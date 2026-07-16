@@ -19,7 +19,12 @@ const publicRegistry = {
     .filter((source) => usedSourceIds.has(source.id))
     .map(({ protectedLocatorId: _protectedLocatorId, media: _media, supportsGenerally: _supportsGenerally, ...source }) => source),
   claims: knowledgeBank.claims
-    .filter((claim) => knowledgeBank.pages.some((page) => page.occurrences.some((occurrence) => occurrence.claimId === claim.id)))
+    .filter((claim) =>
+      ["confirmed", "confirmed-with-boundary"].includes(claim.status) &&
+      claim.projections.some(
+        (projection) => projection.status === "active" && projection.surfaces.length > 0
+      )
+    )
     .map((claim) => ({
       id: claim.id,
       status: claim.status,

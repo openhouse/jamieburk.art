@@ -17,7 +17,9 @@ const requiredProofIds = [
   "callnyc-civic-data-guidance",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
+  "fair-rent-public-data-pilot",
   "nyc-artist-coalition-civic-systems",
+  "nyc-artist-coalition-participation-system",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "kc-spaces-fund-digital-infrastructure",
@@ -32,8 +34,10 @@ const requiredWorkProofs = new Map([
     [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "fair-rent-public-data-pilot",
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-participation-system"
     ]
   ],
   ["callnyc", ["callnyc-civic-data-guidance"]],
@@ -289,6 +293,7 @@ for (const file of walk(docsRoot)) {
 for (const requiredDoc of [
   "README.md",
   "chad-lens.md",
+  "intake-workflow.md",
   "approval-register.md",
   "claims.md",
   "proofs.md",
@@ -299,6 +304,8 @@ for (const requiredDoc of [
   "review-checklist.md",
   "anti-claims.md",
   "public-safety.md",
+  "projects/waterways-participatory-programs.md",
+  "projects/nyc-artist-coalition.md",
   "opportunities/oti-technical-operations.md",
   "opportunities/source-backed-team-memory.md"
 ]) {

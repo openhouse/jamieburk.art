@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 const operationsMap = [
@@ -19,48 +18,29 @@ const proofMap = [
   {
     project: "HJE",
     proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
+      "I helped modernize e-commerce, analytics, marketing, content, and recurring operations in a legacy business."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "I built shared campaign memory, decision records, source maps, action trackers, and public/private boundaries for coalition work."
   },
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
-  },
-  {
-    project: "WOWList",
-    proof:
-      "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
-  },
-  {
-    project: "196 / Sunday Dinner",
-    proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
-  },
-  {
-    project: "KC Spaces Fund",
-    proof:
-      "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
-  },
-  {
-    project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
+      "I translated released CouncilStat data into an independent resident-facing guidance prototype."
   },
   {
     project: "Source-Backed Team Memory",
     proof:
-      "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
+      "I am developing a lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
   }
 ];
 
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
   description:
-    "Role-specific proof surface for technical operations, implementation, product operations, documentation systems, and durable handoffs.",
+    "How Jamie Burkart coordinates technical operations, implementation, product operations, documentation systems, and durable handoffs.",
   path: "/work/technical-operations"
 });
 
@@ -68,7 +48,7 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="break-words text-4xl font-bold text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
@@ -77,6 +57,12 @@ export default function TechnicalOperationsPage() {
           planning rhythms, decision logs, action trackers, onboarding
           materials, documentation systems, launch support, and durable
           handoffs.
+        </p>
+        <p className="mt-4 leading-7 text-jb-ink/72">
+          I am looking for Technical Project Manager and Product Operations
+          roles where public-facing delivery depends on cross-functional
+          coordination, implementation discipline, source-aware decisions, and
+          clear operational memory.
         </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
@@ -105,22 +91,6 @@ export default function TechnicalOperationsPage() {
           </dl>
         </JBCard>
       </section>
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {technicalOperationsProofRows.map((row) => (
-          <JBCard key={row.capability}>
-            <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
-            <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
-            <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {row.proofs.map((proof) => (
-                <li className="flex gap-3" key={proof.id}>
-                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{proof.shortWording ?? proof.publicWording}</span>
-                </li>
-              ))}
-            </ul>
-          </JBCard>
-        ))}
-      </div>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />

@@ -1,0 +1,62 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 15,
+  "runId": "feature-evals-D-facebook-events-v15-browser-20260716",
+  "commit": "de62c89e28da3a1097370cf3eb4b3b8b21349624",
+  "baseUrl": "http://127.0.0.1:3046",
+  "performedAt": "2026-07-16T02:38:26-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Eleven application-facing routes returned 200 at desktop and mobile widths with no horizontal overflow; all eleven also passed the 200-percent-equivalent reflow check.",
+        "The changed Sunday Dinner and WOW List pages separately passed at 320, 375, 768, 1440, and 200-percent-equivalent widths with no overflow, nonblank screenshots, and no held archive language visible."
+      ],
+      "limitations": [
+        "The exact production build was tested locally rather than on the canonical domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright v15 Facebook event archive audit",
+        "runId": "browser-v15-facebook-events-20260716"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Twenty-four real Tab events on CallNYC exposed twenty-four visibly focused controls, including thirteen citation links.",
+        "Thirty-one of thirty-one traversed controls on each changed page exposed visible focus; citation links and backlinks were keyboard reachable, locally anchored, accessibly labeled, and target-correct."
+      ],
+      "limitations": [
+        "Automated browser review does not replace human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright v15 citation and focus audit",
+        "runId": "browser-a11y-v15-facebook-events-20260716"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, and CallNYC each rendered a loaded public artifact at 375 and 1440 pixels with substantial alt text, caption, source link, rights or capture text, and no figure overflow.",
+        "The changed WOW List page rendered its archived public interface artifact at mobile and desktop widths; the new Sunday Dinner evidence remained a public-safe cited claim rather than an unapproved image."
+      ],
+      "limitations": [
+        "The audit verifies selected public artifacts and does not authorize private or approval-gated imagery."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright v15 artifact audit",
+        "runId": "browser-artifacts-v15-facebook-events-20260716"
+      }
+    }
+  ],
+  "humanApprovals": []
+}

@@ -28,6 +28,18 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not say Finkelpearl's February 2017 testimony named NYC Artist Coalition;
+it described the DIY community. Use the separate DCLA commissioner message for
+the explicit coalition link.
+
+Do not turn institutional usefulness into literal dependency. The records do
+not establish that DCLA, the Council, Finkelpearl, or Espinal could not act
+without the coalition, or that coalition activity alone caused a bill to pass.
+
+Do not turn Espinal's collective credit to Dance Liberation Network and NYC
+Artist Coalition into Jamie's sole credit, bill authorship, or a private-motive
+claim.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -40,6 +52,14 @@ selected, or a winner without new evidence and review.
 ## WOWList
 
 Do not name collaborators unless approved.
+
+Do not describe the 38-record displayed profile population as a complete
+history of deleted, private, withheld, or unindexed activity. Do not turn the
+bounded 16-record incoming search into a complete reception census. Do not use
+follower counts, visible interactions, or independently posted URLs as measures
+of total adoption, reach, attendance, endorsement, or impact. Do not say WOW
+List organized every event it distributed or that Jamie authored every account
+post.
 
 ## 196 / Sunday Dinner
 
@@ -59,8 +79,63 @@ private Drive documents.
 
 ## KC Town Hall
 
-Prefer "supported" or "co-founded and documented" unless Jamie approves
-stronger language.
+Do not say the redevelopment was completed, Jamie personally received
+$490,539, a funding agreement was executed, the appropriation was paid or
+disbursed, Jamie alone caused the Council action, the project remains active
+under the award, or the 2024 withdrawal record assigns fault. Prefer
+"supported planning and public-benefit documentation" or "co-led the
+proposal" unless stronger role language is separately supported. The May 17,
+2022, status table reports no disbursement amount at that point; do not turn
+that dated snapshot into an unsupported claim that funds were never disbursed
+later. Jamie separately confirms that he transitioned the project to a
+mission-aligned organization. Do not attribute that transition to the City
+record, name the organization, infer a transfer of public funds, property, or
+assets, claim current operation, or publish the circumstances of the
+transition without separate evidence and approval.
+
+Phase One is a narrower record. Do not turn Jamie's first-person account of
+2019 cold-shell completion into a claim that Phase Two or the full adaptive
+reuse was completed. Do not imply the protected application independently
+assigns Jamie the general-contractor title, certifies completion, reconciles
+the displayed project total, or proves every field duty. Do not imply Jamie
+personally performed licensed trade work assigned to contractors.
+
+Do not describe the resident survey as statistically representative, publish
+respondent data, or imply every request was implemented. Do not assign sole
+operation of TiredOfTires to Jamie, treat first-party tire or savings figures
+as audited outcomes, assign every later pickup to him, or say the Indian Mound
+expansion is independently corroborated by the current source set.
+
+Do not say Jamie originated Pastor Lee's Cleveland Avenue corridor concept,
+alone founded or ran Cleveland Avenue Unify to Beautify, caused a particular
+capital allocation, or produced a quantified number of handbills without
+additional evidence. Those records remain first-person research leads.
+
+## NTER CHNG
+
+Do not say Jamie created NTER CHNG alone or assign him sole responsibility for
+the concept, software, physical installation, or production. Credit Drew
+Bolton and Garrett Fuselier.
+
+Do not claim visitor counts, measured impact, a specific America: Now and Here
+installation venue or configuration, a Nerman Museum display, or a national
+tour from the recovered pages. The linked first-party press release is not
+recovered; do not convert that status into proof that it never existed.
+
+Do not convert the protected America: Now and Here production plan into proof
+that NTER CHNG was installed or opened at Leedy-Voulkos on April 22, 2011, that
+every task was completed, or that Jamie personally performed every task. Do not
+map scenic design, computer programming, motion graphics, experiential
+production, or installation tasks to an individual collaborator without a
+source that makes that assignment.
+
+Do not call the January 8-29, 2010 dates independently verified or describe the
+protected exhibit-information passage as a recovered published press release.
+Do not treat its message samples as verified gallery-visitor records or
+publication permission.
+
+Do not reproduce the personal phone numbers visible in the archived America:
+Now and Here artist interview or the protected working records.
 
 ## Source-Backed Team Memory
 

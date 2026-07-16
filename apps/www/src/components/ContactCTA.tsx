@@ -14,7 +14,7 @@ export function ContactCTA() {
       </p>
       <div className="mt-5 flex flex-wrap gap-3">
         <JBButton href="/resume" variant="secondary">
-          Download resume
+          View resume
         </JBButton>
         <JBButton href={site.emailHref}>
           Email Jamie

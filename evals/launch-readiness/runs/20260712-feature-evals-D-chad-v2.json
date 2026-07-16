@@ -1,0 +1,194 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 2,
+  "runId": "feature-evals-D-chad-v2-20260712T151902Z",
+  "commit": "3d751513f7d55af5dba737326f481112d05f8bc9",
+  "baseUrl": "http://127.0.0.1:3032",
+  "performedAt": "2026-07-12T15:19:02Z",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "All 14 application-facing routes measured scrollWidth equal to clientWidth at 320, 375, 768, and 1440 CSS pixels.",
+        "Long headings wrapped without exceeding their containers; no overflow-hiding workaround was applied."
+      ],
+      "limitations": [
+        "Measurements were performed against the local production bundle, not the deployed production domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium 140 / Playwright 1.61.1",
+        "runId": "browser-feature-evals-D-chad-v2-20260712T151902Z"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Inverse case-study tags measured 4.80:1 contrast, and the first Tab exposed the complete skip link at top 16px with a visible 3px outline.",
+        "No horizontal overflow appeared at 200 percent zoom; CallNYC retained named citations, backlinks, and source notes with JavaScript disabled."
+      ],
+      "limitations": [
+        "This run did not replace a human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium 140 / Playwright 1.61.1",
+        "runId": "browser-feature-evals-D-chad-v2-20260712T151902Z"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, and CallNYC each rendered a relevant public-web capture with source URL, capture date, evidence scope, alt text, and bounded caption.",
+        "All three images loaded at their expected natural dimensions and remained legible at the measured mobile width."
+      ],
+      "limitations": [
+        "The captures do not grant blanket approval for additional images or private materials."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium 140 / Playwright 1.61.1",
+        "runId": "browser-feature-evals-D-chad-v2-20260712T151902Z"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The homepage and resume immediately identify the target role, recurring contribution, concrete impact, and work, resume, and contact actions.",
+        "Technical Operations and the priority cases expose named project proof without requiring source-note consultation."
+      ],
+      "limitations": [
+        "Source inspection did not reproduce a literal timed 30-second browser skim."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-chad-A",
+        "runId": "019f56b5-438e-7570-98c8-cfafd1c864e2-exact-3d75151"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The role, operating contribution, specific HJE, FairRentNYC, and CallNYC proofs, and next actions remain clear in a short source-order skim."
+      ],
+      "limitations": [
+        "Rendered first-viewport placement and interaction state were not inferred."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-chad-B",
+        "runId": "019f56b5-445d-7c33-a8d5-860bb954616b-exact-3d75151"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The required surfaces make Jamie the actor, name concrete interventions and usable results, and explain their purpose without requiring evidence-governance decoding.",
+        "FairRentNYC preserves coalition ownership of campaign outcomes, while CallNYC preserves its independent, archived, and unofficial boundaries."
+      ],
+      "limitations": [
+        "Case-study header summaries still use subjectless verbs, keeping the score below 1."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-chad-A",
+        "runId": "019f56b5-438e-7570-98c8-cfafd1c864e2-exact-3d75151"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Homepage, Technical Operations, resume, HJE, FairRentNYC, and CallNYC identify Jamie's work products and the decisions, coordination, commerce, or resident guidance they made usable.",
+        "Contribution and collective-credit qualifiers remain visible."
+      ],
+      "limitations": [
+        "Some role-level surfaces still rely on recurring operating-structure language rather than one memorable intervention."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-chad-B",
+        "runId": "019f56b5-445d-7c33-a8d5-860bb954616b-exact-3d75151"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The actual artifact gallery now appears once; each priority case separates usable result, intervention, use, outcome, and later evidence limits.",
+        "Source-Backed Team Memory reserves detailed exclusions for What It Is Not and then advances to pattern and deliverables."
+      ],
+      "limitations": [
+        "Some necessary FairRentNYC and CallNYC boundaries remain repeated in distinct safety contexts."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-chad-A",
+        "runId": "019f56b5-438e-7570-98c8-cfafd1c864e2-exact-3d75151"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE states the bounded growth evidence once, FairRentNYC reserves 30+ pages and maintained sites for outcome evidence, and the duplicate Primary artifacts list is gone."
+      ],
+      "limitations": [
+        "CallNYC still repeats archived or unofficial status across artifact, disclaimer, and governance layers."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-chad-B",
+        "runId": "019f56b5-445d-7c33-a8d5-860bb954616b-exact-3d75151"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The prose remains direct, warm, specific, and useful while distinguishing Jamie's contributions from collective outcomes and unsupported authority."
+      ],
+      "limitations": [
+        "No separate writer's-voice guide was present in the inspected commit."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-chad-A",
+        "runId": "019f56b5-438e-7570-98c8-cfafd1c864e2-exact-3d75151"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE preserves customer trust and product judgment, FairRentNYC connects documentation to care, and Contact retains plain usable actions."
+      ],
+      "limitations": [
+        "Tone conveyed by rendered rhythm or audience response was not inferred."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-chad-B",
+        "runId": "019f56b5-445d-7c33-a8d5-860bb954616b-exact-3d75151"
+      }
+    }
+  ],
+  "humanApprovals": []
+}

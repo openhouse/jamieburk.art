@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Claim, References } from "@/components/citations";
 import { ContactCTA } from "@/components/ContactCTA";
 import { createMetadata } from "@/lib/metadata";
 
@@ -38,6 +39,38 @@ export default function AboutPage() {
             delivery, and source-backed knowledge systems.
           </p>
         </div>
+        <section className="mt-12 border-t border-jb-blue/20 pt-10">
+          <h2 className="text-3xl font-semibold text-jb-ink">
+            How I arrived here
+          </h2>
+          <div className="mt-5 space-y-5 text-lg leading-8 text-jb-ink/78">
+            <Claim
+              as="p"
+              claimId="CLM-OPEN-HOUSE-PARTICIPATORY-SYSTEM-2006"
+              occurrenceId="artistic-social-systems-lineage"
+              pageId="about"
+              projection="about"
+              surface="/about"
+            />
+            <p>
+              Before I had product-operations language for this work, I was
+              learning to treat a system as more than a workflow. It is also a
+              place people inhabit, a set of relationships made visible, and an
+              invitation to participate.
+            </p>
+            <p>
+              That lineage still matters. Across WOW List, CallNYC, and
+              source-backed team memory, the recurring move is to listen for
+              relationships already present, prototype a shared representation
+              or interface, and make collective context easier to perceive,
+              use, and revise.
+            </p>
+            <p>
+              That is why I pay attention to atmosphere and trust alongside
+              interfaces, decisions, and handoffs.
+            </p>
+          </div>
+        </section>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
           <p className="leading-8 text-jb-ink/78">
             I value public benefit, accessibility, source-backed memory, careful
@@ -46,6 +79,7 @@ export default function AboutPage() {
             work.
           </p>
         </div>
+        <References pageId="about" />
       </div>
       <div className="mt-12 max-w-3xl">
         <ContactCTA />

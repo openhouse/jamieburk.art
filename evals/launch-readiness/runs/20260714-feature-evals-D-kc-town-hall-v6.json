@@ -1,0 +1,232 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 6,
+  "runId": "feature-evals-D-kc-town-hall-v6-20260714T160200-0400",
+  "commit": "369e6cfcade3eb1181b23a18a31608dc45bc7b70",
+  "baseUrl": "http://127.0.0.1:3041",
+  "performedAt": "2026-07-14T16:02:00-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Fourteen public routes produced 56 successful measurements at 320, 375, 768, and 1440 CSS pixels with no horizontal-overflow failures.",
+        "KC Town Hall rendered the proposal, Council action, appropriation boundary, withdrawal, and four citation pairs at desktop and mobile widths."
+      ],
+      "limitations": [
+        "Measurements were performed against the local production bundle, not the deployed production domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-kc-town-hall-v6-20260714"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "The skip link received a visible 3-pixel solid outline, the measured case-study tag contrast was 7.25:1, and the 2x-density 320-pixel rendering had no overflow.",
+        "All tested citations and backlinks had names and valid targets; CallNYC citations also rendered without JavaScript, and KC Town Hall rendered four named citation-reference pairs."
+      ],
+      "limitations": [
+        "Automated browser checks do not replace a human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-kc-town-hall-v6-20260714"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, and CallNYC each rendered one loaded public artifact with nonempty alt text and a public source link.",
+        "The artifacts remained present in the no-overflow mobile and desktop route matrix."
+      ],
+      "limitations": [
+        "These public captures do not authorize additional private or approval-gated imagery."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-kc-town-hall-v6-20260714"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "The homepage immediately names the Technical Project Manager - Product Operations & Implementation role, the recurring contribution, and Work, Resume, and Contact actions.",
+        "HJE, FairRentNYC, CallNYC, the proof strip, resume, and Technical Operations page provide several concrete proof paths in a short skim."
+      ],
+      "limitations": [
+        "The recurring operating-structure proposition appears in several homepage sections."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v6",
+        "runId": "semantic-v6-a-20260714"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "The homepage identifies Jamie's target role and value, while the proof strip names HJE growth, FairRentNYC campaign memory, WOWList adoption, and 300-plus gatherings.",
+        "Technical Operations translates the position into planning rhythms, decision logs, action trackers, onboarding, launch support, and handoffs tied to named projects."
+      ],
+      "limitations": [
+        "The strongest quantified homepage evidence follows the Start here directory rather than appearing in the first viewport."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v6",
+        "runId": "semantic-v6-b-20260714"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Technical Operations, HJE, FairRentNYC, and CallNYC name Jamie's concrete interventions and the systems, workflows, campaign memory, sites, and guidance that became usable.",
+        "KC Town Hall presents Jamie as presenter and planning/documentation contributor without assigning him sole ownership of the municipal action."
+      ],
+      "limitations": [
+        "Labels such as proof surface, proof map, source layer, and transferable proof still ask readers to learn some portfolio-specific governance vocabulary."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v6",
+        "runId": "semantic-v6-a-20260714"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The resume, FairRentNYC, and CallNYC make Jamie the actor and connect direct work to named usable results.",
+        "FairRentNYC keeps collective outcomes collective, and KC Town Hall separates Jamie's role from Council action and later project status."
+      ],
+      "limitations": [
+        "Some prominent phrases, including operating backbone and modernization, remain broader than the supporting proof lists."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v6",
+        "runId": "semantic-v6-b-20260714"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "Decomposed sources have atomic claims, evidence roles, locators, confidence, boundaries, anti-claims, and explicit projection status.",
+        "KC Town Hall preserves proposal, recommendation, Council acceptance, appropriation, withdrawal, and reappropriation as distinct bounded records; the campaign press queue remains metadata-reviewed and claim-free until close reading."
+      ],
+      "limitations": [
+        "The maturity graph is distributed across several data files and is easier for validators than for a human reviewer to audit as a whole."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v6",
+        "runId": "semantic-v6-a-20260714"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "The KC Town Hall graph distinguishes Board recommendation, Resolution 190649 acceptance and negotiation authority, Ordinance 190642 appropriation, and Ordinance 240317 withdrawal and reappropriation.",
+        "The records explicitly prohibit inferring payment, an executed agreement, construction, sole causality, reasons for withdrawal, or fault; 41 new press records remain unsurfaced and claim-free."
+      ],
+      "limitations": [
+        "The metadata-only press records share generalized limitations and one inquiry, providing limited source-specific prioritization beyond identity and preservation status."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v6",
+        "runId": "semantic-v6-b-20260714"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Priority case studies preserve a composed sequence of summary, artifact, context, intervention, usable result, outcome, and transferable proof before deeper source governance.",
+        "KC Town Hall integrates the municipal sequence into the story and places the non-payment boundary beside the Council action."
+      ],
+      "limitations": [
+        "Evidence and limits cards repeat some caveats already stated in summaries, captions, care notes, and narrative sections."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v6",
+        "runId": "semantic-v6-a-20260714"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, CallNYC, and Source-Backed Team Memory lead with public stories and artifacts before citations, source basis, limits, links, and credits.",
+        "KC Town Hall tells an honest proposal-to-withdrawal story without converting appropriation into a completed-success claim."
+      ],
+      "limitations": [
+        "HJE and FairRentNYC remain somewhat longer and more governance-heavy than the reader's story requires."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v6",
+        "runId": "semantic-v6-b-20260714"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The what-was-unclear-to-usable motif gives Jamie a consistent operating philosophy grounded in concrete outputs.",
+        "About, HJE, Source-Backed Team Memory, and Contact join care, human stakes, plain language, and usable next actions without inflated ownership."
+      ],
+      "limitations": [
+        "Repeated public-safe, source-backed, bounded, and transferable-pattern language can feel procedural."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v6",
+        "runId": "semantic-v6-a-20260714"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Homepage and About connect systems work to accessibility, collective credit, consent, privacy, repair, and useful handoffs.",
+        "CallNYC, FairRentNYC, and KC Town Hall actively distinguish known from assumed, and their next actions remain direct and bounded."
+      ],
+      "limitations": [
+        "Repeated portfolio vocabulary can feel systematized, and Contact is flatter than the homepage and About page."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v6",
+        "runId": "semantic-v6-b-20260714"
+      }
+    }
+  ],
+  "humanApprovals": []
+}

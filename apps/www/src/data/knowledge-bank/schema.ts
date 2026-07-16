@@ -9,6 +9,131 @@ const publicUrlSchema = z
   .url()
   .refine((value) => /^https?:\/\//.test(value), "Use an HTTP(S) public URL");
 
+export const intakeKindSchema = z.enum([
+  "public-url",
+  "memory",
+  "possible-claim",
+  "artifact-lead",
+  "engagement-lead",
+  "research-lead"
+]);
+
+export const intakeMaturitySchema = z.enum([
+  "captured",
+  "triaged",
+  "metadata-reviewed",
+  "source-reviewed",
+  "decomposed",
+  "research-needed",
+  "superseded"
+]);
+
+export const intakePublicUseSchema = z.enum([
+  "public-linkable",
+  "cite-with-care",
+  "approval-required",
+  "protected"
+]);
+
+export const intakeEditorialStateSchema = z.enum([
+  "unsurfaced",
+  "candidate",
+  "selected",
+  "retired"
+]);
+
+export const intakeDispositionSchema = z.enum([
+  "source-created",
+  "claim-candidate-created",
+  "research-inquiry-created",
+  "linked-existing",
+  "linked-duplicate",
+  "held-protected",
+  "superseded"
+]);
+
+export const intakeRecordSchema = z
+  .object({
+    id: stableIdSchema,
+    capturedAt: z.iso.date(),
+    capturedBy: z.string().min(1),
+    kind: intakeKindSchema,
+    title: z.string().min(1),
+    publicSafeSummary: z.string().min(1),
+    whyItMatters: z.string().min(1),
+    projectHints: z.array(stableIdSchema).min(1),
+    maturity: intakeMaturitySchema,
+    publicUse: intakePublicUseSchema,
+    editorialState: intakeEditorialStateSchema,
+    disposition: intakeDispositionSchema,
+    canonicalUrl: publicUrlSchema.optional(),
+    sourceIds: z.array(stableIdSchema).default([]),
+    claimIds: z.array(stableIdSchema).default([]),
+    inquiryIds: z.array(stableIdSchema).default([]),
+    duplicateOf: stableIdSchema.optional(),
+    limitations: z.array(z.string().min(1)).default([]),
+    nextActions: z.array(z.string().min(1)).min(1)
+  })
+  .superRefine((intake, context) => {
+    const addIssue = (message: string) => context.addIssue({ code: "custom", message });
+
+    if (intake.kind === "public-url" && !intake.canonicalUrl) {
+      addIssue("Public URL intakes require a canonical URL");
+    }
+
+    if (
+      ["metadata-reviewed", "source-reviewed"].includes(intake.maturity) &&
+      !intake.sourceIds.length
+    ) {
+      addIssue("Metadata- and source-reviewed intakes require a normalized source");
+    }
+
+    if (
+      intake.maturity === "decomposed" &&
+      (!intake.sourceIds.length || !intake.claimIds.length)
+    ) {
+      addIssue("Decomposed intakes require a source and atomic claim candidate");
+    }
+
+    if (
+      intake.editorialState === "selected" &&
+      (intake.maturity !== "decomposed" || intake.publicUse !== "public-linkable")
+    ) {
+      addIssue("Selected intakes must be decomposed and public-linkable");
+    }
+
+    const linkedRecordCount =
+      intake.sourceIds.length + intake.claimIds.length + intake.inquiryIds.length;
+
+    if (intake.disposition === "source-created" && !intake.sourceIds.length) {
+      addIssue("source-created disposition requires a source ID");
+    }
+    if (intake.disposition === "claim-candidate-created" && !intake.claimIds.length) {
+      addIssue("claim-candidate-created disposition requires a claim ID");
+    }
+    if (
+      intake.disposition === "research-inquiry-created" &&
+      !intake.inquiryIds.length
+    ) {
+      addIssue("research-inquiry-created disposition requires an inquiry ID");
+    }
+    if (intake.disposition === "linked-existing" && !linkedRecordCount) {
+      addIssue("linked-existing disposition requires a canonical record ID");
+    }
+    if (intake.disposition === "linked-duplicate" && !intake.duplicateOf) {
+      addIssue("linked-duplicate disposition requires duplicateOf");
+    }
+    if (
+      intake.disposition === "held-protected" &&
+      !["approval-required", "protected"].includes(intake.publicUse)
+    ) {
+      addIssue("held-protected disposition requires a non-public public-use policy");
+    }
+    if (intake.disposition === "superseded" && !intake.duplicateOf) {
+      addIssue("superseded disposition requires a superseding intake ID");
+    }
+  });
+
 export const sourceVisibilitySchema = z.enum([
   "public",
   "public-metadata-only",
@@ -21,6 +146,7 @@ export const sourceKindSchema = z.enum([
   "government-social-post",
   "institutional-web-page",
   "institutional-social-post",
+  "firsthand-statement",
   "archived-web-capture",
   "promotional-graphic",
   "published-article",
@@ -83,6 +209,10 @@ export const sourceRecordSchema = z
     preferredPublicUrl: z.enum(["canonical", "archive", "asset"]).optional(),
     publicCitation: z.string().min(1),
     publicNote: z.string().min(1).optional(),
+    captureFingerprint: z
+      .string()
+      .regex(/^sha256:[a-f0-9]{64}$/, "Use a SHA-256 capture fingerprint")
+      .optional(),
     supportsGenerally: z.array(z.string().min(1)).default([]),
     doesNotEstablish: z.array(z.string().min(1)).default([]),
     protectedLocatorId: stableIdSchema.optional(),
@@ -144,6 +274,7 @@ export const claimProjectionSchema = z.object({
     "resume-html",
     "technical-operations",
     "homepage",
+    "about",
     "photo-caption",
     "archive-note"
   ]),
@@ -215,18 +346,73 @@ export const citationPageSchema = z.object({
   id: stableIdSchema,
   surface: z.string().min(1),
   sourceOrder: z.array(stableIdSchema),
-  occurrences: z.array(citationOccurrenceSchema)
+  occurrences: z.array(citationOccurrenceSchema),
+  sharedBoundary: z.string().min(1).optional(),
+  sourceBoundaryOmissions: z
+    .record(stableIdSchema, z.array(z.string().min(1)).min(1))
+    .optional()
+});
+
+export const campaignPressPlacementSchema = z.object({
+  id: stableIdSchema,
+  campaign: stableIdSchema,
+  indexSourceId: stableIdSchema,
+  articleSourceId: stableIdSchema,
+  position: z.number().int().positive(),
+  listedPublisher: z.string().min(1),
+  listedTitle: z.string().min(1),
+  listedUrl: publicUrlSchema,
+  relationship: z.literal("listed-in-campaign-press-section"),
+  identityStatus: z.enum([
+    "verified-live",
+    "verified-redirect",
+    "archive-backed",
+    "access-restricted-with-archive"
+  ]),
+  reviewStatus: z.enum(["metadata-reviewed", "decomposed"]),
+  editorialState: z.enum(["unsurfaced", "candidate", "selected", "retired"]),
+  limitations: z.array(z.string().min(1)).min(1),
+  reviewedAt: z.iso.date()
+});
+
+export const socialAccountRecordSchema = z.object({
+  id: stableIdSchema,
+  handle: z
+    .string()
+    .regex(/^@[A-Za-z0-9_]{1,15}$/, "Use a valid X account handle"),
+  canonicalUrl: publicUrlSchema,
+  projectIds: z.array(stableIdSchema).min(1),
+  accountRelationship: z.enum(["dedicated-project", "shared-coalition"]),
+  joined: z.string().min(1),
+  observedAt: z.iso.date(),
+  profilePostsObserved: z.number().int().nonnegative(),
+  recoveredItems: z.number().int().nonnegative(),
+  unresolvedItems: z.number().int().nonnegative(),
+  recoveryStatus: z.enum([
+    "current-profile-control-recovered",
+    "near-complete-current-profile",
+    "partial-with-all-slots-dispositioned"
+  ]),
+  sourceIds: z.array(stableIdSchema).min(1),
+  claimIds: z.array(stableIdSchema).default([]),
+  inquiryIds: z.array(stableIdSchema).default([]),
+  authorshipBoundary: z.string().min(1),
+  limitations: z.array(z.string().min(1)).min(1)
 });
 
 export const knowledgeBankSchema = z.object({
+  intakes: z.array(intakeRecordSchema),
   sources: z.array(sourceRecordSchema),
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
-  pages: z.array(citationPageSchema)
+  pages: z.array(citationPageSchema),
+  campaignPressPlacements: z.array(campaignPressPlacementSchema),
+  socialAccounts: z.array(socialAccountRecordSchema)
 });
 
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
+export type IntakeRecord = z.infer<typeof intakeRecordSchema>;
 export type EvidenceRelationship = z.infer<typeof evidenceRelationshipSchema>;
 export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
@@ -234,4 +420,6 @@ export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;
+export type SocialAccountRecord = z.infer<typeof socialAccountRecordSchema>;
+export type CampaignPressPlacement = z.infer<typeof campaignPressPlacementSchema>;
 export type KnowledgeBank = z.infer<typeof knowledgeBankSchema>;

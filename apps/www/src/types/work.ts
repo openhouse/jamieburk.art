@@ -42,6 +42,17 @@ export type Artifact = {
   title: string;
   description: string;
   type: ArtifactType;
+  asset?: {
+    src: string;
+    width: number;
+    height: number;
+    alt: string;
+    caption: string;
+    sourceUrl: string;
+    capturedAt: string;
+    evidenceScope: "direct" | "contextual" | "representative";
+    rightsStatus: "public-web-capture" | "approved";
+  };
 };
 
 export type WorkMeta = {

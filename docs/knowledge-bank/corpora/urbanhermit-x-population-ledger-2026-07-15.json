@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "account": "@urbanhermit",
+  "capturedAt": "2026-07-15T22:17:38.701Z",
+  "acquisitionIntegrity": {
+    "captureSha256": "822075dc249693da986a217b23591a55ed813058616ce9c9d206f16209a9ed4d",
+    "rawCapturePublished": false,
+    "boundary": "Digest supports integrity comparison without publishing a private locator or archive path."
+  },
+  "population": {
+    "profileReported": 434,
+    "recoveredAccountItems": 434,
+    "accountAuthored": 353,
+    "externalSourceNativeReposts": 81,
+    "recoveryGap": 0,
+    "supplementalConversationContexts": 2,
+    "independentCompletePasses": 3,
+    "allPassesRecoveredSamePopulation": true,
+    "passStatusIdDigests": [
+      {
+        "passId": "authenticated-with-replies-pass-1",
+        "distinctStatusIds": 434,
+        "statusIdDigest": "8eb6d4706105ffbe433208512fc8fd50af726ecfcfa220cbe61004c849edf459"
+      },
+      {
+        "passId": "authenticated-with-replies-pass-2",
+        "distinctStatusIds": 434,
+        "statusIdDigest": "8eb6d4706105ffbe433208512fc8fd50af726ecfcfa220cbe61004c849edf459"
+      },
+      {
+        "passId": "authenticated-with-replies-pass-3",
+        "distinctStatusIds": 434,
+        "statusIdDigest": "8eb6d4706105ffbe433208512fc8fd50af726ecfcfa220cbe61004c849edf459"
+      }
+    ],
+    "range": [
+      "2008-10-04T23:21:03.000Z",
+      "2023-04-17T16:55:07.000Z"
+    ],
+    "byYear": {
+      "2008": {
+        "accountAuthored": 1,
+        "externalSourceNativeReposts": 0,
+        "total": 1
+      },
+      "2009": {
+        "accountAuthored": 49,
+        "externalSourceNativeReposts": 0,
+        "total": 49
+      },
+      "2010": {
+        "accountAuthored": 6,
+        "externalSourceNativeReposts": 0,
+        "total": 6
+      },
+      "2011": {
+        "accountAuthored": 4,
+        "externalSourceNativeReposts": 0,
+        "total": 4
+      },
+      "2012": {
+        "accountAuthored": 12,
+        "externalSourceNativeReposts": 0,
+        "total": 12
+      },
+      "2013": {
+        "accountAuthored": 56,
+        "externalSourceNativeReposts": 2,
+        "total": 58
+      },
+      "2014": {
+        "accountAuthored": 112,
+        "externalSourceNativeReposts": 2,
+        "total": 114
+      },
+      "2015": {
+        "accountAuthored": 16,
+        "externalSourceNativeReposts": 2,
+        "total": 18
+      },
+      "2016": {
+        "accountAuthored": 23,
+        "externalSourceNativeReposts": 14,
+        "total": 37
+      },
+      "2017": {
+        "accountAuthored": 22,
+        "externalSourceNativeReposts": 45,
+        "total": 67
+      },
+      "2018": {
+        "accountAuthored": 21,
+        "externalSourceNativeReposts": 4,
+        "total": 25
+      },
+      "2019": {
+        "accountAuthored": 24,
+        "externalSourceNativeReposts": 7,
+        "total": 31
+      },
+      "2020": {
+        "accountAuthored": 5,
+        "externalSourceNativeReposts": 3,
+        "total": 8
+      },
+      "2021": {
+        "accountAuthored": 0,
+        "externalSourceNativeReposts": 1,
+        "total": 1
+      },
+      "2022": {
+        "accountAuthored": 2,
+        "externalSourceNativeReposts": 0,
+        "total": 2
+      },
+      "2023": {
+        "accountAuthored": 0,
+        "externalSourceNativeReposts": 1,
+        "total": 1
+      }
+    },
+    "recoveredStatusIdDigest": "8eb6d4706105ffbe433208512fc8fd50af726ecfcfa220cbe61004c849edf459",
+    "accountAuthoredStatusIdDigest": "38f4fe2adf6b71c284880f4a7cbb2fea1d3d154e07586dfcfda6d0418c3d6d85",
+    "repostedStatusIdDigest": "4e350f13f4d75cba186f5be2bf26b1e15d3904a0cb1697d23cd2bbcbafa41a9a",
+    "supplementalContextDigest": "e58ad14b0cbb90b503b934037e809fd7bbfb62fb1fbe805a12b736d33daf121b",
+    "boundary": "Complete for the capture-date live profile counter, not an account-owner export or deletion history."
+  },
+  "sourceCirculation": {
+    "recordsWithExternalLinks": 277,
+    "normalizedRecordLinkPairs": 345,
+    "distinctShortUrls": 321,
+    "accountAuthoredNormalizedRecordLinkPairs": 290,
+    "accountAuthoredDistinctShortUrls": 277,
+    "normalizedRecordLinkPairDigest": "a5fa994210b4bc62a806a7705a412d71d87c96e2cdaa58821e310d208534fd81",
+    "researchQueueDisposition": {
+      "status": "open",
+      "completeDistinctUrlInventoryProtected": true,
+      "bulkUrlInventoryPublished": false,
+      "boundary": "Most destinations remain unresolved or not close-read; selected public-safe sources are promoted individually rather than by adjacency."
+    },
+    "boundary": "A posted destination documents circulation, not authorship, endorsement, readership, participation, partnership, or impact. Repeated identical anchors within one rendered card are normalized to one record-link pair."
+  },
+  "missionSignals": {
+    "classificationSurface": "source-post body only; quoted-card text excluded",
+    "overlap": "Records may match more than one signal family.",
+    "counts": {
+      "community-platforms-and-gatherings": 35,
+      "civic-participation-and-service": 8,
+      "cultural-space-advocacy": 45,
+      "public-history-place-and-waterways": 2,
+      "creative-technology-and-media": 4,
+      "neighborhood-mutual-aid": 1
+    },
+    "ruleManifestDigest": "1aff585f09bcf7201409df6ff698df3fab91597944060bc85e8090bcf396170b",
+    "boundary": "Retrieval signals describe records discussed or circulated, not work performed, priority, agreement, reach, or impact. A repost remains authored by its external source."
+  },
+  "incomingStakeholderSearch": {
+    "query": "@urbanhermit -from:urbanhermit",
+    "yearWindows": "2008-2026",
+    "recoveredPublicRecords": 26,
+    "missionRelevantThirdPartyRecords": 15,
+    "missionRelevantThirdPartyAccounts": 9,
+    "missionRelevantConversationContexts": 2,
+    "redactedNonMissionPersonalOrNetworkRecords": 9,
+    "recoveredStatusIdDigest": "26430a1fa0cfa2aa206095779ffd61dd1ee294a479fee6bde1f7562887423a75",
+    "missionRelevantStatusIdDigest": "f6d799f2f2b203cbc37c4e5a08c678805af54ac3e3b9afedba1dbd615dc2358d",
+    "stakeholderGroups": [
+      "civic-design peers",
+      "coalition and project accounts",
+      "creative-technology and media collaborators",
+      "neighborhood actors",
+      "public-history collaborators"
+    ],
+    "boundary": "Bounded public-index search; excludes likes, private activity, deleted or unindexed records, direct messages, and engagement that omits the handle. One live record required direct-status fallback after current year search omitted it."
+  },
+  "selectedSourceLeads": [
+    {
+      "id": "music-hackathon-wowlist-attribution",
+      "canonicalUrl": "https://x.com/musichackathon/status/579088937022406657",
+      "disposition": "public-peer-attribution",
+      "supports": "Jamie as a Music Hackathon co-organizer and WOW List as an event-sharing service he made.",
+      "boundary": "Does not establish sole authorship, complete architecture, adoption, or impact."
+    },
+    {
+      "id": "horse-lords-drew-daniel-attribution",
+      "canonicalUrl": "https://x.com/DDDrewDaniel/status/726096416070836224",
+      "disposition": "public-collaborator-network-attribution",
+      "supports": "Shared public credit for Jamie Burkart and M.C. Schmidt's Horse Lords video.",
+      "boundary": "Does not establish the collaborators' division of labor, rights, terms, or reach."
+    },
+    {
+      "id": "horse-lords-julia-fredenburg-attribution",
+      "canonicalUrl": "https://x.com/juliafredenburg/status/726238278433804288",
+      "disposition": "public-collaborator-attribution",
+      "supports": "A second public attribution naming Jamie and M.C. Schmidt and the analog-media context.",
+      "boundary": "Does not establish sole authorship or the precise division of labor."
+    },
+    {
+      "id": "eighth-street-tunnel-julia-fredenburg-attribution",
+      "canonicalUrl": "https://x.com/juliafredenburg/status/775795144553398272",
+      "disposition": "public-collaborator-attribution",
+      "supports": "Public attribution connecting Jamie to the 8th Street Tunnel interpretation.",
+      "boundary": "Does not establish ownership, restoration, formal control, attendance, or measured impact."
+    },
+    {
+      "id": "cabaret-repeal-peer-attribution",
+      "canonicalUrl": "https://x.com/alizauf/status/925021115080232960",
+      "disposition": "public-peer-attribution",
+      "supports": "Public recognition of Jamie Burkart and Julia Fredenburg's work in the Cabaret Law repeal effort.",
+      "boundary": "Does not assign legislative authorship, sole strategy, or decisive policy causation."
+    },
+    {
+      "id": "nycac-cultural-spaces-quote",
+      "canonicalUrl": "https://x.com/NYCArtC/status/923573066252382209",
+      "disposition": "public-coalition-attribution",
+      "supports": "NYC Artist Coalition attribution of a statement by Jamie about cultural traditions and small diverse spaces.",
+      "boundary": "Speaker attribution is not sole ownership of a coalition argument or outcome."
+    },
+    {
+      "id": "nycac-trust-safety-quote",
+      "canonicalUrl": "https://x.com/NYCArtC/status/925875113555357707",
+      "disposition": "public-coalition-attribution",
+      "supports": "NYC Artist Coalition attribution of Jamie's Cabaret Law trust-and-safety framing.",
+      "boundary": "Does not establish legislative authorship or sole policy causation."
+    },
+    {
+      "id": "nycac-save-spaces-town-hall-quote",
+      "canonicalUrl": "https://x.com/NYCArtC/status/934923724683431936",
+      "disposition": "public-coalition-attribution",
+      "supports": "NYC Artist Coalition attribution of Jamie's statement at a Save NYC Spaces town hall.",
+      "boundary": "Does not establish sole event production, coalition ownership, or policy outcome."
+    },
+    {
+      "id": "kcth-tired-of-tires-participation",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1135246124883861504",
+      "disposition": "public-project-account-attribution",
+      "supports": "A KC Town Hall operating update names Jamie among Tired of Tires participants.",
+      "boundary": "Does not establish sole design, sole coordination, every shift, or audited totals."
+    },
+    {
+      "id": "tired-of-tires-jimmy-fitzner-account",
+      "canonicalUrl": "https://x.com/JimmyFitzner/status/1510067983456026629",
+      "disposition": "public-participant-account",
+      "supports": "A first-person account of a dump-truck tire-pickup shift with Jamie in Northeast Kansas City.",
+      "boundary": "Does not establish sole program operation, every shift, or complete geography."
+    },
+    {
+      "id": "creative-community-introductions",
+      "canonicalUrl": "https://x.com/letsglitchit/status/1648007189049516032",
+      "disposition": "public-peer-attribution",
+      "supports": "Public thanks to Jamie for artist introductions across a creative-technology community.",
+      "boundary": "Does not establish a formal convening role, the complete context, or downstream outcomes."
+    },
+    {
+      "id": "kcur-eighth-street-tunnel",
+      "canonicalUrl": "https://www.kcur.org/arts-life/2016-09-15/the-8th-street-tunnel-is-a-gateway-to-kansas-citys-history-but-you-probably-cant-get-in",
+      "disposition": "live-and-close-read",
+      "supports": "KCUR documents Jamie's 2006 participatory route and three-film screening in the 8th Street Tunnel.",
+      "boundary": "Does not establish tunnel ownership, restoration, attendance, or measured educational impact."
+    },
+    {
+      "id": "brooklyn-daily-eagle-office-of-nightlife",
+      "canonicalUrl": "https://brooklyneagle.com/58743/nycs-office-of-nightlife-expected-to-be-here-by-2018/",
+      "disposition": "live-and-close-read",
+      "supports": "Contemporaneous reporting quotes NYC Artist Coalition and records the Council committee and public-feedback sequence.",
+      "boundary": "Does not name Jamie individually or establish sole coalition causation."
+    }
+  ],
+  "heldVisibleInteractionObservation": {
+    "capturedAt": "2026-07-15T22:17:38.701Z",
+    "accountAuthoredRecordsWithOneOrMoreDisplayedInteraction": 85,
+    "displayedInteractionUnits": {
+      "likes": 175,
+      "replies": 8,
+      "reposts": 60,
+      "total": 243
+    },
+    "status": "hold",
+    "boundary": "Dated volatile interface units, not unique people, reach, endorsement, conversion, attendance, or impact. Engagement displayed on external-source native reposts is excluded."
+  },
+  "privacy": {
+    "status": "public-safe-minimized-ledger",
+    "omitted": [
+      "raw post and quoted-card text",
+      "per-item status IDs and URLs outside selected mission-relevant source leads",
+      "per-item dates, mentions, hashtags, media labels, and interaction counters",
+      "identities, dates, URLs, and metrics for nine non-mission personal or network records",
+      "profile biography, historical contact details, ordinary-life context, and other people's unnecessary traces",
+      "private analytics, direct messages, account settings, browser storage, and authentication state"
+    ],
+    "rationale": "Retain complete evidence in Jamie's protected archive while publishing only reproducible aggregates, digests, selected public-safe sources, and bounded findings."
+  }
+}

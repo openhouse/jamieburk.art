@@ -1,0 +1,23 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 9,
+  "runId": "replace-with-unique-run-id",
+  "commit": "replace-with-full-git-sha",
+  "baseUrl": "https://staging.jamieburk.art",
+  "performedAt": "YYYY-MM-DDTHH:mm:ssZ",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 0,
+      "passed": false,
+      "evidence": [],
+      "limitations": [],
+      "grader": {
+        "type": "browser",
+        "name": "browser-and-version",
+        "runId": "replace-with-independent-run-id"
+      }
+    }
+  ],
+  "humanApprovals": []
+}
