@@ -32,6 +32,7 @@ import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts
 import { projectSocialAccounts, socialEngagementEvents } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import {
+  blindSpotControls,
   evaluateKnowledgeBank,
   loadKnowledgeEvalSuite,
   nycacCouncilTranscriptReview
@@ -111,6 +112,12 @@ function refreshFieldPracticeApproval(targetSuite) {
     .digest("hex");
 }
 
+function refreshBlindSpotApproval(targetSuite) {
+  targetSuite.pilot.blindSpotControls.approvedSha256 = createHash("sha256")
+    .update(JSON.stringify(blindSpotControls))
+    .digest("hex");
+}
+
 function refreshArchiveProductionApproval(targetSuite) {
   const archive = targetSuite.pilot.archiveProduction;
   const byId = (rows, ids) => ids.map((id) => rows.find((row) => row.id === id));
@@ -152,13 +159,13 @@ function refreshArchiveProductionApproval(targetSuite) {
   })).digest("hex");
 }
 
-test("knowledge-bank gate accepts two fresh NYC Artist Coalition Facebook holdouts", () => {
+test("knowledge-bank gate accepts two fresh blind-spot-control holdouts", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-k",
-    "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-l"
+    "blind-spot-holdout-hiring-credit-2026-07-15-final-a",
+    "blind-spot-holdout-data-integrity-2026-07-15-final-b"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -177,6 +184,112 @@ test("mature but unselected claims remain held off public surfaces", () => {
 test("selected NYCAC claims improve existing-site citation coverage", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-COVERAGE")?.score, 5);
+});
+
+test("blind-spot controls pass as governed gaps without claiming resolution", () => {
+  const result = evaluateKnowledgeBank(suite);
+  const blindSpotResults = result.criteria.filter((item) =>
+    item.criterionId.startsWith("KB-EVAL-BLIND-")
+  );
+
+  assert.equal(blindSpotControls.controls.length, 11);
+  assert.equal(blindSpotControls.evaluationSemantics.instrumentedIsNotValidated, true);
+  assert.equal(blindSpotControls.evaluationSemantics.externalEvidenceCannotBeSynthesized, true);
+  assert.ok(blindSpotControls.controls.every((control) =>
+    ["open", "partially-controlled"].includes(control.status)
+  ));
+  assert.equal(result.contentApprovals.blindSpotControls.actualCollaboratorNoteCount, 0);
+  assert.equal(result.contentApprovals.blindSpotControls.reviewLocksMatch, true);
+  assert.ok(Object.values(result.contentApprovals.blindSpotControls.controlReviewLocks).every(Boolean));
+  assert.equal(blindSpotResults.length, 11);
+  assert.ok(blindSpotResults.every((item) => item.score === 5));
+});
+
+test("blind-spot controls reject checksum-refreshed semantic reversals", () => {
+  const originalManifest = structuredClone(blindSpotControls);
+  const originalApproval = suite.pilot.blindSpotControls.approvedSha256;
+  const attacks = [
+    {
+      controlId: "BLIND-HUMAN-CORROBORATION",
+      criterionId: "KB-EVAL-BLIND-HUMAN-CORROBORATION",
+      mutate: (control) => { control.currentEvidence[0] = "AI archival review is permissioned first-hand collaborator testimony."; }
+    },
+    {
+      controlId: "BLIND-POPULATION-DENOMINATOR",
+      criterionId: "KB-EVAL-BLIND-DENOMINATOR",
+      mutate: (control) => { control.publicProjectionRule = "Not recovered means did not exist, and a capture-date surface is lifetime-complete."; }
+    },
+    {
+      controlId: "BLIND-COLLECTIVE-REVIEW",
+      criterionId: "KB-EVAL-BLIND-COLLECTIVE-REVIEW",
+      mutate: (control) => { control.publicProjectionRule = "Silence is approval, endorsement, and permission for sole credit."; }
+    },
+    {
+      controlId: "BLIND-RECENT-OPERATIONS",
+      criterionId: "KB-EVAL-BLIND-RECENT-OPERATIONS",
+      mutate: (control) => { control.publicProjectionRule = "Every proposal is delivered paid work, and protected client records should be public."; }
+    },
+    {
+      controlId: "BLIND-OUTCOME-EVIDENCE",
+      criterionId: "KB-EVAL-BLIND-OUTCOMES",
+      mutate: (control) => { control.publicProjectionRule = "Attendance, press, reactions, and reposts prove attributable impact."; }
+    },
+    {
+      controlId: "BLIND-ROLE-POSITIONING",
+      criterionId: "KB-EVAL-BLIND-POSITIONING",
+      mutate: (control) => { control.publicProjectionRule = "Rewrite canonical facts for each role and treat LLM classification as reader validation."; }
+    },
+    {
+      controlId: "BLIND-HIRING-USABILITY",
+      criterionId: "KB-EVAL-BLIND-HIRING-USABILITY",
+      mutate: (control) => { control.baseline.interpretation = "Simulated and coached agent sessions count as unfamiliar human readers."; }
+    },
+    {
+      controlId: "BLIND-JOB-FUNNEL",
+      criterionId: "KB-EVAL-BLIND-JOB-FUNNEL",
+      mutate: (control) => { control.baseline.rawDataLocation = "public-repository"; }
+    },
+    {
+      controlId: "BLIND-EXTERNAL-VALIDITY",
+      criterionId: "KB-EVAL-BLIND-EXTERNAL-VALIDITY",
+      mutate: (control) => { control.baseline.interpretation = "Internal LLM judges are independent humans and prove hiring impact."; }
+    },
+    {
+      controlId: "BLIND-VISUAL-EVIDENCE",
+      criterionId: "KB-EVAL-BLIND-VISUAL-EVIDENCE",
+      mutate: (control) => { control.publicProjectionRule = "Archive custody is publication permission and visual drama proves role and outcome."; }
+    },
+    {
+      controlId: "BLIND-VOICE-HUMAN-STAKES",
+      criterionId: "KB-EVAL-BLIND-VOICE",
+      mutate: (control) => { control.antiGaming[0] = "Fabricated anecdotes, quotations, motives, and emotional states are permitted."; }
+    }
+  ];
+
+  try {
+    for (const attack of attacks) {
+      for (const key of Object.keys(blindSpotControls)) delete blindSpotControls[key];
+      Object.assign(blindSpotControls, structuredClone(originalManifest));
+      const control = blindSpotControls.controls.find((item) => item.id === attack.controlId);
+      assert.ok(control);
+      attack.mutate(control);
+      refreshBlindSpotApproval(suite);
+
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(result.contentApprovals.blindSpotControls.matches, true, attack.controlId);
+      assert.equal(result.contentApprovals.blindSpotControls.reviewLocksMatch, false, attack.controlId);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === attack.criterionId)?.score,
+        1,
+        attack.controlId
+      );
+      assert.equal(result.accepted, false, attack.controlId);
+    }
+  } finally {
+    for (const key of Object.keys(blindSpotControls)) delete blindSpotControls[key];
+    Object.assign(blindSpotControls, originalManifest);
+    suite.pilot.blindSpotControls.approvedSha256 = originalApproval;
+  }
 });
 
 test("NYCAC source expansion retains exactly ten newly researched sources", () => {

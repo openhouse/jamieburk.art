@@ -1072,6 +1072,23 @@
       "openInquiryIds": [
         "INQ-SOCIAL-ACCOUNT-AUTHORSHIP"
       ]
+    },
+    "blindSpotControls": {
+      "manifestPath": "docs/knowledge-bank/data/blind-spot-controls-2026-07.json",
+      "approvedSha256": "fb76f31059d537dbeca324ae564009e08b20081dcb3af26fae8846bf8d106d42",
+      "controlIds": [
+        "BLIND-HUMAN-CORROBORATION",
+        "BLIND-POPULATION-DENOMINATOR",
+        "BLIND-COLLECTIVE-REVIEW",
+        "BLIND-RECENT-OPERATIONS",
+        "BLIND-OUTCOME-EVIDENCE",
+        "BLIND-ROLE-POSITIONING",
+        "BLIND-HIRING-USABILITY",
+        "BLIND-JOB-FUNNEL",
+        "BLIND-EXTERNAL-VALIDITY",
+        "BLIND-VISUAL-EVIDENCE",
+        "BLIND-VOICE-HUMAN-STAKES"
+      ]
     }
   },
   "criteria": [
@@ -1221,6 +1238,83 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 445 posts exposed by the capture-date authenticated Page feed and all 67 cleaned off-Facebook routes remain reconciled, source-governed, mission-classified, privacy-preserving, and resistant to lifetime-history, individual-authorship, incoming-engagement, endorsement, traction, causation, and collective-credit inflation while the website receives only a selective aggregate projection."
+    },
+    {
+      "id": "KB-EVAL-BLIND-HUMAN-CORROBORATION",
+      "label": "Human corroboration blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The absence of governed first-hand collaborator testimony remains explicit, cannot be filled by AI review or participant memory, and has a permissioned corroboration protocol with a stopping rule."
+    },
+    {
+      "id": "KB-EVAL-BLIND-DENOMINATOR",
+      "label": "Population denominator blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every completeness claim stays bounded to a surface, account, capture date, and denominator; owner-export gaps remain open and not recovered never becomes did not exist."
+    },
+    {
+      "id": "KB-EVAL-BLIND-COLLECTIVE-REVIEW",
+      "label": "Collective review blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Formal collaborator review remains distinct from structured credit rules and includes correction, qualification, and dissent without converting silence into approval or review into endorsement."
+    },
+    {
+      "id": "KB-EVAL-BLIND-RECENT-OPERATIONS",
+      "label": "Recent operations blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Uneven public evidence for recent paid technical operations has a protected, end-to-end research protocol that distinguishes delivered work, operating methods, proposals, and outcomes."
+    },
+    {
+      "id": "KB-EVAL-BLIND-OUTCOMES",
+      "label": "Outcome evidence blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Activity, output, outcome, and impact remain separate evidence levels; attendance, press, and social response cannot become impact or sole causation by rhetorical promotion."
+    },
+    {
+      "id": "KB-EVAL-BLIND-POSITIONING",
+      "label": "Role positioning blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Technical project management, product operations, and implementation each receive an explicit proof map while all variants retain the same governed facts and await real-reader confirmation."
+    },
+    {
+      "id": "KB-EVAL-BLIND-HIRING-USABILITY",
+      "label": "Hiring usability blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The absence of unfamiliar hiring-reader sessions remains explicit and a task-based, consented, aggregate-only protocol cannot be passed with simulated human results."
+    },
+    {
+      "id": "KB-EVAL-BLIND-JOB-FUNNEL",
+      "label": "Job funnel blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Application-funnel learning has a private event model and a de-identified aggregate projection boundary without exposing employers, contacts, correspondence, or asserting portfolio causation."
+    },
+    {
+      "id": "KB-EVAL-BLIND-EXTERNAL-VALIDITY",
+      "label": "External validity blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Deterministic checks, mutation tests, and LLM judges remain internal evidence and cannot be presented as real-human understanding, hiring impact, or external validation."
+    },
+    {
+      "id": "KB-EVAL-BLIND-VISUAL-EVIDENCE",
+      "label": "Visual evidence blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every projected image requires rights, consent, provenance, caption, and evidentiary-function decisions; archive custody and visual drama cannot supply permission, role, or outcome."
+    },
+    {
+      "id": "KB-EVAL-BLIND-VOICE",
+      "label": "Voice and human stakes blind-spot control",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Motive, relationship, learning, and specificity remain visible without fabricated anecdotes, quotations, motives, emotional states, or loss of epistemic boundaries."
     }
   ],
   "hillClimb": {
@@ -1237,7 +1331,10 @@
       "Never improve projection coverage by publishing every mature claim.",
       "Never infer sole causation from participation, proximity, or contemporaneous coverage.",
       "Never turn advocacy, testimony, participation, or coalition work into legislative enactment or sole causation.",
-      "Never treat a photograph as self-interpreting proof or consent to publish."
+      "Never treat a photograph as self-interpreting proof or consent to publish.",
+      "Never treat an instrumented blind spot as resolved.",
+      "Never synthesize collaborator testimony, real-human usability results, funnel outcomes, or publication permissions.",
+      "Never treat deterministic or LLM eval success as evidence of hiring impact."
     ],
     "stopWhen": "Every criterion meets its minimum and the weighted target passes in two consecutive fresh-judge runs, with deterministic checks and public safety passing."
   }

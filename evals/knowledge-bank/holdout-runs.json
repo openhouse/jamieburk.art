@@ -792,6 +792,46 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "blind-spot-holdout-data-integrity-2026-07-15-b",
+      "completedAt": "2026-07-15T19:55:05-04:00",
+      "lens": "Fresh independent data-integrity, privacy, research-methods, and adversarial review of the initial 32-criterion blind-spot control candidate",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "accepted": false,
+      "blockers": [
+        "All eleven initial blind-spot controls accepted checksum-refreshed hostile rewrites because polarity-insensitive substring checks could retain required terms while reversing their meaning; no blind-spot mutation tests yet covered those attacks."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-blind-spot-semantic-review-locks-2026-07-15",
+      "completedAt": "2026-07-15T19:57:45-04:00",
+      "lens": "Protocol reset after replacing polarity-insensitive token checks with manifest, document, and per-control semantic review locks and adding eleven checksum-refresh mutation attacks",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that semantic reversals fail even when the editable approval checksum is refreshed, while the control plane still distinguishes governed gaps from resolved evidence."
+      ]
+    },
+    {
+      "judgeId": "blind-spot-holdout-hiring-credit-2026-07-15-final-a",
+      "completedAt": "2026-07-15T20:02:48-04:00",
+      "lens": "Fresh read-only skeptical hiring, public-interest, collective-credit, and evaluation audit of the 32-criterion candidate after semantic review-lock repair",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "blind-spot-holdout-data-integrity-2026-07-15-final-b",
+      "completedAt": "2026-07-15T20:02:59-04:00",
+      "lens": "Fresh independent read-only data-integrity, privacy, research-methods, and checksum-refresh-resistant adversarial review of the repaired 32-criterion candidate",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

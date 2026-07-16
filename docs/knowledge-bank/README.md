@@ -76,6 +76,13 @@ See [intake-and-maturation.md](intake-and-maturation.md) for the recursive intak
 research, claim-maturation, selective-projection, and photo-feedback workflow.
 
 See
+[projects/blind-spot-evaluation-controls.md](projects/blind-spot-evaluation-controls.md)
+for the eleven governed gaps that remain after the current archival and site
+passes. A passing blind-spot eval means the gap is honestly bounded and
+instrumented; it does not mean missing human evidence has been invented or the
+gap has been resolved.
+
+See
 [agency-and-collective-credit.md](agency-and-collective-credit.md)
 for the rule that separates individual contribution, shared production,
 coalition action, and institutional enactment.

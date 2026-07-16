@@ -51,6 +51,11 @@ const nycacCouncilTranscriptReviewPath = path.join(
 export const nycacCouncilTranscriptReview = JSON.parse(
   readFileSync(nycacCouncilTranscriptReviewPath, "utf8")
 );
+const blindSpotControlsPath = path.join(
+  repoRoot,
+  "docs/knowledge-bank/data/blind-spot-controls-2026-07.json"
+);
+export const blindSpotControls = JSON.parse(readFileSync(blindSpotControlsPath, "utf8"));
 const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   corpusSha256: "7344b91556feaffebbcf4394b0b6cca9ac005c8d94d3b325dce97c557fc1cdc1",
   canonicalRecordsSha256: "00d2c80af90f0584311a5557e2ad02a8b67d63e7b1c5719a2418d82f692d4865",
@@ -116,6 +121,23 @@ const NYCAC_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   publicReportSha256: "82a1cd92f535e6cef244576aab547ccfaee5ba1c1a3f0355cbcfb6c5d6e74a34",
   proofProjectionSha256: "7e6d12c463cb77f5c1cb0307dc8c2a79dec0ceb8f7fc1863ccb1b651f6b04e0e",
   caseStudyMdxSha256: "7989d07d2256f1a2e4e80153804146d9aea33de69eb225d9683de001a1775e08"
+});
+const BLIND_SPOT_CONTROL_REVIEW_LOCKS = Object.freeze({
+  manifestSha256: "fb76f31059d537dbeca324ae564009e08b20081dcb3af26fae8846bf8d106d42",
+  documentSha256: "db5f6018d3f085853725be81a0b08335c1a2cb012b71834521e9090436c71162",
+  controls: Object.freeze({
+    "BLIND-HUMAN-CORROBORATION": "65237814d80448a3a25429c5c90ee8ab53c31ef4ff705bab5c2e5435b0a8188d",
+    "BLIND-POPULATION-DENOMINATOR": "892cd0600cf815c2afd030c31111ef294e5fbe7cc8f3df62683f0c9a6bcabc89",
+    "BLIND-COLLECTIVE-REVIEW": "3cc674420329165088ccec46e1f4abb2339f2fbec9414f2aa8e2a65dab38eb52",
+    "BLIND-RECENT-OPERATIONS": "7314990bff8a1b6a75089687c70201029ef1358645dd95f0ec6bef56e1c831cd",
+    "BLIND-OUTCOME-EVIDENCE": "6233d5332fc055e7a0c304912aa7bc4cb3a88054938394bae965d977d1618f0f",
+    "BLIND-ROLE-POSITIONING": "e0464acf28c07b0843b54c37ab181cc1b4ee4107c9fc8fe1d5766d6e73cddc2d",
+    "BLIND-HIRING-USABILITY": "bebe2a4bbab223eb96926fd78ca5d78538ad96fe8372560e4b20079ef6cb0333",
+    "BLIND-JOB-FUNNEL": "7de703e7f6ba3d2d766da2434a83c9070334d9cd9e63332fd9ea6c03eb4a93c3",
+    "BLIND-EXTERNAL-VALIDITY": "e5b23c3ea67c927900d9c8d647d5bd65d032b4f26099f0ee9b715bbd8df16e97",
+    "BLIND-VISUAL-EVIDENCE": "c5b4afa59c949f06c9cd5bbcb02f1c6796228d8c85e698e8a757df65481da71b",
+    "BLIND-VOICE-HUMAN-STAKES": "2c20ea6c717e30a0bc4ca2cb2c101eacbcdcbfbed7e5935192693f9690f550c0"
+  })
 });
 const NYCAC_FACEBOOK_POST_WORK_EVIDENCE_SEMANTICS = Object.freeze([
   "Founding-member and organizer role in NYC Artist Coalition",
@@ -566,6 +588,175 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const fairRentMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
   const errors = validateKnowledgeBank();
   const publicRegistryText = readFileSync(publicRegistryPath, "utf8");
+
+  const blindSpotConfig = suite.pilot.blindSpotControls;
+  const blindSpotControlById = new Map(
+    blindSpotControls.controls.map((control) => [control.id, control])
+  );
+  const expectedBlindSpotIds = [
+    "BLIND-HUMAN-CORROBORATION",
+    "BLIND-POPULATION-DENOMINATOR",
+    "BLIND-COLLECTIVE-REVIEW",
+    "BLIND-RECENT-OPERATIONS",
+    "BLIND-OUTCOME-EVIDENCE",
+    "BLIND-ROLE-POSITIONING",
+    "BLIND-HIRING-USABILITY",
+    "BLIND-JOB-FUNNEL",
+    "BLIND-EXTERNAL-VALIDITY",
+    "BLIND-VISUAL-EVIDENCE",
+    "BLIND-VOICE-HUMAN-STAKES"
+  ];
+  const blindSpotActualSha256 = createHash("sha256")
+    .update(JSON.stringify(blindSpotControls))
+    .digest("hex");
+  const blindSpotDocument = readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md"),
+    "utf8"
+  );
+  const blindSpotDocumentSha256 = createHash("sha256")
+    .update(blindSpotDocument)
+    .digest("hex");
+  const blindSpotControlReviewLocked = (id) => createHash("sha256")
+    .update(JSON.stringify(blindSpotControlById.get(id) ?? {}))
+    .digest("hex") === BLIND_SPOT_CONTROL_REVIEW_LOCKS.controls[id];
+  const actualCollaboratorNoteCount = knowledgeBank.intakeItems.filter(
+    (item) => item.kind === "collaborator-note"
+  ).length;
+  const blindSpotShapeComplete = blindSpotControls.controls.every((control) =>
+    typeof control.label === "string" && control.label.length > 0 &&
+    ["open", "partially-controlled"].includes(control.status) &&
+    control.baseline && typeof control.baseline === "object" &&
+    Array.isArray(control.currentEvidence) && control.currentEvidence.length >= 2 &&
+    typeof control.gap === "string" && control.gap.length > 0 &&
+    Array.isArray(control.requiredEvidence) && control.requiredEvidence.length >= 3 &&
+    Array.isArray(control.passWhen) && control.passWhen.length >= 3 &&
+    Array.isArray(control.antiGaming) && control.antiGaming.length >= 3 &&
+    typeof control.nextAction === "string" && control.nextAction.length > 0 &&
+    typeof control.publicProjectionRule === "string" && control.publicProjectionRule.length > 0
+  );
+  const blindSpotControlPlaneComplete =
+    blindSpotControls.schemaVersion === 1 &&
+    blindSpotControls.reviewedAt === "2026-07-15" &&
+    blindSpotControls.evaluationSemantics?.instrumentedIsNotValidated === true &&
+    blindSpotControls.evaluationSemantics?.externalEvidenceCannotBeSynthesized === true &&
+    /does not mean.+resolved/i.test(blindSpotControls.evaluationSemantics?.criterionPassMeaning ?? "") &&
+    Array.isArray(blindSpotControls.knownLaunchTasksExcluded) &&
+    blindSpotControls.knownLaunchTasksExcluded.length === 3 &&
+    blindSpotControls.knownLaunchTasksExcluded.some((item) => /exact production commit/i.test(item)) &&
+    blindSpotControls.knownLaunchTasksExcluded.some((item) => /dokku.+tls.+rollback/i.test(item)) &&
+    blindSpotControls.knownLaunchTasksExcluded.some((item) => /indexing approval/i.test(item)) &&
+    blindSpotConfig.manifestPath === "docs/knowledge-bank/data/blind-spot-controls-2026-07.json" &&
+    blindSpotActualSha256 === blindSpotConfig.approvedSha256 &&
+    blindSpotActualSha256 === BLIND_SPOT_CONTROL_REVIEW_LOCKS.manifestSha256 &&
+    blindSpotDocumentSha256 === BLIND_SPOT_CONTROL_REVIEW_LOCKS.documentSha256 &&
+    JSON.stringify(blindSpotConfig.controlIds) === JSON.stringify(expectedBlindSpotIds) &&
+    blindSpotControls.controls.length === expectedBlindSpotIds.length &&
+    new Set(blindSpotControls.controls.map((control) => control.id)).size === expectedBlindSpotIds.length &&
+    expectedBlindSpotIds.every((id) => blindSpotControlById.has(id)) &&
+    blindSpotShapeComplete &&
+    suite.hillClimb.antiGaming.includes("Never treat an instrumented blind spot as resolved.") &&
+    suite.hillClimb.antiGaming.includes("Never synthesize collaborator testimony, real-human usability results, funnel outcomes, or publication permissions.") &&
+    suite.hillClimb.antiGaming.includes("Never treat deterministic or LLM eval success as evidence of hiring impact.");
+
+  const humanCorroborationControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-HUMAN-CORROBORATION");
+    return control?.status === "open" &&
+      control.baseline?.governedCollaboratorNotes === actualCollaboratorNoteCount &&
+      actualCollaboratorNoteCount === 0 &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const populationDenominatorControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-POPULATION-DENOMINATOR");
+    return control?.status === "partially-controlled" &&
+      control.baseline?.governedPopulationReviewCriteria === 9 &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const collectiveReviewControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-COLLECTIVE-REVIEW");
+    return control?.status === "open" &&
+      control.baseline?.governedCollaboratorReviewRounds === 0 &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const recentOperationsControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-RECENT-OPERATIONS");
+    const priorityProofIds = control?.baseline?.priorityProofIds ?? [];
+    return control?.status === "partially-controlled" &&
+      JSON.stringify(priorityProofIds) === JSON.stringify([
+        "hje-modernization-stewardship",
+        "source-backed-team-memory-method",
+        "sunday-dinner-196-participation-infrastructure"
+      ]) &&
+      priorityProofIds.every((id) => proofClaims.some((proof) => proof.id === id)) &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const outcomeEvidenceControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-OUTCOME-EVIDENCE");
+    return control?.status === "partially-controlled" &&
+      JSON.stringify(control.baseline?.evidenceLevels) === JSON.stringify([
+        "activity",
+        "output",
+        "outcome",
+        "impact"
+      ]) &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const rolePositioningControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-ROLE-POSITIONING");
+    return control?.status === "partially-controlled" &&
+      JSON.stringify(control.baseline?.roleTracks) === JSON.stringify([
+        "technical project management",
+        "product operations",
+        "implementation"
+      ]) &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const hiringUsabilityControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-HIRING-USABILITY");
+    return control?.status === "open" &&
+      control.baseline?.governedHumanSessions === 0 &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const jobFunnelControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-JOB-FUNNEL");
+    return control?.status === "open" &&
+      control.baseline?.governedAggregatePeriods === 0 &&
+      control.baseline?.rawDataLocation === "private-outside-public-repo" &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const externalValidityControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-EXTERNAL-VALIDITY");
+    return control?.status === "open" &&
+      control.baseline?.governedRealHumanJudgeRuns === 0 &&
+      JSON.stringify(control.baseline?.internalEvidenceTypes) === JSON.stringify([
+        "deterministic checks",
+        "LLM judges",
+        "mutation tests"
+      ]) &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const visualEvidenceControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-VISUAL-EVIDENCE");
+    return control?.status === "partially-controlled" &&
+      JSON.stringify(control.baseline?.requiredDimensions) === JSON.stringify([
+        "rights",
+        "consent",
+        "provenance",
+        "caption",
+        "evidentiary-function"
+      ]) &&
+      blindSpotControlReviewLocked(control.id);
+  })();
+  const voiceControlComplete = blindSpotControlPlaneComplete && (() => {
+    const control = blindSpotControlById.get("BLIND-VOICE-HUMAN-STAKES");
+    return control?.status === "partially-controlled" &&
+      JSON.stringify(control.baseline?.requiredDimensions) === JSON.stringify([
+        "motive",
+        "relationship",
+        "learning",
+        "specificity"
+      ]) &&
+      blindSpotControlReviewLocked(control.id);
+  })();
 
   const kcTownHall = suite.pilot.kcTownHallCouncilFunding;
   const kcTownHallIntake = intakeById.get(kcTownHall.intakeId);
@@ -5256,6 +5447,83 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [nycacFacebookPostsComplete
         ? `All ${nycacFacebookPostRows.length} distinct posts exposed by the authenticated capture-date Page feed are reconciled across ${nycacFacebookPostUrlRows.length} cleaned off-Facebook routes, nine governed sources, overlapping mission and stakeholder classifications, and bounded displayed interactions; lifetime-export, shared-account authorship, incoming-engagement, collective-credit, privacy, and selective-projection limits remain explicit`
         : `NYC Artist Coalition Facebook post production failed: ${nycacFacebookPostFailedChecks.join(", ")}`]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-HUMAN-CORROBORATION",
+      score: score(humanCorroborationControlComplete),
+      evidence: [humanCorroborationControlComplete
+        ? `The zero-note first-hand collaborator baseline is explicit and a permissioned three-note, two-project-family protocol cannot be satisfied by AI review, participant memory, or an unanswered request`
+        : "Human corroboration control is missing its honest zero baseline, permission and attribution boundary, multi-project stopping rule, or anti-synthesis protection"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-DENOMINATOR",
+      score: score(populationDenominatorControlComplete),
+      evidence: [populationDenominatorControlComplete
+        ? "Nine existing population-review criteria are bounded by surface, account, capture date, denominator, and owner-export gaps; not recovered remains distinct from did not exist"
+        : "Population denominator control is missing its capture boundary, owner-export gap, lifetime-history limit, or not-recovered distinction"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-COLLECTIVE-REVIEW",
+      score: score(collectiveReviewControlComplete),
+      evidence: [collectiveReviewControlComplete
+        ? "The zero-round collaborator-review baseline, correction and dissent path, and prohibition on silence-as-approval remain explicit beside the existing collective-credit graph"
+        : "Collective review control is missing its honest baseline, correction or dissent path, non-response rule, or sole-credit boundary"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-RECENT-OPERATIONS",
+      score: score(recentOperationsControlComplete),
+      evidence: [recentOperationsControlComplete
+        ? "Three recent proof leads are identified while two end-to-end paid-delivery records remain the stopping target; proposals, methods, protected client records, and delivered work stay distinct"
+        : "Recent operations control is missing its governed proof leads, end-to-end delivery requirements, client-protection rule, or proposal-versus-delivery boundary"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-OUTCOMES",
+      score: score(outcomeEvidenceControlComplete),
+      evidence: [outcomeEvidenceControlComplete
+        ? "Activity, output, outcome, and impact remain separate evidence levels, with independent-source and time-horizon requirements and explicit social-metric and sole-causation limits"
+        : "Outcome control is missing an evidence level, independent-source requirement, time horizon, social-signal limit, or causal-attribution boundary"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-POSITIONING",
+      score: score(rolePositioningControlComplete),
+      evidence: [rolePositioningControlComplete
+        ? "Technical project management, product operations, and implementation each require a role-to-proof map that preserves canonical facts and awaits unfamiliar-reader validation"
+        : "Role positioning control is missing a target track, role-to-proof map, canonical-fact rule, or real-reader boundary"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-HIRING-USABILITY",
+      score: score(hiringUsabilityControlComplete),
+      evidence: [hiringUsabilityControlComplete
+        ? "The zero-session baseline remains explicit and the five-reader, two-role-family, three-task protocol rejects coaching and simulated human results"
+        : "Hiring usability control is missing its honest zero baseline, reader or task denominator, no-coaching rule, or anti-simulation boundary"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-JOB-FUNNEL",
+      score: score(jobFunnelControlComplete),
+      evidence: [jobFunnelControlComplete
+        ? "The zero-period public baseline, private raw-data boundary, de-identified aggregate method, funnel fields, and anti-causation rule are explicit"
+        : "Job-funnel control is missing its honest baseline, private raw-data location, required funnel fields, aggregate boundary, or anti-causation rule"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-EXTERNAL-VALIDITY",
+      score: score(externalValidityControlComplete),
+      evidence: [externalValidityControlComplete
+        ? "Deterministic checks, LLM judges, and mutation tests remain internal evidence; the zero-human-judge baseline and two-round external-review target cannot be passed by relabeling agent output"
+        : "External-validity control is missing its honest human-judge baseline, internal-evidence inventory, independent-human target, or no-relabeling rule"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-VISUAL-EVIDENCE",
+      score: score(visualEvidenceControlComplete),
+      evidence: [visualEvidenceControlComplete
+        ? "Rights, consent, provenance, caption, and evidentiary function are required for a three-project pilot; custody, visual drama, and archive presence grant neither proof nor permission"
+        : "Visual-evidence control is missing a required dimension, pilot denominator, custody boundary, self-interpretation rule, or publication-permission rule"]
+    },
+    {
+      criterionId: "KB-EVAL-BLIND-VOICE",
+      score: score(voiceControlComplete),
+      evidence: [voiceControlComplete
+        ? "Motive, relationship, learning, and specificity require Jamie's confirmation and dated or situated support; fabricated scenes, quotations, motives, and emotional states remain prohibited"
+        : "Voice control is missing a human-stakes dimension, author confirmation, situated-source requirement, or anti-fabrication boundary"]
     }
   ];
 
@@ -5414,6 +5682,33 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         reviewLocksMatch: nycacFacebookPostReviewLocksMatch,
         checks: nycacFacebookPostDiagnosticChecks,
         unsafeEditorialSentences: nycacFacebookPostUnsafeEditorialSentences
+      },
+      blindSpotControls: {
+        actualSha256: blindSpotActualSha256,
+        approvedSha256: blindSpotConfig.approvedSha256,
+        matches: blindSpotActualSha256 === blindSpotConfig.approvedSha256,
+        reviewLocksMatch: blindSpotActualSha256 === BLIND_SPOT_CONTROL_REVIEW_LOCKS.manifestSha256 &&
+          blindSpotDocumentSha256 === BLIND_SPOT_CONTROL_REVIEW_LOCKS.documentSha256,
+        documentSha256: blindSpotDocumentSha256,
+        controlReviewLocks: Object.fromEntries(expectedBlindSpotIds.map((id) => [
+          id,
+          blindSpotControlReviewLocked(id)
+        ])),
+        controlPlaneComplete: blindSpotControlPlaneComplete,
+        actualCollaboratorNoteCount,
+        checks: {
+          humanCorroborationControlComplete,
+          populationDenominatorControlComplete,
+          collectiveReviewControlComplete,
+          recentOperationsControlComplete,
+          outcomeEvidenceControlComplete,
+          rolePositioningControlComplete,
+          hiringUsabilityControlComplete,
+          jobFunnelControlComplete,
+          externalValidityControlComplete,
+          visualEvidenceControlComplete,
+          voiceControlComplete
+        }
       }
     },
     accepted: errors.length === 0 &&
