@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
+    "fingerprint": "26d8476507732055ccf09fb7752b5b57d4a5788c98783ec8086b4d2ebc225c65",
     "counts": {
       "entities": 38,
-      "intake": 151,
-      "sources": 274,
-      "sourceReadings": 274,
+      "intake": 152,
+      "sources": 275,
+      "sourceReadings": 275,
       "claims": 121,
       "researchTasks": 54,
-      "projectionDecisions": 97
+      "projectionDecisions": 98
     }
   },
   "judge": {
@@ -24,20 +24,16 @@
             "record": "intakeRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "INTAKE-PITCH-NTER-CHNG-2010"
+            "file": "apps/www/src/data/knowledge-bank/kansas-city-star-river-expedition-2026-07-16.ts",
+            "record": "INTAKE-KCSTAR-RIVER-EXPEDITION-2007"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-NYCARTC-MARCH-TRANSPARENCY-SEED"
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
-          },
-          {
-            "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "Corrections, contradictions, rejected claims, and superseded wording remain in the system."
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "intake-is-accounted-for"
           }
         ]
       },
@@ -46,20 +42,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "READ-PITCH-NTER-CHNG-2010"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "atomicPropositionSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "READ-VIMEO-NTER-CHNG-2011"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-RIVER-CHARLOTTE-STREET-2009"
+            "file": "apps/www/src/data/knowledge-bank/kansas-city-star-river-expedition-2026-07-16.ts",
+            "record": "READ-KCSTAR-RIVER-EXPEDITION-2007"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
+          },
+          {
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "source-readings-are-atomic-and-bounded"
           }
         ]
       },
@@ -68,24 +64,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
-          },
-          {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
+            "record": "CLM-RIVER-EXPEDITION-ORIGIN"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "CLM-RIVER-EXPEDITION-GULF-COMPLETION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "CLM-RIVER-EXPEDITION-ORGANIZER-2007"
           },
           {
             "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
-            "record": "NTER CHNG preserves participatory behavior and every recovered collaborator credit"
+            "record": "Kansas City Star river accession promotes agency while preserving collective and route limits"
+          },
+          {
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "claim-promotion-is-evidence-backed"
           }
         ]
       },
@@ -108,10 +104,6 @@
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "TASK-CALLSCRIPT-NYCARTC-ROLE-AND-CHRONOLOGY-CORROBORATION"
           }
         ]
       },
@@ -120,24 +112,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "DEC-PUBLISH-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "nter-chng-participatory-installation"
-          },
-          {
-            "file": "docs/knowledge-bank/projection-map.md",
-            "record": "NTER CHNG / America: Now and Here"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "DEC-DEFER-CALLSCRIPT-NYCARTC-PARTICIPATION-LINEAGE"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-RIVER-GREAT-ACCOMMODATIONS-DEFER"
+            "record": "DEC-RIVER-EXPEDITION-ORIGIN-PUBLISH-ABOUT"
+          },
+          {
+            "file": "scripts/generate-public-citations.mjs",
+            "record": "cannot enter the public registry without projected maturity"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/public-registry.json",
+            "record": "river-participatory-expedition"
           }
         ]
       },
@@ -146,24 +134,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/public.ts",
-            "record": "Metadata-only citation sources cannot expose an underlying URL"
+            "file": "apps/www/src/data/knowledge-bank/kansas-city-star-river-expedition-2026-07-16.ts",
+            "record": "ARCHIVE-KCSTAR-RIVER-2007-001"
+          },
+          {
+            "file": "scripts/generate-public-citations.mjs",
+            "record": "protectedLocatorId"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/public-registry.json",
+            "record": "SRC-KCSTAR-RIVER-EXPEDITION-2007"
+          },
+          {
+            "file": "scripts/tests/citations.test.mjs",
+            "record": "private evidence stays absent while metadata-only notes expose no archive"
           },
           {
             "file": "apps/www/src/components/citations/SourceNote.tsx",
-            "record": "if (source.visibility !== \"public\") return undefined;"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "SRC-PITCH-NTER-CHNG-2010"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "SRC-VIMEO-NTER-CHNG-2011"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"
+            "record": "source.visibility !== \"public\""
           }
         ]
       },
@@ -172,20 +160,20 @@
         "score": 4,
         "evidence": [
           {
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "composition: z.object"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-RIVER-EXPEDITION-ORIGIN"
+          },
+          {
             "file": "docs/knowledge-bank/chad-lens.md",
             "record": "Do not make the reader decode Jamie."
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
-          },
-          {
-            "file": "docs/knowledge-bank/projection-map.md",
-            "record": "Project `CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010` on `/about`"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+            "file": "apps/www/src/app/about/page.tsx",
+            "record": "river-participatory-expedition"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -212,5 +200,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh read-only review of committed state 08c1ffec found the knowledge lifecycle exceptionally explicit, traversable, defensible, and public-safe. The supplied deterministic report records 0/7 hard-gate failures and 0/4 quality gaps. The bounded change promotes only CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010 from public-ready reserve to a cited /about projection: its two public source relations, atomic readings, complete recovered collaborative credits, anti-claims, explicit publish decision, page plan, generated registry entry, and privacy boundaries preserve loss resistance, decomposition, defensibility, publication independence, safety, and future composability. Related NTER CHNG claims and unresolved execution or exhibition questions remain independently bounded or deferred. All three human gates remain pending."
+  "summary": "Fresh deterministic evaluation of committed HEAD 6a37127a3bfb984a48da42686e2445f15f977506 found 0 of 7 hard gates failing and 0 of 4 quality targets open. The Kansas City Star accession remains protected and metadata-only with no public URL; the close reading and linked claims distinguish Jamie's origin and participation evidence, collective crew credit for Libby Hendon and Laura Mattingly, in-progress Louisiana reporting, and a separate retrospective basis for later Gulf completion. The generated public registry strips the protected locator and media, and the About projection is separately approved from the deferred full case study. All human gates remain pending because no committed gate-specific confirmation by the named human owners was found."
 }

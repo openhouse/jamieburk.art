@@ -147,7 +147,8 @@ corroboration. The newspaper note renders without an external link.
 - `docs/knowledge-bank/sources.md`
 - `docs/knowledge-bank/projection-map.md`
 - `docs/knowledge-bank/research/kansas-city-star-river-expedition-2007.md`
-- eval assessment artifacts refreshed by the recursive hill-climb pass
+- `evals/launch-readiness/assessment.latest.json`
+- `evals/knowledge-lifecycle/assessment.latest.json`
 
 ## Recursive eval record
 
@@ -162,8 +163,37 @@ Baseline before this accession:
   completion confidence 3 of 4 because their remaining gates require human
   rights, reader, collaborator, and production decisions.
 
-Post-change verification and independent-judge results are recorded below once
-the branch is tested and the hill-climb cycle closes.
+Post-change verification:
+
+- citation tests: 10 of 10 passed;
+- launch-eval contract tests: 12 of 12 passed;
+- knowledge-lifecycle tests: 116 of 116 passed;
+- total focused tests: 138 of 138 passed;
+- full `npm run check`: passed, including citation validation, eval contracts,
+  type checking, linting, production build, knowledge-bank validation,
+  public-safety scanning, and route checks;
+- browser evaluation: zero failures across 14 routes at four viewports, with no
+  browser errors or horizontal overflow and with staging `noindex` preserved;
+- launch-readiness source eval: 13 of 13 hard gates passed and 2 of 2 quality
+  targets met;
+- independent launch judge: 93.5 of 100, with Chad, Margaret Morse, Warren
+  Sack, agency, collective credit, and public safety all at 4 of 4;
+- knowledge-lifecycle eval: 7 of 7 hard gates passed and 4 of 4 quality targets
+  met; and
+- independent knowledge-lifecycle judge: 100 of 100, with loss resistance,
+  source decomposition, claim defensibility, research direction, projection
+  discipline, public safety, and future composability all at 4 of 4.
+
+The first focused lifecycle-test run exposed three stale expectations created
+by the intentional claim maturation: one intake-link expectation and two tests
+that still assumed the river-origin claim was context-only and absent from the
+About page. Those tests were repaired to assert the new evidence and projection
+boundaries, then the complete focused and repository-wide checks passed.
+
+The launch assessment retains five pending human gates. The lifecycle
+assessment retains three pending human gates. No agent marked rights,
+collaborator permission, named-human reader validation, claim approval, or
+production authorization complete.
 
 ## Privacy, rights, and credit decisions
 
@@ -185,3 +215,10 @@ the branch is tested and the hill-climb cycle closes.
 - The broader release candidate still awaits the existing human gates for
   media rights, collaborator-sensitive credit, blind-reader review, claim
   corroboration where queued, and Jamie's production approval.
+
+## Published copy
+
+- GitHub file view:
+  <https://github.com/openhouse/jamieburk.art/blob/feature/evals-E/docs/knowledge-bank/research/kansas-city-star-river-expedition-2007.md>
+- Raw Markdown:
+  <https://raw.githubusercontent.com/openhouse/jamieburk.art/feature/evals-E/docs/knowledge-bank/research/kansas-city-star-river-expedition-2007.md>
