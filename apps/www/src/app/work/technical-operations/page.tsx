@@ -32,25 +32,6 @@ const proofMap = [
       "I translated released CouncilStat data into an independent resident-facing guidance prototype."
   },
   {
-    project: "WOWList",
-    proof:
-      "I created and operated a community event-distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
-  },
-  {
-    project: "196 / Sunday Dinner",
-    proof:
-      "I co-created onboarding, facilitation, hosting rhythms, and continuity practices for a recurring gathering."
-  },
-  {
-    project: "KC Spaces Fund",
-    proof:
-      "I built behind-the-scenes digital infrastructure for a collective 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
-  },
-  {
-    project: "KC Town Hall",
-    proof: "I co-led long-horizon project planning and public-benefit documentation through a municipal funding process."
-  },
-  {
     project: "Source-Backed Team Memory",
     proof:
       "I am developing a lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
@@ -77,6 +58,12 @@ export default function TechnicalOperationsPage() {
           planning rhythms, decision logs, action trackers, onboarding
           materials, documentation systems, launch support, and durable
           handoffs.
+        </p>
+        <p className="mt-4 leading-7 text-jb-ink/72">
+          I am looking for Technical Project Manager and Product Operations
+          roles where public-facing delivery depends on cross-functional
+          coordination, implementation discipline, source-aware decisions, and
+          clear operational memory.
         </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">

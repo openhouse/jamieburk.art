@@ -12,11 +12,13 @@ import { validateNYCACFacebookPosts } from
   "./lib/nycac-facebook-posts-validation.mjs";
 import { validatePersonalFacebookPosts } from
   "./lib/personal-facebook-posts-validation.mjs";
+import { validateBlindSpotEvals } from
+  "./lib/blind-spot-eval-validation.mjs";
 import { knowledgeBank } from
   "../apps/www/src/data/knowledge-bank/records.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v21/evals.json"), "utf8"));
+const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v22/evals.json"), "utf8"));
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const observationIndex = args.indexOf("--observations");
@@ -44,6 +46,15 @@ const sourceFiles = walk("apps/www/src").filter((file) => /\.(?:ts|tsx|md|mdx|js
 const sourceText = sourceFiles.map((file) => read(file)).join("\n");
 
 const deterministic = new Map();
+
+const blindSpotValidation = validateBlindSpotEvals();
+deterministic.set("BLINDSPOT-001", {
+  score: blindSpotValidation.passed ? 1 : 0,
+  passed: blindSpotValidation.passed,
+  evidence: blindSpotValidation.passed
+    ? [blindSpotValidation.evidence]
+    : blindSpotValidation.errors
+});
 
 const workSource = read("apps/www/src/data/work.ts");
 const fairRentStart = workSource.indexOf('slug: "fair-rent-nyc"');

@@ -3,9 +3,10 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { validateBlindSpotEvals } from "./lib/blind-spot-eval-validation.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suitePath = path.join(repoRoot, "evals/launch-readiness/v21/evals.json");
+const suitePath = path.join(repoRoot, "evals/launch-readiness/v22/evals.json");
 const suite = JSON.parse(readFileSync(suitePath, "utf8"));
 const failures = [];
 
@@ -60,6 +61,9 @@ for (const key of ["unitOfChange", "acceptWhen", "rejectWhen", "stopWhen"]) {
   requireValue(suite.hillClimb?.[key], `hillClimb.${key} is required`);
 }
 
+const blindSpotValidation = validateBlindSpotEvals();
+for (const error of blindSpotValidation.errors) failures.push(`blind spots: ${error}`);
+
 if (failures.length) {
   console.error("Launch-readiness eval contract failed:");
   for (const failure of failures) console.error(`- ${failure}`);
@@ -67,3 +71,4 @@ if (failures.length) {
 }
 
 console.log(`Launch-readiness eval contract passed: ${suite.criteria.length} criteria, ${suite.protectedInvariants.length} protected invariants.`);
+console.log(blindSpotValidation.evidence);

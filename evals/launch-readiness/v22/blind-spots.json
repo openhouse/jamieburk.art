@@ -1,0 +1,144 @@
+{
+  "suiteVersion": 22,
+  "reviewedAt": "2026-07-16",
+  "policy": {
+    "principle": "A blind spot is tracked until the required observer supplies the required evidence; creating a criterion or template does not resolve it.",
+    "agentStopBoundary": "An agent must stop before claiming human comprehension, collaborator agreement, rights clearance, deployment success, or publication approval."
+  },
+  "protocolFiles": [
+    "evals/launch-readiness/v22/blind-spot-protocol.md",
+    "evals/launch-readiness/v22/editorial-selection-register.md",
+    "evals/launch-readiness/v22/reader-study-template.json",
+    "evals/launch-readiness/v22/archive-bias-audit.md",
+    "evals/launch-readiness/v22/outcome-language-audit.md",
+    "evals/launch-readiness/v22/current-fit-map.md",
+    "evals/launch-readiness/v22/collaborator-review-template.md",
+    "evals/launch-readiness/v22/holdout-audit-template.json",
+    "evals/launch-readiness/v22/maintenance-scorecard.md",
+    "evals/launch-readiness/v22/application-packet-template.md",
+    "evals/launch-readiness/v22/hill-climb-log.md"
+  ],
+  "blindSpots": [
+    {
+      "id": "BLIND-SELECTION",
+      "label": "Knowledge-bank depth can overwhelm editorial selection",
+      "risk": "Archive completeness may leak into public composition and make every project appear equally important.",
+      "criterionIds": ["SELECT-001", "EDITORIAL-001"],
+      "requiredObserver": "semantic",
+      "currentState": "prepared",
+      "failureSignal": "A grader cannot name the small proof set or explains the site as a catalog of projects.",
+      "nextEvidence": "Two independent semantic reviews of the homepage, Technical Operations page, and editorial selection register.",
+      "stopBoundary": "Do not delete knowledge-bank records or conceal relevant work merely to reduce the public count."
+    },
+    {
+      "id": "BLIND-AUDIENCE",
+      "label": "One generic public may substitute for a named application audience",
+      "risk": "A broadly accurate portfolio may not answer the operating questions of a particular hiring team.",
+      "criterionIds": ["APPLICATION-001", "CLARITY-001"],
+      "requiredObserver": "human",
+      "currentState": "human-required",
+      "failureSignal": "An application packet is generic, overloaded, or cannot explain why each included case belongs.",
+      "nextEvidence": "Jamie-approved packet for one named role, followed by a target-reader review.",
+      "stopBoundary": "An agent may draft a packet but cannot approve the role-specific selection or final submission."
+    },
+    {
+      "id": "BLIND-HUMAN-READER",
+      "label": "LLM clarity judgments may not predict hiring-reader behavior",
+      "risk": "Rubric-compliant prose may still fail human comprehension, trust, recall, or action.",
+      "criterionIds": ["READER-001"],
+      "requiredObserver": "human",
+      "currentState": "human-required",
+      "failureSignal": "Fewer than four of five unprimed readers identify the role, contribution, two proofs, and next action.",
+      "nextEvidence": "Five coded, unprimed 30-second reader sessions using the repository template.",
+      "stopBoundary": "An agent may not fabricate, simulate, or relabel LLM outputs as human-reader observations."
+    },
+    {
+      "id": "BLIND-VISUAL-PROOF",
+      "label": "Polished prose may substitute for decisive visible evidence",
+      "risk": "Readers may see descriptions of proof without understanding the actual work product or embodied practice.",
+      "criterionIds": ["PROOF-001"],
+      "requiredObserver": "browser",
+      "currentState": "rights-required",
+      "failureSignal": "Priority cases rely on decorative imagery, press captures, or illegible documents instead of work-product evidence.",
+      "nextEvidence": "Rights-cleared artifact review at mobile and desktop widths with captions and evidence-scope checks.",
+      "stopBoundary": "An agent cannot clear rights; do not publish unapproved photographs, private documents, or representative images as event-specific proof."
+    },
+    {
+      "id": "BLIND-ARCHIVE-BIAS",
+      "label": "Recoverability may become a proxy for professional importance",
+      "risk": "Digitally abundant campaigns may eclipse quiet facilitation, maintenance, repair, failure, or less-recorded collaboration.",
+      "criterionIds": ["ARCHBIAS-001", "DECOMP-001"],
+      "requiredObserver": "semantic",
+      "currentState": "prepared",
+      "failureSignal": "Public selection tracks source volume, platform metrics, or press quantity more closely than role relevance and evidence quality.",
+      "nextEvidence": "Independent review of the archive-bias audit, public selection rationale, and open research inquiries.",
+      "stopBoundary": "Do not invent under-recorded work, upgrade memory to corroboration, or downgrade strong evidence merely to balance the archive."
+    },
+    {
+      "id": "BLIND-CONSEQUENCE",
+      "label": "Activity and output may remain clearer than bounded consequence",
+      "risk": "Case studies may prove effort without showing what became usable or may overreach from participation to impact.",
+      "criterionIds": ["CONSEQUENCE-001", "CHAD-001"],
+      "requiredObserver": "semantic",
+      "currentState": "prepared",
+      "failureSignal": "A grader cannot distinguish Jamie's action, the output, observed use, institutional action, and collective outcome.",
+      "nextEvidence": "Two independent reviews of the outcome-language audit and priority case-study prose.",
+      "stopBoundary": "Do not use reach, engagement, adoption, or policy causality beyond the canonical evidence relationship."
+    },
+    {
+      "id": "BLIND-CURRENT-RELEVANCE",
+      "label": "Historical range may obscure the current and future contribution",
+      "risk": "The portfolio may read as an archive of civic and cultural history rather than evidence for present Technical Project Management and Product Operations work.",
+      "criterionIds": ["CURRENT-001", "CLARITY-001"],
+      "requiredObserver": "semantic",
+      "currentState": "prepared",
+      "failureSignal": "A grader can summarize past projects but cannot name the roles, environments, or next contribution Jamie is prepared for now.",
+      "nextEvidence": "Independent review of the homepage, Technical Operations page, current-fit map, and recent Source-Backed Team Memory work.",
+      "stopBoundary": "Do not recast historical work in unsupported current terminology or imply dormant projects remain active."
+    },
+    {
+      "id": "BLIND-COLLABORATOR-TRUTH",
+      "label": "Archival traces may not capture the social truth of collective work",
+      "risk": "Role division, disagreement, credit, and consequence may remain uncertain without lived collaborator review.",
+      "criterionIds": ["COLLAB-001", "APPROVAL-001"],
+      "requiredObserver": "human",
+      "currentState": "human-required",
+      "failureSignal": "A collaborator-sensitive role claim or asset is public without an explicit disposition or permission record.",
+      "nextEvidence": "Coded collaborator review outcomes and approval-register updates; private replies remain outside the repository.",
+      "stopBoundary": "An agent cannot infer consent, pressure participation, or present an AI archival note as eyewitness testimony."
+    },
+    {
+      "id": "BLIND-RUBRIC-OVERFITTING",
+      "label": "Recursive optimization may overfit the known rubric",
+      "risk": "The portfolio can become highly compliant while an important unmodeled failure remains invisible.",
+      "criterionIds": ["HOLDOUT-001"],
+      "requiredObserver": "human",
+      "currentState": "human-required",
+      "failureSignal": "No unprimed evaluator has looked for omitted problems, or holdout findings receive no disposition.",
+      "nextEvidence": "One open-ended review by an evaluator who has not seen the criterion list, followed by materiality and deduplication review.",
+      "stopBoundary": "An agent cannot serve as the independent human holdout; do not reveal the rubric before the open-ended pass or add every suggestion as a new criterion."
+    },
+    {
+      "id": "BLIND-MAINTAINABILITY",
+      "label": "Repository depth may create disproportionate maintenance burden",
+      "risk": "Version growth, duplicate checks, stale reviews, and competing truth stores can make safe updates too expensive for future contributors.",
+      "criterionIds": ["MAINTAIN-001"],
+      "requiredObserver": "semantic",
+      "currentState": "prepared",
+      "failureSignal": "A new contributor cannot identify the current suite, canonical claim path, intake workflow, or release command.",
+      "nextEvidence": "Independent newcomer review of AGENTS.md, the v22 README, and the maintenance scorecard.",
+      "stopBoundary": "Do not erase historical audit evidence or create a second canonical store in the name of simplicity."
+    },
+    {
+      "id": "BLIND-HUMAN-APPROVAL",
+      "label": "Technical readiness may be mistaken for publication consent",
+      "risk": "Passing checks or merging code may be treated as approval of metrics, assets, collaborator-sensitive material, contact behavior, or production launch.",
+      "criterionIds": ["APPROVAL-001", "RELEASE-001"],
+      "requiredObserver": "human",
+      "currentState": "human-required",
+      "failureSignal": "An approval is missing, inferred, stale, or not tied to the reviewed commit.",
+      "nextEvidence": "Jamie-approved launch register and, where needed, explicit collaborator or rights-holder permission.",
+      "stopBoundary": "An agent cannot approve publication, rights, collaborator use, phone behavior, or production deployment."
+    }
+  ]
+}

@@ -21,19 +21,9 @@ const startHereLinks = [
     note: "How I coordinate technical delivery, product operations, implementation, and durable handoffs."
   },
   {
-    href: "/work/harry-j-epstein",
-    label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
-  },
-  {
-    href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
-  },
-  {
-    href: "/work/callnyc",
-    label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
+    href: "/work",
+    label: "Selected work",
+    note: "Case studies across business operations, civic technology, coalition systems, and community infrastructure."
   },
   {
     href: "/resume",
@@ -54,9 +44,8 @@ export default function HomePage() {
               Quick path through the portfolio
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              Choose a starting point based on the work you want to understand:
-              technical delivery, business operations, public systems, or my
-              resume.
+              Start with my operating approach, browse selected case studies,
+              or open the resume for an application-ready summary.
             </p>
           </div>
           <div className="grid gap-3">
