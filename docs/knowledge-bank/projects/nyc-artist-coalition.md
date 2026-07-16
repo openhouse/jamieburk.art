@@ -34,6 +34,19 @@ requiring MARCH reporting and adding notice and response provisions. Gothamist
 reported that the City dismantled MARCH in December 2023 while other interagency
 inspections continued.
 
+Official Council and DCLA records now also clarify the coalition's institutional
+value. In May 2017, Commissioner Tom Finkelpearl named NYC Artist Coalition in
+Council testimony while explaining the value of direct public feedback and
+common-cause collaboration. City-hosted records show coalition participants
+continuing from the January DCLA meeting into recommendations for partnership
+with informal community-driven spaces. In September 2017, Jamie supplied lived
+and operational Cabaret Law testimony and Rafael Espinal thanked him for his
+story and advocacy. In March 2019, Espinal acknowledged a multi-year working
+relationship with the coalition, and Jamie offered specific public-data and
+online-tool recommendations for cultural-space legality, safety, and
+compliance. See the bounded
+[government-interface record](nyc-artist-coalition-government-value.md).
+
 ## Shared public identity
 
 The [full population-accounted @NYCArtC pass](../runs/2026-07-15-nycartc-x-full-population.md)

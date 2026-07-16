@@ -37,6 +37,13 @@ Approved public artifact examples for this launch pass include:
 - KCUR's 2016 8th Street Tunnel report.
 - NYC Artist Coalition and peer public records attributing advocacy statements
   and Cabaret Law work.
+- New York City Council transcripts documenting Tom Finkelpearl's May 2017
+  reference to NYC Artist Coalition, Jamie's September 2017 Cabaret Law
+  testimony and Espinal's response, and Espinal's March 2019 acknowledgment of
+  sustained coalition collaboration.
+- DCLA and CreateNYC records documenting NYC Artist Coalition as a
+  public-engagement outcome and preserving its recommendations for partnership
+  with informal community-driven cultural spaces.
 - KC Town Hall and Jimmy Fitzner public records documenting shared tire-pickup
   participation.
 - Brooklyn Daily Eagle's 2017 Office of Nightlife report.

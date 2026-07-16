@@ -174,3 +174,13 @@ read of the public January 2017 DCLA event discussion. Its
 preserves exact source-level counts and causal boundaries without publishing
 participant records, raw database rows, authenticated state, or a new website
 claim before collective-credit review.
+
+The [NYC Artist Coalition government-value pass](runs/2026-07-15-nycac-government-value.md)
+adds six official City records and a bounded institutional analysis of why the
+coalition's participation, recommendations, testimony, and implementation
+feedback were useful to DCLA, the New York City Council, and Rafael Espinal.
+Its [project note](projects/nyc-artist-coalition-government-value.md) and
+[public-safe corpus](corpora/nycac-government-value-2026-07-15.json) distinguish
+direct evidence from interpretation, preserve one explicit recovered
+Finkelpearl reference without calling the transcript census complete, and hold
+new website projection for collective-credit review.
