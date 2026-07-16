@@ -1138,7 +1138,8 @@ test("retrieval composes cross-project palettes by time, entity, evidence, prior
     "PRJ-URBANHERM-PUBLIC-RECORD",
     "PRJ-WATERWAYS-PARTICIPATORY-ART",
     "PRJ-GREAT-ACCOMMODATIONS",
-    "PRJ-OPEN-HOUSE"
+    "PRJ-OPEN-HOUSE",
+    "PRJ-UCSC-MEDIA-SYSTEMS-PRACTICE"
   ]);
   assert.ok(earlyPractice.candidates.every((candidate) => candidate.observationIds.some((id) => relationshipRole(knowledgeLifecycle.observations.find((item) => item.id === id), candidate.id) === "direct-support")));
 

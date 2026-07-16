@@ -20,10 +20,12 @@
     "apps/www/src/data/knowledge-bank/personal-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/personal-facebook-posts.ts",
     "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/knowledge-bank/ucsc-lenses-lifecycle.ts",
+    "apps/www/src/data/knowledge-bank/ucsc-lenses.ts",
     "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "7fcfd98953186eaa8e70f4331b41f7c1fabcf73c853f67605de3d86a339e01eb",
+  "sourceSha256": "58d979c6bfe4eb96d0433f9edaa797f5781634ebc6052a6139378d089f88aba0",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -98,6 +100,18 @@
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/contact-mobile-320.png",
       "artifactSha256": "223d1e89e9e06445a13c04168915e09483f5725888a284d73299ab10dc54d223"
+    },
+    {
+      "route": "/about",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/about-desktop.png",
+      "artifactSha256": "457b8f8d25a10cbef104dc59d3272133dfe12dbe09c721d53fa60a576ed7f178"
+    },
+    {
+      "route": "/about",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/about-mobile-320.png",
+      "artifactSha256": "a2afbd4f8b7eac72bc6928cbd4386a31e7d715082c68dae3e94f4e6920d7a4e4"
     },
     {
       "route": "/work/harry-j-epstein",

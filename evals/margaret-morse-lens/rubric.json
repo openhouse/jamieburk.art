@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "margaret-morse-lens-v1",
+  "title": "Prof Margaret Morse Lens eval",
+  "objective": "Preserve the embodied, artistic, relational, and media-aware intelligence that explains why Jamie's systems differ from conventional administration, while keeping the hiring path clear and public-safe.",
+  "decision": "Does the portfolio retain a legible threshold where Jamie's artistic, civic, technical, and social practices remain connected?",
+  "audiences": [
+    "hiring managers",
+    "creative-technology readers",
+    "public-sector readers",
+    "cultural practitioners",
+    "collaborators"
+  ],
+  "recommendations": ["iterate", "criterion-met"],
+  "passingRecommendations": ["criterion-met"],
+  "stopCondition": {
+    "allDeterministicGatesPass": true,
+    "weightedScoreAtLeast": 80,
+    "everyCriterionAtLeast": 4,
+    "criticalCriteriaAtLeast": 4,
+    "stablePassingRuns": 2,
+    "explicitHumanApprovalRequiredForProduction": true
+  },
+  "scoreScale": {
+    "1": "The portfolio erases the artistic and relational practice or turns it into unsupported mystique.",
+    "2": "Artistic history appears as biography or decoration but does not explain Jamie's present method.",
+    "3": "The connection is inferable, but operational utility still flattens embodied inquiry, participation, hospitality, attention, or place.",
+    "4": "A first-pass reader can see how embodied artistic inquiry informs Jamie's humane systems practice without losing hiring clarity.",
+    "5": "The connection is memorable and exact: artistic, civic, technical, and social practices illuminate one another while evidence, consent, and reader effort remain well governed."
+  },
+  "deterministicChecks": [
+    {
+      "id": "margaret-morse-lens-contract",
+      "description": "The portfolio preserves a public-safe artistic-systems threshold and the knowledge bank records its evidence and limits.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:margaret-morse-lens"
+    },
+    {
+      "id": "knowledge-bank-valid",
+      "description": "The artistic-method framing remains no stronger than its source basis.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run knowledge-bank"
+    },
+    {
+      "id": "public-safety-valid",
+      "description": "Narrative evaluations and correspondence do not expose student identifiers, private contact data, or raw private records.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run public-safety"
+    },
+    {
+      "id": "production-preflight",
+      "description": "The Margaret Morse Lens revision passes the complete production preflight.",
+      "profiles": ["release"],
+      "type": "command",
+      "command": "npm run preflight:production"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "margaret-morse-lens",
+      "name": "Prof Margaret Morse Lens",
+      "weight": 100,
+      "minimumScore": 4,
+      "critical": true,
+      "stewards": ["Prof Margaret Morse", "Jamie Burkart", "Helen Nissenbaum", "Chad Berkowitz"],
+      "question": "Can a reader see that Jamie's operating practice grows from embodied inquiry, attention, hospitality, participation, media awareness, and the art/life continuum, rather than reading him only as an efficiency-producing administrator?",
+      "passDefinition": "The About page preserves one concise threshold connecting artistic, civic, technical, and social practice; selected projects show people inhabiting and shaping systems; the site acknowledges value beyond organizational efficiency; and the source layer preserves media archaeology, performative inquiry, collaboration, consent, and public-access boundaries without turning private evaluations into testimonials.",
+      "dimensions": [
+        "embodied-inquiry",
+        "art-life-continuity",
+        "hospitality-participation",
+        "media-memory-attention",
+        "irreducible-human-value",
+        "accessible-public-face"
+      ],
+      "dimensionFields": [
+        "embodiedInquiry",
+        "artLifeContinuity",
+        "hospitalityParticipation",
+        "mediaMemoryAttention",
+        "irreducibleHumanValue",
+        "accessiblePublicFace"
+      ],
+      "minimumEvidence": 6,
+      "evidenceToInspect": [
+        "About page practice threshold",
+        "196 / Sunday Dinner case study",
+        "NYC Artist Coalition / FairRentNYC case study",
+        "WOW List case study",
+        "Open House source and claim records",
+        "Margaret Morse Lens knowledge-bank note"
+      ],
+      "repairPolicy": "Repair the smallest public threshold that restores continuity. Prefer a precise present-method statement over a retrospective survey; keep detailed history and source limits in the knowledge bank.",
+      "antiGaming": "Do not pass by adding vague creativity language, publishing private correspondence, using praise as proof of outcomes, romanticizing precarity, erasing collaborators, or forcing every project to perform every artistic dimension."
+    }
+  ]
+}

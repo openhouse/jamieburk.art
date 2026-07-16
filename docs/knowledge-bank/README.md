@@ -74,6 +74,15 @@ visual rights, source maturation, outcome evidence, and audience-specific
 application briefs. Run `npm run evals:blind-spots` to verify that unresolved
 external work remains explicit rather than being converted into false closure.
 
+The [Prof Margaret Morse Lens](margaret-morse-lens.md) preserves embodied
+inquiry, art/life continuity, hospitality, attention, and human value without
+turning the hiring path into a retrospective. The
+[Prof Warren Sack Lens](warren-sack-lens.md) tests recursive social inference,
+source-backed reasoning, theory-to-prototype movement, interfaces for action,
+and collective architecture. Run
+`npm run eval:margaret-morse-lens -- --profile fast` and
+`npm run eval:warren-sack-lens -- --profile fast` while editing.
+
 The [July 13 ten-source ingestion](research/2026-07-13-ten-source-ingestion.md)
 shows how new sources become observations, bounded claims, research questions,
 and selective exact-surface projections.

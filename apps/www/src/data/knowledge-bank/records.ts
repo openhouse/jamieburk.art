@@ -60,9 +60,15 @@ import {
   wowlistFacebookPostResearchInquiries,
   wowlistFacebookPostSources
 } from "./wowlistFacebookPosts.ts";
+import {
+  ucscLensClaims,
+  ucscLensResearchInquiries,
+  ucscLensSources
+} from "./ucsc-lenses.ts";
 
 const knowledgeBankInput = {
   sources: [
+    ...ucscLensSources,
     ...campaignPressIndexSources,
     ...campaignPressArticleSources,
     ...socialArchiveSources,
@@ -481,6 +487,9 @@ const knowledgeBankInput = {
       accessedAt: "2026-07-12",
       metadataVerifiedAt: "2026-07-12",
       metadataVerifiedBy: "Codex live-source review",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-16",
+      contentReviewedBy: "Codex supplied-PDF and live-source review",
       canonicalUrl: "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
       preferredPublicUrl: "canonical",
       publicCitation: "Good Times Santa Cruz, 'Open House,' June 28, 2006.",
@@ -1331,6 +1340,7 @@ const knowledgeBankInput = {
   ],
   sourceCollections: campaignPressCollections,
   claims: [
+    ...ucscLensClaims,
     ...dclaCouncilBridgeClaims,
     ...socialArchiveClaims,
     ...kcTownHallSocialCorpus.claims,
@@ -1721,6 +1731,7 @@ const knowledgeBankInput = {
     }
   ],
   researchInquiries: [
+    ...ucscLensResearchInquiries,
     ...dclaCouncilBridgeResearchInquiries,
     {
       id: "INQ-HJE-REVENUE-GROWTH-CORROBORATION-2026",
