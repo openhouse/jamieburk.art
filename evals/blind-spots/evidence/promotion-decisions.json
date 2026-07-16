@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "candidate": "sha256:c7b15c81b4c0cc1f5b1b46c22159492a21eda21da382f6f1372051faa4c10bce",
-  "reviewedAt": "2026-07-15",
+  "candidate": "sha256:eb3fedaab32554f814331aa2dd3aa016cc46a3e641e5144849897f38cb920a54",
+  "reviewedAt": "2026-07-16",
   "reviewedBy": [
     "Codex editorial review using Chad's lens"
   ],
@@ -114,6 +114,24 @@
       "decision": "not-for-current-purpose",
       "rationale": "The breakout wording is useful chronology but less important than the already selected independent product and public-data story.",
       "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE",
+      "decision": "promote",
+      "rationale": "Independent contemporaneous chronology and collective crew credit materially strengthen a future Water Publics composition without requiring immediate publication.",
+      "reviewedAt": "2026-07-16"
+    },
+    {
+      "claimId": "CLM-WATER-RAFT-RECYCLED-BICYCLE-DESIGN",
+      "decision": "promote",
+      "rationale": "The built artifact makes Jamie's creative-technical practice legible, provided the composition preserves collective labor and waits for rights-approved visual evidence.",
+      "reviewedAt": "2026-07-16"
+    },
+    {
+      "claimId": "CLM-WATER-RAFT-CIVIC-PREMISE",
+      "decision": "defer",
+      "rationale": "The attributed civic premise should be composed with the route, artifact, collaborators, and later participatory river practice so it does not become an unsupported impact claim.",
+      "reviewedAt": "2026-07-16"
     },
     {
       "claimId": "CLM-WATER-RAFT-ORIGINATION",

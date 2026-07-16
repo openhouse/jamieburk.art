@@ -228,6 +228,17 @@ Ask:
     DCLA event relationship, and March coalition-meeting route while keeping
     Jamie's exact authorship, facilitation, account operation, and founding
     share open to collaborator corroboration?
+74. Does the Kansas City Star source remain bibliographic metadata only, behind
+    an opaque protected locator, with the newspaper pages, credited photographs,
+    reporter contact details, and private filesystem location excluded from the
+    public repository?
+75. Do the 2007 Kansas City Star and Pitch reports support a three-person
+    mid-voyage chronology beyond 1,000 miles without being converted into proof
+    of later Gulf completion, uninterrupted travel, or sole work by Jamie?
+76. Does the recycled bicycle-powered raft remain a collective artifact, and
+    does Jamie's attributed river premise remain distinct from engineering
+    certification, measured civic impact, representation of river communities,
+    or institutional endorsement?
 
 Return JSON with:
 

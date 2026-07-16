@@ -46,7 +46,52 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie completed the journey alone; the article documents every stage and participant.
 **Protected boundaries:** Private route records, participant contact information, and unreviewed photographs remain outside the public repo.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-15
+**Last reviewed:** 2026-07-16
+
+## water-raft-contemporaneous-voyage - Collective mid-voyage record
+
+**Status:** Mature but unused
+**Support level:** Confirmed with boundary
+**Evidence class:** Contemporaneous front-page reporting / corroborating published article
+**Public wording:** Contemporaneous reporting documented Jamie Burkart, Libby Hendon, and Laura Mattingly more than 1,000 miles into their collective 2007 raft journey from Kansas City toward the lower Mississippi.
+**Detailed public-safe wording:** On November 15, 2007, The Kansas City Star reported the three-person crew south of Baton Rouge after passing the 1,000-mile marker; The Pitch independently reported their July 21 Kaw Point departure, travel beyond 1,000 miles, Coast Guard interruption, and Vicksburg repair period.
+**Where to project:** Future water-publics case study or archive note after editorial selection.
+**Why it matters:** Supplies contemporaneous, independent chronology and collective credit for a distinctive long-distance undertaking.
+**Guardrail:** This is a mid-voyage snapshot. The three named travelers were the crew at the reported stage, not necessarily every participant in the project's complete history.
+**Do not say:** The Star article proves Gulf completion; Jamie traveled alone; the sources provide a complete uninterrupted voyage log.
+**Protected boundaries:** The locally preserved newspaper reproduction and credited photographs remain outside the public repo.
+**Review owner:** Jamie / source-rights review
+**Last reviewed:** 2026-07-16
+
+## water-raft-recycled-bicycle-design - Collective craft implementation
+
+**Status:** Mature but unused
+**Support level:** Confirmed with boundary
+**Evidence class:** Contemporaneous published reporting
+**Public wording:** Contemporaneous reporting described the crew's roughly 12-by-13-foot raft as powered by two bicycles linked to a paddlewheel and assembled from discarded and reused materials.
+**Detailed public-safe wording:** The Kansas City Star described three weeks of construction using discarded building remnants, civic refuse, and reused syrup drums; The Pitch independently corroborates the recycled-material construction.
+**Where to project:** Future water-publics case study, artifact caption, or creative-technical-systems chronology after visual and rights review.
+**Why it matters:** Makes the project's built technical apparatus legible without reducing it to an atmospheric adventure story.
+**Guardrail:** The sources describe the collective craft and do not allocate every design, fabrication, repair, or operating task among crew and supporters.
+**Do not say:** Jamie alone designed and built the raft; the newspaper dimensions constitute an engineering certification.
+**Protected boundaries:** Unreviewed plans, construction records, and newspaper or participant photographs remain outside the public repo.
+**Review owner:** Jamie / collaborator and visual-rights review
+**Last reviewed:** 2026-07-16
+
+## water-raft-civic-premise - River as civic and cultural connection
+
+**Status:** Mature but unused
+**Support level:** Confirmed with attribution and boundary
+**Evidence class:** Contemporaneous published interview
+**Public wording:** The Kansas City Star quoted Jamie describing the river as an overlooked civic space and imagining that river travel could awaken cultural connection between Kansas City's West Bottoms and Delta towns.
+**Detailed public-safe wording:** The article preserves Jamie's project premise that the river was often experienced in Kansas City as a dividing line or industrial corridor, while the voyage could make relationships among river communities more perceptible.
+**Where to project:** Future water-publics case study or About-page creative-practice context if the project is selected.
+**Why it matters:** Connects the physical artifact and journey to Jamie's continuing practice of making hidden civic relationships visible and participatory.
+**Guardrail:** Preserve attribution and distinguish an artistic-civic premise from measured community impact or representation of river residents.
+**Do not say:** The voyage transformed every community it encountered; Jamie spoke for West Bottoms or Delta residents; The Star endorsed the interpretation.
+**Protected boundaries:** Full newspaper pages, photographs, private route records, and participant correspondence remain outside the public repo.
+**Review owner:** Jamie / editorial review
+**Last reviewed:** 2026-07-16
 
 ## nter-chng-working-artifacts - Restaging plan and social-information-space framing
 

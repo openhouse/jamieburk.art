@@ -57,6 +57,8 @@ note](research/kc-town-hall-phase-one-neighborhood-stewardship-2018-2022.md).
 The July 13, 2026 lifecycle run closely reviewed:
 
 - [The Pitch: When Artists Turn Huck Finn](https://www.thepitchkc.com/when-artists-turn-huck-finn/), supporting Jamie's origination of the experiential raft project and its Kansas City/Missouri River premise, but not the complete later route.
+- Darryl Levings, *In the name of art, go with the flow*, The Kansas City Star, November 15, 2007, front page and A4. A locally preserved reproduction supports contemporaneous crew, route, distance, craft, origination, and attributed civic-premise claims. Only bibliographic metadata is public; the newspaper pages and photographs remain protected.
+- [The Pitch: Artists Turned Huck Finn, Part III](https://www.thepitchkc.com/artists-turned-huck-finn-part-iii/), corroborating the collective crew, July 21 Kaw Point departure, recycled-material construction, travel beyond 1,000 miles, Coast Guard interruption, and Vicksburg repair context without establishing Gulf completion.
 - [Charlotte Street: Great Accommodations](https://charlottestreet.org/event/great-accommodations-with-jamie-burkart-imagining-lifestyles-for-cities-on-the-water/), supporting Jamie's participatory river-city program and preserving his attributed account of the earlier raft journey.
 - [Good Times: Open House](https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html), supporting Jamie's initiating and facilitation role in a ten-day communal gallery experiment.
 - [Gothamist: DIY Venues Demand Repeal](https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law), supporting Jamie's fire-code study groups, coalition affiliation, and public call for full Cabaret Law repeal.
@@ -274,6 +276,13 @@ The source pass also promoted Carolyn Szczepanski's 2009 Pitch follow-up on
 Great Accommodations. That independent report supports collective Gulf
 completion and a four-month duration for the raft journey while preserving the
 crew and route-log boundaries.
+
+The July 16, 2026 water-publics pass added a close reading of The Kansas City
+Star's November 15, 2007 front-page report and recovered The Pitch's live
+November 12 update. The Star artifact is represented as public metadata with an
+opaque protected locator because no stable public article URL was recovered and
+the newspaper pages and photographs are not cleared for republication. See the
+[archival-production note](research/kansas-city-star-raft-archival-production-2007.md).
 
 ### Firsthand / Collaborator Context
 

@@ -1,8 +1,8 @@
 {
-  "judgeId": "public-safety-composition-2026-07-15-e",
+  "judgeId": "public-safety-composition-2026-07-16-star",
   "lens": "public-safety-composition",
-  "candidate": "sha256:57eee80cb9ae4ece78acc19bb127b4cc0ec0d9f4535584b1941a580979c7ff51",
-  "contract": "sha256:79a912e38917fca1ceabecc00a786c10da42ee18680b88edc1b8fb294f8a2461",
+  "candidate": "sha256:d684e41f67ff31f16ce38e3e8778b808378331cb7a0533be0003fb75d4f0b120",
+  "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,41 +17,53 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "All three new fragments have stable intake IDs, explicit promoted dispositions, linked sources, claims, and inquiries. The database and workbook intakes remain local-private behind opaque protected locator IDs, while the Call Script intake contains only its public Facebook URL."
+      "observation": "The newspaper artifact and independently recovered Pitch article have stable intake and source identities. The newspaper is represented through bibliographic metadata and an opaque protected locator; the public article retains its verified live URL."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The database, workbook, and Call Script records each identify review depth, provenance, support, and non-support. The private sources explicitly refuse attendance, reach, conversion, impact, authorship, account-operation, and participant-publication inferences; the public Call Script source refuses sole authorship, individual post attribution, attendance, outcomes, and founding claims."
+      "observation": "The newspaper record separately identifies support for project origination, three named crew members at the reported stage, mid-voyage chronology, craft characteristics, and Jamie's attributed civic premise. Its boundaries reject Gulf completion, uninterrupted travel, sole credit, a complete labor roster, and republication rights."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "The contemporaneous Pitch source independently corroborates the collective crew, departure, recycled-material construction, distance, interruption, and repair context without establishing Gulf completion, a complete roster, uninterrupted travel, or sole work by Jamie."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "System-scale counts, tag intersections, workbook aggregates, and the cross-project bridge remain four separately evaluable claims. Question 71's database counts and intersections are not combined with users or impact, and question 72's column, mark, and row counts remain distinct from completed-event and attendance conclusions."
+      "observation": "Origination, the three-person mid-voyage chronology, the recycled bicycle-powered artifact, Jamie's attributed civic premise, the later voyage account, and retrospective Gulf completion remain separate claims."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The Call Script bridge resolves to three distinct evidence roles: direct public support for the popular.vote link and March meeting route, direct public support for the January DCLA event relationship, and non-renderable private support for the tag graph. The workbook and database claims resolve only to their respective private aggregate sources."
+      "observation": "Each new claim resolves to a reviewed source through a specific evidence relationship and locator. Later Gulf completion remains directly supported by the separately reviewed 2009 Pitch follow-up, while the newspaper is used only as boundary evidence showing that the journey was still underway."
     },
     {
       "rubric": "status_separation",
-      "observation": "The database, tag-overlap, and workbook claims are confirmed-with-boundary but internal-only with no projections. The bridge is qualified and editorially candidate; its sole citation-required projection is held, has no surfaces, and has no active page occurrence."
+      "observation": "The three new claims are mature but qualified, editorially unused, citation-required, held, and assigned to no public surface. Knowledge maturity is not confused with rights clearance or editorial selection."
     },
     {
       "rubric": "project_context",
-      "observation": "The records situate WOW List, Sunday Dinner, Popular Vote, Call Script, and NYC Artist Coalition across the 2012-2021 workbook span and the January-March 2017 public sequence. The dossier preserves methods, anomalies, related projects, open collaborator research, and the hiring-relevant participation-infrastructure throughline without presenting a private archive."
+      "observation": "The Water Publics dossier situates the raft within Jamie's longer participatory river practice while preserving collaborators, route stages, artifact implementation, later programs, source classes, and photo-research needs."
     },
     {
       "rubric": "research_honesty",
-      "observation": "Question 72 is satisfied by preserving 346 numbered columns, 341 marked columns, 2,726 Y marks, and 411 participant rows while recording duplicate labels, missing numbers, zero-mark columns, unresolved Y semantics, and the absence of an independent audit. Question 73 is satisfied because Jamie's authorship, facilitation share, account operation, and founding share remain unresolved pending collaborator corroboration."
+      "observation": "Questions 74 through 76 pass. The newspaper pages, credited photographs, reporter contact information, full text, and private filesystem location are excluded. The two 2007 reports remain mid-voyage sources rather than completion evidence. Libby Hendon and Laura Mattingly retain crew credit, and room remains for unallocated labor."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "The raft remains a collective artifact. Approximate dimensions and propulsion details are not treated as engineering certification. Jamie's river premise remains attributed and distinct from measured civic impact, representation, or institutional endorsement."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "No row-level database or workbook material, participant identity, contact field, geolocation, post body, private path, raw record, or account-administration detail is exposed. The existing 300-plus-gatherings proof retains its careful status and now states explicitly that workbook marks are not audited attendance or an exact completed-event count; collective and multi-operator credit remains explicit throughout."
+      "observation": "No newspaper reproduction, page image, photograph, full article transcription, private path, or protected-source detail is projected. The current public portfolio remains unchanged, and every new projection is held with no assigned surface."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The production record paraphrases findings, preserves rights and collective-credit boundaries, and defers the civic premise until it can be composed with collaborators, route, artifact, and later practice."
     },
     {
       "rubric": "research_honesty",
-      "observation": "Fresh verification reproduced the exact candidate and contract fingerprints. Deterministic lifecycle validation scored 100 with zero findings, all 86 lifecycle tests passed, and the knowledge-bank and public-safety checks passed; the evaluator's remaining model-judgment gate awaits current candidate-bound judgments rather than a content correction."
+      "observation": "Review of the retained lifecycle context and changed candidate surfaces found no regression in contract questions 1 through 73."
     }
   ],
   "regressions": [],
-  "nextAction": "Accept this candidate-bound judgment and keep the Call Script bridge held until a specific hiring surface warrants it; any later projection should cite the public Page and event sources and preserve the existing participant-privacy, no-attendance, no-impact, and collective-credit boundaries."
+  "nextAction": "Seek a lawful stable publisher or archival permalink for the newspaper citation and clarify image rights before any visual use; until then, keep the source metadata-only and all three new Water Publics projections held."
 }

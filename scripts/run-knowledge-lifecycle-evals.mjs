@@ -49,6 +49,7 @@ const candidatePaths = [
   "docs/knowledge-bank/proofs.md",
   "docs/knowledge-bank/research/kc-town-hall-council-funding-2019-2024.md",
   "docs/knowledge-bank/research/kc-town-hall-phase-one-neighborhood-stewardship-2018-2022.md",
+  "docs/knowledge-bank/research/kansas-city-star-raft-archival-production-2007.md",
   "docs/knowledge-bank/research/google-drive-shared-drives-archival-production-2026-07.md",
   "docs/knowledge-bank/research/nter-chng-google-drive-working-artifacts-2010-2011.md",
   "docs/knowledge-bank/research/icloud-teams-archival-production-2026-07.md",

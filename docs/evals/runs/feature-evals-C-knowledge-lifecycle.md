@@ -302,3 +302,54 @@ questions: Jamie's exact Office of Nightlife contribution, town-hall production
 responsibilities, Talks Not Raids implementation role, M.A.R.C.H. disposition,
 CallNYC engagement, and Cabaret Law causal allocation. Do not strengthen those
 claims until the source relationships support it.
+
+## Kansas City Star Raft Source Cycle
+
+On July 16, Jamie supplied a locally preserved two-page reproduction of Darryl
+Levings's November 15, 2007 Kansas City Star front-page article, *In the name of
+art, go with the flow*. PDF metadata inspection, two-page visual review, and
+layout-preserving text extraction established the source identity and enabled a
+close reading. The newspaper artifact, page images, credited photographs,
+reporter contact information, and private filesystem location remain outside
+the repository. The public graph carries bibliographic metadata and an opaque
+protected locator only.
+
+The article independently credits Jamie with originating the project idea,
+names Jamie Burkart, Libby Hendon, and Laura Mattingly as its three-person crew
+at the reported stage, documents a July 21 Kansas City departure and progress
+beyond 1,000 miles, describes a roughly 12-by-13-foot recycled-material raft
+powered by two bicycles linked to a paddlewheel, and attributes to Jamie a
+civic-artistic premise about the river, the West Bottoms, and Delta towns. A
+separately recovered November 12 Pitch update corroborates the collective crew,
+Kaw Point departure, recycled-material construction, distance, Coast Guard
+interruption, and Vicksburg repairs.
+
+The evidence is deliberately bounded. Both 2007 sources are mid-voyage
+reporting and do not prove later Gulf completion. Origination does not become
+sole design, fabrication, travel, or authorship. The artifact description is
+not engineering certification, and Jamie's attributed premise is not measured
+community impact, representation, or newspaper endorsement. The later Gulf
+completion remains attached to the separately reviewed 2009 Pitch follow-up.
+
+Three new atomic claims entered the mature unused reserve: contemporaneous
+voyage, recycled bicycle-powered design, and civic premise. The first two are
+selected for a future bounded Water Publics composition; the premise remains
+deferred until it can be composed with the route, artifact, collaborators, and
+later participatory river work. No public website surface changed in this
+cycle.
+
+The exact candidate then passed twice at 100/100 with independent
+archival-editorial and public-safety-composition judgments. The unchanged
+public portfolio passed its application-ready profile twice at 86.5. Blind-spot
+diagnostics passed with closure honestly open, and promotion discipline
+accounted for all 33 mature unused claims.
+
+- Knowledge candidate: `sha256:f214f4d7319811be6a862bf3eaed6baa85f5ff281bc2949cc996393325d7b497`
+- Knowledge contract: `sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e`
+- Deterministic score: `100`
+- Lifecycle regression tests: `89/89`
+- Blind-spot regression tests: `11/11`
+- Portfolio regression tests: `10/10`
+- Application-ready score: `86.5`
+- Independent knowledge lenses: archival editorial and public-safety
+  composition

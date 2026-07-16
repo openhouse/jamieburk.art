@@ -172,6 +172,24 @@ article reporting that Jamie and his fellow artists reached the Gulf of Mexico
 four months after leaving Kansas City on their raft. See the [research
 note](research/jamie-personal-facebook-posts-archival-production-2026-07.md).
 
+## Kansas City Star Raft Source
+
+The July 16, 2026 pass close-read a locally preserved two-page reproduction of
+The Kansas City Star's November 15, 2007 front-page report on *Release Yourself
+onto the Water Until It Tastes of Salt*. The source independently strengthens
+Jamie's origination record while preserving Libby Hendon and Laura Mattingly as
+the other two named crew members at that stage. It also documents travel beyond
+the 1,000-mile marker, the recycled bicycle-powered craft, and Jamie's
+attributed civic premise connecting Kansas City's West Bottoms with Delta river
+towns.
+
+The Star story is a contemporaneous mid-voyage account, not evidence of later
+Gulf completion, uninterrupted travel, sole authorship, or a complete labor
+roster. The PDF and credited photographs remain protected and uncommitted. A
+related live [Pitch update](https://www.thepitchkc.com/artists-turned-huck-finn-part-iii/)
+was independently recovered and added as corroborating public evidence. See the
+[full production record](research/kansas-city-star-raft-archival-production-2007.md).
+
 ## KC Town Hall Phase One And Neighborhood Stewardship
 
 The July 15, 2026 pass separates four connected bodies of work that should not

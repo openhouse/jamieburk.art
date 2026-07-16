@@ -33,6 +33,25 @@ Do not describe the legislative-provenance redline as legal advice or authorship
 of underlying legislation. Do not describe the RPIE public-data brief as an
 adopted City program or released dataset.
 
+## Water Publics
+
+Do not describe the November 2007 Kansas City Star article as proof of Gulf
+completion. It is a mid-voyage report documenting the crew south of Baton Rouge
+after passing the 1,000-mile marker. Later completion rests on separately
+reviewed retrospective reporting.
+
+Do not say Jamie traveled alone or solely designed, built, operated, or authored
+the raft project. Preserve Libby Hendon and Laura Mattingly as the other two
+named crew members at the reported stage, and leave room for additional
+departure participants, river-community supporters, repair help, and other
+labor not exhaustively allocated by the sources.
+
+Do not turn approximate newspaper dimensions into an engineering
+certification, the project's cultural-connection premise into measured impact,
+or Jamie's words into representation of West Bottoms or Delta residents. Do
+not publish the locally preserved newspaper pages or credited photographs
+without rights review.
+
 ## Creative Technical Systems
 
 Do not remove M.C. Schmidt's co-credit from the Horse Lords "Truthers" video.

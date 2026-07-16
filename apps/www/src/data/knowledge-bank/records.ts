@@ -147,6 +147,59 @@ const knowledgeBankInput = {
       inquiryIds: []
     },
     {
+      id: "INT-2026-07-16-KC-STAR-RAFT",
+      kind: "artifact",
+      capturedAt: "2026-07-16",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "A locally preserved two-page reproduction of The Kansas City Star's November 15, 2007 front-page report on Release Yourself onto the Water Until It Tastes of Salt. The newspaper pages and photographs remain outside the public repository.",
+      projectIds: ["water-publics"],
+      entityIds: [
+        "kansas-city-star",
+        "libby-hendon",
+        "laura-mattingly",
+        "missouri-river",
+        "mississippi-river"
+      ],
+      dateHints: ["2007-11-15"],
+      sensitivity: "protected-reference",
+      availability: "local-private",
+      status: "promoted",
+      sourceIds: ["SRC-WATER-KC-STAR-GO-WITH-FLOW-2007"],
+      claimIds: [
+        "CLM-WATER-RAFT-ORIGINATION",
+        "CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE",
+        "CLM-WATER-RAFT-RECYCLED-BICYCLE-DESIGN",
+        "CLM-WATER-RAFT-CIVIC-PREMISE"
+      ],
+      inquiryIds: [],
+      protectedLocatorId: "kc-star-raft-article-pdf-2007"
+    },
+    {
+      id: "INT-2026-07-16-PITCH-RAFT-PART-III",
+      kind: "url",
+      capturedAt: "2026-07-16",
+      submittedBy: "Codex source-discovery review",
+      publicSafeDescription: "The Pitch's November 12, 2007 contemporaneous update on the raft project's collective crew, recycled-material construction, route, Coast Guard interruption, and travel beyond 1,000 miles.",
+      submittedUrl: "https://www.thepitchkc.com/artists-turned-huck-finn-part-iii/",
+      projectIds: ["water-publics"],
+      entityIds: [
+        "libby-hendon",
+        "laura-mattingly",
+        "missouri-river",
+        "mississippi-river"
+      ],
+      dateHints: ["2007-11-12"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-WATER-PITCH-HUCK-FINN-PART-III-2007"],
+      claimIds: [
+        "CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE",
+        "CLM-WATER-RAFT-RECYCLED-BICYCLE-DESIGN"
+      ],
+      inquiryIds: []
+    },
+    {
       id: "INT-2026-07-13-GOOD-TIMES-OPEN-HOUSE",
       kind: "url",
       capturedAt: "2026-07-13",
@@ -571,6 +624,27 @@ const knowledgeBankInput = {
       name: "Market Hotel",
       aliases: [],
       publicDescription: "Brooklyn venue that hosted a documented October 2017 Office of Nightlife town hall."
+    },
+    {
+      id: "kansas-city-star",
+      kind: "publication",
+      name: "The Kansas City Star",
+      aliases: ["Kansas City Star", "The Star"],
+      publicDescription: "Kansas City newspaper that published a November 2007 front-page report on the raft project."
+    },
+    {
+      id: "laura-mattingly",
+      kind: "person",
+      name: "Laura Mattingly",
+      aliases: [],
+      publicDescription: "Artist and journalist publicly named as one of the three raft crew members in contemporaneous reporting."
+    },
+    {
+      id: "libby-hendon",
+      kind: "person",
+      name: "Libby Hendon",
+      aliases: [],
+      publicDescription: "Artist publicly named as one of the three raft crew members in contemporaneous reporting."
     },
     {
       id: "mississippi-river",

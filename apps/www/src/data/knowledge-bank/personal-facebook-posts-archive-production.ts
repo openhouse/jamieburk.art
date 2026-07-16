@@ -647,14 +647,24 @@ export const personalFacebookPostClaims = [
       citationRequired: true,
       surfaces: []
     }],
-    evidence: [{
-      sourceId: "SRC-PITCH-GREAT-ACCOMMODATIONS-FOLLOWUP-2009",
-      relationship: "direct-support",
-      supports: ["collective Gulf completion", "four-month duration", "Kansas City departure context"],
-      locator: "Opening paragraphs reporting the intended route, completion, and duration.",
-      confidence: "high",
-      renderCitation: false
-    }],
+    evidence: [
+      {
+        sourceId: "SRC-PITCH-GREAT-ACCOMMODATIONS-FOLLOWUP-2009",
+        relationship: "direct-support",
+        supports: ["collective Gulf completion", "four-month duration", "Kansas City departure context"],
+        locator: "Opening paragraphs reporting the intended route, completion, and duration.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007",
+        relationship: "supports-boundary",
+        supports: ["the journey was still underway on November 15, 2007", "the contemporaneous source did not establish Gulf completion"],
+        locator: "Front-page feature and A4 continuation reporting the crew south of Baton Rouge while completion remained unresolved.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
     boundaries: [
       "Credit the journey collectively and do not imply that Jamie traveled alone.",
       "The retrospective article does not provide a complete participant roster, division of labor, or uninterrupted route log."
@@ -664,8 +674,8 @@ export const personalFacebookPostClaims = [
       "The supplied article documents every stage and participant in the voyage."
     ],
     researchInquiryIds: [],
-    reviewedAt: "2026-07-15",
-    reviewedBy: ["Codex close reading"]
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex cross-source close reading"]
   }
 ] satisfies ClaimRecord[];
 

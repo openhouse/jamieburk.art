@@ -40,6 +40,89 @@ export const lifecycleSources = [
     ]
   },
   {
+    id: "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007",
+    title: "In the name of art, go with the flow",
+    organization: "The Kansas City Star",
+    author: "Darryl Levings",
+    kind: "published-article",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    publishedAt: "2007-11-15",
+    accessedAt: "2026-07-16",
+    publicCitation: "Darryl Levings, 'In the name of art, go with the flow,' The Kansas City Star, November 15, 2007, front page and A4.",
+    publicNote: "Contemporaneous front-page reporting documents the collective raft project while it was underway, credits Jamie with originating the idea, describes the recycled bicycle-powered craft, names Libby Hendon and Laura Mattingly as crew members, and quotes Jamie's civic premise for reconnecting Kansas City with its river.",
+    locator: "Front-page feature and photograph caption; continuation on A4 under 'RIVER: Adventure of a lifetime takes three friends from KC to Louisiana.'",
+    projectIds: ["water-publics"],
+    intakeIds: ["INT-2026-07-16-KC-STAR-RAFT"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex PDF text and visual review"],
+    supportsGenerally: [
+      "Jamie as originator of the project idea",
+      "collective crew credit for Jamie Burkart, Libby Hendon, and Laura Mattingly",
+      "July 21 Kansas City departure and travel beyond the 1,000-mile marker",
+      "roughly 12-by-13-foot craft powered by two bicycles linked to a paddlewheel",
+      "construction from discarded building remnants, civic refuse, and reused syrup drums",
+      "Jamie's attributed civic premise concerning the river, the West Bottoms, and Delta towns"
+    ],
+    doesNotEstablish: [
+      "arrival at the Gulf of Mexico or salt water",
+      "an uninterrupted route or complete voyage log",
+      "Jamie as sole builder, sole traveler, or sole author of the project",
+      "a complete participant or labor roster",
+      "permission to republish the newspaper pages or Vicksburg Post photographs"
+    ],
+    protectedLocatorId: "kc-star-raft-article-pdf-2007",
+    media: {
+      mediaKind: "document",
+      rightsHolder: "The Kansas City Star and credited photographers or licensors",
+      rightsStatus: "permission-needed",
+      consentStatus: "not-applicable",
+      publicDisplayStatus: "metadata-only",
+      visibleText: [
+        "In the name of art, go with the flow",
+        "RIVER: Adventure of a lifetime takes three friends from KC to Louisiana"
+      ]
+    }
+  },
+  {
+    id: "SRC-WATER-PITCH-HUCK-FINN-PART-III-2007",
+    title: "Artists Turned Huck Finn, Part III",
+    organization: "The Pitch",
+    author: "Eric Barton",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2007-11-12",
+    accessedAt: "2026-07-16",
+    canonicalUrl: "https://www.thepitchkc.com/artists-turned-huck-finn-part-iii/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Eric Barton, 'Artists Turned Huck Finn, Part III,' The Pitch, November 12, 2007.",
+    publicNote: "A contemporaneous public update corroborating the project's collective route, recycled-material construction, Coast Guard interruption, and travel beyond 1,000 miles.",
+    locator: "Article body paragraphs on the crew, July 21 Kaw Point departure, recycled-material raft, travel beyond 1,000 miles, Coast Guard interruption, and Vicksburg repairs.",
+    projectIds: ["water-publics"],
+    intakeIds: ["INT-2026-07-16-PITCH-RAFT-PART-III"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex public-source verification"],
+    supportsGenerally: [
+      "Jamie Burkart and Libby Hendon as Kansas City participants",
+      "Laura Mattingly as one of the three raft crew members",
+      "July 21 departure from Kaw Point",
+      "recycled-material construction",
+      "travel beyond 1,000 miles",
+      "Coast Guard interruption and Vicksburg repair context"
+    ],
+    doesNotEstablish: [
+      "Gulf completion",
+      "a complete crew or labor roster",
+      "uninterrupted travel",
+      "sole authorship, construction, or completion by Jamie"
+    ]
+  },
+  {
     id: "SRC-WATER-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009",
     title: "Great Accommodations with Jamie Burkart - Imagining Lifestyles for Cities on the Water",
     organization: "Charlotte Street Foundation",
@@ -643,13 +726,162 @@ export const lifecycleClaims = [
         locator: "Article body paragraphs on Jamie's investigation, origination of the project, and the Missouri route.",
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007",
+        relationship: "direct-support",
+        supports: ["origination"],
+        locator: "A4 paragraph stating that the project began with a dream, vision, or idea by Burkart.",
+        publicNote: "The Star independently credited the project idea to Jamie while naming and describing the collective crew.",
+        confidence: "high",
+        renderCitation: false
       }
     ],
-    boundaries: ["The article describes travel across Missouri, not the complete later route."],
-    antiClaims: ["The Pitch independently documented the full journey to salt water."],
+    boundaries: [
+      "The Pitch article describes travel across Missouri, not the complete later route.",
+      "Origination does not establish sole construction, travel, authorship, or ownership of the collective project."
+    ],
+    antiClaims: [
+      "The Pitch independently documented the full journey to salt water.",
+      "Jamie alone created or carried out the raft project."
+    ],
     researchInquiryIds: [],
-    reviewedAt: "2026-07-13",
-    reviewedBy: ["Codex close reading"]
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex cross-source close reading"]
+  },
+  {
+    id: "CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE",
+    project: "water-publics",
+    claimType: "chronology",
+    internalClaim: "On November 15, 2007, The Kansas City Star reported that Jamie Burkart, Libby Hendon, and Laura Mattingly were traveling south from Kansas City on the raft, had passed the 1,000-mile marker, and were south of Baton Rouge.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "unused",
+    projections: [
+      {
+        key: "archive-note",
+        text: "Contemporaneous reporting documented Jamie Burkart, Libby Hendon, and Laura Mattingly more than 1,000 miles into their collective 2007 raft journey from Kansas City toward the lower Mississippi.",
+        status: "hold",
+        citationRequired: true,
+        surfaces: []
+      }
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007",
+        relationship: "direct-support",
+        supports: ["crew at the reported stage", "Kansas City departure", "1,000-mile marker", "location south of Baton Rouge"],
+        locator: "Front-page caption and feature text; A4 route, crew, and progress paragraphs.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-WATER-PITCH-HUCK-FINN-PART-III-2007",
+        relationship: "corroborating",
+        supports: ["collective crew", "Kaw Point departure", "travel beyond 1,000 miles", "Vicksburg interruption"],
+        locator: "Article paragraphs on departure, crew, distance, Coast Guard interruption, and repairs.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "This is a contemporaneous mid-voyage snapshot, not evidence of later Gulf completion.",
+      "The three named travelers were the crew at this reported stage; the sources also describe other people participating at departure and along the route."
+    ],
+    antiClaims: [
+      "The Kansas City Star article proves that the crew had already reached the Gulf.",
+      "Jamie traveled alone or was the only person responsible for the journey.",
+      "The sources provide a complete uninterrupted voyage log."
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex cross-source close reading"]
+  },
+  {
+    id: "CLM-WATER-RAFT-RECYCLED-BICYCLE-DESIGN",
+    project: "water-publics",
+    claimType: "activity",
+    internalClaim: "The Kansas City Star described the collective project's roughly 12-by-13-foot raft as powered by two bicycles linked to a paddlewheel and built in three weeks from discarded building remnants, civic refuse, and reused syrup drums.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "unused",
+    projections: [
+      {
+        key: "archive-note",
+        text: "Contemporaneous reporting described the crew's roughly 12-by-13-foot raft as powered by two bicycles linked to a paddlewheel and assembled from discarded and reused materials.",
+        status: "hold",
+        citationRequired: true,
+        surfaces: []
+      }
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007",
+        relationship: "direct-support",
+        supports: ["approximate dimensions", "bicycle-linked paddlewheel propulsion", "three-week construction", "discarded and reused materials"],
+        locator: "A4 paragraphs describing construction materials, dimensions, and propulsion.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-WATER-PITCH-HUCK-FINN-PART-III-2007",
+        relationship: "corroborating",
+        supports: ["recycled-material construction", "weeks of construction", "collective project context"],
+        locator: "Opening article paragraphs on the raft's construction and project route.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The reporting describes the collective craft and does not allocate every design, fabrication, repair, or operating task among crew and supporters."
+    ],
+    antiClaims: [
+      "Jamie alone designed and built the raft.",
+      "The reported dimensions or construction description constitute an engineering certification."
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex cross-source close reading"]
+  },
+  {
+    id: "CLM-WATER-RAFT-CIVIC-PREMISE",
+    project: "water-publics",
+    claimType: "attributed-description",
+    internalClaim: "The Kansas City Star quoted Jamie describing the river as largely invisible in Kansas City civic life and imagining that travel between the West Bottoms and Delta towns could awaken cultural connection through the river.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "unused",
+    projections: [
+      {
+        key: "archive-note",
+        text: "The Kansas City Star quoted Jamie describing the river as an overlooked civic space and imagining that river travel could awaken cultural connection between Kansas City's West Bottoms and Delta towns.",
+        status: "hold",
+        citationRequired: true,
+        surfaces: []
+      }
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007",
+        relationship: "direct-support",
+        supports: ["Jamie's attributed description of Kansas City's relationship to the river", "West Bottoms and Delta-town connection premise"],
+        locator: "Closing A4 paragraphs quoting Jamie immediately before the crew pushed off.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "Preserve attribution to Jamie and distinguish an artistic-civic premise from a measured community outcome.",
+      "The article does not evaluate whether cultural connection changed because of the project."
+    ],
+    antiClaims: [
+      "The voyage measurably transformed every community it encountered.",
+      "Jamie spoke for residents of the West Bottoms or Delta towns.",
+      "The Kansas City Star endorsed the project's civic interpretation."
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex PDF text and visual review"]
   },
   {
     id: "CLM-WATER-RAFT-VOYAGE",
@@ -684,13 +916,36 @@ export const lifecycleClaims = [
         locator: "Article body paragraphs on project origin and the Missouri route.",
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007",
+        relationship: "corroborating",
+        supports: ["collective crew", "Kansas City departure", "bicycle-powered raft", "mid-voyage lower Mississippi location"],
+        locator: "Front-page feature and A4 continuation.",
+        publicNote: "The contemporaneous article supports the journey's existence and lower-Mississippi progress, not its later completion.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-WATER-PITCH-HUCK-FINN-PART-III-2007",
+        relationship: "corroborating",
+        supports: ["collective journey", "Kaw Point departure", "recycled-material raft", "travel beyond 1,000 miles"],
+        locator: "Article paragraphs on departure, route, distance, and Vicksburg interruption.",
+        confidence: "high",
+        renderCitation: false
       }
     ],
-    boundaries: ["Preserve attribution for the route and duration details."],
-    antiClaims: ["The supplied sources independently verify arrival at a specifically named Gulf destination."],
+    boundaries: [
+      "Preserve attribution for the route and duration details.",
+      "The 2007 sources are contemporaneous mid-voyage records and do not independently establish later completion."
+    ],
+    antiClaims: [
+      "The supplied 2007 sources independently verify arrival at a specifically named Gulf destination.",
+      "Jamie traveled alone or was solely responsible for the collective project."
+    ],
     researchInquiryIds: [],
-    reviewedAt: "2026-07-13",
-    reviewedBy: ["Codex close reading"]
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex cross-source close reading"]
   },
   {
     id: "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM",

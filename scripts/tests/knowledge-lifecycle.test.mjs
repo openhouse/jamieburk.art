@@ -97,6 +97,99 @@ test("the first lifecycle corpus preserves source support and non-support", () =
   );
 });
 
+test("Kansas City Star raft source stays metadata-only and rights-bounded", () => {
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INT-2026-07-16-KC-STAR-RAFT"
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007"
+  );
+
+  assert.ok(intake);
+  assert.equal(intake.sensitivity, "protected-reference");
+  assert.equal(intake.availability, "local-private");
+  assert.equal(intake.submittedUrl, undefined);
+  assert.equal(intake.protectedLocatorId, "kc-star-raft-article-pdf-2007");
+
+  assert.ok(source);
+  assert.equal(source.visibility, "public-metadata-only");
+  assert.equal(source.preservationStatus, "private");
+  assert.equal(source.canonicalUrl, undefined);
+  assert.equal(source.archiveUrl, undefined);
+  assert.equal(source.assetUrl, undefined);
+  assert.equal(source.protectedLocatorId, "kc-star-raft-article-pdf-2007");
+  assert.equal(source.media?.rightsStatus, "permission-needed");
+  assert.equal(source.media?.publicDisplayStatus, "metadata-only");
+  assert.equal(source.supportsGenerally.length > 0, true);
+  assert.equal(source.doesNotEstablish.includes("arrival at the Gulf of Mexico or salt water"), true);
+
+  const serialized = JSON.stringify({ intake, source });
+  assert.equal(serialized.includes("/Users/"), false);
+  assert.equal(serialized.includes("/Volumes/"), false);
+  assert.equal(serialized.includes("/private/tmp/"), false);
+});
+
+test("contemporaneous raft chronology preserves crew credit and mid-voyage limits", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE"
+  );
+
+  assert.ok(claim);
+  assert.match(claim.internalClaim, /Jamie Burkart, Libby Hendon, and Laura Mattingly/);
+  assert.match(claim.internalClaim, /passed the 1,000-mile marker/);
+  assert.equal(claim.status, "confirmed-with-boundary");
+  assert.equal(claim.editorialStatus, "unused");
+  assert.equal(claim.projections.every((item) => item.status === "hold"), true);
+  assert.equal(
+    claim.antiClaims.includes("The Kansas City Star article proves that the crew had already reached the Gulf."),
+    true
+  );
+  assert.equal(
+    claim.antiClaims.includes("Jamie traveled alone or was the only person responsible for the journey."),
+    true
+  );
+  assert.deepEqual(
+    claim.evidence.map((item) => item.sourceId),
+    [
+      "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007",
+      "SRC-WATER-PITCH-HUCK-FINN-PART-III-2007"
+    ]
+  );
+});
+
+test("raft artifact and civic-premise claims reject sole credit and impact inflation", () => {
+  const design = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATER-RAFT-RECYCLED-BICYCLE-DESIGN"
+  );
+  const premise = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATER-RAFT-CIVIC-PREMISE"
+  );
+  const completion = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATER-RAFT-GULF-COMPLETION"
+  );
+
+  assert.ok(design);
+  assert.match(design.internalClaim, /collective project's roughly 12-by-13-foot raft/);
+  assert.equal(design.antiClaims.includes("Jamie alone designed and built the raft."), true);
+  assert.equal(design.boundaries.some((item) => item.includes("does not allocate every design")), true);
+
+  assert.ok(premise);
+  assert.equal(premise.claimType, "attributed-description");
+  assert.match(premise.internalClaim, /The Kansas City Star quoted Jamie/);
+  assert.equal(premise.antiClaims.includes("The voyage measurably transformed every community it encountered."), true);
+  assert.equal(premise.antiClaims.includes("Jamie spoke for residents of the West Bottoms or Delta towns."), true);
+
+  assert.ok(completion);
+  assert.equal(
+    completion.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007" &&
+        item.relationship === "supports-boundary"
+    ),
+    true
+  );
+});
+
 test("mature unused claims remain out of public composition", () => {
   const lifecycleClaims = knowledgeBank.claims.filter((claim) =>
     ["water-publics", "open-house", "nyc-artist-coalition"].includes(claim.project)
@@ -118,7 +211,7 @@ test("mature unused claims remain out of public composition", () => {
       "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"
     ]
   );
-  assert.equal(unused.length, 25);
+  assert.equal(unused.length, 28);
   assert.equal(unused.some((claim) => claim.id === "CLM-WATER-RAFT-GULF-COMPLETION"), true);
   assert.equal(unused.some((claim) => claim.id === "CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION"), true);
   assert.equal(unused.some((claim) => claim.id === "CLM-JAMIE-NYCARTC-INSTITUTIONAL-BRIDGE-VALUE"), true);

@@ -1,8 +1,8 @@
 {
-  "judgeId": "archival-editorial-2026-07-15-h",
+  "judgeId": "archival-editorial-2026-07-16-star",
   "lens": "archival-editorial",
-  "candidate": "sha256:57eee80cb9ae4ece78acc19bb127b4cc0ec0d9f4535584b1941a580979c7ff51",
-  "contract": "sha256:79a912e38917fca1ceabecc00a786c10da42ee18680b88edc1b8fb294f8a2461",
+  "candidate": "sha256:d684e41f67ff31f16ce38e3e8778b808378331cb7a0533be0003fb75d4f0b120",
+  "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,53 +17,49 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The database snapshot, Sunday Dinner workbook, and Call Script Page have three stable promoted intake IDs with explicit source, claim, inquiry, sensitivity, and availability dispositions. The canonical bank contains 126 intake records and produced no unfinished-intake or missing-intake finding."
+      "observation": "The Kansas City Star artifact and independently recovered Pitch article have stable intake and source identities, explicit dispositions, project and entity relationships, and linked claim IDs. The Star artifact remains local-private behind an opaque protected locator; its pages are absent from the public repository."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The three new sources are separately reviewed at close-reading depth. The private database and protected workbook sources specify supported aggregates, opaque locators, preservation status, and non-support boundaries; the public Call Script source separately supports the popular.vote link and March meeting route while refusing person-level authorship and management conclusions."
+      "observation": "The Star and Pitch sources are decomposed separately. Their records distinguish support for origination, the three-person crew, July 21 departure, progress beyond 1,000 miles, craft construction, and Jamie's attributed civic premise from non-support for Gulf completion, uninterrupted travel, complete labor allocation, sole credit, engineering certification, and republication rights."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Database scale, tag intersections, workbook aggregates, and the Call Script bridge remain four distinct claims. Record counts are not merged with user counts, workbook marks are not merged with attendance, and project linkage is not merged with Jamie's individual role or policy outcomes."
+      "observation": "Origination, the mid-voyage chronology, recycled bicycle-powered artifact, attributed civic premise, broader voyage account, and later Gulf completion remain separate claims. The records do not convert originating the idea into sole construction, the craft description into engineering certification, or an artistic premise into measured civic impact."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The database and tag claims resolve to the private snapshot, the workbook claim resolves to the protected workbook, and the bridge resolves to three differentiated evidence edges: the public Call Script Page, the January 27 DCLA event record, and the private WOW List tag graph. Both unresolved semantic and role questions resolve to dedicated partially recovered inquiries."
+      "observation": "The mid-voyage and artifact claims resolve to contemporaneous Star reporting with independent Pitch corroboration. The civic-premise claim resolves only to Jamie's attributed statement in the Star. Later Gulf completion resolves to a separately reviewed 2009 Pitch source, while the 2007 Star functions only as boundary evidence showing that the journey was still underway."
     },
     {
       "rubric": "status_separation",
-      "observation": "The database-scale, tag-overlap, and workbook claims are confirmed-with-boundary, internal-only candidates with no projections. The bridge is confirmed-with-boundary and qualified but remains an editorial candidate whose sole projection is citation-required, on hold, and assigned to no surface."
+      "observation": "The three new Water Publics claims are mature and qualified but editorially unused. Their citation-required projections remain on hold with no public surfaces. The protected Star source has public-metadata-only visibility, private preservation status, permission-needed rights status, and metadata-only display status."
     },
     {
       "rubric": "project_context",
-      "observation": "The records situate the work across WOW List, 196 Sunday Dinner, and NYC Artist Coalition, preserve the 2012-2021 workbook span and January-to-March 2017 bridge chronology, and provide methods, limitations, related source roles, open collaborator research, and future editorial context."
+      "observation": "The Water Publics dossier places the source cycle within a longer sequence of raft construction, collective travel, river encounters, and later participatory programming, with useful artifact, route, collaborator, rights, and visual-research context."
     },
     {
       "rubric": "research_honesty",
-      "observation": "Question 71 passes: 16,142 posts, 45,562 post-tag relationships, 23,864 tags, 28,837 follow-tag records, 35 sources, and the 67, 34, 33, and 9 tag intersections remain private aggregates explicitly bounded against users, attendance, reach, conversion, authorship, production, causality, and impact."
+      "observation": "Questions 74 through 76 pass. The newspaper remains bibliographic metadata only; the pages, credited photographs, reporter contact details, and private location are excluded. The two 2007 reports support a three-person mid-voyage chronology beyond 1,000 miles but not later Gulf completion. The raft remains a collective artifact, and Jamie's premise remains distinct from certification, impact, representation, or endorsement."
     },
     {
       "rubric": "research_honesty",
-      "observation": "Question 72 passes: the source and claim preserve 346 numbered columns, 341 columns with at least one Y, 2,726 Y marks, and 411 participant rows. They also preserve duplicate labels, missing numbers, and zero-mark columns and explicitly reject audited physical-attendance, unique-person, and exact completed-event interpretations."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "Question 73 passes: the bridge retains the public popular.vote link, the January DCLA event relationship, and the March coalition-meeting route and agenda. Its boundaries leave Jamie's design, authorship, publishing, facilitation, account operation, founding share, attendance, and policy causality open to collaborator corroboration."
+      "observation": "The source cycle states that no stable public Kansas City Star URL was recovered rather than claiming none exists. It records the three named travelers as the crew at the reported stage while leaving room for departure participants, supporters, repair labor, and other contributions not exhaustively allocated by the sources."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "No database rows, participant identities, contact fields, post bodies, workbook rows, private paths, asset URLs, or protected source locations are exposed. Private originals are represented by opaque locator IDs, those IDs are absent from the public registry, and the bridge has no active public projection."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "The active Sunday Dinner proof remains the previously bounded 300+ wording supported by multiple source classes; its new source note explicitly says the workbook does not convert Y marks into audited attendance or prove an exact completed-event count."
+      "observation": "No website surface changed. The records omit the PDF, page images, full article text, photographs, contact information, private filesystem location, and unrelated newspaper content. Titles and bibliographic facts are retained while article substance is paraphrased with explicit rights boundaries."
     },
     {
       "rubric": "research_honesty",
-      "observation": "Fresh execution reproduced the exact requested candidate and contract fingerprints. Deterministic validation scored 100 with zero findings, every rubric scored 4, and all 86 lifecycle tests passed, including mutations for private-row exposure, attendance inflation, sole-credit bridge language, collective credit, and the earlier lifecycle boundaries."
+      "observation": "Deterministic evaluation reproduced the exact candidate and contract, scored 100 of 100, and all 89 lifecycle regression tests passed, including protected metadata, collective credit, mid-voyage, sole-builder, impact, and private-path mutations."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The candidate preserves the distinction between archival depth and rhetorical selection: mature evidence can remain available without being forced onto a hiring-focused public composition."
     }
   ],
   "regressions": [],
-  "nextAction": "Obtain one dated collaborator statement confirming or declining Jamie's exact Call Script account-operation and March-meeting facilitation roles, attach it to the existing role-attribution inquiry, and keep the bridge projection held until that disposition is recorded."
+  "nextAction": "Seek a stable licensed or archived public copy of the Kansas City Star article and collaborator evidence about design, fabrication, repair, and operating roles; retain the current metadata-only source and collective-credit boundaries unless those rights and allocations are independently confirmed."
 }
