@@ -146,6 +146,7 @@ export const sourceKindSchema = z.enum([
   "government-social-post",
   "institutional-web-page",
   "institutional-social-post",
+  "firsthand-statement",
   "archived-web-capture",
   "promotional-graphic",
   "published-article",

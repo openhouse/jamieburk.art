@@ -120,3 +120,13 @@ patterns, and bounded capture-date metrics while withholding raw exports, post
 bodies, platform IDs, engager identities, sensitive routes, and authenticated
 state. Shared-account authorship and incoming stakeholder-group engagement
 remain explicit research questions; no website copy changes were made.
+
+See the authenticated
+[Jamie personal Facebook post pass](projects/jamie-personal-facebook-posts.md)
+for a fresh analytical review of all 1,243 records returned by the terminal
+owner-filtered surface. Its public-safe controls preserve aggregate chronology,
+form, theme, mission, source-route, and bounded response findings while raw
+posts, native IDs, ordinary-life context, audience-unknown material, comments,
+responder identities, and authenticated routes remain outside the repository.
+Six individually public-audience-verified project traces and one close-read
+article entered the bank; no website copy was automatically selected.

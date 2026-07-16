@@ -10,9 +10,13 @@ import { validateWowListFacebookPosts } from
   "./lib/wowlist-facebook-posts-validation.mjs";
 import { validateNYCACFacebookPosts } from
   "./lib/nycac-facebook-posts-validation.mjs";
+import { validatePersonalFacebookPosts } from
+  "./lib/personal-facebook-posts-validation.mjs";
+import { knowledgeBank } from
+  "../apps/www/src/data/knowledge-bank/records.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v17/evals.json"), "utf8"));
+const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v18/evals.json"), "utf8"));
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const observationIndex = args.indexOf("--observations");
@@ -123,6 +127,28 @@ deterministic.set("NYCACFB-001", {
   evidence: nycacFacebookPostValidation.passed
     ? [nycacFacebookPostValidation.evidence]
     : nycacFacebookPostValidation.errors
+});
+
+const personalFacebookControlsText = read(
+  "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json"
+);
+const personalFacebookPostValidation = validatePersonalFacebookPosts({
+  knowledgeBank,
+  controls: JSON.parse(personalFacebookControlsText),
+  publicArtifacts: [
+    personalFacebookControlsText,
+    read("apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-2026-07-16.ts"),
+    read("docs/knowledge-bank/projects/jamie-personal-facebook-posts.md")
+  ]
+});
+deterministic.set("PERSONALFB-001", {
+  score: personalFacebookPostValidation.errors.length ? 0 : 1,
+  passed: personalFacebookPostValidation.errors.length === 0,
+  evidence: personalFacebookPostValidation.errors.length
+    ? personalFacebookPostValidation.errors
+    : [
+        "All 1,243 returned owner-filtered records were freshly classified; population, source, public-safety, stakeholder, and response boundaries reconcile."
+      ]
 });
 
 const criteriaById = new Map(suite.criteria.map((criterion) => [criterion.id, criterion]));

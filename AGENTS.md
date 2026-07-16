@@ -39,6 +39,8 @@ workspaces, Dockerfile, Dokku.
 - `npm run evals:wowlist-facebook-posts`
 - `npm run check:nycac-facebook-posts`
 - `npm run evals:nycac-facebook-posts`
+- `npm run check:personal-facebook-posts`
+- `npm run evals:personal-facebook-posts`
 
 ## Public-Safety Rules
 
@@ -149,10 +151,16 @@ change for V1.
   endorsement, mandate, or impact. Keep organizer, cohost, venue, and official
   displays bounded to an event-level interface unless another source supports
   a stronger relationship.
+- Treat a personal Facebook owner-post cursor population as a bounded returned
+  surface, not an immutable all-ever account archive or deletion history.
+  Keep raw posts, ordinary-life context, native IDs, comments, responder
+  identities, audience-unknown material, and authenticated routes outside the
+  public repository. A posted URL is a research lead until close-read; an
+  outbound stakeholder mention is not inbound engagement.
 
 ## Launch-Readiness Evals
 
-- Read `evals/launch-readiness/v16/evals.json` before optimizing the public site
+- Read `evals/launch-readiness/v18/evals.json` before optimizing the public site
   for production or job applications.
 - Run `npm run eval:launch-readiness` to establish the current baseline.
 - Improve one failing mutable criterion at a time and keep a change only when
