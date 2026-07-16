@@ -271,3 +271,25 @@ request.
 
 A fresh exact-head independent pair is required after this compositional
 repair.
+
+## Call Script emergence-sequence pass
+
+- Made Jamie's contribution concrete as an operating sequence rather than an
+  abstract coalition role: he used Call Script and WOW List's civic
+  event-sharing adaptation to help emerging work move through invitation,
+  listening, collaborative drafting, collective naming, and follow-up.
+- Kept the collective as the actor of its own formation and policy work. The
+  page does not assign Jamie every post, a sole-founder role, or single-tool
+  causality.
+- Kept the naming poll's displayed 57% visible only inside its denominator
+  boundary and excluded contemporaneous reach and response language from the
+  hiring argument.
+- Added the sequence to the Fair Rent case study because it explains what Jamie
+  made usable; kept database and workbook detail in the knowledge bank.
+- Re-ran the governed visual matrix after the copy change: all 42 observations
+  pass at desktop, 390px, and 320px with no overflow, contrast, keyboard,
+  citation, console, or page errors.
+
+The deterministic Chad Lens contract and full Node 26 release gate pass. A new
+external-model score was not requested because the source bundle includes
+protected summaries and no explicit disclosure authorization has been given.

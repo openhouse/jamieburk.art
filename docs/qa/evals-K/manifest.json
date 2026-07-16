@@ -22,7 +22,7 @@
     "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "e0a598a2157ca789e01084895b8f679c5b1f6fb40ae9918a2a4ce87cc2c4415e",
+  "sourceSha256": "2a193c9f9f7c121f9c533a4a9cdcf52b7035d61fffa592d886ab145ad54d3421",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -54,109 +54,109 @@
       "route": "/",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/home-desktop.png",
-      "artifactSha256": "abf85bac88fc5fa641dd9bf4b4b8059e54124cca2f3fa099b587dd43edfb6484"
+      "artifactSha256": "1347ec2a39758426204d44f5eeb3bb52bdd7cdd41a6eeda4661f80a217a65db6"
     },
     {
       "route": "/",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/home-mobile-320.png",
-      "artifactSha256": "3590d0e4b8c2b442e55676f421de5ba99384f70072ae678e015e40d5631e3a01"
+      "artifactSha256": "c3666c989f015f12b1f4f74a934b4c8aef30c55123c11ffb1a0deab71295aa73"
     },
     {
       "route": "/work/technical-operations",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/technical-operations-desktop.png",
-      "artifactSha256": "4dd6a62a54973c6dde101e131d1a2e21252c39fd8d317165d77432fdb46fe525"
+      "artifactSha256": "ee18ba857078c4290e45ab5fcfccbb6febf399ccf0230848b96acbb427b6d66c"
     },
     {
       "route": "/work/technical-operations",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/technical-operations-mobile-320.png",
-      "artifactSha256": "1dc5b5beb13d477ec6d0e77976d9b846c48adef6d58b3328875b493a1d009224"
+      "artifactSha256": "e97112b0eb6463f944f9228d4d139be04c213fb53774450bc332f98148b1380f"
     },
     {
       "route": "/resume",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/resume-desktop.png",
-      "artifactSha256": "96417a6856d9afbcb62a34f7dbdf26b51421e3639350ca1625bb651ce4975501"
+      "artifactSha256": "947f1df9a9bff3d18b3a0775147efc7a17fb1ff812424c766764d0b8770113bd"
     },
     {
       "route": "/resume",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/resume-mobile-320.png",
-      "artifactSha256": "6544bdde50547d024d27f21ebabaf495daf718c0e32ff10d143a853d1532ba77"
+      "artifactSha256": "a2ee148ec7bf749c17cca1a3351c9f5bff18c368bd95ea4002844efbc0dec41a"
     },
     {
       "route": "/contact",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/contact-desktop.png",
-      "artifactSha256": "db3a31b1aa37f6cab19e0578aef68b297d20b4cfad4598f5d18e1bd4e3cb01a3"
+      "artifactSha256": "8143b2181922a1acfa725b65bdc50225b696dda4fb4a5f5439aa89f2f086e784"
     },
     {
       "route": "/contact",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/contact-mobile-320.png",
-      "artifactSha256": "a31f0d9317fcf25c5c5762ec4de6aacb4f0682cd1eee0bc81df104713404eb32"
+      "artifactSha256": "223d1e89e9e06445a13c04168915e09483f5725888a284d73299ab10dc54d223"
     },
     {
       "route": "/work/harry-j-epstein",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/harry-j-epstein-desktop.png",
-      "artifactSha256": "e333dfaaf3643f6a86ba00543a07eebccb5d06f782954db598fdc0bae202ed26"
+      "artifactSha256": "689cd35ff9c80ffdeeda7ba486167ad0c67973b128836537b6c8256834667eed"
     },
     {
       "route": "/work/harry-j-epstein",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/harry-j-epstein-mobile-320.png",
-      "artifactSha256": "ce125a1afb734a3b2e87852728d6c07906e215018a2b850a5f3a1c9fd4512a84"
+      "artifactSha256": "baa060938205cf5b9b72094819981d8641b2e5c9f3e5973c52dce9aaefe2da2e"
     },
     {
       "route": "/work/callnyc",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/callnyc-desktop.png",
-      "artifactSha256": "b501249d3e9d5da61f192ae676aa5fcc4a24223e3f0754d389afab69fbcb35d0"
+      "artifactSha256": "ff6bbbea28d6c8a3cf99b24134ad3b8c656c182d3680fccf68185442957a8bb9"
     },
     {
       "route": "/work/callnyc",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/callnyc-mobile-320.png",
-      "artifactSha256": "b56226d3ead58d7f93a1d5cfb46b93aa0bc82d160d65e1ff263242fe5057083c"
+      "artifactSha256": "6ba068818280341750bdaef7c022e4491fd36f8092305017bcb21eeb1d3f8628"
     },
     {
       "route": "/work/fair-rent-nyc",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/fair-rent-nyc-desktop.png",
-      "artifactSha256": "eb2a4bfb97a473495e09b9a97ad21e43cc804312a20d1a333057a51137f15408"
+      "artifactSha256": "5c091b062676ab56f759978ccb9734508d2408297a51053052773168f9e2ed08"
     },
     {
       "route": "/work/fair-rent-nyc",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/fair-rent-nyc-mobile-320.png",
-      "artifactSha256": "b392e50cb5a0a11d25e6656be9f1dcb1c81800eee8366a886d95491efec21742"
+      "artifactSha256": "4272a05d4bf078101e213ea5ccd627c601c3750332fa3c095c70dec0e318a471"
     },
     {
       "route": "/work/wowlist",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/wowlist-desktop.png",
-      "artifactSha256": "b8b7cb3cdd98571596e1de353c4190f3902eb1844b398868e103309217c5ec77"
+      "artifactSha256": "e89f78adbc8f1ae147f10f0f6de7d3dedac6889e9b7d25a4e8e4115f0ad00fea"
     },
     {
       "route": "/work/wowlist",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/wowlist-mobile-320.png",
-      "artifactSha256": "87d50700486a8854630c9679da34f0b1b16d073027a05290cad76c08448042a4"
+      "artifactSha256": "d3a99f45d38070fff9ba210568a261a0fe1445dd894aeef30903ecce8c729581"
     },
     {
       "route": "/work/kc-town-hall",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-desktop.png",
-      "artifactSha256": "78d7c15d146153ba9aced95dd165452430226189f73c18a4d3734702054abbd7"
+      "artifactSha256": "d6a0be0c520bf31867becc3856c2a2b6fa94d6d18150d6661e6df1638059ddfb"
     },
     {
       "route": "/work/kc-town-hall",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-mobile-320.png",
-      "artifactSha256": "c61cdcc17787a2c5fe505a2b86e70cc0c3c7c54d9c2979920b0ae378b9cc5784"
+      "artifactSha256": "bccc2c46e08dc4d85ff88ced7d311ef6e5e26a677150602d8ea8948fdcee07a6"
     },
     {
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",

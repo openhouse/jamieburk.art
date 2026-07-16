@@ -337,21 +337,23 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system across cultural spaces, practical support sessions, public hearings, town halls, campaign actions, and relief convenings.",
+      "Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system, moving emerging work from public invitation and listening through collaborative drafting, collective naming, follow-up meetings, and sustained civic action.",
     shortWording:
       "Helped establish NYC Artist Coalition's recurring participation system",
     detailedPublicWording:
-      "Jamie connected lessons from WOW List with coalition advocacy through public event pages, meetings rotating among small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+      "Jamie connected lessons from WOW List with coalition advocacy through Call Script and public event pages. The early record preserves a DCLA meeting, issue gathering, collaborative letter drafting, a public naming poll, and a follow-up general meeting before the system expanded across small cultural spaces, practical sessions, town halls, hearings, campaign actions, and relief convenings.",
     sourceBasis:
-      "Jamie's first-hand role account, a public-safe census of 33 recovered Facebook event records, contemporaneous Gothamist reporting on his fire-safety and City Hall organizing, and a community profile connecting him to coalition work and a nightlife town hall invitation.",
+      "Jamie's first-hand role account; the archived popular.vote surface; the surviving Call Script page; the complete public discussion for a Call Script-cohosted January 2017 DCLA meeting; a protected WOW List production snapshot corroborating the event sequence; a public-safe census of 33 recovered coalition event records; contemporaneous Gothamist reporting; and a community profile connecting Jamie to coalition work.",
     whyItMatters:
       "Shows event production and recurring participation as civic operating infrastructure, while preserving the coalition, hosts, partners, and participants as co-authors of the work.",
     guardrail:
-      "Use helped establish and produce. Do not assign Jamie sole authorship of every event, treat Facebook response labels as attendance, or claim that the event system alone caused a policy outcome.",
+      "Use helped establish and produce. Do not assign Jamie sole authorship of every event or page post, treat Facebook response labels as attendance, turn the naming poll's displayed 57% into a vote total or mandate, or claim that one tool or the event system alone caused coalition formation or a policy outcome.",
     doNotSay: [
       "Jamie solely produced every NYC Artist Coalition event",
       "9,989 people attended",
       "Facebook responses equal attendance or unique reach",
+      "The naming poll proves a vote total, representative mandate, or complete founding roster",
+      "Call Script or popular.vote alone created NYC Artist Coalition",
       "Every event used a different venue",
       "The event program alone repealed the Cabaret Law"
     ],
@@ -362,7 +364,8 @@ export const proofClaims: ProofClaim[] = [
       "Contact details",
       "Meeting credentials",
       "Private working links",
-      "Authenticated-session data"
+      "Authenticated-session data",
+      "Raw WOW List database records"
     ],
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
@@ -374,7 +377,7 @@ export const proofClaims: ProofClaim[] = [
       "public-communications"
     ],
     canonicalClaimIds: ["CLM-NYCAC-PARTICIPATION-SYSTEM"],
-    lastReviewed: "2026-07-15"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "wowlist-community-platform",
@@ -433,9 +436,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "For Sunday Dinner, Jamie worked with Julia Fredenberg on invitation, hosting, documentation, and continuity; his approved resume reports 300+ gatherings. For 196 Artists Residency, Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, and artist-support practices.",
     sourceBasis:
-      "Approved resume language and public-safe aggregate project history support the scale claim; a Greene Hill Food Co-op Q&A and the surviving public project archive separately support weekly open co-hosting and participatory documentation. Public Facebook event pages preserve 100th and 200th Sunday Dinner milestone titles with exact organizer displays. A protected 2023 acceptance record supports the residency's proposal-review, pre-arrival-planning, space-configuration, and access methods, not the 20+ aggregate.",
+      "Approved resume language supplies the public scale wording; a protected working ledger preserves numbered Sunday Dinner records through 345 and a contemporaneous 300th record without establishing attendance or unique participants. A Greene Hill Food Co-op Q&A and the surviving public project archive separately support weekly open co-hosting and participatory documentation. Public Facebook event pages preserve 100th and 200th milestone titles. A protected 2023 acceptance record supports the residency's operating methods, not the 20+ aggregate.",
     guardrail:
-      "Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; treat the numbered Facebook titles as contemporaneous milestones rather than an independent count audit; attribute both aggregates to Jamie's approved resume and use 'Jamie reports' for the 20+ residency scale; keep the two role and date ranges distinct.",
+      "Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; treat numbered Facebook titles as contemporaneous milestones and the protected ledger as project-history support rather than attendance or unique-participant evidence; keep the ledger out of public citations and detail; attribute both aggregates to Jamie's approved resume and use 'Jamie reports' for the 20+ residency scale; keep the two role and date ranges distinct.",
     doNotSay: [
       "Jamie was Sunday Dinner's sole host or sole creator",
       "Institutional ownership of participants' work",
@@ -445,6 +448,7 @@ export const proofClaims: ProofClaim[] = [
     protectedBoundaries: [
       "Guest lists",
       "Attendance records",
+      "Workbook rows and response markers",
       "Addresses",
       "Private messages",
       "Raw community records",
@@ -458,7 +462,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-15"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

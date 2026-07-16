@@ -255,24 +255,27 @@ export const nycacFacebookEventLifecycle = {
     {
       id: "CND-NYCAC-PARTICIPATION-SYSTEM",
       projectIds,
-      proposition: "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system across cultural spaces, practical support sessions, town halls, hearings, campaign actions, and relief convenings.",
+      proposition: "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system, including an early sequence from WOW List's civic event-sharing adaptation through a Call Script-cohosted DCLA meeting, issue gathering, collaborative drafting, collective naming, and follow-up convening.",
       maturity: "promoted",
       confidence: "moderate",
       observationIds: [
         "OBS-NYCAC-FACEBOOK-EVENT-CHRONOLOGY",
         "OBS-NYCAC-FACEBOOK-ROTATING-MEETINGS",
         "OBS-NYCAC-FACEBOOK-CIVIC-CULTURAL-INTERFACES",
-        "OBS-NYCAC-FACEBOOK-JAMIE-ROLE-MEMORY"
+        "OBS-NYCAC-FACEBOOK-JAMIE-ROLE-MEMORY",
+        "OBS-CALLSCRIPT-PAGE-LINKS-POPULAR-VOTE",
+        "OBS-CALLSCRIPT-DCLA-PARTICIPATION-SEQUENCE",
+        "OBS-WOWLIST-PRODUCTION-NYCAC-EVENT-SEQUENCE"
       ],
-      requiredEvidence: ["First-hand role account", "Full exposed event census", "Independent role corroboration", "Collective-credit boundary"],
-      boundaries: ["Use helped establish and produce.", "Preserve collaborator, host, partner, and participant credit.", "Do not infer event-level authorship or policy causality."],
-      antiClaims: ["Jamie solely produced every event", "Every event used a different venue", "The event system alone caused Cabaret Law repeal"],
+      requiredEvidence: ["First-hand role account", "Full exposed event census", "Public record of the early operating sequence", "Independent role corroboration", "Collective-credit boundary"],
+      boundaries: ["Use helped establish and produce.", "Preserve collaborator, host, partner, and participant credit.", "Do not infer event-level authorship or policy causality.", "Do not convert the naming poll's displayed 57% into a vote total or representative mandate."],
+      antiClaims: ["Jamie solely produced every event", "Call Script or popular.vote alone caused the coalition to form", "Every event used a different venue", "The event system alone caused Cabaret Law repeal"],
       counterevidencePosture: "Invite collaborator correction and revise event-level credit without erasing the documented collective system.",
-      sourceIndependenceNote: "The role claim combines Jamie's first-hand account with public event-system evidence and independent reporting of related coalition action.",
-      researchTaskIds: [roleTaskId],
+      sourceIndependenceNote: "The role claim combines Jamie's first-hand account with public event-system evidence, a protected production snapshot, and independent reporting of related coalition action; the protected snapshot corroborates sequence, not independent impact.",
+      researchTaskIds: [roleTaskId, "TASK-CALLSCRIPT-WOWLIST-NYCAC-BRIDGE-2026"],
       promotionDecisionIds: ["DEC-NYCAC-PARTICIPATION-SYSTEM-PROMOTE"],
       targetCanonicalClaimId: "CLM-NYCAC-PARTICIPATION-SYSTEM",
-      updatedAt: reviewedAt
+      updatedAt: "2026-07-16"
     },
     {
       id: "CND-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS",

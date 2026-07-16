@@ -467,12 +467,12 @@ export const nycacFacebookEventClaims: KnowledgeBank["claims"] = [
     id: "CLM-NYCAC-PARTICIPATION-SYSTEM",
     project: "nyc-artist-coalition",
     internalClaim:
-      "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, rotating meetings in small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings connecting artists' lived experience with civic pathways.",
+      "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system. Public records preserve an early operating sequence from WOW List's popular.vote civic event-sharing surface through a Call Script-cohosted DCLA meeting, issue gathering, collaborative letter drafting, collective naming, and a February follow-up meeting, followed by rotating meetings, practical sessions, town halls, hearings, campaign actions, and relief convenings.",
     status: "confirmed-with-boundary",
     projections: [
       {
         key: "case-study",
-        text: "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+        text: "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system. He used Call Script and WOW List's civic event-sharing adaptation to help move an emerging group from a DCLA meeting through issue gathering, collaborative drafting, collective naming, and a follow-up meeting, then into a wider cadence of cultural-space meetings and civic action.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/fair-rent-nyc"]
@@ -525,10 +525,53 @@ export const nycacFacebookEventClaims: KnowledgeBank["claims"] = [
         ],
         confidence: "high",
         renderCitation: true
+      },
+      {
+        sourceId: "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016",
+        relationship: "context",
+        supports: [
+          "WOW List's civic event-sharing adaptation",
+          "a public surface for marches, meetings, and in-person connection"
+        ],
+        confidence: "high",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16",
+        relationship: "corroborating",
+        supports: [
+          "Call Script project identity",
+          "the surviving public link to popular.vote"
+        ],
+        confidence: "moderate",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+        relationship: "direct-support",
+        supports: [
+          "Call Script's DCLA-meeting cohost role",
+          "issue gathering and collaborative letter drafting",
+          "collective naming and follow-up meeting coordination"
+        ],
+        confidence: "high",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-WOWLIST-PRODUCTION-ARCHIVE-NYCAC-SEQUENCE-2017",
+        relationship: "private-support",
+        supports: [
+          "the adjacent January-to-February 2017 event sequence",
+          "continuity of event-sharing infrastructure"
+        ],
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: [
       "Use helped establish and produce; do not assign Jamie authorship or sole production of every event.",
+      "The current Call Script link to popular.vote does not establish when the link was added, and page authorship does not establish that Jamie wrote every post or comment.",
+      "The naming poll displays NYC Artist Coalition as the leading option at 57% but does not display a vote denominator.",
       "Preserve partners, venue hosts, artists, advocates, officials, and coalition collaborators as part of the work.",
       "The rotating pattern covers ten physical meeting spaces and two virtual meetings, not one meeting every calendar month.",
       "The event sequence does not establish that any gathering caused a policy outcome."
@@ -536,13 +579,18 @@ export const nycacFacebookEventClaims: KnowledgeBank["claims"] = [
     antiClaims: [
       "Jamie solely created or produced every NYC Artist Coalition event.",
       "Jamie alone led the coalition.",
+      "Call Script or popular.vote alone caused NYC Artist Coalition to form.",
+      "The naming poll establishes a vote total, representative mandate, or complete founding roster.",
       "Every event used a different venue.",
       "The coalition held a meeting every calendar month.",
       "The event program alone caused Cabaret Law repeal or another policy outcome."
     ],
-    researchInquiryIds: ["INQ-NYCAC-FACEBOOK-EVENT-ROLE-AND-ATTENDANCE"],
-    reviewedAt,
-    reviewedBy
+    researchInquiryIds: [
+      "INQ-NYCAC-FACEBOOK-EVENT-ROLE-AND-ATTENDANCE",
+      "INQ-CALLSCRIPT-WOWLIST-NYCAC-BRIDGE-2026"
+    ],
+    reviewedAt: "2026-07-16",
+    reviewedBy: [...reviewedBy, "Codex Call Script bridge review"]
   },
   {
     id: "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS",

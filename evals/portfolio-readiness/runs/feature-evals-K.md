@@ -241,3 +241,20 @@ scores are reported on the pull request.
 
 The exact public page, citation registry, visual evidence, and complete release
 gate must be refreshed before final independent application-readiness review.
+
+## Call Script, WOW List, and coalition bridge release pass
+
+- Added a public-safe, source-backed explanation of how Jamie helped emerging
+  coalition work acquire usable structure across a civic event tool, public
+  meeting, listening, shared drafting, collective naming, and follow-up.
+- Strengthened Sunday Dinner's 300-plus history with protected project-record
+  support while retaining the public attribution and refusing attendance or
+  unique-participant claims.
+- Kept the website selective: only the hiring-relevant operating sequence
+  changed; the database, workbook, poll mechanics, and archival inventory stay
+  in the bank.
+- Regenerated the citation registry, projection map, 42-observation route
+  matrix, and 20 capture hashes.
+
+The complete Node 26 release gate passes. External semantic readiness scoring
+remains pending explicit authorization for any protected evaluation bundle.

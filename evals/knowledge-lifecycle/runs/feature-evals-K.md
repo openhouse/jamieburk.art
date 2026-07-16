@@ -538,3 +538,29 @@ The focused typecheck, 49 lifecycle tests, eight-test WOW List Facebook suite,
 social-archive gate, integrity checkpoint, and Git-history validation pass.
 Fresh deterministic and independent exact-revision semantic evaluation remains
 required after committing this repair.
+
+## Call Script to coalition operating bridge
+
+The July 16 pass added a governed bridge across the archived `popular.vote`
+surface, the surviving Call Script page, the complete January 27, 2017 DCLA
+event discussion, a protected WOW List production snapshot, and a protected
+Sunday Dinner working ledger.
+
+The lifecycle now preserves the early sequence as atomic evidence: civic event
+sharing, public invitation, issue gathering, collaborative drafting, collective
+naming, and follow-up convening. It strengthens the existing promoted NYC
+Artist Coalition participation-system claim rather than introducing a competing
+founding claim. The current page link does not establish its 2017 state; the
+naming poll has no denominator; page authorship remains open; and protected
+database chronology corroborates sequence rather than impact.
+
+The Sunday Dinner ledger now supports numbered project history through 345,
+including a contemporaneous 300th record. It remains non-rendered protected
+support and cannot establish attendance, unique participants, or an
+independently audited census.
+
+The dedicated evaluator hill-climbed from **88 / 100** to **100 / 100**. The
+52-test lifecycle suite, citation registry, projection map, compiled-locator
+gate, public-safety checks, and complete Node 26 release gate pass. External
+semantic judges remain pending explicit authorization to disclose the bounded
+evaluation bundle.

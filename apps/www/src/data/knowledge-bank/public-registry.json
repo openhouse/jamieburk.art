@@ -90,6 +90,28 @@
       ]
     },
     {
+      "id": "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016",
+      "title": "popular.vote WOW List event-sharing surface",
+      "organization": "WOW List",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "capturedAt": "2016-12-11",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "archiveUrl": "https://web.archive.org/web/20161211233030/http://popular.vote/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "popular.vote archived project surface, December 11, 2016.",
+      "publicNote": "The capture identifies a WOW List event-sharing adaptation for marches, meetings, and in-person connection.",
+      "doesNotEstablish": [
+        "participation totals",
+        "complete team ownership",
+        "event attendance",
+        "causal impact"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
       "title": "Taking back New York City's nightlife",
       "organization": "Document Journal",
@@ -110,6 +132,56 @@
         "Jamie's sole founding role",
         "Olympia Kazi's sole control of the account",
         "sole causation of policy outcomes"
+      ]
+    },
+    {
+      "id": "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16",
+      "title": "Call Script Facebook page",
+      "organization": "Call Script",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-16",
+      "metadataVerifiedAt": "2026-07-16",
+      "metadataVerifiedBy": "Codex authenticated public-page review",
+      "reviewStatus": "close-read",
+      "contentReviewedAt": "2026-07-16",
+      "contentReviewedBy": "Codex authenticated public-page review",
+      "canonicalUrl": "https://www.facebook.com/callscript",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Call Script Facebook page, accessed July 16, 2026.",
+      "publicNote": "The surviving page identifies Call Script as a representative-calling project and links to popular.vote. The current link is contextual evidence, not proof that the page displayed the link in 2017.",
+      "doesNotEstablish": [
+        "when the popular.vote link was added",
+        "that Jamie authored every page post",
+        "sole ownership of either project",
+        "participation, attendance, reach, or policy impact"
+      ]
+    },
+    {
+      "id": "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+      "title": "NYC DIY Spaces post Ghost Ship: Department of Cultural Affairs meeting and discussion",
+      "organization": "NYC Artist Coalition, Call Script, and cohosts",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-01-27",
+      "accessedAt": "2026-07-16",
+      "metadataVerifiedAt": "2026-07-16",
+      "metadataVerifiedBy": "Codex authenticated public-event review",
+      "reviewStatus": "close-read",
+      "contentReviewedAt": "2026-07-16",
+      "contentReviewedBy": "Codex authenticated public-event review",
+      "canonicalUrl": "https://www.facebook.com/events/388137698233507/?active_tab=discussion",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, Call Script, and cohosts, 'NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting,' event and discussion, January 27, 2017.",
+      "publicNote": "The public event record preserves a DCLA meeting, issue gathering, collaborative letter drafting, a group-naming poll in which NYC Artist Coalition was the leading displayed option at 57%, and routing into a February 6 follow-up meeting. No poll denominator is displayed.",
+      "doesNotEstablish": [
+        "the poll denominator",
+        "verified attendance or unique reach",
+        "that Jamie authored every post or comment",
+        "a complete founding roster",
+        "sole production or policy causality"
       ]
     },
     {
@@ -851,7 +923,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+          "text": "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system. He used Call Script and WOW List's civic event-sharing adaptation to help move an emerging group from a DCLA meeting through issue gathering, collaborative drafting, collective naming, and a follow-up meeting, then into a wider cadence of cultural-space meetings and civic action.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -898,10 +970,43 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016",
+          "relationship": "context",
+          "supports": [
+            "WOW List's civic event-sharing adaptation",
+            "a public surface for marches, meetings, and in-person connection"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16",
+          "relationship": "corroborating",
+          "supports": [
+            "Call Script project identity",
+            "the surviving public link to popular.vote"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Call Script's DCLA-meeting cohost role",
+            "issue gathering and collaborative letter drafting",
+            "collective naming and follow-up meeting coordination"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
         "Use helped establish and produce; do not assign Jamie authorship or sole production of every event.",
+        "The current Call Script link to popular.vote does not establish when the link was added, and page authorship does not establish that Jamie wrote every post or comment.",
+        "The naming poll displays NYC Artist Coalition as the leading option at 57% but does not display a vote denominator.",
         "Preserve partners, venue hosts, artists, advocates, officials, and coalition collaborators as part of the work.",
         "The rotating pattern covers ten physical meeting spaces and two virtual meetings, not one meeting every calendar month.",
         "The event sequence does not establish that any gathering caused a policy outcome."
@@ -1357,7 +1462,7 @@
         }
       ],
       "boundaries": [
-        "The independent public sources establish weekly co-hosting and the archive, not the 300-plus figure; that aggregate is Jamie-approved and self-reported through the public resume.",
+        "The 300-plus aggregate is Jamie-approved through the public resume and supported by a protected working ledger's numbered history; the ledger is not an independent attendance audit.",
         "This claim concerns Sunday Dinner, not the separately named 196 Artists Residency.",
         "Do not reproduce old RSVP details, identify participants, or republish participant media without contextual rights and consent review.",
         "Do not present the archive as a current event listing."
@@ -1751,7 +1856,10 @@
         "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
         "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
         "SRC-NYCA-GOTHAMIST-CABARET-2017",
-        "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017"
+        "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017",
+        "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016",
+        "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16",
+        "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017"
       ],
       "occurrences": [
         {
@@ -1781,7 +1889,10 @@
           "sourceIds": [
             "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
             "SRC-NYCA-GOTHAMIST-CABARET-2017",
-            "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017"
+            "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017",
+            "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016",
+            "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16",
+            "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017"
           ]
         }
       ]

@@ -9,6 +9,10 @@ import {
   socialArchiveResearchInquiries,
   socialArchiveSources
 } from "./social-archive.ts";
+import {
+  callscriptBridgeResearchInquiries,
+  callscriptBridgeSources
+} from "./callscript-bridge.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import {
   nycartcXCorpusClaims,
@@ -56,6 +60,7 @@ const knowledgeBankInput = {
     ...campaignPressIndexSources,
     ...campaignPressArticleSources,
     ...socialArchiveSources,
+    ...callscriptBridgeSources,
     ...kcTownHallSocialCorpus.sources,
     ...nycartcXCorpusSources,
     ...urbanhermitXCorpusSources,
@@ -1570,11 +1575,12 @@ const knowledgeBankInput = {
       evidence: [
         { sourceId: "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", relationship: "direct-support", supports: ["Jamie and Julia as weekly co-hosts", "the gathering's open-community posture"], locator: "Opening description and interview body", confidence: "high", renderCitation: true },
         { sourceId: "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE", relationship: "corroborating", supports: ["the surviving project archive", "participatory media pathways around the gatherings"], locator: "Homepage and public navigation", confidence: "moderate", renderCitation: true },
-        { sourceId: "SRC-JAMIE-APPROVED-RESUME-2026-07-13", relationship: "direct-support", supports: ["the 300-plus documented-gathering figure", "the 2012-present date range", "Jamie's co-host and systems-steward framing"], locator: "Selected Impact and Experience, pages 1-2", confidence: "moderate", renderCitation: true }
+        { sourceId: "SRC-JAMIE-APPROVED-RESUME-2026-07-13", relationship: "direct-support", supports: ["the 300-plus documented-gathering figure", "the 2012-present date range", "Jamie's co-host and systems-steward framing"], locator: "Selected Impact and Experience, pages 1-2", confidence: "moderate", renderCitation: true },
+        { sourceId: "SRC-SUNDAY-DINNER-WORKING-LEDGER-2012-2021", relationship: "private-support", supports: ["numbered gathering history through 345", "a contemporaneous 300th record", "long-running participation operations"], locator: "Public-safe workbook structure and event-header review; participant rows excluded", confidence: "high", renderCitation: false }
       ],
-      boundaries: ["The independent public sources establish weekly co-hosting and the archive, not the 300-plus figure; that aggregate is Jamie-approved and self-reported through the public resume.", "This claim concerns Sunday Dinner, not the separately named 196 Artists Residency.", "Do not reproduce old RSVP details, identify participants, or republish participant media without contextual rights and consent review.", "Do not present the archive as a current event listing."],
-      antiClaims: ["The reviewed sources establish Jamie as Sunday Dinner's sole host or sole creator", "The public archive is comprehensive", "Participant media is cleared for portfolio republication"],
-      researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Jamie Burkart", "Codex public-source and artifact review"]
+      boundaries: ["The 300-plus aggregate is Jamie-approved through the public resume and supported by a protected working ledger's numbered history; the ledger is not an independent attendance audit.", "This claim concerns Sunday Dinner, not the separately named 196 Artists Residency.", "Do not reproduce old RSVP details, identify participants, or republish participant media without contextual rights and consent review.", "Do not present the archive as a current event listing."],
+      antiClaims: ["The reviewed sources establish Jamie as Sunday Dinner's sole host or sole creator", "The 300-plus aggregate is a verified attendance or unique-participant total", "The public archive is comprehensive", "Participant media is cleared for portfolio republication"],
+      researchInquiryIds: ["INQ-SUNDAY-DINNER-WORKING-LEDGER-2026"], reviewedAt: "2026-07-16", reviewedBy: ["Jamie Burkart", "Codex public-source and protected-workbook review"]
     },
     {
       id: "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
@@ -1720,6 +1726,7 @@ const knowledgeBankInput = {
       publicSummary: "Independent corroboration remains an open research task; public wording stays explicitly self-reported and contributory."
     },
     ...socialArchiveResearchInquiries,
+    ...callscriptBridgeResearchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...nycartcXCorpusResearchInquiries,
     ...urbanhermitXCorpusResearchInquiries,
@@ -1796,12 +1803,12 @@ const knowledgeBankInput = {
     {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
-      sourceOrder: ["SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017", "SRC-NYCA-SAVE-NYC-SPACES", "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018", "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017"],
+      sourceOrder: ["SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017", "SRC-NYCA-SAVE-NYC-SPACES", "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018", "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016", "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017"],
       occurrences: [
         { id: "office-nightlife-town-hall", claimId: "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study" },
         { id: "commercial-rent-testimony", claimId: "CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-2018", projection: "case-study" },
         { id: "shared-social-identity", claimId: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"] },
-        { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017"] }
+        { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016", "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017"] }
       ]
     },
     {

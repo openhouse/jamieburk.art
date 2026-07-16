@@ -226,15 +226,15 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
-**Public wording:** Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system across cultural spaces, practical support sessions, public hearings, town halls, campaign actions, and relief convenings.
-**Detailed public-safe wording:** Jamie connected lessons from WOW List with coalition advocacy through public event pages, meetings rotating among small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.
+**Public wording:** Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system, moving emerging work from public invitation and listening through collaborative drafting, collective naming, follow-up meetings, and sustained civic action.
+**Detailed public-safe wording:** Jamie connected lessons from WOW List with coalition advocacy through Call Script and public event pages. The early record preserves a DCLA meeting, issue gathering, collaborative letter drafting, a public naming poll, and a follow-up general meeting before the system expanded across small cultural spaces, practical sessions, town halls, hearings, campaign actions, and relief convenings.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
 **Why it matters:** Shows event production and recurring participation as civic operating infrastructure while preserving the coalition, hosts, partners, and participants as co-authors of the work.
-**Guardrail:** Use helped establish and produce. Do not assign Jamie sole authorship of every event, treat Facebook response labels as attendance, or claim that the event system alone caused a policy outcome.
-**Do not say:** Jamie solely produced every event; 9,989 people attended; Facebook responses equal attendance or unique reach; every event used a different venue; the event program alone repealed the Cabaret Law.
-**Protected boundaries:** Raw event descriptions, attendee identities, comments and reactions, contact details, meeting credentials, private working links, and authenticated-session data stay offline.
+**Guardrail:** Use helped establish and produce. Do not assign Jamie sole authorship of every event or page post, treat Facebook response labels as attendance, turn the naming poll's displayed 57% into a vote total or mandate, or claim that one tool or the event system alone caused coalition formation or a policy outcome.
+**Do not say:** Jamie solely produced every event; 9,989 people attended; Facebook responses equal attendance or unique reach; the naming poll establishes a representative mandate or complete founding roster; Call Script or popular.vote alone created NYC Artist Coalition; every event used a different venue; the event program alone repealed the Cabaret Law.
+**Protected boundaries:** Raw event descriptions, attendee identities, comments and reactions, contact details, meeting credentials, private working links, authenticated-session data, and raw WOW List database records stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-15
+**Last reviewed:** 2026-07-16
 
 ## wowlist-community-platform - Followable community platform
 
@@ -257,14 +257,14 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful  
 **Evidence class:** Approved resume / public sources / protected onboarding artifact / Jamie review confirmation
 **Public wording:** Jamie co-hosted Sunday Dinner with Julia Fredenberg; his approved resume reports 300+ gatherings. Jamie founded 196 Artists Residency; Jamie reports supporting 20+ resident artists through repeatable participation systems.
-**Detailed public-safe wording:** By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering. Jamie's approved public resume separately identifies him as the founder of 196 Artists Residency, dates Sunday Dinner to 2012-present and the residency to 2020-present, and attributes 300+ gatherings to Sunday Dinner and support for 20+ resident artists to the residency. Independent public sources support Sunday Dinner cadence and co-hosting. A protected 2023 residency record supports proposal review, scheduled onboarding, pre-arrival planning, space configuration, and access logistics. Neither independently corroborates the aggregate figures, which remain Jamie-approved, self-reported claims.
+**Detailed public-safe wording:** By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering. Jamie's approved public resume separately identifies him as the founder of 196 Artists Residency, dates Sunday Dinner to 2012-present and the residency to 2020-present, and attributes 300+ gatherings to Sunday Dinner and support for 20+ resident artists to the residency. Independent public sources support Sunday Dinner cadence and co-hosting. A protected working ledger preserves numbered Sunday Dinner records through 345 and a contemporaneous 300th record; it supports project history, not attendance or unique-participant totals. A protected 2023 residency record supports operating methods, not the 20+ aggregate.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
-**Guardrail:** Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; attach 300+ gatherings only to Sunday Dinner and 20+ resident artists only to 196 Artists Residency; attribute both aggregates to Jamie's approved resume and use "Jamie reports" for the residency scale. The protected onboarding record supports methods, not scale.
-**Do not say:** Jamie was Sunday Dinner's sole host or sole creator; institutional ownership of participants' work; comprehensive public archive; attendance database.
-**Protected boundaries:** Resident identities, work, images, contact details, access instructions, guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.
+**Guardrail:** Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; attach 300+ gatherings only to Sunday Dinner and 20+ resident artists only to 196 Artists Residency; treat numbered Facebook titles as contemporaneous milestones and the protected ledger as project-history support rather than attendance evidence; keep the ledger out of public citations and detail; attribute both aggregates to Jamie's approved resume and use "Jamie reports" for the residency scale.
+**Do not say:** Jamie was Sunday Dinner's sole host or sole creator; the ledger is a verified attendance or unique-participant census; institutional ownership of participants' work; comprehensive public archive; attendance database.
+**Protected boundaries:** Resident identities, work, images, contact details, access instructions, guest lists, attendance records, workbook rows and markers, addresses, private messages, raw community records, and unapproved photos stay offline.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-15
+**Last reviewed:** 2026-07-16
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 

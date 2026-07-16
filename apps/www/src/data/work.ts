@@ -195,7 +195,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Collaborators could find decisions, sources, open questions, and next steps across 30+ shared pages, then use public campaign sites and explanations without exposing private coalition context.",
+      "Emerging work gained a public path from invitation and listening through shared drafting, collective naming, follow-up meetings, and durable campaign memory. Collaborators could then find decisions, sources, open questions, and next steps across 30+ shared pages without exposing private coalition context.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -221,6 +221,12 @@ const workItemsInput = [
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
         type: "website"
+      },
+      {
+        title: "Early participation sequence",
+        description:
+          "Jamie used Call Script and WOW List's civic event-sharing adaptation to help move an emerging group from a DCLA meeting through issue gathering, collaborative drafting, collective naming, and a follow-up meeting.",
+        type: "meeting memory"
       }
     ],
     tags: [
@@ -263,6 +269,7 @@ const workItemsInput = [
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "Named NYC Artist Coalition speaker at a 2017 Office of Nightlife town hall",
       "2018 City Council testimony connecting commercial affordability to cultural-space safety",
+      "Public records preserving an early sequence from civic event sharing through issue gathering, collaborative drafting, collective naming, and follow-up convening",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
@@ -271,7 +278,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Jamie co-founded NYC Artist Coalition and helped emerging work acquire usable structure through public invitation, listening, collaborative drafting, collective naming, recurring meetings, campaign memory, source maps, policy communications, and follow-up systems.",
       open:
         "Named collaborators, meeting materials, and screenshots appear only when already public or separately approved.",
       protected:

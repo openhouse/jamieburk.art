@@ -28,6 +28,12 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not say Call Script or `popular.vote` alone created NYC Artist Coalition,
+that Jamie authored every Call Script page post, or that the naming poll's
+displayed 57% establishes a vote total, representative mandate, or complete
+founding roster. Do not convert Facebook responses or reach language into
+attendance, unique people, or impact.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -51,6 +57,10 @@ resident-artist figures unallocated between the two practices.
 
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
+
+Do not treat the protected Sunday Dinner working ledger as a verified
+attendance census or unique-participant count. Do not publish workbook rows,
+response markers, names, contact information, or formulas.
 
 ## KC Spaces Fund
 

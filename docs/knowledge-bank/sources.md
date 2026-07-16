@@ -23,6 +23,10 @@ Approved public artifact examples for this launch pass include:
 - Harry J. Epstein Company public website.
 - CallNYC public GitHub repository.
 - CallNYC archived Politico New York PDF.
+- The archived December 2016 `popular.vote` surface, the surviving Call Script
+  page, and the complete surviving public discussion for the January 27, 2017
+  DCLA event. Together they support a bounded civic-tool-to-coalition operating
+  sequence, not sole authorship, attendance, a poll vote total, or causality.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 - KC Spaces Fund Facebook surviving-feed public-safe corpus, independently testable opaque acquisition control, and protected authenticated traversal, reviewed July 16, 2026.
@@ -37,6 +41,12 @@ Approved public artifact examples for this launch pass include:
 Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
+
+Protected project records used in this pass include a read-only July 2017 WOW
+List production snapshot and a Sunday Dinner working ledger. Public-safe
+summaries may preserve chronology and numbered project history. Raw database
+rows, user records, participant names, contact details, response markers,
+formulas, and file locators remain excluded.
 
 ### AI-Assisted Archival Review
 

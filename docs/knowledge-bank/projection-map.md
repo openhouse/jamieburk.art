@@ -263,13 +263,15 @@ composed public surface, not a claim database.
 - Private coalition strategy
 - Individual policy causality
 - Sole event production or page authorship
-- Facebook responses as attendance
+- Single-tool coalition causality
+- Facebook responses as attendance or naming-poll mandate
 
 ### Guardrails
 
 - Credit collaborators
 - Do not expose private records
-- Do not convert response counters into attendance
+- Use the public Call Script record for the early sequence and keep the protected database out of citations
+- Do not convert response counters into attendance or the 57% poll display into a vote total
 ## `/work/callnyc`
 
 **Surface:** `case-study`
@@ -350,14 +352,15 @@ composed public surface, not a claim database.
 ### Exclusions
 
 - Private participant records
-- Independent validation of self-reported aggregates
+- Verified attendance or unique-participant claims from ledger markers
 - Attendance inferred from Facebook response labels
 
 ### Guardrails
 
 - Keep the two practices distinct
 - Credit Julia Fredenberg on the 200th milestone
-- Treat numbered titles as contemporaneous records
+- Treat numbered titles and ledger columns as contemporaneous project records
+- Keep the protected ledger out of public citations and public detail
 - Use 'Jamie reports' for the 20+ residency scale
 - Do not publish participant media without review
 ## `/work/kc-town-hall`
