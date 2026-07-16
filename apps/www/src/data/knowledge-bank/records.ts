@@ -127,6 +127,12 @@ import {
   nycacInstitutionalValueResearchInquiries20260716,
   nycacInstitutionalValueSourceRecords20260716
 } from "./nycac-institutional-value-2026-07-16.ts";
+import {
+  ucscMorseSackClaimRecords20260716,
+  ucscMorseSackIntakeRecords20260716,
+  ucscMorseSackResearchInquiries20260716,
+  ucscMorseSackSourceRecords20260716
+} from "./ucsc-morse-sack-intake-2026-07-16.ts";
 
 const knowledgeBankInput = {
   intakes: [
@@ -150,7 +156,8 @@ const knowledgeBankInput = {
     ...nycacFacebookPostIntakeRecords20260716,
     ...jamiePersonalFacebookPostIntakeRecords20260716,
     ...participationLineageIntakeRecords20260716,
-    ...nycacInstitutionalValueIntakeRecords20260716
+    ...nycacInstitutionalValueIntakeRecords20260716,
+    ...ucscMorseSackIntakeRecords20260716
   ],
   sources: [
     {
@@ -295,7 +302,8 @@ const knowledgeBankInput = {
     ...nycacFacebookPostSourceRecords20260716,
     ...jamiePersonalFacebookPostSourceRecords20260716,
     ...participationLineageSourceRecords20260716,
-    ...nycacInstitutionalValueSourceRecords20260716
+    ...nycacInstitutionalValueSourceRecords20260716,
+    ...ucscMorseSackSourceRecords20260716
   ],
   claims: [
     {
@@ -404,7 +412,8 @@ const knowledgeBankInput = {
     ...nycacFacebookPostClaimRecords20260716,
     ...jamiePersonalFacebookPostClaimRecords20260716,
     ...participationLineageClaimRecords20260716,
-    ...nycacInstitutionalValueClaimRecords20260716
+    ...nycacInstitutionalValueClaimRecords20260716,
+    ...ucscMorseSackClaimRecords20260716
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -438,7 +447,8 @@ const knowledgeBankInput = {
     ...nycacFacebookPostResearchInquiries20260716,
     ...jamiePersonalFacebookPostResearchInquiries20260716,
     ...participationLineageResearchInquiries20260716,
-    ...nycacInstitutionalValueResearchInquiries20260716
+    ...nycacInstitutionalValueResearchInquiries20260716,
+    ...ucscMorseSackResearchInquiries20260716
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },

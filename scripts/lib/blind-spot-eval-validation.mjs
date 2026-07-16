@@ -3,8 +3,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-const suitePath = path.join(repoRoot, "evals/launch-readiness/v22/evals.json");
-const mapPath = path.join(repoRoot, "evals/launch-readiness/v22/blind-spots.json");
+const suitePath = path.join(repoRoot, "evals/launch-readiness/v23/evals.json");
+const mapPath = path.join(repoRoot, "evals/launch-readiness/v23/blind-spots.json");
 
 const expectedBlindSpotIds = [
   "BLIND-SELECTION",
@@ -111,7 +111,7 @@ export function validateBlindSpotEvals() {
     errors.push("blind-spot map needs the complete protocol file set");
   }
   for (const relativePath of map.protocolFiles ?? []) {
-    if (typeof relativePath !== "string" || !relativePath.startsWith("evals/launch-readiness/v22/")) {
+    if (typeof relativePath !== "string" || !relativePath.startsWith("evals/launch-readiness/v23/")) {
       errors.push(`invalid blind-spot protocol path ${relativePath}`);
       continue;
     }

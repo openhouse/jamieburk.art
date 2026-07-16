@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import { validateBlindSpotEvals } from "./lib/blind-spot-eval-validation.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suitePath = path.join(repoRoot, "evals/launch-readiness/v22/evals.json");
+const suitePath = path.join(repoRoot, "evals/launch-readiness/v23/evals.json");
 const suite = JSON.parse(readFileSync(suitePath, "utf8"));
 const failures = [];
 

@@ -72,18 +72,21 @@ export const intakeSourceRecords = [
     canonicalUrl: "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
     preferredPublicUrl: "canonical",
     publicCitation: "Laura Mattingly, 'Open House,' Good Times / Metro Santa Cruz, June 28, 2006.",
-    publicNote: "The reported feature documents Open House, the earlier Shop Shows, participant experiences, and Jamie's participatory art approach.",
+    publicNote: "The reported feature documents Open House, the earlier Shop Shows, participant experiences, communal decision-making, shared documentation, and Jamie's participatory art approach.",
+    captureFingerprint: "sha256:ac7a139b71b82f5250a6e25229ad13fb8e18d1664b5e80b24755c546d9153511",
     supportsGenerally: [
       "Jamie organized a ten-day public communal-living and open-art experiment in a UCSC gallery",
       "Open House invited participants to live in, contribute to, and rearrange the gallery",
       "the project developed from participatory Shop Shows held from 2003 to 2005",
-      "Jamie framed the work as distributing artistic authority and letting participants construct meaning"
+      "Jamie framed the work as distributing artistic authority and letting participants construct meaning",
+      "participants used multiple shared documentation methods and the article related the project to social software"
     ],
     doesNotEstablish: [
       "a formal housing program",
       "long-term outcomes for participants",
       "municipal sponsorship",
-      "sole authorship of participant-created work"
+      "sole authorship of participant-created work",
+      "current technical capability without additional evidence"
     ]
   },
   {
