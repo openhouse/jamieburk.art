@@ -77,3 +77,15 @@ editorial-layering failure; one bounded deduplication pass raised editorial from
 
 See `chad-lens-review.md` for the surface findings, stopping decision, and
 non-blocking opportunities toward `1.0`.
+
+## NYC Artist Coalition X archival production
+
+Launch-readiness `v13` adds a deterministic full-population disposition gate
+for `@NYCArtC`, two public-safe ledgers, eight close-read source records, three
+held claim candidates, and a first-party owner-archive inquiry. The recursive
+run also records two editorial and one projection-governance failure found and
+repaired by independent graders before all agent-mutable criteria passed.
+
+See `nycartc-x-full-population-recursive-run.md` for the population boundary,
+stakeholder floors, score progression, exact-candidate browser evidence, and
+the runtime and human stop boundary.
