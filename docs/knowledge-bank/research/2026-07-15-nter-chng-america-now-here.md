@@ -41,6 +41,33 @@ not establish the work's exact gallery location, whether the original wall was
 reinstalled unchanged, or how the collaborators divided programming, scenic
 design, motion graphics, and experiential-production responsibilities.
 
+## Protected working records
+
+On July 16, 2026, Jamie surfaced two additional Google Docs from the working
+archive. Both were close-read through authenticated access and represented in
+the bank through opaque locators rather than public URLs.
+
+The first, an installer plan for the America: Now and Here restaging, describes
+an integrated operating scope: software reliability, frame reconstruction,
+wall anchoring, projectors, display computers, network wiring, floor
+instructions, and final gallery tuning. It names Leedy-Voulkos as the intended
+installation site. Because it is a plan, it does not establish that the work
+was completed there, that every listed task occurred, or which collaborator
+performed each task.
+
+The second, a 2011 working compilation, preserves the January 2010 exhibit
+statement and presents NTER CHNG as the collective work of Drew Bolton, Jamie
+Burkart, and Garrett Fuselier. It reinforces the participatory concept of
+moving one-to-one text exchanges into a many-to-many social information space.
+It is a first-party working record, not an independent publication, and does
+not allocate individual technical responsibilities or establish audience and
+impact totals.
+
+The compilation also contains participant messages and phone numbers. Those
+records, the raw document links, and internal scheduling details are excluded
+from the repository. Only public-safe summaries of the records' evidentiary
+contribution are retained.
+
 ## Nerman Museum boundary
 
 The Nerman Museum page documents the wider America: Now and Here launch and a
@@ -53,10 +80,10 @@ project-level venue evidence.
 
 ## Privacy and recovery limits
 
-The official archived collaborator page contains old participant text messages
-and phone numbers. Those records are not reproduced, summarized, linked from a
-public source record, or exported through the citation layer. The page is held
-as metadata-only evidence behind an opaque locator.
+The official archived collaborator page and the protected working compilation
+contain old participant text messages and phone numbers. Those records are not
+reproduced, summarized, linked from a public source record, or exported through
+the citation layer. Both are held behind opaque locators.
 
 The NTER CHNG homepage linked to a press release, but the bounded 2009-2012
 Wayback index recovered only the homepage and four static assets. The press
@@ -76,7 +103,8 @@ exhibition.
 
 This claim may be retrieved for the knowledge bank and a future
 cultural-technology case study. It is not approved for any current website
-route.
+route. The new protected records deepen the planning and conceptual context but
+do not change that projection decision.
 
 Canonical machine-readable records live in
 `apps/www/src/data/knowledge-bank/records.ts` and

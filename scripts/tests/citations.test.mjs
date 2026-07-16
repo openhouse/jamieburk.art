@@ -123,6 +123,8 @@ test("private and metadata-only evidence is absent from the public registry", ()
   assert.doesNotMatch(serialized, /ARCHIVE-CRS-RUNNING-MINUTES-2026-001/);
   assert.doesNotMatch(serialized, /ARCHIVE-CRS-PROVENANCE-REDLINE-2026-001/);
   assert.doesNotMatch(serialized, /ARCHIVE-SOURCE-BACKED-MEMORY-PROPOSAL-2026-001/);
+  assert.doesNotMatch(serialized, /ARCHIVE-NTER-CHNG-ANH-INSTALLER-PLAN-2011-001/);
+  assert.doesNotMatch(serialized, /ARCHIVE-NTER-CHNG-2011-WORKING-COMPILATION-001/);
   assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
 });
 

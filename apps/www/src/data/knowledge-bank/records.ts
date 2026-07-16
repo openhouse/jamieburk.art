@@ -984,6 +984,46 @@ const knowledgeBankInput = {
       doesNotEstablish: ["which collaborator implemented each component", "the exact installation location within America: Now and Here", "that the original wall was reinstalled unchanged", "permission to republish participant messages or phone numbers", "a Nerman Museum installation"]
     },
     {
+      id: "SRC-NTER-CHNG-ANH-INSTALLER-PLAN-2011",
+      title: "NTER CHNG Installer plan",
+      organization: "NTER CHNG",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2011 working document",
+      accessedAt: "2026-07-16",
+      metadataVerifiedAt: "2026-07-16",
+      metadataVerifiedBy: "Codex Google Drive archival review",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-16",
+      contentReviewedBy: "Codex Google Drive archival review",
+      publicCitation: "Public-safe summary of the NTER CHNG America: Now and Here installer plan, 2011; protected archival record.",
+      publicNote: "The team plan stages software reliability work, frame reconstruction, wall anchoring, projection, display computers, network wiring, floor instructions, and gallery tuning, and names Leedy-Voulkos as the intended installation site.",
+      protectedLocatorId: "ARCHIVE-NTER-CHNG-ANH-INSTALLER-PLAN-2011-001",
+      supportsGenerally: ["planned America: Now and Here restaging work", "an integrated software, fabrication, projection, networking, and gallery-installation scope", "Leedy-Voulkos as the intended installation site", "team preparation and a planned interview with all three collaborators"],
+      doesNotEstablish: ["that the installation was completed", "the work's actual America: Now and Here venue", "who authored or executed each task", "individual component responsibilities", "permission to publish internal schedules or working details"]
+    },
+    {
+      id: "SRC-NTER-CHNG-2011-WORKING-COMPILATION",
+      title: "NTER CHNG 2011 working compilation",
+      organization: "NTER CHNG",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2011 working document",
+      accessedAt: "2026-07-16",
+      metadataVerifiedAt: "2026-07-16",
+      metadataVerifiedBy: "Codex Google Drive archival review",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-16",
+      contentReviewedBy: "Codex Google Drive archival review",
+      publicCitation: "Public-safe summary of a 2011 NTER CHNG working compilation; protected archival record.",
+      publicNote: "The compilation preserves the January 2010 exhibit statement and the project's collective participatory intent. Its participant messages and phone numbers remain excluded from the repository and citation layer.",
+      protectedLocatorId: "ARCHIVE-NTER-CHNG-2011-WORKING-COMPILATION-001",
+      supportsGenerally: ["the January 8-29, 2010 exhibit date range as a first-party record", "Drew Bolton, Jamie Burkart, and Garrett Fuselier as collaborators", "the project as a collective work", "the one-to-one to many-to-many participatory concept", "the collaborators' combined scenic-design, programming, motion-graphics, and experiential-production backgrounds"],
+      doesNotEstablish: ["independent publication or corroboration", "the document's authorship", "which collaborator implemented each component", "audience size, message totals, or impact", "permission to expose participant messages or phone numbers"]
+    },
+    {
       id: "SRC-AMERICA-NOW-HERE-KC-STUDIO-2011",
       title: "America: Now and Here",
       organization: "KC Studio",
@@ -1526,12 +1566,14 @@ const knowledgeBankInput = {
         { sourceId: "SRC-NTER-CHNG-PITCH-2010", relationship: "corroborating", supports: ["January 8, 2010 opening", "software and architectural installation form", "two-sided digital wall", "real-time participant dialogue"], locator: "Event listing date and description", confidence: "high", renderCitation: true },
         { sourceId: "SRC-ANH-KC-VISUAL-ARTISTS-INDEX-2011", relationship: "direct-support", supports: ["the three collaborators on the official visual-artist roster", "America: Now and Here exhibition provenance"], locator: "Visual artists list", confidence: "high", renderCitation: true },
         { sourceId: "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", relationship: "direct-support", supports: ["NTER CHNG as the collaborators' featured work", "software, architectural, and participatory form", "collective technical backgrounds"], locator: "Dedicated artist page heading and artist's statement; participant records excluded", confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NTER-CHNG-ANH-INSTALLER-PLAN-2011", relationship: "private-support", supports: ["the planned 2011 restaging's integrated software, fabrication, projection, networking, and gallery-installation scope", "Leedy-Voulkos as the intended installation site"], locator: "Public-safe summary of installer-plan headings and task sections", confidence: "moderate", renderCitation: false },
+        { sourceId: "SRC-NTER-CHNG-2011-WORKING-COMPILATION", relationship: "private-support", supports: ["the collaborators' collective participatory intent", "the one-to-one to many-to-many project concept", "the January 2010 exhibit statement as a first-party record"], locator: "Public-safe summary of the project statement; participant records excluded", confidence: "moderate", renderCitation: false },
         { sourceId: "SRC-AMERICA-NOW-HERE-KC-STUDIO-2011", relationship: "context", supports: ["May 6-28, 2011 Kansas City launch", "multidisciplinary program", "local-artist participation", "Arts Incubator partnership"], locator: "Announcement opening, program description, and partner list", confidence: "high", renderCitation: true },
         { sourceId: "SRC-AMERICA-NOW-HERE-NERMAN-2011", relationship: "context", supports: ["America: Now and Here launch context", "May 11-12 Nerman Museum program stop"], locator: "Article and event details", confidence: "high", renderCitation: false }
       ],
-      boundaries: ["Credit Drew Bolton and Garrett Fuselier as equal project collaborators.", "The recovered sources do not allocate software, scenic design, motion graphics, or experiential-production responsibilities among the three collaborators.", "The official archive supports inclusion in America: Now and Here's Kansas City exhibition but does not identify NTER CHNG's exact gallery location or establish that the original wall was reinstalled unchanged.", "The Nerman Museum page documents a Barbara Kruger truck stop and wider exhibition context, not an NTER CHNG installation at the museum.", "Do not republish archived participant messages, phone numbers, or uncleared imagery."],
+      boundaries: ["Credit Drew Bolton and Garrett Fuselier as equal project collaborators.", "The recovered sources do not allocate software, scenic design, motion graphics, or experiential-production responsibilities among the three collaborators.", "An internal installer plan names Leedy-Voulkos as the intended America: Now and Here installation site, but it does not establish that installation occurred there or that the original wall was reinstalled unchanged.", "The Nerman Museum page documents a Barbara Kruger truck stop and wider exhibition context, not an NTER CHNG installation at the museum.", "Do not republish archived participant messages, phone numbers, raw working documents, or uncleared imagery."],
       antiClaims: ["Jamie solely created NTER CHNG", "Jamie alone programmed the installation", "NTER CHNG was installed at the Nerman Museum", "The archive establishes audience size or message totals", "Archived participant messages are cleared for republication"],
-      researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Jamie Burkart", "Codex Wayback review"]
+      researchInquiryIds: [], reviewedAt: "2026-07-16", reviewedBy: ["Jamie Burkart", "Codex Wayback review", "Codex Google Drive archival review"]
     }
   ],
   researchInquiries: [

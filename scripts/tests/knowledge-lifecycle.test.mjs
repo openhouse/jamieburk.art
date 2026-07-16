@@ -141,7 +141,10 @@ test("NTER CHNG preserves collective creation and bounded America: Now and Here 
   const decision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-NTER-CHNG-PROMOTE");
   const canonical = knowledgeBank.claims.find(({ id }) => id === "CLM-NTER-CHNG-COLLABORATION-EXHIBITION-2010-2011");
   const protectedPage = knowledgeBank.sources.find(({ id }) => id === "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011");
+  const installerPlan = knowledgeBank.sources.find(({ id }) => id === "SRC-NTER-CHNG-ANH-INSTALLER-PLAN-2011");
+  const workingCompilation = knowledgeBank.sources.find(({ id }) => id === "SRC-NTER-CHNG-2011-WORKING-COMPILATION");
   const nerman = knowledgeLifecycle.observations.find(({ id }) => id === "OBS-NTER-CHNG-NERMAN-BOUNDARY");
+  const installerObservation = knowledgeLifecycle.observations.find(({ id }) => id === "OBS-NTER-CHNG-ANH-INSTALLER-PLAN");
 
   assert.equal(project?.status, "historical");
   assert.ok(project?.entityIds.includes("ENT-DREW-BOLTON"));
@@ -151,7 +154,9 @@ test("NTER CHNG preserves collective creation and bounded America: Now and Here 
   assert.ok(candidate?.antiClaims.some((item) => /solely created/i.test(item)));
   assert.ok(candidate?.antiClaims.some((item) => /Nerman Museum/i.test(item)));
   assert.equal(task?.status, "completed");
-  assert.equal(task?.sourceIds.length, 6);
+  assert.equal(task?.sourceIds.length, 8);
+  assert.ok(task?.sourceIds.includes(installerPlan?.id));
+  assert.ok(task?.sourceIds.includes(workingCompilation?.id));
   assert.ok(task?.limitations.some((item) => /press release was not recovered/i.test(item)));
   assert.equal(decision?.decision, "promote");
   assert.deepEqual(decision?.allowedSurfaces, ["knowledge-bank", "future-cultural-technology-case-study"]);
@@ -161,6 +166,13 @@ test("NTER CHNG preserves collective creation and bounded America: Now and Here 
   assert.equal(protectedPage?.protectedLocatorId, "WEB-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011-001");
   assert.equal(protectedPage?.canonicalUrl, undefined);
   assert.equal(protectedPage?.archiveUrl, undefined);
+  assert.equal(installerPlan?.visibility, "protected");
+  assert.equal(workingCompilation?.visibility, "protected");
+  assert.equal(installerPlan?.canonicalUrl, undefined);
+  assert.equal(workingCompilation?.canonicalUrl, undefined);
+  assert.ok(installerObservation?.statement.includes("intended installation site"));
+  assert.ok(installerObservation?.doesNotEstablish.some((item) => /actual.*venue/i.test(item)));
+  assert.ok(candidate?.boundaries.some((item) => /intended.*does not establish/i.test(item)));
   assert.equal(nerman?.evidenceRole, "context");
   assert.ok(nerman?.doesNotEstablish.some((item) => /NTER CHNG at the Nerman Museum/i.test(item)));
   assert.ok(knowledgeLifecycle.editorialBriefs.every(({ candidateClaimIds }) => !candidateClaimIds.includes(candidate.id)));
