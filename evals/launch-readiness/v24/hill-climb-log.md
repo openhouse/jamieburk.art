@@ -251,3 +251,18 @@ or satisfied by this repository pass.
 - **Result:** `KNOWOPS-001` passes. The tools reconcile 142 intakes, 234
   sources, 171 claims, 51 inquiries, and 48 active projections from the single
   canonical store. The full repository check passes.
+
+## Attempt 3: restore resume-action contrast on the dark panel
+
+- **Observed failure:** The exact-commit Chromium pass found the Technical
+  Operations resume action rendered blue text against its blue parent panel at
+  all four required widths. The measured ratio was `1:1`, below the `4.5:1`
+  normal-text requirement in `A11Y-001`.
+- **Hypothesis:** A dedicated inverse button treatment will make the action
+  readable without changing copy, hierarchy, destination, or surrounding
+  layout.
+- **Bounded change:** Add one `inverse` `JBButton` variant using existing paper,
+  blue, lemon, and ink tokens; apply it only to the shared dark Resume CTA.
+- **Protected boundaries:** Keep the action, destination, keyboard behavior,
+  focus treatment, and minimum target size. Do not hide the failing element or
+  weaken the contrast criterion.
