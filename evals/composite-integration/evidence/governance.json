@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "candidateStatus": "integration-ready",
+  "candidateStatus": "contract-frozen",
   "layers": [
     {
       "id": "deterministic",
       "status": "pass",
-      "evidence": "The exact integration candidate passes the composite deterministic contract, the application-ready profile, the knowledge-lifecycle suite, and the canonical repository checks."
+      "evidence": "Deterministic hard gates independently evaluate frozen inputs, append-only history, semantic mutations, projection restraint, reviewability, and canonical regressions."
     },
     {
       "id": "model",
       "status": "pass",
-      "evidence": "Two independent judgments with distinct archival-editorial and systems-public-safety lenses pass the exact candidate and contract."
+      "evidence": "The candidate-binding hard gate independently requires two passing judgments from distinct judges and lenses for the exact candidate and contract."
     },
     {
       "id": "human-reader",

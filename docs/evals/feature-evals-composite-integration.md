@@ -52,6 +52,13 @@ the citation, knowledge-bank, public-safety, and private-path checks;
 baseline remains preserved, but version 2 requires a new baseline and new
 candidate-bound judgments.
 
+Version 3 closes a fingerprinting gap found by an independent systems review.
+The branch-family ledger and governance record now participate in the contract
+fingerprint because they directly affect hard gates. The append-only lifecycle
+gate now runs the Git-history prefix validation rather than inferring
+append-only integrity from file presence and event types. Version 2 judgments
+and certification are therefore superseded.
+
 ## Evidence layers
 
 Deterministic checks, model judgments, human-reader evidence, rights review,

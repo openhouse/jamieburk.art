@@ -16,6 +16,7 @@ import {
   validateCompositeSuite,
   validateJudgments
 } from "./lib/composite-integration-evals.mjs";
+import { validateAppendOnlyGitHistory } from "./lib/knowledge-history.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -99,12 +100,14 @@ const historyEvents = historyText.split("\n").filter(Boolean).flatMap((line) => 
 });
 const lifecycleMissing = suite.requiredLifecycleFiles.filter((file) => !existsSync(path.join(repoRoot, file)));
 const missingEventTypes = suite.requiredHistoryEventTypes.filter((type) => !historyEvents.some((event) => event.type === type));
+const historyFindings = validateAppendOnlyGitHistory(repoRoot, suite.historyPath);
 const privateFindings = findPrivatePaths({ ledger, history: historyText, governance });
 const appendOnlyLifecycle = {
-  passed: lifecycleMissing.length === 0 && missingEventTypes.length === 0 && privateFindings.length === 0,
+  passed: lifecycleMissing.length === 0 && missingEventTypes.length === 0 && historyFindings.length === 0 && privateFindings.length === 0,
   findings: [
     ...lifecycleMissing.map((file) => `Missing lifecycle file ${file}`),
     ...missingEventTypes.map((type) => `Missing lifecycle event type ${type}`),
+    ...historyFindings,
     ...privateFindings.map((label) => `Private path detected in ${label}`)
   ]
 };

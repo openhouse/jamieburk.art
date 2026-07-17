@@ -1,6 +1,10 @@
-# Feature Knowledge C Composite Certification
+# Feature Knowledge C Composite Certification (Superseded)
 
 Date: 2026-07-16
+
+This version 2 certification is preserved as an iteration record. Version 3
+supersedes it after independent review identified unbound hard-gate inputs and
+an append-only gate that did not yet execute Git-history validation.
 
 ## Stop Decision
 

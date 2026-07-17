@@ -16,11 +16,17 @@ import {
 const suite = JSON.parse(readFileSync("evals/composite-integration/suite.json", "utf8"));
 const fixtures = JSON.parse(readFileSync(suite.semanticFixturePath, "utf8"));
 
-test("composite v2 contract pins A through N and weights 100", () => {
+test("composite v3 contract pins A through N and binds every hard-gate input", () => {
   assert.deepEqual(validateCompositeSuite(suite), []);
-  assert.equal(suite.version, 2);
+  assert.equal(suite.version, 3);
   assert.equal(suite.frozenBranches.length, 14);
   assert.equal(suite.rubrics.reduce((total, item) => total + item.weight, 0), 100);
+  assert.ok(suite.contractPaths.includes(suite.ledgerPath));
+  assert.ok(suite.contractPaths.includes(suite.governancePath));
+  assert.ok(suite.candidatePaths.some((item) => suite.historyPath.startsWith(`${item}/`)));
+  const unbound = structuredClone(suite);
+  unbound.contractPaths = unbound.contractPaths.filter((item) => item !== suite.ledgerPath);
+  assert.match(validateCompositeSuite(unbound).join("\n"), /branch-family-inventory\.json/);
 });
 
 test("branch accounting requires exact frozen SHAs and dispositions", () => {
