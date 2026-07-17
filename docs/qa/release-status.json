@@ -1,12 +1,12 @@
 {
   "version": 1,
   "updated": "2026-07-16",
-  "candidate": "feature/evals-L candidate",
+  "candidate": "feature/knowledge-l composite candidate",
   "automatedVerification": {
     "state": "passed-2026-07-16",
     "commands": ["npm run check", "npm run preflight:staging", "npm run preflight:production"],
-    "additionalCriteria": ["npm run evals:margaret-morse", "npm run evals:warren-sack"],
-    "result": "The full check, staging preflight, and production preflight pass for the Kansas City Star source candidate; all eval criteria remain met."
+    "additionalCriteria": ["npm run evals:composite-integration", "npm run evals:margaret-morse", "npm run evals:warren-sack"],
+    "result": "The feature/knowledge-l composite candidate passes the full check, staging and production preflights, container route and asset smoke tests, responsive browser checks, compiled-output privacy scan, and two-page resume inspection."
   },
   "humanGates": [
     {"gate": "External five-minute hiring comprehension", "state": "open"},
@@ -14,6 +14,7 @@
     {"gate": "Human Chad-lens editorial review", "state": "open"},
     {"gate": "Jamie approval of the exact production candidate", "state": "open"}
   ],
+  "applicationDecision": "eligible-for-targeted-applications-with-open-human-validation",
   "productionDecision": "blocked-pending-human-approval",
-  "boundary": "Automated evals are regression gates. They cannot count as external participants, grant collaborator consent, or authorize production."
+  "boundary": "Application sharing and production launch are separate decisions. Automated evals are regression gates; they cannot count as external readers, grant collaborator consent, satisfy hands-on accessibility review, or authorize production."
 }

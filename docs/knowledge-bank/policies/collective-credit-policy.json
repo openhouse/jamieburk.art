@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "updated": "2026-07-16",
+  "rule": "Describe Jamie's evidenced actions directly while preserving collaborators' authorship, institutional authority, and collective causality. A project's outcome never proves one person's sole authorship or causation.",
+  "projects": [
+    {
+      "id": "harry-j-epstein",
+      "creditScope": "mixed",
+      "publicRule": "Credit Jamie's long-running technical and operational stewardship as a contribution within a family business, not as sole cause of company performance.",
+      "boundaries": ["Do not publish private business metrics or operating data.", "Do not convert contribution language into sole causality."]
+    },
+    {
+      "id": "callnyc",
+      "creditScope": "mixed",
+      "publicRule": "Credit Jamie with independently developing the follow-on project and its public system where supported; credit the hackathon, public participation, and Council engagement to their participants and institutions.",
+      "boundaries": ["Council-account engagement is not endorsement or policy impact.", "Recovered social records are not a lifetime archive or complete authorship record."]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "creditScope": "collective",
+      "publicRule": "Name Jamie's documented websites, operating systems, facilitation, and source-backed policy work while presenting legislation and advocacy outcomes as coalition and public-institution work.",
+      "boundaries": ["Do not claim Jamie alone passed, caused, or authored legislation.", "Preserve named collaborators' and organizations' roles when a source establishes them."]
+    },
+    {
+      "id": "wowlist",
+      "creditScope": "collective",
+      "publicRule": "Describe WOW List as Jamie and Richard Love's project and distinguish Jamie's supported product, engineering, editorial, event, and social-presence responsibilities from community contributions.",
+      "boundaries": ["Do not attribute every listing, event, or social post to Jamie without authorship evidence.", "Platform activity does not by itself establish reach or impact."]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "creditScope": "collective",
+      "publicRule": "Credit Jamie's documented hosting, program design, tools, and participation infrastructure while preserving the gathering as work made with hosts, residents, artists, and guests.",
+      "boundaries": ["Do not turn participation into a sole-author artwork.", "Keep participant identities and private gathering records protected unless permission is documented."]
+    },
+    {
+      "id": "kc-town-hall",
+      "creditScope": "mixed",
+      "publicRule": "State Jamie's evidenced construction coordination, survey design, neighborhood practice, public-benefit documentation, and stewardship transition; distinguish those actions from board, Council, organizational, and neighborhood decisions.",
+      "boundaries": ["Appropriation does not establish receipt or disbursement.", "Do not encode the private family circumstances surrounding the transition."]
+    },
+    {
+      "id": "source-backed-team-memory",
+      "creditScope": "mixed",
+      "publicRule": "Credit Jamie's method design and implementation where supported while naming pilots, source materials, reviews, and resulting decisions as collaborative contexts.",
+      "boundaries": ["AI archival review is not collaborator testimony.", "Do not expose private team records or imply model output is verified fact."]
+    }
+  ]
+}

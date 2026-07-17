@@ -22,6 +22,31 @@ When Jamie supplies material:
 7. Run the lifecycle, citation, public-safety, Chad-lens, and recursive evals.
 8. Return an ingestion receipt.
 
+Begin with a dry-run public-safe receipt when the material is a new lead:
+
+```sh
+npm run knowledge:intake -- \
+  --title "Public article about a project" \
+  --kind url \
+  --project callnyc \
+  --url "https://example.org/article" \
+  --summary "Public article to close-read for bounded role and outcome claims."
+```
+
+Review the JSON, then append it with the same command plus `--write`. The
+receipt log is append-only; corrections and maturation happen in canonical
+records, not by silently rewriting the received lead. The command rejects
+common private paths, email addresses, phone numbers, and credentials.
+
+Query the canonical lifecycle without adding a public database route:
+
+```sh
+npm run knowledge:query -- --project callnyc --publication-safe
+npm run knowledge:query -- --surface /work/callnyc --claim-status confirmed-with-boundary --publication-safe
+npm run knowledge:query -- --entity "New York City Council" --date 2016-05-03 --publication-safe
+npm run knowledge:query -- --evidence-role corroborating --audience hiring --purpose evidence --publication-safe
+```
+
 For a photograph, record its role as evidence, artifact, projection candidate,
 or research lead. Do not create a `photo-caption` projection until rights,
 consent, identity, provenance, and public-display status have been reviewed.

@@ -1,0 +1,169 @@
+{
+  "id": "feature-evals-composite-integration",
+  "version": "1.0.0",
+  "frozenAt": "2026-07-16",
+  "startingCommit": "68846b1f0a8672ff80598a7fef50ce5343c3e004",
+  "objective": "Integrate the strongest feature/evals-A through feature/evals-N mechanisms into one maintainable knowledge lifecycle and selective hiring portfolio without weakening factual accuracy, collective credit, public safety, accessibility, or human release authority.",
+  "thresholds": {
+    "hardGateFailures": 0,
+    "minimumCriterionScore": 1,
+    "minimumWeightedScore": 1,
+    "requiredUnchangedCandidatePasses": 2
+  },
+  "candidatePaths": [
+    "apps/www/src",
+    "apps/www/public/resume",
+    "docs/knowledge-bank",
+    "docs/qa/release-status.json",
+    "docs/qa/composite-integration",
+    "docs/deployment.md",
+    "docs/production-readiness.md",
+    "scripts",
+    "package.json",
+    "evals/composite-integration/rubric.json",
+    "evals/composite-integration/donor-dispositions.json",
+    "evals/composite-integration/scorecard.schema.json"
+  ],
+  "criteria": [
+    {
+      "id": "CI-001",
+      "title": "Donor disposition completeness",
+      "kind": "hard-gate",
+      "weight": 0,
+      "intent": "Every frozen A-N branch receives an explicit adopt, adapt, hold, or reject decision with a canonical destination and boundary."
+    },
+    {
+      "id": "CI-002",
+      "title": "Single lifecycle vocabulary",
+      "kind": "hard-gate",
+      "weight": 0,
+      "intent": "L remains the canonical lifecycle; no competing claim registry, proof route, or maturity vocabulary is introduced."
+    },
+    {
+      "id": "CI-003",
+      "title": "Source-to-projection traceability",
+      "kind": "hard-gate",
+      "weight": 0,
+      "intent": "Every selected proof and work item resolves to current public-safe evidence and an approved projection posture."
+    },
+    {
+      "id": "CI-004",
+      "title": "Atomic evidence semantics",
+      "kind": "hard-gate",
+      "weight": 0,
+      "intent": "Active claim evidence identifies what each source supports while source records preserve non-claims and limitations."
+    },
+    {
+      "id": "CI-005",
+      "title": "Incomplete-corpus integrity",
+      "kind": "hard-gate",
+      "weight": 0,
+      "intent": "Population claims preserve observed, recovered, excluded, and unresolved boundaries and remain reproducible from governed fixtures."
+    },
+    {
+      "id": "CI-006",
+      "title": "Collective-credit integrity",
+      "kind": "hard-gate",
+      "weight": 0,
+      "intent": "Collective, individual, and mixed projects are classified and public proof cannot silently inflate Jamie's authorship, authority, or causality."
+    },
+    {
+      "id": "CI-007",
+      "title": "Exact-surface projection governance",
+      "kind": "hard-gate",
+      "weight": 0,
+      "intent": "Every selected route names its proof and claim sources, source file, audience, approval posture, exclusions, and change boundary."
+    },
+    {
+      "id": "CI-008",
+      "title": "Correction and retirement lineage",
+      "kind": "hard-gate",
+      "weight": 0,
+      "intent": "Corrections supersede earlier wording explicitly and remain linked to canonical claims and affected surfaces."
+    },
+    {
+      "id": "CI-009",
+      "title": "Chad lens",
+      "kind": "quality",
+      "weight": 16,
+      "intent": "Jamie's supported agency, action, purpose, and useful result are clear without causal or collective-credit inflation."
+    },
+    {
+      "id": "CI-010",
+      "title": "Margaret Morse lens",
+      "kind": "quality",
+      "weight": 9,
+      "intent": "A compact threshold preserves embodied, artistic, relational, spatial, and hospitable intelligence across the civic and technical work."
+    },
+    {
+      "id": "CI-011",
+      "title": "Warren Sack lens",
+      "kind": "quality",
+      "weight": 9,
+      "intent": "The recurring observe, model, build, expose-to-use, and revise sequence remains inspectable and collectively bounded."
+    },
+    {
+      "id": "CI-012",
+      "title": "Reader compression and current offer",
+      "kind": "quality",
+      "weight": 22,
+      "intent": "A no-context reader can quickly recover role, concrete responsibilities, strongest proof, current capability, resume, and contact path."
+    },
+    {
+      "id": "CI-013",
+      "title": "Visual and artifact proof",
+      "kind": "quality",
+      "weight": 12,
+      "intent": "Visual evidence remains governed by provenance, rights, consent, caption, alt text, privacy, and evidentiary purpose."
+    },
+    {
+      "id": "CI-014",
+      "title": "Release and reviewability",
+      "kind": "quality",
+      "weight": 20,
+      "intent": "Application-share and production-launch decisions remain separate, exact-candidate evidence is reproducible, and human authority stays explicit."
+    },
+    {
+      "id": "CI-015",
+      "title": "Maintenance burden",
+      "kind": "quality",
+      "weight": 12,
+      "intent": "Generated artifacts are drift-checked, duplicate machinery is rejected, and recurring maintenance has an owner and cadence."
+    }
+  ],
+  "humanGates": [
+    {
+      "id": "external-hiring-reader-comprehension",
+      "owner": "Jamie Burkart and unfamiliar target readers",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "collaborator-corroboration-and-permission",
+      "owner": "Jamie Burkart and affected collaborators",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "visual-rights-and-consent",
+      "owner": "Jamie Burkart or documented rights holder",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "hands-on-accessibility-and-launch-qa",
+      "owner": "Named human reviewer",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "exact-candidate-release-approval",
+      "owner": "Jamie Burkart",
+      "agentMaySelfCertify": false
+    }
+  ],
+  "antiGamingRules": [
+    "A weighted score cannot compensate for a hard-gate failure.",
+    "Do not weaken a criterion, source boundary, anti-claim, or human gate to produce a pass.",
+    "Do not treat a protocol as evidence that the human activity it specifies occurred.",
+    "Do not treat a recovered platform surface as a lifetime archive, native export, deletion history, authorship record, or impact measure.",
+    "Do not add public copy merely to increase proof count or citation density.",
+    "When candidates tie, prefer the smaller and more reversible implementation."
+  ]
+}

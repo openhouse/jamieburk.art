@@ -145,3 +145,25 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Same-SHA Cutover And Rollback
+
+Deploy an immutable reviewed commit to staging first. Record its full SHA,
+health response, route smoke results, robots output, sitemap host, browser QA,
+and human approval state. Production must receive that same SHA; do not rebuild
+from a moving branch tip or copy uncommitted files between environments.
+
+Before cutover, record the currently running production release and verify it
+is available to Dokku rollback. After Jamie approves the exact candidate:
+
+1. deploy the reviewed SHA to `jamieburk-art`;
+2. verify `/api/health`, canonical routes, redirects, resume, assets, robots,
+   sitemap, canonical URLs, headers, and logs;
+3. confirm production is indexable while the resume remains noindex;
+4. compare the deployed commit and image to the approved evidence record.
+
+If a P0 privacy, availability, routing, resume, metadata, or claim defect
+appears, stop promotion and roll back to the previously recorded Dokku release.
+Re-run the production smoke matrix after rollback. Open a correction or intake
+record for factual defects before preparing a new candidate; do not patch the
+public copy outside the source-of-truth files.

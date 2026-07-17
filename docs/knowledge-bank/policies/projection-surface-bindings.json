@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "updated": "2026-07-16",
+  "rule": "The knowledge bank may be deep; each public route is a selective, audience-specific projection. Update a route only through its canonical source files and rerun the full evaluation suite.",
+  "routes": [
+    {
+      "path": "/",
+      "sourceFiles": ["apps/www/src/app/page.tsx", "apps/www/src/data/proofs.ts"],
+      "audience": "Time-limited hiring readers and professional referrals",
+      "purpose": "Establish Jamie's current operating identity, strongest proof range, and next action in one scan.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Keep only proofClaims selected by homepageProofs and preserve concise role-action-result framing.",
+      "exclusions": ["No private evidence, research queue, exhaustive project history, or unresolved metrics."],
+      "proofIds": ["career-operating-structure-14-years", "hje-revenue-growth-contribution", "fair-rent-campaign-memory", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure"],
+      "claimIds": []
+    },
+    {
+      "path": "/about",
+      "sourceFiles": ["apps/www/src/app/about/page.tsx"],
+      "audience": "Readers testing coherence, judgment, and working style",
+      "purpose": "Connect artistic, civic, technical, spatial, and relational practice to a present-tense professional offer.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Preserve the Morse and Sack thresholds without turning educational evaluations into unbounded present-day endorsements.",
+      "exclusions": ["No full biography, private history, or unsupported personality claims."],
+      "proofIds": [],
+      "claimIds": []
+    },
+    {
+      "path": "/lab/source-backed-team-memory",
+      "sourceFiles": ["apps/www/src/app/lab/source-backed-team-memory/page.tsx", "apps/www/src/data/proofs.ts"],
+      "audience": "AI, product operations, implementation, and knowledge-management peers",
+      "purpose": "Make the source-backed team-memory method inspectable as a bounded working system.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Project only method claims with active lab projections and keep private source content outside the repository.",
+      "exclusions": ["No client secrets, private transcripts, raw archives, or claims that AI review equals human corroboration."],
+      "proofIds": ["source-backed-team-memory-method", "ai-evals-professional-development"],
+      "claimIds": ["CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD"]
+    },
+    {
+      "path": "/resume",
+      "sourceFiles": ["apps/www/src/app/resume/page.tsx", "apps/www/src/data/proofs.ts", "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"],
+      "audience": "Recruiters, hiring managers, and application reviewers",
+      "purpose": "Provide a concise, downloadable chronology with a small set of defensible highlights.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Keep the HTML projection synchronized with the approved resume and resumeProofHighlights.",
+      "exclusions": ["No pending proof, private metrics, or role inflation for collective outcomes."],
+      "proofIds": ["career-operating-structure-14-years", "hje-modernization-stewardship", "hje-revenue-growth-contribution", "fair-rent-campaign-memory", "fair-rent-source-map", "callnyc-civic-data-guidance", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "ai-evals-professional-development"],
+      "claimIds": ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"]
+    },
+    {
+      "path": "/work",
+      "sourceFiles": ["apps/www/src/app/work/page.tsx", "apps/www/src/data/work.ts"],
+      "audience": "Readers comparing Jamie's work across domains",
+      "purpose": "Offer a selective portfolio index organized around usable systems and evidence strength.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Add a public card only when its work record is public-safe and its selected claim projection is active.",
+      "exclusions": ["No automatic publication of every eligible knowledge-bank claim."],
+      "proofIds": [],
+      "claimIds": ["CLM-CRS-SHARED-MEMORY-SYSTEM", "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"]
+    },
+    {
+      "path": "/work/technical-operations",
+      "sourceFiles": ["apps/www/src/app/work/technical-operations/page.tsx", "apps/www/src/data/proofs.ts"],
+      "audience": "Technical project management, product operations, and implementation hiring readers",
+      "purpose": "Translate cross-domain work into inspectable operating capabilities and proof.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Keep proofIds exactly synchronized with technicalOperationsProofRows and preserve outcome boundaries.",
+      "exclusions": ["No generic capability claims without linked project evidence."],
+      "proofIds": ["technical-operations-operating-backbone", "hje-modernization-stewardship", "callnyc-civic-data-guidance", "wowlist-community-platform", "fair-rent-campaign-memory", "fair-rent-source-map", "kc-town-hall-public-benefit-documentation", "sunday-dinner-196-participation-infrastructure", "source-backed-team-memory-method", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "kc-spaces-fund-digital-infrastructure", "hje-revenue-growth-contribution"],
+      "claimIds": ["CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD", "CLM-CRS-COALITION-MAPPING-PRACTICE", "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT"]
+    },
+    {
+      "path": "/work/harry-j-epstein",
+      "sourceFiles": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+      "audience": "Hiring readers evaluating long-running technical and operational stewardship",
+      "purpose": "Show modernization work in a legacy business with explicit causal and privacy boundaries.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Use only the work record's proofBankIds and contribution language supported by approved resume and public evidence.",
+      "exclusions": ["No private business data or sole-causality language."],
+      "proofIds": ["hje-modernization-stewardship", "hje-revenue-growth-contribution"],
+      "claimIds": []
+    },
+    {
+      "path": "/work/fair-rent-nyc",
+      "sourceFiles": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+      "audience": "Civic technology, policy operations, coalition, and public-interest hiring readers",
+      "purpose": "Show how Jamie made complex coalition, legislative, and public-source work usable while preserving collective credit.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Use only the work record's proofBankIds and active case-study claim projections.",
+      "exclusions": ["No sole credit for coalition outcomes, legislation, agency decisions, or collaborators' work."],
+      "proofIds": ["fair-rent-campaign-memory", "fair-rent-source-map", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system"],
+      "claimIds": ["CLM-CRS-OPERATING-ARCHITECTURE-PLAN", "CLM-CRS-SHARED-MEMORY-SYSTEM", "CLM-CRS-OPEN-DATA-FOUNDATION-MEMO", "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE", "CLM-FAIR-RENT-WEB-IMPLEMENTATION-2023", "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER", "CLM-NYCAC-PARTICIPATION-SYSTEM", "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE"]
+    },
+    {
+      "path": "/work/callnyc",
+      "sourceFiles": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+      "audience": "Civic product, public data, and constituent-service readers",
+      "purpose": "Show the transition from a public hackathon to an independently developed civic prototype and its bounded public engagement record.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Keep chronology, independent follow-on status, unofficial status, and engagement denominator together.",
+      "exclusions": ["No claim that account engagement equals endorsement, reach, adoption, or policy impact."],
+      "proofIds": ["callnyc-civic-data-guidance"],
+      "claimIds": ["CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM", "CLM-CALLNYC-HACKATHON-DATE-TIME", "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "CLM-CALLNYC-EVENT-BRANDING", "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS"]
+    },
+    {
+      "path": "/work/wowlist",
+      "sourceFiles": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+      "audience": "Community product, platform, event, and cultural-infrastructure readers",
+      "purpose": "Show a long-running community discovery platform and the operating practice around it.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Keep co-creation credit, recovered-corpus boundaries, and public-use evidence attached.",
+      "exclusions": ["No claim that Jamie authored all community or social content or that platform metrics alone prove impact."],
+      "proofIds": ["wowlist-community-platform"],
+      "claimIds": ["CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE", "CLM-FACEBOOK-WOWLIST-IN-PRACTICE"]
+    },
+    {
+      "path": "/work/196-sunday-dinner",
+      "sourceFiles": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+      "audience": "Program operations, community infrastructure, and participatory-practice readers",
+      "purpose": "Show how recurring gatherings became a durable participation and hosting system.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Use public-safe artifacts and active case-study projections while preserving participant privacy and collective authorship.",
+      "exclusions": ["No private guest records, unapproved identities, or sole-author framing."],
+      "proofIds": ["sunday-dinner-196-participation-infrastructure"],
+      "claimIds": ["CLM-196-ARTIST-RESIDENCY-ONBOARDING-2023", "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES"]
+    },
+    {
+      "path": "/work/kc-town-hall",
+      "sourceFiles": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+      "audience": "Public project, place-based operations, construction, and community-engagement readers",
+      "purpose": "Show public-benefit documentation, construction coordination, participatory vision work, and responsible stewardship transition.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Maintain the distinction among Jamie's work, CCED recommendation, Council appropriation, non-disbursement, and transition.",
+      "exclusions": ["No claim of receipt or spending of appropriated funds and no private family-crisis detail."],
+      "proofIds": ["kc-town-hall-public-benefit-documentation"],
+      "claimIds": ["CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"]
+    },
+    {
+      "path": "/contact",
+      "sourceFiles": ["apps/www/src/app/contact/page.tsx", "apps/www/src/data/site.ts"],
+      "audience": "Hiring readers, collaborators, and professional referrals",
+      "purpose": "Provide approved, low-friction contact paths.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Publish only contact channels Jamie has explicitly approved.",
+      "exclusions": ["No private address, alternate email, or unapproved personal detail."],
+      "proofIds": [],
+      "claimIds": []
+    },
+    {
+      "path": "/colophon",
+      "sourceFiles": ["apps/www/src/app/colophon/page.tsx"],
+      "audience": "Readers inspecting process, provenance, and site stewardship",
+      "purpose": "Explain the portfolio's production and care practices without exposing private source material.",
+      "approvalState": "application-eligible; production approval open",
+      "changeRule": "Keep implementation and source-care statements accurate to the shipped candidate.",
+      "exclusions": ["No private repository paths, credentials, or unsupported provenance claims."],
+      "proofIds": [],
+      "claimIds": []
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jamieburk.art/schemas/composite-integration-scorecard.json",
+  "title": "Composite integration scorecard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "rubricId",
+    "rubricVersion",
+    "candidateCommit",
+    "candidateFingerprint",
+    "workingTreeClean",
+    "generatedAt",
+    "hardGateFailures",
+    "weightedScore",
+    "criteria",
+    "humanGates",
+    "passes"
+  ],
+  "properties": {
+    "rubricId": { "type": "string", "const": "feature-evals-composite-integration" },
+    "rubricVersion": { "type": "string" },
+    "candidateCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "candidateFingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "workingTreeClean": { "type": "boolean" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "hardGateFailures": { "type": "integer", "minimum": 0 },
+    "weightedScore": { "type": "number", "minimum": 0, "maximum": 1 },
+    "passes": { "type": "boolean" },
+    "criteria": {
+      "type": "array",
+      "minItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "kind", "passes", "score", "findings"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^CI-[0-9]{3}$" },
+          "title": { "type": "string" },
+          "kind": { "enum": ["hard-gate", "quality"] },
+          "passes": { "type": "boolean" },
+          "score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "findings": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "humanGates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "state", "agentMaySelfCertify"],
+        "properties": {
+          "id": { "type": "string" },
+          "state": { "enum": ["open", "met", "not-applicable"] },
+          "agentMaySelfCertify": { "const": false }
+        }
+      }
+    }
+  }
+}

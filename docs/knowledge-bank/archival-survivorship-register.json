@@ -2,6 +2,7 @@
   "version": 1,
   "updated": "2026-07-15",
   "rule": "Not recovered is not evidence that something did not exist. Public survival, search ranking, and platform exportability are not measures of importance.",
+  "populationClaimRule": "A recovered corpus is not a complete lifetime archive, deletion history, authorship record, or direct measure of reach or impact. State the observed population, capture route, exclusions, unresolved items, and denominator together.",
   "surfaces": [
     {"surface": "public-web", "coverage": "strong-but-uneven", "risk": "Live and Wayback-accessible pages overrepresent projects with durable URLs.", "nextAction": "Keep recovery denominators and distinguish live, archived, partial, and not recovered."},
     {"surface": "social-platforms", "coverage": "bounded-corpora", "risk": "Platform interfaces, deletions, visibility controls, and account access shape what survives.", "nextAction": "Preserve capture routes, population limits, authored/repost distinctions, and unresolved slots."},
