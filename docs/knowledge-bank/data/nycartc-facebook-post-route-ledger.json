@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-07-14",
+  "account": "NYC Artist Coalition Facebook Page",
+  "accounting": {
+    "rawOutboundLinkOccurrences": 64,
+    "rawUniqueUrls": 39,
+    "normalizedRoutes": 33,
+    "protectedRoutes": 2,
+    "sourceRecords": 4
+  },
+  "rows": [
+    {
+      "routeId": "nycartc-fb-route-01",
+      "category": "public-action-or-fundraising",
+      "occurrences": 2,
+      "publicUrl": "https://bit.ly/ELMFundraiser",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-02",
+      "category": "government-or-civic-information",
+      "occurrences": 2,
+      "publicUrl": "https://council.nyc.gov/districts/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-03",
+      "category": "government-or-civic-information",
+      "occurrences": 3,
+      "publicUrl": "https://council.nyc.gov/live/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-04",
+      "category": "other-public-route",
+      "occurrences": 1,
+      "publicUrl": "https://createnyc.org/en/speak-up/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-05",
+      "category": "cultural-program-or-media",
+      "occurrences": 1,
+      "publicUrl": "https://danceparade.org/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-06",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 1,
+      "publicUrl": "https://fairrentnyc.com/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-07",
+      "category": "cultural-program-or-media",
+      "occurrences": 1,
+      "publicUrl": "https://jackny.org/jack-alive-concert.html",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-08",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 3,
+      "publicUrl": "https://letnycdance.com/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-09",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 1,
+      "publicUrl": "https://letnycdance.org/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-10",
+      "category": "government-or-civic-information",
+      "occurrences": 1,
+      "publicUrl": "https://nyc.pollsitelocator.com/search",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-11",
+      "category": "government-or-civic-information",
+      "occurrences": 1,
+      "publicUrl": "https://nycabsentee.com/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-12",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 1,
+      "publicUrl": "https://nycartc.com/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-13",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 1,
+      "publicUrl": "https://nycartc.com/covid19",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-14",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 3,
+      "publicUrl": "https://nycartc.com/covid19-relief/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-15",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 4,
+      "publicUrl": "https://nycartc.com/join",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-16",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 1,
+      "publicUrl": "https://nycartc.com/path-to-be-legal/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-17",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 2,
+      "publicUrl": "https://nycartc.com/priorities/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-18",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 1,
+      "publicUrl": "https://nycartc.com/safety/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-19",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 5,
+      "publicUrl": "https://nycartc.com/speakout",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-20",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 2,
+      "publicUrl": "https://passsbjsa.com/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-21",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 3,
+      "publicUrl": "https://savenycspaces.com/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-22",
+      "category": "cultural-program-or-media",
+      "occurrences": 1,
+      "publicUrl": "https://t.ted.com/C47LzYL",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-23",
+      "category": "campaign-or-coalition-route",
+      "occurrences": 12,
+      "publicUrl": "https://talksnotraids.com/",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-24",
+      "category": "protected-historical-action-route",
+      "occurrences": 1,
+      "publicUrl": null,
+      "sourceId": null,
+      "disposition": "protected",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-25",
+      "category": "public-action-or-fundraising",
+      "occurrences": 1,
+      "publicUrl": "https://www.change.org/p/save-black-brunch",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-26",
+      "category": "press-or-public-knowledge",
+      "occurrences": 1,
+      "publicUrl": "https://www.cityandstateny.com/opinion/2018/09/a-compromise-for-nightlife-venues-and-their-neighbors/178085/",
+      "sourceId": "SRC-CITY-AND-STATE-AGENT-OF-CHANGE-2018",
+      "disposition": "source-record",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-27",
+      "category": "press-or-public-knowledge",
+      "occurrences": 2,
+      "publicUrl": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html",
+      "sourceId": "SRC-PRESS-NYT-CABARET-REPEAL-2017",
+      "disposition": "source-record",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-28",
+      "category": "press-or-public-knowledge",
+      "occurrences": 1,
+      "publicUrl": "https://www.seattletimes.com/entertainment/city-announces-1-1-million-and-rent-relief-to-support-arts-organizations-in-the-coronavirus-economic-crisis/",
+      "sourceId": "SRC-SEATTLE-TIMES-ARTS-RELIEF-2020",
+      "disposition": "source-record",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-29",
+      "category": "press-or-public-knowledge",
+      "occurrences": 1,
+      "publicUrl": "https://www.wbai.org/upcomingprogram.php?upcomingid=2963",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-30",
+      "category": "press-or-public-knowledge",
+      "occurrences": 1,
+      "publicUrl": "https://www.wnyc.org/story/bureaucratic-dance-end-nyc-cabaret-law/",
+      "sourceId": "SRC-PRESS-WNYC-CABARET-LAW-2017",
+      "disposition": "source-record",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-31",
+      "category": "cultural-program-or-media",
+      "occurrences": 1,
+      "publicUrl": "https://www.youtube.com/watch?v=E3YxSrm5qgU&list=PLX1W43ZgDnWFLuHXCFybyELI0zycXn4ln",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-32",
+      "category": "cultural-program-or-media",
+      "occurrences": 1,
+      "publicUrl": "https://youtu.be/Bqk0orxlpKg",
+      "sourceId": null,
+      "disposition": "public-route",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    },
+    {
+      "routeId": "nycartc-fb-route-33",
+      "category": "protected-historical-action-route",
+      "occurrences": 1,
+      "publicUrl": null,
+      "sourceId": null,
+      "disposition": "protected",
+      "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
+    }
+  ],
+  "publicSafety": "Historical meeting-access and form routes are represented without a public URL. No post-to-route relationship, raw post text, comment, administrator state, or authentication material is published."
+}

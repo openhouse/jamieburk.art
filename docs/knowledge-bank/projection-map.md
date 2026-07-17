@@ -8,7 +8,6 @@ map to decide where claims may appear.
 Use only the smallest, most legible claims:
 
 - `career-operating-structure-14-years`
-- `hje-revenue-growth-contribution`
 - `fair-rent-campaign-memory`
 - `wowlist-community-platform`
 - `sunday-dinner-196-participation-infrastructure`
@@ -19,7 +18,6 @@ Use claims that match the approved resume:
 
 - `career-operating-structure-14-years`
 - `hje-modernization-stewardship`
-- `hje-revenue-growth-contribution`
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
 - `callnyc-civic-data-guidance`
@@ -37,7 +35,6 @@ Use claims that directly support operating-backbone fit:
 - `fair-rent-source-map`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `hje-modernization-stewardship`
-- `hje-revenue-growth-contribution`
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
@@ -47,10 +44,98 @@ Use claims that directly support operating-backbone fit:
 
 Use only public-safe method claims.
 
-Do not name Jonathan Marmor, publish pricing, publish private transcripts, or
+Do not name a prospective collaborator, publish pricing, publish private transcripts, or
 imply production SaaS.
 
 ## Case Studies
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+The WOWList case study also projects
+`CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT`. Its public social sources support
+Jamie's collective role and a bounded support/onboarding pattern; they do not
+support the separate aggregate user, post/event, or geographic-adoption claims.
+
+The case study now projects `CLM-WOWLIST-DATABASE-SCALE-2017` separately. Its
+metadata-only source note supports a July 2017 point-in-time scale and a
+50-post city/region activity threshold. Do not rewrite those rows as unique
+active users, official chapters, adoption, satisfaction, or impact.
+
+The Sunday Dinner case study projects
+`CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE`. The independent source supports
+Jamie's collective weekly hosting role; the metadata-only workbook note
+supports more than 300 numbered gathering records across 2012-2021. It does
+not support unique attendance or the separate resident-artist figure.
+
+Keep `CLM-CALLSCRIPT-NYCARTC-PARTICIPATION-LINEAGE` deferred while Jamie's
+specific facilitation and creation chronology remains materially first-person.
+The public records establish a Call Script, popular.vote, and NYC Artist
+Coalition identity and participation intersection, not sole authorship,
+founding credit, user transfer, attendance, or policy causation.
+
+## Personal And WOW List Facebook Events
+
+Keep the personal association census, hosted-event throughline, and WOW List
+negative control in reserve. The public Sunday Dinner event pages strengthen
+the existing participation-infrastructure source basis, but the 502-record
+association graph is provenance rather than portfolio content. The 20 recovered
+hosted pages are available for future audience-specific compositions, and the
+WOW List zero display is a research control rather than an accomplishment.
+
+## NTER CHNG / America: Now and Here
+
+Project `CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010` on `/about` as a compact
+source-backed formation example. The composition credits all three makers,
+preserves the linked supporting credits, and connects Jamie's participatory
+art and social-software practice to his present implementation judgment. It
+does not place NTER CHNG at the Nerman Museum, assign sole authorship, or claim
+audience scale or long-term impact.
+
+Keep `CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011` in reserve for future
+participatory-design, cultural-technology, exhibition-history, or early-career
+compositions. Do not automatically add it to a current page. If projected,
+credit all three makers, preserve the linked supporting credits, and do not
+place NTER CHNG at the Nerman Museum without a separate installation-specific
+source.
+
+Keep `CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011` as public-ready reserve
+depth for a future participatory-design or technical-implementation narrative.
+If projected, preserve the official Jamie attribution as design intent, credit
+all three makers, and do not convert intention into measured connection or
+impact.
+
+Keep `CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011` unprojected while it is
+corroborated rather than public-ready. The planning artifact makes the breadth
+of implementation work visible, but a future public accomplishment claim needs
+after-the-fact execution evidence and collaborator-specific credit.
+
+## NYC Artist Coalition Government Interface
+
+Keep `CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017` and
+`CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018` as public-ready
+reserve claims. Keep the Finkelpearl-significance and institutional-need claims
+as explicitly labeled interpretations. A future projection should foreground
+Jamie's operating contribution, name the civic end and usable result, preserve
+collective and official credit, and avoid claims of exclusive dependency or
+policy causation.
+
+## KC Town Hall Phase One And Neighborhood Practice
+
+Keep `CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019`,
+`CLM-KCTOWNHALL-PARTICIPATORY-SITE-PRACTICE-2018-2019`, and
+`CLM-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS-2019-2021` as corroborated reserve
+depth. They materially strengthen Jamie's implementation record, but public
+composition should wait for after-the-fact completion, role, workflow-design,
+and Indian Mound corroboration.
+
+Keep `CLM-CLEVELAND-AVE-UNIFY-TO-BEAUTIFY-CONTRIBUTION-2019` and
+`CLM-KCTOWNHALL-NEIGHBORHOOD-DESIGN-AND-PRINT-PRACTICE-2018-2021` in the
+research layer. A future projection must credit Pastor Lee's originating idea,
+the collective hosts and neighborhood partners, and distinguish public-priority
+routing from capital-allocation causation.
+
+No future KC Town Hall composition should conflate the Phase One restoration
+record with the later unused $490,539 City appropriation. The former has its
+own contemporaneous and first-party evidence; the latter did not fund the
+documented Phase One work.

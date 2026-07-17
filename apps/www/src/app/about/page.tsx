@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Claim, References } from "@/components/citations";
 import { ContactCTA } from "@/components/ContactCTA";
 import { createMetadata } from "@/lib/metadata";
 
@@ -33,6 +34,27 @@ export default function AboutPage() {
             people can use after the meeting or launch is over.
           </p>
           <p>
+            My operating practice did not begin as conventional administration.
+            It grew from digital media, social software, media archaeology,
+            participatory installation, and the close attention required to
+            host people in shared space.
+          </p>
+          <Claim
+            as="p"
+            claimId="CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
+            projection="archive-note"
+            surface="/about"
+            pageId="about"
+            occurrenceId="nter-chng-participatory-installation"
+          />
+          <p>
+            That early work taught me to ask of any system: Who can enter? What
+            can they contribute? How does the interface shape what becomes
+            visible? What conditions let a shared practice continue? Those
+            questions still guide how I approach civic tools, community
+            infrastructure, and technical implementation.
+          </p>
+          <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
@@ -46,6 +68,7 @@ export default function AboutPage() {
             work.
           </p>
         </div>
+        <References pageId="about" />
       </div>
       <div className="mt-12 max-w-3xl">
         <ContactCTA />

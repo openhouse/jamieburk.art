@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "atlas-accession-exit",
+  "principle": "Accession associations remain provenance, never the sole location or access protocol for knowledge.",
+  "sourceObjectAddressTemplate": "atlas://source-objects/sha256/{sha256}",
+  "profileAddressTemplate": "atlas://source-profiles/sha256/{sha256}",
+  "supportedExtensions": [
+    ".csv",
+    ".html",
+    ".json",
+    ".jsonl",
+    ".md",
+    ".mjs",
+    ".ts",
+    ".txt"
+  ],
+  "knowledgeClasses": [
+    "executable-schema-or-procedure",
+    "heteroglossic-record-variants",
+    "narrative-context",
+    "operational-procedure",
+    "plain-text-context",
+    "semantic-identifiers",
+    "semantic-markdown",
+    "situated-evaluation",
+    "source-dataset",
+    "source-locators",
+    "stakeholder-credit",
+    "structured-dataset",
+    "structured-records",
+    "tabular-dataset",
+    "web-document"
+  ],
+  "nativeTargetPrefixes": [
+    "atlas://datasets/",
+    "atlas://documents/",
+    "atlas://narratives/",
+    "atlas://procedures/",
+    "atlas://record-variants/",
+    "atlas://semantic-records/",
+    "atlas://source-evaluations/",
+    "atlas://source-locators/",
+    "atlas://source-objects/",
+    "atlas://source-profiles/",
+    "atlas://stakeholders/"
+  ],
+  "requiredArtifactFields": [
+    "contentAddress",
+    "sourceObjectId",
+    "sha256",
+    "accessionProvenance",
+    "knowledgeClasses",
+    "migration"
+  ],
+  "requiredMigrationFields": [
+    "status",
+    "disposition",
+    "nativeTargets",
+    "residualKnowledge",
+    "reviewability"
+  ],
+  "antiGaming": [
+    "Full-fidelity bytes alone do not satisfy semantic disposition completeness.",
+    "Extracted semantics alone do not satisfy reversible source-object recovery.",
+    "Removing an accession artifact cannot improve migration completeness.",
+    "Historical branch, commit, path, and Git blob identifiers may appear only as provenance after materialization.",
+    "A privacy boundary cannot be weakened to improve parity or retrieval.",
+    "A source evaluation remains situated knowledge even when it is not promoted into the active Atlas suite.",
+    "Human interpretive review cannot be self-certified by an automated agent."
+  ],
+  "releaseCondition": "Every accession artifact has a native source object, structural profile, knowledge-class disposition, native targets, closed provenance, and no known residual knowledge. Human fidelity gates remain separately fail-closed."
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "taskSetId": "atlas-grounded-knowledge-tasks",
+  "tasks": [
+    {
+      "id": "retrieve-canonical-claim",
+      "operation": "record",
+      "input": { "id": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON" },
+      "expect": { "collection": "claims", "contains": "independent" }
+    },
+    {
+      "id": "explain-project-slice",
+      "operation": "project",
+      "input": { "projectKey": "callnyc" },
+      "expect": { "pageId": "ATLAS-PROJECT-CALLNYC", "minimumClaims": 1 }
+    },
+    {
+      "id": "retrieve-source-centered-dossier",
+      "operation": "source-dossier",
+      "input": { "id": "ATLAS-SOURCE-KCSTAR-GO-WITH-FLOW-2007" },
+      "expect": {
+        "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+        "artifactId": "ART-KCSTAR-GO-WITH-FLOW-PDF-2007",
+        "minimumObservations": 50,
+        "minimumClaims": 3
+      }
+    },
+    {
+      "id": "retrieve-full-fidelity-source",
+      "operation": "source-object",
+      "input": {
+        "id": "atlas://source-objects/sha256/0e5964ca442230c507a6cbabf800d7ba25b83fa835aec57d14673e5fabe0b921"
+      },
+      "expect": { "contains": "survivingPublicRecords: 40" }
+    },
+    {
+      "id": "preserve-proof-boundary",
+      "operation": "record",
+      "input": { "id": "kc-spaces-fund-digital-infrastructure" },
+      "expect": { "collection": "proofClaims", "contains": "collective" }
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "sourcePosition": "public-record-attribution-not-endorsement",
+  "entries": [
+    {
+      "name": "Suzanne Hogan",
+      "atlasPage": "ATLAS-PROJECT-RIVER-PUBLIC-ENGAGEMENT",
+      "basisRecordIds": ["CLM-RIVER-GREAT-ACCOMMODATIONS"],
+      "credit": "Shares credit for documented river-city outreach.",
+      "boundary": "Do not attribute the outreach to Jamie alone."
+    },
+    {
+      "name": "Libby Hendon",
+      "atlasPage": "ATLAS-PROJECT-RIVER-PUBLIC-ENGAGEMENT",
+      "basisRecordIds": ["CLM-RIVER-EXPEDITION-ORGANIZER-2007"],
+      "credit": "Named expedition companion.",
+      "boundary": "Organizer language does not erase expedition crew credit."
+    },
+    {
+      "name": "Laura Mattingly",
+      "atlasPage": "ATLAS-PROJECT-RIVER-PUBLIC-ENGAGEMENT",
+      "basisRecordIds": ["CLM-RIVER-EXPEDITION-ORGANIZER-2007"],
+      "credit": "Named expedition companion.",
+      "boundary": "Organizer language does not erase expedition crew credit."
+    },
+    {
+      "name": "Rafael Espinal",
+      "atlasPage": "ATLAS-PROJECT-NYC-ARTIST-COALITION",
+      "basisRecordIds": ["CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"],
+      "credit": "Retains legislative and Council-member authority for the 2017 nightlife legislation.",
+      "boundary": "Coalition participation infrastructure is not legislative authorship."
+    },
+    {
+      "name": "Tom Finkelpearl",
+      "atlasPage": "ATLAS-PROJECT-NYC-ARTIST-COALITION",
+      "basisRecordIds": ["CLM-NYCARTC-FINKELPEARL-TESTIMONY-SIGNIFICANCE-2017"],
+      "credit": "Retains authorship and institutional context for his public testimony as DCLA commissioner.",
+      "boundary": "Institutional recognition does not establish adoption of every coalition recommendation."
+    },
+    {
+      "name": "Olympia Kazi",
+      "atlasPage": "ATLAS-PROJECT-NYC-ARTIST-COALITION",
+      "basisRecordIds": ["CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018", "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"],
+      "credit": "Retains her testimony, advisory-board representation, amplification, and organizing voice.",
+      "boundary": "Her words, appointment, and coalition use do not confer individual credit on Jamie."
+    },
+    {
+      "name": "Dorothy Howard",
+      "atlasPage": "ATLAS-PROJECT-NYC-ARTIST-COALITION",
+      "basisRecordIds": ["CLM-NYCAC-WIKIPEDIA-SOURCE-HANDOFF-2025"],
+      "credit": "Retains expert editing and Wikipedia publication-handoff credit.",
+      "boundary": "The collaboration is not independent publication by Jamie."
+    },
+    {
+      "name": "Drew Bolton",
+      "atlasPage": "ATLAS-PROJECT-NTER-CHNG",
+      "basisRecordIds": ["CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"],
+      "credit": "Co-maker and named visual artist for NTER CHNG.",
+      "boundary": "Do not assign the three-maker installation to Jamie alone."
+    },
+    {
+      "name": "Garrett Fuselier",
+      "atlasPage": "ATLAS-PROJECT-NTER-CHNG",
+      "basisRecordIds": ["CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"],
+      "credit": "Co-maker and named visual artist for NTER CHNG.",
+      "boundary": "Do not assign the three-maker installation to Jamie alone."
+    },
+    {
+      "name": "Mary Nichols",
+      "atlasPage": "ATLAS-PROJECT-NTER-CHNG",
+      "basisRecordIds": ["CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"],
+      "credit": "Credited for wall engineering and construction support.",
+      "boundary": "Supporting technical credit must remain visible with the maker credits."
+    },
+    {
+      "name": "Megan Mantia",
+      "atlasPage": "ATLAS-PROJECT-NTER-CHNG",
+      "basisRecordIds": ["CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"],
+      "credit": "Credited as an actor in the project record.",
+      "boundary": "Performance credit remains distinct from maker and construction credit."
+    },
+    {
+      "name": "Elisha Stetson",
+      "atlasPage": "ATLAS-PROJECT-NTER-CHNG",
+      "basisRecordIds": ["CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"],
+      "credit": "Credited as an actor in the project record.",
+      "boundary": "Performance credit remains distinct from maker and construction credit."
+    },
+    {
+      "name": "M.C. Schmidt",
+      "atlasPage": "ATLAS-PROJECT-HORSE-LORDS-TRUTHERS-VIDEO",
+      "basisRecordIds": ["CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016"],
+      "credit": "Joint maker of the official Truthers video.",
+      "boundary": "Always use joint maker credit; the division of labor is not established."
+    },
+    {
+      "name": "Andrew Bernstein",
+      "atlasPage": "ATLAS-PROJECT-HORSE-LORDS-TRUTHERS-VIDEO",
+      "basisRecordIds": ["CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016"],
+      "credit": "Retains attribution for the published explanation of the video's visual method.",
+      "boundary": "Do not present his explanation as Jamie's quotation."
+    },
+    {
+      "name": "Richard Kim",
+      "atlasPage": "ATLAS-PROJECT-MUSIC-HACKATHON",
+      "basisRecordIds": ["CLM-MUSIC-HACKATHON-WOWLIST-PUBLIC-CREDIT"],
+      "credit": "Retains WOWList product credit alongside other collaborators.",
+      "boundary": "A singular contemporaneous reference does not establish sole product ownership."
+    },
+    {
+      "name": "Julia Fredenburg",
+      "atlasPage": "ATLAS-PROJECT-KC-TOWN-HALL",
+      "basisRecordIds": ["CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP", "CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019"],
+      "credit": "Shares documented project, neighborhood, building, and tire-workflow credit.",
+      "boundary": "Do not describe collective delivery as Jamie's sole implementation."
+    },
+    {
+      "name": "Jimmy Fitzner",
+      "atlasPage": "ATLAS-PROJECT-KC-TOWN-HALL",
+      "basisRecordIds": ["CLM-KCTOWNHALL-PARTICIPATORY-SITE-PRACTICE-2018-2019"],
+      "credit": "Publicly corroborated hands-on tire collection with Jamie.",
+      "boundary": "The public recollection supports that bounded activity, not the whole program."
+    },
+    {
+      "name": "Michael Rees",
+      "atlasPage": "ATLAS-PROJECT-CLAUDETTE-AR",
+      "basisRecordIds": ["CLM-CLAUDETTE-AR-COLLABORATION"],
+      "credit": "Collaborator on the augmented-reality experience.",
+      "boundary": "Keep AR collaboration distinct from source-video production credit."
+    },
+    {
+      "name": "Anne Dufy Burkart",
+      "atlasPage": "ATLAS-PROJECT-CLAUDETTE-AR",
+      "basisRecordIds": ["CLM-CLAUDETTE-AR-COLLABORATION"],
+      "credit": "Shares source-video production credit.",
+      "boundary": "Do not attribute the source-video production to Jamie alone."
+    },
+    {
+      "name": "Claudette",
+      "atlasPage": "ATLAS-PROJECT-CLAUDETTE-AR",
+      "basisRecordIds": ["CLM-CLAUDETTE-AR-COLLABORATION"],
+      "credit": "Participant in the source-video production record.",
+      "boundary": "Do not infer endorsement or disclose private context beyond the public source."
+    },
+    {
+      "name": "Caitlin Horsmon",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains named public organizer credit for KC Spaces Fund.",
+      "boundary": "Organizer credit does not transfer campaign ownership or fundraising authorship to Jamie."
+    },
+    {
+      "name": "Jordan Carr",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains named public organizer credit for KC Spaces Fund.",
+      "boundary": "Organizer credit does not transfer campaign ownership or fundraising authorship to Jamie."
+    },
+    {
+      "name": "Kendell Harbin",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains named public organizer credit and the public Allied Media Projects relationship.",
+      "boundary": "Do not infer that Jamie organized, fiscally sponsored, or allocated the fund."
+    },
+    {
+      "name": "Megan Pobywajlo",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains named public organizer credit for KC Spaces Fund.",
+      "boundary": "Organizer credit does not transfer campaign ownership or fundraising authorship to Jamie."
+    },
+    {
+      "name": "Allied Media Projects",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains the fiscal-sponsor role stated in the public fundraiser.",
+      "boundary": "Fiscal sponsorship is not evidence that Jamie controlled fundraising or grant allocation."
+    }
+  ]
+}

@@ -18,27 +18,27 @@ const startHereLinks = [
   {
     href: "/work/technical-operations",
     label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for OTI, product operations, implementation, and delivery coordination."
+    note: "See how Jamie moves ambiguous work toward launch and leaves teams with workflows, decision records, onboarding, and handoffs they can keep using."
   },
   {
     href: "/work/harry-j-epstein",
     label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
+    note: "See how Jamie helped translate legacy product knowledge into customer-facing e-commerce and maintainable operating workflows."
   },
   {
     href: "/work/fair-rent-nyc",
     label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
+    note: "See how Jamie helped coalition collaborators turn fragmented context into shared campaign memory, source maps, and public-safe coordination."
   },
   {
     href: "/work/callnyc",
     label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
+    note: "See how Jamie independently translated CouncilStat records into issue pathways and next-step guidance residents could navigate."
   },
   {
     href: "/resume",
     label: "Resume",
-    note: "PDF for applications and hiring workflows."
+    note: "Review Jamie's role history, selected impact, and application-ready PDF."
   }
 ];
 
@@ -145,6 +145,16 @@ export default function HomePage() {
             the workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to
             maintain.
+          </p>
+          <p className="leading-8 text-jb-ink/72">
+            The method grew from participatory art and social-software
+            practice: design conditions people can enter, make feedback
+            legible, and leave structures others can adapt together. The
+            source-backed throughline is documented on the{" "}
+            <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/about">
+              About page
+            </Link>
+            .
           </p>
           <ContactCTA />
         </div>

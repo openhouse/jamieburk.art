@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "policyId": "atlas-source-variant-governance",
+  "defaultDisposition": "retained-unpromoted-source-variant",
+  "canonicalMatchDisposition": "canonical-record-with-retained-source-variants",
+  "unresolvedDisposition": "provenance-preserved-unresolved",
+  "promotionRequires": [
+    "canonical-record-id",
+    "source-basis",
+    "public-use-boundary",
+    "reviewed-status"
+  ],
+  "silentFieldMerge": "prohibited",
+  "requiredProvenance": ["branches", "locations", "digest"]
+}

@@ -22,10 +22,10 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            I coordinate complex public-facing work from an unclear starting
+            point through launch and handoff. I clarify the goal, make ownership
+            and dependencies visible, and build the workflows and decision
+            records people need to deliver and maintain the work.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
@@ -54,7 +54,7 @@ export default function ResumePage() {
                       surface="/resume"
                     />
                   ) : (
-                    proof.shortWording ?? proof.publicWording
+                    proof.detailedPublicWording ?? proof.publicWording
                   )}
                 </span>
               </li>

@@ -1,0 +1,23 @@
+{
+  "name": "@jamie-burkart/atlas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./records": "./src/records.mjs",
+    "./source-dossiers": "./src/source-dossiers.mjs"
+  },
+  "bin": {
+    "atlas": "./bin/atlas.mjs"
+  },
+  "scripts": {
+    "check": "node ./bin/atlas.mjs check",
+    "test": "node --test ./test/*.test.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "typescript": "^6.0.3",
+    "zod": "^4.4.3"
+  }
+}

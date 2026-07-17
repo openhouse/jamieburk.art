@@ -35,26 +35,106 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run check:evals
+npm run test:evals
+npm run eval:launch
+npm run check:knowledge-lifecycle
+npm run test:knowledge-lifecycle
+npm run eval:knowledge-lifecycle
+npm run eval:knowledge-lifecycle:gate
+npm run atlas:generate
+npm run atlas:check
+npm run atlas:test
+npm run atlas:eval
+npm run atlas:bundle -- --output /path/to/atlas-portable
+npm run atlas:verify-bundle -- --input /path/to/atlas-portable
+npm run atlas:release
+npm run atlas:query -- --project callnyc
+npm run eval:launch:browser -- --url http://127.0.0.1:3000 --profile local
 npm run preflight:staging
 npm run preflight:production
 ```
 
-## Knowledge Bank
+## Launch Readiness Evals
 
-This repo includes a public-safe knowledge bank for professional claims:
+`evals/launch-readiness/` turns the portfolio's launch intentions into a
+recursive improvement contract for implementation and judge agents. It keeps
+deterministic source gates, browser behavior, LLM-judged editorial quality, and
+human approvals separate so an agent cannot award itself consent or production
+approval.
 
-- `docs/knowledge-bank/`
-- `apps/www/src/data/proofs.ts`
-- `apps/www/src/data/knowledge-bank/records.ts`
+```bash
+# Report source-level release blockers and quality targets.
+npm run eval:launch
 
-The website is a projection of this bank. Pages select, sequence, and phrase
+# Test a running build at the supported routes and viewports.
+npm run eval:launch:browser -- \
+  --url https://staging.jamieburk.art \
+  --profile staging
+
+# Compare two complete reports lexicographically.
+npm run eval:launch:compare -- before.json after.json
+```
+
+Read `evals/launch-readiness/agent-loop.md` before recursive work. A full
+release decision needs an independent assessment based on `judge-prompt.md`, a
+passing browser report supplied through `LAUNCH_BROWSER_REPORT`, and named
+confirmation of every human gate. `npm run preflight:production` enforces that
+complete release contract and therefore remains nonzero while human gates are
+pending.
+
+The suite maps eight recurring blind spots to deterministic, browser, judge,
+and human evaluations. See
+`evals/launch-readiness/blind-reader-protocol.md`,
+`docs/knowledge-bank/corroboration-register.json`, and
+`docs/production-cutover.md` for human handoff paths that agents may prepare but
+may not self-certify.
+
+## Atlas knowledge system
+
+Atlas is the canonical public-safe knowledge system for professional claims:
+
+- `docs/atlas/records/canonical.json` holds complete atomic records and proof claims.
+- `docs/atlas/pages/` holds the human-readable semantic Markdown wiki.
+- `docs/atlas/generated/feature-evals-knowledge.json` inventories full-fidelity A-N source artifacts by immutable Git content address.
+- `packages/atlas/` provides record, graph, query, provenance, compatibility, and evaluation contracts.
+
+The website is a purposeful projection of Atlas. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
-first adding a public-safe proof record.
+first adding a public-safe Atlas record and projection decision.
 
-The knowledge bank is not a private archive. Do not commit raw transcripts,
+`docs/knowledge-bank/lifecycle.md` defines the loss-resistant path from intake
+through source reading, claim maturity, research, and an independent
+publication decision. The recursive checks live in
+`evals/knowledge-lifecycle/`.
+
+Atlas is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,
 client-private material, internal analytics, raw community records, unapproved
 photos, unapproved screenshots, or unapproved quotes.
+
+## Atlas
+
+`packages/atlas` is the private semantic Markdown component for the knowledge
+universe. Authored pages live in `docs/atlas/pages/`; the package validates
+stable identity, reciprocal typed relations, authority and consent posture,
+complete canonical project slices, public-safety boundaries, named stakeholder
+credit, and exact candidate fingerprints. Its federated catalog indexes all
+fourteen frozen `feature/evals-*` knowledge trees without flattening their
+provenance or exposing protected locators. It also provides in-process page,
+knowledge, source-lineage, and explanation APIs.
+
+Its v4 evaluation contract separates 30 deterministic hard gates, 9 measurable
+quality targets, and 3 human judgments. Mutation tests prove the checks reject
+representative knowledge loss, while a full portable bundle proves Atlas can
+be reconstructed without Git or the deprecated branch refs.
+
+Atlas is a package with service-like contracts, not a separately deployed
+application. Its generated graph is rebuildable, its canonical records are
+portable JSON, and there is intentionally no public Atlas route. The former
+typed banks are frozen, parity-checked migration sources. See
+`docs/atlas/architecture.md` and
+`docs/atlas/evals/hill-climb.md`.
 
 There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.

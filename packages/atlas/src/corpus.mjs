@@ -1,0 +1,590 @@
+import { createHash } from "node:crypto";
+import {
+  existsSync,
+  readFileSync,
+  readdirSync
+} from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import matter from "gray-matter";
+import {
+  atlasRecordStore,
+  knowledgeBank,
+  validateAtlasRecordStore
+} from "./records.mjs";
+import {
+  atlasPageSchema,
+  evalIntegrationManifestSchema,
+  stakeholderCreditRegisterSchema
+} from "./schema.mjs";
+import {
+  loadFeatureEvalKnowledge,
+  validateFeatureEvalKnowledge
+} from "./integration.mjs";
+import { findDeprecatedKnowledgeBankImports } from "./deprecation.mjs";
+import {
+  loadAtlasSourceDossiers,
+  sourceDossierFingerprint,
+  validateAtlasSourceDossiers
+} from "./source-dossiers.mjs";
+import {
+  atlasEvalContractFingerprint,
+  evaluateAdvancedAtlas,
+  loadAtlasEvalContracts,
+  validateAtlasEvalResultSet
+} from "./advanced-evals.mjs";
+
+export const defaultRepoRoot = path.resolve(
+  path.dirname(fileURLToPath(import.meta.url)),
+  "../../.."
+);
+
+const inversePredicates = new Map([
+  ["uses-method", "used-by"],
+  ["used-by", "uses-method"],
+  ["guards-with", "guards"],
+  ["guards", "guards-with"],
+  ["applies-concept", "applied-by"],
+  ["applied-by", "applies-concept"],
+  ["governed-by", "governs"],
+  ["governs", "governed-by"],
+  ["related-to", "related-to"]
+]);
+
+const requiredHeadings = {
+  project: [
+    "What this is",
+    "Human situation",
+    "What Jamie did",
+    "What became usable",
+    "Evidence and limits",
+    "Open questions",
+    "Public projection",
+    "Related pages"
+  ],
+  method: ["What this is", "Contract", "Evidence and limits", "Related pages"],
+  concept: ["What this is", "Contract", "Evidence and limits", "Related pages"]
+};
+
+const unsafeTextPatterns = [
+  ["local-user-path", /\/Users\//i],
+  ["local-volume-path", /\/Volumes\//i],
+  ["temporary-research-path", /\/private\/tmp\//i],
+  ["icloud-container-path", /Mobile Documents\/com~apple~CloudDocs/i],
+  ["raw-private-transcript", /raw private transcript/i]
+];
+
+function hash(value) {
+  return createHash("sha256").update(value).digest("hex");
+}
+
+function sorted(values) {
+  return [...new Set(values)].sort();
+}
+
+function intersects(values, candidates) {
+  return values.some((value) => candidates.has(value));
+}
+
+function walkMarkdown(directory) {
+  if (!existsSync(directory)) return [];
+  return readdirSync(directory, { withFileTypes: true })
+    .flatMap((entry) => {
+      const absolute = path.join(directory, entry.name);
+      if (entry.isDirectory()) return walkMarkdown(absolute);
+      return entry.isFile() && entry.name.endsWith(".md") ? [absolute] : [];
+    })
+    .sort();
+}
+
+function walkImplementationFiles(directory) {
+  if (!existsSync(directory)) return [];
+  return readdirSync(directory, { withFileTypes: true })
+    .flatMap((entry) => {
+      const absolute = path.join(directory, entry.name);
+      if (entry.isDirectory()) return walkImplementationFiles(absolute);
+      return entry.isFile() && [".json", ".mjs"].includes(path.extname(entry.name)) ? [absolute] : [];
+    })
+    .sort();
+}
+
+function markdownTargets(page) {
+  const targets = [];
+  const pattern = /\[[^\]]+\]\(([^)]+\.md(?:#[^)]+)?)\)/g;
+  for (const match of page.body.matchAll(pattern)) {
+    const rawTarget = match[1].split("#")[0];
+    if (!rawTarget.startsWith("http")) {
+      targets.push(path.normalize(path.join(path.dirname(page.relativePath), rawTarget)));
+    }
+  }
+  return sorted(targets);
+}
+
+export function loadAtlasPages(repoRoot = defaultRepoRoot) {
+  const pagesRoot = path.join(repoRoot, "docs/atlas/pages");
+  return walkMarkdown(pagesRoot).map((file) => {
+    const raw = readFileSync(file, "utf8");
+    const parsed = matter(raw);
+    return {
+      ...atlasPageSchema.parse(parsed.data),
+      body: parsed.content.trim(),
+      raw,
+      file,
+      relativePath: path.relative(pagesRoot, file)
+    };
+  });
+}
+
+export function loadIntegrationManifest(repoRoot = defaultRepoRoot) {
+  const file = path.join(repoRoot, "docs/atlas/feature-evals-integration.json");
+  return evalIntegrationManifestSchema.parse(JSON.parse(readFileSync(file, "utf8")));
+}
+
+export function loadStakeholderCreditRegister(repoRoot = defaultRepoRoot) {
+  const file = path.join(repoRoot, "docs/atlas/stakeholder-credit.json");
+  return stakeholderCreditRegisterSchema.parse(JSON.parse(readFileSync(file, "utf8")));
+}
+
+export function selectProjectSlice(bank, canonical) {
+  const primaryEntity = bank.entities.find((entity) => entity.id === canonical.entityId);
+  const entityIds = new Set([canonical.entityId]);
+  const queue = [...(primaryEntity?.relatedEntityIds ?? [])];
+  while (queue.length) {
+    const entityId = queue.shift();
+    if (entityIds.has(entityId)) continue;
+    entityIds.add(entityId);
+    const entity = bank.entities.find(({ id }) => id === entityId);
+    const incomingIds = bank.entities
+      .filter(({ relatedEntityIds }) => relatedEntityIds.includes(entityId))
+      .map(({ id }) => id);
+    for (const relatedId of [...(entity?.relatedEntityIds ?? []), ...incomingIds]) {
+      if (!entityIds.has(relatedId)) queue.push(relatedId);
+    }
+  }
+  const claims = bank.claims.filter((claim) => claim.project === canonical.projectKey);
+  const claimIds = new Set(claims.map(({ id }) => id));
+  const intake = bank.intake.filter((item) =>
+    intersects(item.entityIds, entityIds) || intersects(item.claimIds, claimIds)
+  );
+  const intakeIds = new Set(intake.map(({ id }) => id));
+  const researchTasks = bank.researchTasks.filter((task) =>
+    task.project === canonical.projectKey ||
+    intersects(task.claimIds, claimIds) ||
+    intersects(task.intakeIds, intakeIds)
+  );
+  const researchTaskIds = new Set(researchTasks.map(({ id }) => id));
+  const researchInquiries = bank.researchInquiries.filter((inquiry) =>
+    inquiry.project === canonical.projectKey || claimIds.has(inquiry.claimId)
+  );
+  const sourceIds = new Set([
+    ...intake.flatMap((item) => item.sourceIds),
+    ...claims.flatMap((claim) => claim.evidence.map(({ sourceId }) => sourceId)),
+    ...researchTasks.flatMap((task) => task.sourceIds),
+    ...researchInquiries.flatMap((inquiry) => inquiry.sourceIds)
+  ]);
+  const sources = bank.sources.filter(({ id }) => sourceIds.has(id));
+  const sourceReadings = bank.sourceReadings.filter(({ sourceId }) => sourceIds.has(sourceId));
+  const projectionDecisions = bank.projectionDecisions.filter(({ claimId }) => claimIds.has(claimId));
+  const corrections = bank.corrections.filter(({ claimId }) => claimIds.has(claimId));
+  const pages = bank.pages.filter((page) =>
+    page.occurrences.some(({ claimId }) => claimIds.has(claimId))
+  );
+  const entities = bank.entities.filter(({ id }) => entityIds.has(id));
+
+  const collections = {
+    entities,
+    intake,
+    sources,
+    sourceReadings,
+    claims,
+    researchTasks,
+    researchInquiries,
+    projectionDecisions,
+    corrections,
+    pages
+  };
+  const recordIds = Object.fromEntries(
+    Object.entries(collections).map(([name, records]) => [name, sorted(records.map(({ id }) => id))])
+  );
+  const snapshot = Object.fromEntries(
+    Object.entries(collections).map(([name, records]) => [name, records])
+  );
+
+  return {
+    recordIds,
+    counts: Object.fromEntries(Object.entries(recordIds).map(([name, ids]) => [name, ids.length])),
+    fingerprint: hash(JSON.stringify(snapshot))
+  };
+}
+
+function issue(code, message, page) {
+  return { code, message, page: page?.relativePath ?? null };
+}
+
+export function validateAtlas({
+  pages,
+  bank = knowledgeBank,
+  manifest,
+  repoRoot = defaultRepoRoot,
+  sourceKnowledge = loadFeatureEvalKnowledge(repoRoot),
+  sourceDossiers = loadAtlasSourceDossiers(path.join(repoRoot, "docs/atlas/sources")),
+  stakeholderCredits = loadStakeholderCreditRegister(repoRoot),
+  enforceRepositoryBoundary = true
+}) {
+  const errors = [];
+  const pageById = new Map();
+  const pageByPath = new Map(pages.map((page) => [page.relativePath, page]));
+  const duplicateIds = pages.map(({ id }) => id).filter((id, index, ids) => ids.indexOf(id) !== index);
+  const duplicateSlugs = pages.map(({ slug }) => slug).filter((slug, index, slugs) => slugs.indexOf(slug) !== index);
+  for (const id of sorted(duplicateIds)) errors.push(issue("identity", `Duplicate page ID ${id}`));
+  for (const slug of sorted(duplicateSlugs)) errors.push(issue("identity", `Duplicate slug ${slug}`));
+  for (const page of pages) pageById.set(page.id, page);
+
+  for (const page of pages) {
+    if (path.basename(page.relativePath, ".md") !== page.slug) {
+      errors.push(issue("identity", `Slug ${page.slug} does not match its filename`, page));
+    }
+    const headings = new Set([...page.body.matchAll(/^##\s+(.+)$/gm)].map((match) => match[1].trim()));
+    for (const heading of requiredHeadings[page.kind]) {
+      if (!headings.has(heading)) errors.push(issue("markdown", `Missing required heading: ${heading}`, page));
+    }
+    for (const [reason, pattern] of unsafeTextPatterns) {
+      if (pattern.test(page.raw)) errors.push(issue("safety", `${reason} appears in semantic Markdown`, page));
+    }
+    const correctionPath = path.resolve(repoRoot, page.authority.correctionRoute);
+    if (!correctionPath.startsWith(repoRoot) || !existsSync(correctionPath)) {
+      errors.push(issue("governance", `Correction route does not resolve: ${page.authority.correctionRoute}`, page));
+    }
+
+    if (page.canonical) {
+      const entity = bank.entities.find(({ id }) => id === page.canonical.entityId);
+      if (!entity) errors.push(issue("canonical", `Unknown canonical entity ${page.canonical.entityId}`, page));
+      else if (entity.projectKey !== page.canonical.projectKey) {
+        errors.push(issue("canonical", `Entity ${entity.id} does not own project key ${page.canonical.projectKey}`, page));
+      }
+      const slice = selectProjectSlice(bank, page.canonical);
+      if (!slice.counts.entities || !slice.counts.claims) {
+        errors.push(issue("migration", "Complete project slice is missing entities or claims", page));
+      }
+      const evidenceSourceIds = new Set(
+        bank.claims
+          .filter(({ project }) => project === page.canonical.projectKey)
+          .flatMap((claim) => claim.evidence.map(({ sourceId }) => sourceId))
+      );
+      for (const sourceId of evidenceSourceIds) {
+        if (!slice.recordIds.sources.includes(sourceId)) {
+          errors.push(issue("migration", `Project slice omitted evidence source ${sourceId}`, page));
+        }
+      }
+    }
+
+    const links = new Set(markdownTargets(page));
+    for (const relation of page.relations) {
+      const target = pageById.get(relation.target);
+      if (!target) {
+        errors.push(issue("relation", `Unknown relation target ${relation.target}`, page));
+        continue;
+      }
+      if (!links.has(target.relativePath)) {
+        errors.push(issue("markdown", `Relation target ${relation.target} lacks a standard Markdown link`, page));
+      }
+      if (relation.reciprocal) {
+        const inverse = inversePredicates.get(relation.predicate);
+        const matched = target.relations.some((candidate) =>
+          candidate.target === page.id && candidate.predicate === inverse && candidate.reciprocal
+        );
+        if (!matched) errors.push(issue("relation", `${relation.predicate} -> ${target.id} lacks ${inverse} reciprocal`, page));
+      }
+    }
+    for (const link of links) {
+      if (!pageByPath.has(link)) errors.push(issue("markdown", `Markdown page link does not resolve: ${link}`, page));
+    }
+  }
+
+  const expectedBranches = "ABCDEFGHIJKLMN".split("").map((letter) => `feature/evals-${letter}`);
+  const observedBranches = manifest.branches.map(({ branch }) => branch).sort();
+  if (JSON.stringify(observedBranches) !== JSON.stringify(expectedBranches)) {
+    errors.push(issue("integration", "Eval integration manifest must account for feature/evals-A through feature/evals-N"));
+  }
+  if (!manifest.branches.some(({ branch, sourceCommit }) =>
+    branch === manifest.base.branch && sourceCommit === manifest.base.commit
+  )) {
+    errors.push(issue("integration", "Base branch commit does not match its integration entry"));
+  }
+  const expectedProjectKeys = sorted(bank.entities.flatMap(({ projectKey }) => projectKey ? [projectKey] : []));
+  const observedProjectKeys = sorted(pages.flatMap(({ canonical }) => canonical?.projectKey ? [canonical.projectKey] : []));
+  for (const projectKey of expectedProjectKeys.filter((key) => !observedProjectKeys.includes(key))) {
+    errors.push(issue("migration", `Canonical project lacks an Atlas page: ${projectKey}`));
+  }
+  for (const message of validateFeatureEvalKnowledge({ catalog: sourceKnowledge, manifest })) {
+    errors.push(issue("source-integration", message));
+  }
+  for (const message of validateAtlasSourceDossiers(sourceDossiers, { repoRoot })) {
+    const code = /deprecated source-lineage|deprecated or protected text/i.test(message)
+      ? "deprecated-source-lineage"
+      : "source-dossier";
+    errors.push(issue(code, message));
+  }
+  const allRecordIds = new Set(Object.values(bank)
+    .filter(Array.isArray)
+    .flatMap((records) => records.map(({ id }) => id)));
+  for (const { id } of sourceKnowledge.semanticRecords) allRecordIds.add(id);
+  const duplicateStakeholders = stakeholderCredits.entries
+    .map(({ name }) => name)
+    .filter((name, index, names) => names.indexOf(name) !== index);
+  for (const name of sorted(duplicateStakeholders)) {
+    errors.push(issue("stakeholder", `Duplicate stakeholder credit entry: ${name}`));
+  }
+  for (const entry of stakeholderCredits.entries) {
+    const page = pageById.get(entry.atlasPage);
+    if (!page) errors.push(issue("stakeholder", `Stakeholder ${entry.name} points to an unknown Atlas page`));
+    else if (!page.raw.includes(entry.name)) errors.push(issue("stakeholder", `Stakeholder ${entry.name} is absent from ${page.id}`, page));
+    for (const recordId of entry.basisRecordIds) {
+      if (!allRecordIds.has(recordId)) errors.push(issue("stakeholder", `Stakeholder ${entry.name} cites unknown record ${recordId}`, page));
+    }
+  }
+
+  if (enforceRepositoryBoundary && existsSync(path.join(repoRoot, "apps/www/src/app/atlas"))) {
+    errors.push(issue("boundary", "Atlas must not create a public application route"));
+  }
+  if (enforceRepositoryBoundary && !existsSync(path.join(repoRoot, "packages/atlas/package.json"))) {
+    errors.push(issue("boundary", "Atlas package boundary is missing"));
+  }
+  if (enforceRepositoryBoundary) {
+    for (const file of findDeprecatedKnowledgeBankImports(repoRoot)) {
+      errors.push(issue("deprecation", `Direct deprecated knowledge-bank import: ${file}`));
+    }
+  }
+
+  return { errors };
+}
+
+export function compileAtlas({
+  repoRoot = defaultRepoRoot,
+  recordStore = atlasRecordStore,
+  bank = knowledgeBank,
+  pages = loadAtlasPages(repoRoot),
+  manifest = loadIntegrationManifest(repoRoot),
+  sourceKnowledge = loadFeatureEvalKnowledge(repoRoot),
+  sourceDossiers = loadAtlasSourceDossiers(path.join(repoRoot, "docs/atlas/sources")),
+  stakeholderCredits = loadStakeholderCreditRegister(repoRoot),
+  enforceRepositoryBoundary = true
+} = {}) {
+  const validation = validateAtlas({ pages, bank, manifest, sourceKnowledge, sourceDossiers, stakeholderCredits, repoRoot, enforceRepositoryBoundary });
+  for (const message of validateAtlasRecordStore(recordStore)) {
+    validation.errors.push(issue("record-authority", message));
+  }
+  const pageNodes = pages
+    .map((page) => ({
+      id: page.id,
+      slug: page.slug,
+      kind: page.kind,
+      title: page.title,
+      summary: page.summary,
+      status: page.status,
+      visibility: page.visibility,
+      aliases: page.aliases,
+      tags: page.tags,
+      authority: page.authority,
+      canonical: page.canonical
+        ? { ...page.canonical, slice: selectProjectSlice(bank, page.canonical) }
+        : null,
+      relations: page.relations,
+      path: `docs/atlas/pages/${page.relativePath}`
+    }))
+    .sort((left, right) => left.id.localeCompare(right.id));
+  const corpusSource = pages
+    .map((page) => [page.relativePath, page.raw])
+    .sort(([left], [right]) => left.localeCompare(right));
+  const corpusFingerprint = hash(JSON.stringify(corpusSource));
+  const bankFingerprint = hash(JSON.stringify(bank));
+  const recordStoreFingerprint = recordStore.fingerprint;
+  const integrationFingerprint = hash(JSON.stringify(manifest));
+  const sourceKnowledgeFingerprint = sourceKnowledge.catalogFingerprint;
+  const sourceDossierSetFingerprint = hash(JSON.stringify(sourceDossiers.map(({ file: _file, fingerprint: _fingerprint, ...dossier }) => [
+    dossier.id,
+    sourceDossierFingerprint(dossier),
+    hash(readFileSync(path.join(repoRoot, dossier.synthesisPage), "utf8"))
+  ])));
+  const stakeholderCreditFingerprint = hash(JSON.stringify(stakeholderCredits));
+  const evalContractFingerprint = atlasEvalContractFingerprint(repoRoot);
+  const implementationRoot = path.join(repoRoot, "packages/atlas");
+  const implementationSource = [
+    path.join(implementationRoot, "package.json"),
+    ...walkImplementationFiles(path.join(implementationRoot, "src")),
+    ...walkImplementationFiles(path.join(implementationRoot, "bin"))
+  ].map((file) => [path.relative(repoRoot, file), readFileSync(file, "utf8")]);
+  const implementationFingerprint = hash(JSON.stringify(implementationSource));
+  const candidateFingerprint = hash(
+    `${corpusFingerprint}:${recordStoreFingerprint}:${integrationFingerprint}:${sourceKnowledgeFingerprint}:${sourceDossierSetFingerprint}:${stakeholderCreditFingerprint}:${evalContractFingerprint}:${implementationFingerprint}`
+  );
+  const canonicalUnion = {};
+  for (const page of pageNodes.filter(({ canonical }) => canonical)) {
+    for (const [collection, ids] of Object.entries(page.canonical.slice.recordIds)) {
+      canonicalUnion[collection] = sorted([...(canonicalUnion[collection] ?? []), ...ids]);
+    }
+  }
+  for (const [collection, records] of Object.entries(bank).filter(([, value]) => Array.isArray(value))) {
+    const covered = new Set(canonicalUnion[collection] ?? []);
+    const missing = records.map(({ id }) => id).filter((id) => !covered.has(id));
+    if (missing.length) validation.errors.push(issue("migration", `${collection} has ${missing.length} record(s) outside Atlas project coverage`));
+  }
+
+  return {
+    schemaVersion: 3,
+    candidateFingerprint,
+    inputs: {
+      corpusFingerprint,
+      bankFingerprint,
+      recordStoreFingerprint,
+      integrationFingerprint,
+      sourceKnowledgeFingerprint,
+      sourceDossierFingerprint: sourceDossierSetFingerprint,
+      stakeholderCreditFingerprint,
+      evalContractFingerprint,
+      implementationFingerprint
+    },
+    metrics: {
+      pages: pageNodes.length,
+      projectPages: pageNodes.filter(({ kind }) => kind === "project").length,
+      stakeholderCredits: stakeholderCredits.entries.length,
+      canonicalRecords: Object.values(recordStore.counts).reduce((sum, count) => sum + count, 0),
+      sourceDossiers: sourceDossiers.length,
+      sourceObservations: sourceDossiers.reduce((sum, dossier) => sum + dossier.observations.length, 0),
+      sourceClaims: sourceDossiers.reduce((sum, dossier) => sum + dossier.claims.length, 0),
+      relations: pageNodes.reduce((sum, page) => sum + page.relations.length, 0),
+      canonicalCoverage: Object.fromEntries(
+        Object.entries(canonicalUnion).map(([collection, ids]) => [collection, ids.length])
+      )
+    },
+    pages: pageNodes,
+    sourceDossiers: sourceDossiers.map(({ file: _file, ...dossier }) => dossier),
+    legacyMigration: {
+      status: "deprecated-internal-migration-fixture",
+      catalogFingerprint: sourceKnowledge.catalogFingerprint,
+      nativeSourceObjects: sourceKnowledge.totals.nativeSourceObjects,
+      semanticIds: sourceKnowledge.totals.semanticIds
+    },
+    stakeholderCredits: stakeholderCredits.entries,
+    recordStore: {
+      authority: recordStore.authority,
+      deprecationPolicy: recordStore.deprecationPolicy,
+      migratedFrom: {
+        status: "deprecated-migration-fixture",
+        sourceCutAt: recordStore.migratedFrom.sourceCutAt,
+        legacyFingerprint: recordStore.migratedFrom.legacyFingerprint
+      },
+      counts: recordStore.counts,
+      fingerprint: recordStore.fingerprint
+    },
+    validation
+  };
+}
+
+export function evaluateAtlas(compiled, {
+  repoRoot = defaultRepoRoot,
+  recordStore = atlasRecordStore,
+  sourceKnowledge = loadFeatureEvalKnowledge(repoRoot),
+  manifest = loadIntegrationManifest(repoRoot),
+  contracts = loadAtlasEvalContracts(repoRoot)
+} = {}) {
+  const failures = compiled.validation.errors;
+  const hardGateDefinitions = [
+    ["semantic-markdown-contract", ["schema", "identity"]],
+    ["typed-relations-are-reciprocal", ["relation"]],
+    ["portable-markdown-links-resolve", ["markdown"]],
+    ["canonical-records-resolve", ["canonical"]],
+    ["project-migration-loses-nothing-silently", ["migration"]],
+    ["authority-and-correction-are-explicit", ["governance"]],
+    ["public-safety-boundary-is-enforced", ["safety"]],
+    ["atlas-remains-a-private-package", ["boundary"]],
+    ["canonical-source-dossiers-validate", ["source-dossier"]],
+    ["deprecated-source-lineage-is-absent", ["deprecated-source-lineage"]],
+    ["named-stakeholder-credit-is-preserved", ["stakeholder"]],
+    ["atlas-record-store-is-canonical", ["record-authority"]],
+    ["deprecated-knowledge-banks-have-no-consumers", ["deprecation"]]
+  ];
+  const results = hardGateDefinitions.map(([id, codes]) => {
+    const evidence = failures.filter(({ code }) => codes.includes(code));
+    return {
+      id,
+      kind: "hard-gate",
+      passed: evidence.length === 0,
+      observed: evidence.length ? `${evidence.length} defect(s)` : "No defects",
+      evidence
+    };
+  });
+  results.push(
+    {
+      id: "named-stakeholder-coverage",
+      kind: "quality-target",
+      passed: compiled.metrics.stakeholderCredits >= 25,
+      observed: `${compiled.metrics.stakeholderCredits} named stakeholder credit boundaries; target 25`,
+      evidence: []
+    },
+    {
+      id: "canonical-project-universe",
+      kind: "quality-target",
+      passed: compiled.metrics.projectPages >= 21,
+      observed: `${compiled.metrics.projectPages} project page(s); target 21`,
+      evidence: []
+    },
+    {
+      id: "source-dossier-depth",
+      kind: "quality-target",
+      passed: compiled.metrics.sourceDossiers >= 1 && compiled.metrics.sourceObservations >= 50 && compiled.metrics.sourceClaims >= 3,
+      observed: `${compiled.metrics.sourceDossiers} dossier(s), ${compiled.metrics.sourceObservations} atomic observations, and ${compiled.metrics.sourceClaims} governed claims`,
+      evidence: {
+        dossiers: compiled.metrics.sourceDossiers,
+        observations: compiled.metrics.sourceObservations,
+        claims: compiled.metrics.sourceClaims
+      }
+    },
+    {
+      id: "semantic-neighborhood-depth",
+      kind: "quality-target",
+      passed: compiled.metrics.relations >= compiled.metrics.pages * 2,
+      observed: `${compiled.metrics.relations} typed relation(s) across ${compiled.metrics.pages} page(s)`,
+      evidence: []
+    },
+    {
+      id: "candidate-is-exactly-bound",
+      kind: "quality-target",
+      passed: Boolean(compiled.candidateFingerprint && Object.values(compiled.inputs).every(Boolean)),
+      observed: compiled.candidateFingerprint,
+      evidence: compiled.inputs
+    }
+  );
+  results.push(...evaluateAdvancedAtlas({
+    repoRoot,
+    compiled,
+    recordStore,
+    catalog: sourceKnowledge,
+    manifest,
+    contracts
+  }));
+  const resultSetErrors = validateAtlasEvalResultSet(contracts.suite, results);
+  if (resultSetErrors.length) {
+    const lineage = results.find(({ id }) => id === "eval-lineage-completeness");
+    lineage.passed = false;
+    lineage.observed = `${resultSetErrors.length} defect(s)`;
+    lineage.evidence.push(...resultSetErrors);
+  }
+  const hardGates = results.filter(({ kind }) => kind === "hard-gate");
+  const qualityTargets = results.filter(({ kind }) => kind === "quality-target");
+  const humanGates = results.filter(({ kind }) => kind === "human-gate");
+  return {
+    suiteId: contracts.suite.id,
+    suiteVersion: contracts.suite.version,
+    candidateFingerprint: compiled.candidateFingerprint,
+    results,
+    summary: {
+      hardGateFailures: hardGates.filter(({ passed }) => !passed).length,
+      hardGateTotal: hardGates.length,
+      qualityTargetGaps: qualityTargets.filter(({ passed }) => !passed).length,
+      qualityTargetTotal: qualityTargets.length,
+      humanGatesPending: humanGates.filter(({ passed }) => !passed).length,
+      humanGateTotal: humanGates.length
+    }
+  };
+}

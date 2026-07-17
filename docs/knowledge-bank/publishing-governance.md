@@ -34,3 +34,33 @@ Before a claim appears publicly, ask:
   or "AI"?
 - Does it use stewardship language where appropriate?
 - Does it avoid inflated ownership claims?
+
+## Selection Test
+
+Public-ready means available for composition, not automatically published. For
+every candidate claim, record:
+
+1. the current audience and decision the page needs to support;
+2. Jamie's defensible action and the end it served;
+3. the usable result a reader can understand without archive context;
+4. the minimum evidence and citation path needed for confidence;
+5. the collective-credit, causal, privacy, and consent boundaries;
+6. whether the claim adds distinct decision value or merely repeats a stronger
+   example already on the page;
+7. a publish, defer, retire, or disallow decision with reviewer and date.
+
+Deferred claims remain available in the bank. Deferral is not a judgment that
+the accomplishment is unimportant.
+
+## Review Cadence
+
+- Review the homepage, resume, Technical Operations page, and flagship case
+  studies for every production candidate.
+- Review public-ready reserve claims when the target role, audience, or public
+  argument changes.
+- Revisit high-value deferred claims when a linked research task resolves or a
+  collaborator supplies corroboration.
+- Recheck projected claims when a source changes, correction is added, media is
+  replaced, or public context becomes stale.
+- Keep the decision owner and stop condition explicit; an agent may recommend a
+  change but may not self-certify human approval, rights, or consent.

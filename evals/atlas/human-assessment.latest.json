@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "atlas-situated-knowledge-universe",
+  "suiteVersion": "6.0.0",
+  "status": "pending-human-review",
+  "criteria": [
+    {
+      "id": "social-mechanism-fidelity",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named human must judge whether participation, authorship, hosting, sponsorship, institutional response, feedback, and causation remain distinct."
+    },
+    {
+      "id": "situated-experience-fidelity",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named human must judge whether artistic practice, embodiment, atmosphere, and voice remain legible alongside operational structure."
+    },
+    {
+      "id": "no-context-reader-navigation",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named no-context reader must navigate from a project to its evidence, collaborators, methods, corrections, and open questions."
+    },
+    {
+      "id": "native-semantic-assimilation-review",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named human must sample each knowledge class and judge whether native dispositions preserve meaning, difference, and evidentiary relationships rather than merely bytes and counts."
+    },
+    {
+      "id": "source-dossier-comprehensibility",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named no-context reviewer must judge whether the source dossier, synthesis page, and repository diff make the knowledge change understandable without treating generated JSON as a black box."
+    },
+    {
+      "id": "source-dossier-editorial-fidelity",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named human must compare the dossier with the rendered artifact and judge whether voice, authority, atomic observations, limitations, negative knowledge, collective credit, and social context remain faithful."
+    }
+  ]
+}

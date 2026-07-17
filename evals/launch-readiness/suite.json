@@ -1,0 +1,342 @@
+{
+  "id": "portfolio-launch-readiness",
+  "version": "1.3.0",
+  "objective": "Make Jamie legible and credible to a busy hiring reader while preserving factual accuracy, collective credit, public safety, accessibility, and a clear path to action.",
+  "releaseThresholds": {
+    "hardGateFailures": 0,
+    "weightedJudgeScore": 90,
+    "minimumJudgeScore": 3,
+    "minimumSafetyScore": 4,
+    "maximumPlateauIterations": 2,
+    "maximumIterations": 8
+  },
+  "blindSpotCoverage": [
+    {
+      "id": "knowledge-bank-public-truth",
+      "description": "Public proof selection must stay synchronized with claim status, correction records, and projection decisions.",
+      "evaluationIds": ["public-proof-projection-is-synchronized"]
+    },
+    {
+      "id": "human-corroboration",
+      "description": "High-value role claims needing human corroboration must have an actionable, bounded review route.",
+      "evaluationIds": ["corroboration-queue-is-actionable"],
+      "humanGateIds": ["collaborator-claim-corroboration"]
+    },
+    {
+      "id": "outcome-chain",
+      "description": "Projected claims must connect action, intended end, usable result, audience, collective credit, and causal limits.",
+      "evaluationIds": ["projected-claims-have-complete-outcome-chains", "agency-purpose-usability"]
+    },
+    {
+      "id": "independent-audience-testing",
+      "description": "A no-context reader protocol must exist, and release requires a named human reader pass.",
+      "evaluationIds": ["blind-reader-protocol-is-operational", "hiring-reader-clarity"],
+      "humanGateIds": ["blind-hiring-reader-validation"]
+    },
+    {
+      "id": "editorial-selection",
+      "description": "Public-ready claims must receive explicit audience-and-purpose projection decisions rather than drifting onto the site.",
+      "evaluationIds": ["editorial-decisions-cover-public-ready-claims"]
+    },
+    {
+      "id": "archival-population-scope",
+      "description": "Full-population language must describe the recoverable platform surface rather than implying lifetime archival completeness.",
+      "evaluationIds": ["population-claims-preserve-recovery-scope"]
+    },
+    {
+      "id": "visual-proof-and-rights",
+      "description": "Displayed media must have inspectable provenance and remain subject to human rights and consent approval.",
+      "evaluationIds": ["displayed-media-has-provenance", "visual-proof"],
+      "humanGateIds": ["media-rights-and-consent"]
+    },
+    {
+      "id": "production-cutover",
+      "description": "The primary-domain cutover must have a tested fingerprint, verification plan, rollback path, and explicit human authorization.",
+      "evaluationIds": ["production-cutover-is-operationalized", "primary-domain-serves-current-portfolio"],
+      "humanGateIds": ["jamie-production-approval"]
+    },
+    {
+      "id": "artistic-operating-throughline",
+      "description": "The portfolio must preserve a legible connection among Jamie's artistic, civic, technical, and social practices rather than reducing every project to organizational utility.",
+      "evaluationIds": ["margaret-morse-lens"]
+    },
+    {
+      "id": "social-systems-mechanism",
+      "description": "The portfolio must connect participation patterns to concrete interfaces, workflows, feedback loops, recursive effects, and collective authorship.",
+      "evaluationIds": ["warren-sack-lens"]
+    }
+  ],
+  "routes": [
+    "/",
+    "/work",
+    "/work/technical-operations",
+    "/resume",
+    "/about",
+    "/contact",
+    "/colophon",
+    "/lab/source-backed-team-memory",
+    "/work/harry-j-epstein",
+    "/work/fair-rent-nyc",
+    "/work/callnyc",
+    "/work/wowlist",
+    "/work/196-sunday-dinner",
+    "/work/kc-town-hall"
+  ],
+  "viewports": [
+    { "name": "mobile-320", "width": 320, "height": 800 },
+    { "name": "mobile-375", "width": 375, "height": 812 },
+    { "name": "tablet", "width": 768, "height": 1024 },
+    { "name": "desktop", "width": 1440, "height": 1000 }
+  ],
+  "sourceChecks": [
+    {
+      "id": "public-copy-has-no-workflow-status",
+      "kind": "hard-gate",
+      "intent": "A hiring reader should encounter a deliberate public artifact, not internal approval, production workflow, or instructions to future editors.",
+      "remediation": "Resolve the approval or rewrite the internal instruction as a stable reader-facing boundary."
+    },
+    {
+      "id": "permanent-copy-is-employer-neutral",
+      "kind": "hard-gate",
+      "intent": "The permanent portfolio should remain legible across job applications.",
+      "remediation": "Replace unexplained employer-specific acronyms with the general role or capability."
+    },
+    {
+      "id": "colophon-explains-citational-care",
+      "kind": "hard-gate",
+      "intent": "The site should state how significant factual claims connect to public and protected evidence.",
+      "remediation": "Add the bounded Citational care statement to the Colophon."
+    },
+    {
+      "id": "launch-register-is-resolved",
+      "kind": "hard-gate",
+      "intent": "Production approval must be an explicit reviewed state rather than an assumed one.",
+      "remediation": "Close, remove, or explicitly defer every item in the launch-blockers register."
+    },
+    {
+      "id": "application-path-is-complete",
+      "kind": "hard-gate",
+      "intent": "A reader can reach work, role-fit proof, resume, and contact without interpretation.",
+      "remediation": "Restore the missing application-path link or approved resume artifact."
+    },
+    {
+      "id": "public-proof-projection-is-synchronized",
+      "kind": "hard-gate",
+      "intent": "A held, private, corrected, or otherwise unapproved claim must not re-enter public copy through a parallel proof selector.",
+      "remediation": "Align proof status and selectors with canonical claim corrections and remove every non-public proof from public surfaces."
+    },
+    {
+      "id": "corroboration-queue-is-actionable",
+      "kind": "hard-gate",
+      "intent": "The most valuable first-party or collaborator-sensitive claims need bounded questions, acceptable evidence, owners, and stop conditions.",
+      "remediation": "Create or repair the public-safe corroboration register without marking any human confirmation complete."
+    },
+    {
+      "id": "projected-claims-have-complete-outcome-chains",
+      "kind": "hard-gate",
+      "intent": "Public claims should expose the action-to-purpose-to-usable-result chain while retaining collective credit and causal limits.",
+      "remediation": "Add complete composition fields to every actively projected knowledge-bank claim."
+    },
+    {
+      "id": "blind-reader-protocol-is-operational",
+      "kind": "hard-gate",
+      "intent": "Independent reader testing must be reproducible and no-context rather than an informal impression from the implementation team.",
+      "remediation": "Add the blind-reader protocol and task scenarios; leave the named-human completion gate pending until sessions occur."
+    },
+    {
+      "id": "editorial-decisions-cover-public-ready-claims",
+      "kind": "hard-gate",
+      "intent": "Knowledge depth should feed deliberate audience-specific composition rather than automatic publication or indefinite unowned deferral.",
+      "remediation": "Give each public-ready claim an explicit projection decision and document the recurring selection test."
+    },
+    {
+      "id": "population-claims-preserve-recovery-scope",
+      "kind": "hard-gate",
+      "intent": "Platform censuses must distinguish complete disposition of a recovered surface from a native export, deletion history, or lifetime archive.",
+      "remediation": "Add recoverable-surface and historical-completeness boundaries to every population claim and remove unqualified completeness language from public copy."
+    },
+    {
+      "id": "displayed-media-has-provenance",
+      "kind": "hard-gate",
+      "intent": "Every displayed bitmap artifact needs a source, date, caption, rights basis, consent treatment, and review status.",
+      "remediation": "Complete the public-safe media provenance manifest and keep release approval with the human rights holder."
+    },
+    {
+      "id": "production-cutover-is-operationalized",
+      "kind": "hard-gate",
+      "intent": "The current portfolio should replace the legacy primary-domain experience only through an authorized, verifiable, reversible cutover.",
+      "remediation": "Add the production cutover runbook with preconditions, fingerprint verification, indexing checks, and rollback."
+    },
+    {
+      "id": "public-artifact-media-depth",
+      "kind": "quality-target",
+      "intent": "The portfolio should show inspectable work rather than requiring readers to imagine every artifact.",
+      "minimum": 3,
+      "remediation": "Add a small rights-cleared set of real, captioned project artifacts or photographs."
+    },
+    {
+      "id": "structured-citation-project-depth",
+      "kind": "quality-target",
+      "intent": "The strongest quantitative and causal claims should have inspectable evidence paths beyond one case study.",
+      "minimum": 4,
+      "remediation": "Add structured source, claim, projection, and page-note records for another high-value project."
+    }
+  ],
+  "browserChecks": [
+    {
+      "id": "canonical-routes-return-200",
+      "kind": "hard-gate",
+      "intent": "Every application route is reachable."
+    },
+    {
+      "id": "one-h1-per-route",
+      "kind": "hard-gate",
+      "intent": "Every page has one stable primary heading."
+    },
+    {
+      "id": "no-horizontal-overflow",
+      "kind": "hard-gate",
+      "intent": "Text and controls fit at all supported widths."
+    },
+    {
+      "id": "no-browser-errors",
+      "kind": "hard-gate",
+      "intent": "Application routes render without uncaught browser errors."
+    },
+    {
+      "id": "resume-pdf-is-reachable",
+      "kind": "hard-gate",
+      "intent": "The approved application artifact is downloadable."
+    },
+    {
+      "id": "indexing-matches-environment",
+      "kind": "hard-gate",
+      "intent": "Staging stays private from search while production is intentionally indexable."
+    },
+    {
+      "id": "primary-domain-serves-current-portfolio",
+      "kind": "hard-gate",
+      "intent": "Production must render this reviewed portfolio rather than the legacy application or an unrelated deployment."
+    }
+  ],
+  "judgeCriteria": [
+    {
+      "id": "hiring-reader-clarity",
+      "weight": 12,
+      "floor": 3,
+      "question": "Can a busy hiring reader understand Jamie's professional shape, strongest fit, and next action in one pass?"
+    },
+    {
+      "id": "agency-purpose-usability",
+      "weight": 9,
+      "floor": 3,
+      "question": "Do important claims name Jamie's agency, the end the work served, and what became usable?"
+    },
+    {
+      "id": "chad-lens",
+      "weight": 10,
+      "floor": 4,
+      "minimumEvidence": 4,
+      "question": "Across the homepage, resume, role-fit page, and flagship case studies, does the first-pass rhetoric apply Chad's lens: put Jamie's agency first, name the end served, state what became usable, translate specialized language, preserve precise collective credit, and minimize the hiring reader's interpretive burden?"
+    },
+    {
+      "id": "margaret-morse-lens",
+      "weight": 8,
+      "floor": 4,
+      "minimumEvidence": 4,
+      "question": "Across first-pass and selected project surfaces, does the portfolio show that Jamie's operating practice is shaped by embodied inquiry, attention, hospitality, media archaeology, and participation, preserving a legible connection among artistic, civic, technical, and social work without sacrificing hiring clarity or factual restraint?"
+    },
+    {
+      "id": "warren-sack-lens",
+      "weight": 8,
+      "floor": 4,
+      "minimumEvidence": 4,
+      "question": "Does the portfolio make Jamie's social-systems practice legible by connecting observed participation patterns to technical mechanisms, interfaces, feedback loops, and structures others can enter, adapt, and continue, with inspectable examples and precise collective credit?"
+    },
+    {
+      "id": "role-fit-proof",
+      "weight": 10,
+      "floor": 3,
+      "question": "Does the site demonstrate technical project management, product operations, implementation, and delivery coordination with concrete proof?"
+    },
+    {
+      "id": "evidence-traceability",
+      "weight": 11,
+      "floor": 3,
+      "question": "Can a reader inspect support for the strongest factual, quantitative, and causal claims?"
+    },
+    {
+      "id": "collective-credit-and-anti-claims",
+      "weight": 10,
+      "floor": 3,
+      "question": "Does the rhetoric preserve collective credit and avoid stronger ownership, causality, authority, or adoption claims than the evidence establishes?"
+    },
+    {
+      "id": "public-safety-and-boundaries",
+      "weight": 12,
+      "floor": 4,
+      "question": "Are private evidence, consent limits, legal boundaries, current-service disclaimers, and protected records handled safely without weakening defensible claims?"
+    },
+    {
+      "id": "visual-proof",
+      "weight": 5,
+      "floor": 2,
+      "question": "Do real, relevant, rights-cleared artifacts help readers inspect the work, with useful captions and provenance?"
+    },
+    {
+      "id": "completion-confidence",
+      "weight": 5,
+      "floor": 3,
+      "question": "Does the public site feel intentionally complete rather than exposing internal production state or unresolved placeholders?"
+    }
+  ],
+  "scoreAnchors": {
+    "0": "Absent, contradicted, unsafe, or unusable.",
+    "1": "Major gaps; a reader must infer the intended meaning or path.",
+    "2": "Partially effective, but important ambiguity, evidence, or usability gaps remain.",
+    "3": "Clear and credible with only bounded, non-blocking gaps.",
+    "4": "Exceptionally clear, specific, inspectable, and appropriately bounded."
+  },
+  "humanGates": [
+    {
+      "id": "jamie-production-approval",
+      "owner": "Jamie Burkart",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "media-rights-and-consent",
+      "owner": "Jamie Burkart or documented rights holder",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "collaborator-sensitive-credit",
+      "owner": "Jamie Burkart and affected collaborator when needed",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "collaborator-claim-corroboration",
+      "owner": "Jamie Burkart and an authorized project collaborator or records holder",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "blind-hiring-reader-validation",
+      "owner": "Named no-context human hiring reader",
+      "agentMaySelfCertify": false
+    }
+  ],
+  "antiGamingRules": [
+    "A higher score cannot compensate for a hard-gate failure.",
+    "A judge must cite route-level or record-level evidence for every score.",
+    "Do not remove a defensible claim merely to make citation coverage appear higher.",
+    "Do not weaken public-safety language to improve fluency or visual simplicity.",
+    "Do not add decorative or irrelevant media to satisfy artifact counts.",
+    "Do not mark a human gate complete without named human confirmation.",
+    "Do not improve one criterion by violating a knowledge-bank guardrail or anti-claim.",
+    "Do not satisfy Chad's lens with keyword stuffing, repeated sentence templates, or stronger agency and outcome language than the evidence supports.",
+    "Do not treat a documented review protocol as completion of the human review it specifies.",
+    "Do not call a surviving or recovered platform population a lifetime archive, native export, or deletion history.",
+    "Do not call media rights cleared merely because a public URL, screenshot, or local file exists.",
+    "Do not mark the primary-domain criterion complete from a local or staging render.",
+    "When objective scores tie, prefer the smaller, more reversible patch."
+  ]
+}

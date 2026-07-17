@@ -42,6 +42,16 @@ export default function ColophonPage() {
           </JBCard>
         ))}
       </div>
+      <section className="jb-reading mt-12 border-t border-jb-ink/12 pt-8">
+        <h2 className="text-2xl font-semibold text-jb-ink">Citational care</h2>
+        <p className="mt-4 leading-8 text-jb-ink/76">
+          Significant factual claims are linked to numbered notes and
+          inspectable sources where public access is appropriate. Private or
+          sensitive evidence is described without exposing the underlying
+          archive. Citations state what a source supports, preserve relevant
+          limits, and leave room for correction.
+        </p>
+      </section>
     </div>
   );
 }

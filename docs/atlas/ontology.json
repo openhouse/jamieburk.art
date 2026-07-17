@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "ontologyId": "atlas-situated-knowledge",
+  "version": "1.0.0",
+  "identityPolicy": "stable-ids-with-explicit-migrations",
+  "predicates": {
+    "uses-method": { "inverse": "used-by", "symmetric": false },
+    "used-by": { "inverse": "uses-method", "symmetric": false },
+    "guards-with": { "inverse": "guards", "symmetric": false },
+    "guards": { "inverse": "guards-with", "symmetric": false },
+    "applies-concept": { "inverse": "applied-by", "symmetric": false },
+    "applied-by": { "inverse": "applies-concept", "symmetric": false },
+    "governed-by": { "inverse": "governs", "symmetric": false },
+    "governs": { "inverse": "governed-by", "symmetric": false },
+    "related-to": { "inverse": "related-to", "symmetric": true }
+  },
+  "compatibility": {
+    "unknownPredicates": "reject",
+    "removedPredicates": "migration-required",
+    "renamedPageIds": "redirect-required"
+  }
+}

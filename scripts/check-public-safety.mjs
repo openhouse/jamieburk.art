@@ -21,6 +21,7 @@ const ignoredDirs = new Set([
 
 const textExtensions = new Set([
   ".css",
+  ".csv",
   ".example",
   ".html",
   ".js",

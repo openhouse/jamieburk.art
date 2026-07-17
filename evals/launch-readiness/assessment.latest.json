@@ -1,0 +1,179 @@
+{
+  "suiteId": "portfolio-launch-readiness",
+  "suiteVersion": "1.3.0",
+  "commit": "08c1ffec37375b2997b18541ac250789ad3ffbc6",
+  "judge": {
+    "model": "OpenAI GPT-5 Codex independent judge",
+    "independentPass": true,
+    "scores": [
+      {
+        "criterionId": "hiring-reader-clarity",
+        "score": 4,
+        "evidence": [
+          "/: The hero immediately identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, then states the ambiguity-to-launch-and-handoff value proposition.",
+          "/: The Start here section gives explicit paths to role-fit proof, flagship work, the resume, and contact.",
+          "/resume: The opening explains Jamie's professional shape through goal clarification, dependency visibility, delivery workflows, decision records, and maintainable handoffs."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve the concise employer-neutral role framing, direct next actions, and pending named-human blind-reader gate."
+      },
+      {
+        "criterionId": "agency-purpose-usability",
+        "score": 4,
+        "evidence": [
+          "/work/harry-j-epstein: Jamie's implementation actions are connected to customer product discovery, maintainable e-commerce workflows, and preservation of the company's public voice.",
+          "/work/fair-rent-nyc: Jamie's documentation and web contributions are connected to coalition coordination, reusable campaign memory, source navigation, and public action paths.",
+          "/work/callnyc: Jamie's independent build turns administrative records into issue pathways, district context, and bounded resident-facing next steps.",
+          "/work/196-sunday-dinner: Hosting, invitations, introductions, documentation, and handoffs are presented as usable participation infrastructure rather than an activity list."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve the distinction between usable operating results and unsupported adoption, attendance, satisfaction, or causal-impact claims."
+      },
+      {
+        "criterionId": "chad-lens",
+        "score": 4,
+        "evidence": [
+          "/: The hero puts Jamie's agency first and joins the end served with workflows, public tools, documentation, maintenance, and safe continuation.",
+          "/resume: The first paragraph combines Jamie's action, delivery purpose, ownership and dependency clarity, and reusable operating records without specialist decoding.",
+          "/work/technical-operations: The opening states Jamie's scoping-to-launch role and the workflows, onboarding materials, decisions, and handoffs teams retain.",
+          "/work/harry-j-epstein: The opening joins Jamie's contribution, customer and business purpose, usable digital workflows, and team-level causal limits.",
+          "/work/fair-rent-nyc: The opening names Jamie's co-founder and documentation work, the advocacy purpose, usable shared-memory and web systems, and the collective-outcome boundary.",
+          "/work/callnyc: The summary and CLM-CALLNYC-INDEPENDENT-FOLLOW-ON join Jamie's independent build, resident purpose, usable interface, source context, and unofficial-service boundary."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve direct agency without converting contribution into sole causality, official authority, legal expertise, or repetitive keyword-driven rhetoric."
+      },
+      {
+        "criterionId": "margaret-morse-lens",
+        "score": 4,
+        "evidence": [
+          "/about: A compact first-pass throughline connects digital media, social software, media archaeology, participatory installation, close attention, and hosting to Jamie's present operating practice.",
+          "/ and /about: The public argument explains why that formation matters now: Jamie designs entry conditions, contribution paths, visible feedback, and structures that civic and technical collaborators can continue.",
+          "/work/196-sunday-dinner: Hospitality is explicitly treated as part of the system; invitations, repetition, introductions, and handoffs make embodied participation and continuity possible.",
+          "/work/wowlist: Community language becomes a relational publishing and discovery mechanism, showing participation as an operating method rather than decorative community vocabulary.",
+          "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010: The early example is specific and source-backed, joining software, a constructed gallery interface, visitor phones, and shared dialogue.",
+          "SRC-PITCH-NTER-CHNG-2010 and SRC-VIMEO-NTER-CHNG-2011: The public sources separately support project behavior and collaborative maker credits while withholding audience, impact, sole-authorship, and technical-division claims."
+        ],
+        "smallestChange": "No change; the candidate now earns 4/4 without relying on named-lens vocabulary or decorative biography.",
+        "preserve": "Keep this a team-authored editorial heuristic grounded in historical records, not a current Margaret Morse endorsement; preserve all NTER CHNG credits, privacy boundaries, rights gates, and causal limits."
+      },
+      {
+        "criterionId": "warren-sack-lens",
+        "score": 4,
+        "evidence": [
+          "/work/technical-operations: The social-systems method is stated in plain professional language—identify entry, contribution, signal-to-decision paths, and documentation that lets another person continue the loop.",
+          "/work/wowlist: The page gives a complete recursive mechanism: organizer language becomes followable feeds, publishing and sharing create additional discovery routes, and participation can continue without one central editor.",
+          "/work/196-sunday-dinner: A recurring social pattern is translated into invitations, repetition, introductions, hosting rhythms, documentation, and handoffs that support entry and continuation.",
+          "/work/fair-rent-nyc: Meetings, sources, questions, action trackers, and public/private review lanes become reusable coalition memory that feeds later orientation, decisions, and next steps.",
+          "/about and CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010: NTER CHNG joins physical structure, software, personal phones, visitor action, visible shared dialogue, and precise co-maker credits.",
+          "CLM-WOWLIST-DATABASE-SCALE-2017 and CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE: The mechanism claims retain collective authorship and explicitly reject adoption, unique-attendance, satisfaction, and cultural-impact inference."
+        ],
+        "smallestChange": "No change; the candidate now earns 4/4 through concrete mechanisms and continuation effects rather than network or participation keywords.",
+        "preserve": "Keep this a team-authored editorial heuristic grounded in historical records, not a current Warren Sack endorsement; preserve shared authorship, recovered-population limits, non-adoption boundaries, and protected participant data."
+      },
+      {
+        "criterionId": "role-fit-proof",
+        "score": 4,
+        "evidence": [
+          "/work/technical-operations: Concrete proof spans delivery coordination, risks, dependencies, planning cycles, decisions, onboarding, status reporting, launch support, and handoffs.",
+          "/work/harry-j-epstein: The case demonstrates legacy-system translation, incremental implementation, analytics judgment, stakeholder coordination, content operations, and maintainable e-commerce workflows.",
+          "/work/fair-rent-nyc and /work/callnyc: The cases demonstrate source mapping, coalition operations, action tracking, public-data translation, information architecture, interface delivery, and scope control.",
+          "/lab/source-backed-team-memory: The bounded method demonstrates documentation architecture, human review, decision lineage, onboarding context, and privacy-aware AI readiness."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve concrete implementation evidence and avoid replacing it with unsupported leadership, certification, adoption, or impact claims."
+      },
+      {
+        "criterionId": "evidence-traceability",
+        "score": 3,
+        "evidence": [
+          "/about: CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010 renders references to two public sources that distinguish installation behavior from Jamie's collaborative designer credit.",
+          "/work/callnyc, /work/harry-j-epstein, /work/fair-rent-nyc, and /work/wowlist: Strong claims use structured Claim or Cite occurrences and ordered source notes with source-specific limitations.",
+          "CLM-WOWLIST-DATABASE-SCALE-2017 and CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE: Quantitative claims disclose aggregate methods and boundaries, but their protected underlying records are not independently inspectable by a public reader.",
+          "apps/www/src/data/proofs.ts: Some prominent proof wording, including the separate 20-plus resident-artist figure, remains less directly traceable than the newer structured citation claims."
+        ],
+        "smallestChange": "Publish a privacy-safe reproducible aggregate audit note for one protected quantitative source, including normalization rules and non-row-level verification output.",
+        "preserve": "Do not expose participant rows, contacts, authentication material, raw locations, attendance details, protected locators, or private archive paths."
+      },
+      {
+        "criterionId": "collective-credit-and-anti-claims",
+        "score": 4,
+        "evidence": [
+          "/about and CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010: Drew Bolton, Garrett Fuselier, Mary Nichols, Megan Mantia, and Elisha Stetson retain explicit credit, while Jamie's role remains co-designer.",
+          "/work/fair-rent-nyc: Jamie's co-founder, documentation, and web-infrastructure contributions are direct while campaign and policy outcomes remain collective.",
+          "/work/wowlist: Jamie and Richard's collective project role is separated from collaborator and participant contributions, database activity, adoption, and cultural impact.",
+          "/work/196-sunday-dinner: Jamie's co-host and the wider community retain credit; workbook structure is not converted into sole ownership or participant outcomes.",
+          "/work/callnyc: Jamie's independent prototype remains distinct from Council data, institutional commissioning, endorsement, and official-service authority."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve named collaborators, collective campaign credit, deferred role claims, and prohibitions on sole authorship, policy causation, attendance inference, and adoption claims."
+      },
+      {
+        "criterionId": "public-safety-and-boundaries",
+        "score": 4,
+        "evidence": [
+          "/work/wowlist: Aggregate scale is paired with point-in-time, non-adoption, non-impact, and participant-record boundaries.",
+          "/work/196-sunday-dinner: The page publishes recurring structure while withholding participant rows, contacts, invitations, notes, attendance detail, private records, and unapproved imagery.",
+          "/work/callnyc: The archive disclaimer prevents historical officeholders, statistics, categories, and contacts from being mistaken for official current guidance.",
+          "/work/fair-rent-nyc: Public communication is separated from private coalition notes, legal-review material, stakeholder lists, raw strategy, and unapproved quotations.",
+          "docs/knowledge-bank/media-provenance.json: Every displayed capture has source, date, caption, rights basis, and consent treatment while explicitly remaining pending human release confirmation.",
+          "docs/knowledge-bank/corroboration-register.json: Pending corroboration is routed through bounded questions, accepted evidence, owners, stop conditions, and projection rules without being presented as completion."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Do not certify media rights, collaborator approval, claim corroboration, blind-reader completion, or production authorization; keep protected evidence and locators offline."
+      },
+      {
+        "criterionId": "visual-proof",
+        "score": 2,
+        "evidence": [
+          "/work/harry-j-epstein, /work/fair-rent-nyc, and /work/callnyc each display one relevant interface capture with alt text, caption, capture date, and a public-source link.",
+          "apps/www/src/data/work.ts: WOWList, Sunday Dinner, and KC Town Hall galleries contain descriptive cards rather than inspectable visual artifacts.",
+          "docs/knowledge-bank/media-provenance.json: All three displayed captures remain documented-pending-human-release-confirmation, so the repository does not establish final rights clearance.",
+          "/work/196-sunday-dinner: Unapproved participant imagery is appropriately omitted, leaving the embodied participation claim without visual inspection."
+        ],
+        "smallestChange": "After documented human rights approval, add one real, captioned, provenance-backed WOWList interface artifact or privacy-safe Sunday Dinner operating artifact.",
+        "preserve": "Do not use decorative media, participant imagery, private records, unapproved community artifacts, or public availability as a substitute for rights confirmation."
+      },
+      {
+        "criterionId": "completion-confidence",
+        "score": 3,
+        "evidence": [
+          "evals/launch-readiness/assessment.template.json: Production approval, media rights, collaborator-sensitive credit, claim corroboration, and named-human blind-reader validation all remain pending.",
+          "docs/knowledge-bank/launch-blockers.md: Production deployment is explicitly deferred until PR review, merge, and Jamie's approval; this is a release candidate rather than a completed production cutover.",
+          "docs/production-cutover.md: The repository contains a reversible verification runbook and portfolio fingerprint, but no evidence that the primary domain currently serves this reviewed candidate.",
+          "/work/kc-town-hall: The sentence directing how public wording should remain tied to a funding figure reads as an editor-facing approval instruction.",
+          "/colophon and /resume: Production-indexing review and approved-artifact phrasing expose a small amount of internal release workflow on otherwise composed public pages."
+        ],
+        "smallestChange": "After the named human gates and authorized primary-domain verification are complete, remove the remaining editor-facing approval language from KC Town Hall, the Colophon, and the resume page.",
+        "preserve": "Preserve staging noindex, the tested cutover and rollback contract, the portfolio fingerprint, every unresolved human gate, and Jamie's exclusive production-approval authority."
+      }
+    ]
+  },
+  "humanGates": [
+    {
+      "gateId": "jamie-production-approval",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "media-rights-and-consent",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "collaborator-sensitive-credit",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "collaborator-claim-corroboration",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "blind-hiring-reader-validation",
+      "status": "pending",
+      "verifiedBy": null
+    }
+  ]
+}

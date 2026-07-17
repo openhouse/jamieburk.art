@@ -1,9 +1,13 @@
 import { readFileSync } from "node:fs";
-import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { knowledgeBank } from "@jamie-burkart/atlas/records";
 import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
 
 const publicSurfaceFiles = [
   "apps/www/src/content/work/callnyc.mdx",
+  "apps/www/src/content/work/harry-j-epstein.mdx",
+  "apps/www/src/content/work/fair-rent-nyc.mdx",
+  "apps/www/src/content/work/wowlist.mdx",
+  "apps/www/src/content/work/196-sunday-dinner.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/app/resume/page.tsx"
@@ -130,15 +134,18 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   for (const source of knowledgeBank.sources) {
     if (source.protectedLocatorId && publicJson.includes(source.protectedLocatorId)) errors.push(`Protected locator ${source.protectedLocatorId} leaked into public registry`);
   }
-  if (publicRegistry.sources.some((source) => source.visibility !== "public")) errors.push("Public registry contains a non-public source");
+  if (publicRegistry.sources.some((source) => !["public", "public-metadata-only"].includes(source.visibility))) errors.push("Public registry contains a private or protected source");
+  for (const source of publicRegistry.sources.filter((item) => item.visibility === "public-metadata-only")) {
+    if (source.canonicalUrl || source.archiveUrl || source.assetUrl) errors.push(`Metadata-only source ${source.id} exposes an underlying URL`);
+  }
 
   if (includePublicFiles) {
     const publicText = publicSurfaceFiles.map((path) => readFileSync(path, "utf8")).join("\n");
     for (const pattern of [/first civic-data hackathon/i, /first civic-tech hackathon/i, /the Council['’]s first hackathon(?! of)/i, /2014[-–]2015/, /citation pending|press citation pending/i]) {
       if (pattern.test(publicText)) errors.push(`Retired or unresolved wording remains on a public surface: ${pattern}`);
     }
-    const mdx = readFileSync("apps/www/src/content/work/callnyc.mdx", "utf8");
-    if (/\[\d+\]/.test(mdx)) errors.push("CallNYC MDX contains a manually typed citation number");
+    const mdx = publicSurfaceFiles.filter((path) => path.endsWith(".mdx")).map((path) => readFileSync(path, "utf8")).join("\n");
+    if (/\[\d+\]/.test(mdx)) errors.push("Public MDX contains a manually typed citation number");
   }
 
   return errors;

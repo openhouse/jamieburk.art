@@ -39,6 +39,11 @@ The knowledge bank exists to:
   rewrites claims for readers.
 - **Private archive:** not in this repo.
 
+Operational review records include `corroboration-register.json` for bounded
+human claim checks and `media-provenance.json` for every displayed bitmap.
+Neither file substitutes for the named human gates in the launch-readiness
+suite.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or
@@ -62,4 +67,144 @@ one pass.
 
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
-pilot.
+pilot. See the
+[July 13 ten-source expansion](research/source-expansion-2026-07-13.md) for a
+complete example of a versioned research-ingestion batch.
+
+The
+[KC Town-Hall Council funding record](research/kc-town-hall-council-funding-2019-2024.md)
+shows how a board-stage claim matures through official Council action and later
+disposition records without turning an appropriation into a disbursement or
+completed outcome.
+
+The
+[NYC Artist Coalition campaign press corpus](research/nycartc-campaign-press-2026-07-13.md)
+shows how campaign-curated press indexes, repeated placements, dead links,
+archived captures, and queued article-level readings enter the same lifecycle.
+
+The
+[Teams archive production record](research/teams-archive-production-2026-07-13.md)
+shows how selected private working artifacts can yield public-safe source
+descriptions and bounded claims without committing raw archives or automatically
+changing the website.
+
+The
+[July 14 Teams archive deepening](research/teams-archive-deepening-2026-07-14.md)
+reconciles an authenticated iCloud inventory with locally hydrated material,
+adds source-backed records for NTER CHNG, an NYC Artist Coalition Wikipedia
+handoff, a CRS operating artifact, and independent HJE business context, and
+opens explicit version-reconciliation and HJE revenue-corroboration tasks. Its
+three archive-derived claims remain deferred; the HJE case study receives only
+the separately reviewed independent-context correction.
+
+The
+[NTER CHNG / America: Now and Here follow-up](research/nter-chng-america-now-and-here-2026-07-15.md)
+recovers the project's archived homepage and the exhibition program's own
+visual-artist page. The latter directly establishes NTER CHNG's inclusion in
+the 2011 Kansas City launch and names Drew Bolton, Jamie Burkart, and Garrett
+Fuselier as visual artists. The claim remains deferred from website projection,
+and the Nerman Museum record is retained as program context rather than proof
+that NTER CHNG was installed at the museum.
+
+The same memo now incorporates two protected April 2011 working artifacts. One
+documents the planned technical and physical installation workflow and Jamie's
+scheduled participation; the other corroborates the prompt-driven design and a
+Jamie-attributed connection purpose already visible on the official program
+page. Raw documents, sharing URLs, contact details, and message text remain
+outside the repository.
+
+The
+[NYC Artist Coalition government-interface memo](research/nycartc-dcla-council-interface-2026-07-15.md)
+connects Jamie's documented participation-system work with official DCLA,
+CreateNYC, and Council records. It distinguishes institutional recognition,
+complementary civic function, source-backed interpretation, private motive, and
+policy causation.
+
+The
+[Google Drive Shared Drives production record](research/google-drive-shared-drives-production-2026-07-13.md)
+extends that method to collaborative cloud workspaces: central project records
+can strengthen authored and collective-role claims, while unread recordings and
+photographs remain routed research leads rather than implied evidence.
+
+The
+[social account archive production record](research/social-account-archive-production-2026-07-14.md)
+shows how authenticated review of public project accounts can recover bounded
+engagement, campaign continuity, operational workflows, and source leads while
+keeping shared authorship, mutable metrics, and adoption limits explicit.
+
+The
+[CallNYC full-population social census](research/callnyc-full-population-social-census-2026-07-14.md)
+shows how an observed profile population can receive 100% disposition coverage
+without overstating archive completeness: 107 recovered public statuses, three
+explicit unresolved slots, a redacted item ledger, and bounded source,
+communication, and traction findings.
+
+The
+[WOW List full-population social census](research/wowlist-full-population-social-census-2026-07-14.md)
+shows the complementary case where Posts and Replies close the observed control
+completely: all 38 surviving items are recovered, linked, and classified while
+individual authorship, historical metrics, adoption, and linked-work credit
+remain bounded.
+
+The
+[KC Town Hall full-population social census](research/kctownhall-full-population-social-census-2026-07-14.md)
+closes all 183 surviving profile items and joins the account record to archived
+collective-role, resident-intake, scheduling, public-reporting, source-routing,
+and stakeholder-response evidence without treating self-reports or reactions
+as audited impact.
+
+The
+[KC Town Hall Phase One and neighborhood-practice accession](research/kc-town-hall-phase-one-and-neighborhood-practice-2026-07-15.md)
+adds the previously underdescribed implementation layer: historic-building
+stabilization, owner-side field coordination, a participatory survey workflow,
+Tired of Tires operations, Cleveland Avenue civic routing, and neighborhood
+design and print support. It keeps 2018 work distinct from the first-party 2019
+completion account and keeps both distinct from the later unused City
+appropriation.
+
+The
+[personal and WOW List Facebook event pass](research/personal-wowlist-facebook-events-2026-07-14.md)
+uses deliberately asymmetric controls: the 502-record personal association
+surface remains aggregate-only, the narrower 21-slot Jamie-hosted control is
+dispositioned as 20 recovered pages and one unresolved slot, and the active WOW
+List Page event surface exposes zero records. The pass preserves event-making
+depth without turning Jamie's personal association graph into a portfolio.
+
+The
+[WOW List Facebook Page-post census](research/wowlist-facebook-posts-2026-07-14.md)
+assigns a disposition to all 53 distinct posts on the surviving Page timeline.
+Two terminal traversals each recover 54 rendered records, including one
+Featured/chronology duplicate, and Facebook's manager view attributes every
+rendered record to Jamie as publisher. The pass promotes a bounded Page-
+publishing practice while preserving shared authorship, collective credit,
+mutable-metric, and native-export limits.
+
+The
+[NYC Artist Coalition Facebook Page-post census](research/nycartc-facebook-posts-2026-07-14.md)
+dispositions all 441 records on the surviving 2017-2021 Page timeline. It
+documents a sustained collective system for meetings, campaigns, sources,
+stakeholder addressing, and practical resources while keeping Page identity,
+human publisher attribution, mutable response signals, and policy impact
+separate. A second ledger normalizes the corpus's 39 unique URLs into 33
+public-safe source and action routes while protecting historical meeting-access
+and form destinations.
+
+The
+[KC Spaces Fund Facebook Page-post census](research/kcspacesfund-facebook-posts-2026-07-14.md)
+dispositions all 38 post or remnant records surfaced by the surviving 2020
+Page timeline. Nineteen retain readable campaign messages, including ten named
+grantee recognitions, while nineteen remain interface or unavailable-content
+remnants. The pass joins three public action-route families to the campaign's
+existing digital-infrastructure proof without assigning Jamie organizer,
+fundraiser, grant-decision, or individual post-authorship credit. Jamie's
+memory of helping select a uniformly available project name remains a separate
+research-stage claim.
+
+The
+[personal Facebook post archival-production pass](research/jamie-facebook-posts-2026-07-14.md)
+accounts for all 1,243 unique records exposed by the authenticated `Posted by:
+You` control after reconciling 3,728 returned nodes across 621 cursor pages. An
+aggregate-only ledger and protected close reading preserve source-discovery and
+operating-practice depth without publishing personal post text, people, URLs,
+media, relationships, privacy context, or interaction rows. Population-level
+engagement remains explicitly not recovered rather than zero.

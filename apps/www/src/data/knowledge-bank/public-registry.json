@@ -100,6 +100,270 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-HJE-PUBLIC-STOREFRONT-2026",
+      "title": "Harry J. Epstein Company public storefront",
+      "organization": "Harry J. Epstein Company",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.harryepstein.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Harry J. Epstein Company's public e-commerce storefront.",
+      "publicNote": "The public surface documents customer-facing navigation, search, product content, checkout access, and the company's distinctive editorial voice.",
+      "doesNotEstablish": [
+        "Jamie's role",
+        "revenue growth",
+        "internal systems",
+        "causal business outcomes"
+      ]
+    },
+    {
+      "id": "SRC-FAIRRENTNYC-PUBLIC-SITE-2026",
+      "title": "FairRentNYC public campaign site",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://fairrentnyc.nycartc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "FairRentNYC public campaign site.",
+      "publicNote": "The public surface connects a Commercial Rent Stabilization call to action with a reference-library pathway.",
+      "doesNotEstablish": [
+        "Jamie's co-founder role",
+        "Jamie's authorship",
+        "shared-memory page counts",
+        "policy outcomes"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-WAYBACK-2016-02-12",
+      "title": "WOWList archived public application surface",
+      "organization": "WOWList",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "capturedAt": "2016-02-12T01:12:39Z",
+      "accessedAt": "2026-07-12",
+      "archiveUrl": "https://web.archive.org/web/20160212011239/https://wowlist.org/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "February 12, 2016, Wayback capture of the WOWList public application.",
+      "publicNote": "The capture identifies WOWList as an event-sharing and community-building project and preserves Ember application metadata plus a configured application-programming-interface endpoint.",
+      "doesNotEstablish": [
+        "user totals",
+        "event totals",
+        "city-ecosystem adoption",
+        "Jamie's role",
+        "current service availability"
+      ]
+    },
+    {
+      "id": "SRC-GREENE-HILL-COOP-QA-2017",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "A co-op interview linking recurring community dinners and WOWList with Jamie's public account of coalition advocacy, mutual aid, and town-hall work.",
+      "doesNotEstablish": [
+        "attendance or impact metrics",
+        "sole ownership of Sunday Dinner or WOWList",
+        "a founder title",
+        "that the town hall changed city policy",
+        "sole causation for Cabaret Law repeal"
+      ]
+    },
+    {
+      "id": "SRC-PITCH-NTER-CHNG-2010",
+      "title": "NTR CHNG",
+      "organization": "The Pitch",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2010-01-07",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.thepitchkc.com/ntr-chng/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "The Pitch, 'NTR CHNG,' January 7, 2010.",
+      "publicNote": "The listing describes the installation's public behavior and scheduled opening but does not name its makers.",
+      "doesNotEstablish": [
+        "Jamie's individual role",
+        "the division of technical work",
+        "audience size or measured engagement",
+        "long-term project impact"
+      ]
+    },
+    {
+      "id": "SRC-VIMEO-NTER-CHNG-2011",
+      "title": "NTER CHNG project video and credits",
+      "organization": "Vimeo",
+      "author": "Garrett Fuselier",
+      "kind": "personal-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2011-03-23",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://vimeo.com/21395655",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Garrett Fuselier, 'NTER CHNG,' Vimeo, March 23, 2011.",
+      "publicNote": "Official Vimeo metadata names Drew Bolton, Jamie Burkart, and Garrett Fuselier as the installation makers and preserves additional construction and performer credit.",
+      "doesNotEstablish": [
+        "Jamie's sole authorship",
+        "a precise division of software, design, and fabrication labor",
+        "audience size or measured engagement",
+        "the installation's long-term impact"
+      ]
+    },
+    {
+      "id": "SRC-KCUR-HJE-ONLINE-SALES-2016",
+      "title": "How Flying Dolphins Kept This Old-School Kansas City Hardware Store Alive",
+      "organization": "KCUR 89.3",
+      "author": "Coy Dugger",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-04-21",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.kcur.org/show/central-standard/2016-04-21/how-flying-dolphins-kept-this-old-school-kansas-city-hardware-store-alive",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Coy Dugger, 'How Flying Dolphins Kept This Old-School Kansas City Hardware Store Alive,' KCUR 89.3, April 21, 2016.",
+      "publicNote": "Independent reporting quotes fourth-generation owner and webmaster Jori Sackin on the internet's role, online sales accounting for 50 percent of the business, and customers beyond Kansas City.",
+      "doesNotEstablish": [
+        "Jamie's role or authorship",
+        "a two-times total-revenue comparison",
+        "the revenue comparison period or basis",
+        "causation between Jamie's work and business outcomes"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-ORIGIN-2014",
+      "title": "WOW List account origin post",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-02-12",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List account origin post, 2014-02-12.",
+      "publicNote": "The account publicly identified Richard and Jamie as working on a project based on WOW List calendars made at Sunday Dinner.",
+      "doesNotEstablish": [
+        "authorship by Jamie",
+        "sole credit",
+        "institutional adoption",
+        "causal impact beyond the described post"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-2015",
+      "title": "WOW List product-support thread",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/591664757473673216",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List product-support thread, 2015-04-24.",
+      "publicNote": "The account answered a prospective user's questions about local calendars, profiles, and contributing events and lists.",
+      "doesNotEstablish": [
+        "authorship by Jamie",
+        "sole credit",
+        "institutional adoption",
+        "causal impact beyond the described post"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-NYCDIY-2016",
+      "title": "WOW List NYC DIY calendar post",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List NYC DIY calendar post, 2016-09-01.",
+      "publicNote": "The account described NYC DIY as running on WOW List and connected the community calendar to Sunday Dinner.",
+      "doesNotEstablish": [
+        "authorship by Jamie",
+        "sole credit",
+        "institutional adoption",
+        "causal impact beyond the described post"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026",
+      "title": "Authenticated WOW List full-population social census",
+      "author": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated, read-only census of the @wowlist Posts and Replies routes, with a redacted 38-item ledger, July 14, 2026.",
+      "publicNote": "The Posts route yielded 37 records; the Replies route supplied the missing authored status and closed the 38-item observed profile control. The recovered union contains 16 account posts, six account replies, and 16 reposts from 13 public accounts.",
+      "doesNotEstablish": [
+        "a native X export or deletion history",
+        "that no older status was deleted before capture",
+        "Jamie's authorship of every shared-account post",
+        "the platform's complete support workload, user population, adoption, audience, or impact",
+        "historical analytics, unique people, partnerships, endorsements, or outcomes"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22",
+      "title": "WOWList production database snapshot aggregate review",
+      "author": "WOWList project archive; aggregate review by Codex",
+      "kind": "project-archive",
+      "visibility": "public-metadata-only",
+      "preservationStatus": "private",
+      "capturedAt": "2017-07-22T08:00:01-04:00",
+      "accessedAt": "2026-07-15",
+      "publicCitation": "Protected WOWList production database snapshot dated July 22, 2017; aggregate structure reviewed July 15, 2026.",
+      "publicNote": "The snapshot records 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, and 35 city/region groups with at least 50 geocoded posts/events. No underlying database or participant-level record is public.",
+      "doesNotEstablish": [
+        "unique active users",
+        "complete lifetime activity",
+        "current availability",
+        "official city chapters",
+        "user satisfaction",
+        "institutional adoption",
+        "measured cultural impact",
+        "Jamie's sole authorship"
+      ]
+    },
+    {
+      "id": "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021",
+      "title": "Sunday Dinner operations workbook aggregate review",
+      "author": "Sunday Dinner project archive; aggregate review by Codex",
+      "kind": "project-archive",
+      "visibility": "public-metadata-only",
+      "preservationStatus": "private",
+      "accessedAt": "2026-07-15",
+      "publicCitation": "Protected Sunday Dinner operations workbook spanning 2012-2021; aggregate structure reviewed July 15, 2026.",
+      "publicNote": "The main sheet contains 345 numbered event columns from January 2012 through March 2021. Four event numbers are duplicated. Participant rows and contact fields remain outside the repository.",
+      "doesNotEstablish": [
+        "345 unique gatherings",
+        "a complete lifetime event count",
+        "a unique attendee count",
+        "physical attendance for every invitation",
+        "the 20-plus resident-artist figure",
+        "Jamie's sole operation of every gathering"
+      ]
     }
   ],
   "claims": [
@@ -171,7 +435,9 @@
           "renderCitation": true
         }
       ],
-      "boundaries": []
+      "boundaries": [
+        "Use the Council's narrower first-CouncilStat wording rather than a broader historical superlative."
+      ]
     },
     {
       "id": "CLM-CALLNYC-EVENT-BRANDING",
@@ -299,9 +565,337 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-HJE-PUBLIC-ECOMMERCE-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The current public storefront combines tool-type and brand navigation, search, product content, checkout access, and the company's distinctive public voice.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/harry-j-epstein"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-HJE-PUBLIC-STOREFRONT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "public storefront features",
+            "customer-facing e-commerce surface",
+            "company voice"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public storefront documents the customer-facing surface, not Jamie's role, internal systems, revenue growth, or causal business outcomes."
+      ]
+    },
+    {
+      "id": "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "FairRentNYC's public site connects a Commercial Rent Stabilization call to action with a public reference-library pathway.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FAIRRENTNYC-PUBLIC-SITE-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "campaign identity",
+            "Commercial Rent Stabilization call to action",
+            "public reference-library pathway"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public site documents the campaign surface, not individual authorship, coalition roles, private documentation volume, or policy outcomes."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-ARCHIVED-PUBLIC-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A February 2016 capture preserves WOWList as a public event-sharing and community-building application, with Ember application metadata and a configured API endpoint.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-WAYBACK-2016-02-12",
+          "relationship": "direct-support",
+          "supports": [
+            "event-sharing purpose",
+            "community-building purpose",
+            "Ember application surface",
+            "configured API endpoint"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The archived application shell does not establish user totals, event totals, geographic adoption, Jamie's role, or current availability."
+      ]
+    },
+    {
+      "id": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "With Drew Bolton and Garrett Fuselier, I co-designed NTER CHNG, a 2010 participatory installation combining software with a constructed gallery interface so visitors could use their own phones to contribute to a shared dialogue. Public credits also name Mary Nichols for wall engineering and construction support, and Megan Mantia and Elisha Stetson as actors.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-PITCH-NTER-CHNG-2010",
+          "relationship": "direct-support",
+          "supports": [
+            "participatory interface",
+            "shared dialogue",
+            "January 2010 presentation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-VIMEO-NTER-CHNG-2011",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie designer credit",
+            "three collaborative makers",
+            "supporting collaborators"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use co-designed and retain all named collaborator credits.",
+        "Describe the visible participatory behavior without inventing audience or engagement totals."
+      ]
+    },
+    {
+      "id": "CLM-HJE-ONLINE-SALES-SHARE-2016",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "By 2016, KCUR reported that online sales accounted for half of Harry J. Epstein Company's business and that its customers had expanded from local buyers to customers around the world.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/harry-j-epstein"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCUR-HJE-ONLINE-SALES-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "internet-enabled inventory and niche-item sales context",
+            "50-percent online-sales share in 2016",
+            "customer reach beyond Kansas City"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Attribute the 50-percent figure and global reach to KCUR's reporting and Jori Sackin's account.",
+        "Use this as company outcome context, not proof of Jamie's role or individual causation.",
+        "Do not convert online-sales share into a two-times total-revenue claim."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A surviving 2014 post names Richard and Jamie as working on WOW List, while the recovered account record preserves six public replies explaining product use, onboarding, and local-calendar adaptations.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-WOWLIST-ORIGIN-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie and Richard's project connection to Sunday Dinner calendars"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "the complete six-reply public support and onboarding pattern"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public product-support workflow"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-NYCDIY-2016",
+          "relationship": "corroborating",
+          "supports": [
+            "community-calendar adaptation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The account record does not identify the author of every post or quantify adoption, satisfaction, audience, or the complete support workload."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-DATABASE-SCALE-2017",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie worked with Richard to turn Sunday Dinner calendar practice into WOWList. A protected July 2017 database snapshot records 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, and 35 city/region groups with at least 50 geocoded posts/events.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-WOWLIST-ORIGIN-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie and Richard's collective project role"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22",
+          "relationship": "private-support",
+          "supports": [
+            "the July 2017 aggregate scale and geographic-activity threshold"
+          ],
+          "publicNote": "Only aggregate counts and method boundaries are public.",
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The database snapshot is point-in-time and incomplete as a lifetime or current-service record.",
+        "City/region activity means at least 50 geocoded posts/events, not an official chapter or independently verified community organization.",
+        "No participant-level, contact, authentication, or location rows are published."
+      ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie and his co-host opened Sunday Dinner to the community each week. A protected operations workbook preserves more than 300 numbered gathering records spanning January 2012 through March 2021.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-GREENE-HILL-COOP-QA-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's collective weekly hosting role and community invitation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021",
+          "relationship": "private-support",
+          "supports": [
+            "more than 300 numbered gathering records and the 2012-2021 span"
+          ],
+          "publicNote": "Only aggregate structure and date span are public.",
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Four duplicated event numbers prevent treating 345 columns as 345 uniquely numbered gatherings without further normalization.",
+        "Invitation and response records are not physical-attendance or unique-person counts.",
+        "Participant rows, contact fields, notes, and raw attendance data are not published.",
+        "This claim does not support the separate 20-plus resident-artist figure."
+      ]
     }
   ],
   "pages": [
+    {
+      "id": "about",
+      "surface": "/about",
+      "sourceOrder": [
+        "SRC-PITCH-NTER-CHNG-2010",
+        "SRC-VIMEO-NTER-CHNG-2011"
+      ],
+      "occurrences": [
+        {
+          "id": "nter-chng-participatory-installation",
+          "claimId": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010",
+          "projection": "archive-note",
+          "sourceIds": [
+            "SRC-PITCH-NTER-CHNG-2010",
+            "SRC-VIMEO-NTER-CHNG-2011"
+          ]
+        }
+      ]
+    },
     {
       "id": "callnyc",
       "surface": "/work/callnyc",
@@ -362,6 +956,110 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-j-epstein",
+      "surface": "/work/harry-j-epstein",
+      "sourceOrder": [
+        "SRC-HJE-PUBLIC-STOREFRONT-2026",
+        "SRC-KCUR-HJE-ONLINE-SALES-2016"
+      ],
+      "occurrences": [
+        {
+          "id": "public-storefront",
+          "claimId": "CLM-HJE-PUBLIC-ECOMMERCE-SURFACE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-HJE-PUBLIC-STOREFRONT-2026"
+          ]
+        },
+        {
+          "id": "online-sales-share-2016",
+          "claimId": "CLM-HJE-ONLINE-SALES-SHARE-2016",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCUR-HJE-ONLINE-SALES-2016"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-FAIRRENTNYC-PUBLIC-SITE-2026"
+      ],
+      "occurrences": [
+        {
+          "id": "public-campaign-surface",
+          "claimId": "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FAIRRENTNYC-PUBLIC-SITE-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-WOWLIST-WAYBACK-2016-02-12",
+        "SRC-X-WOWLIST-ORIGIN-2014",
+        "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22",
+        "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026",
+        "SRC-X-WOWLIST-SUPPORT-2015",
+        "SRC-X-WOWLIST-NYCDIY-2016"
+      ],
+      "occurrences": [
+        {
+          "id": "archived-public-surface",
+          "claimId": "CLM-WOWLIST-ARCHIVED-PUBLIC-SURFACE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-WAYBACK-2016-02-12"
+          ]
+        },
+        {
+          "id": "database-scale",
+          "claimId": "CLM-WOWLIST-DATABASE-SCALE-2017",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-WOWLIST-ORIGIN-2014",
+            "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22"
+          ]
+        },
+        {
+          "id": "social-origin-and-support",
+          "claimId": "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-WOWLIST-ORIGIN-2014",
+            "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026",
+            "SRC-X-WOWLIST-SUPPORT-2015",
+            "SRC-X-WOWLIST-NYCDIY-2016"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "surface": "/work/196-sunday-dinner",
+      "sourceOrder": [
+        "SRC-GREENE-HILL-COOP-QA-2017",
+        "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"
+      ],
+      "occurrences": [
+        {
+          "id": "recorded-gathering-scale",
+          "claimId": "CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-GREENE-HILL-COOP-QA-2017",
+            "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"
           ]
         }
       ]

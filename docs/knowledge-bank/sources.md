@@ -52,6 +52,278 @@ stronger public publication.
 Potentially usable, but do not project to public pages until Jamie or
 collaborators approve.
 
+## NYC Artist Coalition Social Census
+
+The July 14, 2026 authenticated review uses the displayed 5,124-post profile
+count as a population control and stores a redacted disposition ledger for
+every slot. It recovers 3,367 public records and preserves 1,757 unresolved
+slots without inferred metadata. A separate inbound ledger distinguishes 347
+explicit account mentions from 154 search or thread-context records.
+
+Three mission-relevant sources surfaced through recovered posted URLs were
+accessioned and closely read: Gothamist reporting on Book Culture's rent
+dispute, repeal of Civil Rights Law section 50-A, and the Excluded Workers Fund.
+They provide context for what the account routed; they are not coverage or
+endorsement of NYC Artist Coalition.
+
+See
+`docs/knowledge-bank/research/nycartc-full-population-social-census-2026-07-14.md`.
+
+## NYC Artist Coalition Facebook Event Census
+
+The July 14, 2026 authenticated review assigns a disposition to every slot in
+Facebook's current 34-event host-card control. It recovers 33 public event
+records and retains one unresolved slot without invented metadata. A public
+event ledger preserves factual date, title, venue or mode, event format,
+program, page relationship, response display, and URL fields where recovered.
+
+A separate redacted ledger routes 61 outbound-link occurrences across 38
+normalized rows on 25 events. Links are source-discovery and action-routing
+records, not automatic corroboration or impact evidence. The pass accessioned
+selected public event pages, Village Voice reporting on the Market Hotel town
+hall, and Gothamist reporting on commercial-rent-stabilization context. Jamie's
+first-person role account is protected and bounded by collective credit.
+
+See
+`docs/knowledge-bank/research/nycartc-facebook-events-2026-07-14.md`.
+
+## NYC Artist Coalition Government Interface
+
+The July 15 pass adds six closely read public sources: the official May 2017
+Council transcript of Tom Finkelpearl's DCLA budget testimony, CreateNYC's
+official NYC Artists record, the coalition recommendations preserved in the
+official CreateNYC appendix, the coalition's Council-action and testimony
+pages, and the Council's 2018 Nightlife Advisory Board announcement.
+
+Together they support a bounded account of NYC Artist Coalition as a
+civic-cultural intermediary. They do not establish private motives, exclusive
+institutional dependence, adoption of every recommendation, individual
+authorship of collective work, or causal responsibility for legislation.
+
+See
+`docs/knowledge-bank/research/nycartc-dcla-council-interface-2026-07-15.md`.
+
+## Personal And WOW List Facebook Events
+
+The July 14 authenticated pass preserves three separate controls rather than
+collapsing them:
+
+- the public [personal events surface](https://www.facebook.com/jburkart/events/),
+  where two terminal traversals returned the same 502 event IDs;
+- a protected 21-slot hosted-event accounting run with 20 recovered pages and
+  one unresolved historical slot; and
+- the public [WOW List event surface](https://www.facebook.com/wowlist/events/),
+  which displayed zero event records while acting as the Page, plus a protected
+  bounded historical-recovery run.
+
+Nine selected hosted-event pages are modeled as public professional sources.
+They preserve event structures connecting networked music culture, public
+history, river travel, walking, Sunday Dinner, civic sign making, and public
+documentary discussion. Existing independent reporting in the bank
+corroborates the raft and 8th Street Tunnel contexts.
+
+The `Micropop: Nation-Scenes` page routed participants to *Imagined
+Communities*, a Last.fm fan graph, and KCDIY.org. Those destinations remain
+source-discovery routes rather than automatic corroboration. The complete
+personal association ledger, guest and relationship context, exact private
+locations, raw descriptions, responses, and browser state remain protected.
+
+See
+`docs/knowledge-bank/research/personal-wowlist-facebook-events-2026-07-14.md`.
+
+## WOW List Facebook Page Posts
+
+The July 14 authenticated Page-manager review traverses the WOW List Page-post
+timeline twice. Both passes recover 54 rendered records; one post appears in
+both Featured and chronology, leaving 53 distinct surviving posts. The public
+ledger assigns every distinct post one primary-theme disposition without
+publishing raw post text or comments.
+
+Facebook's manager-only label attributes publication of all 54 rendered
+records in both passes to Jamie. This supports a bounded claim that Jamie
+operated the Page publishing surface. It does not establish sole lifetime
+administration, authorship of shared sources and participant material, a native
+Meta export, deleted-post completeness, adoption, or impact.
+
+The corpus exposes 27 canonical destinations and surfaces public source routes
+about cultural-space safety, affordability, mutual aid, civic gathering, and
+community calendars. Denver Westword and Willamette Week articles received new
+close readings; existing New Yorker, KQED, and Meow Wolf sources remain in
+their original knowledge-bank records.
+
+See
+`docs/knowledge-bank/research/wowlist-facebook-posts-2026-07-14.md`.
+
+## NYC Artist Coalition Facebook Page Posts
+
+The July 14 authenticated review assigns a public-safe disposition to all 441
+records on the surviving NYC Artist Coalition Facebook Page chronology. A
+redacted ledger retains record form, primary theme, classification counts, and
+a visible-interaction boolean without exposing raw text, comments, names,
+per-record metrics, manager state, or sensitive action links.
+
+A second public-safe ledger normalizes 39 raw unique URLs into 33 route
+records. It withholds two historical meeting-access or form destinations,
+reuses existing New York Times and WNYC records, closely reads Rafael Espinal's
+City & State Agent of Change opinion as policy context, and queues an
+inaccessible Seattle Times cultural-relief article for recovery.
+
+The typed source layer includes the Page surface, a protected census run, a
+separate protected Meta content-control review, Jamie's protected first-person
+publisher memory, and three selected public Page records spanning Cabaret Law
+safety and trust, Talks Not Raids, and COVID-19 practical support. Existing
+campaign-press and event sources are reused rather than duplicated.
+
+The 441-record Page-level control does not expose human publisher attribution.
+Jamie remembers predominantly using the Page while remembering shared use;
+that division of labor remains research-stage pending a native export and
+collaborator proof notes.
+
+See
+`docs/knowledge-bank/research/nycartc-facebook-posts-2026-07-14.md`.
+
+## KC Spaces Fund Facebook Page Posts
+
+The July 14 authenticated terminal traversal assigns a public-safe disposition
+to all 38 post or remnant records surfaced by the surviving KC Spaces Fund
+Facebook Page chronology. Nineteen records retain readable campaign messages,
+including ten named grantee-recognition records; nineteen survive only as
+interface or unavailable-content remnants. The redacted ledger stores forms,
+themes, stakeholder-group counts, destination-family counts, and visible-
+reaction booleans without raw post text, comments, names, post URLs, or
+per-record metrics.
+
+A separate route ledger preserves the campaign site, public GoFundMe, and an
+archived Oddities Prints mutual-aid fundraiser. The source layer also records
+independent Kansas City Star resource-guide visibility. The GoFundMe preserves
+named-organizer and fiscal-sponsor credit; the Oddities archive preserves
+partner and artist credit. None of these records identifies Jamie as the
+Facebook publisher, organizer, fundraiser owner, grant decision-maker, or
+author of individual posts.
+
+The resulting KC Spaces Fund identity is directly observable across the
+campaign domain and its linked Facebook, X, and Instagram routes. Jamie's
+memory that he supported choosing a uniformly available project name remains
+research-stage pending creation records and collaborator proof notes.
+
+See
+`docs/knowledge-bank/research/kcspacesfund-facebook-posts-2026-07-14.md`.
+
+## Personal Public Social Sources
+
+Personal social records may enter the source bank after individual close
+reading when they document Jamie's role, method, project chronology, or a
+research lead. They are first-party contemporaneous evidence, not independent
+verification of every statement or outcome.
+
+The July 14, 2026 `@urbanhermit` review gives all 434 records represented by the
+authenticated profile control a public-safe disposition. The repository retains
+only aggregate population and inbound ledgers plus selected typed sources. Full
+text, exact dates, handles, status IDs, URLs, media, relationship context, and
+per-record reactions remain outside the public corpus.
+
+The pass also accessioned NPR Music's independent joint creator credit for
+Jamie Burkart and M.C. Schmidt's Horse Lords “Truthers” video, a Music Hackathon
+organizational role credit, and bounded public collaborator corroboration for
+Cabaret Law repeal and KC Town Hall tire operations.
+
+See
+`docs/knowledge-bank/research/urbanhermit-full-population-social-census-2026-07-14.md`.
+
+## Personal Facebook Post Archive
+
+The July 2026 authenticated `Manage Posts > Posted by: You` run reached its
+terminal server flag after 621 pages and 3,728 returned nodes. Stable-story
+deduplication produced 1,243 unique records, each represented by one
+aggregate-only public ledger row. Protected close reading selected 222
+professional candidates and inventoried 564 unique external destinations while
+keeping exact posts, dates, IDs, URLs, people, privacy context, comments,
+interactions, and media outside the repository.
+
+The pass recovered Blair Schulman's archived 2009 ArtTattler review of *Great
+Accommodations* as one new independent source. Complete interaction totals and
+stakeholder-identity engagement were not recovered; outgoing tags, actors, and
+destinations are not treated as inbound engagement.
+
+See
+`docs/knowledge-bank/research/jamie-facebook-posts-2026-07-14.md`.
+
+## Teams Archive Deepening
+
+The July 14 authenticated iCloud inventory was reconciled with locally hydrated
+copies before selected close reading. Its aggregate folder counts and detected
+version skew are preserved in a protected research-run record; private account
+details, filenames, links, paths, and source contents remain outside the public
+repository. The newest cloud-hosted CRS overview was inventoried but not read,
+so an open research task prevents unseen contents from becoming evidence.
+
+Public sources recovered through Jamie Projects History include The Pitch's
+NTER CHNG listing, Vimeo project credits, and the NYC Artist Coalition
+Wikipedia revision history. The job-hunt pass also routed the research to
+KCUR's independent 2016 HJE reporting, which supplies company-level
+online-sales context while expressly not supporting Jamie-specific causation or
+the separate two-times revenue claim. Protected source descriptions preserve
+the Wikipedia collaboration packet, a CRS power-map and messaging artifact,
+and the Job-Hunt Context Outline without publishing their underlying private
+material.
+
+See
+`docs/knowledge-bank/research/teams-archive-deepening-2026-07-14.md`.
+
+## NTER CHNG / America: Now and Here
+
+Four public records now preserve the project's exhibition context: the
+archived NTER CHNG homepage, America: Now and Here's archived Kansas City about
+page, its dedicated visual-artist page for Drew Bolton, Jamie Burkart, and
+Garrett Fuselier, and the Nerman Museum's institutional record for its Barbara
+Kruger component.
+
+The official artist page supplies the direct evidence. It lists the three
+collaborators as visual artists and publishes their NTER CHNG artist statement.
+It also attributes to Jamie the aim of helping gallery visitors make new
+connections beyond their existing contacts.
+The Nerman record establishes wider May 2011 program context but does not name
+NTER CHNG or place it at the museum. Historical phone numbers and visitor
+responses visible in the Wayback capture are not reproduced in this repository.
+
+Two newly surfaced April 2011 working artifacts are represented only through
+protected, public-safe source descriptions. A collaborative installation plan
+documents planned software, hosting, equipment, fabrication, logistics,
+networking, wayfinding, installation, tuning, and takedown work, and schedules
+Jamie into the preparation sequence. A working artist-materials document
+preserves three prompts, nine message samples, and the Jamie-attributed purpose
+later published by the program. Neither underlying document, its sharing URL,
+contact details, nor raw message text is stored in the repository.
+
+See
+`docs/knowledge-bank/research/nter-chng-america-now-and-here-2026-07-15.md`.
+
+## KC Town Hall Phase One And Neighborhood Practice
+
+The July 15 accession adds one protected contemporaneous proposal, three
+protected first-person source records, and four public records. The proposal is
+closely read at proposition level without retaining financial, contact,
+address, resident, or support-letter details. It directly supports substantial
+work complete by 2018, the remaining Phase One cold-shell scope, a neighborhood
+survey process, and local contractor-development context. Because it was
+created in March 2019, it does not prove completion later that year.
+
+Jamie's protected records preserve his reported general-contractor and daily
+field-coordination function, survey and data-workflow authorship, Tired of Tires
+design and operations, Cleveland Avenue implementation, and pro bono design and
+print practice. These are first-party records and remain labeled accordingly.
+
+The public layer consists of the Cleveland Ave KC: Unify to Beautify event, a
+Cleveland Ave KC tire-pickup post, the HENC Strategic Plan, and a Health Forward
+announcement concerning a separate HENC anti-dumping partnership. Existing
+archived KC Town Hall pages, Jimmy Fitzner's collaborator recollection, and a
+Bridging The Gap acknowledgment are reused rather than duplicated. Public
+program evidence does not automatically establish Jamie's individual role,
+audited impact, Indian Mound expansion, or causal influence on capital funding.
+
+See
+`docs/knowledge-bank/research/kc-town-hall-phase-one-and-neighborhood-practice-2026-07-15.md`.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;
