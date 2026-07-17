@@ -1,8 +1,8 @@
 {
   "version": 4,
   "expectedWorkStatementCount": 276,
-  "projectionDecisionSha256": "331e4bd59591b8df7972e2a0fc096a8ae6130ccbfa90feb56b5c9cfed68d70a9",
-  "publicSurfaceSha256": "19e232c922e94679fe23227230049a842416f6ab0a1b7478d3eab21d73886829",
+  "projectionDecisionSha256": "ff7b5c12fd1baef5af5f7e52cc5df37663226a5573bff3c885c8ef21fb2deb08",
+  "publicSurfaceSha256": "082816a904b63b7d9034539eebcf7fc685accb458241b919ddf86deb797cd53f",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],

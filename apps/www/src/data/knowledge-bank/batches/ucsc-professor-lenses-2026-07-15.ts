@@ -489,7 +489,7 @@ export const ucscProfessorLensesBatch20260715: {
       status: "use-with-care",
       maturity: "partially-supported",
       projectionEligibility: "hold",
-      collectiveWork: false,
+      collectiveWork: true,
       projections: [
         {
           key: "archive-note",
@@ -517,11 +517,13 @@ export const ucscProfessorLensesBatch20260715: {
         }
       ],
       boundaries: [
-        "Preserve both readings and do not normalize or project a title until another reliable source resolves the conflict."
+        "Preserve both readings and do not normalize or project a title until another reliable source resolves the conflict.",
+        "Resolving the title would not establish Jamie's sole authorship; installation credit remains with the student group described in the source record."
       ],
       antiClaims: [
         "The installation title is definitively Art is Long",
-        "The installation title is definitively Time is Long"
+        "The installation title is definitively Time is Long",
+        "Jamie solely authored the student installation"
       ],
       researchInquiryIds: ["INQ-UCSC-PROFESSOR-LENSES-2026"],
       reviewedAt,
