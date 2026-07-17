@@ -4,27 +4,28 @@ import {
   evaluateCompositeStopCondition,
   governedInputDigest,
   loadCompositeRunRecords,
+  loadContractVersion,
   loadEvalContract,
   validateCompositeRunRecord,
-  validateEvalContract
+  validateEvalContract,
+  validateRunSequence
 } from "./lib/eval-contract.mjs";
 
 const contract = loadEvalContract();
-const expected = {
+const current = {
   contractId: contract.id,
   contractVersion: contract.version,
   contractDigest: contractDigest(contract),
-  governedInputDigest: governedInputDigest(contract)
+  governedInputDigest: governedInputDigest(contract),
+  contract
 };
 const runs = loadCompositeRunRecords();
-const errors = [...validateEvalContract(contract)];
+const errors = [...validateEvalContract(contract), ...validateRunSequence(runs)];
 for (const { file, record } of runs) {
+  const runContract = loadContractVersion(record.contract?.version);
+  const isCurrent = record.contract?.version === contract.version;
+  const expected = isCurrent ? current : { contractId: contract.id, contract: runContract };
   errors.push(...validateCompositeRunRecord(record, expected).map((error) => `${file}: ${error}`));
-}
-for (let index = 1; index < runs.length; index += 1) {
-  if (runs[index].record.previousRunId !== runs[index - 1].record.id) {
-    errors.push(`${runs[index].file}: previousRunId must name ${runs[index - 1].record.id}`);
-  }
 }
 const stop = evaluateCompositeStopCondition(runs, contract);
 if (runs.length === 0) errors.push("no composite run records exist");
@@ -35,6 +36,6 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(`Composite eval contract ${contract.version} passes.`);
-console.log(`Contract digest: ${expected.contractDigest}`);
-console.log(`Governed input digest: ${expected.governedInputDigest}`);
+console.log(`Contract digest: ${current.contractDigest}`);
+console.log(`Governed input digest: ${current.governedInputDigest}`);
 console.log(`Stop condition: ${JSON.stringify(stop)}`);

@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "2.0.0",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.0.0",
+    "digest": "2525b65cbee7d419791b32b3ff8209daeaa8e78ed633ad3eaf6dfbc3564a5ad9"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "74df775e5447cfbb0b04ebb8dd72a0cae093d6d8",
+    "tree": "a5aa6e3d2c25b2323ea4086b592f3ebff66c6cf7",
+    "governedInputDigest": "3b5bc9e5bd810abab16cbe423c947e11904af4ce7d4f29d23d0e56b12e686197"
+  },
+  "commands": [
+    {
+      "command": "npm run check:citations",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run test:citations",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run check:launch-evals",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run test:launch-evals",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run check:portfolio-evals",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run test:portfolio-evals",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run check:knowledge-evals",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run test:knowledge-evals",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run test:knowledge-tools",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run check:projections",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run test:projections",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run test:eval-contract",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run check -w @jamie-burkart/www",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run knowledge-bank",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run public-safety",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "command": "npm run check:routes",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "criterionResults": [],
+  "openDisagreements": [],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new evidence",
+    "changed public projection",
+    "contract or candidate drift",
+    "human disagreement",
+    "privacy or collective-credit concern"
+  ],
+  "decision": {
+    "status": "accepted-for-review",
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "id": "composite-deterministic-pass-1",
+  "iteration": 1,
+  "recordedAt": "2026-07-16T21:39:00-04:00",
+  "judge": {
+    "class": "deterministic",
+    "label": "local-deterministic-pass-1",
+    "independent": false,
+    "priorScoresVisible": false
+  },
+  "recordDigest": "075e59977ea234ef7831ff2c6ffdccdf9792708cfd877914787595365319db3f"
+}

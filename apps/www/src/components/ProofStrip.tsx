@@ -1,4 +1,11 @@
+import Link from "next/link";
+import type { Route } from "next";
 import { homepageProofs } from "@/data/proofs";
+
+function evidenceHref(proof: (typeof homepageProofs)[number]): Route {
+  const project = proof.relatedProjects[0];
+  return (project ? `/work/${project}` : "/about") as Route;
+}
 
 export function ProofStrip() {
   return (
@@ -9,6 +16,12 @@ export function ProofStrip() {
             <p className="text-base font-semibold leading-6">
               {proof.shortWording ?? proof.publicWording}
             </p>
+            <Link
+              className="mt-4 inline-flex text-sm font-semibold text-jb-mint underline decoration-1 underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-jb-paper"
+              href={evidenceHref(proof)}
+            >
+              Project evidence
+            </Link>
           </div>
         ))}
       </div>

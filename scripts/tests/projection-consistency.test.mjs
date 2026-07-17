@@ -10,6 +10,10 @@ test("current canonical projections and public registry are consistent", () => {
   assert.deepEqual(validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles }), []);
 });
 
+test("projection validation cannot pass without scanning public surfaces", () => {
+  assert.match(validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles: [] }).join("\n"), /scan cannot be empty/);
+});
+
 test("generated registry drift is rejected", () => {
   assert.match(validateProjectionConsistency({ bank: knowledgeBank, registryText: "{}\n", publicFiles }).join("\n"), /registry disagrees/);
 });
@@ -19,6 +23,25 @@ test("a held projection leaked through a public surface is rejected", () => {
   assert.ok(held);
   const changedFiles = [...publicFiles, { file: "apps/www/src/app/leak.tsx", content: held.projection.text }];
   assert.match(validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles: changedFiles }).join("\n"), new RegExp(`${held.claim.id}: held projection leaked`));
+});
+
+test("default-ignorable characters cannot conceal a held projection", () => {
+  const held = knowledgeBank.claims.flatMap((claim) => claim.projections.map((projection) => ({ claim, projection }))).find(({ projection }) => projection.status === "hold");
+  assert.ok(held);
+  const evasion = held.projection.text.replace(/(.{3})/g, "$1\u200b");
+  const changedFiles = [...publicFiles, { file: "apps/www/src/app/invisible-leak.tsx", content: evasion }];
+  assert.match(validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles: changedFiles }).join("\n"), /held projection leaked/);
+});
+
+test("held claim and protected source identifiers cannot enter public surfaces", () => {
+  const held = knowledgeBank.claims.find((claim) => claim.projections.some((projection) => projection.status === "hold"));
+  const protectedSource = knowledgeBank.sources.find((source) => source.visibility === "protected" && source.protectedLocatorId);
+  assert.ok(held && protectedSource);
+  const changedFiles = [{ file: "apps/www/src/app/id-leak.tsx", content: `${held.id}\n${protectedSource.id}\n${protectedSource.protectedLocatorId}` }];
+  const errors = validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles: changedFiles }).join("\n");
+  assert.match(errors, /held claim identifier leaked/);
+  assert.match(errors, /protected source identifier leaked/);
+  assert.match(errors, /protected locator identifier leaked/);
 });
 
 test("an active projection without an authorized surface is rejected", () => {

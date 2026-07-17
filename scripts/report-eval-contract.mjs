@@ -29,7 +29,7 @@ const lines = [
   "",
   "## Runs",
   "",
-  ...runs.map(({ file, record }) => `- \`${record.id}\`: ${record.judge?.class}; ${record.decision?.status}; \`${file}\``),
+  ...runs.map(({ file, record }) => `- \`${record.id}\`: ${record.judge?.class}; ${record.decision?.status}${record.decision?.weightedScore ? `; score ${record.decision.weightedScore}` : ""}; \`${file}\``),
   "",
   "Acceptance for review is not production approval. Jamie retains final truth, consent, and promotion authority.",
   ""

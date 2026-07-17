@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  canonicalizeSourceUrl,
   containsPrivatePath,
   createIntakeReceipt,
   knowledgeReport,
@@ -18,7 +19,7 @@ test("intake creates a stable validated receipt without promoting a claim", () =
 });
 
 test("duplicate source leads are preserved and labeled", () => {
-  const receipt = createIntakeReceipt({ ...base, url: "https://x.com/CivicHall/status/693124020917522433" }, new Date("2026-07-16T00:00:00Z"));
+  const receipt = createIntakeReceipt({ ...base, url: "https://X.COM/CivicHall/status/693124020917522433/" }, new Date("2026-07-16T00:00:00Z"));
   assert.equal(receipt.disposition, "duplicate");
   assert.match(receipt.boundaries.join(" "), /Potential duplicate/);
 });
@@ -26,6 +27,12 @@ test("duplicate source leads are preserved and labeled", () => {
 test("private paths cannot enter an intake receipt", () => {
   assert.throws(() => createIntakeReceipt({ ...base, reason: "See /Users/jamie/private.txt" }), /private filesystem paths/);
   assert.equal(containsPrivatePath({ note: "/Volumes/Archive/private.pdf" }), true);
+  assert.equal(containsPrivatePath({ note: "／Ｕｓｅｒｓ／jamie/private.txt" }), true);
+  assert.equal(containsPrivatePath({ note: "/Us\u200bers/jamie/private.txt" }), true);
+});
+
+test("source URLs have one comparison form", () => {
+  assert.equal(canonicalizeSourceUrl("HTTPS://Example.COM:443/a/#fragment"), "https://example.com/a");
 });
 
 test("query distinguishes record classes and filters projects", () => {

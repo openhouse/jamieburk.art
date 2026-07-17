@@ -43,6 +43,10 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:projections`
 - `npm run check:eval-contract`
 - `npm run test:eval-contract`
+- `npm run eval:run`
+- `npm run eval:record-holdout`
+- `npm run eval:run`
+- `npm run eval:record-holdout`
 
 ## Public-Safety Rules
 
@@ -120,6 +124,18 @@ judge independence, prior-score visibility, disagreements, overrides, and open
 external gates. A rubric change requires a version change and resets the streak.
 Do not edit the rubric while optimizing the candidate. Two independent holdouts
 must review the same unchanged governed candidate without prior scores.
+
+Use the canonical runner only after committing a frozen candidate. Preserve
+failed and rejected runs in the hash chain. A holdout must use a governed prompt,
+a distinct stable session ID, all ten criteria, and evidence for every score.
+The validator recomputes candidate identity, score floors, and weighted results;
+do not hand-author a passing decision.
+
+Use the canonical runner only after committing a frozen candidate. Preserve
+failed and rejected runs in the hash chain. A holdout must use a governed prompt,
+a distinct stable session ID, all ten criteria, and evidence for every score.
+The validator recomputes candidate identity, score floors, and weighted results;
+do not hand-author a passing decision.
 
 Use `npm run knowledge:intake` for public-safe leads. It is dry-run by default;
 `--write` appends an intake receipt, not a claim. Keep duplicate receipts with a

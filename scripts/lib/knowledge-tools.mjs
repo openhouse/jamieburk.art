@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -7,6 +7,20 @@ import { intakeItemSchema } from "../../apps/www/src/data/knowledge-bank/schema.
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const receiptPath = path.join(repoRoot, "docs/knowledge-bank/intake/receipts.jsonl");
+const receiptLockPath = `${receiptPath}.lock`;
+const defaultIgnorables = /[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180F\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFE0F\uFEFF\uFFA0]/g;
+
+function normalizedSecurityText(value) {
+  return JSON.stringify(value).normalize("NFKC").replace(defaultIgnorables, "");
+}
+
+export function canonicalizeSourceUrl(value) {
+  if (!value) return undefined;
+  const url = new URL(value);
+  url.hash = "";
+  if (url.pathname.length > 1) url.pathname = url.pathname.replace(/\/+$/, "");
+  return url.toString();
+}
 
 export function parseFlags(argv) {
   const flags = {};
@@ -26,7 +40,7 @@ export function parseFlags(argv) {
 }
 
 export function containsPrivatePath(value) {
-  return /(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|[A-Za-z]:\\Users\\|file:\/\/)/i.test(JSON.stringify(value));
+  return /(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|[A-Za-z]:\\Users\\|file:\/\/)/i.test(normalizedSecurityText(value));
 }
 
 function existingReceipts() {
@@ -43,16 +57,19 @@ export function createIntakeReceipt(flags, now = new Date()) {
   }
   const localDate = [now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-");
   const submittedAt = (flags.date ?? localDate);
+  const sourceUrl = canonicalizeSourceUrl(flags.url);
   const existing = [...knowledgeBank.intakeItems, ...existingReceipts()];
   const duplicateIntake = existing.find((item) =>
-    (flags.url && item.sourceUrl === flags.url) ||
+    (sourceUrl && item.sourceUrl && canonicalizeSourceUrl(item.sourceUrl) === sourceUrl) ||
     (item.title.toLocaleLowerCase() === flags.title.toLocaleLowerCase() && item.projectIds.includes(flags.project))
   );
   const duplicateSource = knowledgeBank.sources.find((source) =>
-    flags.url && [source.canonicalUrl, source.archiveUrl, source.assetUrl].includes(flags.url)
+    sourceUrl && [source.canonicalUrl, source.archiveUrl, source.assetUrl]
+      .filter(Boolean)
+      .some((url) => canonicalizeSourceUrl(url) === sourceUrl)
   );
   const duplicateOf = duplicateIntake ?? duplicateSource;
-  const seed = [submittedAt, flags.project, flags.kind, flags.title, flags.url ?? ""].join("|");
+  const seed = [submittedAt, flags.project, flags.kind, flags.title, sourceUrl ?? ""].join("|");
   const suffix = createHash("sha256").update(seed).digest("hex").slice(0, 10).toUpperCase();
   const duplicateCount = existing.filter((item) => item.id.startsWith(`INTAKE-LEAD-${suffix}`)).length;
   const receipt = {
@@ -63,7 +80,7 @@ export function createIntakeReceipt(flags, now = new Date()) {
     submittedBy: flags.by ?? "Jamie Burkart",
     projectIds: [flags.project],
     reason: flags.reason,
-    ...(flags.url ? { sourceUrl: flags.url } : {}),
+    ...(sourceUrl ? { sourceUrl } : {}),
     visibility: flags.visibility ?? "public-safe",
     disposition: duplicateOf ? "duplicate" : "captured",
     sourceIds: [],
@@ -80,12 +97,31 @@ export function createIntakeReceipt(flags, now = new Date()) {
 
 export function writeIntakeReceipt(receipt) {
   mkdirSync(path.dirname(receiptPath), { recursive: true });
-  appendFileSync(receiptPath, `${JSON.stringify(receipt)}\n`);
+  let lock;
+  for (let attempt = 0; attempt < 100; attempt += 1) {
+    try {
+      lock = openSync(receiptLockPath, "wx");
+      break;
+    } catch (error) {
+      if (error?.code !== "EEXIST" || attempt === 99) throw error;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 10);
+    }
+  }
+  try {
+    const receipts = existingReceipts();
+    const matches = receipts.filter((item) => item.id === receipt.id || item.id.startsWith(`${receipt.id}-D`));
+    const persisted = matches.length ? { ...receipt, id: `${receipt.id}-D${matches.length + 1}` } : receipt;
+    appendFileSync(receiptPath, `${JSON.stringify(persisted)}\n`);
+    return persisted;
+  } finally {
+    if (lock !== undefined) closeSync(lock);
+    if (existsSync(receiptLockPath)) unlinkSync(receiptLockPath);
+  }
 }
 
 export function queryKnowledge(flags) {
   const groups = {
-    intake: knowledgeBank.intakeItems,
+    intake: [...knowledgeBank.intakeItems, ...existingReceipts()],
     observation: knowledgeBank.observations,
     source: knowledgeBank.sources,
     claim: knowledgeBank.claims,
@@ -105,13 +141,14 @@ export function queryKnowledge(flags) {
 }
 
 export function knowledgeReport() {
+  const intakeItems = [...knowledgeBank.intakeItems, ...existingReceipts()];
   const activeClaims = knowledgeBank.claims.filter((claim) => claim.projections.some((projection) => projection.status === "active"));
   const heldClaims = knowledgeBank.claims.filter((claim) => claim.projections.some((projection) => projection.status === "hold"));
   const protectedSources = knowledgeBank.sources.filter((source) => source.visibility === "protected");
   const openInquiries = knowledgeBank.researchInquiries.filter((inquiry) => inquiry.resultStatus !== "recovered");
   return [
     "# Knowledge lifecycle report", "",
-    `- Intake items: ${knowledgeBank.intakeItems.length}`,
+    `- Intake items: ${intakeItems.length}`,
     `- Atomic observations: ${knowledgeBank.observations.length}`,
     `- Sources: ${knowledgeBank.sources.length}`,
     `- Claims: ${knowledgeBank.claims.length}`,

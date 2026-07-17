@@ -17,6 +17,22 @@ change requires a new version and starts a new consecutive-pass and holdout
 streak. Optimizers may change the candidate, never the contract that is scoring
 the active iteration.
 
+Run records form an ordered SHA-256 chain. The validator resolves every recorded
+commit and tree in Git, recomputes its governed-input digest, recomputes holdout
+scores and floors, and rejects missing commands, unknown criteria, duplicate
+reviewers, stale prompts, or an attempt to grant production authority. The
+canonical deterministic runner captures timing and an output digest for every
+required command. Failed runs and rejected holdouts remain in the chain; they
+are evidence about the system, not debris to erase.
+
+Run records form an ordered SHA-256 chain. The validator resolves every recorded
+commit and tree in Git, recomputes its governed-input digest, recomputes holdout
+scores and floors, and rejects missing commands, unknown criteria, duplicate
+reviewers, stale prompts, or an attempt to grant production authority. The
+canonical deterministic runner captures timing and an output digest for every
+required command. Failed runs and rejected holdouts remain in the chain; they
+are evidence about the system, not debris to erase.
+
 ## Recursive protocol
 
 1. Freeze the contract and record both digests.
@@ -29,6 +45,16 @@ the active iteration.
    source boundaries, collective credit, accessibility, or reader clarity.
 8. Repeat until two deterministic passes and two independent holdouts accept the
    unchanged governed candidate.
+
+Run `npm run eval:run` only after committing a frozen candidate. Give each
+holdout exactly one governed prompt from `evals/_shared/`, keep prior scores and
+run records out of view, save its JSON judgment outside the repo, then ingest it
+with `npm run eval:record-holdout -- --input ... --prompt ... --session ...`.
+
+Run `npm run eval:run` only after committing a frozen candidate. Give each
+holdout exactly one governed prompt from `evals/_shared/`, keep prior scores and
+run records out of view, save its JSON judgment outside the repo, then ingest it
+with `npm run eval:record-holdout -- --input ... --prompt ... --session ...`.
 
 ## Authority and open gates
 

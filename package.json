@@ -40,6 +40,8 @@
     "check:eval-contract": "node scripts/check-eval-contract.mjs",
     "test:eval-contract": "node --test scripts/tests/eval-contract.test.mjs",
     "report:eval-contract": "node scripts/report-eval-contract.mjs",
+    "eval:run": "node scripts/run-composite-eval.mjs",
+    "eval:record-holdout": "node scripts/record-holdout-eval.mjs",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",
     "routes": "npm run check:routes",

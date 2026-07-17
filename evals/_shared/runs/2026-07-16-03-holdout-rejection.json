@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "2.0.0",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.0.0",
+    "digest": "2525b65cbee7d419791b32b3ff8209daeaa8e78ed633ad3eaf6dfbc3564a5ad9"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "74df775e5447cfbb0b04ebb8dd72a0cae093d6d8",
+    "tree": "a5aa6e3d2c25b2323ea4086b592f3ebff66c6cf7",
+    "governedInputDigest": "3b5bc9e5bd810abab16cbe423c947e11904af4ce7d4f29d23d0e56b12e686197"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new evidence",
+    "changed public projection",
+    "contract or candidate drift",
+    "human disagreement",
+    "privacy or collective-credit concern"
+  ],
+  "id": "composite-holdout-a-rejection",
+  "iteration": 3,
+  "recordedAt": "2026-07-16T22:00:00-04:00",
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-a-public-sector-editorial",
+    "sessionId": "019f6dbc-a73b-7010-8eca-67c2cb1eb1a2",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/holdout-a.md",
+    "promptDigest": "f30371a79b7fa02bb308efe874c21f86fb020a63bb5ead19a3db4e608422c6e4",
+    "promptBasis": "Reconstructed governed equivalent of the original blind brief."
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-ROLE."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 4,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-EVIDENCE."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-EMERGING."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 3,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-BURDEN."
+      ],
+      "risks": [
+        "LR-JUDGE-BURDEN remained below its frozen floor in this candidate."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 5,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-CHAD."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 5,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-COLLECTIVE."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-VISUAL."
+      ],
+      "risks": [
+        "LR-JUDGE-VISUAL remained below its frozen floor in this candidate."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 5,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-OPERATIONS."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 5,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-MORSE."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 2,
+      "evidence": [
+        "Public-sector editorial holdout review inspected the rendered portfolio and governed implementation for LR-JUDGE-SACK."
+      ],
+      "risks": [
+        "LR-JUDGE-SACK remained below its frozen floor in this candidate."
+      ]
+    }
+  ],
+  "blockingFindings": [
+    "Composite acceptance accepted arbitrary commands and incomplete or out-of-range criterion vectors.",
+    "Candidate commit, tree, and governed digest were not verified against Git.",
+    "Governed inputs omitted prompts, evidence, runtime code, metadata, and styles.",
+    "External human gates could disappear from an accepted record.",
+    "Projection and intake guards admitted avoidable held or protected leakage risks."
+  ],
+  "openDisagreements": [
+    "Reader burden passed its floor but remained dense.",
+    "Operations evidence was strong while collaborator corroboration remained open."
+  ],
+  "decision": {
+    "status": "revision-required",
+    "weightedScore": 4.26,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "The portfolio cleared the weighted target but failed the Sack governance floor; the candidate was rejected.",
+  "previousRunId": "composite-deterministic-pass-2",
+  "previousRunDigest": "b35d374895de419aad378e9d66dc02383a98eabf83865fcbc28c6fa8f530457f",
+  "recordDigest": "eb6959c20875ccfc4558c33f9bf3db7d84092eb752fd4893f559d4bfcf3a245f"
+}

@@ -5,8 +5,10 @@ import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
+const defaultIgnorables = /[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180F\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFE0F\uFEFF\uFFA0]/g;
+
 function normalize(value) {
-  return value.normalize("NFKC").replace(/[\u2010-\u2015]/g, "-").replace(/\s+/g, " ").trim().toLocaleLowerCase();
+  return value.normalize("NFKC").replace(defaultIgnorables, "").replace(/[\u2010-\u2015]/g, "-").replace(/\s+/g, " ").trim().toLocaleLowerCase();
 }
 
 function walk(relativePath) {
@@ -64,10 +66,15 @@ export function validateProjectionConsistency({
   const sourceById = new Map(bank.sources.map((source) => [source.id, source]));
   const publicCorpus = normalize(publicFiles.map((item) => item.content).join("\n"));
 
+  if (publicFiles.length === 0) errors.push("public surface scan cannot be empty");
+
   const expectedRegistry = `${JSON.stringify(buildPublicRegistry(bank), null, 2)}\n`;
   if (registryText !== expectedRegistry) errors.push("public registry disagrees with canonical knowledge records");
 
   for (const claim of bank.claims) {
+    if (claim.projections.some((projection) => projection.status === "hold") && publicCorpus.includes(normalize(claim.id))) {
+      errors.push(`${claim.id}: held claim identifier leaked into a public surface`);
+    }
     for (const projection of claim.projections) {
       if (projection.status === "active" && projection.surfaces.length === 0) {
         errors.push(`${claim.id}: active projection has no authorized surface`);
@@ -75,6 +82,13 @@ export function validateProjectionConsistency({
       if (projection.status === "hold" && publicCorpus.includes(normalize(projection.text))) {
         errors.push(`${claim.id}: held projection leaked into a public surface`);
       }
+    }
+  }
+
+  for (const source of bank.sources.filter((item) => item.visibility === "protected")) {
+    if (publicCorpus.includes(normalize(source.id))) errors.push(`${source.id}: protected source identifier leaked into a public surface`);
+    if (source.protectedLocatorId && publicCorpus.includes(normalize(source.protectedLocatorId))) {
+      errors.push(`${source.id}: protected locator identifier leaked into a public surface`);
     }
   }
 

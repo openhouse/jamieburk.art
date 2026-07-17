@@ -90,6 +90,8 @@ npm run knowledge:intake -- --title "Source title" --project callnyc \
 npm run knowledge:query -- --type claim --project callnyc --active
 npm run knowledge:report -- --write
 npm run knowledge:projection-map -- --write
+npm run eval:run
+npm run eval:run
 ```
 
 The intake command rejects private paths, validates the record shape, assigns a
@@ -99,6 +101,20 @@ claims, inquiries, active projections, and held depth. Generated reports stay
 outside version control under `reports/generated/`.
 See `docs/knowledge-bank/daily-commands.md` for the complete intake and
 promotion boundary.
+
+`npm run eval:run` executes the frozen composite contract against a committed
+candidate and records command output digests. Independent blind judgments are
+recorded with `npm run eval:record-holdout -- --input /path/to/judgment.json
+--prompt evals/_shared/holdout-a.md --session stable-session-id`. Failed runs and
+rejected judgments remain in the hash-chained history. See
+`docs/evals/composite-governance.md`.
+
+`npm run eval:run` executes the frozen composite contract against a committed
+candidate and records command output digests. Independent blind judgments are
+recorded with `npm run eval:record-holdout -- --input /path/to/judgment.json
+--prompt evals/_shared/holdout-a.md --session stable-session-id`. Failed runs and
+rejected judgments remain in the hash-chained history. See
+`docs/evals/composite-governance.md`.
 
 ## Environment
 

@@ -8,8 +8,8 @@ try {
     process.exit(0);
   }
   const receipt = createIntakeReceipt(flags);
-  if (flags.write) writeIntakeReceipt(receipt);
-  console.log(JSON.stringify({ mode: flags.write ? "written" : "dry-run", receipt }, null, 2));
+  const persisted = flags.write ? writeIntakeReceipt(receipt) : receipt;
+  console.log(JSON.stringify({ mode: flags.write ? "written" : "dry-run", receipt: persisted }, null, 2));
 } catch (error) {
   console.error(error instanceof Error ? error.message : error);
   process.exit(1);
