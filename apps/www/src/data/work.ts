@@ -432,7 +432,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities. A July 2017 archive snapshot records activity across at least 35 city or regional scenes.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -468,7 +468,7 @@ const workItemsInput = [
     ],
     links: [{ label: "WOW List on X", url: "https://x.com/wowlist" }],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. The city-scene count is a thresholded archive measure, not proof of citywide adoption.",
     sourceLayer:
       "Public-safe aggregate records, historical project context, and a metadata-only review of all 38 records reported by the project-account profile.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
@@ -480,8 +480,8 @@ const workItemsInput = [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Roughly 35 city ecosystems reached",
+      "A July 2017 archive snapshot contains 1,846 user rows and 16,142 post or event rows",
+      "At least 35 city or regional scenes with 50 or more geocoded posts or events",
       "All 38 profile-counted project-account records reviewed across Posts and Replies",
       "Historical account used for product support, community onboarding, source curation, event distribution, and rapid civic coordination",
       "Bounded search recovered 10 mission-relevant third-party accounts; nine independently posted a WOW List URL",
@@ -572,7 +572,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Historic restoration, participatory development, and neighborhood operations",
     summary:
-      "KC Town Hall completed a $189,629 Phase One cold-shell restoration in 2019. The packet names Jamie and Julia Fredenburg as founders/project managers; Jamie states that he also served as Phase One general contractor and daily site coordinator. He designed a resident survey system and coordinated recurring neighborhood service operations alongside the later, separately documented municipal funding process.",
+      "KC Town Hall completed a $189,629 Phase One cold-shell restoration in 2019. The packet names Jamie and Julia Fredenburg as founders/project managers; Jamie states that he also served as Phase One general contractor and daily site coordinator, designed a resident survey system, and coordinated recurring neighborhood service operations alongside the later, separately documented municipal funding process.",
     role: "Founder & Project Manager; Phase One General Contractor (first-hand account)",
     years: "2018-2022; 2019 funding decision; 2024 disposition",
     status: "Short proof page",

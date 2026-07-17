@@ -6,8 +6,8 @@ into maintained controls. It does not declare the portfolio ready to publish.
 
 ## Authority
 
-1. The latest knowledge-development runner output controls executable eval
-   state.
+1. The latest knowledge-development and composite-integration runner outputs
+   control their respective executable eval states.
 2. The readiness ledger controls the blind-spot inventory and the evidence or
    task route for each one.
 3. The approval register controls public-use permissions.
@@ -39,6 +39,10 @@ claim, or authorize deployment.
 - `npm run run:knowledge-development -- --require-pass` is the complete release
   gate. It must fail when required judgments or approvals are absent.
 - `npm run check` runs the broader repository contract.
+- `npm run check:composite-integration` runs the maintained local composite
+  gate. It may pass while independent and human gates remain open.
+- `npm run run:composite-integration -- --require-pass` runs the complete
+  composite gate and must fail when required judgments or approvals are absent.
 
 The public website remains a selective projection of the knowledge bank.
 There is no public proofs or knowledge-bank route.

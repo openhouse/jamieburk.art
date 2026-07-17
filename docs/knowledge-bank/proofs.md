@@ -40,7 +40,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
   draft.
 - Maintained a mixed-format archive overview workflow with extraction, sampling,
   skip rules, and explicit sensitive-output warnings.
-- Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
+- Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform whose July 2017 archive snapshot records activity across at least 35 city or regional scenes.
 - A July 2017 WOW List database snapshot records 1,846 users, 16,142 posts or
   events, 23,864 tags or lists, 28,837 list follows, 20,927 saves, and 15,915
   calendar events across at least 35 active city scenes under a defined

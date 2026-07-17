@@ -1,0 +1,261 @@
+{
+  "suite_id": "evals-family-composite-integration",
+  "suite_version": 1,
+  "label": "iteration-00-structural-baseline",
+  "run_at": "2026-07-17T01:39:12.936Z",
+  "base_commit": "2ec37fe6e47d11e600ede204d19a98f7d3cff139",
+  "candidate_commit": "d97055d72d794b9ecfd338e10277e4feb14ea918",
+  "candidate_fingerprint": "49b9e073f220cdbe5bc47a0cf2a2cd28855881b14748f8c33a72e9b87dc95737",
+  "candidate_file_count": 169,
+  "rubric_fingerprint": "5dd84a3b8a91c8c1e2cccd2e281c7e59a3c2494ebaf6fe06ca250fdd2be09b11",
+  "inherited_rubric_fingerprints": {
+    ".agents/evals/knowledge-development.json": "91f4173ef4ec2d1f313d6f8b4851da760451f55706b5d65eb2aec2b16bc1c4bb",
+    ".agents/evals/portfolio-production-readiness.json": "e5c461afb8880ef9e4ebe83933690324d3a11fbf21e6d06990a4b79267e425fe"
+  },
+  "graph_fingerprint": "b59879ebbc11e5a795ee9eb7506c8b3b19ccc421ebe9d469555c2322bd6cd4fc",
+  "projection_fingerprint": "bff1bfb4cc5ffceb5639327b6da733161cf4b6c93d931c57d6d706a85ee2fb92",
+  "knowledge_candidate_fingerprint": "324a09def6bfd79c1c45647e816ed688cb9d32db0f88cbc89e06e1d09ff3b286",
+  "weighted_score": 0.7175,
+  "threshold": 0.9,
+  "local_criteria_met": false,
+  "consecutive_local_pass": false,
+  "criteria_before_repeat": false,
+  "criteria_met": false,
+  "decision": "continue_hill_climb",
+  "local_blocking_failures": [
+    "CI-011"
+  ],
+  "local_nonblocking_failures": [],
+  "missing_judgments": [
+    "CI-007",
+    "CI-008",
+    "CI-009",
+    "CI-012"
+  ],
+  "external_failures": [],
+  "judgment_errors": [],
+  "evals": [
+    {
+      "eval_id": "CI-001",
+      "title": "Exact G ancestry and frozen-family integrity",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 5,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "candidate HEAD: d97055d72d794b9ecfd338e10277e4feb14ea918",
+        "G base: d97055d72d794b9ecfd338e10277e4feb14ea918",
+        "frozen refs: 14",
+        "frozen digest: 6227f4f3a2653b1c1417410362b7fa0af45041a818f1a83ab4a79a0f17daa7e0"
+      ],
+      "findings": [],
+      "recommended_next_move": "Restore G ancestry or repair the read-only family manifest."
+    },
+    {
+      "eval_id": "CI-002",
+      "title": "Append-safe intake without silent loss or private payload",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 9,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "public-safe receipts: 1",
+        "receipt validation errors: 0",
+        "dry-run, duplicate, protected-pointer, and malformed-input behavior covered by tests"
+      ],
+      "findings": [],
+      "recommended_next_move": "Create the smallest public-safe receipt and route it without copying the private payload."
+    },
+    {
+      "eval_id": "CI-003",
+      "title": "Queryable lifecycle and auditable correction history",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 6,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "query command: present",
+        "auditable corrections: 5",
+        "stable JSON, JSONL, and table output contracts"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair the query contract or the missing correction path without creating another registry."
+    },
+    {
+      "eval_id": "CI-004",
+      "title": "One canonical graph with valid states and evidence paths",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "knowledge fingerprint: 324a09def6bfd79c1c45647e816ed688cb9d32db0f88cbc89e06e1d09ff3b286",
+        "knowledge local score: 0.88",
+        "validation errors: 0"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair the canonical relationship or hold the projection."
+    },
+    {
+      "eval_id": "CI-005",
+      "title": "Fail-closed projection coverage and cumulative-disclosure safety",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "bound surfaces: 21",
+        "discovered app surfaces: 15",
+        "projection digest: bff1bfb4cc5ffceb5639327b6da733161cf4b6c93d931c57d6d706a85ee2fb92",
+        "default policy: deny"
+      ],
+      "findings": [],
+      "recommended_next_move": "Bind the surface with an explicit policy or remove the unsafe projection."
+    },
+    {
+      "eval_id": "CI-006",
+      "title": "Corpus manifests, honest denominators, and non-additive controls",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "inherited full-population score: 4",
+        "public-safe fixture files: 11",
+        "public-safe ledger files: 5",
+        "corpus digest: f37560e61b3685c7d1ae28c088376d1bc8edcaeee37dbfa3d8324d103e632ef2"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair the denominator or classification before strengthening interpretation."
+    },
+    {
+      "eval_id": "CI-007",
+      "title": "Collective credit, role calibration, and outcome distinctions",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": true,
+      "weight": 10,
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "role-corroboration controls: 5",
+        "outcome evidence classes: 4",
+        "local structural preflight is capped at 3 pending independent judgment"
+      ],
+      "findings": [
+        "Independent collective-credit judgment remains required"
+      ],
+      "recommended_next_move": "Strengthen the direct action and narrow the unearned collective or causal inference."
+    },
+    {
+      "eval_id": "CI-008",
+      "title": "Chad-lens hiring clarity and future-facing offer",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": true,
+      "weight": 10,
+      "score": 0,
+      "pass": false,
+      "evidence": [
+        "homepage actor and offer contract checked",
+        "technical-operations ownership signals checked",
+        "future-facing contact route checked",
+        "local structural preflight is capped at 3 pending independent judgment"
+      ],
+      "findings": [
+        "Hiring path is missing a required action, end, or next step"
+      ],
+      "recommended_next_move": "Make the strongest approved action and end more specific without inflating ownership."
+    },
+    {
+      "eval_id": "CI-009",
+      "title": "Morse and Sack lenses preserve embodied and recursive intelligence",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": false,
+      "weight": 7,
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "Morse structural score: 3",
+        "Sack structural score: 3",
+        "local structural preflight is capped at 3 pending independent judgment"
+      ],
+      "findings": [
+        "Independent Morse and Sack lens judgment remains required"
+      ],
+      "recommended_next_move": "Restore one concrete threshold where embodied inquiry and recursive systems practice remain visible."
+    },
+    {
+      "eval_id": "CI-010",
+      "title": "Human-readable dossiers and evidence-debt routing",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": false,
+      "weight": 5,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "project dossiers: 18",
+        "dossiers missing source/method or boundary/research language: 0",
+        "canonical readiness ledger retained"
+      ],
+      "findings": [],
+      "recommended_next_move": "Add the missing human-readable boundary or route the gap to the canonical ledger."
+    },
+    {
+      "eval_id": "CI-011",
+      "title": "Exact-candidate build, accessibility, and release evidence",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 12,
+      "score": 0,
+      "pass": false,
+      "evidence": [
+        "candidate manifest: missing",
+        "candidate fingerprint match: false",
+        "repository check: not_observed",
+        "staging preflight: not_observed",
+        "production preflight: not_observed",
+        "Docker smoke: not_observed",
+        "responsive pairs: 0"
+      ],
+      "findings": [
+        "Exact-candidate build, runtime, or responsive evidence is incomplete"
+      ],
+      "recommended_next_move": "Run the missing exact-candidate verification or fix the highest-severity observed failure."
+    },
+    {
+      "eval_id": "CI-012",
+      "title": "Grader separation and human authority remain honest",
+      "grader": "hybrid",
+      "external_judgment_required": true,
+      "blocking": true,
+      "weight": 8,
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "machine, evidence, approval, and release authority remain distinct",
+        "release state: held",
+        "local structural preflight is capped at 3 pending human authority"
+      ],
+      "findings": [
+        "Exact-candidate human approval and release authority remain required"
+      ],
+      "recommended_next_move": "Obtain the named external decision or report the candidate honestly as human-blocked."
+    }
+  ]
+}

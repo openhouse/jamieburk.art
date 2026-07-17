@@ -427,16 +427,16 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context",
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform whose July 2017 archive snapshot records activity across at least 35 city or regional scenes.",
+    shortWording: "WOWList records activity across at least 35 city scenes",
     homepageWording:
-      "I co-built WOWList, giving DIY arts organizers a shared calendar platform adopted across roughly 35 city ecosystems.",
+      "I co-built WOWList; a July 2017 archive snapshot records activity across at least 35 city or regional scenes.",
     detailedPublicWording:
-      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
+      "A July 2017 WOWList archive snapshot contains 1,846 user rows and 16,142 post or event rows. The platform included followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis:
       "Approved resume language and public-safe aggregate historical summary.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Use threshold-defined active-scene language, not citywide adoption or official chapters.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -579,11 +579,11 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation",
     ],
     publicWording:
-      "KC Town Hall completed a $189,629 Phase One cold-shell restoration in 2019. The 2019 packet identifies Jamie and Julia Fredenburg as founders/project managers; Jamie states that he also served as Phase One general contractor and daily site coordinator. He designed a resident survey system and coordinated recurring neighborhood service operations. For a later, separate Phase Two proposal, the CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City's 2024 record says KC Town Hall withdrew and the unused appropriation was reappropriated.",
+      "KC Town Hall completed a $189,629 Phase One cold-shell restoration in 2019. The 2019 packet identifies Jamie and Julia Fredenburg as founders/project managers; Jamie states that he also served as Phase One general contractor and daily site coordinator, designed a resident survey system, and coordinated recurring neighborhood service operations. For a later, separate Phase Two proposal, the CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City's 2024 record says KC Town Hall withdrew and the unused appropriation was reappropriated.",
     shortWording:
       "Coordinated a completed $189,629 historic-building cold-shell phase and participatory neighborhood systems",
     detailedPublicWording:
-      "Jamie states that he served as Phase One general contractor and daily site coordinator, coordinating architecture, preservation, roofing, masonry, framing, water, safety, access, and site workflows. The packet independently identifies him as founder/project manager, names the team, and documents the completed scope. He designed a 4-by-6-inch resident survey handbill and backing data system; the packet says input directly shaped the proposal. Public records corroborate his direct operations in Oak Park Neighborhood Association's recurring TiredOfTires workflow. The later Phase Two municipal funding chronology remains separate.",
+      "Jamie states that he served as Phase One general contractor and daily site coordinator, coordinating architecture, preservation, roofing, masonry, framing, water, safety, access, and site workflows. The packet independently identifies him as founder/project manager, names the team, and documents the completed scope. Jamie also states that he designed a 4-by-6-inch resident survey handbill and backing data system; the packet independently preserves the artifact and says input directly shaped the proposal. Public records corroborate his direct operations in Oak Park Neighborhood Association's recurring TiredOfTires workflow. The later Phase Two municipal funding chronology remains separate.",
     sourceBasis:
       "Public-safe archival review of the 2019 CCED packet, official CCED and Council records, public project/participant/collaborator social records, a protected multi-year tire-pickup calculator, approved resume context, and Jamie's bounded first-hand role and transition clarifications.",
     guardrail:

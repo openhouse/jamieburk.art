@@ -3,9 +3,17 @@
   "asOf": "2026-07-15",
   "purpose": "One public-safe control record for the portfolio's evidence, reader, visual, interpretive, safety, and release-readiness gaps.",
   "authority": {
-    "machineState": "The latest output from npm run run:knowledge-development controls executable eval state.",
+    "machineState": "The latest outputs from npm run run:knowledge-development and npm run run:composite-integration control their respective executable eval states.",
     "evidenceState": "This ledger controls the named blind-spot inventory and its evidence or task route.",
     "releaseState": "Human approvals and an explicit production decision control publication. A machine pass is not permission to deploy."
+  },
+  "compositeIntegration": {
+    "suite": ".agents/evals/composite-integration.json",
+    "frozenFamily": "docs/knowledge-bank/frozen-evals-family.json",
+    "projectionBindings": "docs/knowledge-bank/projection-surface-bindings.json",
+    "localCommand": "npm run check:composite-integration",
+    "completeCommand": "npm run run:composite-integration -- --require-pass",
+    "authorityBoundary": "A local composite pass cannot satisfy independent judgment, human approval, rights clearance, or release authority."
   },
   "releaseState": "held",
   "releaseReasons": [

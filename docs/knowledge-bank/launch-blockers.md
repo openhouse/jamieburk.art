@@ -18,6 +18,11 @@ production publication.
   governance, safety, and content contract.
 - Run `npm run check` and the production preflight on the exact release
   candidate.
+- Run `npm run check:composite-integration` and bind its candidate manifest to
+  the exact build, preflight, Docker, route, and responsive evidence.
+- The complete composite gate must remain held while `CI-007`, `CI-008`,
+  `CI-009`, or `CI-012` lacks its fingerprint-bound independent or human
+  judgment.
 - Do not reinterpret a local-gate pass as completion of independent judgment,
   human research, visual rights, or release approval.
 

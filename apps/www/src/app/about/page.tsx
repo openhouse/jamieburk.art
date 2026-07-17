@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { createMetadata } from "@/lib/metadata";
 
@@ -45,6 +46,20 @@ export default function AboutPage() {
                 social work connected: embodied inquiry, participation,
                 memory, place, atmosphere, hospitality, and how people inhabit
                 a structure all shape what I build.
+              </p>
+              <p>
+                At the{" "}
+                <Link
+                  className="font-semibold text-jb-blue underline-offset-4 hover:underline"
+                  href="/work/196-sunday-dinner"
+                >
+                  196 Artists Residency / Sunday Dinner
+                </Link>
+                , hospitality was itself a working interface: invitations,
+                recurring meals, orientation, shared space, quiet logistics,
+                and follow-through made participation possible and helped the
+                gathering continue. The atmosphere was not decoration; it was
+                part of the operating design.
               </p>
               <p>
                 I work recursively: follow relationships across systems, make

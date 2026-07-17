@@ -47,6 +47,11 @@ See [intake-and-promotion.md](intake-and-promotion.md) for the complete
 development lifecycle and [photo-evidence-loop.md](photo-evidence-loop.md) for
 the visual-research feedback process.
 
+See [composite-integration.md](composite-integration.md) for the append-safe
+intake command, read-only lifecycle query, fail-closed projection inventory,
+candidate-bound composite evals, and the read-only integration map for the
+frozen `feature/evals-A` through `feature/evals-N` family.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

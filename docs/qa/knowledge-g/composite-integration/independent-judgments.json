@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "candidate_fingerprint": "5f8b0109d100fd48b70168e602061b241f2371bb4941f757cf6aa15d6f624772",
+  "rubric_fingerprint": "5dd84a3b8a91c8c1e2cccd2e281c7e59a3c2494ebaf6fe06ca250fdd2be09b11",
+  "reviewer_role": "independent_exact_composite_holdout",
+  "judgments": [
+    {
+      "eval_id": "CI-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/content/work/fair-rent-nyc.mdx — CLM-CRS-COALITION-OPERATING-SYSTEM and CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE distinguish Jamie’s operating-system work from coalition, agency, Council, and collaborator outcomes.",
+        "apps/www/src/content/work/kc-town-hall.mdx — CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE, CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT, and CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN separate first-hand role attribution, collective delivery, proposal input, appropriation, payment, and completion.",
+        "apps/www/src/content/work/wowlist.mdx — CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE and CLM-WOWLIST-DATABASE-SNAPSHOT-SCALE distinguish co-building, observed distribution/use signals, archive scale, adoption, attendance, and impact.",
+        "apps/www/src/content/work/196-sunday-dinner.mdx — CLM-196-RESIDENCY-ONBOARDING-HANDOFF and CLM-196-ATTENDANCE-WORKBOOK-SCALE separate a demonstrated handoff workflow from participation-scale evidence.",
+        "apps/www/src/content/work/callnyc.mdx — CLM-CALLNYC-INDEPENDENT-FOLLOW-ON and CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS clearly distinguish independent prototype delivery, press coverage, official status, adoption, and present-day guidance.",
+        "apps/www/src/data/proofs.ts and apps/www/src/data/knowledge-bank/public-registry.json preserve contribution wording, collective-credit guardrails, source boundaries, and explicit prohibited causal claims."
+      ],
+      "findings": [
+        "Jamie’s direct actions remain visible without absorbing coalition, institutional, neighborhood, organizer, artist, or governmental credit.",
+        "Artifact creation, delivery, use, handoff, institutional response, adoption, decision impact, and causality are consistently treated as separate states."
+      ],
+      "recommended_next_move": "Record this fingerprint-bound independent judgment for CI-007 without converting it into human approval or release authority.",
+      "confidence": "high",
+      "reviewer_role": "independent_exact_composite_holdout"
+    },
+    {
+      "eval_id": "CI-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/components/Hero.tsx names the target role, the team condition, Jamie’s owned connective work, intended outcomes, and direct routes to role-fit proof, resume, and selected work.",
+        "apps/www/src/app/work/technical-operations/page.tsx translates the offer into requirements, dependencies, risk, decision records, implementation, launch support, onboarding, and handoffs, then maps those capabilities to project evidence.",
+        "apps/www/src/app/about/page.tsx states that Jamie can own the connective layer for teams navigating consequential change and provides a contact next action.",
+        "apps/www/src/components/ProofStrip.tsx surfaces bounded commercial, civic, technical, and cultural proof, including the contribution-calibrated hje-revenue-growth-contribution proof.",
+        "apps/www/src/data/proofs.ts supplies specific actor/action/result/boundary evidence through hje-revenue-growth-contribution, callnyc-civic-data-guidance, fair-rent-campaign-memory, wowlist-community-platform, and sunday-dinner-196-participation-infrastructure.",
+        "docs/knowledge-bank/readiness-ledger.json records the future offer, team condition, owned work, target role, and /contact route."
+      ],
+      "findings": [
+        "Accurate referral sentence: Jamie is a technical project manager and implementation lead who can own the connective operating layer between emerging requirements and reliable launch for complex public-facing teams.",
+        "The hiring path is immediate and future-facing, while the strongest proof remains specific and bounded rather than apologetic or authority-inflating."
+      ],
+      "recommended_next_move": "Record this fingerprint-bound independent judgment for CI-008; retain the current role, ownership, proof, and contact hierarchy.",
+      "confidence": "high",
+      "reviewer_role": "independent_exact_composite_holdout"
+    },
+    {
+      "eval_id": "CI-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/eval-lenses.md defines the Margaret Morse and Warren Sack lenses as contemporary editorial instruments rather than endorsements or professor-authored rubrics.",
+        "apps/www/src/app/about/page.tsx explicitly connects participatory media, social software, code, interfaces, prototypes, installations, gatherings, hospitality, memory, place, and atmosphere to Jamie’s present operating method while preserving a clear target role.",
+        "apps/www/src/content/work/196-sunday-dinner.mdx — CLM-196-RESIDENCY-ONBOARDING-HANDOFF demonstrates embodied and relational practice becoming a concrete orientation, configuration, scheduling, and access handoff.",
+        "apps/www/src/content/work/callnyc.mdx — CLM-CALLNYC-INDEPENDENT-FOLLOW-ON demonstrates a recursive sequence from administrative records, to issue-oriented analysis, to a working resident-facing prototype, to public encounter and bounded iteration.",
+        "apps/www/src/content/work/kc-town-hall.mdx — CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT demonstrates relationships and resident knowledge becoming a collection interface and proposal-shaping input loop in a real neighborhood process.",
+        "apps/www/src/content/work/fair-rent-nyc.mdx — CLM-CRS-COALITION-OPERATING-SYSTEM demonstrates source-backed relational analysis becoming shared memory, decision records, action tracking, consent controls, and further collaborative use.",
+        "apps/www/src/content/work/wowlist.mdx — CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE shows community vocabulary and organizing relationships becoming a technical platform encountered through observable support and distribution practices."
+      ],
+      "findings": [
+        "The artistic, civic, technical, and social practices are connected as one present method rather than presented as detached biography.",
+        "Multiple concrete sequences allow an independent reader to reconstruct movement from relational observation through working form to situated use and bounded learning.",
+        "Interpretive language remains distinctive without obscuring the technical-project-management, product-operations, and implementation offer."
+      ],
+      "recommended_next_move": "Record this fingerprint-bound independent judgment for CI-009 and preserve the About-to-case-study evidence chain.",
+      "confidence": "high",
+      "reviewer_role": "independent_exact_composite_holdout"
+    }
+  ]
+}

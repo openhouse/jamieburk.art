@@ -65,6 +65,13 @@ test("top-level positioning frames work as emerging rather than deficient", () =
   assert.match(projection, /still taking shape|emerging work/i);
 });
 
+test("About grounds embodied practice in a concrete public project", () => {
+  const about = read("apps/www/src/app/about/page.tsx");
+  assert.match(about, /href="\/work\/196-sunday-dinner"/);
+  assert.match(about, /hospitality was itself a working interface/);
+  assert.match(about, /The atmosphere was not decoration/);
+});
+
 test("Chad-lens proof is actor-led, linked, and immediately follows the hero", () => {
   const homepage = read("apps/www/src/app/page.tsx");
   const proofStrip = read("apps/www/src/components/ProofStrip.tsx");
@@ -73,6 +80,8 @@ test("Chad-lens proof is actor-led, linked, and immediately follows the hero", (
   assert.ok(homepage.indexOf("<Hero />") < homepage.indexOf("<ProofStrip />"));
   assert.ok(homepage.indexOf("<ProofStrip />") < homepage.indexOf("Start here"));
   assert.match(proofStrip, /proof\.homepageWording/);
+  assert.match(proofStrip, /Flagship proof \/ E-commerce & operations/);
+  assert.match(proofStrip, /flagshipProof\.homepageWording/);
   assert.match(proofStrip, /View evidence/);
   assert.match(proofStrip, /href=\{href as Route\}/);
 
