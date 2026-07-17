@@ -1,0 +1,109 @@
+{
+  "judgeId": "codex-independent-chad-editor-application-2026-07-16-r16",
+  "lens": "chad-editorial",
+  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
+  "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
+  "profile": "application_ready",
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 3,
+    "chad_lens": 3,
+    "morse_lens": 3,
+    "sack_lens": 3,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 3
+  },
+  "evidence": [
+    {
+      "rubric": "role_clarity",
+      "route": "/",
+      "observation": "The opening viewport identifies Jamie, the Technical Project Manager–Product Operations & Implementation target, the operating-structure value proposition, and direct paths to work, resume, and contact."
+    },
+    {
+      "rubric": "role_fit",
+      "route": "/work/technical-operations",
+      "observation": "Delivery coordination, risk surfacing, dependency management, documentation, launch support, onboarding, and handoffs are mapped to named projects and hiring-relevant proof."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/harry-j-epstein",
+      "observation": "The 2x revenue result is expressly framed as a contribution during Jamie's long-term systems work; causal ownership and private operational evidence are not claimed."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/kc-town-hall",
+      "observation": "Jamie's planning, documentation, and presenter roles remain distinct from Board and Council decisions, and the page states that appropriation does not prove receipt, expenditure, agreement execution, or construction."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/callnyc",
+      "observation": "The event chronology, Council attribution, independent follow-on, press coverage, and archived unofficial status resolve to bounded local references with accessible backlinks."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Canonical claims and references distinguish Jamie's founding, organizing, documentation, and web contributions from coalition leadership and collective legislative outcomes."
+    },
+    {
+      "rubric": "reader_effort",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Descriptive headings and direct agency make the case navigable, but its length, stacked canonical claims, and repeated public/private boundary explanations impose meaningful scanning effort."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/callnyc",
+      "observation": "Jamie is clearly the builder of the independent prototype, and the resident-facing outcome is translated into plain language without implying an official service, hackathon victory, or present-day guidance."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/kc-town-hall",
+      "observation": "The sourced Council appropriation is stated directly without making Jamie responsible for municipal decisions or unproven downstream funding stages; the claim-heavy presentation keeps the page short of exceptional editorial ease."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "/about",
+      "observation": "Artistic experimentation, installations, gatherings, participation, memory, and place remain connected to Jamie's present systems practice, although few material or visual specimens are available."
+    },
+    {
+      "rubric": "sack_lens",
+      "route": "/work/callnyc",
+      "observation": "The case connects civic records, issue modeling, interface design, and resident action, but the recursive physical-digital method is more often described than visually demonstrated."
+    },
+    {
+      "rubric": "visual_evidence",
+      "route": "/work/callnyc",
+      "observation": "Artifact cards describe the interface, translation layer, and press record in text, but no approved project image or inspectable visual artifact is rendered; this remains a declared application-profile deferral and production gap."
+    },
+    {
+      "rubric": "resume_alignment",
+      "route": "/resume",
+      "observation": "The role title, operating-structure proposition, selected impact, application PDF path, and corrected CallNYC chronology reinforce the public portfolio narrative."
+    },
+    {
+      "rubric": "responsive_quality",
+      "route": "/work/callnyc",
+      "observation": "Candidate-bound evidence reports no overflow across desktop, mobile, and reflow views and visible focus for all 24 traversed controls, including citations; the 200% result uses an equivalent viewport rather than browser-chrome zoom."
+    },
+    {
+      "rubric": "sharing_quality",
+      "route": "/resume",
+      "observation": "Canonical, Open Graph, Twitter-card, resume-download, and contact paths are coherent, while the inspected candidate intentionally retains staging metadata defaults."
+    },
+    {
+      "rubric": "operational_confidence",
+      "route": "/",
+      "observation": "Repository, route, local browser, accessibility, metadata, and resume checks support application use; matching production deployment, smoke, indexing, monitoring, rollback, and human-approval evidence remain explicitly deferred."
+    }
+  ],
+  "regressions": [],
+  "highestValueFailure": "visual_evidence",
+  "smallestDefensiblePatch": "Replace one text-only CallNYC artifact card with one approved public-safe image of the surviving issue-pathway interface, with concise alt text and a caption limited to what the image proves while preserving the archived, unofficial-status boundary.",
+  "passes": true,
+  "confidence": "high"
+}

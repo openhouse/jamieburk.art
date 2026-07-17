@@ -1,0 +1,30 @@
+{
+  "suite": "feature-evals-composite-integration-v3",
+  "profile": "integration_ready",
+  "headSha": "3614c3d26a95ca4af407d40d19b96bc69b03948e",
+  "startingBranchSha": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
+  "candidate": "sha256:41716863523bb05801578eb6e33cf5f18d2f2049db33ad209c6b0877f43e4716",
+  "contract": "sha256:06adf52b69eaf4bbee47df8873f339f804ef43ec65b224b85f2f697550892e8b",
+  "supersedesContract": "feature-evals-composite-integration-v2",
+  "supersessionReason": "Version 3 binds the branch ledger and governance record into the contract and executes Git-history append-only validation inside the lifecycle hard gate.",
+  "score": 100,
+  "threshold": 86,
+  "passed": false,
+  "failedHardGates": [
+    "candidate_binding"
+  ],
+  "failedRubrics": [],
+  "passingBoundaries": [
+    "frozen_source_integrity",
+    "branch_family_accounting",
+    "canonical_architecture",
+    "append_only_lifecycle",
+    "semantic_claim_integrity",
+    "projection_restraint",
+    "reviewability_accounting",
+    "no_regression",
+    "governance_honesty"
+  ],
+  "capturedAt": "2026-07-16",
+  "nextAction": "Obtain two distinct independent judgments for the exact version 3 candidate and contract."
+}

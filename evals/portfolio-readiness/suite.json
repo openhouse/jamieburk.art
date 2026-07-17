@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "id": "portfolio-readiness-v1",
+  "objective": "Improve the smallest defensible patch until the selected release profile passes while preserving Jamie's voice, public safety, claim boundaries, and the existing architecture.",
+  "invariants": [
+    "The public site remains a purposeful projection from the knowledge bank, not an evidence dump.",
+    "No score may be improved by weakening a claim boundary, hiding a failure, or publishing protected material.",
+    "Staging remains non-indexable and production indexing remains an explicit human-approved action.",
+    "Candidate changes stay bounded to the highest-value failing criterion.",
+    "Evaluation definitions do not change during a candidate comparison."
+  ],
+  "profiles": {
+    "application_ready": {
+      "minimumWeightedScore": 86,
+      "minimumRequiredRubricScore": 3,
+      "requiredHardGates": [
+        "repository_integrity",
+        "baseline_improvement",
+        "model_judgment",
+        "chad_lens_review",
+        "morse_lens_review",
+        "sack_lens_review",
+        "public_safety",
+        "claim_integrity",
+        "resume_consistency",
+        "route_health",
+        "application_path",
+        "responsive_accessibility"
+      ],
+      "requiredRubrics": [
+        "role_clarity",
+        "role_fit",
+        "proof_defensibility",
+        "citational_care",
+        "reader_effort",
+        "chad_lens",
+        "morse_lens",
+        "sack_lens",
+        "resume_alignment",
+        "responsive_quality",
+        "sharing_quality"
+      ],
+      "allowedDeferrals": [
+        "Additional approved visual evidence",
+        "Production cutover and indexing",
+        "Production monitoring and deployed-commit verification"
+      ],
+      "consecutivePassingRuns": 2
+    },
+    "production_ready": {
+      "minimumWeightedScore": 90,
+      "minimumRequiredRubricScore": 3,
+      "requiredHardGates": [
+        "repository_integrity",
+        "baseline_improvement",
+        "model_judgment",
+        "chad_lens_review",
+        "morse_lens_review",
+        "sack_lens_review",
+        "public_safety",
+        "claim_integrity",
+        "resume_consistency",
+        "route_health",
+        "application_path",
+        "responsive_accessibility",
+        "production_operations",
+        "human_approval"
+      ],
+      "requiredRubrics": [
+        "role_clarity",
+        "role_fit",
+        "proof_defensibility",
+        "citational_care",
+        "reader_effort",
+        "chad_lens",
+        "morse_lens",
+        "sack_lens",
+        "visual_evidence",
+        "resume_alignment",
+        "responsive_quality",
+        "sharing_quality",
+        "operational_confidence"
+      ],
+      "allowedDeferrals": [],
+      "consecutivePassingRuns": 2
+    }
+  },
+  "hardGates": [
+    {
+      "id": "repository_integrity",
+      "description": "Required application, knowledge-bank, evaluation, and deployment files exist without unresolved merge markers."
+    },
+    {
+      "id": "baseline_improvement",
+      "description": "The candidate is bound to a content fingerprint, improves on an immutable baseline, and does not regress any protected rubric."
+    },
+    {
+      "id": "model_judgment",
+      "description": "At least five candidate-bound independent model judgments pass with distinct lenses and no reported regression."
+    },
+    {
+      "id": "chad_lens_review",
+      "description": "A dedicated Chad-editorial judgment confirms courageous precision, legibility, visible agency, useful outcomes, and right-sized claims."
+    },
+    {
+      "id": "morse_lens_review",
+      "description": "A dedicated Margaret Morse judgment confirms that embodied, artistic, material, social, and place-based inquiry remains legible rather than being reduced to organizational utility."
+    },
+    {
+      "id": "sack_lens_review",
+      "description": "A dedicated Warren Sack judgment confirms recursive relational thinking, computational prototyping, physical-digital translation, source rigor, and collaborative architecture."
+    },
+    {
+      "id": "public_safety",
+      "description": "The existing public-safety scanner passes and no public surface exposes protected material."
+    },
+    {
+      "id": "claim_integrity",
+      "description": "Knowledge-bank and citation checks pass without weakening attribution, guardrails, or anti-claims."
+    },
+    {
+      "id": "resume_consistency",
+      "description": "The approved PDF exists, downloads from the declared path, retains the phone number outside HTML, and agrees with the public chronology."
+    },
+    {
+      "id": "route_health",
+      "description": "Canonical route and redirect checks pass."
+    },
+    {
+      "id": "application_path",
+      "description": "The homepage and role-fit page provide direct paths to selected work, the resume, and contact."
+    },
+    {
+      "id": "responsive_accessibility",
+      "description": "Static semantic proxies pass; an independent browser judge must still inspect mobile, zoom, focus, and citations."
+    },
+    {
+      "id": "production_operations",
+      "description": "A reviewed commit SHA, production smoke result, indexing state, and rollback evidence are explicitly supplied."
+    },
+    {
+      "id": "human_approval",
+      "description": "Jamie explicitly approves the exact production candidate and deploy."
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "role_clarity",
+      "weight": 16,
+      "question": "Can a hiring manager identify Jamie's role, value, and target work in 30 seconds?"
+    },
+    {
+      "id": "role_fit",
+      "weight": 12,
+      "question": "Does the selected entry page answer why Jamie fits technical operations, product operations, or implementation work?"
+    },
+    {
+      "id": "proof_defensibility",
+      "weight": 16,
+      "question": "Are accomplishments strong, specific, source-backed, and no stronger than the evidence?"
+    },
+    {
+      "id": "citational_care",
+      "weight": 9,
+      "question": "Can a reader inspect what each important source supports and where it stops?"
+    },
+    {
+      "id": "reader_effort",
+      "weight": 6,
+      "question": "Is the path concise, scannable, and free of internal governance narration?"
+    },
+    {
+      "id": "chad_lens",
+      "weight": 8,
+      "question": "Does the site make Jamie visible, name the actual work and useful outcome in one pass, translate specialized language, and preserve collective credit without understating or inflating the record?"
+    },
+    {
+      "id": "morse_lens",
+      "weight": 3,
+      "question": "Does the portfolio preserve the connection among embodied inquiry, artistic experimentation, material and spatial practice, participation, memory, and place without obscuring professional legibility?"
+    },
+    {
+      "id": "sack_lens",
+      "weight": 3,
+      "question": "Does the portfolio show Jamie tracing relationships recursively, turning them into source-backed prototypes and interfaces, and connecting computational, social, physical, and collaborative systems?"
+    },
+    {
+      "id": "visual_evidence",
+      "weight": 7,
+      "question": "Do approved artifacts help readers see the work without exposing protected material?"
+    },
+    {
+      "id": "resume_alignment",
+      "weight": 7,
+      "question": "Do the website and resume reinforce one coherent professional history?"
+    },
+    {
+      "id": "responsive_quality",
+      "weight": 5,
+      "question": "Does hierarchy remain clear on mobile, desktop, keyboard navigation, and zoom?"
+    },
+    {
+      "id": "sharing_quality",
+      "weight": 4,
+      "question": "Are titles, descriptions, social previews, links, and contact paths trustworthy?"
+    },
+    {
+      "id": "operational_confidence",
+      "weight": 4,
+      "question": "Could another operator deploy, verify, diagnose, and roll back this exact version?"
+    }
+  ],
+  "scoring": {
+    "0": "Absent or materially harmful",
+    "1": "Substantial failure",
+    "2": "Usable with an important weakness",
+    "3": "Strong and release-capable",
+    "4": "Exceptional, clear, and fully evidenced"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "judgeId": "codex-independent-hiring-manager-application-2026-07-16-r16",
+  "lens": "hiring-manager",
+  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
+  "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
+  "profile": "application_ready",
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 3,
+    "chad_lens": 3,
+    "morse_lens": 3,
+    "sack_lens": 3,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 3
+  },
+  "evidence": [
+    {
+      "rubric": "role_clarity",
+      "route": "/",
+      "observation": "The opening identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, states that he creates operating structure for complex public-facing teams, and immediately links to work, resume, and contact."
+    },
+    {
+      "rubric": "role_fit",
+      "route": "/work/technical-operations",
+      "observation": "The page maps planning rhythms, dependency coordination, risk surfacing, documentation, onboarding, launch support, metrics, and handoffs directly to eight project contexts."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/harry-j-epstein",
+      "observation": "The 2x revenue statement is framed as a contribution during long-term e-commerce and operations stewardship, while private dashboards, revenue detail, customer data, and stronger causal claims remain excluded."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/kc-town-hall",
+      "observation": "The page separates Jamie's planning and presentation role from Board and Council actions and explicitly distinguishes appropriation from disbursement, receipt, expenditure, agreement execution, or completed construction."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/callnyc",
+      "observation": "Canonical claims distinguish the January 2016 hackathon, the Council's attributed description, Jamie's independent follow-on prototype, press coverage, and archived unofficial status; browser evidence confirms eight local references, backlinks, accessible labels, and a References heading."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Browser evidence records 21 references and backlinks plus 15 source notes, with working forward and return navigation; the prose also separates public support, unresolved questions, collective campaign credit, and protected coalition material."
+    },
+    {
+      "rubric": "reader_effort",
+      "route": "/work/fair-rent-nyc",
+      "observation": "The case is scannable through task-oriented headings, but its long claim-rich operating record and repeated boundary explanations require more attention than a concise hiring-manager skim."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/callnyc",
+      "observation": "Jamie is clearly the builder and product translator: he organized records into issue pathways and made civic data usable as resident-facing guidance. The result and boundaries are legible, though some other case studies use denser governance language."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "/about",
+      "observation": "The page connects experimental media and social practice with prototypes, installations, gatherings, public situations, participation, memory, and place, then relates that formation to present systems work without exposing educational records."
+    },
+    {
+      "rubric": "sack_lens",
+      "route": "/about",
+      "observation": "Jamie describes tracing relationships across social and technical systems and turning patterns into interfaces and shared structures; CallNYC and WOWList show that movement becoming public interfaces and community infrastructure."
+    },
+    {
+      "rubric": "visual_evidence",
+      "route": "/work/harry-j-epstein",
+      "observation": "The artifact gallery contains designed text cards describing workflows, analytics summaries, and content systems rather than approved screenshots, diagrams, or other direct project imagery. This remains the declared application deferral and production-readiness gap."
+    },
+    {
+      "rubric": "resume_alignment",
+      "route": "/resume",
+      "observation": "The HTML resume framing repeats the site's Technical Project Manager, Product Operations, and Implementation positioning; deterministic evidence confirms the approved PDF, corrected CallNYC chronology, successful download, and phone containment outside HTML."
+    },
+    {
+      "rubric": "responsive_quality",
+      "route": "/work/callnyc",
+      "observation": "Candidate-bound browser evidence reports no overflow across eleven desktop and mobile routes, visible focus for all 24 traversed controls, working citation focus, and successful 200%-equivalent reflow. The zoom result uses a standards-equivalent viewport rather than browser-chrome zoom."
+    },
+    {
+      "rubric": "sharing_quality",
+      "route": "/resume",
+      "observation": "The route exposes a canonical staging URL, descriptive Open Graph title, generated social image, summary-large-image Twitter card, working resume download, and direct contact path; production-domain verification remains deferred."
+    },
+    {
+      "rubric": "operational_confidence",
+      "route": "/api/health",
+      "observation": "The repository includes a health route and deterministic route, citation, public-safety, resume, and responsive checks. Exact production deploy SHA, smoke result, indexing verification, monitoring, and rollback evidence remain explicitly deferred for application readiness."
+    }
+  ],
+  "regressions": [],
+  "highestValueFailure": null,
+  "smallestDefensiblePatch": null,
+  "passes": true,
+  "confidence": "high"
+}

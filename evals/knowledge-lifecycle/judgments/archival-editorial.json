@@ -1,0 +1,65 @@
+{
+  "judgeId": "archival-editorial-2026-07-16-star",
+  "lens": "archival-editorial",
+  "candidate": "sha256:d684e41f67ff31f16ce38e3e8778b808378331cb7a0533be0003fb75d4f0b120",
+  "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
+  "passes": true,
+  "scores": {
+    "capture_integrity": 4,
+    "source_decomposition": 4,
+    "claim_atomicity": 4,
+    "provenance_closure": 4,
+    "status_separation": 4,
+    "project_context": 4,
+    "research_honesty": 4,
+    "projection_restraint": 4
+  },
+  "evidence": [
+    {
+      "rubric": "capture_integrity",
+      "observation": "The Kansas City Star artifact and independently recovered Pitch article have stable intake and source identities, explicit dispositions, project and entity relationships, and linked claim IDs. The Star artifact remains local-private behind an opaque protected locator; its pages are absent from the public repository."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "The Star and Pitch sources are decomposed separately. Their records distinguish support for origination, the three-person crew, July 21 departure, progress beyond 1,000 miles, craft construction, and Jamie's attributed civic premise from non-support for Gulf completion, uninterrupted travel, complete labor allocation, sole credit, engineering certification, and republication rights."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Origination, the mid-voyage chronology, recycled bicycle-powered artifact, attributed civic premise, broader voyage account, and later Gulf completion remain separate claims. The records do not convert originating the idea into sole construction, the craft description into engineering certification, or an artistic premise into measured civic impact."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "The mid-voyage and artifact claims resolve to contemporaneous Star reporting with independent Pitch corroboration. The civic-premise claim resolves only to Jamie's attributed statement in the Star. Later Gulf completion resolves to a separately reviewed 2009 Pitch source, while the 2007 Star functions only as boundary evidence showing that the journey was still underway."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "The three new Water Publics claims are mature and qualified but editorially unused. Their citation-required projections remain on hold with no public surfaces. The protected Star source has public-metadata-only visibility, private preservation status, permission-needed rights status, and metadata-only display status."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The Water Publics dossier places the source cycle within a longer sequence of raft construction, collective travel, river encounters, and later participatory programming, with useful artifact, route, collaborator, rights, and visual-research context."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Questions 74 through 76 pass. The newspaper remains bibliographic metadata only; the pages, credited photographs, reporter contact details, and private location are excluded. The two 2007 reports support a three-person mid-voyage chronology beyond 1,000 miles but not later Gulf completion. The raft remains a collective artifact, and Jamie's premise remains distinct from certification, impact, representation, or endorsement."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "The source cycle states that no stable public Kansas City Star URL was recovered rather than claiming none exists. It records the three named travelers as the crew at the reported stage while leaving room for departure participants, supporters, repair labor, and other contributions not exhaustively allocated by the sources."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "No website surface changed. The records omit the PDF, page images, full article text, photographs, contact information, private filesystem location, and unrelated newspaper content. Titles and bibliographic facts are retained while article substance is paraphrased with explicit rights boundaries."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Deterministic evaluation reproduced the exact candidate and contract, scored 100 of 100, and all 89 lifecycle regression tests passed, including protected metadata, collective credit, mid-voyage, sole-builder, impact, and private-path mutations."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The candidate preserves the distinction between archival depth and rhetorical selection: mature evidence can remain available without being forced onto a hiring-focused public composition."
+    }
+  ],
+  "regressions": [],
+  "nextAction": "Seek a stable licensed or archived public copy of the Kansas City Star article and collaborator evidence about design, fabrication, repair, and operating roles; retain the current metadata-only source and collective-credit boundaries unless those rights and allocations are independently confirmed."
+}
