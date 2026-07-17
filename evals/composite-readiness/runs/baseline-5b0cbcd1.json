@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "runType": "untouched-baseline",
+  "evaluatedAt": "2026-07-16",
+  "revision": "5b0cbcd1a7f913d2281c671e46903ad997a743f5",
+  "node": "v26.5.0",
+  "npm": "11.3.0",
+  "rootCheck": "passed",
+  "knowledgeLifecycle": {
+    "entities": 44,
+    "projects": 20,
+    "leads": 90,
+    "observations": 249,
+    "candidates": 86,
+    "researchTasks": 71,
+    "decisions": 94,
+    "editorialBriefs": 21,
+    "proofSurfaceManifests": 15,
+    "mediaLeads": 20
+  },
+  "domainEvals": {
+    "nycartcX": 100,
+    "urbanhermitX": 100,
+    "nycacFacebookEvents": 100,
+    "nycacFacebookPosts": 100,
+    "kcSpacesFundFacebookPosts": 100,
+    "personalFacebookPosts": 100,
+    "personalWowlistFacebookEvents": 100,
+    "callscriptBridge": 100,
+    "dclaCouncilBridge": 100,
+    "blindSpotGovernance": 100,
+    "blindSpotClosureProgress": 10
+  },
+  "semanticState": "No fresh exact-revision scorecards supplied; semantic stop conditions remain open.",
+  "compositeState": "No A-N composite contract, final donor dispositions, or composite CI gate existed at the pinned baseline.",
+  "nextAction": "Freeze the composite rubric, implement the contract and mutation tests, then hill climb the measured donor, semantic, runtime, and external-boundary gaps."
+}
+

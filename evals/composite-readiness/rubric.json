@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "id": "composite-readiness-v1",
+  "title": "Feature evals composite readiness",
+  "objective": "Integrate the strongest distinct behavior from feature/evals-A through feature/evals-N into one public-safe, auditable knowledge and portfolio system without creating parallel truth, losing evidence, weakening reader value, or fabricating human closure.",
+  "decision": "Is this exact feature/knowledge-k revision a coherent, reproducible, application-ready composite with honest external boundaries?",
+  "recommendations": ["iterate", "framework-ready", "application-ready"],
+  "passingRecommendations": ["framework-ready", "application-ready"],
+  "audiences": [
+    "Jamie Burkart",
+    "portfolio integration engineers",
+    "archival-production agents",
+    "hiring readers",
+    "public-safety reviewers",
+    "future maintainers"
+  ],
+  "stopCondition": {
+    "allDeterministicGatesPass": true,
+    "weightedScoreAtLeast": 90,
+    "everyCriterionAtLeast": 4,
+    "criticalCriteriaAtLeast": 4,
+    "stablePassingRuns": 2,
+    "explicitHumanApprovalRequiredForProduction": true
+  },
+  "scoreScale": {
+    "1": "Missing, misleading, unsafe, broken, or unable to preserve the donor behavior.",
+    "2": "A partial mechanism exists, but material evidence, reader value, governance, or reproducibility can be lost.",
+    "3": "Directionally sound, but a consequential integration or evidence gap remains.",
+    "4": "Coherent, public-safe, inspectable, and application-ready with only bounded refinements or honest external gates remaining.",
+    "5": "Exceptionally resilient and clear: evidence, correction, composition, reader value, and governance reinforce one another without duplicate machinery."
+  },
+  "deterministicChecks": [
+    {
+      "id": "composite-contract",
+      "description": "The A-N donor ledger, human-status boundary, planning maps, CI contract, and mutation tests are complete and coherent.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:composite-readiness"
+    },
+    {
+      "id": "knowledge-lifecycle-contract",
+      "description": "Append-safe intake, proposition-level evidence, promotion, correction, retrieval, and exact-surface governance remain valid.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:knowledge-lifecycle"
+    },
+    {
+      "id": "citation-contract",
+      "description": "Canonical citations and campaign collections remain complete, bounded, and current.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:citations"
+    },
+    {
+      "id": "archive-contract",
+      "description": "Social identity, corpus arithmetic, provenance, privacy, and projection boundaries remain reproducible.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:social-archive && npm run check:nycartc-corpus && npm run check:urbanhermit-corpus"
+    },
+    {
+      "id": "blind-spot-contract",
+      "description": "Blind-spot governance is complete and no external task is falsely closed.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run evals:blind-spots"
+    },
+    {
+      "id": "public-safety-contract",
+      "description": "No private payload, protected locator, unsafe projection, or unapproved public evidence route is shipped.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run public-safety && npm run check:routes"
+    },
+    {
+      "id": "visual-evidence-contract",
+      "description": "Checked-in route and artifact observations remain bound to their application sources.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:visual-evidence"
+    },
+    {
+      "id": "staging-preflight",
+      "description": "The exact candidate passes the complete noindex staging preflight.",
+      "profiles": ["release"],
+      "type": "command",
+      "command": "npm run preflight:staging"
+    },
+    {
+      "id": "production-preflight",
+      "description": "The exact candidate passes the explicit production-mode build and indexing preflight without authorizing deployment.",
+      "profiles": ["release"],
+      "type": "command",
+      "command": "npm run preflight:production"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "CR-001",
+      "name": "Frozen donor coverage",
+      "weight": 8,
+      "minimumScore": 4,
+      "critical": false,
+      "minimumEvidence": 3,
+      "question": "Does every A-N branch have an exact-commit, behavior-level integration disposition with verification?",
+      "passDefinition": "All fourteen branches are reviewed at their frozen SHAs and mapped to integrated, already-present, superseded, held, research-needed, or rejected-with-reason outcomes. No branch is credited through filename similarity alone.",
+      "evidenceToInspect": ["donor inventory", "composite integration ledger", "representative donor specs and tests"],
+      "repairPolicy": "Close one unmapped donor behavior at a time through a focused implementation or explicit evidence-backed disposition.",
+      "antiGaming": "Do not count branch size, copied files, PR prose, or a blanket already-present label as integration evidence."
+    },
+    {
+      "id": "CR-002",
+      "name": "No-silent-loss lifecycle",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "question": "Can fragments, sources, observations, candidates, research, decisions, claims, briefs, proofs, media, corrections, and retirements remain connected and retrievable?",
+      "passDefinition": "K's append-safe lifecycle remains canonical, all new planning records connect to it or to an explicit integration registry, and no parallel truth store silently bypasses validation.",
+      "evidenceToInspect": ["knowledge lifecycle schema", "append-only logs", "query and maintenance reports", "composite mappings"],
+      "repairPolicy": "Connect or remove an orphan structure before adding more records.",
+      "antiGaming": "More fields, files, or stored URLs do not pass this criterion without graph connections, next actions, and validation."
+    },
+    {
+      "id": "CR-003",
+      "name": "Atomic provenance and source scope",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "question": "Do consequential statements preserve proposition-level support, locator, evidence role, limitations, and alternative explanations?",
+      "passDefinition": "Donor implementation provenance remains separate from real-world evidence; sources are decomposed before claims; collection membership, repetition, and AI summaries cannot silently become corroboration.",
+      "evidenceToInspect": ["atomic observations", "source relationships", "does-not-establish boundaries", "campaign and social corpora"],
+      "repairPolicy": "Narrow the proposition or improve its source relationship before strengthening any public wording.",
+      "antiGaming": "Do not raise confidence through source count, press repetition, repository presence, or Jamie's confidence alone."
+    },
+    {
+      "id": "CR-004",
+      "name": "Adversarial correction resilience",
+      "weight": 8,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "question": "Can independent review reject a candidate and can later evidence narrow, correct, supersede, or retire it without erasing history?",
+      "passDefinition": "Correction and retirement are append-safe, stale authorizations cannot revive, rejected candidates remain inspectable, and mutation tests prove the failure modes.",
+      "evidenceToInspect": ["correction decisions", "retirement events", "rejected iteration records", "adversarial tests"],
+      "repairPolicy": "Preserve the old state, append the new decision, repair every projection, and add the smallest regression test that would have caught the defect.",
+      "antiGaming": "Do not rewrite history, delete the embarrassing candidate, or call a wording change a correction without repairing its authorization chain."
+    },
+    {
+      "id": "CR-005",
+      "name": "Exact-surface publication governance",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "question": "Does every public claim and proof resolve to current human approval for its exact route or download?",
+      "passDefinition": "Canonical claims, proof manifests, downloadable artifacts, briefs, evidence-only links, and retired routes fail closed without exact-destination authorization.",
+      "evidenceToInspect": ["promotion decisions", "proof surface manifests", "publication-safe queries", "resume governance"],
+      "repairPolicy": "Repair the knowledge and authorization layer before changing the public page.",
+      "antiGaming": "Defensibility, project proximity, page category, or evidence linkage cannot substitute for exact-surface permission."
+    },
+    {
+      "id": "CR-006",
+      "name": "Contextual integrity and public safety",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "question": "Does the system preserve appropriate information flow, privacy, consent, rights, collective credit, causal limits, and source position?",
+      "passDefinition": "Professional contribution remains visible while protected payloads stay outside Git, collective work remains collective, metrics retain denominators, and contextual use never outruns permission.",
+      "evidenceToInspect": ["public-safety output", "claim guardrails", "human status", "media and collaborator protocols"],
+      "repairPolicy": "Use the strongest public-safe claim the context supports and route unresolved use to human review.",
+      "antiGaming": "Neither maximal disclosure nor blanket omission is acceptable; preserve truthful agency and appropriate boundaries together."
+    },
+    {
+      "id": "CR-007",
+      "name": "Chad Lens and reader burden",
+      "weight": 8,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "question": "Can a busy reader identify Jamie, his action, the purpose, what became usable, and the next action in one pass?",
+      "passDefinition": "The strongest employer-relevant result arrives before archive process, specialized language is translated, and collective-credit boundaries remain visible.",
+      "evidenceToInspect": ["homepage", "Technical Operations", "resume", "lead case studies", "Chad Lens contract"],
+      "repairPolicy": "Move the answer forward and name the concrete action and usable end before adding detail.",
+      "antiGaming": "Do not reduce burden by deleting proof, caveats, collaborators, or meaningful complexity."
+    },
+    {
+      "id": "CR-008",
+      "name": "Margaret Morse artistic continuity",
+      "weight": 5,
+      "minimumScore": 4,
+      "critical": false,
+      "minimumEvidence": 3,
+      "question": "Does the portfolio preserve embodied, artistic, relational, participatory, place-based, and care-centered intelligence within the professional argument?",
+      "passDefinition": "At least one visible threshold and multiple unlike projects show structures people inhabit, question, and carry forward without using protected professor material as a current endorsement.",
+      "evidenceToInspect": ["About threshold", "artistic continuity map", "Open House, WOW List, Sunday Dinner, civic cases"],
+      "repairPolicy": "Restore one concrete relationship among people, place, material, participation, and learning without obscuring role fit.",
+      "antiGaming": "Do not create a testimonial wall or generic artistic identity paragraph detached from actual projects."
+    },
+    {
+      "id": "CR-009",
+      "name": "Warren Sack recursive systems legibility",
+      "weight": 5,
+      "minimumScore": 4,
+      "critical": false,
+      "minimumEvidence": 3,
+      "question": "Is Jamie's sequence from observed relationships through model, interface, situated use, learning, documentation, and collective continuation legible?",
+      "passDefinition": "Multiple projects show the sequence in materially different forms, historical work is bounded, and implementation remains connected to social use and handoff.",
+      "evidenceToInspect": ["Technical Operations", "recursive method map", "WOW List, CallNYC, Fair Rent, Source-Backed Team Memory"],
+      "repairPolicy": "Add the missing link in one real project's operating sequence rather than asserting a universal method abstractly.",
+      "antiGaming": "Do not claim invention, sole authorship, current research authority, or technical proficiency not established by the record."
+    },
+    {
+      "id": "CR-010",
+      "name": "Hiring-reader and application readiness",
+      "weight": 8,
+      "minimumScore": 4,
+      "critical": false,
+      "minimumEvidence": 3,
+      "question": "Can an unbriefed reader recover the target role, differentiated value, three accurate proofs, and next action?",
+      "passDefinition": "The site, resume, contact path, and priority work form a coherent sendable packet while real unfamiliar-reader evidence remains distinguished from an agent protocol.",
+      "evidenceToInspect": ["homepage path", "resume and PDF", "contact", "priority case studies", "human audience status"],
+      "repairPolicy": "Fix the earliest broken or ambiguous decision in the application path before expanding secondary content.",
+      "antiGaming": "An agent's simulated reader opinion cannot be recorded as a human audience session."
+    },
+    {
+      "id": "CR-011",
+      "name": "Accessibility, artifact, and runtime evidence",
+      "weight": 6,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "question": "Are responsive behavior, keyboard use, contrast, PDF integrity, metadata, indexing, Docker runtime, and routes observed on the exact candidate?",
+      "passDefinition": "Measured browser and artifact evidence is source-bound, current, public-safe, and reproducible; code inspection alone cannot satisfy rendered criteria.",
+      "evidenceToInspect": ["route matrix", "visual evidence manifest", "PDF renders", "Docker smoke report", "staging and production preflights"],
+      "repairPolicy": "Repair the actual rendered defect, regenerate only affected evidence, and bind it to the new application digest.",
+      "antiGaming": "Do not hide overflow, suppress console output, reuse stale screenshots, or infer runtime success from a build."
+    },
+    {
+      "id": "CR-012",
+      "name": "Honest human and external boundaries",
+      "weight": 4,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "question": "Are collaborator review, audience sessions, market response, rights, consent, production cutover, and Jamie approval represented without false closure?",
+      "passDefinition": "Governance is complete, closure progress is separate, empty evidence remains explicit, and no agent-verifiable pass impersonates external observation.",
+      "evidenceToInspect": ["human status", "blind-spot report", "external evidence arrays", "release status"],
+      "repairPolicy": "Improve the protocol or evidence request, then stop at the real person or external state required.",
+      "antiGaming": "Do not convert a protocol, public article, archive record, AI review, or agent scorecard into collaborator permission or human observation."
+    },
+    {
+      "id": "CR-013",
+      "name": "Corpus and metric reproducibility",
+      "weight": 5,
+      "minimumScore": 4,
+      "critical": false,
+      "minimumEvidence": 3,
+      "question": "Can population totals, gaps, link dispositions, stakeholder floors, metric dates, and authorship limits be reproduced from canonical ledgers?",
+      "passDefinition": "Every reported denominator and lower bound names its collection control, unresolved slots remain explicit, privacy mutations hold, and no duplicate donor corpus competes with the canonical record.",
+      "evidenceToInspect": ["social archive checks", "corpus manifests", "campaign press generator", "metric boundaries"],
+      "repairPolicy": "Repair the canonical ledger or derivation before changing a public metric.",
+      "antiGaming": "Do not call a bounded profile recovery a lifetime census or convert outreach, repost, like, mention, and endorsement into one engagement number."
+    },
+    {
+      "id": "CR-014",
+      "name": "CI and exact-candidate reproducibility",
+      "weight": 3,
+      "minimumScore": 4,
+      "critical": false,
+      "minimumEvidence": 3,
+      "question": "Can a clean environment reproduce the deterministic decision for the exact candidate?",
+      "passDefinition": "Node and npm versions are explicit, CI runs the composite and root gates, generated artifacts are checked for drift, and run records bind commands and results to one SHA.",
+      "evidenceToInspect": ["GitHub workflow", "package scripts", "exact-candidate reports", "clean-install verification"],
+      "repairPolicy": "Remove environment ambiguity or nondeterminism before changing evaluation thresholds.",
+      "antiGaming": "A passing local command, stale CI run, or report from another revision cannot satisfy exact-candidate reproducibility."
+    }
+  ]
+}
+

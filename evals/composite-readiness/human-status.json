@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-16",
+  "candidateRevision": null,
+  "governanceTarget": 100,
+  "falseClosureTarget": 0,
+  "gates": [
+    { "id": "collaborator-corroboration", "status": "open", "evidenceCount": 0, "closureDefinition": "Three permission-scoped confirmations across three projects." },
+    { "id": "unfamiliar-reader-validation", "status": "open", "evidenceCount": 0, "closureDefinition": "Five uncoached sessions across at least two target reader groups." },
+    { "id": "visual-rights-and-consent", "status": "open", "evidenceCount": 0, "closureDefinition": "Three cleared, consent-resolved visual proofs across three projects." },
+    { "id": "market-response", "status": "open", "evidenceCount": 0, "closureDefinition": "A bounded application sample with real response observations." },
+    { "id": "production-cutover", "status": "open", "evidenceCount": 0, "closureDefinition": "Approved deploy, route observation, rollback evidence, and postdeploy smoke results." },
+    { "id": "jamie-exact-candidate-approval", "status": "open", "evidenceCount": 0, "closureDefinition": "Jamie's explicit approval of the exact candidate commit, content, artifacts, and indexing state." }
+  ],
+  "boundary": "An agent may improve governance and prepare review packets. It may not convert a protocol, public article, archive record, AI review, or model scorecard into human or external closure."
+}
+
