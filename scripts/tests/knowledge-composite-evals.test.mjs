@@ -244,8 +244,10 @@ test("candidate binding rejects arbitrary SHAs and post-candidate implementation
     headSha: "b".repeat(40),
     commitExists: false,
     candidateIsAncestor: false,
-    changedPaths: []
-  }).join("\n");
+    changedPaths: [],
+    candidateChangedPaths: [],
+    candidateFingerprint: ""
+  }, "candidate").join("\n");
   assert.match(errors, /does not resolve to a Git commit/);
   assert.match(errors, /must be an ancestor/);
 
@@ -253,12 +255,25 @@ test("candidate binding rejects arbitrary SHAs and post-candidate implementation
     headSha: "b".repeat(40),
     commitExists: true,
     candidateIsAncestor: true,
+    candidateChangedPaths: ["scripts/lib/knowledge-composite-validation.mjs"],
+    candidateFingerprint: "candidate",
     changedPaths: [
       "docs/evals/knowledge-composite-integration-state.json",
       "scripts/lib/knowledge-composite-validation.mjs"
     ]
-  }).join("\n");
+  }, "candidate").join("\n");
   assert.match(errors, /exceed the evidence-only allowlist/);
+
+  errors = validateCandidateGitBinding(state, {
+    headSha: "b".repeat(40),
+    commitExists: true,
+    candidateIsAncestor: true,
+    candidateChangedPaths: ["docs/evals/knowledge-composite-integration-state.json"],
+    candidateFingerprint: "different",
+    changedPaths: []
+  }, "candidate").join("\n");
+  assert.match(errors, /implementation-changing commit/);
+  assert.match(errors, /reproduce from the named Git commit tree/);
 });
 
 test("missing holdouts normalize to zero instead of an accidental pass", () => {

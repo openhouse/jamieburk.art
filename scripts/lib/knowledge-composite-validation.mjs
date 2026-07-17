@@ -27,10 +27,10 @@ export function contractFingerprint(suite = readJson(".agents/evals/knowledge-co
   return sha256(`${JSON.stringify(suite)}\n`);
 }
 
-export function candidateFingerprint(suite = readJson(".agents/evals/knowledge-composite-integration.json")) {
+function fingerprintCandidateContents(suite, readContent) {
   const hash = createHash("sha256");
   for (const relativePath of sorted(suite.candidate_fingerprint_scope)) {
-    let content = readFileSync(path.join(repoRoot, relativePath), "utf8");
+    let content = readContent(relativePath);
     if (relativePath === "docs/evals/mosaic-privacy-review.json") {
       const normalized = JSON.parse(content);
       normalized.candidateFingerprint = "<normalized-candidate-fingerprint>";
@@ -42,6 +42,24 @@ export function candidateFingerprint(suite = readJson(".agents/evals/knowledge-c
     hash.update("\0");
   }
   return hash.digest("hex");
+}
+
+export function candidateFingerprint(suite = readJson(".agents/evals/knowledge-composite-integration.json")) {
+  return fingerprintCandidateContents(
+    suite,
+    (relativePath) => readFileSync(path.join(repoRoot, relativePath), "utf8")
+  );
+}
+
+export function candidateFingerprintAtCommit(suite, candidateSha) {
+  return fingerprintCandidateContents(
+    suite,
+    (relativePath) => execFileSync("git", ["show", `${candidateSha}:${relativePath}`], {
+      cwd: repoRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"]
+    })
+  );
 }
 
 export function validateSuite(suite) {
@@ -301,7 +319,7 @@ export function validateHoldouts({ suite, state, receipts, expectedContractFinge
   return { errors, conservativeScores, weightedScore };
 }
 
-export function readGitCandidateBinding(candidateSha) {
+export function readGitCandidateBinding(suite, candidateSha) {
   const runGit = (args) => execFileSync("git", args, {
     cwd: repoRoot,
     encoding: "utf8",
@@ -312,12 +330,19 @@ export function readGitCandidateBinding(candidateSha) {
     commitExists: false,
     candidateIsAncestor: false,
     changedPaths: [],
+    candidateChangedPaths: [],
+    candidateFingerprint: "",
     error: ""
   };
   try {
     binding.headSha = runGit(["rev-parse", "HEAD"]);
     runGit(["cat-file", "-e", `${candidateSha}^{commit}`]);
     binding.commitExists = true;
+    const candidateChanged = runGit([
+      "diff-tree", "--root", "--no-commit-id", "--name-only", "-r", candidateSha
+    ]);
+    binding.candidateChangedPaths = candidateChanged ? candidateChanged.split("\n") : [];
+    binding.candidateFingerprint = candidateFingerprintAtCommit(suite, candidateSha);
     try {
       runGit(["merge-base", "--is-ancestor", candidateSha, binding.headSha]);
       binding.candidateIsAncestor = true;
@@ -334,7 +359,7 @@ export function readGitCandidateBinding(candidateSha) {
   return binding;
 }
 
-export function validateCandidateGitBinding(state, binding) {
+export function validateCandidateGitBinding(state, binding, expectedCandidateFingerprint) {
   const errors = [];
   if (!/^[a-f0-9]{40}$/.test(state.candidateSha ?? "")) {
     errors.push("State candidateSha must be a full implementation commit SHA");
@@ -346,6 +371,12 @@ export function validateCandidateGitBinding(state, binding) {
   if (binding.error) errors.push(`Unable to inspect candidate Git binding: ${binding.error}`);
   if (!binding.commitExists) errors.push("State candidateSha does not resolve to a Git commit");
   if (!binding.candidateIsAncestor) errors.push("State candidateSha must be an ancestor of the checked-out HEAD");
+  if (!(binding.candidateChangedPaths ?? []).some((relativePath) => !expectedPostCandidatePaths.includes(relativePath))) {
+    errors.push("State candidateSha must be the implementation-changing commit, not an evidence-only commit");
+  }
+  if (binding.candidateFingerprint !== expectedCandidateFingerprint) {
+    errors.push("Candidate fingerprint must reproduce from the named Git commit tree");
+  }
   const unauthorized = (binding.changedPaths ?? []).filter(
     (relativePath) => !expectedPostCandidatePaths.includes(relativePath)
   );
@@ -396,8 +427,8 @@ export function validateCompositeArtifacts(artifacts, { requireHoldouts = true }
     if (state.contractFingerprint !== expectedContractFingerprint) errors.push("State contract fingerprint is stale");
     if (state.candidateFingerprint !== expectedCandidateFingerprint) errors.push("State candidate fingerprint is stale");
     errors.push(...validateMosaic(mosaic, { expectedCandidateFingerprint, requireBinding: true }));
-    const gitBinding = readGitCandidateBinding(state.candidateSha);
-    errors.push(...validateCandidateGitBinding(state, gitBinding));
+    const gitBinding = readGitCandidateBinding(suite, state.candidateSha);
+    errors.push(...validateCandidateGitBinding(state, gitBinding, expectedCandidateFingerprint));
     if (state.decision !== "pass_for_code_review") errors.push("Composite state decision must be pass_for_code_review");
     if ((state.holdoutReceiptPaths ?? []).length !== 2) errors.push("State must list exactly two holdout receipts");
     holdoutResult = validateHoldouts({ suite, state, receipts, expectedContractFingerprint, expectedCandidateFingerprint });
