@@ -137,12 +137,16 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
-    shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
+      "Jamie built CallNYC.org as an archived, unofficial, independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
+    shortWording: "Jamie built archived, unofficial CallNYC.org to translate CouncilStat data into resident-facing guidance",
     detailedPublicWording:
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
-      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
+      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, verified Politico New York coverage, and the 110-slot @CallNYCapp archival census.",
+    sourceNote:
+      "The social census recovered 107 of 110 profile-counted objects. Its approved case-study metric is 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts; three profile-counted objects remain not recovered.",
+    whyItMatters:
+      "Shows both the product design and its public operation: source data became resident issue pathways, technical endpoints, and a bounded public-information surface that Council-member offices engaged in several distinct ways.",
     guardrail: "Always describe it as archived and unofficial.",
     doNotSay: [
       "Broader historical hackathon superlatives",
@@ -156,7 +160,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-11"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "fair-rent-campaign-memory",
@@ -239,7 +243,9 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis: "Approved resume language, Jamie confirmation, public campaign websites, and a 5,124-slot @NYCArtC archive ledger with 3,123 public-interface records recovered and 2,001 platform-limited slots explicitly unresolved.",
+    sourceNote:
+      "The ledger documents four named campaign identities, public calls to action, source curation, and stakeholder dialogue. It does not independently prove Jamie established the account, identify the author of each shared-account status, or recover all 5,124 source records.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
@@ -262,7 +268,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
@@ -275,7 +281,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "Approved resume language, public campaign surfaces, public-safe NYC Artist Coalition project history, and a 5,124-slot @NYCArtC disposition ledger with a separately verified strict Council-member interaction floor.",
+    sourceNote:
+      "A strict authenticated review recovered at least 15 direct mentions or replies from five then-serving Council-member accounts. That is a recoverable minimum, not endorsement, adoption, legislative authorship, or policy causality.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -302,7 +310,55 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "nyc-artist-coalition-participation-system",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system across public event pages, small cultural-space meetings, practical sessions, town halls, hearings, campaign actions, and relief convenings.",
+    shortWording: "Helped establish NYC Artist Coalition's participation system",
+    detailedPublicWording:
+      "Jamie combined public event infrastructure, rotating cultural-space meetings, practical safety and legal sessions, civic forums, and campaign action paths so artists' lived experience could enter shared advocacy work.",
+    sourceBasis:
+      "Jamie's first-hand role account, an authenticated 34-slot Facebook event control with 33 recovered detail pages, independent reporting of Jamie's fire-code study groups and City Hall advocacy, and a contemporaneous interview connecting Jamie to coalition work.",
+    sourceNote:
+      "The event record establishes the collective system's public form. It does not identify the author or producer of every event. Facebook response labels are not attendance.",
+    whyItMatters:
+      "Makes relational program production, stakeholder convening, public participation, and translation between cultural and civic settings legible as professional systems work.",
+    guardrail:
+      "Use helped establish and produce. Preserve collective and cohost credit, and do not infer event-to-policy causality.",
+    doNotSay: [
+      "Jamie solely created or produced every NYC Artist Coalition event",
+      "Every event used a different venue",
+      "The coalition met every calendar month",
+      "Facebook responses equal attendance",
+      "The event program alone caused policy outcomes"
+    ],
+    protectedBoundaries: [
+      "Attendee and guest identities",
+      "Comments and reactions",
+      "Meeting credentials",
+      "Private working links",
+      "Raw event bodies",
+      "Unapproved collaborator detail"
+    ],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study", "about"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "public-programs",
+      "stakeholder-convening",
+      "facilitation",
+      "campaign-infrastructure",
+      "civic-systems"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "wowlist-community-platform",
@@ -318,7 +374,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "WOWList reached roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate historical summary, surviving code and database records, and a 38-status public social census documenting contribution, onboarding, circulation, and external-use specimens.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -344,15 +401,19 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: [
       "approved-resume",
+      "public-source",
       "public-safe-archive-summary",
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+      "Jamie hosts Sunday Dinner and created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+    shortWording: "Hosts Sunday Dinner; 300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate project history, Jamie's confirmation that he hosts Sunday Dinner, a 2017 Greene Hill Food Co-op interview documenting weekly open hosting, and the current public Sunday Dinner project site.",
+    sourceNote:
+      "The public sources independently corroborate Jamie's hosting role and the recurring open-community form in 2017, but not the 300+ gathering or 20+ resident-artist aggregates.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -371,7 +432,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -426,15 +487,19 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The work advanced to City Council acceptance and appropriation of $490,539; later records say the project withdrew and the unused funds were reappropriated.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. The project's shared public account also supported resident survey pathways, recurring free tire-pickup intake, civic-resource circulation, and direct dialogue with three then-serving Council-member accounts.",
+    sourceBasis: "Approved resume language, official Kansas City records, a 183-of-183 public social census, and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Keep Council acceptance and appropriation distinct from agreement execution, receipt, spending, construction, and completion. Keep shared-account authorship and all post-transition program operation unassigned to Jamie.",
     doNotSay: [
-      "Final funding received",
+      "KC Town Hall received or spent a $490,539 grant",
+      "The adaptive reuse was completed",
+      "Jamie authored all 183 social records",
+      "Jamie operated every later neighborhood program",
+      "Three Council members formally endorsed KC Town Hall",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the public record"
@@ -448,8 +513,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
-    relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context", "civic-product-operations", "public-engagement"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "source-backed-team-memory-method",
@@ -509,6 +574,49 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: [],
     relatedCapabilities: ["delivery-coordination", "risk-surfacing", "handoffs"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "creative-technology-embodied-systems",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "An early practice in social software, interactive media, and media archaeology still shapes how Jamie surfaces latent structure and gives it a form people can understand, test, and inhabit.",
+    shortWording:
+      "Moved from latent social patterns to prototypes, interfaces, demonstrations, and collaborative spatial designs",
+    detailedPublicWording:
+      "At UCSC, Jamie analyzed recursively overlapping Flickr groups, prototyped a similar-image system using participant relationships and image analysis, built an interface in Max/MSP and Jitter, and helped translate spatial browsing into a collaborative installation design. In parallel, he treated early video systems and embodied installation as ways to investigate attention, participation, and time.",
+    sourceBasis:
+      "Public-safe summaries of Warren Sack's and Margaret Morse's contemporaneous UCSC narrative evaluations, Margaret Morse's 2014 public recommendation, and public creative-technology project records.",
+    sourceNote:
+      "The academic source copy is unofficial and protected. Art is Long and Time Is Long may be title variants, but the available records do not establish that they are the same title or work.",
+    whyItMatters:
+      "Shows that Jamie can originate a model, prototype it, communicate it, and help others inhabit it; the throughline is systems judgment, not only administration.",
+    guardrail:
+      "Use as a bounded historical throughline on secondary hiring surfaces. Preserve title uncertainty, collaborative credit, and the distinction between early prototypes and current professional practice.",
+    doNotSay: [
+      "Jamie invented structural equivalence",
+      "Jamie solely designed the collaborative Flickr installation",
+      "Art is Long and Time Is Long are definitively the same work",
+      "The historical prototypes were commercial or production products",
+      "Jamie currently holds formal social-network-analysis research authority"
+    ],
+    protectedBoundaries: [
+      "Raw narrative evaluations",
+      "Academic identifiers and grades",
+      "Private professor correspondence and contact details",
+      "Recommendation screenshot",
+      "Unapproved student work or installation media"
+    ],
+    surfaces: ["technical-operations", "about"],
+    relatedProjects: ["creative-technology-practice"],
+    relatedCapabilities: [
+      "systems-thinking",
+      "social-software",
+      "interactive-prototyping",
+      "media-archaeology"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "ai-evals-professional-development",
@@ -615,6 +723,11 @@ export const technicalOperationsProofRows = [
       "sunday-dinner-196-participation-infrastructure",
       "source-backed-team-memory-method"
     ]
+  },
+  {
+    capability: "Pattern discovery and interactive prototyping",
+    toward: "Surfacing latent social structures and giving them testable, communicable, inhabitable form.",
+    proofIds: ["creative-technology-embodied-systems"]
   },
   {
     capability: "Public-facing launch and adoption",

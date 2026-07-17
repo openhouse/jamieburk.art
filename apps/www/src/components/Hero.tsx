@@ -1,4 +1,5 @@
 import { JBButton } from "@/components/JBButton";
+import { site } from "@/data/site";
 
 export function Hero() {
   return (
@@ -15,14 +16,14 @@ export function Hero() {
             I create operating structure for complex public-facing teams.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I help teams give emerging, stakeholder-heavy work usable form:
+            requirements, workflows, documentation, decision trails, launch
+            support, onboarding, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
-            <JBButton href="/resume" variant="secondary">
-              Download resume
+            <JBButton href={site.resumePath} variant="secondary" download>
+              Download resume PDF
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
@@ -51,7 +52,7 @@ export function Hero() {
                 key={label}
               >
                 <span className="text-xs text-jb-blue">0{index + 1}</span>
-                <p className="mt-5">{label}</p>
+                <p className="mt-5 text-xs sm:text-sm">{label}</p>
               </div>
             ))}
           </div>

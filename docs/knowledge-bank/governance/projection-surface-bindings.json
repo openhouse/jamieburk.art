@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "status": "governed-open",
+  "reviewed_at": "2026-07-16",
+  "shared_projection_sources": [
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/lib/metadata.ts",
+    "apps/www/src/components/CaseStudyLayout.tsx",
+    "apps/www/src/components/WorkCard.tsx"
+  ],
+  "route_bindings": [
+    { "route": "/", "source_files": ["apps/www/src/app/page.tsx", "apps/www/src/components/ProofStrip.tsx"] },
+    { "route": "/resume", "source_files": ["apps/www/src/app/resume/page.tsx"] },
+    { "route": "/work", "source_files": ["apps/www/src/app/work/page.tsx"] },
+    { "route": "/work/technical-operations", "source_files": ["apps/www/src/app/work/technical-operations/page.tsx"] },
+    { "route": "/work/harry-j-epstein", "source_files": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/content/work/harry-j-epstein.mdx"] },
+    { "route": "/work/fair-rent-nyc", "source_files": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/content/work/fair-rent-nyc.mdx"] },
+    { "route": "/work/callnyc", "source_files": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/content/work/callnyc.mdx"] },
+    { "route": "/work/wowlist", "source_files": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/content/work/wowlist.mdx"] },
+    { "route": "/work/196-sunday-dinner", "source_files": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/content/work/196-sunday-dinner.mdx"] },
+    { "route": "/work/kc-town-hall", "source_files": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/content/work/kc-town-hall.mdx"] },
+    { "route": "/lab/source-backed-team-memory", "source_files": ["apps/www/src/app/lab/source-backed-team-memory/page.tsx"] },
+    { "route": "/about", "source_files": ["apps/www/src/app/about/page.tsx"] },
+    { "route": "/contact", "source_files": ["apps/www/src/app/contact/page.tsx"] },
+    { "route": "/colophon", "source_files": ["apps/www/src/app/colophon/page.tsx"] }
+  ],
+  "non_route_surfaces": [
+    { "surface": "resume-pdf", "source_files": ["apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", "apps/www/next.config.ts"] },
+    { "surface": "open-graph", "source_files": ["apps/www/src/app/opengraph-image.tsx", "apps/www/src/lib/metadata.ts"] }
+  ]
+}

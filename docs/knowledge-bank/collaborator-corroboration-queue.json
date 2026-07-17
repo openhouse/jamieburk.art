@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "purpose": "Track where Jamie's contribution is established, where role-specific collaborator evidence would make it stronger, and how to narrow the claim if that evidence is not recovered.",
+  "items": [
+    {
+      "id": "CORR-NYCA-FORMATION",
+      "project": "NYC Artist Coalition formation",
+      "status": "corroboration-needed",
+      "propositionIds": [
+        "PROP-NYCA-COALITION-FORMATION-MEMORY"
+      ],
+      "established": [
+        "Public records establish that NYC Artist Coalition existed, convened artists and cultural-space stakeholders, and entered official cultural-policy and Council records.",
+        "Jamie's first-person account identifies an instrumental role in facilitating the coalition's formation."
+      ],
+      "neededEvidence": [
+        "A role-specific account from a founding collaborator describing what Jamie initiated, facilitated, or maintained.",
+        "A dated formation artifact that connects Jamie to the first convening or operating workflow."
+      ],
+      "confirmAction": [
+        "Invite one or more founding collaborators to review a short, bounded role statement and suggest corrections.",
+        "Preserve any response as collaborator-provided evidence with date, permission, and quotation boundaries."
+      ],
+      "narrowAction": [
+        "Until corroborated, describe Jamie as an active coalition contributor who built campaign, event, documentation, and digital systems rather than as sole founder.",
+        "Keep formation language attributed to Jamie's memory."
+      ]
+    },
+    {
+      "id": "CORR-NYCA-CAMPAIGN-SYSTEMS",
+      "project": "NYC Artist Coalition campaign and event systems",
+      "status": "partially-corroborated",
+      "propositionIds": [
+        "PROP-NYCA-TOWN-HALLS-AND-CAMPAIGN-SYSTEMS-MEMORY",
+        "PROP-NYCAC-PARTICIPATION-SYSTEM-2026"
+      ],
+      "established": [
+        "Public campaign sites, event records, social records, and Council materials establish a sustained system of convenings and issue campaigns.",
+        "The archive supports Jamie's role in web production, public information systems, testimony, facilitation, and operating continuity."
+      ],
+      "neededEvidence": [
+        "Collaborator accounts distinguishing Jamie's event-production, facilitation, publishing, and campaign-infrastructure responsibilities from shared coalition work.",
+        "Contemporaneous run-of-show, assignment, or launch artifacts with public-safe role attribution."
+      ],
+      "confirmAction": [
+        "Ask recurring collaborators to review one campaign at a time rather than requesting a global endorsement.",
+        "Record both confirming and limiting recollections."
+      ],
+      "narrowAction": [
+        "Use contributed, produced, facilitated, built, and maintained for evidenced tasks.",
+        "Do not convert shared-account output into sole authorship."
+      ]
+    },
+    {
+      "id": "CORR-NYCA-POLICY-OUTCOMES",
+      "project": "NYC Artist Coalition policy outcomes",
+      "status": "institutional-outcome-established-role-bounded",
+      "propositionIds": [
+        "PROP-NYCA-POLICY-OUTCOMES-MEMORY",
+        "PROP-NYCA-CABARET-REPEAL-INSTITUTIONAL-OUTCOME-2017",
+        "PROP-NYCA-MARCH-REPORTING-INSTITUTIONAL-OUTCOME-2019"
+      ],
+      "established": [
+        "Official records establish the Cabaret Law repeal and MARCH reporting legislation as institutional outcomes.",
+        "Official hearing records establish Council use of coalition testimony and research."
+      ],
+      "neededEvidence": [
+        "Role-specific accounts from coalition and government collaborators connecting Jamie's contribution to particular decision inputs without assigning sole causality.",
+        "Additional records that show how findings, events, testimony, or campaign artifacts moved into legislative work."
+      ],
+      "confirmAction": [
+        "Seek bounded descriptions of which contribution was useful, to whom, and at what decision point.",
+        "Keep outcome evidence and contribution evidence separately cited."
+      ],
+      "narrowAction": [
+        "Say Jamie contributed to coalition advocacy that informed or supported the outcome.",
+        "Do not say Jamie caused passage, created an office alone, or secured an institutional decision."
+      ]
+    },
+    {
+      "id": "CORR-WOWLIST-OPERATIONS",
+      "project": "WOWList product, publishing, and community operations",
+      "status": "archive-strong-role-partially-corroborated",
+      "propositionIds": [
+        "PROP-WOWLIST-PRODUCTION-ACTIVITY-SCALE-2017",
+        "PROP-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-2026"
+      ],
+      "established": [
+        "Code, database, public-web, and social archives establish the platform's product surface and operating scale.",
+        "Jamie and Richard Caceres are credited as collaborators; Jamie's memory says he managed the project's social presence."
+      ],
+      "neededEvidence": [
+        "Richard Caceres's account of role division across product, engineering, publishing, onboarding, and community support.",
+        "Organizer accounts describing how they used the platform and what Jamie's support enabled."
+      ],
+      "confirmAction": [
+        "Invite Richard to annotate a concise responsibility matrix.",
+        "Seek two user-side accounts from different city ecosystems."
+      ],
+      "narrowAction": [
+        "Continue to say co-built and distinguish platform records from individual authorship.",
+        "Treat social-account authorship as unresolved unless a record or collaborator resolves it."
+      ]
+    },
+    {
+      "id": "CORR-SUNDAY-DINNER-HOSTING",
+      "project": "Sunday Dinner and 196 participation infrastructure",
+      "status": "hosting-confirmed-scale-needs-method",
+      "propositionIds": [
+        "PROP-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017",
+        "PROP-SUNDAY-DINNER-INVITATION-FOLLOW-THROUGH-SYSTEM-2025-2026"
+      ],
+      "established": [
+        "Jamie confirms that he hosts Sunday Dinner.",
+        "Public sources corroborate a recurring open hosting form and the current public project surface."
+      ],
+      "neededEvidence": [
+        "Participant or co-host accounts describing the hosting, onboarding, facilitation, and continuity work Jamie performed.",
+        "A privacy-preserving method note for the gathering and resident-artist aggregates."
+      ],
+      "confirmAction": [
+        "Invite a small, diverse set of participants to review a bounded description without publishing guest history.",
+        "Reconcile aggregate counts privately and publish only the resulting method note."
+      ],
+      "narrowAction": [
+        "Keep 300+ gatherings and 20+ resident artists marked careful until the metric method is documented.",
+        "Never publish attendance records, addresses, guest lists, or private messages."
+      ]
+    },
+    {
+      "id": "CORR-KCTH-PHASE-ONE",
+      "project": "KC Town Hall phase one field coordination",
+      "status": "documented-memory-needs-role-corroboration",
+      "propositionIds": [
+        "PROP-KCTH-PHASE-ONE-FIELD-COORDINATION-2026",
+        "PROP-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM-2026"
+      ],
+      "established": [
+        "The successful public-benefit proposal documents phase-one scope and completed work.",
+        "Jamie's first-person account describes daily general-contractor coordination and the neighborhood survey system."
+      ],
+      "neededEvidence": [
+        "A project collaborator, architect, engineer, or trade partner account confirming Jamie's coordination role and scope.",
+        "Public-safe dated artifacts connecting Jamie to phase-one sequencing and field decisions."
+      ],
+      "confirmAction": [
+        "Seek one owner-side and one delivery-side role confirmation.",
+        "Keep the later project transition separate from phase-one completion."
+      ],
+      "narrowAction": [
+        "Use served as general contractor for phase one only when corroboration is attached; otherwise say coordinated phase-one field delivery.",
+        "Do not imply completion of the full adaptive-reuse project."
+      ]
+    },
+    {
+      "id": "CORR-KCSPACES-DIGITAL",
+      "project": "KC Spaces Fund digital infrastructure",
+      "status": "archive-supported-not-testimonial",
+      "propositionIds": [
+        "PROP-JAMIE-KCSPACESFUND-DIGITAL-INFRASTRUCTURE-2026"
+      ],
+      "established": [
+        "Public campaign materials establish the fund and named organizers.",
+        "An AI-assisted archival review supports Jamie's behind-the-scenes web, theme, widget, and platform contribution."
+      ],
+      "neededEvidence": [
+        "A named organizer's account confirming the specific digital responsibilities and useful result.",
+        "A public-safe code or launch artifact if a stronger public proof is needed."
+      ],
+      "confirmAction": [
+        "Ask a named organizer to correct a short technical-support statement.",
+        "Identify any response as collaborator testimony rather than retroactively attributing the AI review."
+      ],
+      "narrowAction": [
+        "Keep the claim as behind-the-scenes digital infrastructure.",
+        "Do not call Jamie an organizer, grant decision-maker, fiscal sponsor, or fundraiser owner."
+      ]
+    }
+  ]
+}

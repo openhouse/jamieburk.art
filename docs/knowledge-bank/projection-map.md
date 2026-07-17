@@ -54,3 +54,55 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+The FairRentNYC case study may project `CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS`
+and `CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT`. Keep the 5,124-slot disposition
+distinct from the 3,123 recovered source records, retain the 2,001 unresolved
+slots, and describe the five-account / 15-interaction Council result as a strict
+recoverable minimum rather than endorsement or impact.
+
+## Reserve Knowledge
+
+`CLM-URBANHERM-PERSONAL-PUBLIC-WORKING-SURFACE`,
+`CLM-URBANHERM-HORSE-LORDS-VIDEO`,
+`CLM-URBANHERM-EIGHTH-STREET-TUNNEL-SCREENING`, and
+`CLM-URBANHERM-KC-TOWN-HALL-TIRE-PICKUP-PARTICIPATION` remain in the public
+knowledge-bank reserve. They are not current website requirements and must not
+create a `/proofs`, `/urbanhermit`, or other public route without a new
+audience-and-purpose decision, citation review, and any needed media-rights
+clearance.
+
+The NYC Artist Coalition Facebook event population follows the same reserve
+rule for its 33-row ledger, posted-source inventory, platform-response
+arithmetic, and democracy-lab interpretation. The FairRentNYC case study
+receives only two governed claims: Jamie helped establish and produce the
+recurring participation system, and 19 event pages displayed at least 100
+Facebook responses, with an explicit no-attendance boundary. No event archive
+or knowledge-bank route is created.
+
+Jamie's personal and WOWList Facebook event ledgers are reserve material. Their
+active projections resolve only to
+`docs/knowledge-bank/projects/jamie-wowlist-facebook-events.md`. They do not add
+copy to the hiring website and do not authorize `/proofs`, `/events`,
+`/knowledge-bank`, or another public archive route. Future website use must
+select a governed claim for a specific audience and preserve cohost,
+response-label, shared-account, and current-zero-state boundaries.
+
+The WOW List Facebook post ledger is also reserve material. Its active
+projections resolve only to
+`docs/knowledge-bank/projects/wowlist-facebook-posts.md`. The 51-of-57 Jamie
+publisher-attribution result may support a future role sentence only after a
+specific audience-and-purpose decision. Any projection must preserve six
+unresolved records, attached-source authorship, Richard Caceres's shared
+project credit, the Facebook-only scope, and the absence of a stable
+full-population engagement dataset.
+
+`CLM-KCTH-PHASE-ONE-FIELD-COORDINATION`,
+`CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM`, and
+`CLM-KCTH-TIRED-OF-TIRES-PROGRAM-OPERATIONS` are public knowledge-bank reserve
+claims. Their active projections resolve only to
+`docs/knowledge-bank/projects/kc-town-hall-phase-one-and-neighborhood-practice.md`.
+They do not change `/work/kc-town-hall`, `/resume`, Technical Operations, or any
+other hiring surface. Future website use must preserve first-person attribution,
+collective credit, the unreconciled budget boundary, participant privacy, and
+the distinction between direct participation and complete program ownership.

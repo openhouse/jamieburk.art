@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "suite_id": "knowledge-bank-development",
+  "title": "Jamie Burkart knowledge bank development",
+  "objective": "Recursively transform public-safe fragments into coherent, source-associated, defensible professional knowledge without forcing premature publication or losing useful historical range.",
+  "score_scale": {
+    "minimum": 0,
+    "maximum": 4,
+    "labels": {
+      "0": "unsafe, contradicted, absent, or structurally invalid",
+      "1": "captured but materially underdeveloped",
+      "2": "useful research material below claim-bank threshold",
+      "3": "strong, bounded, source-associated knowledge",
+      "4": "exceptional, specific, traceable, composable, and resilient"
+    }
+  },
+  "claim_development_thresholds": {
+    "weighted_score_minimum": 0.85,
+    "blocking_score_minimum": 3,
+    "nonblocking_score_minimum": 2,
+    "all_blocking_evals_must_pass": true,
+    "two_consecutive_passing_runs_required": true,
+    "human_approval_required": false
+  },
+  "projection_candidate_thresholds": {
+    "weighted_score_minimum": 0.9,
+    "blocking_score_minimum": 3,
+    "nonblocking_score_minimum": 3,
+    "all_blocking_evals_must_pass": true,
+    "holdout_regression_must_pass": true,
+    "two_consecutive_passing_runs_required": true,
+    "human_approval_required": true
+  },
+  "optimization": {
+    "maximum_iterations": 8,
+    "stop_after_no_improvement_iterations": 2,
+    "success_requires_two_consecutive_passing_runs": true,
+    "selection_order": [
+      "failed blocking evals by severity",
+      "largest weighted score gap",
+      "highest-value unresolved claim with available evidence",
+      "smallest coherent research or content patch"
+    ],
+    "rubric_is_frozen_during_run": true,
+    "optimizer_may_not_grade_own_patch": true,
+    "holdout_judge_is_blind_to_patch_intent": true,
+    "one_primary_failure_per_iteration": true
+  },
+  "hard_constraints": [
+    "Do not move raw private material, local archive paths, private correspondence, credentials, legal-review material, participant records, or unapproved media into the public repository.",
+    "Treat memories as research leads until corroborated; never convert confidence of recollection into documentary proof.",
+    "Do not strengthen ownership, causality, authority, scale, chronology, current status, or policy-outcome claims beyond the evidence relationships.",
+    "Preserve collective credit and distinguish Jamie's contribution from the collective outcome.",
+    "A source must state both what it supports and what it does not establish.",
+    "Intake remains no-public-projection until a separate governed claim and editorial decision exist.",
+    "Not recovered is not equivalent to did not exist.",
+    "Do not delete or flatten unusual, poetic, civic, artistic, technical, or relational material merely because it is not immediately useful to a hiring page.",
+    "Do not update the public website merely to improve a knowledge-development score."
+  ],
+  "evals": [
+    {
+      "id": "KB-001",
+      "title": "Public safety and provenance",
+      "category": "safety",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 15,
+      "inputs": ["intake items", "source records", "private-source boundaries", "generated public registry"],
+      "procedure": ["Run citation and public-safety checks.", "Verify every intake fragment is safe for a newspaper-visible public repository.", "Confirm private support is represented only by bounded summaries or protected locators."],
+      "pass_criteria": ["No private path, raw private source, credential, participant record, or unapproved media appears.", "Every item names provenance type and review context.", "No intake identifier or intake-only source leaks into the generated public citation registry.", "Privacy and consent limits are explicit where relevant."],
+      "evidence_required": ["check output", "intake inventory", "registry exclusion result"],
+      "remediation_hint": "Remove unsafe detail, preserve only a bounded public-safe summary, and keep the underlying material outside the repo."
+    },
+    {
+      "id": "KB-002",
+      "title": "Source decomposition and epistemic fit",
+      "category": "evidence",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 15,
+      "inputs": ["source records", "candidate claims", "research notes"],
+      "procedure": ["Closely read each available source.", "Separate project existence, Jamie's role, action, output, outcome, scale, chronology, and causality.", "Compare each candidate claim with supportsGenerally and doesNotEstablish."],
+      "pass_criteria": ["Every associated source states affirmative support and non-support boundaries.", "Candidate claims rely only on propositions their sources can establish.", "Context-only sources are not used as person-specific proof.", "Unavailable or partially read sources are labeled and assigned a next research step."],
+      "evidence_required": ["source-claim matrix", "specific locators or close-reading notes", "boundary findings"],
+      "remediation_hint": "Split the claim into smaller propositions and downgrade or research the unsupported portions."
+    },
+    {
+      "id": "KB-003",
+      "title": "Jamie's role, causality, and collective credit",
+      "category": "credit",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 15,
+      "inputs": ["intake summaries", "candidate claims", "anti-claims", "collaborator context"],
+      "procedure": ["Identify what Jamie initiated, built, organized, hosted, facilitated, documented, stewarded, or contributed.", "Separate those actions from collective outcomes and government decisions.", "Check named collaborators and institutional actors."],
+      "pass_criteria": ["Jamie is visible as an actor without being made the sole cause of collective work.", "Instrumental contribution may be stated when evidence supports it and the mechanism is named.", "Collaborators and institutions retain appropriate credit.", "No claim implies solo policy causality, official authority, or ownership of participants' work."],
+      "evidence_required": ["actor-action-outcome matrix", "collective-credit findings", "anti-claims"],
+      "remediation_hint": "Name Jamie's concrete mechanism of contribution and separately name the collective or institutional outcome."
+    },
+    {
+      "id": "KB-004",
+      "title": "Courageous precision under Chad's lens",
+      "category": "claim-quality",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 12,
+      "inputs": ["candidate claims", "project summaries", "Chad lens"],
+      "procedure": ["Read each claim as a hiring reader with no archive context.", "Identify actor, action, useful end, concrete output, and consequence.", "Flag timid abstraction and inflated compression."],
+      "pass_criteria": ["A reader does not need to decode Jamie's role.", "Claims name concrete work and what became possible or usable.", "Strong evidence is not hidden behind generic systems language.", "Uncertainty is precise rather than apologetic or shame-bearing."],
+      "evidence_required": ["blind-reader scorecard", "actor-action-end-output matrix", "revised claim specimens"],
+      "remediation_hint": "Replace generic nouns with the concrete thing Jamie did, made, organized, or made usable."
+    },
+    {
+      "id": "KB-005",
+      "title": "Chronology, relationships, and historical coherence",
+      "category": "history",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 8,
+      "inputs": ["dates", "projects", "sources", "related claims"],
+      "procedure": ["Order the events and projects supported by the sources.", "Identify continuities without implying unsupported direct causation.", "Mark date, route, duration, and current-status gaps."],
+      "pass_criteria": ["Known dates and sequences are internally consistent.", "Long arcs are described as patterns or lineages unless direct causation is established.", "Disputed or incomplete chronology remains visible.", "Current and historical states are not conflated."],
+      "evidence_required": ["timeline", "relationship notes", "chronology gaps"],
+      "remediation_hint": "Add dated source anchors and weaken lineage language where only thematic continuity is known."
+    },
+    {
+      "id": "KB-006",
+      "title": "Maturity and projection discipline",
+      "category": "governance",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "inputs": ["intake status", "related claims", "claim projections", "public registry"],
+      "procedure": ["Validate status-specific structural requirements.", "Confirm integrated intake links to governed claims.", "Confirm projection remains a separate explicit decision."],
+      "pass_criteria": ["Captured, researching, claim-candidate, and integrated states meet their schema contracts.", "Every integrated item links to a governed claim.", "Every intake item remains no-public-projection.", "No website surface changes solely because an intake item matured."],
+      "evidence_required": ["schema output", "intake-to-claim links", "public registry diff"],
+      "remediation_hint": "Correct the maturity state or create the missing governed claim without activating a public projection."
+    },
+    {
+      "id": "KB-007",
+      "title": "Research questions are answerable and consequential",
+      "category": "research",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 8,
+      "inputs": ["research questions", "known gaps", "source leads"],
+      "procedure": ["Test whether each question names a recoverable fact, likely source class, and decision it would change.", "Prioritize questions that could materially strengthen or constrain a claim."],
+      "pass_criteria": ["Each unresolved thread has specific answerable questions.", "Questions distinguish missing evidence from missing certainty.", "At least one next source class or method is named for each material gap.", "Low-value trivia does not outrank role, outcome, causality, scale, or collaborator evidence."],
+      "evidence_required": ["question-to-decision matrix", "ranked research queue"],
+      "remediation_hint": "Rewrite broad questions as a source, fact, and decision triad."
+    },
+    {
+      "id": "KB-008",
+      "title": "Compositional range and future usefulness",
+      "category": "composition",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 7,
+      "inputs": ["candidate claims", "project lineage", "possible audiences"],
+      "procedure": ["Test the material against hiring, civic, cultural, technical, facilitation, and artistic narratives.", "Check that unusual details remain available without crowding the current site."],
+      "pass_criteria": ["The bank preserves specific project texture and not only resume abstractions.", "Claims can support more than one future argument without becoming vague.", "The current website is not required to display every mature claim.", "Potential future uses and non-uses are legible."],
+      "evidence_required": ["audience-use matrix", "specific retained details", "projection deferrals"],
+      "remediation_hint": "Retain concrete project texture and add audience-use notes rather than prematurely compressing everything into one hiring claim."
+    },
+    {
+      "id": "KB-009",
+      "title": "Contradictions, negative evidence, and correction readiness",
+      "category": "integrity",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 7,
+      "inputs": ["source conflicts", "doesNotEstablish", "research gaps", "corrections"],
+      "procedure": ["Search for contradictory dates, routes, role descriptions, metrics, and outcomes.", "Record unresolved conflicts and negative searches.", "Define what wording must change if new evidence arrives."],
+      "pass_criteria": ["Known conflicts and incomplete recovery are explicit.", "No negative search is phrased as proof of nonexistence.", "Candidate claims use the narrowest wording compatible with all current evidence.", "Corrections can retire prior wording without deleting provenance."],
+      "evidence_required": ["contradiction register", "negative-search limits", "correction triggers"],
+      "remediation_hint": "Preserve both propositions, narrow the claim, and add a research or correction trigger."
+    },
+    {
+      "id": "KB-010",
+      "title": "Recursive optimization integrity",
+      "category": "process",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 3,
+      "inputs": ["frozen rubric", "iteration records", "independent scorecards", "candidate commits"],
+      "procedure": ["Freeze the rubric commit before baseline grading.", "Select one primary failure per iteration.", "Use a fresh judge that did not author the patch.", "Record regressions and stop conditions."],
+      "pass_criteria": ["Rubric and candidate commits are explicit.", "The optimizer does not grade its own patch.", "Each iteration records before and after evidence and scores.", "Success requires two passing judgments on an unchanged candidate.", "Human-blocked research stops rather than inventing evidence."],
+      "evidence_required": ["iteration record", "judge outputs", "commit hashes", "stop decision"],
+      "remediation_hint": "Freeze inputs, narrow the iteration, and obtain an independent score before continuing."
+    }
+  ],
+  "grader_output_schema": {
+    "required": ["eval_id", "score", "pass", "evidence", "findings", "recommended_next_move", "confidence"],
+    "score_range": [0, 4],
+    "missing_evidence_value": "not_observed",
+    "evidence_must_name_observed_source_file_or_command": true
+  },
+  "iteration_record_schema": {
+    "required": ["iteration", "candidate_sha_before", "selected_eval_id", "change_summary", "evidence_before", "candidate_sha_after", "evidence_after", "score_before", "score_after", "regressions", "decision"],
+    "allowed_decisions": ["accept", "revise", "reject", "stop_threshold_met", "stop_iteration_limit", "stop_no_improvement", "stop_human_blocked"]
+  },
+  "run_record_schema": {
+    "required": ["suite_id", "target", "candidate_sha", "candidate_fingerprint", "rubric_sha", "contract_fingerprint", "evidence_bundle_fingerprint", "profile", "evaluator_identity", "evaluator_authored_candidate", "content_scope", "results", "unresolved_blockers", "next_action", "final_state", "consecutive_passing_runs"],
+    "allowed_targets": ["claim-development", "projection-candidate"],
+    "allowed_final_states": ["continue", "threshold_met", "human_blocked", "iteration_limit", "no_improvement"],
+    "projection_required": ["holdout_regression_pass", "human_approval"]
+  }
+}

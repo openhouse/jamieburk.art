@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15",
+  "populationDefinition": "Facebook Manage Posts filtered to Posted by You",
+  "completenessBoundary": "All records returned by the authenticated owner-filtered surface in the July 13 crawl; not a native Meta export, deletion history, or immutable lifetime population.",
+  "populationControl": {
+    "crawlCompletedAt": "2026-07-13",
+    "cursorPages": 621,
+    "returnedNodes": 3728,
+    "uniqueRecords": 1243,
+    "terminalHasNextPage": false,
+    "missingDates": 0,
+    "ownerAbsentRecords": 0,
+    "recoveredStart": "2006-12-19",
+    "recoveredEnd": "2022-06-12",
+    "authenticatedFilterRecheckedAt": "2026-07-15",
+    "audienceLabelExposedRecords": 270,
+    "audienceLabelNotExposedRecords": 973
+  },
+  "recordsByYear": {
+    "2006": 2,
+    "2007": 5,
+    "2008": 4,
+    "2009": 218,
+    "2010": 82,
+    "2011": 88,
+    "2012": 153,
+    "2013": 184,
+    "2014": 109,
+    "2015": 68,
+    "2016": 122,
+    "2017": 118,
+    "2018": 27,
+    "2019": 42,
+    "2020": 19,
+    "2022": 2
+  },
+  "recordForms": {
+    "text": 335,
+    "sharedStory": 244,
+    "photo": 221,
+    "mediaOrTextUnavailable": 159,
+    "photoAlbum": 135,
+    "event": 58,
+    "externalLink": 55,
+    "video": 36
+  },
+  "missionRouting": {
+    "uniqueRecords": 181,
+    "classificationBoundary": "Overlapping deterministic research routes, not exclusive semantic judgments, effort measures, engagement, or impact scores.",
+    "projectRecordCounts": {
+      "wowList": 48,
+      "sundayDinner": 44,
+      "nycArtistCoalition": 34,
+      "letNycDance": 33,
+      "creativeTechnical": 19,
+      "civicTechnical": 13,
+      "waterPublics": 10,
+      "saveNycSpaces": 10,
+      "talksNotRaids": 4,
+      "fairRentNyc": 3,
+      "kcTownHall": 2,
+      "nterChng": 2,
+      "callnyc": 1
+    }
+  },
+  "stakeholderRouting": {
+    "classificationBoundary": "Overlapping mention, tag, quotation, and link matches in Jamie's records; not actions by the named stakeholders and not evidence of engagement, endorsement, attendance, partnership, policy influence, or impact.",
+    "recordCounts": {
+      "newYorkCityCouncil": 20,
+      "rafaelEspinal": 18,
+      "marketHotel": 9,
+      "officeOfNightlife": 6,
+      "antonioReynoso": 5,
+      "quintonLucas": 1,
+      "helenRosenthal": 1
+    }
+  },
+  "postedUrlInventory": {
+    "urlBearingRecords": 430,
+    "uniqueNormalizedExternalUrls": 549,
+    "routingBoundary": "Every posted destination remains a source lead until independently recovered, close-read, and decomposed."
+  },
+  "selectedPublicSourceControls": [
+    {
+      "sourceId": "SRC-FB-JAMIE-NTER-OPENING-2010",
+      "publicAudienceRecheckedAt": "2026-07-15",
+      "currentCounters": null
+    },
+    {
+      "sourceId": "SRC-FB-JAMIE-WOWLIST-NINE-CITIES-2015",
+      "publicAudienceRecheckedAt": "2026-07-15",
+      "currentCounters": {
+        "likes": 28
+      }
+    },
+    {
+      "sourceId": "SRC-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-2016",
+      "publicAudienceRecheckedAt": "2026-07-15",
+      "currentCounters": {
+        "likes": 7,
+        "comments": 0
+      }
+    },
+    {
+      "sourceId": "SRC-FB-JAMIE-LETNYCDANCE-NPR-2017",
+      "publicAudienceRecheckedAt": "2026-07-15",
+      "currentCounters": {
+        "reactions": 24
+      }
+    },
+    {
+      "sourceId": "SRC-FB-JAMIE-KCTOWNHALL-START-2018",
+      "publicAudienceRecheckedAt": "2026-07-15",
+      "currentCounters": {
+        "reactions": 106,
+        "comments": 14
+      }
+    },
+    {
+      "sourceId": "SRC-FB-JAMIE-TALKSNOTRAIDS-ACTION-2019",
+      "publicAudienceRecheckedAt": "2026-07-15",
+      "currentCounters": null
+    }
+  ],
+  "interactionAvailability": "The Manage Posts corpus did not expose reliable historical reaction, comment, share, or responder-identity totals. Engagement requires individually rechecked public records or a privacy-reviewed native export.",
+  "engagementBoundary": "Current counters are mutable interface observations. Do not sum them into reach, unique people, stakeholder engagement, endorsement, attendance, conversion, causality, or impact.",
+  "protectedArtifactId": "jamie-personal-facebook-owner-post-census-2026-07"
+}

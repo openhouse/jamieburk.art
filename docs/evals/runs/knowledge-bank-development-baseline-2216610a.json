@@ -1,0 +1,24 @@
+{
+  "suite_id": "knowledge-bank-development",
+  "target": "claim-development",
+  "candidate_sha": "2216610afa01637ef81d95c1a69112cc2acdc090",
+  "rubric_sha": "2216610afa01637ef81d95c1a69112cc2acdc090",
+  "content_scope": [
+    "INTAKE-WATERWAYS-PARTICIPATORY-PRACTICE-2026-07-12",
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12",
+    "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12"
+  ],
+  "consecutive_passing_runs": 0,
+  "results": [
+    { "eval_id": "KB-001", "score": 4, "pass": true, "evidence": ["Citation and public-safety checks passed; intake remained absent from the public registry."], "findings": [], "recommended_next_move": null, "confidence": 0.98 },
+    { "eval_id": "KB-002", "score": 2, "pass": false, "evidence": ["Candidate claims were associated with source lists but not decomposed proposition by proposition."], "findings": ["Waterways and NYCA candidates combined supported actions with unsupported role and outcome propositions."], "recommended_next_move": "Split compound candidates into source-specific propositions.", "confidence": 0.97 },
+    { "eval_id": "KB-003", "score": 2, "pass": false, "evidence": ["Collective-credit limits existed primarily in boundaries rather than proposition-level wording."], "findings": ["Named collaborators and institutional mechanisms were not consistently visible."], "recommended_next_move": "Separate Jamie's action, collaborators, and collective outcome.", "confidence": 0.93 },
+    { "eval_id": "KB-004", "score": 2, "pass": true, "evidence": ["Waterways details were concrete; NYCA candidates still relied on broad infrastructure language."], "findings": ["Unsupported compression limited clarity."], "recommended_next_move": null, "confidence": 0.88 },
+    { "eval_id": "KB-005", "score": 2, "pass": true, "evidence": ["Dated source anchors existed, but the NYCA campaign sequence remained compressed."], "findings": ["Several campaigns lacked dates and institutional decision points."], "recommended_next_move": null, "confidence": 0.9 },
+    { "eval_id": "KB-006", "score": 4, "pass": true, "evidence": ["Typed maturity states and no-public-projection contracts passed."], "findings": [], "recommended_next_move": null, "confidence": 0.98 },
+    { "eval_id": "KB-007", "score": 2, "pass": true, "evidence": ["Research questions named consequential gaps and several source classes."], "findings": ["No explicit question-to-decision matrix existed."], "recommended_next_move": null, "confidence": 0.91 },
+    { "eval_id": "KB-008", "score": 3, "pass": true, "evidence": ["The bank retained artistic, civic, technical, and relational project texture."], "findings": [], "recommended_next_move": null, "confidence": 0.94 },
+    { "eval_id": "KB-009", "score": 2, "pass": false, "evidence": ["Important limits were recorded, but scoped correction triggers were absent."], "findings": ["Candidate claims were not yet the narrowest wording compatible with evidence."], "recommended_next_move": "Add proposition-level correction triggers and narrow unsupported wording.", "confidence": 0.94 },
+    { "eval_id": "KB-010", "score": 2, "pass": false, "evidence": ["The rubric and scorer existed, but no knowledge-development run artifact had been committed."], "findings": ["The process was not yet auditable as an executed run."], "recommended_next_move": "Record the baseline, iteration, regressions, and decision.", "confidence": 0.99 }
+  ]
+}

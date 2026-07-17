@@ -1,0 +1,61 @@
+{
+  "suite_id": "portfolio-production-readiness",
+  "target": "application-share",
+  "run_kind": "deterministic-bootstrap-and-certification",
+  "rubric_sha": "0a802800b25b66b97f3d62eae0bd238b319dc4df",
+  "candidate_sha": "2b27c3f4ebff8fc1b6fe49c205ebda3a126a1f5f",
+  "content_scope": [
+    "Margaret Morse lens",
+    "Warren Sack lens",
+    "creative-technology knowledge-bank evidence",
+    "About secondary-surface throughline",
+    "Technical Operations proof projection"
+  ],
+  "baseline": {
+    "candidate_ref": "0a802800b25b66b97f3d62eae0bd238b319dc4df",
+    "command": "npm run evals:portfolio",
+    "result": "fail",
+    "evidence": [
+      "The frozen suite reported 14 missing professor-lens contracts against the pre-intervention site.",
+      "About did not preserve a visible threshold connecting artistic, civic, technical, and social practice.",
+      "The public proof system did not preserve a concrete embodied-media or media-archaeology example.",
+      "The public proof system did not preserve the social-pattern, model, interface, demonstration, and collaborative-form sequence.",
+      "The knowledge bank did not encode title uncertainty or the structural-equivalence anti-claim."
+    ]
+  },
+  "remediation": {
+    "primary_failure": "The hiring surfaces explained Jamie as an operator but did not preserve the documented artistic, embodied, and original social-software reasoning that gives the operating practice its character.",
+    "change_summary": "Added two blocking application evals, protected public-safe source summaries, a governed proof and claim, proposition-level boundaries, a restrained About section, and a Technical Operations proof row. Raw evaluations, grades, identifiers, correspondence, contact details, and screenshots remain outside the repository.",
+    "adjacent_failure": "PR-016 and PR-017 draw on one coherent historical evidence set, so the same bounded intervention remediated both without changing the homepage or creating a public knowledge-bank route.",
+    "regressions_observed": []
+  },
+  "certification": {
+    "consecutive_deterministic_passes": 2,
+    "commands": [
+      "npm run check",
+      "npm run check"
+    ],
+    "result": "pass",
+    "evidence": [
+      "Both complete Node 26 runs passed citation governance and 83 citation and archive tests.",
+      "Both complete runs passed the 17-eval portfolio suite and 18 portfolio-eval tests.",
+      "Both complete runs passed the 10-eval knowledge-bank suite and 16 knowledge-bank-eval tests.",
+      "Both complete runs passed the 7-eval blind-spot suite and 11 blind-spot tests.",
+      "Both complete runs passed TypeScript, lint, the Next.js production build, knowledge-bank validation, public-safety scans, and route checks."
+    ]
+  },
+  "weighted_judgment": {
+    "status": "not_run",
+    "score_before": "not_observed",
+    "score_after": "not_observed",
+    "reason": "The optimizer may not grade its own patch, and no independent judge received the repository contents."
+  },
+  "remaining_validation": {
+    "independent_holdout": "blocked pending explicit approval for external transfer of the relevant public-repository contents and eval prompts",
+    "cold_reader": "pending observations from a fresh hiring reader on the exact candidate SHA",
+    "live_use": "pending exact-candidate staging accessibility and production QA",
+    "human_approval": "pending exact-candidate approval"
+  },
+  "decision": "stop_human_blocked",
+  "decision_reason": "The two new deterministic lenses pass twice on one frozen candidate. Independent weighted judgment and human release approval remain external gates."
+}

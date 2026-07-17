@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "suite_id": "blind-spot-readiness",
+  "title": "Jamie Burkart portfolio blind-spot readiness",
+  "objective": "Continuously expose and reduce the consequential gaps between archival depth, defensible individual contribution, institutional use, hiring comprehension, contextual integrity, and real-world release confidence.",
+  "score_scale": {
+    "minimum": 0,
+    "maximum": 4,
+    "labels": {
+      "0": "absent, unsafe, misleading, or structurally invalid",
+      "1": "recognized but not operationalized",
+      "2": "useful controls exist but a consequential gap remains unmanaged",
+      "3": "strong, bounded, actionable, and ready for continued use",
+      "4": "exceptional, independently tested, resilient, and correction-ready"
+    }
+  },
+  "development_readiness_thresholds": {
+    "weighted_score_minimum": 0.85,
+    "blocking_score_minimum": 3,
+    "nonblocking_score_minimum": 2,
+    "all_blocking_evals_must_pass": true,
+    "two_consecutive_passing_runs_required": true,
+    "human_approval_required": false
+  },
+  "release_readiness_thresholds": {
+    "weighted_score_minimum": 0.9,
+    "blocking_score_minimum": 3,
+    "nonblocking_score_minimum": 3,
+    "all_blocking_evals_must_pass": true,
+    "two_consecutive_passing_runs_required": true,
+    "independent_holdout_required": true,
+    "cold_reader_validation_required": true,
+    "live_use_validation_required": true,
+    "human_approval_required": true
+  },
+  "optimization": {
+    "maximum_iterations": 8,
+    "stop_after_no_improvement_iterations": 2,
+    "success_requires_two_consecutive_passing_runs": true,
+    "selection_order": [
+      "failed safety or credit blocker",
+      "failed source or metric blocker",
+      "largest weighted score gap",
+      "smallest coherent evidence or presentation patch"
+    ],
+    "rubric_is_frozen_during_run": true,
+    "optimizer_may_not_grade_own_patch": true,
+    "holdout_judge_is_blind_to_patch_intent": true,
+    "one_primary_failure_per_iteration": true
+  },
+  "hard_constraints": [
+    "Do not convert coalition, collaborator, institutional, legislative, or community outcomes into solo Jamie causality.",
+    "Do not treat institutional receipt, citation, acknowledgment, or use as proof of policy influence without a documented decision pathway.",
+    "Do not publish private contact information, participant records, raw correspondence, protected archive locations, credentials, or unapproved media.",
+    "Do not infer consent to professional projection merely because an artifact or event is publicly accessible.",
+    "Do not treat a metric as self-explanatory; preserve its unit, time window, method, support level, uncertainty, and prohibited inference.",
+    "Do not let digital trace abundance erase physical, relational, hosting, facilitation, print, repair, care, or handoff work.",
+    "Do not let the knowledge bank dictate website prominence; public composition remains a separate audience and purpose decision.",
+    "Do not claim independent, cold-reader, live-use, or human validation unless it was actually completed for the exact candidate.",
+    "Do not create a public proofs, knowledge-bank, social archive, or participant-record route to satisfy an evaluation."
+  ],
+  "evals": [
+    {
+      "id": "BS-001",
+      "title": "Role-specific contribution and collaborator corroboration",
+      "category": "credit",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 18,
+      "inputs": ["candidate claims", "role propositions", "collaborator corroboration queue", "shared-authorship boundaries"],
+      "procedure": ["Decompose each high-value collective result into Jamie action, collaborator action, institutional action, output, and outcome.", "Check whether role-specific records or collaborator accounts support the mechanism attributed to Jamie.", "Keep uncorroborated title, ownership, scale, and authorship claims in a governed research state."],
+      "pass_criteria": ["Every high-priority unresolved role claim has a public-safe corroboration plan.", "Jamie is visible through concrete actions without displacing named collaborators or institutions.", "Source-established role, Jamie memory, collaborator account, and collective outcome remain distinct evidence types.", "Contradictory collaborator evidence has an explicit hold or narrowing path."],
+      "evidence_required": ["actor-action-output-outcome matrix", "corroboration queue", "role-specific propositions and boundaries", "correction triggers"],
+      "remediation_hint": "Split the collective result into actor-specific propositions and request the smallest public-safe artifact or collaborator account that could confirm, narrow, or replace the Jamie wording."
+    },
+    {
+      "id": "BS-002",
+      "title": "Contribution-to-decision pathway and causal middle",
+      "category": "causality",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 16,
+      "inputs": ["institutional pathway register", "hearing records", "policy chronology", "anti-claims"],
+      "procedure": ["Separate contribution, institutional receipt, public use, deliberation, decision, enactment, implementation, and outcome.", "Identify the strongest established link and the first missing causal link for each policy story.", "Look for drafts, sponsor statements, staff records, decision rationales, committee reports, collaborator accounts, and implementation evidence."],
+      "pass_criteria": ["Institutional use is not labeled influence when the decision pathway is missing.", "Each priority pathway names established links, missing links, next source classes, and prohibited causal compression.", "Later enactment is not used as proof that Jamie or one coalition caused the decision.", "Evidence-based interpretation is visibly distinguished from an official's private motive."],
+      "evidence_required": ["dated pathway ledger", "source-to-stage mapping", "first missing link", "anti-claims"],
+      "remediation_hint": "Name the exact stage the evidence reaches, stop at the first unsupported link, and research the decision record that could bridge it."
+    },
+    {
+      "id": "BS-003",
+      "title": "Cold-reader hiring and referral comprehension",
+      "category": "conversion",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 16,
+      "inputs": ["homepage", "work index", "resume", "contact path", "cold-reader protocol"],
+      "procedure": ["Give the exact candidate to readers who have not seen the archive or implementation brief.", "Ask each reader to identify Jamie's target role, strongest three proofs, concrete contribution, and next action without coaching.", "Separate agent checks from actual human reader observations."],
+      "pass_criteria": ["A cold reader can state Jamie's role and operating throughline in plain language.", "A cold reader can identify concrete ownership, outputs, and useful ends rather than only advocacy topics.", "Resume and contact actions are easy to find and correctly labeled.", "Release readiness uses completed human observations, not synthetic reader claims."],
+      "evidence_required": ["exact candidate SHA", "reader protocol", "anonymized task results", "miscomprehension log", "revision decision"],
+      "remediation_hint": "Revise the smallest high-traffic surface responsible for the misunderstanding, then rerun the same tasks with fresh readers."
+    },
+    {
+      "id": "BS-004",
+      "title": "Metric definitions, denominators, and uncertainty",
+      "category": "measurement",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 14,
+      "inputs": ["public quantitative claims", "metric register", "source records", "counting methods"],
+      "procedure": ["Inventory every consequential number projected or considered for projection.", "Record the unit, time window, population or denominator, method, source support, uncertainty, and prohibited inference.", "Recompute from source-safe data where feasible and hold metrics that cannot yet be reconciled."],
+      "pass_criteria": ["Every consequential public number has a metric-register entry.", "Exact, approximate, lower-bound, mutable snapshot, and protected aggregate statuses remain distinct.", "Invitation, response, attendance, reach, adoption, revenue contribution, appropriation, receipt, and expenditure are not conflated.", "Unreconciled metrics have a hold or careful projection state and a concrete next source."],
+      "evidence_required": ["metric register", "method and time window", "source IDs or source class", "uncertainty and anti-inference fields"],
+      "remediation_hint": "Define the quantity before defending it; narrow, approximate, or hold the public wording until the source and method support the displayed value."
+    },
+    {
+      "id": "BS-005",
+      "title": "Public argument selection and editorial proportion",
+      "category": "composition",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 12,
+      "inputs": ["application argument register", "homepage", "work index", "knowledge-bank depth", "deferred material"],
+      "procedure": ["Name the audience, desired action, lead claim, proof pillars, and material intentionally deferred from the current site.", "Check that project variety strengthens one professional argument rather than fragmenting Jamie into unrelated identities.", "Confirm that preservation depth does not determine navigation prominence."],
+      "pass_criteria": ["The lead sentence and proof sequence support one legible professional category.", "Each primary proof does distinct argumentative work.", "Important reserve knowledge is retained with an explicit future use without crowding the current site.", "Human presence and material scenes survive compression."],
+      "evidence_required": ["audience-and-action statement", "lead claim", "proof-pillar map", "deferred-material register", "route rationale"],
+      "remediation_hint": "Select fewer primary proofs, give each a distinct job, and move valuable but nonessential material into governed reserve depth."
+    },
+    {
+      "id": "BS-006",
+      "title": "Consent, contextual integrity, and archive trace bias",
+      "category": "ethics",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 14,
+      "inputs": ["contextual-integrity register", "protected boundaries", "public sources", "offline and relational work"],
+      "procedure": ["Ask whether public availability is being mistaken for consent to professional reuse.", "Identify people, communities, spaces, and shared accounts whose context could be distorted by projection.", "Compare digitally abundant projects with physical, relational, care, print, hosting, repair, and handoff work that left fewer searchable traces."],
+      "pass_criteria": ["Publicness and consent remain separate decisions.", "Shared authorship, vulnerable-community context, participant privacy, current-status drift, and AI synthesis have explicit controls and review triggers.", "The bank preserves offline and relational contribution without inventing scale or exposing participants.", "No evaluation rewards creation of a public archive or proofs route."],
+      "evidence_required": ["contextual-integrity risk register", "controls and triggers", "trace-bias review", "projection deferrals"],
+      "remediation_hint": "Reduce the exposed detail, add consent or collaborator review, and preserve the contribution through a bounded aggregate or nonprojecting proposition."
+    },
+    {
+      "id": "BS-007",
+      "title": "Independent adversarial and live-use validation",
+      "category": "validation",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 10,
+      "inputs": ["independent judge records", "cold-reader results", "live accessibility and production QA", "validation-state register"],
+      "procedure": ["Use fresh judges who did not author the patch and are blind to patch intent.", "Test unexpected skeptical questions against source records and public copy.", "Exercise the exact deployed candidate with keyboard, mobile, reduced-motion, resume, contact, metadata, indexing, and rollback checks.", "Record external-transfer, access, consent, or human-review blockers instead of simulating completion."],
+      "pass_criteria": ["Development readiness records every pending external or human validation as an explicit state with an owner and next action.", "Release readiness includes two independent passing judgments on an unchanged candidate.", "Release readiness includes completed cold-reader and live-use evidence for the exact candidate.", "No agent represents its own review as independent or human validation."],
+      "evidence_required": ["candidate and rubric SHAs", "independent scorecards", "cold-reader results", "live QA report", "blocked-state ledger"],
+      "remediation_hint": "Stop at the explicit external or human boundary, obtain the required approval or observation, and rerun on the unchanged candidate."
+    }
+  ],
+  "grader_output_schema": {
+    "required": ["eval_id", "score", "pass", "evidence", "findings", "recommended_next_move", "confidence"],
+    "score_range": [0, 4],
+    "missing_evidence_value": "not_observed",
+    "evidence_must_name_observed_source_file_or_command": true
+  },
+  "iteration_record_schema": {
+    "required": ["iteration", "candidate_sha_before", "selected_eval_id", "change_summary", "evidence_before", "candidate_sha_after", "evidence_after", "score_before", "score_after", "regressions", "decision"],
+    "allowed_decisions": ["accept", "revise", "reject", "stop_threshold_met", "stop_iteration_limit", "stop_no_improvement", "stop_human_blocked"]
+  },
+  "run_record_schema": {
+    "required": ["suite_id", "target", "candidate_sha", "candidate_fingerprint", "rubric_sha", "contract_fingerprint", "evidence_bundle_fingerprint", "profile", "evaluator_identity", "evaluator_authored_candidate", "content_scope", "results", "unresolved_blockers", "next_action", "final_state", "consecutive_passing_runs"],
+    "allowed_targets": ["development-readiness", "release-readiness"],
+    "allowed_final_states": ["continue", "threshold_met", "human_blocked", "iteration_limit", "no_improvement"],
+    "release_required": ["independent_holdout_pass", "cold_reader_validation_pass", "live_use_validation_pass", "human_approval"]
+  }
+}

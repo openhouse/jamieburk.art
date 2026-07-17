@@ -1,0 +1,83 @@
+{
+  "candidateSha": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+  "evaluatorIdentity": "composite-optimizer-local-author",
+  "evaluatorAuthoredCandidate": true,
+  "profiles": {
+    "knowledgeDevelopment": {
+      "suite_id": "knowledge-bank-development",
+      "target": "claim-development",
+      "candidate_sha": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+      "weighted_score": 0.955,
+      "eligible": false,
+      "errors": [],
+      "blockers": [
+        "KB-010 scores 2; minimum is 3",
+        "KB-010 blocking eval did not pass",
+        "two consecutive passing runs are required"
+      ]
+    },
+    "blindSpotStewardship": {
+      "suite_id": "blind-spot-readiness",
+      "target": "development-readiness",
+      "candidate_sha": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+      "weighted_score": 0.79,
+      "eligible": false,
+      "errors": [],
+      "blockers": [
+        "BS-003 scores 2; minimum is 3",
+        "BS-003 blocking eval did not pass",
+        "BS-007 scores 2; minimum is 3",
+        "BS-007 blocking eval did not pass",
+        "weighted score 0.790 is below 0.850",
+        "two consecutive passing runs are required"
+      ]
+    },
+    "applicationShare": {
+      "suite_id": "portfolio-production-readiness",
+      "target": "application-share",
+      "candidate_sha": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+      "weighted_score": 0.78,
+      "eligible": false,
+      "errors": [],
+      "blockers": [
+        "PR-001 scores 2; minimum is 3",
+        "PR-011 scores 1; minimum is 3",
+        "PR-012 scores 1; minimum is 3",
+        "PR-014 scores 1; minimum is 2",
+        "weighted score 0.780 is below 0.800",
+        "PR-001 required application eval did not pass",
+        "PR-015 required application eval did not pass",
+        "PR-016 required application eval did not pass",
+        "PR-017 required application eval did not pass",
+        "human approval is required"
+      ]
+    },
+    "productionLaunch": {
+      "suite_id": "portfolio-production-readiness",
+      "target": "production-launch",
+      "candidate_sha": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+      "weighted_score": 0.78,
+      "eligible": false,
+      "errors": [],
+      "blockers": [
+        "PR-001 scores 2; minimum is 3",
+        "PR-011 scores 1; minimum is 3",
+        "PR-012 scores 1; minimum is 3",
+        "PR-014 scores 1; minimum is 2",
+        "weighted score 0.780 is below 0.900",
+        "PR-001 blocking eval did not pass",
+        "PR-011 blocking eval did not pass",
+        "PR-012 blocking eval did not pass",
+        "PR-015 blocking eval did not pass",
+        "PR-016 blocking eval did not pass",
+        "PR-017 blocking eval did not pass",
+        "blind reader median missing is below 4",
+        "holdout regression did not pass",
+        "two consecutive passing runs are required",
+        "human approval is required"
+      ]
+    }
+  },
+  "stopReason": "human_blocked",
+  "note": "Local authoring observations cannot certify threshold_met; missing external and human evidence remains explicit."
+}

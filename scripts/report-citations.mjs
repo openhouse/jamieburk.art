@@ -11,6 +11,7 @@ const lines = [
   "## Sources by visibility", "", "| Visibility | Count |", "| --- | ---: |", table(report.sourceVisibility), "",
   "## Preservation", "", "| Status | Count |", "| --- | ---: |", table(report.preservation), "",
   "## Claims and projections", "", `- Active projections: ${report.activeProjections}`, `- Cited claims: ${report.citedClaims}`, `- Uncited public claims: ${report.uncitedPublicClaims.join(", ") || "none"}`, `- Projection surfaces: ${report.projectionSurfaces.join(", ")}`, "",
+  "## Intake maturity", "", "| Status | Count |", "| --- | ---: |", table(report.intakeByStatus), "",
   "## Research and corrections", "", `- Research inquiries: ${report.inquiries}`, `- Corrections: ${report.corrections}`, "",
   "## Bounded evidence", "", ...report.boundedEvidence.map((item) => `- ${item.id}: ${item.visibility}`), "",
   "## Orphan sources", "", ...(report.orphanSources.length ? report.orphanSources.map((id) => `- ${id}`) : ["None."]), "",

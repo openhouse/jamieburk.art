@@ -1,6 +1,6 @@
 # CallNYC citational record
 
-**Reviewed:** 2026-07-11
+**Reviewed:** 2026-07-15
 
 **Public surface:** `/work/callnyc`
 
@@ -31,11 +31,34 @@ product, a documented formal submission, or a documented winner.
 - New York City Council Hackathon promotional graphic.
 - Politico New York coverage dated March 14, 2016.
 - Public CallNYC GitHub repository.
+- Public @CallNYCapp launch, first-person maker, and API posts.
+- Full-population @CallNYCapp census with a 110-slot disposition ledger.
 - Participant photograph metadata held outside the public projection.
 - Documented Civic Hall Wayback/CDX research run held outside the app build.
 
 The Wayback capture preserves embedded social posts. It is not a recovered
 Civic Hall calendar listing or dedicated event-detail page.
+
+## Public operation and traction
+
+The authenticated @CallNYCapp census gives all 110 profile-counted slots a
+disposition. It recovered 107 unique timeline objects: 86 project posts, six
+project replies, and 15 reposts. Three profile-counted objects remain not
+recovered.
+
+Within the recovered set, 71 issue-recognition posts linked 61 distinct
+CallNYC issue pages to 26 Council-member accounts. This documents the issue
+architecture operating in public. It does not establish current Council
+performance, current guidance, or engagement by all 26 named offices.
+
+A separate authenticated interaction review recovered replies, amplification,
+recognition responses, or independent site sharing from at least eight
+then-serving Council-member accounts. Eight is a recovery floor, not a complete
+lifetime total, endorsement count, adoption metric, or constituent-outcome
+measure.
+
+The full method, URL inventory, and item-level ledger are in
+`docs/knowledge-bank/research/2026-07-15-callnyc-x-full-population-archival-production.md`.
 
 ## Bounded research finding
 
@@ -65,10 +88,10 @@ The correction registry preserves three active decisions:
 
 The approved resume wording is:
 
-> Built CallNYC.org as an independent follow-on to the New York City Council's
-> first CouncilStat hackathon, translating constituent-services data into
-> resident-facing issue pages and next-step guidance; covered in Politico New
-> York.
+> Jamie built CallNYC.org as an archived, unofficial, independent follow-on to
+> the New York City Council's first CouncilStat hackathon, translating
+> constituent-services data into resident-facing issue pages and next-step
+> guidance; covered in Politico New York.
 
 ## Digital District photograph
 

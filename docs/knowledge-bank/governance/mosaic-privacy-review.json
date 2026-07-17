@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "status": "governed-open",
+  "reviewed_at": "2026-07-16",
+  "review_scope": "Combinations of public-safe portfolio, proof-bank, lifecycle, social-census, archive, media, and resume information.",
+  "risks": [
+    { "id": "MOSAIC-001", "combination": ["event dates and venues", "participant or stakeholder lists", "private correspondence"], "risk": "Re-identification or disclosure of protected participation.", "control": "Do not commit participant or stakeholder lists; publish event-level public facts only.", "trigger": "Any proposed person-level event or coalition record requires human privacy and consent review." },
+    { "id": "MOSAIC-002", "combination": ["social-account archives", "authorship inference", "engagement counters"], "risk": "Shared-account activity can be misassigned to Jamie or inflated into endorsement and impact.", "control": "Separate account establishment, known authorship, outbound mentions, inbound engagement, and unknown authorship.", "trigger": "Any new social metric must define population, direction, account class, missingness, and anti-inferences." },
+    { "id": "MOSAIC-003", "combination": ["small-business role", "revenue contribution", "private analytics"], "risk": "Aggregate proof can expose or invite inference about private business performance.", "control": "Keep contribution language aggregate and omit dashboards, time-series detail, customer data, and vendor terms.", "trigger": "Any more precise financial claim requires business-owner approval of exact wording and surface." },
+    { "id": "MOSAIC-004", "combination": ["media metadata", "event chronology", "visible faces or placards"], "risk": "Metadata can be mistaken for identity, consent, schedule, or publication rights.", "control": "Treat identity, date, place, meaning, rights, and consent as separate reviews.", "trigger": "Any display candidate requires rights and consent clearance independent of source custody." },
+    { "id": "MOSAIC-005", "combination": ["resume PDF phone number", "public HTML contact", "search indexing"], "risk": "A deliberately bounded contact detail can become broadly indexed or duplicated.", "control": "Keep phone out of public HTML and retain PDF-specific noindex handling.", "trigger": "Any resume asset or routing change reruns PDF, robots, sitemap, and header checks." }
+  ],
+  "residual_risk": "Public facts can still be combined externally. The repository therefore minimizes person-level records, keeps protected locators opaque, and requires exact-surface review for new projections."
+}

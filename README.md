@@ -35,9 +35,32 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run evals:composite
+npm run evals:portfolio
+npm run test:portfolio-evals
+npm run evals:knowledge-bank
+npm run evals:blind-spots
+npm run check:knowledge-lifecycle
+npm run check:knowledge-integrity
 npm run preflight:staging
 npm run preflight:production
 ```
+
+The composite contract lives at `.agents/evals/composite-integration.json` and
+references the three canonical suites under `.agents/evals/`. Run
+`npm run evals:composite` to verify the four profiles, grader separation,
+immutable run bindings, A-N source dispositions, and mutation requirements.
+Validate the portfolio source contracts with `npm run evals:portfolio`. Score
+a complete application-share or production-launch run with:
+
+```bash
+npm run evals:portfolio:score -- path/to/run.json
+```
+
+See `docs/evals/portfolio-production-readiness.md`,
+`docs/evals/feature-evals-composite-decision-ledger.md`, and
+`instructions-j.md` for grader separation, evidence requirements, stopping
+rules, and the recursive improvement protocol.
 
 ## Knowledge Bank
 
@@ -46,6 +69,8 @@ This repo includes a public-safe knowledge bank for professional claims:
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
 - `apps/www/src/data/knowledge-bank/records.ts`
+- `apps/www/src/data/knowledge-bank/lifecycle-records.ts`
+- `docs/knowledge-bank/governance/`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -65,6 +90,16 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+The lifecycle workbench is offline and repository-only. Use
+`npm run knowledge:intake` to emit or append an immutable public-safe receipt,
+`npm run check:knowledge-lifecycle` to validate maturity and decisions,
+`npm run report:knowledge-lifecycle` for a maintenance summary, and
+`npm run query:knowledge-lifecycle` for a bounded research or exact-surface
+palette. `npm run check:knowledge-integrity` enforces collective-credit classes,
+exact proof inventories, projection-source bindings, composition budgets, and
+mosaic-privacy review. None of these commands creates a public knowledge-bank
+route.
 
 ## Environment
 

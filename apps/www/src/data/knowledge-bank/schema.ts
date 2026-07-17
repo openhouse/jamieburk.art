@@ -1,11 +1,11 @@
 import { z } from "zod";
 
-const stableIdSchema = z
+export const stableIdSchema = z
   .string()
   .min(1)
   .regex(/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/, "Use a stable hyphenated ID");
 
-const publicUrlSchema = z
+export const publicUrlSchema = z
   .url()
   .refine((value) => /^https?:\/\//.test(value), "Use an HTTP(S) public URL");
 
@@ -38,7 +38,7 @@ export const preservationStatusSchema = z.enum([
   "private"
 ]);
 
-const mediaSchema = z.object({
+export const mediaSchema = z.object({
   mediaKind: z.enum(["photograph", "screenshot", "graphic", "document", "other"]),
   photographer: z.string().min(1).optional(),
   rightsHolder: z.string().min(1).optional(),
@@ -77,6 +77,8 @@ export const sourceRecordSchema = z
     publishedAt: z.iso.date().optional(),
     capturedAt: z.string().min(1).optional(),
     accessedAt: z.iso.date().optional(),
+    metadataVerifiedAt: z.iso.date().optional(),
+    metadataVerifiedBy: z.string().min(1).optional(),
     canonicalUrl: publicUrlSchema.optional(),
     archiveUrl: publicUrlSchema.optional(),
     assetUrl: publicUrlSchema.optional(),
@@ -144,6 +146,7 @@ export const claimProjectionSchema = z.object({
     "resume-html",
     "technical-operations",
     "homepage",
+    "about",
     "photo-caption",
     "archive-note"
   ]),
@@ -204,6 +207,174 @@ export const correctionRecordSchema = z.object({
   status: z.enum(["active", "superseded"])
 });
 
+export const intakePropositionSchema = z
+  .object({
+    id: stableIdSchema,
+    text: z.string().min(1),
+    status: z.enum([
+      "direct-support",
+      "supported-with-boundary",
+      "synthesis-with-boundary",
+      "context-only",
+      "memory-lead",
+      "research-only"
+    ]),
+    sourceIds: z.array(stableIdSchema).default([]),
+    sourceSupport: z.array(z.string().min(1)).default([]),
+    boundaries: z.array(z.string().min(1)).min(1),
+    decisionUse: z.string().min(1),
+    nextStep: z.string().min(1).optional()
+  })
+  .superRefine((proposition, context) => {
+    if (
+      [
+        "direct-support",
+        "supported-with-boundary",
+        "synthesis-with-boundary",
+        "context-only"
+      ].includes(proposition.status) &&
+      !proposition.sourceIds.length
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: `${proposition.status} propositions require a source`
+      });
+    }
+    if (
+      ["memory-lead", "research-only", "context-only"].includes(
+        proposition.status
+      ) &&
+      !proposition.nextStep
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: `${proposition.status} propositions require a next step`
+      });
+    }
+  });
+
+export const intakeCorrectionTriggerSchema = z
+  .object({
+    id: stableIdSchema,
+    targetProofId: stableIdSchema,
+    condition: z.string().min(1),
+    action: z.enum(["confirm", "narrow", "hold", "replace", "retire"]),
+    requiredEvidence: z.array(z.string().min(1)).min(1),
+    reason: z.string().min(1),
+    replacementGuidance: z.string().min(1).optional()
+  })
+  .superRefine((trigger, context) => {
+    if (trigger.action !== "confirm" && !trigger.replacementGuidance) {
+      context.addIssue({
+        code: "custom",
+        message: `${trigger.action} triggers require replacement guidance`
+      });
+    }
+  });
+
+export const intakeTensionSchema = z
+  .object({
+    id: stableIdSchema,
+    propositionIds: z.array(stableIdSchema).min(1),
+    relatedProofIds: z.array(stableIdSchema).min(1),
+    description: z.string().min(1),
+    currentPosition: z.string().min(1),
+    status: z.enum(["open", "reconciled"]),
+    correctionTriggers: z.array(intakeCorrectionTriggerSchema).min(2)
+  })
+  .superRefine((tension, context) => {
+    if (!tension.correctionTriggers.some((trigger) => trigger.action === "confirm")) {
+      context.addIssue({
+        code: "custom",
+        message: "Tensions require a confirmation trigger"
+      });
+    }
+    if (
+      !tension.correctionTriggers.some((trigger) =>
+        ["narrow", "hold", "replace", "retire"].includes(trigger.action)
+      )
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "Tensions require a corrective trigger"
+      });
+    }
+  });
+
+export const intakeItemSchema = z
+  .object({
+    id: stableIdSchema,
+    title: z.string().min(1),
+    project: stableIdSchema.optional(),
+    kind: z.enum([
+      "memory-fragment",
+      "source-link",
+      "metric-lead",
+      "project-lead",
+      "claim-candidate"
+    ]),
+    summary: z.string().min(1),
+    status: z.enum([
+      "captured",
+      "source-associated",
+      "researching",
+      "claim-candidate",
+      "integrated",
+      "held"
+    ]),
+    sourceIds: z.array(stableIdSchema).default([]),
+    relatedClaimIds: z.array(stableIdSchema).default([]),
+    relatedProofIds: z.array(stableIdSchema).default([]),
+    candidateClaims: z.array(z.string().min(1)).default([]),
+    propositions: z.array(intakePropositionSchema).default([]),
+    tensions: z.array(intakeTensionSchema).default([]),
+    researchQuestions: z.array(z.string().min(1)).default([]),
+    boundaries: z.array(z.string().min(1)).min(1),
+    projectionStatus: z.literal("no-public-projection"),
+    receivedAt: z.iso.date(),
+    reviewedAt: z.iso.date(),
+    reviewedBy: z.array(z.string().min(1)).default([])
+  })
+  .superRefine((item, context) => {
+    if (item.status === "source-associated" && !item.sourceIds.length) {
+      context.addIssue({
+        code: "custom",
+        message: "Source-associated intake requires at least one source"
+      });
+    }
+    if (item.status === "claim-candidate" && !item.candidateClaims.length) {
+      context.addIssue({
+        code: "custom",
+        message: "Claim-candidate intake requires candidate claim language"
+      });
+    }
+    const candidatePropositionTexts = new Set(
+      item.propositions
+        .filter((proposition) =>
+          [
+            "direct-support",
+            "supported-with-boundary",
+            "synthesis-with-boundary"
+          ].includes(proposition.status)
+        )
+        .map((proposition) => proposition.text)
+    );
+    for (const claim of item.candidateClaims) {
+      if (!candidatePropositionTexts.has(claim)) {
+        context.addIssue({
+          code: "custom",
+          message: "Candidate claims must resolve to a supported proposition"
+        });
+      }
+    }
+    if (item.status === "integrated" && !item.relatedClaimIds.length) {
+      context.addIssue({
+        code: "custom",
+        message: "Integrated intake requires at least one related claim"
+      });
+    }
+  });
+
 export const citationOccurrenceSchema = z.object({
   id: stableIdSchema,
   claimId: stableIdSchema,
@@ -223,6 +394,7 @@ export const knowledgeBankSchema = z.object({
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
+  intakeItems: z.array(intakeItemSchema),
   pages: z.array(citationPageSchema)
 });
 
@@ -232,6 +404,10 @@ export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
 export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
+export type IntakeProposition = z.infer<typeof intakePropositionSchema>;
+export type IntakeCorrectionTrigger = z.infer<typeof intakeCorrectionTriggerSchema>;
+export type IntakeTension = z.infer<typeof intakeTensionSchema>;
+export type IntakeItem = z.infer<typeof intakeItemSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;
 export type KnowledgeBank = z.infer<typeof knowledgeBankSchema>;

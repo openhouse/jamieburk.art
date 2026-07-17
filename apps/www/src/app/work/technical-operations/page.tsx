@@ -19,17 +19,23 @@ const proofMap = [
   {
     project: "HJE",
     proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
+      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business.",
+    artifactLabel: "Inspect public storefront",
+    artifactUrl: "https://www.harryepstein.com/"
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management.",
+    artifactLabel: "Inspect public campaign site",
+    artifactUrl: "https://fairrentnyc.nycartc.com/"
   },
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "Jamie built an archived, unofficial, independent prototype translating CouncilStat records into resident-facing issue pathways and next-step guidance.",
+    artifactLabel: "Inspect public repository",
+    artifactUrl: "https://github.com/openhouse/CallNYC"
   },
   {
     project: "WOWList",
@@ -48,7 +54,8 @@ const proofMap = [
   },
   {
     project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
+    proof:
+      "long-horizon project planning, public-benefit documentation, municipal-review support, and a shared public operating surface for resident input and neighborhood service."
   },
   {
     project: "Source-Backed Team Memory",
@@ -68,7 +75,7 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
@@ -100,6 +107,16 @@ export default function TechnicalOperationsPage() {
               <div key={item.project}>
                 <dt className="font-semibold text-jb-ink">{item.project}</dt>
                 <dd className="mt-1 leading-7 text-jb-ink/72">{item.proof}</dd>
+                {item.artifactUrl ? (
+                  <dd className="mt-2">
+                    <a
+                      className="font-semibold text-jb-blue underline decoration-jb-blue/35 underline-offset-4 hover:text-jb-green"
+                      href={item.artifactUrl}
+                    >
+                      {item.artifactLabel}
+                    </a>
+                  </dd>
+                ) : null}
               </div>
             ))}
           </dl>

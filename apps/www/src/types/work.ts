@@ -42,6 +42,9 @@ export type Artifact = {
   title: string;
   description: string;
   type: ArtifactType;
+  inspectUrl?: string;
+  inspectLabel?: string;
+  sourceNote?: string;
 };
 
 export type WorkMeta = {

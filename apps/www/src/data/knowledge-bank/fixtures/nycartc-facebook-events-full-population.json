@@ -1,0 +1,1385 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-15",
+  "page": {
+    "name": "NYC Artist Coalition",
+    "handle": "nycartc",
+    "eventsUrl": "https://www.facebook.com/nycartc/events",
+    "selectedSurface": "Past Events"
+  },
+  "populationReconciliation": {
+    "scope": "The full event-card population exposed by the live NYC Artist Coalition Facebook page's Past Events surface after repeated scrolling to a stable terminal state on the capture date.",
+    "pageDisplayedPastEventCount": 34,
+    "recoveredIndexEventCount": 33,
+    "recoveredDetailEventCount": 33,
+    "detailRetrievalFailureCount": 0,
+    "unmaterializedCount": 1,
+    "terminalState": {
+      "scrollRounds": 9,
+      "stableRounds": 4
+    },
+    "reconciliationNote": "Facebook displayed 34 past events but materialized 33 unique event cards. All 33 exposed detail pages were recovered. The remaining one is recorded as unmaterialized, not as nonexistent."
+  },
+  "publicSafety": {
+    "rawDescriptionsPublished": false,
+    "attendeeIdentitiesPublished": false,
+    "contactDetailsPublished": false,
+    "accessCredentialsPublished": false,
+    "rawCaptureLocation": "protected-research-workspace",
+    "note": "The public fixture retains event metadata, organizer displays, aggregate response snapshots, topics, and selected mission-relevant links. Raw descriptions, emails, phone numbers, meeting IDs, passcodes, attendee identities, and private working-document links are excluded."
+  },
+  "aggregateSnapshot": {
+    "exposedEvents": 33,
+    "indexDisplayedNycacOrganizerEvents": 24,
+    "alliedOrCohostedListings": 9,
+    "eventsWithDisplayedResponseCount": 32,
+    "responseActionPointEstimate": 9989,
+    "roundedResponseCountEvents": 3,
+    "eventsAtOrAbove100Responses": 19,
+    "eventsAtOrAbove500Responses": 7,
+    "eventsAtOrAbove1000Responses": 3,
+    "interpretation": "The total is a point estimate from displayed Facebook response strings; three event counts were rounded in thousands. Response actions are not unique people and do not establish attendance."
+  },
+  "postedSourceArticles": [
+    {
+      "eventId": "472114119789400",
+      "eventTitle": "Cabaret Law Hearing: One Chance to Legalize Dance!",
+      "url": "http://nypost.com/2017/04/08/these-footloose-inspired-rebels-are-fighting-nycs-dancing-ban/",
+      "title": "These 'Footloose'-inspired rebels are fighting NYC's dancing ban",
+      "publisher": "New York Post"
+    },
+    {
+      "eventId": "472114119789400",
+      "eventTitle": "Cabaret Law Hearing: One Chance to Legalize Dance!",
+      "url": "http://www.wnyc.org/story/bureaucratic-dance-end-nyc-cabaret-law/",
+      "title": "The Bureaucratic Dance to End NYC's Cabaret Law",
+      "publisher": "WNYC"
+    },
+    {
+      "eventId": "472114119789400",
+      "eventTitle": "Cabaret Law Hearing: One Chance to Legalize Dance!",
+      "url": "http://www.metro.us/news/local-news/new-york/arts-advocates-renew-call-end-new-york-citys-antiquated-cabaret-laws",
+      "title": "Arts advocates renew call to end New York City's antiquated cabaret laws",
+      "publisher": "Metro"
+    },
+    {
+      "eventId": "107158013279474",
+      "eventTitle": "NAC July Meeting: Legalize Dance, Repairs Fund, CreateNYC",
+      "url": "http://www.newyorker.com/magazine/2017/07/10/dance-outlaws-fight-for-the-right-to-party",
+      "title": "Dance Outlaws Fight for the Right to Party",
+      "publisher": "The New Yorker"
+    },
+    {
+      "eventId": "790581997948463",
+      "eventTitle": "MARCH Raids in NYC - City Hall Hearing #TalksNotRaids",
+      "url": "https://thebaffler.com/latest/cut-the-music-pelly",
+      "title": "Cut the Music",
+      "publisher": "The Baffler"
+    },
+    {
+      "eventId": "1014934072187610",
+      "eventTitle": "Fair Rent NYC: Anti-Displacement Rally",
+      "url": "https://ny.curbed.com/2019/11/8/20953724/commercial-rent-stabilization-bill-nyc-retail-vacancy",
+      "title": "Could commercial rent stabilization solve NYC's retail-vacancy crisis?",
+      "publisher": "Curbed"
+    },
+    {
+      "eventId": "1014934072187610",
+      "eventTitle": "Fair Rent NYC: Anti-Displacement Rally",
+      "url": "https://gothamist.com/news/facing-retail-vacancy-crisis-city-council-consider-plan-commercial-rent-stabilization",
+      "title": "Facing Retail Vacancy Crisis, City Council To Consider Plan For Commercial Rent Stabilization",
+      "publisher": "Gothamist"
+    }
+  ],
+  "events": [
+    {
+      "id": "388137698233507",
+      "url": "https://www.facebook.com/events/388137698233507/",
+      "date": "2017-01-27",
+      "dateLabel": "Fri, Jan 27, 2017",
+      "title": "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting",
+      "venue": "New York City Department of Cultural Affairs",
+      "venueCategory": "government",
+      "indexOrganizerDisplay": "Call Script",
+      "detailOrganizerDisplay": "NYC Artist Coalition, Call Script and 2 others",
+      "relationToPage": "allied-or-cohosted-listing",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "445",
+        "wentDisplay": "141",
+        "interestedDisplay": "304",
+        "pointEstimate": 445,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cultural-planning",
+        "government-interface",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "https://res.cloudinary.com/sagacity/image/upload/v1482164218/Commissions_Response_to_Oakland_Fire_mykyrd.pdf",
+          "host": "res.cloudinary.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "406505576359490",
+      "url": "https://www.facebook.com/events/406505576359490/",
+      "date": "2017-02-06",
+      "dateLabel": "Mon, Feb 6, 2017",
+      "title": "DIY: NYC Artist Coalition - General Meeting",
+      "venue": "Magick City",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "3 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "150",
+        "wentDisplay": "74",
+        "interestedDisplay": "76",
+        "pointEstimate": 150,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cultural-planning",
+        "government-interface",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://nycartc.com/path-to-be-legal/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://nycartc.com/dcla-meeting/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "private-working-document"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "1833265643557435",
+      "url": "https://www.facebook.com/events/1833265643557435/",
+      "date": "2017-03-06",
+      "dateLabel": "Mon, Mar 6, 2017",
+      "title": "NYC Artist Coalition - March General Meeting",
+      "venue": "The Floasis",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "3 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "61",
+        "wentDisplay": "26",
+        "interestedDisplay": "35",
+        "pointEstimate": 61,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cultural-planning",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://www.thefloasis.com/",
+          "host": "www.thefloasis.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "unresolved-short-link"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "629158950604663",
+      "url": "https://www.facebook.com/events/629158950604663/",
+      "date": "2017-03-20",
+      "dateLabel": "Mon, Mar 20, 2017",
+      "title": "Become a Fire Guard: Group Test & Study",
+      "venue": "NYC Fire Department, Public Certification Unit, 9 MetroTech Center, 1st Floor, Brooklyn, NY 11201",
+      "venueCategory": "government",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "13",
+        "wentDisplay": "10",
+        "interestedDisplay": "3",
+        "pointEstimate": 13,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "government-interface",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "unresolved-short-link"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "330648000670969",
+      "url": "https://www.facebook.com/events/330648000670969/",
+      "date": "2017-03-24",
+      "dateLabel": "Fri, Mar 24, 2017",
+      "title": "Become a Fire Guard: Group Test & Study",
+      "venue": "NYC Fire Department, Public Certification Unit, 9 MetroTech Center, 1st Floor, Brooklyn, NY 11201",
+      "venueCategory": "government",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "17",
+        "wentDisplay": "5",
+        "interestedDisplay": "12",
+        "pointEstimate": 17,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "government-interface",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "unresolved-short-link"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "1907948219437421",
+      "url": "https://www.facebook.com/events/1907948219437421/",
+      "date": "2017-03-30",
+      "dateLabel": "Thu, Mar 30, 2017",
+      "title": "Market Hotel - Show NYC We Support Spaces",
+      "venue": "MARKET HOTEL",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "Commend and NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "633",
+        "wentDisplay": "257",
+        "interestedDisplay": "376",
+        "pointEstimate": 633,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "cultural-planning",
+        "cultural-space-defense",
+        "government-interface",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://nycartc.com/join/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "https://twitter.com/nycartc",
+          "host": "twitter.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://www.danceliberationnetwork.com/",
+          "host": "www.danceliberationnetwork.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "212427345900529",
+      "url": "https://www.facebook.com/events/212427345900529/",
+      "date": "2017-04-25",
+      "dateLabel": "Tue, Apr 25, 2017",
+      "title": "Legalize Dance in NYC Panel - NYC Artist Coalition April Meeting",
+      "venue": "Muchmore's",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "458",
+        "wentDisplay": "126",
+        "interestedDisplay": "332",
+        "pointEstimate": 458,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://nycartc.com/cabaret/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://nycartc.com/join/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "835861356564686",
+      "url": "https://www.facebook.com/events/835861356564686/",
+      "date": "2017-05-15",
+      "dateLabel": "Mon, May 15, 2017",
+      "title": "Cultural Plan VOTE + Cabaret Law Protest Prep ▨ NAC May Meeting",
+      "venue": "The City Reliquary",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "71",
+        "wentDisplay": "25",
+        "interestedDisplay": "46",
+        "pointEstimate": 71,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "cultural-planning",
+        "government-interface",
+        "participatory-convening"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "173887729801951",
+      "url": "https://www.facebook.com/events/173887729801951/",
+      "date": "2017-05-19",
+      "dateLabel": "Fri, May 19, 2017",
+      "title": "LEGAL Q&A + Advocacy",
+      "venue": "334 S 5th St, Brooklyn, NY 11211-4602, United States",
+      "venueCategory": "community-meeting-place",
+      "indexOrganizerDisplay": "NYC Loft Tenants",
+      "detailOrganizerDisplay": "NYC Loft Tenants and NYC Artist Coalition",
+      "relationToPage": "allied-or-cohosted-listing",
+      "duration": "3 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "26",
+        "wentDisplay": "12",
+        "interestedDisplay": "14",
+        "pointEstimate": 26,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cultural-planning",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://nyclofttenants.org/",
+          "host": "nyclofttenants.org",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "1677962702508970",
+      "url": "https://www.facebook.com/events/1677962702508970/",
+      "date": "2017-05-20",
+      "dateLabel": "Sat, May 20, 2017",
+      "title": "Protest the Cabaret Law w/ NAC + Dance Parade",
+      "venue": "Broadway and East 22nd Street, Manhattan.",
+      "venueCategory": "public-realm",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "3 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "137",
+        "wentDisplay": "55",
+        "interestedDisplay": "82",
+        "pointEstimate": 137,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "participatory-convening"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "1472395276154065",
+      "url": "https://www.facebook.com/events/1472395276154065/",
+      "date": "2017-06-02",
+      "dateLabel": "Fri, Jun 2, 2017",
+      "title": "Architectural Q&A + Advocacy",
+      "venue": "334 S 5th St, Brooklyn, NY 11211-4602, United States",
+      "venueCategory": "community-meeting-place",
+      "indexOrganizerDisplay": "NYC Loft Tenants",
+      "detailOrganizerDisplay": "NYC Loft Tenants and NYC Artist Coalition",
+      "relationToPage": "allied-or-cohosted-listing",
+      "duration": "3 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "9",
+        "wentDisplay": "4",
+        "interestedDisplay": "5",
+        "pointEstimate": 9,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cultural-planning",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://nyclofttenants.org/",
+          "host": "nyclofttenants.org",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "472114119789400",
+      "url": "https://www.facebook.com/events/472114119789400/",
+      "date": "2017-06-19",
+      "dateLabel": "Mon, Jun 19, 2017",
+      "title": "Cabaret Law Hearing: One Chance to Legalize Dance!",
+      "venue": "New York City Hall",
+      "venueCategory": "government",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "Dance Liberation Network, House Coalition and 2 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "3 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "1.7K",
+        "wentDisplay": "543",
+        "interestedDisplay": "1.1K",
+        "pointEstimate": 1700,
+        "rounded": true,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "government-interface",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://nycartc.com/letter-espinal/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://nypost.com/2017/04/08/these-footloose-inspired-rebels-are-fighting-nycs-dancing-ban/",
+          "host": "nypost.com",
+          "resourceType": "source-article"
+        },
+        {
+          "url": "http://www.wnyc.org/story/bureaucratic-dance-end-nyc-cabaret-law/",
+          "host": "www.wnyc.org",
+          "resourceType": "source-article"
+        },
+        {
+          "url": "http://www.metro.us/news/local-news/new-york/arts-advocates-renew-call-end-new-york-citys-antiquated-cabaret-laws",
+          "host": "www.metro.us",
+          "resourceType": "source-article"
+        },
+        {
+          "url": "http://www.danceliberationnetwork.com/",
+          "host": "www.danceliberationnetwork.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://danceparade.org/",
+          "host": "danceparade.org",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://nycartc.com/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://legalizedance.org/",
+          "host": "legalizedance.org",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "107158013279474",
+      "url": "https://www.facebook.com/events/107158013279474/",
+      "date": "2017-07-24",
+      "dateLabel": "Mon, Jul 24, 2017",
+      "title": "NAC July Meeting: Legalize Dance, Repairs Fund, CreateNYC",
+      "venue": "Shoestring Press",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "99",
+        "wentDisplay": "31",
+        "interestedDisplay": "68",
+        "pointEstimate": 99,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "cultural-planning",
+        "government-interface",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://www.newyorker.com/magazine/2017/07/10/dance-outlaws-fight-for-the-right-to-party",
+          "host": "www.newyorker.com",
+          "resourceType": "source-article"
+        },
+        {
+          "url": "http://nycartc.com/cabaret/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "https://www.peoplesculturalplan.org/",
+          "host": "www.peoplesculturalplan.org",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://www1.nyc.gov/assets/fdny/downloads/pdf/business/cof-f04-noe-study-materials.pdf",
+          "host": "www1.nyc.gov",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "113308576029782",
+      "url": "https://www.facebook.com/events/113308576029782/",
+      "date": "2017-09-14",
+      "dateLabel": "Thu, Sep 14, 2017",
+      "title": "Repeal the Cabaret Law Now: City Hall Hearing",
+      "venue": "New York City Hall",
+      "venueCategory": "government",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "Dance Liberation Network, House Coalition and 2 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "3 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "1.1K",
+        "wentDisplay": "293",
+        "interestedDisplay": "771",
+        "pointEstimate": 1100,
+        "rounded": true,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "government-interface",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://letnycdance.com/",
+          "host": "letnycdance.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://www.danceliberationnetwork.com/",
+          "host": "www.danceliberationnetwork.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://danceparade.org/",
+          "host": "danceparade.org",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://nycartc.com/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://legalizedance.org/",
+          "host": "legalizedance.org",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "120802405289008",
+      "url": "https://www.facebook.com/events/120802405289008/",
+      "date": "2017-10-11",
+      "dateLabel": "Wed, Oct 11, 2017",
+      "title": "Tell NYC's Night Mayor: Save NYC Spaces",
+      "venue": "MARKET HOTEL",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "House of YES, Dance Liberation Network and 7 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr 30 min",
+      "responseSnapshot": {
+        "respondedDisplay": "1.2K",
+        "wentDisplay": "397",
+        "interestedDisplay": "846",
+        "pointEstimate": 1200,
+        "rounded": true,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "cultural-planning",
+        "cultural-space-defense",
+        "government-interface",
+        "nightlife-governance",
+        "participatory-convening"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "expired-registration-link"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "133554860735306",
+      "url": "https://www.facebook.com/events/133554860735306/",
+      "date": "2017-10-31",
+      "dateLabel": "Tue, Oct 31, 2017",
+      "title": "NYC Repeals Cabaret Law: City Hall",
+      "venue": "New York City Hall",
+      "venueCategory": "government",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "Dance Liberation Network, House Coalition and 2 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "1 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "885",
+        "wentDisplay": "214",
+        "interestedDisplay": "671",
+        "pointEstimate": 885,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "cultural-planning",
+        "government-interface"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "144317939631393",
+      "url": "https://www.facebook.com/events/144317939631393/",
+      "date": "2017-11-13",
+      "dateLabel": "Mon, Nov 13, 2017",
+      "title": "NYC Artist Coalition - November Meeting",
+      "venue": "Chinatown Soup",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "1 hr 30 min",
+      "responseSnapshot": {
+        "respondedDisplay": "123",
+        "wentDisplay": "42",
+        "interestedDisplay": "81",
+        "pointEstimate": 123,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "cultural-planning",
+        "nightlife-governance",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "383292402137451",
+      "url": "https://www.facebook.com/events/383292402137451/",
+      "date": "2018-03-26",
+      "dateLabel": "Mon, Mar 26, 2018",
+      "title": "Night Mayor Panel - NAC March Meeting",
+      "venue": "Secret Project Robot",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "House of YES, Educated Little Monsters and 6 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "1 hr 30 min",
+      "responseSnapshot": {
+        "respondedDisplay": "612",
+        "wentDisplay": "206",
+        "interestedDisplay": "406",
+        "pointEstimate": 612,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "nightlife-governance",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://nycartc.com/join",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "1916200875140739",
+      "url": "https://www.facebook.com/events/1916200875140739/",
+      "date": "2018-10-22",
+      "dateLabel": "Mon, Oct 22, 2018",
+      "title": "City Hall Hearing: Lease Protections for Spaces #PassSBJSA",
+      "venue": "New York City Hall",
+      "venueCategory": "government",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "Village Preservation - Greenwich Village Society For Historic Preservation, Equality for Flatbush : E4F and 11 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "527",
+        "wentDisplay": "136",
+        "interestedDisplay": "391",
+        "pointEstimate": 527,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "commercial-rent-and-displacement",
+        "cultural-planning",
+        "cultural-space-defense",
+        "government-interface",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://passsbjsa.com/",
+          "host": "passsbjsa.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "https://secure2.convio.net/gvshp/site/Advocacy?cmd=display&page=UserAction&id=131",
+          "host": "secure2.convio.net",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "468698540318956",
+      "url": "https://www.facebook.com/events/468698540318956/",
+      "date": "2018-11-01",
+      "dateLabel": "Thu, Nov 1, 2018",
+      "title": "MARCH Raids & Fair Rent: NYC Artist Coalition Meeting",
+      "venue": "Friends and Lovers",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "League of Independent Theater, Educated Little Monsters and 4 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "205",
+        "wentDisplay": "53",
+        "interestedDisplay": "152",
+        "pointEstimate": 205,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "commercial-rent-and-displacement",
+        "march-enforcement",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://talksnotraids.com/",
+          "host": "talksnotraids.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://fairrentnyc.com/",
+          "host": "fairrentnyc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://nycartc.com/join/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "dated-voting-logistics"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "790581997948463",
+      "url": "https://www.facebook.com/events/790581997948463/",
+      "date": "2019-02-11",
+      "dateLabel": "Mon, Feb 11, 2019",
+      "title": "MARCH Raids in NYC - City Hall Hearing #TalksNotRaids",
+      "venue": "New York City Hall",
+      "venueCategory": "government",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "Elsewhere, League of Independent Theater and 9 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "1 hr 30 min",
+      "responseSnapshot": {
+        "respondedDisplay": "299",
+        "wentDisplay": "100",
+        "interestedDisplay": "199",
+        "pointEstimate": 299,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cabaret-law-repeal",
+        "commercial-rent-and-displacement",
+        "cultural-space-defense",
+        "government-interface",
+        "march-enforcement",
+        "nightlife-governance",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://talksnotraids.com/",
+          "host": "talksnotraids.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "https://thebaffler.com/latest/cut-the-music-pelly",
+          "host": "thebaffler.com",
+          "resourceType": "source-article"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "149896349250651",
+      "url": "https://www.facebook.com/events/149896349250651/",
+      "date": "2019-02-18",
+      "dateLabel": "Mon, Feb 18, 2019",
+      "title": "NYC Artist Coalition - February Meeting",
+      "venue": "Flowers for all Occasions",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "173",
+        "wentDisplay": "44",
+        "interestedDisplay": "129",
+        "pointEstimate": 173,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "commercial-rent-and-displacement",
+        "government-interface",
+        "march-enforcement",
+        "nightlife-governance",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "https://talksnotraids.com/",
+          "host": "talksnotraids.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://fairrentnyc.com/",
+          "host": "fairrentnyc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://nycartc.com/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "2347093582223366",
+      "url": "https://www.facebook.com/events/2347093582223366/",
+      "date": "2019-05-06",
+      "dateLabel": "Mon, May 6, 2019",
+      "title": "Save Ode To Babel",
+      "venue": "727 Classon Ave, Brooklyn, NY 11238-3704, United States",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition and Ode to Babel",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "3 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "143",
+        "wentDisplay": "49",
+        "interestedDisplay": "94",
+        "pointEstimate": 143,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cultural-space-defense",
+        "march-enforcement"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://talksnotraids.com/",
+          "host": "talksnotraids.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "2998476473711342",
+      "url": "https://www.facebook.com/events/2998476473711342/",
+      "date": "2019-06-22",
+      "dateLabel": "Sat, Jun 22, 2019",
+      "title": "PN Mobile Workshop: In Defense of Grassroots Cultural Spaces",
+      "venue": "Pratt Institute",
+      "venueCategory": "educational-institution",
+      "indexOrganizerDisplay": "Planners Network NYC",
+      "detailOrganizerDisplay": "NYC Artist Coalition and Planners Network NYC",
+      "relationToPage": "allied-or-cohosted-listing",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "28",
+        "wentDisplay": "5",
+        "interestedDisplay": "23",
+        "pointEstimate": 28,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "cultural-space-defense",
+        "nightlife-governance",
+        "participatory-convening",
+        "safety-and-compliance"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "unresolved-short-link"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "373845436658926",
+      "url": "https://www.facebook.com/events/373845436658926/",
+      "date": "2019-08-07",
+      "dateLabel": "Wed, Aug 7, 2019",
+      "title": "NYC Artist Coalition: Summer of Change Meeting",
+      "venue": "Ode to Babel",
+      "venueCategory": "cultural-or-community-space",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition and Ode to Babel",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "157",
+        "wentDisplay": "43",
+        "interestedDisplay": "114",
+        "pointEstimate": 157,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "commercial-rent-and-displacement",
+        "cultural-space-defense",
+        "march-enforcement",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "https://talksnotraids.com/",
+          "host": "talksnotraids.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://fairrentnyc.com/",
+          "host": "fairrentnyc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "http://nycartc.com/",
+          "host": "nycartc.com",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "1014934072187610",
+      "url": "https://www.facebook.com/events/1014934072187610/",
+      "date": "2019-11-14",
+      "dateLabel": "Thu, Nov 14, 2019",
+      "title": "Fair Rent NYC: Anti-Displacement Rally",
+      "venue": "City Hall, New York, NY 10007, United States",
+      "venueCategory": "government",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "Cooper Square Committee, House Coalition and 5 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "1 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "149",
+        "wentDisplay": "32",
+        "interestedDisplay": "117",
+        "pointEstimate": 149,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "commercial-rent-and-displacement",
+        "cultural-space-defense",
+        "government-interface",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://fairrentnyc.com/",
+          "host": "fairrentnyc.com",
+          "resourceType": "mission-resource"
+        },
+        {
+          "url": "https://ny.curbed.com/2019/11/8/20953724/commercial-rent-stabilization-bill-nyc-retail-vacancy",
+          "host": "ny.curbed.com",
+          "resourceType": "source-article"
+        },
+        {
+          "url": "https://gothamist.com/news/facing-retail-vacancy-crisis-city-council-consider-plan-commercial-rent-stabilization",
+          "host": "gothamist.com",
+          "resourceType": "source-article"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "1371973329662017",
+      "url": "https://www.facebook.com/events/1371973329662017/",
+      "date": "2020-03-16",
+      "dateLabel": "Mon, Mar 16, 2020",
+      "title": "Covid-19 Relief: Virtual Meeting - NYC Artist Coalition",
+      "venue": "New York City, N.Y.",
+      "venueCategory": "virtual",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "House Coalition, NYC Artist Coalition and 3 others",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": "1 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "309",
+        "wentDisplay": "131",
+        "interestedDisplay": "178",
+        "pointEstimate": 309,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "mutual-aid-and-relief",
+        "participatory-convening"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 3,
+      "withheldOutboundLinkCategories": [
+        "meeting-access-link"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "2616087105332260",
+      "url": "https://www.facebook.com/events/2616087105332260/",
+      "date": "2020-04-13",
+      "dateLabel": "Mon, Apr 13, 2020",
+      "title": "Coronavirus resources and actions for artists and freelancers",
+      "venue": "online",
+      "venueCategory": "virtual",
+      "indexOrganizerDisplay": "APAP - Association of Performing Arts Professionals",
+      "detailOrganizerDisplay": "Music Workers Alliance, Entertainment Community Fund and 3 others",
+      "relationToPage": "allied-or-cohosted-listing",
+      "duration": "1 hr 30 min",
+      "responseSnapshot": {
+        "respondedDisplay": null,
+        "wentDisplay": null,
+        "interestedDisplay": null,
+        "pointEstimate": null,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "mutual-aid-and-relief",
+        "participatory-convening"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://musicworkersalliance.org/live/",
+          "host": "musicworkersalliance.org",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "expired-registration-link"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "533594734223350",
+      "url": "https://www.facebook.com/events/533594734223350/",
+      "date": "2020-04-30",
+      "dateLabel": "Thu, Apr 30, 2020",
+      "title": "Commercial Tenant Town Call with USBnyc",
+      "venue": "ANHD",
+      "venueCategory": "virtual",
+      "indexOrganizerDisplay": "ANHD",
+      "detailOrganizerDisplay": "Cooper Square Committee, NYC Artist Coalition and 7 others",
+      "relationToPage": "allied-or-cohosted-listing",
+      "duration": "1 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "58",
+        "wentDisplay": "15",
+        "interestedDisplay": "43",
+        "pointEstimate": 58,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "commercial-rent-and-displacement",
+        "mutual-aid-and-relief",
+        "participatory-convening"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "unresolved-short-link"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "208435106806073",
+      "url": "https://www.facebook.com/events/208435106806073/",
+      "date": "2020-06-18",
+      "dateLabel": "Thu, Jun 18, 2020",
+      "title": "We Will Rise: Recovery and Resiliency for Small Business",
+      "venue": null,
+      "venueCategory": "virtual",
+      "indexOrganizerDisplay": "Office of the NYC Public Advocate",
+      "detailOrganizerDisplay": "TakeRoot Justice, NYC Artist Coalition and 6 others",
+      "relationToPage": "allied-or-cohosted-listing",
+      "duration": "1 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "66",
+        "wentDisplay": "18",
+        "interestedDisplay": "48",
+        "pointEstimate": 66,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "commercial-rent-and-displacement",
+        "mutual-aid-and-relief",
+        "participatory-convening"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "1451617855032658",
+      "url": "https://www.facebook.com/events/1451617855032658/",
+      "date": "2020-08-20",
+      "dateLabel": "Thu, Aug 20, 2020",
+      "title": "Small Business Speakout",
+      "venue": null,
+      "venueCategory": "virtual",
+      "indexOrganizerDisplay": "ANHD",
+      "detailOrganizerDisplay": "League of Independent Theater, NYC Artist Coalition and 3 others",
+      "relationToPage": "allied-or-cohosted-listing",
+      "duration": "1 hr 30 min",
+      "responseSnapshot": {
+        "respondedDisplay": "19",
+        "wentDisplay": "7",
+        "interestedDisplay": "12",
+        "pointEstimate": 19,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "commercial-rent-and-displacement",
+        "participatory-convening"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "772824526895291",
+      "url": "https://www.facebook.com/events/772824526895291/",
+      "date": "2020-10-06",
+      "dateLabel": "Tue, Oct 6, 2020",
+      "title": "October Relief Meeting - NYC Artist Coalition",
+      "venue": null,
+      "venueCategory": "virtual",
+      "indexOrganizerDisplay": "NYC Artist Coalition",
+      "detailOrganizerDisplay": "NYC Artist Coalition",
+      "relationToPage": "index-displayed-nycac-organizer",
+      "duration": null,
+      "responseSnapshot": {
+        "respondedDisplay": "90",
+        "wentDisplay": "34",
+        "interestedDisplay": "56",
+        "pointEstimate": 90,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "mutual-aid-and-relief",
+        "participatory-convening"
+      ],
+      "outboundResources": [],
+      "withheldOutboundLinkCount": 1,
+      "withheldOutboundLinkCategories": [
+        "meeting-access-link"
+      ],
+      "retrievalState": "retrieved"
+    },
+    {
+      "id": "109513027694163",
+      "url": "https://www.facebook.com/events/109513027694163/",
+      "date": "2021-01-29",
+      "dateLabel": "Fri, Jan 29, 2021",
+      "title": "Among Us Benefit Stream",
+      "venue": null,
+      "venueCategory": "virtual",
+      "indexOrganizerDisplay": "Wonderville",
+      "detailOrganizerDisplay": "NYC Artist Coalition, NYC Nightlife United and 4 others",
+      "relationToPage": "allied-or-cohosted-listing",
+      "duration": "2 hr",
+      "responseSnapshot": {
+        "respondedDisplay": "27",
+        "wentDisplay": "11",
+        "interestedDisplay": "16",
+        "pointEstimate": 27,
+        "rounded": false,
+        "interpretation": "Historical Facebook response actions; not unique people or verified attendance."
+      },
+      "topics": [
+        "commercial-rent-and-displacement",
+        "cultural-fundraising",
+        "mutual-aid-and-relief",
+        "nightlife-governance"
+      ],
+      "outboundResources": [
+        {
+          "url": "http://twitch.tv/wondervillenyc",
+          "host": "twitch.tv",
+          "resourceType": "mission-resource"
+        }
+      ],
+      "withheldOutboundLinkCount": 0,
+      "withheldOutboundLinkCategories": [],
+      "retrievalState": "retrieved"
+    }
+  ]
+}

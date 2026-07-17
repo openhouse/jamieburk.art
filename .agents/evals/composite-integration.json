@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "suite_id": "feature-evals-composite-integration",
+  "contract_version": "2026-07-16.1",
+  "objective": "Operate one source-backed knowledge and portfolio evaluation system that can improve recursively without converting missing human evidence into automated approval.",
+  "profiles": [
+    {
+      "id": "knowledge-development",
+      "suite_path": ".agents/evals/knowledge-bank-development.json",
+      "target": "claim-development",
+      "weighted_score_minimum": 0.85,
+      "human_approval_required": false
+    },
+    {
+      "id": "application-share",
+      "suite_path": ".agents/evals/portfolio-production-readiness.json",
+      "target": "application-share",
+      "weighted_score_minimum": 0.8,
+      "human_approval_required": true
+    },
+    {
+      "id": "production-launch",
+      "suite_path": ".agents/evals/portfolio-production-readiness.json",
+      "target": "production-launch",
+      "weighted_score_minimum": 0.9,
+      "human_approval_required": true
+    },
+    {
+      "id": "blind-spot-stewardship",
+      "suite_path": ".agents/evals/blind-spot-readiness.json",
+      "target": "development-readiness",
+      "weighted_score_minimum": 0.85,
+      "human_approval_required": false
+    }
+  ],
+  "grader_roles": [
+    {
+      "id": "deterministic",
+      "may_observe": ["schemas", "hashes", "exact sets", "files", "routes", "DOM facts", "HTTP behavior", "links", "build output", "mutation tests"],
+      "may_not_assert": ["reader comprehension", "consent", "permission", "collaborator corroboration", "production approval"]
+    },
+    {
+      "id": "browser",
+      "may_observe": ["rendered routes", "supported viewports", "keyboard operation", "focus", "overflow", "media rendering", "console errors"],
+      "may_not_assert": ["human comprehension", "claim approval", "production cutover"]
+    },
+    {
+      "id": "independent-llm-holdout",
+      "may_observe": ["clarity", "voice", "reader burden", "evidence quality", "Chad lens", "Margaret Morse lens", "Warren Sack lens"],
+      "may_not_assert": ["human participant response", "consent", "rights", "production approval"],
+      "must_not_author_candidate": true,
+      "must_be_blind_to_patch_intent": true
+    },
+    {
+      "id": "human",
+      "may_observe": ["claim approval", "collaborator-sensitive framing", "consent", "rights", "resume and contact approval", "target-reader response", "production cutover"],
+      "may_not_be_simulated": true
+    }
+  ],
+  "run_binding": {
+    "required_fields": [
+      "candidate_sha",
+      "candidate_fingerprint",
+      "rubric_sha",
+      "contract_fingerprint",
+      "evidence_bundle_fingerprint",
+      "profile",
+      "evaluator_identity",
+      "evaluator_authored_candidate",
+      "results",
+      "unresolved_blockers",
+      "next_action",
+      "final_state"
+    ],
+    "fingerprint_algorithm": "sha256",
+    "invalidated_by": [
+      "public candidate change",
+      "rubric or contract change",
+      "relevant knowledge record change",
+      "exact-route manifest change",
+      "evidence bundle change"
+    ],
+    "authored_candidate_may_not_certify_threshold": true
+  },
+  "hard_gates": [
+    "public safety",
+    "provenance",
+    "collective credit",
+    "projection authorization",
+    "accessibility",
+    "runtime",
+    "human approval where required"
+  ],
+  "mutation_requirements": [
+    "memory-as-corroboration",
+    "recommendation-receipt-appropriation-confusion",
+    "project-account-as-individual-authorship",
+    "outbound-mention-as-incoming-engagement",
+    "social-counter-as-impact",
+    "metadata-as-close-reading",
+    "collective-outcome-as-sole-causality",
+    "historical-as-current",
+    "not-recovered-as-nonexistent",
+    "private-locator-or-protected-prose-leak",
+    "caveat-as-positive-role-claim",
+    "self-updating-baseline-bypass",
+    "projection-reachability-bypass",
+    "visual-custody-as-publication-permission",
+    "simulated-human-evidence"
+  ],
+  "source_dispositions": [
+    { "source": "A", "pr": 220, "decision": "adapt", "destination": ".agents/evals/composite-integration.json", "rationale": "Keep separate objectives and non-averagable hard gates." },
+    { "source": "B", "pr": 212, "decision": "adapt", "destination": "docs/knowledge-bank/governance/composition-manifest.json", "rationale": "Use exact-set composition and mosaic-privacy controls." },
+    { "source": "C", "pr": 221, "decision": "adopt", "destination": "scripts/lib/eval-run-contract.mjs", "rationale": "Bind every judgment to candidate, contract, and evidence fingerprints." },
+    { "source": "D", "pr": 216, "decision": "adapt", "destination": "docs/evals/runs/feature-knowledge-j", "rationale": "Keep versioned run history and concrete observations." },
+    { "source": "E", "pr": 211, "decision": "adopt", "destination": ".agents/evals/composite-integration.json", "rationale": "Separate deterministic, browser, holdout, and human evidence." },
+    { "source": "F", "pr": 210, "decision": "adapt", "destination": "scripts/tests/knowledge-integrity.test.mjs", "rationale": "Carry negative tests and fail-closed release mechanics." },
+    { "source": "G", "pr": 222, "decision": "adapt", "destination": ".agents/evals/composite-integration.json", "rationale": "Keep one compact machine-readable umbrella contract." },
+    { "source": "H", "pr": 223, "decision": "adapt", "destination": "docs/evals/feature-knowledge-j-pull-request.md", "rationale": "Separate automated evidence from missing reader and runtime observations." },
+    { "source": "I", "pr": 219, "decision": "adapt", "destination": "scripts/check-knowledge-integrity.mjs", "rationale": "Add immutable policy fingerprints and projection reachability checks." },
+    { "source": "J", "pr": 209, "decision": "adopt", "destination": ".agents/evals", "rationale": "Retain J's three canonical suites and recursive protocol." },
+    { "source": "K", "pr": 217, "decision": "adapt", "destination": "apps/www/src/data/knowledge-bank/lifecycle-schema.ts", "rationale": "Integrate append-safe intake, maturity, query, report, and decision history into J." },
+    { "source": "L", "pr": 213, "decision": "adapt", "destination": "docs/knowledge-bank/knowledge-lifecycle.md", "rationale": "Document a newcomer-readable governed-open maintenance loop." },
+    { "source": "M", "pr": 215, "decision": "adopt", "destination": ".github/workflows/portfolio-readiness.yml", "rationale": "Make Node 26 and npm ci checks durable in CI." },
+    { "source": "N", "pr": 214, "decision": "adopt", "destination": ".agents/evals/composite-integration.json", "rationale": "Keep grader separation and human-only evidence explicit." }
+  ],
+  "canonical_commands": [
+    "npm run evals:composite",
+    "npm run evals:portfolio",
+    "npm run evals:knowledge-bank",
+    "npm run evals:blind-spots",
+    "npm run check:knowledge-lifecycle",
+    "npm run check:knowledge-integrity",
+    "npm run check",
+    "npm run preflight:staging",
+    "npm run preflight:production"
+  ],
+  "stop_conditions": [
+    "two consecutive passing runs against an unchanged candidate",
+    "human-only evidence or approval is next",
+    "iteration budget reached",
+    "two rounds without meaningful improvement",
+    "further change adds complexity without criterion improvement"
+  ]
+}

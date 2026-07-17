@@ -283,8 +283,15 @@ if (!/NEXT_PUBLIC_ROBOTS_POLICY\s*===\s*["']index["']/.test(siteUrlSource + next
   addFailure(siteUrlPath, "production indexing is not explicit opt-in");
 }
 
-if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConfigSource)) {
+if (
+  !/\/resume\/Jamie-Burkart-Resume-Technical-Project-Manager\.pdf/.test(nextConfigSource) ||
+  !/X-Robots-Tag/.test(nextConfigSource)
+) {
   addFailure(nextConfigPath, "resume PDF noindex header is missing");
+}
+
+if (/source:\s*["']\/resume\/:path\*["']/.test(nextConfigSource)) {
+  addFailure(nextConfigPath, "resume HTML and PDF must not share a broad noindex header rule");
 }
 
 if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {

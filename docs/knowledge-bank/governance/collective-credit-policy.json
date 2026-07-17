@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "status": "governed-open",
+  "reviewed_at": "2026-07-16",
+  "principle": "Name Jamie's documented mechanism of contribution while preserving the people, teams, communities, and institutions that held collective outcomes.",
+  "project_classes": [
+    { "project": "196-sunday-dinner", "class": "mixed", "boundary": "Jamie hosts Sunday Dinner and built participation infrastructure; guests and resident artists retain authorship of their own work and relationships." },
+    { "project": "callnyc", "class": "mixed", "boundary": "Jamie independently built CallNYC; the Council event, source data, public records, and office responses remain institutional or stakeholder context." },
+    { "project": "creative-technology-practice", "class": "mixed", "boundary": "Jamie's prototypes and artistic method may be named; course, exhibition, collaborator, and participant contexts remain credited." },
+    { "project": "fair-rent-nyc", "class": "collective", "boundary": "Jamie's co-founder, systems, documentation, web, facilitation, and policy-communications work may be named; coalition and government outcomes remain collective or institutional." },
+    { "project": "harry-j-epstein", "class": "mixed", "boundary": "Jamie's technical and operational contribution may be named; company stewardship, team labor, and revenue outcomes are not his alone." },
+    { "project": "kc-town-hall", "class": "mixed", "boundary": "Jamie's project, contracting, documentation, and neighborhood participation work may be named; neighborhood, board, contractor, organization, and Council decisions retain their own agency." },
+    { "project": "source-backed-team-memory", "class": "mixed", "boundary": "Jamie designed and tested a bounded method with collaborators; it is not a finished product and AI does not replace human judgment." },
+    { "project": "wowlist", "class": "mixed", "boundary": "Jamie's product, operations, and community-platform work may be named; Richard Caceres, contributors, organizers, and local scenes retain credit." }
+  ],
+  "proof_attribution": [
+    { "proof_id": "ai-evals-professional-development", "class": "individual", "required_boundary": "Credential completion is individual; it is not proof of independent product outcomes." },
+    { "proof_id": "callnyc-civic-data-guidance", "class": "mixed", "required_boundary": "Use archived, unofficial, independent framing and do not convert office engagement into endorsement." },
+    { "proof_id": "career-operating-structure-14-years", "class": "individual-synthesis", "required_boundary": "Do not imply one continuous formal role or sole authorship across collective projects." },
+    { "proof_id": "creative-technology-embodied-systems", "class": "mixed", "required_boundary": "Name the specific prototype or installation chain and preserve course, collaborator, and participant context." },
+    { "proof_id": "fair-rent-campaign-memory", "class": "collective", "required_boundary": "Use collective-work language and omit protected coalition context." },
+    { "proof_id": "fair-rent-source-map", "class": "collective", "required_boundary": "Do not imply legal authority, bill authorship, or official analysis." },
+    { "proof_id": "hje-modernization-stewardship", "class": "mixed", "required_boundary": "Use stewardship and contribution language." },
+    { "proof_id": "hje-revenue-growth-contribution", "class": "mixed", "required_boundary": "Retain contributed-to wording and aggregate private business detail." },
+    { "proof_id": "kc-spaces-fund-digital-infrastructure", "class": "collective", "required_boundary": "Credit the named public organizers; Jamie's role is behind-the-scenes digital infrastructure." },
+    { "proof_id": "kc-town-hall-public-benefit-documentation", "class": "mixed", "required_boundary": "Separate Jamie's documented delivery from board recommendations, organizational transition, and Council allocation." },
+    { "proof_id": "nyc-artist-coalition-civic-systems", "class": "collective", "required_boundary": "Name Jamie's mechanism and keep policy outcomes collective and institutional." },
+    { "proof_id": "nyc-artist-coalition-participation-system", "class": "collective", "required_boundary": "Do not convert event participation or shared-account publishing into sole authorship." },
+    { "proof_id": "nyc-artist-coalition-public-web-infrastructure", "class": "collective", "required_boundary": "Website authorship may be named; campaign accomplishment remains collective." },
+    { "proof_id": "source-backed-team-memory-method", "class": "mixed", "required_boundary": "Describe a bounded pilot method, not finished SaaS or autonomous organizational memory." },
+    { "proof_id": "sunday-dinner-196-participation-infrastructure", "class": "mixed", "required_boundary": "State that Jamie hosts; do not publish participant records or appropriate guests' work." },
+    { "proof_id": "technical-operations-operating-backbone", "class": "individual-synthesis", "required_boundary": "Support the synthesis with project-specific evidence and retain unlike project contexts." },
+    { "proof_id": "wowlist-community-platform", "class": "mixed", "required_boundary": "Credit Richard Caceres and local contributors; database objects are not adoption or attendance metrics." }
+  ]
+}
