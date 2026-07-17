@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "evalId": "portfolio-system-blind-spots",
+  "systemControlStatus": "passed",
+  "externalOutcomeStatus": "not-yet-measured",
+  "bundleSha256": "e741e96c73b46d2a2ee16403557c9c413aec16609fc6878c85fd5a0d2a4eb79e",
+  "graphSnapshot": {
+    "intakeRecords": 60,
+    "sources": 233,
+    "claims": 104,
+    "researchInquiries": 33,
+    "partiallyRecoveredInquiries": 27,
+    "recoveredInquiries": 1,
+    "activeProjections": 61,
+    "heldProjections": 45
+  },
+  "iterations": 2,
+  "rounds": [
+    {
+      "round": 1,
+      "result": "qualifying-pass",
+      "judges": [
+        {
+          "judgeRunId": "27928ea2-ab00-4672-bbff-f1b3577a8053",
+          "role": "evidence-and-governance-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-composite/judges/round-1-evidence.json",
+          "sha256": "f0c2a3806d5b65d2b313f585b5b4a0c6b12220873bac31a062a79a25a6a9fcf7"
+        },
+        {
+          "judgeRunId": "6e52342e-96cb-446c-9fdd-c00539ab02e9",
+          "role": "hiring-and-field-use-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-composite/judges/round-1-hiring.json",
+          "sha256": "26f866e342fe21831c8fa33e30c0b0ffb9762aea66febeaeefbe885b92d674ac"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "result": "qualifying-pass",
+      "judges": [
+        {
+          "judgeRunId": "4c449029-6088-4f7b-835f-267f5f0bd6e3",
+          "role": "evidence-and-governance-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-composite/judges/round-2-evidence.json",
+          "sha256": "ceb6703a26aaa934cbcfefec6ea83b071924b4de4856a00842155b2548c6d1c9"
+        },
+        {
+          "judgeRunId": "f3ddaad3-9dd9-47ce-a84c-ca0fdf9e038d",
+          "role": "hiring-and-field-use-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-composite/judges/round-2-hiring.json",
+          "sha256": "a58fdd2799a9e62d8aa09acae97cd328852f7507ab7dfb3cbdc1cf9ed9651e6f"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Composite portfolio readiness scorecard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "evalId",
+    "runId",
+    "round",
+    "evaluatedAt",
+    "evaluator",
+    "candidate",
+    "rubricDigest",
+    "criteria",
+    "releaseRecommendation",
+    "unresolvedHumanChecks"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "evalId": {
+      "const": "portfolio-readiness-composite-v1"
+    },
+    "runId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "round": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "evaluatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "evaluator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "role",
+        "kind",
+        "sessionId",
+        "independentFromAuthor"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "enum": [
+            "hiring-and-comprehension-judge",
+            "evidence-and-systems-judge"
+          ]
+        },
+        "kind": {
+          "const": "llm-judge"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "sessionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "independentFromAuthor": {
+          "const": true
+        }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "revision",
+        "digest"
+      ],
+      "properties": {
+        "revision": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "rubricDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13
+    },
+    "releaseRecommendation": {
+      "enum": [
+        "iterate",
+        "system-ready",
+        "application-ready",
+        "production-ready"
+      ]
+    },
+    "unresolvedHumanChecks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
+

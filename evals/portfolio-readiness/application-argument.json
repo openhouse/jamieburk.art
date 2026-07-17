@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "feature-knowledge-b-application-argument",
+  "reviewedAt": "2026-07-16",
+  "audience": [
+    "technical project management hiring teams",
+    "product operations and implementation teams",
+    "public-sector technology reviewers",
+    "referrers and collaborators"
+  ],
+  "decision": "Decide whether Jamie's practice of turning emerging, stakeholder-heavy work into usable operating structure merits a resume review and conversation.",
+  "targetRole": "Technical Project Manager - Product Operations & Implementation",
+  "governingArgument": "Jamie surfaces the structure already emerging in complex work, then gives it resilient form through requirements, workflows, decision records, implementation, public-facing tools, documentation, and handoff.",
+  "primaryProofIds": [
+    "career-operating-structure-14-years",
+    "hje-modernization-stewardship",
+    "fair-rent-campaign-memory",
+    "callnyc-civic-data-guidance",
+    "source-backed-team-memory-method"
+  ],
+  "primaryRoutes": [
+    "/",
+    "/work/technical-operations",
+    "/work/harry-j-epstein",
+    "/work/fair-rent-nyc",
+    "/work/callnyc",
+    "/resume",
+    "/contact"
+  ],
+  "deferredDepth": [
+    "Bank-only archival populations",
+    "Unresolved individual-role hypotheses",
+    "Protected source material",
+    "Artistic and civic history that does not clarify the first-pass hiring decision"
+  ],
+  "antiArgument": [
+    "Do not present Jamie as a generic administrator.",
+    "Do not make every project carry the whole career story.",
+    "Do not turn collective outcomes into individual causality.",
+    "Do not make archive size a proxy for professional value."
+  ],
+  "primaryAction": "Review the canonical resume and contact Jamie for a conversation.",
+  "compositionRule": "Use the smallest set of source-backed proofs that establishes role fit, operating method, outcomes, and present-tense capability; retain additional mature evidence in the Knowledge Bank."
+}
+

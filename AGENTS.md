@@ -31,6 +31,10 @@ workspaces, Dockerfile, Dokku.
 - `npm run evals:warren-sack`
 - `npm run evals:knowledge-bank-lifecycle`
 - `npm run evals:blind-spots`
+- `npm run evals:portfolio-readiness`
+- `npm run check:knowledge-intake`
+- `npm run knowledge:query -- --help`
+- `npm run knowledge:palette -- --surface /exact-route`
 - `npm run public-safety`
 - `npm run check:routes`
 - `npm run check:citations`
@@ -79,6 +83,14 @@ The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
+New public-safe fragments may enter through
+`docs/knowledge-bank/intake/`. A queue receipt is a lead, not a canonical source
+or claim. Mature it into the typed Knowledge Bank before strengthening public
+copy. Protected leads use only an opaque locator and public-safe summary.
+
+Publication-safe retrieval requires an exact named surface. A palette is an
+editorial candidate set, never an automatic publish command.
+
 ## Claim Evals
 
 Use `evals/portfolio-claims/evals.json` when an LLM agent drafts or strengthens
@@ -112,6 +124,26 @@ platform-shaped evidence, additive composition, mosaic privacy, evaluator
 self-certification, and indefinite polishing. A pass confirms the controls, not
 an external outcome. Keep hiring-reader, collaborator, and application results
 `not-yet-measured` until separately observed.
+
+## Composite Readiness
+
+Use `evals/portfolio-readiness/` to coordinate the existing domain suites. Do
+not create another claim, proof, or lifecycle registry inside the composite.
+
+Every readiness run binds to an exact Git revision, public candidate digest,
+and rubric digest. Any candidate or rubric change invalidates prior judgment.
+Keep failed and superseded iterations.
+
+System readiness requires every deterministic hard gate and two independent
+LLM judges across two consecutive non-regressing rounds. LLMs may certify only
+`system-ready`. Hiring-reader results, collaborator corroboration, exact
+candidate approval, media rights, production indexing, deployment, and
+post-deploy verification remain human-owned states in
+`evals/portfolio-readiness/human-status.json`.
+
+Do not weaken a rubric, lower a threshold, hide a failure, or relabel an
+unmeasured state to improve a score. At the iteration limit, preserve the best
+passing candidate and name what remains unresolved.
 
 ## Chad Lens
 

@@ -36,10 +36,15 @@ npm run evals:chad-lens
 npm run evals:margaret-morse
 npm run evals:warren-sack
 npm run evals:knowledge-bank-lifecycle
+npm run evals:blind-spots
+npm run evals:portfolio-readiness
 npm run public-safety
 npm run check:routes
 npm run check:citations
 npm run test:citations
+npm run check:knowledge-intake
+npm run test:knowledge-intake
+npm run test:portfolio-readiness
 npm run report:citations
 npm run preflight:staging
 npm run preflight:production
@@ -72,6 +77,13 @@ public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
 
+Public-safe fragments that are not yet canonical can enter through the governed
+queue documented in `docs/knowledge-bank/intake/README.md`. Inspect a draft with
+`npm run knowledge:intake -- --help`, then add `--write` only after review.
+`npm run knowledge:query -- --help` searches the canonical bank and queue.
+`npm run knowledge:palette -- --surface /exact-route` returns only active
+projections authorized for that exact surface; it never edits the site.
+
 ## Portfolio Claim Evals
 
 `evals/portfolio-claims/evals.json` expresses the portfolio's editorial intent
@@ -102,6 +114,17 @@ intake-to-source-to-claim-to-projection process, including bank-only material,
 open role hypotheses, citation maintenance, and photo discoveries that return
 as research leads. Run `npm run evals:knowledge-bank-lifecycle` to validate the
 suite, graph, and committed recursive runs.
+
+`evals/portfolio-system-blind-spots/evals.json` tests external-validation gaps,
+inquiry accumulation, attribution, platform-shaped evidence, additive
+composition, mosaic privacy, evaluator independence, and indefinite polishing.
+
+`evals/portfolio-readiness/` coordinates the existing suites for one exact
+candidate and rubric digest. A `system-ready` result requires deterministic
+gates and two independent judges across two consecutive rounds. Human checks
+separately govern `application-ready` and `production-ready`; an LLM cannot
+grant those states. See `docs/evals/composite-integration.md` and
+`docs/evals/human-validation.md`.
 
 ## Environment
 
@@ -167,13 +190,10 @@ or serve private, proprietary, or unlicensed font files.
   Do not render that marker in production-facing pages; keep launch blockers in
   `docs/knowledge-bank/launch-blockers.md`.
 
-## Launch Blockers
+## Launch State
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
-- Confirm production metadata points to `https://jamieburk.art`.
-- Confirm no private/proprietary fonts are committed or served.
+Machine readiness, application readiness, and production readiness are separate.
+The canonical human-owned states live in
+`evals/portfolio-readiness/human-status.json`; detailed content blockers remain
+in `docs/knowledge-bank/launch-blockers.md`. A passing build does not authorize
+sharing, media reuse, production deployment, or indexing.
