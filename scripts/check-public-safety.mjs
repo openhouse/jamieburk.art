@@ -182,6 +182,12 @@ scanPattern(
 
 scanPattern(
   publicContentFiles,
+  "internal release-state language appears in production-facing content",
+  /\b(?:approvals?\s+pending|pending\s+approval|pending\s+Jamie\s+approval|screenshots?\s+pending|public-safe\s+screenshots?\s+pending|approved\s+public\s+materials\s+pending|collaborator\s+review\s+still\s+required|Jamie\s+approval\s+before\s+(?:launch|publication)|before\s+launch|before\s+publication)\b/i
+);
+
+scanPattern(
+  publicContentFiles,
   "raw/private transcript exposure appears in production-facing content",
   /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
 );

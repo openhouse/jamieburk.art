@@ -31,6 +31,9 @@ npm run build
 npm run check
 npm run knowledge-bank
 npm run public-safety
+npm run check:knowledge-lifecycle
+npm run check:chad-lens
+npm run check:evals
 npm run check:routes
 npm run check:citations
 npm run test:citations
@@ -65,6 +68,23 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+`docs/qa/recursive-evals-M.md` defines the repeatable launch-readiness loop for
+claim review, public-safety boundaries, hiring clarity, web QA, and production
+cutover checks. `npm run check:chad-lens` runs the deterministic hiring-clarity
+criterion. `npm run check:evals` combines that criterion with the existing
+knowledge-lifecycle, public-safety, and route gates; it does not create a second
+safety scanner.
+
+`docs/knowledge-bank/intake-and-maturation.md` defines how URLs, memories,
+artifacts, repositories, and photo discoveries enter the knowledge bank,
+develop through research, and remain available even when they are not selected
+for the current public site.
+
+The personal Facebook archival pass is documented through an aggregate-only
+[1,243-record census](docs/knowledge-bank/jamie-facebook-post-census-2026-07-13.csv)
+and [bounded research report](docs/knowledge-bank/jamie-facebook-posts-2026-07-13.md).
+The raw personal corpus stays outside the repository.
 
 ## Environment
 
@@ -130,13 +150,13 @@ or serve private, proprietary, or unlicensed font files.
   Do not render that marker in production-facing pages; keep launch blockers in
   `docs/knowledge-bank/launch-blockers.md`.
 
-## Launch Blockers
+## Launch Readiness Review
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
+- Confirm public email, LinkedIn, GitHub, and resume links.
+- Confirm proof metrics use supportable, bounded wording.
+- Confirm collaborator names, photos, quotes, and artifacts are public-safe.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm public pages contain no TODO, placeholder, pending approval, or
+  before-launch language.

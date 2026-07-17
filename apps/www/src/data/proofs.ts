@@ -6,6 +6,7 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "protected-revision-history"
   | "ai-assisted-archive-review"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
@@ -165,14 +166,16 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
-      "firsthand-collaborator-context"
+      "firsthand-collaborator-context",
+      "protected-revision-history"
     ],
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
     shortWording: "30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+    sourceBasis:
+      "Approved resume language, public-safe collaboration summary, and protected revision-attributed operating artifacts reviewed without publishing private contents.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -195,7 +198,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-12"
   },
   {
     id: "fair-rent-source-map",
@@ -204,14 +207,16 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
-      "firsthand-collaborator-context"
+      "firsthand-collaborator-context",
+      "ai-assisted-archive-review"
     ],
     publicWording:
       "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+    sourceBasis:
+      "Approved resume language, public-safe source-map summary, and a close reading of Jamie's protected provenance artifact.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -227,7 +232,86 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "fair-rent-public-data-pilot",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Specified a privacy-preserving pilot release for geography-aggregated commercial vacancy and lease-cost indicators.",
+    shortWording: "Specified a privacy-preserving commercial-data pilot",
+    detailedPublicWording:
+      "Jamie defined a smallest serious release: an indicator table, coverage and suppression reporting, a plain-language methods note, minimum useful fields, and explicit exclusions for confidential filings and tenant-level records.",
+    sourceBasis:
+      "Jamie's approved two-page public brief, Toward a Fuller Public Baseline for Commercial Vacancy and Lease Cost in NYC.",
+    sourceNote:
+      "The brief is a proposal and implementation specification, not an adopted City program.",
+    whyItMatters:
+      "Shows requirements definition, privacy-by-design, data-product judgment, and the ability to scope a credible minimum release for public-sector stakeholders.",
+    guardrail:
+      "Use proposal and pilot-specification language. Do not imply agency adoption, implementation, confidential-data access, or official statistical authority.",
+    doNotSay: [
+      "New York City adopted Jamie's proposal",
+      "Jamie built or operated the proposed City dataset",
+      "Jamie had access to confidential RPIE filings"
+    ],
+    protectedBoundaries: [
+      "Confidential tax filings",
+      "Tenant identities",
+      "Parcel-level rent records",
+      "Private distribution correspondence"
+    ],
+    surfaces: ["resume", "technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "requirements-definition",
+      "privacy-by-design",
+      "public-data-framing",
+      "implementation-planning"
+    ],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "fair-rent-90-day-operating-plan",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-safe-archive-summary", "firsthand-collaborator-context"],
+    publicWording:
+      "Authored a sequenced 90-day coalition operating plan with concrete deliverables, success conditions, consent boundaries, and decision infrastructure.",
+    shortWording: "Authored a sequenced 90-day coalition operating plan",
+    detailedPublicWording:
+      "Jamie translated an emerging coalition's needs into a clear join path, recurring meeting cadence, reusable message kit, consent-aware story bank, implementation-readiness packet, process norms, action tracking, and durable campaign memory.",
+    sourceBasis:
+      "Jamie's protected April 2026 90-day operating plan, reviewed through public-safe metadata and the surrounding shared-memory record.",
+    sourceNote:
+      "The artifact proves authorship and planning, not completion or coalition adoption of every proposal.",
+    whyItMatters:
+      "Shows requirements definition, prioritization, success criteria, consent-aware workflow design, and implementation planning.",
+    guardrail:
+      "Describe it as an authored operating plan. Preserve collective ownership and do not imply every deliverable was completed or adopted.",
+    doNotSay: [
+      "Jamie completed every item in the plan",
+      "The coalition adopted every recommendation",
+      "Jamie owned or led the entire movement"
+    ],
+    protectedBoundaries: [
+      "Stakeholder names",
+      "Outreach lists",
+      "Consent records",
+      "Private strategy",
+      "Working links"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "requirements-definition",
+      "implementation-planning",
+      "decision-clarity",
+      "consent-aware-workflows"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
@@ -263,6 +347,41 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "nyc-artist-coalition-public-identity-system",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Established NYC Artist Coalition's public identity system across its logo, campaign website family, and shared @NYCArtC account; collaborators sustained and used that collective identity over time.",
+    shortWording: "Established NYC Artist Coalition's public identity system",
+    detailedPublicWording:
+      "Jamie created a durable public identity across the coalition logo, campaign website family, and shared social account. Surviving public records span 2017 through 2026 and show that identity carrying campaign advocacy, artist resources, labor actions, public process, and nightlife accountability.",
+    sourceBasis:
+      "Jamie confirmation, live campaign surfaces, a City of New York social-data appendix, published reporting, public posts, authenticated X research, a 5,124-slot population ledger with 892 recovered records and 4,232 unresolved slots, and bounded Council, city-agency, and collaborator studies.",
+    whyItMatters:
+      "Shows that Jamie's design and implementation work created a public interface other people could use and sustain, not only a set of one-time pages.",
+    guardrail:
+      "Identity-system authorship is Jamie's direct contribution. Treat the campaign voice, individual posts, and policy outcomes as collective unless independently confirmed; do not extrapolate recovered-record patterns to unresolved slots.",
+    doNotSay: [
+      "Jamie authored every @NYCArtC post",
+      "Jamie solely operated NYC Artist Coalition",
+      "Social mentions equal engagement",
+      "The recovered archive is a complete account export",
+      "All 5,124 @NYCArtC posts were recovered"
+    ],
+    protectedBoundaries: [
+      "Private account administration",
+      "Private collaborator correspondence",
+      "Unconfirmed post-level authorship",
+      "Private analytics",
+      "Credentials"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["public-identity-systems", "campaign-websites", "information-architecture"],
+    lastReviewed: "2026-07-12"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
@@ -305,6 +424,47 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-09"
   },
   {
+    id: "nyc-artist-coalition-participation-system",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Helped establish and produce NYC Artist Coalition's recurring participation system across public event pages, rotating cultural-space meetings, practical support, hearings, and campaign action.",
+    shortWording: "Recurring participation system for NYC Artist Coalition",
+    detailedPublicWording:
+      "Jamie helped turn collective cultural-space concerns into repeatable public occasions for gathering, practical learning, priority-setting, testimony, and follow-through. The recovered Facebook event record accounts for 34 control slots: 33 public event records and one unresolved historical slot.",
+    sourceBasis:
+      "Jamie confirmation, a 34-slot public-safe Facebook event census, selected public event pages, and independent reporting on Jamie's coalition advocacy and the Market Hotel town hall.",
+    whyItMatters:
+      "Shows stakeholder convening and public participation as an operating system that connected listening, practical support, action design, and institutional interface.",
+    guardrail:
+      "Use helped establish and produce. Credit events and policy outcomes collectively. Do not assign Jamie authorship of every event page or convert Facebook responses into attendance or reach.",
+    doNotSay: [
+      "Jamie alone organized every NYC Artist Coalition event",
+      "Jamie authored every Facebook event page",
+      "The coalition met every month without interruption",
+      "Facebook responses equal attendance",
+      "The events alone caused policy outcomes"
+    ],
+    protectedBoundaries: [
+      "Guest and attendee identities",
+      "Invite and friend context",
+      "Comments and participant profiles",
+      "Account administration",
+      "Online meeting credentials",
+      "Private analytics"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "stakeholder-convening",
+      "participation-systems",
+      "event-operations",
+      "civic-implementation"
+    ],
+    lastReviewed: "2026-07-13"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",
@@ -318,7 +478,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "WOWList reached roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, three protected production database snapshots with a fresh aggregate audit, platform archive, a complete 38-record census of the surviving @wowlist account, and a terminal-cursor census of 57 surviving Facebook Page records.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -336,7 +497,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -345,14 +506,17 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
-      "jamie-review-confirmation"
+      "jamie-review-confirmation",
+      "protected-revision-history",
+      "ai-assisted-archive-review"
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate project history, a protected longitudinal workbook that substantiates numbered gatherings beyond 300 and the participation operating system, and revision-attributed event and onboarding artifacts. The workbook does not establish the resident-artist total.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -371,7 +535,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -421,23 +585,118 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-09"
   },
   {
+    id: "kc-town-hall-phase-one-delivery",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Served as Phase One construction lead for KC Town Hall's 2018-2019 cold-shell restoration, coordinating historic masonry, roofing, carpentry, welding, engineering, architecture, and plumbing teams while building neighborhood input into the work.",
+    shortWording:
+      "Led Phase One construction delivery and neighborhood-input operations",
+    detailedPublicWording:
+      "As co-founder and project manager, Jamie served in the functional general-contractor role and as the daily on-site construction lead for Phase One. He hired and coordinated specialist teams through completion of the cold shell in 2019, and created a neighborhood survey handbill and contact-intake system whose ongoing results shaped the plan.",
+    sourceBasis:
+      "Jamie's public review confirmation; a public-safe page-level review of the 2019 CCED proposal; and the official municipal packet identifying Jamie as KC Town Hall's developer and presenter.",
+    sourceNote:
+      "The raw proposal is not shipped because its appendices contain private financial, contact, property, and correspondence material.",
+    whyItMatters:
+      "Shows multidisciplinary delivery coordination, schedule-sensitive implementation, field judgment, and participatory research in a real built-environment project.",
+    guardrail:
+      "Use 'Phase One construction lead' publicly. Preserve 'functional general-contractor role' as Jamie's firsthand account without implying a recovered contractor license, permit-holder status, or that Jamie personally performed every trade. Phase One completion is not full redevelopment completion.",
+    doNotSay: [
+      "Jamie was the licensed general contractor of record",
+      "Jamie personally performed every construction trade",
+      "Jamie completed the full KC Town Hall redevelopment",
+      "Phase Two was completed during Jamie's direct involvement",
+      "The neighborhood survey was statistically representative"
+    ],
+    protectedBoundaries: [
+      "Raw proposal and financial appendices",
+      "Banking and property records",
+      "Survey responses and resident contacts",
+      "Private contractor agreements",
+      "Unapproved site photographs",
+      "Private reasons or terms of the later project transition"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: [
+      "project-management",
+      "construction-coordination",
+      "vendor-coordination",
+      "participatory-research",
+      "implementation"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "kc-town-hall-neighborhood-service-operations",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Designed and ran the initial monthly Tired of Tires field operation through Oak Park Neighborhood Association, connecting resident requests, city coordination, pickup routing, recycling delivery, neighborhood information, and count tracking.",
+    shortWording: "Ran an end-to-end neighborhood service workflow",
+    detailedPublicWording:
+      "Jamie designed and ran the initial monthly Tired of Tires field operation through Oak Park Neighborhood Association. He coordinated with city services, routed requests, collected and delivered tires to the city recycling center, recorded monthly counts, and paired pickup routes with neighborhood information distribution. Jamie and Julia co-authored the public workflow; KC Town Hall, Oak Park, later partners, and later operators retain collective credit for the service.",
+    sourceBasis:
+      "Jamie's public review confirmation; the archived Julia-and-Jamie service page; the Cleveland Ave KC public service post; and the complete 183-record census of the surviving KC Town Hall account.",
+    whyItMatters:
+      "Shows service design and implementation as one operating loop: intake, routing, partner coordination, field execution, handoff, measurement, and public follow-through.",
+    guardrail:
+      "Describe Jamie's initial field role as a firsthand confirmation. Credit Julia and Jamie for the public workflow and KC Town Hall with Oak Park Neighborhood Association and later partners for the collective service. Do not assign every later pickup or shared-account post to Jamie, imply municipal ownership, or use unaudited totals.",
+    doNotSay: [
+      "Jamie alone created and operated Tired of Tires through 2022",
+      "Tired of Tires was a City of Kansas City program",
+      "Every public post was written by Jamie",
+      "Tire or avoided-fee totals were independently audited",
+      "The Indian Mound expansion is independently confirmed"
+    ],
+    protectedBoundaries: [
+      "Resident addresses and contact records",
+      "Raw route logs and operational spreadsheets",
+      "Private city or partner correspondence",
+      "Unapproved participant photographs",
+      "Private handoff details"
+    ],
+    surfaces: ["work-card", "case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: [
+      "service-design",
+      "field-operations",
+      "partner-coordination",
+      "intake-and-routing",
+      "operational-recordkeeping"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building; the proposal advanced from unanimous CCED Board recommendation to Council authorization and appropriation of $490,539.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Jamie and Julia also published the resident-facing workflow for a recurring tire-pickup service credited to KC Town Hall and Oak Park Neighborhood Association. Official records show Council authorization and appropriation in 2019. As his direct involvement concluded, Jamie transitioned the project to a mission-aligned organization; KC Town Hall later withdrew from the original allocation, and the unused funds were reappropriated in 2024.",
+    sourceBasis:
+      "Approved resume language; official Kansas City board, Council, appropriation, and clawback records; the archived Julia-and-Jamie service page; and a complete 183-record census of the surviving @KCTownHall public account.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Use Council authorization and appropriation language, not receipt or expenditure. Include the mission-aligned transition, later withdrawal, and reappropriation when describing the lifecycle. Do not publish reasons or terms of the transition.",
     doNotSay: [
-      "Final funding received",
+      "Funding received or spent",
+      "Executed funding agreement",
+      "Completion of the full redevelopment or Phase Two",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Official municipal endorsement beyond the recorded actions",
+      "Independently audited tire or savings totals",
+      "Jamie alone operated Tired of Tires"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -449,7 +708,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-12"
   },
   {
     id: "source-backed-team-memory-method",
@@ -532,7 +791,7 @@ export const proofClaims: ProofClaim[] = [
       "Private cohort materials",
       "Unapproved evaluations"
     ],
-    surfaces: ["resume", "lab", "about"],
+    surfaces: ["resume", "technical-operations", "lab", "about"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
     lastReviewed: "2026-07-07"
@@ -587,14 +846,37 @@ export const resumeProofHighlights = [
   "ai-evals-professional-development"
 ].map(requireReadyOrCarefulProof);
 
+export const currentPracticeProofs = [
+  {
+    period: "2026",
+    context: "Coalition operations",
+    proofId: "fair-rent-90-day-operating-plan"
+  },
+  {
+    period: "Current lab practice",
+    context: "Human-reviewed knowledge systems",
+    proofId: "source-backed-team-memory-method"
+  },
+  {
+    period: "2026",
+    context: "Professional development",
+    proofId: "ai-evals-professional-development"
+  }
+].map((item) => ({
+  ...item,
+  proof: requireReadyOrCarefulProof(item.proofId)
+}));
+
 export const technicalOperationsProofRows = [
   {
     capability: "Delivery coordination",
     toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
     proofIds: [
       "technical-operations-operating-backbone",
+      "fair-rent-90-day-operating-plan",
       "hje-modernization-stewardship",
       "callnyc-civic-data-guidance",
+      "kc-town-hall-phase-one-delivery",
       "wowlist-community-platform"
     ]
   },
@@ -604,6 +886,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "fair-rent-public-data-pilot",
       "kc-town-hall-public-benefit-documentation"
     ]
   },
