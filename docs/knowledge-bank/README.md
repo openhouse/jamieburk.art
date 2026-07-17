@@ -73,10 +73,17 @@ one pass.
 Deterministic checks govern the collective-credit inventory, runtime renderers,
 projection routes, public surfaces, and every visible resume block. The frozen
 policy baseline is pinned to the annotated Git tag
-`knowledge-bank-policy-baseline-2026-07-15-v16`; ordinary branch commits cannot
+`knowledge-bank-policy-baseline-2026-07-16-v17`; ordinary branch commits cannot
 silently rewrite that tagged object. The evaluator also pins the annotated tag
 object ID, and the tag is published to `origin` so a clean clone or CI checkout
 can reproduce the same baseline without local state.
+
+The collective inventory also assigns every claim one semantic class:
+`jamie-contribution`, `collective-context`, `institutional-outcome`, or
+`metric-observation`. The evaluator applies a class-specific credit contract,
+so a platform count cannot become impact, collective context cannot become
+individual authorship, and an institutional decision cannot become solo
+causation.
 
 This is a drift detector, not a substitute for judgment. A candidate patch
 cannot grade its own semantics, so `KB-007` and `KB-009` also require two

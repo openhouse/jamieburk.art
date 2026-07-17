@@ -177,7 +177,7 @@
       },
       {
         "id": "impact-sunday-dinner-participation",
-        "text": "Created Sunday Dinner / 196 Artists Residency as a repeatable trust-building and participation structure, documenting 300-plus gatherings and supporting 20-plus resident artists through invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+        "text": "Built and stewarded repeatable hosting, onboarding, facilitation, documentation, and continuity systems within the participant-made Sunday Dinner / 196 Artists Residency practice, spanning 300-plus gatherings and 20-plus resident artists.",
         "claims": [],
         "proofs": [{ "id": "sunday-dinner-196-participation-infrastructure", "anchor": "onboarding" }]
       },
@@ -257,7 +257,7 @@
       },
       {
         "id": "experience-sunday-dinner-practice",
-        "text": "Built a care-forward residency and recurring community practice; supported 20-plus resident artists and documented 300-plus gatherings through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.",
+        "text": "Built and stewarded operating systems within a care-forward, participant-made residency and recurring community practice; supported more than 20 resident artists and documented 300-plus gatherings through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.",
         "claims": [],
         "proofs": [{ "id": "sunday-dinner-196-participation-infrastructure", "anchor": "onboarding" }]
       },
@@ -411,7 +411,7 @@
       "id": "technical-operations-sunday-dinner-action",
       "path": "apps/www/src/app/work/technical-operations/page.tsx",
       "surface": "/work/technical-operations",
-      "text": "I created repeatable hosting practices and a documented residency acceptance and onboarding workflow, supported by dedicated collaboration workspaces.",
+      "text": "Within a participant-made cultural practice, I built and stewarded repeatable hosting practices and a documented residency acceptance and onboarding workflow, supported by dedicated collaboration workspaces.",
       "claims": [],
       "proofs": [{ "id": "196-residency-onboarding-workflow", "anchor": "onboarding" }]
     },
@@ -623,6 +623,113 @@
         "text": "Early research / method / consulting practice. Not a finished production SaaS.",
         "claims": [],
         "proofs": [{ "id": "source-backed-team-memory-method", "anchor": "finished" }]
+      },
+      {
+        "id": "wowlist-mdx-context",
+        "path": "apps/www/src/content/work/wowlist.mdx",
+        "surface": "/work/wowlist",
+        "text": "WOWList.org was a co-built community-calendar platform organized around followable keyword communities. It used Django, PostgreSQL / PostGIS, and Ember.js to support event distribution and discovery across DIY arts, music, and local-interest scenes.",
+        "claims": [],
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "co-built" }]
+      },
+      {
+        "id": "wowlist-mdx-need",
+        "path": "apps/www/src/content/work/wowlist.mdx",
+        "surface": "/work/wowlist",
+        "text": "Organizers needed lightweight event publishing and distribution through the language their communities already used.",
+        "claims": [],
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "organizers" }]
+      },
+      {
+        "id": "wowlist-mdx-usable",
+        "path": "apps/www/src/content/work/wowlist.mdx",
+        "surface": "/work/wowlist",
+        "text": "The platform turned keywords into followable community surfaces. That gave organizers a way to publish and distribute events around the language their communities already used.",
+        "claims": [],
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "followable" }]
+      },
+      {
+        "id": "wowlist-mdx-scale",
+        "path": "apps/www/src/content/work/wowlist.mdx",
+        "surface": "/work/wowlist",
+        "text": "The public-safe scale claim is careful: aggregate historical records support 1,800+ users, 16,000+ posts/events, and 35+ active city-scene tags. Tags are not cities, chapters, or independent proof of geographic reach. The site does not publish private user rows, organizer contact lists, geolocation records, or raw community data.",
+        "claims": [],
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "35+ active city-scene tags" }]
+      },
+      {
+        "id": "wowlist-mdx-role",
+        "path": "apps/www/src/content/work/wowlist.mdx",
+        "surface": "/work/wowlist",
+        "text": "Jamie co-built and supported the product model, event workflows, and public-facing web system. The work connected community organizing patterns to a maintainable technical platform.",
+        "claims": [],
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "co-built" }]
+      },
+      {
+        "id": "wowlist-mdx-transfer",
+        "path": "apps/www/src/content/work/wowlist.mdx",
+        "surface": "/work/wowlist",
+        "text": "This is product-operations proof: Jamie helped turn community vocabulary, event workflows, and public-web requirements into a maintainable platform.",
+        "claims": [],
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "platform" }]
+      },
+      {
+        "id": "sunday-dinner-mdx-context",
+        "path": "apps/www/src/content/work/196-sunday-dinner.mdx",
+        "surface": "/work/196-sunday-dinner",
+        "text": "196 Artists Residency / Sunday Dinner was cultural infrastructure: recurring gatherings, artist support, hosting, onboarding, facilitation, and continuity work that depended on trust as much as logistics.",
+        "claims": [],
+        "proofs": [{ "id": "sunday-dinner-196-participation-infrastructure", "anchor": "hosting" }]
+      },
+      {
+        "id": "sunday-dinner-mdx-need",
+        "path": "apps/www/src/content/work/196-sunday-dinner.mdx",
+        "surface": "/work/196-sunday-dinner",
+        "text": "The challenge was how to keep participation open, generous, and repeatable without exposing private community records or turning a living social practice into an archive that violated consent.",
+        "claims": [],
+        "proofs": [{ "id": "sunday-dinner-196-participation-infrastructure", "anchor": "participation" }]
+      },
+      {
+        "id": "sunday-dinner-mdx-usable",
+        "path": "apps/www/src/content/work/196-sunday-dinner.mdx",
+        "surface": "/work/196-sunday-dinner",
+        "text": "Jamie built and stewarded repeatable hosting, onboarding, facilitation, documentation, and continuity systems within a participant-made cultural practice spanning 300+ gatherings and 20+ resident artists.",
+        "claims": [],
+        "proofs": [{ "id": "sunday-dinner-196-participation-infrastructure", "anchor": "participant-made" }]
+      },
+      {
+        "id": "sunday-dinner-mdx-role",
+        "path": "apps/www/src/content/work/196-sunday-dinner.mdx",
+        "surface": "/work/196-sunday-dinner",
+        "text": "Jamie's work included invitations, hosting rhythms, artist support, proposal review, orientation, access planning, dedicated collaboration workspaces, documentation practices, and the quiet logistics that supported recurring community work. Participants remained authors of their own work and co-creators of the practice.",
+        "claims": [],
+        "proofs": [
+          { "id": "sunday-dinner-196-participation-infrastructure", "anchor": "Participants" },
+          { "id": "196-residency-onboarding-workflow", "anchor": "proposal review" }
+        ]
+      },
+      {
+        "id": "sunday-dinner-mdx-transfer",
+        "path": "apps/www/src/content/work/196-sunday-dinner.mdx",
+        "surface": "/work/196-sunday-dinner",
+        "text": "This page is summary-only, but the role fit is clear: Jamie built onboarding, facilitation, continuity, and stakeholder-care systems for a trust-intensive cultural setting.",
+        "claims": [],
+        "proofs": [{ "id": "sunday-dinner-196-participation-infrastructure", "anchor": "onboarding" }]
+      },
+      {
+        "id": "fair-rent-mdx-outcome-boundary",
+        "path": "apps/www/src/content/work/fair-rent-nyc.mdx",
+        "surface": "/work/fair-rent-nyc",
+        "text": "Independent public records document the broader collective arc: Cabaret Law repeal, creation of the Office of Nightlife, enactment of MARCH reporting requirements, and the City's later dismantling of MARCH. The record distinguishes collective advocacy from legislation and agency action. Jamie's defensible record here is the founding-era organizing, public advocacy, campaign websites, civic-action interfaces, coalition memory, and coordination infrastructure described above.",
+        "claims": [],
+        "proofs": [{ "id": "nyc-artist-coalition-public-outcome-arc", "anchor": "collective" }]
+      },
+      {
+        "id": "kc-town-hall-mdx-held-handoff",
+        "path": "apps/www/src/content/work/kc-town-hall.mdx",
+        "surface": "/work/kc-town-hall",
+        "text": "A later handoff recollection remains held for collaborator or organizational corroboration.",
+        "claims": [],
+        "proofs": [{ "id": "kc-town-hall-held-role-research", "anchor": "recollection" }]
       }
   ]
 }

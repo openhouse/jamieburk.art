@@ -617,7 +617,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities and used across 35+ active city-scene tags.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -681,7 +681,7 @@ const workItemsInput = [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "Followable keyword-community surfaces for arts, music, and local-interest scenes.",
         type: "diagram"
       }
     ],
@@ -709,7 +709,7 @@ const workItemsInput = [
       "Public support threads document location-scope, list-discovery, and event-entry workflow questions",
       "The project account's public trace combines direct calendar links with curation of demonstrations, vigils, fundraisers, and mutual-aid resources",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Roughly 35 city ecosystems reached"
+      "35+ active city-scene tags supported"
     ],
     knownOpenProtected: {
       known:
@@ -726,7 +726,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Built and stewarded repeatable hosting, onboarding, facilitation, documentation, and continuity systems within a participant-made cultural practice spanning 300+ gatherings and 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -817,7 +817,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie built and stewarded participation infrastructure within recurring, participant-made gatherings and artist-residency contexts.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
@@ -911,7 +911,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe appraisal of the private 2019 CCED proposal and support-letter packet, official Kansas City legislative records including Resolution 190649 and Ordinance 240317, archived KC Town Hall program pages, Jamie's public-safe handoff confirmation, and a governed 181-item public account corpus with an explicit two-item recovery gap.",
+      "Public-safe appraisal of the private 2019 CCED proposal and support-letter packet, official Kansas City legislative records including Resolution 190649 and Ordinance 240317, archived KC Town Hall program pages, and a governed 181-item public account corpus with an explicit two-item recovery gap. Jamie's later handoff recollection remains held pending corroboration.",
     credits: [
       "Jamie Burkart",
       "Julia Fredenburg",

@@ -839,9 +839,9 @@ export const socialAccountProductionBatch20260714: {
           key: "case-study",
           text:
             "The coalition identity became usable civic infrastructure: at least four sitting NYC Council member accounts visibly engaged with @NYCArtC from 2018 through 2020, including posts about the nightlife town hall, Talks Not Raids testimony, arts advocacy, and commercial-rent work.",
-          status: "active",
+          status: "hold",
           citationRequired: true,
-          surfaces: ["/work/fair-rent-nyc"]
+          surfaces: []
         }
       ],
       evidence: [

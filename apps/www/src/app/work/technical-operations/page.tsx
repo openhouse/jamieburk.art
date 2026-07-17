@@ -44,7 +44,7 @@ const proofMap = [
     project: "196 Artists Residency / Sunday Dinner",
     href: "/work/196-sunday-dinner",
     action:
-      "I created repeatable hosting practices and a documented residency acceptance and onboarding workflow, supported by dedicated collaboration workspaces.",
+      "Within a participant-made cultural practice, I built and stewarded repeatable hosting practices and a documented residency acceptance and onboarding workflow, supported by dedicated collaboration workspaces.",
     result:
       "The participation structure supported 300+ gatherings, 20+ resident artists, and reusable project and media handoffs without publishing private community records."
   }

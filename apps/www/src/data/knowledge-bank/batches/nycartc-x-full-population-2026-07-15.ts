@@ -423,9 +423,9 @@ export const nycArtCXFullPopulationBatch20260715: {
           key: "case-study",
           text:
             "One shared coalition identity carried four public campaign systems across nine years. Among 696 recovered authored posts, 195 used #FairRentNYC, 110 used #SaveNYCSpaces, 78 used #LetNYCDance, and 54 used #TalksNotRaids; categories overlap.",
-          status: "active",
+          status: "hold",
           citationRequired: true,
-          surfaces: ["/work/fair-rent-nyc"]
+          surfaces: []
         }
       ],
       evidence: [
@@ -471,9 +471,9 @@ export const nycArtCXFullPopulationBatch20260715: {
           key: "case-study",
           text:
             "The account also operated as a source-and-action layer: 446 of 696 recovered authored posts linked outward to campaign tools, public records, reporting, forms, events, and field resources.",
-          status: "active",
+          status: "hold",
           citationRequired: true,
-          surfaces: ["/work/fair-rent-nyc"]
+          surfaces: []
         },
         {
           key: "archive-note",

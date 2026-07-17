@@ -30,6 +30,8 @@ export type ProofClaim = {
   shortWording?: string;
   detailedPublicWording?: string;
   sourceBasis: string;
+  supportingClaimIds?: string[];
+  supportingSourceIds?: string[];
   sourceNote?: string;
   whyItMatters?: string;
   guardrail: string;
@@ -436,6 +438,14 @@ export const proofClaims: ProofClaim[] = [
       "The related collective outcome record is now source-backed: Cabaret licensing ended in 2017; the Office of Nightlife was established in 2017; MARCH reporting and notice requirements became law in 2019; and the City dismantled MARCH in 2023.",
     sourceBasis:
       "Greene Hill Food Co-op interview, NYC Artist Coalition campaign pages, New York City Council legislation and press records, Mayor's Office records, Gothamist reporting, and a public-safe project-history review.",
+    supportingClaimIds: [
+      "CLM-NAC-REPEAL-MOBILIZATION",
+      "CLM-NAC-OFFICE-NIGHTLIFE-ROLE",
+      "CLM-NAC-CABARET-REPEAL-OUTCOME",
+      "CLM-NAC-OFFICE-NIGHTLIFE-OUTCOME",
+      "CLM-NAC-MARCH-TRANSPARENCY-LAW",
+      "CLM-NAC-MARCH-DISBANDMENT-OUTCOME"
+    ],
     whyItMatters:
       "Connects Jamie's documented operating craft to visible civic products and outcomes while preserving the difference between contribution, collective advocacy, legislation, and agency action.",
     guardrail:
@@ -502,16 +512,24 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform used across 35+ active city-scene tags.",
+    shortWording: "WOWList supported 35+ active city-scene tags",
     detailedPublicWording:
       "As co-builder and product operator, Jamie helped WOWList support 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    supportingClaimIds: [
+      "CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE",
+      "CLM-WOWLIST-PUBLIC-PRODUCT-SUPPORT",
+      "CLM-WOWLIST-CIVIC-CARE-USE-PATTERN",
+      "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP"
+    ],
+    supportingSourceIds: ["SRC-WOWLIST-PRODUCTION-DB-SNAPSHOTS-2016-2017"],
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters. Screenshots, archive links, and collaborator-visible artifacts remain pending approval before publication.",
+      "Describe the governed database measure as active city-scene tags, not cities, chapters, geographic reach, or independently verified organizer adoption. Screenshots, archive links, and collaborator-visible artifacts remain pending approval before publication.",
     doNotSay: [
       "Official chapters in 35 cities",
-      "Full ownership of all organizer adoption",
+      "Adopted across or reached 35 city ecosystems",
+      "Full ownership of organizer use",
       "Current active platform unless confirmed"
     ],
     protectedBoundaries: [
@@ -536,15 +554,23 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Built and stewarded repeatable hosting, onboarding, facilitation, documentation, and continuity systems within a participant-made cultural practice spanning 300+ gatherings and 20+ resident artists.",
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
-      "Jamie built a care-forward residency and recurring community practice, making cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+      "Jamie built and stewarded operating systems for a care-forward residency and recurring, participant-made community practice, making cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    supportingClaimIds: [
+      "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW",
+      "CLM-SUNDAY-DINNER-FACEBOOK-MILESTONES",
+      "CLM-SUNDAY-DINNER-100TH-PUBLIC-TRACE"
+    ],
+    supportingSourceIds: ["SRC-SUNDAY-DINNER-OPERATING-WORKBOOK-2026"],
     guardrail:
-      "Keep the page summary-only; named participants, photos, and artifacts require consent and approval, and community trust work should not become spectacle.",
+      "Name Jamie's stewardship without assigning him authorship of participants' work or sole creation of the collective practice. Keep the page summary-only; named participants, photos, and artifacts require consent and approval.",
     doNotSay: [
       "Institutional ownership of participants' work",
+      "Jamie alone created Sunday Dinner or its participant-made culture",
+      "Participants merely carried out Jamie's program",
       "Comprehensive public archive",
       "Attendance database"
     ],
@@ -573,6 +599,11 @@ export const proofClaims: ProofClaim[] = [
       "Jamie made residency handoffs usable through a documented acceptance and onboarding process, then supported project and media continuity through dedicated collaborator workspaces.",
     sourceBasis:
       "Public-safe aggregate review of a Jamie-authored acceptance record and at least eight dedicated 196 collaboration workspaces spanning 2023-2025.",
+    supportingClaimIds: ["CLM-196-RESIDENCY-ONBOARDING-WORKFLOW"],
+    supportingSourceIds: [
+      "SRC-GDRIVE-196-ACCEPTANCE-ONBOARDING-2023",
+      "SRC-GDRIVE-196-COLLABORATION-ARCHITECTURE-2023-2025"
+    ],
     whyItMatters:
       "Shows proposal review, onboarding design, access planning, collaborator handoffs, and reusable operating structure in a trust-intensive setting.",
     guardrail:
@@ -659,9 +690,9 @@ export const proofClaims: ProofClaim[] = [
     shortWording:
       "Co-founded with Julia Fredenburg and project-managed historic adaptive reuse",
     detailedPublicWording:
-      "A 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. The proposal also documents a partner-based neighborhood survey whose ongoing results shaped its plans. After the CCED Board's recommendation, the Council authorized the City Manager to negotiate a funding agreement for up to $490,539. Ordinance 240317 later recorded KC Town Hall as withdrawn and reappropriated the unused allocation. When Jamie's stewardship concluded, he reports that he transitioned the project to a mission-aligned organization.",
+      "A 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. The proposal also documents a partner-based neighborhood survey whose ongoing results shaped its plans. After the CCED Board's recommendation, the Council authorized the City Manager to negotiate a funding agreement for up to $490,539. Ordinance 240317 later recorded KC Town Hall as withdrawn and reappropriated the unused allocation.",
     sourceBasis:
-      "Public-safe page-level appraisal of the private 2019 CCED proposal and support-letter packet, approved resume language, Kansas City Legistar history, authenticated Resolution 190649, Ordinance 240317, the governed project-account corpus, and Jamie's July 14, 2026 handoff confirmation. The underlying packet remains private because appended materials contain financial and contact information. The account corpus preserves a two-item recovery gap, does not assign every post or later operation to Jamie, and does not independently verify self-reported outcome figures.",
+      "Public-safe page-level appraisal of the private 2019 CCED proposal and support-letter packet, approved resume language, Kansas City Legistar history, authenticated Resolution 190649, Ordinance 240317, and the governed project-account corpus. Jamie's later handoff recollection remains held pending collaborator or organizational corroboration. The underlying packet remains private because appended materials contain financial and contact information.",
     guardrail:
       "Credit Julia's co-leadership, each professional and trade team, survey partners, residents, the CCED Board, and the Council. Phase One completion is not completion of Phase Two or the full redevelopment. Use project manager unless separate evidence corroborates Jamie's recalled general-contractor title. Distinguish negotiation authority from receipt, and do not attribute the later withdrawal or its unstated reasons to Jamie.",
     doNotSay: [
@@ -1004,6 +1035,7 @@ export const proofClaims: ProofClaim[] = [
       "The knowledge bank retains these first-person memories as attributed leads, with contracts, permits, invoices, schedules, drawings, disposal records, neighborhood materials, public artifacts, photographs, and bounded collaborator confirmation identified as potential corroboration paths.",
     sourceBasis:
       "Jamie's July 15, 2026 first-person account, public-safe appraisal of the private 2019 CCED proposal packet, archived Tired of Tires page, and governed KC Town Hall account corpus.",
+    supportingClaimIds: ["CLM-KCTH-MISSION-ALIGNED-HANDOFF"],
     guardrail:
       "These are research leads, not independently confirmed accomplishments. Use project manager for the proposal-backed construction role; do not claim sole authorship, sole operation, verified tire outcomes, Indian Mound expansion, Cleveland Avenue co-founding, or causal influence on capital funding without further evidence.",
     doNotSay: [

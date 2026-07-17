@@ -2034,11 +2034,9 @@ export const nacCampaignPressBatch20260713: {
         {
           "key": "case-study",
           "text": "Across Let NYC Dance, Save NYC Spaces, Talks Not Raids, and the archived FairRentNYC site, four campaign press indexes preserve 45 listed references to 44 distinct article URLs spanning repeal, nightlife governance, enforcement, storefront vacancy, and commercial rent stabilization.",
-          "status": "active",
+          "status": "hold",
           "citationRequired": true,
-          "surfaces": [
-            "/work/fair-rent-nyc"
-          ]
+          "surfaces": []
         }
       ],
       "evidence": [

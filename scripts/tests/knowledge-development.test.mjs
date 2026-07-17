@@ -52,6 +52,7 @@ import {
 } from "../derive-nycartc-x-corpus.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { claimRecordSchema } from "../../apps/www/src/data/knowledge-bank/schema.ts";
+import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-bank-development.json", "utf8")
@@ -524,6 +525,35 @@ test("public and resume statements require proposition-level semantic support", 
   );
 });
 
+test("authored case-study prose resolves to stable knowledge-bank identities", () => {
+  const claimIds = new Set(knowledgeBank.claims.map((claim) => claim.id));
+  const sourceIds = new Set(knowledgeBank.sources.map((sourceItem) => sourceItem.id));
+  const proofById = new Map(proofClaims.map((proof) => [proof.id, proof]));
+  const statements = projectionSurfaceBindings.publicStatementManifest.filter(
+    (statement) => statement.path.endsWith(".mdx")
+  );
+
+  assert.ok(statements.length > 0);
+  for (const statement of statements) {
+    for (const support of statement.proofs ?? []) {
+      const proof = proofById.get(support.id);
+      assert.ok(proof, `${statement.id} references missing proof ${support.id}`);
+      const supportingClaimIds = proof.supportingClaimIds ?? [];
+      const supportingSourceIds = proof.supportingSourceIds ?? [];
+      assert.ok(
+        supportingClaimIds.length + supportingSourceIds.length > 0,
+        `${support.id} has no stable claim or source identity`
+      );
+      for (const claimId of supportingClaimIds) {
+        assert.ok(claimIds.has(claimId), `${support.id} references missing claim ${claimId}`);
+      }
+      for (const sourceId of supportingSourceIds) {
+        assert.ok(sourceIds.has(sourceId), `${support.id} references missing source ${sourceId}`);
+      }
+    }
+  }
+});
+
 test("campaign press corpus preserves all memberships without duplicating articles", () => {
   const pressIntake = knowledgeBank.intake.filter((item) =>
     item.id.includes("PRESS-CORPUS") && item.projects.includes("nyc-artist-coalition")
@@ -600,9 +630,11 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
     "SRC-KCTH-KCMO-LEGISTAR-190649"
   ]);
   assert.equal(page.occurrences[0].claimId, claim.id);
-  assert.equal(handoffClaim.maturity, "confirmed-with-boundary");
-  assert.equal(handoffClaim.projectionEligibility, "eligible");
+  assert.equal(handoffClaim.maturity, "research-needed");
+  assert.equal(handoffClaim.projectionEligibility, "hold");
   assert.equal(handoffClaim.projections[0].citationRequired, false);
+  assert.equal(handoffClaim.projections[0].status, "hold");
+  assert.deepEqual(handoffClaim.projections[0].surfaces, []);
   assert.match(handoffClaim.projections[0].text, /mission-aligned organization/);
   assert.equal(handoffSource.visibility, "protected");
   assert.ok(handoffClaim.boundaries.some((item) => /private transition context/i.test(item)));
@@ -617,7 +649,8 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
   );
   assert.match(mdx, /occurrenceId="cced-council-approval"/);
   assert.match(mdx, /does not by itself establish that a funding agreement was executed/);
-  assert.match(mdx, /claimId="CLM-KCTH-MISSION-ALIGNED-HANDOFF"/);
+  assert.doesNotMatch(mdx, /claimId="CLM-KCTH-MISSION-ALIGNED-HANDOFF"/);
+  assert.match(mdx, /remains held for collaborator or organizational corroboration/);
   assert.match(work, /years: "Beginning in 2017"/);
   assert.match(
     work,
@@ -629,7 +662,31 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
     publicRegistry.sources.some((item) => item.id === handoffSource.id),
     false
   );
-  assert.deepEqual(publicHandoffClaim.evidence, []);
+  assert.equal(publicHandoffClaim, undefined);
+});
+
+test("collective semantic classes and documented baseline stay complete", () => {
+  const baseline = JSON.parse(
+    readFileSync(".agents/evals/baselines/collective-credit-v1.json", "utf8")
+  );
+  const collectiveIds = knowledgeBank.claims
+    .filter((claim) => claim.collectiveWork)
+    .map((claim) => claim.id)
+    .sort();
+  const policyIds = Object.keys(collectiveCreditPolicy.claimSemanticClasses).sort();
+  const baselineIds = Object.keys(baseline.requiredClaimSemanticClasses).sort();
+  const documented = readFileSync("docs/knowledge-bank/README.md", "utf8");
+
+  assert.deepEqual(policyIds, collectiveIds);
+  assert.deepEqual(baselineIds, collectiveIds);
+  assert.deepEqual(
+    baseline.requiredClaimSemanticClasses,
+    collectiveCreditPolicy.claimSemanticClasses
+  );
+  assert.match(
+    documented,
+    new RegExp(FROZEN_COLLECTIVE_BASELINE_TAG.replace("refs/tags/", ""))
+  );
 });
 
 test("Kansas City Star waterway evidence preserves collective credit and the interim-route boundary", () => {

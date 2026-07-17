@@ -344,18 +344,18 @@ export const kcTownHallCouncilRecordBatch20260713: {
       project: "kc-town-hall",
       internalClaim:
         "Jamie reports that, when his KC Town Hall stewardship concluded, he transitioned the project to a mission-aligned organization.",
-      status: "confirmed-with-boundary",
-      maturity: "confirmed-with-boundary",
-      projectionEligibility: "eligible",
+      status: "use-with-care",
+      maturity: "research-needed",
+      projectionEligibility: "hold",
       collectiveWork: true,
       projections: [
         {
           key: "case-study",
           text:
             "Jamie reports that, when his stewardship of KC Town Hall concluded, he transitioned the project to a mission-aligned organization.",
-          status: "active",
+          status: "hold",
           citationRequired: false,
-          surfaces: ["/work/kc-town-hall"]
+          surfaces: []
         }
       ],
       evidence: [
@@ -369,20 +369,48 @@ export const kcTownHallCouncilRecordBatch20260713: {
       ],
       boundaries: [
         "Present this as Jamie's first-person account unless a public organizational record or collaborator corroboration is added.",
-        "Do not identify the recipient organization, infer the handoff date or terms, describe private transition context, or claim present-day project status."
+        "Do not identify the recipient organization, infer the handoff date or terms, describe private transition context, or claim present-day project status.",
+        "The recollection does not establish that Jamie alone owned, authorized, decided, or executed a collective project handoff; preserve Julia Fredenburg's and any receiving organization's decision authority."
       ],
       antiClaims: [
         "The recipient organization is identified by this record",
         "The handoff terms or date are established",
         "The receiving organization's present operations are established",
-        "Private transition context belongs in the public portfolio"
+        "Private transition context belongs in the public portfolio",
+        "Jamie alone controlled or executed the handoff",
+        "Julia Fredenburg or the receiving organization had no decision authority"
       ],
-      researchInquiryIds: [],
+      researchInquiryIds: ["INQ-KCTH-MISSION-ALIGNED-HANDOFF-2026"],
       reviewedAt: "2026-07-14",
       reviewedBy: ["Jamie Burkart", "Codex public-safe review"]
     }
   ],
   researchInquiries: [
+    {
+      id: "INQ-KCTH-MISSION-ALIGNED-HANDOFF-2026",
+      project: "kc-town-hall",
+      question:
+        "Can a collaborator or organizational record corroborate Jamie's recollection of a mission-aligned KC Town Hall handoff?",
+      methods: [
+        "Recorded Jamie's first-person account as a research lead rather than a public accomplishment.",
+        "Separated the private transition context from the public project record.",
+        "Identified collaborator confirmation or a bounded organizational record as the required corroboration path."
+      ],
+      runAt: "2026-07-16",
+      resultStatus: "not-recovered",
+      findings: [
+        "No corroborating collaborator statement or organizational record is present in the governed public-safe evidence set.",
+        "The recollection remains useful as a research lead but is held from active public projection."
+      ],
+      limitations: [
+        "The absence of a recovered record does not establish that the handoff did not occur.",
+        "Private family or transition context is outside the scope of this inquiry.",
+        "The inquiry does not establish the recipient organization, date, terms, authority, or present project status."
+      ],
+      sourceIds: ["SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026"],
+      publicSummary:
+        "Jamie's handoff recollection remains held pending bounded collaborator or organizational corroboration."
+    },
     {
       id: "INQ-KCTH-COUNCIL-ACTION-190649-2026",
       project: "kc-town-hall",

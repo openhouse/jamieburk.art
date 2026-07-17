@@ -51,6 +51,18 @@ const mixedProjects = new Map(
 const unassertedIndividualClaims = new Map(
   Object.entries(collectiveCreditPolicy.unassertedIndividualClaims)
 );
+const collectiveClaimSemanticClasses = new Map(
+  Object.entries(collectiveCreditPolicy.claimSemanticClasses ?? {})
+);
+const frozenCollectiveClaimSemanticClasses = new Map(
+  Object.entries(frozenCollectiveCreditBaseline.requiredClaimSemanticClasses ?? {})
+);
+const allowedCollectiveClaimSemanticClasses = new Set([
+  "jamie-contribution",
+  "collective-context",
+  "institutional-outcome",
+  "metric-observation"
+]);
 const knownRouteProjectionSurfaces = new Set(
   Object.keys(projectionSurfaceBindings.routes)
 );
@@ -973,6 +985,9 @@ function governedStatementFindings(statement, bank, source, label) {
   }
 
   const expectedProofSurface = proofSurfaceForRoute(statement.surface);
+  const requiresStableEvidenceIdentity = statement.path?.endsWith(".mdx");
+  const claimIds = new Set(bank.claims.map((claim) => claim.id));
+  const sourceIds = new Set(bank.sources.map((sourceItem) => sourceItem.id));
   for (const support of proofs) {
     const proof = proofById.get(support.id);
     if (!proof) {
@@ -986,6 +1001,30 @@ function governedStatementFindings(statement, bank, source, label) {
       findings.push(
         `${label} proof ${support.id} is not approved for ${expectedProofSurface}`
       );
+    }
+    const stableClaimIds = proof.supportingClaimIds ?? [];
+    const stableSourceIds = proof.supportingSourceIds ?? [];
+    if (
+      requiresStableEvidenceIdentity &&
+      stableClaimIds.length + stableSourceIds.length === 0
+    ) {
+      findings.push(
+        `${label} proof ${support.id} has no stable claim or source identity`
+      );
+    }
+    for (const claimId of stableClaimIds) {
+      if (!claimIds.has(claimId)) {
+        findings.push(
+          `${label} proof ${support.id} references missing supporting claim ${claimId}`
+        );
+      }
+    }
+    for (const sourceId of stableSourceIds) {
+      if (!sourceIds.has(sourceId)) {
+        findings.push(
+          `${label} proof ${support.id} references missing supporting source ${sourceId}`
+        );
+      }
     }
     if (
       !support.anchor ||
@@ -2886,6 +2925,31 @@ export function evaluateKnowledgeBank(
   if (new Set(projectClassifications).size !== projectClassifications.length) {
     findings["KB-007"].push("collective-credit policy classifies a project more than once");
   }
+  const documentedCollectiveBaseline = readFileSync(
+    "docs/knowledge-bank/README.md",
+    "utf8"
+  );
+  const frozenCollectiveBaselineTagName = FROZEN_COLLECTIVE_BASELINE_TAG.replace(
+    "refs/tags/",
+    ""
+  );
+  if (!documentedCollectiveBaseline.includes(frozenCollectiveBaselineTagName)) {
+    findings["KB-007"].push(
+      `knowledge-bank README does not name frozen baseline ${frozenCollectiveBaselineTagName}`
+    );
+  }
+  for (const id of collectiveClaimSemanticClasses.keys()) {
+    const claim = bank.claims.find((item) => item.id === id);
+    if (!claim?.collectiveWork) {
+      findings["KB-007"].push(`collective semantic policy references non-collective claim ${id}`);
+    }
+  }
+  for (const id of frozenCollectiveClaimSemanticClasses.keys()) {
+    const claim = bank.claims.find((item) => item.id === id);
+    if (!claim?.collectiveWork) {
+      findings["KB-007"].push(`frozen semantic baseline references non-collective claim ${id}`);
+    }
+  }
 
   for (const item of bank.intake) {
     const linkedCount = item.sourceIds.length + item.claimIds.length + item.researchTaskIds.length;
@@ -2939,6 +3003,36 @@ export function evaluateKnowledgeBank(
     if (policyRequiresCollective === true && !claim.collectiveWork) findings["KB-007"].push(`${claim.id} is policy-scoped collective work but is not classified as collective`);
     if (policyRequiresCollective === false && claim.collectiveWork) findings["KB-007"].push(`${claim.id} is policy-scoped individual work but is classified as collective`);
     if (claim.collectiveWork && (claim.boundaries.some((item) => item.trim().length === 0) || claim.antiClaims.some((item) => item.trim().length === 0) || claim.boundaries.length === 0 || claim.antiClaims.length === 0)) findings["KB-007"].push(`${claim.id} lacks a substantive collective-credit boundary or anti-claim`);
+    if (claim.collectiveWork) {
+      const semanticClass = collectiveClaimSemanticClasses.get(claim.id);
+      const frozenSemanticClass = frozenCollectiveClaimSemanticClasses.get(claim.id);
+      const guardrail = [...claim.boundaries, ...claim.antiClaims].join(" ");
+      if (!allowedCollectiveClaimSemanticClasses.has(semanticClass)) {
+        findings["KB-007"].push(`${claim.id} lacks a valid collective semantic class`);
+      } else if (semanticClass !== frozenSemanticClass) {
+        findings["KB-007"].push(`${claim.id} semantic class differs from the frozen baseline`);
+      } else if (
+        semanticClass === "jamie-contribution" &&
+        !/Jamie|Jamie's/i.test(claim.internalClaim)
+      ) {
+        findings["KB-007"].push(`${claim.id} classifies a contribution without naming Jamie's action`);
+      } else if (
+        semanticClass === "institutional-outcome" &&
+        (!/Jamie/i.test(guardrail) || !/(alone|author|caus|personally|secured)/i.test(guardrail))
+      ) {
+        findings["KB-007"].push(`${claim.id} institutional outcome lacks a solo-causation boundary`);
+      } else if (
+        semanticClass === "metric-observation" &&
+        !/(not (?:a )?complete|not.*impact|does not.*impact|not.*attendance|not.*reach|not.*adoption|not.*endorsement|do not sum|observation|not.*unique|historical activity|proves.*causation)/i.test(guardrail)
+      ) {
+        findings["KB-007"].push(`${claim.id} metric observation lacks a denominator or impact boundary`);
+      } else if (
+        semanticClass === "collective-context" &&
+        !/(Jamie|author|credit|collective|account|does not assign|organizer|participant|coalition)/i.test(guardrail)
+      ) {
+        findings["KB-007"].push(`${claim.id} collective context lacks an authorship or attribution boundary`);
+      }
+    }
     const assertionProjects = [
       ...new Set(bank.sourceAssertions
         .filter((assertion) => assertion.candidateClaimIds.includes(claim.id))

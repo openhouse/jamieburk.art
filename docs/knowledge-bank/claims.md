@@ -188,7 +188,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.  
+**Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform used across 35+ active city-scene tags.
 **Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
@@ -203,8 +203,8 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
-**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Public wording:** Built and stewarded repeatable hosting, onboarding, facilitation, documentation, and continuity systems within a participant-made cultural practice spanning 300+ gatherings and 20+ resident artists.
+**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems while participants remained authors of their own work and co-creators of the practice.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
@@ -235,7 +235,7 @@ claim beyond the wording and guardrails here.
 **Evidence class:** Approved resume / public source / public-safe archive summary / Jamie review confirmation
 **Public wording:** With Julia Fredenburg, co-founded and project-managed Phase One cold-shell restoration of a long-vacant Kansas City building while the project conducted a neighborhood survey and built public-benefit documentation. The Council authorized funding-agreement negotiations for up to $490,539 in 2019; a 2024 ordinance later recorded project withdrawal and reappropriated the unused allocation.
 
-**Detailed public-safe wording:** A 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. The proposal also documents a partner-based neighborhood survey whose ongoing results shaped its plans. After the CCED Board's recommendation, the Council authorized the City Manager to negotiate a funding agreement for up to $490,539. Ordinance 240317 later recorded KC Town Hall as withdrawn and reappropriated the unused allocation. When Jamie's stewardship concluded, he reports that he transitioned the project to a mission-aligned organization.
+**Detailed public-safe wording:** A 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. The proposal also documents a partner-based neighborhood survey whose ongoing results shaped its plans. After the CCED Board's recommendation, the Council authorized the City Manager to negotiate a funding agreement for up to $490,539. Ordinance 240317 later recorded KC Town Hall as withdrawn and reappropriated the unused allocation. Jamie's recollection of a later mission-aligned handoff remains held pending collaborator or organizational corroboration.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, phased construction delivery, neighborhood listening, public/private boundary judgment, and documentation for complex built-environment work.
 **Guardrail:** Credit Julia's co-leadership, each professional and trade team, survey partners, residents, the CCED Board, and the Council. Phase One completion is not completion of Phase Two or the full redevelopment. Use project manager unless separate evidence corroborates Jamie's recalled general-contractor title. Distinguish negotiation authority from receipt, and do not attribute the later withdrawal or its unstated reasons to Jamie.
