@@ -31,6 +31,10 @@ workspaces, Dockerfile, Dokku.
 - `npm run test:citations`
 - `npm run report:citations`
 - `npm run check:knowledge-intake`
+- `npm run check:knowledge-operations`
+- `npm run knowledge:query -- <ID, project, or text>`
+- `npm run knowledge:report`
+- `npm run knowledge:projection-map`
 - `npm run check:nycac-facebook-events`
 - `npm run evals:nycac-facebook-events`
 - `npm run check:facebook-events-archive`
@@ -160,8 +164,8 @@ change for V1.
 
 ## Launch-Readiness Evals
 
-- Read `evals/launch-readiness/v23/evals.json` before optimizing the public site
-  for production or job applications.
+- Read `evals/launch-readiness/active.json`, then its referenced `evals.json`,
+  before optimizing the public site for production or job applications.
 - Run `npm run eval:launch-readiness` to establish the current baseline.
 - Improve one failing mutable criterion at a time and keep a change only when
   the lexicographic objective improves without regressing a hard gate or
@@ -172,6 +176,11 @@ change for V1.
   boundaries.
 - A release pass requires two independent observation runs for the same commit;
   use `npm run eval:launch-readiness:strict -- --observations <run-a>,<run-b>`.
+- Observation evidence must name the exact current Git SHA, active contract
+  fingerprint, qualified observer type, stable grader identity, and unique run
+  ID. Semantic and human observers must be independent of the optimizer.
+- An LLM, browser agent, repository edit, merged branch, or lack of objection is
+  never a human observation, rights decision, or publication approval.
 
 ## Deployment
 

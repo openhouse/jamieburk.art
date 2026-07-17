@@ -45,6 +45,8 @@ The knowledge bank exists to:
   `apps/www/src/data/proofs.ts`.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
+- **Operator views:** generated queries, counts, and the projection register,
+  all read from canonical records and never become a second fact store.
 - **Private archive:** not in this repo.
 
 ## Core Rule
@@ -56,6 +58,21 @@ detail.
 ## Projection Rule
 
 The site should project from this bank, not mirror it.
+
+Query and review the bank without opening every source module:
+
+```bash
+npm run knowledge:query -- CallNYC
+npm run knowledge:report
+npm run knowledge:projection-map
+npm run check:knowledge-operations
+```
+
+The generated [projection-register.md](projection-register.md) records active
+projection edges and fails closed when it drifts. It is an operator index, not
+publication permission and not a second canonical store. See
+[composite-integration.md](composite-integration.md) for the decisions that
+integrated the frozen `feature/evals-*` branch family.
 
 For hiring pages, prefer role-fit claims: requirements, workflow mapping,
 documentation architecture, source-backed memory, implementation support,

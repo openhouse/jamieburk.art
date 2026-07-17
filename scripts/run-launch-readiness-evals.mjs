@@ -14,13 +14,25 @@ import { validatePersonalFacebookPosts } from
   "./lib/personal-facebook-posts-validation.mjs";
 import { validateBlindSpotEvals } from
   "./lib/blind-spot-eval-validation.mjs";
+import {
+  currentGitCommit,
+  indexObservations,
+  loadLaunchReadinessSuite,
+  resolveCriterionObservation,
+  validateObservationMeta
+} from "./lib/launch-readiness-contract.mjs";
+import { validateKnowledgeOperations } from
+  "./lib/knowledge-operations.mjs";
 import { knowledgeBank } from
   "../apps/www/src/data/knowledge-bank/records.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v23/evals.json"), "utf8"));
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
+const versionIndex = args.indexOf("--version");
+const requestedVersion = versionIndex >= 0 ? Number(args[versionIndex + 1]) : undefined;
+const { suite, fingerprint, relativePath } = loadLaunchReadinessSuite(repoRoot, requestedVersion);
+const currentCommit = currentGitCommit(repoRoot);
 const observationIndex = args.indexOf("--observations");
 const observationPaths = observationIndex >= 0
   ? (args[observationIndex + 1] ?? "").split(",").filter(Boolean)
@@ -47,7 +59,7 @@ const sourceText = sourceFiles.map((file) => read(file)).join("\n");
 
 const deterministic = new Map();
 
-const blindSpotValidation = validateBlindSpotEvals();
+const blindSpotValidation = validateBlindSpotEvals({ version: suite.version });
 deterministic.set("BLINDSPOT-001", {
   score: blindSpotValidation.passed ? 1 : 0,
   passed: blindSpotValidation.passed,
@@ -165,88 +177,60 @@ deterministic.set("PERSONALFB-001", {
       ]
 });
 
-const criteriaById = new Map(suite.criteria.map((criterion) => [criterion.id, criterion]));
+if (suite.criteria.some((criterion) => criterion.id === "EVALSYS-001")) {
+  const requiredFiles = [
+    "evals/launch-readiness/active.json",
+    relativePath,
+    "scripts/lib/launch-readiness-contract.mjs",
+    "scripts/tests/launch-readiness-evals.test.mjs"
+  ];
+  const policyPass =
+    suite.contractPolicy?.candidateBinding === "exact-current-git-sha" &&
+    suite.contractPolicy?.contractBinding === "sha256-canonical-suite" &&
+    suite.contractPolicy?.invalidEvidencePolicy === "fail-closed" &&
+    suite.observerPolicy?.semantic?.independentOfOptimizer === true &&
+    suite.observerPolicy?.human?.isAgent === false &&
+    /^sha256:[a-f0-9]{64}$/.test(fingerprint) &&
+    requiredFiles.every((file) => existsSync(path.join(repoRoot, file)));
+  deterministic.set("EVALSYS-001", {
+    score: policyPass ? 1 : 0,
+    passed: policyPass,
+    evidence: policyPass
+      ? [`Active v${suite.version} observations bind to ${currentCommit}, ${fingerprint}, typed independent observers, and fail-closed validation.`]
+      : ["The active evaluation contract is missing exact-candidate, fingerprint, observer-independence, or fail-closed controls."]
+  });
+}
+
+if (suite.criteria.some((criterion) => criterion.id === "KNOWOPS-001")) {
+  const knowledgeOperations = validateKnowledgeOperations(knowledgeBank);
+  deterministic.set("KNOWOPS-001", {
+    score: knowledgeOperations.passed ? 1 : 0,
+    passed: knowledgeOperations.passed,
+    evidence: knowledgeOperations.passed
+      ? [knowledgeOperations.evidence]
+      : knowledgeOperations.errors
+  });
+}
+
 const observationErrors = [];
 const observationMetas = observationPaths.map((observationPath) => {
   const absolute = path.resolve(repoRoot, observationPath);
   const meta = JSON.parse(readFileSync(absolute, "utf8"));
 
-  if (meta.suite !== suite.suite) observationErrors.push(`${observationPath}: suite does not match`);
-  if (meta.suiteVersion !== suite.version) observationErrors.push(`${observationPath}: suiteVersion does not match`);
-  if (!meta.runId || /replace-with/.test(meta.runId)) observationErrors.push(`${observationPath}: runId is missing or placeholder`);
-  if (!/^[0-9a-f]{40}$/i.test(meta.commit ?? "")) observationErrors.push(`${observationPath}: commit must be a full Git SHA`);
-  if (!Array.isArray(meta.results)) observationErrors.push(`${observationPath}: results must be an array`);
-
-  for (const result of meta.results ?? []) {
-    const criterion = criteriaById.get(result.criterionId);
-    if (!criterion) {
-      observationErrors.push(`${observationPath}: unknown criterion ${result.criterionId}`);
-      continue;
-    }
-    if (criterion.layer === "deterministic") {
-      observationErrors.push(`${observationPath}: deterministic criterion ${result.criterionId} may not be self-reported`);
-    }
-    if (typeof result.score !== "number" || result.score < 0 || result.score > 1) {
-      observationErrors.push(`${observationPath}: ${result.criterionId} score must be between 0 and 1`);
-    }
-    if (typeof result.passed !== "boolean") {
-      observationErrors.push(`${observationPath}: ${result.criterionId} passed must be boolean`);
-    }
-    if (!Array.isArray(result.evidence) || result.evidence.length === 0) {
-      observationErrors.push(`${observationPath}: ${result.criterionId} needs visible evidence`);
-    }
-    if (!result.grader?.type || !result.grader?.name || !result.grader?.runId) {
-      observationErrors.push(`${observationPath}: ${result.criterionId} needs grader type, name, and runId`);
-    }
-  }
+  observationErrors.push(...validateObservationMeta({
+    meta,
+    suite,
+    fingerprint,
+    currentCommit,
+    label: observationPath
+  }));
 
   return meta;
 });
 
-function indexObservations(observations) {
-  const observedById = new Map();
-  for (const result of observations) {
-    const list = observedById.get(result.criterionId) ?? [];
-    list.push(result);
-    observedById.set(result.criterionId, list);
-  }
-  return observedById;
-}
-
 function resolveResult(criterion, observedById) {
   if (deterministic.has(criterion.id)) return { ...deterministic.get(criterion.id), source: "deterministic" };
-  const candidates = observedById.get(criterion.id) ?? [];
-  if (!candidates.length) return { score: null, passed: false, source: "unobserved", evidence: [] };
-
-  const expectedType = {
-    browser: "browser",
-    semantic: "llm",
-    runtime: "runtime",
-    human: "human"
-  }[criterion.layer];
-  const typedCandidates = candidates.filter((item) => item.grader?.type === expectedType);
-  const requiredGraders = criterion.layer === "semantic"
-    ? suite.target.requiredIndependentSemanticGraders
-    : 1;
-  const independentGraders = new Set(typedCandidates.map((item) => item.grader?.runId));
-
-  if (independentGraders.size < requiredGraders) {
-    return {
-      score: null,
-      passed: false,
-      source: "invalid-observation",
-      evidence: [`${criterion.name} requires ${requiredGraders} independent ${expectedType} grader(s).`]
-    };
-  }
-
-  const score = Math.min(...typedCandidates.map((item) => Number(item.score)));
-  const passed = typedCandidates.every((item) => item.passed === true) && score >= (criterion.gate === "scored" ? suite.target.minimumScoredCriterion : 1);
-  return {
-    score,
-    passed,
-    source: "observation",
-    evidence: typedCandidates.flatMap((item) => item.evidence ?? [])
-  };
+  return resolveCriterionObservation({ criterion, observedById, suite });
 }
 
 function evaluateRun(observationMeta) {
@@ -277,6 +261,8 @@ const runSummaries = observationMetas.length
   : [evaluateRun(null)];
 
 console.log(`# ${suite.suite} v${suite.version}`);
+console.log(`Contract: ${fingerprint}`);
+console.log(`Candidate: ${currentCommit}`);
 for (const summary of runSummaries) {
   if (summary.observationMeta) console.log(`\nRun: ${summary.observationMeta.runId} at ${summary.observationMeta.commit}`);
   console.log("");

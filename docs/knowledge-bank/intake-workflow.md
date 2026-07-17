@@ -104,6 +104,7 @@ criteria include:
 - `INTAKE-001` for lossless public-safe capture;
 - `DISPOSITION-001` for resolvable destinations;
 - `PROJECTION-001` for separation of maturity, public safety, and selection;
+- `KNOWOPS-001` for queryable canonical knowledge and projection-drift checks;
 - `PRESS-001` for complete, deduplicated, archive-backed campaign indexes;
 - `RESEARCH-001` for normalized, close-read public sources;
 - `ARCHIVE-001` for bounded iCloud archival production;
@@ -121,3 +122,9 @@ checks enforce that boundary.
 The deterministic gates can prove structural completeness. Two independent
 semantic graders must still assess whether the decomposition is accurate,
 useful, and neither inflated nor needlessly thin.
+
+For ordinary operation, use `npm run knowledge:query -- <term>` to find stable
+records, `npm run knowledge:report` for lifecycle counts, and
+`npm run check:knowledge-operations` to validate references and generated
+projection state. These commands read `records.ts`; they do not create a second
+fact database.

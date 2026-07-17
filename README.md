@@ -36,24 +36,27 @@ npm run check:citations
 npm run test:citations
 npm run report:citations
 npm run check:launch-evals
+npm run check:knowledge-operations
 npm run eval:launch-readiness
+npm run knowledge:report
+npm run knowledge:query -- CallNYC
 npm run preflight:staging
 npm run preflight:production
 ```
 
 ## Launch-readiness evals
 
-The active versioned eval contract in `evals/launch-readiness/v23/` lets human and LLM
+The version named by `evals/launch-readiness/active.json` lets human and LLM
 collaborators improve the portfolio recursively without collapsing release
-readiness into one gameable score. Hard factual, accessibility, runtime, and
-approval gates must all pass. Scored browser and semantic criteria must meet
-both a per-criterion floor and a weighted target across two independent runs.
+readiness into one gameable score. Every observation is bound to the exact Git
+candidate and contract fingerprint. Hard factual, accessibility, runtime, and
+approval gates must all pass. Scored browser and semantic criteria must meet a
+per-criterion floor and weighted target across two independent runs.
 
 Run `npm run eval:launch-readiness` to see deterministic failures and the
 browser, semantic, runtime, or human evidence still required. The recursive
 agent loop, observation format, protected invariants, and strict release-gate
-command are documented in
-`evals/launch-readiness/v23/README.md`.
+command are documented beside the active suite.
 
 ## Knowledge Bank
 
@@ -87,6 +90,11 @@ public registry; `npm run test:citations` runs citation regressions; and
 fragments, canonical dispositions, public-repository safety, and the separation
 between evidence maturity, public-use permission, and editorial selection. See
 `docs/knowledge-bank/intake-workflow.md`.
+
+`npm run knowledge:query -- <ID, project, or text>` and
+`npm run knowledge:report` provide public-safe operator views directly from the
+canonical records. `npm run knowledge:projection-map` regenerates the tracked
+projection register; `npm run check:knowledge-operations` fails if it drifts.
 
 ## Environment
 

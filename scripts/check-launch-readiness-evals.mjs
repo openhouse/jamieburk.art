@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
-import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateBlindSpotEvals } from "./lib/blind-spot-eval-validation.mjs";
+import { loadLaunchReadinessSuite } from "./lib/launch-readiness-contract.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suitePath = path.join(repoRoot, "evals/launch-readiness/v23/evals.json");
-const suite = JSON.parse(readFileSync(suitePath, "utf8"));
+const args = process.argv.slice(2);
+const versionIndex = args.indexOf("--version");
+const requestedVersion = versionIndex >= 0 ? Number(args[versionIndex + 1]) : undefined;
+const { suite, active, fingerprint } = loadLaunchReadinessSuite(repoRoot, requestedVersion);
 const failures = [];
 
 function requireValue(condition, message) {
@@ -57,11 +59,55 @@ requireValue(suite.target?.minimumWeightedScore >= 0.9, "minimum weighted score 
 requireValue(suite.target?.requiredConsecutivePassingRuns >= 2, "at least two passing runs are required");
 requireValue(suite.target?.requiredIndependentSemanticGraders >= 2, "at least two semantic graders are required");
 
+if (suite.version >= 24) {
+  requireValue(active.version === suite.version, "v24+ contract must be the active suite");
+  requireValue(suite.contractPolicy?.candidateBinding === "exact-current-git-sha", "candidate binding must use the exact current Git SHA");
+  requireValue(suite.contractPolicy?.contractBinding === "sha256-canonical-suite", "contract binding must use the canonical suite fingerprint");
+  requireValue(suite.contractPolicy?.invalidEvidencePolicy === "fail-closed", "invalid observation evidence must fail closed");
+  requireValue(/^sha256:[a-f0-9]{64}$/.test(fingerprint), "contract fingerprint must be SHA-256");
+
+  const allowedDomains = new Set([
+    "accuracy-and-public-safety",
+    "knowledge-lifecycle",
+    "archival-production",
+    "evaluation-integrity",
+    "experience-and-accessibility",
+    "narrative-and-positioning",
+    "human-and-social-truth",
+    "release"
+  ]);
+  const mappedCriterionIds = [];
+  for (const [domain, criterionIds] of Object.entries(suite.criterionDomains ?? {})) {
+    requireValue(allowedDomains.has(domain), `unknown criterion domain ${domain}`);
+    requireValue(Array.isArray(criterionIds) && criterionIds.length > 0, `${domain} must map criteria`);
+    mappedCriterionIds.push(...criterionIds);
+  }
+  requireValue(mappedCriterionIds.length === suite.criteria.length, "criterion domains must map every criterion exactly once");
+  requireValue(new Set(mappedCriterionIds).size === mappedCriterionIds.length, "criterion domains contain duplicate mappings");
+  for (const criterion of suite.criteria) {
+    requireValue(mappedCriterionIds.includes(criterion.id), `${criterion.id} is missing a criterion domain`);
+  }
+
+  for (const [layer, graderType] of Object.entries({
+    browser: "browser",
+    semantic: "llm",
+    runtime: "runtime",
+    human: "human"
+  })) {
+    requireValue(suite.observerPolicy?.[layer]?.graderType === graderType, `${layer} observer policy requires grader type ${graderType}`);
+  }
+  requireValue(suite.observerPolicy?.semantic?.independentOfOptimizer === true, "semantic observers must be independent of the optimizer");
+  requireValue(suite.observerPolicy?.human?.independentOfOptimizer === true, "human observers must be independent of the optimizer");
+  requireValue(suite.observerPolicy?.human?.isAgent === false, "human observers must be non-agent people");
+  requireValue(ids.has("EVALSYS-001"), "v24 requires EVALSYS-001");
+  requireValue(ids.has("KNOWOPS-001"), "v24 requires KNOWOPS-001");
+}
+
 for (const key of ["unitOfChange", "acceptWhen", "rejectWhen", "stopWhen"]) {
   requireValue(suite.hillClimb?.[key], `hillClimb.${key} is required`);
 }
 
-const blindSpotValidation = validateBlindSpotEvals();
+const blindSpotValidation = validateBlindSpotEvals({ version: suite.version });
 for (const error of blindSpotValidation.errors) failures.push(`blind spots: ${error}`);
 
 if (failures.length) {
@@ -70,5 +116,5 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Launch-readiness eval contract passed: ${suite.criteria.length} criteria, ${suite.protectedInvariants.length} protected invariants.`);
+console.log(`Launch-readiness eval contract passed: v${suite.version}, ${suite.criteria.length} criteria, ${suite.protectedInvariants.length} protected invariants, ${fingerprint}.`);
 console.log(blindSpotValidation.evidence);

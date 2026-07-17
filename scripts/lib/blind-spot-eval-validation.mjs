@@ -3,9 +3,6 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-const suitePath = path.join(repoRoot, "evals/launch-readiness/v23/evals.json");
-const mapPath = path.join(repoRoot, "evals/launch-readiness/v23/blind-spots.json");
-
 const expectedBlindSpotIds = [
   "BLIND-SELECTION",
   "BLIND-AUDIENCE",
@@ -42,8 +39,11 @@ function parseJson(filePath) {
   return JSON.parse(readFileSync(filePath, "utf8"));
 }
 
-export function validateBlindSpotEvals() {
+export function validateBlindSpotEvals({ version = 23 } = {}) {
   const errors = [];
+  const versionRoot = `evals/launch-readiness/v${version}`;
+  const suitePath = path.join(repoRoot, versionRoot, "evals.json");
+  const mapPath = path.join(repoRoot, versionRoot, "blind-spots.json");
   const suite = parseJson(suitePath);
   const map = parseJson(mapPath);
   const criteriaById = new Map(suite.criteria.map((criterion) => [criterion.id, criterion]));
@@ -111,7 +111,7 @@ export function validateBlindSpotEvals() {
     errors.push("blind-spot map needs the complete protocol file set");
   }
   for (const relativePath of map.protocolFiles ?? []) {
-    if (typeof relativePath !== "string" || !relativePath.startsWith("evals/launch-readiness/v23/")) {
+    if (typeof relativePath !== "string" || !relativePath.startsWith(`${versionRoot}/`)) {
       errors.push(`invalid blind-spot protocol path ${relativePath}`);
       continue;
     }
