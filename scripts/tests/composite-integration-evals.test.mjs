@@ -16,8 +16,9 @@ import {
 const suite = JSON.parse(readFileSync("evals/composite-integration/suite.json", "utf8"));
 const fixtures = JSON.parse(readFileSync(suite.semanticFixturePath, "utf8"));
 
-test("composite contract pins A through N and weights 100", () => {
+test("composite v2 contract pins A through N and weights 100", () => {
   assert.deepEqual(validateCompositeSuite(suite), []);
+  assert.equal(suite.version, 2);
   assert.equal(suite.frozenBranches.length, 14);
   assert.equal(suite.rubrics.reduce((total, item) => total + item.weight, 0), 100);
 });

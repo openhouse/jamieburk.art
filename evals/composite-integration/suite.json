@@ -1,9 +1,9 @@
 {
-  "version": 1,
-  "id": "feature-evals-composite-integration-v1",
+  "version": 2,
+  "id": "feature-evals-composite-integration-v2",
   "objective": "Integrate the strongest non-duplicative capabilities from the frozen feature/evals-A through feature/evals-N family into feature/knowledge-c without creating parallel knowledge or evaluation architectures.",
   "startSha": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
-  "baselineRecord": "evals/composite-integration/baselines/feature-knowledge-c-ff440a9c.json",
+  "baselineRecord": "evals/composite-integration/baselines/feature-knowledge-c-contract-v2.json",
   "ledgerPath": "evals/composite-integration/evidence/branch-family-inventory.json",
   "historyPath": "docs/knowledge-bank/lifecycle/history.jsonl",
   "governancePath": "evals/composite-integration/evidence/governance.json",

@@ -38,6 +38,20 @@ or publication-approval gates.
 The composite suite evaluates integration quality. It does not replace or
 duplicate any of the three governing suites.
 
+## Contract history
+
+Version 1 established the branch-family, semantic, lifecycle, candidate, and
+governance gates. Its first baseline exposed a diagnostic bug: a stale
+application judgment made `projection_restraint` fail even though citation,
+knowledge, and public-safety checks passed, and the evidence line incorrectly
+read as passing. No composite judgment had been requested at that point.
+
+Version 2 repairs the gate boundary. `projection_restraint` now depends only on
+the citation, knowledge-bank, public-safety, and private-path checks;
+`no_regression` separately owns application-judgment freshness. The version 1
+baseline remains preserved, but version 2 requires a new baseline and new
+candidate-bound judgments.
+
 ## Evidence layers
 
 Deterministic checks, model judgments, human-reader evidence, rights review,

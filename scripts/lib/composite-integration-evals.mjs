@@ -15,7 +15,7 @@ function asArray(value) {
 
 export function validateCompositeSuite(suite) {
   const findings = [];
-  if (suite?.version !== 1) findings.push("Suite version must be 1");
+  if (suite?.version !== 2) findings.push("Suite version must be 2");
   if (!suite?.id) findings.push("Suite requires an ID");
   if (!SHA_PATTERN.test(suite?.startSha ?? "")) findings.push("Suite start SHA is invalid");
   if (asArray(suite?.frozenBranches).length !== 14) findings.push("Suite must pin A through N");

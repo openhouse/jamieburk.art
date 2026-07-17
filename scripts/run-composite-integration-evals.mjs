@@ -131,6 +131,15 @@ const noRegression = {
   passed: skipRegression || regressions.every((item) => item.status === "pass"),
   findings: regressions.filter((item) => item.status !== "pass").map((item) => `${item.id}: ${item.evidence}`)
 };
+const projectionCheckIds = new Set([
+  "scripts/check-citations.mjs",
+  "scripts/check-knowledge-bank.mjs",
+  "scripts/check-public-safety.mjs"
+]);
+const projectionChecks = regressions.filter((item) => projectionCheckIds.has(item.id));
+const projectionPassed =
+  privateFindings.length === 0 &&
+  (skipRegression || projectionChecks.every((item) => item.status === "pass"));
 
 const hardGates = {
   frozen_source_integrity: {
@@ -154,8 +163,12 @@ const hardGates = {
     evidence: semanticIntegrity.findings.join("; ") || `${fixtures.length} adversarial mutations rejected`
   },
   projection_restraint: {
-    status: noRegression.passed && privateFindings.length === 0 ? "pass" : "fail",
-    evidence: privateFindings.length ? `Private paths in ${privateFindings.join(", ")}` : "Citation, knowledge, and public-safety boundaries pass"
+    status: projectionPassed ? "pass" : "fail",
+    evidence: privateFindings.length
+      ? `Private paths in ${privateFindings.join(", ")}`
+      : projectionChecks.some((item) => item.status !== "pass")
+        ? projectionChecks.filter((item) => item.status !== "pass").map((item) => `${item.id}: ${item.evidence}`).join("; ")
+        : "Citation, knowledge, and public-safety boundaries pass"
   },
   candidate_binding: {
     status: judgmentResult.passed ? "pass" : "fail",
