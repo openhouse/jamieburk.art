@@ -1,11 +1,11 @@
 import { z } from "zod";
 
-const stableIdSchema = z
+export const stableIdSchema = z
   .string()
   .min(1)
   .regex(/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/, "Use a stable hyphenated ID");
 
-const publicUrlSchema = z
+export const publicUrlSchema = z
   .url()
   .refine((value) => /^https?:\/\//.test(value), "Use an HTTP(S) public URL");
 
@@ -38,7 +38,7 @@ export const preservationStatusSchema = z.enum([
   "private"
 ]);
 
-const mediaSchema = z.object({
+export const mediaSchema = z.object({
   mediaKind: z.enum(["photograph", "screenshot", "graphic", "document", "other"]),
   photographer: z.string().min(1).optional(),
   rightsHolder: z.string().min(1).optional(),
@@ -77,6 +77,8 @@ export const sourceRecordSchema = z
     publishedAt: z.iso.date().optional(),
     capturedAt: z.string().min(1).optional(),
     accessedAt: z.iso.date().optional(),
+    metadataVerifiedAt: z.iso.date().optional(),
+    metadataVerifiedBy: z.string().min(1).optional(),
     canonicalUrl: publicUrlSchema.optional(),
     archiveUrl: publicUrlSchema.optional(),
     assetUrl: publicUrlSchema.optional(),

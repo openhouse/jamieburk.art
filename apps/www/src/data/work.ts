@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { getClaimProjection } from "@/data/knowledge-bank";
-import type { WorkMeta } from "@/types/work";
+import { getClaimProjection } from "./knowledge-bank/index.ts";
+import type { WorkMeta } from "../types/work.ts";
 
 const visibilitySchema = z.enum([
   "public",

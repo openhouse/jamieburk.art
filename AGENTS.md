@@ -30,6 +30,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run evals:composite`
+- `npm run check:knowledge-lifecycle`
+- `npm run check:knowledge-integrity`
 
 ## Public-Safety Rules
 
@@ -41,7 +44,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+Record uncertainty in governed research or launch-blocker records. Omit
+unapproved material from public pages; do not publish TODO markers.
 
 ## Knowledge Bank
 
@@ -52,6 +56,13 @@ Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
 canonical machine-readable source. Do not add or strengthen a public factual
 claim without updating the canonical claim, evidence relationship, and source
 records.
+
+New fragments enter through the offline lifecycle workbench documented in
+`docs/knowledge-bank/knowledge-lifecycle.md`. Preserve immutable capture facts,
+allow explicitly unassigned leads, and keep candidate maturity separate from
+publication eligibility. Exact public proof inventories and collective-credit
+classes live under `docs/knowledge-bank/governance/` and must pass
+`npm run check:knowledge-integrity`.
 
 Use `<Claim>` for high-risk canonical wording and `<Cite>` for supported
 authored prose. Do not type citation numbers manually.

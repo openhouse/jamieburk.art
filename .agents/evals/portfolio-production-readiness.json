@@ -452,8 +452,9 @@
     "allowed_decisions": ["accept", "revise", "reject", "stop_threshold_met", "stop_iteration_limit", "stop_no_improvement", "stop_human_blocked"]
   },
   "run_record_schema": {
-    "required": ["suite_id", "target", "candidate_sha", "rubric_sha", "results", "human_approval"],
+    "required": ["suite_id", "target", "candidate_sha", "candidate_fingerprint", "rubric_sha", "contract_fingerprint", "evidence_bundle_fingerprint", "profile", "evaluator_identity", "evaluator_authored_candidate", "results", "unresolved_blockers", "next_action", "final_state", "human_approval"],
     "allowed_targets": ["application-share", "production-launch"],
+    "allowed_final_states": ["continue", "threshold_met", "human_blocked", "iteration_limit", "no_improvement"],
     "production_required": ["blind_reader_median", "holdout_regression_pass", "consecutive_passing_runs"]
   }
 }

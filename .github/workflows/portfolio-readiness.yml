@@ -1,0 +1,51 @@
+name: Portfolio readiness
+
+on:
+  pull_request:
+    branches: [develop]
+  push:
+    branches: [develop]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-readiness-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: docker build --tag jamieburk-art:ci .
+      - name: Smoke-test staging container
+        run: |
+          docker run --detach --name jamieburk-art-ci --publish 3000:3000 jamieburk-art:ci
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:3000/api/health >/dev/null; then
+              break
+            fi
+            if [ "$attempt" = 30 ]; then
+              docker logs jamieburk-art-ci
+              exit 1
+            fi
+            sleep 1
+          done
+          test "$(docker exec jamieburk-art-ci id -u)" = "1001"
+          curl --fail --silent http://127.0.0.1:3000/ >/dev/null
+          curl --fail --silent http://127.0.0.1:3000/resume >/dev/null
+          curl --fail --silent http://127.0.0.1:3000/robots.txt | grep --quiet "Disallow: /"
+      - name: Container logs
+        if: always()
+        run: docker logs jamieburk-art-ci || true
+      - name: Remove container
+        if: always()
+        run: docker rm --force jamieburk-art-ci || true

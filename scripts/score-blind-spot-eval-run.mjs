@@ -2,11 +2,12 @@
 
 import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
+import { validateRunBinding } from "./lib/eval-run-contract.mjs";
 
 const suitePath = ".agents/evals/blind-spot-readiness.json";
 
 export function scoreRun(suite, run) {
-  const errors = [];
+  const errors = validateRunBinding(suite, run);
   const blockers = [];
   const allowedTargets = new Set(suite.run_record_schema?.allowed_targets ?? []);
 

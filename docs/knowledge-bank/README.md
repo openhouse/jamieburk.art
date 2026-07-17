@@ -36,8 +36,15 @@ The knowledge bank exists to:
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
+- **Lifecycle workbench:** append-only receipts, mutable triage, atomic
+  observations, candidate maturity, research tasks, decisions, and editorial
+  palettes in `apps/www/src/data/knowledge-bank/lifecycle-records.ts`. It is an
+  offline maintenance surface, not an application route.
 - **Structured proof data:** broader professional claim layer in
   `apps/www/src/data/proofs.ts`.
+- **Governance:** exact public proof inventories, collective-credit classes,
+  projection-source bindings, composition budgets, and mosaic-privacy review
+  under `docs/knowledge-bank/governance/`.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
@@ -45,6 +52,11 @@ The knowledge bank exists to:
 Intake is deliberately broader than publication. A useful fragment can remain
 captured or under research indefinitely without becoming website copy. See
 [intake.md](intake.md) for the maturity model and submission procedure.
+
+The current operating status is `governed-open`: public-safe intake and
+research may continue, while claim promotion, exact public projection, media
+rights, human reader evidence, and production release retain their separate
+approval gates. See [knowledge-lifecycle.md](knowledge-lifecycle.md).
 
 ## Core Rule
 

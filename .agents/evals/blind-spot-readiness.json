@@ -15,7 +15,7 @@
     }
   },
   "development_readiness_thresholds": {
-    "weighted_score_minimum": 0.82,
+    "weighted_score_minimum": 0.85,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
     "all_blocking_evals_must_pass": true,
@@ -163,8 +163,9 @@
     "allowed_decisions": ["accept", "revise", "reject", "stop_threshold_met", "stop_iteration_limit", "stop_no_improvement", "stop_human_blocked"]
   },
   "run_record_schema": {
-    "required": ["suite_id", "target", "candidate_sha", "rubric_sha", "content_scope", "results", "consecutive_passing_runs"],
+    "required": ["suite_id", "target", "candidate_sha", "candidate_fingerprint", "rubric_sha", "contract_fingerprint", "evidence_bundle_fingerprint", "profile", "evaluator_identity", "evaluator_authored_candidate", "content_scope", "results", "unresolved_blockers", "next_action", "final_state", "consecutive_passing_runs"],
     "allowed_targets": ["development-readiness", "release-readiness"],
+    "allowed_final_states": ["continue", "threshold_met", "human_blocked", "iteration_limit", "no_improvement"],
     "release_required": ["independent_holdout_pass", "cold_reader_validation_pass", "live_use_validation_pass", "human_approval"]
   }
 }

@@ -29,6 +29,8 @@ const publicSourceSchema = z.object({
   publishedAt: z.string().optional(),
   capturedAt: z.string().optional(),
   accessedAt: z.string().optional(),
+  metadataVerifiedAt: z.string().optional(),
+  metadataVerifiedBy: z.string().optional(),
   canonicalUrl: z.url().optional(),
   archiveUrl: z.url().optional(),
   assetUrl: z.url().optional(),
