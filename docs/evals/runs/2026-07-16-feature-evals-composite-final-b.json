@@ -1,0 +1,140 @@
+{
+  "runVersion": 2,
+  "judgeId": "composite-holdout-public-value-b-2026-07-16-final-2",
+  "grader": "independent_llm_judge",
+  "independentFromOptimizer": true,
+  "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
+  "candidateFingerprint": "ab0279b466e1569162f4066623e54ac053295fdb88a19afb48a3b0da92684b05",
+  "verdict": "accepted",
+  "scores": [
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All fourteen feature/evals-A through feature/evals-N branches appear exactly once with the frozen commit identities.",
+        "Each identity resolves through refs/remotes/origin rather than an ambiguous local short branch.",
+        "feature/knowledge-h and develop are explicitly identified as the integration branch and pull-request base."
+      ],
+      "rationale": "The frozen family inventory is complete, exact, and reference-only."
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The integration register contains fourteen substantive adopt, adapt, or already-present decisions with rationale, destination paths, projection decisions, and verification IDs.",
+        "All destination paths exist.",
+        "The recomputed register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d and matches the reviewed lock."
+      ],
+      "rationale": "The register makes integration and deliberate non-projection inspectable without importing parallel architectures."
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All eleven declared canonical knowledge, lifecycle, projection, proof, and governance files exist.",
+        "None of the three forbidden parallel lifecycle roots exists.",
+        "The application consumes the redacted public registry, and no public proofs, knowledge-bank, or public-claims route exists.",
+        "Base suite version 3 matches its reviewed digest and points back to the composite suite."
+      ],
+      "rationale": "The candidate retains one H-derived architecture and a selective public projection boundary."
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Four lifecycle-operation tests passed.",
+        "Identical replay is idempotent, a new-ID duplicate is preserved with a duplicate link, and changed content under an existing stable ID is rejected.",
+        "Held claims, unresolved inquiries, corrections, projection counts, and orphan-source state are queryable; the evaluated graph reports no orphan sources."
+      ],
+      "rationale": "Intake and lifecycle operations preserve records without silent loss or collision ambiguity."
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Canonical validation passed for 275 sources, 96 claims, 31 agency relations, and 4 corrections.",
+        "Citation checks and all ten citation tests passed, including redaction, correction, negative-research, and private-evidence controls.",
+        "The knowledge suite passed 5/5 groups across 32 criteria, and all 196 knowledge mutation tests passed.",
+        "Agency records keep individual, shared, collective, and institutional action distinct; population records preserve capture dates, denominators, and recovery limits."
+      ],
+      "rationale": "Source scope, claim support, correction history, population limits, privacy, and collective credit remain structurally enforced."
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The homepage leads with a specific role family, operating-structure offer, selected work, resume, and contact actions rather than exposing the knowledge bank.",
+        "Mature held claims remain off public routes, while lead case studies project bounded artifacts, captions, source notes, Known/Open/Protected limits, and credits.",
+        "Jamie's actions are legible through contribution verbs and usable results without assigning him sole ownership of coalition, institutional, community, or policy outcomes.",
+        "The About page connects artistic, civic, technical, relational, and social practice through project-specific relationship, interface/use, learning, and continuity sequences.",
+        "Professor-lens evaluation passed 14/14 criteria; six bounded professor-lens holdouts score 4, and all six professor mutation tests passed."
+      ],
+      "rationale": "The public site remains selective and job-useful while preserving interdisciplinary continuity, reciprocal participation, privacy, and collective credit."
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All five required human controls remain open: collaborator corroboration, collective review, hiring usability, job funnel, and external validity.",
+        "Each control records required evidence, anti-gaming rules, a next action, and a public-projection boundary.",
+        "The controls explicitly reject AI-generated testimony, internal checks as hiring impact, silence as approval, and synthetic closure of external evidence.",
+        "Exact-commit approval, Dokku/domain/TLS/smoke/rollback verification, and production indexing approval remain open."
+      ],
+      "rationale": "The system governs human and external-validity gaps without pretending to resolve them."
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The recomputed semantic rubric digest is c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340 and matches the separately pinned evaluator constant.",
+        "The complete base suite, decision register, blind-spot controls, and remote branch-head set match their reviewed locks.",
+        "Fourteen adversarial composite subtests passed; the sole expected bootstrap failure was the intentionally absent pre-installation holdout pair.",
+        "In-memory mutations to public UI, CSS accessibility, robots, validation, Next runtime, Docker runtime, release documentation, base suite, decision register, and human controls all changed candidate identity or failed reviewed semantic locks.",
+        "A byte mutation in the certificate binary changed the candidate fingerprint, confirming byte-exact binary hashing.",
+        "Optimizer self-grading and not-observed acceptance are prohibited, and blocking failures cannot be compensated by other scores."
+      ],
+      "rationale": "The frozen governance and complete-source identity resist checksum refreshes, semantic weakening, binary drift, synthetic evidence, and score gaming."
+    },
+    {
+      "criterionId": "COMP-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The recomputed candidate fingerprint is ab0279b466e1569162f4066623e54ac053295fdb88a19afb48a3b0da92684b05 across 423 files.",
+        "Candidate identity covers every tracked or unignored source-tree file and excludes only the two declared holdout result records.",
+        "The stopping contract requires two distinct judges, read-only native-process sessions, distinct full-prompt digests, model and timing data, fixed transport, judgment-payload digests, the same rubric, the same candidate, all nine scores at 4, and empty notObserved arrays.",
+        "Process receipts are explicitly described as auditable orchestration evidence rather than cryptographic authentication.",
+        "Current read-only verification passed portfolio-suite structure, professor lenses, lifecycle operations, citation checks, knowledge checks, public safety, routes, TypeScript checking, and lint.",
+        "The evaluator's present 0/2 holdout count is the expected pre-installation state and is not treated as evidence against the stopping rule."
+      ],
+      "rationale": "The exact-candidate identity, frozen semantic contract, independent provenance requirements, deterministic checks, and explicitly open human production gates form a sound stopping rule."
+    }
+  ],
+  "notObserved": [],
+  "findings": [],
+  "recommendation": "Accept this exact candidate for composite holdout installation. This acceptance does not claim production deployment, live indexing, collaborator review, human hiring validation, domain cutover, or final production approval.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "processSessionId": "019f6dff-1311-7b71-8d05-459351d21cde",
+    "agentNickname": "Dalton",
+    "model": "inherited-parent-default",
+    "reasoningEffort": "xhigh",
+    "sandbox": "read-only",
+    "ephemeral": true,
+    "prompt": "You are independent holdout B: a public-value, accessibility, safety, and production-readiness reviewer. Work read-only in the supplied repository. Do not edit any file. You did not optimize this candidate and must not rely on another judge's conclusions.\n\nEvaluate the exact candidate against all nine blocking criteria in `.agents/evals/feature-evals-composite.json`. Read the high-signal evidence bundle and inspect any additional source-tree dependencies needed, especially public routes and case studies, proof and citation projection, collective credit, privacy boundaries, human blind-spot controls, accessibility/indexing/runtime configuration, professor lenses, evaluator, and mutation tests. Recompute both the rubric digest and candidate fingerprint. The expected rubric is `c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340`; the expected exact source-tree candidate is `ab0279b466e1569162f4066623e54ac053295fdb88a19afb48a3b0da92684b05` across 423 files.\n\nJudge whether the site remains a selective, job-useful projection rather than a knowledge dump; whether Jamie's agency is visible without taking collective credit; whether artistic, civic, technical, and social continuity remains legible; and whether the system preserves human approval and external-validity gaps honestly. Verify that material public, accessibility, indexing, validation, runtime, release, base-suite, decision-register, and human-control changes alter either exact-candidate identity or the reviewed semantic locks. Confirm binary files are hashed byte-exactly and that process receipts are bounded as auditable rather than cryptographically authenticated. Do not award partial credit: each criterion is either 4/pass or 0/fail. A blocker fails the candidate. `notObserved` must be empty for acceptance.\n\nThis is a pre-installation holdout: the evaluator is expected to report COMP-009 absent because this result record and the other holdout do not yet exist. Do not count the absence of your own future result as a defect. Independently score COMP-009 by deciding whether the exact-candidate identity, frozen rubric, provenance contract, deterministic checks, and explicitly open human production gates form a sound stopping rule. Do not claim that production, deployment, indexing, collaborator review, or hiring validation occurred.\n\nSet `judgeId` to `composite-holdout-public-value-b-2026-07-16-final-2`, `runVersion` to 2, `grader` to `independent_llm_judge`, and `independentFromOptimizer` to true. Return only schema-valid JSON. If any blocking criterion fails or is not observed, reject the candidate.\n",
+    "promptSha256": "952665927e1784b07a62e34011ffb9a5aa079bfe2f46a575646fb46bfab71423",
+    "judgmentSha256": "047b2a0b86695926cfcd0e57335ff8512a430de9e28ac5b38ab4a777465b19df",
+    "resultTransport": "multi_agent_v1__wait_agent-completed",
+    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
+    "startedAt": "2026-07-17T02:54:12Z",
+    "completedAt": "2026-07-17T03:05:20Z"
+  }
+}

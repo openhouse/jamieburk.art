@@ -68,10 +68,26 @@ export const intakeItemSchema = z.object({
   sourceUrl: publicUrlSchema.optional(),
   visibility: z.enum(["public-safe", "protected"]),
   disposition: intakeDispositionSchema,
+  duplicateOfIntakeId: stableIdSchema.optional(),
   sourceIds: z.array(stableIdSchema).default([]),
   observationIds: z.array(stableIdSchema).default([]),
   researchInquiryIds: z.array(stableIdSchema).default([]),
   boundaries: z.array(z.string().min(1)).default([])
+}).superRefine((item, context) => {
+  if (item.disposition === "duplicate" && !item.duplicateOfIntakeId) {
+    context.addIssue({
+      code: "custom",
+      path: ["duplicateOfIntakeId"],
+      message: "Duplicate intake items must identify the retained intake"
+    });
+  }
+  if (item.disposition !== "duplicate" && item.duplicateOfIntakeId) {
+    context.addIssue({
+      code: "custom",
+      path: ["duplicateOfIntakeId"],
+      message: "Only duplicate intake items may identify a retained intake"
+    });
+  }
 });
 
 export const observationSchema = z.object({

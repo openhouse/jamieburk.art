@@ -1,8 +1,14 @@
 {
-  "version": 2,
+  "version": 3,
   "suite_id": "portfolio-production-readiness",
   "title": "Jamie Burkart portfolio production readiness",
   "objective": "Make the portfolio clear, inspectable, public-safe, application-ready, and production-safe without overstating Jamie's role or exposing protected material.",
+  "composite_suite": {
+    "required": true,
+    "path": ".agents/evals/feature-evals-composite.json",
+    "integration_register": "docs/integration/feature-evals-composite.json",
+    "human_readable_instructions": "docs/integration/feature-evals-composite.md"
+  },
   "candidate_defaults": {
     "base_ref": "origin/develop",
     "staging_url": "https://staging.jamieburk.art",

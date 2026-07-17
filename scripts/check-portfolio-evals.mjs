@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 const suitePath = ".agents/evals/portfolio-production-readiness.json";
 const suite = JSON.parse(readFileSync(suitePath, "utf8"));
@@ -8,7 +8,7 @@ function requireValue(condition, message) {
   if (!condition) errors.push(message);
 }
 
-requireValue(suite.version === 2, "suite.version must be 2");
+requireValue(suite.version === 3, "suite.version must be 3");
 requireValue(
   suite.suite_id === "portfolio-production-readiness",
   "suite.suite_id must be portfolio-production-readiness"
@@ -17,6 +17,17 @@ requireValue(Array.isArray(suite.hard_constraints) && suite.hard_constraints.len
   "suite.hard_constraints must be a non-empty array");
 requireValue(Array.isArray(suite.evals) && suite.evals.length > 0,
   "suite.evals must be a non-empty array");
+requireValue(suite.composite_suite?.required === true,
+  "suite.composite_suite must be required");
+for (const [key, label] of [
+  ["path", "composite suite"],
+  ["integration_register", "integration register"],
+  ["human_readable_instructions", "human-readable instructions"]
+]) {
+  const target = suite.composite_suite?.[key];
+  requireValue(typeof target === "string" && existsSync(target),
+    `${label} path must exist`);
+}
 
 const ids = new Set();
 let totalWeight = 0;
