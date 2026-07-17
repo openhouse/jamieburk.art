@@ -82,9 +82,10 @@ export const legacyProjectionReadings = [
     propositions: [
       { id: "PROP-HJE-RESUME-IMPROVEMENT-AREAS", text: "Jamie's public resume identifies web, e-commerce, marketing, analytics, and operations as his improvement areas at Harry J. Epstein Company.", relationToJamie: "direct-role", supportTags: ["hje-improvement-areas"], confidence: "high", locator: "Harry J. Epstein Company selected-impact entry" },
       { id: "PROP-HJE-RESUME-REVENUE-CONTRIBUTION", text: "Jamie's public resume states that his work contributed to a period of 2x revenue growth.", relationToJamie: "direct-role", supportTags: ["hje-revenue-contribution-wording"], confidence: "high", locator: "Harry J. Epstein Company selected-impact entry" },
-      { id: "PROP-HJE-RESUME-FINANCIAL-BOUNDARY", text: "The approved wording is a contribution claim, not a claim of sole causality or audited public financial disclosure.", relationToJamie: "limitation", supportTags: ["hje-private-financial-boundary"], confidence: "high", locator: "Public source note and claim boundary" }
+      { id: "PROP-HJE-RESUME-FINANCIAL-BOUNDARY", text: "The approved wording is a contribution claim, not a claim of sole causality or audited public financial disclosure.", relationToJamie: "limitation", supportTags: ["hje-private-financial-boundary"], confidence: "high", locator: "Public source note and claim boundary" },
+      { id: "PROP-196-RESUME-FOUNDER-SCALE", text: "Jamie's approved public resume identifies him as founder of 196 Artists Residency and reports support for more than 20 resident artists.", relationToJamie: "direct-role", supportTags: ["196-residency-founder-scale"], confidence: "moderate", locator: "Selected Impact and Community Infrastructure entries" }
     ],
-    limitations: ["The source is Jamie's approved public resume, not independent financial reporting.", "Underlying business figures remain private and are not presented as audited financial disclosure."],
+    limitations: ["The source is Jamie's approved public resume, not independent financial reporting.", "Underlying business figures remain private and are not presented as audited financial disclosure.", "The resume is a first-party public source; it does not independently corroborate the 20-plus resident-artist aggregate."],
     researchTaskIds: []
   },
   {

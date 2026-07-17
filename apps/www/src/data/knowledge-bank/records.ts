@@ -71,6 +71,11 @@ import {
 } from "./google-drive-archive-production-2026-07-13.ts";
 import { legacyProjectionReadings } from "./legacy-projection-hardening-2026-07-13.ts";
 import {
+  compositeIntegrationClaims,
+  compositeIntegrationDecisions,
+  compositeIntegrationIntake
+} from "./composite-integration-2026-07-16.ts";
+import {
   socialArchiveClaims,
   socialArchiveDecisions,
   socialArchiveEntities,
@@ -202,7 +207,7 @@ import {
 
 const knowledgeBankInput = {
   entities: [...lifecycleEntities, ...sourceExpansionEntities, ...teamsArchiveEntities, ...teamsArchiveDeepeningEntities, ...nterChngAmericaNowHereEntities, ...nycArtCGovernmentInterfaceEntities, ...googleDriveArchiveEntities, ...socialArchiveEntities, ...urbanHermitSocialCensusEntities, ...jamieFacebookPostEntities, ...kcTownHallPhaseOneEntities, ...participationLineageEntities],
-  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...teamsArchiveDeepeningIntake, ...nterChngAmericaNowHereIntake, ...nycArtCGovernmentInterfaceIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake, ...kcTownHallPhaseOneIntake, ...participationLineageIntake, ...kansasCityStarRiverIntake],
+  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...teamsArchiveDeepeningIntake, ...nterChngAmericaNowHereIntake, ...nycArtCGovernmentInterfaceIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake, ...kcTownHallPhaseOneIntake, ...participationLineageIntake, ...kansasCityStarRiverIntake, ...compositeIntegrationIntake],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -350,7 +355,7 @@ const knowledgeBankInput = {
     },
     {
       id: "SRC-HJE-PUBLIC-RESUME-2026-07-11",
-      title: "Jamie Burkart public resume - selected impact",
+      title: "Jamie Burkart public resume",
       organization: "Jamie Burkart",
       kind: "project-archive",
       visibility: "public",
@@ -359,11 +364,11 @@ const knowledgeBankInput = {
       accessedAt: "2026-07-12",
       canonicalUrl: "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       preferredPublicUrl: "canonical",
-      publicCitation: "Jamie Burkart, public resume, selected-impact entry for Harry J. Epstein Company, July 11, 2026.",
-      publicNote: "The public resume supports Jamie's approved contribution wording. The underlying business figures remain private and are not presented as audited financial disclosure.",
-      intakeIds: ["INTAKE-MIGRATION-HJE-PUBLIC-CLAIMS"],
-      supportsGenerally: ["Jamie's HJE improvement areas", "contribution to 2x revenue growth", "legacy e-commerce context"],
-      doesNotEstablish: ["sole causality", "audited financial results", "the underlying revenue figures", "ownership of all business growth"]
+      publicCitation: "Jamie Burkart, public resume, July 11, 2026.",
+      publicNote: "The public resume supports Jamie's approved first-person role and scale wording. Business figures remain private, and the 20-plus residency aggregate is not independently corroborated.",
+      intakeIds: ["INTAKE-MIGRATION-HJE-PUBLIC-CLAIMS", "INTAKE-196-PUBLIC-RESUME-SCALE-2026"],
+      supportsGenerally: ["Jamie's HJE improvement areas", "contribution to 2x revenue growth", "legacy e-commerce context", "Jamie's 196 Artists Residency founder role", "Jamie's self-reported 20-plus resident-artist aggregate"],
+      doesNotEstablish: ["sole causality", "audited financial results", "the underlying revenue figures", "ownership of all business growth", "independent corroboration of the 20-plus resident-artist aggregate", "resident outcomes or permission to identify participants"]
     },
     {
       id: "SRC-FAIRRENTNYC-PUBLIC-SITE-2026",
@@ -680,7 +685,8 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostClaims,
     ...jamieFacebookPostClaims,
     ...kcTownHallPhaseOneClaims,
-    ...participationLineageClaims
+    ...participationLineageClaims,
+    ...compositeIntegrationClaims
   ],
   sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings, ...teamsArchiveReadings, ...teamsArchiveDeepeningReadings, ...nterChngAmericaNowHereReadings, ...nycArtCGovernmentInterfaceReadings, ...googleDriveArchiveReadings, ...legacyProjectionReadings, ...socialArchiveReadings, ...callNycSocialCensusReadings, ...wowListSocialCensusReadings, ...kcTownHallSocialCensusReadings, ...nycArtCSocialCensusReadings, ...urbanHermitSocialCensusReadings, ...nycArtCFacebookEventReadings, ...personalWowListFacebookEventReadings, ...wowListFacebookPostReadings, ...nycArtCFacebookPostReadings, ...kcSpacesFundFacebookPostReadings, ...jamieFacebookPostReadings, ...kcTownHallPhaseOneReadings, ...participationLineageReadings, ...kansasCityStarRiverReadings],
   researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks, ...campaignPressResearchTasks, ...teamsArchiveDeepeningResearchTasks, ...nterChngAmericaNowHereResearchTasks, ...nycArtCGovernmentInterfaceResearchTasks, ...googleDriveArchiveResearchTasks, ...socialArchiveResearchTasks, ...callNycSocialCensusResearchTasks, ...wowListSocialCensusResearchTasks, ...kcTownHallSocialCensusResearchTasks, ...nycArtCSocialCensusResearchTasks, ...urbanHermitSocialCensusResearchTasks, ...nycArtCFacebookEventResearchTasks, ...personalWowListFacebookEventResearchTasks, ...wowListFacebookPostResearchTasks, ...nycArtCFacebookPostResearchTasks, ...kcSpacesFundFacebookPostResearchTasks, ...jamieFacebookPostResearchTasks, ...kcTownHallPhaseOneResearchTasks, ...participationLineageResearchTasks],
@@ -697,7 +703,7 @@ const knowledgeBankInput = {
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
   }, ...nycArtCGovernmentInterfaceInquiries, ...urbanHermitSocialCensusInquiries, ...nycArtCFacebookEventInquiries, ...personalWowListFacebookEventInquiries, ...wowListFacebookPostInquiries, ...nycArtCFacebookPostInquiries, ...kcSpacesFundFacebookPostInquiries, ...jamieFacebookPostInquiries],
-  projectionDecisions: [...lifecycleProjectionDecisions, ...sourceExpansionDecisions, ...teamsArchiveDecisions, ...teamsArchiveDeepeningDecisions, ...nterChngAmericaNowHereDecisions, ...nycArtCGovernmentInterfaceDecisions, ...googleDriveArchiveDecisions, ...socialArchiveDecisions, ...callNycSocialCensusDecisions, ...wowListSocialCensusDecisions, ...kcTownHallSocialCensusDecisions, ...nycArtCSocialCensusDecisions, ...urbanHermitSocialCensusDecisions, ...nycArtCFacebookEventDecisions, ...personalWowListFacebookEventDecisions, ...wowListFacebookPostDecisions, ...nycArtCFacebookPostDecisions, ...kcSpacesFundFacebookPostDecisions, ...jamieFacebookPostDecisions, ...kcTownHallPhaseOneDecisions, ...participationLineageDecisions],
+  projectionDecisions: [...lifecycleProjectionDecisions, ...sourceExpansionDecisions, ...teamsArchiveDecisions, ...teamsArchiveDeepeningDecisions, ...nterChngAmericaNowHereDecisions, ...nycArtCGovernmentInterfaceDecisions, ...googleDriveArchiveDecisions, ...socialArchiveDecisions, ...callNycSocialCensusDecisions, ...wowListSocialCensusDecisions, ...kcTownHallSocialCensusDecisions, ...nycArtCSocialCensusDecisions, ...urbanHermitSocialCensusDecisions, ...nycArtCFacebookEventDecisions, ...personalWowListFacebookEventDecisions, ...wowListFacebookPostDecisions, ...nycArtCFacebookPostDecisions, ...kcSpacesFundFacebookPostDecisions, ...jamieFacebookPostDecisions, ...kcTownHallPhaseOneDecisions, ...participationLineageDecisions, ...compositeIntegrationDecisions],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active", intakeIds: ["INTAKE-CALLNYC-SUPERLATIVE-CORRECTION"] },
@@ -781,9 +787,10 @@ const knowledgeBankInput = {
     {
       id: "196-sunday-dinner",
       surface: "/work/196-sunday-dinner",
-      sourceOrder: ["SRC-GREENE-HILL-COOP-QA-2017", "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"],
+      sourceOrder: ["SRC-GREENE-HILL-COOP-QA-2017", "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021", "SRC-HJE-PUBLIC-RESUME-2026-07-11"],
       occurrences: [
-        { id: "recorded-gathering-scale", claimId: "CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE", projection: "case-study", sourceIds: ["SRC-GREENE-HILL-COOP-QA-2017", "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"] }
+        { id: "recorded-gathering-scale", claimId: "CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE", projection: "case-study", sourceIds: ["SRC-GREENE-HILL-COOP-QA-2017", "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"] },
+        { id: "residency-founder-scale", claimId: "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE", projection: "case-study", sourceIds: ["SRC-HJE-PUBLIC-RESUME-2026-07-11"] }
       ]
     }
   ]

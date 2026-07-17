@@ -71,6 +71,12 @@ pilot. See the
 [July 13 ten-source expansion](research/source-expansion-2026-07-13.md) for a
 complete example of a versioned research-ingestion batch.
 
+See [operations.md](operations.md) for dry-run intake, public-safe graph
+queries, health reporting, compiled-output leak checks, candidate-bound
+assessments, and recursive stop conditions. The
+[feature evals composite ledger](../integration/feature-evals-composite-ledger.md)
+records how the frozen `feature/evals-*` family was evaluated and integrated.
+
 The
 [KC Town-Hall Council funding record](research/kc-town-hall-council-funding-2019-2024.md)
 shows how a board-stage claim matures through official Council action and later

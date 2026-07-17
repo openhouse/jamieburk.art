@@ -1,6 +1,6 @@
 {
   "id": "knowledge-lifecycle",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "objective": "Preserve potentially valuable professional evidence, mature it into defensible claims through explicit research, and keep publication as a separate purpose-driven editorial decision.",
   "releaseThresholds": {
     "hardGateFailures": 0,
@@ -16,6 +16,12 @@
       "kind": "hard-gate",
       "intent": "Every public-safe fragment enters a stable accession record and reaches a source, claim seed, research task, or explicit hold.",
       "remediation": "Link each accession to its next lifecycle object or record why it is held."
+    },
+    {
+      "id": "operational-intake-is-dispositioned",
+      "kind": "hard-gate",
+      "intent": "Every dry-run-first operational receipt is either canonicalized, explicitly deferred, or rejected before the repository passes.",
+      "remediation": "Move each queued receipt into canonical records or document its disposition, then remove the queue entry in the same reviewed change."
     },
     {
       "id": "source-readings-are-atomic-and-bounded",

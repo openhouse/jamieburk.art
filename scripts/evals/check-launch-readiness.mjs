@@ -3,6 +3,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import {
+  currentLaunchCandidateSnapshot,
   evaluateSourceChecks,
   loadSuite,
   readJson,
@@ -33,6 +34,10 @@ if (has("--contract-only")) {
 
 const report = evaluateSourceChecks({ suite });
 report.summary.sourceHardGateFailures = report.summary.hardGateFailures;
+const assessmentPath = valueFor("--assessment");
+const assessmentInput = assessmentPath
+  ? readJson(path.resolve(assessmentPath))
+  : null;
 
 const browserReportPath = valueFor("--browser-report");
 if (browserReportPath) {
@@ -44,13 +49,26 @@ if (browserReportPath) {
     console.error("Browser report suite id/version does not match the active suite.");
     process.exit(1);
   }
+  if (
+    JSON.stringify(report.browser.candidate) !==
+    JSON.stringify(currentLaunchCandidateSnapshot(suite))
+  ) {
+    console.error("Browser report candidate does not match the current governed candidate.");
+    process.exit(1);
+  }
+  if (
+    assessmentInput &&
+    JSON.stringify(report.browser.candidate) !== JSON.stringify(assessmentInput.candidate)
+  ) {
+    console.error("Browser report candidate does not match the semantic assessment candidate.");
+    process.exit(1);
+  }
   report.summary.browserHardGateFailures = report.browser.summary?.hardGateFailures ?? 0;
   report.summary.hardGateFailures += report.summary.browserHardGateFailures;
 }
 
-const assessmentPath = valueFor("--assessment");
-if (assessmentPath) {
-  report.assessment = scoreAssessment(readJson(path.resolve(assessmentPath)), suite);
+if (assessmentInput) {
+  report.assessment = scoreAssessment(assessmentInput, suite);
   report.summary.weightedJudgeScore = report.assessment.weightedJudgeScore;
   report.summary.judgeFloorFailures = report.assessment.judgeFloorFailures;
   report.summary.pendingHumanGates = report.assessment.pendingHumanGates;

@@ -121,6 +121,28 @@
       ]
     },
     {
+      "id": "SRC-HJE-PUBLIC-RESUME-2026-07-11",
+      "title": "Jamie Burkart public resume",
+      "organization": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-11",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart, public resume, July 11, 2026.",
+      "publicNote": "The public resume supports Jamie's approved first-person role and scale wording. Business figures remain private, and the 20-plus residency aggregate is not independently corroborated.",
+      "doesNotEstablish": [
+        "sole causality",
+        "audited financial results",
+        "the underlying revenue figures",
+        "ownership of all business growth",
+        "independent corroboration of the 20-plus resident-artist aggregate",
+        "resident outcomes or permission to identify participants"
+      ]
+    },
+    {
       "id": "SRC-FAIRRENTNYC-PUBLIC-SITE-2026",
       "title": "FairRentNYC public campaign site",
       "organization": "NYC Artist Coalition",
@@ -994,6 +1016,39 @@
         "Participant rows, contact fields, notes, and raw attendance data are not published.",
         "This claim does not support the separate 20-plus resident-artist figure."
       ]
+    },
+    {
+      "id": "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie founded 196 Artists Residency and reports supporting 20+ resident artists through repeatable intake, onboarding, scheduling, hospitality, access, documentation, and continuity systems.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-HJE-PUBLIC-RESUME-2026-07-11",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's 196 Artists Residency founder role",
+            "Jamie's self-reported 20-plus resident-artist aggregate"
+          ],
+          "publicNote": "The scale is attributed to Jamie's approved public resume rather than presented as independently audited.",
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Treat the 20-plus aggregate as Jamie-reported rather than independently corroborated.",
+        "Keep 196 Artists Residency distinct from Sunday Dinner and its separate gathering record.",
+        "Participant identities, contact details, access instructions, work, and images remain protected unless separately cleared."
+      ]
     }
   ],
   "pages": [
@@ -1183,7 +1238,8 @@
       "surface": "/work/196-sunday-dinner",
       "sourceOrder": [
         "SRC-GREENE-HILL-COOP-QA-2017",
-        "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"
+        "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021",
+        "SRC-HJE-PUBLIC-RESUME-2026-07-11"
       ],
       "occurrences": [
         {
@@ -1193,6 +1249,14 @@
           "sourceIds": [
             "SRC-GREENE-HILL-COOP-QA-2017",
             "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"
+          ]
+        },
+        {
+          "id": "residency-founder-scale",
+          "claimId": "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-HJE-PUBLIC-RESUME-2026-07-11"
           ]
         }
       ]

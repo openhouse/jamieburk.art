@@ -3,18 +3,25 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   compareObjective,
+  currentLaunchCandidateSnapshot,
   evaluateSourceChecks,
   findOutcomeChainFailures,
   findPopulationScopeFailures,
   findProofProjectionSyncFailures,
   loadSuite,
-  scoreAssessment,
+  scoreAssessment as scoreAssessmentRaw,
   validateSuite
 } from "../evals/lib/launch-readiness.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
+import {
+  findSemanticInflation,
+  semanticBoundaryMutations
+} from "../evals/lib/semantic-boundaries.mjs";
 
 const suite = loadSuite();
+const scoreAssessment = (assessment, activeSuite = suite) =>
+  scoreAssessmentRaw(assessment, activeSuite, { requireCommitBinding: false });
 
 test("launch-readiness contract is internally consistent", () => {
   assert.deepEqual(validateSuite(suite), []);
@@ -94,6 +101,7 @@ function completeAssessment({ verifier = "Jamie Burkart", score = 4 } = {}) {
   return {
     suiteId: suite.id,
     suiteVersion: suite.version,
+    candidate: currentLaunchCandidateSnapshot(suite),
     judge: {
       model: "independent-eval-model",
       independentPass: true,
@@ -127,6 +135,36 @@ test("an LLM cannot self-certify human approval", () => {
   assert.equal(scored.valid, false);
   assert.equal(scored.pendingHumanGates.length, suite.humanGates.length);
   assert.ok(scored.failures.every((failure) => /named human owner/.test(failure)));
+});
+
+test("launch assessments are bound to the governed candidate and suite", () => {
+  const assessment = completeAssessment();
+  assessment.candidate.contentFingerprint = "0".repeat(64);
+  const scored = scoreAssessment(assessment, suite);
+  assert.equal(scored.valid, false);
+  assert.ok(scored.failures.some((failure) => /content fingerprint/i.test(failure)));
+});
+
+test("hostile semantic transformations fail closed", () => {
+  const specimens = [
+    "Silence was endorsement",
+    "The proposal delivered the program",
+    "The appropriation was received",
+    "107 posts represent the complete lifetime history",
+    "25 reactions means 25 unique people",
+    "Jamie authored every tweet",
+    "The Council reference was an endorsement",
+    "Publicly available means publication permission",
+    "Event responses proved attendance",
+    "Source circulation was agreement",
+    "Codex review counts as human validation"
+  ].map((text, index) => ({ id: `mutation-${index + 1}`, text }));
+  const failures = findSemanticInflation(specimens);
+  assert.equal(failures.length, semanticBoundaryMutations.length);
+  assert.deepEqual(
+    failures.map((failure) => failure.mutation),
+    semanticBoundaryMutations.map(([id]) => id)
+  );
 });
 
 test("Chad's lens requires broad evidence and a perfect floor score", () => {

@@ -74,4 +74,7 @@ Scoring rules:
   media-rights, collaborator-credit, or production-approval gate.
 
 Return only JSON shaped like the `judge` object in
-`assessment.template.json`. Do not certify human gates.
+`assessment.template.json`. Do not certify human gates. The assessment
+coordinator must bind the result to the exact `candidate` object produced by
+`npm run eval:candidate:snapshot`; do not reuse a judgment after governed code
+or suite content changes.

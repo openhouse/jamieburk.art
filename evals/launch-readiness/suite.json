@@ -1,6 +1,6 @@
 {
   "id": "portfolio-launch-readiness",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "objective": "Make Jamie legible and credible to a busy hiring reader while preserving factual accuracy, collective credit, public safety, accessibility, and a clear path to action.",
   "releaseThresholds": {
     "hardGateFailures": 0,
@@ -25,7 +25,7 @@
     {
       "id": "outcome-chain",
       "description": "Projected claims must connect action, intended end, usable result, audience, collective credit, and causal limits.",
-      "evaluationIds": ["projected-claims-have-complete-outcome-chains", "agency-purpose-usability"]
+      "evaluationIds": ["projected-claims-have-complete-outcome-chains", "semantic-inflation-is-rejected", "agency-purpose-usability"]
     },
     {
       "id": "independent-audience-testing",
@@ -168,6 +168,12 @@
       "remediation": "Add the production cutover runbook with preconditions, fingerprint verification, indexing checks, and rollback."
     },
     {
+      "id": "semantic-inflation-is-rejected",
+      "kind": "hard-gate",
+      "intent": "Public assertions must not convert platform signals, plans, references, availability, or agent review into stronger authorship, delivery, endorsement, attendance, permission, impact, or human-validation claims.",
+      "remediation": "Restore the exact evidentiary boundary and add a hostile mutation covering the attempted semantic shortcut."
+    },
+    {
       "id": "public-artifact-media-depth",
       "kind": "quality-target",
       "intent": "The portfolio should show inspectable work rather than requiring readers to imagine every artifact.",
@@ -217,6 +223,26 @@
       "id": "primary-domain-serves-current-portfolio",
       "kind": "hard-gate",
       "intent": "Production must render this reviewed portfolio rather than the legacy application or an unrelated deployment."
+    },
+    {
+      "id": "visible-keyboard-focus",
+      "kind": "hard-gate",
+      "intent": "Keyboard users can see where focus is on the application path."
+    },
+    {
+      "id": "citation-round-trip",
+      "kind": "hard-gate",
+      "intent": "Citation markers reach valid notes and note backlinks return to valid reference anchors."
+    },
+    {
+      "id": "two-hundred-percent-reflow-equivalent",
+      "kind": "hard-gate",
+      "intent": "The portfolio reflows without horizontal loss at the CSS-width equivalent of 200 percent zoom."
+    },
+    {
+      "id": "source-notes-wrap",
+      "kind": "hard-gate",
+      "intent": "Long source labels, notes, and links remain readable without horizontal overflow."
     }
   ],
   "judgeCriteria": [

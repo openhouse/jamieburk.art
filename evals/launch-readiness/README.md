@@ -20,6 +20,11 @@ human reviewers.
    collaborator-sensitive credit, claim corroboration, and blind-reader
    validation for named people.
 
+Committed semantic assessments are candidate-bound. The launch gate compares
+the candidate commit, governed-content fingerprint, and suite fingerprint with
+the current repository before accepting any score. Browser reports must refer
+to the same candidate.
+
 `blindSpotCoverage` in `suite.json` binds the eight current audit findings to
 specific source, browser, judge, and human evaluations. Every ID must resolve;
 the contract check rejects an omitted or invented criterion.
@@ -35,6 +40,7 @@ npm run check:evals
 npm run test:evals
 npm run eval:launch
 npm run eval:launch:gate
+npm run eval:candidate:snapshot
 
 npm run eval:launch:browser -- \
   --url https://staging.jamieburk.art \
@@ -56,6 +62,11 @@ node scripts/evals/check-launch-readiness.mjs \
 All generated reports belong under `reports/generated/`, which is ignored. Do
 not commit private prompts, private evidence, screenshots awaiting approval, or
 human-review notes containing protected context.
+
+The source contract also runs hostile semantic mutations. Unsupported
+transformations such as silence to endorsement, appropriation to completed
+funding, reaction counts to unique people, shared account to individual
+authorship, or agent review to human validation fail closed.
 
 ## Interpreting Results
 

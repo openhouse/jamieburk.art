@@ -32,4 +32,6 @@ unless their named owners have explicitly approved them; an agent cannot
 self-certify them. Copy `repositorySnapshot` exactly from a fresh deterministic
 eval report produced from the same repository state you inspected. An
 assessment for an earlier graph state is invalid even if its evidence paths
-still exist.
+still exist. Copy the matching `candidate` object from
+`npm run eval:candidate:snapshot`; a changed governed-content or suite
+fingerprint invalidates the assessment.

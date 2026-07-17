@@ -8,6 +8,11 @@ import {
   resumeProofHighlights,
   technicalOperationsProofRows
 } from "../../../apps/www/src/data/proofs.ts";
+import {
+  currentCandidateSnapshot,
+  validateCandidateSnapshot
+} from "./candidate-integrity.mjs";
+import { findSemanticInflation } from "./semantic-boundaries.mjs";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -582,6 +587,24 @@ export function evaluateSourceChecks({ repoRoot = defaultRepoRoot, suite = loadS
     )
   );
 
+  const publicAssertionValues = [
+    ...knowledgeBank.claims.flatMap((claim) => claim.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => ({ id: `${claim.id}/${projection.key}`, text: projection.text }))),
+    ...[workFile, homepageFile]
+      .filter((file) => existsSync(file))
+      .map((file) => ({ id: path.relative(repoRoot, file), text: readFileSync(file, "utf8") }))
+  ];
+  const semanticInflation = findSemanticInflation(publicAssertionValues);
+  results.push(
+    result(
+      checks.get("semantic-inflation-is-rejected"),
+      semanticInflation.length === 0,
+      `${semanticInflation.length} prohibited semantic transformation(s)`,
+      semanticInflation
+    )
+  );
+
   return {
     suiteId: suite.id,
     suiteVersion: suite.version,
@@ -603,7 +626,11 @@ export function summarizeSourceResults(results) {
 
 const disallowedHumanVerifier = /\b(?:agent|ai|assistant|chatgpt|codex|llm|model)\b/i;
 
-export function scoreAssessment(assessment, suite = loadSuite()) {
+export function scoreAssessment(
+  assessment,
+  suite = loadSuite(),
+  { requireCommitBinding = true } = {}
+) {
   const failures = [];
   if (assessment?.suiteId !== suite.id || assessment?.suiteVersion !== suite.version) {
     failures.push("Assessment suite id/version does not match the active suite");
@@ -612,6 +639,12 @@ export function scoreAssessment(assessment, suite = loadSuite()) {
   if (!assessment?.judge?.model || assessment?.judge?.independentPass !== true) {
     failures.push("Assessment requires a named independent judge pass");
   }
+  const candidateFailures = validateCandidateSnapshot(assessment?.candidate, {
+    repoRoot: defaultRepoRoot,
+    suite,
+    requireCommitBinding
+  });
+  failures.push(...candidateFailures);
 
   const judgeScores = assessment?.judge?.scores ?? [];
   const duplicateJudgeScores = duplicates(judgeScores.map((item) => item.criterionId));
@@ -670,6 +703,10 @@ export function scoreAssessment(assessment, suite = loadSuite()) {
       weightedJudgeScore >= suite.releaseThresholds.weightedJudgeScore &&
       judgeFloorFailures.length === 0
   };
+}
+
+export function currentLaunchCandidateSnapshot(suite = loadSuite()) {
+  return currentCandidateSnapshot({ repoRoot: defaultRepoRoot, suite });
 }
 
 export function objectiveVector(report) {

@@ -37,5 +37,8 @@ independent qualitative pass. Deterministic checks cannot approve claims,
 collaborator credit, or publication rights.
 
 `gate` requires a current independent assessment, verifies the cited files and
-record identifiers, and enforces the score and critical floors. Human approval
-is intentionally outside this agent-run tool.
+record identifiers, and enforces the score and critical floors. The assessment
+must also identify the exact candidate commit, governed-content fingerprint,
+and suite fingerprint returned by `npm run eval:candidate:snapshot`. A stale
+assessment fails even when its scores were previously high. Human approval is
+intentionally outside this agent-run tool.

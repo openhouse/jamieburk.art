@@ -3,6 +3,11 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../../../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  currentCandidateSnapshot,
+  validateCandidateSnapshot
+} from "./candidate-integrity.mjs";
+import { readJsonLines } from "../../knowledge/lib.mjs";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -173,7 +178,11 @@ export function currentRepositorySnapshot(bank = knowledgeBank) {
   return { fingerprint, counts };
 }
 
-export function evaluateLifecycle({ suite = loadSuite(), bank = knowledgeBank } = {}) {
+export function evaluateLifecycle({
+  suite = loadSuite(),
+  bank = knowledgeBank,
+  queuedReceipts = readJsonLines(defaultRepoRoot)
+} = {}) {
   const checks = new Map(suite.sourceChecks.map((check) => [check.id, check]));
   const results = [];
   const entities = idMap(bank.entities);
@@ -208,6 +217,13 @@ export function evaluateLifecycle({ suite = loadSuite(), bank = knowledgeBank } 
     intakeFailures.length === 0,
     `${bank.intake.length} accessions; ${intakeFailures.length} accession defect(s)`,
     intakeFailures
+  ));
+
+  results.push(result(
+    checks.get("operational-intake-is-dispositioned"),
+    queuedReceipts.length === 0,
+    `${queuedReceipts.length} undispositioned operational receipt(s)`,
+    queuedReceipts.map((receipt) => ({ id: receipt.id, status: receipt.status }))
   ));
 
   const readingFailures = [];
@@ -476,7 +492,11 @@ export function evaluateLifecycle({ suite = loadSuite(), bank = knowledgeBank } 
   };
 }
 
-export function scoreAssessment(assessment, suite = loadSuite()) {
+export function scoreAssessment(
+  assessment,
+  suite = loadSuite(),
+  { requireCommitBinding = true } = {}
+) {
   const failures = [];
   if (assessment.suiteId !== suite.id || assessment.suiteVersion !== suite.version) {
     failures.push("Assessment suite id/version does not match");
@@ -485,6 +505,12 @@ export function scoreAssessment(assessment, suite = loadSuite()) {
   if (JSON.stringify(assessment.repositorySnapshot) !== JSON.stringify(expectedSnapshot)) {
     failures.push("Assessment repository snapshot is missing or stale");
   }
+  const candidateFailures = validateCandidateSnapshot(assessment.candidate, {
+    repoRoot: defaultRepoRoot,
+    suite,
+    requireCommitBinding
+  });
+  failures.push(...candidateFailures);
   const submitted = new Map((assessment.judge?.scores ?? []).map((item) => [item.criterionId, item]));
   let weighted = 0;
   const floorFailures = [];
@@ -535,14 +561,24 @@ export function scoreAssessment(assessment, suite = loadSuite()) {
   };
 }
 
+export function currentLifecycleCandidateSnapshot(suite = loadSuite()) {
+  return currentCandidateSnapshot({ repoRoot: defaultRepoRoot, suite });
+}
+
 export function requiredLifecycleFiles(repoRoot = defaultRepoRoot) {
   return [
     "apps/www/src/data/knowledge-bank/schema.ts",
     "apps/www/src/data/knowledge-bank/records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "docs/knowledge-bank/lifecycle.md",
+    "docs/knowledge-bank/operations.md",
     "evals/knowledge-lifecycle/suite.json",
     "evals/knowledge-lifecycle/agent-loop.md",
-    "evals/knowledge-lifecycle/judge-prompt.md"
+    "evals/knowledge-lifecycle/judge-prompt.md",
+    "scripts/knowledge/intake.mjs",
+    "scripts/knowledge/query.mjs",
+    "scripts/knowledge/report.mjs",
+    "scripts/knowledge/check.mjs",
+    "scripts/knowledge/check-compiled-leaks.mjs"
   ].filter((file) => !existsSync(path.join(repoRoot, file)));
 }

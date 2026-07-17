@@ -351,14 +351,14 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+      "Co-hosted Sunday Dinner with Julia Fredenberg and sustained an operating record of 300+ gatherings; separately founded 196 Artists Residency and reports supporting 20+ resident artists through repeatable participation systems.",
+    shortWording: "Participation systems across Sunday Dinner and 196 Artists Residency",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+      "Jamie co-hosted Sunday Dinner through practical invitations, hosting, and continuity systems, and separately founded 196 Artists Residency with repeatable participant-onboarding and access workflows.",
     sourceBasis:
       "Approved resume language, an independent 2017 description of weekly community dinners, a metadata-only aggregate workbook review supporting more than 300 numbered gathering records, and public Facebook event pages documenting selected gatherings.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the 300-plus Sunday Dinner gathering record separate from the Jamie-reported 20-plus residency aggregate; keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",

@@ -9,16 +9,19 @@
    next actions.
 7. Decide publication separately: publish, defer, retire, or disallow.
 8. Ask an independent judge to score the repository with `judge-prompt.md` and
-   copy the fresh deterministic report's `repositorySnapshot` into the
-   assessment.
+   copy the fresh deterministic report's `repositorySnapshot` and the current
+   `eval:candidate:snapshot` into the assessment.
 9. Change the smallest set of records or documentation that improves the
    weakest criterion without weakening factual scope, collective credit, or
    public safety.
 10. Re-run deterministic checks and the independent judge.
 
-Stop when hard gates are clear, the weighted score reaches 90, every critical
-criterion reaches 4, and the independent pass identifies no new structural
-failure. Stop earlier for a human gate, or after two unchanged iterations.
+Stop with `success` when hard gates are clear, the weighted score reaches 90,
+every critical criterion reaches 4, and the independent pass identifies no new
+structural failure. Stop with `stop_human_blocked` when the next action requires
+rights, consent, collaborator-sensitive credit, factual corroboration,
+blind-reader response, or production approval. Stop with `plateau` after two
+unchanged iterations and record the unresolved criterion.
 
 Never improve a score by making a claim broader, exposing private evidence, or
 turning a deferred claim into site copy without compositional review.

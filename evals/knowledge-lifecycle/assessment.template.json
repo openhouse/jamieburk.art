@@ -1,6 +1,12 @@
 {
   "suiteId": "knowledge-lifecycle",
-  "suiteVersion": "1.0.0",
+  "suiteVersion": "1.1.0",
+  "candidate": {
+    "commit": "REPLACE_WITH_FULL_CANDIDATE_COMMIT_SHA",
+    "contentFingerprint": "REPLACE_WITH_CANDIDATE_CONTENT_FINGERPRINT",
+    "suiteFingerprint": "REPLACE_WITH_SUITE_FINGERPRINT",
+    "governedFileCount": 0
+  },
   "repositorySnapshot": {
     "fingerprint": "copy from the current deterministic eval report",
     "counts": {

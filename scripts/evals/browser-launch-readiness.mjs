@@ -3,7 +3,10 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { chromium } from "playwright";
-import { loadSuite } from "./lib/launch-readiness.mjs";
+import {
+  currentLaunchCandidateSnapshot,
+  loadSuite
+} from "./lib/launch-readiness.mjs";
 
 const args = process.argv.slice(2);
 const valueFor = (flag, fallback) => {
@@ -79,6 +82,8 @@ for (const viewport of suite.viewports) {
         overflow: root.scrollWidth > clientWidth + 1,
         offenders,
         imageCount: document.querySelectorAll("img, picture, video").length,
+        citationCount: document.querySelectorAll('[role="doc-noteref"]').length,
+        endnoteCount: document.querySelectorAll('[role="doc-endnotes"] li').length,
         h1Text: document.querySelector("h1")?.textContent?.replace(/\s+/g, " ").trim() ?? null,
         portfolioMarker: document.body.dataset.portfolio ?? null,
         canonical: document.querySelector('link[rel="canonical"]')?.getAttribute("href") ?? null,
@@ -97,6 +102,71 @@ for (const viewport of suite.viewports) {
 
     observations.push({ route, viewport: viewport.name, status, ...measurement });
   }
+}
+
+const reflowFailures = observations.filter(
+  (item) => item.viewport === "mobile-320" && item.overflow
+);
+if (reflowFailures.length) {
+  failures.push(
+    `two-hundred-percent-reflow-equivalent: ${reflowFailures.length} route(s) overflow at the 320 CSS-pixel equivalent of 200 percent zoom on a 640-pixel viewport`
+  );
+}
+
+try {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto(`${baseUrl}/`, { waitUntil: "domcontentloaded", timeout: 30000 });
+  let focusResult = null;
+  for (let attempt = 0; attempt < 12; attempt += 1) {
+    await page.keyboard.press("Tab");
+    focusResult = await page.evaluate(() => {
+      const element = document.activeElement;
+      if (!(element instanceof HTMLElement) || element === document.body) return null;
+      const style = getComputedStyle(element);
+      return {
+        tag: element.tagName,
+        text: (element.textContent ?? element.getAttribute("aria-label") ?? "").trim().slice(0, 100),
+        outlineStyle: style.outlineStyle,
+        outlineWidth: style.outlineWidth,
+        boxShadow: style.boxShadow
+      };
+    });
+    if (focusResult) break;
+  }
+  const visibleFocus = focusResult && (
+    focusResult.outlineStyle !== "none" && focusResult.outlineWidth !== "0px" ||
+    focusResult.boxShadow !== "none"
+  );
+  if (!visibleFocus) failures.push("visible-keyboard-focus: no visible focus indicator was found on the homepage application path");
+} catch (error) {
+  failures.push(`visible-keyboard-focus: keyboard check failed: ${error.message}`);
+}
+
+try {
+  const citationRoute = observations.find((item) => item.citationCount > 0)?.route;
+  if (!citationRoute) {
+    failures.push("citation-round-trip: no rendered citation marker was found on canonical routes");
+  } else {
+    await page.setViewportSize({ width: 375, height: 812 });
+    await page.goto(`${baseUrl}${citationRoute}`, { waitUntil: "domcontentloaded", timeout: 30000 });
+    const citation = await page.locator('[role="doc-noteref"]').first();
+    const noteSelector = await citation.getAttribute("href");
+    if (!noteSelector?.startsWith("#") || await page.locator(noteSelector).count() !== 1) {
+      failures.push(`citation-round-trip: ${citationRoute} has a citation marker without one valid note target`);
+    } else {
+      const referenceId = await citation.getAttribute("id");
+      await citation.click();
+      if (new URL(page.url()).hash !== noteSelector) failures.push(`citation-round-trip: ${citationRoute} did not navigate to ${noteSelector}`);
+      const validBacklink = referenceId && await page.locator(`${noteSelector} a[href="#${referenceId}"]`).count() > 0;
+      if (!validBacklink) failures.push(`citation-round-trip: ${citationRoute} note lacks a valid backlink to ${referenceId ?? "the marker"}`);
+    }
+    const overflowingNotes = await page.locator('[role="doc-endnotes"] li').evaluateAll((notes) =>
+      notes.filter((note) => note.scrollWidth > note.clientWidth + 1).length
+    );
+    if (overflowingNotes) failures.push(`source-notes-wrap: ${citationRoute} has ${overflowingNotes} overflowing source note(s)`);
+  }
+} catch (error) {
+  failures.push(`citation-round-trip: citation check failed: ${error.message}`);
 }
 
 let homeHeaders = {};
@@ -172,6 +242,7 @@ await browser.close();
 const report = {
   suiteId: suite.id,
   suiteVersion: suite.version,
+  candidate: currentLaunchCandidateSnapshot(suite),
   baseUrl,
   profile,
   summary: {

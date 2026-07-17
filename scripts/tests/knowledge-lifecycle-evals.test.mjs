@@ -18,15 +18,18 @@ import { nycArtCFacebookPostCensus } from "../../apps/www/src/data/knowledge-ban
 import { kcSpacesFundFacebookPostCensus } from "../../apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07-14.ts";
 import { urbanHermitSocialCensus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts";
 import {
+  currentLifecycleCandidateSnapshot,
   currentRepositorySnapshot,
   evaluateLifecycle,
   findUnsafeRepositoryText,
   loadSuite,
-  scoreAssessment,
+  scoreAssessment as scoreAssessmentRaw,
   validateSuite
 } from "../evals/lib/knowledge-lifecycle.mjs";
 
 const suite = loadSuite();
+const scoreAssessment = (assessment, activeSuite = suite) =>
+  scoreAssessmentRaw(assessment, activeSuite, { requireCommitBinding: false });
 const validEvidence = [
   { file: "apps/www/src/data/knowledge-bank/schema.ts", record: "intakeRecordSchema" },
   { file: "apps/www/src/data/knowledge-bank/lifecycle-records.ts", record: "CLM-RIVER-EXPEDITION-ORIGIN" },
@@ -54,6 +57,15 @@ test("orphaned intake fails", () => {
   bank.intake[0].researchTaskIds = [];
   const report = evaluateLifecycle({ suite, bank });
   assert.equal(report.results.find((item) => item.id === "intake-is-accounted-for").passed, false);
+});
+
+test("undispositioned operational intake fails the lifecycle gate", () => {
+  const report = evaluateLifecycle({
+    queuedReceipts: [{ id: "RECEIPT-TEST-QUEUED", status: "queued" }]
+  });
+  const check = report.results.find((item) => item.id === "operational-intake-is-dispositioned");
+  assert.equal(check.passed, false);
+  assert.equal(check.evidence[0].id, "RECEIPT-TEST-QUEUED");
 });
 
 test("every source and claim requires an accession", () => {
@@ -2611,6 +2623,32 @@ test("Sunday Dinner scale preserves participant privacy and counting limits", ()
   assert.ok(claim.antiClaims.some((item) => /unique attendee/i.test(item)));
 });
 
+test("196 Artists Residency is projected separately with self-reported scale and protected method evidence", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.id === "DEC-196-ARTISTS-RESIDENCY-FOUNDER-SCALE-PUBLISH"
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === "196-sunday-dinner");
+  const occurrence = page.occurrences.find(
+    (item) => item.id === "residency-founder-scale"
+  );
+
+  assert.equal(claim.maturity, "projected");
+  assert.match(claim.projections[0].text, /Jamie founded 196 Artists Residency/i);
+  assert.match(claim.projections[0].text, /reports supporting 20\+ resident artists/i);
+  assert.ok(claim.boundaries.some((item) => /distinct from Sunday Dinner/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /one undifferentiated project/i.test(item)));
+  assert.equal(
+    claim.evidence.find((item) => item.sourceId === "SRC-GDRIVE-196-ACCEPTANCE-2023")
+      .renderCitation,
+    false
+  );
+  assert.equal(decision.decision, "publish");
+  assert.equal(occurrence.claimId, claim.id);
+});
+
 test("Call Script participation lineage stays corroborated and research-routed", () => {
   const claim = knowledgeBank.claims.find(
     (item) => item.id === "CLM-CALLSCRIPT-NYCARTC-PARTICIPATION-LINEAGE"
@@ -2666,6 +2704,7 @@ test("judge evidence and floors are enforced", () => {
   const assessment = {
     suiteId: suite.id,
     suiteVersion: suite.version,
+    candidate: currentLifecycleCandidateSnapshot(suite),
     repositorySnapshot: currentRepositorySnapshot(),
     judge: { scores: suite.judgeCriteria.map((item) => ({ criterionId: item.id, score: 4, evidence: validEvidence.slice(0, item.minimumEvidence) })) },
     humanGates: suite.humanGates.map((item) => ({ gateId: item.id, status: "pending" }))
@@ -2682,6 +2721,7 @@ test("judge evidence must be distinct", () => {
   const assessment = {
     suiteId: suite.id,
     suiteVersion: suite.version,
+    candidate: currentLifecycleCandidateSnapshot(suite),
     repositorySnapshot: currentRepositorySnapshot(),
     judge: { scores: suite.judgeCriteria.map((item) => ({ criterionId: item.id, score: 4, evidence: Array(item.minimumEvidence).fill({ file: "same.ts", record: "same" }) })) },
     humanGates: []
@@ -2693,6 +2733,7 @@ test("judge evidence must resolve to repository records", () => {
   const assessment = {
     suiteId: suite.id,
     suiteVersion: suite.version,
+    candidate: currentLifecycleCandidateSnapshot(suite),
     repositorySnapshot: currentRepositorySnapshot(),
     judge: { scores: suite.judgeCriteria.map((item) => ({ criterionId: item.id, score: 4, evidence: validEvidence.slice(0, item.minimumEvidence) })) },
     humanGates: []
@@ -2705,6 +2746,7 @@ test("judge assessment is bound to the current knowledge-bank snapshot", () => {
   const assessment = {
     suiteId: suite.id,
     suiteVersion: suite.version,
+    candidate: currentLifecycleCandidateSnapshot(suite),
     repositorySnapshot: currentRepositorySnapshot(),
     judge: { scores: suite.judgeCriteria.map((item) => ({ criterionId: item.id, score: 4, evidence: validEvidence.slice(0, item.minimumEvidence) })) },
     humanGates: []
@@ -2714,4 +2756,19 @@ test("judge assessment is bound to the current knowledge-bank snapshot", () => {
   const result = scoreAssessment(assessment, suite);
   assert.equal(result.valid, false);
   assert.ok(result.failures.includes("Assessment repository snapshot is missing or stale"));
+});
+
+test("knowledge-lifecycle assessments reject a stale governed candidate", () => {
+  const assessment = {
+    suiteId: suite.id,
+    suiteVersion: suite.version,
+    candidate: currentLifecycleCandidateSnapshot(suite),
+    repositorySnapshot: currentRepositorySnapshot(),
+    judge: { scores: suite.judgeCriteria.map((item) => ({ criterionId: item.id, score: 4, evidence: validEvidence.slice(0, item.minimumEvidence) })) },
+    humanGates: []
+  };
+  assessment.candidate.suiteFingerprint = "0".repeat(64);
+  const result = scoreAssessment(assessment, suite);
+  assert.equal(result.valid, false);
+  assert.ok(result.failures.some((failure) => /suite fingerprint/i.test(failure)));
 });

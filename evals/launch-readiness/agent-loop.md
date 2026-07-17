@@ -54,5 +54,13 @@ Stop and request human input when:
 - candidate improvements conflict on public safety, factual scope, or collective
   credit.
 
+Record this outcome as `stop_human_blocked`. Do not convert a human gate into a
+quality target merely to keep the loop running.
+
+Before accepting a semantic assessment, commit the governed implementation,
+run `npm run eval:candidate:snapshot`, and bind the assessment to that exact
+candidate. A browser report and assessment from different candidates are not a
+valid release evaluation.
+
 Do not stop merely because the prose feels polished. Do not continue merely
 because another archival fact could be found.

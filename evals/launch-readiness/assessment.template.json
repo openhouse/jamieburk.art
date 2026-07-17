@@ -1,7 +1,12 @@
 {
   "suiteId": "portfolio-launch-readiness",
-  "suiteVersion": "1.3.0",
-  "commit": "REPLACE_WITH_COMMIT_SHA",
+  "suiteVersion": "1.4.0",
+  "candidate": {
+    "commit": "REPLACE_WITH_FULL_CANDIDATE_COMMIT_SHA",
+    "contentFingerprint": "REPLACE_WITH_CANDIDATE_CONTENT_FINGERPRINT",
+    "suiteFingerprint": "REPLACE_WITH_SUITE_FINGERPRINT",
+    "governedFileCount": 0
+  },
   "judge": {
     "model": "REPLACE_WITH_MODEL_AND_VERSION",
     "independentPass": true,
