@@ -28,6 +28,7 @@
     "report:portfolio-evals": "node scripts/report-portfolio-evals.mjs",
     "check:knowledge-evals": "node scripts/check-knowledge-evals.mjs",
     "test:knowledge-evals": "node --test scripts/tests/knowledge-evals.test.mjs",
+    "verify:source-receipt": "node scripts/verify-source-receipt.mjs",
     "report:knowledge-evals": "node scripts/report-knowledge-evals.mjs",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",

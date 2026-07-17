@@ -82,7 +82,22 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   }
 
   for (const observation of knowledgeBank.observations) {
-    if (!intakeById.has(observation.intakeId)) errors.push(`Observation ${observation.id} references unknown intake ${observation.intakeId}`);
+    const intake = intakeById.get(observation.intakeId);
+    if (!intake) errors.push(`Observation ${observation.id} references unknown intake ${observation.intakeId}`);
+    else {
+      if (!intake.observationIds.includes(observation.id)) {
+        errors.push(`Observation ${observation.id} points to intake ${intake.id}, but the intake does not list it`);
+      }
+      if (
+        observation.sourceId &&
+        intake.sourceIds.length === 1 &&
+        intake.sourceIds[0] !== observation.sourceId
+      ) {
+        errors.push(
+          `Observation ${observation.id} uses source ${observation.sourceId}, not the single source ${intake.sourceIds[0]} listed by intake ${intake.id}`
+        );
+      }
+    }
     if (observation.sourceId && !sourceById.has(observation.sourceId)) errors.push(`Observation ${observation.id} references unknown source ${observation.sourceId}`);
     for (const claimId of observation.claimIds) if (!claimById.has(claimId)) errors.push(`Observation ${observation.id} references unknown claim ${claimId}`);
     for (const inquiryId of observation.researchInquiryIds) if (!inquiryById.has(inquiryId)) errors.push(`Observation ${observation.id} references unknown inquiry ${inquiryId}`);

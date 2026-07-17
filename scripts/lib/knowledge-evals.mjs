@@ -32,6 +32,23 @@ const nycacEventLedgerPublicContractSha256 = "79b8cb8b652b01a6e96d46aa51dd47b519
 const nycacLinkLedgerPublicContractSha256 = "d6d07b83b23fc23879aeaaf335900472adf14c370dd1a44ee35cdcf6159d4b02";
 const nycacCanonicalGraphPublicContractSha256 = "c5d618f1d8e638354f869d0072fcb6d1820eb453463b824b6367168031f496bf";
 const nycacNarrativePublicContractSha256 = "925d39817101fb4a4bb98282cb6d88e64e3033abf13641f5c51e560c13f7b37e";
+const kcStar2007SourceArtifactSha256 = "8e9821ddccffc062983e3cf38f5a6080a1a5d1ee0cf1d0ff2b38b5ff40b17cd3";
+const kcStar2007SourceTextExtractionSha256 = "7dd0ce52eb9e550f56cdb606760a29026f6a8d25c0a04f43a9f4aa949fd75967";
+const kcStar2007ContractSealSha256 = "b5105d75f4c7335af362a2985435b4129f6f895349b8ea54fb80bba4e9a83a6e";
+const kcStar2007ExpectedIncludedCount = 47;
+const kcStar2007ExpectedDispositionSubjects = [
+  "family reaction and household context",
+  "personal theft and financial loss during the interruption",
+  "rough sleeping and day-night travel routine",
+  "sandbar, electrical-storm, and other route-hazard anecdotes",
+  "participant education and prior-project backstory",
+  "Huckleberry Finn framing and participant response to it",
+  "competing Coast Guard, crew, and participant interpretations",
+  "equipment changes after the intervention",
+  "private email excerpt about leaving Vicksburg",
+  "Paul Kelly Loyacono admiration statement",
+  "anticipated tow support after reaching salt water"
+];
 
 export function loadKnowledgeEvalSuite() {
   return JSON.parse(readFileSync(suitePath, "utf8"));
@@ -43,6 +60,78 @@ function score(passed, strong = true) {
 
 function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
+}
+
+function normalizedAttributionText(value) {
+  return JSON.stringify(value, (_key, item) =>
+    typeof item === "string"
+      ? item
+        .normalize("NFKC")
+        .replace(/\p{Default_Ignorable_Code_Point}/gu, "")
+        .replace(/[\p{P}\p{S}\p{M}]+/gu, " ")
+        .replace(/\s+/g, " ")
+      : item
+  )
+    .replace(/\s+/g, " ");
+}
+
+function publicRegistryContainsId(publicRegistryText, id) {
+  if (publicRegistryText.includes(id)) return true;
+  try {
+    return JSON.stringify(JSON.parse(publicRegistryText)).includes(id);
+  } catch {
+    return false;
+  }
+}
+
+function attributesKcStarWaterwaysSource(value) {
+  const text = normalizedAttributionText(value);
+  if (/\b(?:In the name of art go with the flow|Darryl Levings)\b/i.test(text)) {
+    return true;
+  }
+  return /\b(?:Kansas City Star|KC Star|The Star)\b/i.test(text) &&
+    /\b(?:raft|river|voyage|expedition|crew|Gulf|salt water|Hendon|Mattingly|Coast Guard|Vicksburg|Baton Rouge|New Orleans)\b/i.test(text);
+}
+
+function reviewedRecordSetDigest(records) {
+  return sha256(JSON.stringify(
+    records
+      .map((record) => [record.id, record])
+      .sort(([left], [right]) => left.localeCompare(right))
+  ));
+}
+
+export function kcStarSourceCoverageContractSeal(manifest) {
+  return sha256(JSON.stringify({
+    version: manifest.version,
+    sourceId: manifest.sourceId,
+    sourceArtifactSha256: manifest.sourceArtifactSha256,
+    sourceTextExtractionSha256: manifest.sourceTextExtractionSha256,
+    sourceReceipt: manifest.sourceReceipt,
+    reviewedAt: manifest.reviewedAt,
+    contractRole: manifest.contractRole,
+    reviewHistory: manifest.reviewHistory,
+    scope: manifest.scope,
+    copyrightBoundary: manifest.copyrightBoundary,
+    identityNormalization: manifest.identityNormalization,
+    reviewedIntakeSha256: manifest.reviewedIntakeSha256,
+    reviewedSourceSha256: manifest.reviewedSourceSha256,
+    reviewedInquirySha256: manifest.reviewedInquirySha256,
+    reviewedDocumentationSha256: manifest.reviewedDocumentationSha256,
+    reviewedRecordSha256: manifest.reviewedRecordSha256,
+    reviewedClaimSha256: manifest.reviewedClaimSha256,
+    relatedGraph: manifest.relatedGraph,
+    included: manifest.included,
+    notIncluded: manifest.notIncluded
+  }));
+}
+
+export function kcStarReviewedRecordDigest(record) {
+  return sha256(JSON.stringify(record));
+}
+
+export function kcStarReviewedClaimDigest(claim) {
+  return kcStarReviewedRecordDigest(claim);
 }
 
 function numericRecordEquals(left, right) {
@@ -310,6 +399,403 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const pilotObservations = pilotIntakes.flatMap((item) =>
     item?.observationIds.map((id) => observationById.get(id)) ?? []
   );
+  const waterwaysKcStar = suite.pilot.waterwaysKcStar;
+  const waterwaysSourceCoverage = JSON.parse(readFileSync(
+    path.join(repoRoot, waterwaysKcStar.sourceCoverageManifestPath),
+    "utf8"
+  ));
+  const waterwaysKcStarObservationIds = waterwaysSourceCoverage.included.map(
+    (item) => item.observationId
+  );
+  const waterwaysKcStarIntake = intakeById.get(waterwaysKcStar.intakeId);
+  const waterwaysKcStarSource = sourceById.get(waterwaysKcStar.sourceId);
+  const waterwaysKcStarObservations = waterwaysKcStarObservationIds.map((id) =>
+    observationById.get(id)
+  );
+  const waterwaysExpeditionClaim = claimById.get(waterwaysKcStar.expeditionClaimId);
+  const waterwaysOperationsClaim = claimById.get(waterwaysKcStar.operationsClaimId);
+  const waterwaysSynthesisClaim = claimById.get(waterwaysKcStar.synthesisClaimId);
+  const waterwaysInquiry = inquiryById.get(waterwaysKcStar.inquiryId);
+  const waterwaysDocumentation = readFileSync(
+    path.join(repoRoot, waterwaysKcStar.documentationPath),
+    "utf8"
+  );
+  const waterwaysKcStarClaimIds = [
+    waterwaysKcStar.expeditionClaimId,
+    waterwaysKcStar.operationsClaimId,
+    waterwaysKcStar.synthesisClaimId
+  ];
+  const waterwaysDirectObservationRecords = knowledgeBank.observations.filter((observation) =>
+    observation.sourceId === waterwaysKcStar.sourceId ||
+    observation.intakeId === waterwaysKcStar.intakeId
+  );
+  const waterwaysRelatedInquirySeedIds = [...new Set([
+    waterwaysKcStar.inquiryId,
+    ...waterwaysDirectObservationRecords.flatMap((observation) => observation.researchInquiryIds),
+    ...knowledgeBank.researchInquiries
+      .filter((inquiry) => inquiry.project === "waterways-raft")
+      .map((inquiry) => inquiry.id),
+    ...knowledgeBank.researchInquiries
+      .filter((inquiry) => inquiry.sourceIds.includes(waterwaysKcStar.sourceId))
+      .map((inquiry) => inquiry.id)
+  ])];
+  const waterwaysGloballyAttributingClaimIds = knowledgeBank.claims
+    .filter((claim) =>
+      attributesKcStarWaterwaysSource(claim)
+    )
+    .map((claim) => claim.id);
+  const waterwaysRelatedClaimRecords = knowledgeBank.claims.filter((claim) =>
+    waterwaysKcStarClaimIds.includes(claim.id) ||
+    claim.project === "waterways-raft" ||
+    waterwaysGloballyAttributingClaimIds.includes(claim.id) ||
+    claim.evidence.some((evidence) => evidence.sourceId === waterwaysKcStar.sourceId) ||
+    claim.researchInquiryIds.some((id) => waterwaysRelatedInquirySeedIds.includes(id))
+  );
+  const waterwaysRelatedClaimIds = waterwaysRelatedClaimRecords.map((claim) => claim.id);
+  const waterwaysRelatedObservationRecords = knowledgeBank.observations.filter((observation) =>
+    observation.sourceId === waterwaysKcStar.sourceId ||
+    observation.intakeId === waterwaysKcStar.intakeId ||
+    observation.project === "waterways-raft" ||
+    observation.claimIds.some((id) => waterwaysRelatedClaimIds.includes(id)) ||
+    observation.researchInquiryIds.some((id) => waterwaysRelatedInquirySeedIds.includes(id))
+  );
+  const waterwaysRelatedObservationIds = waterwaysRelatedObservationRecords.map(
+    (observation) => observation.id
+  );
+  const waterwaysRelatedIntakeRecords = knowledgeBank.intakeItems.filter((intake) =>
+    intake.id === waterwaysKcStar.intakeId ||
+    intake.projectIds.includes("waterways-raft") ||
+    intake.sourceIds.includes(waterwaysKcStar.sourceId) ||
+    intake.observationIds.some((id) => waterwaysRelatedObservationIds.includes(id)) ||
+    intake.researchInquiryIds.some((id) => waterwaysRelatedInquirySeedIds.includes(id))
+  );
+  const waterwaysRelatedInquiryRecords = knowledgeBank.researchInquiries.filter((inquiry) =>
+    waterwaysRelatedInquirySeedIds.includes(inquiry.id) ||
+    inquiry.project === "waterways-raft" ||
+    inquiry.sourceIds.includes(waterwaysKcStar.sourceId)
+  );
+  const waterwaysSourceLinkedObservationIds = waterwaysDirectObservationRecords.map(
+    (observation) => observation.id
+  );
+  const waterwaysSourceLinkedClaimIds = knowledgeBank.claims
+    .filter((claim) => claim.evidence.some((evidence) => evidence.sourceId === waterwaysKcStar.sourceId))
+    .map((claim) => claim.id);
+  const waterwaysSourceLinkedIntakeIds = knowledgeBank.intakeItems
+    .filter((intake) => intake.sourceIds.includes(waterwaysKcStar.sourceId))
+    .map((intake) => intake.id);
+  const waterwaysSourceLinkedInquiryIds = knowledgeBank.researchInquiries
+    .filter((inquiry) => inquiry.sourceIds.includes(waterwaysKcStar.sourceId))
+    .map((inquiry) => inquiry.id);
+  const waterwaysAttributionViolations = [
+    ...knowledgeBank.claims
+      .filter((claim) =>
+        attributesKcStarWaterwaysSource(claim) &&
+        !claim.evidence.some((evidence) => evidence.sourceId === waterwaysKcStar.sourceId)
+      )
+      .map((claim) => `claim:${claim.id}`),
+    ...knowledgeBank.observations
+      .filter((observation) =>
+        attributesKcStarWaterwaysSource(observation) &&
+        observation.sourceId !== waterwaysKcStar.sourceId
+      )
+      .map((observation) => `observation:${observation.id}`),
+    ...knowledgeBank.intakeItems
+      .filter((intake) =>
+        attributesKcStarWaterwaysSource(intake) &&
+        !intake.sourceIds.includes(waterwaysKcStar.sourceId)
+      )
+      .map((intake) => `intake:${intake.id}`),
+    ...knowledgeBank.researchInquiries
+      .filter((inquiry) =>
+        attributesKcStarWaterwaysSource(inquiry) &&
+        !inquiry.sourceIds.includes(waterwaysKcStar.sourceId)
+      )
+      .map((inquiry) => `inquiry:${inquiry.id}`)
+  ];
+  const waterwaysInspectionText = JSON.stringify({
+    intake: waterwaysKcStarIntake,
+    source: waterwaysKcStarSource,
+    observations: waterwaysKcStarObservations,
+    claims: [waterwaysExpeditionClaim, waterwaysOperationsClaim, waterwaysSynthesisClaim],
+    inquiry: waterwaysInquiry
+  });
+  const waterwaysCoverageFailures = waterwaysSourceCoverage.included.flatMap((contract) => {
+    const observation = observationById.get(contract.observationId);
+    const text = normalizeInspectionText(observation?.text ?? "").toLowerCase();
+    const limitations = normalizeInspectionText(
+      observation?.limitations.join(" ") ?? ""
+    ).toLowerCase();
+    const reviewedRecordSha256 = kcStarReviewedRecordDigest(observation);
+    const failures = [];
+    if (!observation) failures.push("missing observation");
+    if (observation?.sourceId !== waterwaysKcStar.sourceId) failures.push("wrong source");
+    if (observation?.locator !== contract.locator) failures.push("locator mismatch");
+    if (observation?.status !== "verified") failures.push("unverified status");
+    if (!observation?.publicSafe) failures.push("not public-safe");
+    if (!observation?.limitations.length) failures.push("missing limitations");
+    if (!(observation?.claimIds.length || observation?.researchInquiryIds.length)) {
+      failures.push("orphaned proposition");
+    }
+    if (reviewedRecordSha256 !== waterwaysSourceCoverage.reviewedRecordSha256[contract.observationId]) {
+      failures.push("reviewed record digest mismatch");
+    }
+    for (const term of contract.textTerms) {
+      if (!text.includes(normalizeInspectionText(term).toLowerCase())) {
+        failures.push(`missing proposition term: ${term}`);
+      }
+    }
+    for (const term of contract.limitationTerms) {
+      if (!limitations.includes(normalizeInspectionText(term).toLowerCase())) {
+        failures.push(`missing limitation term: ${term}`);
+      }
+    }
+    return failures.length
+      ? [`${contract.observationId}: ${failures.join(", ")}`]
+      : [];
+  });
+  const waterwaysKcStarDiagnostics = {
+    intakeContract: Boolean(
+      waterwaysKcStarIntake?.disposition === "integrated" &&
+      waterwaysKcStarIntake.visibility === "public-safe" &&
+      waterwaysKcStarIntake.sourceIds.length === 1 &&
+      waterwaysKcStarIntake.sourceIds[0] === waterwaysKcStar.sourceId &&
+      stringSetEquals(waterwaysKcStarIntake.observationIds, waterwaysKcStarObservationIds)
+    ),
+    intakeBoundaries: Boolean(
+      waterwaysKcStarIntake?.boundaries.some((boundary) =>
+        /copyrighted[\s\S]*outside the public repository/i.test(boundary)
+      ) &&
+      waterwaysKcStarIntake.boundaries.some((boundary) =>
+        /does not prove[\s\S]*never existed/i.test(boundary)
+      )
+    ),
+    sourceReceipt: Boolean(
+      waterwaysSourceCoverage.sourceId === waterwaysKcStar.sourceId &&
+      waterwaysSourceCoverage.sourceArtifactSha256 === kcStar2007SourceArtifactSha256 &&
+      waterwaysSourceCoverage.sourceTextExtractionSha256 === kcStar2007SourceTextExtractionSha256 &&
+      waterwaysSourceCoverage.sourceReceipt?.pageCount === 2 &&
+      /pdftotext -layout/i.test(waterwaysSourceCoverage.sourceReceipt.extractionMethod) &&
+      /rendered[\s\S]*visually inspected/i.test(waterwaysSourceCoverage.sourceReceipt.visualReview) &&
+      /recomputed[\s\S]*outside the public repository/i.test(
+        waterwaysSourceCoverage.sourceReceipt.runtimeVerification
+      )
+    ),
+    contractSeal: Boolean(
+      waterwaysSourceCoverage.contractSealSha256 === kcStar2007ContractSealSha256 &&
+      kcStarSourceCoverageContractSeal(waterwaysSourceCoverage) === kcStar2007ContractSealSha256
+    ),
+    contractRole: Boolean(
+      /co-versioned regression contract/i.test(waterwaysSourceCoverage.contractRole) &&
+      /not an independent authority/i.test(waterwaysSourceCoverage.contractRole) &&
+      /fresh read-only review occurs outside the evaluator/i.test(waterwaysSourceCoverage.contractRole)
+    ),
+    contractStructure: Boolean(
+      waterwaysSourceCoverage.included.length === kcStar2007ExpectedIncludedCount &&
+      waterwaysSourceCoverage.included.every((item) =>
+        item.observationId && item.page && item.column && item.locator &&
+        item.speaker && item.boundedProposition && item.textTerms?.length &&
+        item.limitationTerms?.length
+      ) &&
+      stringSetEquals(
+        Object.keys(waterwaysSourceCoverage.reviewedRecordSha256),
+        waterwaysKcStarObservationIds
+      ) &&
+      stringSetEquals(
+        Object.keys(waterwaysSourceCoverage.reviewedClaimSha256),
+        waterwaysKcStarClaimIds
+      )
+    ),
+    recordSetCompleteness: Boolean(
+      stringSetEquals(waterwaysSourceLinkedObservationIds, waterwaysKcStarObservationIds) &&
+      stringSetEquals(waterwaysSourceLinkedClaimIds, waterwaysKcStarClaimIds) &&
+      stringSetEquals(waterwaysSourceLinkedIntakeIds, [waterwaysKcStar.intakeId]) &&
+      stringSetEquals(waterwaysSourceLinkedInquiryIds, [waterwaysKcStar.inquiryId]) &&
+      waterwaysAttributionViolations.length === 0
+    ),
+    relatedGraphIntegrity: Boolean(
+      stringSetEquals(
+        waterwaysRelatedIntakeRecords.map((record) => record.id),
+        waterwaysSourceCoverage.relatedGraph.intakeIds
+      ) &&
+      stringSetEquals(
+        waterwaysRelatedObservationRecords.map((record) => record.id),
+        waterwaysSourceCoverage.relatedGraph.observationIds
+      ) &&
+      stringSetEquals(
+        waterwaysRelatedClaimRecords.map((record) => record.id),
+        waterwaysSourceCoverage.relatedGraph.claimIds
+      ) &&
+      stringSetEquals(
+        waterwaysRelatedInquiryRecords.map((record) => record.id),
+        waterwaysSourceCoverage.relatedGraph.inquiryIds
+      ) &&
+      reviewedRecordSetDigest(waterwaysRelatedIntakeRecords) ===
+        waterwaysSourceCoverage.relatedGraph.recordSetSha256.intakes &&
+      reviewedRecordSetDigest(waterwaysRelatedObservationRecords) ===
+        waterwaysSourceCoverage.relatedGraph.recordSetSha256.observations &&
+      reviewedRecordSetDigest(waterwaysRelatedClaimRecords) ===
+        waterwaysSourceCoverage.relatedGraph.recordSetSha256.claims &&
+      reviewedRecordSetDigest(waterwaysRelatedInquiryRecords) ===
+        waterwaysSourceCoverage.relatedGraph.recordSetSha256.inquiries
+    ),
+    relatedGraphProjectionHold: Boolean(
+      waterwaysRelatedClaimRecords.every((claim) =>
+        claim.projections.every(
+          (projection) => projection.status === "hold" && projection.surfaces.length === 0
+        )
+      ) &&
+      knowledgeBank.pages.every((page) =>
+        page.occurrences.every(
+          (occurrence) => !waterwaysRelatedClaimIds.includes(occurrence.claimId)
+        )
+      ) &&
+      waterwaysRelatedClaimIds.every((id) => !publicRegistryContainsId(publicRegistryText, id))
+    ),
+    intakeRecordIntegrity: Boolean(
+      kcStarReviewedRecordDigest(waterwaysKcStarIntake) ===
+        waterwaysSourceCoverage.reviewedIntakeSha256
+    ),
+    sourceRecordIntegrity: Boolean(
+      kcStarReviewedRecordDigest(waterwaysKcStarSource) ===
+        waterwaysSourceCoverage.reviewedSourceSha256
+    ),
+    claimRecordIntegrity: Boolean(
+      [waterwaysExpeditionClaim, waterwaysOperationsClaim, waterwaysSynthesisClaim]
+        .every((claim) =>
+          claim && kcStarReviewedClaimDigest(claim) === waterwaysSourceCoverage.reviewedClaimSha256[claim.id]
+        )
+    ),
+    inquiryRecordIntegrity: Boolean(
+      kcStarReviewedRecordDigest(waterwaysInquiry) ===
+        waterwaysSourceCoverage.reviewedInquirySha256
+    ),
+    documentationRecordIntegrity: Boolean(
+      sha256(waterwaysDocumentation) === waterwaysSourceCoverage.reviewedDocumentationSha256
+    ),
+    identityNormalization: Boolean(
+      waterwaysSourceCoverage.identityNormalization.printedName === "James Burkart" &&
+      waterwaysSourceCoverage.identityNormalization.currentPublicName === "Jamie Burkart" &&
+      /source-level observations retain James Burkart/i.test(
+        waterwaysSourceCoverage.identityNormalization.rule
+      ) &&
+      waterwaysKcStarObservations.every((observation) => !/\bJamie\b/.test(observation?.text ?? ""))
+    ),
+    explicitDispositions: Boolean(
+      waterwaysSourceCoverage.notIncluded.length === kcStar2007ExpectedDispositionSubjects.length &&
+      stringSetEquals(
+        waterwaysSourceCoverage.notIncluded.map((item) => item.subject),
+        kcStar2007ExpectedDispositionSubjects
+      ) &&
+      waterwaysSourceCoverage.notIncluded.every((item) =>
+        ["omit", "protected", "defer"].includes(item.disposition) && item.reason
+      )
+    ),
+    sourceMetadata: Boolean(
+      waterwaysKcStarSource?.organization === "The Kansas City Star" &&
+      waterwaysKcStarSource.author === "Darryl Levings" &&
+      waterwaysKcStarSource.publishedAt === "2007-11-15" &&
+      waterwaysKcStarSource.visibility === "public-metadata-only" &&
+      waterwaysKcStarSource.preservationStatus === "private" &&
+      !waterwaysKcStarSource.canonicalUrl &&
+      !waterwaysKcStarSource.archiveUrl &&
+      !waterwaysKcStarSource.assetUrl &&
+      waterwaysKcStarSource.supportsGenerally.length >= 10
+    ),
+    sourceBoundaries: Boolean(
+      waterwaysKcStarSource?.doesNotEstablish.some((boundary) =>
+        /completed arrival at salt water/i.test(boundary)
+      ) &&
+      waterwaysKcStarSource.doesNotEstablish.some((boundary) =>
+        /exact final terminus/i.test(boundary)
+      ) &&
+      waterwaysKcStarSource.doesNotEstablish.some((boundary) =>
+        /individual allocation of construction[\s\S]*navigation labor/i.test(boundary)
+      ) &&
+      waterwaysKcStarSource.doesNotEstablish.some((boundary) =>
+        /sole authorship or operation by Jamie/i.test(boundary)
+      ) &&
+      waterwaysKcStarSource.doesNotEstablish.some((boundary) =>
+        /present-day interpretation[\s\S]*operating system/i.test(boundary)
+      )
+    ),
+    observationCoverage: Boolean(
+      waterwaysKcStarObservations.length === waterwaysSourceCoverage.included.length &&
+      waterwaysKcStarObservations.every(Boolean) &&
+      waterwaysCoverageFailures.length === 0
+    ),
+    expeditionClaim: Boolean(
+      waterwaysExpeditionClaim?.evidence.some(
+        (evidence) => evidence.sourceId === waterwaysKcStar.sourceId &&
+          evidence.relationship === "direct-support" && evidence.renderCitation === false
+      ) &&
+      waterwaysExpeditionClaim.boundaries.some((boundary) =>
+        /Libby Hendon[\s\S]*Laura Mattingly[\s\S]*Jamie Burkart/i.test(boundary)
+      ) &&
+      waterwaysExpeditionClaim.antiClaims.some((antiClaim) =>
+        /Kansas City Star[\s\S]*already reached salt water/i.test(antiClaim)
+      )
+    ),
+    operationsClaim: Boolean(
+      waterwaysOperationsClaim?.status === "confirmed-with-boundary" &&
+      waterwaysOperationsClaim.evidence.some(
+        (evidence) => evidence.sourceId === waterwaysKcStar.sourceId &&
+          evidence.relationship === "direct-support" && evidence.renderCitation === false
+      ) &&
+      waterwaysOperationsClaim.projections.length === 1 &&
+      waterwaysOperationsClaim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      ) &&
+      waterwaysOperationsClaim.boundaries.some((boundary) => /Keep credit collective/i.test(boundary)) &&
+      waterwaysOperationsClaim.boundaries.some((boundary) =>
+        /Laura Mattingly[\s\S]*Libby Hendon[\s\S]*Paul Kelly Loyacono/i.test(boundary)
+      ) &&
+      waterwaysOperationsClaim.antiClaims.some((antiClaim) =>
+        /Jamie alone designed, built, steered, operated, navigated, or completed/i.test(antiClaim)
+      ) &&
+      !/(?:participatory operating system|adaptive field operations|social infrastructure)/i.test(
+        waterwaysOperationsClaim.internalClaim
+      )
+    ),
+    synthesisClaim: Boolean(
+      waterwaysSynthesisClaim?.status === "use-with-care" &&
+      waterwaysSynthesisClaim.evidence.some(
+        (evidence) => evidence.sourceId === waterwaysKcStar.sourceId &&
+          evidence.relationship === "context" && evidence.renderCitation === false
+      ) &&
+      waterwaysSynthesisClaim.projections.length === 1 &&
+      waterwaysSynthesisClaim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      ) &&
+      waterwaysSynthesisClaim.boundaries.some((boundary) =>
+        /present-day analytical synthesis[\s\S]*not terminology used/i.test(boundary)
+      ) &&
+      waterwaysSynthesisClaim.antiClaims.some((antiClaim) =>
+        /Kansas City Star described the project as an operating system/i.test(antiClaim)
+      )
+    ),
+    inquiry: Boolean(
+      waterwaysInquiry?.sourceIds.includes(waterwaysKcStar.sourceId) &&
+      waterwaysInquiry.findings.some((finding) => /south of Baton Rouge by November 15/i.test(finding)) &&
+      waterwaysInquiry.limitations.some((limitation) => /does not prove[\s\S]*never existed/i.test(limitation))
+    ),
+    documentationSafety: Boolean(
+      /copyrighted[\s\S]*outside the public\s+repository/i.test(waterwaysDocumentation) &&
+      /negative result does not prove/i.test(waterwaysDocumentation) &&
+      !/(?:\/Users\/|\/Volumes\/|\/private\/|Google Drive\/)/i.test(
+        `${waterwaysInspectionText}\n${waterwaysDocumentation}`
+      )
+    ),
+    publicProjectionHold: Boolean(
+      !publicRegistryContainsId(publicRegistryText, waterwaysKcStar.sourceId) &&
+      !publicRegistryContainsId(publicRegistryText, waterwaysKcStar.expeditionClaimId) &&
+      !publicRegistryContainsId(publicRegistryText, waterwaysKcStar.operationsClaimId) &&
+      !publicRegistryContainsId(publicRegistryText, waterwaysKcStar.synthesisClaimId)
+    )
+  };
+  const waterwaysInvariantFailures = Object.entries(waterwaysKcStarDiagnostics)
+    .filter(([, passed]) => !passed)
+    .map(([name]) => name);
+  const waterwaysKcStarComplete = waterwaysInvariantFailures.length === 0;
   const expansion = suite.pilot.sourceExpansion;
   const expansionIntakes = expansion.intakeIds.map((id) => intakeById.get(id));
   const expansionSources = expansion.sourceIds.map((id) => sourceById.get(id));
@@ -5119,6 +5605,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [nycacGovernmentInterfaceComplete
         ? `The bounded five-transcript-candidate audit preserves the May 19, 2017 Finkelpearl reference at page 92; DCLA, Council, and Espinal value remain three actor-specific held inferences backed by official records and public engagement evidence, with incomplete-corpus, collective-credit, dependency, endorsement, and policy-causation boundaries intact`
         : `NYC Artist Coalition government-interface criterion failed: ${Object.entries(governmentDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
+    },
+    {
+      criterionId: "KB-EVAL-WATERWAYS-KC-STAR",
+      score: score(waterwaysKcStarComplete),
+      evidence: [waterwaysKcStarComplete
+        ? `The 2007 Kansas City Star report is retained as public metadata with ${waterwaysSourceCoverage.included.length} proposition-level observations and three canonical claim records checked against a sealed source-coverage regression contract and a runtime-verifiable artifact receipt; exact page-and-column locators, explicit include/defer/omit dispositions, separate factual and interpretive claims, a refined route inquiry, collective labor credit, copyright protection, non-recovery discipline, and no automatic portfolio promotion remain intact`
+        : `Kansas City Star eval failures: ${[
+            ...waterwaysInvariantFailures,
+            ...waterwaysCoverageFailures
+          ].join("; ") || "unknown invariant"}`]
     }
   ];
 

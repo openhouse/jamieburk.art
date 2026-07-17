@@ -18,9 +18,19 @@ import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-
 import { urbanhermitCorpusFindings, urbanhermitPopulationAudit, urbanhermitSocialCorpus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts";
 import { wowListFacebookPosts } from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts.ts";
 import { wowlistPopulationAudit, wowlistSocialCorpus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts";
-import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
+import {
+  evaluateKnowledgeBank,
+  kcStarReviewedClaimDigest,
+  kcStarReviewedRecordDigest,
+  kcStarSourceCoverageContractSeal,
+  loadKnowledgeEvalSuite
+} from "../lib/knowledge-evals.mjs";
 
 const suite = loadKnowledgeEvalSuite();
+const waterwaysSourceCoverage = JSON.parse(readFileSync(
+  new URL("../../evals/knowledge-bank/fixtures/kc-star-2007-source-coverage.json", import.meta.url),
+  "utf8"
+));
 const callNycLedger = JSON.parse(readFileSync(
   new URL("../../docs/knowledge-bank/data/callnyc-public-post-ledger.json", import.meta.url),
   "utf8"
@@ -186,6 +196,725 @@ test("knowledge-bank pilot retains every supplied intake item", () => {
 test("mature but unselected claims remain held off public surfaces", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 5);
+});
+
+test("Kansas City Star waterways source retains route, credit, and publication boundaries", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+    5
+  );
+});
+
+test("Kansas City Star waterways eval binds every atomic proposition", () => {
+  for (const contract of waterwaysSourceCoverage.included) {
+    const observation = knowledgeBank.observations.find(
+      (item) => item.id === contract.observationId
+    );
+    assert.ok(observation, `missing observation ${contract.observationId}`);
+    const originalText = observation.text;
+    try {
+      observation.text = "Semantically unrelated replacement proposition.";
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+        1,
+        `semantic drift was not rejected for ${contract.observationId}`
+      );
+    } finally {
+      observation.text = originalText;
+    }
+  }
+});
+
+test("Kansas City Star source contract preserves printed identity and explicit non-inclusion dispositions", () => {
+  assert.equal(waterwaysSourceCoverage.identityNormalization.printedName, "James Burkart");
+  assert.equal(waterwaysSourceCoverage.identityNormalization.currentPublicName, "Jamie Burkart");
+  assert.match(waterwaysSourceCoverage.contractRole, /co-versioned regression contract/i);
+  assert.match(waterwaysSourceCoverage.contractRole, /not an independent authority/i);
+  assert.equal(waterwaysSourceCoverage.included.length, 47);
+  assert.equal(waterwaysSourceCoverage.notIncluded.length, 11);
+  assert.ok(waterwaysSourceCoverage.included.every(
+    (item) => item.speaker && item.boundedProposition && item.page && item.column && item.locator
+  ));
+  assert.deepEqual(
+    new Set(waterwaysSourceCoverage.notIncluded.map((item) => item.disposition)),
+    new Set(["omit", "protected", "defer"])
+  );
+});
+
+test("Kansas City Star source contract is sealed to its reviewed artifact receipt and semantics", () => {
+  assert.equal(
+    waterwaysSourceCoverage.sourceArtifactSha256,
+    "8e9821ddccffc062983e3cf38f5a6080a1a5d1ee0cf1d0ff2b38b5ff40b17cd3"
+  );
+  assert.equal(
+    waterwaysSourceCoverage.sourceTextExtractionSha256,
+    "7dd0ce52eb9e550f56cdb606760a29026f6a8d25c0a04f43a9f4aa949fd75967"
+  );
+  assert.equal(
+    waterwaysSourceCoverage.contractSealSha256,
+    "b5105d75f4c7335af362a2985435b4129f6f895349b8ea54fb80bba4e9a83a6e"
+  );
+  assert.equal(
+    kcStarSourceCoverageContractSeal(waterwaysSourceCoverage),
+    waterwaysSourceCoverage.contractSealSha256
+  );
+});
+
+test("Kansas City Star contract seal detects record, locator, and disposition drift", () => {
+  for (const mutate of [
+    (copy) => { copy.included[0].boundedProposition = "Coordinated replacement proposition."; },
+    (copy) => { copy.included[0].speaker = "Unknown speaker"; },
+    (copy) => { copy.included[0].column = "5"; },
+    (copy) => { copy.reviewedSourceSha256 = "0".repeat(64); },
+    (copy) => { copy.reviewedIntakeSha256 = "0".repeat(64); },
+    (copy) => { copy.reviewedInquirySha256 = "0".repeat(64); },
+    (copy) => { copy.reviewedDocumentationSha256 = "0".repeat(64); },
+    (copy) => { copy.reviewedRecordSha256[copy.included[0].observationId] = "0".repeat(64); },
+    (copy) => { copy.reviewedClaimSha256["CLM-WATERWAYS-RAFT-PARTICIPATORY-OPERATIONS"] = "0".repeat(64); },
+    (copy) => { copy.relatedGraph.observationIds.pop(); },
+    (copy) => { copy.relatedGraph.recordSetSha256.claims = "0".repeat(64); },
+    (copy) => { copy.included.pop(); },
+    (copy) => { copy.notIncluded.pop(); }
+  ]) {
+    const copy = structuredClone(waterwaysSourceCoverage);
+    mutate(copy);
+    assert.notEqual(
+      kcStarSourceCoverageContractSeal(copy),
+      waterwaysSourceCoverage.contractSealSha256
+    );
+  }
+});
+
+test("Kansas City Star source contract binds the reviewed claim records", () => {
+  for (const claimId of [
+    suite.pilot.waterwaysKcStar.expeditionClaimId,
+    suite.pilot.waterwaysKcStar.operationsClaimId,
+    suite.pilot.waterwaysKcStar.synthesisClaimId
+  ]) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    assert.equal(
+      kcStarReviewedClaimDigest(claim),
+      waterwaysSourceCoverage.reviewedClaimSha256[claimId]
+    );
+  }
+});
+
+test("Kansas City Star source contract binds complete intake, source, observation, and inquiry records", () => {
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.intakeId
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.sourceId
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.inquiryId
+  );
+  assert.equal(kcStarReviewedRecordDigest(intake), waterwaysSourceCoverage.reviewedIntakeSha256);
+  assert.equal(kcStarReviewedRecordDigest(source), waterwaysSourceCoverage.reviewedSourceSha256);
+  assert.equal(kcStarReviewedRecordDigest(inquiry), waterwaysSourceCoverage.reviewedInquirySha256);
+  for (const contract of waterwaysSourceCoverage.included) {
+    const observation = knowledgeBank.observations.find(
+      (item) => item.id === contract.observationId
+    );
+    assert.equal(
+      kcStarReviewedRecordDigest(observation),
+      waterwaysSourceCoverage.reviewedRecordSha256[contract.observationId]
+    );
+  }
+});
+
+test("Kansas City Star waterways eval rejects source metadata and support drift", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.sourceId
+  );
+  for (const mutate of [
+    () => { source.title = "Fabricated headline asserting completed Gulf arrival"; },
+    () => { source.publicNote += " The article proves Jamie alone completed the voyage."; },
+    () => { source.supportsGenerally.push("Jamie alone completed the voyage and reached the Gulf"); }
+  ]) {
+    const original = structuredClone(source);
+    try {
+      mutate();
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+        1
+      );
+    } finally {
+      Object.assign(source, original);
+    }
+  }
+});
+
+test("Kansas City Star waterways eval rejects intake, observation, claim, and inquiry drift", () => {
+  const records = [
+    {
+      record: knowledgeBank.intakeItems.find((item) => item.id === suite.pilot.waterwaysKcStar.intakeId),
+      mutate: (record) => { record.reason += " It proves Jamie alone completed the voyage."; }
+    },
+    {
+      record: knowledgeBank.observations.find((item) => item.id === "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT"),
+      mutate: (record) => { record.kind = "present-day-synthesis"; }
+    },
+    {
+      record: knowledgeBank.claims.find((item) => item.id === suite.pilot.waterwaysKcStar.operationsClaimId),
+      mutate: (record) => { record.project = "fabricated-project"; }
+    },
+    {
+      record: knowledgeBank.researchInquiries.find((item) => item.id === suite.pilot.waterwaysKcStar.inquiryId),
+      mutate: (record) => { record.publicSummary += " Jamie alone reached the Gulf."; }
+    }
+  ];
+  for (const { record, mutate } of records) {
+    const original = structuredClone(record);
+    try {
+      mutate(record);
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+        1
+      );
+    } finally {
+      Object.assign(record, original);
+    }
+  }
+});
+
+test("Kansas City Star waterways eval rejects unreviewed source-linked records", () => {
+  const sourceId = suite.pilot.waterwaysKcStar.sourceId;
+  const operationsClaim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.operationsClaimId
+  );
+  const routeObservation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT"
+  );
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.intakeId
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.inquiryId
+  );
+  const additions = [
+    {
+      collection: knowledgeBank.claims,
+      record: {
+        ...structuredClone(operationsClaim),
+        id: "CLM-WATERWAYS-KC-STAR-UNREVIEWED-FALSE",
+        internalClaim: "The article proves Jamie alone completed the voyage."
+      }
+    },
+    {
+      collection: knowledgeBank.observations,
+      record: {
+        ...structuredClone(routeObservation),
+        id: "OBS-WATERWAYS-KC-STAR-UNREVIEWED-FALSE",
+        text: "The article proves Jamie alone completed the voyage."
+      }
+    },
+    {
+      collection: knowledgeBank.intakeItems,
+      record: {
+        ...structuredClone(intake),
+        id: "INTAKE-WATERWAYS-KC-STAR-UNREVIEWED-FALSE",
+        observationIds: []
+      }
+    },
+    {
+      collection: knowledgeBank.researchInquiries,
+      record: {
+        ...structuredClone(inquiry),
+        id: "INQ-WATERWAYS-KC-STAR-UNREVIEWED-FALSE",
+        sourceIds: [sourceId]
+      }
+    }
+  ];
+  for (const { collection, record } of additions) {
+    collection.push(record);
+    try {
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+        1
+      );
+    } finally {
+      collection.pop();
+    }
+  }
+});
+
+test("Kansas City Star waterways eval rejects observations hidden behind its intake", () => {
+  const routeObservation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT"
+  );
+  const hiddenObservation = {
+    ...structuredClone(routeObservation),
+    id: "OBS-WATERWAYS-KC-STAR-INTAKE-LINKED-FALSE",
+    sourceId: "SRC-WATERWAYS-PITCH-2007-08-09",
+    text: "The Kansas City Star proves Jamie alone completed the voyage and reached the Gulf."
+  };
+  knowledgeBank.observations.push(hiddenObservation);
+  try {
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+    assert.ok(result.errors.some((error) =>
+      /intake does not list it|not the single source/i.test(error)
+    ));
+  } finally {
+    knowledgeBank.observations.pop();
+  }
+});
+
+test("Kansas City Star waterways eval rejects source attribution with its evidence edge omitted", () => {
+  const operationsClaim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.operationsClaimId
+  );
+  const falseClaim = {
+    ...structuredClone(operationsClaim),
+    id: "CLM-WATERWAYS-KC-STAR-ATTRIBUTION-FALSE",
+    internalClaim: "The Kansas City Star proves Jamie alone completed the voyage and reached the Gulf.",
+    evidence: operationsClaim.evidence.filter(
+      (item) => item.sourceId !== suite.pilot.waterwaysKcStar.sourceId
+    )
+  };
+  knowledgeBank.claims.push(falseClaim);
+  try {
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    knowledgeBank.claims.pop();
+  }
+});
+
+test("Kansas City Star waterways eval closes indirect claim and inquiry edges", () => {
+  const pitchIntake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-WATERWAYS-PITCH-2007"
+  );
+  const pitchObservation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-WATERWAYS-PITCH-MATERIALS"
+  );
+  const attacks = [
+    {
+      text: "Jamie alone completed the voyage and reached the Gulf.",
+      claimIds: [suite.pilot.waterwaysKcStar.operationsClaimId],
+      researchInquiryIds: []
+    },
+    {
+      text: "The reported 14 encounters combined the Coast Guard, police, fire, sheriff, conservation, and Army Corps.",
+      claimIds: [suite.pilot.waterwaysKcStar.operationsClaimId],
+      researchInquiryIds: []
+    },
+    {
+      text: "The newspaper described a present-day operating system with verified cultural outcomes.",
+      claimIds: [],
+      researchInquiryIds: [suite.pilot.waterwaysKcStar.inquiryId]
+    }
+  ];
+  for (const [index, attack] of attacks.entries()) {
+    const observation = {
+      ...structuredClone(pitchObservation),
+      ...attack,
+      id: `OBS-WATERWAYS-KC-STAR-INDIRECT-ATTACK-${index + 1}`
+    };
+    knowledgeBank.observations.push(observation);
+    pitchIntake.observationIds.push(observation.id);
+    try {
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+        1
+      );
+      assert.deepEqual(result.errors, []);
+    } finally {
+      pitchIntake.observationIds.pop();
+      knowledgeBank.observations.pop();
+    }
+  }
+});
+
+test("Kansas City Star waterways eval globally normalizes source attribution", () => {
+  const unrelatedClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-CABARET-SAFETY-ORGANIZING"
+  );
+  const variants = [
+    "The Kansas City Star proves Jamie alone reached the Gulf.",
+    "The Kansas City\u00a0Star proves Jamie alone reached the Gulf.",
+    "The Kansas \u200bCity Star proves Jamie alone reached the Gulf.",
+    "The Kansas   City\tStar proves Jamie alone reached the Gulf.",
+    "The Kansas City\u034f Star proves Jamie alone reached the Gulf.",
+    "The Kansas City *Star* proves Jamie alone reached the Gulf.",
+    "The KC Star proves Jamie alone reached the Gulf.",
+    "The Star proves Jamie alone reached the Gulf."
+  ];
+  for (const [index, internalClaim] of variants.entries()) {
+    const falseClaim = {
+      ...structuredClone(unrelatedClaim),
+      id: `CLM-CROSS-PROJECT-KC-ATTRIBUTION-FALSE-${index + 1}`,
+      project: "callnyc",
+      internalClaim,
+      projections: [],
+      researchInquiryIds: []
+    };
+    knowledgeBank.claims.push(falseClaim);
+    try {
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+        1
+      );
+    } finally {
+      knowledgeBank.claims.pop();
+    }
+  }
+});
+
+test("Kansas City Star waterways eval rejects cross-project attribution promotion", () => {
+  const unrelatedClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-CABARET-SAFETY-ORGANIZING"
+  );
+  const falseClaim = {
+    ...structuredClone(unrelatedClaim),
+    id: "CLM-CROSS-PROJECT-KC-ATTRIBUTION-PUBLIC-FALSE",
+    project: "callnyc",
+    internalClaim: "The Kansas City Star proves Jamie alone completed the voyage and reached the Gulf.",
+    projections: [{
+      key: "attack",
+      text: "The Kansas City Star proves Jamie alone completed the voyage and reached the Gulf.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["/attack"]
+    }],
+    researchInquiryIds: []
+  };
+  const sourceIds = falseClaim.evidence
+    .filter((evidence) => evidence.renderCitation)
+    .map((evidence) => evidence.sourceId);
+  const falsePage = {
+    id: "PAGE-CROSS-PROJECT-KC-ATTRIBUTION-PUBLIC-FALSE",
+    surface: "/attack",
+    occurrences: [{
+      id: "OCC-CROSS-PROJECT-KC-ATTRIBUTION-PUBLIC-FALSE",
+      claimId: falseClaim.id,
+      projection: "attack",
+      sourceIds
+    }],
+    sourceOrder: sourceIds
+  };
+  knowledgeBank.claims.push(falseClaim);
+  knowledgeBank.pages.push(falsePage);
+  try {
+    const pageResult = evaluateKnowledgeBank(suite);
+    assert.equal(
+      pageResult.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+    const registryResult = evaluateKnowledgeBank(suite, {
+      publicRegistryText: `${publicRegistryText}\n${falseClaim.id}`
+    });
+    assert.equal(
+      registryResult.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    knowledgeBank.pages.pop();
+    knowledgeBank.claims.pop();
+  }
+});
+
+test("Kansas City Star waterways eval closes the full waterways project graph", () => {
+  const sourceTemplate = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-WATERWAYS-PITCH-2007-08-09"
+  );
+  const intakeTemplate = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-WATERWAYS-PITCH-2007"
+  );
+  const observationTemplate = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-WATERWAYS-PITCH-MATERIALS"
+  );
+  const unrelatedClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-CABARET-SAFETY-ORGANIZING"
+  );
+  const inquiryTemplate = knowledgeBank.researchInquiries.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.inquiryId
+  );
+  const sourceId = "SRC-WATERWAYS-SHADOW-REPORT-FALSE";
+  const intakeId = "INTAKE-WATERWAYS-SHADOW-REPORT-FALSE";
+  const observationId = "OBS-WATERWAYS-SHADOW-REPORT-FALSE";
+  const claimId = "CLM-WATERWAYS-SHADOW-PUBLIC-FALSE";
+  const inquiryId = "INQ-WATERWAYS-SHADOW-COMPLETION-FALSE";
+  const falseSource = {
+    ...structuredClone(sourceTemplate),
+    id: sourceId,
+    title: "Shadow report"
+  };
+  const falseIntake = {
+    ...structuredClone(intakeTemplate),
+    id: intakeId,
+    title: "Shadow waterways evidence graph",
+    sourceIds: [sourceId],
+    observationIds: [observationId],
+    researchInquiryIds: [inquiryId]
+  };
+  const falseObservation = {
+    ...structuredClone(observationTemplate),
+    id: observationId,
+    intakeId,
+    sourceId,
+    project: "waterways-raft",
+    text: "The crew completed a sole-authored Gulf voyage, and 14 checks covered every named authority.",
+    locator: "article",
+    claimIds: [claimId],
+    researchInquiryIds: [inquiryId]
+  };
+  const falseClaim = {
+    ...structuredClone(unrelatedClaim),
+    id: claimId,
+    project: "waterways-raft",
+    internalClaim: "Contemporaneous reporting proves Jamie alone completed the voyage to the Gulf and that 14 checks covered every named authority.",
+    projections: [{
+      key: "attack",
+      text: "Jamie alone completed the voyage to the Gulf.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["/attack"]
+    }],
+    evidence: unrelatedClaim.evidence.map((evidence) => ({ ...evidence, sourceId })),
+    researchInquiryIds: [inquiryId]
+  };
+  const falseInquiry = {
+    ...structuredClone(inquiryTemplate),
+    id: inquiryId,
+    project: "waterways-raft",
+    sourceIds: [sourceId],
+    findings: ["The crew reached the Gulf under Jamie's sole direction."],
+    limitations: ["No limitations apply."]
+  };
+  const falsePage = {
+    id: "PAGE-WATERWAYS-SHADOW-PUBLIC-FALSE",
+    surface: "/attack",
+    occurrences: [{
+      id: "OCC-WATERWAYS-SHADOW-PUBLIC-FALSE",
+      claimId,
+      projection: "attack",
+      sourceIds: [sourceId]
+    }],
+    sourceOrder: [sourceId]
+  };
+  knowledgeBank.sources.push(falseSource);
+  knowledgeBank.intakeItems.push(falseIntake);
+  knowledgeBank.observations.push(falseObservation);
+  knowledgeBank.claims.push(falseClaim);
+  knowledgeBank.researchInquiries.push(falseInquiry);
+  knowledgeBank.pages.push(falsePage);
+  try {
+    const result = evaluateKnowledgeBank(suite, {
+      publicRegistryText: `${publicRegistryText}\n${claimId}`
+    });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    knowledgeBank.pages.pop();
+    knowledgeBank.researchInquiries.pop();
+    knowledgeBank.claims.pop();
+    knowledgeBank.observations.pop();
+    knowledgeBank.intakeItems.pop();
+    knowledgeBank.sources.pop();
+  }
+});
+
+test("Kansas City Star waterways eval decodes registry identifiers", () => {
+  const escapedId = suite.pilot.waterwaysKcStar.expeditionClaimId.replace(
+    /^C/,
+    "\\u0043"
+  );
+  const registryText = `{"claims":[{"claimId":"${escapedId}"}],"sources":[]}`;
+  const result = evaluateKnowledgeBank(suite, { publicRegistryText: registryText });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+    1
+  );
+});
+
+test("Kansas City Star waterways eval rejects indirect active projections", () => {
+  const operationsClaim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.operationsClaimId
+  );
+  const falseClaim = {
+    ...structuredClone(operationsClaim),
+    id: "CLM-WATERWAYS-KC-STAR-INDIRECT-ACTIVE-FALSE",
+    internalClaim: "The newspaper proves Jamie alone completed the voyage and reached the Gulf.",
+    evidence: operationsClaim.evidence.filter(
+      (item) => item.sourceId !== suite.pilot.waterwaysKcStar.sourceId
+    ),
+    projections: [{
+      key: "about",
+      text: "Jamie alone completed the voyage to the Gulf.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["/about"]
+    }],
+    researchInquiryIds: [suite.pilot.waterwaysKcStar.inquiryId]
+  };
+  knowledgeBank.claims.push(falseClaim);
+  try {
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    knowledgeBank.claims.pop();
+  }
+});
+
+test("Kansas City Star waterways eval rejects an unsupported clause appended to a reviewed observation", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT"
+  );
+  const originalText = observation.text;
+  try {
+    observation.text += " The article also reported that Jamie completed the voyage alone.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    observation.text = originalText;
+  }
+});
+
+test("Kansas City Star waterways eval rejects unsupported canonical claim text", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.operationsClaimId
+  );
+  const originalText = claim.internalClaim;
+  try {
+    claim.internalClaim += " The Kansas City Star proves that Jamie alone reached the Gulf and produced measured benefits for 10,000 participants.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    claim.internalClaim = originalText;
+  }
+});
+
+test("Kansas City Star waterways eval rejects unsupported held projection text", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.operationsClaimId
+  );
+  const originalText = claim.projections[0].text;
+  try {
+    claim.projections[0].text += " Jamie alone carried the expedition to a verified Gulf terminus.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    claim.projections[0].text = originalText;
+  }
+});
+
+test("Kansas City Star waterways eval rejects locator drift", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-WATERWAYS-KC-STAR-GUEST-PARTICIPATION"
+  );
+  const originalLocator = observation.locator;
+  try {
+    observation.locator = "A4, column 2, incorrect paragraph";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    observation.locator = originalLocator;
+  }
+});
+
+test("Kansas City Star waterways eval keeps present-day synthesis separate and held", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.synthesisClaimId
+  );
+  const originalStatus = claim.status;
+  try {
+    claim.status = "confirmed-with-boundary";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    claim.status = originalStatus;
+  }
+});
+
+test("Kansas City Star waterways eval rejects completed-arrival inflation", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.sourceId
+  );
+  const originalDoesNotEstablish = source.doesNotEstablish;
+  try {
+    source.doesNotEstablish = source.doesNotEstablish.filter(
+      (boundary) => !boundary.includes("completed arrival at salt water")
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    source.doesNotEstablish = originalDoesNotEstablish;
+  }
+});
+
+test("Kansas City Star waterways eval rejects erased collective credit", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.operationsClaimId
+  );
+  const originalAntiClaims = claim.antiClaims;
+  try {
+    claim.antiClaims = claim.antiClaims.filter(
+      (antiClaim) => !antiClaim.includes("Jamie alone designed, built, steered, operated, navigated, or completed")
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    claim.antiClaims = originalAntiClaims;
+  }
+});
+
+test("Kansas City Star waterways eval rejects automatic portfolio promotion", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.waterwaysKcStar.operationsClaimId
+  );
+  const originalProjection = structuredClone(claim.projections[0]);
+  try {
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/about"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WATERWAYS-KC-STAR")?.score,
+      1
+    );
+  } finally {
+    claim.projections[0] = originalProjection;
+  }
 });
 
 test("NTER CHNG archive production is integrated, bounded, and held for future composition", () => {

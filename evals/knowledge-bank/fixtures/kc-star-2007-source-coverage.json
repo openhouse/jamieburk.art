@@ -1,0 +1,957 @@
+{
+  "version": 2,
+  "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+  "sourceArtifactSha256": "8e9821ddccffc062983e3cf38f5a6080a1a5d1ee0cf1d0ff2b38b5ff40b17cd3",
+  "sourceTextExtractionSha256": "7dd0ce52eb9e550f56cdb606760a29026f6a8d25c0a04f43a9f4aa949fd75967",
+  "sourceReceipt": {
+    "pageCount": 2,
+    "extractionMethod": "Poppler pdftotext -layout",
+    "visualReview": "Both pages rendered to PNG and visually inspected against the extracted article structure.",
+    "runtimeVerification": "The artifact and extraction digests were recomputed from the participant-held source during this review. The source files remain outside the public repository."
+  },
+  "reviewedAt": "2026-07-16",
+  "contractRole": "Co-versioned regression contract. It detects drift from the reviewed records but is not an independent authority; fresh read-only review occurs outside the evaluator.",
+  "reviewHistory": [
+    "Two-page text extraction and visual-render review performed on 2026-07-16.",
+    "Fresh read-only adversarial judges iteratively tested the source record and evaluator; outcomes are documented in the public handoff."
+  ],
+  "contractSealSha256": "b5105d75f4c7335af362a2985435b4129f6f895349b8ea54fb80bba4e9a83a6e",
+  "scope": "Mission-relevant project facts, attributed interpretations, collective labor, route chronology, and public-use boundaries from the two-page newspaper article.",
+  "copyrightBoundary": "The fixture stores bounded propositions and locators, not the article text or PDF.",
+  "identityNormalization": {
+    "printedName": "James Burkart",
+    "currentPublicName": "Jamie Burkart",
+    "rule": "Source-level observations retain James Burkart or the source's Burkart form; current portfolio projections may use Jamie while disclosing the normalization when the distinction matters."
+  },
+  "relatedGraph": {
+    "intakeIds": [
+      "INTAKE-WATERWAYS-PITCH-2007",
+      "INTAKE-WATERWAYS-CHARLOTTE-2009",
+      "INTAKE-WATERWAYS-KC-STAR-2007",
+      "INTAKE-WATERWAYS-PARTICIPATORY-PROGRAMS-LEAD"
+    ],
+    "observationIds": [
+      "OBS-WATERWAYS-PITCH-ORIGIN",
+      "OBS-WATERWAYS-PITCH-MATERIALS",
+      "OBS-WATERWAYS-PITCH-TROLLEY",
+      "OBS-WATERWAYS-KC-STAR-ORIGIN",
+      "OBS-WATERWAYS-KC-STAR-CORE-CREW",
+      "OBS-WATERWAYS-KC-STAR-STEERING-CREDIT",
+      "OBS-WATERWAYS-KC-STAR-BUILD-DURATION",
+      "OBS-WATERWAYS-KC-STAR-BUILD-MATERIALS",
+      "OBS-WATERWAYS-KC-STAR-RAFT-DIMENSIONS",
+      "OBS-WATERWAYS-KC-STAR-PROPULSION",
+      "OBS-WATERWAYS-KC-STAR-PROPULSION-PRACTICE",
+      "OBS-WATERWAYS-KC-STAR-DEPARTURE",
+      "OBS-WATERWAYS-KC-STAR-DEPARTURE-GUESTS",
+      "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT",
+      "OBS-WATERWAYS-KC-STAR-DISTANCE",
+      "OBS-WATERWAYS-KC-STAR-PACE",
+      "OBS-WATERWAYS-KC-STAR-PROJECT-TITLE",
+      "OBS-WATERWAYS-KC-STAR-LIVED-EXPERIENCE-PURPOSE",
+      "OBS-WATERWAYS-KC-STAR-PEOPLE-PURPOSE",
+      "OBS-WATERWAYS-KC-STAR-SPONTANEOUS-NAVIGATION",
+      "OBS-WATERWAYS-KC-STAR-TECHNOLOGY-PHILOSOPHY",
+      "OBS-WATERWAYS-KC-STAR-GUEST-PARTICIPATION",
+      "OBS-WATERWAYS-KC-STAR-PROVISIONING-STOPS",
+      "OBS-WATERWAYS-KC-STAR-INTERACTION-STOPS",
+      "OBS-WATERWAYS-KC-STAR-INVITATION-TO-JOIN",
+      "OBS-WATERWAYS-KC-STAR-CHAIN-OF-ROCKS-APPROACH",
+      "OBS-WATERWAYS-KC-STAR-CHAIN-OF-ROCKS-PASSAGE",
+      "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ENCOUNTERS",
+      "OBS-WATERWAYS-KC-STAR-OTHER-AUTHORITY-CONTACTS",
+      "OBS-WATERWAYS-KC-STAR-COAST-GUARD-BOARDING",
+      "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ASSESSMENT",
+      "OBS-WATERWAYS-KC-STAR-RAFT-BEACHED",
+      "OBS-WATERWAYS-KC-STAR-INTERRUPTION-DURATION",
+      "OBS-WATERWAYS-KC-STAR-VICKSBURG-TOWN-SUPPORT",
+      "OBS-WATERWAYS-KC-STAR-ATTORNEY-LEGAL-SUPPORT",
+      "OBS-WATERWAYS-KC-STAR-RAFT-RETRIEVAL-SUPPORT",
+      "OBS-WATERWAYS-KC-STAR-WORK-SUPPORT",
+      "OBS-WATERWAYS-KC-STAR-COMMUNITY-SENDOFF",
+      "OBS-WATERWAYS-KC-STAR-NATCHEZ-LOCATION",
+      "OBS-WATERWAYS-KC-STAR-NATCHEZ-FOG-DELAY",
+      "OBS-WATERWAYS-KC-STAR-EXPECTED-SALT-LOCATION",
+      "OBS-WATERWAYS-KC-STAR-SALT-BY-NEW-ORLEANS-UNKNOWN",
+      "OBS-WATERWAYS-KC-STAR-GULF-NOT-EXPECTED",
+      "OBS-WATERWAYS-KC-STAR-RIVER-INVISIBLE",
+      "OBS-WATERWAYS-KC-STAR-RIVER-POLLUTION-ASSOCIATION",
+      "OBS-WATERWAYS-KC-STAR-RIVER-VIOLENCE-ASSOCIATION",
+      "OBS-WATERWAYS-KC-STAR-RIVER-DIVIDING-LINE",
+      "OBS-WATERWAYS-KC-STAR-RIVER-HISTORICAL-NOVELTY",
+      "OBS-WATERWAYS-KC-STAR-RIVER-INDUSTRIAL-CHANNEL",
+      "OBS-WATERWAYS-KC-STAR-CULTURAL-CONNECTION",
+      "OBS-WATERWAYS-CHARLOTTE-EXHIBITION",
+      "OBS-WATERWAYS-CHARLOTTE-RAFT",
+      "OBS-WATERWAYS-CHARLOTTE-PARTICIPATION",
+      "OBS-WATERWAYS-PARTICIPATORY-PROGRAMS-LEAD"
+    ],
+    "claimIds": [
+      "CLM-WATERWAYS-RAFT-EXPEDITION",
+      "CLM-WATERWAYS-RAFT-PARTICIPATORY-OPERATIONS",
+      "CLM-WATERWAYS-RAFT-PARTICIPATORY-SYNTHESIS",
+      "CLM-WATERWAYS-GREAT-ACCOMMODATIONS"
+    ],
+    "inquiryIds": [
+      "INQ-WATERWAYS-RAFT-TERMINUS",
+      "INQ-WATERWAYS-PARTICIPATORY-PROGRAMS"
+    ],
+    "recordSetSha256": {
+      "intakes": "b4fd08ea98f21efc189d1162bc2df7783e7c0339e91a3612ed92273a3926198d",
+      "observations": "6e7b88196534461c25cdf815d5269823c56515a5694f694ce531efd464bad685",
+      "claims": "5aa3d6363a3de45473bdc0bf834daa6a6a99c064d53cdf350e4de0633c095b64",
+      "inquiries": "08c0d1cfd3204db43ee71ede211db0b0bbc7e24d0c66f3e599a2d2c3e1d414ce"
+    }
+  },
+  "reviewedIntakeSha256": "82d19d63f1ba988322a23247fe6b2595ded39575f8996a497f9c53d5ab6cfcb1",
+  "reviewedSourceSha256": "bd461a6278801b95a36beb6a165900c972c6a240ae515d80e2142167b7c8d38e",
+  "reviewedInquirySha256": "97a5d78122fb81550be2d74757ef58d6a082d741f00fbc94ead1c332c9cf581f",
+  "reviewedDocumentationSha256": "69cbf7cec1313a031dfcfadc7632887a3bbbf98099b7fc05aee523a8636f2cc6",
+  "reviewedRecordSha256": {
+    "OBS-WATERWAYS-KC-STAR-ORIGIN": "5fc1ae7735da546e15bc23c218bf532b0dee5e534dbb4aae9e291d48c9069e9c",
+    "OBS-WATERWAYS-KC-STAR-CORE-CREW": "2cffe512d2836c2a2499c31625ffe1a2196e553e74fb8693140ecd23fee96236",
+    "OBS-WATERWAYS-KC-STAR-STEERING-CREDIT": "ee597668cd0cd1a936435770bb398cb412c04d5d26eed02517d088e5cd294244",
+    "OBS-WATERWAYS-KC-STAR-BUILD-DURATION": "a17f783a5b4afcf97fbcfdaba0d89fed4418ddd4531517ef4b1576f32f116202",
+    "OBS-WATERWAYS-KC-STAR-BUILD-MATERIALS": "898d78360881fa0d1439d967e630a0444990ae9a091966df30636e98e4d05b50",
+    "OBS-WATERWAYS-KC-STAR-RAFT-DIMENSIONS": "67027f17ffe14b000fdc4569b8fdda78843820d1da5a6a81f76d5575f6d21d79",
+    "OBS-WATERWAYS-KC-STAR-PROPULSION": "fe1f9e2261ed2c17e16a603ac9d06c750768a6d275658d12dd4da53e94a58772",
+    "OBS-WATERWAYS-KC-STAR-PROPULSION-PRACTICE": "778c8d1fd1bcb6f0a0009566c786a30090586ed1673db2228b075bc7b4bb8011",
+    "OBS-WATERWAYS-KC-STAR-DEPARTURE": "e138dbb674a30ba80017f8cb26b5327c93437c48e7e482d6b662e3efe7caab14",
+    "OBS-WATERWAYS-KC-STAR-DEPARTURE-GUESTS": "a90e645f2eabae7ea1617d709508aabb7b57d0ff7fc654c72ae48b700856bfc1",
+    "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT": "be08f867dfa8e175c8c2f49e98aaa01254847c58ec92f8554d3cdbd01975bc3b",
+    "OBS-WATERWAYS-KC-STAR-DISTANCE": "02a885271735339f7e0872b3788d220721cc1f0768cf2feb04dc84c89f988dda",
+    "OBS-WATERWAYS-KC-STAR-PACE": "b9c303a62692f81e9dff9c2a4cc4daa4d6b7a976b00a39cf185de3294dc32f67",
+    "OBS-WATERWAYS-KC-STAR-PROJECT-TITLE": "f905b828a158950c111063000aad9d6f475c28aae001702a9b5c23e930b52a80",
+    "OBS-WATERWAYS-KC-STAR-LIVED-EXPERIENCE-PURPOSE": "d071c01bad17557c00d21267a9090392f216a30f7eb8b1cb0f095c2ff0bf004a",
+    "OBS-WATERWAYS-KC-STAR-PEOPLE-PURPOSE": "cb6336d81faa95e490f72bc6e9008fbe54a4e3046aed5004732439cf2cfa571e",
+    "OBS-WATERWAYS-KC-STAR-SPONTANEOUS-NAVIGATION": "4fae391dac6aaa7ee816b910643465f7d7a01b4d7924c22c94f0e34daa105398",
+    "OBS-WATERWAYS-KC-STAR-TECHNOLOGY-PHILOSOPHY": "46113ddebe30457c6d96a661f6a02343ea76d69367078e1f48d681e6455ad248",
+    "OBS-WATERWAYS-KC-STAR-GUEST-PARTICIPATION": "a3ae5feaa712cdda4570b5e782d7510b682d1b31b0eb1ea42824514fc11b7c24",
+    "OBS-WATERWAYS-KC-STAR-PROVISIONING-STOPS": "a7c06fa44b94f87bbc48ea5dc8a5a2ec3e033b62618330ab917b96bc21348f5e",
+    "OBS-WATERWAYS-KC-STAR-INTERACTION-STOPS": "ec3097ce1cf35da1e871bfd79201edc1e7bee945c5bd754adef21203f1510aa2",
+    "OBS-WATERWAYS-KC-STAR-INVITATION-TO-JOIN": "c621517846191ff5b1636698bd3f18546699e40b9e884da32364ff4165b00bf1",
+    "OBS-WATERWAYS-KC-STAR-CHAIN-OF-ROCKS-APPROACH": "fffb800cef21157a8dfea1a3f806114ee97a524077904298571e920348ce6146",
+    "OBS-WATERWAYS-KC-STAR-CHAIN-OF-ROCKS-PASSAGE": "dc7daa4a91d9beee679d522bfa0a3e079ad916cf6280189dc53a116166e8d300",
+    "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ENCOUNTERS": "85a4e0a1b1eede0b9d4514abc0057d21d62c89b17f120387a9921ebea95db057",
+    "OBS-WATERWAYS-KC-STAR-OTHER-AUTHORITY-CONTACTS": "c46e4758cfd19898ad450a0e411208defca5f99489a9e7b3697ba39a63df9d02",
+    "OBS-WATERWAYS-KC-STAR-COAST-GUARD-BOARDING": "d3524151cb5b2a28e6f8cc14d9019afa7a6f212207b8b3342f57ed14001a03d5",
+    "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ASSESSMENT": "d53b7a5792053d14c38ed5068bfec3d793844bae6674b6000f84d8fa8d6e075a",
+    "OBS-WATERWAYS-KC-STAR-RAFT-BEACHED": "7d69260eef27dfcd14a23d0ab7f0340b6ffb9ac986e12b7a85dfc47a74100cb7",
+    "OBS-WATERWAYS-KC-STAR-INTERRUPTION-DURATION": "3b4b32f8248fc9bcb0e95df5822643edbeb18397483c30682fedf614d03840ee",
+    "OBS-WATERWAYS-KC-STAR-VICKSBURG-TOWN-SUPPORT": "5ac8415c520a21132114facb2317f7cfa380c176c97c7c412fd3882e224d4f6b",
+    "OBS-WATERWAYS-KC-STAR-ATTORNEY-LEGAL-SUPPORT": "4635c1aeeb890794759dac889dbc405b584e1efc77821c807641cf21732e742e",
+    "OBS-WATERWAYS-KC-STAR-RAFT-RETRIEVAL-SUPPORT": "8eb861b40283fe0ceb8e61b791613d152bff6684e37b2d656feb6b6a1a13f552",
+    "OBS-WATERWAYS-KC-STAR-WORK-SUPPORT": "87db731f774c0ffbdaa217d4e49fc6a308eb9e53669c42d45db7cf059a7f9694",
+    "OBS-WATERWAYS-KC-STAR-COMMUNITY-SENDOFF": "0f6f2dcd929aa9da5fdfeca2ed39d1a50c0ea6002c62363037b42065853276f5",
+    "OBS-WATERWAYS-KC-STAR-NATCHEZ-LOCATION": "d4663ff70d3cfa74409e3300a9b9b3a23feaea7979f084047ff18a5d98b04004",
+    "OBS-WATERWAYS-KC-STAR-NATCHEZ-FOG-DELAY": "1de69598f7c330e8ceb652a15e12186d40a3f0b7ecfb61cd15a1a275a6d488da",
+    "OBS-WATERWAYS-KC-STAR-EXPECTED-SALT-LOCATION": "be62e923a3910f846b3d11dfdc262a06d9d49ab47201788c53a60d606820de5f",
+    "OBS-WATERWAYS-KC-STAR-SALT-BY-NEW-ORLEANS-UNKNOWN": "db1894bf546e3f85bfce41350236359248206aad1920cf3415c4b52c968415a3",
+    "OBS-WATERWAYS-KC-STAR-GULF-NOT-EXPECTED": "4029e9817312e4679879552ecdfd413192175a6cde45c5084a38ce7039245f3b",
+    "OBS-WATERWAYS-KC-STAR-RIVER-INVISIBLE": "6bc99c173e6debed9f9e59f9c1cf2cfa2c2f4a12a0e634e783947083949a0643",
+    "OBS-WATERWAYS-KC-STAR-RIVER-POLLUTION-ASSOCIATION": "66c3fb548539e68daea0b58192bee9ac92e51fb65206d2c8fe25e0c13c408017",
+    "OBS-WATERWAYS-KC-STAR-RIVER-VIOLENCE-ASSOCIATION": "e5cc940eb70fbd1dc129e21aa63830c852d35a5d192700ca625152dc860decba",
+    "OBS-WATERWAYS-KC-STAR-RIVER-DIVIDING-LINE": "d879ee81c563860e1f708125704653e53f6a469b4b617e7d22e77ad5534c2ad1",
+    "OBS-WATERWAYS-KC-STAR-RIVER-HISTORICAL-NOVELTY": "54395101a16953ee667bbfe664d0d1ecaf839d9d9ab2085cb4be407ca003e680",
+    "OBS-WATERWAYS-KC-STAR-RIVER-INDUSTRIAL-CHANNEL": "0145e9783aec61835311ff693fcbb95a170169b325d11ccc625528e397a5ecd0",
+    "OBS-WATERWAYS-KC-STAR-CULTURAL-CONNECTION": "b39260a43c47ed6cbae94b4c20ea327a29a9cecc8ee3006b2ce6d39d5ab9990f"
+  },
+  "reviewedClaimSha256": {
+    "CLM-WATERWAYS-RAFT-EXPEDITION": "c2c61ddfbc7b1676fb8e6ecb9e274771deb8920b07d186965b29700bf6d66267",
+    "CLM-WATERWAYS-RAFT-PARTICIPATORY-OPERATIONS": "19a34087d12c947a5f07675e1b4d6583e435d3f6f8d4f0061e585da7ea8d1a16",
+    "CLM-WATERWAYS-RAFT-PARTICIPATORY-SYNTHESIS": "ce14f08e53a19838aa042afb83d8158977f1cb9784d9840ff3f520801a0f959e"
+  },
+  "included": [
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-ORIGIN",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, project-origin paragraph beginning 'Where does this odyssey begin?'",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The project began with an idea by James Burkart.",
+      "textTerms": [
+        "idea by James Burkart"
+      ],
+      "limitationTerms": [
+        "sole authorship",
+        "article prints James Burkart"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-CORE-CREW",
+      "page": "A1 and A4",
+      "column": "A1 article column 4; A4 photograph caption spanning article columns 2-3",
+      "locator": "A1, article column 4, crew-and-location paragraph; A4, photograph caption spanning article columns 2-3",
+      "speaker": "Darryl Levings and photograph caption",
+      "boundedProposition": "The printed core-crew names are Libby Hendon, James Burkart, and Laura Mattingly.",
+      "textTerms": [
+        "Libby Hendon",
+        "James Burkart",
+        "Laura Mattingly"
+      ],
+      "limitationTerms": [
+        "newspaper itself prints James",
+        "not every guest"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-STEERING-CREDIT",
+      "page": "A1",
+      "column": "photograph caption spanning article columns 1-4",
+      "locator": "A1, photograph caption spanning article columns 1-4",
+      "speaker": "Photograph caption",
+      "boundedProposition": "Laura Mattingly was steering in the photographed moment while James Burkart and Libby Hendon paddled.",
+      "textTerms": [
+        "front-page photograph caption",
+        "Laura Mattingly",
+        "steering",
+        "James Burkart",
+        "Libby Hendon"
+      ],
+      "limitationTerms": [
+        "photographed operating moment",
+        "not a complete allocation"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-BUILD-DURATION",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, first continuation paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The raft was built in three weeks.",
+      "textTerms": [
+        "built in three weeks"
+      ],
+      "limitationTerms": [
+        "who performed each"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-BUILD-MATERIALS",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, first two continuation paragraphs",
+      "speaker": "Libby Hendon, quoted by Darryl Levings",
+      "boundedProposition": "Hendon described discarded construction materials including plastic syrup drums.",
+      "textTerms": [
+        "Libby Hendon",
+        "discarded materials",
+        "30-gallon plastic beverage-syrup drums"
+      ],
+      "limitationTerms": [
+        "illustrative rather than a complete bill of materials"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-RAFT-DIMENSIONS",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, propulsion paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The raft was approximately 12 by 13 feet.",
+      "textTerms": [
+        "roughly 12 by 13 feet"
+      ],
+      "limitationTerms": [
+        "not a measured drawing"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-PROPULSION",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, propulsion paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "Two bicycles linked to a paddle wheel supplied human power.",
+      "textTerms": [
+        "two bicycles linked to a paddle wheel"
+      ],
+      "limitationTerms": [
+        "does not provide engineering drawings"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-PROPULSION-PRACTICE",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, paragraph beginning 'But as Libby explained Tuesday'",
+      "speaker": "Libby Hendon, quoted by Darryl Levings",
+      "boundedProposition": "Hendon said the crew mainly floated and applied power when wind or current pulled the raft toward rocks or out of a favorable position.",
+      "textTerms": [
+        "Libby Hendon",
+        "mainly floated",
+        "wind or current",
+        "toward rocks"
+      ],
+      "limitationTerms": [
+        "not a complete navigation log",
+        "allocation of helm and propulsion duties"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-DEPARTURE",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, project-origin paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The raft left the West Bottoms on July 21, 2007.",
+      "textTerms": [
+        "West Bottoms",
+        "July 21, 2007"
+      ],
+      "limitationTerms": [
+        "do not establish the later route"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-DEPARTURE-GUESTS",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, project-origin paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "Several friends were aboard at departure.",
+      "textTerms": [
+        "several friends were aboard"
+      ],
+      "limitationTerms": [
+        "does not identify every departure guest"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT",
+      "page": "A1",
+      "column": "article column 4",
+      "locator": "A1, article column 4, crew-and-location paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "At publication the crew was somewhere south of Baton Rouge.",
+      "textTerms": [
+        "south of Baton Rouge",
+        "November 15, 2007"
+      ],
+      "limitationTerms": [
+        "does not establish the final route",
+        "completed arrival at salt water"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-DISTANCE",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, propulsion paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The crew had passed the 1,000-mile marker.",
+      "textTerms": [
+        "1,000-mile marker"
+      ],
+      "limitationTerms": [
+        "not a complete route log"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-PACE",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, propulsion paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The raft generally moved at approximately two to four miles per hour.",
+      "textTerms": [
+        "two to four miles per hour"
+      ],
+      "limitationTerms": [
+        "not an independently audited performance measurement"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-PROJECT-TITLE",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, project-title paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The article supplied the project's long-form title.",
+      "textTerms": [
+        "Release Yourself onto the Water until it Tastes of Salt"
+      ],
+      "limitationTerms": [
+        "does not by itself establish the completed route"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-LIVED-EXPERIENCE-PURPOSE",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, project-purpose paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "A living experience on the rivers was a stated purpose.",
+      "textTerms": [
+        "living experience on the rivers"
+      ],
+      "limitationTerms": [
+        "stated purpose does not establish participant outcomes"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-PEOPLE-PURPOSE",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, project-purpose paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "Meeting people along the rivers was a stated purpose.",
+      "textTerms": [
+        "meeting people along the rivers"
+      ],
+      "limitationTerms": [
+        "stated intention does not establish who participated"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-SPONTANEOUS-NAVIGATION",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, paragraph beginning 'No maps, no books about the river'",
+      "speaker": "Laura Mattingly",
+      "boundedProposition": "Mattingly described an intention to preserve spontaneity rather than rely on maps or books.",
+      "textTerms": [
+        "Laura Mattingly",
+        "keep the journey spontaneous"
+      ],
+      "limitationTerms": [
+        "not proof that no navigational information"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-TECHNOLOGY-PHILOSOPHY",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, technology-philosophy paragraph",
+      "speaker": "Laura Mattingly",
+      "boundedProposition": "Mattingly described technology as optional rather than required.",
+      "textTerms": [
+        "Laura Mattingly",
+        "technology as an option rather than a requirement"
+      ],
+      "limitationTerms": [
+        "not a complete inventory of technology"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-GUEST-PARTICIPATION",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, friends-aboard paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "Friends joined route segments around St. Louis, Memphis, and Vicksburg.",
+      "textTerms": [
+        "St. Louis",
+        "Memphis",
+        "Vicksburg"
+      ],
+      "limitationTerms": [
+        "does not identify every guest"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-PROVISIONING-STOPS",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, St. Francisville call-in paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The crew often stopped for food and water.",
+      "textTerms": [
+        "stopped for food and water"
+      ],
+      "limitationTerms": [
+        "does not provide a complete provisioning-stop inventory"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-INTERACTION-STOPS",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, St. Francisville call-in paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The crew often stopped to interact with strangers.",
+      "textTerms": [
+        "interaction with strangers"
+      ],
+      "limitationTerms": [
+        "does not provide a complete participant roster"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-INVITATION-TO-JOIN",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, voice-mail setup paragraph",
+      "speaker": "James Burkart, paraphrased by Darryl Levings",
+      "boundedProposition": "James Burkart recalled that he invited people the crew met to join the raft.",
+      "textTerms": [
+        "James Burkart",
+        "he invited people the crew met to join"
+      ],
+      "limitationTerms": [
+        "Burkart's reported invitation practice",
+        "not who accepted",
+        "article prints James Burkart"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-CHAIN-OF-ROCKS-APPROACH",
+      "page": "A4",
+      "column": "2",
+      "locator": "A4, column 2, paragraph beginning 'We checked it out from a bridge'",
+      "speaker": "Laura Mattingly, quoted by Darryl Levings",
+      "boundedProposition": "Mattingly described assessing the Chain of Rocks from a bridge and attempting a route through it.",
+      "textTerms": [
+        "Laura Mattingly",
+        "bridge-based visual assessment",
+        "Chain of Rocks"
+      ],
+      "limitationTerms": [
+        "one route decision",
+        "not a complete navigation method"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-CHAIN-OF-ROCKS-PASSAGE",
+      "page": "A4",
+      "column": "2",
+      "locator": "A4, column 2, paragraph beginning 'Intimidating,' described Hendon",
+      "speaker": "Libby Hendon, quoted by Darryl Levings",
+      "boundedProposition": "Hendon described passing between boulders and contacting a tree at the Chain of Rocks.",
+      "textTerms": [
+        "Libby Hendon",
+        "between boulders",
+        "contact with a tree",
+        "Chain of Rocks"
+      ],
+      "limitationTerms": [
+        "one passage",
+        "not a complete incident report"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ENCOUNTERS",
+      "page": "A4",
+      "column": "2",
+      "locator": "A4, column 2, paragraph beginning 'The crew's biggest snag by far was the U.S. Coast Guard'",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The article reported 14 prior encounters with the U.S. Coast Guard.",
+      "textTerms": [
+        "U.S. Coast Guard",
+        "14 times before the Vicksburg boarding"
+      ],
+      "limitationTerms": [
+        "not an independently reconstructed Coast Guard contact log",
+        "nature or outcome of every encounter"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-OTHER-AUTHORITY-CONTACTS",
+      "page": "A4",
+      "column": "2",
+      "locator": "A4, column 2, sentence beginning 'Police, fire, sheriff'",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The article separately named other authority classes that had checked on the crew without assigning them the Coast Guard count.",
+      "textTerms": [
+        "separately reported",
+        "police",
+        "fire",
+        "sheriff",
+        "state conservation",
+        "Army Corps"
+      ],
+      "limitationTerms": [
+        "does not count these non-Coast-Guard contacts",
+        "nature or outcome of every check"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-COAST-GUARD-BOARDING",
+      "page": "A4",
+      "column": "2",
+      "locator": "A4, column 2, paragraph beginning 'Fifteen miles north of Vicksburg'",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The Coast Guard boarded the raft 15 miles north of Vicksburg.",
+      "textTerms": [
+        "boarded the raft 15 miles north of Vicksburg"
+      ],
+      "limitationTerms": [
+        "does not establish the complete encounter chronology"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ASSESSMENT",
+      "page": "A4",
+      "column": "2",
+      "locator": "A4, column 2, paragraph beginning 'Unsuitable design and configuration'",
+      "speaker": "Darryl Levings summarizing the Coast Guard assessment",
+      "boundedProposition": "The article reported an unsuitable-design-and-configuration assessment.",
+      "textTerms": [
+        "design and configuration as unsuitable"
+      ],
+      "limitationTerms": [
+        "not a complete administrative, legal, engineering, or safety record"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-RAFT-BEACHED",
+      "page": "A4",
+      "column": "2",
+      "locator": "A4, column 2, paragraph ending 'The raft was beached'",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The raft was beached during the intervention.",
+      "textTerms": [
+        "raft was beached"
+      ],
+      "limitationTerms": [
+        "does not provide a complete custody record"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-INTERRUPTION-DURATION",
+      "page": "A4",
+      "column": "2",
+      "locator": "A4, column 2, concluding Coast Guard paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The crew remained stranded for 51 days.",
+      "textTerms": [
+        "51 days"
+      ],
+      "limitationTerms": [
+        "does not establish that every day had the same"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-VICKSBURG-TOWN-SUPPORT",
+      "page": "A4",
+      "column": "2",
+      "locator": "A4, column 2, concluding Vicksburg-support paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "People in Vicksburg took in and fed the crew.",
+      "textTerms": [
+        "Vicksburg",
+        "took in and fed"
+      ],
+      "limitationTerms": [
+        "does not establish who participated"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-ATTORNEY-LEGAL-SUPPORT",
+      "page": "A4",
+      "column": "2-3",
+      "locator": "A4, columns 2-3, attorney-support paragraph crossing the column break",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The article named Paul Kelly Loyacono as providing free legal help.",
+      "textTerms": [
+        "Paul Kelly Loyacono",
+        "free legal help"
+      ],
+      "limitationTerms": [
+        "not a complete legal file",
+        "renewed endorsement"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-RAFT-RETRIEVAL-SUPPORT",
+      "page": "A4",
+      "column": "3",
+      "locator": "A4, column 3, raft-retrieval paragraph",
+      "speaker": "Paul Kelly Loyacono, quoted by Darryl Levings",
+      "boundedProposition": "Loyacono led a group that helped retrieve the raft.",
+      "textTerms": [
+        "Paul Kelly Loyacono",
+        "helped retrieve the raft"
+      ],
+      "limitationTerms": [
+        "does not identify every helper",
+        "renewed endorsement"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-WORK-SUPPORT",
+      "page": "A4",
+      "column": "3",
+      "locator": "A4, column 3, employment-support paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "Loyacono helped the crew find jobs in substitute teaching, being a coffee barista, and labor with home renovators.",
+      "textTerms": [
+        "Paul Kelly Loyacono",
+        "substitute teaching",
+        "being a coffee barista",
+        "labor with home renovators"
+      ],
+      "limitationTerms": [
+        "does not establish employment duration",
+        "which crew member held each job",
+        "renewed endorsement"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-COMMUNITY-SENDOFF",
+      "page": "A4",
+      "column": "4",
+      "locator": "A4, column 4, departure-support paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "A large group saw the crew off from Vicksburg.",
+      "textTerms": [
+        "large group saw the crew off"
+      ],
+      "limitationTerms": [
+        "does not identify the group"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-NATCHEZ-LOCATION",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, Natchez route-update paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The crew had been in Natchez on the Thursday before publication.",
+      "textTerms": [
+        "in Natchez",
+        "Thursday before publication"
+      ],
+      "limitationTerms": [
+        "exact mooring location",
+        "relation between Natchez and the separately reported fog delay"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-NATCHEZ-FOG-DELAY",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, Natchez route-update paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "Fog cost the crew three half-days tied up, without locating each delay.",
+      "textTerms": [
+        "fog",
+        "three half-days tied up"
+      ],
+      "limitationTerms": [
+        "does not establish where each fog delay occurred",
+        "complete weather log",
+        "independently measured delay"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-EXPECTED-SALT-LOCATION",
+      "page": "A4",
+      "column": "1",
+      "locator": "A4, column 1, anticipated-finish paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The crew expected to encounter salt water below New Orleans.",
+      "textTerms": [
+        "expected to be below New Orleans"
+      ],
+      "limitationTerms": [
+        "not evidence of the actual final location"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-SALT-BY-NEW-ORLEANS-UNKNOWN",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, anticipated-route paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The crew did not know whether they would encounter salt by New Orleans.",
+      "textTerms": [
+        "did not know",
+        "encounter salt by New Orleans"
+      ],
+      "limitationTerms": [
+        "does not establish where salt was ultimately encountered",
+        "whether the expedition was completed"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-GULF-NOT-EXPECTED",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, anticipated-route paragraph",
+      "speaker": "Darryl Levings",
+      "boundedProposition": "The crew did not expect to see the Gulf from the raft.",
+      "textTerms": [
+        "did not expect to see the Gulf from the raft"
+      ],
+      "limitationTerms": [
+        "does not establish the final route",
+        "mode of travel after the article appeared"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-RIVER-INVISIBLE",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, closing voice-mail paragraph",
+      "speaker": "James Burkart, quoted by Darryl Levings",
+      "boundedProposition": "James Burkart described the Kansas City river as invisible space.",
+      "textTerms": [
+        "James Burkart",
+        "river as invisible space"
+      ],
+      "limitationTerms": [
+        "not an independent measurement",
+        "article prints James Burkart"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-RIVER-POLLUTION-ASSOCIATION",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, voice-mail paragraph beginning 'I tell people'",
+      "speaker": "James Burkart, quoted by Darryl Levings",
+      "boundedProposition": "Reflecting on growing up in Kansas City, James Burkart described an association with poisonous water.",
+      "textTerms": [
+        "James Burkart",
+        "reflecting on growing up in Kansas City",
+        "poisonous water"
+      ],
+      "limitationTerms": [
+        "does not establish measured water quality",
+        "article prints James Burkart"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-RIVER-VIOLENCE-ASSOCIATION",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, voice-mail paragraph beginning 'I tell people'",
+      "speaker": "James Burkart, quoted by Darryl Levings",
+      "boundedProposition": "Reflecting on growing up in Kansas City, James Burkart described violent-crime imagery associated with the river.",
+      "textTerms": [
+        "James Burkart",
+        "reflecting on growing up in Kansas City",
+        "violent-crime imagery"
+      ],
+      "limitationTerms": [
+        "does not establish crime incidence",
+        "article prints James Burkart"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-RIVER-DIVIDING-LINE",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, closing voice-mail paragraph",
+      "speaker": "James Burkart, quoted by Darryl Levings",
+      "boundedProposition": "James Burkart described the river as a dividing line.",
+      "textTerms": [
+        "James Burkart",
+        "river as a dividing line"
+      ],
+      "limitationTerms": [
+        "not an independent account",
+        "article prints James Burkart"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-RIVER-HISTORICAL-NOVELTY",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, closing voice-mail paragraph",
+      "speaker": "James Burkart, quoted by Darryl Levings",
+      "boundedProposition": "James Burkart described the river as a historical novelty.",
+      "textTerms": [
+        "James Burkart",
+        "historical novelty"
+      ],
+      "limitationTerms": [
+        "rather than an institutional history",
+        "article prints James Burkart"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-RIVER-INDUSTRIAL-CHANNEL",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, closing voice-mail paragraph",
+      "speaker": "James Burkart, quoted by Darryl Levings",
+      "boundedProposition": "James Burkart said that for some the river was an industrial pipeline.",
+      "textTerms": [
+        "James Burkart",
+        "for some the river was an industrial pipeline"
+      ],
+      "limitationTerms": [
+        "does not inventory all river uses",
+        "article prints James Burkart"
+      ]
+    },
+    {
+      "observationId": "OBS-WATERWAYS-KC-STAR-CULTURAL-CONNECTION",
+      "page": "A4",
+      "column": "5",
+      "locator": "A4, column 5, final voice-mail paragraph",
+      "speaker": "James Burkart, quoted by Darryl Levings",
+      "boundedProposition": "James Burkart hoped the river might awaken cultural connection between the West Bottoms and Delta towns.",
+      "textTerms": [
+        "James Burkart",
+        "cultural connection",
+        "West Bottoms",
+        "Delta towns"
+      ],
+      "limitationTerms": [
+        "does not establish that the cultural connection occurred",
+        "article prints James Burkart"
+      ]
+    }
+  ],
+  "notIncluded": [
+    {
+      "subject": "family reaction and household context",
+      "disposition": "omit",
+      "reason": "Not needed for a professional claim and outside the mission-relevant source scope."
+    },
+    {
+      "subject": "personal theft and financial loss during the interruption",
+      "disposition": "protected",
+      "reason": "The public repository does not need to re-amplify personal loss or financial detail."
+    },
+    {
+      "subject": "rough sleeping and day-night travel routine",
+      "disposition": "defer",
+      "reason": "Potential field-operations context, but not required for the present claims."
+    },
+    {
+      "subject": "sandbar, electrical-storm, and other route-hazard anecdotes",
+      "disposition": "defer",
+      "reason": "Potential operational context, but later use should preserve attribution and avoid implying a complete incident or safety record."
+    },
+    {
+      "subject": "participant education and prior-project backstory",
+      "disposition": "omit",
+      "reason": "Not needed for the current professional claims and incomplete as a biographical record."
+    },
+    {
+      "subject": "Huckleberry Finn framing and participant response to it",
+      "disposition": "omit",
+      "reason": "The reporter's literary framing is not evidence of project method, role, or outcome."
+    },
+    {
+      "subject": "competing Coast Guard, crew, and participant interpretations",
+      "disposition": "defer",
+      "reason": "Any later use must preserve all attributed viewpoints and avoid converting the article into a complete adjudicative record."
+    },
+    {
+      "subject": "equipment changes after the intervention",
+      "disposition": "defer",
+      "reason": "Potential technical-operations detail requiring a dedicated reconstruction."
+    },
+    {
+      "subject": "private email excerpt about leaving Vicksburg",
+      "disposition": "protected",
+      "reason": "The newspaper printed the excerpt, but the present professional record does not need to republish personal correspondence."
+    },
+    {
+      "subject": "Paul Kelly Loyacono admiration statement",
+      "disposition": "defer",
+      "reason": "Do not convert a 2007 newspaper quotation into a current testimonial, relationship, or endorsement without renewed consent."
+    },
+    {
+      "subject": "anticipated tow support after reaching salt water",
+      "disposition": "defer",
+      "reason": "The article records a future plan, not a completed outcome."
+    }
+  ]
+}
