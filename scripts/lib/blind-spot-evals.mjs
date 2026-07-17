@@ -484,6 +484,10 @@ export function runBlindSpotEval(id) {
     return false;
   }
 
-  console.log("Criterion met.");
+  console.log(
+    entry.status === "governed-open"
+      ? "Governance criterion met; real-world validation remains open."
+      : "Criterion met."
+  );
   return true;
 }

@@ -24,7 +24,18 @@ npm run test:composite-integration
 npm run evals:composite-integration
 ```
 
-Run artifacts belong under `evals/composite-integration/runs/`. The candidate
-fingerprint excludes run artifacts so a scorecard can be committed without
-changing the evaluated application and governance inputs. Each committed run
-also records the Git commit and may only be written from a clean worktree.
+The normal checker requires two committed passing holdouts for the unchanged
+candidate. Bootstrap them only after committing the candidate:
+
+```bash
+npm run check:composite-integration -- --write-run evals/composite-integration/runs/<unique-a>.json
+npm run check:composite-integration -- --write-run evals/composite-integration/runs/<unique-b>.json
+```
+
+Run artifacts belong under `evals/composite-integration/runs/`. The full-tree
+candidate fingerprint excludes only immutable run artifacts and ephemeral
+generated/build output, so a scorecard can be committed without changing the
+evaluated inputs. Each run records the governing Git commit, is validated
+against the scorecard schema, may only be written from a clean candidate, and
+cannot overwrite an existing record. Failed runs remain evidence rather than
+being silently replaced.

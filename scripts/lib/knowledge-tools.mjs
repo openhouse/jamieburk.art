@@ -16,7 +16,11 @@ const unsafePatterns = [
   { label: "private filesystem path", pattern: /(?:\/Users\/|\/Volumes\/|[A-Za-z]:\\)/ },
   { label: "email address", pattern: /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i },
   { label: "phone number", pattern: /(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}/ },
-  { label: "credential or token", pattern: /(?:sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|-----BEGIN .*PRIVATE KEY-----|\bpassword\s*[:=])/i }
+  { label: "credential or token", pattern: /(?:sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|-----BEGIN .*PRIVATE KEY-----|\bpassword\s*[:=])/i },
+  { label: "signed or secret URL parameter", pattern: /[?&](?:x-amz-signature|signature|sig|token|access_token|auth|key|secret)=[^&\s]+/i },
+  { label: "private legal or stakeholder detail", pattern: /\b(?:private|confidential|raw)\b.{0,40}\b(?:legal strategy|legal review|strategy|stakeholder (?:list|roster)|donor (?:list|roster)|subscriber (?:list|roster))\b/i },
+  { label: "private health detail", pattern: /\b(?:has|diagnosed with|medical (?:record|history|condition)|health (?:record|history|condition))\s+(?:cancer|hiv|aids|diabetes|depression|anxiety|bipolar|schizophrenia)\b/i },
+  { label: "private financial detail", pattern: /\b(?:owes|debt|salary|bank balance|account balance|tax liability)\b.{0,24}\$[\d,]+/i }
 ];
 
 function stableText(value) {
@@ -136,6 +140,8 @@ export function queryKnowledgeBank(bank, filters = {}) {
   const claims = bank.claims.filter((claim) =>
     (!project || claim.project === project) &&
     (!claimStatus || claim.status === claimStatus) &&
+    (!publicationSafe || ["confirmed", "confirmed-with-boundary", "use-with-care"].includes(claim.status)) &&
+    (!publicationSafe || claim.projections.some((projection) => projection.status === "active")) &&
     (!evidenceRole || claim.evidence.some((evidence) => evidence.relationship === evidenceRole)) &&
     (!hasRouteFilter || claim.projections.some((projection) =>
       projection.status === "active" && projection.surfaces.some((surface) => surfaces.has(surface))
@@ -157,7 +163,7 @@ export function queryKnowledgeBank(bank, filters = {}) {
     project ? projectId === project : !isConstrainedByClaims || selectedProjects.has(projectId);
   const intakeItems = bank.intakeItems.filter((item) =>
     item.projectIds.some((id) => projectMatches(id)) &&
-    (!publicationSafe || item.publicationStatus !== "private")
+    (!publicationSafe || ["eligible", "projected"].includes(item.publicationStatus))
   );
   const sources = bank.sources.filter((source) =>
     (!isConstrainedByClaims || selectedSourceIds.has(source.id)) &&
@@ -166,7 +172,7 @@ export function queryKnowledgeBank(bank, filters = {}) {
   const observations = bank.observations.filter((observation) =>
     projectMatches(observation.project) &&
     (!isConstrainedByClaims || observation.claimIds?.some((id) => claimIds.has(id)) || selectedSourceIds.has(observation.sourceId)) &&
-    (!publicationSafe || publicSourceIds.has(observation.sourceId))
+    (!publicationSafe || (publicSourceIds.has(observation.sourceId) && observation.status === "verified"))
   );
   const researchInquiries = bank.researchInquiries.filter((inquiry) =>
     projectMatches(inquiry.project)
@@ -197,14 +203,13 @@ export function queryKnowledgeBank(bank, filters = {}) {
     intakeItems: selected.intakeItems,
     sources: selected.sources.map(({ protectedLocatorId: _protected, ...source }) => source),
     observations: selected.observations,
-    claims: selected.claims.map((claim) => ({
+    claims: selected.claims.map(({ internalClaim: _internalClaim, ...claim }) => ({
       ...claim,
+      projections: claim.projections.filter((projection) => projection.status === "active"),
       evidence: claim.evidence
         .filter((evidence) => publicSourceIds.has(evidence.sourceId))
         .map(({ internalExcerpt: _internal, ...evidence }) => evidence)
     })),
-    researchInquiries: selected.researchInquiries.map(
-      ({ protectedLocatorId: _protected, ...inquiry }) => inquiry
-    )
+    researchInquiries: []
   };
 }

@@ -22,6 +22,24 @@
       "boundaries": ["Do not claim Jamie alone passed, caused, or authored legislation.", "Preserve named collaborators' and organizations' roles when a source establishes them."]
     },
     {
+      "id": "commercial-rent-stabilization",
+      "creditScope": "collective",
+      "publicRule": "Credit Jamie's documented campaign-memory, source-mapping, implementation, and facilitation work while preserving policy authorship, legal authority, coalition strategy, and legislative action as distinct collective and institutional roles.",
+      "boundaries": ["Do not attribute coalition policy or legislation solely to Jamie.", "Do not expose protected strategy, legal-review context, stakeholder records, or private correspondence."]
+    },
+    {
+      "id": "nyc-artist-coalition",
+      "creditScope": "collective",
+      "publicRule": "State Jamie's supported co-founding, organizing, campaign-site, participation-system, and civic-translation work directly while crediting collaborators, artists, venues, agencies, and elected officials for their own actions and collective outcomes.",
+      "boundaries": ["Do not turn coalition victories into Jamie's sole causality or authorship.", "Shared-account posts and events do not establish one teammate's authorship without additional evidence."]
+    },
+    {
+      "id": "kc-spaces-fund",
+      "creditScope": "collective",
+      "publicRule": "Credit Jamie's documented behind-the-scenes digital infrastructure and naming support while preserving public organizer, grant, fiscal-sponsor, and campaign decisions with the people and organizations identified by the campaign.",
+      "boundaries": ["Do not describe Jamie as a named public organizer without collaborator corroboration.", "Do not expose applicants, grantees, donors, list members, payment records, credentials, or private campaign materials."]
+    },
+    {
       "id": "wowlist",
       "creditScope": "collective",
       "publicRule": "Describe WOW List as Jamie and Richard Love's project and distinguish Jamie's supported product, engineering, editorial, event, and social-presence responsibilities from community contributions.",

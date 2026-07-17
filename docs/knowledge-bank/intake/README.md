@@ -36,7 +36,10 @@ npm run knowledge:intake -- \
 Review the JSON, then append it with the same command plus `--write`. The
 receipt log is append-only; corrections and maturation happen in canonical
 records, not by silently rewriting the received lead. The command rejects
-common private paths, email addresses, phone numbers, and credentials.
+common private paths, email addresses, phone numbers, credentials, signed or
+secret URL parameters, and explicit legal, stakeholder, health, or financial
+detail. Regex guards are not a substitute for human review: if a summary would
+be harmful in a newspaper, do not write it to this public repository.
 
 Query the canonical lifecycle without adding a public database route:
 
@@ -46,6 +49,12 @@ npm run knowledge:query -- --surface /work/callnyc --claim-status confirmed-with
 npm run knowledge:query -- --entity "New York City Council" --date 2016-05-03 --publication-safe
 npm run knowledge:query -- --evidence-role corroborating --audience hiring --purpose evidence --publication-safe
 ```
+
+`--publication-safe` is allowlisted: it returns only eligible or projected
+intake, public or public-metadata sources, verified observations, bounded
+public claim statuses with active projections, and public evidence fields. It
+omits pending or knowledge-bank-only leads, internal claim formulations,
+protected evidence, held or inferential claims, and research inquiries.
 
 For a photograph, record its role as evidence, artifact, projection candidate,
 or research lead. Do not create a `photo-caption` projection until rights,

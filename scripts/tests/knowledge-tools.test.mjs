@@ -67,23 +67,48 @@ test("intake refuses common private content", () => {
     () => createLeadReceipt({ ...base, summary: "Contact person@example.org" }),
     /email address/
   );
+  assert.throws(
+    () => createLeadReceipt({ ...base, summary: "Raw coalition legal strategy and a stakeholder roster" }),
+    /legal or stakeholder/
+  );
+  assert.throws(
+    () => createLeadReceipt({ ...base, summary: "A participant has cancer" }),
+    /health detail/
+  );
+  assert.throws(
+    () => createLeadReceipt({ ...base, summary: "A participant owes $50,000" }),
+    /financial detail/
+  );
+  assert.throws(
+    () => createLeadReceipt({
+      ...base,
+      kind: "url",
+      summary: "Protected archive download",
+      url: "https://example.org/file?X-Amz-Signature=SECRET"
+    }),
+    /signed or secret URL/
+  );
 });
 
 test("public-safe queries remove protected source details and internal excerpts", () => {
   const bank = {
-    intakeItems: [{ projectIds: ["example"], publicationStatus: "pending" }],
+    intakeItems: [
+      { id: "LEAD-ONE", projectIds: ["example"], publicationStatus: "projected" },
+      { id: "LEAD-TWO", projectIds: ["example"], publicationStatus: "pending" }
+    ],
     sources: [
       { id: "SRC-PUBLIC", visibility: "public", protectedLocatorId: "LOC-ONE" },
       { id: "SRC-PRIVATE", visibility: "private", protectedLocatorId: "LOC-TWO" }
     ],
     observations: [
-      { project: "example", sourceId: "SRC-PUBLIC" },
+      { project: "example", sourceId: "SRC-PUBLIC", status: "verified" },
       { project: "example", sourceId: "SRC-PRIVATE" }
     ],
     claims: [{
       id: "CLM-ONE",
       project: "example",
       status: "confirmed",
+      internalClaim: "remove this internal formulation",
       projections: [{ status: "active", surfaces: ["/work/example"] }],
       evidence: [
         { sourceId: "SRC-PUBLIC", internalExcerpt: "remove me" },
@@ -99,9 +124,11 @@ test("public-safe queries remove protected source details and internal excerpts"
     routeBindings: [{ path: "/work/example", audience: "Hiring readers", purpose: "Show evidence" }]
   });
   assert.deepEqual(result.sources.map((source) => source.id), ["SRC-PUBLIC"]);
+  assert.deepEqual(result.intakeItems.map((item) => item.id), ["LEAD-ONE"]);
   assert.equal("protectedLocatorId" in result.sources[0], false);
   assert.deepEqual(result.claims[0].evidence, [{ sourceId: "SRC-PUBLIC" }]);
-  assert.equal("protectedLocatorId" in result.researchInquiries[0], false);
+  assert.equal("internalClaim" in result.claims[0], false);
+  assert.deepEqual(result.researchInquiries, []);
   assert.deepEqual(result.matchedRoutes.map((route) => route.path), ["/work/example"]);
 });
 

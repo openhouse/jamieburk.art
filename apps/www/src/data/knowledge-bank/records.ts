@@ -457,6 +457,46 @@ const knowledgeBankInput = {
     ...ucscNarrativeEvaluationSources,
     ...waterwaysKcStarSources,
     {
+      id: "SRC-APPROVED-RESUME-2026-06-11",
+      title: "Jamie Burkart resume, Technical Project Manager, Product Operations and Implementation",
+      organization: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2026-06-11",
+      accessedAt: "2026-07-16",
+      canonicalUrl: "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Jamie Burkart, resume, Technical Project Manager, Product Operations and Implementation, June 11, 2026.",
+      publicNote: "The approved two-page resume is the direct source for selected career, small-business, and technical-operations summary language.",
+      supportsGenerally: [
+        "approved public career chronology",
+        "selected role, responsibility, and professional-development language"
+      ],
+      doesNotEstablish: [
+        "sole causality for collective or business outcomes",
+        "a formal job title where the resume describes cross-project practice"
+      ]
+    },
+    {
+      id: "SRC-AI-EVALS-MAVEN-CERTIFICATE-2026",
+      title: "AI Evals for Engineers and PMs certificate of completion",
+      organization: "Maven",
+      kind: "project-archive",
+      visibility: "public-metadata-only",
+      preservationStatus: "private",
+      accessedAt: "2026-07-16",
+      publicCitation: "Maven, AI Evals for Engineers and PMs certificate of completion for James Burkart, 2026.",
+      publicNote: "The certificate names Hamel Husain and Shreya Shankar as instructors and establishes course completion only.",
+      supportsGenerally: ["completion of AI Evals for Engineers and PMs in 2026"],
+      doesNotEstablish: [
+        "instructor affiliation",
+        "professional certification beyond the certificate's completion wording",
+        "mastery of every course topic"
+      ],
+      protectedLocatorId: "LOC-AI-EVALS-MAVEN-CERTIFICATE-2026"
+    },
+    {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
       organization: "Civic Hall",

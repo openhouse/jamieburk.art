@@ -1,6 +1,6 @@
 {
   "id": "feature-evals-composite-integration",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "frozenAt": "2026-07-16",
   "startingCommit": "68846b1f0a8672ff80598a7fef50ce5343c3e004",
   "objective": "Integrate the strongest feature/evals-A through feature/evals-N mechanisms into one maintainable knowledge lifecycle and selective hiring portfolio without weakening factual accuracy, collective credit, public safety, accessibility, or human release authority.",
@@ -10,20 +10,13 @@
     "minimumWeightedScore": 1,
     "requiredUnchangedCandidatePasses": 2
   },
-  "candidatePaths": [
-    "apps/www/src",
-    "apps/www/public/resume",
-    "docs/knowledge-bank",
-    "docs/qa/release-status.json",
-    "docs/qa/composite-integration",
-    "docs/deployment.md",
-    "docs/production-readiness.md",
-    "scripts",
-    "package.json",
-    "evals/composite-integration/rubric.json",
-    "evals/composite-integration/donor-dispositions.json",
-    "evals/composite-integration/scorecard.schema.json"
-  ],
+  "candidatePaths": ["."],
+  "maintenance": {
+    "owner": "Jamie Burkart",
+    "cadence": "Run the full suite before every pull-request update and review governance monthly while the portfolio is actively changing.",
+    "trigger": "Rerun after any change to claims, sources, routes, public copy, build or deployment configuration, resume assets, policies, evals, or release state.",
+    "runbook": "docs/qa/composite-integration/maintenance.md"
+  },
   "criteria": [
     {
       "id": "CI-001",
@@ -150,6 +143,11 @@
     {
       "id": "hands-on-accessibility-and-launch-qa",
       "owner": "Named human reviewer",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "human-chad-editorial-review",
+      "owner": "Jamie Burkart and a trusted human editorial reviewer",
       "agentMaySelfCertify": false
     },
     {

@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import {
   evaluateComposite,
   repoRoot
 } from "./lib/composite-integration.mjs";
 
-const scorecard = evaluateComposite();
+const writeRunIndex = process.argv.indexOf("--write-run");
+const scorecard = evaluateComposite(repoRoot, {
+  requireHoldouts: writeRunIndex === -1
+});
 
 console.log(
   `Composite integration eval: ${Math.round(scorecard.weightedScore * 100)}/100 ` +
@@ -31,7 +34,6 @@ if (process.argv.includes("--report")) {
   console.log(`Wrote ${path.relative(repoRoot, reportPath)}`);
 }
 
-const writeRunIndex = process.argv.indexOf("--write-run");
 if (writeRunIndex !== -1) {
   const relativeRunPath = process.argv[writeRunIndex + 1];
   if (
@@ -45,8 +47,13 @@ if (writeRunIndex !== -1) {
     throw new Error("Commit the candidate before writing a candidate-bound run");
   }
   const runPath = path.join(repoRoot, relativeRunPath);
+  if (existsSync(runPath)) {
+    throw new Error(`Run records are immutable: ${relativeRunPath} already exists`);
+  }
   mkdirSync(path.dirname(runPath), { recursive: true });
-  writeFileSync(runPath, `${JSON.stringify(scorecard, null, 2)}\n`);
+  writeFileSync(runPath, `${JSON.stringify(scorecard, null, 2)}\n`, {
+    flag: "wx"
+  });
   console.log(`Wrote ${relativeRunPath}`);
 }
 

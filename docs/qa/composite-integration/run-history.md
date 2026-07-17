@@ -4,12 +4,14 @@
 
 **Starting commit:** `68846b1f0a8672ff80598a7fef50ce5343c3e004`
 
-**Rubric:** `feature-evals-composite-integration` `1.0.0`
+**Rubric:** `feature-evals-composite-integration` `1.1.0`
 
 Run artifacts are retained under `evals/composite-integration/runs/`. Each
 passing holdout records the evaluated Git commit and candidate-input SHA-256.
-The input fingerprint excludes only run artifacts, so recording a result does
-not change the candidate it describes.
+The input fingerprint covers the tracked and unignored repository tree,
+including build, lock, configuration, application, and public-asset inputs. It
+excludes only immutable run artifacts and ephemeral generated/build output, so
+recording a result does not change the candidate it describes.
 
 ## Baseline
 
@@ -37,6 +39,14 @@ query commands. Seven fail-closed and anti-overclaim tests passed.
    buttons now wrap within their container, and the compact Technical
    Operations H1 steps from `text-4xl` to `text-5xl`. The repeated matrix
    passed all 32 route/viewport combinations.
+5. **Independent adversarial holdout.** A read-only qualitative evaluator found
+   that the first 100/100 score could coexist with missing collective-project
+   classifications, fail-open publication-safe output, free-text proof
+   provenance, a CallNYC resume-surface mismatch, unenforced holdouts, and
+   presence-only quality checks. The evaluator and tests were strengthened,
+   every actively projected collective project was classified, proof records
+   gained resolvable source or claim IDs, public-safe tooling became
+   allowlisted, and quality criteria now execute their underlying evals.
 
 No public claim, metric, case-study narrative, homepage argument, or resume
 wording changed in this integration. The two interface repairs address direct
