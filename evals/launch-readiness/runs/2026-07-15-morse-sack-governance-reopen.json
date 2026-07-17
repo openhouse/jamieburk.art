@@ -1,0 +1,146 @@
+{
+  "id": "2026-07-15-morse-sack-governance-reopen",
+  "recordedAt": "2026-07-15",
+  "candidate": {
+    "branch": "feature/evals-A",
+    "baseCommit": "5ec758b82fc7f84348f5a8565e521eb06c80017f",
+    "releaseApproved": false
+  },
+  "hardGatesPass": false,
+  "hardGateNotes": [
+    "Repository checks and focused responsive QA passed for the working-tree candidate.",
+    "Exact-SHA approval and post-deployment production smoke are release-time gates and remain open."
+  ],
+  "scores": [
+    { "criterionId": "LR-JUDGE-ROLE", "score": 5 },
+    { "criterionId": "LR-JUDGE-EVIDENCE", "score": 4 },
+    { "criterionId": "LR-JUDGE-EMERGING", "score": 5 },
+    { "criterionId": "LR-JUDGE-BURDEN", "score": 3 },
+    { "criterionId": "LR-JUDGE-CHAD", "score": 4 },
+    { "criterionId": "LR-JUDGE-COLLECTIVE", "score": 5 },
+    { "criterionId": "LR-JUDGE-VISUAL", "score": 4 },
+    { "criterionId": "LR-JUDGE-OPERATIONS", "score": 5 },
+    { "criterionId": "LR-JUDGE-MORSE", "score": 4 },
+    { "criterionId": "LR-JUDGE-SACK", "score": 3 }
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "The target technical project management and product operations role is immediate and specific.",
+        "evidence": [
+          "The homepage names the role and provides direct work, resume, and contact paths.",
+          "Technical Operations connects role-specific capabilities to named projects."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "Named cases show workflow mapping, implementation, coordination, facilitation, documentation, and handoff work.",
+        "evidence": [
+          "Technical Operations and the selected case studies name Jamie's actions before secondary project governance."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "The portfolio connects Jamie's actions to public tools, participation systems, decision records, onboarding materials, and durable handoffs.",
+        "evidence": [
+          "Case-study sections explicitly state what became usable and the transferable proof."
+        ],
+        "unresolvedRisks": [
+          "Several cases remain more textual than visually inspectable."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "The portfolio distinguishes civic technology, cultural infrastructure, small business, construction, and community-platform experience.",
+        "evidence": [
+          "The Work index and Technical Operations proof map connect practices to projects across domains."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "Formal project-management and general-contractor authority is strongest in the bounded KC Town Hall scope; other cases show coordination, stewardship, and co-building.",
+        "evidence": [
+          "KC Town Hall identifies the Phase One project-manager and general-contractor role.",
+          "Collective cases retain contribution verbs rather than implying broad personnel authority."
+        ],
+        "unresolvedRisks": [
+          "Do not generalize bounded project authority into unsupported organization-wide personnel management."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "Consequential claims are generally source-backed and bounded; protected material remains outside public projection.",
+        "evidence": [
+          "CallNYC, WOW List, Sunday Dinner, and knowledge-bank records distinguish public support from protected evidence."
+        ],
+        "unresolvedRisks": [
+          "Some public cases remain summary-only or rely on protected support."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "The candidate is suitable for PR review but is not an approved production release.",
+        "evidence": [
+          "Repository checks and focused responsive QA passed.",
+          "The exact-SHA and post-deployment gates are deliberately still open."
+        ],
+        "unresolvedRisks": [
+          "Exact-SHA staging approval and production smoke remain release-time work.",
+          "Reader burden remains the lowest public criterion at 3."
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked; this run does not authorize production publication.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "No collaborator attribution dispute was raised in this run; the hold path remains open.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "No model judgment was overridden; the fresh judge's criticism was accepted as evidence.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "Invoked: the fresh judge exposed a governance-enforcement gap, so the decision and scorer contract were reopened.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "The judge's finding that acceptance did not require a populated decision record was treated as new evaluative evidence and triggered a bounded implementation change.",
+    "overrides": [],
+    "openDisagreements": [
+      "The first fresh judge scored the Sack lens 3 because policy was explicit but per-run governance was not structurally enforced.",
+      "The public portfolio still lacks a decisive cleared artifact that fully demonstrates the artistic-to-operational continuity.",
+      "Release-only hard gates remain open."
+    ],
+    "disagreementReview": "The Sack-lens disagreement remains in the record as the reason for reopening. It cannot be erased by a later passing aggregate."
+  },
+  "declaredResult": {
+    "weightedScore": 4.22,
+    "missing": [],
+    "belowMinimum": ["LR-JUDGE-SACK"],
+    "governanceFailures": [],
+    "accepted": false
+  }
+}

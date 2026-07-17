@@ -55,5 +55,19 @@ ideas from the production-readiness-composite family.
 - [ ] Public-safety scanner passes.
 - [ ] Chad-lens review passes.
 
-Production deploy remains blocked until Jamie explicitly approves the reviewed
-content and release.
+Jamie authorized launch preparation on 2026-07-11 and confirmed the current
+public email, LinkedIn profile, and phone-in-resume behavior. Production
+promotion remains gated by review and verification of one exact release SHA as
+recorded in `docs/knowledge-bank/launch-blockers.md`.
+
+## Known Dependency Advisory
+
+As of 2026-07-12, `npm audit --omit=dev` reports the moderate PostCSS advisory
+[`GHSA-qx2v-qp2m-jg93`](https://github.com/advisories/GHSA-qx2v-qp2m-jg93)
+through Next.js 16.2.10's pinned PostCSS 8.4.31. The
+current portfolio compiles repository-controlled CSS and does not accept
+attacker-supplied CSS for stringification. The current Next.js release has no
+patched dependency pin. Do not downgrade Next.js or force an unverified
+override; recheck the advisory at release and adopt the upstream patch when it
+is available. Any high or critical production advisory remains a release
+blocker.

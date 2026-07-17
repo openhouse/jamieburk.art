@@ -178,9 +178,9 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
+      "Co-founded NYC Artist Coalition and helped build public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2024-Present",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
@@ -341,12 +341,12 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and a cleared public project mark. Interface screenshots remain pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots pending.",
+    currentStatus: "Archived prototype. Project mark cleared; interface screenshots pending.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -360,7 +360,7 @@ const workItemsInput = [
       known:
         "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
       open:
-        "Public-safe screenshots and additional archive links need Jamie approval before publication.",
+        "Interface screenshots and additional archive links need Jamie approval before publication.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }
@@ -378,7 +378,7 @@ const workItemsInput = [
     featured: true,
     priority: 4,
     visibility: "public-safe",
-    proofBankIds: ["wowlist-community-platform"],
+    proofBankIds: ["wowlist-community-platform", "wowlist-public-support-surface"],
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
@@ -457,7 +457,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe aggregate summary supported by a protected operations ledger and residency workflow; participant-level records remain intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -465,13 +465,14 @@ const workItemsInput = [
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
       "300+ hosted gatherings",
+      "Protected operations ledger records 345 numbered gatherings and 2,783 meals served through March 2021",
       "20+ resident artists supported",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts. A protected ledger records 345 numbered gatherings and 2,783 meals served through March 2021.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
@@ -482,53 +483,67 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Construction coordination and neighborhood-led adaptive reuse",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    role: "Project Planning & Documentation Support",
-    years: "2020s",
+      "Co-founded and project-managed a neighborhood-led restoration, serving as Phase One general contractor across a $189,629 cold-shell scope.",
+    role: "Co-Founder, Project Manager & Phase One General Contractor",
+    years: "2018-2024",
     status: "Short proof page",
     featured: false,
     priority: 6,
     visibility: "public-safe",
-    proofBankIds: ["kc-town-hall-public-benefit-documentation"],
+    proofBankIds: [
+      "kc-town-hall-public-benefit-documentation",
+      "kc-town-hall-public-service-interface"
+    ],
     whatWasUnclear:
-      "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
+      "A long-vacant historic building needed preservation-sensitive construction, coordinated specialist teams, and a way for emerging neighborhood knowledge to shape what the space could become.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "A completed Phase One cold shell, a neighborhood survey and contact workflow, and public-benefit documentation that could carry the project into municipal review.",
+    artifactTypes: ["guide", "template", "source map"],
     artifacts: [
       {
-        title: "Public-benefit documentation set",
+        title: "Phase One scope and budget",
         description:
-          "Representative materials for describing intended public value, funding context, and stakeholder needs.",
+          "A public-safe account of the $189,629 cold-shell scope across roofing, masonry, floor framing, water service, access, safety, and construction logistics.",
         type: "guide"
+      },
+      {
+        title: "Neighborhood survey system",
+        description:
+          "A four-by-six handbill and backing contact workflow that turned daily site conversations into participatory planning input.",
+        type: "template"
       }
     ],
-    tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    tags: ["Implementation", "Built Environment", "Participatory Research", "Public-Facing Tools"],
+    capabilities: ["Construction Coordination", "Vendor Coordination", "Participatory Planning", "Public-Benefit Documentation"],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "A protected submitted CCED proposal and support-letter packet, Jamie's approved first-person role account, official Kansas City Council and CCED records, and a complete public-safe account corpus.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Public-safe short proof page.",
+    currentStatus:
+      "The public funding record runs from a 2019 Council appropriation through return of the unused funds after the project withdrew in 2024.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Field-based project management, specialist-team coordination, preservation-sensitive sequencing, participatory research, and public-benefit documentation.",
     evidence: [
-      "Redevelopment planning",
-      "Public-benefit documentation",
-      "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "Phase One general contracting and project management",
+      "$189,629 cold-shell proposal scope",
+      "Historic masonry, roofing, floor framing, water, access, and safety coordination",
+      "Four-by-six neighborhood survey and backing contact workflow",
+      "Public-benefit proposal and municipal-review documentation",
+      "Recurring public intake, service coordination, and result-reporting workflow",
+      "2019 Council acceptance and $490,539 appropriation",
+      "$0 disbursed before the unused funds were returned in 2024"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie co-founded and project-managed KC Town Hall and directly confirms serving as Phase One general contractor. The proposal documents the multidisciplinary cold-shell scope, survey artifact, and $189,629 budget; official records establish Jamie's developer/presenter role and the later CCED funding lifecycle.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Contracts, invoices, permits, measured drawings, construction photographs, and collaborator proof notes could independently corroborate the general-contractor title, final Phase One cost, exact technical sequence, local-workforce claims, and division of labor.",
       protected:
-        "Private financial, legal, property, banking, and stakeholder details are omitted."
+        "The raw proposal packet, banking and personal attachments, respondent contacts and survey rows, private legal and property records, and later family context remain outside the repository."
     }
   }
 ] satisfies WorkMeta[];

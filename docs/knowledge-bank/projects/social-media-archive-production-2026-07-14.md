@@ -1,0 +1,177 @@
+# Project social-media archive production
+
+**Reviewed:** 2026-07-14
+
+**Method:** Authenticated review of public X profiles, timelines, and search
+results, with Council-member dates cross-checked against NYC Open Data.
+
+This inventory treats social accounts as public project infrastructure: they
+name a project, route people into its work, document activity, and preserve
+public response. It does not treat post volume, follower counts, or a tagged
+official as proof of impact.
+
+## Verified project accounts
+
+| Project | Handle | Profile snapshot | Recovered public record |
+| --- | --- | --- | --- |
+| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110 posts; joined March 2016 | 107 unique items: 92 authored statuses and 15 reposts; 3 count slots unresolved |
+| NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124 posts; joined January 2017 | 1,026 item-level records; 4,098 explicit unresolved slots; no complete export |
+| WOW List | [@wowlist](https://x.com/wowlist) | 38 posts; joined February 2014 | 38 unique surviving statuses; 22 authored by the project account |
+| KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | 35 posts; joined April 2020 | 34 unique visible statuses; 27 authored by the project |
+| KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 posts; joined March 2018 | 183 unique surviving items; 155 authored by the project account |
+
+Counts are accessed-at snapshots and recovered floors. For CallNYC, the 107
+recovered item records plus three explicit unresolved slots disposition all 110
+observed profile-count slots; this is not a platform export. For KC Town Hall,
+Posts and Replies reconciliation recovered all 183 surviving profile-counted
+items. For NYC Artist Coalition, 1,026 item-level records plus 4,098 explicit
+unresolved slots disposition the 5,124-post control. X pagination,
+virtualization, search behavior, deletions, privacy settings, and unavailable
+posts prevent these from being described as complete exports.
+
+The four NYC Artist Coalition campaign lines use the shared `@NYCArtC`
+identity. Its profile bio explicitly carries `#SaveNYCSpaces`,
+`#LetNYCDance`, `#TalksNotRaids`, and `#FairRentNYC`. No separate campaign
+accounts were verified. The current `@fairrentnyc` and `@sundaydinnernyc`
+profiles were not attributed to Jamie's projects because their dates and
+content do not corroborate the connection. This is not proof that another
+account never existed.
+
+The [population-reconciled archival note](../intake/2026-07-14-nycartc-population-reconciled-social-corpus.md)
+and [1,026-record public-safe ledger](../data/nycartc-public-post-ledger.json)
+preserve all four campaign signals, 408 posted short URLs, 345 currently
+resolved destinations, and a 216-account source network. They also preserve the
+4,098-item carrier gap instead of converting it into invented completeness.
+
+## CallNYC Council-account engagement
+
+A bounded authenticated pass recovered public posts by **eight people who
+were sitting New York City Council members on the post dates**:
+
+| Member | Date | Recovered engagement |
+| --- | --- | --- |
+| [Peter Koo](https://x.com/CMPeterKoo/status/725422741160079360) | 2016-04-27 | Explicit repost of a CallNYC recognition |
+| [Steven Matteo](https://x.com/StevenMatteo/status/727621921341358081) | 2016-05-03 | Reply naming a constituent-service concern |
+| [Ruben Wills](https://x.com/CM_RubenWills/status/732717792097603584) | 2016-05-17 | Public reply with press amplification |
+| [Ydanis Rodriguez](https://x.com/ydanis/status/733089563334299648) | 2016-05-18 | Quote-post connecting a CallNYC recognition to tenant-rights work |
+| [Rosie Mendez](https://x.com/RosieMendez/status/733410096915550208) | 2016-05-19 | Quote-post crediting the office team |
+| [Helen Rosenthal](https://x.com/HelenRosenthal/status/780797474277511170) | 2016-09-27 | Independently authored link to CallNYC.org |
+| [Mathieu Eugene](https://x.com/CMMathieuEugene/status/783305320508514304) | 2016-10-04 | Quote-post connecting the recognition to housing help |
+| [Margaret Chin](https://x.com/CM_MargaretChin/status/884863588317442049) | 2017-07-11 | Response to office-performance recognition |
+
+The profile reported 110 posts; 107 unique public items were recovered and
+three count slots remain explicitly unresolved. Eight is therefore a recovered floor, not an adoption count,
+endorsement count, office-use count, or complete lifetime total. Posts from
+CallNYC tagging officials were classified as outreach and not counted as
+engagement by those officials. Carlina Rivera's May 2016 quote-post remains
+public engagement context but is excluded from the Council-member count
+because it predates her Council service.
+
+## CallNYC full-population pattern
+
+Fresh scroll-to-exhaustion passes recovered 106 unique status URLs from Posts
+and 107 from Replies. Their union matched the canonical item-level ledger
+exactly. The one Replies-only item is a CallNYC reply announcing a JSON endpoint
+for Council-member Twitter usernames. Monthly authenticated X search surfaced
+only 47 of 92 authored statuses and no additional IDs, demonstrating that
+ordinary search is an incomplete discovery surface.
+
+The 107-item ledger documents a deliberate public-engagement layer: 71
+data-derived posts connected 61 issue pages across 16 constituent-service
+categories to 26 sitting Council-member accounts. Those 26 accounts were the
+intended institutional audience. They are not 26 responses, adopters, or
+endorsements. The broader member-authored audit above is the separate evidence
+for reciprocal engagement.
+
+The ledger also preserves every recovered outbound link: 98 short-link
+occurrences, 84 unique short URLs, 76 resolved destinations, 63 CallNYC
+destinations, and 13 external destinations. The external set spans official
+rent-freeze and homelessness-prevention resources, civic-tech infrastructure,
+adjacent open-data tools, public-interest reporting, and other public projects.
+Posted or reposted links establish source circulation, not partnership,
+historical availability, use, or individual post authorship.
+
+See the
+[full-population archival note](../intake/2026-07-14-callnyc-full-population-social-corpus.md)
+and the
+[107-record public ledger](../data/callnyc-public-post-ledger.json).
+
+## NYC Artist Coalition Council-account engagement
+
+The population pass did not recover a complete item-level export: 1,026 records
+were recovered and 4,098 profile-count slots remain explicitly unresolved.
+Broad, dated, campaign, and mention searches nevertheless recovered posts
+authored by **at least five sitting Council members**:
+
+| Member | Date | Recovered engagement |
+| --- | --- | --- |
+| [Stephen Levin](https://x.com/StephenLevin33/status/1095020293112979457) | 2019-02-11 | Thanked venues and the coalition for M.A.R.C.H. hearing testimony |
+| [Rafael Espinal](https://x.com/RLEspinal/status/1098626837821997056) | 2019-02-21 | Connected `#SaveNYCSpaces` and Talks Not Raids to coalition work |
+| [Justin Brannan](https://x.com/JustinBrannan/status/1167536258438115333) | 2019-08-30 | Direct public reply, retained as engagement but not policy evidence |
+| [Jimmy Van Bramer](https://x.com/JimmyVanBramer/status/1320792543773282304) | 2020-10-26 | Named the coalition while calling for support for artists and culture |
+| [Brad Lander](https://x.com/bradlander/status/1354840336330330116) | 2021-01-28 | Commercial-rent-stabilization exchange in a recovered coalition thread |
+
+The earlier search recovered 260 unique visible statuses from a March
+2020-March 2025 mention pass, 60 from a 2018-2019 dated pass, and additional
+targeted campaign results. The later population pass preserved 1,026 unique
+records from 2017-2018 and 2023-2026, but X did not expose a stable carrier for
+the 2019-2022 gap or older native reposts. Posts outside a person's Council term
+were excluded from the sitting-member floor.
+
+## Other mission-relevant findings
+
+- **WOW List:** the earliest recovered authored post names Richard and Jamie
+  and connects the project to calendars made at Sunday Dinner. A later post
+  announces WOW List participation in the 2015 Allied Media Conference. These
+  establish public project language and distribution, not sole authorship or
+  adoption scale.
+- **KC Spaces Fund:** 34 of 35 profile posts were recovered. The account routed
+  applications and donations and publicly reported at least 11 named recipient
+  or grantee highlights. These are project self-reports, not an audited payment
+  ledger; Jamie's established role remains technical and operational support.
+- **KC Town Hall:** all 183 surviving profile-counted items were recovered: 142
+  account posts, 13 account replies, and 28 reposts. One hundred records concern
+  the recurring tire-service workflow. Two sitting Council members authored
+  direct responses in one April 2019 exchange; nine reposted statuses from three
+  city political figures remain separately classified as project-selected
+  amplification. Tire and avoided-fee figures remain project self-reporting
+  pending independent reconciliation. See the
+  [full-population note](../intake/2026-07-14-kctownhall-full-population-social-corpus.md).
+
+## Authorship and stewardship boundary
+
+Jamie states that he established the project accounts so collaborators could
+use and sustain shared public identities. The public record establishes durable
+collective identities and sustained collaborator participation. It does not
+expose administrator history or identify the human author of an individual
+shared-account post.
+
+Olympia Kazi authored 65 of the 260 unique visible posts in the recovered
+March 2020-March 2025 `@NYCArtC` mention set. This is evidence of sustained
+public collaboration around the coalition identity. It is not evidence that
+she authored a particular `@NYCArtC` post or held account access. Jamie's
+account-establishment memory remains held until a collaborator note or
+minimized public-safe administrative record corroborates it.
+
+## Personal practice carrier
+
+The personal [@urbanhermit](https://x.com/urbanhermit) account is inventoried
+separately from the five shared project accounts. Its 434 displayed slots are
+reconciled through 425 recovered public items and nine explicit carrier gaps.
+The [full-population note](../intake/2026-07-14-urbanhermit-full-population-social-corpus.md)
+and [minimized ledger](../data/urbanhermit-public-post-ledger.json) retain 141
+mission-relevant records while retaining 271 context-only and 13 protected-
+context items only as aggregate counts, with no public item-level crosswalk.
+
+This carrier surfaces longitudinal practice and new source leads. It is not a
+shared project identity, a complete professional record, or permission to
+republish personal and third-party life. Its eight new claims all remain held.
+Source-status authorship and source-status metrics remain with their sources.
+
+## Safety boundary
+
+Only public profile metadata, public status URLs, bounded aggregate results,
+and the official Council term dataset enter the repository. Direct messages,
+private analytics, account settings, security data, cookies, resident
+addresses, applicant data, and private correspondence were not inspected or
+retained.

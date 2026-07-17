@@ -63,6 +63,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-11
 
+## callnyc-public-engagement-architecture - Public engagement around issue pathways
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / AI-assisted archive review
+**Public wording:** Paired CallNYC's issue pathways with a public-engagement layer: 71 data-derived posts connected 61 issue pages across 16 service categories to an intended institutional audience of 26 sitting Council-member accounts.
+**Detailed public-safe wording:** A 107-item authenticated public-account ledger documents how CallNYC connected resident-facing issue pathways to their intended institutional audience while preserving the distinction between outreach, member-authored response, and service outcomes.
+**Where to project:** CallNYC case study.
+**Why it matters:** Makes Jamie's product and implementation work legible as an operating system for public data, resident pathways, and institutional engagement rather than a static visualization.
+**Guardrail:** Treat the 26 accounts as intended audience, not reciprocal engagement; keep the separate eight-member authored-engagement floor distinct. The ledger dispositions 107 recovered items and three unresolved slots, not a complete platform export.
+**Do not say:** Twenty-six Council members engaged with or endorsed CallNYC; CallNYC helped a verified number of unique residents; the ledger is a complete X export; Jamie authored every account post.
+**Protected boundaries:** Authentication and session material, private messages and analytics, unverified historical metrics, and individual shared-account post authorship stay outside the public record.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
 **Status:** Careful
@@ -114,14 +129,14 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary
 **Public wording:** Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
-**Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.
+**Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability. He describes his contribution as also helping establish and produce a recurring participation system of public event pages, meetings in cultural spaces, practical support sessions, hearings, and campaign action.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study, About.
 **Why it matters:** Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.
 **Guardrail:** Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.
-**Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
+**Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie individually produced or authored every coalition event; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-14
 
 ## wowlist-community-platform - Followable community platform
 
@@ -138,20 +153,66 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## wowlist-public-support-surface - Shared public support surface
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / authenticated full-population audit / public-safe archive summary
+**Public wording:** WOW List's shared public account became a direct support surface: its six surviving replies explained feed scope, profile navigation, multi-list event submission, joining local calendars, and how NYCDIY ran on WOW List from the Sunday Dinner potluck.
+**Detailed public-safe wording:** A July 2026 authenticated review reconciled all 38 items in the surviving `@wowlist` profile population. Every one of the six account replies performed product support, onboarding, or calendar-identity work.
+**Where to project:** WOW List case study only.
+**Why it matters:** Shows that the public identity Jamie established with teammates functioned as operating infrastructure: people could ask how the system worked and receive usable guidance in public.
+**Guardrail:** Credit the account as shared project infrastructure. A shared account does not reveal which teammate composed a post, and the surviving social record does not establish total support workload, adoption, satisfaction, audience, or impact.
+**Do not say:** Jamie personally wrote all six replies; X was WOW List's only support channel; the social record proves adoption scale or impact; the 38-item population is a complete platform export.
+**Protected boundaries:** No account credentials, private analytics, direct messages, private user data, or raw authenticated-session material enters the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
+**Evidence class:** Approved resume / public community context / selected public event pages / protected operations ledger / Jamie-authored residency workflow / Jamie review confirmation
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**New support:** Public event pages document the 100th Sunday Dinner, an eight-week New York City rotation with changing host places, and a 2017 dinner joining hospitality with civic discussion and sign making. A private operating ledger records 345 numbered gatherings and 2,783 meals served through March 2021. A separate 2023 workflow documents Jamie-authored acceptance, space-configuration, arrival, and collaborator-access planning for one residency. These sources do not establish the 20+ resident aggregate or convert Facebook host labels into sole-production credit.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-15
+
+## personal-facebook-event-practice - Bank-only event-making depth
+
+**Status:** Confirmed with boundary
+**Support level:** Strong current-control accounting; selected public-event support
+**Evidence class:** Authenticated population controls / public Facebook event pages / independent reporting / public-safe aggregate census
+**Public wording:** Twenty current event cards from 2006 through 2017 display Jamie as host and preserve a recurring practice across cultural production, hospitality, place-based participation, civic learning, and networked public culture.
+**Detailed public-safe wording:** Three terminal traversals returned the same 502 profile-event IDs; a separate hosted-events tab contained 21 records, 18 overlapping, for 505 distinct current IDs. Only the 20 cards displaying Jamie as host were interpreted as a professional practice, and nine selected public pages were close-read into bounded historical plot points.
+**Where to project:** Bank only. Use selectively in future role-specific compositions where facilitation, cultural production, hospitality systems, participatory design, or place-based work is material.
+**Why it matters:** Preserves a long public event-making throughline without forcing the hiring portfolio to display every meaningful project at once.
+**Guardrail:** Facebook association is not attendance or professional credit. Displayed host labels are bounded platform attribution, not sole authorship or sole production.
+**Do not say:** Jamie attended or produced all 505 events; Jamie alone produced every selected event; platform values measure attendance, unique reach, endorsement, causality, or impact.
+**Protected boundaries:** The 502-row personal association graph, other host names, guest or invite context, exact private locations, raw descriptions, comments, account state, and authentication material remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-event-recovery - Current zero and historical non-recovery
+
+**Status:** Confirmed current control / historical record not recovered
+**Support level:** Strong for current display; bounded negative search for history
+**Evidence class:** Authenticated Page-context control / bounded Facebook and Wayback research run
+**Public wording:** The current WOW List Facebook event surface displayed zero records; a bounded historical search recovered none.
+**Detailed public-safe wording:** While acting as WOW List on July 15, 2026, Facebook displayed `No events to show` and exposed zero event IDs. Separate Facebook, personal-control, and Wayback searches recovered no historical event record.
+**Where to project:** Bank only.
+**Why it matters:** Preserves an honest negative control while keeping open the possibility that deleted, hidden, renamed, co-hosted, or other-account records existed.
+**Guardrail:** Not recovered does not mean did not exist and says nothing about WOW List's own platform event activity.
+**Do not say:** WOW List never had a Facebook event; WOW List had no event community; the bounded search is a native platform export.
+**Protected boundaries:** Authentication material, account administration, private analytics, and raw browser recovery files remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
@@ -172,16 +233,46 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Evidence class:** Approved first-person account / protected project archive / official public record / public-safe archive summary
+**Public wording:** Co-founded and project-managed a neighborhood-led adaptive reuse effort, serving as Phase One general contractor across a $189,629 cold-shell restoration; later City funding was appropriated but not disbursed.
+**Detailed public-safe wording:** Jamie coordinated specialist construction teams across roofing and TPO membrane work, historic masonry, floor framing, water service, access, and site safety, while building a four-by-six neighborhood survey and contact workflow that helped turn daily site conversations into a public-benefit proposal.
 **Where to project:** Technical Operations, Work card, Case study.  
-**Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
+**Why it matters:** Shows field-based project management, specialist-team coordination, preservation-sensitive sequencing, participatory research, public/private boundary judgment, and documentation for complex built-environment work.
+**Guardrail:** Attribute the general-contractor title and Phase One completion to Jamie's direct account; the proposal independently names him as founder and project manager and documents scope and budget. Treat $189,629 as the proposal budget, distinguish Phase One from the full redevelopment, preserve specialist and collective credit, and retain the complete City funding lifecycle.
+**Do not say:** KC Town Hall received or spent the $490,539; the full redevelopment was completed in 2019; the proposal independently names Jamie as general contractor; Jamie personally performed every trade task; $189,629 is an independently audited final cost; Jamie alone secured the Council action; the public record establishes why the project withdrew.
+**Protected boundaries:** The raw proposal packet, banking and personal attachments, respondent contacts and survey rows, private financial, legal, property, and stakeholder records stay offline.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-15
+
+## kc-town-hall-public-service-interface - Recurring public service interface
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / authenticated full-population audit / public-safe archive summary
+**Public wording:** KC Town Hall used its shared public account as a recurring resident-service surface: 100 of 183 surviving records concern tire reports, pickups, and result reporting from 2019 through 2022.
+**Detailed public-safe wording:** A complete 183-record public-account ledger documents repeated resident intake, pickup coordination, and result reporting through one shared project identity.
+**Where to project:** KC Town Hall work card and case study.
+**Why it matters:** Shows public communication functioning as operating infrastructure for intake, service coordination, and accountable follow-through.
+**Guardrail:** Treat the account as collective, the 100 records as workflow evidence rather than completed-service units, and project-reported tire or fee figures as unreconciled self-reporting.
+**Do not say:** Jamie authored every post; Jamie alone performed every pickup; 100 records equal 100 completed pickups or households; the timeline is an audited service ledger; visible reactions measure historical impact.
+**Protected boundaries:** Resident addresses, phone numbers, direct messages, private service records, account credentials, and private analytics stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## kc-town-hall-stewardship-transition - Stewardship continuity
+
+**Status:** Use with care
+**Support level:** Participant-memory lead
+**Evidence class:** Jamie first-person account
+**Public wording:** Transitioned stewardship of KC Town Hall to a mission-aligned organization.
+**Detailed public-safe wording:** Jamie reports that he transitioned project stewardship to a mission-aligned organization; recipient naming and public projection remain on hold.
+**Where to project:** Hold; no public-site surface currently authorized.
+**Why it matters:** Preserves a professionally relevant continuity action and prevents the later funding withdrawal from being misread as project abandonment.
+**Guardrail:** Keep this separate from the official City funding record. Do not name the recipient without accuracy, consent, and public-use review.
+**Do not say:** Jamie abandoned the project; the City records establish the transition; the recipient assumed every project obligation; the transition caused the later funding withdrawal.
+**Protected boundaries:** Private circumstances surrounding the transition are not retained in this public repository.
+**Review owner:** Jamie; recipient review needed before naming
+**Last reviewed:** 2026-07-13
 
 ## source-backed-team-memory-method - Source-backed team memory
 

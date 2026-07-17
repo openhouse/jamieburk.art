@@ -30,6 +30,12 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run check:launch-evals`
+- `npm run test:launch-evals`
+- `npm run report:launch-evals`
+- `npm run check:knowledge-evals`
+- `npm run test:knowledge-evals`
+- `npm run report:knowledge-evals`
 
 ## Public-Safety Rules
 
@@ -52,6 +58,12 @@ Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
 canonical machine-readable source. Do not add or strengthen a public factual
 claim without updating the canonical claim, evidence relationship, and source
 records.
+
+New fragments enter through stable intake records and atomic observations. Give
+every public-safe item a disposition; do not silently discard it. Keep factual
+maturity separate from compositional selection: a defensible claim may remain a
+held projection with no public surface. Memory and photo leads require research
+inquiries before they become claims.
 
 Use `<Claim>` for high-risk canonical wording and `<Cite>` for supported
 authored prose. Do not type citation numbers manually.
@@ -78,6 +90,21 @@ Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 Minimize the reader's burden. Make Jamie visible as the actor, explain what the
 work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
+
+## Launch-Readiness Evals
+
+Use `evals/launch-readiness/evals.json` for recursive launch improvement. Hard
+gates are invariants and cannot be averaged away by a high judge score. Improve
+the lowest-scoring criterion with one bounded change, rerun every affected
+case, and keep the change only when the objective improves without weakening
+truth, consent, collective credit, accessibility, or exact-commit release
+discipline. Follow `evals/launch-readiness/judge.md`; do not expose private
+evidence to an evaluator.
+
+Use `evals/knowledge-bank/evals.json` for recursive intake and claim maturation.
+Run its deterministic checks before promoting a claim or source into a public
+page. The bank should become deeper with each pass while the public site remains
+selective.
 
 ## Scope Rules
 

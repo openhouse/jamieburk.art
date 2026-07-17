@@ -2,13 +2,9 @@ import type { ReactNode } from "react";
 import {
   AtAGlance,
   ArtifactGallery,
-  ArtifactList,
-  CareNote,
   CreditsList,
-  KnownOpenProtected,
   LinksList,
-  PublicSafetyNote,
-  SourceLayer,
+  ProjectRecord,
   VisibilityNote
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
@@ -34,7 +30,6 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
           <div className="prose mt-10 max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
             {children}
-            <References pageId={item.slug} />
           </div>
         </div>
         <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
@@ -50,17 +45,12 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           </div>
         </aside>
       </div>
+      <References pageId={item.slug} />
       <div className="mt-14 space-y-12">
-        <ArtifactList item={item} />
         <ArtifactGallery item={item} />
-        <KnownOpenProtected item={item} />
-        <div className="grid gap-4 md:grid-cols-2">
-          <CareNote item={item} />
-          <PublicSafetyNote item={item} />
-          <SourceLayer item={item} />
-        </div>
         <LinksList item={item} />
         <CreditsList item={item} />
+        <ProjectRecord item={item} />
       </div>
     </article>
   );

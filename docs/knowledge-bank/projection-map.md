@@ -54,3 +54,13 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+## Bank-Only Event Practice
+
+Keep `CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017` and both WOW List
+Facebook event-control claims out of the current public site. They are reserve
+depth for future compositions where facilitation, cultural production,
+hospitality systems, participatory design, or place-based work is directly
+relevant. Selected Sunday Dinner pages may strengthen the existing
+`sunday-dinner-196-participation-infrastructure` source basis without adding a
+new visible metric or claim.

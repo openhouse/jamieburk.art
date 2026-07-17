@@ -1,0 +1,1522 @@
+{
+  "version": 1,
+  "id": "jamieburk-art-knowledge-bank-maturation",
+  "objective": "Capture every public-safe fragment with a disposition, mature sources into bounded observations and claims, preserve unselected depth, and project only audience-relevant claims with traceable evidence.",
+  "targets": {
+    "allCriteriaMeetMinimum": true,
+    "weightedScoreAtLeast": 4.5,
+    "consecutivePassingRuns": 2
+  },
+  "pilot": {
+    "intakeIds": [
+      "INTAKE-WATERWAYS-PITCH-2007",
+      "INTAKE-WATERWAYS-CHARLOTTE-2009",
+      "INTAKE-WATERWAYS-KC-STAR-2007",
+      "INTAKE-OPEN-HOUSE-GOOD-TIMES-2006",
+      "INTAKE-NYCAC-GOTHAMIST-CABARET-2017",
+      "INTAKE-NYCAC-NPR-CABARET-2017",
+      "INTAKE-NYCAC-GREENE-HILL-QA-2017",
+      "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-LEAD",
+      "INTAKE-NYCAC-OFFICE-NIGHTLIFE-ROLE-LEAD",
+      "INTAKE-NYCAC-MARCH-RAIDS-LEAD",
+      "INTAKE-WATERWAYS-PARTICIPATORY-PROGRAMS-LEAD"
+    ],
+    "sourceIds": [
+      "SRC-WATERWAYS-PITCH-2007-08-09",
+      "SRC-WATERWAYS-CHARLOTTE-STREET-2009",
+      "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+      "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+      "SRC-NYCAC-NPR-CABARET-2017-09-20",
+      "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
+    ],
+    "claimIds": [
+      "CLM-WATERWAYS-RAFT-EXPEDITION",
+      "CLM-WATERWAYS-RAFT-PARTICIPATORY-OPERATIONS",
+      "CLM-WATERWAYS-RAFT-PARTICIPATORY-SYNTHESIS",
+      "CLM-WATERWAYS-GREAT-ACCOMMODATIONS",
+      "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
+      "CLM-SHOP-SHOWS-PARTICIPATORY-PROGRAM",
+      "CLM-NYCAC-CABARET-SAFETY-ORGANIZING",
+      "CLM-NYCAC-CABARET-TOWN-HALL",
+      "CLM-COMMUNITY-SUNDAY-DINNER-WOW-2017"
+    ],
+    "inquiryIds": [
+      "INQ-WATERWAYS-RAFT-TERMINUS",
+      "INQ-WATERWAYS-PARTICIPATORY-PROGRAMS",
+      "INQ-NYCAC-CABARET-CONTRIBUTION",
+      "INQ-NYCAC-OFFICE-NIGHTLIFE-CONTRIBUTION",
+      "INQ-NYCAC-MARCH-RAIDS",
+      "INQ-CALLNYC-COUNCIL-ENGAGEMENT"
+    ],
+    "photoFeedbackChain": {
+      "intakeId": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+      "observationId": "OBS-CALLNYC-DIGITAL-DISTRICT-PLACARD",
+      "sourceId": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+      "claimId": "CLM-CALLNYC-DIGITAL-DISTRICT",
+      "inquiryId": "INQ-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+    },
+    "waterwaysKcStar": {
+      "intakeId": "INTAKE-WATERWAYS-KC-STAR-2007",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "sourceCoverageManifestPath": "evals/knowledge-bank/fixtures/kc-star-2007-source-coverage.json",
+      "expeditionClaimId": "CLM-WATERWAYS-RAFT-EXPEDITION",
+      "operationsClaimId": "CLM-WATERWAYS-RAFT-PARTICIPATORY-OPERATIONS",
+      "synthesisClaimId": "CLM-WATERWAYS-RAFT-PARTICIPATORY-SYNTHESIS",
+      "inquiryId": "INQ-WATERWAYS-RAFT-TERMINUS",
+      "documentationPath": "docs/knowledge-bank/projects/waterways-and-participatory-art.md"
+    },
+    "sourceExpansion": {
+      "expectedSourceCount": 10,
+      "intakeIds": [
+        "INTAKE-NYCAC-BEDFORD-DIY-SPACES-2017",
+        "INTAKE-NYCAC-BEDFORD-NIGHT-MAYOR-2017",
+        "INTAKE-NYCAC-MIXMAG-LET-NYC-DANCE-2017",
+        "INTAKE-NYCAC-SUPPORTERS-LIST",
+        "INTAKE-NYCAC-CABARET-CAMPAIGN-2017",
+        "INTAKE-NYCAC-SAVE-NYC-SPACES",
+        "INTAKE-NYCAC-LET-NYC-DANCE-OUTCOME-2017",
+        "INTAKE-NYC-OFFICE-NIGHTLIFE-LAW-2017",
+        "INTAKE-NYC-CABARET-REPEAL-LAW-2017",
+        "INTAKE-NYC-SBJSA-HEARING-2018"
+      ],
+      "sourceIds": [
+        "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
+        "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
+        "SRC-NYCAC-MIXMAG-LET-NYC-DANCE-2017-09-20",
+        "SRC-NYCAC-SUPPORTERS-LIST",
+        "SRC-NYCAC-CABARET-CAMPAIGN-2017-08-01",
+        "SRC-NYCAC-SAVE-NYC-SPACES",
+        "SRC-NYCAC-LET-NYC-DANCE-OUTCOME-2017-11-27",
+        "SRC-NYC-OFFICE-NIGHTLIFE-LOCAL-LAW-178-2017",
+        "SRC-NYC-CABARET-REPEAL-LOCAL-LAW-214-2017",
+        "SRC-NYC-SBJSA-HEARING-2018-10-22"
+      ],
+      "claimIds": [
+        "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE",
+        "CLM-NYCAC-MUTUAL-AID-NETWORK-2017",
+        "CLM-NYCAC-PUBLIC-ADVOCACY-SYSTEM",
+        "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017",
+        "CLM-NYCAC-CABARET-TESTIMONY-2017",
+        "CLM-NYCAC-OFFICE-NIGHTLIFE-OUTCOME-2017",
+        "CLM-NYCAC-CABARET-REPEAL-OUTCOME-2017",
+        "CLM-NYCAC-SBJSA-TESTIMONY-2018"
+      ],
+      "inquiryIds": [
+        "INQ-NYCAC-CABARET-CONTRIBUTION",
+        "INQ-NYCAC-OFFICE-NIGHTLIFE-CONTRIBUTION",
+        "INQ-NYCAC-PUBLIC-WEB-AUTHORSHIP"
+      ],
+      "selectedClaimIds": [
+        "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE",
+        "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017",
+        "CLM-NYCAC-SBJSA-TESTIMONY-2018"
+      ]
+    },
+    "pressArchive": {
+      "expectedIndexCount": 4,
+      "expectedAppearanceCount": 45,
+      "expectedUniqueArticleCount": 44,
+      "expectedNewArticleSourceCount": 41,
+      "expectedNewSourceCount": 44,
+      "campaignEntryCounts": {
+        "LET-NYC-DANCE": 21,
+        "TALKS-NOT-RAIDS": 7,
+        "SAVE-NYC-SPACES": 8,
+        "FAIR-RENT-NYC": 9
+      },
+      "intakeIds": [
+        "INTAKE-NYCAC-PRESS-INDEX-LET-NYC-DANCE",
+        "INTAKE-NYCAC-PRESS-INDEX-TALKS-NOT-RAIDS",
+        "INTAKE-NYCAC-PRESS-INDEX-SAVE-NYC-SPACES",
+        "INTAKE-NYCAC-PRESS-INDEX-FAIR-RENT-NYC"
+      ],
+      "indexSourceIds": [
+        "SRC-NYCAC-PRESS-INDEX-LET-NYC-DANCE",
+        "SRC-NYCAC-PRESS-INDEX-TALKS-NOT-RAIDS",
+        "SRC-NYCAC-SAVE-NYC-SPACES",
+        "SRC-NYCAC-PRESS-INDEX-FAIR-RENT-NYC-2021-12-01"
+      ],
+      "claimId": "CLM-NYCAC-CAMPAIGN-PRESS-ARCHIVE",
+      "inquiryId": "INQ-NYCAC-CAMPAIGN-PRESS-ARCHIVE",
+      "duplicateSourceId": "SRC-NYCAC-NPR-CABARET-2017-09-20"
+    },
+    "kcTownHallFunding": {
+      "intakeId": "INTAKE-KCTH-CCED-COUNCIL-FUNDING-LIFECYCLE",
+      "expectedSourceCount": 5,
+      "expectedPublicSourceCount": 4,
+      "expectedObservationCount": 8,
+      "sourceIds": [
+        "SRC-KCTH-CCED-FACT-SHEET-190649",
+        "SRC-KCTH-RESOLUTION-190649",
+        "SRC-KCTH-ORDINANCE-190642",
+        "SRC-KCTH-CCED-PROJECT-UPDATE-2022-05-10",
+        "SRC-KCTH-ORDINANCE-240317"
+      ],
+      "claimIds": [
+        "CLM-KCTH-COUNCIL-APPROVAL-AND-APPROPRIATION-2019",
+        "CLM-KCTH-NONDISBURSEMENT-AND-REAPPROPRIATION"
+      ],
+      "inquiryId": "INQ-KCTH-CCED-COUNCIL-FUNDING-LIFECYCLE",
+      "transitionIntakeId": "INTAKE-KCTH-STEWARDSHIP-TRANSITION",
+      "transitionObservationId": "OBS-KCTH-STEWARDSHIP-TRANSITION-LEAD",
+      "transitionClaimId": "CLM-KCTH-STEWARDSHIP-TRANSITION",
+      "transitionInquiryId": "INQ-KCTH-STEWARDSHIP-TRANSITION",
+      "correctionId": "COR-KCTH-FUNDING-LIFECYCLE-2026",
+      "proofId": "kc-town-hall-public-benefit-documentation",
+      "pageId": "kc-town-hall"
+    },
+    "kcTownHallPhaseOne": {
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 4,
+      "expectedObservationCount": 10,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 2,
+      "intakeIds": [
+        "INTAKE-KCTH-PHASE-ONE-PROPOSAL-PACKET-2019",
+        "INTAKE-KCTH-PHASE-ONE-JAMIE-ACCOUNT-2026"
+      ],
+      "sourceIds": [
+        "SRC-KCTH-CCED-PROPOSAL-PACKET-2019",
+        "SRC-KCTH-JULIA-COLE-SUPPORT-LETTER-2019",
+        "SRC-KCTH-CCED-MEETING-PACKET-2019-07-29",
+        "SRC-KCTH-JAMIE-PHASE-ONE-ACCOUNT-2026"
+      ],
+      "protectedSourceIds": [
+        "SRC-KCTH-CCED-PROPOSAL-PACKET-2019",
+        "SRC-KCTH-JULIA-COLE-SUPPORT-LETTER-2019",
+        "SRC-KCTH-JAMIE-PHASE-ONE-ACCOUNT-2026"
+      ],
+      "observationIds": [
+        "OBS-KCTH-PROPOSAL-FOUNDER-PROJECT-MANAGER",
+        "OBS-KCTH-PHASE-ONE-MULTIDISCIPLINARY-SCOPE",
+        "OBS-KCTH-PHASE-ONE-2018-PROGRESS",
+        "OBS-KCTH-PHASE-ONE-BUDGET",
+        "OBS-KCTH-NEIGHBORHOOD-SURVEY-CARD",
+        "OBS-KCTH-LOCAL-HIRING-AND-MASONRY-TRAINING",
+        "OBS-KCTH-LISTENING-DRIVEN-SUPPORT-LETTER",
+        "OBS-KCTH-OFFICIAL-DEVELOPER-PRESENTER",
+        "OBS-KCTH-JAMIE-GENERAL-CONTRACTOR-ACCOUNT",
+        "OBS-KCTH-JAMIE-SURVEY-DATA-SYSTEM-ACCOUNT"
+      ],
+      "claimIds": [
+        "CLM-KCTH-OFFICIAL-DEVELOPER-PRESENTER",
+        "CLM-KCTH-PHASE-ONE-ROLE-AND-CONSTRUCTION",
+        "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+        "CLM-KCTH-LOCAL-WORKFORCE-PRACTICE",
+        "CLM-KCTH-ONSITE-SEQUENCING-PRACTICE"
+      ],
+      "activeClaimIds": [
+        "CLM-KCTH-OFFICIAL-DEVELOPER-PRESENTER",
+        "CLM-KCTH-PHASE-ONE-ROLE-AND-CONSTRUCTION",
+        "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM"
+      ],
+      "heldClaimIds": [
+        "CLM-KCTH-LOCAL-WORKFORCE-PRACTICE",
+        "CLM-KCTH-ONSITE-SEQUENCING-PRACTICE"
+      ],
+      "inquiryIds": [
+        "INQ-KCTH-PHASE-ONE-ROLE-AND-COMPLETION",
+        "INQ-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM"
+      ],
+      "officialSourceId": "SRC-KCTH-CCED-MEETING-PACKET-2019-07-29",
+      "roleClaimId": "CLM-KCTH-PHASE-ONE-ROLE-AND-CONSTRUCTION",
+      "surveyClaimId": "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+      "workforceClaimId": "CLM-KCTH-LOCAL-WORKFORCE-PRACTICE",
+      "sequencingClaimId": "CLM-KCTH-ONSITE-SEQUENCING-PRACTICE",
+      "proofId": "kc-town-hall-public-benefit-documentation",
+      "pageId": "kc-town-hall",
+      "occurrenceId": "official-developer-presenter",
+      "documentationPath": "docs/knowledge-bank/projects/kc-town-hall-phase-one-2019.md",
+      "runPath": "evals/knowledge-bank/runs/2026-07-15-kc-town-hall-phase-one.md"
+    },
+    "teamsArchiveProduction": {
+      "expectedSourceCount": 12,
+      "expectedIntakeCount": 12,
+      "expectedObservationCount": 17,
+      "expectedClaimCount": 10,
+      "expectedInquiryCount": 6,
+      "intakeIds": [
+        "INTAKE-TEAMS-CALLNYC-SCHOOL-OF-DATA-2016",
+        "INTAKE-TEAMS-WOWLIST-ARCHIVED-LANDING-2017",
+        "INTAKE-TEAMS-CLAUDETTES-MAKE-US-VISIBLE-2022",
+        "INTAKE-TEAMS-BAPLAB-WAVE-FARM-2006",
+        "INTAKE-TEAMS-KCSPACES-GOFUNDME-2020",
+        "INTAKE-TEAMS-KCSPACES-CODE-REVIEW-2026",
+        "INTAKE-TEAMS-CRS-90-DAY-OPERATING-PLAN-2026",
+        "INTAKE-TEAMS-CRS-RUNNING-MINUTES-2026",
+        "INTAKE-TEAMS-CRS-OPEN-DATA-FOUNDATION-2025",
+        "INTAKE-TEAMS-CRS-PROVENANCE-REDLINE-2026",
+        "INTAKE-TEAMS-APPROVED-RESUME-2026-06-11",
+        "INTAKE-TEAMS-SOURCE-BACKED-MEMORY-PROPOSAL-2026"
+      ],
+      "sourceIds": [
+        "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08",
+        "SRC-WOWLIST-WAYBACK-2017-06-25",
+        "SRC-CLAUDETTES-MAKE-US-VISIBLE-MUNICH-2022",
+        "SRC-BAPLAB-WAVE-FARM-2006-07-22",
+        "SRC-KCSPACES-GOFUNDME-2020",
+        "SRC-KCSPACES-ARCHIVAL-CODE-REVIEW-2026-07-09",
+        "SRC-CRS-90-DAY-OPERATING-PLAN-2026-04-06",
+        "SRC-CRS-RUNNING-MINUTES-2026-04-29",
+        "SRC-CRS-OPEN-DATA-FOUNDATION-2025-11-26",
+        "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-16",
+        "SRC-JAMIE-APPROVED-RESUME-2026-06-11",
+        "SRC-SOURCE-BACKED-MEMORY-PROPOSAL-2026-06-26"
+      ],
+      "privateSourceIds": [
+        "SRC-KCSPACES-ARCHIVAL-CODE-REVIEW-2026-07-09",
+        "SRC-CRS-90-DAY-OPERATING-PLAN-2026-04-06",
+        "SRC-CRS-RUNNING-MINUTES-2026-04-29",
+        "SRC-CRS-OPEN-DATA-FOUNDATION-2025-11-26",
+        "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-16",
+        "SRC-SOURCE-BACKED-MEMORY-PROPOSAL-2026-06-26"
+      ],
+      "claimIds": [
+        "CLM-CALLNYC-SCHOOL-OF-DATA-FEATURE",
+        "CLM-WOWLIST-PUBLIC-PRODUCT-PURPOSE",
+        "CLM-CLAUDETTES-THEATRE-CO-CREDIT",
+        "CLM-BAPLAB-JAMIE-PARTICIPATION-2006",
+        "CLM-KCSPACES-DIGITAL-INFRASTRUCTURE",
+        "CLM-CRS-SHARED-PUBLIC-GOODS-DESIGN",
+        "CLM-CRS-CONSENT-AWARE-KNOWLEDGE-GOVERNANCE",
+        "CLM-CRS-OPEN-DATA-FOUNDATION-DESIGN",
+        "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+        "CLM-SOURCE-BACKED-MEMORY-BOUNDED-PILOT-METHOD"
+      ],
+      "inquiryIds": [
+        "INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-14",
+        "INQ-WOWLIST-ADOPTION-AND-METRICS",
+        "INQ-CLAUDETTES-CONTRIBUTION-SCOPE",
+        "INQ-KCSPACES-DIGITAL-INFRASTRUCTURE-ROLE",
+        "INQ-CRS-ARTIFACT-PUBLICATION-AND-COLLABORATOR-REVIEW",
+        "INQ-SOURCE-BACKED-MEMORY-PILOT-STATUS"
+      ],
+      "archiveGroups": {
+        "jamieProjectsHistory": 6,
+        "crs": 4,
+        "jobHunt": 2
+      },
+      "archiveGroupIntakeIds": {
+        "jamieProjectsHistory": [
+          "INTAKE-TEAMS-CALLNYC-SCHOOL-OF-DATA-2016",
+          "INTAKE-TEAMS-WOWLIST-ARCHIVED-LANDING-2017",
+          "INTAKE-TEAMS-CLAUDETTES-MAKE-US-VISIBLE-2022",
+          "INTAKE-TEAMS-BAPLAB-WAVE-FARM-2006",
+          "INTAKE-TEAMS-KCSPACES-GOFUNDME-2020",
+          "INTAKE-TEAMS-KCSPACES-CODE-REVIEW-2026"
+        ],
+        "crs": [
+          "INTAKE-TEAMS-CRS-90-DAY-OPERATING-PLAN-2026",
+          "INTAKE-TEAMS-CRS-RUNNING-MINUTES-2026",
+          "INTAKE-TEAMS-CRS-OPEN-DATA-FOUNDATION-2025",
+          "INTAKE-TEAMS-CRS-PROVENANCE-REDLINE-2026"
+        ],
+        "jobHunt": [
+          "INTAKE-TEAMS-APPROVED-RESUME-2026-06-11",
+          "INTAKE-TEAMS-SOURCE-BACKED-MEMORY-PROPOSAL-2026"
+        ]
+      },
+      "activeClaimId": "CLM-CALLNYC-SCHOOL-OF-DATA-FEATURE",
+      "callnycOccurrenceId": "school-of-data-feature",
+      "callnycSourceId": "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08",
+      "proofIds": [
+        "career-operating-structure-14-years",
+        "callnyc-civic-data-guidance",
+        "fair-rent-campaign-memory",
+        "fair-rent-source-map",
+        "wowlist-community-platform",
+        "kc-spaces-fund-digital-infrastructure",
+        "source-backed-team-memory-method",
+        "technical-operations-operating-backbone",
+        "ai-evals-professional-development"
+      ]
+    },
+    "googleDriveSharedDrivesProduction": {
+      "expectedDriveCount": 110,
+      "expectedInspectedRootCount": 26,
+      "expectedCloseReadArtifactCount": 7,
+      "expectedSourceCount": 7,
+      "expectedIntakeCount": 7,
+      "expectedObservationCount": 10,
+      "expectedClaimCount": 6,
+      "expectedInquiryCount": 5,
+      "intakeIds": [
+        "INTAKE-GDRIVE-SHARED-DRIVES-INVENTORY-2026",
+        "INTAKE-GDRIVE-SUNDAY-DINNER-LEDGER",
+        "INTAKE-GDRIVE-196-ACCEPTANCE-WORKFLOW-2023",
+        "INTAKE-GDRIVE-COMMERCIAL-VACANCY-PILOT-2026",
+        "INTAKE-GDRIVE-SBU-BRAND-GUIDELINES-2026",
+        "INTAKE-GDRIVE-OHAI-EMAIL-ONBOARDING-2020",
+        "INTAKE-GDRIVE-NYCAC-IOS-EMAIL-ONBOARDING-2020"
+      ],
+      "sourceIds": [
+        "SRC-GDRIVE-SHARED-DRIVES-RESEARCH-2026-07-14",
+        "SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER",
+        "SRC-GDRIVE-196-ACCEPTANCE-WORKFLOW-2023",
+        "SRC-GDRIVE-COMMERCIAL-VACANCY-PILOT-2026-03-27",
+        "SRC-GDRIVE-SBU-BRAND-GUIDELINES-2026-02-17",
+        "SRC-GDRIVE-OHAI-EMAIL-ONBOARDING-2020",
+        "SRC-GDRIVE-NYCAC-IOS-EMAIL-ONBOARDING-2020"
+      ],
+      "privateSourceIds": [
+        "SRC-GDRIVE-SHARED-DRIVES-RESEARCH-2026-07-14",
+        "SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER",
+        "SRC-GDRIVE-196-ACCEPTANCE-WORKFLOW-2023",
+        "SRC-GDRIVE-COMMERCIAL-VACANCY-PILOT-2026-03-27",
+        "SRC-GDRIVE-SBU-BRAND-GUIDELINES-2026-02-17",
+        "SRC-GDRIVE-OHAI-EMAIL-ONBOARDING-2020",
+        "SRC-GDRIVE-NYCAC-IOS-EMAIL-ONBOARDING-2020"
+      ],
+      "claimIds": [
+        "CLM-GDRIVE-PROJECT-SCOPED-HANDOFF-PRACTICE",
+        "CLM-SUNDAY-DINNER-RECORDED-GATHERINGS-AND-MEALS",
+        "CLM-196-RESIDENCY-ONBOARDING-AND-ACCESS",
+        "CLM-COMMERCIAL-VACANCY-PRIVACY-PRESERVING-PILOT-DESIGN",
+        "CLM-SBU-COLLABORATOR-CREDITED-BRAND-GOVERNANCE",
+        "CLM-NYCAC-AND-OHAI-ROLE-BASED-COMMUNICATION-INFRASTRUCTURE"
+      ],
+      "inquiryIds": [
+        "INQ-GDRIVE-SHARED-DRIVES-PRODUCTION-2026-07-14",
+        "INQ-GDRIVE-SUNDAY-DINNER-AND-196-SCALE",
+        "INQ-GDRIVE-COMMERCIAL-VACANCY-PILOT-STATUS",
+        "INQ-GDRIVE-SBU-BRAND-SYSTEM-STATUS",
+        "INQ-GDRIVE-NYCAC-INFRASTRUCTURE-AUTHORSHIP"
+      ],
+      "activeClaimId": "CLM-SUNDAY-DINNER-RECORDED-GATHERINGS-AND-MEALS",
+      "sundayDinnerSourceId": "SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER",
+      "proofId": "sunday-dinner-196-participation-infrastructure"
+    },
+    "socialMediaArchiveProduction": {
+      "expectedAccountCount": 5,
+      "expectedIntakeCount": 6,
+      "expectedObservationCount": 13,
+      "expectedSourceCount": 30,
+      "expectedClaimCount": 7,
+      "expectedInquiryCount": 3,
+      "accountSnapshots": {
+        "@CallNYCapp": { "profilePosts": 110, "recoveredStatuses": 107, "recoveredAuthoredPosts": 92 },
+        "@NYCArtC": { "profilePosts": 5124, "recoveredStatuses": 1026, "recoveredAuthoredPosts": 342 },
+        "@wowlist": { "profilePosts": 38, "recoveredStatuses": 38, "recoveredAuthoredPosts": 22 },
+        "@KCSpacesFund": { "profilePosts": 35, "recoveredStatuses": 34, "recoveredAuthoredPosts": 27 },
+        "@KCTownHall": { "profilePosts": 183, "recoveredStatuses": 183, "recoveredAuthoredPosts": 155 }
+      },
+      "profileSourceIds": [
+        "SRC-X-PROFILE-CALLNYCAPP",
+        "SRC-X-PROFILE-NYCARTC",
+        "SRC-X-PROFILE-WOWLIST",
+        "SRC-X-PROFILE-KCSPACESFUND",
+        "SRC-X-PROFILE-KCTOWNHALL"
+      ],
+      "auditSourceIds": [
+        "SRC-X-AUDIT-PROJECT-ACCOUNTS-2026-07-14",
+        "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
+        "SRC-X-AUDIT-NYCAC-ENGAGEMENT-2026-07-14"
+      ],
+      "officialRosterSourceId": "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025",
+      "callnycCouncilMemberCount": 8,
+      "callnycCouncilPostIds": [
+        "SRC-X-CALLNYC-PETER-KOO-2016-04-27",
+        "SRC-X-CALLNYC-STEVEN-MATTEO-2016-05-03",
+        "SRC-X-CALLNYC-RUBEN-WILLS-2016-05-17",
+        "SRC-X-CALLNYC-YDANIS-RODRIGUEZ-2016-05-18",
+        "SRC-X-CALLNYC-ROSIE-MENDEZ-2016-05-19",
+        "SRC-X-CALLNYC-HELEN-ROSENTHAL-2016-09-27",
+        "SRC-X-CALLNYC-MATHIEU-EUGENE-2016-10-04",
+        "SRC-X-CALLNYC-MARGARET-CHIN-2017-07-11"
+      ],
+      "nycacCouncilMemberFloor": 5,
+      "nycacCouncilPostIds": [
+        "SRC-X-NYCAC-RAFAEL-ESPINAL-2019-02-21",
+        "SRC-X-NYCAC-STEPHEN-LEVIN-2019-02-11",
+        "SRC-X-NYCAC-JUSTIN-BRANNAN-2019-08-30",
+        "SRC-X-NYCAC-JIMMY-VAN-BRAMER-2020-10-26",
+        "SRC-X-NYCAC-BRAD-LANDER-2021-01-28"
+      ],
+      "activeClaimIds": [
+        "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT",
+        "CLM-KCTH-SOCIAL-SERVICE-REPORTING"
+      ],
+      "heldClaimIds": [
+        "CLM-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT",
+        "CLM-NYCAC-SHARED-SOCIAL-IDENTITY",
+        "CLM-PROJECT-SOCIAL-IDENTITY-ESTABLISHMENT",
+        "CLM-WOWLIST-SOCIAL-PROJECT-ORIGIN",
+        "CLM-KCSPACES-SOCIAL-GRANTEE-REPORTING"
+      ],
+      "inquiryIds": [
+        "INQ-PROJECT-SOCIAL-ARCHIVE-PRODUCTION-2026-07-14",
+        "INQ-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT",
+        "INQ-PROJECT-SOCIAL-ACCOUNT-AUTHORSHIP"
+      ],
+      "callnycPageId": "callnyc",
+      "callnycOccurrenceId": "council-account-engagement",
+      "excludedHandles": ["@fairrentnyc", "@sundaydinnernyc"],
+      "documentationPath": "docs/knowledge-bank/projects/social-media-archive-production-2026-07-14.md"
+    },
+    "callNycFullPopulation": {
+      "ledgerPath": "docs/knowledge-bank/data/callnyc-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-callnyc-full-population-social-corpus.md",
+      "expectedProfileCount": 110,
+      "expectedPostsTabCount": 106,
+      "expectedUniqueItems": 107,
+      "expectedAccountPosts": 86,
+      "expectedAccountReplies": 6,
+      "expectedAuthoredStatuses": 92,
+      "expectedReposts": 15,
+      "expectedUnresolvedSlots": 3,
+      "expectedIssueRecognitionPosts": 71,
+      "expectedCouncilMemberHandles": 26,
+      "institutionalHandlesExcluded": ["@NYCCouncil", "@NYCHousing", "@NYCHA"],
+      "expectedUniqueIssuePages": 61,
+      "expectedIssueCategories": 16,
+      "expectedShortUrlOccurrences": 98,
+      "expectedUniqueShortUrls": 84,
+      "expectedResolvedDestinations": 76,
+      "expectedCallNycDestinations": 63,
+      "expectedExternalDestinations": 13,
+      "expectedVisualTokenRecords": 87,
+      "expectedImageIndicatorRecords": 82,
+      "expectedAmbiguousVisualTokenRecords": 5,
+      "expectedSourceCount": 10,
+      "expectedObservationCount": 8,
+      "expectedClaimCount": 3,
+      "expectedInquiryCount": 3,
+      "activeClaimId": "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
+      "heldClaimIds": [
+        "CLM-CALLNYC-PUBLIC-API-ANNOUNCEMENT",
+        "CLM-CALLNYC-PUBLIC-SOURCE-CIRCULATION"
+      ],
+      "auditSourceId": "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+      "roleSourceId": "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369",
+      "repliesOnlySourceId": "SRC-X-CALLNYC-JSON-API-722837286476390401",
+      "proofId": "callnyc-public-engagement-architecture"
+    },
+    "wowlistFullPopulation": {
+      "ledgerPath": "docs/knowledge-bank/data/wowlist-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-wowlist-full-population-social-corpus.md",
+      "expectedProfileCount": 38,
+      "expectedPostsTabCount": 37,
+      "expectedRepliesTabCount": 38,
+      "expectedUniqueItems": 38,
+      "expectedAccountPosts": 16,
+      "expectedAccountReplies": 6,
+      "expectedAuthoredStatuses": 22,
+      "expectedReposts": 16,
+      "expectedRepostSourceAccounts": 13,
+      "expectedUnresolvedSlots": 0,
+      "expectedSupportReplies": 6,
+      "expectedEventDistributionPosts": 5,
+      "expectedSceneKnowledgePosts": 3,
+      "expectedProductInfrastructurePosts": 3,
+      "expectedCivicCareAuthoredPosts": 5,
+      "expectedCivicCareReposts": 5,
+      "expectedPlatformUseReposts": 5,
+      "expectedExternalHandles": 14,
+      "expectedShortUrlOccurrences": 35,
+      "expectedUniqueShortUrls": 35,
+      "expectedResolvedDestinations": 34,
+      "expectedProjectOrLineageDestinations": 19,
+      "expectedExternalDestinations": 15,
+      "expectedAuthoredStatusesWithReaction": 12,
+      "expectedAuthoredVisibleReplies": 2,
+      "expectedAuthoredVisibleReposts": 20,
+      "expectedAuthoredVisibleLikes": 21,
+      "expectedSourceCount": 12,
+      "expectedObservationCount": 8,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 2,
+      "activeClaimId": "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+      "heldClaimIds": [
+        "CLM-WOWLIST-COMPLETE-SOCIAL-POPULATION",
+        "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING",
+        "CLM-WOWLIST-CIVIC-CARE-CONTINUITY",
+        "CLM-WOWLIST-VISIBLE-TRACTION-SNAPSHOT"
+      ],
+      "auditSourceId": "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026",
+      "repliesOnlySourceId": "SRC-X-WOWLIST-MEMBERS-MEETING-665520472461860864",
+      "proofId": "wowlist-public-support-surface"
+    },
+    "kcTownHallFullPopulation": {
+      "ledgerPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "expectedProfileCount": 183,
+      "expectedPostsTabCount": 170,
+      "expectedRepliesTabCount": 183,
+      "expectedUniqueItems": 183,
+      "expectedAccountPosts": 142,
+      "expectedAccountReplies": 13,
+      "expectedAuthoredStatuses": 155,
+      "expectedReposts": 28,
+      "expectedRepostSourceAccounts": 16,
+      "expectedExcludedContextItems": 5,
+      "expectedUnresolvedSlots": 0,
+      "expectedTireWorkflowRecords": 100,
+      "expectedTireWorkflowPosts": 96,
+      "expectedTireWorkflowReplies": 3,
+      "expectedTireWorkflowReposts": 1,
+      "expectedCivicInformationRecords": 26,
+      "expectedNeighborhoodCultureRecords": 27,
+      "expectedDevelopmentRecords": 16,
+      "expectedRacialJusticeRecords": 12,
+      "expectedPandemicResourceRecords": 2,
+      "expectedExternalHandles": 35,
+      "expectedQuintonLucasMentions": 26,
+      "expectedMelissaRobinsonMentions": 23,
+      "expectedCityPoliticalFigureReposts": 9,
+      "expectedDirectCouncilResponses": 2,
+      "expectedDirectCouncilAccounts": 2,
+      "expectedShortUrlOccurrences": 133,
+      "expectedUniqueShortUrls": 31,
+      "expectedResolvedDestinations": 20,
+      "expectedProjectOrLineageDestinations": 9,
+      "expectedExternalDestinations": 11,
+      "expectedAuthoredStatusesWithReaction": 77,
+      "expectedAuthoredVisibleReplies": 22,
+      "expectedAuthoredVisibleReposts": 70,
+      "expectedAuthoredVisibleLikes": 174,
+      "expectedSourceCount": 10,
+      "expectedObservationCount": 8,
+      "expectedClaimCount": 4,
+      "expectedInquiryCount": 3,
+      "activeClaimId": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
+      "heldClaimIds": [
+        "CLM-KCTH-COMPLETE-SOCIAL-POPULATION",
+        "CLM-KCTH-COUNCIL-MEMBER-RESPONSE-FLOOR",
+        "CLM-KCTH-PUBLIC-IDENTITY-MISSION-BREADTH",
+        "CLM-KCTH-VISIBLE-TRACTION-SNAPSHOT"
+      ],
+      "auditSourceId": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+      "proofId": "kc-town-hall-public-service-interface"
+    },
+    "nycacPopulationDisposition": {
+      "ledgerPath": "docs/knowledge-bank/data/nycartc-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-nycartc-population-reconciled-social-corpus.md",
+      "expectedProfileCount": 5124,
+      "expectedUniqueItems": 1026,
+      "expectedAccountPosts": 309,
+      "expectedAccountReplies": 33,
+      "expectedAuthoredStatuses": 342,
+      "expectedRepostSourceStatuses": 684,
+      "expectedRepostSourceAccounts": 216,
+      "expectedUnresolvedSlots": 4098,
+      "expectedFairRentSignals": 104,
+      "expectedLetDanceSignals": 101,
+      "expectedSaveSpacesSignals": 98,
+      "expectedTalksNotRaidsSignals": 16,
+      "expectedDirectMentionStatuses": 25,
+      "expectedDirectMentionAccounts": 13,
+      "expectedShortUrlOccurrences": 536,
+      "expectedUniqueShortUrls": 408,
+      "expectedResolvedShortUrls": 384,
+      "expectedUnresolvedShortUrls": 24,
+      "expectedResolvedDestinations": 345,
+      "expectedAuthoredStatusesWithReaction": 311,
+      "expectedAuthoredVisibleReplies": 11,
+      "expectedAuthoredVisibleReposts": 544,
+      "expectedAuthoredVisibleLikes": 1111,
+      "expectedSourceCount": 10,
+      "expectedLinkedArticleCount": 10,
+      "expectedObservationCount": 16,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 3,
+      "heldClaimIds": [
+        "CLM-NYCAC-SOCIAL-POPULATION-DISPOSITION",
+        "CLM-NYCAC-SOCIAL-CAMPAIGN-CONTINUITY",
+        "CLM-NYCAC-SOCIAL-EDITORIAL-NETWORK",
+        "CLM-NYCAC-SOCIAL-SOURCE-ROUTING",
+        "CLM-NYCAC-SOCIAL-VISIBLE-REACTIONS"
+      ],
+      "auditSourceId": "SRC-X-NYCAC-POPULATION-AUDIT-2026-07-14"
+    },
+    "urbanhermitFullPopulation": {
+      "ledgerPath": "docs/knowledge-bank/data/urbanhermit-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-urbanhermit-full-population-social-corpus.md",
+      "expectedProfileCount": 434,
+      "expectedUniqueItems": 425,
+      "expectedUnresolvedSlots": 9,
+      "expectedPublicSafeEvidenceRecords": 141,
+      "expectedPublicAccountAuthoredEvidenceRecords": 81,
+      "expectedPublicSourceStatusEvidenceRecords": 60,
+      "expectedContextOnlyRecords": 271,
+      "expectedProtectedContextRecords": 13,
+      "expectedDistinctPublicHandles": 64,
+      "expectedPostedUrlOccurrences": 104,
+      "expectedUniquePostedUrls": 87,
+      "expectedWaterPracticeSignals": 11,
+      "expectedSundayDinnerSignals": 27,
+      "expectedWowlistSignals": 14,
+      "expectedNycArtistCoalitionSignals": 61,
+      "expectedAuthoredStatusesWithReaction": 35,
+      "expectedAuthoredVisibleReplies": 4,
+      "expectedAuthoredVisibleReposts": 26,
+      "expectedAuthoredVisibleLikes": 67,
+      "expectedPublicSourceStatusMetricsExcluded": 60,
+      "expectedNewSourceCount": 15,
+      "expectedLinkedSourceCount": 16,
+      "expectedObservationCount": 19,
+      "expectedClaimCount": 8,
+      "expectedInquiryCount": 3,
+      "expectedLinkedSourceEdgeCount": 4,
+      "expectedLedgerSha256": "c90245a454e7fdf1cf48f499a2abad7c717762da1e3b6135b8dc18c0062911fa",
+      "expectedLedgerMetadataSha256": "22fc6d051dd57a476015117ca5aa9e91d27db861faf4d57df86a9451edc1124d",
+      "expectedKnowledgeGraphSha256": "67de57f549c5145936116c50b3579a2c94d87e7cd41f28873154036818a4e4f0",
+      "expectedPublicSurfaceSha256": "3255fdf7c4ee536665c46959a6e1133f0ba61de2a36bddf6e6c87ac0103db33a",
+      "expectedCrossLedgerSha256": "44929bacce524518dbe8951f51318b35adfa1ce0861d7ab95584c16339d3c401",
+      "expectedSemanticContractSha256": "5e735233a76fe98098c09bc9f6e8f4c170bd1bbfbd7e2e84104ba8ac0a8d34dd",
+      "methodContract": {
+        "surfaces": [
+          "Posts tab",
+          "Replies tab",
+          "bounded latest-results date searches",
+          "public status pages"
+        ],
+        "broadDateWindowsSearched": ["2008-2012", "2012-2016", "2016-2020", "2020-2024"],
+        "annualWindowsSearched": "2008 through 2024 inclusive",
+        "exclusions": [
+          "authentication, cookies, session material, and credentials",
+          "private messages, private analytics, and account-administration records",
+          "raw post text and raw browser recovery files",
+          "personal names, links, and status URLs from context-only or protected-context records",
+          "inferences that Jamie authored source statuses he reposted"
+        ]
+      },
+      "linkedSourceContracts": [
+        ["201361243104227328", "https://t.co/rnFDpjK6", "SRC-VIMEO-URBANHERMIT-UCP-CURFEW-VIDEO-2012"],
+        ["596692863532007424", "http://t.co/76aSNfRb9s", "SRC-GOOD-TIMES-ZINES-2-2015"],
+        ["726092227856969728", "https://t.co/fzIgyhK3Cp", "SRC-NPR-HORSE-LORDS-TRUTHERS-2016"],
+        ["726144972802691073", "https://t.co/KNY46agt6a", "SRC-NPR-HORSE-LORDS-TRUTHERS-2016"]
+      ],
+      "sourceContracts": {
+        "SRC-X-URBANHERMIT-POPULATION-AUDIT-2026-07-14": ["434-slot population reconciliation", "a platform export, deletion history, or proof that the nine unresolved records no longer exist"],
+        "SRC-X-URBANHERMIT-RIVER-OFFICE-HOURS-2009": ["public invitation", "attendance"],
+        "SRC-X-URBANHERMIT-HJE-WEBSITE-2010": ["self-authored website-making statement", "complete implementation scope"],
+        "SRC-X-URBANHERMIT-UCP-CURFEW-VIDEO-2012": ["self-authored video-making statement", "UCP's complete program"],
+        "SRC-VIMEO-URBANHERMIT-UCP-CURFEW-VIDEO-2012": ["continued public availability of the linked video artifact", "complete authorship credit"],
+        "SRC-X-KCUR-CENTRAL-STANDARD-JAMIE-WATER-2015": ["outside-authored public quotation", "complete interview"],
+        "SRC-X-URBANHERMIT-HORSE-LORDS-2016": ["self-authored co-making credit", "complete production roles"],
+        "SRC-X-THRILL-JOCKEY-HORSE-LORDS-2016": ["outside institutional co-making credit", "complete production-role breakdown"],
+        "SRC-NPR-HORSE-LORDS-TRUTHERS-2016": ["NPR publication of the Horse Lords Truthers video", "Jamie's complete production role without the corroborating credit post"],
+        "SRC-X-URBANHERMIT-LETNYCDANCE-REPEAL-2017": ["Jamie's public campaign circulation", "sole causation"],
+        "SRC-X-URBANHERMIT-TALKSNOTRAIDS-2019": ["Jamie's public campaign circulation", "sole authorship"],
+        "SRC-X-URBANHERMIT-MEDIA-ARCHAEOLOGY-2020": ["public technical guidance", "complete technical practice"],
+        "SRC-X-LETSGLITCHIT-JAMIE-CONNECTIONS-2023": ["outside-authored public recognition", "a formal testimonial"],
+        "SRC-X-URBANHERMIT-GOOD-TIMES-ZINES-2-2015": ["Jamie's public source routing", "article authorship"],
+        "SRC-OBSERVER-MARKET-HOTEL-2016": ["public context for one cultural-space-safety link circulated by the account", "press coverage of Jamie"]
+      },
+      "claimContracts": {
+        "CLM-URBANHERMIT-SOCIAL-POPULATION-DISPOSITION": ["425 locally recovered items and nine explicit unresolved slots", "Full disposition is not full public item recovery or a platform export."],
+        "CLM-URBANHERMIT-PRACTICE-CONTINUITY": ["recurring public practices", "Continuity means recurring surviving evidence, not uninterrupted activity or equal effort across years."],
+        "CLM-URBANHERMIT-WATERWAYS-PRACTICE": ["public traces of Jamie's participatory waterways practice", "not complete project histories, attendance, or outcomes"],
+        "CLM-URBANHERMIT-PUBLIC-MEDIA-MAKING": ["co-making Horse Lords' Truthers video with Martin Schmidt", "Keep Martin Schmidt's co-credit visible."],
+        "CLM-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION": ["carry NYC Artist Coalition campaign signals", "not sole authorship, coalition control, policy causality, or impact"],
+        "CLM-URBANHERMIT-TECHNICAL-PRACTICE": ["examples of Jamie's technical practice", "not as a skills rating or complete technical portfolio"],
+        "CLM-URBANHERMIT-OUTSIDE-RECOGNITION-FLOOR": ["Three source statuses", "not a comprehensive mention search or testimonial collection"],
+        "CLM-URBANHERMIT-VISIBLE-TRACTION-SNAPSHOT": ["35 of 81", "Exclude all source-status metrics from Jamie's traction."]
+      },
+      "observationContracts": {
+        "OBS-URBANHERMIT-UCP-VIDEO-SELF-REPORT": {
+          "sourceId": "SRC-X-URBANHERMIT-UCP-CURFEW-VIDEO-2012",
+          "requiredPhrases": ["Jamie's public post says", "links a Vimeo artifact"]
+        },
+        "OBS-URBANHERMIT-UCP-VIMEO-AVAILABILITY": {
+          "sourceId": "SRC-VIMEO-URBANHERMIT-UCP-CURFEW-VIDEO-2012",
+          "requiredPhrases": ["remained publicly available", "July 2026 review"]
+        },
+        "OBS-URBANHERMIT-HORSE-LORDS-SELF-REPORT": {
+          "sourceId": "SRC-X-URBANHERMIT-HORSE-LORDS-2016",
+          "requiredPhrases": ["Jamie's April 2016 post says", "he and Martin Schmidt"]
+        },
+        "OBS-URBANHERMIT-HORSE-LORDS-OUTSIDE-CREDIT": {
+          "sourceId": "SRC-X-THRILL-JOCKEY-HORSE-LORDS-2016",
+          "requiredPhrases": ["Thrill Jockey publicly credited", "Jamie Burkart and Martin Schmidt"]
+        },
+        "OBS-URBANHERMIT-HORSE-LORDS-NPR-PUBLICATION": {
+          "sourceId": "SRC-NPR-HORSE-LORDS-TRUTHERS-2016",
+          "requiredPhrases": ["NPR Music published", "April 29, 2016"]
+        },
+        "OBS-URBANHERMIT-GOOD-TIMES-ROUTING": {
+          "sourceId": "SRC-X-URBANHERMIT-GOOD-TIMES-ZINES-2-2015",
+          "requiredPhrases": ["Jamie's May 2015 post routed readers", "DIY cultural spaces"]
+        },
+        "OBS-URBANHERMIT-GOOD-TIMES-ISSUE-CONTEXT": {
+          "sourceId": "SRC-GOOD-TIMES-ZINES-2-2015",
+          "requiredPhrases": ["Good Times published Elise Granata's reporting", "May 2015"]
+        },
+        "OBS-URBANHERMIT-MARKET-HOTEL-CONTEXT": {
+          "sourceId": "SRC-OBSERVER-MARKET-HOTEL-2016",
+          "requiredPhrases": ["Observer reported", "October 2016 NYPD raid at Market Hotel"]
+        }
+      },
+      "heldClaimIds": [
+        "CLM-URBANHERMIT-SOCIAL-POPULATION-DISPOSITION",
+        "CLM-URBANHERMIT-PRACTICE-CONTINUITY",
+        "CLM-URBANHERMIT-WATERWAYS-PRACTICE",
+        "CLM-URBANHERMIT-PUBLIC-MEDIA-MAKING",
+        "CLM-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION",
+        "CLM-URBANHERMIT-TECHNICAL-PRACTICE",
+        "CLM-URBANHERMIT-OUTSIDE-RECOGNITION-FLOOR",
+        "CLM-URBANHERMIT-VISIBLE-TRACTION-SNAPSHOT"
+      ],
+      "auditSourceId": "SRC-X-URBANHERMIT-POPULATION-AUDIT-2026-07-14"
+    },
+    "nycacFacebookEvents": {
+      "eventLedgerPath": "docs/knowledge-bank/data/nycartc-public-facebook-event-ledger.json",
+      "linkLedgerPath": "docs/knowledge-bank/data/nycartc-public-facebook-event-link-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-event-population.md",
+      "projectReportPath": "docs/knowledge-bank/projects/nycartc-facebook-events-2026-07-14.md",
+      "expectedEventLedgerDigestSha256": "79b8cb8b652b01a6e96d46aa51dd47b519efc03ac3bf8514eb6cbb5141ef09d7",
+      "expectedLinkLedgerDigestSha256": "d6d07b83b23fc23879aeaaf335900472adf14c370dd1a44ee35cdcf6159d4b02",
+      "expectedControlSlots": 34,
+      "expectedRecoveredRecords": 33,
+      "expectedUnresolvedSlots": 1,
+      "expectedYearCounts": { "2017": 17, "2018": 3, "2019": 6, "2020": 6, "2021": 1 },
+      "expectedDirectHostCards": 24,
+      "expectedAlignedHostCards": 9,
+      "expectedRecurringMeetingRecords": 12,
+      "expectedDistinctPhysicalVenues": 10,
+      "expectedVirtualMeetingRecords": 2,
+      "expectedResponseDisplays": 32,
+      "expectedMinimumResponseDisplay": 9,
+      "expectedMaximumResponseDisplay": 1700,
+      "expectedResponseDisplaysAtLeast100": 19,
+      "expectedResponseDisplaysAtLeast400": 9,
+      "expectedResponseDisplaysAtLeast1000": 3,
+      "expectedEventsWithOutboundLinks": 25,
+      "expectedOutboundLinkOccurrences": 61,
+      "expectedNormalizedLinkRows": 38,
+      "expectedArticleRoutes": 7,
+      "expectedProtectedLinkRows": 1,
+      "expectedUnresolvedLinkRows": 4,
+      "expectedCurrentReplayHeaders": 33,
+      "expectedCurrentReplayFullBodies": 22,
+      "expectedCurrentReplayHeaderOnlyBodies": 11,
+      "expectedCurrentReplayHeaderOnlyEventIds": [
+        "109513027694163",
+        "1451617855032658",
+        "533594734223350",
+        "2616087105332260",
+        "790581997948463",
+        "1916200875140739",
+        "383292402137451",
+        "133554860735306",
+        "120802405289008",
+        "113308576029782",
+        "472114119789400"
+      ],
+      "expectedNewSourceCount": 17,
+      "expectedObservationCount": 24,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 2,
+      "selectedClaimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "heldClaimIds": [
+        "CLM-NYCAC-FACEBOOK-EVENT-POPULATION-2026",
+        "CLM-NYCAC-FACEBOOK-RESPONSE-BOUNDARY",
+        "CLM-NYCAC-FACEBOOK-EVENT-LINK-NETWORK",
+        "CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE"
+      ],
+      "eventSourceIds": [
+        "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-HEARING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NOVEMBER-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHT-MAYOR-PANEL-2018",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-HEARING-2019",
+        "SRC-NYCAC-FACEBOOK-EVENT-SUMMER-MEETING-2019",
+        "SRC-NYCAC-FACEBOOK-EVENT-COVID-RELIEF-2020"
+      ],
+      "sourceContracts": {
+        "SRC-NYCAC-FACEBOOK-EVENTS-CONTROL-2026": ["34-event displayed control", "native Meta export"],
+        "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026": ["34-slot accounting", "attendance or unique response"],
+        "SRC-NYCAC-FACEBOOK-EVENT-LINK-LEDGER-2026": ["61 link occurrences", "readership"],
+        "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026": ["first-person contribution account", "sole organization of every event"],
+        "SRC-NYCAC-GOTHAMIST-COMMERCIAL-RENT-BILL-2019-11-06": ["2019 proposal", "bill passage"],
+        "SRC-NYCAC-NYPOST-FOOTLOOSE-CABARET-2017-04-08": ["Cabaret Law advocacy", "Jamie's individual role"]
+      },
+      "claimContracts": {
+        "CLM-NYCAC-FACEBOOK-EVENT-POPULATION-2026": ["33 event records", "one historical control slot remains unresolved"],
+        "CLM-NYCAC-PARTICIPATION-SYSTEM": ["describes his contribution as helping establish and produce", "collective surfaces"],
+        "CLM-NYCAC-FACEBOOK-RESPONSE-BOUNDARY": ["must remain event-level platform signals", "Do not sum event responses"],
+        "CLM-NYCAC-FACEBOOK-EVENT-LINK-NETWORK": ["38 research routes", "not automatic corroboration"],
+        "CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE": ["Jamie interprets", "not neutral platform metadata"]
+      }
+    },
+    "personalWowlistFacebookEvents": {
+      "controlsPath": "docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json",
+      "censusPath": "docs/knowledge-bank/jamie-facebook-displayed-host-event-census-2026-07-14.csv",
+      "reportPath": "docs/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.md",
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 19,
+      "expectedObservationCount": 17,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 2,
+      "expectedProfileIds": 502,
+      "expectedHostedIds": 21,
+      "expectedOverlap": 18,
+      "expectedUnion": 505,
+      "expectedDisplayedJamieHostCards": 20,
+      "expectedDisplayedOtherHostCards": 482,
+      "expectedWowlistCurrentEvents": 0,
+      "selectedEventSourceIds": [
+        "SRC-JAMIE-FACEBOOK-EVENT-SEMANTIC-WEB-2006",
+        "SRC-JAMIE-FACEBOOK-EVENT-PIRATE-TROLLEY-2007",
+        "SRC-JAMIE-FACEBOOK-EVENT-MICROPOP-2007",
+        "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007",
+        "SRC-JAMIE-FACEBOOK-EVENT-NIGHT-WALK-2010",
+        "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014",
+        "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014",
+        "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017",
+        "SRC-JAMIE-FACEBOOK-EVENT-HYPERNORMALISATION-2017"
+      ],
+      "routeSourceIds": [
+        "SRC-MICROPOP-POSTED-IMAGINED-COMMUNITIES",
+        "SRC-MICROPOP-POSTED-LASTFM-FAN-GRAPH",
+        "SRC-MICROPOP-POSTED-KCDIY"
+      ],
+      "claimIds": [
+        "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026",
+        "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-POPULATION-2026",
+        "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017",
+        "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026",
+        "CLM-WOWLIST-FACEBOOK-EVENT-HISTORY-NOT-RECOVERED-2026"
+      ],
+      "inquiryIds": [
+        "INQ-JAMIE-FACEBOOK-EVENT-PRACTICE-2026",
+        "INQ-WOWLIST-FACEBOOK-EVENTS-2026"
+      ],
+      "proofId": "sunday-dinner-196-participation-infrastructure"
+    },
+    "wowlistFacebookPosts": {
+      "ledgerPath": "docs/knowledge-bank/data/wowlist-facebook-post-ledger.json",
+      "reportPath": "docs/knowledge-bank/wowlist-facebook-posts-2015-2018.md",
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 8,
+      "expectedObservationCount": 13,
+      "expectedClaimCount": 7,
+      "expectedInquiryCount": 2,
+      "expectedDistinctPosts": 53,
+      "expectedPriorRenderedRecords": 54,
+      "expectedFreshForwardRecords": 53,
+      "expectedFreshReverseRecords": 53,
+      "expectedFreshExactAgreement": 53,
+      "expectedThemeCounts": {
+        "product-onboarding-and-community-governance": 13,
+        "event-and-participant-amplification": 12,
+        "cultural-space-care-and-safety": 18,
+        "civic-mobilization-and-public-care": 7,
+        "adjacent-cultural-knowledge-and-opportunity": 3
+      },
+      "expectedExplicitDestinationOccurrences": 29,
+      "expectedUniqueExplicitDestinations": 27,
+      "expectedWowlistDestinations": 19,
+      "expectedExternalDestinations": 8,
+      "expectedWiderLinkOccurrences": 80,
+      "expectedWiderDistinctDestinations": 71,
+      "expectedPostsWithVisibleReactions": 39,
+      "expectedTotalVisibleReactions": 88,
+      "expectedContentLibraryRows": 5,
+      "activeClaimId": "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE",
+      "heldMemoryClaimId": "CLM-WOWLIST-FACEBOOK-SOLE-SOCIAL-MANAGEMENT-MEMORY",
+      "claimIds": [
+        "CLM-WOWLIST-FACEBOOK-SURVIVING-POST-POPULATION",
+        "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE",
+        "CLM-WOWLIST-FACEBOOK-MISSION-PRACTICE",
+        "CLM-WOWLIST-FACEBOOK-STAKEHOLDER-PARTICIPATION",
+        "CLM-WOWLIST-FACEBOOK-DESTINATION-NETWORK",
+        "CLM-WOWLIST-FACEBOOK-VISIBLE-TRACTION-SNAPSHOT",
+        "CLM-WOWLIST-FACEBOOK-SOLE-SOCIAL-MANAGEMENT-MEMORY"
+      ],
+      "inquiryIds": [
+        "INQ-WOWLIST-FACEBOOK-POST-POPULATION-2026",
+        "INQ-WOWLIST-FACEBOOK-SOCIAL-MANAGEMENT-2026"
+      ],
+      "selectedPublicSourceIds": [
+        "SRC-WOWLIST-FACEBOOK-COMMUNITY-PHILOSOPHY-2016",
+        "SRC-WOWLIST-FACEBOOK-WOMENS-MARCH-2017",
+        "SRC-WOWLIST-FACEBOOK-LET-NYC-DANCE-2017",
+        "SRC-WESTWORD-DENVER-DIY-SPACES-FUND-2017",
+        "SRC-WILLAMETTE-WEEK-THE-KNOW-CLOSING-2016"
+      ]
+    },
+    "nycacFacebookPosts": {
+      "ledgerPath": "docs/knowledge-bank/data/nycartc-facebook-post-ledger.json",
+      "reportPath": "docs/knowledge-bank/nycartc-facebook-posts-2017-2021.md",
+      "expectedLedgerDigestSha256": "4ad6fb8497c6859f144126124f141d6a506e94d302fe352a81a82579c420d0b1",
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 9,
+      "expectedObservationCount": 18,
+      "expectedClaimCount": 6,
+      "expectedInquiryCount": 2,
+      "expectedPublicCandidateRecords": 634,
+      "expectedPublicNormalizedRecords": 460,
+      "expectedPublicContentSignatures": 413,
+      "expectedPublicForwardSteps": 522,
+      "expectedPublicTerminalConfirmations": 12,
+      "expectedNativePosts": 185,
+      "expectedNativeYearCounts": {
+        "2019": 111,
+        "2020": 69,
+        "2021": 5
+      },
+      "expectedPostTypeCounts": {
+        "Text": 79,
+        "Links": 58,
+        "Photos": 44,
+        "Videos": 4
+      },
+      "expectedPublicThemeCounts": {
+        "cultural-space-policy-and-advocacy": 142,
+        "community-resource-and-mutual-aid": 112,
+        "solidarity-and-cultural-amplification": 75,
+        "public-meeting-and-mobilization": 51,
+        "coalition-governance-and-listening": 24,
+        "source-press-and-public-knowledge": 9
+      },
+      "expectedNativeThemeCounts": {
+        "community-resource-and-mutual-aid": 116,
+        "cultural-space-policy-and-advocacy": 39,
+        "solidarity-and-cultural-amplification": 15,
+        "public-meeting-and-mobilization": 12,
+        "coalition-governance-and-listening": 2,
+        "source-press-and-public-knowledge": 1
+      },
+      "expectedDestinationOccurrences": 239,
+      "expectedUniqueDestinations": 83,
+      "expectedLifetimeMetrics": {
+        "reactions": 1006,
+        "comments": 164,
+        "shares": 208
+      },
+      "claimIds": [
+        "CLM-NYCAC-FACEBOOK-POPULATION-RECONCILIATION",
+        "CLM-NYCAC-FACEBOOK-PUBLISHING-OPERATING-SURFACE",
+        "CLM-NYCAC-FACEBOOK-DESTINATION-NETWORK",
+        "CLM-NYCAC-FACEBOOK-MISSION-SOURCE-CIRCULATION",
+        "CLM-NYCAC-FACEBOOK-TRACTION-SNAPSHOT",
+        "CLM-NYCAC-FACEBOOK-PREDOMINANT-PUBLISHER-MEMORY"
+      ],
+      "inquiryIds": [
+        "INQ-NYCAC-FACEBOOK-POST-POPULATION-2026",
+        "INQ-NYCAC-FACEBOOK-PUBLISHING-CREDIT-2026"
+      ],
+      "selectedPublicSourceIds": [
+        "SRC-NYCAC-BEDFORD-MARCH-2019",
+        "SRC-NYCAC-BAFFLER-MARCH",
+        "SRC-NYCAC-CITY-LIMITS-RENT-COVID-2020",
+        "SRC-NYC-COMPTROLLER-RETAIL-VACANCY-2019",
+        "SRC-NYCAC-BUZZFEED-MARCH-GENTRIFICATION-2020",
+        "SRC-NYCAC-GRUBSTREET-ODE-TO-BABEL-2019",
+        "SRC-NYCAC-POND-VENUE-DIVERSITY-2020",
+        "SRC-NYCAC-GOTHAMIST-BOOK-CULTURE-2020"
+      ],
+      "heldMemoryClaimId": "CLM-NYCAC-FACEBOOK-PREDOMINANT-PUBLISHER-MEMORY"
+    },
+    "kcSpacesFundFacebookPosts": {
+      "ledgerPath": "docs/knowledge-bank/data/kcspacesfund-facebook-post-ledger.json",
+      "reportPath": "docs/knowledge-bank/kcspacesfund-facebook-posts-2020.md",
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 3,
+      "expectedObservationCount": 8,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 2,
+      "expectedDistinctPosts": 35,
+      "expectedEarliestObserved": "2020-04-07",
+      "expectedLatestObserved": "2020-07-09",
+      "expectedIndependentPasses": 2,
+      "expectedTerminalConfirmations": 7,
+      "expectedStableAttachmentIds": 20,
+      "expectedUnavailableSharedContent": 5,
+      "expectedThemeCounts": {
+        "grant-recipient-reporting": 12,
+        "application-donation-and-deadline-routing": 10,
+        "fundraising-partner-and-print-mobilization": 7,
+        "public-context-mutual-aid-and-unavailable": 6
+      },
+      "expectedUniqueDestinations": 6,
+      "expectedInstitutionalResponseSignals": 3,
+      "expectedPostsWithVisibleReactions": 27,
+      "expectedTotalVisibleReactions": 115,
+      "expectedReactionKinds": {
+        "Like": 77,
+        "Love": 38
+      },
+      "claimIds": [
+        "CLM-KCSPACES-FACEBOOK-SURVIVING-POST-POPULATION",
+        "CLM-KCSPACES-FACEBOOK-OPERATIONAL-SEQUENCE",
+        "CLM-KCSPACES-FACEBOOK-INSTITUTIONAL-RESPONSE-SIGNALS",
+        "CLM-KCSPACES-FACEBOOK-VISIBLE-TRACTION-SNAPSHOT",
+        "CLM-KCSPACES-UNIFORM-NAME-CONTRIBUTION-MEMORY"
+      ],
+      "inquiryIds": [
+        "INQ-KCSPACES-FACEBOOK-POST-POPULATION-2026",
+        "INQ-KCSPACES-NAME-AVAILABILITY-2026"
+      ],
+      "heldMemoryClaimId": "CLM-KCSPACES-UNIFORM-NAME-CONTRIBUTION-MEMORY",
+      "selectedPublicSourceIds": [
+        "SRC-KCSPACES-DO816-DAILY-DOGOOD-2020",
+        "SRC-KCSPACES-GOFUNDME-2020"
+      ]
+    },
+    "jamiePersonalFacebookPosts": {
+      "controlsPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
+      "reportPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 10,
+      "expectedObservationCount": 15,
+      "expectedClaimCount": 10,
+      "expectedInquiryCount": 3,
+      "expectedCursorPages": 621,
+      "expectedReturnedNodes": 3728,
+      "expectedUniqueRecords": 1243,
+      "expectedRecoveredStart": "2006-12-19",
+      "expectedRecoveredEnd": "2022-06-12",
+      "expectedAudienceLabels": {
+        "public": 268,
+        "onlyMe": 1,
+        "friends": 1,
+        "notExposedInCrawl": 973
+      },
+      "expectedRecordsByYear": {
+        "2006": 2,
+        "2007": 5,
+        "2008": 4,
+        "2009": 218,
+        "2010": 82,
+        "2011": 88,
+        "2012": 153,
+        "2013": 184,
+        "2014": 109,
+        "2015": 68,
+        "2016": 122,
+        "2017": 118,
+        "2018": 27,
+        "2019": 42,
+        "2020": 19,
+        "2022": 2
+      },
+      "expectedRecordForms": {
+        "text": 335,
+        "sharedStory": 244,
+        "photo": 221,
+        "mediaOrTextUnavailable": 159,
+        "photoAlbum": 135,
+        "event": 58,
+        "externalLink": 55,
+        "video": 36
+      },
+      "expectedMissionRoutedRecords": 181,
+      "expectedProjectRecordCounts": {
+        "wowList": 48,
+        "sundayDinner": 44,
+        "nycArtistCoalition": 34,
+        "letNycDance": 33,
+        "creativeTechnical": 19,
+        "civicTechnical": 13,
+        "waterPublics": 10,
+        "saveNycSpaces": 10,
+        "talksNotRaids": 4,
+        "fairRentNyc": 3,
+        "kcTownHall": 2,
+        "nterChng": 2,
+        "callnyc": 1
+      },
+      "expectedUrlBearingRecords": 430,
+      "expectedUniqueNormalizedExternalUrls": 549,
+      "expectedStakeholderRecordCounts": {
+        "newYorkCityCouncil": 20,
+        "rafaelEspinal": 18,
+        "marketHotel": 9,
+        "officeOfNightlife": 6,
+        "antonioReynoso": 5,
+        "quintonLucas": 1,
+        "helenRosenthal": 1
+      },
+      "expectedPublicPostSourceCount": 6,
+      "selectedPublicSourceIds": [
+        "SRC-FB-JAMIE-NTER-OPENING-2010",
+        "SRC-FB-JAMIE-WOWLIST-NINE-CITIES-2015",
+        "SRC-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-2016",
+        "SRC-FB-JAMIE-LETNYCDANCE-NPR-2017",
+        "SRC-FB-JAMIE-KCTOWNHALL-START-2018",
+        "SRC-FB-JAMIE-TALKSNOTRAIDS-ACTION-2019",
+        "SRC-GOTHAMIST-CABARET-MOMENTUM-2017-03-31",
+        "SRC-NYC-COUNCIL-LABS-CONSTITUENT-SERVICES-2016"
+      ],
+      "claimIds": [
+        "CLM-FB-JAMIE-POST-POPULATION-2026",
+        "CLM-FB-JAMIE-MISSION-ROUTING-PRACTICE",
+        "CLM-FB-JAMIE-POSTED-URL-ROUTING-2026",
+        "CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026",
+        "CLM-FB-JAMIE-SELECTED-PUBLIC-INTERACTION-SNAPSHOT-2026",
+        "CLM-FB-JAMIE-PROJECT-ACTION-ROUTING",
+        "CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE",
+        "CLM-FB-JAMIE-KCTOWNHALL-COINITIATION-TRACE",
+        "CLM-FB-JAMIE-NTER-OPENING-CREDIT-TRACE",
+        "CLM-FB-JAMIE-WOWLIST-NINE-CITY-TRACE"
+      ],
+      "inquiryIds": [
+        "INQ-FB-JAMIE-POST-CORPUS-2026",
+        "INQ-FB-JAMIE-POSTED-SOURCES-2026",
+        "INQ-FB-JAMIE-COUNCILSTAT-ROLE-2026"
+      ],
+      "heldClaimId": "CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE"
+    },
+    "participationInfrastructureProduction": {
+      "reportPath": "docs/knowledge-bank/projects/participation-infrastructure-2026-07-15.md",
+      "expectedIntakeCount": 3,
+      "expectedObservationCount": 10,
+      "expectedSourceCount": 6,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 3,
+      "expectedAudit": {
+        "wowlistUsers2016": 995,
+        "wowlistUsers2017": 1846,
+        "wowlistPosts2016": 10136,
+        "wowlistPosts2017": 16142,
+        "geocodedPosts": 12433,
+        "qualifyingGeographies": 35,
+        "popularVoteEvents": 933,
+        "popularVoteFollowerAccounts": 196,
+        "sundayDinnerNumberedColumns": 345,
+        "sundayDinnerSequenceColumns": 349,
+        "sundayDinnerColumnMarks": 2769,
+        "sundayDinnerWorkbookSummary": 2783,
+        "sundayDinnerDifference": 14,
+        "callscriptRepositoryCommits": 24,
+        "callscriptEventResponseDisplay": 445
+      },
+      "intakeIds": [
+        "INTAKE-WOWLIST-DATABASE-SNAPSHOT-AUDIT-2026",
+        "INTAKE-SUNDAY-DINNER-ATTENDANCE-AUDIT-2026",
+        "INTAKE-CALLSCRIPT-PARTICIPATION-BRIDGE-2026"
+      ],
+      "sourceIds": [
+        "SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026",
+        "SRC-SUNDAY-DINNER-AGGREGATE-AUDIT-2026",
+        "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+        "SRC-CALLSCRIPT-PUBLIC-REPOSITORY",
+        "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+        "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017"
+      ],
+      "claimIds": [
+        "CLM-WOWLIST-HISTORICAL-AGGREGATE-SCALE",
+        "CLM-WOWLIST-POPULAR-VOTE-TRACTION",
+        "CLM-SUNDAY-DINNER-LEDGER-AGGREGATE-AUDIT",
+        "CLM-CALLSCRIPT-DCLA-LISTENING-WORKFLOW",
+        "CLM-PARTICIPATION-INFRASTRUCTURE-CONTINUITY"
+      ],
+      "inquiryIds": [
+        "INQ-WOWLIST-POPULAR-VOTE-PARTICIPATION",
+        "INQ-SUNDAY-DINNER-LEDGER-RECONCILIATION",
+        "INQ-CALLSCRIPT-NYCAC-SEQUENCE-AND-CREDIT"
+      ],
+      "activeClaimId": "CLM-WOWLIST-HISTORICAL-AGGREGATE-SCALE",
+      "heldClaimIds": [
+        "CLM-WOWLIST-POPULAR-VOTE-TRACTION",
+        "CLM-SUNDAY-DINNER-LEDGER-AGGREGATE-AUDIT",
+        "CLM-CALLSCRIPT-DCLA-LISTENING-WORKFLOW",
+        "CLM-PARTICIPATION-INFRASTRUCTURE-CONTINUITY"
+      ],
+      "selectedNycacClaimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "requiredNycacSourceIds": [
+        "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+        "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017"
+      ],
+      "proofIds": [
+        "wowlist-community-platform",
+        "sunday-dinner-196-participation-infrastructure",
+        "nyc-artist-coalition-civic-systems"
+      ]
+    },
+    "nycacGovernmentInterface": {
+      "reportPath": "docs/knowledge-bank/projects/nycac-government-interface-2026-07-15.md",
+      "expectedIntakeCount": 4,
+      "expectedObservationCount": 7,
+      "expectedSourceCount": 4,
+      "expectedClaimCount": 4,
+      "expectedInquiryCount": 2,
+      "expectedTranscriptCandidates": 5,
+      "expectedRecoveredReferences": 1,
+      "intakeIds": [
+        "INTAKE-NYCAC-FINKELPEARL-COUNCIL-TESTIMONY-2017",
+        "INTAKE-NYCAC-DCLA-COMMISSIONER-MESSAGE",
+        "INTAKE-NYCAC-MARCH-COUNCIL-HEARING-2019",
+        "INTAKE-NYCAC-FINKELPEARL-TRANSCRIPT-AUDIT-2026"
+      ],
+      "sourceIds": [
+        "SRC-NYC-COUNCIL-FY2018-DCLA-HEARING-2017-05-19",
+        "SRC-DCLA-COMMISSIONER-CREATENYC-MESSAGE",
+        "SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11",
+        "SRC-NYC-COUNCIL-FINKELPEARL-TRANSCRIPT-AUDIT-2026"
+      ],
+      "claimIds": [
+        "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+        "CLM-NYCAC-DCLA-CIVIC-INTERMEDIARY-VALUE",
+        "CLM-NYCAC-COUNCIL-DELIBERATIVE-VALUE",
+        "CLM-NYCAC-ESPINAL-IMPLEMENTATION-PARTNER-VALUE"
+      ],
+      "inquiryIds": [
+        "INQ-NYCAC-FINKELPEARL-COUNCIL-TRANSCRIPT-AUDIT",
+        "INQ-NYCAC-GOVERNMENT-INTERFACE-VALUE"
+      ],
+      "directClaimId": "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+      "inferenceClaimIds": [
+        "CLM-NYCAC-DCLA-CIVIC-INTERMEDIARY-VALUE",
+        "CLM-NYCAC-COUNCIL-DELIBERATIVE-VALUE",
+        "CLM-NYCAC-ESPINAL-IMPLEMENTATION-PARTNER-VALUE"
+      ],
+      "requiredExistingSourceIds": [
+        "SRC-X-NYCAC-RAFAEL-ESPINAL-2019-02-21",
+        "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
+        "SRC-NYC-OFFICE-NIGHTLIFE-LOCAL-LAW-178-2017",
+        "SRC-NYC-CABARET-REPEAL-LOCAL-LAW-214-2017"
+      ],
+      "proofId": "nyc-artist-coalition-civic-systems"
+    }
+  },
+  "criteria": [
+    {
+      "id": "KB-EVAL-INTAKE",
+      "label": "Lossless public-safe intake",
+      "weight": 0.15,
+      "minimumScore": 5,
+      "intent": "Every supplied fragment receives a stable ID, project association, disposition, boundary, and next relationship rather than disappearing silently."
+    },
+    {
+      "id": "KB-EVAL-ATOMICITY",
+      "label": "Observation atomicity",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "Sources are decomposed into proposition-level observations with locators, limitations, and explicit links to claims or research questions."
+    },
+    {
+      "id": "KB-EVAL-SCOPE",
+      "label": "Evidence scope integrity",
+      "weight": 0.15,
+      "minimumScore": 5,
+      "intent": "Every source records what it establishes and does not establish; evidence relationships never silently broaden a source."
+    },
+    {
+      "id": "KB-EVAL-MATURATION",
+      "label": "Claim maturation",
+      "weight": 0.15,
+      "minimumScore": 4,
+      "intent": "Defensible claims carry evidence, boundaries, anti-claims, review data, and open inquiries where material uncertainty remains."
+    },
+    {
+      "id": "KB-EVAL-PROJECTION",
+      "label": "Projection discipline",
+      "weight": 0.15,
+      "minimumScore": 5,
+      "intent": "Epistemic readiness remains separate from compositional selection; held claims have no public surface and active claims have an authorized page plan."
+    },
+    {
+      "id": "KB-EVAL-COVERAGE",
+      "label": "Existing-site evidence coverage",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "The framework improves support for consequential claims already represented on the public site, without overloading the composition."
+    },
+    {
+      "id": "KB-EVAL-SAFETY",
+      "label": "Public safety and collective credit",
+      "weight": 0.1,
+      "minimumScore": 5,
+      "intent": "No private locator or raw archive leaks; participant detail, policy causation, and collective outcomes remain explicitly bounded."
+    },
+    {
+      "id": "KB-EVAL-RECOMPOSITION",
+      "label": "Recomposition and feedback readiness",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "Unselected claims and open questions remain usable for future applications, site arguments, collaborator proofs, and photo-editor feedback loops."
+    },
+    {
+      "id": "KB-EVAL-PRESS-ARCHIVE",
+      "label": "Campaign press archive completeness",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every press-list appearance across the four campaign sites is preserved with campaign provenance, deduplicated article identity, availability context, scope boundaries, and a maturation disposition."
+    },
+    {
+      "id": "KB-EVAL-KCTH-FUNDING-LIFECYCLE",
+      "label": "KC Town Hall funding lifecycle integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The bank and public projection preserve the full official sequence from CCED recommendation through Council acceptance and appropriation to zero disbursement, withdrawal, and return of the unused funds, without converting collective authorization into individual receipt or sole causation."
+    },
+    {
+      "id": "KB-EVAL-KCTH-PHASE-ONE",
+      "label": "KC Town Hall Phase One construction integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The bank makes Jamie's Phase One construction and neighborhood-process roles legible while keeping participant testimony, applicant-authored proposal evidence, official records, collective specialist labor, proposed budget, phase completion, full redevelopment, local-workforce self-report, survey participation, and protected attachments rigorously distinct."
+    },
+    {
+      "id": "KB-EVAL-TEAMS-ARCHIVE-PRODUCTION",
+      "label": "Teams archive production integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Jamie Projects History, CRS, and job-hunt produce bounded sources, atomic observations, held depth, explicit hydration limits, and only one independently supported public projection without exposing private archive material."
+    },
+    {
+      "id": "KB-EVAL-GDRIVE-SHARED-DRIVES-PRODUCTION",
+      "label": "Google Drive Shared Drives production integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The 110-drive corpus receives a bounded non-exhaustive map, high-signal close reading, cross-carrier deduplication, protected source handling, collective credit, one strengthened existing projection, and held depth without exposing Shared Drive identifiers or participant records."
+    },
+    {
+      "id": "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION",
+      "label": "Project social-media archive production integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Five verified project accounts receive bounded authenticated inventories, official-at-date engagement counts, source and authorship limits, collective credit, one inspectable CallNYC projection, and held archival depth without exposing private account data or mistaking project outreach for official engagement."
+    },
+    {
+      "id": "KB-EVAL-CALLNYC-FULL-POPULATION",
+      "label": "CallNYC full-population archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every recoverable @CallNYCApp item and posted URL is preserved in an item-level ledger; all 110 observed profile-count slots receive honest dispositions; stakeholder outreach remains distinct from reciprocal engagement; mission-relevant sources and claims mature without inflating tags, rows, links, or visible metrics into outcomes."
+    },
+    {
+      "id": "KB-EVAL-WOWLIST-FULL-POPULATION",
+      "label": "WOW List full-population archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every surviving @wowlist item and posted URL is dispositioned; support and stakeholder patterns are reproducible; current reactions remain bounded; collective authorship is preserved; and only the clearest operational claim is composed into the site."
+    },
+    {
+      "id": "KB-EVAL-KCTH-FULL-POPULATION",
+      "label": "KC Town Hall full-population archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every surviving @KCTownHall item and posted URL is dispositioned; resident-service, source-routing, and stakeholder patterns are reproducible; outreach, direct response, amplification, and current reactions remain distinct; private contact and service data stay absent; collective authorship is preserved; and only the clearest operational claim is composed into the site."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-POPULATION-DISPOSITION",
+      "label": "NYC Artist Coalition population-reconciled archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 5,124 displayed @NYCArtC profile-count slots receive honest dispositions; every recovered item and posted URL is preserved without raw text; unresolved carrier gaps remain explicit; source authorship, coalition amplification, direct mention, current reactions, and Council-member engagement remain distinct; and the deeper account record stays available for recomposition without burdening the public portfolio."
+    },
+    {
+      "id": "KB-EVAL-URBANHERMIT-FULL-POPULATION",
+      "label": "Personal @urbanhermit population-reconciled archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 434 displayed personal-account slots receive honest dispositions; mission-relevant public evidence remains inspectable; ordinary and protected life context is counted without republication; source-status authorship and metrics remain with their source; self-report, outside corroboration, mutable reactions, and impact remain distinct; and all newly matured claims stay held until deliberate composition."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-FACEBOOK-EVENTS",
+      "label": "NYC Artist Coalition Facebook event population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 34 displayed Facebook event slots are honestly dispositioned; 33 recovered events remain useful historical plot points; rotating venues, event formats, source routes, and retrieval drift are reproducible; responses never become attendance; private people and access data remain absent; collective authorship is preserved; and only Jamie's bounded participation-system contribution is composed into the public site."
+    },
+    {
+      "id": "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+      "label": "Personal and WOW List Facebook event population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All current personal event controls are population-reconciled; the complete displayed-Jamie subset becomes bounded historical plot points; source routes and independent reporting are retained; personal relationship data stays protected; mutable platform displays never become attendance or impact; and WOW List's current zero and historical non-recovery remain distinct."
+    },
+    {
+      "id": "KB-EVAL-WOWLIST-FACEBOOK-POSTS",
+      "label": "WOW List Facebook post population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every surviving WOW List Facebook post receives a public-safe disposition; independent traversals reconcile; explicit routes and selected source articles remain inspectable; wider participant relationships stay aggregate-only; publisher action, shared authorship, sole management, mutable reactions, stakeholder response, and impact remain distinct; and only the bounded Page-publishing claim enters the portfolio."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-FACEBOOK-POSTS",
+      "label": "NYC Artist Coalition Facebook post population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every recovered NYC Artist Coalition Facebook post receives a public-safe disposition across overlapping public-surface and native-export controls; the populations are never summed; failed controls and product-surface disagreement remain visible; public destinations and selected sources remain inspectable; private evidence and participant relationships stay protected; individual memory, shared authorship, mutable metrics, stakeholder response, and impact remain distinct; and deliberate portfolio composition is not replaced by archive dumping."
+    },
+    {
+      "id": "KB-EVAL-KCSPACES-FACEBOOK-POSTS",
+      "label": "KC Spaces Fund Facebook post population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every post exposed by the surviving KC Spaces Fund Facebook Page receives a public-safe disposition; the complete-surface boundary, unavailable content, collective credit, publisher non-attribution, public routes, selected sources, organization-attributed response examples, mutable reactions, Jamie's separately supported digital role, and his held naming memory remain distinct; and archive depth does not force a new site projection."
+    },
+    {
+      "id": "KB-EVAL-JAMIE-PERSONAL-FACEBOOK-POSTS",
+      "label": "Jamie personal Facebook owner-post population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every record returned by the authenticated Posted by You surface receives a public-safe disposition; year, form, audience, mission, URL, and selected-source controls reconcile; unknown-audience and ordinary-life material remain protected; posted routes remain source leads; outbound stakeholder references remain distinct from inbound engagement; mutable counters remain distinct from people and impact; collective credit and unresolved CouncilStat role language stay bounded; and archive depth does not force a new site projection."
+    },
+    {
+      "id": "KB-EVAL-PARTICIPATION-INFRASTRUCTURE",
+      "label": "Participation-infrastructure archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Protected WOW List and Sunday Dinner records become bounded public-safe aggregates; the Call Script public record preserves a concrete listening workflow; database relationships, ledger marks, platform responses, attendance, authorship, and outcomes remain distinct; collective credit survives; and only audience-useful claims are composed into the site."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-GOVERNMENT-INTERFACE",
+      "label": "NYC Artist Coalition government-interface integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The exact Finkelpearl Council reference, DCLA framing, Council testimony and data record, and Espinal engagement remain source-backed and actor-specific; direct facts stay distinct from institutional interpretation; a bounded transcript search never becomes proof of nonexistence; no official is described as dependent on Jamie; collective credit and policy-causation limits survive; and mature depth remains held until deliberate composition."
+    },
+    {
+      "id": "KB-EVAL-WATERWAYS-KC-STAR",
+      "label": "Kansas City Star waterways source integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The contemporaneous newspaper becomes public-safe metadata, source-attributed atomic observations checked against a sealed co-versioned regression contract and runtime-verifiable artifact receipt, and bounded held claims without republishing the copyrighted carrier, erasing named contributors, allocating undocumented labor, treating publication-date route status as the final terminus, or converting URL non-recovery into proof of nonexistence. The regression contract is not an independent authority; fresh read-only review occurs outside the evaluator."
+    }
+  ],
+  "hillClimb": {
+    "iteration": [
+      "Run deterministic checks and a fresh editorial judge against the current bank.",
+      "Select the lowest criterion and state one bounded maturation hypothesis.",
+      "Improve structure, research, or projection without deleting protected boundaries.",
+      "Rerun checks, public-safety validation, and the affected public projection.",
+      "Keep only iterations that improve the lowest criterion without regressions."
+    ],
+    "antiGaming": [
+      "Never call a memory a verified claim without a source relationship.",
+      "Never improve completeness by placing private paths or raw evidence in the public repo.",
+      "Never improve projection coverage by publishing every mature claim.",
+      "Never infer sole causation from participation, proximity, or contemporaneous coverage.",
+      "Never treat a photograph as self-interpreting proof or consent to publish.",
+      "Never turn an appropriation into money received, omit a material later disposition, or erase a documented approval because the project later changed course.",
+      "Never count a project account tagging an official as engagement authored by that official.",
+      "Never count candidate-era or former-member posts as sitting-officeholder engagement.",
+      "Never treat profile post totals as stable impact metrics or individual authorship records.",
+      "Never count reactions on a reposted source status as engagement earned by the project account's repost action.",
+      "Never call a public personal-account record opaque if its identifier, digest, timestamp, length, metric tuple, or other fingerprint can be linked back to a withheld item.",
+      "Never turn project-authored mentions or project-selected reposts into engagement authored by an outside stakeholder.",
+      "Never add overlapping Facebook public-surface and native-export populations together.",
+      "Never turn a failed reverse traversal into an independent population confirmation.",
+      "Never turn aggregate reactions, comments, and shares into unique people, stakeholder groups, or impact.",
+      "Never turn a Page-authored mention or posted source route into reciprocal engagement, endorsement, readership, or adoption.",
+      "Never expose raw captions, comments, per-post private analytics, working documents, meeting credentials, financial routes, or participant relationship graphs.",
+      "Never turn a first-person memory of predominant Page operation into verified sole authorship or administration.",
+      "Never turn KC Spaces Fund's coherent cross-platform name into proof that Jamie proposed, selected, registered, owned, or controlled it.",
+      "Never attribute KC Spaces Fund Facebook posting, ownership, stakeholder status, organizing authority, grant decisions, or fiscal sponsorship to Jamie without direct evidence.",
+      "Never turn Jamie's 1,243 returned owner-filtered Facebook records into a native export, deletion history, immutable lifetime count, or universally public corpus.",
+      "Never turn audience-label absence into public-audience evidence or commit Jamie's raw personal Facebook corpus to the public repository.",
+      "Never turn overlapping mission or stakeholder routes into exclusive categories, importance rankings, inbound engagement, endorsement, or impact.",
+      "Never turn 549 posted destinations into 549 corroborating sources before source-specific recovery and close reading.",
+      "Never turn mutable personal-post counters into historical analytics, unique people, stakeholder engagement, reach, attendance, conversion, causality, or impact.",
+      "Never infer Jamie's Council employment, title, contract, team membership, job-post authorship, or hiring authority from his May 2016 CouncilStat invitation language.",
+      "Never turn a tire-workflow record count into a completed-pickup, household, or resident-outcome count.",
+      "Never treat an applicant-authored grant proposal as an independent construction audit, final inspection, or completion certificate.",
+      "Never turn Jamie's first-person general-contractor account into independent corroboration or sole credit for specialist trade labor.",
+      "Never turn Phase One cold-shell completion into completion of the full KC Town Hall redevelopment.",
+      "Never turn the $189,629 Phase One proposal budget into an independently audited final cost.",
+      "Never turn a reproduced survey card into proof of representative participation, response count, or implementation of every preference.",
+      "Never turn an unrecovered account or status into proof that it never existed."
+    ],
+    "stopWhen": "Every criterion meets its minimum and the weighted target passes in two consecutive fresh-judge runs, with deterministic checks and public safety passing."
+  }
+}

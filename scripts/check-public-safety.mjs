@@ -124,6 +124,15 @@ try {
   failures.push("scripts/check-knowledge-bank.mjs - knowledge-bank gate failed");
 }
 
+try {
+  execFileSync(process.execPath, [path.join(repoRoot, "scripts/check-knowledge-evals.mjs")], {
+    cwd: repoRoot,
+    stdio: "inherit"
+  });
+} catch {
+  failures.push("scripts/check-knowledge-evals.mjs - strict knowledge-eval gate failed");
+}
+
 const allFiles = walk(repoRoot);
 const textFiles = allFiles.filter((file) => textExtensions.has(path.extname(file)));
 const shippedTextFiles = textFiles.filter((file) => {

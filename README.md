@@ -35,6 +35,9 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run check:portfolio-evals
+npm run test:portfolio-evals
+npm run report:portfolio-evals
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -65,6 +68,13 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+Archive-production passes are evaluated as hard gates rather than informal
+notes. Run `npm run check:knowledge-evals`, `npm run test:knowledge-evals`, and
+`npm run report:knowledge-evals`. The latest Shared Drives pass is documented at
+`docs/knowledge-bank/projects/google-drive-shared-drives-production-2026-07-14.md`;
+the repository retains only public-safe records, never Shared Drive identifiers,
+private URLs, permissions, participant rows, or credentials.
 
 ## Environment
 
@@ -115,8 +125,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body, UI, prose, and display headings. Use Oswald for labels,
+metadata, and compact civic emphasis. Do not commit or serve private,
+proprietary, or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -130,13 +141,26 @@ or serve private, proprietary, or unlicensed font files.
   Do not render that marker in production-facing pages; keep launch blockers in
   `docs/knowledge-bank/launch-blockers.md`.
 
-## Launch Blockers
+## Launch Readiness
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
-- Confirm production metadata points to `https://jamieburk.art`.
-- Confirm no private/proprietary fonts are committed or served.
+Approved contact details and public-use boundaries live in
+`docs/knowledge-bank/approval-register.md`. Cleared content gates and the
+remaining exact-commit release actions live in
+`docs/knowledge-bank/launch-blockers.md`. Re-run the complete checks for every
+production candidate; do not infer readiness from an earlier commit.
+
+The recursive agent evaluation suite lives in `evals/launch-readiness/`. Run
+`npm run check:launch-evals`, `npm run test:launch-evals`, and
+`npm run report:launch-evals`. Hard gates remain authoritative; weighted judge
+scores may improve clarity but may not override safety, consent, accessibility,
+or exact-commit release requirements.
+
+The complementary portfolio-effectiveness suite lives in
+`evals/portfolio-effectiveness/`. It evaluates hiring-reader comprehension,
+collaborator-backed role attribution, complete operating narratives, recent
+practice, consent-cleared visual evidence, exact-SHA release proof, and the
+maintainability of this evaluation system. Run `npm run check:portfolio-evals`,
+`npm run test:portfolio-evals`, and `npm run report:portfolio-evals`. A locally
+passing score does not stand in for human reader sessions, collaborator proof
+notes, artifact rights clearance, externally verified outcomes, or production
+evidence from the exact deployed commit.

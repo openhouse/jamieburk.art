@@ -2,6 +2,8 @@
 
 The V1 type direction is public-safe and font-file-free.
 
+Last reviewed against the shipped application: 2026-07-11.
+
 ## Current Policy
 
 - Karla is the body, UI, prose, card, and long-reading font.
