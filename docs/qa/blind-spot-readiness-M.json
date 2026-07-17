@@ -1,0 +1,62 @@
+{
+  "version": "2026-07-17",
+  "objective": "Make known external-validity and archive-bias risks observable and actionable without claiming that control protocols are real-world outcomes.",
+  "criteria": [
+    {
+      "id": "BS-001",
+      "controlState": "controlled-open",
+      "outcomeState": "pending-human-review",
+      "blockingLevel": "parallel",
+      "criterion": "Independent hiring-reader comprehension is measured only through real dated sessions on an exact candidate."
+    },
+    {
+      "id": "BS-002",
+      "controlState": "controlled-open",
+      "outcomeState": "pending-collaborator-review",
+      "blockingLevel": "parallel",
+      "criterion": "Individual role and collective credit have collaborator corroboration or an explicit hold; silence is not approval."
+    },
+    {
+      "id": "BS-003",
+      "controlState": "controlled",
+      "outcomeState": "open-research",
+      "blockingLevel": "P2",
+      "criterion": "Enumerable archive traces do not crowd out offline, relational, maintenance, or implementation work."
+    },
+    {
+      "id": "BS-004",
+      "controlState": "controlled",
+      "outcomeState": "periodic-review-required",
+      "blockingLevel": "P1",
+      "criterion": "Whole-graph review detects mosaic privacy risk beyond record-level public-safety checks."
+    },
+    {
+      "id": "BS-005",
+      "controlState": "controlled",
+      "outcomeState": "authority-separated",
+      "blockingLevel": "P0",
+      "criterion": "Author, optimizer, deterministic checker, model grader, and human reviewer remain distinct authorities."
+    },
+    {
+      "id": "BS-006",
+      "controlState": "controlled-open",
+      "outcomeState": "no-observations-yet",
+      "blockingLevel": "parallel",
+      "criterion": "Application and referral outcomes remain private, aggregate, and unattributed to the site without evidence."
+    },
+    {
+      "id": "BS-007",
+      "controlState": "controlled",
+      "outcomeState": "monitored",
+      "blockingLevel": "P1",
+      "criterion": "Rubric, evidence, policy, and public-projection drift remain visible through hashes and lifecycle reports."
+    },
+    {
+      "id": "BS-008",
+      "controlState": "controlled-open",
+      "outcomeState": "pending-real-job-review",
+      "blockingLevel": "parallel",
+      "criterion": "Five dated real job descriptions reveal role-specific proof strengths and gaps without rewriting employer needs."
+    }
+  ]
+}

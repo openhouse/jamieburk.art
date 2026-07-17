@@ -1,7 +1,23 @@
 #!/usr/bin/env node
 
 import { existsSync, readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  evaluateKnowledgeContracts,
+  readJson
+} from "./lib/composite-evals.mjs";
+
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const compositeRubric = readJson(
+  repoRoot,
+  "docs/qa/knowledge-lifecycle-M.json"
+);
+const operatorLedger = readJson(
+  repoRoot,
+  "docs/knowledge-bank/operator-intake-M.json"
+);
 
 const intakeItems = knowledgeBank.intakeItems ?? [];
 const sourceReadings = knowledgeBank.sourceReadings ?? [];
@@ -3390,6 +3406,18 @@ const criteria = [
     })()
   }
 ];
+
+criteria.push(
+  ...evaluateKnowledgeContracts({
+    knowledgeBank,
+    rubric: compositeRubric,
+    operatorLedger,
+    repoRoot
+  }).map((result) => ({
+    ...result,
+    label: result.criterion ?? "Missing composite lifecycle criterion"
+  }))
+);
 
 const passed = criteria.filter((criterion) => criterion.pass).length;
 

@@ -65,7 +65,11 @@ const sharedControlsPass = Boolean(
     /Prof\. Warren Sack/.test(protocol) &&
     packageJson.scripts["check:professor-lenses"] ===
       "node scripts/check-professor-lenses.mjs" &&
-    packageJson.scripts.check.includes("check:professor-lenses") &&
+    (packageJson.scripts.check.includes("check:professor-lenses") ||
+      (packageJson.scripts.check.includes("check:evals") &&
+        packageJson.scripts["check:evals"].includes(
+          "check:professor-lenses"
+        ))) &&
     packageJson.scripts["check:evals"].includes("check:professor-lenses") &&
     publicRegistry.includes("SRC-OPEN-HOUSE-GOOD-TIMES-2006") &&
     publicRegistry.includes("CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE")

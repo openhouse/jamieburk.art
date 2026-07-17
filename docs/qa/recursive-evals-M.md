@@ -44,12 +44,20 @@ public-safe, and ready to act from.
    portfolio preserves Jamie's artistic, embodied, and social-technical
    imagination without weakening hiring clarity or presenting Codex-authored
    criteria as fresh testimony from either professor.
-9. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
+9. **Blind-spot pass:** run `npm run check:blind-spots`. Confirm that human
+   comprehension, collaborator corroboration, mosaic privacy, evaluator
+   independence, application outcomes, countability bias, drift, and real-job
+   comparison have truthful controls. Pending outcomes must remain pending.
+10. **Eval-integrity pass:** run `npm run test:evals` and
+   `npm run check:eval-integrity`. Mutation attacks must be rejected, and the
+   final receipt must match the exact candidate content, evidence snapshot, and
+   frozen rubrics.
+11. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
    layout, keyboard navigation, focus states, and key links.
-10. **Automation pass:** run `npm run check`, `npm run check:evals`,
+12. **Automation pass:** run `npm run check`, `npm run check:evals`,
    `npm run preflight:staging`, and `npm run preflight:production` when the
    environment is available.
-11. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
+13. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
    only for unresolved P0/P1 blockers.
 
 ## Chad-Lens Criterion
@@ -84,6 +92,10 @@ The machine-readable registers are:
 - `visual-proof-register-M.json` for rights-aware visual candidates;
 - `delivery-dimensions-M.json` for coordination, constraints, continuity, and
   unsupported-scale boundaries.
+- `blind-spot-readiness-M.json` for external-validity controls with independent
+  outcome states; and
+- `eval-control-plane-M.json` for authority boundaries, semantic mutations,
+  rubric hashes, and exact-candidate receipts.
 
 A passing score does not claim that external review or image clearance has
 happened. Those dimensions pass only when the work is honestly represented as
@@ -102,7 +114,8 @@ open and the bounded protocol is present.
   the repo or public surface.
 - `npm run check`, `npm run check:chad-lens`,
   `npm run check:portfolio-readiness`, `npm run check:professor-lenses`, or
-  `npm run public-safety` fails.
+  `npm run check:blind-spots`, `npm run test:evals`,
+  `npm run check:eval-integrity`, or `npm run public-safety` fails.
 
 ## P1: Blocks Production Cutover
 

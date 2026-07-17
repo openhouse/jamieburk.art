@@ -1,0 +1,116 @@
+{
+  "version": "2026-07-17",
+  "lineageAnchor": "289dd4499eb3e7b78bc16b380a02ac180dca35bb",
+  "canonicalRoot": "docs/qa",
+  "integrationRecord": "docs/qa/evals-composite-integration-M.md",
+  "receiptPath": "docs/qa/runs/latest.json",
+  "rubricPaths": [
+    "docs/qa/eval-control-plane-M.json",
+    "docs/qa/knowledge-lifecycle-M.json",
+    "docs/qa/portfolio-readiness-M.json",
+    "docs/qa/blind-spot-readiness-M.json",
+    "docs/qa/professor-lenses-M.json"
+  ],
+  "policyPaths": [
+    "AGENTS.md",
+    "scripts/check-public-safety.mjs",
+    "docs/knowledge-bank/intake-and-maturation.md",
+    "docs/knowledge-bank/citational-care.md"
+  ],
+  "humanProtocolPaths": [
+    "docs/qa/human-validation-M.md",
+    "docs/qa/application-outcomes-M.md",
+    "docs/qa/launch-qa-M.md"
+  ],
+  "contentHashExcludes": [
+    "docs/qa/runs/"
+  ],
+  "frozenBranches": [
+    "feature/evals-A",
+    "feature/evals-B",
+    "feature/evals-C",
+    "feature/evals-D",
+    "feature/evals-E",
+    "feature/evals-F",
+    "feature/evals-G",
+    "feature/evals-H",
+    "feature/evals-I",
+    "feature/evals-J",
+    "feature/evals-K",
+    "feature/evals-L",
+    "feature/evals-M",
+    "feature/evals-N"
+  ],
+  "authorities": [
+    {
+      "id": "deterministic-checker",
+      "mayEstablish": [
+        "schema and relationship consistency",
+        "command and file presence",
+        "declared control state",
+        "hash and receipt integrity"
+      ],
+      "mayNotEstablish": [
+        "editorial quality",
+        "human comprehension",
+        "collaborator approval",
+        "production approval"
+      ]
+    },
+    {
+      "id": "read-only-model-grader",
+      "mayEstablish": [
+        "a bounded judgment against a frozen rubric"
+      ],
+      "mayNotEstablish": [
+        "external human validation",
+        "firsthand memory",
+        "rights or consent",
+        "release approval"
+      ]
+    },
+    {
+      "id": "human-reviewer",
+      "mayEstablish": [
+        "dated observed comprehension",
+        "firsthand collaborator evidence",
+        "hands-on accessibility findings",
+        "explicit approval within the reviewer's authority"
+      ],
+      "mayNotEstablish": [
+        "facts outside the reviewed evidence or the reviewer's firsthand knowledge"
+      ]
+    }
+  ],
+  "decisionStates": [
+    "continue",
+    "stop_threshold_met",
+    "stop_human_blocked",
+    "stop_external_evidence_blocked"
+  ],
+  "materialChangePolicy": {
+    "resetModelJudgments": true,
+    "resetHumanJudgments": true,
+    "preserveHistoricalReceipts": true
+  },
+  "modelJudgmentPolicy": {
+    "usedByCurrentBlockingCriteria": false,
+    "requiredConsecutivePassesWhenUsed": 2,
+    "requireUnchangedCandidateContentHash": true,
+    "mayOverrideDeterministicFailure": false
+  },
+  "mutationAttacks": [
+    "MUT-001-project-evidence-as-individual-role",
+    "MUT-002-pending-human-review-as-complete",
+    "MUT-003-protected-url-exposure",
+    "MUT-004-recoverable-population-as-platform-complete",
+    "MUT-005-mention-as-endorsement",
+    "MUT-006-mature-claim-auto-projection",
+    "MUT-007-rights-needed-as-cleared",
+    "MUT-008-proposal-as-delivery",
+    "MUT-009-sequence-as-sole-causation",
+    "MUT-010-stale-rubric-hash",
+    "MUT-011-authoring-agent-as-independent",
+    "MUT-012-source-volume-as-importance"
+  ]
+}

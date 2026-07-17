@@ -1,5 +1,77 @@
 {
-  "version": "2026-07-15",
+  "version": "2026-07-17",
+  "applicationShareThresholds": {
+    "requiredBlockingLevels": ["P0"],
+    "allowPendingHumanOutcomes": true,
+    "decisionWhenMet": "stop_threshold_met"
+  },
+  "productionLaunchThresholds": {
+    "requiredBlockingLevels": ["P0", "P1"],
+    "allowPendingHumanOutcomes": false,
+    "decisionWhenHumanEvidenceIsMissing": "stop_human_blocked"
+  },
+  "contracts": [
+    {
+      "id": "PR-001",
+      "state": "controlled-open",
+      "blockingLevel": "parallel",
+      "criterion": "An unfamiliar reader can identify the target role, value, three proofs, and next action; only real dated reader sessions can establish the outcome."
+    },
+    {
+      "id": "PR-002",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Jamie is visible as actor while purpose and usable end remain concise, bounded, and collectively credited where appropriate."
+    },
+    {
+      "id": "PR-003",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Lead claims and metrics are inspectably source-backed through canonical claims, evidence relationships, and generated citations."
+    },
+    {
+      "id": "PR-004",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "Output, observed use, outcome, attribution boundary, and transferable capability remain distinct."
+    },
+    {
+      "id": "PR-005",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "Historical depth resolves into current capability and a future-facing professional offer."
+    },
+    {
+      "id": "PR-006",
+      "state": "controlled-open",
+      "blockingLevel": "P2",
+      "criterion": "Rights-cleared visual proof may reduce reading burden; candidates awaiting rights review are never described as cleared evidence."
+    },
+    {
+      "id": "PR-007",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Resume, contact, referral, LinkedIn, GitHub, and call-to-action destinations are accurate or safely omitted."
+    },
+    {
+      "id": "PR-008",
+      "state": "controlled-open",
+      "blockingLevel": "P1",
+      "criterion": "Automated accessibility and browser controls pass while hands-on keyboard, screen-reader, mobile, zoom, contrast, and link review stays pending until performed."
+    },
+    {
+      "id": "PR-009",
+      "state": "controlled-open",
+      "blockingLevel": "P1",
+      "criterion": "Build, runtime, staging, production cutover, rollback, robots, sitemap, and exact candidate SHA are verifiable; deployment remains human-controlled."
+    },
+    {
+      "id": "PR-010",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "A factual stopping rule prevents P2 polish and archive completeness from delaying applications."
+    }
+  ],
   "dimensions": [
     {
       "id": "external-human-validation",

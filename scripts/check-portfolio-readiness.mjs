@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -35,6 +35,9 @@ const expectedDimensionIds = [
   "release-enforcement",
   "application-ready-stop-rule"
 ];
+const expectedContractIds = Array.from({ length: 10 }, (_, index) =>
+  `PR-${String(index + 1).padStart(3, "0")}`
+);
 
 const protocol = read("docs/qa/portfolio-readiness-M.md");
 const readinessRegister = readJson("docs/qa/portfolio-readiness-M.json");
@@ -50,6 +53,14 @@ const technicalOperations = read(
 const proofData = read("apps/www/src/data/proofs.ts");
 const workflow = read(".github/workflows/portfolio-readiness.yml");
 const fairRent = read("apps/www/src/content/work/fair-rent-nyc.mdx");
+const humanValidation = existsSync(
+  path.join(repoRoot, "docs/qa/human-validation-M.md")
+)
+  ? read("docs/qa/human-validation-M.md")
+  : "";
+const launchQa = existsSync(path.join(repoRoot, "docs/qa/launch-qa-M.md"))
+  ? read("docs/qa/launch-qa-M.md")
+  : "";
 const caseStudies = new Map(
   workSlugs.map((slug) => [
     slug,
@@ -59,6 +70,9 @@ const caseStudies = new Map(
 
 const dimensionById = new Map(
   readinessRegister.dimensions.map((dimension) => [dimension.id, dimension])
+);
+const contractById = new Map(
+  (readinessRegister.contracts ?? []).map((contract) => [contract.id, contract])
 );
 
 function hasDimension(id, allowedStates) {
@@ -74,6 +88,16 @@ function hasDimension(id, allowedStates) {
 
 function hasEveryCaseStudyHeading(pattern) {
   return [...caseStudies.values()].every((content) => pattern.test(content));
+}
+
+function hasContract(id, allowedStates) {
+  const contract = contractById.get(id);
+  return Boolean(
+    contract &&
+      allowedStates.includes(contract.state) &&
+      contract.criterion?.trim() &&
+      contract.blockingLevel?.trim()
+  );
 }
 
 const visualBySlug = new Map(
@@ -221,7 +245,11 @@ const criteria = [
     label: "The full check is enforced locally and on pull requests",
     pass: Boolean(
       hasDimension("release-enforcement", ["controlled"]) &&
-        packageJson.scripts.check.includes("check:portfolio-readiness") &&
+        (packageJson.scripts.check.includes("check:portfolio-readiness") ||
+          (packageJson.scripts.check.includes("check:evals") &&
+            packageJson.scripts["check:evals"].includes(
+              "check:portfolio-readiness"
+            ))) &&
         packageJson.scripts["check:evals"].includes("check:portfolio-readiness") &&
         packageJson.scripts["preflight:staging"].includes("npm run check") &&
         packageJson.scripts["preflight:production"].includes("npm run check") &&
@@ -248,9 +276,125 @@ const criteria = [
   }
 ];
 
+const legacyCriterionById = new Map(
+  criteria.map((criterion) => [criterion.id, criterion.pass])
+);
+const portfolioContracts = [
+  {
+    id: "PR-001",
+    label: "Unfamiliar-reader outcome has a real-session protocol and remains pending",
+    pass: Boolean(
+      hasContract("PR-001", ["controlled-open"]) &&
+        /three unfamiliar readers/i.test(humanValidation) &&
+        /30 seconds/i.test(humanValidation) &&
+        /two minutes/i.test(humanValidation) &&
+        /pending-human-review/i.test(humanValidation) &&
+        legacyCriterionById.get("external-human-validation")
+    )
+  },
+  {
+    id: "PR-002",
+    label: "Jamie is the actor and the usable end remains bounded",
+    pass: Boolean(
+      hasContract("PR-002", ["controlled"]) &&
+        packageJson.scripts["check:evals"].includes("check:chad-lens") &&
+        legacyCriterionById.get("reader-compression")
+    )
+  },
+  {
+    id: "PR-003",
+    label: "Lead proof is bound to canonical claims and generated citations",
+    pass: Boolean(
+      hasContract("PR-003", ["controlled"]) &&
+        packageJson.scripts.check.includes("check:citations") &&
+        packageJson.scripts.check.includes("knowledge-bank") &&
+        /<Claim|<Cite/.test([...caseStudies.values()].join("\n"))
+    )
+  },
+  {
+    id: "PR-004",
+    label: "Output, evidence, attribution, and transfer remain distinct",
+    pass: Boolean(
+      hasContract("PR-004", ["controlled"]) &&
+        legacyCriterionById.get("outcome-and-adoption-proof") &&
+        legacyCriterionById.get("collective-accountability")
+    )
+  },
+  {
+    id: "PR-005",
+    label: "Historical depth resolves into current capability",
+    pass: Boolean(
+      hasContract("PR-005", ["controlled"]) &&
+        legacyCriterionById.get("currentness") &&
+        legacyCriterionById.get("audience-specific-conversion")
+    )
+  },
+  {
+    id: "PR-006",
+    label: "Visual candidates remain rights-aware and non-decorative",
+    pass: Boolean(
+      hasContract("PR-006", ["controlled-open"]) &&
+        legacyCriterionById.get("visual-proof")
+    )
+  },
+  {
+    id: "PR-007",
+    label: "Resume and contact actions exist without placeholder destinations",
+    pass: Boolean(
+      hasContract("PR-007", ["controlled"]) &&
+        existsSync(path.join(repoRoot, "apps/www/src/app/resume/page.tsx")) &&
+        existsSync(path.join(repoRoot, "apps/www/src/app/contact/page.tsx")) &&
+        !/TODO: Jamie approval required|placeholder/i.test(
+          `${read("apps/www/src/app/resume/page.tsx")}\n${read("apps/www/src/app/contact/page.tsx")}`
+        )
+    )
+  },
+  {
+    id: "PR-008",
+    label: "Automated accessibility controls are separated from hands-on review",
+    pass: Boolean(
+      hasContract("PR-008", ["controlled-open"]) &&
+        /pending-human-review/i.test(launchQa) &&
+        /keyboard|focus/i.test(launchQa) &&
+        /VoiceOver|screen reader/i.test(launchQa) &&
+        /320 px|320px/i.test(launchQa) &&
+        /200 percent|200%/i.test(launchQa)
+    )
+  },
+  {
+    id: "PR-009",
+    label: "Runtime and exact-candidate release controls are verifiable",
+    pass: Boolean(
+      hasContract("PR-009", ["controlled-open"]) &&
+        /rollback/i.test(launchQa) &&
+        /exact candidate/i.test(launchQa) &&
+        /fetch-depth:\s*0/.test(workflow) &&
+        existsSync(path.join(repoRoot, "apps/www/src/app/api/health/route.ts")) &&
+        packageJson.scripts["preflight:staging"].includes("npm run check") &&
+        packageJson.scripts["preflight:production"].includes("npm run check")
+    )
+  },
+  {
+    id: "PR-010",
+    label: "Application and production stopping thresholds stay distinct",
+    pass: Boolean(
+      hasContract("PR-010", ["controlled"]) &&
+        readinessRegister.applicationShareThresholds?.decisionWhenMet ===
+          "stop_threshold_met" &&
+        readinessRegister.productionLaunchThresholds
+          ?.decisionWhenHumanEvidenceIsMissing === "stop_human_blocked" &&
+        legacyCriterionById.get("application-ready-stop-rule")
+    )
+  }
+];
+
+criteria.push(...portfolioContracts);
+
 const registerIsComplete =
   dimensionById.size === expectedDimensionIds.length &&
-  expectedDimensionIds.every((id) => dimensionById.has(id));
+  expectedDimensionIds.every((id) => dimensionById.has(id)) &&
+  contractById.size === expectedContractIds.length &&
+  expectedContractIds.every((id) => contractById.has(id));
 
 if (!registerIsComplete) {
   console.error("Portfolio readiness register must contain each expected dimension exactly once.");
