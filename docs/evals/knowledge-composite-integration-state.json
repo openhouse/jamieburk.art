@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "contractVersion": 1,
+  "optimizerIdentity": "Codex implementation agent for feature/knowledge-n",
+  "contractFingerprint": "PENDING-CONTRACT-FINGERPRINT",
+  "candidateFingerprint": "PENDING-CANDIDATE-FINGERPRINT",
+  "candidateSha": "PENDING-IMPLEMENTATION-COMMIT",
+  "decision": "iterate",
+  "holdoutReceiptPaths": [],
+  "humanGates": {
+    "PR-019": "pending-human-review",
+    "PR-025": "pending-human-review",
+    "rights": "pending-as-recorded-per-artifact",
+    "collaboratorConsent": "pending-as-recorded-per-artifact",
+    "productionApproval": "pending-exact-candidate-human-approval"
+  },
+  "instrumentDefects": [
+    "Iteration 1 found that holdoutResult.errors could overwrite structural validation errors in the composite return object; the merge order was corrected before scoring.",
+    "Iteration 2 found expected compiler worktree paths in non-public Next.js server implementation bundles; the leak checker was narrowed to rendered and publicly served text while retaining static-client scans.",
+    "Iteration 3 found that an empty holdout set normalized to Infinity through Math.min; missing receipts now normalize every criterion to zero and fail explicitly."
+  ],
+  "candidateDefects": ["Independent unchanged-candidate holdouts have not yet run."],
+  "allowedPostCandidatePaths": [
+    "docs/evals/knowledge-composite-integration-state.json",
+    "docs/evals/mosaic-privacy-review.json",
+    "docs/evals/runs/2026-07-16-knowledge-composite-integration.md",
+    "docs/evals/runs/2026-07-16-knowledge-composite-holdout-1.json",
+    "docs/evals/runs/2026-07-16-knowledge-composite-holdout-2.json"
+  ]
+}

@@ -37,6 +37,38 @@ The canonical typed records live in `apps/www/src/data/knowledge-bank/`. Run
 `npm run report:knowledge-lifecycle` to see held mature claims and research
 backlog items.
 
+The concise canonical model lives in [framework.md](framework.md). Attribution
+rules live in [agency-and-collective-credit.md](agency-and-collective-credit.md),
+and archival survival states live in
+[archival-survivorship-register.json](archival-survivorship-register.json).
+
+## Operator Workflow
+
+Use the thin commands around the canonical records:
+
+```bash
+npm run knowledge:intake -- --help
+npm run knowledge:intake -- --create /tmp/public-safe-intake.json
+npm run knowledge:intake -- --validate /tmp/public-safe-intake.json
+npm run query:knowledge-lifecycle -- --view held
+npm run query:knowledge-lifecycle -- --project callnyc
+npm run report:knowledge-lifecycle
+npm run check:compiled-lifecycle-leaks
+```
+
+The intake command creates or validates an uncommitted public-safe candidate;
+it never edits canonical records or creates a claim. Query is read-only and
+redacts protected locators and internal excerpts. The report keeps orphan
+intake, unsupported public claims, held mature claims, proof debt, unresolved
+inquiries, rights holds, and human blockers visible. The compiled leak check
+scans public and generated text output while preserving the approved
+phone-bearing resume PDF exception.
+
+After review, add valid records through an ordinary code patch, regenerate the
+public citation registry when relevant, and run `npm run check`. New sources,
+photo observations, collaborator corrections, and reader feedback always
+re-enter through intake or inquiry; they do not become facts automatically.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -64,6 +96,10 @@ The knowledge bank exists to:
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
+- **Agency exact set:** bounded attribution for every proof record; not a
+  substitute for source support or collective credit.
+- **Composition manifest:** audience, argument, action, claim budget, and
+  omission rationale for every public route or route template.
 
 ## Core Rule
 

@@ -273,6 +273,38 @@ export function knowledgeLifecycleReport(bank = knowledgeBank, proofs = proofCla
     );
     return mature && !websiteActive;
   });
+  const orphanIntakeIds = bank.intake
+    .filter((item) =>
+      ![...item.sourceIds, ...item.claimIds, ...item.inquiryIds, ...item.correctionIds].length &&
+      !["deferred", "rejected"].includes(item.status)
+    )
+    .map((item) => item.id);
+  const unsupportedPublicClaimIds = bank.claims
+    .filter(
+      (claim) =>
+        claim.projections.some(
+          (projection) =>
+            projection.status === "active" &&
+            projection.surfaces.some((surface) => surface.startsWith("/"))
+        ) && !claim.evidence.length
+    )
+    .map((claim) => claim.id);
+  const unresolvedInquiryIds = bank.researchInquiries
+    .filter((inquiry) =>
+      ["open", "partially-recovered", "not-recovered", "inconclusive"].includes(
+        inquiry.resultStatus
+      )
+    )
+    .map((inquiry) => inquiry.id);
+  const rightsHoldSourceIds = bank.sources
+    .filter(
+      (source) =>
+        source.media &&
+        (source.media.rightsStatus !== "cleared" ||
+          source.media.consentStatus === "review-needed" ||
+          source.media.publicDisplayStatus !== "cleared")
+    )
+    .map((source) => source.id);
 
   return {
     intakeCount: bank.intake.length,
@@ -285,6 +317,10 @@ export function knowledgeLifecycleReport(bank = knowledgeBank, proofs = proofCla
     claims: bank.claims.length,
     inquiries: bank.researchInquiries.length,
     heldMatureClaimIds: heldClaims.map((claim) => claim.id),
+    orphanIntakeIds,
+    unsupportedPublicClaimIds,
+    unresolvedInquiryIds,
+    rightsHoldSourceIds,
     projectionDecisions: bank.claims.flatMap((claim) =>
       claim.projections.map((projection) => ({
         claimId: claim.id,

@@ -9,6 +9,13 @@ improve clarity, evidence presentation, navigation, and release safety. It may
 not strengthen a claim beyond its proof record, publish protected material, or
 substitute its own approval for Jamie's or a collaborator's.
 
+This 27-eval portfolio suite is frozen. The separate
+`knowledge-composite-integration` suite evaluates whether agency,
+operator-tooling, composition, survivorship, and evaluator-trust controls are
+integrated correctly. See
+`docs/evals/knowledge-composite-integration.md`. Passing that suite means ready
+for code review, not application-share or production approval.
+
 ## Objective
 
 Make the portfolio ready to:

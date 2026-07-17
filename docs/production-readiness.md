@@ -15,6 +15,9 @@ It includes:
   the absence of a public proofs route.
 - Launch blockers for contact, resume, metrics, collaborator consent,
   screenshots, and production deploy.
+- A separate composite integration suite for agency, operator tooling,
+  composition, archival survivorship, evaluator trust, and truthful human
+  gates. The frozen 27-eval portfolio suite remains unchanged.
 
 Do not merge donor branches wholesale. This branch hand-composes the strongest
 ideas from the production-readiness-composite family.
@@ -29,6 +32,9 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run knowledge-bank`
 - [ ] `npm run public-safety`
 - [ ] `npm run check:routes`
+- [ ] `npm run check:knowledge-composite-evals`
+- [ ] `npm run test:knowledge-composite-evals`
+- [ ] `npm run check:compiled-lifecycle-leaks`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`
 - [ ] Docker build
@@ -37,6 +43,11 @@ ideas from the production-readiness-composite family.
 - [ ] Knowledge-bank review
 - [ ] Chad-lens review
 - [ ] Proof projection review
+- [ ] Two independent read-only holdouts bind the same contract, candidate
+  fingerprint, and implementation commit
+- [ ] `PR-019` target-reader review on the exact candidate
+- [ ] `PR-025` hands-on keyboard, screen-reader, mobile, PDF, metadata, and
+  trusted-reader QA on the exact candidate
 - [ ] Jamie final approval
 
 ## Manual Review Checklist
@@ -57,3 +68,20 @@ ideas from the production-readiness-composite family.
 
 Production deploy remains blocked until Jamie explicitly approves the reviewed
 content and release.
+
+## Gate Profiles
+
+Passing `.agents/evals/knowledge-composite-integration.json` means the
+integration is ready for code review. It does not approve application sharing
+or production.
+
+- **Code review:** composite score and deterministic gates pass, existing
+  suites do not regress, and two unchanged-candidate holdouts pass.
+- **Application sharing:** code review passes and `PR-019` records independent
+  target-reader response to the exact candidate.
+- **Production:** application sharing passes, `PR-025` hands-on QA passes,
+  rights and collaborator decisions are complete for published artifacts, and
+  Jamie approves the exact commit and index policy.
+
+Use `stop_human_blocked` when the machine work is complete and a remaining gate
+belongs to a person. Do not convert a prepared checklist into completed review.

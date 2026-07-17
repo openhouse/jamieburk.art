@@ -3,6 +3,12 @@
 The website is not a claim database. It is a composed public surface. Use this
 map to decide where claims may appear.
 
+The machine-readable companion is `docs/evals/composition-manifest.json`. It
+records each route's audience, argument, intended action, claim budget,
+selected proof IDs, and omission rationale. The two files must agree: this map
+provides editorial reasoning; the manifest supplies exact-set and budget
+checks.
+
 ## Homepage Proof Strip
 
 Use only the smallest, most legible claims:

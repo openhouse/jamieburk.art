@@ -1,0 +1,320 @@
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { proofClaims } from "../../apps/www/src/data/proofs.ts";
+
+export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+
+const readJson = (relativePath) =>
+  JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"));
+const sorted = (values) => [...values].sort();
+const sameSet = (left, right) =>
+  JSON.stringify(sorted(new Set(left))) === JSON.stringify(sorted(new Set(right)));
+const duplicates = (values) => values.filter((value, index) => values.indexOf(value) !== index);
+const sha256 = (value) => createHash("sha256").update(value).digest("hex");
+
+export function contractFingerprint(suite = readJson(".agents/evals/knowledge-composite-integration.json")) {
+  return sha256(`${JSON.stringify(suite)}\n`);
+}
+
+export function candidateFingerprint(suite = readJson(".agents/evals/knowledge-composite-integration.json")) {
+  const hash = createHash("sha256");
+  for (const relativePath of sorted(suite.candidate_fingerprint_scope)) {
+    let content = readFileSync(path.join(repoRoot, relativePath), "utf8");
+    if (relativePath === "docs/evals/mosaic-privacy-review.json") {
+      const normalized = JSON.parse(content);
+      normalized.candidateFingerprint = "<normalized-candidate-fingerprint>";
+      content = `${JSON.stringify(normalized, null, 2)}\n`;
+    }
+    hash.update(relativePath);
+    hash.update("\0");
+    hash.update(content);
+    hash.update("\0");
+  }
+  return hash.digest("hex");
+}
+
+export function validateSuite(suite) {
+  const errors = [];
+  const requireValue = (condition, message) => {
+    if (!condition) errors.push(message);
+  };
+  const expectedIds = Array.from({ length: 9 }, (_, index) => `CI-${String(index + 1).padStart(3, "0")}`);
+  const allowedGraders = new Set(["deterministic", "hybrid"]);
+
+  requireValue(suite.version === 1, "Composite suite version must be 1");
+  requireValue(suite.suite_id === "knowledge-composite-integration", "Composite suite ID is incorrect");
+  requireValue(suite.baseline?.commit === "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe", "Baseline commit is not pinned");
+  requireValue(suite.baseline?.wholesale_merges_or_cherry_picks === false, "Wholesale donor integration must remain false");
+  requireValue(sameSet((suite.donors_inspected ?? []).map((item) => item.id), "ABCDEFGHIJKLMN".split("")), "Donor inventory must cover A-N exactly");
+  requireValue(sameSet((suite.evals ?? []).map((item) => item.id), expectedIds), "Composite eval IDs must be exactly CI-001 through CI-009");
+  requireValue(!duplicates((suite.evals ?? []).map((item) => item.id)).length, "Composite eval IDs must be unique");
+  requireValue((suite.evals ?? []).reduce((sum, item) => sum + item.weight, 0) === 100, "Composite eval weights must total 100");
+
+  for (const entry of suite.evals ?? []) {
+    const prefix = entry.id ?? "unknown-eval";
+    requireValue(allowedGraders.has(entry.grader), `${prefix} has an invalid grader`);
+    requireValue(entry.blocking === true, `${prefix} must remain blocking`);
+    requireValue(Number.isInteger(entry.weight) && entry.weight > 0, `${prefix} needs a positive integer weight`);
+    for (const key of ["inputs", "procedure", "pass_criteria", "evidence_required"]) {
+      requireValue(Array.isArray(entry[key]) && entry[key].length > 0, `${prefix}.${key} must be non-empty`);
+    }
+    requireValue(typeof entry.remediation_hint === "string" && entry.remediation_hint.length > 0, `${prefix} needs a remediation hint`);
+  }
+
+  const profile = suite.profiles?.implementation_review;
+  requireValue(profile?.weighted_score_minimum === 0.9, "Implementation weighted threshold must be 0.90");
+  requireValue(profile?.all_scores_minimum === 3, "Every composite eval must score at least 3");
+  requireValue(sameSet(profile?.required_score_4_ids ?? [], ["CI-002", "CI-003", "CI-007"]), "Required score-4 IDs are incorrect");
+  requireValue(profile?.two_independent_unchanged_candidate_holdouts_required === true, "Two unchanged-candidate holdouts must be required");
+  requireValue(suite.optimization?.rubric_is_frozen_during_run === true, "The composite rubric must be frozen during a run");
+  requireValue(suite.optimization?.optimizer_may_not_grade_own_patch === true, "Optimizer self-grading must be rejected");
+  requireValue(suite.optimization?.holdout_judges_must_be_read_only === true, "Holdout judges must be read-only");
+  requireValue(suite.profiles?.application_share?.human_reader_approval_required === true, "Application sharing must retain human reader approval");
+  requireValue(suite.profiles?.production_launch?.exact_candidate_production_approval_required === true, "Production must retain exact-candidate approval");
+  requireValue(Array.isArray(suite.candidate_fingerprint_scope) && suite.candidate_fingerprint_scope.length >= 8, "Candidate fingerprint scope is too narrow");
+  requireValue(!duplicates(suite.candidate_fingerprint_scope ?? []).length, "Candidate fingerprint scope contains duplicates");
+  return errors;
+}
+
+export function validateAgency(agency, proofs = proofClaims, bank = knowledgeBank) {
+  const errors = [];
+  const relations = agency.relations ?? [];
+  const proofById = new Map(proofs.map((proof) => [proof.id, proof]));
+  const claimIds = new Set(bank.claims.map((claim) => claim.id));
+  const allowedTypes = new Set(["implementation", "stewardship", "contribution", "advocacy", "testimony", "publishing", "coalition-action", "inferred-causality", "qualification"]);
+
+  if (!sameSet(relations.map((item) => item.proofId), proofs.map((item) => item.id))) {
+    errors.push("Agency relations must classify the proof bank as an exact set");
+  }
+  for (const id of duplicates(relations.map((item) => item.id))) errors.push(`Duplicate agency relation ID: ${id}`);
+  for (const proofId of duplicates(relations.map((item) => item.proofId))) errors.push(`Duplicate agency proof classification: ${proofId}`);
+
+  for (const relation of relations) {
+    const proof = proofById.get(relation.proofId);
+    if (!proof) {
+      errors.push(`Agency relation ${relation.id} references unknown proof ${relation.proofId}`);
+      continue;
+    }
+    for (const key of ["actor", "boundedAction", "object", "purpose", "usableResult", "creditScope"]) {
+      if (typeof relation[key] !== "string" || !relation[key].trim()) errors.push(`${relation.id}.${key} is required`);
+    }
+    if (relation.actor !== "Jamie Burkart") errors.push(`${relation.id} must name Jamie Burkart as the bounded actor`);
+    if (!allowedTypes.has(relation.relationshipType)) errors.push(`${relation.id} has invalid relationshipType`);
+    if (!["high", "moderate", "limited"].includes(relation.confidence)) errors.push(`${relation.id} has invalid confidence`);
+    if (!Array.isArray(relation.antiClaims) || !relation.antiClaims.length) errors.push(`${relation.id} must retain at least one anti-claim`);
+    if (!sameSet(relation.supportClaimIds ?? [], proof.canonicalClaimIds ?? [])) errors.push(`${relation.id} supportClaimIds must exactly match ${proof.id}.canonicalClaimIds`);
+    const expectedEvidenceState = proof.canonicalClaimIds?.length ? "canonical-linked" : "proof-debt";
+    if (relation.evidenceState !== expectedEvidenceState) errors.push(`${relation.id} must use evidenceState=${expectedEvidenceState}`);
+    for (const claimId of relation.supportClaimIds ?? []) {
+      if (!claimIds.has(claimId)) errors.push(`${relation.id} references unknown canonical claim ${claimId}`);
+    }
+    const asserted = `${relation.boundedAction} ${relation.usableResult}`;
+    if (/\b(?:single-handedly|solely|alone caused|official city representative|executive director|chief executive officer)\b/i.test(asserted)) {
+      errors.push(`${relation.id} contains sole-causality or unsupported-title drift`);
+    }
+    if (/\bofficial(?:ly)? endorsed by\b|\bcity-endorsed\b/i.test(asserted)) {
+      errors.push(`${relation.id} contains institutional-endorsement drift`);
+    }
+    if (proof.status === "careful" && !/(collective|shared|coalition|institution|government|neighborhood|participant|business|legislative|community|producer|organizer|sponsor|human judgment|human review)/i.test(`${relation.creditScope} ${relation.antiClaims.join(" ")}`)) {
+      errors.push(`${relation.id} erases the collective or institutional boundary of a careful proof`);
+    }
+  }
+  return errors;
+}
+
+export function validateComposition(manifest, agency, proofs = proofClaims) {
+  const errors = [];
+  const proofIds = new Set(proofs.map((proof) => proof.id));
+  const agencyProofIds = new Set((agency.relations ?? []).map((relation) => relation.proofId));
+  const expectedSurfaceIds = ["home", "work-index", "technical-operations", "resume", "about", "contact", "colophon", "source-backed-team-memory-lab", "case-study-template"];
+  const expectedCaseSlugs = ["harry-j-epstein", "nyc-artist-coalition", "fair-rent-nyc", "callnyc", "wowlist", "196-sunday-dinner", "kc-town-hall"];
+
+  if (!sameSet((manifest.surfaces ?? []).map((surface) => surface.id), expectedSurfaceIds)) errors.push("Composition manifest must cover every public route or route template exactly");
+  for (const id of duplicates((manifest.surfaces ?? []).map((surface) => surface.id))) errors.push(`Duplicate composition surface: ${id}`);
+
+  const selected = new Set();
+  for (const surface of manifest.surfaces ?? []) {
+    for (const key of ["audience", "argument", "intendedAction", "omissionRationale"]) {
+      if (typeof surface[key] !== "string" || !surface[key].trim()) errors.push(`${surface.id}.${key} is required`);
+    }
+    if (!Number.isInteger(surface.claimBudget) || surface.claimBudget < 0) errors.push(`${surface.id} has invalid claimBudget`);
+    for (const proofId of surface.selectedProofIds ?? []) {
+      selected.add(proofId);
+      if (!proofIds.has(proofId)) errors.push(`${surface.id} selects unknown proof ${proofId}`);
+      if (!agencyProofIds.has(proofId)) errors.push(`${surface.id} selects proof ${proofId} without agency classification`);
+    }
+    if (!surface.routeTemplate && (surface.selectedProofIds ?? []).length > surface.claimBudget) errors.push(`${surface.id} exceeds its claim budget`);
+  }
+
+  const caseTemplate = manifest.surfaces?.find((surface) => surface.id === "case-study-template");
+  if (!sameSet(caseTemplate?.instances ?? [], expectedCaseSlugs)) errors.push("Case-study composition must cover the exact canonical work-slug set");
+  for (const slug of expectedCaseSlugs) {
+    const ids = caseTemplate?.selectedProofIdsByInstance?.[slug];
+    if (!Array.isArray(ids)) errors.push(`Case-study composition is missing ${slug}`);
+    else if (ids.length > caseTemplate.claimBudget) errors.push(`Case study ${slug} exceeds its claim budget`);
+  }
+  const caseUnion = new Set(Object.values(caseTemplate?.selectedProofIdsByInstance ?? {}).flat());
+  if (!sameSet(caseUnion, caseTemplate?.selectedProofIds ?? [])) errors.push("Case-study selectedProofIds must equal the union of its instances");
+
+  const unselected = manifest.unselectedProofDecisions ?? [];
+  for (const decision of unselected) {
+    if (!proofIds.has(decision.proofId)) errors.push(`Unselected decision references unknown proof ${decision.proofId}`);
+    if (!decision.decision || !decision.rationale) errors.push(`Unselected proof ${decision.proofId} needs a decision and rationale`);
+  }
+  if (!sameSet([...selected, ...unselected.map((item) => item.proofId)], [...proofIds])) errors.push("Selected and explicitly unselected proofs must account for the proof bank exactly");
+  if ([...selected].some((id) => unselected.some((item) => item.proofId === id))) errors.push("A proof cannot be both selected and unselected");
+  return errors;
+}
+
+export function validateSurvivorship(register) {
+  const errors = [];
+  const expectedStatuses = ["recovered", "partially-recovered", "not-recovered", "known-through-another-source"];
+  if (!sameSet(register.allowedStatuses ?? [], expectedStatuses)) errors.push("Survivorship statuses must use the canonical exact set");
+  for (const id of duplicates((register.populations ?? []).map((item) => item.id))) errors.push(`Duplicate survivorship population: ${id}`);
+  for (const population of register.populations ?? []) {
+    if (!expectedStatuses.includes(population.status)) errors.push(`${population.id} has invalid survivorship status`);
+    if (!population.finding || !population.boundary) errors.push(`${population.id} needs a finding and boundary`);
+    if (population.status === "not-recovered" && !/(does not|not prove|not establish)/i.test(population.boundary)) errors.push(`${population.id} must state that non-recovery is not proof of nonexistence`);
+  }
+  const expectedRights = ["factual-support", "quotation-permission", "artifact-rights", "image-permission", "participant-consent", "public-display-approval"];
+  if (!sameSet(register.rightsDimensions ?? [], expectedRights)) errors.push("Rights dimensions must remain separate and complete");
+  if (!/cannot become a claim or public projection automatically/i.test(register.reentryRule ?? "")) errors.push("Re-entry rule must block automatic claim promotion");
+  return errors;
+}
+
+export function validateHumanState(state, blindStatus) {
+  const errors = [];
+  const automatedApproval = /automated|ai-approved|machine-approved/i;
+  for (const id of ["PR-019", "PR-025"]) {
+    const expected = blindStatus.evals?.[id]?.status;
+    if (state.humanGates?.[id] !== expected) errors.push(`${id} composite status must match the canonical human-status registry`);
+    if (automatedApproval.test(state.humanGates?.[id] ?? "")) errors.push(`${id} cannot use automated approval`);
+  }
+  if (!/pending/i.test(state.humanGates?.productionApproval ?? "")) errors.push("Production approval must remain pending until a human approves the exact candidate");
+  if (!/pending/i.test(state.humanGates?.rights ?? "")) errors.push("Artifact rights holds must remain visible");
+  if (!/pending/i.test(state.humanGates?.collaboratorConsent ?? "")) errors.push("Collaborator consent holds must remain visible");
+  return errors;
+}
+
+export function validatePackageScripts(packageJson) {
+  const errors = [];
+  const required = {
+    "check:knowledge-composite-evals": "node scripts/check-knowledge-composite-evals.mjs",
+    "test:knowledge-composite-evals": "node --test scripts/tests/knowledge-composite-evals.test.mjs",
+    "knowledge:intake": "node scripts/knowledge-intake.mjs",
+    "query:knowledge-lifecycle": "node scripts/query-knowledge-lifecycle.mjs",
+    "check:compiled-lifecycle-leaks": "node scripts/check-compiled-lifecycle-leaks.mjs"
+  };
+  for (const [name, command] of Object.entries(required)) {
+    if (packageJson.scripts?.[name] !== command) errors.push(`package.json script ${name} is missing or incorrect`);
+  }
+  const check = packageJson.scripts?.check ?? "";
+  const sequence = ["test:knowledge-lifecycle", "check:knowledge-composite-evals", "test:knowledge-composite-evals", "check:compiled-lifecycle-leaks", "check:nycartc-corpus"];
+  let last = -1;
+  for (const command of sequence) {
+    const index = check.indexOf(`npm run ${command}`);
+    if (index < 0) errors.push(`npm run check does not include ${command}`);
+    if (index >= 0 && index <= last) errors.push(`npm run check has ${command} in the wrong order`);
+    last = Math.max(last, index);
+  }
+  return errors;
+}
+
+export function validateHoldouts({ suite, state, receipts, expectedContractFingerprint, expectedCandidateFingerprint }) {
+  const errors = [];
+  const expectedIds = suite.evals.map((item) => item.id);
+  if (receipts.length !== 2) errors.push("Exactly two independent holdout receipts are required");
+  const judgeIds = receipts.map((receipt) => receipt.judgeIdentity);
+  if (new Set(judgeIds).size !== receipts.length) errors.push("Holdout judge identities must be unique");
+
+  for (const receipt of receipts) {
+    if (receipt.version !== 1) errors.push(`${receipt.judgeIdentity ?? "unknown judge"} receipt version must be 1`);
+    if (receipt.judgeIdentity === state.optimizerIdentity) errors.push("Optimizer may not grade the patch");
+    if (receipt.judgeRole !== "read-only-independent") errors.push(`${receipt.judgeIdentity} must be read-only-independent`);
+    if (receipt.authoredPatch !== false) errors.push(`${receipt.judgeIdentity} must not have authored the patch`);
+    if (receipt.sawOptimizationHistory !== false) errors.push(`${receipt.judgeIdentity} must be blind to optimization history`);
+    if (receipt.candidateSha !== state.candidateSha) errors.push(`${receipt.judgeIdentity} reviewed a different candidate SHA`);
+    if (receipt.contractFingerprint !== expectedContractFingerprint) errors.push(`${receipt.judgeIdentity} reviewed a different contract fingerprint`);
+    if (receipt.candidateFingerprint !== expectedCandidateFingerprint) errors.push(`${receipt.judgeIdentity} reviewed a different candidate fingerprint`);
+    if (!sameSet((receipt.scores ?? []).map((score) => score.id), expectedIds)) errors.push(`${receipt.judgeIdentity} must score the exact eval set`);
+    for (const score of receipt.scores ?? []) {
+      if (!Number.isInteger(score.score) || score.score < 0 || score.score > 4) errors.push(`${receipt.judgeIdentity}/${score.id} has invalid score`);
+      if (!score.rationale || !Array.isArray(score.evidencePaths) || !score.evidencePaths.length) errors.push(`${receipt.judgeIdentity}/${score.id} needs rationale and evidence paths`);
+    }
+    if ((receipt.criticalRegressions ?? []).length) errors.push(`${receipt.judgeIdentity} found a critical regression`);
+    if (receipt.decision !== "pass_for_code_review") errors.push(`${receipt.judgeIdentity} did not pass the candidate for code review`);
+  }
+
+  const conservativeScores = Object.fromEntries(
+    expectedIds.map((id) => {
+      const values = receipts.map(
+        (receipt) => receipt.scores?.find((score) => score.id === id)?.score ?? 0
+      );
+      return [id, values.length ? Math.min(...values) : 0];
+    })
+  );
+  const weights = new Map(suite.evals.map((item) => [item.id, item.weight]));
+  const weightedScore = expectedIds.reduce((sum, id) => sum + conservativeScores[id] * weights.get(id), 0) / 400;
+  const profile = suite.profiles.implementation_review;
+  if (weightedScore < profile.weighted_score_minimum) errors.push(`Conservative weighted score ${weightedScore.toFixed(3)} is below ${profile.weighted_score_minimum}`);
+  for (const id of expectedIds) if (conservativeScores[id] < profile.all_scores_minimum) errors.push(`${id} conservative score is below ${profile.all_scores_minimum}`);
+  for (const id of profile.required_score_4_ids) if (conservativeScores[id] !== 4) errors.push(`${id} conservative score must be 4`);
+  return { errors, conservativeScores, weightedScore };
+}
+
+export function readCompositeArtifacts() {
+  const suite = readJson(".agents/evals/knowledge-composite-integration.json");
+  const state = readJson("docs/evals/knowledge-composite-integration-state.json");
+  return {
+    suite,
+    state,
+    agency: readJson("apps/www/src/data/knowledge-bank/agency-relations.json"),
+    composition: readJson("docs/evals/composition-manifest.json"),
+    mosaic: readJson("docs/evals/mosaic-privacy-review.json"),
+    survivorship: readJson("docs/knowledge-bank/archival-survivorship-register.json"),
+    blindStatus: readJson("docs/evals/blind-spot-human-status.json"),
+    packageJson: readJson("package.json"),
+    receipts: (state.holdoutReceiptPaths ?? []).filter((receiptPath) => existsSync(path.join(repoRoot, receiptPath))).map(readJson)
+  };
+}
+
+export function validateCompositeArtifacts(artifacts, { requireHoldouts = true } = {}) {
+  const { suite, state, agency, composition, mosaic, survivorship, blindStatus, packageJson, receipts } = artifacts;
+  const errors = [
+    ...validateSuite(suite),
+    ...validateAgency(agency),
+    ...validateComposition(composition, agency),
+    ...validateSurvivorship(survivorship),
+    ...validateHumanState(state, blindStatus),
+    ...validatePackageScripts(packageJson)
+  ];
+  for (const artifactPath of suite.required_artifacts ?? []) {
+    if (!existsSync(path.join(repoRoot, artifactPath))) errors.push(`Required composite artifact is missing: ${artifactPath}`);
+  }
+  for (const fingerprintPath of suite.candidate_fingerprint_scope ?? []) {
+    if (!existsSync(path.join(repoRoot, fingerprintPath))) errors.push(`Candidate fingerprint input is missing: ${fingerprintPath}`);
+  }
+
+  const expectedContractFingerprint = contractFingerprint(suite);
+  const expectedCandidateFingerprint = candidateFingerprint(suite);
+  let holdoutResult = { errors: [], conservativeScores: {}, weightedScore: 0 };
+  if (requireHoldouts) {
+    if (state.contractFingerprint !== expectedContractFingerprint) errors.push("State contract fingerprint is stale");
+    if (state.candidateFingerprint !== expectedCandidateFingerprint) errors.push("State candidate fingerprint is stale");
+    if (mosaic.candidateFingerprint !== expectedCandidateFingerprint) errors.push("Mosaic review is not bound to the candidate fingerprint");
+    if (!/^[a-f0-9]{40}$/.test(state.candidateSha ?? "")) errors.push("State candidateSha must be a full implementation commit SHA");
+    if (state.decision !== "pass_for_code_review") errors.push("Composite state decision must be pass_for_code_review");
+    if ((state.holdoutReceiptPaths ?? []).length !== 2) errors.push("State must list exactly two holdout receipts");
+    holdoutResult = validateHoldouts({ suite, state, receipts, expectedContractFingerprint, expectedCandidateFingerprint });
+    errors.push(...holdoutResult.errors);
+  }
+  return {
+    ...holdoutResult,
+    errors,
+    expectedContractFingerprint,
+    expectedCandidateFingerprint
+  };
+}

@@ -17,6 +17,13 @@ An image must never become evidence merely because it appears persuasive. It
 may suggest a research question; publication requires contextual verification
 and a separate consent review.
 
+Keep six decisions separate: factual support, quotation permission, artifact
+rights, image permission, participant consent, and public-display approval. A
+photograph can support a bounded observation without being publishable; a
+rights-cleared image can still require participant consent and contextual
+review. Photo-editor notes return through intake or inquiry and cannot create or
+activate a claim automatically.
+
 ## First Round Trip
 
 The mature waterways claims generated the public-safe lead

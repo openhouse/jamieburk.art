@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "suite_id": "knowledge-composite-integration",
+  "title": "Knowledge bank composite integration readiness",
+  "objective": "Integrate the strongest durable ideas from the read-only feature/evals family into the canonical N knowledge lifecycle without duplicating the bank, weakening evidence boundaries, or claiming human approval.",
+  "baseline": {
+    "branch": "feature/knowledge-n",
+    "commit": "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe",
+    "record": "docs/evals/runs/2026-07-16-knowledge-composite-baseline.md",
+    "donor_policy": "read-only-selective-integration",
+    "wholesale_merges_or_cherry_picks": false
+  },
+  "donors_inspected": [
+    { "id": "A", "pr": 220, "durable_idea": "separate evaluation layers and non-averageable hard gates" },
+    { "id": "B", "pr": 212, "durable_idea": "composition, role evidence, mosaic privacy, and receipt controls" },
+    { "id": "C", "pr": 221, "durable_idea": "separate share and launch profiles bound to fingerprints" },
+    { "id": "D", "pr": 216, "durable_idea": "contract versioning and exact-candidate records" },
+    { "id": "E", "pr": 211, "durable_idea": "source, browser, runtime, semantic, and human evidence layers" },
+    { "id": "F", "pr": 210, "durable_idea": "hiring legibility, proof debt, responsive repair, cutover and rollback" },
+    { "id": "G", "pr": 222, "durable_idea": "evaluator calibration and normalized scoring" },
+    { "id": "H", "pr": 223, "durable_idea": "bounded agency and collective-credit relations" },
+    { "id": "I", "pr": 219, "durable_idea": "graph integrity, mutation sensitivity, frozen inputs, no self-grading" },
+    { "id": "J", "pr": 209, "durable_idea": "separate claim maturity from projection candidacy" },
+    { "id": "K", "pr": 217, "durable_idea": "append-safe intake, bounded query, report, and leak checks" },
+    { "id": "L", "pr": 213, "durable_idea": "capture-to-projection framework, survivorship, and re-entry" },
+    { "id": "M", "pr": 215, "durable_idea": "approachable recursive protocol and honest human stops" },
+    { "id": "N", "pr": 214, "durable_idea": "canonical schema, records, citations, corpora, and frozen 27-eval suite" }
+  ],
+  "score_scale": {
+    "minimum": 0,
+    "maximum": 4,
+    "labels": {
+      "0": "absent, unsafe, broken, or contradicted",
+      "1": "materially incomplete",
+      "2": "usable but below integration threshold",
+      "3": "strong and review-ready",
+      "4": "complete, exact-set, mutation-sensitive, and independently checked"
+    }
+  },
+  "profiles": {
+    "implementation_review": {
+      "weighted_score_minimum": 0.9,
+      "all_scores_minimum": 3,
+      "required_score_4_ids": ["CI-002", "CI-003", "CI-007"],
+      "all_deterministic_gates_must_pass": true,
+      "existing_suite_regression_must_pass": true,
+      "two_independent_unchanged_candidate_holdouts_required": true,
+      "human_release_approval_required": false
+    },
+    "application_share": {
+      "inherits": "implementation_review",
+      "human_reader_approval_required": true,
+      "required_human_eval_ids": ["PR-019"]
+    },
+    "production_launch": {
+      "inherits": "application_share",
+      "exact_candidate_human_qa_required": true,
+      "exact_candidate_production_approval_required": true,
+      "required_human_eval_ids": ["PR-019", "PR-025"]
+    }
+  },
+  "optimization": {
+    "rubric_is_frozen_during_run": true,
+    "optimizer_may_not_grade_own_patch": true,
+    "holdout_judges_must_be_read_only": true,
+    "holdout_judges_are_blind_to_optimization_history": true,
+    "holdouts_must_share_contract_and_candidate_fingerprints": true,
+    "success_requires_two_independent_holdouts": true,
+    "allowed_stop_decisions": ["pass_for_code_review", "iterate", "stop_human_blocked", "stop_environment_blocked"]
+  },
+  "candidate_fingerprint_scope": [
+    ".agents/evals/knowledge-composite-integration.json",
+    "apps/www/src/data/knowledge-bank/agency-relations.json",
+    "docs/evals/composition-manifest.json",
+    "docs/evals/mosaic-privacy-review.json",
+    "docs/knowledge-bank/archival-survivorship-register.json",
+    "scripts/check-knowledge-composite-evals.mjs",
+    "scripts/lib/knowledge-composite-validation.mjs",
+    "scripts/knowledge-intake.mjs",
+    "scripts/query-knowledge-lifecycle.mjs",
+    "scripts/check-compiled-lifecycle-leaks.mjs"
+  ],
+  "hard_constraints": [
+    "Keep the existing 27-eval portfolio suite frozen.",
+    "Do not merge or cherry-pick donor branches wholesale.",
+    "Do not create a second knowledge bank, publication registry, database, CMS, or public search surface.",
+    "Do not publish private locators, raw archives, credentials, protected correspondence, unapproved photos, or participant data.",
+    "Do not convert not-recovered into did-not-exist.",
+    "Do not strengthen individual ownership, title, causality, endorsement, or institutional authority beyond the evidence.",
+    "Do not count a protocol, automated score, or AI judgment as human approval.",
+    "Do not enable production indexing without Jamie's approval of the exact candidate."
+  ],
+  "required_artifacts": [
+    "apps/www/src/data/knowledge-bank/agency-relations.json",
+    "docs/evals/composition-manifest.json",
+    "docs/evals/knowledge-composite-integration-state.json",
+    "docs/evals/mosaic-privacy-review.json",
+    "docs/knowledge-bank/archival-survivorship-register.json",
+    "docs/knowledge-bank/framework.md",
+    "scripts/knowledge-intake.mjs",
+    "scripts/query-knowledge-lifecycle.mjs",
+    "scripts/check-compiled-lifecycle-leaks.mjs"
+  ],
+  "evals": [
+    {
+      "id": "CI-001",
+      "title": "Pinned provenance and minimal integration",
+      "weight": 10,
+      "grader": "deterministic",
+      "blocking": true,
+      "inputs": ["baseline record", "donor inventory", "git history", "integration artifact inventory"],
+      "procedure": ["Verify the baseline branch and commit.", "Verify donor A-N references and selective-integration notes.", "Reject wholesale donor merges, copied historical suite trees, and unexplained duplicate systems."],
+      "pass_criteria": ["Baseline and contract version are pinned.", "All donors are accounted for.", "Canonical N surfaces remain authoritative.", "The candidate fingerprint is reproducible."],
+      "evidence_required": ["baseline record", "contract fingerprint", "candidate fingerprint", "accepted and rejected donor decisions"],
+      "remediation_hint": "Remove duplicate machinery and document the smallest canonical integration."
+    },
+    {
+      "id": "CI-002",
+      "title": "Exact knowledge graph and no-loss controls",
+      "weight": 15,
+      "grader": "deterministic",
+      "blocking": true,
+      "inputs": ["canonical records", "proof bank", "citation pages", "corpus fixtures", "intake ledger"],
+      "procedure": ["Run all existing lifecycle, citation, corpus, and route checks.", "Validate stable IDs and every graph reference.", "Mutation-test orphan, duplicate, unsupported, and retired-public-wording failures."],
+      "pass_criteria": ["All exact-set graph checks pass.", "Every canonical record retains intake disposition.", "Every public proof has canonical coverage or explicit proof debt.", "Existing corpora and citations do not regress."],
+      "evidence_required": ["complete check output", "mutation tests", "lifecycle report"],
+      "remediation_hint": "Repair the canonical record or explicit debt state; never hide an orphan by deleting evidence."
+    },
+    {
+      "id": "CI-003",
+      "title": "Agency and collective-credit integrity",
+      "weight": 15,
+      "grader": "hybrid",
+      "blocking": true,
+      "inputs": ["public proof bank", "agency relation exact set", "canonical claims", "source relationships"],
+      "procedure": ["Classify every public proof that assigns Jamie a role.", "Verify actor, bounded action, object, purpose, usable result, credit scope, support, confidence, and anti-claim.", "Mutation-test solo causality, title inflation, collaborator erasure, and endorsement drift."],
+      "pass_criteria": ["The role-evidence classification is an exact set.", "Every careful or collective proof has an agency relation.", "Jamie remains visible without taking collective or institutional credit.", "Known causal inferences remain labeled or held."],
+      "evidence_required": ["agency relations", "exact-set validation", "semantic holdout findings"],
+      "remediation_hint": "Name Jamie's supported action and the shared boundary in the same record."
+    },
+    {
+      "id": "CI-004",
+      "title": "New-operator lifecycle commands",
+      "weight": 10,
+      "grader": "deterministic",
+      "blocking": true,
+      "inputs": ["intake command", "bounded query command", "lifecycle report", "compiled leak checker"],
+      "procedure": ["Run every command with --help.", "Validate a public-safe intake candidate without auto-promoting it.", "Query stable IDs, projects, statuses, sources, inquiries, projections, and held or research views.", "Mutation-test private and credential leaks."],
+      "pass_criteria": ["Commands are read-only or append-safe.", "Invalid input and broken graph state return nonzero.", "No command creates a public claim automatically.", "A new contributor can operate the workflow from help text."],
+      "evidence_required": ["command transcripts", "tests", "operator documentation"],
+      "remediation_hint": "Keep the CLI thin and wrap the canonical records instead of inventing storage."
+    },
+    {
+      "id": "CI-005",
+      "title": "Survivorship, rights, and research re-entry",
+      "weight": 10,
+      "grader": "hybrid",
+      "blocking": true,
+      "inputs": ["survivorship register", "source media rights", "research inquiries", "photo feedback loop"],
+      "procedure": ["Audit recovered, partial, not-recovered, and indirect populations.", "Separate factual support, quotation permission, artifact rights, image permission, participant consent, and display approval.", "Verify discoveries re-enter through intake or inquiry."],
+      "pass_criteria": ["Negative search language remains bounded.", "Protected source scans stay outside Git.", "Rights and consent are not inferred from factual support.", "Photo and collaborator leads cannot mature claims automatically."],
+      "evidence_required": ["survivorship register", "rights matrix", "re-entry records", "semantic holdout findings"],
+      "remediation_hint": "Record what survived and what remains unknown without turning absence into a historical fact."
+    },
+    {
+      "id": "CI-006",
+      "title": "Selective public composition and mosaic privacy",
+      "weight": 10,
+      "grader": "hybrid",
+      "blocking": true,
+      "inputs": ["projection map", "composition manifest", "role evidence", "mosaic review", "public routes"],
+      "procedure": ["Verify every public route or route template has audience, argument, action, selected claims, claim budget, and omission rationale.", "Check claim counts against budgets.", "Review individually safe fragments in combination."],
+      "pass_criteria": ["The website remains a composed argument rather than a bank dump.", "Every selected proof has role evidence.", "Unselected mature knowledge remains explicitly held.", "Mosaic review identifies combinations that must stay omitted or generalized."],
+      "evidence_required": ["composition manifest", "projection map", "mosaic receipt", "semantic holdout findings"],
+      "remediation_hint": "Remove or defer the least useful claim before expanding a route's budget."
+    },
+    {
+      "id": "CI-007",
+      "title": "Evaluator trust, calibration, and unchanged-candidate holdouts",
+      "weight": 15,
+      "grader": "hybrid",
+      "blocking": true,
+      "inputs": ["frozen contract", "candidate fingerprint", "score normalization", "holdout receipts"],
+      "procedure": ["Fingerprint contract and candidate scope.", "Verify optimizer and judges are distinct.", "Normalize all scores to 0-4 and weighted 0-1.", "Require two independent read-only holdouts on the same unchanged candidate."],
+      "pass_criteria": ["Rubric and candidate fingerprints are exact.", "No optimizer self-grade is counted.", "Both holdouts bind identical fingerprints.", "Critical regressions cannot be averaged away."],
+      "evidence_required": ["fingerprints", "two independent receipts", "normalized scorecard", "instrument-defect log"],
+      "remediation_hint": "Discard invalid receipts and rerun independent judges on the unchanged candidate."
+    },
+    {
+      "id": "CI-008",
+      "title": "Layered verification and release policy",
+      "weight": 10,
+      "grader": "hybrid",
+      "blocking": true,
+      "inputs": ["source checks", "browser and accessibility checks", "build and runtime checks", "environment preflights", "human status"],
+      "procedure": ["Run deterministic source and graph checks.", "Inspect responsive routes, keyboard behavior, metadata, and console output.", "Build and smoke the production runtime.", "Run staging and production-mode policies separately."],
+      "pass_criteria": ["All machine layers pass.", "Staging remains noindex.", "Production indexing remains explicit and approval-gated.", "Human release decisions remain reserved to humans."],
+      "evidence_required": ["check output", "browser evidence", "runtime smoke", "human status record"],
+      "remediation_hint": "Repair the failing layer and rerun all later layers on the same candidate."
+    },
+    {
+      "id": "CI-009",
+      "title": "Truthful human and consent gates",
+      "weight": 5,
+      "grader": "deterministic",
+      "blocking": true,
+      "inputs": ["PR-019 status", "PR-025 status", "rights and consent holds", "production approval status"],
+      "procedure": ["Verify human-only statuses use pending, approved, rejected, or expired states.", "Reject automated approval, null reviewer on approved records, and unbound production approval."],
+      "pass_criteria": ["PR-019 and PR-025 remain truthful.", "Rights and collaborator consent holds remain visible.", "No AI or protocol is represented as a human decision.", "Production approval binds the exact candidate or remains pending."],
+      "evidence_required": ["human status registry", "rights holds", "release decision"],
+      "remediation_hint": "Use stop_human_blocked when the next valid action belongs to a person."
+    }
+  ]
+}
