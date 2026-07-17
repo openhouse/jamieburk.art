@@ -40,3 +40,7 @@ supporting-materials/
 *.woff
 *.woff2
 reports/generated/
+
+# Protected full-population social captures stay outside this public repository.
+docs/knowledge-bank/corpora/source-captures/*-x-browser-extraction-*.json
+docs/knowledge-bank/corpora/*-x-full-population-*.json

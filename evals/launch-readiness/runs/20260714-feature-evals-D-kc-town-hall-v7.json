@@ -1,0 +1,232 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 7,
+  "runId": "feature-evals-D-kc-town-hall-v7-20260714T170200-0400",
+  "commit": "b8fdf6cc14811c536279e219bee98de670f34633",
+  "baseUrl": "http://127.0.0.1:3041",
+  "performedAt": "2026-07-14T17:02:00-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Fourteen public routes produced 56 successful measurements at 320, 375, 768, and 1440 CSS pixels with no horizontal-overflow failures.",
+        "The revised KC Town Hall mobile reading order placed At a glance and the resume action before Sources and notes."
+      ],
+      "limitations": [
+        "Measurements were performed against the local production bundle, not the deployed production domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-kc-town-hall-v7-20260714T1645"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "The skip link received a visible 3-pixel solid outline, measured tag contrast was 7.25:1, and the 2x-density 320-pixel rendering had no overflow.",
+        "All tested citation markers and backlinks had names and valid targets; KC Town Hall rendered five pairs without JavaScript."
+      ],
+      "limitations": [
+        "Automated browser checks do not replace a human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-kc-town-hall-v7-20260714T1645"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, and CallNYC each rendered one loaded public artifact with nonempty alt text and a public source link.",
+        "The artifacts remained present in the no-overflow mobile and desktop route matrix."
+      ],
+      "limitations": [
+        "These public captures do not authorize additional private or approval-gated imagery."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-kc-town-hall-v7-20260714T1645"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The homepage and resume immediately name the target role, recurring contribution, and Work, Resume, and Contact actions.",
+        "On mobile, priority case studies now place role-bearing metadata and primary actions directly after the summary."
+      ],
+      "limitations": [
+        "The homepage Start here directory still precedes the proof strip, and the Technical Operations proof map remains long."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v7",
+        "runId": "semantic-v7-a2-revised-20260714"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "The homepage immediately identifies Jamie's target role and value and offers three direct actions.",
+        "The revised KC Town Hall mobile order places At a glance and the resume action well before Sources and notes."
+      ],
+      "limitations": [
+        "The hero presents three similarly weighted actions, and KC Town Hall has only a text-based artifact card."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v7",
+        "runId": "semantic-v7-b-revised-20260714"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Priority surfaces make Jamie the actor and name concrete interventions, usable outputs, and next steps.",
+        "KC Town Hall identifies Jamie's bounded planning and documentation role while retaining collaborator credit."
+      ],
+      "limitations": [
+        "Some priority copy still uses process language such as role-fit proof surface, operating backbone, and source-backed memory."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v7",
+        "runId": "semantic-v7-a2-revised-20260714"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, CallNYC, and KC Town Hall connect Jamie's work to concrete outputs and reader-usable results.",
+        "Coalition, company-team, and municipal outcomes remain bounded and collectively credited."
+      ],
+      "limitations": [
+        "Technical Operations and HJE still introduce some broad operational nouns before their most concrete proof."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v7",
+        "runId": "semantic-v7-b-revised-20260714"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "KC Town Hall separates proposal, recommendation and Council acceptance, appropriation, the May 2022 interim status, and withdrawal into bounded evidence relationships.",
+        "All 41 metadata-reviewed press intakes remain unsurfaced and claim-free pending close reading."
+      ],
+      "limitations": [
+        "The Board recommendation is preserved within the Council-resolution source and acceptance claim rather than projected as a separate public claim."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v7",
+        "runId": "semantic-v7-a2-revised-20260714"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "All 22 decomposed intakes have source edges, claims or inquiries, evidence roles, locators, boundaries, and anti-claims.",
+        "KC Town Hall's five official records do not support payment, construction, sole causality, later non-disbursement from the 2022 snapshot, or fault."
+      ],
+      "limitations": [
+        "Several older CallNYC evidence relationships still lack locator fields."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v7",
+        "runId": "semantic-v7-b-revised-20260714"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "KC Town Hall now presents its role, actions, municipal chronology, and honest ending before the evidence apparatus on mobile.",
+        "Repeated narrative caveats were removed while five source-note boundaries, Known/Open/Protected limits, source basis, links, and credits remain."
+      ],
+      "limitations": [
+        "Five detailed KC Town Hall source notes still require substantial mobile scrolling."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v7",
+        "runId": "semantic-v7-a2-revised-20260714"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "KC Town Hall distinguishes proposal, Council acceptance, appropriation, the May 2022 snapshot, and withdrawal without repeating a caveat after every claim.",
+        "The dated disbursement wording and later withdrawal remain separate, precise, and fully cited."
+      ],
+      "limitations": [
+        "KC Town Hall remains long on mobile, and CallNYC and FairRentNYC still repeat some boundaries."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v7",
+        "runId": "semantic-v7-b-revised-20260714"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The portfolio uses active plain language, connects operating structure to care, and ends in usable next actions.",
+        "KC Town Hall's honest ending names durable documentation without assigning blame or obscuring withdrawal."
+      ],
+      "limitations": [
+        "Repeated governance vocabulary can make the voice sound procedural and evaluation-aware."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v7",
+        "runId": "semantic-v7-a2-revised-20260714"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "The homepage, About, FairRentNYC, and Source-Backed Team Memory join operational specificity to care and human judgment.",
+        "Contact and recurring actions remain direct without using warmth to blur collective credit."
+      ],
+      "limitations": [
+        "Repeated house phrases occasionally make otherwise human prose feel templated."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v7",
+        "runId": "semantic-v7-b-revised-20260714"
+      }
+    }
+  ],
+  "humanApprovals": []
+}

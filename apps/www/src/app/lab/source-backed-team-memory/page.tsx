@@ -25,13 +25,12 @@ export default function SourceBackedTeamMemoryPage() {
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           {methodProof.publicWording}
         </p>
-        <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
-          <p className="leading-7 text-jb-ink/76">
-            Early research / method / consulting practice. Not a finished
-            production SaaS, chatbot, surveillance system, AI replacement for
-            judgment, or private archive browser.
-          </p>
-        </div>
+        <p className="mt-5 leading-8 text-jb-ink/76">
+          I use the method to turn source inventories and recurring conversations
+          into reviewable decision records, meeting memory, onboarding context,
+          and continue / revise / stop recommendations. The result is a bounded
+          working record that people can inspect, correct, and hand off.
+        </p>
         <div className="mt-10 space-y-6">
           <SourceBackedMemory />
         </div>

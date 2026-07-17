@@ -160,19 +160,20 @@ export const proofClaims: ProofClaim[] = [
   },
   {
     id: "fair-rent-campaign-memory",
-    status: "careful",
-    supportLevel: "careful",
+    status: "ready",
+    supportLevel: "strong",
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+      "Built and maintained a shared Commercial Rent Stabilization running-memory system connecting recurring meetings to decisions, action ownership, open questions, city and state workstreams, consent boundaries, and reusable templates.",
+    shortWording: "Built a shared civic campaign-memory system in active use",
     detailedPublicWording:
-      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams. A separate privacy-aware tracker connected outreach and asks to owners, due dates, consent, public-quotation permission, and data-quality flags.",
+    sourceBasis:
+      "Approved resume language plus close reading of the May 14, 2026, collaboration running-minutes system, a February 2026 stakeholder operations tracker and alignment record, and the April 2026 operating plan.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -188,6 +189,8 @@ export const proofClaims: ProofClaim[] = [
       "Private coalition notes",
       "Legal-review materials",
       "Stakeholder lists",
+      "Row-level tracker records",
+      "Contact details and relationship notes",
       "Private emails",
       "Raw strategy context",
       "Unapproved quotes"
@@ -195,23 +198,24 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "fair-rent-source-map",
-    status: "careful",
-    supportLevel: "careful",
+    status: "ready",
+    supportLevel: "strong",
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
+      "Prepared a legislative provenance redline tracing Commercial Rent Stabilization language from NYC Council Intro 93 through Fair Rent NYC recommendations, Small Business Survival Act lineage, and Albany S8319 revisions.",
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+    sourceBasis:
+      "Approved resume language and close reading of Jamie's May 17, 2026, tracked-changes provenance redline.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -227,7 +231,40 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "fair-rent-public-data-pilot",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Prepared a privacy-preserving open-data pilot proposal for geography-aggregated commercial vacancy and lease-cost indicators, with coverage, suppression, and methods documentation.",
+    shortWording: "Scoped a privacy-preserving commercial-data pilot",
+    detailedPublicWording:
+      "For NYC School of Data 2026, Jamie translated a broad policy need into the smallest serious pilot: an RPIE-derived indicator table, coverage and suppression table, and plain-language methods note, explicitly excluding raw confidential filings and identifying information.",
+    sourceBasis:
+      "Jamie-authored two-page public handout dated March 27, 2026, published as a public-safe portfolio artifact.",
+    whyItMatters:
+      "Shows concrete data-product scoping, privacy safeguards, public-interest translation, and implementation thinking in one inspectable artifact.",
+    guardrail:
+      "Describe it as a proposal shared at School of Data, not an adopted City program or released dataset.",
+    doNotSay: [
+      "A city agency adopted the proposal",
+      "Jamie released an official RPIE dataset",
+      "Jamie represented NYC School of Data or the Department of Finance",
+      "The proposal replaces existing storefront data"
+    ],
+    protectedBoundaries: [
+      "Raw confidential filings",
+      "Tenant identities",
+      "Tax identifiers",
+      "Parcel- or unit-level lease records"
+    ],
+    surfaces: ["resume", "technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["open-data", "data-product-scoping", "privacy", "policy-translation"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
@@ -263,6 +300,40 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "project-social-identity-systems",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Established durable public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including a shared coalition identity that collaborators carried across campaigns and years.",
+    shortWording:
+      "Established durable project identities collaborators carried forward",
+    detailedPublicWording:
+      "Jamie established four public project accounts as identity infrastructure. The accounts then became shared operating surfaces: NYC Artist Coalition carried four campaign identities through one handle, and collaborators used the system in their own voices over years.",
+    sourceBasis:
+      "Jamie confirmation plus authenticated read-only review of the public @CallNYCApp, @NYCArtC, @wowlist, and @KCTownHall profiles and selected post-level records.",
+    whyItMatters:
+      "Shows brand and communications infrastructure designed for real team use and durable handoff, rather than a one-person promotional channel.",
+    guardrail:
+      "Keep account establishment separate from post-level authorship, collective outcomes, endorsement, reach, and policy causality.",
+    doNotSay: [
+      "Jamie wrote every project-account post",
+      "Jamie controlled every coalition message",
+      "Social engagement proves project adoption or policy causality"
+    ],
+    protectedBoundaries: [
+      "Authentication material",
+      "Private messages",
+      "Private analytics",
+      "Credentials",
+      "Unattributed teammate authorship"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["callnyc", "fair-rent-nyc", "wowlist", "kc-town-hall"],
+    relatedCapabilities: ["communications-infrastructure", "launch-support", "handoffs"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
@@ -305,6 +376,56 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-09"
   },
   {
+    id: "nyc-artist-coalition-participation-system",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Jamie helped establish and produce NYC Artist Coalition's recurring participation system across rotating cultural-space meetings, practical support sessions, public actions, hearings, and relief convenings.",
+    shortWording:
+      "Helped establish and produce NYC Artist Coalition's recurring participation system",
+    detailedPublicWording:
+      "The recovered record spans 33 public event identities from 2017 through 2021, including 12 recurring meetings, ten named physical cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief coordination. Jamie's broad production role is grounded in his first-hand account; public reporting separately corroborates his founding coalition role, fire-code study groups, and City Hall advocacy.",
+    sourceBasis:
+      "Jamie's first-person account, a public-safe authenticated Facebook event census, and public reporting that documents specific coalition, safety-study, and City Hall advocacy roles.",
+    sourceNote:
+      "The event pages establish the collective system. They do not identify the individual author or producer of every event.",
+    whyItMatters:
+      "Shows Jamie designing recurring participation infrastructure that connected cultural-space listening, practical support, public communication, and civic action.",
+    guardrail:
+      "Preserve collective authorship and never convert Facebook response labels into attendance, reach, endorsement, or impact.",
+    doNotSay: [
+      "Jamie solely produced every NYC Artist Coalition event",
+      "Jamie alone caused a policy outcome",
+      "Facebook responses equal attendance or unique reach",
+      "All 34 historical event pages were recovered"
+    ],
+    protectedBoundaries: [
+      "Raw event descriptions",
+      "Attendee and guest identities",
+      "Comments and reactions",
+      "Contact details",
+      "Meeting credentials",
+      "Private working documents",
+      "Page-administration history",
+      "Authenticated-session state"
+    ],
+    surfaces: ["case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "participation-infrastructure",
+      "coalition-operations",
+      "facilitation",
+      "public-programming",
+      "civic-systems"
+    ],
+    lastReviewed: "2026-07-16"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",
@@ -314,13 +435,14 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform for DIY arts and music organizers, with activity across roughly 35 city ecosystems.",
+    shortWording: "WOWList recorded activity across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, a public-safe aggregate summary, and a protected reproducible July 2017 production-database snapshot.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Keep documented organizer use separate from aggregate geographic activity, and do not describe city activity as official chapters.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -336,7 +458,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -351,14 +473,18 @@ export const proofClaims: ProofClaim[] = [
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems. Protected primary records directly document a residency acceptance and access workflow and a recurring invitation, response, attendance-signal, and follow-up system.",
+    sourceBasis:
+      "Approved resume language, Jamie review confirmation, the public Sunday Dinner RSVP page, a protected 2012-2021 historical operations workbook, a July 2023 residency onboarding letter, and a 2025-2026 invitation and continuity workbook.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only. Treat the historical workbook as protected operational evidence, not an audited attendance census, and keep the 20+ resident-artist aggregate separate from the newly supported 300+ gathering record.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
-      "Attendance database"
+      "Public attendance database",
+      "409 workbook rows equal 409 unique people",
+      "2,767 affirmative marks equal unique attendees or audited physical attendance",
+      "Independent verification of the 20+ resident-artist aggregate"
     ],
     protectedBoundaries: [
       "Guest lists",
@@ -371,7 +497,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -426,15 +552,24 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation; Jamie presented the $490,539 proposal in 2019, the Council accepted the CCED recommendation and appropriated the project amount, official records show the project later stopped proceeding under that award, and Jamie subsequently transitioned it to a mission-aligned organization.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for a proposed rehabilitation with four retail spaces and three apartments. On September 26, 2019, the Council accepted the CCED Board's recommendation of up to $490,539 and passed an ordinance appropriating $490,539 to KC Town Hall. A May 2022 status report still listed the agreement in negotiation and reported no disbursement amount at that point. The project later withdrew from the CCED award, the unused allocation was reappropriated, and Jamie transitioned the project to a mission-aligned organization.",
+    sourceBasis: "Approved resume language, Kansas City CCED public minutes from June 12, 2019, Kansas City Resolution 190649, Kansas City Ordinance 190642, the May 17, 2022, Central City Sales Tax project-status table, Kansas City Ordinance 240317, Jamie's public-use confirmation of the transition, and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Distinguish the proposal, Board recommendation, Council acceptance, appropriation, May 2022 interim status, municipal withdrawal, and Jamie-confirmed transition. The municipal record does not prove the transition. Do not generalize the dated no-disbursement status beyond its reporting point or imply an executed funding agreement, completed construction, sole causality, fault, a transfer of public funds or property, the receiving organization's identity, or current operation.",
     doNotSay: [
       "Final funding received",
+      "A funding agreement was executed",
+      "The appropriation was paid or disbursed",
+      "Jamie alone caused the Council action",
+      "The redevelopment was completed",
+      "The project remains active under the award",
+      "The City record documents the transition",
+      "Public funds, real property, or project assets were transferred to the organization",
+      "The receiving organization currently operates the project",
+      "Why the transition occurred",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the public record"
@@ -449,7 +584,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "source-backed-team-memory-method",
@@ -461,7 +596,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+    sourceBasis:
+      "Public-safe lab materials and close reading of Jamie's June 26, 2026, bounded pilot proposal; recipient context, commercial details, correspondence, and outcomes remain protected.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -475,10 +611,10 @@ export const proofClaims: ProofClaim[] = [
       "Private transcript excerpts",
       "Private company context"
     ],
-    surfaces: ["technical-operations", "lab"],
+    surfaces: ["homepage", "technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "technical-operations-operating-backbone",
@@ -566,11 +702,10 @@ export function selectProofs(surface: ProofSurface): ProofClaim[] {
 }
 
 export const homepageProofs = [
-  "career-operating-structure-14-years",
   "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
-  "wowlist-community-platform",
-  "sunday-dinner-196-participation-infrastructure"
+  "callnyc-civic-data-guidance",
+  "source-backed-team-memory-method"
 ].map(requireReadyOrCarefulProof);
 
 export const resumeProofHighlights = [
@@ -579,6 +714,7 @@ export const resumeProofHighlights = [
   "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
+  "fair-rent-public-data-pilot",
   "callnyc-civic-data-guidance",
   "nyc-artist-coalition-public-web-infrastructure",
   "nyc-artist-coalition-civic-systems",
@@ -586,49 +722,3 @@ export const resumeProofHighlights = [
   "sunday-dinner-196-participation-infrastructure",
   "ai-evals-professional-development"
 ].map(requireReadyOrCarefulProof);
-
-export const technicalOperationsProofRows = [
-  {
-    capability: "Delivery coordination",
-    toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
-    proofIds: [
-      "technical-operations-operating-backbone",
-      "hje-modernization-stewardship",
-      "callnyc-civic-data-guidance",
-      "wowlist-community-platform"
-    ]
-  },
-  {
-    capability: "Risk surfacing and decision clarity",
-    toward: "Making open questions, public/private boundaries, and stakeholder next steps visible.",
-    proofIds: [
-      "fair-rent-campaign-memory",
-      "fair-rent-source-map",
-      "kc-town-hall-public-benefit-documentation"
-    ]
-  },
-  {
-    capability: "Operating documentation people use",
-    toward: "Converting meetings, source trails, and recurring practices into reusable working memory.",
-    proofIds: [
-      "fair-rent-campaign-memory",
-      "sunday-dinner-196-participation-infrastructure",
-      "source-backed-team-memory-method"
-    ]
-  },
-  {
-    capability: "Public-facing launch and adoption",
-    toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
-    proofIds: [
-      "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems",
-      "kc-spaces-fund-digital-infrastructure",
-      "callnyc-civic-data-guidance",
-      "wowlist-community-platform",
-      "hje-revenue-growth-contribution"
-    ]
-  }
-].map((row) => ({
-  ...row,
-  proofs: row.proofIds.map(requireReadyOrCarefulProof)
-}));

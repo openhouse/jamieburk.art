@@ -47,6 +47,22 @@ AI-assisted archival review is not a human collaborator testimonial.
 Known through Jamie or collaborators, but not yet necessarily approved for
 stronger public publication.
 
+### NYC Artist Coalition Facebook event census
+
+The July 15 detail capture and July 16 authenticated index replay reconcile the
+capture-date Past Events control as 33 recovered public event records plus one
+unresolved historical slot. The public-safe corpus retains dates, titles,
+organizer displays, venue categories, mission topics, bounded response labels,
+and selected public source routes while excluding raw descriptions, attendee
+identities, comments, contacts, meeting credentials, private working links, and
+authenticated state.
+
+Seven posted article routes connect selected events to New York Post, WNYC,
+Metro, The New Yorker, The Baffler, Curbed, and Gothamist reporting. Five were
+already typed in the campaign press corpus; two receive new source records. A
+link establishes circulation through an event description, not endorsement,
+Jamie's role, attendance, or policy causality.
+
 ### Approval Pending
 
 Potentially usable, but do not project to public pages until Jamie or

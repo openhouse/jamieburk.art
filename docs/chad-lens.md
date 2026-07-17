@@ -29,3 +29,19 @@ This portfolio should reduce the reader's burden without reducing the record.
   operators unless the technical audience expects "maintainers."
 
 The goal is courageous precision: neither understatement nor overclaiming.
+
+## Eval Protocol
+
+The launch-readiness suite records this lens as `CHAD-001`. Two independent
+semantic graders review the homepage, Technical Operations page, resume, and
+priority case-study openings. Each grader must be able to paraphrase:
+
+1. Jamie's role in the work;
+2. the concrete intervention;
+3. what became usable;
+4. toward what end;
+5. where the outcome or credit remains collective.
+
+The passing threshold is `0.8`. Adding Jamie's name without clarifying the work,
+deleting necessary qualifiers, or adding rubric-facing hiring language does not
+improve the score.

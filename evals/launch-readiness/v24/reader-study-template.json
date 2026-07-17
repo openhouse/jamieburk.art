@@ -1,0 +1,30 @@
+{
+  "templateVersion": 1,
+  "suiteVersion": 24,
+  "contractFingerprint": "replace-with-sha256-contract-fingerprint",
+  "status": "template-only",
+  "commit": "replace-with-reviewed-full-sha",
+  "performedAt": "replace-with-iso-8601",
+  "facilitatorCode": "replace-with-code",
+  "participantPolicy": "Use five or more unprimed target-reader codes. Do not commit names, contact details, recordings, or raw private comments.",
+  "task": {
+    "exposureSeconds": 30,
+    "startingRoute": "/",
+    "promptBeforeExposure": "Please review this portfolio as you naturally would when considering a candidate. I will ask what you understood after 30 seconds.",
+    "questionsAfterExposure": [
+      "What role is Jamie seeking?",
+      "What recurring contribution does Jamie make?",
+      "What two examples do you remember?",
+      "What, if anything, increased or reduced your trust?",
+      "What would you do next?"
+    ]
+  },
+  "participants": [],
+  "aggregate": {
+    "participantCount": 0,
+    "completeRecallCount": 0,
+    "criticalTrustFailures": [],
+    "repeatedComprehensionFailures": [],
+    "criterionDisposition": "unobserved"
+  }
+}

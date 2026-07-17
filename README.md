@@ -35,9 +35,28 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run check:launch-evals
+npm run check:knowledge-operations
+npm run eval:launch-readiness
+npm run knowledge:report
+npm run knowledge:query -- CallNYC
 npm run preflight:staging
 npm run preflight:production
 ```
+
+## Launch-readiness evals
+
+The version named by `evals/launch-readiness/active.json` lets human and LLM
+collaborators improve the portfolio recursively without collapsing release
+readiness into one gameable score. Every observation is bound to the exact Git
+candidate and contract fingerprint. Hard factual, accessibility, runtime, and
+approval gates must all pass. Scored browser and semantic criteria must meet a
+per-criterion floor and weighted target across two independent runs.
+
+Run `npm run eval:launch-readiness` to see deterministic failures and the
+browser, semantic, runtime, or human evidence still required. The recursive
+agent loop, observation format, protected invariants, and strict release-gate
+command are documented beside the active suite.
 
 ## Knowledge Bank
 
@@ -46,6 +65,7 @@ This repo includes a public-safe knowledge bank for professional claims:
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
 - `apps/www/src/data/knowledge-bank/records.ts`
+- `apps/www/src/data/knowledge-bank/intake.ts`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -65,6 +85,16 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+`npm run check:knowledge-intake` validates the lossless intake layer: submitted
+fragments, canonical dispositions, public-repository safety, and the separation
+between evidence maturity, public-use permission, and editorial selection. See
+`docs/knowledge-bank/intake-workflow.md`.
+
+`npm run knowledge:query -- <ID, project, or text>` and
+`npm run knowledge:report` provide public-safe operator views directly from the
+canonical records. `npm run knowledge:projection-map` regenerates the tracked
+projection register; `npm run check:knowledge-operations` fails if it drifts.
 
 ## Environment
 

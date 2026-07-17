@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { resolveCitationReferences } from "@/data/knowledge-bank";
+import { citationPagesById, resolveCitationReferences } from "@/data/knowledge-bank";
 import { SourceNote } from "./SourceNote";
 
 type ReferencesProps = { pageId: string };
 
 export function References({ pageId }: ReferencesProps) {
   const references = resolveCitationReferences(pageId);
+  const page = citationPagesById[pageId];
   if (!references.length) return null;
 
   return (
@@ -20,9 +21,18 @@ export function References({ pageId }: ReferencesProps) {
         These notes preserve what each source supports and where its limits
         remain. See something that needs correction? <Link href="/contact">Contact Jamie</Link>.
       </p>
+      {page.sharedBoundary ? (
+        <p className="jb-endnotes-intro">
+          <strong>Shared boundary:</strong> {page.sharedBoundary}
+        </p>
+      ) : null}
       <ol>
         {references.map((reference) => (
-          <SourceNote key={reference.source.id} {...reference} />
+          <SourceNote
+            boundaryOmissions={page.sourceBoundaryOmissions?.[reference.source.id]}
+            key={reference.source.id}
+            {...reference}
+          />
         ))}
       </ol>
     </section>

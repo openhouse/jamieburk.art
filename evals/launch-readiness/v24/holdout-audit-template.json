@@ -1,0 +1,15 @@
+{
+  "templateVersion": 1,
+  "suiteVersion": 24,
+  "contractFingerprint": "replace-with-sha256-contract-fingerprint",
+  "status": "template-only",
+  "commit": "replace-with-reviewed-full-sha",
+  "performedAt": "replace-with-iso-8601",
+  "evaluatorCode": "replace-with-code",
+  "rubricSeenBeforeOpenReview": false,
+  "openPrompt": "Review this portfolio as a hiring and public-facing artifact. What important failure, risk, confusion, omission, or unintended signal would matter even if every criterion in its existing evaluation rubric passed?",
+  "findings": [],
+  "dispositions": [],
+  "criterionDisposition": "unobserved",
+  "privacyPolicy": "Do not commit evaluator identity, contact details, recordings, or raw private comments."
+}

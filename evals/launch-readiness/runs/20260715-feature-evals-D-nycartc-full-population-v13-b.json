@@ -1,0 +1,253 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 13,
+  "runId": "feature-evals-D-nycartc-full-population-v13-b-20260715T235900-0400",
+  "commit": "36b6980cd1cc5ac24ad5a069c61d4284e9331833",
+  "baseUrl": "http://127.0.0.1:3044",
+  "performedAt": "2026-07-15T23:59:00-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Eleven public routes returned 200 at desktop and mobile widths with zero horizontal overflow.",
+        "All eleven routes passed the 200-percent-equivalent reflow check with zero overflow."
+      ],
+      "limitations": [
+        "Measurements were performed against the exact local production build, not the deployed production domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-nycartc-v13-b-20260715"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Twenty-four real Tab events on CallNYC produced twenty-four visibly focused controls, including thirteen citation links.",
+        "CallNYC and FairRentNYC citation targets, accessible labels, and backlinks worked without client-side state."
+      ],
+      "limitations": [
+        "Automated browser checks do not replace a human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-nycartc-v13-b-20260715"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Harry J. Epstein, FairRentNYC, and CallNYC each rendered a loaded public artifact at 375 and 1440 pixels with substantial alt text, a substantial caption, a public source link, and no overflow.",
+        "KC Town Hall retained nine page-local citations, eight source notes, and a single shared municipal boundary after editorial compression."
+      ],
+      "limitations": [
+        "The check verifies selected public artifacts and does not authorize private or approval-gated imagery."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-priority-artifacts-nycartc-v13-b-20260715"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.93,
+      "passed": true,
+      "evidence": [
+        "The homepage immediately identifies Jamie as a “Technical Project Manager - Product Operations & Implementation,” describes his recurring contribution as creating operating structure for complex public-facing teams, and offers selected-work, resume, and contact actions.",
+        "The homepage and resume supply readily skimmable proofs, including contributing to 2x revenue growth, building an actively used campaign-memory system, and translating CouncilStat records into resident-facing CallNYC guidance.",
+        "Technical Operations maps the recurring contribution to concrete work products—decision logs, action trackers, onboarding materials, documentation, launch support, and handoffs—and associates them with named projects."
+      ],
+      "limitations": [
+        "The homepage places a sizeable “Start here” directory before its proof strip and repeats the operating-structure proposition several times, slightly slowing access to the strongest named evidence."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v13-b1",
+        "runId": "semantic-v13-b1-20260715-nycartc-r4"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.94,
+      "passed": true,
+      "evidence": [
+        "The homepage immediately identifies Jamie as a Technical Project Manager focused on product operations and implementation, explains that he turns ambiguous stakeholder-heavy work into requirements, workflows, documentation, launch support, onboarding, and handoffs, and offers selected-work, resume, and contact actions.",
+        "A short skim yields multiple concrete proofs: contribution to 2x revenue growth, a shared civic campaign-memory system in active use, and CallNYC's translation of constituent-services data into resident-facing guidance.",
+        "The resume and Technical Operations page reinforce the same role-value-proof path, while the HJE, FairRentNYC, CallNYC, and KC Town Hall openings distinguish modernization, coalition operations, civic-data translation, and public-benefit documentation."
+      ],
+      "limitations": [
+        "The 869-word homepage repeats the operating-structure and what-became-usable motifs across several sections, slightly reducing memorability despite the strong initial path."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v13-b2",
+        "runId": "semantic-v13-b2-20260715-nycartc-r4"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.91,
+      "passed": true,
+      "evidence": [
+        "Harry J. Epstein identifies Jamie’s web, analytics, marketing, content, release-coordination, and workflow work; the usable result is a clearer customer storefront and more coherent internal digital operations supporting online growth.",
+        "FairRentNYC names Jamie’s documentation architecture, running minutes, action trackers, source mapping, campaign websites, and privacy-preserving data proposal while explicitly assigning campaign outcomes to the coalition and its collaborators.",
+        "CallNYC plainly connects Jamie’s prototype and information architecture to issue pages, district context, and resident next-step guidance; its account interactions are correctly described as public exchange rather than Council adoption.",
+        "KC Town Hall states Jamie’s co-led planning and documentation role, the reviewable public-benefit result, the neighborhood-service workflows, and the later stewardship transition while bounding teammate authorship, municipal action, funding, and project completion."
+      ],
+      "limitations": [
+        "The resume and Technical Operations proof lists compress some projects into short accomplishment phrases, so beneficiary, purpose, and collective context are more complete after opening a case study."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v13-b1",
+        "runId": "semantic-v13-b1-20260715-nycartc-r4"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.92,
+      "passed": true,
+      "evidence": [
+        "Using visible wording, Jamie is a Technical Project Manager and product-operations implementer who creates requirements, planning rhythms, decision logs, action trackers, documentation, launch support, onboarding materials, and durable handoffs so public-facing teams can move and maintain the work.",
+        "FairRentNYC shows a concrete intervention and usable result: Jamie designed documentation architecture, converted meetings into running minutes and action trackers, created a stakeholder operations tracker and provenance redline, and left collaborators a shared campaign record for decisions, sources, ownership, and next steps.",
+        "CallNYC shows Jamie building an independent prototype that turned administrative records into issue pages, district context, and possible resident next steps. HJE shows him coordinating web, content, analytics, releases, and operational workflows to support e-commerce growth while preserving the company's voice.",
+        "KC Town Hall shows Jamie co-leading planning and public-benefit documentation, presenting the proposal, establishing a shared project identity, and preserving an inspectable municipal sequence through withdrawal and transition. The page explicitly says Jamie did not author every shared-account post and does not claim a completed redevelopment.",
+        "Collective credit is consistently bounded: FairRentNYC assigns campaign outcomes to collaborators, CallNYC disclaims Council adoption, HJE uses contribution language, and KC Town Hall describes co-leadership and later stewardship."
+      ],
+      "limitations": [
+        "The Technical Operations opening still relies on the abstraction operating backbone before its concrete proof map, so the reader must make a small interpretive step that the strongest case-study openings avoid."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v13-b2",
+        "runId": "semantic-v13-b2-20260715-nycartc-r4"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "The architecture separately represents SourceRecord, ClaimRecord, evidence relationships, ResearchInquiry, and IntakeRecord; claims carry supports, locators, confidence, boundaries, anti-claims, inquiry edges, and projection state rather than inheriting source metadata as promotion copy.",
+        "The population record correctly defines 5,124 as a dated profile-count control: 715 account-authored statuses plus 2,652 reposts equal 3,367 recovered items, and 3,367 plus 1,757 unresolved slots equals 5,124. It explicitly says this is neither a platform export nor complete item-level recovery, and assigns no identity, content, date, type, or deletion reason to unresolved slots.",
+        "Source-routing records state that posted URLs and reposts establish public routing—not engagement, readership, endorsement, reach, or impact. The inbound record keeps 501 stakeholder-account records as a recoverable floor rather than an endorsement or complete census, and shared-account authorship remains unassigned without post-level evidence.",
+        "All three new claims—CLM-NYCARTC-FULL-PROFILE-DISPOSITION, CLM-NYCARTC-SOURCE-ROUTING-CONTINUITY, and CLM-NYCARTC-STAKEHOLDER-EXCHANGE-FLOOR—have hold status and empty surfaces. None appears in the supplied public pages or rendered public text; the intake remains decomposed but editorially unsurfaced."
+      ],
+      "limitations": [
+        "The packet omits the two row-level ledgers and the imported schema, so individual recovered-item and unresolved-slot records cannot be independently queried here; their entity-level integrity is supported only by normalized records and the recomputed aggregate report."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v13-b1",
+        "runId": "semantic-v13-b1-20260715-nycartc-r4"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.93,
+      "passed": true,
+      "evidence": [
+        "The knowledge bank separates two research-run sources, eight normalized articles, three bounded claim records, one research inquiry, and one decomposed but unsurfaced intake with explicit next actions.",
+        "Each claim has a distinct proposition, evidence relationship, locator, confidence, boundaries, and anti-claims. All three projections remain on hold with empty public surfaces, so archive depth does not automatically burden the current portfolio narrative.",
+        "The population claim correctly treats 5,124 as a dated control containing 3,367 recovered items and 1,757 unresolved slots—not a complete item export. It also preserves the shared-account authorship boundary.",
+        "The source-routing claim separates 1,772 link occurrences and 1,241 unique URLs from readership, reach, endorsement, conversion, or impact. The stakeholder claim treats 501 inbound records from 178 accounts as a recoverable floor, not official endorsement or a complete stakeholder census.",
+        "The open inquiry identifies the missing first-party owner archive, preserves not recovered as distinct from deleted or nonexistent, and specifies a privacy-safe future reconciliation and handoff procedure."
+      ],
+      "limitations": [
+        "The eight article-to-claim relationships reuse one generic context locator rather than giving article-specific page or section locators and separate atomic claim records, which makes the close-reading layer less immediately auditable than the ledger claims."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v13-b2",
+        "runId": "semantic-v13-b2-20260715-nycartc-r4"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.84,
+      "passed": true,
+      "evidence": [
+        "Each case study establishes a public argument before its evidence apparatus: a concise role/action summary and artifact map lead into context, what was unclear, what became usable, Jamie’s work, outcome, and transferable proof.",
+        "Harry J. Epstein remains especially composed: storefront evidence, customer and internal results, contribution-bounded growth language, and protected operational details occupy distinct layers without turning the page into a ledger.",
+        "FairRentNYC and CallNYC consolidate common shared-account limits into one shared boundary, while individual notes add source-specific limits. KC Town Hall similarly separates the readable municipal sequence from detailed citations and protected/open states.",
+        "Citation markers and source notes remain available at depth—12/11 on FairRentNYC, 13/9 on CallNYC, and 9/8 on KC Town Hall—without interrupting the opening role and artifact summaries."
+      ],
+      "limitations": [
+        "CallNYC’s archived/unofficial status and KC Town Hall’s non-disbursement, noncompletion, and nonendorsement boundaries recur across narrative, source notes, and evidence footers, making the lower portions feel more governance-heavy than necessary."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v13-b1",
+        "runId": "semantic-v13-b1-20260715-nycartc-r4"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.87,
+      "passed": true,
+      "evidence": [
+        "Each case study opens with a composed role-and-result summary and an artifact map before presenting deeper governance: HJE shows the storefront and content system, FairRentNYC shows a campaign surface and public data handout, CallNYC shows its issue-pathway prototype, and KC Town Hall shows its public-benefit documentation set.",
+        "The narrative sections explain context, ambiguity, Jamie's actions, usable results, outcomes, and transferable proof before source notes. FairRentNYC and CallNYC consolidate the common shared-account limitation into one visible boundary while retaining source-specific limits.",
+        "KC Town Hall preserves the most important editorial distinction: the durable proof is planning, proposal development, municipal review, neighborhood workflows, and transition—not a completed redevelopment.",
+        "The three new NYC Artist Coalition archival claims remain held; the existing public narrative uses only the reader-relevant shared identity and bounded Council-account interaction evidence."
+      ],
+      "limitations": [
+        "Evidence depth still becomes heavy late in the civic cases: FairRentNYC has 11 source notes, CallNYC has nine, and KC Town Hall has eight, followed by additional Known/Open/Protected summaries that sometimes repeat adoption, authorship, and completion boundaries."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v13-b2",
+        "runId": "semantic-v13-b2-20260715-nycartc-r4"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.86,
+      "passed": true,
+      "evidence": [
+        "The homepage joins care to structure in active, usable language: Jamie clarifies what is known, protects what should stay private, and leaves material people can act on after a meeting.",
+        "Harry J. Epstein preserves a human register through its attention to customer trust, humor, institutional knowledge, and the company’s distinctive voice while keeping the growth claim contribution-bounded.",
+        "FairRentNYC, CallNYC, and KC Town Hall use precise distinctions that build trust: coalition outcomes remain collective, public exchange is not adoption, an appropriation is not disbursement, and planning proof is not completed redevelopment.",
+        "The pages end with practical resume and contact actions, and the source-note correction invitation supplies a usable accountability path."
+      ],
+      "limitations": [
+        "Repeated phrases such as “operating structure,” “operating backbone,” “transferable pattern,” “public-safe,” and “evidence and limits” sometimes make the otherwise distinctive prose sound templated and procedural."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v13-b1",
+        "runId": "semantic-v13-b1-20260715-nycartc-r4"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "The homepage is direct and human: Jamie says what he makes, who it helps, what remains usable after meetings, and how a reader can proceed through the work, resume, or contact path.",
+        "HJE joins care to structure by treating institutional trust, humor, product judgment, customer experience, and maintainable operations as parts of the same implementation problem.",
+        "CallNYC uses an accessible resident-centered test—a person should not need to interpret the whole dataset before finding an entry point—while precisely identifying the prototype as independent, archived, and unofficial.",
+        "FairRentNYC and KC Town Hall use active first-person language while distinguishing Jamie's work from coalition, team-account, municipal, and collaborator outcomes. KC Town Hall's candid account of withdrawal and transition strengthens trust.",
+        "The pages consistently end with usable actions such as viewing the resume, contacting Jamie, following public links, or reporting a correction."
+      ],
+      "limitations": [
+        "Terms such as legislative provenance redline, RPIE-derived pilot, profile control, and account-level exchange occasionally shift the civic pages from warm public language into specialist evidence-governance language."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v13-b2",
+        "runId": "semantic-v13-b2-20260715-nycartc-r4"
+      }
+    }
+  ],
+  "humanApprovals": []
+}

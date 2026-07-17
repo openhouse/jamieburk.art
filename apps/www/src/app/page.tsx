@@ -18,22 +18,12 @@ const startHereLinks = [
   {
     href: "/work/technical-operations",
     label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for OTI, product operations, implementation, and delivery coordination."
+    note: "How I coordinate technical delivery, product operations, implementation, and durable handoffs."
   },
   {
-    href: "/work/harry-j-epstein",
-    label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
-  },
-  {
-    href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
-  },
-  {
-    href: "/work/callnyc",
-    label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
+    href: "/work",
+    label: "Selected work",
+    note: "Case studies across business operations, civic technology, coalition systems, and community infrastructure."
   },
   {
     href: "/resume",
@@ -54,9 +44,8 @@ export default function HomePage() {
               Quick path through the portfolio
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              New to my work? These pages give the clearest route through the
-              site for hiring managers, referrers, civic-tech peers, and
-              collaborators.
+              Start with my operating approach, browse selected case studies,
+              or open the resume for an application-ready summary.
             </p>
           </div>
           <div className="grid gap-3">

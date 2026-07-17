@@ -1,0 +1,124 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 14,
+  "runId": "feature-evals-D-urbanhermit-v14-a-20260716T003532-0400",
+  "commit": "03a552d2e6259954f73cde8251cbc6109be12a0d",
+  "baseUrl": "http://127.0.0.1:3045",
+  "performedAt": "2026-07-16T00:35:32-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Eleven application-facing routes returned 200 at desktop and mobile widths with no horizontal overflow.",
+        "All eleven routes passed the 200-percent-equivalent reflow check with no overflow."
+      ],
+      "limitations": ["The exact production build was tested locally rather than on the canonical domain."],
+      "grader": { "type": "browser", "name": "Chromium / Playwright", "runId": "browser-v14-urbanhermit-a-20260716" }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Twenty-four real Tab events exposed twenty-four visibly focused controls, including thirteen citation links.",
+        "Citation targets, backlinks, accessible labels, landmarks, and 200-percent-equivalent reflow passed."
+      ],
+      "limitations": ["Automated browser review does not replace human screen-reader comprehension review."],
+      "grader": { "type": "browser", "name": "Chromium / Playwright", "runId": "browser-v14-urbanhermit-a-20260716" }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, and CallNYC each rendered a loaded public artifact at 375 and 1440 pixels with substantial alt text, caption, source link, and rights/status text.",
+        "All six viewport measurements found nonzero natural image dimensions and no figure overflow."
+      ],
+      "limitations": ["The check verifies selected public artifacts and does not authorize private or approval-gated imagery."],
+      "grader": { "type": "browser", "name": "Chromium / Playwright artifact audit", "runId": "browser-artifacts-v14-urbanhermit-a-20260716" }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": ["The homepage states role, recurring value, and next actions; start-here links route to concrete work, resume, and Technical Operations evidence."],
+      "limitations": ["Repeated operating-structure language prevents a top score."],
+      "grader": { "type": "llm", "name": "independent-public-sector-evidence-reviewer-v14-c", "runId": "semantic-v14-urbanhermit-c-20260716" }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.92,
+      "passed": true,
+      "evidence": ["The homepage, resume, Technical Operations page, and priority openings consistently expose role, work, usable result, and status."],
+      "limitations": ["Static source review cannot replace a timed reader study."],
+      "grader": { "type": "llm", "name": "independent-portfolio-editor-v14-d", "runId": "semantic-v14-urbanhermit-d-20260716" }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": ["Priority surfaces make Jamie the actor, name concrete artifacts and usable results, and retain collective-credit boundaries."],
+      "limitations": ["A few domain terms still require modest interpretation."],
+      "grader": { "type": "llm", "name": "independent-public-sector-evidence-reviewer-v14-c", "runId": "semantic-v14-urbanhermit-c-20260716" }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": ["Specific verbs and project outputs make Jamie's intervention visible while FairRentNYC and KC Town Hall separate his contribution from collective outcomes."],
+      "limitations": ["Some Technical Operations language remains abstract until the adjacent proof map is read."],
+      "grader": { "type": "llm", "name": "independent-portfolio-editor-v14-d", "runId": "semantic-v14-urbanhermit-d-20260716" }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": ["Decomposed evidence relationships have locators and limits; metadata-reviewed sources remain claim-free, unsurfaced, and queued."],
+      "limitations": ["The 321-source Urbanhermit queue remains intentionally open rather than article-level decomposed."],
+      "grader": { "type": "llm", "name": "independent-public-sector-evidence-reviewer-v14-c", "runId": "semantic-v14-urbanhermit-c-20260716" }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.97,
+      "passed": true,
+      "evidence": ["All 52 decomposed intakes have limits and locators; 42 metadata-reviewed intakes have no claim or selected projection; all eight Urbanhermit projections remain held."],
+      "limitations": ["Private evidence was assessed through its governed metadata and boundaries, not republished content."],
+      "grader": { "type": "llm", "name": "independent-portfolio-editor-v14-d", "runId": "semantic-v14-urbanhermit-d-20260716" }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": ["Priority cases use skimmable context, action, result, evidence, and transfer sections while reserving source governance for later depth."],
+      "limitations": ["FairRentNYC and KC Town Hall repeat some protection and collective-credit boundaries."],
+      "grader": { "type": "llm", "name": "independent-public-sector-evidence-reviewer-v14-c", "runId": "semantic-v14-urbanhermit-c-20260716" }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.82,
+      "passed": true,
+      "evidence": ["Case-study layouts lead with summary, role, artifact, and narrative before references and evidence limits; held Urbanhermit depth does not crowd the site."],
+      "limitations": ["FairRentNYC and KC Town Hall occasionally retain a governed-claim cadence."],
+      "grader": { "type": "llm", "name": "independent-portfolio-editor-v14-d", "runId": "semantic-v14-urbanhermit-d-20260716" }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": ["About, Contact, priority work, and Known / Open / Protected prose remain direct, human, precise, and actionable."],
+      "limitations": ["Some evidence-heavy passages remain procedural."],
+      "grader": { "type": "llm", "name": "independent-public-sector-evidence-reviewer-v14-c", "runId": "semantic-v14-urbanhermit-c-20260716" }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.87,
+      "passed": true,
+      "evidence": ["The prose joins care to structure, distinguishes known from assumed, and ends with usable actions without inflated ownership."],
+      "limitations": ["Recurring governance vocabulary can feel systematized."],
+      "grader": { "type": "llm", "name": "independent-portfolio-editor-v14-d", "runId": "semantic-v14-urbanhermit-d-20260716" }
+    }
+  ],
+  "humanApprovals": []
+}

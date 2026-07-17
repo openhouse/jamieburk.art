@@ -1,0 +1,232 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 12,
+  "runId": "feature-evals-D-kctownhall-full-population-v12-a-20260715T223100-0400",
+  "commit": "3beb4674f3c499785a200af2e23e2237b3706ed7",
+  "baseUrl": "http://127.0.0.1:3043",
+  "performedAt": "2026-07-15T22:31:00-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Eleven public routes returned 200 without horizontal overflow at desktop and mobile widths.",
+        "KC Town Hall independently passed at 320, 375, 768, and 1440 CSS pixels with nine citation markers, nine backlinks, and eight source notes."
+      ],
+      "limitations": [
+        "Measurements were performed against the exact local production build, not the deployed production domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-kctownhall-v12-a-20260715"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "All eleven routes passed 200-percent-equivalent reflow with zero overflow, and twenty-four real Tab events produced twenty-four visibly focused controls on CallNYC.",
+        "KC Town Hall citation targets and backlinks worked at four widths, exposed useful accessible names, and retained a three-pixel visible focus outline."
+      ],
+      "limitations": [
+        "Automated browser checks do not replace a human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-kctownhall-v12-a-20260715"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Harry J. Epstein, Fair Rent NYC, and CallNYC each rendered a loaded public-web artifact at 375 and 1440 pixels with substantial alt text, a substantial caption, a public source link, and no overflow.",
+        "KC Town Hall rendered eight distinct source notes after the public narrative, with nine working page-local citation and backlink pairs."
+      ],
+      "limitations": [
+        "The check verifies the existing public-web-capture policy and does not authorize private or approval-gated imagery."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-priority-artifacts-kctownhall-v12-a-20260715"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.92,
+      "passed": true,
+      "evidence": [
+        "The homepage identifies Jamie's target role, recurring contribution, multiple concrete proofs, and work, resume, and contact actions.",
+        "KC Town Hall states the co-led planning role, municipal sequence, limits, transition, and neighborhood operating evidence before the source appendix."
+      ],
+      "limitations": [
+        "The KC Town Hall opening remains qualifier-dense and its local next-action card appears later in the desktop composition."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v12-a1",
+        "runId": "semantic-v12-a1-20260715-kcth"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.94,
+      "passed": true,
+      "evidence": [
+        "Role, recurring value, multiple proofs, and next actions are identifiable without consulting source notes.",
+        "The KC Town Hall neighborhood-interface section makes resident input, recurring service work, and bounded stakeholder response skimmable."
+      ],
+      "limitations": [
+        "Some proof repeats across the homepage and Technical Operations page."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v12-a2",
+        "runId": "semantic-v12-a2-20260715-kcth"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.88,
+      "passed": true,
+      "evidence": [
+        "Priority surfaces connect Jamie to concrete work products including requirements, workflows, decision logs, documentation, launch support, and handoffs.",
+        "KC Town Hall names Jamie's planning, presentation, translation, and shared-project-identity work while preserving collective authorship and later stewardship boundaries."
+      ],
+      "limitations": [
+        "The HJE and KC Town Hall opening sentences use implied first-person subjects rather than naming Jamie immediately."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v12-a1",
+        "runId": "semantic-v12-a1-20260715-kcth"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.92,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, CallNYC, and KC Town Hall each make Jamie's intervention, usable result, and purpose legible.",
+        "KC Town Hall identifies a shared account, resident input and service-intake surfaces, and materials that made municipal review and collaborator handoff more usable."
+      ],
+      "limitations": [
+        "A few phrases such as operating backbone and long-horizon implementation proof remain more abstract than the surrounding examples."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v12-a2",
+        "runId": "semantic-v12-a2-20260715-kcth"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.94,
+      "passed": true,
+      "evidence": [
+        "The KC Town Hall intake is decomposed into eight claims with source relationships, locators, confidence, boundaries, anti-claims, and projection status.",
+        "Population, tire publishing, Council response, civic curation, and the volatile engagement snapshot remain distinct propositions with distinct public-use policies."
+      ],
+      "limitations": [
+        "The 183 records are governed through one aggregate intake, so per-row maturity is less immediate than claim-level maturity."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v12-a1",
+        "runId": "semantic-v12-a1-20260715-kcth"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.97,
+      "passed": true,
+      "evidence": [
+        "The fixture reconciles all 183 displayed records, separates five other-account conversation contexts, and independently balances record-type and year totals.",
+        "All nine curated source routes and the 267-unit dated interaction snapshot remain held with no public surfaces."
+      ],
+      "limitations": [
+        "The dated interface reconstruction cannot recover deleted, private, withheld, or unindexed history."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v12-a2",
+        "runId": "semantic-v12-a2-20260715-kcth"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.82,
+      "passed": true,
+      "evidence": [
+        "KC Town Hall presents its role, artifact, context, action, usable result, neighborhood interface, status, and transferable proof before the source appendix.",
+        "The 320px and 1440px compositions preserve narrative hierarchy without horizontal overflow."
+      ],
+      "limitations": [
+        "The mobile page is long, and funding, withdrawal, and non-completion boundaries repeat across several layers."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v12-a1",
+        "runId": "semantic-v12-a1-20260715-kcth"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.85,
+      "passed": true,
+      "evidence": [
+        "The public argument leads, and eight source notes support rather than replace the narrative.",
+        "Evidence and limits, public links, and credits provide progressively deeper inspection after the case has been made."
+      ],
+      "limitations": [
+        "The evidence tail remains substantial and repeats some municipal boundaries."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v12-a2",
+        "runId": "semantic-v12-a2-20260715-kcth"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.85,
+      "passed": true,
+      "evidence": [
+        "The voice is specific, useful, and candid about account authorship, funding, stakeholder response, and current-status limits.",
+        "Contact and resume actions keep the portfolio usable rather than ending in evidence governance."
+      ],
+      "limitations": [
+        "Repeated evidence-layer phrases sometimes make the portfolio sound templated."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v12-a1",
+        "runId": "semantic-v12-a1-20260715-kcth"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.89,
+      "passed": true,
+      "evidence": [
+        "Active first-person language for translating, establishing, and transitioning keeps Jamie visible without claiming sole ownership.",
+        "The statement that Jamie does not assign every shared-account post to himself makes human judgment and collective credit explicit."
+      ],
+      "limitations": [
+        "Repository-derived phrases occasionally make the prose more procedural than conversational."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v12-a2",
+        "runId": "semantic-v12-a2-20260715-kcth"
+      }
+    }
+  ],
+  "humanApprovals": []
+}

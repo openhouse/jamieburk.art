@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-16",
+  "surface": "authenticated-current-wowlist-facebook-page-post-stream",
+  "populationBoundary": "A complete census of the posts exposed by the capture-date WOW List Facebook Page stream, not a native Meta owner export, deletion history, or proof of every post ever published.",
+  "populationReconciliation": {
+    "independentTraversalCount": 3,
+    "rawRenderedCardCounts": [79, 81, 90],
+    "semanticPostCounts": [57, 57, 57],
+    "stableTerminalObservations": [18, 18, 20],
+    "semanticIdentityRule": "Normalize duplicate lazy link-card variants and randomized single-character accessibility timestamps while retaining substantive post language.",
+    "sortedSemanticKeySha256": "1c7a4c56506480e1b8f7d85f5257ad7d01c2f18298e430926dad4d586b0d1e45",
+    "visiblePostDateRange": {
+      "first": "2015-04-25",
+      "last": "2018-03-22"
+    }
+  },
+  "profileControl": {
+    "followersDisplayed": 185,
+    "followingDisplayed": 2,
+    "interpretation": "Mutable capture-date profile controls only; not historical reach, adoption, unique people, or impact."
+  },
+  "sourceRouting": {
+    "semanticPostsWithAnyRecoveredDestination": 51,
+    "semanticPostsWithExternalDestination": 28,
+    "uniquePostedDestinations": 57,
+    "uniqueWowListDestinations": 30,
+    "uniqueExternalDestinations": 27,
+    "allExternalDestinationSha256": "84ee0cda894a113d0dfe88adbe5f0d8c001dfed0f0e96faa26f5efc1ad34cf3b",
+    "publishedSafeExternalDestinations": 24,
+    "publishedSafeDestinationSha256": "8593e539971de803a15323e4fe1651254339f21617fff69b596d1990d5a83c24",
+    "withheldSensitiveDirectAidDestinations": 2,
+    "unresolvedMalformedVideoDestinations": 1,
+    "safeExternalUrls": [
+      "http://dodiy.org/",
+      "http://grasstronaut.com/2015/09/03/the-baltimore-who-do-it-list/",
+      "http://m.eastbayexpress.com/SevenDays/archives/2016/12/03/artists-at-last-nights-oakland-warehouse-fire-discuss-the-tragedy-those-missing-need-for-safe-underground-spaces",
+      "http://nycartc.com/",
+      "http://phxdiy.com/",
+      "http://popular.vote/",
+      "http://saferspac.es/",
+      "http://silentbarn.org/donate",
+      "http://thisusedtobe.us/2016/12/12/essay-by-luke-leavitt/",
+      "http://www.benbiersmith.com/noelevator.html",
+      "http://www.sbdiy.org/",
+      "http://www.seattlediy.org/",
+      "http://www.westword.com/arts/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025",
+      "http://www.wweek.com/bars/2016/07/01/the-know-is-closing/",
+      "https://ijiiji.bandcamp.com/",
+      "https://meowwolf.com/2016/12/meow-wolfs-diy-fund/",
+      "https://meowwolf.com/diy/",
+      "https://www.alliedmedia.org/news/2016/06/28/amp-hiring-development-associate",
+      "https://www.gofundme.com/pehrspace",
+      "https://www.indiegogo.com/projects/get-orange-county-diy-a-permanent-home",
+      "https://www.kickstarter.com/projects/sheastadiumbk/bring-back-shea-stadium",
+      "https://www.patreon.com/neilcampau",
+      "https://www.razoo.com/us/story/Trunk-Space-Opening",
+      "https://youtu.be/nQg47LtixPI"
+    ]
+  },
+  "closeReadSources": [
+    {
+      "sourceId": "SRC-WOWLIST-FACEBOOK-MEOW-WOLF-DIY-FUND-2016",
+      "theme": "cultural-space funding and technical support"
+    },
+    {
+      "sourceId": "SRC-WOWLIST-FACEBOOK-DENVER-DIY-SPACES-2017",
+      "theme": "public-agency and cultural-organization response"
+    },
+    {
+      "sourceId": "SRC-WOWLIST-FACEBOOK-THE-KNOW-CLOSING-2016",
+      "theme": "venue displacement and rent pressure"
+    },
+    {
+      "sourceId": "SRC-WOWLIST-FACEBOOK-GHOST-SHIP-SAFETY-2016",
+      "theme": "cultural-space safety and community care"
+    },
+    {
+      "sourceId": "SRC-WOWLIST-FACEBOOK-SHEA-KICKSTARTER-2017",
+      "theme": "community-space continuity campaign"
+    }
+  ],
+  "operatingPatterns": [
+    "community-calendar routing across several cities",
+    "tour and event distribution",
+    "member meetings, feedback, and community-created product instruction",
+    "cultural-space continuity, safety, and emergency support",
+    "mutual-aid and public-interest event collections",
+    "routing people from Facebook toward WOW List and independent community infrastructure"
+  ],
+  "visibleReception": {
+    "identifiableIncomingPublicComments": 1,
+    "unresolvedCommentBodies": 1,
+    "reactionCensusStatus": "not-recovered",
+    "interpretation": "A bounded reception specimen only; not traction, reach, conversion, adoption, attendance, endorsement, or impact."
+  },
+  "authorship": {
+    "projectCredit": "WOW List was a project Jamie built with Richard.",
+    "jamieMemoryStatus": "protected-first-person-research-lead",
+    "postLevelAuthorshipStatus": "not-recovered-for-full-population",
+    "boundary": "Account access and first-person memory do not assign every Page post to Jamie."
+  },
+  "publicSafety": {
+    "retained": [
+      "aggregate counts",
+      "population and destination digests",
+      "safe public URLs",
+      "close-read source relationships",
+      "bounded operating and reception patterns",
+      "evidence limitations"
+    ],
+    "excluded": [
+      "raw post text",
+      "raw comment text",
+      "sensitive direct-aid destinations",
+      "private messages",
+      "analytics",
+      "credentials",
+      "cookies",
+      "authenticated-session material",
+      "machine-local paths"
+    ]
+  },
+  "projectionDecision": "No new public case-study sentence was selected. The archive deepens the source field while the existing WOW List page remains optimized for role, usability, and hiring-reader clarity."
+}

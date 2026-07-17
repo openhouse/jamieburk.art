@@ -3,6 +3,13 @@
 Use this checklist before staging review, production review, or any PR that
 changes public claims.
 
+- [ ] Every newly supplied fragment has an `INTAKE-` record or a documented
+  duplicate/protected disposition.
+- [ ] Reviewed sources have been decomposed into source-bounded atomic claims,
+  limitations, and open inquiries.
+- [ ] Evidence maturity, public-use policy, and editorial selection were decided
+  independently.
+- [ ] No intake-linked claim was activated merely because its source is public.
 - [ ] Every public claim has a matching entry in `docs/knowledge-bank/claims.md`.
 - [ ] Every structured proof in `apps/www/src/data/proofs.ts` has status,
   support level, evidence class, guardrail, protected boundaries, and review
@@ -28,6 +35,7 @@ changes public claims.
   credentials, or private correspondence have been committed.
 - [ ] No public `/proofs`, `/knowledge-bank`, or `/public-claims` route exists.
 - [ ] `npm run knowledge-bank` passes.
+- [ ] `npm run check:knowledge-intake` passes.
 - [ ] `npm run public-safety` passes.
 - [ ] `npm run check:routes` passes.
 - [ ] `npm run preflight:staging` passes.

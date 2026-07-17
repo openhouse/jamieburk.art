@@ -1,0 +1,232 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 5,
+  "runId": "feature-evals-D-campaign-press-v5-20260714T150850-0400",
+  "commit": "6693139397a7c8661bac40ce29ad7710870cd4c0",
+  "baseUrl": "http://127.0.0.1:3041",
+  "performedAt": "2026-07-14T15:08:50-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Nine application-facing routes returned 200 responses at desktop and mobile viewports without horizontal overflow.",
+        "A 200 percent zoom-equivalent reflow check found no overflow on all nine routes, and the resume PDF returned 200."
+      ],
+      "limitations": [
+        "Measurements were performed against the local production bundle, not the deployed production domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-working-tree-v5-20260714"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "All 24 keyboard-focusable controls tested exposed visible focus outlines.",
+        "CallNYC rendered eight working citation-reference pairs and FairRentNYC rendered one; accessible names, backlinks, and target navigation were present."
+      ],
+      "limitations": [
+        "This browser run does not replace a human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-working-tree-v5-20260714"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, and CallNYC each retained a relevant public-web artifact with nonempty alt text, a caption, and a public source link.",
+        "The artifacts remained legible in the measured mobile and zoom-equivalent layouts."
+      ],
+      "limitations": [
+        "These public captures do not authorize additional private or approval-gated images."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-working-tree-v5-20260714"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The homepage immediately states Jamie's target role, recurring contribution, and selected-work, resume, and contact actions.",
+        "The proof strip, resume, and Technical Operations page reinforce that positioning with concrete evidence."
+      ],
+      "limitations": [
+        "Key proof follows the hero, and some operating-structure language remains repetitive."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v5",
+        "runId": "semantic-v5-a-20260714"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The compiled homepage identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation and supplies three clear next actions.",
+        "The homepage proof strip, Technical Operations page, resume, HJE, and FairRentNYC provide concrete proof paths in a short skim."
+      ],
+      "limitations": [
+        "Recurring phrases such as operating structure, usable systems, and durable handoffs reduce distinctiveness."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v5",
+        "runId": "semantic-v5-b-20260714"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Technical Operations names Jamie as the actor and connects planning rhythms, decision logs, action trackers, onboarding, documentation, and launch support to project proof.",
+        "FairRentNYC and CallNYC distinguish Jamie's direct interventions from collective outcomes and official authority."
+      ],
+      "limitations": [
+        "Some recurring operating-backbone language remains more abstract than the strongest case-study prose."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v5",
+        "runId": "semantic-v5-a-20260714"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Homepage, Technical Operations, and resume copy make Jamie the actor and name concrete interventions and deliverables.",
+        "HJE, FairRentNYC, and CallNYC connect Jamie's work to usable results while preserving collective-credit boundaries."
+      ],
+      "limitations": [
+        "Several case-study summaries begin with subjectless verbs, and a few systems terms remain abstract."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v5",
+        "runId": "semantic-v5-b-20260714"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "The bank contains 45 ordered campaign placements resolving to 44 article sources, including one NPR source with two campaign edges.",
+        "All 41 new article intakes are metadata-reviewed, unsurfaced, claim-free, and queued for close reading; all decomposed claims retain locators, boundaries, and anti-claims."
+      ],
+      "limitations": [
+        "Automated validation cannot independently verify every recovered metadata value or future close-reading judgment."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v5",
+        "runId": "semantic-v5-a-20260714"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "All 19 decomposed intakes have atomic claims, evidence roles, locators, boundaries, and anti-claims.",
+        "The four press indexes produce only bounded placement-count claims; all 41 new articles remain outside claim evidence relationships and public projections."
+      ],
+      "limitations": [
+        "The metadata-reviewed articles remain substantively undecomposed by design and can support discovery only."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v5",
+        "runId": "semantic-v5-b-20260714"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, and CallNYC retain a concise opening, real artifact, narrative, and later evidence limits.",
+        "Source-Backed Team Memory separates method, exclusions, working pattern, deliverables, and role fit."
+      ],
+      "limitations": [
+        "FairRentNYC and HJE repeat some privacy, evidence, and collective-credit boundaries."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v5",
+        "runId": "semantic-v5-a-20260714"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Priority case studies layer summary, artifact, context, intervention, usable result, outcome, and transferable proof before source governance.",
+        "Collective credit, archival status, and source limitations remain available without making the opening read like a claims database."
+      ],
+      "limitations": [
+        "FairRentNYC and CallNYC repeat some intervention and evidence-boundary language across layers."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v5",
+        "runId": "semantic-v5-b-20260714"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Distinctive lines about documentation and operating memory connect human stakes to concrete operating structure without inflated ownership.",
+        "About, Contact, and the case studies preserve care, privacy, collective credit, and usable next actions."
+      ],
+      "limitations": [
+        "Repeated portfolio vocabulary makes some passages feel more procedural than singular."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v5",
+        "runId": "semantic-v5-a-20260714"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The public pages join care to structure through active language about ambiguity, privacy, stakeholder translation, and useful handoffs.",
+        "Priority cases and Source-Backed Team Memory retain human stakes and end with direct next actions."
+      ],
+      "limitations": [
+        "Repeated terms and capability inventories sometimes make the voice feel systematized rather than conversational."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-reviewer-v5",
+        "runId": "semantic-v5-b-20260714"
+      }
+    }
+  ],
+  "humanApprovals": []
+}

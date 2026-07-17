@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
-import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
+import { citationNoteId, citationPagesById, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
 
 test("canonical registry passes deterministic validation", () => assert.deepEqual(validateKnowledgeBank(), []));
@@ -11,7 +11,6 @@ test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-date-time").sources.map((item) => item.number), [1, 2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "first-councilstat-hackathon").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.number), [3, 4]);
-  assert.deepEqual(resolveCitationOccurrence("callnyc", "event-branding").sources.map((item) => item.number), [5]);
 });
 
 test("repeated sources retain one note and unique backlinks", () => {
@@ -28,8 +27,36 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
+test("NYC Artist Coalition participation citation exposes only selected public sources", () => {
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "fair-rent-nyc",
+      "coalition-participation-system"
+    ).sources.map((item) => item.source.id),
+    [
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "SRC-NYCAC-GOTHAMIST-CABARET-2017",
+      "SRC-NYCAC-NPR-NIGHTLIFE-2017",
+      "SRC-COMMUNITY-GREENE-HILL-QA-2017"
+    ]
+  );
+});
+
+test("shared citation boundaries consolidate only declared source limits", () => {
+  for (const pageId of ["callnyc", "fair-rent-nyc", "kc-town-hall"]) {
+    const page = citationPagesById[pageId];
+    assert.ok(page.sharedBoundary);
+    for (const [sourceId, omissions] of Object.entries(page.sourceBoundaryOmissions)) {
+      const source = publicCitationRegistry.sources.find((item) => item.id === sourceId);
+      assert.ok(source, `${sourceId} must remain in the public registry`);
+      assert.ok(omissions.every((boundary) => source.doesNotEstablish.includes(boundary)));
+    }
+  }
+});
+
 test("Claim resolver returns only active approved projections", () => {
   assert.match(getClaimProjection("CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "case-study", "/work/callnyc").text, /first CouncilStat hackathon/);
+  assert.match(getClaimProjection("CLM-KC-TOWN-HALL-PLANNING-DOCUMENTATION-ROLE", "work-card", "/work").text, /Co-led planning/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
@@ -51,6 +78,10 @@ test("private and metadata-only evidence is absent from the public registry", ()
   const serialized = JSON.stringify(publicCitationRegistry);
   assert.doesNotMatch(serialized, /PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001/);
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
+  assert.doesNotMatch(serialized, /SRC-KC-TOWN-HALL-APPROVED-RESUME-2026/);
+  const publicRoleClaim = publicCitationRegistry.claims.find((claim) => claim.id === "CLM-KC-TOWN-HALL-PLANNING-DOCUMENTATION-ROLE");
+  assert.ok(publicRoleClaim);
+  assert.deepEqual(publicRoleClaim.evidence, []);
   assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
 });
 
