@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -6,10 +7,13 @@ import {
   digestJson,
   expectedUnresolvedHumanChecks,
   readJson,
+  sha256,
   validateApplicationArgument,
+  validateBrowserReceipt,
   validateHumanStatus,
   validateRubric,
-  validateScorecard
+  validateScorecard,
+  weightedScoreRegressed
 } from "../lib/portfolio-readiness-validation.mjs";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 
@@ -140,3 +144,89 @@ test("an LLM cannot grant application or production readiness", function () {
   }));
 });
 
+test("round regression uses weighted result while retaining criterion disagreement", function () {
+  assert.equal(weightedScoreRegressed({ weightedScore: 92 }, { weightedScore: 92.5 }), false);
+  assert.equal(weightedScoreRegressed({ weightedScore: 92.5 }, { weightedScore: 92 }), true);
+});
+
+function browserSpecimen() {
+  return {
+    version: 1,
+    runId: "specimen",
+    candidateRevision: "a".repeat(40),
+    candidateDigest: "b".repeat(64),
+    testedAt: "2026-07-16T12:00:00.000Z",
+    browser: "test browser",
+    serverMode: "Next.js standalone production build",
+    reducedMotion: "reduce",
+    viewports: [
+      ["mobile-320", 320],
+      ["mobile-375", 375],
+      ["tablet-768", 768],
+      ["desktop-1440", 1440]
+    ].map(function ([label, width]) {
+      return {
+        label,
+        width,
+        height: 900,
+        routes: ["/", "/work/callnyc"].map(function (route) {
+          return {
+            route,
+            status: 200,
+            overflow: { documentWidth: width, viewportWidth: width, bodyWidth: width, overflow: false },
+            screenshot: "README.md",
+            screenshotSha256: sha256(readFileSync(path.join(repoRoot, "README.md")))
+          };
+        })
+      };
+    }),
+    primaryRouteChecks: argument.primaryRoutes.map(function (route) {
+      return {
+        route,
+        status: 200,
+        overflow: { documentWidth: 1440, viewportWidth: 1440, bodyWidth: 1440, overflow: false }
+      };
+    }),
+    keyboardChecks: [{
+      route: "/work/callnyc",
+      citationFocused: true,
+      citationTarget: "#reference-1",
+      backlinkFocused: true,
+      backlinkTarget: "#citation-1"
+    }],
+    javascriptDisabledChecks: [{
+      route: "/work/callnyc",
+      status: 200,
+      citationCount: 2,
+      referenceCount: 2,
+      overflow: { documentWidth: 375, viewportWidth: 375, bodyWidth: 375, overflow: false }
+    }],
+    consoleErrors: [],
+    limitations: ["Automated browser evidence is not human review."]
+  };
+}
+
+test("browser receipt binds responsive and keyboard evidence to the candidate", function () {
+  const receipt = browserSpecimen();
+  assert.deepEqual(validateBrowserReceipt(receipt, {
+    repoRoot,
+    runId: "specimen",
+    revision: "a".repeat(40),
+    candidateDigest: "b".repeat(64),
+    applicationArgument: argument
+  }), []);
+});
+
+test("browser receipt rejects stale candidate evidence", function () {
+  const receipt = browserSpecimen();
+  receipt.candidateDigest = "c".repeat(64);
+  assert(validateBrowserReceipt(receipt, {
+    repoRoot,
+    runId: "specimen",
+    revision: "a".repeat(40),
+    candidateDigest: "b".repeat(64),
+    applicationArgument: argument
+  }).some(function (item) {
+    return item.includes("candidate digest");
+  }));
+});

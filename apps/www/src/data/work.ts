@@ -555,7 +555,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation. After years of public review, transitioned stewardship to a mission-aligned organization; City records later closed the unused award as withdrawn.",
+      "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation. Jamie reports that after years of public review, he transitioned stewardship to a mission-aligned organization; City records later closed the unused award as withdrawn.",
     role: "Project Planning & Documentation Support",
     years: "2019-2024",
     status: "Short proof page",
@@ -600,7 +600,7 @@ const workItemsInput = [
     sourceLayer:
       "Kansas City CCED Board meeting records, City Council Resolution 190649, Ordinances 190642 and 240317, independent 2021 reporting, Jamie's public-safe first-person correction, the public @KCTownHall profile, and a bounded authenticated timeline review.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Jamie transitioned stewardship to a mission-aligned organization; City records later closed the original unused CCED award as withdrawn and reappropriated it in 2024.",
+    currentStatus: "Jamie reports that he transitioned stewardship to a mission-aligned organization; City records later closed the original unused CCED award as withdrawn and reappropriated it in 2024.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
@@ -610,12 +610,12 @@ const workItemsInput = [
       "Historic preservation context",
       "Unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation",
       "Years-long City-contract process documented by independent reporting",
-      "Stewardship transition separated from the City's later withdrawal record",
+      "Reported stewardship transition separated from the City's later withdrawal record",
       "Public account established as part of the project identity and later used for resident-facing neighborhood information"
     ],
     knownOpenProtected: {
       known:
-        "Jamie presented and supported planning and documentation for a mixed-use adaptive-reuse proposal and confirms that he established its public account. All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. The recovered public timeline later functioned as a resident-facing channel for neighborhood information and recurring #TiredOfTires pickups; it does not assign every post or program action to Jamie. Jamie later transitioned stewardship to a mission-aligned organization; City records subsequently described the original CCED project as withdrawn and reappropriated the unused funds.",
+        "Jamie presented and supported planning and documentation for a mixed-use adaptive-reuse proposal and confirms that he established its public account. All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. The recovered public timeline later functioned as a resident-facing channel for neighborhood information and recurring #TiredOfTires pickups; it does not assign every post or program action to Jamie. Jamie reports that he later transitioned stewardship to a mission-aligned organization; City records subsequently described the original CCED project as withdrawn and reappropriated the unused funds.",
       open:
         "Public sources reviewed so far do not independently identify the successor organization or establish the timing and terms of transition. City records do not provide a complete stewardship or responsibility map.",
       protected:

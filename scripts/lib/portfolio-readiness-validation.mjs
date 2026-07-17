@@ -9,6 +9,8 @@ const EVALUATION_CLASSES = new Set(["deterministic", "llm-judge", "human", "exte
 const RECOMMENDATIONS = new Set(["iterate", "system-ready", "application-ready", "production-ready"]);
 const SCORECARD_KEYS = ["version", "evalId", "runId", "round", "evaluatedAt", "evaluator", "candidate", "rubricDigest", "criteria", "releaseRecommendation", "unresolvedHumanChecks"];
 const CRITERION_KEYS = ["id", "score", "confidence", "evidence", "hardGatePassed", "repair", "antiGamingCheck"];
+const PROVENANCE_KEYS = ["version", "runId", "candidateRevision", "candidateDigest", "rubricDigest", "iterationBudget", "acceptedIteration", "decision", "iterations", "judgeSessions", "limitations"];
+const JUDGE_SESSION_KEYS = ["round", "role", "artifact", "artifactSha256", "sessionId", "sessionMode", "generatorWasJudge", "orchestratedAt"];
 
 export function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
@@ -108,6 +110,13 @@ function validIsoDateTime(value) {
 
 function unique(values) {
   return new Set(values).size === values.length;
+}
+
+function safeRelativePath(repoRoot, value) {
+  if (typeof value !== "string" || !value.trim() || path.isAbsolute(value) || PRIVATE_PATTERN.test(value)) return false;
+  const absolute = path.resolve(repoRoot, value);
+  const relative = path.relative(repoRoot, absolute);
+  return relative && !relative.startsWith("..") && !path.isAbsolute(relative);
 }
 
 export function validateRubric(rubric) {
@@ -229,7 +238,7 @@ export function validateScorecard(scorecard, context) {
   pushIf(scorecard && scorecard.evaluator && scorecard.evaluator.kind !== "llm-judge", failures, "Scorecard evaluator must be an LLM judge");
   pushIf(scorecard && scorecard.evaluator && scorecard.evaluator.independentFromAuthor !== true, failures, "Scorecard evaluator must be independent from author");
   pushIf(!["hiring-and-comprehension-judge", "evidence-and-systems-judge"].includes(scorecard && scorecard.evaluator && scorecard.evaluator.role), failures, "Scorecard evaluator role is invalid");
-  for (const field of ["id", "role", "kind", "sessionId"]) {
+  for (const field of ["id", "role", "kind", "provider", "model", "sessionId"]) {
     pushIf(typeof (scorecard && scorecard.evaluator && scorecard.evaluator[field]) !== "string" || !scorecard.evaluator[field].trim(), failures, "Scorecard evaluator needs " + field);
   }
   pushIf(scorecard && scorecard.candidate && scorecard.candidate.revision !== context.revision, failures, "Scorecard revision is stale");
@@ -341,6 +350,65 @@ export function validateDeterministicReceipt(receipt, context) {
   return failures;
 }
 
+export function validateBrowserReceipt(receipt, context) {
+  const failures = [];
+  pushIf(receipt && receipt.version !== 1, failures, "Browser receipt version must be 1");
+  pushIf(receipt && receipt.runId !== context.runId, failures, "Browser receipt runId is stale");
+  pushIf(receipt && receipt.candidateRevision !== context.revision, failures, "Browser receipt revision is stale");
+  pushIf(receipt && receipt.candidateDigest !== context.candidateDigest, failures, "Browser receipt candidate digest is stale");
+  pushIf(!validIsoDateTime(receipt && receipt.testedAt), failures, "Browser receipt testedAt is invalid");
+  pushIf(typeof (receipt && receipt.browser) !== "string" || !receipt.browser.trim(), failures, "Browser receipt needs a browser");
+  pushIf(receipt && receipt.serverMode !== "Next.js standalone production build", failures, "Browser receipt must test the standalone production build");
+  pushIf(receipt && receipt.reducedMotion !== "reduce", failures, "Browser receipt must test reduced motion");
+
+  const expectedViewports = [
+    ["mobile-320", 320],
+    ["mobile-375", 375],
+    ["tablet-768", 768],
+    ["desktop-1440", 1440]
+  ];
+  const actualViewports = (receipt && receipt.viewports || []).map(function (entry) { return [entry.label, entry.width]; });
+  pushIf(JSON.stringify(actualViewports) !== JSON.stringify(expectedViewports), failures, "Browser receipt viewport inventory is incomplete or out of order");
+  for (const viewport of receipt && receipt.viewports || []) {
+    const routeMap = new Map((viewport.routes || []).map(function (entry) { return [entry.route, entry]; }));
+    for (const route of ["/", "/work/callnyc"]) {
+      const entry = routeMap.get(route);
+      pushIf(!entry, failures, viewport.label + " lacks " + route);
+      pushIf(entry && entry.status !== 200, failures, viewport.label + " " + route + " did not return 200");
+      pushIf(entry && entry.overflow && entry.overflow.overflow !== false, failures, viewport.label + " " + route + " has horizontal overflow");
+      pushIf(entry && !safeRelativePath(context.repoRoot, entry.screenshot), failures, viewport.label + " " + route + " screenshot path is unsafe");
+      const screenshotExists = entry && safeRelativePath(context.repoRoot, entry.screenshot) && existsSync(path.join(context.repoRoot, entry.screenshot));
+      pushIf(entry && !/^[a-f0-9]{64}$/.test(entry.screenshotSha256 || ""), failures, viewport.label + " " + route + " screenshot digest is invalid");
+      pushIf(entry && !screenshotExists, failures, viewport.label + " " + route + " screenshot is missing");
+      if (screenshotExists) {
+        pushIf(sha256(readFileSync(path.join(context.repoRoot, entry.screenshot))) !== entry.screenshotSha256, failures, viewport.label + " " + route + " screenshot digest is stale");
+      }
+    }
+  }
+
+  const routeChecks = new Map((receipt && receipt.primaryRouteChecks || []).map(function (entry) { return [entry.route, entry]; }));
+  for (const route of context.applicationArgument.primaryRoutes) {
+    const entry = routeChecks.get(route);
+    pushIf(!entry, failures, "Browser receipt lacks primary route " + route);
+    pushIf(entry && entry.status !== 200, failures, "Primary route " + route + " did not return 200");
+    pushIf(entry && entry.overflow && entry.overflow.overflow !== false, failures, "Primary route " + route + " has horizontal overflow");
+  }
+
+  const keyboard = receipt && receipt.keyboardChecks && receipt.keyboardChecks[0];
+  pushIf(!keyboard || keyboard.route !== "/work/callnyc", failures, "Browser receipt lacks the CallNYC keyboard check");
+  pushIf(keyboard && (!keyboard.citationFocused || !keyboard.backlinkFocused), failures, "Citation or backlink did not receive keyboard focus");
+  pushIf(keyboard && (!String(keyboard.citationTarget || "").startsWith("#") || !String(keyboard.backlinkTarget || "").startsWith("#")), failures, "Citation or backlink target is missing");
+
+  const noJs = receipt && receipt.javascriptDisabledChecks && receipt.javascriptDisabledChecks[0];
+  pushIf(!noJs || noJs.route !== "/work/callnyc", failures, "Browser receipt lacks the JavaScript-disabled CallNYC check");
+  pushIf(noJs && (noJs.status !== 200 || noJs.citationCount < 1 || noJs.referenceCount < 1), failures, "Citations or references failed without JavaScript");
+  pushIf(noJs && noJs.overflow && noJs.overflow.overflow !== false, failures, "JavaScript-disabled CallNYC has horizontal overflow");
+  pushIf(!Array.isArray(receipt && receipt.consoleErrors) || receipt.consoleErrors.length !== 0, failures, "Browser receipt contains console errors");
+  pushIf(!Array.isArray(receipt && receipt.limitations) || receipt.limitations.length === 0, failures, "Browser receipt needs limitations");
+  pushIf(PRIVATE_PATTERN.test(stableStringify(receipt)), failures, "Browser receipt exposes a private path");
+  return failures;
+}
+
 export function profileBlockers(profileName, rubric, humanStatus) {
   const profile = rubric.profiles[profileName];
   if (!profile) return ["Unknown readiness profile " + profileName];
@@ -356,6 +424,10 @@ export function profileBlockers(profileName, rubric, humanStatus) {
     });
 }
 
+export function weightedScoreRegressed(firstResult, secondResult) {
+  return secondResult.weightedScore < firstResult.weightedScore;
+}
+
 export function validateRunArtifacts(options) {
   const repoRoot = options.repoRoot;
   const runRoot = options.runRoot;
@@ -367,6 +439,7 @@ export function validateRunArtifacts(options) {
     .concat(validateApplicationArgument(options.applicationArgument, options.proofIds));
 
   const provenance = readJson(path.join(runRoot, "provenance.json"));
+  exactKeys(provenance, PROVENANCE_KEYS, "Provenance", failures);
   const revision = provenance.candidateRevision;
   const rubricDigest = digestJson(rubric);
   let candidateDigest = "";
@@ -404,6 +477,15 @@ export function validateRunArtifacts(options) {
     rubricDigest
   }));
 
+  const browserReceipt = readJson(path.join(runRoot, "browser-qa.json"));
+  failures.push.apply(failures, validateBrowserReceipt(browserReceipt, {
+    repoRoot,
+    runId: provenance.runId,
+    revision,
+    candidateDigest,
+    applicationArgument: options.applicationArgument
+  }));
+
   const cards = [];
   for (const round of [1, 2]) {
     for (const role of ["hiring", "evidence"]) {
@@ -431,6 +513,36 @@ export function validateRunArtifacts(options) {
 
   const sessions = cards.map(function (card) { return card.scorecard.evaluator && card.scorecard.evaluator.sessionId; }).filter(Boolean);
   pushIf(!unique(sessions), failures, "Every judge pass needs a distinct session ID");
+
+  const judgeSessions = Array.isArray(provenance.judgeSessions) ? provenance.judgeSessions : [];
+  pushIf(judgeSessions.length !== 4, failures, "Provenance must contain four judge-session receipts");
+  const orchestrationSessions = [];
+  const expectedArtifacts = new Set();
+  for (const card of cards) {
+    expectedArtifacts.add("evals/portfolio-readiness/runs/" + provenance.runId + "/judges/round-" + card.round + "-" + card.role + ".json");
+  }
+  const observedArtifacts = new Set();
+  for (const entry of judgeSessions) {
+    exactKeys(entry, JUDGE_SESSION_KEYS, "Judge-session receipt", failures);
+    const label = "Judge-session round " + entry.round + " " + entry.role;
+    pushIf(![1, 2].includes(entry.round), failures, label + " has an invalid round");
+    pushIf(!["hiring", "evidence"].includes(entry.role), failures, label + " has an invalid role");
+    pushIf(!safeRelativePath(repoRoot, entry.artifact), failures, label + " artifact path is unsafe");
+    pushIf(!expectedArtifacts.has(entry.artifact), failures, label + " references an unexpected artifact");
+    pushIf(observedArtifacts.has(entry.artifact), failures, label + " repeats an artifact");
+    observedArtifacts.add(entry.artifact);
+    if (safeRelativePath(repoRoot, entry.artifact) && existsSync(path.join(repoRoot, entry.artifact))) {
+      pushIf(sha256(readFileSync(path.join(repoRoot, entry.artifact))) !== entry.artifactSha256, failures, label + " artifact digest is stale");
+    }
+    pushIf(!/^[a-f0-9]{64}$/.test(entry.artifactSha256 || ""), failures, label + " artifact digest is invalid");
+    pushIf(!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(entry.sessionId || ""), failures, label + " session ID is invalid");
+    pushIf(entry.sessionMode !== "read-only-independent-agent", failures, label + " session mode is invalid");
+    pushIf(entry.generatorWasJudge !== false, failures, label + " generatorWasJudge must be false");
+    pushIf(!validIsoDateTime(entry.orchestratedAt), failures, label + " orchestratedAt is invalid");
+    orchestrationSessions.push(entry.sessionId);
+  }
+  pushIf(!unique(orchestrationSessions), failures, "Every judge needs a distinct orchestration session");
+  pushIf(observedArtifacts.size !== expectedArtifacts.size, failures, "Provenance judge artifacts are incomplete");
   for (const round of [1, 2]) {
     const roundCards = cards.filter(function (card) { return card.round === round; });
     pushIf(roundCards.length !== 2 || roundCards.some(function (card) { return !card.result.passed; }), failures, "Round " + round + " did not receive two passing independent judgments");
@@ -439,12 +551,11 @@ export function validateRunArtifacts(options) {
     const first = cards.find(function (card) { return card.round === 1 && card.role === role; });
     const second = cards.find(function (card) { return card.round === 2 && card.role === role; });
     if (!first || !second) continue;
-    const firstScores = new Map(first.scorecard.criteria.map(function (entry) { return [entry.id, entry.score]; }));
-    for (const entry of second.scorecard.criteria) {
-      if (typeof entry.score === "number" && entry.score < firstScores.get(entry.id)) {
-        failures.push(role + " judge regressed " + entry.id + " between rounds");
-      }
-    }
+    pushIf(
+      weightedScoreRegressed(first.result, second.result),
+      failures,
+      role + " judge weighted score regressed between rounds"
+    );
   }
 
   const machineScores = cards.map(function (card) { return card.result.weightedScore; });

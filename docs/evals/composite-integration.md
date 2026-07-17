@@ -13,7 +13,7 @@ were studied as design references and were not merged wholesale.
 | Reader effectiveness and maintainability from A | Composite comprehension, handoff, recent-practice, and visual-proof criteria |
 | Governance spine from B | Existing six domain suites, canonical records, composition manifest, role classifications, and blind-spot controls |
 | Application versus production profiles and fingerprints from C | rubric.json profiles plus exact candidate and rubric digests |
-| Exact-commit and responsive QA from D | candidate revision binding and required width/accessibility evidence |
+| Exact-commit and responsive QA from D | Candidate revision binding plus digest-bound 320, 375, 768, desktop, keyboard, no-JavaScript, route, and console evidence |
 | Lifecycle and selective composition from E | Existing lifecycle suite plus application-argument.json |
 | Real-role and outward-validation tests from F | Human status and field protocols |
 | Failed and superseded run history from G | Versioned provenance and run directories |
@@ -45,3 +45,11 @@ interpretation, and release. External outcomes remain observations.
 The composite can be system-ready while application-ready or production-ready
 is human-blocked. This is an honest state, not a test failure.
 
+The two-round stop rule requires every criterion and hard gate to pass in every
+scorecard and prohibits a lower weighted result for either judge role. Individual
+criterion differences remain in the record as evaluator disagreement; the
+system does not mistake those bounded judgments for interval measurements.
+
+Current run receipts also bind the standalone browser evidence and each judge
+artifact to the evaluated candidate. They make stale screenshots and substituted
+judge outputs fail closed without claiming cryptographic or human authority.

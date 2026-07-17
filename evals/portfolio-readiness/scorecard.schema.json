@@ -18,9 +18,11 @@
   ],
   "properties": {
     "version": {
+      "type": "integer",
       "const": 1
     },
     "evalId": {
+      "type": "string",
       "const": "portfolio-readiness-composite-v1"
     },
     "runId": {
@@ -42,6 +44,8 @@
         "id",
         "role",
         "kind",
+        "provider",
+        "model",
         "sessionId",
         "independentFromAuthor"
       ],
@@ -51,12 +55,14 @@
           "minLength": 1
         },
         "role": {
+          "type": "string",
           "enum": [
             "hiring-and-comprehension-judge",
             "evidence-and-systems-judge"
           ]
         },
         "kind": {
+          "type": "string",
           "const": "llm-judge"
         },
         "provider": {
@@ -70,6 +76,7 @@
           "minLength": 1
         },
         "independentFromAuthor": {
+          "type": "boolean",
           "const": true
         }
       }
@@ -99,9 +106,90 @@
     "criteria": {
       "type": "array",
       "minItems": 13,
-      "maxItems": 13
+      "maxItems": 13,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "score",
+          "confidence",
+          "evidence",
+          "hardGatePassed",
+          "repair",
+          "antiGamingCheck"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "score": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "not-applicable"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "path",
+                "observation"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "observation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "hardGatePassed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "repair": {
+            "type": "string",
+            "minLength": 1
+          },
+          "antiGamingCheck": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
     },
     "releaseRecommendation": {
+      "type": "string",
       "enum": [
         "iterate",
         "system-ready",
@@ -117,4 +205,3 @@
     }
   }
 }
-

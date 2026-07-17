@@ -456,7 +456,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary / Jamie review confirmation
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. All four CCED Board members voted to recommend $490,539; Kansas City Council then accepted the recommendation and appropriated $490,539. After years of public review, Jamie transitioned stewardship to a mission-aligned organization. City records later closed the unused award as withdrawn.
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. All four CCED Board members voted to recommend $490,539; Kansas City Council then accepted the recommendation and appropriated $490,539. Jamie reports that after years of public review, he transitioned stewardship to a mission-aligned organization. City records later closed the unused award as withdrawn.
 **Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Independent reporting documents the prolonged City-contract process. Jamie confirms that he later transitioned stewardship to a mission-aligned organization; City records separately preserve the administrative withdrawal and reappropriation.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  

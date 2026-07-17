@@ -41,6 +41,11 @@ artifacts, no-regression rule, application argument, and human-state registry.
 7. Repeat with a fresh pair of judges.
 8. Stop after two passing rounds or preserve the best candidate at iteration 8.
 
+Every machine criterion must meet its own threshold in every scorecard. Across
+rounds, non-regression compares each judge role's weighted result and hard-gate
+state. Criterion-level disagreements remain visible review signals; they are not
+averaged away or treated as precise measurements of candidate change.
+
 Do not edit the rubric during one candidate series. A rubric change starts a new
 baseline. Do not call an LLM judgment hiring-reader validation.
 
@@ -56,8 +61,14 @@ baseline. Do not call an LLM judgment hiring-reader validation.
 - runs/RUN/provenance.json: baseline, accepted iteration, limitations, and
   candidate/rubric fingerprints.
 - runs/RUN/deterministic.json: command outcomes and output digests.
+- runs/RUN/browser-qa.json: exact-candidate responsive, keyboard, no-JavaScript,
+  route, console, and screenshot-digest receipt from the standalone build.
 - runs/RUN/judges/: two roles across two consecutive rounds.
+
+The provenance record binds every judge artifact to a distinct read-only
+orchestration session and verifies its artifact digest. Browser screenshots are
+also digest-bound. These receipts improve auditability; they do not prove human
+reader comprehension or evaluator independence cryptographically.
 
 Run artifacts are public-safe process evidence, not cryptographic proof and not
 evidence that an external outcome occurred.
-

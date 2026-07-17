@@ -939,6 +939,39 @@ for (const record of proofRecords) {
   }
 }
 
+// Authored page copy can paraphrase a Knowledge Bank projection. Keep known
+// first-person and mixed-basis role signatures attributed after that rewrite.
+const authoredRoleSurfaceGuards = [
+  {
+    claimId: "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    sourcePaths: [
+      "apps/www/src/data/work.ts",
+      "apps/www/src/content/work/kc-town-hall.mdx"
+    ],
+    signal: /(?:transition(?:ed|ing)? stewardship|stewardship transition)/i,
+    attribution: /(?:Jamie (?:reports|describes|states|recalls)|Jamie's reported|reported stewardship transition|a reported stewardship transition)/i
+  }
+];
+for (const guard of authoredRoleSurfaceGuards) {
+  const roleRecord = roleRecordByClaimId.get(guard.claimId);
+  if (!roleRecord || !["first-person", "mixed"].includes(roleRecord.basis)) {
+    fail(`${guard.claimId} authored-surface guard lacks a first-person or mixed role record`);
+    continue;
+  }
+  for (const sourcePath of guard.sourcePaths) {
+    const matchingLines = read(sourcePath)
+      .split("\n")
+      .map((line, index) => ({ line, lineNumber: index + 1 }))
+      .filter(({ line }) => guard.signal.test(line));
+    if (!matchingLines.length) fail(`${guard.claimId} authored-surface guard found no signature in ${sourcePath}`);
+    for (const { line, lineNumber } of matchingLines) {
+      if (!guard.attribution.test(line)) {
+        fail(`${sourcePath}:${lineNumber} renders ${guard.claimId} without explicit first-person attribution`);
+      }
+    }
+  }
+}
+
 strictKeys(mosaicReview, ["version", "reviewedAt", "publicSurfaceSha256", "graphSnapshot", "reviewerRole", "scope", "combinationSignalsReviewed", "findings", "removalsOrMinimizations", "unresolvedRisks", "nextTrigger"], "mosaic review");
 if (mosaicReview.version !== 1) fail("Mosaic-review version is invalid");
 requireNotFutureDate(mosaicReview.reviewedAt, "mosaic review reviewedAt");
