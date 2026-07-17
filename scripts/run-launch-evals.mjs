@@ -18,6 +18,11 @@ for (const item of report.results) {
 }
 
 console.log(`Automated score: ${report.summary.score}/100`);
+console.log(`Candidate: ${report.identity.candidateId}`);
+console.log(`Git SHA: ${report.identity.gitSha} (${report.identity.treeState})`);
+console.log(
+  `Contract: ${report.contract.version} (${report.identity.contractDigest})`
+);
 console.log(
   `Automated hard gates: ${report.summary.hardGatesPass ? "PASS" : "FAIL"}`
 );
@@ -26,4 +31,3 @@ console.log(
 );
 
 if (!report.summary.automatedReady) process.exit(1);
-

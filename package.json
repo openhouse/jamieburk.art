@@ -21,7 +21,8 @@
     "test:citations": "node --test scripts/tests/citations.test.mjs",
     "report:citations": "node scripts/report-citations.mjs",
     "evals:launch": "node scripts/run-launch-evals.mjs",
-    "test:evals": "node --test scripts/tests/launch-evals.test.mjs",
+    "test:evals": "node --test scripts/tests/launch-evals.test.mjs scripts/tests/composite-evals.test.mjs",
+    "evals:certify": "node scripts/certify-launch-evals.mjs",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",
     "routes": "npm run check:routes",
@@ -29,6 +30,6 @@
     "check:production": "npm run preflight:production",
     "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex npm run check",
     "preflight:production": "APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run check",
-    "prelaunch:production": "npm run preflight:production && npm run evals:launch"
+    "prelaunch:production": "npm run preflight:production && npm run evals:certify"
   }
 }

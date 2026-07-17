@@ -22,9 +22,16 @@ The canonical positioning sentence is:
    weakening another gate.
 5. Run the focused test, then rerun the full evaluator.
 6. Stop when automated score is at least 94, all hard gates pass, no
-   anti-gaming rule is violated, and remaining manual gates are explicit.
+   anti-gaming rule is violated, remaining manual gates are explicit, and the
+   same clean candidate passes twice against the unchanged composite contract.
 7. Run staging and production preflights. Production deployment still requires
    Jamie's approval of the exact reviewed SHA.
+
+The frozen composite contract is `composite-contract.json`. Every report binds
+the Git SHA, worktree state, contract, material input set, evaluator, and public
+citation registry. `npm run evals:certify` rejects dirty, stale, or changing
+candidates. Its two automated passes do not count as the independent holdout or
+human production approval.
 
 ## Automated criteria
 
@@ -64,6 +71,11 @@ The canonical positioning sentence is:
 | Personal social full-population archive | 20 | Yes | All 434 records in the current `@urbanhermit` live-profile control reconcile as 338 authored posts, 15 authored replies, and 81 reposts; aggregate years, themes, links, inbound stakeholder groups, and interaction contexts recompute without exposing the personal timeline or misassigning repost reactions. |
 | WOWList full-population archive | 20 | Yes | All 38 current-profile items reconcile at item level; account posts, support replies, reposts, themes, links, claims, and collective-authorship boundaries recompute from the ledger. |
 | KC Town Hall full-population archive | 20 | Yes | All 183 observed profile-count slots reconcile to 181 item-level recoveries and two explicit unresolved slots; account relationships, themes, links, reactions, stakeholder patterns, shared authorship, later stewardship, and selected public projections recompute from the ledger. |
+| Composite contract integrity | 20 | Yes | The versioned contract and observed result manifest agree on every required criterion, family, weight, hard gate, and evaluator evidence field. |
+| Candidate input binding | 20 | Yes | The report binds the exact Git candidate, worktree state, contract, material inputs, evaluator implementation, and public registry with reproducible SHA-256 fingerprints. |
+| Provenance frontier closure | 20 | Yes | Every public citation occurrence closes through an active canonical projection, claim, evidence relationship, source, selected publication decision, and allowed surface. |
+| Selective projection governance | 20 | Yes | Reserve, hold, retired, protected, private-support, and rights-pending material remains available without silently entering a public route. |
+| Normalized public safety | 20 | Yes | Governed public text remains clear after Unicode, control-character, entity, escape, and separator normalization, with synthetic adversarial fixtures proving bypass resistance. |
 
 The executable implementation is `scripts/lib/launch-readiness-evals.mjs`.
 Generated reports are written to `reports/generated/` and are ignored by Git.
@@ -101,6 +113,9 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
 - **Recursive social-systems editorial review:** an independent reviewer uses
   only the public site to trace relation model, implementation, interface or
   embodied interaction, documentation, use context, and collective credit.
+- **Independent exact-candidate holdout:** a read-only reviewer who did not
+  optimize the patch reruns the frozen contract against the exact candidate
+  fingerprint and records defects without repairing the candidate.
 - **KC Star river-raft evidence:** the article has a durable intake, source,
   claim, project relationship, partially recovered inquiry, publication
   decision, source-coverage statement, approval boundary, anti-claims, and
@@ -187,3 +202,9 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   into a complete roster; claiming a final Gulf endpoint from a pre-completion
   report; inferring Coast Guard approval; or silently projecting reserve depth
   onto the current site.
+- Do not copy a passing result to another commit, contract, material input set,
+  evaluator implementation, or public registry.
+- Do not bypass public-safety checks with Unicode controls, encoded separators,
+  Markdown aliases, escaped JSON, or tests containing real private values.
+- Do not satisfy provenance closure by deleting a public occurrence, weakening
+  citation requirements, or silently promoting reserve material.

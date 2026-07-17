@@ -32,6 +32,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run report:citations`
 - `npm run test:evals`
 - `npm run evals:launch`
+- `npm run evals:certify`
 - `npm run prelaunch:production`
 
 ## Public-Safety Rules
@@ -70,6 +71,12 @@ changing canonical records.
 
 Website copy should project from the knowledge bank and stay optimized for
 clarity, audience, and purpose.
+
+The launch evaluator is governed by `docs/evals/composite-contract.json`.
+Generated results must bind the exact candidate, contract, material inputs,
+evaluator, and public registry. `npm run evals:certify` requires two passing
+runs against one clean unchanged candidate. It does not replace an independent
+holdout, Jamie's exact-SHA approval, deployment approval, or postdeploy review.
 
 Do not strengthen a claim in a public page unless the stronger claim exists in
 the bank with source basis, status, guardrail, and public-use boundary.

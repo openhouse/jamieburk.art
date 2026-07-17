@@ -40,6 +40,17 @@ public portfolio surface.
   gate: source metadata, bounded claims, collective credit, partially recovered
   route findings, publication restraint, and the protected-media boundary are
   represented across the structured and human-readable knowledge bank.
+- [x] The composite contract passes as an automated hard gate: every required
+  criterion, family, weight, hard gate, evidence field, and stop rule remains
+  frozen and inspectable.
+- [x] Candidate binding passes as an automated hard gate: Git SHA, worktree
+  state, contract, material inputs, evaluator, and public registry receive
+  reproducible fingerprints.
+- [x] The public provenance frontier closes as an automated hard gate: every
+  citation occurrence resolves through canonical projection, evidence, source,
+  publication decision, and allowed surface.
+- [x] Selective projection and normalized public safety pass as automated hard
+  gates without converting reserve depth into public-site volume.
 
 ## Human gates
 
@@ -68,6 +79,8 @@ public portfolio surface.
   public site without private professor material.
 - [ ] An independent reviewer applies the recursive social-systems lens to the
   current public site without private professor material.
+- [ ] A read-only reviewer who did not optimize the patch reruns the frozen
+  contract against the exact candidate fingerprint.
 - [ ] A human reviewer clears rights, permission, vulnerability, caption, and
   purpose before any Kansas City Star page or photograph is considered for
   public use. Protected archive custody does not satisfy this gate.

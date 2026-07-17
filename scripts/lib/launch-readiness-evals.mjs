@@ -7,6 +7,17 @@ import {
   writeFileSync
 } from "node:fs";
 import path from "node:path";
+import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  candidateIdentityEvidence,
+  computeCandidateIdentity,
+  loadCompositeContract,
+  scanGovernedPublicText,
+  validateCandidateIdentity,
+  validateCompositeContract,
+  validateKnowledgeFrontier,
+  validateSelectiveProjection
+} from "./composite-eval-integrity.mjs";
 
 const PRIMARY_MESSAGE =
   "I turn emerging work into usable systems for complex public-facing teams.";
@@ -4962,6 +4973,8 @@ export function evaluateKcStarRiverRaftEvidence({
 }
 
 export function runLaunchEvals(repoRoot) {
+  const compositeContract = loadCompositeContract(repoRoot);
+  const identity = computeCandidateIdentity(repoRoot, compositeContract);
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
   const resumePage = read(repoRoot, "apps/www/src/app/resume/page.tsx");
@@ -5480,6 +5493,7 @@ export function runLaunchEvals(repoRoot) {
     "public-safety",
     "check:routes",
     "evals:launch",
+    "evals:certify",
     "test:evals",
     "prelaunch:production"
   ]) {
@@ -5494,7 +5508,7 @@ export function runLaunchEvals(repoRoot) {
       missing: safetyMissing,
       evidence: [
         "Existing citation, public-safety, route, build, and environment gates remain authoritative.",
-        "Launch evals add bounded static contracts and a production prelaunch command."
+        "Launch evals add a frozen composite contract, repeat certification, and a production prelaunch command."
       ]
     })
   );
@@ -6290,7 +6304,73 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
-  const summary = summarizeLaunchEvals(results);
+  const compositeById = new Map(
+    compositeContract.compositeCriteria.map((criterion) => [criterion.id, criterion])
+  );
+  const compositeResult = (id, missing, evidence) => {
+    const criterion = compositeById.get(id);
+    if (!criterion) throw new Error(`Composite contract is missing ${id}`);
+    return result({
+      id,
+      label: criterion.passingCondition,
+      weight: criterion.weight,
+      hardGate: criterion.hardGate,
+      missing,
+      evidence
+    });
+  };
+
+  const contractResult = compositeResult(
+    "composite-contract-integrity",
+    [],
+    [
+      `Contract ${compositeContract.contractVersion} freezes the criterion IDs, weights, hard gates, families, evidence requirements, anti-gaming rules, and stop rules.`,
+      "The observed result manifest must exactly match the contract; missing, renamed, reweighted, disabled, and uncontracted criteria fail."
+    ]
+  );
+  results.push(contractResult);
+  results.push(
+    compositeResult(
+      "candidate-input-binding",
+      validateCandidateIdentity(identity),
+      candidateIdentityEvidence(identity)
+    )
+  );
+  results.push(
+    compositeResult(
+      "provenance-frontier-closure",
+      validateKnowledgeFrontier(knowledgeBank),
+      [
+        `${knowledgeBank.pages.length} registered public pages close through ${knowledgeBank.claims.length} canonical claims and ${knowledgeBank.sources.length} governed sources.`,
+        "Every cited occurrence must resolve to an active projection, canonical evidence edge, page source order, selected publication decision, and allowed public surface."
+      ]
+    )
+  );
+  results.push(
+    compositeResult(
+      "selective-projection-governance",
+      validateSelectiveProjection(knowledgeBank),
+      [
+        `${knowledgeBank.publicationDecisions.length} publication decisions keep evidentiary maturity, public safety, and editorial selection independent.`,
+        "Reserve, hold, retired, protected, private-support, and rights-pending material remains available to the bank without silently entering a public route."
+      ]
+    )
+  );
+  results.push(
+    compositeResult(
+      "normalized-public-safety",
+      scanGovernedPublicText(repoRoot, compositeContract),
+      [
+        "Governed public text is inspected after Unicode normalization, control-character removal, numeric-entity decoding, JSON/JavaScript escape decoding, and separator normalization.",
+        "Synthetic regression fixtures cover private paths, credentials, tokens, key blocks, and phone-shaped values without storing real secrets."
+      ]
+    )
+  );
+
+  contractResult.failures.push(...validateCompositeContract(compositeContract, results));
+  contractResult.status = contractResult.failures.length ? "fail" : "pass";
+
+  const summary = summarizeLaunchEvals(results, compositeContract.minimumScore);
   const manualEvals = [
     {
       id: "hiring-manager-30-second-test",
@@ -6312,6 +6392,11 @@ export function runLaunchEvals(repoRoot) {
       status: "manual-required",
       pass: "Every open PR targeting develop is active and owned; superseded branch-family PRs are closed or labeled."
     },
+    {
+      id: "independent-exact-candidate-holdout",
+      status: "manual-required",
+      pass: "A read-only reviewer who did not optimize the patch reruns the frozen contract against the exact candidate fingerprint and records any defect without repairing the candidate."
+    },
     ...PORTFOLIO_BLIND_SPOT_SPECS.map((spec) => ({
       id: spec.manualGateId,
       status: "manual-required",
@@ -6332,6 +6417,12 @@ export function runLaunchEvals(repoRoot) {
   return {
     suite: "jamieburk-art-launch-readiness",
     generatedAt: new Date().toISOString(),
+    contract: {
+      path: "docs/evals/composite-contract.json",
+      version: compositeContract.contractVersion,
+      minimumScore: compositeContract.minimumScore
+    },
+    identity,
     summary,
     results,
     manualEvals,
@@ -6356,6 +6447,9 @@ export function runLaunchEvals(repoRoot) {
       "Do not inherit Jamie's individual contribution from collective project evidence, convert outputs or sequence into sole causality, or treat a source list as technical implementation depth.",
       "Do not erase collaborators to make Jamie legible, publish uncleared visual material, flatten distinct projects into one thesis, count archive volume as job-search progress, or weaken boundaries to make agency sound stronger.",
       "Do not call a branch-local score merged, deployed, or production-approved.",
+      "Do not copy a passing report to a different commit, contract, material input set, evaluator, or public registry.",
+      "Do not bypass public-safety inspection with Unicode controls, encoded separators, Markdown aliases, escaped JSON, or fixtures containing real private values.",
+      "Do not satisfy provenance closure by dropping occurrences, weakening citation requirements, or silently publishing reserve material.",
       "Production deployment always requires explicit human approval."
     ]
   };
@@ -6373,6 +6467,13 @@ export function writeLaunchEvalReports(repoRoot, report) {
     "# Launch Readiness Eval Report",
     "",
     `Generated: ${report.generatedAt}`,
+    `Candidate: ${report.identity.candidateId}`,
+    `Git SHA: ${report.identity.gitSha}`,
+    `Tree state: ${report.identity.treeState}`,
+    `Contract: ${report.contract.version} (${report.identity.contractDigest})`,
+    `Material inputs: ${report.identity.materialDigest}`,
+    `Evaluator: ${report.identity.evaluatorDigest}`,
+    `Public registry: ${report.identity.publicRegistryDigest}`,
     `Automated score: ${report.summary.score}/100`,
     `Automated hard gates: ${report.summary.hardGatesPass ? "PASS" : "FAIL"}`,
     `Automated readiness: ${report.summary.automatedReady ? "PASS" : "FAIL"}`,
