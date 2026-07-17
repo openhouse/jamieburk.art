@@ -1,7 +1,9 @@
 # NYC Artist Coalition: Government Institutional Value
 
-**Reviewed:** 2026-07-15  
-**Status:** Integrated as public-safe reserve depth  
+**Reviewed:** 2026-07-15
+
+**Status:** Integrated as public-safe reserve depth
+
 **Project:** NYC Artist Coalition
 
 ## Research question

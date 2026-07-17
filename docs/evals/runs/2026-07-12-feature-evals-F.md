@@ -1,7 +1,9 @@
 # Feature Evals F Run
 
-**Branch:** `feature/evals-F`  
-**Base:** `develop` at `2ec37fe`  
+**Branch:** `feature/evals-F`
+
+**Base:** `develop` at `2ec37fe`
+
 **Date:** 2026-07-12
 
 ## Baseline

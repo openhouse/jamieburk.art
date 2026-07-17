@@ -1,7 +1,9 @@
 # NYC Artist Coalition Facebook Posts: Surviving Public Timeline
 
-Date: 2026-07-14  
-Surface: [NYC Artist Coalition on Facebook](https://www.facebook.com/nycartc)  
+Date: 2026-07-14
+
+Surface: [NYC Artist Coalition on Facebook](https://www.facebook.com/nycartc)
+
 Disposition: integrated with publication and privacy boundaries
 
 ## What was counted
