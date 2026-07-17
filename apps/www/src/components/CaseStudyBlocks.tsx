@@ -22,11 +22,11 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         </h2>
         <dl className="mt-4 grid gap-3">
           {primaryRows.map(([label, value]) => (
-            <div key={label}>
+            <div className="min-w-0" key={label}>
               <dt className="text-xs font-semibold uppercase text-jb-paper/90">
                 {label}
               </dt>
-              <dd className="mt-1 leading-6">{value}</dd>
+              <dd className="mt-1 break-words leading-6">{value}</dd>
             </div>
           ))}
         </dl>
@@ -34,11 +34,11 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
           <summary className="cursor-pointer text-sm font-semibold">More project context</summary>
           <dl className="mt-4 grid gap-3">
             {supportingRows.map(([label, value]) => (
-              <div key={label}>
+              <div className="min-w-0" key={label}>
                 <dt className="text-xs font-semibold uppercase text-jb-paper/90">
                   {label}
                 </dt>
-                <dd className="mt-1 leading-6">{value}</dd>
+                <dd className="mt-1 break-words leading-6">{value}</dd>
               </div>
             ))}
           </dl>
@@ -50,11 +50,11 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         </h2>
         <dl className="mt-5 grid gap-4 sm:grid-cols-2">
           {rows.map(([label, value]) => (
-            <div key={label}>
+            <div className="min-w-0" key={label}>
               <dt className="text-xs font-semibold uppercase text-jb-paper/90">
                 {label}
               </dt>
-              <dd className="mt-1 leading-6">{value}</dd>
+              <dd className="mt-1 break-words leading-6">{value}</dd>
             </div>
           ))}
         </dl>

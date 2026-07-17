@@ -25,7 +25,7 @@
     "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "88cf8de415046a72725204f195e929d689add147fe7d0f0def6a0b0ae3f82566",
+  "sourceSha256": "1e814906f44a21185cede1b2408eb80381f0164d29da4745cd6a8a6b7442c41e",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -117,31 +117,31 @@
       "route": "/work/harry-j-epstein",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/harry-j-epstein-desktop.png",
-      "artifactSha256": "689cd35ff9c80ffdeeda7ba486167ad0c67973b128836537b6c8256834667eed"
+      "artifactSha256": "e540fcb9a8bcfd2cc944a445b3d7f9da394168df35f5601b4af83ccf066d7bd2"
     },
     {
       "route": "/work/harry-j-epstein",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/harry-j-epstein-mobile-320.png",
-      "artifactSha256": "baa060938205cf5b9b72094819981d8641b2e5c9f3e5973c52dce9aaefe2da2e"
+      "artifactSha256": "ce125a1afb734a3b2e87852728d6c07906e215018a2b850a5f3a1c9fd4512a84"
     },
     {
       "route": "/work/callnyc",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/callnyc-desktop.png",
-      "artifactSha256": "ff6bbbea28d6c8a3cf99b24134ad3b8c656c182d3680fccf68185442957a8bb9"
+      "artifactSha256": "b501249d3e9d5da61f192ae676aa5fcc4a24223e3f0754d389afab69fbcb35d0"
     },
     {
       "route": "/work/callnyc",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/callnyc-mobile-320.png",
-      "artifactSha256": "6ba068818280341750bdaef7c022e4491fd36f8092305017bcb21eeb1d3f8628"
+      "artifactSha256": "b56226d3ead58d7f93a1d5cfb46b93aa0bc82d160d65e1ff263242fe5057083c"
     },
     {
       "route": "/work/fair-rent-nyc",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/fair-rent-nyc-desktop.png",
-      "artifactSha256": "b605cbc7fc457b4f0b2d924d742da0fe2a3443024fc46117cdc96fb7b3866e99"
+      "artifactSha256": "bc8c822f4de06e66b844ed1e8744a0b3c59ee0da0dd7f8f4bf1d53b34a056707"
     },
     {
       "route": "/work/fair-rent-nyc",
@@ -153,25 +153,25 @@
       "route": "/work/wowlist",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/wowlist-desktop.png",
-      "artifactSha256": "e89f78adbc8f1ae147f10f0f6de7d3dedac6889e9b7d25a4e8e4115f0ad00fea"
+      "artifactSha256": "b8b7cb3cdd98571596e1de353c4190f3902eb1844b398868e103309217c5ec77"
     },
     {
       "route": "/work/wowlist",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/wowlist-mobile-320.png",
-      "artifactSha256": "d3a99f45d38070fff9ba210568a261a0fe1445dd894aeef30903ecce8c729581"
+      "artifactSha256": "87d50700486a8854630c9679da34f0b1b16d073027a05290cad76c08448042a4"
     },
     {
       "route": "/work/kc-town-hall",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-desktop.png",
-      "artifactSha256": "d6a0be0c520bf31867becc3856c2a2b6fa94d6d18150d6661e6df1638059ddfb"
+      "artifactSha256": "302aa05fb38fc22d1dfb93f68773ff3cd26454c748938f5774ca7c5ffb470fd5"
     },
     {
       "route": "/work/kc-town-hall",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-mobile-320.png",
-      "artifactSha256": "bccc2c46e08dc4d85ff88ced7d311ef6e5e26a677150602d8ea8948fdcee07a6"
+      "artifactSha256": "c61cdcc17787a2c5fe505a2b86e70cc0c3c7c54d9c2979920b0ae378b9cc5784"
     },
     {
       "route": "/lab/source-backed-team-memory",
