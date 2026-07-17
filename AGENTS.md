@@ -31,8 +31,11 @@ workspaces, Dockerfile, Dokku.
 - `npm run test:citations`
 - `npm run report:citations`
 - `npm run test:evals`
+- `npm run test:knowledge-history`
+- `npm run test:composite`
 - `npm run evals:application`
 - `npm run evals:production`
+- `npm run evals:composite`
 
 ## Public-Safety Rules
 
@@ -84,6 +87,14 @@ Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 - Closely read sources into both support and non-support fields.
 - Keep private originals outside the public repo behind opaque locator IDs.
 - Do not project every mature claim onto the site.
+- Use `npm run record:knowledge -- ...` to preview an append-only lifecycle
+  event. Add `--write` only after reviewing the complete event.
+- Use `npm run query:knowledge -- ...` for a redacted source, claim, project,
+  surface, intake, or history trace. Query output must not expose protected
+  locators.
+- Do not rewrite or delete a committed line in
+  `docs/knowledge-bank/lifecycle/history.jsonl`; add an amendment, retirement,
+  or promotion-decision event instead.
 - Run `npm run evals:knowledge` before opening or updating a knowledge-bank PR.
 
 ## Chad Lens
@@ -108,6 +119,12 @@ Do not improve a score by editing the eval during a candidate comparison,
 hiding a finding, adding unsupported claims, publishing protected evidence, or
 moving internal evaluation narration into public copy. Application-ready does
 not imply production-ready.
+
+For `feature/evals-*` integration, use
+`evals/composite-integration/suite.json` and the A-through-N disposition ledger.
+Keep the frozen branches read-only, preserve one canonical architecture, bind
+judgments to the exact candidate and contract, and run `npm run
+evals:composite` twice without changes before stopping.
 
 ## Scope Rules
 

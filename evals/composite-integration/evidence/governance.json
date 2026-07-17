@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "candidateStatus": "implementation-in-progress",
+  "layers": [
+    {
+      "id": "deterministic",
+      "status": "pass",
+      "evidence": "The inherited feature/knowledge-c npm run check baseline passed before integration edits."
+    },
+    {
+      "id": "model",
+      "status": "blocked",
+      "evidence": "Independent candidate-bound composite judgments must be generated after the implementation candidate is frozen."
+    },
+    {
+      "id": "human-reader",
+      "status": "blocked",
+      "evidence": "No five-reader target-role study is present for the exact candidate."
+    },
+    {
+      "id": "rights-review",
+      "status": "blocked",
+      "evidence": "No complete candidate-bound rights review exists for the priority visual artifact set."
+    },
+    {
+      "id": "production",
+      "status": "blocked",
+      "evidence": "Production deployed-SHA, smoke, rollback, and indexing evidence do not exist for this integration candidate."
+    },
+    {
+      "id": "jamie-approval",
+      "status": "blocked",
+      "evidence": "Jamie approved the integration proposal, but approval of the exact final production candidate remains a later gate."
+    }
+  ]
+}
