@@ -1,0 +1,38 @@
+{
+  "version": "2026-07-17",
+  "candidateCommit": "999b6ceb10cb777358f85643875f45a6fb4a0220",
+  "candidateContentHash": "f1c7f5491b2c5aa168230dc9dabf102f91bdab39cc9bcf8e695b930f62d38033",
+  "evidenceSnapshotHash": "2b683d6e01c2edeea1897ec8fd8d946d3e25ee10025dd06a2a65ed1c078236df",
+  "rubricHashes": {
+    "docs/qa/eval-control-plane-M.json": "d2557351ce00d8dd89ff0aa514d72a8e50e1c5c6b5861627d736d4392f9851ec",
+    "docs/qa/knowledge-lifecycle-M.json": "985c04abc88855520a08e478d16ef4b6747e065a660a55cc6ce65eb0cd592c24",
+    "docs/qa/portfolio-readiness-M.json": "c5e3fb3c525057a775c30fd159ecb71ef18310e0e7a3ac500c5867d7ae393d7d",
+    "docs/qa/blind-spot-readiness-M.json": "e80218264f03daf1447e0715b9801e1f993690889b64622ea3595ac744765b83",
+    "docs/qa/professor-lenses-M.json": "5ed860234247a4c65ff7d952d3a2e069ba22351ac6f5eced43e20967a66ab816"
+  },
+  "policyHashes": {
+    "AGENTS.md": "9a3f3d98b5dac9e8e49da641f4425975982fc77d89f116ba92c3bad5b8e59287",
+    "scripts/check-public-safety.mjs": "969cc6c05308a0b0409f276ddd37bef56a983fc3b73aae85854a71539163b1cf",
+    "docs/knowledge-bank/intake-and-maturation.md": "7fbde492bc54463e0b69c2ae9fa514e0d9c9b5aec3e348874c46b42b5235d175",
+    "docs/knowledge-bank/citational-care.md": "1816fefd3427bde0856d14ec059504418046004e2946f07f31e19608b264d1a4"
+  },
+  "checkerVersion": "composite-evals-M-v1",
+  "command": "npm run check",
+  "result": "pass",
+  "timestamp": "2026-07-17T02:17:27Z",
+  "reviewerClass": "deterministic-checker",
+  "decision": "stop_threshold_met",
+  "productionDecision": "stop_human_blocked",
+  "humanOutcomeState": "pending-human-review",
+  "productionApproval": "not-granted",
+  "modelJudgments": [],
+  "openGates": [
+    "unfamiliar-reader sessions",
+    "collaborator corroboration where consequential",
+    "five real-job comparisons",
+    "hands-on accessibility and launch QA",
+    "visual rights and consent review",
+    "staging deployment verification",
+    "production deployment and indexing approval"
+  ]
+}
