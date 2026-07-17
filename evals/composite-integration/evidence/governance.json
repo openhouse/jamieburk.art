@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "candidateStatus": "implementation-in-progress",
+  "candidateStatus": "integration-ready",
   "layers": [
     {
       "id": "deterministic",
       "status": "pass",
-      "evidence": "The inherited feature/knowledge-c npm run check baseline passed before integration edits."
+      "evidence": "The exact integration candidate passes the composite deterministic contract, the application-ready profile, the knowledge-lifecycle suite, and the canonical repository checks."
     },
     {
       "id": "model",
-      "status": "blocked",
-      "evidence": "Independent candidate-bound composite judgments must be generated after the implementation candidate is frozen."
+      "status": "pass",
+      "evidence": "Two independent judgments with distinct archival-editorial and systems-public-safety lenses pass the exact candidate and contract."
     },
     {
       "id": "human-reader",

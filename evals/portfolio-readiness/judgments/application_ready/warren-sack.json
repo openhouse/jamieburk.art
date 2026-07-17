@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-warren-sack-application-2026-07-15-r1",
+  "judgeId": "codex-independent-warren-sack-application-2026-07-16-r2",
   "lens": "warren-sack",
   "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:d5e153eef79f0a60202346aff198951b30da337d1aee13f6f7ea4381f1043e7a",
+  "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -23,102 +23,92 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The opening identifies Jamie, the target technical-project and product-operations work, and the concrete structures he creates before asking the reader to explore individual projects."
+      "observation": "The opening names Jamie as a technical project manager and implementation lead, identifies the operating structures he creates, and provides direct paths to technical-operations work, case studies, resume, and contact."
     },
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "The page translates the portfolio into delivery coordination, risk identification, cross-functional dependencies, operating documentation, launch support, onboarding, and handoffs, then connects those responsibilities to named projects."
+      "observation": "The information architecture translates Jamie's relational method into delivery coordination, risk surfacing, dependency management, documentation, onboarding, launch support, and durable handoffs, then connects those capabilities to named projects."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/kc-town-hall",
-      "observation": "The account distinguishes Jamie's attributed planning and presenter roles from the Board recommendation and subsequent Council actions, while explicitly stating that appropriation does not prove disbursement, expenditure, or construction."
+      "observation": "The page separates Jamie's attributed planning and presenter roles from Board and Council actions and states that appropriation does not establish disbursement, expenditure, construction, or completion."
     },
     {
       "rubric": "citational_care",
       "route": "/work/fair-rent-nyc",
-      "observation": "The citation system connects public claims to numbered references, source notes, backlinks, and explicit limits on individual attribution, attendance inference, and policy causality."
+      "observation": "The public case connects claims to local references, source notes, accessible backlinks, and explicit non-support boundaries while protecting private coalition, legal-review, and stakeholder material."
     },
     {
       "rubric": "reader_effort",
       "route": "/work/fair-rent-nyc",
-      "observation": "The case is intelligible and well organized, but its extended operating record, numerous bounded claims, and twenty-one references demand sustained reading rather than a rapid application scan."
+      "observation": "Clear headings preserve navigability, but the extended operating record, numerous bounded claims, and twenty-one references require sustained reading rather than exceptional one-pass comprehension."
     },
     {
       "rubric": "chad_lens",
       "route": "/work/callnyc",
-      "observation": "Jamie is clearly presented as the builder of an independent prototype that converted administrative records into resident pathways, while the archived and unofficial boundary remains visible; denser pages elsewhere require more specialized vocabulary."
+      "observation": "Jamie is legible as the prototype builder, the resident-facing use is understandable, and the archived unofficial boundary prevents inflated municipal affiliation; denser cases are less economical."
     },
     {
       "rubric": "morse_lens",
       "route": "/about",
-      "observation": "The page directly connects experimental media, social practice, installations, gatherings, and public situations to Jamie's present method of building interfaces and shared structures concerned with participation, memory, and place. The throughline is strong but remains primarily textual."
-    },
-    {
-      "rubric": "morse_lens",
-      "route": "/work/196-sunday-dinner",
-      "observation": "Hosting, hospitality, artist support, facilitation, and recurring gatherings are treated as operational and situated inquiry rather than decorative biography, while participant privacy remains protected."
-    },
-    {
-      "rubric": "sack_lens",
-      "route": "/about",
-      "observation": "Jamie explicitly describes tracing relationships across social and technical systems, converting patterns into interfaces and shared structures, and attending to how people inhabit those structures."
+      "observation": "Experimental media, installations, gatherings, participation, memory, and place are explicitly connected to present systems practice, although that material and embodied throughline is conveyed primarily through prose."
     },
     {
       "rubric": "sack_lens",
       "route": "/work/callnyc",
-      "observation": "The project demonstrates a concrete recursive movement from civic gathering and source data to interpretation model, issue-oriented interface, resident action pathway, public documentation, and clearly bounded archival status."
+      "observation": "The case shows recursive movement from a civic gathering and public records through interpretation and information architecture to an issue-oriented interface, resident action pathways, documentation, and bounded archival status."
     },
     {
       "rubric": "sack_lens",
       "route": "/work/harry-j-epstein",
-      "observation": "The case connects knowledge held by experienced people, inventory practices, customer language, and institutional voice to maintainable e-commerce, content, analytics, and operational workflows."
+      "observation": "Knowledge distributed among experienced people, inventory practices, customer language, and institutional voice is translated into maintainable e-commerce, content, analytics, and operational workflows."
     },
     {
       "rubric": "sack_lens",
       "route": "/work/wowlist",
-      "observation": "Informal relationships among interests, places, venues, and local scenes become a computational model of followable keyword communities and organizer-facing distribution workflows."
+      "observation": "Relationships among community vocabulary, place, venues, organizers, and informal scenes become a computational model of followable keyword communities and event-distribution workflows."
     },
     {
       "rubric": "sack_lens",
       "route": "/work/fair-rent-nyc",
-      "observation": "Coalition relationships, policy questions, meetings, public data, and protected context become source maps, decision records, campaign memory, participation structures, and public interfaces without erasing collective authorship."
+      "observation": "People, institutions, meetings, policy questions, public records, and protected context become decision records, source maps, action trackers, campaign memory, participation structures, and public interfaces while collective credit remains visible."
     },
     {
       "rubric": "sack_lens",
       "route": "/work/technical-operations",
-      "observation": "The proof map makes the method relevant to current operations and implementation roles across legacy commerce, civic data, coalition work, community platforms, recurring gatherings, and the built environment. Because this synthesis is distributed across several pages and mostly text-based, it is strong rather than exceptional."
+      "observation": "The proof map makes the recurring relational method relevant to current technical operations and implementation work, but the synthesis remains distributed across pages and is demonstrated mainly through text rather than inspectable artifacts."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work/callnyc",
-      "observation": "The artifact gallery describes the prototype and translation model in designed text panels but does not display an approved image of the interface. This is an explicit application-profile deferral."
+      "observation": "Designed text cards describe the prototype and translation model, but no approved image of the interface is rendered; candidate-bound browser evidence explicitly preserves project imagery as an application-profile deferral and production-readiness gap."
     },
     {
       "rubric": "resume_alignment",
       "route": "/resume",
-      "observation": "The candidate-bound deterministic gate confirms that the approved application document, public chronology, download route, and HTML privacy boundary agree; no protected document content was required for this judgment."
+      "observation": "The public role framing and chronology reinforce the homepage and case-study narrative, while existing checks confirm the approved download and preserve the phone number outside HTML."
     },
     {
       "rubric": "responsive_quality",
       "route": "/work/callnyc",
-      "observation": "Candidate-bound browser evidence records no overflow across desktop, mobile, and reflow viewports, successful citation navigation, and visible focus for all traversed controls; the zoom result uses an equivalent reduced viewport rather than browser-chrome zoom."
+      "observation": "Candidate-bound evidence reports no overflow on desktop, mobile, or the 200%-equivalent reflow viewport, working citation navigation, and visible focus for all twenty-four traversed controls; the zoom result is a viewport equivalent rather than browser-chrome zoom."
     },
     {
       "rubric": "sharing_quality",
       "route": "/resume",
-      "observation": "Canonical, Open Graph, Twitter-card, link, and download checks pass locally, but the captured URLs retain staging defaults and therefore do not establish production sharing behavior."
+      "observation": "Canonical, Open Graph, Twitter-card, resume-download, and contact paths are present, but the inspected browser evidence uses staging metadata defaults and does not establish production sharing behavior."
     },
     {
       "rubric": "operational_confidence",
-      "route": "/",
-      "observation": "The exact candidate is bound to passing repository, route, accessibility, and local browser evidence. Matching production deployment, smoke, indexing, monitoring, and rollback proof remains an allowed application-profile deferral."
+      "route": "site-wide",
+      "observation": "Repository, route, public-safety, claim-integrity, resume, and local browser checks support application use; deployed-commit verification, production smoke, indexing, monitoring, rollback evidence, and human approval remain explicitly unfulfilled production gates."
     }
   ],
   "regressions": [],
-  "highestValueFailure": null,
-  "smallestDefensiblePatch": null,
+  "highestValueFailure": "visual_evidence",
+  "smallestDefensiblePatch": "After rights and public-safety approval, replace one CallNYC text-only artifact card with one sanitized, captioned interface image whose alt text states what it demonstrates, while keeping the archived, unofficial, and not-current-guidance boundary adjacent to it.",
   "passes": true,
   "confidence": "high"
 }

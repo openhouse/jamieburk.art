@@ -1,0 +1,106 @@
+{
+  "suite": "feature-evals-composite-integration-v2",
+  "candidate": "sha256:5f4bfc17c9f0fe466d295967778954a8ca63d31058e0ed3d81a5d550a1e51352",
+  "contract": "sha256:131ead67ec65f164904e881cb8225c4ba8794f3b22d1b14630312c602156d8cd",
+  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-16-r1",
+  "lens": "systems-public-safety",
+  "status": "pass",
+  "scores": {
+    "architectural_coherence": 4,
+    "knowledge_capture": 4,
+    "source_decomposition": 4,
+    "semantic_resilience": 4,
+    "lifecycle_operability": 3,
+    "editorial_composition": 4,
+    "chad_lens": 3,
+    "morse_lens": 3,
+    "sack_lens": 3,
+    "collective_credit": 4,
+    "public_safety": 4,
+    "reader_effort": 3,
+    "reviewability": 4,
+    "future_resilience": 4
+  },
+  "evidence": [
+    {
+      "rubric": "architectural_coherence",
+      "artifact": "evals/composite-integration/suite.json; scripts/lib/composite-integration-evals.mjs; branch-family inventory",
+      "observation": "All required canonical files are present, forbidden parallel registries and public evidence routes are absent, and the composite remains an integration layer over the governing knowledge, lifecycle, portfolio, and blind-spot systems."
+    },
+    {
+      "rubric": "knowledge_capture",
+      "artifact": "docs/knowledge-bank/lifecycle/history.jsonl; scripts/lib/knowledge-history.mjs",
+      "observation": "Stable intake and promotion events preserve capture and disposition separately from canonical factual truth; amendments and retirements are additive events with explicit supersession."
+    },
+    {
+      "rubric": "source_decomposition",
+      "artifact": "apps/www/src/data/knowledge-bank/records.ts; knowledge-lifecycle judgments and 89-test output",
+      "observation": "Sources, evidence relationships, non-support fields, claims, inquiries, projections, rights, and protected locators remain decomposed; the full knowledge-lifecycle suite passed all 89 claim-boundary tests."
+    },
+    {
+      "rubric": "semantic_resilience",
+      "artifact": "evals/composite-integration/fixtures/semantic-mutations.json; composite tests",
+      "observation": "All 15 required adversarial mutations were detected, including attribution loss, sole-credit inflation, evidence-role substitution, stage inflation, protected projection, anti-claim conflict, and stale candidate or contract binding."
+    },
+    {
+      "rubric": "lifecycle_operability",
+      "artifact": "scripts/record-knowledge-event.mjs; scripts/query-knowledge-lifecycle.mjs; scripts/tests/knowledge-history.test.mjs",
+      "observation": "Intake defaults to dry-run, validates before append, rejects duplicates and invalid supersession, and queries return redacted lifecycle views. Operability is strong, though the claimed query-output leak test is not implemented as a dedicated test."
+    },
+    {
+      "rubric": "editorial_composition",
+      "artifact": "composite runner projection_restraint gate; application-ready judgments",
+      "observation": "Citation, knowledge-bank, and public-safety checks pass while mature unused claims and protected evidence remain outside the composed public portfolio."
+    },
+    {
+      "rubric": "chad_lens",
+      "artifact": "candidate-bound application-ready judgments",
+      "observation": "Jamie is consistently legible as the actor and specialized work is translated for hiring readers without erasing collective action; dense claim-heavy case studies still impose some scanning burden."
+    },
+    {
+      "rubric": "morse_lens",
+      "artifact": "candidate-bound Margaret Morse application judgment; /about composition",
+      "observation": "The portfolio preserves a credible throughline from experimental, embodied, participatory practice to present systems work, but demonstrates much of it through prose rather than approved material specimens."
+    },
+    {
+      "rubric": "sack_lens",
+      "artifact": "candidate-bound Warren Sack application judgment; project and technical-operations compositions",
+      "observation": "The cases make relational-to-computational translation legible across civic records, community vocabularies, interfaces, workflows, and organizational memory, although inspectable visual demonstrations remain limited."
+    },
+    {
+      "rubric": "collective_credit",
+      "artifact": "knowledge-lifecycle mutation tests; canonical boundaries and anti-claims",
+      "observation": "Collective work, attributed first-person evidence, collaborator roles, government decisions, and Jamie's specific contributions remain distinct; sole-credit mutations fail closed."
+    },
+    {
+      "rubric": "public_safety",
+      "artifact": "scripts/check-public-safety.mjs; query projection functions; governance record",
+      "observation": "Public-safety, citation, route, and knowledge checks pass. Protected locators are removed from query output, private URLs are suppressed, and blocked rights or approval gates are not promoted by proxy evidence."
+    },
+    {
+      "rubric": "reader_effort",
+      "artifact": "five candidate-bound application-ready judgments",
+      "observation": "Role framing, navigation, descriptive headings, and bounded claims support application use, while longer source-dense cases and repeated boundary language prevent an exceptional score."
+    },
+    {
+      "rubric": "reviewability",
+      "artifact": "composite runner reviewStats",
+      "observation": "The integration delta is explicitly separated from the inherited branch delta: 19 files, 1,931 added lines, one deletion, and a 316-line largest addition, all within frozen thresholds."
+    },
+    {
+      "rubric": "future_resilience",
+      "artifact": "A-through-N disposition ledger; candidate and contract fingerprint logic; governance layers",
+      "observation": "Every frozen branch has an exact SHA and explicit capability disposition, fingerprints invalidate stale evidence, and deterministic, model, human-reader, rights, production, and Jamie-approval layers cannot substitute for one another."
+    }
+  ],
+  "regressions": [],
+  "limitations": [
+    "The exact-candidate composite runner scores all rubrics at 4 and all deterministic gates except candidate_binding pass; candidate_binding remains open until this and a second distinct exact-candidate, exact-contract judgment are installed.",
+    "Human-reader, rights-review, production, and Jamie-approval gates are honestly blocked and are neither passed here nor treated as integration failures.",
+    "The governance record still labels the candidate implementation-in-progress and its deterministic evidence describes the inherited pre-integration baseline rather than the latest exact-candidate run.",
+    "The branch ledger names a query-output leak test, but no dedicated command-level query redaction test was found; safety was assessed from implementation inspection and broader canonical checks.",
+    "One knowledge-history test could not create its temporary directory under the evaluator's read-only sandbox. The failure was environmental, while its five non-writing tests passed; it is not recorded as a product regression.",
+    "Application evidence remains local and staging-bound, with visual evidence, production deployment, indexing, rollback, monitoring, and exact-candidate human approval explicitly deferred."
+  ],
+  "confidence": "high"
+}

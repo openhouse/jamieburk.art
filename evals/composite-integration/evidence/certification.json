@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "certifiedAt": "2026-07-16",
+  "profile": "integration_ready",
+  "status": "pass",
+  "candidate": "sha256:5f4bfc17c9f0fe466d295967778954a8ca63d31058e0ed3d81a5d550a1e51352",
+  "contract": "sha256:131ead67ec65f164904e881cb8225c4ba8794f3b22d1b14630312c602156d8cd",
+  "consecutivePassingRuns": 2,
+  "independentJudgments": [
+    "codex-independent-composite-archival-editorial-2026-07-16-r1",
+    "codex-independent-composite-systems-public-safety-2026-07-16-r1"
+  ],
+  "relatedProfiles": {
+    "applicationReady": {
+      "status": "pass",
+      "score": 86.5,
+      "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
+      "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
+      "consecutivePassingRuns": 2
+    },
+    "knowledgeReady": {
+      "status": "pass",
+      "score": 100,
+      "candidate": "sha256:d684e41f67ff31f16ce38e3e8778b808378331cb7a0533be0003fb75d4f0b120",
+      "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
+      "consecutivePassingRuns": 2
+    },
+    "blindSpotDiagnostic": {
+      "status": "pass",
+      "closure": "open",
+      "consecutivePassingRuns": 2
+    }
+  },
+  "externalGates": [
+    "candidate-bound human-reader study",
+    "rights review for priority visual evidence",
+    "production deploy, smoke, rollback, monitoring, and indexing evidence",
+    "Jamie approval of the exact production candidate"
+  ]
+}

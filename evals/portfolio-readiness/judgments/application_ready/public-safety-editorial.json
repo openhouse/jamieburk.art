@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-public-safety-editorial-application-2026-07-15-r15",
+  "judgeId": "codex-independent-public-safety-editorial-application-2026-07-16-r16",
   "lens": "public-safety-editorial",
   "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:d5e153eef79f0a60202346aff198951b30da337d1aee13f6f7ea4381f1043e7a",
+  "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -23,87 +23,87 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The first viewport names Jamie, the target role family, the value proposition, the concrete operating outputs, and direct paths to work, resume, and contact."
+      "observation": "The opening names Jamie, the target technical-project and product-operations role family, the operating structures he creates, and direct paths to work, resume, and contact."
     },
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "The page translates prior work into planning, risk tracking, dependency coordination, onboarding, reporting, documentation, launch support, and durable handoffs."
+      "observation": "Planning rhythms, risk surfacing, dependency coordination, documentation, onboarding, launch support, reporting, and handoffs are translated into recognizable responsibilities and connected to named projects."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/kc-town-hall",
-      "observation": "Jamie's resume-attributed role is separated from official Board and Council actions, and the page explicitly distinguishes appropriation from agreement, receipt, expenditure, construction, or completion."
+      "observation": "Jamie's resume-attributed role is kept separate from Board and Council actions; the public boundary correctly prevents appropriation from implying an executed agreement, receipt, expenditure, construction, completion, or current property status."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/callnyc",
-      "observation": "The chronology preserves the Council's attributed description, identifies CallNYC as an independent follow-on, and warns that the archived prototype is neither official nor current guidance."
+      "observation": "The page distinguishes the Council's attributed event description from Jamie's independent follow-on and candidly identifies CallNYC as archived, unofficial, and unsuitable as current guidance."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/fair-rent-nyc",
-      "observation": "Direct web and documentation contributions remain visible while policy leadership, legal authority, and collective campaign outcomes are expressly kept outside Jamie's individual claim."
+      "observation": "Jamie's web, documentation, source-mapping, and coordination work remains visible without assigning him sole policy leadership, institutional authority, legal authorship, or causality for collective outcomes."
     },
     {
       "rubric": "citational_care",
       "route": "/work/fair-rent-nyc",
-      "observation": "Public claims have local references, accessible backlinks, source notes, and explicit limits; however, some other major cases rely on public-safe source-layer summaries rather than equally inspectable source-level notes."
+      "observation": "The source-dense case provides local references, source notes, accessible backlinks, and explicit non-support boundaries, but other major cases rely more heavily on public-safe summaries whose protected support cannot be inspected by a public reader."
     },
     {
       "rubric": "citational_care",
       "route": "/work/harry-j-epstein",
-      "observation": "The growth claim stays carefully causal and protected evidence remains offline, but a public reader cannot inspect source-level support beyond the stated resume-backed and public-safe source relationship."
+      "observation": "The revenue wording remains contribution language and protected commercial evidence stays offline, appropriately limiting public inspection of the underlying source detail."
     },
     {
       "rubric": "reader_effort",
       "route": "/work/technical-operations",
-      "observation": "The route is well labeled and free of evaluation narration, but successive operations, project-proof, and capability maps create more scanning work than an exceptional one-pass hiring page."
+      "observation": "The page is clearly labeled and free of internal evaluation narration, but the operations list, proof map, and capability cards repeat adjacent ideas and require more scanning than an exceptional one-pass application page."
     },
     {
       "rubric": "chad_lens",
       "route": "/work/callnyc",
-      "observation": "Jamie is unmistakably the builder, the work is described as civic-data translation into resident pathways, and the useful result is legible without inflating municipal affiliation."
+      "observation": "Jamie is plainly identified as the builder, the translation from civic records to resident-facing pathways is immediately useful, and official affiliation is not inflated."
     },
     {
       "rubric": "morse_lens",
       "route": "/about",
-      "observation": "The page connects prototypes, installations, gatherings, participation, memory, and place to present systems practice, but that embodied and material throughline remains primarily textual."
+      "observation": "Experimental media, installations, gatherings, participation, memory, and place are connected to current systems practice, though this embodied and material throughline is demonstrated mostly through prose rather than approved specimens."
     },
     {
       "rubric": "sack_lens",
       "route": "/work/callnyc",
-      "observation": "The movement from public records to an information model, interface, and resident action pathway is clear, though the recursive method across projects is described more often than demonstrated through inspectable artifacts."
+      "observation": "The movement from public records to an information model, interface, and social action pathway is legible, while the recursive method across the wider portfolio remains more often described than visually demonstrated."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work/callnyc",
-      "observation": "Artifact cards describe prototypes, maps, and press evidence, but the candidate supplies little rendered project imagery or approved artifact evidence; this is an explicit application-profile deferral."
+      "observation": "Artifact cards describe the interface and translation model, but no approved, inspectable project image is rendered; this remains an explicitly allowed application-profile deferral and must not be closed with unapproved or historically misleading material."
     },
     {
       "rubric": "resume_alignment",
       "route": "/resume",
-      "observation": "The public role line and operating-structure narrative agree with the homepage and technical-operations page, while the deterministic resume gate confirms the approved chronology and download."
+      "observation": "The role line, operating-structure proposition, selected impact, downloadable approved PDF, and corrected CallNYC chronology agree with the homepage and public chronology; the phone remains confined to the PDF rather than HTML."
     },
     {
       "rubric": "responsive_quality",
       "route": "/work/callnyc",
-      "observation": "Candidate-bound evidence shows desktop, mobile, and 200-percent-equivalent reflow without overflow, plus visible focus for all 24 traversed controls and citation links."
+      "observation": "Candidate-bound browser evidence reports no overflow across desktop, mobile, and 200%-equivalent reflow checks, working citation navigation, and visible focus on all 24 traversed controls."
     },
     {
       "rubric": "sharing_quality",
       "route": "/resume",
-      "observation": "Canonical, Open Graph, Twitter-card, resume-download, and contact paths are present and trustworthy for applications, although the captured metadata remains staging-bound."
+      "observation": "Canonical, Open Graph, Twitter-card, resume-download, and contact paths are coherent, but the inspected browser evidence retains staging metadata defaults and therefore does not establish production sharing behavior."
     },
     {
       "rubric": "operational_confidence",
-      "route": "/",
-      "observation": "Local route and health evidence is strong, but matching production deploy identifiers, production smoke results, indexing verification, and rollback evidence are not supplied; production operations remain an allowed application-profile deferral."
+      "route": "site-wide",
+      "observation": "Repository, public-safety, citation, route, resume, and local browser evidence support application use. Production cutover, deployed-commit verification, production smoke and monitoring evidence, indexing state, rollback proof, and Jamie's exact-candidate approval remain candidly declared production and human-approval gaps."
     }
   ],
   "regressions": [],
   "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "After public approval, add one captioned and sanitized CallNYC artifact that contains no historical contact details or current-guidance affordances, and retain the archived-unofficial boundary beside it.",
+  "smallestDefensiblePatch": "After Jamie and any relevant rights holders approve it, add one sanitized CallNYC interface image with concise alt text and a caption stating exactly what it demonstrates, while keeping the archived, independent, unofficial, and not-current-guidance boundary adjacent to the image.",
   "passes": true,
   "confidence": "high"
 }

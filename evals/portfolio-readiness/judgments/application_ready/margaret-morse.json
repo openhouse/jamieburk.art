@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-margaret-morse-application-2026-07-15-r1",
+  "judgeId": "codex-independent-margaret-morse-application-2026-07-16-r2",
   "lens": "margaret-morse",
   "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:d5e153eef79f0a60202346aff198951b30da337d1aee13f6f7ea4381f1043e7a",
+  "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -23,87 +23,87 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The first viewport names Jamie, identifies the target role, states the operating value he provides, and offers direct paths to work, resume, and contact."
+      "observation": "The opening composition identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, states that he creates operating structure for complex public-facing teams, and provides direct paths to work, resume, and contact."
     },
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "The page maps planning, risk, coordination, documentation, launch support, and handoffs to concrete projects across business, civic, and community settings."
+      "observation": "Planning rhythms, risk tracking, decision records, documentation, launch support, onboarding, and handoffs are mapped to specific civic, cultural, business, and technical projects without erasing their distinct contexts."
     },
     {
       "rubric": "proof_defensibility",
-      "route": "/work/kc-town-hall",
-      "observation": "The case study separates Jamie's attributed planning and presentation work from Board and Council decisions and explicitly distinguishes appropriation from receipt or completed construction."
+      "route": "/work/callnyc",
+      "observation": "The case distinguishes Jamie's independent prototype from the Council hackathon and official services, identifies the surviving implementation and press basis, and prominently warns that archived information is not current guidance."
     },
     {
       "rubric": "citational_care",
       "route": "/work/fair-rent-nyc",
-      "observation": "Candidate-bound evidence confirms 21 references, matching backlinks, source notes, accessible labels, and working local citation navigation on this source-dense case study."
+      "observation": "Candidate-bound browser evidence records 21 references and backlinks, 15 source notes, accessible labels, a references heading, and successful forward and return citation navigation."
     },
     {
       "rubric": "reader_effort",
       "route": "/work/fair-rent-nyc",
-      "observation": "Clear headings and summaries keep the case usable, but the wider operating record, numerous claims, and repeated boundary sections require more sustained reading than an exceptional one-pass case study."
+      "observation": "Headings and bounded summaries make the record navigable, but the extensive campaign history, citations, and repeated claim boundaries require sustained reading rather than an exceptional one-pass scan."
     },
     {
       "rubric": "chad_lens",
       "route": "/work/callnyc",
-      "observation": "Jamie is plainly the builder, the resident-facing result is understandable without repository terminology, and the archived unofficial status is prominent; similarly careful collective credit appears on FairRentNYC."
+      "observation": "Jamie is visible as the prototype builder, the resident-facing purpose is translated clearly, and the unofficial archived status is explicit; collective projects elsewhere retain shared credit rather than assigning Jamie sole causality."
     },
     {
       "rubric": "morse_lens",
       "route": "/about",
-      "observation": "The page explicitly connects experimental media and social practice to prototypes, installations, gatherings, public situations, participation, memory, place, and present-day systems work."
+      "observation": "The page explicitly joins experimental media and social practice to prototypes, installations, gatherings, public situations, participation, memory, place, and the ways people inhabit systems, while keeping the hiring narrative direct."
     },
     {
       "rubric": "morse_lens",
       "route": "/work/196-sunday-dinner",
-      "observation": "Hospitality, trust, artist support, recurring gatherings, onboarding, and continuity are treated as rigorous participation infrastructure rather than decorative biography."
+      "observation": "Hospitality, trust, invitation, artist support, hosting rhythms, facilitation, documentation, and continuity are treated as rigorous participation infrastructure rather than decorative biography or generic organizational utility."
     },
     {
       "rubric": "morse_lens",
       "route": "/work/harry-j-epstein",
-      "observation": "The account preserves customer trust, humor, product judgment, institutional memory, and the material knowledge of a legacy business while explaining their operational translation."
+      "observation": "The case preserves material product knowledge, customer trust, humor, institutional memory, and a legacy business's lived voice while showing how those qualities informed digital implementation and operational handoffs."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "/work/wowlist",
+      "observation": "Community vocabulary, place, venue, scene, informal networks, event distribution, and platform logic remain connected, showing a technical system shaped by how communities actually gather and describe themselves."
     },
     {
       "rubric": "morse_lens",
       "route": "/work",
-      "observation": "The artistic and embodied throughline is release-capable but not unusually vivid because it remains distributed across prose and descriptive artifact cards rather than inspectable approved project artifacts."
+      "observation": "The artistic, embodied, civic, and technical threshold is release-capable but distributed mainly through prose and descriptive artifact cards; the public composition does not yet make the material and performative dimensions unusually vivid."
     },
     {
       "rubric": "sack_lens",
       "route": "/work/callnyc",
-      "observation": "The route shows a concrete movement from public records to an information model, issue pathways, interface behavior, and bounded civic action."
-    },
-    {
-      "rubric": "sack_lens",
-      "route": "/work/wowlist",
-      "observation": "Community vocabulary, place, informal scenes, event workflows, and technical platform logic are presented as one relational system, though the surviving public proof is concise."
+      "observation": "The case traces public records through information architecture into issue pathways, interface behavior, bounded guidance, and civic action, making recursive physical-social-computational translation legible."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work/196-sunday-dinner",
-      "observation": "The declared photo sequence is represented by a descriptive artifact card rather than approved imagery; the same text-only artifact treatment limits the other case studies."
+      "observation": "The declared photo sequence is represented only by a descriptive workflow card; project imagery remains an explicit application-profile deferral pending approval, consent, and rights review."
     },
     {
       "rubric": "resume_alignment",
       "route": "/resume",
-      "observation": "The deterministic resume gate passes, the public role framing matches the homepage and technical-operations page, and the corrected public chronology is consistent."
+      "observation": "The role title, operating-structure framing, selected impact, chronology, download path, and approved PDF agree with the homepage and role-fit page; the phone number remains confined to the PDF."
     },
     {
       "rubric": "responsive_quality",
       "route": "site-wide",
-      "observation": "Candidate-bound desktop, mobile, keyboard, and reflow evidence reports no overflow, visible focus on all 24 traversed controls, and successful citation traversal; production-device breadth remains unverified."
+      "observation": "Candidate-bound evidence reports successful desktop, mobile, keyboard, and 200%-equivalent reflow inspection across 11 routes, no overflow, and visible focus on all 24 traversed controls; broader production-device testing remains unverified."
     },
     {
       "rubric": "sharing_quality",
       "route": "/resume",
-      "observation": "Canonical metadata, route-specific title, social image, Twitter card, working resume path, and contact navigation are present, but the browser evidence used staging metadata defaults."
+      "observation": "Canonical metadata, route-specific title, social image, Twitter card, resume download, and contact path are present, but the inspected browser session used staging metadata defaults."
     },
     {
       "rubric": "operational_confidence",
       "route": "site-wide",
-      "observation": "Repository integrity, route checks, candidate binding, and local browser verification support application use; production smoke, deployed-commit, indexing, and rollback evidence remain explicit application-profile deferrals."
+      "observation": "The exact candidate and contract fingerprints were reproduced by the no-report evaluation; repository, safety, claim, resume, route, application-path, and responsive checks pass. Production smoke, deployed-commit verification, rollback evidence, indexing approval, and human approval remain blocked production gates and are not treated as satisfied."
     }
   ],
   "regressions": [],
