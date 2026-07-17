@@ -1,8 +1,8 @@
 {
-  "suite": "feature-evals-composite-integration-v2",
-  "candidate": "sha256:5f4bfc17c9f0fe466d295967778954a8ca63d31058e0ed3d81a5d550a1e51352",
-  "contract": "sha256:131ead67ec65f164904e881cb8225c4ba8794f3b22d1b14630312c602156d8cd",
-  "judgeId": "codex-independent-composite-archival-editorial-2026-07-16-r1",
+  "suite": "feature-evals-composite-integration-v4",
+  "candidate": "sha256:ea87f502439a2d1306f68f6316c43321fd299f59e561d9f991a92dbdf2951e77",
+  "contract": "sha256:0dde8926cd1afd7c7f89142ea2d9fe561fe88092d43fbaada0702b788b435e7d",
+  "judgeId": "codex-independent-composite-archival-editorial-2026-07-16-r4",
   "lens": "archival-editorial",
   "status": "pass",
   "scores": {
@@ -25,87 +25,87 @@
     {
       "rubric": "architectural_coherence",
       "artifact": "evals/composite-integration/suite.json; docs/evals/feature-evals-composite-integration.md; apps/www/src/data/knowledge-bank/records.ts",
-      "observation": "The candidate preserves feature/knowledge-c as the governing architecture: canonical records, lifecycle records, public registry, portfolio evaluation, knowledge evaluation, and blind-spot diagnosis retain distinct responsibilities. Required canonical files exist, forbidden parallel registries and public evidence-browser routes are absent, and the composite evaluates integration without replacing governing suites."
+      "observation": "Version 4 preserves one governing architecture: records.ts remains the canonical knowledge graph, lifecycle-records.ts and append-only history provide operational provenance, public-registry.json is the redacted projection, and the portfolio, knowledge-lifecycle, blind-spot, and composite suites retain distinct responsibilities. Required canonical files exist and forbidden parallel registries and public evidence-browser routes are absent."
     },
     {
       "rubric": "knowledge_capture",
-      "artifact": "docs/knowledge-bank/lifecycle/history.jsonl; apps/www/src/data/knowledge-bank/schema.ts",
-      "observation": "Stable intake identities, sources, claims, inquiries, projects, projections, and lifecycle events preserve submitted fragments and their dispositions. Knowledge maturity, publication status, and editorial status are modeled separately, while protected intake requires opaque locators."
+      "artifact": "apps/www/src/data/knowledge-bank/schema.ts; docs/knowledge-bank/lifecycle/history.jsonl; scripts/record-knowledge-event.mjs",
+      "observation": "The system captures stable intake, source, claim, inquiry, project, projection, correction, and lifecycle identities. Maturity, publication safety, and editorial selection remain separate fields; deferred and closed intake require reasons, and non-public intake requires opaque protected locators."
     },
     {
       "rubric": "source_decomposition",
       "artifact": "apps/www/src/data/knowledge-bank/schema.ts; apps/www/src/data/knowledge-bank/records.ts; evals/knowledge-lifecycle/judgments/archival-editorial.json",
-      "observation": "Sources remain independently modeled with visibility, preservation, review depth, general support, non-support, rights, and media boundaries. Evidence relationships distinguish direct support, corroboration, context, boundary support, contradiction, and private support rather than collapsing heterogeneous artifacts into undifferentiated proof."
+      "observation": "Sources retain independent authorship, organization, kind, visibility, preservation, review depth, support, non-support, rights, consent, and display boundaries. Evidence relationships distinguish direct support, corroboration, context, boundary support, contradiction, and private support, preventing heterogeneous records from becoming undifferentiated proof."
     },
     {
       "rubric": "semantic_resilience",
       "artifact": "evals/composite-integration/fixtures/semantic-mutations.json; scripts/lib/composite-integration-evals.mjs; scripts/tests/composite-integration-evals.test.mjs",
-      "observation": "All fifteen required adversarial fixtures were deterministically rejected, including attribution loss, sole-credit inflation, endorsement inflation, lifetime-population inflation, aggregate-to-impact substitution, evidence-role substitution, stage inflation, memory promotion, protected projection, non-support inversion, anti-claim conflict, and stale candidate or contract binding."
+      "observation": "The focused test suite passed all nine tests, and all fifteen required semantic mutations were rejected, including attribution loss, sole-credit inflation, endorsement inflation, population and impact inflation, evidence-role substitution, stage inflation, memory promotion, negative-finding absolutism, protected projection, non-support inversion, anti-claim conflict, and stale candidate or contract bindings."
     },
     {
       "rubric": "lifecycle_operability",
-      "artifact": "scripts/lib/knowledge-history.mjs; scripts/record-knowledge-event.mjs; scripts/query-knowledge-lifecycle.mjs; scripts/check-knowledge-history.mjs",
-      "observation": "The command surface supports validated preview-before-write recording, append-only intake, amendment, retirement, and promotion events, duplicate and supersession checks, Git-history prefix validation, and redacted queries across sources, claims, projects, surfaces, intake, and history. The repository check reported that history is valid and append-only."
+      "artifact": "scripts/lib/knowledge-history.mjs; scripts/record-knowledge-event.mjs; scripts/query-knowledge-lifecycle.mjs; docs/knowledge-bank/lifecycle/history.jsonl",
+      "observation": "Lifecycle commands support validated preview-before-write recording and redacted queries. The composite runner directly calls validateAppendOnlyGitHistory, which executes git log and git show over every committed version and compares each historical snapshot as an exact prefix of the current JSONL. The exact-candidate run passed with two valid append-only events."
     },
     {
       "rubric": "editorial_composition",
-      "artifact": "docs/evals/feature-evals-composite-integration.md; apps/www/src/data/knowledge-bank/schema.ts; evals/portfolio-readiness/judgments/application_ready/public-safety-editorial.json",
-      "observation": "Mature knowledge is not automatically published: projections have independent editorial states and surfaces, held material can remain research infrastructure, and the integration adds no evidence-dump route or evaluation narration to the public portfolio. Existing application review confirms a composed hiring narrative while acknowledging denser source-heavy cases."
+      "artifact": "apps/www/src/data/knowledge-bank/schema.ts; docs/knowledge-bank/publishing-governance.md; evals/portfolio-readiness/judgments/application_ready/public-safety-editorial.json",
+      "observation": "Publication is not inferred from maturity: projections have independent statuses and bounded surfaces, while protected and held evidence remains research infrastructure. No evidence-dump route or internal evaluation narration was introduced. Fresh application judgments support a composed portfolio while continuing to flag dense source-led cases and deferred visual evidence."
     },
     {
       "rubric": "chad_lens",
-      "artifact": "evals/portfolio-readiness/judgments/application_ready/chad-editorial.json",
-      "observation": "Candidate architecture and inherited public composition keep Jamie visible as an actor, translate operating work into hiring-relevant language, and preserve collective and institutional boundaries. The application judgment scores this lens at 3 because claim-dense cases still impose scanning effort."
+      "artifact": "evals/portfolio-readiness/judgments/application_ready/chad-editorial.json; apps/www/src/data/work.ts",
+      "observation": "Jamie remains visible as a specific actor, operating work is translated for hiring readers, and collective work is not converted into sole authorship. The fresh Chad judgment remains appropriately scored at 3 because citation-heavy cases and repeated qualifications still increase scanning effort."
     },
     {
       "rubric": "morse_lens",
-      "artifact": "evals/portfolio-readiness/judgments/application_ready/margaret-morse.json",
-      "observation": "The portfolio retains connections among experimental media, participation, hospitality, place, material practice, and present systems work. The throughline is credible but remains primarily prose-led because rights-reviewed visual specimens are deferred."
+      "artifact": "evals/portfolio-readiness/judgments/application_ready/margaret-morse.json; docs/knowledge-bank/projects/water-publics.md; docs/knowledge-bank/projects/open-house.md",
+      "observation": "The portfolio sustains a credible connection among participation, hospitality, place, experimental media, material practice, and present systems work. The throughline is still predominantly prose-led because rights-reviewed visual specimens remain blocked, supporting a restrained score of 3."
     },
     {
       "rubric": "sack_lens",
-      "artifact": "evals/portfolio-readiness/judgments/application_ready/warren-sack.json",
-      "observation": "Cases make translations among people, institutions, records, information models, interfaces, workflows, and public action legible. The recursive method is preserved across projects but is more often described than demonstrated through inspectable artifacts."
+      "artifact": "evals/portfolio-readiness/judgments/application_ready/warren-sack.json; apps/www/src/data/knowledge-bank/schema.ts",
+      "observation": "The architecture makes translations among people, institutions, records, claims, workflows, interfaces, and public action inspectable. The recursive method is credible across cases but is more often described than demonstrated through rights-cleared public artifacts, warranting 3 rather than 4."
     },
     {
       "rubric": "collective_credit",
-      "artifact": "apps/www/src/data/knowledge-bank/schema.ts; evals/composite-integration/fixtures/semantic-mutations.json; evals/knowledge-lifecycle/judgments/archival-editorial.json",
-      "observation": "Collective work is protected through atomic role claims, evidence boundaries, anti-claims, named collaborator context, and a sole-credit mutation guard. Existing archival review specifically preserves crew and collaborator credit while leaving unallocated labor unresolved rather than assigning it to Jamie."
+      "artifact": "apps/www/src/data/knowledge-bank/schema.ts; evals/composite-integration/fixtures/semantic-mutations.json; docs/knowledge-bank/anti-claims.md",
+      "observation": "Atomic role claims, attribution requirements, collaborator context, anti-claims, evidence boundaries, and the collective-to-sole-credit mutation preserve collective authorship. Unallocated labor remains unresolved rather than being silently credited to Jamie."
     },
     {
       "rubric": "public_safety",
       "artifact": "apps/www/src/data/knowledge-bank/schema.ts; scripts/query-knowledge-lifecycle.mjs; evals/composite-integration/evidence/governance.json",
-      "observation": "Non-public sources cannot expose underlying URLs, protected material requires opaque locators, query projection removes protected locators, and public evidence omits private filesystem paths. Citation, knowledge-bank, public-safety, and route checks passed for the exact candidate."
+      "observation": "Non-public sources cannot expose underlying URLs, protected material requires opaque locators, public query output removes protected locator data, and private filesystem paths are rejected from integration evidence. Citation, knowledge-bank, public-safety, and route checks all passed for the exact candidate."
     },
     {
       "rubric": "reader_effort",
-      "artifact": "evals/portfolio-readiness/judgments/application_ready/chad-editorial.json; evals/portfolio-readiness/judgments/application_ready/public-safety-editorial.json",
-      "observation": "The architecture reduces reviewer burden through stable IDs, bounded queries, explicit statuses, compact mutation fixtures, and a single disposition ledger. Public cases remain navigable, but dense campaign histories, numerous citations, and repeated boundaries prevent an exceptional one-pass reading score."
+      "artifact": "evals/portfolio-readiness/judgments/application_ready/chad-editorial.json; evals/portfolio-readiness/judgments/application_ready/public-safety-editorial.json; evals/composite-integration/evidence/branch-family-inventory.json",
+      "observation": "Stable IDs, explicit statuses, bounded queries, compact fixtures, and a single disposition ledger reduce archival review burden. Public cases remain navigable, but dense histories, numerous citations, and necessary boundary language keep the experience from an exceptional one-pass score."
     },
     {
       "rubric": "reviewability",
-      "artifact": "evals/composite-integration/evidence/branch-family-inventory.json; scripts/run-composite-integration-evals.mjs",
-      "observation": "Every frozen A-through-N branch is pinned to its contract SHA and has explicit capability-level dispositions, reasons, destinations where applicable, and verification references. The integration delta is reported separately from inherited work and remains within thresholds at 19 files, 1,931 added lines, and 316 lines in the largest added file."
+      "artifact": "evals/composite-integration/suite.json; scripts/run-composite-integration-evals.mjs; scripts/tests/composite-integration-evals.test.mjs",
+      "observation": "Version 4 computes integration statistics from the start SHA through isFingerprintBoundPath, so only candidate- or contract-bound paths count. Generated judgments, baselines, run records, certification, and the stop report are excluded from candidate accounting. The dedicated test passed, and the exact run reported 22 bound files, 1,975 added lines, and a 316-line largest addition, all within thresholds."
     },
     {
       "rubric": "future_resilience",
-      "artifact": "evals/composite-integration/suite.json; scripts/lib/composite-integration-evals.mjs; docs/knowledge-bank/lifecycle/history.jsonl",
-      "observation": "Frozen contract and candidate fingerprints, append-only provenance, explicit branch accounting, semantic mutations, prohibited competing paths, external-gate separation, and versioned contract history create a durable basis for later amendments without rewriting historical evidence or duplicating the canonical architecture."
+      "artifact": "docs/evals/feature-evals-composite-integration.md; evals/composite-integration/evidence/branch-family-inventory.json; evals/composite-integration/evidence/governance.json",
+      "observation": "The contract history explicitly records and supersedes versions 1 through 3, while version 4 closes reviewability binding without rewriting prior evidence. Every frozen A-through-N source has an exact SHA and capability-level disposition, and deterministic, model, human-reader, rights, production, and approval evidence remain non-substitutable."
     },
     {
       "rubric": "exact-candidate verification",
-      "artifact": "node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The runner reproduced the requested candidate and contract fingerprints exactly, scored every deterministic rubric gate at 4, passed all six canonical regression checks, and failed overall only because the required independent candidate-bound composite judgments had not yet been added."
+      "artifact": "npm run test:composite; node scripts/run-composite-integration-evals.mjs --json --no-report",
+      "observation": "The repository reproduced the requested candidate and contract fingerprints exactly. All nine focused tests, all deterministic rubric gates, reviewability accounting, and all six canonical regression checks passed. The runner failed overall only at candidate_binding because no prior v4 judgments were present; superseded v2 judgments and certification were correctly excluded."
     }
   ],
   "regressions": [],
   "limitations": [
-    "The exact candidate still requires a second candidate-bound composite judgment from a distinct judge and lens before the suite's two-judgment gate can pass; this judgment alone does not close that gate.",
-    "Two unchanged passing composite runs and the formal stop record cannot exist until the independent-judgment gate is satisfied.",
-    "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's exact-candidate approval remain explicitly blocked external gates. This integration cannot truthfully close them, and they are not treated as defects in the candidate.",
-    "Rights-cleared visual evidence remains deferred, limiting the Morse and Sack demonstrations and preventing production-readiness claims.",
-    "The append-write unit test could not create its temporary directory under the evaluator's read-only sandbox. Other knowledge-history tests passed, the implementation was inspected directly, and the repository-level append-only history check passed.",
-    "The governance record still labels the candidate implementation-in-progress and the model layer blocked pending candidate-bound judgments; this is conservative and accurate at inspection time but should be refreshed during certification."
+    "This is the first passing independent judgment bound to the exact v4 candidate and contract. A second passing judgment from a distinct judge and lens is still required before candidate_binding can pass.",
+    "Two unchanged passing composite runs and a new v4 stop record cannot be established until the independent-judgment requirement is satisfied.",
+    "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's exact-production-candidate approval remain explicitly blocked. This judgment does not substitute for or close those gates.",
+    "Rights-cleared visual evidence remains deferred, limiting Morse and Sack demonstration and preventing a production-readiness claim.",
+    "The knowledge-bank check passed with ten warnings; they did not fail the canonical gate but remain review debt.",
+    "Prior composite judgments and certification target superseded v2 fingerprints and provide historical context only; they receive no v4 candidate-binding credit."
   ],
   "confidence": "high"
 }

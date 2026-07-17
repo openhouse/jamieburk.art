@@ -2,14 +2,14 @@
   "version": 1,
   "certifiedAt": "2026-07-16",
   "profile": "integration_ready",
-  "status": "superseded",
-  "supersessionReason": "Version 4 additionally binds reviewability to the fingerprinted candidate and contract surface.",
-  "candidate": "sha256:5f4bfc17c9f0fe466d295967778954a8ca63d31058e0ed3d81a5d550a1e51352",
-  "contract": "sha256:131ead67ec65f164904e881cb8225c4ba8794f3b22d1b14630312c602156d8cd",
+  "suite": "feature-evals-composite-integration-v4",
+  "status": "pass",
+  "candidate": "sha256:ea87f502439a2d1306f68f6316c43321fd299f59e561d9f991a92dbdf2951e77",
+  "contract": "sha256:0dde8926cd1afd7c7f89142ea2d9fe561fe88092d43fbaada0702b788b435e7d",
   "consecutivePassingRuns": 2,
   "independentJudgments": [
-    "codex-independent-composite-archival-editorial-2026-07-16-r1",
-    "codex-independent-composite-systems-public-safety-2026-07-16-r1"
+    "codex-independent-composite-archival-editorial-2026-07-16-r4",
+    "codex-independent-composite-systems-public-safety-2026-07-16-r4"
   ],
   "relatedProfiles": {
     "applicationReady": {
