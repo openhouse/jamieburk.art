@@ -64,7 +64,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
@@ -74,6 +74,19 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
             </p>
             <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{artifact.description}</p>
+            {artifact.sourceNote ? (
+              <p className="mt-4 text-xs leading-5 text-jb-ink/60">
+                Source: {artifact.sourceNote}
+              </p>
+            ) : null}
+            {artifact.inspectUrl ? (
+              <a
+                className="mt-5 inline-flex font-semibold text-jb-blue underline decoration-jb-blue/35 underline-offset-4 hover:text-jb-green"
+                href={artifact.inspectUrl}
+              >
+                {artifact.inspectLabel ?? "Inspect public artifact"}
+              </a>
+            ) : null}
           </JBCard>
         ))}
       </div>

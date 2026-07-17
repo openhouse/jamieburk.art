@@ -22,6 +22,40 @@ Approved source -> structured record -> source-linked draft -> ideas / decisions
 
 AI drafts. Humans review. The shared record remains inspectable and correctable.
 
+## Worked Example
+
+Imagine a project team has approved a public meeting recap, a draft decision log,
+and private participant notes. The method does not blend those materials into one
+confident answer. It produces a reviewable record:
+
+<div className="not-prose my-6 grid gap-4 md:grid-cols-3" aria-label="Synthetic Known, Open, and Protected example">
+  <section className="rounded-lg border border-jb-green/30 bg-jb-green/[0.08] p-5">
+    <h3 className="text-lg font-semibold text-jb-green">Known</h3>
+    <p className="mt-3 text-sm leading-6 text-jb-ink/76">
+      The approved recap records that the team selected a two-week pilot and
+      named an implementation owner.
+    </p>
+  </section>
+  <section className="rounded-lg border border-jb-blue/30 bg-jb-sky/15 p-5">
+    <h3 className="text-lg font-semibold text-jb-blue">Open</h3>
+    <p className="mt-3 text-sm leading-6 text-jb-ink/76">
+      The draft log does not yet establish the success measure. A reviewer must
+      confirm it before the record becomes accepted team memory.
+    </p>
+  </section>
+  <section className="rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
+    <h3 className="text-lg font-semibold text-jb-ink">Protected</h3>
+    <p className="mt-3 text-sm leading-6 text-jb-ink/76">
+      Participant notes remain outside the shared output. The record states that
+      protected context exists without exposing names or private discussion.
+    </p>
+  </section>
+</div>
+
+This is synthetic, not a client record. It demonstrates the operating choice:
+cite what is approved, route uncertainty to a person, and preserve a visible
+boundary around material that should not enter the output.
+
 ## Example Deliverables
 
 - knowledge-friction map

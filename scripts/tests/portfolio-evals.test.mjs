@@ -132,6 +132,43 @@ test("download labels cannot point to the resume HTML page", () => {
   assert.match(errors.join("\n"), /labels an HTML \/resume destination as a download/);
 });
 
+test("resume PDF noindex does not block the HTML resume route", () => {
+  const nextConfig = readFileSync("apps/www/next.config.ts", "utf8");
+  const sitemap = readFileSync("apps/www/src/app/sitemap.ts", "utf8");
+
+  assert.doesNotMatch(nextConfig, /source:\s*["']\/resume\/:path\*["']/);
+  assert.match(
+    nextConfig,
+    /\/resume\/Jamie-Burkart-Resume-Technical-Project-Manager\.pdf/
+  );
+  assert.match(sitemap, /["']\/resume["']/);
+  assert.doesNotMatch(sitemap, /lastModified:\s*new Date/);
+});
+
+test("lead proof surfaces expose inspectable public artifacts", () => {
+  const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const lab = readFileSync(
+    "apps/www/src/content/lab/source-backed-team-memory.mdx",
+    "utf8"
+  );
+  const technicalOperations = readFileSync(
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "utf8"
+  );
+
+  for (const url of [
+    "https://www.harryepstein.com/",
+    "https://fairrentnyc.nycartc.com/",
+    "https://github.com/openhouse/CallNYC"
+  ]) {
+    const pattern = new RegExp(url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    assert.match(work, pattern);
+    assert.match(technicalOperations, pattern);
+  }
+  assert.match(lab, /## Worked Example/);
+  assert.match(lab, /This is synthetic, not a client record/);
+});
+
 function passingRun(target = "application-share") {
   return {
     suite_id: suite.suite_id,

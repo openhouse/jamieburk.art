@@ -59,7 +59,10 @@ const workMetaSchema = z.object({
     z.object({
       title: z.string(),
       description: z.string(),
-      type: artifactTypeSchema
+      type: artifactTypeSchema,
+      inspectUrl: z.string().url().optional(),
+      inspectLabel: z.string().optional(),
+      sourceNote: z.string().optional()
     })
   ),
   tags: z.array(z.string()),
@@ -111,10 +114,13 @@ const workItemsInput = [
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
-        title: "E-commerce workflow map",
+        title: "Harry J. Epstein public storefront",
         description:
-          "Representative flow for translating inventory knowledge, customer language, and order handling into a maintainable online workflow.",
-        type: "workflow"
+          "The live customer-facing system where product knowledge, institutional voice, e-commerce, and ongoing implementation meet.",
+        type: "website",
+        inspectUrl: "https://www.harryepstein.com/",
+        inspectLabel: "Inspect the public storefront",
+        sourceNote: "Public website operated by Harry J. Epstein Company."
       },
       {
         title: "Public-safe analytics summary",
@@ -217,10 +223,13 @@ const workItemsInput = [
         type: "decision record"
       },
       {
-        title: "Public campaign web surfaces",
+        title: "FairRentNYC public campaign site",
         description:
-          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
-        type: "website"
+          "A surviving public campaign surface that joins coalition framing, policy communication, source curation, and routes to participation.",
+        type: "website",
+        inspectUrl: "https://fairrentnyc.nycartc.com/",
+        inspectLabel: "Inspect the public campaign site",
+        sourceNote: "Public NYC Artist Coalition campaign website."
       },
       {
         title: "Shared public identity record",
@@ -319,10 +328,13 @@ const workItemsInput = [
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
-        title: "Issue pathway prototype",
+        title: "CallNYC public source repository",
         description:
-          "Public-facing page patterns that moved from constituent issue to relevant office, district context, and possible next step.",
-        type: "prototype"
+          "The surviving implementation exposes the data-to-interface work behind the archived resident-guidance prototype.",
+        type: "prototype",
+        inspectUrl: "https://github.com/openhouse/CallNYC",
+        inspectLabel: "Inspect the public repository",
+        sourceNote: "Public GitHub repository maintained by Jamie Burkart."
       },
       {
         title: "Open-data translation layer",
@@ -334,7 +346,11 @@ const workItemsInput = [
         title: "Archived press note",
         description:
           "Politico New York covered CallNYC in 2016 as a public way to explore City Council constituent-services data.",
-        type: "press"
+        type: "press",
+        inspectUrl:
+          "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
+        inspectLabel: "Read the archived coverage",
+        sourceNote: "Archived copy of Politico New York coverage from March 14, 2016."
       }
     ],
     tags: [
