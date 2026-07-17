@@ -1,0 +1,66 @@
+{
+  "suite": "feature-evals-composite-integration-v2",
+  "profile": "integration_ready",
+  "headSha": "9a4bd99867cbc5cf1c1cc49532800520a1721f7c",
+  "startingBranchSha": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
+  "candidate": "sha256:d657f278f5327536707dc7eb6587263e103fa2e34fc7247c8c85e4d57ab5fc43",
+  "contract": "sha256:131ead67ec65f164904e881cb8225c4ba8794f3b22d1b14630312c602156d8cd",
+  "supersedesContract": "feature-evals-composite-integration-v1",
+  "supersessionReason": "Version 1 coupled projection restraint to unrelated application-judgment freshness and produced misleading passing-sounding failure evidence. Version 2 separates those gates before independent judgments were requested.",
+  "score": 84,
+  "threshold": 86,
+  "passed": false,
+  "scores": {
+    "architectural_coherence": 4,
+    "knowledge_capture": 4,
+    "source_decomposition": 2,
+    "semantic_resilience": 4,
+    "lifecycle_operability": 4,
+    "editorial_composition": 4,
+    "chad_lens": 2,
+    "morse_lens": 2,
+    "sack_lens": 2,
+    "collective_credit": 4,
+    "public_safety": 4,
+    "reader_effort": 2,
+    "reviewability": 4,
+    "future_resilience": 4
+  },
+  "failedHardGates": [
+    "candidate_binding",
+    "no_regression"
+  ],
+  "failedRubrics": [
+    "source_decomposition",
+    "chad_lens",
+    "morse_lens",
+    "sack_lens",
+    "reader_effort"
+  ],
+  "passingBoundaries": [
+    "frozen_source_integrity",
+    "branch_family_accounting",
+    "canonical_architecture",
+    "append_only_lifecycle",
+    "semantic_claim_integrity",
+    "projection_restraint",
+    "reviewability_accounting",
+    "governance_honesty"
+  ],
+  "reviewStats": {
+    "inheritedFromDevelop": {
+      "changedFiles": 122,
+      "addedLines": 32394,
+      "deletedLines": 366,
+      "maximumSingleFileAddedLines": 3025
+    },
+    "integrationFromStart": {
+      "changedFiles": 18,
+      "addedLines": 1865,
+      "deletedLines": 1,
+      "maximumSingleFileAddedLines": 316
+    }
+  },
+  "capturedAt": "2026-07-16",
+  "nextAction": "Refresh five application-readiness judgments for the unchanged public candidate and obtain two distinct composite judgments for this candidate and contract."
+}
