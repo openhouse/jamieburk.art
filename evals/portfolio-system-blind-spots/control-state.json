@@ -117,7 +117,7 @@
     "destinationSurfaces": ["/resume", "/contact"],
     "sample": "Five consented readers: at least two hiring-adjacent readers and one implementation, civic-tech, or product-operations peer. Assign one reader to the home page, one to technical operations, one to Fair Rent NYC, and two to About so the new practice-lineage threshold can produce a repeated page-specific signal; all five must attempt the resume and contact destinations.",
     "exposure": "Five minutes without coaching, followed by a structured recall task.",
-    "frozenSurfaceDigest": "0cce06933b73a1e545afd54cfbf41f590fb846c0efdef1b3919520db94b6f0a0",
+    "frozenSurfaceDigest": "035dd36eddd59c5dfd1024efc0a8857e63e9e66296aa62d3be32d70c0cfd6945",
     "taskOrder": [
       "Open the assigned entry page without coaching.",
       "Browse for no more than five minutes.",

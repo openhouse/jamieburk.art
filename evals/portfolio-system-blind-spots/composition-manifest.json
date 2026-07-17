@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewedAt": "2026-07-16",
-  "publicSurfaceSha256": "0cce06933b73a1e545afd54cfbf41f590fb846c0efdef1b3919520db94b6f0a0",
+  "publicSurfaceSha256": "035dd36eddd59c5dfd1024efc0a8857e63e9e66296aa62d3be32d70c0cfd6945",
   "claimUnitDefinition": "One distinct role, result, capability, uncertainty, transformation, or transferable-method proposition rendered as prose. A paragraph containing several independently meaningful role, artifact-maturity, or continuity propositions contributes several semantic claim keys. A full WorkCard contributes five claim units; a compact homepage WorkCard contributes the rendered subtitle and summary only. Navigation labels, headings, status labels, tags, citations, and repeated CTA labels are not separate claim units.",
   "pages": [
     {
@@ -435,9 +435,9 @@
             "mdx-block-775a50eb26ac",
             "mdx-block-5a80a449bfa7",
             "mdx-claim-clm-kctownhall-public-operations-channel-public-operations-channel",
-            "mdx-block-b343cc75be6e",
-            "mdx-block-23ef95bbbf08",
-            "mdx-block-08ee6a918b89"
+            "mdx-block-66f6d267d286",
+            "mdx-block-87a815b9e08d",
+            "mdx-block-117d22a4c52e"
           ]
         }
       ],

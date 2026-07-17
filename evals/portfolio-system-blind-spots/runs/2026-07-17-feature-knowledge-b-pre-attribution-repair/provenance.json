@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "trustBoundary": "These are orchestration receipts for distinct read-only Codex sessions and are auditable process evidence, not cryptographic proof of evaluator independence or external human validation.",
+  "judges": [
+    {
+      "judgeRunId": "5e872ae4-a744-46f2-ae21-b278c07d2c01",
+      "role": "evidence-and-governance-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-pre-attribution-repair/judges/round-1-evidence.json",
+      "artifactSha256": "9765c1bae759f17d9849215207cfbc3b09e7fe4960cf3011bfcbec2d68f4afe9",
+      "sessionId": "019f6df8-9ec1-7bb0-88c2-a9d27c6a4d10",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-17T02:47:17.953Z"
+    },
+    {
+      "judgeRunId": "d3ea5886-4108-40e5-9ad3-f190167a27f4",
+      "role": "hiring-and-field-use-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-pre-attribution-repair/judges/round-1-hiring.json",
+      "artifactSha256": "4730505102ab26f62c65d49639561f5ac880815c9a0141a6d6098a6d227aa61b",
+      "sessionId": "019f6df8-98e9-76c1-8c26-6f044ea02772",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-17T02:47:16.457Z"
+    },
+    {
+      "judgeRunId": "cb91da3f-49be-40d5-9fba-3abf0dbcedde",
+      "role": "evidence-and-governance-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-pre-attribution-repair/judges/round-2-evidence.json",
+      "artifactSha256": "ab6d59e01f7a516c4f38ec654aa8d71c2c47d980adc80fc52b4f704db321a668",
+      "sessionId": "019f6dfe-3a45-75c3-be48-2f4ed562fb40",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-17T02:53:25.445Z"
+    },
+    {
+      "judgeRunId": "b9c791ff-57bb-4247-b7e5-c12c437550a8",
+      "role": "hiring-and-field-use-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-pre-attribution-repair/judges/round-2-hiring.json",
+      "artifactSha256": "1b09819ab1ed8484d43f73edee0d8304193408f51f2eedfba7940ec6d5a60342",
+      "sessionId": "019f6dfe-41b5-7fe0-be83-9ab23fd7bb14",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-17T02:53:27.349Z"
+    }
+  ]
+}
