@@ -9,8 +9,6 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
     ["Role", item.role],
     ["Years", item.years],
     ["Context", item.series],
-    ["Status", item.status],
-    ["Visibility", item.visibility],
     ["Role fit", item.roleFit]
   ];
 

@@ -69,6 +69,7 @@ test("rendered portfolio copy does not expose editorial workflow controls", () =
   const publicSurface = [
     "apps/www/src/components/CaseStudyLayout.tsx",
     "apps/www/src/components/CaseStudyBlocks.tsx",
+    "apps/www/src/components/WorkCard.tsx",
     "apps/www/src/app/resume/page.tsx",
     "apps/www/src/app/colophon/page.tsx",
     "apps/www/src/content/work/kc-town-hall.mdx"
@@ -80,6 +81,7 @@ test("rendered portfolio copy does not expose editorial workflow controls", () =
     publicSurface,
     /Current status:|This page is marked|Public wording should|unless final details are separately approved|production should only become indexable|approved resume artifact/i
   );
+  assert.doesNotMatch(publicSurface, /StatusBadge|item\.(?:status|visibility)/);
 });
 
 test("FairRentNYC campaign-memory scale has a bounded citation path", () => {
