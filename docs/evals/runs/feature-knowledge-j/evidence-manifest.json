@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "evaluatedAt": "2026-07-16",
+  "candidateSha": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+  "candidateArchiveFingerprint": "sha256:555bf876946275633d97a0eb6847cd30f643b52be29e5bb526b351cd6af745cc",
+  "contractFingerprint": "sha256:714cddcb1eb039ea288e7f1faec1712c2a7f4b215573c41e5000da409c870cfc",
+  "rubricFingerprints": {
+    "composite": "sha256:0603954704e522d1388551419ced556373127b3df1a95a919f505f34af04dbee",
+    "knowledgeBank": "sha256:e86ee0d6bb4ca0ed21a5e4bee3c841572b2bd55183ebb694e4677fa88390f414",
+    "blindSpots": "sha256:4507db8de25ec165e5751d4054323ff1209d402880b95e1cba76dac2be8d430a",
+    "portfolio": "sha256:5cdb254f481aa2ff0b9c8baece9df0d7e686022f27ce4f4db8e1d74f23c20c95"
+  },
+  "deterministic": {
+    "node": "26.5.0",
+    "npm": "11.17.0",
+    "commands": [
+      { "command": "npm run check", "status": "passed" },
+      { "command": "npm run preflight:staging", "status": "passed" },
+      { "command": "npm run preflight:production", "status": "passed" },
+      { "command": "git diff --check", "status": "passed" }
+    ]
+  },
+  "browser": {
+    "canonicalRoutes": 14,
+    "viewportWidths": [320, 375, 768, 1280],
+    "matrixCells": 56,
+    "screenshots": 56,
+    "screenshotBundleFingerprint": "sha256:1be09d5dc1733438f9e7dec033875bc8a7204ba2ffb5e6f50878d12114faad5d",
+    "horizontalOverflowFailures": 0,
+    "missingImageFailures": 0,
+    "unnamedLinkFailures": 0,
+    "criticalAccessibilityViolations": 0,
+    "allAxeViolations": 0,
+    "consoleErrors": 0,
+    "firstKeyboardTarget": "Skip to content -> #main",
+    "reducedMotionPreferenceObserved": true
+  },
+  "container": {
+    "image": "jamieburk-art:knowledge-j-final",
+    "imageDigest": "sha256:254f822960f0413591c0e32ac7c4fe7178e8f5fb70959901ea19a887e0172d90",
+    "configuredUser": "nextjs",
+    "runtimeUid": 1001,
+    "health": "ok",
+    "stagingRobotsIndexable": false,
+    "htmlResumeStatus": 200,
+    "pdfResumeStatus": 200,
+    "pdfContentType": "application/pdf",
+    "pdfRobotsHeader": "noindex, nofollow",
+    "sitemapIncludesHtmlResume": true,
+    "sitemapIncludesRequestTimeLastModified": false
+  },
+  "resume": {
+    "pages": 2,
+    "tagged": true,
+    "machineReadable": true,
+    "bytes": 72586,
+    "targetRolePresent": true,
+    "approvedPhonePresentInPdf": true,
+    "phonePatternPresentInWebsiteSource": false
+  },
+  "notObserved": [
+    "two independent external holdout judgments on this candidate",
+    "three to five human cold-reader results",
+    "candidate-specific consent or rights approval for any future collaborator-sensitive media",
+    "Jamie approval of this exact candidate for production indexing",
+    "public-domain production cutover and rollback exercise"
+  ],
+  "residualRisk": [
+    "npm audit --omit=dev reports two moderate advisories through Next.js bundled PostCSS; npm proposes an incompatible forced downgrade rather than a compatible remediation",
+    "careful claims remain subject to their existing knowledge-bank guardrails"
+  ]
+}

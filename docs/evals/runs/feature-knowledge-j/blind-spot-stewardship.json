@@ -1,0 +1,123 @@
+{
+  "candidate_sha": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+  "candidate_fingerprint": "sha256:555bf876946275633d97a0eb6847cd30f643b52be29e5bb526b351cd6af745cc",
+  "contract_fingerprint": "sha256:714cddcb1eb039ea288e7f1faec1712c2a7f4b215573c41e5000da409c870cfc",
+  "evidence_bundle_fingerprint": "sha256:253a8a81e26fc026759277c4d9fe7969c1e33cd7cf62c6837a8df3385cace12a",
+  "evaluator_identity": "composite-optimizer-local-author",
+  "evaluator_authored_candidate": true,
+  "consecutive_passing_runs": 0,
+  "suite_id": "blind-spot-readiness",
+  "target": "development-readiness",
+  "profile": "development-readiness",
+  "rubric_sha": "sha256:4507db8de25ec165e5751d4054323ff1209d402880b95e1cba76dac2be8d430a",
+  "content_scope": [
+    "portfolio",
+    "knowledge bank",
+    "validation registers",
+    "browser and container evidence"
+  ],
+  "results": [
+    {
+      "eval_id": "BS-001",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/collaborator-corroboration-queue.json",
+        "docs/knowledge-bank/governance/collective-credit-policy.json",
+        "docs/knowledge-bank/contextual-integrity-register.json"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "BS-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/institutional-pathways.json",
+        "apps/www/src/data/knowledge-bank/records.ts",
+        "scripts/tests/citations.test.mjs"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "BS-003",
+      "score": 2,
+      "pass": false,
+      "evidence": [
+        "docs/evals/application-argument.json",
+        "docs/evals/blind-spot-validation-state.json",
+        "not_observed: three to five human cold-reader task results"
+      ],
+      "findings": [
+        "The intended argument and actions are explicit, but actual uncoached reader comprehension is not observed."
+      ],
+      "recommended_next_move": "Run the fixed candidate with three to five hiring or referral readers and preserve their task results.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "BS-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/metric-register.json",
+        "scripts/tests/blind-spot-evals.test.mjs",
+        "apps/www/src/data/proofs.ts"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "BS-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/evals/application-argument.json",
+        "docs/knowledge-bank/governance/composition-manifest.json",
+        "apps/www/src/app/page.tsx"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "BS-006",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/contextual-integrity-register.json",
+        "docs/knowledge-bank/governance/mosaic-privacy-review.json",
+        "docs/knowledge-bank/governance/collective-credit-policy.json"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "BS-007",
+      "score": 2,
+      "pass": false,
+      "evidence": [
+        "docs/evals/runs/feature-knowledge-j/evidence-manifest.json",
+        "docs/evals/blind-spot-validation-state.json",
+        "not_observed: independent holdouts, cold readers, and live production cutover"
+      ],
+      "findings": [
+        "Local 56-cell browser and container evidence passes, but external, human, and public-production validation remains incomplete."
+      ],
+      "recommended_next_move": "Obtain explicit transfer approval, two independent judgments, human cold-reader observations, and candidate-bound live cutover evidence.",
+      "confidence": 0.95
+    }
+  ],
+  "unresolved_blockers": [
+    "Independent external scoring is not authorized in the validation ledger.",
+    "Human cold-reader results are not observed.",
+    "Live public-production cutover evidence is not observed."
+  ],
+  "next_action": "Complete the consented external, human-reader, and live-use validations against one unchanged candidate.",
+  "final_state": "human_blocked"
+}

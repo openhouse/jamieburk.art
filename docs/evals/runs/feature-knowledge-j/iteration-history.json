@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "rubricFrozenAt": "61a3f01796bcaf41794e33f2c49adbc38441623a",
+  "finalCandidateSha": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+  "iterations": [
+    {
+      "iteration": 1,
+      "candidate_sha_before": "61a3f01796bcaf41794e33f2c49adbc38441623a",
+      "selected_eval_id": "KB-006",
+      "change_summary": "Integrated the composite eval contract, lifecycle workbench, fail-closed knowledge governance, mutation tests, CI, and responsive baseline fixes.",
+      "evidence_before": [
+        "instructions-j.md",
+        "feature/knowledge-j baseline"
+      ],
+      "candidate_sha_after": "acaec6aec28596abf99406115c1ebd34291d4334",
+      "evidence_after": [
+        "npm run check",
+        "initial complete 320px route pass"
+      ],
+      "score_before": 1,
+      "score_after": 4,
+      "regressions": [],
+      "decision": "accept"
+    },
+    {
+      "iteration": 2,
+      "candidate_sha_before": "acaec6aec28596abf99406115c1ebd34291d4334",
+      "selected_eval_id": "PR-008",
+      "change_summary": "Scoped noindex to the resume PDF, stabilized sitemap output, exposed public artifacts on lead proof surfaces, and added a synthetic Lab example.",
+      "evidence_before": [
+        "exploratory independent review identified resume indexing conflict and inspectability gaps"
+      ],
+      "candidate_sha_after": "b2bccf9e1f8e996251c86b375e4896e0f625ac07",
+      "evidence_after": [
+        "scripts/tests/portfolio-evals.test.mjs",
+        "npm run check"
+      ],
+      "score_before": 1,
+      "score_after": 4,
+      "regressions": [],
+      "decision": "accept"
+    },
+    {
+      "iteration": 3,
+      "candidate_sha_before": "b2bccf9e1f8e996251c86b375e4896e0f625ac07",
+      "selected_eval_id": "PR-010",
+      "change_summary": "Fixed shared case-study label and tag contrast after the literal viewport matrix found 284 violations.",
+      "evidence_before": [
+        "56-cell axe matrix: 284 color-contrast violations"
+      ],
+      "candidate_sha_after": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+      "evidence_after": [
+        "56-cell axe matrix: zero violations",
+        "screenshot bundle sha256:1be09d5dc1733438f9e7dec033875bc8a7204ba2ffb5e6f50878d12114faad5d"
+      ],
+      "score_before": 2,
+      "score_after": 4,
+      "regressions": [],
+      "decision": "stop_human_blocked"
+    }
+  ]
+}

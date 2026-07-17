@@ -1,0 +1,274 @@
+{
+  "candidate_sha": "3cae667f95173ff7e6bea678ecd577a94784c94a",
+  "candidate_fingerprint": "sha256:555bf876946275633d97a0eb6847cd30f643b52be29e5bb526b351cd6af745cc",
+  "contract_fingerprint": "sha256:714cddcb1eb039ea288e7f1faec1712c2a7f4b215573c41e5000da409c870cfc",
+  "evidence_bundle_fingerprint": "sha256:253a8a81e26fc026759277c4d9fe7969c1e33cd7cf62c6837a8df3385cace12a",
+  "evaluator_identity": "composite-optimizer-local-author",
+  "evaluator_authored_candidate": true,
+  "consecutive_passing_runs": 0,
+  "suite_id": "portfolio-production-readiness",
+  "target": "production-launch",
+  "profile": "production-launch",
+  "rubric_sha": "sha256:5cdb254f481aa2ff0b9c8baece9df0d7e686022f27ce4f4db8e1d74f23c20c95",
+  "content_scope": [
+    "all canonical public routes",
+    "resume PDF",
+    "knowledge projections",
+    "runtime and indexing"
+  ],
+  "results": [
+    {
+      "eval_id": "PR-001",
+      "score": 2,
+      "pass": false,
+      "evidence": [
+        "apps/www/src/app/page.tsx",
+        "apps/www/src/app/work/technical-operations/page.tsx",
+        "not_observed: three two-minute blind-reader scorecards"
+      ],
+      "findings": [
+        "Role and proof hierarchy are present, but the required human comprehension evidence is absent."
+      ],
+      "recommended_next_move": "Run the two-minute protocol with three independent readers.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-002",
+      "score": 3,
+      "pass": false,
+      "evidence": [
+        "scripts/tests/portfolio-evals.test.mjs",
+        "apps/www/src/components/CaseStudyBlocks.tsx",
+        "apps/www/src/content/lab/source-backed-team-memory.mdx",
+        "not_observed: blind artifact explanations"
+      ],
+      "findings": [
+        "All four lead surfaces now expose a public or synthetic inspectable artifact; blind explanations remain unobserved."
+      ],
+      "recommended_next_move": "Have a fresh reader explain what each artifact proves and record any consent-sensitive future media separately.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/app/work/technical-operations/page.tsx",
+        "apps/www/src/data/proofs.ts",
+        "apps/www/src/data/work.ts"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-004",
+      "score": 3,
+      "pass": false,
+      "evidence": [
+        "apps/www/src/app/page.tsx",
+        "apps/www/src/content/work",
+        "not_observed: independent editorial judge scorecard"
+      ],
+      "findings": [
+        "Public copy is bounded and compressed, but an authoring evaluator cannot certify the voice and burden criterion."
+      ],
+      "recommended_next_move": "Obtain an independent editorial read on the unchanged candidate.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "npm run check:knowledge-integrity",
+        "npm run public-safety",
+        "docs/knowledge-bank/governance/projection-surface-bindings.json"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "pdfinfo apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+        "docs/evals/runs/feature-knowledge-j/evidence-manifest.json",
+        "scripts/check-public-safety.mjs"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "scripts/tests/portfolio-evals.test.mjs",
+        "docs/evals/runs/feature-knowledge-j/evidence-manifest.json",
+        "apps/www/src/components/JBButton.tsx"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/next.config.ts",
+        "apps/www/src/app/sitemap.ts",
+        "scripts/tests/portfolio-evals.test.mjs",
+        "container smoke headers in docs/evals/runs/feature-knowledge-j/verification.md"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "npm run check",
+        "npm run preflight:staging",
+        "npm run preflight:production",
+        "Docker image sha256:254f822960f0413591c0e32ac7c4fe7178e8f5fb70959901ea19a887e0172d90"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-010",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/evals/runs/feature-knowledge-j/evidence-manifest.json",
+        "56 screenshots fingerprint sha256:1be09d5dc1733438f9e7dec033875bc8a7204ba2ffb5e6f50878d12114faad5d",
+        "zero axe violations and zero console errors"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-011",
+      "score": 1,
+      "pass": false,
+      "evidence": [
+        "not_observed: candidate-bound apex, www, npr, TLS, deployment SHA, and rollback exercise"
+      ],
+      "findings": [
+        "Local production-image smoke cannot establish public-domain cutover integrity."
+      ],
+      "recommended_next_move": "After exact candidate approval, deploy as a bounded release and preserve public-domain smoke plus rollback evidence.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-012",
+      "score": 1,
+      "pass": false,
+      "evidence": [
+        "docs/evals/blind-spot-validation-state.json",
+        "not_observed: Jamie approval for exact candidate and indexing state"
+      ],
+      "findings": [
+        "The user approved implementation, not the exact production artifact, indexing state, or external evidence transfer described by this gate."
+      ],
+      "recommended_next_move": "Request one dated go or no-go record naming the exact candidate, resume, contact path, public assets, and indexing state.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-013",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/content/lab/source-backed-team-memory.mdx",
+        "apps/www/src/app/resume/page.tsx",
+        "apps/www/src/data/proofs.ts"
+      ],
+      "findings": [],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-014",
+      "score": 1,
+      "pass": false,
+      "evidence": [
+        "not_observed: fixed target-role brief, tailored four-sentence note, packet manifest, and blind packet scorecard"
+      ],
+      "findings": [
+        "The durable site and resume exist, but no role-specific application packet was part of this candidate."
+      ],
+      "recommended_next_move": "Assemble and evaluate a fixed packet for the next real application.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-015",
+      "score": 3,
+      "pass": false,
+      "evidence": [
+        "scripts/tests/portfolio-evals.test.mjs",
+        "apps/www/src/app/page.tsx",
+        "apps/www/src/data/work.ts",
+        "not_observed: blind Chad-lens reader"
+      ],
+      "findings": [
+        "Actor and useful-end language passes deterministic contracts; required blind interpretation is absent."
+      ],
+      "recommended_next_move": "Obtain an independent Chad-lens read against the unchanged candidate.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-016",
+      "score": 3,
+      "pass": false,
+      "evidence": [
+        "scripts/tests/portfolio-evals.test.mjs",
+        "apps/www/src/app/about/page.tsx",
+        "apps/www/src/data/proofs.ts",
+        "not_observed: blind Margaret Morse-lens reader"
+      ],
+      "findings": [
+        "Embodied, hospitable, artistic, and material practice survives the public argument; required blind explanation is absent."
+      ],
+      "recommended_next_move": "Obtain an independent Margaret Morse-lens read against the unchanged candidate.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "PR-017",
+      "score": 3,
+      "pass": false,
+      "evidence": [
+        "scripts/tests/portfolio-evals.test.mjs",
+        "apps/www/src/app/about/page.tsx",
+        "apps/www/src/data/proofs.ts",
+        "not_observed: blind Warren Sack-lens reader"
+      ],
+      "findings": [
+        "The model-to-interface chain and anti-claim are preserved; required blind explanation is absent."
+      ],
+      "recommended_next_move": "Obtain an independent Warren Sack-lens read against the unchanged candidate.",
+      "confidence": 0.95
+    }
+  ],
+  "unresolved_blockers": [
+    "Independent holdout and human-reader evidence are not observed.",
+    "Jamie has not approved this exact candidate for production indexing.",
+    "Public-domain cutover and rollback evidence are not observed."
+  ],
+  "next_action": "After human approval, deploy the exact candidate, verify apex/www/npr/TLS/health/indexing, and preserve a rollback result.",
+  "final_state": "human_blocked",
+  "blind_reader_median": null,
+  "holdout_regression_pass": false,
+  "human_approval": {
+    "granted": false,
+    "candidate_sha": "3cae667f95173ff7e6bea678ecd577a94784c94a"
+  }
+}
