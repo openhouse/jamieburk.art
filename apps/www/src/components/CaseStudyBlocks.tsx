@@ -164,18 +164,6 @@ export function CareNote({ item }: { item: WorkMeta }) {
   );
 }
 
-export function VisibilityNote({ item }: { item: WorkMeta }) {
-  return (
-    <NoteBlock title="Visibility" tone="blue">
-      <p>
-        This page is marked <strong>{item.visibility}</strong>. Current status:
-        {" "}
-        {item.currentStatus}
-      </p>
-    </NoteBlock>
-  );
-}
-
 export function PublicSafetyNote({ item }: { item: WorkMeta }) {
   if (!item.publicSafety?.note) return null;
   return (

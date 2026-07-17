@@ -65,6 +65,39 @@ test("public Open fields describe uncertainty rather than approval workflow", ()
   );
 });
 
+test("rendered portfolio copy does not expose editorial workflow controls", () => {
+  const publicSurface = [
+    "apps/www/src/components/CaseStudyLayout.tsx",
+    "apps/www/src/components/CaseStudyBlocks.tsx",
+    "apps/www/src/app/resume/page.tsx",
+    "apps/www/src/app/colophon/page.tsx",
+    "apps/www/src/content/work/kc-town-hall.mdx"
+  ]
+    .map((path) => readFileSync(path, "utf8"))
+    .join("\n");
+
+  assert.doesNotMatch(
+    publicSurface,
+    /Current status:|This page is marked|Public wording should|unless final details are separately approved|production should only become indexable|approved resume artifact/i
+  );
+});
+
+test("FairRentNYC campaign-memory scale has a bounded citation path", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-FAIRRENTNYC-CAMPAIGN-MEMORY-SCALE"
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === "fair-rent-nyc");
+  const occurrence = page.occurrences.find(
+    (item) => item.claimId === claim.id
+  );
+
+  assert.equal(claim.maturity, "projected");
+  assert.ok(claim.evidence.some((item) => item.renderCitation));
+  assert.ok(claim.boundaries.some((item) => /first-party|public resume/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /solely authored/i.test(item)));
+  assert.deepEqual(occurrence.sourceIds, ["SRC-HJE-PUBLIC-RESUME-2026-07-11"]);
+});
+
 test("a held canonical claim cannot return through a legacy proof selector", () => {
   const proofs = structuredClone(proofClaims);
   const proof = proofs.find((item) => item.id === "hje-revenue-growth-contribution");

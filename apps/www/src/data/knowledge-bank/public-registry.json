@@ -132,13 +132,16 @@
       "canonicalUrl": "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Jamie Burkart, public resume, July 11, 2026.",
-      "publicNote": "The public resume supports Jamie's approved first-person role and scale wording. Business figures remain private, and the 20-plus residency aggregate is not independently corroborated.",
+      "publicNote": "The public resume supports Jamie's published first-person role and scale wording. It is a first-party source rather than independent corroboration; private records and collaborator context remain offline.",
       "doesNotEstablish": [
         "sole causality",
         "audited financial results",
         "the underlying revenue figures",
         "ownership of all business growth",
         "independent corroboration of the 20-plus resident-artist aggregate",
+        "independent corroboration of the 30-plus campaign-memory aggregate",
+        "sole authorship of collective campaign records",
+        "policy causation",
         "resident outcomes or permission to identify participants"
       ]
     },
@@ -1018,6 +1021,40 @@
       ]
     },
     {
+      "id": "CLM-FAIRRENTNYC-CAMPAIGN-MEMORY-SCALE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure, turning meetings, decisions, action items, policy questions, media assets, stakeholder next steps, and city and state strategy lanes into shared memory and actionable workstreams.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-HJE-PUBLIC-RESUME-2026-07-11",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's published building and stewardship role",
+            "Jamie's published 30-plus-page campaign-memory aggregate",
+            "the documented categories synthesized into shared memory and workstreams"
+          ],
+          "publicNote": "This is Jamie's first-person public resume account, not independent corroboration of the aggregate or sole authorship.",
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Attribute the 30-plus-page aggregate to Jamie's public resume rather than presenting it as independently audited.",
+        "Keep private coalition notes, legal-review materials, stakeholder records, emails, raw strategy context, and unapproved quotations offline.",
+        "Preserve collaborators' authorship and collective campaign outcomes."
+      ]
+    },
+    {
       "id": "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1178,9 +1215,18 @@
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
+        "SRC-HJE-PUBLIC-RESUME-2026-07-11",
         "SRC-FAIRRENTNYC-PUBLIC-SITE-2026"
       ],
       "occurrences": [
+        {
+          "id": "campaign-memory-scale",
+          "claimId": "CLM-FAIRRENTNYC-CAMPAIGN-MEMORY-SCALE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-HJE-PUBLIC-RESUME-2026-07-11"
+          ]
+        },
         {
           "id": "public-campaign-surface",
           "claimId": "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE",

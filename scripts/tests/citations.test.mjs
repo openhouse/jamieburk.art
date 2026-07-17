@@ -34,7 +34,8 @@ test("structured citations extend across About and five public case studies", ()
   assert.deepEqual(resolveCitationOccurrence("about", "river-participatory-expedition").sources.map((item) => item.number), [3, 4, 5]);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "public-storefront").sources[0].number, 1);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "online-sales-share-2016").sources[0].number, 2);
-  assert.equal(resolveCitationOccurrence("fair-rent-nyc", "public-campaign-surface").sources[0].number, 1);
+  assert.equal(resolveCitationOccurrence("fair-rent-nyc", "campaign-memory-scale").sources[0].number, 1);
+  assert.equal(resolveCitationOccurrence("fair-rent-nyc", "public-campaign-surface").sources[0].number, 2);
   assert.equal(resolveCitationOccurrence("wowlist", "archived-public-surface").sources[0].number, 1);
   assert.deepEqual(resolveCitationOccurrence("196-sunday-dinner", "recorded-gathering-scale").sources.map((item) => item.number), [1, 2]);
 });

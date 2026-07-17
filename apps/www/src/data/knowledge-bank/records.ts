@@ -365,10 +365,10 @@ const knowledgeBankInput = {
       canonicalUrl: "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       preferredPublicUrl: "canonical",
       publicCitation: "Jamie Burkart, public resume, July 11, 2026.",
-      publicNote: "The public resume supports Jamie's approved first-person role and scale wording. Business figures remain private, and the 20-plus residency aggregate is not independently corroborated.",
-      intakeIds: ["INTAKE-MIGRATION-HJE-PUBLIC-CLAIMS", "INTAKE-196-PUBLIC-RESUME-SCALE-2026"],
-      supportsGenerally: ["Jamie's HJE improvement areas", "contribution to 2x revenue growth", "legacy e-commerce context", "Jamie's 196 Artists Residency founder role", "Jamie's self-reported 20-plus resident-artist aggregate"],
-      doesNotEstablish: ["sole causality", "audited financial results", "the underlying revenue figures", "ownership of all business growth", "independent corroboration of the 20-plus resident-artist aggregate", "resident outcomes or permission to identify participants"]
+      publicNote: "The public resume supports Jamie's published first-person role and scale wording. It is a first-party source rather than independent corroboration; private records and collaborator context remain offline.",
+      intakeIds: ["INTAKE-MIGRATION-HJE-PUBLIC-CLAIMS", "INTAKE-196-PUBLIC-RESUME-SCALE-2026", "INTAKE-FAIRRENT-CAMPAIGN-MEMORY-SCALE-2026"],
+      supportsGenerally: ["Jamie's HJE improvement areas", "contribution to 2x revenue growth", "legacy e-commerce context", "Jamie's 196 Artists Residency founder role", "Jamie's self-reported 20-plus resident-artist aggregate", "Jamie's published 30-plus-page FairRentNYC campaign-memory wording"],
+      doesNotEstablish: ["sole causality", "audited financial results", "the underlying revenue figures", "ownership of all business growth", "independent corroboration of the 20-plus resident-artist aggregate", "independent corroboration of the 30-plus campaign-memory aggregate", "sole authorship of collective campaign records", "policy causation", "resident outcomes or permission to identify participants"]
     },
     {
       id: "SRC-FAIRRENTNYC-PUBLIC-SITE-2026",
@@ -771,8 +771,11 @@ const knowledgeBankInput = {
     {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
-      sourceOrder: ["SRC-FAIRRENTNYC-PUBLIC-SITE-2026"],
-      occurrences: [{ id: "public-campaign-surface", claimId: "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE", projection: "case-study", sourceIds: ["SRC-FAIRRENTNYC-PUBLIC-SITE-2026"] }]
+      sourceOrder: ["SRC-HJE-PUBLIC-RESUME-2026-07-11", "SRC-FAIRRENTNYC-PUBLIC-SITE-2026"],
+      occurrences: [
+        { id: "campaign-memory-scale", claimId: "CLM-FAIRRENTNYC-CAMPAIGN-MEMORY-SCALE", projection: "case-study", sourceIds: ["SRC-HJE-PUBLIC-RESUME-2026-07-11"] },
+        { id: "public-campaign-surface", claimId: "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE", projection: "case-study", sourceIds: ["SRC-FAIRRENTNYC-PUBLIC-SITE-2026"] }
+      ]
     },
     {
       id: "wowlist",
