@@ -1,4 +1,8 @@
 import assert from "node:assert/strict";
+import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { spawnSync } from "node:child_process";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
@@ -9,9 +13,11 @@ import {
   validateComposition,
   validateHumanState,
   validateHoldouts,
+  validateMosaic,
   validateSuite,
   validateSurvivorship
 } from "../lib/knowledge-composite-validation.mjs";
+import { scanCompiledLifecycleLeaks } from "../check-compiled-lifecycle-leaks.mjs";
 
 const clone = (value) => structuredClone(value);
 const artifacts = readCompositeArtifacts();
@@ -75,6 +81,87 @@ test("survivorship mutation catches historical absence overclaim", () => {
   const population = register.populations.find((item) => item.status === "not-recovered");
   population.boundary = "The page never existed.";
   assert.match(validateSurvivorship(register).join("\n"), /not proof of nonexistence/);
+});
+
+test("survivorship mutations preserve separate rights and non-automatic re-entry", () => {
+  const register = clone(artifacts.survivorship);
+  register.rightsDimensions.pop();
+  register.reentryRule = "Photo leads become public claims automatically.";
+  const errors = validateSurvivorship(register).join("\n");
+  assert.match(errors, /Rights dimensions must remain separate and complete/);
+  assert.match(errors, /block automatic claim promotion/);
+});
+
+test("mosaic review requires combinations, continuing holds, and candidate binding", () => {
+  assert.deepEqual(validateMosaic(artifacts.mosaic), []);
+  const mosaic = clone(artifacts.mosaic);
+  mosaic.findings.pop();
+  mosaic.findings[0].combination = ["one fragment"];
+  let errors = validateMosaic(mosaic).join("\n");
+  assert.match(errors, /at least six combination-risk findings/);
+  assert.match(errors, /combination of at least two fragments/);
+  errors = validateMosaic(artifacts.mosaic, {
+    expectedCandidateFingerprint: "different",
+    requireBinding: true
+  }).join("\n");
+  assert.match(errors, /not bound to the candidate fingerprint/);
+});
+
+test("operator commands reject unsafe input and remain non-promoting", () => {
+  const directory = mkdtempSync(path.join(os.tmpdir(), "knowledge-intake-test-"));
+  try {
+    const safePath = path.join(directory, "safe.json");
+    const unsafePath = path.join(directory, "unsafe.json");
+    const candidate = {
+      id: "INT-TEST-PUBLIC-SAFE-2099-01-01",
+      receivedAt: "2099-01-01",
+      kind: "claim-hypothesis",
+      visibility: "public-safe",
+      title: "Test candidate",
+      description: "A bounded test fragment.",
+      whyItMatters: "Exercises intake without creating a claim.",
+      projectIds: ["test-project"],
+      status: "deferred",
+      disposition: "deferred-with-reason",
+      dispositionNote: "Test only; no claim created.",
+      sourceIds: [], claimIds: [], inquiryIds: [], correctionIds: [],
+      relatedIntakeIds: [], artifactPaths: [],
+      boundaries: ["Do not promote automatically."]
+    };
+    writeFileSync(safePath, JSON.stringify(candidate));
+    writeFileSync(unsafePath, JSON.stringify({ ...candidate, id: "INT-TEST-UNSAFE-2099-01-01", description: "Private source at /Users/example/archive." }));
+    const safe = spawnSync(process.execPath, ["scripts/knowledge-intake.mjs", "--validate", safePath], { encoding: "utf8" });
+    assert.equal(safe.status, 0);
+    assert.match(safe.stdout, /No canonical record or public claim was created/);
+    const unsafe = spawnSync(process.execPath, ["scripts/knowledge-intake.mjs", "--validate", unsafePath], { encoding: "utf8" });
+    assert.notEqual(unsafe.status, 0);
+    assert.match(unsafe.stderr, /protected marker/);
+    const invalidQuery = spawnSync(process.execPath, ["scripts/query-knowledge-lifecycle.mjs", "--view", "unbounded"], { encoding: "utf8" });
+    assert.notEqual(invalidQuery.status, 0);
+    assert.match(invalidQuery.stderr, /held, research, or proof-debt/);
+    const report = spawnSync(process.execPath, ["scripts/report-knowledge-lifecycle.mjs", "--stdout"], { encoding: "utf8" });
+    assert.equal(report.status, 0);
+    assert.match(report.stdout, /Human-only blockers/);
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test("compiled leak scanner rejects private locators, credentials, and HTML phone strings", () => {
+  const directory = mkdtempSync(path.join(os.tmpdir(), "knowledge-leak-test-"));
+  try {
+    const html = path.join(directory, "page.html");
+    const json = path.join(directory, "registry.json");
+    writeFileSync(html, "<p>Call 212-555-0199</p>");
+    const credentialKey = ["api", "key"].join("_");
+    writeFileSync(json, JSON.stringify({ path: "/Volumes/private/archive", [credentialKey]: "fixture-value-12345" }));
+    const result = scanCompiledLifecycleLeaks([directory]);
+    assert.match(result.failures.join("\n"), /machine-local path/);
+    assert.match(result.failures.join("\n"), /credential marker/);
+    assert.match(result.failures.join("\n"), /phone-like string/);
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
 });
 
 test("human gates cannot be replaced by automated approval", () => {

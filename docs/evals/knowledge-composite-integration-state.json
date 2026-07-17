@@ -17,7 +17,9 @@
   "instrumentDefects": [
     "Iteration 1 found that holdoutResult.errors could overwrite structural validation errors in the composite return object; the merge order was corrected before scoring.",
     "Iteration 2 found expected compiler worktree paths in non-public Next.js server implementation bundles; the leak checker was narrowed to rendered and publicly served text while retaining static-client scans.",
-    "Iteration 3 found that an empty holdout set normalized to Infinity through Math.min; missing receipts now normalize every criterion to zero and fail explicitly."
+    "Iteration 3 found that an empty holdout set normalized to Infinity through Math.min; missing receipts now normalize every criterion to zero and fail explicitly.",
+    "Iteration 4 discarded both first-pass holdouts after one judge identified an unbound mosaic receipt and thin mosaic, operator, rights, and re-entry mutation coverage. Those controls were added before a new candidate was frozen.",
+    "The first holdout harness attempt used const fields without explicit JSON Schema types and was rejected by the response-format validator; the external harness schema was repaired and neither failed session was counted."
   ],
   "candidateDefects": ["Independent unchanged-candidate holdouts have not yet run."],
   "allowedPostCandidatePaths": [

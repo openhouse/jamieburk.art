@@ -185,6 +185,32 @@ export function validateSurvivorship(register) {
   return errors;
 }
 
+export function validateMosaic(
+  mosaic,
+  { expectedCandidateFingerprint, requireBinding = false } = {}
+) {
+  const errors = [];
+  if (mosaic.version !== 1) errors.push("Mosaic review version must be 1");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(mosaic.reviewedAt ?? "")) errors.push("Mosaic review needs a date");
+  if (mosaic.isLegalReview !== false) errors.push("Mosaic review must not claim legal review");
+  if (mosaic.isParticipantApproval !== false) errors.push("Mosaic review must not claim participant approval");
+  if (mosaic.result !== "pass-with-continuing-holds") errors.push("Mosaic result must retain continuing holds");
+  const findings = mosaic.findings ?? [];
+  if (findings.length < 6) errors.push("Mosaic review must retain at least six combination-risk findings");
+  for (const id of duplicates(findings.map((finding) => finding.id))) errors.push(`Duplicate mosaic finding: ${id}`);
+  for (const finding of findings) {
+    if (!Array.isArray(finding.combination) || finding.combination.length < 2) errors.push(`${finding.id} must evaluate a combination of at least two fragments`);
+    if (!finding.risk || !finding.decision) errors.push(`${finding.id} needs a risk and decision`);
+    if (!Array.isArray(finding.appliesTo) || !finding.appliesTo.length) errors.push(`${finding.id} needs an appliesTo scope`);
+  }
+  const limitations = (mosaic.limitations ?? []).join(" ");
+  if (!/not legal advice/i.test(limitations)) errors.push("Mosaic review must disclaim legal advice");
+  if (!/(does not grant|not grant).*(rights|permission|consent|approval)/i.test(limitations)) errors.push("Mosaic review must not grant rights, consent, or approval");
+  if (!/rerun/i.test(limitations)) errors.push("Mosaic review must identify when it needs to be rerun");
+  if (requireBinding && mosaic.candidateFingerprint !== expectedCandidateFingerprint) errors.push("Mosaic review is not bound to the candidate fingerprint");
+  return errors;
+}
+
 export function validateHumanState(state, blindStatus) {
   const errors = [];
   const automatedApproval = /automated|ai-approved|machine-approved/i;
@@ -288,6 +314,7 @@ export function validateCompositeArtifacts(artifacts, { requireHoldouts = true }
     ...validateAgency(agency),
     ...validateComposition(composition, agency),
     ...validateSurvivorship(survivorship),
+    ...validateMosaic(mosaic),
     ...validateHumanState(state, blindStatus),
     ...validatePackageScripts(packageJson)
   ];
@@ -304,7 +331,7 @@ export function validateCompositeArtifacts(artifacts, { requireHoldouts = true }
   if (requireHoldouts) {
     if (state.contractFingerprint !== expectedContractFingerprint) errors.push("State contract fingerprint is stale");
     if (state.candidateFingerprint !== expectedCandidateFingerprint) errors.push("State candidate fingerprint is stale");
-    if (mosaic.candidateFingerprint !== expectedCandidateFingerprint) errors.push("Mosaic review is not bound to the candidate fingerprint");
+    errors.push(...validateMosaic(mosaic, { expectedCandidateFingerprint, requireBinding: true }));
     if (!/^[a-f0-9]{40}$/.test(state.candidateSha ?? "")) errors.push("State candidateSha must be a full implementation commit SHA");
     if (state.decision !== "pass_for_code_review") errors.push("Composite state decision must be pass_for_code_review");
     if ((state.holdoutReceiptPaths ?? []).length !== 2) errors.push("State must list exactly two holdout receipts");

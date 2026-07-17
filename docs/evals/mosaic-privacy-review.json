@@ -4,7 +4,7 @@
   "reviewType": "public-safe editorial risk review",
   "isLegalReview": false,
   "isParticipantApproval": false,
-  "candidateFingerprint": "PENDING-CANDIDATE-FINGERPRINT",
+  "candidateFingerprint": "376d14baf95156bd2a8568fcdb806b181ff000a8c0ef72a970280e119cf84a18",
   "findings": [
     {
       "id": "MPR-001",
