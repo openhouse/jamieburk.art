@@ -6,7 +6,7 @@
 `fc32ae02b275f5e18e3abb5e6c541256849980ef`
 
 **Atlas candidate:**
-`926e9b8e3cd46782fb7fe7a80a094b473499d8b12c4dda8565c09189bb2a6f1a`
+`1643bdc885557477bef70b4290f1ced239330fc07f7e5e54fa7a07c09ad7cddf`
 
 ## Objective
 
@@ -15,7 +15,7 @@ Improve evaluation coverage lexicographically:
 1. Do not increase inherited hard-gate failures.
 2. Do not increase inherited quality-target gaps.
 3. Add deterministic coverage for semantic Markdown, migration loss,
-   cross-branch source completeness, named stakeholder credit, authority,
+   source-dossier completeness, named stakeholder credit, authority,
    public safety, package boundaries, exact candidate identity, portability,
    disposition, variation, time, correction, epistemic projection, negative
    knowledge, rights, collective credit, ontology evolution, navigation,
@@ -90,7 +90,7 @@ Atlas preserves the inherited floor and adds:
 
 Across the deterministic launch, lifecycle, and Atlas evaluators, coverage now
 totals 70 hard gates and 18 quality targets while all observed automated
-failures and gaps remain at zero. The final clean repository run passes 178
+failures and gaps remain at zero. The final clean repository run passes 185
 tests: 10 citation, 14 launch-readiness, 115 knowledge-lifecycle, and 46 Atlas.
 
 ## Recursive iterations
