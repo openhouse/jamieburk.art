@@ -1,6 +1,6 @@
 {
   "id": "jamieburk-art-composite-eval-contract",
-  "version": "2.2.0",
+  "version": "2.1.0",
   "publishedAt": "2026-07-16",
   "objective": "Improve portfolio usefulness while preserving public safety, source boundaries, collective credit, reader clarity, and human release authority.",
   "suites": [
@@ -37,7 +37,6 @@
   ],
   "generatedOutputs": [
     "apps/www/.next",
-    "apps/www/tsconfig.tsbuildinfo",
     "evals/_shared/runs",
     "evals/knowledge-bank/runs",
     "evals/launch-readiness/runs",
