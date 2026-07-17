@@ -9,6 +9,7 @@ import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import {
   readCompositeArtifacts,
   validateAgency,
+  validateCandidateGitBinding,
   validateCompositeArtifacts,
   validateComposition,
   validateHumanState,
@@ -198,6 +199,66 @@ test("holdout validation rejects self-grading and candidate drift", () => {
   ];
   const result = validateHoldouts({ suite, state, receipts, expectedContractFingerprint: "contract", expectedCandidateFingerprint: "candidate" });
   assert.match(result.errors.join("\n"), /Optimizer may not grade|different candidate fingerprint/);
+});
+
+test("holdout validation rejects duplicate criterion scores", () => {
+  const suite = clone(artifacts.suite);
+  const state = { ...clone(artifacts.state), candidateSha: "a".repeat(40) };
+  const scores = suite.evals.map((entry) => ({ id: entry.id, score: 4, rationale: "fixture", evidencePaths: ["fixture"] }));
+  scores.push({ ...scores[0] });
+  const receipt = {
+    version: 1,
+    judgeIdentity: "judge-1",
+    judgeRole: "read-only-independent",
+    authoredPatch: false,
+    sawOptimizationHistory: false,
+    candidateSha: state.candidateSha,
+    contractFingerprint: "contract",
+    candidateFingerprint: "candidate",
+    scores,
+    criticalRegressions: [],
+    decision: "pass_for_code_review"
+  };
+  const result = validateHoldouts({
+    suite,
+    state,
+    receipts: [receipt, { ...receipt, judgeIdentity: "judge-2" }],
+    expectedContractFingerprint: "contract",
+    expectedCandidateFingerprint: "candidate"
+  });
+  assert.match(result.errors.join("\n"), /score each eval exactly once/);
+});
+
+test("candidate binding rejects arbitrary SHAs and post-candidate implementation drift", () => {
+  const state = {
+    ...clone(artifacts.state),
+    candidateSha: "a".repeat(40),
+    allowedPostCandidatePaths: [
+      "docs/evals/knowledge-composite-integration-state.json",
+      "docs/evals/runs/2026-07-16-knowledge-composite-integration.md",
+      "docs/evals/runs/2026-07-16-knowledge-composite-holdout-1.json",
+      "docs/evals/runs/2026-07-16-knowledge-composite-holdout-2.json"
+    ]
+  };
+  let errors = validateCandidateGitBinding(state, {
+    headSha: "b".repeat(40),
+    commitExists: false,
+    candidateIsAncestor: false,
+    changedPaths: []
+  }).join("\n");
+  assert.match(errors, /does not resolve to a Git commit/);
+  assert.match(errors, /must be an ancestor/);
+
+  errors = validateCandidateGitBinding(state, {
+    headSha: "b".repeat(40),
+    commitExists: true,
+    candidateIsAncestor: true,
+    changedPaths: [
+      "docs/evals/knowledge-composite-integration-state.json",
+      "scripts/lib/knowledge-composite-validation.mjs"
+    ]
+  }).join("\n");
+  assert.match(errors, /exceed the evidence-only allowlist/);
 });
 
 test("missing holdouts normalize to zero instead of an accidental pass", () => {

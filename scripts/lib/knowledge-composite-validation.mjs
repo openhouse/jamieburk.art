@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -14,6 +15,13 @@ const sameSet = (left, right) =>
   JSON.stringify(sorted(new Set(left))) === JSON.stringify(sorted(new Set(right)));
 const duplicates = (values) => values.filter((value, index) => values.indexOf(value) !== index);
 const sha256 = (value) => createHash("sha256").update(value).digest("hex");
+
+export const expectedPostCandidatePaths = [
+  "docs/evals/knowledge-composite-integration-state.json",
+  "docs/evals/runs/2026-07-16-knowledge-composite-integration.md",
+  "docs/evals/runs/2026-07-16-knowledge-composite-holdout-1.json",
+  "docs/evals/runs/2026-07-16-knowledge-composite-holdout-2.json"
+];
 
 export function contractFingerprint(suite = readJson(".agents/evals/knowledge-composite-integration.json")) {
   return sha256(`${JSON.stringify(suite)}\n`);
@@ -265,7 +273,9 @@ export function validateHoldouts({ suite, state, receipts, expectedContractFinge
     if (receipt.candidateSha !== state.candidateSha) errors.push(`${receipt.judgeIdentity} reviewed a different candidate SHA`);
     if (receipt.contractFingerprint !== expectedContractFingerprint) errors.push(`${receipt.judgeIdentity} reviewed a different contract fingerprint`);
     if (receipt.candidateFingerprint !== expectedCandidateFingerprint) errors.push(`${receipt.judgeIdentity} reviewed a different candidate fingerprint`);
-    if (!sameSet((receipt.scores ?? []).map((score) => score.id), expectedIds)) errors.push(`${receipt.judgeIdentity} must score the exact eval set`);
+    const scoreIds = (receipt.scores ?? []).map((score) => score.id);
+    if (!sameSet(scoreIds, expectedIds)) errors.push(`${receipt.judgeIdentity} must score the exact eval set`);
+    if (duplicates(scoreIds).length) errors.push(`${receipt.judgeIdentity} must score each eval exactly once`);
     for (const score of receipt.scores ?? []) {
       if (!Number.isInteger(score.score) || score.score < 0 || score.score > 4) errors.push(`${receipt.judgeIdentity}/${score.id} has invalid score`);
       if (!score.rationale || !Array.isArray(score.evidencePaths) || !score.evidencePaths.length) errors.push(`${receipt.judgeIdentity}/${score.id} needs rationale and evidence paths`);
@@ -289,6 +299,60 @@ export function validateHoldouts({ suite, state, receipts, expectedContractFinge
   for (const id of expectedIds) if (conservativeScores[id] < profile.all_scores_minimum) errors.push(`${id} conservative score is below ${profile.all_scores_minimum}`);
   for (const id of profile.required_score_4_ids) if (conservativeScores[id] !== 4) errors.push(`${id} conservative score must be 4`);
   return { errors, conservativeScores, weightedScore };
+}
+
+export function readGitCandidateBinding(candidateSha) {
+  const runGit = (args) => execFileSync("git", args, {
+    cwd: repoRoot,
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "pipe"]
+  }).trim();
+  const binding = {
+    headSha: "",
+    commitExists: false,
+    candidateIsAncestor: false,
+    changedPaths: [],
+    error: ""
+  };
+  try {
+    binding.headSha = runGit(["rev-parse", "HEAD"]);
+    runGit(["cat-file", "-e", `${candidateSha}^{commit}`]);
+    binding.commitExists = true;
+    try {
+      runGit(["merge-base", "--is-ancestor", candidateSha, binding.headSha]);
+      binding.candidateIsAncestor = true;
+    } catch {
+      binding.candidateIsAncestor = false;
+    }
+    if (binding.candidateIsAncestor) {
+      const changed = runGit(["diff", "--name-only", `${candidateSha}..${binding.headSha}`]);
+      binding.changedPaths = changed ? changed.split("\n") : [];
+    }
+  } catch (error) {
+    binding.error = error instanceof Error ? error.message : String(error);
+  }
+  return binding;
+}
+
+export function validateCandidateGitBinding(state, binding) {
+  const errors = [];
+  if (!/^[a-f0-9]{40}$/.test(state.candidateSha ?? "")) {
+    errors.push("State candidateSha must be a full implementation commit SHA");
+    return errors;
+  }
+  if (!sameSet(state.allowedPostCandidatePaths ?? [], expectedPostCandidatePaths) || duplicates(state.allowedPostCandidatePaths ?? []).length) {
+    errors.push("Post-candidate path allowlist must match the evaluator-owned exact set");
+  }
+  if (binding.error) errors.push(`Unable to inspect candidate Git binding: ${binding.error}`);
+  if (!binding.commitExists) errors.push("State candidateSha does not resolve to a Git commit");
+  if (!binding.candidateIsAncestor) errors.push("State candidateSha must be an ancestor of the checked-out HEAD");
+  const unauthorized = (binding.changedPaths ?? []).filter(
+    (relativePath) => !expectedPostCandidatePaths.includes(relativePath)
+  );
+  if (unauthorized.length) {
+    errors.push(`Post-candidate Git changes exceed the evidence-only allowlist: ${unauthorized.join(", ")}`);
+  }
+  return errors;
 }
 
 export function readCompositeArtifacts() {
@@ -332,7 +396,8 @@ export function validateCompositeArtifacts(artifacts, { requireHoldouts = true }
     if (state.contractFingerprint !== expectedContractFingerprint) errors.push("State contract fingerprint is stale");
     if (state.candidateFingerprint !== expectedCandidateFingerprint) errors.push("State candidate fingerprint is stale");
     errors.push(...validateMosaic(mosaic, { expectedCandidateFingerprint, requireBinding: true }));
-    if (!/^[a-f0-9]{40}$/.test(state.candidateSha ?? "")) errors.push("State candidateSha must be a full implementation commit SHA");
+    const gitBinding = readGitCandidateBinding(state.candidateSha);
+    errors.push(...validateCandidateGitBinding(state, gitBinding));
     if (state.decision !== "pass_for_code_review") errors.push("Composite state decision must be pass_for_code_review");
     if ((state.holdoutReceiptPaths ?? []).length !== 2) errors.push("State must list exactly two holdout receipts");
     holdoutResult = validateHoldouts({ suite, state, receipts, expectedContractFingerprint, expectedCandidateFingerprint });
