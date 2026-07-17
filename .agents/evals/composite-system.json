@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "suite_id": "feature-evals-composite",
+  "title": "Composite knowledge and portfolio evaluation system",
+  "source_branch": "feature/knowledge-i",
+  "pull_request_base": "develop",
+  "objective": "Integrate the strongest mechanisms from the frozen feature/evals-A through feature/evals-N family without duplicating the canonical knowledge graph, weakening public-safety boundaries, or allowing agents to impersonate external evidence.",
+  "branch_family": [
+    { "branch": "feature/evals-A", "pr": 220, "disposition": "adapt", "mechanism": "separated launch, portfolio, and knowledge contracts" },
+    { "branch": "feature/evals-B", "pr": 212, "disposition": "adapt", "mechanism": "composition, role-evidence, mosaic-privacy, and system-risk controls" },
+    { "branch": "feature/evals-C", "pr": 221, "disposition": "adopt", "mechanism": "application and production profiles with diagnostic and closure separation" },
+    { "branch": "feature/evals-D", "pr": 216, "disposition": "adapt", "mechanism": "responsive, accessibility, visual-proof, and observer-integrity evidence" },
+    { "branch": "feature/evals-E", "pr": 211, "disposition": "adopt", "mechanism": "lexicographic optimization and independent blind-reader protocol" },
+    { "branch": "feature/evals-F", "pr": 210, "disposition": "adapt", "mechanism": "application cadence and broad launch integration" },
+    { "branch": "feature/evals-G", "pr": 222, "disposition": "adapt", "mechanism": "source-specific run traceability and independent hybrid grading" },
+    { "branch": "feature/evals-H", "pr": 223, "disposition": "adapt", "mechanism": "release rehearsal, mutation attacks, review locks, and reader compression" },
+    { "branch": "feature/evals-I", "pr": 219, "disposition": "adopt", "mechanism": "canonical graph, corpora, policies, maintenance, and strict knowledge gates" },
+    { "branch": "feature/evals-J", "pr": 209, "disposition": "adopt", "mechanism": "claim-development and projection-candidate separation with explicit application argument" },
+    { "branch": "feature/evals-K", "pr": 217, "disposition": "adapt", "mechanism": "append-safe intake, query, report, and exact-surface operator ergonomics" },
+    { "branch": "feature/evals-L", "pr": 213, "disposition": "adopt", "mechanism": "modular gates, governed-open states, and five-minute hiring review" },
+    { "branch": "feature/evals-M", "pr": 215, "disposition": "adopt", "mechanism": "P0, P1, and P2 release triage" },
+    { "branch": "feature/evals-N", "pr": 214, "disposition": "adapt", "mechanism": "human evidence, outcome transfer, current capability, visual proof, and recursive method" }
+  ],
+  "canonical_layers": [
+    {
+      "id": "knowledge-development",
+      "canonical_store": "apps/www/src/data/knowledge-bank/records.ts",
+      "contract": ".agents/evals/knowledge-bank-development.json",
+      "runner": "scripts/check-knowledge-development.mjs",
+      "test": "scripts/tests/knowledge-development.test.mjs"
+    },
+    {
+      "id": "portfolio-readiness",
+      "canonical_store": ".agents/evals/portfolio-production-readiness.json",
+      "contract": ".agents/evals/portfolio-production-readiness.json",
+      "runner": "scripts/check-portfolio-evals.mjs",
+      "test": "scripts/tests/portfolio-evals.test.mjs"
+    },
+    {
+      "id": "blind-spot-governance",
+      "canonical_store": ".agents/evals/portfolio-blind-spots.json",
+      "contract": ".agents/evals/portfolio-blind-spots.json",
+      "runner": "scripts/check-portfolio-blind-spots.mjs",
+      "test": "scripts/tests/portfolio-blind-spots.test.mjs"
+    },
+    {
+      "id": "modular-domain-evals",
+      "canonical_store": "package.json",
+      "contract": "docs/evals/composite-evaluation-system.md",
+      "runner": "package.json",
+      "test": "scripts/tests/composite-evals.test.mjs"
+    }
+  ],
+  "observer_types": [
+    "deterministic",
+    "browser",
+    "llm_judge",
+    "human_approval",
+    "runtime",
+    "hybrid"
+  ],
+  "statuses": [
+    "criteria_met",
+    "governed_open",
+    "human_blocked",
+    "not_observed",
+    "failed"
+  ],
+  "profiles": {
+    "fast": {
+      "requires_external_evidence": false,
+      "success_status": "criteria_met"
+    },
+    "browser": {
+      "requires_external_evidence": false,
+      "success_status": "criteria_met"
+    },
+    "application": {
+      "requires_external_evidence": true,
+      "success_status": "human_blocked"
+    },
+    "release": {
+      "requires_external_evidence": true,
+      "success_status": "human_blocked"
+    }
+  },
+  "composition_profiles": [
+    { "route": "/", "audience": "first-pass hiring readers and referrers", "reader_decision": "choose a proof path or resume", "claim_budget": 42 },
+    { "route": "/work", "audience": "hiring readers comparing project range", "reader_decision": "select the most relevant case study", "claim_budget": 36 },
+    { "route": "/work/technical-operations", "audience": "technical project and product operations hiring readers", "reader_decision": "connect capabilities to projects and proof", "claim_budget": 48 },
+    { "route": "/resume", "audience": "recruiters and hiring managers", "reader_decision": "view or download the approved resume", "claim_budget": 18 },
+    { "route": "/about", "audience": "readers seeking Jamie's practice and continuity", "reader_decision": "understand the artistic, civic, and technical throughline", "claim_budget": 24 },
+    { "route": "/contact", "audience": "qualified collaborators and hiring readers", "reader_decision": "make contact through an approved path", "claim_budget": 8 }
+  ],
+  "required_commands": [
+    "evals:fast",
+    "evals:knowledge",
+    "evals:portfolio:application",
+    "evals:portfolio:production",
+    "evals:blind-spots",
+    "evals:browser",
+    "evals:release",
+    "knowledge:intake",
+    "knowledge:query",
+    "knowledge:report"
+  ],
+  "required_files": [
+    "docs/evals/composite-integration-decision-log.md",
+    "docs/evals/composite-evaluation-system.md",
+    "docs/evals/external-evidence-protocols.md",
+    "scripts/intake-knowledge-lead.mjs",
+    "scripts/query-knowledge-bank.mjs",
+    "scripts/check-composite-evals.mjs",
+    "scripts/tests/composite-evals.test.mjs"
+  ],
+  "external_gates": [
+    { "id": "EXT-COLLABORATOR", "observer": "human_approval", "status": "human_blocked", "next_action": "Obtain project-relevant collaborator review of the exact candidate." },
+    { "id": "EXT-HIRING-READER", "observer": "human_approval", "status": "human_blocked", "next_action": "Run the unprimed hiring-reader protocol on the exact candidate." },
+    { "id": "EXT-MARKET", "observer": "human_approval", "status": "governed_open", "next_action": "Record a bounded non-identifying application-response sample." },
+    { "id": "EXT-RIGHTS", "observer": "human_approval", "status": "human_blocked", "next_action": "Complete photo-editor selection plus rights and consent review." },
+    { "id": "EXT-PRODUCTION", "observer": "runtime", "status": "not_observed", "next_action": "Deploy only after Jamie approves the exact candidate, then capture DNS, TLS, smoke, indexing, and rollback evidence." }
+  ],
+  "optimization": {
+    "maximum_iterations": 8,
+    "stop_after_no_improvement_iterations": 3,
+    "two_unchanged_passes_required": true,
+    "rubric_frozen_during_run": true,
+    "optimizer_may_not_grade_own_patch": true,
+    "selection_order": [
+      "public-safety, privacy, factual-integrity, and collective-credit failures",
+      "deterministic and runtime hard-gate failures",
+      "blocking criteria by severity",
+      "largest weighted semantic gap",
+      "smallest low-risk quality improvement"
+    ]
+  },
+  "anti_gaming": [
+    "Do not delete evidence, claims, routes, qualifiers, anti-claims, or accessibility affordances to improve a score.",
+    "Do not convert a protocol, recollection, source mention, platform metric, chronology, or current authenticated view into completion, endorsement, impact, causality, or lifetime coverage.",
+    "Do not hide Jamie's supported agency behind vague team language or erase collaborators to make Jamie more visible.",
+    "Do not expose protected sources, private paths, raw text, authenticated state, contact data, or uncleared media.",
+    "Do not let an optimizing agent provide its own independent score or human approval."
+  ]
+}

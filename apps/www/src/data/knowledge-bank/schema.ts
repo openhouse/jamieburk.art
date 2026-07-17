@@ -52,6 +52,7 @@ export const intakeItemSchema = z.object({
   capturedAt: z.iso.date(),
   capturedFrom: z.string().min(1),
   publicSafeSummary: z.string().min(1),
+  publicUrl: publicUrlSchema.optional(),
   projects: z.array(stableIdSchema).min(1),
   status: z.enum(["captured", "triaged", "decomposed", "integrated", "held"]),
   disposition: z.enum([

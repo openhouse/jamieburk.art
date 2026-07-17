@@ -38,6 +38,11 @@ npm run report:citations
 npm run evals:portfolio
 npm run test:portfolio-evals
 npm run check:chad-lens
+npm run evals:fast
+npm run evals:release
+npm run knowledge:intake -- --title "..." --summary "..." --project callnyc --kind public-url
+npm run knowledge:query -- --project callnyc --publication-safe
+npm run knowledge:report
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -76,6 +81,19 @@ mode boundaries, evidence requirements, and human-approval stop condition.
 Jamie's role, action, practical end, usable result, and contribution boundaries
 explicit. See `docs/evals/portfolio-production-readiness.md` for the recursive
 agent protocol.
+
+The composite system in `.agents/evals/composite-system.json` coordinates the
+knowledge, portfolio, blind-spot, and modular domain suites without creating a
+second claim graph. `npm run evals:fast` validates the agent-verifiable contract;
+`npm run evals:release` stops honestly at collaborator, hiring-reader, rights,
+market, and exact-production observations. See
+`docs/evals/composite-evaluation-system.md` and
+`docs/evals/composite-integration-decision-log.md`.
+
+`npm run knowledge:intake` previews a public-safe intake receipt and writes only
+when passed `--write`; its default queue is ignored under `reports/generated/`.
+`npm run knowledge:query` requires a bounded filter and never returns protected
+source contents. Canonical integration still happens through reviewed batches.
 
 ## Environment
 
