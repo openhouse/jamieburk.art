@@ -58,7 +58,7 @@ const suite = JSON.parse(
 );
 const hybridReport = JSON.parse(
   readFileSync(
-    ".agents/evals/runs/knowledge-bank-development-hybrid-2026-07-13.json",
+    ".agents/evals/runs/knowledge-bank-development-hybrid-2026-07-16.json",
     "utf8"
   )
 );
