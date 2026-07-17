@@ -2,9 +2,11 @@
 
 Date: 2026-07-16
 
-This version 2 certification is preserved as an iteration record. Version 3
-supersedes it after independent review identified unbound hard-gate inputs and
-an append-only gate that did not yet execute Git-history validation.
+This version 2 certification is preserved as an iteration record. Versions 3
+and 4 supersede it after independent review identified unbound hard-gate
+inputs, an append-only gate that did not yet execute Git-history validation,
+and a reviewability count that included artifacts excluded from both
+fingerprints.
 
 ## Stop Decision
 

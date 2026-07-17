@@ -59,6 +59,12 @@ gate now runs the Git-history prefix validation rather than inferring
 append-only integrity from file presence and event types. Version 2 judgments
 and certification are therefore superseded.
 
+Version 4 binds reviewability to the same candidate and contract surface as the
+judgments. Generated composite judgments, certification, baselines, and the
+stop record no longer change the reviewability count after the candidate is
+frozen. This prevents excluded evaluation artifacts from changing a hard gate
+without changing either fingerprint.
+
 ## Evidence layers
 
 Deterministic checks, model judgments, human-reader evidence, rights review,

@@ -12,6 +12,7 @@ import {
   evaluateSemanticFixtures,
   findPrivatePaths,
   fingerprintPaths,
+  isFingerprintBoundPath,
   scoreRubrics,
   validateCompositeSuite,
   validateJudgments
@@ -37,7 +38,7 @@ function git(args) {
   }).trim();
 }
 
-function diffStats(baseRef) {
+function diffStats(baseRef, include = () => true) {
   const output = git(["diff", "--numstat", `${baseRef}...HEAD`]);
   const rows = output.split("\n").filter(Boolean).map((line) => {
     const [added, deleted, ...parts] = line.split("\t");
@@ -46,7 +47,7 @@ function diffStats(baseRef) {
       deleted: deleted === "-" ? 0 : Number(deleted),
       path: parts.join("\t")
     };
-  });
+  }).filter((row) => include(row.path));
   return {
     baseRef,
     changedFiles: rows.length,
@@ -119,7 +120,7 @@ const judgments = existsSync(judgmentDirectory)
 const judgmentResult = validateJudgments({ judgments, suite, candidate, contract });
 
 const inheritedStats = diffStats("origin/develop");
-const integrationStats = diffStats(suite.startSha);
+const integrationStats = diffStats(suite.startSha, (relativePath) => isFingerprintBoundPath(relativePath, suite));
 const reviewability = evaluateReviewability(integrationStats, suite.reviewabilityThresholds);
 
 const regressions = skipRegression ? [] : [

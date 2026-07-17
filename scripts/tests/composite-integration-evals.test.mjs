@@ -8,6 +8,7 @@ import {
   evaluateReviewability,
   evaluateSemanticFixtures,
   findPrivatePaths,
+  isFingerprintBoundPath,
   scoreRubrics,
   validateCompositeSuite,
   validateJudgments
@@ -16,9 +17,9 @@ import {
 const suite = JSON.parse(readFileSync("evals/composite-integration/suite.json", "utf8"));
 const fixtures = JSON.parse(readFileSync(suite.semanticFixturePath, "utf8"));
 
-test("composite v3 contract pins A through N and binds every hard-gate input", () => {
+test("composite v4 contract pins A through N and binds every hard-gate input", () => {
   assert.deepEqual(validateCompositeSuite(suite), []);
-  assert.equal(suite.version, 3);
+  assert.equal(suite.version, 4);
   assert.equal(suite.frozenBranches.length, 14);
   assert.equal(suite.rubrics.reduce((total, item) => total + item.weight, 0), 100);
   assert.ok(suite.contractPaths.includes(suite.ledgerPath));
@@ -27,6 +28,16 @@ test("composite v3 contract pins A through N and binds every hard-gate input", (
   const unbound = structuredClone(suite);
   unbound.contractPaths = unbound.contractPaths.filter((item) => item !== suite.ledgerPath);
   assert.match(validateCompositeSuite(unbound).join("\n"), /branch-family-inventory\.json/);
+});
+
+test("reviewability includes only candidate- or contract-bound paths", () => {
+  assert.equal(isFingerprintBoundPath(suite.ledgerPath, suite), true);
+  assert.equal(isFingerprintBoundPath(suite.governancePath, suite), true);
+  assert.equal(isFingerprintBoundPath(suite.historyPath, suite), true);
+  assert.equal(isFingerprintBoundPath("evals/portfolio-readiness/judgments/application_ready/hiring-manager.json", suite), true);
+  assert.equal(isFingerprintBoundPath("evals/composite-integration/judgments/archival-editorial.json", suite), false);
+  assert.equal(isFingerprintBoundPath("evals/composite-integration/evidence/certification.json", suite), false);
+  assert.equal(isFingerprintBoundPath("docs/evals/runs/feature-knowledge-c-composite.md", suite), false);
 });
 
 test("branch accounting requires exact frozen SHAs and dispositions", () => {
