@@ -1,0 +1,22 @@
+
+> test:knowledge-tools
+> node --test scripts/tests/knowledge-tools.test.mjs
+
+(node:42961) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ intake creates a stable validated receipt without promoting a claim (5.855625ms)
+✔ duplicate source leads are preserved and labeled (1.1275ms)
+✔ private paths cannot enter an intake receipt (2.639417ms)
+✔ source URLs have one comparison form (0.112ms)
+✔ duplicate title comparison normalizes trailing and repeated whitespace (0.466959ms)
+✔ query distinguishes record classes and filters projects (0.593792ms)
+✔ active query excludes claims with only held projections (0.491584ms)
+✔ reports keep active and held knowledge visibly distinct (0.959166ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 544.8835

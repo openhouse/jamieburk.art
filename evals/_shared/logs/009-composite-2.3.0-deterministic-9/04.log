@@ -1,0 +1,29 @@
+
+> test:launch-evals
+> node --test scripts/tests/launch-evals.test.mjs
+
+✔ launch-readiness eval suite is structurally valid (2.463583ms)
+✔ launch-readiness source intentions hold (2.624ms)
+✔ machine-readable run records reproduce their declared decisions (196.25125ms)
+✔ a declared hard-gate result cannot use a fabricated candidate commit (0.990709ms)
+✔ a passing run cannot replace hard-gate records with a trust-me note (63.441166ms)
+✔ a passing scorecard reaches the deterministic target (0.532791ms)
+✔ hard-gate failure cannot be averaged away (0.150917ms)
+✔ one criterion below its floor rejects an otherwise strong run (0.826667ms)
+✔ the Chad lens is explicit and cannot be averaged away (0.698833ms)
+✔ the Margaret Morse lens is explicit and cannot be averaged away (1.964042ms)
+✔ the Warren Sack lens is explicit and cannot be averaged away (0.628959ms)
+✔ the Warren Sack lens rejects collapsed judgment and model final authority (1.663667ms)
+✔ an aggregate pass cannot omit the per-run decision record (0.36975ms)
+✔ every decision dimension needs evidence and an unresolved-risks array (0.1055ms)
+✔ reopen review covers every trigger and invoked overrides carry provenance (0.096708ms)
+✔ authority records cannot substitute a model or generic reviewer for policy owners (0.119375ms)
+✔ live disagreement survives an accepted aggregate result (1.721625ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 431.823958

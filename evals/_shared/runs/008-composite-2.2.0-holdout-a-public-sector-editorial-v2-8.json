@@ -4,7 +4,7 @@
   "iteration": 8,
   "recordedAt": "2026-07-17T02:28:29.941Z",
   "previousRunId": "composite-2.2.0-holdout-b-evaluation-archive-v2-7",
-  "previousRunDigest": "4159e5d63e2f0f319f36ba955457de50abc339bf8a10ff11d10c4662fff6928a",
+  "previousRunDigest": "708731124082e35f59d39b73951caa4c60468e50155edeb466a55a6dc21d4a21",
   "contract": {
     "id": "jamieburk-art-composite-eval-contract",
     "version": "2.2.0",
@@ -30,7 +30,7 @@
     "independent": true,
     "priorScoresVisible": false,
     "promptPath": "evals/_shared/prompts/2.2.0/holdout-a.md",
-    "promptDigest": "f16385bba9d84a7f2711d872af6d0c23084922853bf678a9c92d892e378f9437"
+    "promptDigest": "f30371a79b7fa02bb308efe874c21f86fb020a63bb5ead19a3db4e608422c6e4"
   },
   "criterionResults": [
     {
@@ -163,5 +163,5 @@
     ]
   },
   "summary": "Candidate ee45f8f8 is not PR-review ready despite strong role clarity and operating credibility; evidence and composite governance remain below the frozen floors.",
-  "recordDigest": "741044abea4fb6fe877a155ed520d5cfa515d7b0179aa6f60ec1db0576d396bc"
+  "recordDigest": "3051fef12a88f73c3bd30fb82150ea9b78d3208ea878761335b2f1ff70213478"
 }

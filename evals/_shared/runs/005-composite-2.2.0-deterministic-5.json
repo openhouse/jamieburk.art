@@ -4,7 +4,7 @@
   "iteration": 5,
   "recordedAt": "2026-07-17T02:14:44.933Z",
   "previousRunId": "composite-holdout-b-rejection",
-  "previousRunDigest": "c6980bb87671e6c18228c000b914416e5a3cc5626ad5c71bbcb2909d0090cb6d",
+  "previousRunDigest": "0dfe1c25e48004152638a64ef8e445f5dda72fd3c0fd76b0c70aa30273ab478e",
   "contract": {
     "id": "jamieburk-art-composite-eval-contract",
     "version": "2.2.0",
@@ -195,5 +195,5 @@
       "Jamie approval of the exact production SHA"
     ]
   },
-  "recordDigest": "1aa4d0cf1a3abd4b4bfbc68b890448035f41f633cb2531bf5b9d96c35f189823"
+  "recordDigest": "dbb0db9e0a1372d330704660d22702a47439ef688d6306d4b64818e7cf0cf025"
 }

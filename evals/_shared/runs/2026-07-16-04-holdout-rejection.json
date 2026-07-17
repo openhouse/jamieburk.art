@@ -36,7 +36,7 @@
     "independent": true,
     "priorScoresVisible": false,
     "promptPath": "evals/_shared/prompts/2.0.0/holdout-b.md",
-    "promptDigest": "9835b58e0b6e23af90ebfd1cf8823e766aecc7cf9422bb53c70bf17ccb83c34f",
+    "promptDigest": "a56bd860b580ccf8af5de0d3fee47454538e8028bfd85bc635395a71cd18b808",
     "promptBasis": "Reconstructed governed equivalent of the original blind brief."
   },
   "criterionResults": [
@@ -151,6 +151,6 @@
   },
   "summary": "The candidate missed the weighted target and the evidence and Sack floors; the candidate was rejected.",
   "previousRunId": "composite-holdout-a-rejection",
-  "previousRunDigest": "b69374b790251955b82688a7bb3d56921f1cb3a014f05753233c30bd5f41e026",
-  "recordDigest": "c6980bb87671e6c18228c000b914416e5a3cc5626ad5c71bbcb2909d0090cb6d"
+  "previousRunDigest": "663db8db97e2c2453a4a44364379cbab90a6a606f51f01722860e054bb92946a",
+  "recordDigest": "0dfe1c25e48004152638a64ef8e445f5dda72fd3c0fd76b0c70aa30273ab478e"
 }

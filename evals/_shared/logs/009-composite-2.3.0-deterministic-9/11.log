@@ -1,0 +1,25 @@
+
+> test:projections
+> node --test scripts/tests/projection-consistency.test.mjs
+
+(node:43099) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ current canonical projections and public registry are consistent (13.092333ms)
+✔ repository-authored public evidence is pinned to an immutable snapshot (0.216916ms)
+✔ projection validation cannot pass without scanning public surfaces (1.829541ms)
+✔ generated registry drift is rejected (10.087541ms)
+✔ a held projection leaked through a public surface is rejected (9.58325ms)
+✔ default-ignorable characters cannot conceal a held projection (9.853625ms)
+✔ held claim and protected source identifiers cannot enter public surfaces (1.576959ms)
+✔ an active projection without an authorized surface is rejected (15.418125ms)
+✔ an occurrence cannot exceed the projection's authorized surfaces (13.91275ms)
+✔ a protected source cannot become a public citation (15.676541ms)
+✔ Unicode dash normalization cannot hide superseded wording (10.047792ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 620.201583

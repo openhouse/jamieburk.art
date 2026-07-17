@@ -4,7 +4,7 @@
   "iteration": 7,
   "recordedAt": "2026-07-17T02:27:32.660Z",
   "previousRunId": "composite-2.2.0-deterministic-6",
-  "previousRunDigest": "bc790c5a9a9e096bc408daaebd17de56af433ba4ccc5b69a5a76563b4397361c",
+  "previousRunDigest": "c9c4d17ae5fd352b15d7a3410b2e4878e62e2cb1268e5e74a8515295b51a01f0",
   "contract": {
     "id": "jamieburk-art-composite-eval-contract",
     "version": "2.2.0",
@@ -30,7 +30,7 @@
     "independent": true,
     "priorScoresVisible": false,
     "promptPath": "evals/_shared/prompts/2.2.0/holdout-b.md",
-    "promptDigest": "9835b58e0b6e23af90ebfd1cf8823e766aecc7cf9422bb53c70bf17ccb83c34f"
+    "promptDigest": "a56bd860b580ccf8af5de0d3fee47454538e8028bfd85bc635395a71cd18b808"
   },
   "criterionResults": [
     {
@@ -165,5 +165,5 @@
     ]
   },
   "summary": "Candidate ee45f8f8 is not PR-review ready; weighted score 3.76, with evidence, collective-credit, and Sack floors missed.",
-  "recordDigest": "4159e5d63e2f0f319f36ba955457de50abc339bf8a10ff11d10c4662fff6928a"
+  "recordDigest": "708731124082e35f59d39b73951caa4c60468e50155edeb466a55a6dc21d4a21"
 }
