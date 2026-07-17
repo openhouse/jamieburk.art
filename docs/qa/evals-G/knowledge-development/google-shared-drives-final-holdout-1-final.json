@@ -1,0 +1,296 @@
+{
+  "suite_id": "knowledge-development-lifecycle",
+  "suite_version": 1,
+  "label": "google-shared-drives-final-holdout-1",
+  "run_at": "2026-07-14T22:38:09.229Z",
+  "candidate_files": [
+    ".agents/evals/knowledge-development.json",
+    "scripts/run-knowledge-development.mjs",
+    "apps/www/src/data/knowledge-bank/development-records.ts",
+    "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts",
+    "apps/www/src/data/knowledge-bank/campaign-press.ts",
+    "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
+    "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
+    "apps/www/src/data/knowledge-bank/teams-archive.ts",
+    "apps/www/src/data/knowledge-bank/google-shared-drives.ts",
+    "apps/www/src/data/knowledge-bank/schema.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "apps/www/src/content/work/196-sunday-dinner.mdx",
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "apps/www/src/content/work/kc-town-hall.mdx",
+    "docs/knowledge-bank/claims.md",
+    "docs/knowledge-bank/proofs.md",
+    "docs/knowledge-bank/sources.md",
+    "docs/knowledge-bank/anti-claims.md",
+    "docs/knowledge-bank/approval-register.md",
+    "docs/knowledge-bank/projection-map.md",
+    "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
+    "docs/knowledge-bank/projects/kc-town-hall-funding.md",
+    "docs/knowledge-bank/projects/teams-archive-production.md",
+    "docs/knowledge-bank/projects/google-shared-drives-production.md",
+    "scripts/lib/citation-validation.mjs",
+    "scripts/tests/citations.test.mjs",
+    "scripts/tests/knowledge-development-evals.test.mjs",
+    "docs/knowledge-bank/promotion-slate.md"
+  ],
+  "candidate_fingerprint": "bfddf9b436d70a91e9cf843ea4e94c7d22ce60910113bf23aeeb7b715a78e46b",
+  "judgment_fingerprint": "bfddf9b436d70a91e9cf843ea4e94c7d22ce60910113bf23aeeb7b715a78e46b",
+  "judgment_fingerprint_missing": false,
+  "judgment_fingerprint_mismatch": false,
+  "metrics": {
+    "captures": 43,
+    "routedCaptures": 43,
+    "sources": 88,
+    "developmentSources": 81,
+    "observations": 125,
+    "developmentClaims": 29,
+    "researchTasks": 19,
+    "campaignPressPlacements": 45,
+    "campaignPressUniqueArticles": 44,
+    "kcTownHallFundingSources": 5,
+    "kcTownHallFundingClaims": 3,
+    "teamsArchiveCaptures": 6,
+    "teamsArchiveSources": 10,
+    "teamsArchiveObservations": 23,
+    "teamsArchiveClaims": 5,
+    "googleSharedDriveCaptures": 9,
+    "googleSharedDriveSources": 6,
+    "googleSharedDriveObservations": 18,
+    "googleSharedDriveClaims": 5,
+    "googleSharedDriveUnreviewed": 96,
+    "validationErrors": 0
+  },
+  "weighted_score": 0.9925,
+  "threshold": 0.85,
+  "criteria_met": true,
+  "blocking_failures": [],
+  "nonblocking_failures": [],
+  "missing_judgments": [],
+  "evals": [
+    {
+      "eval_id": "KD-001",
+      "title": "Low-friction capture with no silent loss",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "43/43 captures integrated, tasked, or closed"
+      ],
+      "findings": [],
+      "recommended_next_move": "Route every capture to a normalized source or bounded research task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-002",
+      "title": "Source normalization and retrieval state",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "20/20 URL captures routed",
+        "81 normalized development sources"
+      ],
+      "findings": [],
+      "recommended_next_move": "Normalize retrieved sources and create retrieval tasks for inaccessible candidates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-003",
+      "title": "Atomic observations preserve source affordances",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "81/81 development sources decomposed",
+        "125 atomic observations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Decompose each integrated source into located, limited observations.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-004",
+      "title": "Independent epistemic, publication, and selection states",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "36 claims declare three independent states"
+      ],
+      "findings": [],
+      "recommended_next_move": "Hold any projection whose epistemic, publication, or selection state is not ready.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-005",
+      "title": "Promotion requires an auditable evidence path",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "29 development claims",
+        "0 promoted-lineage violations",
+        "0 projection violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Connect confirmed claims through observations and keep unearned projections held.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-006",
+      "title": "Collective credit and calibrated causality",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/google-shared-drives.ts: CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT attributes Jamie’s working revision, preserves the later collaborator edit, and explicitly rejects publication, participation, and policy-outcome claims.",
+        "apps/www/src/data/knowledge-bank/teams-archive.ts: CLM-CRS-COALITION-OPERATING-SYSTEM names Jamie’s design and maintenance actions while describing the minutes as collaborative and rejecting sole-movement, universal-agreement, and legislative-causality claims.",
+        "apps/www/src/content/work/fair-rent-nyc.mdx separates Jamie’s direct organizing, web, testimony, and documentation actions from coalition contributions and governmental outcomes, explicitly retaining credit for sponsors, partners, agencies, operators, advocates, and officials.",
+        "apps/www/src/data/proofs.ts: kc-town-hall-public-benefit-documentation distinguishes Jamie’s developer/presenter role and first-hand transition statement from Board recommendation, Council appropriation, later withdrawal, and reappropriation; private reasons and unsupported transfer mechanics are excluded.",
+        "apps/www/src/content/work/kc-town-hall.mdx presents the project ending candidly, distinguishes the first-hand transition account from official records, and does not expose the receiving organization or private circumstances.",
+        "Focused verification passed 21/21 tests, including Shared Drive collaboration boundaries, collective raft scale, Fair Rent adoption limits, and both KC Town Hall chronology tests."
+      ],
+      "findings": [
+        "Jamie’s documented actions are stated directly without absorbing collaborator, coalition, or government work into individual authorship.",
+        "Draft, publication, adoption, audience response, public outcome, and causality remain distinct throughout the inspected claim and projection layers.",
+        "KC Town Hall transition stewardship is legible while official records, unsupported mechanics, and private reasons remain explicitly separated."
+      ],
+      "recommended_next_move": "Retain the current claim-level credit and causality boundaries during future projection edits, especially the collaborator-edit and KC Town Hall transition distinctions.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-007",
+      "title": "Research queue covers unresolved value and public claim gaps",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "19 research tasks",
+        "0 unresolved captures without tasks",
+        "0 inference claims without tasks"
+      ],
+      "findings": [],
+      "recommended_next_move": "Give every unresolved high-value lead and inference claim a prioritized task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-008",
+      "title": "Projection is purposeful and reversible",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 unsafe active projections",
+        "0 prohibited public routes"
+      ],
+      "findings": [],
+      "recommended_next_move": "Keep developed claims dormant or held until a purpose-specific surface selects approved wording.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-009",
+      "title": "Provenance graph and correction history remain traversable",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 broken references",
+        "0 integrated captures without paths",
+        "45 campaign press placements / 44 unique articles",
+        "0 campaign press integrity violations",
+        "0 KC Town Hall funding-chain integrity violations",
+        "0 Teams archive integrity violations",
+        "0 Google Shared Drive integrity violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair broken references and ensure each integrated capture has a traversable path.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-010",
+      "title": "Public-repository safety and citational care",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 canonical validation errors",
+        "0 private-marker hits",
+        "0 prohibited routes",
+        "0 campaign press promotion violations",
+        "0 KC Town Hall projection-safety violations",
+        "0 Teams archive projection-safety violations",
+        "0 Google Shared Drive safety violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Remove unsafe payloads and satisfy canonical citation validation.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-011",
+      "title": "Photo-editor feedback loop creates questions, not automatic proof",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "photo capture: CAP-PHOTO-ARCHIVE-FEEDBACK-LOOP-2026",
+        "photo task: RT-PHOTO-EVIDENCE-FEEDBACK-LOOP",
+        "workflow document: present"
+      ],
+      "findings": [],
+      "recommended_next_move": "Document the claim-to-brief and discovery-to-research loop with rights and corroboration gates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-012",
+      "title": "Source-backed strength through Chad's lens",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 3,
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/google-shared-drives.ts: CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE states direct maintenance actions, intended collaborators, and the usable consequence—people can orient, act, and continue—while bounding the review to 14 of 110 accessible drives.",
+        "apps/www/src/data/work.ts and apps/www/src/app/work/technical-operations/page.tsx give hiring readers concrete actions, intended users, operational artifacts, and usable consequences across Fair Rent NYC, 196 / Sunday Dinner, and Technical Operations.",
+        "RT-GDRIVE-196-WORKFLOW-REUSE-CORROBORATION keeps repeated use open and separates the single 2023 template from the independently supported 20-plus-resident scale.",
+        "RT-GDRIVE-NYCAC-GUIDANCE-PUBLICATION-USE and RT-GDRIVE-ARCHIVE-WORKFLOW-EXECUTION preserve publication/use and execution outcomes as bounded research rather than promoted accomplishments.",
+        "CLM-SBU-STYLE-GUIDE-HANDOFF-SEED remains dormant with held projections, while the remaining 96 drives, Sunday Dinner photographs, and WOWList transition material remain purposeful protected research.",
+        "The focused evaluator passed the explicit outcome-gap and reusable-drift tests; citation and knowledge-bank checks also exited successfully."
+      ],
+      "findings": [
+        "The candidate meets the hiring-legibility criteria: actions are specific, intended users and usable consequences are named, unresolved value remains prioritized, and the difficult KC Town Hall ending is framed without private circumstances.",
+        "The exact CLM-196 projections do not call the 2023 template reusable or use it to prove the 20-plus scale.",
+        "A minor compositional ambiguity prevents a 4: apps/www/src/data/work.ts describes repeatable participation infrastructure as “including” the newly evidenced handoff, and the 196 MDX places the one-template claim immediately after the aggregate repeatable/20-plus statement. A fast reader could still conflate the evidence paths despite the strong canonical guardrails."
+      ],
+      "recommended_next_move": "In the 196 public composition, add one short sentence explicitly stating that the 2023 artifact demonstrates one handoff instance and does not establish repeated use or the 20-plus scale.",
+      "confidence": "high"
+    }
+  ]
+}

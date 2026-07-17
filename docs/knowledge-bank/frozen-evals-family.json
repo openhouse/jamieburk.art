@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "frozenAt": "2026-07-16",
+  "rule": "These refs are read-only research inputs. Port behavior intentionally; do not merge the branch family wholesale or alter its pull requests.",
+  "base": {
+    "branch": "feature/evals-G",
+    "commit": "d97055d72d794b9ecfd338e10277e4feb14ea918"
+  },
+  "branches": [
+    { "branch": "feature/evals-A", "commit": "3757c4f529cc05d169f30ec059b13bea24cc75d1", "strength": "archival ledgers and overlapping population controls" },
+    { "branch": "feature/evals-B", "commit": "67fc30427e544199540f81d6b50cf94ef8101f47", "strength": "governance and correction history" },
+    { "branch": "feature/evals-C", "commit": "ff440a9c9a15c844b779bbca0c1404eaebcb8031", "strength": "candidate-bound evaluation fingerprints" },
+    { "branch": "feature/evals-D", "commit": "5a7095ffc8e064c5fff8a5acfb114e04f7114a15", "strength": "release engineering and measured accessibility" },
+    { "branch": "feature/evals-E", "commit": "d7d8e0d050b6a8c481fa5aaf2429d6427aa886ea", "strength": "artistic, embodied, and relational intelligence" },
+    { "branch": "feature/evals-F", "commit": "ba74618558e55a836d9a73b5293f6fdb45e684ff", "strength": "hiring clarity, cutover, verification, and rollback" },
+    { "branch": "feature/evals-G", "commit": "d97055d72d794b9ecfd338e10277e4feb14ea918", "strength": "canonical typed graph and three-state governance" },
+    { "branch": "feature/evals-H", "commit": "934c1bdff4a478da56fde3a125d905e7e326b6f2", "strength": "reader coherence and independent holdouts" },
+    { "branch": "feature/evals-I", "commit": "793f7262cd3df8d7401d9b3e0f8209240d5fa640", "strength": "adversarial projection-integrity controls" },
+    { "branch": "feature/evals-J", "commit": "7e1b758b416bbe7c221f601e331696d95515c593", "strength": "visible iteration and stop history" },
+    { "branch": "feature/evals-K", "commit": "5b0cbcd1a7f913d2281c671e46903ad997a743f5", "strength": "append-safe intake and multidimensional querying" },
+    { "branch": "feature/evals-L", "commit": "68846b1f0a8672ff80598a7fef50ce5343c3e004", "strength": "blind-spot and evidence-debt controls" },
+    { "branch": "feature/evals-M", "commit": "289dd4499eb3e7b78bc16b380a02ac180dca35bb", "strength": "human-readable dossiers and revision-history evidence" },
+    { "branch": "feature/evals-N", "commit": "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe", "strength": "reproducible corpora, privacy repair, and grader separation" }
+  ]
+}

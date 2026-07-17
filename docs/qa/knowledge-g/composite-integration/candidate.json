@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-07-17T02:29:55Z",
+  "candidate_fingerprint": "5f8b0109d100fd48b70168e602061b241f2371bb4941f757cf6aa15d6f624772",
+  "rubric_fingerprint": "5dd84a3b8a91c8c1e2cccd2e281c7e59a3c2494ebaf6fe06ca250fdd2be09b11",
+  "verification": {
+    "repository_check": "pass",
+    "staging_preflight": "pass",
+    "production_preflight": "pass",
+    "docker_smoke": "pass",
+    "responsive_route_width_pairs": 56,
+    "route_failures": 0,
+    "browser_console_errors": 0
+  },
+  "verification_basis": {
+    "repository_check": "npm run check:pre-evidence",
+    "staging_preflight": "staging environment contract with npm run check:pre-evidence",
+    "production_preflight": "production environment contract with npm run check:pre-evidence",
+    "docker_image": "jamieburk-art:knowledge-g@sha256:5a56ceaa1949e0e719537ba01c687e476bfc34d62f0ccec2fd6eb3b31616e6ee",
+    "docker_runtime_endpoints": 17,
+    "browser_routes": 14,
+    "browser_viewports": [
+      {
+        "name": "mobile",
+        "width": 320,
+        "height": 800
+      },
+      {
+        "name": "wide-mobile",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "name": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      }
+    ],
+    "browser_assertions": [
+      "one h1 and one main landmark",
+      "no horizontal document overflow",
+      "no duplicate IDs",
+      "no broken in-page fragments",
+      "no broken rendered images",
+      "no browser console errors"
+    ]
+  },
+  "authority_boundary": "This manifest records machine-observed candidate evidence. It does not grant human approval or production release authority."
+}

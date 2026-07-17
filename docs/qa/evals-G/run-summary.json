@@ -1,0 +1,49 @@
+{
+  "run_date": "2026-07-13",
+  "base_commit": "2ec37fe6e47d11e600ede204d19a98f7d3cff139",
+  "candidate_commit": "5d872a92",
+  "suite_id": "portfolio-production-readiness",
+  "suite_version": 3,
+  "decision": "stop_human_blocked",
+  "application_share": {
+    "weighted_score": 0.8537,
+    "weighted_score_minimum": 0.8,
+    "machine_threshold_met": true,
+    "human_approval_observed": false,
+    "eligible": false
+  },
+  "production_launch": {
+    "weighted_score": 0.78,
+    "weighted_score_minimum": 0.9,
+    "eligible": false,
+    "blocking_eval_ids": ["PR-011", "PR-012"],
+    "dependent_live_check_eval_ids": ["PR-014"]
+  },
+  "final_scores": {
+    "PR-001": 4,
+    "PR-002": 2,
+    "PR-003": 3,
+    "PR-004": 2,
+    "PR-005": 4,
+    "PR-006": 4,
+    "PR-007": 4,
+    "PR-008": 4,
+    "PR-009": 4,
+    "PR-010": 4,
+    "PR-011": 0,
+    "PR-012": 0,
+    "PR-013": 4,
+    "PR-014": 2,
+    "PR-015": 4
+  },
+  "verification": {
+    "consecutive_production_preflights": 2,
+    "canonical_routes_checked": 14,
+    "responsive_route_width_pairs_checked": 56,
+    "route_failures": 0,
+    "responsive_failures": 0,
+    "browser_console_errors": 0,
+    "chad_lens_baseline_scores": [3, 4, 3],
+    "chad_lens_confirmation_scores": [[4, 4, 4], [4, 4, 4]]
+  }
+}

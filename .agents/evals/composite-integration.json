@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "suite_id": "evals-family-composite-integration",
+  "title": "feature/evals family composite integration",
+  "objective": "Extend the canonical feature/knowledge-g evidence-to-publication system with the strongest compatible controls from the frozen feature/evals-A through N family without creating a competing knowledge bank, weakening boundaries, or simulating external authority.",
+  "inherited_suites": [
+    ".agents/evals/knowledge-development.json",
+    ".agents/evals/portfolio-production-readiness.json"
+  ],
+  "score_scale": { "minimum": 0, "maximum": 4 },
+  "thresholds": {
+    "weighted_score_minimum": 0.9,
+    "blocking_score_minimum": 3,
+    "nonblocking_score_minimum": 2,
+    "all_blocking_evals_must_pass": true,
+    "two_consecutive_passing_runs_required": true,
+    "holdout_judgments_required": true
+  },
+  "optimization": {
+    "maximum_iterations": 8,
+    "stop_after_no_improvement_iterations": 3,
+    "rubric_is_frozen_during_run": true,
+    "optimizer_may_not_grade_own_patch": true,
+    "holdout_judge_is_blind_to_patch_intent": true,
+    "selection_order": [
+      "privacy, provenance, or projection leak",
+      "invalid graph state or stale judgment",
+      "unrouted capture or unsupported projection",
+      "highest-weight blocking failure",
+      "largest weighted score gap",
+      "smallest coherent nonblocking improvement"
+    ]
+  },
+  "hard_constraints": [
+    "The feature/evals-A through N refs remain read-only research inputs.",
+    "The feature/knowledge-g typed graph, approval register, readiness ledger, and publication model remain canonical.",
+    "Raw private archives, credentials, local paths, authenticated state, and unapproved media remain outside Git.",
+    "Epistemic, publication, and selection states remain independent.",
+    "Collective credit, denominator limits, corrections, project endings, and unrecovered evidence remain visible.",
+    "Unknown claim-capable projection surfaces fail closed.",
+    "The optimizing agent cannot grade its own patch or manufacture independent or human approval.",
+    "No public proofs, knowledge-bank, or public-claims route may exist."
+  ],
+  "evals": [
+    {
+      "id": "CI-001", "title": "Exact G ancestry and frozen-family integrity", "grader": "deterministic", "blocking": true, "weight": 5,
+      "inputs": ["Git ancestry", "frozen-family manifest"],
+      "procedure": ["Verify the G base commit is an ancestor of the candidate.", "Verify all A-N refs and strengths are recorded once."],
+      "pass_criteria": ["G ancestry is intact.", "Fourteen frozen refs have unique branch and commit identities.", "No frozen ref is used as a write target."],
+      "evidence_required": ["candidate SHA", "base SHA", "frozen-family digest"],
+      "remediation_hint": "Restore G ancestry or repair the read-only family manifest.",
+      "cannot_establish": ["that every branch mechanism has been integrated well"]
+    },
+    {
+      "id": "CI-002", "title": "Append-safe intake without silent loss or private payload", "grader": "deterministic", "blocking": true, "weight": 9,
+      "inputs": ["intake command", "receipt ledger", "canonical captures"],
+      "procedure": ["Validate every receipt and canonical route.", "Exercise dry-run, duplicate, protected-pointer, and malformed-input behavior."],
+      "pass_criteria": ["Receipts append rather than rewrite.", "Duplicates are detected.", "Private markers and protected URLs are rejected.", "Integrated receipts resolve to canonical captures or research tasks."],
+      "evidence_required": ["ledger validation", "command tests"],
+      "remediation_hint": "Create the smallest public-safe receipt and route it without copying the private payload.",
+      "cannot_establish": ["that a submitted memory is independently corroborated"]
+    },
+    {
+      "id": "CI-003", "title": "Queryable lifecycle and auditable correction history", "grader": "deterministic", "blocking": true, "weight": 6,
+      "inputs": ["query command", "canonical graph", "corrections"],
+      "procedure": ["Query by record type and lifecycle dimensions.", "Verify zero results differ from query failure and corrections remain traversable."],
+      "pass_criteria": ["Unknown filters fail closed.", "Results use stable IDs and deterministic ordering.", "The command is read-only.", "Superseded wording remains auditable."],
+      "evidence_required": ["query tests", "correction count"],
+      "remediation_hint": "Repair the query contract or the missing correction path without creating another registry.",
+      "cannot_establish": ["that a retrieved claim should be selected for publication"]
+    },
+    {
+      "id": "CI-004", "title": "One canonical graph with valid states and evidence paths", "grader": "deterministic", "blocking": true, "weight": 10,
+      "inputs": ["knowledge-development result", "canonical graph"],
+      "procedure": ["Run the maintained knowledge-development gate.", "Inspect graph, state, source, observation, task, and promotion integrity."],
+      "pass_criteria": ["The inherited local knowledge gate passes.", "No broken reference, unsafe active projection, or competing canonical bank exists."],
+      "evidence_required": ["knowledge candidate fingerprint", "local score", "validation errors"],
+      "remediation_hint": "Repair the canonical relationship or hold the projection.",
+      "cannot_establish": ["independent judgment, human approval, or release authority"]
+    },
+    {
+      "id": "CI-005", "title": "Fail-closed projection coverage and cumulative-disclosure safety", "grader": "hybrid", "blocking": true, "weight": 10,
+      "inputs": ["projection bindings", "app routes", "generated public data"],
+      "procedure": ["Inventory every claim-capable route, metadata, data, content, and document surface.", "Run public-safety and projection-integrity checks."],
+      "pass_criteria": ["Every discovered claim-capable surface is bound.", "Unknown surfaces fail.", "Protected evidence cannot render.", "No prohibited route exists."],
+      "evidence_required": ["projection digest", "route inventory", "safety result"],
+      "remediation_hint": "Bind the surface with an explicit policy or remove the unsafe projection.",
+      "cannot_establish": ["that a visually unobtrusive citation treatment is editorially optimal"]
+    },
+    {
+      "id": "CI-006", "title": "Corpus manifests, honest denominators, and non-additive controls", "grader": "hybrid", "blocking": true, "weight": 8,
+      "inputs": ["population fixtures", "research summaries", "knowledge eval result"],
+      "procedure": ["Verify retained population controls and source digests.", "Check authored, repost, context, excluded, and unrecovered classes remain distinct."],
+      "pass_criteria": ["The inherited full-population eval passes.", "No overlapping control is summed as an independent population.", "Published counts retain denominator limits."],
+      "evidence_required": ["corpus digest", "population reconciliation", "exclusion findings"],
+      "remediation_hint": "Repair the denominator or classification before strengthening interpretation.",
+      "cannot_establish": ["attendance, adoption, endorsement, reach, impact, or causality from platform counters"]
+    },
+    {
+      "id": "CI-007", "title": "Collective credit, role calibration, and outcome distinctions", "grader": "llm_judge", "blocking": true, "weight": 10, "external_judgment_required": true,
+      "inputs": ["selected claims", "anti-claims", "role and outcome controls"],
+      "procedure": ["Give a blind judge the exact candidate and frozen criterion.", "Test direct action, team contribution, institutional response, public outcome, and causality separately."],
+      "pass_criteria": ["Jamie's documented action is not hidden.", "Collective credit is not absorbed.", "Artifact, delivery, use, handoff, adoption, decision impact, and causality remain distinct."],
+      "evidence_required": ["fingerprint-bound independent scorecard"],
+      "remediation_hint": "Strengthen the direct action and narrow the unearned collective or causal inference.",
+      "cannot_establish": ["private collaborator intent or undocumented division of work"]
+    },
+    {
+      "id": "CI-008", "title": "Chad-lens hiring clarity and future-facing offer", "grader": "llm_judge", "blocking": true, "weight": 10, "external_judgment_required": true,
+      "inputs": ["homepage", "technical-operations page", "about page", "selected proof"],
+      "procedure": ["Ask a blind hiring judge what Jamie can own, toward what end, and what proof earns confidence.", "Require one accurate referral sentence without apology or invented authority."],
+      "pass_criteria": ["The target role and owned work are legible.", "Actor, action, usable result, and boundary are specific.", "The future offer and next action are clear."],
+      "evidence_required": ["fingerprint-bound independent scorecard", "page evidence"],
+      "remediation_hint": "Make the strongest approved action and end more specific without inflating ownership.",
+      "cannot_establish": ["employer fit for every role or permission to publish a held claim"]
+    },
+    {
+      "id": "CI-009", "title": "Morse and Sack lenses preserve embodied and recursive intelligence", "grader": "llm_judge", "blocking": false, "weight": 7, "external_judgment_required": true,
+      "inputs": ["about page", "project dossiers", "Morse and Sack lens contracts"],
+      "procedure": ["Test whether embodied, participatory, relational, and artistic intelligence remains connected to present work.", "Test whether relationships become analysis, working form, and real-setting learning."],
+      "pass_criteria": ["The artistic, civic, technical, and social practices remain connected.", "At least one concrete recursive systems sequence is demonstrable.", "Interpretive language does not obscure the hiring path."],
+      "evidence_required": ["fingerprint-bound independent scorecard", "specific public examples"],
+      "remediation_hint": "Restore one concrete threshold where embodied inquiry and recursive systems practice remain visible.",
+      "cannot_establish": ["literal endorsement by Margaret Morse or Warren Sack"]
+    },
+    {
+      "id": "CI-010", "title": "Human-readable dossiers and evidence-debt routing", "grader": "hybrid", "blocking": false, "weight": 5,
+      "inputs": ["project dossiers", "readiness ledger", "research tasks"],
+      "procedure": ["Inspect every project dossier for conclusion, source or method, boundaries, and open research.", "Verify material evidence debt has a canonical route."],
+      "pass_criteria": ["Project records are understandable without reading source code.", "Survivorship, role, outcome, visual, and corroboration gaps remain visible."],
+      "evidence_required": ["dossier coverage", "readiness controls"],
+      "remediation_hint": "Add the missing human-readable boundary or route the gap to the canonical ledger.",
+      "cannot_establish": ["that every private archive has been exhaustively reviewed"]
+    },
+    {
+      "id": "CI-011", "title": "Exact-candidate build, accessibility, and release evidence", "grader": "hybrid", "blocking": true, "weight": 12,
+      "inputs": ["candidate manifest", "build and preflight output", "route and viewport evidence"],
+      "procedure": ["Bind verification to the exact candidate fingerprint.", "Check build, Docker, routes, metadata, keyboard use, reflow, contrast, and console state."],
+      "pass_criteria": ["The exact candidate has a passing repository contract and environment preflights.", "Canonical routes pass at 320, 375, 768, and 1280 pixels.", "Infrastructure failures remain not_observed rather than false passes."],
+      "evidence_required": ["candidate manifest", "verification results", "screenshots or machine-readable browser evidence"],
+      "remediation_hint": "Run the missing exact-candidate verification or fix the highest-severity observed failure.",
+      "cannot_establish": ["production deployment approval or live post-deploy success"]
+    },
+    {
+      "id": "CI-012", "title": "Grader separation and human authority remain honest", "grader": "hybrid", "blocking": true, "weight": 8, "external_judgment_required": true,
+      "inputs": ["run report", "judgments", "approval register", "launch blockers"],
+      "procedure": ["Reject stale or self-authored judgments.", "Verify machine, independent, human, rights, and release authority remain distinct."],
+      "pass_criteria": ["The optimizer does not grade its own patch.", "All judgments match the exact candidate and rubric.", "Open human or release decisions keep complete readiness held."],
+      "evidence_required": ["judgment identities and fingerprints", "human approval state", "release decision"],
+      "remediation_hint": "Obtain the named external decision or report the candidate honestly as human-blocked.",
+      "cannot_establish": ["human approval, rights clearance, or release authority without the named human action"]
+    }
+  ]
+}

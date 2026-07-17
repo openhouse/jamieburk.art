@@ -1,0 +1,83 @@
+{
+  "candidate_fingerprint": "e3f163b7145084b1bfda21a7a6af62e684e3687de07a05f91101f6071457a535",
+  "judgments": [
+    {
+      "eval_id": "KD-006",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/public-registry.json gives CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY direct support while stating that testimony does not establish legislative causality.",
+        "The same registry separates CLM-NYCAC-MARCH-TRANSPARENCY-LAW from Jamie's action and credits Council sponsors, advocates, agencies, and legislators.",
+        "CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE and CLM-KCTH-MISSION-ALIGNED-TRANSITION are explicitly attributed to Jamie, separated from independent project and City records, and bounded against unsupported transfer mechanics.",
+        "docs/knowledge-bank/anti-claims.md prohibits solo campaign causality, unearned authorship, adoption inferences, and conversion of volatile interaction counts into impact."
+      ],
+      "findings": [
+        "The candidate names direct action courageously while preserving collective authorship and institutional responsibility.",
+        "Instrumental, created, caused, adopted, and transitioned are not silently treated as equivalent.",
+        "First-hand transition context remains separate from official records, legal mechanics, private reasons, and the later municipal withdrawal.",
+        "The score stops at 3 because some selected legacy proof records, especially the revenue flagship, still use aggregate source descriptions rather than canonical source and observation IDs."
+      ],
+      "recommended_next_move": "Preserve the current attribution model and migrate the remaining high-visibility legacy proofs onto equally explicit canonical evidence relationships.",
+      "confidence": "high",
+      "reviewer_role": "independent_final_holdout_panel"
+    },
+    {
+      "eval_id": "KD-012",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/content/work/fair-rent-nyc.mdx names Jamie's direct work—operating-plan design, campaign-memory stewardship, provenance redlining, public-web infrastructure, and Council testimony—while holding collective outcomes.",
+        "apps/www/src/content/work/kc-town-hall.mdx candidly records the completed phase, separate unused appropriation, Jamie-attributed mission-aligned transition, withdrawal, and reappropriation without importing private circumstances.",
+        "docs/knowledge-bank/readiness-ledger.json routes unresolved priority roles including CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE to named corroboration tasks.",
+        "apps/www/src/data/knowledge-bank/public-registry.json keeps unsupported transfer mechanics and individual policy causality outside active wording."
+      ],
+      "findings": [
+        "The strongest defensible actions are specific and professionally legible rather than apologetic or inflated.",
+        "The material states what became usable: public guidance, issue pathways, operating memory, handoffs, restored physical scope, and decision-input systems.",
+        "High-value unresolved claims remain attributed or held with research routes.",
+        "The score stops at 3 because the strongest hiring proof is not uniformly source-specific across both the canonical graph and the legacy proof layer."
+      ],
+      "recommended_next_move": "Promote the strongest canonical direct-action examples more prominently and complete source-specific migration for the remaining legacy flagship proof.",
+      "confidence": "high",
+      "reviewer_role": "independent_final_holdout_panel"
+    },
+    {
+      "eval_id": "KD-022",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/app/about/page.tsx presents embodied inquiry as a continuing operating method and explicitly connects participation, memory, place, atmosphere, hospitality, and inhabitation to what Jamie builds.",
+        "The About page's 196 / Sunday Dinner example describes invitations, recurring meals, orientation, shared space, quiet logistics, and follow-through as an operating interface rather than decoration.",
+        "apps/www/src/content/work/196-sunday-dinner.mdx connects cultural infrastructure to repeatable hosting, onboarding, facilitation, documentation, and continuity systems.",
+        "docs/knowledge-bank/eval-lenses.md and docs/knowledge-bank/readiness-ledger.json disclose the protected derivation boundary and state that the lens is not authored, approved, or currently endorsed by Margaret Morse."
+      ],
+      "findings": [
+        "The public candidate treats artistic and embodied inquiry as operating intelligence, not ornamental biography.",
+        "A primary hiring surface connects artistic, civic, technical, and social practice without losing the future-facing offer.",
+        "The score stops at 3 because atmosphere and inhabitation are named clearly but only one example carries them into concrete public detail, and that detail remains deliberately summary-only."
+      ],
+      "recommended_next_move": "Retain the source boundary and add one rights-safe, participant-safe detail showing how atmosphere or inhabitation changed an operating decision.",
+      "confidence": "high",
+      "reviewer_role": "independent_final_holdout_panel"
+    },
+    {
+      "eval_id": "KD-023",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/content/work/callnyc.mdx shows source data becoming issue-oriented pathways, district context, a working public interface, public guidance patterns, and bounded archival learning through CLM-CALLNYC-INDEPENDENT-FOLLOW-ON and CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE.",
+        "apps/www/src/content/work/fair-rent-nyc.mdx shows relationships among policy, public data, coalition memory, legal boundaries, and stakeholders becoming source maps, decision records, action trackers, guidance, and a documented Council-use example.",
+        "apps/www/src/app/about/page.tsx states the recursive method: follow relationships, expose structure, test source-backed analysis through a prototype or process, and use real-setting experience for further learning.",
+        "docs/knowledge-bank/eval-lenses.md and docs/knowledge-bank/readiness-ledger.json preserve source boundaries, collective credit, and the prohibition on treating prototypes as adoption or impact."
+      ],
+      "findings": [
+        "Recursive and relational systems thinking is demonstrated through public sequences rather than asserted generically.",
+        "The candidate connects analysis to interfaces, processes, social situations, and institutional use while retaining source and causality limits.",
+        "The score stops at 3 because the public pages distribute the strongest sequence across About and multiple case studies; no single flagship example yet makes the complete observation-to-form-to-feedback-to-revision loop unmistakable without synthesis."
+      ],
+      "recommended_next_move": "Compose one concise flagship sequence on a primary hiring surface that explicitly shows observation, representation, working form, situated use, and the resulting bounded revision.",
+      "confidence": "high",
+      "reviewer_role": "independent_final_holdout_panel"
+    }
+  ]
+}

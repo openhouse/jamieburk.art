@@ -1,0 +1,256 @@
+{
+  "suite_id": "knowledge-development-lifecycle",
+  "suite_version": 1,
+  "label": "final-holdout-1",
+  "run_at": "2026-07-14T15:45:41.961Z",
+  "candidate_files": [
+    ".agents/evals/knowledge-development.json",
+    "apps/www/src/data/knowledge-bank/development-records.ts",
+    "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "docs/knowledge-bank/claims.md",
+    "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
+    "docs/knowledge-bank/promotion-slate.md"
+  ],
+  "candidate_fingerprint": "cb8ccc6747119d273841e959bb9c96ebd7791b530aa111ea114e235982d321e8",
+  "judgment_fingerprint": "cb8ccc6747119d273841e959bb9c96ebd7791b530aa111ea114e235982d321e8",
+  "judgment_fingerprint_missing": false,
+  "judgment_fingerprint_mismatch": false,
+  "metrics": {
+    "captures": 22,
+    "routedCaptures": 22,
+    "sources": 22,
+    "developmentSources": 15,
+    "observations": 33,
+    "developmentClaims": 15,
+    "researchTasks": 9,
+    "validationErrors": 0
+  },
+  "weighted_score": 0.9725,
+  "threshold": 0.85,
+  "criteria_met": true,
+  "blocking_failures": [],
+  "nonblocking_failures": [],
+  "missing_judgments": [],
+  "evals": [
+    {
+      "eval_id": "KD-001",
+      "title": "Low-friction capture with no silent loss",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "22/22 captures integrated, tasked, or closed"
+      ],
+      "findings": [],
+      "recommended_next_move": "Route every capture to a normalized source or bounded research task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-002",
+      "title": "Source normalization and retrieval state",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "16/16 URL captures routed",
+        "15 normalized development sources"
+      ],
+      "findings": [],
+      "recommended_next_move": "Normalize retrieved sources and create retrieval tasks for inaccessible candidates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-003",
+      "title": "Atomic observations preserve source affordances",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "15/15 development sources decomposed",
+        "33 atomic observations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Decompose each integrated source into located, limited observations.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-004",
+      "title": "Independent epistemic, publication, and selection states",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "22 claims declare three independent states"
+      ],
+      "findings": [],
+      "recommended_next_move": "Hold any projection whose epistemic, publication, or selection state is not ready.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-005",
+      "title": "Promotion requires an auditable evidence path",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "15 development claims",
+        "0 promoted-lineage violations",
+        "0 projection violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Connect confirmed claims through observations and keep unearned projections held.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-006",
+      "title": "Collective credit and calibrated causality",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 8,
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE names Jamie's study-group organizing and City Hall advocacy while crediting the multi-group campaign, Council Member Rafael Espinal, partner organizations, the Council, and the Mayor.",
+        "CLM-NYCAC-OFFICE-NIGHTLIFE-ACCOUNTABILITY separates documented post-creation recommendations, dialogue, and Jamie's liaison request from the held causal claim CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE.",
+        "CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY, CLM-NYCAC-MARCH-TRANSPARENCY-LAW, and CLM-NYCAC-MARCH-REPLACED-BY-CURE distinguish Jamie's testimony, coalition advocacy, Local Law 220, and the City's later CURE decision.",
+        "CLM-NYCAC-FIREGUARD-PASS-RATE-ATTESTED and RT-NYCAC-FIREGUARD-PASS-RATE-CORROBORATION keep the 100 percent metric attributed and held pending denominator, date-range, exam-type, and result-record corroboration.",
+        "apps/www/src/content/work/fair-rent-nyc.mdx explicitly separates direct organizing, coalition infrastructure, governmental outcomes, and later institutional context while retaining collaborator and government credit.",
+        "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE projects the source-specific phrase \"founding member,\" but apps/www/src/data/proofs.ts, apps/www/src/data/work.ts, and uncited prose in fair-rent-nyc.mdx strengthen this to \"co-founded\" based partly on resume/Jamie-confirmation evidence."
+      ],
+      "findings": [
+        "The central chronology is unusually well calibrated: direct action, coalition activity, legislation, and later City action remain separate rather than becoming a single success narrative.",
+        "Cabaret repeal is neither inflated nor timidly described; Jamie's concrete actions are prominent and the causal boundary is explicit.",
+        "Office creation remains properly held while documented accountability work is stated affirmatively.",
+        "Local Law 220 and CURE are presented as governmental outcomes aligned with prior advocacy, not as outcomes caused by Jamie or Talks Not Raids.",
+        "The Fireguard metric is governed correctly as an attributed public statement rather than a verified result.",
+        "The main limitation preventing an exceptional score is the cross-surface shift from the sourced \"founding member\" wording to the stronger action verb \"co-founded,\" plus broad individual civic-systems wording whose atomic citation migration remains open under RT-LEGACY-PUBLIC-CLAIM-CITATION-AUDIT."
+      ],
+      "recommended_next_move": "Either retain \"founding member\" on all public surfaces or add a source relationship that specifically earns \"co-founded\" and Jamie's division of formation work; then complete atomic lineage for the broad civic-systems proof without weakening the well-supported direct actions.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-007",
+      "title": "Research queue covers unresolved value and public claim gaps",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "9 research tasks",
+        "0 unresolved captures without tasks",
+        "0 inference claims without tasks"
+      ],
+      "findings": [],
+      "recommended_next_move": "Give every unresolved high-value lead and inference claim a prioritized task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-008",
+      "title": "Projection is purposeful and reversible",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 unsafe active projections",
+        "0 prohibited public routes"
+      ],
+      "findings": [],
+      "recommended_next_move": "Keep developed claims dormant or held until a purpose-specific surface selects approved wording.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-009",
+      "title": "Provenance graph and correction history remain traversable",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 broken references",
+        "0 integrated captures without paths"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair broken references and ensure each integrated capture has a traversable path.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-010",
+      "title": "Public-repository safety and citational care",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 canonical validation errors",
+        "0 private-marker hits",
+        "0 prohibited routes"
+      ],
+      "findings": [],
+      "recommended_next_move": "Remove unsafe payloads and satisfy canonical citation validation.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-011",
+      "title": "Photo-editor feedback loop creates questions, not automatic proof",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "photo capture: CAP-PHOTO-ARCHIVE-FEEDBACK-LOOP-2026",
+        "photo task: RT-PHOTO-EVIDENCE-FEEDBACK-LOOP",
+        "workflow document: present"
+      ],
+      "findings": [],
+      "recommended_next_move": "Document the claim-to-brief and discovery-to-research loop with rights and corroboration gates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-012",
+      "title": "Source-backed strength through Chad's lens",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 3,
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/promotion-slate.md separates currently selected claims, strong future feature candidates, supporting proof, and research-before-promotion items.",
+        "CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE and CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY give a hiring-oriented editor specific actions: organizing study groups, rallying at City Hall, and testifying before the Council.",
+        "CLM-NYCAC-POLICY-DATA-COMMUNICATIONS and apps/www/src/content/work/fair-rent-nyc.mdx identify usable consequences including town halls, mapped explanations, recommendations, calls to action, campaign memory, source maps, action tracking, and Council use of coalition FOIL research.",
+        "CLM-NYCAC-MARCH-TRANSPARENCY-LAW states the concrete governmental consequence: machine-readable reporting, advance notice with exceptions, and an opportunity for establishments to respond.",
+        "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM and CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN are clearly prioritized in docs/knowledge-bank/promotion-slate.md as strong future feature candidates with specific actions, purposes, and remaining editorial gates.",
+        "RT-NYCAC-OFFICE-CREATION-CONTRIBUTION, RT-NYCAC-FIREGUARD-PASS-RATE-CORROBORATION, and RT-LEGACY-PUBLIC-CLAIM-CITATION-AUDIT keep unresolved high-value work visible with priorities, success criteria, and next actions."
+      ],
+      "findings": [
+        "A future editor can readily identify strong action-end-consequence units rather than only abstract competencies.",
+        "The selected case study gives hiring relevance through explicit sections for what became usable, what Jamie did, civic outcomes, concrete use, and transferable proof.",
+        "The promotion slate is effective editorial governance: matured claims are distinguished from future features, supporting proof, and held research.",
+        "High-value unresolved material is not buried or prematurely promoted, especially Office creation, the Fireguard result, and legacy proof-to-source migration.",
+        "The composition is strong but not exceptional because it combines the 2017-2023 NYC Artist Coalition chronology with the 2026 Commercial Rent Stabilization collaboration, creating some cognitive and temporal burden, while several broad proof statements still rely on the legacy citation path awaiting audit."
+      ],
+      "recommended_next_move": "Preserve the current action/outcome chronology, but tighten the case-study transition between the two periods and complete RT-LEGACY-PUBLIC-CLAIM-CITATION-AUDIT so every broad hiring claim is as source-specific as the newly developed civic claims.",
+      "confidence": "high"
+    }
+  ]
+}
