@@ -10,8 +10,13 @@ const lines = [
   "## Sources by kind", "", "| Kind | Count |", "| --- | ---: |", table(report.sourceKinds), "",
   "## Sources by visibility", "", "| Visibility | Count |", "| --- | ---: |", table(report.sourceVisibility), "",
   "## Preservation", "", "| Status | Count |", "| --- | ---: |", table(report.preservation), "",
+  "## Intake lifecycle", "", "| Status | Count |", "| --- | ---: |", table(report.intakeStatus), "",
+  "## Project editorial status", "", "| Status | Count |", "| --- | ---: |", table(report.projectEditorialStatus), "",
+  "## Claim editorial status", "", "| Status | Count |", "| --- | ---: |", table(report.claimEditorialStatus), "",
+  "## Public proof source coverage", "", "| Status | Count |", "| --- | ---: |", table(report.proofCoverage), "",
   "## Claims and projections", "", `- Active projections: ${report.activeProjections}`, `- Cited claims: ${report.citedClaims}`, `- Uncited public claims: ${report.uncitedPublicClaims.join(", ") || "none"}`, `- Projection surfaces: ${report.projectionSurfaces.join(", ")}`, "",
   "## Research and corrections", "", `- Research inquiries: ${report.inquiries}`, `- Corrections: ${report.corrections}`, "",
+  "## Campaign press corpus", "", `- Unique articles: ${report.campaignPress.uniqueArticles}`, `- Index occurrences: ${report.campaignPress.totalOccurrences}`, ...report.campaignPress.indexes.map((index) => `- ${index.id}: ${index.sources} articles`), "",
   "## Bounded evidence", "", ...report.boundedEvidence.map((item) => `- ${item.id}: ${item.visibility}`), "",
   "## Orphan sources", "", ...(report.orphanSources.length ? report.orphanSources.map((id) => `- ${id}`) : ["None."]), "",
   "## Pages", "", ...report.pages.map((page) => `- ${page.id}: ${page.sources} sources, ${page.occurrences} occurrences`), ""

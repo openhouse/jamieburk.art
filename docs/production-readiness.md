@@ -13,6 +13,8 @@ It includes:
 - One public-safety scanner that calls the focused knowledge-bank checker.
 - Route checks for canonical pages, legacy redirects, sitemap discipline, and
   the absence of a public proofs route.
+- Recursive launch evals with weighted criteria, hard gates, anti-gaming rules,
+  and an ignored local report.
 - Launch blockers for contact, resume, metrics, collaborator consent,
   screenshots, and production deploy.
 
@@ -31,6 +33,7 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run check:routes`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`
+- [ ] `npm run prelaunch:production`
 - [ ] Docker build
 - [ ] Docker run
 - [ ] Route smoke tests
@@ -38,6 +41,10 @@ ideas from the production-readiness-composite family.
 - [ ] Chad-lens review
 - [ ] Proof projection review
 - [ ] Jamie final approval
+
+`npm run evals:launch` is the fast recursive feedback loop. It does not replace
+the full staging and production preflights, rendered-page review, or Jamie's
+approval of the exact production SHA.
 
 ## Manual Review Checklist
 
@@ -53,7 +60,7 @@ ideas from the production-readiness-composite family.
   context.
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
-- [ ] Chad-lens review passes.
+- [x] Chad-lens automated hard gate passes.
 
 Production deploy remains blocked until Jamie explicitly approves the reviewed
 content and release.

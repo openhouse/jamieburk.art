@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-15",
+  "scope": {
+    "blindSpotCount": 11,
+    "automatedProtocolReadyCount": 11,
+    "humanOutcomesClaimed": 0,
+    "principle": "Automated protocol readiness is not evidence that a human review, market test, permission review, application, merge, or deployment occurred."
+  },
+  "blindSpots": [
+    {
+      "id": "target-role-specificity",
+      "label": "Target-role specificity is tested against real opportunities",
+      "weight": 16,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "five-real-role-fit-review",
+      "owner": "Jamie Burkart",
+      "risk": "A coherent general portfolio can still fail to answer the vocabulary, responsibilities, and proof expectations of an actual opening.",
+      "requiredEvidence": [
+        "five dated real job descriptions",
+        "one blind scorecard per job",
+        "documented proof matches and proof gaps"
+      ],
+      "antiGaming": [
+        "Do not substitute role archetypes, invented postings, or portfolio-authored criteria for real market evidence."
+      ],
+      "stopRule": "Pass the human gate only after five real roles are scored from the public portfolio and every material gap has a disposition.",
+      "nextAction": "Supply five current job descriptions and run the role-fit scorecard without changing the site between individual reviews.",
+      "completionEvidence": []
+    },
+    {
+      "id": "independent-comprehension-holdout",
+      "label": "Independent holdouts test comprehension without author briefing",
+      "weight": 16,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "independent-hiring-holdout",
+      "owner": "Jamie Burkart with an independent reviewer coordinator",
+      "risk": "Agents and collaborators who already know the archive can mistake familiarity for public comprehension.",
+      "requiredEvidence": [
+        "at least three unfamiliar reviewers",
+        "unbriefed responses after a 30-second review",
+        "anonymous role, value, proof, and next-action answers"
+      ],
+      "antiGaming": [
+        "Do not count an authoring agent, portfolio collaborator, or coached reviewer as an independent holdout."
+      ],
+      "stopRule": "Pass only when at least three unfamiliar reviewers independently recover the role, differentiated value, three proofs, and next action.",
+      "nextAction": "Run the public-only holdout protocol and retain aggregate answers without reviewer names.",
+      "completionEvidence": []
+    },
+    {
+      "id": "individual-contribution-provenance",
+      "label": "Individual contribution provenance remains distinct from project existence",
+      "weight": 18,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "collaborator-contribution-confirmation",
+      "owner": "Jamie Burkart with project collaborators",
+      "risk": "A source may prove that a collective project existed or succeeded without proving Jamie's exact role, authority, or implementation work.",
+      "requiredEvidence": [
+        "project-level source evidence",
+        "Jamie-role evidence",
+        "independent or collaborator corroboration with publication permission"
+      ],
+      "antiGaming": [
+        "Do not inherit individual credit from project existence, collective outputs, or later outcomes."
+      ],
+      "stopRule": "A role claim advances only when project evidence and Jamie-role evidence are separately recorded and any collaborator-sensitive wording has permission.",
+      "nextAction": "Request bounded proof notes for the five priority projects in the contribution matrix.",
+      "completionEvidence": []
+    },
+    {
+      "id": "outcome-chain-evidence",
+      "label": "Outputs, observed outcomes, and causality boundaries remain separate",
+      "weight": 18,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "outcome-chain-review",
+      "owner": "Jamie Burkart with an evidence reviewer",
+      "risk": "Usable outputs may be clear while adoption, decision change, durability, and Jamie's causal contribution remain under-evidenced.",
+      "requiredEvidence": [
+        "a dated output",
+        "an independently observable outcome",
+        "an attribution boundary and open outcome question"
+      ],
+      "antiGaming": [
+        "Do not turn chronology, response totals, allocations, enactments, or continued existence into sole causality."
+      ],
+      "stopRule": "Publish an outcome only when its source, unit, date, and attribution boundary can be stated together.",
+      "nextAction": "Close one outcome question for each leading case study before adding any broader impact language.",
+      "completionEvidence": []
+    },
+    {
+      "id": "technical-implementation-depth",
+      "label": "Technical claims point to inspectable implementation evidence",
+      "weight": 18,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "technical-evidence-review",
+      "owner": "Jamie Burkart with a technical reviewer",
+      "risk": "The civic and operational narrative can eclipse architecture, implementation decisions, constraints, failure recovery, and current technical practice.",
+      "requiredEvidence": [
+        "an inspectable artifact or bounded protected review",
+        "one consequential implementation decision",
+        "one operating constraint or failure-recovery example"
+      ],
+      "antiGaming": [
+        "Do not treat a technology list, source list, repository name, or database count as an implementation account."
+      ],
+      "stopRule": "A technical claim is ready when a reviewer can trace system, decision, constraint, artifact, and Jamie's role without private access.",
+      "nextAction": "Prepare a technical evidence packet for the five systems in the matrix, beginning with HJE and Technical Operations synthesis debt.",
+      "completionEvidence": []
+    },
+    {
+      "id": "collaboration-role-mapping",
+      "label": "Collaboration maps preserve shared credit and Jamie's bounded role",
+      "weight": 18,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "collaborator-role-map-review",
+      "owner": "Jamie Burkart with named collaborators where approved",
+      "risk": "Protecting collective credit can leave Jamie vague, while strengthening Jamie's role can accidentally erase collaborators.",
+      "requiredEvidence": [
+        "collective purpose and team context",
+        "Jamie's bounded responsibility",
+        "collaborator confirmation and publication-permission status"
+      ],
+      "antiGaming": [
+        "Do not make Jamie legible by making collaborators disappear or by publishing names and quotations without permission."
+      ],
+      "stopRule": "A role map is publishable only when Jamie's contribution and collective credit are both specific and permissions are explicit.",
+      "nextAction": "Build collaborator-safe role maps for five priority collective projects and request corrections before quotation.",
+      "completionEvidence": []
+    },
+    {
+      "id": "visual-proof-readiness",
+      "label": "Visual proof requires evidence, rights, consent, and caption readiness",
+      "weight": 16,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "visual-proof-rights-review",
+      "owner": "Jamie Burkart with a photo editor and rights reviewer",
+      "risk": "The textual argument is much stronger than the visual argument, while archive custody alone does not establish republication rights or participant consent.",
+      "requiredEvidence": [
+        "one candidate set per leading case study",
+        "rights and consent dispositions",
+        "a source-backed caption explaining evidentiary value"
+      ],
+      "antiGaming": [
+        "Do not mark an image ready because it is attractive, available, historically interesting, or already in Jamie's archive."
+      ],
+      "stopRule": "A visual package is ready only when candidate, evidentiary value, rights, consent, crop, alt text, and caption all pass review.",
+      "nextAction": "Produce one unmistakable visual proof package for each of the five leading case studies.",
+      "completionEvidence": []
+    },
+    {
+      "id": "longitudinal-thesis-boundary",
+      "label": "The longitudinal practice thesis remains useful without flattening projects",
+      "weight": 16,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "longitudinal-thesis-editorial-review",
+      "owner": "Jamie Burkart with an independent editor",
+      "risk": "A compelling lifelong pattern can flatten distinct projects, places, communities, collaborators, and historical conditions into one retrospective story.",
+      "requiredEvidence": [
+        "at least five separately sourced projects",
+        "a bounded shared-practice hypothesis",
+        "audience need and cross-project corroboration"
+      ],
+      "antiGaming": [
+        "Do not use thematic resemblance as proof of one continuous program, method, or causal intention."
+      ],
+      "stopRule": "Keep the thesis on hold until an independent editor can state both the shared practice and the meaningful differences among projects.",
+      "nextAction": "Test one diagram and one 150-word synthesis against the anti-flattening questions without adding either to the site.",
+      "completionEvidence": []
+    },
+    {
+      "id": "application-execution-cadence",
+      "label": "Archive work has a stopping rule that returns effort to applications",
+      "weight": 16,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "application-cadence-review",
+      "owner": "Jamie Burkart",
+      "risk": "An effectively infinite archive can absorb time that should produce applications, outreach, interviews, and professional conversations.",
+      "requiredEvidence": [
+        "a per-opportunity timebox",
+        "an application-ready threshold",
+        "weekly outward-action measures"
+      ],
+      "antiGaming": [
+        "Do not count sources found, claims matured, pages edited, or eval points gained as job-search outcomes."
+      ],
+      "stopRule": "After 90 minutes, file noncritical proof debt as an inquiry and return to application, outreach, or conversation unless a factual or safety blocker prevents submission.",
+      "nextAction": "Apply the cadence to the next five real opportunities and review whether research time displaced outward action.",
+      "completionEvidence": []
+    },
+    {
+      "id": "agency-without-inflation",
+      "label": "Agency language is direct without erasing collective boundaries",
+      "weight": 16,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "agency-language-review",
+      "owner": "Jamie Burkart with an independent editor",
+      "risk": "Collective-credit care can become self-erasure, while stronger agency language can become unsupported ownership or causality.",
+      "requiredEvidence": [
+        "a direct contribution verb",
+        "a concrete object or system",
+        "an explicit collective, authority, or causality boundary where needed"
+      ],
+      "antiGaming": [
+        "Do not repair understatement by deleting collaborators, claiming formal authority, or weakening evidence and causality boundaries."
+      ],
+      "stopRule": "A sentence passes when Jamie's action, object, and purpose are direct and the strongest necessary boundary remains adjacent or canonical.",
+      "nextAction": "Run an independent sentence-level review of the homepage, resume, and five leading case studies for both self-erasure and inflation.",
+      "completionEvidence": []
+    },
+    {
+      "id": "integration-governance",
+      "label": "Branch-local readiness remains distinct from merged and deployed reality",
+      "weight": 16,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "branch-pr-production-integration-review",
+      "owner": "Jamie Burkart as repository and deployment owner",
+      "risk": "A branch can pass every automated gate while parallel pull requests, supersession ambiguity, unmerged code, or an unverified deploy prevent the public system from receiving the work.",
+      "requiredEvidence": [
+        "pull-request owner and supersession dispositions",
+        "an exact reviewed candidate SHA",
+        "postdeploy route, indexing, canonical, and resume verification"
+      ],
+      "antiGaming": [
+        "Do not call a branch-local score merged, deployed, production-approved, or postdeploy-verified."
+      ],
+      "stopRule": "Production readiness is complete only after PR ownership is resolved, Jamie approves the exact SHA, deployment succeeds, and postdeploy checks pass.",
+      "nextAction": "Inventory every PR targeting develop, choose the production candidate, and record supersession before requesting deploy approval.",
+      "completionEvidence": []
+    }
+  ],
+  "controls": {
+    "targetRoleSpecificity": {
+      "requiredRealJobDescriptions": 5,
+      "receivedRealJobDescriptions": 0,
+      "archetypesCountAsEvidence": false,
+      "scoreDimensions": [
+        "role vocabulary",
+        "must-have responsibilities",
+        "proof match",
+        "proof gap",
+        "next action"
+      ]
+    },
+    "independentHoldout": {
+      "minimumUnfamiliarReviewers": 3,
+      "completedReviewers": 0,
+      "authoringAgentsEligible": false,
+      "briefingAllowed": false,
+      "questions": [
+        "What role is Jamie seeking?",
+        "What differentiated value does Jamie provide?",
+        "Which three proofs support that answer?",
+        "What should the reader do next?"
+      ]
+    },
+    "contributionProvenance": [
+      {
+        "projectId": "harry-j-epstein",
+        "projectEvidence": "Public business history and approved protected records",
+        "jamieRoleEvidence": "Approved resume and protected operational records",
+        "externalCorroboration": "needed",
+        "nextEvidence": "A bounded collaborator or published proof note covering modernization responsibility and the growth-contribution relationship"
+      },
+      {
+        "projectId": "nyc-artist-coalition",
+        "projectEvidence": "Public campaigns, reporting, events, government records, and social archives",
+        "jamieRoleEvidence": "Selected public attributions plus protected first-person and repository evidence",
+        "externalCorroboration": "partial",
+        "nextEvidence": "Formation-team and campaign-specific collaborator confirmation of Jamie's systems, production, and facilitation role"
+      },
+      {
+        "projectId": "kc-town-hall",
+        "projectEvidence": "Government records, protected proposal packet, public account archive, and support letters",
+        "jamieRoleEvidence": "Founder and project-manager records plus firsthand Phase One account",
+        "externalCorroboration": "partial",
+        "nextEvidence": "Completion and field-delivery corroboration that distinguishes function from licensure and specialist work"
+      },
+      {
+        "projectId": "wowlist",
+        "projectEvidence": "Protected database aggregate, public product records, reporting, and social archives",
+        "jamieRoleEvidence": "Public co-organizer attribution, repository history, and bounded publisher records",
+        "externalCorroboration": "partial",
+        "nextEvidence": "Collaborator-safe account of product ownership, technical decisions, and organizer adoption"
+      },
+      {
+        "projectId": "sunday-dinner-196",
+        "projectEvidence": "Protected workbook, public events, reporting, and one protected residency workflow",
+        "jamieRoleEvidence": "First-person operating account and selected workflow records",
+        "externalCorroboration": "partial",
+        "nextEvidence": "Collaborator and participant-safe confirmation of hosting, continuity, and residency responsibilities"
+      }
+    ],
+    "outcomeChains": [
+      {
+        "projectId": "harry-j-epstein",
+        "output": "E-commerce and operating modernization",
+        "observedOutcome": "Later public reporting described e-commerce as half of the business",
+        "attributionBoundary": "The record supports a contribution relationship, not sole causality for company revenue",
+        "openOutcome": "Recover an approved public or collaborator source connecting Jamie's implementation scope to the observed result"
+      },
+      {
+        "projectId": "nyc-artist-coalition",
+        "output": "Participation, campaign, publication, testimony, and source-routing systems",
+        "observedOutcome": "Coalition materials entered agency and Council processes alongside enacted nightlife and reporting laws",
+        "attributionBoundary": "Collective participation and functional alignment do not establish bill authorship, vote influence, or sole causality",
+        "openOutcome": "Recover implementation and collaborator evidence for Jamie's campaign-specific contribution"
+      },
+      {
+        "projectId": "kc-town-hall",
+        "output": "Neighborhood-led proposal, survey, presentation, and Phase One field delivery",
+        "observedOutcome": "The Board unanimously recommended and Council allocated 490539 dollars while authorizing funding-agreement negotiations",
+        "attributionBoundary": "Allocation is not agreement execution, receipt, disbursement, completion, or sole individual causality",
+        "openOutcome": "Recover agreement, disbursement, Phase One completion, and later stewardship records where public-safe"
+      },
+      {
+        "projectId": "wowlist",
+        "output": "Community calendar, discovery, support, publishing, and syndication system",
+        "observedOutcome": "The July 2017 database records substantial historical use and distributed city or region activity",
+        "attributionBoundary": "Database activity is not satisfaction, retention, impact, current operation, or sole product ownership",
+        "openOutcome": "Recover independent organizer accounts of adoption and durable value"
+      },
+      {
+        "projectId": "sunday-dinner-196",
+        "output": "Recurring invitation, hosting, RSVP, onboarding, and continuity systems",
+        "observedOutcome": "The protected workbook supports a 300-plus documented gathering floor across 2012 to 2021",
+        "attributionBoundary": "Event columns and cached yes counts are not unique people, physical attendance, meals, or Jamie's sole production",
+        "openOutcome": "Verify the separate resident-artist aggregate and obtain collaborator-safe accounts of enduring effects"
+      }
+    ],
+    "technicalEvidence": [
+      {
+        "projectId": "callnyc",
+        "system": "Civic issue-routing application and public engagement layer",
+        "artifactStatus": "source-backed",
+        "decisionEvidenceStatus": "partial",
+        "nextArtifact": "A concise architecture and implementation-decision record linked to the public repository"
+      },
+      {
+        "projectId": "wowlist",
+        "system": "Community calendar, social discovery, geolocation, digest, and calendar-syndication platform",
+        "artifactStatus": "source-backed",
+        "decisionEvidenceStatus": "partial",
+        "nextArtifact": "A bounded architecture chronology connecting code generations, schema, deployment constraints, and operating decisions"
+      },
+      {
+        "projectId": "harry-j-epstein",
+        "system": "E-commerce, analytics, marketing, content, and operating modernization",
+        "artifactStatus": "research-needed",
+        "decisionEvidenceStatus": "research-needed",
+        "nextArtifact": "A public-safe before-and-after system map with implementation sequence and collaborator corroboration"
+      },
+      {
+        "projectId": "commercial-rent-stabilization",
+        "system": "Running minutes, decision records, source boundaries, action ownership, and city-state coordination",
+        "artifactStatus": "protected-source-backed",
+        "decisionEvidenceStatus": "partial",
+        "nextArtifact": "A privacy-safe operating-system diagram showing inputs, decisions, outputs, and handoffs"
+      },
+      {
+        "projectId": "source-backed-team-memory",
+        "system": "Human-reviewed source-backed memory and evaluation method",
+        "artifactStatus": "proposal-only",
+        "decisionEvidenceStatus": "partial",
+        "nextArtifact": "A completed bounded pilot or clearly labeled demonstration with evaluation results and operating constraints"
+      }
+    ],
+    "collaborationRoleMaps": [
+      {
+        "projectId": "nyc-artist-coalition",
+        "collectiveCredit": "Coalition organizers, campaign partners, artists, cultural spaces, advocates, and public participants",
+        "jamieRoleStatus": "partially corroborated",
+        "collaboratorConfirmationStatus": "needed",
+        "publicationPermissionStatus": "not-requested"
+      },
+      {
+        "projectId": "wowlist",
+        "collectiveCredit": "Shared project leadership, contributors, organizers, and local calendar communities",
+        "jamieRoleStatus": "partially corroborated",
+        "collaboratorConfirmationStatus": "needed",
+        "publicationPermissionStatus": "not-requested"
+      },
+      {
+        "projectId": "kc-town-hall",
+        "collectiveCredit": "Neighborhood participants, project partners, specialist trades, designers, advisers, and public bodies",
+        "jamieRoleStatus": "partially corroborated",
+        "collaboratorConfirmationStatus": "needed",
+        "publicationPermissionStatus": "not-requested"
+      },
+      {
+        "projectId": "sunday-dinner-196",
+        "collectiveCredit": "Co-hosts, residents, guests, artists, organizers, and participating spaces",
+        "jamieRoleStatus": "partially corroborated",
+        "collaboratorConfirmationStatus": "needed",
+        "publicationPermissionStatus": "not-requested"
+      },
+      {
+        "projectId": "kc-spaces-fund",
+        "collectiveCredit": "Named public organizers, fiscal sponsor, applicants, grantees, contributors, and technical supporters",
+        "jamieRoleStatus": "bounded and source-backed",
+        "collaboratorConfirmationStatus": "useful-not-required-for-current-wording",
+        "publicationPermissionStatus": "current-public-wording-only"
+      }
+    ],
+    "visualProofs": [
+      {
+        "projectId": "harry-j-epstein",
+        "candidateStatus": "research-needed",
+        "evidenceValueStatus": "not-reviewed",
+        "rightsStatus": "unknown",
+        "consentStatus": "review-needed",
+        "captionStatus": "not-started"
+      },
+      {
+        "projectId": "nyc-artist-coalition",
+        "candidateStatus": "candidates-located",
+        "evidenceValueStatus": "needs-project-role-review",
+        "rightsStatus": "unknown",
+        "consentStatus": "review-needed",
+        "captionStatus": "not-started"
+      },
+      {
+        "projectId": "callnyc",
+        "candidateStatus": "candidates-located",
+        "evidenceValueStatus": "needs-interface-and-context-review",
+        "rightsStatus": "unknown",
+        "consentStatus": "not-applicable-or-review-needed",
+        "captionStatus": "not-started"
+      },
+      {
+        "projectId": "wowlist",
+        "candidateStatus": "candidates-located",
+        "evidenceValueStatus": "needs-product-and-community-review",
+        "rightsStatus": "unknown",
+        "consentStatus": "review-needed",
+        "captionStatus": "not-started"
+      },
+      {
+        "projectId": "kc-town-hall",
+        "candidateStatus": "research-needed",
+        "evidenceValueStatus": "needs-phase-and-role-review",
+        "rightsStatus": "unknown",
+        "consentStatus": "review-needed",
+        "captionStatus": "not-started"
+      }
+    ],
+    "longitudinalSynthesis": {
+      "editorialStatus": "hold",
+      "projectIds": [
+        "open-house",
+        "great-accommodations",
+        "river-raft-expedition",
+        "sunday-dinner-196",
+        "wowlist",
+        "nyc-artist-coalition",
+        "kc-town-hall"
+      ],
+      "promotionRequires": [
+        "a specific audience need",
+        "cross-project corroboration",
+        "independent anti-flattening editorial review"
+      ]
+    },
+    "applicationCadence": {
+      "researchAndCompositionTimeboxMinutes": 90,
+      "archiveItemsCountAsJobSearchOutcome": false,
+      "outwardActions": [
+        "tailored application",
+        "direct outreach",
+        "professional conversation"
+      ],
+      "successMeasures": [
+        "qualified applications submitted",
+        "direct outreach messages sent",
+        "professional conversations scheduled",
+        "interviews advanced"
+      ]
+    },
+    "agencyCalibration": {
+      "requiredDirectVerbs": [
+        "initiated",
+        "designed",
+        "built",
+        "coordinated",
+        "maintained",
+        "produced",
+        "made possible"
+      ],
+      "collectiveBoundaryRequired": true,
+      "reviewSurfaces": [
+        "homepage",
+        "resume",
+        "technical operations",
+        "five leading case studies"
+      ]
+    },
+    "integrationGovernance": {
+      "currentEvidenceBranch": "feature/evals-F",
+      "baseBranch": "develop",
+      "exactCandidateSha": null,
+      "deploymentApproved": false,
+      "branchLocalScoreIsProductionApproval": false,
+      "requiresPrOwnershipAndSupersession": true
+    }
+  }
+}

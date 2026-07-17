@@ -1,0 +1,5578 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-14",
+  "sourceProfile": "https://x.com/KCTownHall",
+  "method": {
+    "authenticatedReadOnlyReview": true,
+    "surfaces": [
+      "Posts tab",
+      "Replies tab",
+      "public status pages",
+      "public X search"
+    ],
+    "exclusions": [
+      "authentication and session material",
+      "private messages and account analytics",
+      "inferences about individual shared-account authorship",
+      "full reproduction of account or third-party post text"
+    ]
+  },
+  "populationAudit": {
+    "profileCountObserved": 183,
+    "postsTabItemsRecovered": 121,
+    "repliesTabPrimaryItemsRecovered": 181,
+    "accountAuthoredStatusesRecovered": 155,
+    "repostsRecovered": 26,
+    "distinctRepostSourceAccounts": 16,
+    "uniqueItemsRecovered": 181,
+    "contextualConversationRecordsExcluded": 7,
+    "unresolvedPopulationSlots": 2,
+    "dispositionTotal": 183,
+    "firstRecoveredAt": "2018-07-02T21:12:15.000Z",
+    "lastRecoveredAt": "2022-09-24T12:31:50.000Z",
+    "completenessStatement": "All 183 slots in the live profile count are dispositioned: 181 surviving public timeline items were recovered at item level and two count slots remain explicitly unresolved. This is a complete disposition of the July 2026 profile control, not a platform export or proof that no older item was deleted before capture."
+  },
+  "aggregateFindings": {
+    "themeCounts": {
+      "civic-information-and-public-participation": 9,
+      "neighborhood-mutual-support": 13,
+      "place-restoration-and-resident-input": 22,
+      "project-conversation-and-context": 38,
+      "tired-of-tires-operations": 99
+    },
+    "authoredThemeCounts": {
+      "civic-information-and-public-participation": 6,
+      "neighborhood-mutual-support": 5,
+      "place-restoration-and-resident-input": 18,
+      "project-conversation-and-context": 27,
+      "tired-of-tires-operations": 99
+    },
+    "tiredOfTiresAuthoredStatuses": 99,
+    "authoredStatusesByYear": {
+      "2018": 24,
+      "2019": 64,
+      "2020": 41,
+      "2021": 17,
+      "2022": 9
+    },
+    "authoredPostsWithMedia": 127,
+    "visibleAuthoredMetrics": {
+      "replies": 22,
+      "reposts": 70,
+      "likes": 174,
+      "bookmarks": 1
+    },
+    "authoredShortUrlOccurrences": 130,
+    "authoredUniqueShortUrls": 28,
+    "allShortUrlOccurrences": 133,
+    "allUniqueShortUrls": 31,
+    "allUniqueResolvedDestinations": 20,
+    "authoredMentionCounts": {
+      "@quintonlucaskc": 25,
+      "@robinson4kc": 22,
+      "@joliejustus": 3,
+      "@jermainereed": 2,
+      "@ericwbunch": 1
+    },
+    "directPublicConversationStakeholderFloor": {
+      "electedOrCityServiceAccounts": [
+        "@QuintonLucasKC",
+        "@joliejustus",
+        "@Robinson4kc",
+        "@KCMO311"
+      ],
+      "outboundMunicipalReplyContext": [
+        "@KCMOHealthDept"
+      ],
+      "boundary": "Thread context establishes public exchange, not endorsement, funding support, or authorship of the project account's posts."
+    }
+  },
+  "sourceLeads": [
+    {
+      "destinationUrl": "https://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/",
+      "disposition": "close-read-context",
+      "note": "Independent reporting linked by the account; provides affordable-housing policy context, not coverage of KC Town Hall."
+    },
+    {
+      "destinationUrl": "https://www.kcur.org/politics-elections-and-government/2018-08-05/a-cheat-sheet-for-tuesdays-primary-election-in-missouri",
+      "disposition": "close-read-context",
+      "note": "Independent election guide linked by the account; demonstrates civic-information routing, not coverage of KC Town Hall."
+    },
+    {
+      "destinationUrl": "https://www.kansascity.com/news/business/article87241897.html",
+      "disposition": "linked-not-recovered",
+      "note": "The account used this source in a public thread about Leon's Thriftway; the article page itself was not recovered in this pass."
+    },
+    {
+      "destinationUrl": "https://www.youtube.com/watch?v=PmLjLyOpS9I",
+      "disposition": "project-media-lead",
+      "note": "Project-linked video associated with the account's public documentation of a large dumped-paint cleanup."
+    },
+    {
+      "destinationUrl": "https://www.youtube.com/watch?v=onCKU-TuPhc",
+      "disposition": "project-media-lead",
+      "note": "Project-linked video associated with an April 2020 public-health and relief Q&A."
+    }
+  ],
+  "records": [
+    {
+      "statusId": "1013893135695601665",
+      "statusUrl": "https://x.com/KCTownHall/status/1013893135695601665",
+      "publishedAt": "2018-07-02T21:12:15.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#kctownhall"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "destinationUrl": "https://kctownhall.com/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 5,
+        "likes": 15,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1013894923031113728",
+      "statusUrl": "https://x.com/KCTownHall/status/1013894923031113728",
+      "publishedAt": "2018-07-02T21:19:21.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares archival history connected to the KC Town Hall building and neighborhood.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#kctownhall"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/r3kHwsgVNP",
+          "destinationUrl": "https://kctownhall.com/join"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1013895905932726273",
+      "statusUrl": "https://x.com/KCTownHall/status/1013895905932726273",
+      "publishedAt": "2018-07-02T21:23:15.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares archival history connected to the KC Town Hall building and neighborhood.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#kctownhall"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/r3kHwsgVNP",
+          "destinationUrl": "https://kctownhall.com/join"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1013897573856370688",
+      "statusUrl": "https://x.com/KCTownHall/status/1013897573856370688",
+      "publishedAt": "2018-07-02T21:29:53.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#kctownhall"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "destinationUrl": "https://kctownhall.com/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1013902884285681665",
+      "statusUrl": "https://x.com/KCTownHall/status/1013902884285681665",
+      "publishedAt": "2018-07-02T21:50:59.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#kctownhall"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "destinationUrl": "https://kctownhall.com/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1013903134551347200",
+      "statusUrl": "https://x.com/KCTownHall/status/1013903134551347200",
+      "publishedAt": "2018-07-02T21:51:59.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#kctownhall"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "destinationUrl": "https://kctownhall.com/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1013903289392517120",
+      "statusUrl": "https://x.com/KCTownHall/status/1013903289392517120",
+      "publishedAt": "2018-07-02T21:52:36.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#kctownhall"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "destinationUrl": "https://kctownhall.com/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1014742105145692161",
+      "statusUrl": "https://x.com/KCTownHall/status/1014742105145692161",
+      "publishedAt": "2018-07-05T05:25:45.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1016684231433564160",
+      "statusUrl": "https://x.com/KCTownHall/status/1016684231433564160",
+      "publishedAt": "2018-07-10T14:03:04.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Routes a public-service, housing, transit, or civic-participation resource.",
+      "primaryTheme": "civic-information-and-public-participation",
+      "mentionedHandles": [
+        "@airqkc",
+        "@ridekc"
+      ],
+      "hashtags": [
+        "#ozoneday"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/5SiJPgIaBU",
+          "destinationUrl": "https://www.kcata.org/about_kcata/entries/ozone_alert"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 2,
+        "likes": 7,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1020798115367047171",
+      "statusUrl": "https://x.com/QuintonLucasKC/status/1020798115367047171",
+      "publishedAt": "2018-07-21T22:30:10.000Z",
+      "relationship": "repost",
+      "authorHandle": "@QuintonLucasKC",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [
+        "@senkamalaharris"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/jc5nZGtusU",
+          "destinationUrl": "https://www.curbed.com/2018/07/rent-relief-act-tax-credit-kamala-harris.html"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 2,
+        "reposts": 2,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1022510145014824962",
+      "statusUrl": "https://x.com/GCI1919/status/1022510145014824962",
+      "publishedAt": "2018-07-26T15:53:10.000Z",
+      "relationship": "repost",
+      "authorHandle": "@GCI1919",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a neighborhood institution, cleanup, mutual-support, or community resource.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#afterschool",
+        "#countdownto100years",
+        "#kcmo",
+        "#latinocommunities",
+        "#wearehere",
+        "#youth"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 8,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1023249193878597632",
+      "statusUrl": "https://x.com/KCTownHall/status/1023249193878597632",
+      "publishedAt": "2018-07-28T16:49:53.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#mysteryhand",
+        "#snailmail"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1024739337282441218",
+      "statusUrl": "https://x.com/KCTownHall/status/1024739337282441218",
+      "publishedAt": "2018-08-01T19:31:11.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@quintonlucaskc"
+      ],
+      "hashtags": [
+        "#kctownhall"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 10,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1026922856091987968",
+      "statusUrl": "https://x.com/KCTownHall/status/1026922856091987968",
+      "publishedAt": "2018-08-07T20:07:42.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Routes public voting or election information through the project account.",
+      "primaryTheme": "civic-information-and-public-participation",
+      "mentionedHandles": [
+        "@ridekctransit"
+      ],
+      "hashtags": [
+        "#stream"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/YOLxn5lCEo",
+          "destinationUrl": "https://www.kcur.org/politics-elections-and-government/2018-08-05/a-cheat-sheet-for-tuesdays-primary-election-in-missouri"
+        },
+        {
+          "shortUrl": "https://t.co/h2rxGUdJJh",
+          "destinationUrl": "https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1029067847740391426",
+      "statusUrl": "https://x.com/CentralHS_KCPS/status/1029067847740391426",
+      "publishedAt": "2018-08-13T18:11:08.000Z",
+      "relationship": "repost",
+      "authorHandle": "@CentralHS_KCPS",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a neighborhood institution, cleanup, mutual-support, or community resource.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 11,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1033485724899794944",
+      "statusUrl": "https://x.com/KCTownHall/status/1033485724899794944",
+      "publishedAt": "2018-08-25T22:46:12.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Routes a public-service, housing, transit, or civic-participation resource.",
+      "primaryTheme": "civic-information-and-public-participation",
+      "mentionedHandles": [
+        "@joliejustus",
+        "@kcmowater"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1033500102801993729",
+      "statusUrl": "https://x.com/KCTownHall/status/1033500102801993729",
+      "publishedAt": "2018-08-25T23:43:20.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1033505948533448705",
+      "statusUrl": "https://x.com/KCTownHall/status/1033505948533448705",
+      "publishedAt": "2018-08-26T00:06:34.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#metrowideproblemsolving"
+      ],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 2,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1034145416663769088",
+      "statusUrl": "https://x.com/KCTownHall/status/1034145416663769088",
+      "publishedAt": "2018-08-27T18:27:35.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1035215055024009216",
+      "statusUrl": "https://x.com/KCTownHall/status/1035215055024009216",
+      "publishedAt": "2018-08-30T17:17:57.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/8BtTrG0dKQ",
+          "destinationUrl": "https://www.youtube.com/watch?v=PmLjLyOpS9I"
+        },
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "destinationUrl": "https://kctownhall.com/"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1037785619706068995",
+      "statusUrl": "https://x.com/KCTownHall/status/1037785619706068995",
+      "publishedAt": "2018-09-06T19:32:27.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#kctownhall"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/XX2HOanaDx",
+          "destinationUrl": "http://kctownhall.com/temporary-elecary-electricity/"
+        },
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "destinationUrl": "https://kctownhall.com/"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1038153710864670721",
+      "statusUrl": "https://x.com/KCTownHall/status/1038153710864670721",
+      "publishedAt": "2018-09-07T19:55:07.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [
+        "@cancunkc"
+      ],
+      "hashtags": [
+        "#honored"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1043539982676369408",
+      "statusUrl": "https://x.com/INCThrives/status/1043539982676369408",
+      "publishedAt": "2018-09-22T16:38:14.000Z",
+      "relationship": "repost",
+      "authorHandle": "@INCThrives",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1043549999550877697",
+      "statusUrl": "https://x.com/KCTownHall/status/1043549999550877697",
+      "publishedAt": "2018-09-22T17:18:02.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Routes a public-service, housing, transit, or civic-participation resource.",
+      "primaryTheme": "civic-information-and-public-participation",
+      "mentionedHandles": [
+        "@quintonlucaskc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/qblDnsNEjm",
+          "destinationUrl": "https://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1044677436204560384",
+      "statusUrl": "https://x.com/GCI1919/status/1044677436204560384",
+      "publishedAt": "2018-09-25T19:58:04.000Z",
+      "relationship": "repost",
+      "authorHandle": "@GCI1919",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a public-service, transit, election, or civic-participation resource.",
+      "primaryTheme": "civic-information-and-public-participation",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#sisepuede",
+        "#vote",
+        "#yourvoicematters"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/lb9UoNFtWE",
+          "destinationUrl": "http://bit.ly/RegisterToVOTEHere"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 5,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1059533163519770624",
+      "statusUrl": "https://x.com/kholmesKARES/status/1059533163519770624",
+      "publishedAt": "2018-11-05T19:49:26.000Z",
+      "relationship": "repost",
+      "authorHandle": "@kholmesKARES",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 19,
+        "reposts": 175,
+        "likes": 923,
+        "bookmarks": 2
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1060936086648733702",
+      "statusUrl": "https://x.com/KCTownHall/status/1060936086648733702",
+      "publishedAt": "2018-11-09T16:44:08.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#noordinarylove"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "destinationUrl": "https://kctownhall.com/"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1061347310758699008",
+      "statusUrl": "https://x.com/KCTownHall/status/1061347310758699008",
+      "publishedAt": "2018-11-10T19:58:12.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Routes a public fundraising request for a neighborhood community institution.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#womenofwarriors"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1062375399429169152",
+      "statusUrl": "https://x.com/KCTownHall/status/1062375399429169152",
+      "publishedAt": "2018-11-13T16:03:27.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares archival history connected to the KC Town Hall building and neighborhood.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 8,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1062377455338618880",
+      "statusUrl": "https://x.com/KCTownHall/status/1062377455338618880",
+      "publishedAt": "2018-11-13T16:11:38.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares archival history connected to the KC Town Hall building and neighborhood.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1087695661020205056",
+      "statusUrl": "https://x.com/KCTownHall/status/1087695661020205056",
+      "publishedAt": "2019-01-22T12:57:08.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/6CANa9RNWd",
+          "destinationUrl": "https://www.youtube.com/watch?v=1jeyIAH3bUI&t=631"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1102627427992375296",
+      "statusUrl": "https://x.com/KCTownHall/status/1102627427992375296",
+      "publishedAt": "2019-03-04T17:50:39.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Routes a public candidate or mayoral forum and related civic-participation information.",
+      "primaryTheme": "civic-information-and-public-participation",
+      "mentionedHandles": [
+        "@kclibrary",
+        "@mattierhodes",
+        "@nekcchamber",
+        "@onekcradio"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PyFuI154b3",
+          "destinationUrl": "https://www.facebook.com/events/299606100678115/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1122854798884257797",
+      "statusUrl": "https://x.com/KCTownHall/status/1122854798884257797",
+      "publishedAt": "2019-04-29T13:27:00.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Calls attention to the threatened closure of a long-running Black-owned neighborhood grocery store.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [
+        "@ginakcur",
+        "@kcur",
+        "@kcurcst",
+        "@pubradiosly"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 2,
+        "reposts": 0,
+        "likes": 4,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1122859036163170304",
+      "statusUrl": "https://x.com/KCTownHall/status/1122859036163170304",
+      "publishedAt": "2019-04-29T13:43:50.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Calls attention to the threatened closure of a long-running Black-owned neighborhood grocery store.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [
+        "@jermainereed",
+        "@quintonlucaskc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/vdw4Yr5aST",
+          "destinationUrl": "https://www.kansascity.com/news/business/article87241897.html"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1122867070729949184",
+      "statusUrl": "https://x.com/KCTownHall/status/1122867070729949184",
+      "publishedAt": "2019-04-29T14:15:46.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1122881981484797954",
+      "statusUrl": "https://x.com/joliejustus/status/1122881981484797954",
+      "publishedAt": "2019-04-29T15:15:01.000Z",
+      "relationship": "repost",
+      "authorHandle": "@joliejustus",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a neighborhood institution, cleanup, mutual-support, or community resource.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 4,
+        "reposts": 13,
+        "likes": 60,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1122884316093210627",
+      "statusUrl": "https://x.com/KCTownHall/status/1122884316093210627",
+      "publishedAt": "2019-04-29T15:24:17.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1122905778464153602",
+      "statusUrl": "https://x.com/QuintonLucasKC/status/1122905778464153602",
+      "publishedAt": "2019-04-29T16:49:34.000Z",
+      "relationship": "repost",
+      "authorHandle": "@QuintonLucasKC",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a neighborhood institution, cleanup, mutual-support, or community resource.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#kansascity",
+        "#kcmo"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 5,
+        "likes": 24,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1122977313468157953",
+      "statusUrl": "https://x.com/KCTownHall/status/1122977313468157953",
+      "publishedAt": "2019-04-29T21:33:50.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1123264511698456577",
+      "statusUrl": "https://x.com/KansasCity/status/1123264511698456577",
+      "publishedAt": "2019-04-30T16:35:03.000Z",
+      "relationship": "repost",
+      "authorHandle": "@KansasCity",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#jazzday"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 14,
+        "likes": 39,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1124416898064580608",
+      "statusUrl": "https://x.com/KCTownHall/status/1124416898064580608",
+      "publishedAt": "2019-05-03T20:54:13.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/Vsuw0RSM2g",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124418375181058048",
+      "statusUrl": "https://x.com/KCTownHall/status/1124418375181058048",
+      "publishedAt": "2019-05-03T21:00:05.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Invites residents to shape possible uses for the historic 36th Street and Indiana Avenue site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/kSEpCVgPwt",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124448415293874176",
+      "statusUrl": "https://x.com/KCTownHall/status/1124448415293874176",
+      "publishedAt": "2019-05-03T22:59:28.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124481129057333250",
+      "statusUrl": "https://x.com/KCTownHall/status/1124481129057333250",
+      "publishedAt": "2019-05-04T01:09:27.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124717766756503552",
+      "statusUrl": "https://x.com/KCTownHall/status/1124717766756503552",
+      "publishedAt": "2019-05-04T16:49:46.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares archival history connected to the KC Town Hall building and neighborhood.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124760081596391424",
+      "statusUrl": "https://x.com/_Titi81/status/1124760081596391424",
+      "publishedAt": "2019-05-04T19:37:55.000Z",
+      "relationship": "repost",
+      "authorHandle": "@_Titi81",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public context connected to local place, preservation, or resident priorities.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1124779534795071489",
+      "statusUrl": "https://x.com/KCTownHall/status/1124779534795071489",
+      "publishedAt": "2019-05-04T20:55:13.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124789562293870592",
+      "statusUrl": "https://x.com/KCTownHall/status/1124789562293870592",
+      "publishedAt": "2019-05-04T21:35:03.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124791429790879745",
+      "statusUrl": "https://x.com/KCTownHall/status/1124791429790879745",
+      "publishedAt": "2019-05-04T21:42:29.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124792146064748550",
+      "statusUrl": "https://x.com/NickStarlingPIO/status/1124792146064748550",
+      "publishedAt": "2019-05-04T21:45:19.000Z",
+      "relationship": "repost",
+      "authorHandle": "@NickStarlingPIO",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a neighborhood institution, cleanup, mutual-support, or community resource.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [
+        "@41actionnews"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 2,
+        "reposts": 7,
+        "likes": 9,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1124793002843615233",
+      "statusUrl": "https://x.com/KCTownHall/status/1124793002843615233",
+      "publishedAt": "2019-05-04T21:48:44.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124795681389076481",
+      "statusUrl": "https://x.com/KCTownHall/status/1124795681389076481",
+      "publishedAt": "2019-05-04T21:59:22.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1124810411302359040",
+      "statusUrl": "https://x.com/KCTownHall/status/1124810411302359040",
+      "publishedAt": "2019-05-04T22:57:54.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@foresttysonjr",
+        "@urbanhermit"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1126284471894933504",
+      "statusUrl": "https://x.com/KCTownHall/status/1126284471894933504",
+      "publishedAt": "2019-05-09T00:35:18.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Invites residents to shape possible uses for the historic 36th Street and Indiana Avenue site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@gci1919",
+        "@joliejustus",
+        "@quintonlucaskc"
+      ],
+      "hashtags": [
+        "#kcmayor",
+        "#kcmayoraldebate",
+        "#votekc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/bf2VnJH9oy",
+          "destinationUrl": "https://www.facebook.com/KCTownHall/videos/2135596040064768"
+        },
+        {
+          "shortUrl": "https://t.co/kSEpCVgPwt",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1134594449256984576",
+      "statusUrl": "https://x.com/KCTownHall/status/1134594449256984576",
+      "publishedAt": "2019-05-31T22:56:11.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/48yjJD5qWu",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1134608391614160896",
+      "statusUrl": "https://x.com/KCTownHall/status/1134608391614160896",
+      "publishedAt": "2019-05-31T23:51:35.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1135225497384890368",
+      "statusUrl": "https://x.com/KCTownHall/status/1135225497384890368",
+      "publishedAt": "2019-06-02T16:43:44.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [
+        "@danfowlerkcmo",
+        "@jermainereed",
+        "@joliejustus",
+        "@k_j_shields",
+        "@mcmanuskc",
+        "@quintonlucaskc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1135246124883861504",
+      "statusUrl": "https://x.com/KCTownHall/status/1135246124883861504",
+      "publishedAt": "2019-06-02T18:05:42.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@foresttysonjr",
+        "@urbanhermit"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1147586873423998976",
+      "statusUrl": "https://x.com/KCTownHall/status/1147586873423998976",
+      "publishedAt": "2019-07-06T19:23:26.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1147589894660907009",
+      "statusUrl": "https://x.com/KCTownHall/status/1147589894660907009",
+      "publishedAt": "2019-07-06T19:35:26.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1147602234127130624",
+      "statusUrl": "https://x.com/KCTownHall/status/1147602234127130624",
+      "publishedAt": "2019-07-06T20:24:28.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1147679988600254465",
+      "statusUrl": "https://x.com/KCTownHall/status/1147679988600254465",
+      "publishedAt": "2019-07-07T01:33:26.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1148277187583389703",
+      "statusUrl": "https://x.com/trutheresme/status/1148277187583389703",
+      "publishedAt": "2019-07-08T17:06:30.000Z",
+      "relationship": "repost",
+      "authorHandle": "@trutheresme",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [
+        "@btg_kc",
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#communitybuilding",
+        "#environmentaljustice",
+        "#moregreenplease"
+      ],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1154729332755050496",
+      "statusUrl": "https://x.com/RideKCTransit/status/1154729332755050496",
+      "publishedAt": "2019-07-26T12:25:01.000Z",
+      "relationship": "repost",
+      "authorHandle": "@RideKCTransit",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public context connected to local place, preservation, or resident priorities.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/D1LHjkHFmS",
+          "destinationUrl": "https://ridekc.org/planning/ridekc-next"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 4,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1154888028889976834",
+      "statusUrl": "https://x.com/KCTownHall/status/1154888028889976834",
+      "publishedAt": "2019-07-26T22:55:37.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1157464628324110336",
+      "statusUrl": "https://x.com/KCTownHall/status/1157464628324110336",
+      "publishedAt": "2019-08-03T01:34:06.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@ellington_b",
+        "@kctownhall",
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1157482636463476736",
+      "statusUrl": "https://x.com/KCTownHall/status/1157482636463476736",
+      "publishedAt": "2019-08-03T02:45:40.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1157483198781087744",
+      "statusUrl": "https://x.com/KCTownHall/status/1157483198781087744",
+      "publishedAt": "2019-08-03T02:47:54.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1157483542529617926",
+      "statusUrl": "https://x.com/KCTownHall/status/1157483542529617926",
+      "publishedAt": "2019-08-03T02:49:16.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1157861700944703488",
+      "statusUrl": "https://x.com/KCTownHall/status/1157861700944703488",
+      "publishedAt": "2019-08-04T03:51:56.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1159153322236026881",
+      "statusUrl": "https://x.com/KCTownHall/status/1159153322236026881",
+      "publishedAt": "2019-08-07T17:24:22.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Routes a public fundraising request for a neighborhood community institution.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [
+        "@ellington_b",
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/cMLHYX42fV",
+          "destinationUrl": "https://www.gofundme.com/f/church-ac-theft"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1170072880090165249",
+      "statusUrl": "https://x.com/KCTownHall/status/1170072880090165249",
+      "publishedAt": "2019-09-06T20:34:48.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1170387602329034754",
+      "statusUrl": "https://x.com/KCTownHall/status/1170387602329034754",
+      "publishedAt": "2019-09-07T17:25:23.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1170387688496799744",
+      "statusUrl": "https://x.com/KCTownHall/status/1170387688496799744",
+      "publishedAt": "2019-09-07T17:25:44.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1170387736492224512",
+      "statusUrl": "https://x.com/KCTownHall/status/1170387736492224512",
+      "publishedAt": "2019-09-07T17:25:55.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1173037571162738689",
+      "statusUrl": "https://x.com/trutheresme/status/1173037571162738689",
+      "publishedAt": "2019-09-15T00:55:25.000Z",
+      "relationship": "repost",
+      "authorHandle": "@trutheresme",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1180176299471638528",
+      "statusUrl": "https://x.com/laurazig/status/1180176299471638528",
+      "publishedAt": "2019-10-04T17:42:11.000Z",
+      "relationship": "repost",
+      "authorHandle": "@laurazig",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [
+        "@cityofkck",
+        "@hughesdevelopmentco",
+        "@kcur"
+      ],
+      "hashtags": [
+        "#heretolistenkcur"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 4,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1180178311848366083",
+      "statusUrl": "https://x.com/KCTownHall/status/1180178311848366083",
+      "publishedAt": "2019-10-04T17:50:10.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "destinationUrl": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180550513819095042",
+      "statusUrl": "https://x.com/KCTownHall/status/1180550513819095042",
+      "publishedAt": "2019-10-05T18:29:10.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180551346090577920",
+      "statusUrl": "https://x.com/KCTownHall/status/1180551346090577920",
+      "publishedAt": "2019-10-05T18:32:29.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180552140005298176",
+      "statusUrl": "https://x.com/KCTownHall/status/1180552140005298176",
+      "publishedAt": "2019-10-05T18:35:38.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180552910071095301",
+      "statusUrl": "https://x.com/KCTownHall/status/1180552910071095301",
+      "publishedAt": "2019-10-05T18:38:42.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180553578689236992",
+      "statusUrl": "https://x.com/KCTownHall/status/1180553578689236992",
+      "publishedAt": "2019-10-05T18:41:21.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180556215870541824",
+      "statusUrl": "https://x.com/KCTownHall/status/1180556215870541824",
+      "publishedAt": "2019-10-05T18:51:50.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180557262823264256",
+      "statusUrl": "https://x.com/KCTownHall/status/1180557262823264256",
+      "publishedAt": "2019-10-05T18:55:59.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180568634260897794",
+      "statusUrl": "https://x.com/KCTownHall/status/1180568634260897794",
+      "publishedAt": "2019-10-05T19:41:10.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180569203717353472",
+      "statusUrl": "https://x.com/KCTownHall/status/1180569203717353472",
+      "publishedAt": "2019-10-05T19:43:26.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180569809475588096",
+      "statusUrl": "https://x.com/KCTownHall/status/1180569809475588096",
+      "publishedAt": "2019-10-05T19:45:51.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180570492530577410",
+      "statusUrl": "https://x.com/KCTownHall/status/1180570492530577410",
+      "publishedAt": "2019-10-05T19:48:34.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1180639237781250049",
+      "statusUrl": "https://x.com/KCTownHall/status/1180639237781250049",
+      "publishedAt": "2019-10-06T00:21:44.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1182329689689473029",
+      "statusUrl": "https://x.com/KCTownHall/status/1182329689689473029",
+      "publishedAt": "2019-10-10T16:18:59.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@foresttysonjr",
+        "@kikicurls",
+        "@robinson4kc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 7,
+        "likes": 6,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1182349413722836992",
+      "statusUrl": "https://x.com/trutheresme/status/1182349413722836992",
+      "publishedAt": "2019-10-10T17:37:21.000Z",
+      "relationship": "repost",
+      "authorHandle": "@trutheresme",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public context connected to local place, preservation, or resident priorities.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@foresttysonjr",
+        "@kikicurls",
+        "@robinson4kc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1182369340034707457",
+      "statusUrl": "https://x.com/JJones816/status/1182369340034707457",
+      "publishedAt": "2019-10-10T18:56:32.000Z",
+      "relationship": "repost",
+      "authorHandle": "@JJones816",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public context connected to local place, preservation, or resident priorities.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@foresttysonjr",
+        "@kikicurls",
+        "@robinson4kc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1183035237233823745",
+      "statusUrl": "https://x.com/KCTownHall/status/1183035237233823745",
+      "publishedAt": "2019-10-12T15:02:34.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Documents restoration work, public identity, or participation around the historic KC Town Hall site.",
+      "primaryTheme": "place-restoration-and-resident-input",
+      "mentionedHandles": [
+        "@foresttysonjr",
+        "@kikicurls",
+        "@robinson4kc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1184421200400801792",
+      "statusUrl": "https://x.com/DjPittel/status/1184421200400801792",
+      "publishedAt": "2019-10-16T10:49:54.000Z",
+      "relationship": "repost",
+      "authorHandle": "@DjPittel",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#wearecentral"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 11,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1185289925748580352",
+      "statusUrl": "https://x.com/QuintonLucasKC/status/1185289925748580352",
+      "publishedAt": "2019-10-18T20:21:54.000Z",
+      "relationship": "repost",
+      "authorHandle": "@QuintonLucasKC",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a public-service, transit, election, or civic-participation resource.",
+      "primaryTheme": "civic-information-and-public-participation",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 4,
+        "reposts": 8,
+        "likes": 50,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1187199836682117126",
+      "statusUrl": "https://x.com/Robinson4kc/status/1187199836682117126",
+      "publishedAt": "2019-10-24T02:51:12.000Z",
+      "relationship": "repost",
+      "authorHandle": "@Robinson4kc",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#violencefreekc"
+      ],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 2,
+        "reposts": 1,
+        "likes": 9,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1190017854248239115",
+      "statusUrl": "https://x.com/KCTownHall/status/1190017854248239115",
+      "publishedAt": "2019-10-31T21:29:00.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190367471129300992",
+      "statusUrl": "https://x.com/KCTownHall/status/1190367471129300992",
+      "publishedAt": "2019-11-01T20:38:15.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires",
+        "#tiredoftiresfinal"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190393136054521856",
+      "statusUrl": "https://x.com/KCTownHall/status/1190393136054521856",
+      "publishedAt": "2019-11-01T22:20:14.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190674584502177797",
+      "statusUrl": "https://x.com/NortheastNewsKC/status/1190674584502177797",
+      "publishedAt": "2019-11-02T16:58:37.000Z",
+      "relationship": "repost",
+      "authorHandle": "@NortheastNewsKC",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a neighborhood institution, cleanup, mutual-support, or community resource.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [
+        "@houstondefoe",
+        "@indianmoundna",
+        "@kcmoparks",
+        "@phna",
+        "@quintonlucaskc",
+        "@scarrittkc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 8,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1190688421276246016",
+      "statusUrl": "https://x.com/Robinson4kc/status/1190688421276246016",
+      "publishedAt": "2019-11-02T17:53:36.000Z",
+      "relationship": "repost",
+      "authorHandle": "@Robinson4kc",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a neighborhood institution, cleanup, mutual-support, or community resource.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 20,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1190703057161601024",
+      "statusUrl": "https://x.com/KCTownHall/status/1190703057161601024",
+      "publishedAt": "2019-11-02T18:51:45.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190704251263160322",
+      "statusUrl": "https://x.com/KCTownHall/status/1190704251263160322",
+      "publishedAt": "2019-11-02T18:56:30.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190705445008216064",
+      "statusUrl": "https://x.com/KCTownHall/status/1190705445008216064",
+      "publishedAt": "2019-11-02T19:01:14.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190707863292956672",
+      "statusUrl": "https://x.com/KCTownHall/status/1190707863292956672",
+      "publishedAt": "2019-11-02T19:10:51.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190708575510958080",
+      "statusUrl": "https://x.com/KCTownHall/status/1190708575510958080",
+      "publishedAt": "2019-11-02T19:13:41.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190709291289890823",
+      "statusUrl": "https://x.com/KCTownHall/status/1190709291289890823",
+      "publishedAt": "2019-11-02T19:16:32.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190710238212694016",
+      "statusUrl": "https://x.com/KCTownHall/status/1190710238212694016",
+      "publishedAt": "2019-11-02T19:20:17.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1190995865814667266",
+      "statusUrl": "https://x.com/KCTownHall/status/1190995865814667266",
+      "publishedAt": "2019-11-03T14:15:16.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1191405830693904385",
+      "statusUrl": "https://x.com/trutheresme/status/1191405830693904385",
+      "publishedAt": "2019-11-04T17:24:19.000Z",
+      "relationship": "repost",
+      "authorHandle": "@trutheresme",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a public-service, transit, election, or civic-participation resource.",
+      "primaryTheme": "civic-information-and-public-participation",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#electionday"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 6,
+        "likes": 14,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1209146067817762816",
+      "statusUrl": "https://x.com/KansasCity/status/1209146067817762816",
+      "publishedAt": "2019-12-23T16:17:42.000Z",
+      "relationship": "repost",
+      "authorHandle": "@KansasCity",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 4,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1209146457590247424",
+      "statusUrl": "https://x.com/KansasCity/status/1209146457590247424",
+      "publishedAt": "2019-12-23T16:19:15.000Z",
+      "relationship": "repost",
+      "authorHandle": "@KansasCity",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies public neighborhood or civic context relevant to the project account.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "1236102068680695808",
+      "statusUrl": "https://x.com/KCTownHall/status/1236102068680695808",
+      "publishedAt": "2020-03-07T01:31:13.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1236385304245927936",
+      "statusUrl": "https://x.com/KCTownHall/status/1236385304245927936",
+      "publishedAt": "2020-03-07T20:16:42.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1236689218174357504",
+      "statusUrl": "https://x.com/KCTownHall/status/1236689218174357504",
+      "publishedAt": "2020-03-08T16:24:20.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1252344939867824132",
+      "statusUrl": "https://x.com/KCTownHall/status/1252344939867824132",
+      "publishedAt": "2020-04-20T21:14:35.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Routes public-health or relief information through the project account.",
+      "primaryTheme": "civic-information-and-public-participation",
+      "mentionedHandles": [
+        "@kctownhall",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#covid19"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ph5INJPPhQ",
+          "destinationUrl": "https://www.youtube.com/watch?v=onCKU-TuPhc"
+        },
+        {
+          "shortUrl": "https://t.co/euxvbbF4q9",
+          "destinationUrl": "https://kctownhall.com/COVID19/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1252345034038407168",
+      "statusUrl": "https://x.com/KCTownHall/status/1252345034038407168",
+      "publishedAt": "2020-04-20T21:14:58.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [
+        "@childrensmercy",
+        "@ericwbunch",
+        "@kccarehealth",
+        "@kcmohealthdept",
+        "@kctenants",
+        "@quintonlucaskc",
+        "@samuelurodgers",
+        "@swopehealth",
+        "@trumanmedkc"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269121890733473795",
+      "statusUrl": "https://x.com/KCTownHall/status/1269121890733473795",
+      "publishedAt": "2020-06-06T04:20:12.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269122302970662912",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122302970662912",
+      "publishedAt": "2020-06-06T04:21:50.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269122489461997568",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122489461997568",
+      "publishedAt": "2020-06-06T04:22:35.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269122641086033920",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122641086033920",
+      "publishedAt": "2020-06-06T04:23:11.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269122793544855552",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122793544855552",
+      "publishedAt": "2020-06-06T04:23:47.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269122955965009921",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122955965009921",
+      "publishedAt": "2020-06-06T04:24:26.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269123177885679618",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123177885679618",
+      "publishedAt": "2020-06-06T04:25:19.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269123270391091200",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123270391091200",
+      "publishedAt": "2020-06-06T04:25:41.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269123426414985216",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123426414985216",
+      "publishedAt": "2020-06-06T04:26:18.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269123738911625217",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123738911625217",
+      "publishedAt": "2020-06-06T04:27:33.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269123813171757059",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123813171757059",
+      "publishedAt": "2020-06-06T04:27:50.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1269123902070042624",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123902070042624",
+      "publishedAt": "2020-06-06T04:28:12.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#blacklivesmatter",
+        "#kcmo",
+        "#protest"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1288612274228396032",
+      "statusUrl": "https://x.com/KCTownHall/status/1288612274228396032",
+      "publishedAt": "2020-07-29T23:08:02.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1288952731982598144",
+      "statusUrl": "https://x.com/KCTownHall/status/1288952731982598144",
+      "publishedAt": "2020-07-30T21:40:53.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1289313255966617602",
+      "statusUrl": "https://x.com/KCTownHall/status/1289313255966617602",
+      "publishedAt": "2020-07-31T21:33:29.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1289350670730948608",
+      "statusUrl": "https://x.com/KCTownHall/status/1289350670730948608",
+      "publishedAt": "2020-08-01T00:02:09.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1289350962709065729",
+      "statusUrl": "https://x.com/KCTownHall/status/1289350962709065729",
+      "publishedAt": "2020-08-01T00:03:19.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1289634461638778880",
+      "statusUrl": "https://x.com/KCTownHall/status/1289634461638778880",
+      "publishedAt": "2020-08-01T18:49:50.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1289713591843565569",
+      "statusUrl": "https://x.com/KCTownHall/status/1289713591843565569",
+      "publishedAt": "2020-08-02T00:04:16.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 7,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1289714654579580928",
+      "statusUrl": "https://x.com/KCTownHall/status/1289714654579580928",
+      "publishedAt": "2020-08-02T00:08:30.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Shares project context or follows up within a public neighborhood conversation.",
+      "primaryTheme": "project-conversation-and-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1301921883831570434",
+      "statusUrl": "https://x.com/KCTownHall/status/1301921883831570434",
+      "publishedAt": "2020-09-04T16:35:40.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1301997561356652546",
+      "statusUrl": "https://x.com/KCTownHall/status/1301997561356652546",
+      "publishedAt": "2020-09-04T21:36:23.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1302003448833953792",
+      "statusUrl": "https://x.com/KCTownHall/status/1302003448833953792",
+      "publishedAt": "2020-09-04T21:59:46.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1302003767831912448",
+      "statusUrl": "https://x.com/KCTownHall/status/1302003767831912448",
+      "publishedAt": "2020-09-04T22:01:02.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1302004390585421825",
+      "statusUrl": "https://x.com/KCTownHall/status/1302004390585421825",
+      "publishedAt": "2020-09-04T22:03:31.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1302281027960926210",
+      "statusUrl": "https://x.com/KCTownHall/status/1302281027960926210",
+      "publishedAt": "2020-09-05T16:22:46.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1302311398999982081",
+      "statusUrl": "https://x.com/KCTownHall/status/1302311398999982081",
+      "publishedAt": "2020-09-05T18:23:27.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1302391602812518401",
+      "statusUrl": "https://x.com/KCTownHall/status/1302391602812518401",
+      "publishedAt": "2020-09-05T23:42:10.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1311091878306213889",
+      "statusUrl": "https://x.com/KCTownHall/status/1311091878306213889",
+      "publishedAt": "2020-09-29T23:53:57.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1312091287273824265",
+      "statusUrl": "https://x.com/KCTownHall/status/1312091287273824265",
+      "publishedAt": "2020-10-02T18:05:15.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1312167901252608001",
+      "statusUrl": "https://x.com/KCTownHall/status/1312167901252608001",
+      "publishedAt": "2020-10-02T23:09:41.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/Ig0fb0ozYH",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1312482560316895232",
+      "statusUrl": "https://x.com/KCTownHall/status/1312482560316895232",
+      "publishedAt": "2020-10-03T20:00:01.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/Ig0fb0ozYH",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1312530339051393024",
+      "statusUrl": "https://x.com/KCTownHall/status/1312530339051393024",
+      "publishedAt": "2020-10-03T23:09:53.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1312649591469342722",
+      "statusUrl": "https://x.com/KCTownHall/status/1312649591469342722",
+      "publishedAt": "2020-10-04T07:03:45.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/Ig0fb0Gbnh",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1324836875568320512",
+      "statusUrl": "https://x.com/KCTownHall/status/1324836875568320512",
+      "publishedAt": "2020-11-06T22:11:40.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1325099960933748744",
+      "statusUrl": "https://x.com/KCTownHall/status/1325099960933748744",
+      "publishedAt": "2020-11-07T15:37:04.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftiresfinal"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1367257547724509189",
+      "statusUrl": "https://x.com/KCTownHall/status/1367257547724509189",
+      "publishedAt": "2021-03-03T23:36:16.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1367878555556777989",
+      "statusUrl": "https://x.com/KCTownHall/status/1367878555556777989",
+      "publishedAt": "2021-03-05T16:43:56.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1368272511490744325",
+      "statusUrl": "https://x.com/KCTownHall/status/1368272511490744325",
+      "publishedAt": "2021-03-06T18:49:22.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1368365228765945858",
+      "statusUrl": "https://x.com/KCTownHall/status/1368365228765945858",
+      "publishedAt": "2021-03-07T00:57:48.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1423734504691314698",
+      "statusUrl": "https://x.com/KCTownHall/status/1423734504691314698",
+      "publishedAt": "2021-08-06T19:55:32.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/TTxnCGI26V",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 4,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1423795274879836160",
+      "statusUrl": "https://x.com/KCTownHall/status/1423795274879836160",
+      "publishedAt": "2021-08-06T23:57:01.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@troostwoodkcmo"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/rIBQz797HJ",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1424055770472198146",
+      "statusUrl": "https://x.com/KCTownHall/status/1424055770472198146",
+      "publishedAt": "2021-08-07T17:12:08.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/rIBQz797HJ",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1424106887482683397",
+      "statusUrl": "https://x.com/KCTownHall/status/1424106887482683397",
+      "publishedAt": "2021-08-07T20:35:15.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/rIBQz797HJ",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1424143001505386498",
+      "statusUrl": "https://x.com/KCTownHall/status/1424143001505386498",
+      "publishedAt": "2021-08-07T22:58:45.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1433862792990400527",
+      "statusUrl": "https://x.com/KCTownHall/status/1433862792990400527",
+      "publishedAt": "2021-09-03T18:41:44.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/TTxnCGI26V",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1434323234346967046",
+      "statusUrl": "https://x.com/KCTownHall/status/1434323234346967046",
+      "publishedAt": "2021-09-05T01:11:22.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1444329446287290382",
+      "statusUrl": "https://x.com/KCTownHall/status/1444329446287290382",
+      "publishedAt": "2021-10-02T15:52:28.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1444466053665509377",
+      "statusUrl": "https://x.com/KCTownHall/status/1444466053665509377",
+      "publishedAt": "2021-10-03T00:55:18.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1457012244588412935",
+      "statusUrl": "https://x.com/KCTownHall/status/1457012244588412935",
+      "publishedAt": "2021-11-06T15:49:23.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/TTxnCGI26V",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 7,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1457031966444896259",
+      "statusUrl": "https://x.com/KCTownHall/status/1457031966444896259",
+      "publishedAt": "2021-11-06T17:07:45.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Routes or documents neighborhood cleanup, mutual support, or community infrastructure.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "hasMedia": false,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1457046287753285637",
+      "statusUrl": "https://x.com/KCTownHall/status/1457046287753285637",
+      "publishedAt": "2021-11-06T18:04:40.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1457371688300056580",
+      "statusUrl": "https://x.com/KCTownHall/status/1457371688300056580",
+      "publishedAt": "2021-11-07T15:37:41.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1500289857750401026",
+      "statusUrl": "https://x.com/KCTownHall/status/1500289857750401026",
+      "publishedAt": "2022-03-06T01:59:10.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/TTxnCGqqIl",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 9,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1510295173548367877",
+      "statusUrl": "https://x.com/KCTownHall/status/1510295173548367877",
+      "publishedAt": "2022-04-02T16:36:43.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1511091801087692813",
+      "statusUrl": "https://x.com/KCTownHall/status/1511091801087692813",
+      "publishedAt": "2022-04-04T21:22:14.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1525157225542651910",
+      "statusUrl": "https://x.com/KCTownHall/status/1525157225542651910",
+      "publishedAt": "2022-05-13T16:53:13.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@kctownhall",
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1532864718490292226",
+      "statusUrl": "https://x.com/KCTownHall/status/1532864718490292226",
+      "publishedAt": "2022-06-03T23:20:02.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/5ABuIyj6CT",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2,
+        "bookmarks": 1
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1542991559674716165",
+      "statusUrl": "https://x.com/KCTownHall/status/1542991559674716165",
+      "publishedAt": "2022-07-01T22:00:29.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/5ABuIyj6CT",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1543272488318242817",
+      "statusUrl": "https://x.com/KCTownHall/status/1543272488318242817",
+      "publishedAt": "2022-07-02T16:36:48.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/5ABuIyj6CT",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1555940701338206208",
+      "statusUrl": "https://x.com/KCTownHall/status/1555940701338206208",
+      "publishedAt": "2022-08-06T15:35:45.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces or routes a recurring free Tired of Tires pickup for East Kansas City residents.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/5ABuIyj6CT",
+          "destinationUrl": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1566197849297195009",
+      "statusUrl": "https://x.com/KCTownHall/status/1566197849297195009",
+      "publishedAt": "2022-09-03T22:54:00.000Z",
+      "relationship": "account-status",
+      "authorHandle": "@KCTownHall",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reports a Tired of Tires pickup result and routes residents to the recurring free-pickup program.",
+      "primaryTheme": "tired-of-tires-operations",
+      "mentionedHandles": [
+        "@quintonlucaskc",
+        "@robinson4kc"
+      ],
+      "hashtags": [
+        "#tiredoftires"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 8,
+        "bookmarks": 0
+      },
+      "metricOwner": "account-status"
+    },
+    {
+      "statusId": "1573651421681139714",
+      "statusUrl": "https://x.com/Robinson4kc/status/1573651421681139714",
+      "publishedAt": "2022-09-24T12:31:50.000Z",
+      "relationship": "repost",
+      "authorHandle": "@Robinson4kc",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Amplifies a neighborhood institution, cleanup, mutual-support, or community resource.",
+      "primaryTheme": "neighborhood-mutual-support",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#3rddistrictstrong",
+        "#cleanup",
+        "#kcstrong",
+        "#trashday"
+      ],
+      "outboundLinks": [],
+      "hasMedia": true,
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 6,
+        "bookmarks": 0
+      },
+      "metricOwner": "source-status"
+    }
+  ]
+}

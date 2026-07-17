@@ -4,6 +4,13 @@ Use this checklist before staging review, production review, or any PR that
 changes public claims.
 
 - [ ] Every public claim has a matching entry in `docs/knowledge-bank/claims.md`.
+- [ ] Every new fragment has an intake record and durable disposition.
+- [ ] Every canonical claim has independent evidentiary, publication-safety,
+  and editorial-selection status.
+- [ ] Every canonical claim has exactly one publication decision.
+- [ ] Every public proof ID has a source-coverage entry or research inquiry.
+- [ ] Reserve and hold claims remain off public site surfaces.
+- [ ] Project photo briefs preserve rights, consent, caption, and evidence needs.
 - [ ] Every structured proof in `apps/www/src/data/proofs.ts` has status,
   support level, evidence class, guardrail, protected boundaries, and review
   date.

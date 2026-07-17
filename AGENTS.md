@@ -3,8 +3,8 @@
 ## Mission
 
 Build and maintain a focused, public-safe portfolio that makes Jamie legible as a
-Technical Project Manager - Product Operations & Implementation lead who creates
-operating structure for complex public-facing teams.
+Technical Project Manager - Product Operations & Implementation lead who turns
+emerging work into usable systems for complex public-facing teams.
 
 ## Current Canonical App
 
@@ -30,6 +30,10 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run test:evals`
+- `npm run evals:launch`
+- `npm run evals:certify`
+- `npm run prelaunch:production`
 
 ## Public-Safety Rules
 
@@ -48,6 +52,11 @@ When uncertain, write: `TODO: Jamie approval required.`
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.
 
+Record new memories, URLs, artifacts, claims, corrections, and photo leads in
+the intake lifecycle before deciding whether they belong on the site. No silent
+loss does not mean automatic publication. Keep evidentiary maturity,
+publication safety, and editorial selection independent.
+
 Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
 canonical machine-readable source. Do not add or strengthen a public factual
 claim without updating the canonical claim, evidence relationship, and source
@@ -62,6 +71,12 @@ changing canonical records.
 
 Website copy should project from the knowledge bank and stay optimized for
 clarity, audience, and purpose.
+
+The launch evaluator is governed by `docs/evals/composite-contract.json`.
+Generated results must bind the exact candidate, contract, material inputs,
+evaluator, and public registry. `npm run evals:certify` requires two passing
+runs against one clean unchanged candidate. It does not replace an independent
+holdout, Jamie's exact-SHA approval, deployment approval, or postdeploy review.
 
 Do not strengthen a claim in a public page unless the stronger claim exists in
 the bank with source basis, status, guardrail, and public-use boundary.

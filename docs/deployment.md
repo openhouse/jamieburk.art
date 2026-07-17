@@ -107,6 +107,67 @@ git remote add dokku-production dokku@<droplet-host-or-ip>:jamieburk-art
 git push dokku-production HEAD:main
 ```
 
+## Production Cutover
+
+Production remains a human-approved action. Deploy the exact commit that was
+reviewed on staging; do not amend or substitute that commit between
+environments.
+
+1. Record the candidate SHA and current production release:
+
+   ```bash
+   git rev-parse HEAD
+   git status --short
+   dokku releases:report jamieburk-art
+   ```
+
+2. Run the complete production gate with production URL and indexing
+   invariants:
+
+   ```bash
+   npm run prelaunch:production
+   dokku config:get jamieburk-art NEXT_PUBLIC_SITE_URL
+   dokku config:get jamieburk-art NEXT_PUBLIC_ROBOTS_POLICY
+   ```
+
+   The expected values are `https://jamieburk.art` and
+   `NEXT_PUBLIC_ROBOTS_POLICY=index`.
+
+3. Obtain Jamie's explicit approval for that SHA, then push it unchanged:
+
+   ```bash
+   git push dokku-production HEAD:main
+   ```
+
+4. Verify the release before announcing it:
+
+   ```bash
+   curl -i https://jamieburk.art/api/health
+   curl -i https://jamieburk.art/robots.txt
+   curl -i https://jamieburk.art/sitemap.xml
+   curl -I https://www.jamieburk.art
+   curl -I https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+   ```
+
+The health response must report production, robots must permit indexing, the
+sitemap and canonical URLs must use `https://jamieburk.art`, and the `www`
+hostname must redirect to the canonical host.
+
+## Rollback
+
+If health, indexing, canonical, route, or resume checks fail, stop promotion and
+restore the last known-good release:
+
+```bash
+dokku releases:report jamieburk-art
+dokku releases:rollback jamieburk-art <known-good-version>
+dokku ps:rebuild jamieburk-art
+```
+
+Repeat the production verification commands after rollback. Record the failed
+SHA, observed failure, restored release, and follow-up owner before attempting
+another cutover.
+
 ## Local Docker Verification
 
 ```bash
