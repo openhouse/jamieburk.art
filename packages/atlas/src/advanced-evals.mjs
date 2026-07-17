@@ -484,9 +484,15 @@ export function evaluateGroundedTasks({ taskSet, compiled, recordStore, catalog,
         const page = compiled.pages.find(({ canonical }) => canonical?.projectKey === task.input.projectKey);
         if (!page || page.id !== task.expect.pageId) throw new Error("project page missing");
         if (page.canonical.slice.counts.claims < task.expect.minimumClaims) throw new Error("project claim slice is too small");
-      } else if (task.operation === "lineage") {
-        const lineage = catalog.semanticRecords.find(({ id }) => id === task.input.id);
-        if (!lineage?.branches.includes(task.expect.branch) || lineage.locations.length < task.expect.minimumLocations) throw new Error("lineage expectation failed");
+      } else if (task.operation === "source-dossier") {
+        const dossier = compiled.sourceDossiers.find(({ id }) => id === task.input.id);
+        if (!dossier) throw new Error("source dossier missing");
+        if (dossier.source.id !== task.expect.sourceId || dossier.artifact.id !== task.expect.artifactId) {
+          throw new Error("source or artifact identity drifted");
+        }
+        if (dossier.observations.length < task.expect.minimumObservations || dossier.claims.length < task.expect.minimumClaims) {
+          throw new Error("source dossier knowledge depth is incomplete");
+        }
       } else if (task.operation === "artifact") {
         const content = readFeatureEvalArtifact({
           repoRoot,

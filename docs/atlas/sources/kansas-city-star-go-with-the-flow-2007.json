@@ -1,0 +1,985 @@
+{
+  "schemaVersion": 1,
+  "id": "ATLAS-SOURCE-KCSTAR-GO-WITH-FLOW-2007",
+  "slug": "kansas-city-star-go-with-the-flow-2007",
+  "projectPageId": "ATLAS-PROJECT-RIVER-PUBLIC-ENGAGEMENT",
+  "synthesisPage": "docs/atlas/sources/kansas-city-star-go-with-the-flow-2007.md",
+  "source": {
+    "id": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    "role": "canonical-source",
+    "kind": "published-article",
+    "title": "In the name of art, go with the flow",
+    "author": "Darryl Levings",
+    "publication": "The Kansas City Star",
+    "publishedAt": "2007-11-15",
+    "printedLocations": [
+      "Kansas City edition, A1",
+      "Kansas City edition, A4"
+    ],
+    "canonicalUrl": null,
+    "publicCitation": "Darryl Levings, 'In the name of art, go with the flow,' The Kansas City Star, November 15, 2007, pp. A1, A4.",
+    "identityNote": "This is the canonical identity of the published article. The supplied PDF is a preservation artifact, not another source."
+  },
+  "artifact": {
+    "id": "ART-KCSTAR-GO-WITH-FLOW-PDF-2007",
+    "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    "role": "preservation-copy",
+    "mediaType": "application/pdf",
+    "sha256": "8e9821ddccffc062983e3cf38f5a6080a1a5d1ee0cf1d0ff2b38b5ff40b17cd3",
+    "bytes": 2379685,
+    "pages": 2,
+    "containerCreatedAt": "2008-12-16T16:42:25-05:00",
+    "fixityVerifiedAt": "2026-07-16",
+    "extraction": {
+      "method": "Poppler pdftotext -layout with page-image verification",
+      "textSha256": "7dd0ce52eb9e550f56cdb606760a29026f6a8d25c0a04f43a9f4aa949fd75967",
+      "visualReview": "all-pages-rendered-and-reviewed",
+      "textIsNavigationAid": true
+    },
+    "custody": {
+      "mode": "protected-external",
+      "custodyId": "ART-KCSTAR-GO-WITH-FLOW-CUSTODY-2007",
+      "repositoryCopy": false,
+      "locatorExposed": false
+    }
+  },
+  "observations": [
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-PUBLICATION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "publication-context",
+      "text": "The article was the illustrated lead story on the Kansas City edition front page and continued on page A4.",
+      "locator": "A1 lead placement and A4 continuation",
+      "attribution": "Newspaper layout and article jump",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-ORIGIN",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The project began with an idea by James Burkart.",
+      "locator": "A4, column 1, project-origin paragraph beginning 'Where does this odyssey begin?'",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-CORE-CREW",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The printed core-crew names are Libby Hendon, James Burkart, and Laura Mattingly.",
+      "locator": "A1, article column 4, crew-and-location paragraph; A4, photograph caption spanning article columns 2-3",
+      "attribution": "Darryl Levings and photograph caption",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-STEERING-CREDIT",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "Laura Mattingly was steering in the photographed moment while James Burkart and Libby Hendon paddled.",
+      "locator": "A1, photograph caption spanning article columns 1-4",
+      "attribution": "Photograph caption",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-BUILD-DURATION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "technical-detail",
+      "text": "The raft was built in three weeks.",
+      "locator": "A4, column 1, first continuation paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-BUILD-MATERIALS",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "technical-detail",
+      "text": "Hendon described discarded construction materials including plastic syrup drums.",
+      "locator": "A4, column 1, first two continuation paragraphs",
+      "attribution": "Libby Hendon, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RAFT-DIMENSIONS",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "technical-detail",
+      "text": "The raft was approximately 12 by 13 feet.",
+      "locator": "A4, column 1, propulsion paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-PROPULSION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "technical-detail",
+      "text": "Two bicycles linked to a paddle wheel supplied human power.",
+      "locator": "A4, column 1, propulsion paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-PROPULSION-PRACTICE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "technical-detail",
+      "text": "Hendon said the crew mainly floated and applied power when wind or current pulled the raft toward rocks or out of a favorable position.",
+      "locator": "A4, column 1, paragraph beginning 'But as Libby explained Tuesday'",
+      "attribution": "Libby Hendon, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-DEPARTURE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "The raft left the West Bottoms on July 21, 2007.",
+      "locator": "A4, column 1, project-origin paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-DEPARTURE-GUESTS",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "Several friends were aboard at departure.",
+      "locator": "A4, column 1, project-origin paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "At publication the crew was somewhere south of Baton Rouge.",
+      "locator": "A1, article column 4, crew-and-location paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-DISTANCE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "The crew had passed the 1,000-mile marker.",
+      "locator": "A4, column 1, propulsion paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-PACE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "The raft generally moved at approximately two to four miles per hour.",
+      "locator": "A4, column 1, propulsion paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-PROJECT-TITLE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The article supplied the project's long-form title.",
+      "locator": "A4, column 1, project-title paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-LIVED-EXPERIENCE-PURPOSE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "A living experience on the rivers was a stated purpose.",
+      "locator": "A4, column 1, project-purpose paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-PEOPLE-PURPOSE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "Meeting people along the rivers was a stated purpose.",
+      "locator": "A4, column 1, project-purpose paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-SPONTANEOUS-NAVIGATION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "Mattingly described an intention to preserve spontaneity rather than rely on maps or books.",
+      "locator": "A4, column 1, paragraph beginning 'No maps, no books about the river'",
+      "attribution": "Laura Mattingly",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-TECHNOLOGY-PHILOSOPHY",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "Mattingly described technology as optional rather than required.",
+      "locator": "A4, column 1, technology-philosophy paragraph",
+      "attribution": "Laura Mattingly",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-GUEST-PARTICIPATION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "Friends joined route segments around St. Louis, Memphis, and Vicksburg.",
+      "locator": "A4, column 1, friends-aboard paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-PROVISIONING-STOPS",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The crew often stopped for food and water.",
+      "locator": "A4, column 1, St. Francisville call-in paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-INTERACTION-STOPS",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The crew often stopped to interact with strangers.",
+      "locator": "A4, column 1, St. Francisville call-in paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-INVITATION-TO-JOIN",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "James Burkart recalled that he invited people the crew met to join the raft.",
+      "locator": "A4, column 5, voice-mail setup paragraph",
+      "attribution": "James Burkart, paraphrased by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-CHAIN-OF-ROCKS-APPROACH",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "Mattingly described assessing the Chain of Rocks from a bridge and attempting a route through it.",
+      "locator": "A4, column 2, paragraph beginning 'We checked it out from a bridge'",
+      "attribution": "Laura Mattingly, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-CHAIN-OF-ROCKS-PASSAGE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "Hendon described passing between boulders and contacting a tree at the Chain of Rocks.",
+      "locator": "A4, column 2, paragraph beginning 'Intimidating,' described Hendon",
+      "attribution": "Libby Hendon, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ENCOUNTERS",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The article reported 14 prior encounters with the U.S. Coast Guard.",
+      "locator": "A4, column 2, paragraph beginning 'The crew's biggest snag by far was the U.S. Coast Guard'",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-OTHER-AUTHORITY-CONTACTS",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The article separately named other authority classes that had checked on the crew without assigning them the Coast Guard count.",
+      "locator": "A4, column 2, sentence beginning 'Police, fire, sheriff'",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-COAST-GUARD-BOARDING",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The Coast Guard boarded the raft 15 miles north of Vicksburg.",
+      "locator": "A4, column 2, paragraph beginning 'Fifteen miles north of Vicksburg'",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ASSESSMENT",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The article reported an unsuitable-design-and-configuration assessment.",
+      "locator": "A4, column 2, paragraph beginning 'Unsuitable design and configuration'",
+      "attribution": "Darryl Levings summarizing the Coast Guard assessment",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RAFT-BEACHED",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The raft was beached during the intervention.",
+      "locator": "A4, column 2, paragraph ending 'The raft was beached'",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-INTERRUPTION-DURATION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The crew remained stranded for 51 days.",
+      "locator": "A4, column 2, concluding Coast Guard paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-VICKSBURG-TOWN-SUPPORT",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "People in Vicksburg took in and fed the crew.",
+      "locator": "A4, column 2, concluding Vicksburg-support paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-ATTORNEY-LEGAL-SUPPORT",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "The article named Paul Kelly Loyacono as providing free legal help.",
+      "locator": "A4, columns 2-3, attorney-support paragraph crossing the column break",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RAFT-RETRIEVAL-SUPPORT",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "Loyacono led a group that helped retrieve the raft.",
+      "locator": "A4, column 3, raft-retrieval paragraph",
+      "attribution": "Paul Kelly Loyacono, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-WORK-SUPPORT",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "Loyacono helped the crew find jobs in substitute teaching, being a coffee barista, and labor with home renovators.",
+      "locator": "A4, column 3, employment-support paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-COMMUNITY-SENDOFF",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "reported-fact",
+      "text": "A large group saw the crew off from Vicksburg.",
+      "locator": "A4, column 4, departure-support paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-NATCHEZ-LOCATION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "The crew had been in Natchez on the Thursday before publication.",
+      "locator": "A4, column 5, Natchez route-update paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-NATCHEZ-FOG-DELAY",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "Fog cost the crew three half-days tied up, without locating each delay.",
+      "locator": "A4, column 5, Natchez route-update paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-EXPECTED-SALT-LOCATION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "The crew expected to encounter salt water below New Orleans.",
+      "locator": "A4, column 1, anticipated-finish paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-SALT-BY-NEW-ORLEANS-UNKNOWN",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "The crew did not know whether they would encounter salt by New Orleans.",
+      "locator": "A4, column 5, anticipated-route paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-GULF-NOT-EXPECTED",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "route-boundary",
+      "text": "The crew did not expect to see the Gulf from the raft.",
+      "locator": "A4, column 5, anticipated-route paragraph",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RIVER-INVISIBLE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "James Burkart described the Kansas City river as invisible space.",
+      "locator": "A4, column 5, closing voice-mail paragraph",
+      "attribution": "James Burkart, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RIVER-POLLUTION-ASSOCIATION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "Reflecting on growing up in Kansas City, James Burkart described an association with poisonous water.",
+      "locator": "A4, column 5, voice-mail paragraph beginning 'I tell people'",
+      "attribution": "James Burkart, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RIVER-VIOLENCE-ASSOCIATION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "Reflecting on growing up in Kansas City, James Burkart described violent-crime imagery associated with the river.",
+      "locator": "A4, column 5, voice-mail paragraph beginning 'I tell people'",
+      "attribution": "James Burkart, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RIVER-DIVIDING-LINE",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "James Burkart described the river as a dividing line.",
+      "locator": "A4, column 5, closing voice-mail paragraph",
+      "attribution": "James Burkart, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RIVER-HISTORICAL-NOVELTY",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "James Burkart described the river as a historical novelty.",
+      "locator": "A4, column 5, closing voice-mail paragraph",
+      "attribution": "James Burkart, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RIVER-INDUSTRIAL-CHANNEL",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "James Burkart said that for some the river was an industrial pipeline.",
+      "locator": "A4, column 5, closing voice-mail paragraph",
+      "attribution": "James Burkart, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-CULTURAL-CONNECTION",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "attributed-statement",
+      "text": "James Burkart hoped the river might awaken cultural connection between the West Bottoms and Delta towns.",
+      "locator": "A4, column 5, final voice-mail paragraph",
+      "attribution": "James Burkart, quoted by Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-PHOTO-CREDITS",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "rights-context",
+      "text": "The article credits the front-page photograph to Joshua Corban and continuation photographs to Brian Loden and Joshua Corban of The Vicksburg Post.",
+      "locator": "A1 and A4 photograph credit lines",
+      "attribution": "Newspaper photograph credits",
+      "confidence": "high",
+      "publicSafe": true
+    },
+    {
+      "id": "OBS-WATERWAYS-KC-STAR-RECOVERY-MODIFICATIONS",
+      "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+      "kind": "technical-detail",
+      "text": "The article reports that the crew lifted the sagging bow, added cones for resistance, brought oars aboard, and added a marine radio before resuming travel.",
+      "locator": "A4, columns 3-4, post-interruption modification paragraphs",
+      "attribution": "Darryl Levings",
+      "confidence": "high",
+      "publicSafe": true
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-WATERWAYS-KCSTAR-COLLECTIVE-EXPEDITION",
+      "text": "The article attributes the expedition idea to Jamie and documents Jamie, Libby Hendon, and Laura Mattingly traveling collectively on a reclaimed-material, bicycle-powered raft for more than 1,000 miles from Kansas City into Louisiana.",
+      "status": "corroborated",
+      "supportObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-ORIGIN",
+        "OBS-WATERWAYS-KC-STAR-CORE-CREW",
+        "OBS-WATERWAYS-KC-STAR-BUILD-MATERIALS",
+        "OBS-WATERWAYS-KC-STAR-PROPULSION",
+        "OBS-WATERWAYS-KC-STAR-DEPARTURE",
+        "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT",
+        "OBS-WATERWAYS-KC-STAR-DISTANCE"
+      ],
+      "corroboratingSourceIds": [
+        "CORR-PITCH-WHEN-ARTISTS-HUCK-FINN-2007",
+        "CORR-PITCH-ARTISTS-HUCK-FINN-III-2007",
+        "CORR-WLBT-RAFTERS-BEACHED-2007"
+      ],
+      "publicUse": "portfolio-review-required"
+    },
+    {
+      "id": "CLM-WATERWAYS-KCSTAR-ADAPTIVE-OPERATIONS",
+      "text": "The article documents a collectively operated improvised technical system that adapted after a 51-day interruption through local hospitality, legal assistance, raft retrieval, work support, repairs, and added safety and communication equipment.",
+      "status": "corroborated",
+      "supportObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-PROPULSION-PRACTICE",
+        "OBS-WATERWAYS-KC-STAR-COAST-GUARD-BOARDING",
+        "OBS-WATERWAYS-KC-STAR-INTERRUPTION-DURATION",
+        "OBS-WATERWAYS-KC-STAR-VICKSBURG-TOWN-SUPPORT",
+        "OBS-WATERWAYS-KC-STAR-ATTORNEY-LEGAL-SUPPORT",
+        "OBS-WATERWAYS-KC-STAR-RAFT-RETRIEVAL-SUPPORT",
+        "OBS-WATERWAYS-KC-STAR-WORK-SUPPORT",
+        "OBS-WATERWAYS-KC-STAR-RECOVERY-MODIFICATIONS",
+        "OBS-WATERWAYS-KC-STAR-COMMUNITY-SENDOFF"
+      ],
+      "corroboratingSourceIds": [
+        "CORR-PITCH-ARTISTS-HUCK-FINN-III-2007",
+        "CORR-WLBT-RAFTERS-BEACHED-2007"
+      ],
+      "publicUse": "portfolio-review-required"
+    },
+    {
+      "id": "CLM-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD",
+      "text": "The article supports a participatory method built around lived river experience, encounters, invitations aboard, and Jamie's attributed hope for cultural connection between Kansas City's West Bottoms and Delta communities.",
+      "status": "interpretive",
+      "supportObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-LIVED-EXPERIENCE-PURPOSE",
+        "OBS-WATERWAYS-KC-STAR-PEOPLE-PURPOSE",
+        "OBS-WATERWAYS-KC-STAR-GUEST-PARTICIPATION",
+        "OBS-WATERWAYS-KC-STAR-INTERACTION-STOPS",
+        "OBS-WATERWAYS-KC-STAR-INVITATION-TO-JOIN",
+        "OBS-WATERWAYS-KC-STAR-RIVER-INVISIBLE",
+        "OBS-WATERWAYS-KC-STAR-RIVER-DIVIDING-LINE",
+        "OBS-WATERWAYS-KC-STAR-CULTURAL-CONNECTION"
+      ],
+      "corroboratingSourceIds": [
+        "CORR-PITCH-WHEN-ARTISTS-HUCK-FINN-2007"
+      ],
+      "publicUse": "portfolio-review-required"
+    }
+  ],
+  "antiClaims": [
+    {
+      "id": "ANTI-KCSTAR-SOLE-CREDIT",
+      "text": "Jamie alone designed, built, steered, operated, or completed the expedition.",
+      "reason": "The article names a collective crew and wider participation and support.",
+      "boundedByObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-CORE-CREW",
+        "OBS-WATERWAYS-KC-STAR-STEERING-CREDIT",
+        "OBS-WATERWAYS-KC-STAR-GUEST-PARTICIPATION"
+      ]
+    },
+    {
+      "id": "ANTI-KCSTAR-GULF-COMPLETION",
+      "text": "This article proves that the raft reached salt water or the Gulf of Mexico.",
+      "reason": "The mid-voyage report preserves endpoint uncertainty.",
+      "boundedByObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT",
+        "OBS-WATERWAYS-KC-STAR-SALT-BY-NEW-ORLEANS-UNKNOWN",
+        "OBS-WATERWAYS-KC-STAR-GULF-NOT-EXPECTED"
+      ]
+    },
+    {
+      "id": "ANTI-KCSTAR-COMPLETE-ROUTE",
+      "text": "The newspaper provides a complete route or stop chronology.",
+      "reason": "It supplies selected locations and incidents rather than a route log.",
+      "boundedByObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-DEPARTURE",
+        "OBS-WATERWAYS-KC-STAR-NATCHEZ-LOCATION",
+        "OBS-WATERWAYS-KC-STAR-ROUTE-SNAPSHOT"
+      ]
+    },
+    {
+      "id": "ANTI-KCSTAR-COMPLETE-ROSTER",
+      "text": "The named travelers are the complete participant, builder, host, helper, or support roster.",
+      "reason": "The article also reports friends, hosts, legal help, work, retrieval assistance, and a sendoff.",
+      "boundedByObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-CORE-CREW",
+        "OBS-WATERWAYS-KC-STAR-GUEST-PARTICIPATION",
+        "OBS-WATERWAYS-KC-STAR-VICKSBURG-TOWN-SUPPORT"
+      ]
+    },
+    {
+      "id": "ANTI-KCSTAR-MEASURED-IMPACT",
+      "text": "The article establishes measured cultural, civic, community, environmental, or policy outcomes.",
+      "reason": "It reports intentions and encounters without an outcomes study.",
+      "boundedByObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-PEOPLE-PURPOSE",
+        "OBS-WATERWAYS-KC-STAR-CULTURAL-CONNECTION"
+      ]
+    },
+    {
+      "id": "ANTI-KCSTAR-ENGINEERING-APPROVAL",
+      "text": "The article provides engineering certification or blanket regulatory approval.",
+      "reason": "It reports objections, a pause, modifications, and a later legal return.",
+      "boundedByObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ASSESSMENT",
+        "OBS-WATERWAYS-KC-STAR-RECOVERY-MODIFICATIONS"
+      ]
+    },
+    {
+      "id": "ANTI-KCSTAR-REPUBLICATION-RIGHTS",
+      "text": "Possession of the PDF grants permission to republish the pages, article body, or photographs.",
+      "reason": "Copyright, photograph rights, and depicted-person consent were not cleared.",
+      "boundedByObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-PHOTO-CREDITS"
+      ]
+    },
+    {
+      "id": "ANTI-KCSTAR-PROMINENCE-AS-ENDORSEMENT",
+      "text": "Front-page placement establishes endorsement, audience reach, hiring value, or cultural impact.",
+      "reason": "Placement establishes editorial prominence only.",
+      "boundedByObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-PUBLICATION"
+      ]
+    },
+    {
+      "id": "ANTI-KCSTAR-AUTHORITY-COUNT-CONFLATION",
+      "text": "Fourteen is the combined count of contacts with every authority named in the article.",
+      "reason": "The count applies to Coast Guard encounters; other agencies are separately uncounted.",
+      "boundedByObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-COAST-GUARD-ENCOUNTERS",
+        "OBS-WATERWAYS-KC-STAR-OTHER-AUTHORITY-CONTACTS"
+      ]
+    }
+  ],
+  "sourceLimitations": [
+    {
+      "id": "LIMIT-KCSTAR-MID-VOYAGE",
+      "text": "The article was published while the expedition was underway.",
+      "consequence": "Later endpoint and duration claims require separate later evidence."
+    },
+    {
+      "id": "LIMIT-KCSTAR-ROUTE-PARTIAL",
+      "text": "The report names selected places and incidents but is not a route log.",
+      "consequence": "Exact stops, dates, and final landing remain open."
+    },
+    {
+      "id": "LIMIT-KCSTAR-CREDIT-PARTIAL",
+      "text": "The report does not allocate every design, construction, navigation, repair, organizing, documentation, or support task.",
+      "consequence": "Collective credit and role uncertainty remain attached."
+    },
+    {
+      "id": "LIMIT-KCSTAR-ATTRIBUTED-PERSPECTIVE",
+      "text": "River and cultural-connection statements are attributed to Jamie, not community consensus.",
+      "consequence": "Portfolio use must preserve attribution and possibility."
+    },
+    {
+      "id": "LIMIT-KCSTAR-IMPACT-UNMEASURED",
+      "text": "The article contains no participant census or measured outcome study.",
+      "consequence": "Encounters cannot become reach, adoption, or impact metrics."
+    },
+    {
+      "id": "LIMIT-KCSTAR-RIGHTS-UNCLEARED",
+      "text": "No republication or photograph-use rights were established.",
+      "consequence": "Only metadata and bounded paraphrase enter the repository."
+    },
+    {
+      "id": "LIMIT-KCSTAR-CONTAINER-DATE",
+      "text": "The PDF container was created in 2008 while the newspaper publication date is in 2007.",
+      "consequence": "Artifact metadata must not replace publication metadata."
+    },
+    {
+      "id": "LIMIT-KCSTAR-EXTRACTION",
+      "text": "Layout-aware extraction is a reading aid, not the newspaper's visual form.",
+      "consequence": "Placement, captions, and column order require rendered-page review."
+    },
+    {
+      "id": "LIMIT-KCSTAR-STOP-DATE-CONFLICT",
+      "text": "Contemporary reports disagree whether the consequential Coast Guard stop occurred on September 15 or September 18.",
+      "consequence": "Atlas retains the conflict without averaging or silently selecting a date."
+    }
+  ],
+  "corroboratingSources": [
+    {
+      "id": "CORR-PITCH-WHEN-ARTISTS-HUCK-FINN-2007",
+      "role": "independent-corroborating-source",
+      "title": "When Artists Turn Huck Finn",
+      "author": "Eric Barton",
+      "publication": "The Pitch",
+      "publishedAt": "2007-08-09",
+      "canonicalUrl": "https://www.thepitchkc.com/when-artists-turn-huck-finn/",
+      "relationship": "Contemporary independent reporting on the idea, recycled craft, early organization, and Missouri travel.",
+      "supportsObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-ORIGIN",
+        "OBS-WATERWAYS-KC-STAR-BUILD-MATERIALS",
+        "OBS-WATERWAYS-KC-STAR-DEPARTURE"
+      ],
+      "doesNotEstablish": [
+        "the complete later route",
+        "the final endpoint",
+        "every participant role"
+      ]
+    },
+    {
+      "id": "CORR-PITCH-ARTISTS-HUCK-FINN-III-2007",
+      "role": "independent-corroborating-source",
+      "title": "Artists Turned Huck Finn, Part III",
+      "author": "Eric Barton",
+      "publication": "The Pitch",
+      "publishedAt": "2007-11-12",
+      "canonicalUrl": "https://www.thepitchkc.com/artists-turned-huck-finn-part-iii/",
+      "relationship": "Contemporary independent reporting on departure, 1,000 miles, interruption, repairs, local work, and legal assistance.",
+      "supportsObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-DEPARTURE",
+        "OBS-WATERWAYS-KC-STAR-DISTANCE",
+        "OBS-WATERWAYS-KC-STAR-INTERRUPTION-DURATION",
+        "OBS-WATERWAYS-KC-STAR-ATTORNEY-LEGAL-SUPPORT",
+        "OBS-WATERWAYS-KC-STAR-WORK-SUPPORT"
+      ],
+      "doesNotEstablish": [
+        "the later Gulf endpoint",
+        "the complete route",
+        "every support contribution"
+      ]
+    },
+    {
+      "id": "CORR-WLBT-RAFTERS-BEACHED-2007",
+      "role": "independent-corroborating-source",
+      "title": "Rafters Beached On Mississippi River",
+      "author": "Bert Case",
+      "publication": "WLBT",
+      "publishedAt": "2007-09-25",
+      "canonicalUrl": "https://www.wlbt.com/story/7123200/rafters-beached-on-mississippi-river/",
+      "relationship": "Contemporary independent reporting naming the crew, Jamie's organizing role, 1,000-mile scale, and interruption.",
+      "supportsObservationIds": [
+        "OBS-WATERWAYS-KC-STAR-CORE-CREW",
+        "OBS-WATERWAYS-KC-STAR-DISTANCE",
+        "OBS-WATERWAYS-KC-STAR-COAST-GUARD-BOARDING"
+      ],
+      "doesNotEstablish": [
+        "completion of the later route",
+        "sole expedition authorship",
+        "the final regulatory disposition"
+      ]
+    }
+  ],
+  "governance": {
+    "rights": {
+      "articleText": "permission-needed",
+      "pageImages": "permission-needed",
+      "photographs": "permission-and-consent-review-needed",
+      "metadataAndBoundedParaphrase": "allowed"
+    },
+    "consent": {
+      "namedPeople": "review-required-before-promotional-reuse",
+      "depictedPeople": "review-required-before-image-use"
+    },
+    "publicUse": {
+      "status": "internal-only",
+      "meaning": "public-safe repository knowledge that must not project onto the website without a separate decision"
+    },
+    "custody": {
+      "mode": "protected-external",
+      "rawArtifactInRepository": false,
+      "privateLocatorInRepository": false
+    }
+  },
+  "projectionDecisions": [
+    {
+      "id": "DEC-KCSTAR-CURRENT-PORTFOLIO-HOLD",
+      "claimIds": [
+        "CLM-WATERWAYS-KCSTAR-COLLECTIVE-EXPEDITION",
+        "CLM-WATERWAYS-KCSTAR-ADAPTIVE-OPERATIONS",
+        "CLM-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD"
+      ],
+      "context": "Current hirable portfolio composition",
+      "surface": "apps/www public website",
+      "decision": "hold",
+      "rationale": "The evidence strengthens the river record, but a public surface requires an audience-specific composition and Jamie's approval.",
+      "decidedAt": "2026-07-16",
+      "authority": "editorial-review"
+    },
+    {
+      "id": "DEC-KCSTAR-FUTURE-WATER-PUBLICS-HOLD",
+      "claimIds": [
+        "CLM-WATERWAYS-KCSTAR-COLLECTIVE-EXPEDITION",
+        "CLM-WATERWAYS-KCSTAR-ADAPTIVE-OPERATIONS",
+        "CLM-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD"
+      ],
+      "context": "Future Water Publics composition",
+      "surface": "future portfolio, resume, interview, or research brief",
+      "decision": "hold",
+      "rationale": "Reserve for a composition that retains collective credit, rights controls, route uncertainty, and premise-versus-outcome boundaries.",
+      "decidedAt": "2026-07-16",
+      "authority": "editorial-review"
+    }
+  ],
+  "evaluation": {
+    "machineRun": {
+      "id": "EVAL-KCSTAR-SOURCE-DOSSIER-2026",
+      "runAt": "2026-07-16",
+      "contractVersion": "6.0.0",
+      "status": "passed",
+      "command": "node --test packages/atlas/test/source-dossier.test.mjs"
+    },
+    "independentCertifications": [
+      {
+        "id": "CERT-KCSTAR-SOURCE-CRITICISM",
+        "status": "pending",
+        "reviewer": null,
+        "scope": "A named independent reviewer compares the dossier against both rendered pages for factual fidelity, attribution, omissions, and limitations.",
+        "evidence": []
+      },
+      {
+        "id": "CERT-KCSTAR-PORTFOLIO-COMPOSITION",
+        "status": "pending",
+        "reviewer": null,
+        "scope": "A named independent reviewer judges any future projection for usefulness, proportionality, collective credit, and evidentiary restraint.",
+        "evidence": []
+      }
+    ],
+    "humanGates": [
+      {
+        "id": "GATE-KCSTAR-MEDIA-RIGHTS",
+        "status": "pending",
+        "reviewer": null,
+        "requirement": "Confirm article-page and photograph rights before visual republication."
+      },
+      {
+        "id": "GATE-KCSTAR-COLLABORATOR-CREDIT",
+        "status": "pending",
+        "reviewer": null,
+        "requirement": "Invite collaborator correction before assigning more specific individual roles."
+      },
+      {
+        "id": "GATE-KCSTAR-PUBLIC-PROJECTION",
+        "status": "pending",
+        "reviewer": null,
+        "requirement": "Jamie approves the exact audience, wording, surface, and credit treatment before website projection."
+      }
+    ],
+    "mutations": [
+      {
+        "id": "MUT-KCSTAR-DUPLICATE-SOURCE",
+        "description": "Duplicate the canonical source.",
+        "expectedFailure": "canonical source uniqueness",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-FIXITY-DRIFT",
+        "description": "Change the PDF SHA-256.",
+        "expectedFailure": "artifact fixity",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-OBSERVATION-LOSS",
+        "description": "Remove a supported observation.",
+        "expectedFailure": "claim observation resolution",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-CLAIM-COLLAPSE",
+        "description": "Put an anti-claim or limitation inside a claim.",
+        "expectedFailure": "epistemic separation",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-CORROBORATOR-ALIAS",
+        "description": "Reuse the canonical identity as corroboration.",
+        "expectedFailure": "independent source identity",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-CUSTODY-EXPOSURE",
+        "description": "Expose a locator or repository copy.",
+        "expectedFailure": "protected custody",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-PROJECTION-BYPASS",
+        "description": "Project without a contextual decision.",
+        "expectedFailure": "projection governance",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-SELF-CERTIFICATION",
+        "description": "Pass independent review without a reviewer.",
+        "expectedFailure": "independent certification",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-EVAL-HISTORY-LOSS",
+        "description": "Remove failure, repair, mutation, or stop evidence.",
+        "expectedFailure": "evaluation evidence completeness",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-BRANCH-LINEAGE",
+        "description": "Add source-branch or multi-run lineage.",
+        "expectedFailure": "deprecated lineage rejection",
+        "status": "passed"
+      },
+      {
+        "id": "MUT-KCSTAR-SYNTHESIS-OPAQUE",
+        "description": "Remove a required readable section.",
+        "expectedFailure": "human inspectability",
+        "status": "passed"
+      }
+    ],
+    "failuresAndRepairs": [
+      {
+        "id": "REPAIR-KCSTAR-MISSING-DOSSIER",
+        "failure": "The first regression run failed because Atlas had neither a canonical source dossier nor a human-readable source synthesis page.",
+        "repair": "Add a source-centered schema, canonical dossier, synthesis page, service query, portable inclusion, and mutation-resistant evals.",
+        "regression": "packages/atlas/test/source-dossier.test.mjs"
+      }
+    ],
+    "stoppingDecision": {
+      "id": "STOP-KCSTAR-AUTOMATED-CLIMB",
+      "decision": "stop-automated-climb",
+      "reason": "All source-dossier machine gates and named mutations pass; independent certifications and human gates remain pending.",
+      "decidedAt": "2026-07-16",
+      "humanGatesRemain": true
+    }
+  }
+}

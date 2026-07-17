@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "atlas-situated-knowledge-universe",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "objectiveOrder": [
-    "knowledge-loss-privacy-authority-attribution-provenance",
+    "knowledge-loss-privacy-authority-attribution-source-identity",
     "identity-correction-temporal-dataset-reproducibility",
     "human-judge-floors",
     "record-and-variant-disposition",
@@ -18,7 +18,9 @@
     "A stronger public claim must not outrun its canonical support and boundaries.",
     "Full-fidelity bytes cannot substitute for semantic disposition, and extracted semantics cannot substitute for reversible source recovery.",
     "Removing or ignoring a difficult accession artifact cannot improve migration completeness.",
-    "Historical Git associations may remain as provenance but cannot remain the only access protocol."
+    "Processing implementations and historical Git associations cannot become the identity or public provenance of a canonical source dossier.",
+    "Claims, anti-claims, source limitations, and contextual projection decisions must remain separately inspectable.",
+    "A source dossier cannot pass by preserving multiple ingestion or interpretation records instead of reconciling their atomic knowledge."
   ],
   "evaluations": [
     { "id": "semantic-markdown-contract", "kind": "hard-gate", "executor": "core" },
@@ -29,8 +31,8 @@
     { "id": "authority-and-correction-are-explicit", "kind": "hard-gate", "executor": "core" },
     { "id": "public-safety-boundary-is-enforced", "kind": "hard-gate", "executor": "core" },
     { "id": "atlas-remains-a-private-package", "kind": "hard-gate", "executor": "core" },
-    { "id": "eval-branch-family-is-accounted-for", "kind": "hard-gate", "executor": "core" },
-    { "id": "all-eval-branch-knowledge-is-cataloged", "kind": "hard-gate", "executor": "core" },
+    { "id": "canonical-source-dossiers-validate", "kind": "hard-gate", "executor": "core" },
+    { "id": "deprecated-source-lineage-is-absent", "kind": "hard-gate", "executor": "core" },
     { "id": "named-stakeholder-credit-is-preserved", "kind": "hard-gate", "executor": "core" },
     { "id": "atlas-record-store-is-canonical", "kind": "hard-gate", "executor": "core" },
     { "id": "deprecated-knowledge-banks-have-no-consumers", "kind": "hard-gate", "executor": "core" },
@@ -73,7 +75,7 @@
     { "id": "semantic-changeset-completeness", "kind": "hard-gate", "executor": "migration" },
     { "id": "named-stakeholder-coverage", "kind": "quality-target", "executor": "core" },
     { "id": "canonical-project-universe", "kind": "quality-target", "executor": "core" },
-    { "id": "federated-source-depth", "kind": "quality-target", "executor": "core" },
+    { "id": "source-dossier-depth", "kind": "quality-target", "executor": "core" },
     { "id": "semantic-neighborhood-depth", "kind": "quality-target", "executor": "core" },
     { "id": "candidate-is-exactly-bound", "kind": "quality-target", "executor": "core" },
     { "id": "record-addressability", "kind": "quality-target", "executor": "advanced" },
@@ -87,7 +89,7 @@
     { "id": "situated-experience-fidelity", "kind": "human-gate", "executor": "human" },
     { "id": "no-context-reader-navigation", "kind": "human-gate", "executor": "human" },
     { "id": "native-semantic-assimilation-review", "kind": "human-gate", "executor": "human" },
-    { "id": "migration-changeset-comprehensibility", "kind": "human-gate", "executor": "human" },
-    { "id": "situated-source-context-fidelity", "kind": "human-gate", "executor": "human" }
+    { "id": "source-dossier-comprehensibility", "kind": "human-gate", "executor": "human" },
+    { "id": "source-dossier-editorial-fidelity", "kind": "human-gate", "executor": "human" }
   ]
 }

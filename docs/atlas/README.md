@@ -1,56 +1,58 @@
 # Atlas
 
-Atlas is the canonical private knowledge system for Jamie's public-safe
-personal-professional knowledge universe. It joins complete atomic records,
-the semantic Markdown wiki, native A-N source objects, queries, evals, and
-a clean-room portable export without exposing the private archive or turning
-the portfolio into a database.
+Atlas is the canonical private application package for Jamie's public-safe
+personal-professional knowledge universe. It joins complete atomic records, a
+semantic Markdown wiki, source-centered dossiers, queries, evals, and a
+clean-room portable export without exposing the private archive or turning the
+portfolio into a claims database.
 
-Markdown pages live in [`pages/`](pages/). Every page has YAML frontmatter with
-a stable Atlas ID, typed reciprocal relations, authority and consent posture,
-review ownership, and - for project pages - a complete deterministic slice of
-the canonical Atlas record store. Twenty-one project pages jointly cover the
-entire canonical lifecycle collection.
+Markdown pages live in [`pages/`](pages/). Every page has a stable Atlas ID,
+typed reciprocal relations, authority and consent posture, review ownership,
+and, for projects, a deterministic slice of the canonical record store.
+
+Source dossiers live in [`sources/`](sources/). One source dossier represents
+one canonical publication or source and one preservation artifact. It contains
+the reconciled union of atomic observations, separately governed claims,
+anti-claims and source limitations, independent corroborators, custody and
+rights controls, contextual projection decisions, evaluation history, and a
+human-readable Markdown synthesis. Processing implementations are not source
+identity and do not appear as dossier provenance.
 
 ## Sources of authority
 
 `records/canonical.json` is authoritative for lifecycle records and proof
-claims. The former typed bank is frozen and retained only for migration parity;
-new consumers use `@jamie-burkart/atlas/records`.
+claims. `sources/*.json` is authoritative for source dossiers. `pages/*.md` and
+each source dossier's synthesis page are the human semantic composition layer.
+The generated graph in `generated/atlas.graph.json` is disposable.
 
-The generated graph in `generated/atlas.graph.json` is disposable. The
-federated source catalog in `generated/feature-evals-knowledge.json` preserves
-the knowledge inventory from all fourteen frozen `feature/evals-*` source
-trees. See [`source-integration.md`](source-integration.md) for its provenance,
-privacy, and merge-history contract.
+The former typed bank and generated feature-evals catalog remain frozen,
+deprecated migration fixtures while final parity and portable recovery are
+maintained. They are not authoring surfaces, consumer APIs, or the protocol for
+new source ingestion. See [`source-integration.md`](source-integration.md).
 
-`accession-migration-policy.json` defines the native migration protocols.
-`generated/accession-migration-report.md` summarizes closure, formats, and
-knowledge classes for a human PR reader; the full JSON catalog remains the
-deterministic audit ledger.
+The ontology, record dispositions, variant policy, machine suite, grounded
+tasks, run lineage, and human-review contracts make correction, negative
+knowledge, temporal precision, rights, credit, editorial limits, and
+epistemic boundaries testable without pretending social interpretation can be
+fully automated.
 
-The ontology, record-disposition ledger, and variant policy are versioned in
-`ontology.json`, `record-dispositions.json`, and `variant-policy.json`. The
-machine suite, grounded retrieval tasks, run lineage, and human review
-contracts live in `evals/atlas/`. These contracts make disagreement,
-correction, negative knowledge, temporal precision, rights, credit, and
-epistemic boundaries testable without pretending that social interpretation
-can be fully automated.
+## Source-centered operating sequence
 
-## Operating sequence
-
-1. Preserve the frozen legacy baseline and its exact fingerprint.
-2. Freeze external branch knowledge by exact source commit.
-3. Refresh and verify the federated source catalog when the source cut changes.
-4. Edit or add a complete Atlas record, then its public-safe Markdown page when needed.
-5. Declare authority, public-use, consent, correction, and named-credit boundaries.
-6. Connect the page through typed reciprocal relations.
-7. Run `npm run atlas:generate`, `npm run atlas:check`, and `npm run atlas:test`.
-8. Materialize a clean-room package with `npm run atlas:bundle -- --output PATH`
-   and verify it without Git using `npm run atlas:verify-bundle -- --input PATH`.
-9. Run the full repository `npm run check` before any public projection.
-10. Use `npm run atlas:release` to fail closed on automated defects or pending
-    human gates. Human review is never converted into a machine pass.
+1. Identify one canonical source and fingerprint one artifact without copying
+   protected bytes or locators into the public repository.
+2. Reconcile atomic observations at the smallest useful proposition level.
+3. Write claims, anti-claims, and source limitations as separate components.
+4. Represent corroborating publications independently; do not count repeated
+   processing of the same artifact as corroboration.
+5. Record rights, consent, public-use, custody, credit, and contextual
+   projection decisions.
+6. Write or update the human-readable synthesis page.
+7. Run focused source-dossier evals, mutations, the complete Atlas suite, and
+   the repository check. Record failures, repairs, and the stopping decision.
+8. Leave independent certifications and human gates pending until named people
+   actually review them. An implementation agent cannot self-certify.
+9. Materialize and verify a clean-room package when portability is in scope.
+10. Project onto the portfolio only after the separate contextual decision.
 
 There is intentionally no `/atlas`, `/knowledge-bank`, `/proofs`, or
 `/public-claims` application route.

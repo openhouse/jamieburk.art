@@ -1,7 +1,7 @@
 {
   "suiteId": "atlas-situated-knowledge-universe",
-  "suiteVersion": "5.0.0",
-  "candidateFingerprint": "926e9b8e3cd46782fb7fe7a80a094b473499d8b12c4dda8565c09189bb2a6f1a",
+  "suiteVersion": "6.0.0",
+  "candidateFingerprint": "1643bdc885557477bef70b4290f1ced239330fc07f7e5e54fa7a07c09ad7cddf",
   "results": [
     {
       "id": "semantic-markdown-contract",
@@ -60,14 +60,14 @@
       "evidence": []
     },
     {
-      "id": "eval-branch-family-is-accounted-for",
+      "id": "canonical-source-dossiers-validate",
       "kind": "hard-gate",
       "passed": true,
       "observed": "No defects",
       "evidence": []
     },
     {
-      "id": "all-eval-branch-knowledge-is-cataloged",
+      "id": "deprecated-source-lineage-is-absent",
       "kind": "hard-gate",
       "passed": true,
       "observed": "No defects",
@@ -109,22 +109,14 @@
       "evidence": []
     },
     {
-      "id": "federated-source-depth",
+      "id": "source-dossier-depth",
       "kind": "quality-target",
       "passed": true,
-      "observed": "7650 semantic IDs from 14 branches",
+      "observed": "1 dossier(s), 50 atomic observations, and 3 governed claims",
       "evidence": {
-        "branches": 14,
-        "artifactMappings": 1833,
-        "fullFidelityArtifacts": 1833,
-        "uniqueBlobs": 1676,
-        "nativeSourceObjects": 1676,
-        "semanticIds": 7650,
-        "recordVariants": 7653,
-        "documents": 829,
-        "publicUrls": 16691,
-        "protectedLocators": 1520,
-        "namedStakeholders": 2
+        "dossiers": 1,
+        "observations": 50,
+        "claims": 3
       }
     },
     {
@@ -138,23 +130,24 @@
       "id": "candidate-is-exactly-bound",
       "kind": "quality-target",
       "passed": true,
-      "observed": "926e9b8e3cd46782fb7fe7a80a094b473499d8b12c4dda8565c09189bb2a6f1a",
+      "observed": "1643bdc885557477bef70b4290f1ced239330fc07f7e5e54fa7a07c09ad7cddf",
       "evidence": {
         "corpusFingerprint": "4697e185b6636cc3284f53d8697d4f6f33fe84e75805d194c46598b6d71979bd",
         "bankFingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
         "recordStoreFingerprint": "2b137e5892b97504f479e70d6865a6ff5c1a20f8f8b711b91b619a6920b8d453",
         "integrationFingerprint": "9cd4f3bae826dec0c57b1545536a09544e9c12bff577eec7117773f76827ec77",
         "sourceKnowledgeFingerprint": "da9ee6f7f86e5a64960ac69c7abb8be01dee885f87a92592b87fb5b9a447198b",
+        "sourceDossierFingerprint": "717d66f613c7c6575d7bb99625b534eca329b0a0b769e64faeb842fe300c799d",
         "stakeholderCreditFingerprint": "a8ede705241b376757d6bca5b6d82a3ef77f8989dc4899e2bd912622fa09d1e9",
-        "evalContractFingerprint": "26ccb88acf631ea4c9896ed6f324103caab385c30fb9ed039a18a3d133e74125",
-        "implementationFingerprint": "240b10f5b5c3a4c13924fc0bf0bc121075eb29e6251205ec1f074bafb00ad7c0"
+        "evalContractFingerprint": "0d2a5f6578a1288239f1cab2601b57691bccdb569e94137fb314f0372e2c64d1",
+        "implementationFingerprint": "f8140306b223ed989f4e8b4134b9cdcb8990d52412d0db4916ca1945c46012f9"
       }
     },
     {
       "id": "portable-export-closure",
       "kind": "hard-gate",
       "passed": true,
-      "observed": "48 files and 1676 native source objects close",
+      "observed": "50 files and 1676 native source objects close",
       "evidence": []
     },
     {
@@ -491,7 +484,7 @@
       "evidence": []
     },
     {
-      "id": "migration-changeset-comprehensibility",
+      "id": "source-dossier-comprehensibility",
       "kind": "human-gate",
       "passed": false,
       "status": "pending",
@@ -499,7 +492,7 @@
       "evidence": []
     },
     {
-      "id": "situated-source-context-fidelity",
+      "id": "source-dossier-editorial-fidelity",
       "kind": "human-gate",
       "passed": false,
       "status": "pending",

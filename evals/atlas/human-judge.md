@@ -30,16 +30,17 @@ components with their full-fidelity source objects. Pass only when the native
 dispositions preserve meaning, evidentiary relationships, disagreement, and
 important structure rather than merely retaining bytes and aggregate counts.
 
-## Migration changeset comprehensibility
+## Source-dossier comprehensibility
 
-Give a no-context reviewer the pull request and generated Markdown migration
-report. Pass only when they can explain what migrated, which formats and
-protocols now hold it, what remains historical provenance, and which judgments
-are still pending without reverse-engineering the generated JSON catalog.
+Give a no-context reviewer the pull request, canonical dossier, and synthesis
+page. Pass only when they can explain the source, artifact, observations,
+claims, anti-claims, limitations, governance, projection decisions, and open
+gates without reverse-engineering generated JSON.
 
-## Situated source-context fidelity
+## Source-dossier editorial fidelity
 
-Sample across branches, projects, evaluations, narratives, datasets, and
-procedures. Pass only when provenance, voice, authority, collective credit,
-correction, rejection, negative knowledge, and social context remain legible.
-Do not infer equivalence from shared identifiers or identical bytes.
+Compare the dossier and synthesis against the rendered source artifact. Pass
+only when voice, authority, atomic observations, collective credit, source
+limitations, negative knowledge, and social context remain legible. Do not
+infer a stronger claim from narrative emphasis, repeated interpretation, or an
+identical artifact fingerprint.

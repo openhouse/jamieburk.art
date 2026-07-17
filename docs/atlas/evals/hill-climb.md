@@ -47,7 +47,7 @@ Atlas preserves the inherited floor and adds:
 - 50 Atlas hard gates with no failures;
 - 12 Atlas quality targets with no gaps;
 - 6 explicit Atlas human gates still pending rather than self-certified;
-- 39 Atlas unit, mutation, service, source-integrity, integration, and
+- 46 Atlas unit, mutation, service, source-integrity, integration, and
   clean-room portability tests passing;
 - 25 semantic pages, including all 21 canonical project keys;
 - 108 typed reciprocal relations and a navigable neighborhood for every page;
@@ -62,17 +62,17 @@ Atlas preserves the inherited floor and adds:
   locators from all 14 frozen source heads;
 - all 14 source commits and all 1,676 unique blobs reachable from Atlas history
   without depending on the `feature/evals-*` refs;
-- a 48-file portable Atlas package plus all 1,676 native SHA-256 source objects, independently
+- a 50-file portable Atlas package plus all 1,676 native SHA-256 source objects, independently
   verifiable without Git after materialization;
 - 25 executable named-stakeholder credit boundaries;
 - 9 versioned ontology predicates with inverse and compatibility contracts;
 - 5 grounded retrieval tasks covering canonical records, project slices,
-  lineage, full source artifacts, and proof boundaries;
-- one candidate fingerprint bound to Markdown, canonical records, exact source
-  manifest, federated catalog, stakeholder register, eval contracts, and Atlas
-  implementation;
+  source dossiers, full source objects, and proof boundaries;
+- one candidate fingerprint bound to Markdown, canonical records, source
+  dossiers and syntheses, the frozen migration fixture, stakeholder register,
+  eval contracts, and Atlas implementation;
 - a versioned accepted-run lineage binding the candidate, all compiled inputs,
-  suite version, parent candidate, source parent, and 36 adversarial mutations;
+  suite version, parent candidate, source parent, and 47 adversarial mutations;
 - explicit native dispositions for all 1,833 accession associations across
   eight formats and 15 governed knowledge classes, with zero known residuals;
 - a generated Markdown migration report for no-context pull-request review;
@@ -91,7 +91,7 @@ Atlas preserves the inherited floor and adds:
 Across the deterministic launch, lifecycle, and Atlas evaluators, coverage now
 totals 70 hard gates and 18 quality targets while all observed automated
 failures and gaps remain at zero. The final clean repository run passes 178
-tests: 10 citation, 14 launch-readiness, 115 knowledge-lifecycle, and 39 Atlas.
+tests: 10 citation, 14 launch-readiness, 115 knowledge-lifecycle, and 46 Atlas.
 
 ## Recursive iterations
 
@@ -172,14 +172,35 @@ tests: 10 citation, 14 launch-readiness, 115 knowledge-lifecycle, and 39 Atlas.
     new accession-exit gate. Native bundle retrieval answers the grounded KC
     Spaces Fund task without Git after materialization and rejects deliberately
     corrupted source-object bytes.
+23. The first v6 source regression failed because Atlas had no canonical source
+    dossier or human-readable synthesis for the Kansas City Star PDF. The PDF
+    was rendered and checked as a two-page artifact, then fixed by exact byte
+    and extracted-text fingerprints without copying protected bytes into Atlas.
+24. Atlas gained one canonical source, one artifact, 50 reconciled atomic
+    observations, 3 governed claims, separate anti-claims and limitations, 3
+    independently identified corroborators, custody and rights controls,
+    contextual holds, evaluation evidence, and a readable synthesis page.
+25. Eleven mutations attacked duplicate source identity, artifact fixity,
+    observation retention, epistemic separation, corroborator independence,
+    custody, projection governance, self-certification, evaluation evidence,
+    deprecated processing identity, and Markdown inspectability. The initial
+    projection-bypass mutation proved too weak because another decision still
+    covered the claim; the mutation was repaired to remove all decisions and
+    then failed the gate as intended.
+26. The v6 compiler, service, CLI, portable manifest, grounded tasks, and exact
+    candidate lineage now consume source dossiers. The compiled graph and query
+    service no longer expose processing-tree associations. All 50 hard gates,
+    12 quality targets, and 46 Atlas tests pass; 6 named human gates and the
+    dossier's independent certifications remain honestly pending.
 
 ## Human gates
 
 The launch assessment remains 93.5/100 with five pending human gates. The
 lifecycle assessment remains 100/100 with three pending human gates. Atlas
 carries six pending judgments: social-mechanism fidelity, situated-experience
-fidelity, no-context-reader navigation, native semantic assimilation, migration
-changeset comprehensibility, and situated source-context fidelity. Release exits
+fidelity, no-context-reader navigation, native semantic assimilation,
+source-dossier comprehensibility, and source-dossier editorial fidelity.
+Release exits
 nonzero by design because an agent cannot authenticate Jamie's approval,
 collaborator permission or corroboration, media rights, blind hiring-reader
 validation, or these interpretive assessments.

@@ -15,10 +15,15 @@
       "expect": { "pageId": "ATLAS-PROJECT-CALLNYC", "minimumClaims": 1 }
     },
     {
-      "id": "trace-federated-lineage",
-      "operation": "lineage",
-      "input": { "id": "CLM-WATERWAYS-RAFT-EXPEDITION" },
-      "expect": { "branch": "feature/evals-A", "minimumLocations": 1 }
+      "id": "retrieve-source-centered-dossier",
+      "operation": "source-dossier",
+      "input": { "id": "ATLAS-SOURCE-KCSTAR-GO-WITH-FLOW-2007" },
+      "expect": {
+        "sourceId": "SRC-WATERWAYS-KC-STAR-2007-11-15",
+        "artifactId": "ART-KCSTAR-GO-WITH-FLOW-PDF-2007",
+        "minimumObservations": 50,
+        "minimumClaims": 3
+      }
     },
     {
       "id": "retrieve-full-fidelity-source",

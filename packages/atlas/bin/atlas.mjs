@@ -11,7 +11,6 @@ import {
 import {
   buildFeatureEvalKnowledge,
   loadFeatureEvalKnowledge,
-  readFeatureEvalArtifact,
   renderAccessionMigrationReport,
   verifyFeatureEvalHistory,
   verifyFeatureEvalSourceArtifacts
@@ -120,18 +119,7 @@ try {
     process.exit(0);
   }
   if (command === "artifact") {
-    const branch = valueFor("--branch");
-    const artifactPath = valueFor("--path");
-    if (!branch || !artifactPath) throw new Error("Use --branch <feature/evals-X> --path <repository-path>");
-    const catalog = loadFeatureEvalKnowledge(defaultRepoRoot);
-    const artifact = catalog.artifacts.find((entry) => entry.branch === branch && entry.path === artifactPath);
-    if (!artifact) throw new Error("Atlas source artifact not found");
-    if (args.includes("--content")) {
-      process.stdout.write(readFeatureEvalArtifact({ repoRoot: defaultRepoRoot, catalog, branch, artifactPath }));
-    } else {
-      console.log(stableJson(artifact));
-    }
-    process.exit(0);
+    throw new Error("Branch/path artifact lookup is deprecated; use dossier --id <source-dossier-id> or source-object --id <content-address>");
   }
   if (command === "source-object") {
     const id = valueFor("--id");
@@ -189,15 +177,21 @@ try {
       projectKey: valueFor("--project")
     });
     console.log(stableJson({ candidateFingerprint: compiled.candidateFingerprint, pages: result }));
+  } else if (command === "dossier") {
+    const id = valueFor("--id");
+    if (!id) throw new Error("Use --id <source-dossier-id>");
+    const dossier = createAtlasService(compiled).getSourceDossier(id);
+    if (!dossier) throw new Error("Atlas source dossier not found");
+    console.log(stableJson(dossier));
   } else if (command === "knowledge") {
     const service = createAtlasService(compiled);
-    const result = service.queryKnowledge({
+    const result = service.querySourceDossiers({
       text: valueFor("--text"),
-      id: valueFor("--id"),
-      kind: valueFor("--kind"),
-      branch: valueFor("--branch")
+      sourceId: valueFor("--source"),
+      artifactId: valueFor("--artifact"),
+      claimId: valueFor("--claim")
     });
-    console.log(stableJson({ candidateFingerprint: compiled.candidateFingerprint, knowledge: result }));
+    console.log(stableJson({ candidateFingerprint: compiled.candidateFingerprint, sourceDossiers: result }));
   } else if (command === "explain") {
     const projectKey = valueFor("--project");
     if (!projectKey) throw new Error("Use --project <project-key>");

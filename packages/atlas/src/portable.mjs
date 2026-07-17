@@ -65,7 +65,10 @@ function mediaType(file) {
 export function portableAtlasFiles(repoRoot) {
   const pages = walk(path.join(repoRoot, "docs/atlas/pages"), ".md")
     .map((file) => path.relative(repoRoot, file));
-  return [...new Set([...fixedPortableFiles, ...pages])].sort();
+  const sourceDossiers = walk(path.join(repoRoot, "docs/atlas/sources"))
+    .filter((file) => [".json", ".md"].includes(path.extname(file)))
+    .map((file) => path.relative(repoRoot, file));
+  return [...new Set([...fixedPortableFiles, ...pages, ...sourceDossiers])].sort();
 }
 
 export function buildPortableAtlasManifest({ repoRoot, compiled, catalog }) {
@@ -90,6 +93,7 @@ export function buildPortableAtlasManifest({ repoRoot, compiled, catalog }) {
     packageId: "atlas-portable-situated-knowledge-universe",
     candidateFingerprint: compiled.candidateFingerprint,
     recordStoreFingerprint: compiled.recordStore.fingerprint,
+    sourceDossierFingerprint: compiled.inputs.sourceDossierFingerprint,
     sourceCatalogFingerprint: catalog.catalogFingerprint,
     portabilityContract: {
       branchRefsRequired: false,
@@ -101,6 +105,9 @@ export function buildPortableAtlasManifest({ repoRoot, compiled, catalog }) {
     totals: {
       files: files.length,
       markdownPages: compiled.metrics.pages,
+      sourceDossiers: compiled.metrics.sourceDossiers,
+      sourceObservations: compiled.metrics.sourceObservations,
+      sourceClaims: compiled.metrics.sourceClaims,
       canonicalRecords: compiled.metrics.canonicalRecords,
       artifactMappings: catalog.totals.artifactMappings,
       nativeSourceObjects: sourceObjects.length
@@ -154,6 +161,10 @@ export function validatePortableAtlasSource({ repoRoot, compiled, catalog }) {
   }
   if (manifest.totals.canonicalRecords !== Object.values(compiled.recordStore.counts).reduce((sum, count) => sum + count, 0)) {
     errors.push("Portable manifest canonical record count drifted");
+  }
+  if (manifest.totals.sourceDossiers !== compiled.sourceDossiers.length ||
+      manifest.sourceDossierFingerprint !== compiled.inputs.sourceDossierFingerprint) {
+    errors.push("Portable manifest omits or drifts from canonical source dossiers");
   }
   if (manifest.totals.nativeSourceObjects !== catalog.totals.nativeSourceObjects) {
     errors.push("Portable manifest omits full-fidelity native source objects");
@@ -247,6 +258,9 @@ export function verifyPortableAtlasBundle(bundleRoot) {
   const graph = JSON.parse(readFileSync(path.join(bundleRoot, "package/docs/atlas/generated/atlas.graph.json"), "utf8"));
   if (graph.candidateFingerprint !== manifest.candidateFingerprint) {
     errors.push("Portable generated graph is not bound to the exported candidate");
+  }
+  if (graph.inputs?.sourceDossierFingerprint !== manifest.sourceDossierFingerprint) {
+    errors.push("Portable source-dossier fingerprint drifted");
   }
   return errors;
 }

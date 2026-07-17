@@ -1,8 +1,3 @@
-import { defaultRepoRoot } from "./corpus.mjs";
-import {
-  loadFeatureEvalKnowledge,
-  readFeatureEvalArtifact
-} from "./integration.mjs";
 import {
   atlasRecordCollections,
   atlasRecordStore,
@@ -11,11 +6,10 @@ import {
 
 export function createAtlasService(
   compiled,
-  sourceKnowledge = loadFeatureEvalKnowledge(defaultRepoRoot),
-  records = atlasRecordStore.records,
-  repoRoot = defaultRepoRoot
+  records = atlasRecordStore.records
 ) {
   const pages = new Map(compiled.pages.map((page) => [page.id, page]));
+  const sourceDossiers = new Map(compiled.sourceDossiers.map((dossier) => [dossier.id, dossier]));
   return Object.freeze({
     candidateFingerprint: compiled.candidateFingerprint,
     getPage(id) {
@@ -39,23 +33,23 @@ export function createAtlasService(
         (!projectKey || page.canonical?.projectKey === projectKey)
       );
     },
-    queryKnowledge({ text, id, kind, branch } = {}) {
-      const needle = text?.toLowerCase();
-      return sourceKnowledge.recordVariants.filter((record) =>
-        (!id || record.id === id) &&
-        (!kind || record.id.startsWith(`${kind}-`)) &&
-        (!branch || record.branches.includes(branch)) &&
-        (!needle || JSON.stringify(record.fields).toLowerCase().includes(needle))
-      );
+    sourceDossiers() {
+      return [...sourceDossiers.values()];
     },
-    sourceLineage(id) {
-      return sourceKnowledge.semanticRecords.find((record) => record.id === id) ?? null;
+    getSourceDossier(id) {
+      return sourceDossiers.get(id) ?? null;
+    },
+    querySourceDossiers({ text, sourceId, artifactId, claimId } = {}) {
+      const needle = text?.toLowerCase();
+      return [...sourceDossiers.values()].filter((dossier) =>
+        (!sourceId || dossier.source.id === sourceId) &&
+        (!artifactId || dossier.artifact.id === artifactId) &&
+        (!claimId || dossier.claims.some(({ id }) => id === claimId)) &&
+        (!needle || JSON.stringify(dossier).toLowerCase().includes(needle))
+      );
     },
     stakeholders() {
       return compiled.stakeholderCredits;
-    },
-    sourceStakeholders() {
-      return sourceKnowledge.stakeholders;
     },
     recordCollections() {
       return [...atlasRecordCollections];
@@ -77,16 +71,6 @@ export function createAtlasService(
           .filter((record) => !needle || JSON.stringify(record).toLowerCase().includes(needle))
           .map((record) => ({ collection: name, record }));
       });
-    },
-    sourceArtifacts({ branch, kind, path: artifactPath } = {}) {
-      return sourceKnowledge.artifacts.filter((artifact) =>
-        (!branch || artifact.branch === branch) &&
-        (!kind || artifact.kind === kind) &&
-        (!artifactPath || artifact.path === artifactPath)
-      );
-    },
-    readSourceArtifact(branch, artifactPath, encoding = null) {
-      return readFeatureEvalArtifact({ repoRoot, catalog: sourceKnowledge, branch, artifactPath, encoding });
     },
     explainProject(projectKey) {
       const page = [...pages.values()].find((candidate) => candidate.canonical?.projectKey === projectKey);

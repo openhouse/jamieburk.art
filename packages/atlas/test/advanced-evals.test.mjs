@@ -59,7 +59,7 @@ function evaluation(results, id) {
   return results.find((entry) => entry.id === id);
 }
 
-test("Atlas 5.0 implements its complete versioned eval contract", () => {
+test("Atlas 6.0 implements its complete versioned eval contract", () => {
   assert.deepEqual(validateAtlasEvalContracts(contracts), []);
   const report = evaluateAtlas(compiled);
   assert.deepEqual(validateAtlasEvalResultSet(contracts.suite, report.results), []);

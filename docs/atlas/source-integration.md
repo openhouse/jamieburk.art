@@ -1,58 +1,65 @@
-# Feature-evals knowledge integration
+# Atlas source-centered ingestion
 
-Atlas integrates the `feature/evals-A` through `feature/evals-N` family at a
-frozen source cut recorded in `feature-evals-integration.json`. Branch names are
-not treated as stable evidence; every source is bound to an exact commit.
+Atlas ingests a source into one canonical dossier. The dossier is organized by
+source identity and artifact fixity, not by the number or origin of processing
+attempts.
 
-## Four native retention layers
+## Native component formats and protocols
 
-1. **Canonical operation.** `records/canonical.json` is the Atlas authority for
-   claims, evidence relationships, corrections, projection decisions, and
-   citations. The former typed bank is a parity fixture, not a future source of
-   authority.
-2. **Semantic components.** `generated/feature-evals-knowledge.json` gives
-   semantic identities, variants, documents, source locators, and stakeholders
-   deterministic `atlas://` addresses while retaining every situated accession
-   location. Different identifiers and variants are not silently merged.
-3. **Native source objects and profiles.** Every artifact association has a
-   SHA-256 `atlas://source-objects/...` address, a format-aware structural
-   profile, declared knowledge classes, native targets, and a migration
-   disposition. `accession-migration-policy.json` governs the protocols; the
-   generated Markdown migration report makes the aggregate diff inspectable.
-4. **Accession provenance.** Historical branch, commit, path, and Git blob
-   identities remain provenance and one-time materialization inputs. They are
-   not Atlas content addresses. Preserve the source ancestry with a merge
-   commit; a squash merge does not retain that additional recovery path.
+1. **Canonical source.** Bibliographic identity, publication context, source
+   type, and stable public locator where appropriate.
+2. **Artifact.** One SHA-256 identity plus byte count, page count, media type,
+   extraction fingerprint, and protected-custody posture.
+3. **Atomic observations.** Bounded propositions with source locator,
+   attribution, confidence, and public-safety status.
+4. **Epistemic components.** Claims, anti-claims, and source limitations remain
+   distinct and independently inspectable.
+5. **Independent corroborators.** Other publications retain their own identity,
+   relationship, supported observations, and explicit non-establishments.
+6. **Governance.** Rights, consent, public-use, protected custody, collective
+   credit, and correction boundaries are structured data.
+7. **Contextual projection decisions.** Every claim is covered by a named hold,
+   project, or rejection decision for a specific audience and surface.
+8. **Evaluation evidence.** Machine runs, independent certifications, human
+   gates, mutations, failures, repairs, and stopping decisions are situated
+   knowledge about the dossier without becoming source provenance.
+9. **Human synthesis.** A Markdown page permits close reading and ordinary Git
+   review of the meaningful change.
 
-The catalog contains public locators only when they are portable and do not
-carry authentication material. Authenticated, private, templated, credential-
-bearing, and otherwise nonportable locators are represented only by SHA-256
-hashes and provenance.
+`publicUse: internal-only` means public-safe repository knowledge that must not
+project onto the website without a separate decision. It does not imply access
+control in this public repository.
 
-## Knowledge coverage
+## Reconciliation rule
 
-The authored semantic wiki contains one page for each of the typed bank's 21
-project keys. Their deterministic slices jointly cover all canonical entities,
-intake records, sources, readings, claims, research tasks, inquiries,
-projection decisions, corrections, and citation pages.
+Repeated processing may discover different observations or boundaries. Atlas
+retains the reconciled atomic knowledge and evaluation evidence needed to
+audit the accepted result. It does not create multiple canonical source,
+artifact, ingestion, or interpretation identities for the same PDF. A repeated
+reading is neither an independent source nor corroboration.
 
-`stakeholder-credit.json` makes named contribution boundaries executable. It
-is a public-record attribution register, not collaborator testimony,
-endorsement, permission, or consent.
+If a proposed reconciliation would discard a supported knowledge form, Atlas
+must evolve its schema and evals before accepting the source. Unknowns remain
+unknown; non-recovery must not become a claim of nonexistence.
 
-## Refresh and verification
+## Legacy migration fixture
+
+The existing feature-evals catalog and frozen source-object inventory remain an
+internal migration fixture while older knowledge is checked for native parity
+and portable recovery. New consumers use canonical records, source dossiers,
+semantic pages, and content-addressed source objects. Consumer-facing compiled
+graphs and services do not expose processing-tree associations.
+
+## Verification
 
 ```bash
-npm run atlas:refresh-sources
-npm run atlas:verify-sources
+node --test packages/atlas/test/source-dossier.test.mjs
 npm run atlas:generate
-npm run atlas:check
 npm run atlas:test
+npm run atlas:check
+npm run check
 ```
 
-`atlas:refresh-sources` requires the frozen source commits in the local Git
-object database. `atlas:verify-history` proves that every commit and cataloged
-blob remains reachable for initial materialization. `atlas:bundle` writes the
-native objects under `objects/sha256/`; `atlas:verify-bundle` and
-`atlas:source-object -- --bundle PATH --content` then operate without Git,
-the old worktrees, or remote branch names.
+`atlas dossier --id ATLAS-SOURCE-KCSTAR-GO-WITH-FLOW-2007` retrieves the
+canonical dossier. `atlas knowledge` searches source dossiers. Branch/path
+artifact lookup is deprecated.

@@ -23,6 +23,11 @@ import {
 } from "./integration.mjs";
 import { findDeprecatedKnowledgeBankImports } from "./deprecation.mjs";
 import {
+  loadAtlasSourceDossiers,
+  sourceDossierFingerprint,
+  validateAtlasSourceDossiers
+} from "./source-dossiers.mjs";
+import {
   atlasEvalContractFingerprint,
   evaluateAdvancedAtlas,
   loadAtlasEvalContracts,
@@ -222,6 +227,7 @@ export function validateAtlas({
   manifest,
   repoRoot = defaultRepoRoot,
   sourceKnowledge = loadFeatureEvalKnowledge(repoRoot),
+  sourceDossiers = loadAtlasSourceDossiers(path.join(repoRoot, "docs/atlas/sources")),
   stakeholderCredits = loadStakeholderCreditRegister(repoRoot),
   enforceRepositoryBoundary = true
 }) {
@@ -313,6 +319,12 @@ export function validateAtlas({
   for (const message of validateFeatureEvalKnowledge({ catalog: sourceKnowledge, manifest })) {
     errors.push(issue("source-integration", message));
   }
+  for (const message of validateAtlasSourceDossiers(sourceDossiers, { repoRoot })) {
+    const code = /deprecated source-lineage|deprecated or protected text/i.test(message)
+      ? "deprecated-source-lineage"
+      : "source-dossier";
+    errors.push(issue(code, message));
+  }
   const allRecordIds = new Set(Object.values(bank)
     .filter(Array.isArray)
     .flatMap((records) => records.map(({ id }) => id)));
@@ -354,10 +366,11 @@ export function compileAtlas({
   pages = loadAtlasPages(repoRoot),
   manifest = loadIntegrationManifest(repoRoot),
   sourceKnowledge = loadFeatureEvalKnowledge(repoRoot),
+  sourceDossiers = loadAtlasSourceDossiers(path.join(repoRoot, "docs/atlas/sources")),
   stakeholderCredits = loadStakeholderCreditRegister(repoRoot),
   enforceRepositoryBoundary = true
 } = {}) {
-  const validation = validateAtlas({ pages, bank, manifest, sourceKnowledge, stakeholderCredits, repoRoot, enforceRepositoryBoundary });
+  const validation = validateAtlas({ pages, bank, manifest, sourceKnowledge, sourceDossiers, stakeholderCredits, repoRoot, enforceRepositoryBoundary });
   for (const message of validateAtlasRecordStore(recordStore)) {
     validation.errors.push(issue("record-authority", message));
   }
@@ -388,6 +401,11 @@ export function compileAtlas({
   const recordStoreFingerprint = recordStore.fingerprint;
   const integrationFingerprint = hash(JSON.stringify(manifest));
   const sourceKnowledgeFingerprint = sourceKnowledge.catalogFingerprint;
+  const sourceDossierSetFingerprint = hash(JSON.stringify(sourceDossiers.map(({ file: _file, fingerprint: _fingerprint, ...dossier }) => [
+    dossier.id,
+    sourceDossierFingerprint(dossier),
+    hash(readFileSync(path.join(repoRoot, dossier.synthesisPage), "utf8"))
+  ])));
   const stakeholderCreditFingerprint = hash(JSON.stringify(stakeholderCredits));
   const evalContractFingerprint = atlasEvalContractFingerprint(repoRoot);
   const implementationRoot = path.join(repoRoot, "packages/atlas");
@@ -398,7 +416,7 @@ export function compileAtlas({
   ].map((file) => [path.relative(repoRoot, file), readFileSync(file, "utf8")]);
   const implementationFingerprint = hash(JSON.stringify(implementationSource));
   const candidateFingerprint = hash(
-    `${corpusFingerprint}:${recordStoreFingerprint}:${integrationFingerprint}:${sourceKnowledgeFingerprint}:${stakeholderCreditFingerprint}:${evalContractFingerprint}:${implementationFingerprint}`
+    `${corpusFingerprint}:${recordStoreFingerprint}:${integrationFingerprint}:${sourceKnowledgeFingerprint}:${sourceDossierSetFingerprint}:${stakeholderCreditFingerprint}:${evalContractFingerprint}:${implementationFingerprint}`
   );
   const canonicalUnion = {};
   for (const page of pageNodes.filter(({ canonical }) => canonical)) {
@@ -421,6 +439,7 @@ export function compileAtlas({
       recordStoreFingerprint,
       integrationFingerprint,
       sourceKnowledgeFingerprint,
+      sourceDossierFingerprint: sourceDossierSetFingerprint,
       stakeholderCreditFingerprint,
       evalContractFingerprint,
       implementationFingerprint
@@ -430,24 +449,31 @@ export function compileAtlas({
       projectPages: pageNodes.filter(({ kind }) => kind === "project").length,
       stakeholderCredits: stakeholderCredits.entries.length,
       canonicalRecords: Object.values(recordStore.counts).reduce((sum, count) => sum + count, 0),
+      sourceDossiers: sourceDossiers.length,
+      sourceObservations: sourceDossiers.reduce((sum, dossier) => sum + dossier.observations.length, 0),
+      sourceClaims: sourceDossiers.reduce((sum, dossier) => sum + dossier.claims.length, 0),
       relations: pageNodes.reduce((sum, page) => sum + page.relations.length, 0),
       canonicalCoverage: Object.fromEntries(
         Object.entries(canonicalUnion).map(([collection, ids]) => [collection, ids.length])
       )
     },
     pages: pageNodes,
-    integration: manifest,
-    sourceKnowledge: {
+    sourceDossiers: sourceDossiers.map(({ file: _file, ...dossier }) => dossier),
+    legacyMigration: {
+      status: "deprecated-internal-migration-fixture",
       catalogFingerprint: sourceKnowledge.catalogFingerprint,
-      totals: sourceKnowledge.totals,
-      branches: sourceKnowledge.branches,
-      stakeholders: sourceKnowledge.stakeholders
+      nativeSourceObjects: sourceKnowledge.totals.nativeSourceObjects,
+      semanticIds: sourceKnowledge.totals.semanticIds
     },
     stakeholderCredits: stakeholderCredits.entries,
     recordStore: {
       authority: recordStore.authority,
       deprecationPolicy: recordStore.deprecationPolicy,
-      migratedFrom: recordStore.migratedFrom,
+      migratedFrom: {
+        status: "deprecated-migration-fixture",
+        sourceCutAt: recordStore.migratedFrom.sourceCutAt,
+        legacyFingerprint: recordStore.migratedFrom.legacyFingerprint
+      },
       counts: recordStore.counts,
       fingerprint: recordStore.fingerprint
     },
@@ -459,6 +485,7 @@ export function evaluateAtlas(compiled, {
   repoRoot = defaultRepoRoot,
   recordStore = atlasRecordStore,
   sourceKnowledge = loadFeatureEvalKnowledge(repoRoot),
+  manifest = loadIntegrationManifest(repoRoot),
   contracts = loadAtlasEvalContracts(repoRoot)
 } = {}) {
   const failures = compiled.validation.errors;
@@ -471,8 +498,8 @@ export function evaluateAtlas(compiled, {
     ["authority-and-correction-are-explicit", ["governance"]],
     ["public-safety-boundary-is-enforced", ["safety"]],
     ["atlas-remains-a-private-package", ["boundary"]],
-    ["eval-branch-family-is-accounted-for", ["integration"]],
-    ["all-eval-branch-knowledge-is-cataloged", ["source-integration"]],
+    ["canonical-source-dossiers-validate", ["source-dossier"]],
+    ["deprecated-source-lineage-is-absent", ["deprecated-source-lineage"]],
     ["named-stakeholder-credit-is-preserved", ["stakeholder"]],
     ["atlas-record-store-is-canonical", ["record-authority"]],
     ["deprecated-knowledge-banks-have-no-consumers", ["deprecation"]]
@@ -503,11 +530,15 @@ export function evaluateAtlas(compiled, {
       evidence: []
     },
     {
-      id: "federated-source-depth",
+      id: "source-dossier-depth",
       kind: "quality-target",
-      passed: compiled.sourceKnowledge.totals.branches === 14 && compiled.sourceKnowledge.totals.semanticIds >= 5000,
-      observed: `${compiled.sourceKnowledge.totals.semanticIds} semantic IDs from ${compiled.sourceKnowledge.totals.branches} branches`,
-      evidence: compiled.sourceKnowledge.totals
+      passed: compiled.metrics.sourceDossiers >= 1 && compiled.metrics.sourceObservations >= 50 && compiled.metrics.sourceClaims >= 3,
+      observed: `${compiled.metrics.sourceDossiers} dossier(s), ${compiled.metrics.sourceObservations} atomic observations, and ${compiled.metrics.sourceClaims} governed claims`,
+      evidence: {
+        dossiers: compiled.metrics.sourceDossiers,
+        observations: compiled.metrics.sourceObservations,
+        claims: compiled.metrics.sourceClaims
+      }
     },
     {
       id: "semantic-neighborhood-depth",
@@ -529,7 +560,7 @@ export function evaluateAtlas(compiled, {
     compiled,
     recordStore,
     catalog: sourceKnowledge,
-    manifest: compiled.integration,
+    manifest,
     contracts
   }));
   const resultSetErrors = validateAtlasEvalResultSet(contracts.suite, results);

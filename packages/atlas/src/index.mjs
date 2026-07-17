@@ -10,6 +10,13 @@ export {
 } from "./corpus.mjs";
 export { createAtlasService } from "./service.mjs";
 export {
+  defaultSourceDossierRoot,
+  loadAtlasSourceDossiers,
+  sourceDossierFingerprint,
+  validateAtlasSourceDossier,
+  validateAtlasSourceDossiers
+} from "./source-dossiers.mjs";
+export {
   buildFeatureEvalKnowledge,
   integrationCatalogFingerprint,
   loadFeatureEvalKnowledge,
@@ -52,6 +59,7 @@ export {
   atlasIdSchema,
   atlasPageSchema,
   atlasRelationSchema,
+  atlasSourceDossierSchema,
   evalIntegrationManifestSchema,
   stakeholderCreditRegisterSchema
 } from "./schema.mjs";

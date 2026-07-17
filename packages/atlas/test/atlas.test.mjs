@@ -24,10 +24,12 @@ import {
 } from "../src/integration.mjs";
 import { findDeprecatedKnowledgeBankImports } from "../src/deprecation.mjs";
 import { verifyLegacyParity } from "../src/legacy.mjs";
+import { loadAtlasSourceDossiers } from "../src/source-dossiers.mjs";
 
 const manifest = loadIntegrationManifest();
 const pages = loadAtlasPages();
 const sourceKnowledge = loadFeatureEvalKnowledge(defaultRepoRoot);
+const sourceDossiers = loadAtlasSourceDossiers();
 
 function clonePages() {
   return structuredClone(pages);
@@ -39,6 +41,12 @@ test("real Atlas corpus compiles as a private semantic graph", () => {
   assert.equal(compiled.metrics.projectPages, 21);
   assert.equal(compiled.metrics.pages, 25);
   assert.ok(compiled.metrics.relations >= 108);
+  assert.equal(compiled.metrics.sourceDossiers, 1);
+  assert.equal(compiled.metrics.sourceObservations, 50);
+  assert.equal(compiled.metrics.sourceClaims, 3);
+  assert.equal(compiled.integration, undefined);
+  assert.equal(compiled.sourceKnowledge, undefined);
+  assert.doesNotMatch(JSON.stringify(compiled), /feature\/evals-|sourceBranch|sourceCommit/);
   assert.match(compiled.candidateFingerprint, /^[a-f0-9]{64}$/);
 });
 
@@ -89,6 +97,19 @@ test("candidate fingerprint changes when semantic Markdown changes", () => {
   assert.notEqual(candidate.candidateFingerprint, baseline.candidateFingerprint);
   assert.equal(candidate.inputs.bankFingerprint, baseline.inputs.bankFingerprint);
   assert.equal(candidate.inputs.implementationFingerprint, baseline.inputs.implementationFingerprint);
+});
+
+test("candidate fingerprint and hard gates bind canonical source dossiers", () => {
+  const baseline = compileAtlas();
+  const mutated = structuredClone(sourceDossiers);
+  mutated[0].source.publisher = "Changed publisher";
+  const candidate = compileAtlas({ sourceDossiers: mutated });
+  assert.notEqual(candidate.candidateFingerprint, baseline.candidateFingerprint);
+
+  const deprecated = structuredClone(sourceDossiers);
+  deprecated[0].source.branch = "obsolete-processing-history";
+  const report = compileAtlas({ sourceDossiers: deprecated });
+  assert.ok(report.validation.errors.some(({ code }) => code === "deprecated-source-lineage"));
 });
 
 test("duplicate stable identity is rejected", () => {
@@ -213,13 +234,17 @@ test("full-fidelity source knowledge is reachable without branch refs", () => {
   assert.match(readFeatureEvalArtifact({ repoRoot: defaultRepoRoot, catalog: sourceKnowledge, branch: "feature/evals-N", artifactPath: nPath, encoding: "utf8" }), /survivingPublicRecords:\s*40/);
 });
 
-test("federated knowledge is queryable with provenance and protected locators stay hashed", () => {
-  const service = createAtlasService(compileAtlas(), sourceKnowledge);
-  const records = service.queryKnowledge({ id: "CLM-WATERWAYS-RAFT-EXPEDITION" });
-  assert.ok(records.length > 0);
-  assert.ok(records.some(({ branches }) => branches.includes("feature/evals-A")));
-  const lineage = service.sourceLineage("CLM-WATERWAYS-RAFT-EXPEDITION");
-  assert.ok(lineage.locations.some((location) => location.startsWith("feature/evals-A:")));
+test("source-centered knowledge is queryable without processing-lineage APIs", () => {
+  const service = createAtlasService(compileAtlas());
+  const dossier = service.getSourceDossier("ATLAS-SOURCE-KCSTAR-GO-WITH-FLOW-2007");
+  assert.equal(dossier.source.id, "SRC-WATERWAYS-KC-STAR-2007-11-15");
+  assert.equal(dossier.artifact.sha256, "8e9821ddccffc062983e3cf38f5a6080a1a5d1ee0cf1d0ff2b38b5ff40b17cd3");
+  assert.equal(dossier.observations.length, 50);
+  assert.equal(service.querySourceDossiers({ claimId: "CLM-WATERWAYS-KCSTAR-ADAPTIVE-OPERATIONS" }).length, 1);
+  assert.equal(service.queryKnowledge, undefined);
+  assert.equal(service.sourceLineage, undefined);
+  assert.equal(service.sourceArtifacts, undefined);
+  assert.equal(service.readSourceArtifact, undefined);
   assert.ok(sourceKnowledge.sources.protected.every((entry) =>
     /^[a-f0-9]{64}$/.test(entry.locatorHash) && !("url" in entry)
   ));
