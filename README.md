@@ -38,6 +38,9 @@ npm run report:citations
 npm run check:portfolio-evals
 npm run test:portfolio-evals
 npm run report:portfolio-evals
+npm run check:eval-contract
+npm run test:eval-contract
+npm run check:projections
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -75,6 +78,27 @@ notes. Run `npm run check:knowledge-evals`, `npm run test:knowledge-evals`, and
 `docs/knowledge-bank/projects/google-drive-shared-drives-production-2026-07-14.md`;
 the repository retains only public-safe records, never Shared Drive identifiers,
 private URLs, permissions, participant rows, or credentials.
+
+Daily knowledge work uses four small, local commands. Intake is a dry run unless
+`--write` is supplied; a receipt remains an unvalidated lead until it is
+integrated into the canonical graph.
+
+```bash
+npm run knowledge:intake -- --title "Source title" --project callnyc \
+  --kind public-url --reason "What this may establish" \
+  --url https://example.org/source
+npm run knowledge:query -- --type claim --project callnyc --active
+npm run knowledge:report -- --write
+npm run knowledge:projection-map -- --write
+```
+
+The intake command rejects private paths, validates the record shape, assigns a
+stable ID, and preserves a repeated lead with a `duplicate` disposition. Query,
+report, and projection-map output distinguish sources, observations, memories,
+claims, inquiries, active projections, and held depth. Generated reports stay
+outside version control under `reports/generated/`.
+See `docs/knowledge-bank/daily-commands.md` for the complete intake and
+promotion boundary.
 
 ## Environment
 
@@ -164,3 +188,12 @@ maintainability of this evaluation system. Run `npm run check:portfolio-evals`,
 passing score does not stand in for human reader sessions, collaborator proof
 notes, artifact rights clearance, externally verified outcomes, or production
 evidence from the exact deployed commit.
+
+The shared contract in `evals/_shared/contract.json` binds all three suites to a
+versioned rubric digest and a governed-candidate digest. Run
+`npm run check:eval-contract`, `npm run test:eval-contract`, and
+`npm run report:eval-contract`. A valid recursive stop requires two passing
+deterministic runs and two independent, prior-score-blind holdouts on the same
+unchanged governed candidate. Generated run reports do not alter that digest.
+Changing a rubric version resets the pass and holdout streak. Acceptance for PR
+review never grants production approval.

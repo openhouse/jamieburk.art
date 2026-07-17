@@ -36,6 +36,13 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:knowledge-evals`
 - `npm run test:knowledge-evals`
 - `npm run report:knowledge-evals`
+- `npm run knowledge:intake -- --help`
+- `npm run knowledge:query -- --type claim --active`
+- `npm run knowledge:report -- --write`
+- `npm run knowledge:projection-map -- --write`
+- `npm run check:projections`
+- `npm run check:eval-contract`
+- `npm run test:eval-contract`
 
 ## Public-Safety Rules
 
@@ -105,6 +112,25 @@ Use `evals/knowledge-bank/evals.json` for recursive intake and claim maturation.
 Run its deterministic checks before promoting a claim or source into a public
 page. The bank should become deeper with each pass while the public site remains
 selective.
+
+Use `evals/_shared/contract.json` as the frozen contract joining the three eval
+suites. Every certifying run must record the contract digest, governed-input
+digest, candidate commit and tree, actual command exit codes, criterion evidence,
+judge independence, prior-score visibility, disagreements, overrides, and open
+external gates. A rubric change requires a version change and resets the streak.
+Do not edit the rubric while optimizing the candidate. Two independent holdouts
+must review the same unchanged governed candidate without prior scores.
+
+Use `npm run knowledge:intake` for public-safe leads. It is dry-run by default;
+`--write` appends an intake receipt, not a claim. Keep duplicate receipts with a
+duplicate disposition. Use the query, report, and projection-map commands to
+inspect the one canonical graph. Never promote held depth merely to improve an
+eval score.
+
+`npm run check:projections` guards authorized surfaces, held-claim leakage,
+superseded wording, protected citation sources, and generated-registry drift.
+Treat a model's accepted-for-review result as advisory. Jamie retains final
+truth, consent, collaborator-credit, and production-promotion authority.
 
 ## Scope Rules
 
