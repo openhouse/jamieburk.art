@@ -10,9 +10,3 @@ results, held or protected leakage, sole-credit inflation, reader burden,
 self-certification, and creation of a second truth system. Cite concrete file or
 route evidence. Acceptance means ready for pull-request review, never production
 approval.
-
-Return all ten criterion scores, blocking findings, disagreements, and the full
-seven-dimension decision record, authority log, five reopen triggers, reopen and
-disagreement reviews, and structured overrides required by the Warren Sack lens.
-An accepted judgment must have no blocking findings. A human refusal remains a
-refusal even when the numerical score passes.

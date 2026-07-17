@@ -1,13 +1,18 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
-import { buildPublicRegistry, loadPublicSurfaceFiles, validateProjectionConsistency } from "../lib/projection-consistency.mjs";
+import { buildPublicRegistry, loadPublicSurfaceFiles, publicEvidenceSnapshotSha, validateProjectionConsistency } from "../lib/projection-consistency.mjs";
 
 const registryText = `${JSON.stringify(buildPublicRegistry(knowledgeBank), null, 2)}\n`;
 const publicFiles = loadPublicSurfaceFiles();
 
 test("current canonical projections and public registry are consistent", () => {
   assert.deepEqual(validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles }), []);
+});
+
+test("repository-authored public evidence is pinned to an immutable snapshot", () => {
+  assert.doesNotMatch(registryText, /jamieburk\.art\/blob\/develop/);
+  assert.match(registryText, new RegExp(`jamieburk\\.art/blob/${publicEvidenceSnapshotSha}`));
 });
 
 test("projection validation cannot pass without scanning public surfaces", () => {
@@ -66,7 +71,7 @@ test("a protected source cannot become a public citation", () => {
   const occurrence = page.occurrences[0];
   const sourceId = occurrence.sourceIds?.[0] ?? changed.claims.find((item) => item.id === occurrence.claimId).evidence.find((item) => item.renderCitation).sourceId;
   changed.sources.find((source) => source.id === sourceId).visibility = "protected";
-  assert.match(validateProjectionConsistency({ bank: changed, registryText: `${JSON.stringify(buildPublicRegistry(changed), null, 2)}\n`, publicFiles }).join("\n"), /protected source/);
+  assert.match(validateProjectionConsistency({ bank: changed, registryText, publicFiles }).join("\n"), /non-public source/);
 });
 
 test("Unicode dash normalization cannot hide superseded wording", () => {

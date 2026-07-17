@@ -11,6 +11,8 @@ Intake canonicalizes source URLs before duplicate comparison, normalizes Unicode
 before private-path checks, and serializes writes through a short-lived lock so
 simultaneous agents cannot claim the same receipt ID. A duplicate stays in the
 queue with an explicit disposition; it is never silently discarded.
+Private-path screening covers normalized and encoded home, volume, temporary,
+and file-URL forms before a receipt can be written.
 
 Intake canonicalizes source URLs before duplicate comparison, normalizes Unicode
 before private-path checks, and serializes writes through a short-lived lock so

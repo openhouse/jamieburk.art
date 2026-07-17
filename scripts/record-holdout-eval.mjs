@@ -11,7 +11,9 @@ import {
   promptDigest,
   repoRoot,
   runRecordDigest,
-  scoreHoldout
+  scoreHoldout,
+  validateCompositeRunRecord,
+  validateRunSequence
 } from "./lib/eval-contract.mjs";
 
 const args = Object.fromEntries(process.argv.slice(2).reduce((pairs, item, index, all) => {
@@ -29,7 +31,8 @@ const committedDigest = governedInputDigestAtCommit(commit, contract);
 if (currentDigest !== committedDigest) throw new Error("Governed inputs differ from HEAD. Freeze the candidate before recording a holdout.");
 
 const judgment = JSON.parse(readFileSync(path.resolve(args.input), "utf8"));
-const previous = loadCompositeRunRecords().at(-1)?.record;
+const previousRuns = loadCompositeRunRecords();
+const previous = previousRuns.at(-1)?.record;
 const iteration = (previous?.iteration ?? 0) + 1;
 const label = String(judgment.judgeLabel ?? "").trim();
 if (!label) throw new Error("Holdout input needs judgeLabel");
@@ -45,17 +48,24 @@ const record = {
   judge: { class: "holdout", label, sessionId: args.session, independent: true, priorScoresVisible: false, promptPath: args.prompt, promptDigest: promptDigest(args.prompt) },
   criterionResults: judgment.criteria,
   blockingFindings: judgment.blockingFindings ?? [],
+  decisionRecord: judgment.decisionRecord,
   openDisagreements: judgment.openDisagreements ?? [],
   overrides: [],
-  reopenTriggersReviewed: ["new evidence", "changed public projection", "contract or candidate drift", "human disagreement", "privacy or collective-credit concern"],
+  reopenTriggersReviewed: [...contract.requiredReopenTriggers],
   decision: { status: "revision-required", weightedScore: 0, productionReady: false, externalGatesOpen: [...contract.requiredExternalGates] },
   summary: judgment.summary ?? ""
 };
 const scored = scoreHoldout(record);
 if (scored.errors.length) throw new Error(scored.errors.join("\n"));
 record.decision.weightedScore = scored.weightedScore;
-record.decision.status = scored.scorePasses && judgment.acceptedForReview !== false ? "accepted-for-review" : "revision-required";
+record.decision.status = scored.scorePasses && judgment.acceptedForReview === true && record.blockingFindings.length === 0 ? "accepted-for-review" : "revision-required";
 record.recordDigest = runRecordDigest(record);
+const candidateRecords = [...previousRuns, { file: "pending holdout record", record }];
+const recordErrors = [
+  ...validateRunSequence(candidateRecords),
+  ...validateCompositeRunRecord(record, { contract, contractId: contract.id, contractVersion: contract.version, contractDigest: contractDigest(contract), governedInputDigest: committedDigest })
+];
+if (recordErrors.length) throw new Error(`Refusing invalid holdout record:\n${recordErrors.join("\n")}`);
 const outputPath = path.join(repoRoot, `evals/_shared/runs/${String(iteration).padStart(3, "0")}-${record.id}.json`);
 mkdirSync(path.dirname(outputPath), { recursive: true });
 writeFileSync(outputPath, `${JSON.stringify(record, null, 2)}\n`);

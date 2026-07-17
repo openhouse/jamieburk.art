@@ -8,11 +8,14 @@ import {
   governedInputDigest,
   loadCompositeRunRecords,
   loadEvalContract,
-  repoRoot
+  repoRoot,
+  validateCompositeHistory
 } from "./lib/eval-contract.mjs";
 
 const contract = loadEvalContract();
 const runs = loadCompositeRunRecords();
+const errors = validateCompositeHistory(runs, contract);
+if (errors.length) throw new Error(`Refusing to report invalid composite history:\n${errors.join("\n")}`);
 const stop = evaluateCompositeStopCondition(runs, contract);
 const lines = [
   "# Composite evaluation report",

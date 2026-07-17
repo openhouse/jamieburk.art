@@ -1,4 +1,5 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -281,12 +282,33 @@ export function validateLaunchEvalRunRecord(suite, run) {
   if (!run?.recordedAt) failures.push("run record needs recordedAt");
   if (!run?.candidate?.branch || !run.candidate.baseCommit) {
     failures.push("run record needs candidate branch and baseCommit");
+  } else if (!/^[a-f0-9]{40}$/i.test(run.candidate.baseCommit)) {
+    failures.push("run record baseCommit must be a full Git SHA");
+  } else {
+    try {
+      execFileSync("git", ["cat-file", "-e", `${run.candidate.baseCommit}^{commit}`], { cwd: repoRoot, stdio: "ignore" });
+    } catch {
+      failures.push("run record baseCommit is not available in Git");
+    }
   }
   if (typeof run?.hardGatesPass !== "boolean") {
     failures.push("run record needs hardGatesPass");
   }
   if (!Array.isArray(run?.hardGateNotes) || run.hardGateNotes.length === 0) {
     failures.push("run record needs hard-gate notes");
+  }
+  if (run?.hardGatesPass === true) {
+    const expectedGateIds = new Set(suite.hardGates.map((gate) => gate.id));
+    const results = run.hardGateResults ?? [];
+    const resultIds = new Set(results.map((result) => result.id));
+    if (results.length !== expectedGateIds.size || resultIds.size !== expectedGateIds.size || [...expectedGateIds].some((id) => !resultIds.has(id))) {
+      failures.push("a passing run must record every hard gate exactly once");
+    }
+    for (const result of results) {
+      if (result.status !== "passed" || !Array.isArray(result.evidence) || result.evidence.length === 0 || result.evidence.some((item) => typeof item !== "string" || !item.trim())) {
+        failures.push(`${result.id ?? "hard gate"} needs passed status and concrete evidence`);
+      }
+    }
   }
 
   const expectedIds = new Set(suite.judgeCriteria.map((criterion) => criterion.id));

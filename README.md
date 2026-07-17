@@ -109,6 +109,11 @@ recorded with `npm run eval:record-holdout -- --input /path/to/judgment.json
 rejected judgments remain in the hash-chained history. See
 `docs/evals/composite-governance.md`.
 
+Use `npm run check:eval-records` for nonrecursive validation of the contract,
+candidate identities, retained command logs, prompt versions, score vectors,
+decision records, and run hash chain. `npm run check:eval-contract` adds the
+recursive stop condition.
+
 `npm run eval:run` executes the frozen composite contract against a committed
 candidate and records command output digests. Independent blind judgments are
 recorded with `npm run eval:record-holdout -- --input /path/to/judgment.json

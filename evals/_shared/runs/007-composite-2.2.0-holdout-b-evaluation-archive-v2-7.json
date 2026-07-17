@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "2.1.0",
+  "id": "composite-2.2.0-holdout-b-evaluation-archive-v2-7",
+  "iteration": 7,
+  "recordedAt": "2026-07-17T02:27:32.660Z",
+  "previousRunId": "composite-2.2.0-deterministic-6",
+  "previousRunDigest": "bc790c5a9a9e096bc408daaebd17de56af433ba4ccc5b69a5a76563b4397361c",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.2.0",
+    "digest": "f0cc12a35febe293864b919b1bccacbd75a7da572296ff24738500f4ec7989d5"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "ee45f8f89ba62d4e69770f7251a54c6053d38ac1",
+    "tree": "c9d25956a3d672f7f620d749296a179b821ef848",
+    "governedInputDigest": "81e3c5ba61f826496eab883f7ff2f5a9c1c6e29c33aca94285c40c0f19be7b81"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-b-evaluation-archive-v2",
+    "sessionId": "019f6ddc-b4e6-7bb1-bf0f-02072ed09424",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/prompts/2.2.0/holdout-b.md",
+    "promptDigest": "9835b58e0b6e23af90ebfd1cf8823e766aecc7cf9422bb53c70bf17ccb83c34f"
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "The hero and technical-operations page state the target role, operating contribution, and application paths."
+      ],
+      "risks": [
+        "Operational proof remains text dense."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 3,
+      "evidence": [
+        "CallNYC and FairRentNYC are visibly cited, while HJE and Sunday Dinner consequential metrics remain less inspectable."
+      ],
+      "risks": [
+        "Evidence visibility is uneven across featured cases."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "The hero, About page, and KC Town Hall frame emerging work as a normal operating condition."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 4,
+      "evidence": [
+        "The Start Here path and consistent At a Glance surface support scanning."
+      ],
+      "risks": [
+        "The homepage repeats some arguments."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4,
+      "evidence": [
+        "Case studies lead with Jamie's action, usable results, role fit, and application paths."
+      ],
+      "risks": [
+        "Many representative artifacts remain descriptive cards."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 3,
+      "evidence": [
+        "FairRentNYC and KC Town Hall preserve collective credit, but generator and intake paths did not fail closed in every case."
+      ],
+      "risks": [
+        "Non-public source handling and private-path bypasses weakened protection."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "CallNYC has a cleared mark; most other project evidence is text-only."
+      ],
+      "risks": [
+        "Flagship cases remain visually under-evidenced."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 4,
+      "evidence": [
+        "Technical Operations, KC Town Hall, and HJE connect operating practices to bounded outcomes."
+      ],
+      "risks": [
+        "Several outputs are described rather than inspectable."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 4,
+      "evidence": [
+        "About, WOW List, and Sunday Dinner retain artistic, civic, technical, social, and participatory continuity."
+      ],
+      "risks": [
+        "The continuity is clearer in prose than material evidence."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 2,
+      "evidence": [
+        "Synthetic probes could fabricate output digests and reviewer identities, override a human hold, and let reports summarize unvalidated records."
+      ],
+      "risks": [
+        "The stop decision did not yet bind logs, later rejections, or authentic human refusal."
+      ]
+    }
+  ],
+  "blockingFindings": [
+    "Command output digests were not verified against retained logs.",
+    "Reviewer independence remained self-asserted.",
+    "A human revision-required decision could be rejected when numerical scores passed.",
+    "The required command set lacked a nonrecursive structural chain check.",
+    "Private-path and duplicate-title normalization had concrete bypasses.",
+    "The citation generator did not fail closed before serializing non-public source data.",
+    "The composite report could summarize unvalidated records."
+  ],
+  "openDisagreements": [
+    "The public portfolio is strong, but evidence is not uniformly inspectable enough for the frozen floor."
+  ],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new evidence",
+    "changed public projection",
+    "contract or candidate drift",
+    "human disagreement",
+    "privacy or collective-credit concern"
+  ],
+  "decision": {
+    "status": "revision-required",
+    "weightedScore": 3.76,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "Candidate ee45f8f8 is not PR-review ready; weighted score 3.76, with evidence, collective-credit, and Sack floors missed.",
+  "recordDigest": "4159e5d63e2f0f319f36ba955457de50abc339bf8a10ff11d10c4662fff6928a"
+}

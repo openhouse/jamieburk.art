@@ -38,6 +38,7 @@
     "check:projections": "node scripts/check-projection-consistency.mjs",
     "test:projections": "node --test scripts/tests/projection-consistency.test.mjs",
     "check:eval-contract": "node scripts/check-eval-contract.mjs",
+    "check:eval-records": "node scripts/check-eval-records.mjs",
     "test:eval-contract": "node --test scripts/tests/eval-contract.test.mjs",
     "report:eval-contract": "node scripts/report-eval-contract.mjs",
     "eval:run": "node scripts/run-composite-eval.mjs",

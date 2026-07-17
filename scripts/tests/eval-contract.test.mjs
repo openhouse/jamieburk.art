@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
+import { mkdirSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import {
   contractDigest,
@@ -21,6 +23,23 @@ const contract = loadEvalContract();
 const digest = contractDigest(contract);
 const inputDigest = governedInputDigest(contract);
 const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/evals.json"), "utf8"));
+const testLogPath = "evals/_shared/logs/test-output.log";
+const testLog = "captured test output\n";
+mkdirSync(path.dirname(path.join(repoRoot, testLogPath)), { recursive: true });
+writeFileSync(path.join(repoRoot, testLogPath), testLog);
+const testLogDigest = createHash("sha256").update(testLog).digest("hex");
+
+function decisionRecord() {
+  return {
+    dimensions: suite.lensPolicy.sack.decisionVector.map((dimension) => ({ dimension, assessment: `${dimension} reviewed`, evidence: [`${dimension} evidence`], unresolvedRisks: [] })),
+    authorityLog: suite.lensPolicy.sack.authorities.map((policy) => ({ action: policy.action, humanAuthority: policy.authority, disposition: "Not invoked; authority remains human.", modelHasFinalAuthority: false })),
+    reopenTriggersConsidered: [...suite.lensPolicy.sack.reopenTriggers],
+    reopenReview: "All triggers were reviewed.",
+    overrides: [],
+    openDisagreements: [],
+    disagreementReview: "No disagreement was hidden."
+  };
+}
 
 function seal(record) {
   record.recordDigest = runRecordDigest(record);
@@ -40,16 +59,17 @@ function run(id, judgeClass = "deterministic", options = {}) {
     contract: { id: contract.id, version: contract.version, digest },
     candidate: { branch: "feature/knowledge-a", commit: "a".repeat(40), tree: "b".repeat(40), governedInputDigest: inputDigest },
     commands: judgeClass === "deterministic"
-      ? contract.requiredCommands.map((command) => ({ command, exitCode: 0, status: "passed", startedAt: "2026-07-16T12:00:00Z", completedAt: "2026-07-16T12:00:01Z", durationMs: 1000, outputDigest: "c".repeat(64) }))
+      ? contract.requiredCommands.map((command) => ({ command, exitCode: 0, status: "passed", startedAt: "2026-07-16T12:00:00Z", completedAt: "2026-07-16T12:00:01Z", durationMs: 1000, outputDigest: testLogDigest, outputPath: testLogPath }))
       : [{ command: "independent read-only holdout", exitCode: 0, status: "passed" }],
     ...(judgeClass === "deterministic" ? { execution: { runnerPath: "scripts/run-composite-eval.mjs", runnerDigest: promptDigest("scripts/run-composite-eval.mjs"), node: process.version, platform: "test" } } : {}),
     judge: judgeClass === "holdout"
-      ? { class: "holdout", label: options.label ?? id, sessionId: options.sessionId ?? `session-${id}`, independent: true, priorScoresVisible: false, promptPath, promptDigest: promptDigest(promptPath) }
+      ? { class: "holdout", label: options.label ?? id, sessionId: options.sessionId ?? "11111111-1111-4111-8111-111111111111", independent: true, priorScoresVisible: false, promptPath, promptDigest: promptDigest(promptPath) }
       : { class: "deterministic", label: id, independent: false, priorScoresVisible: false },
     criterionResults: judgeClass === "holdout" ? criteria : [],
+    ...(judgeClass === "holdout" ? { decisionRecord: decisionRecord(), blockingFindings: [] } : {}),
     openDisagreements: [],
     overrides: [],
-    reopenTriggersReviewed: ["new evidence", "changed public projection", "human disagreement"],
+    reopenTriggersReviewed: [...contract.requiredReopenTriggers],
     decision: { status: "accepted-for-review", weightedScore: judgeClass === "holdout" ? 5 : undefined, productionReady: false, externalGatesOpen: [...contract.requiredExternalGates] }
   };
   return seal(record);
@@ -105,11 +125,13 @@ test("deterministic records require canonical runner and captured output provena
   changed.execution.runnerDigest = "0".repeat(64);
   delete changed.commands[0].outputDigest;
   delete changed.commands[0].startedAt;
+  delete changed.commands[0].outputPath;
   seal(changed);
   const errors = validate(changed, { contract }).join("\n");
   assert.match(errors, /runner digest is stale/);
   assert.match(errors, /captured output digest/);
   assert.match(errors, /execution timing/);
+  assert.match(errors, /retained output log/);
 });
 
 test("holdouts must be independent, blind, normalized, and prompt-bound", () => {
@@ -141,7 +163,7 @@ test("unknown, duplicate, missing, out-of-range, and evidenceless scores are rej
   assert.match(errors, /missing criterion/);
 });
 
-test("declared decision and weighted score are recomputed from actual results", () => {
+test("declared weighted score and an unsupported acceptance are recomputed from actual results", () => {
   const changed = run("below-floor", "holdout");
   changed.criterionResults.find((item) => item.criterionId === "LR-JUDGE-EVIDENCE").score = 3;
   seal(changed);
@@ -149,7 +171,24 @@ test("declared decision and weighted score are recomputed from actual results", 
   assert.deepEqual(scored.belowMinimum, ["LR-JUDGE-EVIDENCE"]);
   const errors = validate(changed, { contract }).join("\n");
   assert.match(errors, /weighted score does not match/);
-  assert.match(errors, /decision status does not match/);
+  assert.match(errors, /accepted decision does not meet/);
+});
+
+test("a human hold remains valid even when numerical scores pass", () => {
+  const changed = run("human-hold", "holdout");
+  changed.decision.status = "revision-required";
+  seal(changed);
+  assert.doesNotMatch(validate(changed, { contract }).join("\n"), /accepted decision/);
+});
+
+test("blocking findings and incomplete decision governance prohibit acceptance", () => {
+  const changed = run("blocked-holdout", "holdout");
+  changed.blockingFindings = ["A material blocker remains."];
+  changed.decisionRecord.authorityLog = [];
+  seal(changed);
+  const errors = validate(changed, { contract }).join("\n");
+  assert.match(errors, /blocking findings prohibit acceptance/);
+  assert.match(errors, /every human authority action/);
 });
 
 test("required human gates cannot disappear from an accepted record", () => {
@@ -175,8 +214,8 @@ test("record mutation invalidates its own digest", () => {
 test("two deterministic passes and two unchanged independent holdouts meet the review stop", () => {
   const records = sequence([
     run("det-1"), run("det-2"),
-    run("hold-1", "holdout", { label: "holdout-a", sessionId: "session-holdout-a" }),
-    run("hold-2", "holdout", { label: "holdout-b", sessionId: "session-holdout-b", promptPath: "evals/_shared/holdout-b.md" })
+    run("hold-1", "holdout", { label: "holdout-a", sessionId: "11111111-1111-4111-8111-111111111111" }),
+    run("hold-2", "holdout", { label: "holdout-b", sessionId: "22222222-2222-4222-8222-222222222222", promptPath: "evals/_shared/holdout-b.md" })
   ]);
   assert.equal(evaluateCompositeStopCondition(records, contract).acceptedForReview, true);
 });
@@ -191,11 +230,21 @@ test("a failed deterministic run resets the consecutive pass streak", () => {
   assert.equal(evaluateCompositeStopCondition(records, contract).acceptedForReview, false);
 });
 
-test("one reviewer cannot certify twice by changing label whitespace or case", () => {
-  const one = run("hold-1", "holdout", { label: "Reviewer-One", sessionId: "session-same-reviewer" });
-  const two = run("hold-2", "holdout", { label: "reviewer-one", sessionId: "session-same-reviewer", promptPath: "evals/_shared/holdout-b.md" });
+test("one reviewer cannot certify twice by changing label case or Unicode", () => {
+  const one = run("hold-1", "holdout", { label: "Reviewer-One", sessionId: "11111111-1111-4111-8111-111111111111" });
+  const two = run("hold-2", "holdout", { label: "reviewer\u200b-one", sessionId: "11111111-1111-4111-8111-111111111111", promptPath: "evals/_shared/holdout-b.md" });
   const records = sequence([run("det-1"), run("det-2"), one, two]);
   assert.equal(evaluateCompositeStopCondition(records, contract).acceptedForReview, false);
+});
+
+test("a later rejected holdout resets the current acceptance phase", () => {
+  const rejected = run("hold-rejected", "holdout", { promptPath: "evals/_shared/holdout-b.md" });
+  rejected.decision.status = "revision-required";
+  seal(rejected);
+  const records = sequence([run("det-1"), run("det-2"), run("hold-1", "holdout"), rejected]);
+  const result = evaluateCompositeStopCondition(records, contract);
+  assert.equal(result.deterministicPasses, 0);
+  assert.equal(result.acceptedForReview, false);
 });
 
 test("deterministic and holdout records must bind the same commit and tree", () => {

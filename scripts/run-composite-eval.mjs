@@ -11,7 +11,9 @@ import {
   loadEvalContract,
   promptDigest,
   repoRoot,
-  runRecordDigest
+  runRecordDigest,
+  validateCompositeRunRecord,
+  validateRunSequence
 } from "./lib/eval-contract.mjs";
 
 const git = (...args) => execFileSync("git", args, { cwd: repoRoot, encoding: "utf8" }).trim();
@@ -25,12 +27,20 @@ if (currentDigest !== committedDigest) {
   throw new Error("Governed inputs differ from HEAD. Commit the candidate before running composite evals.");
 }
 
+const previousRuns = loadCompositeRunRecords();
+const previous = previousRuns.at(-1)?.record;
+const iteration = (previous?.iteration ?? 0) + 1;
+const id = `composite-${contract.version}-deterministic-${iteration}`;
+const logRoot = path.join(repoRoot, `evals/_shared/logs/${String(iteration).padStart(3, "0")}-${id}`);
+mkdirSync(logRoot, { recursive: true });
 const commands = [];
-for (const command of contract.requiredCommands) {
+for (const [index, command] of contract.requiredCommands.entries()) {
   const started = new Date();
   const result = spawnSync(command, { cwd: repoRoot, encoding: "utf8", shell: true, env: process.env, maxBuffer: 50 * 1024 * 1024 });
   const completed = new Date();
   const output = `${result.stdout ?? ""}${result.stderr ?? ""}`;
+  const outputPath = path.posix.join("evals/_shared/logs", path.basename(logRoot), `${String(index + 1).padStart(2, "0")}.log`);
+  writeFileSync(path.join(repoRoot, outputPath), output);
   process.stdout.write(`\n$ ${command}\n${output}`);
   commands.push({
     command,
@@ -39,13 +49,11 @@ for (const command of contract.requiredCommands) {
     startedAt: started.toISOString(),
     completedAt: completed.toISOString(),
     durationMs: completed.getTime() - started.getTime(),
-    outputDigest: createHash("sha256").update(output).digest("hex")
+    outputDigest: createHash("sha256").update(output).digest("hex"),
+    outputPath
   });
 }
 
-const previous = loadCompositeRunRecords().at(-1)?.record;
-const iteration = (previous?.iteration ?? 0) + 1;
-const id = `composite-${contract.version}-deterministic-${iteration}`;
 const record = {
   schemaVersion: "2.1.0",
   id,
@@ -65,7 +73,7 @@ const record = {
   criterionResults: [],
   openDisagreements: [],
   overrides: [],
-  reopenTriggersReviewed: ["new evidence", "changed public projection", "contract or candidate drift", "human disagreement", "privacy or collective-credit concern"],
+  reopenTriggersReviewed: [...contract.requiredReopenTriggers],
   decision: {
     status: commands.every((command) => command.exitCode === 0) ? "accepted-for-review" : "revision-required",
     productionReady: false,
@@ -73,6 +81,12 @@ const record = {
   }
 };
 record.recordDigest = runRecordDigest(record);
+const candidateRecords = [...previousRuns, { file: "pending deterministic record", record }];
+const recordErrors = [
+  ...validateRunSequence(candidateRecords),
+  ...validateCompositeRunRecord(record, { contract, contractId: contract.id, contractVersion: contract.version, contractDigest: contractDigest(contract), governedInputDigest: committedDigest })
+];
+if (recordErrors.length) throw new Error(`Refusing invalid run record:\n${recordErrors.join("\n")}`);
 const outputPath = path.join(repoRoot, `evals/_shared/runs/${String(iteration).padStart(3, "0")}-${id}.json`);
 mkdirSync(path.dirname(outputPath), { recursive: true });
 writeFileSync(outputPath, `${JSON.stringify(record, null, 2)}\n`);

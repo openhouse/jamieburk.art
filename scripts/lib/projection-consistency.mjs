@@ -2,8 +2,16 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { homepageProofs, proofClaims } from "../../apps/www/src/data/proofs.ts";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+export const publicEvidenceSnapshotSha = "3757c4f529cc05d169f30ec059b13bea24cc75d1";
+
+function pinRepositoryUrl(url) {
+  return typeof url === "string"
+    ? url.replace("https://github.com/openhouse/jamieburk.art/blob/develop/", `https://github.com/openhouse/jamieburk.art/blob/${publicEvidenceSnapshotSha}/`)
+    : url;
+}
 
 const defaultIgnorables = /[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180F\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFE0F\uFEFF\uFFA0]/g;
 
@@ -39,8 +47,10 @@ export function buildPublicRegistry(bank = knowledgeBank) {
   })));
   return {
     sources: bank.sources
-      .filter((source) => usedSourceIds.has(source.id))
-      .map(({ protectedLocatorId: _protectedLocatorId, media: _media, supportsGenerally: _supportsGenerally, ...source }) => source),
+      .filter((source) => usedSourceIds.has(source.id) && ["public", "public-metadata-only"].includes(source.visibility))
+      .map(({ protectedLocatorId: _protectedLocatorId, media: _media, supportsGenerally: _supportsGenerally, ...source }) => Object.fromEntries(
+        Object.entries(source).map(([key, value]) => [key, key.endsWith("Url") ? pinRepositoryUrl(value) : value])
+      )),
     claims: bank.claims
       .filter((claim) => bank.pages.some((page) => page.occurrences.some((occurrence) => occurrence.claimId === claim.id)))
       .map((claim) => ({
@@ -70,6 +80,20 @@ export function validateProjectionConsistency({
 
   const expectedRegistry = `${JSON.stringify(buildPublicRegistry(bank), null, 2)}\n`;
   if (registryText !== expectedRegistry) errors.push("public registry disagrees with canonical knowledge records");
+
+  const coverageByProof = new Map(bank.proofCoverageTargets.map((target) => [target.proofId, target]));
+  for (const proof of proofClaims) {
+    if (!coverageByProof.has(proof.id)) errors.push(`${proof.id}: public proof is missing canonical knowledge-bank coverage`);
+  }
+  for (const target of bank.proofCoverageTargets) {
+    if (!proofClaims.some((proof) => proof.id === target.proofId)) errors.push(`${target.proofId}: proof coverage points to an unknown public proof`);
+    for (const sourceId of target.sourceIds) if (!sourceById.has(sourceId)) errors.push(`${target.proofId}: proof coverage has unknown source ${sourceId}`);
+    for (const inquiryId of target.researchInquiryIds) if (!bank.researchInquiries.some((inquiry) => inquiry.id === inquiryId)) errors.push(`${target.proofId}: proof coverage has unknown inquiry ${inquiryId}`);
+  }
+  for (const proof of homepageProofs) {
+    const coverage = coverageByProof.get(proof.id);
+    if (!coverage || ["protected-support", "research-needed"].includes(coverage.status)) errors.push(`${proof.id}: homepage proof needs public or resume-backed coverage`);
+  }
 
   for (const claim of bank.claims) {
     if (claim.projections.some((projection) => projection.status === "hold") && publicCorpus.includes(normalize(claim.id))) {
@@ -106,7 +130,7 @@ export function validateProjectionConsistency({
       for (const sourceId of sourceIds) {
         const source = sourceById.get(sourceId);
         if (!source) errors.push(`${page.id}/${occurrence.id}: unknown source ${sourceId}`);
-        else if (source.visibility === "protected") errors.push(`${page.id}/${occurrence.id}: protected source ${sourceId} cannot render`);
+        else if (!["public", "public-metadata-only"].includes(source.visibility)) errors.push(`${page.id}/${occurrence.id}: non-public source ${sourceId} cannot render`);
       }
     }
   }

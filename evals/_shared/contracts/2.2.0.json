@@ -1,6 +1,6 @@
 {
   "id": "jamieburk-art-composite-eval-contract",
-  "version": "2.3.0",
+  "version": "2.2.0",
   "publishedAt": "2026-07-16",
   "objective": "Improve portfolio usefulness while preserving public safety, source boundaries, collective credit, reader clarity, and human release authority.",
   "suites": [
@@ -38,7 +38,6 @@
   "generatedOutputs": [
     "apps/www/.next",
     "apps/www/tsconfig.tsbuildinfo",
-    "evals/_shared/logs",
     "evals/_shared/runs",
     "evals/knowledge-bank/runs",
     "evals/launch-readiness/runs",
@@ -66,7 +65,6 @@
     "npm run check:projections",
     "npm run test:projections",
     "npm run test:eval-contract",
-    "npm run check:eval-records",
     "npm run check -w @jamie-burkart/www",
     "npm run knowledge-bank",
     "npm run public-safety",
@@ -79,20 +77,6 @@
     "staging verification of the exact candidate SHA",
     "Jamie approval of the exact production SHA"
   ],
-  "holdoutPrompts": [
-    "evals/_shared/holdout-a.md",
-    "evals/_shared/holdout-b.md"
-  ],
-  "requiredReopenTriggers": [
-    "new or contradictory evidence",
-    "changed consent or rights",
-    "a substantiated attribution dispute",
-    "source decay or corrected provenance",
-    "a changed target role or public surface"
-  ],
-  "retainCommandLogs": true,
-  "requireDecisionRecord": true,
-  "runnerPath": "scripts/run-composite-eval.mjs",
   "humanAuthority": {
     "publicTruthAndConsent": "Jamie Burkart",
     "productionPromotion": "Jamie Burkart",

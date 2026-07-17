@@ -51,6 +51,20 @@ test("machine-readable run records reproduce their declared decisions", () => {
   }
 });
 
+test("a declared hard-gate result cannot use a fabricated candidate commit", () => {
+  const record = structuredClone(loadLaunchEvalRunRecords()[0].record);
+  record.candidate.baseCommit = "not-a-sha";
+  assert.match(validateLaunchEvalRunRecord(suite, record).join("\n"), /full Git SHA/);
+});
+
+test("a passing run cannot replace hard-gate records with a trust-me note", () => {
+  const record = structuredClone(loadLaunchEvalRunRecords()[0].record);
+  record.hardGatesPass = true;
+  record.hardGateNotes = ["trust me"];
+  delete record.hardGateResults;
+  assert.match(validateLaunchEvalRunRecord(suite, record).join("\n"), /record every hard gate/);
+});
+
 test("a passing scorecard reaches the deterministic target", () => {
   const scores = suite.judgeCriteria.map((criterion) => ({
     criterionId: criterion.id,

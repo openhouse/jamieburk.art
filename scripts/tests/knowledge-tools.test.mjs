@@ -8,6 +8,7 @@ import {
   projectionMap,
   queryKnowledge
 } from "../lib/knowledge-tools.mjs";
+import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 
 const base = { title: "A useful source", project: "callnyc", kind: "public-url", reason: "Test a bounded lead", url: "https://example.com/source" };
 
@@ -29,10 +30,20 @@ test("private paths cannot enter an intake receipt", () => {
   assert.equal(containsPrivatePath({ note: "/Volumes/Archive/private.pdf" }), true);
   assert.equal(containsPrivatePath({ note: "／Ｕｓｅｒｓ／jamie/private.txt" }), true);
   assert.equal(containsPrivatePath({ note: "/Us\u200bers/jamie/private.txt" }), true);
+  assert.equal(containsPrivatePath({ note: "/private/var/folders/private.txt" }), true);
+  assert.equal(containsPrivatePath({ note: "/tmp/private.txt" }), true);
+  assert.equal(containsPrivatePath({ note: "~/private.txt" }), true);
+  assert.equal(containsPrivatePath({ note: "file%3A%2F%2F%2FUsers%2Fjamie%2Fprivate.txt" }), true);
 });
 
 test("source URLs have one comparison form", () => {
   assert.equal(canonicalizeSourceUrl("HTTPS://Example.COM:443/a/#fragment"), "https://example.com/a");
+});
+
+test("duplicate title comparison normalizes trailing and repeated whitespace", () => {
+  const existing = knowledgeBank.intakeItems[0];
+  const receipt = createIntakeReceipt({ title: `  ${existing.title}   `, project: existing.projectIds[0], kind: existing.kind, reason: "Duplicate normalization test" }, new Date("2026-07-16T00:00:00Z"));
+  assert.equal(receipt.disposition, "duplicate");
 });
 
 test("query distinguishes record classes and filters projects", () => {

@@ -22,8 +22,15 @@ commit and tree in Git, recomputes its governed-input digest, recomputes holdout
 scores and floors, and rejects missing commands, unknown criteria, duplicate
 reviewers, stale prompts, or an attempt to grant production authority. The
 canonical deterministic runner captures timing and an output digest for every
-required command. Failed runs and rejected holdouts remain in the chain; they
+required command. Version 2.3 also retains each command log and verifies its
+digest before a record may count. Failed runs and rejected holdouts remain in the chain; they
 are evidence about the system, not debris to erase.
+
+Prompts are versioned with the contract. A later rejection resets the current
+acceptance phase, including earlier deterministic passes. A numerical pass can
+never erase a reviewer's refusal or a nonempty blocking-finding list. Accepted
+holdouts retain the seven decision dimensions, human authority log, reopen
+review, disagreements, and overrides required by the launch suite.
 
 Run records form an ordered SHA-256 chain. The validator resolves every recorded
 commit and tree in Git, recomputes its governed-input digest, recomputes holdout

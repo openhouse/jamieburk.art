@@ -11,7 +11,16 @@ const receiptLockPath = `${receiptPath}.lock`;
 const defaultIgnorables = /[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180F\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFE0F\uFEFF\uFFA0]/g;
 
 function normalizedSecurityText(value) {
-  return JSON.stringify(value).normalize("NFKC").replace(defaultIgnorables, "");
+  let normalized = JSON.stringify(value).normalize("NFKC").replace(defaultIgnorables, "");
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try { normalized = decodeURIComponent(normalized); }
+    catch { break; }
+  }
+  return normalized;
+}
+
+function normalizedKey(value) {
+  return String(value).normalize("NFKC").replace(defaultIgnorables, "").replace(/\s+/g, " ").trim().toLocaleLowerCase();
 }
 
 export function canonicalizeSourceUrl(value) {
@@ -40,7 +49,7 @@ export function parseFlags(argv) {
 }
 
 export function containsPrivatePath(value) {
-  return /(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|[A-Za-z]:\\Users\\|file:\/\/)/i.test(normalizedSecurityText(value));
+  return /(?:\/Users\/|\/Volumes\/|\/private\/(?:tmp|var)\/|\/tmp\/|\/var\/folders\/|(?:^|["'\s:])~\/|[A-Za-z]:\\Users\\|file:\/\/)/i.test(normalizedSecurityText(value));
 }
 
 function existingReceipts() {
@@ -61,7 +70,7 @@ export function createIntakeReceipt(flags, now = new Date()) {
   const existing = [...knowledgeBank.intakeItems, ...existingReceipts()];
   const duplicateIntake = existing.find((item) =>
     (sourceUrl && item.sourceUrl && canonicalizeSourceUrl(item.sourceUrl) === sourceUrl) ||
-    (item.title.toLocaleLowerCase() === flags.title.toLocaleLowerCase() && item.projectIds.includes(flags.project))
+    (normalizedKey(item.title) === normalizedKey(flags.title) && item.projectIds.includes(flags.project))
   );
   const duplicateSource = knowledgeBank.sources.find((source) =>
     sourceUrl && [source.canonicalUrl, source.archiveUrl, source.assetUrl]
