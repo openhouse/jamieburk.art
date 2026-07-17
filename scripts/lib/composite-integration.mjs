@@ -41,6 +41,8 @@ const expectedDonors = new Map([
 const requiredRoutes = [
   "/",
   "/about",
+  "/colophon",
+  "/contact",
   "/lab/source-backed-team-memory",
   "/resume",
   "/work",
@@ -98,8 +100,10 @@ function readJson(root, relativePath) {
 
 function isCandidatePath(relativePath) {
   return !candidatePathExclusions.some(
-    (excluded) =>
-      relativePath === excluded.slice(0, -1) || relativePath.includes(excluded)
+    (excluded) => {
+      const directory = excluded.slice(0, -1);
+      return relativePath === directory || relativePath.startsWith(excluded);
+    }
   );
 }
 
@@ -165,6 +169,14 @@ function sameSet(left, right) {
   return left.every((item) => rightSet.has(item));
 }
 
+function distinctWords(value) {
+  return new Set(
+    String(value ?? "")
+      .toLowerCase()
+      .match(/[a-z0-9]+/g) ?? []
+  );
+}
+
 export function detectSemanticRisks(statement) {
   return semanticRiskPatterns
     .filter(({ pattern }) => pattern.test(statement))
@@ -228,29 +240,38 @@ export function validateCollectiveCreditPolicy(
     findings.push("Collective-credit project IDs must be unique");
   }
 
-  const selectedClaimIds = new Set(
-    (bindings?.routes ?? []).flatMap((route) => route.claimIds ?? [])
-  );
   const referencedProjects = new Set([
     ...proofs.flatMap((proof) => proof.relatedProjects),
     ...claims
-      .filter((claim) => selectedClaimIds.has(claim.id))
+      .filter((claim) =>
+        claim.projections?.some((projection) => projection.status === "active")
+      )
       .map((claim) => claim.project),
     ...workItems.map((work) => work.slug)
   ]);
   for (const projectId of referencedProjects) {
-    const project = projectById.get(projectId);
-    if (!project) {
+    if (!projectById.has(projectId)) {
       findings.push(`Collective-credit policy is missing ${projectId}`);
-      continue;
     }
+  }
+  for (const project of policy.projects) {
+    const projectId = project.id;
     if (!["individual", "collective", "mixed"].includes(project.creditScope)) {
       findings.push(`${projectId} has an invalid creditScope`);
     }
+    const boundaries = project.boundaries ?? [];
+    const normalizedBoundaries = boundaries.map((boundary) =>
+      boundary.trim().toLowerCase()
+    );
     if (
       project.publicRule?.length < 60 ||
-      project.boundaries?.length < 2 ||
-      project.boundaries.some((boundary) => boundary.length < 20)
+      distinctWords(project.publicRule).size < 10 ||
+      boundaries.length < 2 ||
+      boundaries.some(
+        (boundary) =>
+          boundary.length < 20 || distinctWords(boundary).size < 6
+      ) ||
+      new Set(normalizedBoundaries).size !== boundaries.length
     ) {
       findings.push(`${projectId} needs a substantive publicRule and two boundaries`);
     }
@@ -289,6 +310,9 @@ export function validateSurfaceBindings(
   if (routeByPath.size !== bindings.routes.length) {
     findings.push("Projection route paths must be unique");
   }
+  if (!sameSet(bindings.routes.map((route) => route.path), requiredRoutes)) {
+    findings.push("Projection route registry must match the complete public route set");
+  }
 
   for (const routePath of requiredRoutes) {
     const route = routeByPath.get(routePath);
@@ -303,7 +327,15 @@ export function validateSurfaceBindings(
       findings.push(`${routePath} needs approvalState, changeRule, and exclusions`);
     }
     for (const sourceFile of route.sourceFiles ?? []) {
-      if (!existsSync(absolute(root, sourceFile))) {
+      const resolvedSource = absolute(root, sourceFile);
+      const relativeSource = path.relative(root, resolvedSource);
+      if (
+        path.isAbsolute(sourceFile) ||
+        relativeSource.startsWith("..") ||
+        path.isAbsolute(relativeSource)
+      ) {
+        findings.push(`${routePath} references source file outside the repository`);
+      } else if (!existsSync(resolvedSource)) {
         findings.push(`${routePath} references missing source file ${sourceFile}`);
       }
     }
@@ -411,8 +443,11 @@ export function validateProofTraceability(
       findings.push(`${proof.id} lacks resolvable sourceIds or knowledgeClaimIds`);
     }
     for (const sourceId of sourceIds) {
-      if (!sourceById.has(sourceId)) {
+      const source = sourceById.get(sourceId);
+      if (!source) {
         findings.push(`${proof.id} references unknown source ${sourceId}`);
+      } else if (!["public", "public-metadata-only"].includes(source.visibility)) {
+        findings.push(`${proof.id} directly references protected source ${sourceId}`);
       }
     }
     for (const claimId of claimIds) {
@@ -426,6 +461,13 @@ export function validateProofTraceability(
       }
       if (!claim.evidence.length) {
         findings.push(`${proof.id} references claim ${claimId} without evidence`);
+      }
+      if (
+        !claim.projections.some(
+          (projection) => projection.status === "active"
+        )
+      ) {
+        findings.push(`${proof.id} references claim ${claimId} without an active projection`);
       }
       for (const evidence of claim.evidence) {
         if (!sourceById.has(evidence.sourceId)) {
@@ -453,6 +495,9 @@ export function computeCandidateFingerprint(root) {
 export function validateScorecardSchema(scorecard, schema) {
   const findings = [];
   if (!schema) return ["scorecard.schema.json is missing"];
+  if (!scorecard || typeof scorecard !== "object" || Array.isArray(scorecard)) {
+    return ["Scorecard must be an object"];
+  }
   const allowed = new Set(Object.keys(schema.properties ?? {}));
   for (const key of schema.required ?? []) {
     if (!(key in scorecard)) findings.push(`Scorecard is missing ${key}`);
@@ -471,29 +516,110 @@ export function validateScorecardSchema(scorecard, schema) {
   if (!/^[a-f0-9]{64}$/.test(scorecard.candidateFingerprint ?? "")) {
     findings.push("Scorecard candidateFingerprint is invalid");
   }
-  if (scorecard.criteria?.length !== 15) {
+  if (typeof scorecard.rubricVersion !== "string" || !scorecard.rubricVersion) {
+    findings.push("Scorecard rubricVersion is invalid");
+  }
+  if (typeof scorecard.workingTreeClean !== "boolean") {
+    findings.push("Scorecard workingTreeClean is invalid");
+  }
+  if (
+    typeof scorecard.generatedAt !== "string" ||
+    !Number.isFinite(Date.parse(scorecard.generatedAt)) ||
+    new Date(scorecard.generatedAt).toISOString() !== scorecard.generatedAt
+  ) {
+    findings.push("Scorecard generatedAt is invalid");
+  }
+  if (!Number.isInteger(scorecard.hardGateFailures) || scorecard.hardGateFailures < 0) {
+    findings.push("Scorecard hardGateFailures is invalid");
+  }
+  if (
+    typeof scorecard.weightedScore !== "number" ||
+    scorecard.weightedScore < 0 ||
+    scorecard.weightedScore > 1
+  ) {
+    findings.push("Scorecard weightedScore is invalid");
+  }
+  if (typeof scorecard.passes !== "boolean") {
+    findings.push("Scorecard passes is invalid");
+  }
+  const expectedCriterionIds = Array.from(
+    { length: 15 },
+    (_, index) => `CI-${String(index + 1).padStart(3, "0")}`
+  );
+  if (!Array.isArray(scorecard.criteria) || scorecard.criteria.length !== 15) {
     findings.push("Scorecard must contain exactly 15 criteria");
+  }
+  const criterionIds = scorecard.criteria?.map((criterion) => criterion.id) ?? [];
+  if (!sameSet(criterionIds, expectedCriterionIds)) {
+    findings.push("Scorecard criterion IDs must be unique and complete");
   }
   if (
     !scorecard.criteria?.every(
       (criterion) =>
+        Object.keys(criterion).every((key) =>
+          ["id", "title", "kind", "passes", "score", "findings"].includes(key)
+        ) &&
         /^CI-\d{3}$/.test(criterion.id) &&
+        typeof criterion.title === "string" &&
+        criterion.title.trim().length > 0 &&
         ["hard-gate", "quality"].includes(criterion.kind) &&
         typeof criterion.passes === "boolean" &&
         typeof criterion.score === "number" &&
-        Array.isArray(criterion.findings)
+        criterion.score >= 0 &&
+        criterion.score <= 1 &&
+        Array.isArray(criterion.findings) &&
+        criterion.findings.every((finding) => typeof finding === "string")
     )
   ) {
     findings.push("Scorecard criteria do not match the schema contract");
   }
   if (
-    !scorecard.humanGates?.every(
+    !Array.isArray(scorecard.humanGates) ||
+    scorecard.humanGates.length === 0 ||
+    new Set(scorecard.humanGates.map((gate) => gate.id)).size !== scorecard.humanGates.length ||
+    !scorecard.humanGates.every(
       (gate) =>
+        Object.keys(gate).every((key) =>
+          ["id", "state", "agentMaySelfCertify"].includes(key)
+        ) &&
+        typeof gate.id === "string" &&
+        gate.id.length > 0 &&
         ["open", "met", "not-applicable"].includes(gate.state) &&
         gate.agentMaySelfCertify === false
     )
   ) {
     findings.push("Scorecard human gates do not match the schema contract");
+  }
+  const expectedHumanGateIds =
+    schema.properties?.humanGates?.items?.properties?.id?.enum ?? [];
+  if (
+    expectedHumanGateIds.length &&
+    !sameSet(
+      scorecard.humanGates?.map((gate) => gate.id) ?? [],
+      expectedHumanGateIds
+    )
+  ) {
+    findings.push("Scorecard human gate IDs must be unique and complete");
+  }
+  const actualHardGateFailures = scorecard.criteria?.filter(
+    (criterion) => criterion.kind === "hard-gate" && !criterion.passes
+  ).length;
+  if (
+    Number.isInteger(scorecard.hardGateFailures) &&
+    actualHardGateFailures !== scorecard.hardGateFailures
+  ) {
+    findings.push("Scorecard hardGateFailures does not match criterion results");
+  }
+  if (
+    scorecard.passes === true &&
+    (
+      scorecard.workingTreeClean !== true ||
+      scorecard.hardGateFailures !== 0 ||
+      scorecard.weightedScore !== 1 ||
+      !scorecard.criteria?.every((criterion) => criterion.passes === true)
+    )
+  ) {
+    findings.push("Passing scorecards must satisfy every automated gate");
   }
   return findings;
 }
@@ -532,6 +658,15 @@ export function validateHoldouts(
   const timestamps = new Set(matching.map(({ run }) => run.generatedAt));
   if (timestamps.size < requiredPasses) {
     return ["Passing holdouts must be independent records with distinct timestamps"];
+  }
+  const orderedTimestamps = [...timestamps]
+    .map((timestamp) => Date.parse(timestamp))
+    .sort((left, right) => left - right);
+  if (
+    orderedTimestamps.some((timestamp) => !Number.isFinite(timestamp)) ||
+    orderedTimestamps.at(-1) - orderedTimestamps[0] < 1000
+  ) {
+    return ["Passing holdouts must be recorded by separate runs at least one second apart"];
   }
   const tracked = new Set(
     gitLines(root, ["ls-files", "evals/composite-integration/runs/*.json"])
@@ -789,8 +924,15 @@ export function evaluateComposite(
   }
   for (const gateId of expectedHumanGateIds) {
     const gate = releaseGateById.get(gateId);
-    if (!gate?.owner || !["open", "met", "not-applicable"].includes(gate.state)) {
-      releaseFindings.push(`${gateId} needs a valid state and human owner`);
+    const rubricGate = (rubric?.humanGates ?? []).find((item) => item.id === gateId);
+    if (
+      !gate?.owner ||
+      gate.owner !== rubricGate?.owner ||
+      !["open", "met", "not-applicable"].includes(gate.state) ||
+      gate.agentMaySelfCertify !== false ||
+      rubricGate?.agentMaySelfCertify !== false
+    ) {
+      releaseFindings.push(`${gateId} must match its human owner and prohibit agent self-certification`);
     }
   }
   if (requireHoldouts) {

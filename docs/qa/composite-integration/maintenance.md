@@ -20,7 +20,9 @@
 - Candidate identity covers every tracked or unignored repository file except immutable scorecard runs and ephemeral generated reports/build output.
 - The normal composite check requires two committed passing holdouts for the unchanged candidate. `--write-run` is the only bootstrap path and never overwrites an existing record.
 - The scorecard schema is executable validation, not documentation only.
-- Exact-route bindings must resolve existing source files, active claims, and proof surface permissions.
-- Publication-safe queries omit internal formulations, pending intake, held or inferential claims, protected evidence, and research inquiries.
+- Exact-route bindings must cover the complete public route registry and resolve existing source files, active claims, and proof surface permissions.
+- Every actively projected project must have a substantive collective-credit rule and at least two distinct boundaries.
+- Publication-safe queries use a closed output allowlist and omit internal formulations, pending intake, held or inferential claims, protected evidence, unsafe URLs, private locators, and research inquiries.
+- Human-gate IDs and owners must match the rubric exactly, and agents cannot self-certify those gates.
 
 When the system becomes burdensome, remove duplication before weakening a boundary or human gate.

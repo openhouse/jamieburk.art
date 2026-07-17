@@ -513,7 +513,7 @@ export const proofClaims: ProofClaim[] = [
     sourceBasis:
       "Protected 2019 CCED proposal and first-person construction and stewardship-transition accounts; official Kansas City CCED Board minutes; Council Resolution 190649; Ordinance 190642; the May 2022 project update; Ordinance 240317; and public-safe project context.",
     knowledgeClaimIds: [
-      "CLM-KC-TOWN-HALL-GENERAL-CONTRACTOR-ROLE",
+      "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
       "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
       "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"
     ],

@@ -1,6 +1,6 @@
 {
   "id": "feature-evals-composite-integration",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "frozenAt": "2026-07-16",
   "startingCommit": "68846b1f0a8672ff80598a7fef50ce5343c3e004",
   "objective": "Integrate the strongest feature/evals-A through feature/evals-N mechanisms into one maintainable knowledge lifecycle and selective hiring portfolio without weakening factual accuracy, collective credit, public safety, accessibility, or human release authority.",

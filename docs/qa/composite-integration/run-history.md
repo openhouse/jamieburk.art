@@ -4,7 +4,7 @@
 
 **Starting commit:** `68846b1f0a8672ff80598a7fef50ce5343c3e004`
 
-**Rubric:** `feature-evals-composite-integration` `1.1.0`
+**Rubric:** `feature-evals-composite-integration` `1.2.0`
 
 Run artifacts are retained under `evals/composite-integration/runs/`. Each
 passing holdout records the evaluated Git commit and candidate-input SHA-256.
@@ -45,8 +45,18 @@ query commands. Seven fail-closed and anti-overclaim tests passed.
    provenance, a CallNYC resume-surface mismatch, unenforced holdouts, and
    presence-only quality checks. The evaluator and tests were strengthened,
    every actively projected collective project was classified, proof records
-   gained resolvable source or claim IDs, public-safe tooling became
-   allowlisted, and quality criteria now execute their underlying evals.
+   gained resolvable source or claim IDs, publication filtering gained explicit
+   guards, and quality criteria now execute their underlying evals.
+6. **Second independent adversarial holdout.** A fresh read-only evaluator
+   reproduced the candidate fingerprint and all underlying quality programs,
+   then found additional fail-open paths: active projects outside route
+   manifests, hollow credit rules, skipped public routes, held and protected
+   proof references, malformed scorecards, signed Google URLs, unconstrained
+   queries, and human-gate owner drift. The validators now cover every active
+   projection and every public route, require substantive credit language,
+   constrain proof evidence and project queries, construct publication-safe
+   output from closed allowlists, validate the full scorecard contract, and
+   require exact human-owner agreement with agent self-certification disabled.
 
 No public claim, metric, case-study narrative, homepage argument, or resume
 wording changed in this integration. The two interface repairs address direct
@@ -80,8 +90,9 @@ browser evidence rather than adding portfolio content to satisfy a score.
 
 ## Stopping Decision
 
-The machine-verifiable composite criterion is eligible to stop after two
-passing holdouts record the same unchanged candidate fingerprint. The site is
-eligible for targeted job applications under the existing public-safe claim
+The machine-verifiable composite criterion is eligible to stop only after two
+committed passing holdouts record the same unchanged candidate fingerprint and
+an independent qualitative pass finds no blocking enforcement defect. The site
+is eligible for targeted job applications under the existing public-safe claim
 set. Production launch remains blocked pending the human gates in
 `docs/qa/release-status.json`; no automated result closes them.

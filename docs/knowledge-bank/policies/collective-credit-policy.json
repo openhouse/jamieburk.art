@@ -62,6 +62,54 @@
       "creditScope": "mixed",
       "publicRule": "Credit Jamie's method design and implementation where supported while naming pilots, source materials, reviews, and resulting decisions as collaborative contexts.",
       "boundaries": ["AI archival review is not collaborator testimony.", "Do not expose private team records or imply model output is verified fact."]
+    },
+    {
+      "id": "claudettes-theatre-on-wheels",
+      "creditScope": "collective",
+      "publicRule": "Credit Jamie's documented augmented-reality, web, and technical contributions while preserving Claudette Bruce, participating artists, hosts, audiences, and project partners as authors of their own work.",
+      "boundaries": ["Do not convert technical implementation into sole artistic authorship or project ownership.", "Do not publish participant identities, images, or private project records without documented permission."]
+    },
+    {
+      "id": "collaborative-operations",
+      "creditScope": "mixed",
+      "publicRule": "Describe Jamie's evidenced workflow, documentation, implementation, and handoff contributions directly while preserving collaborators' decisions, expertise, authorship, and responsibility for their own work.",
+      "boundaries": ["Do not generalize one supported workflow into ownership of an entire organization or team.", "Do not expose client, collaborator, operational, or handoff records that are not approved for publication."]
+    },
+    {
+      "id": "creative-technology-and-media",
+      "creditScope": "mixed",
+      "publicRule": "Credit Jamie's documented prototypes, installations, research, and classroom contributions while distinguishing individual experiments from group projects, faculty evaluation, and later interpretations of the work.",
+      "boundaries": ["Do not attribute group-project concepts or execution solely to Jamie when records identify collaborators.", "Historical faculty evaluations establish observed student work, not present-day endorsement or professional certification."]
+    },
+    {
+      "id": "kansas-city-neighborhood-programs",
+      "creditScope": "collective",
+      "publicRule": "Credit Jamie's documented design, printing, mapping, outreach, and operational coordination while preserving Pastor Lee's corridor concept and the authority and labor of residents, neighborhood associations, churches, and city staff.",
+      "boundaries": ["Do not claim Jamie originated Cleveland Avenue Unify to Beautify or acted alone for participating neighborhoods.", "First-person accounts of program operations remain bounded until public records or collaborators provide corroboration."]
+    },
+    {
+      "id": "kansas-city-public-programs",
+      "creditScope": "collective",
+      "publicRule": "State Jamie's evidenced program design, facilitation, documentation, and technical work while crediting residents, artists, public agencies, host institutions, and collaborators for their participation and decisions.",
+      "boundaries": ["Do not turn public attendance or participation into proof of Jamie's sole authorship or measurable impact.", "Do not publish participant records, private correspondence, or undocumented claims about institutional outcomes."]
+    },
+    {
+      "id": "open-house",
+      "creditScope": "mixed",
+      "publicRule": "Credit Jamie's documented Open House artistic, publishing, hosting, and technical practice while preserving the contributions of co-organizers, participating artists, venues, audiences, and institutional partners.",
+      "boundaries": ["Do not describe a participatory or hosted project as Jamie's work alone when others shaped its form.", "Do not publish private participant material or infer later outcomes beyond what recovered sources establish."]
+    },
+    {
+      "id": "waterways-and-participatory-art",
+      "creditScope": "collective",
+      "publicRule": "Credit Jamie's documented waterway journeys, public programs, artworks, and participatory methods while preserving collaborators, hosts, residents, institutions, and encountered communities as distinct contributors.",
+      "boundaries": ["Do not transform reported encounters or participation into broad community endorsement or verified social impact.", "Distinguish contemporaneous published reporting from Jamie's later interpretation and private archival memory."]
+    },
+    {
+      "id": "waterways-participatory-art",
+      "creditScope": "collective",
+      "publicRule": "Describe Jamie's evidenced participatory waterway practice and media work directly while crediting collaborators, participants, hosts, institutions, and local communities for their own roles and knowledge.",
+      "boundaries": ["Do not collapse related projects into one chronology or claim complete recovery of the historical record.", "Do not identify participants or publish private media without source verification, rights review, and consent where needed."]
     }
   ]
 }

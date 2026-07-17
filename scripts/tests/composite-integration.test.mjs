@@ -42,8 +42,8 @@ test("collective-credit policy fails closed when a project disappears", () => {
 test("collective-credit policy rejects hollow rules and covers active claim projects", () => {
   const hollow = structuredClone(collectiveCreditPolicy);
   for (const project of hollow.projects) {
-    project.publicRule = "x";
-    project.boundaries = ["x"];
+    project.publicRule = "x ".repeat(40);
+    project.boundaries = ["y ".repeat(20), "z ".repeat(20)];
   }
   assert.ok(validateCollectiveCreditPolicy(hollow).length > 0);
 
@@ -55,8 +55,12 @@ test("collective-credit policy rejects hollow rules and covers active claim proj
     validateCollectiveCreditPolicy(
       missing,
       [],
-      [{ id: "CLM-ONE", project: "nyc-artist-coalition" }],
-      { routes: [{ claimIds: ["CLM-ONE"] }] }
+      [{
+        id: "CLM-ONE",
+        project: "nyc-artist-coalition",
+        projections: [{ status: "active" }]
+      }],
+      { routes: [] }
     ).join(" "),
     /nyc-artist-coalition/
   );
@@ -86,6 +90,20 @@ test("surface policy rejects missing source files and unauthorized proof surface
     []
   ).join(" ");
   assert.match(findings, /without resume approval/);
+
+  const brokenContact = structuredClone(surfaceBindings);
+  const contact = brokenContact.routes.find((route) => route.path === "/contact");
+  contact.sourceFiles = ["does/not/exist.ts"];
+  contact.proofIds = ["UNKNOWN-PROOF"];
+  const contactFindings = validateSurfaceBindings(brokenContact).join(" ");
+  assert.match(contactFindings, /missing source file/);
+  assert.match(contactFindings, /unknown proof/);
+
+  const escaped = structuredClone(surfaceBindings);
+  escaped.routes.find((route) => route.path === "/contact").sourceFiles = [
+    "../../outside.txt"
+  ];
+  assert.match(validateSurfaceBindings(escaped).join(" "), /outside the repository/);
 });
 
 test("selected proofs require resolvable structured evidence", () => {
@@ -95,6 +113,31 @@ test("selected proofs require resolvable structured evidence", () => {
     { sources: [], claims: [] }
   );
   assert.match(findings.join(" "), /lacks resolvable/);
+
+  const protectedFindings = validateProofTraceability(
+    [{ id: "PROOF-ONE", sourceIds: ["SRC-PROTECTED"] }],
+    { routes: [{ proofIds: ["PROOF-ONE"] }] },
+    {
+      sources: [{ id: "SRC-PROTECTED", visibility: "protected" }],
+      claims: []
+    }
+  );
+  assert.match(protectedFindings.join(" "), /protected source/);
+
+  const heldFindings = validateProofTraceability(
+    [{ id: "PROOF-ONE", knowledgeClaimIds: ["CLM-HELD"] }],
+    { routes: [{ proofIds: ["PROOF-ONE"] }] },
+    {
+      sources: [{ id: "SRC-PUBLIC", visibility: "public" }],
+      claims: [{
+        id: "CLM-HELD",
+        status: "confirmed",
+        projections: [{ status: "hold" }],
+        evidence: [{ sourceId: "SRC-PUBLIC" }]
+      }]
+    }
+  );
+  assert.match(heldFindings.join(" "), /without an active projection/);
 });
 
 test("semantic guard rejects common overclaim mutations", () => {
@@ -131,4 +174,29 @@ test("current composite scorecard is candidate-bound", () => {
   assert.equal(scorecard.criteria.length, 15);
   assert.deepEqual(validateScorecardSchema(scorecard, scorecardSchema), []);
   if (!scorecard.workingTreeClean) assert.equal(scorecard.passes, false);
+});
+
+test("scorecard validation rejects malformed and internally inconsistent runs", () => {
+  const scorecard = evaluateComposite(repoRoot);
+  const malformed = structuredClone(scorecard);
+  malformed.generatedAt = "not-a-date";
+  malformed.hardGateFailures = -4;
+  malformed.weightedScore = 99;
+  malformed.criteria[0].title = 42;
+  malformed.criteria[0].score = 99;
+  malformed.criteria[0].findings = [42];
+  malformed.criteria[1].unsupported = true;
+  malformed.humanGates = [];
+  malformed.passes = true;
+  const findings = validateScorecardSchema(malformed, scorecardSchema).join(" ");
+  for (const expected of [
+    "generatedAt",
+    "hardGateFailures",
+    "weightedScore",
+    "criteria",
+    "human gates",
+    "Passing scorecards"
+  ]) {
+    assert.match(findings, new RegExp(expected, "i"));
+  }
 });

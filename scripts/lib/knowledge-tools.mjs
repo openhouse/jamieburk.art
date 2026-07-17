@@ -19,12 +19,51 @@ const unsafePatterns = [
   { label: "credential or token", pattern: /(?:sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|-----BEGIN .*PRIVATE KEY-----|\bpassword\s*[:=])/i },
   { label: "signed or secret URL parameter", pattern: /[?&](?:x-amz-signature|signature|sig|token|access_token|auth|key|secret)=[^&\s]+/i },
   { label: "private legal or stakeholder detail", pattern: /\b(?:private|confidential|raw)\b.{0,40}\b(?:legal strategy|legal review|strategy|stakeholder (?:list|roster)|donor (?:list|roster)|subscriber (?:list|roster))\b/i },
+  { label: "private correspondence", pattern: /\b(?:private|confidential|unpublished)\b.{0,32}\b(?:correspondence|email|message|letter|conversation)\b/i },
+  { label: "raw participant material", pattern: /\braw\b.{0,32}\b(?:participant|stakeholder|collaborator|interview|transcript|testimony)\b/i },
+  { label: "unapproved personal identity", pattern: /\bunapproved\b.{0,32}\b(?:participant|stakeholder|collaborator|person|people|name|identity|identities)\b/i },
   { label: "private health detail", pattern: /\b(?:has|diagnosed with|medical (?:record|history|condition)|health (?:record|history|condition))\s+(?:cancer|hiv|aids|diabetes|depression|anxiety|bipolar|schizophrenia)\b/i },
   { label: "private financial detail", pattern: /\b(?:owes|debt|salary|bank balance|account balance|tax liability)\b.{0,24}\$[\d,]+/i }
 ];
 
 function stableText(value) {
   return value.trim().replace(/\s+/g, " ");
+}
+
+function publicUrlFindings(value) {
+  if (!value) return [];
+  const findings = [];
+  try {
+    const parsed = new URL(value);
+    if (!["http:", "https:"].includes(parsed.protocol)) {
+      findings.push("--url must be a public HTTP(S) URL");
+    }
+    if (parsed.username || parsed.password) {
+      findings.push("--url cannot contain embedded credentials");
+    }
+    for (const key of parsed.searchParams.keys()) {
+      const normalized = key.toLowerCase();
+      if (
+        /(?:signature|token|secret|credential|authorization|auth|api[-_]?key)/i.test(normalized) ||
+        normalized.startsWith("x-amz-") ||
+        normalized.startsWith("x-goog-")
+      ) {
+        findings.push("Remove signed or secret URL parameter from the public receipt");
+        break;
+      }
+    }
+  } catch {
+    findings.push("--url must be a public HTTP(S) URL");
+  }
+  return findings;
+}
+
+function safePublicUrl(value) {
+  return value && publicUrlFindings(value).length === 0 ? value : undefined;
+}
+
+function definedRecord(entries) {
+  return Object.fromEntries(entries.filter(([, value]) => value !== undefined));
 }
 
 export function parseNamedArgs(argv) {
@@ -68,12 +107,14 @@ export function createLeadReceipt(input) {
   if (!allowedKinds.has(kind)) {
     findings.push(`--kind must be one of ${[...allowedKinds].join(", ")}`);
   }
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(receivedAt)) {
+  if (
+    !/^\d{4}-\d{2}-\d{2}$/.test(receivedAt) ||
+    Number.isNaN(Date.parse(`${receivedAt}T00:00:00Z`)) ||
+    new Date(`${receivedAt}T00:00:00Z`).toISOString().slice(0, 10) !== receivedAt
+  ) {
     findings.push("--received-at must use YYYY-MM-DD");
   }
-  if (url && !/^https?:\/\/[^\s]+$/i.test(url)) {
-    findings.push("--url must be a public HTTP(S) URL");
-  }
+  if (url) findings.push(...publicUrlFindings(url));
   findings.push(...publicSafetyFindings([title, summary, project, url]));
   if (findings.length) throw new Error(findings.join("\n"));
 
@@ -125,12 +166,37 @@ export function queryKnowledgeBank(bank, filters = {}) {
     (!filters.purpose || route.purpose.toLowerCase().includes(filters.purpose.toLowerCase()))
   );
   const surfaces = new Set(
-    filters.surface
-      ? [filters.surface]
-      : matchedRoutes.map((route) => route.path)
+    matchedRoutes.map((route) => route.path)
   );
   const hasRouteFilter = Boolean(filters.surface || filters.audience || filters.purpose);
   const publicationSafe = filters.publicationSafe === true;
+  const publicFilters = definedRecord([
+    ["project", project],
+    ["entity", filters.entity],
+    ["date", date],
+    ["evidenceRole", evidenceRole],
+    ["claimStatus", claimStatus],
+    ["surface", filters.surface],
+    ["audience", filters.audience],
+    ["purpose", filters.purpose],
+    ["publicationSafe", publicationSafe]
+  ]);
+  const publicRoutes = matchedRoutes.map(({ path, audience, purpose }) => ({
+    path,
+    audience,
+    purpose
+  }));
+  if (hasRouteFilter && matchedRoutes.length === 0) {
+    return {
+      filters: publicationSafe ? publicFilters : { ...filters, routeBindings: undefined },
+      matchedRoutes: [],
+      intakeItems: [],
+      sources: [],
+      observations: [],
+      claims: [],
+      researchInquiries: []
+    };
+  }
   const publicSourceIds = new Set(
     bank.sources
       .filter((source) => ["public", "public-metadata-only"].includes(source.visibility))
@@ -158,7 +224,7 @@ export function queryKnowledgeBank(bank, filters = {}) {
   const selectedSourceIds = new Set(
     claims.flatMap((claim) => claim.evidence.map((evidence) => evidence.sourceId))
   );
-  const isConstrainedByClaims = hasRouteFilter || Boolean(claimStatus || evidenceRole);
+  const isConstrainedByClaims = hasRouteFilter || Boolean(project || claimStatus || evidenceRole);
   const projectMatches = (projectId) =>
     project ? projectId === project : !isConstrainedByClaims || selectedProjects.has(projectId);
   const intakeItems = bank.intakeItems.filter((item) =>
@@ -192,24 +258,110 @@ export function queryKnowledgeBank(bank, filters = {}) {
   if (!publicationSafe) {
     return {
       filters: { ...filters, routeBindings: undefined },
-      matchedRoutes: matchedRoutes.map(({ path, audience, purpose }) => ({ path, audience, purpose })),
+      matchedRoutes: publicRoutes,
       ...selected
     };
   }
 
+
+  const publicIntake = (item) => definedRecord([
+    ["id", item.id],
+    ["receivedAt", item.receivedAt],
+    ["inputKind", item.inputKind],
+    ["summary", item.summary],
+    ["projectIds", item.projectIds],
+    ["researchStatus", item.researchStatus],
+    ["publicationStatus", item.publicationStatus],
+    ["publicUrl", safePublicUrl(item.publicUrl)]
+  ]);
+  const publicSource = (source) => {
+    const canonicalUrl = safePublicUrl(source.canonicalUrl);
+    const archiveUrl = safePublicUrl(source.archiveUrl);
+    const assetUrl = safePublicUrl(source.assetUrl);
+    const preferredUrlAvailable =
+      (source.preferredPublicUrl === "canonical" && canonicalUrl) ||
+      (source.preferredPublicUrl === "archive" && archiveUrl) ||
+      (source.preferredPublicUrl === "asset" && assetUrl);
+    return definedRecord([
+      ["id", source.id],
+      ["title", source.title],
+      ["organization", source.organization],
+      ["author", source.author],
+      ["kind", source.kind],
+      ["visibility", source.visibility],
+      ["preservationStatus", source.preservationStatus],
+      ["publishedAt", source.publishedAt],
+      ["capturedAt", source.capturedAt],
+      ["accessedAt", source.accessedAt],
+      ["canonicalUrl", canonicalUrl],
+      ["archiveUrl", archiveUrl],
+      ["assetUrl", assetUrl],
+      ["preferredPublicUrl", preferredUrlAvailable ? source.preferredPublicUrl : undefined],
+      ["publicCitation", source.publicCitation],
+      ["publicNote", source.publicNote],
+      ["supportsGenerally", source.supportsGenerally],
+      ["doesNotEstablish", source.doesNotEstablish]
+    ]);
+  };
+  const publicObservation = (observation) => definedRecord([
+    ["id", observation.id],
+    ["sourceId", observation.sourceId],
+    ["project", observation.project],
+    ["text", observation.text],
+    ["status", observation.status],
+    ["confidence", observation.confidence],
+    ["claimIds", observation.claimIds],
+    ["reviewedAt", observation.reviewedAt]
+  ]);
+  const publicClaim = (claim) => ({
+    id: claim.id,
+    project: claim.project,
+    status: claim.status,
+    projections: claim.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => ({
+        key: projection.key,
+        text: projection.text,
+        status: projection.status,
+        citationRequired: projection.citationRequired,
+        surfaces: projection.surfaces
+      })),
+    evidence: claim.evidence
+      .filter((evidence) => publicSourceIds.has(evidence.sourceId))
+      .map((evidence) => definedRecord([
+        ["sourceId", evidence.sourceId],
+        ["relationship", evidence.relationship],
+        ["supports", evidence.supports],
+        ["publicNote", evidence.publicNote],
+        ["confidence", evidence.confidence],
+        ["renderCitation", evidence.renderCitation]
+      ])),
+    boundaries: claim.boundaries,
+    antiClaims: claim.antiClaims,
+    reviewedAt: claim.reviewedAt
+  });
+  const publicSelected = {
+    intakeItems: selected.intakeItems.map(publicIntake),
+    sources: selected.sources.map(publicSource),
+    observations: selected.observations.map(publicObservation),
+    claims: selected.claims.map(publicClaim),
+    researchInquiries: []
+  };
+  const publicSelect = (items) =>
+    items.filter(
+      (item) =>
+        containsEntity(item) &&
+        containsDate(item) &&
+        publicSafetyFindings([JSON.stringify(item)]).length === 0
+    );
+
   return {
-    filters: { ...filters, routeBindings: undefined },
-    matchedRoutes: matchedRoutes.map(({ path, audience, purpose }) => ({ path, audience, purpose })),
-    intakeItems: selected.intakeItems,
-    sources: selected.sources.map(({ protectedLocatorId: _protected, ...source }) => source),
-    observations: selected.observations,
-    claims: selected.claims.map(({ internalClaim: _internalClaim, ...claim }) => ({
-      ...claim,
-      projections: claim.projections.filter((projection) => projection.status === "active"),
-      evidence: claim.evidence
-        .filter((evidence) => publicSourceIds.has(evidence.sourceId))
-        .map(({ internalExcerpt: _internal, ...evidence }) => evidence)
-    })),
+    filters: publicFilters,
+    matchedRoutes: publicRoutes,
+    intakeItems: publicSelect(publicSelected.intakeItems),
+    sources: publicSelect(publicSelected.sources),
+    observations: publicSelect(publicSelected.observations),
+    claims: publicSelect(publicSelected.claims),
     researchInquiries: []
   };
 }

@@ -88,6 +88,22 @@ test("intake refuses common private content", () => {
     }),
     /signed or secret URL/
   );
+  assert.throws(
+    () => createLeadReceipt({
+      ...base,
+      kind: "url",
+      summary: "Protected archive download",
+      url: "https://storage.googleapis.com/item?X-Goog-Signature=SECRET"
+    }),
+    /signed or secret URL/
+  );
+  assert.throws(
+    () => createLeadReceipt({
+      ...base,
+      summary: "Private correspondence, a raw participant transcript, and unapproved participant names."
+    }),
+    /private correspondence|raw participant material|unapproved personal identity/
+  );
 });
 
 test("public-safe queries remove protected source details and internal excerpts", () => {
@@ -130,6 +146,11 @@ test("public-safe queries remove protected source details and internal excerpts"
   assert.equal("internalClaim" in result.claims[0], false);
   assert.deepEqual(result.researchInquiries, []);
   assert.deepEqual(result.matchedRoutes.map((route) => route.path), ["/work/example"]);
+  assert.deepEqual(Object.keys(result.intakeItems[0]).sort(), [
+    "id",
+    "projectIds",
+    "publicationStatus"
+  ]);
 });
 
 test("surface queries return no unrelated records", () => {
@@ -148,4 +169,81 @@ test("surface queries return no unrelated records", () => {
   assert.deepEqual(result.sources, []);
   assert.deepEqual(result.observations, []);
   assert.deepEqual(result.researchInquiries, []);
+});
+
+test("publication-safe queries fail closed for unbound surfaces and project scope", () => {
+  const bank = {
+    intakeItems: [{
+      id: "LEAD-ONE",
+      projectIds: ["example"],
+      publicationStatus: "projected",
+      sourceIds: ["SRC-PRIVATE"]
+    }],
+    sources: [
+      { id: "SRC-ONE", visibility: "public", canonicalUrl: "https://example.org/one" },
+      { id: "SRC-TWO", visibility: "public", canonicalUrl: "https://example.org/two" },
+      { id: "SRC-PRIVATE", visibility: "protected" }
+    ],
+    observations: [],
+    claims: [{
+      id: "CLM-ONE",
+      project: "example",
+      status: "confirmed",
+      projections: [{ status: "active", surfaces: ["/work/example"] }],
+      evidence: [{ sourceId: "SRC-ONE" }]
+    }],
+    researchInquiries: []
+  };
+  const unbound = queryKnowledgeBank(bank, {
+    surface: "/work/unregistered",
+    publicationSafe: true,
+    routeBindings: [{ path: "/work/example", audience: "Hiring readers", purpose: "Evidence" }]
+  });
+  assert.deepEqual(unbound.claims, []);
+  assert.deepEqual(unbound.sources, []);
+
+  const project = queryKnowledgeBank(bank, {
+    project: "example",
+    publicationSafe: true
+  });
+  assert.deepEqual(project.sources.map((source) => source.id), ["SRC-ONE"]);
+  assert.deepEqual(project.intakeItems[0], {
+    id: "LEAD-ONE",
+    projectIds: ["example"],
+    publicationStatus: "projected"
+  });
+});
+
+test("publication-safe source output is an allowlist and removes signed URLs", () => {
+  const bank = {
+    intakeItems: [],
+    sources: [{
+      id: "SRC-ONE",
+      title: "Source",
+      visibility: "public",
+      canonicalUrl: "https://example.org/file?X-Goog-Signature=SECRET",
+      protectedLocatorId: "LOC-ONE",
+      unexpectedPrivateField: "remove me"
+    }],
+    observations: [],
+    claims: [{
+      id: "CLM-ONE",
+      project: "example",
+      status: "confirmed",
+      internalClaim: "remove me",
+      projections: [{ status: "active", surfaces: ["/work/example"] }],
+      evidence: [{ sourceId: "SRC-ONE" }],
+      boundaries: [],
+      antiClaims: []
+    }],
+    researchInquiries: []
+  };
+  const result = queryKnowledgeBank(bank, {
+    project: "example",
+    publicationSafe: true
+  });
+  assert.equal("canonicalUrl" in result.sources[0], false);
+  assert.equal("protectedLocatorId" in result.sources[0], false);
+  assert.equal("unexpectedPrivateField" in result.sources[0], false);
+  assert.equal("internalClaim" in result.claims[0], false);
 });

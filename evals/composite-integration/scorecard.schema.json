@@ -30,6 +30,7 @@
     "criteria": {
       "type": "array",
       "minItems": 15,
+      "maxItems": 15,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -46,12 +47,23 @@
     },
     "humanGates": {
       "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
       "items": {
         "type": "object",
         "additionalProperties": false,
         "required": ["id", "state", "agentMaySelfCertify"],
         "properties": {
-          "id": { "type": "string" },
+          "id": {
+            "enum": [
+              "external-hiring-reader-comprehension",
+              "collaborator-corroboration-and-permission",
+              "visual-rights-and-consent",
+              "hands-on-accessibility-and-launch-qa",
+              "human-chad-editorial-review",
+              "exact-candidate-release-approval"
+            ]
+          },
           "state": { "enum": ["open", "met", "not-applicable"] },
           "agentMaySelfCertify": { "const": false }
         }

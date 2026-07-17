@@ -9,12 +9,12 @@
     "result": "The feature/knowledge-l composite candidate passes the full check, staging and production preflights, container route and asset smoke tests, responsive browser checks, compiled-output privacy scan, and two-page resume inspection."
   },
   "humanGates": [
-    {"id": "external-hiring-reader-comprehension", "gate": "External five-minute hiring comprehension", "owner": "Jamie Burkart and unfamiliar target readers", "state": "open"},
-    {"id": "collaborator-corroboration-and-permission", "gate": "Collaborator-sensitive names, quotes, images, and exact-role corroboration", "owner": "Jamie Burkart and affected collaborators", "state": "open"},
-    {"id": "visual-rights-and-consent", "gate": "Visual rights and consent", "owner": "Jamie Burkart or documented rights holder", "state": "open"},
-    {"id": "hands-on-accessibility-and-launch-qa", "gate": "Hands-on accessibility and launch QA", "owner": "Named human reviewer", "state": "open"},
-    {"id": "human-chad-editorial-review", "gate": "Human Chad-lens editorial review", "owner": "Jamie Burkart and a trusted human editorial reviewer", "state": "open"},
-    {"id": "exact-candidate-release-approval", "gate": "Jamie approval of the exact production candidate", "owner": "Jamie Burkart", "state": "open"}
+    {"id": "external-hiring-reader-comprehension", "gate": "External five-minute hiring comprehension", "owner": "Jamie Burkart and unfamiliar target readers", "state": "open", "agentMaySelfCertify": false},
+    {"id": "collaborator-corroboration-and-permission", "gate": "Collaborator-sensitive names, quotes, images, and exact-role corroboration", "owner": "Jamie Burkart and affected collaborators", "state": "open", "agentMaySelfCertify": false},
+    {"id": "visual-rights-and-consent", "gate": "Visual rights and consent", "owner": "Jamie Burkart or documented rights holder", "state": "open", "agentMaySelfCertify": false},
+    {"id": "hands-on-accessibility-and-launch-qa", "gate": "Hands-on accessibility and launch QA", "owner": "Named human reviewer", "state": "open", "agentMaySelfCertify": false},
+    {"id": "human-chad-editorial-review", "gate": "Human Chad-lens editorial review", "owner": "Jamie Burkart and a trusted human editorial reviewer", "state": "open", "agentMaySelfCertify": false},
+    {"id": "exact-candidate-release-approval", "gate": "Jamie approval of the exact production candidate", "owner": "Jamie Burkart", "state": "open", "agentMaySelfCertify": false}
   ],
   "applicationDecision": "eligible-for-targeted-applications-with-open-human-validation",
   "productionDecision": "blocked-pending-human-approval",
