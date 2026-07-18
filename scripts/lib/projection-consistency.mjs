@@ -2,7 +2,12 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
-import { homepageProofs, proofClaims } from "../../apps/www/src/data/proofs.ts";
+import {
+  homepageProofs,
+  proofClaims,
+  resumeProofHighlights,
+  technicalOperationsProofRows
+} from "../../apps/www/src/data/proofs.ts";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const publicEvidenceSnapshotSha = "3757c4f529cc05d169f30ec059b13bea24cc75d1";
@@ -132,6 +137,19 @@ export function validateProjectionConsistency({
   for (const proof of homepageProofs) {
     const coverage = coverageByProof.get(proof.id);
     if (!coverage || ["protected-support", "research-needed"].includes(coverage.status)) errors.push(`${proof.id}: homepage proof needs public or resume-backed coverage`);
+  }
+
+  const selectedProofs = [
+    { surface: "homepage", proofs: homepageProofs },
+    { surface: "resume", proofs: resumeProofHighlights },
+    { surface: "technical-operations", proofs: technicalOperationsProofRows.flatMap((row) => row.proofs) }
+  ];
+  for (const selection of selectedProofs) {
+    for (const proof of selection.proofs) {
+      if (!proof.surfaces.includes(selection.surface)) {
+        errors.push(`${proof.id}: curated ${selection.surface} selection exceeds ProofClaim.surfaces`);
+      }
+    }
   }
 
   const homepageSection = projectionMapText.match(/## Homepage Proof Strip\s+([\s\S]*?)(?=\n## |$)/)?.[1] ?? "";

@@ -143,6 +143,15 @@ test("deterministic records require canonical runner and captured output provena
   assert.match(errors, /human-readable output log/);
 });
 
+test("deterministic evidence paths cannot escape approved repository roots", () => {
+  const changed = run("escaping-evidence");
+  changed.commands[0].outputPath = "../private-command.log";
+  changed.commands[0].reviewOutputPath = "/private/tmp/private-review.txt";
+  seal(changed);
+  const errors = validate(changed, { contract }).join("\n");
+  assert.match(errors, /evidence path escapes the repository/);
+});
+
 test("deterministic records require complete decision governance under the current contract", () => {
   const changed = run("missing-deterministic-decision");
   delete changed.decisionRecord;

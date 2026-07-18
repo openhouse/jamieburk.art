@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { resolveRepoEvidencePath } from "./repo-evidence-path.mjs";
 
 export const repoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -27,6 +28,106 @@ export function loadLaunchEvalRunRecords() {
       file: `evals/launch-readiness/runs/${name}`,
       record: JSON.parse(readFileSync(path.join(runsDirectory, name), "utf8"))
     }));
+}
+
+const runtimeReportFields = {
+  "LR-RUNTIME-RESPONSIVE": "responsive",
+  "LR-RUNTIME-KEYBOARD": "keyboard",
+  "LR-RUNTIME-CITATIONS": "citations"
+};
+
+const caseKey = (route, viewport) => `${route}\u0000${viewport[0]}x${viewport[1]}`;
+
+export function validateBrowserReportCoverage(suite, report, { requiredRuntimeIds, exactRuntimeIds = false } = {}) {
+  const errors = [];
+  const required = requiredRuntimeIds ?? Object.keys(runtimeReportFields);
+  const declared = report?.runtimeCaseIds ?? [];
+  if (!Array.isArray(declared) || new Set(declared).size !== declared.length || required.some((id) => !declared.includes(id))) {
+    errors.push("browser report must declare every required runtime case exactly once");
+  }
+  if (exactRuntimeIds && (declared.length !== required.length || declared.some((id) => !required.includes(id)))) {
+    errors.push("browser report runtime cases must exactly match the canonical suite");
+  }
+
+  for (const runtimeId of required) {
+    const runtimeCase = suite.runtimeCases.find((item) => item.id === runtimeId);
+    const field = runtimeReportFields[runtimeId];
+    if (!runtimeCase || !field) {
+      errors.push(`browser report references unsupported runtime case ${runtimeId}`);
+      continue;
+    }
+    const expected = new Set(runtimeCase.routes.flatMap((route) => runtimeCase.viewports.map((viewport) => caseKey(route, viewport))));
+    const actual = report?.[field];
+    if (!Array.isArray(actual)) {
+      errors.push(`${runtimeId} needs a ${field} result array`);
+      continue;
+    }
+    const actualKeys = actual.map((item) => caseKey(item.route, [item.width, item.height]));
+    if (actual.length !== expected.size || new Set(actualKeys).size !== actualKeys.length || actualKeys.some((key) => !expected.has(key))) {
+      errors.push(`${runtimeId} does not cover the complete route and viewport matrix`);
+    }
+    if (actual.some((item) => item.passed !== true)) errors.push(`${runtimeId} contains a failed browser case`);
+  }
+  if (report?.passed !== true) errors.push("browser report is not declared passed");
+  return errors;
+}
+
+const placeholderEvidence = /^(?:pass(?:ed)?|ok|yes|todo|tbd|none|n\/a|trust me)$/i;
+
+function parseJsonObject(value) {
+  try {
+    const parsed = JSON.parse(value);
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+export function validateGateEvidence(gate, evidence, candidateCommit) {
+  const errors = [];
+  const required = gate.evidenceRequired ?? [];
+  if (!Array.isArray(evidence) || evidence.length !== required.length) {
+    return [`${gate.id} needs structured evidence for every declared ${gate.kind} requirement`];
+  }
+  const labels = evidence.map((item) => item?.label);
+  if (new Set(labels).size !== labels.length || required.some((label) => !labels.includes(label)) || labels.some((label) => !required.includes(label))) {
+    errors.push(`${gate.id} evidence labels must exactly match the declared requirements`);
+  }
+  const values = new Map(evidence.map((item) => [item?.label, item?.value]));
+  for (const label of required) {
+    const value = values.get(label);
+    if (typeof value !== "string" || !value.trim() || placeholderEvidence.test(value.trim())) {
+      errors.push(`${gate.id}/${label} needs substantive evidence`);
+      continue;
+    }
+    if (label === "approved commit SHA" && value !== candidateCommit) errors.push(`${gate.id}/${label} must equal the exact candidate commit`);
+    if (label === "staging URL") {
+      try {
+        const url = new URL(value);
+        if (url.protocol !== "https:" || url.hostname !== "staging.jamieburk.art") throw new Error();
+      } catch {
+        errors.push(`${gate.id}/${label} must be an HTTPS staging.jamieburk.art URL`);
+      }
+    }
+    if (label === "production image or deployment identifier" && !/^[A-Za-z0-9][A-Za-z0-9._:@/+\-]{7,}$/.test(value)) {
+      errors.push(`${gate.id}/${label} needs a concrete image or deployment identifier`);
+    }
+    if (label === "resume SHA-256" && !/^[a-f0-9]{64}$/i.test(value)) errors.push(`${gate.id}/${label} must be a SHA-256 digest`);
+    if (label === "HTTP observations") {
+      const observations = parseJsonObject(value);
+      const keys = ["apex", "www", "tls", "health", "canonicals", "openGraph"];
+      if (!observations || keys.some((key) => observations[key] === undefined || observations[key] === "")) {
+        errors.push(`${gate.id}/${label} must be JSON covering apex, www, TLS, health, canonicals, and Open Graph`);
+      }
+    }
+    if (label === "robots and sitemap bodies") {
+      const bodies = parseJsonObject(value);
+      if (!bodies || typeof bodies.robots !== "string" || !/user-agent/i.test(bodies.robots) || typeof bodies.sitemap !== "string" || !/<urlset/i.test(bodies.sitemap)) {
+        errors.push(`${gate.id}/${label} must be JSON containing inspected robots and sitemap bodies`);
+      }
+    }
+  }
+  return errors;
 }
 
 export function validateLaunchEvalSuite(suite) {
@@ -64,6 +165,9 @@ export function validateLaunchEvalSuite(suite) {
     if (!gate.description) errors.push(`${gate.id} needs a description`);
     if (gate.kind === "command" && !gate.command) {
       errors.push(`${gate.id} command gate needs a command`);
+    }
+    if (["approval", "deployment"].includes(gate.kind) && (!Array.isArray(gate.evidenceRequired) || gate.evidenceRequired.length === 0 || new Set(gate.evidenceRequired).size !== gate.evidenceRequired.length)) {
+      errors.push(`${gate.id} needs unique evidence requirements`);
     }
     for (const runtimeId of gate.runtimeCaseIds ?? []) {
       if (!runtimeIds.has(runtimeId)) {
@@ -325,9 +429,10 @@ export function validateLaunchEvalRunRecord(suite, run) {
         if (execution?.command !== gate.command || execution?.exitCode !== 0 || !/^[a-f0-9]{64}$/.test(execution?.outputDigest ?? "") || !execution?.outputPath) {
           failures.push(`${result.id} needs exact command, zero exit code, retained output path, and output digest`);
         } else {
-          const output = path.join(repoRoot, execution.outputPath);
-          if (!existsSync(output)) failures.push(`${result.id} retained output is missing`);
-          else if (createHash("sha256").update(readFileSync(output)).digest("hex") !== execution.outputDigest) failures.push(`${result.id} retained output digest is stale`);
+          const resolved = resolveRepoEvidencePath(repoRoot, execution.outputPath, ["evals/launch-readiness/evidence"]);
+          if (resolved.error) failures.push(`${result.id} ${resolved.error}`);
+          else if (!existsSync(resolved.path)) failures.push(`${result.id} retained output is missing`);
+          else if (createHash("sha256").update(readFileSync(resolved.path)).digest("hex") !== execution.outputDigest) failures.push(`${result.id} retained output digest is stale`);
         }
       } else if (gate?.kind === "browser") {
         const report = result.browserReport;
@@ -336,15 +441,17 @@ export function validateLaunchEvalRunRecord(suite, run) {
         if (!report?.path || !/^[a-f0-9]{64}$/.test(report?.digest ?? "") || JSON.stringify(actualRuntimeIds) !== JSON.stringify(expectedRuntimeIds)) {
           failures.push(`${result.id} needs a digest-bound browser report covering every required runtime case`);
         } else {
-          const reportPath = path.join(repoRoot, report.path);
-          if (!existsSync(reportPath)) failures.push(`${result.id} browser report is missing`);
+          const resolved = resolveRepoEvidencePath(repoRoot, report.path, ["reports/generated"]);
+          if (resolved.error) failures.push(`${result.id} ${resolved.error}`);
+          else if (!existsSync(resolved.path)) failures.push(`${result.id} browser report is missing`);
           else {
-            const reportContent = readFileSync(reportPath);
+            const reportContent = readFileSync(resolved.path);
             if (createHash("sha256").update(reportContent).digest("hex") !== report.digest) failures.push(`${result.id} browser report digest is stale`);
             else {
               try {
                 const parsed = JSON.parse(reportContent);
-                if (parsed.candidateCommit !== run.candidate?.commit || parsed.passed !== true) failures.push(`${result.id} browser report does not pass for the exact candidate`);
+                if (parsed.candidateCommit !== run.candidate?.commit) failures.push(`${result.id} browser report does not bind the exact candidate`);
+                failures.push(...validateBrowserReportCoverage(suite, parsed, { requiredRuntimeIds: gate.runtimeCaseIds }).map((error) => `${result.id} ${error}`));
               } catch {
                 failures.push(`${result.id} browser report is not valid JSON`);
               }
@@ -352,9 +459,7 @@ export function validateLaunchEvalRunRecord(suite, run) {
           }
         }
       } else if (["approval", "deployment"].includes(gate?.kind)) {
-        if (!Array.isArray(result.evidence) || result.evidence.length !== gate.evidenceRequired?.length || result.evidence.some((item) => typeof item?.label !== "string" || !item.label.trim() || typeof item?.value !== "string" || !item.value.trim())) {
-          failures.push(`${result.id} needs structured evidence for every declared ${gate.kind} requirement`);
-        }
+        failures.push(...validateGateEvidence(gate, result.evidence, run.candidate?.commit));
       }
     }
   }

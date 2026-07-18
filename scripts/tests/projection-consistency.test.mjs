@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { requireProofForSurface } from "../../apps/www/src/data/proofs.ts";
 import { buildPublicRegistry, loadPublicSurfaceFiles, publicEvidenceSnapshotSha, validateProjectionConsistency } from "../lib/projection-consistency.mjs";
 
 const registryText = `${JSON.stringify(buildPublicRegistry(knowledgeBank), null, 2)}\n`;
@@ -15,6 +16,13 @@ test("projection documentation cannot drift from the executable homepage proof s
   assert.match(
     validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles, projectionMapText: staleMap }).join("\n"),
     /homepage proof strip disagrees/
+  );
+});
+
+test("a curated proof list cannot grant an unauthorized surface", () => {
+  assert.throws(
+    () => requireProofForSurface("callnyc-public-engagement-architecture", "resume"),
+    /is not authorized for resume/
   );
 });
 

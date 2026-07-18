@@ -4,6 +4,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateDecisionRecord } from "./launch-evals.mjs";
+import { resolveRepoEvidencePath } from "./repo-evidence-path.mjs";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const contractPath = path.join(repoRoot, "evals/_shared/contract.json");
@@ -264,14 +265,20 @@ export function validateCompositeRunRecord(record, expected = {}) {
       if (!/^[a-f0-9]{64}$/.test(command.outputDigest ?? "")) errors.push(`${record.id}: ${command.command} needs a captured output digest`);
       if (!command.startedAt || !command.completedAt || !Number.isInteger(command.durationMs) || command.durationMs < 0) errors.push(`${record.id}: ${command.command} needs execution timing`);
       if (contract.retainCommandLogs === true) {
-        const logPath = path.join(repoRoot, command.outputPath ?? "");
-        if (!command.outputPath || !existsSync(logPath)) errors.push(`${record.id}: ${command.command} needs a retained output log`);
-        else if (sha256(readFileSync(logPath)) !== command.outputDigest) errors.push(`${record.id}: ${command.command} output log digest is stale`);
+        const roots = ["evals/_shared/logs", ...(expected.verifyCandidate === false ? ["scripts/tests/fixtures"] : [])];
+        const resolved = command.outputPath ? resolveRepoEvidencePath(repoRoot, command.outputPath, roots) : null;
+        if (!resolved) errors.push(`${record.id}: ${command.command} needs a retained output log`);
+        else if (resolved.error) errors.push(`${record.id}: ${command.command} ${resolved.error}`);
+        else if (!existsSync(resolved.path)) errors.push(`${record.id}: ${command.command} needs a retained output log`);
+        else if (sha256(readFileSync(resolved.path)) !== command.outputDigest) errors.push(`${record.id}: ${command.command} output log digest is stale`);
       }
       if (contract.requireHumanReadableLogs === true) {
-        const reviewPath = path.join(repoRoot, command.reviewOutputPath ?? "");
-        if (!command.reviewOutputPath || !existsSync(reviewPath)) errors.push(`${record.id}: ${command.command} needs a human-readable output log`);
-        else if (!/^[a-f0-9]{64}$/.test(command.reviewOutputDigest ?? "") || sha256(readFileSync(reviewPath)) !== command.reviewOutputDigest) errors.push(`${record.id}: ${command.command} human-readable output digest is stale`);
+        const roots = ["evals/_shared/logs", ...(expected.verifyCandidate === false ? ["scripts/tests/fixtures"] : [])];
+        const resolved = command.reviewOutputPath ? resolveRepoEvidencePath(repoRoot, command.reviewOutputPath, roots) : null;
+        if (!resolved) errors.push(`${record.id}: ${command.command} needs a human-readable output log`);
+        else if (resolved.error) errors.push(`${record.id}: ${command.command} ${resolved.error}`);
+        else if (!existsSync(resolved.path)) errors.push(`${record.id}: ${command.command} needs a human-readable output log`);
+        else if (!/^[a-f0-9]{64}$/.test(command.reviewOutputDigest ?? "") || sha256(readFileSync(resolved.path)) !== command.reviewOutputDigest) errors.push(`${record.id}: ${command.command} human-readable output digest is stale`);
       }
     }
   }

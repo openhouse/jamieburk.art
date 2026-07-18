@@ -6,7 +6,7 @@ import { createServer } from "node:net";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { loadLaunchEvalSuite } from "./lib/launch-evals.mjs";
+import { loadLaunchEvalSuite, validateBrowserReportCoverage } from "./lib/launch-evals.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const suite = loadLaunchEvalSuite();
@@ -289,12 +289,19 @@ async function main() {
       responsive,
       keyboard,
       citations,
-      passed: responsive.every((item) => item.passed) && keyboard.every((item) => item.passed) && citations.every((item) => item.passed),
+      coverageMode: process.env.BROWSER_EVAL_DEBUG_ROUTE ? "debug-partial" : "full",
+      passed: true,
       limitations: [
         "This is a local browser gate for pull-request review, not post-deployment production smoke.",
         "Human screen-reader and real-reader sessions remain external gates."
       ]
     };
+    const coverageErrors = validateBrowserReportCoverage(suite, report, {
+      requiredRuntimeIds: report.runtimeCaseIds,
+      exactRuntimeIds: true
+    });
+    report.coverageErrors = coverageErrors;
+    report.passed = coverageErrors.length === 0;
     mkdirSync(path.dirname(outputPath), { recursive: true });
     const content = `${JSON.stringify(report, null, 2)}\n`;
     writeFileSync(outputPath, content);

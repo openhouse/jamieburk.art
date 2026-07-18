@@ -94,10 +94,10 @@ export const proofClaims: ProofClaim[] = [
       "Vendor terms",
       "Sensitive operating practices"
     ],
-    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "workflow-mapping", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-18"
   },
   {
     id: "hje-revenue-growth-contribution",
@@ -153,10 +153,10 @@ export const proofClaims: ProofClaim[] = [
       "Legal guidance"
     ],
     protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-11"
+    lastReviewed: "2026-07-18"
   },
   {
     id: "callnyc-public-engagement-architecture",
@@ -188,10 +188,10 @@ export const proofClaims: ProofClaim[] = [
       "Unverified historical metrics",
       "Individual authorship of shared-account posts"
     ],
-    surfaces: ["case-study"],
+    surfaces: ["homepage", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["public-engagement", "information-architecture", "civic-technology", "implementation"],
-    lastReviewed: "2026-07-14"
+    lastReviewed: "2026-07-18"
   },
   {
     id: "fair-rent-campaign-memory",
@@ -373,7 +373,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-15"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "wowlist-public-support-surface",
@@ -497,7 +497,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
       "Co-founded and project-managed a neighborhood-led adaptive reuse effort, serving as Phase One general contractor across a $189,629 cold-shell restoration; later City funding was appropriated but not disbursed.",
-    shortWording: "Directed Phase One restoration and neighborhood-led planning",
+    shortWording: "Co-founded and project-managed Phase One restoration and neighborhood-led planning",
     detailedPublicWording:
       "Jamie coordinated specialist construction teams across roofing and TPO membrane work, historic masonry, floor framing, water service, access, and site safety, while building a four-by-six neighborhood survey and contact workflow that helped turn daily site conversations into a public-benefit proposal.",
     sourceBasis:
@@ -522,10 +522,10 @@ export const proofClaims: ProofClaim[] = [
       "Banking details",
       "Stakeholder details"
     ],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["construction-operations", "vendor-coordination", "participatory-research", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-15"
+    lastReviewed: "2026-07-18"
   },
   {
     id: "kc-town-hall-public-service-interface",
@@ -674,6 +674,18 @@ export function requireReadyOrCarefulProof(id: string): ProofClaim {
   return proof;
 }
 
+export function requireProofForSurface(id: string, surface: ProofSurface): ProofClaim {
+  const proof = requireReadyOrCarefulProof(id);
+  if (!proof.surfaces.includes(surface)) {
+    throw new Error(`Proof claim ${id} is not authorized for ${surface}`);
+  }
+  return proof;
+}
+
+export function selectProofIdsForSurface(ids: string[], surface: ProofSurface): ProofClaim[] {
+  return ids.map((id) => requireProofForSurface(id, surface));
+}
+
 export function selectProofs(surface: ProofSurface): ProofClaim[] {
   return getProofsForSurface(surface);
 }
@@ -684,7 +696,7 @@ export const homepageProofs = [
   "callnyc-public-engagement-architecture",
   "wowlist-community-platform",
   "kc-town-hall-public-benefit-documentation"
-].map(requireReadyOrCarefulProof);
+].map((id) => requireProofForSurface(id, "homepage"));
 
 export const resumeProofHighlights = [
   "career-operating-structure-14-years",
@@ -698,7 +710,7 @@ export const resumeProofHighlights = [
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "ai-evals-professional-development"
-].map(requireReadyOrCarefulProof);
+].map((id) => requireProofForSurface(id, "resume"));
 
 export const technicalOperationsProofRows = [
   {
@@ -743,5 +755,5 @@ export const technicalOperationsProofRows = [
   }
 ].map((row) => ({
   ...row,
-  proofs: row.proofIds.map(requireReadyOrCarefulProof)
+  proofs: row.proofIds.map((id) => requireProofForSurface(id, "technical-operations"))
 }));

@@ -38,10 +38,13 @@ const commands = [];
 const readableOutput = (value) => value
   .replace(/\u001B\[[0-?]*[ -\/]*[@-~]/g, "")
   .replace(/\r(?!\n)/g, "\n")
+  .replace(/[ \t]+$/gm, "")
   .replace(/\n{4,}/g, "\n\n\n");
+const commandEnvironment = { ...process.env };
+delete commandEnvironment.BROWSER_EVAL_DEBUG_ROUTE;
 for (const [index, command] of contract.requiredCommands.entries()) {
   const started = new Date();
-  const result = spawnSync(command, { cwd: repoRoot, encoding: "utf8", shell: true, env: process.env, maxBuffer: 50 * 1024 * 1024 });
+  const result = spawnSync(command, { cwd: repoRoot, encoding: "utf8", shell: true, env: commandEnvironment, maxBuffer: 50 * 1024 * 1024 });
   const completed = new Date();
   const output = `${result.stdout ?? ""}${result.stderr ?? ""}`;
   const outputPath = path.posix.join("evals/_shared/logs", path.basename(logRoot), `${String(index + 1).padStart(2, "0")}.log`);

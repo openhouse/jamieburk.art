@@ -5,12 +5,27 @@ import {
   loadLaunchEvalRunRecords,
   runSourceChecks,
   scoreJudgeResults,
+  validateBrowserReportCoverage,
   validateDecisionRecord,
+  validateGateEvidence,
   validateLaunchEvalRunRecord,
   validateLaunchEvalSuite
 } from "../lib/launch-evals.mjs";
 
 const suite = loadLaunchEvalSuite();
+
+function completeBrowserReport() {
+  const byId = Object.fromEntries(suite.runtimeCases.map((runtimeCase) => [runtimeCase.id, runtimeCase]));
+  const results = (runtimeId) => byId[runtimeId].routes.flatMap((route) => byId[runtimeId].viewports.map(([width, height]) => ({ route, width, height, passed: true })));
+  return {
+    candidateCommit: "a".repeat(40),
+    runtimeCaseIds: ["LR-RUNTIME-RESPONSIVE", "LR-RUNTIME-KEYBOARD", "LR-RUNTIME-CITATIONS"],
+    responsive: results("LR-RUNTIME-RESPONSIVE"),
+    keyboard: results("LR-RUNTIME-KEYBOARD"),
+    citations: results("LR-RUNTIME-CITATIONS"),
+    passed: true
+  };
+}
 
 function makeDecisionRecord(overrides = {}) {
   return {
@@ -101,6 +116,51 @@ test("hard-gate prose cannot substitute for typed command and browser evidence",
   assert.match(errors, /exact command, zero exit code/);
   assert.match(errors, /digest-bound browser report/);
   assert.match(errors, /structured evidence/);
+});
+
+test("browser evidence must cover every route and viewport instead of passing empty loops", () => {
+  const complete = completeBrowserReport();
+  assert.deepEqual(validateBrowserReportCoverage(suite, complete, { exactRuntimeIds: true }), []);
+  complete.responsive = complete.responsive.slice(0, 1);
+  complete.keyboard = [];
+  complete.citations = [];
+  const errors = validateBrowserReportCoverage(suite, complete, { exactRuntimeIds: true }).join("\n");
+  assert.match(errors, /LR-RUNTIME-RESPONSIVE does not cover the complete route and viewport matrix/);
+  assert.match(errors, /LR-RUNTIME-KEYBOARD does not cover the complete route and viewport matrix/);
+  assert.match(errors, /LR-RUNTIME-CITATIONS does not cover the complete route and viewport matrix/);
+});
+
+test("approval and deployment evidence must match declared labels and semantic formats", () => {
+  const approval = suite.hardGates.find((gate) => gate.id === "LR-HG-EXACT-SHA");
+  const deployment = suite.hardGates.find((gate) => gate.id === "LR-HG-PRODUCTION-SMOKE");
+  const commit = "a".repeat(40);
+  const approvalErrors = validateGateEvidence(approval, [
+    { label: "approved commit SHA", value: "passed" },
+    { label: "staging URL", value: "https://example.com" },
+    { label: "production image or deployment identifier", value: "ok" }
+  ], commit).join("\n");
+  assert.match(approvalErrors, /needs substantive evidence/);
+  assert.match(approvalErrors, /HTTPS staging\.jamieburk\.art URL/);
+
+  const deploymentErrors = validateGateEvidence(deployment, [
+    { label: "HTTP observations", value: "{}" },
+    { label: "resume SHA-256", value: "not-a-digest" },
+    { label: "robots and sitemap bodies", value: "{}" }
+  ], commit).join("\n");
+  assert.match(deploymentErrors, /must be JSON covering apex/);
+  assert.match(deploymentErrors, /must be a SHA-256 digest/);
+  assert.match(deploymentErrors, /inspected robots and sitemap bodies/);
+
+  assert.deepEqual(validateGateEvidence(approval, [
+    { label: "approved commit SHA", value: commit },
+    { label: "staging URL", value: "https://staging.jamieburk.art/work" },
+    { label: "production image or deployment identifier", value: "sha256:0123456789abcdef" }
+  ], commit), []);
+  assert.deepEqual(validateGateEvidence(deployment, [
+    { label: "HTTP observations", value: JSON.stringify({ apex: 200, www: 308, tls: true, health: 200, canonicals: "verified", openGraph: "verified" }) },
+    { label: "resume SHA-256", value: "b".repeat(64) },
+    { label: "robots and sitemap bodies", value: JSON.stringify({ robots: "User-agent: *\\nAllow: /", sitemap: "<urlset></urlset>" }) }
+  ], commit), []);
 });
 
 test("a passing scorecard reaches the deterministic target", () => {

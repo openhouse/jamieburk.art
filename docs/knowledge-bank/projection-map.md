@@ -3,6 +3,11 @@
 The website is not a claim database. It is a composed public surface. Use this
 map to decide where claims may appear.
 
+`ProofClaim.surfaces` is the executable authorization boundary for curated proof
+lists. The lists below choose among authorized claims; they cannot grant a new
+surface. `requireProofForSurface` makes a mismatched selection fail at module
+load, and projection tests retain a negative mutation for that boundary.
+
 ## Homepage Proof Strip
 
 Use only the smallest, most legible claims:
