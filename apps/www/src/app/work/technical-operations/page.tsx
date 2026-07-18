@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Route } from "next";
 import Link from "next/link";
+import { Claim } from "@/components/citations";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -33,8 +34,13 @@ const proofMap = [
   {
     project: "CallNYC",
     href: "/work/callnyc",
-    proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+    proof: (
+      <Claim
+        claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+        projection="technical-operations"
+        surface="/work/technical-operations"
+      />
+    )
   },
   {
     project: "WOWList",
@@ -128,7 +134,17 @@ export default function TechnicalOperationsPage() {
               {row.proofs.map((proof) => (
                 <li className="flex gap-3" key={proof.id}>
                   <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{proof.shortWording ?? proof.publicWording}</span>
+                  <span>
+                    {proof.id === "callnyc-civic-data-guidance" ? (
+                      <Claim
+                        claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+                        projection="technical-operations"
+                        surface="/work/technical-operations"
+                      />
+                    ) : (
+                      proof.shortWording ?? proof.publicWording
+                    )}
+                  </span>
                 </li>
               ))}
             </ul>

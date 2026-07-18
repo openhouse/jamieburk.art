@@ -73,6 +73,28 @@ test("an occurrence cannot exceed the projection's authorized surfaces", () => {
   assert.match(validateProjectionConsistency({ bank: changed, registryText: `${JSON.stringify(buildPublicRegistry(changed), null, 2)}\n`, publicFiles }).join("\n"), /is not an authorized surface/);
 });
 
+test("a governed public projection cannot lose required boundary language", () => {
+  const changed = structuredClone(knowledgeBank);
+  const claim = changed.claims.find((item) => item.id === "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON");
+  const projection = claim.projections.find((item) => item.key === "resume-html");
+  projection.text = projection.text.replace("archived, unofficial ", "").replace(" and not current city guidance", "");
+  const changedRegistry = `${JSON.stringify(buildPublicRegistry(changed), null, 2)}\n`;
+  assert.match(
+    validateProjectionConsistency({ bank: changed, registryText: changedRegistry, publicFiles }).join("\n"),
+    /missing required boundary language/
+  );
+});
+
+test("a governed surface cannot bypass its canonical claim projection", () => {
+  const changedFiles = publicFiles.map((item) => item.file === "apps/www/src/content/work/196-sunday-dinner.mdx"
+    ? { ...item, content: item.content.replace("CLM-SUNDAY-DINNER-RECORDED-GATHERINGS-AND-MEALS", "CLM-REMOVED-BINDING") }
+    : item);
+  assert.match(
+    validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles: changedFiles }).join("\n"),
+    /bypasses the canonical CLM-SUNDAY-DINNER-RECORDED-GATHERINGS-AND-MEALS\/case-study binding/
+  );
+});
+
 test("a protected source cannot become a public citation", () => {
   const changed = structuredClone(knowledgeBank);
   const page = changed.pages[0];

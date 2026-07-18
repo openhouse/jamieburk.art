@@ -137,6 +137,7 @@ export function validateEvalContract(contract) {
   if (contract.requireReviewerAttestation !== true) errors.push("current contract must require reviewer attestation");
   if (contract.requireHumanReadableLogs !== true) errors.push("current contract must retain human-readable command logs");
   if (contract.requireDecisionRecordSynchronization !== true) errors.push("current contract must synchronize decision records");
+  if (contract.requireDeterministicDecisionRecord !== true) errors.push("current contract must require deterministic decision records");
   if (!Array.isArray(contract.requiredCommands) || new Set(contract.requiredCommands).size !== contract.requiredCommands?.length) errors.push("required commands must be a unique non-empty array");
   const launch = launchSuite();
   for (const gate of launch.hardGates.filter((item) => item.kind === "command")) {
@@ -304,7 +305,12 @@ export function validateCompositeRunRecord(record, expected = {}) {
     if (record.decision?.weightedScore !== scored.weightedScore) errors.push(`${record.id}: declared weighted score does not match criterion results`);
     if (record.decision?.status === "accepted-for-review" && !scored.scorePasses) errors.push(`${record.id}: an accepted decision does not meet score floors and weighted target`);
     if (record.decision?.status === "accepted-for-review" && (record.blockingFindings?.length ?? 0) > 0) errors.push(`${record.id}: blocking findings prohibit acceptance`);
-    if (contract?.requireDecisionRecord === true) errors.push(...validateDecisionRecord(launchSuite(), record.decisionRecord).map((error) => `${record.id}: ${error}`));
+  }
+  const needsDecisionRecord =
+    (record.judge?.class === "holdout" && contract?.requireDecisionRecord === true) ||
+    (record.judge?.class === "deterministic" && contract?.requireDeterministicDecisionRecord === true);
+  if (needsDecisionRecord) {
+    errors.push(...validateDecisionRecord(launchSuite(), record.decisionRecord).map((error) => `${record.id}: ${error}`));
     if (contract?.requireDecisionRecordSynchronization === true && canonicalJson(record.openDisagreements) !== canonicalJson(record.decisionRecord?.openDisagreements)) errors.push(`${record.id}: top-level disagreements must match the decision record`);
     if (contract?.requireDecisionRecordSynchronization === true && canonicalJson(record.overrides) !== canonicalJson(record.decisionRecord?.overrides)) errors.push(`${record.id}: top-level overrides must match the decision record`);
     if (contract?.requireDecisionRecordSynchronization === true && !sameStringSet(record.reopenTriggersReviewed, record.decisionRecord?.reopenTriggersConsidered)) errors.push(`${record.id}: top-level reopen review must match the decision record`);

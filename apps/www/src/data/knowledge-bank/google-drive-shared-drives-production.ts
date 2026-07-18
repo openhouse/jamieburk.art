@@ -553,7 +553,7 @@ export const googleDriveSharedDrivesProduction = {
       projections: [
         {
           key: "case-study",
-          text: "A protected operating ledger records 345 numbered gatherings through March 2021; its own summary records 2,783 meals served.",
+          text: "A protected operating ledger records a numbered sequence through gathering 345. The workbook's own summary records 2,783 meals served; a separate aggregate audit found a small unreconciled difference and does not treat that figure as a reconstructed headcount.",
           status: "active",
           citationRequired: false,
           surfaces: ["/work/196-sunday-dinner"]

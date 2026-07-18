@@ -15,6 +15,7 @@ import {
   validateCompositeRunRecord,
   validateRunSequence
 } from "./lib/eval-contract.mjs";
+import { loadLaunchEvalSuite } from "./lib/launch-evals.mjs";
 
 const git = (...args) => execFileSync("git", args, { cwd: repoRoot, encoding: "utf8" }).trim();
 const contract = loadEvalContract();
@@ -63,6 +64,41 @@ for (const [index, command] of contract.requiredCommands.entries()) {
   });
 }
 
+const launchSuite = loadLaunchEvalSuite();
+const commandEvidence = (names) => names.map((name) => {
+  const command = commands.find((item) => item.command === name);
+  return `${name}: ${command?.status ?? "not run"}; retained output ${command?.reviewOutputPath ?? "missing"}`;
+});
+const externalRisks = [...contract.requiredExternalGates];
+const dimensionEvidence = {
+  "role fit": commandEvidence(["npm run check:portfolio-evals", "npm run test:browser-evals"]),
+  "demonstrated action": commandEvidence(["npm run check:projections", "npm run check -w @jamie-burkart/www"]),
+  "usable result": commandEvidence(["npm run test:browser-evals", "npm run check:routes", "npm run preflight:staging"]),
+  "domain experience": commandEvidence(["npm run check:knowledge-evals", "npm run check:citations"]),
+  "management authority": commandEvidence(["npm run check:launch-evals", "npm run test:eval-contract"]),
+  "evidentiary confidence": commandEvidence(["npm run check:citations", "npm run test:public-artifacts", "npm run check:eval-records"]),
+  "unresolved risk": commandEvidence(["npm audit --omit=dev --audit-level=high", "npm run preflight:production"])
+};
+const decisionRecord = {
+  dimensions: launchSuite.lensPolicy.sack.decisionVector.map((dimension) => ({
+    dimension,
+    assessment: `The deterministic protocol tested the automated evidence declared for ${dimension}; qualitative interpretation remains with independent holdouts and named human authorities.`,
+    evidence: dimensionEvidence[dimension],
+    unresolvedRisks: dimension === "unresolved risk" || dimension === "management authority" ? externalRisks : []
+  })),
+  authorityLog: launchSuite.lensPolicy.sack.authorities.map((policy) => ({
+    action: policy.action,
+    humanAuthority: policy.authority,
+    disposition: "Not invoked by this deterministic run; authority remains with the named human reviewer.",
+    modelHasFinalAuthority: false
+  })),
+  reopenTriggersConsidered: [...launchSuite.lensPolicy.sack.reopenTriggers],
+  reopenReview: "Every governed trigger was checked as a reason to reopen review; this run found no automated basis to close or waive future human reopening.",
+  overrides: [],
+  openDisagreements: [],
+  disagreementReview: "The deterministic runner introduced no editorial disagreement and cannot erase disagreements recorded by holdouts or human reviewers."
+};
+
 const record = {
   schemaVersion: "2.1.0",
   id,
@@ -80,6 +116,7 @@ const record = {
   commands,
   judge: { class: "deterministic", label: `canonical-runner-${iteration}`, independent: false, priorScoresVisible: false },
   criterionResults: [],
+  decisionRecord,
   openDisagreements: [],
   overrides: [],
   reopenTriggersReviewed: [...contract.requiredReopenTriggers],

@@ -118,6 +118,11 @@ prior-score-blind model-context holdouts accept one unchanged candidate. Raw
 command logs and normalized text copies are both retained. A model-context
 attestation records process separation; it is not proof of a human identity or
 substitute for the contract's external human gates.
+Deterministic records also retain the seven governed decision dimensions,
+evidence, unresolved risks, human-authority dispositions, disagreements,
+overrides, and reopen review. Those records describe automated coverage; only
+fresh holdouts and the named human authorities supply editorial judgment and
+release decisions.
 
 The shipped resume PDF is generated from
 `docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-17.html`
@@ -222,3 +227,8 @@ deterministic runs and two independent, prior-score-blind holdouts on the same
 unchanged governed candidate. Generated run reports do not alter that digest.
 Changing a rubric version resets the pass and holdout streak. Acceptance for PR
 review never grants production approval.
+
+High-risk public projections are bound in the canonical knowledge bank to an
+approved claim ID, projection key, surface, source file, and required boundary
+language. `npm run check:projections` rejects a weakened canonical sentence or
+a public surface that bypasses its approved projection.

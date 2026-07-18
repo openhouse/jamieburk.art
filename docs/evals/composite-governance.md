@@ -22,11 +22,17 @@ commit and tree in Git, recomputes its governed-input digest, recomputes holdout
 scores and floors, and rejects missing commands, unknown criteria, duplicate
 reviewers, stale prompts, or an attempt to grant production authority. The
 canonical deterministic runner captures timing and output digests for every
-required command. Version 2.4 retains both the raw stream and a normalized,
-human-readable text copy. Failed runs and rejected holdouts remain in the chain;
+required command. Version 2.5 retains both the raw stream and a normalized,
+human-readable text copy, and requires deterministic runs to retain the same
+seven-dimension decision record, authority log, disagreement record, and reopen
+review required of holdouts. The deterministic assessment describes automated
+coverage only; it does not impersonate editorial or human judgment. Failed runs
+and rejected holdouts remain in the chain;
 they are evidence about the system, not debris to erase.
 
-Prompts are versioned with the contract. A later rejection resets the current
+Prompts are versioned with the contract. Contracts remain archived under
+`evals/_shared/contracts/`, so stronger current rules do not rewrite the
+validity requirements for historical records. A later rejection resets the current
 acceptance phase, including earlier deterministic passes. A numerical pass can
 never erase a reviewer's refusal or a nonempty blocking-finding list. Accepted
 holdouts retain the seven decision dimensions, human authority log, reopen

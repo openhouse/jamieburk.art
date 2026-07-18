@@ -84,6 +84,7 @@ export function validateProjectionConsistency({
   if (registryText !== expectedRegistry) errors.push("public registry disagrees with canonical knowledge records");
 
   const coverageByProof = new Map(bank.proofCoverageTargets.map((target) => [target.proofId, target]));
+  const publicFileByPath = new Map(publicFiles.map((item) => [item.file, item]));
   for (const proof of proofClaims) {
     if (!coverageByProof.has(proof.id)) errors.push(`${proof.id}: public proof is missing canonical knowledge-bank coverage`);
   }
@@ -91,6 +92,42 @@ export function validateProjectionConsistency({
     if (!proofClaims.some((proof) => proof.id === target.proofId)) errors.push(`${target.proofId}: proof coverage points to an unknown public proof`);
     for (const sourceId of target.sourceIds) if (!sourceById.has(sourceId)) errors.push(`${target.proofId}: proof coverage has unknown source ${sourceId}`);
     for (const inquiryId of target.researchInquiryIds) if (!bank.researchInquiries.some((inquiry) => inquiry.id === inquiryId)) errors.push(`${target.proofId}: proof coverage has unknown inquiry ${inquiryId}`);
+    for (const binding of target.projectionBindings ?? []) {
+      const claim = claimById.get(binding.claimId);
+      const projection = claim?.projections.find((item) => item.key === binding.projection && item.status === "active");
+      if (!claim) {
+        errors.push(`${target.proofId}: projection binding has unknown claim ${binding.claimId}`);
+        continue;
+      }
+      if (!projection) {
+        errors.push(`${target.proofId}: ${binding.claimId} has no active ${binding.projection} projection`);
+        continue;
+      }
+      if (!projection.surfaces.includes(binding.surface)) {
+        errors.push(`${target.proofId}: ${binding.claimId}/${binding.projection} is not authorized for ${binding.surface}`);
+      }
+      for (const phrase of binding.requiredPhrases) {
+        if (!normalize(projection.text).includes(normalize(phrase))) {
+          errors.push(`${target.proofId}: ${binding.claimId}/${binding.projection} is missing required boundary language ${JSON.stringify(phrase)}`);
+        }
+      }
+      const sourceFile = publicFileByPath.get(binding.sourceFile);
+      if (!sourceFile) {
+        errors.push(`${target.proofId}: projection source file is missing from the public scan: ${binding.sourceFile}`);
+        continue;
+      }
+      const sourceText = normalize(sourceFile.content);
+      for (const token of [
+        binding.claimId,
+        `"${binding.projection}"`,
+        `"${binding.surface}"`
+      ]) {
+        if (!sourceText.includes(normalize(token))) {
+          errors.push(`${target.proofId}: ${binding.sourceFile} bypasses the canonical ${binding.claimId}/${binding.projection} binding`);
+          break;
+        }
+      }
+    }
   }
   for (const proof of homepageProofs) {
     const coverage = coverageByProof.get(proof.id);

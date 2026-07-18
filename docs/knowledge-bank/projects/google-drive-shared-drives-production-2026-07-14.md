@@ -107,8 +107,9 @@ on the distinction.
 
 The public Sunday Dinner case study now states:
 
-> A protected operating ledger records 345 numbered gatherings and 2,783 meals
-> served through March 2021.
+> A protected operating ledger contains 345 numbered gathering columns. The
+> workbook's own summary records 2,783 meals served through March 2021; a
+> separate aggregate audit found a small unreconciled difference.
 
 The claim is presented without a public citation because its source is private.
 The raw ledger and all participant-level evidence remain outside the repository.

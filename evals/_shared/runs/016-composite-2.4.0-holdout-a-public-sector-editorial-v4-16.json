@@ -1,0 +1,353 @@
+{
+  "schemaVersion": "2.2.0",
+  "id": "composite-2.4.0-holdout-a-public-sector-editorial-v4-16",
+  "iteration": 16,
+  "recordedAt": "2026-07-18T02:38:07.425Z",
+  "previousRunId": "composite-2.4.0-deterministic-15",
+  "previousRunDigest": "bbba366d6badd399c5cf03e13a017b00c49a5b6bd73353b46a2406b73dbd1564",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.4.0",
+    "digest": "d56f0fbe206f718386557260ad3f8c66087875f07a54c4cc790b365d16d610eb"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "a3885f47de7c4d87e15134348156ca95651c02a5",
+    "tree": "59261e69a6094a510ab29076b4f4b078ee7940e0",
+    "governedInputDigest": "e8faf057d2e020ff51141c7223c3d97f5a1cf8593b7e078ced6751e92772af06"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-a-public-sector-editorial-v4",
+    "sessionId": "019f730a-feb3-7ed3-ad82-78f64ba7bf3f",
+    "reviewerClass": "model-context",
+    "provider": "codex-multi-agent",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/holdout-a.md",
+    "promptDigest": "df9e7f2be24eca360f333a1a2c225e8fd1e8ea2069d4447929970d2a28a5396c",
+    "attestation": {
+      "candidateCommit": "a3885f47de7c4d87e15134348156ca95651c02a5",
+      "promptPath": "evals/_shared/holdout-a.md",
+      "runRecordsInspected": false,
+      "generatedReportsInspected": false,
+      "editsMade": false,
+      "attestedAt": "2026-07-18T02:29:45Z"
+    }
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "/ - apps/www/src/components/Hero.tsx immediately names Technical Project Manager - Product Operations & Implementation, Jamie's operating contribution, and work/resume/contact actions.",
+        "/ - apps/www/src/app/page.tsx provides a labeled Start here sequence whose first destination is the role-specific Technical Operations proof surface.",
+        "/work/technical-operations - the opening paragraph and linked proof map connect the target role to eight named project contexts."
+      ],
+      "risks": [
+        "The role-specific proof page is long enough that a reader may rely on its top proof map rather than reach the more detailed capability rows."
+      ],
+      "rationale": "The target role, contribution, and next proof step are immediate and specific in the first viewport and remain consistent across the principal hiring path."
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 3,
+      "evidence": [
+        "/work/callnyc - apps/www/src/content/work/callnyc.mdx uses typed claims, public citations, explicit non-affiliation language, and a cleared project-mark artifact.",
+        "/work/196-sunday-dinner - the page says a protected ledger records 2,783 meals, while apps/www/src/data/proofs.ts requires attribution to the workbook's own summary and records a small unresolved audit difference; the visible wording omits both qualifications.",
+        "/resume and /work/technical-operations - the CallNYC summary is rendered without 'archived' or 'unofficial' even though apps/www/src/data/proofs.ts says to always describe the project that way.",
+        "scripts/lib/projection-consistency.mjs checks that each proof ID has a coverage record, but it does not compare proofs.ts public wording or guardrails to the canonical claim registry; semantically divergent wording can therefore pass the projection check.",
+        "/resume and /work/harry-j-epstein - the consequential 2x revenue contribution remains carefully phrased, but apps/www/src/data/knowledge-bank/proof-coverage.ts classifies it as protected-support with no normalized source IDs, so a public reader cannot inspect its basis."
+      ],
+      "risks": [
+        "The parallel proof and citation systems can disagree while deterministic checks remain green.",
+        "Protected support is sometimes presented as a precise public metric without an equally visible description of the support limitation.",
+        "Project-status guardrails are not enforced uniformly across resume, role-fit, card, and case-study surfaces."
+      ],
+      "rationale": "The citation-backed case-study work is careful, but consequential visible claims and their guardrails drift across two truth-bearing data layers. That is below the frozen minimum for launch-readiness evidence care."
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "/ - the hero describes 'emerging, stakeholder-heavy work' and names concrete outputs rather than diagnosing teams as deficient.",
+        "/about - the copy describes operating structure as 'still forming' and explains the practical work of surfacing structure, translation, coordination, and handoff.",
+        "/work/kc-town-hall - emerging preservation, neighborhood, and construction needs are framed as a coordination problem with specialist and community knowledge, not as stakeholder failure."
+      ],
+      "risks": [],
+      "rationale": "The language consistently makes under-formed structure normal, actionable, and professionally precise without blaming the people involved."
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 3,
+      "evidence": [
+        "/ - Start here, the proof strip, capability cards, selected systems, operating motif, and How I work repeat related arguments across a long homepage even though the primary path is clear.",
+        "/work - each card repeats status, summary, unclear state, usable result, role fit, and tags before the reader reaches the case study.",
+        "/work/fair-rent-nyc - five citation-bearing organizing and testimony paragraphs appear before the central 'What became usable' and 'What I did' sections.",
+        "apps/www/src/components/CaseStudyBlocks.tsx appropriately collapses Known / Open / Protected and publication governance under a details element."
+      ],
+      "risks": [
+        "A three-minute reader can find the intended route, but may encounter repeated framing and metadata before the decisive action/result proof.",
+        "Text-heavy representative artifact cards add length without always adding inspectable evidence."
+      ],
+      "rationale": "The main path is visible and governance is increasingly secondary, but avoidable repetition and density still match the score-3 anchor."
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4,
+      "evidence": [
+        "/work/harry-j-epstein - 'What I did,' outcome, and transferable-proof sections connect Jamie's actions to implementation and product-operations relevance.",
+        "/work/kc-town-hall - the page names Jamie's project-management and general-contractor role, the usable Phase One result, and specialist-team credit in the principal content.",
+        "/work/callnyc - the main text states that Jamie built the independent prototype and explains the resident pathway before the secondary project record.",
+        "apps/www/src/components/CaseStudyLayout.tsx keeps role, summary, At a glance, resume, and contact visible while moving detailed publication boundaries below the main argument."
+      ],
+      "risks": [
+        "Some case studies still make the reader pass through contextual or citation detail before Jamie's action and usable result.",
+        "Many 'Representative artifacts' are prose descriptions rather than artifacts a hiring reader can inspect."
+      ],
+      "rationale": "Jamie is visible as the actor and role relevance is explicit, while secondary governance is inspectable without dominating. The text-heavy proof presentation keeps this short of exemplary."
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 5,
+      "evidence": [
+        "/work/fair-rent-nyc - the page explicitly limits sole-credit interpretations and lists the contribution verbs it uses for collective civic work.",
+        "/work/kc-town-hall - specialist contractors, consultants, collaborators, and neighbors retain distinct knowledge and labor alongside Jamie's coordination role.",
+        "/work/196-sunday-dinner - participant identities, contacts, attendance history, invitations, addresses, and unapproved images remain omitted while aggregate operating proof stays visible.",
+        "apps/www/src/data/work.ts gives every case a credits list plus Known / Open / Protected, care, source, and public-safety boundaries."
+      ],
+      "risks": [
+        "Affected collaborators still retain authority to dispute attribution, and several named-artifact approvals remain open."
+      ],
+      "rationale": "Jamie's contribution, collective context, and protected absences are unusually explicit and mutually reinforcing."
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "/work/callnyc - a cleared, source-linked project mark is rendered with alt text and a non-affiliation boundary.",
+        "/ - the visual system is coherent and the hero's operating-structure diagram reinforces the role argument.",
+        "apps/www/src/components/CaseStudyBlocks.tsx renders most representative artifacts as generic text cards with titles and descriptions rather than screenshots, documents, diagrams, or working interfaces.",
+        "apps/www/src/data/work.ts repeatedly records screenshot or artifact approvals as pending for HJE, CallNYC, WOWList, and community work."
+      ],
+      "risks": [
+        "Most decisive work remains asserted through copy rather than made tangible through approved visual evidence.",
+        "The sole cleared bitmap is a project mark, not an interface or operating artifact that demonstrates implementation quality."
+      ],
+      "rationale": "The system is coherent and one real artifact is inspectable, but key cases remain text-heavy, which exactly fits the score-3 anchor."
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 4,
+      "evidence": [
+        "/work/technical-operations - the page connects delivery coordination, risk surfacing, operating documentation, launch, and adoption to named projects.",
+        "/work/kc-town-hall - scope, sequencing, specialist teams, survey workflow, municipal review, and the funding lifecycle demonstrate field implementation and durable records.",
+        "/work/fair-rent-nyc - running minutes, action trackers, decision records, source maps, and stakeholder follow-up show documentation used as an operating system.",
+        "/work/harry-j-epstein - long-term stewardship connects releases, analytics limits, customer-facing content, recurring workflows, and handoffs in a live business context."
+      ],
+      "risks": [
+        "Several operational artifacts remain representative descriptions rather than inspectable examples.",
+        "Formal management authority, dependency ownership, and measurable adoption outcomes vary by project and are not always independently corroborated."
+      ],
+      "rationale": "Specific cross-domain examples demonstrate durable coordination and implementation, though inspectable operating artifacts and independently verifiable outcomes are still uneven."
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 4,
+      "evidence": [
+        "/about - the page directly connects artistic, civic, technical, and social practice through participation, memory, place, relationships, and systems people inhabit.",
+        "/work/wowlist - the product model connects community vocabulary and organizer participation to a technical distribution system.",
+        "/work/196-sunday-dinner - recurring hospitality, artist support, onboarding, facilitation, and continuity show social and spatial practice as operating infrastructure.",
+        "/work/technical-operations - role clarity remains prominent and is not displaced by the artistic-practice threshold."
+      ],
+      "risks": [
+        "The About threshold is strong, but the connection is demonstrated mainly through prose because visual or spatial artifacts from the participatory work remain withheld or pending.",
+        "A hiring reader must visit both About and selected community cases to see the full continuity."
+      ],
+      "rationale": "The public threshold is clear, restrained, and grounded in concrete participatory systems without exposing protected educational records or weakening role clarity."
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 3,
+      "evidence": [
+        "evals/launch-readiness/evals.json and scripts/lib/launch-evals.mjs define and validate seven dimensions, four human authority actions, all five reopen triggers, disagreement review, and structured overrides for judged launch records.",
+        "scripts/record-holdout-eval.mjs binds holdouts to the exact candidate commit and prompt, requires context-separation attestations, and refuses acceptance with blockers or incomplete score floors.",
+        "scripts/run-composite-eval.mjs creates an accepted-for-review deterministic record with no decisionRecord and no criterion vector when commands pass.",
+        "scripts/lib/eval-contract.mjs validates the full decision record only inside the holdout branch even though evals/_shared/contract.json sets requireDecisionRecord true.",
+        "scripts/tests/eval-contract.test.mjs constructs accepted deterministic records without decisionRecord and uses two such records in the test that satisfies the composite review stop."
+      ],
+      "risks": [
+        "The aggregate review protocol says every run preserves multidimensional governance, but accepted deterministic records are an intentional exception not disclosed by the policy language.",
+        "A command-only accepted status can exist without a local authority, disagreement, override, or unresolved-risk record, weakening the claim that a passing boolean cannot erase deliberation.",
+        "External human gates remain explicit, but that does not repair the per-run governance omission."
+      ],
+      "rationale": "The holdout path is strong, but the composite evaluator's accepted deterministic path preserves only commands and external gates. That is the frozen score-3 condition: multidimensional governance exists but remains incomplete in a certifying path."
+    }
+  ],
+  "blockingFindings": [
+    "The composite certifying path does not enforce its own every-run decision-governance promise: scripts/run-composite-eval.mjs can emit accepted-for-review deterministic records without decisionRecord or criterionResults, scripts/lib/eval-contract.mjs applies requireDecisionRecord only to holdouts, and scripts/tests/eval-contract.test.mjs treats decision-record-free deterministic records as valid inputs to the passing stop condition. Align the policy, runner, validator, and tests before PR-review acceptance.",
+    "Public claim boundaries can drift between the canonical citation registry and the separate proofs.ts layer without failing projection checks. The drift is already visible: /work/196-sunday-dinner attributes 2,783 meals directly to a protected ledger while omitting that it is the workbook's own summary and differs by 14 from the aggregate audit, and /resume plus /work/technical-operations omit CallNYC's required archived/unofficial framing. Make one canonical projection authority, or validate exact wording and guardrails across every authorized surface, then correct the affected projections."
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "Strong: Jamie is immediately legible as a Technical Project Manager focused on Product Operations and Implementation for complex public-facing teams.",
+        "evidence": [
+          "/ - the hero names the target role, operating contribution, outputs, and three direct actions.",
+          "/work/technical-operations - the proof map connects role requirements to named projects."
+        ],
+        "unresolvedRisks": [
+          "The role page's length may dilute the strongest project-specific evidence for a time-limited reader."
+        ]
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "Strong but unevenly inspectable: case studies name Jamie's building, coordination, documentation, translation, facilitation, and stewardship actions across domains.",
+        "evidence": [
+          "/work/callnyc - Jamie built the independent prototype and organized records into issue-oriented pathways.",
+          "/work/kc-town-hall - Jamie co-founded, project-managed, and coordinated the Phase One restoration with specialist teams.",
+          "/work/fair-rent-nyc - Jamie helped build and steward campaign memory, source maps, and action tracking."
+        ],
+        "unresolvedRisks": [
+          "Some actions rely on protected support or first-person confirmation rather than independently inspectable artifacts.",
+          "Several representative artifacts are descriptions of work rather than the work itself."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "Strong: the portfolio consistently names resident pathways, e-commerce workflows, campaign memory, construction outputs, community distribution, and repeatable participation systems.",
+        "evidence": [
+          "/work/callnyc - open data became issue pathways, district context, and possible next steps.",
+          "/work/fair-rent-nyc - fragmented civic context became running minutes, decision records, action trackers, and source maps.",
+          "/work/kc-town-hall - Phase One produced a cold shell plus neighborhood survey and municipal-review documentation."
+        ],
+        "unresolvedRisks": [
+          "Adoption and outcome evidence is stronger in prose than in visible artifacts for several cases.",
+          "The Sunday Dinner meals-served result needs its audit limitation restored on the public surface."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "Broad and credible across small business, civic technology, coalition operations, cultural infrastructure, community platforms, and the built environment.",
+        "evidence": [
+          "/work and apps/www/src/data/work.ts present six bounded case studies spanning operating, civic, community, and construction contexts.",
+          "/about explains the continuity between artistic, participatory, technical, and civic practice without replacing the target-role argument."
+        ],
+        "unresolvedRisks": [
+          "Breadth may be read as diffusion unless a reader follows the role-specific Technical Operations path.",
+          "The lab is explicitly early method work and should not be treated as delivered production AI experience."
+        ]
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "The evidence supports substantial project coordination, operating stewardship, general-contractor responsibility, coalition infrastructure, and implementation leadership, but formal organizational authority varies by context.",
+        "evidence": [
+          "/work/kc-town-hall names project-manager and Phase One general-contractor roles while preserving specialist credit.",
+          "/work/harry-j-epstein describes long-term web-systems leadership and incremental release coordination.",
+          "/work/fair-rent-nyc distinguishes Jamie's co-founder and operating contribution from collective campaign outcomes."
+        ],
+        "unresolvedRisks": [
+          "The portfolio does not consistently distinguish project authority, people-management authority, budget authority, and influence without formal authority.",
+          "Some formal role titles or divisions of labor still await collaborator or documentary corroboration."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "Mixed: the typed citation registry and public boundaries are strong, but exact wording and support posture can drift through the separate broader proof layer.",
+        "evidence": [
+          "/work/callnyc provides source-linked claims, ordered endnotes, explicit scope limits, and a cleared artifact.",
+          "apps/www/src/data/knowledge-bank/schema.ts distinguishes source visibility, evidence relationships, claim status, projection status, and media rights.",
+          "scripts/lib/projection-consistency.mjs validates registry generation and ID coverage but not semantic equivalence of proofs.ts wording and guardrails.",
+          "/work/196-sunday-dinner and /resume demonstrate concrete boundary drift described in the blocking findings."
+        ],
+        "unresolvedRisks": [
+          "A green deterministic projection check can coexist with public wording that omits a canonical limitation.",
+          "The 2x revenue figure remains consequential protected-support evidence that a public reader cannot inspect.",
+          "Generated citation artifacts can be canonical while broader proof wording remains independently mutable."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "PR-review acceptance is withheld because the public-claim architecture permits demonstrated guardrail drift and the composite certifying path omits required per-run decision governance for deterministic acceptances.",
+        "evidence": [
+          "apps/www/src/data/proofs.ts, apps/www/src/data/knowledge-bank/proof-coverage.ts, and scripts/lib/projection-consistency.mjs expose an ID-linked but not wording-linked second truth system.",
+          "scripts/run-composite-eval.mjs, scripts/lib/eval-contract.mjs, and scripts/tests/eval-contract.test.mjs permit accepted deterministic records without decisionRecord.",
+          "evals/_shared/contract.json keeps five external human gates open, so neither this rejection nor a future model acceptance can authorize production."
+        ],
+        "unresolvedRisks": [
+          "Claim wording may continue to drift across homepage, resume, role-fit, work-card, and case-study projections.",
+          "A certifying deterministic record can present accepted-for-review without its own decision vector, authority log, or disagreement review.",
+          "Artifact and media approvals, collaborator corroboration, real-reader sessions, exact-SHA staging review, and Jamie's production approval remain external gates."
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked by this model-context holdout. The judgment is revision-required, and public-claim promotion remains a human decision after the identified drift is corrected.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "No collaborator dispute was presented in this review. The hold path remains open and is not displaced by the numerical score or blocking findings.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "No override was invoked. Any override of this rejection must retain rationale, evidence, and resulting boundary changes in the governed record.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "All five governed triggers were considered. This fresh rejection may be superseded by a new governed review after corrective changes or when a listed trigger occurs.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "All five triggers were reviewed exactly once. No trigger was independently established during this frozen-candidate review; the decision is revision-required because of current implementation and public-wording findings. New or contradictory support for the disputed metrics, changed rights, a collaborator attribution dispute, corrected source provenance, or a changed hiring/public surface would each require a fresh human-governed review.",
+    "overrides": [],
+    "openDisagreements": [],
+    "disagreementReview": "No human or collaborator disagreement was supplied to this independent holdout, so no live disagreement is recorded. The model-context rejection and its blockers are the current judgment, not a claim of human refusal or final authority."
+  },
+  "openDisagreements": [],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new or contradictory evidence",
+    "changed consent or rights",
+    "a substantiated attribution dispute",
+    "source decay or corrected provenance",
+    "a changed target role or public surface"
+  ],
+  "decision": {
+    "status": "revision-required",
+    "weightedScore": 3.94,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "Revision required before pull-request review. The portfolio is exceptionally clear about role, emerging work, collective credit, and human release authority, but evidence wording can drift across parallel public-claim layers and the composite evaluator permits accepted deterministic records without the seven-dimension governance record its policy promises. Visual proof also remains mostly descriptive, though it meets the minimum rather than independently blocking review. This judgment does not grant or assess production approval.",
+  "recordDigest": "6b17b26ac6f32894e0753bfedeffa7ea990391c830e7335764c47f0ad32c9aa8"
+}

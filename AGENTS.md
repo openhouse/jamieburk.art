@@ -126,6 +126,15 @@ external gates. A rubric change requires a version change and resets the streak.
 Do not edit the rubric while optimizing the candidate. Two independent holdouts
 must review the same unchanged governed candidate without prior scores.
 
+Deterministic run records must carry all seven decision dimensions, evidence,
+unresolved risks, the human-authority log, disagreements, overrides, and every
+reopen trigger. Describe automated coverage honestly; do not present a
+deterministic assessment as a human or editorial judgment.
+
+For high-risk claims, bind each public surface to the canonical claim projection
+and required boundary language. Do not duplicate or weaken that language in a
+page-local string.
+
 Use the canonical runner only after committing a frozen candidate. Preserve
 failed and rejected runs in the hash chain. A holdout must use a governed prompt,
 a distinct stable session ID, all ten criteria, and evidence for every score.

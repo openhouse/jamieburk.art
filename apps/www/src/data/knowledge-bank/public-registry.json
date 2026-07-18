@@ -931,7 +931,7 @@
         },
         {
           "key": "work-card",
-          "text": "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.",
+          "text": "Built archived, unofficial CallNYC.org as an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance; it is not current city guidance.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -941,11 +941,20 @@
         },
         {
           "key": "resume-html",
-          "text": "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
+          "text": "Built archived, unofficial CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York and not current city guidance.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
             "/resume"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Built archived, unofficial CallNYC.org as an independent CouncilStat follow-on translating constituent-services data into resident-facing guidance; it is not current city guidance.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
           ]
         }
       ],
@@ -1075,6 +1084,28 @@
       "boundaries": [
         "Present repeal as collective advocacy and legislative action.",
         "Attribute the safety analysis to Jamie rather than presenting it as a comprehensive venue survey."
+      ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-RECORDED-GATHERINGS-AND-MEALS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A protected operating ledger records a numbered sequence through gathering 345. The workbook's own summary records 2,783 meals served; a separate aggregate audit found a small unreconciled difference and does not treat that figure as a reconstructed headcount.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Keep the workbook and all participant-level records protected.",
+        "Attribute 2,783 to the workbook summary; an aggregate column audit found 2,769 marks and did not recover the reason for the difference.",
+        "Retain the softer 300-plus public summary where brevity serves the composition.",
+        "Do not combine gathering and residency metrics as though one source proves both."
       ]
     },
     {
@@ -1830,6 +1861,18 @@
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
           ]
+        }
+      ]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "surface": "/work/196-sunday-dinner",
+      "sourceOrder": [],
+      "occurrences": [
+        {
+          "id": "ledger-aggregate-audit",
+          "claimId": "CLM-SUNDAY-DINNER-RECORDED-GATHERINGS-AND-MEALS",
+          "projection": "case-study"
         }
       ]
     },

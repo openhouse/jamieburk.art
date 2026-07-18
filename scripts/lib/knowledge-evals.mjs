@@ -31,7 +31,7 @@ const publicRegistryPath = path.join(repoRoot, "apps/www/src/data/knowledge-bank
 const nycacEventLedgerPublicContractSha256 = "79b8cb8b652b01a6e96d46aa51dd47b519efc03ac3bf8514eb6cbb5141ef09d7";
 const nycacLinkLedgerPublicContractSha256 = "d6d07b83b23fc23879aeaaf335900472adf14c370dd1a44ee35cdcf6159d4b02";
 const nycacCanonicalGraphPublicContractSha256 = "c5d618f1d8e638354f869d0072fcb6d1820eb453463b824b6367168031f496bf";
-const nycacNarrativePublicContractSha256 = "f9cb1c12863f0153a5d5a76edcc6a5178fbef1abe532097cb3630d415e0b72ea";
+const nycacNarrativePublicContractSha256 = "48ec0cfa78acc7d6752db4d15b1ded919bf22eb9f9882b6c9c0ede63abbd5eb3";
 const kcStar2007SourceArtifactSha256 = "8e9821ddccffc062983e3cf38f5a6080a1a5d1ee0cf1d0ff2b38b5ff40b17cd3";
 const kcStar2007SourceTextExtractionSha256 = "7dd0ce52eb9e550f56cdb606760a29026f6a8d25c0a04f43a9f4aa949fd75967";
 const kcStar2007ContractSealSha256 = "b5105d75f4c7335af362a2985435b4129f6f895349b8ea54fb80bba4e9a83a6e";
@@ -1308,8 +1308,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
         (projection) => projection.status === "active" &&
           !projection.citationRequired &&
           projection.surfaces.includes("/work/196-sunday-dinner") &&
-          projection.text.includes("345 numbered gatherings") &&
-          projection.text.includes("2,783 meals served")
+          projection.text.includes("workbook's own summary records 2,783 meals served") &&
+          projection.text.includes("separate aggregate audit") &&
+          projection.text.includes("unreconciled difference") &&
+          projection.text.includes("reconstructed headcount")
       ) &&
       sharedDriveActiveClaim.evidence.some(
         (evidence) => evidence.sourceId === sharedDrives.sundayDinnerSourceId &&
@@ -1322,10 +1324,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       sharedDriveCoverage.researchInquiryIds.includes("INQ-GDRIVE-SUNDAY-DINNER-AND-196-SCALE") &&
       sharedDriveEmailSources.every((source) => source?.author === "Julia Fredenburg") &&
       sharedDriveEmailClaim?.antiClaims.includes("Jamie authored these guides.") &&
-      sundayDinnerMdx.includes("345 numbered gatherings") &&
-      sundayDinnerMdx.includes("2,783 meals served") &&
+      sundayDinnerMdx.includes(sharedDrives.activeClaimId) &&
+      sundayDinnerMdx.includes('projection="case-study"') &&
       sundayDinnerMdx.includes("participant names, contact details, attendance history") &&
-      workData.includes("345 numbered gatherings and 2,783 meals served") &&
+      workData.includes("workbook's own summary records 2,783 meals served") &&
+      workData.includes("small unreconciled") &&
       workData.includes("participant-level records remain intentionally omitted") &&
       sharedDrives.privateSourceIds.every((id) => !publicRegistryText.includes(id)) &&
       sharedDrivePrivateSources.every(

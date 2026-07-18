@@ -137,8 +137,8 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
-    shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
+      "Built archived, unofficial CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York and not current city guidance.",
+    shortWording: "Built archived, unofficial CallNYC.org as an independent CouncilStat follow-on; not current city guidance",
     detailedPublicWording:
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:

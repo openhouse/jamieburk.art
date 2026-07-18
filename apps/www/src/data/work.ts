@@ -465,14 +465,14 @@ const workItemsInput = [
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
       "300+ hosted gatherings",
-      "Protected operations ledger records 345 numbered gatherings and 2,783 meals served through March 2021",
+      "Protected ledger preserves a numbered sequence through gathering 345; the workbook's own summary records 2,783 meals served, with a small unreconciled audit difference",
       "20+ resident artists supported",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts. A protected ledger records 345 numbered gatherings and 2,783 meals served through March 2021.",
+        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts. A protected ledger preserves a numbered sequence through gathering 345; the workbook's own summary records 2,783 meals served, while a separate aggregate audit found a small unreconciled difference.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:

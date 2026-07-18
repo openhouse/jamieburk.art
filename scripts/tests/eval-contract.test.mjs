@@ -66,7 +66,8 @@ function run(id, judgeClass = "deterministic", options = {}) {
       ? { class: "holdout", label: options.label ?? id, sessionId: options.sessionId ?? "11111111-1111-4111-8111-111111111111", reviewerClass: "model-context", provider: "codex-multi-agent", independent: true, priorScoresVisible: false, promptPath, promptDigest: promptDigest(promptPath), attestation: { candidateCommit: "a".repeat(40), promptPath, runRecordsInspected: false, generatedReportsInspected: false, editsMade: false, attestedAt: "2026-07-16T12:00:00Z" } }
       : { class: "deterministic", label: id, independent: false, priorScoresVisible: false },
     criterionResults: judgeClass === "holdout" ? criteria : [],
-    ...(judgeClass === "holdout" ? { decisionRecord: decisionRecord(), blockingFindings: [] } : {}),
+    decisionRecord: decisionRecord(),
+    ...(judgeClass === "holdout" ? { blockingFindings: [] } : {}),
     openDisagreements: [],
     overrides: [],
     reopenTriggersReviewed: [...contract.requiredReopenTriggers],
@@ -140,6 +141,22 @@ test("deterministic records require canonical runner and captured output provena
   assert.match(errors, /execution timing/);
   assert.match(errors, /retained output log/);
   assert.match(errors, /human-readable output log/);
+});
+
+test("deterministic records require complete decision governance under the current contract", () => {
+  const changed = run("missing-deterministic-decision");
+  delete changed.decisionRecord;
+  seal(changed);
+  assert.match(validate(changed, { contract }).join("\n"), /decision record must contain every decision dimension/);
+});
+
+test("historical contract versions retain their original deterministic decision rule", () => {
+  const historical = JSON.parse(readFileSync(path.join(repoRoot, "evals/_shared/contracts/2.4.0.json"), "utf8"));
+  const changed = run("historical-deterministic");
+  changed.contract = { id: historical.id, version: historical.version, digest: contractDigest(historical) };
+  delete changed.decisionRecord;
+  seal(changed);
+  assert.doesNotMatch(validate(changed, { contract: historical }).join("\n"), /decision record/);
 });
 
 test("holdouts must be independent, blind, normalized, and prompt-bound", () => {

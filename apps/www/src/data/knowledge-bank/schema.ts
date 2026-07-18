@@ -280,6 +280,13 @@ export const proofCoverageTargetSchema = z.object({
   ]),
   sourceIds: z.array(stableIdSchema).default([]),
   researchInquiryIds: z.array(stableIdSchema).default([]),
+  projectionBindings: z.array(z.object({
+    surface: z.string().min(1),
+    sourceFile: z.string().min(1),
+    claimId: stableIdSchema,
+    projection: claimProjectionSchema.shape.key,
+    requiredPhrases: z.array(z.string().min(1)).min(1)
+  })).default([]),
   nextAction: z.string().min(1),
   reviewedAt: z.iso.date()
 });
