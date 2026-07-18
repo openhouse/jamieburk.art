@@ -715,7 +715,7 @@ const workItemsInput = [
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Screenshots and additional archive links need approval; the approximate aggregate adoption wording is approved through the public-safe proof record.",
+        "Screenshots and additional archive links need approval; the exact July 2017 database measure is approved through the public-safe proof record.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }

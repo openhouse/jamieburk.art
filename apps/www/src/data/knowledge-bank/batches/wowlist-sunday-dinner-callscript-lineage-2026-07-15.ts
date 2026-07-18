@@ -34,6 +34,7 @@ export const wowListSundayDinnerCallScriptLineageBatch20260715: {
         "SRC-WOWLIST-PRODUCTION-DB-SNAPSHOTS-2016-2017",
         "SRC-WOWLIST-POPULAR-VOTE-DOMAIN-COMMIT-2016",
         "SRC-SUNDAY-DINNER-OPERATING-WORKBOOK-2026",
+        "SRC-SUNDAY-DINNER-APPROVED-AGGREGATE-HISTORY-2026",
         "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026",
         "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017"
       ],
@@ -128,6 +129,27 @@ export const wowListSundayDinnerCallScriptLineageBatch20260715: {
       protectedLocatorId: "ARCHIVE-SUNDAY-DINNER-OPERATING-WORKBOOK-2026"
     },
     {
+      id: "SRC-SUNDAY-DINNER-APPROVED-AGGREGATE-HISTORY-2026",
+      title: "Sunday Dinner / 196 approved aggregate project history",
+      author: "Jamie Burkart; public-safe review by Codex",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: reviewedAt,
+      publicCitation:
+        "Jamie Burkart-approved aggregate project history for Sunday Dinner / 196 Artists Residency, reviewed July 2026; participant-level records not published.",
+      supportsGenerally: [
+        "public-safe lower-bound wording of 300+ gatherings and 20+ resident artists",
+        "Jamie's stewardship of repeatable hosting, onboarding, facilitation, documentation, and continuity systems"
+      ],
+      doesNotEstablish: [
+        "audited attendance or unique-participant totals",
+        "Jamie as sole author of the participant-made practice",
+        "permission to publish resident identities, proposals, access details, or media"
+      ],
+      protectedLocatorId: "ARCHIVE-SUNDAY-DINNER-APPROVED-AGGREGATE-HISTORY-2026"
+    },
+    {
       id: "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026",
       title: "Call Script Facebook Page",
       organization: "Call Script",
@@ -189,6 +211,19 @@ export const wowListSundayDinnerCallScriptLineageBatch20260715: {
       project: "wowlist",
       assertion:
         "Three production snapshots show WOW List growing from 995 users and 10,136 posts/events in June 2016 to 1,846 users and 16,142 posts/events in July 2017.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: [],
+      publicSafe: true,
+      reviewedAt,
+      reviewedBy
+    },
+    {
+      id: "AST-WOWLIST-PUBLIC-SCALE-LOWER-BOUNDS-2017",
+      sourceId: "SRC-WOWLIST-PRODUCTION-DB-SNAPSHOTS-2016-2017",
+      project: "wowlist",
+      assertion:
+        "The July 22, 2017 production snapshot totals of 1,846 users and 16,142 posts/events support public-safe lower-bound wording of 1,800+ users and 16,000+ posts/events.",
       relationship: "supports",
       confidence: "high",
       candidateClaimIds: [],
@@ -273,6 +308,19 @@ export const wowListSundayDinnerCallScriptLineageBatch20260715: {
       relationship: "bounds",
       confidence: "high",
       candidateClaimIds: ["CLM-SUNDAY-DINNER-FACEBOOK-MILESTONES"],
+      publicSafe: true,
+      reviewedAt,
+      reviewedBy
+    },
+    {
+      id: "AST-SUNDAY-DINNER-PUBLIC-SCALE-LOWER-BOUNDS-2026",
+      sourceId: "SRC-SUNDAY-DINNER-APPROVED-AGGREGATE-HISTORY-2026",
+      project: "sunday-dinner",
+      assertion:
+        "Jamie's approved aggregate project history supports public-safe lower-bound wording of 300+ gatherings and 20+ resident artists within the participant-made Sunday Dinner / 196 Artists Residency practice.",
+      relationship: "supports",
+      confidence: "moderate",
+      candidateClaimIds: [],
       publicSafe: true,
       reviewedAt,
       reviewedBy

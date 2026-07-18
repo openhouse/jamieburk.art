@@ -769,10 +769,13 @@ function semanticStem(token) {
 }
 
 function semanticTokens(value) {
+  const normalized = String(value)
+    .toLowerCase()
+    .replace(/(?<=\d),(?=\d)/g, "");
   return new Set(
-    (String(value).toLowerCase().match(/[a-z0-9]+/g) ?? [])
+    (normalized.match(/[a-z0-9]+/g) ?? [])
       .map(semanticStem)
-      .filter((token) => token.length > 2 && !semanticStopwords.has(token))
+      .filter((token) => (/^\d+$/.test(token) || token.length > 2) && !semanticStopwords.has(token))
   );
 }
 
@@ -811,25 +814,84 @@ export function statementProofSemanticCoverage(statement, proofInput) {
   );
 }
 
+function stableProofEvidenceBasis(proof, bank) {
+  const claims = (proof.supportingClaimIds ?? [])
+    .map((id) => bank.claims.find((claim) => claim.id === id))
+    .filter(Boolean)
+    .map((claim) => ({
+      internalClaim: claim.internalClaim,
+      projectionText: claim.projections.map((projection) => projection.text),
+      evidenceSupport: claim.evidence.flatMap((item) => item.supports)
+    }));
+  const sources = (proof.supportingSourceIds ?? [])
+    .map((id) => bank.sources.find((source) => source.id === id))
+    .filter(Boolean)
+    .map((source) => ({
+      title: source.title,
+      publicCitation: source.publicCitation,
+      supportsGenerally: source.supportsGenerally
+    }));
+  const assertions = (proof.supportingAssertionIds ?? [])
+    .map((id) =>
+      bank.sourceAssertions.find((assertion) => assertion.id === id)
+    )
+    .filter(Boolean)
+    .map((assertion) => assertion.assertion);
+  const inquiries = (proof.supportingResearchInquiryIds ?? [])
+    .map((id) =>
+      bank.researchInquiries.find((inquiry) => inquiry.id === id)
+    )
+    .filter(Boolean)
+    .map((inquiry) => ({
+      question: inquiry.question,
+      resultStatus: inquiry.resultStatus,
+      findings: inquiry.findings,
+      publicSummary: inquiry.publicSummary
+    }));
+  return JSON.stringify({ claims, sources, assertions, inquiries });
+}
+
 export function stableProofEvidenceCoverage(statement, proofInput, bank) {
   const proofs = (Array.isArray(proofInput) ? proofInput : [proofInput]).filter(
     Boolean
   );
-  const linkedEvidence = proofs.flatMap((proof) => [
-    ...(proof.supportingClaimIds ?? []).map((id) =>
-      bank.claims.find((claim) => claim.id === id)
-    ),
-    ...(proof.supportingSourceIds ?? []).map((id) =>
-      bank.sources.find((source) => source.id === id)
-    ),
-    ...(proof.supportingAssertionIds ?? []).map((id) =>
+  return statementSemanticCoverage(
+    statement,
+    proofs.map((proof) => stableProofEvidenceBasis(proof, bank)).join(" ")
+  );
+}
+
+export function stableProofQuantitativeFindings(statement, proofInput, bank) {
+  const proofs = (Array.isArray(proofInput) ? proofInput : [proofInput]).filter(
+    Boolean
+  );
+  const assertions = proofs
+    .flatMap((proof) => proof.supportingAssertionIds ?? [])
+    .map((id) =>
       bank.sourceAssertions.find((assertion) => assertion.id === id)
-    ),
-    ...(proof.supportingResearchInquiryIds ?? []).map((id) =>
-      bank.researchInquiries.find((inquiry) => inquiry.id === id)
     )
-  ]).filter(Boolean);
-  return statementSemanticCoverage(statement, JSON.stringify(linkedEvidence));
+    .filter(Boolean);
+  const quantitativeClauses = statement
+    .split(/[.;]|\s+\b(?:and|but|while)\b\s+|,\s+(?=(?:and|but)\b)/i)
+    .map((clause) => normalizedText(clause))
+    .filter((clause) =>
+      /\b\d[\d,+.-]*\b/.test(
+        clause.replace(/\b196 Artists Residency\b/gi, "")
+      )
+    );
+
+  return quantitativeClauses
+    .map((clause) => {
+      const coverages = assertions.map((assertion) =>
+        statementSemanticCoverage(clause, assertion.assertion)
+      );
+      const bestCoverage = coverages.reduce(
+        (best, coverage) => (coverage.score > best.score ? coverage : best),
+        { score: 0, matched: [], statementTokens: [...semanticTokens(clause)] }
+      );
+      return { clause, coverage: bestCoverage };
+    })
+    .filter(({ coverage }) => coverage.score < 0.3);
 }
 
 function claimSemanticBasis(claim) {
@@ -891,7 +953,8 @@ const semanticRiskFamilies = new Map([
   ["causal-certainty", /\b(?:brought about|caused|guaranteed|ensured|drove|decisive reason|decisive cause|made [^.?!;]{0,80} happen|responsible for (?:the )?(?:whole|entire|all)|single[ -]?handedly delivered|outcome (?:followed|resulted|came) directly from|directly resulted from|as a direct result of [^.?!;]{0,80}(?:intervention|work|action))\b/i],
   ["official-status", /\b(?:official|officially|certified|endorsed)\b/i],
   ["current-status", /\b(?:current|currently|live|ongoing|remains? operational|still operating|operational today)\b/i],
-  ["completeness", /\b(?:all|every|entire|complete|completely|full corpus|100\s*%)\b/i]
+  ["completeness", /\b(?:all|every|entire|complete|completely|full corpus|100\s*%)\b/i],
+  ["reach-adoption", /\b(?:reach|reached|reaching|adopt|adopted|adoption)\b/i]
 ]);
 
 function riskFamilies(value) {
@@ -1029,6 +1092,17 @@ function governedStatementFindings(statement, bank, source, label) {
     findings.push(
       `${label} contains a quantity without a stable source assertion`
     );
+  }
+  if (requiresStableEvidenceIdentity) {
+    for (const unsupported of stableProofQuantitativeFindings(
+      statement.text,
+      resolvedProofs,
+      bank
+    )) {
+      findings.push(
+        `${label} quantitative clause lacks proposition-level assertion support: ${unsupported.clause}`
+      );
+    }
   }
   if (requiresStableEvidenceIdentity && resolvedProofs.length > 0) {
     const edgeCoverage = stableProofEvidenceCoverage(
@@ -2505,6 +2579,19 @@ function makeResult(id, findings, evidence) {
   };
 }
 
+export function namesFormalInstitutionalDecision(value) {
+  const text = String(value);
+  return (
+    /\b(?:Council|Office|Agency|Board)\b[^.]{0,120}\b(?:adopted|announced|authorized|created|dismantl(?:ed|ing)|enacted|required|approved|voted|passed|signed|accepted)\b/i.test(
+      text
+    ) ||
+    /\bCity\b[^.]{0,120}\b(?:adopted|announced|authorized|created|dismantl(?:ed|ing)|enacted|required|approved|voted|passed|signed|accepted)\b/i.test(
+      text
+    ) ||
+    /\b(?:Intro(?:duction)?|Local Law|Ordinance|Resolution)\s+\d[\w.-]*/i.test(text)
+  );
+}
+
 export function evaluateKnowledgeBank(
   suite,
   bank,
@@ -3090,7 +3177,7 @@ export function evaluateKnowledgeBank(
         findings["KB-007"].push(`${claim.id} classifies a contribution without naming Jamie's action`);
       } else if (
         semanticClass === "institutional-outcome" &&
-        !/(council|city|office|agency|board|legislation|law|ordinance|resolution|signed|passed|authorized|enacted|dismantling|institution)/i.test(claim.internalClaim)
+        !namesFormalInstitutionalDecision(claim.internalClaim)
       ) {
         findings["KB-007"].push(
           `${claim.id} classifies an institutional outcome without naming a formal institution or decision`

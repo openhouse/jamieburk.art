@@ -526,6 +526,8 @@ export const proofClaims: ProofClaim[] = [
       "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP"
     ],
     supportingAssertionIds: [
+      "AST-WOWLIST-DB-SCALE-2016-2017",
+      "AST-WOWLIST-PUBLIC-SCALE-LOWER-BOUNDS-2017",
       "AST-WOWLIST-CITY-REGION-50-POST-THRESHOLD-2017"
     ],
     supportingSourceIds: ["SRC-WOWLIST-PRODUCTION-DB-SNAPSHOTS-2016-2017"],
@@ -570,8 +572,14 @@ export const proofClaims: ProofClaim[] = [
       "CLM-SUNDAY-DINNER-FACEBOOK-MILESTONES",
       "CLM-SUNDAY-DINNER-100TH-PUBLIC-TRACE"
     ],
-    supportingAssertionIds: ["AST-SUNDAY-DINNER-WORKBOOK-SEQUENCE-2021"],
-    supportingSourceIds: ["SRC-SUNDAY-DINNER-OPERATING-WORKBOOK-2026"],
+    supportingAssertionIds: [
+      "AST-SUNDAY-DINNER-WORKBOOK-SEQUENCE-2021",
+      "AST-SUNDAY-DINNER-PUBLIC-SCALE-LOWER-BOUNDS-2026"
+    ],
+    supportingSourceIds: [
+      "SRC-SUNDAY-DINNER-OPERATING-WORKBOOK-2026",
+      "SRC-SUNDAY-DINNER-APPROVED-AGGREGATE-HISTORY-2026"
+    ],
     guardrail:
       "Name Jamie's stewardship without assigning him authorship of participants' work or sole creation of the collective practice. Keep the page summary-only; named participants, photos, and artifacts require consent and approval.",
     doNotSay: [

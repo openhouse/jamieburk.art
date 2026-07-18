@@ -10,6 +10,7 @@ import {
   documentRealizesProjection,
   evaluateKnowledgeBank,
   fileInventoryFingerprint,
+  namesFormalInstitutionalDecision,
   governedStatementSemanticCoverage,
   governedStatementUnsupportedClauses,
   projectionDecisionFingerprint,
@@ -23,6 +24,7 @@ import {
   resumeVisibleBlocks,
   resumeSubstantiveStatements,
   routeRealizesProjection,
+  stableProofQuantitativeFindings,
   stableProofEvidenceCoverage,
   statementProofSemanticCoverage,
   validateHybridReportCandidate,
@@ -586,6 +588,11 @@ test("authored case-study prose resolves to stable knowledge-bank identities", (
       `${statement.id} has only ${coverage.matched.length}/${coverage.statementTokens.length} substantively supported tokens across stable evidence edges`
     );
     if (/\b\d[\d,+.-]*\b/.test(statement.text)) {
+    assert.deepEqual(
+      stableProofQuantitativeFindings(statement.text, resolvedProofs, knowledgeBank),
+      [],
+      `${statement.id} has an unsupported quantitative clause`
+    );
       assert.ok(
         resolvedProofs.some(
           (proof) => (proof.supportingAssertionIds ?? []).length > 0
@@ -601,6 +608,20 @@ test("authored case-study prose resolves to stable knowledge-bank identities", (
       proofById.get("wowlist-community-platform"),
       knowledgeBank
     ).score < 0.15
+  );
+  assert.ok(
+    stableProofQuantitativeFindings(
+      "The platform served 99 satellite colonies.",
+      proofById.get("wowlist-community-platform"),
+      knowledgeBank
+    ).length > 0
+  );
+  assert.match(
+    proofSemanticBoundaryFindings(
+      "WOWList reached 35 cities and organizers adopted it.",
+      proofById.get("wowlist-community-platform")
+    ).join("\n"),
+    /reach-adoption/
   );
 });
 
@@ -668,6 +689,14 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
   );
 
   assert.equal(claim.maturity, "confirmed-with-boundary");
+  const antiClaims = readFileSync("docs/knowledge-bank/anti-claims.md", "utf8");
+  assert.match(handoffSource.title, /handoff recollection/i);
+  assert.doesNotMatch(handoffSource.publicCitation, /first-person confirmation/i);
+  assert.ok(
+    handoffSource.doesNotEstablish.some((item) => /authority to decide or execute/i.test(item))
+  );
+  assert.doesNotMatch(antiClaims, /Jamie confirms that he transitioned/i);
+
   assert.equal(claim.projectionEligibility, "eligible");
   assert.match(claim.internalClaim, /CCED Board voted on July 16, 2019/);
   assert.match(claim.internalClaim, /Council adopted Resolution 190649/);
@@ -740,8 +769,6 @@ test("collective semantic classes and documented baseline stay complete", () => 
 });
 
 test("institutional outcomes name a formal institution or decision-maker", () => {
-  const institutionalPattern =
-    /(council|city|office|agency|board|legislation|law|ordinance|resolution|signed|passed|authorized|enacted|dismantling|institution)/i;
   const institutionalClaims = Object.entries(
     collectiveCreditPolicy.claimSemanticClasses
   )
@@ -753,13 +780,21 @@ test("institutional outcomes name a formal institution or decision-maker", () =>
   assert.ok(institutionalClaims.length > 0);
   for (const claim of institutionalClaims) {
     assert.ok(claim, "institutional semantic class references a missing claim");
-    assert.match(claim.internalClaim, institutionalPattern);
+    assert.equal(namesFormalInstitutionalDecision(claim.internalClaim), true);
   }
   assert.equal(
     collectiveCreditPolicy.claimSemanticClasses[
       "CLM-KCTH-X-SELF-REPORTED-TIRE-OUTCOMES"
     ],
     "metric-observation"
+  );
+  assert.equal(
+    namesFormalInstitutionalDecision("An institution had an outcome."),
+    false
+  );
+  assert.equal(
+    namesFormalInstitutionalDecision("The city had an outcome."),
+    false
   );
 });
 

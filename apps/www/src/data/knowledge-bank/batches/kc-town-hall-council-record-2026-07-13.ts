@@ -152,21 +152,22 @@ export const kcTownHallCouncilRecordBatch20260713: {
     },
     {
       id: "SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026",
-      title: "Jamie Burkart KC Town Hall handoff confirmation",
+      title: "Jamie Burkart KC Town Hall handoff recollection",
       author: "Jamie Burkart",
       kind: "project-archive",
       visibility: "protected",
       preservationStatus: "private",
       capturedAt: "2026-07-14",
       publicCitation:
-        "Jamie Burkart, first-person confirmation of the KC Town Hall project handoff, July 14, 2026. Underlying context not published.",
+        "Jamie Burkart, first-person recollection of a KC Town Hall project handoff, July 14, 2026. Recollection held pending corroboration; underlying context not published.",
       supportsGenerally: [
         "Jamie's first-person report that he transitioned KC Town Hall to a mission-aligned organization when his stewardship concluded"
       ],
       doesNotEstablish: [
         "the recipient organization's identity",
         "the handoff date or terms",
-        "the project's present status under the receiving organization"
+        "the project's present status under the receiving organization",
+        "who held authority to decide or execute the handoff"
       ]
     }
   ],
