@@ -1,0 +1,348 @@
+{
+  "schemaVersion": "2.2.0",
+  "id": "composite-2.5.0-holdout-b-evaluation-archival-2-5-20",
+  "iteration": 20,
+  "recordedAt": "2026-07-18T14:40:45.537Z",
+  "previousRunId": "composite-2.5.0-holdout-a-public-sector-editorial-2-5-19",
+  "previousRunDigest": "91815e57a58d87783959c0bda89ef5a95079d68bed443c560593fbb426e7d563",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.5.0",
+    "digest": "58d01b7fa3008b4f1251f26c2e53ed58b9edd9c9fb99a6d7f68f343192988f29"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "d71cef7794be0eb5f446b98f4df981924bf159a2",
+    "tree": "24df9e497bbff3d770ce8dbcd6831ec7a1f571d6",
+    "governedInputDigest": "ec50bd3b88c94faa60d46c6439d1ec97fc4cbf0aa19c4bdd77b30ab7b309c5ee"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-b-evaluation-archival-2-5",
+    "sessionId": "019f75a0-1ea7-7c01-93f4-38dc496647b1",
+    "reviewerClass": "model-context",
+    "provider": "codex-multi-agent",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/holdout-b.md",
+    "promptDigest": "152dfaa5c7fad30491404fda1b56b61fd868d402fcb3522f588d548459c8e17c",
+    "attestation": {
+      "candidateCommit": "d71cef7794be0eb5f446b98f4df981924bf159a2",
+      "promptPath": "evals/_shared/holdout-b.md",
+      "runRecordsInspected": false,
+      "generatedReportsInspected": false,
+      "editsMade": false,
+      "attestedAt": "2026-07-18T14:36:44Z"
+    }
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "/ - apps/www/src/components/Hero.tsx:8-20 names Technical Project Manager - Product Operations & Implementation, Jamie's operating contribution, and the concrete system outputs in the first viewport.",
+        "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:87-126 provides an immediate role-specific proof map.",
+        "/resume - apps/www/src/app/resume/page.tsx:20-37 repeats the target role and gives direct resume and contact actions."
+      ],
+      "risks": [
+        "The required five privacy-safe real-reader sessions remain open, so first-viewport comprehension has not received the required external human confirmation."
+      ],
+      "rationale": "The target role, operating contribution, and next proof actions are immediate and repeated coherently across the primary hiring path."
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 4,
+      "evidence": [
+        "/work/callnyc - apps/www/src/content/work/callnyc.mdx:3-28 and 60-75 bind consequential statements and the cleared project mark to claim and citation records with explicit non-affiliation limits.",
+        "apps/www/src/data/proofs.ts:103-132 records the HJE revenue statement as careful support, contribution wording, protected boundaries, and prohibited causal claims.",
+        "scripts/lib/citation-validation.mjs:37-231 checks duplicate IDs, bidirectional intake/observation edges, evidence boundaries, authorized projections, protected locators, and public citation surfaces."
+      ],
+      "risks": [
+        "scripts/lib/eval-contract.mjs:263-275 and scripts/lib/launch-evals.mjs:323-350 accept retained evidence paths without enforcing repository containment.",
+        "scripts/lib/launch-evals.mjs:354-357 accepts arbitrary nonempty labels and values for approval and deployment evidence rather than matching the declared evidence requirements.",
+        "Dependency-backed citation and projection tests could not be executed in this frozen checkout because dependencies were absent; the static implementation was reviewed instead."
+      ],
+      "rationale": "The public claim layer is unusually careful and inspectable, but the certification evidence validators have material trust-boundary defects that prevent a top score."
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "/ - apps/www/src/components/Hero.tsx:17-20 frames emerging, stakeholder-heavy work as requirements, workflows, documentation, launch support, onboarding, and handoffs.",
+        "/about - apps/www/src/app/about/page.tsx:23-41 describes still-forming operating structure without blaming teams and connects it to concrete practices.",
+        "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:90-95 translates the framing into specific operating artifacts."
+      ],
+      "risks": [],
+      "rationale": "The language normalizes under-formed structure while staying precise about the professional work used to make it actionable."
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 4,
+      "evidence": [
+        "/ - apps/www/src/app/page.tsx:17-75 offers a labeled Start here path with role-fit, case-study, resume, and collaborator routes.",
+        "/work/* - apps/www/src/components/CaseStudyLayout.tsx:20-54 keeps role, summary, content, evidence, artifacts, links, credits, and the project record in a consistent order.",
+        "/work/* - apps/www/src/components/CaseStudyBlocks.tsx:150-170 collapses detailed publication governance by default."
+      ],
+      "risks": [
+        "The homepage still presents five Start here choices before the proof strip and selected systems, and several case studies repeat Context, What was unclear, What became usable, and Transferable proof language."
+      ],
+      "rationale": "The hierarchy is clear and secondary governance is appropriately collapsed, though the main route still carries some repeated explanation and choice density."
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4,
+      "evidence": [
+        "/work/harry-j-epstein - apps/www/src/content/work/harry-j-epstein.mdx:13-37 identifies what became usable, Jamie's direct actions, bounded impact, and hiring relevance.",
+        "/work/fair-rent-nyc - apps/www/src/content/work/fair-rent-nyc.mdx:62-92 makes campaign memory usable, names Jamie's contribution, and preserves collective credit.",
+        "/work/callnyc - apps/www/src/content/work/callnyc.mdx:45-104 states Jamie's build action, the resident pathway, outcome evidence, and transferable role fit before the archive disclaimer."
+      ],
+      "risks": [
+        "Most representative-artifact entries are descriptive cards rather than inspectable artifacts, so hiring readers still have to accept prose for several key operating claims."
+      ],
+      "rationale": "Jamie, the usable result, and role relevance are visible on key proof pages, while collective and publication boundaries remain available without dominating the principal path."
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 5,
+      "evidence": [
+        "/work/fair-rent-nyc - apps/www/src/content/work/fair-rent-nyc.mdx:54-60 and 68-86 explicitly preserve coalition accomplishment, collaborator agency, and protected legal, strategy, stakeholder, and correspondence boundaries.",
+        "apps/www/src/data/work.ts:247-275 requires collective-work language, lists collaborators, and separates known, open, and protected material.",
+        "docs/knowledge-bank/approval-register.md:24-47 records approved wording, collective outcome boundaries, and pending rights and corroboration gates."
+      ],
+      "risks": [
+        "Collaborator corroboration and artifact/media rights clearance remain external human gates and can still change publication boundaries."
+      ],
+      "rationale": "Jamie's contribution, collective outcomes, collaborator credit, and protected absences are consistently separated and mutually reinforcing."
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "/work/callnyc - apps/www/src/content/work/callnyc.mdx:60-75 and apps/www/src/components/PublicArtifactFigure.tsx:24-47 render one cleared project mark with source and non-affiliation boundary.",
+        "/work/* - apps/www/src/components/CaseStudyBlocks.tsx:43-61 renders Representative artifacts as text-only cards from apps/www/src/data/work.ts.",
+        "apps/www/src/data/work.ts:150-156 and 341-349 explicitly state that HJE screenshots and CallNYC interface screenshots remain pending."
+      ],
+      "risks": [
+        "The primary HJE, FairRentNYC, WOWList, and Sunday Dinner proof remains largely text-based, and the repeated artifact cards can read as descriptions of evidence rather than evidence itself."
+      ],
+      "rationale": "The system is coherent and one bounded visual artifact is inspectable, but key cases remain text-heavy and several named artifact types are represented only by prose."
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 4,
+      "evidence": [
+        "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:11-73 connects delivery coordination, risk tracking, planning, dependencies, onboarding, reporting, and handoffs to a cross-project proof map.",
+        "/work/harry-j-epstein - apps/www/src/content/work/harry-j-epstein.mdx:19-43 describes incremental releases, stakeholder translation, analytics limits, workflows, and long-term stewardship.",
+        "/work/fair-rent-nyc - apps/www/src/content/work/fair-rent-nyc.mdx:62-94 connects running minutes, action trackers, decisions, sources, follow-up, and continuity to collaborator use."
+      ],
+      "risks": [
+        "Several operating artifacts remain summarized rather than shown, and collaborator corroboration is still open for sensitive collective work."
+      ],
+      "rationale": "Specific workflows, launch support, decision records, adoption context, and handoffs are connected across domains, but some examples remain public-safe summaries rather than independently inspectable artifacts."
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 4,
+      "evidence": [
+        "/about - apps/www/src/app/about/page.tsx:35-46 explicitly connects artistic, participatory, civic, technical, and social practice through inhabited systems, memory, place, participation, and relationships.",
+        "/work/wowlist - apps/www/src/content/work/wowlist.mdx:1-44 grounds the connection in a co-built participation and event-distribution system.",
+        "/work/196-sunday-dinner - apps/www/src/content/work/196-sunday-dinner.mdx:1-28 grounds it in recurring hospitality, onboarding, facilitation, documentation, continuity, and privacy boundaries."
+      ],
+      "risks": [
+        "The continuity is stated clearly but remains lightly visualized; the relevant WOWList and Sunday Dinner pages are short and do not yet offer a decisive approved artifact."
+      ],
+      "rationale": "A restrained public threshold explains how artistic and participatory practice changes operating structure without displacing the technical role, though the project proof remains mostly textual."
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 3,
+      "evidence": [
+        "evals/launch-readiness/evals.json:27-69 defines seven decision dimensions, four human authority actions, five reopen triggers, and non-final model acceptance.",
+        "scripts/lib/eval-contract.mjs:278-330 validates holdout identity, prompt binding, score floors, synchronized decision records, external gates, and no model production authority.",
+        "scripts/run-browser-evals.mjs:223-292 can nevertheless declare all three runtime cases passed while debug mode skips keyboard and citation cases, and scripts/lib/launch-evals.mjs:332-350 trusts that report's self-declared runtime IDs and passed boolean."
+      ],
+      "risks": [
+        "Inherited BROWSER_EVAL_DEBUG_ROUTE can create an accepted browser result with empty keyboard and citation evidence.",
+        "Retained command and browser-report paths are not confined to approved repository output roots.",
+        "Approval and deployment evidence can use arbitrary nonempty labels and values instead of the policy-required evidence labels and semantics."
+      ],
+      "rationale": "The decision vector and human authority policy are visible and thoughtfully modeled, but material validator gaps still allow incomplete or semantically empty evidence to pass, so governance remains incomplete in enforcement."
+    }
+  ],
+  "blockingFindings": [
+    "Browser coverage can be bypassed: scripts/run-composite-eval.mjs:42-45 inherits the ambient environment, while scripts/run-browser-evals.mjs:223-250 uses BROWSER_EVAL_DEBUG_ROUTE to test one responsive route and skip all keyboard and citation loops; lines 288-292 still declare all runtime IDs and pass because empty arrays satisfy every(), and scripts/lib/launch-evals.mjs:332-350 does not verify case cardinality or per-case coverage.",
+    "Evaluation evidence paths are not contained: scripts/lib/eval-contract.mjs:263-275 and scripts/lib/launch-evals.mjs:323-350 resolve record-controlled output and report paths with path.join but do not reject .. traversal or require approved generated-output roots, so a structurally valid record can hash and reuse files outside the repository, including private or stale artifacts.",
+    "Human and deployment gates accept semantically empty evidence: scripts/lib/launch-evals.mjs:354-357 checks only evidence-array length plus nonempty label/value strings and never matches labels to gate.evidenceRequired or validates values, allowing LR-HG-EXACT-SHA and LR-HG-PRODUCTION-SMOKE to be recorded as passed without the declared SHA, staging URL, deployment identifier, HTTP observations, resume digest, robots, or sitemap evidence."
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "Strong: the first viewport and role-specific proof page make Jamie legible as a Technical Project Manager focused on product operations and implementation.",
+        "evidence": [
+          "/ - apps/www/src/components/Hero.tsx:8-29",
+          "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:87-126"
+        ],
+        "unresolvedRisks": [
+          "Five privacy-safe real-reader sessions remain open."
+        ]
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "Strong but partly summarized: case studies name Jamie's build, translation, coordination, documentation, and stewardship actions across business, civic, and community contexts.",
+        "evidence": [
+          "/work/harry-j-epstein - apps/www/src/content/work/harry-j-epstein.mdx:19-25",
+          "/work/fair-rent-nyc - apps/www/src/content/work/fair-rent-nyc.mdx:62-74",
+          "/work/callnyc - apps/www/src/content/work/callnyc.mdx:45-58"
+        ],
+        "unresolvedRisks": [
+          "Collaborator corroboration remains open for collective work.",
+          "Several operating artifacts and screenshots remain pending."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "Good: the site repeatedly identifies resident pathways, campaign memory, e-commerce workflows, event distribution, and continuity systems as the usable results.",
+        "evidence": [
+          "/work/callnyc - apps/www/src/content/work/callnyc.mdx:77-104",
+          "/work/fair-rent-nyc - apps/www/src/content/work/fair-rent-nyc.mdx:62-80",
+          "/work/wowlist - apps/www/src/content/work/wowlist.mdx:9-26"
+        ],
+        "unresolvedRisks": [
+          "Key results remain text-heavy and are not yet supported by a small set of decisive approved artifacts."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "Strong breadth with a coherent throughline across civic technology, small-business operations, cultural infrastructure, coalition work, and knowledge systems.",
+        "evidence": [
+          "/about - apps/www/src/app/about/page.tsx:23-46",
+          "/work - apps/www/src/app/work/page.tsx:14-79",
+          "apps/www/src/data/work.ts:89-548"
+        ],
+        "unresolvedRisks": [
+          "The required real-reader gate must still confirm that breadth reads as focus rather than diffusion."
+        ]
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "Human authority is correctly named in policy, but validator enforcement is insufficient to prove approval or deployment actions from recorded evidence.",
+        "evidence": [
+          "evals/launch-readiness/evals.json:36-69",
+          "evals/_shared/contract.json requiredExternalGates and humanAuthority",
+          "scripts/lib/launch-evals.mjs:354-357"
+        ],
+        "unresolvedRisks": [
+          "All five external human gates remain open.",
+          "Approval and deployment evidence labels and values are not matched to policy requirements."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "The canonical claim and citation layers are careful, but certification evidence can be incomplete, self-declared, or loaded from uncontained paths.",
+        "evidence": [
+          "scripts/lib/citation-validation.mjs:37-231",
+          "scripts/lib/projection-consistency.mjs:70-190",
+          "scripts/lib/eval-contract.mjs:263-275",
+          "scripts/run-browser-evals.mjs:223-292"
+        ],
+        "unresolvedRisks": [
+          "Browser debug mode can pass without keyboard and citation evidence.",
+          "Command and browser evidence paths can escape approved output roots.",
+          "Dependency-backed citation and projection tests were not runnable in this dependency-free frozen checkout."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "Blocking technical defects remain in the evaluation protocol, and every external human gate remains open; the candidate is not accepted for pull-request review by this holdout.",
+        "evidence": [
+          "scripts/run-browser-evals.mjs:223-292",
+          "scripts/lib/eval-contract.mjs:263-275",
+          "scripts/lib/launch-evals.mjs:332-357",
+          "evals/_shared/contract.json requiredExternalGates"
+        ],
+        "unresolvedRisks": [
+          "five privacy-safe real-reader sessions",
+          "collaborator corroboration",
+          "artifact and media rights clearance",
+          "staging verification of the exact candidate SHA",
+          "Jamie approval of the exact production SHA",
+          "Browser coverage bypass",
+          "Uncontained evidence paths",
+          "Semantically empty approval and deployment evidence"
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked by this holdout; claim promotion remains subject to Jamie's source, consent, and public-safety review.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "Not invoked in this static review; collaborator corroboration remains an open external gate and any affected collaborator may still trigger a hold.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "No override was invoked; this model-context rejection remains reviewable by a human under the recorded override policy.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "The decision remains reopenable after the blocking validator defects are repaired or whenever any governed trigger occurs.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "All five governed triggers were considered exactly once. None closes or waives a human gate. New or contradictory evidence, changed consent or rights, a substantiated attribution dispute, source decay or corrected provenance, or a changed role or surface must reopen the relevant claim, boundary, and release review. Repair and retest of the three blocking evaluator defects is also required before this holdout result can be superseded for the unchanged candidate.",
+    "overrides": [],
+    "openDisagreements": [
+      "Whether text-only Representative artifacts cards should count as visual proof beyond a baseline score; this review assigns LR-JUDGE-VISUAL a 3 because CallNYC has one cleared bitmap while the other primary cases remain descriptive."
+    ],
+    "disagreementReview": "The visual-proof disagreement remains explicit and does not affect the rejection, which rests on independent certification blockers. No disagreement, override, or aggregate score grants production authority or closes any external human gate."
+  },
+  "openDisagreements": [
+    "Whether text-only Representative artifacts cards should count as visual proof beyond a baseline score; this review assigns LR-JUDGE-VISUAL a 3 because CallNYC has one cleared bitmap while the other primary cases remain descriptive."
+  ],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new or contradictory evidence",
+    "changed consent or rights",
+    "a substantiated attribution dispute",
+    "source decay or corrected provenance",
+    "a changed target role or public surface"
+  ],
+  "decision": {
+    "status": "revision-required",
+    "weightedScore": 4.14,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "Rejected for pull-request review. The portfolio is strong on role legibility, emerging-work framing, collective credit, and public-safe evidence boundaries, but the 2.5 certification machinery still admits incomplete browser coverage, uncontained evidence paths, and arbitrary human/deployment evidence. Acceptance would therefore overstate what the automated record proves. The five external human gates remain open, and this judgment is not production approval.",
+  "recordDigest": "024791afed50fd71dd0762bddfe816114cb848e5bba0ac12814bda1cdbeb3c32"
+}

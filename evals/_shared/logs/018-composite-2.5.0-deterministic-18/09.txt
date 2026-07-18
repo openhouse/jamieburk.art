@@ -1,0 +1,21 @@
+
+> test:knowledge-tools
+> node --test scripts/tests/knowledge-tools.test.mjs
+
+✔ intake creates a stable validated receipt without promoting a claim (5.363292ms)
+✔ duplicate source leads are preserved and labeled (1.174458ms)
+✔ private paths cannot enter an intake receipt (2.582709ms)
+✔ canonical source URLs remove tracking and normalize parameter order (0.174834ms)
+✔ source URLs have one comparison form (0.096709ms)
+✔ duplicate title comparison normalizes trailing and repeated whitespace (0.199458ms)
+✔ query distinguishes record classes and filters projects (0.2835ms)
+✔ active query excludes claims with only held projections (0.140583ms)
+✔ reports keep active and held knowledge visibly distinct (0.685667ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 205.56025
