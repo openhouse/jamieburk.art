@@ -47,6 +47,13 @@ defined by policy. An invoked override must record the human authority,
 rationale, evidence, and resulting boundary changes; an empty override array
 means no override was invoked.
 
+Each authority entry also carries a structured `humanDecision` and a
+`humanDecisionEvidence` array. Use `not-invoked` with an empty evidence array
+unless a concrete, public-safe human decision record is available. A recorded
+`refused`, `publication-hold`, or `reopened` decision is binding and prevents
+acceptance regardless of the numerical score. Context-separated model review
+cannot invent, resolve, or override a human decision.
+
 Jamie retains final authority over public truth, consent, and public projection.
 An affected collaborator may trigger an attribution hold. A human reviewer may
 override a model judgment only with recorded rationale, evidence, and resulting
@@ -107,6 +114,8 @@ Return JSON with this shape:
         "action": "promote-public-claim",
         "humanAuthority": "Jamie Burkart",
         "disposition": "Not invoked in this run",
+        "humanDecision": "not-invoked",
+        "humanDecisionEvidence": [],
         "modelHasFinalAuthority": false
       }
     ],

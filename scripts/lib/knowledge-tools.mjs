@@ -46,6 +46,35 @@ function existingReceipts() {
   });
 }
 
+function matchingIntake(receipt, existing) {
+  return existing.find((item) =>
+    (receipt.sourceUrl && item.sourceUrl && canonicalizeSourceUrl(item.sourceUrl) === receipt.sourceUrl) ||
+    (normalizedKey(item.title) === normalizedKey(receipt.title) &&
+      item.projectIds.some((project) => receipt.projectIds.includes(project)))
+  );
+}
+
+function matchingSource(receipt) {
+  return knowledgeBank.sources.find((source) =>
+    receipt.sourceUrl && [source.canonicalUrl, source.archiveUrl, source.assetUrl]
+      .filter(Boolean)
+      .some((url) => canonicalizeSourceUrl(url) === receipt.sourceUrl)
+  );
+}
+
+export function reconcileIntakeReceipt(receipt, existing) {
+  const duplicateOf = matchingIntake(receipt, existing) ?? matchingSource(receipt);
+  if (!duplicateOf) return intakeItemSchema.parse(receipt);
+  const boundary = `Potential duplicate of ${duplicateOf.id}; preserve this receipt and reconcile deliberately.`;
+  return intakeItemSchema.parse({
+    ...receipt,
+    disposition: "duplicate",
+    boundaries: receipt.boundaries.includes(boundary)
+      ? receipt.boundaries
+      : [...receipt.boundaries, boundary]
+  });
+}
+
 export function createIntakeReceipt(flags, now = new Date()) {
   for (const key of ["title", "project", "kind", "reason"]) {
     if (!flags[key]) throw new Error(`knowledge:intake requires --${key}`);
@@ -54,16 +83,6 @@ export function createIntakeReceipt(flags, now = new Date()) {
   const submittedAt = (flags.date ?? localDate);
   const sourceUrl = canonicalizeSourceUrl(flags.url);
   const existing = [...knowledgeBank.intakeItems, ...existingReceipts()];
-  const duplicateIntake = existing.find((item) =>
-    (sourceUrl && item.sourceUrl && canonicalizeSourceUrl(item.sourceUrl) === sourceUrl) ||
-    (normalizedKey(item.title) === normalizedKey(flags.title) && item.projectIds.includes(flags.project))
-  );
-  const duplicateSource = knowledgeBank.sources.find((source) =>
-    sourceUrl && [source.canonicalUrl, source.archiveUrl, source.assetUrl]
-      .filter(Boolean)
-      .some((url) => canonicalizeSourceUrl(url) === sourceUrl)
-  );
-  const duplicateOf = duplicateIntake ?? duplicateSource;
   const seed = [submittedAt, flags.project, flags.kind, flags.title, sourceUrl ?? ""].join("|");
   const suffix = createHash("sha256").update(seed).digest("hex").slice(0, 10).toUpperCase();
   const duplicateCount = existing.filter((item) => item.id.startsWith(`INTAKE-LEAD-${suffix}`)).length;
@@ -77,17 +96,16 @@ export function createIntakeReceipt(flags, now = new Date()) {
     reason: flags.reason,
     ...(sourceUrl ? { sourceUrl } : {}),
     visibility: flags.visibility ?? "public-safe",
-    disposition: duplicateOf ? "duplicate" : "captured",
+    disposition: "captured",
     sourceIds: [],
     observationIds: [],
     researchInquiryIds: [],
     boundaries: [
-      flags.boundary ?? "This is an intake lead, not a validated claim or authorization for public projection.",
-      ...(duplicateOf ? [`Potential duplicate of ${duplicateOf.id}; preserve this receipt and reconcile deliberately.`] : [])
+      flags.boundary ?? "This is an intake lead, not a validated claim or authorization for public projection."
     ]
   };
   if (containsPrivatePath(receipt)) throw new Error(`${receipt.id}: private filesystem paths are not allowed`);
-  return intakeItemSchema.parse(receipt);
+  return reconcileIntakeReceipt(receipt, existing);
 }
 
 export function writeIntakeReceipt(receipt) {
@@ -105,7 +123,8 @@ export function writeIntakeReceipt(receipt) {
   try {
     const receipts = existingReceipts();
     const matches = receipts.filter((item) => item.id === receipt.id || item.id.startsWith(`${receipt.id}-D`));
-    const persisted = matches.length ? { ...receipt, id: `${receipt.id}-D${matches.length + 1}` } : receipt;
+    const withUniqueId = matches.length ? { ...receipt, id: `${receipt.id}-D${matches.length + 1}` } : receipt;
+    const persisted = reconcileIntakeReceipt(withUniqueId, [...knowledgeBank.intakeItems, ...receipts]);
     appendFileSync(receiptPath, `${JSON.stringify(persisted)}\n`);
     return persisted;
   } finally {

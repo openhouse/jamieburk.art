@@ -6,6 +6,7 @@ import { createServer } from "node:net";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 import { loadLaunchEvalSuite, validateBrowserReportCoverage } from "./lib/launch-evals.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -14,6 +15,17 @@ const candidateCommit = execFileSync("git", ["rev-parse", "HEAD"], { cwd: repoRo
 const expectedOrigin = "https://staging.jamieburk.art";
 const chromePath = process.env.CHROME_BIN ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const outputPath = path.join(repoRoot, "reports/generated/browser-evals.json");
+const forbiddenEvidenceTokens = [...new Set([
+  ...knowledgeBank.sources
+    .filter((source) => source.visibility !== "public")
+    .flatMap((source) => [source.id, source.protectedLocatorId].filter(Boolean)),
+  ...knowledgeBank.claims
+    .filter((claim) => claim.status === "inference" || claim.status === "not-recovered" || claim.status === "disallowed")
+    .map((claim) => claim.id),
+  ...knowledgeBank.claims.flatMap((claim) => claim.projections
+    .filter((projection) => projection.status !== "active")
+    .map((projection) => projection.text))
+])].filter((value) => value.length >= 8);
 
 const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 const sha256 = (value) => createHash("sha256").update(value).digest("hex");
@@ -229,27 +241,66 @@ async function main() {
     for (const route of process.env.BROWSER_EVAL_DEBUG_ROUTE ? [] : keyboardCase.routes) for (const viewport of keyboardCase.viewports) {
       await navigate(route, viewport);
       await evaluate(client, sessionId, "document.activeElement?.blur(); document.body.focus(); true");
-      await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "Tab", code: "Tab", windowsVirtualKeyCode: 9 }, sessionId);
-      await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Tab", code: "Tab", windowsVirtualKeyCode: 9 }, sessionId);
-      const focus = await evaluate(client, sessionId, `(() => {
-        const active = document.activeElement;
-        const style = getComputedStyle(active);
-        return {
-          tag: active?.tagName ?? null,
-          href: active?.getAttribute('href') ?? null,
-          text: active?.textContent?.trim() ?? null,
-          mainExists: Boolean(document.querySelector('#main')),
-          visibleFocus: style.outlineStyle !== 'none' && style.outlineWidth !== '0px'
-        };
+      const focusableCount = await evaluate(client, sessionId, `(() => {
+        const selector = 'a[href], button:not([disabled]), summary, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+        return [...document.querySelectorAll(selector)].filter((item) => item.getClientRects().length > 0 && getComputedStyle(item).visibility !== 'hidden').length;
       })()`);
-      keyboard.push({ route, width: viewport[0], height: viewport[1], ...focus, passed: focus.tag === "A" && focus.href === "#main" && focus.mainExists && focus.visibleFocus });
+      const focusSequence = [];
+      for (let index = 0; index < focusableCount; index += 1) {
+        await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "Tab", code: "Tab", windowsVirtualKeyCode: 9 }, sessionId);
+        await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Tab", code: "Tab", windowsVirtualKeyCode: 9 }, sessionId);
+        focusSequence.push(await evaluate(client, sessionId, `(() => {
+          const selector = 'a[href], button:not([disabled]), summary, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+          const focusable = [...document.querySelectorAll(selector)].filter((item) => item.getClientRects().length > 0 && getComputedStyle(item).visibility !== 'hidden');
+          const active = document.activeElement;
+          const style = getComputedStyle(active);
+          const outlineVisible = style.outlineStyle !== 'none' && style.outlineWidth !== '0px';
+          const shadowVisible = style.boxShadow !== 'none';
+          return {
+            tag: active?.tagName ?? null,
+            href: active?.getAttribute('href') ?? null,
+            text: active?.textContent?.trim().slice(0, 120) ?? null,
+            domIndex: focusable.indexOf(active),
+            visibleFocus: outlineVisible || shadowVisible
+          };
+        })()`));
+      }
+      const domIndexes = focusSequence.map((item) => item.domIndex);
+      const logicalFocusOrder = domIndexes.every((value, index) => value === index);
+      const allFocusIndicatorsVisible = focusSequence.every((item) => item.visibleFocus);
+      const hrefs = focusSequence.map((item) => item.href).filter(Boolean);
+      const actions = {
+        email: hrefs.some((href) => href.startsWith("mailto:")),
+        linkedin: hrefs.some((href) => href.startsWith("https://linkedin.com/in/jamie-burkart")),
+        resume: hrefs.includes("/resume") || hrefs.some((href) => href.includes("Jamie-Burkart-Resume-Technical-Project-Manager.pdf"))
+      };
+      const first = focusSequence[0];
+      const mainExists = await evaluate(client, sessionId, "Boolean(document.querySelector('#main'))");
+      keyboard.push({
+        route,
+        width: viewport[0],
+        height: viewport[1],
+        focusableCount,
+        focusSequence,
+        mainExists,
+        logicalFocusOrder,
+        allFocusIndicatorsVisible,
+        actions,
+        passed: first?.tag === "A" && first?.href === "#main" && mainExists && logicalFocusOrder && allFocusIndicatorsVisible && focusSequence.length === focusableCount
+      });
     }
+    const keyboardActionCoverage = {
+      email: keyboard.some((item) => item.actions.email),
+      linkedin: keyboard.some((item) => item.actions.linkedin),
+      resume: keyboard.some((item) => item.actions.resume)
+    };
 
     const citationCase = suite.runtimeCases.find((item) => item.id === "LR-RUNTIME-CITATIONS");
     const citations = [];
     for (const route of process.env.BROWSER_EVAL_DEBUG_ROUTE ? [] : citationCase.routes) for (const viewport of citationCase.viewports) {
       await navigate(route, viewport);
       const semantics = await evaluate(client, sessionId, `(() => {
+        const forbiddenTokens = ${JSON.stringify(forbiddenEvidenceTokens)};
         const refs = [...document.querySelectorAll('a[role="doc-noteref"]')];
         const endnotes = [...document.querySelectorAll('section[role="doc-endnotes"]')];
         const notes = [...document.querySelectorAll('section[role="doc-endnotes"] ol > li')];
@@ -264,6 +315,8 @@ async function main() {
           labelsPresent: refs.every((ref) => Boolean(ref.getAttribute('aria-label'))),
           targetsExist: refs.every((ref) => document.querySelector(ref.getAttribute('href'))),
           backlinkTargetsExist: backlinks.every((link) => document.querySelector(link.getAttribute('href'))),
+          forbiddenEvidenceTokenCount: forbiddenTokens.length,
+          protectedOrOpenEvidenceRendered: forbiddenTokens.some((token) => document.body.innerText.includes(token)),
           firstRef: refs[0]?.getAttribute('href') ?? null,
           firstBacklink: backlinks[0]?.getAttribute('href') ?? null
         };
@@ -276,7 +329,7 @@ async function main() {
         const backlinkHash = await evaluate(client, sessionId, "location.hash");
         navigationPassed = refHash === semantics.firstRef && backlinkHash === semantics.firstBacklink;
       }
-      citations.push({ route, width: viewport[0], height: viewport[1], ...semantics, navigationPassed, passed: semantics.referenceCount > 0 && semantics.endnotesCount === 1 && semantics.noteCount > 0 && semantics.backlinkCount >= semantics.noteCount && semantics.uniqueIds && semantics.labelsPresent && semantics.targetsExist && semantics.backlinkTargetsExist && navigationPassed });
+      citations.push({ route, width: viewport[0], height: viewport[1], ...semantics, navigationPassed, passed: semantics.referenceCount > 0 && semantics.endnotesCount === 1 && semantics.noteCount > 0 && semantics.backlinkCount >= semantics.noteCount && semantics.uniqueIds && semantics.labelsPresent && semantics.targetsExist && semantics.backlinkTargetsExist && semantics.forbiddenEvidenceTokenCount > 0 && !semantics.protectedOrOpenEvidenceRendered && navigationPassed });
     }
 
     const report = {
@@ -288,6 +341,7 @@ async function main() {
       runtimeCaseIds: [responsiveCase.id, keyboardCase.id, citationCase.id],
       responsive,
       keyboard,
+      keyboardActionCoverage,
       citations,
       coverageMode: process.env.BROWSER_EVAL_DEBUG_ROUTE ? "debug-partial" : "full",
       passed: true,

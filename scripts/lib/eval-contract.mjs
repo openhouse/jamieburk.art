@@ -3,8 +3,12 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { validateDecisionRecord } from "./launch-evals.mjs";
+import {
+  hasBindingHumanRefusal,
+  validateDecisionRecord
+} from "./launch-evals.mjs";
 import { resolveRepoEvidencePath } from "./repo-evidence-path.mjs";
+import { normalizeSecurityText } from "./security-normalization.mjs";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const contractPath = path.join(repoRoot, "evals/_shared/contract.json");
@@ -47,25 +51,41 @@ function isGenerated(file, contract) {
   return contract.generatedOutputs.some((item) => file === item || file.startsWith(`${item.replace(/\/$/, "")}/`));
 }
 
-function walk(relativePath) {
-  const absolutePath = path.join(repoRoot, relativePath);
+function walkAtRoot(root, relativePath) {
+  const absolutePath = path.join(root, relativePath);
   if (!existsSync(absolutePath)) return [];
   if (!statSync(absolutePath).isDirectory()) return [relativePath];
-  return readdirSync(absolutePath).sort().flatMap((name) => walk(path.posix.join(relativePath, name)));
+  return readdirSync(absolutePath).sort().flatMap((name) => walkAtRoot(root, path.posix.join(relativePath, name)));
 }
 
-export function governedFiles(contract = loadEvalContract()) {
-  return [...new Set(contract.governedInputs.flatMap(walk))]
+export function governedFilesAtRoot(root, contract = loadEvalContract()) {
+  return [...new Set(contract.governedInputs.flatMap((input) => walkAtRoot(root, input)))]
     .filter((file) => !isGenerated(file, contract))
     .sort();
 }
 
-export function governedInputDigest(contract = loadEvalContract()) {
+export function governedFiles(contract = loadEvalContract()) {
+  return governedFilesAtRoot(repoRoot, contract);
+}
+
+export function governedInputDigestAtRoot(root, contract = loadEvalContract()) {
   const hash = createHash("sha256");
-  for (const file of governedFiles(contract)) {
-    hash.update(file).update("\0").update(readFileSync(path.join(repoRoot, file))).update("\0");
+  for (const file of governedFilesAtRoot(root, contract)) {
+    hash.update(file).update("\0").update(readFileSync(path.join(root, file))).update("\0");
   }
   return hash.digest("hex");
+}
+
+export function governedInputDigest(contract = loadEvalContract()) {
+  return governedInputDigestAtRoot(repoRoot, contract);
+}
+
+export function normalizeReviewerIdentity(value) {
+  try {
+    return normalizeSecurityText(String(value ?? "")).trim().toLocaleLowerCase();
+  } catch {
+    return "";
+  }
 }
 
 export function governedFilesAtCommit(commit, contract = loadEvalContract()) {
@@ -148,11 +168,20 @@ export function validateEvalContract(contract) {
     if (suite.digest !== sha256(content)) errors.push(`${suite.id}: declared suite digest is stale`);
   }
   if (contract.stopCondition?.consecutiveDeterministicPasses < 2) errors.push("stop condition needs two deterministic passes");
-  if (contract.stopCondition?.independentHoldouts < 2) errors.push("stop condition needs two independent holdouts");
+  const requiredHoldouts = contract.stopCondition?.contextSeparatedModelHoldouts ?? contract.stopCondition?.independentHoldouts;
+  if (requiredHoldouts < 2) errors.push("stop condition needs two context-separated model holdouts");
+  if (contract.requireReviewBundleBinding === true && (
+    contract.stopCondition?.identityAssurance !== "self-attested-model-context" ||
+    contract.stopCondition?.cryptographicIdentityRequired !== false
+  )) errors.push("current stop condition must describe model-context separation without claiming cryptographic identity proof");
   if (contract.stopCondition?.holdoutsReviewUnchangedCandidate !== true) errors.push("holdouts must review an unchanged candidate");
   if (contract.stopCondition?.priorScoresHiddenFromHoldouts !== true) errors.push("holdouts must not see prior scores");
   if (contract.humanAuthority?.modelHasFinalReleaseAuthority !== false) errors.push("models cannot have final release authority");
   if (contract.requireReviewerAttestation !== true) errors.push("current contract must require reviewer attestation");
+  if (contract.requireReviewBundleBinding !== true) errors.push("current contract must bind holdouts to the reviewed source bundle");
+  if (contract.requireBindingHumanDecisions !== true) errors.push("current contract must make human refusals and publication holds binding");
+  if (contract.requireCanonicalReviewerIdentity !== true) errors.push("current contract must canonicalize reviewer identity");
+  if (contract.reviewerProvider !== "codex-multi-agent") errors.push("current contract must name the supported model-context provider");
   if (contract.requireHumanReadableLogs !== true) errors.push("current contract must retain human-readable command logs");
   if (contract.requireDecisionRecordSynchronization !== true) errors.push("current contract must synchronize decision records");
   if (contract.requireDeterministicDecisionRecord !== true) errors.push("current contract must require deterministic decision records");
@@ -303,11 +332,19 @@ export function validateCompositeRunRecord(record, expected = {}) {
     if (record.judge.independent !== true) errors.push(`${record.id}: holdout must be independent`);
     if (record.judge.priorScoresVisible !== false) errors.push(`${record.id}: holdout cannot see prior scores`);
     if (record.judge.label !== record.judge.label?.trim() || !record.judge.label) errors.push(`${record.id}: holdout label must be normalized`);
+    if (contract?.requireCanonicalReviewerIdentity === true && record.judge.label !== normalizeReviewerIdentity(record.judge.label)) errors.push(`${record.id}: holdout label must use its canonical security-normalized form`);
     if (!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(record.judge.sessionId ?? "")) errors.push(`${record.id}: holdout needs a stable reviewer session UUID`);
     if (contract?.requireReviewerAttestation === true) {
       if (record.judge.reviewerClass !== "model-context" || !record.judge.provider?.trim()) errors.push(`${record.id}: holdout must identify its model context and provider`);
       const attestation = record.judge.attestation;
       if (attestation?.candidateCommit !== record.candidate.commit || attestation?.promptPath !== record.judge.promptPath) errors.push(`${record.id}: holdout attestation does not bind candidate and prompt`);
+      if (contract?.requireReviewBundleBinding === true && (
+        attestation?.candidateTree !== record.candidate.tree ||
+        attestation?.governedInputDigest !== record.candidate.governedInputDigest ||
+        attestation?.reviewBundleDigest !== record.candidate.governedInputDigest
+      )) errors.push(`${record.id}: holdout attestation does not bind the reviewed source bundle, candidate tree, and governed digest`);
+      if (contract?.requireReviewBundleBinding === true && attestation?.assurance !== "self-attested-model-context") errors.push(`${record.id}: holdout must state its reviewer identity assurance`);
+      if (contract?.reviewerProvider && record.judge.provider !== contract.reviewerProvider) errors.push(`${record.id}: holdout provider is not the governed model-context provider`);
       for (const field of ["runRecordsInspected", "generatedReportsInspected", "editsMade"]) if (attestation?.[field] !== false) errors.push(`${record.id}: holdout attestation requires ${field}=false`);
       if (!Number.isFinite(Date.parse(attestation?.attestedAt ?? ""))) errors.push(`${record.id}: holdout attestation needs a timestamp`);
     }
@@ -334,7 +371,10 @@ export function validateCompositeRunRecord(record, expected = {}) {
     (record.judge?.class === "holdout" && contract?.requireDecisionRecord === true) ||
     (record.judge?.class === "deterministic" && contract?.requireDeterministicDecisionRecord === true);
   if (needsDecisionRecord) {
-    errors.push(...validateDecisionRecord(launchSuite(), record.decisionRecord).map((error) => `${record.id}: ${error}`));
+    errors.push(...validateDecisionRecord(launchSuite(), record.decisionRecord, {
+      requireBindingHumanDecisions: contract?.requireBindingHumanDecisions === true
+    }).map((error) => `${record.id}: ${error}`));
+    if (record.decision?.status === "accepted-for-review" && hasBindingHumanRefusal(record.decisionRecord)) errors.push(`${record.id}: a binding human refusal, publication hold, or reopen decision prohibits acceptance`);
     if (contract?.requireDecisionRecordSynchronization === true && canonicalJson(record.openDisagreements) !== canonicalJson(record.decisionRecord?.openDisagreements)) errors.push(`${record.id}: top-level disagreements must match the decision record`);
     if (contract?.requireDecisionRecordSynchronization === true && canonicalJson(record.overrides) !== canonicalJson(record.decisionRecord?.overrides)) errors.push(`${record.id}: top-level overrides must match the decision record`);
     if (contract?.requireDecisionRecordSynchronization === true && !sameStringSet(record.reopenTriggersReviewed, record.decisionRecord?.reopenTriggersConsidered)) errors.push(`${record.id}: top-level reopen review must match the decision record`);
@@ -379,22 +419,25 @@ export function evaluateCompositeStopCondition(records, contract = loadEvalContr
   const certifying = [...deterministicRuns.slice(-consecutiveDeterministicPasses), ...holdouts];
   const identities = new Set(certifying.map(({ record }) => [record.candidate.commit, record.candidate.tree, record.candidate.governedInputDigest].join(":")));
   const sessions = new Set(holdouts.map(({ record }) => record.judge.sessionId?.trim().toLocaleLowerCase()));
-  const labels = new Set(holdouts.map(({ record }) => record.judge.label?.normalize("NFKC").replace(/[\u00AD\u034F\u061C\u200B-\u200F\u202A-\u202E\u2060-\u206F\uFEFF]/g, "").trim().toLocaleLowerCase()));
+  const labels = new Set(holdouts.map(({ record }) => normalizeReviewerIdentity(record.judge.label)));
   const prompts = new Set(holdouts.map(({ record }) => record.judge.promptPath));
   const externalGatesExplicit = current.every(({ record }) => sameStringSet(record.decision?.externalGatesOpen, contract.requiredExternalGates));
+  const requiredHoldouts = contract.stopCondition.contextSeparatedModelHoldouts ?? contract.stopCondition.independentHoldouts;
   return {
     deterministicPasses: consecutiveDeterministicPasses,
-    independentHoldouts: holdouts.length,
+    contextSeparatedHoldouts: holdouts.length,
+    identityAssurance: contract.stopCondition.identityAssurance ?? "legacy-self-attested-model-context",
+    cryptographicIdentityVerified: false,
     unchangedCandidate: identities.size === 1,
-    distinctHoldoutJudges: Math.min(sessions.size, labels.size),
+    distinctReviewContexts: Math.min(sessions.size, labels.size),
     phaseOrderValid,
     externalGatesOpen: externalGatesExplicit,
     acceptedForReview:
       phaseOrderValid &&
       consecutiveDeterministicPasses >= contract.stopCondition.consecutiveDeterministicPasses &&
-      holdouts.length >= contract.stopCondition.independentHoldouts &&
-      identities.size === 1 && sessions.size >= contract.stopCondition.independentHoldouts &&
-      labels.size >= contract.stopCondition.independentHoldouts && prompts.size >= contract.stopCondition.independentHoldouts && externalGatesExplicit
+      holdouts.length >= requiredHoldouts &&
+      identities.size === 1 && sessions.size >= requiredHoldouts &&
+      labels.size >= requiredHoldouts && prompts.size >= requiredHoldouts && externalGatesExplicit
   };
 }
 

@@ -101,6 +101,8 @@ const decisionRecord = {
     action: policy.action,
     humanAuthority: policy.authority,
     disposition: "Not invoked by this deterministic run; authority remains with the named human reviewer.",
+    humanDecision: "not-invoked",
+    humanDecisionEvidence: [],
     modelHasFinalAuthority: false
   })),
   reopenTriggersConsidered: [...launchSuite.lensPolicy.sack.reopenTriggers],

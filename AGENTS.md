@@ -121,10 +121,11 @@ selective.
 Use `evals/_shared/contract.json` as the frozen contract joining the three eval
 suites. Every certifying run must record the contract digest, governed-input
 digest, candidate commit and tree, actual command exit codes, criterion evidence,
-judge independence, prior-score visibility, disagreements, overrides, and open
+review-context separation, prior-score visibility, disagreements, overrides, and open
 external gates. A rubric change requires a version change and resets the streak.
-Do not edit the rubric while optimizing the candidate. Two independent holdouts
-must review the same unchanged governed candidate without prior scores.
+Do not edit the rubric while optimizing the candidate. Two context-separated
+model holdouts must review the same unchanged governed candidate without prior
+scores. This is procedural separation, not cryptographic identity proof.
 
 Deterministic run records must carry all seven decision dimensions, evidence,
 unresolved risks, the human-authority log, disagreements, overrides, and every
@@ -138,12 +139,14 @@ page-local string.
 Use the canonical runner only after committing a frozen candidate. Preserve
 failed and rejected runs in the hash chain. A holdout must use a governed prompt,
 a distinct stable session ID, all ten criteria, and evidence for every score.
+Its source-only review bundle must match the candidate's governed-input digest.
 The validator recomputes candidate identity, score floors, and weighted results;
 do not hand-author a passing decision.
 
 Retain raw and human-readable canonical runner logs plus versioned prompts. A
-holdout must attest its model context, provider, candidate, prompt, and process
-separation. That attestation is not human identity proof. A human refusal,
+holdout must attest its model context, provider, candidate commit and tree,
+review-bundle digest, prompt, and process separation. That attestation is not
+human or provider identity proof. A structured human refusal,
 blocking finding, or later rejected holdout resets the current acceptance phase
 and cannot be averaged away. Use `check:eval-contract` for structural validation
 and `certify:eval-contract` only after the recursive stop condition is expected

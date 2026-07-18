@@ -1,6 +1,6 @@
 {
   "id": "jamieburk-art-composite-eval-contract",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "publishedAt": "2026-07-18",
   "objective": "Improve portfolio usefulness while preserving public safety, source boundaries, collective credit, reader clarity, and human release authority.",
   "suites": [
@@ -48,7 +48,9 @@
   ],
   "stopCondition": {
     "consecutiveDeterministicPasses": 2,
-    "independentHoldouts": 2,
+    "contextSeparatedModelHoldouts": 2,
+    "identityAssurance": "self-attested-model-context",
+    "cryptographicIdentityRequired": false,
     "holdoutsReviewUnchangedCandidate": true,
     "priorScoresHiddenFromHoldouts": true,
     "externalHumanGatesMayRemainOpen": true
@@ -102,6 +104,10 @@
   "requireDeterministicDecisionRecord": true,
   "requireDecisionRecordSynchronization": true,
   "requireReviewerAttestation": true,
+  "requireReviewBundleBinding": true,
+  "requireBindingHumanDecisions": true,
+  "requireCanonicalReviewerIdentity": true,
+  "reviewerProvider": "codex-multi-agent",
   "runnerPath": "scripts/run-composite-eval.mjs",
   "humanAuthority": {
     "publicTruthAndConsent": "Jamie Burkart",

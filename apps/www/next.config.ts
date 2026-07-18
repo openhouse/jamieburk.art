@@ -1,6 +1,10 @@
 import path from "node:path";
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
+import {
+  isIndexableDeployment,
+  PRODUCTION_SITE_URL
+} from "./src/lib/deployment-policy";
 
 const stripTrailingSlash = (value: string) => value.replace(/\/$/, "");
 
@@ -14,13 +18,15 @@ const siteUrl = stripTrailingSlash(
   process.env.SITE_URL ??
     process.env.NEXT_PUBLIC_SITE_URL ??
     (appEnv === "production"
-      ? "https://jamieburk.art"
+      ? PRODUCTION_SITE_URL
       : "https://staging.jamieburk.art")
 );
 
-const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
+const robotsIndexable = isIndexableDeployment({
+  appEnv,
+  siteUrl,
+  robotsPolicy: process.env.NEXT_PUBLIC_ROBOTS_POLICY
+});
 
 const globalHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },

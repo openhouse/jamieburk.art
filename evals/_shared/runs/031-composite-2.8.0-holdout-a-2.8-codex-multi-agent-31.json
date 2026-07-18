@@ -1,0 +1,330 @@
+{
+  "schemaVersion": "2.2.0",
+  "id": "composite-2.8.0-holdout-a-2.8-codex-multi-agent-31",
+  "iteration": 31,
+  "recordedAt": "2026-07-18T16:39:28.688Z",
+  "previousRunId": "composite-2.8.0-deterministic-30",
+  "previousRunDigest": "bdf23eefa11da682ff9585298d00a97018d61eecda179d78f7a916e441465bd4",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.8.0",
+    "digest": "8a69924c7e8345cf132a0366754b8bbbd2a103651d839c784801ea113a350036"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "ad2092b7af2f0c2c67659b7d51c9fe200665eb5c",
+    "tree": "e09d4210b335c727eb69544eba618a20f0e1b288",
+    "governedInputDigest": "77d765bc96bfae5e910c78f16a6d219e87f4877411ee8e56e212f104b31f14c8"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-a-2.8-codex-multi-agent",
+    "sessionId": "019f760c-1cdc-7a51-a227-33fe6eb77e49",
+    "reviewerClass": "model-context",
+    "provider": "codex-multi-agent",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/holdout-a.md",
+    "promptDigest": "df9e7f2be24eca360f333a1a2c225e8fd1e8ea2069d4447929970d2a28a5396c",
+    "attestation": {
+      "candidateCommit": "ad2092b7af2f0c2c67659b7d51c9fe200665eb5c",
+      "promptPath": "evals/_shared/holdout-a.md",
+      "runRecordsInspected": false,
+      "generatedReportsInspected": false,
+      "editsMade": false,
+      "attestedAt": "2026-07-18T16:36:22Z"
+    }
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "/ - the first viewport names Jamie, the exact Technical Project Manager - Product Operations & Implementation target, the operating contribution, and direct work, resume, and contact actions.",
+        "/work/technical-operations - the role-specific page maps delivery coordination, risk surfacing, operating documentation, launch, and adoption to named project proof."
+      ],
+      "risks": [
+        "/ introduces five separate Start here choices immediately after the hero, so the otherwise decisive role path becomes broader below the first viewport."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 4,
+      "evidence": [
+        "/work/callnyc - consequential civic-history claims render 16 labeled noterefs, one ordered endnotes section, scope-and-limit disclosures, backlinks, an archived/unofficial warning, and one cleared project mark.",
+        "apps/www/src/data/knowledge-bank/public.ts and public-registry.json - only confirmed or confirmed-with-boundary claims and public sources reach the citation registry; projection status and authorized surfaces are enforced.",
+        "apps/www/src/data/proofs.ts - high-impact claims carry support levels, source bases, guardrails, prohibited wording, protected boundaries, and last-reviewed dates."
+      ],
+      "risks": [
+        "Homepage, resume, and technical-operations proof points still draw heavily from apps/www/src/data/proofs.ts while source-linked case claims draw from the newer public registry, leaving two claim representations that require synchronization.",
+        "/work/196-sunday-dinner renders the protected-ledger aggregate with citationRequired false and no public evidence relationship, so the qualification is visible but the underlying support is intentionally not inspectable.",
+        "Several homepage and resume metrics, including the HJE 2x contribution, do not render page-local citations even though their internal guardrails are careful."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "/ - the hero says teams turn emerging, stakeholder-heavy work into usable systems and immediately names the practical outputs.",
+        "/about - the site describes operating structure as still forming and emerging goals as work to surface, translate, map, coordinate, and hand off without blaming teams.",
+        "/work/kc-town-hall - an emerging public purpose is translated into construction coordination, participatory planning, and bounded municipal documentation."
+      ],
+      "risks": [
+        "The repeated transformation formula can become programmatic across long pages, although it remains humane and concrete."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 3,
+      "evidence": [
+        "/ - a clear hero and Start here list give a time-limited reader direct paths to role proof, cases, resume, and contact.",
+        "/work/technical-operations - the main role argument is visible, but the page presents an eight-project proof map followed by four additional proof groups.",
+        "/work/callnyc - principal action and result precede a collapsed project record, but a long sources section appears before representative artifacts and public links."
+      ],
+      "risks": [
+        "The 320px and 375px browser views are functional but very long, especially the technical-operations page and evidence-rich case studies.",
+        "Repeated summaries, proof maps, proof cards, source notes, and representative-artifact cards create avoidable density even when each section is individually clear."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4,
+      "evidence": [
+        "apps/www/src/components/CaseStudyLayout.tsx - principal case-study content leads with Jamie's action and usable result; representative artifacts, public links, credits, and the collapsed project record follow.",
+        "/work/harry-j-epstein, /work/fair-rent-nyc, and /work/callnyc - each names Jamie's role and contribution while connecting the result to technical project management, product operations, or civic implementation.",
+        "apps/www/src/components/CaseStudyBlocks.tsx - publication governance is collapsed by default while credits and public links remain visible outside the disclosure."
+      ],
+      "risks": [
+        "Long citation sections and repeated metadata can interrupt the hiring argument before the artifact and credit sections.",
+        "Some cases explain Jamie's action persuasively but offer only representative descriptions rather than inspectable work products."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 5,
+      "evidence": [
+        "/work/fair-rent-nyc - the page explicitly refuses to turn coalition, legislative, and policy outcomes into one person's accomplishment and consistently uses contributed, helped, and stewarded language.",
+        "/work/kc-town-hall - the page distinguishes Jamie's coordination role from specialist contractors, consultants, collaborators, and neighbors and preserves funding non-disbursement.",
+        "/work/callnyc - independent, archived, unofficial, and non-affiliation boundaries appear in the summary, artifact caption, source notes, and archive disclaimer.",
+        "apps/www/src/data/work.ts - every case records credits and Known / Open / Protected publication boundaries."
+      ],
+      "risks": [
+        "Affected collaborators retain authority to dispute attribution, and the absence of a dispute in this holdout is not collaborator approval."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "/work/callnyc - a cleared 192-by-192 CallNYC project mark renders with alt text, source link, source-backed caption, and a non-affiliation boundary.",
+        "/ - the visual system is coherent across mobile and desktop, and the operating-structure diagram reinforces the role argument.",
+        "apps/www/src/components/CaseStudyBlocks.tsx - every case exposes a consistent Representative artifacts section."
+      ],
+      "risks": [
+        "CallNYC is the only shipped project bitmap; most representative artifacts are styled text cards describing a workflow, source map, template, or analytics summary rather than showing the work.",
+        "The homepage operating diagram is representative presentation, not evidence, so key cases remain text-heavy."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 4,
+      "evidence": [
+        "/work/technical-operations - the page connects concurrent delivery, status, risk, dependencies, onboarding, reporting, and improvement to specific named projects.",
+        "/work/harry-j-epstein - long-term implementation connects legacy knowledge, e-commerce, content, analytics, release coordination, and maintainable workflows.",
+        "/work/fair-rent-nyc - running minutes, action trackers, decision records, source maps, follow-up notes, and public/private boundaries demonstrate operating memory for sensitive coalition work.",
+        "/work/kc-town-hall - construction sequence, specialist coordination, participatory intake, proposal scope, and complete funding disposition show field-based project management."
+      ],
+      "risks": [
+        "Many operational artifacts are narrated or represented rather than directly inspectable, limiting independent assessment of their actual form and usability.",
+        "The current npm production audit reports two moderate PostCSS advisories, and no frozen knowledge-bank document explicitly records review of that residual risk."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 4,
+      "evidence": [
+        "/about - a restrained paragraph explicitly connects artistic, civic, technical, and social practice through participation, memory, place, relationships, and systems as environments people inhabit.",
+        "/work/wowlist - community vocabulary, event workflows, platform logic, public support, and local-calendar participation remain connected.",
+        "/work/196-sunday-dinner - hosting, artist support, onboarding, facilitation, continuity, privacy, and consent make the participatory method concrete without exposing participant records.",
+        "/work/technical-operations - technical role clarity remains prominent rather than being displaced by generic creativity language."
+      ],
+      "risks": [
+        "The cross-practice synthesis is concentrated on /about, while the supporting community cases are short and mostly text-only.",
+        "Limited approved visual evidence constrains inspection of spatial, embodied, and artistic continuity."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 5,
+      "evidence": [
+        "evals/launch-readiness/evals.json - the frozen policy defines seven separate decision dimensions, four human authority actions, five reopen triggers, preserved disagreement, structured overrides, and a non-final accepted boolean.",
+        "evals/launch-readiness/judge.md - the judge contract states that evaluation allocates professional identity, that a passing boolean cannot erase risk or disagreement, and that a model has no final authority.",
+        "scripts/lib/launch-evals.mjs - validateDecisionRecord rejects missing dimensions, evidence, risk arrays, authority entries, trigger coverage, reopen review, disagreement review, and malformed overrides.",
+        "scripts/lib/eval-contract.mjs - holdout scoring preserves the complete criterion vector and refuses accepted-for-review status when score floors, blockers, provenance, or governance validation fail."
+      ],
+      "risks": [
+        "This independent holdout did not inspect run history, so the score assesses the frozen enforcement code and this decision record rather than asserting historical compliance by prior runs.",
+        "Accepted-for-review remains non-final and cannot substitute for source, consent, attribution, staging, deployment, or human release decisions."
+      ]
+    }
+  ],
+  "blockingFindings": [],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "Strong. Jamie is immediately legible as a Technical Project Manager focused on product operations and implementation for public-facing teams.",
+        "evidence": [
+          "/ - exact role label, named operating contribution, and direct work, resume, and contact actions appear in the first viewport.",
+          "/work/technical-operations - a role-specific proof page maps the target responsibilities to named projects."
+        ],
+        "unresolvedRisks": [
+          "The broader civic, cultural, knowledge-systems, and consulting paths may diffuse focus after the first viewport."
+        ]
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "Strong but unevenly inspectable. The cases repeatedly state what Jamie built, coordinated, translated, documented, and handed off.",
+        "evidence": [
+          "/work/fair-rent-nyc - Jamie's documentation architecture, source mapping, action tracking, policy translation, and campaign web work are explicit.",
+          "/work/kc-town-hall - Jamie's project-management, general-contractor, specialist-coordination, survey, and municipal-documentation actions are explicit."
+        ],
+        "unresolvedRisks": [
+          "Several actions are supported by narrative and representative cards rather than visible primary artifacts."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "Strong. The portfolio consistently translates action into requirements, workflows, guidance, decision trails, participation infrastructure, launch support, and handoffs.",
+        "evidence": [
+          "/ - the What becomes usable capability grid and transformation pairs make outcomes scannable.",
+          "/work/callnyc - open data becomes resident-facing issue pathways, district context, and bounded next-step guidance.",
+          "/work/harry-j-epstein - legacy operating knowledge becomes maintainable e-commerce, content, analytics, and workflow patterns."
+        ],
+        "unresolvedRisks": [
+          "Usability is often described rather than demonstrated through an inspectable artifact."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "Broad and relevant. The visible cases cover civic technology, coalition operations, public data, legacy commerce, construction coordination, cultural infrastructure, and community platforms.",
+        "evidence": [
+          "/work - cases are grouped across operating systems, civic/public systems, and community/cultural infrastructure.",
+          "/work/technical-operations - the proof map connects the same operating method across eight named contexts."
+        ],
+        "unresolvedRisks": [
+          "The breadth is credible but creates scanning cost for a narrowly targeted hiring reader."
+        ]
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "Credible coordination authority is visible, with careful distinctions between direct role, collective work, and authority the evidence does not establish.",
+        "evidence": [
+          "/work/kc-town-hall - the page names co-founder, project manager, and Phase One general-contractor responsibilities while crediting specialist labor.",
+          "/work/fair-rent-nyc - co-founder and operating contributions are explicit while movement and policy outcomes remain collective.",
+          "/work/harry-j-epstein - long-term technical project management and web-systems stewardship are visible."
+        ],
+        "unresolvedRisks": [
+          "Formal decision authority, budget ownership, and people-management scope are not established consistently across cases.",
+          "No model judgment can resolve a collaborator attribution dispute."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "Moderate to strong. Public civic claims have source-linked projections and visible limitations, while some resume-backed, firsthand, or protected aggregate claims remain less directly inspectable.",
+        "evidence": [
+          "/work/callnyc - labeled citations, public source notes, boundaries, backlinks, and a cleared artifact support consequential claims.",
+          "apps/www/src/data/knowledge-bank/public.ts - active projection and public-source constraints are executable.",
+          "The frozen citation, projection-consistency, public-artifact, route, typecheck, lint, build, and 70-case browser checks passed in this review."
+        ],
+        "unresolvedRisks": [
+          "The older proofs.ts layer and newer source-linked registry require ongoing synchronization.",
+          "Some important metrics intentionally rely on protected evidence or approved resume and firsthand context rather than public inspection.",
+          "The current production audit reports two moderate PostCSS advisories."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "No blocker prevents pull-request review, but production, promotion, consent, attribution, exact-SHA release, deployment smoke, and human approval remain outside this model judgment.",
+        "evidence": [
+          "docs/knowledge-bank/launch-blockers.md - exact-commit release actions and production indexing remain separately governed.",
+          "evals/launch-readiness/evals.json - exact-SHA approval and production smoke are external launch gates.",
+          "This holdout's direct browser review found no HTTP, H1-count, horizontal-overflow, console-error, staging-canonical, noindex, skip-link, or CallNYC citation failures across the tested matrix."
+        ],
+        "unresolvedRisks": [
+          "Most case-study artifacts remain representative descriptions rather than approved visual proof.",
+          "Mobile pages are long and dense despite clean responsive behavior.",
+          "Dependency residual risk needs explicit human review and documentation.",
+          "Human source, consent, attribution, staging, deployment, and release decisions remain open."
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked. Accepted-for-review does not promote a claim or approve publication.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "No substantiated attribution dispute was presented in this holdout; the publication-hold authority remains fully available.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "No human override was invoked or inferred.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "No reopen trigger was established by the supplied frozen candidate context, but every listed trigger remains operative.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "All five governed triggers were considered exactly once. This holdout found no supplied new or contradictory evidence, changed consent or rights, substantiated attribution dispute, corrected provenance or source decay, or changed target role or public surface that reopens the frozen review now. That finding is limited to the inspected candidate context: any later occurrence of a listed trigger may reopen the decision through the named human authority, and accepted-for-review is not completion or release approval.",
+    "overrides": [],
+    "openDisagreements": [],
+    "disagreementReview": "No human refusal, affected-collaborator dispute, or minority reviewer judgment was supplied to this independent holdout. The empty array records that explicit review result; it does not claim consensus, collaborator consent, human approval, or model authority. The dual claim-layer, reader-density, visual-proof, protected-evidence, and dependency findings are retained as unresolved risks rather than suppressed as disagreement."
+  },
+  "openDisagreements": [],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new or contradictory evidence",
+    "changed consent or rights",
+    "a substantiated attribution dispute",
+    "source decay or corrected provenance",
+    "a changed target role or public surface"
+  ],
+  "decision": {
+    "status": "accepted-for-review",
+    "weightedScore": 4.26,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "Accepted for pull-request review on the frozen candidate only. The target role, operating contribution, collective boundaries, source-linked civic evidence, cross-practice method, and human-governed evaluation system meet their rubric floors. Reader density, text-heavy representative artifacts, dual claim representations, intentionally non-public support for some metrics, and the documented moderate dependency-audit finding remain review risks. This judgment does not claim production readiness, release authority, source promotion, collaborator consent, or human approval.",
+  "recordDigest": "268cfdb1ab413a61e21119ddb7b9fac7613bab541a3f62f3025a763f2cdf8c58"
+}

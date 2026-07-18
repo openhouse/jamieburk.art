@@ -1,3 +1,8 @@
+import {
+  isIndexableDeployment,
+  PRODUCTION_SITE_URL
+} from "@/lib/deployment-policy";
+
 const stripTrailingSlash = (value: string) => value.replace(/\/$/, "");
 
 export const APP_ENV =
@@ -10,12 +15,15 @@ export const SITE_URL = stripTrailingSlash(
   process.env.SITE_URL ??
     process.env.NEXT_PUBLIC_SITE_URL ??
     (APP_ENV === "production"
-      ? "https://jamieburk.art"
+      ? PRODUCTION_SITE_URL
       : "https://staging.jamieburk.art")
 );
 
 export const IS_PRODUCTION =
-  APP_ENV === "production" || SITE_URL === "https://jamieburk.art";
+  APP_ENV === "production" && SITE_URL === PRODUCTION_SITE_URL;
 
-export const ROBOTS_INDEXABLE =
-  IS_PRODUCTION && process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
+export const ROBOTS_INDEXABLE = isIndexableDeployment({
+  appEnv: APP_ENV,
+  siteUrl: SITE_URL,
+  robotsPolicy: process.env.NEXT_PUBLIC_ROBOTS_POLICY
+});

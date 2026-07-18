@@ -37,7 +37,14 @@ const testReviewLogDigest = createHash("sha256").update(testReviewLog).digest("h
 function decisionRecord() {
   return {
     dimensions: suite.lensPolicy.sack.decisionVector.map((dimension) => ({ dimension, assessment: `${dimension} reviewed`, evidence: [`${dimension} evidence`], unresolvedRisks: [] })),
-    authorityLog: suite.lensPolicy.sack.authorities.map((policy) => ({ action: policy.action, humanAuthority: policy.authority, disposition: "Not invoked; authority remains human.", modelHasFinalAuthority: false })),
+    authorityLog: suite.lensPolicy.sack.authorities.map((policy) => ({
+      action: policy.action,
+      humanAuthority: policy.authority,
+      disposition: "Not invoked; authority remains human.",
+      humanDecision: "not-invoked",
+      humanDecisionEvidence: [],
+      modelHasFinalAuthority: false
+    })),
     reopenTriggersConsidered: [...suite.lensPolicy.sack.reopenTriggers],
     reopenReview: "All triggers were reviewed.",
     overrides: [],
@@ -68,7 +75,7 @@ function run(id, judgeClass = "deterministic", options = {}) {
       : [{ command: "independent read-only holdout", exitCode: 0, status: "passed" }],
     ...(judgeClass === "deterministic" ? { execution: { runnerPath: "scripts/run-composite-eval.mjs", runnerDigest: promptDigest("scripts/run-composite-eval.mjs"), node: process.version, platform: "test" } } : {}),
     judge: judgeClass === "holdout"
-      ? { class: "holdout", label: options.label ?? id, sessionId: options.sessionId ?? "11111111-1111-4111-8111-111111111111", reviewerClass: "model-context", provider: "codex-multi-agent", independent: true, priorScoresVisible: false, promptPath, promptDigest: promptDigest(promptPath), attestation: { candidateCommit: "a".repeat(40), promptPath, runRecordsInspected: false, generatedReportsInspected: false, editsMade: false, attestedAt: "2026-07-16T12:00:00Z" } }
+      ? { class: "holdout", label: options.label ?? id, sessionId: options.sessionId ?? "11111111-1111-4111-8111-111111111111", reviewerClass: "model-context", provider: "codex-multi-agent", independent: true, priorScoresVisible: false, promptPath, promptDigest: promptDigest(promptPath), attestation: { candidateCommit: "a".repeat(40), candidateTree: "b".repeat(40), governedInputDigest: inputDigest, reviewBundleDigest: inputDigest, assurance: "self-attested-model-context", promptPath, runRecordsInspected: false, generatedReportsInspected: false, editsMade: false, attestedAt: "2026-07-16T12:00:00Z" } }
       : { class: "deterministic", label: id, independent: false, priorScoresVisible: false },
     criterionResults: judgeClass === "holdout" ? criteria : [],
     decisionRecord: decisionRecord(),
@@ -232,12 +239,29 @@ test("holdout records require explicit model-context provenance bound to candida
   delete changed.judge.reviewerClass;
   delete changed.judge.provider;
   changed.judge.attestation.candidateCommit = "c".repeat(40);
+  changed.judge.attestation.reviewBundleDigest = "d".repeat(64);
   changed.judge.attestation.runRecordsInspected = true;
   seal(changed);
   const errors = validate(changed, { contract }).join("\n");
   assert.match(errors, /identify its model context and provider/);
   assert.match(errors, /does not bind candidate and prompt/);
+  assert.match(errors, /does not bind the reviewed source bundle/);
   assert.match(errors, /runRecordsInspected=false/);
+});
+
+test("reviewer labels use shared security normalization", () => {
+  const changed = run("reviewer\u3164one", "holdout");
+  seal(changed);
+  assert.match(validate(changed, { contract }).join("\n"), /canonical security-normalized form/);
+});
+
+test("a binding human refusal cannot coexist with acceptance", () => {
+  const changed = run("human-refusal", "holdout");
+  const promotion = changed.decisionRecord.authorityLog.find((item) => item.action === "promote-public-claim");
+  promotion.humanDecision = "refused";
+  promotion.humanDecisionEvidence = ["Jamie declined public projection."];
+  seal(changed);
+  assert.match(validate(changed, { contract }).join("\n"), /binding human refusal/);
 });
 
 test("top-level disagreement, override, and reopen records must match the decision record", () => {
@@ -315,7 +339,7 @@ test("record mutation invalidates its own digest", () => {
   assert.match(validate(changed, { contract }).join("\n"), /run record digest is stale/);
 });
 
-test("two deterministic passes and two unchanged independent holdouts meet the review stop", () => {
+test("two deterministic passes and two unchanged context-separated holdouts meet the review stop", () => {
   const records = sequence([
     run("det-1"), run("det-2"),
     run("hold-1", "holdout", { label: "holdout-a", sessionId: "11111111-1111-4111-8111-111111111111" }),
@@ -361,6 +385,13 @@ test("a failed deterministic run resets the consecutive pass streak", () => {
 test("one reviewer cannot certify twice by changing label case or Unicode", () => {
   const one = run("hold-1", "holdout", { label: "Reviewer-One", sessionId: "11111111-1111-4111-8111-111111111111" });
   const two = run("hold-2", "holdout", { label: "reviewer\u200b-one", sessionId: "11111111-1111-4111-8111-111111111111", promptPath: "evals/_shared/holdout-b.md" });
+  const records = sequence([run("det-1"), run("det-2"), one, two]);
+  assert.equal(evaluateCompositeStopCondition(records, contract).acceptedForReview, false);
+});
+
+test("distinct session strings cannot revive a default-ignorable reviewer label", () => {
+  const one = run("hold-1", "holdout", { label: "reviewer-one", sessionId: "11111111-1111-4111-8111-111111111111" });
+  const two = run("hold-2", "holdout", { label: "reviewer\u3164-one", sessionId: "22222222-2222-4222-8222-222222222222", promptPath: "evals/_shared/holdout-b.md" });
   const records = sequence([run("det-1"), run("det-2"), one, two]);
   assert.equal(evaluateCompositeStopCondition(records, contract).acceptedForReview, false);
 });

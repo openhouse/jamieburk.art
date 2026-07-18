@@ -66,6 +66,54 @@ export function validateBrowserReportCoverage(suite, report, { requiredRuntimeId
     if (actual.length !== expected.size || new Set(actualKeys).size !== actualKeys.length || actualKeys.some((key) => !expected.has(key))) {
       errors.push(`${runtimeId} does not cover the complete route and viewport matrix`);
     }
+    if (runtimeId === "LR-RUNTIME-RESPONSIVE" && actual.some((item) =>
+      item.status !== 200 ||
+      item.h1Count !== 1 ||
+      item.overflow !== false ||
+      item.h1Overflow !== false ||
+      item.consoleErrorCount !== 0 ||
+      item.canonical !== item.expectedCanonical ||
+      !/^https:\/\/staging\.jamieburk\.art\//.test(item.canonical ?? "") ||
+      !/noindex/i.test(item.robots ?? "")
+    )) {
+      errors.push("LR-RUNTIME-RESPONSIVE needs retained HTTP, layout, console, canonical, and robots evidence for every case");
+    }
+    if (runtimeId === "LR-RUNTIME-KEYBOARD") {
+      if (actual.some((item) =>
+        !Number.isInteger(item.focusableCount) ||
+        item.focusableCount < 1 ||
+        !Array.isArray(item.focusSequence) ||
+        item.focusSequence.length !== item.focusableCount ||
+        item.focusSequence[0]?.tag !== "A" ||
+        item.focusSequence[0]?.href !== "#main" ||
+        item.focusSequence.some((focus, index) => focus.domIndex !== index || focus.visibleFocus !== true) ||
+        item.mainExists !== true ||
+        item.logicalFocusOrder !== true ||
+        item.allFocusIndicatorsVisible !== true ||
+        !item.actions ||
+        ["email", "linkedin", "resume"].some((action) => typeof item.actions[action] !== "boolean")
+      )) {
+        errors.push("LR-RUNTIME-KEYBOARD needs a complete logical focus sequence, visible focus evidence, skip-link target, and action reachability for every case");
+      }
+      if (["email", "linkedin", "resume"].some((action) => report?.keyboardActionCoverage?.[action] !== true)) {
+        errors.push("LR-RUNTIME-KEYBOARD must prove keyboard reachability for email, LinkedIn, and resume actions");
+      }
+    }
+    if (runtimeId === "LR-RUNTIME-CITATIONS" && actual.some((item) =>
+      !Number.isInteger(item.referenceCount) || item.referenceCount < 1 ||
+      item.endnotesCount !== 1 ||
+      !Number.isInteger(item.noteCount) || item.noteCount < 1 ||
+      item.backlinkCount < item.noteCount ||
+      item.uniqueIds !== true ||
+      item.labelsPresent !== true ||
+      item.targetsExist !== true ||
+      item.backlinkTargetsExist !== true ||
+      item.navigationPassed !== true ||
+      !Number.isInteger(item.forbiddenEvidenceTokenCount) || item.forbiddenEvidenceTokenCount < 1 ||
+      item.protectedOrOpenEvidenceRendered !== false
+    )) {
+      errors.push("LR-RUNTIME-CITATIONS needs retained semantic, navigation, and protected-or-open non-rendering evidence for every case");
+    }
     if (actual.some((item) => item.passed !== true)) errors.push(`${runtimeId} contains a failed browser case`);
   }
   if (report?.passed !== true) errors.push("browser report is not declared passed");
@@ -315,7 +363,26 @@ export function runSourceChecks(suite) {
   return failures;
 }
 
-export function validateDecisionRecord(suite, decisionRecord) {
+const humanDecisionStates = {
+  "promote-public-claim": new Set(["not-invoked", "approved", "refused"]),
+  "dispute-attribution": new Set(["not-invoked", "publication-hold", "resolved"]),
+  "override-model-judgment": new Set(["not-invoked", "overridden"]),
+  "reopen-decision": new Set(["not-invoked", "reopened"])
+};
+
+export function hasBindingHumanRefusal(decisionRecord) {
+  return (decisionRecord?.authorityLog ?? []).some((record) =>
+    record.humanDecision === "refused" ||
+    record.humanDecision === "publication-hold" ||
+    record.humanDecision === "reopened"
+  );
+}
+
+export function validateDecisionRecord(
+  suite,
+  decisionRecord,
+  { requireBindingHumanDecisions = false } = {}
+) {
   const failures = [];
   const sack = suite.lensPolicy.sack;
   const dimensions = decisionRecord?.dimensions ?? [];
@@ -375,6 +442,32 @@ export function validateDecisionRecord(suite, decisionRecord) {
     if (record.modelHasFinalAuthority !== false) {
       failures.push(`${policy.action} cannot grant final authority to a model`);
     }
+    const decisionFieldsPresent =
+      Object.hasOwn(record, "humanDecision") ||
+      Object.hasOwn(record, "humanDecisionEvidence");
+    if (requireBindingHumanDecisions || decisionFieldsPresent) {
+      if (!humanDecisionStates[policy.action]?.has(record.humanDecision)) {
+        failures.push(`${policy.action} needs an allowed binding human decision`);
+      }
+      if (
+        !Array.isArray(record.humanDecisionEvidence) ||
+        record.humanDecisionEvidence.some(
+          (item) => typeof item !== "string" || !item.trim()
+        )
+      ) {
+        failures.push(`${policy.action} needs a human-decision evidence array`);
+      } else if (
+        record.humanDecision === "not-invoked" &&
+        record.humanDecisionEvidence.length > 0
+      ) {
+        failures.push(`${policy.action} cannot attach human evidence to a decision that was not invoked`);
+      } else if (
+        record.humanDecision !== "not-invoked" &&
+        record.humanDecisionEvidence.length === 0
+      ) {
+        failures.push(`${policy.action} needs substantive evidence for an invoked human decision`);
+      }
+    }
   }
 
   if (
@@ -413,6 +506,14 @@ export function validateDecisionRecord(suite, decisionRecord) {
   }
   if (!decisionRecord?.reopenReview?.trim()) {
     failures.push("decision record needs an explicit reopen review");
+  }
+  const publicationHold = authorityByAction.get("dispute-attribution")?.humanDecision === "publication-hold";
+  if (publicationHold && (decisionRecord?.openDisagreements?.length ?? 0) === 0) {
+    failures.push("a publication hold must remain visible as an open disagreement");
+  }
+  const overrideInvoked = authorityByAction.get("override-model-judgment")?.humanDecision === "overridden";
+  if (overrideInvoked && (decisionRecord?.overrides?.length ?? 0) === 0) {
+    failures.push("an invoked human override needs a structured override record");
   }
   const triggers = decisionRecord?.reopenTriggersConsidered ?? [];
   if (
@@ -572,6 +673,9 @@ export function scoreJudgeResults(
 
   const rounded = Math.round(weightedScore * 1000) / 1000;
   const governanceFailures = validateDecisionRecord(suite, decisionRecord);
+  if (hasBindingHumanRefusal(decisionRecord)) {
+    governanceFailures.push("a binding human refusal, publication hold, or reopen decision prohibits acceptance");
+  }
   return {
     weightedScore: rounded,
     missing,

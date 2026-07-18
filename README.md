@@ -104,11 +104,17 @@ See `docs/knowledge-bank/daily-commands.md` for the complete intake and
 promotion boundary.
 
 `npm run eval:run` executes the frozen composite contract against a committed
-candidate and records command output digests. Independent blind judgments are
+candidate and records command output digests. Context-separated blind judgments are
 recorded with `npm run eval:record-holdout -- --input /path/to/judgment.json
 --prompt evals/_shared/holdout-a.md --session stable-session-id`. Failed runs and
 rejected judgments remain in the hash-chained history. See
 `docs/evals/composite-governance.md`.
+
+Build each holdout from a source-only copy with prior runs, logs, and reports
+physically absent. Run `node scripts/digest-review-bundle.mjs --root
+/path/to/review-bundle`; the judgment must bind that digest, the candidate tree,
+and the governed-input digest. Session and provider attestations document
+model-context separation, not cryptographic identity proof.
 
 Use `npm run check:eval-records` for complete history validation and
 `npm run check:eval-contract` for contract structure plus an advisory stop-state
@@ -123,6 +129,8 @@ evidence, unresolved risks, human-authority dispositions, disagreements,
 overrides, and reopen review. Those records describe automated coverage; only
 fresh holdouts and the named human authorities supply editorial judgment and
 release decisions.
+Structured human refusals, publication holds, and reopen decisions are binding
+and prevent acceptance regardless of score.
 
 The shipped resume PDF is generated from
 `docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-17.html`

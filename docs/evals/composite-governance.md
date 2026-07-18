@@ -39,10 +39,17 @@ holdouts retain the seven decision dimensions, human authority log, reopen
 review, disagreements, and overrides required by the launch suite.
 
 Holdouts supply a model-context attestation binding their session, provider,
-candidate commit, and governed prompt. The recorder verifies that the reviewer
+candidate commit and tree, governed-input digest, independently computed source-
+bundle digest, and governed prompt. The recorder verifies that the reviewer
 did not inspect run records, generated reports, prior scores, or edit the
 candidate. This documents process separation; it does not cryptographically
-prove human identity. External human review remains outside model authority.
+prove human identity, provider identity, or actual context isolation. External
+human review remains outside model authority.
+
+Authority records use structured human-decision states. A recorded refusal,
+publication hold, or reopen decision prevents acceptance even when every score
+passes. Models may record public-safe human evidence; they may not invent or
+resolve a human decision.
 
 ## Recursive protocol
 
@@ -55,13 +62,15 @@ prove human identity. External human review remains outside model authority.
 7. Keep the change only if it improves the objective without weakening safety,
    source boundaries, collective credit, accessibility, or reader clarity.
 8. Repeat until two consecutive deterministic passes are followed by two
-   independent holdouts that accept the unchanged governed candidate. Holdouts
+   context-separated model holdouts that accept the unchanged governed candidate. Holdouts
    recorded before or between the qualifying deterministic passes cannot
    satisfy the stop condition.
 
 Run `npm run eval:run` only after committing a frozen candidate. Give each
 holdout exactly one governed prompt from `evals/_shared/`, keep prior scores and
-run records out of view, save its JSON judgment outside the repo, then ingest it
+run records out of view, compute its source-only bundle digest with
+`node scripts/digest-review-bundle.mjs --root ...`, save its JSON judgment
+outside the repo, then ingest it
 with `npm run eval:record-holdout -- --input ... --prompt ... --session ...`.
 
 `npm run check:eval-records` validates the complete hash-chained history.
@@ -70,8 +79,10 @@ state without making ordinary development checks circular. Only
 `npm run certify:eval-contract` fails when the recursive stop condition has not
 been met. The canonical runner also executes staging and production preflights,
 the full repository check, dependency audit, and browser evaluation. The browser
-gate exercises responsive routes, keyboard focus, canonical/noindex metadata,
-console errors, and citation endnote/backlink semantics against the built app.
+gate exercises responsive routes, complete keyboard focus order and action
+reachability, canonical/noindex metadata, console errors, citation endnote and
+backlink semantics, and non-rendering of held or protected knowledge against the
+built app.
 
 ## Authority and open gates
 

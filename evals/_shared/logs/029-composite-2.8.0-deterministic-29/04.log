@@ -1,0 +1,36 @@
+
+> test:launch-evals
+> node --test scripts/tests/launch-evals.test.mjs
+
+✔ launch-readiness eval suite is structurally valid (0.884375ms)
+✔ launch-readiness source intentions hold (0.574417ms)
+✔ machine-readable run records reproduce their declared decisions (40.279625ms)
+✔ a declared hard-gate result cannot use a fabricated candidate commit (0.505083ms)
+✔ a passing run cannot replace hard-gate records with a trust-me note (12.819375ms)
+✔ a passing run needs exact candidate identity rather than a parent base commit (13.212708ms)
+✔ launch scoring rejects fractional values (0.231208ms)
+✔ a passing run needs criterion evidence and unresolved-risk arrays (12.497708ms)
+✔ hard-gate prose cannot substitute for typed command and browser evidence (24.783167ms)
+✔ browser evidence must cover every route and viewport instead of passing empty loops (0.494084ms)
+✔ approval and deployment evidence must match declared labels and semantic formats (39.221875ms)
+✔ a passing scorecard reaches the deterministic target (0.134041ms)
+✔ hard-gate failure cannot be averaged away (0.069958ms)
+✔ one criterion below its floor rejects an otherwise strong run (0.065209ms)
+✔ the Chad lens is explicit and cannot be averaged away (0.074041ms)
+✔ the Margaret Morse lens is explicit and cannot be averaged away (0.057667ms)
+✔ the Warren Sack lens is explicit and cannot be averaged away (0.063625ms)
+✔ the Warren Sack lens rejects collapsed judgment and model final authority (0.257834ms)
+✔ an aggregate pass cannot omit the per-run decision record (0.06425ms)
+✔ every decision dimension needs evidence and an unresolved-risks array (0.053333ms)
+✔ reopen review covers every trigger and invoked overrides carry provenance (0.053958ms)
+✔ override records cannot grant authority to a model or hide empty evidence and boundary changes (0.0755ms)
+✔ authority records cannot substitute a model or generic reviewer for policy owners (0.032625ms)
+✔ live disagreement survives an accepted aggregate result (0.049792ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 219.813458

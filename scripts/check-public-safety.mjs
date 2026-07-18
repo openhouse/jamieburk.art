@@ -276,15 +276,22 @@ if (!existsSync(resumePath)) {
 
 const siteUrlPath = path.join(repoRoot, "apps/www/src/lib/site-url.ts");
 const nextConfigPath = path.join(repoRoot, "apps/www/next.config.ts");
+const deploymentPolicyPath = path.join(repoRoot, "apps/www/src/lib/deployment-policy.ts");
 const siteUrlSource = existsSync(siteUrlPath) ? readText(siteUrlPath) : "";
 const nextConfigSource = existsSync(nextConfigPath) ? readText(nextConfigPath) : "";
+const deploymentPolicySource = existsSync(deploymentPolicyPath) ? readText(deploymentPolicyPath) : "";
 
 if (/NEXT_PUBLIC_ROBOTS_POLICY\s*!==\s*["']noindex["']/.test(siteUrlSource + nextConfigSource)) {
   addFailure(siteUrlPath, "robots policy is permissive by default");
 }
 
-if (!/NEXT_PUBLIC_ROBOTS_POLICY\s*===\s*["']index["']/.test(siteUrlSource + nextConfigSource)) {
-  addFailure(siteUrlPath, "production indexing is not explicit opt-in");
+if (
+  !/appEnv\s*===\s*["']production["']/.test(deploymentPolicySource) ||
+  !/PRODUCTION_SITE_URL\s*=\s*["']https:\/\/jamieburk\.art["']/.test(deploymentPolicySource) ||
+  !/siteUrl\s*===\s*PRODUCTION_SITE_URL/.test(deploymentPolicySource) ||
+  !/robotsPolicy\s*===\s*["']index["']/.test(deploymentPolicySource)
+) {
+  addFailure(deploymentPolicyPath, "production indexing is not an exact environment, origin, and policy opt-in");
 }
 
 if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConfigSource)) {

@@ -6,7 +6,8 @@ import {
   createIntakeReceipt,
   knowledgeReport,
   projectionMap,
-  queryKnowledge
+  queryKnowledge,
+  reconcileIntakeReceipt
 } from "../lib/knowledge-tools.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 
@@ -69,6 +70,18 @@ test("duplicate title comparison normalizes trailing and repeated whitespace", (
   const existing = knowledgeBank.intakeItems[0];
   const receipt = createIntakeReceipt({ title: `  ${existing.title}   `, project: existing.projectIds[0], kind: existing.kind, reason: "Duplicate normalization test" }, new Date("2026-07-16T00:00:00Z"));
   assert.equal(receipt.disposition, "duplicate");
+});
+
+test("duplicate intake is recomputed after the write lock is acquired", () => {
+  const first = createIntakeReceipt({
+    ...base,
+    title: "Concurrent source lead",
+    url: "https://example.com/concurrent-source-lead"
+  }, new Date("2026-07-16T00:00:00Z"));
+  const second = reconcileIntakeReceipt({ ...first, id: `${first.id}-D2` }, [first]);
+  assert.equal(first.disposition, "captured");
+  assert.equal(second.disposition, "duplicate");
+  assert.match(second.boundaries.join(" "), new RegExp(first.id));
 });
 
 test("query distinguishes record classes and filters projects", () => {

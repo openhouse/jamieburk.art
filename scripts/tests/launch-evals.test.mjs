@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import test from "node:test";
+import { isIndexableDeployment } from "../../apps/www/src/lib/deployment-policy.ts";
 import {
   loadLaunchEvalSuite,
   loadLaunchEvalRunRecords,
@@ -20,13 +21,57 @@ const resumeDigest = createHash("sha256").update(execFileSync("git", ["show", `$
 
 function completeBrowserReport() {
   const byId = Object.fromEntries(suite.runtimeCases.map((runtimeCase) => [runtimeCase.id, runtimeCase]));
-  const results = (runtimeId) => byId[runtimeId].routes.flatMap((route) => byId[runtimeId].viewports.map(([width, height]) => ({ route, width, height, passed: true })));
+  const results = (runtimeId, build) => byId[runtimeId].routes.flatMap((route) => byId[runtimeId].viewports.map(([width, height]) => build(route, width, height)));
   return {
     candidateCommit: "a".repeat(40),
     runtimeCaseIds: ["LR-RUNTIME-RESPONSIVE", "LR-RUNTIME-KEYBOARD", "LR-RUNTIME-CITATIONS"],
-    responsive: results("LR-RUNTIME-RESPONSIVE"),
-    keyboard: results("LR-RUNTIME-KEYBOARD"),
-    citations: results("LR-RUNTIME-CITATIONS"),
+    responsive: results("LR-RUNTIME-RESPONSIVE", (route, width, height) => ({
+      route,
+      width,
+      height,
+      status: 200,
+      h1Count: 1,
+      overflow: false,
+      h1Overflow: false,
+      consoleErrorCount: 0,
+      canonical: `https://staging.jamieburk.art${route === "/" ? "/" : route}`,
+      expectedCanonical: `https://staging.jamieburk.art${route === "/" ? "/" : route}`,
+      robots: "noindex, nofollow",
+      passed: true
+    })),
+    keyboard: results("LR-RUNTIME-KEYBOARD", (route, width, height) => ({
+      route,
+      width,
+      height,
+      focusableCount: 2,
+      focusSequence: [
+        { tag: "A", href: "#main", domIndex: 0, visibleFocus: true },
+        { tag: "A", href: "/resume", domIndex: 1, visibleFocus: true }
+      ],
+      mainExists: true,
+      logicalFocusOrder: true,
+      allFocusIndicatorsVisible: true,
+      actions: { email: route === "/contact", linkedin: route === "/contact", resume: true },
+      passed: true
+    })),
+    keyboardActionCoverage: { email: true, linkedin: true, resume: true },
+    citations: results("LR-RUNTIME-CITATIONS", (route, width, height) => ({
+      route,
+      width,
+      height,
+      referenceCount: 2,
+      endnotesCount: 1,
+      noteCount: 2,
+      backlinkCount: 2,
+      uniqueIds: true,
+      labelsPresent: true,
+      targetsExist: true,
+      backlinkTargetsExist: true,
+      navigationPassed: true,
+      forbiddenEvidenceTokenCount: 3,
+      protectedOrOpenEvidenceRendered: false,
+      passed: true
+    })),
     passed: true
   };
 }
@@ -43,6 +88,8 @@ function makeDecisionRecord(overrides = {}) {
       action: policy.action,
       humanAuthority: policy.authority,
       disposition: "Reviewed and not invoked in this run",
+      humanDecision: "not-invoked",
+      humanDecisionEvidence: [],
       modelHasFinalAuthority: false
     })),
     reopenTriggersConsidered: [...suite.lensPolicy.sack.reopenTriggers],
@@ -56,6 +103,14 @@ function makeDecisionRecord(overrides = {}) {
 
 test("launch-readiness eval suite is structurally valid", () => {
   assert.deepEqual(validateLaunchEvalSuite(suite), []);
+});
+
+test("indexability requires the production environment, exact apex URL, and explicit policy together", () => {
+  assert.equal(isIndexableDeployment({ appEnv: "production", siteUrl: "https://jamieburk.art", robotsPolicy: "index" }), true);
+  assert.equal(isIndexableDeployment({ appEnv: "production", siteUrl: "https://staging.jamieburk.art", robotsPolicy: "index" }), false);
+  assert.equal(isIndexableDeployment({ appEnv: "production", siteUrl: "https://preview.example", robotsPolicy: "index" }), false);
+  assert.equal(isIndexableDeployment({ appEnv: "staging", siteUrl: "https://jamieburk.art", robotsPolicy: "index" }), false);
+  assert.equal(isIndexableDeployment({ appEnv: "production", siteUrl: "https://jamieburk.art", robotsPolicy: "noindex" }), false);
 });
 
 test("launch-readiness source intentions hold", () => {
@@ -132,6 +187,17 @@ test("browser evidence must cover every route and viewport instead of passing em
   assert.match(errors, /LR-RUNTIME-RESPONSIVE does not cover the complete route and viewport matrix/);
   assert.match(errors, /LR-RUNTIME-KEYBOARD does not cover the complete route and viewport matrix/);
   assert.match(errors, /LR-RUNTIME-CITATIONS does not cover the complete route and viewport matrix/);
+});
+
+test("passed booleans cannot replace retained browser assertion evidence", () => {
+  const report = completeBrowserReport();
+  report.responsive = report.responsive.map(({ route, width, height }) => ({ route, width, height, passed: true }));
+  report.keyboard = report.keyboard.map(({ route, width, height }) => ({ route, width, height, passed: true }));
+  report.citations = report.citations.map(({ route, width, height }) => ({ route, width, height, passed: true }));
+  const errors = validateBrowserReportCoverage(suite, report, { exactRuntimeIds: true }).join("\n");
+  assert.match(errors, /retained HTTP, layout, console, canonical, and robots evidence/);
+  assert.match(errors, /complete logical focus sequence/);
+  assert.match(errors, /semantic, navigation, and protected-or-open non-rendering evidence/);
 });
 
 test("approval and deployment evidence must match declared labels and semantic formats", () => {
@@ -357,4 +423,36 @@ test("live disagreement survives an accepted aggregate result", () => {
   assert.deepEqual(decisionRecord.openDisagreements, [
     "A reviewer wants one more artistic-practice artifact."
   ]);
+});
+
+test("a binding human refusal cannot be averaged into acceptance", () => {
+  const scores = suite.judgeCriteria.map((criterion) => ({
+    criterionId: criterion.id,
+    score: 5
+  }));
+  const decisionRecord = makeDecisionRecord();
+  const promotion = decisionRecord.authorityLog.find((item) => item.action === "promote-public-claim");
+  promotion.humanDecision = "refused";
+  promotion.humanDecisionEvidence = ["Jamie declined public projection of the claim."];
+  const result = scoreJudgeResults(suite, scores, true, decisionRecord);
+  assert.equal(result.accepted, false);
+  assert.match(result.governanceFailures.join("\n"), /binding human refusal/);
+});
+
+test("binding human-decision fields are substantive and internally consistent", () => {
+  const missing = makeDecisionRecord();
+  delete missing.authorityLog[0].humanDecision;
+  assert.match(
+    validateDecisionRecord(suite, missing, { requireBindingHumanDecisions: true }).join("\n"),
+    /allowed binding human decision/
+  );
+
+  const held = makeDecisionRecord();
+  const dispute = held.authorityLog.find((item) => item.action === "dispute-attribution");
+  dispute.humanDecision = "publication-hold";
+  dispute.humanDecisionEvidence = ["An affected collaborator requested a publication hold."];
+  assert.match(
+    validateDecisionRecord(suite, held, { requireBindingHumanDecisions: true }).join("\n"),
+    /publication hold must remain visible/
+  );
 });

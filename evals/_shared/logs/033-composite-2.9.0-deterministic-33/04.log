@@ -1,0 +1,36 @@
+
+> test:launch-evals
+> node --test scripts/tests/launch-evals.test.mjs
+
+✔ launch-readiness eval suite is structurally valid (0.9865ms)
+✔ launch-readiness source intentions hold (0.627458ms)
+✔ machine-readable run records reproduce their declared decisions (45.164458ms)
+✔ a declared hard-gate result cannot use a fabricated candidate commit (0.533667ms)
+✔ a passing run cannot replace hard-gate records with a trust-me note (14.6825ms)
+✔ a passing run needs exact candidate identity rather than a parent base commit (15.180083ms)
+✔ launch scoring rejects fractional values (0.248208ms)
+✔ a passing run needs criterion evidence and unresolved-risk arrays (14.364458ms)
+✔ hard-gate prose cannot substitute for typed command and browser evidence (28.1515ms)
+✔ browser evidence must cover every route and viewport instead of passing empty loops (0.909875ms)
+✔ approval and deployment evidence must match declared labels and semantic formats (45.51675ms)
+✔ a passing scorecard reaches the deterministic target (0.187167ms)
+✔ hard-gate failure cannot be averaged away (0.087042ms)
+✔ one criterion below its floor rejects an otherwise strong run (0.069583ms)
+✔ the Chad lens is explicit and cannot be averaged away (0.080333ms)
+✔ the Margaret Morse lens is explicit and cannot be averaged away (0.066833ms)
+✔ the Warren Sack lens is explicit and cannot be averaged away (0.067584ms)
+✔ the Warren Sack lens rejects collapsed judgment and model final authority (0.273ms)
+✔ an aggregate pass cannot omit the per-run decision record (0.074875ms)
+✔ every decision dimension needs evidence and an unresolved-risks array (0.055334ms)
+✔ reopen review covers every trigger and invoked overrides carry provenance (0.057041ms)
+✔ override records cannot grant authority to a model or hide empty evidence and boundary changes (0.077958ms)
+✔ authority records cannot substitute a model or generic reviewer for policy owners (0.036625ms)
+✔ live disagreement survives an accepted aggregate result (0.052792ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 247.476625
