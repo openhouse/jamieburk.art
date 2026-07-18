@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "judgeIdentity": "knowledge-composite-final-holdout-v2-1",
+  "judgeRole": "read-only-independent",
+  "authoredPatch": false,
+  "sawOptimizationHistory": false,
+  "candidateSha": "1dfc2cbb4adebe4d19d0730f2a5e85756a6b8728",
+  "contractFingerprint": "2b2322c54cdf2b52535c0bb53e8c5d59fda6bc2c23fab42cac93fa5cab5ea5ca",
+  "candidateFingerprint": "db27f859d131460ad72d31d451c0b337a2ca9edd71dc8566d6a4368297bc9367",
+  "evaluatedAt": "2026-07-18",
+  "scores": [
+    {
+      "id": "CI-001",
+      "score": 3,
+      "rationale": "The v2 contract is pinned to baseline branch and commit, accounts for donors A-N, and the candidate sits on the pinned baseline lineage with no merge commits. The implementation-changing commit is narrow and consistent with selective integration, but this receipt did not independently recompute the candidate fingerprint from the full scope because that scope includes forbidden run artifacts.",
+      "evidencePaths": [
+        ".agents/evals/knowledge-composite-integration.json",
+        "scripts/lib/knowledge-composite-validation.mjs",
+        "scripts/tests/knowledge-composite-evals.test.mjs"
+      ]
+    },
+    {
+      "id": "CI-002",
+      "score": 4,
+      "rationale": "The exact-set knowledge lifecycle checks passed, the lifecycle test suite passed, the operator graph remained bounded, and the report showed zero orphan active intake and zero unsupported public claims. This is exact-set, mutation-tested, and review-ready.",
+      "evidencePaths": [
+        "scripts/check-knowledge-lifecycle.mjs",
+        "scripts/tests/knowledge-lifecycle.test.mjs",
+        "scripts/check-knowledge-bank.mjs",
+        "scripts/query-knowledge-lifecycle.mjs"
+      ]
+    },
+    {
+      "id": "CI-003",
+      "score": 4,
+      "rationale": "Agency relations validate as an exact set against the proof bank, public wording drift guards are in place, and composition bindings keep public surfaces attached to the canonical proof selectors. The candidate preserves bounded attribution and collective-credit language instead of drifting into solo causality or title inflation.",
+      "evidencePaths": [
+        "apps/www/src/data/knowledge-bank/agency-relations.json",
+        "scripts/lib/knowledge-composite-validation.mjs",
+        "scripts/tests/knowledge-composite-evals.test.mjs",
+        "apps/www/src/data/proofs.ts"
+      ]
+    },
+    {
+      "id": "CI-004",
+      "score": 4,
+      "rationale": "The new-operator commands expose clear help, the intake validator accepts a public-safe candidate without creating a claim, invalid references fail nonzero, invalid query views fail nonzero, bounded queries return structured capped output, and the report supports read-only stdout review. The CLI stays thin and append-safe.",
+      "evidencePaths": [
+        "scripts/knowledge-intake.mjs",
+        "scripts/query-knowledge-lifecycle.mjs",
+        "scripts/report-knowledge-lifecycle.mjs",
+        "scripts/tests/knowledge-composite-evals.test.mjs"
+      ]
+    },
+    {
+      "id": "CI-005",
+      "score": 4,
+      "rationale": "The survivorship register preserves the exact reviewed population and canonical status set, keeps negative-search language bounded, separates rights dimensions, and requires re-entry through intake or inquiry rather than automatic promotion. The validator passed cleanly on the allowed artifacts.",
+      "evidencePaths": [
+        "docs/knowledge-bank/archival-survivorship-register.json",
+        "scripts/lib/knowledge-composite-validation.mjs",
+        "docs/evals/mosaic-privacy-review.json"
+      ]
+    },
+    {
+      "id": "CI-006",
+      "score": 4,
+      "rationale": "The composition manifest covers the exact public route/template set, selected proofs and direct projections validate against the canonical registries, unselected mature knowledge remains explicitly held, and the mosaic review is bound to the supplied candidate fingerprint with continuing holds. Public surfaces remain composed arguments rather than a bank dump.",
+      "evidencePaths": [
+        "docs/evals/composition-manifest.json",
+        "docs/evals/mosaic-privacy-review.json",
+        "apps/www/src/data/proofs.ts",
+        "apps/www/src/app/work/page.tsx"
+      ]
+    },
+    {
+      "id": "CI-007",
+      "score": 3,
+      "rationale": "The frozen trust instrument now correctly separates receipt-level judging from aggregate derivation: each holdout scores its own trust evidence, while the deterministic checker alone upgrades aggregate CI-007 to 4 after validating two independent unchanged-candidate receipts. I verified my own independence, the frozen v2 instrument, the exact candidate SHA, and the supplied contract and candidate fingerprints, but I did not inspect or claim to prove the other receipt.",
+      "evidencePaths": [
+        ".agents/evals/knowledge-composite-integration.json",
+        "scripts/check-knowledge-composite-evals.mjs",
+        "scripts/lib/knowledge-composite-validation.mjs",
+        "scripts/tests/knowledge-composite-evals.test.mjs"
+      ]
+    },
+    {
+      "id": "CI-008",
+      "score": 3,
+      "rationale": "Deterministic source, leak, route, metadata, robots, and human-status policy layers passed, and staging/production indexing gates remain explicit in config. This receipt did not perform exact-candidate browser interaction, console inspection, or production-runtime smoke, so the score stays strong but below complete machine-layer closure.",
+      "evidencePaths": [
+        "scripts/check-public-safety.mjs",
+        "scripts/check-routes.mjs",
+        "apps/www/src/lib/metadata.ts",
+        "apps/www/src/app/robots.ts",
+        "apps/www/next.config.ts"
+      ]
+    },
+    {
+      "id": "CI-009",
+      "score": 4,
+      "rationale": "The human-only gates remain truthful and pending, with no automated approval state, no bound candidate claims on pending reviews, and explicit blocking reasons for both PR-019 and PR-025. Rights and collaborator-consent holds remain visible and structurally enforced.",
+      "evidencePaths": [
+        "docs/evals/blind-spot-human-status.json",
+        "scripts/check-blind-spot-evidence.mjs",
+        "scripts/tests/blind-spot-evidence.test.mjs"
+      ]
+    }
+  ],
+  "criticalRegressions": [],
+  "instrumentDefects": [],
+  "decision": "pass_for_code_review"
+}

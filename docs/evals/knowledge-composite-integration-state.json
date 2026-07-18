@@ -2,11 +2,14 @@
   "version": 1,
   "contractVersion": 2,
   "optimizerIdentity": "Codex implementation agent for feature/knowledge-n",
-  "contractFingerprint": "PENDING-CONTRACT-FINGERPRINT",
-  "candidateFingerprint": "PENDING-CANDIDATE-FINGERPRINT",
-  "candidateSha": "PENDING-IMPLEMENTATION-COMMIT",
-  "decision": "iterate",
-  "holdoutReceiptPaths": [],
+  "contractFingerprint": "2b2322c54cdf2b52535c0bb53e8c5d59fda6bc2c23fab42cac93fa5cab5ea5ca",
+  "candidateFingerprint": "db27f859d131460ad72d31d451c0b337a2ca9edd71dc8566d6a4368297bc9367",
+  "candidateSha": "1dfc2cbb4adebe4d19d0730f2a5e85756a6b8728",
+  "decision": "pass_for_code_review",
+  "holdoutReceiptPaths": [
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-2.json"
+  ],
   "humanGates": {
     "PR-019": "pending-human-review",
     "PR-025": "pending-human-review",
@@ -26,7 +29,7 @@
     "Iteration 9 discarded two unchanged-candidate holdouts after both judges correctly declined to prove the unseen second receipt, revealing that receipt-level CI-007 scoring had been conflated with aggregate completion. Contract version two assigns individual judges the instrument and their own receipt, assigns pair validation to the deterministic checker, and removes the irrelevant same-calendar-day constraint while retaining exact SHA and fingerprint agreement.",
     "The first holdout harness attempt used const fields without explicit JSON Schema types and was rejected by the response-format validator; the external harness schema was repaired and neither failed session was counted."
   ],
-  "candidateDefects": ["Independent unchanged-candidate holdouts have not yet run."],
+  "candidateDefects": [],
   "allowedPostCandidatePaths": [
     "docs/evals/knowledge-composite-integration-state.json",
     "docs/evals/runs/2026-07-17-knowledge-composite-integration.md",
