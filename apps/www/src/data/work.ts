@@ -617,7 +617,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities and used across 35+ active city-scene tags.",
+      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform; July 2017 data records 35 city/region entries with at least 50 geocoded posts/events each.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -673,7 +673,7 @@ const workItemsInput = [
       links: ["wowlist-community-platform"]
     },
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "Local calendar organizers needed lightweight, low-cost ways to publish and distribute events through the language their communities already used.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows, organizer-facing publishing, and a public support loop for product questions and workflow friction.",
     artifactTypes: ["website", "workflow", "prototype"],
@@ -709,7 +709,7 @@ const workItemsInput = [
       "Public support threads document location-scope, list-discovery, and event-entry workflow questions",
       "The project account's public trace combines direct calendar links with curation of demonstrations, vigils, fundraisers, and mutual-aid resources",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "35+ active city-scene tags supported"
+      "35 city/region entries with at least 50 geocoded posts/events each"
     ],
     knownOpenProtected: {
       known:

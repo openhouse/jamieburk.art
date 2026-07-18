@@ -171,9 +171,9 @@
       },
       {
         "id": "impact-wowlist-platform",
-        "text": "Co-built WOWList.org, a Python / Django and Ember.js community-calendar platform used by arts and music organizers across 35-plus active city-scene tags, with natural-language event entry, weekly digests, embeddable calendars, and low-cost deployment.",
+        "text": "Co-built WOWList.org, a Python / Django and Ember.js community-calendar platform with 1,800-plus users, 16,000-plus posts/events, and 35 city/region entries containing at least 50 geocoded posts/events each in July 2017.",
         "claims": [],
-        "proofs": [{ "id": "wowlist-community-platform", "anchor": "natural-language" }]
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "community-calendar" }]
       },
       {
         "id": "impact-sunday-dinner-participation",
@@ -628,7 +628,7 @@
         "id": "wowlist-mdx-context",
         "path": "apps/www/src/content/work/wowlist.mdx",
         "surface": "/work/wowlist",
-        "text": "WOWList.org was a co-built community-calendar platform organized around followable keyword communities. It used Django, PostgreSQL / PostGIS, and Ember.js to support event distribution and discovery across DIY arts, music, and local-interest scenes.",
+        "text": "WOWList.org was a co-built community-calendar platform organized around followable keyword communities. It used Django, PostgreSQL / PostGIS, and Ember.js to support low-cost event publishing and distribution for local calendar organizers.",
         "claims": [],
         "proofs": [{ "id": "wowlist-community-platform", "anchor": "co-built" }]
       },
@@ -652,9 +652,9 @@
         "id": "wowlist-mdx-scale",
         "path": "apps/www/src/content/work/wowlist.mdx",
         "surface": "/work/wowlist",
-        "text": "The public-safe scale claim is careful: aggregate historical records support 1,800+ users, 16,000+ posts/events, and 35+ active city-scene tags. Tags are not cities, chapters, or independent proof of geographic reach. The site does not publish private user rows, organizer contact lists, geolocation records, or raw community data.",
+        "text": "The public-safe scale claim is careful: aggregate historical records support 1,800+ users and 16,000+ posts/events. A July 2017 snapshot contains 35 city/region entries with at least 50 geocoded posts/events each. Those entries are not proof of cities reached, chapters, unique users, or organizer adoption. The site does not publish private user rows, organizer contact lists, geolocation records, or raw community data.",
         "claims": [],
-        "proofs": [{ "id": "wowlist-community-platform", "anchor": "35+ active city-scene tags" }]
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "35 city/region entries" }]
       },
       {
         "id": "wowlist-mdx-role",
@@ -729,7 +729,7 @@
         "surface": "/work/kc-town-hall",
         "text": "A later handoff recollection remains held for collaborator or organizational corroboration.",
         "claims": [],
-        "proofs": [{ "id": "kc-town-hall-held-role-research", "anchor": "recollection" }]
+        "proofs": [{ "id": "kc-town-hall-mission-aligned-handoff-held", "anchor": "recollection" }]
       }
   ]
 }

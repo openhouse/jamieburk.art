@@ -23,6 +23,7 @@ import {
   resumeVisibleBlocks,
   resumeSubstantiveStatements,
   routeRealizesProjection,
+  stableProofEvidenceCoverage,
   statementProofSemanticCoverage,
   validateHybridReportCandidate,
   validateKnowledgeDevelopmentSuite,
@@ -528,6 +529,12 @@ test("public and resume statements require proposition-level semantic support", 
 test("authored case-study prose resolves to stable knowledge-bank identities", () => {
   const claimIds = new Set(knowledgeBank.claims.map((claim) => claim.id));
   const sourceIds = new Set(knowledgeBank.sources.map((sourceItem) => sourceItem.id));
+  const assertionIds = new Set(
+    knowledgeBank.sourceAssertions.map((assertion) => assertion.id)
+  );
+  const inquiryIds = new Set(
+    knowledgeBank.researchInquiries.map((inquiry) => inquiry.id)
+  );
   const proofById = new Map(proofClaims.map((proof) => [proof.id, proof]));
   const statements = projectionSurfaceBindings.publicStatementManifest.filter(
     (statement) => statement.path.endsWith(".mdx")
@@ -535,14 +542,20 @@ test("authored case-study prose resolves to stable knowledge-bank identities", (
 
   assert.ok(statements.length > 0);
   for (const statement of statements) {
+    const resolvedProofs = [];
     for (const support of statement.proofs ?? []) {
       const proof = proofById.get(support.id);
       assert.ok(proof, `${statement.id} references missing proof ${support.id}`);
+      resolvedProofs.push(proof);
       const supportingClaimIds = proof.supportingClaimIds ?? [];
       const supportingSourceIds = proof.supportingSourceIds ?? [];
+      const supportingAssertionIds = proof.supportingAssertionIds ?? [];
+      const supportingInquiryIds = proof.supportingResearchInquiryIds ?? [];
       assert.ok(
-        supportingClaimIds.length + supportingSourceIds.length > 0,
-        `${support.id} has no stable claim or source identity`
+        supportingClaimIds.length + supportingSourceIds.length +
+          supportingAssertionIds.length + supportingInquiryIds.length >
+          0,
+        `${support.id} has no stable knowledge-bank identity`
       );
       for (const claimId of supportingClaimIds) {
         assert.ok(claimIds.has(claimId), `${support.id} references missing claim ${claimId}`);
@@ -550,8 +563,45 @@ test("authored case-study prose resolves to stable knowledge-bank identities", (
       for (const sourceId of supportingSourceIds) {
         assert.ok(sourceIds.has(sourceId), `${support.id} references missing source ${sourceId}`);
       }
+      for (const assertionId of supportingAssertionIds) {
+        assert.ok(
+          assertionIds.has(assertionId),
+          `${support.id} references missing assertion ${assertionId}`
+        );
+      }
+      for (const inquiryId of supportingInquiryIds) {
+        assert.ok(
+          inquiryIds.has(inquiryId),
+          `${support.id} references missing inquiry ${inquiryId}`
+        );
+      }
+    }
+    const coverage = stableProofEvidenceCoverage(
+      statement.text,
+      resolvedProofs,
+      knowledgeBank
+    );
+    assert.ok(
+      coverage.score >= 0.15,
+      `${statement.id} has only ${coverage.matched.length}/${coverage.statementTokens.length} substantively supported tokens across stable evidence edges`
+    );
+    if (/\b\d[\d,+.-]*\b/.test(statement.text)) {
+      assert.ok(
+        resolvedProofs.some(
+          (proof) => (proof.supportingAssertionIds ?? []).length > 0
+        ),
+        `${statement.id} contains a quantity without a stable source assertion`
+      );
     }
   }
+
+  assert.ok(
+    stableProofEvidenceCoverage(
+      "Jamie designed nuclear reactors and spacecraft propulsion systems.",
+      proofById.get("wowlist-community-platform"),
+      knowledgeBank
+    ).score < 0.15
+  );
 });
 
 test("campaign press corpus preserves all memberships without duplicating articles", () => {
@@ -686,6 +736,30 @@ test("collective semantic classes and documented baseline stay complete", () => 
   assert.match(
     documented,
     new RegExp(FROZEN_COLLECTIVE_BASELINE_TAG.replace("refs/tags/", ""))
+  );
+});
+
+test("institutional outcomes name a formal institution or decision-maker", () => {
+  const institutionalPattern =
+    /(council|city|office|agency|board|legislation|law|ordinance|resolution|signed|passed|authorized|enacted|dismantling|institution)/i;
+  const institutionalClaims = Object.entries(
+    collectiveCreditPolicy.claimSemanticClasses
+  )
+    .filter(([, semanticClass]) => semanticClass === "institutional-outcome")
+    .map(([claimId]) =>
+      knowledgeBank.claims.find((claim) => claim.id === claimId)
+    );
+
+  assert.ok(institutionalClaims.length > 0);
+  for (const claim of institutionalClaims) {
+    assert.ok(claim, "institutional semantic class references a missing claim");
+    assert.match(claim.internalClaim, institutionalPattern);
+  }
+  assert.equal(
+    collectiveCreditPolicy.claimSemanticClasses[
+      "CLM-KCTH-X-SELF-REPORTED-TIRE-OUTCOMES"
+    ],
+    "metric-observation"
   );
 });
 
@@ -1894,16 +1968,20 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   assert.equal(pinnedRawCaptureText, rawCaptureText);
   assert.equal(sha256(pinnedRawCaptureText), manifest.sourceCaptureSha256);
   assert.equal(
-    page.occurrences.find(
-      (item) => item.id === "shared-public-operating-layer"
-    ).claimId,
-    sharedLayer.id
+    page.occurrences.some((item) => item.claimId === sharedLayer.id),
+    false
   );
   assert.equal(
-    page.occurrences.find((item) => item.id === "public-source-circulation")
-      .claimId,
-    sourceCirculation.id
+    page.occurrences.some((item) => item.claimId === sourceCirculation.id),
+    false
   );
+  assert.deepEqual(sharedLayer.projections[0].surfaces, []);
+  assert.equal(sharedLayer.projections[0].status, "hold");
+  const sourceCirculationCaseStudy = sourceCirculation.projections.find(
+    (projection) => projection.key === "case-study"
+  );
+  assert.deepEqual(sourceCirculationCaseStudy.surfaces, []);
+  assert.equal(sourceCirculationCaseStudy.status, "hold");
   assert.match(mdx, /What the shared identity made usable/);
   assert.match(mdx, /explicit\s+gap/);
   assert.doesNotMatch(

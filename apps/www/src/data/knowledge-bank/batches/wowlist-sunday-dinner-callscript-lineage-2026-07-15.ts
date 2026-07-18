@@ -62,10 +62,11 @@ export const wowListSundayDinnerCallScriptLineageBatch20260715: {
       publicCitation:
         "Public-safe aggregate review of three historic WOW List production database snapshots dated June 24, 2016, June 1, 2017, and July 22, 2017; raw records and person-level data not published.",
       publicNote:
-        "The July 2017 snapshot contains 1,846 users, 16,142 posts/events, 23,864 tags/lists, 28,837 list follows, 20,927 stars, and 2,965 going records. These are snapshot table totals, not unique reach, attendance, endorsement, or current activity.",
+        "The July 2017 snapshot contains 1,846 users, 16,142 posts/events, 23,864 tags/lists, 28,837 list follows, 20,927 stars, and 2,965 going records. A public-safe geography query found exactly 35 city/region entries with at least 50 geocoded posts/events each. These are snapshot table totals and geographic record groupings, not unique reach, attendance, endorsement, organizer adoption, chapters, or current activity.",
       supportsGenerally: [
         "growth across three dated production snapshots",
         "the scale of the event, list, follow, star, and going data model",
+        "exactly 35 city/region entries with at least 50 geocoded posts/events each in the July 22, 2017 snapshot",
         "a Popular Vote list created November 12, 2016, with 933 linked post/event records, 196 follows, and 10 anonymous contributor IDs by July 22, 2017",
         "an NYC Artist Coalition list created February 7, 2017, with 82 linked post/event records and two anonymous contributor IDs by July 22, 2017"
       ],
@@ -188,6 +189,19 @@ export const wowListSundayDinnerCallScriptLineageBatch20260715: {
       project: "wowlist",
       assertion:
         "Three production snapshots show WOW List growing from 995 users and 10,136 posts/events in June 2016 to 1,846 users and 16,142 posts/events in July 2017.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: [],
+      publicSafe: true,
+      reviewedAt,
+      reviewedBy
+    },
+    {
+      id: "AST-WOWLIST-CITY-REGION-50-POST-THRESHOLD-2017",
+      sourceId: "SRC-WOWLIST-PRODUCTION-DB-SNAPSHOTS-2016-2017",
+      project: "wowlist",
+      assertion:
+        "A public-safe query of the July 22, 2017 production snapshot found exactly 35 city/region entries with at least 50 geocoded posts/events each.",
       relationship: "supports",
       confidence: "high",
       candidateClaimIds: [],

@@ -31,7 +31,9 @@ export type ProofClaim = {
   detailedPublicWording?: string;
   sourceBasis: string;
   supportingClaimIds?: string[];
+  supportingAssertionIds?: string[];
   supportingSourceIds?: string[];
+  supportingResearchInquiryIds?: string[];
   sourceNote?: string;
   whyItMatters?: string;
   guardrail: string;
@@ -512,8 +514,8 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform used across 35+ active city-scene tags.",
-    shortWording: "WOWList supported 35+ active city-scene tags",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform whose July 2017 data records 35 city/region entries with at least 50 geocoded posts/events each.",
+    shortWording: "35 city/region entries with 50+ geocoded posts/events each",
     detailedPublicWording:
       "As co-builder and product operator, Jamie helped WOWList support 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -523,12 +525,16 @@ export const proofClaims: ProofClaim[] = [
       "CLM-WOWLIST-CIVIC-CARE-USE-PATTERN",
       "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP"
     ],
+    supportingAssertionIds: [
+      "AST-WOWLIST-CITY-REGION-50-POST-THRESHOLD-2017"
+    ],
     supportingSourceIds: ["SRC-WOWLIST-PRODUCTION-DB-SNAPSHOTS-2016-2017"],
     guardrail:
-      "Describe the governed database measure as active city-scene tags, not cities, chapters, geographic reach, or independently verified organizer adoption. Screenshots, archive links, and collaborator-visible artifacts remain pending approval before publication.",
+      "Describe the governed measure as 35 city/region entries with at least 50 geocoded posts/events each in the July 22, 2017 snapshot, not cities reached, chapters, unique users, or independently verified organizer adoption. Screenshots, archive links, and collaborator-visible artifacts remain pending approval before publication.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Adopted across or reached 35 city ecosystems",
+      "Thirty-five independently verified organizer communities",
       "Full ownership of organizer use",
       "Current active platform unless confirmed"
     ],
@@ -564,6 +570,7 @@ export const proofClaims: ProofClaim[] = [
       "CLM-SUNDAY-DINNER-FACEBOOK-MILESTONES",
       "CLM-SUNDAY-DINNER-100TH-PUBLIC-TRACE"
     ],
+    supportingAssertionIds: ["AST-SUNDAY-DINNER-WORKBOOK-SEQUENCE-2021"],
     supportingSourceIds: ["SRC-SUNDAY-DINNER-OPERATING-WORKBOOK-2026"],
     guardrail:
       "Name Jamie's stewardship without assigning him authorship of participants' work or sole creation of the collective practice. Keep the page summary-only; named participants, photos, and artifacts require consent and approval.",
@@ -1022,6 +1029,41 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["neighborhood-operations", "public-documentation", "stakeholder-communication"],
     lastReviewed: "2026-07-15"
+  },
+  {
+    id: "kc-town-hall-mission-aligned-handoff-held",
+    status: "careful",
+    supportLevel: "pending",
+    evidenceClass: ["public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "A later mission-aligned handoff recollection remains a held research lead pending collaborator or organizational corroboration.",
+    shortWording: "Mission-aligned handoff recollection held for corroboration",
+    detailedPublicWording:
+      "Jamie's first-person recollection is preserved as a research lead, not an independently confirmed accomplishment; the recipient, date, terms, authority, and present status remain unestablished.",
+    sourceBasis:
+      "Jamie's July 14, 2026 first-person account and the bounded July 16, 2026 corroboration inquiry.",
+    supportingClaimIds: ["CLM-KCTH-MISSION-ALIGNED-HANDOFF"],
+    supportingSourceIds: ["SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026"],
+    supportingResearchInquiryIds: [
+      "INQ-KCTH-MISSION-ALIGNED-HANDOFF-2026"
+    ],
+    guardrail:
+      "Publish only the held research status. Do not project the handoff as an accomplished fact until bounded collaborator or organizational corroboration is added.",
+    doNotSay: [
+      "The mission-aligned handoff is independently confirmed",
+      "Jamie alone authorized or executed the handoff",
+      "The recipient, date, terms, or present project status are established"
+    ],
+    protectedBoundaries: [
+      "Private transition context",
+      "Recipient identity",
+      "Handoff date and terms",
+      "Unapproved collaborator correspondence"
+    ],
+    surfaces: ["case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: ["handoffs", "research-discipline", "collective-credit"],
+    lastReviewed: "2026-07-16"
   },
   {
     id: "kc-town-hall-held-role-research",

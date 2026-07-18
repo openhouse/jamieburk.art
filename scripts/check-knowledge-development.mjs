@@ -811,6 +811,27 @@ export function statementProofSemanticCoverage(statement, proofInput) {
   );
 }
 
+export function stableProofEvidenceCoverage(statement, proofInput, bank) {
+  const proofs = (Array.isArray(proofInput) ? proofInput : [proofInput]).filter(
+    Boolean
+  );
+  const linkedEvidence = proofs.flatMap((proof) => [
+    ...(proof.supportingClaimIds ?? []).map((id) =>
+      bank.claims.find((claim) => claim.id === id)
+    ),
+    ...(proof.supportingSourceIds ?? []).map((id) =>
+      bank.sources.find((source) => source.id === id)
+    ),
+    ...(proof.supportingAssertionIds ?? []).map((id) =>
+      bank.sourceAssertions.find((assertion) => assertion.id === id)
+    ),
+    ...(proof.supportingResearchInquiryIds ?? []).map((id) =>
+      bank.researchInquiries.find((inquiry) => inquiry.id === id)
+    )
+  ]).filter(Boolean);
+  return statementSemanticCoverage(statement, JSON.stringify(linkedEvidence));
+}
+
 function claimSemanticBasis(claim) {
   return JSON.stringify({
     internalClaim: claim.internalClaim,
@@ -988,6 +1009,39 @@ function governedStatementFindings(statement, bank, source, label) {
   const requiresStableEvidenceIdentity = statement.path?.endsWith(".mdx");
   const claimIds = new Set(bank.claims.map((claim) => claim.id));
   const sourceIds = new Set(bank.sources.map((sourceItem) => sourceItem.id));
+  const assertionIds = new Set(
+    bank.sourceAssertions.map((assertion) => assertion.id)
+  );
+  const inquiryIds = new Set(
+    bank.researchInquiries.map((inquiry) => inquiry.id)
+  );
+  const resolvedProofs = proofs
+    .map((support) => proofById.get(support.id))
+    .filter(Boolean);
+  const statementAssertionIds = resolvedProofs.flatMap(
+    (proof) => proof.supportingAssertionIds ?? []
+  );
+  if (
+    requiresStableEvidenceIdentity &&
+    /\b\d[\d,+.-]*\b/.test(statement.text) &&
+    statementAssertionIds.length === 0
+  ) {
+    findings.push(
+      `${label} contains a quantity without a stable source assertion`
+    );
+  }
+  if (requiresStableEvidenceIdentity && resolvedProofs.length > 0) {
+    const edgeCoverage = stableProofEvidenceCoverage(
+      statement.text,
+      resolvedProofs,
+      bank
+    );
+    if (edgeCoverage.statementTokens.length > 0 && edgeCoverage.score < 0.15) {
+      findings.push(
+        `${label} stable evidence edges do not support the proposition (${edgeCoverage.matched.length}/${edgeCoverage.statementTokens.length} substantive tokens)`
+      );
+    }
+  }
   for (const support of proofs) {
     const proof = proofById.get(support.id);
     if (!proof) {
@@ -1004,12 +1058,16 @@ function governedStatementFindings(statement, bank, source, label) {
     }
     const stableClaimIds = proof.supportingClaimIds ?? [];
     const stableSourceIds = proof.supportingSourceIds ?? [];
+    const stableAssertionIds = proof.supportingAssertionIds ?? [];
+    const stableInquiryIds = proof.supportingResearchInquiryIds ?? [];
     if (
       requiresStableEvidenceIdentity &&
-      stableClaimIds.length + stableSourceIds.length === 0
+      stableClaimIds.length + stableSourceIds.length +
+        stableAssertionIds.length + stableInquiryIds.length ===
+        0
     ) {
       findings.push(
-        `${label} proof ${support.id} has no stable claim or source identity`
+        `${label} proof ${support.id} has no stable knowledge-bank identity`
       );
     }
     for (const claimId of stableClaimIds) {
@@ -1023,6 +1081,20 @@ function governedStatementFindings(statement, bank, source, label) {
       if (!sourceIds.has(sourceId)) {
         findings.push(
           `${label} proof ${support.id} references missing supporting source ${sourceId}`
+        );
+      }
+    }
+    for (const assertionId of stableAssertionIds) {
+      if (!assertionIds.has(assertionId)) {
+        findings.push(
+          `${label} proof ${support.id} references missing supporting assertion ${assertionId}`
+        );
+      }
+    }
+    for (const inquiryId of stableInquiryIds) {
+      if (!inquiryIds.has(inquiryId)) {
+        findings.push(
+          `${label} proof ${support.id} references missing supporting inquiry ${inquiryId}`
         );
       }
     }
@@ -3016,6 +3088,13 @@ export function evaluateKnowledgeBank(
         !/Jamie|Jamie's/i.test(claim.internalClaim)
       ) {
         findings["KB-007"].push(`${claim.id} classifies a contribution without naming Jamie's action`);
+      } else if (
+        semanticClass === "institutional-outcome" &&
+        !/(council|city|office|agency|board|legislation|law|ordinance|resolution|signed|passed|authorized|enacted|dismantling|institution)/i.test(claim.internalClaim)
+      ) {
+        findings["KB-007"].push(
+          `${claim.id} classifies an institutional outcome without naming a formal institution or decision`
+        );
       } else if (
         semanticClass === "institutional-outcome" &&
         (!/Jamie/i.test(guardrail) || !/(alone|author|caus|personally|secured)/i.test(guardrail))

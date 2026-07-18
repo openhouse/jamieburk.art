@@ -188,12 +188,12 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform used across 35+ active city-scene tags.
+**Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform whose July 2017 data records 35 city/region entries with at least 50 geocoded posts/events each.
 **Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
-**Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.  
-**Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed.  
+**Guardrail:** Use the exact July 2017 database measure: 35 city/region entries with at least 50 geocoded posts/events each. Do not convert it into cities reached, chapters, unique users, or independently verified organizer adoption.
+**Do not say:** Official chapters in 35 cities; adopted across or reached 35 city ecosystems; current active platform unless confirmed.
 **Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and unapproved community artifacts stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
