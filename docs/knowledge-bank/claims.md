@@ -455,6 +455,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## kc-town-hall-mission-aligned-handoff-held - Mission-aligned handoff research lead
+
+**Status:** Careful / held from public projection
+**Support level:** Pending
+**Evidence class:** Public-safe archive summary / Jamie review confirmation
+**Public wording:** A later mission-aligned handoff recollection remains a held research lead pending collaborator or organizational corroboration.
+**Detailed public-safe wording:** Jamie's first-person recollection is preserved as a research lead, not an independently confirmed accomplishment; the recipient, date, terms, authority, and present status remain unestablished.
+**Where to project:** Knowledge bank only until corroborated.
+**Why it matters:** Preserves a potentially important transition and stewardship practice without publishing private crisis context or presenting an unverified handoff as completed fact.
+**Guardrail:** Publish only the held research status. Do not project the handoff as an accomplished fact until bounded collaborator or organizational corroboration is added.
+**Do not say:** The mission-aligned handoff is independently confirmed; Jamie alone authorized or executed the handoff; the recipient, date, terms, or present project status are established.
+**Protected boundaries:** Private transition context, recipient identity, handoff date and terms, and unapproved collaborator correspondence stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-16
+
 ## kc-town-hall-held-role-research - Held KC Town Hall role research
 
 **Status:** Careful

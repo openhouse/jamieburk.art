@@ -319,7 +319,7 @@ const proofBlock = proofSource.slice(proofStart, proofEnd);
 
 check(
   "Role and projection discipline",
-  "The website receives one strong bounded role claim while fragile metrics stay in the bank",
+  "The website receives one governed role claim while fragile metrics stay in the bank",
   9,
   participationClaim?.projections.some(
     (projection) =>
@@ -338,9 +338,9 @@ check(
         occurrence.claimId === "CLM-NYCAC-PARTICIPATION-SYSTEM"
     ) &&
     includesAll(caseStudy, [
-      "CLM-NYCAC-PARTICIPATION-SYSTEM",
-      "does not assign Jamie authorship of",
-      "Facebook responses into attendance"
+      'claimId="CLM-NYCAC-PARTICIPATION-SYSTEM"',
+      'pageId="fair-rent-nyc"',
+      'occurrenceId="coalition-participation-system"'
     ]) &&
     participationClaim.projections.some((projection) =>
       includesAll(projection.text, ["Jamie reports that", "helped establish and produce"])

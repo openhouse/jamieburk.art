@@ -362,15 +362,15 @@
     "reviewAgePolicyDays": 90,
     "inventory": {
       "intake": 65,
-      "sources": 257,
-      "sourceAssertions": 359,
+      "sources": 258,
+      "sourceAssertions": 362,
       "claims": 112,
-      "proofRecords": 44,
+      "proofRecords": 45,
       "researchTasks": 59,
-      "researchInquiries": 29,
+      "researchInquiries": 30,
       "citationPages": 6
     },
-    "heldClaimCount": 49,
+    "heldClaimCount": 50,
     "notRecoveredClaimCount": 3,
     "inferenceClaimCount": 5,
     "contradictoryAssertionCount": 1,
@@ -389,6 +389,6 @@
       "dataOrKnowledgeSystems": 6,
       "aiEvaluation": 1
     },
-    "fingerprint": "79b03be63cf71c1fb50741fe6c4e5eb1d53785a3b3fc28c9034c8843f84a4e7b"
+    "fingerprint": "391f9af055ebe397de75b5fdbb7dbbcb124def79e1d01d8ce09ac66d3a5532df"
   }
 }
