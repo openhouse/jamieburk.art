@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "sha256:b3915e8a6ee9cbcfdca68d332d873169cef82e03f9c0fddb1c4cdaab7f72379b",
+  "byKind": {
+    "asset": [
+      "asset.photo.digital-district.001"
+    ],
+    "capability": [
+      "capability.technical-operations"
+    ],
+    "claim": [
+      "claim.callnyc.hackathon-date-time",
+      "claim.callnyc.independent-follow-on",
+      "claim.callnyc.project-years.legacy"
+    ],
+    "correction": [
+      "correction.callnyc-years"
+    ],
+    "event": [
+      "event.nycc.constituent-services-hackathon.2016"
+    ],
+    "index": [
+      "index.knowledge-wiki",
+      "index.knowledge-wiki-pilot"
+    ],
+    "method": [
+      "method.source-backed-team-memory"
+    ],
+    "opportunity": [
+      "opportunity.nyc-oti.technical-operations-manager.782369"
+    ],
+    "projection": [
+      "portfolio.work.callnyc",
+      "portfolio.work.technical-operations"
+    ],
+    "project": [
+      "project.callnyc"
+    ],
+    "source": [
+      "source.civichall.hackathon-announcement.2016",
+      "source.nycc.councilstat-hackathon-post.2016",
+      "source.politico.callnyc.2016-03-14"
+    ]
+  },
+  "byStatus": {
+    "governed-open": [
+      "asset.photo.digital-district.001",
+      "opportunity.nyc-oti.technical-operations-manager.782369"
+    ],
+    "maintained": [
+      "capability.technical-operations",
+      "claim.callnyc.hackathon-date-time",
+      "claim.callnyc.independent-follow-on",
+      "correction.callnyc-years",
+      "event.nycc.constituent-services-hackathon.2016",
+      "index.knowledge-wiki",
+      "index.knowledge-wiki-pilot",
+      "method.source-backed-team-memory",
+      "portfolio.work.callnyc",
+      "portfolio.work.technical-operations",
+      "project.callnyc",
+      "source.civichall.hackathon-announcement.2016",
+      "source.nycc.councilstat-hackathon-post.2016",
+      "source.politico.callnyc.2016-03-14"
+    ],
+    "superseded": [
+      "claim.callnyc.project-years.legacy"
+    ]
+  },
+  "aliases": {
+    "call nyc": "project.callnyc",
+    "callnyc.org": "project.callnyc",
+    "civic hall event announcement": "source.civichall.hackathon-announcement.2016",
+    "council event-day post": "source.nycc.councilstat-hackathon-post.2016",
+    "digital district participant photograph": "asset.photo.digital-district.001",
+    "january 2016 councilstat hackathon": "event.nycc.constituent-services-hackathon.2016",
+    "knowledge bank": "index.knowledge-wiki",
+    "oti technical operations": "opportunity.nyc-oti.technical-operations-manager.782369",
+    "politico callnyc article": "source.politico.callnyc.2016-03-14",
+    "product operations and implementation": "capability.technical-operations",
+    "source backed team memory": "method.source-backed-team-memory",
+    "wiki pilot": "index.knowledge-wiki-pilot"
+  }
+}

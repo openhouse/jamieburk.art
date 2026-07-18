@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "sha256:b3915e8a6ee9cbcfdca68d332d873169cef82e03f9c0fddb1c4cdaab7f72379b",
+  "hardGates": {
+    "status": "pass",
+    "failures": []
+  },
+  "diagnostics": {
+    "records": 17,
+    "recordsByKind": {
+      "asset": 1,
+      "capability": 1,
+      "claim": 3,
+      "correction": 1,
+      "event": 1,
+      "index": 2,
+      "method": 1,
+      "opportunity": 1,
+      "projection": 2,
+      "project": 1,
+      "source": 3
+    },
+    "proseLinks": 32,
+    "typedRelations": 35,
+    "genericRelationRate": 0,
+    "discoverableRecords": 16,
+    "reachableDiscoverableRecords": 16,
+    "maximumRootDistance": 2,
+    "typeAwareOrphans": [],
+    "deadEnds": [],
+    "wantedPages": [],
+    "staleRecords": [],
+    "rightsBacklog": [
+      "asset.photo.digital-district.001"
+    ],
+    "humanReviewBacklog": [
+      {
+        "id": "asset.photo.digital-district.001",
+        "state": "human-blocked"
+      }
+    ],
+    "warnings": []
+  },
+  "manualAuthorityGates": {
+    "humanNavigationStudy": "not-requested",
+    "collaboratorConsent": "not-requested",
+    "rightsClearance": "human-blocked",
+    "editorialApproval": "not-requested",
+    "productionObservation": "not-requested"
+  }
+}

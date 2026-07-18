@@ -156,6 +156,7 @@
   ],
   "candidateIgnorePaths": [
     "docs/evals/runs/feature-knowledge-c-composite.md",
+    "docs/evals/runs/feature-knowledge-wiki-D.md",
     "evals/composite-integration/baselines",
     "evals/composite-integration/judgments",
     "evals/composite-integration/runs",

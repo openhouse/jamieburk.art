@@ -48,12 +48,19 @@ JSON. Markdown backlink and navigation reports were added for the VS Code-first
 reader. The candidate and contract fingerprints changed, and stale judgment
 binding failed as designed.
 
+### Iteration 6
+
+The first commit rehearsal exposed extra terminal blank lines in three
+generated Markdown reports. The generator was corrected, the reports were
+regenerated, and stale candidate binding failed as designed. Both independent
+judgments were rechecked against the corrected output.
+
 ### Final Candidate
 
 The independent judgments were re-performed and rebound after the Markdown
-views were inspected.
+views and generator correction were inspected.
 
-- Candidate: `sha256:f16835b0b486b86b1532f6b7bfaa1bcfbbaf62de7ab499cef041527e277269bd`
+- Candidate: `sha256:7533b88aa34368e75bffcaa298450c5e4fd32e7cfcfbea1279a2f21627f7bb7f`
 - Contract: `sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0`
 - Governed records: 17
 - Typed relations: 35

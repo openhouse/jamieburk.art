@@ -1,8 +1,8 @@
 {
   "suite": "feature-evals-composite-integration-v4",
-  "candidate": "sha256:72f9867e417643f2887422273bf5480db51e2c20de71f327593617de47843727",
-  "contract": "sha256:0dde8926cd1afd7c7f89142ea2d9fe561fe88092d43fbaada0702b788b435e7d",
-  "judgeId": "codex-independent-composite-archival-editorial-2026-07-18-wiki",
+  "candidate": "sha256:9460e2e9d601dcc4636d5aff439ea3a0687f5b55774b21f699677b63909c5df9",
+  "contract": "sha256:170874d49ff0b5f6c85579c2fcde8824e325e97fcb90dad3118e34e2ccf83bc7",
+  "judgeId": "codex-independent-composite-archival-editorial-2026-07-18-wiki-r2",
   "lens": "archival-editorial",
   "status": "pass",
   "scores": {
@@ -100,7 +100,7 @@
     {
       "rubric": "exact-candidate verification",
       "artifact": "npm run test:composite; node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The repository reproduced candidate sha256:72f9867e417643f2887422273bf5480db51e2c20de71f327593617de47843727 and contract sha256:0dde8926cd1afd7c7f89142ea2d9fe561fe88092d43fbaada0702b788b435e7d exactly. All focused tests, deterministic rubric gates, reviewability accounting, and canonical regression checks passed; candidate_binding remained open only because the two prior judgments targeted an earlier candidate."
+      "observation": "The repository reproduced candidate sha256:9460e2e9d601dcc4636d5aff439ea3a0687f5b55774b21f699677b63909c5df9 and contract sha256:170874d49ff0b5f6c85579c2fcde8824e325e97fcb90dad3118e34e2ccf83bc7 exactly. All focused tests, deterministic rubric gates, reviewability accounting, and canonical regression checks passed; the exact generated Wiki run receipt is excluded consistently with the existing composite run receipt, while all implementation and contract files remain bound."
     }
   ],
   "regressions": [],

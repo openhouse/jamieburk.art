@@ -1,0 +1,438 @@
+{
+  "asset.photo.digital-district.001": [
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../assets/digital-district-photo.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "has_asset",
+      "source": "frontmatter",
+      "href": "../assets/digital-district-photo.md"
+    }
+  ],
+  "capability.technical-operations": [
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "supports",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "portfolio.work.technical-operations",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "supports",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    }
+  ],
+  "claim.callnyc.hackathon-date-time": [
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../claims/callnyc-hackathon-date-time.md"
+    },
+    {
+      "from": "source.civichall.hackathon-announcement.2016",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../claims/callnyc-hackathon-date-time.md"
+    }
+  ],
+  "claim.callnyc.independent-follow-on": [
+    {
+      "from": "correction.callnyc-years",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../claims/callnyc-independent-follow-on.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../claims/callnyc-independent-follow-on.md"
+    },
+    {
+      "from": "source.politico.callnyc.2016-03-14",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../claims/callnyc-independent-follow-on.md"
+    }
+  ],
+  "claim.callnyc.project-years.legacy": [
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "supersedes",
+      "source": "frontmatter",
+      "href": "callnyc-project-years-legacy.md"
+    },
+    {
+      "from": "correction.callnyc-years",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../claims/callnyc-project-years-legacy.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../claims/callnyc-project-years-legacy.md"
+    }
+  ],
+  "correction.callnyc-years": [
+    {
+      "from": "claim.callnyc.project-years.legacy",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../corrections/callnyc-years.md"
+    },
+    {
+      "from": "claim.callnyc.project-years.legacy",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../corrections/callnyc-years.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../corrections/callnyc-years.md"
+    }
+  ],
+  "event.nycc.constituent-services-hackathon.2016": [
+    {
+      "from": "asset.photo.digital-district.001",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "informed_by",
+      "source": "frontmatter",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
+    },
+    {
+      "from": "source.civichall.hackathon-announcement.2016",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
+    },
+    {
+      "from": "source.nycc.councilstat-hackathon-post.2016",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
+    }
+  ],
+  "index.knowledge-wiki": [
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../README.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "part_of",
+      "source": "frontmatter",
+      "href": "../README.md"
+    }
+  ],
+  "index.knowledge-wiki-pilot": [
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "indexes/pilot.md"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "indexes/pilot.md"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "indexes/pilot.md"
+    }
+  ],
+  "method.source-backed-team-memory": [
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "uses_method",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../methods/source-backed-team-memory.md"
+    }
+  ],
+  "opportunity.nyc-oti.technical-operations-manager.782369": [
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../opportunities/oti-technical-operations.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../opportunities/oti-technical-operations.md"
+    },
+    {
+      "from": "portfolio.work.technical-operations",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md"
+    }
+  ],
+  "portfolio.work.callnyc": [
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "projected_to",
+      "source": "frontmatter",
+      "href": "../projections/work-callnyc.md"
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "projected_to",
+      "source": "frontmatter",
+      "href": "../projections/work-callnyc.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../projections/work-callnyc.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "projected_to",
+      "source": "frontmatter",
+      "href": "../projections/work-callnyc.md"
+    }
+  ],
+  "portfolio.work.technical-operations": [
+    {
+      "from": "capability.technical-operations",
+      "type": "projected_to",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../projections/work-technical-operations.md"
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md"
+    }
+  ],
+  "project.callnyc": [
+    {
+      "from": "capability.technical-operations",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "resulted_in",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "projects/callnyc.md"
+    },
+    {
+      "from": "portfolio.work.callnyc",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "portfolio.work.callnyc",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "source.politico.callnyc.2016-03-14",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    }
+  ],
+  "source.civichall.hackathon-announcement.2016": [
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md"
+    },
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md"
+    }
+  ],
+  "source.nycc.councilstat-hackathon-post.2016": [
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
+    },
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
+    }
+  ],
+  "source.politico.callnyc.2016-03-14": [
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../sources/politico-callnyc-2016-03-14.md"
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/politico-callnyc-2016-03-14.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../sources/politico-callnyc-2016-03-14.md"
+    },
+    {
+      "from": "portfolio.work.callnyc",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/politico-callnyc-2016-03-14.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/politico-callnyc-2016-03-14.md"
+    }
+  ]
+}
