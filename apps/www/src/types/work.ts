@@ -17,6 +17,7 @@ export type ArtifactType =
   | "website"
   | "workflow"
   | "source map"
+  | "stakeholder map"
   | "decision record"
   | "public handout"
   | "meeting memory"

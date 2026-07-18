@@ -145,6 +145,36 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+const publicArchiveFiles = textFiles.filter((file) =>
+  relative(file).startsWith("docs/knowledge-bank/corpora/")
+);
+const urbanhermitPublicArtifacts = textFiles.filter((file) => {
+  const rel = relative(file);
+  return (
+    rel === "apps/www/src/data/knowledge-bank/urbanhermit-x-full-population.ts" ||
+    rel === "scripts/build-urbanhermit-x-public-ledger.mjs" ||
+    (rel.startsWith("docs/knowledge-bank/") && rel.includes("urbanhermit"))
+  );
+});
+
+const prohibitedTrackedSocialArtifacts = [
+  "docs/knowledge-bank/corpora/source-captures/nycartc-x-browser-extraction-2026-07-15-utc.json",
+  "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
+  "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json",
+  "docs/knowledge-bank/corpora/source-captures/urbanhermit-x-browser-extraction-2026-07-15-utc.json",
+  "docs/knowledge-bank/corpora/urbanhermit-x-full-population-2026-07-15.json",
+  "docs/knowledge-bank/corpora/urbanhermit-x-full-population-2026-07-15.manifest.json"
+];
+const trackedProhibitedSocialArtifacts = execFileSync(
+  "git",
+  ["ls-files", "--", ...prohibitedTrackedSocialArtifacts],
+  { cwd: repoRoot, encoding: "utf8" }
+).trim();
+if (trackedProhibitedSocialArtifacts) {
+  failures.push(
+    `${trackedProhibitedSocialArtifacts.replaceAll("\n", ", ")} - protected bulk social artifacts must not be committed`
+  );
+}
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -190,6 +220,18 @@ scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
   /\b(?:PRIVATE|CONFIDENTIAL)\b/
+);
+
+scanPattern(
+  publicArchiveFiles,
+  "authenticated-session identity must not be published in a public corpus artifact",
+  /"(?:authenticatedAs|authenticatedSessionIdentity)"\s*:/i
+);
+
+scanPattern(
+  urbanhermitPublicArtifacts,
+  "Urbanhermit public artifacts must not publish private locators or machine-local archive paths",
+  /(?:protectedLocatorId|protectedSourceLocatorId|source-captures\/urbanhermit|\/(?:Volumes|Users|private\/tmp)\/)/i
 );
 
 const credentialPatterns = [
@@ -256,6 +298,22 @@ if (!existsSync(resumePath)) {
     )
   ) {
     addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
+  }
+
+  if (/secured a\s+\$490,539 public funding recommendation/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF contains the retired KC Town Hall recommendation-only wording");
+  }
+
+  if (/City Council appropriation,?\s+then withdrew/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF ambiguously attributes the KC Town Hall withdrawal");
+  }
+
+  if (
+    !/the project\s+advanced from a unanimous CCED Board recommendation to a \$490,539 City Council appropriation\s+and later withdrew before disbursement/i.test(
+      resumeText
+    )
+  ) {
+    addFailure(resumePath, "resume PDF is missing the approved KC Town Hall Council-action projection");
   }
 
   if (

@@ -18,6 +18,7 @@ const requiredProofIds = [
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
   "nyc-artist-coalition-civic-systems",
+  "nyc-artist-coalition-participation-system",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "kc-spaces-fund-digital-infrastructure",
@@ -32,8 +33,15 @@ const requiredWorkProofs = new Map([
     [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "nyc-artist-coalition-public-web-infrastructure"
+    ]
+  ],
+  [
+    "nyc-artist-coalition",
+    [
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-participation-system"
     ]
   ],
   ["callnyc", ["callnyc-civic-data-guidance"]],
@@ -138,7 +146,17 @@ if (existsSync(proofPath)) {
     fail("Proof data is missing SupportLevel type");
   }
 
-  for (const match of proofSource.matchAll(/\{\n\s+id:\s*"([^"]+)"[\s\S]*?\n\s+\}/g)) {
+  const proofArrayStart = proofSource.indexOf("export const proofClaims: ProofClaim[] = [");
+  const proofArrayEnd = proofSource.indexOf("\n];\n\nconst publicProofStatuses", proofArrayStart);
+  if (proofArrayStart < 0 || proofArrayEnd < 0) {
+    fail("Unable to isolate the canonical proofClaims array");
+  }
+  const canonicalProofSource =
+    proofArrayStart >= 0 && proofArrayEnd >= 0
+      ? proofSource.slice(proofArrayStart, proofArrayEnd)
+      : "";
+
+  for (const match of canonicalProofSource.matchAll(/\{\n\s+id:\s*"([^"]+)"[\s\S]*?\n\s+\}/g)) {
     const [, id] = match;
     proofIds.push(id);
     proofBlocks.set(id, match[0]);

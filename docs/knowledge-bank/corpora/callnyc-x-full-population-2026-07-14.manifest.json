@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "capture": {
+    "account": "@CallNYCapp",
+    "surface": "https://x.com/CallNYCapp/with_replies",
+    "localCaptureDate": "2026-07-14",
+    "utcArtifactDate": "2026-07-15",
+    "profileReportedPosts": 110,
+    "rawArtifact": "docs/knowledge-bank/corpora/source-captures/callnyc-x-browser-extraction-2026-07-15-utc.json",
+    "rawArtifactSha256": "5886d86bfd877373539e790d0648df60fcd5366913fff6d21bf7a9a2bcfe38fe"
+  },
+  "transformation": {
+    "script": "scripts/derive-callnyc-x-corpus.mjs",
+    "derivedCorpus": "docs/knowledge-bank/corpora/callnyc-x-full-population-2026-07-14.json",
+    "rules": [
+      "Sort distinct status records by published timestamp and assign sequential indexes.",
+      "Classify a record as reposted only when the visible text begins with the Call NYC reposted label; all other recovered account records are authored.",
+      "Derive engagement counts from visible X labels, mentions from visible @-links, outgoing links from visible t.co anchors, and media presence from rendered status photo or video anchors.",
+      "Classify service-recognition posts as authored records that mention @NYCCouncil and contain provides the most, provided the most, or gives the most.",
+      "Normalize CallNYC destinations to HTTPS, lowercase hostname, no query or fragment, and no trailing slash; classify issue pages after excluding the site root and /api."
+    ]
+  },
+  "reproduce": "node scripts/derive-callnyc-x-corpus.mjs"
+}

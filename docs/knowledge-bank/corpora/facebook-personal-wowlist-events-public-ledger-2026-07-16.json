@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-16",
+  "surfaces": {
+    "personalPastEvents": "https://www.facebook.com/jburkart/events",
+    "wowListEvents": "https://www.facebook.com/wowlist/events"
+  },
+  "acquisitionIntegrity": {
+    "protectedCaptureSha256": "abcfdd059a87217fe671e9a9ff2d364768c2861ca3013f2e7159e94696c9e6ad",
+    "protectedCapturePublished": false,
+    "personalEventIdentitySha256": "a434043aafbbe20f6f23f2c77022b8807dc76d277568d558757829f8e5ccd77b",
+    "explicitOrganizerIdentitySha256": "8ce5db11955e039666d5d0ac4697641120c022d63028e8ed387e2cf826486336",
+    "identityDigestMethod": "SHA-256 over newline-joined, lexicographically sorted eventId:eventTimeId identities; null eventTimeId is empty.",
+    "boundary": "Digests permit later integrity comparison without publishing the full personal-profile event index or a private locator."
+  },
+  "personalProfile": {
+    "population": {
+      "displayedEventSlots": 511,
+      "distinctBaseEventIds": 502,
+      "recurringEventTimeInstances": 9,
+      "explicitJamieOrganizerRecords": 20,
+      "profileAssociatedRecords": 491,
+      "eventHostControlPastEvents": 21,
+      "unresolvedHostControlCountDifference": 1,
+      "range": [
+        "2006-12-02",
+        "2023-08-26"
+      ],
+      "byYear": {
+        "2006": 1,
+        "2007": 4,
+        "2010": 1,
+        "2011": 3,
+        "2012": 2,
+        "2013": 2,
+        "2014": 3,
+        "2015": 50,
+        "2016": 52,
+        "2017": 239,
+        "2018": 105,
+        "2019": 40,
+        "2020": 6,
+        "2022": 1,
+        "2023": 2
+      },
+      "boundary": "Complete accounting of the authenticated Past Events cards exposed on the capture date. Profile association is not attendance, interest, authorship, production, support, or endorsement. A one-count discrepancy against a separate host control remains unresolved because the controls may not represent the same unit, population, or interface state."
+    },
+    "explicitOrganizerEvidence": {
+      "detailRoutesReviewed": 20,
+      "detailPagesWithDisplayedResponseCount": 17,
+      "eventsAtOrAbove20DisplayedResponses": 6,
+      "largestDisplayedResponseCount": 119,
+      "displayedResponseCountDistribution": [
+        2,
+        4,
+        5,
+        5,
+        5,
+        6,
+        7,
+        7,
+        14,
+        16,
+        16,
+        20,
+        21,
+        28,
+        38,
+        44,
+        119
+      ],
+      "selectedPublicSafeEvents": [
+        {
+          "eventId": "278687849214415",
+          "date": "Wed, Feb 1, 2017",
+          "title": "Movie Club: HyperNormalisation BBC Doc Brexit, Trump & Syria",
+          "canonicalUrl": "https://www.facebook.com/events/278687849214415/",
+          "displayedResponses": 38
+        },
+        {
+          "eventId": "1416424718368443",
+          "date": "Sun, Jan 15, 2017",
+          "title": "Why I March: Sunday Dinner Potluck, Sign Making, Costumes!",
+          "canonicalUrl": "https://www.facebook.com/events/1416424718368443/",
+          "displayedResponses": 16
+        },
+        {
+          "eventId": "205659063162313",
+          "date": "Mon, Jun 27, 2016",
+          "title": "Richard Album (chicago) ◯ Mega Bog ◯ Russel the Leaf ◯ Slow Ref ◯ at The GLOVE *new space",
+          "canonicalUrl": "https://www.facebook.com/events/205659063162313/",
+          "displayedResponses": 119
+        },
+        {
+          "eventId": "653082538122515",
+          "date": "Sun, Nov 23, 2014",
+          "title": "Sunday Dinner: Mid-Manhattan / Roosevelt Island (NYC Week 5)",
+          "canonicalUrl": "https://www.facebook.com/events/653082538122515/",
+          "displayedResponses": null
+        },
+        {
+          "eventId": "702417306475691",
+          "date": "Sun, Mar 9, 2014",
+          "title": "SUNDAY DINNER Turns 100!",
+          "canonicalUrl": "https://www.facebook.com/events/702417306475691/",
+          "displayedResponses": 21
+        },
+        {
+          "eventId": "515145431873418",
+          "date": "Mon, Jun 24, 2013",
+          "title": "Crystal Palace the Musical video shoot",
+          "canonicalUrl": "https://www.facebook.com/events/515145431873418/",
+          "displayedResponses": 16
+        },
+        {
+          "eventId": "477366412348590",
+          "date": "Tue, Jun 11, 2013",
+          "title": "The Crystal Palace RETURN TO SPACE CELEBRATION",
+          "canonicalUrl": "https://www.facebook.com/events/477366412348590/",
+          "displayedResponses": 14
+        },
+        {
+          "eventId": "837548946319905",
+          "date": "Fri, Aug 12, 2011",
+          "title": "Bike the Hudson to Beacon",
+          "canonicalUrl": "https://www.facebook.com/events/837548946319905/",
+          "displayedResponses": 7
+        },
+        {
+          "eventId": "1090550714295009",
+          "date": "Sat, Apr 17, 2010",
+          "title": "The Night Walk with Jamie Burkart",
+          "canonicalUrl": "https://www.facebook.com/events/1090550714295009/",
+          "displayedResponses": 2
+        },
+        {
+          "eventId": "10153218027900549",
+          "date": "Sat, Jul 14, 2007",
+          "title": "\"Release Yourself onto the Water Until it Tastes of Salt\" by Jamie Burkart",
+          "canonicalUrl": "https://www.facebook.com/events/10153218027900549/",
+          "displayedResponses": 5
+        },
+        {
+          "eventId": "10152721710031750",
+          "date": "Mon, Jul 9, 2007",
+          "title": "Release yourself onto a bicycle until it tastes of grilled vegitables.",
+          "canonicalUrl": "https://www.facebook.com/events/10152721710031750/",
+          "displayedResponses": null
+        },
+        {
+          "eventId": "10153329249353169",
+          "date": "Thu, Jan 25, 2007",
+          "title": "Micropop: Nation-Scenes",
+          "canonicalUrl": "https://www.facebook.com/events/10153329249353169/",
+          "displayedResponses": 5
+        },
+        {
+          "eventId": "10155459481930035",
+          "date": "Sat, Jan 6, 2007",
+          "title": "Pirate Trolley-In!!",
+          "canonicalUrl": "https://www.facebook.com/events/10155459481930035/",
+          "displayedResponses": 7
+        },
+        {
+          "eventId": "10153308288768593",
+          "date": "Sat, Dec 2, 2006",
+          "title": "Musicians for a Semantic Web",
+          "canonicalUrl": "https://www.facebook.com/events/10153308288768593/",
+          "displayedResponses": 4
+        }
+      ],
+      "boundary": "Facebook response labels are dated event-level interface signals, not attendance, unique people, stakeholder identity, reach, endorsement, conversion, mandate, or impact. Selected examples omit ordinary-life and unnecessarily personal event detail."
+    },
+    "postedSourceRoutes": {
+      "explicitOrganizerDetailPagesReviewed": 20,
+      "externalArticleDestinationsRecovered": 0,
+      "selectedDirectEventRoutes": 14,
+      "boundary": "No external article destination was exposed as an anchor on the 20 reviewed organizer-detail pages. Absence from the current render is not proof that no destination was ever posted."
+    }
+  },
+  "wowListPage": {
+    "currentProfile": {
+      "followersDisplay": 185,
+      "followingDisplay": 2,
+      "statement": "WOWLIST.ORG is an event sharing tool and community building project. Being there changes everything!",
+      "publicRoutes": [
+        "https://wowlist.org/",
+        "https://wowlist.org/wowlists"
+      ],
+      "boundary": "Dated public profile metadata; follower counts are held from accomplishment messaging."
+    },
+    "currentEventsSurface": {
+      "eventDetailAnchors": 0,
+      "eventsSectionExposed": false,
+      "visibleAdditionalSectionLabels": [
+        "Live",
+        "Check-ins",
+        "Reviews given"
+      ],
+      "historicalPopulationStatus": "unresolved",
+      "boundary": "The current page surface rendered zero event cards and exposed no Events section. This is not evidence that WOW List historically created no Facebook events. A Meta owner export or historical page capture is required."
+    }
+  },
+  "privacy": {
+    "status": "public-safe-minimized-ledger",
+    "omitted": [
+      "full personal-profile event index",
+      "bulk event titles, venues, cities, and organizer names",
+      "ordinary-life and non-mission social records",
+      "guest, invitee, attendee, friend, commenter, and reactor identities",
+      "raw event descriptions, comments, reactions, private controls, and authenticated-session state"
+    ]
+  }
+}

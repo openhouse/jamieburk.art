@@ -25,6 +25,236 @@ Approved public artifact examples for this launch pass include:
 - CallNYC archived Politico New York PDF.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- The Pitch reporting on Jamie's collaborative raft expedition.
+- Public bibliographic metadata and a bounded public-safe summary of Darryl
+  Levings's November 15, 2007 *Kansas City Star* front-page raft-expedition
+  feature; the supplied PDF and credited photographs remain protected.
+- Charlotte Street's institutional page for *Great Accommodations*.
+- Good Times / Metro Santa Cruz reporting on *Open House*.
+- Gothamist, NPR, and Bedford + Bowery reporting on NYC Artist Coalition work.
+- New York City Council hearing transcripts and legislative records.
+- New York City's public announcement replacing M.A.R.C.H. with CURE.
+- Greene Hill Food Co-op's 2017 profile of Sunday Dinner, WOWList, and NYC
+  Artist Coalition work.
+- KCUR reporting on Jamie's 8th Street Tunnel screening and public-history
+  program.
+- The Pitch's 2009 follow-up independently reporting the raft crew's Gulf of
+  Mexico terminus.
+- The Save NYC Spaces public campaign record.
+- New York City Council's 2018 Small Business hearing transcript.
+- Kansas City, Missouri, Central City Economic Development Sales Tax Board
+  proposal, recommendation, and 2021 meeting records.
+- Michael Rees's collaborator-authored record of the Claudette augmented-reality
+  project.
+- sbdiy's public WOWList calendar and add-event links.
+
+Typed source records include a public-safe summary, what the source supports,
+what it does not establish, preservation status, and claim or inquiry links.
+Adding a source without a disposition or association fails
+`npm run knowledge-lifecycle`.
+
+The *Kansas City Star* record is intentionally `public-metadata-only`. The
+public repo preserves the title, author, publication date, pages, source
+boundaries, and propositions established by a complete two-page review. It
+does not contain the supplied PDF, article text, newspaper layout, publication
+contact details, or photographs. Reproduction requires separate rights and
+consent review.
+
+The July 12 source-expansion pass added exactly ten source records. Four cited
+claim groups project to the WOWList, Sunday Dinner, FairRentNYC, and KC Town
+Hall case studies. The tunnel, raft, and augmented-reality records remain as
+public-safe depth in the bank until a future composition has the right
+artifacts, rights review, and editorial space.
+
+### iCloud Teams archive production
+
+The July 15-16 archive-production passes used project overview files to orient
+three large iCloud working archives, then close-read a bounded set of relevant
+anchor records. They added thirteen typed source records:
+
+- the official Horse Lords *Truthers* video page;
+- Lars Gotrich's contemporaneous NPR feature about the video;
+- protected summaries of evolving Commercial Rent Stabilization running
+  minutes, a 90-day operating plan, and a legislative provenance redline;
+- a protected summary of Source-Backed Team Memory proposal and preparation
+  records plus the public lab page;
+- Jamie's protected certificate of completion, Maven's public AI Evals course
+  page, and a protected completed-cohort portal summary.
+- Monthly Music Hackathon NYC's public record of Jamie's 2013 Max/MSP
+  audio-segmentation and pitch-sorting program;
+- a protected summary of Jamie's Commercial Rent Stabilization stakeholder
+  power map and functional messaging grid;
+- a protected job-hunt context outline used as an evidence-control record, not
+  accomplishment evidence.
+- public-safe summaries of Margaret Morse's and Warren Sack's historical UCSC
+  narrative evaluations, plus a protected Margaret Morse recommendation
+  screenshot; and
+- the independently published *Good Times* feature on *Open House*, used as the
+  only public citation for the About-page artistic and relational-systems
+  threshold.
+
+Public records retain their canonical URLs. Protected records expose only a
+stable locator, public-safe source description, supported propositions, and
+explicit non-support. The repository does not contain iCloud paths, raw
+documents, collaborator lists, live strategy, pricing, transcripts, course
+materials, portal identifiers, or private contact information.
+
+The UCSC summaries omit the student identifier, grades, raw evaluation text,
+private correspondence, email addresses, telephone numbers, postal addresses,
+protected locators, and screenshot. They support historical artistic and
+technical lineage, not official-transcript status or current blanket faculty
+endorsement.
+
+The stakeholder-map record supports the existence and design of an operating
+artifact. It does not establish collective approval, completion of its
+milestones, or permission to publish its targets, owners, messages, testimony
+leads, or strategy. The job-hunt outline can identify hypotheses and evidence
+gaps, but it cannot prove the claims it summarizes.
+
+The public Maven syllabus continues to change. It supports the course title,
+instructors, broad educational context, and certificate format; Jamie's
+certificate establishes completion, while the protected cohort record supports
+the period curriculum.
+
+### NYC Artist Coalition campaign press corpus
+
+The July 13 press-ingestion pass added 41 previously unrecorded article records
+and four archived campaign press-index records. Together with three articles
+already in the canonical bank, the four captured campaign Press sections now
+resolve to 45 placements representing 44 unique articles:
+
+- Let NYC Dance: 21;
+- Talks Not Raids: 7;
+- Save NYC Spaces: 8;
+- Fair Rent NYC: 9.
+
+All 44 unique article records include a retrievable Wayback snapshot. The
+typed manifests preserve the cross-campaign NPR duplicate without duplicating
+the source. The corpus is queryable and public-safe, but articles do not become
+personal accomplishment evidence until they are close-read and attached to a
+bounded claim. The human-readable inventory lives at
+`docs/knowledge-bank/projects/nyc-artist-coalition-press.md`.
+
+The capture-derived fixture at
+`apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json`
+records every placement's source-page order, exact listed URL, normalized
+source ID, dated capture, and duplicate disposition. The lifecycle suite uses
+it to reproduce the four manifests offline.
+
+### NYC Artist Coalition Facebook event corpus
+
+The July 15 authenticated pass reconciles the complete capture-date Past Events
+control as 33 recovered public event records plus one unresolved historical
+slot. The public-safe corpus retains dates, titles, organizer displays, venue
+categories, mission topics, bounded response labels, and selected public source
+routes while excluding raw descriptions, attendee identities, comments,
+contacts, meeting credentials, private working links, and authenticated state.
+
+Seven posted article routes connect selected events to New York Post, WNYC,
+Metro, The New Yorker, The Baffler, Curbed, and Gothamist reporting. Five
+articles were already typed in the campaign press corpus; the New York Post
+Cabaret Law article and Gothamist Commercial Rent Stabilization article are new
+source records. A link establishes circulation through an event description,
+not endorsement, Jamie's role, attendance, or policy causality.
+
+### CallNYC authenticated social corpus
+
+The July 15 archival-production pass preserves all 107 distinct items rendered
+by the authenticated replies-inclusive `@CallNYCapp` timeline against a
+110-post profile baseline. The public-safe corpus records authored-versus-
+reposted classification, visible text, dates, public interaction labels,
+mentions, outgoing links, and media presence. A raw public capture, SHA-256
+manifest, and derivation script make the transformation and aggregate findings
+reproducible. The three-count difference is unresolved and must not be silently
+converted into completeness.
+
+### WOW List authenticated social corpus
+
+The July 15 archival-production pass preserves all 38 profile-reported items
+rendered by the authenticated replies-inclusive `@wowlist` timeline: 22
+authored posts and 16 reposts. The raw public capture, SHA-256 manifest, and
+deterministic derivation script preserve 35 posted short-URL occurrences,
+three recovered support conversations, and bounded organizer-use, civic-care,
+field-learning, and visible-engagement patterns.
+
+Close-read source records include Elise Granata's archived Grasstronaut venue
+manual review and *Good Times* article *Zines 2.0*, a member-made WOW List
+tutorial, Allied Media Conference context, popular.vote, Meow Wolf's DIY Fund,
+and KQED's Ghost Ship vigil report. Posted sources are field context unless a
+separate relationship is established; sharing does not imply authorship,
+partnership, attendance, adoption, or outcomes.
+
+A separate public-safe archive review carries the platform-scale and technical
+implementation claims. It records aggregate findings from the July 22, 2017
+production database snapshot and structural findings from code, project
+documentation, and approved resume language while withholding person-level
+rows, raw code archives, and private operational records.
+
+### KC Town Hall authenticated social corpus
+
+The July 15 archival-production pass reconciles all 183 profile-reported
+`@KCTownHall` records across the authenticated Posts and Replies routes. The
+public-safe fixture preserves status URLs, dates, author handles, record types,
+timeline membership, posted-link metadata, row-level classifications, and
+dated visible-interaction counts. It excludes post text, historical phone
+numbers, pickup addresses, authentication identity, cookies, private-account
+state, and session data. A SHA-256 manifest and deterministic validation script
+make the population and aggregate findings reproducible.
+
+A separate redacted acquisition ledger is generated from the protected browser
+capture and preserves the capture digest, 183-post profile observation, 170
+Posts-route IDs, 183 Replies-route primary IDs, five excluded context IDs, and
+public-safe per-record route metadata. This makes acquisition provenance
+independently inspectable from the curated fixture without committing raw post
+text or authenticated state. The builder partitions the actual 188 Replies
+cards into the 183 primary and five context IDs, cross-checks that primary set
+against the normalized population, and rejects route-ID corruption.
+
+The corpus distinguishes 142 original posts, 13 replies, 28 reposts, and five
+other-account conversation-context cards. It records 100 tire-related records,
+12 survey-linked records, and 133 external-link occurrences across 118 records.
+These are publishing and operating-pattern observations, not independently
+audited service, participation, savings, reach, or impact totals.
+
+Close-read posted sources cover neighborhood food access, affordable housing,
+renter policy, elections, transit planning, official voter information, public
+health, emergency resources, and practical cleanup documentation. Circulation
+does not mean a source covered, partnered with, or endorsed KC Town Hall.
+Direct replies and quote responses from three then-serving Council-member accounts,
+one KCMO 311 service response, community amplification, and one external
+tire-dropoff report remain distinct stakeholder-response types.
+
+Two official KCMO records separately corroborate Council service on the three
+interaction dates. They support the historical office-status qualifier, not
+social-account control, endorsement, or current officeholder status.
+
+The companion posted-URL disposition ledger accounts for all 31 distinct short
+URLs: 10 records map to promoted sources, 15 to governed operational-link
+families, and six to a named recovery inquiry. A disposition records what may be
+done with a link; it does not make every destination claim-ready.
+
+### Jamie personal Facebook owner-post corpus
+
+The July 16 archival-production pass accounts for 1,243 records currently
+returned by Facebook Manage Posts filtered to Posted by You. A 621-page graph
+cursor traversal and a separate visual traversal recovered the same population
+and visible December 2006 through June 2022 endpoints. The public control
+artifact preserves both capture commitments and method-specific distributions;
+it does not publish protected rows.
+
+The structural pass recovered 430 URL-bearing records and 549 normalized
+external destinations. Five selected destinations were associated with existing
+close-read Charlotte Street, Pitch, Gothamist, WNYC, and NPR source records; one
+Rolling Stone route remains a retrieval-blocked lead. Posting is not evidence
+of authorship, agreement, partnership, readership, endorsement, conversion, or
+outcome.
+
+Six individually rechecked Public posts preserve dated first-party traces for
+NTER CHNG, WOW List, CouncilStat, Let NYC Dance, KC Town Hall, and Talks Not
+Raids. They support chronology, attributed wording, collective credit, and a
+bounded participation-routing practice. Bulk post text, Friends and Only me
+records, unlabeled contents, comments, responder identities, ordinary personal
+context, media, sensitive URLs, and authenticated state remain protected.
 
 ### Public-Safe Archive Summary
 
@@ -58,7 +288,7 @@ collaborators approve.
 - private correspondence;
 - legal-review materials;
 - private coalition notes;
-- raw community records;
+- raw private or unpublished community records;
 - guest lists;
 - resident records;
 - client-private documents;
@@ -69,3 +299,40 @@ collaborators approve.
 - unapproved photos;
 - private financial records;
 - private personal records.
+
+Governed public-source corpora are allowed when every retained item was already
+public, the research question requires population accounting, and the artifact
+excludes private surfaces, session identity, media binaries, follower exports,
+private analytics, and authenticated account data. Public status IDs, URLs,
+visible text, public conversation context, and dated visible interaction labels
+may be retained for reproducibility with explicit attribution and uncertainty
+boundaries. This exception does not permit private or unpublished community
+records.
+
+## Participation Lineage Sources
+
+The July 16 participation-lineage pass adds four typed sources: a protected
+aggregate review of civic tags in the 2017 WOW List snapshot, the public Call
+Script Page, the public January 2017 DCLA event discussion, and a protected
+authenticated-review record. The existing protected Sunday Dinner workbook
+source was strengthened through a full structural pass.
+
+The source layer may retain public-safe aggregate counts. It may not publish
+raw database rows, person-level workbook records, authenticated state,
+sensitive stories, or private paths. Event rows, calendar mappings, attendance
+marks, and Facebook response labels remain explicitly distinct from unique
+people, attendance, endorsement, and impact.
+
+## NYC Artist Coalition, DCLA, And Council Sources
+
+The July 16 Council-side pass adds five public government or agency records and
+one bounded research-run record. The decisive source is Finkelpearl's May 19,
+2017, Executive Budget testimony. Jamie's March 16, 2018, testimony supplies
+direct role evidence; Espinal's June 19, 2017, hearing supplies the Council's
+problem frame; the DCLA commissioner message and CreateNYC appendix corroborate
+the public-engagement and recommendation pathway.
+
+The corpus control records 30 Cultural Affairs meeting records, 50 transcript
+attachment entries, 41 distinct PDFs, and 24 Finkelpearl-bearing transcripts.
+It supports one recovered speaker-attributed reference. It does not prove that
+no unavailable, unindexed, image-only, or mistranscribed record exists.

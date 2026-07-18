@@ -1,5 +1,10 @@
 import type { MDXComponents } from "mdx/types";
 import { Cite, Claim, References } from "@/components/citations";
+import { NYCACOperatingTimeline } from "@/components/NYCACOperatingTimeline";
+import {
+  SundayDinnerOperationsFigure,
+  WowlistArchiveSnapshot
+} from "@/components/ProjectEvidenceFigures";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -19,6 +24,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     Cite,
     Claim,
+    NYCACOperatingTimeline,
+    SundayDinnerOperationsFigure,
+    WowlistArchiveSnapshot,
     References,
     ...components
   };

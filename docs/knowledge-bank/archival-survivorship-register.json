@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-16",
+  "purpose": "Record what survived each bounded archival pass without treating non-recovery as proof of nonexistence.",
+  "allowedStatuses": ["recovered", "partially-recovered", "not-recovered", "known-through-another-source"],
+  "populations": [
+    {
+      "id": "SURV-CALLNYC-CIVIC-HALL-EVENT-PAGE",
+      "project": "callnyc",
+      "status": "not-recovered",
+      "inquiryId": "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+      "finding": "Embedded institutional social-feed evidence was recovered; no dedicated Civic Hall listing or event-detail page was recovered in the documented CDX pass.",
+      "boundary": "This does not establish that no page existed."
+    },
+    {
+      "id": "SURV-NYCARTC-X-OWNER-ARCHIVE",
+      "project": "nyc-artist-coalition",
+      "status": "partially-recovered",
+      "finding": "The public corpus dispositions 3,367 recovered items and an explicit 1,757-item owner-archive gap against the profile-reported population.",
+      "boundary": "The gap is not silently counted as deleted, private, or nonexistent."
+    },
+    {
+      "id": "SURV-NYCAC-FACEBOOK-EVENTS",
+      "project": "nyc-artist-coalition",
+      "status": "partially-recovered",
+      "finding": "A bounded population of event records was recovered while some historical event pages remained unavailable.",
+      "boundary": "Facebook response labels are not attendance, unique reach, or impact."
+    },
+    {
+      "id": "SURV-WOWLIST-FACEBOOK-EVENTS",
+      "project": "wowlist",
+      "status": "not-recovered",
+      "finding": "The current authenticated Page rendering exposed no Events section during the documented pass.",
+      "boundary": "The rendering does not prove that WOW List never created or hosted Facebook events."
+    },
+    {
+      "id": "SURV-WOWLIST-DATABASE-BACKUPS",
+      "project": "wowlist",
+      "status": "recovered",
+      "finding": "Historical database dumps and application repositories support bounded product, scale, and activity-grouping claims.",
+      "boundary": "Recovered database structure does not prove current platform status, organizer ownership, or official city chapters."
+    },
+    {
+      "id": "SURV-KC-TOWN-HALL-MUNICIPAL-PACKET",
+      "project": "kc-town-hall",
+      "status": "recovered",
+      "finding": "The public municipal packet documents the recommendation, appropriation sequence, completed Phase One scope, and later withdrawal boundary.",
+      "boundary": "The packet does not establish fund receipt, expenditure, a unanimous Council vote, or completed redevelopment."
+    },
+    {
+      "id": "SURV-NTER-CHNG-PROJECT-SITE",
+      "project": "nter-chng",
+      "status": "partially-recovered",
+      "finding": "Wayback captures and institutional exhibition records preserve project context and later American Now and Here inclusion.",
+      "boundary": "Recovered pages do not establish complete participant history, all installation states, or media rights."
+    },
+    {
+      "id": "SURV-PROTECTED-SOCIAL-CAPTURES",
+      "project": "portfolio-social-archive",
+      "status": "known-through-another-source",
+      "finding": "Public ledgers retain minimized aggregates, cryptographic commitments, and selected public sources while authenticated item-level captures remain protected outside Git.",
+      "boundary": "The public repo is intentionally not a reconstructable copy of private or authenticated account data."
+    }
+  ],
+  "rightsDimensions": [
+    "factual-support",
+    "quotation-permission",
+    "artifact-rights",
+    "image-permission",
+    "participant-consent",
+    "public-display-approval"
+  ],
+  "reentryRule": "A photo-editor observation, collaborator correction, reader response, or newly discovered source returns through intake or inquiry. It cannot become a claim or public projection automatically."
+}

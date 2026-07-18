@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "contractVersion": 3,
+  "optimizerIdentity": "Codex implementation agent for feature/knowledge-n",
+  "contractFingerprint": "fce98cbbde355cdeb30c0b34cf7155d4628ca7f8bcad42506ef00237e3ca7ce1",
+  "candidateFingerprint": "be47c135e247fed17e6689e2cb3e1993027b4ae9e82bebc02ff0c03d1b5f3fc3",
+  "candidateSha": "e677892d57260dc006cf69bf22e6067413b19469",
+  "decision": "pass_for_code_review",
+  "holdoutReceiptPaths": [
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-2.json"
+  ],
+  "humanGates": {
+    "PR-019": "pending-human-review",
+    "PR-025": "pending-human-review",
+    "rights": "pending-as-recorded-per-artifact",
+    "collaboratorConsent": "pending-as-recorded-per-artifact",
+    "productionApproval": "pending-exact-candidate-human-approval"
+  },
+  "instrumentDefects": [
+    "Iteration 1 found that holdoutResult.errors could overwrite structural validation errors in the composite return object; the merge order was corrected before scoring.",
+    "Iteration 2 found expected compiler worktree paths in non-public Next.js server implementation bundles; the leak checker was narrowed to rendered and publicly served text while retaining static-client scans.",
+    "Iteration 3 found that an empty holdout set normalized to Infinity through Math.min; missing receipts now normalize every criterion to zero and fail explicitly.",
+    "Iteration 4 discarded both first-pass holdouts after one judge identified an unbound mosaic receipt and thin mosaic, operator, rights, and re-entry mutation coverage. Those controls were added before a new candidate was frozen.",
+    "Iteration 5 discarded both second-pass holdouts after both judges identified that receipt agreement was not yet bound to the actual Git commit. Candidate ancestry, an evaluator-owned exact post-candidate allowlist, and duplicate-score rejection were added before new holdouts.",
+    "Iteration 6 discarded the next holdout after it showed that an evidence-only descendant could still be named as the candidate. Validation now requires the named commit itself to change implementation paths and reproduces the candidate fingerprint directly from that commit's Git tree.",
+    "Iteration 7 discarded a split holdout result after the conservative judge found operator graph bypass, route-to-manifest drift, and under-validated receipt evidence. Operator commands now validate the canonical graph and references, composition selections bind to the public registry, and receipt evidence must exist in the named candidate commit.",
+    "Iteration 8 discarded both unchanged-candidate holdouts after they found two existing-suite regressions plus gaps in donor decisions, public-wording mutations, query-mode coverage, survivorship exactness, claim budgets, render-path bindings, receipt schema and paths, post-candidate history inspection, and human-status lifecycle validation. The regressions and the evaluator were repaired before freezing another candidate.",
+    "Iteration 9 discarded two unchanged-candidate holdouts after both judges correctly declined to prove the unseen second receipt, revealing that receipt-level CI-007 scoring had been conflated with aggregate completion. Contract version two assigns individual judges the instrument and their own receipt, assigns pair validation to the deterministic checker, and removes the irrelevant same-calendar-day constraint while retaining exact SHA and fingerprint agreement.",
+    "Iteration 10 discarded the version-two receipts after the full repository gate exposed a stale source-code spelling assertion in KC-FB-005. Contract version three binds that existing role eval to the canonical Technical Operations projection registry, mutation-tests removal of the resolver, and includes the role eval itself in the candidate fingerprint.",
+    "The first holdout harness attempt used const fields without explicit JSON Schema types and was rejected by the response-format validator; the external harness schema was repaired and neither failed session was counted."
+  ],
+  "candidateDefects": [],
+  "allowedPostCandidatePaths": [
+    "docs/evals/knowledge-composite-integration-state.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-integration.md",
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-2.json"
+  ]
+}

@@ -1,15 +1,9 @@
 import type { ReactNode } from "react";
 import {
   AtAGlance,
-  ArtifactGallery,
-  ArtifactList,
-  CareNote,
   CreditsList,
-  KnownOpenProtected,
+  EvidenceAndLimits,
   LinksList,
-  PublicSafetyNote,
-  SourceLayer,
-  VisibilityNote
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { References } from "@/components/citations";
@@ -34,12 +28,10 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
           <div className="prose mt-10 max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
             {children}
-            <References pageId={item.slug} />
           </div>
         </div>
         <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
           <AtAGlance item={item} />
-          <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
               Download resume
@@ -51,16 +43,12 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </aside>
       </div>
       <div className="mt-14 space-y-12">
-        <ArtifactList item={item} />
-        <ArtifactGallery item={item} />
-        <KnownOpenProtected item={item} />
-        <div className="grid gap-4 md:grid-cols-2">
-          <CareNote item={item} />
-          <PublicSafetyNote item={item} />
-          <SourceLayer item={item} />
-        </div>
+        <EvidenceAndLimits item={item} />
         <LinksList item={item} />
         <CreditsList item={item} />
+        <div className="prose max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
+          <References pageId={item.slug} />
+        </div>
       </div>
     </article>
   );

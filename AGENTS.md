@@ -30,6 +30,12 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run check:knowledge-composite-evals`
+- `npm run test:knowledge-composite-evals`
+- `npm run knowledge:intake -- --help`
+- `npm run query:knowledge-lifecycle -- --help`
+- `npm run report:knowledge-lifecycle`
+- `npm run check:compiled-lifecycle-leaks`
 
 ## Public-Safety Rules
 
@@ -72,6 +78,17 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+Use `docs/knowledge-bank/framework.md` as the canonical lifecycle explanation.
+Agency relations classify every proof record but do not create claims. The
+composition manifest governs route purpose and claim budgets but does not
+approve publication. Intake, photo leads, collaborator corrections, and reader
+feedback must re-enter through review; no command promotes them automatically.
+
+Keep the 27 portfolio evals frozen when running the separate composite
+integration suite. The optimizing agent may not grade its own patch. AI judges
+may support code review but may not approve human reader response, rights,
+consent, hands-on launch QA, production cutover, or indexing.
 
 ## Chad Lens
 

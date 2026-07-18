@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T08:42:42.047Z",
+  "generator": "scripts/build-nycartc-x-public-ledger.mjs",
+  "protectedSourceLocatorId": "NYCAC-X-AUTHENTICATED-CAPTURE-2026-07-15",
+  "protectedSourceSha256": "3a7458edf231caf8e0ad0bae41a2e22bb9ea6e96ff923c7c9369698d2f935504",
+  "publicLedger": "docs/knowledge-bank/corpora/nycartc-x-population-ledger-2026-07-15.json",
+  "publicLedgerSha256": "579895f47a982f68424f4ea1b563e18508ac18c64defc0878c934ddf1f4f0ef4",
+  "profileReportedPosts": 5124,
+  "recoveredAccountItems": 3367,
+  "unrecoveredItems": 1757,
+  "status": "population-accounted-with-protected-source-and-minimized-public-ledger"
+}

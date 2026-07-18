@@ -7,14 +7,29 @@ bank.
 
 ## Flow
 
-1. Private material exists outside repo.
-2. Jamie or reviewer creates a public-safe summary.
-3. Summary is added to the knowledge bank with source-basis class and boundary.
-4. Status is set to Ready, Careful, Pending, or Private.
-5. Website projection uses only Ready or Careful claims.
-6. If a page needs stronger wording, update the bank first.
-7. Public-safety check fails production if pending/private/approval-marker
+1. A public URL, artifact, memory, hypothesis, correction, or photo lead arrives.
+2. Jamie or reviewer creates a public-safe intake record and assigns a disposition.
+3. Source records distinguish what the material establishes from what it cannot.
+4. Research inquiries hold unresolved questions without converting absence of
+   evidence into evidence of absence.
+5. Mature claims carry evidence links, confidence, boundaries, anti-claims, and review.
+6. Projection status is decided separately for each surface: active, hold,
+   replace, or retire.
+7. Website projection uses only Ready or Careful proof claims and active canonical projections.
+8. If a page needs stronger wording, update the bank first.
+9. Public-safety check fails production if pending/private/approval-marker
    material is projected.
+
+## Independent Decisions
+
+- **Evidence status** asks whether a sentence is defensible.
+- **Visibility** asks whether a record itself is safe in this public repo.
+- **Projection status** asks whether defensible material serves a specific page
+  and audience now.
+
+A mature claim may intentionally remain held. That is compositional discipline,
+not lost work. A public-safe fragment may remain an open inquiry without being
+promoted to a claim.
 
 ## Status Meanings
 

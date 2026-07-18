@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-16",
+  "reviewType": "public-safe editorial risk review",
+  "isLegalReview": false,
+  "isParticipantApproval": false,
+  "candidateFingerprint": "be47c135e247fed17e6689e2cb3e1993027b4ae9e82bebc02ff0c03d1b5f3fc3",
+  "findings": [
+    {
+      "id": "MPR-001",
+      "combination": ["named community participant", "event date and location", "attendance or response record"],
+      "risk": "Individually ordinary fragments could reconstruct participation or attendance.",
+      "decision": "omit-identities-and-use-aggregate-summary",
+      "appliesTo": ["196-sunday-dinner", "nyc-artist-coalition", "facebook-event-corpora"]
+    },
+    {
+      "id": "MPR-002",
+      "combination": ["private source locator", "protected archive title", "project and date"],
+      "risk": "The combination could reveal Jamie's filesystem, correspondence, or protected research corpus.",
+      "decision": "retain-only-stable-protected-locator-id",
+      "appliesTo": ["all-knowledge-bank-records", "compiled-output"]
+    },
+    {
+      "id": "MPR-003",
+      "combination": ["small-grant context", "recipient identity", "payment or application record"],
+      "risk": "The fragments could expose applicant or grantee financial context.",
+      "decision": "use-public-campaign-aggregate-only",
+      "appliesTo": ["kc-spaces-fund"]
+    },
+    {
+      "id": "MPR-004",
+      "combination": ["historic property", "funding sequence", "family crisis or stewardship transition"],
+      "risk": "A professional case study could unnecessarily encode private family circumstances.",
+      "decision": "omit-family-circumstances-and-keep-bounded-project-transition",
+      "appliesTo": ["kc-town-hall"]
+    },
+    {
+      "id": "MPR-005",
+      "combination": ["photograph", "participant identity", "advocacy or cultural-space context"],
+      "risk": "A rights-clear image may still expose an unreviewed person's participation or context.",
+      "decision": "require-separate-rights-consent-context-and-display-decisions",
+      "appliesTo": ["photo-feedback-loop", "all-case-studies"]
+    },
+    {
+      "id": "MPR-006",
+      "combination": ["phone-bearing resume PDF", "indexable site", "structured metadata"],
+      "risk": "Search indexing could amplify contact information beyond the intended application artifact.",
+      "decision": "keep-phone-out-of-html-and-pdf-noindex-policy",
+      "appliesTo": ["resume", "robots", "metadata"]
+    }
+  ],
+  "result": "pass-with-continuing-holds",
+  "limitations": [
+    "This review addresses combinations visible in the current public composition; it is not legal advice.",
+    "It does not grant image rights, quotation permission, participant consent, collaborator consent, or production approval.",
+    "It must be rerun when a route adds a new identity, image, private-summary detail, or contact surface."
+  ]
+}

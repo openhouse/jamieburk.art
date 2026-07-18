@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T22:17:38.701Z",
+  "generator": "scripts/build-urbanhermit-x-public-ledger.mjs",
+  "generatorSha256": "1cb0e40e314c10f5e544228291e3b0b062a790c7e23cd35da2c8079e80a759e6",
+  "classifier": "scripts/lib/urbanhermit-mission-classifier.mjs",
+  "classifierSha256": "f76ae5538692c64a8ba37636a64353ee00c3dc6b9c379eaaa8eda4fd198a118f",
+  "nodeRuntime": "v26.5.0",
+  "captureSha256": "822075dc249693da986a217b23591a55ed813058616ce9c9d206f16209a9ed4d",
+  "rawCapturePublished": false,
+  "publicLedger": "docs/knowledge-bank/corpora/urbanhermit-x-population-ledger-2026-07-15.json",
+  "publicLedgerSha256": "2bed8953cc0d9faef4def7c902c667d290a7e9b208aaebc5d97327a692c7e74e",
+  "profileReportedPosts": 434,
+  "recoveredAccountItems": 434,
+  "recoveryGap": 0,
+  "status": "complete-live-population-with-protected-source-and-minimized-public-ledger"
+}
