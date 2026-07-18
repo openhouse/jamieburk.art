@@ -79,13 +79,17 @@ test("recursive encoding cannot conceal protected locators or private paths on a
     { file: "apps/www/src/app/deep-leak.tsx", content: recursivelyPercentEncode(protectedSource.protectedLocatorId) },
     { file: "apps/www/src/content/deep-leak.mdx", content: recursivelyPercentEncode("/Users/jburkart/private-source.txt") },
     { file: "apps/www/src/data/proofs-deep-leak.ts", content: recursivelyPercentEncode("/private/tmp/private-source.txt") },
-    { file: "apps/www/src/data/deep-leak.json", content: JSON.stringify({ locator: recursivelyPercentEncode("/Volumes/private/archive") }) }
+    { file: "apps/www/src/data/deep-leak.json", content: JSON.stringify({ locator: recursivelyPercentEncode("/Volumes/private/archive") }) },
+    { file: "apps/www/src/content/punctuation-leak.mdx", content: "Evidence: (/Users/jburkart/private-source.txt)" },
+    { file: "apps/www/src/data/assignment-leak.ts", content: "const source = 'path=/Users/jburkart/private-source.txt';" }
   ];
   const errors = validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles: changedFiles }).join("\n");
   assert.match(errors, /protected locator identifier leaked/);
   assert.match(errors, /deep-leak\.mdx: public surface contains a forbidden private filesystem path/);
   assert.match(errors, /proofs-deep-leak\.ts: public surface contains a forbidden private filesystem path/);
   assert.match(errors, /deep-leak\.json: public surface contains a forbidden private filesystem path/);
+  assert.match(errors, /punctuation-leak\.mdx: public surface contains a forbidden private filesystem path/);
+  assert.match(errors, /assignment-leak\.ts: public surface contains a forbidden private filesystem path/);
 });
 
 test("an active projection without an authorized surface is rejected", () => {

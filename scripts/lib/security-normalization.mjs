@@ -42,7 +42,7 @@ export function normalizeSecurityText(value) {
 export function containsPrivatePath(value) {
   try {
     const normalized = normalizeSecurityText(value);
-    return /(?:^|["'\s:])(?:~\/|\/+Users\/|\/+Volumes\/|\/+private\/(?:tmp|var)\/|\/+tmp\/|\/+var\/folders\/|[A-Za-z]:\/+Users\/|file:\/+)/i.test(normalized);
+    return /(?<![A-Za-z0-9])(?:~\/|\/+Users\/|\/+Volumes\/|\/+private\/(?:tmp|var)\/|\/+tmp\/|\/+var\/folders\/|[A-Za-z]:\/+Users\/|file:\/+)/i.test(normalized);
   } catch {
     return true;
   }

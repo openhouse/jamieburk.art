@@ -44,6 +44,10 @@ test("private paths cannot enter an intake receipt", () => {
   assert.equal(containsPrivatePath({ note: "∕Users∕jamie∕private.txt" }), true);
   assert.equal(containsPrivatePath({ note: "⁄Volumes⁄Archive⁄private.txt" }), true);
   assert.equal(containsPrivatePath({ note: "\\\\Users\\jamie\\private.txt" }), true);
+  assert.equal(containsPrivatePath({ note: "(/Users/jamie/private.txt)" }), true);
+  assert.equal(containsPrivatePath({ note: "path=/Users/jamie/private.txt" }), true);
+  assert.equal(containsPrivatePath({ note: "source[/Volumes/Archive/private.pdf]" }), true);
+  assert.equal(containsPrivatePath({ note: "https://example.com/people/Users/jamie" }), false);
 });
 
 test("canonical source URLs remove tracking and normalize parameter order", () => {
