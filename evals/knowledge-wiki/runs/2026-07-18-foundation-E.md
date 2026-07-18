@@ -81,6 +81,24 @@ Repair:
 The rejected judgment is not reused: both holdouts must bind to the repaired
 candidate fingerprint.
 
+## Iteration 5: generated-currentness rejection
+
+The next public-value holdout rejected the repaired candidate because the
+committed graph, health, index, backlink, correction, wanted-page, and rights
+views still identified the pre-repair source commit. Their semantic content was
+unchanged, but generated-currentness is a blocking contract.
+
+Repair:
+
+- preserved the rejection rather than installing it as an approval;
+- committed this authored run record before regeneration;
+- regenerated every derived Wiki view against that unchanged authored source
+  commit;
+- required the complete repository check and two new exact-candidate holdouts
+  before release.
+
+Neither earlier holdout pair is reusable after this candidate change.
+
 ## Final deterministic result
 
 | Lens | Result |
