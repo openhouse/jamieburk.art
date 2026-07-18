@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "trustBoundary": "These are orchestration receipts for distinct read-only Codex sessions and are auditable process evidence, not cryptographic proof of evaluator independence or external human validation.",
+  "judges": [
+    {
+      "judgeRunId": "iter14-evidence-governance-962880fd-2c13a944",
+      "role": "evidence-and-governance-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-18-feature-knowledge-b-iteration-14-limit/judges/round-1-evidence.json",
+      "artifactSha256": "3fdb09d4531bc1554df02752175834124d6fc100edb4101e66a363c1a3c98b68",
+      "sessionId": "019f72f6-74d4-7ae0-a27a-6315dd7ce5ff",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-18T02:03:02.000Z"
+    },
+    {
+      "judgeRunId": "iter14-hiring-field-962880fd-2c13a944",
+      "role": "hiring-and-field-use-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-18-feature-knowledge-b-iteration-14-limit/judges/round-1-hiring.json",
+      "artifactSha256": "c8d0f02968b78c3883252b9155ff0e7cbf4e65bfff18f14416f68f0a56cab6b9",
+      "sessionId": "019f72f6-7348-7cd2-a16a-af2cdc29b8a0",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-18T02:03:02.100Z"
+    }
+  ]
+}

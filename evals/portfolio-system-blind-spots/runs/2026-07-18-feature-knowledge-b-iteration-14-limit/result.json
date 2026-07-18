@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "evalId": "portfolio-system-blind-spots",
+  "systemControlStatus": "criteria-not-met",
+  "externalOutcomeStatus": "not-yet-measured",
+  "bundleSha256": "2c13a94474fc00efd93b4ca8446fd16e09b91877b674c677d46cf433ca0d3fb8",
+  "graphSnapshot": {
+    "intakeRecords": 60,
+    "sources": 233,
+    "claims": 104,
+    "researchInquiries": 33,
+    "partiallyRecoveredInquiries": 27,
+    "recoveredInquiries": 1,
+    "activeProjections": 61,
+    "heldProjections": 45
+  },
+  "iterations": 1,
+  "rounds": [
+    {
+      "round": 1,
+      "result": "non-qualifying",
+      "judges": [
+        {
+          "judgeRunId": "iter14-evidence-governance-962880fd-2c13a944",
+          "role": "evidence-and-governance-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-18-feature-knowledge-b-iteration-14-limit/judges/round-1-evidence.json",
+          "sha256": "3fdb09d4531bc1554df02752175834124d6fc100edb4101e66a363c1a3c98b68"
+        },
+        {
+          "judgeRunId": "iter14-hiring-field-962880fd-2c13a944",
+          "role": "hiring-and-field-use-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-18-feature-knowledge-b-iteration-14-limit/judges/round-1-hiring.json",
+          "sha256": "c8d0f02968b78c3883252b9155ff0e7cbf4e65bfff18f14416f68f0a56cab6b9"
+        }
+      ]
+    }
+  ]
+}
