@@ -14,9 +14,9 @@ const frozenCollectiveBaselinePath =
   ".agents/evals/baselines/collective-credit-v1.json";
 const workDataPath = "apps/www/src/data/work.ts";
 export const FROZEN_COLLECTIVE_BASELINE_TAG =
-  "refs/tags/knowledge-bank-policy-baseline-2026-07-16-v17";
+  "refs/tags/knowledge-bank-policy-baseline-2026-07-17-v18";
 export const FROZEN_COLLECTIVE_BASELINE_TAG_OBJECT =
-  "6264147b0d07fea938f1bcea03637e33669affae";
+  "eb3d32e241904ee52072efa350f109e37c317642";
 const privateMarker = /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw[-_ ](?:transcript|export)|\.mbox|credential|password/i;
 const publicProjectionKeys = new Set([
   "case-study",
@@ -2631,11 +2631,11 @@ export function evaluateKnowledgeBank(
   const assertionSourceIds = new Set(bank.sourceAssertions.map((item) => item.sourceId));
   const findings = Object.fromEntries(suite.evals.map((entry) => [entry.id, []]));
 
-  if (collectiveCreditPolicy.version !== 7) {
-    findings["KB-007"].push("collective-credit policy version must be 7");
+  if (collectiveCreditPolicy.version !== 8) {
+    findings["KB-007"].push("collective-credit policy version must be 8");
   }
-  if (projectionSurfaceBindings.version !== 4) {
-    findings["KB-009"].push("projection-surface policy version must be 4");
+  if (projectionSurfaceBindings.version !== 5) {
+    findings["KB-009"].push("projection-surface policy version must be 5");
   }
   if (
     collectiveCreditPolicy.collectiveClaimsSha256 !==
@@ -3214,7 +3214,7 @@ export function evaluateKnowledgeBank(
         findings["KB-007"].push(`${claim.id} institutional outcome lacks a solo-causation boundary`);
       } else if (
         semanticClass === "metric-observation" &&
-        !/(not (?:a )?complete|not.*impact|does not.*impact|not.*attendance|not.*reach|not.*adoption|not.*endorsement|do not sum|observation|not.*unique|historical activity|proves.*causation)/i.test(guardrail)
+        !/(self-report|not.*corroborat|does not.*verif|not.*audited|not (?:a )?complete|not.*impact|does not.*impact|not.*attendance|not.*reach|not.*adoption|not.*endorsement|do not sum|observation|not.*unique|historical activity|proves.*causation)/i.test(guardrail)
       ) {
         findings["KB-007"].push(`${claim.id} metric observation lacks a denominator or impact boundary`);
       } else if (
