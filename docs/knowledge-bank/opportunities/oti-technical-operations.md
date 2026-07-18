@@ -1,3 +1,29 @@
+---
+id: opportunity.nyc-oti.technical-operations-manager.782369
+title: OTI Technical Operations opportunity lens
+kind: opportunity
+status: governed-open
+visibility: public-safe
+sensitivity: low
+owner: jamie
+last_reviewed: "2026-07-18"
+review_by: "2026-10-18"
+canonical_path: docs/knowledge-bank/opportunities/oti-technical-operations.md
+discoverable: true
+canonical_refs:
+  - technical-operations-operating-backbone
+  - callnyc-civic-data-guidance
+  - source-backed-team-memory-method
+relations:
+  - type: related_to
+    target: capability.technical-operations
+    context: Role-specific test of the broader capability.
+  - type: uses_method
+    target: method.source-backed-team-memory
+  - type: projected_to
+    target: portfolio.work.technical-operations
+---
+
 # Opportunity Lens - Technical Operations
 
 This file maps public-safe claims to Technical Operations / Product Operations /
@@ -45,3 +71,9 @@ explicitly requests that.
 The reader should understand in one pass that Jamie coordinates delivery,
 surfaces risks, creates operating documentation, supports onboarding, builds
 decision records, and improves working systems over time.
+
+## Related Wiki records
+
+- [Technical Operations capability](../capabilities/technical-operations.md)
+- [Source-Backed Team Memory method](../methods/source-backed-team-memory.md)
+- [Technical Operations portfolio projection](../projections/technical-operations.md)

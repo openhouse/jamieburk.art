@@ -114,6 +114,7 @@ if (existsSync(path.join(repoRoot, "docs/proofs-bank.md")) && existsSync(claimsP
 const blockedRouteDirs = [
   "apps/www/src/app/proofs",
   "apps/www/src/app/knowledge-bank",
+  "apps/www/src/app/knowledge-wiki",
   "apps/www/src/app/public-claims"
 ];
 

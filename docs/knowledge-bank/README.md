@@ -1,12 +1,76 @@
-# Knowledge Bank
+---
+id: index.knowledge-wiki
+title: Knowledge Wiki
+kind: index
+status: maintained
+visibility: public-safe
+sensitivity: low
+owner: jamie
+last_reviewed: "2026-07-18"
+review_by: "2027-01-18"
+canonical_path: docs/knowledge-bank/README.md
+discoverable: true
+aliases:
+  - Knowledge Bank
+relations:
+  - type: documents
+    target: index.knowledge-wiki.projects
+  - type: documents
+    target: index.knowledge-wiki.sources
+  - type: documents
+    target: index.knowledge-wiki.claims-and-corrections
+  - type: documents
+    target: index.knowledge-wiki.practice-and-opportunities
+wanted:
+  - id: event.beta-nyc.school-of-data.2016
+    proposed_title: BetaNYC School of Data presentation
+    reason: Complete the public-launch chronology if a bounded source record is recovered.
+---
 
-This directory is the public-safe knowledge base for Jamie Burkart's
-professional accomplishment claims.
+# Knowledge Wiki
+
+**Former name and current compatibility path:** Knowledge Bank
+
+The Knowledge Wiki is Jamie Burkart's internal, Git-reviewed, Markdown-first
+system for source-backed operating memory. It is not a public or anonymously
+editable wiki. Anything committed to this public repository must be
+public-safe. Protected source material remains outside the repository.
+
+Markdown is the human-readable record. Stable IDs and typed relations make the
+record queryable. The Wiki Graph is compiled from those records. The portfolio
+is a smaller, selective projection.
+
+## Start here
+
+- **Understand a project:** begin with the
+  [projects index](indexes/projects.md).
+- **Verify a claim or source:** use the
+  [sources index](indexes/sources.md) and
+  [claims and corrections index](indexes/claims-and-corrections.md).
+- **Tailor an application or interview story:** begin with
+  [practice and opportunities](indexes/practice-and-opportunities.md).
+- **Add or move a governed page:** follow the
+  [page contract](schema.md).
+- **Understand authority and migration:** read the
+  [architecture decision](../architecture/ADR-knowledge-wiki-name-and-model.md).
+- **Inspect structural health:** run `npm run wiki:check`,
+  `npm run wiki:report`, or `npm run wiki:tasks`.
+
+## What is not here
+
+Raw transcripts, private correspondence, participant records, private source
+locators, unapproved media, and other protected material do not belong in this
+repository. `noindex`, an internal label, or a hidden link is not a privacy
+control.
+
+This directory remains the public-safe knowledge base for Jamie Burkart's
+professional accomplishment claims while the Knowledge Wiki name and model are
+introduced without an unsafe global path rename.
 
 The repo is public. Do not put anything here that would be unsafe, unfair, too
 private, or too hard to defend if quoted in a newspaper.
 
-The website is a projection of this bank. The bank can hold more structure than
+The website is a projection of this Wiki. The Wiki can hold more structure than
 the site shows: canonical claim language, evidence posture, source-basis
 categories, public-use guidance, guardrails, projection surfaces, and explicit
 non-public boundaries.
@@ -15,7 +79,7 @@ The website should use the clearest subset for a specific audience and purpose.
 
 ## Purpose
 
-The knowledge bank exists to:
+The Knowledge Wiki exists to:
 
 - preserve strong, defensible professional claims;
 - keep public site copy grounded in evidence;
@@ -28,7 +92,7 @@ The knowledge bank exists to:
 
 ## Publication Model
 
-- **Knowledge bank:** public-safe repository layer for defensible claims,
+- **Knowledge Wiki:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in

@@ -1,3 +1,42 @@
+---
+id: project.callnyc
+title: CallNYC
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: low
+owner: jamie
+created: "2016-03-01"
+last_reviewed: "2026-07-18"
+review_by: "2027-01-18"
+canonical_path: docs/knowledge-bank/projects/callnyc.md
+discoverable: true
+aliases:
+  - Call NYC
+  - CallNYC.org
+canonical_refs:
+  - CLM-CALLNYC-INDEPENDENT-FOLLOW-ON
+  - CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS
+  - callnyc-civic-data-guidance
+relations:
+  - type: informed_by
+    target: event.nycc.constituent-services-hackathon.2016
+    context: The event and later CouncilStat release established the project's public-data context.
+  - type: uses_source
+    target: source.civichall.hackathon-announcement.2016
+  - type: uses_source
+    target: source.nycc.councilstat-hackathon-post.2016
+  - type: uses_source
+    target: source.politico.callnyc.2016-03-14
+  - type: has_asset
+    target: asset.callnyc.digital-district-photo
+  - type: supports
+    target: capability.technical-operations
+    context: Demonstrates public-data translation, implementation, and bounded public communication.
+  - type: projected_to
+    target: portfolio.work.callnyc
+---
+
 # CallNYC citational record
 
 **Reviewed:** 2026-07-11
@@ -7,6 +46,19 @@
 The canonical machine-readable record is
 `apps/www/src/data/knowledge-bank/records.ts`. This note explains the research
 context and editorial boundaries; it is not a competing source of truth.
+
+## Jamie's role
+
+Jamie independently designed and built CallNYC.org after the fuller CouncilStat
+constituent-services data became available. He translated those records into
+resident-facing issue pages, district context, and next-step guidance.
+
+## What became usable
+
+Residents and public-interest readers could move from administrative service
+categories toward issue pathways and relevant next steps. The prototype also
+made the underlying public data more legible without presenting itself as an
+official or current Council service.
 
 ## Corrected chronology
 
@@ -81,3 +133,11 @@ depicted.
 
 Rights require permission, consent requires review, and public display remains
 on hold. The photograph is not committed or rendered.
+
+## Related Wiki records
+
+- [2016 Council constituent-services hackathon](../events/nyc-council-constituent-services-hackathon-2016.md)
+- [Independent follow-on claim](../claims/callnyc-independent-follow-on.md)
+- [Chronology correction](../corrections/callnyc-years.md)
+- [Technical Operations capability](../capabilities/technical-operations.md)
+- [CallNYC portfolio projection](../projections/callnyc-case-study.md)

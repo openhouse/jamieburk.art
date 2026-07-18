@@ -43,10 +43,15 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
-## Knowledge Bank
+## Knowledge Wiki
 
-Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
-public-safe claim layer.
+Knowledge Wiki is the canonical current product name. Knowledge Bank remains a
+historical and compatibility alias, including the current
+`docs/knowledge-bank/` path.
+
+Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the public-safe
+claim layer. Governed Markdown owns page identity, orientation, narrative, and
+authored links; it does not duplicate canonical claim or evidence authority.
 
 Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
 canonical machine-readable source. Do not add or strengthen a public factual
@@ -60,7 +65,7 @@ Do not expose private source paths, private assets, protected locators, signed
 URLs, or raw research artifacts. Regenerate the redacted public registry after
 changing canonical records.
 
-Website copy should project from the knowledge bank and stay optimized for
+Website copy should project from the Knowledge Wiki and stay optimized for
 clarity, audience, and purpose.
 
 Do not strengthen a claim in a public page unless the stronger claim exists in
@@ -71,7 +76,8 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 
 The website should read as a composed portfolio, not a claims database.
 
-Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+Do not add `/proofs`, `/knowledge-bank`, `/knowledge-wiki`, or `/public-claims`
+public routes.
 
 ## Chad Lens
 

@@ -1,11 +1,12 @@
 # Production Readiness
 
-This branch adds the knowledge-bank layer from the M-family
+This branch adds the Knowledge Wiki layer, formerly called the Knowledge Bank,
+from the M-family
 production-readiness review.
 
 It includes:
 
-- Public-safe knowledge bank in `docs/knowledge-bank/`.
+- Public-safe Knowledge Wiki in the compatibility path `docs/knowledge-bank/`.
 - Structured proof data in `apps/www/src/data/proofs.ts`.
 - Proof projection guidance for homepage, resume, Technical Operations, work
   cards, case studies, and lab pages.
@@ -29,6 +30,9 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run build`
 - [ ] `npm run check`
 - [ ] `npm run knowledge-bank`
+- [ ] `npm run wiki:check`
+- [ ] `npm run wiki:test`
+- [ ] `npm run wiki:eval`
 - [ ] `npm run public-safety`
 - [ ] `npm run check:knowledge-lifecycle` (35/35)
 - [ ] `npm run check:chad-lens` (10/10)

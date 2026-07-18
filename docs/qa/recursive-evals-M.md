@@ -101,6 +101,25 @@ A passing score does not claim that external review or image clearance has
 happened. Those dimensions pass only when the work is honestly represented as
 open and the bounded protocol is present.
 
+## Knowledge Wiki Foundation Criterion
+
+`npm run wiki:eval` evaluates the bounded Knowledge Wiki foundation against the
+machine-readable rubric in `knowledge-wiki-foundation-M.json`. It checks naming
+and compatibility, authority separation, stable page identity, document and
+semantic graph integrity, canonical-reference closure, correction
+traceability, privacy and rights boundaries, task-oriented reachability,
+selective projection, deterministic derivation, employment usefulness, and
+human authority.
+
+`npm run wiki:test` supplies mutation coverage for broken links and fragments,
+duplicate IDs, unknown relations, alias collisions, missing canonical
+references, private paths, protected records, rights-pending publication,
+negative-search inflation, missing claim-source closure, and correction drift.
+
+The retrieval prompts remain real human tasks. A deterministic pass does not
+record a human session, rights clearance, collaborator approval, editorial
+approval, or hiring outcome.
+
 ## P0: Blocks Job-Application Sharing
 
 - Public pages contain TODO, placeholder, pending approval, or before-launch

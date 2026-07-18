@@ -6,6 +6,7 @@
   "receiptPath": "docs/qa/runs/latest.json",
   "rubricPaths": [
     "docs/qa/eval-control-plane-M.json",
+    "docs/qa/knowledge-wiki-foundation-M.json",
     "docs/qa/knowledge-lifecycle-M.json",
     "docs/qa/portfolio-readiness-M.json",
     "docs/qa/blind-spot-readiness-M.json",
@@ -23,7 +24,8 @@
     "docs/qa/launch-qa-M.md"
   ],
   "contentHashExcludes": [
-    "docs/qa/runs/"
+    "docs/qa/runs/",
+    "recommendations-M.md"
   ],
   "frozenBranches": [
     "feature/evals-A",

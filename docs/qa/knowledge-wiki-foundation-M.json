@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "name": "Knowledge Wiki foundation evals M",
+  "reviewedAt": "2026-07-18",
+  "rootId": "index.knowledge-wiki",
+  "requiredNodeIds": [
+    "anti-claim.callnyc.official-product",
+    "asset.callnyc.digital-district-photo",
+    "capability.technical-operations",
+    "claim.callnyc.independent-follow-on",
+    "correction.callnyc-years",
+    "event.nycc.constituent-services-hackathon.2016",
+    "index.knowledge-wiki",
+    "index.knowledge-wiki.claims-and-corrections",
+    "index.knowledge-wiki.practice-and-opportunities",
+    "index.knowledge-wiki.projects",
+    "index.knowledge-wiki.sources",
+    "method.source-backed-team-memory",
+    "opportunity.nyc-oti.technical-operations-manager.782369",
+    "portfolio.work.callnyc",
+    "portfolio.work.technical-operations",
+    "project.callnyc",
+    "source.civichall.hackathon-announcement.2016",
+    "source.nycc.councilstat-hackathon-post.2016",
+    "source.politico.callnyc.2016-03-14"
+  ],
+  "requiredFiles": [
+    ".vscode/settings.json",
+    "docs/architecture/ADR-knowledge-wiki-name-and-model.md",
+    "docs/knowledge-bank/README.md",
+    "docs/knowledge-bank/schema.md",
+    "reports/knowledge-wiki-inventory.md"
+  ],
+  "forbiddenPublicPaths": [
+    "apps/www/src/app/knowledge-wiki",
+    "apps/www/src/app/knowledge-bank",
+    "apps/www/src/app/proofs"
+  ],
+  "machineCriteria": [
+    {
+      "id": "KW-001",
+      "name": "Naming and compatibility",
+      "criterion": "Knowledge Wiki is canonical, Knowledge Bank remains a documented compatibility alias, and no global path rename occurred."
+    },
+    {
+      "id": "KW-002",
+      "name": "Authority separation",
+      "criterion": "Markdown owns orientation and identity while existing structured records retain claims, evidence, corrections, citations, rights, and projection authority."
+    },
+    {
+      "id": "KW-003",
+      "name": "Stable pilot identity",
+      "criterion": "Every governed pilot record has a unique path-independent ID and a matching canonical_path."
+    },
+    {
+      "id": "KW-004",
+      "name": "Document graph integrity",
+      "criterion": "Relative Markdown files, case, and heading fragments resolve."
+    },
+    {
+      "id": "KW-005",
+      "name": "Semantic graph integrity",
+      "criterion": "Typed relations use the controlled vocabulary, target governed records, and obey kind constraints."
+    },
+    {
+      "id": "KW-006",
+      "name": "Canonical-reference closure",
+      "criterion": "Wiki pages reference real existing claim, source, correction, citation-page, or proof IDs instead of duplicating authority."
+    },
+    {
+      "id": "KW-007",
+      "name": "Correction traceability",
+      "criterion": "The CallNYC year correction connects prior wording, corrected wording, canonical claim, affected projection, and current project record."
+    },
+    {
+      "id": "KW-008",
+      "name": "Privacy and rights separation",
+      "criterion": "No private path or protected locator enters the Wiki, and evidentiary media remains distinct from publication clearance."
+    },
+    {
+      "id": "KW-009",
+      "name": "Task-oriented reachability",
+      "criterion": "Every discoverable pilot record is reachable from the start page through purposeful authored or semantic navigation."
+    },
+    {
+      "id": "KW-010",
+      "name": "Selective projection",
+      "criterion": "Public projection records identify their surfaces without making evidence maturity an automatic publication decision."
+    },
+    {
+      "id": "KW-011",
+      "name": "Bounded architecture",
+      "criterion": "No public Wiki route, Explorer, database, CMS, or second canonical record system is introduced."
+    },
+    {
+      "id": "KW-012",
+      "name": "Deterministic derivation",
+      "criterion": "The same authored input produces byte-identical semantic graph output."
+    },
+    {
+      "id": "KW-013",
+      "name": "Employment usefulness",
+      "criterion": "The graph can retrieve project evidence, correction history, capability, method, opportunity, and portfolio surfaces without exposing protected context."
+    },
+    {
+      "id": "KW-014",
+      "name": "Human authority",
+      "criterion": "Automated success does not claim human comprehension, collaborator consent, rights clearance, editorial approval, or hiring response."
+    }
+  ],
+  "retrievalTasks": [
+    {
+      "id": "TASK-001",
+      "prompt": "Find the current CallNYC chronology and the record that corrected its earlier years.",
+      "expectedIds": [
+        "project.callnyc",
+        "correction.callnyc-years"
+      ],
+      "materialBoundary": "The supported project year is 2016; the correction does not establish official Council ownership."
+    },
+    {
+      "id": "TASK-002",
+      "prompt": "Find the sources supporting the January 30, 2016 event date and the narrower first-CouncilStat description.",
+      "expectedIds": [
+        "source.civichall.hackathon-announcement.2016",
+        "source.nycc.councilstat-hackathon-post.2016"
+      ],
+      "materialBoundary": "The sources do not establish a complete formal title, participant roster, winners, or CallNYC as an official submission."
+    },
+    {
+      "id": "TASK-003",
+      "prompt": "Find the strongest bounded account of Jamie's role in CallNYC and where it appears publicly.",
+      "expectedIds": [
+        "claim.callnyc.independent-follow-on",
+        "portfolio.work.callnyc"
+      ],
+      "materialBoundary": "Jamie independently developed the follow-on project; he did not cause the data release or build an official Council product."
+    },
+    {
+      "id": "TASK-004",
+      "prompt": "Determine what the Digital District photograph supports and whether it may be published.",
+      "expectedIds": [
+        "asset.callnyc.digital-district-photo"
+      ],
+      "materialBoundary": "Visible text and table context are evidentiary; rights and consent remain uncleared and the image is not published."
+    },
+    {
+      "id": "TASK-005",
+      "prompt": "Find Jamie's Technical Operations capability, its source-backed method, and the OTI opportunity lens.",
+      "expectedIds": [
+        "capability.technical-operations",
+        "method.source-backed-team-memory",
+        "opportunity.nyc-oti.technical-operations-manager.782369"
+      ],
+      "materialBoundary": "The public Technical Operations page remains broadly useful rather than becoming an OTI-specific application page."
+    }
+  ],
+  "editorialLenses": [
+    {
+      "name": "Chad",
+      "question": "Can a hiring reader see what Jamie did, toward what end, and what became usable without opening the full archive?"
+    },
+    {
+      "name": "Abby Covert",
+      "question": "Can an unfamiliar teammate choose a task-oriented entrance and recover the right record without understanding the folder tree first?"
+    },
+    {
+      "name": "Shreya Shankar",
+      "question": "Do deterministic checks test evidence, correction, privacy, and projection failure modes rather than rewarding the presence of files?"
+    },
+    {
+      "name": "Mimi Onuoha",
+      "question": "Are protected absence, not-recovered material, rights, and public-safe metadata represented without turning omission into nonexistence?"
+    },
+    {
+      "name": "Amanda Clayman",
+      "question": "Does the system improve responsible action now while keeping human reviews and external outcomes honestly open?"
+    }
+  ],
+  "humanEvaluationState": "not-run"
+}

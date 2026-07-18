@@ -30,6 +30,11 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run wiki:check
+npm run wiki:test
+npm run wiki:eval
+npm run wiki:report
+npm run wiki:query -- --id project.callnyc
 npm run public-safety
 npm run check:knowledge-lifecycle
 npm run check:chad-lens
@@ -42,19 +47,21 @@ npm run preflight:staging
 npm run preflight:production
 ```
 
-## Knowledge Bank
+## Knowledge Wiki
 
-This repo includes a public-safe knowledge bank for professional claims:
+This repo includes a public-safe **Knowledge Wiki**, formerly called the
+Knowledge Bank. Its current compatibility paths are:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
 - `apps/www/src/data/knowledge-bank/records.ts`
 
-The website is a projection of this bank. Pages select, sequence, and phrase
+The Wiki is a Markdown-first editorial and research system with a compiled
+semantic graph. The website is a selective projection. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
 first adding a public-safe proof record.
 
-The knowledge bank is not a private archive. Do not commit raw transcripts,
+The Knowledge Wiki is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,
 client-private material, internal analytics, raw community records, unapproved
 photos, unapproved screenshots, or unapproved quotes.
@@ -62,8 +69,13 @@ photos, unapproved screenshots, or unapproved quotes.
 There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
-`npm run knowledge-bank` checks the proof schema, projection rules, and work
-metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+`npm run knowledge-bank` remains the compatibility command for the proof
+schema, projection rules, and work metadata. `npm run wiki:check` validates
+governed Markdown identity, links, typed relations, canonical references,
+rights, and projections; `npm run wiki:test` runs mutation regressions;
+`npm run wiki:eval` evaluates the bounded foundation; and
+`npm run wiki:report` creates ignored derived graph and health artifacts.
+`npm run check:routes` checks canonical routes and legacy redirects.
 `npm run check:citations` validates the source-to-projection graph and redacted
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
@@ -77,7 +89,7 @@ knowledge-lifecycle, public-safety, and route gates; it does not create a second
 safety scanner.
 
 `docs/knowledge-bank/intake-and-maturation.md` defines how URLs, memories,
-artifacts, repositories, and photo discoveries enter the knowledge bank,
+artifacts, repositories, and photo discoveries enter the Knowledge Wiki,
 develop through research, and remain available even when they are not selected
 for the current public site.
 
