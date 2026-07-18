@@ -1,10 +1,10 @@
 # Composite Integration Run History
 
-**Date:** July 16, 2026
+**Date:** July 17, 2026
 
 **Starting commit:** `68846b1f0a8672ff80598a7fef50ce5343c3e004`
 
-**Rubric:** `feature-evals-composite-integration` `1.2.0`
+**Rubric:** `feature-evals-composite-integration` `1.3.0`
 
 Run artifacts are retained under `evals/composite-integration/runs/`. Each
 passing holdout records the evaluated Git commit and candidate-input SHA-256.
@@ -57,6 +57,20 @@ query commands. Seven fail-closed and anti-overclaim tests passed.
    constrain proof evidence and project queries, construct publication-safe
    output from closed allowlists, validate the full scorecard contract, and
    require exact human-owner agreement with agent self-certification disabled.
+7. **Third independent adversarial holdout.** A new clean-candidate review
+   forged internally contradictory scorecards, passed sensitive identifiers
+   through intake, substituted semantically false credit rules and hollow route
+   metadata, selected proofs on unrelated routes, and demonstrated that several
+   evidence gates remained presence-only. The scorecard is now recomputed
+   against the current rubric and release state; intake rejects additional
+   sensitive classes and ambiguous write syntax; collective policy invokes the
+   semantic overclaim detector; routes are discovered from the App Router;
+   proof claims are bound to selecting routes; donor, source, corpus, and
+   correction gates validate substance; and candidate exclusions admit only
+   schema-valid evidence paths.
+
+The complete rejected-candidate summary is retained in
+`docs/qa/composite-integration/adversarial-review-history.md`.
 
 No public claim, metric, case-study narrative, homepage argument, or resume
 wording changed in this integration. The two interface repairs address direct

@@ -38,18 +38,6 @@ const expectedDonors = new Map([
   ["feature/evals-N", "10d20ecd"]
 ]);
 
-const requiredRoutes = [
-  "/",
-  "/about",
-  "/colophon",
-  "/contact",
-  "/lab/source-backed-team-memory",
-  "/resume",
-  "/work",
-  "/work/technical-operations",
-  ...workItems.map((item) => `/work/${item.slug}`)
-];
-
 const blockedPublicRoutes = [
   "apps/www/src/app/proofs",
   "apps/www/src/app/knowledge-bank",
@@ -80,12 +68,8 @@ const semanticRiskPatterns = [
 ];
 
 const candidatePathExclusions = [
-  "evals/composite-integration/runs/",
-  "reports/generated/",
-  "node_modules/",
-  ".next/",
-  "playwright-report/",
-  "test-results/"
+  /^evals\/composite-integration\/runs\/[A-Za-z0-9._-]+\.json$/,
+  /^reports\/generated\/composite-integration-scorecard\.json$/
 ];
 
 function absolute(root, relativePath) {
@@ -99,12 +83,7 @@ function readJson(root, relativePath) {
 }
 
 function isCandidatePath(relativePath) {
-  return !candidatePathExclusions.some(
-    (excluded) => {
-      const directory = excluded.slice(0, -1);
-      return relativePath === directory || relativePath.startsWith(excluded);
-    }
-  );
+  return !candidatePathExclusions.some((excluded) => excluded.test(relativePath));
 }
 
 function gitLines(root, args) {
@@ -177,6 +156,54 @@ function distinctWords(value) {
   );
 }
 
+function substantive(value, { length = 20, words = 5 } = {}) {
+  return (
+    String(value ?? "").trim().length >= length &&
+    distinctWords(value).size >= words
+  );
+}
+
+function discoverPublicRoutes(root, works = workItems) {
+  const appRoot = absolute(root, "apps/www/src/app");
+  const pageFiles = [];
+  const visit = (directory) => {
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const entryPath = path.join(directory, entry.name);
+      if (entry.isDirectory()) visit(entryPath);
+      if (entry.isFile() && entry.name === "page.tsx") {
+        pageFiles.push(path.relative(root, entryPath));
+      }
+    }
+  };
+  visit(appRoot);
+
+  const routes = [];
+  for (const sourceFile of pageFiles) {
+    const appRelative = path.relative(appRoot, absolute(root, sourceFile));
+    const directory = path.dirname(appRelative);
+    const segments = directory === "." ? [] : directory.split(path.sep);
+    const publicSegments = segments.filter(
+      (segment) => !/^\(.+\)$/.test(segment) && !segment.startsWith("@")
+    );
+    if (publicSegments.some((segment) => segment.startsWith("_"))) continue;
+    if (publicSegments.join("/") === "work/[slug]") {
+      for (const work of works) {
+        routes.push({ path: `/work/${work.slug}`, sourceFile });
+      }
+      continue;
+    }
+    if (publicSegments.some((segment) => /^\[.+\]$/.test(segment))) {
+      routes.push({ path: null, sourceFile });
+      continue;
+    }
+    routes.push({
+      path: publicSegments.length ? `/${publicSegments.join("/")}` : "/",
+      sourceFile
+    });
+  }
+  return routes;
+}
+
 export function detectSemanticRisks(statement) {
   return semanticRiskPatterns
     .filter(({ pattern }) => pattern.test(statement))
@@ -206,14 +233,24 @@ export function validateDonorDispositions(dispositions) {
       findings.push(`${branch} has an invalid decision`);
     }
     for (const field of ["mechanism", "destination", "boundary"]) {
-      if (!donor[field] || donor[field].length < 20) {
+      const minimumWords =
+        field === "destination" ? 5 : field === "mechanism" ? 6 : 7;
+      if (!substantive(donor[field], { length: 20, words: minimumWords })) {
         findings.push(`${branch} needs a substantive ${field}`);
       }
     }
     for (const field of ["risk", "verification"]) {
-      if (!donor[field] || donor[field].length < 12) {
+      const minimumWords = field === "risk" ? 9 : 5;
+      if (!substantive(donor[field], { length: 12, words: minimumWords })) {
         findings.push(`${branch} needs a substantive ${field}`);
       }
+    }
+    if (
+      !/^npm run [a-z0-9:-]+(?: && npm run [a-z0-9:-]+)*$/i.test(
+        donor.verification
+      )
+    ) {
+      findings.push(`${branch} verification must name executable npm scripts`);
     }
   }
 
@@ -275,6 +312,36 @@ export function validateCollectiveCreditPolicy(
     ) {
       findings.push(`${projectId} needs a substantive publicRule and two boundaries`);
     }
+    if (
+      !/\b(?:credit|describe|state|name)\b/i.test(project.publicRule ?? "") ||
+      !/\bJamie(?:'s)?\b/i.test(project.publicRule ?? "") ||
+      !/\b(?:collaborat|collective|contribut|preserv|distinct|role|work|authorship|decision|participant|institution|public)/i.test(
+        project.publicRule ?? ""
+      )
+    ) {
+      findings.push(
+        `${projectId} publicRule must state Jamie's bounded credit relationship`
+      );
+    }
+    if (
+      detectSemanticRisks([project.publicRule, ...boundaries].join(" ")).length
+    ) {
+      findings.push(
+        `${projectId} contains prohibited authorship or causality language`
+      );
+    }
+    if (
+      boundaries.some(
+        (boundary) =>
+          !/\b(?:do not|keep|preserve|not|remain|distinguish|without|until|unless|bounded)\b/i.test(
+            boundary
+          )
+      )
+    ) {
+      findings.push(
+        `${projectId} boundaries must express an enforceable limit`
+      );
+    }
   }
 
   for (const proof of proofs) {
@@ -306,25 +373,58 @@ export function validateSurfaceBindings(
 
   const proofById = new Map(proofs.map((proof) => [proof.id, proof]));
   const claimById = new Map(claims.map((claim) => [claim.id, claim]));
+  const discoveredRoutes = discoverPublicRoutes(root, works);
+  const unresolvedDynamicRoutes = discoveredRoutes.filter((route) => !route.path);
+  if (unresolvedDynamicRoutes.length) {
+    findings.push(
+      `Public dynamic routes need an explicit expansion rule: ${unresolvedDynamicRoutes
+        .map((route) => route.sourceFile)
+        .join(", ")}`
+    );
+  }
+  const requiredRoutes = discoveredRoutes.filter((route) => route.path);
   const routeByPath = new Map(bindings.routes.map((route) => [route.path, route]));
   if (routeByPath.size !== bindings.routes.length) {
     findings.push("Projection route paths must be unique");
   }
-  if (!sameSet(bindings.routes.map((route) => route.path), requiredRoutes)) {
+  if (
+    !sameSet(
+      bindings.routes.map((route) => route.path),
+      requiredRoutes.map((route) => route.path)
+    )
+  ) {
     findings.push("Projection route registry must match the complete public route set");
   }
 
-  for (const routePath of requiredRoutes) {
+  for (const discoveredRoute of requiredRoutes) {
+    const routePath = discoveredRoute.path;
     const route = routeByPath.get(routePath);
     if (!route) {
       findings.push(`Projection policy is missing ${routePath}`);
       continue;
     }
-    if (!route.sourceFiles?.length || !route.audience || !route.purpose) {
+    if (
+      !route.sourceFiles?.length ||
+      !substantive(route.audience, { length: 20, words: 5 }) ||
+      !substantive(route.purpose, { length: 35, words: 5 })
+    ) {
       findings.push(`${routePath} needs sourceFiles, audience, and purpose`);
     }
-    if (!route.approvalState || !route.changeRule || !route.exclusions?.length) {
+    if (
+      route.approvalState !==
+        "application-eligible; production approval open" ||
+      !substantive(route.changeRule, { length: 35, words: 7 }) ||
+      !route.exclusions?.length ||
+      route.exclusions.some(
+        (exclusion) => !substantive(exclusion, { length: 25, words: 5 })
+      )
+    ) {
       findings.push(`${routePath} needs approvalState, changeRule, and exclusions`);
+    }
+    if (!route.sourceFiles?.includes(discoveredRoute.sourceFile)) {
+      findings.push(
+        `${routePath} must name its App Router page source ${discoveredRoute.sourceFile}`
+      );
     }
     for (const sourceFile of route.sourceFiles ?? []) {
       const resolvedSource = absolute(root, sourceFile);
@@ -364,6 +464,18 @@ export function validateSurfaceBindings(
       if (proof && expectedSurface && !proof.surfaces.includes(expectedSurface)) {
         findings.push(`${routePath} selects ${proofId} without ${expectedSurface} approval`);
       }
+    }
+    const expectedProofClaimIds = [
+      ...new Set(
+        (route.proofIds ?? []).flatMap(
+          (proofId) => proofById.get(proofId)?.knowledgeClaimIds ?? []
+        )
+      )
+    ];
+    if (!sameSet(route.proofClaimIds ?? [], expectedProofClaimIds)) {
+      findings.push(
+        `${routePath} proof claim manifest does not match selected proofs`
+      );
     }
     const expectedClaims = claims
       .filter((claim) =>
@@ -437,6 +549,9 @@ export function validateProofTraceability(
   const claimById = new Map(bank.claims.map((claim) => [claim.id, claim]));
 
   for (const proof of proofs.filter((item) => selectedProofIds.has(item.id))) {
+    const selectingRoutes = (bindings?.routes ?? []).filter((route) =>
+      route.proofIds?.includes(proof.id)
+    );
     const sourceIds = proof.sourceIds ?? [];
     const claimIds = proof.knowledgeClaimIds ?? [];
     if (!sourceIds.length && !claimIds.length) {
@@ -451,6 +566,13 @@ export function validateProofTraceability(
       }
     }
     for (const claimId of claimIds) {
+      for (const route of selectingRoutes) {
+        if (!route.proofClaimIds?.includes(claimId)) {
+          findings.push(
+            `${proof.id} claim ${claimId} is not bound to selecting route ${route.path}`
+          );
+        }
+      }
       const claim = claimById.get(claimId);
       if (!claim) {
         findings.push(`${proof.id} references unknown claim ${claimId}`);
@@ -470,8 +592,24 @@ export function validateProofTraceability(
         findings.push(`${proof.id} references claim ${claimId} without an active projection`);
       }
       for (const evidence of claim.evidence) {
-        if (!sourceById.has(evidence.sourceId)) {
+        const source = sourceById.get(evidence.sourceId);
+        if (!source) {
           findings.push(`${proof.id} claim ${claimId} has unknown source ${evidence.sourceId}`);
+          continue;
+        }
+        if (
+          !["public", "public-metadata-only"].includes(source.visibility) &&
+          (
+            !["confirmed-with-boundary", "use-with-care"].includes(
+              claim.status
+            ) ||
+            claim.boundaries.length < 2 ||
+            evidence.renderCitation !== false
+          )
+        ) {
+          findings.push(
+            `${proof.id} claim ${claimId} uses unbounded protected evidence`
+          );
         }
       }
     }
@@ -492,7 +630,12 @@ export function computeCandidateFingerprint(root) {
   return hash.digest("hex");
 }
 
-export function validateScorecardSchema(scorecard, schema) {
+export function validateScorecardSchema(
+  scorecard,
+  schema,
+  rubric = readJson(repoRoot, "evals/composite-integration/rubric.json"),
+  releaseStatus = readJson(repoRoot, "docs/qa/release-status.json")
+) {
   const findings = [];
   if (!schema) return ["scorecard.schema.json is missing"];
   if (!scorecard || typeof scorecard !== "object" || Array.isArray(scorecard)) {
@@ -510,13 +653,19 @@ export function validateScorecardSchema(scorecard, schema) {
   if (scorecard.rubricId !== schema.properties?.rubricId?.const) {
     findings.push("Scorecard rubricId does not match the schema");
   }
+  if (scorecard.rubricVersion !== rubric?.version) {
+    findings.push("Scorecard rubricVersion does not match the current rubric");
+  }
   if (!/^[a-f0-9]{40}$/.test(scorecard.candidateCommit ?? "")) {
     findings.push("Scorecard candidateCommit is invalid");
   }
   if (!/^[a-f0-9]{64}$/.test(scorecard.candidateFingerprint ?? "")) {
     findings.push("Scorecard candidateFingerprint is invalid");
   }
-  if (typeof scorecard.rubricVersion !== "string" || !scorecard.rubricVersion) {
+  if (
+    typeof scorecard.rubricVersion !== "string" ||
+    !scorecard.rubricVersion
+  ) {
     findings.push("Scorecard rubricVersion is invalid");
   }
   if (typeof scorecard.workingTreeClean !== "boolean") {
@@ -573,6 +722,25 @@ export function validateScorecardSchema(scorecard, schema) {
   ) {
     findings.push("Scorecard criteria do not match the schema contract");
   }
+  const rubricCriterionById = new Map(
+    (rubric?.criteria ?? []).map((criterion) => [criterion.id, criterion])
+  );
+  for (const criterion of scorecard.criteria ?? []) {
+    const contract = rubricCriterionById.get(criterion.id);
+    if (
+      !contract ||
+      criterion.title !== contract.title ||
+      criterion.kind !== contract.kind
+    ) {
+      findings.push(`${criterion.id} does not match the current rubric contract`);
+    }
+    if (
+      criterion.passes !==
+        (criterion.score === 1 && criterion.findings.length === 0)
+    ) {
+      findings.push(`${criterion.id} has inconsistent pass, score, or findings`);
+    }
+  }
   if (
     !Array.isArray(scorecard.humanGates) ||
     scorecard.humanGates.length === 0 ||
@@ -580,10 +748,12 @@ export function validateScorecardSchema(scorecard, schema) {
     !scorecard.humanGates.every(
       (gate) =>
         Object.keys(gate).every((key) =>
-          ["id", "state", "agentMaySelfCertify"].includes(key)
+          ["id", "owner", "state", "agentMaySelfCertify"].includes(key)
         ) &&
         typeof gate.id === "string" &&
         gate.id.length > 0 &&
+        typeof gate.owner === "string" &&
+        gate.owner.length > 0 &&
         ["open", "met", "not-applicable"].includes(gate.state) &&
         gate.agentMaySelfCertify === false
     )
@@ -601,6 +771,27 @@ export function validateScorecardSchema(scorecard, schema) {
   ) {
     findings.push("Scorecard human gate IDs must be unique and complete");
   }
+  const releaseGateById = new Map(
+    (releaseStatus?.humanGates ?? []).map((gate) => [gate.id, gate])
+  );
+  const rubricGateById = new Map(
+    (rubric?.humanGates ?? []).map((gate) => [gate.id, gate])
+  );
+  for (const gate of scorecard.humanGates ?? []) {
+    const releaseGate = releaseGateById.get(gate.id);
+    const rubricGate = rubricGateById.get(gate.id);
+    if (
+      !releaseGate ||
+      !rubricGate ||
+      gate.owner !== releaseGate.owner ||
+      gate.owner !== rubricGate.owner ||
+      gate.state !== releaseGate.state ||
+      releaseGate.agentMaySelfCertify !== false ||
+      rubricGate.agentMaySelfCertify !== false
+    ) {
+      findings.push(`${gate.id} does not match the human-gate registries`);
+    }
+  }
   const actualHardGateFailures = scorecard.criteria?.filter(
     (criterion) => criterion.kind === "hard-gate" && !criterion.passes
   ).length;
@@ -609,6 +800,27 @@ export function validateScorecardSchema(scorecard, schema) {
     actualHardGateFailures !== scorecard.hardGateFailures
   ) {
     findings.push("Scorecard hardGateFailures does not match criterion results");
+  }
+  const expectedWeightedScore = Number(
+    (scorecard.criteria ?? [])
+      .filter((criterion) => criterion.kind === "quality")
+      .reduce((sum, criterion) => {
+        const weight = rubricCriterionById.get(criterion.id)?.weight ?? 0;
+        return sum + criterion.score * (weight / 100);
+      }, 0)
+      .toFixed(4)
+  );
+  if (scorecard.weightedScore !== expectedWeightedScore) {
+    findings.push("Scorecard weightedScore does not match criterion results");
+  }
+  const expectedPasses =
+    scorecard.workingTreeClean === true &&
+    scorecard.hardGateFailures === 0 &&
+    scorecard.criteria?.every((criterion) => criterion.passes === true) &&
+    expectedWeightedScore >=
+      (rubric?.thresholds?.minimumWeightedScore ?? 1);
+  if (scorecard.passes !== expectedPasses) {
+    findings.push("Scorecard passes does not match recomputed results");
   }
   if (
     scorecard.passes === true &&
@@ -633,6 +845,39 @@ export function validateHoldouts(
 ) {
   const runsDirectory = absolute(root, "evals/composite-integration/runs");
   if (!existsSync(runsDirectory)) return ["Composite holdout directory is missing"];
+  const trackedRunFiles = gitLines(root, [
+    "ls-files",
+    "evals/composite-integration/runs"
+  ]);
+  for (const relativePath of trackedRunFiles) {
+    if (!/^evals\/composite-integration\/runs\/[A-Za-z0-9._-]+\.json$/.test(relativePath)) {
+      return [`Evidence-only run path is not allowed: ${relativePath}`];
+    }
+    const run = readJson(root, relativePath);
+    const schemaFindings = validateScorecardSchema(run, schema);
+    if (schemaFindings.length) {
+      return [`Committed run ${relativePath} is invalid: ${schemaFindings[0]}`];
+    }
+  }
+  const headCommit = gitLines(root, ["rev-parse", "HEAD"])[0];
+  if (headCommit !== candidateCommitHash) {
+    const evidenceCommitPaths = gitLines(root, [
+      "diff",
+      "--name-only",
+      `${candidateCommitHash}..${headCommit}`
+    ]);
+    const invalidEvidencePath = evidenceCommitPaths.find(
+      (relativePath) =>
+        !/^evals\/composite-integration\/runs\/[A-Za-z0-9._-]+\.json$/.test(
+          relativePath
+        )
+    );
+    if (invalidEvidencePath) {
+      return [
+        `Evidence-only commits changed candidate input ${invalidEvidencePath}`
+      ];
+    }
+  }
   const files = readdirSync(runsDirectory)
     .filter((file) => file.endsWith(".json"))
     .sort();
@@ -770,6 +1015,28 @@ export function evaluateComposite(
   if (existsSync(absolute(root, "docs/proofs-bank.md"))) {
     vocabularyFindings.push("docs/proofs-bank.md duplicates the canonical bank");
   }
+  for (const route of discoverPublicRoutes(root)) {
+    if (
+      route.path &&
+      /\/(?:proofs?|knowledge-bank|public-claims?)(?:\/|$)/.test(route.path)
+    ) {
+      vocabularyFindings.push(`${route.path} exposes an internal evidence route`);
+    }
+  }
+  for (const relativePath of gitLines(root, ["ls-files"])) {
+    if (
+      /(?:proofs?-bank|claim-registry|knowledge-registry)/i.test(relativePath) &&
+      relativePath !== "docs/knowledge-bank/policies/projection-surface-bindings.json"
+    ) {
+      vocabularyFindings.push(`${relativePath} may duplicate the canonical bank`);
+    }
+  }
+  vocabularyFindings.push(
+    ...runEval(root, [
+      "scripts/check-knowledge-bank.mjs",
+      "scripts/check-public-safety.mjs"
+    ])
+  );
   push("CI-002", vocabularyFindings);
 
   const traceabilityFindings = [];
@@ -808,8 +1075,31 @@ export function evaluateComposite(
       if (!evidence.supports.length) {
         semanticsFindings.push(`${claim.id} has empty support semantics`);
       }
+      if (evidence.supports.some((support) => support.trim().length < 4)) {
+        semanticsFindings.push(`${claim.id} has hollow support semantics`);
+      }
       if (!source.doesNotEstablish.length) {
         semanticsFindings.push(`${source.id} needs doesNotEstablish boundaries`);
+      }
+      if (
+        source.doesNotEstablish.some(
+          (boundary) => boundary.trim().length < 5
+        )
+      ) {
+        semanticsFindings.push(`${source.id} has hollow source limitations`);
+      }
+    }
+    if (
+      ["confirmed-with-boundary", "use-with-care"].includes(claim.status) &&
+      claim.boundaries.length < 1
+    ) {
+      semanticsFindings.push(`${claim.id} needs at least one claim boundary`);
+    }
+    for (const projection of claim.projections.filter(
+      (item) => item.status === "active"
+    )) {
+      if (detectSemanticRisks(projection.text).length) {
+        semanticsFindings.push(`${claim.id} has risky active projection language`);
       }
     }
   }
@@ -830,6 +1120,19 @@ export function evaluateComposite(
   ]) {
     if (!existsSync(absolute(root, required))) corpusFindings.push(`Missing ${required}`);
   }
+  corpusFindings.push(
+    ...runEval(root, [
+      "scripts/evals-callnyc-x-corpus.mjs",
+      "scripts/evals-wowlist-x-corpus.mjs",
+      "scripts/evals-nycartc-x-corpus.mjs",
+      "scripts/evals-urbanhermit-x-corpus.mjs",
+      "scripts/evals-nycac-facebook-events.mjs",
+      "scripts/evals-wowlist-facebook-posts.mjs",
+      "scripts/evals-nycac-facebook-posts.mjs",
+      "scripts/evals-kcspacesfund-facebook-posts.mjs",
+      "scripts/evals-jamie-personal-facebook-posts.mjs"
+    ])
+  );
   const corpusBoundaryText = [
     "docs/knowledge-bank/archival-survivorship-register.json",
     "docs/qa/evals-L/recursive-protocol.md"
@@ -841,6 +1144,25 @@ export function evaluateComposite(
     if (!corpusBoundaryText.toLowerCase().includes(phrase)) {
       corpusFindings.push(`Corpus governance is missing ${phrase}`);
     }
+  }
+  const survivorshipRegister = readJson(
+    root,
+    "docs/knowledge-bank/archival-survivorship-register.json"
+  );
+  const survivorshipSurfaces = survivorshipRegister?.surfaces ?? [];
+  if (
+    survivorshipSurfaces.length !== 8 ||
+    new Set(survivorshipSurfaces.map((surface) => surface.surface)).size !== 8 ||
+    survivorshipSurfaces.some(
+      (surface) =>
+        !surface.coverage ||
+        !substantive(surface.risk, { length: 30, words: 5 }) ||
+        !substantive(surface.nextAction, { length: 25, words: 5 })
+    )
+  ) {
+    corpusFindings.push(
+      "Archival survivorship register needs eight substantive, unique surfaces"
+    );
   }
   push("CI-005", corpusFindings);
 
@@ -869,12 +1191,38 @@ export function evaluateComposite(
   if (!knowledgeBank.corrections.length) {
     correctionFindings.push("At least one correction record is required");
   }
+  const correctionIds = knowledgeBank.corrections.map(
+    (correction) => correction.id
+  );
+  if (new Set(correctionIds).size !== correctionIds.length) {
+    correctionFindings.push("Correction IDs must be unique");
+  }
+  const governedCorrectionSurfaces = new Set([
+    ...(surfaceBindings?.routes ?? []).map((route) => route.path),
+    "knowledge-bank",
+    "resume"
+  ]);
   for (const correction of knowledgeBank.corrections) {
     if (!claimIds.has(correction.claimId)) {
       correctionFindings.push(`${correction.id} references an unknown claim`);
     }
     if (correction.previousText === correction.replacementText) {
       correctionFindings.push(`${correction.id} does not change the wording`);
+    }
+    if (!substantive(correction.reason, { length: 25, words: 5 })) {
+      correctionFindings.push(`${correction.id} needs a substantive reason`);
+    }
+    if (
+      !["active", "superseded"].includes(correction.status) ||
+      !/^\d{4}-\d{2}-\d{2}$/.test(correction.decidedAt) ||
+      !correction.affectedSurfaces.length ||
+      correction.affectedSurfaces.some(
+        (surface) => !governedCorrectionSurfaces.has(surface)
+      )
+    ) {
+      correctionFindings.push(
+        `${correction.id} needs governed status, date, and affected surfaces`
+      );
     }
   }
   push("CI-008", correctionFindings);
@@ -901,6 +1249,7 @@ export function evaluateComposite(
   );
   const humanGates = (rubric?.humanGates ?? []).map((gate) => ({
     id: gate.id,
+    owner: gate.owner,
     state: releaseGateById.get(gate.id)?.state ?? "open",
     agentMaySelfCertify: false
   }));
@@ -978,6 +1327,33 @@ export function evaluateComposite(
   ) {
     maintenanceFindings.push("Rubric maintenance needs an owner, cadence, trigger, and runbook");
   }
+  const scorecardContractCriteria = [
+    ...criteria,
+    result(
+      "CI-015",
+      criteriaById.get("CI-015")?.title ?? "Maintenance burden",
+      "quality",
+      []
+    )
+  ];
+  const scorecardContractHardFailures = scorecardContractCriteria.filter(
+    (criterion) => criterion.kind === "hard-gate" && !criterion.passes
+  ).length;
+  const scorecardContractWeightedScore = Number(
+    scorecardContractCriteria
+      .filter((criterion) => criterion.kind === "quality")
+      .reduce((sum, criterion) => {
+        const weight = criteriaById.get(criterion.id)?.weight ?? 0;
+        return sum + criterion.score * (weight / 100);
+      }, 0)
+      .toFixed(4)
+  );
+  const scorecardContractPasses =
+    workingTreeClean &&
+    scorecardContractHardFailures === 0 &&
+    scorecardContractCriteria.every((criterion) => criterion.passes) &&
+    scorecardContractWeightedScore >=
+      (rubric?.thresholds?.minimumWeightedScore ?? 1);
   const scorecardContractProbe = {
     rubricId: rubric?.id ?? "feature-evals-composite-integration",
     rubricVersion: rubric?.version ?? "missing",
@@ -985,14 +1361,11 @@ export function evaluateComposite(
     candidateFingerprint,
     workingTreeClean,
     generatedAt: new Date().toISOString(),
-    hardGateFailures: 0,
-    weightedScore: 0,
-    criteria: [
-      ...criteria,
-      result("CI-015", criteriaById.get("CI-015")?.title ?? "Maintenance burden", "quality", [])
-    ],
+    hardGateFailures: scorecardContractHardFailures,
+    weightedScore: scorecardContractWeightedScore,
+    criteria: scorecardContractCriteria,
     humanGates,
-    passes: false
+    passes: scorecardContractPasses
   };
   maintenanceFindings.push(
     ...validateScorecardSchema(scorecardContractProbe, scorecardSchema)

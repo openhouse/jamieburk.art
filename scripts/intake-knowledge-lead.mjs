@@ -12,6 +12,24 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), ".."
 const args = parseNamedArgs(process.argv.slice(2));
 
 try {
+  const allowedArguments = new Set([
+    "title",
+    "kind",
+    "summary",
+    "project",
+    "url",
+    "received-at",
+    "write"
+  ]);
+  const unknownArgument = Object.keys(args).find(
+    (key) => !allowedArguments.has(key)
+  );
+  if (unknownArgument) {
+    throw new Error(`Unknown argument --${unknownArgument}`);
+  }
+  if (args.write !== undefined && args.write !== true) {
+    throw new Error("--write is a flag and does not accept a value");
+  }
   const receipt = createLeadReceipt({
     title: args.title,
     kind: args.kind,

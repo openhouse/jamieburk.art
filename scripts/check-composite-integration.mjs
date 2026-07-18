@@ -37,9 +37,9 @@ if (process.argv.includes("--report")) {
 if (writeRunIndex !== -1) {
   const relativeRunPath = process.argv[writeRunIndex + 1];
   if (
-    !relativeRunPath?.startsWith("evals/composite-integration/runs/") ||
-    !relativeRunPath.endsWith(".json") ||
-    relativeRunPath.includes("..")
+    !/^evals\/composite-integration\/runs\/[A-Za-z0-9._-]+\.json$/.test(
+      relativeRunPath ?? ""
+    )
   ) {
     throw new Error("--write-run must target evals/composite-integration/runs/*.json");
   }

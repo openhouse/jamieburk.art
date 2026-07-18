@@ -12,6 +12,7 @@
       "changeRule": "Keep only proofClaims selected by homepageProofs and preserve concise role-action-result framing.",
       "exclusions": ["No private evidence, research queue, exhaustive project history, or unresolved metrics."],
       "proofIds": ["career-operating-structure-14-years", "hje-revenue-growth-contribution", "fair-rent-campaign-memory", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure"],
+      "proofClaimIds": ["CLM-CRS-SHARED-MEMORY-SYSTEM", "CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE", "CLM-SUNDAY-DINNER-WEEKLY-OPEN-GATHERING"],
       "claimIds": []
     },
     {
@@ -23,6 +24,7 @@
       "changeRule": "Preserve the Morse and Sack thresholds without turning educational evaluations into unbounded present-day endorsements.",
       "exclusions": ["No full biography, private history, or unsupported personality claims."],
       "proofIds": [],
+      "proofClaimIds": [],
       "claimIds": []
     },
     {
@@ -34,6 +36,7 @@
       "changeRule": "Project only method claims with active lab projections and keep private source content outside the repository.",
       "exclusions": ["No client secrets, private transcripts, raw archives, or claims that AI review equals human corroboration."],
       "proofIds": ["source-backed-team-memory-method", "ai-evals-professional-development"],
+      "proofClaimIds": ["CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD"],
       "claimIds": ["CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD"]
     },
     {
@@ -45,6 +48,7 @@
       "changeRule": "Keep the HTML projection synchronized with the approved resume and resumeProofHighlights.",
       "exclusions": ["No pending proof, private metrics, or role inflation for collective outcomes."],
       "proofIds": ["career-operating-structure-14-years", "hje-modernization-stewardship", "hje-revenue-growth-contribution", "fair-rent-campaign-memory", "fair-rent-source-map", "callnyc-civic-data-guidance", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "ai-evals-professional-development"],
+      "proofClaimIds": ["CLM-CRS-SHARED-MEMORY-SYSTEM", "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE", "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "CLM-NYCA-CAMPAIGN-WEBSITE-AUTHORSHIP", "CLM-NYCA-COFOUNDER-ROLE", "CLM-NYCA-MUTUAL-AID-ORGANIZER-ROLE", "CLM-NYCA-CABARET-LAW-CONTRIBUTION", "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL", "CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE", "CLM-SUNDAY-DINNER-WEEKLY-OPEN-GATHERING"],
       "claimIds": ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"]
     },
     {
@@ -56,6 +60,7 @@
       "changeRule": "Add a public card only when its work record is public-safe and its selected claim projection is active.",
       "exclusions": ["No automatic publication of every eligible knowledge-bank claim."],
       "proofIds": [],
+      "proofClaimIds": [],
       "claimIds": ["CLM-CRS-SHARED-MEMORY-SYSTEM", "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"]
     },
     {
@@ -67,6 +72,7 @@
       "changeRule": "Keep proofIds exactly synchronized with technicalOperationsProofRows and preserve outcome boundaries.",
       "exclusions": ["No generic capability claims without linked project evidence."],
       "proofIds": ["technical-operations-operating-backbone", "hje-modernization-stewardship", "callnyc-civic-data-guidance", "wowlist-community-platform", "fair-rent-campaign-memory", "fair-rent-source-map", "kc-town-hall-public-benefit-documentation", "sunday-dinner-196-participation-infrastructure", "source-backed-team-memory-method", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "kc-spaces-fund-digital-infrastructure", "hje-revenue-growth-contribution"],
+      "proofClaimIds": ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE", "CLM-CRS-SHARED-MEMORY-SYSTEM", "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE", "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION", "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION", "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION", "CLM-SUNDAY-DINNER-WEEKLY-OPEN-GATHERING", "CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD", "CLM-NYCA-CAMPAIGN-WEBSITE-AUTHORSHIP", "CLM-NYCA-COFOUNDER-ROLE", "CLM-NYCA-MUTUAL-AID-ORGANIZER-ROLE", "CLM-NYCA-CABARET-LAW-CONTRIBUTION", "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL", "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT"],
       "claimIds": ["CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD", "CLM-CRS-COALITION-MAPPING-PRACTICE", "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT"]
     },
     {
@@ -78,6 +84,7 @@
       "changeRule": "Use only the work record's proofBankIds and contribution language supported by approved resume and public evidence.",
       "exclusions": ["No private business data or sole-causality language."],
       "proofIds": ["hje-modernization-stewardship", "hje-revenue-growth-contribution"],
+      "proofClaimIds": [],
       "claimIds": []
     },
     {
@@ -89,6 +96,7 @@
       "changeRule": "Use only the work record's proofBankIds and active case-study claim projections.",
       "exclusions": ["No sole credit for coalition outcomes, legislation, agency decisions, or collaborators' work."],
       "proofIds": ["fair-rent-campaign-memory", "fair-rent-source-map", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system"],
+      "proofClaimIds": ["CLM-CRS-SHARED-MEMORY-SYSTEM", "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE", "CLM-NYCA-CAMPAIGN-WEBSITE-AUTHORSHIP", "CLM-NYCA-COFOUNDER-ROLE", "CLM-NYCA-MUTUAL-AID-ORGANIZER-ROLE", "CLM-NYCA-CABARET-LAW-CONTRIBUTION", "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL", "CLM-NYCAC-PARTICIPATION-SYSTEM"],
       "claimIds": ["CLM-CRS-OPERATING-ARCHITECTURE-PLAN", "CLM-CRS-SHARED-MEMORY-SYSTEM", "CLM-CRS-OPEN-DATA-FOUNDATION-MEMO", "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE", "CLM-FAIR-RENT-WEB-IMPLEMENTATION-2023", "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER", "CLM-NYCAC-PARTICIPATION-SYSTEM", "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE"]
     },
     {
@@ -100,6 +108,7 @@
       "changeRule": "Keep chronology, independent follow-on status, unofficial status, and engagement denominator together.",
       "exclusions": ["No claim that account engagement equals endorsement, reach, adoption, or policy impact."],
       "proofIds": ["callnyc-civic-data-guidance"],
+      "proofClaimIds": ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"],
       "claimIds": ["CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM", "CLM-CALLNYC-HACKATHON-DATE-TIME", "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "CLM-CALLNYC-EVENT-BRANDING", "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS"]
     },
     {
@@ -111,6 +120,7 @@
       "changeRule": "Keep co-creation credit, recovered-corpus boundaries, and public-use evidence attached.",
       "exclusions": ["No claim that Jamie authored all community or social content or that platform metrics alone prove impact."],
       "proofIds": ["wowlist-community-platform"],
+      "proofClaimIds": ["CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE"],
       "claimIds": ["CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE", "CLM-FACEBOOK-WOWLIST-IN-PRACTICE"]
     },
     {
@@ -122,6 +132,7 @@
       "changeRule": "Use public-safe artifacts and active case-study projections while preserving participant privacy and collective authorship.",
       "exclusions": ["No private guest records, unapproved identities, or sole-author framing."],
       "proofIds": ["sunday-dinner-196-participation-infrastructure"],
+      "proofClaimIds": ["CLM-SUNDAY-DINNER-WEEKLY-OPEN-GATHERING"],
       "claimIds": ["CLM-196-ARTIST-RESIDENCY-ONBOARDING-2023", "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES"]
     },
     {
@@ -133,6 +144,7 @@
       "changeRule": "Maintain the distinction among Jamie's work, CCED recommendation, Council appropriation, non-disbursement, and transition.",
       "exclusions": ["No claim of receipt or spending of appropriated funds and no private family-crisis detail."],
       "proofIds": ["kc-town-hall-public-benefit-documentation"],
+      "proofClaimIds": ["CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION", "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION", "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
       "claimIds": ["CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"]
     },
     {
@@ -144,6 +156,7 @@
       "changeRule": "Publish only contact channels Jamie has explicitly approved.",
       "exclusions": ["No private address, alternate email, or unapproved personal detail."],
       "proofIds": [],
+      "proofClaimIds": [],
       "claimIds": []
     },
     {
@@ -155,6 +168,7 @@
       "changeRule": "Keep implementation and source-care statements accurate to the shipped candidate.",
       "exclusions": ["No private repository paths, credentials, or unsupported provenance claims."],
       "proofIds": [],
+      "proofClaimIds": [],
       "claimIds": []
     }
   ]

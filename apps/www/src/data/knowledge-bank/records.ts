@@ -2151,7 +2151,7 @@ const knowledgeBankInput = {
       status: "confirmed-with-boundary",
       projections: [{ key: "case-study", text: "The Council described the gathering as its first CouncilStat hackathon.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", relationship: "direct-support", supports: ["the Council's own first-CouncilStat description"], confidence: "high", renderCitation: true }],
-      boundaries: [],
+      boundaries: ["Keep the Council's narrower CouncilStat wording; the source does not establish a first civic-data, civic-tech, or all-purpose Council hackathon."],
       antiClaims: ["first civic-data hackathon", "first civic-tech hackathon", "the Council's first hackathon of any kind"],
       researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },

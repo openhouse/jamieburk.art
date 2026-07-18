@@ -25,17 +25,22 @@ npm run evals:composite-integration
 ```
 
 The normal checker requires two committed passing holdouts for the unchanged
-candidate. Bootstrap them only after committing the candidate:
+candidate. Bootstrap them only after committing the candidate and receiving an
+independent qualitative review with no P0 or P1 enforcement finding:
 
 ```bash
 npm run check:composite-integration -- --write-run evals/composite-integration/runs/<unique-a>.json
 npm run check:composite-integration -- --write-run evals/composite-integration/runs/<unique-b>.json
 ```
 
-Run artifacts belong under `evals/composite-integration/runs/`. The full-tree
-candidate fingerprint excludes only immutable run artifacts and ephemeral
-generated/build output, so a scorecard can be committed without changing the
-evaluated inputs. Each run records the governing Git commit, is validated
-against the scorecard schema, may only be written from a clean candidate, and
-cannot overwrite an existing record. Failed runs remain evidence rather than
-being silently replaced.
+Run artifacts belong under `evals/composite-integration/runs/`. The repository
+candidate fingerprint excludes only schema-valid run JSON and the canonical
+generated scorecard; ordinary ignored dependencies and build output are not
+repository inputs. Each run records the governing Git commit, is validated
+against the current rubric and scorecard schema, may only be written from a
+clean candidate, and cannot overwrite an existing record. The evidence commit
+may change only those validated run paths. Failed runs remain evidence rather
+than being silently replaced.
+
+The rejected-candidate record is retained in
+`docs/qa/composite-integration/adversarial-review-history.md`.

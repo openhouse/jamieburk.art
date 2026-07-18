@@ -19,7 +19,7 @@
   ],
   "properties": {
     "rubricId": { "type": "string", "const": "feature-evals-composite-integration" },
-    "rubricVersion": { "type": "string" },
+    "rubricVersion": { "type": "string", "const": "1.3.0" },
     "candidateCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
     "candidateFingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
     "workingTreeClean": { "type": "boolean" },
@@ -52,7 +52,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "state", "agentMaySelfCertify"],
+        "required": ["id", "owner", "state", "agentMaySelfCertify"],
         "properties": {
           "id": {
             "enum": [
@@ -64,6 +64,7 @@
               "exact-candidate-release-approval"
             ]
           },
+          "owner": { "type": "string", "minLength": 1 },
           "state": { "enum": ["open", "met", "not-applicable"] },
           "agentMaySelfCertify": { "const": false }
         }

@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updated": "2026-07-16",
+  "updated": "2026-07-17",
   "candidate": "feature/knowledge-l composite candidate",
   "automatedVerification": {
-    "state": "passed-2026-07-16",
+    "state": "passed-2026-07-17",
     "commands": ["npm run check", "npm run preflight:staging", "npm run preflight:production"],
-    "additionalCriteria": ["npm run evals:composite-integration", "npm run evals:margaret-morse", "npm run evals:warren-sack"],
-    "result": "The feature/knowledge-l composite candidate passes the full check, staging and production preflights, container route and asset smoke tests, responsive browser checks, compiled-output privacy scan, and two-page resume inspection."
+    "additionalCriteria": ["npm run test:composite-integration", "npm run test:knowledge-tools", "npm run evals:composite-integration", "npm run evals:margaret-morse", "npm run evals:warren-sack"],
+    "result": "The feature/knowledge-l composite candidate passes the full check, staging and production preflights, adversarial evaluator regressions, container route and asset smoke tests, responsive browser checks, compiled-output privacy scan, and two-page resume inspection."
   },
   "humanGates": [
     {"id": "external-hiring-reader-comprehension", "gate": "External five-minute hiring comprehension", "owner": "Jamie Burkart and unfamiliar target readers", "state": "open", "agentMaySelfCertify": false},

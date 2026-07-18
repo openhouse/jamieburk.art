@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import {
@@ -104,6 +105,53 @@ test("intake refuses common private content", () => {
     }),
     /private correspondence|raw participant material|unapproved personal identity/
   );
+  assert.throws(
+    () => createLeadReceipt({
+      title: "Sensitive participant record",
+      kind: "document",
+      project: "callnyc",
+      receivedAt: "2026-07-16",
+      summary:
+        `Participant medical record confirms asthma; SSN 123-45-6789; AWS key ${"AKIA" + "IOSFODNN7EXAMPLE"}; home address 123 Main Street.`
+    }),
+    /medical record|government identifier|credential|street address/
+  );
+  assert.throws(
+    () => createLeadReceipt({
+      title: "x",
+      kind: "memory",
+      project: "callnyc",
+      receivedAt: "2026-07-16",
+      summary: "y"
+    }),
+    /at least 8 characters|at least 20 characters/
+  );
+});
+
+test("intake CLI rejects valued write flags and unknown arguments", () => {
+  const script = path.join(repoRoot, "scripts/intake-knowledge-lead.mjs");
+  const common = [
+    script,
+    "--title", "Public archive lead",
+    "--kind", "memory",
+    "--summary", "A sufficiently specific public lead for later review.",
+    "--project", "callnyc",
+    "--received-at", "2026-07-16"
+  ];
+
+  const valuedWrite = spawnSync(process.execPath, [...common, "--write", "false"], {
+    cwd: repoRoot,
+    encoding: "utf8"
+  });
+  assert.notEqual(valuedWrite.status, 0);
+  assert.match(valuedWrite.stderr, /does not accept a value/);
+
+  const unknown = spawnSync(process.execPath, [...common, "--publish"], {
+    cwd: repoRoot,
+    encoding: "utf8"
+  });
+  assert.notEqual(unknown.status, 0);
+  assert.match(unknown.stderr, /Unknown argument --publish/);
 });
 
 test("public-safe queries remove protected source details and internal excerpts", () => {
@@ -246,4 +294,41 @@ test("publication-safe source output is an allowlist and removes signed URLs", (
   assert.equal("protectedLocatorId" in result.sources[0], false);
   assert.equal("unexpectedPrivateField" in result.sources[0], false);
   assert.equal("internalClaim" in result.claims[0], false);
+});
+
+test("publication-safe output drops records containing sensitive identifiers", () => {
+  const bank = {
+    intakeItems: [],
+    sources: [{
+      id: "SRC-LEAK",
+      title: "Public source",
+      author: "Participant SSN 123-45-6789; medical record confirms asthma",
+      visibility: "public",
+      canonicalUrl: "https://example.org/source"
+    }],
+    observations: [],
+    claims: [{
+      id: "CLM-LEAK",
+      project: "example",
+      status: "confirmed",
+      projections: [{
+        key: "case-study",
+        text: "Bounded text",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/example"]
+      }],
+      evidence: [{ sourceId: "SRC-LEAK" }],
+      boundaries: [],
+      antiClaims: [],
+      reviewedAt: "2026-07-16"
+    }],
+    researchInquiries: []
+  };
+  const result = queryKnowledgeBank(bank, {
+    project: "example",
+    publicationSafe: true
+  });
+  assert.deepEqual(result.sources, []);
+  assert.deepEqual(result.claims, []);
 });

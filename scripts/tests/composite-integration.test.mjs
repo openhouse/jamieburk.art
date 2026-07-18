@@ -29,6 +29,16 @@ test("donor deletion and head drift fail closed", () => {
   const drifted = structuredClone(donorDispositions);
   drifted.donors[0].head = "00000000";
   assert.match(validateDonorDispositions(drifted).join(" "), /3757c4f5/);
+
+  const hollow = structuredClone(donorDispositions);
+  for (const donor of hollow.donors) {
+    donor.mechanism = "alpha beta gamma delta";
+    donor.destination = "epsilon zeta eta theta";
+    donor.boundary = "iota kappa lambda mu";
+    donor.risk = "nu xi omicron pi";
+    donor.verification = "rho sigma tau upsilon";
+  }
+  assert.ok(validateDonorDispositions(hollow).length > 0);
 });
 
 test("collective-credit policy fails closed when a project disappears", () => {
@@ -63,6 +73,14 @@ test("collective-credit policy rejects hollow rules and covers active claim proj
       { routes: [] }
     ).join(" "),
     /nyc-artist-coalition/
+  );
+
+  const overclaim = structuredClone(collectiveCreditPolicy);
+  overclaim.projects[0].publicRule =
+    "Credit Jamie because he single-handedly caused every collective outcome and alone authored all policy decisions, campaigns, public systems, institutional actions, and community results.";
+  assert.match(
+    validateCollectiveCreditPolicy(overclaim).join(" "),
+    /prohibited authorship or causality/
   );
 });
 
@@ -104,6 +122,20 @@ test("surface policy rejects missing source files and unauthorized proof surface
     "../../outside.txt"
   ];
   assert.match(validateSurfaceBindings(escaped).join(" "), /outside the repository/);
+
+  const hollowRoute = structuredClone(surfaceBindings);
+  Object.assign(
+    hollowRoute.routes.find((route) => route.path === "/contact"),
+    {
+      sourceFiles: ["package.json"],
+      audience: "x",
+      purpose: "x",
+      approvalState: "x",
+      changeRule: "x",
+      exclusions: [""]
+    }
+  );
+  assert.ok(validateSurfaceBindings(hollowRoute).length > 0);
 });
 
 test("selected proofs require resolvable structured evidence", () => {
@@ -138,6 +170,25 @@ test("selected proofs require resolvable structured evidence", () => {
     }
   );
   assert.match(heldFindings.join(" "), /without an active projection/);
+
+  const indirectProtected = validateProofTraceability(
+    [{ id: "PROOF-ONE", knowledgeClaimIds: ["CLM-ONE"] }],
+    { routes: [{ path: "/shown", proofIds: ["PROOF-ONE"] }] },
+    {
+      sources: [{ id: "SRC-PRIVATE", visibility: "protected" }],
+      claims: [{
+        id: "CLM-ONE",
+        status: "confirmed",
+        projections: [{ status: "active", surfaces: ["/elsewhere"] }],
+        evidence: [{ sourceId: "SRC-PRIVATE", renderCitation: false }],
+        boundaries: []
+      }]
+    }
+  );
+  assert.match(
+    indirectProtected.join(" "),
+    /not bound to selecting route|unbounded protected evidence/
+  );
 });
 
 test("semantic guard rejects common overclaim mutations", () => {
@@ -198,5 +249,34 @@ test("scorecard validation rejects malformed and internally inconsistent runs", 
     "Passing scorecards"
   ]) {
     assert.match(findings, new RegExp(expected, "i"));
+  }
+
+  const forged = structuredClone(scorecard);
+  forged.rubricVersion = "forged-version";
+  forged.workingTreeClean = true;
+  forged.hardGateFailures = 0;
+  forged.weightedScore = 1;
+  forged.passes = true;
+  forged.criteria = forged.criteria.map((criterion) => ({
+    ...criterion,
+    passes: true,
+    score: 0,
+    findings: ["ignored failure"]
+  }));
+  forged.humanGates = forged.humanGates.map((gate) => ({
+    ...gate,
+    state: "met"
+  }));
+  const forgedFindings = validateScorecardSchema(
+    forged,
+    scorecardSchema
+  ).join(" ");
+  for (const expected of [
+    "rubricVersion",
+    "inconsistent pass",
+    "human-gate registries",
+    "weightedScore"
+  ]) {
+    assert.match(forgedFindings, new RegExp(expected, "i"));
   }
 });

@@ -16,14 +16,17 @@ const unsafePatterns = [
   { label: "private filesystem path", pattern: /(?:\/Users\/|\/Volumes\/|[A-Za-z]:\\)/ },
   { label: "email address", pattern: /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i },
   { label: "phone number", pattern: /(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}/ },
-  { label: "credential or token", pattern: /(?:sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|-----BEGIN .*PRIVATE KEY-----|\bpassword\s*[:=])/i },
+  { label: "government identifier", pattern: /\b(?:\d{3}-\d{2}-\d{4}|(?:ssn|social security number)\s*[:#]?\s*\d{4,})\b/i },
+  { label: "credential or token", pattern: /(?:sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|AKIA[A-Z0-9]{16}|-----BEGIN .*PRIVATE KEY-----|\b(?:password|bearer|api[-_ ]?key|access[-_ ]?key)\s*[:=])/i },
   { label: "signed or secret URL parameter", pattern: /[?&](?:x-amz-signature|signature|sig|token|access_token|auth|key|secret)=[^&\s]+/i },
   { label: "private legal or stakeholder detail", pattern: /\b(?:private|confidential|raw)\b.{0,40}\b(?:legal strategy|legal review|strategy|stakeholder (?:list|roster)|donor (?:list|roster)|subscriber (?:list|roster))\b/i },
   { label: "private correspondence", pattern: /\b(?:private|confidential|unpublished)\b.{0,32}\b(?:correspondence|email|message|letter|conversation)\b/i },
   { label: "raw participant material", pattern: /\braw\b.{0,32}\b(?:participant|stakeholder|collaborator|interview|transcript|testimony)\b/i },
   { label: "unapproved personal identity", pattern: /\bunapproved\b.{0,32}\b(?:participant|stakeholder|collaborator|person|people|name|identity|identities)\b/i },
+  { label: "private medical record", pattern: /\b(?:medical|health|clinical)\s+(?:record|records|history|details|information)\b/i },
   { label: "private health detail", pattern: /\b(?:has|diagnosed with|medical (?:record|history|condition)|health (?:record|history|condition))\s+(?:cancer|hiv|aids|diabetes|depression|anxiety|bipolar|schizophrenia)\b/i },
-  { label: "private financial detail", pattern: /\b(?:owes|debt|salary|bank balance|account balance|tax liability)\b.{0,24}\$[\d,]+/i }
+  { label: "private financial detail", pattern: /\b(?:owes|debt|salary|bank balance|account balance|tax liability)\b.{0,24}\$[\d,]+/i },
+  { label: "street address", pattern: /\b\d{1,6}\s+[A-Z0-9][A-Z0-9 .'-]{1,40}\s(?:street|st|avenue|ave|road|rd|boulevard|blvd|drive|dr|lane|ln|court|ct|place|pl)\b/i }
 ];
 
 function stableText(value) {
@@ -99,8 +102,8 @@ export function createLeadReceipt(input) {
   const url = input.url ? stableText(input.url) : undefined;
 
   const findings = [];
-  if (!title) findings.push("--title is required");
-  if (!summary) findings.push("--summary is required");
+  if (title.length < 8) findings.push("--title must contain at least 8 characters");
+  if (summary.length < 20) findings.push("--summary must contain at least 20 characters");
   if (!project || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project)) {
     findings.push("--project must be a lowercase hyphenated project ID");
   }
@@ -354,14 +357,26 @@ export function queryKnowledgeBank(bank, filters = {}) {
         containsDate(item) &&
         publicSafetyFindings([JSON.stringify(item)]).length === 0
     );
+  const safeSources = publicSelect(publicSelected.sources);
+  const safeSourceIds = new Set(safeSources.map((source) => source.id));
+  const safeClaims = publicSelect(publicSelected.claims)
+    .map((claim) => ({
+      ...claim,
+      evidence: claim.evidence.filter((evidence) =>
+        safeSourceIds.has(evidence.sourceId)
+      )
+    }))
+    .filter((claim) => claim.evidence.length > 0);
 
   return {
     filters: publicFilters,
     matchedRoutes: publicRoutes,
     intakeItems: publicSelect(publicSelected.intakeItems),
-    sources: publicSelect(publicSelected.sources),
-    observations: publicSelect(publicSelected.observations),
-    claims: publicSelect(publicSelected.claims),
+    sources: safeSources,
+    observations: publicSelect(publicSelected.observations).filter(
+      (observation) => safeSourceIds.has(observation.sourceId)
+    ),
+    claims: safeClaims,
     researchInquiries: []
   };
 }
