@@ -56,6 +56,18 @@ test("contract mutation catches an unbound composition render path", () => {
   );
 });
 
+test("contract mutation catches an unbound legacy role eval", () => {
+  const suite = clone(artifacts.suite);
+  suite.candidate_fingerprint_scope = suite.candidate_fingerprint_scope.filter(
+    (relativePath) =>
+      relativePath !== "scripts/evals-kcspacesfund-facebook-posts.mjs"
+  );
+  assert.match(
+    validateSuite(suite).join("\n"),
+    /Candidate fingerprint scope must include the KC Spaces Fund role eval/
+  );
+});
+
 test("agency relations classify every proof as an exact set", () => {
   assert.deepEqual(validateAgency(artifacts.agency, proofClaims, knowledgeBank), []);
 });

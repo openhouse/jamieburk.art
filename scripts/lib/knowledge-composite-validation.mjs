@@ -118,10 +118,10 @@ export function validateSuite(suite) {
   const expectedIds = Array.from({ length: 9 }, (_, index) => `CI-${String(index + 1).padStart(3, "0")}`);
   const allowedGraders = new Set(["deterministic", "hybrid"]);
 
-  requireValue(suite.version === 2, "Composite suite version must be 2");
+  requireValue(suite.version === 3, "Composite suite version must be 3");
   requireValue(suite.suite_id === "knowledge-composite-integration", "Composite suite ID is incorrect");
   requireValue(suite.baseline?.commit === "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe", "Baseline commit is not pinned");
-  requireValue(suite.baseline?.record === "docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md", "Version-two baseline record is not pinned");
+  requireValue(suite.baseline?.record === "docs/evals/runs/2026-07-17-knowledge-composite-v3-baseline.md", "Version-three baseline record is not pinned");
   requireValue(suite.baseline?.wholesale_merges_or_cherry_picks === false, "Wholesale donor integration must remain false");
   requireValue(sameSet((suite.donors_inspected ?? []).map((item) => item.id), "ABCDEFGHIJKLMN".split("")), "Donor inventory must cover A-N exactly");
   for (const donor of suite.donors_inspected ?? []) {
@@ -164,6 +164,12 @@ export function validateSuite(suite) {
       `Candidate fingerprint scope must include ${binding.path}`
     );
   }
+  requireValue(
+    suite.candidate_fingerprint_scope.includes(
+      "scripts/evals-kcspacesfund-facebook-posts.mjs"
+    ),
+    "Candidate fingerprint scope must include the KC Spaces Fund role eval"
+  );
   return errors;
 }
 

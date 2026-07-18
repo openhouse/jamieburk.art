@@ -1,12 +1,12 @@
 {
-  "version": 2,
+  "version": 3,
   "suite_id": "knowledge-composite-integration",
   "title": "Knowledge bank composite integration readiness",
   "objective": "Integrate the strongest durable ideas from the read-only feature/evals family into the canonical N knowledge lifecycle without duplicating the bank, weakening evidence boundaries, or claiming human approval.",
   "baseline": {
     "branch": "feature/knowledge-n",
     "commit": "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe",
-    "record": "docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md",
+    "record": "docs/evals/runs/2026-07-17-knowledge-composite-v3-baseline.md",
     "donor_policy": "read-only-selective-integration",
     "wholesale_merges_or_cherry_picks": false
   },
@@ -84,7 +84,8 @@
     "apps/www/src/data/proofs.ts",
     "apps/www/src/data/work.ts",
     "docs/evals/composition-manifest.json",
-    "docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md",
+    "docs/evals/knowledge-composite-integration.md",
+    "docs/evals/runs/2026-07-17-knowledge-composite-v3-baseline.md",
     "docs/evals/mosaic-privacy-review.json",
     "docs/knowledge-bank/archival-survivorship-register.json",
     "scripts/check-blind-spot-evidence.mjs",
@@ -95,6 +96,7 @@
     "scripts/query-knowledge-lifecycle.mjs",
     "scripts/report-knowledge-lifecycle.mjs",
     "scripts/check-compiled-lifecycle-leaks.mjs",
+    "scripts/evals-kcspacesfund-facebook-posts.mjs",
     "scripts/tests/blind-spot-evidence.test.mjs",
     "scripts/tests/knowledge-composite-evals.test.mjs",
     "scripts/tests/knowledge-lifecycle.test.mjs"
@@ -112,7 +114,7 @@
   "required_artifacts": [
     "apps/www/src/data/knowledge-bank/agency-relations.json",
     "docs/evals/composition-manifest.json",
-    "docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md",
+    "docs/evals/runs/2026-07-17-knowledge-composite-v3-baseline.md",
     "docs/evals/knowledge-composite-integration-state.json",
     "docs/evals/mosaic-privacy-review.json",
     "docs/knowledge-bank/archival-survivorship-register.json",

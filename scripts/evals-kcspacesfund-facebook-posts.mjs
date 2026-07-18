@@ -6,7 +6,10 @@ import {
   evaluateKcSpacesFundManifest
 } from "./check-kcspacesfund-facebook-posts-corpus.mjs";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
-import { proofClaims } from "../apps/www/src/data/proofs.ts";
+import {
+  proofClaims,
+  technicalOperationsClaimProjectionRefs
+} from "../apps/www/src/data/proofs.ts";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -138,6 +141,10 @@ const interactionClaim = claimById.get(
 const kcSpacesFundProof = proofClaims.find(
   (proof) => proof.id === "kc-spaces-fund-digital-infrastructure"
 );
+const kcSpacesFundProjectionReference =
+  technicalOperationsClaimProjectionRefs.find(
+    (reference) => reference.id === "kc-spaces-fund-operations"
+  );
 const approvedProjectionText =
   "For KC Spaces Fund, Jamie built campaign web infrastructure and supported an available cross-channel identity; collaborator-led channels used it to route applications, donations, and funded-space updates.";
 const approvedPublicWording =
@@ -192,10 +199,17 @@ function websiteProjectionContractErrors(pageText) {
   const errors = [];
   if (
     !pageText.includes(
-      'getClaimProjection(\n  "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT"'
+      'technicalProjection("kc-spaces-fund-operations")'
     )
   ) {
     errors.push("KC Spaces Fund claim resolver missing");
+  }
+  if (
+    !pageText.includes(
+      "return getClaimProjection(reference.claimId, reference.key, reference.route);"
+    )
+  ) {
+    errors.push("canonical claim projection resolver missing");
   }
   if (
     !pageText.includes(
@@ -234,6 +248,10 @@ score(
   15,
   roleContractErrors(digitalClaim, kcSpacesFundProof).length === 0 &&
     websiteProjectionContractErrors(technicalOperationsPageText).length === 0 &&
+    kcSpacesFundProjectionReference?.claimId ===
+      "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT" &&
+    kcSpacesFundProjectionReference.key === "technical-operations" &&
+    kcSpacesFundProjectionReference.route === "/work/technical-operations" &&
     digitalClaim?.status === "confirmed-with-boundary" &&
     digitalClaim.projections.some(
       (projection) =>
@@ -501,6 +519,14 @@ const roleMutationFailures = roleMutations.filter(([, mutate, target]) => {
   return roleContractErrors(claim, proof).length === 0;
 });
 const websiteRoleMutations = [
+  [
+    "remove KC Spaces Fund canonical resolver",
+    (text) =>
+      text.replace(
+        'technicalProjection("kc-spaces-fund-operations")',
+        'technicalProjection("commercial-vacancy")'
+      )
+  ],
   [
     "hardcode project proof",
     (text) =>

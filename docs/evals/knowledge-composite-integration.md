@@ -8,15 +8,17 @@ does not authorize application sharing, production launch, or indexing.
 ## Contract
 
 - Machine contract: `.agents/evals/knowledge-composite-integration.json`
-- Baseline: `docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md`
+- Baseline: `docs/evals/runs/2026-07-17-knowledge-composite-v3-baseline.md`
 - State: `docs/evals/knowledge-composite-integration-state.json`
 - Checker: `npm run check:knowledge-composite-evals`
 - Mutation tests: `npm run test:knowledge-composite-evals`
 
-The contract is frozen within a scored run. Version two records the instrument
-repair that separates one judge's receipt-level trust assessment from the
-deterministic two-receipt aggregate. A substantive rubric change requires a
-version increment, a new baseline, and new holdouts.
+The contract is frozen within a scored run. Version two separated one judge's
+receipt-level trust assessment from the deterministic two-receipt aggregate.
+Version three binds an existing KC Spaces Fund role eval to the canonical
+projection registry after the full repository gate exposed a stale source-code
+spelling check. A substantive rubric change requires a version increment, a
+new baseline, and new holdouts.
 
 Each donor entry records both the bounded idea accepted into the canonical N
 lifecycle and the parallel system, overclaim, or wholesale integration path
