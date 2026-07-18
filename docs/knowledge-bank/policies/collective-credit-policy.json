@@ -1,7 +1,7 @@
 {
-  "version": 7,
-  "collectiveClaimsSha256": "45c56ab5be71335991d0f889b1adf52b3e0888fede488ca86376fefcbbeac7fe",
-  "collectiveRuntimeSha256": "1384722a31d23bef79f99c27a777f707340afbe135d8b4d8f8f7b0644f0487ed",
+  "version": 8,
+  "collectiveClaimsSha256": "acdd16099de5e79f4976a8b34a20b2966a4ee16d196d180a8746ff8ed1696f3d",
+  "collectiveRuntimeSha256": "e65438bee3e4a73a5170c965f94bbc9a659b7d47cb007505a6937083d3855775",
   "collectiveRuntimeFiles": [
     "apps/www/mdx-components.tsx",
     "apps/www/src/app/page.tsx",

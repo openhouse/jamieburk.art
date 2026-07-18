@@ -1,18 +1,19 @@
 {
   "version": 1,
   "status": "frozen-during-run",
-  "reviewedAt": "2026-07-16",
+  "reviewedAt": "2026-07-17",
   "reviewedBy": [
     "Jamie Burkart approved recursive protocol",
     "Codex archival integration",
-    "independent semantic evaluator A pre-renewal"
+    "independent semantic reviewer A pre-renewal",
+    "independent semantic reviewer B pre-renewal"
   ],
   "minimumCollectiveClaimCount": 88,
-  "collectiveClaimsSha256": "45c56ab5be71335991d0f889b1adf52b3e0888fede488ca86376fefcbbeac7fe",
-  "collectiveRuntimeSha256": "1384722a31d23bef79f99c27a777f707340afbe135d8b4d8f8f7b0644f0487ed",
-  "statementSupportSha256": "43adadb28594b9a4e1e170e9b3d45abba9a649d0731e149406b5711cbb53686c",
+  "collectiveClaimsSha256": "acdd16099de5e79f4976a8b34a20b2966a4ee16d196d180a8746ff8ed1696f3d",
+  "collectiveRuntimeSha256": "e65438bee3e4a73a5170c965f94bbc9a659b7d47cb007505a6937083d3855775",
+  "statementSupportSha256": "53654b3eb8125fc4f22667e6989144cf54298870fdae94143877d2038353e4c6",
   "projectionRouteBindingsSha256": "66fb867401e7d1e631b5ffb58197a1a6bc9523a5b9926471f7a0d56d40fd4283",
-  "publicSurfaceSha256": "082816a904b63b7d9034539eebcf7fc685accb458241b919ddf86deb797cd53f",
+  "publicSurfaceSha256": "56a2cfc473dab85777c6bba7b4f99d2a1a655bfcf061b2f9157611dc645d967a",
   "requiredClaimProjects": {
     "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW": "196-sunday-dinner",
     "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE": "fair-rent-nyc",
@@ -122,7 +123,7 @@
     "CLM-KCTH-X-CIVIC-ENGAGEMENT": "metric-observation",
     "CLM-KCTH-X-PUBLIC-OPERATIONS": "jamie-contribution",
     "CLM-KCTH-X-PUBLIC-SOURCE-CIRCULATION": "metric-observation",
-    "CLM-KCTH-X-SELF-REPORTED-TIRE-OUTCOMES": "institutional-outcome",
+    "CLM-KCTH-X-SELF-REPORTED-TIRE-OUTCOMES": "metric-observation",
     "CLM-KCTH-X-SOCIAL-TRACTION-OBSERVATION": "metric-observation",
     "CLM-KCTOWNHALL-SOCIAL-DOCUMENTATION": "collective-context",
     "CLM-NAC-CABARET-CIVIC-TOOLING": "jamie-contribution",

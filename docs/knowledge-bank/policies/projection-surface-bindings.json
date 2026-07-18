@@ -1,8 +1,8 @@
 {
-  "version": 4,
+  "version": 5,
   "expectedWorkStatementCount": 276,
-  "projectionDecisionSha256": "ff7b5c12fd1baef5af5f7e52cc5df37663226a5573bff3c885c8ef21fb2deb08",
-  "publicSurfaceSha256": "082816a904b63b7d9034539eebcf7fc685accb458241b919ddf86deb797cd53f",
+  "projectionDecisionSha256": "38c41fcfd718f0b5bb00cace718091513564d3b638490678d1ec02805e4bc00d",
+  "publicSurfaceSha256": "56a2cfc473dab85777c6bba7b4f99d2a1a655bfcf061b2f9157611dc645d967a",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],
@@ -64,11 +64,11 @@
   ],
   "resumeArtifact": {
     "sourcePath": "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
-    "sourceSha256": "e7ad907d2ed636b9553426996a7c061b16fae088509fd40d08dc4d873bb71947",
+    "sourceSha256": "f61d6e805310c6f4e64b56a28864cfcb1aec062d19685dc23e0c24b8987af1bf",
     "extractedTextPath": "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt",
-    "extractedTextSha256": "5f1bff398fb97548d24f63c9e79263d240fde9f6fbd7b5ca09192a6ac4dd8a5d",
+    "extractedTextSha256": "4d5222e338e6614055af7467fac07f68b7b7b58b1830d7677d3aa96094204689",
     "pdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-    "pdfSha256": "5e38ca89c4cfb5ef1cf3a36eb15a8aed013fbf2c73ee083279f7ad08b78dfa52",
+    "pdfSha256": "bdd6d130db425e6c2eb825e7bc0eb18b056a5074e7f169b8a01ddcfc6cc08b3b",
     "requiredText": [
       "Brooklyn, NY | (816) 728-8685",
       "Civic Systems, Coalition Operations",
