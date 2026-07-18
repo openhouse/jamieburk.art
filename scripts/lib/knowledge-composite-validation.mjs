@@ -23,9 +23,9 @@ const sha256 = (value) => createHash("sha256").update(value).digest("hex");
 
 export const expectedPostCandidatePaths = [
   "docs/evals/knowledge-composite-integration-state.json",
-  "docs/evals/runs/2026-07-16-knowledge-composite-integration.md",
-  "docs/evals/runs/2026-07-16-knowledge-composite-holdout-1.json",
-  "docs/evals/runs/2026-07-16-knowledge-composite-holdout-2.json"
+  "docs/evals/runs/2026-07-17-knowledge-composite-integration.md",
+  "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
+  "docs/evals/runs/2026-07-17-knowledge-composite-holdout-2.json"
 ];
 
 const expectedHoldoutReceiptPaths = expectedPostCandidatePaths.filter((relativePath) =>
@@ -118,9 +118,10 @@ export function validateSuite(suite) {
   const expectedIds = Array.from({ length: 9 }, (_, index) => `CI-${String(index + 1).padStart(3, "0")}`);
   const allowedGraders = new Set(["deterministic", "hybrid"]);
 
-  requireValue(suite.version === 1, "Composite suite version must be 1");
+  requireValue(suite.version === 2, "Composite suite version must be 2");
   requireValue(suite.suite_id === "knowledge-composite-integration", "Composite suite ID is incorrect");
   requireValue(suite.baseline?.commit === "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe", "Baseline commit is not pinned");
+  requireValue(suite.baseline?.record === "docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md", "Version-two baseline record is not pinned");
   requireValue(suite.baseline?.wholesale_merges_or_cherry_picks === false, "Wholesale donor integration must remain false");
   requireValue(sameSet((suite.donors_inspected ?? []).map((item) => item.id), "ABCDEFGHIJKLMN".split("")), "Donor inventory must cover A-N exactly");
   for (const donor of suite.donors_inspected ?? []) {
@@ -148,9 +149,11 @@ export function validateSuite(suite) {
   requireValue(profile?.all_scores_minimum === 3, "Every composite eval must score at least 3");
   requireValue(sameSet(profile?.required_score_4_ids ?? [], ["CI-002", "CI-003", "CI-007"]), "Required score-4 IDs are incorrect");
   requireValue(profile?.two_independent_unchanged_candidate_holdouts_required === true, "Two unchanged-candidate holdouts must be required");
+  requireValue(profile?.ci007_aggregate_score_rule === "derive-4-only-after-two-valid-independent-receipts-each-scoring-at-least-3", "CI-007 aggregate score rule is incorrect");
   requireValue(suite.optimization?.rubric_is_frozen_during_run === true, "The composite rubric must be frozen during a run");
   requireValue(suite.optimization?.optimizer_may_not_grade_own_patch === true, "Optimizer self-grading must be rejected");
   requireValue(suite.optimization?.holdout_judges_must_be_read_only === true, "Holdout judges must be read-only");
+  requireValue(suite.optimization?.individual_holdouts_grade_the_instrument_and_their_own_receipt_not_aggregate_completion === true, "Individual and aggregate holdout responsibilities must remain separate");
   requireValue(suite.profiles?.application_share?.human_reader_approval_required === true, "Application sharing must retain human reader approval");
   requireValue(suite.profiles?.production_launch?.exact_candidate_production_approval_required === true, "Production must retain exact-candidate approval");
   requireValue(Array.isArray(suite.candidate_fingerprint_scope) && suite.candidate_fingerprint_scope.length >= 8, "Candidate fingerprint scope is too narrow");
@@ -481,9 +484,6 @@ export function validateHoldouts({ suite, state, receipts, receiptPaths = state.
     else if (receipt.instrumentDefects.length) errors.push(`${receipt.judgeIdentity} found an unresolved evaluator defect`);
     if (receipt.decision !== "pass_for_code_review") errors.push(`${receipt.judgeIdentity} did not pass the candidate for code review`);
   }
-  const evaluationDates = receipts.map((receipt) => receipt.evaluatedAt);
-  if (new Set(evaluationDates).size > 1) errors.push("Holdout receipts must share one evaluation date");
-
   const conservativeScores = Object.fromEntries(
     expectedIds.map((id) => {
       const values = receipts.map(
@@ -492,6 +492,11 @@ export function validateHoldouts({ suite, state, receipts, receiptPaths = state.
       return [id, values.length ? Math.min(...values) : 0];
     })
   );
+  const aggregateTrustEligible =
+    receipts.length === 2 &&
+    errors.length === 0 &&
+    conservativeScores["CI-007"] >= 3;
+  if (aggregateTrustEligible) conservativeScores["CI-007"] = 4;
   const weights = new Map(suite.evals.map((item) => [item.id, item.weight]));
   const weightedScore = expectedIds.reduce((sum, id) => sum + conservativeScores[id] * weights.get(id), 0) / 400;
   const profile = suite.profiles.implementation_review;

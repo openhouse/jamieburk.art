@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "contractVersion": 1,
+  "contractVersion": 2,
   "optimizerIdentity": "Codex implementation agent for feature/knowledge-n",
   "contractFingerprint": "PENDING-CONTRACT-FINGERPRINT",
   "candidateFingerprint": "PENDING-CANDIDATE-FINGERPRINT",
@@ -23,13 +23,14 @@
     "Iteration 6 discarded the next holdout after it showed that an evidence-only descendant could still be named as the candidate. Validation now requires the named commit itself to change implementation paths and reproduces the candidate fingerprint directly from that commit's Git tree.",
     "Iteration 7 discarded a split holdout result after the conservative judge found operator graph bypass, route-to-manifest drift, and under-validated receipt evidence. Operator commands now validate the canonical graph and references, composition selections bind to the public registry, and receipt evidence must exist in the named candidate commit.",
     "Iteration 8 discarded both unchanged-candidate holdouts after they found two existing-suite regressions plus gaps in donor decisions, public-wording mutations, query-mode coverage, survivorship exactness, claim budgets, render-path bindings, receipt schema and paths, post-candidate history inspection, and human-status lifecycle validation. The regressions and the evaluator were repaired before freezing another candidate.",
+    "Iteration 9 discarded two unchanged-candidate holdouts after both judges correctly declined to prove the unseen second receipt, revealing that receipt-level CI-007 scoring had been conflated with aggregate completion. Contract version two assigns individual judges the instrument and their own receipt, assigns pair validation to the deterministic checker, and removes the irrelevant same-calendar-day constraint while retaining exact SHA and fingerprint agreement.",
     "The first holdout harness attempt used const fields without explicit JSON Schema types and was rejected by the response-format validator; the external harness schema was repaired and neither failed session was counted."
   ],
   "candidateDefects": ["Independent unchanged-candidate holdouts have not yet run."],
   "allowedPostCandidatePaths": [
     "docs/evals/knowledge-composite-integration-state.json",
-    "docs/evals/runs/2026-07-16-knowledge-composite-integration.md",
-    "docs/evals/runs/2026-07-16-knowledge-composite-holdout-1.json",
-    "docs/evals/runs/2026-07-16-knowledge-composite-holdout-2.json"
+    "docs/evals/runs/2026-07-17-knowledge-composite-integration.md",
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-2.json"
   ]
 }

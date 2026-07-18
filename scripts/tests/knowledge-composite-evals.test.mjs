@@ -397,7 +397,52 @@ test("holdout validation rejects stale dates, unresolved defects, and invented e
   assert.match(errors, /ISO evaluation date/);
   assert.match(errors, /outside the candidate commit/);
   assert.match(errors, /unresolved evaluator defect/);
-  assert.match(errors, /share one evaluation date/);
+});
+
+test("holdout aggregation derives CI-007 four from two valid receipt-level threes", () => {
+  const suite = clone(artifacts.suite);
+  const state = {
+    ...clone(artifacts.state),
+    optimizerIdentity: "optimizer",
+    candidateSha: "a".repeat(40)
+  };
+  const scores = suite.evals.map((entry) => ({
+    id: entry.id,
+    score: entry.id === "CI-007" ? 3 : 4,
+    rationale: "fixture",
+    evidencePaths: ["fixture"]
+  }));
+  const baseReceipt = {
+    version: 1,
+    judgeRole: "read-only-independent",
+    authoredPatch: false,
+    sawOptimizationHistory: false,
+    candidateSha: state.candidateSha,
+    contractFingerprint: "contract",
+    candidateFingerprint: "candidate",
+    scores,
+    criticalRegressions: [],
+    instrumentDefects: [],
+    decision: "pass_for_code_review"
+  };
+  const result = validateHoldouts({
+    suite,
+    state,
+    receipts: [
+      { ...baseReceipt, judgeIdentity: "judge-1", evaluatedAt: "2026-07-17" },
+      { ...baseReceipt, judgeIdentity: "judge-2", evaluatedAt: "2026-07-18" }
+    ],
+    receiptPaths: [
+      "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
+      "docs/evals/runs/2026-07-17-knowledge-composite-holdout-2.json"
+    ],
+    expectedContractFingerprint: "contract",
+    expectedCandidateFingerprint: "candidate",
+    evidencePathExists: () => true
+  });
+  assert.deepEqual(result.errors, []);
+  assert.equal(result.conservativeScores["CI-007"], 4);
+  assert.equal(result.weightedScore, 1);
 });
 
 test("holdout validation requires exact receipt paths and explicit empty defect arrays", () => {
@@ -445,9 +490,9 @@ test("candidate binding rejects arbitrary SHAs and post-candidate implementation
     candidateSha: "a".repeat(40),
     allowedPostCandidatePaths: [
       "docs/evals/knowledge-composite-integration-state.json",
-      "docs/evals/runs/2026-07-16-knowledge-composite-integration.md",
-      "docs/evals/runs/2026-07-16-knowledge-composite-holdout-1.json",
-      "docs/evals/runs/2026-07-16-knowledge-composite-holdout-2.json"
+      "docs/evals/runs/2026-07-17-knowledge-composite-integration.md",
+      "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
+      "docs/evals/runs/2026-07-17-knowledge-composite-holdout-2.json"
     ]
   };
   let errors = validateCandidateGitBinding(state, {

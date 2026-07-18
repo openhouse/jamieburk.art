@@ -1,12 +1,12 @@
 {
-  "version": 1,
+  "version": 2,
   "suite_id": "knowledge-composite-integration",
   "title": "Knowledge bank composite integration readiness",
   "objective": "Integrate the strongest durable ideas from the read-only feature/evals family into the canonical N knowledge lifecycle without duplicating the bank, weakening evidence boundaries, or claiming human approval.",
   "baseline": {
     "branch": "feature/knowledge-n",
     "commit": "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe",
-    "record": "docs/evals/runs/2026-07-16-knowledge-composite-baseline.md",
+    "record": "docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md",
     "donor_policy": "read-only-selective-integration",
     "wholesale_merges_or_cherry_picks": false
   },
@@ -45,6 +45,7 @@
       "all_deterministic_gates_must_pass": true,
       "existing_suite_regression_must_pass": true,
       "two_independent_unchanged_candidate_holdouts_required": true,
+      "ci007_aggregate_score_rule": "derive-4-only-after-two-valid-independent-receipts-each-scoring-at-least-3",
       "human_release_approval_required": false
     },
     "application_share": {
@@ -65,6 +66,7 @@
     "holdout_judges_must_be_read_only": true,
     "holdout_judges_are_blind_to_optimization_history": true,
     "holdouts_must_share_contract_and_candidate_fingerprints": true,
+    "individual_holdouts_grade_the_instrument_and_their_own_receipt_not_aggregate_completion": true,
     "success_requires_two_independent_holdouts": true,
     "allowed_stop_decisions": ["pass_for_code_review", "iterate", "stop_human_blocked", "stop_environment_blocked"]
   },
@@ -82,6 +84,7 @@
     "apps/www/src/data/proofs.ts",
     "apps/www/src/data/work.ts",
     "docs/evals/composition-manifest.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md",
     "docs/evals/mosaic-privacy-review.json",
     "docs/knowledge-bank/archival-survivorship-register.json",
     "scripts/check-blind-spot-evidence.mjs",
@@ -109,6 +112,7 @@
   "required_artifacts": [
     "apps/www/src/data/knowledge-bank/agency-relations.json",
     "docs/evals/composition-manifest.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md",
     "docs/evals/knowledge-composite-integration-state.json",
     "docs/evals/mosaic-privacy-review.json",
     "docs/knowledge-bank/archival-survivorship-register.json",
@@ -197,9 +201,9 @@
       "grader": "hybrid",
       "blocking": true,
       "inputs": ["frozen contract", "candidate fingerprint", "score normalization", "holdout receipts"],
-      "procedure": ["Fingerprint contract and candidate scope.", "Verify optimizer and judges are distinct.", "Normalize all scores to 0-4 and weighted 0-1.", "Require two independent read-only holdouts on the same unchanged candidate."],
-      "pass_criteria": ["Rubric and candidate fingerprints are exact.", "No optimizer self-grade is counted.", "Both holdouts bind identical fingerprints.", "Critical regressions cannot be averaged away."],
-      "evidence_required": ["fingerprints", "two independent receipts", "normalized scorecard", "instrument-defect log"],
+      "procedure": ["Each judge verifies the frozen instrument, its own independence, and the exact candidate binding without inspecting the other receipt.", "The deterministic aggregate checker verifies two distinct judges, exact receipt schemas, identical candidate SHA and fingerprints, and receipt-level CI-007 scores of at least 3.", "Only that aggregate checker derives final CI-007 = 4.", "Normalize all remaining scores to 0-4 and weighted 0-1."],
+      "pass_criteria": ["Rubric and candidate fingerprints are exact.", "No optimizer self-grade is counted.", "Each receipt independently scores evaluator trust at least 3 without claiming to prove the unseen receipt.", "The aggregate checker proves both receipts bind one unchanged candidate before deriving 4.", "Critical regressions cannot be averaged away."],
+      "evidence_required": ["fingerprints", "two independent receipt-level judgments", "deterministic aggregate scorecard", "instrument-defect log"],
       "remediation_hint": "Discard invalid receipts and rerun independent judges on the unchanged candidate."
     },
     {

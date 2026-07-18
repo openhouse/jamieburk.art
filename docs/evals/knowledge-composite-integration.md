@@ -8,13 +8,15 @@ does not authorize application sharing, production launch, or indexing.
 ## Contract
 
 - Machine contract: `.agents/evals/knowledge-composite-integration.json`
-- Baseline: `docs/evals/runs/2026-07-16-knowledge-composite-baseline.md`
+- Baseline: `docs/evals/runs/2026-07-17-knowledge-composite-v2-baseline.md`
 - State: `docs/evals/knowledge-composite-integration-state.json`
 - Checker: `npm run check:knowledge-composite-evals`
 - Mutation tests: `npm run test:knowledge-composite-evals`
 
-The contract is frozen within a scored run. A substantive rubric change
-requires a version increment, a new baseline, and new holdouts.
+The contract is frozen within a scored run. Version two records the instrument
+repair that separates one judge's receipt-level trust assessment from the
+deterministic two-receipt aggregate. A substantive rubric change requires a
+version increment, a new baseline, and new holdouts.
 
 Each donor entry records both the bounded idea accepted into the canonical N
 lifecycle and the parallel system, overclaim, or wholesale integration path
@@ -54,6 +56,12 @@ Implementation review requires a weighted score of at least `0.90`, every
 criterion at least `3`, and `CI-002`, `CI-003`, and `CI-007` at `4`. Every
 deterministic gate and existing suite must pass. Two independent holdouts must
 bind the same contract and candidate fingerprints.
+
+An individual judge evaluates the frozen instrument, its own independence, and
+its own exact-candidate binding. It does not inspect or claim to prove the other
+receipt. The deterministic checker derives final `CI-007 = 4` only after two
+valid distinct receipts each score receipt-level evaluator trust at least `3`
+and bind the same SHA and fingerprints. Their evaluation dates may differ.
 
 The checker resolves the named implementation-changing Git commit, reproduces
 the candidate fingerprint from that commit's tree, permits only four exact
