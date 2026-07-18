@@ -1,0 +1,176 @@
+{
+  "suiteId": "portfolio-launch-readiness",
+  "suiteVersion": "1.4.0",
+  "candidate": {
+    "commit": "8e68adecb69e1b8daf3745c2b8662fa090e90b94",
+    "contentFingerprint": "00bc6425f8aafcaaafc5a934aefb9b4564babcc871c24207d3cc1ed4328861a4",
+    "suiteFingerprint": "6b0613cc03473246d9fcefcce4e05d595f9310c612b19591b2a4896a5cb3aefb",
+    "governedFileCount": 206
+  },
+  "judge": {
+    "model": "gpt-5.6-sol independent read-only judge",
+    "independentPass": true,
+    "scores": [
+      {
+        "criterionId": "hiring-reader-clarity",
+        "score": 4,
+        "evidence": [
+          "/: The hero immediately names Technical Project Manager - Product Operations & Implementation, explains Jamie's ambiguity-to-launch role, and offers work, resume, and contact actions.",
+          "/work: Project cards consistently expose what was unclear, what became usable, role fit, and a case-study path instead of requiring readers to infer the portfolio argument.",
+          "/resume and the committed PDF: The profile, capabilities, selected impact, experience, contact information, and links form a polished, internally consistent two-page application artifact."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve the concise role label, ambiguity-to-handoff throughline, concrete start-here paths, and direct work/resume/contact actions."
+      },
+      {
+        "criterionId": "agency-purpose-usability",
+        "score": 4,
+        "evidence": [
+          "/work/technical-operations: Jamie's action, the delivery end, and the reusable workflows, onboarding, decision records, and handoffs appear together in the opening paragraph.",
+          "/work/callnyc and CLM-CALLNYC-INDEPENDENT-FOLLOW-ON: Jamie independently built an interpretation layer so residents could use issue pathways, district context, and next-step guidance.",
+          "/work/fair-rent-nyc and CLM-FAIRRENTNYC-CAMPAIGN-MEMORY-SCALE: Jamie's documentation work is connected to coalition continuity and actionable workstreams while the first-party aggregate and collective limits remain explicit."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve complete action, intended-end, usable-result, audience, collective-credit, and causal-boundary fields for every active projection."
+      },
+      {
+        "criterionId": "chad-lens",
+        "score": 4,
+        "evidence": [
+          "/: The first pass puts Jamie's agency first and connects clarification, ownership, workflows, public tools, delivery, maintenance, and safe continuation.",
+          "/resume and the committed PDF: The profile and selected-impact bullets translate operating work into recognizable actions and bounded results; HJE uses KCUR's company context without assigning sole causation.",
+          "/work/technical-operations: The opening and proof map translate specialized operating language into concrete workflows, decisions, onboarding, launches, and handoffs.",
+          "/work/harry-j-epstein: The summary and early context connect Jamie's stewardship to customer-facing e-commerce and maintainable workflows while retaining company-team credit.",
+          "/work/fair-rent-nyc: The opening names Jamie's co-founder and documentation contributions, the advocacy end, usable coalition memory, and the collective-outcome boundary.",
+          "/work/callnyc and /work/wowlist: Both first-pass summaries join agency, human purpose, usable interface mechanisms, and explicit official-status, authorship, or adoption limits."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve first-pass placement and avoid replacing composed claims with technology lists, noun piles, solo causality, or repeated templates."
+      },
+      {
+        "criterionId": "margaret-morse-lens",
+        "score": 4,
+        "evidence": [
+          "/ and /about: The portfolio compactly connects participatory art, social software, media archaeology, hospitality, and close attention to Jamie's present implementation practice.",
+          "/about and CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010: The source-backed installation example joins software, a constructed interface, visitor participation, and complete collaborator credit.",
+          "/about and CLM-RIVER-EXPEDITION-ORIGIN: The river expedition connects embodied field operations, place, participation, adaptation, and collective authorship to current implementation judgment.",
+          "/work/196-sunday-dinner: Hosting, invitations, repetition, access, onboarding, and handoffs are treated as the operating system rather than decorative community biography.",
+          "/work/wowlist: Community language and recurring calendar practice become concrete publishing, discovery, and participation mechanisms without romantic or adoption claims."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve the compact artistic-to-operating throughline, named collaborators, protected archival boundaries, and the distinction between historical evidence and current endorsement."
+      },
+      {
+        "criterionId": "warren-sack-lens",
+        "score": 4,
+        "evidence": [
+          "/work/technical-operations: Jamie's social-systems method is stated in plain professional language as entry, contribution, signal, decision, next step, documentation, and continuation.",
+          "/work/wowlist and CLM-WOWLIST-DATABASE-SCALE-2017: Organizer language becomes followable feeds and additional discovery routes, with Richard and community participants credited and adoption explicitly excluded.",
+          "/work/fair-rent-nyc: Meetings, decisions, sources, policy questions, public/private lanes, and follow-up become reusable coalition memory that supports continued participation.",
+          "/work/196-sunday-dinner: Invitations, introductions, hosting rhythms, independent access, documentation, and handoffs show how a social structure can recur and continue.",
+          "/about and CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010: A physical gallery interface, visitors' own phones, software, and shared dialogue supply an inspectable physical-social-digital example."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve concrete mechanisms, recursive continuation effects, human purpose, shared authorship, recovered-population limits, and non-adoption boundaries."
+      },
+      {
+        "criterionId": "role-fit-proof",
+        "score": 4,
+        "evidence": [
+          "/work/technical-operations: Delivery coordination, dependency management, risk surfacing, decision clarity, operating documentation, launch support, and handoffs are mapped to project evidence.",
+          "/work/harry-j-epstein, /work/callnyc, and /work/fair-rent-nyc: The portfolio demonstrates private-sector implementation, civic-data product translation, and coalition product operations through distinct concrete systems.",
+          "Committed resume PDF: Experience and selected-impact sections align the case studies with requirements, UAT/QA, rollout planning, documentation architecture, web delivery, and stakeholder translation."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve the cross-domain proof map and do not imply certification, government employment, unsupported authority, or responsibility belonging to collaborators."
+      },
+      {
+        "criterionId": "evidence-traceability",
+        "score": 4,
+        "evidence": [
+          "/about and all six public case-study routes: Structured Claim and Cite projections produce numbered notes, direct public links where available, source limits, and backlinks.",
+          "CLM-HJE-ONLINE-SALES-SHARE-2016: KCUR's 2016 company-level context directly replaces the held 2x contribution claim and explicitly rejects converting a 50-percent sales share into doubled revenue.",
+          "CLM-WOWLIST-DATABASE-SCALE-2017 and the committed PDF: Both use 1,846 users, 16,142 posts/events, and 35 city/region groups at the stated threshold; the metadata-only source note exposes no protected rows.",
+          "reports/generated/launch-browser.json and fresh citation checks: The report is bound to this candidate, contains no failures or browser errors, and deterministic citation tests confirm valid round-trips, redaction, and active-projection resolution."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve direct public source links, metadata-only treatment for protected evidence, first-party attribution where applicable, explicit source limitations, and stable citation backlinks."
+      },
+      {
+        "criterionId": "collective-credit-and-anti-claims",
+        "score": 4,
+        "evidence": [
+          "/work/harry-j-epstein and the PDF: The company-level online-sales result is attributed to KCUR and Harry J. Epstein Company rather than to Jamie alone.",
+          "/work/fair-rent-nyc: Jamie's co-founder, web, and documentation contributions are separated from collective campaign and policy outcomes.",
+          "/work/wowlist: Richard, wider collaborators, shared-account uncertainty, and community participation remain visible; the page rejects sole authorship and adoption claims.",
+          "/work/196-sunday-dinner and /work/kc-town-hall: Julia Fredenberg and community collaborators retain credit, while KC Town Hall stays bounded to the official recommendation, appropriation, negotiation authorization, withdrawal, and unused-fund sequence."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve named collaborators, collective campaign credit, shared-account authorship uncertainty, company-level attribution, and every anti-causality boundary."
+      },
+      {
+        "criterionId": "public-safety-and-boundaries",
+        "score": 4,
+        "evidence": [
+          "All case studies: Known / Open / Protected, care, public-safety, source-layer, and credit sections expose useful boundaries without publishing private records.",
+          "/work/callnyc: The archived, unofficial, non-current-service disclaimer is present in the page, image, canonical projection, and source notes.",
+          "docs/knowledge-bank/media-provenance.json plus pixel inspection: HJE correctly contains no identifiable person; FairRentNYC and CallNYC correctly record identifiable people with rights and consent review pending.",
+          "Fresh public-safety, knowledge-bank, citation, and lifecycle checks pass; protected locations, participant rows, private correspondence, legal-review material, and raw coalition records remain excluded."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve strong positive claims alongside consent, privacy, legal, current-service, protected-evidence, collaborator-credit, and human-approval boundaries."
+      },
+      {
+        "criterionId": "visual-proof",
+        "score": 4,
+        "evidence": [
+          "/work/harry-j-epstein: A real storefront capture shows navigation, product discovery, checkout access, and company voice with a caption, capture date, and direct public-source link.",
+          "/work/fair-rent-nyc: A real campaign capture shows the call-to-action and reference-library pathway with an accurate identifiable-person classification and pending consent treatment.",
+          "/work/callnyc: A real archived interface capture shows issue navigation, district context, historical names, and an on-image archived/not-current boundary.",
+          "reports/generated/launch-browser.json: The candidate-bound run records 12 media instances across four viewports with no route, overflow, or browser failures; the manifest documents all three underlying assets."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve relevance, captions, dates, direct source links, accurate people classifications, documentary use, and the pending human media-rights gate."
+      },
+      {
+        "criterionId": "completion-confidence",
+        "score": 4,
+        "evidence": [
+          "reports/generated/launch-browser.json: All 14 routes return 200 across four viewports with one H1, no horizontal overflow, no browser errors, and no recorded hard-gate failure.",
+          "Public route sources and regression checks: Internal status badges, editorial instructions, staging-first prose, future-archive language, placeholders, and production notes are absent from rendered composition.",
+          "Committed resume PDF: Both pages render cleanly with readable hierarchy, intact links, no clipping or overlap, and consistent bounded HJE, 2026 FairRentNYC, WOWList, Sunday Dinner, and KC Town Hall claims.",
+          "docs/production-cutover.md and the local browser profile: The public composition is complete while production-domain deployment and authorization remain explicitly separate and pending."
+        ],
+        "smallestChange": "No score-raising change is available at the 4-point ceiling.",
+        "preserve": "Preserve the composed reader-facing state and do not convert local or staging success into production release, indexing, rights, corroboration, collaborator, or blind-reader certification."
+      }
+    ]
+  },
+  "humanGates": [
+    {
+      "gateId": "jamie-production-approval",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "media-rights-and-consent",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "collaborator-sensitive-credit",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "collaborator-claim-corroboration",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "blind-hiring-reader-validation",
+      "status": "pending",
+      "verifiedBy": null
+    }
+  ]
+}

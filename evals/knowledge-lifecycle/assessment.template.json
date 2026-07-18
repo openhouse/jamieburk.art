@@ -1,0 +1,39 @@
+{
+  "suiteId": "knowledge-lifecycle",
+  "suiteVersion": "1.1.0",
+  "candidate": {
+    "commit": "REPLACE_WITH_FULL_CANDIDATE_COMMIT_SHA",
+    "contentFingerprint": "REPLACE_WITH_CANDIDATE_CONTENT_FINGERPRINT",
+    "suiteFingerprint": "REPLACE_WITH_SUITE_FINGERPRINT",
+    "governedFileCount": 0
+  },
+  "repositorySnapshot": {
+    "fingerprint": "copy from the current deterministic eval report",
+    "counts": {
+      "entities": 0,
+      "intake": 0,
+      "sources": 0,
+      "sourceReadings": 0,
+      "claims": 0,
+      "researchTasks": 0,
+      "projectionDecisions": 0
+    }
+  },
+  "judge": {
+    "scores": [
+      { "criterionId": "loss-resistance", "score": 0, "evidence": [] },
+      { "criterionId": "source-decomposition", "score": 0, "evidence": [] },
+      { "criterionId": "claim-defensibility", "score": 0, "evidence": [] },
+      { "criterionId": "research-direction", "score": 0, "evidence": [] },
+      { "criterionId": "projection-discipline", "score": 0, "evidence": [] },
+      { "criterionId": "public-safety", "score": 0, "evidence": [] },
+      { "criterionId": "future-composability", "score": 0, "evidence": [] }
+    ]
+  },
+  "humanGates": [
+    { "gateId": "jamie-claim-approval", "status": "pending", "confirmedBy": null },
+    { "gateId": "collaborator-credit-or-permission", "status": "pending", "confirmedBy": null },
+    { "gateId": "media-rights-and-consent", "status": "pending", "confirmedBy": null }
+  ],
+  "summary": ""
+}

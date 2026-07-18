@@ -21,6 +21,7 @@ const ignoredDirs = new Set([
 
 const textExtensions = new Set([
   ".css",
+  ".csv",
   ".example",
   ".html",
   ".js",
@@ -115,6 +116,19 @@ function pdftotext(file) {
   }
 }
 
+function pdftohtml(file) {
+  try {
+    return execFileSync("pdftohtml", ["-xml", "-hidden", "-stdout", file], {
+      cwd: repoRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"]
+    });
+  } catch {
+    addWarning(file, "pdftohtml unavailable or failed; resume evidence-link check skipped");
+    return "";
+  }
+}
+
 try {
   execFileSync(process.execPath, [path.join(repoRoot, "scripts/check-knowledge-bank.mjs")], {
     cwd: repoRoot,
@@ -178,6 +192,12 @@ scanPattern(
   shippedContentFiles,
   "placeholder text appears in production-facing content",
   /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this)\b/i
+);
+
+scanPattern(
+  shippedContentFiles,
+  "internal living-archive or content-status language appears on the public site",
+  /\b(?:future living (?:archive|notebook)|visible content-status notes)\b/i
 );
 
 scanPattern(
@@ -250,12 +270,44 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains retired CallNYC hackathon wording");
   }
 
+  if (/contribut(?:ed|ing) to (?:a period of )?2x revenue growth/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF publishes the held HJE revenue-contribution claim");
+  }
+
+  if (/secured adoption|adopted by (?:DIY|local calendar)/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF converts bounded WOWList activity into adoption");
+  }
+
+  if (
+    !/July 2017 snapshot records 1,846 users, 16,142 posts\/events, and at least 50 geocoded\s+posts\/events in each of 35 city\/region groups/i.test(
+      resumeText
+    )
+  ) {
+    addFailure(resumePath, "resume PDF does not match the canonical WOWList activity threshold");
+  }
+
+  if (!/Sunday Dinner with Julia Fredenberg/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF omits Sunday Dinner co-host credit");
+  }
+
+  if (!/\(816\)\s*728-8685/.test(resumeText)) {
+    addFailure(resumePath, "resume PDF is missing Jamie's approved phone number");
+  }
+
   if (
     !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
       resumeText
     )
   ) {
     addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
+  }
+
+  const resumeHtml = pdftohtml(resumePath);
+  if (
+    resumeHtml &&
+    !/href="https:\/\/jamieburk\.art\/work\/kc-town-hall"/i.test(resumeHtml)
+  ) {
+    addFailure(resumePath, "resume PDF KC Town Hall claim lacks a direct evidence link");
   }
 
   if (

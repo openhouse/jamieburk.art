@@ -1,0 +1,194 @@
+{
+  "suiteId": "knowledge-lifecycle",
+  "suiteVersion": "1.1.0",
+  "candidate": {
+    "commit": "8e68adecb69e1b8daf3745c2b8662fa090e90b94",
+    "contentFingerprint": "00bc6425f8aafcaaafc5a934aefb9b4564babcc871c24207d3cc1ed4328861a4",
+    "suiteFingerprint": "30ba1ca528279bd1c1eb2e644dd136acf38c4456aa11a689b23ba0e1adef91db",
+    "governedFileCount": 206
+  },
+  "repositorySnapshot": {
+    "fingerprint": "c8ea110a99fd771cce020fe72d94d0ca3f3a0e4a850e589b446b904ecd18287c",
+    "counts": {
+      "entities": 38,
+      "intake": 154,
+      "sources": 275,
+      "sourceReadings": 275,
+      "claims": 123,
+      "researchTasks": 54,
+      "projectionDecisions": 100
+    }
+  },
+  "judge": {
+    "scores": [
+      {
+        "criterionId": "loss-resistance",
+        "score": 4,
+        "evidence": [
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-RIVER-PITCH-2007"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-NYCARTC-CREATION-ROLE-MEMORY"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "COR-CALLNYC-SUPERLATIVE-2026"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
+          }
+        ]
+      },
+      {
+        "criterionId": "source-decomposition",
+        "score": 4,
+        "evidence": [
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-RIVER-PITCH-2007"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-NYCARTC-GOTHAMIST-CABARET-2017"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "READ-FACEBOOK-NYCARTC-POST-CENSUS-RUN-2026"
+          }
+        ]
+      },
+      {
+        "criterionId": "claim-defensibility",
+        "score": 4,
+        "evidence": [
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-RIVER-EXPEDITION-ORIGIN"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
+            "record": "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE"
+          }
+        ]
+      },
+      {
+        "criterionId": "research-direction",
+        "score": 4,
+        "evidence": [
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-CREATION-ROLE"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "TASK-HJE-REVENUE-INDEPENDENT-CORROBORATION"
+          }
+        ]
+      },
+      {
+        "criterionId": "projection-discipline",
+        "score": 4,
+        "evidence": [
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-RIVER-GREAT-ACCOMMODATIONS-DEFER"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-PUBLISH-CALLNYC-DATE"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/jamie-facebook-posts-2026-07-14.ts",
+            "record": "DEC-DISALLOW-JAMIE-FACEBOOK-ENGAGEMENT-CLAIM"
+          }
+        ]
+      },
+      {
+        "criterionId": "public-safety",
+        "score": 4,
+        "evidence": [
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
+            "record": "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/kansas-city-star-river-expedition-2026-07-16.ts",
+            "record": "SRC-KCSTAR-RIVER-EXPEDITION-2007"
+          }
+        ]
+      },
+      {
+        "criterionId": "future-composability",
+        "score": 4,
+        "evidence": [
+          {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/jamie-facebook-posts-2026-07-14.ts",
+            "record": "CLM-JAMIE-FACEBOOK-PROJECT-OPERATIONS-THREAD-2009-2020"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "CLM-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
+          }
+        ]
+      }
+    ]
+  },
+  "humanGates": [
+    {
+      "gateId": "jamie-claim-approval",
+      "status": "pending",
+      "confirmedBy": null
+    },
+    {
+      "gateId": "collaborator-credit-or-permission",
+      "status": "pending",
+      "confirmedBy": null
+    },
+    {
+      "gateId": "media-rights-and-consent",
+      "status": "pending",
+      "confirmedBy": null
+    }
+  ],
+  "summary": "The candidate and deterministic report match exactly. Inspection across all seven maturity levels found a loss-resistant, proposition-linked, role- and collective-credit-aware graph with executable research routes, independent publication decisions, protected-source handling, and Chad-lens composition fields; all human gates remain pending."
+}

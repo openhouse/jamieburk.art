@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import type { Route } from "next";
+import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import { technicalOperationsProofRows } from "@/data/proofs";
+import { getProofHref, technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 const operationsMap = [
@@ -19,41 +21,42 @@ const proofMap = [
   {
     project: "HJE",
     proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
+      "Jamie helped translate legacy product and operating knowledge into customer-facing e-commerce and maintainable digital workflows."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "Jamie helped coalition collaborators keep sensitive civic work coordinated by building shared campaign memory, source maps, action trackers, and public/private review lanes."
   },
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "Jamie independently turned CouncilStat records into issue pathways and next-step guidance residents could navigate; the prototype remains archived and unofficial."
   },
   {
     project: "WOWList",
     proof:
-      "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
+      "Jamie co-built a community calendar that let DIY organizers publish and distribute events through followable local-interest feeds."
   },
   {
     project: "196 / Sunday Dinner",
     proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
+      "Jamie created hosting, onboarding, and continuity systems that helped recurring gatherings and resident-artist work continue without publishing private community records."
   },
   {
     project: "KC Spaces Fund",
     proof:
-      "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
+      "Jamie supported organizers behind the scenes by building campaign-site, fundraising-display, application, and sign-up infrastructure for a 2020 mutual-aid fund."
   },
   {
     project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
+    proof:
+      "Jamie supported a long-horizon adaptive-reuse effort by structuring public-benefit documentation and municipal-review materials."
   },
   {
     project: "Source-Backed Team Memory",
     proof:
-      "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
+      "Jamie developed a human-reviewed method that turns meetings and source trails into correctable decision records, onboarding context, and team memory."
   }
 ];
 
@@ -68,15 +71,28 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="break-words text-4xl font-bold text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding
-          materials, documentation systems, launch support, and durable
-          handoffs.
+          I coordinate ambiguous public-facing technical work from scoping
+          through launch: clarifying ownership and requirements, keeping
+          dependencies and decisions visible, and leaving teams with workflows,
+          onboarding, and handoffs they can continue using.
+        </p>
+        <p className="mt-4 leading-8 text-jb-ink/72">
+          The proof below shows that operating role in e-commerce, civic data,
+          coalition work, community platforms, and source-backed knowledge
+          systems, with collective credit and public/private limits kept visible.
+        </p>
+        <p className="mt-4 leading-8 text-jb-ink/72">
+          I also treat implementation as social-system design: identify who can
+          enter, what each person can contribute, how those signals become
+          decisions or next steps, and what documentation lets another person
+          continue the loop. WOWList made community vocabulary a publishing and
+          discovery mechanism; FairRentNYC made meetings and sources reusable
+          coalition memory; Sunday Dinner made hosting rhythms and handoffs part
+          of continuity.
         </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
@@ -111,12 +127,23 @@ export default function TechnicalOperationsPage() {
             <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
             <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
             <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {row.proofs.map((proof) => (
-                <li className="flex gap-3" key={proof.id}>
-                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{proof.shortWording ?? proof.publicWording}</span>
-                </li>
-              ))}
+              {row.proofs.map((proof) => {
+                const href = getProofHref(proof);
+
+                return (
+                  <li className="flex gap-3" key={proof.id}>
+                    <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                    <span>
+                      {proof.detailedPublicWording ?? proof.publicWording}
+                      {href ? (
+                        <Link className="ml-2 font-semibold text-jb-blue hover:text-jb-green" href={href as Route}>
+                          View evidence
+                        </Link>
+                      ) : null}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </JBCard>
         ))}

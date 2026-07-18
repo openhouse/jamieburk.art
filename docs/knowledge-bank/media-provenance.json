@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "reviewedAt": "2026-07-15",
+  "rule": "This manifest documents displayed public-site captures. Documentation does not complete the release-time human media-rights gate.",
+  "assets": [
+    {
+      "path": "/images/work/harry-j-epstein-public-site-2026-07-12.jpg",
+      "sourceUrl": "https://www.harryepstein.com/",
+      "capturedAt": "2026-07-12",
+      "caption": "Public storefront capture showing e-commerce navigation, product-discovery paths, checkout access, and company voice.",
+      "rightsBasis": "Linked capture of a public project surface used for documentary portfolio context.",
+      "rightsReviewStatus": "documented-pending-human-release-confirmation",
+      "containsIdentifiablePeople": false,
+      "consentStatus": "not-applicable-no-identifiable-person"
+    },
+    {
+      "path": "/images/work/fairrentnyc-public-site-2026-07-12.jpg",
+      "sourceUrl": "https://fairrentnyc.nycartc.com/",
+      "capturedAt": "2026-07-12",
+      "caption": "Public campaign capture showing the call-to-action hierarchy and reference-library pathway.",
+      "rightsBasis": "Linked capture of a public coalition project surface used for documentary portfolio context.",
+      "rightsReviewStatus": "documented-pending-human-release-confirmation",
+      "containsIdentifiablePeople": true,
+      "consentStatus": "identifiable-people-present-rights-and-consent-review-pending"
+    },
+    {
+      "path": "/images/work/callnyc-interface-2026-07-12.jpg",
+      "sourceUrl": "https://callnyc.org/",
+      "capturedAt": "2026-07-12",
+      "caption": "Archived interface capture showing issue navigation, district context, ranked service patterns, and the historical-use boundary.",
+      "rightsBasis": "Linked capture of Jamie's archived public project surface used for documentary portfolio context.",
+      "rightsReviewStatus": "documented-pending-human-release-confirmation",
+      "containsIdentifiablePeople": true,
+      "consentStatus": "identifiable-people-present-rights-and-consent-review-pending"
+    }
+  ]
+}

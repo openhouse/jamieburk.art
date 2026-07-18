@@ -29,7 +29,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html className={`${karla.variable} ${oswald.variable}`} lang="en">
-      <body>
+      <body data-portfolio="jamieburk-art-next">
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />

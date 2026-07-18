@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
@@ -8,8 +9,6 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
     ["Role", item.role],
     ["Years", item.years],
     ["Context", item.series],
-    ["Status", item.status],
-    ["Visibility", item.visibility],
     ["Role fit", item.roleFit]
   ];
 
@@ -72,7 +71,33 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
             <p className="text-xs font-semibold uppercase text-jb-blue">
               {artifact.type} / 0{index + 1}
             </p>
-            <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
+            {artifact.image ? (
+              <figure className="mt-4">
+                <a href={artifact.image.sourceUrl}>
+                  <Image
+                    alt={artifact.image.alt}
+                    className="aspect-[16/10] w-full rounded-md border border-jb-ink/12 object-cover object-top"
+                    height={891}
+                    src={artifact.image.src}
+                    width={1425}
+                  />
+                </a>
+                <figcaption className="mt-3 text-xs leading-5 text-jb-ink/62">
+                  {artifact.image.caption} Captured {artifact.image.capturedAt}.{" "}
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={artifact.image.sourceUrl}
+                  >
+                    View public source
+                  </a>
+                </figcaption>
+              </figure>
+            ) : null}
+            <h3
+              className={`${artifact.image ? "mt-5" : "mt-10"} text-xl font-semibold text-jb-ink`}
+            >
+              {artifact.title}
+            </h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{artifact.description}</p>
           </JBCard>
         ))}
@@ -133,18 +158,6 @@ export function CareNote({ item }: { item: WorkMeta }) {
   return (
     <NoteBlock title="Care note / limits" tone="ochre">
       <p>{item.careNote}</p>
-    </NoteBlock>
-  );
-}
-
-export function VisibilityNote({ item }: { item: WorkMeta }) {
-  return (
-    <NoteBlock title="Visibility" tone="blue">
-      <p>
-        This page is marked <strong>{item.visibility}</strong>. Current status:
-        {" "}
-        {item.currentStatus}
-      </p>
     </NoteBlock>
   );
 }

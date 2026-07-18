@@ -8,12 +8,10 @@ import {
   KnownOpenProtected,
   LinksList,
   PublicSafetyNote,
-  SourceLayer,
-  VisibilityNote
+  SourceLayer
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { References } from "@/components/citations";
-import { StatusBadge } from "@/components/StatusBadge";
 import type { WorkMeta } from "@/types/work";
 
 type CaseStudyLayoutProps = {
@@ -26,8 +24,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
     <article className="jb-frame py-12">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,0.72fr)_minmax(280px,0.28fr)]">
         <div className="min-w-0">
-          <StatusBadge status={item.status} visibility={item.visibility} />
-          <h1 className="mt-5 text-4xl font-bold leading-tight text-jb-ink sm:text-5xl">
+          <h1 className="text-4xl font-bold leading-tight text-jb-ink sm:text-5xl">
             {item.title}
           </h1>
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
@@ -39,7 +36,6 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </div>
         <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
           <AtAGlance item={item} />
-          <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
               Download resume

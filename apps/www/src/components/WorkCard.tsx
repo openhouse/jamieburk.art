@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Route } from "next";
-import { StatusBadge } from "@/components/StatusBadge";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
 
@@ -12,7 +11,6 @@ export function WorkCard({ item }: WorkCardProps) {
   return (
     <article className="rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5 shadow-sm">
       <div className="flex flex-col gap-4">
-        <StatusBadge status={item.status} visibility={item.visibility} />
         <div>
           <h2 className="text-2xl font-semibold text-jb-ink">
             <Link className="hover:text-jb-blue" href={`/work/${item.slug}` as Route}>

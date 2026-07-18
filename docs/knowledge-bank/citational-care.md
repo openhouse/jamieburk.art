@@ -9,9 +9,14 @@ reasoning without exposing private evidence.
 ## Canonical flow
 
 ```text
-source -> evidence relationship -> claim -> approved projection
-       -> page occurrence -> page-local number -> public note
+intake -> source -> close reading -> evidence relationship -> claim maturity
+       -> publication decision -> approved projection -> page occurrence
+       -> page-local number -> public note
 ```
+
+See `lifecycle.md` for accession, research-task, maturity, and publication
+rules. Citational care governs the final evidence-to-reader path; the lifecycle
+governs how a fragment becomes eligible for that path.
 
 Stable IDs belong to sources, claims, inquiries, corrections, pages, and
 occurrences. Citation numbers are deliberately local to a page and are assigned
@@ -85,6 +90,13 @@ Photographs and archival artifacts may support an internal claim while being
 unavailable for display. Record media kind, rights status, consent status,
 display status, safe visible-text description, limitations, and an opaque
 locator when necessary.
+
+A protected source may receive a `public-metadata-only` citation when its
+aggregate or descriptive evidence is selected for a public claim. That public
+note may state what was reviewed, the safe aggregate it supports, and its
+limits. It must expose no URL, protected locator, filename, private path,
+participant row, contact detail, or raw excerpt. `SourceNote` renders the note
+as unlinked text, while the generator strips every protected locator.
 
 Never commit local paths, private cloud URLs, signed URLs, raw photos, private
 emails, transcripts, CDX dumps, credentials, or coalition-private materials.

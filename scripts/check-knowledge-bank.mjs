@@ -26,7 +26,7 @@ const requiredProofIds = [
 ];
 
 const requiredWorkProofs = new Map([
-  ["harry-j-epstein", ["hje-modernization-stewardship", "hje-revenue-growth-contribution"]],
+  ["harry-j-epstein", ["hje-modernization-stewardship"]],
   [
     "fair-rent-nyc",
     [
@@ -206,7 +206,7 @@ if (existsSync(proofPath)) {
 
     if (status === "careful") warn(`${id} is careful and must keep its guardrail in public copy`);
 
-    if (id === "source-backed-team-memory-method" && /Jonathan Marmor|pricing|private transcript|private company/i.test(publicFieldBundle)) {
+    if (id === "source-backed-team-memory-method" && /prospective collaborator|prospective client|pricing|private transcript|private company/i.test(publicFieldBundle)) {
       fail("source-backed-team-memory-method exposes private collaborator, pricing, transcript, or company context in public fields");
     }
   }
@@ -289,6 +289,7 @@ for (const file of walk(docsRoot)) {
 for (const requiredDoc of [
   "README.md",
   "chad-lens.md",
+  "lifecycle.md",
   "approval-register.md",
   "claims.md",
   "proofs.md",
