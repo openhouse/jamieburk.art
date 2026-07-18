@@ -118,7 +118,7 @@ const NYCAC_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   governedModuleSha256: "e6eb628aa6be509e3373e8c49aa051ce3f72343f9c0fd57173d894b35cb6f772",
   canonicalKnowledgeSha256: "f2e27a428995e8c01567d7bda1dbe84f3f49abd32b7022c6a898a27228872f30",
   reviewConfigurationSha256: "8c188485aa7340c8f33b82d9112cd9238d59db77236033ac13d8426e52feac2e",
-  publicReportSha256: "82a1cd92f535e6cef244576aab547ccfaee5ba1c1a3f0355cbcfb6c5d6e74a34",
+  publicReportSha256: "6ad87ec58dec3fbb3b1b73271b6562d3adf86d1adf61c9d28598f2e1736fad04",
   proofProjectionSha256: "7e6d12c463cb77f5c1cb0307dc8c2a79dec0ceb8f7fc1863ccb1b651f6b04e0e",
   caseStudyMdxSha256: "7989d07d2256f1a2e4e80153804146d9aea33de69eb225d9683de001a1775e08"
 });
@@ -330,7 +330,7 @@ const NYCAC_FACEBOOK_POST_REPORT_BLOCK_HASHES = Object.freeze([
   "3f00afa05a355df1f67708fdacfddd3b1674a13cd46abf8d12ea60b9dab7bba3",
   "fadb049d88a1cd376c5753a00b6702c0f5354ac5343853e0f4f224791fd92376",
   "89ce23df067a3d0a692e1b337ad6eb6710bf39b1918fcf60d0c89bbf36091f8d",
-  "cdb2542807433b0b31ba7a21aae7a11858fd0fef6b3b3a8e022d4c6d1b3c8990",
+  "ba9d7cd7c602338dd0a4a6afa3970fac5746e319f72cf1743b162db375adde62",
   "5a882282fb77558a9ac3efa32c0572843de3eae69bfb2efc85c6847fa2192ed7",
   "6c8025064b0f3fdbf91beeb567ee5b3c36e4abdb154f41e583855109bc2ae58b"
 ]);

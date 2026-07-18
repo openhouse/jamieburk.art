@@ -62,6 +62,25 @@ Repair:
 - left the authored language unchanged;
 - reran every lens.
 
+## Iteration 4: independent holdout rejection
+
+The first public-value holdout rejected the exact candidate after discovering
+that the full repository check did not pass. One inherited NYC Artist Coalition
+Facebook report contained a repaired repository-relative fixture link, while
+its byte-level report and paragraph review locks still described the prior
+broken link.
+
+Repair:
+
+- reviewed the change as a navigation correction with no factual or
+  publication-scope change;
+- updated only the whole-report and changed-paragraph review digests;
+- required the knowledge eval, its adversarial tests, the complete repository
+  check, and both exact-candidate holdouts to pass before release.
+
+The rejected judgment is not reused: both holdouts must bind to the repaired
+candidate fingerprint.
+
 ## Final deterministic result
 
 | Lens | Result |
