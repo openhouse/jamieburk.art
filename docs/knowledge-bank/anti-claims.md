@@ -41,10 +41,33 @@ selected, or a winner without new evidence and review.
 
 Do not name collaborators unless approved.
 
+Do not infer that Jamie personally authored every post or reply on a shared
+project account. Do not treat 38 surviving profile items as a complete X export
+or proof against earlier deletion. Do not count engagement displayed on
+reposted source statuses as engagement earned by WOW List. Do not turn a link
+or repost into a claim of authorship, endorsement, participation, causality, or
+impact. July 2026 visible reaction totals are mutable snapshots, not historical
+analytics or adoption measures.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
+
+## Personal and WOW List Facebook Events
+
+Do not treat the 502 profile-event associations, the 21 hosted-tab records, or
+their 505-ID union as events Jamie attended, endorsed, authored, or produced.
+Facebook's hosted tab and `Event by Jamie Burkart` labels are platform
+classifications, not sole-production credit. Do not publish the personal
+association ledger, other host names as a relationship graph, guest context,
+exact private locations, raw descriptions, comments, account state, or
+authentication material.
+
+Do not sum mutable event-page values or describe them as attendance, unique
+people, reach, endorsement, causality, or impact. Do not rewrite WOW List's
+current zero-event display or bounded historical non-recovery as proof that no
+Facebook event ever existed.
 
 ## KC Spaces Fund
 
@@ -61,6 +84,30 @@ private Drive documents.
 
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
+
+Do not collapse the funding lifecycle into a generic "award received." The CCED
+Board recommended $490,539; the Council accepted the recommendation and
+appropriated the amount to a City project account; official records later show
+zero disbursement, project withdrawal, and return of the unused funds. Do not
+claim Jamie alone caused the Council action, that the funding agreement was
+executed, that KC Town Hall received or spent the money, or that the development
+was completed.
+
+Do not describe Jamie as abandoning the project. His account that he
+transitioned stewardship to a mission-aligned organization is retained as a
+held participant-memory lead. Do not name the recipient, infer the scope of its
+obligations, connect the transition causally to the City funding withdrawal, or
+publish private circumstances without a separate review.
+
+Do not treat 183 surviving profile items as a complete platform export or proof
+against prior deletion. Do not treat the account's 100 tire-workflow records as
+100 pickups or households, or as an audited service ledger. Do not infer that
+Jamie authored every shared-account record or alone delivered every field
+operation. Project mentions, outside-authored responses, project-selected
+reposts, and visible reactions are different relationship types; do not convert
+nine reposted posts from city political figures into nine official engagements.
+July 2026 reactions are mutable snapshots, and project-reported tire and fee
+figures remain unreconciled.
 
 ## Source-Backed Team Memory
 

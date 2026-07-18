@@ -1,0 +1,34 @@
+
+> test:eval-contract
+> node --test scripts/tests/eval-contract.test.mjs
+
+✔ shared contract governs exactly the three canonical suites (1.98175ms)
+✔ governed digest includes all app source and excludes generated results (35.377458ms)
+✔ stale contract and candidate digests are rejected (1.48975ms)
+✔ hard-coded pass without the full command set is rejected (0.307292ms)
+✔ command status must agree with its actual exit code (0.675625ms)
+✔ deterministic records require canonical runner and captured output provenance (0.657458ms)
+✔ holdouts must be independent, blind, normalized, and prompt-bound (1.153458ms)
+✔ unknown, duplicate, missing, out-of-range, and evidenceless scores are rejected (0.668417ms)
+✔ declared weighted score and an unsupported acceptance are recomputed from actual results (0.72425ms)
+✔ a human hold remains valid even when numerical scores pass (0.562667ms)
+✔ blocking findings and incomplete decision governance prohibit acceptance (0.557458ms)
+✔ required human gates cannot disappear from an accepted record (0.808584ms)
+✔ run records form an ordered hash chain (0.554ms)
+✔ record mutation invalidates its own digest (0.593375ms)
+✔ two deterministic passes and two unchanged independent holdouts meet the review stop (43.473417ms)
+✔ a failed deterministic run resets the consecutive pass streak (80.737125ms)
+✔ one reviewer cannot certify twice by changing label case or Unicode (40.285709ms)
+✔ a later rejected holdout resets the current acceptance phase (39.896667ms)
+✔ deterministic and holdout records must bind the same commit and tree (80.005458ms)
+✔ a contract version change resets old passes (41.262916ms)
+✔ a model cannot grant production readiness (0.75825ms)
+✔ candidate commit and tree are verified by the record validator (22.469459ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 531.843667

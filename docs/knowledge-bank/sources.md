@@ -17,14 +17,87 @@ public GitHub repositories, or public project URLs.
 Approved public artifact examples for this launch pass include:
 
 - NYC Artist Coalition public website.
+- NYC Artist Coalition supporters, Cabaret Law, Save NYC Spaces, and repeal
+  campaign pages.
+- Contemporary reporting from Gothamist, NPR, Bedford + Bowery, and Mixmag.
+- Official New York City Council legislation and hearing records for the
+  Office of Nightlife, Cabaret Law repeal, and commercial-rent testimony.
 - FairRentNYC public website.
 - Talks Not Raids public website.
 - Let NYC Dance public website.
 - Harry J. Epstein Company public website.
 - CallNYC public GitHub repository.
+- CallNYC project mark in the public GitHub repository, cleared for display with
+  a visible non-affiliation boundary.
 - CallNYC archived Politico New York PDF.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+
+The complete public-safe inventory of NYC Artist Coalition campaign press
+indexes lives in
+[projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md).
+Its article records are source-discovery leads until close reading establishes
+specific propositions; campaign selection alone does not establish article
+content, Jamie's individual role, or policy causation.
+
+The WOW List social-corpus audit reconciles the complete 38-item population
+visible on the authenticated `@wowlist` profile in July 2026. The public-safe
+ledger retains status identifiers, bounded summaries, source and destination
+URLs, relationship types, mutable visible-reaction snapshots, and digests. It
+does not retain raw post text, session material, private analytics, messages,
+or credentials. The current population is not represented as a complete
+platform export or proof that no earlier post was deleted. See
+[intake/2026-07-14-wowlist-full-population-social-corpus.md](intake/2026-07-14-wowlist-full-population-social-corpus.md).
+
+The KC Town Hall social-corpus audit reconciles all 183 items in the surviving
+profile control: 142 account posts, 13 account replies, and 28 reposts. Its
+public-safe ledger retains bounded classifications, posted destinations, media
+signals, status identifiers, and mutable reaction snapshots without reproducing
+post text, phone numbers, street addresses, session material, messages, or
+private analytics. See
+[intake/2026-07-14-kctownhall-full-population-social-corpus.md](intake/2026-07-14-kctownhall-full-population-social-corpus.md).
+
+The personal `@urbanhermit` social-corpus audit reconciles 434 displayed slots
+through 425 recovered records and nine explicit carrier-limited absences. Its
+public-safe ledger exposes item detail for 141 mission-relevant records and
+keeps 271 context-only and 13 protected-context items as aggregate-only counts,
+with no public item-level crosswalk or fingerprint. Self-authored statements,
+outside corroboration, contextual links, and source-status metrics remain
+distinct. See
+[intake/2026-07-14-urbanhermit-full-population-social-corpus.md](intake/2026-07-14-urbanhermit-full-population-social-corpus.md).
+
+The NYC Artist Coalition Facebook event audit accounts for all 34 displayed
+past-event control slots through 33 recovered public event records and one
+metadata-free unresolved slot. Its public ledgers retain dates, titles, venues
+or modes, event formats, host-card relationships, bounded response displays,
+event URLs, and public source routes while excluding guest identities, invite
+context, comments, participant profiles, private administration, meeting
+credentials, and working-document locators. Facebook responses remain mutable
+event-level signals, never attendance or unique reach. See
+[intake/2026-07-14-nycartc-facebook-event-population.md](intake/2026-07-14-nycartc-facebook-event-population.md).
+
+The personal and WOW List Facebook event review is documented in
+[personal-wowlist-facebook-events-2026-07-14.md](personal-wowlist-facebook-events-2026-07-14.md).
+Three terminal traversals returned the same 502 IDs on Jamie's profile event
+surface; the separate hosted-events tab exposed 21 records, 18 overlapping,
+for 505 distinct current IDs. Nine selected public event pages and KCUR's
+independent 8th Street Tunnel reporting preserve mission-relevant plot points.
+The wider association graph remains protected. WOW List's current Page surface
+displayed zero events; its bounded historical non-recovery is not proof of
+nonexistence.
+
+KCUR election guidance, Northeast News affordable-housing reporting, Curbed
+housing-policy reporting, and Kansas City Star reporting about Leon's Thriftway
+are retained as sources routed by the account. Their appearance establishes
+public circulation and mission context, not coverage of KC Town Hall, project
+authorship, partnership, adoption, or impact.
+
+Four public articles linked or reposted by the account are retained as context
+sources: Grasstronaut on DIY organization and community infrastructure, *Good
+Times* on zines connecting geographically separated DIY spaces, KQED on the
+Lake Merritt Ghost Ship vigil, and Meow Wolf on its post-fire DIY Fund. Their
+appearance in the feed establishes circulation and context, not WOW List
+authorship, endorsement, participation, causality, or impact.
 
 ### Public-Safe Archive Summary
 

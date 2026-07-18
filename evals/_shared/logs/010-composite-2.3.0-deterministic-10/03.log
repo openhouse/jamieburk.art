@@ -1,0 +1,5 @@
+
+> check:launch-evals
+> node scripts/check-launch-evals.mjs
+
+Launch-readiness eval check passed: 8 hard gates, 7 runtime cases, and 10 weighted criteria; 3 machine-readable run records validated.

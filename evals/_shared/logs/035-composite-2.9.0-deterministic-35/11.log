@@ -1,0 +1,5 @@
+
+> check:projections
+> node scripts/check-projection-consistency.mjs
+
+Projection consistency passes across canonical records, public surfaces, citations, and the generated registry.

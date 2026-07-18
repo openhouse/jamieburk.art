@@ -1,0 +1,40 @@
+
+> test:launch-evals
+> node --test scripts/tests/launch-evals.test.mjs
+
+✔ launch-readiness eval suite is structurally valid (0.945875ms)
+✔ indexability requires the production environment, exact apex URL, and explicit policy together (0.083208ms)
+✔ launch-readiness source intentions hold (0.762417ms)
+✔ machine-readable run records reproduce their declared decisions (43.741ms)
+✔ a declared hard-gate result cannot use a fabricated candidate commit (0.456792ms)
+✔ a passing run cannot replace hard-gate records with a trust-me note (14.424708ms)
+✔ a passing run needs exact candidate identity rather than a parent base commit (14.7315ms)
+✔ launch scoring rejects fractional values (0.318167ms)
+✔ a passing run needs criterion evidence and unresolved-risk arrays (14.716583ms)
+✔ hard-gate prose cannot substitute for typed command and browser evidence (27.510125ms)
+✔ browser evidence must cover every route and viewport instead of passing empty loops (0.694875ms)
+✔ passed booleans cannot replace retained browser assertion evidence (0.178125ms)
+✔ approval and deployment evidence must match declared labels and semantic formats (42.733416ms)
+✔ a passing scorecard reaches the deterministic target (0.182792ms)
+✔ hard-gate failure cannot be averaged away (0.065625ms)
+✔ one criterion below its floor rejects an otherwise strong run (0.066333ms)
+✔ the Chad lens is explicit and cannot be averaged away (0.086042ms)
+✔ the Margaret Morse lens is explicit and cannot be averaged away (0.062458ms)
+✔ the Warren Sack lens is explicit and cannot be averaged away (0.074083ms)
+✔ the Warren Sack lens rejects collapsed judgment and model final authority (0.265916ms)
+✔ an aggregate pass cannot omit the per-run decision record (0.055834ms)
+✔ every decision dimension needs evidence and an unresolved-risks array (0.052416ms)
+✔ reopen review covers every trigger and invoked overrides carry provenance (0.048916ms)
+✔ override records cannot grant authority to a model or hide empty evidence and boundary changes (0.08625ms)
+✔ authority records cannot substitute a model or generic reviewer for policy owners (0.037333ms)
+✔ live disagreement survives an accepted aggregate result (0.050792ms)
+✔ a binding human refusal cannot be averaged into acceptance (0.063125ms)
+✔ binding human-decision fields are substantive and internally consistent (0.05775ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 264.699375

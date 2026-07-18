@@ -1,0 +1,153 @@
+#!/usr/bin/env node
+import { createHash } from "node:crypto";
+import { execFileSync, spawnSync } from "node:child_process";
+import { mkdirSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import {
+  captureCandidateSnapshot,
+  contractDigest,
+  governedInputDigest,
+  governedInputDigestAtCommit,
+  loadCompositeRunRecords,
+  loadEvalContract,
+  promptDigest,
+  repoRoot,
+  runRecordDigest,
+  validateCompositeRunRecord,
+  validateCandidateSnapshot,
+  validateRunSequence
+} from "./lib/eval-contract.mjs";
+import { loadLaunchEvalSuite } from "./lib/launch-evals.mjs";
+
+const git = (...args) => execFileSync("git", args, { cwd: repoRoot, encoding: "utf8" }).trim();
+const contract = loadEvalContract();
+const commit = git("rev-parse", "HEAD");
+const tree = git("rev-parse", "HEAD^{tree}");
+const currentDigest = governedInputDigest(contract);
+const committedDigest = governedInputDigestAtCommit(commit, contract);
+const startingSnapshot = captureCandidateSnapshot(contract);
+
+if (currentDigest !== committedDigest) {
+  throw new Error("Governed inputs differ from HEAD. Commit the candidate before running composite evals.");
+}
+
+const previousRuns = loadCompositeRunRecords();
+const previous = previousRuns.at(-1)?.record;
+const iteration = (previous?.iteration ?? 0) + 1;
+const id = `composite-${contract.version}-deterministic-${iteration}`;
+const logRoot = path.join(repoRoot, `evals/_shared/logs/${String(iteration).padStart(3, "0")}-${id}`);
+mkdirSync(logRoot, { recursive: true });
+const commands = [];
+const readableOutput = (value) => value
+  .replace(/\u001B\[[0-?]*[ -\/]*[@-~]/g, "")
+  .replace(/\r(?!\n)/g, "\n")
+  .replace(/[ \t]+$/gm, "")
+  .replace(/\n{4,}/g, "\n\n\n");
+const commandEnvironment = { ...process.env };
+delete commandEnvironment.BROWSER_EVAL_DEBUG_ROUTE;
+for (const [index, command] of contract.requiredCommands.entries()) {
+  const started = new Date();
+  const result = spawnSync(command, { cwd: repoRoot, encoding: "utf8", shell: true, env: commandEnvironment, maxBuffer: 50 * 1024 * 1024 });
+  const completed = new Date();
+  const output = `${result.stdout ?? ""}${result.stderr ?? ""}`;
+  const outputPath = path.posix.join("evals/_shared/logs", path.basename(logRoot), `${String(index + 1).padStart(2, "0")}.log`);
+  const reviewOutputPath = path.posix.join("evals/_shared/logs", path.basename(logRoot), `${String(index + 1).padStart(2, "0")}.txt`);
+  const reviewOutput = readableOutput(output);
+  writeFileSync(path.join(repoRoot, outputPath), output);
+  writeFileSync(path.join(repoRoot, reviewOutputPath), reviewOutput);
+  process.stdout.write(`\n$ ${command}\n${output}`);
+  commands.push({
+    command,
+    exitCode: result.status ?? 1,
+    status: result.status === 0 ? "passed" : "failed",
+    startedAt: started.toISOString(),
+    completedAt: completed.toISOString(),
+    durationMs: completed.getTime() - started.getTime(),
+    outputDigest: createHash("sha256").update(output).digest("hex"),
+    outputPath,
+    reviewOutputDigest: createHash("sha256").update(reviewOutput).digest("hex"),
+    reviewOutputPath
+  });
+}
+
+const candidateDrift = validateCandidateSnapshot(startingSnapshot, contract);
+if (candidateDrift.length) {
+  throw new Error(`Refusing to certify a candidate that changed during command execution:\n${candidateDrift.join("\n")}`);
+}
+
+const launchSuite = loadLaunchEvalSuite();
+const commandEvidence = (names) => names.map((name) => {
+  const command = commands.find((item) => item.command === name);
+  return `${name}: ${command?.status ?? "not run"}; retained output ${command?.reviewOutputPath ?? "missing"}`;
+});
+const externalRisks = [...contract.requiredExternalGates];
+const dimensionEvidence = {
+  "role fit": commandEvidence(["npm run check:portfolio-evals", "npm run test:browser-evals"]),
+  "demonstrated action": commandEvidence(["npm run check:projections", "npm run check -w @jamie-burkart/www"]),
+  "usable result": commandEvidence(["npm run test:browser-evals", "npm run check:routes", "npm run preflight:staging"]),
+  "domain experience": commandEvidence(["npm run check:knowledge-evals", "npm run check:citations"]),
+  "management authority": commandEvidence(["npm run check:launch-evals", "npm run test:eval-contract"]),
+  "evidentiary confidence": commandEvidence(["npm run check:citations", "npm run test:public-artifacts", "npm run check:eval-records"]),
+  "unresolved risk": commandEvidence(["npm audit --omit=dev --audit-level=high", "npm run preflight:production"])
+};
+const decisionRecord = {
+  dimensions: launchSuite.lensPolicy.sack.decisionVector.map((dimension) => ({
+    dimension,
+    assessment: `The deterministic protocol tested the automated evidence declared for ${dimension}; qualitative interpretation remains with independent holdouts and named human authorities.`,
+    evidence: dimensionEvidence[dimension],
+    unresolvedRisks: dimension === "unresolved risk" || dimension === "management authority" ? externalRisks : []
+  })),
+  authorityLog: launchSuite.lensPolicy.sack.authorities.map((policy) => ({
+    action: policy.action,
+    humanAuthority: policy.authority,
+    disposition: "Not invoked by this deterministic run; authority remains with the named human reviewer.",
+    humanDecision: "not-invoked",
+    humanDecisionEvidence: [],
+    modelHasFinalAuthority: false
+  })),
+  reopenTriggersConsidered: [...launchSuite.lensPolicy.sack.reopenTriggers],
+  reopenReview: "Every governed trigger was checked as a reason to reopen review; this run found no automated basis to close or waive future human reopening.",
+  overrides: [],
+  openDisagreements: [],
+  disagreementReview: "The deterministic runner introduced no editorial disagreement and cannot erase disagreements recorded by holdouts or human reviewers."
+};
+
+const record = {
+  schemaVersion: "2.1.0",
+  id,
+  iteration,
+  recordedAt: new Date().toISOString(),
+  ...(previous ? { previousRunId: previous.id, previousRunDigest: previous.recordDigest } : {}),
+  contract: { id: contract.id, version: contract.version, digest: contractDigest(contract) },
+  candidate: { branch: git("branch", "--show-current"), commit, tree, governedInputDigest: committedDigest },
+  execution: {
+    runnerPath: "scripts/run-composite-eval.mjs",
+    runnerDigest: promptDigest("scripts/run-composite-eval.mjs"),
+    node: process.version,
+    platform: `${process.platform}-${process.arch}`
+  },
+  commands,
+  judge: { class: "deterministic", label: `canonical-runner-${iteration}`, independent: false, priorScoresVisible: false },
+  criterionResults: [],
+  decisionRecord,
+  openDisagreements: [],
+  overrides: [],
+  reopenTriggersReviewed: [...contract.requiredReopenTriggers],
+  decision: {
+    status: commands.every((command) => command.exitCode === 0) ? "accepted-for-review" : "revision-required",
+    productionReady: false,
+    externalGatesOpen: [...contract.requiredExternalGates]
+  }
+};
+record.recordDigest = runRecordDigest(record);
+const candidateRecords = [...previousRuns, { file: "pending deterministic record", record }];
+const recordErrors = [
+  ...validateRunSequence(candidateRecords),
+  ...validateCompositeRunRecord(record, { contract, contractId: contract.id, contractVersion: contract.version, contractDigest: contractDigest(contract), governedInputDigest: committedDigest })
+];
+if (recordErrors.length) throw new Error(`Refusing invalid run record:\n${recordErrors.join("\n")}`);
+const outputPath = path.join(repoRoot, `evals/_shared/runs/${String(iteration).padStart(3, "0")}-${id}.json`);
+mkdirSync(path.dirname(outputPath), { recursive: true });
+writeFileSync(outputPath, `${JSON.stringify(record, null, 2)}\n`);
+console.log(`\nRecorded ${path.relative(repoRoot, outputPath)} (${record.decision.status}).`);
+if (record.decision.status !== "accepted-for-review") process.exit(1);

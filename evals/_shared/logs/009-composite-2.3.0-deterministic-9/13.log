@@ -1,0 +1,8 @@
+
+> check:eval-records
+> node scripts/check-eval-records.mjs
+
+- evals/_shared/runs/2026-07-16-03-holdout-rejection.json: composite-holdout-a-rejection: holdout prompt digest is stale
+- evals/_shared/runs/2026-07-16-04-holdout-rejection.json: composite-holdout-b-rejection: holdout prompt digest is stale
+- evals/_shared/runs/007-composite-2.2.0-holdout-b-evaluation-archive-v2-7.json: composite-2.2.0-holdout-b-evaluation-archive-v2-7: holdout prompt digest is stale
+- evals/_shared/runs/008-composite-2.2.0-holdout-a-public-sector-editorial-v2-8.json: composite-2.2.0-holdout-a-public-sector-editorial-v2-8: holdout prompt digest is stale

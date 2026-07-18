@@ -1,0 +1,85 @@
+{
+  "id": "jamieburk-art-composite-eval-contract",
+  "version": "2.2.0",
+  "publishedAt": "2026-07-16",
+  "objective": "Improve portfolio usefulness while preserving public safety, source boundaries, collective credit, reader clarity, and human release authority.",
+  "suites": [
+    {
+      "id": "launch-readiness",
+      "path": "evals/launch-readiness/evals.json",
+      "version": 1,
+      "digest": "0f8e1066921a49cead1b3c79ebef0962e8fa97b4b55f9400d71be541788ca834"
+    },
+    {
+      "id": "portfolio-effectiveness",
+      "path": "evals/portfolio-effectiveness/evals.json",
+      "version": 1,
+      "digest": "186e0d2d9b4701a6be41ee8fdf12449665218478f07e126070687d676d63cd1f"
+    },
+    {
+      "id": "knowledge-bank",
+      "path": "evals/knowledge-bank/evals.json",
+      "version": 1,
+      "digest": "f583e6d7f133b37433db6a195d0ecda5f09c8fac5cb274e6b50de6caa0752c82"
+    }
+  ],
+  "governedInputs": [
+    "AGENTS.md",
+    "Dockerfile",
+    "README.md",
+    "apps/www",
+    "apps/www/public",
+    "docs/knowledge-bank",
+    "evals",
+    "package-lock.json",
+    "package.json",
+    "scripts"
+  ],
+  "generatedOutputs": [
+    "apps/www/.next",
+    "apps/www/tsconfig.tsbuildinfo",
+    "evals/_shared/runs",
+    "evals/knowledge-bank/runs",
+    "evals/launch-readiness/runs",
+    "evals/portfolio-effectiveness/runs",
+    "node_modules",
+    "reports/generated"
+  ],
+  "stopCondition": {
+    "consecutiveDeterministicPasses": 2,
+    "independentHoldouts": 2,
+    "holdoutsReviewUnchangedCandidate": true,
+    "priorScoresHiddenFromHoldouts": true,
+    "externalHumanGatesMayRemainOpen": true
+  },
+  "requiredCommands": [
+    "npm run check:citations",
+    "npm run test:citations",
+    "npm run check:launch-evals",
+    "npm run test:launch-evals",
+    "npm run check:portfolio-evals",
+    "npm run test:portfolio-evals",
+    "npm run check:knowledge-evals",
+    "npm run test:knowledge-evals",
+    "npm run test:knowledge-tools",
+    "npm run check:projections",
+    "npm run test:projections",
+    "npm run test:eval-contract",
+    "npm run check -w @jamie-burkart/www",
+    "npm run knowledge-bank",
+    "npm run public-safety",
+    "npm run check:routes"
+  ],
+  "requiredExternalGates": [
+    "five privacy-safe real-reader sessions",
+    "collaborator corroboration",
+    "artifact and media rights clearance",
+    "staging verification of the exact candidate SHA",
+    "Jamie approval of the exact production SHA"
+  ],
+  "humanAuthority": {
+    "publicTruthAndConsent": "Jamie Burkart",
+    "productionPromotion": "Jamie Burkart",
+    "modelHasFinalReleaseAuthority": false
+  }
+}

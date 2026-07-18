@@ -3,6 +3,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { containsPrivatePath } from "./lib/security-normalization.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -56,6 +57,22 @@ const proofPath = path.join(repoRoot, "apps/www/src/data/proofs.ts");
 const workPath = path.join(repoRoot, "apps/www/src/data/work.ts");
 const claimsPath = path.join(repoRoot, "docs/knowledge-bank/claims.md");
 const docsRoot = path.join(repoRoot, "docs/knowledge-bank");
+const personalWowlistEventModulePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events.ts"
+);
+const personalWowlistEventControlsPath = path.join(
+  docsRoot,
+  "data/personal-wowlist-facebook-event-controls.json"
+);
+const personalDisplayedHostCensusPath = path.join(
+  docsRoot,
+  "jamie-facebook-displayed-host-event-census-2026-07-14.csv"
+);
+const personalWowlistEventReportPath = path.join(
+  docsRoot,
+  "personal-wowlist-facebook-events-2026-07-14.md"
+);
 
 function fail(message) {
   failures.push(message);
@@ -99,6 +116,19 @@ function assertIncludes(text, expected, label) {
   if (!text.includes(expected)) fail(`${label} is missing ${expected}`);
 }
 
+function collectObjectKeys(value, keys = []) {
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectObjectKeys(item, keys));
+    return keys;
+  }
+  if (!value || typeof value !== "object") return keys;
+  for (const [key, item] of Object.entries(value)) {
+    keys.push(key);
+    collectObjectKeys(item, keys);
+  }
+  return keys;
+}
+
 if (!existsSync(proofPath)) {
   fail("apps/www/src/data/proofs.ts is missing");
 }
@@ -123,6 +153,102 @@ for (const routeDir of blockedRouteDirs) {
   }
 }
 
+if (!existsSync(personalWowlistEventControlsPath)) {
+  fail("Personal and WOW List Facebook event controls are missing");
+} else {
+  let controls;
+  try {
+    controls = JSON.parse(read(personalWowlistEventControlsPath));
+  } catch (error) {
+    fail(`Personal and WOW List Facebook event controls are invalid JSON: ${error.message}`);
+  }
+
+  if (controls) {
+    const association = controls.personalAssociationSurface ?? {};
+    const hosted = controls.personalHostedEventsTab ?? {};
+    const displayed = controls.displayedJamieHostSubset ?? {};
+    const wowlist = controls.wowlist ?? {};
+    const live = controls.liveReverification ?? {};
+
+    if (association.currentRecords !== 502) fail("Personal event control must retain 502 profile IDs");
+    if (!association.secondPassExactIdMatch || !association.thirdPassExactIdMatch) {
+      fail("Personal event control must retain both exact ID-set reverifications");
+    }
+    if (association.displayedHostAccounting?.jamie !== 20 || association.displayedHostAccounting?.anotherHost !== 482) {
+      fail("Personal event displayed-host accounting must reconcile 20 + 482 = 502");
+    }
+    if (hosted.currentRecords !== 21 || hosted.recoveredRecords !== 21 || hosted.unresolvedRecords !== 0) {
+      fail("Hosted-events control must reconcile all 21 current records");
+    }
+    if (hosted.overlapWithAssociationSurface !== 18 || hosted.distinctRecordsAcrossBothTabs !== 505) {
+      fail("Personal event controls must retain the 18-overlap, 505-ID union");
+    }
+    if (displayed.pastEventsCards !== 20) fail("Displayed Jamie-host census must retain 20 cards");
+    if (Object.values(displayed.primaryFormCounts ?? {}).reduce((sum, value) => sum + value, 0) !== 20) {
+      fail("Displayed Jamie-host practice forms must reconcile to 20 cards");
+    }
+    if (wowlist.currentDisplayedRecords !== 0 || wowlist.historicalDisposition !== "not-recovered") {
+      fail("WOW List event controls must separate current zero from historical non-recovery");
+    }
+    if (live.personalPastTraversalCount !== 502 || live.personalPastExactIdMatchAgainstPriorControl !== true || live.hostedTabRecordsRecovered !== 21 || live.wowlistDisplayedRecordsWhileActingAsPage !== 0) {
+      fail("July 15 live Facebook event reverification is incomplete");
+    }
+
+    const controlsText = read(personalWowlistEventControlsPath);
+    if (/facebook\.com\/events\/\d+|\b\d{12,}\b/.test(controlsText)) {
+      fail("Personal event controls expose record-level event identifiers");
+    }
+    const prohibitedKeys = collectObjectKeys(controls).filter((key) =>
+      /^(eventId|eventUrl|guests?|invitees?|comments?|addresses?|exactLocation|rawDescription)$/i.test(key)
+    );
+    if (prohibitedKeys.length) {
+      fail(`Personal event controls expose prohibited record-level fields: ${prohibitedKeys.join(", ")}`);
+    }
+  }
+}
+
+if (!existsSync(personalDisplayedHostCensusPath)) {
+  fail("Displayed Jamie-host event census is missing");
+} else {
+  const lines = read(personalDisplayedHostCensusPath).trimEnd().split("\n");
+  if (lines.length !== 21) fail("Displayed Jamie-host census must contain 20 rows plus its header");
+  if (lines[0] !== "subset_slot,source_surface,displayed_host,recovery_status,year,primary_form") {
+    fail("Displayed Jamie-host census header changed unexpectedly");
+  }
+  for (const [index, line] of lines.slice(1).entries()) {
+    if (line.split(",").length !== 6) fail(`Displayed-host census row ${index + 1} has the wrong column count`);
+    if (/https?:|facebook\.com|\b\d{12,}\b/.test(line)) {
+      fail(`Displayed-host census row ${index + 1} exposes a record-level locator`);
+    }
+  }
+}
+
+if (!existsSync(personalWowlistEventModulePath)) {
+  fail("Personal and WOW List Facebook event knowledge module is missing");
+} else {
+  const moduleText = read(personalWowlistEventModulePath);
+  for (const phrase of [
+    "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026",
+    "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017",
+    "CLM-WOWLIST-FACEBOOK-EVENT-HISTORY-NOT-RECOVERED-2026",
+    "Not recovered does not mean did not exist",
+    "attendance, unique reach, endorsement, causality, or impact"
+  ]) assertIncludes(moduleText, phrase, "Personal and WOW List Facebook event knowledge module");
+}
+
+if (!existsSync(personalWowlistEventReportPath)) {
+  fail("Personal and WOW List Facebook event report is missing");
+} else {
+  const report = read(personalWowlistEventReportPath);
+  for (const phrase of [
+    "505 distinct current event IDs",
+    "Association does not establish attendance",
+    "source route, not automatic corroboration",
+    "not recovered",
+    "Do not add a new visible portfolio claim"
+  ]) assertIncludes(report, phrase, "Personal and WOW List Facebook event report");
+}
+
 let proofSource = "";
 let proofIds = [];
 const proofBlocks = new Map();
@@ -130,7 +256,7 @@ const proofBlocks = new Map();
 if (existsSync(proofPath)) {
   proofSource = read(proofPath);
 
-  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw-otter|otter(?:\.ai|_ai)|\.docx|\.xlsx/i.test(proofSource)) {
+  if (containsPrivatePath(proofSource) || /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw-otter|otter(?:\.ai|_ai)|\.docx|\.xlsx/i.test(proofSource)) {
     fail("apps/www/src/data/proofs.ts contains a private path or private source marker");
   }
 
@@ -281,7 +407,7 @@ for (const file of walk(docsRoot)) {
   if (!/\.(md|mdx|txt)$/i.test(file)) continue;
 
   const content = read(file);
-  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|otter\.ai\.txt|\.docx|\.xlsx/i.test(content)) {
+  if (containsPrivatePath(content) || /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|otter\.ai\.txt|\.docx|\.xlsx/i.test(content)) {
     fail(`${relative(file)} contains a private path, raw-source filename, or office-source marker`);
   }
 }

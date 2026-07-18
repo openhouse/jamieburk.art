@@ -1,0 +1,24 @@
+
+> test:citations
+> node --test scripts/tests/citations.test.mjs
+
+(node:23696) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ canonical registry passes deterministic validation (45.794875ms)
+✔ page-local numbering follows first source appearance (0.567ms)
+✔ repeated sources retain one note and unique backlinks (0.369083ms)
+✔ multi-source occurrences preserve editorial order (0.279458ms)
+✔ KC Town Hall adds a role note while preserving funding and service-interface notes (0.961834ms)
+✔ Claim resolver returns only active approved projections (0.745542ms)
+✔ corrections retire old wording from public surfaces (1.471166ms)
+✔ negative research preserves scope and limitations (0.343583ms)
+✔ private and metadata-only evidence is absent from the public registry (0.405208ms)
+✔ rendering primitives preserve no-JavaScript document semantics (2.055833ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 612.293375

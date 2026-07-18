@@ -40,31 +40,11 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
   );
 }
 
-export function ArtifactList({ item }: { item: WorkMeta }) {
-  return (
-    <section aria-labelledby="artifact-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
-        Primary artifacts
-      </h2>
-      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-        {item.artifactTypes.map((artifact) => (
-          <li
-            className="rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium text-jb-ink"
-            key={artifact}
-          >
-            {artifact}
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
 export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
-    <section aria-labelledby="artifact-gallery">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+    <section aria-labelledby="representative-artifacts">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="representative-artifacts">
+        Representative artifacts
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
@@ -164,6 +144,30 @@ export function SourceLayer({ item }: { item: WorkMeta }) {
     <NoteBlock title="Source layer" tone="green">
       <p>{item.sourceLayer}</p>
     </NoteBlock>
+  );
+}
+
+export function ProjectRecord({ item }: { item: WorkMeta }) {
+  return (
+    <details className="group border-y border-jb-ink/15 py-5">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-jb-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-jb-blue">
+        <span>Project record and publication boundaries</span>
+        <span aria-hidden="true" className="text-2xl leading-none group-open:hidden">
+          +
+        </span>
+        <span aria-hidden="true" className="hidden text-2xl leading-none group-open:inline">
+          -
+        </span>
+      </summary>
+      <div className="mt-8 space-y-8">
+        <KnownOpenProtected item={item} />
+        <div className="grid gap-4 md:grid-cols-2">
+          <CareNote item={item} />
+          <PublicSafetyNote item={item} />
+          <SourceLayer item={item} />
+        </div>
+      </div>
+    </details>
   );
 }
 

@@ -1,0 +1,39 @@
+
+> test:eval-contract
+> node --test scripts/tests/eval-contract.test.mjs
+
+✔ shared contract governs exactly the three canonical suites (1.882375ms)
+✔ shared contract executes every automatable launch hard gate (0.121042ms)
+✔ governed digest includes all app source and excludes generated results (37.770792ms)
+✔ stale contract and candidate digests are rejected (2.691875ms)
+✔ hard-coded pass without the full command set is rejected (0.543083ms)
+✔ command status must agree with its actual exit code (1.569125ms)
+✔ deterministic records require canonical runner and captured output provenance (1.743041ms)
+✔ deterministic records require complete decision governance under the current contract (1.81275ms)
+✔ historical contract versions retain their original deterministic decision rule (1.671208ms)
+✔ holdouts must be independent, blind, normalized, and prompt-bound (1.221375ms)
+✔ holdout records require explicit model-context provenance bound to candidate and prompt (0.535208ms)
+✔ top-level disagreement, override, and reopen records must match the decision record (0.438708ms)
+✔ unknown, duplicate, missing, out-of-range, and evidenceless scores are rejected (0.538834ms)
+✔ declared weighted score and an unsupported acceptance are recomputed from actual results (0.885083ms)
+✔ a human hold remains valid even when numerical scores pass (0.46675ms)
+✔ blocking findings and incomplete decision governance prohibit acceptance (0.383167ms)
+✔ required human gates cannot disappear from an accepted record (1.373417ms)
+✔ run records form an ordered hash chain (0.597208ms)
+✔ record mutation invalidates its own digest (1.297542ms)
+✔ two deterministic passes and two unchanged independent holdouts meet the review stop (47.68925ms)
+✔ a failed deterministic run resets the consecutive pass streak (89.984041ms)
+✔ one reviewer cannot certify twice by changing label case or Unicode (44.694125ms)
+✔ a later rejected holdout resets the current acceptance phase (43.53825ms)
+✔ deterministic and holdout records must bind the same commit and tree (88.016666ms)
+✔ a contract version change resets old passes (42.656125ms)
+✔ a model cannot grant production readiness (1.490667ms)
+✔ candidate commit and tree are verified by the record validator (40.552792ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 580.861042

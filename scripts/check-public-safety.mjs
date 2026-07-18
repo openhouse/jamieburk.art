@@ -4,6 +4,8 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { approvedResumeArtifact, validateResumeSource, validateResumeText } from "./lib/public-artifacts.mjs";
+import { containsPrivatePath } from "./lib/security-normalization.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -50,6 +52,9 @@ const resumePath = path.join(
   repoRoot,
   "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
 );
+const resumeSourcePath = path.join(repoRoot, approvedResumeArtifact.htmlPath);
+const resumeTextPath = path.join(repoRoot, approvedResumeArtifact.textPath);
+const resumeGeneratorPath = path.join(repoRoot, approvedResumeArtifact.generatorPath);
 
 function walk(dir) {
   if (!existsSync(dir)) return [];
@@ -104,7 +109,7 @@ function scanPattern(files, label, pattern, severity = "failure") {
 
 function pdftotext(file) {
   try {
-    return execFileSync("pdftotext", [file, "-"], {
+    return execFileSync("pdftotext", ["-layout", file, "-"], {
       cwd: repoRoot,
       encoding: "utf8",
       stdio: ["ignore", "pipe", "ignore"]
@@ -122,6 +127,15 @@ try {
   });
 } catch {
   failures.push("scripts/check-knowledge-bank.mjs - knowledge-bank gate failed");
+}
+
+try {
+  execFileSync(process.execPath, [path.join(repoRoot, "scripts/check-knowledge-evals.mjs")], {
+    cwd: repoRoot,
+    stdio: "inherit"
+  });
+} catch {
+  failures.push("scripts/check-knowledge-evals.mjs - strict knowledge-eval gate failed");
 }
 
 const allFiles = walk(repoRoot);
@@ -145,6 +159,12 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+
+for (const file of shippedContentFiles) {
+  if (containsPrivatePath(readText(file))) {
+    addFailure(file, "recursively encoded private filesystem path appears in production-facing content");
+  }
+}
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -234,29 +254,13 @@ if (!existsSync(resumePath)) {
   }
 
   const resumeText = pdftotext(resumePath);
-  if (!/Jamie\s+Burkart/i.test(resumeText)) {
-    addFailure(resumePath, "resume PDF text does not include Jamie Burkart");
-  }
+  for (const failure of validateResumeText(resumeText)) addFailure(resumePath, failure);
 
-  if (!/Technical Project Manager/i.test(resumeText)) {
-    addFailure(resumePath, "resume PDF text does not include the target role");
-  }
-
-  if (/\b(?:TODO|Placeholder resume PDF|lorem ipsum|replace this)\b/i.test(resumeText)) {
-    addFailure(resumePath, "resume PDF contains placeholder or TODO text");
-  }
-
-  if (/first civic-data hackathon|first civic-tech hackathon/i.test(resumeText)) {
-    addFailure(resumePath, "resume PDF contains retired CallNYC hackathon wording");
-  }
-
-  if (
-    !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
-      resumeText
-    )
-  ) {
-    addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
-  }
+  if (!existsSync(resumeSourcePath)) addFailure(resumePath, "editable approved resume HTML source is missing");
+  else for (const failure of validateResumeSource(readText(resumeSourcePath))) addFailure(resumeSourcePath, failure);
+  if (!existsSync(resumeGeneratorPath)) addFailure(resumePath, "resume generator is missing");
+  if (!existsSync(resumeTextPath)) addFailure(resumePath, "versioned extracted resume text is missing");
+  else if (readText(resumeTextPath) !== resumeText) addFailure(resumeTextPath, "extracted resume text disagrees with the shipped PDF");
 
   if (
     isProduction &&
@@ -272,15 +276,22 @@ if (!existsSync(resumePath)) {
 
 const siteUrlPath = path.join(repoRoot, "apps/www/src/lib/site-url.ts");
 const nextConfigPath = path.join(repoRoot, "apps/www/next.config.ts");
+const deploymentPolicyPath = path.join(repoRoot, "apps/www/src/lib/deployment-policy.ts");
 const siteUrlSource = existsSync(siteUrlPath) ? readText(siteUrlPath) : "";
 const nextConfigSource = existsSync(nextConfigPath) ? readText(nextConfigPath) : "";
+const deploymentPolicySource = existsSync(deploymentPolicyPath) ? readText(deploymentPolicyPath) : "";
 
 if (/NEXT_PUBLIC_ROBOTS_POLICY\s*!==\s*["']noindex["']/.test(siteUrlSource + nextConfigSource)) {
   addFailure(siteUrlPath, "robots policy is permissive by default");
 }
 
-if (!/NEXT_PUBLIC_ROBOTS_POLICY\s*===\s*["']index["']/.test(siteUrlSource + nextConfigSource)) {
-  addFailure(siteUrlPath, "production indexing is not explicit opt-in");
+if (
+  !/appEnv\s*===\s*["']production["']/.test(deploymentPolicySource) ||
+  !/PRODUCTION_SITE_URL\s*=\s*["']https:\/\/jamieburk\.art["']/.test(deploymentPolicySource) ||
+  !/siteUrl\s*===\s*PRODUCTION_SITE_URL/.test(deploymentPolicySource) ||
+  !/robotsPolicy\s*===\s*["']index["']/.test(deploymentPolicySource)
+) {
+  addFailure(deploymentPolicyPath, "production indexing is not an exact environment, origin, and policy opt-in");
 }
 
 if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConfigSource)) {

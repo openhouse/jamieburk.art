@@ -15,6 +15,16 @@ changes public claims.
 - [ ] Pending and private claims are not projected onto public pages.
 - [ ] Careful claims preserve contribution, stewardship, or collective-work
   language.
+- [ ] Complete current Facebook event controls are not described as native
+  exports, complete lifetime histories, attendance records, or authorship
+  ledgers.
+- [ ] Personal event association rows, host networks, guest context, exact
+  private locations, raw descriptions, comments, and account state stay out of
+  the repository.
+- [ ] Facebook event-page values retain their labels and are never summed or
+  converted into attendance, unique reach, endorsement, causality, or impact.
+- [ ] A current zero display or bounded negative search is never rewritten as
+  proof of historical nonexistence.
 - [ ] Metrics are approved, softened, or explicitly bounded.
 - [ ] Collaborator-sensitive claims are approved or omitted.
 - [ ] NYC Artist Coalition website authorship is visible without overstating

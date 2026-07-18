@@ -25,11 +25,16 @@ The knowledge bank exists to:
 - reduce the risk that private evidence leaks into public pages;
 - make the Technical Operations / Product Operations / Implementation story
   easier to maintain.
+- retain public-safe fragments and research leads that may matter to a future
+  application, argument, or photo brief even when they do not belong on today's
+  site.
 
 ## Publication Model
 
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
+- **Intake and observations:** lossless public-safe capture and proposition-level
+  source reading in `historical-knowledge.ts`.
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
@@ -63,3 +68,68 @@ one pass.
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot.
+
+See [intake-and-maturation.md](intake-and-maturation.md) for the recursive intake,
+research, claim-maturation, selective-projection, and photo-feedback workflow.
+
+See
+[projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md)
+for the complete, deduplicated press indexes from Let NYC Dance, Talks Not
+Raids, Save NYC Spaces, and the supplied Fair Rent NYC Wayback capture.
+
+See
+[projects/teams-archive-production-2026-07-14.md](projects/teams-archive-production-2026-07-14.md)
+for the public-safe production pass across `Jamie Projects History`, `CRS`, and
+`job-hunt`, including the iCloud materialization boundary and selective
+projection decision.
+
+See
+[projects/google-drive-shared-drives-production-2026-07-14.md](projects/google-drive-shared-drives-production-2026-07-14.md)
+for the bounded pass across 110 accessible Shared Drives: aggregate mapping,
+26 portfolio-relevant roots, seven close-read artifacts, cross-carrier
+deduplication, protected-source handling, collective credit, and the strengthened
+Sunday Dinner projection.
+
+See
+[intake/2026-07-14-callnyc-full-population-social-corpus.md](intake/2026-07-14-callnyc-full-population-social-corpus.md)
+for the 100-percent-disposition archival pass on the observed `@CallNYCApp`
+population. Its canonical public ledger preserves 107 recovered item records,
+every recovered outbound URL, and three explicit unresolved count slots without
+claiming a platform export.
+
+See
+[intake/2026-07-14-urbanhermit-full-population-social-corpus.md](intake/2026-07-14-urbanhermit-full-population-social-corpus.md)
+for the population-reconciled pass on Jamie's personal public account. It
+preserves 141 mission-relevant records and 87 distinct posted source URLs while
+counting 284 ordinary or protected-context items through aggregate-only
+dispositions, with no public item-level crosswalk or fingerprint.
+
+See
+[intake/2026-07-14-nycartc-facebook-event-population.md](intake/2026-07-14-nycartc-facebook-event-population.md)
+for the full-population pass on NYC Artist Coalition's Facebook event surface.
+It accounts for all 34 displayed control slots through 33 recovered public
+event records and one unresolved slot, preserving the event chronology,
+rotating-venue practice, public source routes, platform drift, and a bounded
+claim about Jamie's role in the recurring participation system.
+
+See
+[personal-wowlist-facebook-events-2026-07-14.md](personal-wowlist-facebook-events-2026-07-14.md)
+for the 100-percent current-control pass across Jamie's personal Facebook event
+surfaces and WOW List's Page event surface. It reconciles 502 profile IDs and
+21 hosted-tab IDs with 18 overlaps, preserves an anonymous 20-card
+displayed-host census and selected public event plot points, and keeps the
+wider personal association graph outside the repository.
+
+See
+[projects/participation-infrastructure-2026-07-15.md](projects/participation-infrastructure-2026-07-15.md)
+for the bounded aggregate audits of WOW List and Sunday Dinner plus the public
+Call Script evidence connecting a calendar surface, a calling tool, and an early
+NYC Artist Coalition listening workflow. The report preserves denominator,
+attendance, shared-account, and collective-credit boundaries.
+
+See
+[projects/nycac-government-interface-2026-07-15.md](projects/nycac-government-interface-2026-07-15.md)
+for the official Council transcript in which Tom Finkelpearl identified NYC
+Artist Coalition as an outcome of DCLA's DIY-arts convening, the bounded
+transcript-search audit, and held institutional interpretations of the
+coalition's value to DCLA, the Council, and Council Member Rafael Espinal.

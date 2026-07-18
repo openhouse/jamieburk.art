@@ -1,0 +1,23 @@
+
+> test:portfolio-evals
+> node --test scripts/tests/portfolio-evals.test.mjs
+
+✔ portfolio-effectiveness suite defines exactly seven valid criteria (1.291834ms)
+✔ current evidence meets every local floor without hiding external gates (5.166875ms)
+✔ LLM or automated review cannot become a real reader session (6.123584ms)
+✔ real reader completion requires five privacy-safe aggregate records (6.03375ms)
+✔ self-assertion cannot become collaborator corroboration (7.043208ms)
+✔ an operating sequence fails when its evidence reference is unknown (5.695417ms)
+✔ a recent proposal cannot be represented as delivered client work (3.313875ms)
+✔ pending visual candidates cannot count as cleared artifacts (3.115542ms)
+✔ a different production SHA cannot satisfy exact-candidate release (3.243ms)
+✔ maintenance rejects removal of the anti-self-certification rule (3.102042ms)
+✔ private local paths fail suite validation (0.292667ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 138.245916

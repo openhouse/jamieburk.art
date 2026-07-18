@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import type { Route } from "next";
+import Link from "next/link";
+import { Claim } from "@/components/citations";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -18,40 +21,53 @@ const operationsMap = [
 const proofMap = [
   {
     project: "HJE",
+    href: "/work/harry-j-epstein",
     proof:
       "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
+    href: "/work/fair-rent-nyc",
     proof:
       "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
   },
   {
     project: "CallNYC",
-    proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+    href: "/work/callnyc",
+    proof: (
+      <Claim
+        claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+        projection="technical-operations"
+        surface="/work/technical-operations"
+      />
+    )
   },
   {
     project: "WOWList",
+    href: "/work/wowlist",
     proof:
       "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
   },
   {
     project: "196 / Sunday Dinner",
+    href: "/work/196-sunday-dinner",
     proof:
       "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
   },
   {
     project: "KC Spaces Fund",
+    href: "/work",
     proof:
       "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
   },
   {
     project: "KC Town Hall",
+    href: "/work/kc-town-hall",
     proof: "long-horizon project planning and public-benefit documentation."
   },
   {
     project: "Source-Backed Team Memory",
+    href: "/lab/source-backed-team-memory",
     proof:
       "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
   }
@@ -68,7 +84,7 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="text-balance text-4xl font-bold leading-tight text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
@@ -98,7 +114,11 @@ export default function TechnicalOperationsPage() {
           <dl className="mt-5 space-y-4">
             {proofMap.map((item) => (
               <div key={item.project}>
-                <dt className="font-semibold text-jb-ink">{item.project}</dt>
+                <dt className="font-semibold text-jb-ink">
+                  <Link className="text-jb-blue underline decoration-1 underline-offset-4" href={item.href as Route}>
+                    {item.project}
+                  </Link>
+                </dt>
                 <dd className="mt-1 leading-7 text-jb-ink/72">{item.proof}</dd>
               </div>
             ))}
@@ -114,7 +134,17 @@ export default function TechnicalOperationsPage() {
               {row.proofs.map((proof) => (
                 <li className="flex gap-3" key={proof.id}>
                   <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{proof.shortWording ?? proof.publicWording}</span>
+                  <span>
+                    {proof.id === "callnyc-civic-data-guidance" ? (
+                      <Claim
+                        claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+                        projection="technical-operations"
+                        surface="/work/technical-operations"
+                      />
+                    ) : (
+                      proof.shortWording ?? proof.publicWording
+                    )}
+                  </span>
                 </li>
               ))}
             </ul>

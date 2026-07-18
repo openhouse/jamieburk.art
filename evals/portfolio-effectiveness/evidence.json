@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "readerValidation": {
+    "protocolPath": "docs/knowledge-bank/portfolio-effectiveness.md",
+    "taskCases": [
+      {
+        "id": "READER-OTI-30-SECOND",
+        "persona": "OTI or civic-technology hiring manager",
+        "timeboxSeconds": 30,
+        "routes": ["/"],
+        "questions": ["What role is Jamie seeking?", "What operating problem does he solve?", "Where would you go next for proof?"],
+        "requiredSignals": ["Technical Project Manager", "operating structure", "View selected work"]
+      },
+      {
+        "id": "READER-RECRUITER-RESUME",
+        "persona": "Recruiter validating application basics",
+        "timeboxSeconds": 60,
+        "routes": ["/resume", "/contact"],
+        "questions": ["Can you find the approved resume?", "Can you find email and LinkedIn?", "Does the role match the homepage?"],
+        "requiredSignals": ["Download resume PDF", "Contact Jamie", "Product Operations & Implementation"]
+      },
+      {
+        "id": "READER-IMPLEMENTATION-THREE-MINUTE",
+        "persona": "Implementation director",
+        "timeboxSeconds": 180,
+        "routes": ["/work/technical-operations", "/work/kc-town-hall"],
+        "questions": ["Name three operating capabilities.", "Identify one multi-team implementation example.", "What became usable?"],
+        "requiredSignals": ["requirements", "workflows", "specialist teams"]
+      },
+      {
+        "id": "READER-CIVIC-TECH-EVIDENCE",
+        "persona": "Civic-technology product leader",
+        "timeboxSeconds": 180,
+        "routes": ["/work/callnyc", "/work/fair-rent-nyc"],
+        "questions": ["What did Jamie build?", "What public or institutional need did it address?", "Which outcomes are bounded rather than claimed?"],
+        "requiredSignals": ["independent prototype", "shared campaign-memory system", "collective"]
+      },
+      {
+        "id": "READER-COLLABORATOR-CARE",
+        "persona": "Past collaborator reviewing credit and consent",
+        "timeboxSeconds": 180,
+        "routes": ["/work/fair-rent-nyc", "/work/196-sunday-dinner", "/colophon"],
+        "questions": ["Is Jamie's contribution visible?", "Is collective work still collective?", "Are protected absences understandable?"],
+        "requiredSignals": ["collective-work language", "Protected", "private supporting records are not published"]
+      }
+    ],
+    "automatedEvidence": [
+      {"file": "apps/www/src/components/Hero.tsx", "mustInclude": "Technical Project Manager - Product Operations & Implementation"},
+      {"file": "apps/www/src/app/page.tsx", "mustInclude": "Quick path through the portfolio"},
+      {"file": "apps/www/src/app/resume/page.tsx", "mustInclude": "Download resume PDF"},
+      {"file": "apps/www/src/app/contact/page.tsx", "mustInclude": "LinkedIn"}
+    ],
+    "humanSessions": [],
+    "boundary": "Automation and LLM review can test availability and wording, but only privacy-safe aggregate records from real readers can satisfy the human-session requirement."
+  },
+  "collaboratorProof": {
+    "targets": [
+      {"id": "COLLAB-HJE", "proofId": "hje-modernization-stewardship", "project": "Harry J. Epstein Company", "reviewerClass": "manager, owner, or close operational collaborator", "evidenceGap": "Jamie's decision scope, cross-functional coordination, and the operational difference his work made", "requestStatus": "not-requested"},
+      {"id": "COLLAB-NYCAC", "proofId": "nyc-artist-coalition-civic-systems", "project": "NYC Artist Coalition", "reviewerClass": "coalition collaborator", "evidenceGap": "Jamie's formation, event-production, digital-operations, and coordination contribution within collective work", "requestStatus": "not-requested"},
+      {"id": "COLLAB-WOWLIST", "proofId": "wowlist-community-platform", "project": "WOW List", "reviewerClass": "product collaborator or organizer user", "evidenceGap": "Jamie's product, infrastructure, support, and adoption contribution with shared authorship preserved", "requestStatus": "not-requested"},
+      {"id": "COLLAB-KCTH", "proofId": "kc-town-hall-public-benefit-documentation", "project": "KC Town Hall", "reviewerClass": "project collaborator, consultant, or contractor", "evidenceGap": "Jamie's general-contractor coordination, field sequencing, and neighborhood-process role", "requestStatus": "not-requested"},
+      {"id": "COLLAB-KCSPACES", "proofId": "kc-spaces-fund-digital-infrastructure", "project": "KC Spaces Fund", "reviewerClass": "named organizer or technical collaborator", "evidenceGap": "Jamie's behind-the-scenes web implementation and naming-system contribution without public-organizer inflation", "requestStatus": "not-requested"}
+    ],
+    "requestTemplate": {
+      "questions": [
+        "What problem or transition were we navigating?",
+        "What do you remember Jamie being responsible for?",
+        "What became easier, possible, or more durable because of that work?",
+        "What was collective, and what should Jamie not claim individually?",
+        "May this note be used privately, paraphrased publicly, quoted publicly, or not published?"
+      ],
+      "requiredPermissionStates": ["private-background-only", "public-paraphrase-approved", "public-quotation-approved", "do-not-use"],
+      "boundary": "A response remains attributed collaborator evidence; silence, an AI review, or Jamie's memory cannot substitute for it."
+    },
+    "receivedProofNotes": []
+  },
+  "operatingSequences": [
+    {
+      "id": "SEQUENCE-CALLNYC",
+      "project": "CallNYC",
+      "route": "/work/callnyc",
+      "condition": "A public constituent-services dataset carried civic signal but was not yet a resident pathway.",
+      "diagnosis": "People needed issue-first entry points, district context, possible next steps, and source limitations without first interpreting the complete dataset.",
+      "intervention": "Jamie independently built a public prototype that translated administrative categories into issue-oriented guidance.",
+      "coordination": "He connected source data, information architecture, interface implementation, public documentation, and a bounded institutional-outreach layer.",
+      "changedBehavior": "A reader could enter through a recognizable concern, and issue pathways could be routed toward an intended Council-account audience.",
+      "outcome": "The prototype shipped publicly, received press and civic-data recognition, and has a documented eight-member Council-account authored-engagement floor.",
+      "evidenceRefs": ["proof:callnyc-civic-data-guidance", "proof:callnyc-public-engagement-architecture", "claim:CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"],
+      "boundaries": ["The intended 26-account audience is not reciprocal engagement.", "CallNYC was independent, unofficial, and is not current guidance.", "The record does not establish unique resident use or service outcomes."]
+    },
+    {
+      "id": "SEQUENCE-KC-TOWN-HALL",
+      "project": "KC Town Hall",
+      "route": "/work/kc-town-hall",
+      "condition": "A long-vacant historic building required preservation-sensitive stabilization and a neighborhood-led public-purpose process.",
+      "diagnosis": "Construction dependencies, specialist teams, municipal documentation, site conditions, and neighborhood knowledge needed one shared operating picture.",
+      "intervention": "Jamie co-founded and project-managed the effort, served as Phase One general contractor, and created a neighborhood survey and contact workflow.",
+      "coordination": "He connected masonry, roofing, framing, water, access, safety, consultants, measured drawings, survey cards, and daily field decisions.",
+      "changedBehavior": "Specialist work could be sequenced across the site while neighborhood conversations accumulated into a reusable planning record.",
+      "outcome": "Phase One produced a cold shell; the project received a CCED recommendation and Council appropriation; a separate recurring public-service interface also became visible.",
+      "evidenceRefs": ["proof:kc-town-hall-public-benefit-documentation", "proof:kc-town-hall-public-service-interface", "claim:CLM-KCTH-NONDISBURSEMENT-AND-REAPPROPRIATION"],
+      "boundaries": ["Specialist labor and public milestones remain collective.", "The City appropriation was not disbursed to KC Town Hall.", "The records do not establish that Jamie alone caused funding or performed every trade's work."]
+    },
+    {
+      "id": "SEQUENCE-NYCAC-CRS",
+      "project": "NYC Artist Coalition and Commercial Rent Stabilization",
+      "route": "/work/fair-rent-nyc",
+      "condition": "Cultural-space and commercial-rent work crossed public policy, lived experience, legal questions, public data, meetings, and protected coalition context.",
+      "diagnosis": "Without shared memory and translation infrastructure, decisions, sources, follow-up, and public/private boundaries fragmented.",
+      "intervention": "Jamie helped establish recurring participation infrastructure and built campaign-memory, source-map, public-data, and policy-communication systems.",
+      "coordination": "The work connected rotating cultural-space meetings, stakeholder follow-up, testimony, campaign sites, decision records, source lineages, and review lanes.",
+      "changedBehavior": "Collaborators could orient after meetings, find source context, track next steps, prepare testimony, and distinguish public explanation from protected strategy.",
+      "outcome": "Official records document coalition formation and testimony; public campaigns contributed to nightlife-policy and cultural-space debates; current CRS work has reusable memory and provenance infrastructure.",
+      "evidenceRefs": ["proof:nyc-artist-coalition-civic-systems", "proof:fair-rent-campaign-memory", "proof:fair-rent-source-map", "claim:CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE"],
+      "boundaries": ["Government outcomes and coalition work remain collective.", "The record does not assign Jamie sole causation for laws, offices, or agency change.", "Private strategy, legal-review material, and stakeholder records remain protected."]
+    }
+  ],
+  "recentPractice": [
+    {
+      "id": "RECENT-CRS-2025-2026",
+      "period": "2025-2026",
+      "practice": "Commercial Rent Stabilization campaign memory, public-data framing, source lineage, and collaboration infrastructure",
+      "publicSurface": "/work/fair-rent-nyc",
+      "evidenceRefs": ["source:SRC-CRS-90-DAY-OPERATING-PLAN-2026-04-06", "source:SRC-CRS-RUNNING-MINUTES-2026-04-29", "source:SRC-CRS-OPEN-DATA-FOUNDATION-2025-11-26", "source:SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-16"],
+      "boundary": "Active coalition work is summarized without exposing strategy, legal review, private correspondence, or collaborator records."
+    },
+    {
+      "id": "RECENT-SOURCE-BACKED-MEMORY-2026",
+      "period": "2026",
+      "practice": "Source-backed team-memory method and pilot design",
+      "publicSurface": "/lab/source-backed-team-memory",
+      "evidenceRefs": ["proof:source-backed-team-memory-method", "source:SRC-SOURCE-BACKED-MEMORY-PROPOSAL-2026-06-26"],
+      "boundary": "This supports a method and proposal, not a claim that a client pilot was delivered."
+    },
+    {
+      "id": "RECENT-PORTFOLIO-EVALS-2026",
+      "period": "2026",
+      "practice": "Public-safe claim governance, accessible citations, archival-production evals, and release checks",
+      "publicSurface": "/colophon",
+      "repositoryEvidencePaths": ["evals/knowledge-bank/evals.json", "evals/launch-readiness/evals.json", "scripts/check-citations.mjs", "scripts/check-public-safety.mjs"],
+      "boundary": "This public repository demonstrates current self-directed implementation; it is not external adoption, client impact, or independent endorsement."
+    }
+  ],
+  "visualEvidence": {
+    "clearedArtifacts": [
+      {"id": "VISUAL-CALLNYC-MARK", "project": "CallNYC", "path": "apps/www/public/artifacts/callnyc/callnyc-project-mark.png", "route": "/work/callnyc", "sourceId": "SRC-CALLNYC-PROJECT-MARK", "status": "cleared", "boundary": "The mark documents the independent prototype and does not imply Council ownership, affiliation, or current-service status."}
+    ],
+    "selectionQueue": [
+      {"id": "VISUAL-KCTH-PHASE-ONE", "project": "KC Town Hall", "artifactClass": "construction photograph or redrawn sequencing diagram", "status": "rights-and-collaborator-review"},
+      {"id": "VISUAL-NYCAC-EVENT", "project": "NYC Artist Coalition", "artifactClass": "public event or campaign-system artifact", "status": "collaborator-and-participant-review"},
+      {"id": "VISUAL-WOWLIST-PRODUCT", "project": "WOW List", "artifactClass": "public product screenshot or careful reconstruction", "status": "archive-and-shared-authorship-review"},
+      {"id": "VISUAL-CRS-SOURCE-MAP", "project": "Commercial Rent Stabilization", "artifactClass": "redrawn public-safe provenance diagram", "status": "legal-and-collaborator-review"},
+      {"id": "VISUAL-SUNDAY-DINNER", "project": "Sunday Dinner / 196", "artifactClass": "summary-only environment or hosting artifact", "status": "participant-protection-review"}
+    ],
+    "clearanceRequires": ["source", "rights", "people", "crop", "credit", "alt text", "caption boundary", "publication context"],
+    "boundary": "Unapproved photographs, participant identities, private records, and proprietary material remain outside the public repository."
+  },
+  "exactShaRelease": {
+    "checklistPath": "docs/knowledge-bank/launch-blockers.md",
+    "requiredLocalCommands": ["npm ci", "npm run check", "npm audit --omit=dev --audit-level=high", "npm run preflight:staging", "npm run preflight:production", "docker build"],
+    "requiredManualEvidence": ["responsive QA", "keyboard QA", "screen-reader spot check", "Jamie approval of exact SHA", "staging URL", "production image or deployment identifier"],
+    "requiredProductionEvidence": ["apex and www routing", "TLS", "health", "canonical URLs", "Open Graph", "resume SHA-256", "robots.txt", "sitemap.xml"],
+    "verifiedCandidate": null,
+    "productionVerification": null,
+    "boundary": "The open feature branch has passed repository checks, but no branch result is represented as Jamie-approved staging or production evidence."
+  },
+  "maintenance": {
+    "owners": [
+      {"area": "public truth, consent, and composition", "owner": "Jamie Burkart"},
+      {"area": "technical checks and release evidence", "owner": "implementing reviewer for the candidate SHA"},
+      {"area": "public safety and collective-credit review", "owner": "Jamie Burkart plus a context-appropriate reviewer"}
+    ],
+    "cadences": [
+      {"area": "source health and citation report", "maximumDays": 30},
+      {"area": "collaborator-proof queue", "maximumDays": 30},
+      {"area": "visual-rights queue", "maximumDays": 30},
+      {"area": "hiring-reader validation", "maximumDays": 90},
+      {"area": "eval complexity and retirement review", "maximumDays": 90}
+    ],
+    "reviewedAt": "2026-07-15",
+    "nextReviewBy": "2026-08-14",
+    "sourceHealth": {"command": "npm run report:citations", "requireOriginalAndArchiveAwareness": true, "transientNetworkFailureDoesNotRewriteHistoricalTruth": true},
+    "complexityBudget": {"maximumCriteriaInThisSuite": 10, "maximumPublicRoutesAdded": 0, "newFrameworksAllowed": 0, "requireRetirementReview": true},
+    "changePolicy": ["Retire or merge criteria that no longer change a decision.", "Keep external evidence gates explicit rather than lowering their definition.", "Require fresh exact-SHA evidence for release claims.", "Do not expose protected records to improve a score.", "Do not treat an evaluator's own assertion as independent evidence."]
+  }
+}

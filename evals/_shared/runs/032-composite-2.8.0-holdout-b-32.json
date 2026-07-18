@@ -1,0 +1,321 @@
+{
+  "schemaVersion": "2.2.0",
+  "id": "composite-2.8.0-holdout-b-32",
+  "iteration": 32,
+  "recordedAt": "2026-07-18T16:41:55.736Z",
+  "previousRunId": "composite-2.8.0-holdout-a-2.8-codex-multi-agent-31",
+  "previousRunDigest": "268cfdb1ab413a61e21119ddb7b9fac7613bab541a3f62f3025a763f2cdf8c58",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.8.0",
+    "digest": "8a69924c7e8345cf132a0366754b8bbbd2a103651d839c784801ea113a350036"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "ad2092b7af2f0c2c67659b7d51c9fe200665eb5c",
+    "tree": "e09d4210b335c727eb69544eba618a20f0e1b288",
+    "governedInputDigest": "77d765bc96bfae5e910c78f16a6d219e87f4877411ee8e56e212f104b31f14c8"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-b",
+    "sessionId": "019f760f-8725-7930-865d-938d927ac4c7",
+    "reviewerClass": "model-context",
+    "provider": "codex-multi-agent",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/holdout-b.md",
+    "promptDigest": "152dfaa5c7fad30491404fda1b56b61fd868d402fcb3522f588d548459c8e17c",
+    "attestation": {
+      "candidateCommit": "ad2092b7af2f0c2c67659b7d51c9fe200665eb5c",
+      "promptPath": "evals/_shared/holdout-b.md",
+      "runRecordsInspected": false,
+      "generatedReportsInspected": false,
+      "editsMade": false,
+      "attestedAt": "2026-07-18T16:38:34Z"
+    }
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "apps/www/src/components/Hero.tsx names Jamie Burkart and the target Technical Project Manager - Product Operations & Implementation role in the first viewport, then states the operating contribution and links directly to work, resume, and contact.",
+        "apps/www/src/app/work/technical-operations/page.tsx provides a role-specific proof map that connects operating capabilities to HJE, FairRentNYC, CallNYC, WOWList, Sunday Dinner, KC Town Hall, and the lab method."
+      ],
+      "risks": [
+        "The source-limited review did not include real-reader session evidence, so three-minute comprehension remains an external validation task."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 4,
+      "evidence": [
+        "apps/www/src/data/proofs.ts records status, support level, evidence class, public wording, source basis, guardrails, prohibited wording, protected boundaries, authorized surfaces, and review dates for consequential portfolio claims.",
+        "scripts/lib/projection-consistency.mjs rebuilds the public registry from canonical records, requires exact registry equality, binds selected high-risk projections to authorized surfaces, and rejects held claims, protected source identifiers, and superseded wording on public surfaces.",
+        "apps/www/src/content/work/callnyc.mdx uses claim-bound projections and citations while repeatedly limiting official affiliation, current-service status, and what the available sources establish."
+      ],
+      "risks": [
+        "Some prominent HJE, FairRentNYC, WOWList, and Sunday Dinner statements are careful public-safe syntheses rather than independently inspectable public artifacts.",
+        "The private-path detector has a verified punctuation-boundary bypass, and concurrent intake can misclassify semantic duplicates before the write lock is acquired."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "apps/www/src/components/Hero.tsx describes emerging, stakeholder-heavy work becoming requirements, workflows, documentation, decision trails, launch support, onboarding, and durable handoffs without diagnosing or blaming teams.",
+        "apps/www/src/app/about/page.tsx describes operating structure as still forming and explains Jamie's role as surfacing structure in emerging goals.",
+        "apps/www/src/data/work.ts consistently pairs what was unclear with what became usable, using concrete operating outcomes rather than deficit language about collaborators."
+      ],
+      "risks": [
+        "The phrase 'what was unclear' repeats across every work card and can feel formulaic even though the underlying descriptions remain humane and specific."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 4,
+      "evidence": [
+        "apps/www/src/app/page.tsx supplies an explicit Start here path, a role-specific proof route, selected proof points, case-study links, resume, and contact actions.",
+        "apps/www/src/components/CaseStudyLayout.tsx places the case narrative and at-a-glance role fit before citations, artifacts, links, credits, and the collapsed publication record.",
+        "apps/www/src/components/CaseStudyBlocks.tsx keeps Known / Open / Protected, care, source, and public-safety detail inside a keyboard-expandable Project record and publication boundaries section."
+      ],
+      "risks": [
+        "The homepage repeats proof through Start here, proof strip, capabilities, selected systems, transformations, and process sections, while work cards carry dense metadata that a hurried reader may not need."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4,
+      "evidence": [
+        "The case-study MDX files use What became usable and What I did sections that make Jamie's action and the operational result explicit before the reader reaches publication governance.",
+        "apps/www/src/data/work.ts gives every case a role, role-fit statement, what-became-usable statement, credits, evidence summary, and protected boundary.",
+        "apps/www/src/components/CaseStudyLayout.tsx renders representative artifacts, public links, credits, and a collapsed project record in the sequence required by the Chad-lens source check."
+      ],
+      "risks": [
+        "Several case pages remain long and text-heavy, and representative artifact cards are often descriptions of artifacts rather than artifacts a hiring reader can directly inspect."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 4,
+      "evidence": [
+        "apps/www/src/content/work/fair-rent-nyc.mdx explicitly says the sources do not turn coalition, policy, or campaign outcomes into one person's accomplishment and uses contributed, helped structure, stewarded, supported, and translated language.",
+        "apps/www/src/content/work/kc-town-hall.mdx separates Jamie's coordination role from specialist contractors, consultants, collaborators, neighbors, and collective Council action.",
+        "apps/www/src/data/work.ts supplies credits plus Known / Open / Protected boundaries for every work item, including omitted coalition notes, participant records, customer data, private analytics, and unapproved images."
+      ],
+      "risks": [
+        "scripts/lib/security-normalization.mjs does not detect a private path when the root follows common punctuation or an equals sign, weakening the automated protection of otherwise careful public boundaries.",
+        "Collaborator corroboration and artifact or media rights clearance remain explicitly external gates."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "apps/www/src/content/work/callnyc.mdx renders the cleared CallNYC project mark as a source-linked PublicArtifactFigure with alt text and an explicit non-affiliation boundary.",
+        "apps/www/public/artifacts/callnyc/callnyc-project-mark.png is a concrete project artifact, and apps/www/src/data/knowledge-bank/records.ts binds its cleared public-display status and limits.",
+        "The visual system uses a consistent restrained palette, readable hierarchy, and stable case-study structure across the app source."
+      ],
+      "risks": [
+        "Most Representative artifacts entries are text cards describing workflows, maps, or records rather than inspectable approved evidence.",
+        "HJE screenshots, CallNYC interface screenshots, WOWList screenshots, Sunday Dinner images, and additional archive media remain pending or intentionally withheld."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 5,
+      "evidence": [
+        "apps/www/src/app/work/technical-operations/page.tsx connects planning cycles, risk surfacing, cross-functional dependencies, onboarding, reporting, retrospectives, and handoffs to specific project proof paths.",
+        "The HJE, FairRentNYC, CallNYC, KC Town Hall, WOWList, and Sunday Dinner cases connect requirements, workflows, implementation, launch or adoption, documentation, and continuity to concrete usable results across private, civic, built-environment, and community contexts.",
+        "The knowledge-bank architecture and source-backed team-memory lab demonstrate maintainable records, review boundaries, decision lineage, correction paths, and transfer-oriented documentation as part of the work itself."
+      ],
+      "risks": [
+        "The concurrent duplicate-intake race in scripts/lib/knowledge-tools.mjs is a maintainability defect in an otherwise strong operational system."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 4,
+      "evidence": [
+        "apps/www/src/app/about/page.tsx directly connects Jamie's artistic and participatory practice to software, events, rooms, records, and public systems as environments people inhabit.",
+        "The About language grounds that connection in participation, memory, place, and relationships while keeping technical project management and implementation role clarity explicit.",
+        "apps/www/src/content/work/wowlist.mdx and apps/www/src/content/work/196-sunday-dinner.mdx provide concrete technical and social participation systems rather than generic creativity branding, without exposing protected educational records or professor quotations."
+      ],
+      "risks": [
+        "The cross-practice connection is strongest on About and must be reconstructed across mostly textual project pages; additional consent-cleared artifacts could make the continuity more inspectable."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 4,
+      "evidence": [
+        "evals/launch-readiness/evals.json defines seven separate decision dimensions, four exact human-authority policies, five reopen triggers, preserved disagreement, structured overrides, and a rule that acceptance is not completion.",
+        "scripts/lib/launch-evals.mjs requires every dimension, per-run evidence, unresolved-risk arrays, exact human authorities, dispositions, override provenance, disagreement review, reopen review, and all reopen triggers.",
+        "scripts/lib/eval-contract.mjs recomputes holdout scores, rejects criterion omissions and malformed scores, binds candidate and prompt attestations, normalizes reviewer labels, enforces deterministic-then-holdout sequencing, requires distinct sessions and prompts, preserves external human gates, and prohibits model production authority."
+      ],
+      "risks": [
+        "Reviewer independence is structurally attested but not cryptographically verified; any UUID-shaped session identifier and nonempty provider are accepted by the recorder.",
+        "Several governance text fields are validated for presence rather than semantic substance, and launch approval or deployment observations can be self-asserted as structured strings even though composite external gates correctly remain open."
+      ]
+    }
+  ],
+  "blockingFindings": [
+    "scripts/lib/security-normalization.mjs uses a private-path regex that requires start-of-string, quote, whitespace, or colon immediately before a filesystem root. Direct local probes returned false for '(/Users/jamie/private.txt)' and 'path=/Users/jamie/private.txt'. Because scripts/check-public-safety.mjs, scripts/lib/projection-consistency.mjs, and scripts/lib/citation-validation.mjs rely on this helper for production-facing content, a private filesystem path in ordinary MDX punctuation can bypass the declared public-safety gate."
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "The target role, Jamie's operating contribution, and the fastest proof routes are immediate and consistent across the homepage, technical-operations page, resume, and case-study metadata.",
+        "evidence": [
+          "apps/www/src/components/Hero.tsx names the role, Jamie, the operating contribution, and direct work, resume, and contact actions.",
+          "apps/www/src/app/work/technical-operations/page.tsx maps role responsibilities to eight concrete project or method proof paths."
+        ],
+        "unresolvedRisks": [
+          "No privacy-safe real-reader session evidence was available in this source-only review."
+        ]
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "The portfolio repeatedly identifies what Jamie did: translated stakeholder context, built workflows and public interfaces, coordinated implementation, maintained operating records, and created handoffs, while preserving collective credit.",
+        "evidence": [
+          "apps/www/src/content/work/harry-j-epstein.mdx, fair-rent-nyc.mdx, callnyc.mdx, and kc-town-hall.mdx each include explicit What I did sections.",
+          "apps/www/src/data/work.ts records role, capabilities, evidence, credits, and what became usable for every case."
+        ],
+        "unresolvedRisks": [
+          "Collaborator corroboration remains an external gate for collective and sensitive projects."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "The cases identify concrete outputs such as e-commerce workflows, campaign memory, resident issue pathways, a cold-shell phase and survey workflow, community event distribution, and recurring participation infrastructure.",
+        "evidence": [
+          "apps/www/src/data/work.ts pairs each case's uncertainty with a specific whatBecameUsable result.",
+          "apps/www/src/content/work/callnyc.mdx explains the issue pathways, district context, next steps, implementation, and archived evidence."
+        ],
+        "unresolvedRisks": [
+          "Most representative artifacts are descriptive text rather than inspectable approved media, and rights clearance remains open."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "The public record spans civic technology, coalition operations, small-business e-commerce, built-environment coordination, community platforms, participatory cultural infrastructure, and source-backed knowledge systems without collapsing them into one formal employment claim.",
+        "evidence": [
+          "apps/www/src/data/proofs.ts supplies bounded role and impact records across HJE, FairRentNYC, CallNYC, WOWList, Sunday Dinner, KC Town Hall, and the lab method.",
+          "apps/www/src/app/about/page.tsx states the domain range and explains the cross-practice operating method."
+        ],
+        "unresolvedRisks": [
+          "Some domain claims depend on public-safe archive summaries or Jamie-confirmed context rather than public primary artifacts."
+        ]
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "The portfolio carefully distinguishes Jamie's project, implementation, stewardship, co-founder, host, and general-contractor roles from collective outcomes, while the evaluation system reserves public-truth, dispute, override, reopen, and release authority for named humans.",
+        "evidence": [
+          "apps/www/src/data/work.ts and the case-study MDX files state role scope and collective credits case by case.",
+          "evals/launch-readiness/evals.json and scripts/lib/eval-contract.mjs keep four human authority paths and all required external gates explicit, with productionReady fixed false for composite evaluation."
+        ],
+        "unresolvedRisks": [
+          "Jamie approval, collaborator corroboration, rights clearance, and exact-SHA staging verification remain open and cannot be supplied by this model-context review.",
+          "Structured launch approval evidence is not itself proof that the named human supplied it."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "Canonical claims, public projections, citation occurrences, registry generation, protected locators, corrections, and public surfaces are connected by deterministic validators and careful public wording, but the private-path gate has a confirmed bypass.",
+        "evidence": [
+          "scripts/lib/citation-validation.mjs validates source, claim, occurrence, citation order, visibility, and does-not-establish boundaries.",
+          "scripts/lib/projection-consistency.mjs requires exact public-registry regeneration and checks held claims, protected source identifiers, surface authorization, and correction drift.",
+          "A direct source-local probe of containsPrivatePath returned false for punctuation- and equals-prefixed /Users paths."
+        ],
+        "unresolvedRisks": [
+          "Private filesystem paths can evade production-facing scanners when preceded by common punctuation or equals signs.",
+          "Semantic duplicate classification is computed before the intake write lock, so concurrent same-source leads can both remain captured.",
+          "No run records, command logs, generated reports, or prior scores were inspected, as required by this holdout."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "The private-path bypass is blocking for this review; duplicate-intake concurrency, limited visual artifacts, self-attested model-context identity, and all named external human and deployment gates remain non-final risks.",
+        "evidence": [
+          "scripts/lib/security-normalization.mjs contains the boundary-limited regex used by the public-safety, projection, and citation validators.",
+          "scripts/lib/knowledge-tools.mjs performs duplicate detection in createIntakeReceipt before writeIntakeReceipt acquires its lock and rechecks only receipt-ID collisions during the write.",
+          "evals/_shared/contract.json lists five external gates and states that models have no final release authority."
+        ],
+        "unresolvedRisks": [
+          "Private-path punctuation bypass must be fixed and regression-tested before acceptance for review.",
+          "Concurrent intake should re-evaluate canonical URL or normalized title/project duplicates inside the write lock.",
+          "Five privacy-safe reader sessions, collaborator corroboration, artifact and media rights clearance, exact-candidate staging verification, Jamie's exact production-SHA approval, and post-deployment smoke evidence remain outside this judgment."
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked. This model-context holdout does not promote any claim and leaves source, consent, and public-safety approval with Jamie Burkart.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "Not invoked by an identified collaborator in this source-limited review; the publication-hold path remains open and cannot be waived by this judgment.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "No override was supplied or inferred. Any future human override must preserve its rationale, evidence, and resulting boundary changes in the governed record.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "All governed triggers remain active. This revision-required judgment may be reopened after the blocking safety defect changes or whenever another listed trigger occurs.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "All five triggers were reviewed. New or contradictory evidence could change claim support or this defect assessment; changed consent or rights could withdraw public artifacts or wording; a substantiated attribution dispute must place affected material on human hold; source decay or corrected provenance could weaken citations or require revised boundaries; and a changed target role or public surface would require rescoring role fit, hierarchy, authorization, and risk. No trigger is waived or closed by this model-context judgment.",
+    "overrides": [],
+    "openDisagreements": [],
+    "disagreementReview": "No prior reviewer judgment, collaborator objection, or human decision was available within the physically source-limited bundle, so there is no concrete disagreement to record and no basis to infer consensus. The blocking private-path finding is this holdout's independent judgment and remains subject to the governed human override and reopen paths."
+  },
+  "openDisagreements": [],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new or contradictory evidence",
+    "changed consent or rights",
+    "a substantiated attribution dispute",
+    "source decay or corrected provenance",
+    "a changed target role or public surface"
+  ],
+  "decision": {
+    "status": "revision-required",
+    "weightedScore": 4.24,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "The candidate is highly legible, operationally credible, careful with evidence and collective credit, and numerically clears the weighted qualitative target at 4.24 with every criterion at or above its floor. It is not accepted for pull-request review in this holdout because the verified punctuation-boundary bypass can let a private filesystem path evade the production-facing safety checks. The duplicate-intake race, text-heavy visual proof, self-attested reviewer identity, and still-open human and deployment gates remain recorded risks. This judgment does not claim human approval or production readiness.",
+  "recordDigest": "18374a50b9f19ce33dfee32d77bca2c28c19aa077501a501452eb8c763ce5362"
+}

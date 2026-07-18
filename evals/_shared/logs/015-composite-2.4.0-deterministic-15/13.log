@@ -1,0 +1,37 @@
+
+> test:eval-contract
+> node --test scripts/tests/eval-contract.test.mjs
+
+✔ shared contract governs exactly the three canonical suites (2.8925ms)
+✔ shared contract executes every automatable launch hard gate (0.18325ms)
+✔ governed digest includes all app source and excludes generated results (84.658125ms)
+✔ stale contract and candidate digests are rejected (3.611875ms)
+✔ hard-coded pass without the full command set is rejected (0.710625ms)
+✔ command status must agree with its actual exit code (2.94725ms)
+✔ deterministic records require canonical runner and captured output provenance (1.954209ms)
+✔ holdouts must be independent, blind, normalized, and prompt-bound (1.667083ms)
+✔ holdout records require explicit model-context provenance bound to candidate and prompt (0.958583ms)
+✔ top-level disagreement, override, and reopen records must match the decision record (0.903208ms)
+✔ unknown, duplicate, missing, out-of-range, and evidenceless scores are rejected (1.560625ms)
+✔ declared weighted score and an unsupported acceptance are recomputed from actual results (1.130542ms)
+✔ a human hold remains valid even when numerical scores pass (1.320792ms)
+✔ blocking findings and incomplete decision governance prohibit acceptance (0.728292ms)
+✔ required human gates cannot disappear from an accepted record (2.476791ms)
+✔ run records form an ordered hash chain (0.971542ms)
+✔ record mutation invalidates its own digest (1.867292ms)
+✔ two deterministic passes and two unchanged independent holdouts meet the review stop (66.224541ms)
+✔ a failed deterministic run resets the consecutive pass streak (139.610625ms)
+✔ one reviewer cannot certify twice by changing label case or Unicode (87.759084ms)
+✔ a later rejected holdout resets the current acceptance phase (67.3425ms)
+✔ deterministic and holdout records must bind the same commit and tree (131.034833ms)
+✔ a contract version change resets old passes (67.944709ms)
+✔ a model cannot grant production readiness (2.229ms)
+✔ candidate commit and tree are verified by the record validator (100.726958ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 989.269125

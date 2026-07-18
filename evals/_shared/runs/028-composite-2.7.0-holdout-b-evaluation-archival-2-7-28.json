@@ -1,0 +1,415 @@
+{
+  "schemaVersion": "2.2.0",
+  "id": "composite-2.7.0-holdout-b-evaluation-archival-2-7-28",
+  "iteration": 28,
+  "recordedAt": "2026-07-18T15:53:59.194Z",
+  "previousRunId": "composite-2.7.0-holdout-a-public-sector-editorial-2-7-27",
+  "previousRunDigest": "086e08332a253634d71bf6506c5412038d8c0a0cdc059f77d6abfdfa520af7f3",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.7.0",
+    "digest": "0a1c0559339fbdb4de6af0923e4f19e5b4c1db33c41ee9ad70f2a9dde86763ac"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "ccca65166d5b99b61d309d5134b3bd386e3163d8",
+    "tree": "30e72d7b911b0df3413dd7353f0eec96aabe4b15",
+    "governedInputDigest": "df7639b5f9eccac6fedfddac5b99f33fd3108ee17761fba5e8f3477b7a5d6b71"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-b-evaluation-archival-2-7",
+    "sessionId": "019f75e2-3795-7713-8a37-51c0711d88e7",
+    "reviewerClass": "model-context",
+    "provider": "codex-multi-agent",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/holdout-b.md",
+    "promptDigest": "152dfaa5c7fad30491404fda1b56b61fd868d402fcb3522f588d548459c8e17c",
+    "attestation": {
+      "candidateCommit": "ccca65166d5b99b61d309d5134b3bd386e3163d8",
+      "promptPath": "evals/_shared/holdout-b.md",
+      "runRecordsInspected": false,
+      "generatedReportsInspected": false,
+      "editsMade": false,
+      "attestedAt": "2026-07-18T15:49:34Z"
+    }
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "/ - apps/www/src/components/Hero.tsx:9-23 names Technical Project Manager - Product Operations & Implementation, Jamie's operating contribution, and immediate work, resume, and contact paths.",
+        "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:84-174 maps the target role to team operations and project proof."
+      ],
+      "risks": [],
+      "rationale": "Role, contribution, and next proof step are immediate and specific."
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 4,
+      "evidence": [
+        "/work/callnyc - apps/www/src/content/work/callnyc.mdx:1-116 uses governed claims, citations, a cleared artifact, and explicit unofficial/current-use boundaries.",
+        "scripts/lib/citation-validation.mjs:43-231 checks graph references, projection authorization, source order, non-public URLs, private paths in canonical records, and protected-locator absence.",
+        "scripts/lib/projection-consistency.mjs:76-187 rejects exact generated-registry drift and unauthorized, held, non-public, protected, or superseded projections."
+      ],
+      "risks": [
+        "Encoded protected locators can evade literal public-registry and public-corpus checks.",
+        "Recursive private-path normalization is not applied to the complete shipped public corpus.",
+        "Production smoke can accept an arbitrary resume digest rather than evidence of the delivered artifact."
+      ],
+      "rationale": "The public claim layer is unusually careful and inspectable, but several fail-closed evidence boundaries remain incomplete."
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "/ - apps/www/src/components/Hero.tsx:15-23 frames emerging, stakeholder-heavy work as requirements, workflows, documentation, launch support, onboarding, and handoffs.",
+        "/about - apps/www/src/app/about/page.tsx:20-34 describes forming operating structure without blaming teams."
+      ],
+      "risks": [],
+      "rationale": "The language makes under-formed structure normal, actionable, humane, and professionally precise."
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 4,
+      "evidence": [
+        "/ - apps/www/src/app/page.tsx:44-83 provides a labeled quick path for hiring readers and collaborators.",
+        "Case-study routes - apps/www/src/components/CaseStudyBlocks.tsx:9-35 supplies an At a glance block, while lines 151-172 collapse secondary publication governance by default."
+      ],
+      "risks": [
+        "The homepage and role-fit proof surface remain information-dense, with repeated project maps and operating-language lists."
+      ],
+      "rationale": "The main route is clear and secondary governance is well layered, though some repetition remains."
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 5,
+      "evidence": [
+        "/work/callnyc - apps/www/src/content/work/callnyc.mdx:47-106 states Jamie's action, what became usable, outcome evidence, and transferable role proof before archival detail.",
+        "Case-study routes - apps/www/src/components/CaseStudyLayout.tsx:22-56 keeps summary and principal narrative ahead of representative artifacts, links, credits, and collapsed project boundaries."
+      ],
+      "risks": [],
+      "rationale": "Jamie, usable results, and hiring relevance are visible without forcing readers through the archival governance layer."
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 5,
+      "evidence": [
+        "/work/fair-rent-nyc metadata - apps/www/src/data/work.ts:238-275 explicitly identifies collective civic work, collaborator credits, approval needs, and protected omissions.",
+        "Case-study routes - apps/www/src/components/CaseStudyBlocks.tsx:176-189 renders collaborator credits separately from Jamie's role."
+      ],
+      "risks": [],
+      "rationale": "Jamie's contribution, collective agency, approval state, and protected absences are mutually clear."
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "/work/callnyc - apps/www/src/content/work/callnyc.mdx:55-75 renders one cleared, source-linked project mark with an affiliation boundary.",
+        "Case-study routes - apps/www/src/components/CaseStudyBlocks.tsx:43-62 renders most representative artifacts as descriptive cards rather than inspectable work artifacts.",
+        "apps/www/src/data/work.ts:137-142 and 339-343 say screenshots remain pending for flagship cases."
+      ],
+      "risks": [
+        "Most flagship proof remains text-heavy and relies on representative descriptions rather than cleared visual artifacts."
+      ],
+      "rationale": "The system is coherent and one decisive artifact is inspectable, but the visual proof set remains limited."
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 5,
+      "evidence": [
+        "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:10-74 connects delivery coordination, risks, planning rhythms, dependencies, onboarding, reporting, and maintenance to a proof map.",
+        "/ - apps/www/src/app/page.tsx:149-166 presents a clear Clarify to Structure to Build to Document to Transfer operating method."
+      ],
+      "risks": [],
+      "rationale": "The portfolio consistently links requirements, workflows, launch support, adoption, documentation, and handoffs to specific contexts."
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 5,
+      "evidence": [
+        "/about - apps/www/src/app/about/page.tsx:36-43 directly connects artistic, civic, technical, and social practice through inhabited systems, participation, memory, place, and relationships.",
+        "/work and case-study metadata - apps/www/src/data/work.ts:372-440 and 441-520 preserve concrete community-platform and participation-infrastructure examples without exposing protected educational records."
+      ],
+      "risks": [],
+      "rationale": "A restrained public threshold explains how artistic and participatory practice changes Jamie's operating systems without displacing role clarity."
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 3,
+      "evidence": [
+        "evals/launch-readiness/evals.json:24-76 defines seven dimensions, four human authorities, five reopen triggers, disagreement preservation, and structured overrides.",
+        "scripts/lib/launch-evals.mjs:316-395 validates dimension, authority-log, disagreement, override, and reopen record structure.",
+        "Read-only QA showed validateDecisionRecord returned no errors for an override with humanAuthority='automated judge', evidence=[''], and boundaryChanges=[]."
+      ],
+      "risks": [
+        "An invoked model-attributed override can pass validation without substantive evidence or resulting boundary changes.",
+        "Acceptance records can therefore preserve the appearance of human authority while violating the declared authority boundary."
+      ],
+      "rationale": "The decision vector and authority policy are visible, but override authority and provenance enforcement remain incomplete, matching the score-3 anchor."
+    }
+  ],
+  "blockingFindings": [
+    {
+      "id": "HOB-270-01",
+      "severity": "blocking",
+      "title": "Invoked overrides do not fail closed on human authority or substantive provenance",
+      "evidence": [
+        "scripts/lib/launch-evals.mjs:367-380 only requires nonempty humanAuthority/rationale, a nonempty evidence array, and an array for boundaryChanges; it does not reject a model authority, blank evidence entries, or empty resulting changes.",
+        "Read-only QA constructed humanAuthority='automated judge', evidence=[''], boundaryChanges=[]; validateDecisionRecord returned []."
+      ],
+      "impact": "A model judgment can be represented as a valid override even though policy reserves overrides to a human reviewer with rationale, evidence, and resulting boundary changes.",
+      "requiredRemediation": "Require an explicitly human, policy-authorized override identity; validate every evidence entry as substantive text; require substantive resulting boundary changes when an override is invoked; add rejecting mutation tests."
+    },
+    {
+      "id": "HOB-270-02",
+      "severity": "blocking",
+      "title": "An approved evidence-root symlink can relocate retained evidence outside the repository",
+      "evidence": [
+        "scripts/lib/repo-evidence-path.mjs:37-43 checks the real candidate only relative to the real approved root, but never checks that the real approved root remains under the real repository root.",
+        "Read-only temporary-directory QA symlinked repo/approved to an external directory; resolveRepoEvidencePath accepted approved/capture.log."
+      ],
+      "impact": "Command logs or browser evidence can resolve outside approved repository roots while still satisfying path and digest validation.",
+      "requiredRemediation": "Resolve the repository root and each approved root, reject approved roots that escape the real repository root, and add an approved-root-symlink mutation test."
+    },
+    {
+      "id": "HOB-270-03",
+      "severity": "blocking",
+      "title": "Recursive private-path rejection is not applied to the complete shipped public corpus",
+      "evidence": [
+        "scripts/lib/security-normalization.mjs:13-40 implements recursive percent decoding, Unicode normalization, and fail-closed private-path detection.",
+        "scripts/lib/citation-validation.mjs:211 applies containsPrivatePath only to the canonical knowledgeBank object.",
+        "scripts/check-public-safety.mjs:184-216 scans shipped files with literal regular expressions and never calls containsPrivatePath; scripts/check-knowledge-bank.mjs:255-260 and 405-410 likewise use literal path patterns."
+      ],
+      "impact": "A recursively encoded private filesystem path placed directly in TSX, MDX, public data, proofs, or public-safe documentation can bypass the integrated gates and ship in HTML or client bundles.",
+      "requiredRemediation": "Apply containsPrivatePath to every shipped/public text corpus and generated public registry input, with integration tests for deeply encoded paths in TSX, MDX, proofs, and public JSON."
+    },
+    {
+      "id": "HOB-270-04",
+      "severity": "blocking",
+      "title": "Production smoke accepts a blocking robots policy and an unverified resume digest",
+      "evidence": [
+        "scripts/lib/launch-evals.mjs:115 checks only that resume SHA-256 has 64 hexadecimal characters and does not bind it to the committed or fetched resume.",
+        "scripts/lib/launch-evals.mjs:130-141 requires an Allow: / line and rejects only an exact Disallow: / line; it does not reject Disallow: /* or evaluate the applicable production user-agent policy.",
+        "Read-only QA supplied resume SHA-256='b' repeated 64 times and robots='User-agent: *\\nDisallow: /*\\nAllow: /'; validateGateEvidence returned []."
+      ],
+      "impact": "A launch run can record production-smoke success while most routes remain non-indexable and without proof that the production resume was successfully delivered or matched the candidate artifact.",
+      "requiredRemediation": "Bind the observed resume body digest and successful HTTP status to the committed artifact, parse or exact-match the production robots policy for the relevant user agent, and cross-bind smoke observations to the approved deployment identifier and candidate SHA."
+    },
+    {
+      "id": "HOB-270-05",
+      "severity": "blocking",
+      "title": "Encoded protected locators evade public registry and public-surface checks",
+      "evidence": [
+        "docs/knowledge-bank/citational-care.md:91-95 forbids opaque protected locators from public-registry.json, HTML, RSC payloads, and client bundles.",
+        "scripts/lib/citation-validation.mjs:216-218 checks protected locators with literal publicJson.includes.",
+        "scripts/lib/projection-consistency.mjs:10-12 and 171-180 normalize Unicode and whitespace but do not recursively URL-decode before searching for protected locator IDs."
+      ],
+      "impact": "A percent-encoded protected locator can enter a public citation field or public source file, remain decodable by a reader or client, and evade both boundary checks.",
+      "requiredRemediation": "Recursively decode and security-normalize the generated public registry and complete public corpus before comparing every protected source and locator identifier; add encoded and Unicode mutation tests."
+    },
+    {
+      "id": "HOB-270-06",
+      "severity": "blocking",
+      "title": "The deterministic runner does not reverify the frozen candidate after command execution",
+      "evidence": [
+        "scripts/run-composite-eval.mjs:24-29 compares the worktree's governed digest with HEAD only before running commands.",
+        "scripts/run-composite-eval.mjs:45-69 then executes every required command, and lines 112-136 record and validate the original committed digest without recomputing current governed inputs."
+      ],
+      "impact": "A command that changes a governed file can make later commands test a mixed or modified worktree while the accepted record remains attributed to the original exact commit.",
+      "requiredRemediation": "Recompute the governed worktree digest after every command or at minimum before record construction, reject any drift from the candidate commit, and add a mutation test with a command that writes a governed file and exits zero."
+    }
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "Strong. Jamie's target technical project management and product-operations role is immediate and remains connected to a fast proof path.",
+        "evidence": [
+          "/ - apps/www/src/components/Hero.tsx:9-35",
+          "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:84-174"
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "Strong. Case studies use actor-forward language and show translation, coordination, building, documentation, and handoff activity.",
+        "evidence": [
+          "/work/callnyc - apps/www/src/content/work/callnyc.mdx:47-53",
+          "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:10-74"
+        ],
+        "unresolvedRisks": [
+          "Some project proof remains resume-backed or public-safe summary rather than artifact-backed."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "Strong. The portfolio repeatedly names public guidance, workflows, source maps, decision trails, interfaces, onboarding, and durable handoffs as usable outcomes.",
+        "evidence": [
+          "/ - apps/www/src/app/page.tsx:104-137",
+          "/work/callnyc - apps/www/src/content/work/callnyc.mdx:77-106"
+        ],
+        "unresolvedRisks": [
+          "Only a small number of real artifacts are visually inspectable."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "Strong and broad across civic technology, legacy business operations, cultural infrastructure, community platforms, and source-backed knowledge systems.",
+        "evidence": [
+          "/ - apps/www/src/app/page.tsx:15-41",
+          "apps/www/src/data/work.ts:89-440"
+        ],
+        "unresolvedRisks": [
+          "Real-reader validation and collaborator corroboration remain external gates."
+        ]
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "The public portfolio describes credible leadership and stewardship roles, and policy names the required human authorities, but invoked override enforcement is not fail-closed.",
+        "evidence": [
+          "apps/www/src/data/work.ts:90-275",
+          "evals/launch-readiness/evals.json:34-57",
+          "scripts/lib/launch-evals.mjs:337-380"
+        ],
+        "unresolvedRisks": [
+          "HOB-270-01 permits model-attributed overrides.",
+          "Jamie approval of the exact production SHA remains open.",
+          "Collaborator corroboration and attribution-hold authority remain external."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "Moderately strong. Exact registry drift, citation graph closure, source boundaries, candidate commit/tree/digest, and reviewer separation are checked, but encoded-public-surface and retained-evidence bypasses remain.",
+        "evidence": [
+          "scripts/lib/citation-validation.mjs:43-231",
+          "scripts/lib/projection-consistency.mjs:76-187",
+          "scripts/lib/eval-contract.mjs:211-342"
+        ],
+        "unresolvedRisks": [
+          "HOB-270-02 permits approved-root symlink escape.",
+          "HOB-270-03 permits recursively encoded private paths on public surfaces.",
+          "HOB-270-04 permits semantically invalid smoke evidence.",
+          "HOB-270-05 permits encoded protected-locator leakage.",
+          "HOB-270-06 permits post-freeze governed-input drift during deterministic commands."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "Revision is required before pull-request-review acceptance. Six software-assurance blockers and all governed external human gates remain open.",
+        "evidence": [
+          "Blocking findings HOB-270-01 through HOB-270-06",
+          "evals/_shared/contract.json:92-110",
+          "docs/evals/composite-governance.md:76-83"
+        ],
+        "unresolvedRisks": [
+          "five privacy-safe real-reader sessions",
+          "collaborator corroboration",
+          "artifact and media rights clearance",
+          "staging verification of the exact candidate SHA",
+          "Jamie approval of the exact production SHA"
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked by this model-context review; public-truth and consent authority remains human and open.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "No collaborator dispute was available in permitted review inputs; the publication-hold authority remains intact and external.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "No override was invoked. HOB-270-01 blocks acceptance because code does not reliably enforce this human-only authority.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "New software-assurance evidence reopens the candidate for revision; future human reopen authority remains unchanged.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenTriggerReview": [
+      {
+        "trigger": "new or contradictory evidence",
+        "disposition": "triggered",
+        "review": "Six reproducible source-level assurance findings require revision and a fresh deterministic and holdout sequence."
+      },
+      {
+        "trigger": "changed consent or rights",
+        "disposition": "not observed",
+        "review": "No consent or rights change was present in permitted repository inputs; rights clearance remains an external human gate."
+      },
+      {
+        "trigger": "a substantiated attribution dispute",
+        "disposition": "not observed",
+        "review": "No substantiated dispute was present in permitted repository inputs; affected collaborators retain publication-hold authority."
+      },
+      {
+        "trigger": "source decay or corrected provenance",
+        "disposition": "not resolved by this review",
+        "review": "No external source-health access was performed; the trigger remains active for future human or source-health review."
+      },
+      {
+        "trigger": "a changed target role or public surface",
+        "disposition": "not observed",
+        "review": "The declared target role and canonical public routes remain stable; any future change requires full projection and reader-path review."
+      }
+    ],
+    "reopenReview": "All five governed triggers were reviewed exactly once. New software-assurance evidence is triggered; the other four remain unwaived human-governance paths.",
+    "overrides": [],
+    "overrideReview": {
+      "invoked": false,
+      "review": "No Warren Sack override was invoked. The weighted score does not override blocking findings, criterion floors, disagreement, or human gates."
+    },
+    "openDisagreements": [],
+    "disagreementReview": "No external human, collaborator, or second-reviewer disagreement was available in permitted inputs. The judgment preserves the internal tension that the weighted score exceeds 4.2 while the Sack floor and blocking findings still require rejection; the aggregate cannot erase that result."
+  },
+  "openDisagreements": [],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new or contradictory evidence",
+    "changed consent or rights",
+    "a substantiated attribution dispute",
+    "source decay or corrected provenance",
+    "a changed target role or public surface"
+  ],
+  "decision": {
+    "status": "revision-required",
+    "weightedScore": 4.44,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "Revision required. The portfolio itself is highly legible, careful, collective, operationally credible, and above the weighted target, but the frozen Sack minimum is missed and six archival-governance or software-assurance boundaries are not fail-closed. This is a pull-request-review judgment only and grants no production authority.",
+  "recordDigest": "a2bb1c208152180fe9e720b8393b31474d078dc25154ddbccf910242f7f58821"
+}

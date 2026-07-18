@@ -1,0 +1,5 @@
+
+> check:routes
+> node scripts/check-routes.mjs
+
+Route check passed.

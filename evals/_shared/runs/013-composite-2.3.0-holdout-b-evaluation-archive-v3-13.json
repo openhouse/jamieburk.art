@@ -1,0 +1,275 @@
+{
+  "schemaVersion": "2.1.0",
+  "id": "composite-2.3.0-holdout-b-evaluation-archive-v3-13",
+  "iteration": 13,
+  "recordedAt": "2026-07-18T00:56:41.288Z",
+  "previousRunId": "composite-2.3.0-holdout-a-public-sector-editorial-v3-12",
+  "previousRunDigest": "572ac9a8566b8703c1b628fd4bcec91aaa26642b91e4b60f6c515d302d4e96b1",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.3.0",
+    "digest": "caaaf417a45f093e6373b22b793910a0ae3d89bbf4e22359edc430aadb23c656"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "461974aa8bdda717d78bc5a97976b02f28036c9e",
+    "tree": "2823f1813ddb9bccf930485f36929b4605e9df1f",
+    "governedInputDigest": "97531717e548ee8d7da4f4588e526ea73a3b207cf1670e11d05777464f4953f7"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-b-evaluation-archive-v3",
+    "sessionId": "019f6e0a-062d-70b1-941f-cda718726747",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/holdout-b.md",
+    "promptDigest": "2da702d984b1dc7a3d0210e0f623a37d2b12cde7f592373052da97029a3cb21d"
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "The public candidate identifies the target role and connects it to concrete technical and operating work."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 4,
+      "evidence": [
+        "The candidate has normalized claims, evidence relationships, public citations, retained command logs, and candidate digests."
+      ],
+      "risks": [
+        "Private-path normalization and canonical URL equivalence remain bypassable in edge cases."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "The content and evaluation model preserve emerging work and protected absences without converting uncertainty into failure."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 4,
+      "evidence": [
+        "The public site is composed for readers rather than exposing the whole bank, and the evaluation reports are separated from public routes."
+      ],
+      "risks": [
+        "Binary command logs are difficult to review in Git diffs."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4,
+      "evidence": [
+        "Prominent surfaces generally make Jamie's action and usable result explicit."
+      ],
+      "risks": [
+        "The composite protocol can accept without executing every launch hard gate."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 5,
+      "evidence": [
+        "The canonical knowledge records and public pages strongly preserve collective authorship and bounded authority."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "Responsive design is coherent, but browser and accessibility behavior are not part of the canonical composite command set."
+      ],
+      "risks": [
+        "A deterministic acceptance can be recorded without browser-level evidence."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 5,
+      "evidence": [
+        "The repository contains repeatable validation, reporting, intake, projection, and build workflows."
+      ],
+      "risks": [
+        "Some release gates remain documented rather than enforced by the composite runner."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 4,
+      "evidence": [
+        "The system preserves artistic and civic context while converting evidence into usable operating structures."
+      ],
+      "risks": [
+        "Generated evaluation prose influences one knowledge score despite exclusion from the governed candidate digest."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 3,
+      "evidence": [
+        "Decision dimensions and human authority are explicit, but launch-run validation, holdout provenance, generated-input separation, and normalization boundaries can still be self-certified or bypassed."
+      ],
+      "risks": [
+        "The protocol can report acceptance without a sufficiently trustworthy chain from evidence and evaluator identity to decision."
+      ]
+    }
+  ],
+  "blockingFindings": [
+    "The composite runner does not enforce all launch hard gates, including staging and production preflights, dependency audit, and responsive accessibility browser execution.",
+    "Launch-run validation accepts stale candidate identity, fractional and evidence-free score records, and trusted hard-gate strings instead of exact evidence.",
+    "A knowledge evaluator reads a generated KC Town Hall run narrative even though generated run directories are excluded from the governed candidate digest.",
+    "Holdout provenance can be self-asserted through arbitrary session and label input, while top-level disagreements and overrides are not required to match the decision record.",
+    "Private-path and duplicate-URL normalization can be bypassed through repeated encoding, Unicode slash variants, UNC forms, or tracking parameters.",
+    "Retained command logs are marked binary without a human-readable, digest-bound companion."
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "The public candidate strongly supports the intended technical project management and product-operations role.",
+        "evidence": [
+          "The homepage and Technical Operations surfaces make role fit concrete."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "The repository and site show documentation, coordination, implementation, evidence management, and release-governance action.",
+        "evidence": [
+          "Scripts and project pages connect operating practices to named work."
+        ],
+        "unresolvedRisks": [
+          "Composite acceptance does not yet execute every declared launch hard gate."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "The system produces a public portfolio, source-backed knowledge records, projections, reports, and validation outputs.",
+        "evidence": [
+          "The app and knowledge tooling are connected through canonical data and scripts."
+        ],
+        "unresolvedRisks": [
+          "A generated narrative can influence scoring outside the governed digest."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "The candidate demonstrates broad and relevant civic, cultural, technical, and archival practice.",
+        "evidence": [
+          "Canonical projects and source records span those domains."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "Human release, consent, dispute, and override authority are stated, but reviewer provenance remains locally self-attested.",
+        "evidence": [
+          "The Sack-lens authority log names four human actions and prohibits model final authority."
+        ],
+        "unresolvedRisks": [
+          "A single operator can fabricate labels and session identifiers without a stronger provenance receipt."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "The candidate retains logs, hashes, and source relationships, but several validators accept stale or evasively encoded inputs.",
+        "evidence": [
+          "Synthetic review probes identified stale launch candidates, fractional evidence-free scores, path encodings, and URL variants that pass existing guards."
+        ],
+        "unresolvedRisks": [
+          "The chain from executed launch evidence to accepted composite record is incomplete."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "The frozen candidate requires another implementation and review cycle.",
+        "evidence": [
+          "Six blocking findings remain and the Sack criterion is below its floor."
+        ],
+        "unresolvedRisks": [
+          "Launch enforcement, generated-input isolation, holdout provenance, normalization, readable logs, and external gates remain open."
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked; this review does not authorize promotion.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "No dispute was asserted; the publication-hold path remains available.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "No override was invoked; the rejection remains in force.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "Invoked by new adversarial evidence about evaluator and intake governance.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "New adversarial implementation evidence reopens the prior deterministic acceptance. No changed consent, attribution dispute, or source decay was established, and all such human-controlled paths remain live.",
+    "overrides": [],
+    "openDisagreements": [
+      "Tool-issued distinct model contexts provide useful separation, but local records alone cannot prove human identity or true independence.",
+      "Five external human and release gates remain open and cannot be satisfied by model evaluation."
+    ],
+    "disagreementReview": "The strong aggregate score does not erase the Sack floor failure or any blocking finding. Model-context separation is recorded only as such, and human release authority remains outside the protocol."
+  },
+  "openDisagreements": [
+    "Tool-issued distinct model contexts provide useful separation, but local records alone cannot prove human identity or true independence.",
+    "Five external human and release gates remain open and cannot be satisfied by model evaluation."
+  ],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new or contradictory evidence",
+    "changed consent or rights",
+    "a substantiated attribution dispute",
+    "source decay or corrected provenance",
+    "a changed target role or public surface"
+  ],
+  "decision": {
+    "status": "revision-required",
+    "weightedScore": 4.22,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "Candidate 461974aa has a strong public portfolio and substantial evidence infrastructure, but is not ready for PR review because the composite protocol can accept incomplete or stale launch evidence, consume mutable generated text, self-attest reviewer provenance, and miss path and URL evasions.",
+  "recordDigest": "933208070ee50cfaa390aadb4b4929e4c735bb9cdd9565925637683869fd698e"
+}

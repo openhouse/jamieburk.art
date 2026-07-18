@@ -35,6 +35,14 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run check:portfolio-evals
+npm run test:portfolio-evals
+npm run report:portfolio-evals
+npm run check:eval-contract
+npm run certify:eval-contract
+npm run test:eval-contract
+npm run test:browser-evals
+npm run check:projections
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -65,6 +73,70 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+Archive-production passes are evaluated as hard gates rather than informal
+notes. Run `npm run check:knowledge-evals`, `npm run test:knowledge-evals`, and
+`npm run report:knowledge-evals`. The latest Shared Drives pass is documented at
+`docs/knowledge-bank/projects/google-drive-shared-drives-production-2026-07-14.md`;
+the repository retains only public-safe records, never Shared Drive identifiers,
+private URLs, permissions, participant rows, or credentials.
+
+Daily knowledge work uses four small, local commands. Intake is a dry run unless
+`--write` is supplied; a receipt remains an unvalidated lead until it is
+integrated into the canonical graph.
+
+```bash
+npm run knowledge:intake -- --title "Source title" --project callnyc \
+  --kind public-url --reason "What this may establish" \
+  --url https://example.org/source
+npm run knowledge:query -- --type claim --project callnyc --active
+npm run knowledge:report -- --write
+npm run knowledge:projection-map -- --write
+npm run eval:run
+```
+
+The intake command rejects private paths, validates the record shape, assigns a
+stable ID, and preserves a repeated lead with a `duplicate` disposition. Query,
+report, and projection-map output distinguish sources, observations, memories,
+claims, inquiries, active projections, and held depth. Generated reports stay
+outside version control under `reports/generated/`.
+See `docs/knowledge-bank/daily-commands.md` for the complete intake and
+promotion boundary.
+
+`npm run eval:run` executes the frozen composite contract against a committed
+candidate and records command output digests. Context-separated blind judgments are
+recorded with `npm run eval:record-holdout -- --input /path/to/judgment.json
+--prompt evals/_shared/holdout-a.md --session stable-session-id`. Failed runs and
+rejected judgments remain in the hash-chained history. See
+`docs/evals/composite-governance.md`.
+
+Build each holdout from a source-only copy with prior runs, logs, and reports
+physically absent. Run `node scripts/digest-review-bundle.mjs --root
+/path/to/review-bundle`; the judgment must bind that digest, the candidate tree,
+and the governed-input digest. Session and provider attestations document
+model-context separation, not cryptographic identity proof.
+
+Use `npm run check:eval-records` for complete history validation and
+`npm run check:eval-contract` for contract structure plus an advisory stop-state
+report. `npm run certify:eval-contract` is the fail-closed certification gate;
+it succeeds only after two deterministic passes and two separately attested,
+prior-score-blind model-context holdouts accept one unchanged candidate. Raw
+command logs and normalized text copies are both retained. A model-context
+attestation records process separation; it is not proof of a human identity or
+substitute for the contract's external human gates.
+Deterministic records also retain the seven governed decision dimensions,
+evidence, unresolved risks, human-authority dispositions, disagreements,
+overrides, and reopen review. Those records describe automated coverage; only
+fresh holdouts and the named human authorities supply editorial judgment and
+release decisions.
+Structured human refusals, publication holds, and reopen decisions are binding
+and prevent acceptance regardless of score.
+
+The shipped resume PDF is generated from
+`docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-17.html`
+with `npm run generate:resume`. Public-safety checks compare extracted PDF text
+to the committed text projection and enforce the approved contact, CallNYC, and
+KC Town Hall language.
 
 ## Environment
 
@@ -115,8 +187,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body, UI, prose, and display headings. Use Oswald for labels,
+metadata, and compact civic emphasis. Do not commit or serve private,
+proprietary, or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -130,13 +203,40 @@ or serve private, proprietary, or unlicensed font files.
   Do not render that marker in production-facing pages; keep launch blockers in
   `docs/knowledge-bank/launch-blockers.md`.
 
-## Launch Blockers
+## Launch Readiness
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
-- Confirm production metadata points to `https://jamieburk.art`.
-- Confirm no private/proprietary fonts are committed or served.
+Approved contact details and public-use boundaries live in
+`docs/knowledge-bank/approval-register.md`. Cleared content gates and the
+remaining exact-commit release actions live in
+`docs/knowledge-bank/launch-blockers.md`. Re-run the complete checks for every
+production candidate; do not infer readiness from an earlier commit.
+
+The recursive agent evaluation suite lives in `evals/launch-readiness/`. Run
+`npm run check:launch-evals`, `npm run test:launch-evals`, and
+`npm run report:launch-evals`. Hard gates remain authoritative; weighted judge
+scores may improve clarity but may not override safety, consent, accessibility,
+or exact-commit release requirements.
+
+The complementary portfolio-effectiveness suite lives in
+`evals/portfolio-effectiveness/`. It evaluates hiring-reader comprehension,
+collaborator-backed role attribution, complete operating narratives, recent
+practice, consent-cleared visual evidence, exact-SHA release proof, and the
+maintainability of this evaluation system. Run `npm run check:portfolio-evals`,
+`npm run test:portfolio-evals`, and `npm run report:portfolio-evals`. A locally
+passing score does not stand in for human reader sessions, collaborator proof
+notes, artifact rights clearance, externally verified outcomes, or production
+evidence from the exact deployed commit.
+
+The shared contract in `evals/_shared/contract.json` binds all three suites to a
+versioned rubric digest and a governed-candidate digest. Run
+`npm run check:eval-contract`, `npm run test:eval-contract`, and
+`npm run report:eval-contract`. A valid recursive stop requires two passing
+deterministic runs and two independent, prior-score-blind holdouts on the same
+unchanged governed candidate. Generated run reports do not alter that digest.
+Changing a rubric version resets the pass and holdout streak. Acceptance for PR
+review never grants production approval.
+
+High-risk public projections are bound in the canonical knowledge bank to an
+approved claim ID, projection key, surface, source file, and required boundary
+language. `npm run check:projections` rejects a weakened canonical sentence or
+a public surface that bypasses its approved projection.

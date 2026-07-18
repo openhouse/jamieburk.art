@@ -17,8 +17,8 @@ export function References({ pageId }: ReferencesProps) {
     >
       <h2 id="sources-and-notes-heading">Sources and notes</h2>
       <p className="jb-endnotes-intro">
-        These notes preserve what each source supports and where its limits
-        remain. See something that needs correction? <Link href="/contact">Contact Jamie</Link>.
+        Sources supporting the claims above. Expand a source to review
+        its scope and limits. See something that needs correction? <Link href="/contact">Contact Jamie</Link>.
       </p>
       <ol>
         {references.map((reference) => (

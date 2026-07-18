@@ -94,10 +94,10 @@ export const proofClaims: ProofClaim[] = [
       "Vendor terms",
       "Sensitive operating practices"
     ],
-    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "workflow-mapping", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-18"
   },
   {
     id: "hje-revenue-growth-contribution",
@@ -137,8 +137,8 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
-    shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
+      "Built archived, unofficial CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York and not current city guidance.",
+    shortWording: "Built archived, unofficial CallNYC.org as an independent CouncilStat follow-on; not current city guidance",
     detailedPublicWording:
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
@@ -153,10 +153,45 @@ export const proofClaims: ProofClaim[] = [
       "Legal guidance"
     ],
     protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-11"
+    lastReviewed: "2026-07-18"
+  },
+  {
+    id: "callnyc-public-engagement-architecture",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "ai-assisted-archive-review"],
+    publicWording:
+      "Paired CallNYC's issue pathways with a public-engagement layer: 71 data-derived posts connected 61 issue pages across 16 service categories to an intended institutional audience of 26 sitting Council-member accounts.",
+    shortWording: "Built a source-backed public-engagement layer around 61 civic issue pathways",
+    detailedPublicWording:
+      "A 107-item authenticated public-account ledger documents how CallNYC connected resident-facing issue pathways to their intended institutional audience while preserving the distinction between outreach, member-authored response, and service outcomes.",
+    sourceBasis:
+      "Authenticated full-population review of the public CallNYC Posts and Replies surfaces, a 107-record public ledger, first-person contemporaneous role and feature posts, and official Council term records.",
+    sourceNote:
+      "The ledger dispositions all 110 observed profile-count slots through 107 recovered items and three explicit unresolved slots; it is not a platform export.",
+    whyItMatters:
+      "Makes Jamie's product and implementation work legible as an operating system for public data, resident pathways, and institutional engagement rather than a static visualization.",
+    guardrail:
+      "Treat the 26 accounts as intended audience, not reciprocal engagement; keep the separate eight-member authored-engagement floor distinct.",
+    doNotSay: [
+      "Twenty-six Council members engaged with or endorsed CallNYC",
+      "CallNYC helped a verified number of unique residents",
+      "The ledger is a complete X platform export",
+      "Jamie authored every CallNYC account post"
+    ],
+    protectedBoundaries: [
+      "Authentication and session material",
+      "Private messages and analytics",
+      "Unverified historical metrics",
+      "Individual authorship of shared-account posts"
+    ],
+    surfaces: ["homepage", "case-study"],
+    relatedProjects: ["callnyc"],
+    relatedCapabilities: ["public-engagement", "information-architecture", "civic-technology", "implementation"],
+    lastReviewed: "2026-07-18"
   },
   {
     id: "fair-rent-campaign-memory",
@@ -273,9 +308,9 @@ export const proofClaims: ProofClaim[] = [
       "Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.",
     shortWording: "Civic systems and coalition operations for NYC Artist Coalition",
     detailedPublicWording:
-      "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
+      "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability. He describes his contribution as also helping establish and produce a recurring participation system of public event pages, meetings in cultural spaces, practical support sessions, hearings, and campaign action.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "Approved resume language, public campaign surfaces, independent reporting, Jamie's bounded first-person account, and the public-safe 34-slot NYC Artist Coalition Facebook event census.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -284,6 +319,7 @@ export const proofClaims: ProofClaim[] = [
       "Jamie alone repealed the Cabaret Law",
       "Jamie alone created the Office of Nightlife",
       "Jamie alone passed nightlife enforcement reporting legislation",
+      "Do not claim Jamie individually produced or authored every coalition event",
       "Jamie speaks for every NYC Artist Coalition collaborator"
     ],
     protectedBoundaries: [
@@ -302,7 +338,7 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "wowlist-community-platform",
@@ -318,7 +354,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "WOWList reached roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, the archived public product surface, and a July 2026 public-safe aggregate audit of protected historical database snapshots.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -336,7 +373,39 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "wowlist-public-support-surface",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "ai-assisted-archive-review"],
+    publicWording:
+      "WOW List's shared public account became a direct support surface for feed navigation, event submission, local-calendar onboarding, and community lineage.",
+    shortWording: "Shared public support and onboarding for WOW List communities",
+    detailedPublicWording:
+      "The complete surviving account corpus includes six replies explaining feed scope, profile navigation, multi-list event submission, joining local calendars, and how NYCDIY related to WOW List and Sunday Dinner.",
+    sourceBasis:
+      "A 38-record authenticated public-post ledger and the six surviving public account replies.",
+    whyItMatters:
+      "Shows a community platform operating in public through support, onboarding, and relationship-aware explanation rather than only through feature delivery.",
+    guardrail:
+      "Attribute the replies to the shared account unless individual authorship is independently established; do not turn the social record into adoption or impact analytics.",
+    doNotSay: [
+      "Jamie personally wrote every WOW List reply",
+      "X was the platform's only support channel",
+      "The account record proves platform-wide adoption or impact"
+    ],
+    protectedBoundaries: [
+      "Account credentials and administrator history",
+      "Private messages",
+      "Private analytics",
+      "Individual teammate authorship without direct evidence"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["wowlist"],
+    relatedCapabilities: ["product-support", "onboarding", "community-platforms", "public-identity-systems"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -352,9 +421,10 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceBasis:
+      "Approved resume language, public community context, public event pages documenting the 100th dinner, an eight-week New York City rotation, and a civic sign-making potluck, a protected event ledger recording 345 numbered gatherings whose own summary records 2,783 meals served, a July 2026 aggregate audit that found a small unresolved difference, and a Jamie-authored residency onboarding workflow.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only, attribute 2,783 to the workbook's own summary, do not convert ledger rows or marks into unique attendees, and avoid turning community trust work into spectacle.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
@@ -371,7 +441,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -426,18 +496,24 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    shortWording: "Supported adaptive reuse planning and public-benefit documentation",
+      "Co-founded and project-managed a neighborhood-led adaptive reuse effort, serving as Phase One general contractor across a $189,629 cold-shell restoration; later City funding was appropriated but not disbursed.",
+    shortWording: "Co-founded and project-managed Phase One restoration and neighborhood-led planning",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie coordinated specialist construction teams across roofing and TPO membrane work, historic masonry, floor framing, water service, access, and site safety, while building a four-by-six neighborhood survey and contact workflow that helped turn daily site conversations into a public-benefit proposal.",
+    sourceBasis:
+      "Jamie's approved first-person role account, the protected 2019 CCED proposal and support-letter packet, and official Kansas City Council and CCED records.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Attribute the general-contractor title and Phase One completion to Jamie's direct account; the proposal independently names him as founder and project manager and documents scope and budget. Treat $189,629 as the proposal budget, distinguish Phase One from the full redevelopment, preserve specialist and collective credit, and retain the complete City funding lifecycle.",
     doNotSay: [
-      "Final funding received",
+      "Treating the appropriation as money transferred to or spent by the project",
+      "The full redevelopment was completed in 2019",
+      "The proposal independently names Jamie as general contractor",
+      "Jamie personally performed every trade task",
+      "The $189,629 is an independently audited final construction cost",
+      "Jamie alone secured the Council action",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "A complete explanation for the project's withdrawal"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -446,10 +522,47 @@ export const proofClaims: ProofClaim[] = [
       "Banking details",
       "Stakeholder details"
     ],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
-    relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    relatedCapabilities: ["construction-operations", "vendor-coordination", "participatory-research", "public-benefit-documentation", "stakeholder-context"],
+    lastReviewed: "2026-07-18"
+  },
+  {
+    id: "kc-town-hall-public-service-interface",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "ai-assisted-archive-review"],
+    publicWording:
+      "KC Town Hall used its shared public account as a recurring resident-service surface: 100 of 183 surviving records concern tire reports, pickups, and result reporting from 2019 through 2022.",
+    shortWording: "Built a recurring public intake and follow-through surface",
+    detailedPublicWording:
+      "A complete 183-record public-account ledger documents how KC Town Hall repeatedly solicited resident tire locations, coordinated pickups, and reported results through one shared public identity.",
+    sourceBasis:
+      "Authenticated full-population review of the public KC Town Hall Posts and Replies surfaces, a 183-record public-safe ledger, and public project posts spanning program launch through recurring result reports.",
+    sourceNote:
+      "The complete surviving profile population is not a platform export or proof that no earlier post was deleted.",
+    whyItMatters:
+      "Shows public-facing communications functioning as an operating interface for resident intake, service coordination, and accountable follow-through.",
+    guardrail:
+      "Treat the account as collective, the 100 records as workflow evidence rather than completed-service units, and project-reported tire or fee figures as unreconciled self-reporting.",
+    doNotSay: [
+      "Jamie authored every KC Town Hall post",
+      "Jamie alone performed every pickup",
+      "One hundred records equal one hundred completed pickups or households",
+      "The timeline is an audited service ledger",
+      "Visible social reactions measure historical impact"
+    ],
+    protectedBoundaries: [
+      "Resident addresses",
+      "Phone numbers",
+      "Direct messages",
+      "Private service records",
+      "Account credentials and analytics"
+    ],
+    surfaces: ["work-card", "case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: ["resident-intake", "service-coordination", "public-reporting", "implementation"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "source-backed-team-memory-method",
@@ -561,17 +674,29 @@ export function requireReadyOrCarefulProof(id: string): ProofClaim {
   return proof;
 }
 
+export function requireProofForSurface(id: string, surface: ProofSurface): ProofClaim {
+  const proof = requireReadyOrCarefulProof(id);
+  if (!proof.surfaces.includes(surface)) {
+    throw new Error(`Proof claim ${id} is not authorized for ${surface}`);
+  }
+  return proof;
+}
+
+export function selectProofIdsForSurface(ids: string[], surface: ProofSurface): ProofClaim[] {
+  return ids.map((id) => requireProofForSurface(id, surface));
+}
+
 export function selectProofs(surface: ProofSurface): ProofClaim[] {
   return getProofsForSurface(surface);
 }
 
 export const homepageProofs = [
   "career-operating-structure-14-years",
-  "hje-revenue-growth-contribution",
-  "fair-rent-campaign-memory",
+  "hje-modernization-stewardship",
+  "callnyc-public-engagement-architecture",
   "wowlist-community-platform",
-  "sunday-dinner-196-participation-infrastructure"
-].map(requireReadyOrCarefulProof);
+  "kc-town-hall-public-benefit-documentation"
+].map((id) => requireProofForSurface(id, "homepage"));
 
 export const resumeProofHighlights = [
   "career-operating-structure-14-years",
@@ -585,7 +710,7 @@ export const resumeProofHighlights = [
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "ai-evals-professional-development"
-].map(requireReadyOrCarefulProof);
+].map((id) => requireProofForSurface(id, "resume"));
 
 export const technicalOperationsProofRows = [
   {
@@ -630,5 +755,5 @@ export const technicalOperationsProofRows = [
   }
 ].map((row) => ({
   ...row,
-  proofs: row.proofIds.map(requireReadyOrCarefulProof)
+  proofs: row.proofIds.map((id) => requireProofForSurface(id, "technical-operations"))
 }));

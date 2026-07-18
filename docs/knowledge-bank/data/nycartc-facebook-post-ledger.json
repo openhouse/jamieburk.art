@@ -1,0 +1,4654 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-15",
+  "project": "NYC Artist Coalition",
+  "surface": "Facebook Page posts",
+  "controls": {
+    "publicChronology": {
+      "candidateRecords": 634,
+      "distinctNormalizedRecords": 460,
+      "distinctContentSignatures": 413,
+      "forwardScrollSteps": 522,
+      "terminalConfirmations": 12,
+      "displayedDateRange": {
+        "earliestObserved": "2017-01-29",
+        "latestObserved": "2021-09-15"
+      },
+      "reverseControl": "failed-to-rehydrate-older-cards",
+      "boundary": "Every content signature exposed by the completed forward traversal received a redacted disposition. The count is a conservative public-surface content-signature count, not an exact lifetime post count; repeated identical posts may merge, and deleted, hidden, or unavailable records are outside the surface."
+    },
+    "nativeAnnualExports": {
+      "exactUniquePostIds": 185,
+      "years": {
+        "2019": {
+          "records": 111,
+          "firstPublishedAt": "2019-02-06",
+          "lastPublishedAt": "2019-12-30"
+        },
+        "2020": {
+          "records": 69,
+          "firstPublishedAt": "2020-01-09",
+          "lastPublishedAt": "2020-12-23"
+        },
+        "2021": {
+          "records": 5,
+          "firstPublishedAt": "2021-01-13",
+          "lastPublishedAt": "2021-09-15"
+        }
+      },
+      "postTypeCounts": {
+        "Links": 58,
+        "Photos": 44,
+        "Text": 79,
+        "Videos": 4
+      },
+      "lifetimeMetricSnapshot": {
+        "reactions": 1006,
+        "comments": 164,
+        "shares": 208,
+        "asOf": "2026-07-15",
+        "boundary": "Mutable lifetime values from Meta Business Suite. They are not unique people, historical snapshots, stakeholder-group counts, reach, adoption, attendance, endorsement, causality, or impact."
+      },
+      "productSurfaceDisagreement": "Meta Business Suite labeled the Content lifetime as March 31, 2019 through July 14, 2026, while the annual export includes records beginning February 6, 2019. Both product-surface observations are retained.",
+      "boundary": "The annual native exports establish exact Page-post IDs only for 2019 through 2021. They do not establish the full 2017 through 2021 public chronology or the complete lifetime deletion history."
+    },
+    "reconciliation": "The 413 public-surface content signatures and 185 native-export post IDs overlap and must never be added together."
+  },
+  "publicChronologyDispositions": [
+    {
+      "id": "FB-NYCAC-PUBLIC-001",
+      "surfaceSlot": 1,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-002",
+      "surfaceSlot": 2,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-003",
+      "surfaceSlot": 3,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-004",
+      "surfaceSlot": 4,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-005",
+      "surfaceSlot": 5,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-006",
+      "surfaceSlot": 6,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-007",
+      "surfaceSlot": 7,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-008",
+      "surfaceSlot": 8,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-009",
+      "surfaceSlot": 9,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-010",
+      "surfaceSlot": 10,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-011",
+      "surfaceSlot": 11,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-012",
+      "surfaceSlot": 12,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-013",
+      "surfaceSlot": 13,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-014",
+      "surfaceSlot": 14,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-015",
+      "surfaceSlot": 15,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-016",
+      "surfaceSlot": 16,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-017",
+      "surfaceSlot": 17,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-018",
+      "surfaceSlot": 18,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-019",
+      "surfaceSlot": 19,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-020",
+      "surfaceSlot": 20,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-021",
+      "surfaceSlot": 21,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-022",
+      "surfaceSlot": 22,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-023",
+      "surfaceSlot": 23,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-024",
+      "surfaceSlot": 24,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-025",
+      "surfaceSlot": 25,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-026",
+      "surfaceSlot": 26,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-027",
+      "surfaceSlot": 27,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-028",
+      "surfaceSlot": 28,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-029",
+      "surfaceSlot": 29,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-030",
+      "surfaceSlot": 30,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-031",
+      "surfaceSlot": 31,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-032",
+      "surfaceSlot": 32,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-033",
+      "surfaceSlot": 33,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-034",
+      "surfaceSlot": 34,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-035",
+      "surfaceSlot": 35,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-036",
+      "surfaceSlot": 36,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-037",
+      "surfaceSlot": 37,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-038",
+      "surfaceSlot": 38,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-039",
+      "surfaceSlot": 39,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-040",
+      "surfaceSlot": 40,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-041",
+      "surfaceSlot": 41,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-042",
+      "surfaceSlot": 42,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-043",
+      "surfaceSlot": 43,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-044",
+      "surfaceSlot": 44,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-045",
+      "surfaceSlot": 45,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-046",
+      "surfaceSlot": 46,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-047",
+      "surfaceSlot": 47,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-048",
+      "surfaceSlot": 48,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-049",
+      "surfaceSlot": 49,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-050",
+      "surfaceSlot": 50,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-051",
+      "surfaceSlot": 51,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-052",
+      "surfaceSlot": 52,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-053",
+      "surfaceSlot": 53,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-054",
+      "surfaceSlot": 54,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-055",
+      "surfaceSlot": 55,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-056",
+      "surfaceSlot": 56,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-057",
+      "surfaceSlot": 57,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-058",
+      "surfaceSlot": 58,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-059",
+      "surfaceSlot": 59,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-060",
+      "surfaceSlot": 60,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-061",
+      "surfaceSlot": 61,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-062",
+      "surfaceSlot": 62,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-063",
+      "surfaceSlot": 63,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-064",
+      "surfaceSlot": 64,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-065",
+      "surfaceSlot": 65,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-066",
+      "surfaceSlot": 66,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-067",
+      "surfaceSlot": 67,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-068",
+      "surfaceSlot": 68,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-069",
+      "surfaceSlot": 69,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-070",
+      "surfaceSlot": 70,
+      "primaryTheme": "source-press-and-public-knowledge",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-071",
+      "surfaceSlot": 71,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-072",
+      "surfaceSlot": 72,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-073",
+      "surfaceSlot": 73,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-074",
+      "surfaceSlot": 74,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-075",
+      "surfaceSlot": 75,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-076",
+      "surfaceSlot": 76,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-077",
+      "surfaceSlot": 77,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-078",
+      "surfaceSlot": 78,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-079",
+      "surfaceSlot": 79,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-080",
+      "surfaceSlot": 80,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-081",
+      "surfaceSlot": 81,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-082",
+      "surfaceSlot": 82,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-083",
+      "surfaceSlot": 83,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-084",
+      "surfaceSlot": 84,
+      "primaryTheme": "source-press-and-public-knowledge",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-085",
+      "surfaceSlot": 85,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-086",
+      "surfaceSlot": 86,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-087",
+      "surfaceSlot": 87,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-088",
+      "surfaceSlot": 88,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-089",
+      "surfaceSlot": 89,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-090",
+      "surfaceSlot": 90,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-091",
+      "surfaceSlot": 91,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-092",
+      "surfaceSlot": 92,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-093",
+      "surfaceSlot": 93,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-094",
+      "surfaceSlot": 94,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-095",
+      "surfaceSlot": 95,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-096",
+      "surfaceSlot": 96,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-097",
+      "surfaceSlot": 97,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-098",
+      "surfaceSlot": 98,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-099",
+      "surfaceSlot": 99,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-100",
+      "surfaceSlot": 100,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-101",
+      "surfaceSlot": 101,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-102",
+      "surfaceSlot": 102,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-103",
+      "surfaceSlot": 103,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-104",
+      "surfaceSlot": 104,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-105",
+      "surfaceSlot": 105,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-106",
+      "surfaceSlot": 106,
+      "primaryTheme": "source-press-and-public-knowledge",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-107",
+      "surfaceSlot": 107,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-108",
+      "surfaceSlot": 108,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-109",
+      "surfaceSlot": 109,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-110",
+      "surfaceSlot": 110,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-111",
+      "surfaceSlot": 111,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-112",
+      "surfaceSlot": 112,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-113",
+      "surfaceSlot": 113,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-114",
+      "surfaceSlot": 114,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-115",
+      "surfaceSlot": 115,
+      "primaryTheme": "source-press-and-public-knowledge",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-116",
+      "surfaceSlot": 116,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-117",
+      "surfaceSlot": 117,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-118",
+      "surfaceSlot": 118,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-119",
+      "surfaceSlot": 119,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-120",
+      "surfaceSlot": 120,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-121",
+      "surfaceSlot": 121,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-122",
+      "surfaceSlot": 122,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-123",
+      "surfaceSlot": 123,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-124",
+      "surfaceSlot": 124,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-125",
+      "surfaceSlot": 125,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-126",
+      "surfaceSlot": 126,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-127",
+      "surfaceSlot": 127,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-128",
+      "surfaceSlot": 128,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-129",
+      "surfaceSlot": 129,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-130",
+      "surfaceSlot": 130,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-131",
+      "surfaceSlot": 131,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-132",
+      "surfaceSlot": 132,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-133",
+      "surfaceSlot": 133,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-134",
+      "surfaceSlot": 134,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-135",
+      "surfaceSlot": 135,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-136",
+      "surfaceSlot": 136,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-137",
+      "surfaceSlot": 137,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-138",
+      "surfaceSlot": 138,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-139",
+      "surfaceSlot": 139,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-140",
+      "surfaceSlot": 140,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-141",
+      "surfaceSlot": 141,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-142",
+      "surfaceSlot": 142,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-143",
+      "surfaceSlot": 143,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-144",
+      "surfaceSlot": 144,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-145",
+      "surfaceSlot": 145,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-146",
+      "surfaceSlot": 146,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-147",
+      "surfaceSlot": 147,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-148",
+      "surfaceSlot": 148,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-149",
+      "surfaceSlot": 149,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-150",
+      "surfaceSlot": 150,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-151",
+      "surfaceSlot": 151,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-152",
+      "surfaceSlot": 152,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-153",
+      "surfaceSlot": 153,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-154",
+      "surfaceSlot": 154,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-155",
+      "surfaceSlot": 155,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-156",
+      "surfaceSlot": 156,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-157",
+      "surfaceSlot": 157,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-158",
+      "surfaceSlot": 158,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-159",
+      "surfaceSlot": 159,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-160",
+      "surfaceSlot": 160,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-161",
+      "surfaceSlot": 161,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-162",
+      "surfaceSlot": 162,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-163",
+      "surfaceSlot": 163,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-164",
+      "surfaceSlot": 164,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-165",
+      "surfaceSlot": 165,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-166",
+      "surfaceSlot": 166,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-167",
+      "surfaceSlot": 167,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-168",
+      "surfaceSlot": 168,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-169",
+      "surfaceSlot": 169,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-170",
+      "surfaceSlot": 170,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-171",
+      "surfaceSlot": 171,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-172",
+      "surfaceSlot": 172,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-173",
+      "surfaceSlot": 173,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-174",
+      "surfaceSlot": 174,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-175",
+      "surfaceSlot": 175,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-176",
+      "surfaceSlot": 176,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-177",
+      "surfaceSlot": 177,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-178",
+      "surfaceSlot": 178,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-179",
+      "surfaceSlot": 179,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-180",
+      "surfaceSlot": 180,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-181",
+      "surfaceSlot": 181,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-182",
+      "surfaceSlot": 182,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-183",
+      "surfaceSlot": 183,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-184",
+      "surfaceSlot": 184,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-185",
+      "surfaceSlot": 185,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-186",
+      "surfaceSlot": 186,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-187",
+      "surfaceSlot": 187,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-188",
+      "surfaceSlot": 188,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-189",
+      "surfaceSlot": 189,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-190",
+      "surfaceSlot": 190,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-191",
+      "surfaceSlot": 191,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-192",
+      "surfaceSlot": 192,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-193",
+      "surfaceSlot": 193,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-194",
+      "surfaceSlot": 194,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-195",
+      "surfaceSlot": 195,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-196",
+      "surfaceSlot": 196,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-197",
+      "surfaceSlot": 197,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-198",
+      "surfaceSlot": 198,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-199",
+      "surfaceSlot": 199,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-200",
+      "surfaceSlot": 200,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-201",
+      "surfaceSlot": 201,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-202",
+      "surfaceSlot": 202,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-203",
+      "surfaceSlot": 203,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-204",
+      "surfaceSlot": 204,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-205",
+      "surfaceSlot": 205,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-206",
+      "surfaceSlot": 206,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-207",
+      "surfaceSlot": 207,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-208",
+      "surfaceSlot": 208,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-209",
+      "surfaceSlot": 209,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-210",
+      "surfaceSlot": 210,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-211",
+      "surfaceSlot": 211,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-212",
+      "surfaceSlot": 212,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-213",
+      "surfaceSlot": 213,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-214",
+      "surfaceSlot": 214,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-215",
+      "surfaceSlot": 215,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-216",
+      "surfaceSlot": 216,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-217",
+      "surfaceSlot": 217,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-218",
+      "surfaceSlot": 218,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-219",
+      "surfaceSlot": 219,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-220",
+      "surfaceSlot": 220,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-221",
+      "surfaceSlot": 221,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-222",
+      "surfaceSlot": 222,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-223",
+      "surfaceSlot": 223,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-224",
+      "surfaceSlot": 224,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-225",
+      "surfaceSlot": 225,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-226",
+      "surfaceSlot": 226,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-227",
+      "surfaceSlot": 227,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-228",
+      "surfaceSlot": 228,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-229",
+      "surfaceSlot": 229,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-230",
+      "surfaceSlot": 230,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-231",
+      "surfaceSlot": 231,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-232",
+      "surfaceSlot": 232,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-233",
+      "surfaceSlot": 233,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-234",
+      "surfaceSlot": 234,
+      "primaryTheme": "source-press-and-public-knowledge",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-235",
+      "surfaceSlot": 235,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-236",
+      "surfaceSlot": 236,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-237",
+      "surfaceSlot": 237,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-238",
+      "surfaceSlot": 238,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-239",
+      "surfaceSlot": 239,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-240",
+      "surfaceSlot": 240,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-241",
+      "surfaceSlot": 241,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-242",
+      "surfaceSlot": 242,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-243",
+      "surfaceSlot": 243,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-244",
+      "surfaceSlot": 244,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-245",
+      "surfaceSlot": 245,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-246",
+      "surfaceSlot": 246,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-247",
+      "surfaceSlot": 247,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-248",
+      "surfaceSlot": 248,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-249",
+      "surfaceSlot": 249,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-250",
+      "surfaceSlot": 250,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-251",
+      "surfaceSlot": 251,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-252",
+      "surfaceSlot": 252,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-253",
+      "surfaceSlot": 253,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-254",
+      "surfaceSlot": 254,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-255",
+      "surfaceSlot": 255,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-256",
+      "surfaceSlot": 256,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-257",
+      "surfaceSlot": 257,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-258",
+      "surfaceSlot": 258,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-259",
+      "surfaceSlot": 259,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-260",
+      "surfaceSlot": 260,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-261",
+      "surfaceSlot": 261,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-262",
+      "surfaceSlot": 262,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-263",
+      "surfaceSlot": 263,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-264",
+      "surfaceSlot": 264,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-265",
+      "surfaceSlot": 265,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-266",
+      "surfaceSlot": 266,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-267",
+      "surfaceSlot": 267,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-268",
+      "surfaceSlot": 268,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-269",
+      "surfaceSlot": 269,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-270",
+      "surfaceSlot": 270,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-271",
+      "surfaceSlot": 271,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-272",
+      "surfaceSlot": 272,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-273",
+      "surfaceSlot": 273,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-274",
+      "surfaceSlot": 274,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-275",
+      "surfaceSlot": 275,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-276",
+      "surfaceSlot": 276,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-277",
+      "surfaceSlot": 277,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-278",
+      "surfaceSlot": 278,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-279",
+      "surfaceSlot": 279,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-280",
+      "surfaceSlot": 280,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-281",
+      "surfaceSlot": 281,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-282",
+      "surfaceSlot": 282,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-283",
+      "surfaceSlot": 283,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-284",
+      "surfaceSlot": 284,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-285",
+      "surfaceSlot": 285,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-286",
+      "surfaceSlot": 286,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-287",
+      "surfaceSlot": 287,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-288",
+      "surfaceSlot": 288,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-289",
+      "surfaceSlot": 289,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-290",
+      "surfaceSlot": 290,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-291",
+      "surfaceSlot": 291,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-292",
+      "surfaceSlot": 292,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-293",
+      "surfaceSlot": 293,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-294",
+      "surfaceSlot": 294,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-295",
+      "surfaceSlot": 295,
+      "primaryTheme": "source-press-and-public-knowledge",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-296",
+      "surfaceSlot": 296,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-297",
+      "surfaceSlot": 297,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-298",
+      "surfaceSlot": 298,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-299",
+      "surfaceSlot": 299,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-300",
+      "surfaceSlot": 300,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-301",
+      "surfaceSlot": 301,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-302",
+      "surfaceSlot": 302,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-303",
+      "surfaceSlot": 303,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-304",
+      "surfaceSlot": 304,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-305",
+      "surfaceSlot": 305,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-306",
+      "surfaceSlot": 306,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-307",
+      "surfaceSlot": 307,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-308",
+      "surfaceSlot": 308,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-309",
+      "surfaceSlot": 309,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-310",
+      "surfaceSlot": 310,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-311",
+      "surfaceSlot": 311,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-312",
+      "surfaceSlot": 312,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-313",
+      "surfaceSlot": 313,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-314",
+      "surfaceSlot": 314,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-315",
+      "surfaceSlot": 315,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-316",
+      "surfaceSlot": 316,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-317",
+      "surfaceSlot": 317,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-318",
+      "surfaceSlot": 318,
+      "primaryTheme": "source-press-and-public-knowledge",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-319",
+      "surfaceSlot": 319,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-320",
+      "surfaceSlot": 320,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-321",
+      "surfaceSlot": 321,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-322",
+      "surfaceSlot": 322,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-323",
+      "surfaceSlot": 323,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-324",
+      "surfaceSlot": 324,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-325",
+      "surfaceSlot": 325,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-326",
+      "surfaceSlot": 326,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-327",
+      "surfaceSlot": 327,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-328",
+      "surfaceSlot": 328,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-329",
+      "surfaceSlot": 329,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-330",
+      "surfaceSlot": 330,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-331",
+      "surfaceSlot": 331,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-332",
+      "surfaceSlot": 332,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-333",
+      "surfaceSlot": 333,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-334",
+      "surfaceSlot": 334,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-335",
+      "surfaceSlot": 335,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-336",
+      "surfaceSlot": 336,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-337",
+      "surfaceSlot": 337,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-338",
+      "surfaceSlot": 338,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-339",
+      "surfaceSlot": 339,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-340",
+      "surfaceSlot": 340,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-341",
+      "surfaceSlot": 341,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-342",
+      "surfaceSlot": 342,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-343",
+      "surfaceSlot": 343,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-344",
+      "surfaceSlot": 344,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-345",
+      "surfaceSlot": 345,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-346",
+      "surfaceSlot": 346,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-347",
+      "surfaceSlot": 347,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-348",
+      "surfaceSlot": 348,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-349",
+      "surfaceSlot": 349,
+      "primaryTheme": "source-press-and-public-knowledge",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-350",
+      "surfaceSlot": 350,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-351",
+      "surfaceSlot": 351,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-352",
+      "surfaceSlot": 352,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-353",
+      "surfaceSlot": 353,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-354",
+      "surfaceSlot": 354,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-355",
+      "surfaceSlot": 355,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-356",
+      "surfaceSlot": 356,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-357",
+      "surfaceSlot": 357,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-358",
+      "surfaceSlot": 358,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-359",
+      "surfaceSlot": 359,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-360",
+      "surfaceSlot": 360,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-361",
+      "surfaceSlot": 361,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-362",
+      "surfaceSlot": 362,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-363",
+      "surfaceSlot": 363,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-364",
+      "surfaceSlot": 364,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-365",
+      "surfaceSlot": 365,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-366",
+      "surfaceSlot": 366,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-367",
+      "surfaceSlot": 367,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-368",
+      "surfaceSlot": 368,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-369",
+      "surfaceSlot": 369,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-370",
+      "surfaceSlot": 370,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-371",
+      "surfaceSlot": 371,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-372",
+      "surfaceSlot": 372,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-373",
+      "surfaceSlot": 373,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-374",
+      "surfaceSlot": 374,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-375",
+      "surfaceSlot": 375,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-376",
+      "surfaceSlot": 376,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-377",
+      "surfaceSlot": 377,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-378",
+      "surfaceSlot": 378,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-379",
+      "surfaceSlot": 379,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-380",
+      "surfaceSlot": 380,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-381",
+      "surfaceSlot": 381,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-382",
+      "surfaceSlot": 382,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-383",
+      "surfaceSlot": 383,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-384",
+      "surfaceSlot": 384,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-385",
+      "surfaceSlot": 385,
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-386",
+      "surfaceSlot": 386,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-387",
+      "surfaceSlot": 387,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-388",
+      "surfaceSlot": 388,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-389",
+      "surfaceSlot": 389,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-390",
+      "surfaceSlot": 390,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-391",
+      "surfaceSlot": 391,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-392",
+      "surfaceSlot": 392,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-393",
+      "surfaceSlot": 393,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-394",
+      "surfaceSlot": 394,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-395",
+      "surfaceSlot": 395,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-396",
+      "surfaceSlot": 396,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-397",
+      "surfaceSlot": 397,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-398",
+      "surfaceSlot": 398,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-399",
+      "surfaceSlot": 399,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-400",
+      "surfaceSlot": 400,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-401",
+      "surfaceSlot": 401,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-402",
+      "surfaceSlot": 402,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-403",
+      "surfaceSlot": 403,
+      "primaryTheme": "source-press-and-public-knowledge",
+      "routeClass": "source-or-public-record"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-404",
+      "surfaceSlot": 404,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-405",
+      "surfaceSlot": 405,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-406",
+      "surfaceSlot": 406,
+      "primaryTheme": "coalition-governance-and-listening",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-407",
+      "surfaceSlot": 407,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-408",
+      "surfaceSlot": 408,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-409",
+      "surfaceSlot": 409,
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "routeClass": "identity-or-context"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-410",
+      "surfaceSlot": 410,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-411",
+      "surfaceSlot": 411,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-412",
+      "surfaceSlot": 412,
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "routeClass": "action-or-resource"
+    },
+    {
+      "id": "FB-NYCAC-PUBLIC-413",
+      "surfaceSlot": 413,
+      "primaryTheme": "public-meeting-and-mobilization",
+      "routeClass": "event-or-public-action"
+    }
+  ],
+  "nativePostDispositions": [
+    {
+      "id": "FB-NYCAC-NATIVE-001",
+      "postId": "2218136945107348",
+      "publishedAt": "2019-02-06T10:02:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02Kphc4LTkBKgNCUZkNFjERr8iQu1nTmidFwVaKz6Smx4VocmaYuJ4U3PTEbFrmZitl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-002",
+      "postId": "2218398458414530",
+      "publishedAt": "2019-02-06T20:15:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0sDtacUxgwVYv8cF1Tg1kFV18WoyS3nMQR2NnKxhQa1Cq9YtcU51zXNrSxu9CXg1Al"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-003",
+      "postId": "2218805308373845",
+      "publishedAt": "2019-02-07T12:08:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0grgrqZWGRnztdYu4gvmvtx6stvD6vrzzZPNHCqWkPAjgDcy3cV8ayLVEB9TZEDBHl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-004",
+      "postId": "2219386811649028",
+      "publishedAt": "2019-02-08T11:26:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0cgMKq5PUDLSfvBG8ZLDoDnZTGfebxTGgZuyFfz43MuCc9JrYVnT7gpXdiEMkguwTl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-005",
+      "postId": "2219892508265125",
+      "publishedAt": "2019-02-09T08:44:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0Pg36oFS7xwJBDGC3zvrNaJdzYXKDEoDgPaxUSCCLJTUfyLneb5CGvN8bJy4LBavel"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-006",
+      "postId": "2219893508265025",
+      "publishedAt": "2019-02-09T08:46:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02yGEbBRFXimv5Q2z7vohnU1YKHCcPXzsxv5bEdPig2E1vHTBapyChdsW6BkUJYRbzl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-007",
+      "postId": "2219964268257949",
+      "publishedAt": "2019-02-09T11:14:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid03QiZcuLV1j5GicH8kTA64kdSSjoY4QcD1febMaoQGfxefk4sXjJbdC2ETikpLeTpl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-008",
+      "postId": "2219965961591113",
+      "publishedAt": "2019-02-09T11:17:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02iNPBCKJEKEu5mkjbnwUuuqk9SbWmbYXTDR4truWV2zWoKbdPZWJyDRehEg2LFiSMl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-009",
+      "postId": "2219980124923030",
+      "publishedAt": "2019-02-09T11:33:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0BoghYbhYcVpf479htaPg4E9ypwBJLdayeD1AeAwsVVD7jX3PvyScyzKdXZuywga5l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-010",
+      "postId": "2220404061547303",
+      "publishedAt": "2019-02-10T05:22:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0RGKTqGYabnpzz7atFDCwwSs2dgr9EhCWP1kBdCF5ko258hfgYJnhLv2pTPaewnorl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-011",
+      "postId": "2220438638210512",
+      "publishedAt": "2019-02-10T06:31:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0d3D8WYuKhAua8Vep41AKge4LYMWaLEfu9KJNY6RSHW5Yk2FsqYuD7xYx57VagkiWl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-012",
+      "postId": "2220462141541495",
+      "publishedAt": "2019-02-10T07:24:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02SxcCKgYgYDtnPeQvkwKCgvBF4whgjKSfRtVe5WHaYzQxabJyrFCw8ZHcFRBeFW3cl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-013",
+      "postId": "2220536941534015",
+      "publishedAt": "2019-02-10T09:47:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02xKXAPt8Sc2Z1uNFYv8yGE1kJBqi5Cjic9vhZnkkkz8Vcn49HnZUwUQmyBUUTfUMCl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-014",
+      "postId": "2220672668187109",
+      "publishedAt": "2019-02-10T15:33:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0qqcxFXELbH7WuAETygkmaiY9TJaT22sEjzJLDD5fuXVTCNayPqT4DUZ9oyuHe6Wal"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-015",
+      "postId": "2220674608186915",
+      "publishedAt": "2019-02-10T15:40:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0r1817vFdX3dkLmGBk2PBy9bf2tJWjEdcLHjz2i7zzgYjcnTWe7yyG3nNRfFARavNl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-016",
+      "postId": "2220934048160971",
+      "publishedAt": "2019-02-11T03:55:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02AKBxts3suxv8EVp7N6e2WXRm834CvRz7ndK4GmxqJqtFBKTrWARqSa56K5Mh3vVMl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-017",
+      "postId": "2220938958160480",
+      "publishedAt": "2019-02-11T04:05:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02jrzBm2oWWiAuvNbp7Fbucc71oC8c8A8ZhSRFKfAQZRuLaWPQBsM6iH4m9DCggbqSl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-018",
+      "postId": "2221010538153322",
+      "publishedAt": "2019-02-11T06:32:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid09YJg2nkfnZ7ymrs5Mr3jb8X1ax7EZMSHS4bfx9VTpFbY3cvHsid4aUqsfgXgMmaUl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-019",
+      "postId": "2221038558150520",
+      "publishedAt": "2019-02-11T07:28:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid034DEqC2hFUTAF8g1S2LrxGGGPmLCbs2jHYXh8HhB9Ab4ZQmnxKz1cRUEMEraqQDgxl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-020",
+      "postId": "2221312868123089",
+      "publishedAt": "2019-02-11T19:22:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02fqpg36oac2AND574NGtmp2arR7TtK121vDrPDKm4pnq5Nzq9ehtZ8k86gmK8aDwXl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-021",
+      "postId": "2221764208077955",
+      "publishedAt": "2019-02-12T11:56:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid029HfqGQihxCvAKWufzvedrJzeDzJGYqB2BZRS7P43GHegAz5AUHrGxPQF7iQhnpTRl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-022",
+      "postId": "2221804821407227",
+      "publishedAt": "2019-02-12T12:58:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0nPmPie4mg7pcfkaeCQAMkJz6NePBbtKE5zGRGtpBn4o7wazSbQAZf2NmUBJA4bWql"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-023",
+      "postId": "2221807981406911",
+      "publishedAt": "2019-02-12T13:05:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02T2YCfk5U84p6asj9pNtdvcQpubQykLffBXDbtcrSL4dTTvNueZAdoUawYYMnuLARl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-024",
+      "postId": "2221837721403937",
+      "publishedAt": "2019-02-12T13:59:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0gPpefhqi3h2RTYCt7eNcLN3Bbt7E77LTt3HHjHmGkRNfQNTBoUvP4JnSz7wPnnSSl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-025",
+      "postId": "2222471981340511",
+      "publishedAt": "2019-02-13T15:09:00",
+      "postType": "Photos",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0rz8SwiDz8Fy6XbwMtUq3LYAFjdBZmCTnkQdiM5bkyAF1VPmJYPjt2qDfgAZytDMGl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-026",
+      "postId": "2223801867874189",
+      "publishedAt": "2019-02-15T17:40:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02MGMbHab7K3aWj4CZCamTFQVYjJSQR4CfBsJWw61V3dgMUE93NhYErFobaRYukgPwl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-027",
+      "postId": "2224360937818282",
+      "publishedAt": "2019-02-17T09:02:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0xDQUzX88DE2ZhPKj143m5dzvELpWdQ25fwwoZ5qFoE1ojxibzffsV7j4sdXJEx9ul"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-028",
+      "postId": "2225357911051918",
+      "publishedAt": "2019-02-18T10:01:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02ec57XwwefbXW83K3NFZHivtwnWcvEPh3q4KY1JwuhGPzKYdHRm2nQTKhyvLs1Gkjl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-029",
+      "postId": "2225391641048545",
+      "publishedAt": "2019-02-18T11:23:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02bH6c7qKtEnaTztf4Z3t2QksCUjCvZvpc9jouRgwRERCzyHfuqThA3sP2cDJ5ew8yl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-030",
+      "postId": "2225951247659251",
+      "publishedAt": "2019-02-19T11:11:00",
+      "postType": "Photos",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid035LmKSPtvf3uZN71sum8GMThN9MLWsf5HNMYYcTpPHCzd9hjfFu6FouTucHuwzUJhl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-031",
+      "postId": "2225983177656058",
+      "publishedAt": "2019-02-19T17:00:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02C1hQBfpbJW42UVT84cEwYhYDLGA9XzW27uC8R4kYe5GQNWLxEpk4jNh6aYsqCgGal"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-032",
+      "postId": "2226525290935180",
+      "publishedAt": "2019-02-20T10:42:00",
+      "postType": "Photos",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid05SmpRzCraZ76GKzMvjdM4oULReonDYVnDYRoYeCQetJAYpNVbaTuZdoSR4nrtMorl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-033",
+      "postId": "2225983564322686",
+      "publishedAt": "2019-02-20T10:45:00",
+      "postType": "Photos",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid026ViEZrSwBNWPmjpdbgKHefNZAguDkbCKhnupC8zTqkvZ3aTE6U1oMgrKhVHBKJ1el"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-034",
+      "postId": "2225985157655860",
+      "publishedAt": "2019-02-20T11:46:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02NDwh8jkPrDxcziy8eWYXx7TJMnqGiXH6TmvSQGXeHDaHnLmGXpFJot8VzAfu4Cfjl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-035",
+      "postId": "2225969340990775",
+      "publishedAt": "2019-02-20T12:48:00",
+      "postType": "Photos",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0Q6AvxobDJ62Hjqkkp6hh9CV66aEmwaPaU3JxANXE1fgPD6nVrDZoQAHfFu4WgPEkl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-036",
+      "postId": "2227155807538795",
+      "publishedAt": "2019-02-21T11:06:00",
+      "postType": "Photos",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0EfMghHGknrfcrkYfqUuTtNymnBWht4ZH8ky6ZPYqtkG9iNm54hR2UxDM3KJNY3Pml"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-037",
+      "postId": "2227713857482990",
+      "publishedAt": "2019-02-22T13:02:00",
+      "postType": "Photos",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0yMv17wksay4LRBWv6btoCi9fAPLpVnfomFLQGWU4zZ6jUwVLdjyvWcbeDkrzDeMFl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-038",
+      "postId": "2228797007374675",
+      "publishedAt": "2019-02-24T06:48:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02kiGQNguwZUfHBg23ZvX2wR5uaR3iZuSAuUtcTfsdCbfKUhhwVCBGEeo8iFNVQz7l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-039",
+      "postId": "2229971167257259",
+      "publishedAt": "2019-02-26T08:08:00",
+      "postType": "Photos",
+      "primaryTheme": "coalition-governance-and-listening",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0LDRB9iM2iJGaoqwHpYA7SvfZEgkgyuJJqdtRyjoGCwhA3PWJo7KLJpj4LhC6CDmhl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-040",
+      "postId": "2230113547243021",
+      "publishedAt": "2019-02-26T14:34:00",
+      "postType": "Links",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0w93fQoAp7QJM9CuQkiGS4cdGED35uqsxPUCg1WTAbjB6656HZHaEeYZYMcJbbAGel"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-041",
+      "postId": "2230550543865988",
+      "publishedAt": "2019-02-27T09:12:00",
+      "postType": "Photos",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02NRC7ZcVBUMJY4dSXhaiH7jwmhN5YNhFkvZXguFC96tmfbtknfipdVUgiqrcQ9sHQl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-042",
+      "postId": "2237049273216115",
+      "publishedAt": "2019-03-11T18:43:00",
+      "postType": "Text",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02u5a2b6EJtBdxkVyd2TMAtks3FtdbNGWyotgNmHrBKtECmWueB6Xpkz73Q8M4Y1Xtl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-043",
+      "postId": "2240436619544047",
+      "publishedAt": "2019-03-18T05:11:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid024a6hLj7GPNzz4kMQUq9UDCiLT7gHEvMyhpRKs5HJ5HijLNhUK8Cv2wV5uwsySka8l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-044",
+      "postId": "2240506232870419",
+      "publishedAt": "2019-03-18T07:58:00",
+      "postType": "Photos",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0ABYf18kvCZdmwbssGw7FYxiEdvUuECUbz2GBUm5mALUsriUJcNuJiJnatLu5PRVfl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-045",
+      "postId": "2240510632869979",
+      "publishedAt": "2019-03-18T08:04:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0kSJAz4tw6h49wsTQoSstg6LVL5fVgQ9MpWKejKPb3JxsYPX4t3t2zQVcKpjHgep2l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-046",
+      "postId": "2250472551873787",
+      "publishedAt": "2019-04-04T07:27:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0SehRaS2hsyajJEYimhv4hF3pwg9PVtK7AG1dLwbMcELZiv5B6LSD1LvTyjGaPZ9ol"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-047",
+      "postId": "2253669874887388",
+      "publishedAt": "2019-04-09T12:19:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02ZWmURw94Mbs1jkt746f6JAUAi5Dd4BsiCLV6uGG5onb8FK9Py9PLtKRW38pigWw5l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-048",
+      "postId": "2260058434248532",
+      "publishedAt": "2019-04-20T08:43:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0wqZeRzBCY1fZ3xjyfo6kBWWryqXjuk5RnfHKW49KV9D4T8yNrZ9GbgZaWsJXjj9el"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-049",
+      "postId": "2262768940644148",
+      "publishedAt": "2019-04-24T15:47:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0CBkEJmo7z4Gg7mnpSUaL3DzKbkpt3KAsR6SfQLkijPob7xj1SEckAzhpmdydxCCKl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-050",
+      "postId": "2269796279941414",
+      "publishedAt": "2019-05-05T19:00:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02cJQ4yt9WLi4eJPhxcMGAM9Vsm5r5CZfzgg7FBCpSCNTB47KAthhaXHnGgqYfFWktl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-051",
+      "postId": "2270137949907247",
+      "publishedAt": "2019-05-06T08:35:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid021WxeRzvpa297bixpKS6GLZFTsR4Dt3EvjMqKsHs2atFd7Be7Bf95iWkPi2PSWp2il"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-052",
+      "postId": "2270217249899317",
+      "publishedAt": "2019-05-06T11:33:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0bxQyQ1vut41k3nfJCmXjxchWiecwK85C1V12SkKuA5fDUR4bqVTxoq4jy8vFBrkFl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-053",
+      "postId": "2270301659890876",
+      "publishedAt": "2019-05-06T14:51:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0E7gkFGm1iy1n4BrTnBWt5sPkpTuRAdmdQYExwCNrBKVhn9n27LkV7Qh2CiM1JH5vl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-054",
+      "postId": "2270342919886750",
+      "publishedAt": "2019-05-06T16:49:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02xWLDriD2g2JQwaUQTeN3T3HNS5kV66xukScmMUq7k7x5LUtyjgJvBQfwA6FVUhqpl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-055",
+      "postId": "2270358163218559",
+      "publishedAt": "2019-05-06T17:32:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0326Nr6nyhDeCBaSgziQsbDxgHDdCpte7WPHUtm9wjnNk2T99wZ7mUerxxbuhChXhol"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-056",
+      "postId": "2270389033215472",
+      "publishedAt": "2019-05-06T18:57:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid08d7vc6CRfjMtm7DgS4ndbMUMajTvU8ZyfcMLwPE8tUyv3jJQ7nMahwRvRL7uGtoUl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-057",
+      "postId": "2277360175851691",
+      "publishedAt": "2019-05-17T13:51:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02zGmgvp9dVCBbDHp9VkXF6Zpn73veWtqbMDE2kX8oDFchtWpKvhSZCk6JwZsc2UUnl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-058",
+      "postId": "2278199005767808",
+      "publishedAt": "2019-05-18T13:49:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/photo.php"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-059",
+      "postId": "2281365235451185",
+      "publishedAt": "2019-05-23T06:18:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02HGq9BAC11Qg9BUALjMxiP8b4ePCjwewy35LQPFU7LhWqLcTKRQP9Nm89iiV1BeSMl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-060",
+      "postId": "2282331975354511",
+      "publishedAt": "2019-05-24T14:10:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02VaxMuAmBmvYdze8Y5yjGMtiaGu6aWiN2yf3zbDaMGSE1GkDmrPEq2MGZz6NaVRGwl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-061",
+      "postId": "2286291558291886",
+      "publishedAt": "2019-05-30T10:25:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02k1HZRCXHEHcsjGeL9ZkvwEadnSj4e5qovsNCofe4aNxPFSHVXAugWnGmYaiuzMpUl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-062",
+      "postId": "2303008339953541",
+      "publishedAt": "2019-06-22T13:38:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid08581Si4Tf1H25TMhhYqrTUtYpghsaFd43MZ6uZThQtFjAf52x6KK4y5ibUQjuhDWl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-063",
+      "postId": "2304463599808015",
+      "publishedAt": "2019-06-24T12:41:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02EYNDHrRv6uQifBCA4rWs5mjX2tbGtQkJqRzeCRCw5xc8s7Jjre1qBfiAsPyyQhDgl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-064",
+      "postId": "2305151603072548",
+      "publishedAt": "2019-06-25T10:41:00",
+      "postType": "Links",
+      "primaryTheme": "coalition-governance-and-listening",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0hvW1WGghtK56H65exmXeQo8WzZWYhWbCkc7xtdLX8LX21jZKMgrGaAmSaKtQaARql"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-065",
+      "postId": "2306920202895688",
+      "publishedAt": "2019-06-27T15:11:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0ghd84jryNZ4p39irZKjU1RgAdS4TRsDvvPqErG4iz7CkfmpczhQaUf9vFppqyjzhl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-066",
+      "postId": "2321564914764550",
+      "publishedAt": "2019-07-19T12:15:00",
+      "postType": "Photos",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0jEHwAvUJAupWCY9roAxNnB2NcevDwV4tj2kRDqaMVGQnDGBSHmV7SXq3xU4kf3rEl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-067",
+      "postId": "2324375861150122",
+      "publishedAt": "2019-07-23T11:03:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0seMQveP74D1kymPCxdKw9zMqVBLogvjW39cyhXfmCeKNJGe9V3SmmrBNi3z2it3Zl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-068",
+      "postId": "2326393857614989",
+      "publishedAt": "2019-07-26T12:33:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02tZRmVvHQozpy8BphC2C1o2bh7yZ6e5XAFhhbWL6QWtq1U2725bakMUKWy51moRzTl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-069",
+      "postId": "2329073117347063",
+      "publishedAt": "2019-07-30T12:47:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0aoMnMaXHrtKaJDazYDeC75uCBvJKGzGS3pjeGD5Ec4kjvCRBZqBX7ichGYP7XCVnl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-070",
+      "postId": "2331096883811353",
+      "publishedAt": "2019-08-02T15:27:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02VUwyr2FaiQNXE1rqXhNuTsYhzzBegH7PwScMaaktZnakkVBviVfadaeq2vApodmtl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-071",
+      "postId": "2333603663560675",
+      "publishedAt": "2019-08-06T08:54:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02n2o9KGcn9wfkCyV7opQqmpVgkRTXudXh8JG96ga33J5gugfUyfJkMaSNLGnfVyK2l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-072",
+      "postId": "2350127735241601",
+      "publishedAt": "2019-08-30T09:40:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0kpMesmiJnfzHSwR98se66ZVusksrjAhwnWgs6W41zfPSoWaWVfYKXQMx6JnErpAAl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-073",
+      "postId": "2353886714865703",
+      "publishedAt": "2019-09-04T15:35:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0UsEm8yMSa1Uj5uSUq1ckSm37aHzaTxF2ojFt1LWVa8M5vcpWE2TorMsrVvwgbkaTl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-074",
+      "postId": "2395246534063054",
+      "publishedAt": "2019-10-25T07:56:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0XgWNRxgWV3iK4DSa9VApkuge7i3QpVBtSint6JeraPZSmmP5rLyT6G8L3Q5ym2Til"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-075",
+      "postId": "2397262297194811",
+      "publishedAt": "2019-10-28T08:04:00",
+      "postType": "Photos",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0egzDEHofsYzpwmYj9fzoZ15WHG4nt7Fprg3R8gTEBHALFZAVeWizUE6t1xZrr1APl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-076",
+      "postId": "2398894130364961",
+      "publishedAt": "2019-10-29T14:02:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02GhJXDhr6A7VaCwRGx6oss39pgB9FShbNCxis48XS1dtJf1JUKTqjMnXpaU9wjAiql"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-077",
+      "postId": "2404861813101526",
+      "publishedAt": "2019-11-05T07:35:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0kVuBBXAPtrqNn8t4sQArdBPci2t4gVyphyt4WCQZ6wFB8ojQU41TjHcSk8HSp3e8l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-078",
+      "postId": "2410511682536539",
+      "publishedAt": "2019-11-11T14:08:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0aiLQkFofABrKkJLqDFMTUQiGVRsRo2i1rF2jLKVEfnmV2YWoMjeX6UF9VJLRM2FAl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-079",
+      "postId": "2410676925853348",
+      "publishedAt": "2019-11-11T19:01:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid03znq48pAfThxJqy5SGuKT54vPYhZdr7k799GGKBRR8gWsjrVLH4EEWeD6tUEkoVel"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-080",
+      "postId": "2410682639186110",
+      "publishedAt": "2019-11-11T19:11:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02frb1iX6172HnZYHe2qf97wdSVrwSti6SyhHPqyCbkUbChS7NkkBtXosVnQcvW3Tcl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-081",
+      "postId": "2411259895795051",
+      "publishedAt": "2019-11-12T09:13:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0kKk6afyMZH8MZ7nZgz1XetNuQE5w9SFoQrSPYhFk2oYh3WfJYPnNcBbYFpJjsRCnl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-082",
+      "postId": "2411312722456435",
+      "publishedAt": "2019-11-12T10:25:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0w5Sdn7GFUVPKZPSTxRsvxazSG5mFe9ZJYMV5w2NFb8SJahEmUgjyhCzoufKih6YLl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-083",
+      "postId": "2411388319115542",
+      "publishedAt": "2019-11-12T12:24:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0mptn4QFWPse94siMss4um123czttkHJcgrFpVVv9snJxn9Jd667NweRfGWAkx7HWl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-084",
+      "postId": "2411645855756455",
+      "publishedAt": "2019-11-12T20:17:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid06DmW9VA14zT5TTgwUyNR7qaf4zuewk1dm2ruEd3KeYpctAvmshLJkiKfwckwseVKl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-085",
+      "postId": "2412104252377282",
+      "publishedAt": "2019-11-13T08:15:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0prcWRjFyynYheZf9kC5tj9uprvkcYmtDgnpriZmG9kvQj8CcHEf6nFVtef4PU7Gzl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-086",
+      "postId": "2412435542344153",
+      "publishedAt": "2019-11-13T17:33:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid029v37ju3f6iHkN8mkaepQux7euuCE6Vj7aVrpnHChxVs4LfhpnhvDLN65VPJWPCQfl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-087",
+      "postId": "2412440095677031",
+      "publishedAt": "2019-11-14T05:00:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0gNwyc5oWd1qEyawSB8QUrJ1wXzNve57q4owVoKrLU4sBEnkdNgJCSmGgU1HVVHjbl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-088",
+      "postId": "2412883095632731",
+      "publishedAt": "2019-11-14T05:24:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid04zEdqySipy1N44ZSdpUHA3SeigymYLnfmPoUxx6vNHJVSJbcSXYDp9anfDdsEvKrl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-089",
+      "postId": "2412908038963570",
+      "publishedAt": "2019-11-14T05:56:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02PUnbTvA55EXVwn4eoKpNWfUk7yfUCASwcFBG3d2H2W13DYDcdAsvizQCjsNkVGuvl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-090",
+      "postId": "2412946308959743",
+      "publishedAt": "2019-11-14T06:44:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0xYQdbnSukCWzSf83umUC682d5hGBREH8vV29shP5BEgBjJx4e4jxBTbiN3wn2GXWl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-091",
+      "postId": "2414301532157554",
+      "publishedAt": "2019-11-15T17:25:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0vf68r9bcHfHb5bgEhr5Fdfz4QCEptKTwHtJz5eXcHcKDFUW2z9v7WV4j8QPkTqm1l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-092",
+      "postId": "2414360395485001",
+      "publishedAt": "2019-11-15T18:59:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02hSm4oa5neZd4mfPqhNG5ND8arBkwky4M8n1b499bQjvWu3oMG2dbVK3NYBQcCBsvl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-093",
+      "postId": "2414891198765254",
+      "publishedAt": "2019-11-16T08:01:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0sf7kc4fXZDiyKJpW1QHuq4CXUN2odPWTQLAzosJDnRuRp8yMymeFnZs9xAuXo7pql"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-094",
+      "postId": "2416021108652263",
+      "publishedAt": "2019-11-17T12:40:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0Rr4j7tkwTtRSJNkxJFvhrsc5UHGWrc4TMfBzSU2k8iXoWJc7AF2bRr4S4tNwLhBul"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-095",
+      "postId": "2416160725304968",
+      "publishedAt": "2019-11-17T16:46:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid026EXonvBMyUqUiaDtRbmVMawY5A4Ag5AFkJRhbLuLTj4w1NNj5zgmGfbpxFe4Qpetl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-096",
+      "postId": "2416806738573700",
+      "publishedAt": "2019-11-18T08:32:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02L4gP4H4u1eaziETwDSZniQkbpPDsT7chkzGwqiQ2oknzTTJani7sVPkd7rLmuJRvl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-097",
+      "postId": "2416849638569410",
+      "publishedAt": "2019-11-18T09:30:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0smtULdTZ7agD4tVk1k7wsBBvRnL3SjmisURMatNscLkgkE4RaD7bj72qzf8GenvYl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-098",
+      "postId": "2416900001897707",
+      "publishedAt": "2019-11-18T10:47:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid037ihPvN8HBpyK7SY2Jp7364iu3sXrMSg5DYCZ1BAQEscHMVv359Uv5iVa82hpw8RCl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-099",
+      "postId": "2416920035229037",
+      "publishedAt": "2019-11-18T11:16:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0EdwKHQpat9K4dnZry12KsWrTMjaZTib3XuZWWd9Z5r2B4utgnXPHa35S3afqsonZl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-100",
+      "postId": "2416921881895519",
+      "publishedAt": "2019-11-18T11:18:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid028x81k8d3mjhDdjErNgRJDYjRtYdUsXcsfuo7jfM2REwKxJf9mQKycV6dPQs5YpF6l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-101",
+      "postId": "2416906125230428",
+      "publishedAt": "2019-11-18T12:07:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02RV6Xazb9dBTcx3hw8vUEbC7EMhsXDNEn4uwi6TS4xHy6ta5dNYXJsW6BCbA7YDhml"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-102",
+      "postId": "2416970238557350",
+      "publishedAt": "2019-11-18T12:24:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0Q5dG3npLeqZFgTHiedTe4DLeoYcRt2bVvvHC5369qexKdzFpSkT3WmyvP95i36T4l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-103",
+      "postId": "2416859805235060",
+      "publishedAt": "2019-11-18T12:57:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02xKdULrF7hCYC7DDoBimL98UGvf9Xju44fZ4wNafugVtmC4fe7Smm7iAttHHkVzYnl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-104",
+      "postId": "2416932671894440",
+      "publishedAt": "2019-11-18T13:19:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02s6nmprN5KpcHyFoCWihCJugjNT4FA183zpKBZkdJYdRYTBCKr3XHhYgVwcAmNcjel"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-105",
+      "postId": "2417216705199370",
+      "publishedAt": "2019-11-18T18:39:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02B31ywikfKVvLB6tPgariDdRvTs4eTprmWXZRSnsNuHFgk8LYjUmm91BopwmVc3r6l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-106",
+      "postId": "2416945028559871",
+      "publishedAt": "2019-11-19T06:05:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02zrdHbe7mHEskt8fxdnwv1bLyvus6MBQnBNHxm7qEVUaJUYsfVZHJ9RXzwpeWVXh6l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-107",
+      "postId": "2417789671808740",
+      "publishedAt": "2019-11-19T08:07:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid021bmMGv8uR8xs978b1fM8NfyfKDAwDr6fc8awm8bSxoWRXkcahmAM4DSF7Lsvv8Uul"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-108",
+      "postId": "2417803458474028",
+      "publishedAt": "2019-11-19T08:24:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0Rz9TStcGAXDLDaexNcuVVX9PpCznzYqMiCq9CtN1rJBkxizQokQt9pLjApQngdWEl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-109",
+      "postId": "2418054511782256",
+      "publishedAt": "2019-11-19T14:57:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02bTh2FVY2HauE3YbdKKZc1DoxeKQgc7ewJrC3XCSCLmzwPAGJtVzXh8vFtJt1YGMvl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-110",
+      "postId": "2418141048440269",
+      "publishedAt": "2019-11-19T17:35:00",
+      "postType": "Photos",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid029reksceeKPDCagYkDgRFiHeHFH76LwuZ9KjqwyjepoDTFaJ6xJj3JWyA9dj86Rptl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-111",
+      "postId": "2458023717785335",
+      "publishedAt": "2019-12-30T13:13:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02Q8gZJF3sDahVmiXitjh5z8nJXhAxQz1LKkRGccAEFVbbSmkrxjBwz8RB2KvFn2Mvl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-112",
+      "postId": "2468049416782765",
+      "publishedAt": "2020-01-09T13:43:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02wEPyhWFcAfRLRfuQdKvSyHAZYVHzgZF2L32HNVu5xJxcHSHaBb5voYt8rCBYky6vl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-113",
+      "postId": "2468063990114641",
+      "publishedAt": "2020-01-10T07:18:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02CHCrYSzb8cMyPtR4itTPbRmrbYPUzptzdgvCZYEvKjBLvGGRYMsoWeFPXLsQExkFl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-114",
+      "postId": "2469132006674506",
+      "publishedAt": "2020-01-10T16:43:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0FvJtyRo76inGUUTK21drgU2hJ2XRi7y3Z1ygyYfuqdKj9YWvrocqqoGopp9VPkmql"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-115",
+      "postId": "2493127507608289",
+      "publishedAt": "2020-02-08T08:53:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02uRzXAzNAVJDdH6mEtqvGrKohU7LpA3dMA9S3gsT1SBPw7gMWpqzSfiEtp2cfameHl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-116",
+      "postId": "2495898080664565",
+      "publishedAt": "2020-02-11T11:03:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02RqQfMTL8Ttpb2nUXmv9xCtbU9J5T8zAaM8YaV7aMNkLwbvA1w1otTCdffx5TXgLQl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-117",
+      "postId": "2507156909538682",
+      "publishedAt": "2020-02-25T09:59:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0ktBNi6mX7wHFoxWNnDxy2RXfj1RYquh82DANeYLdyzA1dGvdCkMPmaUKoTmtWksSl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-118",
+      "postId": "2519094125011627",
+      "publishedAt": "2020-03-11T15:09:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0LAgpaeUfW3EhX465jXAEwPtDw7EdMWUHU1fgRuvD7TMyXPi6cyA58xBBuNqg25Wbl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-119",
+      "postId": "2521280441459662",
+      "publishedAt": "2020-03-14T11:25:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid05wc4vj6TWY5a8aHQg1qSdW9JbguZBMkUyK5qwTUxTanUH3yEPoG5BmHn96SHDq4Bl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-120",
+      "postId": "2521365978117775",
+      "publishedAt": "2020-03-14T13:59:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02bHrwoFcJjWbEeauUAVn2Kg1hKxp966Pfoe2SWth2PfgBaz7iMZ2VzdcryGkFVb5el"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-121",
+      "postId": "2522214131366293",
+      "publishedAt": "2020-03-15T16:22:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0eB4fmzeXLfdpQjTt7oBsTjtbwSgirsZDpGMYEZAYZ1D7rk6thnpntEoJrK4ZKCRpl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-122",
+      "postId": "2522317684689271",
+      "publishedAt": "2020-03-15T19:49:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02WQMRUMxUXUaTdAfUXU9L3iCASEuBAVgXDG4VMAgFpLk9FzD3jfRgnRFftaoZRfbel"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-123",
+      "postId": "2522858251301881",
+      "publishedAt": "2020-03-16T10:52:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02KAv13SxpocasaYJ8EcXdbk95fAReBqyK3isWRr2mYmU5WLopVFHEfAPFZyCXzFzHl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-124",
+      "postId": "2522923254628714",
+      "publishedAt": "2020-03-16T12:29:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02t6zvJ7H3zECzj23sdo5hvqWgJvRinhutkkdrJXFz4o8BLEvGdzvXCt3RLnH7VfQNl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-125",
+      "postId": "2522936637960709",
+      "publishedAt": "2020-03-16T12:54:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02hR1k7ZeVdiECrRNCz8FfKAFMQ1QvajQNYB51kToQ6KPpXwPKZ6MkwvJk9pJqcmKtl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-126",
+      "postId": "2523062834614756",
+      "publishedAt": "2020-03-16T16:57:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02Zzj2RpMN212G8Nbk9zhAvPgnHomEb9NyN19reVit3vzfsbfAhiNewiLWjD8hfSzul"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-127",
+      "postId": "2523837494537290",
+      "publishedAt": "2020-03-17T16:07:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid03GkAg7EwEvSUSJcJKnGyZi7hb1j3QtGhnzGPeTr7897cs4yG146jNN1zbSaDZmy8l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-128",
+      "postId": "2523895394531500",
+      "publishedAt": "2020-03-17T17:57:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid058s1ekRpL1gSD7VWgTFaR1kEFzC3c73Ku6sai22GoTJ9svxFDGpvohxWSVkweUTYl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-129",
+      "postId": "2524364881151218",
+      "publishedAt": "2020-03-18T07:59:00",
+      "postType": "Photos",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0dvyXxceVjxa1w5EydBtivnPtfmiURnjQvBgbiHvrptcXfjCYSDsV2devmR7ucEi2l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-130",
+      "postId": "2524445274476512",
+      "publishedAt": "2020-03-18T09:57:00",
+      "postType": "Videos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/videos/2549974675266935/"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-131",
+      "postId": "2525223591065347",
+      "publishedAt": "2020-03-19T08:13:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02EzuRK6q9hQDjnsyTRxjPgEBiMrpJ8FaW5LBTLsFktAoAsAeBDTgTpUUnmG39jKGYl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-132",
+      "postId": "2525227621064944",
+      "publishedAt": "2020-03-19T08:18:00",
+      "postType": "Links",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid034Xax4qrHbpzbx17WZ6XLRBQy6izYjYFFYpw8ex49CLHHSuvZBck3Ck6359E3Qyqsl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-133",
+      "postId": "2525318534389186",
+      "publishedAt": "2020-03-19T10:24:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0mzPsoGZ116N2tuVpzZ8mkVSSgbNBwJUsBrVESB37ELFcvnC9XZgR5P9oypaNfkyKl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-134",
+      "postId": "2526125957641777",
+      "publishedAt": "2020-03-20T08:45:00",
+      "postType": "Links",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02xNoASj8acu3Pq9zcexMAwEfeZheEYBLrjPer44SbdVBfHZ6zAopZyBU7BLuHYmUJl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-135",
+      "postId": "2526378297616543",
+      "publishedAt": "2020-03-20T14:45:00",
+      "postType": "Links",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02JrZrjQAgqRKpFYoo3Zbk99o2wEcpXgNYofuxR9qheKfLWWpw4r97N4NjH6USVTnjl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-136",
+      "postId": "2527138474207192",
+      "publishedAt": "2020-03-21T09:23:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0UL7X3DFfz3QyQxbia3iADXFu5RgaNnBWg88494X88VoQbCtocrtrrQH5zbMXR1Hol"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-137",
+      "postId": "2528290000758706",
+      "publishedAt": "2020-03-22T14:05:00",
+      "postType": "Videos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/videos/2597713320485161/"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-138",
+      "postId": "2529134280674278",
+      "publishedAt": "2020-03-23T12:38:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02N4SeGLj6vUVMLK6gZSxhMjJqQDDmoE4cvhjVcbBAqEvawZMLZQUatkAUwXBnur6El"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-139",
+      "postId": "2529271023993937",
+      "publishedAt": "2020-03-23T16:11:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0LNowWNtkPZG6jy2vNWaC4DYsY2nncqH15fCQxW3j7tW5gjSssHvqL5EiwJcEYXV9l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-140",
+      "postId": "2530926957161677",
+      "publishedAt": "2020-03-25T13:30:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid07dTUV5hRVRzPqsNpq5Mo4nSHaXnwjyJXKgTnbbxCNFh3ATmGxt2jmJNNqoznMoTAl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-141",
+      "postId": "2533717893549250",
+      "publishedAt": "2020-03-28T12:50:00",
+      "postType": "Videos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 4,
+      "permalink": "https://facebook.com/nycartc/videos/632085217644541/"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-142",
+      "postId": "2536501293270910",
+      "publishedAt": "2020-03-31T12:54:00",
+      "postType": "Videos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 4,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02HnD1iSaGtyMwZrhUXXg6QVSMqDMQGZdtMrVctXK3BSQ3zPGR3NFzUVGLFgnUVKFfl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-143",
+      "postId": "2538391179748588",
+      "publishedAt": "2020-04-02T16:11:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 3,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid031XWFsnoXnGEFaDf8PJPhgyNa6FUmy23i4yMV5Tg3PJqf4UhSBcGWwRxWoirmsrLdl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-144",
+      "postId": "2538494736404899",
+      "publishedAt": "2020-04-02T19:48:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 4,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02v7R8vvBhnijC23bxA2pmYDZntQLZcWP7X3p4L5NKZd7jdnNqMS1jsgbZ8iuVecS4l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-145",
+      "postId": "2542168082704231",
+      "publishedAt": "2020-04-06T18:52:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02N8GLfS9DR4R9VtgxjiC3sCXQ6w4VNBJ4JmT4voX58XnkZUr7TLyJQwaHfEXiHdSfl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-146",
+      "postId": "2544729649114741",
+      "publishedAt": "2020-04-09T16:44:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0ByQScdsVEkWXsZPR74B1L5pybGdNid2Dpp7PkS3SnyRf5tEhJVKEYEifPJPVkpH2l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-147",
+      "postId": "2545515655702807",
+      "publishedAt": "2020-04-10T13:16:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0vFpvskCWhyrudjvVvp2SL6nS8FyiU9sqxfch1ezkNQdf3yUftjhP1v8zdzghRBqWl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-148",
+      "postId": "2564168840504155",
+      "publishedAt": "2020-04-30T11:35:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0xSWcN5LBTHUomDehqVRH1ZNjJxxn3gMf6ZpGz2ZMMZVGb91qiv7DCpVeJ5Tkeu7Bl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-149",
+      "postId": "2564970307090675",
+      "publishedAt": "2020-05-01T09:44:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02NCXNbLaRcufPjxuxnkC6DMS3GsMSZQwryjw3n5BMjuXDr8pomeYFsDX52MNCUSLwl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-150",
+      "postId": "2565008800420159",
+      "publishedAt": "2020-05-01T10:24:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02R5HehaRBQLMf98kBYGbJQ2twop9qqEFYKaRfd6QDjYk3XqbFri6b7hv1PHY2baBYl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-151",
+      "postId": "2570445403209832",
+      "publishedAt": "2020-05-07T10:52:00",
+      "postType": "Links",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0wxzPu18yWDhtstn59nqiBmUyUPYTZ3KgRBXAJcLAAbyA3DNVBLSmWqkisgu5Asmbl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-152",
+      "postId": "2591180771136295",
+      "publishedAt": "2020-05-31T13:06:00",
+      "postType": "Photos",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/photo.php"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-153",
+      "postId": "2593951277525911",
+      "publishedAt": "2020-06-03T12:45:00",
+      "postType": "Text",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02jgikLkDbQWE5zvPyT7obxgG5rLRdbGyG96HUu4Mv2XnZ3CTqADT6cKiL93oDB9DRl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-154",
+      "postId": "2595721210682251",
+      "publishedAt": "2020-06-05T10:02:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02TLZLqBcHJRdm57KBDMRmjCwWJGDw57Xef2eZaU4D3VhvRpJgJcndqpUBZCoarDDrl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-155",
+      "postId": "2597455297175509",
+      "publishedAt": "2020-06-07T07:28:00",
+      "postType": "Photos",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/photo.php"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-156",
+      "postId": "2597461867174852",
+      "publishedAt": "2020-06-07T07:36:00",
+      "postType": "Photos",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/photo.php"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-157",
+      "postId": "2599723833615322",
+      "publishedAt": "2020-06-09T17:56:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0Pcm3sw9nGtZmtxZFbBzBL5ZPsLFudnMuu4mt4yHRyXX7sfGtApA3ZZYE1AakbEGTl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-158",
+      "postId": "2607419346179104",
+      "publishedAt": "2020-06-18T08:54:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0wWZVpirQzyxLhFyzGACcLems4bqBq9upwttRz9aPAVAdFfxDZYC9nL2jKPsaE9aul"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-159",
+      "postId": "2624493407805031",
+      "publishedAt": "2020-07-07T14:24:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02aBs7UVLNiGkw4xxPzdpuvzshrqj8WtntFgo971B3q5TcPuDNHN2gRps4nXeiuAUul"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-160",
+      "postId": "2662656593988712",
+      "publishedAt": "2020-08-19T18:27:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0zTFq9VWA3N8yJHr6DD8tvC6kpKDm3NUs2caKxHSLUkF2EnSSiuHFmJrEsHTCE3dWl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-161",
+      "postId": "2663369417250763",
+      "publishedAt": "2020-08-20T14:37:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid09g4QDBLfhZiTcPb9Y9aPfGejF1LQz5uF6dCds1w57PamwAU5taqEfKX61GZT3Uxvl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-162",
+      "postId": "2664133453841026",
+      "publishedAt": "2020-08-21T11:47:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02zp7dEDQ3mNmeuUC3UYQLJDWDgMothQ8oVitaSDizCuk3Vz5rX8yE1g4Xs1fS3Lvul"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-163",
+      "postId": "2666661540254884",
+      "publishedAt": "2020-08-24T11:19:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0fFXoJgiWXgiVDhgPoGo5D95q2942oMjLw2Njh9Pb2Tqmczjq6Zwb9CexAsZqwe6xl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-164",
+      "postId": "2667688650152173",
+      "publishedAt": "2020-08-25T17:34:00",
+      "postType": "Links",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid06NWEmhXyLaaabzTyURahVC54gqZT8YeDkDGP5ic7Pa4ULgadRAYQh4Jn8oBfkVi3l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-165",
+      "postId": "2669149160006122",
+      "publishedAt": "2020-08-27T08:05:00",
+      "postType": "Text",
+      "primaryTheme": "solidarity-and-cultural-amplification",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02XFiUVy6c9cpCrjVyrC1wYe5WFXsbokyowxD1yX9pqjP4GWLXRnRngRrXK2r7ygFpl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-166",
+      "postId": "2669266476661057",
+      "publishedAt": "2020-08-27T11:03:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid024hrSxMLN93ZBaGfjA7QmifmfF6DRvXwmngAPo8yBCHjTFzin2VDxiNhxhSYd9Fz2l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-167",
+      "postId": "2669377899983248",
+      "publishedAt": "2020-08-27T14:08:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0atVWnLdoLNisrF46hozdinGEHg71xJkHajxKEzYHshETVExxYr61yFJQoKSkAyeKl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-168",
+      "postId": "2674538652800506",
+      "publishedAt": "2020-09-02T10:39:00",
+      "postType": "Photos",
+      "primaryTheme": "source-press-and-public-knowledge",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0fm8N3cFS7cVVebYskSWn4Yujs5EFisHcqYoA8YHwD5Eq9gLLxoxzwX6ToKEugzJrl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-169",
+      "postId": "2675396969381341",
+      "publishedAt": "2020-09-03T09:38:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02zTFmgGbzcK3wkQRS1gW1h2GnmMwwRqipA2FJrrkXbnxksWHD6TJ7JA2vu9BUVBTNl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-170",
+      "postId": "2686684168252621",
+      "publishedAt": "2020-09-16T14:40:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 2,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0id8KufSsEhCmHGMdSUZMehCPqcX6wnckMGTcWk8EcjWd1zEuSaq5UnDyrH44EGTul"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-171",
+      "postId": "2694802360774135",
+      "publishedAt": "2020-09-25T18:51:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02EJPSHupmGnXsXZ8g4bmBbBT3SF3tC1LrXJpEa2DdMwY9iNQ5kuViEVBDWSLAEfHgl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-172",
+      "postId": "2700639020190469",
+      "publishedAt": "2020-10-02T14:04:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02B1pHJFp3GJrSbHbppJeBghB2WAziT7LGyocaegJSQmKLETmMSWbzsjbPqPJK9hyJl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-173",
+      "postId": "2703312696589768",
+      "publishedAt": "2020-10-05T15:33:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02MXRi7Yk1RcHtxWaAksyqtm1kkTTPAGeXnhqQ3RhUrCsjid6kDCQuDNBpXoL8HPtdl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-174",
+      "postId": "2703974863190218",
+      "publishedAt": "2020-10-06T09:50:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02tajoXayontS56FW7Sq4TpHUi4UUkgnjf7Pnv4wKWxW3wcZ8Kqp7mXyEu7kbKNEjtl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-175",
+      "postId": "2712844795636558",
+      "publishedAt": "2020-10-16T15:26:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0rcBGzyXHXPJK4rcHHChUWCzSTwgGM1vYdk2B2drLp7s5HDNE7L6VRfjQM1V2q7Wml"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-176",
+      "postId": "2716306081957096",
+      "publishedAt": "2020-10-20T09:25:00",
+      "postType": "Text",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0K3veaTvJyjkMhHe7P53RdhXrHDZA7DnymvaLA6JjLDo5Dz6k1NpAqwogm7keqJRHl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-177",
+      "postId": "2760199450901092",
+      "publishedAt": "2020-12-09T11:38:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid08b3aLEri2mDdS29DXRhNDuXbqAhiXc152hqvextd6E4uQCgrpGiqjFTdG5aps7ppl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-178",
+      "postId": "2764589307128773",
+      "publishedAt": "2020-12-15T10:03:00",
+      "postType": "Text",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02FQvwXgsZwNxBFzF1MdpQhHyCjDqjrmqzUxZBS3LNFDeDePXqyoZWnzkHrhJyuc4pl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-179",
+      "postId": "2767092640211773",
+      "publishedAt": "2020-12-18T17:08:00",
+      "postType": "Links",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0Cank5Y3ZsLEwr93LznwhMvPxkuDeY3Z9mdfw7megG4tCLzToSStyutr83J6zhzvnl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-180",
+      "postId": "2770562119864825",
+      "publishedAt": "2020-12-23T11:59:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0iyzA2NbpZJfjHESzpKSAfzXFbafsNyYxvbt9iC3Lqb8eFwRfnwLJGAfEAgqazkaDl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-181",
+      "postId": "2785674595020244",
+      "publishedAt": "2021-01-13T10:58:00",
+      "postType": "Links",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0LDCWPJqUrV2VjY8dUQ886YJ9J6fAmkGk9MYWzbi7gY9nYXMVCLHo5WRKLpkk4Wh9l"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-182",
+      "postId": "2796823403905363",
+      "publishedAt": "2021-01-29T11:42:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid0tCgMfsRVhARrqyxZnip2a3kkGRpzqyTmhNg8orp71CPLHupW9RnFbsPizRaG2JNhl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-183",
+      "postId": "2811126725808364",
+      "publishedAt": "2021-02-18T11:53:00",
+      "postType": "Photos",
+      "primaryTheme": "community-resource-and-mutual-aid",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02tTkR2cgENpf8mRnyFvVZXXx9eJtfdWfFYdB8gPrArXJjXSXYcS1QdHbEzLS5q2vjl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-184",
+      "postId": "2831039857150384",
+      "publishedAt": "2021-03-18T16:13:00",
+      "postType": "Text",
+      "primaryTheme": "public-meeting-and-mobilization",
+      "postedPublicUrlCount": 0,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02GKa3UcJ3FahvNT6T2XnUeQCAF7J2vR9ucnEYEoSm2kce6UCrG3oxEHqh5A9SGjbUl"
+    },
+    {
+      "id": "FB-NYCAC-NATIVE-185",
+      "postId": "2960969584157410",
+      "publishedAt": "2021-09-15T13:45:00",
+      "postType": "Photos",
+      "primaryTheme": "cultural-space-policy-and-advocacy",
+      "postedPublicUrlCount": 1,
+      "permalink": "https://facebook.com/nycartc/posts/pfbid02e7MDreSvWDJqwuEwxK6MrR5KgXLdASca916K37F6WgT29nJvjvUGr96aeJJDJzyul"
+    }
+  ],
+  "postedDestinationInventory": {
+    "publicSafeDestinations": [
+      {
+        "url": "https://bedfordandbowery.com/2019/02/disco-discord-nypd-and-nightlife-operators-clash-over-party-crashing-raids/",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://bka.org/",
+        "occurrences": 4,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://buzzfeednews.com/article/lamvo/gentrification-noise-complaints-police",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://ci.ovationtix.com/35022/store/donations/28210",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://citylimits.org/2020/04/06/citys-small-businesses-need-rent-stabilization-to-survive-covid-19-advocates-say/",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://citylimits.org/2020/08/19/opinion-will-the-city-step-up-for-black-and-latinx-owned-small-businesses/",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://comptroller.nyc.gov/reports/retail-vacancy-in-new-york-city/",
+        "occurrences": 1,
+        "kind": "government-or-public-record"
+      },
+      {
+        "url": "https://council.nyc.gov/live/",
+        "occurrences": 2,
+        "kind": "government-or-public-record"
+      },
+      {
+        "url": "https://eventbrite.com/e/shuttered-venue-operators-grant-save-our-stages-webinar-02182021-tickets-140700062675",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://eventbrite.com/e/shuttered-venue-operators-grant-webinar-registration-136050549857",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://facebook.com/events/1014934072187610/",
+        "occurrences": 13,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/1371973329662017/",
+        "occurrences": 5,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/149896349250651/",
+        "occurrences": 4,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/184969502815604/",
+        "occurrences": 1,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/208435106806073/",
+        "occurrences": 1,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/2124948934418624/",
+        "occurrences": 1,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/2347093582223366/",
+        "occurrences": 1,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/2506201862949336/",
+        "occurrences": 1,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/268968720387261/",
+        "occurrences": 1,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/314671892724189/",
+        "occurrences": 2,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/373845436658926/",
+        "occurrences": 2,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/426996257871171/",
+        "occurrences": 1,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/455399301875647/",
+        "occurrences": 1,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/511065806145986/",
+        "occurrences": 19,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/772824526895291/",
+        "occurrences": 3,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/790581997948463/",
+        "occurrences": 18,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/events/824636481335600/",
+        "occurrences": 1,
+        "kind": "public-event"
+      },
+      {
+        "url": "https://facebook.com/nycartc/videos/2327947643921948/",
+        "occurrences": 12,
+        "kind": "project-video"
+      },
+      {
+        "url": "https://facebook.com/nycartc/videos/2597713320485161/",
+        "occurrences": 1,
+        "kind": "project-video"
+      },
+      {
+        "url": "https://fairrentnyc.com/",
+        "occurrences": 19,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://forbes.com/sites/michelinemaynard/2020/03/13/5-ways-to-help-your-favorite-restaurant-survive-the-coronavirus-crisis/",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://gothamist.com/2019/02/12/march_nightlife_raids_city_council.php",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://gothamist.com/2019/07/24/empty_storefront_update.php",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://gothamist.com/arts-entertainment/uws-book-culture-seized-city-marshal-over-unpaid-rent",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://gothamist.com/news/guide-5-ballot-questions-could-change-city-charter",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://gothamist.com/news/new-york-state-legislature-votes-repeal-law-50-shields-police-scrunity",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://grubstreet.com/2019/05/prospect-heights-ode-to-babel-gentrification.html",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://instructables.com/id/HEPA-Vacuum-Bag-Mask/",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://jacobinmag.com/2020/03/coronavirus-housing-security-rent-freeze-eviction",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://letnycdance.org/",
+        "occurrences": 2,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://lisc.org/covid-19/small-business-assistance/lowes-neighborhood-business-grants/",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://media.nyc/",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://medium.com/@amandalkool/dear-non-profits-small-businesses-freelancers-etc-this-money-is-for-you-please-take-it-b853196005ce",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://ny.curbed.com/2019/11/8/20953724/commercial-rent-stabilization-bill-nyc-retail-vacancy",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://ny.eater.com/2020/1/9/21058579/neirs-tavern-closed-nyc",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://nyassembly.gov/leg/",
+        "occurrences": 1,
+        "kind": "government-or-public-record"
+      },
+      {
+        "url": "https://nyc.pollsitelocator.com/",
+        "occurrences": 2,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://nyc.pollsitelocator.com/search",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://nycabsentee.com/",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://nycartc.com/",
+        "occurrences": 2,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://nycartc.com/FairRentNYC",
+        "occurrences": 1,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://nycartc.com/Priorities",
+        "occurrences": 2,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://nycartc.com/covid19",
+        "occurrences": 3,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://nycartc.com/covid19-relief",
+        "occurrences": 8,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://nycartc.com/fairrentnyc",
+        "occurrences": 1,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://nycartc.com/join",
+        "occurrences": 11,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://nycartc.com/vacant-storefronts-in-nyc",
+        "occurrences": 3,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://nydailynews.com/new-york/ny-lesbians-queer-women-bars-nightclubs-new-york-history-20190519-dvbvom7rwrcpllr7pg3o74aec4-story.html",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://nydailynews.com/news/politics/ny-commercial-rent-regulation-steve-levin-20191114-eh3aigksp5edlf4itwdkfur74y-story.html",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://nydailynews.com/news/politics/ny-mayors-office-nightlife-underfunded-and-understaffed-20190828-5rvycmj3r5arnhrej62iquuyka-story.html",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://nytimes.com/2019/06/27/us/politics/census-citizenship-question-supreme-court.html",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://nytimes.com/2019/12/30/nyregion/chelsea-annex-flea-market-closing.html",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://nytimes.com/2020/03/15/nyregion/new-york-coronavirus.html",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://nytimes.com/2020/03/25/us/politics/whats-in-coronavirus-stimulus-bill.html",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://oem.nyc/",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://passsbjsa.com/",
+        "occurrences": 1,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://pond-mag.com/culture/2020/8/25/why-the-future-of-venues-depends-on-diversity-inclusivity",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://savenycspaces.com/",
+        "occurrences": 2,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://seattletimes.com/entertainment/city-announces-1-1-million-and-rent-relief-to-support-arts-organizations-in-the-coronavirus-economic-crisis/",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://sla.ny.gov/IndoorDiningNYC",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://talksnotraids.com/",
+        "occurrences": 40,
+        "kind": "campaign-or-coalition"
+      },
+      {
+        "url": "https://thebaffler.com/latest/cut-the-music-pelly",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://theblackinstitute.org/wp-content/uploads/2019/09/TBI_Cabaret_Report_FINAL.pdf",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://thecity.nyc/2020/02/de-blasios-retail-nyc-commercial-rent-control-longshot.html",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://thecity.nyc/2020/7/5/21312054/nyc-business-say-insurance-companies-shafted-on-covid-claims",
+        "occurrences": 1,
+        "kind": "press-or-published-source"
+      },
+      {
+        "url": "https://twitter.com/StephenLevin33/status/1095033921325223936",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://whosontheballot.org/",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://www1.nyc.gov/site/mome/news/paycheck-protection-program-outreach.page",
+        "occurrences": 1,
+        "kind": "government-or-public-record"
+      },
+      {
+        "url": "https://www1.nyc.gov/site/mome/nightlife/march-report.page",
+        "occurrences": 1,
+        "kind": "government-or-public-record"
+      },
+      {
+        "url": "https://www1.nyc.gov/site/mome/nightlife/nightlife.page",
+        "occurrences": 1,
+        "kind": "government-or-public-record"
+      },
+      {
+        "url": "https://www1.nyc.gov/site/sbs/businesses/covid19-business-financial-assistance.page",
+        "occurrences": 1,
+        "kind": "government-or-public-record"
+      },
+      {
+        "url": "https://youtu.be/Bqk0orxlpKg",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      },
+      {
+        "url": "https://youtu.be/XQw-95azq18",
+        "occurrences": 1,
+        "kind": "public-resource-or-partner"
+      }
+    ],
+    "publicSafeOccurrences": 239,
+    "publicSafeUniqueDestinations": 83,
+    "withheldOccurrencesByClass": {
+      "protected-financial-route": 2,
+      "protected-meeting-route": 3,
+      "protected-working-document": 6,
+      "public-unresolved-short-route": 2,
+      "withheld-malformed-or-incidental-route": 2,
+      "withheld-participant-or-profile-route": 2
+    },
+    "boundary": "A posted destination establishes a routing action, not authorship, endorsement, readership, click-through, stakeholder response, adoption, causality, or impact."
+  },
+  "authorshipAndCredit": {
+    "nativePublisherIdentityAvailable": false,
+    "userMemory": "Jamie remembers that he was the predominant Page operator while other coalition members also published.",
+    "status": "held-first-person-memory",
+    "boundary": "The native export does not identify the publishing administrator. Preserve shared coalition authorship and do not convert Jamie's memory into sole or verified Page authorship."
+  },
+  "publicSafety": {
+    "excluded": [
+      "raw captions and descriptions",
+      "comments and participant identities",
+      "per-post reach, click, and engagement metrics",
+      "administrator and authentication data",
+      "Google Docs and Drive working routes",
+      "Zoom and meeting credentials",
+      "financial-transfer routes",
+      "participant and profile relationship graphs",
+      "private filesystem paths"
+    ],
+    "creditBoundary": "NYC Artist Coalition was collective work. Page publication does not assign authorship of every sentence, source, image, event, campaign, or outcome to Jamie or any single coalition member."
+  }
+}

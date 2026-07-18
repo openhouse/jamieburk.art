@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "2.1.0",
+  "id": "composite-2.2.0-deterministic-6",
+  "iteration": 6,
+  "recordedAt": "2026-07-17T02:16:28.286Z",
+  "previousRunId": "composite-2.2.0-deterministic-5",
+  "previousRunDigest": "dbb0db9e0a1372d330704660d22702a47439ef688d6306d4b64818e7cf0cf025",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.2.0",
+    "digest": "f0cc12a35febe293864b919b1bccacbd75a7da572296ff24738500f4ec7989d5"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "ee45f8f89ba62d4e69770f7251a54c6053d38ac1",
+    "tree": "c9d25956a3d672f7f620d749296a179b821ef848",
+    "governedInputDigest": "81e3c5ba61f826496eab883f7ff2f5a9c1c6e29c33aca94285c40c0f19be7b81"
+  },
+  "execution": {
+    "runnerPath": "scripts/run-composite-eval.mjs",
+    "runnerDigest": "4d36dfc6bfc9fc77760aa9db5f9431a6e13a97ff7f835fcbea7beea182562708",
+    "node": "v26.5.0",
+    "platform": "darwin-arm64"
+  },
+  "commands": [
+    {
+      "command": "npm run check:citations",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:15:10.439Z",
+      "completedAt": "2026-07-17T02:15:10.871Z",
+      "durationMs": 432,
+      "outputDigest": "febc095e26a01ee482834b05be0148abc3194a65338704264870b8e2e551b52f"
+    },
+    {
+      "command": "npm run test:citations",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:15:10.871Z",
+      "completedAt": "2026-07-17T02:15:11.215Z",
+      "durationMs": 344,
+      "outputDigest": "5e7d81f60a19c924c7b39359e71b8e9420f2bf4429dd20f625e516bee8e80b2c"
+    },
+    {
+      "command": "npm run check:launch-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:15:11.215Z",
+      "completedAt": "2026-07-17T02:15:11.354Z",
+      "durationMs": 139,
+      "outputDigest": "6eefa03fb4ab7854d4f65d511316d4f78a8f4c456469e41b55a20e1ca101a1a3"
+    },
+    {
+      "command": "npm run test:launch-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:15:11.354Z",
+      "completedAt": "2026-07-17T02:15:11.543Z",
+      "durationMs": 189,
+      "outputDigest": "62b460084cefb3a4939336745a8d344a7bbd9682aedc159b3bc6cdb9274e5536"
+    },
+    {
+      "command": "npm run check:portfolio-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:15:11.543Z",
+      "completedAt": "2026-07-17T02:15:11.683Z",
+      "durationMs": 140,
+      "outputDigest": "4740bb78b1d20fbad530e73131415ed4657e925090d33437246cb51fa83c5a17"
+    },
+    {
+      "command": "npm run test:portfolio-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:15:11.683Z",
+      "completedAt": "2026-07-17T02:15:11.906Z",
+      "durationMs": 223,
+      "outputDigest": "2c6d1420f959d73cacd0c5842d16fe33d6341a68cf01e02ac796f83343a8abb8"
+    },
+    {
+      "command": "npm run check:knowledge-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:15:11.906Z",
+      "completedAt": "2026-07-17T02:15:12.343Z",
+      "durationMs": 437,
+      "outputDigest": "4e5b13cf964cef6a6a637587841348a8539f223e461fd907016ed1454e9066f6"
+    },
+    {
+      "command": "npm run test:knowledge-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:15:12.343Z",
+      "completedAt": "2026-07-17T02:16:07.416Z",
+      "durationMs": 55073,
+      "outputDigest": "b28dfd3cac08db817af0036b5c3538d1d42b09ffb5e5955623f692c923152886"
+    },
+    {
+      "command": "npm run test:knowledge-tools",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:16:07.417Z",
+      "completedAt": "2026-07-17T02:16:07.773Z",
+      "durationMs": 356,
+      "outputDigest": "da963e68181a0930e90410a24be97d02fc40c714b64b638e1a380abd7fa5a652"
+    },
+    {
+      "command": "npm run check:projections",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:16:07.773Z",
+      "completedAt": "2026-07-17T02:16:08.060Z",
+      "durationMs": 287,
+      "outputDigest": "cda8cf28177303d3a0de35f64a47ce03270f3cc42959ad725f85c4aa1295ea48"
+    },
+    {
+      "command": "npm run test:projections",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:16:08.060Z",
+      "completedAt": "2026-07-17T02:16:08.451Z",
+      "durationMs": 391,
+      "outputDigest": "bcca6b0cb087f9470fc0b075a4dee3dd3c6556aeab08dab1b0b09e6940dcf6ad"
+    },
+    {
+      "command": "npm run test:eval-contract",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:16:08.451Z",
+      "completedAt": "2026-07-17T02:16:09.056Z",
+      "durationMs": 605,
+      "outputDigest": "bb43429fc0f4316bd2a0e2d391b43f84672c0002088277a96f644d08a4e54e25"
+    },
+    {
+      "command": "npm run check -w @jamie-burkart/www",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:16:09.056Z",
+      "completedAt": "2026-07-17T02:16:27.185Z",
+      "durationMs": 18129,
+      "outputDigest": "2e5c61849e03384ceafffdac4cd54d761433394f28a2e05812f7c75128acb15e"
+    },
+    {
+      "command": "npm run knowledge-bank",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:16:27.185Z",
+      "completedAt": "2026-07-17T02:16:27.341Z",
+      "durationMs": 156,
+      "outputDigest": "0f6a38d5a1d3845fc07609c6f4626293d91285e0fa0f3627b7b7680fc2861219"
+    },
+    {
+      "command": "npm run public-safety",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:16:27.341Z",
+      "completedAt": "2026-07-17T02:16:28.098Z",
+      "durationMs": 757,
+      "outputDigest": "18da466263b4c9eebc0ce06b95858f4e2f053a868e3008bceb60fe7962783ff7"
+    },
+    {
+      "command": "npm run check:routes",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-17T02:16:28.098Z",
+      "completedAt": "2026-07-17T02:16:28.285Z",
+      "durationMs": 187,
+      "outputDigest": "5e045429b44f7327d14d0a83bdf5339d744ccb76b3c5942a31be1eb3dc1f698d"
+    }
+  ],
+  "judge": {
+    "class": "deterministic",
+    "label": "canonical-runner-6",
+    "independent": false,
+    "priorScoresVisible": false
+  },
+  "criterionResults": [],
+  "openDisagreements": [],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new evidence",
+    "changed public projection",
+    "contract or candidate drift",
+    "human disagreement",
+    "privacy or collective-credit concern"
+  ],
+  "decision": {
+    "status": "accepted-for-review",
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "recordDigest": "c9c4d17ae5fd352b15d7a3410b2e4878e62e2cb1268e5e74a8515295b51a01f0"
+}

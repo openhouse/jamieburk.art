@@ -1,0 +1,457 @@
+{
+  "schemaVersion": "2.1.0",
+  "id": "composite-2.10.0-deterministic-38",
+  "iteration": 38,
+  "recordedAt": "2026-07-18T18:08:14.022Z",
+  "previousRunId": "composite-2.9.0-holdout-b-37",
+  "previousRunDigest": "beade6c220a054905fab323b3f15b0993ad43019d6389f40b4f2e59f7c138295",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.10.0",
+    "digest": "d360381fc89a2f82ca405a165d5eea6dbb45abbd3d771c14845520059727f691"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "4fd637f0a1ea03040faadc5153e00abc731cb38b",
+    "tree": "6737767c06f04bcc7379d563eb9992680ba07dd1",
+    "governedInputDigest": "028f8deb00c48724d49c73d125f7326dbeffafae7d23d4db31bd21e187be8d12"
+  },
+  "execution": {
+    "runnerPath": "scripts/run-composite-eval.mjs",
+    "runnerDigest": "c650de6938d09340bb0e2eb3da17ba70a89213a2a39473efaf1b9cc2608acfdf",
+    "node": "v24.2.0",
+    "platform": "darwin-x64"
+  },
+  "commands": [
+    {
+      "command": "npm run check:citations",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:50:43.114Z",
+      "completedAt": "2026-07-18T17:50:44.666Z",
+      "durationMs": 1552,
+      "outputDigest": "d30b9a2b8905b8bfe3ce99b9545a722d0ac483d1e96a7b4284f010efc7916dda",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/01.log",
+      "reviewOutputDigest": "d30b9a2b8905b8bfe3ce99b9545a722d0ac483d1e96a7b4284f010efc7916dda",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/01.txt"
+    },
+    {
+      "command": "npm run test:citations",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:50:44.671Z",
+      "completedAt": "2026-07-18T17:50:45.653Z",
+      "durationMs": 982,
+      "outputDigest": "881dd20db00fda9518fa21702c377bb4552c1e2e878a9a8daaf24b09ebd135d3",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/02.log",
+      "reviewOutputDigest": "881dd20db00fda9518fa21702c377bb4552c1e2e878a9a8daaf24b09ebd135d3",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/02.txt"
+    },
+    {
+      "command": "npm run check:launch-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:50:45.654Z",
+      "completedAt": "2026-07-18T17:50:46.193Z",
+      "durationMs": 539,
+      "outputDigest": "6eefa03fb4ab7854d4f65d511316d4f78a8f4c456469e41b55a20e1ca101a1a3",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/03.log",
+      "reviewOutputDigest": "6eefa03fb4ab7854d4f65d511316d4f78a8f4c456469e41b55a20e1ca101a1a3",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/03.txt"
+    },
+    {
+      "command": "npm run test:launch-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:50:46.193Z",
+      "completedAt": "2026-07-18T17:50:47.633Z",
+      "durationMs": 1440,
+      "outputDigest": "33f2f5f9625f2ccd45b722bfc7655bda4588cb9422270f47aea5b96b394d5437",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/04.log",
+      "reviewOutputDigest": "33f2f5f9625f2ccd45b722bfc7655bda4588cb9422270f47aea5b96b394d5437",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/04.txt"
+    },
+    {
+      "command": "npm run check:portfolio-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:50:47.634Z",
+      "completedAt": "2026-07-18T17:50:47.978Z",
+      "durationMs": 344,
+      "outputDigest": "4740bb78b1d20fbad530e73131415ed4657e925090d33437246cb51fa83c5a17",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/05.log",
+      "reviewOutputDigest": "4740bb78b1d20fbad530e73131415ed4657e925090d33437246cb51fa83c5a17",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/05.txt"
+    },
+    {
+      "command": "npm run test:portfolio-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:50:47.979Z",
+      "completedAt": "2026-07-18T17:50:48.497Z",
+      "durationMs": 518,
+      "outputDigest": "30fa5594bf0cbb4d9651a20c427e82f1ab95713f932b320e8990a3499803cc14",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/06.log",
+      "reviewOutputDigest": "30fa5594bf0cbb4d9651a20c427e82f1ab95713f932b320e8990a3499803cc14",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/06.txt"
+    },
+    {
+      "command": "npm run check:knowledge-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:50:48.498Z",
+      "completedAt": "2026-07-18T17:50:49.486Z",
+      "durationMs": 988,
+      "outputDigest": "7a150a85fac1804c292d0ac626308403412df58e4fa8e4a322adf3c42971b4b7",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/07.log",
+      "reviewOutputDigest": "7a150a85fac1804c292d0ac626308403412df58e4fa8e4a322adf3c42971b4b7",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/07.txt"
+    },
+    {
+      "command": "npm run test:knowledge-evals",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:50:49.487Z",
+      "completedAt": "2026-07-18T17:51:53.872Z",
+      "durationMs": 64385,
+      "outputDigest": "d7b766cfce3ddf28102dd72d13caa532f89af1b5abe47e30430d0112f7d41e00",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/08.log",
+      "reviewOutputDigest": "d7b766cfce3ddf28102dd72d13caa532f89af1b5abe47e30430d0112f7d41e00",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/08.txt"
+    },
+    {
+      "command": "npm run test:knowledge-tools",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:51:53.873Z",
+      "completedAt": "2026-07-18T17:51:54.788Z",
+      "durationMs": 915,
+      "outputDigest": "e003b090485827e61f9a5bf29ee9efb48cf64e9012bf9b85a66855a4ef3c3bb8",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/09.log",
+      "reviewOutputDigest": "e003b090485827e61f9a5bf29ee9efb48cf64e9012bf9b85a66855a4ef3c3bb8",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/09.txt"
+    },
+    {
+      "command": "npm run test:public-artifacts",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:51:54.788Z",
+      "completedAt": "2026-07-18T17:51:55.294Z",
+      "durationMs": 506,
+      "outputDigest": "06b8dfb2667d498b21f7049493e5328712473be8564215405171e47f5003ac6a",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/10.log",
+      "reviewOutputDigest": "06b8dfb2667d498b21f7049493e5328712473be8564215405171e47f5003ac6a",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/10.txt"
+    },
+    {
+      "command": "npm run check:projections",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:51:55.295Z",
+      "completedAt": "2026-07-18T17:51:56.082Z",
+      "durationMs": 787,
+      "outputDigest": "e9f38442782cc4a8b58988e8bdeaa926992d4610910e94b8748337990769d558",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/11.log",
+      "reviewOutputDigest": "e9f38442782cc4a8b58988e8bdeaa926992d4610910e94b8748337990769d558",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/11.txt"
+    },
+    {
+      "command": "npm run test:projections",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:51:56.082Z",
+      "completedAt": "2026-07-18T17:51:57.276Z",
+      "durationMs": 1194,
+      "outputDigest": "15327d33c88432e52079b5bf69f7436b3c76b5be56b0c06d4e6d725e444db32f",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/12.log",
+      "reviewOutputDigest": "15327d33c88432e52079b5bf69f7436b3c76b5be56b0c06d4e6d725e444db32f",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/12.txt"
+    },
+    {
+      "command": "npm run test:eval-contract",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:51:57.276Z",
+      "completedAt": "2026-07-18T17:51:59.217Z",
+      "durationMs": 1941,
+      "outputDigest": "b5823d7fbde08022a935af19653548621171a10d94e2b696ee770f52bc3fa1e0",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/13.log",
+      "reviewOutputDigest": "b5823d7fbde08022a935af19653548621171a10d94e2b696ee770f52bc3fa1e0",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/13.txt"
+    },
+    {
+      "command": "npm run check:eval-records",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:51:59.218Z",
+      "completedAt": "2026-07-18T17:54:35.436Z",
+      "durationMs": 156218,
+      "outputDigest": "6c63bd0fc38ff2d951c7554781d9e24003df251acd15823b4b374ae88e3b8bee",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/14.log",
+      "reviewOutputDigest": "6c63bd0fc38ff2d951c7554781d9e24003df251acd15823b4b374ae88e3b8bee",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/14.txt"
+    },
+    {
+      "command": "npm run check -w @jamie-burkart/www",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:54:35.437Z",
+      "completedAt": "2026-07-18T17:55:01.237Z",
+      "durationMs": 25800,
+      "outputDigest": "cdc9b81cada55be2591a788e9a18c6f1c56a005fc55ad8b4ab18065415877415",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/15.log",
+      "reviewOutputDigest": "aadeecf2e961ccc6453f1490a7ab3e32adfecd5dcf8b1ee52ceb4129702909e3",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/15.txt"
+    },
+    {
+      "command": "npm run knowledge-bank",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:55:01.238Z",
+      "completedAt": "2026-07-18T17:55:01.606Z",
+      "durationMs": 368,
+      "outputDigest": "0f6a38d5a1d3845fc07609c6f4626293d91285e0fa0f3627b7b7680fc2861219",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/16.log",
+      "reviewOutputDigest": "0f6a38d5a1d3845fc07609c6f4626293d91285e0fa0f3627b7b7680fc2861219",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/16.txt"
+    },
+    {
+      "command": "npm run public-safety",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:55:01.606Z",
+      "completedAt": "2026-07-18T17:55:03.179Z",
+      "durationMs": 1573,
+      "outputDigest": "7fae74db52d2338540198c685f5ea9b2f4ed792fa622785a05db50ca66497397",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/17.log",
+      "reviewOutputDigest": "7fae74db52d2338540198c685f5ea9b2f4ed792fa622785a05db50ca66497397",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/17.txt"
+    },
+    {
+      "command": "npm run check:routes",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:55:03.180Z",
+      "completedAt": "2026-07-18T17:55:03.524Z",
+      "durationMs": 344,
+      "outputDigest": "5e045429b44f7327d14d0a83bdf5339d744ccb76b3c5942a31be1eb3dc1f698d",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/18.log",
+      "reviewOutputDigest": "5e045429b44f7327d14d0a83bdf5339d744ccb76b3c5942a31be1eb3dc1f698d",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/18.txt"
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T17:55:03.524Z",
+      "completedAt": "2026-07-18T17:59:27.287Z",
+      "durationMs": 263763,
+      "outputDigest": "80264257acadde7a099711b7be3c73b119e5de44cd7dbac8edcc54fad2c25840",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/19.log",
+      "reviewOutputDigest": "fa5aac0270e691b1e600f07cc696a18937e526d9dec8bb42df214c4c81292791",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/19.txt"
+    },
+    {
+      "command": "npm run preflight:staging",
+      "exitCode": 1,
+      "status": "failed",
+      "startedAt": "2026-07-18T17:59:27.288Z",
+      "completedAt": "2026-07-18T18:03:42.258Z",
+      "durationMs": 254970,
+      "outputDigest": "e7cbd53344f53a5023bf912b4016220d789717238db3c3c5a22e6c5ffeaf4da6",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/20.log",
+      "reviewOutputDigest": "e7cbd53344f53a5023bf912b4016220d789717238db3c3c5a22e6c5ffeaf4da6",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/20.txt"
+    },
+    {
+      "command": "npm run test:browser-evals",
+      "exitCode": 1,
+      "status": "failed",
+      "startedAt": "2026-07-18T18:03:42.259Z",
+      "completedAt": "2026-07-18T18:03:45.980Z",
+      "durationMs": 3721,
+      "outputDigest": "a31c485d16228413a93a23176d813192ee379eee2d5358f41dacc5268fa433df",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/21.log",
+      "reviewOutputDigest": "a31c485d16228413a93a23176d813192ee379eee2d5358f41dacc5268fa433df",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/21.txt"
+    },
+    {
+      "command": "npm audit --omit=dev --audit-level=high",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-07-18T18:03:45.981Z",
+      "completedAt": "2026-07-18T18:03:47.280Z",
+      "durationMs": 1299,
+      "outputDigest": "e911a39694ac286cad8b74baa4a2c966ef91c1195db1f36310729d55acbb5d24",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/22.log",
+      "reviewOutputDigest": "e911a39694ac286cad8b74baa4a2c966ef91c1195db1f36310729d55acbb5d24",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/22.txt"
+    },
+    {
+      "command": "npm run preflight:production",
+      "exitCode": 1,
+      "status": "failed",
+      "startedAt": "2026-07-18T18:03:47.280Z",
+      "completedAt": "2026-07-18T18:08:13.856Z",
+      "durationMs": 266576,
+      "outputDigest": "f205e39a6cbd01a44792034a00d33f144775421e24504cd0f7b9043b5df8d653",
+      "outputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/23.log",
+      "reviewOutputDigest": "f205e39a6cbd01a44792034a00d33f144775421e24504cd0f7b9043b5df8d653",
+      "reviewOutputPath": "evals/_shared/logs/038-composite-2.10.0-deterministic-38/23.txt"
+    }
+  ],
+  "judge": {
+    "class": "deterministic",
+    "label": "canonical-runner-38",
+    "independent": false,
+    "priorScoresVisible": false
+  },
+  "criterionResults": [],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "The deterministic protocol tested the automated evidence declared for role fit; qualitative interpretation remains with independent holdouts and named human authorities.",
+        "evidence": [
+          "npm run check:portfolio-evals: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/05.txt",
+          "npm run test:browser-evals: failed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/21.txt"
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "The deterministic protocol tested the automated evidence declared for demonstrated action; qualitative interpretation remains with independent holdouts and named human authorities.",
+        "evidence": [
+          "npm run check:projections: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/11.txt",
+          "npm run check -w @jamie-burkart/www: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/15.txt"
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "The deterministic protocol tested the automated evidence declared for usable result; qualitative interpretation remains with independent holdouts and named human authorities.",
+        "evidence": [
+          "npm run test:browser-evals: failed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/21.txt",
+          "npm run check:routes: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/18.txt",
+          "npm run preflight:staging: failed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/20.txt"
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "The deterministic protocol tested the automated evidence declared for domain experience; qualitative interpretation remains with independent holdouts and named human authorities.",
+        "evidence": [
+          "npm run check:knowledge-evals: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/07.txt",
+          "npm run check:citations: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/01.txt"
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "The deterministic protocol tested the automated evidence declared for management authority; qualitative interpretation remains with independent holdouts and named human authorities.",
+        "evidence": [
+          "npm run check:launch-evals: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/03.txt",
+          "npm run test:eval-contract: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/13.txt"
+        ],
+        "unresolvedRisks": [
+          "five privacy-safe real-reader sessions",
+          "collaborator corroboration",
+          "artifact and media rights clearance",
+          "staging verification of the exact candidate SHA",
+          "Jamie approval of the exact production SHA"
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "The deterministic protocol tested the automated evidence declared for evidentiary confidence; qualitative interpretation remains with independent holdouts and named human authorities.",
+        "evidence": [
+          "npm run check:citations: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/01.txt",
+          "npm run test:public-artifacts: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/10.txt",
+          "npm run check:eval-records: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/14.txt"
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "The deterministic protocol tested the automated evidence declared for unresolved risk; qualitative interpretation remains with independent holdouts and named human authorities.",
+        "evidence": [
+          "npm audit --omit=dev --audit-level=high: passed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/22.txt",
+          "npm run preflight:production: failed; retained output evals/_shared/logs/038-composite-2.10.0-deterministic-38/23.txt"
+        ],
+        "unresolvedRisks": [
+          "five privacy-safe real-reader sessions",
+          "collaborator corroboration",
+          "artifact and media rights clearance",
+          "staging verification of the exact candidate SHA",
+          "Jamie approval of the exact production SHA"
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked by this deterministic run; authority remains with the named human reviewer.",
+        "humanDecision": "not-invoked",
+        "humanDecisionEvidence": [],
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "Not invoked by this deterministic run; authority remains with the named human reviewer.",
+        "humanDecision": "not-invoked",
+        "humanDecisionEvidence": [],
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "Not invoked by this deterministic run; authority remains with the named human reviewer.",
+        "humanDecision": "not-invoked",
+        "humanDecisionEvidence": [],
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "Not invoked by this deterministic run; authority remains with the named human reviewer.",
+        "humanDecision": "not-invoked",
+        "humanDecisionEvidence": [],
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "Every governed trigger was checked as a reason to reopen review; this run found no automated basis to close or waive future human reopening.",
+    "overrides": [],
+    "openDisagreements": [],
+    "disagreementReview": "The deterministic runner introduced no editorial disagreement and cannot erase disagreements recorded by holdouts or human reviewers."
+  },
+  "openDisagreements": [],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new or contradictory evidence",
+    "changed consent or rights",
+    "a substantiated attribution dispute",
+    "source decay or corrected provenance",
+    "a changed target role or public surface"
+  ],
+  "decision": {
+    "status": "revision-required",
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "recordDigest": "9b248de6c260e284b7e8e0a45c43f9044f2d3ea868ab7416cb2b08b5d98b666b"
+}

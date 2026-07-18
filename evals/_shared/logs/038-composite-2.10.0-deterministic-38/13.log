@@ -1,0 +1,48 @@
+
+> test:eval-contract
+> node --test scripts/tests/eval-contract.test.mjs
+
+✔ shared contract governs exactly the three canonical suites (3.915375ms)
+✔ shared contract executes every automatable launch hard gate (0.18725ms)
+✔ governed digest includes all app source and excludes generated results (40.596917ms)
+✔ stale contract and candidate digests are rejected (9.993542ms)
+✔ hard-coded pass without the full command set is rejected (1.097583ms)
+✔ command status must agree with its actual exit code (4.542917ms)
+✔ deterministic records require canonical runner and captured output provenance (5.609959ms)
+✔ deterministic evidence paths cannot escape approved repository roots (8.778292ms)
+✔ evidence paths cannot escape approved roots through symlinks (3.650958ms)
+✔ an approved evidence root cannot itself be a symlink outside the repository (3.359042ms)
+✔ a successful command cannot mutate governed inputs and retain candidate certification (464.446208ms)
+✔ deterministic records require complete decision governance under the current contract (6.774042ms)
+✔ historical contract versions retain their original deterministic decision rule (4.19375ms)
+✔ holdouts must be independent, blind, normalized, and prompt-bound (2.124875ms)
+✔ holdout records require explicit model-context provenance bound to candidate and prompt (1.3675ms)
+✔ reviewer labels use shared security normalization (1.471875ms)
+✔ a binding human refusal cannot coexist with acceptance (0.582959ms)
+✔ top-level disagreement, override, and reopen records must match the decision record (0.490875ms)
+✔ unknown, duplicate, missing, out-of-range, and evidenceless scores are rejected (0.5145ms)
+✔ declared weighted score and an unsupported acceptance are recomputed from actual results (0.63525ms)
+✔ a human hold remains valid even when numerical scores pass (1.187291ms)
+✔ blocking findings and incomplete decision governance prohibit acceptance (0.914292ms)
+✔ required human gates cannot disappear from an accepted record (4.732542ms)
+✔ run records form an ordered hash chain (2.0245ms)
+✔ record mutation invalidates its own digest (3.23625ms)
+✔ two deterministic passes and two unchanged context-separated holdouts meet the review stop (57.863958ms)
+✔ holdouts recorded before deterministic qualification cannot certify (58.065792ms)
+✔ a deterministic pass interleaved with holdouts cannot certify (58.34175ms)
+✔ a failed deterministic run resets the consecutive pass streak (116.345125ms)
+✔ one reviewer cannot certify twice by changing label case or Unicode (57.189125ms)
+✔ distinct session strings cannot revive a default-ignorable reviewer label (56.913167ms)
+✔ a later rejected holdout resets the current acceptance phase (58.032084ms)
+✔ deterministic and holdout records must bind the same commit and tree (108.175834ms)
+✔ a contract version change resets old passes (57.088833ms)
+✔ a model cannot grant production readiness (4.037167ms)
+✔ candidate commit and tree are verified by the record validator (123.903ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1591.857334

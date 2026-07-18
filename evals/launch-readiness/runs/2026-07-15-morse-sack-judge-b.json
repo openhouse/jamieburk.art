@@ -1,0 +1,201 @@
+{
+  "id": "2026-07-15-morse-sack-judge-b",
+  "recordedAt": "2026-07-15",
+  "candidate": {
+    "branch": "feature/evals-A",
+    "baseCommit": "5ec758b82fc7f84348f5a8565e521eb06c80017f",
+    "releaseApproved": false
+  },
+  "judge": {
+    "label": "Fresh judge B",
+    "model": "gpt-5.6-sol",
+    "criterionMinimumsPass": true,
+    "lowestCriterionId": "LR-JUDGE-BURDEN",
+    "nextAction": "Make one bounded revision to /work/technical-operations that consolidates the overlapping operations map and proof map into a shorter capability-to-project scan while preserving every claim boundary, then re-review both required viewports.",
+    "regressions": []
+  },
+  "hardGatesPass": false,
+  "hardGateNotes": [
+    "Full repository checks and focused responsive QA passed for the working-tree candidate.",
+    "Exact-SHA approval and post-deployment production smoke remain open release-time gates."
+  ],
+  "scores": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 4
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 3
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 5
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 4
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 5
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 4
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 4
+    }
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "Jamie is immediately legible as a technical project manager and implementation lead focused on product operations and public-facing implementation.",
+        "evidence": [
+          "/about names the target role in its opening sentence.",
+          "/work/technical-operations connects that role to operating practices and named projects."
+        ],
+        "unresolvedRisks": [
+          "Dense proof layers may slow a time-limited hiring reader after the initial role statement."
+        ]
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "The inspected surfaces identify workflow mapping, coordination, implementation, documentation, facilitation, onboarding, hosting, and handoff actions.",
+        "evidence": [
+          "/work/technical-operations enumerates concrete delivery and operating actions.",
+          "WOW List and Sunday Dinner distinguish Jamie's actions from project context and outcomes."
+        ],
+        "unresolvedRisks": [
+          "Some proof-map entries remain compressed summaries rather than inspectable action narratives."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "Jamie's work is connected to a community distribution platform, repeatable participation systems, operating documentation, decision records, launch support, and durable handoffs.",
+        "evidence": [
+          "WOW List describes followable community surfaces for publishing and distributing events.",
+          "Sunday Dinner describes repeatable hosting, onboarding, facilitation, documentation, and continuity systems.",
+          "Technical Operations names project-specific operating outputs."
+        ],
+        "unresolvedRisks": [
+          "Several usable results remain textually described without decisive public artifacts."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "The candidate demonstrates relevant experience across civic technology, cultural infrastructure, community platforms, small-business operations, construction, and knowledge systems.",
+        "evidence": [
+          "/about lists the principal domains.",
+          "The Technical Operations proof map associates different operating practices with named projects across those domains."
+        ],
+        "unresolvedRisks": [
+          "Breadth can read as an inventory unless hiring relevance remains prioritized."
+        ]
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "The inspected pages support coordination, implementation leadership, facilitation, stewardship, and system-building more strongly than broad personnel-management authority.",
+        "evidence": [
+          "/about uses the bounded title technical project manager and implementation lead.",
+          "WOW List uses co-built language, while Sunday Dinner identifies contribution without claiming sole control."
+        ],
+        "unresolvedRisks": [
+          "Do not generalize project-level authority into unsupported organization-wide personnel management."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "Public claims are generally bounded, with canonical Claim projections and explicit protected-data exclusions, but some aggregate and summary claims are not publicly inspectable on their page.",
+        "evidence": [
+          "WOW List uses Claim components and states excluded data categories.",
+          "Sunday Dinner identifies the protected ledger and explicitly withholds participant-level records.",
+          "The recorded run retains summary-only and protected-support limitations."
+        ],
+        "unresolvedRisks": [
+          "The Sunday Dinner aggregate depends on protected support.",
+          "Some Technical Operations proof-map statements cannot be independently assessed from the allowed files."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "All criterion floors pass, but this working-tree candidate is not an approved production release.",
+        "evidence": [
+          "The supplied repository and browser QA results passed for the candidate.",
+          "The recorded run and user instruction state that exact-SHA approval and post-deployment production smoke remain open.",
+          "git diff --stat shows uncommitted changes relative to the stated base commit."
+        ],
+        "unresolvedRisks": [
+          "Jamie has not approved an exact candidate SHA for promotion.",
+          "Production routing, TLS, metadata, resume integrity, robots, sitemap, and related smoke checks remain unverified after deployment.",
+          "Reader burden remains the lowest public criterion.",
+          "The allowed inspection excluded changed check/report scripts shown by git diff --stat, limiting independent assessment of those integrations."
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked; this review does not authorize claim promotion or production publication.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "No attribution dispute is reported in the inspected run; the human-triggered hold path remains open.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "No override was invoked; the overrides record remains empty.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "Invoked because new adversarial evidence exposed a governance-enforcement gap and the public/evaluation surfaces changed; release review remains open.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "New adversarial evidence and changed public/evaluation surfaces justified reopening and rescoring. The inspected record reports no changed consent, substantiated attribution dispute, or provenance correction, but those human-controlled paths remain available. Exact-SHA approval and production smoke still prevent release acceptance.",
+    "overrides": [],
+    "openDisagreements": [
+      "The first fresh governance judge scored LR-JUDGE-SACK at 3 because explicit policy was not yet enforced per run; the structural gap is addressed, but semantic adequacy still depends on human review.",
+      "The portfolio lacks a decisive cleared artifact that fully demonstrates the continuity from artistic investigation to operating practice.",
+      "The Technical Operations page remains dense and partly repetitive for a time-limited hiring reader.",
+      "Exact-SHA approval and post-deployment production smoke remain open."
+    ],
+    "disagreementReview": "The prior Sack-lens dissent remains material history rather than being erased by the new structural checks. This independent review raises Sack to 4, not 5, because nonempty strings and matching arrays cannot prove substantive deliberation. The artifact, reader-burden, and release disagreements remain live."
+  },
+  "declaredResult": {
+    "weightedScore": 4.32,
+    "missing": [],
+    "belowMinimum": [],
+    "governanceFailures": [],
+    "accepted": false
+  }
+}

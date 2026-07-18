@@ -1,0 +1,5 @@
+
+> check:eval-records
+> node scripts/check-eval-records.mjs
+
+Composite run history passes structural validation across 9 record(s).

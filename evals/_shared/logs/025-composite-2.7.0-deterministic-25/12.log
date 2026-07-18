@@ -1,0 +1,27 @@
+
+> test:projections
+> node --test scripts/tests/projection-consistency.test.mjs
+
+✔ current canonical projections and public registry are consistent (9.068291ms)
+✔ projection documentation cannot drift from the executable homepage proof strip (7.362583ms)
+✔ a curated proof list cannot grant an unauthorized surface (0.243417ms)
+✔ repository-authored public evidence is pinned to an immutable snapshot (0.10275ms)
+✔ projection validation cannot pass without scanning public surfaces (0.844542ms)
+✔ generated registry drift is rejected (7.618917ms)
+✔ a held projection leaked through a public surface is rejected (6.892459ms)
+✔ default-ignorable characters cannot conceal a held projection (6.953333ms)
+✔ held claim and protected source identifiers cannot enter public surfaces (1.051208ms)
+✔ an active projection without an authorized surface is rejected (10.519708ms)
+✔ an occurrence cannot exceed the projection's authorized surfaces (10.550584ms)
+✔ a governed public projection cannot lose required boundary language (10.402583ms)
+✔ a governed surface cannot bypass its canonical claim projection (7.13175ms)
+✔ a protected source cannot become a public citation (9.912083ms)
+✔ Unicode dash normalization cannot hide superseded wording (7.270708ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 241.176292
