@@ -997,7 +997,7 @@ const technicalOperationsPageProofIds = [
 
 export const publicCompositionProofSelections = {
   home: homepageProofs.map((proof) => proof.id),
-  "work-index": caseStudyProofIds,
+  "work-index": [...caseStudyProofIds, "source-backed-team-memory-method"],
   "technical-operations": technicalOperationsPageProofIds,
   resume: resumeProofHighlights.map((proof) => proof.id),
   about: ["ai-evals-professional-development"],

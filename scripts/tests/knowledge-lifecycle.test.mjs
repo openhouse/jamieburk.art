@@ -747,7 +747,7 @@ test("KC Town Hall public surfaces preserve the no-disbursement boundary", () =>
 
   assert.match(
     technicalOperationsSource,
-    /requireReadyOrCarefulProof\(\s*"kc-town-hall-public-benefit-documentation"/
+    /requireTechnicalOperationsProof\(\s*"kc-town-hall-public-benefit-documentation"/
   );
   assert.match(publicText, /City Council (?:approval and appropriation|then adopted)/);
   assert.match(

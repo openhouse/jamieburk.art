@@ -146,7 +146,17 @@ if (existsSync(proofPath)) {
     fail("Proof data is missing SupportLevel type");
   }
 
-  for (const match of proofSource.matchAll(/\{\n\s+id:\s*"([^"]+)"[\s\S]*?\n\s+\}/g)) {
+  const proofArrayStart = proofSource.indexOf("export const proofClaims: ProofClaim[] = [");
+  const proofArrayEnd = proofSource.indexOf("\n];\n\nconst publicProofStatuses", proofArrayStart);
+  if (proofArrayStart < 0 || proofArrayEnd < 0) {
+    fail("Unable to isolate the canonical proofClaims array");
+  }
+  const canonicalProofSource =
+    proofArrayStart >= 0 && proofArrayEnd >= 0
+      ? proofSource.slice(proofArrayStart, proofArrayEnd)
+      : "";
+
+  for (const match of canonicalProofSource.matchAll(/\{\n\s+id:\s*"([^"]+)"[\s\S]*?\n\s+\}/g)) {
     const [, id] = match;
     proofIds.push(id);
     proofBlocks.set(id, match[0]);

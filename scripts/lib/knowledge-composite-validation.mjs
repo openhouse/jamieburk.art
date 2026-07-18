@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -26,6 +26,49 @@ export const expectedPostCandidatePaths = [
   "docs/evals/runs/2026-07-16-knowledge-composite-integration.md",
   "docs/evals/runs/2026-07-16-knowledge-composite-holdout-1.json",
   "docs/evals/runs/2026-07-16-knowledge-composite-holdout-2.json"
+];
+
+const expectedHoldoutReceiptPaths = expectedPostCandidatePaths.filter((relativePath) =>
+  /knowledge-composite-holdout-[12]\.json$/.test(relativePath)
+);
+
+const expectedSurvivorshipPopulationIds = [
+  "SURV-CALLNYC-CIVIC-HALL-EVENT-PAGE",
+  "SURV-NYCARTC-X-OWNER-ARCHIVE",
+  "SURV-NYCAC-FACEBOOK-EVENTS",
+  "SURV-WOWLIST-FACEBOOK-EVENTS",
+  "SURV-WOWLIST-DATABASE-BACKUPS",
+  "SURV-KC-TOWN-HALL-MUNICIPAL-PACKET",
+  "SURV-NTER-CHNG-PROJECT-SITE",
+  "SURV-PROTECTED-SOCIAL-CAPTURES"
+];
+
+const compositionSourceBindingSpecs = [
+  { surface: "home", path: "apps/www/src/components/ProofStrip.tsx", tokens: ["homepageProofs"] },
+  { surface: "home", path: "apps/www/src/app/page.tsx", tokens: ["featuredWork"] },
+  { surface: "work-index", path: "apps/www/src/app/work/page.tsx", tokens: ["workItems", "requireReadyOrCarefulProof", "source-backed-team-memory-method"] },
+  { surface: "case-study-template", path: "apps/www/src/app/work/[slug]/page.tsx", tokens: ["workItems"] },
+  { surface: "case-study-template", path: "apps/www/src/data/work.ts", tokens: ["getClaimProjection"] },
+  { surface: "technical-operations", path: "apps/www/src/app/work/technical-operations/page.tsx", tokens: ["technicalOperationsProofRows", "technicalOperationsClaimProjectionRefs", "requireTechnicalOperationsProof"] },
+  { surface: "resume", path: "apps/www/src/app/resume/page.tsx", tokens: ["resumeProofHighlights"] },
+  { surface: "about", path: "apps/www/src/app/about/page.tsx", tokens: ["getClaimProjection", "requireReadyOrCarefulProof"] },
+  { surface: "source-backed-team-memory-lab", path: "apps/www/src/app/lab/source-backed-team-memory/page.tsx", tokens: ["requireReadyOrCarefulProof", "source-backed-team-memory-method"] }
+];
+
+const collectPublicCopyPaths = (relativeDirectory) => {
+  const absoluteDirectory = path.join(repoRoot, relativeDirectory);
+  return readdirSync(absoluteDirectory, { withFileTypes: true }).flatMap((entry) => {
+    const relativePath = path.join(relativeDirectory, entry.name);
+    if (entry.isDirectory()) return collectPublicCopyPaths(relativePath);
+    return /\.(?:tsx|mdx)$/.test(entry.name) ? [relativePath] : [];
+  });
+};
+
+export const publicAgencySurfacePaths = [
+  ...collectPublicCopyPaths("apps/www/src/app"),
+  ...collectPublicCopyPaths("apps/www/src/components"),
+  ...collectPublicCopyPaths("apps/www/src/content"),
+  "apps/www/src/data/work.ts"
 ];
 
 export function contractFingerprint(suite = readJson(".agents/evals/knowledge-composite-integration.json")) {
@@ -80,6 +123,11 @@ export function validateSuite(suite) {
   requireValue(suite.baseline?.commit === "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe", "Baseline commit is not pinned");
   requireValue(suite.baseline?.wholesale_merges_or_cherry_picks === false, "Wholesale donor integration must remain false");
   requireValue(sameSet((suite.donors_inspected ?? []).map((item) => item.id), "ABCDEFGHIJKLMN".split("")), "Donor inventory must cover A-N exactly");
+  for (const donor of suite.donors_inspected ?? []) {
+    requireValue(Number.isInteger(donor.pr), `Donor ${donor.id} needs a PR number`);
+    requireValue(typeof donor.accepted === "string" && donor.accepted.length > 0, `Donor ${donor.id} needs an accepted decision`);
+    requireValue(typeof donor.rejected === "string" && donor.rejected.length > 0, `Donor ${donor.id} needs a rejected decision`);
+  }
   requireValue(sameSet((suite.evals ?? []).map((item) => item.id), expectedIds), "Composite eval IDs must be exactly CI-001 through CI-009");
   requireValue(!duplicates((suite.evals ?? []).map((item) => item.id)).length, "Composite eval IDs must be unique");
   requireValue((suite.evals ?? []).reduce((sum, item) => sum + item.weight, 0) === 100, "Composite eval weights must total 100");
@@ -107,6 +155,12 @@ export function validateSuite(suite) {
   requireValue(suite.profiles?.production_launch?.exact_candidate_production_approval_required === true, "Production must retain exact-candidate approval");
   requireValue(Array.isArray(suite.candidate_fingerprint_scope) && suite.candidate_fingerprint_scope.length >= 8, "Candidate fingerprint scope is too narrow");
   requireValue(!duplicates(suite.candidate_fingerprint_scope ?? []).length, "Candidate fingerprint scope contains duplicates");
+  for (const binding of compositionSourceBindingSpecs) {
+    requireValue(
+      suite.candidate_fingerprint_scope.includes(binding.path),
+      `Candidate fingerprint scope must include ${binding.path}`
+    );
+  }
   return errors;
 }
 
@@ -149,6 +203,17 @@ export function validateAgency(agency, proofs = proofClaims, bank = knowledgeBan
     if (/\bofficial(?:ly)? endorsed by\b|\bcity-endorsed\b/i.test(asserted)) {
       errors.push(`${relation.id} contains institutional-endorsement drift`);
     }
+    const publicWording = [
+      proof.publicWording,
+      proof.shortWording,
+      proof.detailedPublicWording
+    ].filter(Boolean).join(" ");
+    if (/\b(?:single-handedly|solely|alone caused|official city representative|executive director|chief executive officer)\b/i.test(publicWording)) {
+      errors.push(`${proof.id} public wording contains sole-causality or unsupported-title drift`);
+    }
+    if (/\bofficial(?:ly)? endorsed by\b|\bcity-endorsed\b/i.test(publicWording)) {
+      errors.push(`${proof.id} public wording contains institutional-endorsement drift`);
+    }
     if (proof.status === "careful" && !/(collective|shared|coalition|institution|government|neighborhood|participant|business|legislative|community|producer|organizer|sponsor|human judgment|human review)/i.test(`${relation.creditScope} ${relation.antiClaims.join(" ")}`)) {
       errors.push(`${relation.id} erases the collective or institutional boundary of a careful proof`);
     }
@@ -183,7 +248,12 @@ export function validateComposition(manifest, agency, proofs = proofClaims) {
       if (!proofIds.has(proofId)) errors.push(`${surface.id} selects unknown proof ${proofId}`);
       if (!agencyProofIds.has(proofId)) errors.push(`${surface.id} selects proof ${proofId} without agency classification`);
     }
-    if (!surface.routeTemplate && (surface.selectedProofIds ?? []).length > surface.claimBudget) errors.push(`${surface.id} exceeds its claim budget`);
+    const selectedClaimCount =
+      (surface.selectedProofIds ?? []).length +
+      (surface.selectedClaimProjectionKeys ?? []).length;
+    if (!surface.routeTemplate && selectedClaimCount > surface.claimBudget) {
+      errors.push(`${surface.id} exceeds its claim budget`);
+    }
   }
 
   const caseTemplate = manifest.surfaces?.find((surface) => surface.id === "case-study-template");
@@ -220,14 +290,69 @@ export function validateComposition(manifest, agency, proofs = proofClaims) {
   return errors;
 }
 
-export function validateSurvivorship(register) {
+export function validateCompositionSourceBindings(
+  readSource = (relativePath) => readFileSync(path.join(repoRoot, relativePath), "utf8")
+) {
+  const errors = [];
+  for (const binding of compositionSourceBindingSpecs) {
+    let source = "";
+    try {
+      source = readSource(binding.path);
+    } catch {
+      errors.push(`${binding.surface} composition source is missing: ${binding.path}`);
+      continue;
+    }
+    for (const token of binding.tokens) {
+      if (!source.includes(token)) {
+        errors.push(`${binding.surface} render path is not bound to ${token} in ${binding.path}`);
+      }
+    }
+  }
+  return errors;
+}
+
+export function validatePublicAgencySurfaceWording(
+  readSource = (relativePath) => readFileSync(path.join(repoRoot, relativePath), "utf8")
+) {
+  const errors = [];
+  const soleOrTitlePattern =
+    /\b(?:single-handedly|solely caused|alone caused|official city representative|served as (?:the )?executive director|chief executive officer)\b/i;
+  const endorsementPattern = /\bofficial(?:ly)? endorsed by\b|\bcity-endorsed\b/i;
+  for (const relativePath of publicAgencySurfacePaths) {
+    const source = readSource(relativePath);
+    if (soleOrTitlePattern.test(source)) {
+      errors.push(`${relativePath} contains public sole-causality or unsupported-title drift`);
+    }
+    if (endorsementPattern.test(source)) {
+      errors.push(`${relativePath} contains public institutional-endorsement drift`);
+    }
+  }
+  return errors;
+}
+
+export function validateSurvivorship(register, bank = knowledgeBank, proofs = proofClaims) {
   const errors = [];
   const expectedStatuses = ["recovered", "partially-recovered", "not-recovered", "known-through-another-source"];
   if (!sameSet(register.allowedStatuses ?? [], expectedStatuses)) errors.push("Survivorship statuses must use the canonical exact set");
+  if (!sameSet((register.populations ?? []).map((item) => item.id), expectedSurvivorshipPopulationIds)) {
+    errors.push("Survivorship populations must match the reviewed exact set");
+  }
   for (const id of duplicates((register.populations ?? []).map((item) => item.id))) errors.push(`Duplicate survivorship population: ${id}`);
+  if (!sameSet((register.populations ?? []).map((item) => item.status), expectedStatuses)) {
+    errors.push("Survivorship populations must represent every canonical status");
+  }
+  const knownProjects = new Set([
+    ...bank.intake.flatMap((item) => item.projectIds),
+    ...bank.claims.map((item) => item.project),
+    ...bank.researchInquiries.map((item) => item.project),
+    ...proofs.flatMap((item) => item.relatedProjects)
+  ]);
+  const knownInquiryIds = new Set(bank.researchInquiries.map((item) => item.id));
   for (const population of register.populations ?? []) {
     if (!expectedStatuses.includes(population.status)) errors.push(`${population.id} has invalid survivorship status`);
     if (!population.finding || !population.boundary) errors.push(`${population.id} needs a finding and boundary`);
+    if (!knownProjects.has(population.project)) errors.push(`${population.id} references unknown project ${population.project}`);
+    if (population.inquiryId && !knownInquiryIds.has(population.inquiryId)) errors.push(`${population.id} references unknown inquiry ${population.inquiryId}`);
     if (population.status === "not-recovered" && !/(does not|not prove|not establish)/i.test(population.boundary)) errors.push(`${population.id} must state that non-recovery is not proof of nonexistence`);
   }
   const expectedRights = ["factual-support", "quotation-permission", "artifact-rights", "image-permission", "participant-consent", "public-display-approval"];
@@ -300,14 +425,32 @@ export function validatePackageScripts(packageJson) {
   return errors;
 }
 
-export function validateHoldouts({ suite, state, receipts, expectedContractFingerprint, expectedCandidateFingerprint, evidencePathExists = () => true }) {
+export function validateHoldouts({ suite, state, receipts, receiptPaths = state.holdoutReceiptPaths ?? [], expectedContractFingerprint, expectedCandidateFingerprint, evidencePathExists = () => true }) {
   const errors = [];
   const expectedIds = suite.evals.map((item) => item.id);
+  const expectedReceiptKeys = [
+    "version", "judgeIdentity", "judgeRole", "authoredPatch",
+    "sawOptimizationHistory", "candidateSha", "contractFingerprint",
+    "candidateFingerprint", "evaluatedAt", "scores",
+    "criticalRegressions", "instrumentDefects", "decision"
+  ];
+  const expectedScoreKeys = ["id", "score", "rationale", "evidencePaths"];
+  if (!sameSet(receiptPaths, expectedHoldoutReceiptPaths) || duplicates(receiptPaths).length) {
+    errors.push("Holdout receipt paths must match the evaluator-owned exact set");
+  }
+  for (const receiptPath of receiptPaths) {
+    if (path.isAbsolute(receiptPath) || receiptPath.split("/").includes("..")) {
+      errors.push(`Holdout receipt path escapes the repository: ${receiptPath}`);
+    }
+  }
   if (receipts.length !== 2) errors.push("Exactly two independent holdout receipts are required");
   const judgeIds = receipts.map((receipt) => receipt.judgeIdentity);
   if (new Set(judgeIds).size !== receipts.length) errors.push("Holdout judge identities must be unique");
 
   for (const receipt of receipts) {
+    if (!sameSet(Object.keys(receipt), expectedReceiptKeys) || duplicates(Object.keys(receipt)).length) {
+      errors.push(`${receipt.judgeIdentity ?? "unknown judge"} receipt must use the exact schema`);
+    }
     if (receipt.version !== 1) errors.push(`${receipt.judgeIdentity ?? "unknown judge"} receipt version must be 1`);
     if (receipt.judgeIdentity === state.optimizerIdentity) errors.push("Optimizer may not grade the patch");
     if (receipt.judgeRole !== "read-only-independent") errors.push(`${receipt.judgeIdentity} must be read-only-independent`);
@@ -321,6 +464,9 @@ export function validateHoldouts({ suite, state, receipts, expectedContractFinge
     if (!sameSet(scoreIds, expectedIds)) errors.push(`${receipt.judgeIdentity} must score the exact eval set`);
     if (duplicates(scoreIds).length) errors.push(`${receipt.judgeIdentity} must score each eval exactly once`);
     for (const score of receipt.scores ?? []) {
+      if (!sameSet(Object.keys(score), expectedScoreKeys) || duplicates(Object.keys(score)).length) {
+        errors.push(`${receipt.judgeIdentity}/${score.id ?? "unknown"} score must use the exact schema`);
+      }
       if (!Number.isInteger(score.score) || score.score < 0 || score.score > 4) errors.push(`${receipt.judgeIdentity}/${score.id} has invalid score`);
       if (!score.rationale || !Array.isArray(score.evidencePaths) || !score.evidencePaths.length) errors.push(`${receipt.judgeIdentity}/${score.id} needs rationale and evidence paths`);
       for (const evidencePath of score.evidencePaths ?? []) {
@@ -329,8 +475,10 @@ export function validateHoldouts({ suite, state, receipts, expectedContractFinge
         }
       }
     }
-    if ((receipt.criticalRegressions ?? []).length) errors.push(`${receipt.judgeIdentity} found a critical regression`);
-    if ((receipt.instrumentDefects ?? []).length) errors.push(`${receipt.judgeIdentity} found an unresolved evaluator defect`);
+    if (!Array.isArray(receipt.criticalRegressions)) errors.push(`${receipt.judgeIdentity} criticalRegressions must be an array`);
+    else if (receipt.criticalRegressions.length) errors.push(`${receipt.judgeIdentity} found a critical regression`);
+    if (!Array.isArray(receipt.instrumentDefects)) errors.push(`${receipt.judgeIdentity} instrumentDefects must be an array`);
+    else if (receipt.instrumentDefects.length) errors.push(`${receipt.judgeIdentity} found an unresolved evaluator defect`);
     if (receipt.decision !== "pass_for_code_review") errors.push(`${receipt.judgeIdentity} did not pass the candidate for code review`);
   }
   const evaluationDates = receipts.map((receipt) => receipt.evaluatedAt);
@@ -364,6 +512,8 @@ export function readGitCandidateBinding(suite, candidateSha) {
     commitExists: false,
     candidateIsAncestor: false,
     changedPaths: [],
+    historyChangedPaths: [],
+    mergeCommits: [],
     candidateChangedPaths: [],
     candidateFingerprint: "",
     error: ""
@@ -386,6 +536,17 @@ export function readGitCandidateBinding(suite, candidateSha) {
     if (binding.candidateIsAncestor) {
       const changed = runGit(["diff", "--name-only", `${candidateSha}..${binding.headSha}`]);
       binding.changedPaths = changed ? changed.split("\n") : [];
+      const postCandidateCommits = runGit(["rev-list", "--reverse", `${candidateSha}..${binding.headSha}`]);
+      const historicalPaths = new Set();
+      for (const commit of postCandidateCommits ? postCandidateCommits.split("\n") : []) {
+        const commitPaths = runGit(["diff-tree", "--root", "--no-commit-id", "--name-only", "-r", commit]);
+        for (const relativePath of commitPaths ? commitPaths.split("\n") : []) {
+          if (relativePath) historicalPaths.add(relativePath);
+        }
+      }
+      binding.historyChangedPaths = [...historicalPaths];
+      const mergeCommits = runGit(["rev-list", "--merges", `${suite.baseline.commit}..${binding.headSha}`]);
+      binding.mergeCommits = mergeCommits ? mergeCommits.split("\n") : [];
     }
   } catch (error) {
     binding.error = error instanceof Error ? error.message : String(error);
@@ -423,7 +584,10 @@ export function validateCandidateGitBinding(state, binding, expectedCandidateFin
   if (binding.candidateFingerprint !== expectedCandidateFingerprint) {
     errors.push("Candidate fingerprint must reproduce from the named Git commit tree");
   }
-  const unauthorized = (binding.changedPaths ?? []).filter(
+  if ((binding.mergeCommits ?? []).length) {
+    errors.push("Composite history must not contain wholesale donor merge commits");
+  }
+  const unauthorized = (binding.historyChangedPaths ?? binding.changedPaths ?? []).filter(
     (relativePath) => !expectedPostCandidatePaths.includes(relativePath)
   );
   if (unauthorized.length) {
@@ -444,7 +608,12 @@ export function readCompositeArtifacts() {
     survivorship: readJson("docs/knowledge-bank/archival-survivorship-register.json"),
     blindStatus: readJson("docs/evals/blind-spot-human-status.json"),
     packageJson: readJson("package.json"),
-    receipts: (state.holdoutReceiptPaths ?? []).filter((receiptPath) => existsSync(path.join(repoRoot, receiptPath))).map(readJson)
+    receipts: (state.holdoutReceiptPaths ?? [])
+      .filter((receiptPath) =>
+        expectedHoldoutReceiptPaths.includes(receiptPath) &&
+        existsSync(path.join(repoRoot, receiptPath))
+      )
+      .map(readJson)
   };
 }
 
@@ -453,7 +622,9 @@ export function validateCompositeArtifacts(artifacts, { requireHoldouts = true }
   const errors = [
     ...validateSuite(suite),
     ...validateAgency(agency),
+    ...validatePublicAgencySurfaceWording(),
     ...validateComposition(composition, agency),
+    ...validateCompositionSourceBindings(),
     ...validateSurvivorship(survivorship),
     ...validateMosaic(mosaic),
     ...validateHumanState(state, blindStatus),
@@ -481,6 +652,7 @@ export function validateCompositeArtifacts(artifacts, { requireHoldouts = true }
       suite,
       state,
       receipts,
+      receiptPaths: state.holdoutReceiptPaths ?? [],
       expectedContractFingerprint,
       expectedCandidateFingerprint,
       evidencePathExists: (relativePath) => candidatePathExistsAtCommit(state.candidateSha, relativePath)

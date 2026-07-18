@@ -56,7 +56,7 @@
     },
     {
       "id": "SURV-PROTECTED-SOCIAL-CAPTURES",
-      "project": "social-media-archive-production",
+      "project": "portfolio-social-archive",
       "status": "known-through-another-source",
       "finding": "Public ledgers retain minimized aggregates, cryptographic commitments, and selected public sources while authenticated item-level captures remain protected outside Git.",
       "boundary": "The public repo is intentionally not a reconstructable copy of private or authenticated account data."

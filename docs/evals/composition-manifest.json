@@ -51,8 +51,8 @@
       "audience": "readers comparing Jamie's work across civic, cultural, business, and technical settings",
       "argument": "The same operating method appears across distinct projects without making those projects interchangeable.",
       "intendedAction": "Choose the most relevant case study.",
-      "claimBudget": 11,
-      "selectedProofIds": ["hje-modernization-stewardship", "hje-revenue-growth-contribution", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system", "fair-rent-campaign-memory", "fair-rent-source-map", "callnyc-civic-data-guidance", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "kc-town-hall-public-benefit-documentation"],
+      "claimBudget": 12,
+      "selectedProofIds": ["hje-modernization-stewardship", "hje-revenue-growth-contribution", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system", "fair-rent-campaign-memory", "fair-rent-source-map", "callnyc-civic-data-guidance", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "kc-town-hall-public-benefit-documentation", "source-backed-team-memory-method"],
       "selectedClaimProjectionKeys": [],
       "omissionRationale": "The index uses one compact role-and-result signal per project and leaves source density to case studies."
     },
@@ -62,7 +62,7 @@
       "audience": "technical project, product operations, implementation, and public-sector delivery hiring readers",
       "argument": "Jamie can create an operating backbone across ambiguous multidisciplinary work.",
       "intendedAction": "Trace a capability to a project and then view or download the resume.",
-      "claimBudget": 15,
+      "claimBudget": 18,
       "selectedProofIds": ["career-operating-structure-14-years", "kc-town-hall-public-benefit-documentation", "fair-rent-campaign-memory", "source-backed-team-memory-method", "ai-evals-professional-development", "technical-operations-operating-backbone", "hje-modernization-stewardship", "callnyc-civic-data-guidance", "wowlist-community-platform", "fair-rent-source-map", "sunday-dinner-196-participation-infrastructure", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "kc-spaces-fund-digital-infrastructure", "hje-revenue-growth-contribution"],
       "selectedClaimProjectionKeys": ["CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026/technical-operations", "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS/technical-operations", "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT/technical-operations"],
       "omissionRationale": "Only claims that transfer directly to operating-backbone work appear; artistic and archival depth remains available in projects and the bank."

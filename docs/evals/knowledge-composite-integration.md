@@ -16,6 +16,11 @@ does not authorize application sharing, production launch, or indexing.
 The contract is frozen within a scored run. A substantive rubric change
 requires a version increment, a new baseline, and new holdouts.
 
+Each donor entry records both the bounded idea accepted into the canonical N
+lifecycle and the parallel system, overclaim, or wholesale integration path
+that was rejected. The donor branches remain read-only evidence, not merge
+targets.
+
 ## Evidence Layers
 
 1. **Source and graph:** canonical records, citations, corpus controls, exact
@@ -52,8 +57,16 @@ bind the same contract and candidate fingerprints.
 
 The checker resolves the named implementation-changing Git commit, reproduces
 the candidate fingerprint from that commit's tree, permits only four exact
-evidence files afterward, and requires every receipt evidence path to exist in
-the judged commit.
+evidence files afterward, inspects every intervening commit so a later reversion
+cannot hide an unauthorized change, rejects merge commits across the composite
+history, constrains receipts to two evaluator-owned paths and an exact schema,
+and requires every receipt evidence path to exist in the judged commit.
+
+Composition budgets count selected proof records and direct canonical claim
+projections. Render-path bindings connect the manifest to the selectors used by
+home, work, case-study, technical-operations, resume, about, and lab surfaces.
+Survivorship validation treats the reviewed populations and status vocabulary
+as exact sets and graph-checks project and inquiry references.
 
 That threshold means ready for code review. Application sharing and production
 remain governed by their own human gates.

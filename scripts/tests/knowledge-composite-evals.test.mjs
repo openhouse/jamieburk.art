@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
@@ -12,9 +12,11 @@ import {
   validateCandidateGitBinding,
   validateCompositeArtifacts,
   validateComposition,
+  validateCompositionSourceBindings,
   validateHumanState,
   validateHoldouts,
   validateMosaic,
+  validatePublicAgencySurfaceWording,
   validateSuite,
   validateSurvivorship
 } from "../lib/knowledge-composite-validation.mjs";
@@ -35,6 +37,23 @@ test("contract mutation catches weight drift", () => {
   const suite = clone(artifacts.suite);
   suite.evals[0].weight += 1;
   assert.match(validateSuite(suite).join("\n"), /weights must total 100/);
+});
+
+test("contract mutation catches missing donor decisions", () => {
+  const suite = clone(artifacts.suite);
+  delete suite.donors_inspected[0].rejected;
+  assert.match(validateSuite(suite).join("\n"), /Donor A needs a rejected decision/);
+});
+
+test("contract mutation catches an unbound composition render path", () => {
+  const suite = clone(artifacts.suite);
+  suite.candidate_fingerprint_scope = suite.candidate_fingerprint_scope.filter(
+    (relativePath) => relativePath !== "apps/www/src/app/work/page.tsx"
+  );
+  assert.match(
+    validateSuite(suite).join("\n"),
+    /Candidate fingerprint scope must include apps\/www\/src\/app\/work\/page\.tsx/
+  );
 });
 
 test("agency relations classify every proof as an exact set", () => {
@@ -69,6 +88,27 @@ test("agency mutation catches unknown canonical support", () => {
   assert.match(errors, /must exactly match|unknown canonical claim/);
 });
 
+test("agency mutation catches public wording causality, title, and endorsement drift", () => {
+  const proofs = clone(proofClaims);
+  proofs[0].publicWording =
+    "Jamie single-handedly served as executive director and was officially endorsed by the city.";
+  const errors = validateAgency(artifacts.agency, proofs, knowledgeBank).join("\n");
+  assert.match(errors, /public wording contains sole-causality or unsupported-title drift/);
+  assert.match(errors, /public wording contains institutional-endorsement drift/);
+});
+
+test("public route mutation catches causality, title, and endorsement drift", () => {
+  const target = "apps/www/src/app/work/page.tsx";
+  const errors = validatePublicAgencySurfaceWording((relativePath) => {
+    const source = readFileSync(relativePath, "utf8");
+    return relativePath === target
+      ? `${source}\nJamie single-handedly served as the executive director and was officially endorsed by the city.\n`
+      : source;
+  }).join("\n");
+  assert.match(errors, /public sole-causality or unsupported-title drift/);
+  assert.match(errors, /public institutional-endorsement drift/);
+});
+
 test("composition covers every route template and every proof decision", () => {
   assert.deepEqual(validateComposition(artifacts.composition, artifacts.agency), []);
 });
@@ -91,6 +131,24 @@ test("composition mutation catches rendered proof and direct-projection drift", 
   assert.match(errors, /direct claim projections must match the public composition registry exactly/);
 });
 
+test("composition budget counts proofs and direct projections", () => {
+  const manifest = clone(artifacts.composition);
+  const surface = manifest.surfaces.find((item) => item.id === "technical-operations");
+  surface.claimBudget = surface.selectedProofIds.length;
+  assert.match(validateComposition(manifest, artifacts.agency).join("\n"), /exceeds its claim budget/);
+});
+
+test("composition render paths stay bound to canonical selectors", () => {
+  assert.deepEqual(validateCompositionSourceBindings(), []);
+  const errors = validateCompositionSourceBindings((relativePath) => {
+    const source = readFileSync(relativePath, "utf8");
+    return relativePath === "apps/www/src/app/work/page.tsx"
+      ? source.replaceAll("requireReadyOrCarefulProof", "unboundProof")
+      : source;
+  });
+  assert.match(errors.join("\n"), /work-index render path is not bound/);
+});
+
 test("survivorship mutation catches historical absence overclaim", () => {
   const register = clone(artifacts.survivorship);
   const population = register.populations.find((item) => item.status === "not-recovered");
@@ -105,6 +163,18 @@ test("survivorship mutations preserve separate rights and non-automatic re-entry
   const errors = validateSurvivorship(register).join("\n");
   assert.match(errors, /Rights dimensions must remain separate and complete/);
   assert.match(errors, /block automatic claim promotion/);
+});
+
+test("survivorship mutations catch population, status, project, and inquiry drift", () => {
+  const register = clone(artifacts.survivorship);
+  register.populations.pop();
+  register.populations[0].project = "not-a-project";
+  register.populations[0].inquiryId = "INQ-NOT-REAL";
+  const errors = validateSurvivorship(register).join("\n");
+  assert.match(errors, /reviewed exact set/);
+  assert.match(errors, /represent every canonical status/);
+  assert.match(errors, /unknown project/);
+  assert.match(errors, /unknown inquiry/);
 });
 
 test("mosaic review requires combinations, continuing holds, and candidate binding", () => {
@@ -162,6 +232,36 @@ test("operator commands reject unsafe input and remain non-promoting", () => {
     const report = spawnSync(process.execPath, ["scripts/report-knowledge-lifecycle.mjs", "--stdout"], { encoding: "utf8" });
     assert.equal(report.status, 0);
     assert.match(report.stdout, /Human-only blockers/);
+
+    const queryFixtures = [
+      ["text", ["CallNYC"]],
+      ["id", ["--id", proofClaims[0].id]],
+      ["project", ["--project", knowledgeBank.claims[0].project]],
+      ["status", ["--status", knowledgeBank.claims[0].status]],
+      ["source", ["--source", knowledgeBank.sources[0].id]],
+      ["inquiry", ["--inquiry", knowledgeBank.researchInquiries[0].id]],
+      ["projection", ["--projection", knowledgeBank.claims[0].projections[0].surfaces[0]]],
+      ["evidence-class", ["--evidence-class", proofClaims[0].evidenceClass[0]]],
+      ["view-held", ["--view", "held"]],
+      ["view-research", ["--view", "research"]],
+      ["view-proof-debt", ["--view", "proof-debt"]]
+    ];
+    for (const [label, queryArgs] of queryFixtures) {
+      const result = spawnSync(
+        process.execPath,
+        ["scripts/query-knowledge-lifecycle.mjs", ...queryArgs],
+        { encoding: "utf8" }
+      );
+      assert.equal(result.status, 0, `${label}: ${result.stderr}`);
+      const payload = JSON.parse(result.stdout);
+      assert.ok(Array.isArray(payload.results), `${label} must return bounded results`);
+      assert.ok(payload.results.length <= 100, `${label} exceeded its result cap`);
+      assert.doesNotMatch(
+        result.stdout,
+        /protectedLocatorId|internalExcerpt|artifactPaths|privateUrl/i,
+        `${label} leaked a protected output field`
+      );
+    }
   } finally {
     rmSync(directory, { recursive: true, force: true });
   }
@@ -222,8 +322,10 @@ test("holdout validation rejects self-grading and candidate drift", () => {
     candidateSha: state.candidateSha,
     contractFingerprint: "contract",
     candidateFingerprint: "candidate",
+    evaluatedAt: "2026-07-17",
     scores,
     criticalRegressions: [],
+    instrumentDefects: [],
     decision: "pass_for_code_review"
   };
   const receipts = [
@@ -250,6 +352,8 @@ test("holdout validation rejects duplicate criterion scores", () => {
     candidateFingerprint: "candidate",
     scores,
     criticalRegressions: [],
+    instrumentDefects: [],
+    evaluatedAt: "2026-07-17",
     decision: "pass_for_code_review"
   };
   const result = validateHoldouts({
@@ -296,6 +400,45 @@ test("holdout validation rejects stale dates, unresolved defects, and invented e
   assert.match(errors, /share one evaluation date/);
 });
 
+test("holdout validation requires exact receipt paths and explicit empty defect arrays", () => {
+  const suite = clone(artifacts.suite);
+  const state = { ...clone(artifacts.state), candidateSha: "a".repeat(40) };
+  const scores = suite.evals.map((entry) => ({
+    id: entry.id,
+    score: 4,
+    rationale: "fixture",
+    evidencePaths: ["fixture"]
+  }));
+  const receipt = {
+    version: 1,
+    judgeIdentity: "judge-1",
+    judgeRole: "read-only-independent",
+    authoredPatch: false,
+    sawOptimizationHistory: false,
+    candidateSha: state.candidateSha,
+    contractFingerprint: "contract",
+    candidateFingerprint: "candidate",
+    evaluatedAt: "2026-07-17",
+    scores,
+    criticalRegressions: [],
+    decision: "pass_for_code_review"
+  };
+  const result = validateHoldouts({
+    suite,
+    state,
+    receipts: [receipt, { ...receipt, judgeIdentity: "judge-2" }],
+    receiptPaths: ["../holdout-1.json", "docs/evals/runs/other.json"],
+    expectedContractFingerprint: "contract",
+    expectedCandidateFingerprint: "candidate",
+    evidencePathExists: () => true
+  });
+  const errors = result.errors.join("\n");
+  assert.match(errors, /evaluator-owned exact set/);
+  assert.match(errors, /escapes the repository/);
+  assert.match(errors, /receipt must use the exact schema/);
+  assert.match(errors, /instrumentDefects must be an array/);
+});
+
 test("candidate binding rejects arbitrary SHAs and post-candidate implementation drift", () => {
   const state = {
     ...clone(artifacts.state),
@@ -328,6 +471,18 @@ test("candidate binding rejects arbitrary SHAs and post-candidate implementation
       "docs/evals/knowledge-composite-integration-state.json",
       "scripts/lib/knowledge-composite-validation.mjs"
     ]
+  }, "candidate").join("\n");
+  assert.match(errors, /exceed the evidence-only allowlist/);
+
+  errors = validateCandidateGitBinding(state, {
+    headSha: "b".repeat(40),
+    commitExists: true,
+    candidateIsAncestor: true,
+    candidateChangedPaths: ["scripts/lib/knowledge-composite-validation.mjs"],
+    candidateFingerprint: "candidate",
+    changedPaths: [],
+    historyChangedPaths: ["scripts/lib/knowledge-composite-validation.mjs"],
+    mergeCommits: []
   }, "candidate").join("\n");
   assert.match(errors, /exceed the evidence-only allowlist/);
 

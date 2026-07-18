@@ -14,7 +14,7 @@ test("canonical blind-spot evidence status is valid", () => {
 
 test("a prepared protocol cannot masquerade as market validation", () => {
   const candidate = structuredClone(status);
-  candidate.evals["PR-019"].status = "pass";
+  candidate.evals["PR-019"].status = "approved";
   candidate.evals["PR-019"].blockingReason = null;
   const errors = validateBlindSpotEvidence(candidate, allFilesExist).errors.join("\n");
   assert.match(errors, /exact 40-character candidate SHA/);
@@ -23,7 +23,7 @@ test("a prepared protocol cannot masquerade as market validation", () => {
 
 test("automated checks cannot masquerade as hands-on launch QA", () => {
   const candidate = structuredClone(status);
-  candidate.evals["PR-025"].status = "pass";
+  candidate.evals["PR-025"].status = "approved";
   candidate.evals["PR-025"].candidateSha = "a".repeat(40);
   candidate.evals["PR-025"].reviewedAt = "2026-07-16";
   candidate.evals["PR-025"].blockingReason = null;
@@ -38,4 +38,19 @@ test("pending human work requires an explicit blocking reason", () => {
     validateBlindSpotEvidence(candidate, allFilesExist).errors.join("\n"),
     /pending status requires a blocking reason/
   );
+});
+
+test("rejected and expired human reviews remain explicit bounded states", () => {
+  for (const humanStatus of ["rejected", "expired"]) {
+    const candidate = structuredClone(status);
+    candidate.evals["PR-019"] = {
+      ...candidate.evals["PR-019"],
+      status: humanStatus,
+      candidateSha: "a".repeat(40),
+      reviewedAt: "2026-07-17",
+      reviewers: ["independent-human-reviewer"],
+      blockingReason: `${humanStatus} candidate cannot advance.`
+    };
+    assert.deepEqual(validateBlindSpotEvidence(candidate, allFilesExist).errors, []);
+  }
 });

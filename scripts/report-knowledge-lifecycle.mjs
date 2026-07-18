@@ -14,7 +14,7 @@ const humanStatus = JSON.parse(
   readFileSync("docs/evals/blind-spot-human-status.json", "utf8")
 );
 const humanBlockers = Object.entries(humanStatus.evals)
-  .filter(([, value]) => value.status === "pending-human-review")
+  .filter(([, value]) => value.status !== "approved")
   .map(([id, value]) => `${id}: ${value.blockingReason}`);
 const lines = [
   "# Knowledge lifecycle report",

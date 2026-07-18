@@ -18,6 +18,12 @@ export function validateBlindSpotEvidence(status, fileExists = existsSync) {
   };
 
   requireValue(status?.version === 1, "human status version must be 1");
+  const allowedStatuses = new Set([
+    "pending-human-review",
+    "approved",
+    "rejected",
+    "expired"
+  ]);
   for (const path of requiredEvidencePaths) {
     requireValue(fileExists(path), `required blind-spot evidence is missing: ${path}`);
   }
@@ -26,8 +32,8 @@ export function validateBlindSpotEvidence(status, fileExists = existsSync) {
     const record = status?.evals?.[id];
     requireValue(Boolean(record), `${id} human status is required`);
     requireValue(
-      ["pending-human-review", "pass"].includes(record?.status),
-      `${id} status must be pending-human-review or pass`
+      allowedStatuses.has(record?.status),
+      `${id} status must be pending-human-review, approved, rejected, or expired`
     );
     requireValue(Array.isArray(record?.reviewers), `${id} reviewers must be an array`);
     requireValue(
@@ -38,25 +44,42 @@ export function validateBlindSpotEvidence(status, fileExists = existsSync) {
       requireValue(fileExists(path), `${id} evidence path is missing: ${path}`);
     }
 
-    if (record?.status === "pass") {
+    if (record?.status === "approved") {
       requireValue(
         typeof record.candidateSha === "string" && /^[a-f0-9]{40}$/.test(record.candidateSha),
-        `${id} pass requires an exact 40-character candidate SHA`
+        `${id} approved requires an exact 40-character candidate SHA`
       );
       requireValue(
         typeof record.reviewedAt === "string" && /^\d{4}-\d{2}-\d{2}$/.test(record.reviewedAt),
-        `${id} pass requires a review date`
+        `${id} approved requires a review date`
       );
       const minimumReviewers = id === "PR-019" ? 3 : 2;
       requireValue(
         record.reviewers.length >= minimumReviewers,
-        `${id} pass requires at least ${minimumReviewers} independent reviewers`
+        `${id} approved requires at least ${minimumReviewers} independent reviewers`
       );
-      requireValue(!record.blockingReason, `${id} pass cannot retain a blocking reason`);
-    } else {
+      requireValue(!record.blockingReason, `${id} approved cannot retain a blocking reason`);
+    } else if (record?.status === "pending-human-review") {
       requireValue(
         typeof record?.blockingReason === "string" && record.blockingReason.length > 0,
         `${id} pending status requires a blocking reason`
+      );
+      requireValue(record.candidateSha === null, `${id} pending status cannot claim a candidate review`);
+      requireValue(record.reviewedAt === null, `${id} pending status cannot claim a review date`);
+      requireValue(record.reviewers.length === 0, `${id} pending status cannot claim reviewers`);
+    } else if (record) {
+      requireValue(
+        typeof record.candidateSha === "string" && /^[a-f0-9]{40}$/.test(record.candidateSha),
+        `${id} ${record.status} requires an exact 40-character candidate SHA`
+      );
+      requireValue(
+        typeof record.reviewedAt === "string" && /^\d{4}-\d{2}-\d{2}$/.test(record.reviewedAt),
+        `${id} ${record.status} requires a review date`
+      );
+      requireValue(record.reviewers.length > 0, `${id} ${record.status} requires a human reviewer`);
+      requireValue(
+        typeof record.blockingReason === "string" && record.blockingReason.length > 0,
+        `${id} ${record.status} requires a reason`
       );
     }
   }
@@ -74,7 +97,7 @@ function run() {
   }
 
   const pending = Object.entries(status.evals)
-    .filter(([, record]) => record.status === "pending-human-review")
+    .filter(([, record]) => record.status !== "approved")
     .map(([id]) => id);
   console.log(
     `Blind-spot evidence is structurally valid; human review pending for ${pending.join(", ")}.`
