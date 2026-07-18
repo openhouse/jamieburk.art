@@ -1,0 +1,6 @@
+
+> test:browser-evals
+> node scripts/run-browser-evals.mjs
+
+Browser eval passed: 45 responsive cases, 6 keyboard cases, 2 citation cases.
+Report: reports/generated/browser-evals.json (34a1e0eba341d47068e6b17f260893d4b1c882a55607673b436b3a23e6389955)

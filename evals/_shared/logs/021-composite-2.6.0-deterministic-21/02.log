@@ -1,0 +1,22 @@
+
+> test:citations
+> node --test scripts/tests/citations.test.mjs
+
+✔ canonical registry passes deterministic validation (17.477875ms)
+✔ page-local numbering follows first source appearance (0.344625ms)
+✔ repeated sources retain one note and unique backlinks (0.226584ms)
+✔ multi-source occurrences preserve editorial order (0.077666ms)
+✔ KC Town Hall adds a role note while preserving funding and service-interface notes (0.19475ms)
+✔ Claim resolver returns only active approved projections (0.230042ms)
+✔ corrections retire old wording from public surfaces (0.385042ms)
+✔ negative research preserves scope and limitations (0.078791ms)
+✔ private and metadata-only evidence is absent from the public registry (0.157ms)
+✔ rendering primitives preserve no-JavaScript document semantics (0.188833ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 149.527625
