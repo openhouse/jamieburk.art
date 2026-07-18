@@ -119,7 +119,10 @@ suite, graph, and committed recursive runs.
 inquiry accumulation, attribution, platform-shaped evidence, additive
 composition, mosaic privacy, evaluator independence, and indefinite polishing.
 Run `npm run evals:blind-spots:refresh` after rendered-prose changes to rebuild
-the semantic route inventory and public-surface receipts before judging.
+the semantic route inventory and public-surface receipts before judging. The
+role-occurrence manifest binds every role-bearing authored sentence to a proof
+or canonical claim basis and requires explicit attribution for mixed or
+first-person evidence.
 
 `evals/portfolio-readiness/` coordinates the existing suites for one exact
 candidate and rubric digest. A `system-ready` result requires deterministic

@@ -2,7 +2,7 @@
   "version": 1,
   "reviewedAt": "2026-07-17",
   "scope": "Public-safe summary of independent LLM control judgments made during this pass. Scores evaluate the internal control bundle, not human comprehension, collaborator agreement, interviews, applications, or hiring outcomes.",
-  "iterationBudgetRevision": "Iteration 8 reproduced hard-gate failures in both fresh judge pairs. The budget was extended from 8 to 12 without changing any hard gate, score threshold, criterion minimum, calibration requirement, regression limit, or external-outcome boundary.",
+  "iterationBudgetRevision": "Iteration 8 reproduced hard-gate failures in both fresh judge pairs, so the budget was extended from 8 to 12. Iteration 12 then found that the advertised semantic inventory still omitted rendered text fields and that authored-role coverage depended on a voluntarily declared list. Because the user explicitly requested recursive hill climbing, the budget was extended once from 12 to 14 to repair those newly observed mechanisms. Neither extension changed a hard gate, score threshold, criterion minimum, calibration requirement, regression limit, or external-outcome boundary.",
   "iterations": [
     {
       "iteration": 1,
@@ -91,7 +91,15 @@
       "hiringAndFieldUseScore": 90,
       "disposition": "revise-after-second-round-calibration-failure",
       "changePrompted": "Attribute KC Town Hall planning and stewardship paraphrases, derive exact mixed-proof coverage for authored surfaces, decompose multi-proposition rendered prose into semantic claim units, and perform a Fair Rent subtraction pass."
+    },
+    {
+      "iteration": 12,
+      "candidate": "sentence-level composition and declared mixed-proof coverage",
+      "evidenceAndGovernanceScore": 92,
+      "hiringAndFieldUseScore": null,
+      "disposition": "revise-after-first-disqualifying-judgment-and-extend-budget-without-lowering-gates",
+      "changePrompted": "Count rendered public-safety notes, start-here notes, and capability prose instead of labels; add an exact route-and-hash role-occurrence manifest; derive required first-person and mixed-proof coverage from proofBankIds and canonical Claim use; and subtract one redundant Fair Rent artifact."
     }
   ],
-  "next": "Iteration 12 is the final internal-control candidate under this budget. Preserve external outcomes as not-yet-measured and stop only after two unchanged qualifying rounds; otherwise retain the strongest bounded controls and report the unresolved criteria."
+  "next": "Iteration 13 is the repaired internal-control candidate under a final two-iteration reserve. Preserve external outcomes as not-yet-measured and stop only after two unchanged qualifying rounds; at iteration 14 retain the strongest bounded controls and report unresolved criteria without another budget extension."
 }

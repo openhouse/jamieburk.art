@@ -30,16 +30,20 @@ require separate external evidence.
   decision rule, next test, and evidence-return path.
 - `composition-manifest.json` governs audience, argument, action, claim budget,
   and omission for every public route or route template. Exact claim-key
-  inventories decompose rendered route data, metadata, MDX prose, and artifact
-  descriptions by sentence and semicolon; canonical `<Claim>` nodes remain one
-  governed unit because evidence and boundaries travel with the projection.
+  inventories decompose rendered route data, metadata, public-safety notes,
+  start-here notes, capability prose, MDX, and artifact descriptions by sentence
+  and semicolon. Navigation labels and headings are not counted; canonical
+  `<Claim>` nodes remain one governed unit because evidence and boundaries travel
+  with the projection.
 - `role-evidence-classifications.json` is an exact-set classification of every
   Knowledge Bank claim whose internal text or projection names Jamie, plus
   every proof claim permitted on a public surface. Adding or removing one
   without classifying its source basis fails the suite.
-- Work items declare `authoredRoleProofIds` when page authors paraphrase a
-  first-person or mixed-basis proof. The checker requires exact coverage through
-  a linked canonical `<Claim>` or an attributed authored-prose guard.
+- `role-occurrence-manifest.json` classifies every rendered role-bearing sentence
+  by route and content hash. Each occurrence resolves through work-item proof or
+  canonical claim IDs; first-person and mixed bases require explicit attribution.
+  Required mixed-proof coverage is derived from `proofBankIds` and canonical
+  `<Claim>` use rather than a voluntary authored-role list.
 - `control-state.json` derives the full-population archive-pass ledger from
   Knowledge Bank inquiries and requires an invisible-labor balance review for
   every project represented there.

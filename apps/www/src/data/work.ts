@@ -52,7 +52,6 @@ const workMetaSchema = z.object({
   priority: z.number(),
   visibility: visibilitySchema,
   proofBankIds: z.array(z.string()),
-  authoredRoleProofIds: z.array(z.string()).default([]),
   whatWasUnclear: z.string(),
   whatBecameUsable: z.string(),
   artifactTypes: z.array(artifactTypeSchema),
@@ -201,13 +200,6 @@ const workItemsInput = [
       "nyca-commercial-rent-testimony-2018",
       "commercial-vacancy-public-data-pilot"
     ],
-    authoredRoleProofIds: [
-      "project-social-identity-systems",
-      "nyc-artist-coalition-public-web-infrastructure",
-      "nyca-council-member-account-engagement",
-      "nyca-campaign-press-architecture",
-      "nyca-participation-system"
-    ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable: getClaimProjection(
@@ -222,12 +214,6 @@ const workItemsInput = [
         description:
           "A shared documentation structure for meetings, next steps, decision context, and public-safe continuity.",
         type: "meeting memory"
-      },
-      {
-        title: "Coalition operating design",
-        description:
-          "A bounded design for intake, recurring coordination, reusable messages, consent-aware story handling, implementation planning, and durable shared memory.",
-        type: "decision record"
       },
       {
         title: "Source map and policy question log",
@@ -555,10 +541,6 @@ const workItemsInput = [
     proofBankIds: [
       "kc-town-hall-public-benefit-documentation",
       "project-social-identity-systems",
-      "kc-town-hall-public-operations-channel"
-    ],
-    authoredRoleProofIds: [
-      "kc-town-hall-public-benefit-documentation",
       "kc-town-hall-public-operations-channel"
     ],
     whatWasUnclear:

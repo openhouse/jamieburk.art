@@ -22,6 +22,10 @@ function checkerOutput(argument) {
 }
 
 const inventory = JSON.parse(checkerOutput("--print-composition-inventory"));
+const workCompositions = JSON.parse(checkerOutput("--print-work-compositions"));
+const workCompositionByPath = new Map(
+  workCompositions.map((item) => [`/work/${item.slug}`, item])
+);
 const publicSurfaceSha256 = checkerOutput("--print-reader-surface-digest");
 const compositionPath = "evals/portfolio-system-blind-spots/composition-manifest.json";
 const composition = readJson(compositionPath);
@@ -32,10 +36,13 @@ for (const page of composition.pages) {
     for (const concrete of page.concretePages) {
       const keys = inventory[concrete.path];
       if (!keys) throw new Error(`No derived composition inventory for ${concrete.path}`);
-      concrete.metadataClaimUnits = keys.filter((key) => !key.startsWith("mdx-")).length;
-      concrete.mdxClaimUnits = keys.filter((key) => key.startsWith("mdx-")).length;
-      concrete.currentClaimCount = keys.length;
-      concrete.countedClaimKeys = keys;
+      const derived = workCompositionByPath.get(concrete.path);
+      if (!derived) throw new Error(`No derived work composition for ${concrete.path}`);
+      concrete.artifactCount = derived.artifactCount;
+      concrete.metadataClaimUnits = derived.metadataClaimUnits;
+      concrete.mdxClaimUnits = derived.mdxClaimUnits;
+      concrete.currentClaimCount = derived.currentClaimCount;
+      concrete.countedClaimKeys = derived.countedClaimKeys;
     }
     continue;
   }

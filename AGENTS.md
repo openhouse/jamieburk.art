@@ -127,7 +127,9 @@ an external outcome. Keep hiring-reader, collaborator, and application results
 
 After changing rendered prose, run `npm run evals:blind-spots:refresh`, review
 the semantic claim counts, and subtract or recalibrate page budgets before
-starting a new exact-candidate eval run.
+starting a new exact-candidate eval run. Update the exact role-occurrence
+manifest for changed role-bearing prose; do not bypass it with an unclassified
+authored sentence.
 
 ## Composite Readiness
 

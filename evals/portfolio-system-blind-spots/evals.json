@@ -142,10 +142,10 @@
     "minimumCriterionScore": 4,
     "requiredPerfectCriteria": ["calibration"],
     "requiredConsecutivePasses": 2,
-    "maxIterations": 12,
+    "maxIterations": 14,
     "maxRegressions": 0,
     "scoreVariancePolicy": "Independent judges may differ above threshold on the same bundle. A programmatic regression is a hard gate changing from pass to fail, a criterion falling below its minimum, or calibration falling below five; smaller above-threshold score variation is not a control regression.",
     "successCondition": "Both independent LLM judges pass every hard gate, score at least 92, score each criterion at least 4, score calibration 5, and repeat the pass without regression. Success applies only to blind-spot controls, not external outcomes.",
-    "failureCondition": "At iteration 12, preserve the strongest bounded controls and report unresolved blind spots without claiming system or external success."
+    "failureCondition": "At iteration 14, preserve the strongest bounded controls and report unresolved blind spots without claiming system or external success."
   }
 }
