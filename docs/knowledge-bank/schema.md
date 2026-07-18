@@ -1,0 +1,94 @@
+# Knowledge Wiki pilot record contract
+
+The Knowledge Wiki currently lives at the compatibility path
+`docs/knowledge-bank`. Governed records begin with YAML frontmatter and remain
+understandable as ordinary Markdown documents.
+
+## Shared required fields
+
+```yaml
+id: project.callnyc
+title: CallNYC
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-18
+canonical_path: docs/knowledge-bank/projects/callnyc.md
+summary: A bounded public-safe orientation sentence.
+```
+
+Active records use a stable ID independent of the file path. Supported lifecycle
+values are `inbox`, `draft`, `maintained`, `governed-open`, `superseded`,
+`archived`, and `retired`.
+
+Visibility describes editorial use, not repository secrecy:
+
+```text
+public
+public-safe
+summary-only
+internal
+restricted
+private
+permission-required
+```
+
+Everything committed to this public repository must remain public-safe.
+
+## Typed relations
+
+```yaml
+relations:
+  - type: informed_by
+    target: event.nycc.constituent-services-hackathon.2016
+    href: ../events/nycc-constituent-services-hackathon-2016.md
+    context: The event established the project context.
+```
+
+The initial relation vocabulary is:
+
+```text
+part_of, informed_by, resulted_in, supports, contradicts, supersedes,
+documents, mentions, participated_in, organized_by, collaborated_with,
+uses_source, uses_method, has_asset, located_at, projected_to, related_to
+```
+
+`target` provides stable machine meaning. `href` provides ordinary human
+navigation. Both must resolve to the same governed record.
+
+## Claims and evidence
+
+Claim pages use bounded propositions and explicit evidence relationships:
+
+```yaml
+evidence:
+  - target: source.politico.callnyc.2016-03-14
+    relationship: direct-support
+    confidence: high
+    supports:
+      - Jamie's independent development of CallNYC
+```
+
+Claims may also carry `anti_claims`, boundaries, and a projection object. A
+`hold`, `disallowed`, protected, superseded, or rights-pending record cannot be
+projected as active.
+
+## Sources and assets
+
+A source is the publication or artifact. An asset is a particular image,
+graphic, document, audio file, or video. Evidence value and publication rights
+are separate. Rights-pending assets stay metadata-only and must not contain a
+private path or media payload.
+
+## Wanted pages
+
+`wanted` records name deliberate research needs without creating broken links.
+`not-recovered` means a bounded search did not recover something. It never means
+the thing did not exist.
+
+## Generated files
+
+Files under `_generated` and `reports/wiki-*` begin with a generated warning.
+Regenerate them with `npm run wiki:graph` and `npm run wiki:report`; do not edit
+them as authored records.

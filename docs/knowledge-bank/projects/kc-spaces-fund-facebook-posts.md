@@ -145,7 +145,7 @@ Raw bodies, comments, personal social-graph identities, private analytics,
 authenticated state, Page-management records, contact details, applicant or
 grantee files, donor data, payment records, and private project materials stay
 out of the public repository. The public-safe row ledger lives in [the
-population fixture](../../../../apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json).
+population fixture](../../../apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json).
 
 ## Open research
 

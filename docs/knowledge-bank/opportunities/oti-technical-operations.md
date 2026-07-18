@@ -1,3 +1,30 @@
+---
+id: opportunity.nyc-oti.technical-operations-manager.782369
+title: Technical Operations opportunity lens
+kind: opportunity
+status: governed-open
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-18
+review_by: 2026-08-18
+canonical_path: docs/knowledge-bank/opportunities/oti-technical-operations.md
+summary: Public-safe role-needs and proof map for Technical Operations opportunities.
+relations:
+  - type: related_to
+    target: capability.technical-operations
+    href: ../capabilities/technical-operations.md
+  - type: related_to
+    target: project.callnyc
+    href: ../projects/callnyc.md
+  - type: uses_method
+    target: method.source-backed-team-memory
+    href: ../methods/source-backed-team-memory.md
+  - type: projected_to
+    target: portfolio.work.technical-operations
+    href: ../projections/work-technical-operations.md
+human_review: governed-open
+---
+
 # Opportunity Lens - Technical Operations
 
 This file maps public-safe claims to Technical Operations / Product Operations /

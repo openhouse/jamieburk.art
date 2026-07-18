@@ -1,3 +1,49 @@
+---
+id: project.callnyc
+title: CallNYC
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-18
+review_by: 2027-01-18
+aliases:
+  - Call NYC
+  - CallNYC.org
+canonical_path: docs/knowledge-bank/projects/callnyc.md
+summary: >
+  Independent civic-technology prototype translating CouncilStat
+  constituent-services records into resident-facing issue pathways.
+authority: contextual-wiki
+registry_ids:
+  - callnyc
+  - CLM-CALLNYC-INDEPENDENT-FOLLOW-ON
+relations:
+  - type: informed_by
+    target: event.nycc.constituent-services-hackathon.2016
+    href: ../events/nycc-constituent-services-hackathon-2016.md
+  - type: uses_source
+    target: source.politico.callnyc.2016-03-14
+    href: ../sources/politico-callnyc-2016-03-14.md
+  - type: uses_method
+    target: method.source-backed-team-memory
+    href: ../methods/source-backed-team-memory.md
+  - type: supports
+    target: capability.technical-operations
+    href: ../capabilities/technical-operations.md
+    context: Public-data interpretation, implementation, correction, and archival continuity.
+  - type: has_asset
+    target: asset.photo.digital-district.001
+    href: ../assets/digital-district-photo.md
+  - type: projected_to
+    target: portfolio.work.callnyc
+    href: ../projections/work-callnyc.md
+wanted:
+  - id: source.councilstat.fuller-release.2016
+    proposed_title: Fuller CouncilStat constituent-services data release
+    reason: Needed to tighten the release-to-prototype chronology.
+---
+
 # CallNYC citational record
 
 **Reviewed:** 2026-07-11
@@ -9,6 +55,11 @@ The canonical machine-readable record is
 context and editorial boundaries; it is not a competing source of truth.
 
 ## Corrected chronology
+
+The chronology is also traversable through the
+[Council constituent-services hackathon](../events/nycc-constituent-services-hackathon-2016.md#source-basis),
+the [bounded independent-development claim](../claims/callnyc-independent-follow-on.md),
+and the [active chronology correction](../corrections/callnyc-years-2026.md).
 
 - **2015:** Council 2.0 established policy context for open Council data,
   civic-technology collaboration, and user-centered experimentation.
@@ -85,6 +136,10 @@ chain is recorded as a protected photo lead, a visual observation limited to
 the placard and generic table context, and a research inquiry covering
 corroboration, rights, consent, and any appropriate future crop. The held claim
 cannot enter the public registry merely because the visible text was verified.
+
+The separate
+[media record](../assets/digital-district-photo.md#what-it-does-not-establish)
+keeps evidentiary value distinct from rights, consent, and display permission.
 
 ## Cleared project mark
 

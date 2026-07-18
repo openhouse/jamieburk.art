@@ -1,0 +1,72 @@
+{
+  "suite": "knowledge-wiki-foundation-E",
+  "version": 1,
+  "authority": "M-knowledge-wiki-product-and-teammate-implementation-brief.md",
+  "principle": "Markdown is the record. The graph is compiled from the record. The portfolio is a selective projection from the governed system.",
+  "scoring": "Every deterministic criterion blocks independently. Human authority gates must remain explicitly open until observed; they are not averaged into a synthetic score.",
+  "lenses": [
+    {
+      "id": "architecture",
+      "criteria": [
+        "canonical_product_name",
+        "compatibility_alias",
+        "single_physical_root",
+        "canonicality_adr",
+        "existing_authorities_preserved",
+        "no_public_ui_change",
+        "no_explorer"
+      ]
+    },
+    {
+      "id": "abby-information-architecture",
+      "criteria": [
+        "task_oriented_root",
+        "stable_unique_ids",
+        "aliases_unique",
+        "relative_links_resolve",
+        "heading_fragments_resolve",
+        "typed_targets_and_hrefs_align",
+        "pilot_reachable",
+        "type_aware_orphans"
+      ]
+    },
+    {
+      "id": "chad-professional-argument",
+      "criteria": [
+        "jamie_visible_as_actor",
+        "purpose_and_usable_result_visible",
+        "technical_operations_query",
+        "public_projection_smaller_than_wiki"
+      ]
+    },
+    {
+      "id": "gerdes-provenance",
+      "criteria": [
+        "source_identity_preserved",
+        "evidence_types_distinct",
+        "not_recovered_not_nonexistence",
+        "asset_evidence_not_rights"
+      ]
+    },
+    {
+      "id": "governance-and-citational-care",
+      "criteria": [
+        "claim_source_closure",
+        "correction_traceable",
+        "private_paths_rejected",
+        "rights_pending_fails_closed",
+        "anti_claims_preserved",
+        "human_gates_open"
+      ]
+    },
+    {
+      "id": "engineering",
+      "criteria": [
+        "graph_deterministic",
+        "generated_outputs_current",
+        "mutation_suite",
+        "legacy_checks_preserved"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,36 @@
-# Knowledge Bank
+---
+id: index.knowledge-wiki
+title: Knowledge Wiki
+kind: index
+status: maintained
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-18
+review_by: 2027-01-18
+aliases:
+  - Knowledge Bank
+canonical_path: docs/knowledge-bank/README.md
+summary: >
+  Start-here page for the public-safe, Markdown-first editorial and research
+  system that compiles into a governed graph and selective projections.
+relations:
+  - type: related_to
+    target: index.knowledge-wiki.pilot
+    href: indexes/pilot.md
+    context: Bounded first implementation of stable identity and typed relations.
+---
+
+# Knowledge Wiki
+
+**Former and compatibility name:** Knowledge Bank
 
 This directory is the public-safe knowledge base for Jamie Burkart's
 professional accomplishment claims.
+
+The Knowledge Wiki is Jamie Burkart's internal, Git-reviewed, Markdown-first
+system for source-backed operating memory. It is not a public or anonymously
+editable wiki. Anything committed to this public repository must be public-safe.
+Protected source material remains outside the repository.
 
 The repo is public. Do not put anything here that would be unsafe, unfair, too
 private, or too hard to defend if quoted in a newspaper.
@@ -12,6 +41,26 @@ categories, public-use guidance, guardrails, projection surfaces, and explicit
 non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
+
+## Start here
+
+- [Pilot map](indexes/pilot.md): the bounded governed records and ordinary
+  navigation path.
+- [Architecture decision](../architecture/ADR-knowledge-wiki-canonicality.md):
+  what is canonical, derived, transitional, and projected.
+- [Record contract](schema.md): stable IDs, lifecycle, relations, evidence, and
+  projection rules.
+- [Generated index](_generated/index-by-kind.md): rebuildable views of governed
+  records.
+- [Wiki health report](../../reports/wiki-health.md): hard gates, diagnostics,
+  and human work that automation cannot complete.
+- [Open questions](_generated/wanted-pages.md): deliberate missing knowledge,
+  kept distinct from broken links and nonexistence.
+
+Daily work begins here: open Markdown Preview to the side, follow ordinary
+links, search stable IDs, use Find All References when needed, and run
+`npm run wiki:check` before committing. See the
+[VS Code workflow](workflow.md) for moves, corrections, and generated files.
 
 ## Purpose
 

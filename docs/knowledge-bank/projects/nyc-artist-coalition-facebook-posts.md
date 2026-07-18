@@ -134,7 +134,7 @@ The public work page receives one restrained aggregate proof: the 445-post,
 bodies, comment or reaction identities, follower data, authenticated session
 data, and sensitive exact routes remain out of the public site and repository.
 The full public-safe row ledger lives in
-[the population fixture](../../../../apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json).
+[the population fixture](../../../apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json).
 
 ## Open research
 

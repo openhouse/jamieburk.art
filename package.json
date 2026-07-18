@@ -15,7 +15,7 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check:citations && npm run test:citations && npm run evals:portfolio && npm run evals:professor-lenses && npm run test:professor-lenses && npm run evals:composite && npm run test:composite && npm run test:lifecycle-operations && npm run check:knowledge-evals && npm run test:knowledge-evals && npm run evals:participation-continuity && npm run test:participation-continuity && npm run evals:icloud-teams-archive && npm run test:icloud-teams-archive-guard && npm run test:personal-facebook-posts-guard && npm run evals:kcspacesfund-facebook-posts && npm run evals:jamie-personal-facebook-posts && npm run check -w @jamie-burkart/www && npm run knowledge-bank && npm run public-safety && npm run check:routes",
+    "check": "npm run check:citations && npm run test:citations && npm run evals:portfolio && npm run evals:professor-lenses && npm run test:professor-lenses && npm run evals:composite && npm run test:composite && npm run test:lifecycle-operations && npm run check:knowledge-evals && npm run test:knowledge-evals && npm run evals:participation-continuity && npm run test:participation-continuity && npm run evals:icloud-teams-archive && npm run test:icloud-teams-archive-guard && npm run test:personal-facebook-posts-guard && npm run evals:kcspacesfund-facebook-posts && npm run evals:jamie-personal-facebook-posts && npm run wiki:check && npm run wiki:test && npm run wiki:eval && npm run check -w @jamie-burkart/www && npm run knowledge-bank && npm run public-safety && npm run check:routes",
     "generate:citations": "node scripts/generate-public-citations.mjs",
     "check:citations": "node scripts/check-citations.mjs",
     "test:citations": "node --test scripts/tests/citations.test.mjs",
@@ -36,6 +36,14 @@
     "test:participation-continuity": "node --test scripts/tests/participation-continuity.test.mjs",
     "evals:icloud-teams-archive": "node scripts/evals-icloud-teams-archive.mjs",
     "test:icloud-teams-archive-guard": "node --test scripts/tests/icloud-teams-archive-guard.test.mjs",
+    "wiki:check": "node scripts/knowledge-wiki/check-wiki-health.mjs",
+    "wiki:test": "node --test scripts/knowledge-wiki/wiki.test.mjs",
+    "wiki:report": "node scripts/knowledge-wiki/report-wiki-health.mjs",
+    "wiki:graph": "node scripts/knowledge-wiki/build-wiki-graph.mjs",
+    "wiki:tasks": "node scripts/knowledge-wiki/wiki-tasks.mjs",
+    "wiki:query": "node scripts/knowledge-wiki/wiki-query.mjs",
+    "wiki:eval": "node scripts/knowledge-wiki/evaluate-wiki.mjs",
+    "wiki:hillclimb": "npm run wiki:graph && npm run wiki:report && npm run wiki:check && npm run wiki:test && npm run wiki:eval",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",
     "routes": "npm run check:routes",
@@ -43,5 +51,11 @@
     "check:production": "npm run preflight:production",
     "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex npm run check",
     "preflight:production": "APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run check"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "zod": "^4.4.3"
   }
 }
