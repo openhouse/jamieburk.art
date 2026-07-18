@@ -21,10 +21,10 @@ Run records form an ordered SHA-256 chain. The validator resolves every recorded
 commit and tree in Git, recomputes its governed-input digest, recomputes holdout
 scores and floors, and rejects missing commands, unknown criteria, duplicate
 reviewers, stale prompts, or an attempt to grant production authority. The
-canonical deterministic runner captures timing and an output digest for every
-required command. Version 2.3 also retains each command log and verifies its
-digest before a record may count. Failed runs and rejected holdouts remain in the chain; they
-are evidence about the system, not debris to erase.
+canonical deterministic runner captures timing and output digests for every
+required command. Version 2.4 retains both the raw stream and a normalized,
+human-readable text copy. Failed runs and rejected holdouts remain in the chain;
+they are evidence about the system, not debris to erase.
 
 Prompts are versioned with the contract. A later rejection resets the current
 acceptance phase, including earlier deterministic passes. A numerical pass can
@@ -32,13 +32,11 @@ never erase a reviewer's refusal or a nonempty blocking-finding list. Accepted
 holdouts retain the seven decision dimensions, human authority log, reopen
 review, disagreements, and overrides required by the launch suite.
 
-Run records form an ordered SHA-256 chain. The validator resolves every recorded
-commit and tree in Git, recomputes its governed-input digest, recomputes holdout
-scores and floors, and rejects missing commands, unknown criteria, duplicate
-reviewers, stale prompts, or an attempt to grant production authority. The
-canonical deterministic runner captures timing and an output digest for every
-required command. Failed runs and rejected holdouts remain in the chain; they
-are evidence about the system, not debris to erase.
+Holdouts supply a model-context attestation binding their session, provider,
+candidate commit, and governed prompt. The recorder verifies that the reviewer
+did not inspect run records, generated reports, prior scores, or edit the
+candidate. This documents process separation; it does not cryptographically
+prove human identity. External human review remains outside model authority.
 
 ## Recursive protocol
 
@@ -58,10 +56,14 @@ holdout exactly one governed prompt from `evals/_shared/`, keep prior scores and
 run records out of view, save its JSON judgment outside the repo, then ingest it
 with `npm run eval:record-holdout -- --input ... --prompt ... --session ...`.
 
-Run `npm run eval:run` only after committing a frozen candidate. Give each
-holdout exactly one governed prompt from `evals/_shared/`, keep prior scores and
-run records out of view, save its JSON judgment outside the repo, then ingest it
-with `npm run eval:record-holdout -- --input ... --prompt ... --session ...`.
+`npm run check:eval-records` validates the complete hash-chained history.
+`npm run check:eval-contract` validates contract structure and reports the stop
+state without making ordinary development checks circular. Only
+`npm run certify:eval-contract` fails when the recursive stop condition has not
+been met. The canonical runner also executes staging and production preflights,
+the full repository check, dependency audit, and browser evaluation. The browser
+gate exercises responsive routes, keyboard focus, canonical/noindex metadata,
+console errors, and citation endnote/backlink semantics against the built app.
 
 ## Authority and open gates
 

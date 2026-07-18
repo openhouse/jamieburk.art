@@ -42,10 +42,10 @@ workspaces, Dockerfile, Dokku.
 - `npm run knowledge:projection-map -- --write`
 - `npm run check:projections`
 - `npm run check:eval-contract`
+- `npm run certify:eval-contract`
 - `npm run check:eval-records`
 - `npm run test:eval-contract`
-- `npm run eval:run`
-- `npm run eval:record-holdout`
+- `npm run test:browser-evals`
 - `npm run eval:run`
 - `npm run eval:record-holdout`
 
@@ -132,15 +132,13 @@ a distinct stable session ID, all ten criteria, and evidence for every score.
 The validator recomputes candidate identity, score floors, and weighted results;
 do not hand-author a passing decision.
 
-Retain canonical runner logs and versioned prompts. A human refusal, blocking
-finding, or later rejected holdout resets the current acceptance phase and
-cannot be averaged away.
-
-Use the canonical runner only after committing a frozen candidate. Preserve
-failed and rejected runs in the hash chain. A holdout must use a governed prompt,
-a distinct stable session ID, all ten criteria, and evidence for every score.
-The validator recomputes candidate identity, score floors, and weighted results;
-do not hand-author a passing decision.
+Retain raw and human-readable canonical runner logs plus versioned prompts. A
+holdout must attest its model context, provider, candidate, prompt, and process
+separation. That attestation is not human identity proof. A human refusal,
+blocking finding, or later rejected holdout resets the current acceptance phase
+and cannot be averaged away. Use `check:eval-contract` for structural validation
+and `certify:eval-contract` only after the recursive stop condition is expected
+to pass.
 
 Use `npm run knowledge:intake` for public-safe leads. It is dry-run by default;
 `--write` appends an intake receipt, not a claim. Keep duplicate receipts with a

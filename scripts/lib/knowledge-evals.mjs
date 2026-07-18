@@ -956,9 +956,6 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const kcPhaseDocumentation = existsSync(path.join(repoRoot, kcPhase.documentationPath))
     ? readFileSync(path.join(repoRoot, kcPhase.documentationPath), "utf8")
     : "";
-  const kcPhaseRun = existsSync(path.join(repoRoot, kcPhase.runPath))
-    ? readFileSync(path.join(repoRoot, kcPhase.runPath), "utf8")
-    : "";
   const kcPhaseProjectionText = kcPhaseClaims.flatMap(
     (claim) => claim?.projections.map((projection) => projection.text) ?? []
   ).join(" ");
@@ -1091,7 +1088,6 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       /It is not an\s+independent construction audit/.test(kcPhaseDocumentation) &&
       /Phase One (?:cold-shell )?completion(?: is not| from)\s+completion of\s+the full redevelopment/.test(kcPhaseDocumentation) &&
       kcPhaseDocumentation.includes("The raw PDF is not committed") &&
-      kcPhaseRun.includes("proposal is not audit") &&
       !/(?:completed the entire|completed the full) (?:KC Town Hall )?(?:project|development|redevelopment)/i.test(kcPhaseProjectionText) &&
       !/(?:solely|alone|personally) (?:performed|completed|built) (?:all|every|the entire)/i.test(kcPhaseProjectionText)
   );

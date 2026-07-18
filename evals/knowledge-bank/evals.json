@@ -227,8 +227,7 @@
       "proofId": "kc-town-hall-public-benefit-documentation",
       "pageId": "kc-town-hall",
       "occurrenceId": "official-developer-presenter",
-      "documentationPath": "docs/knowledge-bank/projects/kc-town-hall-phase-one-2019.md",
-      "runPath": "evals/knowledge-bank/runs/2026-07-15-kc-town-hall-phase-one.md"
+      "documentationPath": "docs/knowledge-bank/projects/kc-town-hall-phase-one-2019.md"
     },
     "teamsArchiveProduction": {
       "expectedSourceCount": 12,

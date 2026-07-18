@@ -11,6 +11,9 @@ export const runDirectory = path.join(repoRoot, "evals/_shared/runs");
 
 const sha256 = (value) => createHash("sha256").update(value).digest("hex");
 const git = (...args) => execFileSync("git", args, { cwd: repoRoot, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
+const commitFileDigestCache = new Map();
+const governedFilesAtCommitCache = new Map();
+const governedDigestAtCommitCache = new Map();
 
 export function canonicalJson(value) {
   if (Array.isArray(value)) return `[${value.map(canonicalJson).join(",")}]`;
@@ -65,6 +68,8 @@ export function governedInputDigest(contract = loadEvalContract()) {
 }
 
 export function governedFilesAtCommit(commit, contract = loadEvalContract()) {
+  const cacheKey = `${commit}:${canonicalJson({ governedInputs: contract.governedInputs, generatedOutputs: contract.generatedOutputs })}`;
+  if (governedFilesAtCommitCache.has(cacheKey)) return governedFilesAtCommitCache.get(cacheKey);
   const files = contract.governedInputs.flatMap((input) => {
     try {
       return git("ls-tree", "-r", "--name-only", commit, "--", input).split("\n").filter(Boolean);
@@ -72,19 +77,31 @@ export function governedFilesAtCommit(commit, contract = loadEvalContract()) {
       return [];
     }
   });
-  return [...new Set(files)].filter((file) => !isGenerated(file, contract)).sort();
+  const result = [...new Set(files)].filter((file) => !isGenerated(file, contract)).sort();
+  governedFilesAtCommitCache.set(cacheKey, result);
+  return result;
 }
 
 export function governedInputDigestAtCommit(commit, contract = loadEvalContract()) {
+  const cacheKey = `${commit}:${canonicalJson({ governedInputs: contract.governedInputs, generatedOutputs: contract.generatedOutputs })}`;
+  if (governedDigestAtCommitCache.has(cacheKey)) return governedDigestAtCommitCache.get(cacheKey);
   const hash = createHash("sha256");
   for (const file of governedFilesAtCommit(commit, contract)) {
     hash.update(file).update("\0").update(execFileSync("git", ["show", `${commit}:${file}`], { cwd: repoRoot, maxBuffer: 100 * 1024 * 1024 })).update("\0");
   }
-  return hash.digest("hex");
+  const digest = hash.digest("hex");
+  governedDigestAtCommitCache.set(cacheKey, digest);
+  return digest;
 }
 
 export function promptDigest(promptPath) {
   return sha256(readFileSync(path.join(repoRoot, promptPath)));
+}
+
+export function fileDigestAtCommit(commit, filePath) {
+  const cacheKey = `${commit}:${filePath}`;
+  if (!commitFileDigestCache.has(cacheKey)) commitFileDigestCache.set(cacheKey, sha256(execFileSync("git", ["show", `${commit}:${filePath}`], { cwd: repoRoot, maxBuffer: 100 * 1024 * 1024, stdio: ["ignore", "pipe", "pipe"] })));
+  return commitFileDigestCache.get(cacheKey);
 }
 
 export function runRecordDigest(record) {
@@ -117,7 +134,15 @@ export function validateEvalContract(contract) {
   if (contract.stopCondition?.holdoutsReviewUnchangedCandidate !== true) errors.push("holdouts must review an unchanged candidate");
   if (contract.stopCondition?.priorScoresHiddenFromHoldouts !== true) errors.push("holdouts must not see prior scores");
   if (contract.humanAuthority?.modelHasFinalReleaseAuthority !== false) errors.push("models cannot have final release authority");
+  if (contract.requireReviewerAttestation !== true) errors.push("current contract must require reviewer attestation");
+  if (contract.requireHumanReadableLogs !== true) errors.push("current contract must retain human-readable command logs");
+  if (contract.requireDecisionRecordSynchronization !== true) errors.push("current contract must synchronize decision records");
   if (!Array.isArray(contract.requiredCommands) || new Set(contract.requiredCommands).size !== contract.requiredCommands?.length) errors.push("required commands must be a unique non-empty array");
+  const launch = launchSuite();
+  for (const gate of launch.hardGates.filter((item) => item.kind === "command")) {
+    if (!contract.requiredCommands?.includes(gate.command)) errors.push(`composite contract is missing launch command gate ${gate.id}: ${gate.command}`);
+  }
+  if (!contract.requiredCommands?.includes("npm run test:browser-evals")) errors.push("composite contract is missing the browser hard gate");
   if (!Array.isArray(contract.requiredExternalGates) || contract.requiredExternalGates.length < 1) errors.push("required external gates are missing");
   if (!Array.isArray(contract.holdoutPrompts) || new Set(contract.holdoutPrompts).size !== 2) errors.push("contract needs exactly two distinct holdout prompts");
   for (const prompt of contract.holdoutPrompts ?? []) if (!existsSync(path.join(repoRoot, prompt))) errors.push(`holdout prompt does not exist: ${prompt}`);
@@ -226,7 +251,14 @@ export function validateCompositeRunRecord(record, expected = {}) {
   if (record.judge?.class === "deterministic" && contract?.requiredCommands && !sameStringSet(record.commands.map((item) => item.command), contract.requiredCommands)) errors.push(`${record.id}: deterministic run must execute the complete required command set`);
   if (record.judge?.class === "deterministic" && contract?.requiredCommands) {
     if (contract.runnerPath && record.execution?.runnerPath !== contract.runnerPath) errors.push(`${record.id}: deterministic run must identify the canonical runner`);
-    else if (contract.runnerPath && record.execution.runnerDigest !== promptDigest(record.execution.runnerPath)) errors.push(`${record.id}: deterministic runner digest is stale`);
+    else if (contract.runnerPath) {
+      try {
+        const expectedRunnerDigest = expected.verifyCandidate === false ? promptDigest(record.execution.runnerPath) : fileDigestAtCommit(record.candidate.commit, record.execution.runnerPath);
+        if (record.execution.runnerDigest !== expectedRunnerDigest) errors.push(`${record.id}: deterministic runner digest is stale for its candidate commit`);
+      } catch {
+        errors.push(`${record.id}: deterministic runner is missing from its candidate commit`);
+      }
+    }
     for (const command of record.commands ?? []) {
       if (!/^[a-f0-9]{64}$/.test(command.outputDigest ?? "")) errors.push(`${record.id}: ${command.command} needs a captured output digest`);
       if (!command.startedAt || !command.completedAt || !Number.isInteger(command.durationMs) || command.durationMs < 0) errors.push(`${record.id}: ${command.command} needs execution timing`);
@@ -235,6 +267,11 @@ export function validateCompositeRunRecord(record, expected = {}) {
         if (!command.outputPath || !existsSync(logPath)) errors.push(`${record.id}: ${command.command} needs a retained output log`);
         else if (sha256(readFileSync(logPath)) !== command.outputDigest) errors.push(`${record.id}: ${command.command} output log digest is stale`);
       }
+      if (contract.requireHumanReadableLogs === true) {
+        const reviewPath = path.join(repoRoot, command.reviewOutputPath ?? "");
+        if (!command.reviewOutputPath || !existsSync(reviewPath)) errors.push(`${record.id}: ${command.command} needs a human-readable output log`);
+        else if (!/^[a-f0-9]{64}$/.test(command.reviewOutputDigest ?? "") || sha256(readFileSync(reviewPath)) !== command.reviewOutputDigest) errors.push(`${record.id}: ${command.command} human-readable output digest is stale`);
+      }
     }
   }
   if (record.judge?.class === "holdout") {
@@ -242,15 +279,35 @@ export function validateCompositeRunRecord(record, expected = {}) {
     if (record.judge.priorScoresVisible !== false) errors.push(`${record.id}: holdout cannot see prior scores`);
     if (record.judge.label !== record.judge.label?.trim() || !record.judge.label) errors.push(`${record.id}: holdout label must be normalized`);
     if (!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(record.judge.sessionId ?? "")) errors.push(`${record.id}: holdout needs a stable reviewer session UUID`);
+    if (contract?.requireReviewerAttestation === true) {
+      if (record.judge.reviewerClass !== "model-context" || !record.judge.provider?.trim()) errors.push(`${record.id}: holdout must identify its model context and provider`);
+      const attestation = record.judge.attestation;
+      if (attestation?.candidateCommit !== record.candidate.commit || attestation?.promptPath !== record.judge.promptPath) errors.push(`${record.id}: holdout attestation does not bind candidate and prompt`);
+      for (const field of ["runRecordsInspected", "generatedReportsInspected", "editsMade"]) if (attestation?.[field] !== false) errors.push(`${record.id}: holdout attestation requires ${field}=false`);
+      if (!Number.isFinite(Date.parse(attestation?.attestedAt ?? ""))) errors.push(`${record.id}: holdout attestation needs a timestamp`);
+    }
     if (contract?.holdoutPrompts && !contract.holdoutPrompts.includes(record.judge.promptPath)) errors.push(`${record.id}: holdout prompt is not governed by the contract`);
     if (!record.judge.promptPath || !existsSync(path.join(repoRoot, record.judge.promptPath))) errors.push(`${record.id}: holdout prompt path is missing`);
-    else if (record.judge.promptDigest !== promptDigest(record.judge.promptPath)) errors.push(`${record.id}: holdout prompt digest is stale`);
+    else {
+      try {
+        const archivedPrompt = record.judge.promptPath.startsWith(`evals/_shared/prompts/${record.contract.version}/`);
+        const expectedPromptDigest = expected.verifyCandidate === false || archivedPrompt
+          ? promptDigest(record.judge.promptPath)
+          : fileDigestAtCommit(record.candidate.commit, record.judge.promptPath);
+        if (record.judge.promptDigest !== expectedPromptDigest) errors.push(`${record.id}: holdout prompt digest is stale for its candidate commit`);
+      } catch {
+        errors.push(`${record.id}: holdout prompt is missing from its candidate commit`);
+      }
+    }
     const scored = scoreHoldout(record);
     errors.push(...scored.errors);
     if (record.decision?.weightedScore !== scored.weightedScore) errors.push(`${record.id}: declared weighted score does not match criterion results`);
     if (record.decision?.status === "accepted-for-review" && !scored.scorePasses) errors.push(`${record.id}: an accepted decision does not meet score floors and weighted target`);
     if (record.decision?.status === "accepted-for-review" && (record.blockingFindings?.length ?? 0) > 0) errors.push(`${record.id}: blocking findings prohibit acceptance`);
     if (contract?.requireDecisionRecord === true) errors.push(...validateDecisionRecord(launchSuite(), record.decisionRecord).map((error) => `${record.id}: ${error}`));
+    if (contract?.requireDecisionRecordSynchronization === true && canonicalJson(record.openDisagreements) !== canonicalJson(record.decisionRecord?.openDisagreements)) errors.push(`${record.id}: top-level disagreements must match the decision record`);
+    if (contract?.requireDecisionRecordSynchronization === true && canonicalJson(record.overrides) !== canonicalJson(record.decisionRecord?.overrides)) errors.push(`${record.id}: top-level overrides must match the decision record`);
+    if (contract?.requireDecisionRecordSynchronization === true && !sameStringSet(record.reopenTriggersReviewed, record.decisionRecord?.reopenTriggersConsidered)) errors.push(`${record.id}: top-level reopen review must match the decision record`);
   }
   if (!["accepted-for-review", "revision-required", "blocked-by-external-gates"].includes(record.decision?.status)) errors.push(`${record.id}: invalid decision status`);
   if (record.commands?.some((command) => command.exitCode !== 0) && record.decision?.status === "accepted-for-review") errors.push(`${record.id}: a failed command cannot be averaged away`);
@@ -280,7 +337,7 @@ export function evaluateCompositeStopCondition(records, contract = loadEvalContr
     if (record.commands?.every((command) => command.exitCode === 0) && record.decision?.status === "accepted-for-review") consecutiveDeterministicPasses += 1;
     else consecutiveDeterministicPasses = 0;
   }
-  const holdouts = current.filter(({ record }) => record.judge?.class === "holdout" && record.judge.independent === true && record.judge.priorScoresVisible === false && record.decision?.status === "accepted-for-review");
+  const holdouts = current.filter(({ record }) => record.judge?.class === "holdout" && record.judge.reviewerClass === "model-context" && record.judge.independent === true && record.judge.priorScoresVisible === false && record.decision?.status === "accepted-for-review");
   const certifying = [...deterministicRuns.slice(-consecutiveDeterministicPasses), ...holdouts];
   const identities = new Set(certifying.map(({ record }) => [record.candidate.commit, record.candidate.tree, record.candidate.governedInputDigest].join(":")));
   const sessions = new Set(holdouts.map(({ record }) => record.judge.sessionId?.trim().toLocaleLowerCase()));

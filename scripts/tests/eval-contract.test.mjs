@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
-import { mkdirSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import {
@@ -23,11 +22,12 @@ const contract = loadEvalContract();
 const digest = contractDigest(contract);
 const inputDigest = governedInputDigest(contract);
 const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/evals.json"), "utf8"));
-const testLogPath = "evals/_shared/logs/test-output.log";
-const testLog = "captured test output\n";
-mkdirSync(path.dirname(path.join(repoRoot, testLogPath)), { recursive: true });
-writeFileSync(path.join(repoRoot, testLogPath), testLog);
+const testLogPath = "scripts/tests/fixtures/eval-output.log";
+const testReviewLogPath = "scripts/tests/fixtures/eval-output.txt";
+const testLog = readFileSync(path.join(repoRoot, testLogPath));
+const testReviewLog = readFileSync(path.join(repoRoot, testReviewLogPath));
 const testLogDigest = createHash("sha256").update(testLog).digest("hex");
+const testReviewLogDigest = createHash("sha256").update(testReviewLog).digest("hex");
 
 function decisionRecord() {
   return {
@@ -52,18 +52,18 @@ function run(id, judgeClass = "deterministic", options = {}) {
   const promptPath = options.promptPath ?? "evals/_shared/holdout-a.md";
   const criteria = suite.judgeCriteria.map((criterion) => ({ criterionId: criterion.id, score: 5, evidence: [`${criterion.id} evidence`], risks: [] }));
   const record = {
-    schemaVersion: "2.1.0",
+    schemaVersion: "2.2.0",
     id,
     iteration: options.iteration ?? 1,
     recordedAt: "2026-07-16T12:00:00Z",
     contract: { id: contract.id, version: contract.version, digest },
     candidate: { branch: "feature/knowledge-a", commit: "a".repeat(40), tree: "b".repeat(40), governedInputDigest: inputDigest },
     commands: judgeClass === "deterministic"
-      ? contract.requiredCommands.map((command) => ({ command, exitCode: 0, status: "passed", startedAt: "2026-07-16T12:00:00Z", completedAt: "2026-07-16T12:00:01Z", durationMs: 1000, outputDigest: testLogDigest, outputPath: testLogPath }))
+      ? contract.requiredCommands.map((command) => ({ command, exitCode: 0, status: "passed", startedAt: "2026-07-16T12:00:00Z", completedAt: "2026-07-16T12:00:01Z", durationMs: 1000, outputDigest: testLogDigest, outputPath: testLogPath, reviewOutputDigest: testReviewLogDigest, reviewOutputPath: testReviewLogPath }))
       : [{ command: "independent read-only holdout", exitCode: 0, status: "passed" }],
     ...(judgeClass === "deterministic" ? { execution: { runnerPath: "scripts/run-composite-eval.mjs", runnerDigest: promptDigest("scripts/run-composite-eval.mjs"), node: process.version, platform: "test" } } : {}),
     judge: judgeClass === "holdout"
-      ? { class: "holdout", label: options.label ?? id, sessionId: options.sessionId ?? "11111111-1111-4111-8111-111111111111", independent: true, priorScoresVisible: false, promptPath, promptDigest: promptDigest(promptPath) }
+      ? { class: "holdout", label: options.label ?? id, sessionId: options.sessionId ?? "11111111-1111-4111-8111-111111111111", reviewerClass: "model-context", provider: "codex-multi-agent", independent: true, priorScoresVisible: false, promptPath, promptDigest: promptDigest(promptPath), attestation: { candidateCommit: "a".repeat(40), promptPath, runRecordsInspected: false, generatedReportsInspected: false, editsMade: false, attestedAt: "2026-07-16T12:00:00Z" } }
       : { class: "deterministic", label: id, independent: false, priorScoresVisible: false },
     criterionResults: judgeClass === "holdout" ? criteria : [],
     ...(judgeClass === "holdout" ? { decisionRecord: decisionRecord(), blockingFindings: [] } : {}),
@@ -87,6 +87,11 @@ function sequence(records) {
 }
 
 test("shared contract governs exactly the three canonical suites", () => assert.deepEqual(validateEvalContract(contract), []));
+
+test("shared contract executes every automatable launch hard gate", () => {
+  for (const gate of suite.hardGates.filter((item) => item.kind === "command")) assert.ok(contract.requiredCommands.includes(gate.command), gate.id);
+  assert.ok(contract.requiredCommands.includes("npm run test:browser-evals"));
+});
 
 test("governed digest includes all app source and excludes generated results", () => {
   const files = governedFiles(contract);
@@ -126,12 +131,15 @@ test("deterministic records require canonical runner and captured output provena
   delete changed.commands[0].outputDigest;
   delete changed.commands[0].startedAt;
   delete changed.commands[0].outputPath;
+  delete changed.commands[0].reviewOutputDigest;
+  delete changed.commands[0].reviewOutputPath;
   seal(changed);
   const errors = validate(changed, { contract }).join("\n");
   assert.match(errors, /runner digest is stale/);
   assert.match(errors, /captured output digest/);
   assert.match(errors, /execution timing/);
   assert.match(errors, /retained output log/);
+  assert.match(errors, /human-readable output log/);
 });
 
 test("holdouts must be independent, blind, normalized, and prompt-bound", () => {
@@ -146,6 +154,31 @@ test("holdouts must be independent, blind, normalized, and prompt-bound", () => 
   assert.match(errors, /cannot see prior scores/);
   assert.match(errors, /label must be normalized/);
   assert.match(errors, /prompt digest is stale/);
+});
+
+test("holdout records require explicit model-context provenance bound to candidate and prompt", () => {
+  const changed = run("missing-attestation", "holdout");
+  delete changed.judge.reviewerClass;
+  delete changed.judge.provider;
+  changed.judge.attestation.candidateCommit = "c".repeat(40);
+  changed.judge.attestation.runRecordsInspected = true;
+  seal(changed);
+  const errors = validate(changed, { contract }).join("\n");
+  assert.match(errors, /identify its model context and provider/);
+  assert.match(errors, /does not bind candidate and prompt/);
+  assert.match(errors, /runRecordsInspected=false/);
+});
+
+test("top-level disagreement, override, and reopen records must match the decision record", () => {
+  const changed = run("split-authority", "holdout");
+  changed.openDisagreements = ["hidden elsewhere"];
+  changed.overrides = [{ humanAuthority: "someone" }];
+  changed.reopenTriggersReviewed = [];
+  seal(changed);
+  const errors = validate(changed, { contract }).join("\n");
+  assert.match(errors, /top-level disagreements must match/);
+  assert.match(errors, /top-level overrides must match/);
+  assert.match(errors, /top-level reopen review must match/);
 });
 
 test("unknown, duplicate, missing, out-of-range, and evidenceless scores are rejected", () => {

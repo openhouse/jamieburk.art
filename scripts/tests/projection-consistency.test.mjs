@@ -10,6 +10,14 @@ test("current canonical projections and public registry are consistent", () => {
   assert.deepEqual(validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles }), []);
 });
 
+test("projection documentation cannot drift from the executable homepage proof strip", () => {
+  const staleMap = "# Projection Map\n\n## Homepage Proof Strip\n\n- `career-operating-structure-14-years`\n";
+  assert.match(
+    validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles, projectionMapText: staleMap }).join("\n"),
+    /homepage proof strip disagrees/
+  );
+});
+
 test("repository-authored public evidence is pinned to an immutable snapshot", () => {
   assert.doesNotMatch(registryText, /jamieburk\.art\/blob\/develop/);
   assert.match(registryText, new RegExp(`jamieburk\\.art/blob/${publicEvidenceSnapshotSha}`));

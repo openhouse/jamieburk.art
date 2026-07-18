@@ -8,10 +8,10 @@ map to decide where claims may appear.
 Use only the smallest, most legible claims:
 
 - `career-operating-structure-14-years`
-- `hje-revenue-growth-contribution`
-- `fair-rent-campaign-memory`
+- `hje-modernization-stewardship`
+- `callnyc-public-engagement-architecture`
 - `wowlist-community-platform`
-- `sunday-dinner-196-participation-infrastructure`
+- `kc-town-hall-public-benefit-documentation`
 
 ## Resume Page
 

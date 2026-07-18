@@ -34,13 +34,20 @@ const id = `composite-${contract.version}-deterministic-${iteration}`;
 const logRoot = path.join(repoRoot, `evals/_shared/logs/${String(iteration).padStart(3, "0")}-${id}`);
 mkdirSync(logRoot, { recursive: true });
 const commands = [];
+const readableOutput = (value) => value
+  .replace(/\u001B\[[0-?]*[ -\/]*[@-~]/g, "")
+  .replace(/\r(?!\n)/g, "\n")
+  .replace(/\n{4,}/g, "\n\n\n");
 for (const [index, command] of contract.requiredCommands.entries()) {
   const started = new Date();
   const result = spawnSync(command, { cwd: repoRoot, encoding: "utf8", shell: true, env: process.env, maxBuffer: 50 * 1024 * 1024 });
   const completed = new Date();
   const output = `${result.stdout ?? ""}${result.stderr ?? ""}`;
   const outputPath = path.posix.join("evals/_shared/logs", path.basename(logRoot), `${String(index + 1).padStart(2, "0")}.log`);
+  const reviewOutputPath = path.posix.join("evals/_shared/logs", path.basename(logRoot), `${String(index + 1).padStart(2, "0")}.txt`);
+  const reviewOutput = readableOutput(output);
   writeFileSync(path.join(repoRoot, outputPath), output);
+  writeFileSync(path.join(repoRoot, reviewOutputPath), reviewOutput);
   process.stdout.write(`\n$ ${command}\n${output}`);
   commands.push({
     command,
@@ -50,7 +57,9 @@ for (const [index, command] of contract.requiredCommands.entries()) {
     completedAt: completed.toISOString(),
     durationMs: completed.getTime() - started.getTime(),
     outputDigest: createHash("sha256").update(output).digest("hex"),
-    outputPath
+    outputPath,
+    reviewOutputDigest: createHash("sha256").update(reviewOutput).digest("hex"),
+    reviewOutputPath
   });
 }
 

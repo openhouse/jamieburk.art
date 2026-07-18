@@ -4,6 +4,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { approvedResumeArtifact, validateResumeSource, validateResumeText } from "./lib/public-artifacts.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -50,6 +51,9 @@ const resumePath = path.join(
   repoRoot,
   "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
 );
+const resumeSourcePath = path.join(repoRoot, approvedResumeArtifact.htmlPath);
+const resumeTextPath = path.join(repoRoot, approvedResumeArtifact.textPath);
+const resumeGeneratorPath = path.join(repoRoot, approvedResumeArtifact.generatorPath);
 
 function walk(dir) {
   if (!existsSync(dir)) return [];
@@ -104,7 +108,7 @@ function scanPattern(files, label, pattern, severity = "failure") {
 
 function pdftotext(file) {
   try {
-    return execFileSync("pdftotext", [file, "-"], {
+    return execFileSync("pdftotext", ["-layout", file, "-"], {
       cwd: repoRoot,
       encoding: "utf8",
       stdio: ["ignore", "pipe", "ignore"]
@@ -243,29 +247,13 @@ if (!existsSync(resumePath)) {
   }
 
   const resumeText = pdftotext(resumePath);
-  if (!/Jamie\s+Burkart/i.test(resumeText)) {
-    addFailure(resumePath, "resume PDF text does not include Jamie Burkart");
-  }
+  for (const failure of validateResumeText(resumeText)) addFailure(resumePath, failure);
 
-  if (!/Technical Project Manager/i.test(resumeText)) {
-    addFailure(resumePath, "resume PDF text does not include the target role");
-  }
-
-  if (/\b(?:TODO|Placeholder resume PDF|lorem ipsum|replace this)\b/i.test(resumeText)) {
-    addFailure(resumePath, "resume PDF contains placeholder or TODO text");
-  }
-
-  if (/first civic-data hackathon|first civic-tech hackathon/i.test(resumeText)) {
-    addFailure(resumePath, "resume PDF contains retired CallNYC hackathon wording");
-  }
-
-  if (
-    !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
-      resumeText
-    )
-  ) {
-    addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
-  }
+  if (!existsSync(resumeSourcePath)) addFailure(resumePath, "editable approved resume HTML source is missing");
+  else for (const failure of validateResumeSource(readText(resumeSourcePath))) addFailure(resumeSourcePath, failure);
+  if (!existsSync(resumeGeneratorPath)) addFailure(resumePath, "resume generator is missing");
+  if (!existsSync(resumeTextPath)) addFailure(resumePath, "versioned extracted resume text is missing");
+  else if (readText(resumeTextPath) !== resumeText) addFailure(resumeTextPath, "extracted resume text disagrees with the shipped PDF");
 
   if (
     isProduction &&

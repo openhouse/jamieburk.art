@@ -1,0 +1,272 @@
+{
+  "schemaVersion": "2.1.0",
+  "id": "composite-2.3.0-holdout-a-public-sector-editorial-v3-12",
+  "iteration": 12,
+  "recordedAt": "2026-07-18T00:56:04.196Z",
+  "previousRunId": "composite-2.3.0-deterministic-11",
+  "previousRunDigest": "b00dd5a5bdc84dbe54dc5529eb4f1c3f6218389de778309c58d9b387a2d28ea6",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.3.0",
+    "digest": "caaaf417a45f093e6373b22b793910a0ae3d89bbf4e22359edc430aadb23c656"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "461974aa8bdda717d78bc5a97976b02f28036c9e",
+    "tree": "2823f1813ddb9bccf930485f36929b4605e9df1f",
+    "governedInputDigest": "97531717e548ee8d7da4f4588e526ea73a3b207cf1670e11d05777464f4953f7"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-a-public-sector-editorial-v3",
+    "sessionId": "019f6e0a-0554-7120-b733-c37b8d9b2a81",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/holdout-a.md",
+    "promptDigest": "988584325af8eec60965d5f966318b7a9c90ed1d1cdea2047b472ecf197bc6ad"
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "The homepage names Technical Project Manager - Product Operations & Implementation and makes Jamie's operating contribution visible in the first viewport."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 3,
+      "evidence": [
+        "CallNYC and the homepage proof strip offer evidence paths, but the shipped resume PDF makes a stale sole-causality funding claim and public-safety checks do not inspect binary resume text."
+      ],
+      "risks": [
+        "The prominent resume can contradict the canonical KC Town Hall lifecycle claim while still passing repository checks."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "The hero and case studies describe emerging work without shaming uncertainty and show structure growing from the work itself."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 3,
+      "evidence": [
+        "The homepage is scannable and role-first, but the proof strip, technical-operations map, and stale projection-map prose create avoidable reconciliation work."
+      ],
+      "risks": [
+        "A hiring reader may encounter two descriptions of which projects constitute the homepage proof strip."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4,
+      "evidence": [
+        "Case studies generally say what Jamie did, what became usable, and why it matters to product-operations hiring readers."
+      ],
+      "risks": [
+        "The resume funding sentence overstates Jamie's individual causal role and weakens otherwise careful translation."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 3,
+      "evidence": [
+        "Public pages usually use helped, supported, and co-built language, but the resume says Jamie secured a public funding recommendation for a collective project."
+      ],
+      "risks": [
+        "The resume wording can displace collective and governmental decision-making authority."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "The visual system is coherent and CallNYC has cleared project evidence; several principal cases remain mainly textual."
+      ],
+      "risks": [
+        "The portfolio still lacks a decisive cleared visual artifact for several major claims."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 4,
+      "evidence": [
+        "Technical Operations and the case studies connect coordination, implementation, facilitation, and handoff work to bounded outputs."
+      ],
+      "risks": [
+        "The resume's funding claim obscures the stronger operational story documented in the lifecycle record."
+      ]
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 5,
+      "evidence": [
+        "About and the work pages preserve a threshold where artistic, civic, technical, social, participatory, and spatial practice remain connected."
+      ],
+      "risks": []
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 4,
+      "evidence": [
+        "The composite history preserves candidate identity, command evidence, rejection records, decision dimensions, human authority, and reopen paths."
+      ],
+      "risks": [
+        "Projection documentation and binary public artifacts are not yet governed strongly enough to prevent a second authority."
+      ]
+    }
+  ],
+  "blockingFindings": [
+    "The shipped resume PDF says Jamie secured a $490,539 public funding recommendation, conflicting with the canonical KC Town Hall lifecycle record and its sole-causality boundary.",
+    "Projection and public-safety checks do not inspect the public resume PDF against canonical corrections and anti-claims.",
+    "docs/knowledge-bank/projection-map.md describes FairRentNYC and Sunday Dinner in the homepage proof strip while the executable homepage selection uses CallNYC and KC Town Hall."
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "Jamie is immediately legible in the target technical project management and product-operations role.",
+        "evidence": [
+          "The homepage first viewport and About opening name the target role and operating contribution."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "The portfolio identifies concrete coordination, implementation, facilitation, documentation, and handoff actions.",
+        "evidence": [
+          "Technical Operations and named case studies connect Jamie to specific actions."
+        ],
+        "unresolvedRisks": [
+          "The resume substitutes a broad funding outcome for the more precise actions documented in the bank."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "The public work connects Jamie's actions to usable services, systems, documentation, and participation structures.",
+        "evidence": [
+          "CallNYC, WOW List, Harry J. Epstein, and KC Town Hall appear in the executable homepage proof strip."
+        ],
+        "unresolvedRisks": [
+          "The prose projection map names a different strip and therefore weakens the single source of truth."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "The candidate demonstrates relevant civic, cultural, technical, construction, and knowledge-system experience.",
+        "evidence": [
+          "The work index and About page span these domains without losing the target role."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "The site supports project coordination and implementation leadership more strongly than sole organizational authority.",
+        "evidence": [
+          "Most cases preserve collective verbs and project-specific authority."
+        ],
+        "unresolvedRisks": [
+          "The resume phrase secured a funding recommendation overstates individual causality in collective public work."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "The citation and knowledge layers are substantial, but the public resume can contradict them without a failing check.",
+        "evidence": [
+          "Canonical KC Town Hall records preserve recommendation, appropriation, zero disbursement, withdrawal, and return boundaries."
+        ],
+        "unresolvedRisks": [
+          "Binary public artifact text is outside the current correction and anti-claim enforcement path."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "The frozen candidate requires revision before PR-review acceptance.",
+        "evidence": [
+          "Three blocking findings remain and external human gates are explicitly open."
+        ],
+        "unresolvedRisks": [
+          "Resume correction, binary scanning, and projection-map synchronization remain incomplete."
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked; this rejection does not authorize claim promotion.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "No collaborator dispute is recorded, but collective-credit risk requires revision and the hold path remains open.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "No override was invoked; the candidate remains rejected.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "Invoked by contradictory public projection evidence in the resume and projection map.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "Contradictory projection evidence in the resume and projection map reopens the prior deterministic acceptance; no changed consent or source decay was established.",
+    "overrides": [],
+    "openDisagreements": [
+      "The public pages are strong enough for many hiring readers, but the resume contradiction is too consequential to treat as a nonblocking editorial detail.",
+      "Five external human and release gates remain open and are not resolved by this review."
+    ],
+    "disagreementReview": "The numerical score cannot average away the evidence and collective-credit floors or the three blocking findings. Human authorities remain able to dispute, override with evidence, or reopen later."
+  },
+  "openDisagreements": [
+    "The public pages are strong enough for many hiring readers, but the resume contradiction is too consequential to treat as a nonblocking editorial detail.",
+    "Five external human and release gates remain open and are not resolved by this review."
+  ],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new or contradictory evidence",
+    "changed consent or rights",
+    "a substantiated attribution dispute",
+    "source decay or corrected provenance",
+    "a changed target role or public surface"
+  ],
+  "decision": {
+    "status": "revision-required",
+    "weightedScore": 3.98,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "Candidate 461974aa is clear, humane, and operationally persuasive, but is not ready for PR review because the public resume contradicts the canonical KC Town Hall lifecycle record, binary artifact safety is unenforced, and the projection map has drifted from the executable homepage.",
+  "recordDigest": "572ac9a8566b8703c1b628fd4bcec91aaa26642b91e4b60f6c515d302d4e96b1"
+}

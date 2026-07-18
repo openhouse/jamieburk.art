@@ -65,6 +65,44 @@ test("a passing run cannot replace hard-gate records with a trust-me note", () =
   assert.match(validateLaunchEvalRunRecord(suite, record).join("\n"), /record every hard gate/);
 });
 
+test("a passing run needs exact candidate identity rather than a parent base commit", () => {
+  const record = structuredClone(loadLaunchEvalRunRecords()[0].record);
+  record.hardGatesPass = true;
+  record.candidate.baseCommit = "a".repeat(40);
+  delete record.candidate.commit;
+  delete record.candidate.tree;
+  record.hardGateResults = suite.hardGates.map((gate) => ({ id: gate.id, status: "passed", evidence: ["trust me"] }));
+  assert.match(validateLaunchEvalRunRecord(suite, record).join("\n"), /exact candidate commit and tree/);
+});
+
+test("launch scoring rejects fractional values", () => {
+  const scores = suite.judgeCriteria.map((criterion) => ({ criterionId: criterion.id, score: criterion.id === "LR-JUDGE-ROLE" ? 4.2 : 5 }));
+  const result = scoreJudgeResults(suite, scores, true, makeDecisionRecord());
+  assert.equal(result.accepted, false);
+  assert.deepEqual(result.missing, ["LR-JUDGE-ROLE"]);
+});
+
+test("a passing run needs criterion evidence and unresolved-risk arrays", () => {
+  const record = structuredClone(loadLaunchEvalRunRecords()[0].record);
+  record.hardGatesPass = true;
+  record.scores = suite.judgeCriteria.map((criterion) => ({ criterionId: criterion.id, score: 5 }));
+  const errors = validateLaunchEvalRunRecord(suite, record).join("\n");
+  assert.match(errors, /needs evidence before a run can pass/);
+  assert.match(errors, /needs a risks array before a run can pass/);
+});
+
+test("hard-gate prose cannot substitute for typed command and browser evidence", () => {
+  const record = structuredClone(loadLaunchEvalRunRecords()[0].record);
+  record.hardGatesPass = true;
+  record.candidate.commit = record.candidate.baseCommit;
+  record.candidate.tree = "b".repeat(40);
+  record.hardGateResults = suite.hardGates.map((gate) => ({ id: gate.id, status: "passed", candidateCommit: record.candidate.commit, evidence: ["passed"] }));
+  const errors = validateLaunchEvalRunRecord(suite, record).join("\n");
+  assert.match(errors, /exact command, zero exit code/);
+  assert.match(errors, /digest-bound browser report/);
+  assert.match(errors, /structured evidence/);
+});
+
 test("a passing scorecard reaches the deterministic target", () => {
   const scores = suite.judgeCriteria.map((criterion) => ({
     criterionId: criterion.id,

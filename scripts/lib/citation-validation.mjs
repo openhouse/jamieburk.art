@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
+import { canonicalizePublicUrl, containsPrivatePath } from "./security-normalization.mjs";
 
 const publicSurfaceFiles = [
   "apps/www/src/content/work/callnyc.mdx",
@@ -11,10 +12,7 @@ const publicSurfaceFiles = [
   "apps/www/src/app/resume/page.tsx"
 ];
 
-const forbiddenPathPatterns = [
-  /\/private\//i,
-  /\/tmp\//i,
-  /file:\/\//i,
+const forbiddenPublicUrlPatterns = [
   /civic-hall-wayback-research/i,
   /(?:drive|dropbox)\.google\.com/i,
   /[?&](?:x-goog-signature|x-amz-signature)=/i
@@ -112,6 +110,26 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     if (source.visibility === "public" && ["archived", "live-and-archived"].includes(source.preservationStatus) && !source.archiveUrl) errors.push(`Archived public source ${source.id} has no archive URL`);
   }
 
+  const canonicalSourceUrls = new Map();
+  for (const source of knowledgeBank.sources) {
+    const field = source.canonicalUrl ? "canonicalUrl" : source.assetUrl ? "assetUrl" : "archiveUrl";
+    const value = source[field];
+    if (!value) continue;
+    let canonical;
+    try {
+      canonical = canonicalizePublicUrl(value, { stripHash: false });
+    } catch {
+      errors.push(`Source ${source.id} has malformed ${field}: ${value}`);
+      continue;
+    }
+    const prior = canonicalSourceUrls.get(canonical);
+    if (prior && prior.sourceId !== source.id) {
+      errors.push(`Sources ${prior.sourceId} and ${source.id} reuse canonical public URL ${canonical}`);
+    } else {
+      canonicalSourceUrls.set(canonical, { sourceId: source.id, field });
+    }
+  }
+
   for (const claim of knowledgeBank.claims) {
     if (["confirmed", "confirmed-with-boundary"].includes(claim.status) && !claim.evidence.length) errors.push(`Confirmed claim ${claim.id} has no evidence`);
     for (const evidence of claim.evidence) {
@@ -190,8 +208,9 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     if (JSON.stringify(firstAppearance) !== JSON.stringify(page.sourceOrder)) errors.push(`Page ${page.id} source order does not match first appearance or contains unused sources`);
   }
 
+  if (containsPrivatePath(knowledgeBank)) errors.push("Canonical registry contains a forbidden private filesystem path");
   for (const value of allStrings(knowledgeBank)) {
-    for (const pattern of forbiddenPathPatterns) if (pattern.test(value)) errors.push(`Canonical registry contains forbidden private path or URL: ${value}`);
+    for (const pattern of forbiddenPublicUrlPatterns) if (pattern.test(value)) errors.push(`Canonical registry contains forbidden private URL: ${value}`);
   }
 
   const publicJson = JSON.stringify(publicRegistry);

@@ -39,7 +39,9 @@ npm run check:portfolio-evals
 npm run test:portfolio-evals
 npm run report:portfolio-evals
 npm run check:eval-contract
+npm run certify:eval-contract
 npm run test:eval-contract
+npm run test:browser-evals
 npm run check:projections
 npm run preflight:staging
 npm run preflight:production
@@ -91,7 +93,6 @@ npm run knowledge:query -- --type claim --project callnyc --active
 npm run knowledge:report -- --write
 npm run knowledge:projection-map -- --write
 npm run eval:run
-npm run eval:run
 ```
 
 The intake command rejects private paths, validates the record shape, assigns a
@@ -109,17 +110,20 @@ recorded with `npm run eval:record-holdout -- --input /path/to/judgment.json
 rejected judgments remain in the hash-chained history. See
 `docs/evals/composite-governance.md`.
 
-Use `npm run check:eval-records` for nonrecursive validation of the contract,
-candidate identities, retained command logs, prompt versions, score vectors,
-decision records, and run hash chain. `npm run check:eval-contract` adds the
-recursive stop condition.
+Use `npm run check:eval-records` for complete history validation and
+`npm run check:eval-contract` for contract structure plus an advisory stop-state
+report. `npm run certify:eval-contract` is the fail-closed certification gate;
+it succeeds only after two deterministic passes and two separately attested,
+prior-score-blind model-context holdouts accept one unchanged candidate. Raw
+command logs and normalized text copies are both retained. A model-context
+attestation records process separation; it is not proof of a human identity or
+substitute for the contract's external human gates.
 
-`npm run eval:run` executes the frozen composite contract against a committed
-candidate and records command output digests. Independent blind judgments are
-recorded with `npm run eval:record-holdout -- --input /path/to/judgment.json
---prompt evals/_shared/holdout-a.md --session stable-session-id`. Failed runs and
-rejected judgments remain in the hash-chained history. See
-`docs/evals/composite-governance.md`.
+The shipped resume PDF is generated from
+`docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-17.html`
+with `npm run generate:resume`. Public-safety checks compare extracted PDF text
+to the committed text projection and enforce the approved contact, CallNYC, and
+KC Town Hall language.
 
 ## Environment
 

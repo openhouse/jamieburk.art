@@ -32,9 +32,10 @@ export function loadPublicSurfaceFiles() {
     "apps/www/src/components",
     "apps/www/src/content",
     "apps/www/src/data/proofs.ts",
-    "apps/www/src/data/work.ts"
+    "apps/www/src/data/work.ts",
+    "docs/knowledge-bank/public-artifacts"
   ];
-  return roots.flatMap(walk).filter((file) => /\.(?:ts|tsx|mdx|json)$/.test(file)).map((file) => ({
+  return roots.flatMap(walk).filter((file) => /\.(?:ts|tsx|mdx|json|html|txt)$/.test(file)).map((file) => ({
     file,
     content: readFileSync(path.join(repoRoot, file), "utf8")
   }));
@@ -69,7 +70,8 @@ export function buildPublicRegistry(bank = knowledgeBank) {
 export function validateProjectionConsistency({
   bank = knowledgeBank,
   registryText = readFileSync(path.join(repoRoot, "apps/www/src/data/knowledge-bank/public-registry.json"), "utf8"),
-  publicFiles = loadPublicSurfaceFiles()
+  publicFiles = loadPublicSurfaceFiles(),
+  projectionMapText = readFileSync(path.join(repoRoot, "docs/knowledge-bank/projection-map.md"), "utf8")
 } = {}) {
   const errors = [];
   const claimById = new Map(bank.claims.map((claim) => [claim.id, claim]));
@@ -93,6 +95,13 @@ export function validateProjectionConsistency({
   for (const proof of homepageProofs) {
     const coverage = coverageByProof.get(proof.id);
     if (!coverage || ["protected-support", "research-needed"].includes(coverage.status)) errors.push(`${proof.id}: homepage proof needs public or resume-backed coverage`);
+  }
+
+  const homepageSection = projectionMapText.match(/## Homepage Proof Strip\s+([\s\S]*?)(?=\n## |$)/)?.[1] ?? "";
+  const documentedHomepageProofIds = [...homepageSection.matchAll(/^- `([^`]+)`$/gm)].map((match) => match[1]);
+  const executableHomepageProofIds = homepageProofs.map((proof) => proof.id);
+  if (JSON.stringify(documentedHomepageProofIds) !== JSON.stringify(executableHomepageProofIds)) {
+    errors.push("docs/knowledge-bank/projection-map.md homepage proof strip disagrees with executable homepageProofs");
   }
 
   for (const claim of bank.claims) {

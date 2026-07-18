@@ -4,31 +4,19 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { intakeItemSchema } from "../../apps/www/src/data/knowledge-bank/schema.ts";
+import { canonicalizePublicUrl, containsPrivatePath } from "./security-normalization.mjs";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const receiptPath = path.join(repoRoot, "docs/knowledge-bank/intake/receipts.jsonl");
 const receiptLockPath = `${receiptPath}.lock`;
 const defaultIgnorables = /[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180F\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFE0F\uFEFF\uFFA0]/g;
 
-function normalizedSecurityText(value) {
-  let normalized = JSON.stringify(value).normalize("NFKC").replace(defaultIgnorables, "");
-  for (let attempt = 0; attempt < 2; attempt += 1) {
-    try { normalized = decodeURIComponent(normalized); }
-    catch { break; }
-  }
-  return normalized;
-}
-
 function normalizedKey(value) {
   return String(value).normalize("NFKC").replace(defaultIgnorables, "").replace(/\s+/g, " ").trim().toLocaleLowerCase();
 }
 
 export function canonicalizeSourceUrl(value) {
-  if (!value) return undefined;
-  const url = new URL(value);
-  url.hash = "";
-  if (url.pathname.length > 1) url.pathname = url.pathname.replace(/\/+$/, "");
-  return url.toString();
+  return canonicalizePublicUrl(value);
 }
 
 export function parseFlags(argv) {
@@ -48,9 +36,7 @@ export function parseFlags(argv) {
   return flags;
 }
 
-export function containsPrivatePath(value) {
-  return /(?:\/Users\/|\/Volumes\/|\/private\/(?:tmp|var)\/|\/tmp\/|\/var\/folders\/|(?:^|["'\s:])~\/|[A-Za-z]:\\Users\\|file:\/\/)/i.test(normalizedSecurityText(value));
-}
+export { containsPrivatePath };
 
 function existingReceipts() {
   if (!existsSync(receiptPath)) return [];

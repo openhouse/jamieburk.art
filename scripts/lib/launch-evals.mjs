@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -298,6 +299,16 @@ export function validateLaunchEvalRunRecord(suite, run) {
     failures.push("run record needs hard-gate notes");
   }
   if (run?.hardGatesPass === true) {
+    if (!/^[a-f0-9]{40}$/i.test(run.candidate?.commit ?? "") || !/^[a-f0-9]{40}$/i.test(run.candidate?.tree ?? "")) {
+      failures.push("a passing run must bind an exact candidate commit and tree");
+    } else {
+      try {
+        const actualTree = execFileSync("git", ["rev-parse", `${run.candidate.commit}^{tree}`], { cwd: repoRoot, encoding: "utf8" }).trim();
+        if (actualTree !== run.candidate.tree) failures.push("passing run candidate tree does not match its commit");
+      } catch {
+        failures.push("passing run candidate commit is not available in Git");
+      }
+    }
     const expectedGateIds = new Set(suite.hardGates.map((gate) => gate.id));
     const results = run.hardGateResults ?? [];
     const resultIds = new Set(results.map((result) => result.id));
@@ -305,8 +316,45 @@ export function validateLaunchEvalRunRecord(suite, run) {
       failures.push("a passing run must record every hard gate exactly once");
     }
     for (const result of results) {
-      if (result.status !== "passed" || !Array.isArray(result.evidence) || result.evidence.length === 0 || result.evidence.some((item) => typeof item !== "string" || !item.trim())) {
-        failures.push(`${result.id ?? "hard gate"} needs passed status and concrete evidence`);
+      const gate = suite.hardGates.find((item) => item.id === result.id);
+      if (result.status !== "passed" || result.candidateCommit !== run.candidate?.commit) {
+        failures.push(`${result.id ?? "hard gate"} needs passed status bound to the exact candidate commit`);
+      }
+      if (gate?.kind === "command") {
+        const execution = result.execution;
+        if (execution?.command !== gate.command || execution?.exitCode !== 0 || !/^[a-f0-9]{64}$/.test(execution?.outputDigest ?? "") || !execution?.outputPath) {
+          failures.push(`${result.id} needs exact command, zero exit code, retained output path, and output digest`);
+        } else {
+          const output = path.join(repoRoot, execution.outputPath);
+          if (!existsSync(output)) failures.push(`${result.id} retained output is missing`);
+          else if (createHash("sha256").update(readFileSync(output)).digest("hex") !== execution.outputDigest) failures.push(`${result.id} retained output digest is stale`);
+        }
+      } else if (gate?.kind === "browser") {
+        const report = result.browserReport;
+        const expectedRuntimeIds = [...(gate.runtimeCaseIds ?? [])].sort();
+        const actualRuntimeIds = [...(report?.runtimeCaseIds ?? [])].sort();
+        if (!report?.path || !/^[a-f0-9]{64}$/.test(report?.digest ?? "") || JSON.stringify(actualRuntimeIds) !== JSON.stringify(expectedRuntimeIds)) {
+          failures.push(`${result.id} needs a digest-bound browser report covering every required runtime case`);
+        } else {
+          const reportPath = path.join(repoRoot, report.path);
+          if (!existsSync(reportPath)) failures.push(`${result.id} browser report is missing`);
+          else {
+            const reportContent = readFileSync(reportPath);
+            if (createHash("sha256").update(reportContent).digest("hex") !== report.digest) failures.push(`${result.id} browser report digest is stale`);
+            else {
+              try {
+                const parsed = JSON.parse(reportContent);
+                if (parsed.candidateCommit !== run.candidate?.commit || parsed.passed !== true) failures.push(`${result.id} browser report does not pass for the exact candidate`);
+              } catch {
+                failures.push(`${result.id} browser report is not valid JSON`);
+              }
+            }
+          }
+        }
+      } else if (["approval", "deployment"].includes(gate?.kind)) {
+        if (!Array.isArray(result.evidence) || result.evidence.length !== gate.evidenceRequired?.length || result.evidence.some((item) => typeof item?.label !== "string" || !item.label.trim() || typeof item?.value !== "string" || !item.value.trim())) {
+          failures.push(`${result.id} needs structured evidence for every declared ${gate.kind} requirement`);
+        }
       }
     }
   }
@@ -319,6 +367,11 @@ export function validateLaunchEvalRunRecord(suite, run) {
     [...expectedIds].some((id) => !scoreIds.has(id))
   ) {
     failures.push("run record must score every criterion exactly once");
+  }
+  for (const score of run?.scores ?? []) {
+    if (!Number.isInteger(score.score) || score.score < 1 || score.score > suite.targets.scoreScale) failures.push(`${score.criterionId ?? "score"} must be an integer on the declared scale`);
+    if (run?.hardGatesPass === true && (!Array.isArray(score.evidence) || score.evidence.length === 0 || score.evidence.some((item) => typeof item !== "string" || !item.trim()))) failures.push(`${score.criterionId ?? "score"} needs evidence before a run can pass`);
+    if (run?.hardGatesPass === true && !Array.isArray(score.risks)) failures.push(`${score.criterionId ?? "score"} needs a risks array before a run can pass`);
   }
 
   const computed = scoreJudgeResults(
@@ -359,7 +412,7 @@ export function scoreJudgeResults(
 
   for (const criterion of suite.judgeCriteria) {
     const score = byId.get(criterion.id);
-    if (!(score >= 1 && score <= suite.targets.scoreScale)) {
+    if (!Number.isInteger(score) || !(score >= 1 && score <= suite.targets.scoreScale)) {
       missing.push(criterion.id);
       continue;
     }

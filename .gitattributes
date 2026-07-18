@@ -1,1 +1,2 @@
-evals/_shared/logs/** binary
+evals/_shared/logs/**/*.log binary
+evals/_shared/logs/**/*.txt text eol=lf
