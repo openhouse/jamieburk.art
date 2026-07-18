@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-07-17T02:29:55Z",
-  "candidate_fingerprint": "5f8b0109d100fd48b70168e602061b241f2371bb4941f757cf6aa15d6f624772",
+  "recorded_at": "2026-07-18T20:56:54Z",
+  "candidate_fingerprint": "8bbe808580d7d2f12a10939e352441a90dd8069d62d7770f4099cff3487f85bf",
   "rubric_fingerprint": "5dd84a3b8a91c8c1e2cccd2e281c7e59a3c2494ebaf6fe06ca250fdd2be09b11",
   "verification": {
     "repository_check": "pass",
@@ -16,7 +16,7 @@
     "repository_check": "npm run check:pre-evidence",
     "staging_preflight": "staging environment contract with npm run check:pre-evidence",
     "production_preflight": "production environment contract with npm run check:pre-evidence",
-    "docker_image": "jamieburk-art:knowledge-g@sha256:5a56ceaa1949e0e719537ba01c687e476bfc34d62f0ccec2fd6eb3b31616e6ee",
+    "docker_image": "jamieburk-art:knowledge-wiki-C@sha256:a6f5b0db08761c40fdaaa3da6110b798dd18f60d6c47f8bb8a1d4d34259a43fd",
     "docker_runtime_endpoints": 17,
     "browser_routes": 14,
     "browser_viewports": [
@@ -47,7 +47,9 @@
       "no duplicate IDs",
       "no broken in-page fragments",
       "no broken rendered images",
-      "no browser console errors"
+      "no browser console or page errors across 14 representative routes",
+      "CallNYC and Fair Rent citation targets and backlinks resolve",
+      "resume PDF returns HTTP 200"
     ]
   },
   "authority_boundary": "This manifest records machine-observed candidate evidence. It does not grant human approval or production release authority."

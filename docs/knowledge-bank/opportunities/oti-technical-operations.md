@@ -1,3 +1,21 @@
+---
+id: opportunity.oti-technical-operations
+title: Opportunity lens - Technical Operations
+kind: opportunity
+status: maintained
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-18
+review_by: 2026-10-18
+relations:
+  - type: related_to
+    target: capability.technical-operations
+  - type: related_to
+    target: project.callnyc
+  - type: related_to
+    target: method.source-backed-team-memory
+---
+
 # Opportunity Lens - Technical Operations
 
 This file maps public-safe claims to Technical Operations / Product Operations /

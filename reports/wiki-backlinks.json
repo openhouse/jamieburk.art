@@ -1,0 +1,681 @@
+{
+  "schema_version": 1,
+  "generated": true,
+  "generated_by": "npm run wiki:graph",
+  "graph_fingerprint": "5aa51ddca50a192af564f9e05f99beed56768f40dc91d594d5713459cd16385f",
+  "backlinks": {
+    "capability.technical-operations": [
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.source-backed-team-memory",
+        "type": "demonstrates",
+        "layer": "authored"
+      },
+      {
+        "from": "method.source-backed-team-memory",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.oti-technical-operations",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "project.callnyc",
+        "type": "demonstrates",
+        "layer": "authored"
+      }
+    ],
+    "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS": [
+      {
+        "from": "project.callnyc",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED": [
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "CLM-CALLNYC-DIGITAL-DISTRICT": [
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "CLM-CALLNYC-EVENT-BRANDING": [
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON": [
+      {
+        "from": "COR-CALLNYC-SUPERLATIVE-2026",
+        "type": "corrects",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "CLM-CALLNYC-HACKATHON-DATE-TIME": [
+      {
+        "from": "COR-CALLNYC-EVENT-TIME-2026",
+        "type": "corrects",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON": [
+      {
+        "from": "COR-CALLNYC-CHRONOLOGY-2026",
+        "type": "corrects",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "project.callnyc",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS": [
+      {
+        "from": "OBS-JOBHUNT-DISCOVERY-LEGIBILITY-CONTROL",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-DISCOVERY-PROBLEM-FIRST",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-DISCOVERY-USE-QUESTION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN": [
+      {
+        "from": "method.source-backed-team-memory",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "OBS-JOBHUNT-ICLOUD-JUNE-PACKET-INVENTORY",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-SPRINT-BOUNDED-SOURCE-LOOP",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-SPRINT-DELIVERABLE-DECISION-GATE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-SPRINT-OPERATING-MEMORY-FRAME",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-SPRINT-PROTOTYPE-BOUNDARY",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "COR-CALLNYC-CHRONOLOGY-2026": [
+      {
+        "from": "project.callnyc",
+        "type": "corrected_by",
+        "layer": "authored"
+      },
+      {
+        "from": "project.callnyc",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "COR-CALLNYC-EVENT-TIME-2026": [
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "corrected_by",
+        "layer": "authored"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "project.callnyc",
+        "type": "corrected_by",
+        "layer": "authored"
+      },
+      {
+        "from": "project.callnyc",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "COR-CALLNYC-SUPERLATIVE-2026": [
+      {
+        "from": "project.callnyc",
+        "type": "corrected_by",
+        "layer": "authored"
+      },
+      {
+        "from": "project.callnyc",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "event.nycc.councilstat-hackathon-2016": [
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "project.callnyc",
+        "type": "informed_by",
+        "layer": "authored"
+      }
+    ],
+    "index.knowledge-wiki": [
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.knowledge-wiki-authoring",
+        "type": "governs",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.knowledge-wiki-schema",
+        "type": "governs",
+        "layer": "authored"
+      }
+    ],
+    "index.knowledge-wiki-project-dossiers": [
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
+    "INQ-CALLNYC-CIVIC-HALL-PAGE-2026": [
+      {
+        "from": "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "INQ-TEAMS-JOBHUNT-ICLOUD-HYDRATION-2026": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "method.source-backed-team-memory": [
+      {
+        "from": "capability.technical-operations",
+        "type": "developed_through",
+        "layer": "authored"
+      },
+      {
+        "from": "capability.technical-operations",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.oti-technical-operations",
+        "type": "related_to",
+        "layer": "authored"
+      }
+    ],
+    "OBS-JOBHUNT-DISCOVERY-LEGIBILITY-CONTROL": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-JOBHUNT-DISCOVERY-PROBLEM-FIRST": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-JOBHUNT-DISCOVERY-USE-QUESTION": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-JOBHUNT-ICLOUD-JUNE-PACKET-INVENTORY": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-JOBHUNT-SPRINT-BOUNDED-SOURCE-LOOP": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-JOBHUNT-SPRINT-DELIVERABLE-DECISION-GATE": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-JOBHUNT-SPRINT-OPERATING-MEMORY-FRAME": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-JOBHUNT-SPRINT-PROTOTYPE-BOUNDARY": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "opportunity.oti-technical-operations": [
+      {
+        "from": "capability.technical-operations",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "capability.technical-operations",
+        "type": "projects_to",
+        "layer": "authored"
+      }
+    ],
+    "policy.knowledge-wiki-authoring": [
+      {
+        "from": "index.knowledge-wiki",
+        "type": "governed_by",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.knowledge-wiki-schema",
+        "type": "related_to",
+        "layer": "authored"
+      }
+    ],
+    "policy.knowledge-wiki-schema": [
+      {
+        "from": "index.knowledge-wiki",
+        "type": "governed_by",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.knowledge-wiki-authoring",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.knowledge-wiki-authoring",
+        "type": "related_to",
+        "layer": "authored"
+      }
+    ],
+    "project.callnyc": [
+      {
+        "from": "capability.technical-operations",
+        "type": "demonstrated_by",
+        "layer": "authored"
+      },
+      {
+        "from": "capability.technical-operations",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "informed",
+        "layer": "authored"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.source-backed-team-memory",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.oti-technical-operations",
+        "type": "related_to",
+        "layer": "authored"
+      }
+    ],
+    "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433": [
+      {
+        "from": "CLM-CALLNYC-HACKATHON-DATE-TIME",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "documented_by",
+        "layer": "authored"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026": [
+      {
+        "from": "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO": [
+      {
+        "from": "CLM-CALLNYC-DIGITAL-DISTRICT",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "SRC-CALLNYC-GITHUB-REPOSITORY": [
+      {
+        "from": "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "project.callnyc",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC": [
+      {
+        "from": "CLM-CALLNYC-EVENT-BRANDING",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368": [
+      {
+        "from": "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-CALLNYC-HACKATHON-DATE-TIME",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "documented_by",
+        "layer": "authored"
+      },
+      {
+        "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-CALLNYC-POLITICO-2016-03-14": [
+      {
+        "from": "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+        "type": "context",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "project.callnyc",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "SRC-JOBHUNT-KNOWLEDGE-DISCOVERY-CALLS-2025": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-TEAMS-JOBHUNT-ICLOUD-HYDRATION-2026",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-DISCOVERY-LEGIBILITY-CONTROL",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-DISCOVERY-PROBLEM-FIRST",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-DISCOVERY-USE-QUESTION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-SPRINT-BOUNDED-SOURCE-LOOP",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-SPRINT-DELIVERABLE-DECISION-GATE",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-SPRINT-OPERATING-MEMORY-FRAME",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-SPRINT-PROTOTYPE-BOUNDARY",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-TEAMS-ICLOUD-HANDOFF-STATEMENT-2026-07-15": [
+      {
+        "from": "INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15": [
+      {
+        "from": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+        "type": "context",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-JOBHUNT-ICLOUD-JUNE-PACKET-INVENTORY",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ]
+  }
+}

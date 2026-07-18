@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "suite_id": "knowledge-wiki-foundation",
+  "title": "Knowledge Wiki foundation and governed projection",
+  "objective": "Establish a useful Markdown-first semantic wiki over the existing canonical evidence system without duplicating authority, weakening protection, or confusing archival depth with public selection.",
+  "score_scale": { "minimum": 0, "maximum": 4 },
+  "thresholds": {
+    "implementation_weighted_score_minimum": 0.9,
+    "blocking_score_minimum": 3,
+    "all_implementation_blockers_must_pass": true,
+    "two_consecutive_passing_runs_required": true,
+    "holdout_judgments_required": true,
+    "human_release_approval_required": true
+  },
+  "optimization": {
+    "maximum_iterations": 8,
+    "stop_after_no_improvement_iterations": 3,
+    "rubric_is_frozen_during_run": true,
+    "optimizer_may_not_grade_own_patch": true,
+    "holdout_judge_is_blind_to_patch_intent": true,
+    "selection_order": [
+      "privacy, rights, consent, or locator leak",
+      "duplicate authority or stale generated artifact",
+      "broken identity, relation, link, fragment, or correction",
+      "highest-weight implementation blocker",
+      "largest weighted score gap",
+      "smallest coherent nonblocking improvement"
+    ]
+  },
+  "hard_constraints": [
+    "M is primary; N and D may add only compatible detail.",
+    "The existing typed records own exact claims, sources, evidence, rights, corrections, and citation plans.",
+    "Markdown owns page identity, context, authored links, and human orientation.",
+    "Generated graphs, reports, backlinks, and indexes are derived and never canonical.",
+    "Raw private archives, local locators, authenticated state, credentials, and unapproved media remain outside Git.",
+    "A wiki node is not portfolio selection or publication approval.",
+    "Not-recovered is never converted into never-existed.",
+    "The optimizing agent cannot grade its own patch or manufacture independent or human approval.",
+    "No public proofs, knowledge-bank, knowledge-wiki, or public-claims route may exist."
+  ],
+  "evals": [
+    {
+      "id": "KW-001", "title": "One authority model without a second truth tree", "grader": "deterministic", "blocking": true, "weight": 12,
+      "inputs": ["architecture inventory", "ADR", "schema contract", "repository paths"],
+      "procedure": ["Inventory authored, canonical, derived, projected, and private layers.", "Check that the compatibility root is singular and authority is assigned once."],
+      "pass_criteria": ["No docs/knowledge-wiki content fork exists.", "Typed records remain authoritative for exact evidence objects.", "Generated artifacts declare themselves derived."],
+      "evidence_required": ["authority table", "path inventory", "generated markers"],
+      "remediation_hint": "Remove the duplicate record and bind the surviving representation to its canonical owner.",
+      "cannot_establish": ["that every historical dossier has completed semantic migration"]
+    },
+    {
+      "id": "KW-002", "title": "Stable identity, links, graph, and reachability", "grader": "deterministic", "blocking": true, "weight": 12,
+      "inputs": ["frontmatter", "Markdown links", "typed relations", "compiled graph"],
+      "procedure": ["Validate IDs, aliases, fields, dates, links, fragments, relations, and canonical references.", "Compile twice and compare fingerprints.", "Check typed orphans and root reachability."],
+      "pass_criteria": ["No duplicate or unresolved identity exists.", "No broken link, fragment, or edge exists.", "The pilot is reachable and deterministic."],
+      "evidence_required": ["health report", "graph fingerprint", "mutation tests"],
+      "remediation_hint": "Repair the smallest authored or canonical relationship and regenerate.",
+      "cannot_establish": ["the long-term desirability of every relation type"]
+    },
+    {
+      "id": "KW-003", "title": "Evidence governance and protected-source thresholds", "grader": "deterministic", "blocking": true, "weight": 12,
+      "inputs": ["canonical source adapter", "CallNYC protected photograph", "public-safety checks"],
+      "procedure": ["Inspect the derived protected node and serialized reports.", "Search for private locators and run mutation tests."],
+      "pass_criteria": ["Protected source titles and locators do not enter the graph.", "Rights, consent, and display holds remain visible.", "Private paths fail closed."],
+      "evidence_required": ["redacted node", "governance status", "privacy mutation"],
+      "remediation_hint": "Reduce the derived node to approved metadata and restore the strictest applicable hold.",
+      "cannot_establish": ["rights clearance, participant consent, or permission to publish"]
+    },
+    {
+      "id": "KW-004", "title": "Corrections, anti-claims, wanted pages, and negative knowledge", "grader": "hybrid", "blocking": true, "weight": 8,
+      "inputs": ["CallNYC corrections", "wanted-page report", "negative research language"],
+      "procedure": ["Traverse chronology, superlative, and time corrections.", "Verify the unrecovered event page remains a wanted page with bounded language.", "Mutate absence language toward never-existed and require failure."],
+      "pass_criteria": ["Superseded wording remains auditable.", "The dedicated event page remains not-recovered rather than disproven.", "Wanted pages do not become dangling assertions."],
+      "evidence_required": ["correction edges", "wanted-page output", "absence mutation"],
+      "remediation_hint": "Restore the bounded search result and the canonical correction link.",
+      "cannot_establish": ["that an unrecovered record never existed"]
+    },
+    {
+      "id": "KW-005", "title": "Job-search query usefulness", "grader": "hybrid", "blocking": true, "weight": 8,
+      "inputs": ["wiki query", "Technical Operations capability", "CallNYC evidence path"],
+      "procedure": ["Ask what demonstrates Technical Operations.", "Trace the CouncilStat time claim to its source.", "Inspect the protected photo and active correction."],
+      "pass_criteria": ["A cold user can retrieve a capability, project, method, opportunity, source path, correction, and boundary by stable ID.", "Unknown options and zero matches fail distinctly."],
+      "evidence_required": ["query output", "query tests", "stable graph fingerprint"],
+      "remediation_hint": "Add the smallest relation or query affordance that answers the failed work question.",
+      "cannot_establish": ["that the retrieved material should appear on the homepage"]
+    },
+    {
+      "id": "KW-006", "title": "VS Code reader and author experience", "grader": "deterministic", "blocking": false, "weight": 5,
+      "inputs": ["root index", "authoring guide", "VS Code settings", "task protocols"],
+      "procedure": ["Open the repository cold and follow Start Here.", "Check link validation, file-move behavior, authoring steps, and human-task output."],
+      "pass_criteria": ["The root gives useful entry points.", "Authoring routes exact records to their existing owner.", "Human tasks name owners and artifacts without fabricated results."],
+      "evidence_required": ["reader settings", "authoring workflow", "task protocol JSON"],
+      "remediation_hint": "Remove setup friction or clarify the next human action without adding a second interface.",
+      "cannot_establish": ["measured reader success without an actual consented study"]
+    },
+    {
+      "id": "KW-007", "title": "Selective portfolio projection and prohibited-route guard", "grader": "deterministic", "blocking": true, "weight": 10,
+      "inputs": ["application routes", "projection bindings", "public-safety suite", "authoring policy"],
+      "procedure": ["Run projection and route checks.", "Verify current work.ts projection authority remains unchanged.", "Search for prohibited public wiki routes."],
+      "pass_criteria": ["The wiki does not automatically publish nodes.", "Existing public surfaces retain fail-closed bindings.", "No proofs or wiki route exists."],
+      "evidence_required": ["route result", "projection result", "unchanged projection boundary"],
+      "remediation_hint": "Remove the accidental projection or bind it to an approved selected claim.",
+      "cannot_establish": ["human approval of the current public composition"]
+    },
+    {
+      "id": "KW-008", "title": "Chad lens: hiring clarity and strategic depth", "grader": "llm_judge", "blocking": true, "weight": 8, "external_judgment_required": true,
+      "inputs": ["root index", "Technical Operations capability", "CallNYC project", "query output"],
+      "procedure": ["Give a blind judge the exact candidate and frozen criterion.", "Ask what Jamie can own, what proof earns confidence, and what remains bounded."],
+      "pass_criteria": ["The job-relevant offer is legible without flattening the deeper practice.", "Actor, action, usable result, and boundary are concrete.", "The wiki improves future application composition rather than becoming an archive tour."],
+      "evidence_required": ["fingerprint-bound independent scorecard", "specific file evidence"],
+      "remediation_hint": "Make the strongest defensible professional action easier to retrieve and connect to present value.",
+      "cannot_establish": ["fit for every employer or permission to publish held material"]
+    },
+    {
+      "id": "KW-009", "title": "Jamie voice: tender civic architecture with editorial restraint", "grader": "llm_judge", "blocking": false, "weight": 6, "external_judgment_required": true,
+      "inputs": ["root index", "capability page", "method page", "authoring policy"],
+      "procedure": ["Assess whether care becomes structure, uncertainty remains material, and the future reader is respected.", "Check that lyrical language does not obscure operational meaning."],
+      "pass_criteria": ["The prose is warm, precise, relational, and usable.", "Uncertainty carries no shame and no inflated certainty.", "Operational readers can still act quickly."],
+      "evidence_required": ["fingerprint-bound independent scorecard", "quoted file-specific observations"],
+      "remediation_hint": "Replace abstraction with one precise human consequence or operating action.",
+      "cannot_establish": ["literal authorship by Jamie for AI-assisted text"]
+    },
+    {
+      "id": "KW-010", "title": "Warren Sack lens: recursive systems become inspectable", "grader": "llm_judge", "blocking": false, "weight": 5, "external_judgment_required": true,
+      "inputs": ["compiled graph", "CallNYC pilot", "query paths"],
+      "procedure": ["Inspect whether relations become analysis, working form, and reusable inquiry.", "Trace an event-project-capability-method sequence and a claim-source-correction sequence."],
+      "pass_criteria": ["At least two recursive sequences are demonstrable rather than merely described.", "Stable relations support further discovery without erasing context."],
+      "evidence_required": ["fingerprint-bound independent scorecard", "specific traversals"],
+      "remediation_hint": "Add or repair one relation that turns a stated pattern into a traversable working form.",
+      "cannot_establish": ["literal endorsement by Warren Sack"]
+    },
+    {
+      "id": "KW-011", "title": "Margaret Morse lens: embodied and relational knowledge remains present", "grader": "llm_judge", "blocking": false, "weight": 5, "external_judgment_required": true,
+      "inputs": ["CallNYC event", "protected photograph threshold", "capability and method pages"],
+      "procedure": ["Assess whether the wiki preserves events, participation, media, and lived thresholds alongside operational artifacts.", "Check that protection does not collapse embodied evidence into absence."],
+      "pass_criteria": ["The artistic, civic, technical, and social dimensions remain connected.", "Protected media remains meaningful as governed metadata.", "The portfolio utility does not erase relational practice."],
+      "evidence_required": ["fingerprint-bound independent scorecard", "specific threshold evidence"],
+      "remediation_hint": "Restore one concrete place, event, relation, or protected threshold without inventing access.",
+      "cannot_establish": ["literal endorsement by Margaret Morse or consent to display protected media"]
+    },
+    {
+      "id": "KW-012", "title": "Human authority and release decision remain honest", "grader": "human_approval", "blocking": true, "weight": 9, "external_judgment_required": true,
+      "inputs": ["exact candidate", "human task protocols", "rights and collaborator gates"],
+      "procedure": ["Require Jamie to review the exact candidate separately from machine and LLM evidence.", "Keep collaborator credit, media rights, and release decisions with their named owners."],
+      "pass_criteria": ["The optimizer does not claim Jamie's approval.", "Open rights or collaborator decisions stay open.", "Release occurs only after an exact-candidate human decision."],
+      "evidence_required": ["fingerprint-bound Jamie decision", "named rights and credit decisions where applicable"],
+      "remediation_hint": "Report the candidate as implementation-ready but human-held until the named decision exists.",
+      "cannot_establish": ["human approval, rights clearance, collaborator consent, or production release without the named action"]
+    }
+  ]
+}

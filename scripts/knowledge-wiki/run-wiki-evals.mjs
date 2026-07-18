@@ -1,0 +1,205 @@
+#!/usr/bin/env node
+
+import { createHash } from "node:crypto";
+import { spawnSync } from "node:child_process";
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import { compileKnowledgeWiki, repoRoot, serializeBacklinks, serializeGraph, serializeHealthJson, serializeHealthMarkdown } from "./lib.mjs";
+import { suitePath, validateWikiEvalSuite } from "./check-wiki-evals.mjs";
+
+const suite = JSON.parse(readFileSync(suitePath, "utf8"));
+const suiteValidation = validateWikiEvalSuite(suite);
+if (suiteValidation.errors.length) throw new Error(suiteValidation.errors.join("; "));
+
+function argument(name) {
+  const index = process.argv.indexOf(name);
+  return index >= 0 ? process.argv[index + 1] : undefined;
+}
+
+function walk(root) {
+  if (!existsSync(root)) return [];
+  const files = [];
+  for (const entry of readdirSync(root, { withFileTypes: true })) {
+    const absolute = path.join(root, entry.name);
+    if (entry.isDirectory()) files.push(...walk(absolute));
+    else if (entry.isFile()) files.push(absolute);
+  }
+  return files;
+}
+
+function relative(file) { return path.relative(repoRoot, file).split(path.sep).join("/"); }
+
+export function selectedCandidateFiles() {
+  const roots = [
+    ".agents/evals",
+    ".vscode",
+    "apps/www/src",
+    "docs/architecture",
+    "docs/knowledge-bank",
+    "reports",
+    "scripts/knowledge-wiki",
+    "scripts/tests/knowledge-wiki.test.mjs",
+    "scripts/tests/knowledge-wiki-evals.test.mjs",
+  ];
+  const files = roots.flatMap((root) => {
+    const absolute = path.join(repoRoot, root);
+    return existsSync(absolute) && statSync(absolute).isFile() ? [absolute] : walk(absolute);
+  });
+  for (const file of ["package.json", "package-lock.json"]) {
+    const absolute = path.join(repoRoot, file);
+    if (existsSync(absolute)) files.push(absolute);
+  }
+  return [...new Set(files)].filter((file) => !relative(file).startsWith("docs/qa/")).sort((left, right) => relative(left).localeCompare(relative(right)));
+}
+
+export function hashFiles(files) {
+  const hash = createHash("sha256");
+  for (const file of files) { hash.update(relative(file)); hash.update("\0"); hash.update(readFileSync(file)); hash.update("\0"); }
+  return hash.digest("hex");
+}
+
+function hashFile(file) { return createHash("sha256").update(readFileSync(file)).digest("hex"); }
+
+function command(args) {
+  const result = spawnSync(process.execPath, args, { cwd: repoRoot, encoding: "utf8" });
+  return { pass: result.status === 0, output: `${result.stdout ?? ""}${result.stderr ?? ""}`.trim() };
+}
+
+function result(entry, score, evidence, findings = []) {
+  const threshold = entry.blocking ? suite.thresholds.blocking_score_minimum : 2;
+  return { eval_id: entry.id, title: entry.title, grader: entry.grader, external_judgment_required: entry.external_judgment_required === true, blocking: entry.blocking, weight: entry.weight, score, pass: score >= threshold, evidence, findings, recommended_next_move: entry.remediation_hint };
+}
+
+export function validateJudgmentPayload(payload, candidateFingerprint, rubricFingerprint) {
+  const errors = [];
+  if (!payload) return { errors: ["No judgment payload supplied"], judgments: new Map() };
+  if (payload.suite_id !== suite.suite_id) errors.push("Judgment suite_id does not match");
+  if (payload.candidate_fingerprint !== candidateFingerprint) errors.push("Judgment candidate fingerprint is stale or missing");
+  if (payload.rubric_fingerprint !== rubricFingerprint) errors.push("Judgment rubric fingerprint is stale or missing");
+  if (payload.independent_from_optimizer !== true) errors.push("Judgment must be independent from the optimizer");
+  if (!payload.judge_id || typeof payload.judge_id !== "string") errors.push("Judgment judge_id is required");
+  const judgments = new Map();
+  for (const item of payload.judgments ?? []) {
+    if (!/^KW-\d{3}$/.test(item.eval_id ?? "")) errors.push(`Invalid judgment eval_id: ${item.eval_id}`);
+    if (!Number.isInteger(item.score) || item.score < 0 || item.score > 4) errors.push(`Invalid score for ${item.eval_id}`);
+    if (!Array.isArray(item.evidence) || !item.evidence.length) errors.push(`Evidence is required for ${item.eval_id}`);
+    if (!Array.isArray(item.findings)) errors.push(`Findings must be an array for ${item.eval_id}`);
+    judgments.set(item.eval_id, item);
+  }
+  return { errors, judgments };
+}
+
+function deterministicResults(compiled) {
+  const byId = new Map(suite.evals.map((entry) => [entry.id, entry]));
+  const results = [];
+  const architecture = readFileSync(path.join(repoRoot, "docs/architecture/knowledge-wiki-inventory.md"), "utf8");
+  const schema = readFileSync(path.join(repoRoot, "docs/knowledge-bank/schema.md"), "utf8");
+  const noSecondTree = !existsSync(path.join(repoRoot, "docs/knowledge-wiki"));
+  const derivedMarked = ["wiki-graph.json", "wiki-backlinks.json", "wiki-health.json"].every((name) => JSON.parse(readFileSync(path.join(repoRoot, "reports", name), "utf8")).generated === true) && readFileSync(path.join(repoRoot, "reports/wiki-health.md"), "utf8").startsWith("<!-- GENERATED FILE");
+  const authorityPass = noSecondTree && /Exact claims, sources, observations, evidence/.test(schema) && /work\.ts/.test(architecture) && derivedMarked;
+  results.push(result(byId.get("KW-001"), authorityPass ? 4 : 0, [`single compatibility root: ${noSecondTree}`, `generated artifacts marked: ${derivedMarked}`, "authority table assigns exact evidence records to existing typed registry"], authorityPass ? [] : ["Authority map, compatibility root, or generated marker is incomplete"]));
+
+  const repeat = compileKnowledgeWiki();
+  const structurePass = compiled.health.errors.length === 0 && compiled.health.counts.orphans === 0 && compiled.health.counts.unreachable === 0 && repeat.graph.fingerprint === compiled.graph.fingerprint;
+  results.push(result(byId.get("KW-002"), structurePass ? 4 : 0, [`graph fingerprint: ${compiled.graph.fingerprint}`, `nodes: ${compiled.graph.nodes.length}`, `edges: ${compiled.graph.edges.length}`, `errors: ${compiled.health.errors.length}`, `orphans: ${compiled.health.counts.orphans}`, `unreachable: ${compiled.health.counts.unreachable}`], structurePass ? [] : ["Identity, link, reachability, or determinism failure remains"]));
+
+  const photo = compiled.graph.nodes.find((node) => node.id === "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO");
+  const serialized = JSON.stringify({ graph: compiled.graph, backlinks: compiled.backlinks, health: compiled.health });
+  const protectedPass = photo?.title === "[protected source]" && photo?.sensitivity === "protected" && photo?.governance?.public_display_status === "hold" && !/(?:file:\/\/|\/Users\/|\/Volumes\/)/.test(serialized);
+  results.push(result(byId.get("KW-003"), protectedPass ? 4 : 0, [`protected photo label: ${photo?.title}`, `display state: ${photo?.governance?.public_display_status}`, "serialized graph contains no absolute private locator"], protectedPass ? [] : ["Protected-source representation is too revealing or governance is missing"]));
+
+  const correctionIds = new Set(["COR-CALLNYC-CHRONOLOGY-2026", "COR-CALLNYC-SUPERLATIVE-2026", "COR-CALLNYC-EVENT-TIME-2026"]);
+  const correctionEdges = compiled.graph.edges.filter((edge) => edge.type === "corrected_by" && correctionIds.has(edge.to));
+  const representedCorrections = new Set(correctionEdges.map((edge) => edge.to));
+  const negativePass = [...correctionIds].every((id) => representedCorrections.has(id)) && compiled.health.wanted_pages.some((item) => item.id === "wanted.callnyc.civic-hall-event-page" && item.status === "not-recovered") && compiled.graph.nodes.some((node) => node.id === "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED");
+  results.push(result(byId.get("KW-004"), negativePass ? 4 : 0, [`canonical CallNYC corrections represented: ${representedCorrections.size}`, `authored correction paths: ${correctionEdges.length}`, `wanted pages: ${compiled.health.wanted_pages.length}`, "not-recovered canonical claim retained"], negativePass ? [] : ["Correction or negative-knowledge path is incomplete"]));
+
+  const queryCapability = command(["scripts/knowledge-wiki/wiki-query.mjs", "--id", "capability.technical-operations"]);
+  const queryTime = command(["scripts/knowledge-wiki/wiki-query.mjs", "--id", "CLM-CALLNYC-HACKATHON-DATE-TIME"]);
+  const queryPhoto = command(["scripts/knowledge-wiki/wiki-query.mjs", "--id", "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"]);
+  const queryCorrection = command(["scripts/knowledge-wiki/wiki-query.mjs", "--id", "COR-CALLNYC-EVENT-TIME-2026"]);
+  const queryPath = command(["scripts/knowledge-wiki/wiki-query.mjs", "--from", "event.nycc.councilstat-hackathon-2016", "--to", "method.source-backed-team-memory"]);
+  const queryUnknown = command(["scripts/knowledge-wiki/wiki-query.mjs", "--unknown", "value"]);
+  const queryPass = [queryCapability, queryTime, queryPhoto, queryCorrection, queryPath].every((item) => item.pass) && !queryUnknown.pass && /project\.callnyc/.test(queryCapability.output) && /SRC-CALLNYC-CIVIC-HALL-POST/.test(queryTime.output) && /\[protected source\]/.test(queryPhoto.output) && /developed_through/.test(queryPath.output);
+  results.push(result(byId.get("KW-005"), queryPass ? 4 : 0, ["capability traversal resolves project, method, and opportunity", "time claim resolves direct source", "protected photo query stays redacted and exposes approved safe context", "event-to-method multi-hop path resolves", "unknown option fails closed"], queryPass ? [] : ["One or more benchmark queries failed"]));
+
+  const root = readFileSync(path.join(repoRoot, "docs/knowledge-bank/README.md"), "utf8");
+  const authoring = readFileSync(path.join(repoRoot, "docs/knowledge-bank/authoring.md"), "utf8");
+  const settings = JSON.parse(readFileSync(path.join(repoRoot, ".vscode/settings.json"), "utf8"));
+  const tasks = command(["scripts/knowledge-wiki/wiki-tasks.mjs"]);
+  const readerPass = /## Start Here/.test(root) && /Exact claims, sources, evidence/.test(authoring) && settings["markdown.validate.enabled"] === true && tasks.pass && /"result_claims": false/.test(tasks.output);
+  results.push(result(byId.get("KW-006"), readerPass ? 4 : 0, ["root Start Here present", "VS Code Markdown validation enabled", "authoring routes exact records to typed registry", "human task output declares no result claims"], readerPass ? [] : ["Reader or author experience is incomplete"]));
+
+  const safety = command(["scripts/check-public-safety.mjs"]);
+  const projection = command(["scripts/check-projection-integrity.mjs"]);
+  const routes = command(["scripts/check-routes.mjs"]);
+  const prohibited = walk(path.join(repoRoot, "apps/www/src/app")).filter((file) => /\/(?:proofs|knowledge-bank|knowledge-wiki|public-claims)\//.test(file.split(path.sep).join("/")));
+  const projectionPass = safety.pass && projection.pass && routes.pass && prohibited.length === 0 && /There is no `\/proofs`/.test(authoring);
+  results.push(result(byId.get("KW-007"), projectionPass ? 4 : 0, ["public-safety check passes", "projection-integrity check passes", "route check passes", `prohibited route files: ${prohibited.length}`], projectionPass ? [] : ["Projection or prohibited-route guard failed"]));
+
+  for (const id of ["KW-008", "KW-009", "KW-010", "KW-011"]) results.push(result(byId.get(id), 0, ["Independent exact-candidate judgment required"], ["No valid external judgment supplied"]));
+  results.push(result(byId.get("KW-012"), 0, ["Human task protocol is present; no approval is inferred"], ["Exact-candidate Jamie approval and any applicable rights or collaborator decisions remain open"]));
+  return results;
+}
+
+function main() {
+  const candidateFingerprint = hashFiles(selectedCandidateFiles());
+  const rubricFingerprint = hashFile(suitePath);
+  const compiled = compileKnowledgeWiki();
+  const generatedCurrent = readFileSync(path.join(repoRoot, "reports/wiki-graph.json"), "utf8") === serializeGraph(compiled)
+    && readFileSync(path.join(repoRoot, "reports/wiki-backlinks.json"), "utf8") === serializeBacklinks(compiled)
+    && readFileSync(path.join(repoRoot, "reports/wiki-health.json"), "utf8") === serializeHealthJson(compiled)
+    && readFileSync(path.join(repoRoot, "reports/wiki-health.md"), "utf8") === serializeHealthMarkdown(compiled);
+  const results = deterministicResults(compiled);
+  const judgmentPath = argument("--judgments");
+  const judgmentPayload = judgmentPath ? JSON.parse(readFileSync(path.resolve(judgmentPath), "utf8")) : null;
+  const loaded = validateJudgmentPayload(judgmentPayload, candidateFingerprint, rubricFingerprint);
+  const externalIds = new Set(["KW-008", "KW-009", "KW-010", "KW-011"]);
+  for (const entry of results) {
+    if (!externalIds.has(entry.eval_id)) continue;
+    const judgment = loaded.judgments.get(entry.eval_id);
+    if (!judgment || loaded.errors.length) continue;
+    entry.score = judgment.score;
+    entry.pass = judgment.score >= (entry.blocking ? suite.thresholds.blocking_score_minimum : 2);
+    entry.evidence = judgment.evidence;
+    entry.findings = judgment.findings;
+  }
+  const implementationResults = results.filter((entry) => entry.eval_id !== "KW-012");
+  const implementationWeight = implementationResults.reduce((sum, entry) => sum + entry.weight, 0);
+  const weightedScore = implementationResults.reduce((sum, entry) => sum + entry.weight * entry.score / 4, 0) / implementationWeight;
+  const missingJudgments = [...externalIds].filter((id) => !loaded.judgments.has(id));
+  const blockingFailures = implementationResults.filter((entry) => entry.blocking && !entry.pass).map((entry) => entry.eval_id);
+  const implementationBeforeRepeat = generatedCurrent && compiled.health.errors.length === 0 && loaded.errors.length === 0 && missingJudgments.length === 0 && blockingFailures.length === 0 && weightedScore >= suite.thresholds.implementation_weighted_score_minimum;
+  const previousPath = argument("--previous");
+  const previous = previousPath && existsSync(previousPath) ? JSON.parse(readFileSync(previousPath, "utf8")) : null;
+  const consecutivePass = previous?.candidate_fingerprint === candidateFingerprint && previous?.implementation_before_repeat === true && implementationBeforeRepeat;
+  const implementationCriteriaMet = implementationBeforeRepeat && consecutivePass;
+  const humanApproval = loaded.judgments.get("KW-012");
+  const releaseCriteriaMet = implementationCriteriaMet && humanApproval?.score === 4;
+  const output = {
+    suite_id: suite.suite_id,
+    suite_version: suite.version,
+    label: argument("--label") ?? "knowledge-wiki-eval-run",
+    candidate_fingerprint: candidateFingerprint,
+    rubric_fingerprint: rubricFingerprint,
+    graph_fingerprint: compiled.graph.fingerprint,
+    generated_reports_current: generatedCurrent,
+    implementation_weighted_score: Number(weightedScore.toFixed(4)),
+    implementation_before_repeat: implementationBeforeRepeat,
+    consecutive_unchanged_pass: consecutivePass,
+    implementation_criteria_met: implementationCriteriaMet,
+    release_criteria_met: releaseCriteriaMet,
+    decision: releaseCriteriaMet ? "release_approved" : implementationCriteriaMet ? "implementation_ready_human_held" : missingJudgments.length ? "external_judgment_required" : "continue_hill_climb",
+    blocking_failures: blockingFailures,
+    missing_judgments: missingJudgments,
+    judgment_errors: loaded.errors,
+    human_open_items: releaseCriteriaMet ? [] : ["Jamie exact-candidate release decision", "Any applicable collaborator-credit review", "Any applicable media rights and consent decision"],
+    evals: results,
+  };
+  const outputPath = argument("--output");
+  if (outputPath) { mkdirSync(path.dirname(path.resolve(outputPath)), { recursive: true }); writeFileSync(path.resolve(outputPath), `${JSON.stringify(output, null, 2)}\n`); }
+  console.log(JSON.stringify(output, null, 2));
+  if (process.argv.includes("--require-implementation-pass") && !implementationCriteriaMet) process.exitCode = 1;
+}
+
+if (process.argv[1]?.endsWith("run-wiki-evals.mjs")) main();

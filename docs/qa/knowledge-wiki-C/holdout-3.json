@@ -1,0 +1,73 @@
+{
+  "suite_id": "knowledge-wiki-foundation",
+  "candidate_fingerprint": "b4d409c0497e8857fc92afc7c3b8f6c420ca1519230b8af4590be56ca190fe6c",
+  "rubric_fingerprint": "5621d7b3e8f95713d0e76ce1b25c9c6964bb78811035cbb1457e5bc3de2eccf4",
+  "judge_id": "internal-read-only-holdout-3",
+  "independent_from_optimizer": true,
+  "judgments": [
+    {
+      "eval_id": "KW-008",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/capabilities/technical-operations.md names concrete responsibilities Jamie can own.",
+        "docs/knowledge-bank/projects/callnyc.md supplies a concrete action and usable result with an unofficial-status boundary.",
+        "The capability query connects project.callnyc, method.source-backed-team-memory, and opportunity.oti-technical-operations.",
+        "docs/knowledge-bank/README.md distinguishes audience-specific portfolio projections from the deeper wiki record."
+      ],
+      "findings": [
+        "The professional offer, supporting project, operating method, and principal boundary are legible.",
+        "Cold query output still requires opening canonical records for full proof language."
+      ],
+      "rationale": "A cold hiring reader can determine what Jamie can own, identify CallNYC as evidence, and understand the evidence limits."
+    },
+    {
+      "eval_id": "KW-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/authoring.md turns expansive memory, selective publication, and protected context into an operating procedure.",
+        "docs/knowledge-bank/capabilities/technical-operations.md treats uncertainty as material and preserves collaborator agency.",
+        "docs/knowledge-bank/methods/source-backed-team-memory.md keeps human correction and a continue, revise, or stop decision inside the method.",
+        "docs/knowledge-bank/events/councilstat-hackathon-2016.md preserves bounded negative knowledge."
+      ],
+      "findings": [
+        "Care repeatedly becomes structure while lyrical sentences remain attached to operational consequences.",
+        "The assessment does not establish literal authorship."
+      ],
+      "rationale": "Warmth, restraint, and operational usability reinforce one another across the authored pilot."
+    },
+    {
+      "eval_id": "KW-010",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "The event-to-project-to-capability-to-method path is a three-hop executable query.",
+        "The correction-to-claim-to-source path is a two-hop executable query.",
+        "reports/wiki-graph.json preserves stable IDs, typed relations, and authored versus canonical-adapter layers.",
+        "reports/wiki-health.json records 44 nodes, 117 edges, zero orphans, and zero unreachable nodes."
+      ],
+      "findings": [
+        "Both recursive sequences are working forms rather than prose-only descriptions.",
+        "Generic canonical-node titles limit cold-query richness."
+      ],
+      "rationale": "The criterion is met through two concrete multi-hop traversals."
+    },
+    {
+      "eval_id": "KW-011",
+      "score": 2,
+      "pass": true,
+      "evidence": [
+        "The event page preserves Civic Hall, Council attribution, collaborative context, and the relationship to CallNYC.",
+        "The Digital District photograph remains meaningful as redacted governed metadata with safe context and explicit limits.",
+        "The protected source retains permission-needed, review-needed, and display-hold states.",
+        "The graph connects the Digital District claim to the photograph through private_support."
+      ],
+      "findings": [
+        "Embodied participation and protected media remain present without exposure.",
+        "The artistic dimension remains a future connected migration rather than a substantive pilot node."
+      ],
+      "rationale": "The minimum is met because protection preserves meaningful relational evidence while the bounded pilot only partially realizes the artistic-civic-technical-social connection."
+    }
+  ]
+}

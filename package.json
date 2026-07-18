@@ -15,8 +15,8 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check:citations && npm run test:citations && npm run evals:portfolio && npm run test:portfolio-evals && npm run evals:knowledge && npm run test:knowledge-evals && npm run check:knowledge-development && npm run evals:composite && npm run test:composite-evals && npm run check:composite-integration && npm run test:application-contracts && npm run check -w @jamie-burkart/www && npm run knowledge-bank && npm run public-safety && npm run check:projection-integrity && npm run check:routes",
-    "check:pre-evidence": "npm run check:citations && npm run test:citations && npm run evals:portfolio && npm run test:portfolio-evals && npm run evals:knowledge && npm run test:knowledge-evals && npm run check:knowledge-development && npm run evals:composite && npm run test:composite-evals && npm run test:application-contracts && npm run check -w @jamie-burkart/www && npm run knowledge-bank && npm run public-safety && npm run check:projection-integrity && npm run check:routes",
+    "check": "npm run check:citations && npm run test:citations && npm run evals:portfolio && npm run test:portfolio-evals && npm run evals:knowledge && npm run test:knowledge-evals && npm run check:knowledge-development && npm run evals:composite && npm run test:composite-evals && npm run check:composite-integration && npm run test:application-contracts && npm run check -w @jamie-burkart/www && npm run wiki:check && npm run wiki:test && npm run evals:wiki && npm run test:wiki-evals && npm run public-safety && npm run check:projection-integrity && npm run check:routes",
+    "check:pre-evidence": "npm run check:citations && npm run test:citations && npm run evals:portfolio && npm run test:portfolio-evals && npm run evals:knowledge && npm run test:knowledge-evals && npm run check:knowledge-development && npm run evals:composite && npm run test:composite-evals && npm run test:application-contracts && npm run check -w @jamie-burkart/www && npm run wiki:check && npm run wiki:test && npm run evals:wiki && npm run test:wiki-evals && npm run public-safety && npm run check:projection-integrity && npm run check:routes",
     "generate:citations": "node scripts/generate-public-citations.mjs",
     "check:citations": "node scripts/check-citations.mjs",
     "test:citations": "node --test scripts/tests/citations.test.mjs",
@@ -32,7 +32,17 @@
     "run:composite-integration": "node scripts/run-composite-integration.mjs",
     "check:composite-integration": "node scripts/run-composite-integration.mjs --label maintained-local-gate --require-local-pass",
     "test:application-contracts": "node --test scripts/tests/application-contracts.test.mjs",
-    "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
+    "wiki:graph": "node scripts/knowledge-wiki/build-wiki-graph.mjs",
+    "wiki:report": "npm run wiki:graph && node scripts/knowledge-wiki/report-wiki-health.mjs",
+    "wiki:check": "node scripts/knowledge-wiki/check-wiki.mjs && node scripts/check-knowledge-bank.mjs",
+    "wiki:test": "node --test scripts/tests/knowledge-wiki.test.mjs",
+    "wiki:query": "node scripts/knowledge-wiki/wiki-query.mjs",
+    "wiki:tasks": "node scripts/knowledge-wiki/wiki-tasks.mjs",
+    "evals:wiki": "node scripts/knowledge-wiki/check-wiki-evals.mjs",
+    "test:wiki-evals": "node --test scripts/tests/knowledge-wiki-evals.test.mjs",
+    "run:wiki-evals": "node scripts/knowledge-wiki/run-wiki-evals.mjs",
+    "knowledge-bank": "node scripts/knowledge-wiki/legacy-knowledge-bank-alias.mjs",
+    "knowledge-bank:legacy": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",
     "check:projection-integrity": "node scripts/check-projection-integrity.mjs",
     "routes": "npm run check:routes",
@@ -40,5 +50,8 @@
     "check:production": "npm run preflight:production",
     "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex npm run check",
     "preflight:production": "APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run check"
+  },
+  "devDependencies": {
+    "yaml": "^2.9.0"
   }
 }

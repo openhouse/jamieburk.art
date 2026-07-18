@@ -1,0 +1,16 @@
+{
+  "files.associations": {
+    "docs/knowledge-bank/**/*.md": "markdown"
+  },
+  "markdown.validate.enabled": true,
+  "markdown.validate.fileLinks.enabled": "warning",
+  "markdown.validate.fragmentLinks.enabled": "warning",
+  "markdown.validate.referenceLinks.enabled": "warning",
+  "markdown.updateLinksOnFileMove.enabled": "prompt",
+  "files.exclude": {
+    "reports/wiki-*.json": true
+  },
+  "search.exclude": {
+    "apps/www/.next": true
+  }
+}
