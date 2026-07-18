@@ -14,18 +14,34 @@ const usedSourceIds = new Set(
   }))
 );
 
+const occurrenceSourceIdsByClaim = new Map();
+for (const page of knowledgeBank.pages) {
+  for (const occurrence of page.occurrences) {
+    const ids = occurrenceSourceIdsByClaim.get(occurrence.claimId) ?? new Set();
+    for (const sourceId of occurrence.sourceIds ?? []) ids.add(sourceId);
+    occurrenceSourceIdsByClaim.set(occurrence.claimId, ids);
+  }
+}
+
+const publicClaimIds = new Set([
+  ...occurrenceSourceIdsByClaim.keys(),
+  ...knowledgeBank.claims
+    .filter((claim) => claim.projections.some((projection) => projection.status === "active" && projection.surfaces.some((surface) => surface.startsWith("/"))))
+    .map((claim) => claim.id)
+]);
+
 const publicRegistry = {
   sources: knowledgeBank.sources
     .filter((source) => usedSourceIds.has(source.id))
     .map(({ protectedLocatorId: _protectedLocatorId, media: _media, supportsGenerally: _supportsGenerally, ...source }) => source),
   claims: knowledgeBank.claims
-    .filter((claim) => knowledgeBank.pages.some((page) => page.occurrences.some((occurrence) => occurrence.claimId === claim.id)))
+    .filter((claim) => publicClaimIds.has(claim.id))
     .map((claim) => ({
       id: claim.id,
       status: claim.status,
       projections: claim.projections.filter((projection) => projection.status === "active"),
       evidence: claim.evidence
-        .filter((evidence) => evidence.renderCitation && usedSourceIds.has(evidence.sourceId))
+        .filter((evidence) => evidence.renderCitation && occurrenceSourceIdsByClaim.get(claim.id)?.has(evidence.sourceId))
         .map(({ internalExcerpt: _internalExcerpt, locator: _locator, ...evidence }) => evidence),
       boundaries: claim.boundaries
     })),

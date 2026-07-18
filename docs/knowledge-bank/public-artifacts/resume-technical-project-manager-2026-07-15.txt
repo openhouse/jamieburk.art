@@ -1,0 +1,93 @@
+Jamie Burkart
+Technical Project Manager - Product Operations & Implementation
+Brooklyn, NY | (816) 728-8685 | jamie.burkart@gmail.com | jamieburk.art | LinkedIn | GitHub
+
+PROFILE
+
+Implementation lead who builds operating structure for emerging public-facing technical work. Fourteen-plus years translating between
+stakeholders, product, documentation, implementation, and public systems. Strong in complex, resource-constrained civic, cultural, small-
+business, and public-interest environments where teams need clear requirements, coordinated decisions, usable workflows, adoption support,
+reliable handoffs, and durable documentation.
+
+CORE CAPABILITIES
+
+Product operations & implementation              Knowledge systems & documentation                 Web, open data & civic technology
+Requirements, workflow mapping, user             Documentation architecture, meeting               JavaScript / TypeScript, Node.js, React /
+stories, acceptance criteria, decision logs,     synthesis, source maps, shared drives, public     Next.js, Ember.js, Python / Django, SQL, Git /
+action tracking, rollout planning, UAT / QA,     guidance, resource libraries, reusable            GitHub, Docker / Dokku, QGIS, open-data
+stakeholder updates, adoption, and handoffs.     templates, and searchable reference               workflows, APIs, and data-product
+                                                 systems.                                          requirements.
+
+SELECTED IMPACT
+
+    Led web, e-commerce, marketing, analytics, and operations improvements for Harry J. Epstein Company, contributing to 2x revenue
+    growth while helping an 80-plus-year-old industrial business adapt to e-commerce.
+    Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services
+    data into resident-facing issue pages and next-step guidance; covered in Politico New York.
+    Built and stewarded 30-plus pages of shared campaign memory and coordination infrastructure for a 2026 Commercial Rent Stabilization
+    collaboration spanning Action Lab / Small Business United, Fair Rent NYC, NYC Artist Coalition, and partner networks.
+    Built and maintained public web and knowledge infrastructure across NYC Artist Coalition campaigns for nightlife policy, cultural-space
+    advocacy, storefront stability, and commercial rent stabilization, while preserving coalition and institutional credit.
+    Co-built WOWList.org, a Python / Django and Ember.js community-calendar platform with 1,800-plus users, 16,000-plus posts/events, and
+    35 city/region entries containing at least 50 geocoded posts/events each in July 2017.
+    Built and stewarded repeatable hosting, onboarding, facilitation, documentation, and continuity systems within the participant-made
+    Sunday Dinner / 196 Artists Residency practice, spanning 300-plus gatherings and 20-plus resident artists.
+
+
+
+
+                                                                                          Jamie Burkart | Technical Project Manager | July 2026
+EXPERIENCE
+
+THICK ARTS - Founder, Technical Project Manager & Web Systems Lead                                                                          2012-Present
+New York, NY / Remote
+    Lead an independent web strategy, design, and engineering studio delivering maintainable publishing systems, campaign hubs, e-
+    commerce workflows, documentation infrastructure, resource libraries, and post-launch maintenance.
+    Translate stakeholder needs into requirements, information architecture, content models, technical scopes, implementation plans, public
+    interfaces, launch plans, maintenance workflows, adoption materials, and handoff documentation.
+    Led digital transformation work for Harry J. Epstein Company across e-commerce, analytics, content, marketing, and operational
+    workflows while preserving the company's distinctive institutional voice.
+
+NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy                                                         2017-Present
+Communications
+New York, NY
+    Build and steward campaign and knowledge infrastructure for commercial rent stabilization, storefront stability, cultural-space advocacy,
+    public-data framing, and civic action.
+    Create shared documentation and coordination systems including running minutes, action trackers, source maps, call scripts, QR
+    pathways, public handouts, stakeholder follow-up systems, and report-back materials.
+    Translate policy, public-data, and coalition needs into practical materials for work around Cabaret Law repeal, the Office of Nightlife,
+    nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.
+    Developed policy-neutral public-data framing around commercial vacancy, occupancy, lease-cost indicators, storefront data, Local Law
+    157, and RPIE-derived aggregate reporting.
+
+WOWList.org - Co-Founder, Product & Community Systems                                                                                           2015-2020
+New York, NY / Remote
+    Co-built a community event-calendar and distribution platform organized around user-followed keyword communities, natural-language
+    event entry, weekly digest emails, embeddable calendars, and low-cost deployment.
+
+196 Artists Residency / Sunday Dinner - Founder & Systems Steward                                                                           2012-Present
+Brooklyn, NY
+    Built and stewarded operating systems within a care-forward, participant-made residency and recurring community practice; supported
+    more than 20 resident artists and documented 300-plus gatherings through intake, onboarding, scheduling, hospitality, facilitation,
+    documentation, and continuity systems.
+
+KC Town Hall LLC - Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development                                                   2015-2024
+Kansas City, MO
+    Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The CCED Board
+    recommended up to $490,539 for eligible project costs; the Kansas City Council later accepted that recommendation and authorized
+    funding-agreement negotiations. The public resolution does not establish that an agreement was executed or funds were received.
+
+EDUCATION & PROFESSIONAL DEVELOPMENT
+AI Evals for Engineers & PMs - Shreya Shankar & Hamel Husain / Maven, 2026. Application-centric evals, error analysis, annotation
+workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.
+University of California, Santa Cruz - B.A., Film & Digital Media, Honors.
+
+ADDITIONAL
+
+Valid New York State driver's license. Authorized to work in the U.S.; no U.S. sponsorship required.
+
+
+
+
+                                                                                            Jamie Burkart | Technical Project Manager | July 2026
+

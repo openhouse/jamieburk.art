@@ -8,14 +8,19 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.
 - Contributed to a period of 2x revenue growth for a legacy e-commerce business.
 - Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
-- Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.
+- Served as a founding-era NYC Artist Coalition organizer and built public campaign websites for cultural-space advocacy.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
+- Public records document Jamie's Cabaret Law repeal advocacy, Office of Nightlife public-engagement work, and web and civic-action infrastructure for Talks Not Raids; related policy outcomes remain explicitly collective and institutionally credited.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
-- Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
-- Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
+- Designed a privacy-preserving pilot data product for geography-aggregated commercial vacancy and lease-cost indicators, with schema, coverage and suppression, methods, and explicit confidential-data exclusions.
+- Helped coordinate and implement FairRentNYC's February 2023 website relaunch through a versioned shared checklist connecting web updates, public action tools, campaign calls, press materials, forms, and follow-through.
+- Assembled a 20-year working corpus of 81 quarterly HUD-USPS business-vacancy snapshots spanning Q4 2005 through Q4 2025.
+- Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform whose July 2017 data records 35 city/region entries with at least 50 geocoded posts/events each.
+- Built and stewarded repeatable hosting, onboarding, facilitation, documentation, and continuity systems within a participant-made cultural practice spanning 300+ gatherings and 20+ resident artists.
+- Built a repeatable artist-residency acceptance and onboarding workflow covering proposal review, orientation, space configuration, independent access, and dedicated collaboration workspaces.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
-- Co-led adaptive reuse planning and public-benefit documentation tied to a $490,539 public funding recommendation.
+- Co-led adaptive reuse planning and public-benefit documentation; Kansas City Council Resolution 190649 accepted the CCED Board's $490,539 recommendation and authorized funding-agreement negotiations.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
 
 ## Projection Rule

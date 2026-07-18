@@ -38,6 +38,51 @@ export const preservationStatusSchema = z.enum([
   "private"
 ]);
 
+export const intakeItemSchema = z.object({
+  id: stableIdSchema,
+  kind: z.enum([
+    "public-url",
+    "recollection",
+    "artifact-lead",
+    "photo-lead",
+    "collaborator-note",
+    "claim-lead",
+    "research-question"
+  ]),
+  capturedAt: z.iso.date(),
+  capturedFrom: z.string().min(1),
+  publicSafeSummary: z.string().min(1),
+  publicUrl: publicUrlSchema.optional(),
+  projects: z.array(stableIdSchema).min(1),
+  status: z.enum(["captured", "triaged", "decomposed", "integrated", "held"]),
+  disposition: z.enum([
+    "source-created",
+    "claim-created",
+    "research-queued",
+    "media-review",
+    "duplicate",
+    "no-action"
+  ]),
+  sourceIds: z.array(stableIdSchema).default([]),
+  claimIds: z.array(stableIdSchema).default([]),
+  researchTaskIds: z.array(stableIdSchema).default([]),
+  notes: z.array(z.string().min(1)).default([]),
+  reviewedAt: z.iso.date(),
+  reviewedBy: z.array(z.string().min(1)).min(1)
+}).superRefine((item, context) => {
+  const linked =
+    item.sourceIds.length + item.claimIds.length + item.researchTaskIds.length;
+  if (["decomposed", "integrated"].includes(item.status) && linked === 0) {
+    context.addIssue({
+      code: "custom",
+      message: "Decomposed and integrated intake items require a linked disposition"
+    });
+  }
+  if (item.status === "held" && item.notes.length === 0) {
+    context.addIssue({ code: "custom", message: "Held intake items require a reason" });
+  }
+});
+
 const mediaSchema = z.object({
   mediaKind: z.enum(["photograph", "screenshot", "graphic", "document", "other"]),
   photographer: z.string().min(1).optional(),
@@ -137,9 +182,30 @@ export const evidenceRelationshipSchema = z.object({
   renderCitation: z.boolean()
 });
 
+export const sourceAssertionSchema = z.object({
+  id: stableIdSchema,
+  sourceId: stableIdSchema,
+  project: stableIdSchema,
+  assertion: z.string().min(1),
+  relationship: z.enum([
+    "supports",
+    "corroborates",
+    "contextualizes",
+    "bounds",
+    "contradicts",
+    "raises-question"
+  ]),
+  confidence: z.enum(["high", "moderate", "limited"]),
+  candidateClaimIds: z.array(stableIdSchema).default([]),
+  publicSafe: z.boolean(),
+  reviewedAt: z.iso.date(),
+  reviewedBy: z.array(z.string().min(1)).min(1)
+});
+
 export const claimProjectionSchema = z.object({
   key: z.enum([
     "case-study",
+    "case-study-evidence",
     "work-card",
     "resume-html",
     "technical-operations",
@@ -165,13 +231,48 @@ export const claimRecordSchema = z.object({
     "not-recovered",
     "disallowed"
   ]),
-  projections: z.array(claimProjectionSchema),
+  maturity: z.enum([
+    "research-needed",
+    "partially-supported",
+    "confirmed",
+    "confirmed-with-boundary",
+    "disallowed"
+  ]),
+  projectionEligibility: z.enum(["eligible", "hold", "disallowed"]),
+  collectiveWork: z.boolean(),
+  projections: z.array(claimProjectionSchema).superRefine((projections, context) => {
+    const keys = new Set<string>();
+    projections.forEach((projection, index) => {
+      if (keys.has(projection.key)) {
+        context.addIssue({
+          code: "custom",
+          message: `Projection key ${projection.key} must be unique within a claim`,
+          path: [index, "key"]
+        });
+      }
+      keys.add(projection.key);
+    });
+  }),
   evidence: z.array(evidenceRelationshipSchema),
-  boundaries: z.array(z.string().min(1)).default([]),
-  antiClaims: z.array(z.string().min(1)).default([]),
+  boundaries: z.array(z.string().trim().min(1)).default([]),
+  antiClaims: z.array(z.string().trim().min(1)).default([]),
   researchInquiryIds: z.array(stableIdSchema).default([]),
   reviewedAt: z.iso.date(),
   reviewedBy: z.array(z.string().min(1)).default([])
+});
+
+export const researchTaskSchema = z.object({
+  id: stableIdSchema,
+  project: stableIdSchema,
+  question: z.string().min(1),
+  priority: z.enum(["high", "medium", "low"]),
+  status: z.enum(["queued", "in-progress", "blocked", "completed"]),
+  methodsPlanned: z.array(z.string().min(1)).min(1),
+  successCriteria: z.array(z.string().min(1)).min(1),
+  sourceIds: z.array(stableIdSchema).default([]),
+  claimIds: z.array(stableIdSchema).default([]),
+  publicSummary: z.string().min(1),
+  reviewedAt: z.iso.date()
 });
 
 export const researchInquirySchema = z.object({
@@ -219,17 +320,23 @@ export const citationPageSchema = z.object({
 });
 
 export const knowledgeBankSchema = z.object({
+  intake: z.array(intakeItemSchema),
   sources: z.array(sourceRecordSchema),
+  sourceAssertions: z.array(sourceAssertionSchema),
   claims: z.array(claimRecordSchema),
+  researchTasks: z.array(researchTaskSchema),
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
   pages: z.array(citationPageSchema)
 });
 
+export type IntakeItem = z.infer<typeof intakeItemSchema>;
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
 export type EvidenceRelationship = z.infer<typeof evidenceRelationshipSchema>;
+export type SourceAssertion = z.infer<typeof sourceAssertionSchema>;
 export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
+export type ResearchTask = z.infer<typeof researchTaskSchema>;
 export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;

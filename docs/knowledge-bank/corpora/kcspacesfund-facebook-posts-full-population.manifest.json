@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "corpusPath": "docs/knowledge-bank/corpora/kcspacesfund-facebook-posts-full-population.json",
+  "corpusBytes": 36829,
+  "corpusSha256": "a410ac5fcd488e73a9008e0a646ad53f0ee4fa4d85d209fc2deb431b42f5f9e5",
+  "publicReconciliationHashSet": {
+    "count": 38,
+    "sha256": "8c25756bd56ff742266a2afeebca945d65dc596262422e16314d446734245c88"
+  },
+  "sourceCapturePublished": false,
+  "privacy": {
+    "rawPostTextPublished": false,
+    "nativePostIdsPublished": false,
+    "renderedTokensPublished": false,
+    "engagerIdentitiesPublished": false,
+    "authenticatedRoutesPublished": false
+  }
+}

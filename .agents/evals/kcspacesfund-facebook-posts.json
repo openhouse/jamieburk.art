@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "suite_id": "kcspacesfund-facebook-posts-full-population",
+  "title": "KC Spaces Fund Facebook posts archival production",
+  "objective": "Account for the complete surviving public Page-post population, develop mission-relevant sources and claims, preserve organizer credit and unresolved Page authorship, and publish no protected social data.",
+  "thresholds": {
+    "score_minimum": 100,
+    "all_evals_blocking": true,
+    "all_adversarial_mutations_must_be_rejected": true
+  },
+  "population_boundary": "One hundred percent means every distinct record exposed by the authenticated 2020 Page filter after four stable terminal checks. It does not mean every post ever created, a Meta owner export, or deleted-post recovery.",
+  "evals": [
+    {
+      "id": "FB-KCSPACES-001",
+      "title": "Complete surviving-surface accounting",
+      "weight": 20
+    },
+    {
+      "id": "FB-KCSPACES-002",
+      "title": "Mission patterns and source decomposition",
+      "weight": 15
+    },
+    {
+      "id": "FB-KCSPACES-003",
+      "title": "Stakeholder references remain distinct from engagement",
+      "weight": 15
+    },
+    {
+      "id": "FB-KCSPACES-004",
+      "title": "Interaction and follower values remain bounded snapshots",
+      "weight": 15
+    },
+    {
+      "id": "FB-KCSPACES-005",
+      "title": "Organizer credit, Page authorship, and Jamie role boundaries",
+      "weight": 15
+    },
+    {
+      "id": "FB-KCSPACES-006",
+      "title": "Knowledge lifecycle and selective website projection",
+      "weight": 15
+    },
+    {
+      "id": "FB-KCSPACES-007",
+      "title": "Public safety and immutable provenance",
+      "weight": 5
+    }
+  ],
+  "required_mutation_classes": [
+    "missing or duplicated record",
+    "complete-history overstatement",
+    "unavailable-content erasure",
+    "individual Page-publisher assignment",
+    "named-organizer credit erasure",
+    "outgoing stakeholder reference converted to incoming engagement",
+    "reaction total converted to unique people or impact",
+    "current follower display converted to historical reach",
+    "participant naming memory converted to confirmed claim",
+    "unsupported social-management website projection",
+    "protected body, identity, contact, route, or local-path leakage",
+    "governed source-route orphaning"
+  ]
+}
+

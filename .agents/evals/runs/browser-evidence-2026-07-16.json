@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "suite_id": "feature-evals-composite-browser",
+  "candidate_sha": "9a220fcfbeb214b9ebb4e7c594884f8ec90232fa",
+  "performed_at": "2026-07-18T01:29:44.911Z",
+  "method": "Local production build inspected with Playwright at four responsive widths, plus keyboard, citation, metadata, and resume-download checks.",
+  "browser": {
+    "engine": "chromium",
+    "headless": true
+  },
+  "routes": [
+    {
+      "route": "/",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Jamie Burkart",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Jamie Burkart",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Jamie Burkart",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Jamie Burkart",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/work",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Selected work",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Selected work",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Selected work",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Selected work",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/work/technical-operations",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Technical Operations & Implementation",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Technical Operations & Implementation",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Technical Operations & Implementation",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Technical Operations & Implementation",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/resume",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Resume",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Resume",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Resume",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Resume",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Contact",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Contact",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Contact",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Contact",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "About",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "About",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "About",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "About",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Harry J. Epstein Company",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Harry J. Epstein Company",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Harry J. Epstein Company",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "Harry J. Epstein Company",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "NYC Artist Coalition / FairRentNYC",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "NYC Artist Coalition / FairRentNYC",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "NYC Artist Coalition / FairRentNYC",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "NYC Artist Coalition / FairRentNYC",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/work/callnyc",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "CallNYC.org",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "CallNYC.org",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "CallNYC.org",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "CallNYC.org",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "KC Town Hall LLC",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "KC Town Hall LLC",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "KC Town Hall LLC",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "KC Town Hall LLC",
+          "body_text_present": true
+        }
+      ]
+    },
+    {
+      "route": "/work/wowlist",
+      "viewports": [
+        {
+          "width": 320,
+          "height": 760,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "WOWList.org",
+          "body_text_present": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "WOWList.org",
+          "body_text_present": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "WOWList.org",
+          "body_text_present": true
+        },
+        {
+          "width": 1440,
+          "height": 1000,
+          "status": 200,
+          "overflow_x": false,
+          "console_errors": [],
+          "h1": "WOWList.org",
+          "body_text_present": true
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "keyboard": {
+      "passed": true,
+      "focusable_count": 30,
+      "visible_indicator_count": 30,
+      "citation_focus_count": 20
+    },
+    "citations": {
+      "passed": true,
+      "callnyc": {
+        "reference_count": 20,
+        "backlink_count": 20,
+        "local_links": true,
+        "accessible_labels": true,
+        "references_heading": true
+      },
+      "fair_rent_nyc": {
+        "reference_count": 7,
+        "backlink_count": 7,
+        "source_note_count": 5,
+        "local_links": true,
+        "accessible_labels": true,
+        "references_heading": true
+      }
+    },
+    "resume_download": {
+      "passed": true,
+      "status": 200
+    },
+    "metadata": {
+      "passed": true,
+      "fields_present": {
+        "canonical": true,
+        "open_graph_title": true,
+        "open_graph_image": true,
+        "twitter_card": true
+      }
+    }
+  },
+  "limitations": [
+    "The candidate was tested locally with staging and noindex configuration.",
+    "This receipt establishes rendered behavior, not human comprehension, permission, market response, or production deployment."
+  ]
+}

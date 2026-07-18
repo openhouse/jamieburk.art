@@ -18,7 +18,7 @@ const startHereLinks = [
   {
     href: "/work/technical-operations",
     label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for OTI, product operations, implementation, and delivery coordination."
+    note: "The fastest role-fit proof surface for technical project management, product operations, implementation, and delivery coordination."
   },
   {
     href: "/work/harry-j-epstein",

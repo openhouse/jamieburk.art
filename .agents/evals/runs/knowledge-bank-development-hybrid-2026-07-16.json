@@ -1,0 +1,34 @@
+{
+  "candidate_sha": "2fe16973e9328c7ea50cd483870666b6061427f1",
+  "results": [
+    {
+      "eval_id": "KB-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Two independent semantic reviewers scored exact integrated candidate 2fe16973e9328c7ea50cd483870666b6061427f1 at 4/4 for collective credit.",
+        "Policy version 8 and the frozen baseline agree on all 88 collective claims, including the corrected metric-observation class for the held tire-outcome self-report.",
+        "The KC Town Hall handoff remains an attributed, uncorroborated recollection with recipient, terms, authority, and present status held.",
+        "Sunday Dinner preserves participant authorship, and Fair Rent separates Jamie's contribution from Council, mayoral, and agency action.",
+        "Annotated v18 tag object eb3d32e241904ee52072efa350f109e37c317642 anchors the reviewed baseline blob."
+      ],
+      "findings": [],
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Two independent semantic reviewers scored exact integrated candidate 2fe16973e9328c7ea50cd483870666b6061427f1 at 4/4 for public projection.",
+        "WOWList's 1,800+/16,000+ lower bounds and exact July 2017 35/50 database measure resolve to dedicated atomic assertions and explicit anti-overread boundaries.",
+        "Authored MDX requires stable claim, source, assertion, or inquiry identities; affirmative evidence coverage, exact quantities, and adversarial 36/51, reached-cities, adoption, and false-corroboration mutations are enforced.",
+        "The governed resume preserves (816) 728-8685 and its HTML, extracted text, PDF, projection decisions, and public-surface hashes match policy version 5.",
+        "Protected records, participant identities, recipient identity, raw database rows, and unapproved media remain outside the public projection."
+      ],
+      "findings": [],
+      "confidence": 0.99
+    }
+  ],
+  "overall_finding": "Exact integrated candidate 2fe16973e9328c7ea50cd483870666b6061427f1 passed two independent reviews at 4/4 for KB-007 and KB-009. The v18 baseline is annotated and hash-pinned; repaired mutation contracts verify active projection behavior, the legacy NYCAC gate follows governed citation bindings, and the held KC Town Hall handoff remains uncorroborated and knowledge-bank-only."
+}

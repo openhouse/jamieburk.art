@@ -44,6 +44,36 @@ export type Artifact = {
   type: ArtifactType;
 };
 
+export type WorkStatementProofs = {
+  title: string[];
+  subtitle: string[];
+  role: string[];
+  summary: string[];
+  years: string[];
+  series: string[];
+  status: string[];
+  visibility: string[];
+  group: string[];
+  featured: string[];
+  priority: string[];
+  whatWasUnclear: string[];
+  whatBecameUsable: string[];
+  roleFit: string[];
+  tags: string[];
+  artifactTypes: string[];
+  artifacts: string[][];
+  evidence: string[][];
+  known: string[];
+  open: string[];
+  protected: string[];
+  careNote: string[];
+  currentStatus: string[];
+  publicSafetyNote: string[];
+  sourceLayer: string[];
+  credits: string[];
+  links: string[];
+};
+
 export type WorkMeta = {
   title: string;
   slug: string;
@@ -57,6 +87,7 @@ export type WorkMeta = {
   priority: number;
   visibility: Visibility;
   proofBankIds: string[];
+  statementProofs: WorkStatementProofs;
   whatWasUnclear: string;
   whatBecameUsable: string;
   artifactTypes: ArtifactType[];
