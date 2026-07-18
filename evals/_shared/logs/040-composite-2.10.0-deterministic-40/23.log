@@ -1,0 +1,604 @@
+
+> preflight:production
+> APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run check
+
+
+> check
+> npm run check:citations && npm run test:citations && npm run check:launch-evals && npm run test:launch-evals && npm run check:portfolio-evals && npm run test:portfolio-evals && npm run check:knowledge-evals && npm run test:knowledge-evals && npm run test:knowledge-tools && npm run test:public-artifacts && npm run check:projections && npm run test:projections && npm run check:eval-contract && npm run test:eval-contract && npm run check -w @jamie-burkart/www && npm run knowledge-bank && npm run public-safety && npm run check:routes
+
+
+> check:citations
+> node scripts/check-citations.mjs
+
+Public citation registry is current and redacted.
+Citation check passed: canonical records, public projection, boundaries, and page plans are consistent.
+
+> test:citations
+> node --test scripts/tests/citations.test.mjs
+
+✔ canonical registry passes deterministic validation (20.91925ms)
+✔ page-local numbering follows first source appearance (0.366917ms)
+✔ repeated sources retain one note and unique backlinks (0.228291ms)
+✔ multi-source occurrences preserve editorial order (0.073791ms)
+✔ KC Town Hall adds a role note while preserving funding and service-interface notes (0.180917ms)
+✔ Claim resolver returns only active approved projections (0.220958ms)
+✔ corrections retire old wording from public surfaces (0.401541ms)
+✔ negative research preserves scope and limitations (0.075167ms)
+✔ private and metadata-only evidence is absent from the public registry (0.159417ms)
+✔ rendering primitives preserve no-JavaScript document semantics (0.201916ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 166.05
+
+> check:launch-evals
+> node scripts/check-launch-evals.mjs
+
+Launch-readiness eval check passed: 8 hard gates, 7 runtime cases, and 10 weighted criteria; 3 machine-readable run records validated.
+
+> test:launch-evals
+> node --test scripts/tests/launch-evals.test.mjs
+
+✔ launch-readiness eval suite is structurally valid (1.013875ms)
+✔ indexability requires the production environment, exact apex URL, and explicit policy together (0.086625ms)
+✔ launch-readiness source intentions hold (0.662583ms)
+✔ machine-readable run records reproduce their declared decisions (48.391084ms)
+✔ a declared hard-gate result cannot use a fabricated candidate commit (0.487416ms)
+✔ a passing run cannot replace hard-gate records with a trust-me note (15.531542ms)
+✔ a passing run needs exact candidate identity rather than a parent base commit (16.236791ms)
+✔ launch scoring rejects fractional values (0.224791ms)
+✔ a passing run needs criterion evidence and unresolved-risk arrays (16.346875ms)
+✔ hard-gate prose cannot substitute for typed command and browser evidence (30.409208ms)
+✔ browser evidence must cover every route and viewport instead of passing empty loops (0.723084ms)
+✔ passed booleans cannot replace retained browser assertion evidence (0.177208ms)
+✔ approval and deployment evidence must match declared labels and semantic formats (45.112583ms)
+✔ a passing scorecard reaches the deterministic target (0.218ms)
+✔ hard-gate failure cannot be averaged away (0.070875ms)
+✔ one criterion below its floor rejects an otherwise strong run (0.07375ms)
+✔ the Chad lens is explicit and cannot be averaged away (0.099125ms)
+✔ the Margaret Morse lens is explicit and cannot be averaged away (0.06725ms)
+✔ the Warren Sack lens is explicit and cannot be averaged away (0.107292ms)
+✔ the Warren Sack lens rejects collapsed judgment and model final authority (0.346917ms)
+✔ an aggregate pass cannot omit the per-run decision record (0.184042ms)
+✔ every decision dimension needs evidence and an unresolved-risks array (0.083666ms)
+✔ reopen review covers every trigger and invoked overrides carry provenance (0.112042ms)
+✔ override records cannot grant authority to a model or hide empty evidence and boundary changes (0.150875ms)
+✔ authority records cannot substitute a model or generic reviewer for policy owners (0.055208ms)
+✔ live disagreement survives an accepted aggregate result (0.069917ms)
+✔ a binding human refusal cannot be averaged into acceptance (0.076541ms)
+✔ binding human-decision fields are substantive and internally consistent (0.067042ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 280.55875
+
+> check:portfolio-evals
+> node scripts/check-portfolio-evals.mjs
+
+Portfolio-effectiveness eval passed at 3.88/5 across 7 criteria; 5 explicit external gate(s) remain.
+
+> test:portfolio-evals
+> node --test scripts/tests/portfolio-evals.test.mjs
+
+✔ portfolio-effectiveness suite defines exactly seven valid criteria (1.060667ms)
+✔ current evidence meets every local floor without hiding external gates (3.838209ms)
+✔ LLM or automated review cannot become a real reader session (3.117667ms)
+✔ real reader completion requires five privacy-safe aggregate records (2.363959ms)
+✔ self-assertion cannot become collaborator corroboration (2.707708ms)
+✔ an operating sequence fails when its evidence reference is unknown (2.653708ms)
+✔ a recent proposal cannot be represented as delivered client work (2.505667ms)
+✔ pending visual candidates cannot count as cleared artifacts (2.498041ms)
+✔ a different production SHA cannot satisfy exact-candidate release (2.364041ms)
+✔ maintenance rejects removal of the anti-self-certification rule (2.772708ms)
+✔ private local paths fail suite validation (0.240458ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 72.135875
+
+> check:knowledge-evals
+> node scripts/check-knowledge-evals.mjs
+
+Knowledge-bank eval passed: 5/5 across 28 criteria.
+
+> test:knowledge-evals
+> node --test scripts/tests/knowledge-evals.test.mjs
+
+✔ knowledge-bank pilot retains every supplied intake item (140.216958ms)
+✔ mature but unselected claims remain held off public surfaces (86.677334ms)
+✔ Kansas City Star waterways source retains route, credit, and publication boundaries (84.005375ms)
+✔ Kansas City Star waterways eval binds every atomic proposition (3962.42525ms)
+✔ Kansas City Star source contract preserves printed identity and explicit non-inclusion dispositions (0.682125ms)
+✔ Kansas City Star source contract is sealed to its reviewed artifact receipt and semantics (0.131417ms)
+✔ Kansas City Star contract seal detects record, locator, and disposition drift (1.827375ms)
+✔ Kansas City Star source contract binds the reviewed claim records (0.160166ms)
+✔ Kansas City Star source contract binds complete intake, source, observation, and inquiry records (0.273334ms)
+✔ Kansas City Star waterways eval rejects source metadata and support drift (241.960083ms)
+✔ Kansas City Star waterways eval rejects intake, observation, claim, and inquiry drift (320.300583ms)
+✔ Kansas City Star waterways eval rejects unreviewed source-linked records (320.869958ms)
+✔ Kansas City Star waterways eval rejects observations hidden behind its intake (77.748958ms)
+✔ Kansas City Star waterways eval rejects source attribution with its evidence edge omitted (78.764458ms)
+✔ Kansas City Star waterways eval closes indirect claim and inquiry edges (244.933041ms)
+✔ Kansas City Star waterways eval globally normalizes source attribution (653.2905ms)
+✔ Kansas City Star waterways eval rejects cross-project attribution promotion (156.650209ms)
+✔ Kansas City Star waterways eval closes the full waterways project graph (76.5285ms)
+✔ Kansas City Star waterways eval decodes registry identifiers (79.196667ms)
+✔ Kansas City Star waterways eval rejects indirect active projections (81.819042ms)
+✔ Kansas City Star waterways eval rejects an unsupported clause appended to a reviewed observation (81.45075ms)
+✔ Kansas City Star waterways eval rejects unsupported canonical claim text (81.419042ms)
+✔ Kansas City Star waterways eval rejects unsupported held projection text (79.754334ms)
+✔ Kansas City Star waterways eval rejects locator drift (79.504833ms)
+✔ Kansas City Star waterways eval keeps present-day synthesis separate and held (81.3355ms)
+✔ Kansas City Star waterways eval rejects completed-arrival inflation (79.136459ms)
+✔ Kansas City Star waterways eval rejects erased collective credit (79.480584ms)
+✔ Kansas City Star waterways eval rejects automatic portfolio promotion (80.04725ms)
+✔ NTER CHNG archive production is integrated, bounded, and held for future composition (0.240834ms)
+✔ NTER CHNG evidence keeps exhibition inclusion distinct from wider context (0.091541ms)
+✔ NTER CHNG working documents remain protected and absent from the public registry (0.425166ms)
+✔ NTER CHNG installation plan matures operational depth without sole-credit or completion inflation (0.141583ms)
+✔ NTER CHNG prompt evidence preserves participation design without exposing people or messages (0.148833ms)
+✔ selected NYCAC claims improve existing-site citation coverage (79.491209ms)
+✔ NYCAC source expansion retains exactly ten newly researched sources (0.144625ms)
+✔ NYCAC source expansion rejects an unbounded source (79.128417ms)
+✔ campaign press archive retains every appearance and distinct article identity (0.200917ms)
+✔ campaign press archive completeness is a hard evaluation gate (78.78425ms)
+✔ campaign press articles remain bounded source leads until close reading (0.2535ms)
+✔ KC Town Hall funding lifecycle retains the Council action and later disposition (79.163042ms)
+✔ KC Town Hall funding lifecycle rejects omission of the 2024 disposition (78.899834ms)
+✔ KC Town Hall funding lifecycle rejects appropriation-as-receipt language (79.696416ms)
+✔ KC Town Hall stewardship transition remains retained, bounded, and held (0.123125ms)
+✔ KC Town Hall eval rejects accidental publication of the transition lead (80.174667ms)
+✔ KC Town Hall Phase One retains role, construction, survey, and source-class boundaries (79.350875ms)
+✔ KC Town Hall Phase One rejects whole-project completion and sole-labor inflation (86.08875ms)
+✔ KC Town Hall Phase One rejects loss of the proposal completion-certificate boundary (80.016375ms)
+✔ KC Town Hall Phase One rejects exposing the protected proposal carrier (77.607542ms)
+✔ KC Town Hall Phase One keeps local-workforce and exact sequencing claims held (80.385333ms)
+✔ KC Town Hall Phase One rejects loss of the neighborhood survey observation (78.101959ms)
+✔ Teams archive production retains the complete three-family evidence graph (79.189667ms)
+✔ Teams archive private sources retain protected locators and cannot enter the public registry (0.218833ms)
+✔ Teams archive eval rejects accidental publication of a held CRS claim (79.949416ms)
+✔ Teams archive inquiry preserves the iCloud materialization limitation (0.105667ms)
+✔ Teams archive promotes only the independently supported CallNYC recognition (0.109291ms)
+✔ Shared Drives production retains the bounded seven-source evidence graph (80.723167ms)
+✔ Shared Drives private sources cannot expose Drive URLs or enter the public registry (0.30075ms)
+✔ Shared Drives production rejects accidental publication of a held claim (81.092333ms)
+✔ Shared Drives production preserves collaborator authorship for email guides (77.976209ms)
+✔ Shared Drives production preserves the non-exhaustive access limitation (80.708208ms)
+✔ Shared Drives production keeps the resident count separate from gathering evidence (0.142958ms)
+✔ photo feedback is instantiated as a protected research chain (79.909709ms)
+✔ photo feedback rejects an accidental publication-clearance mutation (78.568708ms)
+✔ photo feedback requires an explicit hold and protected locator (155.081834ms)
+✔ social archive production preserves five accounts and bounded official engagement (77.988625ms)
+✔ social archive eval rejects an inflated CallNYC Council count (85.8135ms)
+✔ social archive eval requires the pre-Council Carlina Rivera exclusion (80.588042ms)
+✔ social archive eval rejects a falsely complete NYC Artist Coalition count (80.876167ms)
+✔ social archive eval keeps Jamie's account-establishment memory held (80.23475ms)
+✔ social archive eval preserves excluded-handle uncertainty (81.678208ms)
+✔ CallNYC full-population ledger dispositions all 110 observed slots (80.155625ms)
+✔ CallNYC visual tokens are not misrepresented as archived media (0.243125ms)
+✔ CallNYC recognition architecture excludes institutional accounts (80.212875ms)
+✔ CallNYC full-population eval rejects an erased unresolved slot (80.25475ms)
+✔ CallNYC full-population claim cannot convert outreach into engagement (81.134ms)
+✔ CallNYC engagement floor includes the authenticated Ydanis quote-post (0.137208ms)
+✔ CallNYC reserve depth stays off public surfaces (0.099084ms)
+✔ WOW List full-population ledger reconciles every surviving profile item (0.068542ms)
+✔ WOW List source-status reactions cannot become project-account traction (0.059625ms)
+✔ WOW List shared-account authorship boundary is a hard gate (80.158291ms)
+✔ WOW List reserve depth stays off public surfaces (0.122375ms)
+✔ KC Town Hall full-population ledger reconciles every surviving profile item (0.189333ms)
+✔ KC Town Hall aggregate findings are recomputed from item-level records (0.226625ms)
+✔ KC Town Hall full-population eval rejects aggregate-only drift (82.281375ms)
+✔ KC Town Hall official-response floor is derived from ledger annotations (83.355292ms)
+✔ KC Town Hall source-status reactions cannot become project-account traction (0.130458ms)
+✔ KC Town Hall shared-account and service-unit boundaries are hard gates (79.892125ms)
+✔ KC Town Hall official-engagement floor cannot absorb outreach or reposts (80.327375ms)
+✔ KC Town Hall reserve depth stays off public surfaces (0.102ms)
+✔ NYC Artist Coalition population ledger reconciles every displayed profile slot (0.486792ms)
+✔ NYC Artist Coalition aggregate findings are recomputed from item-level records (0.598125ms)
+✔ NYC Artist Coalition population eval rejects aggregate-only drift (84.278ms)
+✔ NYC Artist Coalition source-status reactions cannot become account traction (0.473667ms)
+✔ NYC Artist Coalition linked articles mature into source-specific observations (0.184458ms)
+✔ urbanhermit population ledger reconciles every displayed profile slot (0.179583ms)
+✔ urbanhermit context and protected records remain aggregate-only and unlinkable (1.099417ms)
+✔ urbanhermit public evidence aggregates are recomputed from item-level records (0.304292ms)
+✔ urbanhermit mature depth stays held off public surfaces (0.059958ms)
+✔ urbanhermit eval rejects unresolved-population drift (87.152708ms)
+✔ urbanhermit eval rejects an item-level crosswalk on a withheld disposition (81.221208ms)
+✔ urbanhermit eval rejects a fingerprint on a withheld disposition (81.439ms)
+✔ urbanhermit eval rejects a withheld fingerprint outside the disposition buckets (79.087291ms)
+✔ urbanhermit eval rejects subtractive relationship disclosure (79.925292ms)
+✔ urbanhermit eval rejects source-status metrics assigned to Jamie (79.963ms)
+✔ urbanhermit eval rejects source-status authorship assigned to Jamie (80.581834ms)
+✔ urbanhermit handle identities are normalized case-insensitively (0.136708ms)
+✔ urbanhermit eval rejects unexpected nested metric metadata (80.919916ms)
+✔ urbanhermit eval rejects unexpected disposition categories (79.246291ms)
+✔ urbanhermit eval rejects nested personal metadata in allowed arrays (78.013625ms)
+✔ urbanhermit eval rejects false fresh-verification values (77.323333ms)
+✔ urbanhermit eval rejects identifying detail appended to unresolved reasons (76.785084ms)
+✔ urbanhermit metadata contract rejects equivalent free-text privacy and truth attacks (233.145542ms)
+✔ urbanhermit complete ledger contract rejects unlisted item drift (314.823666ms)
+✔ urbanhermit eval rejects an empty selected-source inventory (78.326834ms)
+✔ urbanhermit eval rejects empty recomputed aggregate maps (158.522542ms)
+✔ urbanhermit linked-source edges bind short URLs to canonical sources (0.223125ms)
+✔ urbanhermit eval rejects removal of a linked-source edge (80.374125ms)
+✔ urbanhermit eval binds source-status URL, author, date, and summary (312.582959ms)
+✔ every urbanhermit intake source, including reused sources, has a bounded atomic observation (0.122917ms)
+✔ urbanhermit eval rejects omission of a reused intake source observation (77.832291ms)
+✔ urbanhermit semantic contracts reject paraphrased overclaims (79.560583ms)
+✔ urbanhermit semantic contracts cover sources, claims, projections, and inquiries (387.647292ms)
+✔ urbanhermit independent contracts reject dual-sided semantic overclaims (82.291417ms)
+✔ urbanhermit semantic digest rejects dual-sided paraphrased observation overclaims (84.202791ms)
+✔ urbanhermit complete graph contract rejects provenance and review drift (552.016916ms)
+✔ urbanhermit complete graph contract rejects citation-requirement drift (82.361125ms)
+✔ urbanhermit public-surface contract rejects summary, inventory, and documentation drift (2669.191541ms)
+✔ urbanhermit cross-ledger contract rejects attribution and summary drift (338.119083ms)
+✔ urbanhermit personal and individual posts are not institutional metadata (0.119375ms)
+✔ urbanhermit native repost boundary preserves source authorship (0.122125ms)
+✔ urbanhermit eval rejects a semantically overbroad observation (82.102417ms)
+✔ urbanhermit eval rejects accidental public projection (82.772667ms)
+✔ NYC Artist Coalition direct mentions cannot support the Council-member claim (0.08625ms)
+✔ NYC Artist Coalition reserve depth stays off public surfaces (0.061292ms)
+✔ NYC Artist Coalition Facebook event population meets the complete criterion (84.752125ms)
+✔ NYC Artist Coalition event eval rejects erasing the unresolved slot (82.148083ms)
+✔ NYC Artist Coalition event eval rejects invented unresolved metadata (80.866917ms)
+✔ NYC Artist Coalition event eval rejects response-as-attendance wording (86.326083ms)
+✔ NYC Artist Coalition event eval rejects RSVP-as-turnout paraphrases (82.496083ms)
+✔ NYC Artist Coalition event eval rejects semantic attendance bypasses (6009.599959ms)
+✔ NYC Artist Coalition event eval accepts direct response boundaries (3061.791416ms)
+✔ NYC Artist Coalition event eval scans the report for attendance conversion (203.20425ms)
+✔ NYC Artist Coalition event eval scans public page and proof copy for attendance conversion (305.839625ms)
+✔ NYC Artist Coalition event eval scans canonical source notes and observations (345.012708ms)
+✔ NYC Artist Coalition event eval scans canonical public fields for people and private locators (1629.495917ms)
+✔ NYC Artist Coalition event eval keeps held interpretations off public projections (1789.591209ms)
+✔ NYC Artist Coalition event eval rejects a public protected locator (77.721209ms)
+✔ NYC Artist Coalition event eval rejects personal metadata fields (78.701333ms)
+✔ NYC Artist Coalition event eval rejects personal metadata inside allowed fields (78.638541ms)
+✔ NYC Artist Coalition event eval rejects guest identity inside an allowed field (241.285458ms)
+✔ NYC Artist Coalition event eval rejects identities inside link fields (154.868375ms)
+✔ NYC Artist Coalition event eval rejects normalized and unlabeled identities after digest rebound (971.910417ms)
+✔ NYC Artist Coalition event eval scans all ledger strings for identities (392.3075ms)
+✔ NYC Artist Coalition event eval rejects protected locator smuggling (315.709458ms)
+✔ NYC Artist Coalition event eval enforces exact top-level ledger schemas (158.153541ms)
+✔ NYC Artist Coalition event eval scans every event field for protected locators (620.051667ms)
+✔ NYC Artist Coalition event eval rejects nested non-scalar ledger values (239.418667ms)
+✔ NYC Artist Coalition event eval binds reviewed ledgers independently of suite digests (158.067209ms)
+✔ NYC Artist Coalition event eval binds displayed responses to numeric values (81.010042ms)
+✔ NYC Artist Coalition event eval rejects duplicate row identities (155.044042ms)
+✔ NYC Artist Coalition event eval keeps the unresolved slot metadata-free (80.1625ms)
+✔ NYC Artist Coalition event eval keeps the unresolved slot ID nonsemantic (80.551208ms)
+✔ NYC Artist Coalition event eval recomputes declared event accounting (89.403333ms)
+✔ NYC Artist Coalition event eval recomputes declared link accounting (122.399834ms)
+✔ NYC Artist Coalition event eval rejects stale replay accounting (78.629791ms)
+✔ NYC Artist Coalition event eval binds the exact replay event set (85.360792ms)
+✔ NYC Artist Coalition event eval rejects a missing source boundary (117.727209ms)
+✔ NYC Artist Coalition event eval rejects sole-credit claim drift (80.24075ms)
+✔ NYC Artist Coalition event eval scans the report for sole-credit drift (81.642416ms)
+✔ NYC Artist Coalition event eval rejects semantic sole-credit bypasses (6322.254125ms)
+✔ NYC Artist Coalition event eval accepts bounded collective credit (2699.156334ms)
+✔ NYC Artist Coalition event eval enforces event-title referential integrity (78.796958ms)
+✔ NYC Artist Coalition selected sources match ledger titles and dates (156.067125ms)
+✔ NYC Artist Coalition event eval keeps unselected claims off public surfaces (78.573458ms)
+✔ NYC Artist Coalition event eval keeps the democracy-lab interpretation at inference status (79.010791ms)
+✔ NYC Artist Coalition event eval rejects an extra selected active projection (79.922458ms)
+✔ NYC Artist Coalition event eval binds reviewed evidence confidence and boundaries (257.242625ms)
+✔ NYC Artist Coalition event source set preserves public event URLs (0.124292ms)
+✔ NYC Artist Coalition event eval binds every reviewed public narrative surface (159.381125ms)
+✔ NYC Artist Coalition event eval accepts explicit boundaries on reviewed documentation (167.977416ms)
+✔ NYC Artist Coalition event eval binds the complete generated public registry (316.994292ms)
+✔ personal and WOW List Facebook event population meets its full control (82.330875ms)
+✔ personal event eval rejects population arithmetic drift (82.447917ms)
+✔ personal event eval rejects row-level identifiers in aggregate controls (83.597042ms)
+✔ personal event eval rejects sole-author metadata on selected event sources (83.093666ms)
+✔ personal event eval keeps reserve-depth claims off hiring pages (80.989458ms)
+✔ personal event eval preserves non-recovery language (81.450459ms)
+✔ WOW List Facebook post population meets its complete surviving-surface control (105.758875ms)
+✔ WOW List Facebook post eval rejects population drift (86.678959ms)
+✔ WOW List Facebook post eval rejects a broken reverse-traversal reconciliation (117.529666ms)
+✔ WOW List Facebook post eval rejects raw record fields (87.241708ms)
+✔ WOW List Facebook post eval rejects reaction inflation (90.788875ms)
+✔ WOW List Facebook post eval requires the participant-graph privacy boundary (91.975666ms)
+✔ WOW List Facebook post eval preserves Richard and collective credit (88.238292ms)
+✔ WOW List Facebook post eval keeps sole-management memory held (112.038166ms)
+✔ WOW List Facebook post eval prevents the protected census from becoming a public citation (95.994875ms)
+✔ WOW List Facebook post report states the bounded management and stakeholder findings (0.11825ms)
+✔ NYC Artist Coalition Facebook post population meets both non-additive controls (89.079292ms)
+✔ NYC Artist Coalition Facebook post eval rejects overlap summation (92.4455ms)
+✔ NYC Artist Coalition Facebook post eval rejects an exact-lifetime public census claim (94.79775ms)
+✔ NYC Artist Coalition Facebook post eval preserves the failed reverse control (91.601792ms)
+✔ NYC Artist Coalition Facebook post eval rejects public-surface raw fields (89.062792ms)
+✔ NYC Artist Coalition Facebook post eval rejects native-record private metrics (91.454625ms)
+✔ NYC Artist Coalition Facebook post eval rejects sensitive destination exposure (91.45175ms)
+✔ NYC Artist Coalition Facebook post eval rejects people inflation from aggregate metrics (93.098667ms)
+✔ NYC Artist Coalition Facebook post eval preserves collective credit (93.648583ms)
+✔ NYC Artist Coalition Facebook post eval keeps predominant-operation memory attributed (126.761833ms)
+✔ NYC Artist Coalition Facebook post eval keeps the publisher-memory claim off public surfaces (116.40075ms)
+✔ NYC Artist Coalition Facebook post eval rejects stakeholder-response inference (94.992458ms)
+✔ NYC Artist Coalition Facebook post eval preserves product-surface disagreement (96.12975ms)
+✔ NYC Artist Coalition Facebook post eval requires posted-route limitations (98.497333ms)
+✔ NYC Artist Coalition Facebook post eval does not force the bank onto the portfolio (93.137042ms)
+✔ NYC Artist Coalition Facebook post report preserves population, source, traction, and credit boundaries (0.110791ms)
+✔ KC Spaces Fund Facebook post population meets the complete surviving-surface control (94.142625ms)
+✔ KC Spaces Fund Facebook post eval rejects lifetime-population inflation (94.502ms)
+✔ KC Spaces Fund Facebook post eval rejects an incomplete disposition (92.873583ms)
+✔ KC Spaces Fund Facebook post eval rejects raw post fields (90.663292ms)
+✔ KC Spaces Fund Facebook post eval rejects people inflation from reactions (98.679667ms)
+✔ KC Spaces Fund Facebook post eval rejects complete-stakeholder inference (92.299875ms)
+✔ KC Spaces Fund Facebook post eval preserves publisher non-attribution and collective credit (86.487917ms)
+✔ KC Spaces Fund Facebook post eval keeps the naming memory held (89.745375ms)
+✔ KC Spaces Fund Facebook post eval rejects route-to-impact inference (90.210417ms)
+✔ KC Spaces Fund Facebook post eval does not force archive depth onto the site (89.631417ms)
+✔ KC Spaces Fund Facebook post report preserves census, response, role, and memory boundaries (0.12575ms)
+✔ Jamie personal Facebook post population meets the complete returned-surface control (91.348417ms)
+✔ Jamie personal Facebook eval rejects lifetime-population inflation (87.48325ms)
+✔ Jamie personal Facebook eval rejects unknown-audience conversion to public (87.709125ms)
+✔ Jamie personal Facebook eval rejects year-accounting drift (86.544208ms)
+✔ Jamie personal Facebook eval rejects record-form accounting drift (86.028959ms)
+✔ Jamie personal Facebook eval rejects mission frequency as importance or impact (98.204833ms)
+✔ Jamie personal Facebook eval rejects posted destinations as corroboration (84.802209ms)
+✔ Jamie personal Facebook eval rejects outbound stakeholder routes as inbound engagement (86.902917ms)
+✔ Jamie personal Facebook eval requires all six public-post controls (87.94375ms)
+✔ Jamie personal Facebook eval rejects mutable counters as people or impact (91.305917ms)
+✔ Jamie personal Facebook eval keeps the CouncilStat role interpretation held (88.456125ms)
+✔ Jamie personal Facebook eval preserves NTER CHNG and KC Town Hall collective credit (90.578833ms)
+✔ Jamie personal Facebook eval rejects participation routes as outcomes (93.441625ms)
+✔ Jamie personal Facebook eval rejects raw corpus material and private paths (93.931917ms)
+✔ Jamie personal Facebook eval does not force archive depth onto the site (94.11875ms)
+✔ Jamie personal Facebook report preserves population, source, stakeholder, and role boundaries (0.110958ms)
+✔ participation-infrastructure production preserves exact bounded aggregates (89.107917ms)
+✔ participation-infrastructure production keeps protected rows and paths out of the repo (0.358583ms)
+✔ participation-infrastructure eval rejects activation of a held ledger claim (88.036791ms)
+✔ participation-infrastructure eval requires the Call Script listening evidence (85.699084ms)
+✔ participation-infrastructure eval rejects platform responses converted to attendance (89.68625ms)
+✔ participation-infrastructure eval rejects public reports containing private paths (88.906792ms)
+✔ NYC Artist Coalition government-interface record meets the recursive criterion (88.643666ms)
+✔ government-interface eval rejects promoting institutional inference as public fact (85.309542ms)
+✔ government-interface eval rejects turning bounded search into proof of exclusivity (85.902209ms)
+✔ government-interface eval requires Espinal-specific evidence (86.03825ms)
+✔ government-interface eval requires dependency and sole-causation anti-claims (85.347208ms)
+✔ government-interface eval rejects a public report containing a private path (84.546459ms)
+✔ complete maturation pilot meets every floor (82.274333ms)
+ℹ tests 253
+ℹ suites 0
+ℹ pass 253
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52070.281167
+
+> test:knowledge-tools
+> node --test scripts/tests/knowledge-tools.test.mjs
+
+✔ intake creates a stable validated receipt without promoting a claim (4.372958ms)
+✔ duplicate source leads are preserved and labeled (0.554458ms)
+✔ private paths cannot enter an intake receipt (0.697625ms)
+✔ canonical source URLs remove tracking and normalize parameter order (0.11425ms)
+✔ source URLs have one comparison form (0.069459ms)
+✔ duplicate title comparison normalizes trailing and repeated whitespace (0.141375ms)
+✔ duplicate intake is recomputed after the write lock is acquired (2.195291ms)
+✔ query distinguishes record classes and filters projects (0.252542ms)
+✔ active query excludes claims with only held projections (0.127584ms)
+✔ reports keep active and held knowledge visibly distinct (0.484042ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 155.325834
+
+> test:public-artifacts
+> node --test scripts/tests/public-artifacts.test.mjs
+
+✔ approved resume source and extracted PDF text satisfy the public contract (2.263708ms)
+✔ resume contract rejects sole-causality and appropriation-as-receipt claims (0.2915ms)
+✔ resume contract requires the complete KC Town Hall disposition (0.145584ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 50.37775
+
+> check:projections
+> node scripts/check-projection-consistency.mjs
+
+Projection consistency passes across canonical records, public surfaces, citations, and the generated registry.
+
+> test:projections
+> node --test scripts/tests/projection-consistency.test.mjs
+
+✔ current canonical projections and public registry are consistent (12.782666ms)
+✔ projection documentation cannot drift from the executable homepage proof strip (10.714208ms)
+✔ a curated proof list cannot grant an unauthorized surface (0.237334ms)
+✔ repository-authored public evidence is pinned to an immutable snapshot (0.106583ms)
+✔ projection validation cannot pass without scanning public surfaces (1.135666ms)
+✔ generated registry drift is rejected (10.703834ms)
+✔ a held projection leaked through a public surface is rejected (10.027958ms)
+✔ default-ignorable characters cannot conceal a held projection (10.693083ms)
+✔ held claim and protected source identifiers cannot enter public surfaces (1.055375ms)
+✔ recursive encoding cannot conceal protected locators or private paths on any public surface type (15.122459ms)
+✔ an active projection without an authorized surface is rejected (15.0515ms)
+✔ an occurrence cannot exceed the projection's authorized surfaces (14.960167ms)
+✔ a governed public projection cannot lose required boundary language (14.209417ms)
+✔ a governed surface cannot bypass its canonical claim projection (10.467208ms)
+✔ a protected source cannot become a public citation (14.480042ms)
+✔ Unicode dash normalization cannot hide superseded wording (10.191041ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 341.637
+
+> check:eval-contract
+> node scripts/check-eval-contract.mjs
+
+Composite eval contract 2.10.0 is structurally valid.
+Certification status: incomplete {"deterministicPasses":1,"contextSeparatedHoldouts":0,"identityAssurance":"self-attested-model-context","cryptographicIdentityVerified":false,"unchangedCandidate":true,"distinctReviewContexts":0,"phaseOrderValid":true,"externalGatesOpen":true,"acceptedForReview":false}
+
+> test:eval-contract
+> node --test scripts/tests/eval-contract.test.mjs
+
+✔ shared contract governs exactly the three canonical suites (1.471291ms)
+✔ shared contract executes every automatable launch hard gate (0.088792ms)
+✔ governed digest includes all app source and excludes generated results (33.901917ms)
+✔ stale contract and candidate digests are rejected (4.525291ms)
+✔ hard-coded pass without the full command set is rejected (0.443209ms)
+✔ command status must agree with its actual exit code (2.699542ms)
+✔ deterministic records require canonical runner and captured output provenance (2.888916ms)
+✔ deterministic evidence paths cannot escape approved repository roots (3.434208ms)
+✔ evidence paths cannot escape approved roots through symlinks (1.089709ms)
+✔ an approved evidence root cannot itself be a symlink outside the repository (0.8125ms)
+✔ a successful command cannot mutate governed inputs and retain candidate certification (171.3435ms)
+✔ deterministic records require complete decision governance under the current contract (2.948625ms)
+✔ historical contract versions retain their original deterministic decision rule (2.623834ms)
+✔ holdouts must be independent, blind, normalized, and prompt-bound (0.851166ms)
+✔ holdout records require explicit model-context provenance bound to candidate and prompt (0.607458ms)
+✔ reviewer labels use shared security normalization (0.486666ms)
+✔ a binding human refusal cannot coexist with acceptance (0.459625ms)
+✔ top-level disagreement, override, and reopen records must match the decision record (0.507916ms)
+✔ unknown, duplicate, missing, out-of-range, and evidenceless scores are rejected (0.698292ms)
+✔ declared weighted score and an unsupported acceptance are recomputed from actual results (0.515084ms)
+✔ a human hold remains valid even when numerical scores pass (0.335417ms)
+✔ blocking findings and incomplete decision governance prohibit acceptance (0.319333ms)
+✔ required human gates cannot disappear from an accepted record (2.585917ms)
+✔ run records form an ordered hash chain (0.493375ms)
+✔ record mutation invalidates its own digest (2.601708ms)
+✔ two deterministic passes and two unchanged context-separated holdouts meet the review stop (39.602458ms)
+✔ holdouts recorded before deterministic qualification cannot certify (39.371291ms)
+✔ a deterministic pass interleaved with holdouts cannot certify (40.180208ms)
+✔ a failed deterministic run resets the consecutive pass streak (77.763291ms)
+✔ one reviewer cannot certify twice by changing label case or Unicode (38.453042ms)
+✔ distinct session strings cannot revive a default-ignorable reviewer label (38.986042ms)
+✔ a later rejected holdout resets the current acceptance phase (38.1625ms)
+✔ deterministic and holdout records must bind the same commit and tree (76.289459ms)
+✔ a contract version change resets old passes (38.668375ms)
+✔ a model cannot grant production readiness (2.782417ms)
+✔ candidate commit and tree are verified by the record validator (31.5ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 800.952125
+
+> @jamie-burkart/www@0.1.0 check
+> npm run typecheck && npm run lint && npm run build
+
+
+> @jamie-burkart/www@0.1.0 typecheck
+> tsc --noEmit
+
+
+> @jamie-burkart/www@0.1.0 lint
+> eslint .
+
+
+> @jamie-burkart/www@0.1.0 build
+> next build --webpack && npm run standalone:assets
+
+▲ Next.js 16.2.10 (webpack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 930ms
+  Running TypeScript ...
+  Finished TypeScript in 1975ms ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/17) ...
+  Generating static pages using 11 workers (4/17) 
+  Generating static pages using 11 workers (8/17) 
+  Generating static pages using 11 workers (12/17) 
+✓ Generating static pages using 11 workers (17/17) in 205ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ƒ /api/health
+├ ○ /colophon
+├ ○ /contact
+├ ○ /icon.svg
+├ ○ /lab/source-backed-team-memory
+├ ƒ /opengraph-image
+├ ○ /resume
+├ ƒ /robots.txt
+├ ƒ /sitemap.xml
+├ ○ /work
+├ ● /work/[slug]
+│ ├ /work/harry-j-epstein
+│ ├ /work/fair-rent-nyc
+│ ├ /work/callnyc
+│ └ [+3 more paths]
+└ ○ /work/technical-operations
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+> @jamie-burkart/www@0.1.0 standalone:assets
+> sh -c 'if [ -d .next/standalone/apps/www ]; then rm -rf .next/standalone/apps/www/public .next/standalone/apps/www/.next/static && mkdir -p .next/standalone/apps/www/.next && cp -R public .next/standalone/apps/www/public && cp -R .next/static .next/standalone/apps/www/.next/static; fi'
+
+
+> knowledge-bank
+> node scripts/check-knowledge-bank.mjs
+
+Knowledge-bank check passed with 10 warning(s).
+
+> public-safety
+> node scripts/check-public-safety.mjs
+
+Knowledge-bank check passed with 10 warning(s).
+Knowledge-bank eval passed: 5/5 across 28 criteria.
+Public-safety check passed.
+
+> check:routes
+> node scripts/check-routes.mjs
+
+Route check passed.
+⚠ Using edge runtime on a page currently disables static generation for that page
+Knowledge-bank warnings:
+- hje-revenue-growth-contribution is careful and must keep its guardrail in public copy
+- fair-rent-campaign-memory is careful and must keep its guardrail in public copy
+- fair-rent-source-map is careful and must keep its guardrail in public copy
+- nyc-artist-coalition-public-web-infrastructure is careful and must keep its guardrail in public copy
+- nyc-artist-coalition-civic-systems is careful and must keep its guardrail in public copy
+- wowlist-community-platform is careful and must keep its guardrail in public copy
+- sunday-dinner-196-participation-infrastructure is careful and must keep its guardrail in public copy
+- kc-spaces-fund-digital-infrastructure is careful and must keep its guardrail in public copy
+- kc-town-hall-public-benefit-documentation is careful and must keep its guardrail in public copy
+- source-backed-team-memory-method is careful and must keep its guardrail in public copy
+Knowledge-bank warnings:
+- hje-revenue-growth-contribution is careful and must keep its guardrail in public copy
+- fair-rent-campaign-memory is careful and must keep its guardrail in public copy
+- fair-rent-source-map is careful and must keep its guardrail in public copy
+- nyc-artist-coalition-public-web-infrastructure is careful and must keep its guardrail in public copy
+- nyc-artist-coalition-civic-systems is careful and must keep its guardrail in public copy
+- wowlist-community-platform is careful and must keep its guardrail in public copy
+- sunday-dinner-196-participation-infrastructure is careful and must keep its guardrail in public copy
+- kc-spaces-fund-digital-infrastructure is careful and must keep its guardrail in public copy
+- kc-town-hall-public-benefit-documentation is careful and must keep its guardrail in public copy
+- source-backed-team-memory-method is careful and must keep its guardrail in public copy

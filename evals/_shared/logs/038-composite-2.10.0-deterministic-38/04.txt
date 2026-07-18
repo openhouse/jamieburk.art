@@ -1,0 +1,42 @@
+
+> test:launch-evals
+> node --test scripts/tests/launch-evals.test.mjs
+
+(node:23778) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ launch-readiness eval suite is structurally valid (2.181833ms)
+✔ indexability requires the production environment, exact apex URL, and explicit policy together (0.196625ms)
+✔ launch-readiness source intentions hold (2.460834ms)
+✔ machine-readable run records reproduce their declared decisions (188.918541ms)
+✔ a declared hard-gate result cannot use a fabricated candidate commit (1.136083ms)
+✔ a passing run cannot replace hard-gate records with a trust-me note (63.701375ms)
+✔ a passing run needs exact candidate identity rather than a parent base commit (60.781084ms)
+✔ launch scoring rejects fractional values (0.725958ms)
+✔ a passing run needs criterion evidence and unresolved-risk arrays (65.278667ms)
+✔ hard-gate prose cannot substitute for typed command and browser evidence (127.779834ms)
+✔ browser evidence must cover every route and viewport instead of passing empty loops (2.787417ms)
+✔ passed booleans cannot replace retained browser assertion evidence (0.638917ms)
+✔ approval and deployment evidence must match declared labels and semantic formats (192.579333ms)
+✔ a passing scorecard reaches the deterministic target (0.401ms)
+✔ hard-gate failure cannot be averaged away (0.25725ms)
+✔ one criterion below its floor rejects an otherwise strong run (0.566708ms)
+✔ the Chad lens is explicit and cannot be averaged away (0.227709ms)
+✔ the Margaret Morse lens is explicit and cannot be averaged away (0.45275ms)
+✔ the Warren Sack lens is explicit and cannot be averaged away (0.111208ms)
+✔ the Warren Sack lens rejects collapsed judgment and model final authority (0.80325ms)
+✔ an aggregate pass cannot omit the per-run decision record (0.184375ms)
+✔ every decision dimension needs evidence and an unresolved-risks array (0.117417ms)
+✔ reopen review covers every trigger and invoked overrides carry provenance (0.232209ms)
+✔ override records cannot grant authority to a model or hide empty evidence and boundary changes (0.141125ms)
+✔ authority records cannot substitute a model or generic reviewer for policy owners (0.0695ms)
+✔ live disagreement survives an accepted aggregate result (0.254959ms)
+✔ a binding human refusal cannot be averaged into acceptance (0.108084ms)
+✔ binding human-decision fields are substantive and internally consistent (0.096709ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1110.449875

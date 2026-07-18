@@ -1,0 +1,34 @@
+
+> test:browser-evals
+> node scripts/run-browser-evals.mjs
+
+(node:71682) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+file:///private/tmp/jamieburk-art-knowledge-a/scripts/run-browser-evals.mjs:46
+    if (processState.exited) throw new Error(`Staging server exited before readiness:\n${processState.output}`);
+                                   ^
+
+Error: Staging server exited before readiness:
+
+> @jamie-burkart/www@0.1.0 start
+> sh -c 'if [ -f .next/standalone/apps/www/server.js ]; then cd .next/standalone && node apps/www/server.js; elif [ -f .next/standalone/server.js ]; then cd .next/standalone && node server.js; else next start -p ${PORT:-3000}; fi'
+
+▲ Next.js 16.2.10
+- Local:         http://localhost:57016
+- Network:       http://192.168.0.106:57016
+✓ Ready in 149ms
+Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+    at ignore-listed frames
+npm error Lifecycle script `start` failed with error:
+npm error code 1
+npm error path /private/tmp/jamieburk-art-knowledge-a/apps/www
+npm error workspace @jamie-burkart/www@0.1.0
+npm error location /private/tmp/jamieburk-art-knowledge-a/apps/www
+npm error command failed
+npm error command sh -c sh -c 'if [ -f .next/standalone/apps/www/server.js ]; then cd .next/standalone && node apps/www/server.js; elif [ -f .next/standalone/server.js ]; then cd .next/standalone && node server.js; else next start -p ${PORT:-3000}; fi'
+
+    at waitForServer (file:///private/tmp/jamieburk-art-knowledge-a/scripts/run-browser-evals.mjs:46:36)
+    at async main (file:///private/tmp/jamieburk-art-knowledge-a/scripts/run-browser-evals.mjs:188:20)
+    at async file:///private/tmp/jamieburk-art-knowledge-a/scripts/run-browser-evals.mjs:379:1
+
+Node.js v24.2.0
