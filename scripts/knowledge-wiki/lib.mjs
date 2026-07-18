@@ -872,8 +872,8 @@ export function compileWiki(options = {}) {
 
 function generatedHeader(title, result) {
   return `<!-- GENERATED FILE. DO NOT EDIT. -->\n# ${title}\n\n` +
-    `**Source commit:** \`${result.metadata.sourceCommit}\`  \n` +
-    `**Generation time:** ${result.metadata.generatedAt}  \n` +
+    `**Source commit:** \`${result.metadata.sourceCommit}\`\n` +
+    `**Generation time:** ${result.metadata.generatedAt}\n` +
     `**Source fingerprint:** \`${result.graph.sourceFingerprint}\`\n\n`;
 }
 
