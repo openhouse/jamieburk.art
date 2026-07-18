@@ -35,23 +35,37 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run wiki:check
+npm run wiki:test
+npm run wiki:report
 npm run preflight:staging
 npm run preflight:production
 ```
 
-## Knowledge Bank
+## Knowledge Wiki
 
-This repo includes a public-safe knowledge bank for professional claims:
+This repo includes the **Knowledge Wiki**, Jamie Burkart's internal,
+Git-reviewed, Markdown-first system for source-backed operating memory. The
+former name, **Knowledge Bank**, remains a compatibility and historical alias.
 
+The Wiki's human reading surface begins at `docs/knowledge-wiki/README.md`.
+Its existing governed authorities remain in:
+
+- `docs/knowledge-wiki/`
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
 - `apps/www/src/data/knowledge-bank/records.ts`
 
-The website is a projection of this bank. Pages select, sequence, and phrase
+Markdown owns page identity, orientation, and authored navigation. Existing
+typed records continue to own claims, sources, evidence, corrections,
+citations, rights, and projection state. Generated Wiki Graph artifacts are
+derived and ignored by Git.
+
+The website is a selective projection of this system. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
 first adding a public-safe proof record.
 
-The knowledge bank is not a private archive. Do not commit raw transcripts,
+The Knowledge Wiki is not a private archive or publicly editable wiki. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,
 client-private material, internal analytics, raw community records, unapproved
 photos, unapproved screenshots, or unapproved quotes.
@@ -59,7 +73,10 @@ photos, unapproved screenshots, or unapproved quotes.
 There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
-`npm run knowledge-bank` checks the proof schema, projection rules, and work
+`npm run wiki:check` validates Wiki identity, links, fragments, relations,
+authority references, correction and projection boundaries, and private-path
+exclusions. `npm run wiki:report` writes ignored graph and health artifacts.
+`npm run knowledge-bank` remains the compatibility check for the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 `npm run check:citations` validates the source-to-projection graph and redacted
 public registry; `npm run test:citations` runs citation regressions; and

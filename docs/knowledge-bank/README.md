@@ -1,7 +1,15 @@
-# Knowledge Bank
+# Knowledge Wiki Compatibility Layer
 
-This directory is the public-safe knowledge base for Jamie Burkart's
-professional accomplishment claims.
+**Knowledge Wiki** is the canonical current product name. **Knowledge Bank** is
+the former name and remains the path for the existing public-safe claim,
+evidence, governance, and research notes during the bounded migration.
+
+Start with the task-oriented
+[Knowledge Wiki index](../knowledge-wiki/README.md). The architecture decision
+explains why this directory has not been renamed or copied wholesale.
+
+This directory remains the public-safe evidence and governance layer for Jamie
+Burkart's professional accomplishment claims.
 
 The repo is public. Do not put anything here that would be unsafe, unfair, too
 private, or too hard to defend if quoted in a newspaper.
