@@ -1,0 +1,41 @@
+{
+  "id": "architecture-editorial",
+  "reviewer": "Codex independent architecture and editorial review",
+  "reviewedAt": "2026-07-18",
+  "candidateFingerprint": "sha256:f16835b0b486b86b1532f6b7bfaa1bcfbbaf62de7ab499cef041527e277269bd",
+  "contractFingerprint": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
+  "verdict": "pass",
+  "criteria": [
+    {
+      "id": "one-authority-per-domain",
+      "status": "pass",
+      "finding": "The ADR distinguishes contextual Markdown authority from the existing canonical claim, source, citation, projection, correction, and lifecycle systems."
+    },
+    {
+      "id": "reader-orientation",
+      "status": "pass",
+      "finding": "The root and pilot index provide task-oriented entry, purposeful links, and a complete bounded path through project, source, claim, correction, capability, opportunity, method, projection, and media records."
+    },
+    {
+      "id": "correction-legibility",
+      "status": "pass",
+      "finding": "The CallNYC chronology correction preserves previous wording, corrected account, reason, affected surfaces, and a non-public superseded record."
+    },
+    {
+      "id": "projection-restraint",
+      "status": "pass",
+      "finding": "The public projection stays smaller than the Wiki and does not inherit the protected participant photograph or imply Council commissioning, endorsement, or adoption."
+    },
+    {
+      "id": "voice-and-care",
+      "status": "pass",
+      "finding": "Documentation uses plain, precise language that joins care to structure and keeps uncertainty, collective context, and reader action visible."
+    }
+  ],
+  "manualGates": {
+    "humanNavigationStudy": "not-requested",
+    "rightsClearance": "human-blocked",
+    "editorialApproval": "not-requested"
+  },
+  "remainingWork": "Run the documented retrieval tasks with unfamiliar human readers before treating navigation as human-validated."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "systems-public-safety",
+  "reviewer": "Codex independent systems and public-safety review",
+  "reviewedAt": "2026-07-18",
+  "candidateFingerprint": "sha256:f16835b0b486b86b1532f6b7bfaa1bcfbbaf62de7ab499cef041527e277269bd",
+  "contractFingerprint": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
+  "verdict": "pass",
+  "criteria": [
+    {
+      "id": "deterministic-derivation",
+      "status": "pass",
+      "finding": "The compiler produces sorted graph, index, backlink, health, and delta artifacts from explicitly governed Markdown without mutating authored records."
+    },
+    {
+      "id": "identity-and-relation-integrity",
+      "status": "pass",
+      "finding": "Stable IDs are path-independent; duplicate IDs, alias collisions, dangling targets, mismatched relation hrefs, illegal relation shapes, broken links, and broken fragments fail closed."
+    },
+    {
+      "id": "canonical-bridge",
+      "status": "pass",
+      "finding": "Canonical references resolve to the current citation registry instead of copying source URLs, evidence locators, or claim logic into a second store."
+    },
+    {
+      "id": "privacy-rights-and-negative-knowledge",
+      "status": "pass",
+      "finding": "Mutation tests reject machine-local paths, restricted projection, uncleared public media, and conversion of a not-recovered finding into a nonexistence claim."
+    },
+    {
+      "id": "governance-honesty",
+      "status": "pass",
+      "finding": "The health model separates hard gates, diagnostics, human tasks, rights clearance, editorial approval, and production observation rather than averaging them into a synthetic score."
+    }
+  ],
+  "manualGates": {
+    "collaboratorConsent": "not-requested",
+    "rightsClearance": "human-blocked",
+    "productionObservation": "not-requested"
+  },
+  "remainingWork": "Keep the participant photograph unprojected until rights, consent, credit, and editorial review are completed by people with authority."
+}

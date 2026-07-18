@@ -1,7 +1,7 @@
 {
-  "judgeId": "public-safety-composition-2026-07-16-star",
+  "judgeId": "public-safety-composition-2026-07-18-wiki-foundation",
   "lens": "public-safety-composition",
-  "candidate": "sha256:d684e41f67ff31f16ce38e3e8778b808378331cb7a0533be0003fb75d4f0b120",
+  "candidate": "sha256:4c0e553a4d70eb71767a6adc0f73783b464887b387d682492db976666ada9dff",
   "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
   "passes": true,
   "scores": {
@@ -62,6 +62,14 @@
     {
       "rubric": "research_honesty",
       "observation": "Review of the retained lifecycle context and changed candidate surfaces found no regression in contract questions 1 through 73."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "The Knowledge Wiki README keeps record maturity, public safety, rights state, and portfolio selection separate. It treats frontmatter as governance metadata rather than a privacy control and leaves the protected source layer outside the repository."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The Wiki foundation introduces no public route, no source reproduction, and no automatic projection. The Digital District photo remains represented only by a public-safe receipt with rights and consent human-blocked."
     }
   ],
   "regressions": [],

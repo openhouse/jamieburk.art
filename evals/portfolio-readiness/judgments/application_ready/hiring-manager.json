@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-hiring-manager-application-2026-07-16-r16",
+  "judgeId": "codex-independent-hiring-manager-application-2026-07-18-wiki",
   "lens": "hiring-manager",
   "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
+  "contract": "sha256:d15ed158e182ba89f79b658f60fcace919b21bc3553262f68e1c5611c24d2104",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -94,6 +94,11 @@
       "rubric": "operational_confidence",
       "route": "/api/health",
       "observation": "The repository includes a health route and deterministic route, citation, public-safety, resume, and responsive checks. Exact production deploy SHA, smoke result, indexing verification, monitoring, and rollback evidence remain explicitly deferred for application readiness."
+    },
+    {
+      "rubric": "operational_confidence",
+      "route": "repository",
+      "observation": "The unchanged public candidate now sits behind an additional Knowledge Wiki integrity gate. This improves confidence in the evidence and correction backend without adding reader-facing complexity or changing the existing application-readiness score."
     }
   ],
   "regressions": [],

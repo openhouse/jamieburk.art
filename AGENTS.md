@@ -49,7 +49,26 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
-## Knowledge Bank
+## Knowledge Wiki
+
+Knowledge Wiki is the canonical current product name. Knowledge Bank remains a
+historical and command/path compatibility alias during migration.
+
+Markdown is the human record, the Wiki Graph is derived, and the portfolio is a
+selective projection. The current canonical Markdown root remains
+`docs/knowledge-bank/`; do not create a competing `docs/knowledge-wiki/` tree or
+perform a global rename without a reviewed migration.
+
+Use stable IDs, ordinary relative links, and governed typed relations. Paths and
+titles may change; stable IDs must survive. Run `npm run wiki:check`, `npm run
+wiki:test`, and `npm run evals:wiki` after changing governed records. Regenerate
+reports with `npm run wiki:report`; never hand-edit generated Wiki artifacts.
+
+Human comprehension, collaborator consent, rights clearance, editorial
+approval, and production observation remain manual gates. Do not translate an
+automated pass into human approval.
+
+### Compatibility Layer
 
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.

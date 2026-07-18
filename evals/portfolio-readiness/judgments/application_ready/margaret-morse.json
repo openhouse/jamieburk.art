@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-margaret-morse-application-2026-07-16-r2",
+  "judgeId": "codex-independent-margaret-morse-application-2026-07-18-wiki",
   "lens": "margaret-morse",
   "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
+  "contract": "sha256:d15ed158e182ba89f79b658f60fcace919b21bc3553262f68e1c5611c24d2104",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -104,6 +104,11 @@
       "rubric": "operational_confidence",
       "route": "site-wide",
       "observation": "The exact candidate and contract fingerprints were reproduced by the no-report evaluation; repository, safety, claim, resume, route, application-path, and responsive checks pass. Production smoke, deployed-commit verification, rollback evidence, indexing approval, and human approval remain blocked production gates and are not treated as satisfied."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "repository",
+      "observation": "The revised contract adds a Markdown-first Wiki that preserves images and artifacts as situated evidence with distinct rights, consent, and non-support fields. The public candidate remains unchanged and still needs approved material specimens before the embodied throughline can score higher."
     }
   ],
   "regressions": [],

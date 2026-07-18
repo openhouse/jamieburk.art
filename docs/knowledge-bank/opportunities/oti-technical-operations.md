@@ -1,3 +1,29 @@
+---
+wiki_record: true
+id: opportunity.nyc-oti.technical-operations-manager.782369
+title: NYC OTI Technical Operations opportunity lens
+kind: opportunity
+status: governed-open
+visibility: public-safe
+sensitivity: low
+projection_status: careful
+discoverable: true
+last_reviewed: 2026-07-18
+review_by: 2026-10-18
+review_state: completed
+owner: Jamie Burkart
+aliases:
+  - OTI Technical Operations
+canonical_path: docs/knowledge-bank/opportunities/oti-technical-operations.md
+relations:
+  - type: documents
+    target: capability.technical-operations
+    href: ../capabilities/technical-operations.md
+  - type: documents
+    target: portfolio.work.technical-operations
+    href: ../projections/work-technical-operations.md
+---
+
 # Opportunity Lens - Technical Operations
 
 This file maps public-safe claims to Technical Operations / Product Operations /

@@ -1,8 +1,8 @@
 {
   "suite": "feature-evals-composite-integration-v4",
-  "candidate": "sha256:ea87f502439a2d1306f68f6316c43321fd299f59e561d9f991a92dbdf2951e77",
+  "candidate": "sha256:72f9867e417643f2887422273bf5480db51e2c20de71f327593617de47843727",
   "contract": "sha256:0dde8926cd1afd7c7f89142ea2d9fe561fe88092d43fbaada0702b788b435e7d",
-  "judgeId": "codex-independent-composite-archival-editorial-2026-07-16-r4",
+  "judgeId": "codex-independent-composite-archival-editorial-2026-07-18-wiki",
   "lens": "archival-editorial",
   "status": "pass",
   "scores": {
@@ -93,19 +93,24 @@
       "observation": "The contract history explicitly records and supersedes versions 1 through 3, while version 4 closes reviewability binding without rewriting prior evidence. Every frozen A-through-N source has an exact SHA and capability-level disposition, and deterministic, model, human-reader, rights, production, and approval evidence remain non-substitutable."
     },
     {
+      "rubric": "architectural_coherence",
+      "artifact": "docs/architecture/ADR-knowledge-wiki-name-and-model.md; docs/knowledge-bank/README.md; scripts/lib/knowledge-wiki.mjs; reports/knowledge-wiki/generated/wiki-graph.json",
+      "observation": "The Knowledge Wiki is an authoring and navigation layer over the canonical records.ts architecture, not a competing public registry. Seventeen governed Markdown records add typed relations, aliases, backlinks, health diagnostics, and deterministic reports while retaining the existing proof, citation, lifecycle, and publication controls. No public Wiki route was added."
+    },
+    {
       "rubric": "exact-candidate verification",
       "artifact": "npm run test:composite; node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The repository reproduced the requested candidate and contract fingerprints exactly. All nine focused tests, all deterministic rubric gates, reviewability accounting, and all six canonical regression checks passed. The runner failed overall only at candidate_binding because no prior v4 judgments were present; superseded v2 judgments and certification were correctly excluded."
+      "observation": "The repository reproduced candidate sha256:72f9867e417643f2887422273bf5480db51e2c20de71f327593617de47843727 and contract sha256:0dde8926cd1afd7c7f89142ea2d9fe561fe88092d43fbaada0702b788b435e7d exactly. All focused tests, deterministic rubric gates, reviewability accounting, and canonical regression checks passed; candidate_binding remained open only because the two prior judgments targeted an earlier candidate."
     }
   ],
   "regressions": [],
   "limitations": [
-    "This is the first passing independent judgment bound to the exact v4 candidate and contract. A second passing judgment from a distinct judge and lens is still required before candidate_binding can pass.",
-    "Two unchanged passing composite runs and a new v4 stop record cannot be established until the independent-judgment requirement is satisfied.",
+    "This archival-editorial judgment is one of two reviews required for the exact Knowledge Wiki candidate; it does not certify its companion systems review.",
+    "The Knowledge Wiki pilot covers a deliberately small governed corpus rather than the full knowledge archive.",
     "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's exact-production-candidate approval remain explicitly blocked. This judgment does not substitute for or close those gates.",
     "Rights-cleared visual evidence remains deferred, limiting Morse and Sack demonstration and preventing a production-readiness claim.",
     "The knowledge-bank check passed with ten warnings; they did not fail the canonical gate but remain review debt.",
-    "Prior composite judgments and certification target superseded v2 fingerprints and provide historical context only; they receive no v4 candidate-binding credit."
+    "Prior composite judgments and certification target superseded fingerprints and provide historical context only; they receive no exact-candidate binding credit."
   ],
   "confidence": "high"
 }

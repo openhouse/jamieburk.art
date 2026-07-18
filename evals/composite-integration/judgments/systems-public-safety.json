@@ -1,8 +1,8 @@
 {
   "suite": "feature-evals-composite-integration-v4",
-  "candidate": "sha256:ea87f502439a2d1306f68f6316c43321fd299f59e561d9f991a92dbdf2951e77",
+  "candidate": "sha256:72f9867e417643f2887422273bf5480db51e2c20de71f327593617de47843727",
   "contract": "sha256:0dde8926cd1afd7c7f89142ea2d9fe561fe88092d43fbaada0702b788b435e7d",
-  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-16-r4",
+  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-18-wiki",
   "lens": "systems-public-safety",
   "status": "pass",
   "scores": {
@@ -93,15 +93,20 @@
       "observation": "The v1-through-v4 contract history records each discovered boundary correction. All A-through-N heads are pinned and dispositioned, stale evidence is rejected, append-only provenance is verified against Git history, and deterministic, model, human-reader, rights, production, and Jamie-approval evidence are structurally non-substitutable."
     },
     {
+      "rubric": "architectural_coherence",
+      "artifact": "docs/architecture/ADR-knowledge-wiki-name-and-model.md; scripts/check-knowledge-wiki.mjs; scripts/tests/knowledge-wiki.test.mjs; evals/knowledge-wiki/suite.json",
+      "observation": "The Knowledge Wiki extends the canonical knowledge architecture with fail-closed Markdown compilation, typed link validation, private-path and rights checks, query benchmarks, and mutation tests. It neither duplicates records.ts nor creates a public evidence browser, and its checks now run in the repository's normal verification pipeline."
+    },
+    {
       "rubric": "exact-binding verification",
       "artifact": "node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The runner reproduced the requested candidate and contract fingerprints exactly. All canonical regression checks and all deterministic gates other than the intentionally open two-judgment candidate-binding gate passed; reviewability was calculated solely from candidate- or contract-bound paths."
+      "observation": "The runner reproduced candidate sha256:72f9867e417643f2887422273bf5480db51e2c20de71f327593617de47843727 and contract sha256:0dde8926cd1afd7c7f89142ea2d9fe561fe88092d43fbaada0702b788b435e7d exactly. All canonical regression checks and deterministic gates other than the intentionally open two-judgment binding gate passed; reviewability remained calculated solely from candidate- or contract-bound paths."
     }
   ],
   "regressions": [],
   "limitations": [
-    "Before this judgment, the version 4 runner found zero installed judgments for the exact candidate and contract, so candidate_binding correctly remained open. This judgment alone cannot satisfy the requirement for two distinct judges and lenses.",
-    "Two unchanged fully passing composite runs and a stop record cannot be validly produced until a second exact-candidate, exact-contract independent judgment is present.",
+    "This systems-public-safety judgment is one of two reviews required for the exact Knowledge Wiki candidate; it does not certify its companion archival-editorial review.",
+    "The Knowledge Wiki foundation validates a bounded pilot corpus and does not imply that the full archive has been migrated or rights-cleared.",
     "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's approval of the exact final production candidate remain blocked. This model judgment does not close or substitute for any of them.",
     "Rights-cleared visual evidence remains deferred, limiting the Morse and Sack demonstrations and keeping application readiness distinct from production readiness.",
     "The governance model layer uses status pass to describe the functioning exact-binding control, while the runner separately reports the current candidate-binding evidence as incomplete. Certification should preserve that distinction and must not describe the candidate as having two judgments until both exact-bound records exist."

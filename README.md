@@ -45,15 +45,17 @@ npm run preflight:staging
 npm run preflight:production
 ```
 
-## Knowledge Bank
+## Knowledge Wiki
 
-This repo includes a public-safe knowledge bank for professional claims:
+This repo includes **Knowledge Wiki**, formerly called Knowledge Bank: a
+public-safe, Markdown-first editorial and research system with a compiled Wiki
+Graph.
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
 - `apps/www/src/data/knowledge-bank/records.ts`
 
-The website is a projection of this bank. Pages select, sequence, and phrase
+The website is a projection of this Wiki. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
 first adding a public-safe proof record.
 
@@ -62,8 +64,28 @@ private coalition notes, legal-review materials, private correspondence,
 client-private material, internal analytics, raw community records, unapproved
 photos, unapproved screenshots, or unapproved quotes.
 
-There is intentionally no public `/proofs` route. The site should remain a
+There is intentionally no public `/proofs` or Knowledge Wiki route. The site should remain a
 composed portfolio, not a claims database.
+
+The current filesystem root remains `docs/knowledge-bank/` during the naming
+compatibility cycle. Stable IDs carry Wiki identity; existing claim, source,
+evidence, correction, and citation authority remains in
+`apps/www/src/data/knowledge-bank/records.ts` until a separate migration is
+reviewed.
+
+```bash
+npm run wiki:graph
+npm run wiki:report
+npm run wiki:check
+npm run wiki:test
+npm run wiki:tasks
+npm run wiki:query -- --project callnyc
+npm run evals:wiki
+```
+
+Start with [the Knowledge Wiki](docs/knowledge-bank/README.md), its
+[architecture decision](docs/architecture/ADR-knowledge-wiki-name-and-model.md),
+and the [authoring guide](docs/knowledge-bank/knowledge-wiki-authoring.md).
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.

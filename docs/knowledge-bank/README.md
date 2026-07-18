@@ -1,6 +1,62 @@
-# Knowledge Bank
+---
+wiki_record: true
+id: index.knowledge-wiki
+title: Knowledge Wiki
+kind: index
+status: maintained
+visibility: public-safe
+sensitivity: low
+projection_status: not-applicable
+discoverable: true
+last_reviewed: 2026-07-18
+review_by: 2027-01-18
+review_state: completed
+owner: Jamie Burkart
+aliases:
+  - Knowledge Bank
+canonical_path: docs/knowledge-bank/README.md
+relations:
+  - type: documents
+    target: index.knowledge-wiki-pilot
+    href: indexes/pilot.md
+    context: Start-here map for the bounded foundation records.
+---
 
-This directory is the public-safe knowledge base for Jamie Burkart's
+# Knowledge Wiki
+
+**Knowledge Wiki**, formerly called **Knowledge Bank**, is Jamie Burkart's
+internal, Git-reviewed, Markdown-first system for source-backed operating
+memory. Markdown is the human record, the Wiki Graph is derived, and the
+portfolio is a selective public projection.
+
+The path remains `docs/knowledge-bank/` during the compatibility period. Stable
+record IDs, not paths or titles, carry identity. See the
+[foundation pilot](indexes/pilot.md), the
+[architecture decision](../architecture/ADR-knowledge-wiki-name-and-model.md),
+and the [authoring guide](knowledge-wiki-authoring.md).
+
+## Start Here
+
+- [Foundation pilot](indexes/pilot.md): bounded records that demonstrate the
+  document, semantic, evidence, and governance graphs.
+- [Projects](projects/): project histories and editorial boundaries.
+- [Sources and claims](citational-care.md): canonical citation and evidence
+  workflow.
+- [Lifecycle](lifecycle.md): intake, promotion, correction, and retirement.
+- [Current opportunities](opportunities/): role-specific evidence maps.
+- [Open questions](launch-blockers.md): human decisions automation must not
+  impersonate.
+- [Generated Wiki health](../../reports/knowledge-wiki/generated/wiki-health.md):
+  reproducible structural diagnostics and manual authority gates.
+
+## What Is Not Here
+
+The public repository is not the Source Vault. It does not contain raw private
+archives, private correspondence, unapproved photographs, participant lists,
+protected locators, credentials, or relationship graphs. `noindex` is not a
+privacy boundary.
+
+This directory is the public-safe knowledge system for Jamie Burkart's
 professional accomplishment claims.
 
 The repo is public. Do not put anything here that would be unsafe, unfair, too

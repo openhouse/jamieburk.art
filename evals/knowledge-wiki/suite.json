@@ -1,0 +1,113 @@
+{
+  "id": "knowledge-wiki-foundation",
+  "version": 1,
+  "profile": "foundation_ready",
+  "principle": "Markdown is the record, the graph is compiled, and the portfolio is a governed projection.",
+  "stopRule": {
+    "consecutivePasses": 2,
+    "requireUnchangedCandidate": true,
+    "requireIndependentJudgments": [
+      "architecture-editorial",
+      "systems-public-safety"
+    ]
+  },
+  "hardGates": [
+    "authority_documented",
+    "wiki_integrity",
+    "canonical_reference_integrity",
+    "generated_artifacts_current",
+    "graph_determinism",
+    "discoverability",
+    "query_benchmark",
+    "mutation_rejection",
+    "projection_restraint",
+    "candidate_binding"
+  ],
+  "diagnostics": [
+    "records_by_kind",
+    "typed_relations",
+    "prose_links",
+    "root_distance",
+    "type_aware_orphans",
+    "dead_ends",
+    "wanted_pages",
+    "rights_backlog",
+    "human_review_backlog"
+  ],
+  "queryBenchmarks": [
+    {
+      "id": "callnyc-project",
+      "query": { "id": "project.callnyc" },
+      "expectedRecordIds": ["project.callnyc"],
+      "requiredBoundary": "It was not an official Council product"
+    },
+    {
+      "id": "callnyc-date-source",
+      "query": { "canonicalRef": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433" },
+      "expectedRecordIds": ["source.civichall.hackathon-announcement.2016"],
+      "requiredBoundary": "does not establish a dedicated Civic Hall calendar page"
+    },
+    {
+      "id": "callnyc-projection",
+      "query": { "surface": "/work/callnyc" },
+      "expectedRecordIds": [
+        "claim.callnyc.hackathon-date-time",
+        "claim.callnyc.independent-follow-on",
+        "portfolio.work.callnyc",
+        "project.callnyc"
+      ],
+      "requiredBoundary": "not a mirror of the Wiki"
+    },
+    {
+      "id": "digital-district-rights",
+      "query": { "id": "asset.photo.digital-district.001" },
+      "expectedRecordIds": ["asset.photo.digital-district.001"],
+      "requiredBoundary": "Evidentiary value does not confer publication permission."
+    },
+    {
+      "id": "chronology-correction",
+      "query": { "id": "correction.callnyc-years" },
+      "expectedRecordIds": ["correction.callnyc-years"],
+      "requiredBoundary": "Consequential history remains visible"
+    }
+  ],
+  "humanTasks": [
+    {
+      "id": "find-callnyc-chronology",
+      "prompt": "Find the current CallNYC chronology and explain why the project is dated 2016.",
+      "expectedRecordIds": ["project.callnyc", "correction.callnyc-years"],
+      "requiredBoundary": "Do not describe CallNYC as an official hackathon project."
+    },
+    {
+      "id": "find-event-window",
+      "prompt": "Find the source supporting the January 30, 2016, 1-3 p.m. event window.",
+      "expectedRecordIds": ["source.civichall.hackathon-announcement.2016"],
+      "requiredBoundary": "A participant photograph timestamp is not the event start time."
+    },
+    {
+      "id": "find-digital-district-boundary",
+      "prompt": "Explain what the Digital District photograph supports and whether it may be published.",
+      "expectedRecordIds": ["asset.photo.digital-district.001"],
+      "requiredBoundary": "Rights and consent remain human-blocked."
+    },
+    {
+      "id": "find-role-proof",
+      "prompt": "Find one project demonstrating public-data translation for a Technical Operations reader.",
+      "expectedRecordIds": ["capability.technical-operations", "project.callnyc"],
+      "requiredBoundary": "The capability path does not retroactively assign a formal job title."
+    },
+    {
+      "id": "find-projection-restraint",
+      "prompt": "Show why the portfolio page is smaller than the underlying Wiki record.",
+      "expectedRecordIds": ["portfolio.work.callnyc", "project.callnyc"],
+      "requiredBoundary": "Mature knowledge can remain unselected."
+    }
+  ],
+  "manualAuthorityGates": [
+    "human_navigation_study",
+    "collaborator_consent",
+    "rights_clearance",
+    "editorial_approval",
+    "production_observation"
+  ]
+}

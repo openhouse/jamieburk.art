@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-chad-editor-application-2026-07-16-r16",
+  "judgeId": "codex-independent-chad-editor-application-2026-07-18-wiki",
   "lens": "chad-editorial",
   "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
+  "contract": "sha256:d15ed158e182ba89f79b658f60fcace919b21bc3553262f68e1c5611c24d2104",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -99,6 +99,11 @@
       "rubric": "operational_confidence",
       "route": "/",
       "observation": "Repository, route, local browser, accessibility, metadata, and resume checks support application use; matching production deployment, smoke, indexing, monitoring, rollback, and human-approval evidence remain explicitly deferred."
+    },
+    {
+      "rubric": "operational_confidence",
+      "route": "repository",
+      "observation": "The application candidate is unchanged. The revised contract adds Knowledge Wiki schema, link, relation, projection, generation, mutation, and candidate-binding checks to the standard pipeline without weakening any public-page criterion or closing visual, production, or human-approval gaps."
     }
   ],
   "regressions": [],
