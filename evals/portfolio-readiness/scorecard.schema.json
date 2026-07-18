@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portfolio readiness scorecard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evalId",
+    "evaluatedAt",
+    "evaluator",
+    "revision",
+    "pagesReviewed",
+    "criteria",
+    "releaseRecommendation"
+  ],
+  "properties": {
+    "evalId": { "type": "string", "const": "portfolio-readiness-v1" },
+    "evaluatedAt": { "type": "string" },
+    "evaluator": { "type": "string" },
+    "revision": { "type": "string" },
+    "pagesReviewed": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "score",
+          "confidence",
+          "evidence",
+          "mostImportantFailure",
+          "repair",
+          "repairLayer",
+          "antiGamingCheck"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "positioning-clarity",
+              "hiring-path",
+              "proof-defensibility",
+              "reader-effort",
+              "narrative-finish",
+              "application-readiness",
+              "interface-confidence",
+              "contextual-integrity"
+            ]
+          },
+          "score": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "confidence": { "type": "string", "enum": ["low", "medium", "high"] },
+          "evidence": {
+            "type": "array",
+            "minItems": 2,
+            "items": { "type": "string" }
+          },
+          "mostImportantFailure": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }]
+          },
+          "repair": { "type": "string" },
+          "repairLayer": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "knowledge-bank",
+                "website",
+                "artifact",
+                "infrastructure",
+                "human-approval",
+                "none"
+              ]
+            }
+          },
+          "antiGamingCheck": { "type": "string" }
+        }
+      }
+    },
+    "releaseRecommendation": {
+      "type": "string",
+      "enum": ["iterate", "application-ready", "production-ready"]
+    }
+  }
+}

@@ -38,14 +38,35 @@ export default function AboutPage() {
             delivery, and source-backed knowledge systems.
           </p>
         </div>
-        <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
-          <p className="leading-8 text-jb-ink/78">
-            I value public benefit, accessibility, source-backed memory, careful
-            claims, collective credit, consent, privacy, repair, and
-            documentation that helps future collaborators safely continue the
-            work.
-          </p>
-        </div>
+        <section className="mt-12 border-t border-jb-ink/15 pt-8" aria-labelledby="practice-heading">
+          <h2 className="text-3xl font-semibold text-jb-ink" id="practice-heading">
+            A practice of attention and structure
+          </h2>
+          <div className="mt-5 space-y-5 text-lg leading-8 text-jb-ink/78">
+            <p>
+              The artistic, civic, technical, and social parts of my practice
+              belong together. I approach systems as things people inhabit:
+              places where attention, hospitality, and participation shape what
+              becomes possible. I care not only whether a structure works, but
+              whether it helps people find agency, connection, and room to
+              contribute.
+            </p>
+            <p>
+              Structure grows from the material and relationships already
+              present. I look for latent patterns, make them inspectable through
+              prototypes and shared artifacts, and build interfaces people can
+              use to understand and change the system together. I learn from
+              what happens in use and revise the structure without erasing the
+              relationships that produced it.
+            </p>
+            <p>
+              That is why I value public benefit, accessibility, source-backed
+              memory, careful claims, collective credit, consent, privacy,
+              repair, and documentation that helps future collaborators safely
+              continue the work.
+            </p>
+          </div>
+        </section>
       </div>
       <div className="mt-12 max-w-3xl">
         <ContactCTA />

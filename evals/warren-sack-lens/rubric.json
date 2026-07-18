@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "warren-sack-lens-v1",
+  "title": "Prof Warren Sack Lens eval",
+  "objective": "Make Jamie's recursive systems intelligence legible: finding latent social structure, grounding interpretation in sources, moving from theory to prototypes and interfaces, and building ambitious forms with collaborators.",
+  "decision": "Does the portfolio show Jamie discovering structure in social and technical material and turning it into inspectable, usable forms?",
+  "audiences": [
+    "technical hiring managers",
+    "product and implementation leaders",
+    "civic-technology readers",
+    "creative technologists",
+    "research collaborators"
+  ],
+  "recommendations": ["iterate", "criterion-met"],
+  "passingRecommendations": ["criterion-met"],
+  "stopCondition": {
+    "allDeterministicGatesPass": true,
+    "weightedScoreAtLeast": 80,
+    "everyCriterionAtLeast": 4,
+    "criticalCriteriaAtLeast": 4,
+    "stablePassingRuns": 2,
+    "explicitHumanApprovalRequiredForProduction": true
+  },
+  "scoreScale": {
+    "1": "The portfolio presents generic delivery activity or unsupported intellectual superlatives without inspectable systems reasoning.",
+    "2": "Projects and tools appear, but the move from observation to model, prototype, interface, and collective use is mostly absent.",
+    "3": "The recursive method is inferable from several projects but not named or connected across the portfolio.",
+    "4": "A first-pass reader can see Jamie find latent structure, test it through artifacts or interfaces, make it available for collective understanding and action, and learn from situated use.",
+    "5": "The portfolio makes an unusually coherent and defensible recursive systems practice visible across research, prototypes, interfaces, situated learning, documentation, and collaborative implementation."
+  },
+  "deterministicChecks": [
+    {
+      "id": "warren-sack-lens-contract",
+      "description": "The portfolio names and evidences recursive, source-backed, prototype-to-interface systems work without unsupported genius claims.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:warren-sack-lens"
+    },
+    {
+      "id": "knowledge-bank-valid",
+      "description": "The social-software and method framing remains source-positioned and bounded.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run knowledge-bank"
+    },
+    {
+      "id": "public-safety-valid",
+      "description": "The lens does not expose protected student records or private correspondence.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run public-safety"
+    },
+    {
+      "id": "production-preflight",
+      "description": "The Warren Sack Lens revision passes the complete production preflight.",
+      "profiles": ["release"],
+      "type": "command",
+      "command": "npm run preflight:production"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "warren-sack-lens",
+      "name": "Prof Warren Sack Lens",
+      "weight": 100,
+      "minimumScore": 4,
+      "critical": true,
+      "stewards": ["Prof Warren Sack", "Jamie Burkart", "Ben Balter", "Hamel Husain"],
+      "question": "Can a reader see Jamie recursively discover social or technical structure, support interpretation with evidence, prototype an idea, expose it through an interface or shared artifact, and carry it into collaborative use?",
+      "passDefinition": "The About page names the material-to-structure method and closes the loop through learning from situated use; selected civic, community-platform, and knowledge-system work demonstrates theory-to-prototype, interface-to-use, and use-to-revision movement; sources and limits remain inspectable; and collective architectures and collaborators remain visible.",
+      "dimensions": [
+        "recursive-social-inference",
+        "theory-to-prototype",
+        "interface-for-action",
+        "situated-learning",
+        "source-backed-reasoning",
+        "collective-architecture",
+        "continuity-across-time"
+      ],
+      "dimensionFields": [
+        "recursiveSocialInference",
+        "theoryToPrototype",
+        "interfaceForAction",
+        "situatedLearning",
+        "sourceBackedReasoning",
+        "collectiveArchitecture",
+        "continuityAcrossTime"
+      ],
+      "minimumEvidence": 6,
+      "evidenceToInspect": [
+        "About page practice threshold",
+        "Technical Operations page",
+        "CallNYC case study",
+        "WOW List case study",
+        "NYC Artist Coalition / FairRentNYC case study",
+        "Source-Backed Team Memory lab and method proof record",
+        "Warren Sack Lens knowledge-bank note"
+      ],
+      "repairPolicy": "Make the reasoning chain visible in the smallest correct layer: material or observation, inferred structure, prototype or artifact, interface, user action, learning from situated use, revision, and boundary. Keep project detail on its own pages.",
+      "antiGaming": "Do not pass by claiming genius, publishing the phrase structural equivalence as a self-brand, listing technologies without behavior, treating source volume as insight, erasing co-design, or inventing adoption and impact."
+    }
+  ]
+}

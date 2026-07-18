@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-16",
+  "projects": [
+    {
+      "projectId": "PRJ-HARRY-J-EPSTEIN",
+      "output": "Searchable e-commerce content, analytics, marketing, and operational workflows.",
+      "observedUse": "The systems supported ongoing business operations.",
+      "outcome": "Jamie reports contribution during a period of approximately 2x revenue growth.",
+      "causalContribution": "Contribution only; other people, products, decisions, and market conditions remain in the causal frame.",
+      "outcomeStatus": "self-reported"
+    },
+    {
+      "projectId": "PRJ-NYC-ARTIST-COALITION",
+      "output": "Recurring meetings, recommendations, campaign surfaces, shared records, testimony, and policy communications.",
+      "observedUse": "Collaborators, DCLA, and Council processes used the organized public record and participation pathway.",
+      "outcome": "Official records document agency listening, formal testimony, legislative attention, and enacted Cabaret Law repeal legislation.",
+      "causalContribution": "Jamie helped build and steward the operating layer; the evidence does not assign sole or quantified policy causality.",
+      "outcomeStatus": "corroborated"
+    },
+    {
+      "projectId": "PRJ-CALLNYC",
+      "output": "An archived resident-facing prototype translating CouncilStat records into issue and next-step guidance.",
+      "observedUse": "At least 19 serving Council-member accounts made attributable public interactions with CallNYC.",
+      "outcome": "Institutional adoption, resident task completion, and service improvement are not established.",
+      "causalContribution": "The engagement record establishes public attention, not endorsement, adoption, or policy effect.",
+      "outcomeStatus": "partial"
+    },
+    {
+      "projectId": "PRJ-WOWLIST",
+      "output": "A community publishing and event-discovery platform with contributor, city-scene, and support workflows.",
+      "observedUse": "Protected production records support historical scale and public records show concrete organizer and event routes.",
+      "outcome": "Complete adoption, current availability, and downstream organizer outcomes remain unestablished.",
+      "causalContribution": "Credit remains shared with Richard Caceres, contributors, organizers, and participants.",
+      "outcomeStatus": "partial"
+    },
+    {
+      "projectId": "PRJ-SUNDAY-DINNER-196",
+      "output": "Recurring gathering, hosting, onboarding, documentation, and residency support systems.",
+      "observedUse": "Public and protected project records document weekly practice and numbered project history.",
+      "outcome": "Participant outcomes and unique-person reach are not established for public use.",
+      "causalContribution": "Sunday Dinner remains co-hosted and participatory; the residency founder role is distinct.",
+      "outcomeStatus": "partial"
+    },
+    {
+      "projectId": "PRJ-KC-TOWN-HALL",
+      "output": "A neighborhood-led adaptive-reuse proposal, public-benefit record, survey process, and municipal funding request.",
+      "observedUse": "The CCED Board recommended the request and the City Council accepted and appropriated it to a project account.",
+      "outcome": "The municipal decision is corroborated; the agreement was not completed, no funds were disbursed, and the unused award was later reappropriated.",
+      "causalContribution": "Jamie is documented as presenter; the wider proposal and public process were collective.",
+      "outcomeStatus": "corroborated"
+    },
+    {
+      "projectId": "PRJ-KC-SPACES-FUND",
+      "output": "A campaign site, reusable theme, fundraising widget, and public donation, application, sign-up, and contact routes.",
+      "observedUse": "The public campaign exceeded its stated fundraising goal and published organizer and grantee information.",
+      "outcome": "Jamie's technical contribution is documented, but its causal effect on fundraising, applications, or grants is not established.",
+      "causalContribution": "Public organizer and grant-decision credit remains with the named organizers and fiscal sponsor.",
+      "outcomeStatus": "partial"
+    }
+  ]
+}

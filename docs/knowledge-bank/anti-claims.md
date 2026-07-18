@@ -28,6 +28,17 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not say Call Script or `popular.vote` alone created NYC Artist Coalition,
+that Jamie authored every Call Script page post, or that the naming poll's
+displayed 57% establishes a vote total, representative mandate, or complete
+founding roster. Do not convert Facebook responses or reach language into
+attendance, unique people, or impact.
+
+Do not say DCLA created or controlled NYC Artist Coalition, that Finkelpearl
+used the coalition's formal name in every relevant hearing, that the Council
+needed Jamie personally, that Espinal could not advance Intro 1652 without
+Jamie, or that Jamie or the coalition alone caused Cabaret Law repeal.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -43,8 +54,18 @@ Do not name collaborators unless approved.
 
 ## 196 / Sunday Dinner
 
+Do not present Jamie as Sunday Dinner's sole host or sole creator. Distinguish
+Jamie's 196 Artists Residency founder role from the separate Sunday Dinner
+co-host role, and credit Julia Fredenberg wherever Sunday Dinner hosting is
+named. Do not collapse the two date ranges or leave the 300+ gathering and 20+
+resident-artist figures unallocated between the two practices.
+
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
+
+Do not treat the protected Sunday Dinner working ledger as a verified
+attendance census or unique-participant count. Do not publish workbook rows,
+response markers, names, contact information, or formulas.
 
 ## KC Spaces Fund
 

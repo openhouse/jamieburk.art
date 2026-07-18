@@ -1,0 +1,295 @@
+# feature/evals-K Chad Lens run
+
+Date: 2026-07-15
+
+Decision sought: whether the core application path meets Chad's standard of
+courageous precision. This decision does not authorize production publication.
+
+## Baseline
+
+- Deterministic contract: failed on three uses of `lightweight` that named a
+  virtue without translating the actual bounded organizer need.
+- Fresh independent score: **3 / iterate**.
+- Most important failure: prominent summaries often named categories, artifact
+  sets, or boundaries without completing the shortest useful chain: Jamie did
+  a specific thing so a defined person or team could do something they could
+  not reliably do before.
+
+The baseline found strong collective and factual boundaries. The repair target
+was clarity and sequence, not stronger ownership or causality.
+
+## Accepted repairs
+
+- Replaced the homepage's abstract operating-structure lead with a direct
+  account of the working condition, Jamie's action, and the handoffs people can
+  continue using.
+- Removed a redundant homepage capability inventory and rewrote the selected
+  work introduction around what Jamie helped teams make usable.
+- Rewrote the three Technical Operations lead proofs as complete
+  action-to-user-result statements for HJE, CallNYC, and FairRentNYC.
+- Moved HJE and FairRentNYC's usable result before diagnostic detail in their
+  case-study narratives.
+- Revised HJE and FairRentNYC summaries and `whatBecameUsable` fields so they
+  name what customers, staff, or coalition collaborators could do.
+- Updated canonical proof wording and CallNYC projections so Jamie remains the
+  bounded actor wherever those claims appear.
+- Replaced `lightweight` with the actual WOWList need: a practical, low-cost,
+  bounded distribution pattern for organizers.
+- Kept Sunday Dinner and 196 Artists Residency distinct, credited Julia
+  Fredenberg, and required Jamie-reported attribution for the 300+ and 20+
+  aggregates wherever compressed proof wording uses them.
+- Reduced repeated status language at case-study openings while retaining
+  visibility and boundary context in At a Glance and supplemental evidence.
+
+No evidence class, metric, ownership boundary, or collective campaign outcome
+was strengthened.
+
+## Campaign press integration
+
+- Aggregated 45 article listings from four NYC Artist Coalition campaign press
+  sections into 44 canonical article records, preserving the campaign and list
+  position for every occurrence.
+- Kept the press corpus in the knowledge bank. The public portfolio remains a
+  selective argument rather than an exhaustive press index.
+- Close-read only the sources needed for current claims; metadata-reviewed
+  listings cannot silently become article-content evidence.
+- Added independent NPR support for Jamie's founding-member role while keeping
+  coalition accomplishments collective and sole-founder or sole-causality
+  claims out of bounds.
+- Reduced mobile citation burden with native disclosure while preserving
+  desktop and print access to the complete source notes.
+
+## Final evaluation
+
+- Deterministic fast gates: all passed.
+- Fresh independent judge A: **4 / criterion-met**.
+- Fresh independent judge B: **4 / criterion-met**.
+- Stable pair: yes.
+- All six required dimensions were addressed by both judges: actor legibility,
+  toward what end, usable result, one-pass translation, reader burden, and
+  collective precision.
+- Production browser matrix: 42 observations across 14 routes at desktop, 390px,
+  and 320px, with no route, H1, empty-link, overflow, duplicate-ID, console, or
+  page-error failures, plus complete keyboard traversal and reduced-motion
+  checks.
+
+## KC Town Hall lifecycle
+
+- Replaced the stale Board-recommendation endpoint with the complete bounded
+  public record: Council accepted the recommendation and appropriated $490,539
+  on September 26, 2019; the funding agreement did not close; no funds were
+  disbursed; and Council reappropriated the unused award in 2024 after the
+  project withdrew.
+- Kept Jamie visible as the person who co-led planning, assembled the public
+  benefit and stakeholder record, presented the proposal, and supported its
+  movement through public review.
+- Kept the legal and operational boundary equally visible: appropriation was
+  not receipt, expenditure, implementation, or completion, and the record does
+  not establish why the project withdrew.
+- Corrected the case study, work index, canonical claim, proof layer, and
+  phone-bearing resume together so no prominent surface silently strengthens or
+  truncates the lifecycle.
+
+The runner now requires a passing recommendation, all six dimension findings,
+and six evidence observations. Three regression tests confirm that
+`criterion-met` can pass, `iterate` cannot, and a missing dimension fails.
+
+## Teams archive pass
+
+- Strengthened the raft history around the most useful defensible chain:
+  Jamie initiated and organized a collective expedition; the crew built and
+  adapted the system in public; the voyage traveled more than 1,000 miles from
+  Kansas City into Louisiana. The archive does not claim the intended Gulf
+  endpoint was reached.
+- Preserved CRS planning, running minutes, and legislative provenance as
+  evidence of Jamie's operating method without converting collective policy
+  work into individual ownership.
+- Preserved the Source-Backed Team Memory Sprint as a designed bounded offer,
+  not a completed engagement.
+- Added evidence-only proof lineage so future agents can retrieve these methods
+  without silently publishing them.
+- Corrected a production-browser contrast defect in small case-study metadata
+  labels and repeated the accessibility audit across the governed route matrix.
+- Expanded the visual review set to 17 source-bound artifacts, including both
+  rendered resume pages and desktop/mobile captures of the application path.
+
+Two fresh independent judges again scored the criterion **4 / criterion-met**.
+The stable pair reached the 80-point threshold with every Chad Lens dimension
+addressed and all production preflight gates passing.
+
+## Remaining refinements
+
+- Long case studies can still consolidate repeated transferable-proof and
+  boundary language without removing source context.
+- The first HJE lead claim on the HTML resume could eventually name the
+  contributing work beside the 2x result, provided the compact layout remains
+  readable and the contribution guardrail stays intact.
+
+## Decision
+
+The Chad Lens criterion is met for application use. Production publication
+still requires Jamie's explicit approval.
+
+## KC Town Hall full-population pass
+
+- Reframed the social record as a public operating surface rather than an
+  engagement-statistics appendix: resident requests, pickup coordination,
+  result reporting, civic information, and bounded public dialogue became
+  usable through one shared project identity.
+- Kept Jamie's role legible through the surrounding case study without
+  assigning him every shared-account post or every field action.
+- Added the strongest narrow traction fact, direct responses from three
+  then-sitting Council-member accounts, while stating that response is not
+  endorsement, partnership, adoption, or outcome.
+- Left the 183-row census, theme taxonomy, link inventory, and current counters
+  in the knowledge bank so the case study remains readable in one pass.
+
+The deterministic Chad Lens contract and complete application preflight remain
+the stop-condition gates; exact-head independent scores are reported on the
+pull request.
+
+## Google Shared Drive and exact-final pass
+
+- Kept the archive as source material rather than a public interface: the
+  bounded vacancy-data method claim remains held, and protected media did not
+  become site content.
+- Reworked mobile navigation into a compact menu and made the homepage's primary
+  hiring action visually singular.
+- Placed every case-study summary before At a glance on mobile and inside the
+  desktop header, then removed the resulting desktop blank-space regression.
+- Shortened FairRentNYC's opening without losing Jamie's co-founder role,
+  collaborators, usable records and sites, or the collective advocacy end.
+- Removed duplicated status metadata and retained the visible case-study badge.
+- Made `support launch` explicit in the hero and synchronized the deterministic
+  Chad Lens contract.
+- Carried `archived, unofficial` into CallNYC's HTML and PDF resume wording.
+- Labeled the 20+ residency aggregate as Jamie-reported in both PDF occurrences
+  while preserving Sunday Dinner's distinct role, collaborator credit, and
+  300+ gathering figure.
+
+Two exact-final independent judges scored Chad's criterion **5 / 5**. The runner
+reported **100 / 100**, stable pair `yes`, recommendation `criterion-met`, with
+all six dimensions addressed and every deterministic gate passing.
+
+## WOW List full-population release pass
+
+- Made Jamie's product and operating contribution legible without assigning
+  him every post, repost, or third-party use in a collectively used account.
+- Repaired every public and public-safe `35+` projection so the reader can see
+  the qualifying threshold: each city or region entry had at least 50 geocoded
+  posts or events.
+- Bound both WOW List claims to the exact-route manifest and kept the complete
+  38-record social archive in the knowledge bank rather than burdening the case
+  study with an archival inventory.
+- Preserved dated interaction counters as context, not as claims of reach,
+  endorsement, conversion, attendance, or impact.
+
+Two fresh independent judges scored Chad's criterion **4 / 4**. The release
+runner reported **80 / 80**, stable pair `yes`, recommendation
+`criterion-met`, with every deterministic gate passing. Production publication
+still requires Jamie's explicit approval.
+
+## KC Town Hall compositional hill climb
+
+- The first exact-head KC Town Hall pair split **4 / 3**: the archive and
+  boundaries held, but one judge found that the public projection led with
+  corpus metrics and left Jamie's relevance implicit.
+- Reordered the case study so Jamie's documented role precedes a clearly
+  labeled shared-project-operations section.
+- Rewrote the social projection to lead with what residents and collaborators
+  could do, keep Council interaction counts subordinate, and state directly
+  that the corpus does not establish Jamie's individual authorship or field
+  work.
+- A fresh exact-head independent pair is required before the criterion can be
+  treated as stable.
+
+## KC Town Hall atomic-claim repair
+
+- Removed Council-response and reposter counts from the public case-study
+  projection so the first-pass reader sees one thing: what residents and
+  collaborators could do through the shared project account.
+- Kept Jamie visible through the immediately preceding role section while
+  explicitly declining to assign every post or field action to him.
+- Preserved Council dialogue, repost-list appearances, and mutable counters as
+  distinct knowledge-bank depth available for later compositions.
+
+A fresh exact-head Chad Lens pair is required after this change.
+
+## NYC Artist Coalition archive-depth pass
+
+- Kept Jamie's existing co-founder, infrastructure, testimony, and systems
+  contribution legible on the Fair Rent NYC case study.
+- Kept the stronger six-account incoming Council-member floor in the public
+  argument while preventing 109 outbound Council-addressing posts from being
+  misread as 109 engaged members.
+- Preserved the 5,124-item population accounting, campaign counts, resolved
+  links, repost-source patterns, and mutable counters in the knowledge bank
+  rather than making the hiring reader interpret an archival appendix.
+- Added an editorial hold question for every future projection: does this
+  finding make Jamie's operating contribution more legible, or is it merely
+  another number?
+
+The deterministic Chad Lens contract, full repository check, production build,
+and refreshed 42-observation visual matrix pass. Exact-head independent scores
+are reported on the pull request. Production publication remains Jamie's
+explicit decision.
+
+## Urbanhermit selection pass
+
+- Kept the current hiring website unchanged: the archive discovered strong
+  reserve evidence, but no present page became clearer by adding it now.
+- Made Jamie legible inside the bank through three concrete actions and roles:
+  co-creating a credited music video, leading a participatory public-history
+  program, and directly joining neighborhood tire-pickup fieldwork.
+- Preserved collaborator credit, collective ownership, rights, access, and
+  impact boundaries at sentence level.
+- Added an editorial question that future agents must answer before projection:
+  does the selected record clarify Jamie's craft for this audience, or merely
+  expose more archive?
+
+The dedicated corpus score is **100 / 100** and the full deterministic suite
+passes. Exact-head independent Chad Lens scores are reported on the pull
+request.
+
+## WOW List Facebook publishing-role hill climb
+
+- The first exact-head Chad pair split **4 / 3**. Both judges accepted the
+  57-record census and its attribution, authorship, collaborator-credit, and
+  impact boundaries; the dissenting judge found that the public case study
+  still let the account, rather than Jamie, act.
+- Replaced the dense general social-account paragraph with one bounded role
+  sentence: Jamie managed Facebook publishing across the recovered 2015-2018
+  corpus and used the page for contributor onboarding, event circulation, and
+  practical support routing.
+- Kept Richard Caceres's shared-project credit and the 51/0/6 audit visible.
+  Six publisher identities remain unresolved, and the sentence makes no claim
+  about attached-source authorship, engagement, adoption, attendance,
+  endorsement, or impact.
+- Kept the full census, source ecology, stakeholder classifications, and open
+  engagement research in the knowledge bank rather than adding a social-media
+  section or public archive route.
+
+A fresh exact-head independent pair is required after this compositional
+repair.
+
+## Call Script emergence-sequence pass
+
+- Made Jamie's contribution concrete as an operating sequence rather than an
+  abstract coalition role: he used Call Script and WOW List's civic
+  event-sharing adaptation to help emerging work move through invitation,
+  listening, collaborative drafting, collective naming, and follow-up.
+- Kept the collective as the actor of its own formation and policy work. The
+  page does not assign Jamie every post, a sole-founder role, or single-tool
+  causality.
+- Kept the naming poll's displayed 57% visible only inside its denominator
+  boundary and excluded contemporaneous reach and response language from the
+  hiring argument.
+- Added the sequence to the Fair Rent case study because it explains what Jamie
+  made usable; kept database and workbook detail in the knowledge bank.
+- Re-ran the governed visual matrix after the copy change: all 42 observations
+  pass at desktop, 390px, and 320px with no overflow, contrast, keyboard,
+  citation, console, or page errors.
+
+The deterministic Chad Lens contract and full Node 26 release gate pass. A new
+external-model score was not requested because the source bundle includes
+protected summaries and no explicit disclosure authorization has been given.

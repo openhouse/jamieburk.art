@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "knowledge-lifecycle-v1",
+  "title": "Knowledge lifecycle eval",
+  "objective": "Preserve relevant fragments without premature publication, mature them through source-backed research into defensible claims, and compose a selective public portfolio from a deep, auditable, public-safe knowledge bank.",
+  "decision": "Can Jamie and future LLM agents safely capture, research, promote, retrieve, and compose professional evidence without losing material or turning the public site into the archive?",
+  "audiences": [
+    "Jamie Burkart",
+    "research and archival agents",
+    "portfolio editors",
+    "photo editors",
+    "public-safety reviewers",
+    "future application teams"
+  ],
+  "recommendations": ["iterate", "framework-ready"],
+  "passingRecommendations": ["framework-ready"],
+  "stopCondition": {
+    "allDeterministicGatesPass": true,
+    "weightedScoreAtLeast": 90,
+    "everyCriterionAtLeast": 4,
+    "criticalCriteriaAtLeast": 4,
+    "stablePassingRuns": 2,
+    "explicitHumanApprovalRequiredForProduction": true
+  },
+  "scoreScale": {
+    "1": "Missing, unsafe, misleading, or unable to preserve and mature the material.",
+    "2": "Partial structure exists, but important evidence can be lost, conflated, leaked, or promoted without support.",
+    "3": "Directionally sound, but a material lifecycle, retrieval, research, or governance gap remains.",
+    "4": "Operationally useful, public-safe, auditable, and ready to accept and mature real material with only minor refinements.",
+    "5": "Exceptionally coherent and resilient: evidence, uncertainty, research, promotion, composition, and feedback reinforce one another without needless burden."
+  },
+  "deterministicChecks": [
+    {
+      "id": "knowledge-lifecycle-contract",
+      "description": "The intake-to-promotion framework, content corpus, cross-reference validation, and regression tests are present and internally consistent.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:knowledge-lifecycle"
+    },
+    {
+      "id": "citation-registry-valid",
+      "description": "Promoted claims and source relationships remain compatible with the canonical citation layer.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:citations"
+    },
+    {
+      "id": "social-archive-contract",
+      "description": "Project-account identity, full-population and bounded engagement ledgers, metric ownership, collective-authorship limits, privacy mutations, held role claims, and exact-route projections remain internally consistent.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:social-archive"
+    },
+    {
+      "id": "nycartc-full-population-contract",
+      "description": "The NYC Artist Coalition population accounting, item classifications, URL dispositions, stakeholder boundaries, privacy mutations, lifecycle integration, and projection holds reproduce exactly.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:nycartc-corpus && npm run evals:nycartc-x"
+    },
+    {
+      "id": "urbanhermit-full-population-contract",
+      "description": "The Urbanhermit 434-record population reconciliation, aggregate-only privacy mutation, link and mission-signal accounting, stakeholder boundaries, selected source maturation, lifecycle holds, and no-route decision reproduce exactly.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:urbanhermit-corpus && npm run evals:urbanhermit-x"
+    },
+    {
+      "id": "campaign-press-corpus-complete",
+      "description": "Campaign press collections retain their declared article counts, canonical references, generated index, and provenance boundaries.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:campaign-press"
+    },
+    {
+      "id": "knowledge-bank-valid",
+      "description": "Structured public claims and their guardrails remain valid.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run knowledge-bank"
+    },
+    {
+      "id": "public-safety-valid",
+      "description": "The public repository contains no prohibited private payloads or unsafe projections.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run public-safety"
+    },
+    {
+      "id": "production-preflight",
+      "description": "The framework and its generated public projection pass the complete production preflight.",
+      "profiles": ["release"],
+      "type": "command",
+      "command": "npm run preflight:production"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "intake-preservation",
+      "name": "Generous intake and safe preservation",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "stewards": ["Jamie Burkart", "Prof Ingeborg Gerdes", "Cyd Harrell"],
+      "question": "Can a URL, memory, artifact, metric, document, or visual lead enter with minimal friction and remain findable without implying publication or evidentiary maturity?",
+      "passDefinition": "Every lead receives a stable identity, provenance, project/entity associations, visibility boundary, capture state, and next step. Public-safe metadata may enter the repo; private payloads remain outside it behind opaque locators.",
+      "evidenceToInspect": ["lead schema", "real intake records", "private/public boundary", "capture receipt", "orphan and duplicate handling"],
+      "repairPolicy": "Make intake easier without weakening privacy. Preserve uncertainty and route the item toward extraction or research rather than forcing a claim.",
+      "antiGaming": "Do not pass merely because every URL is stored. The material must remain attributable, retrievable, bounded, and actionable."
+    },
+    {
+      "id": "source-decomposition",
+      "name": "Atomic source decomposition",
+      "weight": 20,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "stewards": ["Deborah Treisman", "Ben Balter", "Hamel Husain"],
+      "question": "Are sources decomposed into atomic observations that distinguish direct support, context, contradiction, boundary support, and what the source does not establish?",
+      "passDefinition": "Observations retain source locators, certainty, supported propositions, limitations, project/entity links, and candidate-claim relationships. A source is never treated as uniformly supporting every nearby claim.",
+      "evidenceToInspect": ["observation records", "source affordances", "does-not-establish fields", "relationship types", "cross-reference validation"],
+      "repairPolicy": "Split compound propositions, narrow evidence relationships, and record source limits before strengthening a candidate claim.",
+      "antiGaming": "More observations are not automatically better. Each must carry a distinct, source-grounded proposition or boundary."
+    },
+    {
+      "id": "research-posture",
+      "name": "Research, contradiction, and uncertainty posture",
+      "weight": 20,
+      "minimumScore": 4,
+      "critical": false,
+      "minimumEvidence": 3,
+      "stewards": ["Hamel Husain", "Prof Warren Sack", "Vivian Gornick"],
+      "question": "Does the system turn gaps, memories, conflicts, metrics, and large causal claims into explicit research work rather than silent omission or premature certainty?",
+      "passDefinition": "Candidate claims name their maturity, required evidence, open questions, counterevidence posture, research priority, completed methods, findings, limitations, and next actions. Not recovered remains distinct from did not exist.",
+      "evidenceToInspect": ["candidate claims", "research tasks", "contradictions", "limitations", "next actions", "claim history"],
+      "repairPolicy": "Create the smallest decisive research task and preserve the uncertainty that remains after it runs.",
+      "antiGaming": "Do not convert Jamie's confidence, source count, press repetition, or an AI summary into independent corroboration."
+    },
+    {
+      "id": "promotion-governance",
+      "name": "Promotion discipline and contextual integrity",
+      "weight": 20,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 3,
+      "stewards": ["Helen Nissenbaum", "Jamie Burkart", "Ben Balter"],
+      "question": "Can a claim become defensible without automatically becoming public, and can promotion decisions be audited and reversed?",
+      "passDefinition": "Promotion records identify the candidate, decision, rationale, evidence threshold, reviewer, date, allowed surfaces, target canonical claim, guardrails, and reasons to hold or reject. Collective outcomes and private context retain their boundaries.",
+      "evidenceToInspect": ["promotion decisions", "held claims", "promoted claims", "canonical target links", "allowed surfaces", "corrections and retirement"],
+      "repairPolicy": "Promote the strongest narrow claim the evidence supports. Hold broader causality, ownership, consent, or authority claims for research or human review.",
+      "antiGaming": "Public defensibility is not the same as homepage relevance; promotion into the bank must not force projection onto the site."
+    },
+    {
+      "id": "editorial-composability",
+      "name": "Retrieval and editorial composability",
+      "weight": 15,
+      "minimumScore": 4,
+      "critical": false,
+      "minimumEvidence": 3,
+      "stewards": ["Chad Berkowitz", "Amanda Gordon", "Deborah Treisman"],
+      "question": "Can an agent retrieve a deep but selective palette for a concrete audience and purpose without dumping the knowledge bank into the public site?",
+      "passDefinition": "Projects, entities, capabilities, periods, evidence strength, claim maturity, audience, purpose, and allowed surfaces support retrieval. Editorial briefs state the argument, required proof, exclusions, and citation posture. The website remains a composed projection.",
+      "evidenceToInspect": ["editorial briefs", "project/entity graph", "claim tags", "projection decisions", "current site selection", "citation restraint"],
+      "repairPolicy": "Improve information scent and selection metadata before adding public content. Use Chad's lens on every projection.",
+      "antiGaming": "Do not pass by exposing a search UI, knowledge-bank route, or exhaustive public archive."
+    },
+    {
+      "id": "media-feedback",
+      "name": "Visual archive and feedback readiness",
+      "weight": 5,
+      "minimumScore": 4,
+      "critical": false,
+      "minimumEvidence": 3,
+      "stewards": ["Prof Margaret Morse", "Stephen Coles", "Helen Nissenbaum"],
+      "question": "Can the knowledge bank generate useful photo-editor briefs and accept visual discoveries back as bounded research leads?",
+      "passDefinition": "Media leads preserve project and claim associations, opaque locators, rights and consent states, visual research prompts, display status, and promotion boundaries. Editorial briefs can request evidence-rich image selections without exposing private photo records.",
+      "evidenceToInspect": ["media lead schema", "real media leads", "rights and consent", "photo-editor brief", "visual-to-claim research loop"],
+      "repairPolicy": "Preserve a public-safe visual description and research prompt while keeping raw media and protected locators out of generated public data.",
+      "antiGaming": "A photo's existence or metadata does not prove the depicted role, identity, event meaning, consent, or causal claim."
+    },
+    {
+      "id": "social-archive-production",
+      "name": "Social identity and engagement archive production",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": true,
+      "minimumEvidence": 6,
+      "stewards": ["Jamie Burkart", "Chad Berkowitz", "Ben Balter", "Cyd Harrell", "Helen Nissenbaum"],
+      "question": "Can project social accounts be inventoried and interpreted as public operating and documentation surfaces without confusing interaction with endorsement, shared identity with individual authorship, or a bounded recovery floor with a complete lifetime census?",
+      "passDefinition": "The account registry distinguishes dedicated, shared, adjacent, and not-recovered identities; authenticated collection methods and stopping conditions are documented; named interaction ledgers are deduplicated and reproducible; volatile metrics are dated; collective authorship and administrator-history limits are explicit; strong narrow findings enter exact public surfaces while role memories and reserve depth may remain held.",
+      "evidenceToInspect": ["project account registry", "authenticated collection method", "CallNYC Council-member ledger", "NYC Artist Coalition 5,124-item population accounting, 3,367-item recovered corpus, 1,757-item explicit gap, complete recovered short-link disposition, campaign markers, outbound-versus-incoming separation, repost-source lower bounds, held counters, and privacy tests", "NYC Artist Coalition authored-mention ledger", "Urbanhermit 434-of-434 live-profile reconciliation, aggregate-only public mutation, 321-link inventory, mission-signal manifest, bounded stakeholder sample, selected source maturation, held counters, and no-route decision", "WOW List provenance and support evidence", "KC Town Hall 183-item full-population ledger, 133-link inventory, public-reposter audit, direct-response floor, metric ownership, and privacy-mutation tests", "KC Spaces Fund held outcome inventory", "account-establishment research hold", "exact-route portfolio projections"],
+      "repairPolicy": "Repair the ledger or lifecycle layer before changing public copy. Deduplicate people across interaction types, use lower-bound language, record missing-data limits, keep account establishment separate from post authorship, and project only the finding that reduces reader burden for the selected audience.",
+      "antiGaming": "Do not pass through follower totals, search-result volume, or engagement language alone. Do not count outreach by the project as incoming engagement, add authored interactions twice, infer likes, treat a repost as endorsement, assign a shared post to Jamie, or turn not recovered into never existed."
+    }
+  ]
+}

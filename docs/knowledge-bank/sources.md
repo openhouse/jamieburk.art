@@ -23,14 +23,36 @@ Approved public artifact examples for this launch pass include:
 - Harry J. Epstein Company public website.
 - CallNYC public GitHub repository.
 - CallNYC archived Politico New York PDF.
+- The archived December 2016 `popular.vote` surface, the surviving Call Script
+  page, and the complete surviving public discussion for the January 27, 2017
+  DCLA event. Together they support a bounded civic-tool-to-coalition operating
+  sequence, not sole authorship, attendance, a poll vote total, or causality.
+- Official 2017 DCLA and New York City Council records: Finkelpearl's Cultural
+  Plan testimony, the Fiscal 2018 Executive Budget hearing, the comprehensive
+  cultural-plan hearing, DCLA's CreateNYC NYC Artists page, Espinal's June 21
+  stated-meeting remarks, the September 14 Intro 1652 hearing, and the Intro
+  1652 legislative record. These establish public statements, participation,
+  and sequence, not private motive or a measured causal share.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- KC Spaces Fund Facebook surviving-feed public-safe corpus, independently testable opaque acquisition control, and protected authenticated traversal, reviewed July 16, 2026.
+- The Kansas City Star's April 2020 COVID-19 giving guide and the close-read Oddities Prints MAPE partner-fundraising page.
+- Protected AI-assisted archival review of KC Spaces Fund code, deployment, launch, domain, and public-identity records; use as evidence, not a human collaborator testimonial.
+- KC Town Hall's complete surviving 183-record public social ledger, which
+  stores public metadata, bounded summaries, classifications, and content
+  digests without raw post text or resident contact details.
 
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
+
+Protected project records used in this pass include a read-only July 2017 WOW
+List production snapshot and a Sunday Dinner working ledger. Public-safe
+summaries may preserve chronology and numbered project history. Raw database
+rows, user records, participant names, contact details, response markers,
+formulas, and file locators remain excluded.
 
 ### AI-Assisted Archival Review
 
@@ -69,3 +91,33 @@ collaborators approve.
 - unapproved photos;
 - private financial records;
 - private personal records.
+
+## WOW List Facebook Posts
+
+The [full-population report](projects/wowlist-facebook-posts.md) and
+[57-row public-safe fixture](../../apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json)
+keep three evidence jobs distinct:
+
+- a protected terminal 19-page capture establishes the recovered 57-record
+  population, chronology, source relationships, and posted-URL inputs;
+- an authenticated manager-only audit gives all 57 identities a live and
+  publisher-attribution disposition; and
+- the public-safe fixture exposes population arithmetic, classifications,
+  public routes, selected organization source names, and protected-input
+  digests without publishing raw messages, comments, contacts, ordinary
+  individual source-account names, administration state, or local paths.
+
+`SRC-WOWLIST-FACEBOOK-PUBLISHER-AUDIT-2026-07-15` supports a 51-record Jamie
+publisher-attribution result. It does not resolve the remaining six records or
+establish sole ownership, attached-source authorship, or cross-platform social
+management. A fresh bidirectional live-page control recovered 53 exact
+message-bearing records in each direction after ten terminal no-growth checks.
+That control corroborates the current live population but does not replace the
+four no-message records in the protected owner-post capture.
+
+Selected close-read sources include East Bay Express on Ghost Ship and safe
+underground spaces, Willamette Week on The Know's closure, pehrspace's public
+relocation fundraiser, Denver Westword on DIY-space funding, and existing Meow
+Wolf and participant-tutorial records. These establish the account's source
+trail and context, not reciprocal endorsement or outcomes caused by a WOW List
+post.

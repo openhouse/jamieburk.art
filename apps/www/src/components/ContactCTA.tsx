@@ -13,8 +13,8 @@ export function ContactCTA() {
         collaboration.
       </p>
       <div className="mt-5 flex flex-wrap gap-3">
-        <JBButton href="/resume" variant="secondary">
-          Download resume
+        <JBButton href={site.resumePath} variant="secondary" download>
+          Download resume PDF
         </JBButton>
         <JBButton href={site.emailHref}>
           Email Jamie

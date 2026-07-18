@@ -12,9 +12,18 @@
   context.
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
+- [ ] `npm run check:nycartc-corpus` reproduces the governed NYC Artist
+  Coalition corpus and hashes.
+- [ ] `npm run evals:nycartc-x` passes population, source-positioning,
+  shared-authorship, privacy, and projection-discipline checks.
+- [ ] `npm run check:urbanhermit-corpus` and `npm run evals:urbanhermit-x`
+  reproduce the 434-record census, aggregate-only privacy boundary, source
+  maturation, stakeholder limits, and no-route decision.
+- [ ] `npm run evals:nycac-facebook-events` reproduces the 34-slot accounting,
+  33-record census, role guardrails, response semantics, and privacy boundary.
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
-- [ ] Jamie approves resume PDF and phone-in-PDF behavior.
+- [x] Jamie approves resume PDF and phone-in-PDF behavior.
 - [ ] Jamie approves proof metrics.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.

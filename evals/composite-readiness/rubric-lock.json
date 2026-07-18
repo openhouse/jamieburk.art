@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "rubricId": "composite-readiness-v1",
+  "sha256": "522af9c2ad28f3c06ab6ff246b6c2b6cba8d6b9a1ccb2cf04e99e22e2cd505af",
+  "frozenAtStartRevision": "5b0cbcd1a7f913d2281c671e46903ad997a743f5",
+  "frozenAt": "2026-07-16",
+  "changeRule": "A material rubric defect requires a new rubric version, written rationale, new lock, and new baseline. The optimizing agent may not edit this rubric during the v1 run."
+}

@@ -1,0 +1,1436 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15",
+  "project": "WOW List",
+  "surface": "Facebook page posts",
+  "platform": "facebook",
+  "corpusId": "wowlist-facebook-owner-posts-2026-07-15",
+  "publicSafety": {
+    "status": "public-safe-project-account-census",
+    "included": "All 57 recovered project-post identities, dates, public post routes, content-relationship classifications, manager-attribution dispositions, mission and stakeholder-group labels, selected organization source names, and public posted URLs.",
+    "excluded": "Raw post bodies, comments, commenter identities, reactions, phone numbers, email addresses, ordinary individual source-account names, private Google document routes, account IDs, administration details, local paths, cookies, and authenticated-session state.",
+    "rawCaptureLocation": "protected pointer outside the public repository",
+    "reason": "The public ledger proves full-population review and supports source-backed professional claims without republishing conversation, contact, or account-administration data."
+  },
+  "populationReconciliation": {
+    "protectedCapturePageCount": 19,
+    "protectedCaptureTerminal": true,
+    "protectedCaptureUniqueRecordCount": 57,
+    "publicCensusRecordCount": 57,
+    "recordsReviewedPercent": 100,
+    "firstPublishedAt": "2015-04-25T12:48:33.000Z",
+    "lastPublishedAt": "2018-03-23T03:39:09.000Z",
+    "recordsByYear": {
+      "2015": 22,
+      "2016": 27,
+      "2017": 7,
+      "2018": 1
+    },
+    "protectedRecordSetSha256": "bfd2e181265ed8df43f028604f92c2488fc78a3f093d2493c0c418cd6c716ca1",
+    "boundary": "This is complete disposition of the 57 posts recovered through a terminal 19-page owner-post capture. It is not a native Meta owner export and cannot establish that no older post was deleted, withheld, or omitted before capture."
+  },
+  "livePublisherAudit": {
+    "reviewedRecordCount": 57,
+    "availablePostCount": 54,
+    "unavailablePostCount": 3,
+    "jamieAttributedPostCount": 51,
+    "otherPublisherAttributedPostCount": 0,
+    "attributionNotRecoveredCount": 6,
+    "protectedAuditSetSha256": "67a2f7088c69c400d8491977b97ba25eb4d1967f7ee579ed53cf2bd1f2b15f2d",
+    "evidence": "Facebook's manager-only post detail interface displayed 'Published by Jamie Burkart' on 51 records. No reviewed record displayed another publisher. Three unavailable post wrappers and three video redirects did not yield publisher attribution.",
+    "boundary": "Manager attribution is strong evidence of Facebook publishing responsibility across this recovered corpus. It does not establish sole ownership of WOW List, authorship of every attached source statement, or management of every social platform and cannot resolve the six unattributed records."
+  },
+  "publishingPattern": {
+    "relationshipCounts": {
+      "media-or-link-without-message": 4,
+      "page-authored-commentary": 32,
+      "page-commentary-with-shared-source": 12,
+      "shared-source-only": 9
+    },
+    "recordsWithPageAuthoredCommentary": 44,
+    "recordsWithAttachedSharedSource": 21,
+    "recordsWithoutMessageText": 4,
+    "missionThemeCounts": {
+      "civic-and-cultural-advocacy": 9,
+      "diy-cultural-space-sustainability": 19,
+      "event-discovery-and-circulation": 34,
+      "mutual-aid-and-solidarity": 17,
+      "peer-learning-and-documentation": 12,
+      "product-onboarding-and-contribution": 21
+    },
+    "stakeholderGroupCounts": {
+      "arts-and-civic-organizations": 7,
+      "community-contributors-and-organizers": 26,
+      "diy-cultural-spaces-and-networks": 16,
+      "movement-and-mutual-aid-publics": 10,
+      "public-media-and-documentarians": 7
+    },
+    "recurringFunctions": [
+      "onboard contributors into a shared event-publishing workflow",
+      "circulate independent events, tours, and community calendars",
+      "connect organizers to peer knowledge, tools, and public resources",
+      "support DIY cultural spaces through fundraising and continuity moments",
+      "carry mutual-aid, safety, and solidarity information during crises",
+      "extend cultural-space infrastructure into civic and policy advocacy"
+    ],
+    "boundary": "The classifications describe what the account published or redistributed. They do not assign authorship of attached source material, establish reciprocal endorsement, measure audience conversion, or prove outcomes caused by a post."
+  },
+  "postedUrlInventory": {
+    "recordsWithPublicUrls": 54,
+    "publicUrlOccurrences": 73,
+    "distinctNormalizedPublicUrls": 65,
+    "distinctWowListRouteUrls": 36,
+    "distinctExternalPublicUrls": 29,
+    "withheldRouteOccurrences": 1,
+    "publicUrls": [
+      "http://benbiersmith.com/noelevator.html",
+      "http://dodiy.org",
+      "http://foxla.com/news/local-news/217378179-story",
+      "http://grasstronaut.com/2015/09/03/the-baltimore-who-do-it-list",
+      "http://helptagon.better.space",
+      "http://m.eastbayexpress.com/SevenDays/archives/2016/12/03/artists-at-last-nights-oakland-warehouse-fire-discuss-the-tragedy-those-missing-need-for-safe-underground-spaces",
+      "http://nycartc.com/speakout",
+      "http://phxdiy.com",
+      "http://popular.vote",
+      "http://saferspac.es",
+      "http://sbdiy.org",
+      "http://seattlediy.org",
+      "http://silentbarn.org/2015/09/fire-aftermath",
+      "http://silentbarn.org/donate",
+      "http://thisusedtobe.us/2016/12/12/essay-by-luke-leavitt",
+      "http://westword.com/arts/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025",
+      "http://wowlist.org/join",
+      "http://wowlist.org/pinkyswear",
+      "http://wweek.com/bars/2016/07/01/the-know-is-closing",
+      "https://alliedmedia.org/news/2016/06/28/amp-hiring-development-associate",
+      "https://gofundme.com/pehrspace",
+      "https://ijiiji.bandcamp.com",
+      "https://indiegogo.com/projects/get-orange-county-diy-a-permanent-home",
+      "https://kickstarter.com/projects/sheastadiumbk/bring-back-shea-stadium",
+      "https://meowwolf.com/2016/12/meow-wolfs-diy-fund",
+      "https://meowwolf.com/diy",
+      "https://patreon.com/neilcampau",
+      "https://razoo.com/us/story/Trunk-Space-Opening",
+      "https://wowlist.org",
+      "https://wowlist.org/PhxDIY/join",
+      "https://wowlist.org/RichardAlbum/events/24160/basement-family--ohtis--richard-album--anna-burch",
+      "https://wowlist.org/SeattleDIY/events/23270/6th-annual-short-run-comix-festival",
+      "https://wowlist.org/TorreyPines",
+      "https://wowlist.org/chicagoart",
+      "https://wowlist.org/chicagoart/join",
+      "https://wowlist.org/chidiy",
+      "https://wowlist.org/desertdip",
+      "https://wowlist.org/downwithtrump",
+      "https://wowlist.org/dozerdances",
+      "https://wowlist.org/events/18489/help-silent-barn-recover-from-their-recent-fire-donate-httpsilentbarnorgdonate",
+      "https://wowlist.org/events/18549/wow-list-site-design",
+      "https://wowlist.org/helptagon/events/18493/the-big-shlep-fire-recovery-dumpster-loading",
+      "https://wowlist.org/iowacitydiy",
+      "https://wowlist.org/join",
+      "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees",
+      "https://wowlist.org/ladiy/events/22855/margot-pauline--pamela_-and-her-sons--sofia-reta--kevin-greenspon",
+      "https://wowlist.org/ladiy/join",
+      "https://wowlist.org/pacificnature",
+      "https://wowlist.org/pacificnature/join",
+      "https://wowlist.org/popularvote/events/25863/art-hero-email-template",
+      "https://wowlist.org/punksandcriminals",
+      "https://wowlist.org/rapidpulse",
+      "https://wowlist.org/richardkatyspringtour",
+      "https://wowlist.org/sbdiy",
+      "https://wowlist.org/seattlediy/join",
+      "https://wowlist.org/silentbarn",
+      "https://wowlist.org/sylvanannex",
+      "https://wowlist.org/sylvanannex/join",
+      "https://wowlist.org/theyellowdress",
+      "https://wowlist.org/theyellowdress/join",
+      "https://wowlist.org/waterislife",
+      "https://wowlist.org/womensmarch",
+      "https://youcaring.com/firevictimsofoaklandfiredec232016-706684",
+      "https://youtu.be/nQg47LtixPI",
+      "https://youtube.com/watch?v=g7zIdDeRVjU"
+    ],
+    "boundary": "A posted URL establishes account publication or redistribution, not authorship, endorsement, readership, participation, or impact. One Google document route remains withheld pending a separate public-safety review."
+  },
+  "engagementBoundary": {
+    "postLevelInteractionTotalsRecovered": false,
+    "managementSurfaceCoverage": "Meta Business Suite labeled its Lifetime content view as March 31, 2019 through July 14, 2026, after this 2015-2018 corpus, and displayed no activity in that later range.",
+    "boundary": "The later management-surface zero-state does not mean the 57 earlier posts did not exist. Neither the protected capture nor the complete live audit supplied a stable full-population reaction, comment, share, reach, or audience-identity dataset."
+  },
+  "records": [
+    {
+      "populationSlot": "RECOVERED-001",
+      "postId": "384399728433507",
+      "postUrl": "https://www.facebook.com/wowlist/posts/384399728433507",
+      "publishedAt": "2015-04-25T12:48:33.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "arts-and-civic-organizations"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-002",
+      "postId": "389058464634300",
+      "postUrl": "https://www.facebook.com/wowlist/posts/389058464634300",
+      "publishedAt": "2015-05-11T16:28:05.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/chidiy"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-003",
+      "postId": "389607387912741",
+      "postUrl": "https://www.facebook.com/wowlist/posts/389607387912741",
+      "publishedAt": "2015-05-13T16:41:30.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/desertdip"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-004",
+      "postId": "396324050574408",
+      "postUrl": "https://www.facebook.com/wowlist/posts/396324050574408",
+      "publishedAt": "2015-05-29T20:50:47.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/punksandcriminals",
+        "http://dodiy.org"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-005",
+      "postId": "398906853649461",
+      "postUrl": "https://www.facebook.com/wowlist/posts/398906853649461",
+      "publishedAt": "2015-06-04T17:33:30.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/rapidpulse"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-006",
+      "postId": "405879632952183",
+      "postUrl": "https://www.facebook.com/wowlist/posts/405879632952183",
+      "publishedAt": "2015-06-24T21:14:14.000Z",
+      "relationship": "media-or-link-without-message",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://patreon.com/neilcampau"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-007",
+      "postId": "406264956246984",
+      "postUrl": "https://www.facebook.com/wowlist/posts/406264956246984",
+      "publishedAt": "2015-06-25T16:49:15.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/dozerdances"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-008",
+      "postId": "406350326238447",
+      "postUrl": "https://www.facebook.com/wowlist/posts/406350326238447",
+      "publishedAt": "2015-06-25T20:45:39.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/theyellowdress/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-009",
+      "postId": "422738701266276",
+      "postUrl": "https://www.facebook.com/wowlist/posts/422738701266276",
+      "publishedAt": "2015-08-14T12:25:14.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://youtu.be/nQg47LtixPI",
+        "https://wowlist.org/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-010",
+      "postId": "422801284593351",
+      "postUrl": "https://www.facebook.com/wowlist/posts/422801284593351",
+      "publishedAt": "2015-08-14T16:35:57.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/iowacitydiy",
+        "https://wowlist.org/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-011",
+      "postId": "425723747634438",
+      "postUrl": "https://www.facebook.com/wowlist/posts/425723747634438",
+      "publishedAt": "2015-08-22T14:58:25.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/sylvanannex",
+        "https://wowlist.org/sylvanannex/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-012",
+      "postId": "430461273827352",
+      "postUrl": "https://www.facebook.com/wowlist/posts/430461273827352",
+      "publishedAt": "2015-09-03T16:31:00.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "public-media-and-documentarians"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://grasstronaut.com/2015/09/03/the-baltimore-who-do-it-list"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-013",
+      "postId": "433959393477540",
+      "postUrl": "https://www.facebook.com/wowlist/posts/433959393477540",
+      "publishedAt": "2015-09-14T15:40:07.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://seattlediy.org",
+        "https://wowlist.org/seattlediy/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-014",
+      "postId": "435109090029237",
+      "postUrl": "https://www.facebook.com/wowlist/posts/435109090029237",
+      "publishedAt": "2015-09-18T14:27:19.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution"
+      ],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/chicagoart",
+        "https://wowlist.org/chicagoart/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-015",
+      "postId": "438721293001350",
+      "postUrl": "https://www.facebook.com/wowlist/posts/438721293001350",
+      "publishedAt": "2015-10-01T00:28:01.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation",
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks",
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/events/18489/help-silent-barn-recover-from-their-recent-fire-donate-httpsilentbarnorgdonate",
+        "http://silentbarn.org/donate",
+        "http://helptagon.better.space",
+        "http://silentbarn.org/2015/09/fire-aftermath",
+        "https://wowlist.org/silentbarn",
+        "https://wowlist.org/helptagon/events/18493/the-big-shlep-fire-recovery-dumpster-loading"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-016",
+      "postId": "439926419547504",
+      "postUrl": "https://www.facebook.com/wowlist/posts/439926419547504",
+      "publishedAt": "2015-10-05T20:58:35.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-017",
+      "postId": "440608412812638",
+      "postUrl": "https://www.facebook.com/wowlist/posts/440608412812638",
+      "publishedAt": "2015-10-08T16:40:15.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://indiegogo.com/projects/get-orange-county-diy-a-permanent-home"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-018",
+      "postId": "443131052560374",
+      "postUrl": "https://www.facebook.com/wowlist/posts/443131052560374",
+      "publishedAt": "2015-10-17T17:55:58.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/events/18549/wow-list-site-design"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-019",
+      "postId": "447543708785775",
+      "postUrl": "https://www.facebook.com/wowlist/posts/447543708785775",
+      "publishedAt": "2015-11-04T20:17:45.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/theyellowdress",
+        "https://wowlist.org/theyellowdress/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-020",
+      "postId": "449839565222856",
+      "postUrl": "https://www.facebook.com/wowlist/posts/449839565222856",
+      "publishedAt": "2015-11-13T18:10:46.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://wowlist.org/pinkyswear"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-021",
+      "postId": "450595671813912",
+      "postUrl": "https://www.facebook.com/wowlist/posts/450595671813912",
+      "publishedAt": "2015-11-16T17:08:06.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation",
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://wowlist.org/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-022",
+      "postId": "450622238477922",
+      "postUrl": "https://www.facebook.com/wowlist/posts/450622238477922",
+      "publishedAt": "2015-11-16T19:07:29.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/ladiy/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-023",
+      "postId": "515811585292320",
+      "postUrl": "https://www.facebook.com/wowlist/posts/515811585292320",
+      "publishedAt": "2016-05-23T20:43:59.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-video-redirect",
+      "publisherAttribution": "not-recovered",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation",
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/join",
+        "http://wowlist.org/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Publisher attribution was not recovered; no other publisher was displayed."
+    },
+    {
+      "populationSlot": "RECOVERED-024",
+      "postId": "515826801957465",
+      "postUrl": "https://www.facebook.com/wowlist/posts/515826801957465",
+      "publishedAt": "2016-05-23T22:15:51.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://phxdiy.com",
+        "https://wowlist.org/PhxDIY/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-025",
+      "postId": "522381004635378",
+      "postUrl": "https://www.facebook.com/wowlist/posts/522381004635378",
+      "publishedAt": "2016-06-09T19:49:05.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "public-media-and-documentarians"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://benbiersmith.com/noelevator.html"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-026",
+      "postId": "522920754581403",
+      "postUrl": "https://www.facebook.com/wowlist/posts/522920754581403",
+      "publishedAt": "2016-06-11T02:32:13.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks",
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [
+        "pehrspace"
+      ],
+      "publicUrls": [
+        "https://gofundme.com/pehrspace"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-027",
+      "postId": "529370927269719",
+      "postUrl": "https://www.facebook.com/wowlist/posts/529370927269719",
+      "publishedAt": "2016-06-28T20:37:56.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "unavailable",
+      "publisherAttribution": "not-recovered",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation",
+        "diy-cultural-space-sustainability"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/ladiy/events/22855/margot-pauline--pamela_-and-her-sons--sofia-reta--kevin-greenspon"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Publisher attribution was not recovered; no other publisher was displayed."
+    },
+    {
+      "populationSlot": "RECOVERED-028",
+      "postId": "529378613935617",
+      "postUrl": "https://www.facebook.com/wowlist/posts/529378613935617",
+      "publishedAt": "2016-06-28T21:13:28.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation",
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/sbdiy",
+        "http://sbdiy.org",
+        "https://wowlist.org/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-029",
+      "postId": "529669663906512",
+      "postUrl": "https://www.facebook.com/wowlist/posts/529669663906512",
+      "publishedAt": "2016-06-29T17:46:50.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity",
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "arts-and-civic-organizations"
+      ],
+      "publicOrganizationSources": [
+        "Allied Media Projects"
+      ],
+      "publicUrls": [
+        "https://alliedmedia.org/news/2016/06/28/amp-hiring-development-associate"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-030",
+      "postId": "529797787227033",
+      "postUrl": "https://www.facebook.com/wowlist/posts/529797787227033",
+      "publishedAt": "2016-06-30T02:32:43.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [
+        "Pacific Nature Presents"
+      ],
+      "publicUrls": [
+        "https://wowlist.org/pacificnature",
+        "https://wowlist.org/pacificnature/join"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-031",
+      "postId": "531156430424502",
+      "postUrl": "https://www.facebook.com/wowlist/posts/531156430424502",
+      "publishedAt": "2016-07-03T21:34:06.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability",
+        "civic-and-cultural-advocacy"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://wweek.com/bars/2016/07/01/the-know-is-closing"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-032",
+      "postId": "572320439641434",
+      "postUrl": "https://www.facebook.com/wowlist/posts/572320439641434",
+      "publishedAt": "2016-10-11T13:55:32.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-video-redirect",
+      "publisherAttribution": "not-recovered",
+      "missionThemes": [
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/RichardAlbum/events/24160/basement-family--ohtis--richard-album--anna-burch"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Publisher attribution was not recovered; no other publisher was displayed."
+    },
+    {
+      "populationSlot": "RECOVERED-033",
+      "postId": "574129079460570",
+      "postUrl": "https://www.facebook.com/wowlist/posts/574129079460570",
+      "publishedAt": "2016-10-15T14:11:35.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "unavailable",
+      "publisherAttribution": "not-recovered",
+      "missionThemes": [
+        "event-discovery-and-circulation",
+        "diy-cultural-space-sustainability"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/TorreyPines"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Publisher attribution was not recovered; no other publisher was displayed."
+    },
+    {
+      "populationSlot": "RECOVERED-034",
+      "postId": "575941009279377",
+      "postUrl": "https://www.facebook.com/wowlist/posts/575941009279377",
+      "publishedAt": "2016-10-19T10:55:53.000Z",
+      "relationship": "shared-source-only",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://razoo.com/us/story/Trunk-Space-Opening"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-035",
+      "postId": "584845425055602",
+      "postUrl": "https://www.facebook.com/wowlist/posts/584845425055602",
+      "publishedAt": "2016-11-05T15:33:35.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/SeattleDIY/events/23270/6th-annual-short-run-comix-festival"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-036",
+      "postId": "586893981517413",
+      "postUrl": "https://www.facebook.com/wowlist/posts/586893981517413",
+      "publishedAt": "2016-11-09T21:15:54.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation",
+        "mutual-aid-and-solidarity",
+        "civic-and-cultural-advocacy"
+      ],
+      "stakeholderGroups": [
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/downwithtrump"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-037",
+      "postId": "589231931283618",
+      "postUrl": "https://www.facebook.com/wowlist/posts/589231931283618",
+      "publishedAt": "2016-11-15T04:16:07.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation",
+        "mutual-aid-and-solidarity",
+        "civic-and-cultural-advocacy"
+      ],
+      "stakeholderGroups": [
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://popular.vote"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-038",
+      "postId": "589463604593784",
+      "postUrl": "https://www.facebook.com/wowlist/posts/589463604593784",
+      "publishedAt": "2016-11-15T17:37:06.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation",
+        "mutual-aid-and-solidarity",
+        "civic-and-cultural-advocacy"
+      ],
+      "stakeholderGroups": [
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/waterislife"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-039",
+      "postId": "589905124549632",
+      "postUrl": "https://www.facebook.com/wowlist/posts/589905124549632",
+      "publishedAt": "2016-11-16T15:21:49.000Z",
+      "relationship": "shared-source-only",
+      "liveDisposition": "available-video-redirect",
+      "publisherAttribution": "not-recovered",
+      "missionThemes": [
+        "mutual-aid-and-solidarity",
+        "civic-and-cultural-advocacy"
+      ],
+      "stakeholderGroups": [
+        "public-media-and-documentarians",
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [
+        "FOX 11 Los Angeles"
+      ],
+      "publicUrls": [
+        "http://foxla.com/news/local-news/217378179-story"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Publisher attribution was not recovered; no other publisher was displayed."
+    },
+    {
+      "populationSlot": "RECOVERED-040",
+      "postId": "592336194306525",
+      "postUrl": "https://www.facebook.com/wowlist/posts/592336194306525",
+      "publishedAt": "2016-11-21T17:30:58.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "mutual-aid-and-solidarity"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://ijiiji.bandcamp.com"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-041",
+      "postId": "598119190394892",
+      "postUrl": "https://www.facebook.com/wowlist/posts/598119190394892",
+      "publishedAt": "2016-12-04T01:50:05.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity"
+      ],
+      "stakeholderGroups": [
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://youcaring.com/firevictimsofoaklandfiredec232016-706684"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-042",
+      "postId": "598204300386381",
+      "postUrl": "https://www.facebook.com/wowlist/posts/598204300386381",
+      "publishedAt": "2016-12-04T07:19:17.000Z",
+      "relationship": "shared-source-only",
+      "liveDisposition": "unavailable",
+      "publisherAttribution": "not-recovered",
+      "missionThemes": [
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [],
+      "withheldUrlCount": 0,
+      "note": "Publisher attribution was not recovered; no other publisher was displayed."
+    },
+    {
+      "populationSlot": "RECOVERED-043",
+      "postId": "598204937052984",
+      "postUrl": "https://www.facebook.com/wowlist/posts/598204937052984",
+      "publishedAt": "2016-12-04T07:24:15.000Z",
+      "relationship": "shared-source-only",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity",
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://m.eastbayexpress.com/SevenDays/archives/2016/12/03/artists-at-last-nights-oakland-warehouse-fire-discuss-the-tragedy-those-missing-need-for-safe-underground-spaces"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-044",
+      "postId": "599384950268316",
+      "postUrl": "https://www.facebook.com/wowlist/posts/599384950268316",
+      "publishedAt": "2016-12-06T17:52:15.000Z",
+      "relationship": "media-or-link-without-message",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability"
+      ],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://saferspac.es"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-045",
+      "postId": "599802690226542",
+      "postUrl": "https://www.facebook.com/wowlist/posts/599802690226542",
+      "publishedAt": "2016-12-07T15:11:32.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [],
+      "stakeholderGroups": [
+        "public-media-and-documentarians"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://youtube.com/watch?v=g7zIdDeRVjU"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-046",
+      "postId": "602887726584705",
+      "postUrl": "https://www.facebook.com/wowlist/posts/602887726584705",
+      "publishedAt": "2016-12-13T05:19:56.000Z",
+      "relationship": "media-or-link-without-message",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "public-media-and-documentarians"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [],
+      "withheldUrlCount": 1,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-047",
+      "postId": "603121939894617",
+      "postUrl": "https://www.facebook.com/wowlist/posts/603121939894617",
+      "publishedAt": "2016-12-13T17:20:15.000Z",
+      "relationship": "media-or-link-without-message",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "public-media-and-documentarians"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://thisusedtobe.us/2016/12/12/essay-by-luke-leavitt"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-048",
+      "postId": "604041746469303",
+      "postUrl": "https://www.facebook.com/wowlist/posts/604041746469303",
+      "publishedAt": "2016-12-15T17:40:12.000Z",
+      "relationship": "shared-source-only",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity",
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks",
+        "arts-and-civic-organizations"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://meowwolf.com/2016/12/meow-wolfs-diy-fund"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-049",
+      "postId": "604149446458533",
+      "postUrl": "https://www.facebook.com/wowlist/posts/604149446458533",
+      "publishedAt": "2016-12-15T22:12:07.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation",
+        "diy-cultural-space-sustainability"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/popularvote/events/25863/art-hero-email-template"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-050",
+      "postId": "616983925175085",
+      "postUrl": "https://www.facebook.com/wowlist/posts/616983925175085",
+      "publishedAt": "2017-01-13T20:37:43.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation",
+        "mutual-aid-and-solidarity",
+        "civic-and-cultural-advocacy"
+      ],
+      "stakeholderGroups": [
+        "movement-and-mutual-aid-publics"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/womensmarch"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-051",
+      "postId": "623352527871558",
+      "postUrl": "https://www.facebook.com/wowlist/posts/623352527871558",
+      "publishedAt": "2017-01-26T17:25:31.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation",
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity"
+      ],
+      "stakeholderGroups": [],
+      "publicOrganizationSources": [],
+      "publicUrls": [],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-052",
+      "postId": "642655592607918",
+      "postUrl": "https://www.facebook.com/wowlist/posts/642655592607918",
+      "publishedAt": "2017-03-09T23:01:49.000Z",
+      "relationship": "page-authored-commentary",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation",
+        "diy-cultural-space-sustainability",
+        "civic-and-cultural-advocacy"
+      ],
+      "stakeholderGroups": [
+        "diy-cultural-spaces-and-networks",
+        "arts-and-civic-organizations",
+        "public-media-and-documentarians"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://westword.com/arts/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025",
+        "https://meowwolf.com/diy"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-053",
+      "postId": "645446255662185",
+      "postUrl": "https://www.facebook.com/wowlist/posts/645446255662185",
+      "publishedAt": "2017-03-15T19:14:23.000Z",
+      "relationship": "shared-source-only",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation",
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity",
+        "civic-and-cultural-advocacy",
+        "peer-learning-and-documentation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "arts-and-civic-organizations"
+      ],
+      "publicOrganizationSources": [
+        "NYC Artist Coalition"
+      ],
+      "publicUrls": [
+        "https://meowwolf.com/diy"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-054",
+      "postId": "648642558675888",
+      "postUrl": "https://www.facebook.com/wowlist/posts/648642558675888",
+      "publishedAt": "2017-03-22T14:43:04.000Z",
+      "relationship": "shared-source-only",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation",
+        "diy-cultural-space-sustainability"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "diy-cultural-spaces-and-networks",
+        "arts-and-civic-organizations"
+      ],
+      "publicOrganizationSources": [
+        "NYC Artist Coalition"
+      ],
+      "publicUrls": [
+        "https://kickstarter.com/projects/sheastadiumbk/bring-back-shea-stadium"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-055",
+      "postId": "661430584063752",
+      "postUrl": "https://www.facebook.com/wowlist/posts/661430584063752",
+      "publishedAt": "2017-04-14T14:10:02.000Z",
+      "relationship": "shared-source-only",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "https://wowlist.org/richardkatyspringtour"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-056",
+      "postId": "702379893302154",
+      "postUrl": "https://www.facebook.com/wowlist/posts/702379893302154",
+      "publishedAt": "2017-07-03T17:10:56.000Z",
+      "relationship": "page-commentary-with-shared-source",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "diy-cultural-space-sustainability",
+        "mutual-aid-and-solidarity",
+        "civic-and-cultural-advocacy"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "arts-and-civic-organizations"
+      ],
+      "publicOrganizationSources": [
+        "NYC Artist Coalition"
+      ],
+      "publicUrls": [
+        "http://nycartc.com/speakout"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    },
+    {
+      "populationSlot": "RECOVERED-057",
+      "postId": "826673707539438",
+      "postUrl": "https://www.facebook.com/wowlist/posts/826673707539438",
+      "publishedAt": "2018-03-23T03:39:09.000Z",
+      "relationship": "shared-source-only",
+      "liveDisposition": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "missionThemes": [
+        "product-onboarding-and-contribution",
+        "event-discovery-and-circulation"
+      ],
+      "stakeholderGroups": [
+        "community-contributors-and-organizers",
+        "diy-cultural-spaces-and-networks"
+      ],
+      "publicOrganizationSources": [],
+      "publicUrls": [
+        "http://phxdiy.com",
+        "https://wowlist.org"
+      ],
+      "withheldUrlCount": 0,
+      "note": "Manager-only interface attribution displayed 'Published by Jamie Burkart' during the July 15, 2026 review."
+    }
+  ]
+}

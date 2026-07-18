@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Prof Margaret Morse Lens scorecard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evalId", "evaluatedAt", "evaluator", "revision", "pagesReviewed", "criteria", "releaseRecommendation"],
+  "properties": {
+    "evalId": { "type": "string", "const": "margaret-morse-lens-v1" },
+    "evaluatedAt": { "type": "string" },
+    "evaluator": { "type": "string", "minLength": 1 },
+    "revision": { "type": "string", "minLength": 1 },
+    "pagesReviewed": { "type": "array", "minItems": 6, "items": { "type": "string" } },
+    "criteria": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "score", "confidence", "dimensionFindings", "evidence", "mostImportantFailure", "repair", "repairLayer", "antiGamingCheck"],
+        "properties": {
+          "id": { "type": "string", "const": "margaret-morse-lens" },
+          "score": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "confidence": { "enum": ["low", "medium", "high"] },
+          "dimensionFindings": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["embodiedInquiry", "artLifeContinuity", "hospitalityParticipation", "mediaMemoryAttention", "irreducibleHumanValue", "accessiblePublicFace"],
+            "properties": {
+              "embodiedInquiry": { "type": "string", "minLength": 1 },
+              "artLifeContinuity": { "type": "string", "minLength": 1 },
+              "hospitalityParticipation": { "type": "string", "minLength": 1 },
+              "mediaMemoryAttention": { "type": "string", "minLength": 1 },
+              "irreducibleHumanValue": { "type": "string", "minLength": 1 },
+              "accessiblePublicFace": { "type": "string", "minLength": 1 }
+            }
+          },
+          "evidence": { "type": "array", "minItems": 6, "items": { "type": "string" } },
+          "mostImportantFailure": { "type": ["string", "null"] },
+          "repair": { "type": "string", "minLength": 1 },
+          "repairLayer": { "type": "array", "minItems": 1, "items": { "enum": ["knowledge-bank", "website", "artifact", "infrastructure", "human-approval", "none"] } },
+          "antiGamingCheck": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "releaseRecommendation": { "enum": ["iterate", "criterion-met"] }
+  }
+}

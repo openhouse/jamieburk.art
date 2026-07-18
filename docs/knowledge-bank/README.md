@@ -35,6 +35,8 @@ The knowledge bank exists to:
   `apps/www/src/data/knowledge-bank/records.ts`.
 - **Structured proof data:** broader professional claim layer in
   `apps/www/src/data/proofs.ts`.
+- **Proof surface manifests:** Jamie-approved, audience-specific selections for
+  each public proof destination in `lifecycle-records.ts`.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
@@ -60,6 +62,141 @@ usable, what Jamie did, and what boundary remains protected.
 For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
 
-See [citational-care.md](citational-care.md) for the authoring and validation
-workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
-pilot.
+See [knowledge-lifecycle.md](knowledge-lifecycle.md) for intake, research,
+promotion, retrieval, and visual-feedback operations;
+[citational-care.md](citational-care.md) for public citation authoring; and
+[projects/callnyc.md](projects/callnyc.md) for the first complete citation pilot.
+
+Research runs may also leave a human-readable public-safe map under `research/`.
+The [portfolio blind-spot ledger](blind-spots.md) governs collaborator
+corroboration, contemporary implementation proof, unfamiliar-reader testing,
+visual rights, source maturation, outcome evidence, and audience-specific
+application briefs. Run `npm run evals:blind-spots` to verify that unresolved
+external work remains explicit rather than being converted into false closure.
+
+The [Prof Margaret Morse Lens](margaret-morse-lens.md) preserves embodied
+inquiry, art/life continuity, hospitality, attention, and human value without
+turning the hiring path into a retrospective. The
+[Prof Warren Sack Lens](warren-sack-lens.md) tests recursive social inference,
+source-backed reasoning, theory-to-prototype movement, interfaces for action,
+and collective architecture. Run
+`npm run eval:margaret-morse-lens -- --profile fast` and
+`npm run eval:warren-sack-lens -- --profile fast` while editing.
+
+The [July 13 ten-source ingestion](research/2026-07-13-ten-source-ingestion.md)
+shows how new sources become observations, bounded claims, research questions,
+and selective exact-surface projections.
+
+The [July 15 project social-media archival production inventory](research/2026-07-15-project-social-media-archive-production.md)
+records the recovered account registry, authenticated collection methods,
+named public engagement ledgers, lower-bound counts, collective-authorship
+limits, held role claims, and selective portfolio projection. Its
+[redacted population fixture](fixtures/social-account-populations.json) lets CI
+recompute the CallNYC and NYC Artist Coalition Council-member floors and the
+CallNYC, WOW List, KC Town Hall, and KC Spaces Fund population findings without
+storing post text, private account data, or session material. The WOW List pass
+reconciles all 38 displayed records, 35 posted-link occurrences, and a bounded
+10-account stakeholder sample while retaining only public-safe counts and edges.
+The KC Town Hall pass adds a [full-population production note](intake/2026-07-14-kctownhall-full-population-social-corpus.md)
+and [183-item public-safe ledger](data/kctownhall-public-post-ledger.json), with
+exact profile reconciliation, record-level themes and links, metric ownership,
+and a fail-closed privacy boundary.
+
+The [NYC Artist Coalition full-population receipt](intake/2026-07-15-nycartc-x-full-population.md)
+accounts for the profile's 5,124 reported posts as 3,367 recovered account
+items plus an explicit 1,757-item recovery gap. The governed corpus separates
+696 authored posts from 2,671 reposts, resolves every one of the 1,235 distinct
+short URLs in recovered account items, and preserves campaign, source,
+stakeholder, and dated-counter findings with shared-authorship and
+outbound-versus-incoming boundaries. These deeper findings remain held from
+the website unless a future editorial purpose makes them clearer than the
+current bounded coalition projection.
+
+The [Urbanhermit full-population receipt](intake/2026-07-15-urbanhermit-x-full-population.md)
+reconciles all 434 records counted by Jamie's live personal profile on July 15,
+2026: 340 originals, 13 replies, and 81 native reposts. Its aggregate-only
+fixture retains exact population, link, mission-signal, stakeholder-group, and
+dated interaction accounting without publishing raw post text or a
+reconstructable item-level personal timeline. Selected NPR, KCUR, participant,
+project, and local-reporting sources matured into bounded reserve claims; all
+are promoted for internal composition while every public projection remains
+held from the current job-application website. A closed aggregate schema and
+protected-side derivation manifest make the 434-of-434 result reproducible for
+authorized reviewers without publishing a row-level personal timeline.
+
+The authenticated [personal Facebook authored-post pass](projects/personal-facebook-posts.md)
+accounts for all 1,243 cards exposed by Jamie's owner-visible `Manage posts`
+surface on July 16, 2026, spanning December 2006 through June 2022. Its
+aggregate-only fixture preserves exact population, visibility-label,
+posted-route, overlapping mission-signal, stakeholder-reference, and
+traction-boundary findings without publishing raw post text, private records,
+ordinary identities, personal chronology, comments, images, or authenticated
+state. Selected explicitly public professional posts enter the source bank as
+first-party specimens; role, outcome, causal, and impact claims still require
+the stronger independent and official sources already governed elsewhere. The
+compact-card surface exposed no reaction, comment, share, or incoming-engager
+fields, so full-population engagement remains held rather than guessed. No
+website copy or public route changed from this pass.
+
+The [DCLA and Council institutional-bridge review](research/2026-07-16-nycac-dcla-council-institutional-bridge.md)
+close-reads official 2017 records to distinguish Finkelpearl's exact May 19
+reference to NYC Artist Coalition from his functional descriptions in other
+hearings. It records why DCLA and Council actors found the coalition's
+participation system useful while keeping private motive, personal necessity,
+individual authorship, and sole policy causality out of the claim.
+
+Campaign press sections are preserved as typed source collections rather than
+treated as automatic claim support. The generated
+[NYC Artist Coalition campaign press corpus](campaign-press-corpus.md) records
+all 45 listings across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and the
+December 2021 Fair Rent NYC capture, with 44 unique canonical article records.
+The frozen extraction fixture makes collection membership reproducible.
+
+The authenticated [NYC Artist Coalition Facebook post pass](projects/nyc-artist-coalition-facebook-posts.md)
+accounts for all 444 rows and 444 unique post IDs in five annual Meta Business
+Suite Published exports across the surviving 2017-2021 chronology, cross-checked
+against a terminal Page-feed traversal. Its
+[public-safe corpus](corpora/nycartc-facebook-posts-full-population.json) and
+manifest preserve 67 posted routes, mission and civic-interface patterns, and
+bounded owner-export metrics while withholding raw exports, post bodies,
+platform IDs, engager identities, sensitive routes, and authenticated state.
+Shared-account human authorship and incoming stakeholder-group engagement remain
+explicit research questions; no website copy changes were made from this pass.
+
+The authenticated [KC Spaces Fund Facebook post pass](projects/kc-spaces-fund-facebook-posts.md)
+accounts for all 37 distinct surviving records in the public Page feed available
+on July 16, 2026, after four duplicate or alternate render variants were
+excluded from 41 encountered rows. Its
+[public-safe corpus](corpora/kcspacesfund-facebook-posts-full-population.json)
+preserves content states, mutual-aid operating patterns, five exact public
+routes, named public organization references, and dated counter boundaries
+without publishing raw posts, platform IDs, comments, ordinary people,
+authenticated state, or protected captures. No owner export was available, so
+the result is a surviving-feed control rather than a lifetime total. Jamie's
+behind-the-scenes digital role remains separate from campaign-account
+authorship, public organizing, fundraising, grant selection, and fiscal
+sponsorship. A separate
+[public-safe acquisition control](corpora/kcspacesfund-facebook-posts-acquisition-control.json)
+binds 41 opaque render keys to the 37-row corpus, preserves the four duplicate
+groups and eight stable endpoint checks, and exposes no raw text, platform IDs,
+URLs, identities, paths, or session state. Twenty photo records remain in a
+rights- and consent-gated media queue; no website copy changes were made from
+this pass.
+
+The [WOW List Facebook post archival-production report](projects/wowlist-facebook-posts.md)
+accounts for all 57 records in a terminal 19-page protected capture and gives
+each a public-safe content, live, and publisher-attribution disposition. The
+manager-only audit attributes 51 records to Jamie, attributes none to another
+publisher, and leaves six unresolved. Its public fixture inventories operating
+patterns and 65 distinct public posted URLs without republishing raw messages,
+contacts, ordinary individual source accounts, comments, or account
+administration. A fresh authenticated bidirectional page reconciliation on July
+15 recovered the same 53 message-bearing live records in both directions; four
+no-message records remain represented through the protected population rather
+than silently falling out. Its
+[public-safe acquisition manifest](corpora/wowlist-facebook-posts-acquisition-manifest.json)
+adds protected-input attestations, the public 57-ID digest, traversal
+checkpoints, and independent denominator mutations without publishing raw
+content. Only the bounded Facebook publishing-role claim projects to the case
+study; the population, source ecology, mission synthesis, and engagement
+questions remain reserve knowledge.
