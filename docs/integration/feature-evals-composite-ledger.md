@@ -92,7 +92,7 @@ undispositioned-intake blocking, and compiled-output leak detection. See
 The Sunday Dinner case study now distinguishes two related practices:
 
 - Jamie co-hosted Sunday Dinner with Julia Fredenberg; the surviving operating
-  record documents more than 300 participants.
+  record documents more than 300 gatherings, not 300 unique participants.
 - Jamie separately founded the 196 Artists Residency; the public resume
   self-reports more than 20 participants.
 
