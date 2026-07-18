@@ -1,16 +1,16 @@
 # Knowledge Composite Integration Run
 
-Date: 2026-07-17
+Date: 2026-07-18
 
 Branch: `feature/knowledge-n`
 
-Candidate commit: `1dfc2cbb4adebe4d19d0730f2a5e85756a6b8728`
+Candidate commit: `e677892d57260dc006cf69bf22e6067413b19469`
 
-Contract version: `2`
+Contract version: `3`
 
-Contract fingerprint: `2b2322c54cdf2b52535c0bb53e8c5d59fda6bc2c23fab42cac93fa5cab5ea5ca`
+Contract fingerprint: `fce98cbbde355cdeb30c0b34cf7155d4628ca7f8bcad42506ef00237e3ca7ce1`
 
-Candidate fingerprint: `db27f859d131460ad72d31d451c0b337a2ca9edd71dc8566d6a4368297bc9367`
+Candidate fingerprint: `be47c135e247fed17e6689e2cb3e1993027b4ae9e82bebc02ff0c03d1b5f3fc3`
 
 ## Decision
 
@@ -41,7 +41,7 @@ The resulting system adds:
 
 ## Recursive Hill Climb
 
-Nine iterations were required. The state record preserves the complete defect
+Ten iterations were required. The state record preserves the complete defect
 log. The substantial repairs included:
 
 1. Preserving structural validation errors during holdout aggregation.
@@ -57,24 +57,28 @@ log. The substantial repairs included:
 9. Separating each judge's receipt-level trust decision from the deterministic
    two-receipt aggregate, removing an evaluator contradiction without weakening
    unchanged-candidate identity.
+10. Replacing a stale KC Spaces Fund source-spelling assertion with a semantic
+    check of the canonical projection registry, adding resolver-removal
+    mutation coverage, and fingerprinting the repaired legacy eval.
 
 ## Independent Holdouts
 
-Two distinct, read-only judges evaluated the unchanged version-two candidate.
-Neither authored the patch nor saw the optimization history. Both reproduced
-the exact SHA and fingerprints, reported no critical regression or unresolved
-instrument defect, and returned `pass_for_code_review`.
+Two distinct, read-only judges evaluated the unchanged version-three
+candidate. Neither authored the patch nor saw optimization history. Both bound
+their receipt to the exact SHA and fingerprints, reported no critical
+regression or unresolved instrument defect, and returned
+`pass_for_code_review`.
 
 | Criterion | Holdout 1 | Holdout 2 | Conservative aggregate |
 | --- | ---: | ---: | ---: |
-| CI-001 | 3 | 4 | 3 |
+| CI-001 | 4 | 4 | 4 |
 | CI-002 | 4 | 4 | 4 |
 | CI-003 | 4 | 4 | 4 |
-| CI-004 | 4 | 4 | 4 |
+| CI-004 | 4 | 3 | 3 |
 | CI-005 | 4 | 4 | 4 |
 | CI-006 | 4 | 4 | 4 |
 | CI-007 | 3 | 3 | 4 |
-| CI-008 | 3 | 3 | 3 |
+| CI-008 | 3 | 4 | 3 |
 | CI-009 | 4 | 4 | 4 |
 
 The deterministic checker derives aggregate `CI-007 = 4` only after validating
@@ -87,23 +91,34 @@ all required criteria at `4`.
 The exact candidate or its unchanged public runtime passed:
 
 - 52 knowledge-lifecycle tests;
-- 32 composite-integration tests, including aggregate-derivation mutation;
+- 33 composite-integration tests, including aggregate-derivation and legacy
+  role-eval binding mutations;
 - 10 citation tests;
 - the frozen 27-eval portfolio suite, including 18 portfolio-eval tests;
 - 5 blind-spot evidence tests;
+- the KC Spaces Fund Facebook role eval at `100/100`;
 - knowledge-bank, lifecycle, citation, corpus, route, metadata, robots, public
   safety, and compiled-leak checks;
 - Node 26 TypeScript, ESLint, and Next.js production build;
 - a Docker staging build and 18-endpoint HTTP 200 runtime smoke;
 - staging robots behavior with indexing disabled;
 - responsive, metadata, link, and console browser QA before the final
-  evaluator-only commit. Version two did not change public runtime code.
+  evaluator-only changes. Version three did not change public runtime code.
 
 The public-safety checker completed with 16 intentional review warnings and no
 failure. The host's optional native Node dependency was repaired by reinstalling
 dependencies under Node 26; `package-lock.json` was restored and no source
 change resulted. `npm audit` continues to report two moderate dependency
 vulnerabilities; they are recorded residual risk rather than a hidden pass.
+
+## Holdout Hygiene
+
+One attempted subagent exhausted its service quota without returning a receipt
+and was not counted. Two fallback attempts were also discarded: one was stopped
+after exceeding the bounded review task, and one incidentally exposed
+historical receipt text through an overbroad search. The counted second receipt
+used an explicit candidate-path allowlist and did not inspect historical
+receipts, state, the run report, or working-tree evidence.
 
 ## Human Gates
 
