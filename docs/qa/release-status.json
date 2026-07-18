@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "updated": "2026-07-17",
+  "candidate": "feature/knowledge-l composite candidate",
+  "automatedVerification": {
+    "state": "passed-2026-07-17",
+    "commands": ["npm run check", "npm run preflight:staging", "npm run preflight:production"],
+    "additionalCriteria": ["npm run test:composite-integration", "npm run test:knowledge-tools", "npm run evals:composite-integration", "npm run evals:margaret-morse", "npm run evals:warren-sack"],
+    "result": "The feature/knowledge-l composite candidate passes the full check, staging and production preflights, adversarial evaluator regressions, container route and asset smoke tests, responsive browser checks, compiled-output privacy scan, and two-page resume inspection."
+  },
+  "humanGates": [
+    {"id": "external-hiring-reader-comprehension", "gate": "External five-minute hiring comprehension", "owner": "Jamie Burkart and unfamiliar target readers", "state": "open", "agentMaySelfCertify": false},
+    {"id": "collaborator-corroboration-and-permission", "gate": "Collaborator-sensitive names, quotes, images, and exact-role corroboration", "owner": "Jamie Burkart and affected collaborators", "state": "open", "agentMaySelfCertify": false},
+    {"id": "visual-rights-and-consent", "gate": "Visual rights and consent", "owner": "Jamie Burkart or documented rights holder", "state": "open", "agentMaySelfCertify": false},
+    {"id": "hands-on-accessibility-and-launch-qa", "gate": "Hands-on accessibility and launch QA", "owner": "Named human reviewer", "state": "open", "agentMaySelfCertify": false},
+    {"id": "human-chad-editorial-review", "gate": "Human Chad-lens editorial review", "owner": "Jamie Burkart and a trusted human editorial reviewer", "state": "open", "agentMaySelfCertify": false},
+    {"id": "exact-candidate-release-approval", "gate": "Jamie approval of the exact production candidate", "owner": "Jamie Burkart", "state": "open", "agentMaySelfCertify": false}
+  ],
+  "applicationDecision": "eligible-for-targeted-applications-with-open-human-validation",
+  "productionDecision": "blocked-pending-human-approval",
+  "boundary": "Application sharing and production launch are separate decisions. Automated evals are regression gates; they cannot count as external readers, grant collaborator consent, satisfy hands-on accessibility review, or authorize production."
+}

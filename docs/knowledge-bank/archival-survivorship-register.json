@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "updated": "2026-07-15",
+  "rule": "Not recovered is not evidence that something did not exist. Public survival, search ranking, and platform exportability are not measures of importance.",
+  "populationClaimRule": "A recovered corpus is not a complete lifetime archive, deletion history, authorship record, or direct measure of reach or impact. State the observed population, capture route, exclusions, unresolved items, and denominator together.",
+  "surfaces": [
+    {"surface": "public-web", "coverage": "strong-but-uneven", "risk": "Live and Wayback-accessible pages overrepresent projects with durable URLs.", "nextAction": "Keep recovery denominators and distinguish live, archived, partial, and not recovered."},
+    {"surface": "social-platforms", "coverage": "bounded-corpora", "risk": "Platform interfaces, deletions, visibility controls, and account access shape what survives.", "nextAction": "Preserve capture routes, population limits, authored/repost distinctions, and unresolved slots."},
+    {"surface": "official-government-records", "coverage": "targeted", "risk": "Formal hearings and legislation overrepresent activity legible to institutions.", "nextAction": "Pair official records with community, organizer, and implementation sources."},
+    {"surface": "private-digital-archives", "coverage": "selective", "risk": "Searchable files overrepresent documented desk work and may contain material unsafe for publication.", "nextAction": "Extract public-safe observations while retaining provenance and privacy boundaries."},
+    {"surface": "offline-and-physical-work", "coverage": "underrepresented", "risk": "Construction, hosting, printing, facilitation, maintenance, and street-level work may leave weak text traces.", "nextAction": "Prioritize photo, handbill, invoice, calendar, and collaborator-memory research."},
+    {"surface": "collaborator-memory", "coverage": "open", "risk": "The current record is disproportionately Jamie's archive and public institutional record.", "nextAction": "Invite corrections and bounded proof notes without converting memory into unqualified fact."},
+    {"surface": "failed-abandoned-or-unfunded-work", "coverage": "partial", "risk": "Public success narratives can erase withdrawals, non-disbursement, experiments, and work that did not continue.", "nextAction": "Record negative outcomes and discontinuities, including the KC Town Hall funding disposition."},
+    {"surface": "maintenance-care-and-handoffs", "coverage": "partial", "risk": "Launch artifacts are easier to see than years of upkeep, repair, transition, and support.", "nextAction": "Seek continuity evidence and handoff records without exposing private operations."}
+  ]
+}

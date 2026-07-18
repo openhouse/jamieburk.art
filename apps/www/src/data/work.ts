@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { getClaimProjection } from "@/data/knowledge-bank";
-import type { WorkMeta } from "@/types/work";
+import { getClaimProjection } from "./knowledge-bank/index.ts";
+import type { WorkMeta } from "../types/work.ts";
 
 const visibilitySchema = z.enum([
   "public",
@@ -54,6 +54,15 @@ const workMetaSchema = z.object({
   proofBankIds: z.array(z.string()),
   whatWasUnclear: z.string(),
   whatBecameUsable: z.string(),
+  outcomeStatus: z.enum([
+    "verified-outcome",
+    "partial-outcome",
+    "verified-output",
+    "open"
+  ]),
+  outcomeSummary: z.string(),
+  outcomeBoundary: z.string(),
+  adoptionEvidence: z.array(z.string()),
   artifactTypes: z.array(artifactTypeSchema),
   artifacts: z.array(
     z.object({
@@ -108,6 +117,16 @@ const workItemsInput = [
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
       "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "The modernized systems remain part of a long-running e-commerce operation. Jamie's resume supports contribution language around online growth, while the private metric and causal breakdown remain outside the public record.",
+    outcomeBoundary:
+      "Do not attribute company growth solely to Jamie or publish private revenue, customer, vendor, or analytics detail.",
+    adoptionEvidence: [
+      "Long-running stewardship from 2012 to the present",
+      "The public e-commerce site remains live",
+      "Resume-backed contribution to growth, with detailed metric verification protected"
+    ],
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
@@ -178,9 +197,9 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
-    role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2024-Present",
+      "Co-founded NYC Artist Coalition, organized safety and mutual-aid work, and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy and Commercial Rent Stabilization.",
+    role: "Co-Founder, Organizer, Civic Systems & Policy Communications",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
@@ -189,12 +208,23 @@ const workItemsInput = [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-participation-system"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "A shared campaign-memory system for decisions, owners, action items, open questions, city/state lanes, consent levels, source lineage, public-data framing, public campaign websites, and public-safe continuity.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "The coalition's public systems supported recurring participation, policy testimony, campaign continuity, and live web infrastructure. Independent and official records confirm institutional use and recognition, while legislative causality and adoption of every recommendation remain collective and bounded.",
+    outcomeBoundary:
+      "Do not claim that Jamie alone caused policy change, that agencies adopted every coalition position, or that current Commercial Rent Stabilization proposals have been implemented.",
+    adoptionEvidence: [
+      "Independent reporting identifies Jamie as a founding member and organizer",
+      "Official Council testimony records DCLA Commissioner Tom Finkelpearl naming NYC Artist Coalition",
+      "A 2023 working record documents a live FairRentNYC site, administrative handoff, and restored campaign email service"
+    ],
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -220,6 +250,12 @@ const workItemsInput = [
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
         type: "website"
+      },
+      {
+        title: "Implementation and handoff record",
+        description:
+          "A dated 2023 working record documents a FairRentNYC site-live state, an administrative handoff, restored campaign email service, and still-open work.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -242,12 +278,13 @@ const workItemsInput = [
       { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
       { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
       { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
-      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "Save NYC Spaces", url: "https://savenycspaces.nycartc.com/" }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "NPR founding-member attribution, independent organizer and town-hall reporting, Council testimony, public campaign materials, a recovered 44-article campaign press corpus, a protected 2023 web implementation record, and protected operating-plan, running-minutes, public-data, and legislative-provenance artifacts.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -258,17 +295,20 @@ const workItemsInput = [
       "Civic delivery, coalition operations, product operations, documentation architecture, source-backed memory, public guidance, policy communications, and implementation support.",
     evidence: [
       "Co-founder role in NYC Artist Coalition",
+      "Independent 2017 organizer attribution and 100+ mutual-aid network sign-ups at that time",
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
-      "30+ pages of shared campaign-memory infrastructure",
-      "Running minutes, decision records, action trackers, and source maps",
-      "Public campaign websites for NYC Artist Coalition advocacy",
+      "Shared campaign-memory architecture for decisions, ownership, open questions, city/state lanes, consent levels, and next steps",
+      "Running minutes, decision records, action trackers, and an unofficial legislative provenance redline",
+      "Jamie-built campaign websites for Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC",
+      "A dated 2023 implementation record documents a FairRentNYC site-live state, an administrative handoff, restored campaign email service, and still-open work",
+      "Recovered campaign press corpus: 45 placements and 44 distinct articles across four campaign sites",
       "Legal/policy questions organized for collaborators",
-      "Public-data framing and stakeholder next steps"
+      "An authored open-data proposal for aggregate rent and vacancy indicators with privacy and licensing safeguards"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Contemporaneous reporting identifies Jamie as a founding member and organizer of NYC Artist Coalition. Jamie directly confirms that he made the Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC websites; a protected 2023 implementation record corroborates FairRentNYC delivery and handoff, and the recovered press corpus documents the wider collective campaign context.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -296,6 +336,16 @@ const workItemsInput = [
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
       "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
+    outcomeStatus: "verified-output",
+    outcomeSummary:
+      "The prototype, public repository, press coverage, and bounded Council-account engagement are recoverable. No evidence currently supports official adoption or continued service delivery.",
+    outcomeBoundary:
+      "Treat CallNYC as an archived, independent prototype, not an official City Council service, current guidance source, or adopted government product.",
+    adoptionEvidence: [
+      "Politico New York covered the project in 2016",
+      "At least six then-Council-member accounts publicly replied to, amplified, or promoted it in a bounded review",
+      "The public GitHub repository preserves the implementation"
+    ],
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
@@ -341,7 +391,7 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, an authenticated full-timeline social archive, a bounded Council-account response finding, public GitHub repository, and public-safe screenshots pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -354,11 +404,13 @@ const workItemsInput = [
       "Independent follow-on to the New York City Council's first CouncilStat hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Covered by Politico New York in 2016"
+      "Seventy recovered issue-recognition posts addressed 24 Council-member accounts and two city-agency accounts across 63 CallNYC destinations",
+      "Covered by Politico New York in 2016",
+      "At least six then-Council-member accounts publicly replied to, amplified, or promoted the project in a bounded 2016-2017 review"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage; a bounded review recovered at least six then-Council-member accounts publicly replying to, amplifying, or promoting it in 2016-2017.",
       open:
         "Public-safe screenshots and additional archive links need Jamie approval before publication.",
       protected:
@@ -383,6 +435,16 @@ const workItemsInput = [
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "Public-safe aggregate records support meaningful historical use across many local scenes. Exact retention, current activity, and the causal contribution of particular product choices remain open.",
+    outcomeBoundary:
+      "Use approximate historical adoption language and do not imply current platform activity or sole authorship of a co-built system.",
+    adoptionEvidence: [
+      "Public-safe aggregate records support 1,800+ users",
+      "Public-safe aggregate records support 16,000+ posts and events",
+      "Historical records indicate roughly 35 city ecosystems reached"
+    ],
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
@@ -431,8 +493,8 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    role: "Host, Organizer & Systems Steward",
+      "Co-hosted a weekly community-open Sunday dinner and created repeatable hosting, onboarding, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+    role: "Co-Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
     featured: true,
@@ -443,6 +505,16 @@ const workItemsInput = [
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
       "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "Independent reporting confirms the weekly open-dinner practice, and a protected onboarding record confirms one later residency workflow. Aggregate gathering and residency counts remain first-party, public-safe summaries rather than an independently audited census.",
+    outcomeBoundary:
+      "Do not expose participant records or imply that every gathering, attendee, or residency outcome has been independently verified.",
+    adoptionEvidence: [
+      "A 2017 Greene Hill Food Co-op profile independently documents the weekly community-open dinner",
+      "A protected 2023 record documents an artist invitation, space planning, access, and handoff workflow",
+      "Public-safe first-party records support 300+ gatherings and 20+ resident artists"
+    ],
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -450,20 +522,34 @@ const workItemsInput = [
         description:
           "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
         type: "workflow"
+      },
+      {
+        title: "Artist onboarding",
+        description:
+          "A 2023 record signed by Jamie documents invitation, pre-arrival space planning, independent access arrangements, and protected handoff records.",
+        type: "template"
       }
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
-    capabilities: ["Onboarding", "Facilitation", "Hospitality Systems", "Artist Support"],
+    capabilities: ["Onboarding", "Facilitation", "Hospitality Systems", "Artist Support", "Access Coordination"],
+    links: [
+      {
+        label: "Greene Hill Food Co-op profile",
+        url: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter"
+      }
+    ],
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Greene Hill Food Co-op's public 2017 profile, a protected 2023 artist-onboarding record signed by Jamie, and private participant records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
+      "Weekly community-open Sunday dinners independently documented in 2017",
+      "A 2023 onboarding record documents invitation, pre-arrival space planning, and independent access arrangements",
       "300+ hosted gatherings",
       "20+ resident artists supported",
       "Onboarding and participation systems",
@@ -471,7 +557,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie and Julie Fredenberg co-hosted a weekly community-open dinner. A protected 2023 record signed by Jamie documents one artist-residency onboarding workflow through invitation, pre-arrival space planning, and independent access arrangements.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
@@ -482,53 +568,94 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Adaptive reuse, construction coordination, and neighborhood process",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    role: "Project Planning & Documentation Support",
-    years: "2020s",
+      "Co-founded KC Town Hall and served as project manager for a multi-trade Phase One cold-shell restoration recorded as completed in 2019; advanced a neighborhood-informed Phase Two proposal through City Council appropriation; and later transitioned project stewardship to a mission-aligned organization.",
+    role: "Co-Founder, Project Manager & Construction Coordinator",
+    years: "2018-2024",
     status: "Short proof page",
     featured: false,
     priority: 6,
     visibility: "public-safe",
     proofBankIds: ["kc-town-hall-public-benefit-documentation"],
     whatWasUnclear:
-      "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
+      "A long-vacant historic building needed coordinated cold-shell restoration, a credible public-benefit program, neighborhood participation, and a path through municipal review.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "A completed Phase One scope, a neighborhood-informed next-phase proposal, durable public-benefit documentation, and an auditable municipal decision trail.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "The source record supports Phase One completion, a neighborhood-informed proposal, board recommendation, and Council appropriation. The separate funded phase later withdrew before disbursement, so the appropriation is evidence of municipal approval, not completed grant-funded construction.",
+    outcomeBoundary:
+      "Do not describe the appropriated amount as money received or spent. Jamie's exact general-contractor title and the stewardship transition remain first-person claims pending corroboration.",
+    adoptionEvidence: [
+      "The 2019 proposal records the Phase One cold-shell scope as completed",
+      "Official board minutes and Council records document recommendation, acceptance, and appropriation",
+      "Later official records document withdrawal before disbursement and reclamation of the unused appropriation"
+    ],
+    artifactTypes: ["workflow", "public handout", "source map", "map"],
     artifacts: [
       {
-        title: "Public-benefit documentation set",
+        title: "Phase One coordination record",
         description:
-          "Representative materials for describing intended public value, funding context, and stakeholder needs.",
-        type: "guide"
+          "Public-safe summary of the multi-trade cold-shell scope recorded as completed in 2019.",
+        type: "workflow"
+      },
+      {
+        title: "Neighborhood survey system",
+        description:
+          "A handbill-led neighborhood process whose responses directly shaped the Phase Two proposal.",
+        type: "public handout"
       }
     ],
-    tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    tags: ["Project Management", "Implementation", "Participatory Research", "Built Environment"],
+    capabilities: ["Construction Coordination", "Stakeholder Documentation", "Participatory Planning", "Municipal Review"],
+    links: [
+      {
+        label: "Official board minutes",
+        url: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000"
+      },
+      {
+        label: "Council funding resolution",
+        url: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search="
+      },
+      {
+        label: "Council appropriation ordinance",
+        url: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search="
+      },
+      {
+        label: "Later funding disposition",
+        url: "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search="
+      }
+    ],
     careNote:
-      "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
+      "Public-safe short proof page. The protected proposal supports founder, project-manager, Phase One, team, and survey facts. Jamie's exact general-contractor title and later stewardship transition remain first-person claims pending independent corroboration.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
-    credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Public-safe short proof page.",
+      "Protected 2019 CCED proposal and first-person construction and stewardship-transition accounts; official Kansas City board minutes, Council resolution and appropriation ordinance, later project-status and clawback records; and public-safe project summaries.",
+    credits: [
+      "Jamie Burkart",
+      "Julia Fredenburg",
+      "KC Town Hall trade, professional, neighborhood, and municipal partners"
+    ],
+    currentStatus: "Phase One was recorded as completed in 2019. Jamie later transitioned project stewardship to a mission-aligned organization; the separate municipal funding project later withdrew before disbursement.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Multi-trade project management, implementation sequencing, participatory discovery, public-benefit documentation, municipal coordination, and responsible stewardship transition.",
     evidence: [
-      "Redevelopment planning",
-      "Public-benefit documentation",
-      "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "Jamie Burkart and Julia Fredenburg identified as founders and project managers in the 2019 proposal",
+      "Phase One cold-shell work recorded as completed in 2019 across roof, masonry, structural framing, water, access, safety, and site operations",
+      "Neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church directly shaped the proposal",
+      "Jamie identified as proposal presenter in official board minutes",
+      "$490,539 board recommendation followed by City Council acceptance and appropriation",
+      "Jamie's first-person account that he transitioned project stewardship to a mission-aligned organization when he concluded his active role",
+      "Official record that the project later withdrew and the full unused appropriation was reclaimed"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie and Julia co-founded KC Town Hall and were named project managers. The proposal records Phase One cold-shell work as completed in 2019 and says a neighborhood survey shaped Phase Two. The board later recommended $490,539, and the City Council accepted the recommendation and appropriated the amount. Jamie reports transitioning project stewardship to a mission-aligned organization when he concluded his active role. The separate municipal funding project later withdrew before disbursement, and the unused appropriation was reclaimed.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Jamie's exact day-to-day general-contractor role, survey-system authorship, stewardship-transition timing and terms, receiving organization, continuity outcomes, and responsibilities during the Council and funding-agreement phases remain queued for additional corroboration.",
       protected:
-        "Private financial, legal, property, banking, and stakeholder details are omitted."
+        "Private financial, legal, property, banking, contact, support-letter, resident, and stakeholder details are omitted."
     }
   }
 ] satisfies WorkMeta[];

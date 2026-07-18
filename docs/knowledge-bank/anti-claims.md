@@ -12,6 +12,9 @@ Do not imply a prototype is a current official service.
 Do not imply Source-Backed Team Memory is a finished SaaS product.
 Do not imply AI replaces human judgment.
 Do not imply private archives are browsable or available.
+Do not infer authorship, rights, consent, collaborator approval, project scale,
+event count, participant count, or outcomes from Shared Drive access, workspace
+structure, artifact presence, or file count.
 
 ## HJE
 
@@ -45,6 +48,10 @@ Do not name collaborators unless approved.
 
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
+
+Do not use one protected onboarding record as proof of the complete residency
+history or aggregate resident-artist totals. Do not expose participant identity,
+contact information, access details, or collaborator media.
 
 ## KC Spaces Fund
 

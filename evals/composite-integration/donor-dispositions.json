@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "frozenAt": "2026-07-16",
+  "baseBranch": "feature/knowledge-l",
+  "baseCommit": "68846b1f0a8672ff80598a7fef50ce5343c3e004",
+  "donors": [
+    {
+      "branch": "feature/evals-A",
+      "pullRequest": 220,
+      "head": "3757c4f5",
+      "decision": "adapt",
+      "mechanism": "Population disposition and portfolio-effectiveness controls",
+      "destination": "Composite criteria CI-005, CI-012, CI-013, and CI-014",
+      "boundary": "Do not copy large social ledgers already represented by L.",
+      "risk": "A second population ledger could drift from the canonical corpus fixtures.",
+      "verification": "npm run evals:composite-integration && npm run evals:blind-spots"
+    },
+    {
+      "branch": "feature/evals-B",
+      "pullRequest": 212,
+      "head": "67fc3042",
+      "decision": "adapt",
+      "mechanism": "Separate governance concerns and statement-level semantic safety",
+      "destination": "Composite criteria CI-003, CI-006, and CI-007",
+      "boundary": "Retain L's command names and avoid a second lifecycle schema.",
+      "risk": "Parallel lifecycle terms would make maturity and publication status ambiguous.",
+      "verification": "npm run check:composite-integration && npm run public-safety"
+    },
+    {
+      "branch": "feature/evals-C",
+      "pullRequest": 221,
+      "head": "ff440a9c",
+      "decision": "adapt",
+      "mechanism": "Diagnostic-versus-closure semantics, privacy, and reviewability",
+      "destination": "Composite criterion CI-014 and human-gate reporting",
+      "boundary": "A diagnostic pass does not close external or human work.",
+      "risk": "Automation could falsely certify reader, collaborator, or accessibility evidence.",
+      "verification": "npm run evals:composite-integration && npm run evals:release-governance"
+    },
+    {
+      "branch": "feature/evals-D",
+      "pullRequest": 216,
+      "head": "5a7095ff",
+      "decision": "adapt",
+      "mechanism": "Versioned rubric and inspectable observation history",
+      "destination": "Composite rubric versioning and run records",
+      "boundary": "Do not copy redundant screenshot sets or twenty-three rubric directories.",
+      "risk": "Redundant rubrics and images would increase review cost without stronger evidence.",
+      "verification": "npm run test:composite-integration && npm run check:composite-integration"
+    },
+    {
+      "branch": "feature/evals-E",
+      "pullRequest": 211,
+      "head": "d7d8e0d0",
+      "decision": "adapt",
+      "mechanism": "Atomic proposition, source limitation, correction, and disposition semantics",
+      "destination": "L's canonical schema plus criteria CI-004 and CI-008",
+      "boundary": "Preserve L's simpler record model unless a new field changes a decision.",
+      "risk": "Schema expansion could duplicate sources and obscure correction lineage.",
+      "verification": "npm run test:knowledge-lifecycle && npm run evals:knowledge-lifecycle"
+    },
+    {
+      "branch": "feature/evals-F",
+      "pullRequest": 210,
+      "head": "ba746185",
+      "decision": "adapt",
+      "mechanism": "Anti-gaming, production verification, rollback, and stopping rules",
+      "destination": "Composite criterion CI-014 and release documentation",
+      "boundary": "Application sharing must not wait for unlimited archive expansion.",
+      "risk": "Production evidence and application eligibility could collapse into one endless gate.",
+      "verification": "npm run preflight:staging && npm run preflight:production"
+    },
+    {
+      "branch": "feature/evals-G",
+      "pullRequest": 222,
+      "head": "d97055d7",
+      "decision": "adopt",
+      "mechanism": "Candidate fingerprint, failed-run retention, and unchanged-candidate holdouts",
+      "destination": "Composite scorecards and recursive stop condition",
+      "boundary": "Holdout artifacts are evidence of the evaluated candidate, not external hiring outcomes.",
+      "risk": "A run artifact could change the candidate it claims to evaluate or reuse a dirty tree.",
+      "verification": "npm run test:composite-integration && npm run evals:composite-integration"
+    },
+    {
+      "branch": "feature/evals-H",
+      "pullRequest": 223,
+      "head": "934c1bdf",
+      "decision": "adapt",
+      "mechanism": "Article-level close reading and institutional agency modeling",
+      "destination": "Composite criteria CI-004 and CI-005",
+      "boundary": "Campaign press indexes remain distinct from article-level support.",
+      "risk": "Index inclusion could be mistaken for article-level role or outcome evidence.",
+      "verification": "npm run check:citations && npm run evals:knowledge-lifecycle"
+    },
+    {
+      "branch": "feature/evals-I",
+      "pullRequest": 219,
+      "head": "793f7262",
+      "decision": "adopt",
+      "mechanism": "Fail-closed collective-credit and exact-surface policy",
+      "destination": "docs/knowledge-bank/policies and criteria CI-006 and CI-007",
+      "boundary": "Regression tests must not contain the protected details they exclude.",
+      "risk": "Unknown projects or routes could silently inherit inappropriate credit or evidence.",
+      "verification": "npm run test:composite-integration && npm run public-safety"
+    },
+    {
+      "branch": "feature/evals-J",
+      "pullRequest": 209,
+      "head": "7e1b758b",
+      "decision": "adapt",
+      "mechanism": "Conservative incubation, contextual integrity, and explicit stop records",
+      "destination": "Composite run history and held/rejected donor decisions",
+      "boundary": "Knowledge maturity does not require website publication.",
+      "risk": "Mature but irrelevant material could overload the hiring argument.",
+      "verification": "npm run check:composite-integration && npm run evals:chad"
+    },
+    {
+      "branch": "feature/evals-K",
+      "pullRequest": 217,
+      "head": "5b0cbcd1",
+      "decision": "adapt",
+      "mechanism": "Append-only intake, query tools, and route-specific manifests",
+      "destination": "Knowledge commands and projection-surface policy",
+      "boundary": "Human approval remains explicit; broad defensibility cannot authorize every route.",
+      "risk": "Convenient tools could write private leads or authorize projections implicitly.",
+      "verification": "npm run test:knowledge-tools && npm run test:composite-integration"
+    },
+    {
+      "branch": "feature/evals-L",
+      "pullRequest": 213,
+      "head": "68846b1f",
+      "decision": "adopt",
+      "mechanism": "Canonical six-layer evidence-to-projection lifecycle",
+      "destination": "Existing feature/knowledge-l architecture",
+      "boundary": "Do not replace the spine with a donor-specific parallel system.",
+      "risk": "A replacement vocabulary would split source, claim, and projection ownership.",
+      "verification": "npm run test:knowledge-lifecycle && npm run check:composite-integration"
+    },
+    {
+      "branch": "feature/evals-M",
+      "pullRequest": 215,
+      "head": "289dd449",
+      "decision": "adapt",
+      "mechanism": "Application-ready stopping rule, CI posture, and archive-to-composition discipline",
+      "destination": "Composite criteria CI-012, CI-014, and CI-015",
+      "boundary": "Current-practice language must not imply unproven client adoption.",
+      "risk": "Archive completeness could delay applications or inflate present-tense adoption claims.",
+      "verification": "npm run evals:hiring-comprehension && npm run evals:present-tense-offer"
+    },
+    {
+      "branch": "feature/evals-N",
+      "pullRequest": 214,
+      "head": "10d20ecd",
+      "decision": "adapt",
+      "mechanism": "Cross-surface claim consistency and flagship reader hierarchy",
+      "destination": "Exact-surface policy and public-composition review",
+      "boundary": "Do not copy every donor page change without a demonstrated reader need.",
+      "risk": "Cross-surface consistency work could flatten purposeful differences between routes.",
+      "verification": "npm run check:routes && npm run evals:composite-integration"
+    }
+  ]
+}

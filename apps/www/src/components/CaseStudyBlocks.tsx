@@ -3,6 +3,13 @@ import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
 
+const outcomeLabels = {
+  "verified-outcome": "Verified outcome",
+  "partial-outcome": "Partial outcome evidence",
+  "verified-output": "Verified output",
+  open: "Outcome open"
+} as const;
+
 export function AtAGlance({ item }: { item: WorkMeta }) {
   const rows = [
     ["Role", item.role],
@@ -60,12 +67,46 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
   );
 }
 
+export function OutcomeStatus({ item }: { item: WorkMeta }) {
+  return (
+    <section aria-labelledby="outcome-status">
+      <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <h2 className="text-2xl font-semibold text-jb-ink" id="outcome-status">
+          Outcome and adoption
+        </h2>
+        <span className="text-sm font-semibold text-jb-green">
+          {outcomeLabels[item.outcomeStatus]}
+        </span>
+      </div>
+      <p className="mt-4 max-w-4xl leading-7 text-jb-ink/78">
+        {item.outcomeSummary}
+      </p>
+      <h3 className="mt-5 text-sm font-semibold uppercase text-jb-blue">
+        Adoption evidence
+      </h3>
+      <ul className="mt-3 list-disc space-y-2 pl-6 text-jb-ink/76">
+        {item.adoptionEvidence.map((evidence) => (
+          <li key={evidence}>{evidence}</li>
+        ))}
+      </ul>
+      <p className="mt-5 border-l-4 border-jb-ochre pl-4 text-sm leading-6 text-jb-ink/72">
+        <strong>Boundary:</strong> {item.outcomeBoundary}
+      </p>
+    </section>
+  );
+}
+
 export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Artifact descriptions
       </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/70">
+        These are public-safe descriptions of working artifacts. Approved images
+        and documents are projected separately when permissions and context are
+        complete.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
           <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>

@@ -1,0 +1,33 @@
+# Composite Integration Maintenance
+
+**Owner:** Jamie Burkart
+
+**Active-change cadence:** Run the complete repository check before every pull-request update. Review this governance layer monthly while the portfolio is actively changing.
+
+**Change trigger:** Rerun after any change to claims, sources, routes, public copy, build or deployment configuration, resume assets, policies, evals, or release state.
+
+## Routine
+
+1. Commit the candidate without run artifacts.
+2. Ask an independent read-only reviewer to reproduce the candidate and attack
+   the evaluator. Repair and recommit when it finds any P0 or P1 enforcement
+   defect; do not create release holdouts for a rejected candidate.
+3. Run `npm run check:composite-integration -- --write-run evals/composite-integration/runs/<unique-name>.json` twice. Run records are immutable and preserve failures as well as passes.
+4. Confirm both passing records bind the same candidate commit and full repository-input fingerprint.
+5. Commit the run records without changing candidate inputs.
+6. Run `npm run check`, staging and production preflights, container smoke checks, responsive browser QA, compiled-output privacy checks, and resume inspection.
+7. Keep application eligibility separate from production approval. Record human observations only after the named humans complete them.
+
+## Drift Controls
+
+- Candidate identity covers every tracked or unignored repository file except schema-valid scorecard runs and the canonical generated scorecard. Ignored dependencies and build output are not repository inputs.
+- The normal composite check requires two committed passing holdouts for the unchanged candidate. `--write-run` is the only bootstrap path and never overwrites an existing record.
+- The scorecard schema is executable validation, not documentation only.
+- Exact-route bindings must cover the complete public route registry and resolve existing source files, active claims, and proof surface permissions.
+- Every actively projected project must have a substantive collective-credit rule and at least two distinct boundaries.
+- Publication-safe queries use a closed output allowlist and omit internal formulations, pending intake, held or inferential claims, protected evidence, unsafe URLs, private locators, and research inquiries.
+- Knowledge queries are publication-safe by default. Broader canonical output requires the explicit local-only `--internal` flag; unknown and valued boolean flags fail closed.
+- Frozen policy, evaluator, build-contract, and command files carry SHA-256 contracts in the versioned rubric. An intentional change requires a rubric version and digest update plus a new independent review.
+- Human-gate IDs and owners must match the rubric exactly, and agents cannot self-certify those gates.
+
+When the system becomes burdensome, remove duplication before weakening a boundary or human gate.

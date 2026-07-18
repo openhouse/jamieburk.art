@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jamieburk.art/schemas/composite-integration-scorecard.json",
+  "title": "Composite integration scorecard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "rubricId",
+    "rubricVersion",
+    "candidateCommit",
+    "candidateFingerprint",
+    "workingTreeClean",
+    "generatedAt",
+    "hardGateFailures",
+    "weightedScore",
+    "criteria",
+    "humanGates",
+    "passes"
+  ],
+  "properties": {
+    "rubricId": { "type": "string", "const": "feature-evals-composite-integration" },
+    "rubricVersion": { "type": "string", "const": "1.4.0" },
+    "candidateCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "candidateFingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "workingTreeClean": { "type": "boolean" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "hardGateFailures": { "type": "integer", "minimum": 0 },
+    "weightedScore": { "type": "number", "minimum": 0, "maximum": 1 },
+    "passes": { "type": "boolean" },
+    "criteria": {
+      "type": "array",
+      "minItems": 15,
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "kind", "passes", "score", "findings"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^CI-[0-9]{3}$" },
+          "title": { "type": "string" },
+          "kind": { "enum": ["hard-gate", "quality"] },
+          "passes": { "type": "boolean" },
+          "score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "findings": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "humanGates": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "owner", "state", "agentMaySelfCertify"],
+        "properties": {
+          "id": {
+            "enum": [
+              "external-hiring-reader-comprehension",
+              "collaborator-corroboration-and-permission",
+              "visual-rights-and-consent",
+              "hands-on-accessibility-and-launch-qa",
+              "human-chad-editorial-review",
+              "exact-candidate-release-approval"
+            ]
+          },
+          "owner": { "type": "string", "minLength": 1 },
+          "state": { "enum": ["open", "met", "not-applicable"] },
+          "agentMaySelfCertify": { "const": false }
+        }
+      }
+    }
+  }
+}
