@@ -4,6 +4,10 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { intakeRecordSchema } from "../apps/www/src/data/knowledge-bank/schema.ts";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  validateIntakeCandidateReferences,
+  validateOperatorGraph
+} from "./lib/knowledge-operator-validation.mjs";
 
 const help = `Usage:
   npm run knowledge:intake -- --template
@@ -52,6 +56,8 @@ function fail(message) {
 }
 
 function validateCandidate(filePath) {
+  const graphErrors = validateOperatorGraph();
+  if (graphErrors.length) fail(`Canonical knowledge graph is invalid:\n${graphErrors.join("\n")}`);
   if (!existsSync(filePath)) fail(`Intake candidate does not exist: ${filePath}`);
   let parsed;
   try {
@@ -68,6 +74,8 @@ function validateCandidate(filePath) {
   if (knowledgeBank.intake.some((record) => record.id === result.data.id)) {
     fail(`Intake ID already exists in canonical records: ${result.data.id}`);
   }
+  const referenceErrors = validateIntakeCandidateReferences(result.data);
+  if (referenceErrors.length) fail(referenceErrors.join("\n"));
   const serialized = JSON.stringify(result.data);
   for (const marker of privateMarkers) {
     if (marker.test(serialized)) fail(`Candidate contains a protected marker matched by ${marker}`);

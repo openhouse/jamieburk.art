@@ -43,6 +43,9 @@ The website is a selective projection, not a query interface over the bank.
 `docs/evals/composition-manifest.json` records the purpose and claim budget for
 each route or route template. Eligible but unselected knowledge stays in the
 bank with an explicit hold or composition rationale.
+Proof selections and direct canonical projections must match the public
+composition registry exported from `apps/www/src/data/proofs.ts`; this keeps
+the manifest aligned with what route code actually renders.
 
 ## Operating Surfaces
 
@@ -54,6 +57,7 @@ bank with an explicit hold or composition rationale.
 - Photo re-entry: `docs/knowledge-bank/photo-feedback-loop.md`
 - Composite evals: `.agents/evals/knowledge-composite-integration.json`
 
-The CLI validates intake, queries the canonical records, reports lifecycle
-debt, and checks compiled-output leaks. It does not create public claims or add
-a database, CMS, or public archive browser.
+The CLI validates the canonical graph before intake or query work and rejects
+unknown project and graph references. It reports lifecycle debt and checks
+compiled-output leaks, but does not create public claims or add a database,
+CMS, or public archive browser.

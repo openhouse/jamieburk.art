@@ -5,43 +5,38 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
 import {
-  requireReadyOrCarefulProof,
+  requireTechnicalOperationsProof,
+  technicalOperationsClaimProjectionRefs,
   technicalOperationsProofRows
 } from "@/data/proofs";
 import { getClaimProjection } from "@/data/knowledge-bank";
 import { createMetadata } from "@/lib/metadata";
 
-const kcTownHallProof = requireReadyOrCarefulProof(
+const kcTownHallProof = requireTechnicalOperationsProof(
   "kc-town-hall-public-benefit-documentation"
 );
 
-const commercialVacancyProof = getClaimProjection(
-  "CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026",
-  "technical-operations",
-  "/work/technical-operations"
-);
+const technicalProjection = (id: (typeof technicalOperationsClaimProjectionRefs)[number]["id"]) => {
+  const reference = technicalOperationsClaimProjectionRefs.find((item) => item.id === id);
+  if (!reference) throw new Error(`Unknown Technical Operations projection: ${id}`);
+  return getClaimProjection(reference.claimId, reference.key, reference.route);
+};
 
-const commercialRentOperationsProof = requireReadyOrCarefulProof(
+const commercialVacancyProof = technicalProjection("commercial-vacancy");
+
+const commercialRentOperationsProof = requireTechnicalOperationsProof(
   "fair-rent-campaign-memory"
 );
 
-const sundayDinnerOperationsProof = getClaimProjection(
-  "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS",
-  "technical-operations",
-  "/work/technical-operations"
-);
+const sundayDinnerOperationsProof = technicalProjection("sunday-dinner-operations");
 
-const kcSpacesFundOperationsProof = getClaimProjection(
-  "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
-  "technical-operations",
-  "/work/technical-operations"
-);
+const kcSpacesFundOperationsProof = technicalProjection("kc-spaces-fund-operations");
 
-const sourceBackedMemoryProof = requireReadyOrCarefulProof(
+const sourceBackedMemoryProof = requireTechnicalOperationsProof(
   "source-backed-team-memory-method"
 );
 
-const aiEvalsProof = requireReadyOrCarefulProof(
+const aiEvalsProof = requireTechnicalOperationsProof(
   "ai-evals-professional-development"
 );
 

@@ -2,6 +2,7 @@
 
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../apps/www/src/data/proofs.ts";
+import { validateOperatorGraph } from "./lib/knowledge-operator-validation.mjs";
 
 const help = `Usage:
   npm run query:knowledge-lifecycle -- <bounded query>
@@ -23,6 +24,12 @@ const args = process.argv.slice(2);
 if (!args.length || args.includes("--help") || args.includes("-h")) {
   console.log(help);
   process.exit(0);
+}
+
+const graphErrors = validateOperatorGraph();
+if (graphErrors.length) {
+  console.error(`Canonical knowledge graph is invalid:\n${graphErrors.join("\n")}`);
+  process.exit(1);
 }
 
 const flags = new Set(["--id", "--project", "--status", "--source", "--inquiry", "--projection", "--evidence-class", "--view"]);

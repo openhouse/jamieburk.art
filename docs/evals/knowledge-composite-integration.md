@@ -50,5 +50,10 @@ criterion at least `3`, and `CI-002`, `CI-003`, and `CI-007` at `4`. Every
 deterministic gate and existing suite must pass. Two independent holdouts must
 bind the same contract and candidate fingerprints.
 
+The checker resolves the named implementation-changing Git commit, reproduces
+the candidate fingerprint from that commit's tree, permits only four exact
+evidence files afterward, and requires every receipt evidence path to exist in
+the judged commit.
+
 That threshold means ready for code review. Application sharing and production
 remain governed by their own human gates.

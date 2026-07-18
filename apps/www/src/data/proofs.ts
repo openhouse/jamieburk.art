@@ -938,3 +938,93 @@ export const technicalOperationsProofRows = [
   ...row,
   proofs: row.proofIds.map(requireReadyOrCarefulProof)
 }));
+
+export const technicalOperationsDirectProofIds = [
+  "career-operating-structure-14-years",
+  "kc-town-hall-public-benefit-documentation",
+  "fair-rent-campaign-memory",
+  "source-backed-team-memory-method",
+  "ai-evals-professional-development"
+] as const;
+
+export function requireTechnicalOperationsProof(
+  id: (typeof technicalOperationsDirectProofIds)[number]
+): ProofClaim {
+  if (!technicalOperationsDirectProofIds.includes(id)) {
+    throw new Error(`Proof is outside the Technical Operations composition: ${id}`);
+  }
+  return requireReadyOrCarefulProof(id);
+}
+
+export const technicalOperationsClaimProjectionRefs = [
+  {
+    id: "commercial-vacancy",
+    claimId: "CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026",
+    key: "technical-operations",
+    route: "/work/technical-operations"
+  },
+  {
+    id: "sunday-dinner-operations",
+    claimId: "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS",
+    key: "technical-operations",
+    route: "/work/technical-operations"
+  },
+  {
+    id: "kc-spaces-fund-operations",
+    claimId: "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+    key: "technical-operations",
+    route: "/work/technical-operations"
+  }
+] as const;
+
+const caseStudyProofIdsByInstance = {
+  "harry-j-epstein": ["hje-modernization-stewardship", "hje-revenue-growth-contribution"],
+  "nyc-artist-coalition": ["nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system"],
+  "fair-rent-nyc": ["fair-rent-campaign-memory", "fair-rent-source-map", "nyc-artist-coalition-public-web-infrastructure"],
+  callnyc: ["callnyc-civic-data-guidance"],
+  wowlist: ["wowlist-community-platform"],
+  "196-sunday-dinner": ["sunday-dinner-196-participation-infrastructure"],
+  "kc-town-hall": ["kc-town-hall-public-benefit-documentation"]
+};
+
+const caseStudyProofIds = [...new Set(Object.values(caseStudyProofIdsByInstance).flat())];
+const technicalOperationsPageProofIds = [
+  ...new Set([
+    ...technicalOperationsDirectProofIds,
+    ...technicalOperationsProofRows.flatMap((row) => row.proofIds)
+  ])
+];
+
+export const publicCompositionProofSelections = {
+  home: homepageProofs.map((proof) => proof.id),
+  "work-index": caseStudyProofIds,
+  "technical-operations": technicalOperationsPageProofIds,
+  resume: resumeProofHighlights.map((proof) => proof.id),
+  about: ["ai-evals-professional-development"],
+  contact: [],
+  colophon: [],
+  "source-backed-team-memory-lab": ["source-backed-team-memory-method"],
+  "case-study-template": caseStudyProofIds
+};
+
+export const publicCompositionCaseStudySelections = caseStudyProofIdsByInstance;
+
+export const publicCompositionClaimProjectionSelections = {
+  home: [],
+  "work-index": [],
+  "technical-operations": technicalOperationsClaimProjectionRefs.map(
+    (item) => `${item.claimId}/${item.key}`
+  ),
+  resume: [],
+  about: [
+    "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE/about",
+    "CLM-UCSC-SACK-RECURSIVE-SOCIAL-SYSTEMS/about",
+    "CLM-OPEN-HOUSE-ITERATIVE-GOVERNANCE/about",
+    "CLM-CALLNYC-RECURSIVE-METHOD/about",
+    "CLM-NYCAC-RECURSIVE-METHOD/about"
+  ],
+  contact: [],
+  colophon: [],
+  "source-backed-team-memory-lab": [],
+  "case-study-template": []
+};

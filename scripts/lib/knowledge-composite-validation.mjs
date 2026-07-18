@@ -4,7 +4,12 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
-import { proofClaims } from "../../apps/www/src/data/proofs.ts";
+import {
+  proofClaims,
+  publicCompositionCaseStudySelections,
+  publicCompositionClaimProjectionSelections,
+  publicCompositionProofSelections
+} from "../../apps/www/src/data/proofs.ts";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -167,6 +172,12 @@ export function validateComposition(manifest, agency, proofs = proofClaims) {
       if (typeof surface[key] !== "string" || !surface[key].trim()) errors.push(`${surface.id}.${key} is required`);
     }
     if (!Number.isInteger(surface.claimBudget) || surface.claimBudget < 0) errors.push(`${surface.id} has invalid claimBudget`);
+    if (!sameSet(surface.selectedProofIds ?? [], publicCompositionProofSelections[surface.id] ?? [])) {
+      errors.push(`${surface.id} proof selection must match the public composition registry exactly`);
+    }
+    if (!sameSet(surface.selectedClaimProjectionKeys ?? [], publicCompositionClaimProjectionSelections[surface.id] ?? [])) {
+      errors.push(`${surface.id} direct claim projections must match the public composition registry exactly`);
+    }
     for (const proofId of surface.selectedProofIds ?? []) {
       selected.add(proofId);
       if (!proofIds.has(proofId)) errors.push(`${surface.id} selects unknown proof ${proofId}`);
@@ -181,6 +192,7 @@ export function validateComposition(manifest, agency, proofs = proofClaims) {
     const ids = caseTemplate?.selectedProofIdsByInstance?.[slug];
     if (!Array.isArray(ids)) errors.push(`Case-study composition is missing ${slug}`);
     else if (ids.length > caseTemplate.claimBudget) errors.push(`Case study ${slug} exceeds its claim budget`);
+    else if (!sameSet(ids, publicCompositionCaseStudySelections[slug] ?? [])) errors.push(`Case study ${slug} must match the public composition registry exactly`);
   }
   const caseUnion = new Set(Object.values(caseTemplate?.selectedProofIdsByInstance ?? {}).flat());
   if (!sameSet(caseUnion, caseTemplate?.selectedProofIds ?? [])) errors.push("Case-study selectedProofIds must equal the union of its instances");
@@ -192,6 +204,19 @@ export function validateComposition(manifest, agency, proofs = proofClaims) {
   }
   if (!sameSet([...selected, ...unselected.map((item) => item.proofId)], [...proofIds])) errors.push("Selected and explicitly unselected proofs must account for the proof bank exactly");
   if ([...selected].some((id) => unselected.some((item) => item.proofId === id))) errors.push("A proof cannot be both selected and unselected");
+  for (const surface of manifest.surfaces ?? []) {
+    for (const compositeKey of surface.selectedClaimProjectionKeys ?? []) {
+      const splitAt = compositeKey.lastIndexOf("/");
+      const claimId = compositeKey.slice(0, splitAt);
+      const projectionKey = compositeKey.slice(splitAt + 1);
+      const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+      const projection = claim?.projections.find((item) => item.key === projectionKey);
+      if (!claim || !projection) errors.push(`${surface.id} references unknown direct claim projection ${compositeKey}`);
+      else if (projection.status !== "active" || (surface.route && !projection.surfaces.includes(surface.route))) {
+        errors.push(`${surface.id} direct claim projection ${compositeKey} is not active on its route`);
+      }
+    }
+  }
   return errors;
 }
 
@@ -275,7 +300,7 @@ export function validatePackageScripts(packageJson) {
   return errors;
 }
 
-export function validateHoldouts({ suite, state, receipts, expectedContractFingerprint, expectedCandidateFingerprint }) {
+export function validateHoldouts({ suite, state, receipts, expectedContractFingerprint, expectedCandidateFingerprint, evidencePathExists = () => true }) {
   const errors = [];
   const expectedIds = suite.evals.map((item) => item.id);
   if (receipts.length !== 2) errors.push("Exactly two independent holdout receipts are required");
@@ -291,16 +316,25 @@ export function validateHoldouts({ suite, state, receipts, expectedContractFinge
     if (receipt.candidateSha !== state.candidateSha) errors.push(`${receipt.judgeIdentity} reviewed a different candidate SHA`);
     if (receipt.contractFingerprint !== expectedContractFingerprint) errors.push(`${receipt.judgeIdentity} reviewed a different contract fingerprint`);
     if (receipt.candidateFingerprint !== expectedCandidateFingerprint) errors.push(`${receipt.judgeIdentity} reviewed a different candidate fingerprint`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(receipt.evaluatedAt ?? "")) errors.push(`${receipt.judgeIdentity} needs an ISO evaluation date`);
     const scoreIds = (receipt.scores ?? []).map((score) => score.id);
     if (!sameSet(scoreIds, expectedIds)) errors.push(`${receipt.judgeIdentity} must score the exact eval set`);
     if (duplicates(scoreIds).length) errors.push(`${receipt.judgeIdentity} must score each eval exactly once`);
     for (const score of receipt.scores ?? []) {
       if (!Number.isInteger(score.score) || score.score < 0 || score.score > 4) errors.push(`${receipt.judgeIdentity}/${score.id} has invalid score`);
       if (!score.rationale || !Array.isArray(score.evidencePaths) || !score.evidencePaths.length) errors.push(`${receipt.judgeIdentity}/${score.id} needs rationale and evidence paths`);
+      for (const evidencePath of score.evidencePaths ?? []) {
+        if (path.isAbsolute(evidencePath) || evidencePath.split("/").includes("..") || !evidencePathExists(evidencePath)) {
+          errors.push(`${receipt.judgeIdentity}/${score.id} cites evidence outside the candidate commit: ${evidencePath}`);
+        }
+      }
     }
     if ((receipt.criticalRegressions ?? []).length) errors.push(`${receipt.judgeIdentity} found a critical regression`);
+    if ((receipt.instrumentDefects ?? []).length) errors.push(`${receipt.judgeIdentity} found an unresolved evaluator defect`);
     if (receipt.decision !== "pass_for_code_review") errors.push(`${receipt.judgeIdentity} did not pass the candidate for code review`);
   }
+  const evaluationDates = receipts.map((receipt) => receipt.evaluatedAt);
+  if (new Set(evaluationDates).size > 1) errors.push("Holdout receipts must share one evaluation date");
 
   const conservativeScores = Object.fromEntries(
     expectedIds.map((id) => {
@@ -357,6 +391,18 @@ export function readGitCandidateBinding(suite, candidateSha) {
     binding.error = error instanceof Error ? error.message : String(error);
   }
   return binding;
+}
+
+export function candidatePathExistsAtCommit(candidateSha, relativePath) {
+  try {
+    execFileSync("git", ["cat-file", "-e", `${candidateSha}:${relativePath}`], {
+      cwd: repoRoot,
+      stdio: "ignore"
+    });
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 export function validateCandidateGitBinding(state, binding, expectedCandidateFingerprint) {
@@ -431,7 +477,14 @@ export function validateCompositeArtifacts(artifacts, { requireHoldouts = true }
     errors.push(...validateCandidateGitBinding(state, gitBinding, expectedCandidateFingerprint));
     if (state.decision !== "pass_for_code_review") errors.push("Composite state decision must be pass_for_code_review");
     if ((state.holdoutReceiptPaths ?? []).length !== 2) errors.push("State must list exactly two holdout receipts");
-    holdoutResult = validateHoldouts({ suite, state, receipts, expectedContractFingerprint, expectedCandidateFingerprint });
+    holdoutResult = validateHoldouts({
+      suite,
+      state,
+      receipts,
+      expectedContractFingerprint,
+      expectedCandidateFingerprint,
+      evidencePathExists: (relativePath) => candidatePathExistsAtCommit(state.candidateSha, relativePath)
+    });
     errors.push(...holdoutResult.errors);
   }
   return {

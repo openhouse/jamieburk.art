@@ -3,9 +3,9 @@
   "scope": "Every user-facing public route or route template. Metadata, health, robots, sitemap, icon, and not-found responses are governed by route and production checks rather than editorial claim budgets.",
   "unselectedProofDecisions": [
     {
-      "proofId": "kc-spaces-fund-digital-infrastructure",
-      "decision": "hold-from-current-composition",
-      "rationale": "The bounded technical-support proof remains available in the bank, but the current Technical Operations argument is already at its claim budget and has stronger directly inspectable examples."
+      "proofId": "open-house-participatory-practice",
+      "decision": "represented-through-canonical-about-claims",
+      "rationale": "The About page renders five exact canonical projections for the artistic and recursive throughline; this broader proof record remains held to avoid counting the same argument twice."
     },
     {
       "proofId": "waterways-participatory-practice",
@@ -42,6 +42,7 @@
       "intendedAction": "Open a relevant project, view the resume, or make contact.",
       "claimBudget": 5,
       "selectedProofIds": ["career-operating-structure-14-years", "hje-revenue-growth-contribution", "fair-rent-campaign-memory", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure"],
+      "selectedClaimProjectionKeys": [],
       "omissionRationale": "The homepage establishes category and range; detailed evidence, historical projects, and research governance belong deeper in the site."
     },
     {
@@ -50,8 +51,9 @@
       "audience": "readers comparing Jamie's work across civic, cultural, business, and technical settings",
       "argument": "The same operating method appears across distinct projects without making those projects interchangeable.",
       "intendedAction": "Choose the most relevant case study.",
-      "claimBudget": 8,
-      "selectedProofIds": ["hje-modernization-stewardship", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "fair-rent-campaign-memory", "callnyc-civic-data-guidance", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "kc-town-hall-public-benefit-documentation"],
+      "claimBudget": 11,
+      "selectedProofIds": ["hje-modernization-stewardship", "hje-revenue-growth-contribution", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system", "fair-rent-campaign-memory", "fair-rent-source-map", "callnyc-civic-data-guidance", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "kc-town-hall-public-benefit-documentation"],
+      "selectedClaimProjectionKeys": [],
       "omissionRationale": "The index uses one compact role-and-result signal per project and leaves source density to case studies."
     },
     {
@@ -60,8 +62,9 @@
       "audience": "technical project, product operations, implementation, and public-sector delivery hiring readers",
       "argument": "Jamie can create an operating backbone across ambiguous multidisciplinary work.",
       "intendedAction": "Trace a capability to a project and then view or download the resume.",
-      "claimBudget": 10,
-      "selectedProofIds": ["technical-operations-operating-backbone", "fair-rent-campaign-memory", "fair-rent-source-map", "nyc-artist-coalition-public-web-infrastructure", "hje-modernization-stewardship", "hje-revenue-growth-contribution", "callnyc-civic-data-guidance", "source-backed-team-memory-method", "sunday-dinner-196-participation-infrastructure", "kc-town-hall-public-benefit-documentation"],
+      "claimBudget": 15,
+      "selectedProofIds": ["career-operating-structure-14-years", "kc-town-hall-public-benefit-documentation", "fair-rent-campaign-memory", "source-backed-team-memory-method", "ai-evals-professional-development", "technical-operations-operating-backbone", "hje-modernization-stewardship", "callnyc-civic-data-guidance", "wowlist-community-platform", "fair-rent-source-map", "sunday-dinner-196-participation-infrastructure", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "kc-spaces-fund-digital-infrastructure", "hje-revenue-growth-contribution"],
+      "selectedClaimProjectionKeys": ["CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026/technical-operations", "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS/technical-operations", "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT/technical-operations"],
       "omissionRationale": "Only claims that transfer directly to operating-backbone work appear; artistic and archival depth remains available in projects and the bank."
     },
     {
@@ -72,6 +75,7 @@
       "intendedAction": "Download the approved phone-bearing PDF or contact Jamie through the site.",
       "claimBudget": 11,
       "selectedProofIds": ["career-operating-structure-14-years", "hje-modernization-stewardship", "hje-revenue-growth-contribution", "fair-rent-campaign-memory", "fair-rent-source-map", "callnyc-civic-data-guidance", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "ai-evals-professional-development"],
+      "selectedClaimProjectionKeys": [],
       "omissionRationale": "The resume favors role fit and compressed evidence; the PDF and HTML may differ intentionally where one bounded proof better fits the format."
     },
     {
@@ -80,8 +84,9 @@
       "audience": "readers who want to understand the person, method, and artistic-civic throughline behind the operating work",
       "argument": "Jamie's systems practice grows from participation, attention, recursive social structure, and care for how people inhabit institutions.",
       "intendedAction": "Return to the work with a richer understanding of the method or make contact.",
-      "claimBudget": 5,
-      "selectedProofIds": ["career-operating-structure-14-years", "technical-operations-operating-backbone", "ai-evals-professional-development", "open-house-participatory-practice", "nyc-artist-coalition-civic-systems"],
+      "claimBudget": 6,
+      "selectedProofIds": ["ai-evals-professional-development"],
+      "selectedClaimProjectionKeys": ["CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE/about", "CLM-UCSC-SACK-RECURSIVE-SOCIAL-SYSTEMS/about", "CLM-OPEN-HOUSE-ITERATIVE-GOVERNANCE/about", "CLM-CALLNYC-RECURSIVE-METHOD/about", "CLM-NYCAC-RECURSIVE-METHOD/about"],
       "omissionRationale": "The page preserves one threshold connecting artistic, civic, technical, and social practice; it does not become a complete biography or faculty archive."
     },
     {
@@ -92,6 +97,7 @@
       "intendedAction": "Send an email or follow an approved professional profile.",
       "claimBudget": 0,
       "selectedProofIds": [],
+      "selectedClaimProjectionKeys": [],
       "omissionRationale": "Contact is an action surface, not another proof surface; the phone number stays inside the approved resume PDF."
     },
     {
@@ -100,8 +106,9 @@
       "audience": "readers interested in how the portfolio was made and governed",
       "argument": "The site uses ordinary web technology and explicit source, privacy, and accessibility boundaries.",
       "intendedAction": "Understand the site's method without entering the private archive or internal bank.",
-      "claimBudget": 1,
-      "selectedProofIds": ["source-backed-team-memory-method"],
+      "claimBudget": 0,
+      "selectedProofIds": [],
+      "selectedClaimProjectionKeys": [],
       "omissionRationale": "Implementation and governance notes stay concise; the internal knowledge bank is not exposed as a public product."
     },
     {
@@ -110,8 +117,9 @@
       "audience": "peers exploring source-backed team knowledge and AI-assisted research operations",
       "argument": "A developing method can make claims, evidence, boundaries, corrections, and projection decisions more inspectable.",
       "intendedAction": "Review the method as a lab artifact and discuss a bounded pilot.",
-      "claimBudget": 2,
-      "selectedProofIds": ["source-backed-team-memory-method", "ai-evals-professional-development"],
+      "claimBudget": 1,
+      "selectedProofIds": ["source-backed-team-memory-method"],
+      "selectedClaimProjectionKeys": [],
       "omissionRationale": "The lab omits private collaborators, transcripts, pricing, protected locators, and any claim of production SaaS or automated trust."
     },
     {
@@ -123,6 +131,7 @@
       "intendedAction": "Inspect the evidence, compare another case, view technical operations, or contact Jamie.",
       "claimBudget": 6,
       "selectedProofIds": ["hje-modernization-stewardship", "hje-revenue-growth-contribution", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system", "fair-rent-campaign-memory", "fair-rent-source-map", "callnyc-civic-data-guidance", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "kc-town-hall-public-benefit-documentation"],
+      "selectedClaimProjectionKeys": [],
       "selectedProofIdsByInstance": {
         "harry-j-epstein": ["hje-modernization-stewardship", "hje-revenue-growth-contribution"],
         "nyc-artist-coalition": ["nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system"],

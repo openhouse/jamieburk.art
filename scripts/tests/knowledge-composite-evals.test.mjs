@@ -19,6 +19,10 @@ import {
   validateSurvivorship
 } from "../lib/knowledge-composite-validation.mjs";
 import { scanCompiledLifecycleLeaks } from "../check-compiled-lifecycle-leaks.mjs";
+import {
+  validateIntakeCandidateReferences,
+  validateOperatorGraph
+} from "../lib/knowledge-operator-validation.mjs";
 
 const clone = (value) => structuredClone(value);
 const artifacts = readCompositeArtifacts();
@@ -77,6 +81,16 @@ test("composition mutation catches route and omission loss", () => {
   assert.match(errors, /every public route|account for the proof bank exactly/);
 });
 
+test("composition mutation catches rendered proof and direct-projection drift", () => {
+  const manifest = clone(artifacts.composition);
+  const surface = manifest.surfaces.find((item) => item.id === "technical-operations");
+  surface.selectedProofIds = surface.selectedProofIds.filter((id) => id !== "kc-spaces-fund-digital-infrastructure");
+  surface.selectedClaimProjectionKeys.pop();
+  const errors = validateComposition(manifest, artifacts.agency).join("\n");
+  assert.match(errors, /proof selection must match the public composition registry exactly/);
+  assert.match(errors, /direct claim projections must match the public composition registry exactly/);
+});
+
 test("survivorship mutation catches historical absence overclaim", () => {
   const register = clone(artifacts.survivorship);
   const population = register.populations.find((item) => item.status === "not-recovered");
@@ -113,6 +127,7 @@ test("operator commands reject unsafe input and remain non-promoting", () => {
   try {
     const safePath = path.join(directory, "safe.json");
     const unsafePath = path.join(directory, "unsafe.json");
+    const unknownPath = path.join(directory, "unknown.json");
     const candidate = {
       id: "INT-TEST-PUBLIC-SAFE-2099-01-01",
       receivedAt: "2099-01-01",
@@ -121,7 +136,7 @@ test("operator commands reject unsafe input and remain non-promoting", () => {
       title: "Test candidate",
       description: "A bounded test fragment.",
       whyItMatters: "Exercises intake without creating a claim.",
-      projectIds: ["test-project"],
+      projectIds: ["callnyc"],
       status: "deferred",
       disposition: "deferred-with-reason",
       dispositionNote: "Test only; no claim created.",
@@ -131,12 +146,16 @@ test("operator commands reject unsafe input and remain non-promoting", () => {
     };
     writeFileSync(safePath, JSON.stringify(candidate));
     writeFileSync(unsafePath, JSON.stringify({ ...candidate, id: "INT-TEST-UNSAFE-2099-01-01", description: "Private source at /Users/example/archive." }));
+    writeFileSync(unknownPath, JSON.stringify({ ...candidate, id: "INT-TEST-UNKNOWN-2099-01-01", sourceIds: ["SRC-NOT-REAL"] }));
     const safe = spawnSync(process.execPath, ["scripts/knowledge-intake.mjs", "--validate", safePath], { encoding: "utf8" });
     assert.equal(safe.status, 0);
     assert.match(safe.stdout, /No canonical record or public claim was created/);
     const unsafe = spawnSync(process.execPath, ["scripts/knowledge-intake.mjs", "--validate", unsafePath], { encoding: "utf8" });
     assert.notEqual(unsafe.status, 0);
     assert.match(unsafe.stderr, /protected marker/);
+    const unknown = spawnSync(process.execPath, ["scripts/knowledge-intake.mjs", "--validate", unknownPath], { encoding: "utf8" });
+    assert.notEqual(unknown.status, 0);
+    assert.match(unknown.stderr, /unknown ID/);
     const invalidQuery = spawnSync(process.execPath, ["scripts/query-knowledge-lifecycle.mjs", "--view", "unbounded"], { encoding: "utf8" });
     assert.notEqual(invalidQuery.status, 0);
     assert.match(invalidQuery.stderr, /held, research, or proof-debt/);
@@ -146,6 +165,20 @@ test("operator commands reject unsafe input and remain non-promoting", () => {
   } finally {
     rmSync(directory, { recursive: true, force: true });
   }
+});
+
+test("operator validation rejects broken canonical graphs and unknown references", () => {
+  const brokenBank = clone(knowledgeBank);
+  brokenBank.intake[0].sourceIds.push("SRC-NOT-REAL");
+  assert.match(validateOperatorGraph(brokenBank, proofClaims).join("\n"), /unknown source/);
+  const candidate = {
+    projectIds: ["PROJECT-NOT-REAL"],
+    sourceIds: ["SRC-NOT-REAL"],
+    claimIds: [], inquiryIds: [], correctionIds: [], relatedIntakeIds: []
+  };
+  const errors = validateIntakeCandidateReferences(candidate).join("\n");
+  assert.match(errors, /unknown project/);
+  assert.match(errors, /unknown ID/);
 });
 
 test("compiled leak scanner rejects private locators, credentials, and HTML phone strings", () => {
@@ -227,6 +260,40 @@ test("holdout validation rejects duplicate criterion scores", () => {
     expectedCandidateFingerprint: "candidate"
   });
   assert.match(result.errors.join("\n"), /score each eval exactly once/);
+});
+
+test("holdout validation rejects stale dates, unresolved defects, and invented evidence", () => {
+  const suite = clone(artifacts.suite);
+  const state = { ...clone(artifacts.state), candidateSha: "a".repeat(40) };
+  const scores = suite.evals.map((entry) => ({ id: entry.id, score: 4, rationale: "fixture", evidencePaths: ["fixture"] }));
+  const receipt = {
+    version: 1,
+    judgeIdentity: "judge-1",
+    judgeRole: "read-only-independent",
+    authoredPatch: false,
+    sawOptimizationHistory: false,
+    candidateSha: state.candidateSha,
+    contractFingerprint: "contract",
+    candidateFingerprint: "candidate",
+    evaluatedAt: "not-a-date",
+    scores: [{ ...scores[0], evidencePaths: ["../invented"] }, ...scores.slice(1)],
+    criticalRegressions: [],
+    instrumentDefects: ["unresolved"],
+    decision: "pass_for_code_review"
+  };
+  const result = validateHoldouts({
+    suite,
+    state,
+    receipts: [receipt, { ...receipt, judgeIdentity: "judge-2", evaluatedAt: "2026-07-17" }],
+    expectedContractFingerprint: "contract",
+    expectedCandidateFingerprint: "candidate",
+    evidencePathExists: (relativePath) => relativePath === "fixture"
+  });
+  const errors = result.errors.join("\n");
+  assert.match(errors, /ISO evaluation date/);
+  assert.match(errors, /outside the candidate commit/);
+  assert.match(errors, /unresolved evaluator defect/);
+  assert.match(errors, /share one evaluation date/);
 });
 
 test("candidate binding rejects arbitrary SHAs and post-candidate implementation drift", () => {
