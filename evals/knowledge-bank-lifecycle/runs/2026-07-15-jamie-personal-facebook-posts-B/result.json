@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "evaluatedThrough": "2026-07-15",
+  "iterations": 4,
+  "status": "passed",
+  "graphSnapshot": {
+    "intakeRecords": 54,
+    "sources": 208,
+    "claims": 88,
+    "researchInquiries": 29,
+    "activeProjections": 57,
+    "heldProjections": 32
+  },
+  "qualifyingRounds": [
+    3,
+    4
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 83,
+      "editorialFutureUseScore": 85,
+      "result": "revise",
+      "finding": "Scope completeness to the owner-filtered returned population, protect the 973 audience-unknown records, and separate aggregate navigation from public source promotion."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 91,
+      "editorialFutureUseScore": 95,
+      "result": "revise",
+      "finding": "Separate outgoing stakeholder routing from inbound engagement, keep counters mutable, preserve collective authorship, and open an inquiry instead of inferring Jamie's CouncilStat relationship from social wording."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 100,
+      "result": "qualifying-pass",
+      "finding": "The revision closes every returned row, promotes only individually rechecked public posts, governs 549 destination leads, preserves action-routing value, and passes lifetime, audience, engagement, impact, sole-credit, and institutional-role mutations."
+    },
+    {
+      "round": 4,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 100,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent challenge repeated every hard-gate and scored-criterion pass with zero regression."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "unresolvedCriteria": [],
+  "contentClusters": [
+    {
+      "id": "jamie-personal-facebook-owner-post-production",
+      "sourceIds": [
+        "SRC-FB-JAMIE-OWNER-POST-CENSUS-2026",
+        "SRC-FB-JAMIE-POST-CONTROLS-2026",
+        "SRC-FB-JAMIE-NTER-OPENING-2010",
+        "SRC-FB-JAMIE-WOWLIST-NINE-CITIES-2015",
+        "SRC-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-2016",
+        "SRC-FB-JAMIE-LETNYCDANCE-NPR-2017",
+        "SRC-FB-JAMIE-KCTOWNHALL-START-2018",
+        "SRC-FB-JAMIE-TALKSNOTRAIDS-ACTION-2019",
+        "SRC-GOTHAMIST-CABARET-MOMENTUM-2017-03-31",
+        "SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20",
+        "SRC-PITCH-GREAT-ACCOMMODATIONS-2009-09-03"
+      ],
+      "claimIds": [
+        "CLM-FB-JAMIE-POST-POPULATION-2026",
+        "CLM-FB-JAMIE-MISSION-ROUTING-PRACTICE",
+        "CLM-FB-JAMIE-POSTED-URL-ROUTING-2026",
+        "CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026",
+        "CLM-FB-JAMIE-SELECTED-PUBLIC-INTERACTION-FLOOR-2026",
+        "CLM-FB-JAMIE-PROJECT-ACTION-ROUTING",
+        "CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE",
+        "CLM-FB-JAMIE-KCTOWNHALL-COINITIATION-TRACE"
+      ],
+      "researchInquiryIds": [
+        "INQ-FB-JAMIE-POST-CORPUS-2026",
+        "INQ-FB-JAMIE-POSTED-SOURCES-2026",
+        "INQ-FB-JAMIE-COUNCILSTAT-ROLE-2026"
+      ],
+      "projectionDecision": "Retain the full-population method, source queue, stakeholder and counter boundaries, selected action-routing practice, and open CouncilStat role question as governed Knowledge Bank depth. Do not add a public personal timeline or engagement dashboard to the current site."
+    }
+  ],
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
+    "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS",
+    "INTAKE-2026-07-14-URBANHERMIT-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-MICROPOP-POSTED-DESTINATIONS",
+    "INTAKE-2026-07-14-WOWLIST-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-WOWLIST-SOCIAL-MANAGEMENT-MEMORY",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-PUBLISHING-MEMORY",
+    "INTAKE-2026-07-14-KCSPACES-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-15-KCSPACES-NAMING-ROLE-CORRECTION",
+    "INTAKE-2026-07-15-NTERCHNG-AMERICA-NOW-AND-HERE",
+    "INTAKE-2026-07-15-KCTOWNHALL-PHASE-ONE-PROPOSAL",
+    "INTAKE-2026-07-15-KCTOWNHALL-PHASE-ONE-ROLE",
+    "INTAKE-2026-07-15-JAMIE-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-15-JAMIE-FACEBOOK-PUBLIC-PROJECT-POSTS"
+  ]
+}

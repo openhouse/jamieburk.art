@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-14-teams-archive-production-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-14",
+  "status": "passed",
+  "iterations": 5,
+  "qualifyingRounds": [4, 5],
+  "graphSnapshot": {
+    "intakeRecords": 28,
+    "sources": 82,
+    "claims": 30,
+    "researchInquiries": 8,
+    "activeProjections": 19,
+    "heldProjections": 17
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS"
+  ],
+  "contentClusters": [
+    {
+      "id": "teams-project-history-creative-tech",
+      "sourceIds": ["SRC-COOL-HUNTING-TIME-IS-LONG-2006", "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013", "SRC-THRILL-JOCKEY-CONSUMING-FLAME-2020", "SRC-DISCOGS-CONSUMING-FLAME-2020"],
+      "claimIds": ["CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006", "CLM-SORTED-AUDIO-MAX-MSP-2013", "CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020"],
+      "researchInquiryIds": ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13"],
+      "projectionDecision": "Retain three dated creative-technical specimens as bank-only depth. Treat the Matmos listing as community-maintained metadata and do not imply continuous practice, production credit, or a known individual contribution."
+    },
+    {
+      "id": "teams-crs-operating-design",
+      "sourceIds": ["SRC-CRS-OPERATING-DESIGN-ARCHIVE-2026"],
+      "claimIds": ["CLM-CRS-SHARED-OPERATING-LAYER-2026"],
+      "researchInquiryIds": ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13"],
+      "projectionDecision": "Project the protected-source claim through governed work-card and case-study projections. Separate the initial shared record Jamie created from the broader system he designed, keep the source uncited and redacted, and preserve collective campaign outcomes."
+    },
+    {
+      "id": "teams-job-hunt-source-audit",
+      "sourceIds": [],
+      "claimIds": [],
+      "researchInquiryIds": ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13", "INQ-PUBLIC-SITE-SOURCE-COVERAGE"],
+      "projectionDecision": "Use the dossier only to route primary-source research. Do not promote derivative resume or preparation language as independent evidence."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 96,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 97,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 78,
+      "editorialFutureUseScore": 80,
+      "result": "revise",
+      "finding": "The creative cluster implied a continuous practice, the CRS projection blurred designed components with completed work, and direct public copy was not yet bound to the projection resolver."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 81,
+      "editorialFutureUseScore": 83,
+      "result": "revise",
+      "finding": "Source calibration improved, but the CRS sentence still described intended benefit rather than the working record collaborators could use, and the Matmos credit remained too institutionally framed."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 92,
+      "editorialFutureUseScore": 92,
+      "result": "revise",
+      "finding": "The claim and projection wiring improved, but the protected source relationship did not yet enumerate every public proposition and the work card carried the full case-study paragraph."
+    },
+    {
+      "round": 4,
+      "evidenceGovernanceScore": 98,
+      "editorialFutureUseScore": 96,
+      "result": "qualifying-pass",
+      "finding": "The graph decomposed the protected evidence relationship, separated work-card and case-study projections, preserved collective credit, kept creative claims bank-only, and passed every hard gate without regression."
+    },
+    {
+      "round": 5,
+      "evidenceGovernanceScore": 96,
+      "editorialFutureUseScore": 97,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck confirmed the source decomposition, projection contracts, protected-source redaction, derivative-evidence boundary, and calibrated public wording."
+    }
+  ],
+  "unresolvedCriteria": []
+}

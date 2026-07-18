@@ -1,9 +1,19 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
+import {
+  findNycaOverclaims,
+  nycaResearchClaimText
+} from "../lib/nyca-claim-guard.mjs";
+import {
+  findUrbanHermitOverclaims,
+  urbanHermitPublicClaimText,
+  urbanHermitResearchClaimText
+} from "../lib/urbanhermit-claim-guard.mjs";
 
 test("canonical registry passes deterministic validation", () => assert.deepEqual(validateKnowledgeBank(), []));
 
@@ -12,6 +22,7 @@ test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "first-councilstat-hackathon").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.number), [3, 4]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-branding").sources.map((item) => item.number), [5]);
+  assert.deepEqual(resolveCitationOccurrence("callnyc", "member-engagement").sources.map((item) => item.number), [6]);
 });
 
 test("repeated sources retain one note and unique backlinks", () => {
@@ -34,17 +45,317 @@ test("Claim resolver returns only active approved projections", () => {
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
 
+test("every MDX Claim resolves through the generated public registry", () => {
+  for (const filename of ["fair-rent-nyc.mdx", "kc-town-hall.mdx", "callnyc.mdx"]) {
+    const source = readFileSync(`apps/www/src/content/work/${filename}`, "utf8");
+    for (const match of source.matchAll(/<Claim\b([\s\S]*?)\/>/g)) {
+      const attributes = Object.fromEntries(
+        [...match[1].matchAll(/(claimId|projection|surface)="([^"]+)"/g)].map((item) => [item[1], item[2]])
+      );
+      assert.doesNotThrow(
+        () => getClaimProjection(attributes.claimId, attributes.projection, attributes.surface),
+        `${filename} must resolve ${attributes.claimId}`
+      );
+    }
+  }
+});
+
 test("corrections retire old wording from public surfaces", () => {
-  const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
-  assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 3);
+  const publicText = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/content/work/kc-town-hall.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
+  assert.doesNotMatch(publicText, /first civic-data hackathon|2014[-–]2015/i);
+  assert.doesNotMatch(publicText, /The project did not proceed\. It later withdrew/i);
+  assert.match(publicText, /transitioned stewardship/i);
+
+  const correctionIds = new Set(knowledgeBank.corrections.map(({ id }) => id));
+  for (const id of [
+    "COR-CALLNYC-CHRONOLOGY-2026",
+    "COR-CALLNYC-SUPERLATIVE-2026",
+    "COR-CALLNYC-EVENT-TIME-2026",
+    "COR-KC-TOWN-HALL-STEWARDSHIP-2026"
+  ]) {
+    assert.ok(correctionIds.has(id), `Missing correction ${id}`);
+  }
 });
 
 test("negative research preserves scope and limitations", () => {
-  const inquiry = knowledgeBank.researchInquiries[0];
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (record) => record.id === "INQ-CALLNYC-CIVIC-HALL-PAGE-2026"
+  );
+  assert.ok(inquiry, "Missing Civic Hall negative-research inquiry");
   assert.equal(inquiry.resultStatus, "not-recovered");
   assert.ok(inquiry.limitations.some((item) => /not proof of nonexistence/i.test(item)));
   assert.doesNotMatch(inquiry.publicSummary, /did not exist/i);
+});
+
+test("NTER CHNG preserves collective credit and exhibition-source boundaries", () => {
+  const claims = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const sources = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const installation = claims.get("CLM-NTERCHNG-COLLABORATIVE-INSTALLATION-2011");
+  const exhibition = claims.get("CLM-NTERCHNG-AMERICA-NOW-AND-HERE-2011");
+  const operations = claims.get("CLM-NTERCHNG-REINSTALLATION-OPERATIONS-2011");
+  const exhibitionSource = sources.get("SRC-AMERICA-NOW-AND-HERE-KC-NTERCHNG-2011");
+  const nermanSource = sources.get("SRC-NERMAN-AMERICA-NOW-AND-HERE-2011");
+  const installerSource = sources.get("SRC-NTERCHNG-INSTALLER-PLAN-2011");
+  const participantSource = sources.get("SRC-NTERCHNG-EXHIBITION-PARTICIPANT-NOTES-2011");
+
+  assert.ok(installation);
+  assert.ok(exhibition);
+  assert.ok(operations);
+  assert.ok(exhibitionSource);
+  assert.ok(nermanSource);
+  assert.ok(installerSource);
+  assert.ok(participantSource);
+  assert.match(installation.internalClaim, /Drew Bolton.*Garrett Fuselier/i);
+  assert.ok(installation.antiClaims.some((item) => /solely created.*programmed.*designed.*produced/i.test(item)));
+  assert.ok(
+    exhibition.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-AMERICA-NOW-AND-HERE-KC-NTERCHNG-2011" &&
+        item.relationship === "direct-support"
+    )
+  );
+  assert.ok(
+    exhibition.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-NERMAN-AMERICA-NOW-AND-HERE-2011" &&
+        item.relationship === "context"
+    )
+  );
+  assert.ok(exhibitionSource.doesNotEstablish.some((item) => /Nerman Museum/i.test(item)));
+  assert.ok(nermanSource.doesNotEstablish.some((item) => /NTER CHNG.*inclusion/i.test(item)));
+  assert.equal(installerSource.visibility, "protected");
+  assert.equal(installerSource.canonicalUrl, undefined);
+  assert.equal(installerSource.archiveUrl, undefined);
+  assert.equal(participantSource.visibility, "protected");
+  assert.ok(participantSource.doesNotEstablish.some((item) => /permission to publish participant messages/i.test(item)));
+  assert.ok(operations.boundaries.some((item) => /intended workstreams.*not completion/i.test(item)));
+  assert.ok(operations.antiClaims.some((item) => /individually performed every software/i.test(item)));
+});
+
+test("KC Town Hall Phase One separates completion, role, survey, and full redevelopment", () => {
+  const claims = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const sources = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const completion = claims.get("CLM-KCTOWNHALL-PHASE-ONE-COLD-SHELL-COMPLETION-2019");
+  const role = claims.get("CLM-KCTOWNHALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE");
+  const survey = claims.get("CLM-KCTOWNHALL-PARTICIPATORY-SURVEY-SYSTEM-2019");
+  const award = claims.get("CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE");
+  const proposal = sources.get("SRC-KCTOWNHALL-CCED-PROPOSAL-2019");
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-KCTOWNHALL-PHASE-ONE-ROLE-AND-COMPLETION-2019"
+  );
+
+  assert.ok(completion);
+  assert.ok(role);
+  assert.ok(survey);
+  assert.ok(award);
+  assert.ok(proposal);
+  assert.ok(inquiry);
+  assert.equal(completion.status, "confirmed-with-boundary");
+  assert.ok(completion.boundaries.some((item) => /project-prepared.*independent/i.test(item)));
+  assert.ok(completion.antiClaims.some((item) => /full KC Town Hall redevelopment/i.test(item)));
+  assert.equal(role.status, "use-with-care");
+  assert.ok(
+    role.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-JAMIE-KCTOWNHALL-PHASE-ONE-ACCOUNT-2026" &&
+        item.relationship === "direct-support"
+    )
+  );
+  assert.ok(
+    role.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-KCTOWNHALL-CCED-PROPOSAL-2019" &&
+        item.relationship === "corroborating"
+    )
+  );
+  assert.ok(survey.boundaries.some((item) => /Oak Park.*New Horizon/i.test(item)));
+  assert.ok(survey.boundaries.some((item) => /participant responses.*contact information/i.test(item)));
+  assert.equal(proposal.visibility, "protected");
+  assert.equal(proposal.canonicalUrl, undefined);
+  assert.equal(proposal.archiveUrl, undefined);
+  assert.ok(award.antiClaims.some((item) => /full redevelopment was completed/i.test(item)));
+  assert.ok(inquiry.limitations.some((item) => /\$189,629.*\$180,629/i.test(item)));
+});
+
+test("member engagement remains account-level and institutionally bounded", () => {
+  const claim = knowledgeBank.claims.find((item) => item.id === "CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT");
+  assert.ok(claim);
+  assert.match(claim.internalClaim, /11 posts.*10 sitting NYC Council members/i);
+  assert.ok(claim.boundaries.some((item) => /account-level/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /endorsed CallNYC/i.test(item)));
+});
+
+test("NYC Artist Coalition social claims preserve recovery and authorship boundaries", () => {
+  const byId = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const sharedIdentity = byId.get("CLM-NYCA-SHARED-SOCIAL-IDENTITY");
+  const councilEngagement = byId.get("CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT");
+  const populationRange = byId.get("CLM-NYCA-SHARED-PUBLISHING-SYSTEM-RANGE");
+
+  assert.ok(sharedIdentity);
+  assert.ok(councilEngagement);
+  assert.ok(populationRange);
+
+  const sharedProjection = sharedIdentity.projections.find((projection) => projection.status === "active");
+  const councilProjection = councilEngagement.projections.find((projection) => projection.status === "active");
+  assert.match(sharedProjection.text, /Teammates also published.*not attributed to Jamie/is);
+  assert.match(councilProjection.text, /account-level evidence.*not formal endorsement.*personal authorship/is);
+  assert.ok(populationRange.projections.every((projection) => projection.status !== "active" && projection.surfaces.length === 0));
+  assert.ok(populationRange.boundaries.some((boundary) => /complete disposition is not complete item recovery/i.test(boundary)));
+
+  const liveText = [sharedIdentity, councilEngagement, populationRange]
+    .flatMap((claim) => [claim.internalClaim, ...claim.projections.filter((projection) => projection.status === "active").map((projection) => projection.text)])
+    .join("\n");
+  assert.deepEqual(findNycaOverclaims(liveText), []);
+});
+
+test("NYC Artist Coalition guard catches representative semantic regressions", () => {
+  const overclaims = [
+    "All 5,124 tweets were recovered.",
+    "5,124/5,124 tweets recovered.",
+    "100 percent of the posts were recovered.",
+    "Jamie authored all 5,124 posts.",
+    "Jamie selected every repost.",
+    "Current profile counters prove reach.",
+    "The New York City Council formally endorsed NYC Artist Coalition.",
+    "Seven Council members formally endorsed the coalition.",
+    "Jamie personally communicated with all seven Council members.",
+    "The social corpus alone proves policy causality."
+  ];
+
+  for (const sample of overclaims) {
+    assert.notDeepEqual(findNycaOverclaims(sample), [], `Expected guard to reject: ${sample}`);
+  }
+});
+
+test("NYC Artist Coalition public research artifacts pass the semantic guard", () => {
+  const text = [
+    nycaResearchClaimText(
+      readFileSync("docs/knowledge-bank/projects/nycartc-x-population-2026-07-14.md", "utf8")
+    ),
+    readFileSync("docs/knowledge-bank/data/nycartc-public-post-ledger.json", "utf8"),
+    readFileSync("docs/knowledge-bank/data/nycartc-public-engagement-ledger.json", "utf8")
+  ].join("\n");
+
+  assert.deepEqual(findNycaOverclaims(text), []);
+});
+
+test("personal social archive claims preserve population, attribution, and projection boundaries", () => {
+  const byId = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const population = byId.get("CLM-URBANHERMIT-CURRENT-POPULATION-ACCOUNTING");
+  const inbound = byId.get("CLM-URBANHERMIT-INBOUND-ENGAGEMENT-FLOOR");
+  const practice = byId.get("CLM-URBANHERMIT-PRACTICE-THREADS");
+  const horseLords = byId.get("CLM-HORSE-LORDS-TRUTHERS-VIDEO");
+  const musicHackathon = byId.get("CLM-MUSIC-HACKATHON-WOWLIST-ROLE");
+
+  assert.ok(population);
+  assert.ok(inbound);
+  assert.ok(practice);
+  assert.ok(horseLords);
+  assert.ok(musicHackathon);
+  assert.match(population.internalClaim, /434.*431.*three repost-source records/is);
+  assert.ok(population.boundaries.some((boundary) => /not every post Jamie ever made or a platform export/i.test(boundary)));
+  assert.ok(inbound.boundaries.some((boundary) => /not automatically endorsement.*reach.*impact/i.test(boundary)));
+  assert.ok(practice.projections.every((projection) => projection.status !== "active" && projection.surfaces.length === 0));
+  assert.match(horseLords.internalClaim, /Jamie Burkart and M\.C\. Schmidt made/i);
+  assert.match(musicHackathon.internalClaim, /co-organizer/i);
+  assert.ok(musicHackathon.boundaries.some((boundary) => /sole authorship/i.test(boundary)));
+});
+
+test("personal social archive guard catches representative semantic regressions", () => {
+  const overclaims = [
+    "Every post Jamie ever made was recovered.",
+    "All 434 tweets were recovered.",
+    "434/434 posts recovered.",
+    "100 percent of all tweets Jamie ever posted were recovered.",
+    "Jamie authored all 434 records.",
+    "All 17 accounts endorsed Jamie.",
+    "The 26 inbound records prove Jamie's reach.",
+    "Reactions on reposts measure Jamie's engagement.",
+    "The 175 likes prove Jamie's reach.",
+    "Current visible reactions are historical analytics.",
+    "Theme frequency proves Jamie's professional priorities.",
+    "The unresolved short URLs never existed.",
+    "The personal timeline should become a public portfolio archive.",
+    "Jamie alone made the Horse Lords Truthers video.",
+    "Jamie solely built WOW List."
+  ];
+
+  for (const sample of overclaims) {
+    assert.notDeepEqual(findUrbanHermitOverclaims(sample), [], `Expected guard to reject: ${sample}`);
+  }
+});
+
+test("personal social archive artifacts pass the semantic guard and close their controls", () => {
+  const postLedger = JSON.parse(readFileSync("docs/knowledge-bank/data/urbanhermit-public-post-ledger.json", "utf8"));
+  const engagementLedger = JSON.parse(readFileSync("docs/knowledge-bank/data/urbanhermit-public-engagement-ledger.json", "utf8"));
+  const claimText = urbanHermitResearchClaimText(
+    readFileSync("docs/knowledge-bank/projects/urbanhermit-x-population-2026-07-14.md", "utf8")
+  );
+
+  const humanText = ["README.md", "claims.md", "proofs.md", "sources.md", "projection-map.md"]
+    .map((filename) => urbanHermitPublicClaimText(readFileSync(`docs/knowledge-bank/${filename}`, "utf8")))
+    .join("\n");
+  assert.deepEqual(findUrbanHermitOverclaims(`${claimText}\n${humanText}\n${JSON.stringify(postLedger)}\n${JSON.stringify(engagementLedger)}`), []);
+  assert.equal(postLedger.items.length, 434);
+  assert.equal(postLedger.populationAudit.directlyReverifiedRecords, 431);
+  assert.equal(postLedger.populationAudit.priorAuthenticatedCaptureOnlyRecords, 3);
+  assert.equal(
+    postLedger.populationAudit.authoredStandalonePosts +
+      postLedger.populationAudit.authoredReplies +
+      postLedger.populationAudit.reposts,
+    434
+  );
+  assert.equal(engagementLedger.records.length, 26);
+  assert.equal(engagementLedger.searchAudit.distinctPublicAccounts, 17);
+  assert.deepEqual(engagementLedger.aggregateFindings.byInteractionContext, {
+    "general-public-conversation": 8,
+    "role-or-project-attribution": 11,
+    "mission-related-thread": 7
+  });
+
+  const serialized = `${JSON.stringify(postLedger)}\n${JSON.stringify(engagementLedger)}`;
+  assert.doesNotMatch(serialized, /"(?:statusId|statusUrl|fullText|authorHandle|postedAt|publishedAt|exactDate|visibleMetricsObserved2026)"\s*:/i);
+  assert.ok(postLedger.items.every((item) => item.publicDetailStatus === "redacted-row-level-disposition"));
+  assert.ok(engagementLedger.records.every((item) => item.publicDetailStatus === "redacted-row-level-disposition"));
+
+  const countBy = (records, key) =>
+    Object.fromEntries(
+      [...records.reduce((counts, record) => counts.set(record[key], (counts.get(record[key]) ?? 0) + 1), new Map())]
+        .sort(([left], [right]) => String(left).localeCompare(String(right)))
+    );
+  const sortedObject = (value) => Object.fromEntries(Object.entries(value).sort(([left], [right]) => left.localeCompare(right)));
+  assert.deepEqual(countBy(postLedger.items, "year"), sortedObject(postLedger.aggregateFindings.byYear));
+  assert.deepEqual(countBy(postLedger.items, "relationship"), sortedObject(postLedger.aggregateFindings.byRelationship));
+  assert.deepEqual(countBy(postLedger.items, "primaryTheme"), sortedObject(postLedger.aggregateFindings.byPrimaryTheme));
+  assert.equal(postLedger.items.filter((item) => item.hasExternalLink).length, postLedger.aggregateFindings.recordsWithExternalLinks);
+  assert.equal(postLedger.items.reduce((sum, item) => sum + item.externalLinkCount, 0), postLedger.aggregateFindings.externalLinkOccurrences);
+  assert.deepEqual(postLedger.aggregateFindings.currentVisibleReactionFloor, {
+    authoredRecordsWithAnyReaction: 85,
+    replies: 8,
+    reposts: 60,
+    likes: 175
+  });
+  assert.deepEqual(countBy(engagementLedger.records, "stakeholderGroup"), sortedObject(engagementLedger.aggregateFindings.byStakeholderGroup));
+  assert.deepEqual(countBy(engagementLedger.records, "primaryTheme"), sortedObject(engagementLedger.aggregateFindings.byPrimaryTheme));
+  assert.deepEqual(countBy(engagementLedger.records, "interactionContext"), sortedObject(engagementLedger.aggregateFindings.byInteractionContext));
+});
+
+test("repo-local knowledge-bank sources use immutable existing commit refs", () => {
+  const repoBlobPattern =
+    /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/([^/]+)\/([^#?]+)(?:[#?].*)?$/i;
+  const repoSources = knowledgeBank.sources
+    .map((source) => ({ source, match: source.canonicalUrl?.match(repoBlobPattern) }))
+    .filter(({ match }) => Boolean(match));
+
+  assert.ok(repoSources.length > 0);
+  for (const { source, match } of repoSources) {
+    const [, revision, sourcePath] = match;
+    assert.match(revision, /^[0-9a-f]{40}$/i, `${source.id} must use a full commit SHA`);
+    assert.doesNotThrow(
+      () => execFileSync("git", ["cat-file", "-e", `${revision}:${decodeURIComponent(sourcePath)}`], { stdio: "ignore" }),
+      `${source.id} must resolve to a file in the pinned commit`
+    );
+  }
 });
 
 test("private and metadata-only evidence is absent from the public registry", () => {
@@ -62,4 +373,60 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(references, /role="doc-endnotes"/);
   assert.match(references, /<ol>/);
   assert.match(sourceNote, /role="doc-backlink"/);
+});
+
+test("iCloud Teams source deepening preserves policy, ordinal, and credential boundaries", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+
+  const redlineSource = sourceById.get("SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026");
+  const redlineClaim = claimById.get("CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026");
+  assert.equal(redlineSource?.visibility, "protected");
+  assert.equal(redlineSource?.canonicalUrl, undefined);
+  assert.equal(redlineSource?.archiveUrl, undefined);
+  assert.match(redlineClaim?.internalClaim ?? "", /prepared a tracked-change legislative provenance redline/i);
+  assert.match((redlineClaim?.antiClaims ?? []).join("\n"), /authored Commercial Rent Stabilization legislation/i);
+
+  const sundaySource = sourceById.get("SRC-SUNDAY-DINNER-HUNDREDTH-PROJECT-PAGE");
+  const sundayClaim = claimById.get("CLM-SUNDAY-DINNER-HUNDREDTH-ITERATION-TRACE");
+  assert.equal(sundaySource?.visibility, "public");
+  assert.match(sundaySource?.canonicalUrl ?? "", /^https:\/\/sundaydinnernyc\.com\//);
+  assert.match((sundayClaim?.antiClaims ?? []).join("\n"), /300-plus Sunday Dinner gatherings/i);
+  assert.match((sundayClaim?.antiClaims ?? []).join("\n"), /One hundred people attended/i);
+
+  const certificateSource = sourceById.get("SRC-MAVEN-AI-EVALS-COMPLETION-CERTIFICATE");
+  const certificateClaim = claimById.get("CLM-AI-EVALS-COURSE-COMPLETION");
+  assert.equal(certificateSource?.visibility, "public-metadata-only");
+  assert.equal(certificateSource?.canonicalUrl, undefined);
+  assert.match(certificateSource?.publicNote ?? "", /does not display a completion date/i);
+  assert.match((certificateClaim?.antiClaims ?? []).join("\n"), /certified AI evaluator/i);
+  assert.match((certificateClaim?.antiClaims ?? []).join("\n"), /completion date, curriculum, score, or proficiency/i);
+});
+
+test("NYC Artist Coalition institutional-value claims preserve fact, inference, and reciprocal credit", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+
+  const testimony = sourceById.get("SRC-DCLA-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27");
+  const outcome = claimById.get("CLM-NYCA-DCLA-ENGAGEMENT-OUTCOME-2017");
+  const intermediary = claimById.get("CLM-NYCA-CIVIC-INTERMEDIARY-VALUE");
+  const council = claimById.get("CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY");
+
+  assert.equal(testimony?.visibility, "public");
+  assert.match(testimony?.canonicalUrl ?? "", /Commissioner-Tom-Finkelpearl_Testimony\.pdf$/);
+  assert.ok(testimony?.doesNotEstablish.some((item) => /does not name NYC Artist Coalition/i.test(item)));
+  assert.equal(outcome?.status, "confirmed-with-boundary");
+  assert.ok(outcome?.boundaries.some((item) => /does not name NYC Artist Coalition/i.test(item)));
+  assert.ok(outcome?.antiClaims.some((item) => /testified that he needed/i.test(item)));
+
+  assert.equal(intermediary?.status, "inference");
+  assert.match(intermediary?.internalClaim ?? "", /support the inference.*civic intermediary/is);
+  assert.ok(intermediary?.antiClaims.some((item) => /official representative of every artist/i.test(item)));
+  assert.ok(intermediary?.antiClaims.some((item) => /commissioned the coalition/i.test(item)));
+
+  assert.equal(council?.status, "inference");
+  assert.match(council?.internalClaim ?? "", /reciprocal-capacity analysis/i);
+  assert.ok(council?.boundaries.some((item) => /not a statement of Espinal's private motive/i.test(item)));
+  assert.ok(council?.antiClaims.some((item) => /coalition alone caused/i.test(item)));
+  assert.ok(council?.antiClaims.some((item) => /Jamie personally supplied every witness/i.test(item)));
 });

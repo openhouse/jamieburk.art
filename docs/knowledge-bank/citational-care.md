@@ -9,7 +9,7 @@ reasoning without exposing private evidence.
 ## Canonical flow
 
 ```text
-source -> evidence relationship -> claim -> approved projection
+intake -> source -> evidence relationship -> claim -> approved projection
        -> page occurrence -> page-local number -> public note
 ```
 
@@ -22,6 +22,10 @@ The canonical machine-readable records live in
 `apps/www/src/data/knowledge-bank/records.ts`. The generated, redacted public
 projection is `public-registry.json`. The app imports only the redacted
 projection; validators and reports inspect the canonical registry.
+
+Intake records retain public-safe source leads, memories, artifacts, claim
+proposals, corrections, and photo leads before they mature. They are never
+rendered as citations directly.
 
 Run `npm run generate:citations` after changing canonical records. Never edit
 the generated registry by hand.

@@ -1,0 +1,410 @@
+{
+  "version": 1,
+  "id": "portfolio-readiness-composite-v1",
+  "objective": "Coordinate the existing claim, practice, lifecycle, and blind-spot suites into an exact-candidate readiness decision without replacing their authority or confusing machine checks with human outcomes.",
+  "scopeBoundary": "A system-ready result certifies the repository's deterministic and bounded LLM evaluation contract for one exact candidate. Application-ready and production-ready require separately recorded human states.",
+  "candidatePaths": [
+    "apps/www/mdx-components.tsx",
+    "apps/www/src/app",
+    "apps/www/src/components",
+    "apps/www/src/content",
+    "apps/www/src/data/site.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/knowledge-bank",
+    "apps/www/public/resume"
+  ],
+  "domainSuites": [
+    {
+      "id": "citations",
+      "command": "npm run check:citations",
+      "authority": "deterministic"
+    },
+    {
+      "id": "citation-tests",
+      "command": "npm run test:citations",
+      "authority": "deterministic"
+    },
+    {
+      "id": "knowledge-tests",
+      "command": "npm run test:knowledge-bank",
+      "authority": "deterministic"
+    },
+    {
+      "id": "knowledge-bank",
+      "command": "npm run knowledge-bank",
+      "authority": "deterministic"
+    },
+    {
+      "id": "portfolio-claims",
+      "command": "npm run evals:portfolio",
+      "authority": "deterministic-contract"
+    },
+    {
+      "id": "chad-lens",
+      "command": "npm run evals:chad-lens",
+      "authority": "deterministic-contract"
+    },
+    {
+      "id": "margaret-morse-lens",
+      "command": "npm run evals:margaret-morse",
+      "authority": "deterministic-contract-and-judge-artifacts"
+    },
+    {
+      "id": "warren-sack-lens",
+      "command": "npm run evals:warren-sack",
+      "authority": "deterministic-contract-and-judge-artifacts"
+    },
+    {
+      "id": "knowledge-bank-lifecycle",
+      "command": "npm run evals:knowledge-bank-lifecycle",
+      "authority": "deterministic-contract"
+    },
+    {
+      "id": "portfolio-system-blind-spots",
+      "command": "npm run evals:blind-spots",
+      "authority": "deterministic-contract-and-judge-artifacts"
+    },
+    {
+      "id": "public-safety",
+      "command": "npm run public-safety",
+      "authority": "deterministic"
+    },
+    {
+      "id": "routes",
+      "command": "npm run check:routes",
+      "authority": "deterministic"
+    },
+    {
+      "id": "typecheck",
+      "command": "npm run typecheck",
+      "authority": "deterministic"
+    },
+    {
+      "id": "lint",
+      "command": "npm run lint",
+      "authority": "deterministic"
+    },
+    {
+      "id": "build",
+      "command": "npm run build",
+      "authority": "deterministic"
+    }
+  ],
+  "profiles": {
+    "system-ready": {
+      "minimumMachineWeightedScore": 90,
+      "minimumMachineCriterionScore": 4,
+      "requiredHumanChecks": []
+    },
+    "application-ready": {
+      "minimumMachineWeightedScore": 90,
+      "minimumMachineCriterionScore": 4,
+      "requiredHumanChecks": [
+        "resume-contact-approval",
+        "hiring-reader-validation",
+        "exact-candidate-share-approval"
+      ]
+    },
+    "production-ready": {
+      "minimumMachineWeightedScore": 90,
+      "minimumMachineCriterionScore": 4,
+      "requiredHumanChecks": [
+        "resume-contact-approval",
+        "hiring-reader-validation",
+        "exact-candidate-share-approval",
+        "media-rights-review",
+        "production-indexing-approval",
+        "production-deploy-approval",
+        "post-deploy-verification"
+      ]
+    }
+  },
+  "criteria": [
+    {
+      "id": "application-comprehension",
+      "name": "Application comprehension",
+      "description": "A hiring reader can identify Jamie's target work, direct contribution, usable outcomes, strongest proof, and next action without reconstructing the archive.",
+      "evaluationClass": "hybrid",
+      "machineScored": true,
+      "weight": 12,
+      "hardGate": false,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Rendered homepage and role-fit surface",
+        "Resume and contact path",
+        "First-viewport and scan-order observations"
+      ],
+      "failureExamples": [
+        "The reader must infer the target role",
+        "Archive depth appears before the hiring argument"
+      ],
+      "remediationGuidance": "Move the answer forward, reduce repeated setup, and route to two or three decisive proofs.",
+      "owner": "portfolio editor"
+    },
+    {
+      "id": "claim-source-governance",
+      "name": "Claim and source governance",
+      "description": "Consequential public claims remain canonical, source-backed, bounded, cited where required, and no stronger than the Knowledge Bank record.",
+      "evaluationClass": "hybrid",
+      "machineScored": true,
+      "weight": 14,
+      "hardGate": true,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Citation and Knowledge Bank checks",
+        "Claim/source/evidence relationships",
+        "Public-safety boundaries"
+      ],
+      "failureExamples": [
+        "A URL is treated as a seal of authority",
+        "Not recovered becomes did not exist",
+        "A private locator appears publicly"
+      ],
+      "remediationGuidance": "Repair the canonical source, evidence, claim, or boundary before revising public copy.",
+      "owner": "knowledge-bank steward"
+    },
+    {
+      "id": "role-collective-credit",
+      "name": "Exact role and collective credit",
+      "description": "Jamie's supported actions are visible while collaborators, institutions, legislation, and collective outcomes retain their proper credit.",
+      "evaluationClass": "hybrid",
+      "machineScored": true,
+      "weight": 10,
+      "hardGate": true,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Role-specific source relationships",
+        "Credits and guardrails",
+        "Adversarial sole-credit fixtures"
+      ],
+      "failureExamples": [
+        "Coalition importance becomes Jamie's sole authorship",
+        "Careful collective language erases Jamie's documented action"
+      ],
+      "remediationGuidance": "Separate individual action, collective work, institutional authority, and outcome causality.",
+      "owner": "evidence and attribution editor"
+    },
+    {
+      "id": "operating-sequence-transfer",
+      "name": "Operating sequence, outcomes, and transfer",
+      "description": "Primary proof cases show how an emerging condition became usable through decisions, implementation, use, outcome, and durable handoff.",
+      "evaluationClass": "llm-judge",
+      "machineScored": true,
+      "weight": 10,
+      "hardGate": false,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "At least two primary case studies",
+        "Concrete artifacts or operating records",
+        "Bounded output-to-outcome chain"
+      ],
+      "failureExamples": [
+        "A list of duties replaces a sequence",
+        "Outputs are presented as outcomes without use evidence"
+      ],
+      "remediationGuidance": "Show the smallest accurate chain from condition through handoff while preserving domain differences.",
+      "owner": "case-study editor"
+    },
+    {
+      "id": "recent-capability",
+      "name": "Recent and present-tense capability",
+      "description": "The portfolio demonstrates current technical project, product operations, implementation, knowledge-system, and evaluation practice rather than relying only on historical importance.",
+      "evaluationClass": "hybrid",
+      "machineScored": true,
+      "weight": 6,
+      "hardGate": false,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Recent dated work",
+        "Present-tense offer",
+        "Connection between current method and prior practice"
+      ],
+      "failureExamples": [
+        "All convincing evidence is historical",
+        "Current experiments are described as deployed products"
+      ],
+      "remediationGuidance": "Use bounded recent practice and label prototype, method, consulting, and production status precisely.",
+      "owner": "portfolio editor"
+    },
+    {
+      "id": "artifact-visual-proof",
+      "name": "Artifact and visual proof",
+      "description": "Readers can inspect representative work while evidentiary, representative, reconstructed, protected, and rights-pending media remain distinct.",
+      "evaluationClass": "hybrid",
+      "machineScored": true,
+      "weight": 6,
+      "hardGate": false,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Rendered artifact surfaces",
+        "Rights and consent status",
+        "Representative/evidentiary labels"
+      ],
+      "failureExamples": [
+        "A generic image is presented as event evidence",
+        "Protected media is exposed for visual polish"
+      ],
+      "remediationGuidance": "Prefer actual approved artifacts and label what an image can and cannot establish.",
+      "owner": "visual and rights editor"
+    },
+    {
+      "id": "resume-contact-path",
+      "name": "Resume, contact, and application path",
+      "description": "The canonical resume, approved contact route, proof destinations, and website chronology reinforce one coherent application packet.",
+      "evaluationClass": "hybrid",
+      "machineScored": true,
+      "weight": 6,
+      "hardGate": true,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Resume PDF and route",
+        "Contact route",
+        "Cross-surface chronology and role consistency"
+      ],
+      "failureExamples": [
+        "A file exists but is not the approved resume",
+        "The site and resume contradict one another"
+      ],
+      "remediationGuidance": "Fix front-door application artifacts before expanding secondary content.",
+      "owner": "application owner"
+    },
+    {
+      "id": "responsive-accessibility",
+      "name": "Responsive and accessible experience",
+      "description": "The exact rendered candidate remains legible, stable, keyboard-usable, and comprehensible across required widths and assistive interaction paths.",
+      "evaluationClass": "hybrid",
+      "machineScored": true,
+      "weight": 8,
+      "hardGate": true,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "320, 375, 768, and desktop inspection",
+        "Keyboard and focus QA",
+        "Citation/backlink and reduced-motion behavior"
+      ],
+      "failureExamples": [
+        "Text or controls overlap",
+        "Focus is invisible",
+        "Citation information depends on hover"
+      ],
+      "remediationGuidance": "Repair reading order, layout constraints, focus, contrast, and semantics before ornament.",
+      "owner": "frontend and accessibility reviewer"
+    },
+    {
+      "id": "runtime-release-behavior",
+      "name": "Runtime, routes, indexing, and release behavior",
+      "description": "The application builds reproducibly, routes and health contracts work, staging remains noindex, and production state is bound to an exact candidate.",
+      "evaluationClass": "deterministic",
+      "machineScored": true,
+      "weight": 8,
+      "hardGate": true,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Build and route checks",
+        "Robots, sitemap, health, and Docker evidence",
+        "Exact candidate digest"
+      ],
+      "failureExamples": [
+        "A stale score certifies a changed build",
+        "Production indexing is enabled without approval"
+      ],
+      "remediationGuidance": "Repair deterministic release behavior and bind every result to the reviewed candidate.",
+      "owner": "release operator"
+    },
+    {
+      "id": "maintainability-handoff",
+      "name": "Maintainability and contributor comprehension",
+      "description": "A contributor with only the repository can ingest, query, evaluate, improve, and hand off the system without inventing a parallel source of truth.",
+      "evaluationClass": "hybrid",
+      "machineScored": true,
+      "weight": 5,
+      "hardGate": false,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "README and AGENTS guidance",
+        "Intake/query/palette commands",
+        "Reproducible eval and run records"
+      ],
+      "failureExamples": [
+        "The latest pass cannot be reproduced",
+        "A helper writes outside canonical lifecycle stages"
+      ],
+      "remediationGuidance": "Reduce duplicate concepts and document authority, state transitions, and exact commands.",
+      "owner": "repository maintainer"
+    },
+    {
+      "id": "collaborator-corroboration",
+      "name": "Collaborator corroboration",
+      "description": "Where consequential individual-role language depends on shared work, a named human process can confirm, revise, decline, or protect it.",
+      "evaluationClass": "human",
+      "machineScored": false,
+      "weight": 5,
+      "hardGate": false,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Public-safe corroboration receipt or explicit not-required decision",
+        "Claim and candidate digest"
+      ],
+      "failureExamples": [
+        "A planned collaborator review is described as completed",
+        "Private feedback is committed"
+      ],
+      "remediationGuidance": "Request bounded review and retain only public-safe disposition and learning.",
+      "owner": "Jamie Burkart"
+    },
+    {
+      "id": "hiring-reader-validation",
+      "name": "Independent hiring-reader validation",
+      "description": "A real intended reader can identify role, contribution, proof, and next action from the exact shared candidate.",
+      "evaluationClass": "human",
+      "machineScored": false,
+      "weight": 5,
+      "hardGate": false,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Dated aggregate reader receipt",
+        "Candidate digest",
+        "Result and content decision"
+      ],
+      "failureExamples": [
+        "An LLM score is called recruiter validation",
+        "A reader tests a different candidate"
+      ],
+      "remediationGuidance": "Run the short comprehension protocol and record only aggregate public-safe learning.",
+      "owner": "Jamie Burkart"
+    },
+    {
+      "id": "exact-candidate-approval",
+      "name": "Exact-candidate approval and cutover",
+      "description": "Jamie approves the exact candidate for sharing or deployment, with indexing, rights, rollback, and post-deploy states separately visible.",
+      "evaluationClass": "human",
+      "machineScored": false,
+      "weight": 5,
+      "hardGate": true,
+      "threshold": 4,
+      "evidenceRequirements": [
+        "Explicit approval receipt",
+        "Exact revision and candidate digest",
+        "Named scope of approval"
+      ],
+      "failureExamples": [
+        "Approval of a proposal is treated as approval of a later candidate",
+        "Deployment approval is inferred from machine checks"
+      ],
+      "remediationGuidance": "Present the exact candidate and request the specific share or production decision.",
+      "owner": "Jamie Burkart"
+    }
+  ],
+  "stopPolicy": {
+    "targetMachineWeightedScore": 90,
+    "minimumMachineCriterionScore": 4,
+    "requiredConsecutivePassingRounds": 2,
+    "requiredIndependentJudgesPerRound": 2,
+    "maxIterations": 8,
+    "maxRegressions": 0,
+    "candidateAndRubricMustRemainStable": true,
+    "failureCondition": "At the iteration limit, preserve the strongest non-regressing candidate and name unresolved criteria without claiming readiness."
+  }
+}
+

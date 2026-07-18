@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "trustBoundary": "These are orchestration receipts for distinct read-only Codex sessions and are auditable process evidence, not cryptographic proof of evaluator independence or external human validation.",
+  "judges": [
+    {
+      "judgeRunId": "8c68511b-a182-4fc7-a6dd-eb689d17833c",
+      "role": "evidence-and-governance-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-16-kc-star-raft-evidence-b/judges/round-1-evidence.json",
+      "artifactSha256": "fdc38804d9a960a0c739b33f072e840fccbf2f9cdb58974dca340e2d7cbefae5",
+      "sessionId": "019f6cd2-8c48-75a0-88d0-533bc615b178",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-16T21:26:05.100Z"
+    },
+    {
+      "judgeRunId": "3bf90fef-6077-4d55-a169-23d6d9ed5f71",
+      "role": "hiring-and-field-use-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-16-kc-star-raft-evidence-b/judges/round-1-hiring.json",
+      "artifactSha256": "43990e3232d2aabdc100dc1bbdf18869172ce7cc233d24c2e207a10f89cc8454",
+      "sessionId": "019f6cd2-8c49-7091-a2db-1ba06c64b7cd",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-16T21:26:05.200Z"
+    },
+    {
+      "judgeRunId": "248ecd50-9696-45f7-ab67-a4b59c37596c",
+      "role": "evidence-and-governance-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-16-kc-star-raft-evidence-b/judges/round-2-evidence.json",
+      "artifactSha256": "6cdb2ccf3c7dd8f3d2fc7f0608854e56a6889ead50b682cf2d980c6b4336fef4",
+      "sessionId": "019f6cd7-71ad-73c1-a701-df8479378c05",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-16T21:31:26.200Z"
+    },
+    {
+      "judgeRunId": "a20c4f48-6ebe-4404-b9a9-78c23f2d0d07",
+      "role": "hiring-and-field-use-judge",
+      "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-16-kc-star-raft-evidence-b/judges/round-2-hiring.json",
+      "artifactSha256": "ef25e5ee109c29542a8d27229581809d1663bc0694e26e096c2b785cd52f1b1d",
+      "sessionId": "019f6cd7-71ac-78d1-ad44-56edc884bcc6",
+      "sessionMode": "read-only-independent-agent",
+      "generatorWasJudge": false,
+      "commandSurface": "codex-exec-read-only",
+      "orchestratedAt": "2026-07-16T21:31:26.100Z"
+    }
+  ]
+}

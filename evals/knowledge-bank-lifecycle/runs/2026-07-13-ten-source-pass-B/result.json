@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-13-ten-source-pass-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-13",
+  "status": "passed",
+  "iterations": 3,
+  "qualifyingRounds": [2, 3],
+  "graphSnapshot": {
+    "intakeRecords": 18,
+    "sources": 30,
+    "claims": 20,
+    "researchInquiries": 6,
+    "activeProjections": 14,
+    "heldProjections": 10
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR"
+  ],
+  "contentClusters": [
+    {
+      "id": "sunday-dinner-public-hosting",
+      "sourceIds": ["SRC-GREENE-HILL-QA-2017-12-19"],
+      "claimIds": ["CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING"],
+      "researchInquiryIds": [],
+      "projectionDecision": "Weekly shared hosting and community invitation strengthen the Sunday Dinner case study; aggregate program counts retain their separate documentary basis."
+    },
+    {
+      "id": "nightlife-campaign-public-roles",
+      "sourceIds": [
+        "SRC-GREENE-HILL-QA-2017-12-19",
+        "SRC-SAVE-NYC-SPACES-CAMPAIGN",
+        "SRC-MIXMAG-LET-NYC-DANCE-2017-09-20",
+        "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017-10-12"
+      ],
+      "claimIds": [
+        "CLM-NYCA-CABARET-LAW-DIRECT-ORGANIZING",
+        "CLM-NYCA-OFFICE-NIGHTLIFE-ADVOCACY",
+        "CLM-TALKS-NOT-RAIDS-TRANSPARENCY-TO-PHASEOUT"
+      ],
+      "researchInquiryIds": [
+        "INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE",
+        "INQ-NYCA-JAMIE-OFFICE-NIGHTLIFE-ROLE",
+        "INQ-NYCA-JAMIE-TALKS-NOT-RAIDS-ROLE"
+      ],
+      "projectionDecision": "Jamie receives direct credit for supported public invitation, testimony, and speaking actions; campaign formation, event production, legislation, and institutional outcomes remain collective or open."
+    },
+    {
+      "id": "commercial-rent-testimony",
+      "sourceIds": ["SRC-NYC-COUNCIL-SBJSA-HEARING-2018-10-22"],
+      "claimIds": ["CLM-NYCA-COMMERCIAL-RENT-TESTIMONY-2018"],
+      "researchInquiryIds": ["INQ-PUBLIC-SITE-SOURCE-COVERAGE"],
+      "projectionDecision": "The official testimony creates a strong public bridge from cultural-space safety advocacy to the FairRentNYC commercial-rent body of work."
+    },
+    {
+      "id": "kc-town-hall-funding-lifecycle",
+      "sourceIds": [
+        "SRC-KCMO-CCED-KC-TOWN-HALL-2019-06",
+        "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28"
+      ],
+      "claimIds": ["CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE"],
+      "researchInquiryIds": ["INQ-PUBLIC-SITE-SOURCE-COVERAGE"],
+      "projectionDecision": "The public case study now preserves the unanimous recommendation and the later withdrawal and reappropriation without inferring cause or disbursement."
+    },
+    {
+      "id": "kc-public-history-programming",
+      "sourceIds": ["SRC-KCUR-EIGHTH-STREET-TUNNEL-2016-09-15"],
+      "claimIds": ["CLM-KC-EIGHTH-STREET-TUNNEL-PUBLIC-PROGRAM"],
+      "researchInquiryIds": [],
+      "projectionDecision": "A strong participatory public-history claim is retained bank-only until the public composition needs this depth."
+    },
+    {
+      "id": "waterways-endpoint-corroboration",
+      "sourceIds": [
+        "SRC-PITCH-HUCK-FINN-2007",
+        "SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009",
+        "SRC-PITCH-GREAT-ACCOMMODATIONS-2009-09-03"
+      ],
+      "claimIds": [
+        "CLM-WATERWAYS-RAFT-EXPEDITION",
+        "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES"
+      ],
+      "researchInquiryIds": ["INQ-WATERWAYS-FULL-ROUTE-AND-ROLES"],
+      "projectionDecision": "The broad Gulf of Mexico endpoint is now confirmed; exact landing place, full route, and responsibility map remain open; projection stays held."
+    },
+    {
+      "id": "claudette-ar-collaboration",
+      "sourceIds": ["SRC-MICHAEL-REES-CLAUDETTE-AR"],
+      "claimIds": ["CLM-CLAUDETTE-AR-COLLABORATION"],
+      "researchInquiryIds": [],
+      "projectionDecision": "Collaborative AR and source-video credits are retained as a careful bank-only claim pending technical, date, and rights research."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 98,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 97,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 88,
+      "editorialFutureUseScore": 90,
+      "result": "revise",
+      "finding": "The first graph preserved only the favorable KC Town Hall milestone, understated newly documented Office of Nightlife actions, left two bank-only claims without editorial rationale, and made prior run snapshots stale whenever the bank grew."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 97,
+      "editorialFutureUseScore": 96,
+      "result": "qualifying-pass",
+      "finding": "The graph now preserves the complete KC funding lifecycle, claims Jamie's supported actions directly, supplies explicit public-use rationales, and makes historical evaluations date-bounded and append-safe."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 98,
+      "editorialFutureUseScore": 97,
+      "result": "qualifying-pass",
+      "finding": "A fresh unchanged pass found all ten source intakes traceable, every consequential clause bounded, active and held projections disciplined, and no public-safety or collective-credit regression."
+    }
+  ],
+  "unresolvedCriteria": []
+}

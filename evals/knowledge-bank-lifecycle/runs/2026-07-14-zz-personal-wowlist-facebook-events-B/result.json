@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-14-zz-personal-wowlist-facebook-events-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-14",
+  "status": "passed",
+  "iterations": 4,
+  "qualifyingRounds": [3, 4],
+  "graphSnapshot": {
+    "intakeRecords": 43,
+    "sources": 164,
+    "claims": 56,
+    "researchInquiries": 17,
+    "activeProjections": 42,
+    "heldProjections": 21
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
+    "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS",
+    "INTAKE-2026-07-14-URBANHERMIT-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-MICROPOP-POSTED-DESTINATIONS"
+  ],
+  "contentClusters": [
+    {
+      "id": "personal-wowlist-facebook-event-field",
+      "sourceIds": [
+        "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-CONTROL-2026",
+        "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-RUN-2026",
+        "SRC-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026",
+        "SRC-JAMIE-FACEBOOK-DISPLAYED-HOST-PRACTICE-RUN-2026",
+        "SRC-JAMIE-FACEBOOK-EVENT-SEMANTIC-WEB-2006",
+        "SRC-JAMIE-FACEBOOK-EVENT-PIRATE-TROLLEY-2007",
+        "SRC-JAMIE-FACEBOOK-EVENT-MICROPOP-2007",
+        "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007",
+        "SRC-JAMIE-FACEBOOK-EVENT-NIGHT-WALK-2010",
+        "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014",
+        "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014",
+        "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017",
+        "SRC-JAMIE-FACEBOOK-EVENT-HYPERNORMALISATION-2017",
+        "SRC-MICROPOP-POSTED-IMAGINED-COMMUNITIES",
+        "SRC-MICROPOP-POSTED-LASTFM-FAN-GRAPH",
+        "SRC-MICROPOP-POSTED-KCDIY",
+        "SRC-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026",
+        "SRC-WOWLIST-FACEBOOK-EVENT-RECOVERY-RUN-2026",
+        "SRC-PITCH-HUCK-FINN-2007",
+        "SRC-KCUR-EIGHTH-STREET-TUNNEL-2016-09-15"
+      ],
+      "claimIds": [
+        "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026",
+        "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-POPULATION-2026",
+        "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017",
+        "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026",
+        "CLM-WOWLIST-FACEBOOK-EVENT-HISTORY-NOT-RECOVERED-2026"
+      ],
+      "researchInquiryIds": [
+        "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026",
+        "INQ-WOWLIST-FACEBOOK-EVENTS-2026"
+      ],
+      "projectionDecision": "Retain the reconciled event controls, selected public pages, event-making throughline, posted destinations, and WOW List recovery debt as governed bank depth. Strengthen the existing Sunday Dinner source basis without adding a new visible portfolio claim."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 99,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 64,
+      "editorialFutureUseScore": 72,
+      "result": "revise",
+      "finding": "Broken graph references, unsupported author metadata, uncaptured posted destinations, mixed WOW List statuses, and an incomplete reciprocal proof relationship blocked acceptance."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 89,
+      "editorialFutureUseScore": 90,
+      "result": "revise",
+      "finding": "Deterministic checks passed, but three claim clauses still exceeded their exact source edges: the WOW List match control, 21/18/505 reconciliation, and 20-card classification."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 99,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "Scoped evidence edges, governed URL routes, separate non-recovery status, and bank-only projection discipline passed every hard gate."
+    },
+    {
+      "round": 4,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck repeated every lifecycle, calibration, public-safety, and future-use pass without regression."
+    }
+  ],
+  "unresolvedCriteria": []
+}

@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-13-kc-town-hall-stewardship-transition-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-13",
+  "status": "passed",
+  "iterations": 3,
+  "qualifyingRounds": [2, 3],
+  "graphSnapshot": {
+    "intakeRecords": 25,
+    "sources": 77,
+    "claims": 26,
+    "researchInquiries": 7,
+    "activeProjections": 17,
+    "heldProjections": 14
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS"
+  ],
+  "contentClusters": [
+    {
+      "id": "kc-town-hall-stewardship-transition",
+      "sourceIds": [
+        "SRC-KC-STAR-KC-TOWN-HALL-DELAYS-2021-12-27",
+        "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28"
+      ],
+      "claimIds": [
+        "CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE",
+        "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"
+      ],
+      "researchInquiryIds": ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      "projectionDecision": "Project Jamie's first-person stewardship transition while keeping it distinct from independent reporting on the delayed City contract and the City's later administrative withdrawal. Keep the successor identity and transfer terms out of public copy unless separately approved and supported, and do not store or project a reason for the transition."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 98,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 98,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 87,
+      "editorialFutureUseScore": 90,
+      "result": "revise",
+      "finding": "The existing projection reduced the project's conclusion to withdrawal, omitted Jamie's stated stewardship handoff, and risked making the City's administrative record appear to be the complete human account."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 97,
+      "editorialFutureUseScore": 96,
+      "result": "qualifying-pass",
+      "finding": "The revision creates a public-safe memory intake, use-with-care stewardship claim, research inquiry, correction record, and independent 2021 context while keeping the City's 2024 withdrawal record separate and declining to store or project a reason for transition."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 98,
+      "editorialFutureUseScore": 98,
+      "result": "qualifying-pass",
+      "finding": "An unchanged recheck confirmed precise evidence classes, reciprocal claim links, visible Jamie agency, no unsupported successor or award-transfer claim, protected private context, and no regression across the existing public-funding lifecycle."
+    }
+  ],
+  "unresolvedCriteria": []
+}

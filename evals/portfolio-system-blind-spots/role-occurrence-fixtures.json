@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "rule": "Each fixture represents an authored role assertion that must enter the exact role-occurrence population. The checker proves that adding the unit without a matching manifest entry produces a missing occurrence.",
+  "cases": [
+    {
+      "id": "home-first-person",
+      "surface": "/",
+      "kind": "home",
+      "text": "I coordinate emerging public-facing work across stakeholders."
+    },
+    {
+      "id": "about-first-person",
+      "surface": "/about",
+      "kind": "about",
+      "text": "My practice joins artistic inquiry with operating systems."
+    },
+    {
+      "id": "resume-first-person",
+      "surface": "/resume",
+      "kind": "resume",
+      "text": "I build requirements, workflows, and durable handoffs."
+    },
+    {
+      "id": "work-card-named-person",
+      "surface": "/work",
+      "kind": "work-card",
+      "text": "Jamie built the public project interface."
+    },
+    {
+      "id": "metadata-third-person",
+      "surface": "/work/example",
+      "kind": "metadata",
+      "text": "His role included implementation and documentation."
+    },
+    {
+      "id": "artifact-named-person",
+      "surface": "/work/example",
+      "kind": "artifact",
+      "text": "Jamie created the operating guide."
+    },
+    {
+      "id": "mdx-third-person-action-2017",
+      "surface": "/work/fair-rent-nyc",
+      "kind": "mdx",
+      "text": "In 2017, he organized fire-code study groups and testified for Cabaret Law repeal."
+    },
+    {
+      "id": "mdx-third-person-action-2018",
+      "surface": "/work/fair-rent-nyc",
+      "kind": "mdx",
+      "text": "In October 2018, he testified before the City Council's Small Business Committee."
+    }
+  ]
+}

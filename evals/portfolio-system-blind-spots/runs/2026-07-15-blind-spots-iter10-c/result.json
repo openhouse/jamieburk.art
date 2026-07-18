@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "evalId": "portfolio-system-blind-spots",
+  "systemControlStatus": "passed",
+  "externalOutcomeStatus": "not-yet-measured",
+  "bundleSha256": "30a028cd32a195a6194fe8c431dfb8ffb7e73c020cf739fb27e0191018169749",
+  "graphSnapshot": {
+    "intakeRecords": 58,
+    "sources": 228,
+    "claims": 100,
+    "researchInquiries": 32,
+    "partiallyRecoveredInquiries": 26,
+    "recoveredInquiries": 1,
+    "activeProjections": 60,
+    "heldProjections": 42
+  },
+  "iterations": 2,
+  "rounds": [
+    {
+      "round": 1,
+      "result": "qualifying-pass",
+      "judges": [
+        {
+          "judgeRunId": "4859137b-1e94-4787-b25f-fab33c153f53",
+          "role": "evidence-and-governance-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-15-blind-spots-iter10-c/judges/round-1-evidence.json",
+          "sha256": "1f55b3cabe2cc91e5281c607c42452c81ed7d206a5b31348d93c413cc8b36c73"
+        },
+        {
+          "judgeRunId": "5a92ea34-756f-427b-be4f-92aed395368a",
+          "role": "hiring-and-field-use-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-15-blind-spots-iter10-c/judges/round-1-hiring.json",
+          "sha256": "8bfce04e9b985c561b875eeb0184dc55fddc9fd7bfe00f083151232fee937f4d"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "result": "qualifying-pass",
+      "judges": [
+        {
+          "judgeRunId": "f2b759cc-12db-4925-9309-bebc1e9edd71",
+          "role": "evidence-and-governance-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-15-blind-spots-iter10-c/judges/round-2-evidence.json",
+          "sha256": "2e691070fb5d283e52d10ee9aea299ba294a6aac23de3b5ec07cbf47724e888e"
+        },
+        {
+          "judgeRunId": "25141ebe-21f2-4038-b45f-b080b895db37",
+          "role": "hiring-and-field-use-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-15-blind-spots-iter10-c/judges/round-2-hiring.json",
+          "sha256": "74bb573e5cf1f28e54c3ad0c121aa08454db00d777bd2dc94bbb17eaf2c17544"
+        }
+      ]
+    }
+  ]
+}

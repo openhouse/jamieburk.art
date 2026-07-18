@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "evalId": "margaret-morse-lens",
+  "runId": "2026-07-15-ucsc-practice-lineage-B",
+  "trustBoundary": "Each deciding judgment came from a fresh Codex session restricted to read-only repository access. Judges reviewed public-safe records only.",
+  "generatorWasJudge": false,
+  "judges": [
+    {
+      "judgeRunId": "morse-final-r2-embodied-20260715",
+      "role": "embodied-practice-judge",
+      "round": 2,
+      "mode": "read-only",
+      "sessionId": "019f6706-425f-77b3-b947-2774676f73a7",
+      "artifact": "judges/round-2-embodied-practice-judge.json",
+      "outputSha256": "691a2c1c811c5979b4afce554adcac858ca867baa39cf1030dfeee5b027d2a85",
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4"
+    },
+    {
+      "judgeRunId": "morse-final-r2-composition-20260715",
+      "role": "portfolio-composition-judge",
+      "round": 2,
+      "mode": "read-only",
+      "sessionId": "019f6706-3c80-7d73-ae87-f15d66597602",
+      "artifact": "judges/round-2-portfolio-composition-judge.json",
+      "outputSha256": "0d974fe3bf3dca87a7dd3ad6be1381af2bc27671b39fae1b3f648599fe39bd87",
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4"
+    },
+    {
+      "judgeRunId": "morse-final-r3-embodied-20260715",
+      "role": "embodied-practice-judge",
+      "round": 3,
+      "mode": "read-only",
+      "sessionId": "019f6708-163c-70a3-a6be-c9a1a1da3a77",
+      "artifact": "judges/round-3-embodied-practice-judge.json",
+      "outputSha256": "22ae9f9013d9d40bf2bb9153d13510bfdbb9f470c5987a7ea1931d1aaf6c8967",
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4"
+    },
+    {
+      "judgeRunId": "morse-final-r3-composition-20260715",
+      "role": "portfolio-composition-judge",
+      "round": 3,
+      "mode": "read-only",
+      "sessionId": "019f6708-19d1-7233-a013-68dd570e5837",
+      "artifact": "judges/round-3-portfolio-composition-judge.json",
+      "outputSha256": "85f07b7e558da5cacb007ad6a4123d84d9bc2cd4527bcbc0b84a5ef8377e2350",
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4"
+    }
+  ]
+}

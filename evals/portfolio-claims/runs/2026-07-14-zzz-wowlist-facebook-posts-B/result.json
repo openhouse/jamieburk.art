@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "suiteId": "portfolio-claim-hill-climb",
+  "runId": "2026-07-14-zzz-wowlist-facebook-posts-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "baseSha": "2ec37fe6e47d11e600ede204d19a98f7d3cff139",
+  "conductedAt": "2026-07-14",
+  "status": "passed",
+  "stoppingReason": "success-condition-reached",
+  "iterations": 2,
+  "judgeRoles": ["independent-evidence-governance-judge", "independent-hiring-reader-judge"],
+  "threshold": {"weightedScore": 92, "minimumCriterionScore": 4, "requiredPerfectCriteria": ["calibration"], "requiredConsecutivePasses": 2},
+  "summary": {"fixtures": 8, "thresholdMet": 8, "unresolved": 0, "acceptedDraftRegressions": 0, "hardGateFailuresInFinalCandidates": 0},
+  "fixtures": [
+    {"id": "emerging-work-throughline", "disposition": "accepted-unchanged-recheck", "acceptedIteration": 1, "qualifyingRounds": [1, 2], "evidenceJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}, "hiringReaderJudge": {"weightedScore": 99, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}},
+    {"id": "callnyc-member-engagement", "disposition": "accepted-unchanged-recheck", "acceptedIteration": 1, "qualifyingRounds": [1, 2], "evidenceJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}, "hiringReaderJudge": {"weightedScore": 99, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}},
+    {"id": "callnyc-access-audit", "disposition": "accepted-unchanged-recheck", "acceptedIteration": 1, "qualifyingRounds": [1, 2], "evidenceJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}, "hiringReaderJudge": {"weightedScore": 99, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}},
+    {"id": "photo-coalition-corroboration", "disposition": "accepted-unchanged-recheck", "acceptedIteration": 1, "qualifyingRounds": [1, 2], "evidenceJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}, "hiringReaderJudge": {"weightedScore": 99, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}},
+    {"id": "photo-cultural-hosting-material-practice", "disposition": "accepted-unchanged-recheck", "acceptedIteration": 1, "qualifyingRounds": [1, 2], "evidenceJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}, "hiringReaderJudge": {"weightedScore": 99, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}},
+    {"id": "photo-source-backed-memory-vocabulary", "disposition": "accepted-unchanged-recheck", "acceptedIteration": 1, "qualifyingRounds": [1, 2], "evidenceJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}, "hiringReaderJudge": {"weightedScore": 99, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}},
+    {"id": "photo-unsupported-project-attribution", "disposition": "accepted-unchanged-recheck", "acceptedIteration": 1, "qualifyingRounds": [1, 2], "evidenceJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}, "hiringReaderJudge": {"weightedScore": 99, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}},
+    {"id": "photo-asset-publication-gate", "disposition": "accepted-unchanged-recheck", "acceptedIteration": 1, "qualifyingRounds": [1, 2], "evidenceJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}, "hiringReaderJudge": {"weightedScore": 99, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}}
+  ],
+  "unresolvedCriteria": []
+}

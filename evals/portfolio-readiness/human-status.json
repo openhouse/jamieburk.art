@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-16",
+  "states": [
+    {
+      "id": "resume-contact-approval",
+      "criterionId": "resume-contact-path",
+      "owner": "Jamie Burkart",
+      "state": "passed",
+      "reviewedAt": "2026-07-16",
+      "candidateDigest": null,
+      "publicSafeEvidence": [
+        "docs/knowledge-bank/approval-register.md"
+      ],
+      "note": "The repository approval register authorizes the canonical resume PDF, public email, LinkedIn, GitHub, and phone-in-PDF boundary."
+    },
+    {
+      "id": "hiring-reader-validation",
+      "criterionId": "hiring-reader-validation",
+      "owner": "Jamie Burkart",
+      "state": "not-yet-measured",
+      "reviewedAt": null,
+      "candidateDigest": null,
+      "publicSafeEvidence": [],
+      "note": "No dated human hiring-reader result is recorded for the exact composite candidate."
+    },
+    {
+      "id": "collaborator-corroboration",
+      "criterionId": "collaborator-corroboration",
+      "owner": "Jamie Burkart",
+      "state": "not-yet-measured",
+      "reviewedAt": null,
+      "candidateDigest": null,
+      "publicSafeEvidence": [],
+      "note": "Corroboration remains claim-specific. No general collaborator approval is inferred."
+    },
+    {
+      "id": "exact-candidate-share-approval",
+      "criterionId": "exact-candidate-approval",
+      "owner": "Jamie Burkart",
+      "state": "not-yet-measured",
+      "reviewedAt": null,
+      "candidateDigest": null,
+      "publicSafeEvidence": [],
+      "note": "Approval of the integration proposal is not approval of the later exact candidate."
+    },
+    {
+      "id": "media-rights-review",
+      "criterionId": "artifact-visual-proof",
+      "owner": "Jamie Burkart",
+      "state": "human-blocked",
+      "reviewedAt": null,
+      "candidateDigest": null,
+      "publicSafeEvidence": [],
+      "note": "Existing approved artifacts may remain; new or unreviewed participant media requires separate rights and consent review."
+    },
+    {
+      "id": "production-indexing-approval",
+      "criterionId": "exact-candidate-approval",
+      "owner": "Jamie Burkart",
+      "state": "not-yet-measured",
+      "reviewedAt": null,
+      "candidateDigest": null,
+      "publicSafeEvidence": [],
+      "note": "Production indexing remains an explicit human decision."
+    },
+    {
+      "id": "production-deploy-approval",
+      "criterionId": "exact-candidate-approval",
+      "owner": "Jamie Burkart",
+      "state": "not-yet-measured",
+      "reviewedAt": null,
+      "candidateDigest": null,
+      "publicSafeEvidence": [],
+      "note": "No production deployment is authorized by this implementation task."
+    },
+    {
+      "id": "post-deploy-verification",
+      "criterionId": "runtime-release-behavior",
+      "owner": "release operator",
+      "state": "not-yet-measured",
+      "reviewedAt": null,
+      "candidateDigest": null,
+      "publicSafeEvidence": [],
+      "note": "Post-deploy verification cannot occur before an approved deployment."
+    }
+  ]
+}
+

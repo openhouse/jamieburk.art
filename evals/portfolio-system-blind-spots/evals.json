@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "evalId": "portfolio-system-blind-spots",
+  "objective": "Detect and govern the portfolio system's major blind spots without confusing the existence of a control with evidence that an external outcome has occurred.",
+  "scopeBoundary": "A passing run means every named blind spot has an observable control, an honest current state, and a concrete next test. It does not mean hiring effectiveness, collaborator agreement, archival completeness, or application outcomes have already been demonstrated.",
+  "hardGates": [
+    {
+      "id": "no-fabricated-external-outcomes",
+      "passCondition": "Unmeasured hiring, collaborator, audience, and application outcomes remain explicitly unmeasured.",
+      "failureExamples": ["Internal eval scores are presented as recruiter validation", "A planned collaborator review is described as completed"]
+    },
+    {
+      "id": "risk-control-traceability",
+      "passCondition": "Every blind spot has a named observable signal, repository control, trigger, and next external or archival test.",
+      "failureExamples": ["A risk is discussed but cannot fail a check", "A next step has no evidence target"]
+    },
+    {
+      "id": "evaluator-independence-disclosure",
+      "passCondition": "Separate orchestration receipts distinguish read-only agent judgments, deterministic checks, and external human validation, while disclosing that repository provenance is auditable process evidence rather than cryptographic proof.",
+      "failureExamples": ["The generator certifies its own work", "Two role labels are presented as two independent evaluations"]
+    },
+    {
+      "id": "public-and-relational-safety",
+      "passCondition": "Controls protect both record-level privacy and combination-level mosaic risk without publishing private feedback or relationship graphs.",
+      "failureExamples": ["Individually safe records combine into an unnecessary personal network map", "Private recruiter feedback is committed"]
+    }
+  ],
+  "scoredCriteria": [
+    {
+      "id": "coverage",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "Major known blind spots are absent.", "3": "Most are named but some controls are generic.", "5": "Every named blind spot has a distinct control and test."}
+    },
+    {
+      "id": "calibration",
+      "weight": 20,
+      "minimumScore": 5,
+      "anchors": {"1": "Controls are mistaken for outcomes or uncertainty is erased.", "3": "Limits are present but inconsistently attached.", "5": "Control state, evidence state, and external outcome state remain distinct everywhere."}
+    },
+    {
+      "id": "observability",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "Failure cannot be detected.", "3": "Signals exist but rely mainly on interpretation.", "5": "Each risk has concrete repository or field-test evidence that can change its state."}
+    },
+    {
+      "id": "intervention-quality",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "Controls add ceremony without reducing risk.", "3": "Controls help but do not target the main failure mechanism.", "5": "Each intervention directly addresses its blind spot with proportionate effort."}
+    },
+    {
+      "id": "external-reality",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "The system treats internal evidence as proof of external effectiveness.", "3": "External testing is mentioned but underspecified.", "5": "Unmeasured outcomes stay open and have a specific ethical field-test protocol."}
+    },
+    {
+      "id": "composition-utility",
+      "weight": 10,
+      "minimumScore": 4,
+      "anchors": {"1": "More evidence automatically creates more public copy.", "3": "Selection exists but lacks a reader or argument constraint.", "5": "Audience, argument, claim budget, and omission are governed independently from claim maturity."}
+    },
+    {
+      "id": "actionability",
+      "weight": 10,
+      "minimumScore": 4,
+      "anchors": {"1": "The portfolio can be polished indefinitely without contact with the world.", "3": "Next steps exist but have no trigger or evidence return path.", "5": "Each iteration ends in a bounded ship, solicit, apply, or learn action whose evidence returns safely."}
+    }
+  ],
+  "blindSpots": [
+    {
+      "id": "external-reader-validation",
+      "risk": "Internal evidence quality may not translate into fast comprehension, trust, recall, or role fit for hiring readers.",
+      "observableFailure": "The repository claims hiring effectiveness without a dated reader study or outcome record.",
+      "requiredControls": ["Keep external outcome state explicit", "Define a short comprehension and recall protocol", "Store only aggregate public-safe findings"],
+      "prohibitedSuccessClaims": ["Recruiters understand the portfolio", "The site increases interviews", "Internal eval scores prove market effectiveness"]
+    },
+    {
+      "id": "inquiry-closure",
+      "risk": "Careful partially recovered inquiries can accumulate without prioritization or closure evidence.",
+      "observableFailure": "A partially recovered inquiry has no specific evidence target, closure condition, or disposition path.",
+      "requiredControls": ["Track inquiry-state counts", "Prioritize high-value open questions", "Name closure evidence and acceptable bounded disposition"],
+      "prohibitedSuccessClaims": ["The archive is complete", "Every major role is fully verified"]
+    },
+    {
+      "id": "individual-role-corroboration",
+      "risk": "Strong project and coalition evidence may be mistaken for complete evidence of Jamie's individual responsibility.",
+      "observableFailure": "Coalition-level importance is projected as Jamie's individual authorship without a role-specific source relationship.",
+      "requiredControls": ["Decompose role hypotheses by action", "Seek collaborator or contemporaneous role evidence", "Keep collective and individual claims linked but distinct"],
+      "prohibitedSuccessClaims": ["Jamie performed every coalition function", "Project importance proves individual authorship"]
+    },
+    {
+      "id": "countability-and-platform-bias",
+      "risk": "Enumerable platform traces may crowd out offline, relational, maintenance, and implementation work that left fewer machine-readable records.",
+      "observableFailure": "Source volume or engagement counters are used as a proxy for professional importance.",
+      "requiredControls": ["Audit source-class balance", "Open targeted leads for invisible operating work", "Never rank claims by trace count alone"],
+      "prohibitedSuccessClaims": ["The most documented project was the most important", "Social volume measures Jamie's effort or impact"]
+    },
+    {
+      "id": "composition-and-argument",
+      "risk": "A deep Knowledge Bank can produce an additive public site that makes the reader assemble Jamie's professional throughline.",
+      "observableFailure": "A claim is activated because it matured rather than because it serves a named audience and argument.",
+      "requiredControls": ["Keep claim maturity separate from selection", "Name audience and page argument", "Use a claim budget and permit omission"],
+      "prohibitedSuccessClaims": ["Every strong claim belongs on the site", "More proof always improves the page"]
+    },
+    {
+      "id": "mosaic-privacy",
+      "risk": "Individually public-safe fragments may combine into unnecessary relationship, movement, or collaborator profiles.",
+      "observableFailure": "Whole-graph review reveals a sensitive pattern that no single-record check detected.",
+      "requiredControls": ["Run periodic combination-level review", "Minimize unnecessary names and network structure", "Keep private feedback and raw relationship graphs outside the repo"],
+      "prohibitedSuccessClaims": ["Record-level safety guarantees graph-level safety", "Publicly available means harmless to aggregate"]
+    },
+    {
+      "id": "evaluator-independence",
+      "risk": "The system may reward compliance with its own ontology and mistake rubric integrity for truth or external usefulness.",
+      "observableFailure": "The drafting agent is the deciding judge or independent role labels lack separate run provenance.",
+      "requiredControls": ["Use distinct read-only judge runs", "Record judge provenance and limitations", "Keep external human validation as a separate evidence class"],
+      "prohibitedSuccessClaims": ["A deterministic check proves editorial quality", "Two named perspectives equal two independent judges"]
+    },
+    {
+      "id": "action-conversion",
+      "risk": "Portfolio refinement may postpone applications, conversations, collaborator review, and other contact with the world.",
+      "observableFailure": "A substantial portfolio iteration ends without a bounded ship, solicit, apply, or learn action.",
+      "requiredControls": ["Declare the next external action", "Time-box further polishing", "Route returned evidence into the bank without publishing private feedback"],
+      "prohibitedSuccessClaims": ["Portfolio completion guarantees a job", "More archival work is always the highest-value next action"]
+    }
+  ],
+  "judgeProtocol": {
+    "independentRoles": ["evidence-and-governance-judge", "hiring-and-field-use-judge"],
+    "rules": [
+      "Judges run in distinct read-only agent sessions against the same versioned evidence bundle.",
+      "The generator cannot be a deciding judge.",
+      "Judge outputs must disclose that they are LLM evaluations, not human reader research.",
+      "A deterministic checker validates structure and state; it cannot certify external effectiveness.",
+      "Keep the highest-scoring non-regressing control set and require two consecutive qualifying rounds."
+    ]
+  },
+  "stopPolicy": {
+    "targetWeightedScore": 92,
+    "minimumCriterionScore": 4,
+    "requiredPerfectCriteria": ["calibration"],
+    "requiredConsecutivePasses": 2,
+    "maxIterations": 14,
+    "maxRegressions": 0,
+    "scoreVariancePolicy": "Independent judges may differ above threshold on the same bundle. A programmatic regression is a hard gate changing from pass to fail, a criterion falling below its minimum, or calibration falling below five; smaller above-threshold score variation is not a control regression.",
+    "successCondition": "Both independent LLM judges pass every hard gate, score at least 92, score each criterion at least 4, score calibration 5, and repeat the pass without regression. Success applies only to blind-spot controls, not external outcomes.",
+    "failureCondition": "At iteration 14, preserve the strongest bounded controls and report unresolved blind spots without claiming system or external success."
+  }
+}

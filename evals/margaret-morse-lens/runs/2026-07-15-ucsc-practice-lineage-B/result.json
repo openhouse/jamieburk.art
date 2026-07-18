@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "evalId": "margaret-morse-lens",
+  "runId": "2026-07-15-ucsc-practice-lineage-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 3,
+  "qualifyingRounds": [2, 3],
+  "candidate": "My operating practice has an artistic lineage: a ten-day communal Open House I tended and the realized Time is Long installation that made elapsed time physical. I also prototyped an interface joining recursive social-network analysis with image comparison, and co-designed a documented proposal for browsing online photographs by moving through physical rooms. These were experiments in attention, atmosphere, participation, representation, and care, with value beyond organizational utility. The same inquiry continues through my civic, technical, and organizational work: form grows from the people, materials, relationships, and place already present.",
+  "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4",
+  "wordCount": 89,
+  "sentenceCount": 4,
+  "finalJudgments": [
+    {
+      "role": "embodied-practice-judge",
+      "score": 5,
+      "hardGatesPass": true,
+      "dimensionsPass": 5
+    },
+    {
+      "role": "portfolio-composition-judge",
+      "score": 5,
+      "hardGatesPass": true,
+      "dimensionsPass": 5
+    }
+  ],
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "candidate": "Jamie has always combined creativity and systems thinking. His early art projects developed skills he now uses in technical project management.",
+      "result": "revision-required",
+      "finding": "The baseline reduces embodied practice to a creativity trait, omits tending, duration, materials, participant agency, and art-life continuity, and makes art legible only through later employment."
+    },
+    {
+      "round": 2,
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4",
+      "result": "qualifying-pass",
+      "judges": [
+        {
+          "judgeRunId": "morse-final-r2-embodied-20260715",
+          "role": "embodied-practice-judge",
+          "artifact": "judges/round-2-embodied-practice-judge.json",
+          "outputSha256": "691a2c1c811c5979b4afce554adcac858ca867baa39cf1030dfeee5b027d2a85"
+        },
+        {
+          "judgeRunId": "morse-final-r2-composition-20260715",
+          "role": "portfolio-composition-judge",
+          "artifact": "judges/round-2-portfolio-composition-judge.json",
+          "outputSha256": "0d974fe3bf3dca87a7dd3ad6be1381af2bc27671b39fae1b3f648599fe39bd87"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4",
+      "result": "qualifying-pass",
+      "judges": [
+        {
+          "judgeRunId": "morse-final-r3-embodied-20260715",
+          "role": "embodied-practice-judge",
+          "artifact": "judges/round-3-embodied-practice-judge.json",
+          "outputSha256": "22ae9f9013d9d40bf2bb9153d13510bfdbb9f470c5987a7ea1931d1aaf6c8967"
+        },
+        {
+          "judgeRunId": "morse-final-r3-composition-20260715",
+          "role": "portfolio-composition-judge",
+          "artifact": "judges/round-3-portfolio-composition-judge.json",
+          "outputSha256": "85f07b7e558da5cacb007ad6a4123d84d9bc2cd4527bcbc0b84a5ef8377e2350"
+        }
+      ]
+    }
+  ]
+}

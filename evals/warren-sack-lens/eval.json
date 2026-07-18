@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "evalId": "warren-sack-lens",
+  "objective": "Make Jamie's recursive relational reasoning, translation across representations, prototype specificity, evidence practice, and collective systems agency visible without equating platform traces with human relationships.",
+  "candidateContract": {
+    "maximumWords": 90,
+    "maximumSentences": 4,
+    "instructions": [
+      "Name concrete transformations among data, interfaces, media, or physical space rather than praising abstract systems thinking.",
+      "Show that Jamie reasons relationally and recursively across representations.",
+      "Preserve the status of prototypes, proposals, built works, and later operating systems.",
+      "Keep collaborators and participants visible as agents in the system.",
+      "Do not treat social-platform data as a complete account of relationships."
+    ]
+  },
+  "hardGates": [
+    {
+      "id": "evidence-and-attribution",
+      "passCondition": "Every concrete system, transformation, and role is supported at its stated scope, and cross-period continuity is presented as Jamie's interpretation."
+    },
+    {
+      "id": "no-network-determinism",
+      "passCondition": "The candidate does not confuse social traces, computed structures, interfaces, or archives with the full relationships they represent."
+    },
+    {
+      "id": "prototype-status-and-collective-credit",
+      "passCondition": "Prototypes and proposals are not described as deployed products, and co-designed work remains collective."
+    },
+    {
+      "id": "public-legibility-and-safety",
+      "passCondition": "A general reader can understand the passage, and no protected record, identifier, correspondence, contact detail, or unapproved image is exposed."
+    }
+  ],
+  "criterion": {
+    "id": "warren-sack-lens",
+    "threshold": 5,
+    "dimensions": [
+      {
+        "id": "recursive-relational-reasoning",
+        "passCondition": "The copy shows Jamie finding structure through relationships among participants, groups, sources, or layers rather than through isolated objects alone."
+      },
+      {
+        "id": "cross-representational-translation",
+        "passCondition": "The copy makes at least one translation among social structure, data, images, interfaces, time, physical movement, documentation, or organizational form concrete."
+      },
+      {
+        "id": "prototype-and-artifact-specificity",
+        "passCondition": "The copy distinguishes built installations, co-designed systems, prototypes, documentation, and later practice at their supported maturity."
+      },
+      {
+        "id": "source-rigor",
+        "passCondition": "The copy remains within public and protected evidence boundaries and avoids inventing causality, deployment, reception, or ownership."
+      },
+      {
+        "id": "collective-agency-and-feedback",
+        "passCondition": "People remain agents who inhabit, alter, and give meaning to systems; Jamie's role is visible without presenting him as sole author of collective behavior."
+      }
+    ],
+    "anchors": {
+      "1": "The candidate says systems thinking without naming a relationship, representation, artifact, feedback process, or collective boundary.",
+      "3": "A concrete system or translation is visible, but recursion, maturity, evidence, or human agency remains weak.",
+      "5": "The passage concretely joins recursive relational reasoning, cross-representational translation, artifact maturity, source rigor, and collective agency."
+    }
+  },
+  "fixture": {
+    "id": "ucsc-recursive-systems-lineage",
+    "task": "Write one brief About-page paragraph that makes the artistic and relational lineage of Jamie's systems practice legible for a public portfolio.",
+    "evidence": {
+      "publicSpecimens": [
+        "A public profile connects Jamie's ten-day Open House with social software, shared decision-making, multiple documentation forms, and physical and online representations of participation.",
+        "Public reporting documents Time is Long as a realized physical system translating elapsed time through a VHS delay."
+      ],
+      "protectedCorroboration": [
+        "Protected Warren Sack course evaluations describe source-backed analysis of physical and online social networks.",
+        "They describe recursive group analysis, a structural-equivalence and image-analysis prototype with an interactive interface, and co-design of a physical Flickr-browsing installation proposal documented through several media."
+      ],
+      "interpretiveBoundary": "The continuity across later civic, technical, and organizational work is Jamie's interpretation; platform traces and computed structures are partial representations of relationships."
+    },
+    "startingCandidate": "Jamie has always combined creativity and systems thinking. His early social-software projects developed skills he now uses in technical project management.",
+    "mustInclude": [
+      "at least one concrete cross-representational translation",
+      "a relational or recursive structure",
+      "accurate maturity language for built and co-designed work",
+      "a bounded connection to later practice",
+      "human, participant, or collaborator agency"
+    ],
+    "mustNotClaim": [
+      "social-platform traces fully represent relationships",
+      "a course prototype was a deployed production system",
+      "Jamie solely authored a collaborative installation proposal",
+      "Warren Sack authored Jamie's cross-period interpretation"
+    ]
+  },
+  "projectionContract": {
+    "exactCandidatePaths": [
+      "apps/www/src/app/about/page.tsx"
+    ],
+    "knowledgeBankClaimIds": [
+      "CLM-UCSC-MORSE-EMBODIED-MEDIA-PRACTICE-2006",
+      "CLM-UCSC-SACK-RECURSIVE-SOCIAL-SOFTWARE-2004-2006",
+      "CLM-PRACTICE-LINEAGE-ART-TECHNOLOGY-PARTICIPATION"
+    ],
+    "knowledgeBankPaths": [
+      "apps/www/src/data/knowledge-bank/ucsc-practice-lenses-batch-2026-07-15.ts",
+      "docs/knowledge-bank/claims.md"
+    ]
+  },
+  "judgeProtocol": {
+    "artifactSchema": "evals/practice-lens-judge-artifact.schema.json",
+    "independentRoles": [
+      "systems-and-evidence-judge",
+      "hiring-reader-judge"
+    ],
+    "rules": [
+      "Both judges score the same candidate independently in read-only sessions.",
+      "A failed hard gate blocks the candidate regardless of its lens score.",
+      "Score 5 only when all five dimensions pass together.",
+      "The generator cannot be a deciding judge.",
+      "Keep the highest-scoring non-regressing candidate, not the latest candidate."
+    ]
+  },
+  "stopPolicy": {
+    "targetScore": 5,
+    "requiredConsecutivePasses": 2,
+    "maxIterations": 6,
+    "maxRegressions": 0,
+    "successCondition": "Both independent judges pass every hard gate and score the Warren Sack lens 5 in two consecutive rounds.",
+    "failureCondition": "At iteration 6, return the best passing candidate and unresolved dimensions without claiming completion."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "evalId": "portfolio-system-blind-spots",
+  "systemControlStatus": "revision-required",
+  "externalOutcomeStatus": "not-yet-measured",
+  "bundleSha256": "1914893f1e1d7a652809fbc04832a05ec5d5610838d7f1d2022f7ef0da6085aa",
+  "iterations": 2,
+  "rounds": [
+    {
+      "round": 1,
+      "result": "qualifying-pass",
+      "judges": [
+        {
+          "judgeRunId": "5e872ae4-a744-46f2-ae21-b278c07d2c01",
+          "role": "evidence-and-governance-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-pre-attribution-repair/judges/round-1-evidence.json",
+          "sha256": "9765c1bae759f17d9849215207cfbc3b09e7fe4960cf3011bfcbec2d68f4afe9"
+        },
+        {
+          "judgeRunId": "d3ea5886-4108-40e5-9ad3-f190167a27f4",
+          "role": "hiring-and-field-use-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-pre-attribution-repair/judges/round-1-hiring.json",
+          "sha256": "4730505102ab26f62c65d49639561f5ac880815c9a0141a6d6098a6d227aa61b"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "result": "revision-required",
+      "judges": [
+        {
+          "judgeRunId": "cb91da3f-49be-40d5-9fba-3abf0dbcedde",
+          "role": "evidence-and-governance-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-pre-attribution-repair/judges/round-2-evidence.json",
+          "sha256": "ab6d59e01f7a516c4f38ec654aa8d71c2c47d980adc80fc52b4f704db321a668"
+        },
+        {
+          "judgeRunId": "b9c791ff-57bb-4247-b7e5-c12c437550a8",
+          "role": "hiring-and-field-use-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-17-feature-knowledge-b-pre-attribution-repair/judges/round-2-hiring.json",
+          "sha256": "1b09819ab1ed8484d43f73edee0d8304193408f51f2eedfba7940ec6d5a60342"
+        }
+      ]
+    }
+  ]
+}

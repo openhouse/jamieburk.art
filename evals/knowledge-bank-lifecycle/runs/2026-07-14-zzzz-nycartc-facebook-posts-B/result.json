@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-14-zzzz-nycartc-facebook-posts-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-14",
+  "status": "passed",
+  "iterations": 8,
+  "qualifyingRounds": [7, 8],
+  "graphSnapshot": {
+    "intakeRecords": 47,
+    "sources": 184,
+    "claims": 69,
+    "researchInquiries": 22,
+    "activeProjections": 53,
+    "heldProjections": 23
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
+    "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS",
+    "INTAKE-2026-07-14-URBANHERMIT-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-MICROPOP-POSTED-DESTINATIONS",
+    "INTAKE-2026-07-14-WOWLIST-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-WOWLIST-SOCIAL-MANAGEMENT-MEMORY",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-PUBLISHING-MEMORY"
+  ],
+  "contentClusters": [
+    {
+      "id": "nycartc-facebook-current-post-population",
+      "sourceIds": [
+        "SRC-FB-NYCAC-PAGE-CONTROL-2026",
+        "SRC-FB-NYCAC-FULL-PUBLIC-TIMELINE-RUN-2026",
+        "SRC-FB-NYCAC-MANAGED-CONTENT-CROSSCHECK-2026",
+        "SRC-FB-NYCAC-POSTED-URL-INVENTORY-2026",
+        "SRC-JAMIE-NYCAC-FACEBOOK-PUBLISHING-MEMORY-2026",
+        "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
+        "SRC-FB-NYCAC-PUBLIC-ROUTE-LEDGER-2026",
+        "SRC-FB-NYCAC-POST-REPORT-2026",
+        "SRC-CITY-STATE-AGENT-OF-CHANGE-2018",
+        "SRC-SEATTLE-TIMES-ARTS-RELIEF-2020",
+        "SRC-FB-NYCAC-CABARET-LAW-CULTURE-POST",
+        "SRC-FB-NYCAC-TALKS-NOT-RAIDS-POST",
+        "SRC-FB-NYCAC-COVID-KNOW-YOUR-RIGHTS-VIDEO"
+      ],
+      "claimIds": [
+        "CLM-NYCAC-FACEBOOK-SURVIVING-PUBLIC-TIMELINE",
+        "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
+        "CLM-NYCAC-FACEBOOK-STAKEHOLDER-ROUTING",
+        "CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS",
+        "CLM-NYCAC-FACEBOOK-POSTED-URL-ROUTING",
+        "CLM-JAMIE-NYCAC-FACEBOOK-PUBLISHING-MEMORY"
+      ],
+      "researchInquiryIds": [
+        "INQ-NYCAC-FACEBOOK-POSTS-2026",
+        "INQ-NYCAC-FACEBOOK-POSTED-SOURCES-2026",
+        "INQ-NYCAC-FACEBOOK-PUBLISHING-ROLE-2026"
+      ],
+      "projectionDecision": "Retain the complete current-surface disposition ledger, source routes, campaign and participation patterns, mutable interaction floor, and Jamie's bounded publishing memory as governed bank depth. Add no new visible portfolio claim."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {"round": 1, "evidenceGovernanceScore": 78, "editorialFutureUseScore": 82, "result": "revise", "finding": "Repair source graph alignment, provenance, public-safe aggregate derivation, and protected account-state boundaries."},
+    {"round": 2, "evidenceGovernanceScore": 84, "editorialFutureUseScore": 92, "result": "revise", "finding": "Correct source and URL mismatches, stale projections, aggregate independence, digest verification, and semantic guard bypasses."},
+    {"round": 3, "evidenceGovernanceScore": 87, "editorialFutureUseScore": 100, "result": "revise", "finding": "Close eight fresh semantic bypasses and remove a private-path exposure from the public safety model."},
+    {"round": 4, "evidenceGovernanceScore": 84, "editorialFutureUseScore": 100, "result": "revise", "finding": "Scan typed-batch authored fields, remove the unreproducible raw-URL count, and generalize fresh semantic variants."},
+    {"round": 5, "evidenceGovernanceScore": 90, "editorialFutureUseScore": 100, "result": "revise", "finding": "Independent judges found five new semantic bypasses and one stale 39-URL statement despite all deterministic checks passing."},
+    {"round": 6, "evidenceGovernanceScore": 75, "editorialFutureUseScore": 95, "result": "revise", "finding": "Adaptive local probes found present-tense capability, five risky paraphrase gaps, and one overblocked careful denial; both sides of the semantic boundary were refined."},
+    {"round": 7, "evidenceGovernanceScore": 100, "editorialFutureUseScore": 100, "result": "qualifying-pass", "finding": "The frozen revision reconciled 444 records, its digest, 64 route occurrences, 33 normalized routes, two protected routes, ten fresh risks, five careful controls, and all deterministic eval validators."},
+    {"round": 8, "evidenceGovernanceScore": 100, "editorialFutureUseScore": 100, "result": "qualifying-pass", "finding": "An unchanged second challenge used different wording and repeated every hard-gate and criterion pass with zero regression."}
+  ],
+  "unresolvedCriteria": []
+}

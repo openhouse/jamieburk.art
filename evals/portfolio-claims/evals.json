@@ -1,0 +1,553 @@
+{
+  "version": 1,
+  "suiteId": "portfolio-claim-hill-climb",
+  "objective": "Produce the strongest hiring-useful portfolio language that is fully entailed by public-safe evidence, accurately attributes Jamie's role, preserves collective credit, and states uncertainty without shame or vagueness.",
+  "candidateContract": {
+    "requiredFields": [
+      "candidate",
+      "claims",
+      "evidenceMap",
+      "boundaries",
+      "revisionNote"
+    ],
+    "instructions": [
+      "Make Jamie visible as an actor without claiming work performed by collaborators.",
+      "Describe emerging conditions as normal features of transition, not organizational failure.",
+      "Name what became usable and why it mattered to the intended reader.",
+      "Use only evidence supplied in the fixture or an approved Knowledge Bank record.",
+      "Treat every output as public and quotable."
+    ]
+  },
+  "hardGates": [
+    {
+      "id": "evidence-entailment",
+      "description": "Every consequential factual claim is directly supported by the supplied evidence at the stated precision.",
+      "passCondition": "The evaluator can map each consequential clause to evidence without adding assumptions or broadening a source.",
+      "failureExamples": [
+        "Turning a recovered account interaction into institutional endorsement",
+        "Presenting a current engagement counter as contemporaneous impact",
+        "Converting not recovered into never existed"
+      ]
+    },
+    {
+      "id": "role-attribution",
+      "description": "Jamie's work, collaborator work, account-level actions, and institutional actions remain distinct.",
+      "passCondition": "Actor, action, and scope are explicit, and the copy does not silently move credit between people, accounts, teams, or institutions.",
+      "failureExamples": [
+        "Saying Jamie led a collective campaign when the evidence supports web infrastructure",
+        "Saying an elected member personally authored a post when only account-level evidence exists",
+        "Treating a tagged account as an engaged account"
+      ]
+    },
+    {
+      "id": "uncertainty-calibration",
+      "description": "Known, open, reconstructed, and protected material remain distinguishable.",
+      "passCondition": "Coverage gaps and source limits are stated at the level needed to prevent a reasonable reader from drawing a stronger conclusion.",
+      "failureExamples": [
+        "Calling a 107-of-110 recovery complete",
+        "Omitting that surviving social counters can change",
+        "Using cautious language so broadly that supported facts become illegible"
+      ]
+    },
+    {
+      "id": "collective-credit",
+      "description": "The copy claims Jamie's documented contribution while preserving the agency and credit of collaborators.",
+      "passCondition": "Direct authorship is direct, collective accomplishments are collective, and contribution language is used where causality is shared.",
+      "failureExamples": [
+        "Replacing direct authorship with vague passive voice",
+        "Claiming sole ownership of a collective outcome",
+        "Erasing named public organizers or team members"
+      ]
+    },
+    {
+      "id": "public-safety",
+      "description": "The candidate is safe for a public repository and newspaper quotation.",
+      "passCondition": "No private path, raw correspondence, protected identity, credential, private metric, or unapproved source artifact appears.",
+      "failureExamples": [
+        "Publishing a local filesystem path",
+        "Quoting a private transcript",
+        "Exposing participant identities or source metadata beyond approval"
+      ]
+    },
+    {
+      "id": "knowledge-bank-alignment",
+      "description": "Public copy does not exceed the strongest approved Knowledge Bank claim or its allowed surface.",
+      "passCondition": "Any stronger wording is proposed as a bank update with evidence and guardrails before it is projected publicly.",
+      "failureExamples": [
+        "Strengthening website copy while leaving the claim register weaker",
+        "Publishing a pending or internal-only claim",
+        "Dropping an archived, unofficial, contribution, or collective-work guardrail"
+      ]
+    },
+    {
+      "id": "non-pathologizing-transition",
+      "description": "Emergence and ambiguity are framed as normal conditions of change rather than sources of shame.",
+      "passCondition": "The copy offers agency and structure without describing collaborators as confused, dysfunctional, or deficient.",
+      "failureExamples": [
+        "Teams that cannot get organized",
+        "Fixing chaotic stakeholders",
+        "Rescuing organizations from their own confusion"
+      ]
+    },
+    {
+      "id": "photo-evidence-boundary",
+      "description": "Photographs are treated as corroboration of visible presence, settings, artifacts, and material continuity rather than self-authenticating proof or publication consent.",
+      "passCondition": "The candidate distinguishes visible observation, retrieval hypothesis, documentary claim, and asset-specific publication approval without transferring certainty between them.",
+      "failureExamples": [
+        "Treating a People association as identity confirmation, consent, or professional role",
+        "Treating project-album membership as proof of authorship, leadership, or outcome",
+        "Calling every editor-field candidate approved for publication",
+        "Converting attribution not established in this run into the work did not happen"
+      ]
+    }
+  ],
+  "scoredCriteria": [
+    {
+      "id": "hiring-reader-clarity",
+      "weight": 20,
+      "minimumScore": 4,
+      "anchors": {
+        "1": "The reader cannot tell what Jamie does or why it matters.",
+        "3": "The role is understandable but abstract, crowded, or slow to parse.",
+        "5": "A hiring reader can identify Jamie's role, value, and fit in one pass."
+      }
+    },
+    {
+      "id": "actor-action-outcome",
+      "weight": 20,
+      "minimumScore": 4,
+      "anchors": {
+        "1": "Uses abstractions or passive voice without a legible contribution.",
+        "3": "Names an action but leaves the resulting usable change vague.",
+        "5": "Clearly connects Jamie's bounded action to what became usable and for whom."
+      }
+    },
+    {
+      "id": "evidentiary-specificity",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {
+        "1": "Relies on generic competence language or unsupported superlatives.",
+        "3": "Includes some concrete detail but misses the strongest defensible proof.",
+        "5": "Uses the most decision-relevant supported detail without evidentiary clutter."
+      }
+    },
+    {
+      "id": "calibration",
+      "weight": 20,
+      "minimumScore": 4,
+      "anchors": {
+        "1": "Materially overstates, understates, or blurs the evidence boundary.",
+        "3": "Technically careful but either timid or insufficiently bounded.",
+        "5": "Claims the full supported record and no more, with proportionate limits."
+      }
+    },
+    {
+      "id": "reader-burden",
+      "weight": 10,
+      "minimumScore": 4,
+      "anchors": {
+        "1": "Requires rereading, domain knowledge, or interpretation to find the point.",
+        "3": "Mostly clear but carries avoidable clauses, jargon, or caveats.",
+        "5": "Sequences claim, value, and limit with minimal cognitive load."
+      }
+    },
+    {
+      "id": "voice-and-care",
+      "weight": 10,
+      "minimumScore": 4,
+      "anchors": {
+        "1": "Sounds inflated, clinical, ashamed, or generic.",
+        "3": "Competent and accurate but interchangeable with ordinary portfolio copy.",
+        "5": "Precise, warm, grounded, and quietly confident without becoming poetic fog."
+      }
+    },
+    {
+      "id": "transferable-value",
+      "weight": 5,
+      "minimumScore": 4,
+      "anchors": {
+        "1": "Reads as an isolated anecdote with no role relevance.",
+        "3": "Suggests a capability but leaves the future-use case implicit.",
+        "5": "Makes the demonstrated capability legible in the reader's likely environment."
+      }
+    }
+  ],
+  "judgeProtocol": {
+    "independentRoles": [
+      "evidence-judge",
+      "hiring-reader-judge"
+    ],
+    "requiredOutput": {
+      "hardGates": "Object keyed by gate ID with pass, evidence, and correction fields.",
+      "scores": "Object keyed by scored criterion ID with integer score from 1 to 5 and a short rationale.",
+      "weightedScore": "Number from 0 to 100.",
+      "regressions": "List of ways the candidate is worse than the previous accepted candidate.",
+      "revisionBrief": "Smallest set of changes likely to improve the score without weakening a passed gate.",
+      "verdict": "accept, revise, or block"
+    },
+    "rules": [
+      "Judge only against the supplied evidence pack and rubric.",
+      "Do not reward rhetorical force when it reduces calibration.",
+      "Compare candidates blind to author and iteration number.",
+      "A failed hard gate always produces block, regardless of weighted score.",
+      "The generator may not score its own candidate as the deciding judge."
+    ]
+  },
+  "stopPolicy": {
+    "targetWeightedScore": 92,
+    "minimumCriterionScore": 4,
+    "requiredPerfectCriteria": [
+      "calibration"
+    ],
+    "requiredConsecutivePasses": 2,
+    "maxIterations": 8,
+    "maxRegressions": 2,
+    "improvementEpsilon": 0.5,
+    "selectionRule": "Keep the highest-scoring candidate that passes every hard gate. Never replace it with a louder candidate that introduces a regression.",
+    "successCondition": "Both independent judges pass every hard gate, weighted score is at least 92, every criterion is at least 4, calibration is 5, and the result passes twice consecutively.",
+    "failureCondition": "If the criterion is not reached by iteration 8 or two accepted-draft regressions occur, return the best passing candidate with unresolved criteria and do not label the run complete."
+  },
+  "loop": [
+    "Load one fixture, its public-safe evidence, and the current accepted candidate.",
+    "Run deterministic public-safety and forbidden-claim checks.",
+    "Have the evidence judge evaluate entailment, attribution, uncertainty, and boundaries.",
+    "Have the hiring-reader judge evaluate clarity, reader burden, voice, and transferable value.",
+    "Reject any candidate that fails a hard gate or regresses from the accepted candidate.",
+    "Give the generator only the judges' bounded revision brief, not hidden expected answers.",
+    "Revise the smallest necessary span and evaluate again.",
+    "Stop only under the success or failure condition in stopPolicy."
+  ],
+  "fixtures": [
+    {
+      "id": "emerging-work-throughline",
+      "task": "Write a concise professional throughline for a hiring reader.",
+      "evidence": {
+        "supportedCapabilities": [
+          "requirements clarification",
+          "workflow mapping",
+          "decision records",
+          "status rhythms",
+          "runbooks",
+          "onboarding materials",
+          "launch support",
+          "durable handoffs"
+        ],
+        "intent": "Jamie surfaces naturally emerging cultural, organizational, conceptual, and technical structure and gives it resilient form so people can move through transition with greater agency, connection, and integrity.",
+        "audience": "Technical project management, product operations, implementation, and public-sector hiring readers."
+      },
+      "expected": {
+        "requiredGates": [
+          "evidence-entailment",
+          "role-attribution",
+          "non-pathologizing-transition",
+          "public-safety"
+        ],
+        "mustIncludeConcepts": [
+          "emerging work",
+          "operating structure",
+          "usable forward movement"
+        ],
+        "mustNotClaim": [
+          "Jamie fixes dysfunctional teams",
+          "Jamie eliminates ambiguity",
+          "Jamie rescues organizations",
+          "Transformation guarantees success"
+        ]
+      }
+    },
+    {
+      "id": "callnyc-member-engagement",
+      "task": "Write one public-safe portfolio claim about NYC Council-member account engagement with CallNYC.",
+      "evidence": {
+        "profileReportedPosts": 110,
+        "recoveredTimelineEntries": 107,
+        "recognitionPosts": 70,
+        "recognizedMemberHandles": 26,
+        "recognitionPostsWithSurvivingEngagement": 45,
+        "recognitionEngagement": {
+          "replies": 4,
+          "reposts": 63,
+          "likes": 86
+        },
+        "attributableMemberAccounts": 10,
+        "attributableMemberPosts": 11,
+        "interactionModes": [
+          "quote or textual repost",
+          "direct reply",
+          "resident referral",
+          "direct acknowledgment"
+        ],
+        "sourceLimits": [
+          "Three reported timeline entries remain unrecovered.",
+          "Surviving counters are current mirror observations, not contemporaneous analytics.",
+          "Account-level evidence does not establish who personally typed a post.",
+          "A tag is outbound outreach, not engagement by the tagged account."
+        ]
+      },
+      "expected": {
+        "requiredGates": [
+          "evidence-entailment",
+          "role-attribution",
+          "uncertainty-calibration",
+          "knowledge-bank-alignment",
+          "public-safety"
+        ],
+        "mustIncludeConcepts": [
+          "public recognition and feedback loop",
+          "10 sitting Council-member accounts or 11 attributable posts",
+          "surviving public evidence"
+        ],
+        "mustNotClaim": [
+          "The New York City Council endorsed CallNYC",
+          "Ten Council members formally endorsed CallNYC",
+          "Every tagged Council member engaged",
+          "The account history was completely recovered",
+          "Jamie personally conversed with every member"
+        ]
+      }
+    },
+    {
+      "id": "callnyc-access-audit",
+      "task": "Summarize the timeline-recovery method without overstating completeness.",
+      "evidence": {
+        "anonymousXState": "The profile reported 110 posts while rendering that the account had not posted.",
+        "authenticatedPdfState": "One populated timeline page and six blank print-continuation pages.",
+        "mirrorRecovery": "Exact pagination cursors carried across two public mirrors recovered 107 unique entries.",
+        "apiState": "No API credential was configured; API access was not required for the core member-engagement claim."
+      },
+      "expected": {
+        "requiredGates": [
+          "evidence-entailment",
+          "uncertainty-calibration",
+          "public-safety"
+        ],
+        "mustIncludeConcepts": [
+          "retrieval limitation",
+          "107 of 110",
+          "three unrecovered entries"
+        ],
+        "mustNotClaim": [
+          "X showed an empty account",
+          "The PDF captured the full timeline",
+          "No additional engagement occurred",
+          "An API account would recover deleted history"
+        ]
+      }
+    },
+    {
+      "id": "photo-coalition-corroboration",
+      "task": "Write a concise public-safe evidence note about what the photographs add to the NYC Artist Coalition and FairRentNYC record.",
+      "evidence": {
+        "sourceClass": "Curated photo evidence summary",
+        "observedDateRange": "2017 through 2025",
+        "visiblePatterns": [
+          "public and collaborative settings",
+          "people gathered together",
+          "signs and banners",
+          "candidates showing Jamie within the work's social environment"
+        ],
+        "supportedInference": "The photographs corroborate Jamie's sustained presence and participation in coalition and public-advocacy environments.",
+        "sourceLimits": [
+          "The photographs do not independently prove coalition leadership or campaign ownership.",
+          "The photographs do not independently prove policy authorship, website authorship, or campaign outcomes.",
+          "Individual photographs remain unapproved until asset-specific publication review."
+        ]
+      },
+      "expected": {
+        "requiredGates": [
+          "evidence-entailment",
+          "role-attribution",
+          "uncertainty-calibration",
+          "collective-credit",
+          "public-safety",
+          "knowledge-bank-alignment",
+          "photo-evidence-boundary"
+        ],
+        "mustIncludeConcepts": [
+          "corroborated sustained presence or participation",
+          "2017 through 2025",
+          "role and outcomes require documentary evidence beyond the photographs"
+        ],
+        "mustNotClaim": [
+          "The photographs prove Jamie led NYC Artist Coalition",
+          "Jamie owned the campaigns",
+          "The photographs prove Jamie authored every policy position or website",
+          "Every pictured person consented to publication",
+          "Every image in the editor field is publication-ready"
+        ]
+      }
+    },
+    {
+      "id": "photo-cultural-hosting-material-practice",
+      "task": "Write a hiring-useful evidence note about what the 196 Artists Residency and Sunday Dinner photographs corroborate.",
+      "evidence": {
+        "sourceClass": "Curated photo evidence summary",
+        "visiblePatterns": [
+          "documents and handwriting",
+          "artworks",
+          "tables, utensils, and prepared rooms",
+          "plants and traces of use"
+        ],
+        "supportedInference": "The photographs corroborate hosting, facilitation, documentation, continuity, and care as practical material work over time.",
+        "separatelyApprovedMetrics": [
+          "300+ gatherings",
+          "20+ resident artists"
+        ],
+        "sourceLimits": [
+          "The photographs do not independently verify the gathering or resident-artist counts.",
+          "The photographs do not authorize publication of guests, artists, homes, addresses, or private gatherings.",
+          "The archive is not a public attendance database or comprehensive history."
+        ]
+      },
+      "expected": {
+        "requiredGates": [
+          "evidence-entailment",
+          "role-attribution",
+          "uncertainty-calibration",
+          "collective-credit",
+          "public-safety",
+          "photo-evidence-boundary"
+        ],
+        "mustIncludeConcepts": [
+          "hosting as material participation infrastructure",
+          "preparation, documentation, and continuity",
+          "the photographs do not independently verify approved project metrics"
+        ],
+        "mustNotClaim": [
+          "The images prove 300+ gatherings and 20+ resident artists",
+          "Jamie owns participants' work or stories",
+          "The photographs form a public attendance record",
+          "Guests and private interiors are cleared for publication"
+        ]
+      }
+    },
+    {
+      "id": "photo-source-backed-memory-vocabulary",
+      "task": "Write a bounded portfolio note about the visual language available for Source-Backed Team Memory.",
+      "evidence": {
+        "sourceClass": "Curated photo evidence summary",
+        "visiblePatterns": [
+          "documents",
+          "handwriting",
+          "working surfaces",
+          "boards and connective materials"
+        ],
+        "supportedInference": "The images can show source-backed memory as a material practice of arranging and reviewing evidence rather than as an abstract AI aesthetic.",
+        "sourceLimits": [
+          "The images do not prove a finished product.",
+          "The images do not prove production deployment for a client.",
+          "Private source material is not available to browse."
+        ]
+      },
+      "expected": {
+        "requiredGates": [
+          "evidence-entailment",
+          "uncertainty-calibration",
+          "public-safety",
+          "knowledge-bank-alignment",
+          "photo-evidence-boundary"
+        ],
+        "mustIncludeConcepts": [
+          "material practice of arranging and reviewing evidence",
+          "documents, handwriting, boards, or working surfaces",
+          "not proof of product maturity or client deployment"
+        ],
+        "mustNotClaim": [
+          "The photographs prove a production AI platform exists",
+          "The method has been deployed inside a client's company",
+          "Private archives are browsable",
+          "The images demonstrate automated trust"
+        ]
+      }
+    },
+    {
+      "id": "photo-unsupported-project-attribution",
+      "task": "Explain the photo review's negative finding without weakening claims supported by other evidence.",
+      "evidence": {
+        "attributionNotEstablishedFor": [
+          "Harry J. Epstein Company",
+          "CallNYC",
+          "WOWList",
+          "KC Town Hall",
+          "general Technical Operations",
+          "Colophon"
+        ],
+        "reason": "Earlier generated editor-album memberships had entered retrieval provenance, so those labels were withheld as independent photographic evidence.",
+        "otherEvidenceMayStillSupportClaims": [
+          "approved resumes",
+          "public artifacts",
+          "code",
+          "records",
+          "collaborator confirmation"
+        ],
+        "nextStep": "Fresh photo retrieval should begin from independently verified dates, places, public artifacts, or collaborator-confirmed events."
+      },
+      "expected": {
+        "requiredGates": [
+          "evidence-entailment",
+          "uncertainty-calibration",
+          "public-safety",
+          "knowledge-bank-alignment",
+          "photo-evidence-boundary"
+        ],
+        "mustIncludeConcepts": [
+          "project-specific photo attribution was not established in this run",
+          "this is not evidence that the work did not happen",
+          "fresh retrieval needs independent anchors"
+        ],
+        "mustNotClaim": [
+          "No photographs of these projects exist",
+          "The projects did not happen",
+          "Existing documentary claims are false",
+          "The contaminated album labels can be used as independent proof"
+        ]
+      }
+    },
+    {
+      "id": "photo-asset-publication-gate",
+      "task": "Write an actionable internal review instruction for moving one photo candidate toward public site use.",
+      "evidence": {
+        "retrievalCuesNotApproval": [
+          "People associations",
+          "face detection",
+          "project-album membership",
+          "filenames",
+          "embedded dates"
+        ],
+        "requiredAssetChecks": [
+          "identity",
+          "project, event, place, and date",
+          "photographer or creator and publication rights",
+          "consent or an appropriate documented public-event basis",
+          "the Knowledge Bank claim ID the image corroborates",
+          "factual caption",
+          "crop and context, including screens, documents, addresses, minors, bystanders, and private interiors",
+          "Jamie's final approval for the specific image and placement"
+        ],
+        "defaultState": "Keep the image in private editorial review until every check passes."
+      },
+      "expected": {
+        "requiredGates": [
+          "evidence-entailment",
+          "role-attribution",
+          "public-safety",
+          "knowledge-bank-alignment",
+          "photo-evidence-boundary"
+        ],
+        "mustIncludeConcepts": [
+          "editor-field membership is not publication approval",
+          "identity, context, creator, rights, and consent review",
+          "claim, caption, crop, and Jamie placement approval",
+          "private review remains the default until all checks pass"
+        ],
+        "mustNotClaim": [
+          "People recognition confirms identity or consent",
+          "Public-event context removes the need for review",
+          "A factual caption is optional",
+          "Entering the editor field clears an image for the website"
+        ]
+      }
+    }
+  ]
+}

@@ -22,6 +22,7 @@ The knowledge bank exists to:
 - separate verified scope from open questions;
 - make future edits easier to audit;
 - prevent both overstatement and understatement;
+- retain public-safe fragments before their eventual relevance is known;
 - reduce the risk that private evidence leaks into public pages;
 - make the Technical Operations / Product Operations / Implementation story
   easier to maintain.
@@ -63,3 +64,85 @@ one pass.
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot.
+
+See [lifecycle.md](lifecycle.md) for the intake-to-source-to-claim process,
+projection restraint, recursive eval, and photo-feedback loop.
+
+The campaign press corpus is normalized in
+`apps/www/src/data/knowledge-bank/campaignPress.ts` and documented for human
+review in
+[projects/nyca-campaign-press-index.md](projects/nyca-campaign-press-index.md).
+It preserves placements, distinct articles, archive state, and claim-use
+boundaries separately.
+
+The NYC Artist Coalition Facebook event production is documented in
+[nycartc-facebook-events-2026-07-13.md](nycartc-facebook-events-2026-07-13.md).
+Its public event and outbound-link ledgers live under `data/`. The 34-slot
+control is fully disposed as 33 recovered event records and one metadata-free
+unresolved slot. This is complete control accounting, not complete content or
+lifetime-history recovery. Facebook response displays remain mutable
+event-level platform signals rather than attendance, unique-person, reach, or
+impact measures. Event pages establish collective public surfaces; they do not
+assign individual authorship or policy causality.
+
+The personal and WOW List Facebook event pass is documented in
+[personal-wowlist-facebook-events-2026-07-14.md](personal-wowlist-facebook-events-2026-07-14.md).
+Two terminal traversals returned the same 502 IDs on Jamie's Past events
+surface. The separate hosted-events tab exposed 21 records, 18 of which
+overlapped, yielding 505 distinct current IDs across the two personal tabs.
+`data/personal-wowlist-facebook-event-controls.json` preserves aggregate
+reconciliation, and
+`jamie-facebook-displayed-host-event-census-2026-07-14.csv` classifies the 20
+Past events cards that display Jamie as host. The record-level association
+graph remains protected. The current WOW List Page event surface displayed
+zero records. A separate bounded historical search recovered none; that
+non-recovery is not proof of historical absence.
+
+The recovered KC Town Hall public-funding sequence is documented in
+[projects/kc-town-hall-council-allocation-2019.md](projects/kc-town-hall-council-allocation-2019.md).
+It keeps the Board recommendation, Council acceptance, appropriation, later
+contract-delay state, Jamie's first-person stewardship transition, City
+withdrawal, and reappropriation as distinct evidence-bearing events.
+
+The authenticated personal-social review is documented in
+[projects/urbanhermit-x-population-2026-07-14.md](projects/urbanhermit-x-population-2026-07-14.md).
+Its public ledgers preserve redacted row-level dispositions and aggregate
+summaries for the current 434-record profile control and a 26-record
+inbound-search floor. Ordered rows retain coarse year and research classes for
+auditability, which carries residual reconstruction risk. They intentionally omit
+raw post text, handles, status identifiers, exact dates, personal context, and
+per-record metrics. Selected professional records enter the typed bank only
+after close reading; the personal timeline is not a public portfolio artifact.
+
+The NYC Artist Coalition Facebook post production is documented in
+[projects/nycartc-facebook-post-population-2026-07-14.md](projects/nycartc-facebook-post-population-2026-07-14.md).
+Two terminal traversals recovered the same 444 currently available post
+identities and every record received a public-safe disposition. The current
+surface is not a native export, deletion history, or lifetime total. The post
+and route ledgers under `data/` omit raw text, comments, identities, per-record
+metrics, account state, private analytics, and protected historical action
+routes. Page identity, stakeholder routing, and mutable interactions remain
+separate from human authorship, inbound engagement, and impact.
+
+The KC Spaces Fund Facebook production is documented in
+[research/kcspacesfund-facebook-posts-2026-07-14.md](research/kcspacesfund-facebook-posts-2026-07-14.md).
+Its public ledgers under `data/` disposition all 38 post or remnant rows exposed
+by the surviving observed Page surface and normalize three posted destination
+families. The control is not a native export, deletion history, or lifetime
+denominator. Raw text, identities, per-record mutable metrics, authentication,
+administrator context, and private campaign records remain outside the repo.
+The campaign-level record stays separate from Jamie's bounded website,
+digital-operations, and cross-channel naming support.
+
+Jamie's personal Facebook post production is documented in
+[research/jamie-personal-facebook-posts-2026-07-15.md](research/jamie-personal-facebook-posts-2026-07-15.md).
+The protected owner-filtered crawl ended after 621 cursor pages and returned
+1,243 unique records; every returned record received a research disposition.
+The public-safe aggregate control lives at
+[`data/jamie-personal-facebook-post-controls.json`](data/jamie-personal-facebook-post-controls.json).
+This is complete accounting of the July 13, 2026 `Posted by You` surface, not a
+native Meta export, deletion history, lifetime population, or universal-public
+corpus. Selected posts become public sources only after individual audience and
+content review. Posted URLs remain source leads, stakeholder strings remain
+outgoing routing occurrences, and mutable counters remain observations rather
+than reach or impact.

@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "objective": "Retain every public-safe professional evidence fragment while recursively developing the strongest defensible claims, preserving uncertainty and collective credit, and projecting only what the current public argument needs.",
+  "hardGates": [
+    {
+      "id": "capture-completeness",
+      "passCondition": "Every supplied public-safe fragment has an intake record or an opaque protected locator and a next action.",
+      "failureExamples": ["A supplied article remains only in chat history", "A memory is omitted because it is not yet proven"]
+    },
+    {
+      "id": "source-decomposition",
+      "passCondition": "Every used source states what it supports, what it does not establish, its provenance, and its preservation posture.",
+      "failureExamples": ["A URL is treated as a seal of authority", "A project website is treated as independent proof of impact"]
+    },
+    {
+      "id": "claim-evidence-separation",
+      "passCondition": "Sources, evidence relationships, claim propositions, memories, and projections remain distinct graph objects.",
+      "failureExamples": ["A memory becomes a confirmed claim without evidence", "An article title is copied directly into public positioning"]
+    },
+    {
+      "id": "status-calibration",
+      "passCondition": "Confirmed, bounded, inferred, open, not-recovered, held, and disallowed states match the available evidence.",
+      "failureExamples": ["Chronology is presented as causality", "Not recovered becomes did not exist", "A bounded direct action is left timidly unclaimed"]
+    },
+    {
+      "id": "collective-credit-and-causality",
+      "passCondition": "Jamie receives direct credit for supported actions while collective campaigns, legislation, and institutional outcomes remain collective.",
+      "failureExamples": ["Jamie single-handedly repealed the Cabaret Law", "Jamie's direct testimony disappears into vague team language"]
+    },
+    {
+      "id": "projection-discipline",
+      "passCondition": "Claim maturity and public-site selection are separate; only claims selected for a named surface become active projections.",
+      "failureExamples": ["Every confirmed claim is added to the homepage", "A pending role hypothesis appears on the resume"]
+    },
+    {
+      "id": "citation-contract",
+      "passCondition": "Consequential active public claims resolve to stable claim and source IDs without requiring citation markers to dominate the interface.",
+      "failureExamples": ["A site claim has no source path", "Citation numbers are typed manually"]
+    },
+    {
+      "id": "public-safety",
+      "passCondition": "The public repository contains no private paths, raw private materials, unapproved identities, credentials, or unsafe archive detail.",
+      "failureExamples": ["A local photo path is committed", "A private memory is quoted instead of summarized"]
+    },
+    {
+      "id": "photo-feedback-boundary",
+      "passCondition": "Photographs can create leads and corroborate visible facts but do not inherit identity, role, authorship, outcome, rights, consent, or publication approval.",
+      "failureExamples": ["Album membership proves project authorship", "A visually compelling image is treated as approved for publication"]
+    }
+  ],
+  "scoredCriteria": [
+    {
+      "id": "retention-and-retrievability",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "Important material can disappear or cannot be found again.", "3": "Most material is captured, but links or next actions are inconsistent.", "5": "Every fragment has a stable home, relationship path, and useful next action."}
+    },
+    {
+      "id": "evidentiary-precision",
+      "weight": 20,
+      "minimumScore": 4,
+      "anchors": {"1": "Claims rely on source aura or unsupported inference.", "3": "Sources are present but support boundaries remain broad.", "5": "Every consequential clause maps to evidence at the strongest defensible precision."}
+    },
+    {
+      "id": "calibration",
+      "weight": 20,
+      "minimumScore": 5,
+      "anchors": {"1": "The system materially overstates, understates, or erases uncertainty.", "3": "The system is cautious but inconsistent about maturity or limits.", "5": "The system claims the full supported record and no more while preserving open and protected states."}
+    },
+    {
+      "id": "graph-coherence",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "Intake, sources, claims, inquiries, and projections compete or drift.", "3": "The objects exist but some relationships are implicit.", "5": "A future agent can trace every input through research, claim, and projection decisions."}
+    },
+    {
+      "id": "editorial-usefulness",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "The bank is an archive dump with no compositional value.", "3": "Material is accurate but difficult to select for an audience.", "5": "The bank offers deep, bounded material that can be composed clearly for changing goals."}
+    },
+    {
+      "id": "future-actionability",
+      "weight": 10,
+      "minimumScore": 4,
+      "anchors": {"1": "Open questions have no research path.", "3": "Next steps exist but are generic.", "5": "Each unresolved item names the evidence, confirmation, or review needed to mature."}
+    },
+    {
+      "id": "photo-research-utility",
+      "weight": 5,
+      "minimumScore": 4,
+      "anchors": {"1": "Photo work is disconnected from claims or unsafe.", "3": "Claims provide loose visual themes.", "5": "Claims guide anchored retrieval and photo discoveries safely return as research leads."}
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "unread-public-url",
+      "task": "Receive a public URL that has not yet been closely read.",
+      "mustDo": ["create intake record", "record next action", "avoid claim promotion"],
+      "mustNotDo": ["infer article contents", "activate a site projection"]
+    },
+    {
+      "id": "memory-with-partial-public-support",
+      "task": "Receive Jamie's important role memory when public sources support only some actions.",
+      "mustDo": ["retain a public-safe hypothesis", "claim directly supported actions", "open role inquiry"],
+      "mustNotDo": ["discard the memory", "publish the full role claim as confirmed"]
+    },
+    {
+      "id": "collective-policy-outcome",
+      "task": "Develop a claim connecting Jamie's direct work to a successful collective policy campaign.",
+      "mustDo": ["name Jamie's documented actions", "preserve collective and legislative causality"],
+      "mustNotDo": ["use sole-causality language", "hide Jamie behind passive voice"]
+    },
+    {
+      "id": "mature-bank-only-claim",
+      "task": "Retain a confirmed claim that is not needed by the current public composition.",
+      "mustDo": ["store full evidence and boundaries", "keep projection on hold"],
+      "mustNotDo": ["force it onto a public page", "downgrade its factual status because it is unselected"]
+    },
+    {
+      "id": "existing-site-claim-needs-sources",
+      "task": "Encounter a consequential site claim whose source lineage is incomplete.",
+      "mustDo": ["open a source-discovery inquiry", "preserve or soften wording according to current support"],
+      "mustNotDo": ["invent a citation", "treat polished copy as evidence"]
+    },
+    {
+      "id": "photo-discovers-research-lead",
+      "task": "A photo editor finds a potentially important scene not yet represented in the bank.",
+      "mustDo": ["create photo lead", "record visible facts", "open research and asset review"],
+      "mustNotDo": ["infer role or outcome", "approve publication from retrieval metadata"]
+    },
+    {
+      "id": "chronology-without-causality",
+      "task": "A campaign precedes later legislation and administrative change.",
+      "mustDo": ["store each event", "state causal uncertainty", "research contribution pathway"],
+      "mustNotDo": ["convert sequence into sole causality", "erase the campaign from the record"]
+    },
+    {
+      "id": "shared-account-population-and-role-memory",
+      "task": "A complete surviving social surface and Jamie's bounded role memory arrive together for a collaborator-led project.",
+      "mustDo": ["disposition every surfaced row", "scope completeness to the observed surface", "separate Page identity from human authorship", "preserve Jamie's supported direct role", "keep mutable counters and outgoing tags within their evidence limits"],
+      "mustNotDo": ["claim a lifetime export", "assign shared-account posts to Jamie", "turn outgoing references into stakeholder engagement", "turn counters into reach or impact", "inflate naming support into sole authorship or ownership"]
+    },
+    {
+      "id": "private-owner-post-population-and-public-source-selection",
+      "task": "A closed owner-filtered personal-post surface contains private or audience-unknown records, public project traces, mutable counters, posted URLs, and stakeholder references.",
+      "mustDo": ["close and state the returned-population control", "protect audience-unknown and raw record-level material", "individually recheck public posts before source promotion", "treat posted URLs as source-discovery leads", "distinguish outbound stakeholder routing from inbound engagement", "keep mutable counters within their evidence limits", "open an inquiry for unresolved institutional-role language"],
+      "mustNotDo": ["claim a lifetime or native-platform export", "claim the full population was public", "publish the raw personal corpus", "turn stakeholder references into engagement or endorsement", "turn counters into reach or impact", "turn social wording into employment, title, or hiring authority"]
+    },
+    {
+      "id": "private-collaborative-production-record",
+      "task": "A private collaborative production plan contains useful technical workstreams, Jamie's participation trace, planned tasks, conflicting chronology, and participant identifiers.",
+      "mustDo": ["create protected source records without source links", "retain the system and production breadth", "separate Jamie's participation from individual task ownership", "distinguish planned work from completed work", "preserve collaborator credit", "record chronology conflict as an open reconciliation", "exclude participant messages and identifiers"],
+      "mustNotDo": ["publish the private artifact URL", "assign every workstream to Jamie", "treat a plan as proof of completion", "erase collaborators", "resolve conflicting dates without reconciliation", "publish personal identifiers or scheduling details"]
+    },
+    {
+      "id": "protected-authored-policy-provenance",
+      "task": "A protected policy-working artifact directly identifies Jamie as preparer and documents a useful source-lineage method.",
+      "mustDo": ["record the protected artifact without a source link", "name Jamie's supported preparer role", "preserve the source-layer sequence", "distinguish working provenance from official legislative history", "keep legal and strategy material protected"],
+      "mustNotDo": ["publish the working artifact", "attribute underlying bill language to Jamie", "claim legal authority or official status", "convert reviewer labels into drafting authorship", "infer adoption, endorsement, passage, or implementation"]
+    },
+    {
+      "id": "credential-completion-boundary",
+      "task": "A public-safe completion certificate confirms a course, issuer, and instructors but displays no date, curriculum, score, or proficiency level.",
+      "mustDo": ["record only visible credential facts as direct support", "separate the completion certificate from resume-only date and curriculum language", "preserve the distinction between completion and professional certification", "protect the underlying file locator"],
+      "mustNotDo": ["infer a completion date", "infer detailed curriculum or proficiency", "describe the learner as professionally certified", "imply employment, teaching, or institutional affiliation", "publish a private file path"]
+    },
+    {
+      "id": "institutional-reciprocity-without-mind-reading",
+      "task": "Official records show a community coalition contributing knowledge and participation to public planning and legislation, while a role-memory question asks why named officials needed the coalition.",
+      "mustDo": ["separate explicit source statements from institutional inference", "identify the complementary capacities supplied by community and government actors", "preserve public-authority and collective-causality credit", "state when an earlier source does not name the coalition and a later source supplies the identification", "keep coalition-level value distinct from Jamie's individual responsibility map"],
+      "mustNotDo": ["present literal dependency as an official quotation", "invent a named official's private motive", "claim commissioning, endorsement, bill authorship, recommendation adoption, or sole causality", "assign collective intermediary work entirely to Jamie"]
+    },
+    {
+      "id": "protected-operational-population-with-public-aggregate",
+      "task": "A protected production database or attendance workbook can support an aggregate public claim but contains private people, account, location, or participation records.",
+      "mustDo": ["retain only governed aggregate findings", "state the snapshot or working-record boundary", "define the counted unit and denominator", "keep raw records and locators protected", "separate operational scale from current activity, lifetime totals, attendance, and impact"],
+      "mustNotDo": ["publish row-level data", "turn interaction marks into unique people", "turn geography labels into official chapters", "treat a stale working formula as reconciled truth", "infer current or lifetime scale from one snapshot"]
+    },
+    {
+      "id": "cross-project-sequence-with-attributed-role",
+      "task": "Public project records support a sequence across two systems while Jamie supplies the interpretation that his facilitation connected them.",
+      "mustDo": ["store the project sequence separately from the individual role proposition", "attribute first-person role language", "use current account custody only for current custody", "preserve shared-account and collective-formation boundaries", "name the collaborator or contemporaneous evidence needed to mature the role"],
+      "mustNotDo": ["turn sequence into sole causality", "use current admin access as historic authorship proof", "assign every shared-account post to Jamie", "claim one poll legally founded a coalition", "erase Jamie's bounded role memory"]
+    }
+  ],
+  "judgeProtocol": {
+    "independentRoles": ["evidence-and-governance-judge", "editorial-and-future-use-judge"],
+    "rules": [
+      "Both judges inspect the same graph snapshot independently.",
+      "Any failed hard gate blocks the iteration.",
+      "The generator cannot be a deciding judge.",
+      "Revise the smallest necessary record or relationship.",
+      "Keep the highest-scoring non-regressing graph, not the latest graph."
+    ]
+  },
+  "stopPolicy": {
+    "targetWeightedScore": 92,
+    "minimumCriterionScore": 4,
+    "requiredPerfectCriteria": ["calibration"],
+    "requiredConsecutivePasses": 2,
+    "maxIterations": 8,
+    "maxRegressions": 0,
+    "successCondition": "Both independent judges pass every hard gate, score at least 92, score every criterion at least 4, score calibration 5, and repeat the pass without regression.",
+    "failureCondition": "At iteration 8, preserve the strongest bounded graph and name unresolved criteria without claiming completion."
+  }
+}

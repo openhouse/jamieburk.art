@@ -4,6 +4,25 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  findWowlistFacebookPublicArtifactRisk,
+  hasWowlistFacebookPublicArtifactRisk
+} from "./lib/wowlist-facebook-guard.mjs";
+import {
+  findNycartcFacebookPublicArtifactRisk,
+  hasNycartcFacebookPublicArtifactRisk
+} from "./lib/nycartc-facebook-guard.mjs";
+import {
+  findKcSpacesFundFacebookPublicArtifactRisk,
+  hasKcSpacesFundFacebookPublicArtifactRisk
+} from "./lib/kcspacesfund-facebook-guard.mjs";
+import {
+  findPersonalFacebookPostsPublicArtifactRisk,
+  hasPersonalFacebookPostsPublicArtifactRisk
+} from "./lib/personal-facebook-posts-guard.mjs";
+import { nycartcFacebookPostsBatch } from "../apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts";
+import { kcSpacesFundFacebookPostsBatch } from "../apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts";
+import { jamiePersonalFacebookPostsBatch } from "../apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-batch-2026-07-15.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -145,6 +164,55 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+const publicSocialLedgerFiles = textFiles.filter((file) =>
+  /^docs\/knowledge-bank\/data\/(?:nycartc|callnyc|wowlist|kctownhall|urbanhermit)-public-.*\.json$/i.test(
+    relative(file)
+  )
+);
+const urbanHermitPublicLedgerFiles = publicSocialLedgerFiles.filter((file) =>
+  /urbanhermit-public-.*\.json$/i.test(relative(file))
+);
+const nycartcFacebookEventLedgerFiles = publicSocialLedgerFiles.filter((file) =>
+  /nycartc-public-facebook-event.*\.json$/i.test(relative(file))
+);
+const wowlistFacebookPostLedgerFiles = publicSocialLedgerFiles.filter((file) =>
+  /wowlist-public-facebook-post-ledger\.json$/i.test(relative(file))
+);
+const wowlistFacebookArtifactFiles = textFiles.filter((file) =>
+  /(?:apps\/www\/src\/data\/knowledge-bank\/wowlist-facebook-posts-batch-2026-07-14\.ts|docs\/knowledge-bank\/(?:data\/wowlist-public-facebook-post-ledger\.json|projects\/wowlist-facebook-post-population-2026-07-14\.md))$/i.test(
+    relative(file)
+  )
+);
+const nycartcFacebookPostArtifactFiles = textFiles.filter((file) =>
+  /docs\/knowledge-bank\/(?:data\/nycartc-public-facebook-post(?:-route)?-ledger\.json|projects\/nycartc-facebook-post-population-2026-07-14\.md)$/i.test(
+    relative(file)
+  )
+);
+const nycartcFacebookPostGovernanceFiles = textFiles.filter((file) =>
+  /(?:apps\/www\/src\/data\/knowledge-bank\/nycartc-facebook-posts-batch-2026-07-14\.ts|docs\/knowledge-bank\/(?:data\/nycartc-public-facebook-post(?:-route)?-ledger\.json|projects\/nycartc-facebook-post-population-2026-07-14\.md))$/i.test(
+    relative(file)
+  )
+);
+const nycartcFacebookPostLedgerFiles = textFiles.filter((file) =>
+  /docs\/knowledge-bank\/data\/nycartc-public-facebook-post-ledger\.json$/i.test(
+    relative(file)
+  )
+);
+const kcSpacesFundFacebookArtifactFiles = textFiles.filter((file) =>
+  /(?:apps\/www\/src\/data\/knowledge-bank\/kcspacesfund-facebook-posts-batch-2026-07-14\.ts|docs\/knowledge-bank\/(?:data\/kcspacesfund-facebook-post(?:-route)?-ledger\.json|research\/kcspacesfund-facebook-posts-2026-07-14\.md))$/i.test(
+    relative(file)
+  )
+);
+const kcSpacesFundFacebookLedgerFiles = textFiles.filter((file) =>
+  /docs\/knowledge-bank\/data\/kcspacesfund-facebook-post-ledger\.json$/i.test(
+    relative(file)
+  )
+);
+const personalFacebookPostsArtifactFiles = textFiles.filter((file) =>
+  /(?:apps\/www\/src\/data\/knowledge-bank\/jamie-personal-facebook-posts-batch-2026-07-15\.ts|docs\/knowledge-bank\/(?:data\/jamie-personal-facebook-post-controls\.json|research\/jamie-personal-facebook-posts-2026-07-15\.md))$/i.test(
+    relative(file)
+  )
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -190,6 +258,411 @@ scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
   /\b(?:PRIVATE|CONFIDENTIAL)\b/
+);
+
+scanPattern(
+  publicSocialLedgerFiles,
+  "public social ledger exposes raw outbound-link or mutable-metric fields",
+  /"(?:outboundLinks|visibleMetricsObserved2026)"\s*:/
+);
+
+scanPattern(
+  urbanHermitPublicLedgerFiles,
+  "personal social ledger exposes raw post, author, URL, date, or per-record metric fields",
+  /"(?:statusId|statusUrl|fullText|authorHandle|postedAt|publishedAt|exactDate|visibleMetricsObserved2026)"\s*:/i
+);
+
+scanPattern(
+  nycartcFacebookEventLedgerFiles,
+  "public Facebook event ledger exposes raw participant, description, private-metric, meeting-access, or account-admin fields",
+  /"(?:detailsText|fullText|guestIdentities|attendeeIdentities|friendContext|inviteContext|comments|reactions|profileUrl|email|phone|meetingUrl|zoomUrl|passcode|dialIn|accountAdmin|workingDocumentUrl|privateAnalytics)"\s*:/i
+);
+
+scanPattern(
+  wowlistFacebookPostLedgerFiles,
+  "public WOW List Facebook post ledger exposes raw capture, comment, private-metric, or account-admin fields",
+  /"(?:messages|profiles|labels|buttons|comments|commentText|commenterIdentity|fullText|rawText|privateAnalytics|accountAdmin|authenticatedAccount)"\s*:/i
+);
+
+for (const file of wowlistFacebookArtifactFiles) {
+  const risk = findWowlistFacebookPublicArtifactRisk(readText(file));
+  if (risk) addFailure(file, `WOW List Facebook public artifact contains ${risk}`);
+}
+
+for (const file of nycartcFacebookPostArtifactFiles) {
+  const risk = findNycartcFacebookPublicArtifactRisk(readText(file));
+  if (risk) addFailure(file, `NYC Artist Coalition Facebook public artifact contains ${risk}`);
+}
+
+for (const file of kcSpacesFundFacebookArtifactFiles) {
+  const risk = findKcSpacesFundFacebookPublicArtifactRisk(readText(file));
+  if (risk) addFailure(file, `KC Spaces Fund Facebook public artifact contains ${risk}`);
+}
+
+for (const file of personalFacebookPostsArtifactFiles) {
+  const risk = findPersonalFacebookPostsPublicArtifactRisk(readText(file));
+  if (risk) addFailure(file, `Personal Facebook posts public artifact contains ${risk}`);
+}
+
+scanPattern(
+  kcSpacesFundFacebookLedgerFiles,
+  "KC Spaces Fund Facebook ledger exposes raw text, identity, URL, per-record metric, or account-state fields",
+  /"(?:rawText|fullText|message|commentText|commenterIdentity|actorIdentity|publisherIdentity|publicLocator|postUrl|statusUrl|reactionCount|commentCount|shareCount|accountState|authenticatedAccount|privateAnalytics)"\s*:/i
+);
+
+const nycartcTypedSemanticStatements = [
+  ...nycartcFacebookPostsBatch.intakeRecords.flatMap((record) => [
+    record.publicSummary
+  ]),
+  ...nycartcFacebookPostsBatch.sources.flatMap((source) => [
+    source.publicCitation,
+    source.publicNote,
+    ...source.supportsGenerally
+  ]),
+  ...nycartcFacebookPostsBatch.claims.flatMap((claim) => [
+    claim.internalClaim,
+    ...claim.projections.map((projection) => projection.text),
+    ...claim.evidence.flatMap((evidence) => evidence.supports),
+    ...claim.boundaries
+  ]),
+  ...nycartcFacebookPostsBatch.researchInquiries.flatMap((inquiry) => [
+    inquiry.publicSummary,
+    ...inquiry.findings
+  ])
+].filter(Boolean);
+
+for (const statement of nycartcTypedSemanticStatements) {
+  const risk = findNycartcFacebookPublicArtifactRisk(statement);
+  if (risk) {
+    addFailure(
+      path.join(
+        repoRoot,
+        "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts"
+      ),
+      `NYC Artist Coalition Facebook typed knowledge-bank record contains ${risk}: ${statement.slice(0, 120)}`
+    );
+  }
+}
+
+const kcSpacesFundFacebookTypedSemanticStatements = [
+  ...kcSpacesFundFacebookPostsBatch.intakeRecords.flatMap((record) => [
+    record.publicSummary,
+    ...record.nextActions
+  ]),
+  ...kcSpacesFundFacebookPostsBatch.sources.flatMap((source) => [
+    source.publicCitation,
+    source.publicNote,
+    ...source.supportsGenerally,
+    ...source.doesNotEstablish
+  ]),
+  ...kcSpacesFundFacebookPostsBatch.claims.flatMap((claim) => [
+    claim.internalClaim,
+    ...claim.projections.map((projection) => projection.text),
+    ...claim.evidence.flatMap((evidence) => evidence.supports),
+    ...claim.boundaries
+  ]),
+  ...kcSpacesFundFacebookPostsBatch.researchInquiries.flatMap((inquiry) => [
+    inquiry.publicSummary,
+    ...inquiry.findings,
+    ...inquiry.limitations
+  ])
+].filter(Boolean);
+
+for (const statement of kcSpacesFundFacebookTypedSemanticStatements) {
+  const risk = findKcSpacesFundFacebookPublicArtifactRisk(statement);
+  if (risk) {
+    addFailure(
+      path.join(
+        repoRoot,
+        "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts"
+      ),
+      `KC Spaces Fund Facebook typed knowledge-bank record contains ${risk}: ${statement.slice(0, 120)}`
+    );
+  }
+}
+
+const personalFacebookPostsTypedSemanticStatements = [
+  ...jamiePersonalFacebookPostsBatch.intakeRecords.flatMap((record) => [
+    record.publicSummary,
+    ...record.nextActions
+  ]),
+  ...jamiePersonalFacebookPostsBatch.sources.flatMap((source) => [
+    source.publicCitation,
+    source.publicNote,
+    ...source.supportsGenerally,
+    ...source.doesNotEstablish
+  ]),
+  ...jamiePersonalFacebookPostsBatch.claims.flatMap((claim) => [
+    claim.internalClaim,
+    ...claim.projections.map((projection) => projection.text),
+    ...claim.evidence.flatMap((evidence) => evidence.supports),
+    ...claim.boundaries
+  ]),
+  ...jamiePersonalFacebookPostsBatch.researchInquiries.flatMap((inquiry) => [
+    inquiry.publicSummary,
+    ...inquiry.findings,
+    ...inquiry.limitations
+  ])
+].filter(Boolean);
+
+for (const statement of personalFacebookPostsTypedSemanticStatements) {
+  const risk = findPersonalFacebookPostsPublicArtifactRisk(statement);
+  if (risk) {
+    addFailure(
+      path.join(
+        repoRoot,
+        "apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-batch-2026-07-15.ts"
+      ),
+      `Personal Facebook posts typed knowledge-bank record contains ${risk}: ${statement.slice(0, 120)}`
+    );
+  }
+}
+
+scanPattern(
+  nycartcFacebookPostGovernanceFiles,
+  "NYC Artist Coalition Facebook governance artifact exposes authenticated account or management state",
+  /\b(?:authenticated (?:account|session|dashboard|Meta|Page)|Meta Business Suite|signed[- ]in|logged[- ]in|current account access|current Page-management controls?|current administrator|task access)\b/i
+);
+
+scanPattern(
+  nycartcFacebookPostLedgerFiles,
+  "NYC Artist Coalition Facebook population ledger exposes record-level text, URL, metric, identity, or account-state fields",
+  /"(?:postUrl|statusUrl|publicUrl|rawText|fullText|message|actorIdentity|publisherIdentity|accountState|privateAnalytics)"\s*:/i
+);
+
+const wowlistPinnedArtifacts = [
+  "docs/knowledge-bank/data/wowlist-public-facebook-post-ledger.json",
+  "docs/knowledge-bank/projects/wowlist-facebook-post-population-2026-07-14.md"
+];
+const wowlistBatchSourcePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-batch-2026-07-14.ts"
+);
+if (existsSync(wowlistBatchSourcePath)) {
+  const batchSource = readText(wowlistBatchSourcePath);
+  for (const artifactPath of wowlistPinnedArtifacts) {
+    const escapedPath = artifactPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pinnedUrlPattern = new RegExp(
+      `https://github\\.com/openhouse/jamieburk\\.art/blob/([0-9a-f]{40})/${escapedPath}`
+    );
+    const match = batchSource.match(pinnedUrlPattern);
+    if (!match) {
+      addFailure(wowlistBatchSourcePath, `WOW List public artifact lacks an immutable Git citation: ${artifactPath}`);
+      continue;
+    }
+
+    const commit = match[1];
+    try {
+      execFileSync("git", ["merge-base", "--is-ancestor", commit, "HEAD"], {
+        cwd: repoRoot,
+        stdio: "ignore"
+      });
+      const pinnedText = execFileSync("git", ["show", `${commit}:${artifactPath}`], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      });
+      const currentPath = path.join(repoRoot, artifactPath);
+      if (pinnedText !== readText(currentPath)) {
+        addFailure(currentPath, "WOW List immutable citation does not match the current public-safe artifact");
+      }
+      if (hasWowlistFacebookPublicArtifactRisk(pinnedText)) {
+        addFailure(currentPath, "WOW List immutable citation contains prohibited account-state or participation wording");
+      }
+    } catch {
+      addFailure(wowlistBatchSourcePath, `WOW List immutable citation is not reachable from HEAD: ${commit}:${artifactPath}`);
+    }
+  }
+}
+
+const nycartcFacebookPinnedArtifacts = [
+  "docs/knowledge-bank/data/nycartc-public-facebook-post-ledger.json",
+  "docs/knowledge-bank/data/nycartc-public-facebook-post-route-ledger.json",
+  "docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md"
+];
+const nycartcFacebookBatchSourcePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts"
+);
+if (existsSync(nycartcFacebookBatchSourcePath)) {
+  const batchSource = readText(nycartcFacebookBatchSourcePath);
+  for (const artifactPath of nycartcFacebookPinnedArtifacts) {
+    const escapedPath = artifactPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pinnedUrlPattern = new RegExp(
+      `https://github\\.com/openhouse/jamieburk\\.art/blob/([0-9a-f]{40})/${escapedPath}`
+    );
+    const match = batchSource.match(pinnedUrlPattern);
+    if (!match) {
+      addFailure(
+        nycartcFacebookBatchSourcePath,
+        `NYC Artist Coalition Facebook public artifact lacks an immutable Git citation: ${artifactPath}`
+      );
+      continue;
+    }
+
+    const commit = match[1];
+    try {
+      execFileSync("git", ["merge-base", "--is-ancestor", commit, "HEAD"], {
+        cwd: repoRoot,
+        stdio: "ignore"
+      });
+      const pinnedText = execFileSync("git", ["show", `${commit}:${artifactPath}`], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      });
+      const currentPath = path.join(repoRoot, artifactPath);
+      if (pinnedText !== readText(currentPath)) {
+        addFailure(
+          currentPath,
+          "NYC Artist Coalition Facebook immutable citation does not match the current public-safe artifact"
+        );
+      }
+      if (hasNycartcFacebookPublicArtifactRisk(pinnedText)) {
+        addFailure(
+          currentPath,
+          "NYC Artist Coalition Facebook immutable citation contains prohibited population, authorship, engagement, or impact wording"
+        );
+      }
+      const originRefs = execFileSync(
+        "git",
+        ["for-each-ref", "--format=%(refname)", "--contains", commit, "refs/remotes/origin"],
+        { cwd: repoRoot, encoding: "utf8" }
+      ).trim();
+      if (!originRefs) {
+        addFailure(
+          currentPath,
+          "NYC Artist Coalition Facebook immutable citation is not reachable from a fetched origin ref"
+        );
+      }
+    } catch {
+      addFailure(
+        nycartcFacebookBatchSourcePath,
+        `NYC Artist Coalition Facebook immutable citation is not reachable from HEAD: ${commit}:${artifactPath}`
+      );
+    }
+  }
+}
+
+const kcSpacesFundFacebookPinnedArtifacts = [
+  "docs/knowledge-bank/data/kcspacesfund-facebook-post-ledger.json",
+  "docs/knowledge-bank/data/kcspacesfund-facebook-post-route-ledger.json"
+];
+const kcSpacesFundFacebookBatchSourcePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts"
+);
+if (existsSync(kcSpacesFundFacebookBatchSourcePath)) {
+  const batchSource = readText(kcSpacesFundFacebookBatchSourcePath);
+  for (const artifactPath of kcSpacesFundFacebookPinnedArtifacts) {
+    const escapedPath = artifactPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pinnedUrlPattern = new RegExp(
+      `https://github\\.com/openhouse/jamieburk\\.art/blob/([0-9a-f]{40})/${escapedPath}`
+    );
+    const match = batchSource.match(pinnedUrlPattern);
+    if (!match) {
+      addFailure(
+        kcSpacesFundFacebookBatchSourcePath,
+        `KC Spaces Fund Facebook public artifact lacks an immutable Git citation: ${artifactPath}`
+      );
+      continue;
+    }
+
+    const commit = match[1];
+    try {
+      execFileSync("git", ["merge-base", "--is-ancestor", commit, "HEAD"], {
+        cwd: repoRoot,
+        stdio: "ignore"
+      });
+      const pinnedText = execFileSync("git", ["show", `${commit}:${artifactPath}`], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      });
+      const currentPath = path.join(repoRoot, artifactPath);
+      if (pinnedText !== readText(currentPath)) {
+        addFailure(
+          currentPath,
+          "KC Spaces Fund Facebook immutable citation does not match the current public-safe artifact"
+        );
+      }
+      if (hasKcSpacesFundFacebookPublicArtifactRisk(pinnedText)) {
+        addFailure(
+          currentPath,
+          "KC Spaces Fund Facebook immutable citation contains prohibited population, authorship, engagement, or impact wording"
+        );
+      }
+    } catch {
+      addFailure(
+        kcSpacesFundFacebookBatchSourcePath,
+        `KC Spaces Fund Facebook immutable citation is not reachable from HEAD: ${commit}:${artifactPath}`
+      );
+    }
+  }
+}
+
+const personalFacebookPostsPinnedArtifacts = [
+  "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json"
+];
+const personalFacebookPostsBatchSourcePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-batch-2026-07-15.ts"
+);
+if (existsSync(personalFacebookPostsBatchSourcePath)) {
+  const batchSource = readText(personalFacebookPostsBatchSourcePath);
+  for (const artifactPath of personalFacebookPostsPinnedArtifacts) {
+    const escapedPath = artifactPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pinnedUrlPattern = new RegExp(
+      `https://github\\.com/openhouse/jamieburk\\.art/blob/([0-9a-f]{40})/${escapedPath}`
+    );
+    const match = batchSource.match(pinnedUrlPattern);
+    if (!match) {
+      addFailure(
+        personalFacebookPostsBatchSourcePath,
+        `Personal Facebook posts public artifact lacks an immutable Git citation: ${artifactPath}`
+      );
+      continue;
+    }
+
+    const commit = match[1];
+    try {
+      execFileSync("git", ["merge-base", "--is-ancestor", commit, "HEAD"], {
+        cwd: repoRoot,
+        stdio: "ignore"
+      });
+      const pinnedText = execFileSync("git", ["show", `${commit}:${artifactPath}`], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      });
+      const currentPath = path.join(repoRoot, artifactPath);
+      if (pinnedText !== readText(currentPath)) {
+        addFailure(
+          currentPath,
+          "Personal Facebook posts immutable citation does not match the current public-safe artifact"
+        );
+      }
+      if (hasPersonalFacebookPostsPublicArtifactRisk(pinnedText)) {
+        addFailure(
+          currentPath,
+          "Personal Facebook posts immutable citation contains prohibited population, audience, engagement, impact, or role wording"
+        );
+      }
+    } catch {
+      addFailure(
+        personalFacebookPostsBatchSourcePath,
+        `Personal Facebook posts immutable citation is not reachable from HEAD: ${commit}:${artifactPath}`
+      );
+    }
+  }
+}
+
+scanPattern(
+  nycartcFacebookEventLedgerFiles,
+  "public Facebook event ledger contains an invalid aggregate response or attendance field",
+  /"(?:responseSum|totalResponses|peopleReached|attendance|uniqueResponders)"\s*:/i
+);
+
+scanPattern(
+  publicSocialLedgerFiles,
+  "public social ledger exposes a Google working-document or Zoom session URL",
+  /https?:\\?\/\\?\/(?:docs|drive)\.google\.com|https?:\\?\/\\?\/(?:[^\/"\\\s]+\.)?zoom\.us\//i
 );
 
 const credentialPatterns = [

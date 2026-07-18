@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-12-feature-evals-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 7,
+  "qualifyingRounds": [6, 7],
+  "candidate": "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 53,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    },
+    "hiringReaderJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    }
+  },
+  "regressions": [],
+  "harnessRevision": {
+    "afterRound": 5,
+    "change": "Raised the sentence ceiling from two to four while retaining the 75-word ceiling and every scoring and evidence threshold.",
+    "reason": "Both judges found the evidence and substance sound, but the two-sentence cap forced overloaded compound sentences and conflicted with the reader-burden dimension."
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 3,
+      "hiringReaderJudgeScore": 2,
+      "result": "revise",
+      "finding": "The incumbent hid direct authorship, named outputs without their use, and left collective credit implicit."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 4,
+      "hiringReaderJudgeScore": 3,
+      "result": "blocked",
+      "finding": "Observed-use language exceeded evidence, and the opening remained too dense."
+    },
+    {
+      "round": 3,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 3,
+      "result": "revise",
+      "finding": "Affordance language repaired evidence scope, but specialist labels and sentence load remained."
+    },
+    {
+      "round": 4,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 4,
+      "result": "revise",
+      "finding": "Plain-language workflows repaired translation; compound syntax still raised reader burden."
+    },
+    {
+      "round": 5,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 4,
+      "result": "revise-harness",
+      "finding": "The remaining failure came from the two-sentence cap rather than missing evidence or substance."
+    },
+    {
+      "round": 6,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "Four short sentences passed every hard gate and all five dimensions."
+    },
+    {
+      "round": 7,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "The preserved candidate passed without regression and met the stopping criterion."
+    }
+  ]
+}

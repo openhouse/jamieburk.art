@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-16",
+  "publicSurfaceSha256": "71277bcb7efa63ea0b1c796675237f2de47c5c2380ce43aaeb2ab2a12d737d4c",
+  "graphSnapshot": {
+    "intakeRecords": 60,
+    "sources": 233,
+    "claims": 104,
+    "researchInquiries": 33,
+    "partiallyRecoveredInquiries": 27,
+    "recoveredInquiries": 1,
+    "activeProjections": 61,
+    "heldProjections": 45
+  },
+  "reviewerRole": "public-safety control review by Codex; not legal, participant, or collaborator review",
+  "scope": [
+    "structured Knowledge Bank public projections",
+    "public citation records",
+    "portfolio route composition",
+    "blind-spot control artifacts"
+  ],
+  "combinationSignalsReviewed": [
+    "names joined to dates and affiliations",
+    "locations joined to movement history",
+    "collaborator interaction patterns",
+    "private feedback or job-search context",
+    "face, GPS, and archive-locator data",
+    "social engagement ledgers joined to individual-role claims",
+    "protected educational records joined to public artistic chronology",
+    "crew names, route chronology, encounter patterns, and expedition photographs joined across archival sources"
+  ],
+  "findings": [
+    {
+      "severity": "moderate",
+      "finding": "Public social records can make stakeholder relationships look more complete or personal than account-level evidence permits.",
+      "decision": "Keep engagement claims at account level, retain temporal and staff-operation boundaries, and do not publish a relationship graph."
+    },
+    {
+      "severity": "moderate",
+      "finding": "Combining first-person role memory with project-platform custody can overstate individual authorship.",
+      "decision": "Require explicit first-person attribution or stronger role evidence and preserve collective-work boundaries."
+    },
+    {
+      "severity": "moderate",
+      "finding": "Protected database and attendance aggregates can become identifying or misleading when combined with public social and event traces.",
+      "decision": "Publish only bounded aggregate units, withhold row-level records and locators, and do not join participant, geolocation, contact, or account data across sources."
+    },
+    {
+      "severity": "low",
+      "finding": "The control system could invite identifiable reader feedback into the public repository.",
+      "decision": "Retain only aggregate findings and coarse action receipts; keep names, employers, applications, and verbatim feedback outside the repo."
+    },
+    {
+      "severity": "moderate",
+      "finding": "Combining protected academic evaluations with public artistic records could expose educational details or convert a teacher's bounded assessment into a lifetime endorsement.",
+      "decision": "Project only public-safe source summaries, keep grades, identifiers, raw records, correspondence, and recommendation images offline, and state that cross-period continuity is Jamie's interpretation."
+    },
+    {
+      "severity": "moderate",
+      "finding": "Combining a named traveling crew, dated route positions, public invitations, and newspaper photographs can produce a richer movement and relationship record than the portfolio needs.",
+      "decision": "Name the three-person crew for factual and collective-credit accuracy, retain only coarse route anchors, keep local hosts and passengers unenumerated, and withhold the supplied scan and photographs pending separate rights and participant review."
+    }
+  ],
+  "removalsOrMinimizations": [
+    "No private path, face tag, GPS payload, participant roster, private correspondence, reader identity, application detail, or raw relationship graph is added by this pass.",
+    "The WOW List and Sunday Dinner findings are retained as protected aggregate sources; no user, contact, geolocation, row-level attendance, formula, or account-control record is committed.",
+    "The public role policy treats account creation history supported only by Jamie's memory as attributed first-person evidence rather than independent fact.",
+    "The technical-operations page omits a duplicate eight-project proof map and limits detailed proof entries.",
+    "The About page names public-safe artistic specimens while protected evaluations remain unlinked corroboration with no grade, identifier, contact detail, or raw quotation.",
+    "The raft record exposes citation metadata and bounded findings rather than the supplied scan, photographs, local locator, complete route, or a host and passenger graph."
+  ],
+  "unresolvedRisks": [
+    "Public reporting and public social records can still reveal affiliations when combined by a determined reader.",
+    "A rendered production review is still required after merge and after future substantial ingestion.",
+    "This review cannot substitute for collaborator, participant, legal, or human privacy review."
+  ],
+  "nextTrigger": "Repeat after the next substantial ingestion and before production release."
+}

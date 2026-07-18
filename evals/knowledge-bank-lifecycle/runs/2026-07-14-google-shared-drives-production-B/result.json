@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-14-google-shared-drives-production-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-14",
+  "status": "passed",
+  "iterations": 4,
+  "qualifyingRounds": [3, 4],
+  "graphSnapshot": {
+    "intakeRecords": 34,
+    "sources": 90,
+    "claims": 34,
+    "researchInquiries": 9,
+    "activeProjections": 23,
+    "heldProjections": 17
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS"
+  ],
+  "contentClusters": [
+    {
+      "id": "google-shared-drive-map",
+      "sourceIds": [],
+      "claimIds": [],
+      "researchInquiryIds": ["INQ-GDRIVE-SHARED-DRIVES-PRODUCTION-2026-07-14"],
+      "projectionDecision": "Retain a public-safe scope and method record only. Empty or media-only roots are retrieval leads, not evidence that work or documentation did not exist."
+    },
+    {
+      "id": "google-shared-drive-nyca-operating-records",
+      "sourceIds": ["SRC-NYCA-SHARED-FOLDER-FAQ-2017", "SRC-NYCA-LET-NYC-DANCE-DEPLOYMENT-NOTE-2017", "SRC-NYCA-PUBLIC-MEETING-PRODUCTION-PLAN-2018", "SRC-NYCA-MACHINE-READABLE-POLICY-NOTE-2019"],
+      "claimIds": ["CLM-NYCA-OPERATING-INFRASTRUCTURE-2017-2019"],
+      "researchInquiryIds": ["INQ-GDRIVE-SHARED-DRIVES-PRODUCTION-2026-07-14", "INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE"],
+      "projectionDecision": "Use the protected records to strengthen a bounded operating-infrastructure claim. Treat Drive revision history as maintenance evidence only and preserve collective authorship, decisions, and outcomes."
+    },
+    {
+      "id": "google-shared-drive-nyca-context-hold",
+      "sourceIds": [],
+      "claimIds": [],
+      "researchInquiryIds": ["INQ-GDRIVE-SHARED-DRIVES-PRODUCTION-2026-07-14"],
+      "projectionDecision": "Hold three contextual records as research leads because they do not independently establish Jamie's role or a public-safe outcome claim."
+    },
+    {
+      "id": "google-shared-drive-196-residency-workflow",
+      "sourceIds": ["SRC-196-RESIDENCY-ACCEPTANCE-WORKFLOW-2023"],
+      "claimIds": ["CLM-196-RESIDENCY-OPERATING-WORKFLOW-2023"],
+      "researchInquiryIds": ["INQ-GDRIVE-SHARED-DRIVES-PRODUCTION-2026-07-14"],
+      "projectionDecision": "Project one specific Jamie-signed acceptance workflow as an example of residency operations. Do not use it to support aggregate gathering or resident counts."
+    },
+    {
+      "id": "google-shared-drive-commercial-vacancy-pilot",
+      "sourceIds": ["SRC-COMMERCIAL-VACANCY-PUBLIC-DATA-PILOT-2026"],
+      "claimIds": ["CLM-COMMERCIAL-VACANCY-PUBLIC-DATA-PILOT-2026"],
+      "researchInquiryIds": ["INQ-GDRIVE-SHARED-DRIVES-PRODUCTION-2026-07-14"],
+      "projectionDecision": "Retain the authored brief as a public-safe technical-operations specimen. Describe the proposed data product and implementation sequence without implying agency adoption or deployment."
+    },
+    {
+      "id": "google-shared-drive-source-backed-memory-design",
+      "sourceIds": ["SRC-SOURCE-BACKED-MEMORY-PILOT-PROPOSAL-2026", "SRC-NOTING-SYSTEM-SPEC-2026"],
+      "claimIds": ["CLM-SOURCE-BACKED-MEMORY-DESIGN-2026"],
+      "researchInquiryIds": ["INQ-GDRIVE-SHARED-DRIVES-PRODUCTION-2026-07-14"],
+      "projectionDecision": "Use two Jamie-authored design records to support method and system-design claims. Do not imply production deployment, automated trust, or client adoption."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 97,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 99,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 81,
+      "editorialFutureUseScore": 89,
+      "result": "revise",
+      "finding": "The first graph overgeneralized one 2023 residency workflow, let revision history drift toward authorship, and did not reconcile all eleven close-read records."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 89,
+      "editorialFutureUseScore": 89,
+      "result": "revise",
+      "finding": "The graph boundaries improved, but the aggregate residency proof still named the single workflow among sources for independently supported scale metrics."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 97,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "Eight protected sources and three held records reconciled the full close-read set; four bounded claims gained useful projections with explicit authorship, adoption, implementation, consent, and impact limits."
+    },
+    {
+      "round": 4,
+      "evidenceGovernanceScore": 97,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck confirmed graph coherence, public safety, collective credit, source calibration, and the separation of a specific workflow from aggregate program claims."
+    }
+  ],
+  "unresolvedCriteria": []
+}

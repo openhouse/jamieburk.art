@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-14-x-project-social-accounts-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 5,
+  "qualifyingRounds": [4, 5],
+  "candidate": "Jamie co-founded NYC Artist Coalition, built campaign websites for the coalition and FairRentNYC, and established a shared public publishing identity collaborators used across campaigns. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 63,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    },
+    "hiringReaderJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    }
+  },
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 4,
+      "hiringReaderJudgeScore": 5,
+      "result": "revise",
+      "finding": "The Council-account proof briefly foregrounded archive accounting over Jamie's usable contribution, and repo-local research sources still used movable branch URLs."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 4,
+      "result": "revise",
+      "finding": "The reader-facing copy passed, but the recursive system still lacked complete live semantic and immutable-source enforcement."
+    },
+    {
+      "round": 3,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "revise",
+      "finding": "The candidate passed the Chad lens, but adversarial review found semantic-guard variants and archival surfaces that still needed deterministic coverage."
+    },
+    {
+      "round": 4,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "Two independent judges confirmed the 63-word candidate with every dimension, hard gate, evidence boundary, and public-safety condition intact."
+    },
+    {
+      "round": 5,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck repeated the score-5 pass without regression or recommended material edits."
+    }
+  ]
+}

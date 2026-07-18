@@ -1,0 +1,768 @@
+{
+  "schemaVersion": "1.0.0",
+  "account": "WOW List Facebook Page",
+  "surface": "current public Page timeline",
+  "capturedAt": "2026-07-14",
+  "populationDefinition": "Every distinct top-level public post unit recovered from the current WOW List Page timeline in two terminal traversals, not every post ever created or a native Meta export.",
+  "privacyBoundary": "Public Page content summarized for professional research. Commenter identities, comment text, account state, private analytics, raw browser artifacts, and per-record reaction details are excluded.",
+  "accounting": {
+    "forwardTraversalRecords": 53,
+    "reverseTraversalRecords": 53,
+    "forwardOnlyRecords": 0,
+    "reverseOnlyRecords": 0,
+    "exactSetMatch": true,
+    "missionRelevantDestinationUrls": 30,
+    "normalizedDestinationHostnames": 10,
+    "wowlistDestinationUrls": 20,
+    "currentFollowerDisplay": 185,
+    "postsWithDisplayedLikes": 37,
+    "currentDisplayedLikeFloor": 81,
+    "largestSinglePostLikeDisplay": 13,
+    "engagementBoundary": "These are mutable current displays, not historical analytics, unique people, reach, attendance, endorsement, conversion, or impact. Per-record values are omitted and the aggregate must not be used as a performance total."
+  },
+  "additionalControlBoundary": "Additional protected controls did not establish a lifetime denominator for the legacy public posts.",
+  "records": [
+    {
+      "slotId": "current-001",
+      "evidenceDigest": "3085be3dc58769a3d6e1364d7978d0748d51d589e8d7a2d1be3f5c08dc75c585",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "A Phoenix organizer recommended WOW List as an off-Facebook way to find shows while updating a local DIY calendar.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "http://phxdiy.com/"
+      ]
+    },
+    {
+      "slotId": "current-002",
+      "evidenceDigest": "13a7014982a14be80afb1baa8ae7bbbff95b37e296c3714bb0f849fb42ff3105",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-policy-advocacy",
+      "publicSummary": "WOW List amplified NYC Artist Coalition's Let NYC Dance campaign, explained the Cabaret Law issue, and invited a City Council call to action.",
+      "stakeholderGroups": [
+        "artists",
+        "cultural-spaces",
+        "civic-advocates",
+        "city-government"
+      ],
+      "postedDestinationUrls": [
+        "https://www.facebook.com/NYCCouncil",
+        "https://www.facebook.com/nycartc"
+      ],
+      "sourceUrl": "https://www.facebook.com/wowlist/posts/702379893302154"
+    },
+    {
+      "slotId": "current-003",
+      "evidenceDigest": "527aa5ab124500758f1cf930f4e0c16a5f2af133c81fe6eb0f84666e06288d48",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "artist-tour-routing",
+      "publicSummary": "WOW List routed readers to Richard and Katy's spring tour calendar.",
+      "stakeholderGroups": [
+        "artists",
+        "touring-projects",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://www.wowlist.org/richardkatyspringtour"
+      ]
+    },
+    {
+      "slotId": "current-004",
+      "evidenceDigest": "d50b25e66d7c81ed523c3be8813d6e70941faa1fe03ef1ce6911ffe3eac0fc92",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-advocacy",
+      "publicSummary": "A post connected the campaign to restore Shea Stadium with the economic and cultural importance of small music venues.",
+      "stakeholderGroups": [
+        "cultural-spaces",
+        "artists",
+        "civic-advocates"
+      ],
+      "postedDestinationUrls": [
+        "https://www.facebook.com/nycartc"
+      ]
+    },
+    {
+      "slotId": "current-005",
+      "evidenceDigest": "0b6fc1481d5b97106ca4924dacae850f76173d63773588e064a6c60c0fe0f10c",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-support",
+      "publicSummary": "WOW List shared an application deadline for Meow Wolf's DIY Fund and described eligible infrastructure, rent, materials, and equipment needs.",
+      "stakeholderGroups": [
+        "cultural-spaces",
+        "funders",
+        "organizers"
+      ],
+      "postedDestinationUrls": [
+        "https://www.facebook.com/nycartc"
+      ]
+    },
+    {
+      "slotId": "current-006",
+      "evidenceDigest": "be7b29258c6f44c00cac1233e7ad72fca6728fb3fdac736f4f2b16e36d3124f6",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-advocacy",
+      "publicSummary": "A post urged attendance at a local-arts support gathering and used cultural-space safety and anti-eviction campaign language.",
+      "stakeholderGroups": [
+        "artists",
+        "cultural-spaces",
+        "event-goers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-007",
+      "evidenceDigest": "cd572dd814b27ffa9ca28c1a880a4012cc1983121827fda6c40f98f2b8c3194a",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-support",
+      "publicSummary": "WOW List highlighted Meow Wolf's experience offering grants to DIY spaces.",
+      "stakeholderGroups": [
+        "cultural-spaces",
+        "funders",
+        "organizers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-008",
+      "evidenceDigest": "d5200a6eb4a83cd512fb43a5a9cb001fe3bb2b6bd184cea227e2621d3c9662be",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-safety-advocacy",
+      "publicSummary": "A WOW List email invited prominent artists to support the underground scenes they emerged from and framed safety as a shared responsibility.",
+      "stakeholderGroups": [
+        "artists",
+        "cultural-spaces",
+        "civic-advocates"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/popularvote/events/25863/art-hero-email-template"
+      ]
+    },
+    {
+      "slotId": "current-009",
+      "evidenceDigest": "55cc7e1cd8e9c5ba5a53003c53d0b0d2e3a37d4c0edddc2251e2ba3131e918a5",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "civic-action-calendar",
+      "publicSummary": "WOW List routed readers to a national calendar for Women's March events.",
+      "stakeholderGroups": [
+        "civic-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/womensmarch"
+      ],
+      "sourceUrl": "https://www.facebook.com/wowlist/posts/616983925175085"
+    },
+    {
+      "slotId": "current-010",
+      "evidenceDigest": "7e77b69b464683b86879425b21c8730fbdd67b104050583cb62bda0c1025d2ba",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-support",
+      "publicSummary": "WOW List shared the announcement of an annual fund and consulting support for DIY music and art spaces.",
+      "stakeholderGroups": [
+        "cultural-spaces",
+        "funders",
+        "organizers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-011",
+      "evidenceDigest": "68ae2032c73b1e1252606651182c9c539b666c4833e28ce02df543786b68b0a5",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "solidarity-and-care",
+      "publicSummary": "A brief solidarity post invited a collective gesture of light.",
+      "stakeholderGroups": [
+        "community-members"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-012",
+      "evidenceDigest": "a54af36de26f54d58330980aed4045f969c31efab028a43cce7ba2be25dcc21a",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-care",
+      "publicSummary": "WOW List honored people who open homes and lives to create inclusive community space.",
+      "stakeholderGroups": [
+        "space-stewards",
+        "community-members",
+        "artists"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-013",
+      "evidenceDigest": "9e1eac1bd9b2cad13c00201d6d619e972610d6747e0c86a3b3c2c9c254ce6050",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-care",
+      "publicSummary": "A post described underground art spaces as necessary sites of culture, resistance, and survival.",
+      "stakeholderGroups": [
+        "artists",
+        "cultural-spaces"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-014",
+      "evidenceDigest": "230708c80443119096572478cd65f5f63390d457e3fff7807e748cfac8d22fae",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "solidarity-and-care",
+      "publicSummary": "A brief care message encouraged readers to hold loved ones close.",
+      "stakeholderGroups": [
+        "community-members"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-015",
+      "evidenceDigest": "3679fd7c112a8c9e9492b5beceeb017ab357e5fe3bf76896e108775c802fe7e2",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "indigenous-solidarity",
+      "publicSummary": "WOW List amplified a musician's plan to donate download proceeds to Standing Rock water protectors.",
+      "stakeholderGroups": [
+        "artists",
+        "movement-organizers",
+        "community-members"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-016",
+      "evidenceDigest": "3d2a14151326de7fa69edd29a1f45f7bc5525c7f9665da69035bb14c657f9676",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "civic-action-calendar",
+      "publicSummary": "WOW List routed readers to a Water Is Life calendar for nearby Standing Rock solidarity events.",
+      "stakeholderGroups": [
+        "movement-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/waterislife"
+      ]
+    },
+    {
+      "slotId": "current-017",
+      "evidenceDigest": "c5905ace8ba378906991c529ca4c751aced585133849f0dff09b2db9953a7e87",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "youth-civic-action",
+      "publicSummary": "A post connected high-school student protest with the organizing legacy of the civil-rights movement.",
+      "stakeholderGroups": [
+        "students",
+        "civic-organizers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-018",
+      "evidenceDigest": "f51ba6aa246e14d9b3dbfdbe308c8050d3ac07e499fa08eea0062f4e6932d455",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "civic-action-calendar",
+      "publicSummary": "WOW List invited people to add and follow marches, meetings, and support events through a national resistance calendar.",
+      "stakeholderGroups": [
+        "civic-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "http://popular.vote/"
+      ]
+    },
+    {
+      "slotId": "current-019",
+      "evidenceDigest": "cff6b824bf0431e1600094bf60e09796d7441497ff74551829fe3957c040495a",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "civic-action-calendar",
+      "publicSummary": "A post pointed to marches across the country and connected event discovery with anti-racist, anti-sexist, and immigrant-solidarity action.",
+      "stakeholderGroups": [
+        "civic-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-020",
+      "evidenceDigest": "8ad9d123b11a743535548539aae9b75a7d1af875c79686f4f1ed6d8b224abee0",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "touring-cultural-program",
+      "publicSummary": "WOW List routed readers to the Torrey Pines touring queer-punk animated feature and live-score calendar.",
+      "stakeholderGroups": [
+        "artists",
+        "touring-projects",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/TorreyPines"
+      ]
+    },
+    {
+      "slotId": "current-021",
+      "evidenceDigest": "4a0d9994e9a810dd3fc09251fe908f160d0980a59ad1e62e90599aaa0e2269e7",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-routing",
+      "publicSummary": "WOW List linked to a Seattle DIY calendar entry for the Short Run small-press comics festival.",
+      "stakeholderGroups": [
+        "artists",
+        "local-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/SeattleDIY/events/23270/6th-annual-short-run-comix-festival"
+      ]
+    },
+    {
+      "slotId": "current-022",
+      "evidenceDigest": "b9bd9c5b7602610adeca8a26dd67718706efa64cfd9e6a5dc3ff4469e23f8417",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-mutual-aid",
+      "publicSummary": "WOW List amplified a fundraiser for The Trunk Space and reported the campaign's then-current progress.",
+      "stakeholderGroups": [
+        "cultural-spaces",
+        "donors",
+        "community-members"
+      ],
+      "postedDestinationUrls": [
+        "https://www.razoo.com/us/story/Trunk-Space-Opening"
+      ]
+    },
+    {
+      "slotId": "current-023",
+      "evidenceDigest": "0ee9c1a8136278a8de10a1309e6e7285cf25d9191467a16454b82115064709c9",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "artist-tour-routing",
+      "publicSummary": "WOW List routed readers to a Richard Album event listing.",
+      "stakeholderGroups": [
+        "artists",
+        "touring-projects",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/RichardAlbum/events/24160/basement-family--ohtis--richard-album--anna-burch"
+      ]
+    },
+    {
+      "slotId": "current-024",
+      "evidenceDigest": "75232cbe80d321f847aa009b7051ec7640a465456c0e85012237639f74cb2832",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-policy",
+      "publicSummary": "WOW List amplified a community argument for public support of all-ages venues as durable cultural infrastructure.",
+      "stakeholderGroups": [
+        "cultural-spaces",
+        "young-people",
+        "public-funders"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-025",
+      "evidenceDigest": "2e5ae76304160f3e788c2afcac4c8774122f418b3f86597c118d2cbb13dbb031",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "platform-adoption",
+      "publicSummary": "An organizer promoted a new WOW List presence as an alternative to Facebook for finding underground DIY shows.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "event-goers",
+        "platform-members"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-026",
+      "evidenceDigest": "d8fbcc219f1f20c3905de9e3b0acff32ef37a46d3c3bff7931182575a32b71fa",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "movement-infrastructure",
+      "publicSummary": "WOW List praised Allied Media Projects and shared a development-associate hiring notice.",
+      "stakeholderGroups": [
+        "movement-organizations",
+        "organizers",
+        "job-seekers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-027",
+      "evidenceDigest": "8674f4fb995d54dd991fb17eac4da2aa11b997a6dd87633ff5f2a0924980ef66",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "A Santa Barbara organizer invited people to join and contribute to a local DIY and community calendar.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "platform-members",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/sbdiy",
+        "http://www.sbdiy.org/"
+      ]
+    },
+    {
+      "slotId": "current-028",
+      "evidenceDigest": "32b4e7c0b56fd46c08597c86808f86e5d90055aab3784177e14833862a76552b",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "A community organizer recommended WOW List as an alternative event-discovery system for DIY shows.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "platform-members",
+        "event-goers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-029",
+      "evidenceDigest": "f0eaa4e2bcb04bcbabce1359f82a66b25609b28b252cf7e510afb479f82bd21e",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-mutual-aid",
+      "publicSummary": "WOW List amplified an all-ages DIY space's urgent search and fundraising effort after a building ownership change.",
+      "stakeholderGroups": [
+        "cultural-spaces",
+        "donors",
+        "community-members"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-030",
+      "evidenceDigest": "8d508a5ba6bc0745de7a8be250bbbcfe2f5925de686950466d1d66876e724cbc",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "community-publishing",
+      "publicSummary": "WOW List shared a community member's plan for a summer nonfiction publishing practice.",
+      "stakeholderGroups": [
+        "writers",
+        "community-members"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-031",
+      "evidenceDigest": "a8861b2b62ffe1ffcfbe310f03ecb9befbc4af74b67d806f818e366a85452858",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "WOW List celebrated Phoenix DIY organizers and invited people to create accounts and add events.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "platform-members",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/PhxDIY/join"
+      ]
+    },
+    {
+      "slotId": "current-032",
+      "evidenceDigest": "a50925169e7e6c31ca8348430a7d1d1d5ad0bc17cf1a6db4a344797bcbb4d82b",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "participatory-community-design",
+      "publicSummary": "WOW List published a member's account of Jamie describing a community-first platform with shared rather than owner-centered participation.",
+      "stakeholderGroups": [
+        "platform-members",
+        "community-organizers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/join"
+      ]
+    },
+    {
+      "slotId": "current-033",
+      "evidenceDigest": "217db83625ac71ed3a5f1a737906fba3fa710fd363eca91cdb2709fd8e9bd323",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "WOW List reported that a Los Angeles organizer had added 41 upcoming DIY shows and invited others to join the local calendar.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "platform-members",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/ladiy/join"
+      ]
+    },
+    {
+      "slotId": "current-034",
+      "evidenceDigest": "2e3613f1ff734663214936fef046cae9a44f4bdee32db0db399140dbfa5ce898",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "participatory-community-design",
+      "publicSummary": "A second surviving unit repeated the member quotation about Jamie's community-first account of WOW List design and shared participation.",
+      "stakeholderGroups": [
+        "platform-members",
+        "community-organizers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-035",
+      "evidenceDigest": "acf80f24035a9610e027cfb94174b97dc9644bc2b107cb3b5d67764bc0b00415",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "event-attendance",
+      "publicSummary": "WOW List amplified a Chicago organizer thanking people for attending a local event.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-036",
+      "evidenceDigest": "2bd41c85a91ca46032320775bcafd5b35ea693591f4d03b42a5a226183ec1048",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "artist-tour-routing",
+      "publicSummary": "WOW List invited people to follow The Yellow Dress tour through a project calendar and location-based email updates.",
+      "stakeholderGroups": [
+        "artists",
+        "touring-projects",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/theyellowdress/join"
+      ]
+    },
+    {
+      "slotId": "current-037",
+      "evidenceDigest": "209c8fe6509885f2226bda88f05162d59cd4ca0a32c513d9ba47ed32faf38778",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "participatory-product-design",
+      "publicSummary": "WOW List invited members into a kitchen-to-kitchen video conversation about how the site could improve.",
+      "stakeholderGroups": [
+        "platform-members",
+        "community-organizers",
+        "product-participants"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/events/18549/wow-list-site-design"
+      ]
+    },
+    {
+      "slotId": "current-038",
+      "evidenceDigest": "14e6cb01af6105d8f95f4039f3b1d933b4ee1853579ca10dc40049fbf2156931",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-mutual-aid",
+      "publicSummary": "WOW List amplified a campaign to create an all-ages, safer, sober, community-driven arts and music space in Southern California.",
+      "stakeholderGroups": [
+        "cultural-spaces",
+        "donors",
+        "community-members"
+      ],
+      "postedDestinationUrls": [
+        "https://www.indiegogo.com/projects/get-orange-county-diy-a-permanent-home"
+      ]
+    },
+    {
+      "slotId": "current-039",
+      "evidenceDigest": "5c711c8a8f842c693031a42282b13585d47f69adcb11fd2935b3f20c45b0fcd0",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "WOW List announced that members in nine cities had introduced community calendars and invited people to join one nearby.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "platform-members",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/join"
+      ]
+    },
+    {
+      "slotId": "current-040",
+      "evidenceDigest": "13010b181dc04268f2f4c7a7c6d6a76fb6b3700e40b8564ba18eb32137777f4b",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-space-mutual-aid",
+      "publicSummary": "WOW List routed readers to The Silent Barn's post-fire recovery donation page.",
+      "stakeholderGroups": [
+        "cultural-spaces",
+        "donors",
+        "community-members"
+      ],
+      "postedDestinationUrls": [
+        "http://silentbarn.org/donate"
+      ]
+    },
+    {
+      "slotId": "current-041",
+      "evidenceDigest": "307f553c15283b65e951b399380dc53184a76ec8342a1bb55087f8ea6ebfeee1",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "WOW List shared a join route for a Chicago art calendar.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "platform-members",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/chicagoart/join"
+      ]
+    },
+    {
+      "slotId": "current-042",
+      "evidenceDigest": "80bb0e26dbbdf5df27e890bc9189fc128454c7d30f3af3d4e666a44763bc014c",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "A Seattle organizer announced a local site and invited community members to join and add events through WOW List.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "platform-members",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "http://www.SeattleDiy.org/",
+        "https://wowlist.org/seattlediy/join"
+      ]
+    },
+    {
+      "slotId": "current-043",
+      "evidenceDigest": "aad60ecc2d95864c63cb42cb05e1231de044b4affc71903291c2bfbec7ed5753",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "networked-community-infrastructure",
+      "publicSummary": "WOW List amplified a Baltimore community spreadsheet mapping the skills and contact routes of more than 300 local makers.",
+      "stakeholderGroups": [
+        "community-organizers",
+        "artists",
+        "makers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-044",
+      "evidenceDigest": "9163a923449c0a6ab4c310a3151bc43153b6f079560cb9d859f65de82c316815",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "A San Francisco organizer invited people to follow an intimate DIY pop-show calendar for Sylvan Annex.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "artists",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/sylvanannex/join",
+        "https://wowlist.org/sylvanannex"
+      ]
+    },
+    {
+      "slotId": "current-045",
+      "evidenceDigest": "6393d038a9f10811706c86e92f3db5c9046db2fbdaed48da0686be75f7e9c88a",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "platform-adoption",
+      "publicSummary": "A member described WOW List as a tool for helping people participate in real-world community life and urged others to use it.",
+      "stakeholderGroups": [
+        "platform-members",
+        "community-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-046",
+      "evidenceDigest": "433baf096428bb7e7e517b74389dbd1a01bd4d90da31b54370847037e484188d",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "platform-onboarding",
+      "publicSummary": "WOW List celebrated a community-created tutorial and invited people to join the platform.",
+      "stakeholderGroups": [
+        "platform-members",
+        "community-organizers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/join"
+      ]
+    },
+    {
+      "slotId": "current-047",
+      "evidenceDigest": "6ddd3777a819efc09602ed434e29aa959764d5713aaba026f1245917aa707dec",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "artist-tour-routing",
+      "publicSummary": "WOW List amplified The Yellow Dress's summer tour.",
+      "stakeholderGroups": [
+        "artists",
+        "touring-projects",
+        "event-goers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-048",
+      "evidenceDigest": "cdcda62c785d8f8960ad6e7287ffb5a3458ae0e3316d06b4b472bc6b5d1d609e",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "artist-tour-routing",
+      "publicSummary": "WOW List invited readers to follow Dozer's Dream Party tour calendar.",
+      "stakeholderGroups": [
+        "artists",
+        "touring-projects",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/dozerdances"
+      ]
+    },
+    {
+      "slotId": "current-049",
+      "evidenceDigest": "9d631bd9887cede422955cc84f11ef3cb0783e9f412a43b74f234b073cda9982",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-event-routing",
+      "publicSummary": "WOW List routed Chicago readers to the Rapid Pulse International Performance Art Festival.",
+      "stakeholderGroups": [
+        "artists",
+        "local-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/rapidpulse"
+      ]
+    },
+    {
+      "slotId": "current-050",
+      "evidenceDigest": "cb6e55653f5edd66556d6bc4dbf3d0b2be25a28eb3c096c6a51eb3ea16987635",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "artist-tour-routing",
+      "publicSummary": "WOW List credited doDIY.org's Neil Campau with loading a touring-show calendar for several music projects.",
+      "stakeholderGroups": [
+        "artists",
+        "touring-projects",
+        "local-organizers"
+      ],
+      "postedDestinationUrls": [
+        "http://doDIY.org/"
+      ]
+    },
+    {
+      "slotId": "current-051",
+      "evidenceDigest": "a3e74167a99aa248727ac945cd6de051bfa788f43c1eac32675b39ea8409c05f",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "artist-tour-routing",
+      "publicSummary": "WOW List shared iji tour dates across four western states.",
+      "stakeholderGroups": [
+        "artists",
+        "touring-projects",
+        "event-goers"
+      ],
+      "postedDestinationUrls": []
+    },
+    {
+      "slotId": "current-052",
+      "evidenceDigest": "78fa6bcce7ac64a7ada52e13b85d185710ce21ea20bbb11713200aadbc51f5ca",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "local-calendar-adoption",
+      "publicSummary": "A Chicago organizer urged local show organizers to use a WOW List city calendar as an alternative to Facebook.",
+      "stakeholderGroups": [
+        "local-organizers",
+        "platform-members",
+        "event-goers"
+      ],
+      "postedDestinationUrls": [
+        "https://wowlist.org/chidiy"
+      ]
+    },
+    {
+      "slotId": "current-053",
+      "evidenceDigest": "77d5e4baca19461b50d34f9dedcb96d5e6ee573a94070e037fe3d9ee06e2fcd7",
+      "sourcePreservation": "protected-capture",
+      "primaryTheme": "cultural-event-routing",
+      "publicSummary": "WOW List shared a free Kansas City artist and architect lecture with time, place, and subject details.",
+      "stakeholderGroups": [
+        "artists",
+        "local-organizers",
+        "event-goers"
+      ],
+      "postedDestinationUrls": []
+    }
+  ],
+  "evidenceKeyMethod": "SHA-256 of a protected canonical record containing currentOrder, messages, profiles, and stableLinks. The digest permits later reconciliation without publishing raw capture content.",
+  "hostnameNormalization": "Lowercase each URL hostname and remove one leading www. before counting distinct hostnames."
+}

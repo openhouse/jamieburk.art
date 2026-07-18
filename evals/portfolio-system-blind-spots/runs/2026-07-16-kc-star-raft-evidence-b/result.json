@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "evalId": "portfolio-system-blind-spots",
+  "systemControlStatus": "passed",
+  "externalOutcomeStatus": "not-yet-measured",
+  "bundleSha256": "f67058bc52fbc867f7c6cd59713f41cbe46f2b7783f2d7b54cb420a0d45f2086",
+  "graphSnapshot": {
+    "intakeRecords": 60,
+    "sources": 233,
+    "claims": 104,
+    "researchInquiries": 33,
+    "partiallyRecoveredInquiries": 27,
+    "recoveredInquiries": 1,
+    "activeProjections": 61,
+    "heldProjections": 45
+  },
+  "iterations": 2,
+  "rounds": [
+    {
+      "round": 1,
+      "result": "qualifying-pass",
+      "judges": [
+        {
+          "judgeRunId": "8c68511b-a182-4fc7-a6dd-eb689d17833c",
+          "role": "evidence-and-governance-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-16-kc-star-raft-evidence-b/judges/round-1-evidence.json",
+          "sha256": "fdc38804d9a960a0c739b33f072e840fccbf2f9cdb58974dca340e2d7cbefae5"
+        },
+        {
+          "judgeRunId": "3bf90fef-6077-4d55-a169-23d6d9ed5f71",
+          "role": "hiring-and-field-use-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-16-kc-star-raft-evidence-b/judges/round-1-hiring.json",
+          "sha256": "43990e3232d2aabdc100dc1bbdf18869172ce7cc233d24c2e207a10f89cc8454"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "result": "qualifying-pass",
+      "judges": [
+        {
+          "judgeRunId": "248ecd50-9696-45f7-ab67-a4b59c37596c",
+          "role": "evidence-and-governance-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-16-kc-star-raft-evidence-b/judges/round-2-evidence.json",
+          "sha256": "6cdb2ccf3c7dd8f3d2fc7f0608854e56a6889ead50b682cf2d980c6b4336fef4"
+        },
+        {
+          "judgeRunId": "a20c4f48-6ebe-4404-b9a9-78c23f2d0d07",
+          "role": "hiring-and-field-use-judge",
+          "artifact": "evals/portfolio-system-blind-spots/runs/2026-07-16-kc-star-raft-evidence-b/judges/round-2-hiring.json",
+          "sha256": "ef25e5ee109c29542a8d27229581809d1663bc0694e26e096c2b785cd52f1b1d"
+        }
+      ]
+    }
+  ]
+}
