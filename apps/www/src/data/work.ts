@@ -695,7 +695,7 @@ const workItemsInput = [
     ],
     links: [{ label: "WOW List on X", url: "https://x.com/wowlist" }],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. Claims must not convert database record groupings into geographic reach or organizer adoption.",
     sourceLayer:
       "Approved resume language and a public-safe aggregate historical summary support the scale wording; the authenticated July 15 X corpus supports the product-support and civic-curation claims. Screenshots remain pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],

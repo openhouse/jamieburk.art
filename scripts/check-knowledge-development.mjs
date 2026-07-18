@@ -843,10 +843,10 @@ function stableProofEvidenceBasis(proof, bank) {
     )
     .filter(Boolean)
     .map((inquiry) => ({
-      question: inquiry.question,
       resultStatus: inquiry.resultStatus,
-      findings: inquiry.findings,
-      publicSummary: inquiry.publicSummary
+      publicSummary: ["recovered", "partially-recovered"].includes(
+        inquiry.resultStatus
+      ) ? inquiry.publicSummary : undefined
     }));
   return JSON.stringify({ claims, sources, assertions, inquiries });
 }
@@ -861,6 +861,14 @@ export function stableProofEvidenceCoverage(statement, proofInput, bank) {
   );
 }
 
+function normalizedQuantities(value) {
+  return (
+    String(value)
+      .replace(/(?<=\d),(?=\d)/g, "")
+      .match(/\b\d+(?:\.\d+)?\+?/g) ?? []
+  );
+}
+
 export function stableProofQuantitativeFindings(statement, proofInput, bank) {
   const proofs = (Array.isArray(proofInput) ? proofInput : [proofInput]).filter(
     Boolean
@@ -871,6 +879,9 @@ export function stableProofQuantitativeFindings(statement, proofInput, bank) {
       bank.sourceAssertions.find((assertion) => assertion.id === id)
     )
     .filter(Boolean);
+  const assertionQuantities = new Set(
+    assertions.flatMap((assertion) => normalizedQuantities(assertion.assertion))
+  );
   const quantitativeClauses = statement
     .split(/[.;]|\s+\b(?:and|but|while)\b\s+|,\s+(?=(?:and|but)\b)/i)
     .map((clause) => normalizedText(clause))
@@ -882,6 +893,9 @@ export function stableProofQuantitativeFindings(statement, proofInput, bank) {
 
   return quantitativeClauses
     .map((clause) => {
+      const quantities = normalizedQuantities(
+        clause.replace(/\b196 Artists Residency\b/gi, "")
+      );
       const coverages = assertions.map((assertion) =>
         statementSemanticCoverage(clause, assertion.assertion)
       );
@@ -889,9 +903,15 @@ export function stableProofQuantitativeFindings(statement, proofInput, bank) {
         (best, coverage) => (coverage.score > best.score ? coverage : best),
         { score: 0, matched: [], statementTokens: [...semanticTokens(clause)] }
       );
-      return { clause, coverage: bestCoverage };
+      const unsupportedQuantities = quantities.filter(
+        (quantity) => !assertionQuantities.has(quantity)
+      );
+      return { clause, coverage: bestCoverage, unsupportedQuantities };
     })
-    .filter(({ coverage }) => coverage.score < 0.3);
+    .filter(
+      ({ coverage, unsupportedQuantities }) =>
+        coverage.score < 0.3 || unsupportedQuantities.length > 0
+    );
 }
 
 function claimSemanticBasis(claim) {
@@ -954,7 +974,8 @@ const semanticRiskFamilies = new Map([
   ["official-status", /\b(?:official|officially|certified|endorsed)\b/i],
   ["current-status", /\b(?:current|currently|live|ongoing|remains? operational|still operating|operational today)\b/i],
   ["completeness", /\b(?:all|every|entire|complete|completely|full corpus|100\s*%)\b/i],
-  ["reach-adoption", /\b(?:reach|reached|reaching|adopt|adopted|adoption)\b/i]
+  ["reach-adoption", /\b(?:reach|reached|reaching|adopt|adopted|adoption)\b/i],
+  ["corroboration-certainty", /\b(?:corroborat(?:e|ed|es|ion)|confirm(?:ed|ation)|verif(?:ied|ication))\b/i]
 ]);
 
 function riskFamilies(value) {
@@ -968,7 +989,11 @@ function riskFamilies(value) {
         const broadBoundaryNegation =
           family !== "sole-credit" &&
           /\b(?:avoid|avoids|avoided|does\s+not|do\s+not|no|not|never|omit|omits|omitted|without)\b/i.test(prefix);
-        return !localNegation && !broadBoundaryNegation;
+        const corroborationBoundary =
+          family === "corroboration-certainty" &&
+          /\b(?:held|pending|awaiting|require|requires|required)\b/i.test(prefix);
+        return !localNegation && !broadBoundaryNegation &&
+          !corroborationBoundary;
       })
       .map(([family]) => family)
   );
@@ -1100,7 +1125,7 @@ function governedStatementFindings(statement, bank, source, label) {
       bank
     )) {
       findings.push(
-        `${label} quantitative clause lacks proposition-level assertion support: ${unsupported.clause}`
+        `${label} quantitative clause lacks proposition-level assertion support${unsupported.unsupportedQuantities.length > 0 ? ` for ${unsupported.unsupportedQuantities.join(", ")}` : ""}: ${unsupported.clause}`
       );
     }
   }

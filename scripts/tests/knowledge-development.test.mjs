@@ -616,6 +616,20 @@ test("authored case-study prose resolves to stable knowledge-bank identities", (
       knowledgeBank
     ).length > 0
   );
+  assert.ok(
+    stableProofQuantitativeFindings(
+      "The snapshot contained 36 city/region entries with at least 51 geocoded posts/events.",
+      proofById.get("wowlist-community-platform"),
+      knowledgeBank
+    ).length > 0
+  );
+  assert.match(
+    proofSemanticBoundaryFindings(
+      "A collaborator record corroborated the mission-aligned handoff.",
+      proofById.get("kc-town-hall-mission-aligned-handoff-held")
+    ).join("\n"),
+    /corroboration-certainty/
+  );
   assert.match(
     proofSemanticBoundaryFindings(
       "WOWList reached 35 cities and organizers adopted it.",
@@ -1318,7 +1332,7 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     work,
     /Screenshots, archive links, and precise adoption wording need approval/
   );
-  assert.match(work, /aggregate adoption wording is approved through the public-safe proof record/);
+  assert.match(work, /exact July 2017 database measure is approved through the public-safe proof record/);
   assert.match(work, /authenticated July 15 X corpus supports the product-support and civic-curation claims/);
   assert.equal(
     Number(priorObservation.publicNote.match(/profile reported (\d+) posts/)?.[1]),
