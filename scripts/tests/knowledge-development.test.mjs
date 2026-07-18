@@ -2031,8 +2031,10 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   );
   assert.deepEqual(sourceCirculationCaseStudy.surfaces, []);
   assert.equal(sourceCirculationCaseStudy.status, "hold");
-  assert.match(mdx, /What the shared identity made usable/);
-  assert.match(mdx, /explicit\s+gap/);
+  assert.doesNotMatch(
+    mdx,
+    /What the shared identity made usable|1,757-item difference|446 of 696/
+  );
   assert.doesNotMatch(
     [mdx, work].join("\n"),
     /1,527 reposts|2,761 likes|64 bookmarks/
@@ -2313,7 +2315,7 @@ test("active projections require a known and realized surface", () => {
 test("case-study projections cannot move to an unrelated known route", () => {
   const candidate = structuredClone(knowledgeBank);
   const claim = candidate.claims.find(
-    (item) => item.id === "CLM-NAC-FIRE-CODE-STUDY-GROUPS"
+    (item) => item.id === "CLM-NAC-REPEAL-MOBILIZATION"
   );
   claim.projections.find((item) => item.key === "case-study").surfaces = [
     "/work/callnyc"
@@ -2353,7 +2355,7 @@ test("technical projections cannot move to an unrelated known route", () => {
 test("every active document projection requires exact realization", () => {
   const candidate = structuredClone(knowledgeBank);
   const claim = candidate.claims.find(
-    (item) => item.id === "CLM-NAC-FIRE-CODE-STUDY-GROUPS"
+    (item) => item.id === "CLM-NAC-REPEAL-MOBILIZATION"
   );
   claim.projections.find((item) => item.key === "case-study").surfaces = [
     "docs/knowledge-bank/projects/callnyc"
@@ -2444,7 +2446,7 @@ test("citation-required route bindings stay connected to their page occurrence",
     (item) => item.id === "fair-rent-nyc"
   );
   page.occurrences = page.occurrences.filter(
-    (item) => item.id !== "fire-code-study-groups"
+    (item) => item.id !== "repeal-mobilization"
   );
   const missingResult = evaluateKnowledgeBank(
     suite,
@@ -2458,15 +2460,15 @@ test("citation-required route bindings stay connected to their page occurrence",
   assert.equal(missingCoverage.pass, false);
   assert.match(
     missingCoverage.findings.join("\n"),
-    /CLM-NAC-FIRE-CODE-STUDY-GROUPS\/case-study is not realized/
+    /CLM-NAC-REPEAL-MOBILIZATION\/case-study is not realized/
   );
 
   const reboundCandidate = structuredClone(knowledgeBank);
   reboundCandidate.pages
     .find((item) => item.id === "fair-rent-nyc")
     .occurrences.find(
-      (item) => item.id === "fire-code-study-groups"
-    ).claimId = "CLM-NAC-REPEAL-MOBILIZATION";
+      (item) => item.id === "repeal-mobilization"
+    ).claimId = "CLM-NAC-OFFICE-NIGHTLIFE-ROLE";
   const reboundResult = evaluateKnowledgeBank(
     suite,
     reboundCandidate,
