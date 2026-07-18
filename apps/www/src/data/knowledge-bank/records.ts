@@ -795,6 +795,27 @@ const knowledgeBankInput = {
         { id: "recorded-gathering-scale", claimId: "CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE", projection: "case-study", sourceIds: ["SRC-GREENE-HILL-COOP-QA-2017", "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"] },
         { id: "residency-founder-scale", claimId: "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE", projection: "case-study", sourceIds: ["SRC-HJE-PUBLIC-RESUME-2026-07-11"] }
       ]
+    },
+    {
+      id: "kc-town-hall",
+      surface: "/work/kc-town-hall",
+      sourceOrder: [
+        "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
+        "SRC-KCMO-COUNCIL-MEETING-2019-09-26",
+        "SRC-KCMO-RESOLUTION-190649-2019",
+        "SRC-KCMO-ORDINANCE-240317-2024"
+      ],
+      occurrences: [{
+        id: "council-appropriation-and-disposition",
+        claimId: "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
+          "SRC-KCMO-COUNCIL-MEETING-2019-09-26",
+          "SRC-KCMO-RESOLUTION-190649-2019",
+          "SRC-KCMO-ORDINANCE-240317-2024"
+        ]
+      }]
     }
   ]
 } satisfies KnowledgeBankInput;

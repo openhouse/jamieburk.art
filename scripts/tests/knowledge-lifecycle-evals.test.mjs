@@ -290,7 +290,22 @@ test("KC Town Hall records Council appropriation and the later unused-fund clawb
 
   assert.equal(priorClaim.maturity, "superseded");
   assert.ok(priorClaim.disposition.successorClaimIds.includes(completeClaim.id));
-  assert.equal(completeClaim.maturity, "public-ready");
+  assert.equal(completeClaim.maturity, "projected");
+  assert.ok(
+    completeClaim.projections.some(
+      (projection) =>
+        projection.status === "active" &&
+        projection.surfaces.includes("/work/kc-town-hall")
+    )
+  );
+  assert.ok(
+    knowledgeBank.projectionDecisions.some(
+      (decision) =>
+        decision.claimId === completeClaim.id &&
+        decision.surface === "/work/kc-town-hall" &&
+        decision.decision === "publish"
+    )
+  );
   assert.ok(completeClaim.requiredSupportTags.includes("kc-town-hall-council-appropriation-confirmed"));
   assert.ok(completeClaim.requiredSupportTags.includes("kc-town-hall-funding-negotiation-authorized"));
   assert.ok(completeClaim.requiredSupportTags.includes("kc-town-hall-council-funding-conditions"));

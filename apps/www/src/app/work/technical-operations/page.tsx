@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import type { Route } from "next";
+import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import { technicalOperationsProofRows } from "@/data/proofs";
+import { getProofHref, technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 const operationsMap = [
@@ -125,12 +127,23 @@ export default function TechnicalOperationsPage() {
             <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
             <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
             <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {row.proofs.map((proof) => (
-                <li className="flex gap-3" key={proof.id}>
-                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{proof.detailedPublicWording ?? proof.publicWording}</span>
-                </li>
-              ))}
+              {row.proofs.map((proof) => {
+                const href = getProofHref(proof);
+
+                return (
+                  <li className="flex gap-3" key={proof.id}>
+                    <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                    <span>
+                      {proof.detailedPublicWording ?? proof.publicWording}
+                      {href ? (
+                        <Link className="ml-2 font-semibold text-jb-blue hover:text-jb-green" href={href as Route}>
+                          View evidence
+                        </Link>
+                      ) : null}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </JBCard>
         ))}

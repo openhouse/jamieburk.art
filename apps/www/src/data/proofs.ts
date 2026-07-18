@@ -638,3 +638,19 @@ export const technicalOperationsProofRows = [
   ...row,
   proofs: row.proofIds.map(requireReadyOrCarefulProof)
 }));
+
+const proofHrefByProject: Record<string, string> = {
+  "196-sunday-dinner": "/work/196-sunday-dinner",
+  callnyc: "/work/callnyc",
+  "fair-rent-nyc": "/work/fair-rent-nyc",
+  "harry-j-epstein": "/work/harry-j-epstein",
+  "kc-town-hall": "/work/kc-town-hall",
+  "source-backed-team-memory": "/lab/source-backed-team-memory",
+  wowlist: "/work/wowlist"
+};
+
+export function getProofHref(proof: ProofClaim): string | undefined {
+  return proof.relatedProjects
+    .map((project) => proofHrefByProject[project])
+    .find(Boolean);
+}

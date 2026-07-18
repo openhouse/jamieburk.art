@@ -28,8 +28,8 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
-test("structured citations extend across About and five public case studies", () => {
-  assert.deepEqual(knowledgeBank.pages.map((page) => page.id), ["about", "callnyc", "harry-j-epstein", "fair-rent-nyc", "wowlist", "196-sunday-dinner"]);
+test("structured citations extend across About and six public case studies", () => {
+  assert.deepEqual(knowledgeBank.pages.map((page) => page.id), ["about", "callnyc", "harry-j-epstein", "fair-rent-nyc", "wowlist", "196-sunday-dinner", "kc-town-hall"]);
   assert.deepEqual(resolveCitationOccurrence("about", "nter-chng-participatory-installation").sources.map((item) => item.number), [1, 2]);
   assert.deepEqual(resolveCitationOccurrence("about", "river-participatory-expedition").sources.map((item) => item.number), [3, 4, 5]);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "public-storefront").sources[0].number, 1);
@@ -38,6 +38,7 @@ test("structured citations extend across About and five public case studies", ()
   assert.equal(resolveCitationOccurrence("fair-rent-nyc", "public-campaign-surface").sources[0].number, 2);
   assert.equal(resolveCitationOccurrence("wowlist", "archived-public-surface").sources[0].number, 1);
   assert.deepEqual(resolveCitationOccurrence("196-sunday-dinner", "recorded-gathering-scale").sources.map((item) => item.number), [1, 2]);
+  assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "council-appropriation-and-disposition").sources.map((item) => item.number), [1, 2, 3, 4]);
 });
 
 test("Claim resolver returns only active approved projections", () => {

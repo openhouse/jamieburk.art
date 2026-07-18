@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import type { Route } from "next";
+import Link from "next/link";
 import { Claim } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
-import { resumeProofHighlights } from "@/data/proofs";
+import { getProofHref, resumeProofHighlights } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -43,22 +45,31 @@ export default function ResumePage() {
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
           <ul className="mt-5 space-y-4 text-jb-ink/76">
-            {resumeProofHighlights.map((proof) => (
-              <li className="flex gap-3" key={proof.id}>
-                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                <span>
-                  {proof.id === "callnyc-civic-data-guidance" ? (
-                    <Claim
-                      claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
-                      projection="resume-html"
-                      surface="/resume"
-                    />
-                  ) : (
-                    proof.detailedPublicWording ?? proof.publicWording
-                  )}
-                </span>
-              </li>
-            ))}
+            {resumeProofHighlights.map((proof) => {
+              const href = getProofHref(proof);
+
+              return (
+                <li className="flex gap-3" key={proof.id}>
+                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                  <span>
+                    {proof.id === "callnyc-civic-data-guidance" ? (
+                      <Claim
+                        claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+                        projection="resume-html"
+                        surface="/resume"
+                      />
+                    ) : (
+                      proof.detailedPublicWording ?? proof.publicWording
+                    )}
+                    {href ? (
+                      <Link className="ml-2 font-semibold text-jb-blue hover:text-jb-green" href={href as Route}>
+                        View evidence
+                      </Link>
+                    ) : null}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         </aside>
       </div>

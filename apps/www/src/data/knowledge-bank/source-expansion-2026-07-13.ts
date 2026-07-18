@@ -828,7 +828,7 @@ export const sourceExpansionClaims = [
     project: "kc-town-hall",
     internalClaim: "After Jamie presented the KC Town-Hall mixed-use proposal and the CCED Board unanimously recommended it, the Kansas City Council on September 26, 2019 passed the Round Two appropriation ordinance and adopted Resolution 190649, accepting up to $490,539 for eligible project costs and authorizing funding-agreement negotiations; a 2024 ordinance records that the project later withdrew and reappropriates the unused $490,539 allocation.",
     status: "confirmed-with-boundary",
-    maturity: "public-ready",
+    maturity: "projected",
     intakeIds: [
       "INTAKE-KCMO-KC-TOWN-HALL-2019",
       "INTAKE-KCMO-KC-TOWN-HALL-COUNCIL-MEETING-2019",
@@ -855,12 +855,18 @@ export const sourceExpansionClaims = [
       collectiveCredit: "The board packet names Jamie as presenter; the proposal, board recommendation, Council legislation, and negotiations were collective and institutional work involving additional project participants and public officials.",
       causalBoundary: "The records support Jamie's presenter role and document the proposal's institutional progression; they do not establish that Jamie personally caused or managed the Council action. The allocation did not become a disbursement or completed development and was later reclaimed after withdrawal."
     },
-    projections: [],
+    projections: [{
+      key: "case-study",
+      text: "Official records document the public sequence: Jamie was the named presenter; the board unanimously recommended the proposal; and the Council appropriated $490,539 and authorized funding-agreement negotiations. A 2024 ordinance records that the project later withdrew and that the unused allocation was reappropriated.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["/work/kc-town-hall"]
+    }],
     evidence: [
-      { sourceId: "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019", relationship: "direct-support", supports: ["Jamie's presenter role", "proposal context", "unanimous board recommendation"], propositionIds: ["PROP-KCTOWN-PRESENTER", "PROP-KCTOWN-PROPOSAL", "PROP-KCTOWN-REQUEST", "PROP-KCTOWN-BOARD-RECOMMENDATION"], confidence: "high", renderCitation: false },
-      { sourceId: "SRC-KCMO-COUNCIL-MEETING-2019-09-26", relationship: "direct-support", supports: ["Council vote on the appropriation ordinance", "Council adoption of the project resolution"], propositionIds: ["PROP-KCTOWN-COUNCIL-ORDINANCE-190642-PASSED", "PROP-KCTOWN-COUNCIL-RESOLUTION-190649-ADOPTED"], confidence: "high", renderCitation: false },
-      { sourceId: "SRC-KCMO-RESOLUTION-190649-2019", relationship: "direct-support", supports: ["acceptance of up to $490,539 for eligible costs", "authorization for funding-agreement negotiations", "funding-use conditions"], propositionIds: ["PROP-KCTOWN-RESOLUTION-ACCEPTS-FUNDING", "PROP-KCTOWN-RESOLUTION-AUTHORIZES-NEGOTIATION", "PROP-KCTOWN-RESOLUTION-LIMITS-USES"], confidence: "high", renderCitation: false },
-      { sourceId: "SRC-KCMO-ORDINANCE-240317-2024", relationship: "direct-support", supports: ["the $490,539 appropriation", "project withdrawal", "unused-fund clawback"], propositionIds: ["PROP-KCTOWN-ORDINANCE-190642-APPROPRIATED", "PROP-KCTOWN-PROJECT-WITHDREW", "PROP-KCTOWN-UNUSED-FUNDS-REAPPROPRIATED"], confidence: "high", renderCitation: false }
+      { sourceId: "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019", relationship: "direct-support", supports: ["Jamie's presenter role", "proposal context", "unanimous board recommendation"], propositionIds: ["PROP-KCTOWN-PRESENTER", "PROP-KCTOWN-PROPOSAL", "PROP-KCTOWN-REQUEST", "PROP-KCTOWN-BOARD-RECOMMENDATION"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-KCMO-COUNCIL-MEETING-2019-09-26", relationship: "direct-support", supports: ["Council vote on the appropriation ordinance", "Council adoption of the project resolution"], propositionIds: ["PROP-KCTOWN-COUNCIL-ORDINANCE-190642-PASSED", "PROP-KCTOWN-COUNCIL-RESOLUTION-190649-ADOPTED"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-KCMO-RESOLUTION-190649-2019", relationship: "direct-support", supports: ["acceptance of up to $490,539 for eligible costs", "authorization for funding-agreement negotiations", "funding-use conditions"], propositionIds: ["PROP-KCTOWN-RESOLUTION-ACCEPTS-FUNDING", "PROP-KCTOWN-RESOLUTION-AUTHORIZES-NEGOTIATION", "PROP-KCTOWN-RESOLUTION-LIMITS-USES"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-KCMO-ORDINANCE-240317-2024", relationship: "direct-support", supports: ["the $490,539 appropriation", "project withdrawal", "unused-fund clawback"], propositionIds: ["PROP-KCTOWN-ORDINANCE-190642-APPROPRIATED", "PROP-KCTOWN-PROJECT-WITHDREW", "PROP-KCTOWN-UNUSED-FUNDS-REAPPROPRIATED"], confidence: "high", renderCitation: true }
     ],
     boundaries: [
       "Use appropriated, allocated, or awarded with the exact amount and Council action; do not substitute received, paid, or disbursed.",
@@ -1062,16 +1068,27 @@ export const sourceExpansionResearchTasks = [
   }
 ] satisfies ResearchTask[];
 
-export const sourceExpansionDecisions = sourceExpansionClaims.map((claim) => ({
-  id: `DEC-${claim.id.replace(/^CLM-/, "")}-${claim.maturity === "superseded" ? "RETIRE" : "DEFER"}`,
-  claimId: claim.id,
-  surface: "future-portfolio-composition",
-  decision: claim.maturity === "superseded" ? "retire" as const : "defer" as const,
-  rationale: claim.maturity === "superseded"
-    ? "A more complete source-backed successor replaces this board-only claim."
-    : claim.maturity === "public-ready"
-      ? "The claim is public-ready and retained for future composition; this source-ingestion pass does not automatically change the live portfolio argument."
-      : "The first-party memory remains research-stage and cannot be projected until the professional handoff is corroborated.",
-  decidedAt: "2026-07-13",
-  reviewedBy: ["Codex editorial review"]
-})) satisfies ProjectionDecision[];
+export const sourceExpansionDecisions = sourceExpansionClaims.map((claim) => {
+  const activeProjection = claim.projections.find((projection) => projection.status === "active");
+  const decision = claim.maturity === "superseded"
+    ? "retire" as const
+    : activeProjection
+      ? "publish" as const
+      : "defer" as const;
+
+  return {
+    id: `DEC-${claim.id.replace(/^CLM-/, "")}-${decision.toUpperCase()}`,
+    claimId: claim.id,
+    surface: activeProjection?.surfaces[0] ?? "future-portfolio-composition",
+    decision,
+    rationale: claim.maturity === "superseded"
+      ? "A more complete source-backed successor replaces this board-only claim."
+      : activeProjection
+        ? "The official proposal, Council, resolution, and disposition records support a bounded public case-study projection."
+        : claim.maturity === "public-ready"
+          ? "The claim is public-ready and retained for future composition; this source-ingestion pass does not automatically change the live portfolio argument."
+          : "The first-party memory remains research-stage and cannot be projected until the professional handoff is corroborated.",
+    decidedAt: "2026-07-13",
+    reviewedBy: ["Codex editorial review"]
+  };
+}) satisfies ProjectionDecision[];

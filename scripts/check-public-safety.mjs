@@ -251,6 +251,22 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains retired CallNYC hackathon wording");
   }
 
+  if (/contribut(?:ed|ing) to (?:a period of )?2x revenue growth/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF publishes the held HJE revenue-contribution claim");
+  }
+
+  if (/secured adoption|adopted by (?:DIY|local calendar)/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF converts bounded WOWList activity into adoption");
+  }
+
+  if (!/Sunday Dinner with Julia Fredenberg/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF omits Sunday Dinner co-host credit");
+  }
+
+  if (!/\(816\)\s*728-8685/.test(resumeText)) {
+    addFailure(resumePath, "resume PDF is missing Jamie's approved phone number");
+  }
+
   if (
     !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
       resumeText
