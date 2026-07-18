@@ -78,6 +78,8 @@ if (!manifest.qaMatrix?.resultsPath) {
     let matrixFailureCount = 0;
 
     if (matrix.mode !== "production") failures.push(`Visual-evidence QA matrix is not production mode: ${matrix.mode}`);
+    if (matrix.runtime !== "next-start") failures.push(`Visual-evidence QA matrix is not a built Next.js runtime: ${matrix.runtime}`);
+    if (matrix.sourceSha256 !== manifest.sourceSha256) failures.push("Visual-evidence QA matrix is not bound to the manifest source digest");
     if (manifest.qaMatrix.routes !== governedPageRoutes.length) failures.push(`Visual-evidence route count ${manifest.qaMatrix.routes} does not match ${governedPageRoutes.length} governed routes`);
     if (matrix.results?.length !== manifest.qaMatrix.observations) failures.push(`Visual-evidence observation count ${matrix.results?.length ?? 0} does not match ${manifest.qaMatrix.observations}`);
 
@@ -102,6 +104,7 @@ if (!manifest.qaMatrix?.resultsPath) {
         skipLink: result.firstTabStopIsSkipLink,
         keyboardTraversal: result.keyboardTraversalPassed,
         reducedMotion: result.reducedMotionPassed,
+        productionRuntime: result.developmentIndicatorCount === 0,
         consoleErrors: result.consoleErrorCount === 0,
         pageErrors: result.pageErrorCount === 0
       })) if (!passed) failures.push(`Visual-evidence check ${check} failed: ${key}`);

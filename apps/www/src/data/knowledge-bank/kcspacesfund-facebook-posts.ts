@@ -83,6 +83,9 @@ export const kcSpacesFundFacebookSources: KnowledgeBank["sources"] = [
     preservationStatus: "private",
     capturedAt: reviewedAt,
     accessedAt: reviewedAt,
+    reviewStatus: "close-read",
+    contentReviewedAt: reviewedAt,
+    contentReviewedBy: "Codex protected-source and traversal-control review",
     publicCitation:
       "Authenticated archival-production pass over the KC Spaces Fund Facebook Page feed, July 16, 2026.",
     publicNote:
@@ -111,6 +114,9 @@ export const kcSpacesFundFacebookSources: KnowledgeBank["sources"] = [
     accessedAt: reviewedAt,
     metadataVerifiedAt: reviewedAt,
     metadataVerifiedBy: "Codex authenticated live Page review",
+    reviewStatus: "close-read",
+    contentReviewedAt: reviewedAt,
+    contentReviewedBy: "Codex authenticated live Page review",
     canonicalUrl: "https://www.facebook.com/KCSpacesFund/",
     preferredPublicUrl: "canonical",
     publicCitation: "KC Spaces Fund Facebook Page, authenticated review July 16, 2026.",
@@ -230,6 +236,9 @@ export const kcSpacesFundFacebookSources: KnowledgeBank["sources"] = [
     preservationStatus: "private",
     capturedAt: "2026-07-09",
     accessedAt: reviewedAt,
+    reviewStatus: "close-read",
+    contentReviewedAt: "2026-07-09",
+    contentReviewedBy: "Jamie Burkart authorization and Codex protected-archive review",
     publicCitation:
       "AI-assisted archival review of Jamie Burkart's KC Spaces Fund project records, July 2026.",
     publicNote:
@@ -255,6 +264,9 @@ export const kcSpacesFundFacebookSources: KnowledgeBank["sources"] = [
     preservationStatus: "private",
     capturedAt: reviewedAt,
     accessedAt: reviewedAt,
+    reviewStatus: "close-read",
+    contentReviewedAt: reviewedAt,
+    contentReviewedBy: "Jamie Burkart authorization and Codex source-positioning review",
     publicCitation:
       "Jamie Burkart first-person account of his bounded KC Spaces Fund naming and public-identity contribution, July 16, 2026.",
     publicNote:

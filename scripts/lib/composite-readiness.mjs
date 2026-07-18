@@ -70,6 +70,74 @@ export function validateDonorInventory(inventory) {
   return failures;
 }
 
+export function validateDonorBehaviors(behaviorRegistry, inventory, adapters = {}) {
+  const failures = [];
+  const behaviors = behaviorRegistry?.behaviors ?? [];
+  const donors = new Map((inventory?.donors ?? []).map((donor) => [donor.letter, donor]));
+  const letters = behaviors.map((behavior) => behavior.letter);
+
+  if (behaviorRegistry?.targetStartRevision !== inventory?.targetStartRevision) {
+    failures.push("Donor behavior registry must retain the inventory start revision.");
+  }
+  if (behaviors.length !== EXPECTED_DONOR_LETTERS.length) {
+    failures.push(`Donor behavior registry contains ${behaviors.length} entries; expected 14.`);
+  }
+  if (new Set(letters).size !== letters.length) {
+    failures.push("Donor behavior registry contains duplicate letters.");
+  }
+
+  for (const letter of EXPECTED_DONOR_LETTERS) {
+    const behavior = behaviors.find((item) => item.letter === letter);
+    const donor = donors.get(letter);
+    if (!behavior) {
+      failures.push(`Donor behavior ${letter} is missing.`);
+      continue;
+    }
+    if (!donor || behavior.revision !== donor.revision) {
+      failures.push(`Donor behavior ${letter} does not match the frozen inventory revision.`);
+    }
+    if (!behavior.currentBehavior?.trim()) {
+      failures.push(`Donor behavior ${letter} needs a behavior-level description.`);
+    }
+    if (!behavior.donorArtifact?.path?.trim() || !/^[0-9a-f]{40}$/.test(behavior.donorArtifact?.blobSha1 ?? "")) {
+      failures.push(`Donor behavior ${letter} needs a frozen path and blob SHA-1.`);
+    } else if (adapters.resolveDonorBlob) {
+      try {
+        const actual = adapters.resolveDonorBlob(behavior.revision, behavior.donorArtifact.path);
+        if (actual !== behavior.donorArtifact.blobSha1) {
+          failures.push(`Donor behavior ${letter} frozen artifact hash does not match.`);
+        }
+      } catch {
+        failures.push(`Donor behavior ${letter} frozen artifact cannot be resolved.`);
+      }
+    }
+
+    if (!Array.isArray(behavior.currentEvidence) || behavior.currentEvidence.length < 2) {
+      failures.push(`Donor behavior ${letter} needs at least two current evidence assertions.`);
+      continue;
+    }
+    for (const evidence of behavior.currentEvidence) {
+      if (!evidence.path?.trim() || !Array.isArray(evidence.includes) || evidence.includes.length < 2) {
+        failures.push(`Donor behavior ${letter} has an incomplete current evidence assertion.`);
+        continue;
+      }
+      if (adapters.readCurrentEvidence) {
+        try {
+          const current = adapters.readCurrentEvidence(evidence.path);
+          for (const phrase of evidence.includes) {
+            if (!current.includes(phrase)) {
+              failures.push(`Donor behavior ${letter} current evidence ${evidence.path} is missing ${phrase}.`);
+            }
+          }
+        } catch {
+          failures.push(`Donor behavior ${letter} current evidence cannot be read: ${evidence.path}.`);
+        }
+      }
+    }
+  }
+  return failures;
+}
+
 export function validateHumanStatus(status) {
   const failures = [];
   const gates = status?.gates ?? [];
@@ -142,7 +210,9 @@ export function validatePackageContract(packageJson) {
   const required = [
     "eval:composite-readiness",
     "check:composite-readiness",
-    "test:composite-readiness"
+    "test:composite-readiness",
+    "check:docker-runtime",
+    "report:candidate-verification"
   ];
   for (const name of required) {
     if (!scripts[name]) failures.push(`package.json is missing ${name}.`);
@@ -165,6 +235,9 @@ export function validateWorkflow(workflow) {
     "npm run check",
     "npm run preflight:staging",
     "npm run preflight:production",
+    "npm run check:docker-runtime",
+    "npm run report:candidate-verification",
+    "fetch-depth: 0",
     "poppler-utils"
   ]) {
     if (!workflow.includes(phrase)) failures.push(`CI workflow is missing ${phrase}.`);
@@ -188,7 +261,7 @@ export function validateRubricLock(lock, rubricText) {
   return failures;
 }
 
-export function validatePlanningMaps(maps) {
+export function validatePlanningMaps(maps, projectIds = new Set()) {
   const failures = [];
   const requirements = {
     recentCapability: ["Current signal", "Evidence posture", "Boundary", "Next proof"],
@@ -200,6 +273,18 @@ export function validatePlanningMaps(maps) {
     const text = maps?.[name] ?? "";
     for (const phrase of phrases) {
       if (!text.includes(phrase)) failures.push(`${name} map is missing ${phrase}.`);
+    }
+  }
+  for (const name of ["recentCapability", "outcomeTransfer", "artisticContinuity"]) {
+    const rows = (maps?.[name] ?? "")
+      .split("\n")
+      .filter((line) => /^\| `PRJ-[A-Z0-9-]+` \|/.test(line));
+    if (rows.length === 0) failures.push(`${name} map has no lifecycle-linked rows.`);
+    for (const row of rows) {
+      const projectId = row.match(/^\| `(PRJ-[A-Z0-9-]+)` \|/)?.[1];
+      if (projectIds.size > 0 && projectId && !projectIds.has(projectId)) {
+        failures.push(`${name} map references unknown lifecycle project ${projectId}.`);
+      }
     }
   }
   return failures;

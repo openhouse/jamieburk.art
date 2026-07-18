@@ -1,10 +1,12 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import {
   sha256,
+  validateDonorBehaviors,
   validateDonorInventory,
   validateHumanStatus,
   validateIntegrationLedger,
@@ -13,6 +15,7 @@ import {
   validateRubricLock,
   validateWorkflow
 } from "../lib/composite-readiness.mjs";
+import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const read = (relativePath) => readFileSync(path.join(repoRoot, relativePath), "utf8");
@@ -20,6 +23,7 @@ const readJson = (relativePath) => JSON.parse(read(relativePath));
 const clone = (value) => structuredClone(value);
 
 const inventory = readJson("evals/composite-readiness/donor-inventory.json");
+const donorBehaviors = readJson("evals/composite-readiness/donor-behaviors.json");
 const humanStatus = readJson("evals/composite-readiness/human-status.json");
 const rubricText = read("evals/composite-readiness/rubric.json");
 const lock = readJson("evals/composite-readiness/rubric-lock.json");
@@ -32,15 +36,37 @@ const maps = {
   artisticContinuity: read("docs/evals/artistic-continuity-map.md"),
   releaseStatus: read("docs/evals/release-status.md")
 };
+const behaviorAdapters = {
+  readCurrentEvidence: read,
+  resolveDonorBlob: (revision, donorPath) => execFileSync(
+    "git",
+    ["rev-parse", `${revision}:${donorPath}`],
+    { cwd: repoRoot, encoding: "utf8" }
+  ).trim()
+};
+const projectIds = new Set(knowledgeLifecycle.projects.map(({ id }) => id));
 
 test("the committed composite contract is internally valid", () => {
   assert.deepEqual(validateDonorInventory(inventory), []);
+  assert.deepEqual(validateDonorBehaviors(donorBehaviors, inventory, behaviorAdapters), []);
   assert.deepEqual(validateHumanStatus(humanStatus), []);
   assert.deepEqual(validateIntegrationLedger(ledger, inventory), []);
   assert.deepEqual(validatePackageContract(packageJson), []);
   assert.deepEqual(validateWorkflow(workflow), []);
   assert.deepEqual(validateRubricLock(lock, rubricText), []);
-  assert.deepEqual(validatePlanningMaps(maps), []);
+  assert.deepEqual(validatePlanningMaps(maps, projectIds), []);
+});
+
+test("a frozen donor artifact cannot be replaced by an unverified filename", () => {
+  const value = clone(donorBehaviors);
+  value.behaviors[0].donorArtifact.blobSha1 = "0".repeat(40);
+  assert.match(validateDonorBehaviors(value, inventory, behaviorAdapters).join("\n"), /frozen artifact hash/);
+});
+
+test("a current behavior needs content assertions, not path similarity", () => {
+  const value = clone(donorBehaviors);
+  value.behaviors[1].currentEvidence[0].includes[0] = "not-present-in-the-candidate";
+  assert.match(validateDonorBehaviors(value, inventory, behaviorAdapters).join("\n"), /current evidence/);
 });
 
 test("a missing donor cannot disappear from the composite", () => {
@@ -107,5 +133,10 @@ test("the active rubric cannot drift from its lock", () => {
 
 test("planning maps must preserve their decision boundaries", () => {
   const value = { ...maps, outcomeTransfer: maps.outcomeTransfer.replaceAll("Causal boundary", "Impact") };
-  assert.match(validatePlanningMaps(value).join("\n"), /outcomeTransfer map is missing Causal boundary/);
+  assert.match(validatePlanningMaps(value, projectIds).join("\n"), /outcomeTransfer map is missing Causal boundary/);
+});
+
+test("planning maps cannot point to an unknown lifecycle project", () => {
+  const value = { ...maps, recentCapability: maps.recentCapability.replace("PRJ-HARRY-J-EPSTEIN", "PRJ-NOT-REAL") };
+  assert.match(validatePlanningMaps(value, projectIds).join("\n"), /unknown lifecycle project PRJ-NOT-REAL/);
 });

@@ -42,6 +42,12 @@ Production still requires Jamie's explicit approval. A completed protocol is
 not collaborator corroboration, rights clearance, hiring-reader evidence,
 market response, or production observation.
 
+Pull-request CI also builds and observes the exact candidate as a staging-mode
+Docker container, then emits Docker and candidate-verification reports into the
+runner's temporary directory. These records are deliberately not committed or
+uploaded because a commit cannot contain a non-self-referential report of its
+own final SHA and the repository must not publish runtime artifacts.
+
 ## Anti-gaming rules
 
 - Donor branches are implementation provenance, not professional evidence.
@@ -50,4 +56,3 @@ market response, or production observation.
 - Evidence maturity never authorizes publication by itself.
 - Human and external gates remain open until qualifying evidence exists.
 - No authoring evaluator may serve as its own confirming evaluator.
-

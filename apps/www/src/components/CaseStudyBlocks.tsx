@@ -48,13 +48,13 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         <h2 className="text-xl font-semibold" id="at-a-glance">
           At a glance
         </h2>
-        <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+        <dl className="mt-5 grid gap-4">
           {rows.map(([label, value]) => (
             <div className="min-w-0" key={label}>
               <dt className="text-xs font-semibold uppercase text-jb-paper/90">
                 {label}
               </dt>
-              <dd className="mt-1 break-words leading-6">{value}</dd>
+              <dd className="mt-1 leading-6">{value}</dd>
             </div>
           ))}
         </dl>

@@ -12,13 +12,15 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Check out candidate
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0
 
       - name: Use Node 26
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 26
           cache: npm
@@ -37,3 +39,9 @@ jobs:
 
       - name: Verify production configuration
         run: npm run preflight:production
+
+      - name: Verify the exact-candidate Docker runtime
+        run: npm run check:docker-runtime -- --output "$RUNNER_TEMP/docker-runtime.json"
+
+      - name: Record exact-candidate verification
+        run: npm run report:candidate-verification -- --output "$RUNNER_TEMP/candidate-verification.json"

@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-16",
+  "targetStartRevision": "5b0cbcd1a7f913d2281c671e46903ad997a743f5",
+  "boundary": "Frozen donor artifacts prove what was reviewed. Current assertions prove that the distinct behavior, not a similarly named file, exists in the candidate.",
+  "behaviors": [
+    {
+      "letter": "A",
+      "revision": "3757c4f529cc05d169f30ec059b13bea24cc75d1",
+      "donorArtifact": { "path": "evals/portfolio-effectiveness/evals.json", "blobSha1": "c5142dfb140ae55b2360e7f37edb503a75a02ea3" },
+      "currentBehavior": "Archive, portfolio, and release concerns remain joined without replacing focused suites.",
+      "currentEvidence": [
+        { "path": "evals/composite-readiness/rubric.json", "includes": ["Frozen donor coverage", "No-silent-loss lifecycle"] },
+        { "path": "docs/qa/feature-knowledge-k/composite-integration-ledger.md", "includes": ["Integrated archive-to-portfolio breadth", "rather than being collapsed into a monolith"] }
+      ]
+    },
+    {
+      "letter": "B",
+      "revision": "67fc30427e544199540f81d6b50cf94ef8101f47",
+      "donorArtifact": { "path": "evals/practice-lens-judge-artifact.schema.json", "blobSha1": "bef28cb044f9e0cda2b4df83efb5745a15455bbd" },
+      "currentBehavior": "The run history preserves an untouched baseline and distinguishes publishing authorization from evaluation.",
+      "currentEvidence": [
+        { "path": "evals/composite-readiness/runs/baseline-5b0cbcd1.json", "includes": ["untouched-baseline", "semantic stop conditions remain open"] },
+        { "path": "docs/evals/release-status.md", "includes": ["exact candidate", "Production authority"] }
+      ]
+    },
+    {
+      "letter": "C",
+      "revision": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
+      "donorArtifact": { "path": "evals/portfolio-readiness/suite.json", "blobSha1": "951878d2c43b1703f27d9d7848f1bf9c75aa1eb8" },
+      "currentBehavior": "Independent judges use one exact-revision schema and a stable-pair stop condition.",
+      "currentEvidence": [
+        { "path": "evals/composite-readiness/scorecard.schema.json", "includes": ["revision", "releaseRecommendation"] },
+        { "path": "evals/composite-readiness/judge-prompt.md", "includes": ["independent of the authoring context", "exact candidate"] }
+      ]
+    },
+    {
+      "letter": "D",
+      "revision": "5a7095ffc8e064c5fff8a5acfb114e04f7114a15",
+      "donorArtifact": { "path": "evals/launch-readiness/v9/evals.json", "blobSha1": "2a1c711a43c4abbb333dbb601fb5809413f03ed0" },
+      "currentBehavior": "Rendered route, accessibility, and PDF evidence is hash-bound to application sources.",
+      "currentEvidence": [
+        { "path": "scripts/check-visual-evidence.mjs", "includes": ["sourceSha256", "keyboardTraversal"] },
+        { "path": "docs/qa/evals-K/manifest.json", "includes": ["route-matrix.json", "artifactSha256"] }
+      ]
+    },
+    {
+      "letter": "E",
+      "revision": "d7d8e0d050b6a8c481fa5aaf2429d6427aa886ea",
+      "donorArtifact": { "path": "evals/launch-readiness/suite.json", "blobSha1": "a547f369e37590ca91010cecfeffcb55274b6252" },
+      "currentBehavior": "Deterministic, rendered, semantic, and human evidence remain distinct.",
+      "currentEvidence": [
+        { "path": "evals/composite-readiness/README.md", "includes": ["deterministic gate", "two distinct evaluators"] },
+        { "path": "evals/composite-readiness/human-status.json", "includes": ["may not convert", "unfamiliar-reader-validation"] }
+      ]
+    },
+    {
+      "letter": "F",
+      "revision": "ba74618558e55a836d9a73b5293f6fdb45e684ff",
+      "donorArtifact": { "path": "docs/production-readiness.md", "blobSha1": "a98fe559ccb609b007499b4ffcd118cbf434e059" },
+      "currentBehavior": "Press accounting, staged release, production preflight, and rollback remain explicit hard gates.",
+      "currentEvidence": [
+        { "path": "package.json", "includes": ["check:campaign-press", "preflight:production"] },
+        { "path": "docs/deployment.md", "includes": ["staging-first", "X-Robots-Tag"] }
+      ]
+    },
+    {
+      "letter": "G",
+      "revision": "d97055d72d794b9ecfd338e10277e4feb14ea918",
+      "donorArtifact": { "path": "docs/qa/evals-G/run-summary.json", "blobSha1": "960fbf6b8795895b227f59e7b15c3409c3c5c34b" },
+      "currentBehavior": "The active rubric is frozen and recursive work stops only after stable unchanged runs.",
+      "currentEvidence": [
+        { "path": "evals/composite-readiness/rubric-lock.json", "includes": ["sha256", "optimizing agent may not edit"] },
+        { "path": "evals/composite-readiness/README.md", "includes": ["two unchanged-candidate runs", "Anti-gaming rules"] }
+      ]
+    },
+    {
+      "letter": "H",
+      "revision": "934c1bdff4a478da56fde3a125d905e7e326b6f2",
+      "donorArtifact": { "path": "scripts/evals-participation-continuity.mjs", "blobSha1": "a2c01abc0a6422032a508f075d93416885e1acb8" },
+      "currentBehavior": "Responsive evidence, Docker runtime, and human-reader holdouts are separately verifiable.",
+      "currentEvidence": [
+        { "path": "docs/qa/evals-K/manifest.json", "includes": ["1440x1000", "320x740"] },
+        { "path": "evals/composite-readiness/human-status.json", "includes": ["unfamiliar-reader-validation", "production-cutover"] }
+      ]
+    },
+    {
+      "letter": "I",
+      "revision": "793f7262cd3df8d7401d9b3e0f8209240d5fa640",
+      "donorArtifact": { "path": "scripts/tests/knowledge-development.test.mjs", "blobSha1": "9fb4338dd2c06b4ff52b10e5e9bc9a2f1b366ca2" },
+      "currentBehavior": "Composite mutations reject missing evidence, stale locks, false closure, and silent donor loss.",
+      "currentEvidence": [
+        { "path": "scripts/tests/composite-readiness.test.mjs", "includes": ["a missing donor cannot disappear", "a human gate cannot be falsely closed"] },
+        { "path": "scripts/tests/knowledge-lifecycle.test.mjs", "includes": ["Git-anchored integrity rejects", "canonical corrections resolve"] }
+      ]
+    },
+    {
+      "letter": "J",
+      "revision": "7e1b758b416bbe7c221f601e331696d95515c593",
+      "donorArtifact": { "path": "scripts/tests/blind-spot-evals.test.mjs", "blobSha1": "f295f6474a3327d2933b394985beebb8c8ed91f4" },
+      "currentBehavior": "Framework, application, and production readiness remain separate decisions.",
+      "currentEvidence": [
+        { "path": "docs/evals/release-status.md", "includes": ["Agent-verifiable", "Production authority"] },
+        { "path": "evals/composite-readiness/human-status.json", "includes": ["candidateRevision", "jamie-exact-candidate-approval"] }
+      ]
+    },
+    {
+      "letter": "K",
+      "revision": "5b0cbcd1a7f913d2281c671e46903ad997a743f5",
+      "donorArtifact": { "path": "scripts/tests/knowledge-lifecycle.test.mjs", "blobSha1": "b342e2e567de0d8603dea5efcd9b5ac7ce0ee1a8" },
+      "currentBehavior": "The append-safe lifecycle and exact-surface publication query remain canonical.",
+      "currentEvidence": [
+        { "path": "docs/knowledge-bank/knowledge-lifecycle.md", "includes": ["receipts.jsonl", "publication-safe"] },
+        { "path": "scripts/tests/knowledge-lifecycle.test.mjs", "includes": ["append-only", "proof surface manifests"] }
+      ]
+    },
+    {
+      "letter": "L",
+      "revision": "68846b1f0a8672ff80598a7fef50ce5343c3e004",
+      "donorArtifact": { "path": "scripts/evals-recursive-protocol.mjs", "blobSha1": "c274cbc99d26f1abecfaed4f37d890b02e2e5183" },
+      "currentBehavior": "Survivorship, corroboration, outcomes, visual rights, and release gaps remain connected but independently open.",
+      "currentEvidence": [
+        { "path": "docs/evals/outcome-transfer-matrix.md", "includes": ["Observed use", "Causal boundary"] },
+        { "path": "evals/blind-spots/rubric.json", "includes": ["Collaborator corroboration", "Visual proof and rights"] }
+      ]
+    },
+    {
+      "letter": "M",
+      "revision": "289dd4499eb3e7b78bc16b380a02ac180dca35bb",
+      "donorArtifact": { "path": "docs/qa/portfolio-readiness-M.json", "blobSha1": "606a1730f174776f1167d6a92154caf9c7066200" },
+      "currentBehavior": "CI uses explicit runtime tooling and runs root, environment, artifact, and runtime checks.",
+      "currentEvidence": [
+        { "path": ".github/workflows/portfolio-readiness.yml", "includes": ["node-version: 26", "poppler-utils"] },
+        { "path": "package.json", "includes": ["check:visual-evidence", "preflight:staging"] }
+      ]
+    },
+    {
+      "letter": "N",
+      "revision": "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe",
+      "donorArtifact": { "path": "scripts/tests/blind-spot-evidence.test.mjs", "blobSha1": "cb7b3482b111531c2d88f45abd1ad2ff09bf7620" },
+      "currentBehavior": "Transfer maps connect stable lifecycle project IDs to current capability, outcomes, and artistic continuity.",
+      "currentEvidence": [
+        { "path": "docs/evals/recent-capability-map.md", "includes": ["Lifecycle project ID", "Current signal"] },
+        { "path": "docs/evals/artistic-continuity-map.md", "includes": ["People and place", "Learning and continuity"] }
+      ]
+    }
+  ]
+}

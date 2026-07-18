@@ -90,3 +90,33 @@ The following remain human or external work and are not failures of the
 framework: collaborator corroboration, unfamiliar-reader sessions, visual
 rights and consent, bounded market response, production cutover observation,
 and Jamie's approval of the exact candidate. No agent run may close them.
+
+## Iteration 4 - independent-judge repair
+
+An independent holdout judge accepted the core portfolio, knowledge lifecycle,
+Morse, Sack, and Chad behavior, but identified four remaining composite gaps:
+
+- donor integration was documented more strongly than it was behaviorally
+  verified;
+- only 7 of 21 priority sources had a close-read status;
+- visual evidence was not explicitly bound to a built Next.js runtime; and
+- the workflow lacked an exact-candidate container and verification report.
+
+The repair binds every A-N donor to a frozen Git blob and at least two current
+content assertions, links planning rows to governed lifecycle project IDs,
+records all 21 priority sources as close-read with review metadata, and captures
+the 42-observation browser matrix from `next start`. The visual validator now
+requires the source digest, production runtime, and absence of development
+indicators to agree.
+
+CI actions are pinned to full commit SHAs with full history available. The
+candidate workflow now builds and probes the exact Docker image, records its Git
+revision and image ID outside the repository, and writes a second exact-candidate
+verification report outside the repository. Mutation tests fail when a donor
+blob, behavior assertion, lifecycle ID, human boundary, rubric lock, or workflow
+requirement is weakened.
+
+This iteration also replaces the narrow two-column At a Glance layout with a
+single readable column, removing the mid-word breaks observed by the holdout
+judge. Fresh independent scorecards are required after the repair is committed;
+earlier scorecards do not transfer to the new revision.
