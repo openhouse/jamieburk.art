@@ -1,0 +1,1554 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-18T16:49:40-04:00",
+  "sourceCommit": "e668bf3ade903e9c67dad7cb00273f67d7daf12c",
+  "sourceFingerprint": "81fde5a3b0e9e1aabd4ab40dd50751f94e36bb6de75da998026ef23a756cf64f",
+  "rootId": "index.knowledge-wiki",
+  "nodes": [
+    {
+      "id": "asset.photo.digital-district.001",
+      "path": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "title": "Digital District participant photograph metadata",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe metadata for a protected participant photograph showing a Digital District breakout placard.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "capability.technical-operations",
+      "path": "docs/knowledge-bank/capabilities/technical-operations.md",
+      "title": "Technical Operations",
+      "kind": "capability",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Turning ambiguous, cross-functional work into traceable decisions, usable operating documentation, implementation support, and durable handoffs.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "claim.callnyc.independent-follow-on",
+      "path": "docs/knowledge-bank/claims/callnyc-independent-follow-on.md",
+      "title": "CallNYC was an independent CouncilStat follow-on",
+      "kind": "claim",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "After the fuller CouncilStat dataset was released, Jamie independently built CallNYC as a public-facing interpretation of constituent-services records.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "correction.callnyc-years.2026",
+      "path": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
+      "title": "CallNYC chronology correction",
+      "kind": "correction",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Corrects the project chronology from 2014-2015 to 2016.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "evaluation.knowledge-wiki.retrieval-tasks",
+      "path": "docs/knowledge-bank/evaluations/retrieval-tasks.md",
+      "title": "Knowledge Wiki retrieval tasks",
+      "kind": "evaluation",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Human task protocol for testing whether the Wiki is actually usable.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-08-18"
+    },
+    {
+      "id": "event.nycc.constituent-services-hackathon.2016",
+      "path": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
+      "title": "New York City Council constituent-services hackathon",
+      "kind": "event",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "January 30, 2016 Civic Hall gathering described by the Council as its first CouncilStat hackathon and announced as running from 1 to 3 p.m.\n",
+      "aliases": [
+        "first CouncilStat hackathon"
+      ],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "index.knowledge-wiki",
+      "path": "docs/knowledge-bank/README.md",
+      "title": "Knowledge Wiki",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Start-here page for the public-safe, Markdown-first editorial and research system that compiles into a governed graph and selective projections.\n",
+      "aliases": [
+        "Knowledge Bank"
+      ],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "index.knowledge-wiki.pilot",
+      "path": "docs/knowledge-bank/indexes/pilot.md",
+      "title": "Knowledge Wiki pilot map",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Task-oriented map of the bounded CallNYC and Technical Operations pilot.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "method.source-backed-team-memory",
+      "path": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "title": "Source-Backed Team Memory",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A governed workflow for turning scattered records into traceable decisions, bounded claims, open questions, and reusable handoffs.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "path": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "title": "Technical Operations opportunity lens",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe role-needs and proof map for Technical Operations opportunities.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-08-18"
+    },
+    {
+      "id": "portfolio.work.callnyc",
+      "path": "docs/knowledge-bank/projections/work-callnyc.md",
+      "title": "CallNYC portfolio projection",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Governed projection record for the public CallNYC case study.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "portfolio.work.technical-operations",
+      "path": "docs/knowledge-bank/projections/work-technical-operations.md",
+      "title": "Technical Operations portfolio projection",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Governed role-fit projection for Technical Operations work.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "project.callnyc",
+      "path": "docs/knowledge-bank/projects/callnyc.md",
+      "title": "CallNYC",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Independent civic-technology prototype translating CouncilStat constituent-services records into resident-facing issue pathways.\n",
+      "aliases": [
+        "Call NYC",
+        "CallNYC.org"
+      ],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.civichall.hackathon-announcement.2016",
+      "path": "docs/knowledge-bank/sources/civichall-hackathon-announcement-2016.md",
+      "title": "Civic Hall hackathon announcement",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Archived embedded post announcing the January 30 event from 1 to 3 p.m.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.nycc.councilstat-hackathon-post.2016",
+      "path": "docs/knowledge-bank/sources/nycc-councilstat-hackathon-post-2016.md",
+      "title": "New York City Council event-day CouncilStat post",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Council-authored event-day post using the phrase first CouncilStat hackathon.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.politico.callnyc.2016-03-14",
+      "path": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
+      "title": "Website provides new information about council members' focus",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Politico New York coverage connecting Jamie, CouncilStat, and CallNYC.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18"
+    }
+  ],
+  "edges": [
+    {
+      "from": "asset.photo.digital-district.001",
+      "type": "part_of",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "projected_to",
+      "to": "portfolio.work.technical-operations",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "evidence:direct-support",
+      "to": "source.politico.callnyc.2016-03-14",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "Jamie's independent development and iteration",
+        "the event, data-release, and prototype sequence"
+      ]
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "part_of",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "projected_to",
+      "to": "portfolio.work.callnyc",
+      "source": "frontmatter",
+      "href": "../projections/work-callnyc.md",
+      "context": null
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "uses_source",
+      "to": "source.politico.callnyc.2016-03-14",
+      "source": "frontmatter",
+      "href": "../sources/politico-callnyc-2016-03-14.md",
+      "context": null
+    },
+    {
+      "from": "correction.callnyc-years.2026",
+      "type": "projected_to",
+      "to": "portfolio.work.callnyc",
+      "source": "frontmatter",
+      "href": "../projections/work-callnyc.md",
+      "context": null
+    },
+    {
+      "from": "correction.callnyc-years.2026",
+      "type": "supersedes",
+      "to": "claim.callnyc.independent-follow-on",
+      "source": "frontmatter",
+      "href": "../claims/callnyc-independent-follow-on.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.knowledge-wiki.retrieval-tasks",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.pilot",
+      "source": "frontmatter",
+      "href": "../indexes/pilot.md",
+      "context": null
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "resulted_in",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": "CallNYC was an independent follow-on after the fuller data release, not an official event submission."
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "uses_source",
+      "to": "source.civichall.hackathon-announcement.2016",
+      "source": "frontmatter",
+      "href": "../sources/civichall-hackathon-announcement-2016.md",
+      "context": null
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "uses_source",
+      "to": "source.nycc.councilstat-hackathon-post.2016",
+      "source": "frontmatter",
+      "href": "../sources/nycc-councilstat-hackathon-post-2016.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.pilot",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.pilot",
+      "type": "related_to",
+      "to": "claim.callnyc.independent-follow-on",
+      "source": "frontmatter",
+      "href": "../claims/callnyc-independent-follow-on.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.pilot",
+      "type": "related_to",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "source": "frontmatter",
+      "href": "../events/nycc-constituent-services-hackathon-2016.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.pilot",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.pilot",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.pilot",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.pilot",
+      "source": "frontmatter",
+      "href": "indexes/pilot.md",
+      "context": "Bounded first implementation of stable identity and typed relations."
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "projected_to",
+      "to": "portfolio.work.technical-operations",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "projected_to",
+      "to": "portfolio.work.technical-operations",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.work.callnyc",
+      "type": "related_to",
+      "to": "claim.callnyc.independent-follow-on",
+      "source": "frontmatter",
+      "href": "../claims/callnyc-independent-follow-on.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.work.callnyc",
+      "type": "related_to",
+      "to": "correction.callnyc-years.2026",
+      "source": "frontmatter",
+      "href": "../corrections/callnyc-years-2026.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.work.callnyc",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.work.technical-operations",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.work.technical-operations",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.work.technical-operations",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "project.callnyc",
+      "type": "has_asset",
+      "to": "asset.photo.digital-district.001",
+      "source": "frontmatter",
+      "href": "../assets/digital-district-photo.md",
+      "context": null
+    },
+    {
+      "from": "project.callnyc",
+      "type": "informed_by",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "source": "frontmatter",
+      "href": "../events/nycc-constituent-services-hackathon-2016.md",
+      "context": null
+    },
+    {
+      "from": "project.callnyc",
+      "type": "projected_to",
+      "to": "portfolio.work.callnyc",
+      "source": "frontmatter",
+      "href": "../projections/work-callnyc.md",
+      "context": null
+    },
+    {
+      "from": "project.callnyc",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": "Public-data interpretation, implementation, correction, and archival continuity."
+    },
+    {
+      "from": "project.callnyc",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "to": "source.politico.callnyc.2016-03-14",
+      "source": "frontmatter",
+      "href": "../sources/politico-callnyc-2016-03-14.md",
+      "context": null
+    },
+    {
+      "from": "source.civichall.hackathon-announcement.2016",
+      "type": "documents",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "source": "frontmatter",
+      "href": "../events/nycc-constituent-services-hackathon-2016.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.councilstat-hackathon-post.2016",
+      "type": "documents",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "source": "frontmatter",
+      "href": "../events/nycc-constituent-services-hackathon-2016.md",
+      "context": null
+    },
+    {
+      "from": "source.politico.callnyc.2016-03-14",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "source.politico.callnyc.2016-03-14",
+      "type": "supports",
+      "to": "claim.callnyc.independent-follow-on",
+      "source": "frontmatter",
+      "href": "../claims/callnyc-independent-follow-on.md",
+      "context": null
+    }
+  ],
+  "documentLinks": [
+    {
+      "fromPath": "docs/knowledge-bank/capabilities/technical-operations.md",
+      "from": "capability.technical-operations",
+      "toPath": "docs/knowledge-bank/projects/callnyc.md",
+      "to": "project.callnyc",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/capabilities/technical-operations.md",
+      "from": "capability.technical-operations",
+      "toPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "to": "method.source-backed-team-memory",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/claims/callnyc-independent-follow-on.md",
+      "from": "claim.callnyc.independent-follow-on",
+      "toPath": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
+      "to": "source.politico.callnyc.2016-03-14",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/claims/callnyc-independent-follow-on.md",
+      "from": "claim.callnyc.independent-follow-on",
+      "toPath": "docs/knowledge-bank/projections/work-callnyc.md",
+      "to": "portfolio.work.callnyc",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
+      "from": "correction.callnyc-years.2026",
+      "toPath": "docs/knowledge-bank/projections/work-callnyc.md",
+      "to": "portfolio.work.callnyc",
+      "fragment": null,
+      "line": 6,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/retrieval-tasks.md",
+      "from": "evaluation.knowledge-wiki.retrieval-tasks",
+      "toPath": "docs/knowledge-bank/README.md",
+      "to": "index.knowledge-wiki",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "toPath": "docs/knowledge-bank/projects/callnyc.md",
+      "to": "project.callnyc",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "toPath": "docs/knowledge-bank/sources/civichall-hackathon-announcement-2016.md",
+      "to": "source.civichall.hackathon-announcement.2016",
+      "fragment": null,
+      "line": 7,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "toPath": "docs/knowledge-bank/sources/nycc-councilstat-hackathon-post-2016.md",
+      "to": "source.nycc.councilstat-hackathon-post.2016",
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/claims/callnyc-independent-follow-on.md",
+      "to": "claim.callnyc.independent-follow-on",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
+      "to": "correction.callnyc-years.2026",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/sources/civichall-hackathon-announcement-2016.md",
+      "to": "source.civichall.hackathon-announcement.2016",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/sources/nycc-councilstat-hackathon-post-2016.md",
+      "to": "source.nycc.councilstat-hackathon-post.2016",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
+      "to": "source.politico.callnyc.2016-03-14",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "to": "asset.photo.digital-district.001",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/projections/work-callnyc.md",
+      "to": "portfolio.work.callnyc",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
+      "to": "capability.technical-operations",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "to": "method.source-backed-team-memory",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/projections/work-technical-operations.md",
+      "to": "portfolio.work.technical-operations",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/evaluations/retrieval-tasks.md",
+      "to": "evaluation.knowledge-wiki.retrieval-tasks",
+      "fragment": null,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/schema.md",
+      "to": null,
+      "fragment": null,
+      "line": 35,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/workflow.md",
+      "to": null,
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/_generated/index-by-kind.md",
+      "to": null,
+      "fragment": null,
+      "line": 37,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "reports/wiki-health.md",
+      "to": null,
+      "fragment": null,
+      "line": 38,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/projects/callnyc.md",
+      "to": "project.callnyc",
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
+      "to": null,
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
+      "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
+      "to": "capability.technical-operations",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/launch-blockers.md",
+      "to": null,
+      "fragment": null,
+      "line": 58,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/data/blind-spot-controls-2026-07.json",
+      "to": null,
+      "fragment": null,
+      "line": 5,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
+      "to": null,
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/callnyc.md",
+      "from": "project.callnyc",
+      "toPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "fragment": "source-basis",
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/callnyc.md",
+      "from": "project.callnyc",
+      "toPath": "docs/knowledge-bank/claims/callnyc-independent-follow-on.md",
+      "to": "claim.callnyc.independent-follow-on",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/callnyc.md",
+      "from": "project.callnyc",
+      "toPath": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
+      "to": "correction.callnyc-years.2026",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/callnyc.md",
+      "from": "project.callnyc",
+      "toPath": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "to": "asset.photo.digital-district.001",
+      "fragment": "what-it-does-not-establish",
+      "line": 96,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
+      "from": null,
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 147,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "to": null,
+      "fragment": null,
+      "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
+      "to": null,
+      "fragment": null,
+      "line": 91,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
+      "to": null,
+      "fragment": null,
+      "line": 153,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
+      "to": null,
+      "fragment": null,
+      "line": 71,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-readings.md",
+      "to": null,
+      "fragment": null,
+      "line": 72,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
+      "from": null,
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 5,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "from": null,
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 137,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/data/nycac-finkelpearl-council-transcript-review-2026-07.json",
+      "to": null,
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nycac-social-population.md",
+      "from": null,
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/personal-wowlist-facebook-events.md",
+      "from": null,
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/personal-wowlist-facebook-events-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 5,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 130,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 215,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 247,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "to": null,
+      "fragment": null,
+      "line": 274,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 59,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 74,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
+      "to": null,
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/callnyc.md",
+      "to": "project.callnyc",
+      "fragment": null,
+      "line": 100,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/intake-and-maturation.md",
+      "to": null,
+      "fragment": null,
+      "line": 103,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
+      "to": null,
+      "fragment": null,
+      "line": 107,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
+      "to": null,
+      "fragment": null,
+      "line": 114,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
+      "to": null,
+      "fragment": null,
+      "line": 119,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
+      "to": null,
+      "fragment": null,
+      "line": 125,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "to": null,
+      "fragment": null,
+      "line": 130,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 136,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 138,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 144,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
+      "to": null,
+      "fragment": null,
+      "line": 146,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "to": null,
+      "fragment": null,
+      "line": 154,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "to": null,
+      "fragment": null,
+      "line": 160,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
+      "to": null,
+      "fragment": null,
+      "line": 162,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
+      "to": null,
+      "fragment": null,
+      "line": 168,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
+      "to": null,
+      "fragment": null,
+      "line": 174,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
+      "to": null,
+      "fragment": null,
+      "line": 180,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
+      "to": null,
+      "fragment": null,
+      "line": 186,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
+      "to": null,
+      "fragment": null,
+      "line": 192,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 198,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 200,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 206,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
+      "to": null,
+      "fragment": null,
+      "line": 211,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 213,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 220,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 222,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 228,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
+      "to": null,
+      "fragment": null,
+      "line": 230,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 235,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
+      "to": null,
+      "fragment": null,
+      "line": 237,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 243,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 245,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 252,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
+      "to": null,
+      "fragment": null,
+      "line": 254,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 260,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 263,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 268,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 269,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/pilot.md",
+      "to": "index.knowledge-wiki.pilot",
+      "fragment": null,
+      "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/architecture/ADR-knowledge-wiki-canonicality.md",
+      "to": null,
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/schema.md",
+      "to": null,
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/_generated/index-by-kind.md",
+      "to": null,
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "reports/wiki-health.md",
+      "to": null,
+      "fragment": null,
+      "line": 34,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
+      "to": null,
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/workflow.md",
+      "to": null,
+      "fragment": null,
+      "line": 42,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/citational-care.md",
+      "to": null,
+      "fragment": null,
+      "line": 99,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
+      "to": null,
+      "fragment": null,
+      "line": 112,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources.md",
+      "from": null,
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 118,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
+      "to": null,
+      "fragment": null,
+      "line": 119,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
+      "to": null,
+      "fragment": null,
+      "line": 52,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-readings.md",
+      "to": null,
+      "fragment": null,
+      "line": 54,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "to": null,
+      "fragment": null,
+      "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/workflow.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/README.md",
+      "to": "index.knowledge-wiki",
+      "fragment": null,
+      "line": 5,
+      "kind": "link"
+    }
+  ]
+}

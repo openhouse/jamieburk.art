@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-18T16:49:40-04:00",
+  "sourceCommit": "e668bf3ade903e9c67dad7cb00273f67d7daf12c",
+  "sourceFingerprint": "81fde5a3b0e9e1aabd4ab40dd50751f94e36bb6de75da998026ef23a756cf64f",
+  "hardGates": {
+    "passed": true,
+    "errorCount": 0,
+    "errors": []
+  },
+  "diagnostics": {
+    "records": 16,
+    "byKind": {
+      "project": 1,
+      "event": 1,
+      "source": 3,
+      "asset": 1,
+      "claim": 1,
+      "correction": 1,
+      "method": 1,
+      "evaluation": 1,
+      "index": 2,
+      "capability": 1,
+      "opportunity": 1,
+      "projection": 2
+    },
+    "typedRelations": 44,
+    "evidenceRelations": 1,
+    "relationTypeCounts": {
+      "documents": 3,
+      "evidence:direct-support": 1,
+      "has_asset": 1,
+      "informed_by": 1,
+      "part_of": 2,
+      "projected_to": 6,
+      "related_to": 21,
+      "resulted_in": 1,
+      "supersedes": 1,
+      "supports": 2,
+      "uses_method": 2,
+      "uses_source": 4
+    },
+    "proseLinks": 107,
+    "rootReachable": 16,
+    "orphanCount": 0,
+    "deadEndCount": 0,
+    "wantedPageCount": 1,
+    "stalePageCount": 0,
+    "correctionCount": 1,
+    "rightsReviewCount": 1,
+    "warningCount": 0,
+    "warnings": []
+  },
+  "humanGates": [
+    {
+      "id": "collaborator-review",
+      "state": "governed-open",
+      "authority": "named collaborators"
+    },
+    {
+      "id": "media-rights-and-consent",
+      "state": "human-blocked",
+      "authority": "rights holders and depicted people"
+    },
+    {
+      "id": "retrieval-task-study",
+      "state": "not-requested",
+      "authority": "fresh human readers"
+    },
+    {
+      "id": "editorial-projection-approval",
+      "state": "governed-open",
+      "authority": "Jamie and relevant editors"
+    },
+    {
+      "id": "production-observation",
+      "state": "not-requested",
+      "authority": "deployment owner"
+    },
+    {
+      "id": "hiring-outcomes",
+      "state": "not-requested",
+      "authority": "external readers and employers"
+    }
+  ],
+  "orphans": [],
+  "deadEnds": [],
+  "wanted": [
+    {
+      "id": "source.councilstat.fuller-release.2016",
+      "proposed_title": "Fuller CouncilStat constituent-services data release",
+      "reason": "Needed to tighten the release-to-prototype chronology.",
+      "requestedBy": "project.callnyc",
+      "path": "docs/knowledge-bank/projects/callnyc.md"
+    }
+  ],
+  "stale": [],
+  "corrections": [
+    {
+      "id": "correction.callnyc-years.2026",
+      "title": "CallNYC chronology correction",
+      "path": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
+      "humanReview": "resolved"
+    }
+  ],
+  "rightsReview": [
+    {
+      "id": "asset.photo.digital-district.001",
+      "path": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    }
+  ]
+}
