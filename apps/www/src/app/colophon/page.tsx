@@ -16,7 +16,7 @@ const details = [
   "Karla for body/UI text and League Spartan for display headings",
   "No private or proprietary font files are committed or served",
   "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
-  "Staging-first Docker / Dokku deployment with staging noindex by default",
+  "Next.js standalone output deployed with Docker and Dokku",
   "No invasive tracking in V1"
 ];
 
@@ -30,9 +30,7 @@ export default function ColophonPage() {
           content, public-safe artifacts, and numbered sources for significant
           factual claims, with intentionally limited tracking. The design uses
           Broadway blue, Jamie&apos;s oil-pastel palette, and a quiet proportional
-          grid derived from his print-layout sketchpad. The site separates
-          reviewable staging from the public production surface; staging remains
-          noindex.
+          grid derived from his print-layout sketchpad.
         </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">

@@ -278,6 +278,14 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF converts bounded WOWList activity into adoption");
   }
 
+  if (
+    !/July 2017 snapshot records 1,846 users, 16,142 posts\/events, and at least 50 geocoded\s+posts\/events in each of 35 city\/region groups/i.test(
+      resumeText
+    )
+  ) {
+    addFailure(resumePath, "resume PDF does not match the canonical WOWList activity threshold");
+  }
+
   if (!/Sunday Dinner with Julia Fredenberg/i.test(resumeText)) {
     addFailure(resumePath, "resume PDF omits Sunday Dinner co-host credit");
   }

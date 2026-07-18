@@ -92,7 +92,10 @@ test("global public copy describes the portfolio rather than its internal lifecy
     .map((path) => readFileSync(path, "utf8"))
     .join("\n");
 
-  assert.doesNotMatch(publicChrome, /future living (?:archive|notebook)|visible content-status notes/i);
+  assert.doesNotMatch(
+    publicChrome,
+    /future living (?:archive|notebook)|visible content-status notes|staging-first|reviewable staging/i
+  );
   assert.match(publicChrome, /source-backed portfolio|focused public proof surface/i);
 });
 
