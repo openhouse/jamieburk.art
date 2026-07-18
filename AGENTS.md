@@ -128,8 +128,9 @@ an external outcome. Keep hiring-reader, collaborator, and application results
 After changing rendered prose, run `npm run evals:blind-spots:refresh`, review
 the semantic claim counts, and subtract or recalibrate page budgets before
 starting a new exact-candidate eval run. Update the exact role-occurrence
-manifest for changed role-bearing prose; do not bypass it with an unclassified
-authored sentence.
+manifest and its complete semantic-inventory digest for changed role-bearing
+prose; do not bypass it with an unclassified authored sentence. Proof and
+canonical-claim bindings are enforced at each exact rendered surface.
 
 ## Composite Readiness
 

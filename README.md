@@ -120,9 +120,11 @@ inquiry accumulation, attribution, platform-shaped evidence, additive
 composition, mosaic privacy, evaluator independence, and indefinite polishing.
 Run `npm run evals:blind-spots:refresh` after rendered-prose changes to rebuild
 the semantic route inventory and public-surface receipts before judging. The
-role-occurrence manifest binds every role-bearing authored sentence to a proof
-or canonical claim basis and requires explicit attribution for mixed or
-first-person evidence.
+role control digest-binds the complete public semantic inventory. Embedded
+proof and canonical-claim occurrences inherit their structured basis at the
+exact rendered surface; every remaining person-referential authored unit must
+appear in the role-occurrence manifest. Negative fixtures cover Home, About,
+Resume, work cards, metadata, artifacts, and MDX.
 
 `evals/portfolio-readiness/` coordinates the existing suites for one exact
 candidate and rubric digest. A `system-ready` result requires deterministic

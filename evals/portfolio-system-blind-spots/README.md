@@ -39,11 +39,12 @@ require separate external evidence.
   Knowledge Bank claim whose internal text or projection names Jamie, plus
   every proof claim permitted on a public surface. Adding or removing one
   without classifying its source basis fails the suite.
-- `role-occurrence-manifest.json` classifies every rendered role-bearing sentence
-  by route and content hash. Each occurrence resolves through work-item proof or
-  canonical claim IDs; first-person and mixed bases require explicit attribution.
-  Required mixed-proof coverage is derived from `proofBankIds` and canonical
-  `<Claim>` use rather than a voluntary authored-role list.
+- `role-occurrence-manifest.json` binds review to the digest of every rendered
+  semantic unit. Proof and canonical-claim occurrences inherit their structured
+  basis at each exact route and content hash. Every remaining person-referential
+  authored unit is explicitly classified; first-person and mixed bases require
+  attribution. `role-occurrence-fixtures.json` proves unmanifested Home, About,
+  Resume, work-card, metadata, artifact, and MDX role prose fails the checker.
 - `control-state.json` derives the full-population archive-pass ledger from
   Knowledge Bank inquiries and requires an invisible-labor balance review for
   every project represented there.

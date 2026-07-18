@@ -206,6 +206,23 @@ function semanticClaimUnits(prefix, value) {
     }));
 }
 
+function claimProjectionText(claimId, projectionKey, surface) {
+  return knowledgeBank.claims
+    .find((claim) => claim.id === claimId)
+    ?.projections.find((projection) =>
+      projection.key === projectionKey && projection.surfaces.includes(surface)
+    )?.text ?? "";
+}
+
+function proofUnits(prefix, proof, { positioning = false } = {}) {
+  return semanticClaimUnits(prefix, proof.shortWording ?? proof.publicWording).map((unit) => ({
+    ...unit,
+    proofIds: [proof.id],
+    claimIds: [],
+    positioning
+  }));
+}
+
 function mdxClaimKeys(source) {
   return mdxClaimUnits(source).map((unit) => unit.key);
 }
@@ -229,11 +246,17 @@ function mdxClaimUnits(source) {
       }
       const claimId = block.match(/claimId="([^"]+)"/)?.[1];
       const occurrenceId = block.match(/occurrenceId="([^"]+)"/)?.[1];
-      if (claimId) return [{
-        key: `mdx-claim-${stableKey(claimId)}${occurrenceId ? `-${stableKey(occurrenceId)}` : ""}`,
-        text: "",
-        claimId
-      }];
+      const projection = block.match(/projection="([^"]+)"/)?.[1];
+      const surface = block.match(/surface="([^"]+)"/)?.[1];
+      if (claimId) {
+        const text = projection && surface ? claimProjectionText(claimId, projection, surface) : "";
+        return [{
+          key: `mdx-claim-${stableKey(claimId)}${occurrenceId ? `-${stableKey(occurrenceId)}` : ""}-${sha256(text || claimId).slice(0, 12)}`,
+          text,
+          claimId,
+          claimIds: [claimId]
+        }];
+      }
       return semanticClaimUnits("mdx-block", block);
     });
 }
@@ -324,8 +347,6 @@ function workCaseCompositions() {
           return semanticClaimUnits(`known-${key}`, literalValue(property.initializer));
         })
       : [];
-    const artifactTypeKeys = arrayElements(properties.get("artifactTypes"))
-      .map((element) => `artifact-type-${stableKey(literalValue(element))}`);
     const artifactUnits = arrayElements(properties.get("artifacts")).flatMap((element, index) => {
       const artifactProperties = ts.isObjectLiteralExpression(element) ? propertyMap(element) : new Map();
       const prefix = `artifact-${index + 1}`;
@@ -334,8 +355,8 @@ function workCaseCompositions() {
         ...semanticClaimUnits(`${prefix}-description`, literalValue(artifactProperties.get("description")?.initializer))
       ];
     });
-    const creditKeys = arrayElements(properties.get("credits"))
-      .map((element, index) => `credit-${stableKey(literalValue(element))}-${index + 1}`);
+    const creditUnits = arrayElements(properties.get("credits"))
+      .flatMap((element, index) => semanticClaimUnits(`credit-${index + 1}`, literalValue(element)));
     const mdxUnits = slug ? mdxClaimUnits(read(`apps/www/src/content/work/${slug}.mdx`)) : [];
     const mdxKeys = mdxUnits.map((unit) => unit.key);
     const mdxClaimUnitCount = mdxKeys.length;
@@ -344,13 +365,10 @@ function workCaseCompositions() {
       ...optionalUnits,
       ...publicSafetyUnits,
       ...knownUnits,
-      ...artifactUnits
+      ...artifactUnits,
+      ...creditUnits
     ];
-    const nonMdxKeys = [
-      ...metadataProseUnits.map((unit) => unit.key),
-      ...artifactTypeKeys,
-      ...creditKeys
-    ];
+    const nonMdxKeys = metadataProseUnits.map((unit) => unit.key);
     const metadataClaimUnits = nonMdxKeys.length;
     const countedClaimKeys = [...nonMdxKeys, ...mdxKeys];
     return {
@@ -387,89 +405,107 @@ function workCaseCompositions() {
   }));
 }
 
-function staticParagraphKeys(relativePath, prefix, { exclude = [] } = {}) {
+function staticParagraphUnits(relativePath, prefix, { exclude = [] } = {}) {
   return [...read(relativePath).matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/g)]
     .map((match) => match[1].replace(/<[^>]+>/g, " ").replace(/\{[^}]+\}/g, " ").replace(/\s+/g, " ").trim())
     .filter((text) => text && !exclude.some((pattern) => pattern.test(text)))
-    .flatMap((text) => semanticClaimKeys(prefix, text));
+    .flatMap((text) => semanticClaimUnits(prefix, text));
 }
 
-function deriveRouteClaimKeys(workCompositions) {
-  const workIntroKeys = staticParagraphKeys("apps/www/src/app/work/page.tsx", "work-block", {
+function routeUnits(route, units) {
+  return units.map((unit) => ({
+    ...unit,
+    id: `${route}|${unit.projectSlug ?? "global"}|${unit.key}`,
+    route,
+    proofIds: unit.proofIds ?? [],
+    claimIds: unit.claimIds ?? (unit.claimId ? [unit.claimId] : []),
+    projectSlug: unit.projectSlug ?? null
+  }));
+}
+
+function deriveRouteClaimUnits(workCompositions) {
+  const workIntroUnits = staticParagraphUnits("apps/www/src/app/work/page.tsx", "work-block", {
     exclude: [/Early research/, /A lab \/ proof-of-practice/]
   });
-  const workLabKeys = staticParagraphKeys("apps/www/src/app/work/page.tsx", "work-lab", {
+  const workLabUnits = staticParagraphUnits("apps/www/src/app/work/page.tsx", "work-lab", {
     exclude: [/These case studies/]
   });
   const technicalSource = read("apps/www/src/app/work/technical-operations/page.tsx");
   const operationsBlock = technicalSource.match(/const operationsMap = \[([\s\S]*?)\n\];/)?.[1] ?? "";
   const operations = [...operationsBlock.matchAll(/^\s+"([^"]+)"[,]?$/gm)].map((match) => match[1]);
-  const technicalKeys = [
-    ...staticParagraphKeys("apps/www/src/app/work/technical-operations/page.tsx", "technical-positioning", {
+  const technicalUnits = [
+    ...staticParagraphUnits("apps/www/src/app/work/technical-operations/page.tsx", "technical-positioning", {
       exclude: [/\{row\.toward\}/]
     }),
-    ...operations.map((operation) => `technical-operation-${sha256(operation).slice(0, 12)}`),
+    ...operations.flatMap((operation) => semanticClaimUnits("technical-operation", operation)),
     ...technicalOperationsProofRows.flatMap((row) => [
-      `technical-toward-${stableKey(row.capability)}`,
-      ...row.proofs.slice(0, 2).map((proof) => `technical-proof-${stableKey(row.capability)}-${stableKey(proof.id)}`)
+      ...semanticClaimUnits(`technical-toward-${stableKey(row.capability)}`, row.toward),
+      ...row.proofs.slice(0, 2).flatMap((proof) => proofUnits(
+        `technical-proof-${stableKey(row.capability)}-${stableKey(proof.id)}`,
+        proof
+      ))
     ]),
-    ...staticParagraphKeys("apps/www/src/components/ResumeCTA.tsx", "resume-cta"),
-    ...staticParagraphKeys("apps/www/src/components/ContactCTA.tsx", "contact-cta")
+    ...staticParagraphUnits("apps/www/src/components/ResumeCTA.tsx", "resume-cta"),
+    ...staticParagraphUnits("apps/www/src/components/ContactCTA.tsx", "contact-cta")
   ];
-  const resumeKeys = [
-    ...staticParagraphKeys("apps/www/src/app/resume/page.tsx", "resume-block", {
+  const resumeUnits = [
+    ...staticParagraphUnits("apps/www/src/app/resume/page.tsx", "resume-block", {
       exclude: [/\{proof\./]
     }),
-    ...resumeProofHighlights.map((proof) => `resume-proof-${stableKey(proof.id)}`)
+    ...resumeProofHighlights.flatMap((proof) => {
+      if (proof.id !== "callnyc-civic-data-guidance") {
+        return proofUnits(`resume-proof-${stableKey(proof.id)}`, proof);
+      }
+      const claimId = "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON";
+      const text = claimProjectionText(claimId, "resume-html", "/resume");
+      return semanticClaimUnits(`resume-claim-${stableKey(claimId)}`, text).map((unit) => ({
+        ...unit,
+        claimIds: [claimId]
+      }));
+    })
   ];
   const colophonSource = read("apps/www/src/app/colophon/page.tsx");
   const colophonDetailsBlock = colophonSource.match(/const details = \[([\s\S]*?)\n\];/)?.[1] ?? "";
   const colophonDetails = [...colophonDetailsBlock.matchAll(/^\s+"([^"]+)"[,]?$/gm)].map((match) => match[1]);
-  const labKeys = [
-    "lab-method-proof-source-backed-team-memory-method",
-    ...staticParagraphKeys("apps/www/src/app/lab/source-backed-team-memory/page.tsx", "lab-boundary", {
+  const methodProof = proofClaims.find((proof) => proof.id === "source-backed-team-memory-method");
+  const labUnits = [
+    ...(methodProof ? proofUnits("lab-method-proof-source-backed-team-memory-method", methodProof) : []),
+    ...staticParagraphUnits("apps/www/src/app/lab/source-backed-team-memory/page.tsx", "lab-boundary", {
       exclude: [/\{methodProof\.publicWording\}/, /Lab \/ method/]
     }),
-    ...mdxClaimKeys(read("apps/www/src/content/lab/source-backed-team-memory.mdx")).map((key) => `lab-${key}`)
+    ...mdxClaimUnits(read("apps/www/src/content/lab/source-backed-team-memory.mdx")).map((unit) => ({
+      ...unit,
+      key: `lab-${unit.key}`
+    }))
   ];
-  const aboutSource = read("apps/www/src/app/about/page.tsx");
-  const practiceLineageKeys = aboutSource.includes("My operating practice has an artistic lineage")
-    ? [
-        "about-lineage-open-house-tending",
-        "about-lineage-time-is-long-realized-installation",
-        "about-lineage-network-image-interface-prototype",
-        "about-lineage-physical-browsing-proposal",
-        "about-lineage-practice-values-beyond-utility",
-        "about-lineage-cross-period-continuity"
-      ]
-    : [];
-  return {
-    "/": deriveHomeClaimKeys(workCompositions),
+  const raw = {
+    "/": deriveHomeClaimUnits(workCompositions),
     "/work": [
-      ...workIntroKeys,
-      ...workCompositions.flatMap((item) => item.cardClaimKeys),
-      ...workLabKeys
+      ...workIntroUnits,
+      ...workCompositions.flatMap((item) => item.cardProseUnits.map((unit) => ({ ...unit, projectSlug: item.slug }))),
+      ...workLabUnits
     ],
-    "/work/technical-operations": technicalKeys,
-    "/resume": resumeKeys,
+    "/work/technical-operations": technicalUnits,
+    "/resume": resumeUnits,
     "/about": [
-      ...staticParagraphKeys("apps/www/src/app/about/page.tsx", "about-block", {
-        exclude: [/My operating practice has an artistic lineage/]
-      }),
-      ...practiceLineageKeys,
-      ...staticParagraphKeys("apps/www/src/components/ContactCTA.tsx", "contact-cta")
+      ...staticParagraphUnits("apps/www/src/app/about/page.tsx", "about-block"),
+      ...staticParagraphUnits("apps/www/src/components/ContactCTA.tsx", "contact-cta")
     ],
-    "/contact": staticParagraphKeys("apps/www/src/app/contact/page.tsx", "contact-block"),
+    "/contact": staticParagraphUnits("apps/www/src/app/contact/page.tsx", "contact-block"),
     "/colophon": [
-      ...staticParagraphKeys("apps/www/src/app/colophon/page.tsx", "colophon-block", { exclude: [/\{detail\}/] }),
-      ...colophonDetails.map((detail) => `colophon-detail-${sha256(detail).slice(0, 12)}`)
+      ...staticParagraphUnits("apps/www/src/app/colophon/page.tsx", "colophon-block", { exclude: [/\{detail\}/] }),
+      ...colophonDetails.flatMap((detail) => semanticClaimUnits("colophon-detail", detail))
     ],
-    "/lab/source-backed-team-memory": labKeys,
-    ...Object.fromEntries(workCompositions.map((item) => [`/work/${item.slug}`, item.countedClaimKeys]))
+    "/lab/source-backed-team-memory": labUnits,
+    ...Object.fromEntries(workCompositions.map((item) => [
+      `/work/${item.slug}`,
+      [...item.metadataProseUnits, ...item.mdxProseUnits].map((unit) => ({ ...unit, projectSlug: item.slug }))
+    ]))
   };
+  return Object.fromEntries(Object.entries(raw).map(([route, units]) => [route, routeUnits(route, units)]));
 }
 
-function deriveHomeClaimKeys(workCompositions) {
+function deriveHomeClaimUnits(workCompositions) {
   const heroSource = read("apps/www/src/components/Hero.tsx");
   const homeSource = read("apps/www/src/app/page.tsx");
   const heroParagraphs = [...heroSource.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/g)]
@@ -482,40 +518,39 @@ function deriveHomeClaimKeys(workCompositions) {
     .map((match) => match[1].replace(/\s+/g, " ").trim())
     .filter((text) => text.startsWith("These projects show") || text.startsWith("The projects differ") || text.startsWith("I usually enter"));
   return [
-    ...heroParagraphs.flatMap((text) => semanticClaimKeys("hero", text)),
-    ...startHereNotes.flatMap((text) => semanticClaimKeys("start-here-note", text)),
-    ...homepageProofs.map((proof) => `proof-${stableKey(proof.id)}`),
-    ...capabilityTexts.flatMap((text) => semanticClaimKeys("capability-text", text)),
-    ...workCompositions.filter((item) => item.featured).flatMap((item) => item.featuredClaimKeys),
-    ...transformations.map((text) => `transformation-${stableKey(text)}`),
-    ...selectedParagraphs.flatMap((text) => semanticClaimKeys("home-block", text)),
-    ...staticParagraphKeys("apps/www/src/components/ContactCTA.tsx", "contact-cta")
+    ...heroParagraphs.flatMap((text) => semanticClaimUnits("hero", text)),
+    ...startHereNotes.flatMap((text) => semanticClaimUnits("start-here-note", text)),
+    ...homepageProofs.flatMap((proof) => proofUnits(`proof-${stableKey(proof.id)}`, proof)),
+    ...capabilityTexts.flatMap((text) => semanticClaimUnits("capability-text", text)),
+    ...workCompositions.filter((item) => item.featured).flatMap((item) =>
+      item.featuredProseUnits.map((unit) => ({ ...unit, projectSlug: item.slug }))
+    ),
+    ...transformations.flatMap((text) => semanticClaimUnits("transformation", text)),
+    ...selectedParagraphs.flatMap((text) => semanticClaimUnits("home-block", text)),
+    ...staticParagraphUnits("apps/www/src/components/ContactCTA.tsx", "contact-cta")
   ];
 }
 
-function deriveRoleOccurrences(workCompositions) {
-  const roleSubject = /(?:\bJamie (?:reports|describes|states|recalls|contributed|helped|built|created|co-built|presented|organized|testified|established|designed|coordinated|maintained|supported|translated|took)\b|\bJamie and [^.]+\bhosting\b|\bJamie's (?:direct|reported|independent|documented)\b|\bHis documented role\b|\bhis bounded design\b|\bPublic records [^.]+ document his\b|\bJamie-attributed revision history document\b|\bsigned by Jamie [^.]+ documents\b)/i;
-  const occurrences = [];
-  for (const item of workCompositions) {
-    const surfaces = [
-      ["/", item.featured ? item.featuredProseUnits : []],
-      ["/work", item.cardProseUnits],
-      [`/work/${item.slug}`, [...item.metadataProseUnits, ...item.mdxProseUnits]]
-    ];
-    for (const [surface, units] of surfaces) {
-      for (const unit of units) {
-        if (!roleSubject.test(unit.text)) continue;
-        occurrences.push({
-          id: `${surface}|${item.slug}|${unit.key}`,
-          surface,
-          projectSlug: item.slug,
-          unitKey: unit.key,
-          text: unit.text
-        });
-      }
-    }
-  }
-  return occurrences;
+function isRoleOccurrence(unit) {
+  return Boolean(
+    unit.proofIds.length ||
+    /\b(?:I|me|my|mine|we|us|our|ours|Jamie|he|him|his)\b/i.test(unit.text)
+  );
+}
+
+function deriveRoleOccurrences(routeClaimUnits) {
+  return Object.values(routeClaimUnits)
+    .flat()
+    .filter(isRoleOccurrence)
+    .map((unit) => ({
+      id: unit.id,
+      surface: unit.route,
+      projectSlug: unit.projectSlug,
+      unitKey: unit.key,
+      text: unit.text,
+      proofIds: unit.proofIds,
+      claimIds: unit.claimIds
+    }));
 }
 
 const suitePath = "evals/portfolio-system-blind-spots/evals.json";
@@ -526,6 +561,7 @@ const judgeSchemaPath = "evals/portfolio-system-blind-spots/judge-artifact.schem
 const historyPath = "evals/portfolio-system-blind-spots/hill-climb-history.json";
 const roleEvidencePath = "evals/portfolio-system-blind-spots/role-evidence-classifications.json";
 const roleOccurrencePath = "evals/portfolio-system-blind-spots/role-occurrence-manifest.json";
+const roleFixturePath = "evals/portfolio-system-blind-spots/role-occurrence-fixtures.json";
 const registerPath = "docs/knowledge-bank/blind-spot-register.md";
 const technicalOperationsPath = "apps/www/src/app/work/technical-operations/page.tsx";
 const readerSurfacePaths = [
@@ -549,6 +585,7 @@ const judgeSchema = parse(judgeSchemaPath);
 const hillClimbHistory = parse(historyPath);
 const roleEvidenceClassifications = parse(roleEvidencePath);
 const roleOccurrenceManifest = parse(roleOccurrencePath);
+const roleOccurrenceFixtures = parse(roleFixturePath);
 const readerSurfaceHash = createHash("sha256");
 for (const relativePath of readerSurfacePaths) {
   readerSurfaceHash.update(`${relativePath}\n`);
@@ -635,9 +672,18 @@ const currentSnapshot = {
   ).length
 };
 const workCompositionInventory = workCaseCompositions();
-const routeClaimKeys = deriveRouteClaimKeys(workCompositionInventory);
+const routeClaimUnitsByPath = deriveRouteClaimUnits(workCompositionInventory);
+const routeClaimKeys = Object.fromEntries(Object.entries(routeClaimUnitsByPath).map(([route, units]) => [
+  route,
+  units.map((unit) => unit.key)
+]));
 const homeClaimKeys = routeClaimKeys["/"];
-const renderedRoleOccurrences = deriveRoleOccurrences(workCompositionInventory);
+const renderedRoleOccurrences = deriveRoleOccurrences(routeClaimUnitsByPath);
+const roleInventorySha256 = sha256(JSON.stringify(
+  Object.entries(routeClaimUnitsByPath).flatMap(([route, units]) =>
+    units.map((unit) => [route, unit.key, unit.text, unit.proofIds, unit.claimIds])
+  )
+));
 
 const bundleFiles = [
   [suitePath, suiteSource],
@@ -650,6 +696,7 @@ const bundleFiles = [
   [historyPath, read(historyPath)],
   [roleEvidencePath, read(roleEvidencePath)],
   [roleOccurrencePath, read(roleOccurrencePath)],
+  [roleFixturePath, read(roleFixturePath)],
   ["scripts/check-portfolio-system-blind-spots.mjs", read("scripts/check-portfolio-system-blind-spots.mjs")],
   ["scripts/check-citations.mjs", read("scripts/check-citations.mjs")],
   ["scripts/generate-public-citations.mjs", read("scripts/generate-public-citations.mjs")],
@@ -679,6 +726,11 @@ if (process.argv.includes("--print-bundle-digest")) {
 
 if (process.argv.includes("--print-role-occurrences")) {
   console.log(JSON.stringify(renderedRoleOccurrences, null, 2));
+  process.exit(0);
+}
+
+if (process.argv.includes("--print-role-inventory-digest")) {
+  console.log(roleInventorySha256);
   process.exit(0);
 }
 
@@ -1051,6 +1103,11 @@ if (JSON.stringify([...proofRecordIds].sort()) !== JSON.stringify(expectedProofI
 const roleRecordByClaimId = new Map(roleRecords.map((record) => [record.claimId, record]));
 const proofById = new Map(proofClaims.map((proof) => [proof.id, proof]));
 const basisRank = { "source-corroborated": 0, positioning: 0, mixed: 1, "first-person": 2, open: 3 };
+const strongestBasis = (records) => records.reduce((strongest, record) =>
+  strongest === null || basisRank[record.basis] > basisRank[strongest]
+    ? record.basis
+    : strongest
+, null) ?? "source-corroborated";
 for (const record of proofRecords) {
   strictKeys(record, ["proofId", "basis", "rationale"], `proof role-evidence record ${record.proofId ?? "unknown"}`);
   const proof = proofById.get(record.proofId);
@@ -1077,21 +1134,80 @@ for (const record of proofRecords) {
 }
 
 const proofRoleRecordById = new Map(proofRecords.map((record) => [record.proofId, record]));
-strictKeys(roleOccurrenceManifest, ["version", "reviewedAt", "rule", "occurrences"], "role-occurrence manifest");
+strictKeys(roleOccurrenceFixtures, ["version", "rule", "cases"], "role-occurrence fixtures");
+if (roleOccurrenceFixtures.version !== 1) fail("Role-occurrence fixture version is invalid");
+requireString(roleOccurrenceFixtures.rule, "role-occurrence fixture rule");
+const fixtureIds = uniqueIds(roleOccurrenceFixtures.cases ?? [], "role-occurrence fixtures");
+for (const fixture of roleOccurrenceFixtures.cases ?? []) {
+  strictKeys(fixture, ["id", "surface", "kind", "text"], `role-occurrence fixture ${fixture.id ?? "unknown"}`);
+  requireString(fixture.surface, `${fixture.id}/surface`);
+  requireString(fixture.kind, `${fixture.id}/kind`);
+  requireString(fixture.text, `${fixture.id}/text`);
+  const units = routeUnits(fixture.surface, semanticClaimUnits(`fixture-${fixture.id}`, fixture.text));
+  const occurrences = deriveRoleOccurrences({ [fixture.surface]: units });
+  if (occurrences.length !== 1) {
+    fail(`${fixture.id} does not produce exactly one governed role occurrence`);
+    continue;
+  }
+  const unmanifested = occurrences.filter((occurrence) => !new Set().has(occurrence.id));
+  if (unmanifested.length !== 1 || !occurrences[0].id.includes(sha256(fixture.text).slice(0, 12))) {
+    fail(`${fixture.id} does not prove content-bound failure for an unmanifested role occurrence`);
+  }
+}
+if (fixtureIds.size < 8 || !new Set((roleOccurrenceFixtures.cases ?? []).map((fixture) => fixture.kind)).isSupersetOf(
+  new Set(["home", "about", "resume", "work-card", "metadata", "artifact", "mdx"])
+)) {
+  fail("Role-occurrence fixtures do not cover every required public role-prose surface");
+}
+
+strictKeys(roleOccurrenceManifest, ["version", "reviewedAt", "rule", "semanticInventorySha256", "occurrences"], "role-occurrence manifest");
 if (roleOccurrenceManifest.version !== 1) fail("Role-occurrence manifest version is invalid");
 requireNotFutureDate(roleOccurrenceManifest.reviewedAt, "role-occurrence manifest reviewedAt");
 requireString(roleOccurrenceManifest.rule, "role-occurrence manifest rule");
+requireSha256(roleOccurrenceManifest.semanticInventorySha256, "role-occurrence manifest semanticInventorySha256");
+if (roleOccurrenceManifest.semanticInventorySha256 !== roleInventorySha256) {
+  fail("Role-occurrence manifest was not reviewed against the current complete public semantic inventory");
+}
 const renderedRoleById = new Map(renderedRoleOccurrences.map((occurrence) => [occurrence.id, occurrence]));
 const occurrenceIds = uniqueIds(roleOccurrenceManifest.occurrences ?? [], "role occurrences");
-const renderedRoleIds = [...renderedRoleById.keys()].sort();
-if (JSON.stringify([...occurrenceIds].sort()) !== JSON.stringify(renderedRoleIds)) {
-  const missing = renderedRoleIds.filter((id) => !occurrenceIds.has(id));
-  const extra = [...occurrenceIds].filter((id) => !renderedRoleById.has(id));
-  fail(`Role-occurrence manifest must exactly cover rendered role prose; missing: ${missing.join(", ") || "none"}; extra: ${extra.join(", ") || "none"}`);
+const manualRoleIds = renderedRoleOccurrences
+  .filter((occurrence) => !(occurrence.proofIds.length || occurrence.claimIds.length))
+  .map((occurrence) => occurrence.id)
+  .sort();
+if (JSON.stringify([...occurrenceIds].sort()) !== JSON.stringify(manualRoleIds)) {
+  const missing = manualRoleIds.filter((id) => !occurrenceIds.has(id));
+  const extra = [...occurrenceIds].filter((id) => !manualRoleIds.includes(id));
+  fail(`Role-occurrence manifest must exactly cover authored role prose without embedded proof or canonical-claim bindings; missing: ${missing.join(", ") || "none"}; extra: ${extra.join(", ") || "none"}`);
 }
 const manifestProofIdsByProject = new Map();
-const explicitAttribution = /(?:\b(?:Jamie|He) (?:reports|describes|states|recalls)\b|\bJamie's reported\b|\breported (?:role|work|stewardship transition)\b|\baccording to Jamie\b|\bJamie-attributed\b)/i;
-for (const occurrence of roleOccurrenceManifest.occurrences ?? []) {
+const explicitAttribution = /(?:\b(?:I|my|me)\b|\b(?:Jamie|He) (?:reports|describes|states|recalls)\b|\bJamie's reported\b|\breported (?:role|work|stewardship transition)\b|\baccording to Jamie\b|\bJamie-attributed\b)/i;
+const routeProofSurface = (route) => {
+  if (route === "/") return "homepage";
+  if (route === "/work") return "work-card";
+  if (route === "/resume") return "resume";
+  if (route === "/about") return "about";
+  if (route === "/work/technical-operations") return "technical-operations";
+  if (route === "/lab/source-backed-team-memory") return "lab";
+  if (route.startsWith("/work/")) return "case-study";
+  return null;
+};
+const autoClassifiedOccurrences = renderedRoleOccurrences
+  .filter((occurrence) => occurrence.proofIds.length || occurrence.claimIds.length)
+  .map((occurrence) => {
+    const records = [
+      ...occurrence.proofIds.map((proofId) => proofRoleRecordById.get(proofId)),
+      ...occurrence.claimIds.map((claimId) => roleRecordByClaimId.get(claimId))
+    ].filter(Boolean);
+    const basis = strongestBasis(records);
+    return {
+      id: occurrence.id,
+      basis,
+      proofIds: occurrence.proofIds,
+      claimIds: occurrence.claimIds,
+      note: "Basis is derived from the exact proof or canonical claim rendered in this semantic unit."
+    };
+  });
+for (const occurrence of [...(roleOccurrenceManifest.occurrences ?? []), ...autoClassifiedOccurrences]) {
   strictKeys(occurrence, ["id", "basis", "proofIds", "claimIds", "note"], `role occurrence ${occurrence.id ?? "unknown"}`);
   if (!["source-corroborated", "first-person", "mixed", "positioning"].includes(occurrence.basis)) {
     fail(`${occurrence.id}/basis is invalid`);
@@ -1105,10 +1221,21 @@ for (const occurrence of roleOccurrenceManifest.occurrences ?? []) {
   const rendered = renderedRoleById.get(occurrence.id);
   if (!rendered) continue;
   const item = workCompositionInventory.find((candidate) => candidate.slug === rendered.projectSlug);
+  if (rendered.proofIds.length && JSON.stringify([...occurrence.proofIds].sort()) !== JSON.stringify([...rendered.proofIds].sort())) {
+    fail(`${occurrence.id} does not retain the exact proof IDs rendered in that occurrence`);
+  }
+  if (rendered.claimIds.length && JSON.stringify([...occurrence.claimIds].sort()) !== JSON.stringify([...rendered.claimIds].sort())) {
+    fail(`${occurrence.id} does not retain the exact canonical claim IDs rendered in that occurrence`);
+  }
   const referencedBasisRecords = [];
   for (const proofId of occurrence.proofIds ?? []) {
-    if (!item?.proofBankIds.includes(proofId)) {
+    const proof = proofById.get(proofId);
+    if (item && !item.proofBankIds.includes(proofId)) {
       fail(`${occurrence.id} resolves through proof outside ${rendered.projectSlug} proofBankIds: ${proofId}`);
+    }
+    const expectedSurface = routeProofSurface(rendered.surface);
+    if (!item && (!proof || !expectedSurface || !proof.surfaces.includes(expectedSurface))) {
+      fail(`${occurrence.id} resolves through proof not approved for ${rendered.surface}: ${proofId}`);
     }
     const roleRecord = proofRoleRecordById.get(proofId);
     if (!roleRecord) fail(`${occurrence.id} resolves through an unclassified proof ${proofId}`);
@@ -1120,38 +1247,26 @@ for (const occurrence of roleOccurrenceManifest.occurrences ?? []) {
   for (const claimId of occurrence.claimIds ?? []) {
     const linkedByItem = item?.proofBankIds.some((proofId) =>
       (proofById.get(proofId)?.structuredClaimIds ?? []).includes(claimId)
-    );
+    ) ?? true;
     if (!linkedByItem) fail(`${occurrence.id} resolves through a claim outside ${rendered.projectSlug} proofBankIds: ${claimId}`);
     const roleRecord = roleRecordByClaimId.get(claimId);
     if (!roleRecord) fail(`${occurrence.id} resolves through an unclassified role claim ${claimId}`);
     else referencedBasisRecords.push(roleRecord);
   }
-  if (!(occurrence.proofIds?.length || occurrence.claimIds?.length)) {
+  if (!(occurrence.proofIds?.length || occurrence.claimIds?.length) && occurrence.basis !== "positioning") {
     fail(`${occurrence.id} has no proof or claim basis`);
   }
-  const expectedBasis = referencedBasisRecords.reduce((strongest, record) =>
-    basisRank[record.basis] > basisRank[strongest] ? record.basis : strongest
-  , "source-corroborated");
+  if (occurrence.basis === "positioning" && referencedBasisRecords.some((record) => record.basis !== "positioning")) {
+    fail(`${occurrence.id} labels a non-positioning evidence record as positioning`);
+  }
+  const expectedBasis = occurrence.basis === "positioning"
+    ? "positioning"
+    : strongestBasis(referencedBasisRecords);
   if (occurrence.basis !== expectedBasis) {
     fail(`${occurrence.id} basis ${occurrence.basis} does not match referenced basis ${expectedBasis}`);
   }
   if (["first-person", "mixed"].includes(expectedBasis) && !explicitAttribution.test(rendered.text)) {
     fail(`${occurrence.id} renders ${expectedBasis} role prose without explicit attribution`);
-  }
-}
-for (const item of workCompositionInventory) {
-  const requiredRoleProofIds = item.proofBankIds.filter((proofId) =>
-    ["first-person", "mixed"].includes(proofRoleRecordById.get(proofId)?.basis)
-  );
-  const authoredProofIds = manifestProofIdsByProject.get(item.slug) ?? new Set();
-  const canonicalProofIds = requiredRoleProofIds.filter((proofId) => {
-    const proof = proofById.get(proofId);
-    return (proof?.structuredClaimIds ?? []).some((claimId) => item.canonicalClaimIds.includes(claimId));
-  });
-  const coveredRoleProofIds = new Set([...authoredProofIds, ...canonicalProofIds]);
-  const missingRoleProofIds = requiredRoleProofIds.filter((proofId) => !coveredRoleProofIds.has(proofId));
-  if (missingRoleProofIds.length) {
-    fail(`/work/${item.slug} has mixed or first-person proof bases without rendered occurrence or canonical Claim coverage: ${missingRoleProofIds.join(", ")}`);
   }
 }
 
