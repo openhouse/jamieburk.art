@@ -3,6 +3,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { containsPrivatePath } from "./lib/security-normalization.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -255,7 +256,7 @@ const proofBlocks = new Map();
 if (existsSync(proofPath)) {
   proofSource = read(proofPath);
 
-  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw-otter|otter(?:\.ai|_ai)|\.docx|\.xlsx/i.test(proofSource)) {
+  if (containsPrivatePath(proofSource) || /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw-otter|otter(?:\.ai|_ai)|\.docx|\.xlsx/i.test(proofSource)) {
     fail("apps/www/src/data/proofs.ts contains a private path or private source marker");
   }
 
@@ -406,7 +407,7 @@ for (const file of walk(docsRoot)) {
   if (!/\.(md|mdx|txt)$/i.test(file)) continue;
 
   const content = read(file);
-  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|otter\.ai\.txt|\.docx|\.xlsx/i.test(content)) {
+  if (containsPrivatePath(content) || /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|otter\.ai\.txt|\.docx|\.xlsx/i.test(content)) {
     fail(`${relative(file)} contains a private path, raw-source filename, or office-source marker`);
   }
 }

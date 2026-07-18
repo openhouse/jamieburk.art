@@ -7,6 +7,12 @@ import { buildPublicRegistry, loadPublicSurfaceFiles, publicEvidenceSnapshotSha,
 const registryText = `${JSON.stringify(buildPublicRegistry(knowledgeBank), null, 2)}\n`;
 const publicFiles = loadPublicSurfaceFiles();
 
+function recursivelyPercentEncode(value, passes = 8) {
+  let encoded = [...Buffer.from(value)].map((byte) => `%${byte.toString(16).padStart(2, "0")}`).join("");
+  for (let index = 1; index < passes; index += 1) encoded = encodeURIComponent(encoded);
+  return encoded;
+}
+
 test("current canonical projections and public registry are consistent", () => {
   assert.deepEqual(validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles }), []);
 });
@@ -63,6 +69,23 @@ test("held claim and protected source identifiers cannot enter public surfaces",
   assert.match(errors, /held claim identifier leaked/);
   assert.match(errors, /protected source identifier leaked/);
   assert.match(errors, /protected locator identifier leaked/);
+});
+
+test("recursive encoding cannot conceal protected locators or private paths on any public surface type", () => {
+  const protectedSource = knowledgeBank.sources.find((source) => source.visibility === "protected" && source.protectedLocatorId);
+  assert.ok(protectedSource);
+  const changedFiles = [
+    ...publicFiles,
+    { file: "apps/www/src/app/deep-leak.tsx", content: recursivelyPercentEncode(protectedSource.protectedLocatorId) },
+    { file: "apps/www/src/content/deep-leak.mdx", content: recursivelyPercentEncode("/Users/jburkart/private-source.txt") },
+    { file: "apps/www/src/data/proofs-deep-leak.ts", content: recursivelyPercentEncode("/private/tmp/private-source.txt") },
+    { file: "apps/www/src/data/deep-leak.json", content: JSON.stringify({ locator: recursivelyPercentEncode("/Volumes/private/archive") }) }
+  ];
+  const errors = validateProjectionConsistency({ bank: knowledgeBank, registryText, publicFiles: changedFiles }).join("\n");
+  assert.match(errors, /protected locator identifier leaked/);
+  assert.match(errors, /deep-leak\.mdx: public surface contains a forbidden private filesystem path/);
+  assert.match(errors, /proofs-deep-leak\.ts: public surface contains a forbidden private filesystem path/);
+  assert.match(errors, /deep-leak\.json: public surface contains a forbidden private filesystem path/);
 });
 
 test("an active projection without an authorized surface is rejected", () => {

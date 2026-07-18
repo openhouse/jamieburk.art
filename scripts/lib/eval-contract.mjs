@@ -95,6 +95,23 @@ export function governedInputDigestAtCommit(commit, contract = loadEvalContract(
   return digest;
 }
 
+export function captureCandidateSnapshot(contract = loadEvalContract()) {
+  return {
+    commit: git("rev-parse", "HEAD"),
+    tree: git("rev-parse", "HEAD^{tree}"),
+    governedInputDigest: governedInputDigest(contract)
+  };
+}
+
+export function validateCandidateSnapshot(snapshot, contract = loadEvalContract()) {
+  const current = captureCandidateSnapshot(contract);
+  const errors = [];
+  if (current.commit !== snapshot.commit) errors.push("candidate commit changed during deterministic evaluation");
+  if (current.tree !== snapshot.tree) errors.push("candidate tree changed during deterministic evaluation");
+  if (current.governedInputDigest !== snapshot.governedInputDigest) errors.push("governed inputs changed during deterministic evaluation");
+  return errors;
+}
+
 export function promptDigest(promptPath) {
   return sha256(readFileSync(path.join(repoRoot, promptPath)));
 }

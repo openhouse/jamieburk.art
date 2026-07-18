@@ -8,6 +8,7 @@ import {
   resumeProofHighlights,
   technicalOperationsProofRows
 } from "../../apps/www/src/data/proofs.ts";
+import { containsPrivatePath, normalizeSecurityText } from "./security-normalization.mjs";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const publicEvidenceSnapshotSha = "3757c4f529cc05d169f30ec059b13bea24cc75d1";
@@ -21,7 +22,7 @@ function pinRepositoryUrl(url) {
 const defaultIgnorables = /[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180F\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFE0F\uFEFF\uFFA0]/g;
 
 function normalize(value) {
-  return value.normalize("NFKC").replace(defaultIgnorables, "").replace(/[\u2010-\u2015]/g, "-").replace(/\s+/g, " ").trim().toLocaleLowerCase();
+  return normalizeSecurityText(value).normalize("NFKC").replace(defaultIgnorables, "").replace(/[\u2010-\u2015]/g, "-").replace(/\s+/g, " ").trim().toLocaleLowerCase();
 }
 
 function walk(relativePath) {
@@ -84,6 +85,9 @@ export function validateProjectionConsistency({
   const publicCorpus = normalize(publicFiles.map((item) => item.content).join("\n"));
 
   if (publicFiles.length === 0) errors.push("public surface scan cannot be empty");
+  for (const publicFile of publicFiles) {
+    if (containsPrivatePath(publicFile.content)) errors.push(`${publicFile.file}: public surface contains a forbidden private filesystem path`);
+  }
 
   const expectedRegistry = `${JSON.stringify(buildPublicRegistry(bank), null, 2)}\n`;
   if (registryText !== expectedRegistry) errors.push("public registry disagrees with canonical knowledge records");

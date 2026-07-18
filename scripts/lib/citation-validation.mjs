@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
-import { canonicalizePublicUrl, containsPrivatePath } from "./security-normalization.mjs";
+import { canonicalizePublicUrl, containsPrivatePath, normalizeSecurityText } from "./security-normalization.mjs";
 
 const publicSurfaceFiles = [
   "apps/www/src/content/work/callnyc.mdx",
@@ -213,14 +213,20 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     for (const pattern of forbiddenPublicUrlPatterns) if (pattern.test(value)) errors.push(`Canonical registry contains forbidden private URL: ${value}`);
   }
 
-  const publicJson = JSON.stringify(publicRegistry);
+  const normalizedPublicJson = normalizeSecurityText(publicRegistry).toLocaleLowerCase();
+  if (containsPrivatePath(publicRegistry)) errors.push("Public registry contains a forbidden private filesystem path");
   for (const source of knowledgeBank.sources) {
-    if (source.protectedLocatorId && publicJson.includes(source.protectedLocatorId)) errors.push(`Protected locator ${source.protectedLocatorId} leaked into public registry`);
+    if (source.protectedLocatorId && normalizedPublicJson.includes(normalizeSecurityText(source.protectedLocatorId).toLocaleLowerCase())) errors.push(`Protected locator ${source.protectedLocatorId} leaked into public registry`);
   }
   if (publicRegistry.sources.some((source) => source.visibility !== "public")) errors.push("Public registry contains a non-public source");
 
   if (includePublicFiles) {
     const publicText = publicSurfaceFiles.map((path) => readFileSync(path, "utf8")).join("\n");
+    const normalizedPublicText = normalizeSecurityText(publicText).toLocaleLowerCase();
+    if (containsPrivatePath(publicText)) errors.push("Public surface contains a forbidden private filesystem path");
+    for (const source of knowledgeBank.sources) {
+      if (source.protectedLocatorId && normalizedPublicText.includes(normalizeSecurityText(source.protectedLocatorId).toLocaleLowerCase())) errors.push(`Protected locator ${source.protectedLocatorId} leaked into a public surface`);
+    }
     for (const pattern of [/first civic-data hackathon/i, /first civic-tech hackathon/i, /the Council['’]s first hackathon(?! of)/i, /2014[-–]2015/, /citation pending|press citation pending/i, /recommendation unless final funding details/i, /KC Town Hall received (?:or spent )?(?:the )?\$490,539/i]) {
       if (pattern.test(publicText)) errors.push(`Retired or unresolved wording remains on a public surface: ${pattern}`);
     }

@@ -2,9 +2,11 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import {
+  captureCandidateSnapshot,
   contractDigest,
   evaluateCompositeStopCondition,
   governedFiles,
@@ -15,6 +17,7 @@ import {
   runRecordDigest,
   scoreHoldout,
   validateCompositeRunRecord,
+  validateCandidateSnapshot,
   validateEvalContract,
   validateRunSequence
 } from "../lib/eval-contract.mjs";
@@ -166,6 +169,31 @@ test("evidence paths cannot escape approved roots through symlinks", () => {
   } finally {
     rmSync(sandbox, { recursive: true, force: true });
     rmSync(external, { recursive: true, force: true });
+  }
+});
+
+test("an approved evidence root cannot itself be a symlink outside the repository", () => {
+  const sandbox = mkdtempSync(path.join(tmpdir(), "jamie-evidence-root-link-"));
+  const external = mkdtempSync(path.join(tmpdir(), "jamie-evidence-root-external-"));
+  try {
+    writeFileSync(path.join(external, "capture.log"), "private evidence\n");
+    symlinkSync(external, path.join(sandbox, "approved"));
+    const result = resolveRepoEvidencePath(sandbox, "approved/capture.log", ["approved"]);
+    assert.match(result.error, /approved evidence root resolves outside the repository/);
+  } finally {
+    rmSync(sandbox, { recursive: true, force: true });
+    rmSync(external, { recursive: true, force: true });
+  }
+});
+
+test("a successful command cannot mutate governed inputs and retain candidate certification", () => {
+  const probe = path.join(repoRoot, "scripts/tests/fixtures/eval-governed-drift-probe.txt");
+  const snapshot = captureCandidateSnapshot(contract);
+  try {
+    execFileSync(process.execPath, ["-e", `require("node:fs").writeFileSync(${JSON.stringify(probe)}, "mutated after snapshot\\n")`]);
+    assert.match(validateCandidateSnapshot(snapshot, contract).join("\n"), /governed inputs changed during deterministic evaluation/);
+  } finally {
+    rmSync(probe, { force: true });
   }
 });
 

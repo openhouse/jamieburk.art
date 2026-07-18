@@ -5,6 +5,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { approvedResumeArtifact, validateResumeSource, validateResumeText } from "./lib/public-artifacts.mjs";
+import { containsPrivatePath } from "./lib/security-normalization.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -158,6 +159,12 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+
+for (const file of shippedContentFiles) {
+  if (containsPrivatePath(readText(file))) {
+    addFailure(file, "recursively encoded private filesystem path appears in production-facing content");
+  }
+}
 
 for (const file of allFiles) {
   const rel = relative(file);

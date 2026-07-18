@@ -34,12 +34,22 @@ export function resolveRepoEvidencePath(repoRoot, candidate, allowedRoots) {
   }
   if (existsSync(absolute)) {
     try {
+      const realRepoRoot = realpathSync(repoRoot);
       const realCandidate = realpathSync(absolute);
       const realApprovedRoot = realpathSync(path.resolve(repoRoot, matchedRoot));
+      const approvedRootRelative = path.relative(realRepoRoot, realApprovedRoot);
+      if (
+        approvedRootRelative === ".." ||
+        approvedRootRelative.startsWith(`..${path.sep}`) ||
+        path.isAbsolute(approvedRootRelative)
+      ) {
+        return { error: `approved evidence root resolves outside the repository: ${matchedRoot}` };
+      }
       const realRelative = path.relative(realApprovedRoot, realCandidate);
       if (realRelative === ".." || realRelative.startsWith(`..${path.sep}`) || path.isAbsolute(realRelative)) {
         return { error: `evidence path resolves outside its approved root: ${candidate}` };
       }
+      return { path: realCandidate, relative: normalized };
     } catch {
       return { error: `evidence path cannot be resolved safely: ${candidate}` };
     }

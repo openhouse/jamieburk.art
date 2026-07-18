@@ -83,6 +83,19 @@ function parseJsonObject(value) {
   }
 }
 
+function committedResumeDigest(candidateCommit) {
+  try {
+    const resume = execFileSync(
+      "git",
+      ["show", `${candidateCommit}:apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`],
+      { cwd: repoRoot, maxBuffer: 25 * 1024 * 1024 }
+    );
+    return createHash("sha256").update(resume).digest("hex");
+  } catch {
+    return null;
+  }
+}
+
 export function validateGateEvidence(gate, evidence, candidateCommit) {
   const errors = [];
   const required = gate.evidenceRequired ?? [];
@@ -112,19 +125,29 @@ export function validateGateEvidence(gate, evidence, candidateCommit) {
     if (label === "production image or deployment identifier" && !/^[A-Za-z0-9][A-Za-z0-9._:@/+\-]{7,}$/.test(value)) {
       errors.push(`${gate.id}/${label} needs a concrete image or deployment identifier`);
     }
-    if (label === "resume SHA-256" && !/^[a-f0-9]{64}$/i.test(value)) errors.push(`${gate.id}/${label} must be a SHA-256 digest`);
+    if (label === "resume SHA-256") {
+      if (!/^[a-f0-9]{64}$/i.test(value)) errors.push(`${gate.id}/${label} must be a SHA-256 digest`);
+      else {
+        const expectedDigest = committedResumeDigest(candidateCommit);
+        if (!expectedDigest) errors.push(`${gate.id}/${label} cannot be bound because the candidate resume artifact is unavailable`);
+        else if (value.toLocaleLowerCase() !== expectedDigest) errors.push(`${gate.id}/${label} must match the resume artifact committed at the candidate SHA`);
+      }
+    }
     if (label === "HTTP observations") {
       const observations = parseJsonObject(value);
-      const keys = ["apex", "www", "tls", "health", "canonicals", "openGraph"];
+      const keys = ["apex", "www", "tls", "health", "resume", "canonicals", "openGraph", "candidateCommit", "deploymentIdentifier"];
       if (!observations || keys.some((key) => observations[key] === undefined || observations[key] === "")) {
-        errors.push(`${gate.id}/${label} must be JSON covering apex, www, TLS, health, canonicals, and Open Graph`);
+        errors.push(`${gate.id}/${label} must be JSON covering apex, www, TLS, health, resume delivery, canonicals, Open Graph, candidate commit, and deployment identifier`);
       } else {
         if (observations.apex !== 200) errors.push(`${gate.id}/${label} must record a 200 apex response`);
         if (![301, 308].includes(observations.www)) errors.push(`${gate.id}/${label} must record a permanent www redirect`);
         if (observations.tls !== true) errors.push(`${gate.id}/${label} must confirm TLS`);
         if (observations.health !== 200) errors.push(`${gate.id}/${label} must record a 200 health response`);
+        if (observations.resume !== 200) errors.push(`${gate.id}/${label} must record a 200 resume response`);
         if (![true, "verified"].includes(observations.canonicals)) errors.push(`${gate.id}/${label} must confirm canonical URLs`);
         if (![true, "verified"].includes(observations.openGraph)) errors.push(`${gate.id}/${label} must confirm Open Graph metadata`);
+        if (observations.candidateCommit !== candidateCommit) errors.push(`${gate.id}/${label} must bind the exact candidate commit`);
+        if (!/^[A-Za-z0-9][A-Za-z0-9._:@/+\-]{7,}$/.test(observations.deploymentIdentifier)) errors.push(`${gate.id}/${label} needs a concrete deployment identifier`);
       }
     }
     if (label === "robots and sitemap bodies") {
@@ -132,7 +155,8 @@ export function validateGateEvidence(gate, evidence, candidateCommit) {
       if (!bodies || typeof bodies.robots !== "string" || !/user-agent/i.test(bodies.robots) || typeof bodies.sitemap !== "string" || !/<urlset/i.test(bodies.sitemap)) {
         errors.push(`${gate.id}/${label} must be JSON containing inspected robots and sitemap bodies`);
       } else {
-        if (!/^\s*allow:\s*\/\s*$/im.test(bodies.robots) || /^\s*disallow:\s*\/\s*$/im.test(bodies.robots)) {
+        const disallowRules = [...bodies.robots.matchAll(/^\s*disallow:\s*(.*?)\s*$/gim)].map((match) => match[1]).filter(Boolean);
+        if (!/^\s*user-agent:\s*\*\s*$/im.test(bodies.robots) || !/^\s*allow:\s*\/\s*$/im.test(bodies.robots) || disallowRules.length > 0) {
           errors.push(`${gate.id}/${label} must show production crawling allowed at the root`);
         }
         if (!/<loc>\s*https:\/\/jamieburk\.art(?:\/|<)/i.test(bodies.sitemap)) {
@@ -367,16 +391,23 @@ export function validateDecisionRecord(suite, decisionRecord) {
   if (!Array.isArray(decisionRecord?.overrides)) {
     failures.push("decision record needs an overrides array");
   } else {
+    const governedHumanAuthorities = new Set(
+      sack.authorities.map((policy) => policy.authority)
+    );
     for (const [index, override] of decisionRecord.overrides.entries()) {
       if (
+        !override ||
         typeof override !== "object" ||
-        !override.humanAuthority?.trim() ||
+        !governedHumanAuthorities.has(override.humanAuthority) ||
         !override.rationale?.trim() ||
         !Array.isArray(override.evidence) ||
         override.evidence.length === 0 ||
-        !Array.isArray(override.boundaryChanges)
+        override.evidence.some((item) => typeof item !== "string" || !item.trim()) ||
+        !Array.isArray(override.boundaryChanges) ||
+        override.boundaryChanges.length === 0 ||
+        override.boundaryChanges.some((item) => typeof item !== "string" || !item.trim())
       ) {
-        failures.push(`override ${index + 1} needs human authority, rationale, evidence, and boundary changes`);
+        failures.push(`override ${index + 1} needs a governed human authority, rationale, substantive evidence, and substantive boundary changes`);
       }
     }
   }

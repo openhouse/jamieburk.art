@@ -3,6 +3,7 @@ const forwardSlashVariants = /[\u2044\u2215\u29F8\uFF0F]/g;
 const reverseSlashVariants = /[\u2216\u29F5\uFF3C]/g;
 const trackingParameter = /^(?:utm_.+|fbclid|gclid|dclid|msclkid|mc_cid|mc_eid)$/i;
 const maxDecodePasses = 64;
+const percentByteRun = /(?:%[0-9A-Fa-f]{2})+/g;
 
 function normalizeCharacters(value) {
   return value
@@ -13,14 +14,22 @@ function normalizeCharacters(value) {
 }
 
 export function normalizeSecurityText(value) {
-  let normalized = normalizeCharacters(JSON.stringify(value));
+  let normalized = normalizeCharacters(
+    typeof value === "string" ? value : JSON.stringify(value)
+  );
 
   for (let attempt = 0; attempt < maxDecodePasses; attempt += 1) {
     let decoded;
     try {
       decoded = decodeURIComponent(normalized);
     } catch {
-      break;
+      decoded = normalized.replace(percentByteRun, (run) => {
+        try {
+          return decodeURIComponent(run);
+        } catch {
+          return run;
+        }
+      });
     }
     if (decoded === normalized) break;
     normalized = normalizeCharacters(decoded);

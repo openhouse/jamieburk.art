@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import test from "node:test";
 import {
   loadLaunchEvalSuite,
@@ -13,6 +15,8 @@ import {
 } from "../lib/launch-evals.mjs";
 
 const suite = loadLaunchEvalSuite();
+const candidateCommit = execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }).trim();
+const resumeDigest = createHash("sha256").update(execFileSync("git", ["show", `${candidateCommit}:apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`])).digest("hex");
 
 function completeBrowserReport() {
   const byId = Object.fromEntries(suite.runtimeCases.map((runtimeCase) => [runtimeCase.id, runtimeCase]));
@@ -133,7 +137,7 @@ test("browser evidence must cover every route and viewport instead of passing em
 test("approval and deployment evidence must match declared labels and semantic formats", () => {
   const approval = suite.hardGates.find((gate) => gate.id === "LR-HG-EXACT-SHA");
   const deployment = suite.hardGates.find((gate) => gate.id === "LR-HG-PRODUCTION-SMOKE");
-  const commit = "a".repeat(40);
+  const commit = candidateCommit;
   const approvalErrors = validateGateEvidence(approval, [
     { label: "approved commit SHA", value: "passed" },
     { label: "staging URL", value: "https://example.com" },
@@ -152,7 +156,7 @@ test("approval and deployment evidence must match declared labels and semantic f
   assert.match(deploymentErrors, /inspected robots and sitemap bodies/);
 
   const failedSmokeErrors = validateGateEvidence(deployment, [
-    { label: "HTTP observations", value: JSON.stringify({ apex: 500, www: 500, tls: false, health: 503, canonicals: false, openGraph: false }) },
+    { label: "HTTP observations", value: JSON.stringify({ apex: 500, www: 500, tls: false, health: 503, resume: 404, canonicals: false, openGraph: false, candidateCommit: commit, deploymentIdentifier: "deploy:test-failure" }) },
     { label: "resume SHA-256", value: "b".repeat(64) },
     { label: "robots and sitemap bodies", value: JSON.stringify({ robots: "User-agent: *\nDisallow: /", sitemap: "<urlset><url><loc>https://example.com/</loc></url></urlset>" }) }
   ], commit).join("\n");
@@ -160,6 +164,7 @@ test("approval and deployment evidence must match declared labels and semantic f
   assert.match(failedSmokeErrors, /permanent www redirect/);
   assert.match(failedSmokeErrors, /confirm TLS/);
   assert.match(failedSmokeErrors, /200 health response/);
+  assert.match(failedSmokeErrors, /200 resume response/);
   assert.match(failedSmokeErrors, /confirm canonical URLs/);
   assert.match(failedSmokeErrors, /confirm Open Graph metadata/);
   assert.match(failedSmokeErrors, /production crawling allowed/);
@@ -171,10 +176,17 @@ test("approval and deployment evidence must match declared labels and semantic f
     { label: "production image or deployment identifier", value: "sha256:0123456789abcdef" }
   ], commit), []);
   assert.deepEqual(validateGateEvidence(deployment, [
-    { label: "HTTP observations", value: JSON.stringify({ apex: 200, www: 308, tls: true, health: 200, canonicals: "verified", openGraph: "verified" }) },
-    { label: "resume SHA-256", value: "b".repeat(64) },
+    { label: "HTTP observations", value: JSON.stringify({ apex: 200, www: 308, tls: true, health: 200, resume: 200, canonicals: "verified", openGraph: "verified", candidateCommit: commit, deploymentIdentifier: "sha256:0123456789abcdef" }) },
+    { label: "resume SHA-256", value: resumeDigest },
     { label: "robots and sitemap bodies", value: JSON.stringify({ robots: "User-agent: *\nAllow: /", sitemap: "<urlset><url><loc>https://jamieburk.art/</loc></url></urlset>" }) }
   ], commit), []);
+
+  const wildcardBlock = validateGateEvidence(deployment, [
+    { label: "HTTP observations", value: JSON.stringify({ apex: 200, www: 308, tls: true, health: 200, resume: 200, canonicals: true, openGraph: true, candidateCommit: commit, deploymentIdentifier: "sha256:0123456789abcdef" }) },
+    { label: "resume SHA-256", value: resumeDigest },
+    { label: "robots and sitemap bodies", value: JSON.stringify({ robots: "User-agent: *\nAllow: /\nDisallow: /*", sitemap: "<urlset><url><loc>https://jamieburk.art/</loc></url></urlset>" }) }
+  ], commit).join("\n");
+  assert.match(wildcardBlock, /production crawling allowed/);
 });
 
 test("a passing scorecard reaches the deterministic target", () => {
@@ -301,7 +313,27 @@ test("reopen review covers every trigger and invoked overrides carry provenance"
   });
   const failures = validateDecisionRecord(suite, changed).join("\n");
   assert.match(failures, /review every reopen trigger exactly once/);
-  assert.match(failures, /override 1 needs human authority, rationale, evidence, and boundary changes/);
+  assert.match(failures, /override 1 needs a governed human authority, rationale, substantive evidence, and substantive boundary changes/);
+});
+
+test("override records cannot grant authority to a model or hide empty evidence and boundary changes", () => {
+  const changed = makeDecisionRecord({
+    overrides: [{
+      humanAuthority: "automated model reviewer",
+      rationale: "Override the public boundary.",
+      evidence: ["   "],
+      boundaryChanges: [""]
+    }]
+  });
+  assert.match(validateDecisionRecord(suite, changed).join("\n"), /governed human authority/);
+
+  changed.overrides[0] = {
+    humanAuthority: suite.lensPolicy.sack.authorities.find((item) => item.action === "override-model-judgment").authority,
+    rationale: "A named human reviewer recorded why the model judgment changed.",
+    evidence: ["Reviewed public source and consent record."],
+    boundaryChanges: ["Return the claim to human review before publication."]
+  };
+  assert.deepEqual(validateDecisionRecord(suite, changed), []);
 });
 
 test("authority records cannot substitute a model or generic reviewer for policy owners", () => {

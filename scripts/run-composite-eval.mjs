@@ -4,6 +4,7 @@ import { execFileSync, spawnSync } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import {
+  captureCandidateSnapshot,
   contractDigest,
   governedInputDigest,
   governedInputDigestAtCommit,
@@ -13,6 +14,7 @@ import {
   repoRoot,
   runRecordDigest,
   validateCompositeRunRecord,
+  validateCandidateSnapshot,
   validateRunSequence
 } from "./lib/eval-contract.mjs";
 import { loadLaunchEvalSuite } from "./lib/launch-evals.mjs";
@@ -23,6 +25,7 @@ const commit = git("rev-parse", "HEAD");
 const tree = git("rev-parse", "HEAD^{tree}");
 const currentDigest = governedInputDigest(contract);
 const committedDigest = governedInputDigestAtCommit(commit, contract);
+const startingSnapshot = captureCandidateSnapshot(contract);
 
 if (currentDigest !== committedDigest) {
   throw new Error("Governed inputs differ from HEAD. Commit the candidate before running composite evals.");
@@ -65,6 +68,11 @@ for (const [index, command] of contract.requiredCommands.entries()) {
     reviewOutputDigest: createHash("sha256").update(reviewOutput).digest("hex"),
     reviewOutputPath
   });
+}
+
+const candidateDrift = validateCandidateSnapshot(startingSnapshot, contract);
+if (candidateDrift.length) {
+  throw new Error(`Refusing to certify a candidate that changed during command execution:\n${candidateDrift.join("\n")}`);
 }
 
 const launchSuite = loadLaunchEvalSuite();
