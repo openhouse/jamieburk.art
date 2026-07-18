@@ -54,8 +54,10 @@ prove human identity. External human review remains outside model authority.
 6. Obtain a fresh judgment without showing prior scores.
 7. Keep the change only if it improves the objective without weakening safety,
    source boundaries, collective credit, accessibility, or reader clarity.
-8. Repeat until two deterministic passes and two independent holdouts accept the
-   unchanged governed candidate.
+8. Repeat until two consecutive deterministic passes are followed by two
+   independent holdouts that accept the unchanged governed candidate. Holdouts
+   recorded before or between the qualifying deterministic passes cannot
+   satisfy the stop condition.
 
 Run `npm run eval:run` only after committing a frozen candidate. Give each
 holdout exactly one governed prompt from `evals/_shared/`, keep prior scores and

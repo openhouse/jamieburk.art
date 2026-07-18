@@ -1,3 +1,4 @@
+import { existsSync, realpathSync } from "node:fs";
 import path from "node:path";
 
 const windowsAbsolutePath = /^[A-Za-z]:[\\/]/;
@@ -21,8 +22,8 @@ export function resolveRepoEvidencePath(repoRoot, candidate, allowedRoots) {
   }
 
   const normalizedRoots = allowedRoots.map((root) => path.posix.normalize(root).replace(/\/$/, ""));
-  const allowed = normalizedRoots.some((root) => normalized === root || normalized.startsWith(`${root}/`));
-  if (!allowed) {
+  const matchedRoot = normalizedRoots.find((root) => normalized === root || normalized.startsWith(`${root}/`));
+  if (!matchedRoot) {
     return { error: `evidence path is outside approved roots (${normalizedRoots.join(", ")}): ${candidate}` };
   }
 
@@ -30,6 +31,18 @@ export function resolveRepoEvidencePath(repoRoot, candidate, allowedRoots) {
   const relative = path.relative(repoRoot, absolute);
   if (relative === ".." || relative.startsWith(`..${path.sep}`) || path.isAbsolute(relative)) {
     return { error: `evidence path escapes the repository: ${candidate}` };
+  }
+  if (existsSync(absolute)) {
+    try {
+      const realCandidate = realpathSync(absolute);
+      const realApprovedRoot = realpathSync(path.resolve(repoRoot, matchedRoot));
+      const realRelative = path.relative(realApprovedRoot, realCandidate);
+      if (realRelative === ".." || realRelative.startsWith(`..${path.sep}`) || path.isAbsolute(realRelative)) {
+        return { error: `evidence path resolves outside its approved root: ${candidate}` };
+      }
+    } catch {
+      return { error: `evidence path cannot be resolved safely: ${candidate}` };
+    }
   }
   return { path: absolute, relative: normalized };
 }

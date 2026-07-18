@@ -2,15 +2,20 @@ const defaultIgnorables = /[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u1
 const forwardSlashVariants = /[\u2044\u2215\u29F8\uFF0F]/g;
 const reverseSlashVariants = /[\u2216\u29F5\uFF3C]/g;
 const trackingParameter = /^(?:utm_.+|fbclid|gclid|dclid|msclkid|mc_cid|mc_eid)$/i;
+const maxDecodePasses = 64;
 
-export function normalizeSecurityText(value) {
-  let normalized = JSON.stringify(value)
+function normalizeCharacters(value) {
+  return value
     .normalize("NFKC")
     .replace(defaultIgnorables, "")
     .replace(forwardSlashVariants, "/")
     .replace(reverseSlashVariants, "\\");
+}
 
-  for (let attempt = 0; attempt < 8; attempt += 1) {
+export function normalizeSecurityText(value) {
+  let normalized = normalizeCharacters(JSON.stringify(value));
+
+  for (let attempt = 0; attempt < maxDecodePasses; attempt += 1) {
     let decoded;
     try {
       decoded = decodeURIComponent(normalized);
@@ -18,24 +23,25 @@ export function normalizeSecurityText(value) {
       break;
     }
     if (decoded === normalized) break;
-    normalized = decoded
-      .normalize("NFKC")
-      .replace(defaultIgnorables, "")
-      .replace(forwardSlashVariants, "/")
-      .replace(reverseSlashVariants, "\\");
+    normalized = normalizeCharacters(decoded);
+    if (attempt === maxDecodePasses - 1) throw new Error("security normalization exceeded the recursive decode limit");
   }
 
   return normalized.replaceAll("\\", "/");
 }
 
 export function containsPrivatePath(value) {
-  const normalized = normalizeSecurityText(value);
-  return /(?:^|["'\s:])(?:~\/|\/+Users\/|\/+Volumes\/|\/+private\/(?:tmp|var)\/|\/+tmp\/|\/+var\/folders\/|[A-Za-z]:\/+Users\/|file:\/+)/i.test(normalized);
+  try {
+    const normalized = normalizeSecurityText(value);
+    return /(?:^|["'\s:])(?:~\/|\/+Users\/|\/+Volumes\/|\/+private\/(?:tmp|var)\/|\/+tmp\/|\/+var\/folders\/|[A-Za-z]:\/+Users\/|file:\/+)/i.test(normalized);
+  } catch {
+    return true;
+  }
 }
 
 function decodeUrlInput(value) {
   let normalized = String(value).normalize("NFKC").replace(defaultIgnorables, "").trim();
-  for (let attempt = 0; attempt < 8; attempt += 1) {
+  for (let attempt = 0; attempt < maxDecodePasses; attempt += 1) {
     try {
       return new URL(normalized);
     } catch {

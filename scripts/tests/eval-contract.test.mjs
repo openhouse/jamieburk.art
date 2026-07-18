@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { readFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
+import { tmpdir } from "node:os";
 import path from "node:path";
 import {
   contractDigest,
@@ -17,6 +18,7 @@ import {
   validateEvalContract,
   validateRunSequence
 } from "../lib/eval-contract.mjs";
+import { resolveRepoEvidencePath } from "../lib/repo-evidence-path.mjs";
 
 const contract = loadEvalContract();
 const digest = contractDigest(contract);
@@ -152,6 +154,21 @@ test("deterministic evidence paths cannot escape approved repository roots", () 
   assert.match(errors, /evidence path escapes the repository/);
 });
 
+test("evidence paths cannot escape approved roots through symlinks", () => {
+  const sandbox = mkdtempSync(path.join(tmpdir(), "jamie-evidence-root-"));
+  const external = mkdtempSync(path.join(tmpdir(), "jamie-evidence-external-"));
+  try {
+    mkdirSync(path.join(sandbox, "approved"));
+    writeFileSync(path.join(external, "private.log"), "private evidence\n");
+    symlinkSync(path.join(external, "private.log"), path.join(sandbox, "approved", "capture.log"));
+    const result = resolveRepoEvidencePath(sandbox, "approved/capture.log", ["approved"]);
+    assert.match(result.error, /resolves outside its approved root/);
+  } finally {
+    rmSync(sandbox, { recursive: true, force: true });
+    rmSync(external, { recursive: true, force: true });
+  }
+});
+
 test("deterministic records require complete decision governance under the current contract", () => {
   const changed = run("missing-deterministic-decision");
   delete changed.decisionRecord;
@@ -277,6 +294,30 @@ test("two deterministic passes and two unchanged independent holdouts meet the r
     run("hold-2", "holdout", { label: "holdout-b", sessionId: "22222222-2222-4222-8222-222222222222", promptPath: "evals/_shared/holdout-b.md" })
   ]);
   assert.equal(evaluateCompositeStopCondition(records, contract).acceptedForReview, true);
+});
+
+test("holdouts recorded before deterministic qualification cannot certify", () => {
+  const records = sequence([
+    run("hold-1", "holdout", { label: "holdout-a", sessionId: "11111111-1111-4111-8111-111111111111" }),
+    run("hold-2", "holdout", { label: "holdout-b", sessionId: "22222222-2222-4222-8222-222222222222", promptPath: "evals/_shared/holdout-b.md" }),
+    run("det-1"),
+    run("det-2")
+  ]);
+  const result = evaluateCompositeStopCondition(records, contract);
+  assert.equal(result.phaseOrderValid, false);
+  assert.equal(result.acceptedForReview, false);
+});
+
+test("a deterministic pass interleaved with holdouts cannot certify", () => {
+  const records = sequence([
+    run("det-1"),
+    run("hold-1", "holdout", { label: "holdout-a", sessionId: "11111111-1111-4111-8111-111111111111" }),
+    run("det-2"),
+    run("hold-2", "holdout", { label: "holdout-b", sessionId: "22222222-2222-4222-8222-222222222222", promptPath: "evals/_shared/holdout-b.md" })
+  ]);
+  const result = evaluateCompositeStopCondition(records, contract);
+  assert.equal(result.phaseOrderValid, false);
+  assert.equal(result.acceptedForReview, false);
 });
 
 test("a failed deterministic run resets the consecutive pass streak", () => {

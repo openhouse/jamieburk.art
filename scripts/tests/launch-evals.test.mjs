@@ -151,6 +151,20 @@ test("approval and deployment evidence must match declared labels and semantic f
   assert.match(deploymentErrors, /must be a SHA-256 digest/);
   assert.match(deploymentErrors, /inspected robots and sitemap bodies/);
 
+  const failedSmokeErrors = validateGateEvidence(deployment, [
+    { label: "HTTP observations", value: JSON.stringify({ apex: 500, www: 500, tls: false, health: 503, canonicals: false, openGraph: false }) },
+    { label: "resume SHA-256", value: "b".repeat(64) },
+    { label: "robots and sitemap bodies", value: JSON.stringify({ robots: "User-agent: *\nDisallow: /", sitemap: "<urlset><url><loc>https://example.com/</loc></url></urlset>" }) }
+  ], commit).join("\n");
+  assert.match(failedSmokeErrors, /200 apex response/);
+  assert.match(failedSmokeErrors, /permanent www redirect/);
+  assert.match(failedSmokeErrors, /confirm TLS/);
+  assert.match(failedSmokeErrors, /200 health response/);
+  assert.match(failedSmokeErrors, /confirm canonical URLs/);
+  assert.match(failedSmokeErrors, /confirm Open Graph metadata/);
+  assert.match(failedSmokeErrors, /production crawling allowed/);
+  assert.match(failedSmokeErrors, /apex production URL/);
+
   assert.deepEqual(validateGateEvidence(approval, [
     { label: "approved commit SHA", value: commit },
     { label: "staging URL", value: "https://staging.jamieburk.art/work" },
@@ -159,7 +173,7 @@ test("approval and deployment evidence must match declared labels and semantic f
   assert.deepEqual(validateGateEvidence(deployment, [
     { label: "HTTP observations", value: JSON.stringify({ apex: 200, www: 308, tls: true, health: 200, canonicals: "verified", openGraph: "verified" }) },
     { label: "resume SHA-256", value: "b".repeat(64) },
-    { label: "robots and sitemap bodies", value: JSON.stringify({ robots: "User-agent: *\\nAllow: /", sitemap: "<urlset></urlset>" }) }
+    { label: "robots and sitemap bodies", value: JSON.stringify({ robots: "User-agent: *\nAllow: /", sitemap: "<urlset><url><loc>https://jamieburk.art/</loc></url></urlset>" }) }
   ], commit), []);
 });
 

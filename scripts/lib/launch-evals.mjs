@@ -118,12 +118,26 @@ export function validateGateEvidence(gate, evidence, candidateCommit) {
       const keys = ["apex", "www", "tls", "health", "canonicals", "openGraph"];
       if (!observations || keys.some((key) => observations[key] === undefined || observations[key] === "")) {
         errors.push(`${gate.id}/${label} must be JSON covering apex, www, TLS, health, canonicals, and Open Graph`);
+      } else {
+        if (observations.apex !== 200) errors.push(`${gate.id}/${label} must record a 200 apex response`);
+        if (![301, 308].includes(observations.www)) errors.push(`${gate.id}/${label} must record a permanent www redirect`);
+        if (observations.tls !== true) errors.push(`${gate.id}/${label} must confirm TLS`);
+        if (observations.health !== 200) errors.push(`${gate.id}/${label} must record a 200 health response`);
+        if (![true, "verified"].includes(observations.canonicals)) errors.push(`${gate.id}/${label} must confirm canonical URLs`);
+        if (![true, "verified"].includes(observations.openGraph)) errors.push(`${gate.id}/${label} must confirm Open Graph metadata`);
       }
     }
     if (label === "robots and sitemap bodies") {
       const bodies = parseJsonObject(value);
       if (!bodies || typeof bodies.robots !== "string" || !/user-agent/i.test(bodies.robots) || typeof bodies.sitemap !== "string" || !/<urlset/i.test(bodies.sitemap)) {
         errors.push(`${gate.id}/${label} must be JSON containing inspected robots and sitemap bodies`);
+      } else {
+        if (!/^\s*allow:\s*\/\s*$/im.test(bodies.robots) || /^\s*disallow:\s*\/\s*$/im.test(bodies.robots)) {
+          errors.push(`${gate.id}/${label} must show production crawling allowed at the root`);
+        }
+        if (!/<loc>\s*https:\/\/jamieburk\.art(?:\/|<)/i.test(bodies.sitemap)) {
+          errors.push(`${gate.id}/${label} must show an apex production URL in the sitemap`);
+        }
       }
     }
   }

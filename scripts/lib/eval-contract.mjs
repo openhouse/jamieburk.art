@@ -344,13 +344,21 @@ export function evaluateCompositeStopCondition(records, contract = loadEvalContr
   const matching = records.filter(({ record }) => record.contract?.digest === currentContractDigest && record.candidate?.governedInputDigest === currentInputDigest);
   const lastRejection = matching.findLastIndex(({ record }) => record.decision?.status !== "accepted-for-review");
   const current = matching.slice(lastRejection + 1);
-  const deterministicRuns = current.filter(({ record }) => record.judge?.class === "deterministic");
+  const firstHoldoutIndex = current.findIndex(({ record }) => record.judge?.class === "holdout");
+  const deterministicPhase = firstHoldoutIndex === -1 ? current : current.slice(0, firstHoldoutIndex);
+  const holdoutPhase = firstHoldoutIndex === -1 ? [] : current.slice(firstHoldoutIndex);
+  const phaseOrderValid =
+    deterministicPhase.every(({ record }) => record.judge?.class === "deterministic") &&
+    holdoutPhase.every(({ record }) => record.judge?.class === "holdout");
+  const deterministicRuns = deterministicPhase.filter(({ record }) => record.judge?.class === "deterministic");
   let consecutiveDeterministicPasses = 0;
   for (const { record } of deterministicRuns) {
     if (record.commands?.every((command) => command.exitCode === 0) && record.decision?.status === "accepted-for-review") consecutiveDeterministicPasses += 1;
     else consecutiveDeterministicPasses = 0;
   }
-  const holdouts = current.filter(({ record }) => record.judge?.class === "holdout" && record.judge.reviewerClass === "model-context" && record.judge.independent === true && record.judge.priorScoresVisible === false && record.decision?.status === "accepted-for-review");
+  const holdouts = phaseOrderValid
+    ? holdoutPhase.filter(({ record }) => record.judge.reviewerClass === "model-context" && record.judge.independent === true && record.judge.priorScoresVisible === false && record.decision?.status === "accepted-for-review")
+    : [];
   const certifying = [...deterministicRuns.slice(-consecutiveDeterministicPasses), ...holdouts];
   const identities = new Set(certifying.map(({ record }) => [record.candidate.commit, record.candidate.tree, record.candidate.governedInputDigest].join(":")));
   const sessions = new Set(holdouts.map(({ record }) => record.judge.sessionId?.trim().toLocaleLowerCase()));
@@ -362,8 +370,10 @@ export function evaluateCompositeStopCondition(records, contract = loadEvalContr
     independentHoldouts: holdouts.length,
     unchangedCandidate: identities.size === 1,
     distinctHoldoutJudges: Math.min(sessions.size, labels.size),
+    phaseOrderValid,
     externalGatesOpen: externalGatesExplicit,
     acceptedForReview:
+      phaseOrderValid &&
       consecutiveDeterministicPasses >= contract.stopCondition.consecutiveDeterministicPasses &&
       holdouts.length >= contract.stopCondition.independentHoldouts &&
       identities.size === 1 && sessions.size >= contract.stopCondition.independentHoldouts &&

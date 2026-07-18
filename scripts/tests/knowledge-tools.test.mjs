@@ -35,6 +35,12 @@ test("private paths cannot enter an intake receipt", () => {
   assert.equal(containsPrivatePath({ note: "~/private.txt" }), true);
   assert.equal(containsPrivatePath({ note: "file%3A%2F%2F%2FUsers%2Fjamie%2Fprivate.txt" }), true);
   assert.equal(containsPrivatePath({ note: "file%25253A%25252F%25252F%25252FUsers%25252Fjamie%25252Fprivate.txt" }), true);
+  let nineLayers = "/Users/jamie/private.txt";
+  for (let index = 0; index < 9; index += 1) nineLayers = encodeURIComponent(nineLayers);
+  assert.equal(containsPrivatePath({ note: nineLayers }), true);
+  let overLimit = "/Users/jamie/private.txt";
+  for (let index = 0; index < 65; index += 1) overLimit = encodeURIComponent(overLimit);
+  assert.equal(containsPrivatePath({ note: overLimit }), true);
   assert.equal(containsPrivatePath({ note: "∕Users∕jamie∕private.txt" }), true);
   assert.equal(containsPrivatePath({ note: "⁄Volumes⁄Archive⁄private.txt" }), true);
   assert.equal(containsPrivatePath({ note: "\\\\Users\\jamie\\private.txt" }), true);
