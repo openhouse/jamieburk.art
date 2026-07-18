@@ -7,6 +7,31 @@ import { fileURLToPath } from "node:url";
 import { parseNamedArgs, queryKnowledgeBank } from "./lib/knowledge-tools.mjs";
 
 const args = parseNamedArgs(process.argv.slice(2));
+const allowedArguments = new Set([
+  "project",
+  "entity",
+  "date",
+  "evidence-role",
+  "claim-status",
+  "surface",
+  "destination",
+  "audience",
+  "purpose",
+  "publication-safe",
+  "internal"
+]);
+const unknownArgument = Object.keys(args).find(
+  (key) => !allowedArguments.has(key)
+);
+if (unknownArgument) throw new Error(`Unknown argument --${unknownArgument}`);
+for (const flag of ["publication-safe", "internal"]) {
+  if (args[flag] !== undefined && args[flag] !== true) {
+    throw new Error(`--${flag} is a flag and does not accept a value`);
+  }
+}
+if (args["publication-safe"] && args.internal) {
+  throw new Error("Choose either --publication-safe or --internal, not both");
+}
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const routeBindings = JSON.parse(
   readFileSync(
@@ -24,7 +49,7 @@ const result = queryKnowledgeBank(knowledgeBank, {
   audience: args.audience,
   purpose: args.purpose,
   routeBindings,
-  publicationSafe: args["publication-safe"] === true || args["publication-safe"] === "true"
+  publicationSafe: args.internal !== true
 });
 
 console.log(JSON.stringify(result, null, 2));

@@ -116,6 +116,23 @@ test("intake refuses common private content", () => {
     }),
     /medical record|government identifier|credential|street address/
   );
+  for (const summary of [
+    `Participant Alice Smith is ${"HIV-" + "positive"} and asked for privacy.`,
+    `Participant passport number: ${"1234" + "56789"} must remain private.`,
+    `Private credential ${"github_pat_" + "A".repeat(30)} must not be published.`,
+    `Participant receives mail at ${"PO " + "Box 1234"} and asked for privacy.`
+  ]) {
+    assert.throws(
+      () => createLeadReceipt({
+        title: "Sensitive participant record",
+        kind: "document",
+        project: "callnyc",
+        receivedAt: "2026-07-16",
+        summary
+      }),
+      /unapproved personal identity|health status|government identifier|credential|street address/
+    );
+  }
   assert.throws(
     () => createLeadReceipt({
       title: "x",
@@ -125,6 +142,16 @@ test("intake refuses common private content", () => {
       summary: "y"
     }),
     /at least 8 characters|at least 20 characters/
+  );
+  assert.throws(
+    () => createLeadReceipt({
+      title: "repeat repeat",
+      kind: "memory",
+      project: "callnyc",
+      receivedAt: "2026-07-16",
+      summary: "repeat repeat repeat repeat repeat repeat repeat repeat"
+    }),
+    /distinct words/
   );
 });
 
@@ -185,7 +212,12 @@ test("public-safe queries remove protected source details and internal excerpts"
     project: "example",
     surface: "/work/example",
     publicationSafe: true,
-    routeBindings: [{ path: "/work/example", audience: "Hiring readers", purpose: "Show evidence" }]
+    routeBindings: [{
+      path: "/work/example",
+      audience: "Hiring readers",
+      purpose: "Show evidence",
+      claimIds: ["CLM-ONE"]
+    }]
   });
   assert.deepEqual(result.sources.map((source) => source.id), ["SRC-PUBLIC"]);
   assert.deepEqual(result.intakeItems.map((item) => item.id), ["LEAD-ONE"]);
@@ -260,6 +292,80 @@ test("publication-safe queries fail closed for unbound surfaces and project scop
     projectIds: ["example"],
     publicationStatus: "projected"
   });
+});
+
+test("surface queries obey claim manifests and return only that surface projection", () => {
+  const bank = {
+    intakeItems: [],
+    sources: [{ id: "SRC-ONE", title: "Public source", visibility: "public" }],
+    observations: [],
+    claims: [{
+      id: "CLM-ONE",
+      project: "example",
+      status: "confirmed",
+      projections: [
+        { status: "active", text: "Work projection", surfaces: ["/work/example"] },
+        { status: "active", text: "Resume projection", surfaces: ["/resume"] }
+      ],
+      evidence: [{ sourceId: "SRC-ONE" }],
+      boundaries: [],
+      antiClaims: []
+    }],
+    researchInquiries: []
+  };
+  const blocked = queryKnowledgeBank(bank, {
+    surface: "/work/example",
+    publicationSafe: true,
+    routeBindings: [{
+      path: "/work/example",
+      audience: "Hiring readers reviewing project evidence",
+      purpose: "Show project evidence with bounded context",
+      claimIds: []
+    }]
+  });
+  assert.deepEqual(blocked.claims, []);
+
+  const allowed = queryKnowledgeBank(bank, {
+    surface: "/work/example",
+    publicationSafe: true,
+    routeBindings: [{
+      path: "/work/example",
+      audience: "Hiring readers reviewing project evidence",
+      purpose: "Show project evidence with bounded context",
+      claimIds: ["CLM-ONE"]
+    }]
+  });
+  assert.deepEqual(
+    allowed.claims[0].projections.map((projection) => projection.text),
+    ["Work projection"]
+  );
+  assert.deepEqual(allowed.claims[0].projections[0].surfaces, ["/work/example"]);
+});
+
+test("query CLI is publication-safe by default and rejects ambiguous flags", () => {
+  const script = path.join(repoRoot, "scripts/query-knowledge-lifecycle.mjs");
+  for (const args of [["--bogus"], ["--publication-safe", "yes"]]) {
+    const result = spawnSync(process.execPath, [script, ...args], {
+      cwd: repoRoot,
+      encoding: "utf8"
+    });
+    assert.notEqual(result.status, 0);
+  }
+  const safe = spawnSync(process.execPath, [script, "--project", "callnyc"], {
+    cwd: repoRoot,
+    encoding: "utf8"
+  });
+  assert.equal(safe.status, 0);
+  const output = JSON.parse(safe.stdout);
+  assert.equal(output.filters.publicationSafe, true);
+  assert.equal(
+    output.claims.some((claim) => "internalClaim" in claim),
+    false
+  );
+  assert.equal(
+    output.sources.some((source) => !["public", "public-metadata-only"].includes(source.visibility)),
+    false
+  );
 });
 
 test("publication-safe source output is an allowlist and removes signed URLs", () => {

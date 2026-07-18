@@ -44,3 +44,8 @@ than being silently replaced.
 
 The rejected-candidate record is retained in
 `docs/qa/composite-integration/adversarial-review-history.md`.
+
+The rubric also pins SHA-256 contracts for the approved collective-credit and
+donor policies, query/public-safety implementation, Next route configuration,
+root command graph, and quality evaluators. Updating one is a governed rubric
+change, not routine score maintenance.

@@ -904,7 +904,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.",
+          "text": "In 2016, after the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [

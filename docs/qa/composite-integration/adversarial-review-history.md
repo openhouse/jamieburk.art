@@ -1,6 +1,6 @@
 # Adversarial Review History
 
-The composite integration was not permitted to certify itself. Three clean,
+The composite integration was not permitted to certify itself. Four clean,
 read-only qualitative reviews attacked successive candidate commits before any
 evidence-only commit was accepted. Each review reproduced the candidate
 identity, ran relevant checks, constructed adversarial mutations, and returned
@@ -56,6 +56,27 @@ bootstrap runs were not committed as release evidence.
   policy, discover routes from the App Router, require exact proof-to-claim
   route bindings, execute and structurally validate underlying evidence gates,
   narrow evidence exclusions, and make CLI write intent unambiguous.
+
+## Review 4
+
+- Candidate: `8b14fad7d64a81087c17e6b98f9fcaaf411777bd`
+- Fingerprint:
+  `8937571f92aa9b2920187901ba8476d990300b0dcbc4b7bd255c5a2653de29fe`
+- Verdict: `FAIL`
+- Principal findings: invalid query flags could silently return internal data;
+  sensitive health, identifier, credential, and address variants passed intake;
+  non-TSX Next pages escaped route discovery; proof selection could bypass
+  surface authorization; citation-required claims could lack renderable
+  evidence; route queries returned projections from other surfaces; policy and
+  evidence semantics remained lexically gameable; stored scorecards were not
+  compared with fresh evaluator output; and prior run files could be rewritten.
+- Response: make publication-safe query behavior the default and raw output
+  explicit, reject ambiguous flags and additional sensitive classes, bind
+  route query output to route manifests, discover every configured page
+  extension, forbid proof selection on unclassified surfaces, require
+  renderable public evidence for required citations, version policy and eval
+  content with SHA-256 contracts, recompute holdout results, and permit
+  evidence commits to add but never modify run files.
 
 ## Acceptance Rule
 

@@ -47,11 +47,15 @@ const blockedPublicRoutes = [
 const semanticRiskPatterns = [
   {
     id: "sole-causality",
-    pattern: /\b(single-handedly|solely caused|alone caused|personally caused|made (?:the )?law happen)\b/i
+    pattern: /\b(single-handedly|solely caused|alone caused|personally caused|made (?:the )?law happen|exclusively responsible|solely responsible|responsible for every collective|exclusive credit)\b/i
   },
   {
     id: "sole-collective-authorship",
-    pattern: /\b(alone founded|sole founder|authored every|organized every)\b/i
+    pattern: /\b(alone founded|sole founder|authored every|organized every|exclusive authorship|exclusively authored|sole authorship)\b/i
+  },
+  {
+    id: "coercive-credit",
+    pattern: /\b(do not question|must not question|unquestioned authorship|indisputable authorship|must accept (?:his|Jamie's) (?:authorship|credit))\b/i
   },
   {
     id: "appropriation-inflation",
@@ -72,6 +76,23 @@ const candidatePathExclusions = [
   /^reports\/generated\/composite-integration-scorecard\.json$/
 ];
 
+const frozenContractPaths = [
+  "package.json",
+  "apps/www/next.config.ts",
+  "evals/composite-integration/donor-dispositions.json",
+  "docs/knowledge-bank/policies/collective-credit-policy.json",
+  "scripts/lib/knowledge-tools.mjs",
+  "scripts/query-knowledge-lifecycle.mjs",
+  "scripts/check-knowledge-bank.mjs",
+  "scripts/check-public-safety.mjs",
+  "scripts/evals-chad-lens.mjs",
+  "scripts/evals-margaret-morse-lens.mjs",
+  "scripts/evals-warren-sack-lens.mjs",
+  "scripts/evals-hiring-comprehension.mjs",
+  "scripts/evals-present-tense-offer.mjs",
+  "scripts/evals-visual-artifact-proof.mjs"
+];
+
 function absolute(root, relativePath) {
   return path.join(root, relativePath);
 }
@@ -80,6 +101,45 @@ function readJson(root, relativePath) {
   const file = absolute(root, relativePath);
   if (!existsSync(file)) return null;
   return JSON.parse(readFileSync(file, "utf8"));
+}
+
+function sha256(value) {
+  return createHash("sha256").update(value).digest("hex");
+}
+
+function validateFrozenContract(root, rubric, relativePath) {
+  const expected = rubric?.contracts?.files?.[relativePath];
+  if (!/^[a-f0-9]{64}$/.test(expected ?? "")) {
+    return [`Rubric is missing the SHA-256 contract for ${relativePath}`];
+  }
+  const file = absolute(root, relativePath);
+  if (!existsSync(file)) return [`Contract file is missing: ${relativePath}`];
+  const actual = sha256(readFileSync(file));
+  return actual === expected
+    ? []
+    : [`${relativePath} changed without an approved rubric contract update`];
+}
+
+function evidenceSemanticsDigest(bank) {
+  return sha256(JSON.stringify({
+    sources: bank.sources.map(({ id, doesNotEstablish }) => ({
+      id,
+      doesNotEstablish
+    })),
+    claims: bank.claims.map(({ id, evidence }) => ({
+      id,
+      evidence: evidence.map((item) => ({
+        sourceId: item.sourceId,
+        relationship: item.relationship,
+        supports: item.supports,
+        renderCitation: item.renderCitation
+      }))
+    }))
+  }));
+}
+
+function correctionDigest(bank) {
+  return sha256(JSON.stringify(bank.corrections));
 }
 
 function isCandidatePath(relativePath) {
@@ -163,14 +223,17 @@ function substantive(value, { length = 20, words = 5 } = {}) {
   );
 }
 
-function discoverPublicRoutes(root, works = workItems) {
+export function discoverPublicRoutes(root, works = workItems) {
   const appRoot = absolute(root, "apps/www/src/app");
   const pageFiles = [];
   const visit = (directory) => {
     for (const entry of readdirSync(directory, { withFileTypes: true })) {
       const entryPath = path.join(directory, entry.name);
       if (entry.isDirectory()) visit(entryPath);
-      if (entry.isFile() && entry.name === "page.tsx") {
+      if (
+        entry.isFile() &&
+        /^page\.(?:js|jsx|md|mdx|ts|tsx)$/.test(entry.name)
+      ) {
         pageFiles.push(path.relative(root, entryPath));
       }
     }
@@ -215,6 +278,13 @@ export function validateDonorDispositions(dispositions) {
   if (!dispositions) return ["donor-dispositions.json is missing"];
   if (!Array.isArray(dispositions.donors)) {
     return ["donor-dispositions.json must contain a donors array"];
+  }
+  const canonical = readJson(
+    repoRoot,
+    "evals/composite-integration/donor-dispositions.json"
+  );
+  if (JSON.stringify(dispositions) !== JSON.stringify(canonical)) {
+    findings.push("Donor dispositions differ from the approved canonical ledger");
   }
 
   const branches = dispositions.donors.map((item) => item.branch);
@@ -271,6 +341,13 @@ export function validateCollectiveCreditPolicy(
   if (!Array.isArray(policy.projects)) {
     return ["collective-credit policy must contain projects"];
   }
+  const canonical = readJson(
+    repoRoot,
+    "docs/knowledge-bank/policies/collective-credit-policy.json"
+  );
+  if (JSON.stringify(policy) !== JSON.stringify(canonical)) {
+    findings.push("Collective-credit policy differs from the approved canonical policy");
+  }
 
   const projectById = new Map(policy.projects.map((item) => [item.id, item]));
   if (projectById.size !== policy.projects.length) {
@@ -323,9 +400,7 @@ export function validateCollectiveCreditPolicy(
         `${projectId} publicRule must state Jamie's bounded credit relationship`
       );
     }
-    if (
-      detectSemanticRisks([project.publicRule, ...boundaries].join(" ")).length
-    ) {
+    if (detectSemanticRisks(project.publicRule ?? "").length) {
       findings.push(
         `${projectId} contains prohibited authorship or causality language`
       );
@@ -341,6 +416,15 @@ export function validateCollectiveCreditPolicy(
       findings.push(
         `${projectId} boundaries must express an enforceable limit`
       );
+    }
+    if (
+      boundaries.some((boundary) =>
+        /\b(?:do not question|must not question|unquestioned|indisputable|exclusive(?:ly)? responsible)\b/i.test(
+          boundary
+        )
+      )
+    ) {
+      findings.push(`${projectId} boundaries cannot suppress credit review`);
     }
   }
 
@@ -464,6 +548,9 @@ export function validateSurfaceBindings(
       if (proof && expectedSurface && !proof.surfaces.includes(expectedSurface)) {
         findings.push(`${routePath} selects ${proofId} without ${expectedSurface} approval`);
       }
+    }
+    if (!expectedSurface && (route.proofIds ?? []).length) {
+      findings.push(`${routePath} cannot select proofs without an approved proof surface class`);
     }
     const expectedProofClaimIds = [
       ...new Set(
@@ -590,6 +677,22 @@ export function validateProofTraceability(
         )
       ) {
         findings.push(`${proof.id} references claim ${claimId} without an active projection`);
+      }
+      const citationRequired = claim.projections.some(
+        (projection) =>
+          projection.status === "active" && projection.citationRequired === true
+      );
+      const hasRenderablePublicEvidence = claim.evidence.some((evidence) => {
+        const source = sourceById.get(evidence.sourceId);
+        return (
+          ["public", "public-metadata-only"].includes(source?.visibility) &&
+          evidence.renderCitation === true
+        );
+      });
+      if (citationRequired && !hasRenderablePublicEvidence) {
+        findings.push(
+          `${proof.id} claim ${claimId} requires a citation without renderable public evidence`
+        );
       }
       for (const evidence of claim.evidence) {
         const source = sourceById.get(evidence.sourceId);
@@ -849,6 +952,19 @@ export function validateHoldouts(
     "ls-files",
     "evals/composite-integration/runs"
   ]);
+  const recomputed = evaluateComposite(root, { requireHoldouts: false });
+  const comparableScorecard = (run) => ({
+    rubricId: run.rubricId,
+    rubricVersion: run.rubricVersion,
+    candidateCommit: run.candidateCommit,
+    candidateFingerprint: run.candidateFingerprint,
+    workingTreeClean: run.workingTreeClean,
+    hardGateFailures: run.hardGateFailures,
+    weightedScore: run.weightedScore,
+    criteria: run.criteria,
+    humanGates: run.humanGates,
+    passes: run.passes
+  });
   for (const relativePath of trackedRunFiles) {
     if (!/^evals\/composite-integration\/runs\/[A-Za-z0-9._-]+\.json$/.test(relativePath)) {
       return [`Evidence-only run path is not allowed: ${relativePath}`];
@@ -858,24 +974,47 @@ export function validateHoldouts(
     if (schemaFindings.length) {
       return [`Committed run ${relativePath} is invalid: ${schemaFindings[0]}`];
     }
+    if (
+      JSON.stringify(comparableScorecard(run)) !==
+      JSON.stringify(comparableScorecard(recomputed))
+    ) {
+      return [`Committed run ${relativePath} does not match fresh evaluator output`];
+    }
   }
   const headCommit = gitLines(root, ["rev-parse", "HEAD"])[0];
   if (headCommit !== candidateCommitHash) {
-    const evidenceCommitPaths = gitLines(root, [
+    const evidenceCommitChanges = gitLines(root, [
       "diff",
-      "--name-only",
+      "--name-status",
       `${candidateCommitHash}..${headCommit}`
     ]);
-    const invalidEvidencePath = evidenceCommitPaths.find(
-      (relativePath) =>
-        !/^evals\/composite-integration\/runs\/[A-Za-z0-9._-]+\.json$/.test(
-          relativePath
-        )
+    const invalidEvidenceChange = evidenceCommitChanges.find(
+      (line) => {
+        const [status, relativePath] = line.split("\t");
+        return (
+          status !== "A" ||
+          !/^evals\/composite-integration\/runs\/[A-Za-z0-9._-]+\.json$/.test(
+            relativePath ?? ""
+          )
+        );
+      }
     );
-    if (invalidEvidencePath) {
+    if (invalidEvidenceChange) {
       return [
-        `Evidence-only commits changed candidate input ${invalidEvidencePath}`
+        `Evidence-only commits must only add immutable run JSON: ${invalidEvidenceChange}`
       ];
+    }
+    const rewrittenEvidence = gitLines(root, [
+      "log",
+      "--format=",
+      "--diff-filter=MDR",
+      "--name-only",
+      `${candidateCommitHash}..${headCommit}`,
+      "--",
+      "evals/composite-integration/runs"
+    ]);
+    if (rewrittenEvidence.length) {
+      return [`Evidence history rewrote or removed ${rewrittenEvidence[0]}`];
     }
   }
   const files = readdirSync(runsDirectory)
@@ -995,6 +1134,13 @@ export function evaluateComposite(
     rubricFindings.push("Quality criterion weights must total 100");
   }
   rubricFindings.push(...validateDonorDispositions(dispositions));
+  rubricFindings.push(
+    ...validateFrozenContract(
+      root,
+      rubric,
+      "evals/composite-integration/donor-dispositions.json"
+    )
+  );
   push("CI-001", rubricFindings);
 
   const vocabularyFindings = [];
@@ -1037,6 +1183,16 @@ export function evaluateComposite(
       "scripts/check-public-safety.mjs"
     ])
   );
+  for (const contractPath of [
+    "scripts/lib/knowledge-tools.mjs",
+    "scripts/query-knowledge-lifecycle.mjs",
+    "scripts/check-knowledge-bank.mjs",
+    "scripts/check-public-safety.mjs"
+  ]) {
+    vocabularyFindings.push(
+      ...validateFrozenContract(root, rubric, contractPath)
+    );
+  }
   push("CI-002", vocabularyFindings);
 
   const traceabilityFindings = [];
@@ -1089,6 +1245,24 @@ export function evaluateComposite(
         semanticsFindings.push(`${source.id} has hollow source limitations`);
       }
     }
+    const citationRequired = claim.projections.some(
+      (projection) =>
+        projection.status === "active" && projection.citationRequired === true
+    );
+    if (
+      citationRequired &&
+      !claim.evidence.some((evidence) => {
+        const source = sourceById.get(evidence.sourceId);
+        return (
+          ["public", "public-metadata-only"].includes(source?.visibility) &&
+          evidence.renderCitation === true
+        );
+      })
+    ) {
+      semanticsFindings.push(
+        `${claim.id} requires a citation without renderable public evidence`
+      );
+    }
     if (
       ["confirmed-with-boundary", "use-with-care"].includes(claim.status) &&
       claim.boundaries.length < 1
@@ -1102,6 +1276,14 @@ export function evaluateComposite(
         semanticsFindings.push(`${claim.id} has risky active projection language`);
       }
     }
+  }
+  if (
+    evidenceSemanticsDigest(knowledgeBank) !==
+    rubric?.contracts?.evidenceSemanticsSha256
+  ) {
+    semanticsFindings.push(
+      "Evidence support and limitation semantics changed without an approved rubric contract update"
+    );
   }
   push("CI-004", semanticsFindings);
 
@@ -1168,12 +1350,19 @@ export function evaluateComposite(
 
   push(
     "CI-006",
-    validateCollectiveCreditPolicy(
+    [
+      ...validateCollectiveCreditPolicy(
       collectivePolicy,
       proofClaims,
       knowledgeBank.claims,
       surfaceBindings
-    )
+      ),
+      ...validateFrozenContract(
+        root,
+        rubric,
+        "docs/knowledge-bank/policies/collective-credit-policy.json"
+      )
+    ]
   );
   push(
     "CI-007",
@@ -1203,6 +1392,9 @@ export function evaluateComposite(
     "resume"
   ]);
   for (const correction of knowledgeBank.corrections) {
+    const correctedClaim = knowledgeBank.claims.find(
+      (claim) => claim.id === correction.claimId
+    );
     if (!claimIds.has(correction.claimId)) {
       correctionFindings.push(`${correction.id} references an unknown claim`);
     }
@@ -1211,6 +1403,18 @@ export function evaluateComposite(
     }
     if (!substantive(correction.reason, { length: 25, words: 5 })) {
       correctionFindings.push(`${correction.id} needs a substantive reason`);
+    }
+    const activeProjectionText = (correctedClaim?.projections ?? [])
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text)
+      .join(" ");
+    if (
+      !activeProjectionText.includes(correction.replacementText) ||
+      activeProjectionText.includes(correction.previousText)
+    ) {
+      correctionFindings.push(
+        `${correction.id} must bind replacement wording and retire previous wording`
+      );
     }
     if (
       !["active", "superseded"].includes(correction.status) ||
@@ -1224,6 +1428,11 @@ export function evaluateComposite(
         `${correction.id} needs governed status, date, and affected surfaces`
       );
     }
+  }
+  if (correctionDigest(knowledgeBank) !== rubric?.contracts?.correctionsSha256) {
+    correctionFindings.push(
+      "Correction history changed without an approved rubric contract update"
+    );
   }
   push("CI-008", correctionFindings);
 
@@ -1241,7 +1450,12 @@ export function evaluateComposite(
     ["CI-013", ["scripts/evals-visual-artifact-proof.mjs"]]
   ]);
   for (const [id, scriptsToRun] of qualityEvals) {
-    push(id, runEval(root, scriptsToRun));
+    push(id, [
+      ...scriptsToRun.flatMap((script) =>
+        validateFrozenContract(root, rubric, script)
+      ),
+      ...runEval(root, scriptsToRun)
+    ]);
   }
 
   const releaseGateById = new Map(
@@ -1319,6 +1533,21 @@ export function evaluateComposite(
     maintenanceFindings.push("Root check does not include knowledge-tool tests");
   }
   const maintenance = rubric?.maintenance;
+  if (
+    !sameSet(
+      Object.keys(rubric?.contracts?.files ?? {}),
+      frozenContractPaths
+    )
+  ) {
+    maintenanceFindings.push(
+      "Rubric frozen-file contracts must match the complete governed file set"
+    );
+  }
+  for (const contractPath of frozenContractPaths) {
+    maintenanceFindings.push(
+      ...validateFrozenContract(root, rubric, contractPath)
+    );
+  }
   if (
     !maintenance?.owner ||
     !maintenance?.cadence ||

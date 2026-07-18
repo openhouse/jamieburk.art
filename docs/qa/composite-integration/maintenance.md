@@ -26,6 +26,8 @@
 - Exact-route bindings must cover the complete public route registry and resolve existing source files, active claims, and proof surface permissions.
 - Every actively projected project must have a substantive collective-credit rule and at least two distinct boundaries.
 - Publication-safe queries use a closed output allowlist and omit internal formulations, pending intake, held or inferential claims, protected evidence, unsafe URLs, private locators, and research inquiries.
+- Knowledge queries are publication-safe by default. Broader canonical output requires the explicit local-only `--internal` flag; unknown and valued boolean flags fail closed.
+- Frozen policy, evaluator, build-contract, and command files carry SHA-256 contracts in the versioned rubric. An intentional change requires a rubric version and digest update plus a new independent review.
 - Human-gate IDs and owners must match the rubric exactly, and agents cannot self-certify those gates.
 
 When the system becomes burdensome, remove duplication before weakening a boundary or human gate.

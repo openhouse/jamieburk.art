@@ -50,7 +50,12 @@ npm run knowledge:query -- --entity "New York City Council" --date 2016-05-03 --
 npm run knowledge:query -- --evidence-role corroborating --audience hiring --purpose evidence --publication-safe
 ```
 
-`--publication-safe` is allowlisted: it returns only eligible or projected
+Queries are publication-safe by default; `--publication-safe` may be supplied
+as an explicit bare flag. Only trusted local research may request the broader
+canonical record with the bare `--internal` flag. Unknown flags and valued
+boolean forms such as `--publication-safe yes` are rejected.
+
+Publication-safe output is allowlisted: it returns only eligible or projected
 intake, public or public-metadata sources, verified observations, bounded
 public claim statuses with active projections, and public evidence fields. It
 omits pending or knowledge-bank-only leads, internal claim formulations,

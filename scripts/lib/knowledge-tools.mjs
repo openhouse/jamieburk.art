@@ -16,21 +16,26 @@ const unsafePatterns = [
   { label: "private filesystem path", pattern: /(?:\/Users\/|\/Volumes\/|[A-Za-z]:\\)/ },
   { label: "email address", pattern: /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i },
   { label: "phone number", pattern: /(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}/ },
-  { label: "government identifier", pattern: /\b(?:\d{3}-\d{2}-\d{4}|(?:ssn|social security number)\s*[:#]?\s*\d{4,})\b/i },
-  { label: "credential or token", pattern: /(?:sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|AKIA[A-Z0-9]{16}|-----BEGIN .*PRIVATE KEY-----|\b(?:password|bearer|api[-_ ]?key|access[-_ ]?key)\s*[:=])/i },
+  { label: "government identifier", pattern: /\b(?:\d{3}-\d{2}-\d{4}|(?:ssn|social security number|passport(?: number)?|driver'?s license)\s*[:#]?\s*[A-Z0-9-]{4,})\b/i },
+  { label: "credential or token", pattern: /(?:sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[A-Z0-9]{16}|-----BEGIN .*PRIVATE KEY-----|\b(?:password|bearer|api[-_ ]?key|access[-_ ]?key)\s*[:=])/i },
   { label: "signed or secret URL parameter", pattern: /[?&](?:x-amz-signature|signature|sig|token|access_token|auth|key|secret)=[^&\s]+/i },
   { label: "private legal or stakeholder detail", pattern: /\b(?:private|confidential|raw)\b.{0,40}\b(?:legal strategy|legal review|strategy|stakeholder (?:list|roster)|donor (?:list|roster)|subscriber (?:list|roster))\b/i },
   { label: "private correspondence", pattern: /\b(?:private|confidential|unpublished)\b.{0,32}\b(?:correspondence|email|message|letter|conversation)\b/i },
   { label: "raw participant material", pattern: /\braw\b.{0,32}\b(?:participant|stakeholder|collaborator|interview|transcript|testimony)\b/i },
-  { label: "unapproved personal identity", pattern: /\bunapproved\b.{0,32}\b(?:participant|stakeholder|collaborator|person|people|name|identity|identities)\b/i },
+  { label: "unapproved personal identity", pattern: /(?:\bunapproved\b.{0,32}\b(?:participant|stakeholder|collaborator|person|people|name|identity|identities)\b|\b(?:participant|stakeholder|collaborator|interviewee)\s+(?:named\s+)?[A-Z][a-z]{1,}\s+[A-Z][a-z]{1,}\b)/i },
   { label: "private medical record", pattern: /\b(?:medical|health|clinical)\s+(?:record|records|history|details|information)\b/i },
   { label: "private health detail", pattern: /\b(?:has|diagnosed with|medical (?:record|history|condition)|health (?:record|history|condition))\s+(?:cancer|hiv|aids|diabetes|depression|anxiety|bipolar|schizophrenia)\b/i },
+  { label: "private health status", pattern: /\b(?:hiv[- ]positive|aids diagnosis|cancer diagnosis|mental health diagnosis)\b/i },
   { label: "private financial detail", pattern: /\b(?:owes|debt|salary|bank balance|account balance|tax liability)\b.{0,24}\$[\d,]+/i },
-  { label: "street address", pattern: /\b\d{1,6}\s+[A-Z0-9][A-Z0-9 .'-]{1,40}\s(?:street|st|avenue|ave|road|rd|boulevard|blvd|drive|dr|lane|ln|court|ct|place|pl)\b/i }
+  { label: "street address", pattern: /\b(?:P\.?O\.?\s+Box\s+\d+|\d{1,6}\s+[A-Z0-9][A-Z0-9 .'-]{1,40}\s(?:street|st|avenue|ave|road|rd|boulevard|blvd|drive|dr|lane|ln|court|ct|place|pl))\b/i }
 ];
 
 function stableText(value) {
   return value.trim().replace(/\s+/g, " ");
+}
+
+function distinctWords(value) {
+  return new Set(value.toLowerCase().match(/[a-z0-9]+/g) ?? []);
 }
 
 function publicUrlFindings(value) {
@@ -102,8 +107,12 @@ export function createLeadReceipt(input) {
   const url = input.url ? stableText(input.url) : undefined;
 
   const findings = [];
-  if (title.length < 8) findings.push("--title must contain at least 8 characters");
-  if (summary.length < 20) findings.push("--summary must contain at least 20 characters");
+  if (title.length < 8 || distinctWords(title).size < 2) {
+    findings.push("--title must contain at least 8 characters and two distinct words");
+  }
+  if (summary.length < 20 || distinctWords(summary).size < 6) {
+    findings.push("--summary must contain at least 20 characters and six distinct words");
+  }
   if (!project || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project)) {
     findings.push("--project must be a lowercase hyphenated project ID");
   }
@@ -171,6 +180,9 @@ export function queryKnowledgeBank(bank, filters = {}) {
   const surfaces = new Set(
     matchedRoutes.map((route) => route.path)
   );
+  const routeClaimIds = new Set(
+    matchedRoutes.flatMap((route) => route.claimIds ?? [])
+  );
   const hasRouteFilter = Boolean(filters.surface || filters.audience || filters.purpose);
   const publicationSafe = filters.publicationSafe === true;
   const publicFilters = definedRecord([
@@ -212,8 +224,12 @@ export function queryKnowledgeBank(bank, filters = {}) {
     (!publicationSafe || ["confirmed", "confirmed-with-boundary", "use-with-care"].includes(claim.status)) &&
     (!publicationSafe || claim.projections.some((projection) => projection.status === "active")) &&
     (!evidenceRole || claim.evidence.some((evidence) => evidence.relationship === evidenceRole)) &&
-    (!hasRouteFilter || claim.projections.some((projection) =>
-      projection.status === "active" && projection.surfaces.some((surface) => surfaces.has(surface))
+    (!hasRouteFilter || (
+      routeClaimIds.has(claim.id) &&
+      claim.projections.some((projection) =>
+        projection.status === "active" &&
+        projection.surfaces.some((surface) => surfaces.has(surface))
+      )
     ))
   );
   const claimIds = new Set(claims.map((claim) => claim.id));
@@ -321,13 +337,18 @@ export function queryKnowledgeBank(bank, filters = {}) {
     project: claim.project,
     status: claim.status,
     projections: claim.projections
-      .filter((projection) => projection.status === "active")
+      .filter((projection) =>
+        projection.status === "active" &&
+        (!hasRouteFilter || projection.surfaces.some((surface) => surfaces.has(surface)))
+      )
       .map((projection) => ({
         key: projection.key,
         text: projection.text,
         status: projection.status,
         citationRequired: projection.citationRequired,
-        surfaces: projection.surfaces
+        surfaces: hasRouteFilter
+          ? projection.surfaces.filter((surface) => surfaces.has(surface))
+          : projection.surfaces
       })),
     evidence: claim.evidence
       .filter((evidence) => publicSourceIds.has(evidence.sourceId))

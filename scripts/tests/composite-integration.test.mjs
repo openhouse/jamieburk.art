@@ -1,7 +1,11 @@
 import assert from "node:assert/strict";
+import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import test from "node:test";
 import {
   detectSemanticRisks,
+  discoverPublicRoutes,
   evaluateComposite,
   repoRoot,
   validateCollectiveCreditPolicy,
@@ -136,6 +140,37 @@ test("surface policy rejects missing source files and unauthorized proof surface
     }
   );
   assert.ok(validateSurfaceBindings(hollowRoute).length > 0);
+
+  const proofOnContact = structuredClone(surfaceBindings);
+  const contactWithProof = proofOnContact.routes.find(
+    (route) => route.path === "/contact"
+  );
+  contactWithProof.proofIds = ["callnyc-civic-data-guidance"];
+  contactWithProof.proofClaimIds = ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"];
+  assert.match(
+    validateSurfaceBindings(proofOnContact).join(" "),
+    /cannot select proofs without an approved proof surface class/
+  );
+});
+
+test("route discovery covers every configured Next page extension", () => {
+  const root = mkdtempSync(path.join(tmpdir(), "composite-routes-"));
+  for (const [route, extension] of [
+    ["alpha", "js"],
+    ["beta", "jsx"],
+    ["gamma", "md"],
+    ["delta", "mdx"],
+    ["epsilon", "ts"],
+    ["zeta", "tsx"]
+  ]) {
+    const directory = path.join(root, "apps/www/src/app", route);
+    mkdirSync(directory, { recursive: true });
+    writeFileSync(path.join(directory, `page.${extension}`), "export default null;\n");
+  }
+  assert.deepEqual(
+    discoverPublicRoutes(root, []).map((route) => route.path).sort(),
+    ["/alpha", "/beta", "/delta", "/epsilon", "/gamma", "/zeta"]
+  );
 });
 
 test("selected proofs require resolvable structured evidence", () => {
@@ -188,6 +223,35 @@ test("selected proofs require resolvable structured evidence", () => {
   assert.match(
     indirectProtected.join(" "),
     /not bound to selecting route|unbounded protected evidence/
+  );
+
+  const missingRenderableCitation = validateProofTraceability(
+    [{ id: "PROOF-ONE", knowledgeClaimIds: ["CLM-ONE"] }],
+    {
+      routes: [{
+        path: "/shown",
+        proofIds: ["PROOF-ONE"],
+        proofClaimIds: ["CLM-ONE"]
+      }]
+    },
+    {
+      sources: [{ id: "SRC-PUBLIC", visibility: "public" }],
+      claims: [{
+        id: "CLM-ONE",
+        status: "confirmed",
+        projections: [{
+          status: "active",
+          citationRequired: true,
+          surfaces: ["/shown"]
+        }],
+        evidence: [{ sourceId: "SRC-PUBLIC", renderCitation: false }],
+        boundaries: []
+      }]
+    }
+  );
+  assert.match(
+    missingRenderableCitation.join(" "),
+    /requires a citation without renderable public evidence/
   );
 });
 

@@ -4,7 +4,7 @@
 
 **Starting commit:** `68846b1f0a8672ff80598a7fef50ce5343c3e004`
 
-**Rubric:** `feature-evals-composite-integration` `1.3.0`
+**Rubric:** `feature-evals-composite-integration` `1.4.0`
 
 Run artifacts are retained under `evals/composite-integration/runs/`. Each
 passing holdout records the evaluated Git commit and candidate-input SHA-256.
@@ -68,6 +68,16 @@ query commands. Seven fail-closed and anti-overclaim tests passed.
    proof claims are bound to selecting routes; donor, source, corpus, and
    correction gates validate substance; and candidate exclusions admit only
    schema-valid evidence paths.
+8. **Fourth independent adversarial holdout.** The clean candidate reproduced
+   its claimed fingerprint, then failed attacks on query defaults, additional
+   sensitive-data forms, non-TSX route discovery, proof surface authorization,
+   citation rendering, route-specific query output, semantic policy drift, and
+   stored-run forgery. Queries are now public-safe by default; raw output is an
+   explicit local mode; every configured Next page extension is discovered;
+   proofless surfaces reject proofs; citation-required claims require
+   renderable public evidence; route manifests constrain returned claims and
+   projection text; policy/eval semantics are versioned by digest; holdouts are
+   freshly recomputed; and evidence history is append-only.
 
 The complete rejected-candidate summary is retained in
 `docs/qa/composite-integration/adversarial-review-history.md`.
