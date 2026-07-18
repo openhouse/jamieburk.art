@@ -84,6 +84,28 @@ test("rendered portfolio copy does not expose editorial workflow controls", () =
   assert.doesNotMatch(publicSurface, /StatusBadge|item\.(?:status|visibility)/);
 });
 
+test("global public copy describes the portfolio rather than its internal lifecycle", () => {
+  const publicChrome = [
+    "apps/www/src/components/SiteFooter.tsx",
+    "apps/www/src/app/colophon/page.tsx"
+  ]
+    .map((path) => readFileSync(path, "utf8"))
+    .join("\n");
+
+  assert.doesNotMatch(publicChrome, /future living (?:archive|notebook)|visible content-status notes/i);
+  assert.match(publicChrome, /source-backed portfolio|focused public proof surface/i);
+});
+
+test("the combined NYC Artist Coalition and FairRentNYC chronology is consistent", () => {
+  const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const caseStart = work.indexOf('title: "NYC Artist Coalition / FairRentNYC"');
+  const caseEnd = work.indexOf('title: "CallNYC.org"', caseStart);
+  const caseBlock = work.slice(caseStart, caseEnd);
+
+  assert.match(caseBlock, /years: "2017-Present"/);
+  assert.doesNotMatch(caseBlock, /years: "2024-Present"/);
+});
+
 test("WOWList public copy preserves the dated activity boundary", () => {
   const work = readFileSync("apps/www/src/data/work.ts", "utf8");
   assert.match(work, /July 2017 snapshot records at least 50 geocoded posts\/events in each of 35 city\/region groups/i);

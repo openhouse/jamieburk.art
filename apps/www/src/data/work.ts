@@ -195,7 +195,7 @@ const workItemsInput = [
     summary:
       "Co-founded NYC Artist Coalition and helped collaborators turn fragmented policy, meeting, and campaign context into public websites, shared memory, source maps, and coordination systems they could use for cultural-space advocacy; campaign outcomes remained collective.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2024-Present",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,

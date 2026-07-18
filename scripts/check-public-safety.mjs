@@ -195,6 +195,12 @@ scanPattern(
 );
 
 scanPattern(
+  shippedContentFiles,
+  "internal living-archive or content-status language appears on the public site",
+  /\b(?:future living (?:archive|notebook)|visible content-status notes)\b/i
+);
+
+scanPattern(
   publicContentFiles,
   "raw/private transcript exposure appears in production-facing content",
   /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i

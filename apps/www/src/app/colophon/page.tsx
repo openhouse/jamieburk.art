@@ -5,13 +5,13 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Colophon - Jamie Burkart",
   description:
-    "Colophon for Jamie Burkart's public-safe portfolio and future living notebook.",
+    "Colophon for Jamie Burkart's public-safe, source-backed portfolio.",
   path: "/colophon"
 });
 
 const details = [
   "Static-first Next.js App Router site with local MDX content",
-  "Public-safe artifacts, claim discipline, and visible content-status notes",
+  "Public-safe artifacts, source-backed factual claims, and explicit evidence limits",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
   "Karla for body/UI text and League Spartan for display headings",
   "No private or proprietary font files are committed or served",
@@ -26,12 +26,13 @@ export default function ColophonPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Colophon</h1>
         <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-          This site is built as a small public proof surface and future living
-          notebook. It uses local MDX content, public-safe artifacts, and
-          intentionally limited tracking. The design uses Broadway blue, Jamie&apos;s
-          oil-pastel palette, and a quiet proportional grid derived from his
-          print-layout sketchpad. The site separates reviewable staging from the
-          public production surface; staging remains noindex.
+          This site is built as a focused public proof surface. It uses local MDX
+          content, public-safe artifacts, and numbered sources for significant
+          factual claims, with intentionally limited tracking. The design uses
+          Broadway blue, Jamie&apos;s oil-pastel palette, and a quiet proportional
+          grid derived from his print-layout sketchpad. The site separates
+          reviewable staging from the public production surface; staging remains
+          noindex.
         </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
