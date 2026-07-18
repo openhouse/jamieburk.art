@@ -10,6 +10,7 @@
       "caption": "Public storefront capture showing e-commerce navigation, product-discovery paths, checkout access, and company voice.",
       "rightsBasis": "Linked capture of a public project surface used for documentary portfolio context.",
       "rightsReviewStatus": "documented-pending-human-release-confirmation",
+      "containsIdentifiablePeople": false,
       "consentStatus": "not-applicable-no-identifiable-person"
     },
     {
@@ -19,7 +20,8 @@
       "caption": "Public campaign capture showing the call-to-action hierarchy and reference-library pathway.",
       "rightsBasis": "Linked capture of a public coalition project surface used for documentary portfolio context.",
       "rightsReviewStatus": "documented-pending-human-release-confirmation",
-      "consentStatus": "not-applicable-no-identifiable-person"
+      "containsIdentifiablePeople": true,
+      "consentStatus": "identifiable-people-present-rights-and-consent-review-pending"
     },
     {
       "path": "/images/work/callnyc-interface-2026-07-12.jpg",
@@ -28,7 +30,8 @@
       "caption": "Archived interface capture showing issue navigation, district context, ranked service patterns, and the historical-use boundary.",
       "rightsBasis": "Linked capture of Jamie's archived public project surface used for documentary portfolio context.",
       "rightsReviewStatus": "documented-pending-human-release-confirmation",
-      "consentStatus": "not-applicable-no-identifiable-person"
+      "containsIdentifiablePeople": true,
+      "consentStatus": "identifiable-people-present-rights-and-consent-review-pending"
     }
   ]
 }

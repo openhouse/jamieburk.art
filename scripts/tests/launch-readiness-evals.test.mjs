@@ -84,6 +84,31 @@ test("rendered portfolio copy does not expose editorial workflow controls", () =
   assert.doesNotMatch(publicSurface, /StatusBadge|item\.(?:status|visibility)/);
 });
 
+test("WOWList public copy preserves the dated activity boundary", () => {
+  const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  assert.match(work, /July 2017 snapshot records at least 50 geocoded posts\/events in each of 35 city\/region groups/i);
+  assert.match(work, /recorded activity rather than adoption/i);
+  assert.doesNotMatch(work, /support use across roughly 35 city ecosystems/i);
+});
+
+test("displayed-media consent records agree with the human visual review", () => {
+  const manifest = JSON.parse(readFileSync("docs/knowledge-bank/media-provenance.json", "utf8"));
+  const byPath = new Map(manifest.assets.map((asset) => [asset.path, asset]));
+
+  for (const path of [
+    "/images/work/fairrentnyc-public-site-2026-07-12.jpg",
+    "/images/work/callnyc-interface-2026-07-12.jpg"
+  ]) {
+    const asset = byPath.get(path);
+    assert.equal(asset.containsIdentifiablePeople, true);
+    assert.match(asset.consentStatus, /identifiable-people-present-rights-and-consent-review-pending/i);
+  }
+
+  const storefront = byPath.get("/images/work/harry-j-epstein-public-site-2026-07-12.jpg");
+  assert.equal(storefront.containsIdentifiablePeople, false);
+  assert.match(storefront.consentStatus, /not-applicable-no-identifiable-person/i);
+});
+
 test("FairRentNYC campaign-memory scale has a bounded citation path", () => {
   const claim = knowledgeBank.claims.find(
     (item) => item.id === "CLM-FAIRRENTNYC-CAMPAIGN-MEMORY-SCALE"

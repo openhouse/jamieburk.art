@@ -404,7 +404,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built WOWList so DIY arts and music organizers could publish and distribute events through followable keyword communities rather than one editorial gatekeeper; public-safe records support use across roughly 35 city ecosystems.",
+      "Co-built WOWList so DIY arts and music organizers could publish and distribute events through followable keyword communities rather than one editorial gatekeeper; a July 2017 snapshot records at least 50 geocoded posts/events in each of 35 city/region groups, a measure of recorded activity rather than adoption.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",

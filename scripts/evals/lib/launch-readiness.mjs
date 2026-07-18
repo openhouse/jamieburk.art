@@ -456,6 +456,21 @@ export function evaluateSourceChecks({ repoRoot = defaultRepoRoot, suite = loadS
     for (const field of ["sourceUrl", "capturedAt", "caption", "rightsBasis", "rightsReviewStatus", "consentStatus"]) {
       if (!entry[field]) mediaFailures.push({ path: publicPath, reason: `missing ${field}` });
     }
+    if (typeof entry.containsIdentifiablePeople !== "boolean") {
+      mediaFailures.push({ path: publicPath, reason: "missing containsIdentifiablePeople review" });
+    }
+    if (
+      entry.containsIdentifiablePeople === true &&
+      /no-identifiable-person/i.test(entry.consentStatus ?? "")
+    ) {
+      mediaFailures.push({ path: publicPath, reason: "identifiable people conflict with consent status" });
+    }
+    if (
+      entry.containsIdentifiablePeople === false &&
+      /identifiable-people-present/i.test(entry.consentStatus ?? "")
+    ) {
+      mediaFailures.push({ path: publicPath, reason: "no identifiable people conflicts with consent status" });
+    }
     if (entry.sourceUrl && !isHttpUrl(entry.sourceUrl)) mediaFailures.push({ path: publicPath, reason: "invalid source URL" });
     if (entry.rightsReviewStatus === "unknown") mediaFailures.push({ path: publicPath, reason: "unknown rights review status" });
   }

@@ -116,6 +116,19 @@ function pdftotext(file) {
   }
 }
 
+function pdftohtml(file) {
+  try {
+    return execFileSync("pdftohtml", ["-xml", "-hidden", "-stdout", file], {
+      cwd: repoRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"]
+    });
+  } catch {
+    addWarning(file, "pdftohtml unavailable or failed; resume evidence-link check skipped");
+    return "";
+  }
+}
+
 try {
   execFileSync(process.execPath, [path.join(repoRoot, "scripts/check-knowledge-bank.mjs")], {
     cwd: repoRoot,
@@ -273,6 +286,14 @@ if (!existsSync(resumePath)) {
     )
   ) {
     addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
+  }
+
+  const resumeHtml = pdftohtml(resumePath);
+  if (
+    resumeHtml &&
+    !/href="https:\/\/jamieburk\.art\/work\/kc-town-hall"/i.test(resumeHtml)
+  ) {
+    addFailure(resumePath, "resume PDF KC Town Hall claim lacks a direct evidence link");
   }
 
   if (

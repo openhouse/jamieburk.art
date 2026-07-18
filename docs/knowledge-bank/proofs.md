@@ -14,7 +14,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
   profile slots while preserving shared authorship and 1,757 unresolved slots.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
-- Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
+- Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform whose July 2017 snapshot records activity above a conservative threshold in 35 city/region groups; the count does not establish adoption.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led adaptive reuse planning and public-benefit documentation tied to a $490,539 public funding recommendation.
