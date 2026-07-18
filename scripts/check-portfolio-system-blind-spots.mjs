@@ -184,6 +184,21 @@ function stableKey(value) {
   return slug || sha256(value).slice(0, 12);
 }
 
+function semanticClaimKeys(prefix, value) {
+  const text = String(value ?? "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\{[^}]+\}/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!text) return [];
+  return text
+    .split(/;\s+|(?<=[.!?])\s+(?=["'“‘(]*[A-Z0-9])/)
+    .map((unit) => unit.trim())
+    .filter(Boolean)
+    .map((unit, index) => `${prefix}-${index + 1}-${sha256(unit).slice(0, 12)}`);
+}
+
 function mdxClaimKeys(source) {
   return source
     .split(/\n\s*\n/)
@@ -196,12 +211,15 @@ function mdxClaimKeys(source) {
           .split("\n")
           .map((line) => line.trim())
           .filter((line) => /^(?:[-*]\s|\d+\.\s)/.test(line))
-          .map((line) => `mdx-list-${sha256(line).slice(0, 12)}`);
+          .flatMap((line, index) => semanticClaimKeys(
+            `mdx-list-${index + 1}`,
+            line.replace(/^(?:[-*]\s|\d+\.\s)/, "")
+          ));
       }
       const claimId = block.match(/claimId="([^"]+)"/)?.[1];
       const occurrenceId = block.match(/occurrenceId="([^"]+)"/)?.[1];
       if (claimId) return [`mdx-claim-${stableKey(claimId)}${occurrenceId ? `-${stableKey(occurrenceId)}` : ""}`];
-      return [`mdx-block-${sha256(block).slice(0, 12)}`];
+      return semanticClaimKeys("mdx-block", block);
     });
 }
 
@@ -229,6 +247,23 @@ function workCaseCompositions() {
   };
   const literalValue = (node) => {
     const value = unwrap(node);
+    if (
+      value &&
+      ts.isPropertyAccessExpression(value) &&
+      value.name.text === "text" &&
+      ts.isCallExpression(value.expression) &&
+      value.expression.expression.getText(sourceFile) === "getClaimProjection"
+    ) {
+      const [claimIdNode, projectionKeyNode, surfaceNode] = value.expression.arguments;
+      const claimId = literalValue(claimIdNode);
+      const projectionKey = literalValue(projectionKeyNode);
+      const surface = literalValue(surfaceNode);
+      return knowledgeBank.claims
+        .find((claim) => claim.id === claimId)
+        ?.projections.find((projection) =>
+          projection.key === projectionKey && projection.surfaces.includes(surface)
+        )?.text ?? value.getText(sourceFile);
+    }
     return value && (ts.isStringLiteral(value) || ts.isNoSubstitutionTemplateLiteral(value))
       ? value.text
       : value?.getText(sourceFile) ?? "unknown";
@@ -247,42 +282,60 @@ function workCaseCompositions() {
     const properties = propertyMap(element);
     const slug = properties.get("slug")?.initializer?.text;
     const artifacts = arrayLength(properties.get("artifacts"));
-    const artifactTypes = arrayLength(properties.get("artifactTypes"));
-    const credits = arrayLength(properties.get("credits"));
     const known = unwrap(properties.get("knownOpenProtected")?.initializer);
-    const knownCount = known && ts.isObjectLiteralExpression(known) ? known.properties.length : 0;
-    const requiredMetadata = ["subtitle", "summary", "role", "years", "series", "status", "visibility", "roleFit", "currentStatus"]
-      .filter((key) => properties.has(key)).length;
-    const optionalMetadata = ["careNote", "sourceLayer", "publicSafety"]
-      .filter((key) => properties.has(key)).length;
     if (!slug) fail("A work item lacks a static slug");
     const metadataKeys = ["subtitle", "summary", "role", "years", "series", "status", "visibility", "roleFit", "currentStatus"]
       .filter((key) => properties.has(key))
-      .map((key) => `metadata-${key}`);
+      .flatMap((key) => semanticClaimKeys(
+        `metadata-${key}`,
+        literalValue(properties.get(key)?.initializer)
+      ));
     const optionalKeys = ["careNote", "sourceLayer", "publicSafety"]
       .filter((key) => properties.has(key))
-      .map((key) => `metadata-${key}`);
+      .flatMap((key) => semanticClaimKeys(
+        `metadata-${key}`,
+        literalValue(properties.get(key)?.initializer)
+      ));
     const knownKeys = known && ts.isObjectLiteralExpression(known)
-      ? known.properties.map((property) => `known-${property.name?.getText(sourceFile).replace(/["'`]/g, "")}`)
+      ? known.properties.flatMap((property) => {
+          const key = property.name?.getText(sourceFile).replace(/["'`]/g, "") ?? "unknown";
+          return semanticClaimKeys(`known-${key}`, literalValue(property.initializer));
+        })
       : [];
     const artifactTypeKeys = arrayElements(properties.get("artifactTypes"))
       .map((element) => `artifact-type-${stableKey(literalValue(element))}`);
-    const artifactKeys = arrayElements(properties.get("artifacts")).map((element, index) => {
+    const artifactKeys = arrayElements(properties.get("artifacts")).flatMap((element, index) => {
       const artifactProperties = ts.isObjectLiteralExpression(element) ? propertyMap(element) : new Map();
-      return `artifact-${stableKey(literalValue(artifactProperties.get("title")?.initializer ?? element))}-${index + 1}`;
+      const prefix = `artifact-${index + 1}`;
+      return [
+        ...semanticClaimKeys(`${prefix}-title`, literalValue(artifactProperties.get("title")?.initializer ?? element)),
+        ...semanticClaimKeys(`${prefix}-description`, literalValue(artifactProperties.get("description")?.initializer))
+      ];
     });
     const creditKeys = arrayElements(properties.get("credits"))
       .map((element, index) => `credit-${stableKey(literalValue(element))}-${index + 1}`);
     const mdxKeys = slug ? mdxClaimKeys(read(`apps/www/src/content/work/${slug}.mdx`)) : [];
     const mdxClaimUnits = mdxKeys.length;
-    const metadataClaimUnits = requiredMetadata + optionalMetadata + knownCount + artifactTypes + artifacts + credits;
-    const countedClaimKeys = [...metadataKeys, ...optionalKeys, ...knownKeys, ...artifactTypeKeys, ...artifactKeys, ...creditKeys, ...mdxKeys];
+    const nonMdxKeys = [...metadataKeys, ...optionalKeys, ...knownKeys, ...artifactTypeKeys, ...artifactKeys, ...creditKeys];
+    const metadataClaimUnits = nonMdxKeys.length;
+    const countedClaimKeys = [...nonMdxKeys, ...mdxKeys];
     return {
       slug: slug ?? "unknown",
       featured: properties.get("featured")?.initializer?.kind === ts.SyntaxKind.TrueKeyword,
       cardClaimKeys: ["subtitle", "summary", "whatWasUnclear", "whatBecameUsable", "roleFit"]
         .filter((key) => properties.has(key))
-        .map((key) => `work-card-${slug ?? "unknown"}-${key}`),
+        .flatMap((key) => semanticClaimKeys(
+          `work-card-${slug ?? "unknown"}-${key}`,
+          literalValue(properties.get(key)?.initializer)
+        )),
+      featuredClaimKeys: ["subtitle", "summary"]
+        .filter((key) => properties.has(key))
+        .flatMap((key) => semanticClaimKeys(
+          `featured-${slug ?? "unknown"}-${key}`,
+          literalValue(properties.get(key)?.initializer)
+        )),
+      proofBankIds: arrayElements(properties.get("proofBankIds")).map((entry) => literalValue(entry)),
+      authoredRoleProofIds: arrayElements(properties.get("authoredRoleProofIds")).map((entry) => literalValue(entry)),
       artifactCount: artifacts,
       metadataClaimUnits,
       mdxClaimUnits,
@@ -296,7 +349,7 @@ function staticParagraphKeys(relativePath, prefix, { exclude = [] } = {}) {
   return [...read(relativePath).matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/g)]
     .map((match) => match[1].replace(/<[^>]+>/g, " ").replace(/\{[^}]+\}/g, " ").replace(/\s+/g, " ").trim())
     .filter((text) => text && !exclude.some((pattern) => pattern.test(text)))
-    .map((text) => `${prefix}-${sha256(text).slice(0, 12)}`);
+    .flatMap((text) => semanticClaimKeys(prefix, text));
 }
 
 function deriveRouteClaimKeys(workCompositions) {
@@ -387,17 +440,14 @@ function deriveHomeClaimKeys(workCompositions) {
     .map((match) => match[1].replace(/\s+/g, " ").trim())
     .filter((text) => text.startsWith("These projects show") || text.startsWith("The projects differ") || text.startsWith("I usually enter"));
   return [
-    ...heroParagraphs.map((text) => `hero-${sha256(text).slice(0, 12)}`),
+    ...heroParagraphs.flatMap((text) => semanticClaimKeys("hero", text)),
     `start-here-intro-${sha256("New to my work").slice(0, 12)}`,
     ...startHereLabels.map((label) => `start-here-${stableKey(label)}`),
     ...homepageProofs.map((proof) => `proof-${stableKey(proof.id)}`),
     ...capabilityTitles.map((title) => `capability-${stableKey(title)}`),
-    ...workCompositions.filter((item) => item.featured).flatMap((item) => [
-      `featured-${stableKey(item.slug)}-subtitle`,
-      `featured-${stableKey(item.slug)}-summary`
-    ]),
+    ...workCompositions.filter((item) => item.featured).flatMap((item) => item.featuredClaimKeys),
     ...transformations.map((text) => `transformation-${stableKey(text)}`),
-    ...selectedParagraphs.map((text) => `home-block-${sha256(text).slice(0, 12)}`),
+    ...selectedParagraphs.flatMap((text) => semanticClaimKeys("home-block", text)),
     ...staticParagraphKeys("apps/www/src/components/ContactCTA.tsx", "contact-cta")
   ];
 }
@@ -939,34 +989,116 @@ for (const record of proofRecords) {
   }
 }
 
-// Authored page copy can paraphrase a Knowledge Bank projection. Keep known
-// first-person and mixed-basis role signatures attributed after that rewrite.
-const authoredRoleSurfaceGuards = [
+// Work metadata declares which mixed-basis proofs it paraphrases. Every such
+// proof must resolve through a canonical <Claim> or an attributed prose guard.
+const authoredRoleCoverage = [
   {
-    claimId: "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
-    sourcePaths: [
-      "apps/www/src/data/work.ts",
-      "apps/www/src/content/work/kc-town-hall.mdx"
-    ],
-    signal: /(?:transition(?:ed|ing)? stewardship|stewardship transition)/i,
-    attribution: /(?:Jamie (?:reports|describes|states|recalls)|Jamie's reported|reported stewardship transition|a reported stewardship transition)/i
+    proofId: "project-social-identity-systems",
+    mode: "canonical-claim",
+    sourcePaths: ["apps/www/src/content/work/fair-rent-nyc.mdx"],
+    claimIds: ["CLM-NYCA-SHARED-SOCIAL-IDENTITY"]
+  },
+  {
+    proofId: "nyca-council-member-account-engagement",
+    mode: "canonical-claim",
+    sourcePaths: ["apps/www/src/content/work/fair-rent-nyc.mdx"],
+    claimIds: ["CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT"]
+  },
+  {
+    proofId: "kc-town-hall-public-operations-channel",
+    mode: "canonical-claim",
+    sourcePaths: ["apps/www/src/content/work/kc-town-hall.mdx"],
+    claimIds: ["CLM-KCTOWNHALL-PUBLIC-OPERATIONS-CHANNEL"]
+  },
+  {
+    proofId: "nyc-artist-coalition-public-web-infrastructure",
+    mode: "authored-guard",
+    sourcePaths: ["apps/www/src/data/work.ts"],
+    signatures: [{
+      signal: /Jamie describes [^"\n]*campaign-website builder/i,
+      attribution: /Jamie describes/i
+    }]
+  },
+  {
+    proofId: "nyca-campaign-press-architecture",
+    mode: "authored-guard",
+    sourcePaths: ["apps/www/src/content/work/fair-rent-nyc.mdx"],
+    signatures: [{
+      signal: /Jamie reports building press sections/i,
+      attribution: /Jamie reports/i
+    }]
+  },
+  {
+    proofId: "nyca-participation-system",
+    mode: "canonical-claim",
+    sourcePaths: ["apps/www/src/content/work/fair-rent-nyc.mdx"],
+    claimIds: ["CLM-NYCAC-PARTICIPATION-SYSTEM"]
+  },
+  {
+    proofId: "kc-town-hall-public-benefit-documentation",
+    mode: "authored-guard",
+    sourcePaths: ["apps/www/src/data/work.ts", "apps/www/src/content/work/kc-town-hall.mdx"],
+    signatures: [
+      {
+        signal: /Jamie describes [^"\n]*(?:mixed-use|redevelopment planning|planning support)/i,
+        attribution: /Jamie describes/i
+      },
+      {
+        signal: /(?:transition(?:ed|ing)? stewardship|stewardship transition)/i,
+        attribution: /(?:Jamie (?:reports|describes|states|recalls)|Jamie's reported|reported stewardship transition|a reported stewardship transition)/i
+      }
+    ]
   }
 ];
-for (const guard of authoredRoleSurfaceGuards) {
-  const roleRecord = roleRecordByClaimId.get(guard.claimId);
-  if (!roleRecord || !["first-person", "mixed"].includes(roleRecord.basis)) {
-    fail(`${guard.claimId} authored-surface guard lacks a first-person or mixed role record`);
+const proofRoleRecordById = new Map(proofRecords.map((record) => [record.proofId, record]));
+const requiredAuthoredRoleProofIds = [...new Set(
+  workCompositionInventory.flatMap((item) => item.authoredRoleProofIds)
+)].sort();
+const coveredAuthoredRoleProofIds = authoredRoleCoverage.map((entry) => entry.proofId).sort();
+if (JSON.stringify(requiredAuthoredRoleProofIds) !== JSON.stringify(coveredAuthoredRoleProofIds)) {
+  fail("Authored role coverage must exactly match work-item authoredRoleProofIds");
+}
+for (const item of workCompositionInventory) {
+  for (const proofId of item.authoredRoleProofIds) {
+    if (!item.proofBankIds.includes(proofId)) {
+      fail(`/work/${item.slug} binds authored role proof outside proofBankIds: ${proofId}`);
+    }
+  }
+}
+for (const coverage of authoredRoleCoverage) {
+  const proof = proofById.get(coverage.proofId);
+  const roleRecord = proofRoleRecordById.get(coverage.proofId);
+  if (!proof || !roleRecord || !["first-person", "mixed"].includes(roleRecord.basis)) {
+    fail(`${coverage.proofId} authored-role coverage lacks a first-person or mixed proof record`);
     continue;
   }
-  for (const sourcePath of guard.sourcePaths) {
-    const matchingLines = read(sourcePath)
-      .split("\n")
-      .map((line, index) => ({ line, lineNumber: index + 1 }))
-      .filter(({ line }) => guard.signal.test(line));
-    if (!matchingLines.length) fail(`${guard.claimId} authored-surface guard found no signature in ${sourcePath}`);
-    for (const { line, lineNumber } of matchingLines) {
-      if (!guard.attribution.test(line)) {
-        fail(`${sourcePath}:${lineNumber} renders ${guard.claimId} without explicit first-person attribution`);
+  if (coverage.mode === "canonical-claim") {
+    for (const claimId of coverage.claimIds) {
+      if (!(proof.structuredClaimIds ?? []).includes(claimId)) {
+        fail(`${coverage.proofId} canonical coverage uses an unlinked claim ${claimId}`);
+      }
+    }
+    for (const sourcePath of coverage.sourcePaths) {
+      const source = read(sourcePath);
+      if (!coverage.claimIds.some((claimId) => source.includes(`claimId="${claimId}"`))) {
+        fail(`${coverage.proofId} lacks a linked canonical <Claim> in ${sourcePath}`);
+      }
+    }
+    continue;
+  }
+  for (const sourcePath of coverage.sourcePaths) {
+    const lines = read(sourcePath).split("\n");
+    for (const signature of coverage.signatures) {
+      const matchingLines = lines
+        .map((line, index) => ({ line, lineNumber: index + 1 }))
+        .filter(({ line }) => signature.signal.test(line));
+      if (!matchingLines.length) {
+        fail(`${coverage.proofId} authored guard found no signature in ${sourcePath}`);
+      }
+      for (const { line, lineNumber } of matchingLines) {
+        if (!signature.attribution.test(line)) {
+          fail(`${sourcePath}:${lineNumber} renders ${coverage.proofId} without explicit attribution`);
+        }
       }
     }
   }

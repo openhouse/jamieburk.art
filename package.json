@@ -35,6 +35,7 @@
     "evals:warren-sack": "node scripts/check-practice-lens-eval.mjs warren-sack-lens",
     "evals:knowledge-bank-lifecycle": "node scripts/check-knowledge-bank-lifecycle-evals.mjs",
     "evals:blind-spots": "node scripts/check-portfolio-system-blind-spots.mjs",
+    "evals:blind-spots:refresh": "node scripts/refresh-portfolio-composition.mjs",
     "evals:portfolio-readiness": "node scripts/check-portfolio-readiness.mjs",
     "evals:portfolio-readiness:application": "node scripts/check-portfolio-readiness.mjs --profile application-ready",
     "evals:portfolio-readiness:production": "node scripts/check-portfolio-readiness.mjs --profile production-ready",

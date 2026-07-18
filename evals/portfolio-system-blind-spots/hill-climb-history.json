@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewedAt": "2026-07-15",
+  "reviewedAt": "2026-07-17",
   "scope": "Public-safe summary of independent LLM control judgments made during this pass. Scores evaluate the internal control bundle, not human comprehension, collaborator agreement, interviews, applications, or hiring outcomes.",
   "iterationBudgetRevision": "Iteration 8 reproduced hard-gate failures in both fresh judge pairs. The budget was extended from 8 to 12 without changing any hard gate, score threshold, criterion minimum, calibration requirement, regression limit, or external-outcome boundary.",
   "iterations": [
@@ -75,7 +75,23 @@
       "hiringAndFieldUseScore": null,
       "disposition": "revise-after-first-disqualifying-judgment",
       "changePrompted": "Count compact WorkCard propositions exactly; derive role claims from internal and projected text; govern the parallel proof layer; version tested and post-decision reader surfaces; add a machine-checkable Fair Rent follow-up; reject intermediate symlinks; and derive source-balance coverage from every full-population inquiry."
+    },
+    {
+      "iteration": 10,
+      "candidate": "composite-ready control bundle",
+      "evidenceAndGovernanceScore": 98,
+      "hiringAndFieldUseScore": 98,
+      "disposition": "qualifying-two-round-pass-superseded-by-later-candidate-change",
+      "changePrompted": "Retain the qualifying controls but invalidate their run when the exact public candidate or governing bundle changes."
+    },
+    {
+      "iteration": 11,
+      "candidate": "first-person stewardship attribution repair",
+      "evidenceAndGovernanceScore": 100,
+      "hiringAndFieldUseScore": 90,
+      "disposition": "revise-after-second-round-calibration-failure",
+      "changePrompted": "Attribute KC Town Hall planning and stewardship paraphrases, derive exact mixed-proof coverage for authored surfaces, decompose multi-proposition rendered prose into semantic claim units, and perform a Fair Rent subtraction pass."
     }
   ],
-  "next": "Iteration 10 is the next candidate. Preserve external outcomes as not-yet-measured, run fresh independent judges, and stop only after two unchanged qualifying rounds or the revised iteration-12 limit."
+  "next": "Iteration 12 is the final internal-control candidate under this budget. Preserve external outcomes as not-yet-measured and stop only after two unchanged qualifying rounds; otherwise retain the strongest bounded controls and report the unresolved criteria."
 }

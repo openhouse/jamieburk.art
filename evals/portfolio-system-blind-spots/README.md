@@ -12,6 +12,13 @@ Run:
 npm run evals:blind-spots
 ```
 
+After intentionally changing rendered portfolio prose, regenerate the
+content-addressed route inventory and public-surface receipts before judging:
+
+```bash
+npm run evals:blind-spots:refresh
+```
+
 A pass means the controls are explicit, testable, calibrated, and actionable.
 It does not mean recruiters understood the site, collaborators approved every
 claim, the archive is complete, or a job-search outcome occurred. Those states
@@ -23,12 +30,16 @@ require separate external evidence.
   decision rule, next test, and evidence-return path.
 - `composition-manifest.json` governs audience, argument, action, claim budget,
   and omission for every public route or route template. Exact claim-key
-  inventories are recomputed from rendered route data, metadata, MDX prose,
-  and `<Claim>` nodes; multi-proposition project cards are not counted as one.
+  inventories decompose rendered route data, metadata, MDX prose, and artifact
+  descriptions by sentence and semicolon; canonical `<Claim>` nodes remain one
+  governed unit because evidence and boundaries travel with the projection.
 - `role-evidence-classifications.json` is an exact-set classification of every
   Knowledge Bank claim whose internal text or projection names Jamie, plus
   every proof claim permitted on a public surface. Adding or removing one
   without classifying its source basis fails the suite.
+- Work items declare `authoredRoleProofIds` when page authors paraphrase a
+  first-person or mixed-basis proof. The checker requires exact coverage through
+  a linked canonical `<Claim>` or an attributed authored-prose guard.
 - `control-state.json` derives the full-population archive-pass ledger from
   Knowledge Bank inquiries and requires an invisible-labor balance review for
   every project represented there.

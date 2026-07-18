@@ -19,7 +19,7 @@ effect attributable to the site.
 2026, ask five consented readers, including at least two hiring-adjacent readers
 and one implementation, civic-tech, or product-operations peer, to review a
 frozen surface for five minutes without coaching. Assign one reader each to
-home, technical operations, and the 53-of-56 Fair Rent case, and two readers to
+home, technical operations, and the 83-of-84 Fair Rent case, and two readers to
 About so the new artistic-practice threshold can produce a repeated signal; all
 five must attempt the resume and contact destinations. Record aggregate entry
 coverage, exposure completion, role identification, proof recall, role fit,
@@ -97,14 +97,14 @@ strengthens the bank. It enters the site only when it reduces reader uncertainty
 or supports the page's current argument. Omission is an editorial success when
 depth remains retrievable.
 
-Every concrete route has an ordered, render-derived claim-key inventory. A work
-card counts its subtitle, summary, uncertainty, usable transformation, and role
-fit as separate propositions even though they share a container. Concrete case
-studies add MDX prose and `<Claim>` nodes to the metadata actually rendered by
-the shared layout; they do not inherit a generic count. Multi-proposition About
-copy is likewise decomposed into semantic claim keys rather than counted as one
-paragraph. In this snapshot the six cases range from 24 to 53 claim units; Fair
-Rent NYC is the densest at 53 of 56.
+Every concrete route has an ordered, render-derived claim-key inventory. Prose
+sentences and semicolon-delimited propositions receive separate content-bound
+keys across work cards, metadata, Known/Open/Protected text, artifact titles and
+descriptions, and MDX. Canonical `<Claim>` projections remain one governed unit
+because their evidence and boundary travel with the projection. In this
+snapshot the six cases range from 33 to 83 claim units; Fair Rent NYC is the
+densest at 83 of 84 after a subtraction pass removed redundant artifacts and
+replaced a paraphrased role block with its canonical claim.
 
 **Next evidence:** Short reader-recall results and page-level subtraction tests,
 not a larger page by default.

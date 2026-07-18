@@ -52,6 +52,7 @@ const workMetaSchema = z.object({
   priority: z.number(),
   visibility: visibilitySchema,
   proofBankIds: z.array(z.string()),
+  authoredRoleProofIds: z.array(z.string()).default([]),
   whatWasUnclear: z.string(),
   whatBecameUsable: z.string(),
   artifactTypes: z.array(artifactTypeSchema),
@@ -178,7 +179,7 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Jamie describes his role as a NYC Artist Coalition co-founder, campaign-website builder, and civic-systems contributor. Public sources and protected revision records corroborate specific organizing, testimony, web, meeting-production, and documentation work, while the complete founding and responsibility map remains under research. Campaign decisions and accomplishments remained collective.",
+      "Jamie describes his role as a NYC Artist Coalition co-founder who built campaign websites and a shared publishing system that collaborators used to explain issues, share resources, and organize participation. Surviving public sources corroborate the infrastructure and specific actions, while the full responsibility map remains under research and campaign decisions and outcomes remain collective.",
     role: "Civic Systems, Coalition Operations & Policy Communications",
     years: "2017-Present",
     status: "Full case study",
@@ -199,6 +200,13 @@ const workItemsInput = [
       "nyca-office-nightlife-advocacy",
       "nyca-commercial-rent-testimony-2018",
       "commercial-vacancy-public-data-pilot"
+    ],
+    authoredRoleProofIds: [
+      "project-social-identity-systems",
+      "nyc-artist-coalition-public-web-infrastructure",
+      "nyca-council-member-account-engagement",
+      "nyca-campaign-press-architecture",
+      "nyca-participation-system"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
@@ -222,27 +230,15 @@ const workItemsInput = [
         type: "decision record"
       },
       {
-        title: "Source map",
+        title: "Source map and policy question log",
         description:
-          "A structured way to separate public sources, private notes, open questions, and materials that require review.",
+          "A structured way to separate public sources, private notes, open legal and policy questions, and materials that require collaborator review.",
         type: "source map"
       },
       {
-        title: "Policy question log",
+        title: "Campaign websites and shared identity",
         description:
-          "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
-        type: "decision record"
-      },
-      {
-        title: "Public campaign web surfaces",
-        description:
-          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance.",
-        type: "website"
-      },
-      {
-        title: "Shared public identity system",
-        description:
-          "A durable @NYCArtC publishing identity connected across the coalition, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC, with shared authorship kept explicit.",
+          "Public-safe campaign websites connected to a durable @NYCArtC publishing identity, with shared authorship kept explicit.",
         type: "website"
       },
       {
@@ -255,12 +251,6 @@ const workItemsInput = [
         title: "Campaign press corpus",
         description:
           "A governed index of 46 campaign-to-article placements representing 45 distinct articles across four live and archived campaign surfaces.",
-        type: "source map"
-      },
-      {
-        title: "Commercial vacancy open-data pilot",
-        description:
-          "A privacy-preserving implementation brief for geography-aggregated vacancy and lease-cost indicators, including minimum fields, coverage and suppression reporting, methods, and confidentiality limits.",
         type: "source map"
       }
     ],
@@ -555,7 +545,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation. Jamie reports that after years of public review, he transitioned stewardship to a mission-aligned organization; City records later closed the unused award as withdrawn.",
+      "Jamie describes presenting a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation. Jamie reports that after years of public review, he transitioned stewardship to a mission-aligned organization; City records later closed the unused award as withdrawn.",
     role: "Project Planning & Documentation Support",
     years: "2019-2024",
     status: "Short proof page",
@@ -565,6 +555,10 @@ const workItemsInput = [
     proofBankIds: [
       "kc-town-hall-public-benefit-documentation",
       "project-social-identity-systems",
+      "kc-town-hall-public-operations-channel"
+    ],
+    authoredRoleProofIds: [
+      "kc-town-hall-public-benefit-documentation",
       "kc-town-hall-public-operations-channel"
     ],
     whatWasUnclear:
@@ -615,7 +609,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie presented and supported planning and documentation for a mixed-use adaptive-reuse proposal and confirms that he established its public account. All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. The recovered public timeline later functioned as a resident-facing channel for neighborhood information and recurring #TiredOfTires pickups; it does not assign every post or program action to Jamie. Jamie reports that he later transitioned stewardship to a mission-aligned organization; City records subsequently described the original CCED project as withdrawn and reappropriated the unused funds.",
+        "Jamie describes presenting and supporting planning and documentation for a mixed-use adaptive-reuse proposal, and reports that he established its public account. All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. The recovered public timeline later functioned as a resident-facing channel for neighborhood information and recurring #TiredOfTires pickups; it does not assign every post or program action to Jamie. Jamie reports that he later transitioned stewardship to a mission-aligned organization; City records subsequently described the original CCED project as withdrawn and reappropriated the unused funds.",
       open:
         "Public sources reviewed so far do not independently identify the successor organization or establish the timing and terms of transition. City records do not provide a complete stewardship or responsibility map.",
       protected:

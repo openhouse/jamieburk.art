@@ -106,18 +106,33 @@
     "status": "planned",
     "actionClass": "bounded-hiring-reader-study",
     "deadline": "2026-07-18",
-    "frozenSurfaces": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/about", "/resume", "/contact"],
-    "entrySurfaces": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/about"],
+    "frozenSurfaces": [
+      "/",
+      "/work/technical-operations",
+      "/work/fair-rent-nyc",
+      "/about",
+      "/resume",
+      "/contact"
+    ],
+    "entrySurfaces": [
+      "/",
+      "/work/technical-operations",
+      "/work/fair-rent-nyc",
+      "/about"
+    ],
     "entrySurfaceAllocation": {
       "/": 1,
       "/work/technical-operations": 1,
       "/work/fair-rent-nyc": 1,
       "/about": 2
     },
-    "destinationSurfaces": ["/resume", "/contact"],
+    "destinationSurfaces": [
+      "/resume",
+      "/contact"
+    ],
     "sample": "Five consented readers: at least two hiring-adjacent readers and one implementation, civic-tech, or product-operations peer. Assign one reader to the home page, one to technical operations, one to Fair Rent NYC, and two to About so the new practice-lineage threshold can produce a repeated page-specific signal; all five must attempt the resume and contact destinations.",
     "exposure": "Five minutes without coaching, followed by a structured recall task.",
-    "frozenSurfaceDigest": "035dd36eddd59c5dfd1024efc0a8857e63e9e66296aa62d3be32d70c0cfd6945",
+    "frozenSurfaceDigest": "f6730fe128549206e5542b31f4630e58d24cf4f7b148e92d583072b0aa82124d",
     "taskOrder": [
       "Open the assigned entry page without coaching.",
       "Browse for no more than five minutes.",
@@ -261,83 +276,164 @@
       "INQ-WOWLIST-FACEBOOK-EVENTS-2026",
       "INQ-WOWLIST-FACEBOOK-POST-POPULATION-2026"
     ],
-    "requiredInvisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "repair", "documentation", "follow-through", "handoff"],
+    "requiredInvisibleWorkDimensions": [
+      "maintenance",
+      "facilitation",
+      "coordination",
+      "repair",
+      "documentation",
+      "follow-through",
+      "handoff"
+    ],
     "stopRule": "Do not open a broad archive pass solely because a platform population is countable. Open a targeted lead only when it could change a consequential role claim or active hiring decision.",
     "projectReviews": [
       {
         "project": "nyc-artist-coalition",
         "platformTraceRisk": "Large social and press populations can eclipse convening, meeting production, policy translation, maintenance, and handoff.",
-        "invisibleWorkDimensions": ["facilitation", "coordination", "documentation", "follow-through", "handoff"],
+        "invisibleWorkDimensions": [
+          "facilitation",
+          "coordination",
+          "documentation",
+          "follow-through",
+          "handoff"
+        ],
         "evidenceDisposition": "Protected revision records and public event records support targeted operating claims. Call Script's naming poll and collaborative letter prompt now document participatory formation mechanisms; broader founding responsibility and individual shared-account authorship remain open.",
         "nextDecision": "Pursue only role-specific founding or production evidence that could change active wording."
       },
       {
         "project": "kc-town-hall",
         "platformTraceRisk": "Public votes and posts can eclipse daily construction coordination, field listening, maintenance, and stewardship transition.",
-        "invisibleWorkDimensions": ["maintenance", "coordination", "documentation", "follow-through", "handoff"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "coordination",
+          "documentation",
+          "follow-through",
+          "handoff"
+        ],
         "evidenceDisposition": "Phase One role remains a priority inquiry; the stewardship transition stays bounded without a private reason.",
         "nextDecision": "Seek a role-specific public-safe construction record before strengthening the general-contractor claim."
       },
       {
         "project": "wowlist",
         "platformTraceRisk": "Event and post counts can eclipse moderation, taxonomy work, partner support, maintenance, and community facilitation.",
-        "invisibleWorkDimensions": ["maintenance", "facilitation", "documentation", "follow-through", "handoff"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "facilitation",
+          "documentation",
+          "follow-through",
+          "handoff"
+        ],
         "evidenceDisposition": "A protected July 2017 production snapshot now supports bounded platform scale and the popular.vote surface. Counts remain scale context, not a ranking of effort or impact; social-management attribution remains inconclusive.",
         "nextDecision": "Prefer collaborator or role-specific product records over another broad platform count."
       },
       {
         "project": "callnyc",
         "platformTraceRisk": "Council-member account engagement can overshadow product translation, data work, interface design, and archival maintenance.",
-        "invisibleWorkDimensions": ["maintenance", "coordination", "documentation", "handoff"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "coordination",
+          "documentation",
+          "handoff"
+        ],
         "evidenceDisposition": "The public project, repository, reporting, and bounded engagement review support separate product and traction claims.",
         "nextDecision": "Do not expand engagement research unless it changes a consequential stakeholder-use claim."
       },
       {
         "project": "196-sunday-dinner",
         "platformTraceRisk": "Event and participant counts can obscure hosting, space preparation, onboarding, continuity, care, and self-service access.",
-        "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "repair", "documentation", "follow-through"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "facilitation",
+          "coordination",
+          "repair",
+          "documentation",
+          "follow-through"
+        ],
         "evidenceDisposition": "A protected workflow supports one concrete residency sequence, while a separate protected workbook supports 345 numbered Sunday Dinner entries without exposing people or converting marks into attendance impact.",
         "nextDecision": "Seek participant-safe operating evidence only when it changes an active role or case-study decision."
       },
       {
         "project": "harry-j-epstein",
         "platformTraceRisk": "Revenue and analytics traces can crowd out legacy-system maintenance, operational translation, staff support, and durable handoff.",
-        "invisibleWorkDimensions": ["maintenance", "coordination", "repair", "documentation", "follow-through", "handoff"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "coordination",
+          "repair",
+          "documentation",
+          "follow-through",
+          "handoff"
+        ],
         "evidenceDisposition": "Keep private operational detail protected and use approved aggregate claims; primary source wiring remains a priority.",
         "nextDecision": "Pursue a canonical role-and-outcome source relationship rather than additional surface metrics."
       },
       {
         "project": "career-proof-system",
         "platformTraceRisk": "A complete personal social timeline can overrepresent public posting while underrepresenting private coordination, maintenance, repair, and long-term handoff work across projects.",
-        "invisibleWorkDimensions": ["maintenance", "coordination", "repair", "documentation", "follow-through", "handoff"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "coordination",
+          "repair",
+          "documentation",
+          "follow-through",
+          "handoff"
+        ],
         "evidenceDisposition": "The personal-account population is a bounded lead index, not a professional activity ledger; role claims still require project-level evidence.",
         "nextDecision": "Use personal posts only to route targeted source recovery that could alter a consequential claim."
       },
       {
         "project": "participatory-public-practice",
         "platformTraceRisk": "Hosted-event associations can make visible event titles and dates while hiding facilitation, preparation, access work, care, follow-through, and collective authorship.",
-        "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "documentation", "follow-through", "handoff"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "facilitation",
+          "coordination",
+          "documentation",
+          "follow-through",
+          "handoff"
+        ],
         "evidenceDisposition": "Facebook association is treated as a historical locator, not proof of attendance, production responsibility, or impact.",
         "nextDecision": "Pursue event-specific production evidence only when it can resolve an active role question."
       },
       {
         "project": "experimental-media-practice",
         "platformTraceRisk": "Public profiles and protected academic records can make artistic practice look like a credential list or a prehistory valuable only through later employment.",
-        "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "documentation", "follow-through", "handoff"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "facilitation",
+          "coordination",
+          "documentation",
+          "follow-through",
+          "handoff"
+        ],
         "evidenceDisposition": "Use public Open House and Time is Long records for public specimens, retain protected evaluations only as bounded corroboration, distinguish realized installations from prototypes and proposals, and keep tending, atmosphere, participation, and value beyond utility visible.",
         "nextDecision": "Seek original project artifacts only when they can refine maturity, collaboration, or public-use boundaries; do not publish raw educational records."
       },
       {
         "project": "waterways-participatory-practice",
         "platformTraceRisk": "A dramatic newspaper narrative and expedition photographs can eclipse the crew's shared labor, local hosts, safety adaptation, and the distinction between reported intent and demonstrated impact.",
-        "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "repair", "documentation", "follow-through", "handoff"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "facilitation",
+          "coordination",
+          "repair",
+          "documentation",
+          "follow-through",
+          "handoff"
+        ],
         "evidenceDisposition": "Use the contemporaneous report to anchor chronology, crew, craft, invitations, and Jamie's attributed interpretation; keep construction responsibility, host networks, unmeasured outcomes, the archival scan, and photographs bounded or offline.",
         "nextDecision": "Pursue builder, route, host, passenger, and handoff evidence only when it can materially refine role or participatory-method claims."
       },
       {
         "project": "kc-spaces-fund",
         "platformTraceRisk": "A collaborator-led post population can eclipse the behind-the-scenes web, naming, deployment, maintenance, and handoff work that made the campaign usable.",
-        "invisibleWorkDimensions": ["maintenance", "coordination", "repair", "documentation", "follow-through", "handoff"],
+        "invisibleWorkDimensions": [
+          "maintenance",
+          "coordination",
+          "repair",
+          "documentation",
+          "follow-through",
+          "handoff"
+        ],
         "evidenceDisposition": "The public Page supports campaign chronology and shared identity; Jamie's bounded technical role is separately attributed and code-corroborated.",
         "nextDecision": "Seek collaborator confirmation only if it would materially refine the naming or responsibility boundary."
       }

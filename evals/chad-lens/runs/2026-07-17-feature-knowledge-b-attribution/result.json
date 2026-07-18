@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-17-feature-knowledge-b-attribution",
+  "branch": "feature/knowledge-b",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 2,
+  "qualifyingRounds": [1, 2],
+  "candidate": "Jamie describes his role as a NYC Artist Coalition co-founder who built campaign websites and a shared publishing system that collaborators used to explain issues, share resources, and organize participation. Surviving public sources corroborate the infrastructure and specific actions, while the full responsibility map remains under research and campaign decisions and outcomes remain collective.",
+  "wordCount": 54,
+  "sentenceCount": 2,
+  "finalJudgments": {
+    "evidenceJudge": {"hardGatesPass": true, "score": 5, "dimensionsPass": 5},
+    "hiringReaderJudge": {"hardGatesPass": true, "score": 5, "dimensionsPass": 5}
+  },
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "Fresh evidence and hiring-reader judges found the exact projected candidate entailed, public-safe, legible in one pass, concrete about collaborator use, and explicit about unresolved attribution and collective outcomes."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "Fresh independent judges re-read the unchanged candidate and retained every hard gate and dimension without regression."
+    }
+  ]
+}

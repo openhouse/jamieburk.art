@@ -125,6 +125,10 @@ self-certification, and indefinite polishing. A pass confirms the controls, not
 an external outcome. Keep hiring-reader, collaborator, and application results
 `not-yet-measured` until separately observed.
 
+After changing rendered prose, run `npm run evals:blind-spots:refresh`, review
+the semantic claim counts, and subtract or recalibrate page budgets before
+starting a new exact-candidate eval run.
+
 ## Composite Readiness
 
 Use `evals/portfolio-readiness/` to coordinate the existing domain suites. Do
