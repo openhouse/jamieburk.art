@@ -1,0 +1,332 @@
+{
+  "schemaVersion": "2.2.0",
+  "id": "composite-2.7.0-holdout-a-public-sector-editorial-2-7-27",
+  "iteration": 27,
+  "recordedAt": "2026-07-18T15:53:42.073Z",
+  "previousRunId": "composite-2.7.0-deterministic-26",
+  "previousRunDigest": "00dfd1aae2024120ef30fc060f5b0504248d425f1be53d611c76b6edc745d9da",
+  "contract": {
+    "id": "jamieburk-art-composite-eval-contract",
+    "version": "2.7.0",
+    "digest": "0a1c0559339fbdb4de6af0923e4f19e5b4c1db33c41ee9ad70f2a9dde86763ac"
+  },
+  "candidate": {
+    "branch": "feature/knowledge-a",
+    "commit": "ccca65166d5b99b61d309d5134b3bd386e3163d8",
+    "tree": "30e72d7b911b0df3413dd7353f0eec96aabe4b15",
+    "governedInputDigest": "df7639b5f9eccac6fedfddac5b99f33fd3108ee17761fba5e8f3477b7a5d6b71"
+  },
+  "commands": [
+    {
+      "command": "independent read-only holdout",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "judge": {
+    "class": "holdout",
+    "label": "holdout-a-public-sector-editorial-2-7",
+    "sessionId": "019f75de-4d29-7782-b4b0-6a312fb58ab2",
+    "reviewerClass": "model-context",
+    "provider": "codex-multi-agent",
+    "independent": true,
+    "priorScoresVisible": false,
+    "promptPath": "evals/_shared/holdout-a.md",
+    "promptDigest": "df9e7f2be24eca360f333a1a2c225e8fd1e8ea2069d4447929970d2a28a5396c",
+    "attestation": {
+      "candidateCommit": "ccca65166d5b99b61d309d5134b3bd386e3163d8",
+      "promptPath": "evals/_shared/holdout-a.md",
+      "runRecordsInspected": false,
+      "generatedReportsInspected": false,
+      "editsMade": false,
+      "attestedAt": "2026-07-18T15:43:21Z"
+    }
+  },
+  "criterionResults": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5,
+      "evidence": [
+        "/ - apps/www/src/components/Hero.tsx:6 names Technical Project Manager - Product Operations & Implementation, states the operating contribution, and offers work, resume, and contact actions in the opening surface.",
+        "/ - apps/www/src/app/page.tsx:17 provides a role-specific Technical Operations & Implementation proof path before the broader project inventory."
+      ],
+      "risks": [
+        "The homepage names a specific OTI-oriented proof path that may need retargeting when the target role changes."
+      ],
+      "rationale": "A time-limited hiring reader can identify Jamie, the target role, the operating contribution, and an appropriate next proof step immediately."
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 4,
+      "evidence": [
+        "/work/callnyc - apps/www/src/content/work/callnyc.mdx:3-28 and 83-96 render claim-bound evidence and public references; lines 58-75 preserve unofficial-status and non-affiliation boundaries around the one visible project artifact.",
+        "/work/fair-rent-nyc - apps/www/src/content/work/fair-rent-nyc.mdx:7-54 and 82-86 separate documented organizing from protected coalition material and reject sole-credit inference.",
+        "scripts/lib/repo-evidence-path.mjs:24-31 checks a candidate against the real approved root but does not first require the approved root itself to resolve inside the real repository root; the root-symlink probe was accepted."
+      ],
+      "risks": [
+        "A root-level symlink can route retained command evidence outside the repository, weakening stale-result and protected-locator defenses.",
+        "Several public claims remain intentionally based on public-safe archive summaries or firsthand context rather than independently inspectable artifacts.",
+        "Recursive private-path detection works when invoked, but some public-safety source scans still use narrower literal patterns; the direct current-content scan found no leak."
+      ],
+      "rationale": "Public claims are unusually careful and often source-linked, but evidence provenance cannot receive the top score while an approved evidence root can escape through a symlink."
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5,
+      "evidence": [
+        "/ - apps/www/src/app/page.tsx:89-92 describes emerging, high-context situations becoming usable systems without diagnosing or blaming teams.",
+        "/about - apps/www/src/app/about/page.tsx:23-41 treats still-forming operating structure as a normal professional context and connects it to concrete translation, workflow, documentation, interface, and handoff practices.",
+        "/work/kc-town-hall - apps/www/src/content/work/kc-town-hall.mdx:1-11 makes an under-formed civic and construction context specific without romanticizing uncertainty."
+      ],
+      "risks": [],
+      "rationale": "The language is humane, actionable, and specific about what work is still forming and what Jamie does next."
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 3,
+      "evidence": [
+        "/ - apps/www/src/app/page.tsx:17-151 stacks five start-here links, five proof tiles, capability content, featured case-study cards, a transformation motif, and a second process explanation before the close.",
+        "/work - apps/www/src/app/work/page.tsx:33-77 presents several grouped inventories, while each WorkCard repeats status, summary, what was unclear, what became usable, role fit, tags, and a detail action.",
+        "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:98-157 offers a clear role-specific path but contains both an eight-project proof map and a second capability-by-proof grid."
+      ],
+      "risks": [
+        "Repeated role-fit and operating-structure language can make a skeptical reader feel they are being told the thesis more often than shown decisive proof."
+      ],
+      "rationale": "The primary route is visible, but repetition and dense parallel proof maps create avoidable editorial load."
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4,
+      "evidence": [
+        "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:87-157 states Jamie's operating contribution, maps it to team operations, and links each proof to a project.",
+        "/work/harry-j-epstein - apps/www/src/content/work/harry-j-epstein.mdx:19-37 names Jamie's implementation actions, the usable operating result, and hiring relevance with careful contribution language.",
+        "/work/kc-town-hall - apps/www/src/content/work/kc-town-hall.mdx:9-32 makes Jamie's coordination role specific while retaining specialist and neighborhood credit."
+      ],
+      "risks": [
+        "Specialized phrases such as source-backed memory, decision lineage, provenance redline, and operating backbone accumulate across the main path.",
+        "The technical-operations route repeats proof through two mappings, interrupting the fastest hiring argument."
+      ],
+      "rationale": "Jamie is visible as the actor and the usable results are named, but the strongest path still asks the reader to carry more framework language and repeated mapping than a score of 5 allows."
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 5,
+      "evidence": [
+        "/work/fair-rent-nyc - apps/www/src/content/work/fair-rent-nyc.mdx:54 and 68-86 explicitly distinguish Jamie's systems work from collective campaign outcomes and omit private strategy, legal-review material, and stakeholder records.",
+        "/work/kc-town-hall - apps/www/src/content/work/kc-town-hall.mdx:24-32 and 54-67 preserve specialist, collaborator, neighbor, and shared-account agency while bounding what public records establish.",
+        "apps/www/src/components/CaseStudyBlocks.tsx:150-186 keeps detailed Known/Open/Protected material collapsible and renders explicit credits on every case that supplies them."
+      ],
+      "risks": [],
+      "rationale": "Jamie's contribution, collective context, and protected absences are consistently precise and mutually reinforcing."
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3,
+      "evidence": [
+        "/work/callnyc - apps/www/src/content/work/callnyc.mdx:60-75 presents a real, source-linked project mark with an explicit non-affiliation boundary.",
+        "apps/www/public contains one project image at artifacts/callnyc/callnyc-project-mark.png plus the resume artifact.",
+        "apps/www/src/components/CaseStudyBlocks.tsx:43-61 renders most representative artifacts as descriptive text cards rather than inspectable project artifacts."
+      ],
+      "risks": [
+        "Key cases remain text-heavy, so the portfolio often asks readers to trust descriptions of workflows, maps, and documents they cannot inspect."
+      ],
+      "rationale": "The system is coherent and one cleared artifact is real, but most visual proof is representational rather than evidentiary."
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 5,
+      "evidence": [
+        "/work/technical-operations - apps/www/src/app/work/technical-operations/page.tsx:11-73 connects delivery coordination, blockers, planning cycles, dependencies, onboarding, reporting, and handoffs to eight contexts.",
+        "/work/harry-j-epstein - apps/www/src/content/work/harry-j-epstein.mdx:13-45 connects incremental releases, analytics limits, content, e-commerce, internal habits, and handoffs to long-term stewardship.",
+        "/work/kc-town-hall - apps/www/src/content/work/kc-town-hall.mdx:13-32 provides concrete scope, sequence, specialist coordination, survey workflow, and public/private boundaries."
+      ],
+      "risks": [],
+      "rationale": "Requirements, workflows, implementation, launch support, adoption context, and maintainable handoffs are connected to specific outcomes across materially different environments."
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 4,
+      "evidence": [
+        "/about - apps/www/src/app/about/page.tsx:35-41 explicitly connects artistic, civic, technical, social, participatory, spatial, relational, memory, and place-based practice without displacing the target role.",
+        "/work/196-sunday-dinner - apps/www/src/content/work/196-sunday-dinner.mdx:1-28 makes participation, hospitality, continuity, consent, and recurring human systems operationally legible.",
+        "/work/kc-town-hall - apps/www/src/content/work/kc-town-hall.mdx:28-32 connects neighborhood conversation and participatory planning to a concrete survey and contact workflow."
+      ],
+      "risks": [
+        "The threshold is clear in prose, but limited visual or artifact evidence makes the continuity between artistic method and system design less inspectable than the top anchor requires."
+      ],
+      "rationale": "The public threshold is restrained and role-compatible, but the reader still reconstructs part of the artistic-to-operational continuity from prose."
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 3,
+      "evidence": [
+        "evals/launch-readiness/evals.json defines the seven-dimension vector, four human authorities, five reopen triggers, disagreement preservation, structured overrides, and non-final model acceptance.",
+        "scripts/lib/eval-contract.mjs:350-377 enforces deterministic-then-holdout phase order, unchanged candidate identity, distinct sessions and labels, distinct prompts, and explicit external gates.",
+        "scripts/lib/repo-evidence-path.mjs:24-31 accepts an approved root that is itself a symlink outside the repository; scripts/tests/eval-contract.test.mjs:157-167 covers only a symlinked file inside a real approved root."
+      ],
+      "risks": [
+        "A model-visible aggregate can appear well governed while retained evidence is outside the repository boundary the validator claims to enforce.",
+        "No run history was inspected, so this review evaluates the governance mechanism and candidate surface, not whether any actual sequence has qualified."
+      ],
+      "rationale": "The decision vector and human authority model are visible and substantial, but the evidence-root escape leaves the governance implementation incomplete rather than merely aspirational."
+    }
+  ],
+  "blockingFindings": [
+    {
+      "id": "A-2.7.0-BLOCK-001",
+      "severity": "blocking",
+      "criterionIds": [
+        "LR-JUDGE-EVIDENCE",
+        "LR-JUDGE-SACK"
+      ],
+      "title": "An approved evidence root can itself symlink outside the repository",
+      "finding": "resolveRepoEvidencePath rejects a symlinked evidence file but accepts a candidate under an approved root directory that is itself a symlink to an external directory. The implementation resolves the approved root and then checks the candidate relative to that external real path; it never proves that the real approved root is inside the real repository root.",
+      "evidence": [
+        "scripts/lib/repo-evidence-path.mjs:24-31 computes realApprovedRoot and realRelative but does not compare realApprovedRoot with realpath(repoRoot).",
+        "scripts/tests/eval-contract.test.mjs:157-167 tests an approved/capture.log symlink, not an approved-root symlink.",
+        "A read-only temporary probe made approved a symlink to an external directory; resolveRepoEvidencePath(base, 'approved/private.log', ['approved']) returned a path and relative value instead of an error."
+      ],
+      "impact": "Retained deterministic command or review evidence can be read from or written through an external location, defeating the asserted repository-root boundary and creating a path for stale, fabricated, or protected evidence to participate in certification.",
+      "requiredResolution": "Resolve the real repository root and reject any allowed root whose real path is not contained by it before validating the candidate. Add a regression fixture in which the approved root itself is a symlink to an external directory, then rerun the eval-contract tests and the governed checks on the unchanged candidate."
+    }
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "Strong. Jamie is immediately legible as a technical project manager focused on product operations and implementation for public-facing teams.",
+        "evidence": [
+          "/ hero and /work/technical-operations provide an immediate role statement, operating contribution, and direct proof path."
+        ],
+        "unresolvedRisks": [
+          "The OTI-specific framing should be reopened if the target role changes."
+        ]
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "Strong. The case studies repeatedly name Jamie's actions in requirements, workflow design, documentation, implementation coordination, public interfaces, and handoffs.",
+        "evidence": [
+          "/work/harry-j-epstein names incremental implementation actions; /work/kc-town-hall names project management and specialist coordination; /work/fair-rent-nyc names documentation architecture and source translation."
+        ],
+        "unresolvedRisks": [
+          "Some claims rely on approved first-person or public-safe archive summaries and should not be strengthened without new corroboration."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "Strong but visually under-demonstrated. The portfolio names usable systems and outcomes clearly, while most artifacts remain descriptions rather than inspectable examples.",
+        "evidence": [
+          "/work/callnyc presents a real source-linked project mark and resident-pathway result; /work/fair-rent-nyc describes shared campaign memory; /work/harry-j-epstein describes maintainable e-commerce and operating workflows."
+        ],
+        "unresolvedRisks": [
+          "Only one project image is shipped, and most artifact galleries are text cards."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "Strong and differentiated across civic technology, small-business operations, coalition work, construction coordination, community infrastructure, and knowledge systems.",
+        "evidence": [
+          "/work and its six case studies present materially different operating environments with a consistent implementation throughline."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "Credible coordination and implementation authority is demonstrated, while formal organizational authority is correctly bounded rather than implied.",
+        "evidence": [
+          "/work/kc-town-hall identifies project-manager and general-contractor scope with specialist credit; /work/fair-rent-nyc identifies co-founder and systems roles without claiming movement ownership."
+        ],
+        "unresolvedRisks": [
+          "The site should continue distinguishing delivery leadership from executive, legal, policy, or sole decision authority."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "Public claim discipline is strong, but certification evidence is not fully repository-bounded because an approved evidence root may symlink outside the repository.",
+        "evidence": [
+          "Public claim projections and route citations preserve source limits; A-2.7.0-BLOCK-001 demonstrates the retained-evidence root escape."
+        ],
+        "unresolvedRisks": [
+          "Stale, fabricated, or protected external evidence could satisfy path checks until the root containment defect is fixed.",
+          "Some public-safe summary claims remain less independently inspectable than public-source claims."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "One technical governance blocker remains, alongside nonblocking editorial density, limited visual proof, external human gates, and a narrower-scanner scope risk.",
+        "evidence": [
+          "A-2.7.0-BLOCK-001 records the root-symlink escape; / repeats several proof frameworks; apps/www/public contains one project image; evals/_shared/contract.json leaves five external human gates open."
+        ],
+        "unresolvedRisks": [
+          "Evidence-root containment must be repaired before PR-review acceptance.",
+          "Five privacy-safe real-reader sessions, collaborator corroboration, rights clearance, exact-SHA staging verification, and Jamie's exact-production-SHA approval remain open.",
+          "Public-safety scanners should consistently apply recursive private-path normalization to every shipped text surface."
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked. This judgment does not promote or strengthen any public claim; authority remains with Jamie after human review.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "No substantiated attribution dispute was established in the permitted review. The collaborator hold remains available and controlling.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "Not invoked. No human override, rationale, evidence package, or boundary change was supplied.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "No governed trigger was established during this review; the listed human authorities may reopen the decision whenever one occurs.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "All five governed triggers were reviewed exactly once. The permitted source review established no new or contradictory claim evidence, changed consent or rights, substantiated attribution dispute, source decay or corrected provenance, or changed target role or public surface. Any such future event requires human reopening. The evidence-root defect is a current technical blocker requiring revision, not a model override of human authority.",
+    "overrides": [],
+    "openDisagreements": [
+      "The contract represents retained evidence paths as repository-bounded, but the approved-root symlink probe shows that this boundary is not currently enforced."
+    ],
+    "disagreementReview": "The live technical disagreement is preserved rather than averaged away: strong editorial and claim-governance work does not cure the evidence-root escape. No collaborator or human-authority disagreement was observed or inferred."
+  },
+  "openDisagreements": [
+    "The contract represents retained evidence paths as repository-bounded, but the approved-root symlink probe shows that this boundary is not currently enforced."
+  ],
+  "overrides": [],
+  "reopenTriggersReviewed": [
+    "new or contradictory evidence",
+    "changed consent or rights",
+    "a substantiated attribution dispute",
+    "source decay or corrected provenance",
+    "a changed target role or public surface"
+  ],
+  "decision": {
+    "status": "revision-required",
+    "weightedScore": 4.14,
+    "productionReady": false,
+    "externalGatesOpen": [
+      "five privacy-safe real-reader sessions",
+      "collaborator corroboration",
+      "artifact and media rights clearance",
+      "staging verification of the exact candidate SHA",
+      "Jamie approval of the exact production SHA"
+    ]
+  },
+  "summary": "Revision required. The portfolio is role-clear, operationally credible, careful with collective credit, and public-safe in the inspected source surfaces. It does not qualify for pull-request review because an approved evidence root can symlink outside the repository, undermining retained-log provenance and the Warren Sack governance boundary. This rejection is not production approval; all external human gates remain open.",
+  "recordDigest": "086e08332a253634d71bf6506c5412038d8c0a0cdc059f77d6abfdfa520af7f3"
+}
