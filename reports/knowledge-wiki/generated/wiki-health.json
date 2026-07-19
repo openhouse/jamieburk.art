@@ -1,33 +1,34 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "sha256:a9a3c476f8cefe123025711a4ec08f2c9464a5ad1793630c535f1559988d7cdf",
+  "sourceFingerprint": "sha256:3a1abafc1eefbe18ad808760c3d381e0ec39363b0ca969b50d07c0b921d49f49",
   "hardGates": {
     "status": "pass",
     "failures": []
   },
   "diagnostics": {
-    "records": 50,
+    "records": 75,
     "recordsByKind": {
       "asset": 1,
-      "capability": 1,
+      "capability": 2,
       "claim": 6,
       "correction": 1,
-      "event": 1,
-      "index": 12,
-      "method": 3,
+      "decision": 4,
+      "event": 2,
+      "index": 18,
+      "method": 7,
       "opportunity": 6,
       "projection": 2,
-      "project": 3,
+      "project": 11,
       "research-inquiry": 1,
       "research-run": 1,
-      "source": 8,
+      "source": 9,
       "timeline": 4
     },
-    "proseLinks": 97,
-    "typedRelations": 165,
+    "proseLinks": 140,
+    "typedRelations": 252,
     "genericRelationRate": 0,
-    "discoverableRecords": 49,
-    "reachableDiscoverableRecords": 49,
+    "discoverableRecords": 74,
+    "reachableDiscoverableRecords": 74,
     "maximumRootDistance": 3,
     "typeAwareOrphans": [],
     "deadEnds": [],
@@ -42,6 +43,10 @@
         "state": "human-blocked"
       },
       {
+        "id": "capability.implementation-adoption-and-handoff",
+        "state": "requested"
+      },
+      {
         "id": "claim.nycartc.march-data-design-lead",
         "state": "human-blocked"
       },
@@ -54,8 +59,36 @@
         "state": "requested"
       },
       {
+        "id": "decision.callnyc.issue-pathways",
+        "state": "requested"
+      },
+      {
+        "id": "decision.kc-town-hall.listening-fieldwork",
+        "state": "requested"
+      },
+      {
+        "id": "decision.knowledge-wiki.selective-projection",
+        "state": "requested"
+      },
+      {
+        "id": "decision.open-house.communal-governance",
+        "state": "requested"
+      },
+      {
+        "id": "event.nycac.office-of-nightlife-town-hall-2017",
+        "state": "requested"
+      },
+      {
         "id": "index.absences-protections-and-permissions",
         "state": "human-blocked"
+      },
+      {
+        "id": "index.knowledge-wiki.canonical-story-bank",
+        "state": "requested"
+      },
+      {
+        "id": "index.knowledge-wiki.decision-records",
+        "state": "requested"
       },
       {
         "id": "index.decisions-deliverables-operational-outcomes",
@@ -74,7 +107,15 @@
         "state": "requested"
       },
       {
+        "id": "index.places-where-work-became-real",
+        "state": "requested"
+      },
+      {
         "id": "index.project-afterlives-and-handoffs",
+        "state": "requested"
+      },
+      {
+        "id": "index.knowledge-wiki.project-lineages",
         "state": "requested"
       },
       {
@@ -90,7 +131,23 @@
         "state": "requested"
       },
       {
+        "id": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+        "state": "human-blocked"
+      },
+      {
+        "id": "index.knowledge-wiki.pressures",
+        "state": "requested"
+      },
+      {
         "id": "inquiry.nycartc.march-data-design-attribution",
+        "state": "requested"
+      },
+      {
+        "id": "method.identity-systems-as-shared-infrastructure",
+        "state": "requested"
+      },
+      {
+        "id": "method.learning-through-making",
         "state": "requested"
       },
       {
@@ -98,11 +155,51 @@
         "state": "requested"
       },
       {
+        "id": "method.public-knowledge-in-peoples-own-terms",
+        "state": "requested"
+      },
+      {
+        "id": "method.what-is-at-stake-for-me",
+        "state": "human-blocked"
+      },
+      {
         "id": "project.kc-spaces-fund",
         "state": "requested"
       },
       {
+        "id": "project.kc-town-hall",
+        "state": "requested"
+      },
+      {
+        "id": "project.let-nyc-dance",
+        "state": "requested"
+      },
+      {
+        "id": "project.nter-chng",
+        "state": "requested"
+      },
+      {
         "id": "project.nyc-artist-coalition",
+        "state": "requested"
+      },
+      {
+        "id": "project.open-house",
+        "state": "requested"
+      },
+      {
+        "id": "project.sunday-dinner",
+        "state": "requested"
+      },
+      {
+        "id": "project.talks-not-raids",
+        "state": "requested"
+      },
+      {
+        "id": "project.water-publics",
+        "state": "requested"
+      },
+      {
+        "id": "project.wowlist",
         "state": "requested"
       },
       {

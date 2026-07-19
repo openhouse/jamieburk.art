@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import {
@@ -161,6 +161,24 @@ test("maintenance and care preserve distinct modes and collective labor", () => 
   }
   assert.match(text, /does not support a single continuous maintenance role across all projects/);
   assert.match(text, /Care language must not obscure labor allocation/);
+});
+
+test("A-E family closure uses one canonical Wiki and preserves human gates", () => {
+  const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/knowledge-wiki/suite.json"), "utf8"));
+  const ledger = JSON.parse(readFileSync(path.join(repoRoot, suite.familyClosure.ledgerPath), "utf8"));
+  const wiki = loadKnowledgeWiki({ failOnErrors: true });
+  assert.equal(suite.version, 5);
+  assert.equal(ledger.branches.length, 5);
+  assert.deepEqual(
+    ledger.branches.map((entry) => entry.sourceCommit),
+    suite.familyClosure.frozenBranches.map((entry) => entry.sha)
+  );
+  assert.ok(suite.familyClosure.requiredRecordIds.every((id) => wiki.records.some((record) => record.id === id)));
+  assert.ok(!existsSync(path.join(repoRoot, "docs/knowledge-wiki")));
+  const stakes = wiki.records.find((record) => record.id === "method.what-is-at-stake-for-me");
+  assert.equal(stakes.reviewState, "human-blocked");
+  assert.equal(stakes.projectionStatus, "pending");
+  assert.deepEqual(stakes.allowedSurfaces, []);
 });
 
 test("mutation fixture contract matches implemented adversarial cases", () => {

@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "sha256:a9a3c476f8cefe123025711a4ec08f2c9464a5ad1793630c535f1559988d7cdf",
+  "sourceFingerprint": "sha256:3a1abafc1eefbe18ad808760c3d381e0ec39363b0ca969b50d07c0b921d49f49",
   "byKind": {
     "asset": [
       "asset.photo.digital-district.001"
     ],
     "capability": [
+      "capability.implementation-adoption-and-handoff",
       "capability.technical-operations"
     ],
     "claim": [
@@ -19,7 +20,14 @@
     "correction": [
       "correction.callnyc-years"
     ],
+    "decision": [
+      "decision.callnyc.issue-pathways",
+      "decision.kc-town-hall.listening-fieldwork",
+      "decision.knowledge-wiki.selective-projection",
+      "decision.open-house.communal-governance"
+    ],
     "event": [
+      "event.nycac.office-of-nightlife-town-hall-2017",
       "event.nycc.constituent-services-hackathon.2016"
     ],
     "index": [
@@ -29,8 +37,14 @@
       "index.knowledge-wiki",
       "index.knowledge-wiki-missing-pages",
       "index.knowledge-wiki-pilot",
+      "index.knowledge-wiki.canonical-story-bank",
+      "index.knowledge-wiki.decision-records",
+      "index.knowledge-wiki.pressures",
+      "index.knowledge-wiki.project-lineages",
+      "index.knowledge-wiki.visual-evidence-and-rights-queue",
       "index.maintenance-and-care",
       "index.people-places-and-community-testimony",
+      "index.places-where-work-became-real",
       "index.project-afterlives-and-handoffs",
       "index.relational-infrastructure-atlas",
       "index.role-and-collective-authorship",
@@ -40,9 +54,13 @@
       "inquiry.nycartc.march-data-design-attribution"
     ],
     "method": [
+      "method.identity-systems-as-shared-infrastructure",
+      "method.learning-through-making",
       "method.nycartc.public-meeting-and-testimony-participation",
+      "method.public-knowledge-in-peoples-own-terms",
       "method.source-backed-team-memory",
-      "method.source-re-encounter"
+      "method.source-re-encounter",
+      "method.what-is-at-stake-for-me"
     ],
     "opportunity": [
       "opportunity.aclu.product-manager-ii-discovery.8482872002",
@@ -59,13 +77,22 @@
     "project": [
       "project.callnyc",
       "project.kc-spaces-fund",
-      "project.nyc-artist-coalition"
+      "project.kc-town-hall",
+      "project.let-nyc-dance",
+      "project.nter-chng",
+      "project.nyc-artist-coalition",
+      "project.open-house",
+      "project.sunday-dinner",
+      "project.talks-not-raids",
+      "project.water-publics",
+      "project.wowlist"
     ],
     "research-run": [
       "research-run.nycartc.shared-folder.2026-07"
     ],
     "source": [
       "source.civichall.hackathon-announcement.2016",
+      "source.councilstat.fuller-release.2016",
       "source.nycartc.march-data-design-notes.2019",
       "source.nycartc.nightlife-recommendation-sequence.2017-2019",
       "source.nycartc.public-meeting-playbook.2018",
@@ -85,6 +112,8 @@
     "governed-open": [
       "asset.photo.digital-district.001",
       "index.employment-acceptance",
+      "index.knowledge-wiki.canonical-story-bank",
+      "index.knowledge-wiki.visual-evidence-and-rights-queue",
       "inquiry.nycartc.march-data-design-attribution",
       "opportunity.aclu.product-manager-ii-discovery.8482872002",
       "opportunity.asana.ai-implementation-manager.8027437",
@@ -94,6 +123,7 @@
       "opportunity.permitflow.product-operations-manager.8a6e6066"
     ],
     "maintained": [
+      "capability.implementation-adoption-and-handoff",
       "capability.technical-operations",
       "claim.callnyc.hackathon-date-time",
       "claim.callnyc.independent-follow-on",
@@ -101,27 +131,45 @@
       "claim.nycartc.nightlife-recommendation-continuity",
       "claim.nycartc.public-meeting-operating-system",
       "correction.callnyc-years",
+      "decision.knowledge-wiki.selective-projection",
+      "event.nycac.office-of-nightlife-town-hall-2017",
       "event.nycc.constituent-services-hackathon.2016",
       "index.absences-protections-and-permissions",
       "index.decisions-deliverables-operational-outcomes",
       "index.knowledge-wiki",
       "index.knowledge-wiki-missing-pages",
       "index.knowledge-wiki-pilot",
+      "index.knowledge-wiki.decision-records",
+      "index.knowledge-wiki.pressures",
+      "index.knowledge-wiki.project-lineages",
       "index.maintenance-and-care",
       "index.people-places-and-community-testimony",
+      "index.places-where-work-became-real",
       "index.project-afterlives-and-handoffs",
       "index.relational-infrastructure-atlas",
       "index.role-and-collective-authorship",
       "index.scenes-of-work",
+      "method.identity-systems-as-shared-infrastructure",
+      "method.learning-through-making",
       "method.nycartc.public-meeting-and-testimony-participation",
+      "method.public-knowledge-in-peoples-own-terms",
       "method.source-backed-team-memory",
       "method.source-re-encounter",
       "portfolio.work.callnyc",
       "portfolio.work.technical-operations",
       "project.callnyc",
+      "project.kc-town-hall",
+      "project.let-nyc-dance",
+      "project.nter-chng",
       "project.nyc-artist-coalition",
+      "project.open-house",
+      "project.sunday-dinner",
+      "project.talks-not-raids",
+      "project.water-publics",
+      "project.wowlist",
       "research-run.nycartc.shared-folder.2026-07",
       "source.civichall.hackathon-announcement.2016",
+      "source.councilstat.fuller-release.2016",
       "source.nycartc.march-data-design-notes.2019",
       "source.nycartc.nightlife-recommendation-sequence.2017-2019",
       "source.nycartc.public-meeting-playbook.2018",
@@ -137,14 +185,22 @@
     "superseded": [
       "claim.callnyc.project-years.legacy"
     ],
+    "draft": [
+      "decision.callnyc.issue-pathways",
+      "decision.kc-town-hall.listening-fieldwork",
+      "decision.open-house.communal-governance",
+      "method.what-is-at-stake-for-me"
+    ],
     "archived": [
       "project.kc-spaces-fund"
     ]
   },
   "aliases": {
+    "196": "project.sunday-dinner",
     "aclu discovery": "opportunity.aclu.product-manager-ii-discovery.8482872002",
     "asana ai implementation": "opportunity.asana.ai-implementation-manager.8027437",
     "benepass product operations": "opportunity.benepass.product-operations-manager.7f963a7a",
+    "cabaret law repeal campaign": "project.let-nyc-dance",
     "call nyc": "project.callnyc",
     "callnyc.org": "project.callnyc",
     "care as operations": "index.maintenance-and-care",
@@ -154,9 +210,12 @@
     "current priority opportunities": "index.employment-acceptance",
     "digital district participant photograph": "asset.photo.digital-district.001",
     "early participatory practice lineage": "timeline.art-life-waterways-media-archaeology.2003-2011",
+    "embodied inquiry": "method.learning-through-making",
+    "first-person stakes draft": "method.what-is-at-stake-for-me",
     "human-readable wiki graph": "index.relational-infrastructure-atlas",
     "january 2016 councilstat hackathon": "event.nycc.constituent-services-hackathon.2016",
     "knowledge bank": "index.knowledge-wiki",
+    "night mayor town hall": "event.nycac.office-of-nightlife-town-hall-2017",
     "nyc artist coalition event chronology": "timeline.nycartc.events-and-venues.2017-2021",
     "nycartc": "project.nyc-artist-coalition",
     "operational outcomes": "index.decisions-deliverables-operational-outcomes",
@@ -169,11 +228,17 @@
     "protected absence register": "index.absences-protections-and-permissions",
     "relational infrastructure map": "index.relational-infrastructure-atlas",
     "return to the originals": "method.source-re-encounter",
+    "situated practice index": "index.places-where-work-became-real",
     "source backed team memory": "method.source-backed-team-memory",
+    "sunday dinner": "project.sunday-dinner",
     "sustaining systems": "index.maintenance-and-care",
+    "tell nyc's night mayor: save nyc spaces": "event.nycac.office-of-nightlife-town-hall-2017",
+    "transparency on march raids": "project.talks-not-raids",
     "wanted pages": "index.knowledge-wiki-missing-pages",
+    "waterways and participatory art": "project.water-publics",
     "what jamie made usable": "index.decisions-deliverables-operational-outcomes",
     "wiki pilot": "index.knowledge-wiki-pilot",
-    "wow list to knowledge wiki lineage": "timeline.participation-infrastructure.2012-2026"
+    "wow list to knowledge wiki lineage": "timeline.participation-infrastructure.2012-2026",
+    "wowlist": "project.wowlist"
   }
 }

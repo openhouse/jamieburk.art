@@ -32,6 +32,30 @@ relations:
     target: research-run.nycartc.shared-folder.2026-07
     href: research/nycartc-shared-folder-archival-production-2026-07.md
     context: Complete population accounting with selective, public-safe close reading.
+  - type: documents
+    target: index.knowledge-wiki.canonical-story-bank
+    href: indexes/canonical-story-bank.md
+    context: Reusable stories that retain situation, supported action, usable result, collective context, and honest limit.
+  - type: documents
+    target: index.knowledge-wiki.pressures
+    href: indexes/what-the-work-was-up-against.md
+    context: Pressure-before-response map that keeps people and places legible as holders of knowledge and agency.
+  - type: documents
+    target: index.knowledge-wiki.project-lineages
+    href: indexes/project-lineages.md
+    context: Inheritance, adaptation, and divergence without causal inevitability.
+  - type: documents
+    target: index.knowledge-wiki.decision-records
+    href: indexes/decision-records.md
+    context: Bounded decision reconstructions held from public projection.
+  - type: documents
+    target: index.knowledge-wiki.visual-evidence-and-rights-queue
+    href: indexes/visual-evidence-and-rights-queue.md
+    context: Visual leads whose evidentiary value, rights, consent, and publication states remain separate.
+  - type: documents
+    target: index.places-where-work-became-real
+    href: indexes/places-where-work-became-real.md
+    context: Place-oriented retrieval across galleries, waterways, kitchens, cultural spaces, streets, and construction sites.
 ---
 
 # Knowledge Wiki
@@ -63,6 +87,19 @@ and the [authoring guide](knowledge-wiki-authoring.md).
   [operational outcomes](indexes/decisions-deliverables-and-operational-outcomes.md),
   and [maintenance and care](indexes/maintenance-and-care.md): human-readable
   routes through relationships, responsibility, delivery, results, and tending.
+- [What the work was up against](indexes/what-the-work-was-up-against.md),
+  [project lineages](indexes/project-lineages.md), and
+  [decision records](indexes/decision-records.md): pressure, inheritance,
+  divergence, and bounded choice without retrospective inevitability.
+- [Canonical story bank](indexes/canonical-story-bank.md),
+  [identity systems](methods/identity-systems-as-shared-infrastructure.md), and
+  [implementation, adoption, and handoff](capabilities/implementation-adoption-and-handoff.md):
+  reusable employment narratives that preserve evidence states and collective
+  credit.
+- [Places where the work became real](indexes/places-where-work-became-real.md),
+  [learning through making](methods/learning-through-making.md), and the
+  [visual evidence and rights queue](indexes/visual-evidence-and-rights-queue.md):
+  artistic, situated, and visual routes whose human gates remain explicit.
 - [Absences, protections, and permissions](indexes/absences-protections-and-permissions.md):
   why inaccessible, private, rights-blocked, unresolved, and unselected
   knowledge must remain distinguishable.

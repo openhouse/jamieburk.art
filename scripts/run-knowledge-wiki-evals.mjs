@@ -16,6 +16,7 @@ import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 const suitePath = "evals/knowledge-wiki/suite.json";
 const fixturePath = "evals/knowledge-wiki/fixtures/mutations.json";
 const suite = JSON.parse(readFileSync(suitePath, "utf8"));
+const familyLedgerPath = suite.familyClosure.ledgerPath;
 
 const candidatePaths = [
   ".vscode/settings.json",
@@ -36,11 +37,12 @@ const candidatePaths = [
   "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   suitePath,
-  fixturePath
+  fixturePath,
+  familyLedgerPath
 ];
 
 const candidate = candidateFingerprint(candidatePaths);
-const contract = candidateFingerprint([suitePath, fixturePath]);
+const contract = candidateFingerprint([suitePath, fixturePath, familyLedgerPath]);
 const wiki = loadKnowledgeWiki();
 const gates = new Map();
 
@@ -534,6 +536,72 @@ const maintenanceCareIntegrity = maintenanceCare?.kind === "index" &&
 gate("maintenance_care_integrity", maintenanceCareIntegrity, maintenanceCareIntegrity
   ? "Maintenance remains a source-bounded multi-mode operating practice with distinct labor, collaborators, time periods, outcomes, and handoff states rather than one continuous or heroic personal role"
   : "The maintenance page has collapsed distinct modes, obscured labor allocation, inferred continuous responsibility, or created unsupported rights, role, completion, or impact claims");
+
+const familyLedger = JSON.parse(readFileSync(path.join(repoRoot, familyLedgerPath), "utf8"));
+const allowedFamilyDispositions = new Set(suite.familyClosure.allowedDispositions);
+const familyFindings = [];
+const familyEntries = new Map((familyLedger.branches ?? []).map((entry) => [entry.branch, entry]));
+for (const frozen of suite.familyClosure.frozenBranches) {
+  const entry = familyEntries.get(frozen.branch);
+  if (!entry) {
+    familyFindings.push(`${frozen.branch}: missing closure-ledger entry`);
+    continue;
+  }
+  if (entry.sourceCommit !== frozen.sha) familyFindings.push(`${frozen.branch}: source SHA does not match the frozen contract`);
+  if (!entry.strength) familyFindings.push(`${frozen.branch}: strength is not recorded`);
+  if (!(entry.decisions ?? []).some((decision) => ["adopt", "adapt"].includes(decision.disposition))) {
+    familyFindings.push(`${frozen.branch}: no adopted or adapted contribution`);
+  }
+  for (const decision of entry.decisions ?? []) {
+    if (!allowedFamilyDispositions.has(decision.disposition)) familyFindings.push(`${frozen.branch}: invalid disposition ${decision.disposition}`);
+    if (["adopt", "adapt"].includes(decision.disposition)) {
+      if (!decision.canonicalDestination || !existsSync(path.join(repoRoot, decision.canonicalDestination))) {
+        familyFindings.push(`${frozen.branch}: adopted destination is missing for ${decision.capability}`);
+      }
+    } else if (!decision.reason) {
+      familyFindings.push(`${frozen.branch}: ${decision.disposition} decision lacks a reason`);
+    }
+    if (!(decision.verification ?? []).length) familyFindings.push(`${frozen.branch}: ${decision.capability} lacks verification criteria`);
+  }
+}
+for (const entry of familyLedger.branches ?? []) {
+  if (!suite.familyClosure.frozenBranches.some((frozen) => frozen.branch === entry.branch)) {
+    familyFindings.push(`${entry.branch}: unexpected source branch`);
+  }
+}
+for (const forbidden of suite.familyClosure.forbiddenPaths) {
+  if (existsSync(path.join(repoRoot, forbidden))) familyFindings.push(`forbidden competing path exists: ${forbidden}`);
+}
+for (const id of suite.familyClosure.requiredRecordIds) {
+  if (!wiki.records.some((record) => record.id === id)) familyFindings.push(`required integrated record is missing: ${id}`);
+}
+const stakesRecord = wiki.records.find((record) => record.id === "method.what-is-at-stake-for-me");
+if (stakesRecord && (stakesRecord.reviewState !== "human-blocked" || stakesRecord.allowedSurfaces.length !== 0 || stakesRecord.projectionStatus !== "pending")) {
+  familyFindings.push("first-person stakes draft escaped its Jamie-only review gate");
+}
+const boundedDecisionIds = suite.familyClosure.requiredRecordIds.filter((id) => id.startsWith("decision."));
+for (const id of boundedDecisionIds) {
+  const record = wiki.records.find((item) => item.id === id);
+  if (record && (record.allowedSurfaces.length !== 0 || record.projectionStatus !== "pending")) {
+    familyFindings.push(`${id}: decision reconstruction must remain unprojected pending human review`);
+  }
+}
+const identityText = normalizedText(wiki.records.find((record) => record.id === "method.identity-systems-as-shared-infrastructure")?.body ?? "");
+if (identityText && !["account establishment", "authorship of a particular post", "ownership of the collective project"].every((term) => identityText.includes(term))) {
+  familyFindings.push("identity-system page no longer separates establishment, post authorship, and collective ownership");
+}
+const pressureText = normalizedText(wiki.records.find((record) => record.id === "index.knowledge-wiki.pressures")?.body ?? "");
+if (pressureText && !pressureText.includes("people and places were holders of knowledge and agency")) {
+  familyFindings.push("pressure-before-response framing casts people as deficits");
+}
+const lineageText = normalizedText(wiki.records.find((record) => record.id === "index.knowledge-wiki.project-lineages")?.body ?? "");
+if (lineageText && !lineageText.includes("chronology and resemblance are prompts for research not proof of causation")) {
+  familyFindings.push("project lineage no longer preserves its noncausality rule");
+}
+if (!existsSync(path.join(repoRoot, suite.familyClosure.planPath))) familyFindings.push("family-closure plan is missing");
+gate("wiki_family_closure", familyFindings.length === 0, familyFindings.length
+  ? familyFindings.join("; ")
+  : "A-E are pinned and dispositioned; selected strengths resolve into one canonical, unprojected, public-safe Wiki architecture");
 
 const photo = wiki.records.find((record) => record.id === "asset.photo.digital-district.001");
 const noPublicWikiRoute = !existsSync(path.join(repoRoot, "apps/www/src/app/knowledge-wiki")) && !existsSync(path.join(repoRoot, "apps/www/src/app/knowledge-bank"));

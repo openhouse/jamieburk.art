@@ -1,6 +1,25 @@
 ---
+wiki_record: true
+id: project.water-publics
+title: Water publics
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: moderate
+projection_status: careful
+discoverable: true
+last_reviewed: 2026-07-19
+review_by: 2027-01-19
+review_state: requested
+owner: Jamie Burkart
+aliases: ["Waterways and participatory art"]
+canonical_path: docs/knowledge-bank/projects/water-publics.md
+canonical_refs: ["SRC-WATER-PITCH-HUCK-FINN-2007","SRC-WATER-KC-STAR-GO-WITH-FLOW-2007","SRC-WATER-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009","CLM-WATER-RAFT-ORIGINATION","CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE","CLM-WATER-RAFT-CIVIC-PREMISE","CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM"]
+allowed_surfaces: []
+relations: [{"type":"part_of","target":"timeline.art-life-waterways-media-archaeology.2003-2011","href":"../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"},{"type":"uses_method","target":"method.learning-through-making","href":"../methods/learning-through-making.md"},{"type":"informed_by","target":"index.places-where-work-became-real","href":"../indexes/places-where-work-became-real.md"}]
 ---
----ater Publics
+
+# Water Publics
 
 This dossier connects the raft expedition, Great Accommodations, public
 programs, correspondence, installation work, and other participatory projects

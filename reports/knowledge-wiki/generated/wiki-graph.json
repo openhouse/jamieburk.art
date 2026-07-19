@@ -4,7 +4,7 @@
   "compatibilityAlias": "Knowledge Bank",
   "canonicalRoot": "docs/knowledge-bank",
   "sourceCommit": "34b6c86682da02350f7b89c082873e687daab5d5",
-  "sourceFingerprint": "sha256:a9a3c476f8cefe123025711a4ec08f2c9464a5ad1793630c535f1559988d7cdf",
+  "sourceFingerprint": "sha256:3a1abafc1eefbe18ad808760c3d381e0ec39363b0ca969b50d07c0b921d49f49",
   "nodes": [
     {
       "id": "asset.photo.digital-district.001",
@@ -28,6 +28,31 @@
       "reviewState": "human-blocked",
       "rightsState": "private-review",
       "consentState": "review-needed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "capability.implementation-adoption-and-handoff",
+      "path": "docs/knowledge-bank/capabilities/implementation-adoption-and-handoff.md",
+      "title": "Implementation, adoption, and handoff",
+      "kind": "capability",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+        "CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM",
+        "CLM-SUNDAY-DINNER-WORKBOOK-AGGREGATE",
+        "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19",
+      "reviewState": "requested",
       "roleRequirements": [],
       "discoveryTerms": [],
       "portfolioRoutes": []
@@ -207,6 +232,127 @@
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18",
       "reviewState": "resolved",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "decision.callnyc.issue-pathways",
+      "path": "docs/knowledge-bank/decisions/callnyc-issue-pathways.md",
+      "title": "CallNYC issue pathways",
+      "kind": "decision",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "pending",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "SRC-CALLNYC-GITHUB-REPOSITORY",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATA-2016"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "decision.kc-town-hall.listening-fieldwork",
+      "path": "docs/knowledge-bank/decisions/kc-town-hall-listening-fieldwork.md",
+      "title": "KC Town Hall listening within fieldwork",
+      "kind": "decision",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "pending",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+        "CLM-KC-TOWN-HALL-SURVEY-SYSTEM-ROLE",
+        "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "decision.knowledge-wiki.selective-projection",
+      "path": "docs/knowledge-bank/decisions/knowledge-wiki-selective-projection.md",
+      "title": "Knowledge Wiki selective projection",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "pending",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "decision.open-house.communal-governance",
+      "path": "docs/knowledge-bank/decisions/open-house-communal-governance.md",
+      "title": "Open House communal governance",
+      "kind": "decision",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "pending",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+        "SRC-OPEN-HOUSE-GOOD-TIMES-2006"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "event.nycac.office-of-nightlife-town-hall-2017",
+      "path": "docs/knowledge-bank/events/office-of-nightlife-town-hall-2017.md",
+      "title": "Office of Nightlife town hall at Market Hotel",
+      "kind": "event",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-ESPINAL-NYCARTC-TOWN-HALL-PARTICIPATION",
+        "CLM-NYCARTC-OCTOBER-TOWN-HALL",
+        "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+        "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017"
+      ],
+      "aliases": [
+        "Night Mayor town hall",
+        "Tell NYC's Night Mayor: Save NYC Spaces"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
       "roleRequirements": [],
       "discoveryTerms": [],
       "portfolioRoutes": []
@@ -396,6 +542,106 @@
       "portfolioRoutes": []
     },
     {
+      "id": "index.knowledge-wiki.canonical-story-bank",
+      "path": "docs/knowledge-bank/indexes/canonical-story-bank.md",
+      "title": "Canonical story bank",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.knowledge-wiki.decision-records",
+      "path": "docs/knowledge-bank/indexes/decision-records.md",
+      "title": "Decision records",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.knowledge-wiki.pressures",
+      "path": "docs/knowledge-bank/indexes/what-the-work-was-up-against.md",
+      "title": "What the work was up against",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.knowledge-wiki.project-lineages",
+      "path": "docs/knowledge-bank/indexes/project-lineages.md",
+      "title": "Project lineages",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "path": "docs/knowledge-bank/indexes/visual-evidence-and-rights-queue.md",
+      "title": "Visual evidence and rights queue",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
       "id": "index.maintenance-and-care",
       "path": "docs/knowledge-bank/indexes/maintenance-and-care.md",
       "title": "Maintenance and care",
@@ -449,6 +695,34 @@
       "allowedSurfaces": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.places-where-work-became-real",
+      "path": "docs/knowledge-bank/indexes/places-where-work-became-real.md",
+      "title": "Places where the work became real",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+        "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+        "CLM-SUNDAY-DINNER-WORKBOOK-AGGREGATE",
+        "CLM-WATER-RAFT-CIVIC-PREMISE"
+      ],
+      "aliases": [
+        "Situated practice index"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19",
       "reviewState": "requested",
       "roleRequirements": [],
       "discoveryTerms": [],
@@ -588,6 +862,58 @@
       "portfolioRoutes": []
     },
     {
+      "id": "method.identity-systems-as-shared-infrastructure",
+      "path": "docs/knowledge-bank/methods/identity-systems-as-shared-infrastructure.md",
+      "title": "Identity systems as shared infrastructure",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-NYCARTC-FOUNDING-ROLE",
+        "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+        "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "method.learning-through-making",
+      "path": "docs/knowledge-bank/methods/learning-through-making.md",
+      "title": "Learning through making",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM",
+        "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
+        "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+        "CLM-TIME-IS-LONG-VHS-INSTALLATION"
+      ],
+      "aliases": [
+        "Embodied inquiry"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
       "id": "method.nycartc.public-meeting-and-testimony-participation",
       "path": "docs/knowledge-bank/methods/nycartc-public-meeting-and-testimony-participation.md",
       "title": "NYC Artist Coalition public-meeting and testimony participation",
@@ -605,6 +931,30 @@
       "allowedSurfaces": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "method.public-knowledge-in-peoples-own-terms",
+      "path": "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md",
+      "title": "Public knowledge in people's own terms",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+        "CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM",
+        "CLM-SUNDAY-DINNER-WORKBOOK-AGGREGATE"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19",
       "reviewState": "requested",
       "roleRequirements": [],
       "discoveryTerms": [],
@@ -650,6 +1000,32 @@
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19",
       "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "method.what-is-at-stake-for-me",
+      "path": "docs/knowledge-bank/methods/what-is-at-stake-for-me.md",
+      "title": "What is at stake for me",
+      "kind": "method",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "pending",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+        "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT"
+      ],
+      "aliases": [
+        "First-person stakes draft"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-08-19",
+      "reviewState": "human-blocked",
       "roleRequirements": [],
       "discoveryTerms": [],
       "portfolioRoutes": []
@@ -1544,6 +1920,91 @@
       "portfolioRoutes": []
     },
     {
+      "id": "project.kc-town-hall",
+      "path": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "title": "KC Town Hall",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+        "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-SCOPE",
+        "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
+        "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+        "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.let-nyc-dance",
+      "path": "docs/knowledge-bank/projects/let-nyc-dance.md",
+      "title": "Let NYC Dance",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NYC-CABARET-LAW-COUNCIL-VOTE",
+        "CLM-NYCARTC-CABARET-HEARING-TESTIMONY",
+        "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+        "SRC-NYC-COUNCIL-CABARET-VOTE-2017",
+        "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+        "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
+        "SRC-NYCARTC-NPR-NIGHTLIFE-2017"
+      ],
+      "aliases": [
+        "Cabaret Law repeal campaign"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.nter-chng",
+      "path": "docs/knowledge-bank/projects/nter-chng.md",
+      "title": "NTER CHNG",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION",
+        "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
+        "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011",
+        "SRC-GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN-2011",
+        "SRC-NTER-CHNG-PROJECT-SITE-2011"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
       "id": "project.nyc-artist-coalition",
       "path": "docs/knowledge-bank/projects/nyc-artist-coalition.md",
       "title": "NYC Artist Coalition",
@@ -1566,6 +2027,143 @@
       "allowedSurfaces": [
         "/work/fair-rent-nyc"
       ],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.open-house",
+      "path": "docs/knowledge-bank/projects/open-house.md",
+      "title": "Open House",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+        "SRC-OPEN-HOUSE-GOOD-TIMES-2006"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.sunday-dinner",
+      "path": "docs/knowledge-bank/projects/sunday-dinner.md",
+      "title": "Sunday Dinner and 196",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-SUNDAY-DINNER-WORKBOOK-AGGREGATE",
+        "CLM-SUNDAY-DINNER-ZOOM-ARCHIVE-DEPTH",
+        "SRC-GDRIVE-SUNDAY-DINNER-ZOOM-ARCHIVE-2023",
+        "SRC-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2021"
+      ],
+      "aliases": [
+        "196",
+        "Sunday Dinner"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.talks-not-raids",
+      "path": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "title": "Talks Not Raids",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NYCARTC-MARCH-CROSS-CHANNEL-IMPLEMENTATION",
+        "CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME",
+        "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN",
+        "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220",
+        "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN"
+      ],
+      "aliases": [
+        "Transparency on MARCH raids"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.water-publics",
+      "path": "docs/knowledge-bank/projects/water-publics.md",
+      "title": "Water publics",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM",
+        "CLM-WATER-RAFT-CIVIC-PREMISE",
+        "CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE",
+        "CLM-WATER-RAFT-ORIGINATION",
+        "SRC-WATER-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009",
+        "SRC-WATER-KC-STAR-GO-WITH-FLOW-2007",
+        "SRC-WATER-PITCH-HUCK-FINN-2007"
+      ],
+      "aliases": [
+        "Waterways and participatory art"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.wowlist",
+      "path": "docs/knowledge-bank/projects/wowlist.md",
+      "title": "WOW List",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-WOWLIST-POST-POPULATION-2026",
+        "CLM-FB-WOWLIST-SOCIAL-MANAGEMENT-ROLE",
+        "CLM-WOWLIST-DB-SNAPSHOT-SCALE-2017",
+        "CLM-WOWLIST-RELATIONAL-TAG-OVERLAP-2017",
+        "SRC-WOWLIST-DB-SNAPSHOT-2017-07"
+      ],
+      "aliases": [
+        "WOWList"
+      ],
+      "allowedSurfaces": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19",
       "reviewState": "requested",
@@ -1615,6 +2213,28 @@
       "allowedSurfaces": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "source.councilstat.fuller-release.2016",
+      "path": "docs/knowledge-bank/sources/nycc-constituent-services-data-2016-05-27.md",
+      "title": "New York City Council Constituent Services Data release",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "projectionStatus": "ready-with-attribution",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATA-2016"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19",
       "reviewState": "completed",
       "roleRequirements": [],
       "discoveryTerms": [],
@@ -1893,6 +2513,66 @@
       "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
     },
     {
+      "from": "capability.implementation-adoption-and-handoff",
+      "type": "informed_by",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "../indexes/project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "capability.implementation-adoption-and-handoff",
+      "type": "informed_by",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall.md"
+    },
+    {
+      "from": "capability.implementation-adoption-and-handoff",
+      "type": "informed_by",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "capability.implementation-adoption-and-handoff",
+      "type": "links_to",
+      "to": "project.kc-town-hall",
+      "source": "markdown",
+      "href": "../projects/kc-town-hall.md",
+      "context": "KC Town Hall"
+    },
+    {
+      "from": "capability.implementation-adoption-and-handoff",
+      "type": "links_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "markdown",
+      "href": "../projects/nyc-artist-coalition.md",
+      "context": "NYC Artist Coalition"
+    },
+    {
+      "from": "capability.implementation-adoption-and-handoff",
+      "type": "links_to",
+      "to": "project.sunday-dinner",
+      "source": "markdown",
+      "href": "../projects/sunday-dinner.md",
+      "context": "Sunday Dinner"
+    },
+    {
+      "from": "capability.implementation-adoption-and-handoff",
+      "type": "links_to",
+      "to": "project.talks-not-raids",
+      "source": "markdown",
+      "href": "../projects/talks-not-raids.md",
+      "context": "Talks Not Raids"
+    },
+    {
+      "from": "capability.implementation-adoption-and-handoff",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "technical-operations.md"
+    },
+    {
       "from": "capability.technical-operations",
       "type": "documents",
       "to": "project.callnyc",
@@ -2126,6 +2806,104 @@
       "to": "claim.callnyc.project-years.legacy",
       "source": "frontmatter",
       "href": "../claims/callnyc-project-years-legacy.md"
+    },
+    {
+      "from": "decision.callnyc.issue-pathways",
+      "type": "part_of",
+      "to": "index.knowledge-wiki.decision-records",
+      "source": "frontmatter",
+      "href": "../indexes/decision-records.md"
+    },
+    {
+      "from": "decision.callnyc.issue-pathways",
+      "type": "part_of",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "decision.callnyc.issue-pathways",
+      "type": "uses_source",
+      "to": "source.councilstat.fuller-release.2016",
+      "source": "frontmatter",
+      "href": "../sources/nycc-constituent-services-data-2016-05-27.md"
+    },
+    {
+      "from": "decision.kc-town-hall.listening-fieldwork",
+      "type": "part_of",
+      "to": "index.knowledge-wiki.decision-records",
+      "source": "frontmatter",
+      "href": "../indexes/decision-records.md"
+    },
+    {
+      "from": "decision.kc-town-hall.listening-fieldwork",
+      "type": "part_of",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall.md"
+    },
+    {
+      "from": "decision.kc-town-hall.listening-fieldwork",
+      "type": "uses_method",
+      "to": "method.public-knowledge-in-peoples-own-terms",
+      "source": "frontmatter",
+      "href": "../methods/public-knowledge-in-peoples-own-terms.md"
+    },
+    {
+      "from": "decision.knowledge-wiki.selective-projection",
+      "type": "informed_by",
+      "to": "index.knowledge-wiki",
+      "source": "frontmatter",
+      "href": "../README.md"
+    },
+    {
+      "from": "decision.knowledge-wiki.selective-projection",
+      "type": "part_of",
+      "to": "index.knowledge-wiki.decision-records",
+      "source": "frontmatter",
+      "href": "../indexes/decision-records.md"
+    },
+    {
+      "from": "decision.knowledge-wiki.selective-projection",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "decision.open-house.communal-governance",
+      "type": "part_of",
+      "to": "index.knowledge-wiki.decision-records",
+      "source": "frontmatter",
+      "href": "../indexes/decision-records.md"
+    },
+    {
+      "from": "decision.open-house.communal-governance",
+      "type": "part_of",
+      "to": "project.open-house",
+      "source": "frontmatter",
+      "href": "../projects/open-house.md"
+    },
+    {
+      "from": "event.nycac.office-of-nightlife-town-hall-2017",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "event.nycac.office-of-nightlife-town-hall-2017",
+      "type": "part_of",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "event.nycac.office-of-nightlife-town-hall-2017",
+      "type": "uses_method",
+      "to": "method.public-knowledge-in-peoples-own-terms",
+      "source": "frontmatter",
+      "href": "../methods/public-knowledge-in-peoples-own-terms.md"
     },
     {
       "from": "event.nycc.constituent-services-hackathon.2016",
@@ -2702,6 +3480,345 @@
       "href": "../README.md"
     },
     {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "documents",
+      "to": "capability.implementation-adoption-and-handoff",
+      "source": "frontmatter",
+      "href": "../capabilities/implementation-adoption-and-handoff.md"
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "documents",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall.md"
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "documents",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist.md"
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "informed_by",
+      "to": "index.scenes-of-work",
+      "source": "frontmatter",
+      "href": "scenes-of-work.md"
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "documents",
+      "to": "decision.callnyc.issue-pathways",
+      "source": "frontmatter",
+      "href": "../decisions/callnyc-issue-pathways.md"
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "documents",
+      "to": "decision.kc-town-hall.listening-fieldwork",
+      "source": "frontmatter",
+      "href": "../decisions/kc-town-hall-listening-fieldwork.md"
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "documents",
+      "to": "decision.knowledge-wiki.selective-projection",
+      "source": "frontmatter",
+      "href": "../decisions/knowledge-wiki-selective-projection.md"
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "documents",
+      "to": "decision.open-house.communal-governance",
+      "source": "frontmatter",
+      "href": "../decisions/open-house-communal-governance.md"
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "links_to",
+      "to": "decision.callnyc.issue-pathways",
+      "source": "markdown",
+      "href": "../decisions/callnyc-issue-pathways.md",
+      "context": "CallNYC: issue pathways for public constituent-services data"
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "links_to",
+      "to": "decision.kc-town-hall.listening-fieldwork",
+      "source": "markdown",
+      "href": "../decisions/kc-town-hall-listening-fieldwork.md",
+      "context": "KC Town Hall: listening within fieldwork"
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "links_to",
+      "to": "decision.knowledge-wiki.selective-projection",
+      "source": "markdown",
+      "href": "../decisions/knowledge-wiki-selective-projection.md",
+      "context": "Knowledge Wiki: deep bank and selective projection"
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "links_to",
+      "to": "decision.open-house.communal-governance",
+      "source": "markdown",
+      "href": "../decisions/open-house-communal-governance.md",
+      "context": "Open House: communal governance inside negotiated boundaries"
+    },
+    {
+      "from": "index.knowledge-wiki.pressures",
+      "type": "informed_by",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "frontmatter",
+      "href": "decisions-deliverables-and-operational-outcomes.md"
+    },
+    {
+      "from": "index.knowledge-wiki.pressures",
+      "type": "informed_by",
+      "to": "index.places-where-work-became-real",
+      "source": "frontmatter",
+      "href": "places-where-work-became-real.md"
+    },
+    {
+      "from": "index.knowledge-wiki.pressures",
+      "type": "informed_by",
+      "to": "method.public-knowledge-in-peoples-own-terms",
+      "source": "frontmatter",
+      "href": "../methods/public-knowledge-in-peoples-own-terms.md"
+    },
+    {
+      "from": "index.knowledge-wiki.pressures",
+      "type": "links_to",
+      "to": "method.source-backed-team-memory",
+      "source": "markdown",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": "Source-backed team memory"
+    },
+    {
+      "from": "index.knowledge-wiki.pressures",
+      "type": "links_to",
+      "to": "project.callnyc",
+      "source": "markdown",
+      "href": "../projects/callnyc.md",
+      "context": "CallNYC"
+    },
+    {
+      "from": "index.knowledge-wiki.pressures",
+      "type": "links_to",
+      "to": "project.kc-town-hall",
+      "source": "markdown",
+      "href": "../projects/kc-town-hall.md",
+      "context": "KC Town Hall"
+    },
+    {
+      "from": "index.knowledge-wiki.pressures",
+      "type": "links_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "markdown",
+      "href": "../projects/nyc-artist-coalition.md",
+      "context": "NYC Artist Coalition"
+    },
+    {
+      "from": "index.knowledge-wiki.pressures",
+      "type": "links_to",
+      "to": "project.water-publics",
+      "source": "markdown",
+      "href": "../projects/water-publics.md",
+      "context": "Water publics"
+    },
+    {
+      "from": "index.knowledge-wiki.pressures",
+      "type": "links_to",
+      "to": "project.wowlist",
+      "source": "markdown",
+      "href": "../projects/wowlist.md",
+      "context": "WOW List"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "informed_by",
+      "to": "method.identity-systems-as-shared-infrastructure",
+      "source": "frontmatter",
+      "href": "../methods/identity-systems-as-shared-infrastructure.md"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "informed_by",
+      "to": "method.learning-through-making",
+      "source": "frontmatter",
+      "href": "../methods/learning-through-making.md"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "informed_by",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "frontmatter",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "informed_by",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "event.nycac.office-of-nightlife-town-hall-2017",
+      "source": "markdown",
+      "href": "../events/office-of-nightlife-town-hall-2017.md",
+      "context": "Office of Nightlife town\nhall"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "method.source-backed-team-memory",
+      "source": "markdown",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": "source-backed team memory method"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "project.let-nyc-dance",
+      "source": "markdown",
+      "href": "../projects/let-nyc-dance.md",
+      "context": "Let NYC Dance"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "project.nter-chng",
+      "source": "markdown",
+      "href": "../projects/nter-chng.md",
+      "context": "NTER CHNG"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "markdown",
+      "href": "../projects/nyc-artist-coalition.md",
+      "context": "NYC Artist Coalition"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "project.open-house",
+      "source": "markdown",
+      "href": "../projects/open-house.md",
+      "context": "Open House"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "project.sunday-dinner",
+      "source": "markdown",
+      "href": "../projects/sunday-dinner.md",
+      "context": "Sunday Dinner"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "project.talks-not-raids",
+      "source": "markdown",
+      "href": "../projects/talks-not-raids.md",
+      "context": "Talks Not\nRaids"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "project.wowlist",
+      "source": "markdown",
+      "href": "../projects/wowlist.md",
+      "context": "WOW List"
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "links_to",
+      "to": "project.wowlist",
+      "source": "markdown",
+      "href": "../projects/wowlist.md",
+      "context": "WOW List"
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "type": "documents",
+      "to": "asset.photo.digital-district.001",
+      "source": "frontmatter",
+      "href": "../assets/digital-district-photo.md"
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall.md"
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "type": "documents",
+      "to": "project.nter-chng",
+      "source": "frontmatter",
+      "href": "../projects/nter-chng.md"
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "type": "informed_by",
+      "to": "index.scenes-of-work",
+      "source": "frontmatter",
+      "href": "scenes-of-work.md"
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "type": "links_to",
+      "to": "asset.photo.digital-district.001",
+      "source": "markdown",
+      "href": "../assets/digital-district-photo.md",
+      "context": "CallNYC Digital District photograph"
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "type": "links_to",
+      "to": "project.kc-town-hall",
+      "source": "markdown",
+      "href": "../projects/kc-town-hall.md",
+      "context": "KC Town Hall"
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "type": "links_to",
+      "to": "project.nter-chng",
+      "source": "markdown",
+      "href": "../projects/nter-chng.md",
+      "context": "NTER CHNG"
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "type": "links_to",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "markdown",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "context": "Art, life, and waterways"
+    },
+    {
       "from": "index.knowledge-wiki",
       "type": "documents",
       "to": "index.employment-acceptance",
@@ -2728,10 +3845,66 @@
     {
       "from": "index.knowledge-wiki",
       "type": "documents",
+      "to": "index.knowledge-wiki.canonical-story-bank",
+      "source": "frontmatter",
+      "href": "indexes/canonical-story-bank.md",
+      "context": "Reusable stories that retain situation, supported action, usable result, collective context, and honest limit."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "to": "index.knowledge-wiki.decision-records",
+      "source": "frontmatter",
+      "href": "indexes/decision-records.md",
+      "context": "Bounded decision reconstructions held from public projection."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "to": "index.knowledge-wiki.pressures",
+      "source": "frontmatter",
+      "href": "indexes/what-the-work-was-up-against.md",
+      "context": "Pressure-before-response map that keeps people and places legible as holders of knowledge and agency."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "to": "index.knowledge-wiki.project-lineages",
+      "source": "frontmatter",
+      "href": "indexes/project-lineages.md",
+      "context": "Inheritance, adaptation, and divergence without causal inevitability."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "to": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "source": "frontmatter",
+      "href": "indexes/visual-evidence-and-rights-queue.md",
+      "context": "Visual leads whose evidentiary value, rights, consent, and publication states remain separate."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "to": "index.places-where-work-became-real",
+      "source": "frontmatter",
+      "href": "indexes/places-where-work-became-real.md",
+      "context": "Place-oriented retrieval across galleries, waterways, kitchens, cultural spaces, streets, and construction sites."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
       "to": "research-run.nycartc.shared-folder.2026-07",
       "source": "frontmatter",
       "href": "research/nycartc-shared-folder-archival-production-2026-07.md",
       "context": "Complete population accounting with selective, public-safe close reading."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "capability.implementation-adoption-and-handoff",
+      "source": "markdown",
+      "href": "capabilities/implementation-adoption-and-handoff.md",
+      "context": "implementation, adoption, and handoff"
     },
     {
       "from": "index.knowledge-wiki",
@@ -2784,10 +3957,58 @@
     {
       "from": "index.knowledge-wiki",
       "type": "links_to",
+      "to": "index.knowledge-wiki.canonical-story-bank",
+      "source": "markdown",
+      "href": "indexes/canonical-story-bank.md",
+      "context": "Canonical story bank"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.knowledge-wiki.decision-records",
+      "source": "markdown",
+      "href": "indexes/decision-records.md",
+      "context": "decision records"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.knowledge-wiki.pressures",
+      "source": "markdown",
+      "href": "indexes/what-the-work-was-up-against.md",
+      "context": "What the work was up against"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.knowledge-wiki.project-lineages",
+      "source": "markdown",
+      "href": "indexes/project-lineages.md",
+      "context": "project lineages"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "source": "markdown",
+      "href": "indexes/visual-evidence-and-rights-queue.md",
+      "context": "visual evidence and rights queue"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
       "to": "index.maintenance-and-care",
       "source": "markdown",
       "href": "indexes/maintenance-and-care.md",
       "context": "maintenance and care"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.places-where-work-became-real",
+      "source": "markdown",
+      "href": "indexes/places-where-work-became-real.md",
+      "context": "Places where the work became real"
     },
     {
       "from": "index.knowledge-wiki",
@@ -2804,6 +4025,22 @@
       "source": "markdown",
       "href": "indexes/scenes-of-work.md",
       "context": "Scenes of the work"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "method.identity-systems-as-shared-infrastructure",
+      "source": "markdown",
+      "href": "methods/identity-systems-as-shared-infrastructure.md",
+      "context": "identity systems"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "method.learning-through-making",
+      "source": "markdown",
+      "href": "methods/learning-through-making.md",
+      "context": "learning through making"
     },
     {
       "from": "index.knowledge-wiki",
@@ -2913,6 +4150,41 @@
       "to": "source.nycartc.testimony-guide.2017",
       "source": "frontmatter",
       "href": "../sources/nycartc-testimony-guide-2017.md"
+    },
+    {
+      "from": "index.places-where-work-became-real",
+      "type": "documents",
+      "to": "method.what-is-at-stake-for-me",
+      "source": "frontmatter",
+      "href": "../methods/what-is-at-stake-for-me.md"
+    },
+    {
+      "from": "index.places-where-work-became-real",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall.md"
+    },
+    {
+      "from": "index.places-where-work-became-real",
+      "type": "informed_by",
+      "to": "index.people-places-and-community-testimony",
+      "source": "frontmatter",
+      "href": "people-places-and-community-testimony.md"
+    },
+    {
+      "from": "index.places-where-work-became-real",
+      "type": "informed_by",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "frontmatter",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"
+    },
+    {
+      "from": "index.places-where-work-became-real",
+      "type": "informed_by",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
     },
     {
       "from": "index.project-afterlives-and-handoffs",
@@ -3133,6 +4405,55 @@
       "href": "../sources/nycartc-march-data-design-notes-2019.md"
     },
     {
+      "from": "method.identity-systems-as-shared-infrastructure",
+      "type": "informed_by",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "method.identity-systems-as-shared-infrastructure",
+      "type": "informed_by",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist.md"
+    },
+    {
+      "from": "method.identity-systems-as-shared-infrastructure",
+      "type": "supports",
+      "to": "capability.implementation-adoption-and-handoff",
+      "source": "frontmatter",
+      "href": "../capabilities/implementation-adoption-and-handoff.md"
+    },
+    {
+      "from": "method.learning-through-making",
+      "type": "informed_by",
+      "to": "project.nter-chng",
+      "source": "frontmatter",
+      "href": "../projects/nter-chng.md"
+    },
+    {
+      "from": "method.learning-through-making",
+      "type": "informed_by",
+      "to": "project.open-house",
+      "source": "frontmatter",
+      "href": "../projects/open-house.md"
+    },
+    {
+      "from": "method.learning-through-making",
+      "type": "informed_by",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "frontmatter",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"
+    },
+    {
+      "from": "method.learning-through-making",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "source-re-encounter.md"
+    },
+    {
       "from": "method.nycartc.public-meeting-and-testimony-participation",
       "type": "part_of",
       "to": "project.nyc-artist-coalition",
@@ -3161,6 +4482,58 @@
       "href": "../sources/nycartc-testimony-guide-2017.md"
     },
     {
+      "from": "method.public-knowledge-in-peoples-own-terms",
+      "type": "informed_by",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall.md"
+    },
+    {
+      "from": "method.public-knowledge-in-peoples-own-terms",
+      "type": "informed_by",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "method.public-knowledge-in-peoples-own-terms",
+      "type": "informed_by",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist.md"
+    },
+    {
+      "from": "method.public-knowledge-in-peoples-own-terms",
+      "type": "links_to",
+      "to": "project.kc-town-hall",
+      "source": "markdown",
+      "href": "../projects/kc-town-hall.md",
+      "context": "KC Town Hall"
+    },
+    {
+      "from": "method.public-knowledge-in-peoples-own-terms",
+      "type": "links_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "markdown",
+      "href": "../projects/nyc-artist-coalition.md",
+      "context": "NYC Artist Coalition"
+    },
+    {
+      "from": "method.public-knowledge-in-peoples-own-terms",
+      "type": "links_to",
+      "to": "project.wowlist",
+      "source": "markdown",
+      "href": "../projects/wowlist.md",
+      "context": "WOW List"
+    },
+    {
+      "from": "method.public-knowledge-in-peoples-own-terms",
+      "type": "supports",
+      "to": "capability.implementation-adoption-and-handoff",
+      "source": "frontmatter",
+      "href": "../capabilities/implementation-adoption-and-handoff.md"
+    },
+    {
       "from": "method.source-backed-team-memory",
       "type": "supports",
       "to": "capability.technical-operations",
@@ -3187,6 +4560,27 @@
       "to": "method.source-backed-team-memory",
       "source": "frontmatter",
       "href": "source-backed-team-memory.md"
+    },
+    {
+      "from": "method.what-is-at-stake-for-me",
+      "type": "informed_by",
+      "to": "index.places-where-work-became-real",
+      "source": "frontmatter",
+      "href": "../indexes/places-where-work-became-real.md"
+    },
+    {
+      "from": "method.what-is-at-stake-for-me",
+      "type": "informed_by",
+      "to": "method.learning-through-making",
+      "source": "frontmatter",
+      "href": "learning-through-making.md"
+    },
+    {
+      "from": "method.what-is-at-stake-for-me",
+      "type": "informed_by",
+      "to": "method.public-knowledge-in-peoples-own-terms",
+      "source": "frontmatter",
+      "href": "public-knowledge-in-peoples-own-terms.md"
     },
     {
       "from": "opportunity.aclu.product-manager-ii-discovery.8482872002",
@@ -3365,6 +4759,62 @@
       "href": "../indexes/role-and-collective-authorship.md"
     },
     {
+      "from": "project.kc-town-hall",
+      "type": "informed_by",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "../indexes/project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "informed_by",
+      "to": "index.scenes-of-work",
+      "source": "frontmatter",
+      "href": "../indexes/scenes-of-work.md"
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "uses_method",
+      "to": "method.public-knowledge-in-peoples-own-terms",
+      "source": "frontmatter",
+      "href": "../methods/public-knowledge-in-peoples-own-terms.md"
+    },
+    {
+      "from": "project.let-nyc-dance",
+      "type": "informed_by",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "project.let-nyc-dance",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "nyc-artist-coalition.md"
+    },
+    {
+      "from": "project.let-nyc-dance",
+      "type": "uses_method",
+      "to": "method.identity-systems-as-shared-infrastructure",
+      "source": "frontmatter",
+      "href": "../methods/identity-systems-as-shared-infrastructure.md"
+    },
+    {
+      "from": "project.nter-chng",
+      "type": "part_of",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "frontmatter",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"
+    },
+    {
+      "from": "project.nter-chng",
+      "type": "uses_method",
+      "to": "method.learning-through-making",
+      "source": "frontmatter",
+      "href": "../methods/learning-through-making.md"
+    },
+    {
       "from": "project.nyc-artist-coalition",
       "type": "informed_by",
       "to": "inquiry.nycartc.march-data-design-attribution",
@@ -3491,6 +4941,121 @@
       "href": "../sources/nycartc-shared-folder-census-2026.md"
     },
     {
+      "from": "project.open-house",
+      "type": "links_to",
+      "to": "index.scenes-of-work",
+      "source": "markdown",
+      "href": "../indexes/scenes-of-work.md",
+      "context": "scenes-of-work index"
+    },
+    {
+      "from": "project.open-house",
+      "type": "links_to",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "markdown",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "context": "art, life, waterways, and media-archaeology timeline"
+    },
+    {
+      "from": "project.open-house",
+      "type": "part_of",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "frontmatter",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"
+    },
+    {
+      "from": "project.open-house",
+      "type": "uses_method",
+      "to": "method.learning-through-making",
+      "source": "frontmatter",
+      "href": "../methods/learning-through-making.md"
+    },
+    {
+      "from": "project.sunday-dinner",
+      "type": "informed_by",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "wowlist.md"
+    },
+    {
+      "from": "project.sunday-dinner",
+      "type": "part_of",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
+    },
+    {
+      "from": "project.sunday-dinner",
+      "type": "uses_method",
+      "to": "method.public-knowledge-in-peoples-own-terms",
+      "source": "frontmatter",
+      "href": "../methods/public-knowledge-in-peoples-own-terms.md"
+    },
+    {
+      "from": "project.talks-not-raids",
+      "type": "informed_by",
+      "to": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md"
+    },
+    {
+      "from": "project.talks-not-raids",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "nyc-artist-coalition.md"
+    },
+    {
+      "from": "project.talks-not-raids",
+      "type": "uses_method",
+      "to": "method.identity-systems-as-shared-infrastructure",
+      "source": "frontmatter",
+      "href": "../methods/identity-systems-as-shared-infrastructure.md"
+    },
+    {
+      "from": "project.water-publics",
+      "type": "informed_by",
+      "to": "index.places-where-work-became-real",
+      "source": "frontmatter",
+      "href": "../indexes/places-where-work-became-real.md"
+    },
+    {
+      "from": "project.water-publics",
+      "type": "links_to",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "markdown",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "context": "art, life, waterways, and media-archaeology timeline"
+    },
+    {
+      "from": "project.water-publics",
+      "type": "part_of",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "frontmatter",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"
+    },
+    {
+      "from": "project.water-publics",
+      "type": "uses_method",
+      "to": "method.learning-through-making",
+      "source": "frontmatter",
+      "href": "../methods/learning-through-making.md"
+    },
+    {
+      "from": "project.wowlist",
+      "type": "part_of",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
+    },
+    {
+      "from": "project.wowlist",
+      "type": "uses_method",
+      "to": "method.identity-systems-as-shared-infrastructure",
+      "source": "frontmatter",
+      "href": "../methods/identity-systems-as-shared-infrastructure.md"
+    },
+    {
       "from": "research-run.nycartc.shared-folder.2026-07",
       "type": "links_to",
       "to": "capability.technical-operations",
@@ -3602,6 +5167,20 @@
       "source": "markdown",
       "href": "../claims/callnyc-hackathon-date-time.md",
       "context": "date and time claim"
+    },
+    {
+      "from": "source.councilstat.fuller-release.2016",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "source.councilstat.fuller-release.2016",
+      "type": "informed_by",
+      "to": "decision.callnyc.issue-pathways",
+      "source": "frontmatter",
+      "href": "../decisions/callnyc-issue-pathways.md"
     },
     {
       "from": "source.nycartc.march-data-design-notes.2019",

@@ -25,6 +25,22 @@ memory, or a responsible transition over time. This page makes that work
 visible without treating care as an unmeasured virtue or assigning every
 sustaining task to Jamie.
 
+## Working Sequence
+
+1. **Learn the inherited system.** Identify who carries knowledge, which
+   workarounds are protective, and what cannot change without authority.
+2. **Make operation visible.** Expose dependencies, ownership boundaries,
+   recurring tasks, exceptions, rights, risks, and decision history.
+3. **Maintain in use.** Treat corrections, support requests, renewals, and
+   changing conditions as operating evidence rather than aftercare.
+4. **Transfer responsibility.** Name a successor or custodian when evidence
+   allows and provide context, boundaries, open issues, and revision paths.
+5. **Preserve a bounded record.** Record what transferred and what remains
+   unknown, protected, temporary, or person-dependent.
+
+Stewardship is not permanent personal ownership, invisible unpaid
+availability, or permission to retain access after responsibility changes.
+
 ## Modes Of Maintenance
 
 | Mode | Governed example | What the record supports | Boundary |

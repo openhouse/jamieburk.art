@@ -1,6 +1,24 @@
 ---
+wiki_record: true
+id: project.open-house
+title: Open House
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: moderate
+projection_status: careful
+discoverable: true
+last_reviewed: 2026-07-19
+review_by: 2027-01-19
+review_state: requested
+owner: Jamie Burkart
+canonical_path: docs/knowledge-bank/projects/open-house.md
+canonical_refs: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006","CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE"]
+allowed_surfaces: []
+relations: [{"type":"part_of","target":"timeline.art-life-waterways-media-archaeology.2003-2011","href":"../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"},{"type":"uses_method","target":"method.learning-through-making","href":"../methods/learning-through-making.md"}]
 ---
----pen House
+
+# Open House
 
 This dossier preserves public-safe evidence for the 2006 Porter Bridge Gallery
 Open House and its relationship to Jamie's longer participatory practice. It

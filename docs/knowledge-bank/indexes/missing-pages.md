@@ -19,6 +19,20 @@ relations: [{"type":"part_of","target":"index.knowledge-wiki","href":"../README.
 
 # Knowledge Wiki Missing Pages
 
+## A-E Family Closure, July 19, 2026
+
+The frozen `feature/knowledge-wiki-A` through `feature/knowledge-wiki-E`
+branches were dispositioned through one closure ledger. The integrated family
+adds adoption states, a story bank, identity and embodied-learning methods,
+place-oriented retrieval, campaign and town-hall records, pressure-before-
+response framing, project lineages, bounded decision records, and an official
+CouncilStat source. These pages remain selectively projected or unprojected.
+
+Still open: Jamie's line-by-line authorship review of the first-person stakes
+draft; collaborator attribution review; visual rights and consent; the HJE
+decision reconstruction after canonical source migration; and any decision to
+compose these records into the public portfolio.
+
 This is a governed wanted-pages list, not a claim that the Wiki can ever be
 complete. It records which absences matter most, whether the original evidence
 can be revisited, and why a page was created, deferred, protected, or declined.

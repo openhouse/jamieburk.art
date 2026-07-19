@@ -1,8 +1,48 @@
 {
   "id": "knowledge-wiki-foundation",
-  "version": 4,
+  "version": 5,
   "profile": "foundation_ready",
   "principle": "Markdown is the record, the graph is compiled, and the portfolio is a governed projection.",
+  "familyClosure": {
+    "baseBranch": "feature/knowledge-wiki-D",
+    "baseSha": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b",
+    "ledgerPath": "evals/knowledge-wiki/evidence/wiki-family-closure.json",
+    "planPath": "docs/architecture/knowledge-wiki-family-closure.md",
+    "allowedDispositions": ["adopt", "adapt", "deduplicate", "defer", "protect", "reject"],
+    "forbiddenPaths": [
+      "docs/knowledge-wiki",
+      "apps/www/src/app/knowledge-wiki",
+      "apps/www/src/app/knowledge-bank"
+    ],
+    "frozenBranches": [
+      { "branch": "feature/knowledge-wiki-A", "sha": "920f9024d7e058700f282e3e1e76188fe1c5294e" },
+      { "branch": "feature/knowledge-wiki-B", "sha": "268a92d794f5b604f4004fc9d6e5652f234fc61b" },
+      { "branch": "feature/knowledge-wiki-C", "sha": "6a2af7396240381ce04aad9b9129ba402b83c134" },
+      { "branch": "feature/knowledge-wiki-D", "sha": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b" },
+      { "branch": "feature/knowledge-wiki-E", "sha": "9f1bbfacec3edbfbc47a5200f777d4f498da0ec4" }
+    ],
+    "requiredRecordIds": [
+      "capability.implementation-adoption-and-handoff",
+      "index.knowledge-wiki.canonical-story-bank",
+      "method.public-knowledge-in-peoples-own-terms",
+      "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "method.identity-systems-as-shared-infrastructure",
+      "method.learning-through-making",
+      "index.places-where-work-became-real",
+      "method.what-is-at-stake-for-me",
+      "project.let-nyc-dance",
+      "project.talks-not-raids",
+      "event.nycac.office-of-nightlife-town-hall-2017",
+      "index.knowledge-wiki.pressures",
+      "index.knowledge-wiki.project-lineages",
+      "index.knowledge-wiki.decision-records",
+      "decision.open-house.communal-governance",
+      "decision.callnyc.issue-pathways",
+      "decision.kc-town-hall.listening-fieldwork",
+      "decision.knowledge-wiki.selective-projection",
+      "source.councilstat.fuller-release.2016"
+    ]
+  },
   "stopRule": {
     "consecutivePasses": 2,
     "requireUnchangedCandidate": true,
@@ -40,6 +80,7 @@
     "relational_atlas_integrity",
     "operational_outcome_integrity",
     "maintenance_care_integrity",
+    "wiki_family_closure",
     "projection_restraint",
     "candidate_binding"
   ],
@@ -212,6 +253,48 @@
       "query": { "id": "Places, passages, and publics" },
       "expectedRecordIds": ["index.people-places-and-community-testimony"],
       "requiredBoundary": "Geography is not background in this record"
+    },
+    {
+      "id": "implementation-adoption-states",
+      "query": { "id": "capability.implementation-adoption-and-handoff" },
+      "expectedRecordIds": ["capability.implementation-adoption-and-handoff"],
+      "requiredBoundary": "One state does not prove the next"
+    },
+    {
+      "id": "let-nyc-dance-collective-outcome",
+      "query": { "id": "project.let-nyc-dance" },
+      "expectedRecordIds": ["project.let-nyc-dance"],
+      "requiredBoundary": "Neither Jamie nor NYC Artist Coalition alone repealed the law"
+    },
+    {
+      "id": "talks-not-raids-institutional-outcomes",
+      "query": { "id": "project.talks-not-raids" },
+      "expectedRecordIds": ["project.talks-not-raids"],
+      "requiredBoundary": "not proof that Jamie, NYC Artist Coalition, or Talks Not Raids alone caused enactment or replacement"
+    },
+    {
+      "id": "nightlife-town-hall-response-boundary",
+      "query": { "id": "event.nycac.office-of-nightlife-town-hall-2017" },
+      "expectedRecordIds": ["event.nycac.office-of-nightlife-town-hall-2017"],
+      "requiredBoundary": "A Facebook response is not attendance or unique people"
+    },
+    {
+      "id": "first-person-stakes-human-gate",
+      "query": { "id": "method.what-is-at-stake-for-me" },
+      "expectedRecordIds": ["method.what-is-at-stake-for-me"],
+      "requiredBoundary": "Only Jamie may resolve this page's authorship review"
+    },
+    {
+      "id": "official-councilstat-source-boundary",
+      "query": { "id": "source.councilstat.fuller-release.2016" },
+      "expectedRecordIds": ["source.councilstat.fuller-release.2016"],
+      "requiredBoundary": "does not establish that Jamie caused the release"
+    },
+    {
+      "id": "decision-record-evidence-state",
+      "query": { "id": "index.knowledge-wiki.decision-records" },
+      "expectedRecordIds": ["index.knowledge-wiki.decision-records"],
+      "requiredBoundary": "Not observed is an evidence state"
     }
   ],
   "humanTasks": [
@@ -401,6 +484,36 @@
         "index.relational-infrastructure-atlas"
       ],
       "requiredBoundary": "Places and participation routes may be documented without inferring private relationships or policy effects."
+    },
+    {
+      "id": "compare-campaign-role-and-outcome",
+      "prompt": "Compare Jamie's supported role, the collective campaign system, and the institutional outcome for Let NYC Dance and Talks Not Raids.",
+      "expectedRecordIds": [
+        "project.let-nyc-dance",
+        "project.talks-not-raids",
+        "project.nyc-artist-coalition"
+      ],
+      "requiredBoundary": "Do not convert participation, web infrastructure, testimony, legislation, or later agency change into sole personal causality."
+    },
+    {
+      "id": "review-first-person-stakes",
+      "prompt": "Find the current first-person stakes draft and identify who may approve its voice and public use.",
+      "expectedRecordIds": [
+        "method.what-is-at-stake-for-me",
+        "index.places-where-work-became-real"
+      ],
+      "requiredBoundary": "Only Jamie may approve the first-person voice; automated passage of structural checks is not authorship approval."
+    },
+    {
+      "id": "trace-a-e-family-closure",
+      "prompt": "Explain how the frozen A-E Knowledge Wiki branches were dispositioned into one canonical architecture.",
+      "expectedRecordIds": [
+        "index.knowledge-wiki",
+        "index.knowledge-wiki.canonical-story-bank",
+        "index.knowledge-wiki.project-lineages",
+        "index.knowledge-wiki.decision-records"
+      ],
+      "requiredBoundary": "Branch-family closure does not approve rights, consent, attribution, public projection, or production deployment."
     }
   ],
   "manualAuthorityGates": [

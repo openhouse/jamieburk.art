@@ -102,6 +102,23 @@ import {
 
 const knowledgeBankInput = {
   intakeItems: [
+    {
+      id: "INT-2026-07-19-COUNCILSTAT-FULLER-RELEASE",
+      kind: "url",
+      capturedAt: "2026-07-19",
+      submittedBy: "Knowledge Wiki A-E integration",
+      publicSafeDescription: "Official May 2016 New York City Council page documenting CouncilStat, daily public-data publication, the January Civic Hall hackathon, and changes being implemented from participant suggestions.",
+      submittedUrl: "https://council.nyc.gov/labs/2016/05/27/constituent-services-data/",
+      projectIds: ["callnyc"],
+      entityIds: ["new-york-city-council"],
+      dateHints: ["2016-05-27"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATA-2016"],
+      claimIds: [],
+      inquiryIds: []
+    },
     ...nycArtcSharedFolderIntakes,
     ...relationalInfrastructureIntakes,
     ...nycArtcInstitutionalValueIntakes,
@@ -799,6 +816,28 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    {
+      id: "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATA-2016",
+      title: "New York City Council Constituent Services Data release",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2016-05-27",
+      accessedAt: "2026-07-19",
+      canonicalUrl: "https://council.nyc.gov/labs/2016/05/27/constituent-services-data/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Council release describing CouncilStat, daily constituent-services data publication, the January 2016 Civic Hall hackathon, and changes being implemented from participant suggestions.",
+      publicNote: "The official page establishes the institutional release and purpose. It does not make CallNYC an official Council product or establish Jamie's role in the Council's release decisions.",
+      projectIds: ["callnyc"],
+      intakeIds: ["INT-2026-07-19-COUNCILSTAT-FULLER-RELEASE"],
+      reviewStatus: "reviewed",
+      reviewDepth: "close-reading",
+      reviewedAt: "2026-07-19",
+      reviewedBy: ["Knowledge Wiki A-E integration"],
+      supportsGenerally: ["CouncilStat purpose", "daily public-data publication", "January 2016 Civic Hall hackathon context", "participant-suggestion implementation context"],
+      doesNotEstablish: ["CallNYC as a Council product", "Jamie as a Council employee", "Jamie causing the data release", "complete implementation of every participant suggestion"]
+    },
     ...nycArtcSharedFolderSources,
     ...relationalInfrastructureSources,
     ...nycArtcInstitutionalValueSources,
