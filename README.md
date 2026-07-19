@@ -66,6 +66,14 @@ public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
 
+## Requests For Proposals
+
+Substantial architectural and governance changes begin in `rfps/`. The RFP
+process keeps an inspectable record of the problem, proposed design, public and
+private boundaries, alternatives, evaluation criteria, and decision status
+before implementation begins. See `rfps/README.md` for stages and authoring
+guidance.
+
 ## Environment
 
 Staging is the first deployment target and is non-indexable by default:
