@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-19T12:23:37-04:00",
-  "sourceCommit": "4637d2b21073f78ade7008d3e09d78b1391199d8",
-  "sourceFingerprint": "772573f68666cf0c6c64159987ed00c1bf043877e390af1d627202c2e01c8315",
+  "generatedAt": "2026-07-19T12:46:34-04:00",
+  "sourceCommit": "9f8de25f72cc48fbd1ce86f4f82d3f9243f12b8b",
+  "sourceFingerprint": "7ad4705ba07b2393a24bce5b69a5a880e4806f18888a3ee063e7528065bdf674",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -463,7 +463,7 @@
     },
     {
       "id": "project.kc-spaces-fund",
-      "path": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
+      "path": "docs/knowledge-bank/projects/kc-spaces-fund-orientation.md",
       "title": "KC Spaces Fund",
       "kind": "project",
       "status": "maintained",
@@ -476,8 +476,8 @@
     },
     {
       "id": "project.kc-town-hall",
-      "path": "docs/knowledge-bank/projects/kc-town-hall.md",
-      "title": "KC Town Hall",
+      "path": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
+      "title": "KC Town Hall orientation",
       "kind": "project",
       "status": "governed-open",
       "visibility": "public-safe",
@@ -556,8 +556,8 @@
     },
     {
       "id": "project.sunday-dinner-196",
-      "path": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
-      "title": "Sunday Dinner and 196 Artists Residency",
+      "path": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
+      "title": "Sunday Dinner and 196 Artists Residency orientation",
       "kind": "project",
       "status": "governed-open",
       "visibility": "public-safe",
@@ -572,8 +572,8 @@
     },
     {
       "id": "project.talks-not-raids",
-      "path": "docs/knowledge-bank/projects/talks-not-raids.md",
-      "title": "Talks Not Raids",
+      "path": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
+      "title": "Talks Not Raids orientation",
       "kind": "project",
       "status": "maintained",
       "visibility": "public-safe",
@@ -585,8 +585,8 @@
     },
     {
       "id": "project.waterways-participatory-art",
-      "path": "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
-      "title": "Waterways and participatory art",
+      "path": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
+      "title": "Waterways and participatory art orientation",
       "kind": "project",
       "status": "governed-open",
       "visibility": "public-safe",
@@ -598,8 +598,8 @@
     },
     {
       "id": "project.wowlist",
-      "path": "docs/knowledge-bank/projects/wowlist-social-population.md",
-      "title": "WOWList",
+      "path": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "title": "WOWList orientation",
       "kind": "project",
       "status": "maintained",
       "visibility": "public-safe",
@@ -974,7 +974,7 @@
       "type": "related_to",
       "to": "project.kc-town-hall",
       "source": "frontmatter",
-      "href": "../projects/kc-town-hall.md",
+      "href": "../projects/kc-town-hall-orientation.md",
       "context": null
     },
     {
@@ -1300,7 +1300,7 @@
       "type": "related_to",
       "to": "project.kc-spaces-fund",
       "source": "frontmatter",
-      "href": "../projects/kc-spaces-fund-facebook-posts.md",
+      "href": "../projects/kc-spaces-fund-orientation.md",
       "context": null
     },
     {
@@ -1308,7 +1308,7 @@
       "type": "related_to",
       "to": "project.kc-town-hall",
       "source": "frontmatter",
-      "href": "../projects/kc-town-hall.md",
+      "href": "../projects/kc-town-hall-orientation.md",
       "context": null
     },
     {
@@ -1348,7 +1348,7 @@
       "type": "related_to",
       "to": "project.sunday-dinner-196",
       "source": "frontmatter",
-      "href": "../projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "href": "../projects/sunday-dinner-196-orientation.md",
       "context": null
     },
     {
@@ -1356,7 +1356,7 @@
       "type": "related_to",
       "to": "project.talks-not-raids",
       "source": "frontmatter",
-      "href": "../projects/talks-not-raids.md",
+      "href": "../projects/talks-not-raids-orientation.md",
       "context": null
     },
     {
@@ -1364,7 +1364,7 @@
       "type": "related_to",
       "to": "project.waterways-participatory-art",
       "source": "frontmatter",
-      "href": "../projects/waterways-and-participatory-art.md",
+      "href": "../projects/waterways-participatory-art-orientation.md",
       "context": null
     },
     {
@@ -1372,7 +1372,7 @@
       "type": "related_to",
       "to": "project.wowlist",
       "source": "frontmatter",
-      "href": "../projects/wowlist-social-population.md",
+      "href": "../projects/wowlist-orientation.md",
       "context": null
     },
     {
@@ -1872,7 +1872,7 @@
       "type": "related_to",
       "to": "project.talks-not-raids",
       "source": "frontmatter",
-      "href": "../projects/talks-not-raids.md",
+      "href": "../projects/talks-not-raids-orientation.md",
       "context": null
     },
     {
@@ -2288,7 +2288,7 @@
       "type": "related_to",
       "to": "project.talks-not-raids",
       "source": "frontmatter",
-      "href": "talks-not-raids.md",
+      "href": "talks-not-raids-orientation.md",
       "context": null
     },
     {
@@ -2640,7 +2640,7 @@
       "type": "documents",
       "to": "project.waterways-participatory-art",
       "source": "frontmatter",
-      "href": "../projects/waterways-and-participatory-art.md",
+      "href": "../projects/waterways-participatory-art-orientation.md",
       "context": null
     },
     {
@@ -3029,7 +3029,7 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
       "from": "index.knowledge-wiki.living-archive",
-      "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "toPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
       "to": "project.talks-not-raids",
       "fragment": null,
       "line": 20,
@@ -3065,7 +3065,7 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
       "from": "index.knowledge-wiki.living-archive",
-      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "to": "project.wowlist",
       "fragment": null,
       "line": 27,
@@ -3074,7 +3074,7 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
       "from": "index.knowledge-wiki.living-archive",
-      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "toPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
       "to": "project.sunday-dinner-196",
       "fragment": null,
       "line": 28,
@@ -3083,7 +3083,7 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
       "from": "index.knowledge-wiki.living-archive",
-      "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "toPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
       "to": "project.kc-town-hall",
       "fragment": null,
       "line": 29,
@@ -3101,7 +3101,7 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
       "from": "index.knowledge-wiki.living-archive",
-      "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
+      "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-orientation.md",
       "to": "project.kc-spaces-fund",
       "fragment": null,
       "line": 31,
@@ -3110,7 +3110,7 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
       "from": "index.knowledge-wiki.living-archive",
-      "toPath": "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+      "toPath": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
       "to": "project.waterways-participatory-art",
       "fragment": null,
       "line": 32,
@@ -3461,7 +3461,7 @@
     {
       "fromPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
       "from": "organization.nyc-artist-coalition",
-      "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "toPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
       "to": "project.talks-not-raids",
       "fragment": null,
       "line": 31,
@@ -3506,7 +3506,7 @@
     {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
-      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "to": "project.wowlist",
       "fragment": null,
       "line": 33,
@@ -3542,7 +3542,7 @@
     {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
-      "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "toPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
       "to": "project.kc-town-hall",
       "fragment": null,
       "line": 40,
@@ -3551,7 +3551,7 @@
     {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
-      "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "toPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
       "to": "project.talks-not-raids",
       "fragment": null,
       "line": 41,
@@ -3569,7 +3569,7 @@
     {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
-      "toPath": "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+      "toPath": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
       "to": "project.waterways-participatory-art",
       "fragment": null,
       "line": 46,
@@ -3587,7 +3587,7 @@
     {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
-      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "toPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
       "to": "project.sunday-dinner-196",
       "fragment": null,
       "line": 48,
@@ -3685,29 +3685,56 @@
     },
     {
       "fromPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
-      "from": "project.kc-spaces-fund",
+      "from": null,
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 148,
+      "line": 147,
       "kind": "link"
     },
     {
-      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
-      "from": "project.kc-town-hall",
-      "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "fromPath": "docs/knowledge-bank/projects/kc-spaces-fund-orientation.md",
+      "from": "project.kc-spaces-fund",
+      "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 66,
+      "line": 10,
       "kind": "link"
     },
     {
-      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
+      "from": "project.kc-town-hall",
+      "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "to": null,
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
       "from": "project.kc-town-hall",
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 92,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "to": null,
+      "fragment": null,
+      "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
+      "to": null,
+      "fragment": null,
+      "line": 91,
       "kind": "link"
     },
     {
@@ -3840,7 +3867,7 @@
       "fromPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "from": null,
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
-      "to": "project.wowlist",
+      "to": null,
       "fragment": null,
       "line": 215,
       "kind": "link"
@@ -3882,12 +3909,48 @@
       "kind": "link"
     },
     {
-      "fromPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "fromPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
+      "from": "project.sunday-dinner-196",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
+      "from": "project.talks-not-raids",
+      "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "to": null,
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
+      "from": "project.waterways-participatory-art",
+      "toPath": "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+      "to": null,
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "from": null,
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 37,
+      "line": 36,
       "kind": "link"
     },
     {
@@ -3957,7 +4020,7 @@
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
-      "to": "project.talks-not-raids",
+      "to": null,
       "fragment": null,
       "line": 139,
       "kind": "link"
@@ -3966,7 +4029,7 @@
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
-      "to": "project.kc-spaces-fund",
+      "to": null,
       "fragment": null,
       "line": 145,
       "kind": "link"
@@ -4002,7 +4065,7 @@
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
-      "to": "project.kc-town-hall",
+      "to": null,
       "fragment": null,
       "line": 163,
       "kind": "link"
@@ -4155,7 +4218,7 @@
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
-      "to": "project.wowlist",
+      "to": null,
       "fragment": null,
       "line": 244,
       "kind": "link"
@@ -4191,7 +4254,7 @@
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
-      "to": "project.sunday-dinner-196",
+      "to": null,
       "fragment": null,
       "line": 261,
       "kind": "link"
@@ -4496,7 +4559,7 @@
     {
       "fromPath": "docs/knowledge-bank/timelines/practice-2004-present.md",
       "from": "timeline.jamie-practice.2004-present",
-      "toPath": "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+      "toPath": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
       "to": "project.waterways-participatory-art",
       "fragment": null,
       "line": 30,

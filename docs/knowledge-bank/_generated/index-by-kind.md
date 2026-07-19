@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `4637d2b21073f78ade7008d3e09d78b1391199d8`
-**Generation time:** 2026-07-19T12:23:37-04:00
-**Source fingerprint:** `772573f68666cf0c6c64159987ed00c1bf043877e390af1d627202c2e01c8315`
+**Source commit:** `9f8de25f72cc48fbd1ce86f4f82d3f9243f12b8b`
+**Generation time:** 2026-07-19T12:46:34-04:00
+**Source fingerprint:** `7ad4705ba07b2393a24bce5b69a5a880e4806f18888a3ee063e7528065bdf674`
 
 ## application
 
@@ -74,17 +74,17 @@
 - [CallNYC](../projects/callnyc.md) - `project.callnyc`
 - [Fair Rent NYC](../projects/fair-rent-nyc.md) - `project.fair-rent-nyc`
 - [Harry J. Epstein Company digital operations](../projects/harry-j-epstein.md) - `project.harry-j-epstein`
-- [KC Spaces Fund](../projects/kc-spaces-fund-facebook-posts.md) - `project.kc-spaces-fund`
-- [KC Town Hall](../projects/kc-town-hall.md) - `project.kc-town-hall`
+- [KC Spaces Fund](../projects/kc-spaces-fund-orientation.md) - `project.kc-spaces-fund`
+- [KC Town Hall orientation](../projects/kc-town-hall-orientation.md) - `project.kc-town-hall`
 - [Let NYC Dance](../projects/let-nyc-dance.md) - `project.let-nyc-dance`
 - [NTER CHNG](../projects/nter-chng.md) - `project.nter-chng`
 - [NYC Artist Coalition](../projects/nyc-artist-coalition-2017.md) - `project.nyc-artist-coalition`
 - [Office of Nightlife town halls](../projects/office-of-nightlife-town-halls.md) - `project.office-of-nightlife-town-halls`
 - [Save NYC Spaces](../projects/save-nyc-spaces.md) - `project.save-nyc-spaces`
-- [Sunday Dinner and 196 Artists Residency](../projects/wowlist-sunday-dinner-callscript-continuity.md) - `project.sunday-dinner-196`
-- [Talks Not Raids](../projects/talks-not-raids.md) - `project.talks-not-raids`
-- [Waterways and participatory art](../projects/waterways-and-participatory-art.md) - `project.waterways-participatory-art`
-- [WOWList](../projects/wowlist-social-population.md) - `project.wowlist`
+- [Sunday Dinner and 196 Artists Residency orientation](../projects/sunday-dinner-196-orientation.md) - `project.sunday-dinner-196`
+- [Talks Not Raids orientation](../projects/talks-not-raids-orientation.md) - `project.talks-not-raids`
+- [Waterways and participatory art orientation](../projects/waterways-participatory-art-orientation.md) - `project.waterways-participatory-art`
+- [WOWList orientation](../projects/wowlist-orientation.md) - `project.wowlist`
 
 ## projection
 
