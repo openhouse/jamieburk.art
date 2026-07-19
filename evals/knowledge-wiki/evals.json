@@ -66,6 +66,7 @@
         "graph_deterministic",
         "generated_outputs_current",
         "employment_outputs_current",
+        "candidate_bound_accessibility_evidence",
         "mutation_suite",
         "legacy_checks_preserved"
       ]

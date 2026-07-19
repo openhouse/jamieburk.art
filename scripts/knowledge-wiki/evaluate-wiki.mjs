@@ -17,6 +17,7 @@ import {
   evaluatePublicHiring,
   resolveHiringGaps
 } from "./employment-lib.mjs";
+import { validateResponsiveAccessibilityEvidence } from "./accessibility-evidence.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -41,6 +42,7 @@ const requirementIds = opportunities.flatMap((record) =>
   record.role_requirements.map((requirement) => requirement.id)
 );
 const privateVault = result.byId.get("source.vault.communication-history.metadata");
+const accessibilityEvidence = validateResponsiveAccessibilityEvidence(defaultRepoRoot);
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -79,6 +81,7 @@ const changedPublicUiPaths = changedPaths.filter((file) =>
 const technicalOperationsPath = "apps/www/src/app/work/technical-operations/page.tsx";
 const technicalOperationsSource = readFileSync(path.join(defaultRepoRoot, technicalOperationsPath), "utf8");
 const boundedPublicUiPaths = [
+  "apps/www/src/app/globals.css",
   "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
   technicalOperationsPath,
   "apps/www/src/components/CaseStudyBlocks.tsx",
@@ -198,6 +201,7 @@ const checks = {
     semanticGraphFingerprint(result.graph) === semanticGraphFingerprint(second.graph),
   generated_outputs_current: generatedIssues.length === 0,
   employment_outputs_current: employmentOutputsCurrent,
+  candidate_bound_accessibility_evidence: accessibilityEvidence.passed,
   mutation_suite:
     existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/wiki.test.mjs")) &&
     existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/employment.test.mjs")),
