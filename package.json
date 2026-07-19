@@ -41,6 +41,7 @@
     "check:nycac-shared-folder": "node scripts/check-nycac-shared-folder.mjs",
     "check:wiki-family-closure": "node scripts/check-wiki-family-closure.mjs",
     "test:wiki-family-closure": "node --test scripts/tests/wiki-family-closure.test.mjs",
+    "generate:wiki-review-map": "node scripts/generate-wiki-review-map.mjs",
     "check:eval-integrity": "node scripts/check-eval-integrity.mjs",
     "test:evals": "node --test scripts/tests/knowledge-lifecycle.test.mjs scripts/tests/blind-spots.test.mjs scripts/tests/eval-integrity.test.mjs scripts/tests/nycac-shared-folder.test.mjs",
     "check:evals": "npm run check:knowledge-lifecycle && npm run check:chad-lens && npm run check:portfolio-readiness && npm run check:professor-lenses && npm run check:blind-spots && npm run check:nycac-shared-folder && npm run test:evals && npm run check:eval-integrity && npm run public-safety && npm run check:routes",
