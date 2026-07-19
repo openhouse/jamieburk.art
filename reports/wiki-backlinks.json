@@ -2,7 +2,7 @@
   "schema_version": 1,
   "generated": true,
   "generated_by": "npm run wiki:graph",
-  "graph_fingerprint": "5aa51ddca50a192af564f9e05f99beed56768f40dc91d594d5713459cd16385f",
+  "graph_fingerprint": "6be77d5a2344cfb7f901370cc49f15061447c18abc80b73fbe6158f677c6ae5c",
   "backlinks": {
     "capability.technical-operations": [
       {
@@ -26,7 +26,47 @@
         "layer": "authored"
       },
       {
+        "from": "note.employment-career-trajectory",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "note.employment-opportunity-discovery",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.aclu.product-manager-discovery.8482872002",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.asana.ai-implementation-manager-service-management.8027437",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.benepass.product-operations-manager",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
         "from": "opportunity.oti-technical-operations",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.oti.technical-operations-manager.782369",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.permitflow.product-operations-manager",
         "type": "related_to",
         "layer": "authored"
       },
@@ -222,6 +262,18 @@
         "layer": "authored"
       }
     ],
+    "index.employment-context": [
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
     "index.knowledge-wiki": [
       {
         "from": "index.knowledge-wiki-project-dossiers",
@@ -299,8 +351,79 @@
         "layer": "authored"
       },
       {
+        "from": "note.employment-career-trajectory",
+        "type": "developed_through",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.aclu.product-manager-discovery.8482872002",
+        "type": "developed_through",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.asana.ai-implementation-manager-service-management.8027437",
+        "type": "developed_through",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.benepass.product-operations-manager",
+        "type": "developed_through",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+        "type": "developed_through",
+        "layer": "authored"
+      },
+      {
         "from": "opportunity.oti-technical-operations",
         "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.oti.technical-operations-manager.782369",
+        "type": "developed_through",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.permitflow.product-operations-manager",
+        "type": "developed_through",
+        "layer": "authored"
+      }
+    ],
+    "note.employment-career-trajectory": [
+      {
+        "from": "index.employment-context",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
+    "note.employment-opportunity-discovery": [
+      {
+        "from": "index.employment-context",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
+    "note.employment-source-channel-coverage": [
+      {
+        "from": "index.employment-context",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
         "layer": "authored"
       }
     ],
@@ -360,7 +483,62 @@
         "layer": "canonical-adapter"
       }
     ],
+    "opportunity.aclu.product-manager-discovery.8482872002": [
+      {
+        "from": "index.employment-context",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
+    "opportunity.asana.ai-implementation-manager-service-management.8027437": [
+      {
+        "from": "index.employment-context",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
+    "opportunity.benepass.product-operations-manager": [
+      {
+        "from": "index.employment-context",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
+    "opportunity.codepath.senior-program-manager-claude-corps.5182020007": [
+      {
+        "from": "index.employment-context",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
     "opportunity.oti-technical-operations": [
+      {
+        "from": "capability.technical-operations",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
+    "opportunity.oti.technical-operations-manager.782369": [
       {
         "from": "capability.technical-operations",
         "type": "links_to",
@@ -369,6 +547,33 @@
       {
         "from": "capability.technical-operations",
         "type": "projects_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.oti-technical-operations",
+        "type": "related_to",
+        "layer": "authored"
+      }
+    ],
+    "opportunity.permitflow.product-operations-manager": [
+      {
+        "from": "index.employment-context",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
         "layer": "authored"
       }
     ],
@@ -381,6 +586,11 @@
       {
         "from": "index.knowledge-wiki",
         "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "note.employment-source-channel-coverage",
+        "type": "governed_by",
         "layer": "authored"
       },
       {
@@ -398,6 +608,11 @@
       {
         "from": "index.knowledge-wiki",
         "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "note.employment-source-channel-coverage",
+        "type": "governed_by",
         "layer": "authored"
       },
       {
@@ -458,7 +673,22 @@
         "layer": "authored"
       },
       {
+        "from": "opportunity.aclu.product-manager-discovery.8482872002",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
         "from": "opportunity.oti-technical-operations",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.oti.technical-operations-manager.782369",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "opportunity.permitflow.product-operations-manager",
         "type": "related_to",
         "layer": "authored"
       }

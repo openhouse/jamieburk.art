@@ -1,0 +1,38 @@
+{
+  "id": "current-priority-2026-07-18",
+  "developmentReaderIds": [
+    "reader.generic-recruiter",
+    "reader.lisa-gelobter",
+    "reader.chad-berkowitz",
+    "reader.herminia-ibarra",
+    "reader.amy-edmondson"
+  ],
+  "holdoutReaderIds": [
+    "reader.generic-hiring-manager",
+    "reader.aileen-palmer",
+    "reader.claudio-fernandez-araoz",
+    "reader.cyd-harrell"
+  ],
+  "opportunityIds": [
+    "opportunity.oti.technical-operations-manager.782369",
+    "opportunity.aclu.product-manager-discovery.8482872002",
+    "opportunity.benepass.product-operations-manager",
+    "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+    "opportunity.asana.ai-implementation-manager-service-management.8027437",
+    "opportunity.permitflow.product-operations-manager"
+  ],
+  "routes": [
+    "/",
+    "/work",
+    "/work/technical-operations",
+    "/work/callnyc",
+    "/work/harry-j-epstein",
+    "/work/fair-rent-nyc",
+    "/work/196-sunday-dinner",
+    "/lab/source-backed-team-memory",
+    "/resume",
+    "/about",
+    "/contact"
+  ],
+  "modes": ["blind-first-pass", "named-public-context", "external-expert", "one-year-fit"]
+}

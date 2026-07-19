@@ -20,6 +20,8 @@ relations:
     target: method.source-backed-team-memory
   - type: indexes
     target: index.knowledge-wiki-project-dossiers
+  - type: indexes
+    target: index.employment-context
   - type: governed_by
     target: policy.knowledge-wiki-schema
   - type: governed_by
@@ -84,6 +86,7 @@ The Knowledge Wiki exists to:
 - [Technical Operations capability](capabilities/technical-operations.md)
 - [Source-Backed Team Memory method](methods/source-backed-team-memory.md)
 - [Project dossier directory](indexes/project-dossiers.md)
+- [Employment context and priority opportunities](employment/README.md)
 - [Schema and authority contract](schema.md)
 - [Authoring and review workflow](authoring.md)
 - [Generated health report](../../reports/wiki-health.md)

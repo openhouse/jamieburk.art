@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-07-18",
+  "known_good": [
+    "opportunity.oti.technical-operations-manager.782369",
+    "opportunity.aclu.product-manager-discovery.8482872002",
+    "opportunity.benepass.product-operations-manager",
+    "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+    "opportunity.asana.ai-implementation-manager-service-management.8027437",
+    "opportunity.permitflow.product-operations-manager"
+  ],
+  "controls": [
+    {"id":"fixture.adjacent.program-operations","label":"adjacent","live":true,"salary_min":115000,"signals":["program delivery","handoffs"]},
+    {"id":"fixture.false-positive.low-salary","label":"false-positive","live":true,"salary_min":72000,"signals":["operations","documentation"]},
+    {"id":"fixture.false-positive.facilities","label":"false-positive","live":true,"salary_min":125000,"signals":["facilities operations","building systems"]},
+    {"id":"fixture.hard-screen.licensed-counsel","label":"hard-screen","live":true,"salary_min":145000,"signals":["program operations"],"hard_screen":"active bar license required"},
+    {"id":"fixture.hard-screen.ml-engineer","label":"hard-screen","live":true,"salary_min":170000,"signals":["AI systems","Python"],"hard_screen":"five years production ML engineering required"},
+    {"id":"fixture.closed.product-operations","label":"closed","live":false,"salary_min":140000,"signals":["product operations","launch readiness"]}
+  ]
+}

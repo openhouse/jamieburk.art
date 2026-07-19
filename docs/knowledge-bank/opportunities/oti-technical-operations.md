@@ -1,7 +1,7 @@
 ---
 id: opportunity.oti-technical-operations
 title: Opportunity lens - Technical Operations
-kind: opportunity
+kind: note
 status: maintained
 visibility: public-safe
 sensitivity: low
@@ -14,6 +14,8 @@ relations:
     target: project.callnyc
   - type: related_to
     target: method.source-backed-team-memory
+  - type: related_to
+    target: opportunity.oti.technical-operations-manager.782369
 ---
 
 # Opportunity Lens - Technical Operations

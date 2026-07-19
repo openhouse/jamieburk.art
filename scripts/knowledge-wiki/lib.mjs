@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const wikiRoot = path.join(repoRoot, "docs/knowledge-bank");
@@ -24,6 +25,14 @@ export const relationTypes = new Set([
   "developed_through", "uses_method", "documented_by", "governed_by",
   "governs", "supports", "corrected_by", "projects_to", "related_to",
 ]);
+export const opportunityPostingStatuses = new Set(["live", "closed", "historical", "unknown"]);
+export const opportunityCoverageStatuses = new Set([
+  "visible-proven", "visible-qualified", "visible-weak",
+  "wiki-proven-not-projected", "source-needed", "corroboration-needed",
+  "rights-blocked", "experience-gap", "hard-screen", "unknown",
+  "not-applicable",
+]);
+export const hardScreenStatuses = new Set(["clear", "conditional", "unknown", "gap", "not-applicable"]);
 
 const requiredFields = [
   "id", "title", "kind", "status", "visibility", "sensitivity",
@@ -156,10 +165,51 @@ function validateFrontmatter(document, state) {
     }
   }
   if (privateLocatorPattern.test(document.source)) addError(state, "private-locator", "Public repository wiki page contains an absolute private locator", file);
+  if (data.kind === "opportunity") validateOpportunity(data, state, file);
   const inflatesAbsence = /\b(?:page|artifact|record|source)\s+never existed\b/i.test(document.body);
   const explicitlyRejectsInflation = /(?:not proof|cannot|must never)[\s\S]{0,120}\b(?:page|artifact|record|source)\s+never existed\b/i.test(document.body);
   if (inflatesAbsence && !explicitlyRejectsInflation) {
     addError(state, "absence-inflation", "A not-recovered artifact cannot be asserted to have never existed", file);
+  }
+}
+
+function validateOpportunity(data, state, file) {
+  const required = ["organization", "canonical_url", "source_type", "posting_status", "verified_at", "reverify_by"];
+  for (const field of required) {
+    if (data[field] === undefined || data[field] === null || data[field] === "") {
+      addError(state, "missing-opportunity-field", `Opportunity is missing ${field}`, file);
+    }
+  }
+  if (data.canonical_url && !/^https:\/\//.test(data.canonical_url)) addError(state, "invalid-opportunity-url", "Opportunity canonical_url must use HTTPS", file);
+  if (data.source_type && data.source_type !== "official-employer") addError(state, "invalid-opportunity-source", "Priority opportunity source_type must be official-employer", file);
+  if (data.posting_status && !opportunityPostingStatuses.has(data.posting_status)) addError(state, "invalid-posting-status", `Unknown opportunity posting_status: ${data.posting_status}`, file);
+  for (const field of ["verified_at", "reverify_by", "deadline"]) {
+    if (data[field] && !isoDatePattern.test(String(data[field]))) addError(state, "invalid-opportunity-date", `${field} must be YYYY-MM-DD`, file);
+  }
+  if (data.verified_at && data.reverify_by && String(data.reverify_by) < String(data.verified_at)) addError(state, "invalid-reverification-window", "reverify_by precedes verified_at", file);
+  if (!Array.isArray(data.role_requirements) || data.role_requirements.length === 0) addError(state, "missing-role-requirements", "Opportunity must contain role_requirements", file);
+  const requirementIds = new Set();
+  const proofIds = new Set(proofClaims.map((proof) => proof.id));
+  for (const requirement of normalizeArray(data.role_requirements)) {
+    if (!requirement?.id || !stableWikiIdPattern.test(requirement.id)) addError(state, "invalid-requirement-id", `Invalid role requirement ID: ${requirement?.id ?? "missing"}`, file);
+    if (requirementIds.has(requirement?.id)) addError(state, "duplicate-requirement-id", `Duplicate role requirement ID: ${requirement.id}`, file);
+    requirementIds.add(requirement?.id);
+    if (!['critical', 'important', 'supporting'].includes(requirement?.importance)) addError(state, "invalid-requirement-importance", `Invalid importance for ${requirement?.id ?? "requirement"}`, file);
+    if (!requirement?.text) addError(state, "missing-requirement-text", `Missing text for ${requirement?.id ?? "requirement"}`, file);
+    const coverage = requirement?.coverage;
+    if (!coverage || !opportunityCoverageStatuses.has(coverage.status)) addError(state, "invalid-coverage-status", `Invalid coverage status for ${requirement?.id ?? "requirement"}`, file);
+    for (const id of normalizeArray(coverage?.public_proof_ids)) if (!proofIds.has(id)) addError(state, "unknown-public-proof", `Unknown public proof ID ${id}`, file);
+    for (const route of normalizeArray(coverage?.public_routes)) if (typeof route !== "string" || !route.startsWith("/")) addError(state, "invalid-public-route", `Invalid public route for ${requirement?.id ?? "requirement"}`, file);
+    if (!coverage?.next_action) addError(state, "missing-coverage-action", `Missing next_action for ${requirement?.id ?? "requirement"}`, file);
+  }
+  for (const screen of normalizeArray(data.hard_screens)) {
+    if (!screen?.id || !stableWikiIdPattern.test(screen.id)) addError(state, "invalid-hard-screen-id", `Invalid hard-screen ID: ${screen?.id ?? "missing"}`, file);
+    if (!screen?.text || !hardScreenStatuses.has(screen?.status)) addError(state, "invalid-hard-screen", `Hard screen ${screen?.id ?? "missing"} requires text and controlled status`, file);
+  }
+  if (!Array.isArray(data.portfolio_routes) || data.portfolio_routes.length === 0) addError(state, "missing-portfolio-routes", "Opportunity must name public portfolio routes", file);
+  for (const route of normalizeArray(data.portfolio_routes)) if (typeof route !== "string" || !route.startsWith("/")) addError(state, "invalid-public-route", `Invalid opportunity portfolio route: ${route}`, file);
+  for (const field of ["confirmed_facts", "inferences", "unknowns", "one_year_success_conditions", "one_year_risk_conditions", "interview_questions"]) {
+    if (!Array.isArray(data[field])) addError(state, "missing-opportunity-array", `Opportunity field ${field} must be an array`, file);
   }
 }
 
@@ -338,6 +388,31 @@ export function compileKnowledgeWiki({ root = wikiRoot, registry = knowledgeBank
       aliases: normalizeArray(data.aliases).sort(),
       last_reviewed: String(data.last_reviewed ?? ""),
       review_by: String(data.review_by ?? ""),
+      ...(data.kind === "opportunity" ? {
+        opportunity: {
+          organization: data.organization,
+          canonical_url: data.canonical_url,
+          source_type: data.source_type,
+          posting_status: data.posting_status,
+          verified_at: String(data.verified_at ?? ""),
+          reverify_by: String(data.reverify_by ?? ""),
+          deadline: data.deadline ? String(data.deadline) : null,
+          job_id: data.job_id ?? null,
+          compensation: data.compensation ?? null,
+          location: data.location ?? null,
+          reporting_line: data.reporting_line ?? null,
+          named_personnel: normalizeArray(data.named_personnel),
+          role_requirements: normalizeArray(data.role_requirements),
+          hard_screens: normalizeArray(data.hard_screens),
+          portfolio_routes: normalizeArray(data.portfolio_routes),
+          confirmed_facts: normalizeArray(data.confirmed_facts),
+          inferences: normalizeArray(data.inferences),
+          unknowns: normalizeArray(data.unknowns),
+          one_year_success_conditions: normalizeArray(data.one_year_success_conditions),
+          one_year_risk_conditions: normalizeArray(data.one_year_risk_conditions),
+          interview_questions: normalizeArray(data.interview_questions),
+        },
+      } : {}),
     });
     for (const relation of normalizeArray(data.relations)) edges.push({ from: data.id, type: relation.type, to: relation.target, layer: "authored" });
     for (const reference of normalizeArray(data.canonical_refs)) edges.push({ from: data.id, type: "references", to: reference, layer: "authored" });
@@ -370,6 +445,13 @@ export function compileKnowledgeWiki({ root = wikiRoot, registry = knowledgeBank
   }
 
   const nodeIds = new Set(nodes.map((node) => node.id));
+  for (const node of nodes.filter((item) => item.kind === "opportunity" && item.opportunity)) {
+    for (const requirement of node.opportunity.role_requirements) {
+      for (const evidenceId of normalizeArray(requirement.coverage?.wiki_evidence)) {
+        if (!nodeIds.has(evidenceId)) addError(state, "missing-wiki-evidence", `Unknown Wiki evidence ${evidenceId} for ${requirement.id}`, node.path);
+      }
+    }
+  }
   for (const edge of edges) {
     if (!nodeIds.has(edge.from) || !nodeIds.has(edge.to)) addError(state, "dangling-edge", `Dangling edge: ${edge.from} -[${edge.type}]-> ${edge.to}`);
   }

@@ -1,0 +1,59 @@
+{
+  "suite_id": "knowledge-wiki-employment-acceptance-v1",
+  "title": "Knowledge Wiki employment context and hiring acceptance",
+  "objective": "Help Jamie secure a well-matched role quickly without sacrificing truth, privacy, collective credit, human authority, or one-year mutual fit.",
+  "as_of": "2026-07-18",
+  "scoring": "No blended score. Every hard gate reports separately; external outcomes and human authority remain separate.",
+  "lexicographic_objective": [
+    "privacy consent and rights",
+    "factual support and claim closure",
+    "collective credit",
+    "hard requirements",
+    "Wiki requirement coverage",
+    "public portfolio coverage",
+    "simulated advancement",
+    "one-year mutual fit",
+    "clarity",
+    "voice and warmth",
+    "concision and visual load"
+  ],
+  "stop_conditions": [
+    "all hard gates pass",
+    "no priority-zero gap remains for the selected target",
+    "two unchanged bounded passes",
+    "the next change adds more burden than signal",
+    "a named human decision is required",
+    "no improvement after two bounded cycles",
+    "outward action or deadline takes priority"
+  ],
+  "evals": [
+    {"id":"EWA-001","title":"One authority model and Private Source Vault boundary","grader":"deterministic","blocking":true,"pass_criteria":["One docs/knowledge-bank compatibility root remains","No raw communications or private locators enter Git","Protected channels use opaque metadata only"]},
+    {"id":"EWA-002","title":"Six official and fresh priority opportunity records","grader":"deterministic","blocking":true,"pass_criteria":["All Tier 1 records exist","Official employer pages are canonical","Live records have bounded 48-72 hour reverification windows"]},
+    {"id":"EWA-003","title":"Stable requirements, hard screens, and source discrepancies","grader":"deterministic","blocking":true,"pass_criteria":["Requirements have stable IDs","Hard screens remain distinct","OTI public-page and Internal-CSV discrepancy remains visible"]},
+    {"id":"EWA-004","title":"Role, trajectory, and source-channel coverage","grader":"deterministic","blocking":true,"pass_criteria":["Every role has a generated coverage matrix","Career trajectory reports strengths and limits","Source channels report gaps and public-use boundaries"]},
+    {"id":"EWA-005","title":"Title-blind opportunity discovery with negative controls","grader":"deterministic","blocking":true,"pass_criteria":["Known-good Top-6 recall is 100 percent","Precision is 100 percent","Hard-screen, closed, and below-floor controls are rejected"]},
+    {"id":"EWA-006","title":"Hiring evaluator and Wiki gap resolver separation","grader":"deterministic","blocking":true,"pass_criteria":["Evaluator receives public portfolio and public context only","Gap resolver runs after the hiring report","Hidden Wiki evidence cannot leak into evaluator context"]},
+    {"id":"EWA-007","title":"Sourced reader profiles and honest simulation labels","grader":"deterministic","blocking":true,"pass_criteria":["Named profiles have public sources","Every named profile has the full non-endorsement disclaimer","Development and holdout readers do not overlap"]},
+    {"id":"EWA-008","title":"Exact candidate, context, and independent judgment binding","grader":"deterministic","blocking":true,"pass_criteria":["Development and holdout reports match the candidate fingerprint","Snapshot, role, reader, and prompt hashes are retained","Judge is independent from optimizer"]},
+    {"id":"EWA-009","title":"Role-specific public hiring acceptance","grader":"llm_judge","blocking":true,"external_judgment_required":true,"pass_criteria":["Professional category and target relevance are understood quickly","Critical requirements are assessed from visible evidence only","The report retains missing positive evidence and uncertainty"]},
+    {"id":"EWA-010","title":"One-year mutual-fit advisory panel","grader":"llm_judge","blocking":true,"external_judgment_required":true,"pass_criteria":["Herminia lens examines working identity","Claudio lens examines selection risk","Amy lens examines authority, learning, and psychological safety"]},
+    {"id":"EWA-011","title":"Chad lens and Jamie voice","grader":"llm_judge","blocking":true,"external_judgment_required":true,"pass_criteria":["Actor, action, result, and boundary are legible","The strongest sentence arrives quickly","Prose remains warm, specific, and restrained"]},
+    {"id":"EWA-012","title":"Human authority and outward action remain open","grader":"human_approval","blocking":true,"external_judgment_required":true,"pass_criteria":["Reports do not claim Jamie approval or employer outcome","Application and release actions remain human","The system explicitly yields to a live deadline"]}
+  ],
+  "mutations": [
+    "missing proof",
+    "hidden actor",
+    "vague verbs",
+    "sole credit",
+    "unsupported metric",
+    "hidden resume or contact",
+    "dense first screen",
+    "stale role",
+    "removed credential warning",
+    "protected evidence leak",
+    "private path",
+    "missing relevant case",
+    "broken citation",
+    "resume contradiction"
+  ]
+}

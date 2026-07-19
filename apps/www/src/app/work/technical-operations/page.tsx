@@ -110,11 +110,10 @@ export default function TechnicalOperationsPage() {
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding
-          materials, documentation systems, launch support, and durable
-          handoffs.
+          I create operating structure for complex public-facing teams. I
+          coordinate delivery from emerging requirements through reliable
+          launch with planning rhythms, risk and dependency tracking, decision
+          records, onboarding, runbooks, status reporting, and durable handoffs.
         </p>
         <p className="mt-5 leading-7 text-jb-ink/72">
           {sharedDriveHandoff} {archiveOverviewWorkflow}

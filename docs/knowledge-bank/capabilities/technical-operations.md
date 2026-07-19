@@ -16,7 +16,7 @@ relations:
   - type: developed_through
     target: method.source-backed-team-memory
   - type: projects_to
-    target: opportunity.oti-technical-operations
+    target: opportunity.oti.technical-operations-manager.782369
 ---
 
 # Technical operations
@@ -39,5 +39,7 @@ while chronology, attribution, and protected evidence remained bounded.
 [Source-Backed Team Memory](../methods/source-backed-team-memory.md) develops
 the same care into a repeatable operating method for knowledge-heavy teams.
 
-The hiring projection and proof IDs remain in the
-[Technical Operations opportunity lens](../opportunities/oti-technical-operations.md#strong-proof-ids).
+The current hiring projection and proof IDs remain in the
+[Technical Operations opportunity lens](../opportunities/oti-technical-operations.md#strong-proof-ids),
+with requirement-level coverage in the
+[verified OTI opportunity record](../opportunities/oti-technical-operations-manager-782369.md).

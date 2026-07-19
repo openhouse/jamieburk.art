@@ -1,0 +1,808 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-07-18",
+  "status": "pass",
+  "gates": {
+    "canonical_wiki_authority": true,
+    "no_private_locators": true,
+    "six_priority_records": true,
+    "official_sources_only": true,
+    "bounded_reverification": true,
+    "live_roles_current_as_of": true,
+    "requirement_ids": true,
+    "hard_screens": true,
+    "oti_source_discrepancy_preserved": true,
+    "title_blind_recall": true,
+    "discovery_precision": true,
+    "hard_screen_detection": true,
+    "closed_control_rejected": true
+  },
+  "missing_priority_records": [],
+  "invalid_reverify_windows": [],
+  "stale_live_roles": [],
+  "role_coverage": [
+    {
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "title": "NYC OTI - Technical Operations Manager",
+      "posting_status": "live",
+      "verified_at": "2026-07-18",
+      "reverify_by": "2026-07-21",
+      "requirement_count": 5,
+      "critical_requirement_count": 3,
+      "critical_p0_gaps": [],
+      "requirements": [
+        {
+          "id": "requirement.oti.delivery-coordination",
+          "importance": "critical",
+          "text": "Coordinate concurrent delivery, planning rhythms, dependencies, and launch support.",
+          "status": "visible-proven",
+          "wiki_evidence": [
+            "capability.technical-operations",
+            "project.callnyc"
+          ],
+          "public_proof_ids": [
+            "technical-operations-operating-backbone",
+            "hje-modernization-stewardship",
+            "callnyc-civic-data-guidance"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/harry-j-epstein",
+            "/work/callnyc"
+          ],
+          "gap_type": "none",
+          "next_action": "Keep the public examples compact and source-backed."
+        },
+        {
+          "id": "requirement.oti.risk-status-reporting",
+          "importance": "critical",
+          "text": "Surface risks and blockers, maintain status, and report honestly to leadership.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "technical-operations-operating-backbone",
+            "fair-rent-campaign-memory"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/fair-rent-nyc"
+          ],
+          "gap_type": "specificity",
+          "next_action": "Use an interview example with a concrete decision record and escalation path."
+        },
+        {
+          "id": "requirement.oti.onboarding-runbooks",
+          "importance": "critical",
+          "text": "Create onboarding guides, handbooks, runbooks, and operating documentation people use.",
+          "status": "visible-proven",
+          "wiki_evidence": [
+            "capability.technical-operations",
+            "method.source-backed-team-memory"
+          ],
+          "public_proof_ids": [
+            "sunday-dinner-196-participation-infrastructure",
+            "source-backed-team-memory-method",
+            "fair-rent-source-map"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/196-sunday-dinner",
+            "/lab/source-backed-team-memory"
+          ],
+          "gap_type": "none",
+          "next_action": "Preserve the distinction between deployed records and the developing lab method."
+        },
+        {
+          "id": "requirement.oti.operational-metrics-retros",
+          "importance": "important",
+          "text": "Track operational measures, run retrospectives, and improve systems over time.",
+          "status": "visible-weak",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "hje-revenue-growth-contribution",
+            "wowlist-community-platform"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/harry-j-epstein",
+            "/work/wowlist"
+          ],
+          "gap_type": "source-specificity",
+          "next_action": "Revisit source-backed operating metrics before adding public prose."
+        },
+        {
+          "id": "requirement.oti.cross-functional-public-service",
+          "importance": "important",
+          "text": "Translate across technical, legal, communications, security, contracts, and public stakeholders.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "project.callnyc",
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "callnyc-civic-data-guidance",
+            "nyc-artist-coalition-civic-systems",
+            "fair-rent-source-map"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/callnyc",
+            "/work/fair-rent-nyc"
+          ],
+          "gap_type": "enterprise-context",
+          "next_action": "Qualify direct experience by stakeholder type rather than implying every named function."
+        }
+      ],
+      "hard_screens": [
+        {
+          "id": "requirement.oti.minimum-qualification",
+          "text": "Meet one of the posted IT Project Specialist education and experience pathways.",
+          "status": "conditional",
+          "next_action": "Confirm the exact pathway and document it in the private application packet."
+        },
+        {
+          "id": "requirement.oti.schedule",
+          "text": "Be available for possible night and weekend work in a 24/7 operation.",
+          "status": "conditional",
+          "next_action": "Clarify frequency and on-call expectations in interview."
+        }
+      ]
+    },
+    {
+      "opportunity_id": "opportunity.aclu.product-manager-discovery.8482872002",
+      "title": "ACLU - Product Manager II, Discovery",
+      "posting_status": "live",
+      "verified_at": "2026-07-18",
+      "reverify_by": "2026-07-21",
+      "requirement_count": 4,
+      "critical_requirement_count": 4,
+      "critical_p0_gaps": [
+        "requirement.aclu.product-artifact"
+      ],
+      "requirements": [
+        {
+          "id": "requirement.aclu.discovery-research",
+          "importance": "critical",
+          "text": "Lead early discovery through listening, workshops, synthesis, and problem framing.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "project.callnyc",
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "fair-rent-campaign-memory",
+            "nyc-artist-coalition-civic-systems",
+            "callnyc-civic-data-guidance"
+          ],
+          "public_routes": [
+            "/work/fair-rent-nyc",
+            "/work/callnyc",
+            "/work/technical-operations"
+          ],
+          "gap_type": "product-discovery-language",
+          "next_action": "Prepare one concise case narrative connecting listening to a product decision."
+        },
+        {
+          "id": "requirement.aclu.build-buy-no-build",
+          "importance": "critical",
+          "text": "Turn discovery into build, buy, or do-not-build recommendations.",
+          "status": "visible-weak",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "hje-modernization-stewardship",
+            "technical-operations-operating-backbone"
+          ],
+          "public_routes": [
+            "/work/harry-j-epstein",
+            "/work/technical-operations"
+          ],
+          "gap_type": "decision-specificity",
+          "next_action": "Revisit source material for one defensible product investment decision."
+        },
+        {
+          "id": "requirement.aclu.privacy-governance",
+          "importance": "critical",
+          "text": "Partner with privacy, information security, and counsel on responsible product and GenAI governance.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "method.source-backed-team-memory"
+          ],
+          "public_proof_ids": [
+            "source-backed-team-memory-method",
+            "fair-rent-source-map"
+          ],
+          "public_routes": [
+            "/lab/source-backed-team-memory",
+            "/work/fair-rent-nyc"
+          ],
+          "gap_type": "formal-org-context",
+          "next_action": "Distinguish demonstrated governance practice from unclaimed formal InfoSec ownership."
+        },
+        {
+          "id": "requirement.aclu.product-artifact",
+          "importance": "critical",
+          "text": "Provide an inspectable product brief or PRD for a launched product.",
+          "status": "source-needed",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "wowlist-community-platform",
+            "hje-modernization-stewardship"
+          ],
+          "public_routes": [
+            "/work/wowlist",
+            "/work/harry-j-epstein"
+          ],
+          "gap_type": "application-artifact",
+          "next_action": "Identify, redact, and obtain permission for a suitable launched-product artifact."
+        }
+      ],
+      "hard_screens": [
+        {
+          "id": "requirement.aclu.prd-artifact",
+          "text": "Submit a PRD or product brief for a launched product.",
+          "status": "conditional",
+          "next_action": "Select a rights-safe artifact that demonstrates discovery and launch reasoning."
+        }
+      ]
+    },
+    {
+      "opportunity_id": "opportunity.benepass.product-operations-manager",
+      "title": "Benepass - Product Operations Manager",
+      "posting_status": "live",
+      "verified_at": "2026-07-18",
+      "reverify_by": "2026-07-21",
+      "requirement_count": 4,
+      "critical_requirement_count": 3,
+      "critical_p0_gaps": [],
+      "requirements": [
+        {
+          "id": "requirement.benepass.launch-readiness",
+          "importance": "critical",
+          "text": "Own launch readiness, go or no-go coordination, and downstream operational impact.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "hje-modernization-stewardship",
+            "wowlist-community-platform",
+            "technical-operations-operating-backbone"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/harry-j-epstein",
+            "/work/wowlist"
+          ],
+          "gap_type": "formal-go-no-go",
+          "next_action": "Prepare a defensible launch-readiness example with dependencies and decision owner."
+        },
+        {
+          "id": "requirement.benepass.ops-product-loop",
+          "importance": "critical",
+          "text": "Convert customer-operations friction into quantified product priorities.",
+          "status": "visible-weak",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "hje-revenue-growth-contribution",
+            "hje-modernization-stewardship"
+          ],
+          "public_routes": [
+            "/work/harry-j-epstein",
+            "/work/technical-operations"
+          ],
+          "gap_type": "quantified-feedback-loop",
+          "next_action": "Revisit HJE evidence for a source-backed operations-to-product prioritization example."
+        },
+        {
+          "id": "requirement.benepass.cross-functional-influence",
+          "importance": "critical",
+          "text": "Influence Product, Engineering, Customer Operations, and go-to-market partners.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "capability.technical-operations",
+            "project.callnyc"
+          ],
+          "public_proof_ids": [
+            "technical-operations-operating-backbone",
+            "hje-modernization-stewardship",
+            "callnyc-civic-data-guidance"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/harry-j-epstein",
+            "/work/callnyc"
+          ],
+          "gap_type": "team-scale",
+          "next_action": "Be exact about collaborator functions and scope in interviews."
+        },
+        {
+          "id": "requirement.benepass.operating-metrics",
+          "importance": "important",
+          "text": "Define operating measures that help Product prioritize and Operations prepare.",
+          "status": "visible-weak",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "hje-revenue-growth-contribution",
+            "wowlist-community-platform"
+          ],
+          "public_routes": [
+            "/work/harry-j-epstein",
+            "/work/wowlist"
+          ],
+          "gap_type": "metric-specificity",
+          "next_action": "Promote only reviewed metrics with clear attribution and decision use."
+        }
+      ],
+      "hard_screens": [
+        {
+          "id": "requirement.benepass.years-similar",
+          "text": "Posting requests five to eight or more years in Product Operations or similar work.",
+          "status": "conditional",
+          "next_action": "Translate relevant years by function without rewriting title history."
+        }
+      ]
+    },
+    {
+      "opportunity_id": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "title": "CodePath - Senior Program Manager, Claude Corps",
+      "posting_status": "live",
+      "verified_at": "2026-07-18",
+      "reverify_by": "2026-07-21",
+      "requirement_count": 4,
+      "critical_requirement_count": 3,
+      "critical_p0_gaps": [],
+      "requirements": [
+        {
+          "id": "requirement.codepath.master-plan",
+          "importance": "critical",
+          "text": "Build and maintain the master plan for a new AI learning program.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "technical-operations-operating-backbone",
+            "sunday-dinner-196-participation-infrastructure"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/196-sunday-dinner"
+          ],
+          "gap_type": "formal-program-scale",
+          "next_action": "Prepare one end-to-end program plan example with milestones and changes."
+        },
+        {
+          "id": "requirement.codepath.partner-delivery",
+          "importance": "critical",
+          "text": "Coordinate cross-partner delivery, executive reporting, risks, and dependencies.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "capability.technical-operations",
+            "project.callnyc"
+          ],
+          "public_proof_ids": [
+            "fair-rent-campaign-memory",
+            "callnyc-civic-data-guidance",
+            "technical-operations-operating-backbone"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/fair-rent-nyc",
+            "/work/callnyc"
+          ],
+          "gap_type": "executive-reporting-specificity",
+          "next_action": "Use an interview example that names cadence, audience, and decision consequence."
+        },
+        {
+          "id": "requirement.codepath.ai-first-operations",
+          "importance": "critical",
+          "text": "Use AI thoughtfully to accelerate program operations and learning.",
+          "status": "visible-proven",
+          "wiki_evidence": [
+            "method.source-backed-team-memory"
+          ],
+          "public_proof_ids": [
+            "ai-evals-professional-development",
+            "source-backed-team-memory-method"
+          ],
+          "public_routes": [
+            "/lab/source-backed-team-memory",
+            "/resume"
+          ],
+          "gap_type": "none",
+          "next_action": "Keep the distinction between completed evaluation training and developing methods."
+        },
+        {
+          "id": "requirement.codepath.handoff-ready-systems",
+          "importance": "important",
+          "text": "Leave repeatable systems, documentation, and handoffs after launch.",
+          "status": "visible-proven",
+          "wiki_evidence": [
+            "method.source-backed-team-memory",
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "sunday-dinner-196-participation-infrastructure",
+            "source-backed-team-memory-method",
+            "fair-rent-source-map"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/196-sunday-dinner",
+            "/lab/source-backed-team-memory"
+          ],
+          "gap_type": "none",
+          "next_action": "Maintain concise examples across routes."
+        }
+      ],
+      "hard_screens": [
+        {
+          "id": "requirement.codepath.program-experience",
+          "text": "Posting requests at least three years of relevant program-management experience.",
+          "status": "clear",
+          "next_action": "Map program history directly in the private application narrative."
+        }
+      ]
+    },
+    {
+      "opportunity_id": "opportunity.asana.ai-implementation-manager-service-management.8027437",
+      "title": "Asana - AI Implementation Manager, Service Management",
+      "posting_status": "live",
+      "verified_at": "2026-07-18",
+      "reverify_by": "2026-07-21",
+      "requirement_count": 4,
+      "critical_requirement_count": 3,
+      "critical_p0_gaps": [],
+      "requirements": [
+        {
+          "id": "requirement.asana.customer-implementation",
+          "importance": "critical",
+          "text": "Lead customer implementation from discovery through configuration, migration, launch, and value realization.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "hje-modernization-stewardship",
+            "technical-operations-operating-backbone"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/harry-j-epstein"
+          ],
+          "gap_type": "enterprise-customer-context",
+          "next_action": "Prepare an implementation narrative with customer, migration, adoption, and handoff stages."
+        },
+        {
+          "id": "requirement.asana.ai-workflows",
+          "importance": "critical",
+          "text": "Design and implement AI-assisted service-management workflows responsibly.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "method.source-backed-team-memory"
+          ],
+          "public_proof_ids": [
+            "source-backed-team-memory-method",
+            "ai-evals-professional-development"
+          ],
+          "public_routes": [
+            "/lab/source-backed-team-memory",
+            "/resume"
+          ],
+          "gap_type": "production-customer-deployment",
+          "next_action": "Do not imply production customer AI deployment where only method development is supported."
+        },
+        {
+          "id": "requirement.asana.change-adoption",
+          "importance": "critical",
+          "text": "Manage risk, change, workshops, enablement, and adoption across customer teams.",
+          "status": "visible-proven",
+          "wiki_evidence": [
+            "capability.technical-operations",
+            "project.callnyc"
+          ],
+          "public_proof_ids": [
+            "sunday-dinner-196-participation-infrastructure",
+            "hje-modernization-stewardship",
+            "callnyc-civic-data-guidance"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/196-sunday-dinner",
+            "/work/harry-j-epstein"
+          ],
+          "gap_type": "none",
+          "next_action": "Translate community and business adoption work with audience-specific detail."
+        },
+        {
+          "id": "requirement.asana.data-acumen",
+          "importance": "important",
+          "text": "Use data, including SQL or Python where helpful, to diagnose and improve implementation outcomes.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "wowlist-community-platform",
+            "hje-revenue-growth-contribution"
+          ],
+          "public_routes": [
+            "/work/wowlist",
+            "/work/harry-j-epstein",
+            "/resume"
+          ],
+          "gap_type": "recent-code-depth",
+          "next_action": "Be precise about current hands-on SQL and Python depth."
+        }
+      ],
+      "hard_screens": [
+        {
+          "id": "requirement.asana.technical-implementation-tenure",
+          "text": "Posting requests at least three years in technical customer success, implementation, TAM, or consulting.",
+          "status": "conditional",
+          "next_action": "Map equivalent client implementation work without changing title history."
+        }
+      ]
+    },
+    {
+      "opportunity_id": "opportunity.permitflow.product-operations-manager",
+      "title": "PermitFlow - Product Operations Manager",
+      "posting_status": "live",
+      "verified_at": "2026-07-18",
+      "reverify_by": "2026-07-21",
+      "requirement_count": 5,
+      "critical_requirement_count": 3,
+      "critical_p0_gaps": [],
+      "requirements": [
+        {
+          "id": "requirement.permitflow.product-insights",
+          "importance": "critical",
+          "text": "Turn customer and operational insights into Product and Engineering priorities.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "hje-modernization-stewardship",
+            "callnyc-civic-data-guidance"
+          ],
+          "public_routes": [
+            "/work/harry-j-epstein",
+            "/work/callnyc",
+            "/work/technical-operations"
+          ],
+          "gap_type": "formal-product-loop",
+          "next_action": "Prepare one source-backed example connecting observed friction to a product change."
+        },
+        {
+          "id": "requirement.permitflow.product-data",
+          "importance": "critical",
+          "text": "Use product data, dashboards, and metrics to diagnose and improve adoption and operations.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "hje-revenue-growth-contribution",
+            "wowlist-community-platform"
+          ],
+          "public_routes": [
+            "/work/harry-j-epstein",
+            "/work/wowlist",
+            "/resume"
+          ],
+          "gap_type": "metric-specificity",
+          "next_action": "Revisit source-backed dashboard and decision examples before changing the site."
+        },
+        {
+          "id": "requirement.permitflow.launch-operations",
+          "importance": "critical",
+          "text": "Coordinate launch readiness and the operational systems surrounding new product work.",
+          "status": "visible-proven",
+          "wiki_evidence": [
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "technical-operations-operating-backbone",
+            "hje-modernization-stewardship",
+            "wowlist-community-platform"
+          ],
+          "public_routes": [
+            "/work/technical-operations",
+            "/work/harry-j-epstein",
+            "/work/wowlist"
+          ],
+          "gap_type": "none",
+          "next_action": "Keep the strongest launch examples prominent."
+        },
+        {
+          "id": "requirement.permitflow.ai-workflows",
+          "importance": "important",
+          "text": "Build practical AI-enabled workflows while improving operating quality.",
+          "status": "visible-qualified",
+          "wiki_evidence": [
+            "method.source-backed-team-memory"
+          ],
+          "public_proof_ids": [
+            "source-backed-team-memory-method",
+            "ai-evals-professional-development"
+          ],
+          "public_routes": [
+            "/lab/source-backed-team-memory",
+            "/resume"
+          ],
+          "gap_type": "production-context",
+          "next_action": "Preserve the difference between a tested method and scaled production automation."
+        },
+        {
+          "id": "requirement.permitflow.zero-to-one",
+          "importance": "important",
+          "text": "Operate comfortably in zero-to-one conditions with changing requirements.",
+          "status": "visible-proven",
+          "wiki_evidence": [
+            "project.callnyc",
+            "capability.technical-operations"
+          ],
+          "public_proof_ids": [
+            "callnyc-civic-data-guidance",
+            "wowlist-community-platform",
+            "nyc-artist-coalition-public-web-infrastructure"
+          ],
+          "public_routes": [
+            "/work/callnyc",
+            "/work/wowlist",
+            "/work/technical-operations"
+          ],
+          "gap_type": "none",
+          "next_action": "Use precise examples rather than a generic startup claim."
+        }
+      ],
+      "hard_screens": [
+        {
+          "id": "requirement.permitflow.product-ops-tenure",
+          "text": "Posting requests at least two years in product operations, strategy, or business operations.",
+          "status": "conditional",
+          "next_action": "Map equivalent work by function and dates without inflating title history."
+        }
+      ]
+    }
+  ],
+  "discovery": {
+    "schema_version": 1,
+    "as_of": "2026-07-18",
+    "title_blind": true,
+    "query_terms_exclude_titles": true,
+    "top_k": 6,
+    "retrieved": [
+      "opportunity.asana.ai-implementation-manager-service-management.8027437",
+      "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "opportunity.permitflow.product-operations-manager",
+      "opportunity.oti.technical-operations-manager.782369",
+      "opportunity.benepass.product-operations-manager",
+      "opportunity.aclu.product-manager-discovery.8482872002"
+    ],
+    "expected": [
+      "opportunity.oti.technical-operations-manager.782369",
+      "opportunity.aclu.product-manager-discovery.8482872002",
+      "opportunity.benepass.product-operations-manager",
+      "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "opportunity.asana.ai-implementation-manager-service-management.8027437",
+      "opportunity.permitflow.product-operations-manager"
+    ],
+    "top_k_recall": 1,
+    "precision": 1,
+    "hard_screen_detection": 1,
+    "closed_roles_rejected": true,
+    "below_floor_rejected": true,
+    "rejected": [
+      {
+        "id": "fixture.false-positive.low-salary",
+        "reasons": [
+          "compensation-below-floor",
+          "insufficient-trajectory-match"
+        ]
+      },
+      {
+        "id": "fixture.false-positive.facilities",
+        "reasons": [
+          "insufficient-trajectory-match"
+        ]
+      },
+      {
+        "id": "fixture.hard-screen.licensed-counsel",
+        "reasons": [
+          "hard-screen",
+          "insufficient-trajectory-match"
+        ]
+      },
+      {
+        "id": "fixture.hard-screen.ml-engineer",
+        "reasons": [
+          "hard-screen",
+          "insufficient-trajectory-match"
+        ]
+      },
+      {
+        "id": "fixture.closed.product-operations",
+        "reasons": [
+          "closed"
+        ]
+      }
+    ],
+    "candidate_scores": [
+      {
+        "id": "opportunity.oti.technical-operations-manager.782369",
+        "label": "known-good",
+        "score": 7
+      },
+      {
+        "id": "opportunity.aclu.product-manager-discovery.8482872002",
+        "label": "known-good",
+        "score": 4
+      },
+      {
+        "id": "opportunity.benepass.product-operations-manager",
+        "label": "known-good",
+        "score": 5
+      },
+      {
+        "id": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+        "label": "known-good",
+        "score": 8
+      },
+      {
+        "id": "opportunity.asana.ai-implementation-manager-service-management.8027437",
+        "label": "known-good",
+        "score": 8
+      },
+      {
+        "id": "opportunity.permitflow.product-operations-manager",
+        "label": "known-good",
+        "score": 8
+      },
+      {
+        "id": "fixture.adjacent.program-operations",
+        "label": "adjacent",
+        "score": 3
+      },
+      {
+        "id": "fixture.false-positive.low-salary",
+        "label": "false-positive",
+        "score": 2
+      },
+      {
+        "id": "fixture.false-positive.facilities",
+        "label": "false-positive",
+        "score": 1
+      },
+      {
+        "id": "fixture.hard-screen.licensed-counsel",
+        "label": "hard-screen",
+        "score": 2
+      },
+      {
+        "id": "fixture.hard-screen.ml-engineer",
+        "label": "hard-screen",
+        "score": 1
+      },
+      {
+        "id": "fixture.closed.product-operations",
+        "label": "closed",
+        "score": 3
+      }
+    ]
+  },
+  "fingerprint": "99942d3036ee0895e603010085cf2a9de4615cae255ba9c751e7de7ce308e5ce"
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "candidateSha": "e1bfdc1e82f2e1d352c94e8051f28725523b96e878f2da17c3403fe7aee83d4e",
+  "sourceReport": "reports/hiring/holdout/reader-consensus.json",
+  "resolutions": [
+    {
+      "reader_id": "reader.generic-hiring-manager",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "A public, date-specific education and employment chronology that clearly establishes one qualifying civil-service pathway.",
+      "requirement_id": "requirement.oti.minimum-qualification",
+      "classification": "unknown",
+      "public_routes": [],
+      "wiki_evidence": [],
+      "public_proof_ids": [],
+      "next_action": "Create a bounded research inquiry; do not infer missing evidence."
+    },
+    {
+      "reader_id": "reader.generic-hiring-manager",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "One compact case study naming Jamie's authority, team composition, concurrent workstreams, cadence, risks escalated, and launch outcome.",
+      "requirement_id": "requirement.oti.delivery-coordination",
+      "classification": "visible-proven",
+      "public_routes": [
+        "/work/technical-operations",
+        "/work/harry-j-epstein",
+        "/work/callnyc"
+      ],
+      "wiki_evidence": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "public_proof_ids": [
+        "technical-operations-operating-backbone",
+        "hje-modernization-stewardship",
+        "callnyc-civic-data-guidance"
+      ],
+      "next_action": "Keep the public examples compact and source-backed."
+    },
+    {
+      "reader_id": "reader.claudio-fernandez-araoz",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "A concise education and dated experience chronology explicitly demonstrating one posted civil-service qualification pathway.",
+      "requirement_id": "requirement.oti.minimum-qualification",
+      "classification": "unknown",
+      "public_routes": [],
+      "wiki_evidence": [],
+      "public_proof_ids": [],
+      "next_action": "Create a bounded research inquiry; do not infer missing evidence."
+    },
+    {
+      "reader_id": "reader.claudio-fernandez-araoz",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "One redacted status artifact showing the risk, Jamie's escalation, the leadership decision, and the delivery result.",
+      "requirement_id": "requirement.oti.risk-status-reporting",
+      "classification": "visible-qualified",
+      "public_routes": [
+        "/work/technical-operations",
+        "/work/fair-rent-nyc"
+      ],
+      "wiki_evidence": [
+        "capability.technical-operations"
+      ],
+      "public_proof_ids": [
+        "technical-operations-operating-backbone",
+        "fair-rent-campaign-memory"
+      ],
+      "next_action": "Use an interview example with a concrete decision record and escalation path."
+    }
+  ]
+}

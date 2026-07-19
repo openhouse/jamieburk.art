@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-07-18T20:56:54Z",
-  "candidate_fingerprint": "8bbe808580d7d2f12a10939e352441a90dd8069d62d7770f4099cff3487f85bf",
+  "recorded_at": "2026-07-19T03:17:24Z",
+  "candidate_fingerprint": "5256341d44b4301aa59bbed49255f56157a140ccf5ef40dae678e8dd92114917",
   "rubric_fingerprint": "5dd84a3b8a91c8c1e2cccd2e281c7e59a3c2494ebaf6fe06ca250fdd2be09b11",
   "verification": {
     "repository_check": "pass",
@@ -16,7 +16,7 @@
     "repository_check": "npm run check:pre-evidence",
     "staging_preflight": "staging environment contract with npm run check:pre-evidence",
     "production_preflight": "production environment contract with npm run check:pre-evidence",
-    "docker_image": "jamieburk-art:knowledge-wiki-C@sha256:a6f5b0db08761c40fdaaa3da6110b798dd18f60d6c47f8bb8a1d4d34259a43fd",
+    "docker_image": "jamieburk-art:knowledge-wiki-C-employment@sha256:520cf76162b38083ea67d961f880e029bbf226cd0b759426a1f2246e8e6fd405",
     "docker_runtime_endpoints": 17,
     "browser_routes": 14,
     "browser_viewports": [
