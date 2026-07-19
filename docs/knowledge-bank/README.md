@@ -22,6 +22,10 @@ relations:
     target: index.knowledge-wiki.employment-context
     href: indexes/employment-context.md
     context: Present-tense opportunity research and public-only hiring evaluation.
+  - type: related_to
+    target: project.nyc-artist-coalition
+    href: projects/nyc-artist-coalition-2017.md
+    context: Governed civic-systems record strengthened by complete shared-folder accounting.
 ---
 
 # Knowledge Wiki
@@ -61,6 +65,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Employment context](indexes/employment-context.md): live official-source
   opportunities, stable requirement IDs, public-only reader evaluation, and
   private job-search boundaries.
+- [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
+  claims, collective-credit boundaries, and the governed shared-folder research
+  pass.
 - [Open questions](_generated/wanted-pages.md): deliberate missing knowledge,
   kept distinct from broken links and nonexistence.
 

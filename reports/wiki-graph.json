@@ -2,9 +2,22 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-19T00:29:28-04:00",
   "sourceCommit": "8d2a3547a2cfce2c1dfc69fd64deae98aa79a1f5",
-  "sourceFingerprint": "716079918f0338dc6f3c364231c440a08a8c80cbe4fae38e0c44d542781e0fa5",
+  "sourceFingerprint": "ddd9caecd3c914c8e73000423301dfd9124c9d65f2d0a9128731dfdc8e78163e",
   "rootId": "index.knowledge-wiki",
   "nodes": [
+    {
+      "id": "application.nycac.civic-product-operations",
+      "path": "docs/knowledge-bank/applications/nycac-civic-product-operations.md",
+      "title": "NYC Artist Coalition application brief",
+      "kind": "application",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Audience-ready translation of NYC Artist Coalition evidence for technical operations, product operations, implementation, and civic-technology roles.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-08-19"
+    },
     {
       "id": "asset.photo.digital-district.001",
       "path": "docs/knowledge-bank/assets/digital-district-photo.md",
@@ -45,6 +58,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "claim.nycac.advocacy-operating-playbook",
+      "path": "docs/knowledge-bank/claims/nycac-advocacy-operating-playbook.md",
+      "title": "Shared NYC Artist Coalition advocacy operating playbook",
+      "kind": "claim",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Jamie and Julia Fredenburg co-authored a working guide that made a listening-to-action civic operating method explicit and reusable.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "correction.callnyc-years.2026",
       "path": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
       "title": "CallNYC chronology correction",
@@ -82,6 +108,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-08-18"
+    },
+    {
+      "id": "evaluation.nycac.shared-folder-production.2026-07-19",
+      "path": "docs/knowledge-bank/evaluations/nycac-shared-folder-production-2026-07-19.md",
+      "title": "NYC Artist Coalition shared-folder production evals",
+      "kind": "evaluation",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Deterministic and human criteria for complete accounting, safe promotion, collective credit, application usefulness, and selective public projection.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-08-19"
     },
     {
       "id": "event.nycc.constituent-services-hackathon.2016",
@@ -273,6 +312,32 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "project.nyc-artist-coalition",
+      "path": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "title": "NYC Artist Coalition",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "A collectively credited civic participation and campaign system connecting cultural-space listening, public action, technical implementation, and government-facing advocacy.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.nycac.shared-folder.2026-07-19",
+      "path": "docs/knowledge-bank/research-runs/nycac-shared-folder-2026-07-19.md",
+      "title": "NYC Artist Coalition shared-folder archival production",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Complete accounting of the accessible shared-folder population, priority close reading, and selective promotion under public-safety and collective-credit constraints.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "source.civichall.hackathon-announcement.2016",
       "path": "docs/knowledge-bank/sources/civichall-hackathon-announcement-2016.md",
       "title": "Civic Hall hackathon announcement",
@@ -364,6 +429,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "source.nycac.shared-folder-census.2026",
+      "path": "docs/knowledge-bank/sources/nycac-protected-shared-folder-census-2026.md",
+      "title": "Protected NYC Artist Coalition shared-folder census",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe aggregate coverage and findings from an authenticated recursive Drive review whose raw source material remains outside the repository.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "source.nycc.councilstat-hackathon-post.2016",
       "path": "docs/knowledge-bank/sources/nycc-councilstat-hackathon-post-2016.md",
       "title": "New York City Council event-day CouncilStat post",
@@ -404,6 +482,30 @@
     }
   ],
   "edges": [
+    {
+      "from": "application.nycac.civic-product-operations",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "application.nycac.civic-product-operations",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "application.nycac.civic-product-operations",
+      "type": "related_to",
+      "to": "claim.nycac.advocacy-operating-playbook",
+      "source": "frontmatter",
+      "href": "../claims/nycac-advocacy-operating-playbook.md",
+      "context": null
+    },
     {
       "from": "asset.photo.digital-district.001",
       "type": "part_of",
@@ -480,6 +582,41 @@
       "context": null
     },
     {
+      "from": "claim.nycac.advocacy-operating-playbook",
+      "type": "evidence:private-support",
+      "to": "source.nycac.shared-folder-census.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "shared Julia Fredenburg and Jamie Burkart authorship",
+        "repeatable listening-to-action operating method"
+      ]
+    },
+    {
+      "from": "claim.nycac.advocacy-operating-playbook",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "claim.nycac.advocacy-operating-playbook",
+      "type": "related_to",
+      "to": "application.nycac.civic-product-operations",
+      "source": "frontmatter",
+      "href": "../applications/nycac-civic-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "claim.nycac.advocacy-operating-playbook",
+      "type": "uses_source",
+      "to": "source.nycac.shared-folder-census.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycac-protected-shared-folder-census-2026.md",
+      "context": null
+    },
+    {
       "from": "correction.callnyc-years.2026",
       "type": "projected_to",
       "to": "portfolio.work.callnyc",
@@ -517,6 +654,22 @@
       "to": "index.knowledge-wiki.pilot",
       "source": "frontmatter",
       "href": "../indexes/pilot.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.nycac.shared-folder-production.2026-07-19",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.nycac.shared-folder-production.2026-07-19",
+      "type": "related_to",
+      "to": "research.nycac.shared-folder.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/nycac-shared-folder-2026-07-19.md",
       "context": null
     },
     {
@@ -662,6 +815,14 @@
       "source": "frontmatter",
       "href": "indexes/pilot.md",
       "context": "Bounded first implementation of stable identity and typed relations."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "projects/nyc-artist-coalition-2017.md",
+      "context": "Governed civic-systems record strengthened by complete shared-folder accounting."
     },
     {
       "from": "method.source-backed-team-memory",
@@ -1012,6 +1173,86 @@
       "context": null
     },
     {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
+      "to": "research.nycac.shared-folder.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/nycac-shared-folder-2026-07-19.md",
+      "context": "Complete accounting of the accessible shared-folder population and a bounded priority close reading."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "application.nycac.civic-product-operations",
+      "source": "frontmatter",
+      "href": "../applications/nycac-civic-product-operations.md",
+      "context": "Hiring translation for technical operations, product operations, and implementation roles."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "claim.nycac.advocacy-operating-playbook",
+      "source": "frontmatter",
+      "href": "../claims/nycac-advocacy-operating-playbook.md",
+      "context": "Shared-authorship and repeatable-method claim held for selective projection."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "evaluation.nycac.shared-folder-production.2026-07-19",
+      "source": "frontmatter",
+      "href": "../evaluations/nycac-shared-folder-production-2026-07-19.md",
+      "context": "Deterministic coverage, leakage, credit, and projection criteria."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "uses_source",
+      "to": "source.nycac.shared-folder-census.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycac-protected-shared-folder-census-2026.md",
+      "context": "Protected source custody with public-safe aggregate coverage only."
+    },
+    {
+      "from": "research.nycac.shared-folder.2026-07-19",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "research.nycac.shared-folder.2026-07-19",
+      "type": "related_to",
+      "to": "application.nycac.civic-product-operations",
+      "source": "frontmatter",
+      "href": "../applications/nycac-civic-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "research.nycac.shared-folder.2026-07-19",
+      "type": "related_to",
+      "to": "claim.nycac.advocacy-operating-playbook",
+      "source": "frontmatter",
+      "href": "../claims/nycac-advocacy-operating-playbook.md",
+      "context": null
+    },
+    {
+      "from": "research.nycac.shared-folder.2026-07-19",
+      "type": "related_to",
+      "to": "evaluation.nycac.shared-folder-production.2026-07-19",
+      "source": "frontmatter",
+      "href": "../evaluations/nycac-shared-folder-production-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "research.nycac.shared-folder.2026-07-19",
+      "type": "uses_source",
+      "to": "source.nycac.shared-folder-census.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycac-protected-shared-folder-census-2026.md",
+      "context": null
+    },
+    {
       "from": "source.civichall.hackathon-announcement.2016",
       "type": "documents",
       "to": "event.nycc.constituent-services-hackathon.2016",
@@ -1066,6 +1307,22 @@
       "source": "frontmatter",
       "href": "../opportunities/permitflow-product-operations.md",
       "context": null
+    },
+    {
+      "from": "source.nycac.shared-folder-census.2026",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "Supports bounded role, method, implementation, and archival-coverage propositions."
+    },
+    {
+      "from": "source.nycac.shared-folder-census.2026",
+      "type": "supports",
+      "to": "claim.nycac.advocacy-operating-playbook",
+      "source": "frontmatter",
+      "href": "../claims/nycac-advocacy-operating-playbook.md",
+      "context": "Protected direct support for shared authorship and operating method."
     },
     {
       "from": "source.nycc.councilstat-hackathon-post.2016",
@@ -1634,29 +1891,74 @@
     },
     {
       "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
-      "from": null,
-      "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
-      "to": null,
-      "fragment": null,
-      "line": 153,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
-      "from": null,
+      "from": "project.nyc-artist-coalition",
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 71,
+      "line": 109,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
-      "from": null,
+      "from": "project.nyc-artist-coalition",
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-readings.md",
       "to": null,
       "fragment": null,
-      "line": 72,
+      "line": 110,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
+      "to": null,
+      "fragment": null,
+      "line": 191,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/research-runs/nycac-shared-folder-2026-07-19.md",
+      "to": "research.nycac.shared-folder.2026-07-19",
+      "fragment": null,
+      "line": 40,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/sources/nycac-protected-shared-folder-census-2026.md",
+      "to": "source.nycac.shared-folder-census.2026",
+      "fragment": null,
+      "line": 41,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/claims/nycac-advocacy-operating-playbook.md",
+      "to": "claim.nycac.advocacy-operating-playbook",
+      "fragment": null,
+      "line": 42,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/applications/nycac-civic-product-operations.md",
+      "to": "application.nycac.civic-product-operations",
+      "fragment": null,
+      "line": 43,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/evaluations/nycac-shared-folder-production-2026-07-19.md",
+      "to": "evaluation.nycac.shared-folder-production.2026-07-19",
+      "fragment": null,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -1773,7 +2075,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 102,
+      "line": 105,
       "kind": "link"
     },
     {
@@ -1782,7 +2084,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 103,
+      "line": 106,
       "kind": "link"
     },
     {
@@ -1791,7 +2093,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 106,
+      "line": 109,
       "kind": "link"
     },
     {
@@ -1800,7 +2102,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 110,
+      "line": 113,
       "kind": "link"
     },
     {
@@ -1809,7 +2111,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 117,
+      "line": 120,
       "kind": "link"
     },
     {
@@ -1818,7 +2120,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 122,
+      "line": 125,
       "kind": "link"
     },
     {
@@ -1827,7 +2129,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 128,
+      "line": 131,
       "kind": "link"
     },
     {
@@ -1836,7 +2138,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 133,
+      "line": 136,
       "kind": "link"
     },
     {
@@ -1845,7 +2147,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 139,
+      "line": 142,
       "kind": "link"
     },
     {
@@ -1854,7 +2156,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 141,
+      "line": 144,
       "kind": "link"
     },
     {
@@ -1863,7 +2165,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 147,
+      "line": 150,
       "kind": "link"
     },
     {
@@ -1872,7 +2174,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 149,
+      "line": 152,
       "kind": "link"
     },
     {
@@ -1881,7 +2183,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 157,
+      "line": 160,
       "kind": "link"
     },
     {
@@ -1890,7 +2192,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 163,
+      "line": 166,
       "kind": "link"
     },
     {
@@ -1899,7 +2201,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 165,
+      "line": 168,
       "kind": "link"
     },
     {
@@ -1908,7 +2210,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 171,
+      "line": 174,
       "kind": "link"
     },
     {
@@ -1917,7 +2219,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 177,
+      "line": 180,
       "kind": "link"
     },
     {
@@ -1926,7 +2228,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 183,
+      "line": 186,
       "kind": "link"
     },
     {
@@ -1935,7 +2237,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 189,
+      "line": 192,
       "kind": "link"
     },
     {
@@ -1944,7 +2246,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 195,
+      "line": 198,
       "kind": "link"
     },
     {
@@ -1953,7 +2255,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 201,
+      "line": 204,
       "kind": "link"
     },
     {
@@ -1962,7 +2264,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 203,
+      "line": 206,
       "kind": "link"
     },
     {
@@ -1971,7 +2273,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 209,
+      "line": 212,
       "kind": "link"
     },
     {
@@ -1980,7 +2282,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 214,
+      "line": 217,
       "kind": "link"
     },
     {
@@ -1989,7 +2291,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 216,
+      "line": 219,
       "kind": "link"
     },
     {
@@ -1998,7 +2300,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 223,
+      "line": 226,
       "kind": "link"
     },
     {
@@ -2007,7 +2309,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 225,
+      "line": 228,
       "kind": "link"
     },
     {
@@ -2016,7 +2318,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 231,
+      "line": 234,
       "kind": "link"
     },
     {
@@ -2025,7 +2327,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 233,
+      "line": 236,
       "kind": "link"
     },
     {
@@ -2034,7 +2336,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 238,
+      "line": 241,
       "kind": "link"
     },
     {
@@ -2043,7 +2345,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 240,
+      "line": 243,
       "kind": "link"
     },
     {
@@ -2052,7 +2354,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 246,
+      "line": 249,
       "kind": "link"
     },
     {
@@ -2061,7 +2363,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 248,
+      "line": 251,
       "kind": "link"
     },
     {
@@ -2070,7 +2372,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 255,
+      "line": 258,
       "kind": "link"
     },
     {
@@ -2079,7 +2381,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
-      "line": 257,
+      "line": 260,
       "kind": "link"
     },
     {
@@ -2088,7 +2390,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 263,
+      "line": 266,
       "kind": "link"
     },
     {
@@ -2097,7 +2399,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 266,
+      "line": 269,
       "kind": "link"
     },
     {
@@ -2115,7 +2417,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 271,
+      "line": 274,
       "kind": "link"
     },
     {
@@ -2124,7 +2426,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 272,
+      "line": 275,
       "kind": "link"
     },
     {
@@ -2175,10 +2477,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "to": "project.nyc-artist-coalition",
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 39,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -2187,7 +2498,16 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 45,
+      "line": 48,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/nycac-shared-folder-2026-07-19.md",
+      "from": "research.nycac.shared-folder.2026-07-19",
+      "toPath": "docs/knowledge-bank/data/nycac-shared-folder-census-2026-07-19.json",
+      "to": null,
+      "fragment": null,
+      "line": 55,
       "kind": "link"
     },
     {
@@ -2242,6 +2562,15 @@
       "to": null,
       "fragment": null,
       "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nycac-protected-shared-folder-census-2026.md",
+      "from": "source.nycac.shared-folder-census.2026",
+      "toPath": "docs/knowledge-bank/data/nycac-shared-folder-census-2026-07-19.json",
+      "to": null,
+      "fragment": null,
+      "line": 19,
       "kind": "link"
     },
     {

@@ -1,8 +1,9 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-19T04:13:00.038Z",
-  "baseUrl": "http://127.0.0.1:3040",
-  "publicSurfaceFingerprint": "7c620afe82cef406e52d47bd63f22d5acce7aaf13dfa55a46ad8fe43c55e1d43",
+  "checkedAt": "2026-07-19T06:37:51.421Z",
+  "baseUrl": "http://127.0.0.1:3042",
+  "publicSurfaceFingerprint": "c45cb4a726e890c1a29c6fe61a845c126a6c37d3a7cd9cc27f4ec6f2cc3751a9",
+  "publicSurfaceBindingNote": "Browser observations were captured before the production build normalized the generated Next.js type reference in apps/www/next-env.d.ts. Recomputing the capture fingerprint with that single development-to-production type-path substitution exactly produced this production-source fingerprint; no runtime source, route, style, asset, dependency, or observation row changed.",
   "publicSurfaceFileCount": 108,
   "publicSurfaceScope": [
     "apps/www/**",

@@ -120,10 +120,19 @@ export const nycacImplementationEvidence = {
           locator: "Repository commit history",
           confidence: "high",
           renderCitation: true
+        },
+        {
+          sourceId: "SRC-NYCAC-FAIRRENT-WEB-CHECKLIST-2019",
+          relationship: "private-support",
+          supports: ["Jamie-assigned campaign web tasks", "responsive presentation", "testimonial, coalition, press, and social-sharing modules"],
+          locator: "Protected Jamie task section",
+          confidence: "high",
+          renderCitation: false
         }
       ],
       boundaries: [
         "Use implementation and maintenance language rather than sole authorship of coalition policy or public copy.",
+        "The task checklist corroborates implementation detail while private links, data fields, collaborator notes, and media-selection records remain excluded.",
         "Keep campaign strategy, participation, and outcomes collectively credited."
       ],
       antiClaims: [

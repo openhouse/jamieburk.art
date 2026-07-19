@@ -282,9 +282,9 @@ export const proofClaims: ProofClaim[] = [
     shortWording:
       "Jamie built civic systems and coalition operations for NYC Artist Coalition",
     detailedPublicWording:
-      "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
+      "Jamie helped turn listening into coordinated public action: recurring meetings and priority ballots became testimony plans, run-of-show documents, call scripts, public forums, websites, and sustained follow-through across Cabaret Law repeal, Office of Nightlife, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "Approved resume language, public campaign surfaces, public reporting, retained Git histories, and a public-safe aggregate of the complete accessible NYC Artist Coalition shared-folder census and a 63-document priority close reading.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -301,7 +301,8 @@ export const proofClaims: ProofClaim[] = [
       "Private correspondence",
       "Membership records",
       "Unapproved collaborator names",
-      "Legal-review materials"
+      "Legal-review materials",
+      "Raw shared-folder records, exact private locators, participant data, and unapproved quotations"
     ],
     surfaces: ["resume", "technical-operations", "work-card", "case-study", "about"],
     relatedProjects: ["fair-rent-nyc"],
@@ -311,7 +312,7 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-19"
   },
   {
     id: "nyc-artist-coalition-participation-system",

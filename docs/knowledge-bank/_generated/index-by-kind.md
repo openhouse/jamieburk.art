@@ -3,7 +3,11 @@
 
 **Source commit:** `8d2a3547a2cfce2c1dfc69fd64deae98aa79a1f5`
 **Generation time:** 2026-07-19T00:29:28-04:00
-**Source fingerprint:** `716079918f0338dc6f3c364231c440a08a8c80cbe4fae38e0c44d542781e0fa5`
+**Source fingerprint:** `ddd9caecd3c914c8e73000423301dfd9124c9d65f2d0a9128731dfdc8e78163e`
+
+## application
+
+- [NYC Artist Coalition application brief](../applications/nycac-civic-product-operations.md) - `application.nycac.civic-product-operations`
 
 ## asset
 
@@ -16,6 +20,7 @@
 ## claim
 
 - [CallNYC was an independent CouncilStat follow-on](../claims/callnyc-independent-follow-on.md) - `claim.callnyc.independent-follow-on`
+- [Shared NYC Artist Coalition advocacy operating playbook](../claims/nycac-advocacy-operating-playbook.md) - `claim.nycac.advocacy-operating-playbook`
 
 ## correction
 
@@ -25,6 +30,7 @@
 
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
+- [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
 
 ## event
 
@@ -52,11 +58,16 @@
 ## project
 
 - [CallNYC](../projects/callnyc.md) - `project.callnyc`
+- [NYC Artist Coalition](../projects/nyc-artist-coalition-2017.md) - `project.nyc-artist-coalition`
 
 ## projection
 
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+
+## research-run
+
+- [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 
 ## source
 
@@ -67,6 +78,7 @@
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
+- [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`

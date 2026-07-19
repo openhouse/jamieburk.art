@@ -1,3 +1,38 @@
+---
+id: project.nyc-artist-coalition
+title: NYC Artist Coalition
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: moderate
+last_reviewed: 2026-07-19
+review_by: 2026-10-19
+canonical_path: docs/knowledge-bank/projects/nyc-artist-coalition-2017.md
+summary: A collectively credited civic participation and campaign system connecting cultural-space listening, public action, technical implementation, and government-facing advocacy.
+relations:
+  - type: informed_by
+    target: research.nycac.shared-folder.2026-07-19
+    href: ../research-runs/nycac-shared-folder-2026-07-19.md
+    context: Complete accounting of the accessible shared-folder population and a bounded priority close reading.
+  - type: uses_source
+    target: source.nycac.shared-folder-census.2026
+    href: ../sources/nycac-protected-shared-folder-census-2026.md
+    context: Protected source custody with public-safe aggregate coverage only.
+  - type: related_to
+    target: claim.nycac.advocacy-operating-playbook
+    href: ../claims/nycac-advocacy-operating-playbook.md
+    context: Shared-authorship and repeatable-method claim held for selective projection.
+  - type: related_to
+    target: application.nycac.civic-product-operations
+    href: ../applications/nycac-civic-product-operations.md
+    context: Hiring translation for technical operations, product operations, and implementation roles.
+  - type: related_to
+    target: evaluation.nycac.shared-folder-production.2026-07-19
+    href: ../evaluations/nycac-shared-folder-production-2026-07-19.md
+    context: Deterministic coverage, leakage, credit, and projection criteria.
+human_review: governed-open
+---
+
 # NYC Artist Coalition: 2017-2018 public record
 
 **Reviewed:** 2026-07-15
@@ -5,6 +40,43 @@
 **Public projection:** Six bounded claims selected for
 `/work/fair-rent-nyc`; additional mature claims remain held for future
 composition.
+
+## Shared-folder archival production
+
+On July 19, 2026, an authenticated Google Drive pass reconciled all 61 root
+items and recursively inventoried 2,405 uniquely identified items across 257
+captured folders. Every item received one primary disposition; no accessible
+folder failed to open. Exact identifiers, paths, filenames, owners, raw
+documents, excerpts, participant records, and media remain in protected custody
+outside this public repository.
+
+Sixty-three priority text documents totaling 351,532 characters were
+close-read across coalition operations, Cabaret Law repeal, Office of
+Nightlife, M.A.R.C.H., Commercial Rent Stabilization, CreateNYC, public-meeting
+production, and campaign implementation. This is complete population
+accounting, not a claim that all 2,405 items were close-read or cleared for
+publication.
+
+The pass strengthened four bounded findings:
+
+- Julia Fredenburg and Jamie co-authored a working guide that made a
+  listening-to-action method explicit and reusable.
+- A protected Office of Nightlife town-hall production record documents Jamie
+  and Olympia Kazi opening the program for the coalition within a larger shared
+  production plan; contemporary reporting independently identifies Jamie as a
+  coalition speaker and the coalition as convener.
+- A Jamie-assigned Fair Rent NYC checklist corroborates task-level campaign-web
+  implementation already supported by retained Git history.
+- Meeting and ballot artifacts show a recurring collective practice of agendas,
+  priority-setting, next-step assignment, practical safety work, and campaign
+  follow-through.
+
+See the [research run](../research-runs/nycac-shared-folder-2026-07-19.md),
+[protected source record](../sources/nycac-protected-shared-folder-census-2026.md),
+[playbook claim](../claims/nycac-advocacy-operating-playbook.md), and
+[application brief](../applications/nycac-civic-product-operations.md). The
+[evaluation record](../evaluations/nycac-shared-folder-production-2026-07-19.md)
+keeps the population, leakage, credit, projection, and human gates inspectable.
 
 ## Research result
 

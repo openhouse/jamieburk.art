@@ -267,12 +267,13 @@ export const nycacSourceExpansion = {
       project: "office-of-nightlife",
       internalClaim: "NYC Artist Coalition spearheaded an October 2017 town hall about what communities needed from the new Office of Nightlife, with Jamie among coalition speakers and multiple cultural organizations, Council members, and city officials participating.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "NYC Artist Coalition then spearheaded a public town hall about what communities needed from the new Office of Nightlife; Jamie was among the coalition speakers, alongside cultural organizations, Council members, and city officials.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
+      projections: [{ key: "case-study", text: "NYC Artist Coalition then spearheaded a public town hall about what communities needed from the new Office of Nightlife. Public reporting names Jamie among the coalition speakers; a protected run-of-show also documents Jamie and Olympia Kazi opening the program within a larger shared production plan.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
       evidence: [
         { sourceId: "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", relationship: "direct-support", supports: ["coalition-spearheaded town hall", "Jamie's speaking role", "institutional participation"], confidence: "high", renderCitation: true },
-        { sourceId: "SRC-NYCAC-GREENE-HILL-QA-2017-12-19", relationship: "corroborating", supports: ["community invitation", "dialogue with the new Office"], confidence: "high", renderCitation: true }
+        { sourceId: "SRC-NYCAC-GREENE-HILL-QA-2017-12-19", relationship: "corroborating", supports: ["community invitation", "dialogue with the new Office"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NYCAC-NIGHTLIFE-TOWN-HALL-RUN-OF-SHOW-2017", relationship: "private-support", supports: ["Jamie and Olympia Kazi in the coalition opening sequence", "Jamie's presentation and documentation tasks", "shared production plan"], locator: "Protected opening sequence and production notes", confidence: "high", renderCitation: false }
       ],
-      boundaries: ["Do not assign every production responsibility to Jamie or infer an audited attendance count."],
+      boundaries: ["The run-of-show is a working plan, not a complete credit roster or proof that every planned detail occurred.", "Do not assign every production responsibility to Jamie or infer an audited attendance count."],
       antiClaims: ["Jamie alone produced the town hall", "the town hall created the Office of Nightlife", "every attendee endorsed the coalition's full agenda"],
       researchInquiryIds: [],
       reviewedAt,
