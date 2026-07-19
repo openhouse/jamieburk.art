@@ -123,8 +123,28 @@ export function validateSuite(suite) {
 
   requireValue(suite.version === 4, "Composite suite version must be 4");
   requireValue(suite.suite_id === "knowledge-composite-integration", "Composite suite ID is incorrect");
+  requireValue(suite.baseline?.branch === "feature/knowledge-n", "Lineage baseline branch is not pinned");
+  requireValue(suite.baseline?.integration_branch === "feature/knowledge-wiki-B", "Integration branch is not pinned");
   requireValue(suite.baseline?.commit === "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe", "Baseline commit is not pinned");
   requireValue(suite.baseline?.record === "docs/evals/runs/2026-07-19-knowledge-composite-v4-baseline.md", "Version-four baseline record is not pinned");
+  let baselineRecord = "";
+  try {
+    baselineRecord = readFileSync(path.join(repoRoot, suite.baseline?.record ?? ""), "utf8");
+  } catch {
+    // The pinned record-path check above reports the canonical configuration error.
+  }
+  requireValue(
+    baselineRecord.includes(`Lineage baseline branch: \`${suite.baseline?.branch}\``),
+    "Baseline record must match the lineage baseline branch"
+  );
+  requireValue(
+    baselineRecord.includes(`Integration branch: \`${suite.baseline?.integration_branch}\``),
+    "Baseline record must match the integration branch"
+  );
+  requireValue(
+    baselineRecord.includes(`Lineage baseline commit: \`${suite.baseline?.commit}\``),
+    "Baseline record must match the lineage baseline commit"
+  );
   requireValue(suite.baseline?.wholesale_merges_or_cherry_picks === false, "Wholesale donor integration must remain false");
   requireValue(sameSet((suite.donors_inspected ?? []).map((item) => item.id), "ABCDEFGHIJKLMN".split("")), "Donor inventory must cover A-N exactly");
   for (const donor of suite.donors_inspected ?? []) {
@@ -557,10 +577,12 @@ export function readGitCandidateBinding(suite, candidateSha) {
   const binding = {
     headSha: "",
     commitExists: false,
+    baselineIsAncestor: false,
     candidateIsAncestor: false,
     changedPaths: [],
     historyChangedPaths: [],
     mergeCommits: [],
+    baselineChangedPaths: [],
     candidateChangedPaths: [],
     candidateFingerprint: "",
     error: ""
@@ -569,6 +591,18 @@ export function readGitCandidateBinding(suite, candidateSha) {
     binding.headSha = runGit(["rev-parse", "HEAD"]);
     runGit(["cat-file", "-e", `${candidateSha}^{commit}`]);
     binding.commitExists = true;
+    try {
+      runGit(["merge-base", "--is-ancestor", suite.baseline.commit, candidateSha]);
+      binding.baselineIsAncestor = true;
+    } catch {
+      binding.baselineIsAncestor = false;
+    }
+    if (binding.baselineIsAncestor) {
+      const baselineChanged = runGit([
+        "diff", "--name-only", `${suite.baseline.commit}..${candidateSha}`
+      ]);
+      binding.baselineChangedPaths = baselineChanged ? baselineChanged.split("\n") : [];
+    }
     const candidateChanged = runGit([
       "diff-tree", "--root", "--no-commit-id", "--name-only", "-r", candidateSha
     ]);
@@ -629,6 +663,7 @@ export function validateCandidateGitBinding(
   }
   if (binding.error) errors.push(`Unable to inspect candidate Git binding: ${binding.error}`);
   if (!binding.commitExists) errors.push("State candidateSha does not resolve to a Git commit");
+  if (!binding.baselineIsAncestor) errors.push("Lineage baseline commit must be an ancestor of the candidate");
   if (!binding.candidateIsAncestor) errors.push("State candidateSha must be an ancestor of the checked-out HEAD");
   if (!(binding.candidateChangedPaths ?? []).some((relativePath) => !expectedPostCandidatePaths.includes(relativePath))) {
     errors.push("State candidateSha must be the implementation-changing commit, not an evidence-only commit");
@@ -636,7 +671,7 @@ export function validateCandidateGitBinding(
   if (binding.candidateFingerprint !== expectedCandidateFingerprint) {
     errors.push("Candidate fingerprint must reproduce from the named Git commit tree");
   }
-  const unboundCandidatePaths = (binding.candidateChangedPaths ?? []).filter(
+  const unboundCandidatePaths = (binding.baselineChangedPaths ?? []).filter(
     (relativePath) =>
       !expectedPostCandidatePaths.includes(relativePath) &&
       !candidateFingerprintScope.includes(relativePath)

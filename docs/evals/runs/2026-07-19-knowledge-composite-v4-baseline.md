@@ -2,7 +2,9 @@
 
 Date: 2026-07-19
 
-Branch: `feature/knowledge-wiki-B`
+Lineage baseline branch: `feature/knowledge-n`
+
+Integration branch: `feature/knowledge-wiki-B`
 
 Lineage baseline commit: `10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe`
 

@@ -45,6 +45,15 @@ test("contract mutation catches missing donor decisions", () => {
   assert.match(validateSuite(suite).join("\n"), /Donor A needs a rejected decision/);
 });
 
+test("contract mutation catches baseline branch contradiction", () => {
+  const suite = clone(artifacts.suite);
+  suite.baseline.branch = "feature/not-the-lineage-baseline";
+  assert.match(
+    validateSuite(suite).join("\n"),
+    /Lineage baseline branch is not pinned|Baseline record must match the lineage baseline branch/
+  );
+});
+
 test("contract mutation catches an unbound composition render path", () => {
   const suite = clone(artifacts.suite);
   suite.candidate_fingerprint_scope = suite.candidate_fingerprint_scope.filter(
@@ -565,18 +574,22 @@ test("candidate binding rejects arbitrary SHAs and post-candidate implementation
   let errors = validateCandidateGitBinding(state, {
     headSha: "b".repeat(40),
     commitExists: false,
+    baselineIsAncestor: false,
     candidateIsAncestor: false,
     changedPaths: [],
     candidateChangedPaths: [],
     candidateFingerprint: ""
   }, "candidate").join("\n");
   assert.match(errors, /does not resolve to a Git commit/);
+  assert.match(errors, /Lineage baseline commit must be an ancestor/);
   assert.match(errors, /must be an ancestor/);
 
   errors = validateCandidateGitBinding(state, {
     headSha: "b".repeat(40),
     commitExists: true,
+    baselineIsAncestor: true,
     candidateIsAncestor: true,
+    baselineChangedPaths: ["scripts/lib/knowledge-composite-validation.mjs"],
     candidateChangedPaths: ["scripts/lib/knowledge-composite-validation.mjs"],
     candidateFingerprint: "candidate",
     changedPaths: [
@@ -589,7 +602,9 @@ test("candidate binding rejects arbitrary SHAs and post-candidate implementation
   errors = validateCandidateGitBinding(state, {
     headSha: "b".repeat(40),
     commitExists: true,
+    baselineIsAncestor: true,
     candidateIsAncestor: true,
+    baselineChangedPaths: ["scripts/lib/knowledge-composite-validation.mjs"],
     candidateChangedPaths: ["scripts/lib/knowledge-composite-validation.mjs"],
     candidateFingerprint: "candidate",
     changedPaths: [],
@@ -601,7 +616,9 @@ test("candidate binding rejects arbitrary SHAs and post-candidate implementation
   errors = validateCandidateGitBinding(state, {
     headSha: "b".repeat(40),
     commitExists: true,
+    baselineIsAncestor: true,
     candidateIsAncestor: true,
+    baselineChangedPaths: ["docs/evals/knowledge-composite-integration-state.json"],
     candidateChangedPaths: ["docs/evals/knowledge-composite-integration-state.json"],
     candidateFingerprint: "different",
     changedPaths: []
@@ -612,7 +629,9 @@ test("candidate binding rejects arbitrary SHAs and post-candidate implementation
   errors = validateCandidateGitBinding(state, {
     headSha: "b".repeat(40),
     commitExists: true,
+    baselineIsAncestor: true,
     candidateIsAncestor: true,
+    baselineChangedPaths: ["apps/www/src/data/knowledge-bank/records.ts"],
     candidateChangedPaths: ["apps/www/src/data/knowledge-bank/records.ts"],
     candidateFingerprint: "candidate",
     changedPaths: [],
