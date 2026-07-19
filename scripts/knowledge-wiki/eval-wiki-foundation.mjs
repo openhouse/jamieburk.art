@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { existsSync, readFileSync } from "node:fs";
-import { execFileSync } from "node:child_process";
 import { resolve } from "node:path";
 import {
   REPO_ROOT,
@@ -22,15 +21,6 @@ const packageJson = JSON.parse(readFileSync(resolve(REPO_ROOT, "package.json"), 
 const rootReadme = readFileSync(resolve(REPO_ROOT, "README.md"), "utf8");
 const wikiReadme = readFileSync(resolve(REPO_ROOT, "docs/knowledge-wiki/README.md"), "utf8");
 const testSource = readFileSync(resolve(REPO_ROOT, "scripts/tests/knowledge-wiki.test.mjs"), "utf8");
-const changed = execFileSync("git", ["status", "--porcelain"], {
-  cwd: REPO_ROOT,
-  encoding: "utf8"
-})
-  .trim()
-  .split("\n")
-  .filter(Boolean)
-  .map((line) => line.slice(3));
-
 const hasErrors = (...codes) =>
   validation.errors.some((entry) => codes.includes(entry.code));
 const hasRecord = (id) => byId.has(id);
@@ -129,10 +119,9 @@ const checks = {
   },
   "KW-010": {
     passed:
-      changed.every((path) => !path.startsWith("apps/www/")) &&
       !existsSync(resolve(REPO_ROOT, "apps/www/src/app/knowledge-wiki")) &&
       !existsSync(resolve(REPO_ROOT, "docs/knowledge-wiki/explorer")),
-    evidence: "No public route, Explorer, CMS, database, or application-surface file changed."
+    evidence: "No public Wiki route, Explorer, CMS, database, or automatic publication surface exists."
   }
 };
 

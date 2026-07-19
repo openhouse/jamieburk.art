@@ -62,6 +62,10 @@ npm run wiki:graph
 npm run wiki:report
 npm run wiki:tasks
 npm run wiki:query -- --help
+npm run wiki:opportunities
+npm run wiki:coverage
+npm run wiki:discovery
+npm run eval:portfolio:acceptance
 ```
 
 Generated graph and health artifacts live under

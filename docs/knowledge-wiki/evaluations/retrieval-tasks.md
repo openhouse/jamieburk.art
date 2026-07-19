@@ -37,6 +37,10 @@ after a named person performs the task against an exact commit.
 1. Find the project that demonstrates public-data translation.
 2. Find Jamie's strongest bounded Technical Operations proof.
 3. Find which evidence is relevant to the current OTI opportunity.
+4. Find OTI requirements that are visible and proven on the public site.
+5. Find the OTI structured-hiring requirement that remains a direct experience gap.
+6. Find the ACLU artifact that must be completed before applying.
+7. Find why enterprise SaaS migration is not treated as proven for Asana.
 
 ## Governance
 

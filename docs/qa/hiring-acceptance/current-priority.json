@@ -1,0 +1,40 @@
+{
+  "id": "current-priority-2026-07-18",
+  "readerIds": [
+    "reader.generic-recruiter",
+    "reader.generic-hiring-manager",
+    "reader.lisa-gelobter",
+    "reader.aileen-palmer",
+    "reader.herminia-ibarra",
+    "reader.claudio-fernandez-araoz",
+    "reader.amy-edmondson"
+  ],
+  "opportunityIds": [
+    "opportunity.nyc-oti.technical-operations-manager.782369",
+    "opportunity.aclu.product-manager-ii-discovery.8482872002",
+    "opportunity.benepass.product-operations-manager.7f963a7a",
+    "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+    "opportunity.asana.ai-implementation-manager-service-management.8027437",
+    "opportunity.permitflow.product-operations-manager.8a6e6066"
+  ],
+  "modes": [
+    "blind-first-pass",
+    "role-specific",
+    "named-public-context",
+    "one-year-fit"
+  ],
+  "panels": {
+    "development": [
+      "reader.generic-recruiter",
+      "reader.generic-hiring-manager",
+      "reader.lisa-gelobter",
+      "reader.aileen-palmer"
+    ],
+    "holdout": [
+      "reader.herminia-ibarra",
+      "reader.claudio-fernandez-araoz",
+      "reader.amy-edmondson"
+    ]
+  },
+  "privacyBoundary": "Public portfolio, public opportunity context, and public reader context only."
+}

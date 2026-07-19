@@ -24,6 +24,11 @@ smallest set of credible evidence.
 - [Technical Operations](../capabilities/technical-operations.md)
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md)
 - [NYC OTI Technical Operations opportunity](../opportunities/oti-technical-operations.md)
+- [ACLU Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)
+- [Benepass Product Operations Manager](../opportunities/benepass-product-operations.md)
+- [CodePath Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md)
+- [Asana AI Implementation Manager](../opportunities/asana-ai-implementation.md)
+- [PermitFlow Product Operations Manager](../opportunities/permitflow-product-operations.md)
 
 This is an edited retrieval path, not an automatic tag dump or application
 approval.

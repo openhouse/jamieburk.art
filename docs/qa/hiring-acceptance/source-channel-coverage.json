@@ -1,0 +1,16 @@
+{
+  "asOf": "2026-07-18",
+  "rule": "Access, normalization, and review do not grant publication permission.",
+  "channels": [
+    {"id":"official-public-web","coverageDate":"2026-07-18","accessState":"available","normalizationState":"bounded-records","identityResolutionState":"source-owned","publicUseBoundary":"Official public facts may be summarized with verification dates."},
+    {"id":"press","coverageDate":"2026-07-18","accessState":"partial","normalizationState":"source-registry","identityResolutionState":"article-by-article","publicUseBoundary":"Cite or paraphrase within rights and claim controls."},
+    {"id":"public-repositories","coverageDate":"2026-07-18","accessState":"partial","normalizationState":"project-specific","identityResolutionState":"commit-and-project-specific","publicUseBoundary":"Public code establishes surviving implementation, not complete authorship or adoption."},
+    {"id":"private-communications","coverageDate":"2026-07-18","accessState":"private-vault-only","normalizationState":"external-to-repository","identityResolutionState":"separate-private-process","publicUseBoundary":"Raw bodies, participants, and relationship graphs never enter this repository."},
+    {"id":"shared-drives","coverageDate":"2026-07-18","accessState":"partial-private-review","normalizationState":"public-safe-derived-records-only","identityResolutionState":"project-specific","publicUseBoundary":"Source discovery is not publication approval."},
+    {"id":"transcripts","coverageDate":"2026-07-18","accessState":"partial","normalizationState":"bounded-research-receipts","identityResolutionState":"speaker-specific-when-supported","publicUseBoundary":"Private transcripts remain protected; public transcripts may support bounded claims."},
+    {"id":"photographs","coverageDate":"2026-07-18","accessState":"large-private-archive","normalizationState":"rights-aware-selection-only","identityResolutionState":"incomplete","publicUseBoundary":"Evidence, consent, rights, and display are separate decisions."},
+    {"id":"project-code","coverageDate":"2026-07-18","accessState":"partial","normalizationState":"project-specific","identityResolutionState":"commit-specific","publicUseBoundary":"Code can support implementation claims but not social causality by itself."},
+    {"id":"public-data","coverageDate":"2026-07-18","accessState":"available","normalizationState":"project-specific","identityResolutionState":"authority-specific","publicUseBoundary":"Data lineage and current-service limits must remain visible."},
+    {"id":"collaborator-confirmation","coverageDate":"2026-07-18","accessState":"selective","normalizationState":"permission-specific","identityResolutionState":"named-only-with-approval","publicUseBoundary":"Private memory and public testimonial permission are different states."}
+  ]
+}

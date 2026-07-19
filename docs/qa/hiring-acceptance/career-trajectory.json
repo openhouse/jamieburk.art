@@ -1,0 +1,11 @@
+{
+  "asOf": "2026-07-18",
+  "rule": "Uneven density is diagnostic, not a defect to fill with unsupported claims.",
+  "phases": [
+    {"id":"participatory-media-and-public-practice","period":"2004-2011","proofRefs":["open-house-participatory-practice","waterways-participatory-practice"],"capabilities":["participatory design","media systems","public invitation"],"portfolioState":"selective-about-context"},
+    {"id":"community-platform-and-recurring-operations","period":"2012-2016","proofRefs":["wowlist-community-platform","sunday-dinner-196-participation-infrastructure","callnyc-civic-data-guidance"],"capabilities":["product building","onboarding","facilitation","public data"],"portfolioState":"strong-case-study-coverage"},
+    {"id":"coalition-and-civic-delivery","period":"2015-2023","proofRefs":["nyc-artist-coalition-civic-systems","fair-rent-campaign-memory","talks-not-raids-advocacy"],"capabilities":["stakeholder translation","campaign operations","public programs","policy implementation"],"portfolioState":"strong-with-collective-credit-guardrails"},
+    {"id":"physical-and-small-business-implementation","period":"2018-2026","proofRefs":["kc-town-hall-public-benefit-documentation","hje-modernization-stewardship","kc-spaces-fund-digital-infrastructure"],"capabilities":["implementation","workflow mapping","contractor coordination","digital operations"],"portfolioState":"strong-case-study-coverage"},
+    {"id":"knowledge-systems-and-responsible-ai","period":"2026","proofRefs":["source-backed-team-memory-method","ai-evals-professional-development","technical-operations-operating-backbone"],"capabilities":["documentation architecture","human review","evaluation design","technical operations"],"portfolioState":"current-practice-visible"}
+  ]
+}

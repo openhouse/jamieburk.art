@@ -1157,6 +1157,12 @@ export function queryWiki({ records = loadWiki(), mode, value } = {}) {
     "public-data-translation": [
       "project.callnyc",
       "capability.technical-operations"
+    ],
+    "oti-role-coverage": [
+      "opportunity.nyc-oti.technical-operations-manager.782369",
+      "capability.technical-operations",
+      "project.callnyc",
+      "method.source-backed-team-memory"
     ]
   };
 

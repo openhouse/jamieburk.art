@@ -14,7 +14,8 @@ const help = `Knowledge Wiki query (read-only)\n\n` +
   `  npm run wiki:query -- --question digital-district-protection --json\n\n` +
   `Bounded questions: callnyc-chronology, callnyc-time, ` +
   `callnyc-council-attribution, digital-district-support, ` +
-  `digital-district-protection, callnyc-correction, public-data-translation.\n` +
+  `digital-district-protection, callnyc-correction, public-data-translation, ` +
+  `oti-role-coverage.\n` +
   `The command reads authored Wiki records and never edits or promotes them.\n`;
 
 if (!args.length || args.includes("--help") || args.includes("-h")) {

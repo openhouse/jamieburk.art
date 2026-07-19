@@ -48,12 +48,12 @@ const technicalOperationsProjectionOverrides = new Map<string, string>([
 ]);
 
 const operationsMap = [
-  "Clarify requirements and map workflows for public-facing technical work.",
-  "Coordinate delivery from ambiguity toward launch.",
-  "Surface risks and open questions early so teams can act on them.",
-  "Maintain decision records and clear project-status reporting.",
-  "Prepare onboarding materials, operating documentation, and durable handoffs.",
-  "Improve working systems over time without overengineering."
+  "Clarify requirements and map public-facing workflows.",
+  "Coordinate delivery from ambiguity to launch.",
+  "Surface risk, dependencies, and open questions early.",
+  "Use decision records and status reports to make next decisions visible.",
+  "Prepare onboarding materials and operating documentation people can pick up.",
+  "Improve the system without overengineering it."
 ];
 
 const proofMap = [
