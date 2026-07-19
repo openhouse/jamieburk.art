@@ -2,15 +2,15 @@
 
 Date: 2026-07-19
 
-Branch: `feature/knowledge-wiki-B`
+Branch: `feature/wiki-B`
 
-Candidate commit: `aaea3666787ed65121bb8b67f7a57a0d238d8303`
+Candidate commit: `c71cf5f5fae1d9fbc10bccf23fcaed30fc13f261`
 
 Contract version: `4`
 
-Contract fingerprint: `29b8a0a185bcabb3f1125b9c86b12f401f12eb2972594958ed1b19867b362498`
+Contract fingerprint: `d2e10ae95018c9fdc463ea2b7af3b29c230e9d2e97cc7331b19aaa978bb45582`
 
-Candidate fingerprint: `b59c90dc4c55d5db60b1839bd05e6f76bd6bc7e62548479a79146e727c752995`
+Candidate fingerprint: `ab7127e96a39272b6f6859e2f3919ebab5b8d4a4fc7be1fc84e3d5bd93e0ba8a`
 
 ## Decision
 
@@ -19,6 +19,33 @@ Candidate fingerprint: `b59c90dc4c55d5db60b1839bd05e6f76bd6bc7e62548479a79146e72
 The composite integration is ready for pull-request review. It is not approved
 for job-application sharing, production deployment, or production indexing.
 Those decisions remain bound to explicit human gates.
+
+## Knowledge Wiki Family Closure
+
+This candidate closes the frozen `feature/knowledge-wiki-A` through
+`feature/knowledge-wiki-E` family without merging any donor wholesale. It uses
+B's authority split and human-gate model as the base, then selectively adapts:
+
+- A's canonical story units, evidence-state ladder, scene protocol, and visual
+  review queue;
+- C's Jamie-at-work framing and complete Let NYC Dance and Talks Not Raids
+  reader pages;
+- D's operational evidence semantics, maintenance distinctions, and review
+  packets; and
+- E's pressure-first map, cross-domain translation, and bounded decision
+  records.
+
+The five archive counts remain snapshot- and method-specific observations. The
+2,408-item B receipt governs current operations because inventory,
+classification, and disposition totals close exactly and bind to a protected
+manifest digest. That does not make the other counts false, establish complete
+content review, or grant publication rights.
+
+The family evaluator scores ten criteria at `100/100`. Its twelve adversarial
+mutations reject omitted donors and archive observations, missing reader paths,
+erased Jamie actions, continuity and causality inflation, incomplete or
+projected decision records, private locators, falsely resolved human gates, and
+candidate-fingerprint drift.
 
 ## Missing Pages And Source Return
 
@@ -125,6 +152,16 @@ detached checkouts of the unchanged repaired candidate. One concentrated on
 provenance and governance; the other completed the production build, staging
 runtime smoke, lifecycle operators, and focused evaluation suites.
 
+For family closure, a pre-holdout audit found four architecture and decision
+paths outside the candidate fingerprint. The contract scope was repaired and
+the candidate commit amended before any receipt was counted. Early harness
+attempts that failed schema validation, could not exercise temporary fixtures,
+did not complete, or misaligned rationales with criterion titles were
+discarded. Two fresh judges then reviewed separate clean detached checkouts of
+the unchanged candidate. One concentrated on schema, provenance, graph, and
+evaluator integrity; the other concentrated on hiring legibility, public
+safety, composition, and release boundaries.
+
 ## Independent Holdouts
 
 Neither counted judge authored the patch, inspected optimization history, or
@@ -151,6 +188,7 @@ criteria at `4`, and no critical regression or unresolved instrument defect.
 
 Run on Node 26:
 
+- complete `npm run check` after installing both exact-candidate holdouts;
 - NYCAC census closure and public-safety check;
 - NYCAC focused archive eval: `100/100`;
 - 37 composite-integration mutation tests;
@@ -159,6 +197,7 @@ Run on Node 26:
 - 20 Knowledge Wiki mutation tests and `100/100` Wiki evaluation;
 - 11 source-return tests and `100/100` missing-pages evaluation;
 - 17 editorial-depth tests and `100/100` editorial-depth evaluation;
+- 13 family-closure tests and `100/100` family-closure evaluation;
 - frozen 27-eval portfolio suite;
 - knowledge-bank and public-safety checks;
 - TypeScript, ESLint, and Next.js production build for 18 routes;
