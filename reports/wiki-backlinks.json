@@ -2,7 +2,7 @@
   "schema_version": 1,
   "generated": true,
   "generated_by": "npm run wiki:graph",
-  "graph_fingerprint": "6be77d5a2344cfb7f901370cc49f15061447c18abc80b73fbe6158f677c6ae5c",
+  "graph_fingerprint": "475c77cfaba70c464716727473df367c1ba3a66a5f88c2e82e48fbeed420b02e",
   "backlinks": {
     "capability.technical-operations": [
       {
@@ -72,6 +72,11 @@
       },
       {
         "from": "project.callnyc",
+        "type": "demonstrates",
+        "layer": "authored"
+      },
+      {
+        "from": "project.nyc-artist-coalition-shared-folder-2026-07-19",
         "type": "demonstrates",
         "layer": "authored"
       }
@@ -245,6 +250,13 @@
         "layer": "authored"
       }
     ],
+    "employment.nyc-artist-coalition-application-brief": [
+      {
+        "from": "index.employment-context",
+        "type": "links_to",
+        "layer": "authored"
+      }
+    ],
     "event.nycc.councilstat-hackathon-2016": [
       {
         "from": "index.knowledge-wiki",
@@ -263,6 +275,11 @@
       }
     ],
     "index.employment-context": [
+      {
+        "from": "employment.nyc-artist-coalition-application-brief",
+        "type": "related_to",
+        "layer": "authored"
+      },
       {
         "from": "index.knowledge-wiki",
         "type": "indexes",
@@ -690,6 +707,18 @@
       {
         "from": "opportunity.permitflow.product-operations-manager",
         "type": "related_to",
+        "layer": "authored"
+      }
+    ],
+    "project.nyc-artist-coalition-shared-folder-2026-07-19": [
+      {
+        "from": "employment.nyc-artist-coalition-application-brief",
+        "type": "informed_by",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
         "layer": "authored"
       }
     ],

@@ -14,6 +14,14 @@ import {
   nycacResearchTasks,
 } from "./nycac-research-2026-07-14.ts";
 import {
+  nycacSharedFolderCaptures,
+  nycacSharedFolderClaims,
+  nycacSharedFolderInquiries,
+  nycacSharedFolderObservations,
+  nycacSharedFolderResearchTasks,
+  nycacSharedFolderSources,
+} from "./nycac-shared-folder-production.ts";
+import {
   campaignPressCaptures,
   campaignPressClaims,
   campaignPressInquiries,
@@ -138,6 +146,7 @@ const knowledgeBankInput = {
   captures: [
     ...developmentCaptures,
     ...nycacResearchCaptures,
+    ...nycacSharedFolderCaptures,
     ...campaignPressCaptures,
     ...kcTownHallFundingCaptures,
     ...kcTownHallPhaseOneCaptures,
@@ -157,6 +166,7 @@ const knowledgeBankInput = {
   sources: [
     ...developmentSources,
     ...nycacResearchSources,
+    ...nycacSharedFolderSources,
     ...campaignPressSources,
     ...kcTownHallFundingSources,
     ...kcTownHallPhaseOneSources,
@@ -371,6 +381,7 @@ const knowledgeBankInput = {
   observations: [
     ...developmentObservations,
     ...nycacResearchObservations,
+    ...nycacSharedFolderObservations,
     ...campaignPressObservations,
     ...kcTownHallFundingObservations,
     ...kcTownHallPhaseOneObservations,
@@ -390,6 +401,7 @@ const knowledgeBankInput = {
   claims: [
     ...developmentClaims,
     ...nycacResearchClaims,
+    ...nycacSharedFolderClaims,
     ...campaignPressClaims,
     ...kcTownHallFundingClaims,
     ...kcTownHallPhaseOneClaims,
@@ -720,6 +732,7 @@ const knowledgeBankInput = {
   researchTasks: [
     ...developmentResearchTasks,
     ...nycacResearchTasks,
+    ...nycacSharedFolderResearchTasks,
     ...campaignPressResearchTasks,
     ...kcTownHallPhaseOneResearchTasks,
     ...teamsArchiveResearchTasks,
@@ -767,6 +780,7 @@ const knowledgeBankInput = {
         "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
       protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001",
     },
+    ...nycacSharedFolderInquiries,
     ...campaignPressInquiries,
     ...kcTownHallFundingInquiries,
     ...kcTownHallPhaseOneInquiries,
@@ -932,6 +946,7 @@ const knowledgeBankInput = {
         "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
         "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
         "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+        "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18",
         "SRC-NYCAC-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27",
         "SRC-NYCAC-FINKELPEARL-BUDGET-HEARING-2017-05-19",
         "SRC-NYCAC-CREATENYC-FINAL-PLAN-2017-07",
@@ -1006,6 +1021,14 @@ const knowledgeBankInput = {
           ],
         },
         {
+          id: "machine-readable-civic-design",
+          claimId: "CLM-NYCAC-MACHINE-READABLE-CIVIC-DESIGN",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18",
+          ],
+        },
+        {
           id: "civic-intermediary-value",
           claimId: "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
           projection: "case-study",
@@ -1016,6 +1039,15 @@ const knowledgeBankInput = {
             "SRC-NYCAC-CREATENYC-APPENDIX-2017",
             "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017",
             "SRC-NYCAC-ESPINAL-REPEAL-LETTER-2017-04-18",
+            "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
+          ],
+        },
+        {
+          id: "participation-to-action-system",
+          claimId: "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYCAC-CREATENYC-APPENDIX-2017",
             "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
           ],
         },
@@ -1199,7 +1231,9 @@ const knowledgeBankInput = {
     {
       id: "technical-operations",
       surface: "/work/technical-operations",
-      sourceOrder: [],
+      sourceOrder: [
+        "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18",
+      ],
       occurrences: [
         {
           id: "portable-shared-drive-handoffs",
@@ -1210,6 +1244,14 @@ const knowledgeBankInput = {
           id: "archive-overview-workflow",
           claimId: "CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW",
           projection: "technical-operations",
+        },
+        {
+          id: "machine-readable-civic-design",
+          claimId: "CLM-NYCAC-MACHINE-READABLE-CIVIC-DESIGN",
+          projection: "technical-operations",
+          sourceIds: [
+            "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18",
+          ],
         },
       ],
     },

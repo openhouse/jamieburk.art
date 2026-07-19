@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0.0",
+  "corpusId": "nycac-shared-folder-2026-07-19",
+  "snapshotAt": "2026-07-19T04:05:28.743Z",
+  "scope": "Every item reachable beneath the authenticated NYC Artist Coalition shared folder at snapshot time. Deleted items, revision histories, resolved comments, no-longer-shared items, and external systems referenced by files are outside this pass.",
+  "coverage": {
+    "population_total": 2078,
+    "inventoried_total": 2078,
+    "classified_total": 2078,
+    "content_reviewed_total": 36,
+    "rights_reviewed_total": 0,
+    "dispositioned_total": 2078,
+    "public_source_total": 0,
+    "protected_total": 2078,
+    "claim_linked_total": 73,
+    "projection_selected_total": 2
+  },
+  "population": {
+    "topLevelTotal": 61,
+    "topLevelFolderTotal": 47,
+    "topLevelLooseFileTotal": 14,
+    "folderTotal": 253,
+    "nonFolderTotal": 1825,
+    "traversalFolderTotal": 253,
+    "traversalExceptionTotal": 20,
+    "emptyFolderTotal": 18,
+    "recoveredFolderTotal": 2
+  },
+  "formatCounts": {
+    "audio": 38,
+    "binary": 39,
+    "folder": 253,
+    "google-doc": 285,
+    "google-slides": 1,
+    "html": 5,
+    "illustrator": 10,
+    "image": 877,
+    "other": 65,
+    "pdf": 83,
+    "photoshop": 310,
+    "text": 38,
+    "video": 50,
+    "word": 24
+  },
+  "dispositionCounts": {
+    "duplicate-or-derivative": 106,
+    "pending-rights-consent-attribution-or-jamie-review": 1221,
+    "protected-metadata-only": 253,
+    "public-safe-summary-of-protected-source": 409,
+    "unreadable-or-unsupported-format": 89
+  },
+  "closeReading": {
+    "recordTotal": 36,
+    "characterTotal": 183871,
+    "errorTotal": 0,
+    "priorityClusters": [
+      "coalition formation and facilitation",
+      "Cabaret Law repeal and Let NYC Dance",
+      "MARCH and Talks Not Raids",
+      "Office of Nightlife and town-hall production",
+      "Fair Rent NYC and Commercial Rent Stabilization",
+      "civic data and web implementation"
+    ]
+  },
+  "method": {
+    "browser": "authenticated in-app browser",
+    "accessMode": "read-only",
+    "rootCountReconciled": true,
+    "recursiveQueueClosed": true,
+    "wholeFolderDownloadAttempt": "failed during Drive zip preparation",
+    "downloadFailureWasCoverageGap": false,
+    "unknownSensitivityDefault": "protected",
+    "perItemPrimaryDispositionRequired": true
+  },
+  "privateManifest": {
+    "sha256": "250de23a17cf990de9f87d5374bb3325265ed7321a5cfe9eb4b38aec71bf62ba",
+    "exactLocatorPublished": false,
+    "rawContentInGit": false,
+    "containsExactIdentifiers": true,
+    "containsCloseReadingText": true
+  },
+  "limitations": [
+    "Access does not establish publication permission, ownership, authorship, collaborator adoption, or individual causality.",
+    "Drive ownership and modification displays are not conclusive creator evidence.",
+    "The census is complete for the defined accessible snapshot population, not for deleted, unshared, revision-history, comment, or external-reference populations.",
+    "Only 36 priority text records received content close reading; 100 percent coverage means accounting and disposition, not publication or full-content review.",
+    "Visual, audio, video, and design assets remain held pending rights, consent, attribution, and editorial review.",
+    "Internal campaign calculations and causal interpretations require official or independent corroboration before public use."
+  ]
+}

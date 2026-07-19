@@ -39,6 +39,9 @@ signal that every dossier has completed semantic migration.
 
 ## Civic and neighborhood systems
 
+- [NYC Artist Coalition shared-folder archival production](../projects/nyc-artist-coalition-shared-folder-2026-07-19.md):
+  complete accessible-population accounting, protected close reading, selected
+  claims, held leads, and rights-aware custody.
 - [NYC Artist Coalition Facebook events](../projects/nyc-artist-coalition-facebook-events.md)
   and [Page posts](../projects/nycartc-facebook-post-population-2026-07-14.md):
   convening and campaign records with collective-credit boundaries.

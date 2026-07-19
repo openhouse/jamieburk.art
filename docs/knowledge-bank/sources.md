@@ -347,3 +347,22 @@ Commissioner-letter invitation, and shared-note workflow. They do not support
 historical account permissions, a poll denominator, complete coalition
 formation, sole authorship, or policy causality. See
 `docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript.md`.
+
+## NYC Artist Coalition Shared-Folder Archival Production
+
+The July 19 authenticated pass accounts for all 2,078 records in the defined
+accessible snapshot: 253 folders and 1,825 non-folder records. Every item
+received inventory, classification, and one primary disposition. Thirty-six
+priority Google Docs received close reading; none of their raw text entered
+Git.
+
+Six normalized source records preserve a protected census pointer, four
+public-safe summaries of protected working-record clusters, and the official
+March 18, 2019, Council Small Business hearing transcript. The exact item-level
+manifest remains outside Git and is bound to the public aggregate by SHA-256.
+
+Access does not establish publication permission, authorship, ownership,
+adoption, or individual causality. Exact Drive identifiers, paths, owner
+displays, close-reading text, participant information, and unapproved media
+remain protected. See
+`docs/knowledge-bank/projects/nyc-artist-coalition-shared-folder-2026-07-19.md`.

@@ -47,6 +47,14 @@ website selection. It is a recommendation, not publication approval.
   outcome that followed the campaign and hearing, with causal attribution held.
 - `CLM-NYCAC-MARCH-REPLACED-BY-CURE`: selected as later institutional context,
   not as an accomplishment attributed to Jamie or one campaign.
+- `CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM`: selected as direct operating-
+  design evidence. Preserve Jamie's co-writer attribution, the sequence from
+  recurring meetings to multi-channel public action, and the boundary against
+  sole design, universal adoption, or individual policy causality.
+- `CLM-NYCAC-MACHINE-READABLE-CIVIC-DESIGN`: selected as direct official-
+  record evidence that Jamie translated a fragmented compliance journey into
+  machine-readable civic-data requirements. Keep Council adoption, dataset
+  publication, tool delivery, and legislative authorship explicitly unclaimed.
 
 ## Selected in the KC Town Hall Case Study
 
@@ -199,6 +207,18 @@ website selection. It is a recommendation, not publication approval.
   website argument.
 
 ## Research Before Promotion
+
+- `CLM-NYCAC-TOWN-HALL-PRODUCTION-ROLE-CANDIDATE`: recover public event records
+  and collaborator-aware credits before activating a detailed individual
+  production role.
+- `CLM-NYCAC-FAIRRENT-WEB-IMPLEMENTATION-CANDIDATE`: recover repository and
+  deployment lineage before turning attributed checklist tasks into a complete
+  public implementation credit.
+- Reproduce internal MARCH calculations against source data and official
+  records before promoting any protected metric.
+- Route visual, audio, video, and design candidates through rights, consent,
+  attribution, sensitivity, caption, and editorial review; access alone is not
+  approval.
 
 - `CLM-CALLSCRIPT-JAMIE-ESTABLISHMENT-ROLE`: preserve Jamie's first-hand
   account that he established Call Script and facilitated the participatory

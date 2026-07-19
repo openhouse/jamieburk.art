@@ -1,10 +1,13 @@
 # NYC Artist Coalition Research
 
 Status: ten public sources ingested on July 14, 2026, with five additional
-institutional-use sources integrated on July 15. Founding-member,
+institutional-use sources integrated on July 15 and a complete accessible
+shared-folder census integrated on July 19. Founding-member,
 Cabaret-campaign contribution, policy-communications, Office accountability,
 Talks Not Raids testimony, MARCH-transparency law, and later MARCH replacement
-claims are developed. The new institutional-value claim distinguishes DCLA,
+claims are developed. The shared-folder pass adds selected participation-to-
+action and machine-readable civic-design claims while holding incomplete role,
+metric, and rights questions. The institutional-value claim distinguishes DCLA,
 Council, Espinal, and coalition capacities without inferring private motive or
 dependence. Individual causality for Office creation, legislation, or MARCH
 replacement remains held.
@@ -14,6 +17,11 @@ preserves all 45 placements from four recovered campaign Press sections as 44
 unique article identities. The corpus is complete for those four inspected
 captures and remains a research field, not a claim that every article centers
 Jamie or proves an individual accomplishment.
+
+The companion [shared-folder archival-production dossier](./nyc-artist-coalition-shared-folder-2026-07-19.md)
+accounts for all 2,078 records in the accessible snapshot. It publishes only
+aggregate method, bounded findings, and claim decisions; exact Drive records
+and close-reading text remain in protected custody.
 
 ## What Matured
 
@@ -65,6 +73,30 @@ These are collective artifacts. The sources do not assign Jamie individual
 authorship of every map, analysis, recommendation, event component, or line of
 copy. Jamie's separate approved web-infrastructure claim remains grounded in
 public project surfaces, public-safe project history, and Jamie confirmation.
+
+### Participation-to-action system
+
+A protected 2017 working guide identifies Jamie as a co-writer and documents a
+repeatable collective method connecting recurring meetings and issue
+prioritization to shared letters, pocket-size calls to action, official
+meetings, public events, phone calls, and hearings. Public City and Council
+records corroborate several of those channels.
+
+This supports a direct operating-design contribution. It does not establish
+that Jamie alone designed or facilitated the coalition, that every campaign
+used one fixed process, or that the guide caused public outcomes.
+
+### Machine-readable civic design
+
+The official March 18, 2019, Small Business hearing transcript records Jamie
+proposing that the Council expand Intros 1466 and 1467 with machine-readable
+Open Data requirements for permits, certificates, cost, timing, requirements,
+and agency pathways. He framed the records as infrastructure for tools helping
+small businesses navigate legality, safety, and compliance.
+
+This supports direct requirements and civic-product wording. It does not show
+that the Council adopted the proposal, that the datasets or tools were built,
+or that Jamie authored or sponsored the bills.
 
 ### Reciprocal institutional value
 
@@ -183,6 +215,8 @@ nightlife enforcement ended.
 15. [New York City Council, Committee on Consumer Affairs hearing transcript
     on the Cabaret Law, June 19,
     2017](https://legistar.council.nyc.gov/View.ashx?GUID=41F1062B-FC32-4A12-846E-65CEB3BB052C&ID=5316935&M=F).
+16. [New York City Council, Committee on Small Business hearing transcript,
+    March 18, 2019, printed pages 142-144](https://legistar.council.nyc.gov/View.ashx?M=F&ID=7230194&GUID=A217E78A-034D-4EE7-ACF4-F4A8DC1F9B16).
 
 The Greene Hill Food Co-op Q&A remains an additional existing source in the
 project graph and participates in the selected Office-accountability claim.

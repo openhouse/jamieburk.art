@@ -56,6 +56,13 @@ Across the strongest records, a repeatable pattern is visible:
 - [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation-manager-service-management-8027437.md)
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations-manager.md)
 
+## Application Proof Briefs
+
+- [NYC Artist Coalition](nyc-artist-coalition-application-brief.md): approved
+  participation-system and machine-readable civic-design evidence translated
+  for technical program management, product operations, implementation, and
+  civic-technology applications.
+
 ## Boundaries
 
 - Official employer pages are canonical for live role facts.

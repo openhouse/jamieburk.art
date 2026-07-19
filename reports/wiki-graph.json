@@ -129,6 +129,19 @@
       "sensitivity": "low"
     },
     {
+      "id": "employment.nyc-artist-coalition-application-brief",
+      "title": "NYC Artist Coalition application brief",
+      "kind": "note",
+      "layer": "authored",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "path": "docs/knowledge-bank/employment/nyc-artist-coalition-application-brief.md",
+      "aliases": [],
+      "last_reviewed": "2026-07-19",
+      "review_by": "2026-10-19"
+    },
+    {
       "id": "event.nycc.councilstat-hackathon-2016",
       "title": "New York City Council CouncilStat hackathon",
       "kind": "event",
@@ -1527,6 +1540,19 @@
       "review_by": "2027-01-18"
     },
     {
+      "id": "project.nyc-artist-coalition-shared-folder-2026-07-19",
+      "title": "NYC Artist Coalition shared-folder archival production",
+      "kind": "project",
+      "layer": "authored",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "path": "docs/knowledge-bank/projects/nyc-artist-coalition-shared-folder-2026-07-19.md",
+      "aliases": [],
+      "last_reviewed": "2026-07-19",
+      "review_by": "2026-10-19"
+    },
+    {
       "id": "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",
       "title": "Research task RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",
       "kind": "research-task",
@@ -1925,6 +1951,18 @@
       "layer": "canonical-adapter"
     },
     {
+      "from": "employment.nyc-artist-coalition-application-brief",
+      "type": "informed_by",
+      "to": "project.nyc-artist-coalition-shared-folder-2026-07-19",
+      "layer": "authored"
+    },
+    {
+      "from": "employment.nyc-artist-coalition-application-brief",
+      "type": "related_to",
+      "to": "index.employment-context",
+      "layer": "authored"
+    },
+    {
       "from": "event.nycc.councilstat-hackathon-2016",
       "type": "corrected_by",
       "to": "COR-CALLNYC-EVENT-TIME-2026",
@@ -2071,6 +2109,12 @@
     {
       "from": "index.employment-context",
       "type": "links_to",
+      "to": "employment.nyc-artist-coalition-application-brief",
+      "layer": "authored"
+    },
+    {
+      "from": "index.employment-context",
+      "type": "links_to",
       "to": "note.employment-career-trajectory",
       "layer": "authored"
     },
@@ -2132,6 +2176,12 @@
       "from": "index.knowledge-wiki-project-dossiers",
       "type": "links_to",
       "to": "project.callnyc",
+      "layer": "authored"
+    },
+    {
+      "from": "index.knowledge-wiki-project-dossiers",
+      "type": "links_to",
+      "to": "project.nyc-artist-coalition-shared-folder-2026-07-19",
       "layer": "authored"
     },
     {
@@ -2645,6 +2695,12 @@
       "layer": "authored"
     },
     {
+      "from": "project.nyc-artist-coalition-shared-folder-2026-07-19",
+      "type": "demonstrates",
+      "to": "capability.technical-operations",
+      "layer": "authored"
+    },
+    {
       "from": "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",
       "type": "investigates_claim",
       "to": "CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS",
@@ -2663,5 +2719,5 @@
       "layer": "canonical-adapter"
     }
   ],
-  "fingerprint": "6be77d5a2344cfb7f901370cc49f15061447c18abc80b73fbe6158f677c6ae5c"
+  "fingerprint": "475c77cfaba70c464716727473df367c1ba3a66a5f88c2e82e48fbeed420b02e"
 }

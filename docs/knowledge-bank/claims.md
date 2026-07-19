@@ -514,6 +514,36 @@ claim beyond the wording and guardrails here.
   not the receiving organization's identity, legal terms, assumption of City
   funding or obligations, or a causal link to the later municipal record.
 
+## nycac-participation-to-action-system - Participation-to-action operating guide
+
+**Status:** Ready with collective-credit boundary
+**Support level:** Strong
+**Evidence class:** Protected co-writer attribution / public City and Council corroboration
+**Public wording:** Jamie co-wrote a 2017 NYC Artist Coalition guide documenting how recurring meetings and issue prioritization could become shared letters, pocket-size calls to action, meetings with officials, public events, phone calls, and hearings.
+**Detailed public-safe wording:** The guide makes a repeatable collective participation system legible. Public City and Council records corroborate several of the documented action channels.
+**Where to project:** Fair Rent NYC / NYC Artist Coalition case study, application brief.
+**Why it matters:** Shows Jamie turning emerging collective knowledge into a usable operating method across participation, communication, and government interfaces.
+**Guardrail:** Describe Jamie as a co-writer and participant in collective work. Do not absorb coalition members, partner groups, public officials, or governmental decisions into his role.
+**Do not say:** Jamie alone designed or facilitated NYC Artist Coalition; every campaign used one fixed process; the guide caused legislation or institutional change.
+**Protected boundaries:** Raw working text, private notes, participants, exact Drive locators, and draft history stay outside Git.
+**Review owner:** Jamie / collaborator-aware archival review
+**Last reviewed:** 2026-07-19
+
+## nycac-machine-readable-civic-design - Machine-readable compliance proposal
+
+**Status:** Ready with outcome boundary
+**Support level:** Strong
+**Evidence class:** Official New York City Council hearing transcript / protected preparation context
+**Public wording:** In 2019 City Council testimony, Jamie translated a fragmented compliance journey into a machine-readable Open Data requirement for tools helping small businesses navigate permits, certificates, cost, timing, and agency processes.
+**Detailed public-safe wording:** Jamie asked the Council to expand Intros 1466 and 1467 with records for permits, certificates, requirements, cost, timing, and agency pathways so City and public developers could build small-business compliance tools.
+**Where to project:** Technical Operations, Fair Rent NYC / NYC Artist Coalition case study, application brief.
+**Why it matters:** Shows requirements discovery, service-journey analysis, public-data product thinking, and translation between operators and government.
+**Guardrail:** The evidence establishes a public proposal, not adoption, delivery, or policy impact.
+**Do not say:** Jamie authored or sponsored the bills; the Council adopted his recommendations; Jamie built the City datasets or compliance tools.
+**Protected boundaries:** Draft testimony and preparation records remain protected; use the official transcript for public citation.
+**Review owner:** Jamie / official-record review
+**Last reviewed:** 2026-07-19
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

@@ -4,6 +4,7 @@ import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { Claim, References } from "@/components/citations";
 import { getClaimProjection } from "@/data/knowledge-bank/public";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
@@ -118,6 +119,16 @@ export default function TechnicalOperationsPage() {
         <p className="mt-5 leading-7 text-jb-ink/72">
           {sharedDriveHandoff} {archiveOverviewWorkflow}
         </p>
+        <div className="mt-5 leading-7 text-jb-ink/72">
+          <Claim
+            as="p"
+            claimId="CLM-NYCAC-MACHINE-READABLE-CIVIC-DESIGN"
+            occurrenceId="machine-readable-civic-design"
+            pageId="technical-operations"
+            projection="technical-operations"
+            surface="/work/technical-operations"
+          />
+        </div>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
         <JBCard>
@@ -200,6 +211,7 @@ export default function TechnicalOperationsPage() {
           keeping delivery moving.
         </p>
       </section>
+      <References pageId="technical-operations" />
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />

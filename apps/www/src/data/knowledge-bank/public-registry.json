@@ -346,6 +346,26 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18",
+      "title": "Committee on Small Business hearing transcript",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-03-18",
+      "accessedAt": "2026-07-19",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7230194&GUID=A217E78A-034D-4EE7-ACF4-F4A8DC1F9B16",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Committee on Small Business hearing transcript, March 18, 2019, printed pages 142-144.",
+      "publicNote": "The official transcript records Jamie's testimony; it does not establish adoption or implementation of his recommendations.",
+      "doesNotEstablish": [
+        "that the Council adopted the recommendations",
+        "that the proposed datasets or tools were built",
+        "individual authorship of every coalition policy position",
+        "causality for later small-business legislation"
+      ]
+    },
+    {
       "id": "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
       "title": "Central City Economic Development Sales Tax Round Two proposals",
       "organization": "City of Kansas City, Missouri",
@@ -1965,6 +1985,88 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A 2017 organizing guide co-written by Jamie documents a repeatable participation-to-action system: recurring meetings surfaced and prioritized issues; shared letters and pocket-size calls to action translated them into concrete asks; meetings with officials, public events, calls, and hearings carried those asks into government.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "coalition town hall",
+            "multi-part public policy agenda"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
+          "relationship": "corroborating",
+          "supports": [
+            "coalition-affiliated Council testimony",
+            "Council receipt of witness stories and testimony"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The guide documents and teaches a collective system; it does not make Jamie the sole designer, facilitator, author, or decision-maker for every component.",
+        "Public records corroborate use of several channels but do not establish universal adoption, attendance, conversion, or individual policy causality."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-MACHINE-READABLE-CIVIC-DESIGN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In March 2019 Council testimony, Jamie translated cultural-space operators' compliance problems into a civic data product requirement: machine-readable Open Data records for permit and certificate cost, timing, requirements, and agency pathways that could support tools for small businesses navigating city government.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "In 2019 City Council testimony, Jamie translated a fragmented compliance journey into a machine-readable Open Data requirement for tools helping small businesses navigate permits, certificates, cost, timing, and agency processes.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's testimony and coalition role",
+            "the proposed machine-readable Open Data requirement",
+            "the proposed compliance fields and tool purpose"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The evidence establishes Jamie's public proposal, not Council adoption, dataset publication, tool delivery, or policy impact.",
+        "Intros 1466 and 1467 were separate Council bills and the transcript does not make Jamie their sponsor or author."
+      ]
+    },
+    {
       "id": "CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -3576,6 +3678,7 @@
         "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
         "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
         "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+        "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18",
         "SRC-NYCAC-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27",
         "SRC-NYCAC-FINKELPEARL-BUDGET-HEARING-2017-05-19",
         "SRC-NYCAC-CREATENYC-FINAL-PLAN-2017-07",
@@ -3650,6 +3753,14 @@
           ]
         },
         {
+          "id": "machine-readable-civic-design",
+          "claimId": "CLM-NYCAC-MACHINE-READABLE-CIVIC-DESIGN",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18"
+          ]
+        },
+        {
           "id": "civic-intermediary-value",
           "claimId": "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
           "projection": "case-study",
@@ -3660,6 +3771,15 @@
             "SRC-NYCAC-CREATENYC-APPENDIX-2017",
             "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017",
             "SRC-NYCAC-ESPINAL-REPEAL-LETTER-2017-04-18",
+            "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19"
+          ]
+        },
+        {
+          "id": "participation-to-action-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-CREATENYC-APPENDIX-2017",
             "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19"
           ]
         },
@@ -3847,7 +3967,9 @@
     {
       "id": "technical-operations",
       "surface": "/work/technical-operations",
-      "sourceOrder": [],
+      "sourceOrder": [
+        "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18"
+      ],
       "occurrences": [
         {
           "id": "portable-shared-drive-handoffs",
@@ -3858,6 +3980,14 @@
           "id": "archive-overview-workflow",
           "claimId": "CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW",
           "projection": "technical-operations"
+        },
+        {
+          "id": "machine-readable-civic-design",
+          "claimId": "CLM-NYCAC-MACHINE-READABLE-CIVIC-DESIGN",
+          "projection": "technical-operations",
+          "sourceIds": [
+            "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18"
+          ]
         }
       ]
     },
