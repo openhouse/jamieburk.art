@@ -1,10 +1,10 @@
 {
   "version": 1,
   "contractVersion": 3,
-  "optimizerIdentity": "Codex implementation agent for feature/knowledge-n",
-  "contractFingerprint": "fce98cbbde355cdeb30c0b34cf7155d4628ca7f8bcad42506ef00237e3ca7ce1",
-  "candidateFingerprint": "be47c135e247fed17e6689e2cb3e1993027b4ae9e82bebc02ff0c03d1b5f3fc3",
-  "candidateSha": "e677892d57260dc006cf69bf22e6067413b19469",
+  "optimizerIdentity": "Codex implementation agent for feature/knowledge-wiki-B employment-context run",
+  "contractFingerprint": "8db0a1bf3c7bd29ea03e44be19bdfa67e5ade85f5a8e91acb42652e31c4a5b62",
+  "candidateFingerprint": "ba0775ddfaaa4f3ec26af8caa3a914e902064966e499a9d94928f36e180b59dc",
+  "candidateSha": "edeeef12f3b83f6eae0a104d3f526e7c2fd48cd5",
   "decision": "pass_for_code_review",
   "holdoutReceiptPaths": [
     "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
@@ -28,7 +28,11 @@
     "Iteration 8 discarded both unchanged-candidate holdouts after they found two existing-suite regressions plus gaps in donor decisions, public-wording mutations, query-mode coverage, survivorship exactness, claim budgets, render-path bindings, receipt schema and paths, post-candidate history inspection, and human-status lifecycle validation. The regressions and the evaluator were repaired before freezing another candidate.",
     "Iteration 9 discarded two unchanged-candidate holdouts after both judges correctly declined to prove the unseen second receipt, revealing that receipt-level CI-007 scoring had been conflated with aggregate completion. Contract version two assigns individual judges the instrument and their own receipt, assigns pair validation to the deterministic checker, and removes the irrelevant same-calendar-day constraint while retaining exact SHA and fingerprint agreement.",
     "Iteration 10 discarded the version-two receipts after the full repository gate exposed a stale source-code spelling assertion in KC-FB-005. Contract version three binds that existing role eval to the canonical Technical Operations projection registry, mutation-tests removal of the resolver, and includes the role eval itself in the candidate fingerprint.",
-    "The first holdout harness attempt used const fields without explicit JSON Schema types and was rejected by the response-format validator; the external harness schema was repaired and neither failed session was counted."
+    "The first holdout harness attempt used const fields without explicit JSON Schema types and was rejected by the response-format validator; the external harness schema was repaired and neither failed session was counted.",
+    "Iteration 11 invalidated the earlier receipts when the employment-context work expanded the exact candidate fingerprint scope. The implementation was frozen in commit 152df7eae55dc4d61c287fced16d995f48bbd3b0 before a new pair of read-only holdouts was requested.",
+    "Iteration 12 discarded both receipts after the holdouts found a post-freeze mosaic binding, truncated comma-bearing YAML, ranking-based negative-control rejection, incomplete official-source and reader-source semantics, weak proof-strength and hard-screen closure, and permissive dirty or offline snapshot packets. Candidate 7eccdb57c9ed8524feed8f220b3cf5351e06afca incorporated those repairs and expanded mutation coverage from 17 to 28 tests.",
+    "Iteration 13 discarded the split second-pair result after the stricter judge found a tautological six-role retrieval cutoff, mutable official facts and proof mappings, hidden Wiki interpretation in evaluator packets, forgeable snapshot provenance, optional compiled-output scanning, and internal claim prose in public queries. Candidate edeeef12f3b83f6eae0a104d3f526e7c2fd48cd5 adds eligible decoys, governed role fingerprints, official-fact-only evaluator context, live server SHA and pre/post-capture binding, fail-closed compiled scanning, public-projection-only query output, and 32 passing hiring mutations.",
+    "Iteration 14 discarded a valid but sub-threshold holdout pair whose conservative weighted score was 0.887 because the isolated clones lacked dependencies for independent operator execution. The candidate remained unchanged; dependencies were provisioned outside Git, and two fresh blind read-only judges directly ran the composite and hiring mutation suites plus employment evals. Their conservative aggregate passes at 0.95 with no critical regressions or instrument defects."
   ],
   "candidateDefects": [],
   "allowedPostCandidatePaths": [
