@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "composite-holdout-architecture-a-2026-07-19-living-archive-final",
+  "judgeId": "composite-holdout-architecture-a-2026-07-19-living-archive-repaired",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "00bb03e5bf6f4ab64c4c52f6adf371184deebc1b98ddebce5eadc7b24473d121",
+  "candidateFingerprint": "744a69cd7b9229e4e7b7ec5d984a6a238f77afc9f12da051f5cc849a722f0a0a",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,34 +12,34 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "npm run evals:composite resolved and passed all 14 frozen feature/evals-A through feature/evals-N heads through refs/remotes/origin.",
-        "The integration register declares writable branch feature/knowledge-h and pull-request base develop, with exactly one decision for each frozen branch.",
-        "The independently recomputed frozen rubric digest matches c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340."
+        "Independent ref resolution found exactly 14 feature/evals-A through feature/evals-N entries and no mismatch between their frozen heads and refs/remotes/origin.",
+        "The integration register declares writableBranch feature/knowledge-h and pullRequestBase develop.",
+        "npm run evals:composite passed COMP-001 with 14/14 frozen branch decisions."
       ],
-      "rationale": "The frozen family inventory, branch identities, integration branch, and base are complete and exact."
+      "rationale": "The frozen family inventory, branch namespace, integration branch, and base are exact and inspectable."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 integration decisions use an allowed disposition and retain substantive rationale, existing destination paths, and criterion-linked verification IDs.",
-        "The independently recomputed integration-register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d, matching the reviewed binding.",
-        "The website decision explicitly retains selective H-derived composition instead of projecting the expanded archive."
+        "The independently computed canonical register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "All 14 branch decisions use an allowed disposition and include substantive rationale, existing destination paths, and criterion verification IDs.",
+        "The register explicitly retains the selective H-derived public composition instead of projecting additional archival material."
       ],
-      "rationale": "The integration decisions are inspectable, destination-bound, and explicit about adoption and non-projection."
+      "rationale": "The integration choices are complete, destination-bound, reviewable, and explicit about public non-projection."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "npm run evals:composite found all 11 canonical H-derived files and none of the three forbidden parallel lifecycle roots.",
-        "The canonicality ADR preserves the TypeScript claim, citation, proof, and public-projection authorities while treating Markdown records as the governed editorial and graph layer and generated views as derived.",
-        "The public application imports the schema-validated redacted public registry; none of the 32 living-archive priority IDs appears in that registry.",
-        "The application exposes nine page implementations and no public proofs route or automatic Knowledge Wiki mirror."
+        "npm run evals:composite found all 11 canonical H-derived files and zero forbidden parallel lifecycle roots.",
+        "Application imports resolve through knowledge-bank/index.ts and public.ts, whose runtime data is schema-validated public-registry.json with internal excerpts and locators omitted.",
+        "No apps/www/src or apps/www/public file changed between the pre-living-archive candidate c99c8391 and HEAD.",
+        "The living-archive additions compile into the existing Markdown Wiki and canonical graph rather than creating another knowledge architecture."
       ],
-      "rationale": "The living-archive layer remains integrated with the established authorities and does not become a second public application or unrestricted projection path."
+      "rationale": "The candidate extends the canonical architecture while preserving a smaller, redacted public projection."
     },
     {
       "criterionId": "COMP-004",
@@ -47,98 +47,97 @@
       "pass": true,
       "evidence": [
         "npm run test:lifecycle-operations passed all four tests for idempotent replay, linked duplicate preservation, changed-content stable-ID rejection, and lifecycle queries.",
-        "The composite evaluator independently exercised held claims, unresolved inquiries, corrections, projection states, and orphan-source accounting.",
-        "The Wiki compiler rejects duplicate stable IDs, alias collisions, unknown evidence or relation targets, incompatible relation shapes, and mismatched relation hrefs."
+        "sourceEncounterSchema requires dated authority, unique source states, prior readings, new observations, changed interpretations, contradictions, affected records, limitations, librarian requests, and a bounded publication decision.",
+        "The source-return evaluator passed all 11 blocking checks, and its nine focused tests rejected missing pages, authority substitution, erased interpretation, erased librarian requests, closed conflict, activated projection, and private-path leakage."
       ],
-      "rationale": "Both canonical intake behavior and the Markdown graph contract fail closed under identity and reference errors."
+      "rationale": "Append behavior and the new source-encounter lifecycle contract fail closed under the tested identity and governance mutations."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The composite validated 280 sources, 98 claims, 31 agency relations, and four corrections with current derived outputs.",
-        "The Knowledge Wiki compiled 68 records, 229 semantic or evidence edges, and 194 prose links with zero errors, warnings, structural orphans, or dead ends; all 32 priority records are root-reachable.",
-        "The living-archive evaluation passed 11/11 checks and materialized exactly eight source targets, each represented by a source record and one visible ordinary Markdown link from the source-return page.",
-        "All five protected source targets are summary-only metadata records with opaque vault locators, no canonical URLs, no active projections, no private paths, and no reproduced protected quotations.",
-        "The title inquiry preserves both Art is Long and Time is Long while the timeline names neither; the six inspected NYC Artist Coalition organization and campaign records retain collective credit and bounded individual contribution."
+        "npm run evals:composite validated 280 sources, 98 claims, 31 agency relations, and four corrections with current derived outputs.",
+        "npm run knowledge-bank and npm run public-safety passed; the 11 careful-claim warnings retain required guardrails.",
+        "All 32 priority IDs materialize at their declared canonical paths and are reachable from the Wiki root through ordinary Markdown links.",
+        "The Wiki check passed with 68 records, 229 semantic or evidence edges, 201 prose links, and current generated outputs.",
+        "The six review-locked records have identical Git blob IDs at c99c8391 and HEAD; their six orientation wrappers own the stable governed project IDs and visibly link to the restored records.",
+        "Exactly eight source records are linked from the encounter. The five protected targets are summary-only records with opaque locators, no canonical URLs, no active projections, and no private paths, raw quotations, contact details, or credentials."
       ],
-      "rationale": "Source, schema, relation, privacy, contradiction, correction, and collective-credit integrity are closed without promoting protected or disputed material."
+      "rationale": "Source closure, graph navigation, review-lock preservation, privacy, collective credit, causality boundaries, and current derived reports are all observed."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The composite professor-lens evaluation passed 14/14 criteria, and npm run test:professor-lenses passed all seven baseline and adversarial tests.",
-        "The new person, method, capability, and timeline pages reconstruct observe, model, prototype, use, learn, revise, and handoff while retaining artistic, civic, technical, relational, and social continuity.",
-        "portfolio.role-fit-referral-map remains governed-open with projection_status hold, projection status hold, and an empty surfaces array.",
-        "No living-archive priority record is automatically exported through the public citation registry."
+        "npm run evals:professor-lenses passed all 14 criteria.",
+        "The Jamie, timeline, capability, and method pages reconstruct observe, model, prototype, use, learn, revise, and handoff across artistic, civic, technical, relational, and operational practice.",
+        "Project and campaign pages distinguish Jamie's bounded contribution from shared production, coalition advocacy, Council enactment, agency implementation, and business outcomes.",
+        "portfolio.role-fit-referral-map remains hold with an empty surfaces array, while the living-archive work changes no public application files."
       ],
-      "rationale": "The archive deepens the internal professional argument while the website remains a purposeful, bounded projection."
+      "rationale": "The whole-practice argument is coherent and useful without turning the archive into a website mirror or inflating individual agency."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The blind-spot digest matches 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "Human corroboration, collective review, hiring usability, job-funnel learning, and external validity all remain open with required evidence, anti-gaming rules, next actions, and projection boundaries.",
-        "The source encounter keeps research_authority authorized-by-jamie distinct from publication_authority separate-human-review and limits publication to public-safe synthesis.",
-        "Collaborator review, quotation permission, rights and represented-person consent, Jamie editorial and application selection, production, deployment, indexing, human retrieval, employer judgment, hiring validation, and employment outcomes remain explicitly outside automated authority."
+        "All five human-evidence controls remain open and retain required evidence, anti-gaming rules, next actions, and public projection boundaries under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "The living archive preserves four concrete wanted records as librarian requests and explicitly says they are not claims that a source never existed.",
+        "The installation-title record remains governed-open; it preserves Art is Long and Time is Long as conflicting readings, while the timeline names neither title.",
+        "Wiki health leaves collaborator review, media rights and consent, fresh-human retrieval, editorial projection approval, production observation, and hiring outcomes unresolved."
       ],
-      "rationale": "The candidate governs missing evidence as open work and does not synthesize human permission, validation, or outcomes."
+      "rationale": "Missing human evidence is governed and actionable without being synthesized into corroboration, consent, approval, usability, or external validity."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The semantic rubric digest matches both the suite declaration and the separately pinned evaluator constant.",
-        "npm run test:composite passed all 15 governance and mutation probes; its sole 16th-test failure was the circular top-level assertion requiring already-installed exact-candidate holdouts.",
-        "The combined living-archive, privacy, and Wiki mutation run passed all 40 tests, including authority substitution, changed-interpretation removal, missing inquiry, role-fit activation, protected-path leakage, collective-to-sole mutation, broken graph references, and unsafe projections.",
-        "npm run wiki:check, npm run wiki:employment:check, npm run knowledge-bank, and npm run public-safety passed; generated Wiki and employment outputs exactly match their current builders.",
-        "The holdout contract binds process session, full prompt, model, timing, transport, and judgment digest while describing native receipts as auditable provenance rather than cryptographic authentication."
+        "Independent canonical hashing produced the frozen semantic rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340, matching the suite and separately pinned evaluator constant.",
+        "Independent canonical hashes matched the pinned base-suite, integration-register, and blind-spot-control digests.",
+        "npm run test:composite passed all 15 non-circular governance and mutation tests; its sole baseline failure was the expected absence of fresh exact-candidate holdouts.",
+        "npm run wiki:test passed all 54 tests, including graph closure, private-path rejection, rights fail-closed behavior, collective-credit protection, source-return mutations, and deterministic compilation.",
+        "The rubric forbids optimizer self-grading, not-observed passing, synthetic external validation, and score compensation for a blocking failure."
       ],
-      "rationale": "Frozen semantics, current derived outputs, grader separation, mutation resistance, and provenance boundaries remain intact."
+      "rationale": "Frozen semantics, independently pinned dependencies, grader separation, anti-gaming mutations, and current derived surfaces remain intact."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "An independent raw-byte source-tree computation enumerated 616 tracked or unignored files, excluded exactly the two candidate_identity.exclude_only holdout paths, and hashed exactly 614 candidate files.",
-        "The independently computed candidate fingerprint is 00bb03e5bf6f4ab64c4c52f6adf371184deebc1b98ddebce5eadc7b24473d121.",
-        "npm run evals:composite passed COMP-001 through COMP-008 and failed only because two fresh provenance-bound holdouts for this exact fingerprint are not yet installed.",
-        "The worktree was clean before and after all read-only inspection and checks.",
-        "Per the required pre-installation rule, absence of this future holdout record and the second fresh holdout is circular and is not scored as a candidate defect."
+        "An independent raw-byte source-tree computation enumerated exactly 620 candidate files and produced fingerprint 744a69cd7b9229e4e7b7ec5d984a6a238f77afc9f12da051f5cc849a722f0a0a.",
+        "The only exclusions are docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json and docs/evals/runs/2026-07-16-feature-evals-composite-final-b.json, exactly matching candidate_identity.exclude_only.",
+        "npm run evals:composite passed COMP-001 through COMP-008 and failed COMP-009 only because fresh provenance-bound holdouts for this exact fingerprint are not yet installed.",
+        "The repository describes native process receipts as auditable provenance rather than cryptographic platform authentication and keeps production approval, deployment verification, and indexing approval open."
       ],
-      "rationale": "The exact candidate and stopping contract are fully observed; only the explicitly exempted installation of fresh holdout records remains."
+      "rationale": "Exact-candidate identity and stopping semantics are fully observed; the pre-installation absence of this future record and the second fresh holdout is the explicitly exempted circular condition."
     }
   ],
   "notObserved": [],
   "findings": [
     "No non-circular blocking defect was found.",
-    "The living-archive and situated-source-return layer passes its complete 11-check evaluation across all 32 priority records.",
-    "The sole ordinary-link-unreachable Wiki record is the intentionally metadata-only protected communication source leaf; it is semantically linked and is not a structural orphan.",
-    "The knowledge-bank and public-safety checks retain 11 deliberate careful-claim warnings whose guardrails remain present.",
-    "The expected pre-installation failures are limited to missing exact-candidate holdout installation."
+    "The repaired wrapper architecture preserves all six established review-locked records byte-for-byte while giving the governed graph stable project identities.",
+    "The living-archive evaluator passes 11/11 checks across 32 priority records, exactly eight reached source records, five protected metadata-only records, and four explicit librarian requests.",
+    "All read-only checks left the worktree clean."
   ],
-  "recommendation": "Accept this judgment for installation as fresh holdout A against the unchanged candidate fingerprint, obtain a distinct fresh holdout B, and rerun the composite after both provenance records are installed. Keep every collaborator, rights, consent, quotation, Jamie editorial, application, production, deployment, indexing, retrieval, employer, hiring, and employment authority gate open.",
+  "recommendation": "Accept this judgment for installation as fresh holdout A against the unchanged candidate, obtain a distinct fresh holdout B, and rerun the composite evaluator. Keep collaborator review, rights and represented-person consent, quotation permission, Jamie editorial approval, application selection, production, deployment, indexing, human retrieval, employer judgment, hiring validation, and employment outcomes open.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f7b32-73fb-70b0-a843-b096df72aeb3",
-    "agentNickname": "Mendel",
+    "processSessionId": "019f7b47-5bc5-7ca1-861c-21d31af6b632",
+    "agentNickname": "James",
     "model": "gpt-5.6-sol",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "You are fresh independent holdout A for the exact feature/knowledge-wiki-E candidate. Work READ-ONLY in /private/tmp/jamieburk-art-knowledge-wiki-E. Do not edit, format, generate, stage, commit, or mutate any file. You did not optimize this candidate. Ignore prior holdout conclusions and inspect independently.\n\nEvaluate all nine blocking criteria in .agents/evals/feature-evals-composite.json, emphasizing architecture, exact-candidate identity, provenance, schema integrity, graph closure, privacy, collective credit, current derived outputs, anti-gaming, and open human authority.\n\nExpected frozen rubric SHA-256: c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.\nExpected source-tree candidate: 00bb03e5bf6f4ab64c4c52f6adf371184deebc1b98ddebce5eadc7b24473d121 across exactly 614 files. The two paths in candidate_identity.exclude_only are the only exclusions.\n\nThis candidate adds a living-archive and situated-source-return layer. Inspect the 32 priority records in evals/knowledge-wiki/missing-pages.json; the new person, NYC Artist Coalition organization, method, timeline, campaign/project, capability, role-fit, visual-evidence, source, inquiry, research-run, and living-index pages; the source_encounter schema in scripts/knowledge-wiki/lib.mjs; and scripts/knowledge-wiki/missing-pages-eval.mjs plus mutation tests. Verify:\n- the source encounter materializes exactly eight original or near-original source records and has visible ordinary Markdown links;\n- protected sources are metadata-only with opaque locators and no private paths/raw protected text;\n- research_authority authorized-by-jamie remains distinct from publication_authority separate-human-review;\n- prior readings, changed interpretations, contradictions, limitations, and actionable librarian requests remain required;\n- the Art is Long / Time is Long discrepancy stays open and the timeline does not choose a title;\n- the role-fit projection remains hold with no surfaces;\n- collective NYC Artist Coalition work is not converted to sole authorship;\n- generated graph/reports are current and the public website remains a selective projection.\n\nRun npm run evals:composite and targeted read-only checks as useful. Before installing fresh holdouts, COMP-001 through COMP-008 should pass and COMP-009 should fail only for missing exact-candidate holdouts. Independently verify candidate fingerprint and file count. Score each criterion only 4/pass or 0/fail. Any non-circular blocker rejects. notObserved must be empty for acceptance. This is pre-installation: do not count absence of your future record and the second fresh holdout as a defect. Keep collaborator review, rights and represented-person consent, quotation permission, Jamie editorial approval, application selection, production, deployment, indexing, human retrieval, employer judgment, hiring validation, and employment outcomes open. Native process receipts are auditable provenance, not cryptographic authentication.\n\nSet judgeId to composite-holdout-architecture-a-2026-07-19-living-archive-final, runVersion 2, grader independent_llm_judge, independentFromOptimizer true. Return ONLY valid JSON with runVersion, judgeId, grader, independentFromOptimizer, rubricSha256, candidateFingerprint, verdict, scores (exactly nine objects with criterionId, score, pass, evidence array of strings, rationale), notObserved, findings, and recommendation.",
-    "promptSha256": "421d2595f39a9ad93dd3f28c8a8a60b7805d80bcc2795ab109d9298dd3c36fe9",
+    "prompt": "You are fresh independent holdout A for the exact feature/knowledge-wiki-E candidate.\n\nWork READ-ONLY in /private/tmp/jamieburk-art-knowledge-wiki-E. Do not edit, format, generate, stage, commit, or mutate any file. You did not optimize this candidate. Ignore prior holdout conclusions and inspect independently.\n\nEvaluate all nine blocking criteria in .agents/evals/feature-evals-composite.json. Expected frozen rubric SHA-256: c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Expected source-tree candidate: 744a69cd7b9229e4e7b7ec5d984a6a238f77afc9f12da051f5cc849a722f0a0a across exactly 620 files. The two paths in candidate_identity.exclude_only are the only exclusions.\n\nThis corrected candidate adds a living-archive and situated-source-return layer while restoring six established review-locked archival records byte-for-byte to their pre-feature state and placing governed orientation records beside them. Inspect the 32 priority records in evals/knowledge-wiki/missing-pages.json; docs/knowledge-bank/indexes/living-archive.md; docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md; the Jamie, NYC Artist Coalition, methods, timeline, capability, project/campaign, held role-fit, visual-evidence, source, and inquiry pages; the sourceEncounterSchema in scripts/knowledge-wiki/lib.mjs; scripts/knowledge-wiki/missing-pages-eval.mjs and its mutation tests; and these restored/wrapper pairs:\n- projects/kc-spaces-fund-facebook-posts.md + kc-spaces-fund-orientation.md\n- projects/kc-town-hall.md + kc-town-hall-orientation.md\n- projects/talks-not-raids.md + talks-not-raids-orientation.md\n- projects/waterways-and-participatory-art.md + waterways-participatory-art-orientation.md\n- projects/wowlist-social-population.md + wowlist-orientation.md\n- projects/wowlist-sunday-dinner-callscript-continuity.md + sunday-dinner-196-orientation.md\n\nVerify independently:\n- all 32 priority pages materialize as governed records and are navigable;\n- established review-locked records are not repurposed or rewritten merely to gain frontmatter; wrappers carry the stable governed project IDs and link to them;\n- the source encounter materially reached exactly eight original or near-original sources and links visibly to source records;\n- five protected source targets remain metadata-only with opaque locators, no private paths, raw protected text, or unauthorized projection;\n- research_authority authorized-by-jamie stays distinct from publication_authority separate-human-review;\n- prior readings, changed interpretations, conflicts, limitations, and actionable librarian requests remain required;\n- Art is Long / Time is Long remains an open inquiry and the timeline does not choose;\n- project/campaign pages preserve collective credit, bounded roles, and institutional causality;\n- the role-fit projection remains hold with no surfaces and the public website remains selective;\n- generated graph/reports are current.\n\nRun npm run evals:composite and targeted read-only checks as useful. Before installing fresh holdouts, COMP-001 through COMP-008 should pass and COMP-009 should fail only for missing exact-candidate holdouts. Independently verify candidate fingerprint and file count. Score each criterion only 4/pass or 0/fail. Any non-circular blocker rejects. notObserved must be empty for acceptance. This is pre-installation: do not count absence of your future record and the other fresh holdout as a defect. Keep collaborator review, rights and represented-person consent, quotation permission, Jamie editorial approval, application selection, production, deployment, indexing, human retrieval, employer judgment, hiring validation, and employment outcomes open. Native process receipts are auditable provenance, not cryptographic authentication.\n\nEmphasize architecture, exact-candidate identity, provenance, schema integrity, graph closure, review-lock preservation, privacy, anti-gaming, and open human authority.\n\nSet judgeId to composite-holdout-architecture-a-2026-07-19-living-archive-repaired, runVersion 2, grader independent_llm_judge, independentFromOptimizer true. Return ONLY valid JSON with runVersion, judgeId, grader, independentFromOptimizer, rubricSha256, candidateFingerprint, verdict, scores (exactly nine objects with criterionId, score, pass, evidence array of strings, rationale), notObserved, findings, and recommendation.",
+    "promptSha256": "7315466b30f669a1936b44920662176b3545a44bac3313233fe9047f78148fd7",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-19T16:25:31.924Z",
-    "completedAt": "2026-07-19T16:34:31.335Z",
-    "judgmentSha256": "844e95f1104a328e983fbbb9644d5baf32c8d886834ae8e512fbe094a6420df5"
+    "startedAt": "2026-07-19T16:48:21.985Z",
+    "completedAt": "2026-07-19T16:59:42.179Z",
+    "judgmentSha256": "8d7874b67c2ae06b5b9ce71e3f370f5bbcba56adbd68e6758b617d1035c5a4f3"
   }
 }
