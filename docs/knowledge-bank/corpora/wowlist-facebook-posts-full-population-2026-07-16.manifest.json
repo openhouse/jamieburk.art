@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-16T16:00:00-04:00",
+  "generator": "Protected authenticated capture reconciliation plus public-safe derivation",
+  "sourceCapturesPublished": false,
+  "corpus": "docs/knowledge-bank/corpora/wowlist-facebook-posts-full-population-2026-07-16.json",
+  "corpusSha256": "0e8cf08fea7284b8d37009ad922eccf8cb2126580765418afc3a7249aaaf4cc0",
+  "corpusBytes": 38317,
+  "population": {
+    "materializedRecords": 54,
+    "canonicalPostIds": 54,
+    "legacyManagementContentIds": 54,
+    "publisherBylines": 51,
+    "videoRedirectsWithoutBylines": 3,
+    "start": "2015-04-25",
+    "end": "2018-03-22",
+    "status": "complete-as-materialized"
+  },
+  "ownerExport": {
+    "generatedWindows": 3,
+    "completedWindows": 3,
+    "fileVerifiedWindows": 1,
+    "verifiedRows": 29,
+    "exactCanonicalIdAgreement": 29,
+    "boundary": "Two completed export files were not recovered from the browser client and remain unverified."
+  },
+  "privacy": {
+    "rawPostTextPublished": false,
+    "commentsPublished": false,
+    "engagerIdentitiesPublished": false,
+    "adminAnalyticsPublished": false,
+    "authenticatedSessionDataPublished": false,
+    "privatePathsPublished": false,
+    "rationale": "The public ledger preserves identifiers, dates, public URLs, source dispositions, classifications, counts, and integrity controls without republishing social copy, personal traces, or private analytics."
+  }
+}

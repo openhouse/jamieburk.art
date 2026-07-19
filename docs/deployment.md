@@ -145,3 +145,26 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Rollback
+
+Before production cutover, record the exact approved commit and the currently
+deployed known-good Git commit:
+
+```bash
+git rev-parse HEAD
+```
+
+After deploy, smoke the health endpoint, primary routes, resume PDF, robots,
+sitemap, and metadata before changing any DNS or indexing policy. If a release
+is unhealthy, leave indexing disabled and redeploy the recorded known-good
+commit through the same reviewed Git path:
+
+```bash
+git push dokku-production <known-good-commit>:main --force
+```
+
+Confirm the production remote and target branch before cutover; do not improvise
+the command during an incident. Record the rollback commit, reason, operator,
+timestamp, and post-rollback smoke results. Never repair production by
+deploying an unreviewed working tree.

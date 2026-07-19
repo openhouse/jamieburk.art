@@ -1,0 +1,1289 @@
+{
+  "capturedAt": "2026-07-15T00:56:07-04:00",
+  "profileReportedPosts": 38,
+  "surface": "https://x.com/wowlist/with_replies",
+  "captureMethod": "Replies-inclusive profile timeline scrolled through repeated no-new-item bottom passes; canonical status IDs deduplicated.",
+  "acquisitionVerification": {
+    "method": "Three overlapping complete timeline passes were independently deduplicated and reconciled to the profile-reported denominator.",
+    "statusIdSetSha256": "37e4547e6e17a29b2aa103f5d448c4405dfd6e548216b7009169a7884195bed5",
+    "passes": [
+      {
+        "id": "authenticated-scroll-pass-1",
+        "distinctStatusIds": 38,
+        "matchedProfileBaseline": true,
+        "matchedCanonicalStatusIdSet": true,
+        "statusIds": [
+          "433628764493606913",
+          "433671630837919744",
+          "587713396486856704",
+          "590942060829663232",
+          "590961074326917122",
+          "591664757473673216",
+          "591666366215811073",
+          "591668857670148096",
+          "591944013768499200",
+          "592424659225845760",
+          "592718356018556928",
+          "592787353925726208",
+          "592810776961916929",
+          "596690796641923073",
+          "596691623993581568",
+          "598530404669358080",
+          "603631189308604416",
+          "604360847012413440",
+          "606517628765650945",
+          "632168285291835392",
+          "663732869357965313",
+          "665520472461860864",
+          "749378122823245824",
+          "751150062458269696",
+          "771412862191407104",
+          "771455571501416448",
+          "771457416298921985",
+          "783312785702805504",
+          "796473557387575297",
+          "797181275308257282",
+          "798274424763981824",
+          "801883926029447168",
+          "805210387004223488",
+          "805949658405175296",
+          "806517013472485376",
+          "807395049814290433",
+          "815697993709993984",
+          "819663088634851328"
+        ]
+      },
+      {
+        "id": "authenticated-scroll-pass-2",
+        "distinctStatusIds": 38,
+        "matchedProfileBaseline": true,
+        "matchedCanonicalStatusIdSet": true,
+        "statusIds": [
+          "433628764493606913",
+          "433671630837919744",
+          "587713396486856704",
+          "590942060829663232",
+          "590961074326917122",
+          "591664757473673216",
+          "591666366215811073",
+          "591668857670148096",
+          "591944013768499200",
+          "592424659225845760",
+          "592718356018556928",
+          "592787353925726208",
+          "592810776961916929",
+          "596690796641923073",
+          "596691623993581568",
+          "598530404669358080",
+          "603631189308604416",
+          "604360847012413440",
+          "606517628765650945",
+          "632168285291835392",
+          "663732869357965313",
+          "665520472461860864",
+          "749378122823245824",
+          "751150062458269696",
+          "771412862191407104",
+          "771455571501416448",
+          "771457416298921985",
+          "783312785702805504",
+          "796473557387575297",
+          "797181275308257282",
+          "798274424763981824",
+          "801883926029447168",
+          "805210387004223488",
+          "805949658405175296",
+          "806517013472485376",
+          "807395049814290433",
+          "815697993709993984",
+          "819663088634851328"
+        ]
+      },
+      {
+        "id": "authenticated-scroll-pass-3",
+        "distinctStatusIds": 38,
+        "matchedProfileBaseline": true,
+        "matchedCanonicalStatusIdSet": true,
+        "statusIds": [
+          "433628764493606913",
+          "433671630837919744",
+          "587713396486856704",
+          "590942060829663232",
+          "590961074326917122",
+          "591664757473673216",
+          "591666366215811073",
+          "591668857670148096",
+          "591944013768499200",
+          "592424659225845760",
+          "592718356018556928",
+          "592787353925726208",
+          "592810776961916929",
+          "596690796641923073",
+          "596691623993581568",
+          "598530404669358080",
+          "603631189308604416",
+          "604360847012413440",
+          "606517628765650945",
+          "632168285291835392",
+          "663732869357965313",
+          "665520472461860864",
+          "749378122823245824",
+          "751150062458269696",
+          "771412862191407104",
+          "771455571501416448",
+          "771457416298921985",
+          "783312785702805504",
+          "796473557387575297",
+          "797181275308257282",
+          "798274424763981824",
+          "801883926029447168",
+          "805210387004223488",
+          "805949658405175296",
+          "806517013472485376",
+          "807395049814290433",
+          "815697993709993984",
+          "819663088634851328"
+        ]
+      }
+    ],
+    "stoppingCondition": "Repeated bottom-of-timeline passes produced no new canonical status IDs."
+  },
+  "boundaries": [
+    "Only public profile, post, and conversation surfaces were inspected.",
+    "No direct messages, account settings, follower export, private analytics, or session data were captured.",
+    "The authenticated-session identity used to reach the public timeline is intentionally excluded from this public artifact.",
+    "Visible engagement labels are dated observations. Engagement on reposted items belongs to the original post.",
+    "Project-account output does not identify the author of every post."
+  ],
+  "items": [
+    {
+      "statusUrl": "/goshwizard/status/819663088634851328",
+      "datetime": "2017-01-12T21:51:23.000Z",
+      "engagementLabel": "1 reply, 1 repost, 5 likes",
+      "links": [
+        {
+          "href": "/goshwizard",
+          "text": ""
+        },
+        {
+          "href": "/goshwizard",
+          "text": "jake"
+        },
+        {
+          "href": "/goshwizard",
+          "text": "@goshwizard"
+        },
+        {
+          "href": "/goshwizard/status/819663088634851328",
+          "text": "Jan 12, 2017"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\njake\n@goshwizard\n·\nJan 12, 2017\nPunk shows should be at 8am!\n1\n1\n5"
+    },
+    {
+      "statusUrl": "/MeowWolf/status/815697993709993984",
+      "datetime": "2017-01-01T23:15:31.000Z",
+      "engagementLabel": "4 reposts, 13 likes",
+      "links": [
+        {
+          "href": "/MeowWolf",
+          "text": ""
+        },
+        {
+          "href": "/MeowWolf",
+          "text": "Meow Wolf"
+        },
+        {
+          "href": "/MeowWolf",
+          "text": "@MeowWolf"
+        },
+        {
+          "href": "/MeowWolf/status/815697993709993984",
+          "text": "Jan 1, 2017"
+        },
+        {
+          "href": "https://t.co/0jKQMlauld",
+          "text": "http://\nmeowwolf.com/diy"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nMeow Wolf\n@MeowWolf\n·\nJan 1, 2017\nTo kick off the year right... We launch our DIY Fund, $100,000 for DIY Arts and Music spaces around the country.  \nhttp://\nmeowwolf.com/diy\n4\n13"
+    },
+    {
+      "statusUrl": "/urbanhermit/status/807395049814290433",
+      "datetime": "2016-12-10T01:22:35.000Z",
+      "engagementLabel": "2 reposts, 8 likes",
+      "links": [
+        {
+          "href": "/urbanhermit",
+          "text": ""
+        },
+        {
+          "href": "/urbanhermit",
+          "text": "Jamie Burkart"
+        },
+        {
+          "href": "/urbanhermit",
+          "text": "@urbanhermit"
+        },
+        {
+          "href": "/urbanhermit/status/807395049814290433",
+          "text": "Dec 9, 2016"
+        },
+        {
+          "href": "/hashtag/DIYsavesOurLife?src=hashtag_click",
+          "text": "#DIYsavesOurLife"
+        },
+        {
+          "href": "https://t.co/L0gAiWmIbX",
+          "text": "https://\ndocs.google.com/spreadsheets/d\n/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml\n…"
+        },
+        {
+          "href": "/urbanhermit/status/807395049814290433/photo/1",
+          "text": ""
+        }
+      ],
+      "hasVisibleMedia": true,
+      "text": "WOW List! reposted\nJamie Burkart\n@urbanhermit\n·\nDec 9, 2016\n Call your Mayor: #DIYsavesOurLife. Honor the lost by helping artists and spaces in our city thrive safely. Script: \nhttps://\ndocs.google.com/spreadsheets/d\n/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml\n…\n2\n8"
+    },
+    {
+      "statusUrl": "/wowlist/status/806517013472485376",
+      "datetime": "2016-12-07T15:13:35.000Z",
+      "engagementLabel": "2 reposts, 1 like",
+      "links": [
+        {
+          "href": "https://t.co/Q2vtL8JdOq",
+          "text": "Hundreds Mourn the Victims of the Ghost Ship Fire in Oakland | KQED"
+        },
+        {
+          "href": "https://t.co/Q2vtL8JdOq",
+          "text": "From youtube.com"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nDec 7, 2016\nLet us lift our candles, our lights up high.\nHundreds Mourn the Victims of the Ghost Ship Fire in Oakland | KQED\nFrom youtube.com\n2\n1"
+    },
+    {
+      "statusUrl": "/urbanhermit/status/805949658405175296",
+      "datetime": "2016-12-06T01:39:07.000Z",
+      "engagementLabel": "1 repost",
+      "links": [
+        {
+          "href": "/urbanhermit",
+          "text": ""
+        },
+        {
+          "href": "/urbanhermit",
+          "text": "Jamie Burkart"
+        },
+        {
+          "href": "/urbanhermit",
+          "text": "@urbanhermit"
+        },
+        {
+          "href": "/urbanhermit/status/805949658405175296",
+          "text": "Dec 5, 2016"
+        },
+        {
+          "href": "https://t.co/jhGFCwormV",
+          "text": "https://\nwowlist.org/events/25653/l\night-vigil-for-ghost-ship-at-lake-merritt-oakland---tonight\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nJamie Burkart\n@urbanhermit\n·\nDec 5, 2016\nLight Vigil at Lake Merritt 8pm <3 \nhttps://\nwowlist.org/events/25653/l\night-vigil-for-ghost-ship-at-lake-merritt-oakland---tonight\n…\n1"
+    },
+    {
+      "statusUrl": "/wowlist/status/805210387004223488",
+      "datetime": "2016-12-04T00:41:31.000Z",
+      "engagementLabel": "2 reposts, 1 like",
+      "links": [
+        {
+          "href": "https://t.co/vWtAyQiwMl",
+          "text": "https://\nyoucaring.com/firevictimsofo\naklandfiredec232016-706684\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nDec 3, 2016\nHug those that you love. \nhttps://\nyoucaring.com/firevictimsofo\naklandfiredec232016-706684\n…\n2\n1"
+    },
+    {
+      "statusUrl": "/5432fun/status/801883926029447168",
+      "datetime": "2016-11-24T20:23:20.000Z",
+      "engagementLabel": "2 reposts, 2 likes",
+      "links": [
+        {
+          "href": "/5432fun",
+          "text": ""
+        },
+        {
+          "href": "/5432fun",
+          "text": "hoshwa / 5432fun / cave babies"
+        },
+        {
+          "href": "/5432fun",
+          "text": "@5432fun"
+        },
+        {
+          "href": "/5432fun/status/801883926029447168",
+          "text": "Nov 24, 2016"
+        },
+        {
+          "href": "https://t.co/xBooqnpcBS",
+          "text": "http://\nfb.me/1TW9AQgwM"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nhoshwa / 5432fun / cave babies\n@5432fun\n·\nNov 24, 2016\nHow to Give, and to Give Thanks, to Standing Rock \nhttp://\nfb.me/1TW9AQgwM\n2\n2"
+    },
+    {
+      "statusUrl": "/wowlist/status/798274424763981824",
+      "datetime": "2016-11-14T21:20:28.000Z",
+      "engagementLabel": "3 reposts, 3 likes",
+      "links": [
+        {
+          "href": "https://t.co/O1euiAdPmX",
+          "text": "http://\npopular.vote"
+        },
+        {
+          "href": "/hashtag/NotMyPresident?src=hashtag_click",
+          "text": "#NotMyPresident"
+        },
+        {
+          "href": "/hashtag/WeAreThePopularVote?src=hashtag_click",
+          "text": "#WeAreThePopularVote"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nNov 14, 2016\nhttp://\npopular.vote add events, get updates on marches, meetings, friendship near you across the us #NotMyPresident #WeAreThePopularVote\n3\n3"
+    },
+    {
+      "statusUrl": "/yokoono/status/797181275308257282",
+      "datetime": "2016-11-11T20:56:41.000Z",
+      "engagementLabel": "2 replies, 211 reposts, 467 likes",
+      "links": [
+        {
+          "href": "/yokoono",
+          "text": ""
+        },
+        {
+          "href": "/yokoono",
+          "text": "Yoko Ono"
+        },
+        {
+          "href": "/yokoono",
+          "text": "@yokoono"
+        },
+        {
+          "href": "/yokoono/status/797181275308257282",
+          "text": "Nov 11, 2016"
+        },
+        {
+          "href": "https://t.co/ST6A7fMabN",
+          "text": "http://\nift.tt/2fjVs71"
+        },
+        {
+          "href": "/yokoono/status/797181275308257282/photo/1",
+          "text": ""
+        }
+      ],
+      "hasVisibleMedia": true,
+      "text": "WOW List! reposted\nYoko Ono\n@yokoono\n·\nNov 11, 2016\nhttp://\nift.tt/2fjVs71\n2\n211\n467"
+    },
+    {
+      "statusUrl": "/wowlist/status/796473557387575297",
+      "datetime": "2016-11-09T22:04:28.000Z",
+      "engagementLabel": "5 reposts, 6 likes",
+      "links": [
+        {
+          "href": "/hashtag/DownWithTrump?src=hashtag_click",
+          "text": "#DownWithTrump"
+        },
+        {
+          "href": "https://t.co/D6udDGJ7Um",
+          "text": "https://\nwowlist.org/DownWithTrump"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nNov 9, 2016\nMarches across the US tonight on the #DownWithTrump WOW List. Build a movement to fight sexism, racism, Islamophobia \nhttps://\nwowlist.org/DownWithTrump\n5\n6"
+    },
+    {
+      "statusUrl": "/FOKLcenter/status/783312785702805504",
+      "datetime": "2016-10-04T14:28:16.000Z",
+      "engagementLabel": "1 repost, 2 likes",
+      "links": [
+        {
+          "href": "/FOKLcenter",
+          "text": ""
+        },
+        {
+          "href": "/FOKLcenter",
+          "text": "FOKL"
+        },
+        {
+          "href": "/FOKLcenter",
+          "text": "@FOKLcenter"
+        },
+        {
+          "href": "/FOKLcenter/status/783312785702805504",
+          "text": "Oct 4, 2016"
+        },
+        {
+          "href": "https://t.co/t0grs2Do3H",
+          "text": ""
+        },
+        {
+          "href": "https://t.co/t0grs2Do3H",
+          "text": "facebook.com\nFOKL\nelectricity gets turned on at the new spot today. This is our FIRST show at the new location. same drive, different door."
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nFOKL\n@FOKLcenter\n·\nOct 4, 2016\nelectricity gets turned on at the new spot today. This is our FIRST show at the new location. same drive,...\nfacebook.com\nFOKL\nelectricity gets turned on at the new spot today. This is our FIRST show at the new location. same drive, different door.\n1\n2"
+    },
+    {
+      "statusUrl": "/wowlist/status/771457416298921985",
+      "datetime": "2016-09-01T21:19:15.000Z",
+      "engagementLabel": "1 repost, 1 like",
+      "links": [
+        {
+          "href": "/selfdfens",
+          "text": "@selfdfens"
+        },
+        {
+          "href": "/showpaper",
+          "text": "@showpaper"
+        },
+        {
+          "href": "https://t.co/7lKlHLEZf1",
+          "text": "https://\nwowlist.org/sundaydinner/e\nvents/24130/sunday-dinner-potluck-uop-psdn-8pm--jjs\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nSep 1, 2016\nReplying to \n@wowlist\n.\n@selfdfens\n \n@showpaper\n NYCdiy runs on \n@wowlist\n a diy community calendar project from the Sunday Dinner potluck  \nhttps://\nwowlist.org/sundaydinner/e\nvents/24130/sunday-dinner-potluck-uop-psdn-8pm--jjs\n…\n1\n1"
+    },
+    {
+      "statusUrl": "/wowlist/status/771455571501416448",
+      "datetime": "2016-09-01T21:11:55.000Z",
+      "engagementLabel": "1 reply, 2 reposts, 2 likes",
+      "links": [
+        {
+          "href": "/selfdfens",
+          "text": "@selfdfens"
+        },
+        {
+          "href": "/selfdfens",
+          "text": "@selfdfens"
+        },
+        {
+          "href": "/showpaper",
+          "text": "@showpaper"
+        },
+        {
+          "href": "https://t.co/3an880EXo8",
+          "text": "http://\nNYCdiy.org"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nSep 1, 2016\nReplying to \n@selfdfens\n.\n@selfdfens\n \n@showpaper\n You can join \nhttp://\nNYCdiy.org to add shows and get the weekly email!\n1\n2\n2"
+    },
+    {
+      "statusUrl": "/wowlist/status/771412862191407104",
+      "datetime": "2016-09-01T18:22:13.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "https://t.co/ixsJHQRdDK",
+          "text": "http://\nNYCDIY.org"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nSep 1, 2016\nHi \nhttp://\nNYCDIY.org\nQuote\n285 KENT\n@285KENT\n·\nSep 1, 2016\nReplying to @lil_seltz\n.@lil_seltz \nHi Sunnyvale\nHi Trans-Pecos\nHi Gateway\nHi the Glove\nHi Tarot Society\nHi Footlight\nHi Sump at Poppers Locarno\nHi more places..."
+    },
+    {
+      "statusUrl": "/wowlist/status/751150062458269696",
+      "datetime": "2016-07-07T20:25:05.000Z",
+      "engagementLabel": "1 repost",
+      "links": [
+        {
+          "href": "/hashtag/AltonSterling?src=hashtag_click",
+          "text": "#AltonSterling"
+        },
+        {
+          "href": "/hashtag/PhilandoCastile?src=hashtag_click",
+          "text": "#PhilandoCastile"
+        },
+        {
+          "href": "/hashtag/BlackLivesMatter?src=hashtag_click",
+          "text": "#BlackLivesMatter"
+        },
+        {
+          "href": "https://t.co/a39ETzpVWO",
+          "text": "https://\nwowlist.org/nycdiy/events/\n23185/demonstration-for-altonsterling--philandocastile-at-5pm-today-in-union-square-nyc\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nJul 7, 2016\nNYC: Demonstration for #AltonSterling & #PhilandoCastile at 5PM today in Union Square #BlackLivesMatter \nhttps://\nwowlist.org/nycdiy/events/\n23185/demonstration-for-altonsterling--philandocastile-at-5pm-today-in-union-square-nyc\n…\n1"
+    },
+    {
+      "statusUrl": "/rchrd2/status/749378122823245824",
+      "datetime": "2016-07-02T23:04:01.000Z",
+      "engagementLabel": "1 repost",
+      "links": [
+        {
+          "href": "/rchrd2",
+          "text": ""
+        },
+        {
+          "href": "/rchrd2",
+          "text": "Richard"
+        },
+        {
+          "href": "/rchrd2",
+          "text": "@rchrd2"
+        },
+        {
+          "href": "/rchrd2/status/749378122823245824",
+          "text": "Jul 2, 2016"
+        },
+        {
+          "href": "https://t.co/DbCvjUQM1n",
+          "text": "http://\nsresproductions.com/events/fillmor\ne-jazz-festival/\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nRichard\n@rchrd2\n·\nJul 2, 2016\n@wowlist\n Fillmore Jazz Festival in SF today and tomorrow \nhttp://\nsresproductions.com/events/fillmor\ne-jazz-festival/\n…\n1"
+    },
+    {
+      "statusUrl": "/wowlist/status/665520472461860864",
+      "datetime": "2015-11-14T13:23:40.000Z",
+      "engagementLabel": "1 reply",
+      "links": [
+        {
+          "href": "/all_ages",
+          "text": "@all_ages"
+        },
+        {
+          "href": "https://t.co/JpK2QOam9r",
+          "text": "https://\nwowlist.org/AllAges"
+        },
+        {
+          "href": "https://t.co/YuCfobbQTB",
+          "text": "https://\nwowlist.org/events/18547/w\now-list-members-meeting\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nNov 14, 2015\n@all_ages\n WOW! Members sharing all-ages shows! \nhttps://\nwowlist.org/AllAges So honored if you would join today's meeting? \nhttps://\nwowlist.org/events/18547/w\now-list-members-meeting\n…\n1"
+    },
+    {
+      "statusUrl": "/cotfg/status/663732869357965313",
+      "datetime": "2015-11-09T15:00:22.000Z",
+      "engagementLabel": "1 repost, 3 likes",
+      "links": [
+        {
+          "href": "/cotfg",
+          "text": ""
+        },
+        {
+          "href": "/cotfg",
+          "text": "COTFG"
+        },
+        {
+          "href": "/cotfg",
+          "text": "@cotfg"
+        },
+        {
+          "href": "/cotfg/status/663732869357965313",
+          "text": "Nov 9, 2015"
+        },
+        {
+          "href": "https://t.co/606xbcLhMq",
+          "text": "https://\nwowlist.org/events/19077/8\npm-sunday-november-22nd--drone-orchestra\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nCOTFG\n@cotfg\n·\nNov 9, 2015\nDrone Orchestra rehearsal was excellent. \nhttps://\nwowlist.org/events/19077/8\npm-sunday-november-22nd--drone-orchestra\n… Very excited to hear them and see you on Sunday - 11/22!\n1\n3"
+    },
+    {
+      "statusUrl": "/wowlist/status/632168285291835392",
+      "datetime": "2015-08-14T12:33:58.000Z",
+      "engagementLabel": "1 repost, 3 likes",
+      "links": [
+        {
+          "href": "https://t.co/KZ7x2zPgtB",
+          "text": "https://\nyoutu.be/nQg47LtixPI"
+        },
+        {
+          "href": "https://t.co/w5zPq7Z89p",
+          "text": "https://\nwowlist.org/join"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nAug 14, 2015\nThank you Shelby! Great WOW List tutorial!! \"Let's do this everybody!\" \nhttps://\nyoutu.be/nQg47LtixPI \nhttps://\nwowlist.org/join\nyoutube.com\nSHELBY'S WOWLIST TUTORIAL ~ for my new fave events website\nhttp://wowlist.orghttp://wowlist.org/chidiy/joinWOWLIST is a sup...\n1\n3"
+    },
+    {
+      "statusUrl": "/wowlist/status/606517628765650945",
+      "datetime": "2015-06-04T17:47:25.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "/RapidPulseFest",
+          "text": "@RapidPulseFest"
+        },
+        {
+          "href": "/hashtag/RP15?src=hashtag_click",
+          "text": "#RP15"
+        },
+        {
+          "href": "https://t.co/o65oORabb6",
+          "text": "https://\nwowlist.org/rapidpulse"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nJun 4, 2015\nChicago: \n@RapidPulseFest\n Rapid Pulse International Performance Art Festival starts today! #RP15 \nhttps://\nwowlist.org/rapidpulse"
+    },
+    {
+      "statusUrl": "/punkscriminals/status/604360847012413440",
+      "datetime": "2015-05-29T18:57:09.000Z",
+      "engagementLabel": "1 repost, 1 like",
+      "links": [
+        {
+          "href": "/punkscriminals",
+          "text": ""
+        },
+        {
+          "href": "/punkscriminals",
+          "text": "Punks & Criminals"
+        },
+        {
+          "href": "/punkscriminals",
+          "text": "@punkscriminals"
+        },
+        {
+          "href": "/punkscriminals/status/604360847012413440",
+          "text": "May 29, 2015"
+        },
+        {
+          "href": "https://t.co/wNFjbgp7a1",
+          "text": "https://\nwowlist.org/punksandcrimin\nals\n…"
+        },
+        {
+          "href": "/weareonthewater",
+          "text": "@weareonthewater"
+        },
+        {
+          "href": "/hashtag/livemusic?src=hashtag_click",
+          "text": "#livemusic"
+        },
+        {
+          "href": "/hashtag/show?src=hashtag_click",
+          "text": "#show"
+        },
+        {
+          "href": "/hashtag/concert?src=hashtag_click",
+          "text": "#concert"
+        },
+        {
+          "href": "/hashtag/event?src=hashtag_click",
+          "text": "#event"
+        },
+        {
+          "href": "/hashtag/music?src=hashtag_click",
+          "text": "#music"
+        },
+        {
+          "href": "/hashtag/calendar?src=hashtag_click",
+          "text": "#calendar"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nPunks & Criminals\n@punkscriminals\n·\nMay 29, 2015\nPutting shows up on @wowlistnyc now! \nhttps://\nwowlist.org/punksandcrimin\nals\n… \n@weareonthewater\n #livemusic #show #concert #event #music #calendar\n1\n1"
+    },
+    {
+      "statusUrl": "/pluspoolny/status/603631189308604416",
+      "datetime": "2015-05-27T18:37:45.000Z",
+      "engagementLabel": "1 reply, 4 reposts, 3 likes",
+      "links": [
+        {
+          "href": "/pluspoolny",
+          "text": ""
+        },
+        {
+          "href": "/pluspoolny",
+          "text": "+ POOL"
+        },
+        {
+          "href": "/pluspoolny",
+          "text": "@pluspoolny"
+        },
+        {
+          "href": "/pluspoolny/status/603631189308604416",
+          "text": "May 27, 2015"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\n+ POOL\n@pluspoolny\n·\nMay 27, 2015\nSUMMER\n1\n4\n3"
+    },
+    {
+      "statusUrl": "/wowlist/status/598530404669358080",
+      "datetime": "2015-05-13T16:49:03.000Z",
+      "engagementLabel": "2 reposts, 2 likes",
+      "links": [
+        {
+          "href": "/hashtag/DesertDip?src=hashtag_click",
+          "text": "#DesertDip"
+        },
+        {
+          "href": "https://t.co/3rl1wMar2x",
+          "text": "https://\nwowlist.org/desertdip"
+        },
+        {
+          "href": "/zachfromiji",
+          "text": "@zachfromiji"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nMay 13, 2015\niji #DesertDip tour: California, Washington, Arizona, and Nevada next month! \nhttps://\nwowlist.org/desertdip \n@zachfromiji\n2\n2"
+    },
+    {
+      "statusUrl": "/wowlist/status/596691623993581568",
+      "datetime": "2015-05-08T15:02:23.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "/elisegranata",
+          "text": "@elisegranata"
+        },
+        {
+          "href": "http://t.co/S7hb8xKAJQ",
+          "text": "http://\ngrasstronaut.com"
+        },
+        {
+          "href": "http://t.co/cG6FgcGsgu",
+          "text": "http://\ngtweekly.com/index.php/sant\na-cruz-news/good-times-cover-stories/6548-zines-20.html\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nMay 8, 2015\nZines 2.0 - Great article about documenting + connecting DIY in Good Times by \n@elisegranata\n \nhttp://\ngrasstronaut.com \nhttp://\ngtweekly.com/index.php/sant\na-cruz-news/good-times-cover-stories/6548-zines-20.html\n…"
+    },
+    {
+      "statusUrl": "/wowlist/status/596690796641923073",
+      "datetime": "2015-05-08T14:59:06.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "/elisegranata",
+          "text": "@elisegranata"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nMay 8, 2015\n\"Isn’t it amazing that two similar alternative arts warehouses on opposite sides of the country had no clue about eachother?\" \n@elisegranata"
+    },
+    {
+      "statusUrl": "/wowlist/status/592810776961916929",
+      "datetime": "2015-04-27T22:01:17.000Z",
+      "engagementLabel": "1 repost, 1 like",
+      "links": [
+        {
+          "href": "/elisegranata",
+          "text": "@elisegranata"
+        },
+        {
+          "href": "/hashtag/grasstronaut?src=hashtag_click",
+          "text": "#grasstronaut"
+        },
+        {
+          "href": "http://t.co/IS8uGw6zxb",
+          "text": "http://\ngrasstronaut.com/2015/01/29/hom\nework-in-every-town/\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nApr 27, 2015\nGreat talking with \n@elisegranata\n last week! Her blog #grasstronaut is the DIY Guide to DIY Guides! Wonderful writing! \nhttp://\ngrasstronaut.com/2015/01/29/hom\nework-in-every-town/\n…\n1\n1"
+    },
+    {
+      "statusUrl": "/zachfromiji/status/592787353925726208",
+      "datetime": "2015-04-27T20:28:13.000Z",
+      "engagementLabel": "2 reposts, 3 likes",
+      "links": [
+        {
+          "href": "/zachfromiji",
+          "text": ""
+        },
+        {
+          "href": "/zachfromiji",
+          "text": "iji"
+        },
+        {
+          "href": "/zachfromiji",
+          "text": "@zachfromiji"
+        },
+        {
+          "href": "/zachfromiji/status/592787353925726208",
+          "text": "Apr 27, 2015"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\niji\n@zachfromiji\n·\nApr 27, 2015\nI'm an idea list.\n2\n3"
+    },
+    {
+      "statusUrl": "/urbanhermit/status/592718356018556928",
+      "datetime": "2015-04-27T15:54:02.000Z",
+      "engagementLabel": "1 repost",
+      "links": [
+        {
+          "href": "/urbanhermit",
+          "text": ""
+        },
+        {
+          "href": "/urbanhermit",
+          "text": "Jamie Burkart"
+        },
+        {
+          "href": "/urbanhermit",
+          "text": "@urbanhermit"
+        },
+        {
+          "href": "/urbanhermit/status/592718356018556928",
+          "text": "Apr 27, 2015"
+        },
+        {
+          "href": "https://t.co/jSkbutnuw3",
+          "text": "https://\nwowlist.org/sundaydinner/e\nvents/15993/s-multimedia-theatre-adapatation-of-andrei-tarkovskys-solaris-with-mike-rekevics--secret-location-cl\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nJamie Burkart\n@urbanhermit\n·\nApr 27, 2015\nNYC: Doris Mirescu's live multimedia adaptation of Tarkovsky's SOLARIS shows what stage and cinema can be! Ends Sat  \nhttps://\nwowlist.org/sundaydinner/e\nvents/15993/s-multimedia-theatre-adapatation-of-andrei-tarkovskys-solaris-with-mike-rekevics--secret-location-cl\n…\n1"
+    },
+    {
+      "statusUrl": "/TheSilentBarn/status/592424659225845760",
+      "datetime": "2015-04-26T20:27:00.000Z",
+      "engagementLabel": "2 reposts, 3 likes",
+      "links": [
+        {
+          "href": "/TheSilentBarn",
+          "text": ""
+        },
+        {
+          "href": "/TheSilentBarn",
+          "text": "The Silent Barn"
+        },
+        {
+          "href": "/TheSilentBarn",
+          "text": "@TheSilentBarn"
+        },
+        {
+          "href": "/TheSilentBarn/status/592424659225845760",
+          "text": "Apr 26, 2015"
+        },
+        {
+          "href": "/TheSilentBarn",
+          "text": "@TheSilentBarn"
+        },
+        {
+          "href": "http://t.co/03vayVcYxT",
+          "text": "http://\ngofundme.com/sjdjkk"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nThe Silent Barn\n@TheSilentBarn\n·\nApr 26, 2015\nReplying to \n@TheSilentBarn\ndonations for the family of akai gurley can be directed here: \nhttp://\ngofundme.com/sjdjkk\n\nsee you soon\n2\n3"
+    },
+    {
+      "statusUrl": "/urbanhermit/status/591944013768499200",
+      "datetime": "2015-04-25T12:37:05.000Z",
+      "engagementLabel": "1 repost",
+      "links": [
+        {
+          "href": "/urbanhermit",
+          "text": ""
+        },
+        {
+          "href": "/urbanhermit",
+          "text": "Jamie Burkart"
+        },
+        {
+          "href": "/urbanhermit",
+          "text": "@urbanhermit"
+        },
+        {
+          "href": "/urbanhermit/status/591944013768499200",
+          "text": "Apr 25, 2015"
+        },
+        {
+          "href": "https://t.co/yPlmpXlshq",
+          "text": "https://\nwowlist.org/kcdiy/events/1\n5928/in-the-surface-of-architecture-conversation-with-jack-rees\n…"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nJamie Burkart\n@urbanhermit\n·\nApr 25, 2015\nArtist, architect + friend Jack Rees lecture 2:30pm today: In the surface of architecture. UMKC Atterbury Room 237 \nhttps://\nwowlist.org/kcdiy/events/1\n5928/in-the-surface-of-architecture-conversation-with-jack-rees\n…\n1"
+    },
+    {
+      "statusUrl": "/wowlist/status/591668857670148096",
+      "datetime": "2015-04-24T18:23:43.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "/juliafredenburg",
+          "text": "@juliafredenburg"
+        },
+        {
+          "href": "/juliafredenburg",
+          "text": "@juliafredenburg"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nApr 24, 2015\nReplying to \n@juliafredenburg\nTouch \"Add to the WOW List\" to add a new event. On the event touch \"add to\" and type the names of more WOW Lists! \n@juliafredenburg\n \n@wowlist"
+    },
+    {
+      "statusUrl": "/wowlist/status/591666366215811073",
+      "datetime": "2015-04-24T18:13:48.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "/juliafredenburg",
+          "text": "@juliafredenburg"
+        },
+        {
+          "href": "https://t.co/d0A6kYzDuc",
+          "text": "https://\nwowlist.org/people/julia"
+        },
+        {
+          "href": "/juliafredenburg",
+          "text": "@juliafredenburg"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nApr 24, 2015\nReplying to \n@juliafredenburg\nYour profile page shows all your WOW Lists.  Open the sidebar, then click your name! : ) \nhttps://\nwowlist.org/people/julia \n@juliafredenburg\n \n@wowlist"
+    },
+    {
+      "statusUrl": "/wowlist/status/591664757473673216",
+      "datetime": "2015-04-24T18:07:25.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "/juliafredenburg",
+          "text": "@juliafredenburg"
+        },
+        {
+          "href": "/juliafredenburg",
+          "text": "@juliafredenburg"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nApr 24, 2015\nReplying to \n@juliafredenburg\nYour home calendar shows local events from WOW Lists you follow.  Coming soon: toggle ( local | everywhere ) \n@juliafredenburg\n \n@wowlist"
+    },
+    {
+      "statusUrl": "/wowlist/status/590961074326917122",
+      "datetime": "2015-04-22T19:31:14.000Z",
+      "engagementLabel": "1 like",
+      "links": [
+        {
+          "href": "https://t.co/mM9psewVlR",
+          "text": "https://\nwowlist.org/kcdiy/events/1\n5939\n…"
+        },
+        {
+          "href": "/hashtag/folkPunk?src=hashtag_click",
+          "text": "#folkPunk"
+        },
+        {
+          "href": "/hashtag/KCDIY?src=hashtag_click",
+          "text": "#KCDIY"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nApr 22, 2015\nEvent: ROBBERS ROOST / MY PIZZA MY WORLD / @DSTRYNATEALLEN & Pac-Away Dots @ El Torreon KC tonight! \nhttps://\nwowlist.org/kcdiy/events/1\n5939\n… #folkPunk #KCDIY\n1"
+    },
+    {
+      "statusUrl": "/wowlist/status/590942060829663232",
+      "datetime": "2015-04-22T18:15:41.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "http://t.co/dASFox1C0C",
+          "text": "http://\nwowlist.org"
+        },
+        {
+          "href": "http://t.co/hWIGngWvC2",
+          "text": "http://\nalliedmedia.org/amc"
+        },
+        {
+          "href": "/PMPressOrg/status/589457364077645824/photo/1",
+          "text": ""
+        }
+      ],
+      "hasVisibleMedia": true,
+      "text": "WOW List!\n@wowlist\n·\nApr 22, 2015\nhttp://\nwowlist.org will be at Allied Media Conference June 18-21 in Detroit! Join us! \nhttp://\nalliedmedia.org/amc\nQuote\nPM Press\n@PMPressOrg\n·\nApr 18, 2015\nGo register for Allied Media Conference! \nhttps://\nalliedmedia.org/amc @AlliedMediaConf @Allied_Media #amc2015"
+    },
+    {
+      "statusUrl": "/wowlist/status/587713396486856704",
+      "datetime": "2015-04-13T20:26:07.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "http://t.co/e7KLKI81IM",
+          "text": "http://\nwowlist.org/events/15529"
+        },
+        {
+          "href": "/hashtag/org20?src=hashtag_click",
+          "text": "#org20"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nApr 13, 2015\nThanks Michelle for adding the Organizing 2.0 conference! Helps us get the word out about everyone's events! \nhttp://\nwowlist.org/events/15529 #org20"
+    },
+    {
+      "statusUrl": "/wowlist/status/433671630837919744",
+      "datetime": "2014-02-12T18:39:08.000Z",
+      "engagementLabel": "",
+      "links": [
+        {
+          "href": "/urbanhermit",
+          "text": "@urbanhermit"
+        },
+        {
+          "href": "/hashtag/SundayDinner?src=hashtag_click",
+          "text": "#SundayDinner"
+        },
+        {
+          "href": "http://t.co/GgppxNburh",
+          "text": "http://\now.ly/tyMAa"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List!\n@wowlist\n·\nFeb 12, 2014\nRichard & Jamie (\n@urbanhermit\n) are doing a big project based on the wowlist calendars we make at #SundayDinner! \nhttp://\now.ly/tyMAa"
+    },
+    {
+      "statusUrl": "/all_ages/status/433628764493606913",
+      "datetime": "2014-02-12T15:48:48.000Z",
+      "engagementLabel": "1 reply, 4 reposts, 6 likes",
+      "links": [
+        {
+          "href": "/all_ages",
+          "text": ""
+        },
+        {
+          "href": "/all_ages",
+          "text": "all_ages"
+        },
+        {
+          "href": "/all_ages",
+          "text": "@all_ages"
+        },
+        {
+          "href": "/all_ages/status/433628764493606913",
+          "text": "Feb 12, 2014"
+        }
+      ],
+      "hasVisibleMedia": false,
+      "text": "WOW List! reposted\nall_ages\n@all_ages\n·\nFeb 12, 2014\nOne of the most powerful aspects of local scenes is how they orient our cultural thinking towards a more humane scale.\n1\n4\n6"
+    }
+  ],
+  "shortUrlResolutions": [
+    {
+      "shortUrl": "https://t.co/0jKQMlauld",
+      "resolvedUrl": "https://www.meowwolf.com/diy",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/L0gAiWmIbX",
+      "resolvedUrl": "https://docs.google.com/spreadsheets/d/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/Q2vtL8JdOq",
+      "resolvedUrl": "https://www.youtube.com/watch?v=g7zIdDeRVjU",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/jhGFCwormV",
+      "resolvedUrl": "https://wowlist.org/events/25653/light-vigil-for-ghost-ship-at-lake-merritt-oakland---tonight",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/vWtAyQiwMl",
+      "resolvedUrl": "https://www.youcaring.com/firevictimsofoaklandfiredec232016-706684",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/xBooqnpcBS",
+      "resolvedUrl": "https://fb.me/1TW9AQgwM",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/O1euiAdPmX",
+      "resolvedUrl": "https://popular.vote/",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/ST6A7fMabN",
+      "resolvedUrl": "https://ift.tt/2fjVs71",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/D6udDGJ7Um",
+      "resolvedUrl": "https://wowlist.org/DownWithTrump",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/t0grs2Do3H",
+      "resolvedUrl": "https://fb.me/2TmsoJZSP",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/7lKlHLEZf1",
+      "resolvedUrl": "https://wowlist.org/sundaydinner/events/24130/sunday-dinner-potluck-uop-psdn-8pm--jjs",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/3an880EXo8",
+      "resolvedUrl": "https://nycdiy.org/",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/ixsJHQRdDK",
+      "resolvedUrl": "https://nycdiy.org/",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/a39ETzpVWO",
+      "resolvedUrl": "https://wowlist.org/nycdiy/events/23185/demonstration-for-altonsterling--philandocastile-at-5pm-today-in-union-square-nyc",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/DbCvjUQM1n",
+      "resolvedUrl": "https://www.sresproductions.com/events/fillmore-jazz-festival/",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/JpK2QOam9r",
+      "resolvedUrl": "https://wowlist.org/AllAges",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/YuCfobbQTB",
+      "resolvedUrl": "https://wowlist.org/events/18547/wow-list-members-meeting",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/606xbcLhMq",
+      "resolvedUrl": "https://wowlist.org/events/19077/8pm-sunday-november-22nd--drone-orchestra",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/KZ7x2zPgtB",
+      "resolvedUrl": "https://youtu.be/nQg47LtixPI",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/w5zPq7Z89p",
+      "resolvedUrl": "https://wowlist.org/join",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/o65oORabb6",
+      "resolvedUrl": "https://wowlist.org/rapidpulse",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/wNFjbgp7a1",
+      "resolvedUrl": "https://wowlist.org/punksandcriminals",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/3rl1wMar2x",
+      "resolvedUrl": "https://wowlist.org/desertdip",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "http://t.co/S7hb8xKAJQ",
+      "resolvedUrl": "https://grasstronaut.com/",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "http://t.co/cG6FgcGsgu",
+      "resolvedUrl": "https://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "http://t.co/IS8uGw6zxb",
+      "resolvedUrl": "https://grasstronaut.com/2015/01/29/homework-in-every-town/",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/jSkbutnuw3",
+      "resolvedUrl": "https://wowlist.org/sundaydinner/events/15993/s-multimedia-theatre-adapatation-of-andrei-tarkovskys-solaris-with-mike-rekevics--secret-location-cl",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "http://t.co/03vayVcYxT",
+      "resolvedUrl": "https://www.gofundme.com/sjdjkk",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/yPlmpXlshq",
+      "resolvedUrl": "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/d0A6kYzDuc",
+      "resolvedUrl": "https://wowlist.org/people/julia",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "https://t.co/mM9psewVlR",
+      "resolvedUrl": "https://wowlist.org/kcdiy/events/15939",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "http://t.co/dASFox1C0C",
+      "resolvedUrl": "https://wowlist.org/",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "http://t.co/hWIGngWvC2",
+      "resolvedUrl": "https://alliedmedia.org/amc",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "http://t.co/e7KLKI81IM",
+      "resolvedUrl": "https://wowlist.org/events/15529",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    },
+    {
+      "shortUrl": "http://t.co/GgppxNburh",
+      "resolvedUrl": "https://ow.ly/tyMAa",
+      "method": "t.co Location header; historical http://t.co links requested over HTTPS when the HTTP endpoint returned a proxy error"
+    }
+  ],
+  "supplementalThreads": [
+    {
+      "authoredStatusUrl": "/wowlist/status/591664757473673216",
+      "parentStatusUrl": "/juliafredenburg/status/591266765251878912",
+      "parentPublishedAt": "2015-04-23",
+      "parentAuthor": "Julia Fredenburg (@juliafredenburg)",
+      "parentVisibleText": "@wowlist How can I see all events regardless of my location?",
+      "relationship": "public product-support question answered by the project account"
+    },
+    {
+      "authoredStatusUrl": "/wowlist/status/591666366215811073",
+      "parentStatusUrl": "/juliafredenburg/status/530907046963855360",
+      "parentPublishedAt": "2014-11-07",
+      "parentAuthor": "Julia Fredenburg (@juliafredenburg)",
+      "parentVisibleText": "How do I find my lists on wowlist? @wowlist",
+      "relationship": "public product-support question answered by the project account"
+    },
+    {
+      "authoredStatusUrl": "/wowlist/status/591668857670148096",
+      "parentStatusUrl": "/juliafredenburg/status/531892607199494144",
+      "parentPublishedAt": "2014-11-10",
+      "parentAuthor": "Julia Fredenburg (@juliafredenburg)",
+      "parentVisibleText": "@wowlist How do I add an event to a list from the home screen? too many clicks to get there other wise",
+      "relationship": "public workflow-friction report answered by the project account"
+    },
+    {
+      "authoredStatusUrl": "/wowlist/status/771455571501416448",
+      "parentStatusUrl": null,
+      "parentPublishedAt": null,
+      "parentAuthor": null,
+      "parentVisibleText": "This Post was deleted by the Post author.",
+      "relationship": "parent unavailable; participant or initiating text cannot be recovered from the live conversation"
+    }
+  ]
+}

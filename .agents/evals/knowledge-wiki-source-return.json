@@ -1,0 +1,56 @@
+{
+  "name": "Knowledge Wiki missing pages and source return",
+  "version": "1.0.1",
+  "score_maximum": 100,
+  "score_threshold": 100,
+  "criteria": [
+    {
+      "id": "SR-001",
+      "title": "Approved missing-page set exists",
+      "weight": 15,
+      "blocking": true
+    },
+    {
+      "id": "SR-002",
+      "title": "Pages preserve canonical authority and reader structure",
+      "weight": 15,
+      "blocking": true
+    },
+    {
+      "id": "SR-003",
+      "title": "Pages are discoverable from edited indexes",
+      "weight": 10,
+      "blocking": true
+    },
+    {
+      "id": "SR-004",
+      "title": "Fresh source-return receipt is canonical, bounded, and plural",
+      "weight": 20,
+      "blocking": true
+    },
+    {
+      "id": "SR-005",
+      "title": "Public and protected boundaries remain intact",
+      "weight": 15,
+      "blocking": true
+    },
+    {
+      "id": "SR-006",
+      "title": "Human librarian review remains open",
+      "weight": 10,
+      "blocking": true
+    },
+    {
+      "id": "SR-007",
+      "title": "Evidence debt and re-entry are explicit",
+      "weight": 10,
+      "blocking": true
+    },
+    {
+      "id": "SR-008",
+      "title": "Adversarial mutation coverage exists",
+      "weight": 5,
+      "blocking": true
+    }
+  ]
+}

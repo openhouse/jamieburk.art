@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "suite_id": "knowledge-wiki-employment-context",
+  "title": "Knowledge Wiki employment context and hiring acceptance",
+  "objective": "Make the governed public-safe Wiki useful for present-tense opportunity research and bounded portfolio acceptance testing without exposing private job-search context or giving simulated readers hidden evidence.",
+  "primary_brief": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md",
+  "evaluation_model": "lexicographic-hard-gates",
+  "official_role_fingerprint_policy": "These hashes lock the reviewed official-role facts and the governed requirement-to-proof mappings. Reverification may update a role record and its hash only in the same reviewed change.",
+  "official_role_fingerprints": {
+    "opportunity.aclu.product-manager-ii-discovery.8482872002": "6575bd6f1d5a20c717d2dc4362deb037a754e0244bf9443256b0113e668650f4",
+    "opportunity.asana.ai-implementation-manager-service-management.8027437": "1e865330780a55dc750fefb0ffa25dfb90e450ebeac863dda5de24195bc038fe",
+    "opportunity.benepass.product-operations-manager.7f963a7a": "2a3df9d55484cbc70188046bc196bfd4dd23b92cc97acb47580074470d6e720e",
+    "opportunity.codepath.senior-program-manager-claude-corps.5182020007": "9298f488af3e9f4b7a7ce31b777f753af38571b0d5a2b19674cdc8925639659d",
+    "opportunity.nyc-oti.technical-operations-manager.782369": "7040ed603276458fb3b35adac19a89fe66396751a1bc529606eba3c3a5538a0b",
+    "opportunity.permitflow.product-operations-manager.8a6e6066": "cc5305f4e916c9bc51a1e015620a0ac74fece11e5a3657400f69e3c7bdf58dce"
+  },
+  "priority_order": [
+    "privacy-rights-consent-public-safety",
+    "factual-support",
+    "collective-credit",
+    "hard-role-requirements",
+    "wiki-requirement-coverage",
+    "public-portfolio-coverage",
+    "reader-clarity",
+    "writer-voice",
+    "concision"
+  ],
+  "criteria": [
+    {
+      "id": "KWE-001",
+      "title": "One authority and a private-source boundary",
+      "pass": "Opportunity pages extend the canonical Knowledge Wiki; QA contexts do not duplicate claim or source authority; raw communications, warm paths, and application status remain outside Git."
+    },
+    {
+      "id": "KWE-002",
+      "title": "Six current official opportunity contexts",
+      "pass": "All six Tier 1 roles have official-employer URLs, live-state and freshness metadata, compensation and location facts, confirmed/inferred/unknown separation, and bounded one-year questions."
+    },
+    {
+      "id": "KWE-003",
+      "title": "Stable requirements and honest coverage",
+      "pass": "Requirement IDs are unique; proof and Wiki references resolve; visible, qualified, source-needed, experience-gap, hard-screen, and unknown states remain distinct."
+    },
+    {
+      "id": "KWE-004",
+      "title": "Career and source-channel diagnostics",
+      "pass": "Generated reports expose career-phase and source-channel coverage without treating equal density, private access, or source discovery as publication permission."
+    },
+    {
+      "id": "KWE-005",
+      "title": "Title-blind discovery and negative controls",
+      "pass": "The six known-good roles are recovered without titles; incompatible roles are rejected for credential, compensation, travel, or technical hard screens."
+    },
+    {
+      "id": "KWE-006",
+      "title": "Hiring evaluator isolation",
+      "pass": "The evaluator accepts only public route content plus public role and reader context; the Wiki gap resolver is a different operator and no evaluator packet contains hidden Wiki evidence."
+    },
+    {
+      "id": "KWE-007",
+      "title": "Reader context integrity",
+      "pass": "Generic and named reader contexts are configurable; every named profile has public sources, an explicit category, prohibited assumptions, and a simulation disclaimer."
+    },
+    {
+      "id": "KWE-008",
+      "title": "Candidate and context binding",
+      "pass": "Runtime packets record exact Git SHA, worktree state, public snapshot hash, opportunity hash, reader hash, suite hash, timestamp, and development or holdout panel identity."
+    },
+    {
+      "id": "KWE-009",
+      "title": "Mutation resistance",
+      "pass": "Tests reject private locators, stale roles, unsupported proof IDs, duplicate requirements, hidden hard screens, sole-authorship drift, private evaluator inputs, and unsourced named lenses."
+    },
+    {
+      "id": "KWE-010",
+      "title": "Bounded public hill climb",
+      "pass": "One small public change improves a decision-relevant signal using existing governed proof, adds no unsupported hiring claim, and leaves human hiring and application outcomes open."
+    }
+  ],
+  "human_gates": [
+    {
+      "id": "KWE-H01",
+      "owner": "Jamie",
+      "state": "not-requested",
+      "question": "Does the exact public candidate remain true, warm, useful, and ready to use in an application?"
+    },
+    {
+      "id": "KWE-H02",
+      "owner": "trusted hiring reader",
+      "state": "not-requested",
+      "question": "Can the reader understand Jamie's category, strongest evidence, and honest limits without private coaching?"
+    },
+    {
+      "id": "KWE-H03",
+      "owner": "rights and collective-credit reviewers",
+      "state": "not-requested",
+      "question": "Does any later public projection require collaborator, rights, or consent review?"
+    },
+    {
+      "id": "KWE-H04",
+      "owner": "Jamie",
+      "state": "human-blocked",
+      "question": "Was a real application submitted without this system delaying it by more than one working day?"
+    }
+  ],
+  "machine_success_decision": "ready-for-human-review-and-outward-action",
+  "machine_success_does_not_mean": [
+    "actual reader participation or endorsement",
+    "interview or hiring advancement",
+    "one-year team fit",
+    "application submission",
+    "rights clearance",
+    "production approval"
+  ]
+}

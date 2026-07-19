@@ -1,0 +1,45 @@
+{
+  "asOf": "2026-07-18",
+  "topK": 6,
+  "profileSignals": [
+    "ambiguous-work",
+    "cross-functional-delivery",
+    "public-facing-systems",
+    "requirements",
+    "workflow-mapping",
+    "documentation",
+    "risk-and-dependencies",
+    "launch-readiness",
+    "onboarding",
+    "stakeholder-translation",
+    "responsible-ai"
+  ],
+  "knownGoodOpportunityIds": [
+    "opportunity.nyc-oti.technical-operations-manager.782369",
+    "opportunity.aclu.product-manager-ii-discovery.8482872002",
+    "opportunity.benepass.product-operations-manager.7f963a7a",
+    "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+    "opportunity.asana.ai-implementation-manager-service-management.8027437",
+    "opportunity.permitflow.product-operations-manager.8a6e6066"
+  ],
+  "decoyControls": [
+    {
+      "id": "decoy.generic-operations-analyst",
+      "signals": ["requirements", "documentation", "stakeholder-translation"]
+    },
+    {
+      "id": "decoy.community-program-coordinator",
+      "signals": ["onboarding", "stakeholder-translation", "public-facing-systems"]
+    },
+    {
+      "id": "decoy.web-content-manager",
+      "signals": ["documentation", "public-facing-systems"]
+    }
+  ],
+  "negativeControls": [
+    {"id":"negative.staff-backend-go","signals":["cross-functional-delivery"],"hardScreens":["seven-years-production-go"]},
+    {"id":"negative.clinical-operations-director","signals":["workflow-mapping","documentation"],"hardScreens":["active-clinical-license"]},
+    {"id":"negative.traveling-implementation-consultant","signals":["requirements","launch-readiness"],"hardScreens":["seventy-five-percent-travel"]},
+    {"id":"negative.low-compensation-coordinator","signals":["stakeholder-translation","documentation"],"hardScreens":["posted-maximum-below-100000"]}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-16",
+  "status": "complete-current-surface-accounting-with-protected-full-index-and-minimized-public-ledger",
+  "publicLedger": "docs/knowledge-bank/corpora/facebook-personal-wowlist-events-public-ledger-2026-07-16.json",
+  "publicLedgerSha256": "6d0801464836c6cb41711426e8d5aff80d634962510b4f2179a4fa19bb7810ae",
+  "publicLedgerBytes": 8481,
+  "protectedCaptureSha256": "abcfdd059a87217fe671e9a9ff2d364768c2861ca3013f2e7159e94696c9e6ad",
+  "protectedCapturePublished": false,
+  "personalProfileDisplayedEventSlots": 511,
+  "personalProfileDistinctBaseEventIds": 502,
+  "personalProfileExplicitJamieOrganizerRecords": 20,
+  "personalProfileAssociatedRecords": 491,
+  "personalHostControlPastEvents": 21,
+  "personalHostControlCountDifference": 1,
+  "wowListCurrentEventAnchors": 0,
+  "wowListHistoricalPopulationStatus": "unresolved",
+  "scopeNote": "This is complete accounting of the 511 cards exposed by Jamie's authenticated personal Past Events surface and the current zero-card WOW List Events surface on the capture date. It is not a native Meta owner export or a claim that every historical event remains visible.",
+  "publicSafetyNote": "The full personal index remains protected. The public ledger retains aggregates, digests, 14 selected mission-relevant organizer records, bounded response labels, and research dispositions while excluding bulk titles, ordinary-life records, guest identities, raw descriptions, comments, reactions, and authenticated state."
+}

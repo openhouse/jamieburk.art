@@ -4,9 +4,12 @@ import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-regist
 
 const publicSurfaceFiles = [
   "apps/www/src/content/work/callnyc.mdx",
+  "apps/www/src/content/work/fair-rent-nyc.mdx",
+  "apps/www/src/content/work/196-sunday-dinner.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/data/proofs.ts",
-  "apps/www/src/app/resume/page.tsx"
+  "apps/www/src/app/resume/page.tsx",
+  "apps/www/src/app/work/technical-operations/page.tsx"
 ];
 
 const forbiddenPathPatterns = [
