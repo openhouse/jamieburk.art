@@ -166,7 +166,9 @@ function publicEvaluationMarkdown(report) {
       `- Deterministic disposition: \`${opportunity.decision}\``,
       `- Critical signals observed: ${opportunity.criticalObserved}/${opportunity.criticalTotal}`,
       `- All signals observed: ${opportunity.observed}/${opportunity.requirementTotal}`,
+      `- Opportunity status live: ${opportunity.live ? "yes" : "no"}`,
       `- Role context current at candidate time: ${opportunity.fresh ? "yes" : "no"}`,
+      `- Exclusionary hard screen recorded: ${opportunity.hardScreenBlocked ? "yes" : "no"}`,
       ""
     );
     for (const requirement of opportunity.requirementCoverage) {
@@ -221,16 +223,26 @@ export function evaluatePublicHiring(repoRoot) {
     });
     const critical = requirementCoverage.filter((item) => item.importance === "critical");
     const criticalObserved = critical.filter((item) => item.observed).length;
-    const fresh = opportunity.status !== "live" || opportunity.reviewBy >= generatedAt.slice(0, 10);
+    const live = opportunity.status === "live";
+    const fresh = live && opportunity.reviewBy >= generatedAt.slice(0, 10);
+    const hardScreenBlocked = opportunity.hardScreens.some(
+      (screen) => screen.state === "not-met" || screen.disposition === "do-not-pursue"
+    );
     return {
       id: opportunity.id,
       title: opportunity.title,
       roleContextHash: sha256(JSON.stringify(opportunity)),
+      live,
       fresh,
+      hardScreenBlocked,
       decision:
-        fresh && critical.length > 0 && criticalObserved / critical.length >= 0.75
-          ? "deterministic-ready-for-human-review"
-          : "evidence-gap-review",
+        !live
+          ? "not-live"
+          : hardScreenBlocked
+            ? "hard-screen-exclusion"
+            : fresh && critical.length > 0 && criticalObserved / critical.length >= 0.75
+              ? "deterministic-ready-for-human-review"
+              : "evidence-gap-review",
       observed: requirementCoverage.filter((item) => item.observed).length,
       requirementTotal: requirementCoverage.length,
       criticalObserved,
@@ -279,12 +291,12 @@ function gapClassification(requirement) {
   if (requirement.gap_type === "experience") return "true-experience-gap";
   if (requirement.gap_type === "hard-screen") return "hard-screen-gap";
   if (requirement.status === "wiki-proven-not-projected") return "wiki-proven-not-projected";
+  if (requirement.status === "visible-weak") return "visible-weak-evidence-gap";
   if (requirement.status === "source-needed") return "source-needs-close-reading";
   if (requirement.status === "corroboration-needed") return "corroboration-needed";
   if (requirement.status === "rights-blocked") return "rights-or-consent-blocked";
   if (requirement.status === "experience-gap") return "true-experience-gap";
   if (requirement.status === "hard-screen") return "hard-screen-gap";
-  if (requirement.wiki_evidence?.length) return "wiki-proven-not-projected";
   return "role-context-or-evidence-unknown";
 }
 

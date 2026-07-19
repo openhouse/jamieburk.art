@@ -996,9 +996,7 @@ export function compileWiki(options = {}) {
       liveOpportunityCount: opportunityRecords.filter((record) => record.opportunity_status === "live").length,
       criticalRequirementCount: criticalRequirements.length,
       criticalRequirementGapCount: criticalRequirements.filter((requirement) =>
-        ["source-needed", "corroboration-needed", "experience-gap", "hard-screen", "unknown"].includes(
-          requirement.status
-        )
+        !["visible-proven", "visible-qualified"].includes(requirement.status)
       ).length,
       warningCount: warnings.length,
       warnings

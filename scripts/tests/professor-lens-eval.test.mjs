@@ -91,3 +91,24 @@ test("guard rejects a stale or weakened holdout scorecard", () => {
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
 });
+
+test("guard rejects a scorecard bound to another public candidate", () => {
+  const staleScorecards = [
+    ...["margaret-morse", "warren-sack"].flatMap((lens) =>
+      ["a", "b", "c"].map((judge) => JSON.parse(readFileSync(
+        path.join(repoRoot, `docs/qa/evals-H/${lens}-final-${judge}.json`),
+        "utf8"
+      )))
+    )
+  ];
+  staleScorecards[0].candidateSha256 = "0".repeat(64);
+
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    finalScorecards: staleScorecards
+  });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});

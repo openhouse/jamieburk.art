@@ -410,6 +410,18 @@ test("opportunity contract preserves requirements, freshness, screens, and offic
   assert.deepEqual(result.errors, []);
   assert.equal(result.health.diagnostics.opportunityCount, 1);
   assert.equal(result.health.diagnostics.criticalRequirementCount, 1);
+  assert.equal(result.health.diagnostics.criticalRequirementGapCount, 0);
+});
+
+test("visible-weak critical requirements remain counted as gaps", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) => value
+    .replace("status: visible-proven", "status: visible-weak")
+    .replace("gap_type: none", "gap_type: source"));
+  const result = compile(root);
+  assert.deepEqual(result.errors, []);
+  assert.equal(result.health.diagnostics.criticalRequirementGapCount, 1);
 });
 
 test("unknown role-requirement evidence fails closed", () => {

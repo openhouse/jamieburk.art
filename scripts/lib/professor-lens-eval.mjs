@@ -34,7 +34,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "3cf4e23136486be62797034ded7ac3e4ecdbfd8d90eb15ef142b6ced4a8e1ee9";
+const approvedCandidateSha256 = "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -212,7 +212,8 @@ export function evaluateProfessorLenses({
       "Three final holdouts per lens score the bound candidate at 4 with no failing judge.",
       finalScorecards.length === 6 &&
         finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
-          scorecard.score === 4 && scorecard.pass === true),
+          scorecard.score === 4 && scorecard.pass === true &&
+          scorecard.candidateSha256 === candidateSha256),
       `${finalScorecards.filter((scorecard) => scorecard.score === 4 && scorecard.pass === true).length}/6 final scorecards pass at 4.`
     )
   ];

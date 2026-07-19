@@ -82,4 +82,35 @@ test("gap resolver remains separate and cannot approve projection", () => {
   assert.equal(resolution.humanApprovalRequired, true);
   assert.ok(resolution.findings.every((finding) => finding.requiresHumanApproval));
   assert.ok(resolution.findings.some((finding) => finding.classification === "true-experience-gap"));
+  assert.ok(resolution.findings.some((finding) => finding.classification === "visible-weak-evidence-gap"));
+  assert.ok(!resolution.findings.some((finding) =>
+    finding.currentStatus === "visible-weak" && finding.classification === "wiki-proven-not-projected"
+  ));
+});
+
+test("closed opportunities cannot be ready for human review", () => {
+  const root = candidateFixture();
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");
+  writeFileSync(
+    opportunityPath,
+    readFileSync(opportunityPath, "utf8").replace("opportunity_status: live", "opportunity_status: closed")
+  );
+  const oti = evaluatePublicHiring(root).report.opportunities.find((item) => item.id.includes("nyc-oti"));
+  assert.equal(oti.live, false);
+  assert.equal(oti.decision, "not-live");
+});
+
+test("exclusionary hard screens fail closed", () => {
+  const root = candidateFixture();
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");
+  writeFileSync(
+    opportunityPath,
+    readFileSync(opportunityPath, "utf8").replace(
+      "state: review-needed\n    disposition: verify",
+      "state: not-met\n    disposition: do-not-pursue"
+    )
+  );
+  const oti = evaluatePublicHiring(root).report.opportunities.find((item) => item.id.includes("nyc-oti"));
+  assert.equal(oti.hardScreenBlocked, true);
+  assert.equal(oti.decision, "hard-screen-exclusion");
 });

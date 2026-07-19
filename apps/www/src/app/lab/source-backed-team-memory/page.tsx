@@ -88,7 +88,7 @@ export default function SourceBackedTeamMemoryPage() {
               src="/artifacts/ai-evals/completion-certificate.jpg"
               width={1024}
             />
-            <figcaption className="border-t border-jb-ink/10 p-4 text-sm leading-6 text-jb-ink/68">
+            <figcaption className="border-t border-jb-ink/10 p-4 text-sm leading-6 text-jb-ink/76">
               Public completion certificate. Professional development,
               not instructor affiliation or a claim that the lab is production SaaS.
             </figcaption>

@@ -1,1 +1,40 @@
-{"evaluator":"Final holdout A — PR-015, Prof. Margaret Morse lens","phase":"holdout","score":4,"pass":true,"evidence":["The About page directly connects the practice as “artistic, civic, technical, and social,” with links to WOWList, Sunday Dinner/196, FairRentNYC, and Source-Backed Team Memory—all reachable within one additional click.","At least three distinct continuities are explicit: WOWList turns community vocabulary into participatory publishing infrastructure; Sunday Dinner/196 turns hospitality and trust into repeatable hosting and onboarding; FairRentNYC turns meetings, public sources, and civic participation into campaign memory and action pathways; HJE turns customer knowledge and institutional voice into maintained technical operations.","The recurring method is plainly stated: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.","Project-specific differences remain legible: commercial stewardship at HJE, decentralized cultural discovery in WOWList, resident-facing data translation in CallNYC, consent-bound hospitality at Sunday Dinner/196, coalition documentation in FairRentNYC, and human-reviewed knowledge practice in the lab.","Reciprocal agency is visible through participant governance, community language shaping WOWList, collaborators using and continuing coalition records, people shaping the Sunday Dinner/196 practice, and repeated co-built, collective, and collaborator-led framing.","Job fit remains prominent through the homepage’s role-oriented paths, the Technical Operations & Implementation proof map, explicit capability language, transferable-proof sections, and hiring-team summaries.","Collective credit is consistently bounded: WOWList is co-built; FairRentNYC explicitly rejects sole causation; campaign outcomes remain collective; HJE credits the company team; Sunday Dinner/196 credits its community.","Privacy boundaries are explicit across the reviewed surfaces, excluding private dashboards, customer data, coalition notes, legal-review materials, correspondence, guest histories, contact details, access information, and unapproved images or quotations.","The public course-completion certificate is correctly bounded as professional development, not instructor affiliation, endorsement, production-SaaS evidence, or proof that the lab is a finished product."],"gaps":[],"safety_findings":["No visible use of private UCSC narrative evaluations, private correspondence, or unapproved testimonials was found in the reviewed copy and links.","The lab’s public course-completion artifact stays within the permitted boundary and includes an explicit limiting caption.","Archived CallNYC content is clearly labeled unofficial, historical, and unsuitable as current constituent-service guidance."],"recommendation":"Pass PR-015 unchanged. The visible portfolio establishes an interdisciplinary operating lineage while preserving project difference, reciprocal agency, role clarity, collective credit, privacy, and protected-source boundaries."}
+{
+  "evaluator": "Codex independent holdout reader",
+  "reviewerId": "morse-a-employment-release",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The recomputed SHA-256 exactly matches the expected candidate fingerprint.",
+    "The About page provides a visible through-line from the 2006 Open House experiment to WOWList, Sunday Dinner and 196, NYC Artist Coalition work, and source-backed team memory, explicitly connecting artistic, civic, technical, and social practice.",
+    "The linked [Good Times Open House report](https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html) supplies the media-archaeological and embodied basis: art-life experimentation, Ant Farm and Fluxus lineages, attentive observation, many-perspective documentation, communal space, and participants changing their bodily behavior in relation to recording media.",
+    "The four About-page continuity examples distinguish relationships, interface and use, and learning and continuity. They show people influencing systems through language, participation, hospitality, shared space, documentation, and recurring practice rather than receiving conventional administrative services.",
+    "Sunday Dinner and 196 make hospitality, trust, artist support, access, facilitation, consent, and living social practice concrete; WOWList connects community vocabulary to a distributed technical platform; coalition work connects lived cultural-space experience to civic interfaces and shared memory.",
+    "The homepage and technical-operations page maintain clear employment relevance, while the About-page threshold prevents the practice from being reduced to organizational utility.",
+    "Historical projects are labeled as historical or archived, while current capability is supported separately by present-tense operating work and the bounded 2026 source-backed-memory lab."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Open House is credited as collectively governed, and WOWList, coalition work, CallNYC, and Sunday Dinner retain explicit collaborator or community credit.",
+    "The source note states that protected educational records, grades, identifiers, private paths, correspondence, and raw record text are withheld.",
+    "No faculty testimonial is projected, and the public certificate is explicitly bounded as professional development rather than instructor affiliation or production proof.",
+    "The candidate does not convert historical coursework or tools into claims of present proficiency, sole authorship, research invention, or production deployment.",
+    "Sensitive guest histories, correspondence, attendance information, access details, and unapproved images remain outside the public projection."
+  ],
+  "recommendation": "Pass PR-015 for this bound candidate. Preserve the collective-credit, consent, historical-current, and protected-record boundaries in any subsequent release.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "processSessionId": "019f785d-2eb5-7373-9689-d6f7c69238cf",
+    "agentNickname": "Rawls",
+    "model": "gpt-5.6-sol",
+    "reasoningEffort": "xhigh",
+    "sandbox": "read-only",
+    "ephemeral": true,
+    "resultTransport": "multi_agent_v1__wait_agent-completed",
+    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
+    "startedAt": "2026-07-19T03:13:20.561Z",
+    "completedAt": "2026-07-19T03:17:30.027Z"
+  }
+}

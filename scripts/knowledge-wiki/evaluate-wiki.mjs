@@ -78,6 +78,26 @@ const changedPublicUiPaths = changedPaths.filter((file) =>
 );
 const technicalOperationsPath = "apps/www/src/app/work/technical-operations/page.tsx";
 const technicalOperationsSource = readFileSync(path.join(defaultRepoRoot, technicalOperationsPath), "utf8");
+const boundedPublicUiPaths = [
+  "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+  technicalOperationsPath,
+  "apps/www/src/components/CaseStudyBlocks.tsx",
+  "apps/www/src/components/TagList.tsx"
+].sort();
+const boundedPublicUiChange = JSON.stringify(changedPublicUiPaths.sort()) ===
+  JSON.stringify(boundedPublicUiPaths);
+const caseStudyBlocksSource = readFileSync(
+  path.join(defaultRepoRoot, "apps/www/src/components/CaseStudyBlocks.tsx"),
+  "utf8"
+);
+const tagListSource = readFileSync(
+  path.join(defaultRepoRoot, "apps/www/src/components/TagList.tsx"),
+  "utf8"
+);
+const labSource = readFileSync(
+  path.join(defaultRepoRoot, "apps/www/src/app/lab/source-backed-team-memory/page.tsx"),
+  "utf8"
+);
 const employmentOutputsCurrent = Object.entries(employmentOutputs).every(
   ([relativePath, content]) =>
     existsSync(path.join(defaultRepoRoot, relativePath)) &&
@@ -98,9 +118,13 @@ const checks = {
     adr.includes("apps/www/src/data/proofs.ts"),
   bounded_public_projection_change:
     publicUiChanged &&
-    changedPublicUiPaths.length === 1 &&
-    changedPublicUiPaths[0] === technicalOperationsPath &&
-    technicalOperationsSource.includes("I create the operating backbone complex teams need to move"),
+    boundedPublicUiChange &&
+    technicalOperationsSource.includes("I create the operating backbone complex teams need to move") &&
+    caseStudyBlocksSource.includes('tone="inverted"') &&
+    !caseStudyBlocksSource.includes("text-jb-paper/70") &&
+    !caseStudyBlocksSource.includes("text-jb-ink/64") &&
+    tagListSource.includes("border-jb-paper/45 bg-jb-paper text-jb-blue") &&
+    !labSource.includes("text-jb-ink/68"),
   branch_donor_synthesis:
     adr.includes("## Branch donor synthesis") &&
     ["**A:**", "**B:**", "**C:**", "**D:**", "**E:**"].every((marker) => adr.includes(marker)),
@@ -266,7 +290,7 @@ const checks = {
     gapResolution.report.findings.some((item) => item.classification === "source-needs-close-reading"),
   portfolio_projection_remains_selective:
     opportunities.every((record) => !record.projection || record.projection.status !== "active") &&
-    changedPublicUiPaths.length === 1
+    boundedPublicUiChange
 };
 
 let failed = 0;

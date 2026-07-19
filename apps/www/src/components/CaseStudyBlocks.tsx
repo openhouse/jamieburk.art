@@ -22,7 +22,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
       <dl className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
         {rows.map(([label, value]) => (
           <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+            <dt className="text-xs font-semibold uppercase text-jb-paper">
               {label}
             </dt>
             <dd className="mt-1 leading-6">{value}</dd>
@@ -30,11 +30,11 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="text-xs font-semibold uppercase text-jb-paper">
           Tags
         </p>
         <div className="mt-3">
-          <TagList compact tags={item.tags} />
+          <TagList compact tags={item.tags} tone="inverted" />
         </div>
       </div>
     </section>
@@ -95,7 +95,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                   <p className="mt-2 text-sm leading-6 text-jb-ink/74">
                     {artifact.description}
                   </p>
-                  <p className="mt-3 text-sm leading-6 text-jb-ink/64">
+                  <p className="mt-3 text-sm leading-6 text-jb-ink/76">
                     {artifact.media.caption}
                   </p>
                   <a
