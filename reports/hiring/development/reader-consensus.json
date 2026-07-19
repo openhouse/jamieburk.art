@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "current-priority-2026-07-18",
+  "panel": "development",
+  "candidateSha": "e1bfdc1e82f2e1d352c94e8051f28725523b96e878f2da17c3403fe7aee83d4e",
+  "gitHead": "a41e57564195762d8ffd0f76544264e41faa32e4",
+  "portfolioSnapshotHash": "a7e09127c67905a9588b661dd73edd9d342033489b2de25c8080bd98ad276c09",
+  "roleContextHash": "2f287fc612edfc0af21c9028d5fc62549552bc5a633b2434fab6c480537740ec",
+  "readerContextHash": "d4a1e209964030c1626dcf7f2287da7494c0fe3088164cf7938466c43d6e9194",
+  "promptHash": "719a14245df748b24852cb52a3b569a846351e71eadd8c7b5d4b381e5f2306cc",
+  "judgeId": "codex-independent-hiring-reader-v1",
+  "independentFromOptimizer": true,
+  "model": "gpt-5.6-sol",
+  "decisions": {
+    "advance": 0,
+    "hold": 4,
+    "decline": 0
+  },
+  "reviews": [
+    {
+      "readerId": "reader.generic-recruiter",
+      "opportunityId": "opportunity.oti.technical-operations-manager.782369",
+      "decision": "hold",
+      "confidence": 0.88,
+      "firstTenSeconds": {
+        "professionalCategoryUnderstood": true,
+        "category": "Technical project manager focused on product operations and implementation",
+        "roleRelevanceUnderstood": true,
+        "readerLabor": "low"
+      },
+      "positiveSignals": [
+        "The technical-operations page mirrors the role's delivery, risk, documentation, onboarding, and cross-functional coordination needs.",
+        "The portfolio supplies concrete scale indicators, including 14+ years, 30+ pages of campaign memory, 300+ gatherings, and contribution to 2x revenue growth."
+      ],
+      "criticalRequirementCoverage": [
+        {
+          "requirementId": "requirement.oti.delivery-coordination",
+          "status": "visible-qualified",
+          "evidenceObserved": [
+            "Claims coordination from emerging requirements through launch using planning rhythms, dependency tracking, decision records, and handoffs.",
+            "Public examples include e-commerce modernization, civic-tool launches, coalition operations, and a completed $189,629 project phase."
+          ],
+          "concern": "Relevant capability is highly visible, but evidence of owning several concurrent technical projects inside a formal delivery organization is limited."
+        },
+        {
+          "requirementId": "requirement.oti.risk-status-reporting",
+          "status": "visible-qualified",
+          "evidenceObserved": [
+            "The role-fit page explicitly describes risk and dependency tracking, status reporting, decision records, and surfacing blockers.",
+            "FairRentNYC evidence includes source maps, decision records, action trackers, and privacy-aware public/private boundaries."
+          ],
+          "concern": "The portfolio describes the practice well but shows few concrete status reports, escalation outcomes, or leadership-reporting results."
+        },
+        {
+          "requirementId": "requirement.oti.onboarding-runbooks",
+          "status": "visible-proven",
+          "evidenceObserved": [
+            "The portfolio identifies structured onboarding templates, runbooks, handbooks, source-backed memory, and portable handoff surfaces.",
+            "Repeatable onboarding and continuity systems supported 300+ gatherings and 20+ resident artists."
+          ],
+          "concern": "Most detailed artifacts are summarized rather than directly inspectable, but repeated examples make the capability credible."
+        },
+        {
+          "requirementId": "requirement.oti.minimum-qualification",
+          "status": "hard-screen",
+          "evidenceObserved": [],
+          "concern": "The captured public portfolio does not establish which posted IT Project Specialist education-and-experience pathway the candidate satisfies."
+        },
+        {
+          "requirementId": "requirement.oti.schedule",
+          "status": "hard-screen",
+          "evidenceObserved": [],
+          "concern": "Availability for possible night and weekend work in a 24/7 operation is not stated."
+        }
+      ],
+      "missingPositiveEvidence": [
+        {
+          "requirementId": "requirement.oti.minimum-qualification",
+          "signal": "A concise, verifiable statement mapping education and experience to one posted civil-service qualification pathway."
+        },
+        {
+          "requirementId": "requirement.oti.schedule",
+          "signal": "An explicit statement of availability for the required night and weekend coverage, if accurate."
+        }
+      ],
+      "underclaimingRisk": [
+        "The resume page omits chronology, employer names, titles, dates, and education from its visible text, preventing a recruiter from quickly validating seniority and minimum qualifications.",
+        "Strong operating work is often framed as contribution or system creation without consistently stating scope, authority, team size, or delivery accountability."
+      ],
+      "overclaimingRisk": [
+        "The technical-operations page closely mirrors the posting language, while several supporting examples come from civic, community, or small-business settings rather than a comparable formal technical-operations environment.",
+        "Claims about status reporting, operational metrics, retrospectives, security, legal, communications, and contracts are broader than the directly demonstrated public evidence."
+      ],
+      "collectiveCreditFindings": [
+        "The portfolio appropriately uses collective-credit language such as “helped,” “contributing,” and “co-built” for shared outcomes.",
+        "Jamie-attributed work is distinguished from collaborator edits in the FairRentNYC example, supporting credible attribution."
+      ],
+      "voiceFindings": {
+        "warmth": 3,
+        "clarity": 4,
+        "specificity": 3,
+        "readerOrientation": 4,
+        "runwayLength": "appropriate",
+        "strongestSentence": "I coordinate delivery from emerging requirements through reliable launch with planning rhythms, risk and dependency tracking, decision records, onboarding, runbooks, status reporting, and durable handoffs."
+      },
+      "questionsForInterview": [
+        "Which IT Project Specialist qualification pathway do you meet, and what education and dated experience establish it?",
+        "Describe a concurrent delivery portfolio you personally owned, including dependencies, a risk you escalated, and the resulting leadership decision."
+      ],
+      "oneYearSuccessConditions": [
+        "Jamie owns a visible delivery portfolio with authority proportional to accountability.",
+        "Teams actively use the operating records, onboarding materials, and retrospectives to improve delivery."
+      ],
+      "oneYearRiskConditions": [
+        "Responsibility for delivery is assigned without decision access or escalation authority.",
+        "Frequent emergency coverage displaces durable process improvement and team learning."
+      ],
+      "managerAndTeamQuestions": [
+        "Is this vacancy open to external applicants despite the CSV Posting Type value?",
+        "How often are nights or weekends required, and how are operational health and delivery authority structured? "
+      ],
+      "referralSentence": "Jamie appears strongly aligned with the operating-documentation and cross-functional delivery work, but I would verify civil-service eligibility and 24/7 schedule availability before advancing.",
+      "recommendedPortfolioChanges": [
+        {
+          "change": "Add a prominent, verified “Eligibility and availability” block to the public resume that identifies the exact IT Project Specialist qualification pathway with dated supporting experience and states night/weekend availability if accurate.",
+          "reason": "This resolves the two unanswered hard screens that currently prevent a recruiter from advancing an otherwise relevant candidate.",
+          "priority": "P0"
+        }
+      ],
+      "disclaimer": "Simulated review lens; not actual participation or endorsement."
+    },
+    {
+      "readerId": "reader.chad-berkowitz",
+      "opportunityId": "opportunity.oti.technical-operations-manager.782369",
+      "decision": "hold",
+      "confidence": 0.88,
+      "firstTenSeconds": {
+        "professionalCategoryUnderstood": true,
+        "category": "Technical project manager focused on product operations, implementation, and public-facing systems",
+        "roleRelevanceUnderstood": true,
+        "readerLabor": "low"
+      },
+      "positiveSignals": [
+        "The dedicated technical-operations page mirrors the role's delivery, risk, documentation, onboarding, and cross-functional coordination needs in direct language.",
+        "Public proof includes 30+ pages of campaign memory, 300+ gatherings, a completed $189,629 project phase, and work contributing to 2x e-commerce revenue growth."
+      ],
+      "criticalRequirementCoverage": [
+        {
+          "requirementId": "requirement.oti.delivery-coordination",
+          "status": "visible-qualified",
+          "evidenceObserved": [
+            "The portfolio describes coordinating requirements, dependencies, planning rhythms, launch support, and handoffs.",
+            "The KC Town Hall proof cites coordination of a completed $189,629 historic-building cold-shell phase."
+          ],
+          "concern": "Relevant coordination is visible, but ownership of multiple concurrent technical delivery streams is not demonstrated with a compact actor-action-result example."
+        },
+        {
+          "requirementId": "requirement.oti.risk-status-reporting",
+          "status": "visible-qualified",
+          "evidenceObserved": [
+            "The technical-operations page explicitly describes risk and dependency tracking, decision records, and status reporting.",
+            "FairRentNYC evidence includes shared campaign memory, action trackers, a source map, and a provenance redline."
+          ],
+          "concern": "Artifacts are credible, but the public portfolio does not show a specific risk escalated to leadership and the resulting decision or delivery outcome."
+        },
+        {
+          "requirementId": "requirement.oti.onboarding-runbooks",
+          "status": "visible-proven",
+          "evidenceObserved": [
+            "The portfolio describes structured onboarding templates, action-oriented guidance, Shared Drive handoff surfaces, and archive tooling.",
+            "The residency work documents repeatable onboarding and continuity systems supporting 300+ gatherings and 20+ resident artists."
+          ],
+          "concern": "The evidence is strong, though one redacted artifact or usage example would establish adoption more directly."
+        },
+        {
+          "requirementId": "requirement.oti.minimum-qualification",
+          "status": "hard-screen",
+          "evidenceObserved": [
+            "The captured resume page does not state education or experience in terms of a posted IT Project Specialist qualification pathway."
+          ],
+          "concern": "Eligibility cannot be established from the public portfolio."
+        },
+        {
+          "requirementId": "requirement.oti.schedule",
+          "status": "hard-screen",
+          "evidenceObserved": [
+            "The captured public portfolio does not state availability for possible night and weekend work in a 24/7 operation."
+          ],
+          "concern": "Schedule eligibility remains unknown."
+        }
+      ],
+      "missingPositiveEvidence": [
+        {
+          "requirementId": "requirement.oti.minimum-qualification",
+          "signal": "A concise statement identifying the exact IT Project Specialist education-and-experience pathway Jamie satisfies."
+        },
+        {
+          "requirementId": "requirement.oti.delivery-coordination",
+          "signal": "One actor-action-result example showing Jamie owning concurrent technical workstreams, resolving dependencies, and delivering a launch."
+        }
+      ],
+      "underclaimingRisk": [
+        "The strongest operating artifacts are distributed across several projects, so Jamie's present-day readiness to own a delivery portfolio is less explicit than the underlying evidence supports.",
+        "The portfolio names status, risk, and decision practices but rarely shows the consequential decision each practice enabled."
+      ],
+      "overclaimingRisk": [
+        "The phrase \"coordinate delivery from emerging requirements through reliable launch\" reads as a broad ownership claim without one equally direct end-to-end example.",
+        "The 2x revenue-growth claim is appropriately framed as a contribution and should not be tightened into sole attribution."
+      ],
+      "collectiveCreditFindings": [
+        "The portfolio generally protects collective credit through phrases such as \"helped modernize,\" \"contributing to,\" and \"co-built.\"",
+        "FairRentNYC explicitly identifies collaborator editing and Jamie-attributed work, providing unusually clear authorship boundaries."
+      ],
+      "voiceFindings": {
+        "warmth": 4,
+        "clarity": 4,
+        "specificity": 3,
+        "readerOrientation": 4,
+        "runwayLength": "appropriate",
+        "strongestSentence": "I am ready to own the connective work between a consequential goal and a reliable launch: clarify emerging requirements, coordinate technical and business dependencies, surface risk, keep decisions inspectable, support implementation, and build the operating records that let a team continue with confidence."
+      },
+      "questionsForInterview": [
+        "Describe one launch where you coordinated several concurrent workstreams: what was blocked, what did you decide or escalate, and what changed?",
+        "Which posted IT Project Specialist qualification pathway do you meet, and what evidence supports it?"
+      ],
+      "oneYearSuccessConditions": [
+        "Jamie owns a visible delivery portfolio with authority proportional to accountability.",
+        "Teams actively use Jamie's operating records, onboarding materials, and retrospectives to make delivery decisions."
+      ],
+      "oneYearRiskConditions": [
+        "Jamie is held responsible for delivery without sufficient decision access or escalation authority.",
+        "Chronic emergency and after-hours work crowds out system improvement and learning."
+      ],
+      "managerAndTeamQuestions": [
+        "What decisions can this role make directly, and what requires escalation?",
+        "Is the vacancy open to external applicants despite the Internal label, and how frequent is night or weekend work?"
+      ],
+      "referralSentence": "Jamie presents as a credible public-service technical-operations candidate with unusually strong documentation and institutional-translation instincts; I would refer pending confirmation of civil-service and schedule eligibility.",
+      "recommendedPortfolioChanges": [
+        {
+          "change": "Add a prominent role-fit proof block that names the IT Project Specialist qualification pathway and gives one concise actor-action-result delivery example with concurrent workstreams, a surfaced risk, the decision made, and the launch outcome.",
+          "reason": "This resolves the biggest public hard-screen ambiguity while turning broad operational capability into the fastest defensible proof for this role.",
+          "priority": "P0"
+        }
+      ],
+      "disclaimer": "Simulated review lens; not actual participation or endorsement."
+    },
+    {
+      "readerId": "reader.herminia-ibarra",
+      "opportunityId": "opportunity.oti.technical-operations-manager.782369",
+      "decision": "hold",
+      "confidence": 0.88,
+      "firstTenSeconds": {
+        "professionalCategoryUnderstood": true,
+        "category": "Technical project manager focused on product operations, implementation, and public-facing systems",
+        "roleRelevanceUnderstood": true,
+        "readerLabor": "low"
+      },
+      "positiveSignals": [
+        "The portfolio presents a coherent next identity: owning the connective work between consequential public goals and reliable launches.",
+        "Repeated civic, technical, and community examples show that documentation, coordination, and handoffs are Jamie's actual work rather than aspirational keywords."
+      ],
+      "criticalRequirementCoverage": [
+        {
+          "requirementId": "requirement.oti.delivery-coordination",
+          "status": "visible-qualified",
+          "evidenceObserved": [
+            "The technical-operations page explicitly describes coordinating emerging requirements, planning rhythms, dependencies, launch support, and durable handoffs.",
+            "Public examples span e-commerce modernization, civic-data guidance, coalition operations, and a completed $189,629 building phase."
+          ],
+          "concern": "The portfolio offers strong transferable proof but limited detail about Jamie's authority, team scale, and cadence while coordinating several simultaneous technical deliveries."
+        },
+        {
+          "requirementId": "requirement.oti.risk-status-reporting",
+          "status": "visible-qualified",
+          "evidenceObserved": [
+            "Jamie describes risk and dependency tracking, decision records, status reporting, and honest reporting of what is and is not working.",
+            "FairRentNYC evidence includes decision records, source maps, action trackers, and privacy-aware boundaries."
+          ],
+          "concern": "Few public examples show a specific risk Jamie escalated, the leadership decision it changed, and the delivery result."
+        },
+        {
+          "requirementId": "requirement.oti.onboarding-runbooks",
+          "status": "visible-proven",
+          "evidenceObserved": [
+            "The portfolio identifies structured onboarding templates, runbooks, operating documentation, source maps, and portable handoff surfaces.",
+            "Repeatable onboarding and continuity systems supported 300+ gatherings and 20+ resident artists."
+          ],
+          "concern": "Evidence is compelling, though a redacted artifact demonstrating adoption by a technical team would make the transfer even clearer."
+        },
+        {
+          "requirementId": "requirement.oti.minimum-qualification",
+          "status": "hard-screen",
+          "evidenceObserved": [
+            "The captured public resume emphasizes 14+ years of relevant operating work but does not expose education or a pathway-by-pathway civil-service qualification mapping."
+          ],
+          "concern": "Eligibility for the posted IT Project Specialist education-and-experience pathways cannot be verified from the captured portfolio."
+        },
+        {
+          "requirementId": "requirement.oti.schedule",
+          "status": "hard-screen",
+          "evidenceObserved": [],
+          "concern": "Availability for possible night and weekend work in a 24/7 operation is not visible."
+        }
+      ],
+      "missingPositiveEvidence": [
+        {
+          "requirementId": "requirement.oti.minimum-qualification",
+          "signal": "A concise public mapping to one posted civil-service education-and-experience pathway."
+        },
+        {
+          "requirementId": "requirement.oti.delivery-coordination",
+          "signal": "One actor-action-result example naming portfolio size, concurrent workstreams, decision authority, and delivery outcome."
+        }
+      ],
+      "underclaimingRisk": [
+        "The strongest operational evidence is distributed across projects, making Jamie's scope and decision authority appear smaller than it may have been.",
+        "Collective verbs such as “helped,” “contributed,” and “co-built” appropriately protect accuracy but sometimes obscure Jamie's distinct operating contribution."
+      ],
+      "overclaimingRisk": [
+        "The technical-operations page describes broad management practices more confidently than the case evidence establishes their scale or frequency.",
+        "“Ready to own” is a forward-looking proposition; readers still need a concrete example of end-to-end ownership in a comparable technical environment."
+      ],
+      "collectiveCreditFindings": [
+        "The portfolio generally distinguishes Jamie's work from team outcomes, especially through “co-founded,” “co-built,” and collaborator-edited attribution.",
+        "The 2x revenue-growth claim is responsibly framed as a contribution, but Jamie's specific causal contribution remains diffuse."
+      ],
+      "voiceFindings": {
+        "warmth": 3,
+        "clarity": 4,
+        "specificity": 3,
+        "readerOrientation": 4,
+        "runwayLength": "appropriate",
+        "strongestSentence": "I coordinate delivery from emerging requirements through reliable launch with planning rhythms, risk and dependency tracking, decision records, onboarding, runbooks, status reporting, and durable handoffs."
+      },
+      "questionsForInterview": [
+        "Describe one concurrent delivery portfolio you coordinated: what did you own, which dependencies or risks did you surface, and what changed because of your intervention?",
+        "Which posted IT Project Specialist qualification pathway do you meet, and are you available for the role's possible night and weekend work?"
+      ],
+      "oneYearSuccessConditions": [
+        "Jamie owns a visible delivery portfolio with decision access and escalation authority proportional to accountability.",
+        "The team actively uses Jamie's runbooks, decision records, and retrospectives to improve delivery rather than treating them as compliance artifacts."
+      ],
+      "oneYearRiskConditions": [
+        "The role assigns coordination responsibility without access to the decisions, relationships, or authority needed to resolve blockers.",
+        "Chronic emergency work crowds out the documentation, learning, and system improvement that make this next identity developmental."
+      ],
+      "managerAndTeamQuestions": [
+        "What decisions can this role make directly, and what requires escalation through the Commissioner's Office?",
+        "How often does night or weekend work occur, and how does the team protect time for retrospectives and operational improvement?"
+      ],
+      "referralSentence": "Jamie presents a coherent transition into technical operations leadership, with credible public proof in delivery structure, civic translation, onboarding, and durable operating memory; advance consideration once civil-service eligibility and schedule availability are confirmed.",
+      "recommendedPortfolioChanges": [
+        {
+          "change": "Publish a single role-fit proof block that maps one end-to-end project to the posting's requirements, naming Jamie's authority, concurrent workstreams, risk escalation, status rhythm, runbook adoption, measurable result, and qualifying civil-service pathway.",
+          "reason": "This would convert a strong but distributed working identity into immediately verifiable evidence while resolving the highest-stakes public ambiguity.",
+          "priority": "P0"
+        }
+      ],
+      "disclaimer": "Simulated review lens; not actual participation or endorsement."
+    },
+    {
+      "readerId": "reader.amy-edmondson",
+      "opportunityId": "opportunity.oti.technical-operations-manager.782369",
+      "decision": "hold",
+      "confidence": 0.86,
+      "firstTenSeconds": {
+        "professionalCategoryUnderstood": true,
+        "category": "Technical project manager focused on product operations and implementation for complex public-facing teams",
+        "roleRelevanceUnderstood": true,
+        "readerLabor": "low"
+      },
+      "positiveSignals": [
+        "The technical-operations page directly addresses planning rhythms, dependency coordination, risk surfacing, honest status reporting, retrospectives, onboarding, runbooks, and durable handoffs.",
+        "The portfolio repeatedly emphasizes inspectable decisions, source-backed memory, public/private boundaries, and materials collaborators can use after handoff—credible foundations for cross-boundary learning."
+      ],
+      "criticalRequirementCoverage": [
+        {
+          "requirementId": "requirement.oti.delivery-coordination",
+          "status": "visible-qualified",
+          "evidenceObserved": [
+            "Claims coordination from emerging requirements through launch using planning rhythms, dependency tracking, decision records, and handoffs.",
+            "Public examples span e-commerce modernization, civic-data guidance, coalition operations, and community platforms."
+          ],
+          "concern": "The portfolio shows strong transferable coordination patterns but limited direct evidence of owning several concurrent technical deliveries inside a large 24/7 organization."
+        },
+        {
+          "requirementId": "requirement.oti.risk-status-reporting",
+          "status": "visible-qualified",
+          "evidenceObserved": [
+            "The role-fit page explicitly describes risk and dependency tracking, early blocker surfacing, status reporting, and honest reporting of what is not working.",
+            "FairRentNYC evidence includes decision records, source maps, action trackers, and privacy-aware boundaries."
+          ],
+          "concern": "Specific examples of a consequential risk being raised to leadership, the response it produced, and the resulting correction are not visible."
+        },
+        {
+          "requirementId": "requirement.oti.onboarding-runbooks",
+          "status": "visible-proven",
+          "evidenceObserved": [
+            "Reviewed examples include structured onboarding templates, action-oriented guidance, portable Shared Drive handoffs, and archive tooling.",
+            "Repeatable onboarding, orientation, access handoff, documentation, and continuity systems supported 300+ gatherings and 20+ resident artists."
+          ],
+          "concern": "The evidence is credible, though a public redacted artifact showing actual adoption in a technical team would make transfer to this role even clearer."
+        },
+        {
+          "requirementId": "requirement.oti.minimum-qualification",
+          "status": "hard-screen",
+          "evidenceObserved": [
+            "The captured public resume describes 14+ years of relevant operating-structure work.",
+            "The supplied portfolio does not expose education or a complete experience chronology mapped to an IT Project Specialist pathway."
+          ],
+          "concern": "Eligibility under one of the posted civil-service education and experience pathways cannot be verified from the captured public materials."
+        },
+        {
+          "requirementId": "requirement.oti.schedule",
+          "status": "hard-screen",
+          "evidenceObserved": [],
+          "concern": "Availability for possible night and weekend work in a 24/7 operation is not stated."
+        }
+      ],
+      "missingPositiveEvidence": [
+        {
+          "requirementId": "requirement.oti.risk-status-reporting",
+          "signal": "A concise incident narrative showing how Jamie surfaced bad news or an error, what authority Jamie had, how leadership responded, and what the team changed."
+        },
+        {
+          "requirementId": "requirement.oti.minimum-qualification",
+          "signal": "A public, recruiter-readable mapping of education and dated experience to one posted IT Project Specialist qualification pathway."
+        }
+      ],
+      "underclaimingRisk": [
+        "The portfolio may understate leadership-facing accountability: it names many operating practices but rarely shows who received Jamie's status or risk reporting and what decisions followed.",
+        "Collaborative work is carefully bounded, but Jamie's individual authority, decisions, and ownership within those systems can remain harder to distinguish than the artifacts produced."
+      ],
+      "overclaimingRisk": [
+        "The technical-operations page presents several practices in present-tense role language that are more fully demonstrated in civic, small-business, and community contexts than in enterprise technical operations.",
+        "Claims about reporting team health and operational metrics are less supported by concrete measures, review cadences, or corrective outcomes than the documentation and onboarding claims."
+      ],
+      "collectiveCreditFindings": [
+        "The portfolio responsibly uses phrases such as “helped modernize,” “contributing to,” “co-built,” and “collaborator-edited,” reducing the risk of appropriating team outcomes.",
+        "FairRentNYC distinguishes Jamie-attributed drafts from collaborator edits, but several other project summaries could identify collaborators' roles and Jamie's decision rights more explicitly."
+      ],
+      "voiceFindings": {
+        "warmth": 3,
+        "clarity": 4,
+        "specificity": 3,
+        "readerOrientation": 4,
+        "runwayLength": "appropriate",
+        "strongestSentence": "I coordinate delivery from emerging requirements through reliable launch with planning rhythms, risk and dependency tracking, decision records, onboarding, runbooks, status reporting, and durable handoffs."
+      },
+      "questionsForInterview": [
+        "Tell me about a moment when you surfaced a risk, mistake, or unwelcome status to leadership. What made speaking up possible, and what changed afterward?",
+        "Across the portfolio examples, which delivery decisions were yours to make directly, which required escalation, and how did you handle accountability when authority was limited?"
+      ],
+      "oneYearSuccessConditions": [
+        "Jamie owns a visible delivery portfolio with decision and escalation authority proportional to accountability.",
+        "Teams actively use runbooks, decision records, metrics, and retrospectives to surface problems early and improve work rather than treating them as compliance artifacts."
+      ],
+      "oneYearRiskConditions": [
+        "Jamie is held responsible for delivery while excluded from key decisions or punished for reporting risks and errors candidly.",
+        "Recurring emergency work crowds out retrospectives, documentation maintenance, onboarding, and system improvement."
+      ],
+      "managerAndTeamQuestions": [
+        "When someone reports that a launch is at risk or that a process failed, what happens next, and can you share a recent example of the team learning from it?",
+        "What decisions can this manager make independently, what must be escalated, and how are disagreements across engineering, security, legal, communications, and contracts resolved?"
+      ],
+      "referralSentence": "Jamie presents strong, unusually legible evidence of building documentation, onboarding, decision-memory, and delivery structure across public-facing work; I would refer pending confirmation of civil-service eligibility, schedule availability, and leadership-level risk-reporting experience.",
+      "recommendedPortfolioChanges": [
+        {
+          "change": "Add one public, redacted case-study panel that maps a real delivery incident from early risk signal through candid escalation, decision authority, corrective action, retrospective learning, and measurable outcome, while explicitly separating Jamie's actions from collaborators' contributions.",
+          "reason": "This single addition would supply the highest-value missing proof for the role and this lens: whether Jamie can speak up, help a team learn from error, and connect accountability to actual authority.",
+          "priority": "P0"
+        }
+      ],
+      "disclaimer": "Simulated review lens; not actual participation or endorsement."
+    }
+  ],
+  "humanAuthority": "open",
+  "disclaimer": "Simulated reviews do not establish actual participation, endorsement, hiring outcome, or human release approval."
+}

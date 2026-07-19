@@ -1,0 +1,286 @@
+{
+  "suite_id": "knowledge-development-lifecycle",
+  "suite_version": 1,
+  "label": "teams-archive-holdout-2",
+  "run_at": "2026-07-14T21:36:46.072Z",
+  "candidate_files": [
+    ".agents/evals/knowledge-development.json",
+    "scripts/run-knowledge-development.mjs",
+    "apps/www/src/data/knowledge-bank/development-records.ts",
+    "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts",
+    "apps/www/src/data/knowledge-bank/campaign-press.ts",
+    "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
+    "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
+    "apps/www/src/data/knowledge-bank/teams-archive.ts",
+    "apps/www/src/data/knowledge-bank/schema.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "apps/www/src/content/work/kc-town-hall.mdx",
+    "docs/knowledge-bank/claims.md",
+    "docs/knowledge-bank/proofs.md",
+    "docs/knowledge-bank/sources.md",
+    "docs/knowledge-bank/anti-claims.md",
+    "docs/knowledge-bank/approval-register.md",
+    "docs/knowledge-bank/projection-map.md",
+    "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
+    "docs/knowledge-bank/projects/kc-town-hall-funding.md",
+    "docs/knowledge-bank/projects/teams-archive-production.md",
+    "scripts/lib/citation-validation.mjs",
+    "scripts/tests/citations.test.mjs",
+    "scripts/tests/knowledge-development-evals.test.mjs",
+    "docs/knowledge-bank/promotion-slate.md"
+  ],
+  "candidate_fingerprint": "5e91854dfbc2b4b309e364182c83987cde3298bc7aef91979aad6ce2931efb9d",
+  "judgment_fingerprint": "5e91854dfbc2b4b309e364182c83987cde3298bc7aef91979aad6ce2931efb9d",
+  "judgment_fingerprint_missing": false,
+  "judgment_fingerprint_mismatch": false,
+  "metrics": {
+    "captures": 34,
+    "routedCaptures": 34,
+    "sources": 82,
+    "developmentSources": 75,
+    "observations": 107,
+    "developmentClaims": 24,
+    "researchTasks": 12,
+    "campaignPressPlacements": 45,
+    "campaignPressUniqueArticles": 44,
+    "kcTownHallFundingSources": 5,
+    "kcTownHallFundingClaims": 3,
+    "teamsArchiveCaptures": 6,
+    "teamsArchiveSources": 10,
+    "teamsArchiveObservations": 23,
+    "teamsArchiveClaims": 5,
+    "validationErrors": 0
+  },
+  "weighted_score": 1,
+  "threshold": 0.85,
+  "criteria_met": true,
+  "blocking_failures": [],
+  "nonblocking_failures": [],
+  "missing_judgments": [],
+  "evals": [
+    {
+      "eval_id": "KD-001",
+      "title": "Low-friction capture with no silent loss",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "34/34 captures integrated, tasked, or closed"
+      ],
+      "findings": [],
+      "recommended_next_move": "Route every capture to a normalized source or bounded research task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-002",
+      "title": "Source normalization and retrieval state",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "20/20 URL captures routed",
+        "75 normalized development sources"
+      ],
+      "findings": [],
+      "recommended_next_move": "Normalize retrieved sources and create retrieval tasks for inaccessible candidates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-003",
+      "title": "Atomic observations preserve source affordances",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "75/75 development sources decomposed",
+        "107 atomic observations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Decompose each integrated source into located, limited observations.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-004",
+      "title": "Independent epistemic, publication, and selection states",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "31 claims declare three independent states"
+      ],
+      "findings": [],
+      "recommended_next_move": "Hold any projection whose epistemic, publication, or selection state is not ready.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-005",
+      "title": "Promotion requires an auditable evidence path",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "24 development claims",
+        "0 promoted-lineage violations",
+        "0 projection violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Connect confirmed claims through observations and keep unearned projections held.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-006",
+      "title": "Collective credit and calibrated causality",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "CLM-CRS-COALITION-OPERATING-SYSTEM in apps/www/src/data/knowledge-bank/teams-archive.ts names Jamie's six-part operating design and running-memory maintenance, while its boundaries preserve collaborative authorship and hold completion and legislative causality.",
+        "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN names concrete product requirements while explicitly withholding City adoption, implementation, confidential-data access, and policy-outcome claims.",
+        "CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE, CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY, CLM-NYCAC-MARCH-TRANSPARENCY-LAW, and CLM-NYCAC-MARCH-REPLACED-BY-CURE distinguish Jamie's organizing and testimony, multi-group campaigning, Council enactment, and later City action; 'created,' 'caused,' and 'disbanded' formulations remain anti-claims where unearned.",
+        "CLM-NYCAC-ARCHIVAL-PUBLICATION-WORKFLOW distinctly credits Jamie's source assembly, Dorothy Howard's review and mainspace move, and later editors' maintenance. CLM-WATERWAYS-RAFT-EXPEDITION-SCALE likewise preserves named and collective crew credit and holds the unrecovered Gulf endpoint.",
+        "CLM-KCTH-MISSION-ALIGNED-TRANSITION in apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts remains an attributed first-hand account, separate from official municipal records, transfer mechanics, later withdrawal, causality, and private reasons.",
+        "CAP-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION-2026, RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION, and INQ-TEAMS-JOBHUNT-ICLOUD-HYDRATION-2026 treat non-materialization as retryable retrieval state, explicitly not absence or emptiness.",
+        "The held raft, Wikipedia, and discovery candidate IDs do not appear in apps/www/src/data/knowledge-bank/public-registry.json or public-site content. The targeted knowledge-development tests passed 15/15."
+      ],
+      "findings": [
+        "No material understatement of Jamie's documented direct actions was observed.",
+        "No collaborator, coalition, or institutional outcome was improperly absorbed into Jamie's individual authorship.",
+        "Causality, implementation, adoption, transition, and retrieval boundaries are unusually explicit and mutually consistent across claim records, public projections, anti-claims, and the promotion slate."
+      ],
+      "recommended_next_move": "Preserve these boundaries; promote held candidates only after their stated corroboration, editorial-selection, and rights or materialization gates are satisfied.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-007",
+      "title": "Research queue covers unresolved value and public claim gaps",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "12 research tasks",
+        "0 unresolved captures without tasks",
+        "0 inference claims without tasks"
+      ],
+      "findings": [],
+      "recommended_next_move": "Give every unresolved high-value lead and inference claim a prioritized task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-008",
+      "title": "Projection is purposeful and reversible",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 unsafe active projections",
+        "0 prohibited public routes"
+      ],
+      "findings": [],
+      "recommended_next_move": "Keep developed claims dormant or held until a purpose-specific surface selects approved wording.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-009",
+      "title": "Provenance graph and correction history remain traversable",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 broken references",
+        "0 integrated captures without paths",
+        "45 campaign press placements / 44 unique articles",
+        "0 campaign press integrity violations",
+        "0 KC Town Hall funding-chain integrity violations",
+        "0 Teams archive integrity violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair broken references and ensure each integrated capture has a traversable path.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-010",
+      "title": "Public-repository safety and citational care",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 canonical validation errors",
+        "0 private-marker hits",
+        "0 prohibited routes",
+        "0 campaign press promotion violations",
+        "0 KC Town Hall projection-safety violations",
+        "0 Teams archive projection-safety violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Remove unsafe payloads and satisfy canonical citation validation.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-011",
+      "title": "Photo-editor feedback loop creates questions, not automatic proof",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "photo capture: CAP-PHOTO-ARCHIVE-FEEDBACK-LOOP-2026",
+        "photo task: RT-PHOTO-EVIDENCE-FEEDBACK-LOOP",
+        "workflow document: present"
+      ],
+      "findings": [],
+      "recommended_next_move": "Document the claim-to-brief and discovery-to-research loop with rights and corroboration gates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-012",
+      "title": "Source-backed strength through Chad's lens",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/content/work/fair-rent-nyc.mdx names specific direct actions: designing the operating plan, maintaining running memory, creating the legislative provenance redline, building campaign sites, organizing fire-code study groups, rallying, and giving Council testimony.",
+        "The same case study identifies intended users and uses: collaborators orienting after meetings, finding source context, tracking next steps, resolving policy questions, and preparing public-safe explanations. It also identifies a concrete institutional use of coalition research at a 2019 Council hearing without assigning that research to Jamie individually.",
+        "apps/www/src/data/work.ts makes the usable artifacts scannable: campaign-memory spine, six-part operating plan, provenance redline, policy-question log, privacy-preserving pilot requirements, campaign web surfaces, testimony, and policy trail.",
+        "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN and fair-rent-nyc.mdx clearly state that the pilot was an implementation design rather than an adopted City program; CLM-CRS-COALITION-OPERATING-SYSTEM similarly distinguishes designed structure from completed implementation.",
+        "docs/knowledge-bank/promotion-slate.md selects the strongest Fair Rent actions while keeping CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS and other unresolved claims visible as bounded future research rather than weakening or prematurely publishing them.",
+        "The KC Town Hall transition material satisfies the difficult-ending criterion: CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN candidly retains withdrawal and unused-funds reappropriation, while CLM-KCTH-MISSION-ALIGNED-TRANSITION frames continuity stewardship without exposing private circumstances or conflating it with the official record."
+      ],
+      "findings": [
+        "A skeptical hiring reader can identify what Jamie did, for whom, which artifacts became usable, and which outcomes belong to collaborators or institutions.",
+        "The material is assertive without inflation: direct actions use active verbs, while adoption and causal claims remain bounded.",
+        "Public-safety qualifications clarify the professional work without overwhelming or apologizing for it."
+      ],
+      "recommended_next_move": "Keep the current Fair Rent selection; after the June packet materializes, reassess the held product-discovery claim against the same user, artifact, adoption, and causality standard.",
+      "confidence": "high"
+    }
+  ]
+}

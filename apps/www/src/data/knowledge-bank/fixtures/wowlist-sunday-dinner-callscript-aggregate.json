@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "publicSafety": "aggregate-only",
+  "wowList": {
+    "snapshotCreatedAt": "2017-07-22T08:00:01-04:00",
+    "snapshotSha256": "6987cc78a4b307487150642f17be66e7779999d308a2080abe5fedf9a7122695",
+    "counts": {
+      "users": 1846,
+      "postsOrEvents": 16142,
+      "tagsOrLists": 23864,
+      "listFollows": 28837,
+      "starsOrSaves": 20927,
+      "goingMarks": 2965,
+      "calendarEvents": 15915
+    },
+    "activeCityScenes": {
+      "minimum": 35,
+      "threshold": "at least 50 geocoded posts or events per city or region"
+    },
+    "method": "Logical rows were reconstructed from the archive's multiline database records and reconciled to distinct primary identifiers before aggregate counting.",
+    "boundary": "The snapshot is a historical product-scale record, not a measure of unique active users, attendance, current use, revenue, or impact."
+  },
+  "sundayDinner": {
+    "workbookSha256": "8d04b588d731191f82e08430c4f314d3cb8ae2985714bef4c3b16cbd7c4f13f7",
+    "numberedEntries": 345,
+    "firstNumberedEntry": "001 Africa (1.22.2012)",
+    "lastNumberedEntry": "345 Persimmons (Livestream) 3/7/2021",
+    "formulaBackedMealsServed": 2783,
+    "formula": "=sum(NP:NP)",
+    "method": "The linked Office workbook was inspected read-only. Event-header cells, numbered chronology, cached summary values, and the displayed meals-served formula were reconciled without exporting row-level records.",
+    "boundary": "Numbered entries and the workbook's meals-served total are not unique-person, complete-attendance, or impact measures."
+  },
+  "callScript": {
+    "pageUrl": "https://www.facebook.com/callscript",
+    "eventDiscussionUrl": "https://www.facebook.com/events/388137698233507/?active_tab=discussion",
+    "pageDescription": "Call your representatives. simply make change",
+    "pageLinkedProject": "popular.vote",
+    "event": {
+      "title": "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting",
+      "date": "2017-01-27",
+      "time": "15:00-17:00",
+      "location": "NYC Department of Cultural Affairs",
+      "displayedCohosts": "NYC Artist Coalition, Call Script, and two others"
+    },
+    "displayedNamingPoll": [
+      {
+        "option": "NYC Artist Coalition",
+        "sharePercent": 57
+      },
+      {
+        "option": "NYC DIY Artist Coalition",
+        "sharePercent": 23
+      },
+      {
+        "option": "Art Space Coalition NYC",
+        "sharePercent": 15
+      },
+      {
+        "option": "NYC Arts Space Association",
+        "sharePercent": 3
+      },
+      {
+        "option": "Independent Arts NYC",
+        "sharePercent": 1
+      },
+      {
+        "option": "NYC Artist Network",
+        "sharePercent": 1
+      },
+      {
+        "option": "We the Artists of NYC",
+        "sharePercent": 0
+      }
+    ],
+    "collaborativeActions": [
+      "public naming poll before the meeting",
+      "invitation to review, edit, and sign a letter to the Commissioner",
+      "participant offer to take and share meeting notes"
+    ],
+    "boundary": "The visible poll provides percentage shares but no vote denominator. The current event interface is not evidence of historical attendance, sole authorship, or a complete coalition-formation sequence."
+  },
+  "excluded": [
+    "raw database records",
+    "names and contact details",
+    "row-level invitations and attendance",
+    "private messages and participant quotations",
+    "credentials and authenticated session state",
+    "local archive locations"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-07-19T16:30:58Z",
+  "candidate_fingerprint": "d347d31202a0e8ac6fde0dfbd0084680e997c97531214903eb6833aa5e402cef",
+  "rubric_fingerprint": "5dd84a3b8a91c8c1e2cccd2e281c7e59a3c2494ebaf6fe06ca250fdd2be09b11",
+  "verification": {
+    "repository_check": "pass",
+    "staging_preflight": "pass",
+    "production_preflight": "pass",
+    "docker_smoke": "pass",
+    "responsive_route_width_pairs": 56,
+    "route_failures": 0,
+    "browser_console_errors": 0
+  },
+  "verification_basis": {
+    "repository_check": "npm run check:pre-evidence",
+    "staging_preflight": "staging environment contract with npm run check:pre-evidence",
+    "production_preflight": "production environment contract with npm run check:pre-evidence",
+    "docker_image": "jamieburk-art:knowledge-wiki-C-missing-pages@sha256:392b5289adef119c530a9b1a540bc144ee269d471f634844412b2e7c8dc023b7",
+    "docker_runtime_endpoints": 18,
+    "browser_routes": 14,
+    "browser_viewports": [
+      {
+        "name": "mobile",
+        "width": 320,
+        "height": 800
+      },
+      {
+        "name": "wide-mobile",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "name": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      }
+    ],
+    "browser_assertions": [
+      "one h1 and one main landmark",
+      "no horizontal document overflow",
+      "no duplicate IDs",
+      "no broken rendered images",
+      "no browser console or page errors across 14 representative routes",
+      "selected NYC Artist Coalition citation targets and reference backlinks resolve",
+      "resume PDF returns HTTP 200"
+    ]
+  },
+  "authority_boundary": "This manifest records machine-observed candidate evidence. It does not grant human approval or production release authority."
+}

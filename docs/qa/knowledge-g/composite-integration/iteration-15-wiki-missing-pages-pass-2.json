@@ -1,0 +1,278 @@
+{
+  "suite_id": "evals-family-composite-integration",
+  "suite_version": 1,
+  "label": "iteration-15-wiki-missing-pages-pass-2",
+  "run_at": "2026-07-19T16:38:12.555Z",
+  "base_commit": "2ec37fe6e47d11e600ede204d19a98f7d3cff139",
+  "candidate_commit": "d2df4aa783aa8dc55f03c10121f3b5ea1450638f",
+  "candidate_fingerprint": "d347d31202a0e8ac6fde0dfbd0084680e997c97531214903eb6833aa5e402cef",
+  "candidate_file_count": 237,
+  "rubric_fingerprint": "5dd84a3b8a91c8c1e2cccd2e281c7e59a3c2494ebaf6fe06ca250fdd2be09b11",
+  "inherited_rubric_fingerprints": {
+    ".agents/evals/knowledge-development.json": "91f4173ef4ec2d1f313d6f8b4851da760451f55706b5d65eb2aec2b16bc1c4bb",
+    ".agents/evals/portfolio-production-readiness.json": "e5c461afb8880ef9e4ebe83933690324d3a11fbf21e6d06990a4b79267e425fe"
+  },
+  "graph_fingerprint": "6183286cd1e8928aaa72fcd822f400a499943603339701bbea01a539b67515e5",
+  "projection_fingerprint": "bff1bfb4cc5ffceb5639327b6da733161cf4b6c93d931c57d6d706a85ee2fb92",
+  "knowledge_candidate_fingerprint": "bb229a14e20f1e0ecd93b0d038b6ca9bad6071d866fded41860da9c629db12c8",
+  "weighted_score": 0.98,
+  "threshold": 0.9,
+  "local_criteria_met": true,
+  "consecutive_local_pass": true,
+  "criteria_before_repeat": false,
+  "criteria_met": false,
+  "decision": "stop_external_or_human_blocked",
+  "local_blocking_failures": [],
+  "local_nonblocking_failures": [],
+  "missing_judgments": [
+    "CI-012"
+  ],
+  "external_failures": [
+    "CI-007",
+    "CI-008",
+    "CI-009"
+  ],
+  "judgment_errors": [],
+  "evals": [
+    {
+      "eval_id": "CI-001",
+      "title": "Exact G ancestry and frozen-family integrity",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 5,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "candidate HEAD: d2df4aa783aa8dc55f03c10121f3b5ea1450638f",
+        "G base: d97055d72d794b9ecfd338e10277e4feb14ea918",
+        "frozen refs: 14",
+        "frozen digest: 6227f4f3a2653b1c1417410362b7fa0af45041a818f1a83ab4a79a0f17daa7e0"
+      ],
+      "findings": [],
+      "recommended_next_move": "Restore G ancestry or repair the read-only family manifest."
+    },
+    {
+      "eval_id": "CI-002",
+      "title": "Append-safe intake without silent loss or private payload",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 9,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "public-safe receipts: 1",
+        "receipt validation errors: 0",
+        "dry-run, duplicate, protected-pointer, and malformed-input behavior covered by tests"
+      ],
+      "findings": [],
+      "recommended_next_move": "Create the smallest public-safe receipt and route it without copying the private payload."
+    },
+    {
+      "eval_id": "CI-003",
+      "title": "Queryable lifecycle and auditable correction history",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 6,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "query command: present",
+        "auditable corrections: 5",
+        "stable JSON, JSONL, and table output contracts"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair the query contract or the missing correction path without creating another registry."
+    },
+    {
+      "eval_id": "CI-004",
+      "title": "One canonical graph with valid states and evidence paths",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "knowledge fingerprint: bb229a14e20f1e0ecd93b0d038b6ca9bad6071d866fded41860da9c629db12c8",
+        "knowledge local score: 0.88",
+        "validation errors: 0"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair the canonical relationship or hold the projection."
+    },
+    {
+      "eval_id": "CI-005",
+      "title": "Fail-closed projection coverage and cumulative-disclosure safety",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "bound surfaces: 21",
+        "discovered app surfaces: 15",
+        "projection digest: bff1bfb4cc5ffceb5639327b6da733161cf4b6c93d931c57d6d706a85ee2fb92",
+        "default policy: deny"
+      ],
+      "findings": [],
+      "recommended_next_move": "Bind the surface with an explicit policy or remove the unsafe projection."
+    },
+    {
+      "eval_id": "CI-006",
+      "title": "Corpus manifests, honest denominators, and non-additive controls",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "inherited full-population score: 4",
+        "public-safe fixture files: 12",
+        "public-safe ledger files: 6",
+        "corpus digest: 52d5e37f1e31915cf1a4d1f0451a0e55e7aa0a39b9c35a5b2d07f9a1a3225563"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair the denominator or classification before strengthening interpretation."
+    },
+    {
+      "eval_id": "CI-007",
+      "title": "Collective credit, role calibration, and outcome distinctions",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": false,
+      "evidence": [
+        "scripts/run-composite-integration.mjs:43-74 and 304-305 define the candidate and rubric hashing contracts; an independent read-only recomputation over 237 candidate files reproduced both supplied fingerprints exactly.",
+        "apps/www/src/content/work/fair-rent-nyc.mdx:73-92 names Jamie's operating-plan, memory, provenance, translation, tracking, and web actions while explicitly retaining collective campaign and governmental ownership; lines 247-259 distinguish Jamie's action, the wider decision system, and documented use of coalition research that is not attributed to Jamie individually.",
+        "apps/www/src/content/work/kc-town-hall.mdx:23-25, 35-47, and 109-127 distinguish completed Phase One, a later appropriation, receipt or expenditure, Jamie's first-hand role, collective trade work, withdrawal, reappropriation, and a separately sourced transition.",
+        "docs/knowledge-bank/outcomes-and-adoption.md:31-72 separates delivery, collaborator use, institutional adoption, changed conditions, association, emerging work, and held claims, then prohibits converting plans, appropriations, adoption, chronology, or growth into stronger outcomes or causality.",
+        "docs/knowledge-bank/people-and-collective-credit.md:30-74 requires direct Jamie action, collaborator credit, unknown authorship, formal authority, protected absences, and consent or publication decisions to remain distinct.",
+        "docs/knowledge-bank/projects/let-nyc-dance.md:37-68 and docs/knowledge-bank/projects/talks-not-raids.md:37-71 preserve Jamie's documented organizing, testimony, and web contribution while retaining coalition, venue, legislative, agency, and elected-official credit and rejecting individual causality."
+      ],
+      "findings": [
+        "The concise public 196 / Sunday Dinner summary does not name the wider hosting and production network, although it assigns Jamie the repeatable systems rather than sole ownership of every gathering and the canonical claim rejects sole production.",
+        "No material collapse of artifact, delivery, use, handoff, adoption, decision impact, or causality was observed across the inspected candidate.",
+        "This criterion cannot establish private collaborator intent or undocumented division of work."
+      ],
+      "recommended_next_move": "Strengthen the direct action and narrow the unearned collective or causal inference.",
+      "reviewer_role": "independent_exact_composite_holdout",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "CI-008",
+      "title": "Chad-lens hiring clarity and future-facing offer",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": false,
+      "evidence": [
+        "apps/www/src/components/Hero.tsx:8-35 immediately identifies the target role, the owned work from emerging requirements through launch and handoff, the desired role families, and direct next actions to role-fit proof, resume, and selected work.",
+        "apps/www/src/app/work/technical-operations/page.tsx:101-121 states what Jamie can coordinate and own; lines 133-194 map that offer to concrete project proof; lines 196-218 provide a specific future-facing offer plus resume and contact actions.",
+        "apps/www/src/data/knowledge-bank/nycac-shared-folder-production.ts:538-595 supplies a bounded actor-action-result example: Jamie translated a fragmented compliance journey into a machine-readable civic-data requirement while explicitly withholding claims of Council adoption, dataset publication, tool delivery, bill authorship, or policy impact.",
+        "apps/www/src/data/proofs.ts:82-155 and 194-281 provide specific confidence-earning evidence in long-term legacy e-commerce modernization, careful 2x-growth contribution language, 30+ pages of campaign memory, and a legislative source map and provenance redline.",
+        "apps/www/src/app/about/page.tsx:73-86 restates the future offer as ownership of requirements, dependencies, workflows, risk, decision records, launch support, onboarding, and maintainable handoffs while keeping collective credit, consent, privacy, and careful claims visible.",
+        "An accurate referral sentence supported by the inspected pages is: \"Jamie Burkart is a technical project manager and implementation lead who can own requirements, dependencies, risk, decision records, launch support, and handoffs for complex public-facing teams, with proof in long-term legacy e-commerce modernization and 30+ pages of source-backed civic campaign memory.\""
+      ],
+      "findings": [
+        "The Technical Operations page is proof-dense, so a very fast reader must choose among several project maps and capability groups; the Hero and explicit future-offer section nevertheless keep the primary path clear.",
+        "No apology, inflated title, or invented external authority is needed to state the referral case accurately.",
+        "This criterion cannot establish employer fit for every role or permission to publish a held claim."
+      ],
+      "recommended_next_move": "Make the strongest approved action and end more specific without inflating ownership.",
+      "reviewer_role": "independent_exact_composite_holdout",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "CI-009",
+      "title": "Morse and Sack lenses preserve embodied and recursive intelligence",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": false,
+      "weight": 7,
+      "score": 4,
+      "pass": false,
+      "evidence": [
+        "docs/knowledge-bank/eval-lenses.md:3-12 explicitly identifies the Morse and Sack lenses as contemporary editorial instruments rather than quotations, testimonials, or endorsements; lines 14-83 freeze the embodied and recursive criteria used here.",
+        "apps/www/src/app/about/page.tsx:42-69 connects participatory media, social software, code, prototypes, installations, gatherings, place, atmosphere, hospitality, and social use to Jamie's present operating method, then states the recursive movement from relationships and source-backed analysis through working form, real-setting use, and further learning.",
+        "apps/www/src/content/work/196-sunday-dinner.mdx:1-11 and 35-50 makes embodied practice concrete through invitation, hosting, onboarding, facilitation, artist support, documentation, quiet logistics, recurrence, and continuity rather than treating artistic history as ornament.",
+        "apps/www/src/data/knowledge-bank/kc-town-hall-phase-one.ts:429-500 demonstrates a specific recursive sequence: Jamie's survey handbill, backing data system, and on-site listening practice gathered resident input; named neighborhood partners participated; the packet says the input shaped the proposal; boundaries reject universal adoption, sole process ownership, and measured impact.",
+        "docs/knowledge-bank/methods/jamie-at-work.md:43-70 describes the recurring cycle from entering a setting and observing relationships through translation, a smallest useful working structure, observed use, repair, memory, and transferred ownership, with examples across business, civic, cultural, physical, and knowledge systems.",
+        "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md:31-75 and 77-107 keeps invitation, situated encounter, agency, translation, memory, and continuation connected while refusing to infer inclusion, adoption, attendance, or impact merely from the existence of a participatory form."
+      ],
+      "findings": [
+        "The public About page necessarily compresses the feedback phase; the KC Town Hall evidence supplies the concrete real-setting learning sequence, while fuller participant and collaborator accounts could deepen how subsequent design changed.",
+        "The interpretive layer remains subordinate to a clear technical-project-management and implementation offer rather than obscuring it.",
+        "This criterion cannot establish literal endorsement by Margaret Morse or Warren Sack."
+      ],
+      "recommended_next_move": "Restore one concrete threshold where embodied inquiry and recursive systems practice remain visible.",
+      "reviewer_role": "independent_exact_composite_holdout",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "CI-010",
+      "title": "Human-readable dossiers and evidence-debt routing",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": false,
+      "weight": 5,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "project dossiers: 26",
+        "dossiers missing source/method or boundary/research language: 0",
+        "canonical readiness ledger retained"
+      ],
+      "findings": [],
+      "recommended_next_move": "Add the missing human-readable boundary or route the gap to the canonical ledger."
+    },
+    {
+      "eval_id": "CI-011",
+      "title": "Exact-candidate build, accessibility, and release evidence",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "candidate manifest: present",
+        "candidate fingerprint match: true",
+        "repository check: pass",
+        "staging preflight: pass",
+        "production preflight: pass",
+        "Docker smoke: pass",
+        "responsive pairs: 56"
+      ],
+      "findings": [],
+      "recommended_next_move": "Run the missing exact-candidate verification or fix the highest-severity observed failure."
+    },
+    {
+      "eval_id": "CI-012",
+      "title": "Grader separation and human authority remain honest",
+      "grader": "hybrid",
+      "external_judgment_required": true,
+      "blocking": true,
+      "weight": 8,
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "machine, evidence, approval, and release authority remain distinct",
+        "release state: held",
+        "local structural preflight is capped at 3 pending human authority"
+      ],
+      "findings": [
+        "Exact-candidate human approval and release authority remain required"
+      ],
+      "recommended_next_move": "Obtain the named external decision or report the candidate honestly as human-blocked."
+    }
+  ]
+}

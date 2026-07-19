@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "suite_id": "nycac-shared-folder-archival-production",
+  "title": "NYC Artist Coalition shared-folder archival production",
+  "objective": "Account for the complete accessible snapshot, develop useful source-backed knowledge, and project only claims that preserve privacy, rights, collective credit, and outcome boundaries.",
+  "population_contract": "100 percent means inventory, classification, and one primary disposition for every item reachable in the authenticated snapshot. It does not mean full-content review, rights clearance, publication, or historical completeness outside the accessible population.",
+  "optimization": {
+    "maximum_iterations": 8,
+    "selection_order": [
+      "private-source leakage or rights failure",
+      "population or disposition mismatch",
+      "unsupported selected claim",
+      "collective-credit or outcome inflation",
+      "application and portfolio clarity"
+    ],
+    "two_consecutive_unchanged_passing_runs_required": true,
+    "stop_when_next_change_adds_more_burden_than_signal": true
+  },
+  "evals": [
+    {
+      "id": "NYCAC-SF-001",
+      "title": "Accessible population closes exactly",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": ["Population, inventory, classification, and disposition totals all equal 2,078", "Folder and non-folder totals reconcile to the population", "The 61-item root reconciles as 47 folders and 14 loose files"]
+    },
+    {
+      "id": "NYCAC-SF-002",
+      "title": "Traversal exceptions are adjudicated",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": ["All 253 folders have a final traversal state", "Twenty initial exceptions resolve as 18 empty and two recovered folders", "The recursive queue closes at zero"]
+    },
+    {
+      "id": "NYCAC-SF-003",
+      "title": "Every item has one primary disposition",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": ["Disposition counts sum to 2,078", "Format counts sum to 2,078", "The public aggregate and protected manifest digest agree on coverage"]
+    },
+    {
+      "id": "NYCAC-SF-004",
+      "title": "Protected-source boundary has no decoded leak path",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": ["No Drive or Docs URL, resource key, exact local path, email address, item list, or owner display enters the public artifacts", "The private manifest is represented only by an opaque digest and protected source pointers", "No raw close-reading text enters Git"]
+    },
+    {
+      "id": "NYCAC-SF-005",
+      "title": "Census and close reading remain distinct",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": ["The dossier defines 100 percent as accounting and disposition", "It separately reports 36 close-read records and zero errors", "It names excluded populations and the failed ZIP attempt without treating either as a closed historical universe"]
+    },
+    {
+      "id": "NYCAC-SF-006",
+      "title": "Collective credit survives claim promotion",
+      "grader": "hybrid",
+      "blocking": true,
+      "pass_criteria": ["Jamie's co-writer and public-testimony actions are named directly", "Coalition members, collaborators, partner groups, officials, agencies, and legislative bodies retain distinct credit", "No selected claim assigns sole authorship or individual policy causality"]
+    },
+    {
+      "id": "NYCAC-SF-007",
+      "title": "Selected claims have public corroboration and anti-claims",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": ["Two claims are selected", "Each selected claim has at least one public corroborating source relationship", "Each selected claim declares boundaries and anti-claims"]
+    },
+    {
+      "id": "NYCAC-SF-008",
+      "title": "High-value incomplete claims remain held and tasked",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": ["Town-hall production and FairRent web-implementation candidates have hold projections", "MARCH metric validation has a reproducible research task", "Rights and consent have an explicit queue"]
+    },
+    {
+      "id": "NYCAC-SF-009",
+      "title": "Portfolio and application projections are useful and bounded",
+      "grader": "hybrid",
+      "blocking": true,
+      "pass_criteria": ["The civic case study renders both selected claims through the canonical claim graph", "Technical Operations renders the machine-readable civic-design projection", "The application brief separates ready language, held language, role translation, and anti-claims"]
+    },
+    {
+      "id": "NYCAC-SF-010",
+      "title": "Knowledge depth does not create a public archive route",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": ["No public Knowledge Wiki, knowledge-bank, public-claims, or proofs route exists", "The website remains a selected projection of the private/public knowledge lifecycle", "Access and census depth never imply publication approval"]
+    }
+  ]
+}

@@ -18,12 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticRoutes.map((route) => ({
-      url: new URL(route, SITE_URL).toString(),
-      lastModified: new Date()
+      url: new URL(route, SITE_URL).toString()
     })),
     ...workItems.map((item) => ({
-      url: new URL(`/work/${item.slug}`, SITE_URL).toString(),
-      lastModified: new Date()
+      url: new URL(`/work/${item.slug}`, SITE_URL).toString()
     }))
   ];
 }

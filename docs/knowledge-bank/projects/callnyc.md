@@ -1,3 +1,35 @@
+---
+id: project.callnyc
+title: CallNYC
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-18
+review_by: 2027-01-18
+aliases:
+  - CallNYC.org
+canonical_refs:
+  - SRC-CALLNYC-POLITICO-2016-03-14
+  - SRC-CALLNYC-GITHUB-REPOSITORY
+  - CLM-CALLNYC-INDEPENDENT-FOLLOW-ON
+  - CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS
+  - COR-CALLNYC-CHRONOLOGY-2026
+  - COR-CALLNYC-SUPERLATIVE-2026
+  - COR-CALLNYC-EVENT-TIME-2026
+relations:
+  - type: informed_by
+    target: event.nycc.councilstat-hackathon-2016
+  - type: demonstrates
+    target: capability.technical-operations
+  - type: corrected_by
+    target: COR-CALLNYC-CHRONOLOGY-2026
+  - type: corrected_by
+    target: COR-CALLNYC-SUPERLATIVE-2026
+  - type: corrected_by
+    target: COR-CALLNYC-EVENT-TIME-2026
+---
+
 # CallNYC citational record
 
 **Reviewed:** 2026-07-11

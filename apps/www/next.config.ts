@@ -47,7 +47,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/resume/:path*",
+        source: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]
       },
       {

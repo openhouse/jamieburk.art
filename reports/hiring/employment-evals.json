@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "knowledge-wiki-employment-acceptance-v1",
+  "candidateSha": "e1bfdc1e82f2e1d352c94e8051f28725523b96e878f2da17c3403fe7aee83d4e",
+  "status": "pass",
+  "noBlendedScore": true,
+  "results": [
+    {
+      "id": "EWA-001",
+      "title": "One authority model and Private Source Vault boundary",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "single docs/knowledge-bank authority",
+        "opaque protected-channel metadata",
+        "no private locator compiler errors"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-002",
+      "title": "Six official and fresh priority opportunity records",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "priority records: 6",
+        "as of: 2026-07-18"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-003",
+      "title": "Stable requirements, hard screens, and source discrepancies",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "stable role requirement IDs",
+        "controlled hard-screen states",
+        "OTI Internal CSV discrepancy retained"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-004",
+      "title": "Role, trajectory, and source-channel coverage",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "reports/wiki/employment-health.md",
+        "reports/wiki/source-coverage.md",
+        "reports/wiki/career-trajectory-coverage.md",
+        "reports/wiki/role-coverage/opportunity.oti.technical-operations-manager.782369.md",
+        "reports/wiki/role-coverage/opportunity.aclu.product-manager-discovery.8482872002.md",
+        "reports/wiki/role-coverage/opportunity.benepass.product-operations-manager.md",
+        "reports/wiki/role-coverage/opportunity.codepath.senior-program-manager-claude-corps.5182020007.md",
+        "reports/wiki/role-coverage/opportunity.asana.ai-implementation-manager-service-management.8027437.md",
+        "reports/wiki/role-coverage/opportunity.permitflow.product-operations-manager.md"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-005",
+      "title": "Title-blind opportunity discovery with negative controls",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "Top-6 recall: 1",
+        "precision: 1",
+        "hard-screen detection: 1"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-006",
+      "title": "Hiring evaluator and Wiki gap resolver separation",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "Hiring acceptance contract passed: 9 readers, 6 opportunities, exact candidate e1bfdc1e82f2e1d352c94e8051f28725523b96e878f2da17c3403fe7aee83d4e."
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-007",
+      "title": "Sourced reader profiles and honest simulation labels",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "reader profiles: 9",
+        "development and holdout panels are disjoint"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-008",
+      "title": "Exact candidate, context, and independent judgment binding",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "candidate fingerprint: e1bfdc1e82f2e1d352c94e8051f28725523b96e878f2da17c3403fe7aee83d4e",
+        "bound reports: 2/2"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-009",
+      "title": "Role-specific public hiring acceptance",
+      "grader": "llm_judge",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "OTI public-only reviews: 6",
+        "first-ten-second and requirement-level outputs retained"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-010",
+      "title": "One-year mutual-fit advisory panel",
+      "grader": "llm_judge",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "Herminia working-identity lens",
+        "Claudio selection-risk lens",
+        "Amy team-learning lens"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-011",
+      "title": "Chad lens and Jamie voice",
+      "grader": "llm_judge",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "Chad-lens reviews: 1",
+        "voice findings retain strongest sentence, clarity, and warmth"
+      ],
+      "findings": []
+    },
+    {
+      "id": "EWA-012",
+      "title": "Human authority and outward action remain open",
+      "grader": "human_approval",
+      "blocking": true,
+      "pass": true,
+      "evidence": [
+        "human authority remains open",
+        "live deadlines outrank further optimization",
+        "no employer outcome claimed"
+      ],
+      "findings": []
+    }
+  ]
+}

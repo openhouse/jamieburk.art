@@ -1,0 +1,24 @@
+{
+  "title": "NYC Artist Coalition public campaign surface inventory",
+  "reviewed": "2026-07-12",
+  "purpose": "Public-source inventory supporting Jamie's public-web infrastructure role across linked campaign surfaces.",
+  "boundary": "The inventory does not assign collective campaign strategy, organizing, legislation, or policy outcomes to one person.",
+  "surfaces": [
+    {
+      "label": "NYC Artist Coalition",
+      "url": "https://nycartc.com/"
+    },
+    {
+      "label": "FairRentNYC",
+      "url": "https://fairrentnyc.nycartc.com/"
+    },
+    {
+      "label": "Talks Not Raids",
+      "url": "https://talksnotraids.com/"
+    },
+    {
+      "label": "Let NYC Dance",
+      "url": "https://letnycdance.nycartc.com/"
+    }
+  ]
+}

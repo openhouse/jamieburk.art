@@ -18,7 +18,7 @@ const startHereLinks = [
   {
     href: "/work/technical-operations",
     label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for OTI, product operations, implementation, and delivery coordination."
+    note: "The fastest role-fit proof surface for technical project management, product operations, implementation, and delivery coordination."
   },
   {
     href: "/work/harry-j-epstein",
@@ -46,6 +46,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <ProofStrip />
       <section className="jb-frame py-12">
         <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
           <div className="jb-reading">
@@ -75,7 +76,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <ProofStrip />
       <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -87,8 +87,8 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: ambiguous, high-context
-              situations becoming usable systems, public-facing tools,
+              These projects show a recurring pattern: complex, high-context
+              situations still taking shape becoming usable systems, public-facing tools,
               documentation, decision trails, and durable handoffs.
             </p>
           </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Claim } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
 import { resumeProofHighlights } from "@/data/proofs";
@@ -23,9 +24,9 @@ export default function ResumePage() {
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
             I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            turning complex work still taking shape into requirements,
+            workflows, documentation, decision trails, launch support,
+            onboarding materials, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
@@ -62,6 +63,47 @@ export default function ResumePage() {
           </ul>
         </aside>
       </div>
+      <section
+        aria-labelledby="professional-development-evidence"
+        className="mt-12 grid gap-6 border-t border-jb-ink/15 pt-10 md:grid-cols-[0.72fr_0.28fr] md:items-center"
+      >
+        <div>
+          <h2
+            className="text-2xl font-semibold text-jb-ink"
+            id="professional-development-evidence"
+          >
+            Professional development evidence
+          </h2>
+          <p className="mt-3 max-w-2xl leading-7 text-jb-ink/76">
+            Completed AI Evals for Engineers &amp; PMs with Shreya Shankar and
+            Hamel Husain through Maven in 2026. The course focused on
+            application-centric evaluation, error analysis, annotation
+            workflows, traces, rubric design, retrieval quality, and
+            human-in-the-loop review.
+          </p>
+          <div className="mt-5">
+            <JBButton
+              href="/proofs/ai-evals-engineers-pms-certificate.jpg"
+              variant="secondary"
+            >
+              View completion certificate
+            </JBButton>
+          </div>
+        </div>
+        <figure>
+          <Image
+            alt="Certificate of completion for James Burkart, AI Evals for Engineers and PMs, taught by Hamel Husain and Shreya Shankar through Maven"
+            className="h-auto w-full border border-jb-ink/15"
+            height={576}
+            src="/proofs/ai-evals-engineers-pms-certificate.jpg"
+            width={1024}
+          />
+          <figcaption className="mt-2 text-sm leading-5 text-jb-ink/62">
+            Maven completion certificate, 2026. Public credential supplied by
+            Jamie Burkart.
+          </figcaption>
+        </figure>
+      </section>
     </div>
   );
 }

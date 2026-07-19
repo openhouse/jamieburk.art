@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { createMetadata } from "@/lib/metadata";
 
@@ -32,10 +33,49 @@ export default function AboutPage() {
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.
           </p>
+          <section className="border-y border-jb-blue/20 py-6">
+            <h2 className="text-2xl font-semibold text-jb-ink">
+              A practice of attention
+            </h2>
+            <div className="mt-4 space-y-4">
+              <p>
+                My practice began in participatory media and social software,
+                where code, interfaces, prototypes, installations, gatherings,
+                and public situations were ways to understand a system by
+                entering it. I still keep artistic, civic, technical, and
+                social work connected: embodied inquiry, participation,
+                memory, place, atmosphere, hospitality, and how people inhabit
+                a structure all shape what I build.
+              </p>
+              <p>
+                At the{" "}
+                <Link
+                  className="font-semibold text-jb-blue underline-offset-4 hover:underline"
+                  href="/work/196-sunday-dinner"
+                >
+                  196 Artists Residency / Sunday Dinner
+                </Link>
+                , hospitality was itself a working interface: invitations,
+                recurring meals, orientation, shared space, quiet logistics,
+                and follow-through made participation possible and helped the
+                gathering continue. The atmosphere was not decoration; it was
+                part of the operating design.
+              </p>
+              <p>
+                I work recursively: follow relationships across systems, make
+                hidden structures visible, test a source-backed analysis
+                through a prototype or usable process, and then test it with
+                people in real settings. That cycle turns observation into
+                working form and use into further learning.
+              </p>
+            </div>
+          </section>
           <p>
-            I am currently focused on technical project management, product
-            operations, implementation, business analysis, civic/govtech
-            delivery, and source-backed knowledge systems.
+            I am seeking technical project management, product operations, and
+            implementation work with teams navigating consequential change. I
+            can take ownership of the connective layer: requirements,
+            dependencies, workflows, risk, decision records, launch support,
+            onboarding, and maintainable handoffs.
           </p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">

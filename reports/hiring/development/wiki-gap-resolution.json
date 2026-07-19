@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "candidateSha": "e1bfdc1e82f2e1d352c94e8051f28725523b96e878f2da17c3403fe7aee83d4e",
+  "sourceReport": "reports/hiring/development/reader-consensus.json",
+  "resolutions": [
+    {
+      "reader_id": "reader.generic-recruiter",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "A concise, verifiable statement mapping education and experience to one posted civil-service qualification pathway.",
+      "requirement_id": "requirement.oti.minimum-qualification",
+      "classification": "unknown",
+      "public_routes": [],
+      "wiki_evidence": [],
+      "public_proof_ids": [],
+      "next_action": "Create a bounded research inquiry; do not infer missing evidence."
+    },
+    {
+      "reader_id": "reader.generic-recruiter",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "An explicit statement of availability for the required night and weekend coverage, if accurate.",
+      "requirement_id": "requirement.oti.schedule",
+      "classification": "unknown",
+      "public_routes": [],
+      "wiki_evidence": [],
+      "public_proof_ids": [],
+      "next_action": "Create a bounded research inquiry; do not infer missing evidence."
+    },
+    {
+      "reader_id": "reader.chad-berkowitz",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "A concise statement identifying the exact IT Project Specialist education-and-experience pathway Jamie satisfies.",
+      "requirement_id": "requirement.oti.minimum-qualification",
+      "classification": "unknown",
+      "public_routes": [],
+      "wiki_evidence": [],
+      "public_proof_ids": [],
+      "next_action": "Create a bounded research inquiry; do not infer missing evidence."
+    },
+    {
+      "reader_id": "reader.chad-berkowitz",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "One actor-action-result example showing Jamie owning concurrent technical workstreams, resolving dependencies, and delivering a launch.",
+      "requirement_id": "requirement.oti.delivery-coordination",
+      "classification": "visible-proven",
+      "public_routes": [
+        "/work/technical-operations",
+        "/work/harry-j-epstein",
+        "/work/callnyc"
+      ],
+      "wiki_evidence": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "public_proof_ids": [
+        "technical-operations-operating-backbone",
+        "hje-modernization-stewardship",
+        "callnyc-civic-data-guidance"
+      ],
+      "next_action": "Keep the public examples compact and source-backed."
+    },
+    {
+      "reader_id": "reader.herminia-ibarra",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "A concise public mapping to one posted civil-service education-and-experience pathway.",
+      "requirement_id": "requirement.oti.minimum-qualification",
+      "classification": "unknown",
+      "public_routes": [],
+      "wiki_evidence": [],
+      "public_proof_ids": [],
+      "next_action": "Create a bounded research inquiry; do not infer missing evidence."
+    },
+    {
+      "reader_id": "reader.herminia-ibarra",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "One actor-action-result example naming portfolio size, concurrent workstreams, decision authority, and delivery outcome.",
+      "requirement_id": "requirement.oti.delivery-coordination",
+      "classification": "visible-proven",
+      "public_routes": [
+        "/work/technical-operations",
+        "/work/harry-j-epstein",
+        "/work/callnyc"
+      ],
+      "wiki_evidence": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "public_proof_ids": [
+        "technical-operations-operating-backbone",
+        "hje-modernization-stewardship",
+        "callnyc-civic-data-guidance"
+      ],
+      "next_action": "Keep the public examples compact and source-backed."
+    },
+    {
+      "reader_id": "reader.amy-edmondson",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "A concise incident narrative showing how Jamie surfaced bad news or an error, what authority Jamie had, how leadership responded, and what the team changed.",
+      "requirement_id": "requirement.oti.risk-status-reporting",
+      "classification": "visible-qualified",
+      "public_routes": [
+        "/work/technical-operations",
+        "/work/fair-rent-nyc"
+      ],
+      "wiki_evidence": [
+        "capability.technical-operations"
+      ],
+      "public_proof_ids": [
+        "technical-operations-operating-backbone",
+        "fair-rent-campaign-memory"
+      ],
+      "next_action": "Use an interview example with a concrete decision record and escalation path."
+    },
+    {
+      "reader_id": "reader.amy-edmondson",
+      "opportunity_id": "opportunity.oti.technical-operations-manager.782369",
+      "signal": "A public, recruiter-readable mapping of education and dated experience to one posted IT Project Specialist qualification pathway.",
+      "requirement_id": "requirement.oti.minimum-qualification",
+      "classification": "unknown",
+      "public_routes": [],
+      "wiki_evidence": [],
+      "public_proof_ids": [],
+      "next_action": "Create a bounded research inquiry; do not infer missing evidence."
+    }
+  ]
+}
