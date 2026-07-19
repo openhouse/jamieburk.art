@@ -4,12 +4,12 @@
   "profile": "integration_ready",
   "suite": "feature-evals-composite-integration-v5",
   "status": "pass",
-  "candidate": "sha256:2d02b48e1ffce0755af46161fa326a98ef1d4cbeeac6e0840471a5f24fa084f9",
-  "contract": "sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332",
+  "candidate": "sha256:0b0b906a4cc40d7887943069e88ef70926a8815096818e4660cbe46283f72e83",
+  "contract": "sha256:77cb3d71fadfa7722b880dc75f6254a4418e269e42d40a7e82656aa58df9b895",
   "consecutivePassingRuns": 2,
   "independentJudgments": [
-    "codex-independent-composite-archival-editorial-2026-07-19-missing-pages-r7",
-    "codex-independent-composite-systems-public-safety-2026-07-19-missing-pages-r7"
+    "codex-independent-composite-archival-editorial-2026-07-19-completed-synthesis-r8",
+    "codex-independent-composite-systems-public-safety-2026-07-19-completed-synthesis-r8"
   ],
   "relatedProfiles": {
     "applicationReady": {
@@ -22,15 +22,15 @@
     "knowledgeReady": {
       "status": "pass",
       "score": 100,
-      "candidate": "sha256:ad6fda3184c7e018b83fa125c3617ac22e57cf4f0d4b7683827bbb3cba23ecbc",
-      "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
+      "candidate": "sha256:efea907e3632bcaa315a4058867c7067c21844e09c9b1c41f8dd10d18253c059",
+      "contract": "sha256:2f1d5f6cfeb00461b911bb1601cfa670f2de91e81a92d7a4270bdbeb81ae2f44",
       "consecutivePassingRuns": 2
     },
     "knowledgeWiki": {
       "status": "pass",
-      "candidate": "sha256:a45d73911c5d16c42ff68a170d0268afdb4c67db1ca04ec85459da1a9dc0f098",
-      "contract": "sha256:4fd8e47766d2c7dfba7890dc552f03a552c2b3f0ec06cd0bdce1eba1cec21353",
-      "records": 47,
+      "candidate": "sha256:43627c5f73e80ec26a09cd2e79e3645da71650cc84e211c1f20515860a363e8b",
+      "contract": "sha256:dd6e660720efc391078459b6ff72dd393f44f1dd3ba324eb782abfd3529179ae",
+      "records": 50,
       "consecutivePassingRuns": 2
     },
     "hiringAcceptance": {
@@ -49,6 +49,7 @@
   },
   "externalGates": [
     "candidate-bound human-reader study",
+    "collaborator consent and attribution review",
     "rights review for priority visual evidence",
     "human decision and submission for any live application",
     "re-verification of mutable opportunity records on their recorded dates",
