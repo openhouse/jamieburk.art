@@ -4,7 +4,7 @@
   "reviewType": "public-safe editorial risk review",
   "isLegalReview": false,
   "isParticipantApproval": false,
-  "candidateFingerprint": "b59c90dc4c55d5db60b1839bd05e6f76bd6bc7e62548479a79146e727c752995",
+  "candidateFingerprint": "ab7127e96a39272b6f6859e2f3919ebab5b8d4a4fc7be1fc84e3d5bd93e0ba8a",
   "findings": [
     {
       "id": "MPR-001",
@@ -68,6 +68,34 @@
       "risk": "A bounded interpretive draft could be mistaken for Jamie-approved autobiography or make protected interior context inferable through cross-project synthesis.",
       "decision": "label-pending-authorship-keep-private-voice-offsite-and-block-projection-until-jamie-review",
       "appliesTo": ["what-is-at-stake-for-me", "selected-practice-chronology", "private-voice-source"]
+    },
+    {
+      "id": "MPR-010",
+      "combination": ["five archive population observations", "one current canonical operational receipt", "shared-folder completeness language"],
+      "risk": "Method-specific counts could be mistaken for one comparable historical total or for complete content review.",
+      "decision": "retain-all-observations-name-method-differences-and-separate-accounting-from-reading",
+      "appliesTo": ["knowledge-wiki-family-closure", "nyc-artist-coalition", "shared-folder-census"]
+    },
+    {
+      "id": "MPR-011",
+      "combination": ["Jamie's documented campaign role", "Council legislation", "later agency change"],
+      "risk": "A compact chronology could convert aligned institutional outcomes into individual legislative or administrative causality.",
+      "decision": "name-supported-action-and-separate-government-outcomes-with-explicit-anti-causality",
+      "appliesTo": ["let-nyc-dance", "talks-not-raids", "nyc-artist-coalition"]
+    },
+    {
+      "id": "MPR-012",
+      "combination": ["decision question", "options not observed", "retrospective source synthesis"],
+      "risk": "A bounded reconstruction could be read as minutes from a documented decision meeting or as evidence that every alternative was considered.",
+      "decision": "label-reconstruction-and-distinguish-chosen-documented-not-chosen-and-not-observed",
+      "appliesTo": ["decision-records", "callnyc", "kc-town-hall", "knowledge-wiki"]
+    },
+    {
+      "id": "MPR-013",
+      "combination": ["specific place", "observable action", "other people present"],
+      "risk": "Scene-level specificity could re-identify participation, attribute unrecorded interior states, or turn another person's life into narrative evidence.",
+      "decision": "require-source-backed-observation-and-omit-invented-dialogue-interiority-and-identifying-detail",
+      "appliesTo": ["places-where-work-became-real", "canonical-story-bank", "photo-and-media-review"]
     }
   ],
   "result": "pass-with-continuing-holds",

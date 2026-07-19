@@ -121,6 +121,15 @@ Jamie worked. Name, quote, photograph, attendance, and personal-history use each
 require their own source, relevance, privacy, rights, consent, and context
 decision.
 
+## Scene Protocol
+
+A scene may make operating work concrete when a source supports the setting,
+Jamie's observable action, the material or institutional constraint, the other
+actors present, and what became usable. Do not invent dialogue, interiority,
+emotion, chronology, or representative community meaning. A vivid scene is an
+evidence-led retrieval aid, not a license to turn another person's life into
+narrative texture.
+
 ## Next Research
 
 Build individual place records only when they improve retrieval and can retain

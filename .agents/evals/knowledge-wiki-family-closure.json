@@ -1,0 +1,26 @@
+{
+  "id": "knowledge-wiki-family-closure-v1",
+  "title": "Knowledge Wiki family closure",
+  "purpose": "Close the frozen feature/knowledge-wiki-A through E family into one reviewable, public-safe candidate without creating parallel authorities or erasing donor strengths.",
+  "score_maximum": 100,
+  "score_threshold": 100,
+  "criteria": [
+    { "id": "FC-001", "title": "One architecture and complete donor ledger", "weight": 10, "blocking": true },
+    { "id": "FC-002", "title": "Archive observations are reconciled without false equivalence", "weight": 10, "blocking": true },
+    { "id": "FC-003", "title": "Distinct reader pathways exist and are discoverable", "weight": 10, "blocking": true },
+    { "id": "FC-004", "title": "Jamie is visible without sole-credit or causality inflation", "weight": 10, "blocking": true },
+    { "id": "FC-005", "title": "Implementation, adoption, handoff, and continuity remain distinct", "weight": 10, "blocking": true },
+    { "id": "FC-006", "title": "Campaign and civic outcomes retain institutional boundaries", "weight": 10, "blocking": true },
+    { "id": "FC-007", "title": "Decision records preserve actors, constraints, unknowns, and anti-claims", "weight": 10, "blocking": true },
+    { "id": "FC-008", "title": "Public-safety and selective-projection boundaries remain intact", "weight": 10, "blocking": true },
+    { "id": "FC-009", "title": "Adversarial coverage and review packets are explicit", "weight": 10, "blocking": true },
+    { "id": "FC-010", "title": "The exact candidate is bound while human gates remain open", "weight": 10, "blocking": true }
+  ],
+  "human_only_gates": [
+    "Jamie final content and voice review",
+    "collaborator correction or consent where required",
+    "media rights and represented-person review",
+    "hiring-reader comprehension",
+    "production deployment and indexing approval"
+  ]
+}

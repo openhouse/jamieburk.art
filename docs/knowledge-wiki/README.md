@@ -31,6 +31,10 @@ globally renamed.
 ## Start Here
 
 - [Projects](indexes/projects.md): begin with a body of work.
+- [Jamie at Work](methods/jamie-at-work.md): understand the recurring operating
+  practice before choosing a project example.
+- [What the Work Was Up Against](indexes/what-the-work-was-up-against.md): name
+  the condition and pressure before describing a response.
 - [Selected practice chronology](timelines/selected-practice-chronology.md):
   move across two decades of source-backed work without treating the selection
   as a complete life history.
@@ -47,6 +51,12 @@ globally renamed.
 - [Evidence debt and promotion queue](indexes/evidence-debt-and-promotion-queue.md):
   see what still needs a source return, collaborator correction, rights review,
   or editorial decision.
+- [Canonical Story Bank](indexes/canonical-story-bank.md): preserve situation,
+  Jamie's action, usable result, collective context, and honest limit together.
+- [Operational Evidence Map](indexes/operational-evidence-map.md): distinguish
+  responsibility, delivery, wider outcome, and boundary.
+- [Decision Records](indexes/decision-records.md): inspect actors, constraints,
+  observed choices, unknowns, and anti-claims.
 - [Places where the work became real](indexes/places-where-work-became-real.md):
   retrieve situated work without treating places or people as scenery.
 - [What is at stake for me](methods/what-is-at-stake-for-me.md): read an
@@ -61,6 +71,8 @@ globally renamed.
   human questions.
 - [Editorial depth evaluation](evaluations/editorial-depth.md): test distinct
   attribution, evidence, consent, and authorship gates for four deeper pages.
+- [Family closure evaluation](evaluations/family-closure.md): verify that the
+  frozen A-E family resolves into one architecture and exact candidate.
 
 ## Work Safely
 
@@ -85,6 +97,8 @@ npm run wiki:eval:source-return
 npm run wiki:test:source-return
 npm run wiki:eval:editorial-depth
 npm run wiki:test:editorial-depth
+npm run wiki:eval:family-closure
+npm run wiki:test:family-closure
 npm run wiki:opportunities
 npm run wiki:coverage
 npm run wiki:discovery

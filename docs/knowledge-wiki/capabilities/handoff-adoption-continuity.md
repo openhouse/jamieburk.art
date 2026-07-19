@@ -60,6 +60,21 @@ The strongest version of this capability is plural and bounded:
   while the personal reason for that transition remains outside this public
   record.
 
+## Evidence States
+
+- **Designed:** requirements, workflows, interfaces, plans, or operating
+  structures exist.
+- **Launched:** the system reached a real public or team-use context.
+- **Used:** another person demonstrably acted through it.
+- **Adopted:** a team incorporated it into recurring practice.
+- **Handed off:** ownership, documentation, or operating custody transferred.
+- **Sustained:** the structure remained useful after Jamie's direct work.
+
+One state does not prove the next. Evidence of launch is not evidence of
+adoption; adoption is not evidence of a successful handoff; survival is not
+proof that maintenance was easy. Failed, abandoned, or burdensome handoffs are
+part of the professional record and belong in future source return.
+
 ## Source Return
 
 The [July 2026 return-to-source run](../research-runs/missing-pages-return-to-source-2026.md)

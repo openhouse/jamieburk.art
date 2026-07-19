@@ -1,0 +1,18 @@
+{
+  "contract": "knowledge-wiki-family-closure-v1",
+  "base": {
+    "branch": "feature/knowledge-wiki-B",
+    "sha": "268a92d794f5b604f4004fc9d6e5652f234fc61b"
+  },
+  "candidateFingerprint": "sha256:8b81379903a7d6ed0736151925088a5bfb476d60dc7baacdfa1aa32c892c80c8",
+  "candidateFileCount": 70,
+  "automatedDecision": "pass",
+  "evaluatedAt": "2026-07-19",
+  "humanGates": {
+    "jamieFinalReview": "open",
+    "collaboratorAndConsentReview": "open",
+    "mediaRightsReview": "open",
+    "hiringReaderReview": "open",
+    "productionAndIndexingApproval": "open"
+  }
+}

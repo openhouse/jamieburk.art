@@ -35,6 +35,10 @@ public boundary.
 - [NYC Artist Coalition](../projects/nyc-artist-coalition.md): recurring
   participation, public identity, practical safety, civic translation, and a
   fully accounted shared-archive research layer.
+- [Let NYC Dance](../projects/let-nyc-dance.md): safety learning, public
+  explanation, action routes, sponsor state, and collective Cabaret Law repeal.
+- [Talks Not Raids](../projects/talks-not-raids.md): venue testimony, public
+  research, Council action, transparency law, and the later CURE chronology.
 - [Fair Rent NYC and Commercial Rent Stabilization](../projects/fair-rent-nyc.md):
   campaign operations, legislative provenance, and public-data proposals.
 - [KC Town Hall](../projects/kc-town-hall.md): physical restoration,
@@ -56,6 +60,10 @@ public boundary.
 - [Learning Through Making](../methods/learning-through-making.md): the artistic
   and technical lineage joining embodied inquiry, writing, prototypes,
   participation, and revision.
+- [What the Work Was Up Against](what-the-work-was-up-against.md): a
+  pressure-first comparison that avoids turning people into project deficits.
+- [Canonical Story Bank](canonical-story-bank.md): reusable application and
+  interview stories with evidence limits intact.
 
 The deeper compatibility layer retains additional public-safe
 [project research](../../knowledge-bank/README.md#projection-rule). Those notes

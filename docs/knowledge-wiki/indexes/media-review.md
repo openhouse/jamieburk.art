@@ -26,3 +26,18 @@ consent, and display approval as separate questions.
 
 The photograph itself and its private locator are not committed. The record is
 a public-safe review surface, not permission to publish.
+
+## Visual Evidence Queue
+
+Every proposed image or media artifact moves through separate decisions:
+
+1. what factual proposition the artifact supports;
+2. who created it and who owns relevant rights;
+3. who is represented and whether consent or additional care is required;
+4. whether the caption, crop, context, and credit are accurate; and
+5. whether publication serves the current audience and composition.
+
+An artifact can pass evidence review and remain held for rights, consent,
+caption, credit, sensitivity, or editorial reasons. The queue should also tell
+a photo editor what remains worth looking for without exposing private archive
+coordinates.

@@ -46,3 +46,9 @@ The [July 2026 source-return run](../research-runs/missing-pages-return-to-sourc
 also leaves direct librarian questions open. Full access authorization enables
 research; it does not itself approve publication, quotation, identification,
 or reuse.
+
+The [family closure run](../research-runs/knowledge-wiki-family-closure-2026.md)
+also preserves the five non-comparable NYC Artist Coalition archive
+observations. A future census may supersede the current operational receipt
+only after documenting its snapshot, traversal, inclusion rules, disposition
+contract, and protected manifest boundary.
