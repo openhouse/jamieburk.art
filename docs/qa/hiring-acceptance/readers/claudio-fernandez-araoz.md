@@ -6,6 +6,8 @@ category: career-and-mutual-fit-advisory-lens
 mode: named-expert-advisory-lens
 public_sources:
   - https://hbr.org/2014/06/21st-century-talent-spotting
+source_notes:
+  - The public Harvard Business Review article supports a bounded capability-and-potential selection lens; it does not establish Jamie-specific judgment or endorsement.
 relevance:
   - selection decisions
   - capability and potential

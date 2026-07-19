@@ -29,6 +29,10 @@ export const EVAL_CONTRACT_PATH = resolve(
   ".agents/evals/knowledge-wiki-employment.json"
 );
 export const HIRING_ARTIFACT_ROOT = resolve(WIKI_ARTIFACT_ROOT, "hiring-acceptance");
+const AGENCY_RELATIONS_PATH = resolve(
+  REPO_ROOT,
+  "apps/www/src/data/knowledge-bank/agency-relations.json"
+);
 
 const COVERAGE_STATUSES = new Set([
   "visible-proven",
@@ -67,14 +71,46 @@ const SOLE_AUTHORSHIP_PATTERN =
   /\b(?:single-handedly|solely (?:built|created|led|caused|owned)|alone (?:built|created|led|caused))\b/i;
 
 const FORBIDDEN_KEYS = new Set([
-  "application_status",
-  "warm_path",
+  "applicationstatus",
+  "warmpath",
   "referral",
-  "mutual_connection",
-  "private_contact",
-  "interview_notes",
-  "relationship_history",
-  "raw_communications"
+  "mutualconnection",
+  "privatecontact",
+  "interviewnotes",
+  "relationshiphistory",
+  "rawcommunications"
+]);
+
+const OFFICIAL_SOURCE_HOSTS = new Set([
+  "asana.com",
+  "cityjobs.nyc.gov",
+  "job-boards.greenhouse.io",
+  "jobs.ashbyhq.com"
+]);
+
+const OFFICIAL_SOURCE_FIELDS = [
+  "role_title",
+  "opportunity_status",
+  "deadline",
+  "compensation",
+  "location",
+  "reporting_line",
+  "role_requirements",
+  "confirmed_facts"
+];
+
+const DISCOVERY_SIGNAL_PATTERNS = new Map([
+  ["ambiguous-work", /ambig|unclear|complex|evolving|discovery|needs|concept|zero-to-one/i],
+  ["cross-functional-delivery", /cross-functional|concurrent|coordinate|delivery|launch|partner/i],
+  ["documentation", /document|runbook|handbook|guide|brief|report|playbook/i],
+  ["launch-readiness", /launch|go or no-go|implementation|readiness|deploy/i],
+  ["onboarding", /onboard|ramp|enable|training|handoff|cohort/i],
+  ["public-facing-systems", /public|customer|campaign|participant|physical process/i],
+  ["requirements", /requirement|qualification|standards|principles|needs|success criteria|brief|scope|priorit|plan|ownership/i],
+  ["responsible-ai", /AI|GenAI|governance|evaluation|automation/i],
+  ["risk-and-dependencies", /risk|dependenc|constraint|security|bottleneck|go or no-go/i],
+  ["stakeholder-translation", /stakeholder|technical and nontechnical|alignment|customer|facilitat|partner/i],
+  ["workflow-mapping", /workflow|process|journey|discovery/i]
 ]);
 
 const REQUIRED_OPPORTUNITY_FIELDS = [
@@ -165,7 +201,8 @@ export function loadHiringContext() {
     discovery: readJson(DISCOVERY_PATH),
     sourceChannels: readJson(SOURCE_CHANNEL_PATH),
     career: readJson(CAREER_PATH),
-    contract: readJson(EVAL_CONTRACT_PATH)
+    contract: readJson(EVAL_CONTRACT_PATH),
+    agency: readJson(AGENCY_RELATIONS_PATH)
   };
 }
 
@@ -179,7 +216,8 @@ function findForbiddenKey(value, trail = []) {
   }
   if (!value || typeof value !== "object") return null;
   for (const [key, child] of Object.entries(value)) {
-    if (FORBIDDEN_KEYS.has(key)) return [...trail, key].join(".");
+    const normalizedKey = key.replace(/[^a-z0-9]/gi, "").toLowerCase();
+    if (FORBIDDEN_KEYS.has(normalizedKey)) return [...trail, key].join(".");
     const found = findForbiddenKey(child, [...trail, key]);
     if (found) return found;
   }
@@ -197,6 +235,9 @@ export function validateHiringContext(context = loadHiringContext(), { asOf = "2
   const warnings = [];
   const add = (code, path, message) => errors.push({ code, path, message });
   const proofIds = new Set(proofClaims.map((proof) => proof.id));
+  const agencyByProof = new Map(
+    (context.agency?.relations ?? []).map((relation) => [relation.proofId, relation])
+  );
   const wikiIds = new Set(context.wikiRecords.map((record) => record.data.id));
   const readerById = new Map(context.readers.map((reader) => [reader.data.id, reader]));
   const opportunityById = new Map(
@@ -224,6 +265,40 @@ export function validateHiringContext(context = loadHiringContext(), { asOf = "2
     }
     if (!/^https:\/\//.test(data.canonical_url ?? "")) {
       add("invalid-opportunity-url", record.repoPath, "canonical_url must be HTTPS.");
+    }
+    let canonicalHost = "";
+    try {
+      canonicalHost = new URL(data.canonical_url).hostname;
+    } catch {
+      canonicalHost = "";
+    }
+    if (!OFFICIAL_SOURCE_HOSTS.has(canonicalHost)) {
+      add(
+        "unrecognized-employer-domain",
+        record.repoPath,
+        `${canonicalHost || "invalid host"} is not an approved official-employer domain.`
+      );
+    }
+    const officialSource = data.official_source;
+    if (
+      officialSource?.url !== data.canonical_url ||
+      officialSource?.retrieved_at !== data.verified_at
+    ) {
+      add(
+        "unbound-official-source",
+        record.repoPath,
+        "Official source must bind the canonical URL and verification date."
+      );
+    }
+    const supportedFields = new Set(officialSource?.supports ?? []);
+    for (const field of OFFICIAL_SOURCE_FIELDS) {
+      if (!supportedFields.has(field)) {
+        add(
+          "unsupported-role-fact-class",
+          record.repoPath,
+          `Official source does not declare support for ${field}.`
+        );
+      }
     }
     if (data.opportunity_status !== "live") {
       add("inactive-tier-one-role", record.repoPath, "Tier 1 role is not marked live.");
@@ -259,6 +334,13 @@ export function validateHiringContext(context = loadHiringContext(), { asOf = "2
       }
       for (const proofId of requirement.proof_refs ?? []) {
         if (!proofIds.has(proofId)) add("unknown-proof-ref", record.repoPath, `${requirementId} references ${proofId}.`);
+        if (!agencyByProof.has(proofId)) {
+          add(
+            "unclassified-proof-ref",
+            record.repoPath,
+            `${requirementId} references ${proofId} without an agency relation.`
+          );
+        }
       }
       for (const wikiId of requirement.wiki_records ?? []) {
         if (!wikiIds.has(wikiId)) add("unknown-wiki-ref", record.repoPath, `${requirementId} references ${wikiId}.`);
@@ -274,12 +356,59 @@ export function validateHiringContext(context = loadHiringContext(), { asOf = "2
       ) {
         add("unproven-visible-status", record.repoPath, `${requirementId} is visible-proven without proof and route evidence.`);
       }
+      if (requirement.coverage_status === "visible-proven") {
+        const relations = (requirement.proof_refs ?? [])
+          .map((proofId) => agencyByProof.get(proofId))
+          .filter(Boolean);
+        const strong = relations.some(
+          (relation) =>
+            relation.confidence === "high" && relation.evidenceState === "canonical-linked"
+        );
+        const corroboratedModerate =
+          relations.filter(
+            (relation) =>
+              relation.confidence === "moderate" &&
+              relation.evidenceState === "canonical-linked"
+          ).length >= 2;
+        if (!strong && !corroboratedModerate) {
+          add(
+            "overstated-proof-coverage",
+            record.repoPath,
+            `${requirementId} is visible-proven without strong or corroborated canonical agency evidence.`
+          );
+        }
+      }
     }
     for (const requirementId of data.hard_requirements ?? []) {
       const requirement = (data.role_requirements ?? []).find((item) => item.id === requirementId);
       if (!requirement) add("unknown-hard-requirement", record.repoPath, `Unknown hard requirement ${requirementId}.`);
       else if (requirement.kind !== "hard-screen") {
         add("hidden-hard-screen", record.repoPath, `${requirementId} must be typed hard-screen.`);
+      }
+    }
+    const typedHardScreens = (data.role_requirements ?? [])
+      .filter((requirement) => requirement.kind === "hard-screen")
+      .map((requirement) => requirement.id)
+      .sort();
+    const listedHardScreens = [...(data.hard_requirements ?? [])].sort();
+    if (stableJson(typedHardScreens) !== stableJson(listedHardScreens)) {
+      add(
+        "hard-screen-closure",
+        record.repoPath,
+        "Every typed hard screen must appear in hard_requirements and vice versa."
+      );
+    }
+    const requirementText = (data.role_requirements ?? [])
+      .map((requirement) => requirement.text)
+      .join(" ");
+    for (const signal of data.discovery_signals ?? []) {
+      const pattern = DISCOVERY_SIGNAL_PATTERNS.get(signal);
+      if (!pattern || !pattern.test(requirementText)) {
+        add(
+          "untraceable-discovery-signal",
+          record.repoPath,
+          `${signal} is not traceable to requirement text.`
+        );
       }
     }
     for (const field of [
@@ -315,6 +444,23 @@ export function validateHiringContext(context = loadHiringContext(), { asOf = "2
     }
     const named = !data.id?.startsWith("reader.generic-");
     if (named && !(data.public_sources?.length)) add("unsourced-named-reader", reader.repoPath, "Named profiles require public sources.");
+    if (
+      named &&
+      (!Array.isArray(data.source_notes) ||
+        data.source_notes.length !== data.public_sources.length ||
+        data.source_notes.some((note) => typeof note !== "string" || note.length < 20))
+    ) {
+      add(
+        "unbound-reader-source",
+        reader.repoPath,
+        "Every named-reader source requires a substantive, position-matched source note."
+      );
+    }
+    for (const source of data.public_sources ?? []) {
+      if (!/^https:\/\//.test(source)) {
+        add("invalid-reader-source", reader.repoPath, `Reader source must be HTTPS: ${source}`);
+      }
+    }
     if (named && !data.disclaimer?.includes("not") && !data.disclaimer?.includes("Not")) {
       add("missing-reader-disclaimer", reader.repoPath, "Named profile disclaimer must reject actual participation.");
     }
@@ -385,15 +531,18 @@ export function runTitleBlindDiscovery(context = loadHiringContext()) {
     score: overlapScore(candidate.signals ?? [], profileSignals),
     hardScreens: candidate.hardScreens ?? []
   }));
-  const ranked = [...opportunities, ...negativeControls].sort(
+  const screenedOut = negativeControls.filter((candidate) => candidate.hardScreens.length > 0);
+  const eligible = [
+    ...opportunities,
+    ...negativeControls.filter((candidate) => candidate.hardScreens.length === 0)
+  ];
+  const ranked = eligible.sort(
     (a, b) => b.score - a.score || a.id.localeCompare(b.id)
   );
   const topK = ranked.slice(0, context.discovery.topK ?? 6).map((candidate) => candidate.id);
   const knownGood = context.discovery.knownGoodOpportunityIds ?? [];
   const recalled = knownGood.filter((id) => topK.includes(id));
-  const rejected = negativeControls.filter(
-    (candidate) => candidate.hardScreens.length > 0 && !topK.includes(candidate.id)
-  );
+  const rejected = screenedOut.filter((candidate) => !topK.includes(candidate.id));
   const recall = knownGood.length ? recalled.length / knownGood.length : 0;
   const passed = recall === 1 && rejected.length === negativeControls.length;
   return {
@@ -404,6 +553,7 @@ export function runTitleBlindDiscovery(context = loadHiringContext()) {
     recall,
     topK,
     ranked,
+    screenedOut,
     negativeControlsRejected: rejected.length
   };
 }
@@ -475,6 +625,7 @@ export async function capturePublicSnapshot(baseUrl, routes) {
   }
   const semantic = pages.map(({ route, status, text, htmlHash }) => ({ route, status, text, htmlHash }));
   return {
+    source: "live-http",
     baseUrl,
     pages,
     snapshotHash: sha256(stableJson(semantic))
@@ -483,11 +634,22 @@ export async function capturePublicSnapshot(baseUrl, routes) {
 
 export function candidateBinding() {
   const candidateSha = git(["rev-parse", "HEAD"]);
-  const status = git(["status", "--porcelain"], "");
+  const status = git(["status", "--porcelain=v1"], "");
+  const trackedDiff = status ? git(["diff", "--no-ext-diff", "--binary", "HEAD"], "") : "";
+  const untrackedPaths = status
+    ? git(["ls-files", "--others", "--exclude-standard"], "")
+        .split("\n")
+        .filter(Boolean)
+        .sort()
+    : [];
+  const untrackedDigests = untrackedPaths.map((repoPath) => ({
+    repoPath,
+    contentHash: sha256(readFileSync(resolve(REPO_ROOT, repoPath)))
+  }));
   return {
     candidateSha,
     worktreeClean: status === "",
-    worktreeStateHash: sha256(status)
+    worktreeStateHash: sha256(stableJson({ status, trackedDiff, untrackedDigests }))
   };
 }
 
@@ -506,14 +668,51 @@ export function buildEvaluatorPacket({
   if (evaluatorIdentity === optimizerIdentity) {
     throw new Error("Optimizer and evaluator identities must differ.");
   }
+  if (!binding.worktreeClean) {
+    throw new Error("Evaluator packets require a clean worktree.");
+  }
+  if (snapshot.source !== "live-http") {
+    throw new Error("Evaluator packets require a live HTTP public snapshot.");
+  }
   const snapshotRaw = stableJson(snapshot);
   for (const [pattern, label] of PRIVATE_PATTERNS) {
     if (pattern.test(snapshotRaw)) throw new Error(`Public snapshot contains ${label}.`);
   }
   const roleContext = publicOpportunityContext(opportunity);
   const readerContext = publicReaderContext(reader);
+  const normalizedEvaluator = evaluatorIdentity.toLowerCase();
+  if (
+    normalizedEvaluator === readerContext.id.toLowerCase() ||
+    normalizedEvaluator === readerContext.displayName.toLowerCase()
+  ) {
+    throw new Error("Evaluator identity cannot impersonate the configured reader lens.");
+  }
   const selectedRoutes = new Set(roleContext.portfolioRoutes);
-  const publicPages = (snapshot.pages ?? []).filter((page) => selectedRoutes.has(page.route));
+  const snapshotPages = snapshot.pages ?? [];
+  const snapshotSemantic = snapshotPages.map(({ route, status, text, htmlHash }) => ({
+    route,
+    status,
+    text,
+    htmlHash
+  }));
+  if (snapshot.snapshotHash !== sha256(stableJson(snapshotSemantic))) {
+    throw new Error("Public snapshot hash does not match its route contents.");
+  }
+  const pageByRoute = new Map();
+  for (const page of snapshotPages) {
+    if (pageByRoute.has(page.route)) throw new Error(`Public snapshot repeats route ${page.route}.`);
+    pageByRoute.set(page.route, page);
+  }
+  const missingRoutes = [...selectedRoutes].filter((route) => !pageByRoute.has(route));
+  if (missingRoutes.length) {
+    throw new Error(`Public snapshot is missing required routes: ${missingRoutes.join(", ")}.`);
+  }
+  const publicPages = roleContext.portfolioRoutes.map((route) => pageByRoute.get(route));
+  for (const page of publicPages) {
+    if (page.status !== 200 || !page.text || !page.htmlHash) {
+      throw new Error(`Public snapshot route ${page.route} is incomplete.`);
+    }
+  }
   const portfolioSnapshot = {
     baseUrl: snapshot.baseUrl,
     snapshotHash: snapshot.snapshotHash,

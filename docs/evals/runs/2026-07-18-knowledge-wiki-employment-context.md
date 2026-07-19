@@ -27,7 +27,7 @@ has been identified.
 - title-blind recovery of all 6 known-good opportunities
 - rejection of 4 negative controls with hard credential, compensation, travel,
   or technical screens
-- 17 mutation and isolation tests
+- 28 mutation and isolation tests
 - exact runtime binding for Git SHA, worktree state, public snapshot, role,
   reader, suite, timestamp, and development or holdout panel
 - Knowledge Wiki graph integrity, query behavior, source governance, public
@@ -41,6 +41,18 @@ operating list. The second revision compressed every item while preserving the
 decision-relevant signals. Browser checks at 1440 x 1000 and 375 x 812 found no
 horizontal overflow or overlap; the mobile page became 51 pixels shorter than
 the first revision.
+
+The first independent holdout pair rejected the initial frozen candidate. It
+found a post-freeze mosaic binding, ranking-based rather than explicit negative
+hard screens, truncated comma-bearing YAML values, insufficient official-source
+field binding, weak reverse hard-screen closure, overly permissive snapshot and
+dirty-worktree packet states, and thin named-reader source semantics. Those
+receipts were not counted. The repaired candidate quotes the affected YAML,
+screens before ranking, traces discovery signals to requirement text, binds
+role fact classes and named-reader notes to public sources, checks agency
+evidence strength, fingerprints dirty contents, requires clean live-HTTP
+snapshots with complete routes and content hashes, and mutation-tests each
+boundary.
 
 The public copy does not claim structured government hiring ownership, public
 launch authority, or any other experience that the governed evidence does not

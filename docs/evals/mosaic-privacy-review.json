@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "reviewedAt": "2026-07-16",
+  "reviewedAt": "2026-07-18",
   "reviewType": "public-safe editorial risk review",
   "isLegalReview": false,
   "isParticipantApproval": false,
-  "candidateFingerprint": "be47c135e247fed17e6689e2cb3e1993027b4ae9e82bebc02ff0c03d1b5f3fc3",
+  "candidateFingerprint": "b93f397d30ca20898e9795f706b5e42352e65e495503010f593912a5156aca5f",
   "findings": [
     {
       "id": "MPR-001",

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { readFileSync } from "node:fs";
 import {
   buildEvaluatorPacket,
   candidateBinding,
@@ -18,7 +17,6 @@ const value = (name) => {
 const help = `Public-only hiring evaluator packet builder\n\n` +
   `Usage:\n` +
   `  npm run eval:hiring -- --base-url http://127.0.0.1:3042\n` +
-  `  npm run eval:hiring -- --snapshot .artifacts/public-snapshot.json\n` +
   `  npm run eval:hiring -- --readers reader.generic-recruiter --opportunities opportunity.nyc-oti.technical-operations-manager.782369 --base-url URL\n\n` +
   `Options: --panel development|holdout --sha SHA --optimizer ID --evaluator ID\n` +
   `This command builds exact, public-only packets. It does not fabricate a reader decision.\n`;
@@ -29,8 +27,7 @@ if (args.includes("--help") || args.includes("-h")) {
 }
 
 const baseUrl = value("--base-url");
-const snapshotPath = value("--snapshot");
-if (!baseUrl && !snapshotPath) {
+if (!baseUrl) {
   console.error(help);
   process.exit(2);
 }
@@ -62,9 +59,7 @@ for (const id of requestedOpportunities) {
 const routes = requestedOpportunities.flatMap(
   (id) => opportunityById.get(id).data.portfolio_routes
 );
-const snapshot = snapshotPath
-  ? JSON.parse(readFileSync(snapshotPath, "utf8"))
-  : await capturePublicSnapshot(baseUrl, routes);
+const snapshot = await capturePublicSnapshot(baseUrl, routes);
 
 const packets = [];
 for (const opportunityId of requestedOpportunities) {

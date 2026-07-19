@@ -19,6 +19,21 @@ function errorCodes(result) {
   return new Set(result.errors.map((error) => error.code));
 }
 
+function publicSnapshot(routes, label = "Public content") {
+  const pages = routes.map((route) => ({
+    route,
+    status: 200,
+    text: `${label} for ${route}`,
+    htmlHash: sha256(route)
+  }));
+  return {
+    source: "live-http",
+    baseUrl: "https://example.test",
+    snapshotHash: sha256(stableJson(pages)),
+    pages
+  };
+}
+
 test("canonical employment context passes every machine hard gate", () => {
   const result = validateHiringContext(loadHiringContext());
   assert.deepEqual(result.errors, []);
@@ -38,6 +53,16 @@ test("title-blind discovery never needs organization or role titles", () => {
   const after = runTitleBlindDiscovery(context);
   assert.deepEqual(after.topK, before.topK);
   assert.equal(after.recall, 1);
+});
+
+test("title-blind discovery applies hard screens before signal ranking", () => {
+  const context = cloneContext();
+  const control = context.discovery.negativeControls[0];
+  control.signals = [...context.discovery.profileSignals];
+  const result = runTitleBlindDiscovery(context);
+  assert.ok(result.screenedOut.some((candidate) => candidate.id === control.id));
+  assert.ok(!result.topK.includes(control.id));
+  assert.equal(result.negativeControlsRejected, context.discovery.negativeControls.length);
 });
 
 test("public evaluator context excludes Wiki-only evidence", () => {
@@ -62,16 +87,7 @@ test("evaluator packet is deterministic for frozen inputs and leaves decision op
   const context = loadHiringContext();
   const opportunity = context.opportunities[0];
   const reader = context.readers.find((item) => item.data.id === "reader.generic-recruiter");
-  const snapshot = {
-    baseUrl: "https://example.test",
-    snapshotHash: sha256("snapshot"),
-    pages: opportunity.data.portfolio_routes.map((route) => ({
-      route,
-      status: 200,
-      text: `Public content for ${route}`,
-      htmlHash: sha256(route)
-    }))
-  };
+  const snapshot = publicSnapshot(opportunity.data.portfolio_routes);
   const options = {
     opportunity,
     reader,
@@ -124,6 +140,12 @@ test("mutation rejects private job-search state", () => {
   assert.ok(errorCodes(validateHiringContext(context)).has("private-job-search-field"));
 });
 
+test("mutation rejects camelCase private job-search state", () => {
+  const context = cloneContext();
+  context.opportunities[0].data.applicationStatus = "drafted";
+  assert.ok(errorCodes(validateHiringContext(context)).has("private-job-search-field"));
+});
+
 test("mutation rejects sole-authorship inflation", () => {
   const context = cloneContext();
   context.opportunities[0].raw += "\nJamie single-handedly created the coalition.\n";
@@ -139,11 +161,39 @@ test("mutation rejects a hidden hard screen", () => {
   assert.ok(errorCodes(validateHiringContext(context)).has("hidden-hard-screen"));
 });
 
+test("mutation rejects a typed hard screen omitted from the reverse index", () => {
+  const context = cloneContext();
+  context.opportunities[0].data.hard_requirements.pop();
+  assert.ok(errorCodes(validateHiringContext(context)).has("hard-screen-closure"));
+});
+
+test("mutation rejects a role fact set detached from its official source", () => {
+  const context = cloneContext();
+  context.opportunities[0].data.official_source.supports = ["role_title"];
+  assert.ok(errorCodes(validateHiringContext(context)).has("unsupported-role-fact-class"));
+});
+
+test("mutation rejects visible-proven coverage backed only by weak proof debt", () => {
+  const context = cloneContext();
+  const requirement = context.opportunities
+    .flatMap((opportunity) => opportunity.data.role_requirements)
+    .find((item) => item.coverage_status === "visible-proven");
+  requirement.proof_refs = ["hje-revenue-growth-contribution"];
+  assert.ok(errorCodes(validateHiringContext(context)).has("overstated-proof-coverage"));
+});
+
 test("mutation rejects an unsourced named lens", () => {
   const context = cloneContext();
   const reader = context.readers.find((item) => item.data.id === "reader.herminia-ibarra");
   reader.data.public_sources = [];
   assert.ok(errorCodes(validateHiringContext(context)).has("unsourced-named-reader"));
+});
+
+test("mutation rejects named-reader sources without position-matched notes", () => {
+  const context = cloneContext();
+  const reader = context.readers.find((item) => item.data.id === "reader.herminia-ibarra");
+  reader.data.source_notes = [];
+  assert.ok(errorCodes(validateHiringContext(context)).has("unbound-reader-source"));
 });
 
 test("mutation rejects a disclaimer that implies actual participation", () => {
@@ -162,11 +212,9 @@ test("mutation rejects development and holdout panel leakage", () => {
 
 test("mutation rejects private material in an evaluator snapshot", () => {
   const context = loadHiringContext();
-  const snapshot = {
-    baseUrl: "https://example.test",
-    snapshotHash: sha256("private"),
-    pages: [{ route: "/", status: 200, text: "/Users/example/private", htmlHash: sha256("private") }]
-  };
+  const routes = context.opportunities[0].data.portfolio_routes;
+  const snapshot = publicSnapshot(routes);
+  snapshot.pages[0].text = "/Users/example/private";
   assert.throws(
     () =>
       buildEvaluatorPacket({
@@ -181,17 +229,126 @@ test("mutation rejects private material in an evaluator snapshot", () => {
   );
 });
 
-test("mutation rejects optimizer self-grading", () => {
+test("mutation rejects a dirty worktree evaluator binding", () => {
   const context = loadHiringContext();
-  const snapshot = {
-    baseUrl: "https://example.test",
-    snapshotHash: sha256("snapshot"),
-    pages: []
-  };
+  const opportunity = context.opportunities[0];
   assert.throws(
     () =>
       buildEvaluatorPacket({
-        opportunity: context.opportunities[0],
+        opportunity,
+        reader: context.readers[0],
+        snapshot: publicSnapshot(opportunity.data.portfolio_routes),
+        binding: {
+          candidateSha: "a".repeat(40),
+          worktreeClean: false,
+          worktreeStateHash: sha256("changed file contents")
+        },
+        suite: context.suite,
+        contract: context.contract
+      }),
+    /clean worktree/
+  );
+});
+
+test("mutation rejects an incomplete public route snapshot", () => {
+  const context = loadHiringContext();
+  const opportunity = context.opportunities[0];
+  const routes = opportunity.data.portfolio_routes;
+  assert.throws(
+    () =>
+      buildEvaluatorPacket({
+        opportunity,
+        reader: context.readers[0],
+        snapshot: publicSnapshot(routes.slice(1)),
+        binding: {
+          candidateSha: "a".repeat(40),
+          worktreeClean: true,
+          worktreeStateHash: sha256("")
+        },
+        suite: context.suite,
+        contract: context.contract
+      }),
+    /missing required routes/
+  );
+});
+
+test("mutation rejects a forged or stale public snapshot hash", () => {
+  const context = loadHiringContext();
+  const opportunity = context.opportunities[0];
+  const snapshot = publicSnapshot(opportunity.data.portfolio_routes);
+  snapshot.pages[0].text = "Changed after capture";
+  assert.throws(
+    () =>
+      buildEvaluatorPacket({
+        opportunity,
+        reader: context.readers[0],
+        snapshot,
+        binding: {
+          candidateSha: "a".repeat(40),
+          worktreeClean: true,
+          worktreeStateHash: sha256("")
+        },
+        suite: context.suite,
+        contract: context.contract
+      }),
+    /snapshot hash/
+  );
+});
+
+test("mutation rejects non-live evaluator snapshots", () => {
+  const context = loadHiringContext();
+  const opportunity = context.opportunities[0];
+  const snapshot = publicSnapshot(opportunity.data.portfolio_routes);
+  snapshot.source = "fixture";
+  assert.throws(
+    () =>
+      buildEvaluatorPacket({
+        opportunity,
+        reader: context.readers[0],
+        snapshot,
+        binding: {
+          candidateSha: "a".repeat(40),
+          worktreeClean: true,
+          worktreeStateHash: sha256("")
+        },
+        suite: context.suite,
+        contract: context.contract
+      }),
+    /live HTTP/
+  );
+});
+
+test("mutation rejects evaluator impersonation of a named reader", () => {
+  const context = loadHiringContext();
+  const opportunity = context.opportunities[0];
+  const reader = context.readers.find((item) => item.data.id === "reader.lisa-gelobter");
+  assert.throws(
+    () =>
+      buildEvaluatorPacket({
+        opportunity,
+        reader,
+        snapshot: publicSnapshot(opportunity.data.portfolio_routes),
+        binding: {
+          candidateSha: "a".repeat(40),
+          worktreeClean: true,
+          worktreeStateHash: sha256("")
+        },
+        suite: context.suite,
+        contract: context.contract,
+        evaluatorIdentity: "Lisa Gelobter"
+      }),
+    /cannot impersonate/
+  );
+});
+
+test("mutation rejects optimizer self-grading", () => {
+  const context = loadHiringContext();
+  const opportunity = context.opportunities[0];
+  const snapshot = publicSnapshot(opportunity.data.portfolio_routes);
+  assert.throws(
+    () =>
+      buildEvaluatorPacket({
+        opportunity,
         reader: context.readers[0],
         snapshot,
         binding: { candidateSha: "a".repeat(40), worktreeClean: true, worktreeStateHash: sha256("") },

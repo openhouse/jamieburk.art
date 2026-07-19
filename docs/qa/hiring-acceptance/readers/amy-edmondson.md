@@ -6,6 +6,8 @@ category: career-and-mutual-fit-advisory-lens
 mode: named-expert-advisory-lens
 public_sources:
   - https://www.hbs.edu/faculty/Pages/item.aspx?researchSummary=108
+source_notes:
+  - The official Harvard Business School research profile supports the lens's focus on psychological safety, teaming, and organizational learning; it does not imply participation.
 relevance:
   - psychological safety
   - cross-boundary teaming

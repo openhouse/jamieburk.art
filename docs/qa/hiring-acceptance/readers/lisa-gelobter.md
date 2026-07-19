@@ -7,6 +7,9 @@ mode: named-public-context
 public_sources:
   - https://www.nyc.gov/mayors-office/news/2026/02/mayor-mamdani-announces-key-appointments-to-three-city-agencies-
   - https://www.nyc.gov/mayors-office/news/2026/07/mayor-mamdani-launches--public-interest-technology--pit--crew--t
+source_notes:
+  - The official appointment announcement supports Lisa Gelobter's OTI executive context; it does not establish that she manages or selects for this role.
+  - The official PIT Crew announcement supports public-interest technology delivery context; it does not establish that this role belongs to a Crew.
 relevance:
   - NYC public-interest technology executive context
   - accountable digital-service delivery

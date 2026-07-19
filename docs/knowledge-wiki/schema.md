@@ -71,6 +71,11 @@ role_title: Technical Operations Manager
 tier: 1
 canonical_url: https://cityjobs.nyc.gov/job/example
 source_type: official-employer
+official_source:
+  url: https://cityjobs.nyc.gov/job/example
+  retrieved_at: "2026-07-18"
+  supports: [role_title, opportunity_status, deadline, compensation, location,
+    reporting_line, role_requirements, confirmed_facts]
 opportunity_status: live
 verified_at: "2026-07-18"
 reverify_by: "2026-07-21"
@@ -92,6 +97,13 @@ Opportunity lifecycle and role availability are deliberately separate:
 `status` governs the Wiki record; `opportunity_status` says whether the role is
 live. A role cannot remain Tier 1 after `reverify_by` without a new check of the
 official employer source.
+
+The source URL, retrieval date, and supported fact classes are explicit. Hard
+screens close in both directions: every `kind: hard-screen` requirement appears
+in `hard_requirements`, and every listed hard requirement is typed as a hard
+screen. `visible-proven` is reserved for public-route evidence with strong or
+corroborated canonical agency support; adjacent or weaker evidence remains
+`visible-qualified`.
 
 Private application state, referrals, relationship history, and warm paths do
 not belong in this public repository.

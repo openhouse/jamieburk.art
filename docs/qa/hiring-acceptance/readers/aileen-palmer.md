@@ -6,6 +6,8 @@ category: confirmed-organization-context-reader
 mode: named-public-context
 public_sources:
   - https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/
+source_notes:
+  - The official Benepass posting identifies Aileen Palmer as Head of Customer Operations and the role's manager; it supports organization and reporting context, not private preferences.
 relevance:
   - confirmed Benepass reporting context
   - customer operations

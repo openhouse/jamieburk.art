@@ -23,6 +23,10 @@ context, and public reader context. The Wiki gap resolver is a separate operator
 that may inspect public-safe Wiki records after a missing public signal has been
 identified.
 
+Evaluator packets require a clean Git worktree and a freshly captured live-HTTP
+snapshot with complete role routes and a content-derived hash. Offline snapshot
+files cannot be promoted into review packets.
+
 ## Operators
 
 ```bash

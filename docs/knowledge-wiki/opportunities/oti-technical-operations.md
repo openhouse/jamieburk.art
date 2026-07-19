@@ -23,6 +23,7 @@ role_title: Technical Operations Manager
 tier: 1
 canonical_url: https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321
 source_type: official-employer
+official_source: {url: https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321, retrieved_at: "2026-07-18", supports: [role_title, opportunity_status, deadline, compensation, location, reporting_line, role_requirements, confirmed_facts]}
 opportunity_status: live
 verified_at: "2026-07-18"
 reverify_by: "2026-07-21"

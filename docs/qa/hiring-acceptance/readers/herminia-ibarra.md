@@ -6,6 +6,8 @@ category: career-and-mutual-fit-advisory-lens
 mode: named-expert-advisory-lens
 public_sources:
   - https://www.london.edu/faculty-and-research/faculty-profiles/h/herminia-ibarra
+source_notes:
+  - The official London Business School profile supports a bounded working-identity and career-transition lens; it does not establish employer-specific authority or participation.
 relevance:
   - career transition
   - working identity
