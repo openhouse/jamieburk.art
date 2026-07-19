@@ -7,6 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 import {
+  collectLifecycleTextFiles,
   fingerprintFiles,
   validLifecycleJudgments,
   validateKnowledgeLifecycle
@@ -41,40 +42,7 @@ const candidatePaths = [
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
-  "docs/knowledge-bank/README.md",
-  "docs/knowledge-bank/anti-claims.md",
-  "docs/knowledge-bank/approval-register.md",
-  "docs/knowledge-bank/chad-lens.md",
-  "docs/knowledge-bank/claims.md",
-  "docs/knowledge-bank/lifecycle.md",
-  "docs/knowledge-bank/proofs.md",
-  "docs/knowledge-bank/research/kc-town-hall-council-funding-2019-2024.md",
-  "docs/knowledge-bank/research/kc-town-hall-phase-one-neighborhood-stewardship-2018-2022.md",
-  "docs/knowledge-bank/research/kansas-city-star-raft-archival-production-2007.md",
-  "docs/knowledge-bank/research/google-drive-shared-drives-archival-production-2026-07.md",
-  "docs/knowledge-bank/research/nter-chng-google-drive-working-artifacts-2010-2011.md",
-  "docs/knowledge-bank/research/icloud-teams-archival-production-2026-07.md",
-  "docs/knowledge-bank/research/social-media-archival-production-2026-07.md",
-  "docs/knowledge-bank/research/nycartc-facebook-events-archival-production-2026-07.md",
-  "docs/knowledge-bank/research/personal-wowlist-facebook-events-archival-production-2026-07.md",
-  "docs/knowledge-bank/research/wowlist-facebook-posts-archival-production-2026-07.md",
-  "docs/knowledge-bank/research/nycartc-facebook-posts-archival-production-2026-07.md",
-  "docs/knowledge-bank/research/nycartc-dcla-council-institutional-value-2017.md",
-  "docs/knowledge-bank/research/kcspacesfund-facebook-posts-archival-production-2026-07.md",
-  "docs/knowledge-bank/research/jamie-personal-facebook-posts-archival-production-2026-07.md",
-  "docs/knowledge-bank/research/wowlist-sunday-dinner-callscript-archival-production-2012-2017.md",
-  "docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md",
-  "docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json",
-  "docs/knowledge-bank/data/jamie-facebook-displayed-host-event-census-2026-07-14.csv",
-  "docs/knowledge-bank/data/wowlist-facebook-post-controls.json",
-  "docs/knowledge-bank/data/nycartc-facebook-post-controls.json",
-  "docs/knowledge-bank/data/kcspacesfund-facebook-post-controls.json",
-  "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
-  "docs/knowledge-bank/sources.md",
-  "docs/knowledge-bank/projects/nyc-artist-coalition.md",
-  "docs/knowledge-bank/projects/kc-spaces-fund.md",
-  "docs/knowledge-bank/projects/open-house.md",
-  "docs/knowledge-bank/projects/water-publics.md"
+  ...collectLifecycleTextFiles(repoRoot, "docs/knowledge-bank")
 ];
 const contractPaths = [
   "evals/knowledge-lifecycle/model-judge.md",

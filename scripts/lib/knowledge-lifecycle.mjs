@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
+import path from "node:path";
 
 const PRIVATE_PATTERN = /\/Users\/|\/Volumes\/|\/private\/tmp\/|Mobile Documents|supporting-materials/i;
 
@@ -3008,6 +3009,17 @@ export function fingerprintFiles(root, files) {
     hash.update(`${file}\0${readFileSync(new URL(file, root), "utf8")}\0`);
   }
   return `sha256:${hash.digest("hex")}`;
+}
+
+export function collectLifecycleTextFiles(repoRoot, relativeDirectory) {
+  const visit = (relativePath) => readdirSync(path.join(repoRoot, relativePath), { withFileTypes: true })
+    .flatMap((entry) => {
+      const child = path.join(relativePath, entry.name);
+      return entry.isDirectory() ? visit(child) : [child];
+    });
+  return visit(relativeDirectory)
+    .filter((file) => /\.(?:csv|json|jsonl|md)$/.test(file))
+    .sort();
 }
 
 export function validLifecycleJudgments({ judgments, candidate, contract, suite }) {

@@ -3,12 +3,24 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import {
+  collectLifecycleTextFiles,
   validLifecycleJudgments,
   validateKnowledgeLifecycle,
   weightedScore
 } from "../lib/knowledge-lifecycle.mjs";
 
 const suite = JSON.parse(readFileSync("evals/knowledge-lifecycle/suite.json", "utf8"));
+
+test("the lifecycle candidate binds every governed Wiki text record", () => {
+  const files = collectLifecycleTextFiles(process.cwd(), "docs/knowledge-bank");
+  for (const required of [
+    "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+    "docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md",
+    "docs/knowledge-bank/indexes/maintenance-and-care.md",
+    "docs/knowledge-bank/indexes/people-places-and-community-testimony.md"
+  ]) assert.ok(files.includes(required), required);
+  assert.equal(files.every((file) => file.startsWith("docs/knowledge-bank/")), true);
+});
 
 test("knowledge-lifecycle weights sum to 100", () => {
   assert.equal(suite.rubrics.reduce((sum, rubric) => sum + rubric.weight, 0), 100);
