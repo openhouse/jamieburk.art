@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Type-aware orphans
 
-**Source commit:** `17575a82c505a70f8466788b4d7b72f3be1e899f`
-**Generation time:** 2026-07-18T17:12:52-04:00
-**Source fingerprint:** `81fde5a3b0e9e1aabd4ab40dd50751f94e36bb6de75da998026ef23a756cf64f`
+**Source commit:** `589caac5da230980b1dd145c4f958696da72c944`
+**Generation time:** 2026-07-18T22:39:30-04:00
+**Source fingerprint:** `51874f3fcf222b00266d02d6ca39bee2a4b2f620564e97024fa151dcfbe18db6`
 
 - None.

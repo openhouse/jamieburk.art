@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-18T17:12:52-04:00",
-  "sourceCommit": "17575a82c505a70f8466788b4d7b72f3be1e899f",
-  "sourceFingerprint": "81fde5a3b0e9e1aabd4ab40dd50751f94e36bb6de75da998026ef23a756cf64f",
+  "generatedAt": "2026-07-18T22:39:30-04:00",
+  "sourceCommit": "589caac5da230980b1dd145c4f958696da72c944",
+  "sourceFingerprint": "51874f3fcf222b00266d02d6ca39bee2a4b2f620564e97024fa151dcfbe18db6",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -58,6 +58,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "evaluation.employment-context.coverage.2026-07-18",
+      "path": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
+      "title": "Employment context coverage baseline - July 18, 2026",
+      "kind": "evaluation",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe baseline for career-trajectory and source-channel coverage; protected evidence is represented only by boundaries and opaque metadata.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
       "id": "evaluation.knowledge-wiki.retrieval-tasks",
       "path": "docs/knowledge-bank/evaluations/retrieval-tasks.md",
       "title": "Knowledge Wiki retrieval tasks",
@@ -101,6 +114,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "index.knowledge-wiki.employment-context",
+      "path": "docs/knowledge-bank/indexes/employment-context.md",
+      "title": "Employment context and hiring acceptance",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
       "id": "index.knowledge-wiki.pilot",
       "path": "docs/knowledge-bank/indexes/pilot.md",
       "title": "Knowledge Wiki pilot map",
@@ -127,17 +153,82 @@
       "reviewBy": "2027-01-18"
     },
     {
-      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
-      "path": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
-      "title": "Technical Operations opportunity lens",
+      "id": "opportunity.aclu.product-manager-discovery.8482872002",
+      "path": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+      "title": "ACLU - Product Manager II, Discovery",
       "kind": "opportunity",
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe role-needs and proof map for Technical Operations opportunities.",
+      "summary": "Public-safe requirement and portfolio-coverage map for ACLU's live term-limited Product Manager II, Discovery role.",
       "aliases": [],
       "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-08-18"
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "opportunity.asana.ai-implementation.8027437",
+      "path": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "title": "Asana - AI Implementation Manager, Service Management",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement and portfolio-coverage map for Asana's live AI Implementation Manager, Service Management role.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "opportunity.benepass.product-operations.7f963a7a",
+      "path": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "title": "Benepass - Product Operations Manager",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "opportunity.codepath.claude-corps.5182020007",
+      "path": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+      "title": "CodePath - Senior Program Manager, Claude Corps",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement and portfolio-coverage map for CodePath's live Senior Program Manager, Claude Corps role.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "path": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "title": "NYC OTI - Technical Operations Manager 782369",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe, source-backed requirement and portfolio-coverage map for NYC OTI's live Technical Operations Manager role.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "opportunity.permitflow.product-operations.8a6e6066",
+      "path": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+      "title": "PermitFlow - Product Operations Manager",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement and portfolio-coverage map for PermitFlow's live Product Operations Manager role.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
     },
     {
       "id": "portfolio.work.callnyc",
@@ -195,6 +286,84 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.jobs.aclu.product-discovery.8482872002",
+      "path": "docs/knowledge-bank/sources/jobs-aclu-product-discovery-8482872002.md",
+      "title": "ACLU - Product Manager II, Discovery 8482872002",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official ACLU posting for the term-limited Product Manager II, Discovery role, rechecked July 18, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "source.jobs.asana.ai-implementation.8027437",
+      "path": "docs/knowledge-bank/sources/jobs-asana-ai-implementation-8027437.md",
+      "title": "Asana - AI Implementation Manager, Service Management 8027437",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Asana posting context for AI Implementation Manager, Service Management, rechecked July 18, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "source.jobs.benepass.product-operations.7f963a7a",
+      "path": "docs/knowledge-bank/sources/jobs-benepass-product-operations.md",
+      "title": "Official posting - Benepass Product Operations Manager",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Benepass posting for a Product Operations Manager, rechecked July 18, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "source.jobs.codepath.claude-corps.5182020007",
+      "path": "docs/knowledge-bank/sources/jobs-codepath-claude-corps-5182020007.md",
+      "title": "CodePath - Senior Program Manager, Claude Corps 5182020007",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official CodePath posting for Senior Program Manager, Claude Corps, rechecked July 18, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "source.jobs.oti.technical-operations.782369",
+      "path": "docs/knowledge-bank/sources/jobs-oti-technical-operations-782369.md",
+      "title": "NYC Jobs - Technical Operations Manager 782369",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official City of New York posting for the OTI Technical Operations Manager role, rechecked July 18, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "source.jobs.permitflow.product-operations.8a6e6066",
+      "path": "docs/knowledge-bank/sources/jobs-permitflow-product-operations.md",
+      "title": "Official posting - PermitFlow Product Operations Manager",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official PermitFlow posting for a Product Operations Manager, rechecked July 18, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21"
+    },
+    {
       "id": "source.nycc.councilstat-hackathon-post.2016",
       "path": "docs/knowledge-bank/sources/nycc-councilstat-hackathon-post-2016.md",
       "title": "New York City Council event-day CouncilStat post",
@@ -219,6 +388,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.vault.communication-history.metadata",
+      "path": "docs/knowledge-bank/sources/protected-communication-vault-metadata.md",
+      "title": "Protected communication history - public-safe metadata boundary",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only boundary for a private, local-first communication index; no message bodies, identities, filenames, or local paths are committed.",
+      "aliases": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18"
     }
   ],
   "edges": [
@@ -314,6 +496,22 @@
       "context": null
     },
     {
+      "from": "evaluation.employment-context.coverage.2026-07-18",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.employment-context",
+      "source": "frontmatter",
+      "href": "../indexes/employment-context.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.employment-context.coverage.2026-07-18",
+      "type": "uses_source",
+      "to": "source.vault.communication-history.metadata",
+      "source": "frontmatter",
+      "href": "../sources/protected-communication-vault-metadata.md",
+      "context": null
+    },
+    {
       "from": "evaluation.knowledge-wiki.retrieval-tasks",
       "type": "related_to",
       "to": "index.knowledge-wiki.pilot",
@@ -343,6 +541,62 @@
       "to": "source.nycc.councilstat-hackathon-post.2016",
       "source": "frontmatter",
       "href": "../sources/nycc-councilstat-hackathon-post-2016.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "evaluation.employment-context.coverage.2026-07-18",
+      "source": "frontmatter",
+      "href": "../evaluations/employment-context-coverage-2026-07-18.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.aclu.product-manager-discovery.8482872002",
+      "source": "frontmatter",
+      "href": "../opportunities/aclu-product-discovery.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.asana.ai-implementation.8027437",
+      "source": "frontmatter",
+      "href": "../opportunities/asana-ai-implementation.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../opportunities/benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.codepath.claude-corps.5182020007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-claude-corps.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.permitflow.product-operations.8a6e6066",
+      "source": "frontmatter",
+      "href": "../opportunities/permitflow-product-operations.md",
       "context": null
     },
     {
@@ -396,6 +650,14 @@
     {
       "from": "index.knowledge-wiki",
       "type": "related_to",
+      "to": "index.knowledge-wiki.employment-context",
+      "source": "frontmatter",
+      "href": "indexes/employment-context.md",
+      "context": "Present-tense opportunity research and public-only hiring evaluation."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
       "to": "index.knowledge-wiki.pilot",
       "source": "frontmatter",
       "href": "indexes/pilot.md",
@@ -424,6 +686,152 @@
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
       "context": null
+    },
+    {
+      "from": "opportunity.aclu.product-manager-discovery.8482872002",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.aclu.product-discovery.8482872002",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role requirements and application artifact as rechecked July 18, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.aclu.product-manager-discovery.8482872002",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.aclu.product-manager-discovery.8482872002",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.aclu.product-manager-discovery.8482872002",
+      "type": "uses_source",
+      "to": "source.jobs.aclu.product-discovery.8482872002",
+      "source": "frontmatter",
+      "href": "../sources/jobs-aclu-product-discovery-8482872002.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.asana.ai-implementation.8027437",
+      "type": "evidence:context",
+      "to": "source.jobs.asana.ai-implementation.8027437",
+      "source": "evidence",
+      "confidence": "moderate",
+      "supports": [
+        "official role listing and supplied role-context facts as rechecked July 18, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.asana.ai-implementation.8027437",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.asana.ai-implementation.8027437",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.asana.ai-implementation.8027437",
+      "type": "uses_source",
+      "to": "source.jobs.asana.ai-implementation.8027437",
+      "source": "frontmatter",
+      "href": "../sources/jobs-asana-ai-implementation-8027437.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.benepass.product-operations.7f963a7a",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.benepass.product-operations.7f963a7a",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts and requirements as rechecked July 18, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.benepass.product-operations.7f963a7a",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.benepass.product-operations.7f963a7a",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.benepass.product-operations.7f963a7a",
+      "type": "uses_source",
+      "to": "source.jobs.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../sources/jobs-benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.codepath.claude-corps.5182020007",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.codepath.claude-corps.5182020007",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts and requirements as rechecked July 18, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.codepath.claude-corps.5182020007",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.codepath.claude-corps.5182020007",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.codepath.claude-corps.5182020007",
+      "type": "uses_source",
+      "to": "source.jobs.codepath.claude-corps.5182020007",
+      "source": "frontmatter",
+      "href": "../sources/jobs-codepath-claude-corps-5182020007.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.technical-operations.782369",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts and requirements as rechecked on July 18, 2026"
+      ]
     },
     {
       "from": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -455,6 +863,56 @@
       "to": "method.source-backed-team-memory",
       "source": "frontmatter",
       "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "uses_source",
+      "to": "source.jobs.oti.technical-operations.782369",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-technical-operations-782369.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.permitflow.product-operations.8a6e6066",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.permitflow.product-operations.8a6e6066",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts and requirements as rechecked July 18, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.permitflow.product-operations.8a6e6066",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.permitflow.product-operations.8a6e6066",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.permitflow.product-operations.8a6e6066",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.permitflow.product-operations.8a6e6066",
+      "type": "uses_source",
+      "to": "source.jobs.permitflow.product-operations.8a6e6066",
+      "source": "frontmatter",
+      "href": "../sources/jobs-permitflow-product-operations.md",
       "context": null
     },
     {
@@ -562,6 +1020,54 @@
       "context": null
     },
     {
+      "from": "source.jobs.aclu.product-discovery.8482872002",
+      "type": "supports",
+      "to": "opportunity.aclu.product-manager-discovery.8482872002",
+      "source": "frontmatter",
+      "href": "../opportunities/aclu-product-discovery.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.asana.ai-implementation.8027437",
+      "type": "supports",
+      "to": "opportunity.asana.ai-implementation.8027437",
+      "source": "frontmatter",
+      "href": "../opportunities/asana-ai-implementation.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.benepass.product-operations.7f963a7a",
+      "type": "supports",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../opportunities/benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.codepath.claude-corps.5182020007",
+      "type": "supports",
+      "to": "opportunity.codepath.claude-corps.5182020007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-claude-corps.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.technical-operations.782369",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.permitflow.product-operations.8a6e6066",
+      "type": "supports",
+      "to": "opportunity.permitflow.product-operations.8a6e6066",
+      "source": "frontmatter",
+      "href": "../opportunities/permitflow-product-operations.md",
+      "context": null
+    },
+    {
       "from": "source.nycc.councilstat-hackathon-post.2016",
       "type": "documents",
       "to": "event.nycc.constituent-services-hackathon.2016",
@@ -583,6 +1089,14 @@
       "to": "claim.callnyc.independent-follow-on",
       "source": "frontmatter",
       "href": "../claims/callnyc-independent-follow-on.md",
+      "context": null
+    },
+    {
+      "from": "source.vault.communication-history.metadata",
+      "type": "related_to",
+      "to": "evaluation.employment-context.coverage.2026-07-18",
+      "source": "frontmatter",
+      "href": "../evaluations/employment-context-coverage-2026-07-18.md",
       "context": null
     }
   ],
@@ -666,6 +1180,123 @@
       "to": "source.nycc.councilstat-hackathon-post.2016",
       "fragment": null,
       "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+      "to": "opportunity.aclu.product-manager-discovery.8482872002",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+      "to": "opportunity.codepath.claude-corps.5182020007",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "to": "opportunity.asana.ai-implementation.8027437",
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+      "to": "opportunity.permitflow.product-operations.8a6e6066",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
+      "to": "evaluation.employment-context.coverage.2026-07-18",
+      "fragment": null,
+      "line": 38,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-career-trajectory-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 40,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-source-channel-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 41,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-discovery.md",
+      "to": null,
+      "fragment": null,
+      "line": 42,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-public.md",
+      "to": null,
+      "fragment": null,
+      "line": 43,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "to": null,
+      "fragment": null,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -846,6 +1477,69 @@
       "to": "capability.technical-operations",
       "fragment": null,
       "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+      "from": "opportunity.aclu.product-manager-discovery.8482872002",
+      "toPath": "docs/knowledge-bank/sources/jobs-aclu-product-discovery-8482872002.md",
+      "to": "source.jobs.aclu.product-discovery.8482872002",
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "from": "opportunity.asana.ai-implementation.8027437",
+      "toPath": "docs/knowledge-bank/sources/jobs-asana-ai-implementation-8027437.md",
+      "to": "source.jobs.asana.ai-implementation.8027437",
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "from": "opportunity.benepass.product-operations.7f963a7a",
+      "toPath": "docs/knowledge-bank/sources/jobs-benepass-product-operations.md",
+      "to": "source.jobs.benepass.product-operations.7f963a7a",
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+      "from": "opportunity.codepath.claude-corps.5182020007",
+      "toPath": "docs/knowledge-bank/sources/jobs-codepath-claude-corps-5182020007.md",
+      "to": "source.jobs.codepath.claude-corps.5182020007",
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "toPath": "apps/www/src/app/work/technical-operations/page.tsx",
+      "to": null,
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-technical-operations-782369.md",
+      "to": "source.jobs.oti.technical-operations.782369",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+      "from": "opportunity.permitflow.product-operations.8a6e6066",
+      "toPath": "docs/knowledge-bank/sources/jobs-permitflow-product-operations.md",
+      "to": "source.jobs.permitflow.product-operations.8a6e6066",
+      "fragment": null,
+      "line": 9,
       "kind": "link"
     },
     {
@@ -1076,10 +1770,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/citational-care.md",
+      "to": null,
+      "fragment": null,
+      "line": 102,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 100,
+      "line": 103,
       "kind": "link"
     },
     {
@@ -1088,7 +1791,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 103,
+      "line": 106,
       "kind": "link"
     },
     {
@@ -1097,7 +1800,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 107,
+      "line": 110,
       "kind": "link"
     },
     {
@@ -1106,7 +1809,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 114,
+      "line": 117,
       "kind": "link"
     },
     {
@@ -1115,7 +1818,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 119,
+      "line": 122,
       "kind": "link"
     },
     {
@@ -1124,7 +1827,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 125,
+      "line": 128,
       "kind": "link"
     },
     {
@@ -1133,7 +1836,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 130,
+      "line": 133,
       "kind": "link"
     },
     {
@@ -1142,7 +1845,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 136,
+      "line": 139,
       "kind": "link"
     },
     {
@@ -1151,7 +1854,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 138,
+      "line": 141,
       "kind": "link"
     },
     {
@@ -1160,7 +1863,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 144,
+      "line": 147,
       "kind": "link"
     },
     {
@@ -1169,7 +1872,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 146,
+      "line": 149,
       "kind": "link"
     },
     {
@@ -1178,7 +1881,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 154,
+      "line": 157,
       "kind": "link"
     },
     {
@@ -1187,7 +1890,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 160,
+      "line": 163,
       "kind": "link"
     },
     {
@@ -1196,7 +1899,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 162,
+      "line": 165,
       "kind": "link"
     },
     {
@@ -1205,7 +1908,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 168,
+      "line": 171,
       "kind": "link"
     },
     {
@@ -1214,7 +1917,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 174,
+      "line": 177,
       "kind": "link"
     },
     {
@@ -1223,7 +1926,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 180,
+      "line": 183,
       "kind": "link"
     },
     {
@@ -1232,7 +1935,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 186,
+      "line": 189,
       "kind": "link"
     },
     {
@@ -1241,7 +1944,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 192,
+      "line": 195,
       "kind": "link"
     },
     {
@@ -1250,7 +1953,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 198,
+      "line": 201,
       "kind": "link"
     },
     {
@@ -1259,7 +1962,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 200,
+      "line": 203,
       "kind": "link"
     },
     {
@@ -1268,7 +1971,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 206,
+      "line": 209,
       "kind": "link"
     },
     {
@@ -1277,7 +1980,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 211,
+      "line": 214,
       "kind": "link"
     },
     {
@@ -1286,7 +1989,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 213,
+      "line": 216,
       "kind": "link"
     },
     {
@@ -1295,7 +1998,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 220,
+      "line": 223,
       "kind": "link"
     },
     {
@@ -1304,7 +2007,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 222,
+      "line": 225,
       "kind": "link"
     },
     {
@@ -1313,7 +2016,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 228,
+      "line": 231,
       "kind": "link"
     },
     {
@@ -1322,7 +2025,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 230,
+      "line": 233,
       "kind": "link"
     },
     {
@@ -1331,7 +2034,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 235,
+      "line": 238,
       "kind": "link"
     },
     {
@@ -1340,7 +2043,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 237,
+      "line": 240,
       "kind": "link"
     },
     {
@@ -1349,7 +2052,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 243,
+      "line": 246,
       "kind": "link"
     },
     {
@@ -1358,7 +2061,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 245,
+      "line": 248,
       "kind": "link"
     },
     {
@@ -1367,7 +2070,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 252,
+      "line": 255,
       "kind": "link"
     },
     {
@@ -1376,7 +2079,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
-      "line": 254,
+      "line": 257,
       "kind": "link"
     },
     {
@@ -1385,7 +2088,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 260,
+      "line": 263,
       "kind": "link"
     },
     {
@@ -1394,25 +2097,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 263,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
-      "to": null,
-      "fragment": null,
-      "line": 268,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
-      "to": null,
-      "fragment": null,
-      "line": 269,
+      "line": 266,
       "kind": "link"
     },
     {
@@ -1422,6 +2107,24 @@
       "to": "index.knowledge-wiki.pilot",
       "fragment": null,
       "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 271,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 272,
       "kind": "link"
     },
     {
@@ -1463,10 +2166,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "to": "index.knowledge-wiki.employment-context",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 36,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -1475,16 +2187,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 42,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/citational-care.md",
-      "to": null,
-      "fragment": null,
-      "line": 99,
+      "line": 45,
       "kind": "link"
     },
     {
