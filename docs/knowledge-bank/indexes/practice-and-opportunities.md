@@ -1,0 +1,101 @@
+---
+id: index.knowledge-wiki.practice-and-opportunities
+title: Practice and opportunities
+kind: index
+status: maintained
+visibility: public-safe
+sensitivity: low
+owner: jamie
+last_reviewed: "2026-07-19"
+review_by: "2027-01-19"
+canonical_path: docs/knowledge-bank/indexes/practice-and-opportunities.md
+discoverable: true
+relations:
+  - type: documents
+    target: person.jamie-burkart
+  - type: documents
+    target: capability.technical-operations
+  - type: documents
+    target: capability.participatory-public-systems
+  - type: documents
+    target: capability.implementation-adoption-and-handoff
+  - type: documents
+    target: capability.campaign-identity-and-web-systems
+  - type: documents
+    target: method.structure-grows-from-the-material
+  - type: documents
+    target: method.present-grounded-source-return
+  - type: documents
+    target: method.collective-credit-and-protected-absence
+  - type: documents
+    target: method.new-fragment-intake
+  - type: documents
+    target: method.practices-of-care-and-transition
+  - type: documents
+    target: method.public-knowledge-in-peoples-own-terms
+  - type: documents
+    target: method.source-backed-team-memory
+  - type: documents
+    target: timeline.jamie-practice.2004-present
+  - type: documents
+    target: index.knowledge-wiki.research-agenda-and-held-claims
+  - type: documents
+    target: index.knowledge-wiki.scenes-of-work
+  - type: documents
+    target: index.knowledge-wiki.canonical-story-bank
+  - type: documents
+    target: index.knowledge-wiki.visual-evidence-and-rights-queue
+  - type: documents
+    target: opportunity.nyc-oti.technical-operations-manager.782369
+  - type: documents
+    target: opportunity.aclu.product-manager-ii.discovery.8482872002
+  - type: documents
+    target: opportunity.benepass.product-operations-manager
+  - type: documents
+    target: opportunity.codepath.senior-program-manager.claude-corps.5182020007
+  - type: documents
+    target: opportunity.asana.ai-implementation-manager.service-management.8027437
+  - type: documents
+    target: opportunity.permitflow.product-operations-manager
+  - type: documents
+    target: index.knowledge-wiki.career-trajectory-coverage
+  - type: documents
+    target: index.knowledge-wiki.source-channel-coverage
+  - type: documents
+    target: portfolio.work.callnyc
+  - type: documents
+    target: portfolio.work.technical-operations
+---
+
+# Practice and opportunities
+
+- [Jamie Burkart](../people/jamie-burkart.md)
+- [Technical Operations capability](../capabilities/technical-operations.md)
+- [Participatory Public Systems](../projects/participatory-public-systems.md)
+- [Implementation, Adoption, and Handoff](../capabilities/implementation-adoption-and-handoff.md)
+- [Campaign Identity and Web Systems](../capabilities/campaign-identity-and-web-systems.md)
+- [Structure Grows from the Material](../methods/structure-grows-from-the-material.md)
+- [Present-Grounded Source Return](../methods/present-grounded-source-return.md)
+- [Collective Credit and Protected Absence](../methods/collective-credit-and-protected-absence.md)
+- [New Fragment Intake](../intake-and-maturation.md)
+- [Practices of Care and Transition](../methods/practices-of-care-and-transition.md)
+- [Public Knowledge in People's Own Terms](../methods/public-knowledge-in-peoples-own-terms.md)
+- [Source-Backed Team Memory method](../methods/source-backed-team-memory.md)
+- [Practice timeline](../timelines/practice-2004-present.md)
+- [Research Agenda and Held Claims](research-agenda-and-held-claims.md)
+- [Scenes of Work](scenes-of-work.md)
+- [Canonical Story Bank](canonical-story-bank.md)
+- [Visual Evidence and Rights Queue](visual-evidence-and-rights-queue.md)
+- [OTI Technical Operations opportunity lens](../opportunities/oti-technical-operations.md)
+- [ACLU Product Discovery opportunity lens](../opportunities/aclu-product-discovery.md)
+- [Benepass Product Operations opportunity lens](../opportunities/benepass-product-operations.md)
+- [CodePath Claude Corps opportunity lens](../opportunities/codepath-claude-corps.md)
+- [Asana AI Implementation opportunity lens](../opportunities/asana-ai-implementation.md)
+- [PermitFlow Product Operations opportunity lens](../opportunities/permitflow-product-operations.md)
+- [Career-trajectory coverage](career-trajectory-coverage.md)
+- [Source-channel coverage](source-channel-coverage.md)
+- [CallNYC portfolio projection](../projections/callnyc-case-study.md)
+- [Technical Operations portfolio projection](../projections/technical-operations.md)
+
+These records help a teammate move from evidence into a bounded application or
+interview argument. Evidence maturity never forces publication selection.

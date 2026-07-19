@@ -1,0 +1,53 @@
+{
+  "version": "2026-07-15",
+  "projects": [
+    {
+      "slug": "harry-j-epstein",
+      "status": "bounded",
+      "coordination": "Long-running translation across business operations, web systems, content, marketing, analytics, and customer-facing workflows.",
+      "constraints": "Legacy operating knowledge, customer trust, private business data, and the need to modernize without flattening institutional voice.",
+      "continuity": "Sustained stewardship and incremental operating improvements rather than a one-time launch.",
+      "scaleBoundary": "Do not infer undisclosed team size, budget authority, revenue detail, or sole ownership of business outcomes."
+    },
+    {
+      "slug": "fair-rent-nyc",
+      "status": "bounded",
+      "coordination": "Coalition collaborators, cultural-space operators, public participants, advocates, policy sources, and government-facing processes.",
+      "constraints": "Collective authorship, changing strategy, legal and policy questions, consent, and public-private information boundaries.",
+      "continuity": "Running memory, action tracking, source maps, public identity, campaign websites, and current coalition planning.",
+      "scaleBoundary": "Do not infer sole policy causality, private institutional motives, a verified total participant count, or authority over collaborators."
+    },
+    {
+      "slug": "callnyc",
+      "status": "bounded",
+      "coordination": "Open-data interpretation, product design, web implementation, public guidance, archive continuity, and civic stakeholder context.",
+      "constraints": "Unofficial status, changing city information, incomplete social recovery, and the need to avoid current-service claims.",
+      "continuity": "An independently built prototype, public repository, archived press record, and recoverable product lineage.",
+      "scaleBoundary": "Do not infer official City Council affiliation, comprehensive adoption, current service status, or complete engagement totals."
+    },
+    {
+      "slug": "wowlist",
+      "status": "bounded",
+      "coordination": "Co-building product logic, organizer workflows, community vocabulary, web systems, support surfaces, and event distribution.",
+      "constraints": "Distributed informal communities, historical platform records, collaborator credit, and protected user data.",
+      "continuity": "A maintained publishing and support system whose aggregate production record survives in the public-safe bank.",
+      "scaleBoundary": "Do not infer 35 official chapters, sole authorship, exact active-community totals, or person-level adoption from aggregate records."
+    },
+    {
+      "slug": "196-sunday-dinner",
+      "status": "bounded",
+      "coordination": "Hosting, invitations, facilitation, artist support, onboarding, documentation, handoffs, and recurring space operations.",
+      "constraints": "Trust, consent, private guest and attendance records, identifiable participants, and living community relationships.",
+      "continuity": "Repeatable gathering and residency practices sustained across years rather than a single event.",
+      "scaleBoundary": "Do not infer a public attendance database, unique-person totals, universal participant consent, or sole authorship of collective culture."
+    },
+    {
+      "slug": "kc-town-hall",
+      "status": "bounded",
+      "coordination": "Historic masonry, roofing, carpentry, welding, engineering, architecture, plumbing, field decisions, neighborhood input, and municipal process.",
+      "constraints": "Preservation sequencing, a long-vacant building, schedule-sensitive construction, private property and financial context, and changing project stewardship.",
+      "continuity": "Daily Phase One field leadership, neighborhood intake, resident-service operations, public-benefit documentation, and a later mission-aligned transition.",
+      "scaleBoundary": "Do not infer a formal contractor license, undisclosed budget authority, receipt of later municipal funds, completed Phase Two, or full redevelopment."
+    }
+  ]
+}

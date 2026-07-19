@@ -1,0 +1,147 @@
+{
+  "version": "2026-07-17",
+  "applicationShareThresholds": {
+    "requiredBlockingLevels": ["P0"],
+    "allowPendingHumanOutcomes": true,
+    "decisionWhenMet": "stop_threshold_met"
+  },
+  "productionLaunchThresholds": {
+    "requiredBlockingLevels": ["P0", "P1"],
+    "allowPendingHumanOutcomes": false,
+    "decisionWhenHumanEvidenceIsMissing": "stop_human_blocked"
+  },
+  "contracts": [
+    {
+      "id": "PR-001",
+      "state": "controlled-open",
+      "blockingLevel": "parallel",
+      "criterion": "An unfamiliar reader can identify the target role, value, three proofs, and next action; only real dated reader sessions can establish the outcome."
+    },
+    {
+      "id": "PR-002",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Jamie is visible as actor while purpose and usable end remain concise, bounded, and collectively credited where appropriate."
+    },
+    {
+      "id": "PR-003",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Lead claims and metrics are inspectably source-backed through canonical claims, evidence relationships, and generated citations."
+    },
+    {
+      "id": "PR-004",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "Output, observed use, outcome, attribution boundary, and transferable capability remain distinct."
+    },
+    {
+      "id": "PR-005",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "Historical depth resolves into current capability and a future-facing professional offer."
+    },
+    {
+      "id": "PR-006",
+      "state": "controlled-open",
+      "blockingLevel": "P2",
+      "criterion": "Rights-cleared visual proof may reduce reading burden; candidates awaiting rights review are never described as cleared evidence."
+    },
+    {
+      "id": "PR-007",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Resume, contact, referral, LinkedIn, GitHub, and call-to-action destinations are accurate or safely omitted."
+    },
+    {
+      "id": "PR-008",
+      "state": "controlled-open",
+      "blockingLevel": "P1",
+      "criterion": "Automated accessibility and browser controls pass while hands-on keyboard, screen-reader, mobile, zoom, contrast, and link review stays pending until performed."
+    },
+    {
+      "id": "PR-009",
+      "state": "controlled-open",
+      "blockingLevel": "P1",
+      "criterion": "Build, runtime, staging, production cutover, rollback, robots, sitemap, and exact candidate SHA are verifiable; deployment remains human-controlled."
+    },
+    {
+      "id": "PR-010",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "A factual stopping rule prevents P2 polish and archive completeness from delaying applications."
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "external-human-validation",
+      "mode": "human-with-automated-control",
+      "state": "controlled-open",
+      "blockingLevel": "parallel",
+      "criterion": "A blinded review instrument exists, unperformed reviews remain explicitly unperformed, and no synthetic reviewer result is recorded."
+    },
+    {
+      "id": "outcome-and-adoption-proof",
+      "mode": "automated-and-editorial",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "Every public case study distinguishes what became usable, Jamie's contribution, outcome evidence, and transferable proof."
+    },
+    {
+      "id": "reader-compression",
+      "mode": "automated-and-human",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "Every project exposes role, context, usable result, and role fit before deeper evidence and boundaries."
+    },
+    {
+      "id": "visual-proof",
+      "mode": "rights-aware-human-review",
+      "state": "controlled-open",
+      "blockingLevel": "P2",
+      "criterion": "Every public project has a bounded visual candidate or linked public artifact, and descriptive cards are not misrepresented as visual evidence."
+    },
+    {
+      "id": "leadership-scale",
+      "mode": "automated-and-research",
+      "state": "controlled-open",
+      "blockingLevel": "P2",
+      "criterion": "Every public project records coordination, constraints, continuity, and an explicit boundary against unsupported scale claims."
+    },
+    {
+      "id": "currentness",
+      "mode": "automated",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "The role-focused public surface contains evidence-backed 2026 and current-practice signals."
+    },
+    {
+      "id": "audience-specific-conversion",
+      "mode": "automated-and-human",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "Each priority audience has an existing route, selected proof path, and clear resume or contact action without adding public-route sprawl."
+    },
+    {
+      "id": "collective-accountability",
+      "mode": "human-with-automated-control",
+      "state": "controlled-open",
+      "blockingLevel": "parallel",
+      "criterion": "Collective credit remains visible, collaborator review is invited where consequential, and no approval is fabricated."
+    },
+    {
+      "id": "release-enforcement",
+      "mode": "automated",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "The full repository check runs locally and in pull requests, with staging and production preflights kept explicit."
+    },
+    {
+      "id": "application-ready-stop-rule",
+      "mode": "automated-and-human",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "A passing checked commit with no P0 blocker can be shared while P2 refinement and unrecorded external review continue in parallel."
+    }
+  ]
+}

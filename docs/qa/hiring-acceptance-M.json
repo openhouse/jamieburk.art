@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "name": "Employment context and hiring acceptance evals M",
+  "reviewedAt": "2026-07-18",
+  "targetOpportunityId": "opportunity.aclu.product-manager-ii.discovery.8482872002",
+  "freshnessHours": 72,
+  "preferredCompensationFloor": 120000,
+  "coverageStatuses": [
+    "visible-proven",
+    "visible-qualified",
+    "visible-weak",
+    "wiki-proven-not-projected",
+    "source-needed",
+    "corroboration-needed",
+    "rights-blocked",
+    "experience-gap",
+    "hard-screen",
+    "unknown",
+    "not-applicable"
+  ],
+  "requiredFiles": [
+    "docs/qa/hiring-acceptance/readers.json",
+    "docs/qa/hiring-acceptance/suites/current-priority.json",
+    "docs/qa/hiring-acceptance/public-route-sources.json",
+    "docs/qa/hiring-acceptance/discovery-benchmark.json",
+    "docs/knowledge-bank/indexes/career-trajectory-coverage.md",
+    "docs/knowledge-bank/indexes/source-channel-coverage.md",
+    "docs/knowledge-bank/applications/callnyc-retrospective-product-brief.md"
+  ],
+  "machineCriteria": [
+    {
+      "id": "HA-001",
+      "name": "Current official opportunity context",
+      "criterion": "Each Tier 1 record has one official employer URL, verification and reverification dates, status, compensation, location, work model, reporting-line certainty, hard screens, and explicit confirmed, inferred, and unknown facts."
+    },
+    {
+      "id": "HA-002",
+      "name": "Requirement-level role coverage",
+      "criterion": "Every critical requirement has a stable ID, source posture, Wiki evidence, public evidence, controlled coverage status, gap type, and next action."
+    },
+    {
+      "id": "HA-003",
+      "name": "Public-only hiring evaluation",
+      "criterion": "The hiring evaluator reads only explicitly mapped public route sources and cannot read docs/knowledge-bank or private source material."
+    },
+    {
+      "id": "HA-004",
+      "name": "Separate Wiki gap resolution",
+      "criterion": "A second step may use the opportunity's governed role coverage only after public evaluation and classifies projection, source, corroboration, rights, experience, hard-screen, and unknown gaps."
+    },
+    {
+      "id": "HA-005",
+      "name": "Reader context without impersonation",
+      "criterion": "Named profiles cite public context and state that the lens is a simulation, not the person's actual opinion, participation, or endorsement."
+    },
+    {
+      "id": "HA-006",
+      "name": "Configurable and candidate-bound suites",
+      "criterion": "Opportunity, route, reader, rubric, and candidate hashes are reported; development and holdout reader arrays are separate."
+    },
+    {
+      "id": "HA-007",
+      "name": "Opportunity discovery",
+      "criterion": "Title-blind benchmark queries recover relevant roles, negative controls do not produce false confidence, hard screens are surfaced, and stale roles cannot present as current."
+    },
+    {
+      "id": "HA-008",
+      "name": "Career and source coverage",
+      "criterion": "Public-safe coverage records report career phases, evidence strength, source-channel state, known gaps, and publication boundaries without exposing private locators."
+    },
+    {
+      "id": "HA-009",
+      "name": "Bounded ACLU hill climb",
+      "criterion": "A retrospective CallNYC brief exists in the Wiki, public CallNYC copy makes discovery and bounded product judgment legible, and retrospective authorship remains explicit."
+    },
+    {
+      "id": "HA-010",
+      "name": "Human and external authority",
+      "criterion": "Machine checks do not claim a real recruiter response, named person's opinion, collaborator approval, application acceptance, interview outcome, or production approval."
+    }
+  ],
+  "mutationAttacks": [
+    "MUT-H001-hidden-public-proof",
+    "MUT-H002-vague-actor-language",
+    "MUT-H003-sole-authorship-inflation",
+    "MUT-H004-unsupported-metric",
+    "MUT-H005-hidden-resume-or-contact",
+    "MUT-H006-stale-opportunity",
+    "MUT-H007-missing-hard-screen",
+    "MUT-H008-private-wiki-leak",
+    "MUT-H009-broken-public-citation",
+    "MUT-H010-resume-portfolio-contradiction"
+  ],
+  "humanEvaluationState": "not-run",
+  "externalOutcomeState": "not-observed",
+  "productionApproval": "not-granted"
+}

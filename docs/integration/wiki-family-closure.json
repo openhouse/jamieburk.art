@@ -1,0 +1,109 @@
+{
+  "decisionDate": "2026-07-19",
+  "applyTarget": "develop",
+  "canonicalRoot": "docs/knowledge-bank",
+  "forbiddenParallelRoots": [
+    "docs/knowledge-wiki",
+    "docs/wiki",
+    "knowledge-wiki"
+  ],
+  "frozenBranches": [
+    {
+      "branch": "feature/knowledge-wiki-A",
+      "head": "920f9024d7e058700f282e3e1e76188fe1c5294e",
+      "strength": "Governed Markdown, one-root graph compilation, source return, CI, and hiring acceptance checks.",
+      "disposition": "foundation",
+      "destinations": [
+        "docs/knowledge-bank",
+        "scripts/knowledge-wiki",
+        ".github/workflows/portfolio-readiness.yml"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-B",
+      "head": "268a92d794f5b604f4004fc9d6e5652f234fc61b",
+      "strength": "Adversarial editorial criteria and language for identity systems and learning through making.",
+      "disposition": "adapt-selected",
+      "destinations": [
+        "docs/knowledge-bank/capabilities",
+        "docs/qa/wiki-family-closure.json"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-C",
+      "head": "6a2af7396240381ce04aad9b9129ba402b83c134",
+      "strength": "Hiring-facing articulation of adoption, outcomes, and Jamie's situated practice.",
+      "disposition": "adapt-selected",
+      "destinations": [
+        "docs/knowledge-bank/indexes",
+        "docs/knowledge-bank/methods"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-D",
+      "head": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b",
+      "strength": "Relational synthesis, collective-authorship boundaries, and exact-diff reviewability.",
+      "disposition": "adapt-selected",
+      "destinations": [
+        "docs/knowledge-bank/indexes",
+        "docs/review/wiki-A-review-units.json"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-E",
+      "head": "9f1bbfacec3edbfbc47a5200f777d4f498da0ec4",
+      "strength": "Project lineage, interpretation, stewardship, and decision records.",
+      "disposition": "adapt-selected",
+      "destinations": [
+        "docs/knowledge-bank/indexes",
+        "docs/knowledge-bank/capabilities",
+        "docs/knowledge-bank/methods"
+      ]
+    }
+  ],
+  "censusObservations": [
+    {
+      "branch": "feature/knowledge-wiki-A",
+      "reportedAccessibleItems": 2365
+    },
+    {
+      "branch": "feature/knowledge-wiki-B",
+      "reportedAccessibleItems": 2408
+    },
+    {
+      "branch": "feature/knowledge-wiki-C",
+      "reportedAccessibleItems": 2078
+    },
+    {
+      "branch": "feature/knowledge-wiki-D",
+      "reportedAccessibleItems": 2192
+    },
+    {
+      "branch": "feature/knowledge-wiki-E",
+      "reportedAccessibleItems": 2405
+    }
+  ],
+  "canonicalCensusTotal": null,
+  "censusProjection": "hold",
+  "selectedPageIds": [
+    "index.knowledge-wiki.family-closure",
+    "research-run.nycac-shared-folder-census-reconciliation.2026-07-19",
+    "index.knowledge-wiki.what-the-work-was-up-against",
+    "index.knowledge-wiki.people-places-and-work-between-them",
+    "index.knowledge-wiki.project-lineages",
+    "index.knowledge-wiki.relational-infrastructure-atlas",
+    "index.knowledge-wiki.outcomes-and-adoption",
+    "capability.civic-cultural-and-technical-translation",
+    "capability.implementation-and-operational-stewardship",
+    "method.maintenance-handoff-and-stewardship",
+    "method.learning-through-making"
+  ],
+  "reviewMapPath": "docs/review/wiki-A-review-units.json",
+  "ciWorkflowPath": ".github/workflows/portfolio-readiness.yml",
+  "humanGates": {
+    "contentApproval": "pending",
+    "rightsClearance": "pending",
+    "productionApproval": "not-granted",
+    "mergeDecision": "pending"
+  }
+}

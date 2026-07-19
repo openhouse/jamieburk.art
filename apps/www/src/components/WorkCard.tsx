@@ -13,6 +13,16 @@ export function WorkCard({ item }: WorkCardProps) {
     <article className="rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5 shadow-sm">
       <div className="flex flex-col gap-4">
         <StatusBadge status={item.status} visibility={item.visibility} />
+        <dl className="grid gap-3 border-y border-jb-ink/12 py-3 text-sm sm:grid-cols-[1fr_auto]">
+          <div>
+            <dt className="font-semibold text-jb-ink">Jamie&apos;s role</dt>
+            <dd className="mt-1 leading-6 text-jb-ink/72">{item.role}</dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-jb-ink">Years</dt>
+            <dd className="mt-1 text-jb-ink/72">{item.years}</dd>
+          </div>
+        </dl>
         <div>
           <h2 className="text-2xl font-semibold text-jb-ink">
             <Link className="hover:text-jb-blue" href={`/work/${item.slug}` as Route}>
