@@ -3,8 +3,8 @@
   "baseSha": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
   "reviewOrder": [
     "portfolio-and-wiki-content",
-    "evaluation-contracts-and-receipts",
-    "tooling-and-tests"
+    "evaluation-contracts-and-methods",
+    "tooling-governance-and-opportunities"
   ],
   "packets": [
     {
@@ -18,40 +18,41 @@
         "docs/knowledge-bank/claims",
         "docs/knowledge-bank/claims.md",
         "docs/knowledge-bank/corrections",
+        "docs/knowledge-bank/decisions",
         "docs/knowledge-bank/events",
         "docs/knowledge-bank/inquiries",
-        "docs/knowledge-bank/methods",
-        "docs/knowledge-bank/opportunities",
         "docs/knowledge-bank/projections",
         "docs/knowledge-bank/projects",
         "docs/knowledge-bank/research",
         "docs/knowledge-bank/sources",
-        "docs/knowledge-bank/sources.md",
-        "docs/knowledge-bank/timelines"
+        "docs/knowledge-bank/sources.md"
       ]
     },
     {
-      "id": "evaluation-contracts-and-receipts",
-      "purpose": "Review frozen contracts, adversarial fixtures, candidate-bound judgments, and governance evidence as one integrity layer.",
-      "includes": [
-        "docs/evals",
-        "docs/qa/hiring-acceptance",
-        "evals"
-      ]
-    },
-    {
-      "id": "tooling-and-tests",
-      "purpose": "Review repository rules, Wiki governance, compilers, query surfaces, runners, checks, and mutation tests as the executable implementation layer.",
+      "id": "evaluation-contracts-and-methods",
+      "purpose": "Review frozen contracts, adversarial fixtures, candidate-bound judgments, and the methods and timelines those evaluations govern.",
       "includes": [
         "AGENTS.md",
         "README.md",
-        "package.json",
+        "docs/evals",
+        "docs/knowledge-bank/methods",
+        "docs/knowledge-bank/timelines",
+        "docs/qa/hiring-acceptance",
+        "evals",
+        "package.json"
+      ]
+    },
+    {
+      "id": "tooling-governance-and-opportunities",
+      "purpose": "Review Wiki governance, opportunity records, compilers, query surfaces, runners, checks, and mutation tests as the executable implementation layer.",
+      "includes": [
         "docs/knowledge-bank/anti-claims.md",
         "docs/knowledge-bank/approval-register.md",
         "docs/knowledge-bank/indexes",
         "docs/knowledge-bank/knowledge-wiki-authoring.md",
         "docs/knowledge-bank/knowledge-wiki-schema.md",
         "docs/knowledge-bank/lifecycle/history.jsonl",
+        "docs/knowledge-bank/opportunities",
         "scripts"
       ]
     }

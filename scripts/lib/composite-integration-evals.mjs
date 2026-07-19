@@ -267,14 +267,14 @@ export function evaluateReviewability(stats, thresholds, options = {}) {
   const rows = asArray(stats.files);
   const dirtyPaths = asArray(options.dirtyPaths);
   const manifest = options.manifest;
-  if (stats.addedLines > thresholds.maximumAddedLines) findings.push(`${stats.addedLines} added lines exceeds ${thresholds.maximumAddedLines}`);
-  if (stats.maximumSingleFileAddedLines > thresholds.maximumSingleFileAddedLines) {
-    findings.push(`${stats.maximumSingleFileAddedLines} added lines in ${stats.largestAddedFile} exceeds ${thresholds.maximumSingleFileAddedLines}`);
-  }
   if (dirtyPaths.length) findings.push(`Candidate-affecting working-tree changes must be committed: ${dirtyPaths.join(", ")}`);
 
   const packetStats = [];
   if (!manifest) {
+    if (stats.addedLines > thresholds.maximumAddedLines) findings.push(`${stats.addedLines} added lines exceeds ${thresholds.maximumAddedLines}`);
+    if (stats.maximumSingleFileAddedLines > thresholds.maximumSingleFileAddedLines) {
+      findings.push(`${stats.maximumSingleFileAddedLines} added lines in ${stats.largestAddedFile} exceeds ${thresholds.maximumSingleFileAddedLines}`);
+    }
     if (stats.changedFiles > thresholds.maximumChangedFiles) findings.push(`${stats.changedFiles} changed files exceeds ${thresholds.maximumChangedFiles}`);
     return { passed: findings.length === 0, findings, mode: "single-delta", packetStats };
   }

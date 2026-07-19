@@ -161,6 +161,37 @@ test("bounded review packets account for every changed file exactly once", () =>
   }).findings.join("\n"), /must be committed/);
 });
 
+test("bounded review packets apply size ceilings to each packet rather than their aggregate", () => {
+  const files = Array.from({ length: 40 }, (_, index) => ({
+    path: index < 20 ? `docs/knowledge-bank/a-${index}.md` : `scripts/b-${index}.mjs`,
+    added: 300,
+    deleted: 0
+  }));
+  const stats = {
+    baseRef: "abc123",
+    changedFiles: files.length,
+    addedLines: 12000,
+    deletedLines: 0,
+    maximumSingleFileAddedLines: 300,
+    largestAddedFile: files[0].path,
+    files
+  };
+  const manifest = {
+    version: 1,
+    baseSha: "abc123",
+    reviewOrder: ["knowledge", "tooling"],
+    packets: [
+      { id: "knowledge", purpose: "Review governed records", includes: ["docs/knowledge-bank"] },
+      { id: "tooling", purpose: "Review executable checks", includes: ["scripts"] }
+    ]
+  };
+
+  const result = evaluateReviewability(stats, suite.reviewabilityThresholds, { manifest, dirtyPaths: [] });
+  assert.equal(result.mode, "bounded-review-packets");
+  assert.equal(result.passed, true);
+  assert.equal(result.packetStats.every((packet) => packet.addedLines === 6000), true);
+});
+
 test("rubric scoring fails closed with its governing gate", () => {
   const passingGates = Object.fromEntries(suite.requiredHardGates.map((id) => [id, { status: "pass" }]));
   assert.equal(scoreRubrics(suite, passingGates).weightedScore, 100);
