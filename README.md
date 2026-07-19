@@ -83,6 +83,13 @@ public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
 
+## Requests For Proposal
+
+Substantial architecture, governance, source-access, and information-boundary
+changes begin as reviewable proposals under [`rfps/`](rfps/README.md). An
+accepted RFP approves a direction for later implementation; it does not approve
+publication, private-source use, deployment, or another human-only gate.
+
 ## Environment
 
 Staging is the first deployment target and is non-indexable by default:
