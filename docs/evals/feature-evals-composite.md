@@ -49,6 +49,10 @@ judge reading guide, not the definition of candidate identity.
 The rubric digest is also pinned in the evaluator rather than trusted only from
 the mutable suite file. The complete base suite, integration register, blind-
 spot controls, and `refs/remotes/origin` branch-head set have reviewed digests.
+The composite evaluator also fails canonical-integrity and frozen-governance
+criteria when Knowledge Wiki generated views or employment-context reports are
+stale, so a passing component result cannot conceal an out-of-date derived
+surface.
 Distinct holdouts must bind full prompt text, read-only native process session,
 model, timing, result transport, and all judgment provenance. These are auditable
 process receipts, not a claim of cryptographic platform authentication.

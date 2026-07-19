@@ -11,6 +11,13 @@ import {
 } from "../../apps/www/src/data/knowledge-bank/lifecycle-operations.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
 import { evaluateProfessorLenses } from "./professor-lens-eval.mjs";
+import {
+  buildEmploymentOutputs,
+  evaluatePublicHiring,
+  resolveHiringGaps,
+  writeOrCheckOutputs
+} from "../knowledge-wiki/employment-lib.mjs";
+import { checkGeneratedOutputs, compileWiki } from "../knowledge-wiki/lib.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -142,6 +149,35 @@ export function computeHoldoutJudgmentDigest(run) {
   return sha256(holdoutJudgmentPayload(run));
 }
 
+export function checkCompositeDerivedCurrentness() {
+  try {
+    const wiki = compileWiki();
+    const generatedIssues = checkGeneratedOutputs(wiki).map(
+      (issue) => `${issue.code} ${issue.file}:${issue.line} - ${issue.message}`
+    );
+    const publicEvaluation = evaluatePublicHiring(wiki.repoRoot);
+    const gapResolution = resolveHiringGaps(wiki, publicEvaluation.report);
+    const employmentOutputs = buildEmploymentOutputs(wiki, publicEvaluation, gapResolution);
+    const employmentIssues = writeOrCheckOutputs(wiki.repoRoot, employmentOutputs, true);
+    const wikiErrors = wiki.errors.map(
+      (issue) => `${issue.code} ${issue.file}:${issue.line} - ${issue.message}`
+    );
+    return {
+      pass: wikiErrors.length === 0 && generatedIssues.length === 0 && employmentIssues.length === 0,
+      wikiErrors,
+      generatedIssues,
+      employmentIssues
+    };
+  } catch (error) {
+    return {
+      pass: false,
+      wikiErrors: [error instanceof Error ? error.message : String(error)],
+      generatedIssues: [],
+      employmentIssues: []
+    };
+  }
+}
+
 function criterion(id, pass, evidence, findings = []) {
   return { id, pass, score: pass ? 4 : 0, evidence, findings };
 }
@@ -170,7 +206,8 @@ export function evaluateCompositeIntegration({
   register = readJson("docs/integration/feature-evals-composite.json"),
   portfolioSuite = readJson(".agents/evals/portfolio-production-readiness.json"),
   blindSpots = readJson("docs/knowledge-bank/data/blind-spot-controls-2026-07.json"),
-  holdouts = loadHoldouts(suite)
+  holdouts = loadHoldouts(suite),
+  derivedCurrentness = checkCompositeDerivedCurrentness()
 } = {}) {
   const results = [];
   const expectedBranches = Object.keys(suite.required_branch_heads).sort();
@@ -289,9 +326,14 @@ export function evaluateCompositeIntegration({
   );
   results.push(criterion(
     "COMP-005",
-    knowledgeErrors.length === 0 && populationBoundaryPresent && agencyBounded,
-    `${knowledgeBank.sources.length} sources, ${knowledgeBank.claims.length} claims, ${knowledgeBank.agencyRelations.length} agency relations, and ${knowledgeBank.corrections.length} corrections validated.`,
-    knowledgeErrors
+    knowledgeErrors.length === 0 && populationBoundaryPresent && agencyBounded && derivedCurrentness.pass,
+    `${knowledgeBank.sources.length} sources, ${knowledgeBank.claims.length} claims, ${knowledgeBank.agencyRelations.length} agency relations, and ${knowledgeBank.corrections.length} corrections validated; derived Wiki and employment outputs ${derivedCurrentness.pass ? "are current" : "are stale"}.`,
+    [
+      ...knowledgeErrors,
+      ...derivedCurrentness.wikiErrors,
+      ...derivedCurrentness.generatedIssues,
+      ...derivedCurrentness.employmentIssues
+    ]
   ));
 
   const professorResult = evaluateProfessorLenses();
@@ -343,12 +385,18 @@ export function evaluateCompositeIntegration({
     suite.grader_separation.not_observed_may_pass === false &&
     suite.grader_separation.instrumented_absence_counts_as_external_validation === false &&
     portfolioSuite.launch_thresholds.all_blocking_evals_must_pass === true &&
-    portfolioSuite.launch_thresholds.human_production_approval_required === true;
+    portfolioSuite.launch_thresholds.human_production_approval_required === true &&
+    derivedCurrentness.pass;
   results.push(criterion(
     "COMP-008",
     frozenGovernance,
     `Frozen rubric digest: ${actualRubricDigest}.`,
-    frozenGovernance ? [] : ["Rubric lock or grader separation does not match the frozen contract."]
+    frozenGovernance ? [] : [
+      "Rubric lock, grader separation, or derived-output currentness does not match the frozen contract.",
+      ...derivedCurrentness.wikiErrors,
+      ...derivedCurrentness.generatedIssues,
+      ...derivedCurrentness.employmentIssues
+    ]
   ));
 
   const candidateFingerprint = computeCompositeCandidateFingerprint(suite);

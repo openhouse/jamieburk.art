@@ -105,6 +105,15 @@ Use `evals/knowledge-bank/evals.json` for recursive intake and claim maturation.
 Run its deterministic checks before promoting a claim or source into a public
 page. The bank should become deeper with each pass while the public site remains
 selective.
+
+## Repository Feature Proposals
+
+Use `rfps/` for substantial architecture, governance, privacy-boundary, data
+model, package, repository, or cross-system proposals. Follow
+`rfps/0000-template.md` and run `node scripts/check-rfps.mjs`. A merged `proposed` or
+`exploring` RFP is preserved for review; it is not implementation authorization.
+Agents may draft, critique, prototype, and test an RFP but may not advance a
+decision that the RFP reserves for Jamie or another named human decision owner.
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

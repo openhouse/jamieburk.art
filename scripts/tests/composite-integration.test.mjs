@@ -89,6 +89,23 @@ test("base portfolio semantics cannot change outside the frozen composite digest
   assert.equal(result.criteria.find((item) => item.id === "COMP-008")?.pass, false);
 });
 
+test("stale derived outputs fail canonical integrity and frozen governance", () => {
+  const result = evaluateCompositeIntegration({
+    suite,
+    register,
+    portfolioSuite,
+    blindSpots,
+    derivedCurrentness: {
+      pass: false,
+      wikiErrors: [],
+      generatedIssues: ["GENERATED_STALE reports/wiki-health.json"],
+      employmentIssues: ["reports/hiring-acceptance-public.json is stale"]
+    }
+  });
+  assert.equal(result.criteria.find((item) => item.id === "COMP-005")?.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "COMP-008")?.pass, false);
+});
+
 test("candidate identity binds the complete source tree and material dependency changes", () => {
   const files = listCompositeCandidateFiles(suite);
   for (const requiredPath of [
