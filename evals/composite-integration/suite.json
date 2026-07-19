@@ -1,12 +1,13 @@
 {
-  "version": 4,
-  "id": "feature-evals-composite-integration-v4",
+  "version": 5,
+  "id": "feature-evals-composite-integration-v5",
   "objective": "Integrate the strongest non-duplicative capabilities from the frozen feature/evals-A through feature/evals-N family into feature/knowledge-c without creating parallel knowledge or evaluation architectures.",
   "startSha": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
-  "baselineRecord": "evals/composite-integration/baselines/feature-knowledge-c-contract-v4.json",
+  "baselineRecord": "evals/composite-integration/baselines/feature-knowledge-c-contract-v5.json",
   "ledgerPath": "evals/composite-integration/evidence/branch-family-inventory.json",
   "historyPath": "docs/knowledge-bank/lifecycle/history.jsonl",
   "governancePath": "evals/composite-integration/evidence/governance.json",
+  "reviewPacketPath": "evals/composite-integration/evidence/review-packets.json",
   "judgmentDirectory": "evals/composite-integration/judgments",
   "profiles": {
     "integration_ready": {
@@ -86,7 +87,11 @@
     "scripts/lib/portfolio-evals.mjs",
     "scripts/run-portfolio-evals.mjs",
     "scripts/lib/blind-spot-evals.mjs",
-    "scripts/run-blind-spot-evals.mjs"
+    "scripts/run-blind-spot-evals.mjs",
+    "scripts/lib/knowledge-wiki.mjs",
+    "scripts/run-knowledge-wiki-evals.mjs",
+    "scripts/lib/hiring-acceptance.mjs",
+    "scripts/run-hiring-acceptance-evals.mjs"
   ],
   "forbiddenArchitecturePaths": [
     "apps/www/src/data/knowledge-bank/claims.json",
@@ -149,7 +154,9 @@
     "apps/www/src/data/work.ts",
     "docs/evals",
     "docs/knowledge-bank",
+    "docs/qa/hiring-acceptance",
     "evals/blind-spots",
+    "evals/hiring-acceptance",
     "evals/knowledge-lifecycle",
     "evals/portfolio-readiness",
     "scripts"
@@ -167,6 +174,7 @@
     "evals/composite-integration/suite.json",
     "evals/composite-integration/evidence/branch-family-inventory.json",
     "evals/composite-integration/evidence/governance.json",
+    "evals/composite-integration/evidence/review-packets.json",
     "evals/composite-integration/fixtures/semantic-mutations.json",
     "scripts/lib/composite-integration-evals.mjs",
     "scripts/run-composite-integration-evals.mjs",
@@ -175,6 +183,7 @@
   "reviewabilityThresholds": {
     "maximumChangedFiles": 50,
     "maximumAddedLines": 10000,
-    "maximumSingleFileAddedLines": 2000
+    "maximumSingleFileAddedLines": 2000,
+    "maximumReviewPackets": 3
   }
 }

@@ -1,7 +1,7 @@
 {
   "judgeId": "archival-editorial-2026-07-18-wiki-foundation",
   "lens": "archival-editorial",
-  "candidate": "sha256:4c0e553a4d70eb71767a6adc0f73783b464887b387d682492db976666ada9dff",
+  "candidate": "sha256:e5875a6b1adef3de4a8baadef889a26487666b3d4b33605d0ce51caa58d13f00",
   "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
   "passes": true,
   "scores": {
@@ -66,6 +66,14 @@
     {
       "rubric": "projection_restraint",
       "observation": "The renamed Knowledge Wiki remains explicitly internal, public-safe, and smaller than the private Source Vault. The README states that the portfolio is a selective projection and that supported or mature knowledge is not automatically selected or published."
+    },
+    {
+      "rubric": "capture_integrity",
+      "observation": "Six current opportunities preserve official employer URLs, access and review dates, source status, stable requirement IDs, hard screens, evidence routes, gaps, and one-year conditions. This present-tense hiring context is governed without being mistaken for archival proof."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Title-blind discovery terms and three unrelated negative controls test whether the portfolio exposes transferable evidence rather than merely echoing target titles. Unresolved domain and artifact gaps remain visible, and simulated named-reader profiles explicitly disclaim real participation or endorsement."
     }
   ],
   "regressions": [],

@@ -1,7 +1,7 @@
 {
   "judgeId": "public-safety-composition-2026-07-18-wiki-foundation",
   "lens": "public-safety-composition",
-  "candidate": "sha256:4c0e553a4d70eb71767a6adc0f73783b464887b387d682492db976666ada9dff",
+  "candidate": "sha256:e5875a6b1adef3de4a8baadef889a26487666b3d4b33605d0ce51caa58d13f00",
   "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
   "passes": true,
   "scores": {
@@ -70,6 +70,14 @@
     {
       "rubric": "projection_restraint",
       "observation": "The Wiki foundation introduces no public route, no source reproduction, and no automatic projection. The Digital District photo remains represented only by a public-safe receipt with rights and consent human-blocked."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "The employment extension treats six current job descriptions as time-bounded opportunity context with official-source status, requirements, gaps, and acceptance conditions. It does not convert employer requirements into evidence about Jamie or promote fit hypotheses into confirmed accomplishment claims."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "Role-specific comparisons, named simulated reader lenses, private communication channels, and unresolved fit gaps remain internal. The only public edit is a concise evidence-backed description of Jamie's existing operating practice, not application targeting or evaluator narration."
     }
   ],
   "regressions": [],

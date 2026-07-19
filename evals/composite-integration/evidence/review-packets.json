@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "baseSha": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
+  "reviewOrder": [
+    "portfolio-and-wiki-content",
+    "evaluation-contracts-and-receipts",
+    "tooling-and-tests"
+  ],
+  "packets": [
+    {
+      "id": "portfolio-and-wiki-content",
+      "purpose": "Review the composed public change, governed Wiki records, current opportunity context, and reader contracts together.",
+      "includes": [
+        "AGENTS.md",
+        "README.md",
+        "package.json",
+        "apps/www",
+        "docs/knowledge-bank",
+        "docs/qa/hiring-acceptance"
+      ]
+    },
+    {
+      "id": "evaluation-contracts-and-receipts",
+      "purpose": "Review frozen contracts, adversarial fixtures, candidate-bound judgments, and governance evidence as one integrity layer.",
+      "includes": [
+        "docs/evals",
+        "evals"
+      ]
+    },
+    {
+      "id": "tooling-and-tests",
+      "purpose": "Review compilers, query surfaces, runners, checks, and mutation tests as the executable implementation layer.",
+      "includes": [
+        "scripts"
+      ]
+    }
+  ]
+}

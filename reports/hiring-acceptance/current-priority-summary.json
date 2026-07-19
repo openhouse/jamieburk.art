@@ -1,0 +1,325 @@
+{
+  "id": "hiring-acceptance-current-priority-2026-07-18",
+  "generatedAt": "2026-07-19T02:24:36.186Z",
+  "automatedResult": "pass",
+  "consecutivePasses": 2,
+  "fingerprints": {
+    "candidateSha": "7845a9d11a27bb894b5041cf1114081c659451c0",
+    "portfolioSnapshotHash": "sha256:d94cf7b38106bff30c19a331795c239e744690d0a806656a5a29764c1d8e8fa5",
+    "roleContextHash": "sha256:b303823ac0862f483666bcca2921af7a6fe8ac788a7df1db7d4d287fbbcefc5a",
+    "readerContextHash": "sha256:8e1573f686d41cfc9d2668a07ad4962de45978c30d3ec9729652ff86d88f3558",
+    "promptHash": "sha256:8996d91721fe183c271cb166049a6f16462367dfe7527386014bfd07df83dd75",
+    "contractFingerprint": "sha256:bf88066104927288487b27b7586b68c3ccc1c98689923b5cd07d649e217e9939"
+  },
+  "gates": [
+    {
+      "id": "wiki-integrity",
+      "status": "pass",
+      "detail": "Knowledge Wiki hard gates pass"
+    },
+    {
+      "id": "tier-one-records",
+      "status": "pass",
+      "detail": "Six governed Tier 1 opportunity records are present"
+    },
+    {
+      "id": "opportunity-freshness",
+      "status": "pass",
+      "detail": "All Tier 1 records are live within their recorded verification windows"
+    },
+    {
+      "id": "requirement-coverage",
+      "status": "pass",
+      "detail": "34 stable requirements preserve evidence, status, gap, and next action"
+    },
+    {
+      "id": "reader-contracts",
+      "status": "pass",
+      "detail": "9 reader profiles preserve category, public basis, prohibited assumptions, and disclaimers"
+    },
+    {
+      "id": "public-only-separation",
+      "status": "pass",
+      "detail": "Hiring inputs exclude Wiki gap fields; the separate resolver receives public-safe Wiki metadata afterward"
+    },
+    {
+      "id": "title-blind-discovery",
+      "status": "pass",
+      "detail": "Target scores 6, 3, 2, 2, 1, 1; negative-control scores 0, 0, 0"
+    },
+    {
+      "id": "negative-controls",
+      "status": "pass",
+      "detail": "License, coding-depth, and quota-carrying controls remain explicit non-matches"
+    },
+    {
+      "id": "mutation-detection",
+      "status": "pass",
+      "detail": "13/13 adversarial mutations detected"
+    },
+    {
+      "id": "bounded-oti-climb",
+      "status": "pass",
+      "detail": "The Technical Operations introduction shortens the runway and preserves source-backed operating specifics"
+    },
+    {
+      "id": "candidate-bound-judgments",
+      "status": "pass",
+      "detail": "Public-only hiring and separate Wiki gap-resolution judgments bind to this candidate, role context, reader context, and contract"
+    }
+  ],
+  "ranking": [
+    {
+      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "title": "NYC OTI Technical Operations Manager",
+      "candidateType": "target",
+      "terms": [
+        "operating backbone",
+        "delivery coordination",
+        "onboarding and runbooks",
+        "public launch",
+        "cross-team dependencies"
+      ],
+      "hardScreen": "Meet the posted education and experience minimum",
+      "overlap": [
+        "operating",
+        "onboarding",
+        "runbooks",
+        "public",
+        "launch",
+        "dependencies"
+      ],
+      "score": 6
+    },
+    {
+      "id": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+      "title": "ACLU Product Manager II, Discovery",
+      "candidateType": "target",
+      "terms": [
+        "early-stage discovery",
+        "governance and decision traceability",
+        "non-technical stakeholder alignment",
+        "privacy and security constraints",
+        "build buy or stop recommendation"
+      ],
+      "hardScreen": "Submit a redacted PRD or product brief for a launched product",
+      "overlap": [
+        "decision",
+        "non",
+        "technical"
+      ],
+      "score": 3
+    },
+    {
+      "id": "opportunity.benepass.product-operations-manager.7f963a7a",
+      "title": "Benepass Product Operations Manager",
+      "candidateType": "target",
+      "terms": [
+        "launch readiness",
+        "downstream operational impact",
+        "product and engineering translation",
+        "operations roadmap",
+        "scalable runbooks"
+      ],
+      "hardScreen": "Five to eight years in product operations, project management, or technical program management",
+      "overlap": [
+        "launch",
+        "runbooks"
+      ],
+      "score": 2
+    },
+    {
+      "id": "opportunity.permitflow.product-operations-manager.8a6e6066",
+      "title": "PermitFlow Product Operations Manager",
+      "candidateType": "target",
+      "terms": [
+        "fragmented public process",
+        "product lifecycle operations",
+        "customer feedback and data",
+        "launch readiness",
+        "physical-world workflow"
+      ],
+      "hardScreen": "Two or more years in Product Operations, Product Strategy, Business Operations, or a similar technology role",
+      "overlap": [
+        "public",
+        "launch"
+      ],
+      "score": 2
+    },
+    {
+      "id": "opportunity.asana.ai-implementation-manager.8027437",
+      "title": "Asana AI Implementation Manager, Service Management",
+      "candidateType": "target",
+      "terms": [
+        "customer implementation",
+        "time to first value",
+        "deployment risk and governance",
+        "change management",
+        "reusable playbook"
+      ],
+      "hardScreen": "Three or more years in technical customer success, implementation, technical account management, or consulting",
+      "overlap": [
+        "risk"
+      ],
+      "score": 1
+    },
+    {
+      "id": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "title": "CodePath Senior Program Manager, Claude Corps",
+      "candidateType": "target",
+      "terms": [
+        "multi-partner program plan",
+        "single accurate operating view",
+        "handoff-ready systems",
+        "lightweight rigor",
+        "AI-first operations"
+      ],
+      "hardScreen": "Three or more years running complex multi-stakeholder projects or programs",
+      "overlap": [
+        "operating"
+      ],
+      "score": 1
+    },
+    {
+      "id": "negative.enterprise-sales",
+      "title": "Enterprise Account Executive",
+      "terms": [
+        "quota carrying",
+        "pipeline generation",
+        "closing enterprise contracts"
+      ],
+      "hardScreen": "quota carrying sales tenure",
+      "candidateType": "negative",
+      "overlap": [],
+      "score": 0
+    },
+    {
+      "id": "negative.registered-nurse",
+      "title": "Registered Nurse",
+      "terms": [
+        "active nursing license",
+        "clinical care",
+        "patient assessment"
+      ],
+      "hardScreen": "active nursing license",
+      "candidateType": "negative",
+      "overlap": [],
+      "score": 0
+    },
+    {
+      "id": "negative.senior-backend-rust",
+      "title": "Senior Backend Engineer, Rust",
+      "terms": [
+        "production Rust",
+        "distributed systems",
+        "compiler internals"
+      ],
+      "hardScreen": "production Rust",
+      "candidateType": "negative",
+      "overlap": [],
+      "score": 0
+    }
+  ],
+  "mutationResults": [
+    {
+      "id": "remove-strongest-proof",
+      "detected": true,
+      "findings": [
+        "remove-strongest-proof"
+      ]
+    },
+    {
+      "id": "hide-jamie-role",
+      "detected": true,
+      "findings": [
+        "hide-jamie-role"
+      ]
+    },
+    {
+      "id": "replace-specificity-with-vague-language",
+      "detected": true,
+      "findings": [
+        "replace-specificity-with-vague-language"
+      ]
+    },
+    {
+      "id": "inflate-sole-credit",
+      "detected": true,
+      "findings": [
+        "inflate-sole-credit"
+      ]
+    },
+    {
+      "id": "add-unsupported-metric",
+      "detected": true,
+      "findings": [
+        "add-unsupported-metric"
+      ]
+    },
+    {
+      "id": "hide-resume-contact",
+      "detected": true,
+      "findings": [
+        "hide-resume-contact"
+      ]
+    },
+    {
+      "id": "densify-first-screen",
+      "detected": true,
+      "findings": [
+        "densify-first-screen"
+      ]
+    },
+    {
+      "id": "stale-opportunity",
+      "detected": true,
+      "findings": [
+        "stale-opportunity"
+      ]
+    },
+    {
+      "id": "drop-hard-screen",
+      "detected": true,
+      "findings": [
+        "drop-hard-screen"
+      ]
+    },
+    {
+      "id": "leak-protected-path",
+      "detected": true,
+      "findings": [
+        "leak-protected-path"
+      ]
+    },
+    {
+      "id": "remove-case-study",
+      "detected": true,
+      "findings": [
+        "remove-case-study"
+      ]
+    },
+    {
+      "id": "break-citation",
+      "detected": true,
+      "findings": [
+        "break-citation"
+      ]
+    },
+    {
+      "id": "contradict-resume-category",
+      "detected": true,
+      "findings": [
+        "contradict-resume-category"
+      ]
+    }
+  ],
+  "selectedOpportunity": null,
+  "manualAuthority": {
+    "applicationSubmission": "human-only",
+    "acluProductBriefApproval": "human-blocked",
+    "workAuthorizationAnswers": "private-human-only",
+    "namedReaderParticipation": "not-claimed",
+    "employmentAcceptance": "human-only"
+  },
+  "stopReason": "All automated gates passed twice on the unchanged candidate; remaining decisions require human authority or application work outside the public repository."
+}

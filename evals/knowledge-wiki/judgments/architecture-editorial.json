@@ -2,7 +2,7 @@
   "id": "architecture-editorial",
   "reviewer": "Codex independent architecture and editorial review",
   "reviewedAt": "2026-07-18",
-  "candidateFingerprint": "sha256:7533b88aa34368e75bffcaa298450c5e4fd32e7cfcfbea1279a2f21627f7bb7f",
+  "candidateFingerprint": "sha256:b180818eee7376e329badfc0dc49e48dfeaa89d07d41f433eac3ab6a0150ed13",
   "contractFingerprint": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
   "verdict": "pass",
   "criteria": [
@@ -14,7 +14,7 @@
     {
       "id": "reader-orientation",
       "status": "pass",
-      "finding": "The root and pilot index provide task-oriented entry, purposeful links, and a complete bounded path through project, source, claim, correction, capability, opportunity, method, projection, and media records."
+      "finding": "The root, pilot index, and employment-acceptance index provide task-oriented entry, purposeful links, and bounded paths through project, source, claim, correction, capability, current opportunity, requirement, method, projection, and media records."
     },
     {
       "id": "correction-legibility",
@@ -30,6 +30,11 @@
       "id": "voice-and-care",
       "status": "pass",
       "finding": "Documentation uses plain, precise language that joins care to structure and keeps uncertainty, collective context, and reader action visible."
+    },
+    {
+      "id": "employment-acceptance-restraint",
+      "status": "pass",
+      "finding": "Six current opportunities retain official-source status, hard requirements, evidence routes, explicit gaps, and one-year acceptance conditions; simulated named-reader profiles are clearly labeled as lenses rather than participation, endorsement, or hiring decisions."
     }
   ],
   "manualGates": {
@@ -37,5 +42,5 @@
     "rightsClearance": "human-blocked",
     "editorialApproval": "not-requested"
   },
-  "remainingWork": "Run the documented retrieval tasks with unfamiliar human readers before treating navigation as human-validated."
+  "remainingWork": "Run the documented retrieval tasks with unfamiliar human readers and obtain Jamie's current-role priority decisions before treating navigation or opportunity selection as human-validated."
 }

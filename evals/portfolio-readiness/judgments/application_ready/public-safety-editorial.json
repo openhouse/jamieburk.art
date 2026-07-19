@@ -1,8 +1,8 @@
 {
   "judgeId": "codex-independent-public-safety-editorial-application-2026-07-18-wiki",
   "lens": "public-safety-editorial",
-  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:d15ed158e182ba89f79b658f60fcace919b21bc3553262f68e1c5611c24d2104",
+  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
+  "contract": "sha256:f35c29a9eb885e5a07870f9cdb3c3709f802f07699de4d78b6207d3b9e45268f",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -28,7 +28,7 @@
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "Planning rhythms, risk surfacing, dependency coordination, documentation, onboarding, launch support, reporting, and handoffs are translated into recognizable responsibilities and connected to named projects."
+      "observation": "The concise new opening makes Jamie's agency and the usable outcomes of plans, risk visibility, records, onboarding, launch support, and handoffs immediately legible, then connects them to named projects."
     },
     {
       "rubric": "proof_defensibility",
@@ -88,7 +88,7 @@
     {
       "rubric": "responsive_quality",
       "route": "/work/callnyc",
-      "observation": "Candidate-bound browser evidence reports no overflow across desktop, mobile, and 200%-equivalent reflow checks, working citation navigation, and visible focus on all 24 traversed controls."
+      "observation": "Candidate-bound browser evidence reports 200 responses, no overflow across desktop, mobile, and 200%-equivalent reflow checks, working citation navigation, visible focus on all 24 traversed controls, and content on all routes without JavaScript."
     },
     {
       "rubric": "sharing_quality",
@@ -103,7 +103,7 @@
     {
       "rubric": "proof_defensibility",
       "route": "repository",
-      "observation": "The revised contract adds Wiki checks for canonical references, private paths, uncleared media, negative-knowledge inflation, and stale generated records. It introduces no public route and does not alter the public candidate or its existing safety boundaries."
+      "observation": "The employment extension stores current role requirements, hard screens, fit evidence, gaps, and simulated reader contexts in governed internal records. It adds no public job-targeting route and does not publish private communications or imply that named readers participated."
     }
   ],
   "regressions": [],

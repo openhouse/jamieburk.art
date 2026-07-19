@@ -1,8 +1,8 @@
 {
   "judgeId": "codex-independent-chad-editor-application-2026-07-18-wiki",
   "lens": "chad-editorial",
-  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:d15ed158e182ba89f79b658f60fcace919b21bc3553262f68e1c5611c24d2104",
+  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
+  "contract": "sha256:f35c29a9eb885e5a07870f9cdb3c3709f802f07699de4d78b6207d3b9e45268f",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -28,7 +28,7 @@
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "Delivery coordination, risk surfacing, dependency management, documentation, launch support, onboarding, and handoffs are mapped to named projects and hiring-relevant proof."
+      "observation": "The revised opening names Jamie as the actor and translates his work into plans, visible risks, decision and status records, onboarding, launch support, and durable handoffs before mapping those capabilities to named projects."
     },
     {
       "rubric": "proof_defensibility",
@@ -88,7 +88,7 @@
     {
       "rubric": "responsive_quality",
       "route": "/work/callnyc",
-      "observation": "Candidate-bound evidence reports no overflow across desktop, mobile, and reflow views and visible focus for all 24 traversed controls, including citations; the 200% result uses an equivalent viewport rather than browser-chrome zoom."
+      "observation": "Candidate-bound evidence reports 200 responses across 11 desktop and mobile routes, no reflow overflow, visible focus for all 24 traversed controls, working citations, and usable server-rendered content on all 11 routes with JavaScript disabled; the 200% result uses an equivalent viewport rather than browser-chrome zoom."
     },
     {
       "rubric": "sharing_quality",
@@ -103,7 +103,7 @@
     {
       "rubric": "operational_confidence",
       "route": "repository",
-      "observation": "The application candidate is unchanged. The revised contract adds Knowledge Wiki schema, link, relation, projection, generation, mutation, and candidate-binding checks to the standard pipeline without weakening any public-page criterion or closing visual, production, or human-approval gaps."
+      "observation": "The employment-acceptance contract adds six current role contexts, requirement-level fit and gap records, title-blind discovery controls, reader-specific simulated judgments, and exact-candidate binding without weakening public-safety gates or closing visual, production, rights, or human-approval gaps."
     }
   ],
   "regressions": [],

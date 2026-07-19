@@ -1,8 +1,8 @@
 {
   "judgeId": "codex-independent-warren-sack-application-2026-07-18-wiki",
   "lens": "warren-sack",
-  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:d15ed158e182ba89f79b658f60fcace919b21bc3553262f68e1c5611c24d2104",
+  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
+  "contract": "sha256:f35c29a9eb885e5a07870f9cdb3c3709f802f07699de4d78b6207d3b9e45268f",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -28,7 +28,7 @@
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "The information architecture translates Jamie's relational method into delivery coordination, risk surfacing, dependency management, documentation, onboarding, launch support, and durable handoffs, then connects those capabilities to named projects."
+      "observation": "The revised opening translates Jamie's relational method into plans, visible risks, shared records, onboarding, launch support, and durable handoffs, then connects those capabilities to named project systems."
     },
     {
       "rubric": "proof_defensibility",
@@ -93,7 +93,7 @@
     {
       "rubric": "responsive_quality",
       "route": "/work/callnyc",
-      "observation": "Candidate-bound evidence reports no overflow on desktop, mobile, or the 200%-equivalent reflow viewport, working citation navigation, and visible focus for all twenty-four traversed controls; the zoom result is a viewport equivalent rather than browser-chrome zoom."
+      "observation": "Candidate-bound evidence reports no overflow on desktop, mobile, or the 200%-equivalent reflow viewport, working citation navigation, visible focus for all twenty-four traversed controls, and server-rendered content without JavaScript; the zoom result is a viewport equivalent rather than browser-chrome zoom."
     },
     {
       "rubric": "sharing_quality",
@@ -108,7 +108,7 @@
     {
       "rubric": "sack_lens",
       "route": "repository",
-      "observation": "The revised contract makes document, semantic, evidence, and publication relations inspectable through stable IDs, backlinks, and bounded queries. The public candidate remains text-led, so the existing score and visual-evidence limitation remain appropriate."
+      "observation": "The employment extension makes role requirements, evidence routes, gaps, source freshness, reader contexts, and acceptance conditions inspectable through stable IDs. The public candidate remains text-led, so the existing score and visual-evidence limitation remain appropriate."
     }
   ],
   "regressions": [],

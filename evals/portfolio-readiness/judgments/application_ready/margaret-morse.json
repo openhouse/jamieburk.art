@@ -1,8 +1,8 @@
 {
   "judgeId": "codex-independent-margaret-morse-application-2026-07-18-wiki",
   "lens": "margaret-morse",
-  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:d15ed158e182ba89f79b658f60fcace919b21bc3553262f68e1c5611c24d2104",
+  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
+  "contract": "sha256:f35c29a9eb885e5a07870f9cdb3c3709f802f07699de4d78b6207d3b9e45268f",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -28,7 +28,7 @@
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "Planning rhythms, risk tracking, decision records, documentation, launch support, onboarding, and handoffs are mapped to specific civic, cultural, business, and technical projects without erasing their distinct contexts."
+      "observation": "The new opening condenses plans, risks, records, onboarding, launch support, and handoffs into a usable professional proposition, while the proof map preserves the civic, cultural, business, and technical projects' distinct contexts."
     },
     {
       "rubric": "proof_defensibility",
@@ -93,7 +93,7 @@
     {
       "rubric": "responsive_quality",
       "route": "site-wide",
-      "observation": "Candidate-bound evidence reports successful desktop, mobile, keyboard, and 200%-equivalent reflow inspection across 11 routes, no overflow, and visible focus on all 24 traversed controls; broader production-device testing remains unverified."
+      "observation": "Candidate-bound evidence reports successful desktop, mobile, keyboard, JavaScript-disabled, and 200%-equivalent reflow inspection across 11 routes, no overflow, and visible focus on all 24 traversed controls; broader production-device testing remains unverified."
     },
     {
       "rubric": "sharing_quality",
@@ -108,7 +108,7 @@
     {
       "rubric": "morse_lens",
       "route": "repository",
-      "observation": "The revised contract adds a Markdown-first Wiki that preserves images and artifacts as situated evidence with distinct rights, consent, and non-support fields. The public candidate remains unchanged and still needs approved material specimens before the embodied throughline can score higher."
+      "observation": "The employment extension preserves role requirements, gaps, and reader contexts as governed records while keeping the public composition selective. The candidate still needs approved material specimens before the embodied throughline can score higher."
     }
   ],
   "regressions": [],

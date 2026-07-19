@@ -2,7 +2,7 @@
   "id": "systems-public-safety",
   "reviewer": "Codex independent systems and public-safety review",
   "reviewedAt": "2026-07-18",
-  "candidateFingerprint": "sha256:7533b88aa34368e75bffcaa298450c5e4fd32e7cfcfbea1279a2f21627f7bb7f",
+  "candidateFingerprint": "sha256:b180818eee7376e329badfc0dc49e48dfeaa89d07d41f433eac3ab6a0150ed13",
   "contractFingerprint": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
   "verdict": "pass",
   "criteria": [
@@ -30,6 +30,11 @@
       "id": "governance-honesty",
       "status": "pass",
       "finding": "The health model separates hard gates, diagnostics, human tasks, rights clearance, editorial approval, and production observation rather than averaging them into a synthetic score."
+    },
+    {
+      "id": "employment-source-and-gap-integrity",
+      "status": "pass",
+      "finding": "Opportunity validation requires official URLs, freshness, stable requirement and evidence IDs, explicit hard screens, title-blind discovery language, public routes, gaps, and one-year conditions; the evaluation handoff exposes only public-safe Wiki metadata after the public-only hiring judgment."
     }
   ],
   "manualGates": {
@@ -37,5 +42,5 @@
     "rightsClearance": "human-blocked",
     "productionObservation": "not-requested"
   },
-  "remainingWork": "Keep the participant photograph unprojected until rights, consent, credit, and editorial review are completed by people with authority."
+  "remainingWork": "Keep the participant photograph unprojected until rights, consent, credit, and editorial review are completed by people with authority, and keep private communication history outside hiring-evaluator inputs."
 }

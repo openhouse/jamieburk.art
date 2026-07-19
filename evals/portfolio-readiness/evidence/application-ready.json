@@ -1,20 +1,152 @@
 {
-  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
+  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
   "profile": "application_ready",
-  "performedAt": "2026-07-15",
-  "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, and resume download checks.",
+  "performedAt": "2026-07-18",
+  "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, resume download, and JavaScript-disabled checks.",
   "routes": [
-    { "route": "/", "desktop": { "status": 200, "overflow": false, "h1": "Jamie Burkart" }, "mobile": { "status": 200, "overflow": false, "h1": "Jamie Burkart" } },
-    { "route": "/work", "desktop": { "status": 200, "overflow": false, "h1": "Selected work" }, "mobile": { "status": 200, "overflow": false, "h1": "Selected work" } },
-    { "route": "/work/technical-operations", "desktop": { "status": 200, "overflow": false, "h1": "Technical Operations & Implementation" }, "mobile": { "status": 200, "overflow": false, "h1": "Technical Operations & Implementation" } },
-    { "route": "/resume", "desktop": { "status": 200, "overflow": false, "h1": "Resume" }, "mobile": { "status": 200, "overflow": false, "h1": "Resume" } },
-    { "route": "/contact", "desktop": { "status": 200, "overflow": false, "h1": "Contact" }, "mobile": { "status": 200, "overflow": false, "h1": "Contact" } },
-    { "route": "/about", "desktop": { "status": 200, "overflow": false, "h1": "About" }, "mobile": { "status": 200, "overflow": false, "h1": "About" } },
-    { "route": "/work/harry-j-epstein", "desktop": { "status": 200, "overflow": false, "h1": "Harry J. Epstein Company" }, "mobile": { "status": 200, "overflow": false, "h1": "Harry J. Epstein Company" } },
-    { "route": "/work/fair-rent-nyc", "desktop": { "status": 200, "overflow": false, "h1": "NYC Artist Coalition / FairRentNYC" }, "mobile": { "status": 200, "overflow": false, "h1": "NYC Artist Coalition / FairRentNYC" } },
-    { "route": "/work/callnyc", "desktop": { "status": 200, "overflow": false, "h1": "CallNYC.org" }, "mobile": { "status": 200, "overflow": false, "h1": "CallNYC.org" } },
-    { "route": "/work/kc-town-hall", "desktop": { "status": 200, "overflow": false, "h1": "KC Town Hall LLC" }, "mobile": { "status": 200, "overflow": false, "h1": "KC Town Hall LLC" } },
-    { "route": "/work/wowlist", "desktop": { "status": 200, "overflow": false, "h1": "WOWList.org" }, "mobile": { "status": 200, "overflow": false, "h1": "WOWList.org" } }
+    {
+      "route": "/",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Jamie Burkart"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Jamie Burkart"
+      }
+    },
+    {
+      "route": "/work",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Selected work"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Selected work"
+      }
+    },
+    {
+      "route": "/work/technical-operations",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Technical Operations & Implementation"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Technical Operations & Implementation"
+      }
+    },
+    {
+      "route": "/resume",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Resume"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Resume"
+      }
+    },
+    {
+      "route": "/contact",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Contact"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Contact"
+      }
+    },
+    {
+      "route": "/about",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "About"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "About"
+      }
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Harry J. Epstein Company"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Harry J. Epstein Company"
+      }
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "NYC Artist Coalition / FairRentNYC"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "NYC Artist Coalition / FairRentNYC"
+      }
+    },
+    {
+      "route": "/work/callnyc",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "CallNYC.org"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "CallNYC.org"
+      }
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "KC Town Hall LLC"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "KC Town Hall LLC"
+      }
+    },
+    {
+      "route": "/work/wowlist",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "WOWList.org"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "WOWList.org"
+      }
+    }
   ],
   "citations": {
     "referenceCount": 8,
@@ -61,6 +193,10 @@
   },
   "publicCopy": {
     "resumeGovernanceNotePresent": false
+  },
+  "javascriptDisabled": {
+    "passed": true,
+    "routeCount": 11
   },
   "limitations": [
     "The candidate was inspected locally with staging metadata defaults.",

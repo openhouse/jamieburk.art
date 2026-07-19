@@ -65,6 +65,29 @@ stop record no longer change the reviewability count after the candidate is
 frozen. This prevents excluded evaluation artifacts from changing a hard gate
 without changing either fingerprint.
 
+Version 5 keeps the existing review thresholds and permits a larger integration
+only through at most three bounded review packets. Every candidate- or
+contract-affecting changed file must be committed and assigned to exactly one
+packet. Unassigned files, overlapping assignments, empty packets, oversized
+packets, and dirty candidate paths fail closed. This version also brings the
+Knowledge Wiki and hiring-acceptance suites into the composite no-regression
+gate and fingerprint surface.
+
+## Review packets
+
+The packet manifest lives at
+`evals/composite-integration/evidence/review-packets.json`. Its order is the
+recommended review order:
+
+1. composed portfolio, governed Wiki content, opportunities, and reader contracts;
+2. evaluation contracts, fixtures, receipts, and judgments;
+3. executable tooling and tests.
+
+The 50-file, 10,000-added-line, and 2,000-added-line single-file ceilings apply
+to each packet. The aggregate added-line and single-file ceilings also remain
+in force. Packetization cannot hide an uncommitted file or remove a file from
+the candidate and contract fingerprints.
+
 ## Evidence layers
 
 Deterministic checks, model judgments, human-reader evidence, rights review,
@@ -79,4 +102,5 @@ npm run evals:composite
 ```
 
 The final composite runner also invokes the canonical citation, knowledge,
-public-safety, route, knowledge-lifecycle, and application-readiness checks.
+public-safety, route, knowledge-lifecycle, application-readiness, Knowledge Wiki,
+and hiring-acceptance checks.

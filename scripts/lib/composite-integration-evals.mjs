@@ -15,7 +15,7 @@ function asArray(value) {
 
 export function validateCompositeSuite(suite) {
   const findings = [];
-  if (suite?.version !== 4) findings.push("Suite version must be 4");
+  if (suite?.version !== 5) findings.push("Suite version must be 5");
   if (!suite?.id) findings.push("Suite requires an ID");
   if (!SHA_PATTERN.test(suite?.startSha ?? "")) findings.push("Suite start SHA is invalid");
   if (asArray(suite?.frozenBranches).length !== 14) findings.push("Suite must pin A through N");
@@ -37,8 +37,11 @@ export function validateCompositeSuite(suite) {
   if (!asArray(suite?.contractPaths).length) findings.push("Contract paths are required");
   if (!asArray(suite?.candidatePaths).length) findings.push("Candidate paths are required");
   if (!asArray(suite?.requiredMutationIds).length) findings.push("Semantic mutation IDs are required");
-  for (const requiredPath of [suite?.ledgerPath, suite?.governancePath, suite?.historyPath, suite?.semanticFixturePath]) {
+  for (const requiredPath of [suite?.ledgerPath, suite?.governancePath, suite?.reviewPacketPath, suite?.historyPath, suite?.semanticFixturePath]) {
     if (!requiredPath || !isFingerprintBoundPath(requiredPath, suite)) findings.push(`Hard-gate input is not fingerprint-bound: ${requiredPath ?? "missing"}`);
+  }
+  if (!Number.isInteger(suite?.reviewabilityThresholds?.maximumReviewPackets) || suite.reviewabilityThresholds.maximumReviewPackets < 1) {
+    findings.push("Reviewability requires a positive maximum review-packet count");
   }
   return findings;
 }
@@ -249,14 +252,68 @@ export function evaluateGovernance(suite, governance) {
   return { passed: findings.length === 0, findings };
 }
 
-export function evaluateReviewability(stats, thresholds) {
+function summarizeReviewRows(rows) {
+  return {
+    changedFiles: rows.length,
+    addedLines: rows.reduce((total, row) => total + Number(row.added ?? 0), 0),
+    deletedLines: rows.reduce((total, row) => total + Number(row.deleted ?? 0), 0),
+    maximumSingleFileAddedLines: Math.max(0, ...rows.map((row) => Number(row.added ?? 0))),
+    largestAddedFile: [...rows].sort((a, b) => Number(b.added ?? 0) - Number(a.added ?? 0))[0]?.path ?? null
+  };
+}
+
+export function evaluateReviewability(stats, thresholds, options = {}) {
   const findings = [];
-  if (stats.changedFiles > thresholds.maximumChangedFiles) findings.push(`${stats.changedFiles} changed files exceeds ${thresholds.maximumChangedFiles}`);
+  const rows = asArray(stats.files);
+  const dirtyPaths = asArray(options.dirtyPaths);
+  const manifest = options.manifest;
   if (stats.addedLines > thresholds.maximumAddedLines) findings.push(`${stats.addedLines} added lines exceeds ${thresholds.maximumAddedLines}`);
   if (stats.maximumSingleFileAddedLines > thresholds.maximumSingleFileAddedLines) {
     findings.push(`${stats.maximumSingleFileAddedLines} added lines in ${stats.largestAddedFile} exceeds ${thresholds.maximumSingleFileAddedLines}`);
   }
-  return { passed: findings.length === 0, findings };
+  if (dirtyPaths.length) findings.push(`Candidate-affecting working-tree changes must be committed: ${dirtyPaths.join(", ")}`);
+
+  const packetStats = [];
+  if (!manifest) {
+    if (stats.changedFiles > thresholds.maximumChangedFiles) findings.push(`${stats.changedFiles} changed files exceeds ${thresholds.maximumChangedFiles}`);
+    return { passed: findings.length === 0, findings, mode: "single-delta", packetStats };
+  }
+
+  if (manifest.version !== 1) findings.push("Review-packet manifest version must be 1");
+  if (manifest.baseSha !== stats.baseRef) findings.push(`Review-packet base ${manifest.baseSha ?? "missing"} does not match ${stats.baseRef}`);
+  const packets = asArray(manifest.packets);
+  const packetIds = packets.map((packet) => packet.id);
+  if (!packets.length) findings.push("Review-packet manifest has no packets");
+  if (packets.length > thresholds.maximumReviewPackets) findings.push(`${packets.length} review packets exceeds ${thresholds.maximumReviewPackets}`);
+  if (!unique(packetIds) || packetIds.some((id) => !id)) findings.push("Review-packet IDs must be present and unique");
+  if (JSON.stringify(asArray(manifest.reviewOrder)) !== JSON.stringify(packetIds)) {
+    findings.push("Review order must list every packet exactly once in manifest order");
+  }
+  for (const packet of packets) {
+    if (!packet.purpose) findings.push(`${packet.id ?? "unknown packet"} requires a review purpose`);
+    if (!asArray(packet.includes).length) findings.push(`${packet.id ?? "unknown packet"} requires include paths`);
+  }
+
+  const rowsByPacket = new Map(packetIds.map((id) => [id, []]));
+  for (const row of rows) {
+    const matches = packets.filter((packet) => pathMatches(row.path, packet.includes));
+    if (matches.length === 0) findings.push(`Changed file is not assigned to a review packet: ${row.path}`);
+    if (matches.length > 1) findings.push(`Changed file is assigned to multiple review packets: ${row.path}`);
+    if (matches.length === 1) rowsByPacket.get(matches[0].id)?.push(row);
+  }
+  for (const packet of packets) {
+    const packetRows = rowsByPacket.get(packet.id) ?? [];
+    const summary = { id: packet.id, ...summarizeReviewRows(packetRows) };
+    packetStats.push(summary);
+    if (!packetRows.length) findings.push(`${packet.id} contains no changed files`);
+    if (summary.changedFiles > thresholds.maximumChangedFiles) findings.push(`${packet.id}: ${summary.changedFiles} changed files exceeds ${thresholds.maximumChangedFiles}`);
+    if (summary.addedLines > thresholds.maximumAddedLines) findings.push(`${packet.id}: ${summary.addedLines} added lines exceeds ${thresholds.maximumAddedLines}`);
+    if (summary.maximumSingleFileAddedLines > thresholds.maximumSingleFileAddedLines) {
+      findings.push(`${packet.id}: ${summary.maximumSingleFileAddedLines} added lines in ${summary.largestAddedFile} exceeds ${thresholds.maximumSingleFileAddedLines}`);
+    }
+  }
+
+  return { passed: findings.length === 0, findings, mode: "bounded-review-packets", packetStats };
 }
 
 export function scoreRubrics(suite, hardGates) {

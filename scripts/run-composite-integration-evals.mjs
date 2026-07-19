@@ -50,6 +50,7 @@ function diffStats(baseRef, include = () => true) {
   }).filter((row) => include(row.path));
   return {
     baseRef,
+    files: rows,
     changedFiles: rows.length,
     addedLines: rows.reduce((total, row) => total + row.added, 0),
     deletedLines: rows.reduce((total, row) => total + row.deleted, 0),
@@ -93,6 +94,7 @@ const canonicalArchitecture = evaluateCanonicalArchitecture(repoRoot, suite);
 const fixtures = readJson(suite.semanticFixturePath) ?? [];
 const semanticIntegrity = evaluateSemanticFixtures(suite, fixtures);
 const governance = evaluateGovernance(suite, readJson(suite.governancePath));
+const reviewPacketManifest = readJson(suite.reviewPacketPath);
 
 const historyPath = path.join(repoRoot, suite.historyPath);
 const historyText = existsSync(historyPath) ? readFileSync(historyPath, "utf8") : "";
@@ -121,7 +123,15 @@ const judgmentResult = validateJudgments({ judgments, suite, candidate, contract
 
 const inheritedStats = diffStats("origin/develop");
 const integrationStats = diffStats(suite.startSha, (relativePath) => isFingerprintBoundPath(relativePath, suite));
-const reviewability = evaluateReviewability(integrationStats, suite.reviewabilityThresholds);
+const dirtyPaths = git(["status", "--porcelain=v1", "--untracked-files=all"])
+  .split("\n")
+  .filter(Boolean)
+  .map((line) => line.slice(3).split(" -> ").at(-1))
+  .filter((relativePath) => isFingerprintBoundPath(relativePath, suite));
+const reviewability = evaluateReviewability(integrationStats, suite.reviewabilityThresholds, {
+  manifest: reviewPacketManifest,
+  dirtyPaths
+});
 
 const regressions = skipRegression ? [] : [
   runNode("scripts/check-citations.mjs"),
@@ -129,7 +139,9 @@ const regressions = skipRegression ? [] : [
   runNode("scripts/run-knowledge-lifecycle-evals.mjs", ["--json", "--no-report"]),
   runNode("scripts/check-public-safety.mjs"),
   runNode("scripts/check-routes.mjs"),
-  runNode("scripts/run-portfolio-evals.mjs", ["--profile", "application_ready", "--json", "--no-report"])
+  runNode("scripts/run-portfolio-evals.mjs", ["--profile", "application_ready", "--json", "--no-report"]),
+  runNode("scripts/run-knowledge-wiki-evals.mjs", ["--json", "--no-report"]),
+  runNode("scripts/run-hiring-acceptance-evals.mjs", ["--json", "--no-report"])
 ];
 const noRegression = {
   passed: skipRegression || regressions.every((item) => item.status === "pass"),
@@ -180,7 +192,7 @@ const hardGates = {
   },
   reviewability_accounting: {
     status: reviewability.passed ? "pass" : "fail",
-    evidence: reviewability.findings.join("; ") || `${integrationStats.changedFiles} integration files; inherited delta reported separately`
+    evidence: reviewability.findings.join("; ") || `${integrationStats.changedFiles} integration files assigned exactly once across ${reviewability.packetStats.length} bounded review packets; inherited delta reported separately`
   },
   no_regression: {
     status: noRegression.passed ? "pass" : "fail",
@@ -204,7 +216,7 @@ const result = {
   headSha,
   candidate,
   contract,
-  baselineCandidate: baseline?.candidate ?? null,
+  baselineCandidate: baseline?.candidate ?? baseline?.previousBaselineCandidate ?? null,
   score: weightedScore,
   threshold: profile.minimumWeightedScore,
   passed,
@@ -212,7 +224,13 @@ const result = {
   hardGates,
   failedHardGates,
   failedRubrics,
-  reviewStats: { inheritedFromDevelop: inheritedStats, integrationFromStart: integrationStats },
+  reviewStats: {
+    inheritedFromDevelop: inheritedStats,
+    integrationFromStart: integrationStats,
+    mode: reviewability.mode,
+    packets: reviewability.packetStats,
+    dirtyCandidatePaths: dirtyPaths
+  },
   regressions,
   evaluatedAt: new Date().toISOString(),
   nextAction: passed

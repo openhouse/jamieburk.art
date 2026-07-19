@@ -17,13 +17,14 @@ import {
 const suite = JSON.parse(readFileSync("evals/composite-integration/suite.json", "utf8"));
 const fixtures = JSON.parse(readFileSync(suite.semanticFixturePath, "utf8"));
 
-test("composite v4 contract pins A through N and binds every hard-gate input", () => {
+test("composite v5 contract pins A through N and binds every hard-gate input", () => {
   assert.deepEqual(validateCompositeSuite(suite), []);
-  assert.equal(suite.version, 4);
+  assert.equal(suite.version, 5);
   assert.equal(suite.frozenBranches.length, 14);
   assert.equal(suite.rubrics.reduce((total, item) => total + item.weight, 0), 100);
   assert.ok(suite.contractPaths.includes(suite.ledgerPath));
   assert.ok(suite.contractPaths.includes(suite.governancePath));
+  assert.ok(suite.contractPaths.includes(suite.reviewPacketPath));
   assert.ok(suite.candidatePaths.some((item) => suite.historyPath.startsWith(`${item}/`)));
   const unbound = structuredClone(suite);
   unbound.contractPaths = unbound.contractPaths.filter((item) => item !== suite.ledgerPath);
@@ -111,6 +112,53 @@ test("reviewability measures the integration delta independently", () => {
   assert.equal(evaluateReviewability(within, suite.reviewabilityThresholds).passed, true);
   const oversized = { ...within, changedFiles: 51 };
   assert.equal(evaluateReviewability(oversized, suite.reviewabilityThresholds).passed, false);
+});
+
+test("bounded review packets account for every changed file exactly once", () => {
+  const files = Array.from({ length: 60 }, (_, index) => ({
+    path: index < 30 ? `docs/knowledge-bank/item-${index}.md` : `scripts/item-${index}.mjs`,
+    added: 10,
+    deleted: 0
+  }));
+  const stats = {
+    baseRef: suite.startSha,
+    files,
+    changedFiles: files.length,
+    addedLines: 600,
+    maximumSingleFileAddedLines: 10,
+    largestAddedFile: files[0].path
+  };
+  const manifest = {
+    version: 1,
+    baseSha: suite.startSha,
+    reviewOrder: ["content", "tooling"],
+    packets: [
+      { id: "content", purpose: "Review content", includes: ["docs/knowledge-bank"] },
+      { id: "tooling", purpose: "Review tooling", includes: ["scripts"] }
+    ]
+  };
+  const passing = evaluateReviewability(stats, suite.reviewabilityThresholds, { manifest, dirtyPaths: [] });
+  assert.equal(passing.passed, true, passing.findings.join("\n"));
+  assert.deepEqual(passing.packetStats.map((packet) => packet.changedFiles), [30, 30]);
+
+  const unassigned = structuredClone(manifest);
+  unassigned.packets[1].includes = ["tests"];
+  assert.match(evaluateReviewability(stats, suite.reviewabilityThresholds, { manifest: unassigned }).findings.join("\n"), /not assigned/);
+
+  const duplicated = structuredClone(manifest);
+  duplicated.packets[1].includes.push("docs");
+  assert.match(evaluateReviewability(stats, suite.reviewabilityThresholds, { manifest: duplicated }).findings.join("\n"), /multiple review packets/);
+
+  const oversizedPacket = structuredClone(manifest);
+  oversizedPacket.packets[0].includes.push("scripts");
+  oversizedPacket.packets.pop();
+  oversizedPacket.reviewOrder = ["content"];
+  assert.match(evaluateReviewability(stats, suite.reviewabilityThresholds, { manifest: oversizedPacket }).findings.join("\n"), /60 changed files exceeds 50/);
+
+  assert.match(evaluateReviewability(stats, suite.reviewabilityThresholds, {
+    manifest,
+    dirtyPaths: ["scripts/uncommitted.mjs"]
+  }).findings.join("\n"), /must be committed/);
 });
 
 test("rubric scoring fails closed with its governing gate", () => {

@@ -1,8 +1,8 @@
 {
   "judgeId": "codex-independent-hiring-manager-application-2026-07-18-wiki",
   "lens": "hiring-manager",
-  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-  "contract": "sha256:d15ed158e182ba89f79b658f60fcace919b21bc3553262f68e1c5611c24d2104",
+  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
+  "contract": "sha256:f35c29a9eb885e5a07870f9cdb3c3709f802f07699de4d78b6207d3b9e45268f",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -28,7 +28,7 @@
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "The page maps planning rhythms, dependency coordination, risk surfacing, documentation, onboarding, launch support, metrics, and handoffs directly to eight project contexts."
+      "observation": "The revised opening makes the operating value immediately legible, then maps planning, dependency coordination, risk surfacing, documentation, onboarding, launch support, metrics, and handoffs directly to eight project contexts."
     },
     {
       "rubric": "proof_defensibility",
@@ -83,7 +83,7 @@
     {
       "rubric": "responsive_quality",
       "route": "/work/callnyc",
-      "observation": "Candidate-bound browser evidence reports no overflow across eleven desktop and mobile routes, visible focus for all 24 traversed controls, working citation focus, and successful 200%-equivalent reflow. The zoom result uses a standards-equivalent viewport rather than browser-chrome zoom."
+      "observation": "Candidate-bound browser evidence reports 200 responses and no overflow across eleven desktop and mobile routes, visible focus for all 24 traversed controls, working citation focus, successful 200%-equivalent reflow, and usable headings on every route with JavaScript disabled."
     },
     {
       "rubric": "sharing_quality",
@@ -98,7 +98,7 @@
     {
       "rubric": "operational_confidence",
       "route": "repository",
-      "observation": "The unchanged public candidate now sits behind an additional Knowledge Wiki integrity gate. This improves confidence in the evidence and correction backend without adding reader-facing complexity or changing the existing application-readiness score."
+      "observation": "The candidate now sits behind an employment-acceptance layer covering six current roles, 34 stable requirements, explicit gaps, title-blind discovery, and simulated reader lenses. The one public edit reduces reader burden without turning role-specific evaluation narration into portfolio copy."
     }
   ],
   "regressions": [],
