@@ -18,6 +18,20 @@ relations:
   - type: documents
     target: opportunity.nyc-oti.technical-operations-manager.782369
   - type: documents
+    target: opportunity.aclu.product-manager-ii.discovery.8482872002
+  - type: documents
+    target: opportunity.benepass.product-operations-manager
+  - type: documents
+    target: opportunity.codepath.senior-program-manager.claude-corps.5182020007
+  - type: documents
+    target: opportunity.asana.ai-implementation-manager.service-management.8027437
+  - type: documents
+    target: opportunity.permitflow.product-operations-manager
+  - type: documents
+    target: index.knowledge-wiki.career-trajectory-coverage
+  - type: documents
+    target: index.knowledge-wiki.source-channel-coverage
+  - type: documents
     target: portfolio.work.callnyc
   - type: documents
     target: portfolio.work.technical-operations
@@ -28,6 +42,13 @@ relations:
 - [Technical Operations capability](../capabilities/technical-operations.md)
 - [Source-Backed Team Memory method](../methods/source-backed-team-memory.md)
 - [OTI Technical Operations opportunity lens](../opportunities/oti-technical-operations.md)
+- [ACLU Product Discovery opportunity lens](../opportunities/aclu-product-discovery.md)
+- [Benepass Product Operations opportunity lens](../opportunities/benepass-product-operations.md)
+- [CodePath Claude Corps opportunity lens](../opportunities/codepath-claude-corps.md)
+- [Asana AI Implementation opportunity lens](../opportunities/asana-ai-implementation.md)
+- [PermitFlow Product Operations opportunity lens](../opportunities/permitflow-product-operations.md)
+- [Career-trajectory coverage](career-trajectory-coverage.md)
+- [Source-channel coverage](source-channel-coverage.md)
 - [CallNYC portfolio projection](../projections/callnyc-case-study.md)
 - [Technical Operations portfolio projection](../projections/technical-operations.md)
 

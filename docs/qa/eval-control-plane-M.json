@@ -10,7 +10,8 @@
     "docs/qa/knowledge-lifecycle-M.json",
     "docs/qa/portfolio-readiness-M.json",
     "docs/qa/blind-spot-readiness-M.json",
-    "docs/qa/professor-lenses-M.json"
+    "docs/qa/professor-lenses-M.json",
+    "docs/qa/hiring-acceptance-M.json"
   ],
   "policyPaths": [
     "AGENTS.md",
