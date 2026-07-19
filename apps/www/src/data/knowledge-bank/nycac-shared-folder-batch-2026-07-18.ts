@@ -16,12 +16,12 @@ export const nycacSharedFolderBatchRecords: NycacSharedFolderBatch = {
       preservationStatus: "private",
       accessedAt: "2026-07-18",
       publicCitation:
-        "Public-safe metadata for a complete July 2026 inventory and disposition pass over the accessible NYC Artist Coalition Shared Folder.",
+        "Public-safe metadata for one internally closed July 2026 inventory and disposition capture of the accessible NYC Artist Coalition Shared Folder.",
       publicNote:
         "The public record contains aggregate coverage and boundaries only; exact titles, paths, identifiers, file bodies, and private records remain outside git.",
       protectedLocatorId: "RESEARCH-NYCAC-SHARED-FOLDER-CENSUS-2026-001",
       supportsGenerally: [
-        "2,365 accessible descendants were inventoried, broadly classified, and dispositioned",
+        "one July 18 capture recorded 2,365 accessible descendants under its declared descendant-counting method",
         "the accessible population contained 258 folders and 2,107 files",
         "16 selected documents were close-read",
         "seven items exposed limited-access signals and zero traversal errors remained after retry",
@@ -32,7 +32,8 @@ export const nycacSharedFolderBatchRecords: NycacSharedFolderBatch = {
         "that Jamie created or authored every accessible item",
         "that shared access grants publication rights",
         "that candidate public sources or media are approved for publication",
-        "that the folder is a complete history of NYC Artist Coalition"
+        "that the folder is a complete history of NYC Artist Coalition",
+        "that 2,365 is the canonical population across captures or counting methods"
       ]
     },
     {
@@ -198,18 +199,16 @@ export const nycacSharedFolderBatchRecords: NycacSharedFolderBatch = {
       id: "CLM-NYCAC-SHARED-FOLDER-POPULATION-2026",
       project: "nyc-artist-coalition",
       internalClaim:
-        "The July 2026 authenticated archival-production pass accounted for all 2,365 accessible descendants in the NYC Artist Coalition Shared Folder by inventorying, broadly classifying, and dispositioning each item.",
+        "One July 18, 2026 authenticated capture accounted for 2,365 accessible descendants under its declared descendant-counting method by inventorying, broadly classifying, and dispositioning each returned item; cross-capture comparison does not establish 2,365 as the canonical folder population.",
       status: "confirmed-with-boundary",
       projections: [
         {
           key: "archive-note",
           text:
-            "A July 2026 archival-production pass inventoried, broadly classified, and dispositioned all 2,365 accessible descendants in the NYC Artist Coalition Shared Folder; 16 selected documents were close-read and no media was rights-cleared by the census itself.",
-          status: "active",
+            "One July 18 capture inventoried, broadly classified, and dispositioned 2,365 accessible descendants under its declared counting method; this total is not canonical across captures.",
+          status: "hold",
           citationRequired: false,
-          surfaces: [
-            "docs/knowledge-bank/nyc-artist-coalition-shared-folder-census-2026-07-18.md"
-          ]
+          surfaces: []
         }
       ],
       evidence: [
@@ -229,17 +228,19 @@ export const nycacSharedFolderBatchRecords: NycacSharedFolderBatch = {
       boundaries: [
         "Complete accounting is not complete interpretation, rights review, authorship review, or publication approval.",
         "The count is limited to the population accessible to Jamie's authenticated account during the review window.",
-        "Exact titles, paths, identifiers, and file bodies remain outside the public repository."
+        "Exact titles, paths, identifiers, and file bodies remain outside the public repository.",
+        "Five frozen branch captures report different totals; the canonical cross-capture population remains held pending protected manifest reconciliation."
       ],
       antiClaims: [
         "Every file was read",
         "Jamie authored all 2,365 items",
         "All accessible items are public-safe",
         "The folder is a complete history of NYC Artist Coalition",
-        "The census grants publication rights"
+        "The census grants publication rights",
+        "2,365 is the settled population across captures"
       ],
       researchInquiryIds: ["INQ-NYCAC-SHARED-FOLDER-ARCHIVAL-PRODUCTION-2026"],
-      reviewedAt: "2026-07-18",
+      reviewedAt: "2026-07-19",
       reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
     },
     {
@@ -336,7 +337,7 @@ export const nycacSharedFolderBatchRecords: NycacSharedFolderBatch = {
       runAt: "2026-07-18",
       resultStatus: "partially-recovered",
       findings: [
-        "All 2,365 accessible descendants were inventoried, broadly classified, and dispositioned with zero unresolved traversal errors.",
+        "One July 18 capture returned 2,365 accessible descendants, all of which were inventoried, broadly classified, and dispositioned with zero unresolved traversal errors under that method.",
         "The collection contains 258 folders and 2,107 files across visual, document, data, audio, video, and design formats.",
         "A protected implementation checklist and companion architecture note make Jamie's FairRentNYC web, data, product, and information-architecture role substantially more concrete.",
         "Selected testimony drafts show Jamie translating operators' experience into open-data and service-design proposals, but draft status requires official corroboration before a delivered-testimony claim is strengthened.",
@@ -360,7 +361,7 @@ export const nycacSharedFolderBatchRecords: NycacSharedFolderBatch = {
         "SRC-NYCAC-ARCHIVE-PARTICIPATION-TEMPLATES-2017"
       ],
       publicSummary:
-        "A complete accounting of 2,365 accessible items, paired with 16 priority close readings, strengthened one portfolio-ready FairRentNYC implementation claim while preserving item-level rights, credit, consent, and publication gates.",
+        "One internally closed July 18 capture, paired with 16 priority close readings, strengthened a bounded FairRentNYC implementation claim while preserving cross-capture reconciliation, item-level rights, credit, consent, and publication gates.",
       protectedLocatorId: "RESEARCH-NYCAC-SHARED-FOLDER-CENSUS-2026-001"
     }
   ]

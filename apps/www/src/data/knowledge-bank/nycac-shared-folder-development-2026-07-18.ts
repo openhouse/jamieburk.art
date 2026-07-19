@@ -23,7 +23,7 @@ export const nycacSharedFolderDevelopmentRecords: NycacSharedFolderDevelopment =
       projectHints: ["nyc-artist-coalition", "fair-rent-nyc"],
       status: "processed",
       disposition:
-        "Inventoried, classified, and dispositioned all 2,365 accessible descendants; close-read 16 priority documents; promoted one bounded FairRentNYC implementation claim; retained rights, consent, attribution, and Jamie approval as separate gates.",
+        "Internally closed one July 18 capture of 2,365 accessible descendants under its declared counting method; close-read 16 priority documents; promoted one bounded FairRentNYC implementation claim; held the population total from cross-capture projection; retained rights, consent, attribution, and Jamie approval as separate gates.",
       linkedRecordIds: [
         "INQ-NYCAC-SHARED-FOLDER-ARCHIVAL-PRODUCTION-2026",
         "SRC-NYCAC-SHARED-FOLDER-CENSUS-2026",
@@ -44,7 +44,7 @@ export const nycacSharedFolderDevelopmentRecords: NycacSharedFolderDevelopment =
         {
           id: "ASSERT-NYCAC-CENSUS-COMPLETE-ACCOUNTING",
           statement:
-            "The authenticated pass inventoried, broadly classified, and dispositioned all 2,365 accessible descendants.",
+            "One July 18 authenticated capture inventoried, broadly classified, and dispositioned all 2,365 descendants returned under its declared counting method.",
           locator: "Protected aggregate manifest",
           confidence: "high",
           publicSafe: true
@@ -67,7 +67,7 @@ export const nycacSharedFolderDevelopmentRecords: NycacSharedFolderDevelopment =
         }
       ],
       limitations: [
-        "The census establishes complete accounting of the accessible population, not complete interpretation, authorship, rights, consent, or publication approval."
+        "The capture establishes internal accounting closure under one method, not a canonical cross-capture population, complete interpretation, authorship, rights, consent, or publication approval."
       ],
       entityIds: ["Jamie-Burkart", "NYC-Artist-Coalition"],
       themeIds: ["archival-production", "coverage-ledger", "rights-boundaries"],

@@ -17,7 +17,8 @@ const mutations = [
   ["NYCAC-009-private-locator-redaction", { privateLocatorExposed: true }],
   ["NYCAC-010-no-public-archive-route", { publicRouteExposed: true }],
   ["NYCAC-011-held-metric-containment", { heldMetricProjected: true }],
-  ["NYCAC-012-purpose-built-projection", { portfolioGuardrailPresent: false }]
+  ["NYCAC-012-purpose-built-projection", { portfolioGuardrailPresent: false }],
+  ["NYCAC-013-cross-capture-reconciliation", { crossCaptureCanonicalTotal: 2365 }]
 ];
 
 test("the governed NYC Artist Coalition archive fixture passes every criterion", () => {

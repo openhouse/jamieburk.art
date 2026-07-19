@@ -1,17 +1,24 @@
-# NYC Artist Coalition Shared Folder: archival-production census
+# NYC Artist Coalition Shared Folder: A-method archival-production census
 
 **Review date:** 2026-07-18  
 **Collection state:** Fully inventoried; selectively close-read; not publication-cleared  
 **Public artifact:** Aggregate and redacted
 
+> **Reconciliation notice, 2026-07-19:** This page preserves one internally
+> closed July 18 capture under the A branch's descendant-counting method. Four
+> other frozen branches reported different accessible-population totals. The
+> count below is therefore not the canonical cross-capture population and is
+> held from portfolio projection. See the [census reconciliation](research-runs/nycac-shared-folder-census-reconciliation-2026-07-19.md).
+
 ## Scope
 
 This pass used Jamie Burkart's authenticated access to account for the complete
-accessible population of the NYC Artist Coalition Shared Folder. In this
-context, **100% archival production** means that every accessible descendant
-received an inventory record, a broad classification, and exactly one
-disposition. It does not mean that every file was opened, that every item was
-created by Jamie, or that shared access grants publication rights.
+accessible population returned by one declared capture and counting method. In
+this context, **100% archival production** means that every accessible
+descendant inside that capture received an inventory record, a broad
+classification, and exactly one disposition. It does not mean that every file
+was opened, that every item was created by Jamie, that shared access grants
+publication rights, or that a mutable shared folder has one timeless total.
 
 The exact private manifest, titles, paths, identifiers, and selected document
 bodies are preserved outside the public repository. This record publishes only
@@ -116,5 +123,6 @@ it was accessible or visually compelling.
 6. Keep rights, consent, collaborator credit, Jamie approval, and purpose-built
    editorial selection as separate human gates.
 
-The census is complete for the population accessible during this review. The
-archive's interpretive, rights, and editorial work remains intentionally open.
+The census is internally complete for the population returned by this method
+during this review. Its cross-capture reconciliation, interpretation, rights,
+and editorial work remain intentionally open.

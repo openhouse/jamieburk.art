@@ -23,6 +23,8 @@ relations:
     target: index.knowledge-wiki.practice-and-opportunities
   - type: documents
     target: index.knowledge-wiki.research-agenda-and-held-claims
+  - type: documents
+    target: index.knowledge-wiki.family-closure
 wanted:
   - id: event.beta-nyc.school-of-data.2016
     proposed_title: BetaNYC School of Data presentation
@@ -55,6 +57,8 @@ is a smaller, selective projection.
   then follow the [page contract](schema.md) if it becomes a governed page.
 - **Continue open research:** use the
   [Research Agenda and Held Claims](indexes/research-agenda-and-held-claims.md).
+- **Review the frozen branch convergence:** use the
+  [Knowledge Wiki Family Closure](indexes/wiki-family-closure.md).
 - **Understand authority and migration:** read the
   [architecture decision](../architecture/ADR-knowledge-wiki-name-and-model.md).
 - **Inspect structural health:** run `npm run wiki:check`,

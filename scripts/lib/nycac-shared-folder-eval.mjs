@@ -20,7 +20,11 @@ export function nycacSharedFolderFixture() {
     heldMetricProjected: false,
     portfolioClaimLinked: true,
     portfolioGuardrailPresent: true,
-    humanGatesRemainOpen: true
+    humanGatesRemainOpen: true,
+    captureMethod: "A-descendant-accounting",
+    crossCaptureCanonicalTotal: null,
+    crossCaptureProjection: "hold",
+    reconciliationPresent: true
   };
 }
 
@@ -85,6 +89,14 @@ export function evaluateNycacSharedFolder(candidate) {
       id: "NYCAC-012-purpose-built-projection",
       pass:
         candidate.portfolioClaimLinked && candidate.portfolioGuardrailPresent
+    },
+    {
+      id: "NYCAC-013-cross-capture-reconciliation",
+      pass:
+        candidate.captureMethod === "A-descendant-accounting" &&
+        candidate.crossCaptureCanonicalTotal === null &&
+        candidate.crossCaptureProjection === "hold" &&
+        candidate.reconciliationPresent
     }
   ];
 }

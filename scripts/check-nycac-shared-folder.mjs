@@ -31,6 +31,10 @@ const registryPath = path.join(
   repoRoot,
   "apps/www/src/data/knowledge-bank/public-registry.json"
 );
+const reconciliationPath = path.join(
+  repoRoot,
+  "docs/knowledge-bank/research-runs/nycac-shared-folder-census-reconciliation-2026-07-19.md"
+);
 
 const requiredPaths = [
   reportPath,
@@ -39,7 +43,8 @@ const requiredPaths = [
   proofPath,
   workPath,
   caseStudyPath,
-  registryPath
+  registryPath,
+  reconciliationPath
 ];
 
 const missing = requiredPaths.filter((file) => !existsSync(file));
@@ -60,6 +65,7 @@ const proofs = read(proofPath);
 const work = read(workPath);
 const caseStudy = read(caseStudyPath);
 const registry = read(registryPath);
+const reconciliation = read(reconciliationPath);
 const governedPublicCorpus = [report, batch, development, proofs, work, caseStudy].join(
   "\n"
 );
@@ -120,17 +126,19 @@ const actual = {
   traversalErrorTotal: tableValue("Traversal errors after retry"),
   rightsClearedTotal: tableValue("Media items rights-cleared in this pass"),
   everyItemHasOneDisposition:
-    /every accessible descendant[\s\S]{0,120}exactly one\s+disposition/i.test(
+    /every accessible\s+descendant[\s\S]{0,240}exactly one\s+disposition/i.test(
       report
     ) && /These dispositions sum to 2,365/.test(report),
   populationScope:
-    /complete\s+accessible population/.test(report) &&
-    /population accessible during this review/.test(report)
+    /complete\s+accessible population returned by one declared capture/.test(
+      report
+    ) &&
+    /internally complete for the population returned by this method/.test(report)
       ? "accessible-population"
       : "overbroad",
   interpretationScope:
     /selectively close-read/.test(report) &&
-    /does not mean that every file was opened/.test(report)
+    /does not mean that every file\s+was opened/.test(report)
       ? "selected-close-reading"
       : "complete-interpretation",
   authorshipScope:
@@ -158,7 +166,24 @@ const actual = {
     /does not prove that every proposed feature shipped/.test(proofs),
   humanGatesRemainOpen:
     /rights, consent, collaborator credit, Jamie approval/.test(report) &&
-    /No media item was promoted/.test(report)
+    /No media item was promoted/.test(report),
+  captureMethod: /A-method archival-production census/.test(report)
+    ? "A-descendant-accounting"
+    : "unspecified",
+  crossCaptureCanonicalTotal:
+    /No single shared-folder population total is canonical/.test(reconciliation)
+      ? null
+      : tableValue("Accessible descendants"),
+  crossCaptureProjection:
+    /status: "hold"/.test(batch) && /surfaces: \[\]/.test(batch)
+      ? "hold"
+      : "active",
+  reconciliationPresent:
+    /2,365/.test(reconciliation) &&
+    /2,408/.test(reconciliation) &&
+    /2,078/.test(reconciliation) &&
+    /2,192/.test(reconciliation) &&
+    /2,405/.test(reconciliation)
 };
 
 const results = evaluateNycacSharedFolder(actual);
