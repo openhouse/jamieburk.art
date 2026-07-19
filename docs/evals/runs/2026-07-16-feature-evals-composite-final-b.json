@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "composite-holdout-public-value-b-2026-07-18-wiki-E-release",
+  "judgeId": "composite-holdout-public-value-b-2026-07-19-wiki-E-final2",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "38c01b8648a124eaabed3c7cc290c1b2f00c0045eb18c243db83940bc0459a80",
+  "candidateFingerprint": "67caf508c412349192c43eec24be5ed0a1c3ada443a5feaecfdba753544b9e0b",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,127 +12,129 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "The target-tree evaluator resolved all 14 refs/remotes/origin feature/evals-A through feature/evals-N heads to the frozen SHAs.",
-        "The register contains exactly 14 matching branch decisions and explicitly identifies feature/knowledge-h with develop as the pull-request base."
+        "The evaluator resolved all 14 feature/evals-A through feature/evals-N heads through refs/remotes/origin at their frozen SHAs.",
+        "The integration branch and develop pull-request base are explicit, and the frozen branches remain reference-only."
       ],
-      "rationale": "The frozen family inventory is complete, origin-bound, explicit, and reference-only."
+      "rationale": "The A-N inventory is complete, exact, origin-bound, and unambiguous."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The decision register recomputed to 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
-        "Every decision has an allowed disposition, substantive rationale, existing destinations, criterion references, and a deliberate website projection decision."
+        "All 14 register entries contain an allowed decision, substantive strength and rationale, existing destination paths, and criterion-linked verification.",
+        "The register recomputed to 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d and explicitly preserves selective website composition."
       ],
-      "rationale": "The integration choices are inspectable and preserve the restrained public composition."
+      "rationale": "Integration decisions are inspectable, destination-specific, and explicit about public projection."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 11 canonical files exist and none of the three forbidden parallel lifecycle roots exists.",
-        "Public application consumers import the redacted public registry and projection helpers; canonical records and protected lifecycle data are not imported into public routes.",
-        "There is no public Knowledge Wiki explorer or proofs route."
+        "All 11 canonical H-derived files exist, the three forbidden parallel lifecycle roots are absent, and the public registry exposes only claims, pages, and sources.",
+        "The Knowledge Wiki ADR preserves one Markdown root, existing structured authorities, derived generated views, and a smaller public portfolio without a public Wiki Explorer."
       ],
-      "rationale": "The H-derived architecture remains canonical and the website remains a selective projection."
+      "rationale": "The candidate extends one canonical architecture without introducing a competing registry, lifecycle engine, or public mirror."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Lifecycle tests passed for identical replay, linked duplicate preservation, changed-content stable-ID rejection, and held-claim, inquiry, correction, projection, and orphan queries.",
-        "Knowledge Wiki queries returned claim sources, opportunity-linked proof, corrections, and rights-pending records through stable IDs."
+        "All four lifecycle-operation tests passed under Node 26.",
+        "Identical intake replay is idempotent, repeated content with a new ID is linked and preserved, changed content under a stable ID is rejected, and held claims, inquiries, corrections, projection states, and orphan status remain queryable."
       ],
-      "rationale": "Intake is append-safe and the required lifecycle states are operationally queryable."
+      "rationale": "The canonical lifecycle is append-safe and exposes the required operational queries."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Validation passed across 275 sources, 96 claims, 31 agency relations, and 4 corrections with no protected leakage or broken canonical references.",
-        "The 238-test knowledge, lifecycle, privacy, population, credit, projection, and mutation run passed completely.",
-        "The repaired NYC Artist Coalition Facebook fixture link resolves; the report SHA-256 is 6ad87ec58dec3fbb3b1b73271b6562d3adf86d1adf61c9d28598f2e1736fad04 and the changed block lock is ba9d7cd7c602338dd0a4a6afa3970fac5746e319f72cf1743b162db375adde62."
+        "Composite validation passed for 275 sources, 96 claims, 31 agency relations, and 4 corrections; citation, knowledge-bank, and public-safety checks also passed.",
+        "All 196 knowledge-evaluation mutation and regression tests passed, including source closure, correction integrity, population boundaries, private leakage, collective credit, institutional action, and causal-overclaim controls.",
+        "The public citation registry is current and redacted, and careful proof records retain their explicit guardrails."
       ],
-      "rationale": "Source limits, evidence roles, population boundaries, corrections, privacy, rights, and distinct individual, shared, collective, and institutional credit remain intact."
+      "rationale": "Source, claim, agency, correction, privacy, credit, and population semantics remain bounded and internally consistent."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The homepage names the role and operating value, prioritizes selected work, Technical Operations, resume, and contact paths, and does not expose the Wiki as a public knowledge dump.",
-        "Technical Operations and lead case studies identify Jamie's actions and usable results while FairRentNYC, WOWList, Sunday Dinner, KC Town Hall, and Open House retain collective-credit boundaries.",
-        "The About page makes artistic, civic, technical, relational, and social continuity explicit and reconstructs observe, model, prototype, use, learn, revise, and handoff.",
-        "All 14 professor-lens criteria and all 33 Knowledge Wiki lens criteria passed."
+        "The public site provides a direct hiring path through the homepage, Technical Operations page, resume, selected case studies, contact route, and bounded lab method; it does not expose a proof-bank or Knowledge Wiki route.",
+        "Jamie is repeatedly named as actor through supported verbs such as led, built, stewarded, co-built, created, supported, and contributed, while coalition, municipal, community, and collaborator outcomes retain collective or institutional credit.",
+        "The About page makes the artistic, civic, technical, relational, and social continuity legible, and the public cases reconstruct observation, modeling, prototyping, use, learning, revision, and handoff.",
+        "Professor-lens evaluation passed 14/14 criteria and its seven adversarial tests passed."
       ],
-      "rationale": "The site is selective and job-useful, Jamie's agency is legible without appropriation, and the broader practice remains coherent."
+      "rationale": "The portfolio is selective and job-useful, gives Jamie visible agency without taking collective credit, and presents a coherent interdisciplinary operating practice."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All five human-controlled blind spots remain open and each retains required evidence, anti-gaming rules, a next action, and a public-projection boundary under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "The Wiki keeps collaborator review, media rights and consent, fresh-reader retrieval, editorial approval, production observation, and hiring outcomes open.",
-        "Retrieval and authoring tasks are defined but remain not-requested; automation is not represented as human comprehension or external validation."
+        "All five required blind-spot controls remain open with evidence requirements, anti-gaming rules, next actions, and public-projection boundaries under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "The public-only hiring evaluator remains separate from the Wiki gap resolver and explicitly disclaims participation, endorsement, private opinion, employer judgment, and hiring prediction.",
+        "Exactly six critical requirement gaps remain visible; visible-weak evidence is not counted as observed, and eight total gap findings still require human approval.",
+        "Mutation tests confirmed that closed roles, stale live roles, exclusionary hard screens, hidden Wiki access, and attempted projection approval fail closed."
       ],
-      "rationale": "Human authority and external-validity gaps are honest, actionable, and fail-open only to the appropriate humans."
+      "rationale": "The candidate uses diagnostics to expose gaps and next actions without synthesizing external validation or converting role fit into employer predictions."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The semantic rubric digest recomputed exactly to c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340 and the base suite, decision register, blind-spot controls, and frozen branch heads match their reviewed locks.",
-        "Adversarial composite tests rejected semantic weakening with refreshed mutable checksums, fabricated heads, missing destinations, base-suite replacement, self-grading, synthetic human evidence, decorative decisions, and score compensation.",
-        "Representative mutations to public UI, accessibility CSS, robots, validation, Docker runtime, release documentation, base suite, decision register, human controls, and generated-currentness output each changed the exact-candidate fingerprint.",
-        "A one-byte mutation in the 165832-byte certificate binary changed the fingerprint to 7c4591552d307b1e2bca25a0bea96856892fb9ff94b732cceb8ee17c82207426."
+        "The frozen semantic rubric independently recomputed to c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
+        "All 14 non-circular composite adversarial tests passed, rejecting semantic weakening with refreshed checksums, fabricated branch heads, decorative decisions, base-suite replacement, self-grading, synthetic human evidence, incomplete provenance, and compensating scores.",
+        "Candidate identity tests demonstrated byte-exact sensitivity for text and binary files.",
+        "The privacy suite found no public Wiki directive disclosing the protected collaborator and rejected a proper-name mutation.",
+        "The accessibility contract rejected coordinated route and viewport substitutions and stale public-surface evidence."
       ],
-      "rationale": "Recursive governance is frozen, byte-exact, blocker-based, and resistant to the requested score-gaming paths."
+      "rationale": "Frozen semantics, reviewed dependencies, exact identity, grader separation, mutation resistance, and all-blockers-must-pass behavior remain intact."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The exact source-tree fingerprint recomputed to 38c01b8648a124eaabed3c7cc290c1b2f00c0045eb18c243db83940bc0459a80 across 477 files, excluding only the two declared holdout records.",
-        "Generated Wiki outputs identify authored source commit 17575a82c505a70f8466788b4d7b72f3be1e899f; HEAD 0a03bb2a changes only the 26 generated views, and wiki:check confirmed every generated output remains current.",
-        "Staging and production-mode Node 26 builds passed in a disposable clone. Production-mode smoke checks returned 200 for all 18 tested routes with apex canonicals and PDF noindex; staging emitted noindex, nofollow and Disallow: /. These are configuration checks, not deployment or indexing claims.",
-        "The evaluator's current COMP-009 absence and the single composite acceptance-test failure are solely the expected pre-installation absence of two fresh exact-candidate holdouts.",
-        "The provenance contract binds distinct process sessions, full prompts, model and reasoning metadata, timestamps, transport, and judgment digests while explicitly limiting receipts to auditable process evidence rather than cryptographic authentication."
+        "The exact source-tree fingerprint recomputed to 67caf508c412349192c43eec24be5ed0a1c3ada443a5feaecfdba753544b9e0b across 532 files, excluding only the two declared holdout records.",
+        "The 108-file public surface recomputed to 7c620afe82cef406e52d47bd63f22d5acce7aaf13dfa55a46ad8fe43c55e1d43 and matches the candidate-bound accessibility report.",
+        "All 56 canonical route and viewport rows passed axe 4.12.1 WCAG A/AA checks, overflow, response status, headings, main landmarks, image labeling, request failures, and explicit lazy-image scroll and decode follow-up; global contrast tests also passed.",
+        "Wiki health, graph, generated indexes, and employment outputs are current; graph and health identify authored source commit 8d2a3547a2cfce2c1dfc69fd64deae98aa79a1f5 and source fingerprint 716079918f0338dc6f3c364231c440a08a8c80cbe4fae38e0c44d542781e0fa5.",
+        "The current composite evaluator reports only the expected pre-installation holdout mismatch. The provenance contract binds distinct process, prompt, model, time, transport, and judgment data while describing native receipts as auditable rather than cryptographic."
       ],
-      "rationale": "Exact identity, frozen semantics, generated-currentness, deterministic gates, distinct holdout provenance, and explicitly open human authority gates form a sound stopping rule."
+      "rationale": "Ignoring only the permitted circular absence of this result and the second fresh holdout, exact identity, currentness, deterministic gates, provenance requirements, and open human authority form a sound stopping rule."
     }
   ],
   "notObserved": [],
   "findings": [
-    "The expected rubric digest, 477-file count, and exact candidate fingerprint independently recomputed exactly.",
-    "The Knowledge Wiki pilot has usable root and task-oriented entry points, 16 governed records, 45 semantic or evidence edges, 107 prose links, zero type-aware orphans or dead ends, one correction, one wanted page, and one rights-review record.",
-    "The NYC Artist Coalition Facebook navigation repair resolves and both reviewed report locks match the repaired bytes.",
-    "The public site remains byte-unchanged by the Wiki commits and exposes no Wiki explorer or proof-bank mirror.",
-    "Accessibility controls include a skip link, main landmark, visible focus, reduced-motion handling, useful image alternatives, and previously recorded overflow-free canonical-route matrices; current typecheck, lint, and builds pass.",
-    "No production deployment, public indexing event, collaborator review, rights clearance, human retrieval success, hiring validation, or external outcome validation was observed or claimed.",
-    "Fresh holdout records remain to be installed; their expected pre-installation absence is not treated as a candidate defect."
+    "The expected rubric digest, 532-file count, and exact candidate fingerprint recomputed exactly in a clean worktree.",
+    "Node 26 checks passed for citations, portfolio and professor lenses, lifecycle operations, 196 knowledge mutations, Knowledge Wiki health and employment currentness, 45 Wiki mutations, contrast, accessibility evidence, participation continuity, archive guards, public safety, routes, type checking, and linting.",
+    "The composite evaluator scored 32/36 solely because the two excluded legacy holdout records target an earlier candidate; the other eight composite criteria passed, and this permitted pre-installation circular absence was independently evaluated rather than counted as a defect.",
+    "No public Wiki Markdown file discloses the protected collaborator through a do-not-name or do-not-identify instruction. A broader tracked-text scan found a proper name only in the deliberate mutation fixture.",
+    "The public hiring evaluator preserves six critical gaps, does not upgrade visible-weak signals, excludes hidden Wiki and communications context, and never represents its dispositions as employer predictions.",
+    "The portfolio remains a selective hiring surface rather than a knowledge dump, while the deeper Wiki retains corrections, wanted pages, rights review, source boundaries, and opportunity diagnostics.",
+    "Collaborator review, rights and consent, human retrieval testing, editorial approval, production observation, hiring outcomes, exact-commit approval, deployment, and indexing authorization all remain open.",
+    "No production deployment, public indexing state, collaborator review, rights clearance, human retrieval success, employer judgment, hiring validation, or employment outcome was inferred from the passing checks."
   ],
-  "recommendation": "Accept this holdout for the exact candidate. Install it only with the distinct fresh holdout bound to the same rubric and fingerprint, then rerun the composite evaluator, composite tests, and complete Node 26 check without changing the source tree. Keep exact-commit approval, deployment, indexing, collaborator review, rights, retrieval-study, and hiring-validation gates open.",
+  "recommendation": "Accept this independent holdout for the exact candidate. Install it only with the distinct fresh holdout bound to the same rubric and fingerprint, then rerun the composite evaluator without changing the source tree. Keep exact-commit approval, deployment, indexing, collaborator review, rights, human retrieval, and hiring-outcome gates open.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f7714-1668-76c2-b4a1-a8a8abe8a727",
-    "agentNickname": "Hooke",
-    "model": "inherited-parent-default",
+    "processSessionId": "019f78a4-6022-76a2-9a84-714d0d011bfa",
+    "agentNickname": "Newton",
+    "model": "gpt-5.6-sol",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "You are independent holdout B: a public-value, accessibility, safety, and production-readiness reviewer. Work read-only in /private/tmp/jamieburk-art-knowledge-wiki-E. Do not edit any file. You did not optimize this candidate and must not rely on another judge's conclusions.\n\nEvaluate the exact candidate against all nine blocking criteria in .agents/evals/feature-evals-composite.json. Read the high-signal evidence bundle and inspect additional source-tree dependencies as needed, especially public routes and case studies, proof and citation projection, Knowledge Wiki pilot records and query tasks, collective credit, privacy and rights boundaries, human blind-spot controls, accessibility, indexing and runtime configuration, professor lenses, evaluator, generated-currentness controls, and mutation tests. Recompute both the rubric digest and candidate fingerprint. The expected rubric is c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340; the expected exact source-tree candidate is 38c01b8648a124eaabed3c7cc290c1b2f00c0045eb18c243db83940bc0459a80 across 477 files.\n\nJudge whether the site remains a selective, job-useful projection rather than a knowledge dump; whether Jamie's agency is visible without taking collective credit; whether artistic, civic, technical, and social continuity remains legible; whether the Knowledge Wiki has usable entry points, links, typed relations, corrections, wanted pages, and rights queues; and whether human approval and external-validity gaps remain honestly open. Verify the repaired NYC Artist Coalition Facebook report link and reviewed lock. Verify generated Wiki outputs are current for the final authored source commit and remain current after their generated-only commit. Verify that material public, accessibility, indexing, validation, runtime, release, base-suite, decision-register, and human-control changes alter either exact-candidate identity or reviewed semantic locks. Confirm binary files are hashed byte-exactly and process receipts are bounded as auditable rather than cryptographically authenticated. Do not award partial credit: each criterion is either 4/pass or 0/fail. A blocker fails the candidate. notObserved must be empty for acceptance.\n\nThis is a pre-installation holdout: the evaluator is expected to report COMP-009 absent because this result record and the other fresh holdout do not yet exist. Do not count the absence of your own future result as a defect. Independently score COMP-009 by deciding whether exact-candidate identity, the frozen rubric, provenance contract, deterministic checks, generated-currentness, and explicitly open human authority gates form a sound stopping rule. Do not claim production, deployment, indexing, collaborator review, rights clearance, human retrieval success, or hiring validation occurred.\n\nSet judgeId to composite-holdout-public-value-b-2026-07-18-wiki-E-release, runVersion to 2, grader to independent_llm_judge, and independentFromOptimizer to true. Return only schema-valid JSON with runVersion, judgeId, grader, independentFromOptimizer, rubricSha256, candidateFingerprint, verdict, scores, notObserved, findings, and recommendation. If any blocking criterion fails or is not observed, reject the candidate.",
-    "promptSha256": "7a9b3dc13f0dd90c54d5b09df96ce593aae702a57527b4467247e655caa36f76",
-    "judgmentSha256": "1b94b79c283d8808b3ef5445975a924d6611abfd0d1b74aa38798028b8b39b7c",
+    "prompt": "You are independent holdout B for the final repaired candidate: public value, hiring usability, accessibility, safety, and release readiness. Work read-only in /private/tmp/jamieburk-art-knowledge-wiki-E. Do not edit any file. You did not optimize this candidate and must not rely on prior judges.\n\nEvaluate all nine blocking criteria in .agents/evals/feature-evals-composite.json. Recompute the frozen rubric digest and exact candidate fingerprint. Expected rubric: c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Expected source-tree candidate: 67caf508c412349192c43eec24be5ed0a1c3ada443a5feaecfdba753544b9e0b across 532 files.\n\nRead the public portfolio, Knowledge Wiki, six official-source opportunity contracts, reader disclaimers, public-only hiring evaluator, separate gap resolver, generated health and graph views, collective-credit and privacy rules, professor lenses, accessibility report/verifier/tests, indexing/runtime configuration, and composite mutation suite. Judge whether the site is a selective job-useful projection; Jamie's agency is visible without taking collective credit; interdisciplinary continuity is legible; role-fit outputs remain diagnostic rather than employer predictions; visible-weak evidence remains weak; six critical gaps remain visible; stale roles and exclusionary screens fail closed; and every human/external gate remains open.\n\nIndependently verify the repaired release issues: no public file identifies the protected collaborator through a do-not-name instruction; privacy-directive tests fail closed on a proper-name mutation; the accessibility contract freezes the exact canonical route and viewport sets and rejects coordinated substitutions; the 108-file public fingerprint is current; 56 route/viewport rows pass axe WCAG A/AA, overflow, headings, landmarks, alt text, requests, response status, and explicit lazy-image scroll/decode; global contrast passes; and Wiki/generated employment outputs are current for authored source commit 8d2a3547a2cfce2c1dfc69fd64deae98aa79a1f5. Run or inspect all deterministic and adversarial checks needed.\n\nScore every criterion only 4/pass or 0/fail. Any blocker rejects. notObserved must be empty for acceptance. This is pre-installation: COMP-009 may be absent solely because your future record and the second fresh holdout are not installed. Do not count that circular absence. Independently judge all non-circular stopping conditions. Native receipts are auditable, not cryptographic. Do not claim production deployment, indexing, collaborator review, rights clearance, human retrieval success, employer judgment, hiring validation, or employment outcomes.\n\nSet judgeId to composite-holdout-public-value-b-2026-07-19-wiki-E-final2, runVersion 2, grader independent_llm_judge, independentFromOptimizer true. Return only schema-valid JSON with runVersion, judgeId, grader, independentFromOptimizer, rubricSha256, candidateFingerprint, verdict, scores, notObserved, findings, and recommendation.",
+    "promptSha256": "c80bdcfbc358e33f9ef451dcbe9fada0dabb55e028fcf0d7d841987e411ac0ed",
+    "judgmentSha256": "422bd7a2981e5912bc05150e446fadfdc90c0c5b47e496b415bf86a645c0960f",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-18T21:13:52.602Z",
-    "completedAt": "2026-07-18T21:35:41.434Z"
+    "startedAt": "2026-07-19T04:31:06.262Z",
+    "completedAt": "2026-07-19T04:44:07.485Z"
   }
 }
