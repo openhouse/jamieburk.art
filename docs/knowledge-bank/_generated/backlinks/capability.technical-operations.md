@@ -1,11 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Technical Operations
 
-**Source commit:** `ecb6d79bfddd647f8718068143ff6df24c58f594`
-**Generation time:** 2026-07-19T03:17:54-04:00
-**Source fingerprint:** `ddd9caecd3c914c8e73000423301dfd9124c9d65f2d0a9128731dfdc8e78163e`
+**Source commit:** `4637d2b21073f78ade7008d3e09d78b1391199d8`
+**Generation time:** 2026-07-19T12:23:37-04:00
+**Source fingerprint:** `772573f68666cf0c6c64159987ed00c1bf043877e390af1d627202c2e01c8315`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `related_to` (frontmatter)
+- [Participatory public systems](../../capabilities/participatory-public-systems.md) - `related_to` (frontmatter)
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `prose_link` (markdown)
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `related_to` (frontmatter)
 - [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `prose_link` (markdown)
@@ -15,5 +16,9 @@
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
+- [Jamie Burkart](../../people/jamie-burkart.md) - `related_to` (frontmatter)
+- [Role-fit and referral map](../../projections/role-fit-and-referral-map.md) - `related_to` (frontmatter)
 - [Technical Operations portfolio projection](../../projections/work-technical-operations.md) - `related_to` (frontmatter)
 - [CallNYC](../../projects/callnyc.md) - `supports` (frontmatter)
+- [Harry J. Epstein Company digital operations](../../projects/harry-j-epstein.md) - `supports` (frontmatter)
+- [KC Spaces Fund](../../projects/kc-spaces-fund-facebook-posts.md) - `supports` (frontmatter)

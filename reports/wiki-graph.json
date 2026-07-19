@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-19T03:17:54-04:00",
-  "sourceCommit": "ecb6d79bfddd647f8718068143ff6df24c58f594",
-  "sourceFingerprint": "ddd9caecd3c914c8e73000423301dfd9124c9d65f2d0a9128731dfdc8e78163e",
+  "generatedAt": "2026-07-19T12:23:37-04:00",
+  "sourceCommit": "4637d2b21073f78ade7008d3e09d78b1391199d8",
+  "sourceFingerprint": "772573f68666cf0c6c64159987ed00c1bf043877e390af1d627202c2e01c8315",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -30,6 +30,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "capability.participatory-public-systems",
+      "path": "docs/knowledge-bank/capabilities/participatory-public-systems.md",
+      "title": "Participatory public systems",
+      "kind": "capability",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Capability connecting facilitation, information design, technical implementation, public events, and institutional follow-through.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
     },
     {
       "id": "capability.technical-operations",
@@ -166,6 +179,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "index.knowledge-wiki.living-archive",
+      "path": "docs/knowledge-bank/indexes/living-archive.md",
+      "title": "Living archive and missing-page map",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Task-oriented map of the newly created orientation, campaign, project, capability, ethical-method, source-return, role-fit, and visual-evidence pages.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "index.knowledge-wiki.pilot",
       "path": "docs/knowledge-bank/indexes/pilot.md",
       "title": "Knowledge Wiki pilot map",
@@ -179,6 +205,45 @@
       "reviewBy": "2026-10-18"
     },
     {
+      "id": "index.knowledge-wiki.visual-evidence",
+      "path": "docs/knowledge-bank/indexes/visual-evidence.md",
+      "title": "Visual evidence index",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe map of visual evidence that is approved, metadata-only, held for review, missing, or still awaiting research across Jamie's projects.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "method.collective-credit-protected-absence",
+      "path": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
+      "title": "Collective credit and protected absence",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Method for preserving individual contribution, collective agency, source existence, and non-public boundaries without confusing access with authorship or permission.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "method.situated-source-rereading",
+      "path": "docs/knowledge-bank/methods/situated-source-rereading.md",
+      "title": "Situated source rereading",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Recurring protocol for returning to original material with a dated present-tense question while preserving prior readings, uncertainty, and publication boundaries.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "method.source-backed-team-memory",
       "path": "docs/knowledge-bank/methods/source-backed-team-memory.md",
       "title": "Source-Backed Team Memory",
@@ -190,6 +255,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "method.structure-grows-from-material",
+      "path": "docs/knowledge-bank/methods/structure-grows-from-the-material.md",
+      "title": "Structure grows from the material",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Jamie's practice of discovering the operative form already present in people, places, records, and technical systems, then making that form usable and transferable.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
     },
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
@@ -270,6 +348,50 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "organization.nyc-artist-coalition",
+      "path": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
+      "title": "NYC Artist Coalition organization map",
+      "kind": "organization",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Collective orientation to the coalition's listening, public-event, campaign, documentation, and institutional-translation practice, with Jamie's role kept bounded.",
+      "aliases": [
+        "New York City Artist Coalition",
+        "NYCArtC"
+      ],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "person.jamie-burkart",
+      "path": "docs/knowledge-bank/people/jamie-burkart.md",
+      "title": "Jamie Burkart",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Orientation map connecting Jamie's artistic, technical, civic, operational, and archival practice without collapsing collective work into an individual biography.",
+      "aliases": [
+        "James Burkart"
+      ],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "portfolio.role-fit-referral-map",
+      "path": "docs/knowledge-bank/projections/role-fit-and-referral-map.md",
+      "title": "Role-fit and referral map",
+      "kind": "projection",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Held editorial map connecting governed evidence to roles where Jamie's technical, operational, civic, and archival practice may be useful.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-08-19"
+    },
+    {
       "id": "portfolio.work.callnyc",
       "path": "docs/knowledge-bank/projections/work-callnyc.md",
       "title": "CallNYC portfolio projection",
@@ -312,6 +434,88 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "project.fair-rent-nyc",
+      "path": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "title": "Fair Rent NYC",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-09-19"
+    },
+    {
+      "id": "project.harry-j-epstein",
+      "path": "docs/knowledge-bank/projects/harry-j-epstein.md",
+      "title": "Harry J. Epstein Company digital operations",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Long-running e-commerce, analytics, publishing, and operational modernization for a multigenerational Kansas City industrial supply business.",
+      "aliases": [
+        "HJE"
+      ],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.kc-spaces-fund",
+      "path": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
+      "title": "KC Spaces Fund",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Collaborator-led 2020 mutual-aid campaign for Kansas City cultural spaces, supported by Jamie through bounded digital infrastructure and cross-channel identity work.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.kc-town-hall",
+      "path": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "title": "KC Town Hall",
+      "kind": "project",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Adaptive-reuse, neighborhood fieldwork, resident-service, and public-benefit documentation project with municipal funding history kept distinct from disbursement and completion.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.let-nyc-dance",
+      "path": "docs/knowledge-bank/projects/let-nyc-dance.md",
+      "title": "Let NYC Dance",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "NYC Artist Coalition campaign surface supporting public understanding and repeal advocacy concerning New York City's Cabaret Law.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.nter-chng",
+      "path": "docs/knowledge-bank/projects/nter-chng.md",
+      "title": "NTER CHNG",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Interactive texting installation co-created by Drew Bolton, Jamie Burkart, and Garrett Fuselier and later included in America: Now and Here's Kansas City presentation.",
+      "aliases": [
+        "nterchng"
+      ],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "project.nyc-artist-coalition",
       "path": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "title": "NYC Artist Coalition",
@@ -320,6 +524,116 @@
       "visibility": "public-safe",
       "sensitivity": "moderate",
       "summary": "A collectively credited civic participation and campaign system connecting cultural-space listening, public action, technical implementation, and government-facing advocacy.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.office-of-nightlife-town-halls",
+      "path": "docs/knowledge-bank/projects/office-of-nightlife-town-halls.md",
+      "title": "Office of Nightlife town halls",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public forums and coalition production work connecting nightlife workers and small cultural spaces with elected officials, agency leaders, and the emerging Office of Nightlife.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.save-nyc-spaces",
+      "path": "docs/knowledge-bank/projects/save-nyc-spaces.md",
+      "title": "Save NYC Spaces",
+      "kind": "project",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "NYC Artist Coalition campaign surface concerning the survival, affordability, and public value of small cultural spaces.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.sunday-dinner-196",
+      "path": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "title": "Sunday Dinner and 196 Artists Residency",
+      "kind": "project",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Recurring hosting, onboarding, facilitation, documentation, and continuity practice connecting gatherings, artist support, community software, and civic participation.",
+      "aliases": [
+        "Sunday Dinner",
+        "196 Artists Residency"
+      ],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.talks-not-raids",
+      "path": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "title": "Talks Not Raids",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Coalition campaign for transparency and engagement alternatives concerning M.A.R.C.H. inspections, with advocacy, Council enactment, and agency implementation kept distinct.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.waterways-participatory-art",
+      "path": "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+      "title": "Waterways and participatory art",
+      "kind": "project",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Participatory art practice using waterways, communal living, field encounters, and public programs to connect people with place and one another.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.wowlist",
+      "path": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "title": "WOWList",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Community-calendar platform co-built by Jamie Burkart and Richard Caceres around followable keyword communities, event distribution, and organizer adoption.",
+      "aliases": [
+        "WOW List",
+        "wowlist.org"
+      ],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research-inquiry.ucsc-installation-title",
+      "path": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md",
+      "title": "Resolve the 2006 New York installation title",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Open inquiry preserving a title discrepancy between a recovered UCSC evaluation and a later supplied transcription.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.foundational-source-return.2026-07-19",
+      "path": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "title": "Foundational Wiki page source return, July 19, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Dated return to foundational original and near-original sources before creating the missing person, organization, method, timeline, project, capability, and index pages.",
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
@@ -349,6 +663,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.hje.research-brief.2026-07",
+      "path": "docs/knowledge-bank/sources/hje-research-brief-2026-07.md",
+      "title": "Harry J. Epstein Company archival research brief, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Metadata-only record of a working source map that separates public business history from Jamie's firsthand account of implementation responsibilities.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.jamie.writers-voice-synthesis.2026-07",
+      "path": "docs/knowledge-bank/sources/writers-voice-synthesis-2026-07.md",
+      "title": "Jamie Burkart writer's voice synthesis, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Metadata-only record of a private working synthesis describing Jamie's recurring relationship among care, structure, memory, evidence, and action.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
     },
     {
       "id": "source.jobs.aclu.product-discovery.8482872002",
@@ -429,6 +769,58 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "source.kansas-city-star.raft.2007-11-15",
+      "path": "docs/knowledge-bank/sources/kansas-city-star-raft-2007-11-15.md",
+      "title": "The Kansas City Star raft report, November 15, 2007",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Contemporary newspaper report on Jamie Burkart, Libby Hendon, and Laura Mattingly traveling from Kansas City into Louisiana on a reclaimed-material bicycle-powered raft.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19"
+    },
+    {
+      "id": "source.nter-chng.archived-homepage.2011",
+      "path": "docs/knowledge-bank/sources/nter-chng-archived-homepage-2011.md",
+      "title": "Archived NTER CHNG project homepage",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Archived project homepage crediting Drew Bolton, Jamie Burkart, and Garrett Fuselier and describing NTER CHNG as an interactive texting installation.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19"
+    },
+    {
+      "id": "source.nycac.nightlife-forum-transcript.2026",
+      "path": "docs/knowledge-bank/sources/nycac-nightlife-forum-transcript-2026.md",
+      "title": "NYC nightlife forum corrected working transcript, 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe metadata record of a corrected working transcript documenting a 2026 public forum, Jamie's public comment, institutional responses, and unresolved speaker attribution.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-09-19"
+    },
+    {
+      "id": "source.nycac.running-minutes.2026",
+      "path": "docs/knowledge-bank/sources/nycac-running-minutes-2026.md",
+      "title": "Commercial Rent Stabilization collaboration running minutes, 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only record of protected collaboration minutes documenting decisions, open questions, action ownership, policy provenance, and follow-through in 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-09-19"
+    },
+    {
       "id": "source.nycac.shared-folder-census.2026",
       "path": "docs/knowledge-bank/sources/nycac-protected-shared-folder-census-2026.md",
       "title": "Protected NYC Artist Coalition shared-folder census",
@@ -468,6 +860,32 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.resume.jamie-burkart.2026-06-11",
+      "path": "docs/knowledge-bank/sources/jamie-resume-2026-06-11.md",
+      "title": "Jamie Burkart resume, June 11, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public professional resume used as a present-tense statement of role, capabilities, chronology, and selected impact claims.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.ucsc.narrative-evaluations.2004-2006",
+      "path": "docs/knowledge-bank/sources/ucsc-narrative-evaluations-2004-2006.md",
+      "title": "UCSC narrative evaluations, 2004-2006",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only record of Jamie's privately supplied educational evaluations concerning digital media, social software, media archaeology, performance, and installation practice.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "source.vault.communication-history.metadata",
       "path": "docs/knowledge-bank/sources/protected-communication-vault-metadata.md",
       "title": "Protected communication history - public-safe metadata boundary",
@@ -479,6 +897,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "timeline.jamie-practice.2004-present",
+      "path": "docs/knowledge-bank/timelines/practice-2004-present.md",
+      "title": "Jamie Burkart practice timeline, 2004-present",
+      "kind": "timeline",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded chronology tracing continuity among Jamie's artistic experiments, participatory systems, civic technology, operations work, and source-backed memory practice.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
     }
   ],
   "edges": [
@@ -512,6 +943,38 @@
       "to": "project.callnyc",
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "capability.participatory-public-systems",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "capability.participatory-public-systems",
+      "type": "related_to",
+      "to": "method.structure-grows-from-material",
+      "source": "frontmatter",
+      "href": "../methods/structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "capability.participatory-public-systems",
+      "type": "related_to",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "capability.participatory-public-systems",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall.md",
       "context": null
     },
     {
@@ -753,6 +1216,182 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "visual-evidence.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "../methods/collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "method.situated-source-rereading",
+      "source": "frontmatter",
+      "href": "../methods/situated-source-rereading.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "method.structure-grows-from-material",
+      "source": "frontmatter",
+      "href": "../methods/structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "portfolio.role-fit-referral-map",
+      "source": "frontmatter",
+      "href": "../projections/role-fit-and-referral-map.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund-facebook-posts.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.let-nyc-dance",
+      "source": "frontmatter",
+      "href": "../projects/let-nyc-dance.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.nter-chng",
+      "source": "frontmatter",
+      "href": "../projects/nter-chng.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.office-of-nightlife-town-halls",
+      "source": "frontmatter",
+      "href": "../projects/office-of-nightlife-town-halls.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.save-nyc-spaces",
+      "source": "frontmatter",
+      "href": "../projects/save-nyc-spaces.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.talks-not-raids",
+      "source": "frontmatter",
+      "href": "../projects/talks-not-raids.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.waterways-participatory-art",
+      "source": "frontmatter",
+      "href": "../projects/waterways-and-participatory-art.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-social-population.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "research.foundational-source-return.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/foundational-source-return-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki.pilot",
       "type": "related_to",
       "to": "capability.technical-operations",
@@ -801,12 +1440,44 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.visual-evidence",
+      "type": "has_asset",
+      "to": "asset.photo.digital-district.001",
+      "source": "frontmatter",
+      "href": "../assets/digital-district-photo.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence",
+      "type": "related_to",
+      "to": "research.foundational-source-return.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/foundational-source-return-2026-07-19.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki",
       "type": "related_to",
       "to": "index.knowledge-wiki.employment-context",
       "source": "frontmatter",
       "href": "indexes/employment-context.md",
       "context": "Present-tense opportunity research and public-only hiring evaluation."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.living-archive",
+      "source": "frontmatter",
+      "href": "indexes/living-archive.md",
+      "context": "Orientation, missing-page, project, and situated source-return map."
     },
     {
       "from": "index.knowledge-wiki",
@@ -823,6 +1494,46 @@
       "source": "frontmatter",
       "href": "projects/nyc-artist-coalition-2017.md",
       "context": "Governed civic-systems record strengthened by complete shared-folder accounting."
+    },
+    {
+      "from": "method.collective-credit-protected-absence",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "method.collective-credit-protected-absence",
+      "type": "related_to",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "method.collective-credit-protected-absence",
+      "type": "related_to",
+      "to": "source.vault.communication-history.metadata",
+      "source": "frontmatter",
+      "href": "../sources/protected-communication-vault-metadata.md",
+      "context": null
+    },
+    {
+      "from": "method.situated-source-rereading",
+      "type": "informed_by",
+      "to": "research.foundational-source-return.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/foundational-source-return-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "method.situated-source-rereading",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "source-backed-team-memory.md",
+      "context": null
     },
     {
       "from": "method.source-backed-team-memory",
@@ -846,6 +1557,38 @@
       "to": "project.callnyc",
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "method.structure-grows-from-material",
+      "type": "informed_by",
+      "to": "research.foundational-source-return.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/foundational-source-return-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "method.structure-grows-from-material",
+      "type": "related_to",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "method.structure-grows-from-material",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "method.structure-grows-from-material",
+      "type": "uses_source",
+      "to": "source.jamie.writers-voice-synthesis.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/writers-voice-synthesis-2026-07.md",
       "context": null
     },
     {
@@ -1077,6 +1820,166 @@
       "context": null
     },
     {
+      "from": "organization.nyc-artist-coalition",
+      "type": "informed_by",
+      "to": "research.nycac.shared-folder.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/nycac-shared-folder-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "project.let-nyc-dance",
+      "source": "frontmatter",
+      "href": "../projects/let-nyc-dance.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "project.office-of-nightlife-town-halls",
+      "source": "frontmatter",
+      "href": "../projects/office-of-nightlife-town-halls.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "project.save-nyc-spaces",
+      "source": "frontmatter",
+      "href": "../projects/save-nyc-spaces.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "project.talks-not-raids",
+      "source": "frontmatter",
+      "href": "../projects/talks-not-raids.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "uses_method",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "../methods/collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "uses_source",
+      "to": "source.nycac.running-minutes.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycac-running-minutes-2026.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "collaborated_with",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "informed_by",
+      "to": "research.foundational-source-return.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/foundational-source-return-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "related_to",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "related_to",
+      "to": "portfolio.role-fit-referral-map",
+      "source": "frontmatter",
+      "href": "../projections/role-fit-and-referral-map.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "uses_method",
+      "to": "method.situated-source-rereading",
+      "source": "frontmatter",
+      "href": "../methods/situated-source-rereading.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "uses_method",
+      "to": "method.structure-grows-from-material",
+      "source": "frontmatter",
+      "href": "../methods/structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.role-fit-referral-map",
+      "type": "related_to",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.role-fit-referral-map",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.role-fit-referral-map",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
       "from": "portfolio.work.callnyc",
       "type": "related_to",
       "to": "claim.callnyc.independent-follow-on",
@@ -1173,6 +2076,158 @@
       "context": null
     },
     {
+      "from": "project.fair-rent-nyc",
+      "type": "part_of",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "related_to",
+      "to": "project.save-nyc-spaces",
+      "source": "frontmatter",
+      "href": "save-nyc-spaces.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "uses_source",
+      "to": "source.nycac.running-minutes.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycac-running-minutes-2026.md",
+      "context": null
+    },
+    {
+      "from": "project.harry-j-epstein",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "project.harry-j-epstein",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "project.harry-j-epstein",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "project.harry-j-epstein",
+      "type": "uses_source",
+      "to": "source.hje.research-brief.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/hje-research-brief-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-spaces-fund",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-spaces-fund",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-spaces-fund",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "supports",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "project.let-nyc-dance",
+      "type": "part_of",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "project.let-nyc-dance",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "project.let-nyc-dance",
+      "type": "related_to",
+      "to": "project.office-of-nightlife-town-halls",
+      "source": "frontmatter",
+      "href": "office-of-nightlife-town-halls.md",
+      "context": null
+    },
+    {
+      "from": "project.nter-chng",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "project.nter-chng",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "project.nter-chng",
+      "type": "uses_source",
+      "to": "source.nter-chng.archived-homepage.2011",
+      "source": "frontmatter",
+      "href": "../sources/nter-chng-archived-homepage-2011.md",
+      "context": null
+    },
+    {
       "from": "project.nyc-artist-coalition",
       "type": "informed_by",
       "to": "research.nycac.shared-folder.2026-07-19",
@@ -1211,6 +2266,262 @@
       "source": "frontmatter",
       "href": "../sources/nycac-protected-shared-folder-census-2026.md",
       "context": "Protected source custody with public-safe aggregate coverage only."
+    },
+    {
+      "from": "project.office-of-nightlife-town-halls",
+      "type": "part_of",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "project.office-of-nightlife-town-halls",
+      "type": "related_to",
+      "to": "project.let-nyc-dance",
+      "source": "frontmatter",
+      "href": "let-nyc-dance.md",
+      "context": null
+    },
+    {
+      "from": "project.office-of-nightlife-town-halls",
+      "type": "related_to",
+      "to": "project.talks-not-raids",
+      "source": "frontmatter",
+      "href": "talks-not-raids.md",
+      "context": null
+    },
+    {
+      "from": "project.office-of-nightlife-town-halls",
+      "type": "uses_source",
+      "to": "source.nycac.nightlife-forum-transcript.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycac-nightlife-forum-transcript-2026.md",
+      "context": null
+    },
+    {
+      "from": "project.save-nyc-spaces",
+      "type": "part_of",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "project.save-nyc-spaces",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "project.save-nyc-spaces",
+      "type": "related_to",
+      "to": "project.office-of-nightlife-town-halls",
+      "source": "frontmatter",
+      "href": "office-of-nightlife-town-halls.md",
+      "context": null
+    },
+    {
+      "from": "project.sunday-dinner-196",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "project.sunday-dinner-196",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "project.sunday-dinner-196",
+      "type": "supports",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "project.talks-not-raids",
+      "type": "part_of",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "project.talks-not-raids",
+      "type": "related_to",
+      "to": "project.let-nyc-dance",
+      "source": "frontmatter",
+      "href": "let-nyc-dance.md",
+      "context": null
+    },
+    {
+      "from": "project.talks-not-raids",
+      "type": "related_to",
+      "to": "project.office-of-nightlife-town-halls",
+      "source": "frontmatter",
+      "href": "office-of-nightlife-town-halls.md",
+      "context": null
+    },
+    {
+      "from": "project.waterways-participatory-art",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "project.waterways-participatory-art",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "project.waterways-participatory-art",
+      "type": "uses_source",
+      "to": "source.kansas-city-star.raft.2007-11-15",
+      "source": "frontmatter",
+      "href": "../sources/kansas-city-star-raft-2007-11-15.md",
+      "context": null
+    },
+    {
+      "from": "project.wowlist",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "project.wowlist",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "project.wowlist",
+      "type": "supports",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.ucsc-installation-title",
+      "type": "uses_source",
+      "to": "source.ucsc.narrative-evaluations.2004-2006",
+      "source": "frontmatter",
+      "href": "../sources/ucsc-narrative-evaluations-2004-2006.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "documents",
+      "to": "method.situated-source-rereading",
+      "source": "frontmatter",
+      "href": "../methods/situated-source-rereading.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "related_to",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "uses_source",
+      "to": "source.hje.research-brief.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/hje-research-brief-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "uses_source",
+      "to": "source.jamie.writers-voice-synthesis.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/writers-voice-synthesis-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "uses_source",
+      "to": "source.kansas-city-star.raft.2007-11-15",
+      "source": "frontmatter",
+      "href": "../sources/kansas-city-star-raft-2007-11-15.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "uses_source",
+      "to": "source.nter-chng.archived-homepage.2011",
+      "source": "frontmatter",
+      "href": "../sources/nter-chng-archived-homepage-2011.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "uses_source",
+      "to": "source.nycac.nightlife-forum-transcript.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycac-nightlife-forum-transcript-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "uses_source",
+      "to": "source.nycac.running-minutes.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycac-running-minutes-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "uses_source",
+      "to": "source.resume.jamie-burkart.2026-06-11",
+      "source": "frontmatter",
+      "href": "../sources/jamie-resume-2026-06-11.md",
+      "context": null
+    },
+    {
+      "from": "research.foundational-source-return.2026-07-19",
+      "type": "uses_source",
+      "to": "source.ucsc.narrative-evaluations.2004-2006",
+      "source": "frontmatter",
+      "href": "../sources/ucsc-narrative-evaluations-2004-2006.md",
+      "context": null
     },
     {
       "from": "research.nycac.shared-folder.2026-07-19",
@@ -1258,6 +2569,22 @@
       "to": "event.nycc.constituent-services-hackathon.2016",
       "source": "frontmatter",
       "href": "../events/nycc-constituent-services-hackathon-2016.md",
+      "context": null
+    },
+    {
+      "from": "source.hje.research-brief.2026-07",
+      "type": "documents",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "source.jamie.writers-voice-synthesis.2026-07",
+      "type": "documents",
+      "to": "method.structure-grows-from-material",
+      "source": "frontmatter",
+      "href": "../methods/structure-grows-from-the-material.md",
       "context": null
     },
     {
@@ -1309,6 +2636,38 @@
       "context": null
     },
     {
+      "from": "source.kansas-city-star.raft.2007-11-15",
+      "type": "documents",
+      "to": "project.waterways-participatory-art",
+      "source": "frontmatter",
+      "href": "../projects/waterways-and-participatory-art.md",
+      "context": null
+    },
+    {
+      "from": "source.nter-chng.archived-homepage.2011",
+      "type": "documents",
+      "to": "project.nter-chng",
+      "source": "frontmatter",
+      "href": "../projects/nter-chng.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.nightlife-forum-transcript.2026",
+      "type": "documents",
+      "to": "project.office-of-nightlife-town-halls",
+      "source": "frontmatter",
+      "href": "../projects/office-of-nightlife-town-halls.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.running-minutes.2026",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
       "from": "source.nycac.shared-folder-census.2026",
       "type": "documents",
       "to": "project.nyc-artist-coalition",
@@ -1354,6 +2713,54 @@
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "source": "frontmatter",
       "href": "../evaluations/employment-context-coverage-2026-07-18.md",
+      "context": null
+    },
+    {
+      "from": "timeline.jamie-practice.2004-present",
+      "type": "informed_by",
+      "to": "research.foundational-source-return.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/foundational-source-return-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "timeline.jamie-practice.2004-present",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "timeline.jamie-practice.2004-present",
+      "type": "related_to",
+      "to": "research-inquiry.ucsc-installation-title",
+      "source": "frontmatter",
+      "href": "../research-inquiries/ucsc-installation-title.md",
+      "context": null
+    },
+    {
+      "from": "timeline.jamie-practice.2004-present",
+      "type": "uses_source",
+      "to": "source.kansas-city-star.raft.2007-11-15",
+      "source": "frontmatter",
+      "href": "../sources/kansas-city-star-raft-2007-11-15.md",
+      "context": null
+    },
+    {
+      "from": "timeline.jamie-practice.2004-present",
+      "type": "uses_source",
+      "to": "source.resume.jamie-burkart.2026-06-11",
+      "source": "frontmatter",
+      "href": "../sources/jamie-resume-2026-06-11.md",
+      "context": null
+    },
+    {
+      "from": "timeline.jamie-practice.2004-present",
+      "type": "uses_source",
+      "to": "source.ucsc.narrative-evaluations.2004-2006",
+      "source": "frontmatter",
+      "href": "../sources/ucsc-narrative-evaluations-2004-2006.md",
       "context": null
     }
   ],
@@ -1557,6 +2964,231 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "to": "person.jamie-burkart",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/structure-grows-from-the-material.md",
+      "to": "method.structure-grows-from-material",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/timelines/practice-2004-present.md",
+      "to": "timeline.jamie-practice.2004-present",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/capabilities/participatory-public-systems.md",
+      "to": "capability.participatory-public-systems",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
+      "to": "organization.nyc-artist-coalition",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/let-nyc-dance.md",
+      "to": "project.let-nyc-dance",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/office-of-nightlife-town-halls.md",
+      "to": "project.office-of-nightlife-town-halls",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "to": "project.talks-not-raids",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "to": "project.fair-rent-nyc",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/save-nyc-spaces.md",
+      "to": "project.save-nyc-spaces",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
+      "to": "project.harry-j-epstein",
+      "fragment": null,
+      "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "to": "project.wowlist",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": "project.sunday-dinner-196",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "to": "project.kc-town-hall",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/nter-chng.md",
+      "to": "project.nter-chng",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
+      "to": "project.kc-spaces-fund",
+      "fragment": null,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+      "to": "project.waterways-participatory-art",
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projects/callnyc.md",
+      "to": "project.callnyc",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
+      "to": "method.collective-credit-protected-absence",
+      "fragment": null,
+      "line": 37,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/projections/role-fit-and-referral-map.md",
+      "to": "portfolio.role-fit-referral-map",
+      "fragment": null,
+      "line": 38,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/situated-source-rereading.md",
+      "to": "method.situated-source-rereading",
+      "fragment": null,
+      "line": 43,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "to": "research.foundational-source-return.2026-07-19",
+      "fragment": null,
+      "line": 44,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md",
+      "to": "research-inquiry.ucsc-installation-title",
+      "fragment": null,
+      "line": 45,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
+      "to": null,
+      "fragment": null,
+      "line": 46,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/pilot.md",
       "from": "index.knowledge-wiki.pilot",
       "toPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
@@ -1719,6 +3351,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/visual-evidence.md",
+      "from": "index.knowledge-wiki.visual-evidence",
+      "toPath": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "to": "asset.photo.digital-district.001",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "from": null,
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
@@ -1800,6 +3441,186 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
+      "from": "organization.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/projects/let-nyc-dance.md",
+      "to": "project.let-nyc-dance",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
+      "from": "organization.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/projects/office-of-nightlife-town-halls.md",
+      "to": "project.office-of-nightlife-town-halls",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
+      "from": "organization.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "to": "project.talks-not-raids",
+      "fragment": null,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
+      "from": "organization.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "to": "project.fair-rent-nyc",
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
+      "from": "organization.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/projects/save-nyc-spaces.md",
+      "to": "project.save-nyc-spaces",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projections/role-fit-and-referral-map.md",
+      "to": "portfolio.role-fit-referral-map",
+      "fragment": null,
+      "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
+      "to": "project.harry-j-epstein",
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "to": "project.wowlist",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/callnyc.md",
+      "to": "project.callnyc",
+      "fragment": null,
+      "line": 34,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "to": "method.source-backed-team-memory",
+      "fragment": null,
+      "line": 35,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
+      "to": "organization.nyc-artist-coalition",
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "to": "project.kc-town-hall",
+      "fragment": null,
+      "line": 40,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
+      "to": "project.talks-not-raids",
+      "fragment": null,
+      "line": 41,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "to": "project.fair-rent-nyc",
+      "fragment": null,
+      "line": 42,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+      "to": "project.waterways-participatory-art",
+      "fragment": null,
+      "line": 46,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/nter-chng.md",
+      "to": "project.nter-chng",
+      "fragment": null,
+      "line": 47,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": "project.sunday-dinner-196",
+      "fragment": null,
+      "line": 48,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/projects/office-of-nightlife-town-halls.md",
+      "to": "project.office-of-nightlife-town-halls",
+      "fragment": null,
+      "line": 49,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/timelines/practice-2004-present.md",
+      "to": "timeline.jamie-practice.2004-present",
+      "fragment": null,
+      "line": 61,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
+      "to": "method.collective-credit-protected-absence",
+      "fragment": null,
+      "line": 74,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "from": null,
       "toPath": "docs/knowledge-bank/launch-blockers.md",
@@ -1864,29 +3685,29 @@
     },
     {
       "fromPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
-      "from": null,
+      "from": "project.kc-spaces-fund",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 147,
+      "line": 148,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
-      "from": null,
+      "from": "project.kc-town-hall",
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 65,
+      "line": 66,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
-      "from": null,
+      "from": "project.kc-town-hall",
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 91,
+      "line": 92,
       "kind": "link"
     },
     {
@@ -2019,7 +3840,7 @@
       "fromPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "from": null,
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
-      "to": null,
+      "to": "project.wowlist",
       "fragment": null,
       "line": 215,
       "kind": "link"
@@ -2062,11 +3883,11 @@
     },
     {
       "fromPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
-      "from": null,
+      "from": "project.wowlist",
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 36,
+      "line": 37,
       "kind": "link"
     },
     {
@@ -2075,7 +3896,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 105,
+      "line": 108,
       "kind": "link"
     },
     {
@@ -2084,7 +3905,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 106,
+      "line": 109,
       "kind": "link"
     },
     {
@@ -2093,7 +3914,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 109,
+      "line": 112,
       "kind": "link"
     },
     {
@@ -2102,7 +3923,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 113,
+      "line": 116,
       "kind": "link"
     },
     {
@@ -2111,7 +3932,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 120,
+      "line": 123,
       "kind": "link"
     },
     {
@@ -2120,7 +3941,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 125,
+      "line": 128,
       "kind": "link"
     },
     {
@@ -2129,25 +3950,25 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 131,
+      "line": 134,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
-      "to": null,
+      "to": "project.talks-not-raids",
       "fragment": null,
-      "line": 136,
+      "line": 139,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
-      "to": null,
+      "to": "project.kc-spaces-fund",
       "fragment": null,
-      "line": 142,
+      "line": 145,
       "kind": "link"
     },
     {
@@ -2156,7 +3977,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 144,
+      "line": 147,
       "kind": "link"
     },
     {
@@ -2165,7 +3986,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 150,
+      "line": 153,
       "kind": "link"
     },
     {
@@ -2174,16 +3995,16 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 152,
+      "line": 155,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
-      "to": null,
+      "to": "project.kc-town-hall",
       "fragment": null,
-      "line": 160,
+      "line": 163,
       "kind": "link"
     },
     {
@@ -2192,7 +4013,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 166,
+      "line": 169,
       "kind": "link"
     },
     {
@@ -2201,7 +4022,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 168,
+      "line": 171,
       "kind": "link"
     },
     {
@@ -2210,7 +4031,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 174,
+      "line": 177,
       "kind": "link"
     },
     {
@@ -2219,7 +4040,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 180,
+      "line": 183,
       "kind": "link"
     },
     {
@@ -2228,7 +4049,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 186,
+      "line": 189,
       "kind": "link"
     },
     {
@@ -2237,7 +4058,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 192,
+      "line": 195,
       "kind": "link"
     },
     {
@@ -2246,7 +4067,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 198,
+      "line": 201,
       "kind": "link"
     },
     {
@@ -2255,7 +4076,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 204,
+      "line": 207,
       "kind": "link"
     },
     {
@@ -2264,7 +4085,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 206,
+      "line": 209,
       "kind": "link"
     },
     {
@@ -2273,7 +4094,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 212,
+      "line": 215,
       "kind": "link"
     },
     {
@@ -2282,7 +4103,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 217,
+      "line": 220,
       "kind": "link"
     },
     {
@@ -2291,7 +4112,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 219,
+      "line": 222,
       "kind": "link"
     },
     {
@@ -2300,7 +4121,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 226,
+      "line": 229,
       "kind": "link"
     },
     {
@@ -2309,7 +4130,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 228,
+      "line": 231,
       "kind": "link"
     },
     {
@@ -2318,7 +4139,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 234,
+      "line": 237,
       "kind": "link"
     },
     {
@@ -2327,16 +4148,16 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 236,
+      "line": 239,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
-      "to": null,
+      "to": "project.wowlist",
       "fragment": null,
-      "line": 241,
+      "line": 244,
       "kind": "link"
     },
     {
@@ -2345,7 +4166,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 243,
+      "line": 246,
       "kind": "link"
     },
     {
@@ -2354,7 +4175,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 249,
+      "line": 252,
       "kind": "link"
     },
     {
@@ -2363,16 +4184,16 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 251,
+      "line": 254,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
-      "to": null,
+      "to": "project.sunday-dinner-196",
       "fragment": null,
-      "line": 258,
+      "line": 261,
       "kind": "link"
     },
     {
@@ -2381,22 +4202,13 @@
       "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
-      "line": 260,
+      "line": 263,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
-      "to": null,
-      "fragment": null,
-      "line": 266,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
       "to": null,
       "fragment": null,
       "line": 269,
@@ -2414,10 +4226,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 272,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 274,
+      "line": 277,
       "kind": "link"
     },
     {
@@ -2426,7 +4247,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 275,
+      "line": 278,
       "kind": "link"
     },
     {
@@ -2477,10 +4298,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "to": "index.knowledge-wiki.living-archive",
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 39,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -2489,7 +4319,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 42,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -2498,7 +4328,88 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 48,
+      "line": 51,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "from": "research.foundational-source-return.2026-07-19",
+      "toPath": "docs/knowledge-bank/sources/jamie-resume-2026-06-11.md",
+      "to": "source.resume.jamie-burkart.2026-06-11",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "from": "research.foundational-source-return.2026-07-19",
+      "toPath": "docs/knowledge-bank/sources/ucsc-narrative-evaluations-2004-2006.md",
+      "to": "source.ucsc.narrative-evaluations.2004-2006",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "from": "research.foundational-source-return.2026-07-19",
+      "toPath": "docs/knowledge-bank/sources/kansas-city-star-raft-2007-11-15.md",
+      "to": "source.kansas-city-star.raft.2007-11-15",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "from": "research.foundational-source-return.2026-07-19",
+      "toPath": "docs/knowledge-bank/sources/writers-voice-synthesis-2026-07.md",
+      "to": "source.jamie.writers-voice-synthesis.2026-07",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "from": "research.foundational-source-return.2026-07-19",
+      "toPath": "docs/knowledge-bank/sources/nycac-running-minutes-2026.md",
+      "to": "source.nycac.running-minutes.2026",
+      "fragment": null,
+      "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "from": "research.foundational-source-return.2026-07-19",
+      "toPath": "docs/knowledge-bank/sources/nycac-nightlife-forum-transcript-2026.md",
+      "to": "source.nycac.nightlife-forum-transcript.2026",
+      "fragment": null,
+      "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "from": "research.foundational-source-return.2026-07-19",
+      "toPath": "docs/knowledge-bank/sources/hje-research-brief-2026-07.md",
+      "to": "source.hje.research-brief.2026-07",
+      "fragment": null,
+      "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "from": "research.foundational-source-return.2026-07-19",
+      "toPath": "docs/knowledge-bank/sources/nter-chng-archived-homepage-2011.md",
+      "to": "source.nter-chng.archived-homepage.2011",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
+      "from": "research.foundational-source-return.2026-07-19",
+      "toPath": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md",
+      "to": "research-inquiry.ucsc-installation-title",
+      "fragment": null,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -2571,6 +4482,24 @@
       "to": null,
       "fragment": null,
       "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/timelines/practice-2004-present.md",
+      "from": "timeline.jamie-practice.2004-present",
+      "toPath": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md",
+      "to": "research-inquiry.ucsc-installation-title",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/timelines/practice-2004-present.md",
+      "from": "timeline.jamie-practice.2004-present",
+      "toPath": "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+      "to": "project.waterways-participatory-art",
+      "fragment": null,
+      "line": 30,
       "kind": "link"
     },
     {

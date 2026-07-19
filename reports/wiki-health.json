@@ -1,54 +1,59 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-19T03:17:54-04:00",
-  "sourceCommit": "ecb6d79bfddd647f8718068143ff6df24c58f594",
-  "sourceFingerprint": "ddd9caecd3c914c8e73000423301dfd9124c9d65f2d0a9128731dfdc8e78163e",
+  "generatedAt": "2026-07-19T12:23:37-04:00",
+  "sourceCommit": "4637d2b21073f78ade7008d3e09d78b1391199d8",
+  "sourceFingerprint": "772573f68666cf0c6c64159987ed00c1bf043877e390af1d627202c2e01c8315",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 36,
+    "records": 68,
     "byKind": {
-      "project": 2,
+      "project": 14,
+      "person": 1,
+      "organization": 1,
       "event": 1,
-      "source": 11,
+      "source": 19,
       "asset": 1,
       "claim": 2,
-      "research-run": 1,
+      "research-run": 2,
+      "research-inquiry": 1,
       "correction": 1,
-      "method": 1,
+      "method": 4,
+      "timeline": 1,
       "application": 1,
       "evaluation": 3,
-      "index": 3,
-      "capability": 1,
+      "index": 5,
+      "capability": 2,
       "opportunity": 6,
-      "projection": 2
+      "projection": 3
     },
-    "typedRelations": 99,
+    "typedRelations": 221,
     "evidenceRelations": 8,
     "relationTypeCounts": {
-      "documents": 5,
+      "collaborated_with": 1,
+      "documents": 12,
       "evidence:context": 1,
       "evidence:direct-support": 6,
       "evidence:private-support": 1,
-      "has_asset": 1,
-      "informed_by": 2,
-      "part_of": 4,
+      "has_asset": 2,
+      "informed_by": 7,
+      "part_of": 9,
       "projected_to": 6,
-      "related_to": 49,
+      "related_to": 125,
       "resulted_in": 1,
       "supersedes": 1,
-      "supports": 9,
-      "uses_method": 7,
-      "uses_source": 14
+      "supports": 14,
+      "uses_method": 10,
+      "uses_source": 33
     },
-    "proseLinks": 136,
-    "rootReachable": 35,
+    "proseLinks": 194,
+    "rootReachable": 67,
     "orphanCount": 0,
     "deadEndCount": 0,
-    "wantedPageCount": 1,
+    "wantedPageCount": 7,
     "stalePageCount": 0,
     "correctionCount": 1,
     "rightsReviewCount": 1,
@@ -95,11 +100,53 @@
   "deadEnds": [],
   "wanted": [
     {
+      "id": "source.nycac.founding-and-handoff.2016-2018",
+      "proposed_title": "NYC Artist Coalition founding and handoff source set",
+      "reason": "Needed to deepen formation chronology and collaborator-specific credit with public-safe originals.",
+      "requestedBy": "index.knowledge-wiki.living-archive",
+      "path": "docs/knowledge-bank/indexes/living-archive.md"
+    },
+    {
+      "id": "source.wowlist.product-decision-history",
+      "proposed_title": "WOWList product decision history",
+      "reason": "Needed to connect database and code evidence with collaborator-reviewed product reasoning and adoption chronology.",
+      "requestedBy": "index.knowledge-wiki.living-archive",
+      "path": "docs/knowledge-bank/indexes/living-archive.md"
+    },
+    {
+      "id": "source.hje.component-role-corroboration",
+      "proposed_title": "Harry J. Epstein component-role corroboration",
+      "reason": "Needed to distinguish Jamie's implementation responsibility from public company history at component level.",
+      "requestedBy": "index.knowledge-wiki.living-archive",
+      "path": "docs/knowledge-bank/indexes/living-archive.md"
+    },
+    {
+      "id": "source.kc-town-hall.stewardship-transition",
+      "proposed_title": "KC Town Hall stewardship transition record",
+      "reason": "Needed to document the bounded handoff without recording private personal context.",
+      "requestedBy": "index.knowledge-wiki.living-archive",
+      "path": "docs/knowledge-bank/indexes/living-archive.md"
+    },
+    {
+      "id": "index.visual-rights-and-consent-register",
+      "proposed_title": "Private visual rights and consent register",
+      "reason": "Needed to connect approved or held project images with rights holders, represented-person review, crop limits, and publication decisions outside public Git.",
+      "requestedBy": "index.knowledge-wiki.visual-evidence",
+      "path": "docs/knowledge-bank/indexes/visual-evidence.md"
+    },
+    {
       "id": "source.councilstat.fuller-release.2016",
       "proposed_title": "Fuller CouncilStat constituent-services data release",
       "reason": "Needed to tighten the release-to-prototype chronology.",
       "requestedBy": "project.callnyc",
       "path": "docs/knowledge-bank/projects/callnyc.md"
+    },
+    {
+      "id": "source.ucsc.installation-primary-record.2006",
+      "proposed_title": "Primary 2006 installation record",
+      "reason": "Needed to resolve the title from a contemporaneous invitation, checklist, photograph, gallery record, or artist file.",
+      "requestedBy": "research-inquiry.ucsc-installation-title",
+      "path": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md"
     }
   ],
   "stale": [],
