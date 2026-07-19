@@ -4,13 +4,13 @@ Date: 2026-07-19
 
 Branch: `feature/knowledge-wiki-B`
 
-Candidate commit: `ad135d1d4cb960c68484dd1ebc508a0063aab140`
+Candidate commit: `00013499f2d07530a8d36c89828c73348f028afc`
 
 Contract version: `4`
 
-Contract fingerprint: `721b3169a80742a3d91bf8465002bfdff6ecc7c96ac4a896197e3d824386d022`
+Contract fingerprint: `dd791f7528801e996e4b34e8af03d3e715f171b366e50d14e83062b421194dc9`
 
-Candidate fingerprint: `bc5414cc975e9a4d270526cf8fb077436282bb9713bb66c4f0b01a511d2476a7`
+Candidate fingerprint: `9f52c6cdb449b9a7bd8cb351d43107a38558cf7d33391849205f9e530ce3c2c9`
 
 ## Decision
 
@@ -19,6 +19,23 @@ Candidate fingerprint: `bc5414cc975e9a4d270526cf8fb077436282bb9713bb66c4f0b01a51
 The composite integration is ready for pull-request review. It is not approved
 for job-application sharing, production deployment, or production indexing.
 Those decisions remain bound to explicit human gates.
+
+## Missing Pages And Source Return
+
+The candidate adds ten task-oriented Knowledge Wiki pages covering WOW List,
+KC Town Hall, Fair Rent NYC, participatory public practice, a participation
+lineage, the movement from being there to operating structure, civic-interface
+capability, handoff and continuity, an evidence-debt queue, and a selected
+practice chronology.
+
+Each page is a projection of existing canonical claims, sources, or inquiries.
+Every page identifies what its sources establish, what they do not establish,
+what remains Known, Open, or Protected, and what research should happen next.
+A fresh return-to-source receipt records bounded rereads across nine source
+classes without publishing person-level rows, protected paths, raw artifacts,
+or private circumstances. Jamie's access authorization enables research but
+does not itself grant publication, quotation, image, rights, or consent
+permission.
 
 ## NYC Artist Coalition Archive Scope
 
@@ -64,6 +81,15 @@ version-four receipt was discarded because its fork inherited an unrelated
 untracked file; an interrupted retry was also excluded. Two fresh judges then
 reviewed clean isolated detached checkouts of the unchanged candidate.
 
+The missing-pages pass added a focused `100/100` source-return evaluation and
+an adversarial mutation suite. The first source-return holdout correctly found
+that the initial evaluator did not fail when canonical authority references
+were removed. That receipt was discarded. The evaluator was strengthened to
+require non-empty, resolvable authority on all ten pages and the research
+receipt, and page-level and receipt-level authority-removal mutations were
+added. Two fresh judges then reviewed clean isolated detached checkouts of the
+unchanged repaired candidate.
+
 ## Independent Holdouts
 
 Neither counted judge authored the patch, inspected optimization history, or
@@ -74,15 +100,15 @@ saw the other receipt.
 | CI-001 | 4 | 4 | 4 |
 | CI-002 | 4 | 4 | 4 |
 | CI-003 | 4 | 4 | 4 |
-| CI-004 | 4 | 4 | 4 |
+| CI-004 | 3 | 3 | 3 |
 | CI-005 | 4 | 4 | 4 |
 | CI-006 | 4 | 4 | 4 |
 | CI-007 | 3 | 3 | 4 |
 | CI-008 | 3 | 3 | 3 |
-| CI-009 | 4 | 4 | 4 |
+| CI-009 | 3 | 4 | 3 |
 
 The checker derives aggregate `CI-007 = 4` only after validating both exact
-receipts. The final weighted score is `0.975`, above the `0.900`
+receipts. The final weighted score is `0.938`, above the `0.900`
 implementation threshold, with every criterion at least `3`, all required
 criteria at `4`, and no critical regression or unresolved instrument defect.
 
@@ -96,6 +122,7 @@ Run on Node 26:
 - 52 knowledge-lifecycle tests;
 - 10 citation tests;
 - 20 Knowledge Wiki mutation tests and `100/100` Wiki evaluation;
+- 11 source-return tests and `100/100` missing-pages evaluation;
 - frozen 27-eval portfolio suite;
 - knowledge-bank and public-safety checks;
 - TypeScript, ESLint, and Next.js production build for 18 routes;

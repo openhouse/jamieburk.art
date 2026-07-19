@@ -1,10 +1,10 @@
 {
   "version": 1,
   "contractVersion": 4,
-  "optimizerIdentity": "Codex implementation agent for feature/knowledge-wiki-B NYCAC shared-folder run",
-  "contractFingerprint": "721b3169a80742a3d91bf8465002bfdff6ecc7c96ac4a896197e3d824386d022",
-  "candidateFingerprint": "bc5414cc975e9a4d270526cf8fb077436282bb9713bb66c4f0b01a511d2476a7",
-  "candidateSha": "ad135d1d4cb960c68484dd1ebc508a0063aab140",
+  "optimizerIdentity": "Codex implementation agent for feature/knowledge-wiki-B missing-pages source-return run",
+  "contractFingerprint": "dd791f7528801e996e4b34e8af03d3e715f171b366e50d14e83062b421194dc9",
+  "candidateFingerprint": "9f52c6cdb449b9a7bd8cb351d43107a38558cf7d33391849205f9e530ce3c2c9",
+  "candidateSha": "00013499f2d07530a8d36c89828c73348f028afc",
   "decision": "pass_for_code_review",
   "holdoutReceiptPaths": [
     "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
@@ -34,7 +34,8 @@
     "Iteration 13 discarded the split second-pair result after the stricter judge found a tautological six-role retrieval cutoff, mutable official facts and proof mappings, hidden Wiki interpretation in evaluator packets, forgeable snapshot provenance, optional compiled-output scanning, and internal claim prose in public queries. Candidate edeeef12f3b83f6eae0a104d3f526e7c2fd48cd5 adds eligible decoys, governed role fingerprints, official-fact-only evaluator context, live server SHA and pre/post-capture binding, fail-closed compiled scanning, public-projection-only query output, and 32 passing hiring mutations.",
     "Iteration 14 discarded a valid but sub-threshold holdout pair whose conservative weighted score was 0.887 because the isolated clones lacked dependencies for independent operator execution. The candidate remained unchanged; dependencies were provisioned outside Git, and two fresh blind read-only judges directly ran the composite and hiring mutation suites plus employment evals. Their conservative aggregate passes at 0.95 with no critical regressions or instrument defects.",
     "Iteration 15 discarded both first-pass NYCAC holdouts after they found incomplete candidate fingerprint coverage, an unbudgeted case-study projection, a stale mosaic binding, aggregate-only semantic checks, and a missing survivorship population. Contract version four binds every candidate-changed path, budgets and source-binds the projection, adds the archive population, and makes semantic mutations file-specific.",
-    "Iteration 16 discarded one otherwise-substantive version-four receipt because the evaluator fork inherited an unrelated untracked recommendations file, and interrupted a separate retry that did not return promptly. Two fresh read-only judges then evaluated clean isolated detached checkouts of unchanged candidate ad135d1d4cb960c68484dd1ebc508a0063aab140 and returned valid passing receipts with no critical regressions or instrument defects."
+    "Iteration 16 discarded one otherwise-substantive version-four receipt because the evaluator fork inherited an unrelated untracked recommendations file, and interrupted a separate retry that did not return promptly. Two fresh read-only judges then evaluated clean isolated detached checkouts of unchanged candidate ad135d1d4cb960c68484dd1ebc508a0063aab140 and returned valid passing receipts with no critical regressions or instrument defects.",
+    "Iteration 17 discarded an initial source-return holdout after it demonstrated that the focused eval still passed when canonical authority references were removed from every new page and the research receipt. The evaluator now requires non-empty, resolvable canonical authorities on each page and the receipt, with page-level and receipt-level mutations. Two fresh read-only judges then evaluated clean isolated detached checkouts of unchanged candidate 00013499f2d07530a8d36c89828c73348f028afc and returned valid passing receipts with no critical regressions or instrument defects."
   ],
   "candidateDefects": [],
   "allowedPostCandidatePaths": [
