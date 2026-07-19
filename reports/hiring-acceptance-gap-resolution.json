@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "589caac5da230980b1dd145c4f958696da72c944",
-  "portfolioSnapshotHash": "1948f11aefd83c2b51da0084e82c6e35467f253a2b960b5900c084568a9f0c26",
-  "publicReportHash": "6fd125b857008c5d86e7640bf2a798423004f14782d3c0858a595c079853ecf1",
+  "candidateSha": "2db01848bfe2b4f24736cc0befd39710bec3e2db",
+  "portfolioSnapshotHash": "8fd7cf34a73e0817eea022049b9c89e2f1282ad6b8f2b5ca77e69f9ad3a1cbf5",
+  "publicReportHash": "d4d5945cb77a14293275962b59a3c91c71f49c936710b9bcd5a93cf9f633b23d",
   "wikiSourceFingerprint": "51874f3fcf222b00266d02d6ca39bee2a4b2f620564e97024fa151dcfbe18db6",
   "findings": [
     {
       "findingId": "finding.requirement.oti.government-hiring-and-procurement",
       "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
       "requirementId": "requirement.oti.government-hiring-and-procurement",
-      "classification": "wiki-proven-not-projected",
+      "classification": "visible-weak-evidence-gap",
       "wikiRecords": [
         "project.callnyc"
       ],
@@ -23,7 +23,7 @@
       "findingId": "finding.requirement.aclu.facilitation-without-authority",
       "opportunityId": "opportunity.aclu.product-manager-discovery.8482872002",
       "requirementId": "requirement.aclu.facilitation-without-authority",
-      "classification": "wiki-proven-not-projected",
+      "classification": "visible-weak-evidence-gap",
       "wikiRecords": [
         "project.callnyc"
       ],
@@ -65,7 +65,7 @@
       "findingId": "finding.requirement.benepass.quantified-prioritization",
       "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
       "requirementId": "requirement.benepass.quantified-prioritization",
-      "classification": "role-context-or-evidence-unknown",
+      "classification": "visible-weak-evidence-gap",
       "wikiRecords": [],
       "currentStatus": "visible-weak",
       "gapType": "source",

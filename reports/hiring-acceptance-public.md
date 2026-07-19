@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `589caac5da230980b1dd145c4f958696da72c944`
-**Portfolio snapshot:** `1948f11aefd83c2b51da0084e82c6e35467f253a2b960b5900c084568a9f0c26`
+**Candidate commit:** `2db01848bfe2b4f24736cc0befd39710bec3e2db`
+**Portfolio snapshot:** `8fd7cf34a73e0817eea022049b9c89e2f1282ad6b8f2b5ca77e69f9ad3a1cbf5`
 **Role-context hash:** `e609dbecd2231409330b4a992e1c2fa0cb8786cf463c1e4c9bfa450e0fcd3d90`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
@@ -17,7 +17,9 @@
 - Deterministic disposition: `deterministic-ready-for-human-review`
 - Critical signals observed: 4/4
 - All signals observed: 5/6
+- Opportunity status live: yes
 - Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
 
 - `requirement.oti.delivery-coordination`: **observed** on `/work/technical-operations`
 - `requirement.oti.risk-and-dependencies`: **observed** on `/work/technical-operations`
@@ -31,7 +33,9 @@
 - Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 2/4
 - All signals observed: 2/5
+- Opportunity status live: yes
 - Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
 
 - `requirement.aclu.discovery-and-synthesis`: **observed** on `/work/technical-operations`
 - `requirement.aclu.facilitation-without-authority`: **not observed** on `/work/fair-rent-nyc`
@@ -44,7 +48,9 @@
 - Deterministic disposition: `deterministic-ready-for-human-review`
 - Critical signals observed: 3/4
 - All signals observed: 3/4
+- Opportunity status live: yes
 - Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
 
 - `requirement.benepass.launch-readiness`: **observed** on `/work/technical-operations`
 - `requirement.benepass.product-engineering-translation`: **observed** on `/work/technical-operations`
@@ -56,7 +62,9 @@
 - Deterministic disposition: `deterministic-ready-for-human-review`
 - Critical signals observed: 4/4
 - All signals observed: 5/5
+- Opportunity status live: yes
 - Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
 
 - `requirement.codepath.master-program-plan`: **observed** on `/work/technical-operations`
 - `requirement.codepath.partner-coordination`: **observed** on `/work/technical-operations`
@@ -69,7 +77,9 @@
 - Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 1/3
 - All signals observed: 2/4
+- Opportunity status live: yes
 - Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
 
 - `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
 - `requirement.asana.ai-workflow-design`: **observed** on `/lab/source-backed-team-memory`
@@ -81,7 +91,9 @@
 - Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 2/3
 - All signals observed: 3/4
+- Opportunity status live: yes
 - Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
 
 - `requirement.permitflow.physical-public-systems`: **observed** on `/work/kc-town-hall`, `/work/callnyc`
 - `requirement.permitflow.product-data`: **not observed** on `/work/harry-j-epstein`
