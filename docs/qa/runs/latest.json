@@ -1,8 +1,8 @@
 {
   "version": "2026-07-17",
-  "candidateCommit": "0e55786be5e858e0d1fbe3b77b0427e6ca876ab0",
-  "candidateContentHash": "c50c95acab0240e31b50786d7583ded7de5a7ef66a01c4dd139aded7868d64d6",
-  "evidenceSnapshotHash": "cb48684c58c05167f82f79a095e18c300060ebd6ec4f7264a915badd8a7e0181",
+  "candidateCommit": "9ff3fe86288a7efac52774814ffc04519d4ca75e",
+  "candidateContentHash": "76eb501f57f379a654f0ba7baa5359641fad40e40e154602c2af77177243fbee",
+  "evidenceSnapshotHash": "6fc363410eea4299757f7d73ecb34f10f6a922afa15455e4378f5b914999bd71",
   "rubricHashes": {
     "docs/qa/eval-control-plane-M.json": "a74fcf18450206612c4404afa5530d2b2b155f0769474afbe9c79799fa636156",
     "docs/qa/knowledge-wiki-foundation-M.json": "9c9d3be68fe454d2706959e40057c03f98affe2404b7a5941843602f762e29b2",
@@ -21,9 +21,9 @@
   "checkerVersion": "composite-evals-M-v1",
   "command": "npm run check",
   "result": "pass",
-  "timestamp": "2026-07-19T15:53:11Z",
+  "timestamp": "2026-07-19T20:08:03Z",
   "reviewerClass": "deterministic-checker",
-  "decision": "stop_threshold_met",
+  "decision": "stop_human_blocked",
   "productionDecision": "stop_human_blocked",
   "humanOutcomeState": "pending-human-review",
   "productionApproval": "not-granted",
@@ -40,6 +40,8 @@
     "hands-on accessibility and launch QA",
     "visual rights and consent review",
     "NYC Artist Coalition archive item-level rights, consent, attribution, and Jamie editorial review",
+    "NYC Artist Coalition protected manifest reconciliation before any cross-capture population total is projected",
+    "feature/wiki-A exact-diff content review and merge decision by Jamie",
     "RFP 0001 exploration after pull request 239 closes and Jamie names a champion",
     "staging deployment verification",
     "production deployment and indexing approval"
