@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Office of Nightlife town halls
 
-**Source commit:** `cd96f4b66a2e6c427de39495897ef1cbc1622f34`
-**Generation time:** 2026-07-19T13:46:15-04:00
-**Source fingerprint:** `1ba9159f377b9b0190feccb0f0b9e6edb757f276b7ca867ae211c7211950d566`
+**Source commit:** `e4c8e879dccc0e9061e74f662bc011fc08d2310f`
+**Generation time:** 2026-07-19T16:07:55-04:00
+**Source fingerprint:** `0b065d8aac05fa7d09ad44b01193df478ef9b7bf4cbbd4f26e6bb65de78fe95c`
 
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
@@ -11,6 +11,7 @@
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `prose_link` (markdown)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
+- [Small Cultural Spaces Where Culture Is Born](../../places/small-cultural-spaces.md) - `related_to` (frontmatter)
 - [Let NYC Dance](../../projects/let-nyc-dance.md) - `related_to` (frontmatter)
 - [Save NYC Spaces](../../projects/save-nyc-spaces.md) - `related_to` (frontmatter)
 - [Talks Not Raids orientation](../../projects/talks-not-raids-orientation.md) - `related_to` (frontmatter)

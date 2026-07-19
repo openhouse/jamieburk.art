@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `cd96f4b66a2e6c427de39495897ef1cbc1622f34`
-**Generation time:** 2026-07-19T13:46:15-04:00
-**Source fingerprint:** `1ba9159f377b9b0190feccb0f0b9e6edb757f276b7ca867ae211c7211950d566`
+**Source commit:** `e4c8e879dccc0e9061e74f662bc011fc08d2310f`
+**Generation time:** 2026-07-19T16:07:55-04:00
+**Source fingerprint:** `0b065d8aac05fa7d09ad44b01193df478ef9b7bf4cbbd4f26e6bb65de78fe95c`
 
 `origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.
 
-- Nodes added: 86
+- Nodes added: 107
 - Nodes removed: 0
-- Edges added: 310
+- Edges added: 435
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 1
@@ -19,6 +19,7 @@
 - `application.nycac.civic-product-operations`
 - `asset.photo.digital-district.001`
 - `capability.civic-cultural-technical-translation`
+- `capability.implementation-adoption-and-handoff`
 - `capability.implementation-operational-stewardship`
 - `capability.participatory-public-systems`
 - `capability.technical-operations`
@@ -35,19 +36,32 @@
 - `evaluation.nycac.shared-folder-production.2026-07-19`
 - `event.nycc.constituent-services-hackathon.2016`
 - `index.knowledge-wiki`
+- `index.knowledge-wiki.canonical-story-bank`
 - `index.knowledge-wiki.decision-records`
+- `index.knowledge-wiki.decisions-deliverables-operational-outcomes`
 - `index.knowledge-wiki.employment-context`
+- `index.knowledge-wiki.family-closure`
 - `index.knowledge-wiki.living-archive`
+- `index.knowledge-wiki.outcomes-adoption-afterlives`
 - `index.knowledge-wiki.people-places-work`
 - `index.knowledge-wiki.pilot`
 - `index.knowledge-wiki.pressures`
 - `index.knowledge-wiki.project-lineages`
+- `index.knowledge-wiki.relational-infrastructure-atlas`
+- `index.knowledge-wiki.research-agenda-and-held-claims`
+- `index.knowledge-wiki.role-authorship-protected-absence`
+- `index.knowledge-wiki.scenes-and-places-of-work`
 - `index.knowledge-wiki.visual-evidence`
 - `method.collective-credit-protected-absence`
+- `method.identity-systems-as-shared-infrastructure`
+- `method.jamie-at-work`
+- `method.learning-through-making`
 - `method.maintenance-handoff-stewardship`
+- `method.participation-and-relational-infrastructure`
 - `method.situated-source-rereading`
 - `method.source-backed-team-memory`
 - `method.structure-grows-from-material`
+- `method.what-is-at-stake-for-me`
 - `opportunity.aclu.product-manager-discovery.8482872002`
 - `opportunity.asana.ai-implementation.8027437`
 - `opportunity.benepass.product-operations.7f963a7a`
@@ -56,6 +70,7 @@
 - `opportunity.permitflow.product-operations.8a6e6066`
 - `organization.nyc-artist-coalition`
 - `person.jamie-burkart`
+- `place.small-cultural-spaces`
 - `portfolio.role-fit-referral-map`
 - `portfolio.work.callnyc`
 - `portfolio.work.technical-operations`
@@ -76,6 +91,7 @@
 - `research-inquiry.ucsc-installation-title`
 - `research.foundational-source-return.2026-07-19`
 - `research.interpretive-layer-source-return.2026-07-19`
+- `research.knowledge-wiki-family-closure.2026-07-19`
 - `research.nycac.shared-folder.2026-07-19`
 - `source.callnyc.source-repository`
 - `source.civichall.hackathon-announcement.2016`
@@ -91,6 +107,11 @@
 - `source.jobs.permitflow.product-operations.8a6e6066`
 - `source.kansas-city-star.raft.2007-11-15`
 - `source.kc-town-hall.cced-proposal.2019`
+- `source.knowledge-wiki.branch-a.2026-07-19`
+- `source.knowledge-wiki.branch-b.2026-07-19`
+- `source.knowledge-wiki.branch-c.2026-07-19`
+- `source.knowledge-wiki.branch-d.2026-07-19`
+- `source.knowledge-wiki.branch-e.2026-07-19`
 - `source.nter-chng.archived-homepage.2011`
 - `source.nycac.nightlife-forum-transcript.2026`
 - `source.nycac.running-minutes.2026`

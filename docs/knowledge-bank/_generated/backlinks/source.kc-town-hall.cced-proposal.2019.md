@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Town Hall CCED proposal bundle, 2019
 
-**Source commit:** `cd96f4b66a2e6c427de39495897ef1cbc1622f34`
-**Generation time:** 2026-07-19T13:46:15-04:00
-**Source fingerprint:** `1ba9159f377b9b0190feccb0f0b9e6edb757f276b7ca867ae211c7211950d566`
+**Source commit:** `e4c8e879dccc0e9061e74f662bc011fc08d2310f`
+**Generation time:** 2026-07-19T16:07:55-04:00
+**Source fingerprint:** `0b065d8aac05fa7d09ad44b01193df478ef9b7bf4cbbd4f26e6bb65de78fe95c`
 
 - [KC Town Hall listening within fieldwork](../../decisions/kc-town-hall-listening-fieldwork.md) - `uses_source` (frontmatter)
 - [Interpretive layer source return, July 19, 2026](../../research-runs/interpretive-layer-source-return-2026-07-19.md) - `prose_link` (markdown)
