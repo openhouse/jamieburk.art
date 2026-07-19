@@ -1,7 +1,7 @@
 {
   "version": "2026-07-17",
-  "candidateCommit": "9ff3fe86288a7efac52774814ffc04519d4ca75e",
-  "candidateContentHash": "76eb501f57f379a654f0ba7baa5359641fad40e40e154602c2af77177243fbee",
+  "candidateCommit": "f6b648948392b3a0bd04d07c6249272ab4b7fa2f",
+  "candidateContentHash": "b4e40db0fa76f3667496dfddf828c34cf08e78745bf190d91e35f6b87bf58838",
   "evidenceSnapshotHash": "6fc363410eea4299757f7d73ecb34f10f6a922afa15455e4378f5b914999bd71",
   "rubricHashes": {
     "docs/qa/eval-control-plane-M.json": "a74fcf18450206612c4404afa5530d2b2b155f0769474afbe9c79799fa636156",
@@ -21,7 +21,7 @@
   "checkerVersion": "composite-evals-M-v1",
   "command": "npm run check",
   "result": "pass",
-  "timestamp": "2026-07-19T20:08:03Z",
+  "timestamp": "2026-07-19T20:11:17Z",
   "reviewerClass": "deterministic-checker",
   "decision": "stop_human_blocked",
   "productionDecision": "stop_human_blocked",
