@@ -1,11 +1,11 @@
 {
   "version": "2026-07-17",
-  "candidateCommit": "8f18ceb9ae770971315f1551a227781d99fa1fd6",
-  "candidateContentHash": "20a6b193600a5abc25f53df626d897f8ee33943aa3b982c301104d573d145193",
+  "candidateCommit": "0e55786be5e858e0d1fbe3b77b0427e6ca876ab0",
+  "candidateContentHash": "c50c95acab0240e31b50786d7583ded7de5a7ef66a01c4dd139aded7868d64d6",
   "evidenceSnapshotHash": "cb48684c58c05167f82f79a095e18c300060ebd6ec4f7264a915badd8a7e0181",
   "rubricHashes": {
     "docs/qa/eval-control-plane-M.json": "a74fcf18450206612c4404afa5530d2b2b155f0769474afbe9c79799fa636156",
-    "docs/qa/knowledge-wiki-foundation-M.json": "77d2d8e06144ae5fa53277960d676360d4bf8320cac62a4667d25a68e2a7fd00",
+    "docs/qa/knowledge-wiki-foundation-M.json": "9c9d3be68fe454d2706959e40057c03f98affe2404b7a5941843602f762e29b2",
     "docs/qa/knowledge-lifecycle-M.json": "985c04abc88855520a08e478d16ef4b6747e065a660a55cc6ce65eb0cd592c24",
     "docs/qa/portfolio-readiness-M.json": "c5e3fb3c525057a775c30fd159ecb71ef18310e0e7a3ac500c5867d7ae393d7d",
     "docs/qa/blind-spot-readiness-M.json": "e80218264f03daf1447e0715b9801e1f993690889b64622ea3595ac744765b83",
@@ -15,13 +15,13 @@
   "policyHashes": {
     "AGENTS.md": "fa3e8dee518f829336fa83eaebd739bcefc069eaa07eba3d7d11198a09473093",
     "scripts/check-public-safety.mjs": "969cc6c05308a0b0409f276ddd37bef56a983fc3b73aae85854a71539163b1cf",
-    "docs/knowledge-bank/intake-and-maturation.md": "7fbde492bc54463e0b69c2ae9fa514e0d9c9b5aec3e348874c46b42b5235d175",
+    "docs/knowledge-bank/intake-and-maturation.md": "7bf0443f896caeab381ac812740f5cb3e9d2dec1daf25bebcd8a641831aa2dc9",
     "docs/knowledge-bank/citational-care.md": "1816fefd3427bde0856d14ec059504418046004e2946f07f31e19608b264d1a4"
   },
   "checkerVersion": "composite-evals-M-v1",
   "command": "npm run check",
   "result": "pass",
-  "timestamp": "2026-07-19T15:28:40Z",
+  "timestamp": "2026-07-19T15:53:11Z",
   "reviewerClass": "deterministic-checker",
   "decision": "stop_threshold_met",
   "productionDecision": "stop_human_blocked",
@@ -30,6 +30,7 @@
   "modelJudgments": [],
   "openGates": [
     "Knowledge Wiki human retrieval sessions",
+    "advisory-wishlist retrieval and application-story sessions",
     "unfamiliar-reader sessions",
     "collaborator corroboration where consequential",
     "Tier 1 opportunity reverification before application",
