@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-19T20:06:45.200Z",
+  "generatedAt": "2026-07-19T20:10:57.499Z",
   "baseRef": "origin/develop",
   "baseSha": "2ec37fe6e47d11e600ede204d19a98f7d3cff139",
-  "generatedFromHead": "c2ef88257967aa7920d68960512c09e6988d48e9",
+  "generatedFromHead": "fea33a55c1b238cef30a58ec65d66c33c96326de",
   "pullRequest": "https://github.com/openhouse/jamieburk.art/pull/244",
   "contract": {
     "exactPathCoverage": true,
@@ -346,7 +346,7 @@
         "scripts/knowledge-wiki/lib.mjs",
         "scripts/knowledge-wiki/query.mjs"
       ],
-      "addedLines": 9235,
+      "addedLines": 9237,
       "deletedLines": 1,
       "humanReview": "pending"
     },
