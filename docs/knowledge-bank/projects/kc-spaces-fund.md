@@ -1,3 +1,31 @@
+---
+wiki_record: true
+id: project.kc-spaces-fund
+title: KC Spaces Fund
+kind: project
+status: archived
+visibility: public-safe
+sensitivity: moderate
+projection_status: careful
+discoverable: true
+last_reviewed: 2026-07-19
+review_by: 2026-10-19
+review_state: requested
+owner: Jamie Burkart
+canonical_path: docs/knowledge-bank/projects/kc-spaces-fund.md
+canonical_refs:
+  - CLM-KCSPACES-FUNDRAISING-OUTCOME
+  - CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE
+  - CLM-KCSPACES-NAMING-SUPPORT
+relations:
+  - type: informed_by
+    target: index.project-afterlives-and-handoffs
+    href: ../indexes/project-afterlives-and-handoffs.md
+  - type: informed_by
+    target: index.role-and-collective-authorship
+    href: ../indexes/role-and-collective-authorship.md
+---
+
 # KC Spaces Fund
 
 **Period:** April-July 2020

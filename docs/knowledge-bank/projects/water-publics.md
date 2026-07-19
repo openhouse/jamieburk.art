@@ -36,6 +36,10 @@ water-based civic imagination. The Star article materially strengthens a future
 case study, but does not by itself require immediate projection onto the current
 hiring path.
 
+The governed [art, life, waterways, and media-archaeology timeline](../timelines/art-life-waterways-and-media-archaeology-2003-2011.md)
+connects the raft and Great Accommodations to a wider creative-technical
+practice while preserving collective labor, attribution, and outcome limits.
+
 ## Source And Rights Boundary
 
 The locally preserved Star PDF was visually reviewed page by page and extracted

@@ -24,6 +24,11 @@ activity into Jamie's sole authorship.
 The claim is mature and public-safe with collective-work qualification, but it
 remains editorially unused in the current portfolio composition.
 
+The governed [art, life, waterways, and media-archaeology timeline](../timelines/art-life-waterways-and-media-archaeology-2003-2011.md)
+and [scenes-of-work index](../indexes/scenes-of-work.md) place this project in a
+longer source-bounded practice without turning thematic continuity into sole
+authorship or causality.
+
 ## Photo Research
 
 Look for wide views of the inhabited gallery, shared making and decision

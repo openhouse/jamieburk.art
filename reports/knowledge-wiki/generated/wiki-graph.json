@@ -4,7 +4,7 @@
   "compatibilityAlias": "Knowledge Bank",
   "canonicalRoot": "docs/knowledge-bank",
   "sourceCommit": "1bb2c6e4bbf773eea29d6a72b194d081040833e7",
-  "sourceFingerprint": "sha256:fca56116fc256ba50d294ecf0a63f5e2f785f3b8c0416179e1cf106152957ede",
+  "sourceFingerprint": "sha256:5c1a13697de700bbbb0d82db7be48c95206b7a0f8b4ef9464af684e571dcaa99",
   "nodes": [
     {
       "id": "asset.photo.digital-district.001",
@@ -234,6 +234,32 @@
       "portfolioRoutes": []
     },
     {
+      "id": "index.absences-protections-and-permissions",
+      "path": "docs/knowledge-bank/indexes/absences-protections-and-permissions.md",
+      "title": "Absences, protections, and permissions",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "INQ-FB-NYCARTC-EVENT-POPULATION",
+        "INQ-KC-TOWN-HALL-PROJECT-TRANSITION",
+        "INQ-WOWLIST-CALLSCRIPT-NYCARTC-ROLE-ATTRIBUTION"
+      ],
+      "aliases": [
+        "Protected absence register"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
       "id": "index.employment-acceptance",
       "path": "docs/knowledge-bank/indexes/employment-acceptance.md",
       "title": "Employment acceptance",
@@ -317,6 +343,108 @@
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18",
       "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.people-places-and-community-testimony",
+      "path": "docs/knowledge-bank/indexes/people-places-and-community-testimony.md",
+      "title": "People, places, and community testimony",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-FB-NYCARTC-PUBLIC-OFFICIAL-PROGRAMS",
+        "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+        "CLM-NYCARTC-TESTIMONY-PARTICIPATION-DESIGN"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.project-afterlives-and-handoffs",
+      "path": "docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md",
+      "title": "Project afterlives and handoffs",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+        "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
+        "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.role-and-collective-authorship",
+      "path": "docs/knowledge-bank/indexes/role-and-collective-authorship.md",
+      "title": "Role and collective authorship map",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+        "CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE",
+        "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
+        "CLM-NYCARTC-FOUNDING-ROLE",
+        "CLM-WATER-RAFT-ORIGINATION"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.scenes-of-work",
+      "path": "docs/knowledge-bank/indexes/scenes-of-work.md",
+      "title": "Scenes of the work",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+        "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
       "roleRequirements": [],
       "discoveryTerms": [],
       "portfolioRoutes": []
@@ -1278,6 +1406,30 @@
       "portfolioRoutes": []
     },
     {
+      "id": "project.kc-spaces-fund",
+      "path": "docs/knowledge-bank/projects/kc-spaces-fund.md",
+      "title": "KC Spaces Fund",
+      "kind": "project",
+      "status": "archived",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE",
+        "CLM-KCSPACES-FUNDRAISING-OUTCOME",
+        "CLM-KCSPACES-NAMING-SUPPORT"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
       "id": "project.nyc-artist-coalition",
       "path": "docs/knowledge-bank/projects/nyc-artist-coalition.md",
       "title": "NYC Artist Coalition",
@@ -1513,6 +1665,61 @@
       "portfolioRoutes": []
     },
     {
+      "id": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "path": "docs/knowledge-bank/timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "title": "Art, life, waterways, and media archaeology, 2003-2011",
+      "kind": "timeline",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM",
+        "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION",
+        "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
+        "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+        "CLM-TIME-IS-LONG-VHS-INSTALLATION",
+        "CLM-WATER-RAFT-ORIGINATION"
+      ],
+      "aliases": [
+        "Early participatory practice lineage"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "timeline.nycartc.events-and-venues.2017-2021",
+      "path": "docs/knowledge-bank/timelines/nycartc-events-and-venues-2017-2021.md",
+      "title": "NYC Artist Coalition events and venues, 2017-2021",
+      "kind": "timeline",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-EVENT-POPULATION",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-FB-NYCARTC-PUBLIC-OFFICIAL-PROGRAMS"
+      ],
+      "aliases": [
+        "NYC Artist Coalition event chronology"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
       "id": "timeline.nycartc.nightlife-recommendations.2017-2019",
       "path": "docs/knowledge-bank/timelines/nycartc-nightlife-recommendations-2017-2019.md",
       "title": "NYC Artist Coalition nightlife recommendations, 2017-2019",
@@ -1527,6 +1734,33 @@
         "SRC-NYCARTC-ARCHIVE-NIGHTLIFE-RECOMMENDATION-SEQUENCE-2017-2019"
       ],
       "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "timeline.participation-infrastructure.2012-2026",
+      "path": "docs/knowledge-bank/timelines/participation-infrastructure-lineage-2012-2026.md",
+      "title": "Participation infrastructure lineage, 2012-2026",
+      "kind": "timeline",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLSCRIPT-POPULAR-VOTE-NYCARTC-BRIDGE",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT",
+        "CLM-WOWLIST-RELATIONAL-TAG-OVERLAP-2017"
+      ],
+      "aliases": [
+        "WOW List to Knowledge Wiki lineage"
+      ],
       "allowedSurfaces": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19",
@@ -1795,6 +2029,41 @@
       "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
     },
     {
+      "from": "index.absences-protections-and-permissions",
+      "type": "documents",
+      "to": "asset.photo.digital-district.001",
+      "source": "frontmatter",
+      "href": "../assets/digital-district-photo.md"
+    },
+    {
+      "from": "index.absences-protections-and-permissions",
+      "type": "documents",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "index.absences-protections-and-permissions",
+      "type": "documents",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.absences-protections-and-permissions",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.absences-protections-and-permissions",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
       "from": "index.employment-acceptance",
       "type": "documents",
       "to": "capability.technical-operations",
@@ -1859,6 +2128,41 @@
     {
       "from": "index.knowledge-wiki-missing-pages",
       "type": "documents",
+      "to": "index.absences-protections-and-permissions",
+      "source": "frontmatter",
+      "href": "absences-protections-and-permissions.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.people-places-and-community-testimony",
+      "source": "frontmatter",
+      "href": "people-places-and-community-testimony.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.scenes-of-work",
+      "source": "frontmatter",
+      "href": "scenes-of-work.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
       "to": "inquiry.nycartc.march-data-design-attribution",
       "source": "frontmatter",
       "href": "../inquiries/nycartc-march-data-design-attribution.md"
@@ -1887,9 +2191,70 @@
     {
       "from": "index.knowledge-wiki-missing-pages",
       "type": "documents",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "frontmatter",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
       "to": "timeline.nycartc.nightlife-recommendations.2017-2019",
       "source": "frontmatter",
       "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.absences-protections-and-permissions",
+      "source": "markdown",
+      "href": "absences-protections-and-permissions.md",
+      "context": "Absences, protections, and permissions"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.people-places-and-community-testimony",
+      "source": "markdown",
+      "href": "people-places-and-community-testimony.md",
+      "context": "People, places, and community testimony"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "markdown",
+      "href": "project-afterlives-and-handoffs.md",
+      "context": "Project afterlives and handoffs"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.role-and-collective-authorship",
+      "source": "markdown",
+      "href": "role-and-collective-authorship.md",
+      "context": "Role and collective authorship map"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.scenes-of-work",
+      "source": "markdown",
+      "href": "scenes-of-work.md",
+      "context": "Scenes of the work"
     },
     {
       "from": "index.knowledge-wiki-missing-pages",
@@ -1926,10 +2291,34 @@
     {
       "from": "index.knowledge-wiki-missing-pages",
       "type": "links_to",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "markdown",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "context": "Art, life, waterways, and media archaeology, 2003-2011"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "markdown",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md",
+      "context": "NYC Artist Coalition events and venues, 2017-2021"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
       "to": "timeline.nycartc.nightlife-recommendations.2017-2019",
       "source": "markdown",
       "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md",
       "context": "Nightlife recommendation sequence, 2017-2019"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "markdown",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md",
+      "context": "Participation infrastructure lineage, 2012-2026"
     },
     {
       "from": "index.knowledge-wiki-missing-pages",
@@ -2108,6 +2497,14 @@
     {
       "from": "index.knowledge-wiki",
       "type": "links_to",
+      "to": "index.absences-protections-and-permissions",
+      "source": "markdown",
+      "href": "indexes/absences-protections-and-permissions.md",
+      "context": "Absences, protections, and permissions"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
       "to": "index.employment-acceptance",
       "source": "markdown",
       "href": "indexes/employment-acceptance.md",
@@ -2140,6 +2537,14 @@
     {
       "from": "index.knowledge-wiki",
       "type": "links_to",
+      "to": "index.scenes-of-work",
+      "source": "markdown",
+      "href": "indexes/scenes-of-work.md",
+      "context": "Scenes of the work"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
       "to": "project.callnyc",
       "source": "markdown",
       "href": "projects/callnyc.md",
@@ -2152,6 +2557,155 @@
       "source": "markdown",
       "href": "research/nycartc-shared-folder-archival-production-2026-07.md",
       "context": "NYC Artist Coalition shared-folder production"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "markdown",
+      "href": "timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "context": "artistic practice"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "markdown",
+      "href": "timelines/participation-infrastructure-lineage-2012-2026.md",
+      "context": "participation infrastructure"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "documents",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "frontmatter",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "documents",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "uses_source",
+      "to": "source.nycartc.testimony-guide.2017",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-testimony-guide-2017.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.scenes-of-work",
+      "type": "informed_by",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.scenes-of-work",
+      "type": "informed_by",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "index.scenes-of-work",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.scenes-of-work",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
     },
     {
       "from": "inquiry.nycartc.march-data-design-attribution",
@@ -2393,6 +2947,20 @@
       "href": "../sources/politico-callnyc-2016-03-14.md"
     },
     {
+      "from": "project.kc-spaces-fund",
+      "type": "informed_by",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "../indexes/project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "project.kc-spaces-fund",
+      "type": "informed_by",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "../indexes/role-and-collective-authorship.md"
+    },
+    {
       "from": "project.nyc-artist-coalition",
       "type": "informed_by",
       "to": "inquiry.nycartc.march-data-design-attribution",
@@ -2410,9 +2978,23 @@
     {
       "from": "project.nyc-artist-coalition",
       "type": "informed_by",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
       "to": "timeline.nycartc.nightlife-recommendations.2017-2019",
       "source": "frontmatter",
       "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
     },
     {
       "from": "project.nyc-artist-coalition",
@@ -2441,10 +3023,26 @@
     {
       "from": "project.nyc-artist-coalition",
       "type": "links_to",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "markdown",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md",
+      "context": "event-and-venue chronology"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
       "to": "timeline.nycartc.nightlife-recommendations.2017-2019",
       "source": "markdown",
       "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md",
       "context": "nightlife recommendation timeline"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "markdown",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md",
+      "context": "participation-infrastructure lineage"
     },
     {
       "from": "project.nyc-artist-coalition",
@@ -2714,6 +3312,55 @@
       "context": "independent follow-on claim"
     },
     {
+      "from": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "type": "informed_by",
+      "to": "index.scenes-of-work",
+      "source": "frontmatter",
+      "href": "../indexes/scenes-of-work.md"
+    },
+    {
+      "from": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "../indexes/missing-pages.md"
+    },
+    {
+      "from": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "timeline.nycartc.events-and-venues.2017-2021",
+      "type": "informed_by",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "frontmatter",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "timeline.nycartc.events-and-venues.2017-2021",
+      "type": "informed_by",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "timeline.nycartc.events-and-venues.2017-2021",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "../indexes/missing-pages.md"
+    },
+    {
+      "from": "timeline.nycartc.events-and-venues.2017-2021",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
       "from": "timeline.nycartc.nightlife-recommendations.2017-2019",
       "type": "part_of",
       "to": "project.nyc-artist-coalition",
@@ -2733,6 +3380,42 @@
       "to": "source.nycartc.nightlife-recommendation-sequence.2017-2019",
       "source": "frontmatter",
       "href": "../sources/nycartc-nightlife-recommendation-sequence-2017-2019.md"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "informed_by",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "informed_by",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "links_to",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "markdown",
+      "href": "nycartc-events-and-venues-2017-2021.md",
+      "context": "NYC Artist Coalition event chronology"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "../indexes/missing-pages.md"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
     }
   ]
 }

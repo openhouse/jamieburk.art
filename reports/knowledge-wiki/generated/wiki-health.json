@@ -1,33 +1,33 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "sha256:fca56116fc256ba50d294ecf0a63f5e2f785f3b8c0416179e1cf106152957ede",
+  "sourceFingerprint": "sha256:5c1a13697de700bbbb0d82db7be48c95206b7a0f8b4ef9464af684e571dcaa99",
   "hardGates": {
     "status": "pass",
     "failures": []
   },
   "diagnostics": {
-    "records": 38,
+    "records": 47,
     "recordsByKind": {
       "asset": 1,
       "capability": 1,
       "claim": 6,
       "correction": 1,
       "event": 1,
-      "index": 4,
+      "index": 9,
       "method": 3,
       "opportunity": 6,
       "projection": 2,
-      "project": 2,
+      "project": 3,
       "research-inquiry": 1,
       "research-run": 1,
       "source": 8,
-      "timeline": 1
+      "timeline": 4
     },
-    "proseLinks": 65,
-    "typedRelations": 96,
+    "proseLinks": 80,
+    "typedRelations": 143,
     "genericRelationRate": 0,
-    "discoverableRecords": 37,
-    "reachableDiscoverableRecords": 37,
+    "discoverableRecords": 46,
+    "reachableDiscoverableRecords": 46,
     "maximumRootDistance": 3,
     "typeAwareOrphans": [],
     "deadEnds": [],
@@ -54,7 +54,27 @@
         "state": "requested"
       },
       {
+        "id": "index.absences-protections-and-permissions",
+        "state": "human-blocked"
+      },
+      {
         "id": "index.knowledge-wiki-missing-pages",
+        "state": "requested"
+      },
+      {
+        "id": "index.people-places-and-community-testimony",
+        "state": "requested"
+      },
+      {
+        "id": "index.project-afterlives-and-handoffs",
+        "state": "requested"
+      },
+      {
+        "id": "index.role-and-collective-authorship",
+        "state": "human-blocked"
+      },
+      {
+        "id": "index.scenes-of-work",
         "state": "requested"
       },
       {
@@ -63,6 +83,10 @@
       },
       {
         "id": "method.nycartc.public-meeting-and-testimony-participation",
+        "state": "requested"
+      },
+      {
+        "id": "project.kc-spaces-fund",
         "state": "requested"
       },
       {
@@ -94,7 +118,19 @@
         "state": "human-blocked"
       },
       {
+        "id": "timeline.art-life-waterways-media-archaeology.2003-2011",
+        "state": "requested"
+      },
+      {
+        "id": "timeline.nycartc.events-and-venues.2017-2021",
+        "state": "requested"
+      },
+      {
         "id": "timeline.nycartc.nightlife-recommendations.2017-2019",
+        "state": "requested"
+      },
+      {
+        "id": "timeline.participation-infrastructure.2012-2026",
         "state": "requested"
       }
     ],

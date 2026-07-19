@@ -242,15 +242,16 @@ const missingPageGoverned = requiredMissingPageRecords.length === requiredMissin
   requiredMissingPageIds.slice(1).every((id) => missingPageRelations.has(id)) &&
   [
     "created deferred protected or declined",
-    "event level chronology deferred",
-    "artifact level authorship map protected",
+    "second priority page family created",
+    "private artifact level authorship ledger protected",
+    "contributed oral histories deferred",
     "public visual specimen",
     "rights blocked",
     "librarian handoff",
     "full access authorization makes research possible it does not make protected material public"
   ].every((term) => missingPageIndexText.includes(term));
 gate("missing_page_governance", missingPageGoverned, missingPageGoverned
-  ? "Six prioritized wanted pages exist, remain linked from one governed index, and preserve deferred, protected, rights-blocked, and librarian-handoff states"
+  ? "The first source-reencounter pages and second eight-page family remain linked from one governed index while narrower oral-history, private-authorship, rights, and unresolved-event work stays open"
   : "The wanted-pages index, required pages, dispositions, or librarian handoff is incomplete");
 
 const sourceReencounter = wiki.records.find((record) => record.id === "method.source-re-encounter");
@@ -316,6 +317,129 @@ const marchInquiryIntegrity = marchInquiry?.kind === "research-inquiry" &&
 gate("inquiry_integrity", marchInquiryIntegrity, marchInquiryIntegrity
   ? "The visible Jamie-attributed FOIL/reporting suggestion narrows one inquiry while the canonical claim remains an unprojected inference and implementation remains unresolved"
   : "The MARCH source encounter has been promoted beyond its narrow attribution or no longer preserves inquiry and implementation boundaries");
+
+const priorityPageIds = [
+  "timeline.nycartc.events-and-venues.2017-2021",
+  "timeline.participation-infrastructure.2012-2026",
+  "index.project-afterlives-and-handoffs",
+  "index.role-and-collective-authorship",
+  "index.scenes-of-work",
+  "timeline.art-life-waterways-media-archaeology.2003-2011",
+  "index.people-places-and-community-testimony",
+  "index.absences-protections-and-permissions"
+];
+const priorityPages = priorityPageIds
+  .map((id) => wiki.records.find((record) => record.id === id))
+  .filter(Boolean);
+const priorityIndexTargets = new Set((missingPageIndex?.relations ?? []).map((relation) => relation.target));
+const priorityPageFamilyComplete = priorityPages.length === priorityPageIds.length &&
+  priorityPageIds.every((id) => priorityIndexTargets.has(id)) &&
+  priorityPages.every((record) => record.discoverable && record.lastReviewed === "2026-07-19") &&
+  missingPageIndexText.includes("second priority page family created") &&
+  missingPageIndexText.includes("private artifact level authorship ledger protected") &&
+  missingPageIndexText.includes("contributed oral histories deferred");
+gate("priority_page_family_complete", priorityPageFamilyComplete, priorityPageFamilyComplete
+  ? "All eight requested pages exist as current governed records, are linked from the wanted-pages index, and leave narrower private, oral-history, rights, and unresolved-event work visibly open"
+  : "The requested page family, index relationships, present review dates, or remaining wanted-page dispositions are incomplete");
+
+const presentSourcePageIds = [
+  "timeline.nycartc.events-and-venues.2017-2021",
+  "timeline.participation-infrastructure.2012-2026",
+  "index.scenes-of-work",
+  "timeline.art-life-waterways-media-archaeology.2003-2011"
+];
+const prioritySourceFailures = [];
+for (const id of presentSourcePageIds) {
+  const record = wiki.records.find((item) => item.id === id);
+  const methodTargets = new Set((record?.relations ?? []).filter((relation) => relation.type === "uses_method").map((relation) => relation.target));
+  const text = normalizedText(record?.body ?? "");
+  if (!record || record.canonicalRefs.length < 3) prioritySourceFailures.push(`${id}: missing canonical claim relationships`);
+  if (!methodTargets.has("method.source-re-encounter")) prioritySourceFailures.push(`${id}: missing source-reencounter method`);
+  if (!text.includes("present source encounter") || !text.includes("july 19 2026")) prioritySourceFailures.push(`${id}: missing dated present-source receipt`);
+}
+const eventChronologyText = normalizedText(wiki.records.find((record) => record.id === "timeline.nycartc.events-and-venues.2017-2021")?.body ?? "");
+const artisticLineageText = normalizedText(wiki.records.find((record) => record.id === "timeline.art-life-waterways-media-archaeology.2003-2011")?.body ?? "");
+if (!["33 recovered records", "one slot", "availability and representation check not a new population recount"].every((term) => eventChronologyText.includes(term))) {
+  prioritySourceFailures.push("event chronology: population and fresh-encounter distinction is incomplete");
+}
+if (!["good times open house feature", "the pitch s 2007 raft report", "charlotte street s great accommodations", "did not return usable text"].every((term) => artisticLineageText.includes(term))) {
+  prioritySourceFailures.push("artistic lineage: public-source return or access gap is incomplete");
+}
+gate("priority_page_source_grounding", prioritySourceFailures.length === 0, prioritySourceFailures.length
+  ? prioritySourceFailures.join("; ")
+  : "Four synthesis pages bind to canonical claims, the source-reencounter method, dated present representations, and an explicit access or recount boundary");
+
+const participationLineageText = normalizedText(wiki.records.find((record) => record.id === "timeline.participation-infrastructure.2012-2026")?.body ?? "");
+const scenesText = normalizedText(wiki.records.find((record) => record.id === "index.scenes-of-work")?.body ?? "");
+const lineageCausalRestraint = [
+  "not a claim that one project single handedly caused the next",
+  "cross project resonances",
+  "do not yet allocate the complete design publishing facilitation or founding work"
+].every((term) => participationLineageText.includes(term)) && [
+  "does not claim that each project caused the next",
+  "editorial synthesis",
+  "collaborator credit rights and consent"
+].every((term) => artisticLineageText.includes(term)) && scenesText.includes("a vivid first person memory does not become independently corroborated because it is specific");
+gate("lineage_causal_restraint", lineageCausalRestraint, lineageCausalRestraint
+  ? "Project lineage is framed as documented relationship and recurring method, not causal inevitability, sole authorship, or evidence inflation from vivid memory"
+  : "A lineage or scene page no longer preserves non-causality, evidence labels, or collaborator boundaries");
+
+const roleMap = wiki.records.find((record) => record.id === "index.role-and-collective-authorship");
+const roleMapText = normalizedText(roleMap?.body ?? "");
+const collectiveAuthorshipMapIntegrity = roleMap?.kind === "index" &&
+  roleMap?.reviewState === "human-blocked" &&
+  roleMap?.projectionStatus === "not-applicable" &&
+  roleMap?.allowedSurfaces.length === 0 &&
+  roleMap?.canonicalRefs.length >= 7 &&
+  [
+    "not the protected artifact by artifact authorship ledger",
+    "revision histories private messages contracts contact details and collaborator testimony remain outside this repository",
+    "full archive access does not settle authorship by itself",
+    "collaborator review remains a human gate"
+  ].every((term) => roleMapText.includes(term));
+gate("collective_authorship_map_integrity", collectiveAuthorshipMapIntegrity, collectiveAuthorshipMapIntegrity
+  ? "The public-safe role map distinguishes independent, originated, jointly credited, collective, supported, attributed, and unresolved states while artifact-level allocation remains human-blocked"
+  : "The role map has weakened its collective-credit vocabulary, protected provenance boundary, or human gate");
+
+const afterlives = wiki.records.find((record) => record.id === "index.project-afterlives-and-handoffs");
+const afterlivesText = normalizedText(afterlives?.body ?? "");
+const projectAfterlifeIntegrity = afterlives?.kind === "index" &&
+  afterlives?.projectionStatus === "not-applicable" &&
+  afterlives?.allowedSurfaces.length === 0 &&
+  [
+    "projects do not all end in the same way",
+    "the municipal action and organizational transition are not the same event",
+    "private family circumstances are intentionally outside this account",
+    "an archive is not proof of a current service",
+    "recipient timing and scope are supported at the level used publicly"
+  ].every((term) => afterlivesText.includes(term));
+gate("project_afterlife_integrity", projectAfterlifeIntegrity, projectAfterlifeIntegrity
+  ? "Afterlives distinguish archival survival, continued activity, social transition, administrative action, later reuse, and intentionally absent private context"
+  : "The afterlife index conflates project states, public service status, organizational handoff, administrative action, or private context");
+
+const absences = wiki.records.find((record) => record.id === "index.absences-protections-and-permissions");
+const absencesText = normalizedText(absences?.body ?? "");
+const peoplePlaces = wiki.records.find((record) => record.id === "index.people-places-and-community-testimony");
+const peoplePlacesText = normalizedText(peoplePlaces?.body ?? "");
+const protectedAbsenceIntegrity = absences?.reviewState === "human-blocked" &&
+  absences?.projectionStatus === "not-applicable" &&
+  absences?.allowedSurfaces.length === 0 &&
+  [
+    "personal context intentionally absent",
+    "family circumstances near the conclusion of kc town hall work",
+    "jamie s authorization allows agents to research it does not manufacture third party consent",
+    "do not hill climb by erasing an absence",
+    "private locator source body or relationship graph"
+  ].every((term) => absencesText.includes(term)) &&
+  [
+    "without publishing a social graph of private people",
+    "being named or scheduled does not prove attendance endorsement agreement or influence",
+    "do not belong in this public repository",
+    "consented collaborator and participant memory"
+  ].every((term) => peoplePlacesText.includes(term));
+gate("protected_absence_integrity", protectedAbsenceIntegrity, protectedAbsenceIntegrity
+  ? "The Wiki distinguishes missing, unread, protected, rights-blocked, unresolved, intentionally absent, and unselected knowledge while forbidding private social-graph publication"
+  : "Protected absence, permission separation, private-context restraint, or people-and-testimony safety has regressed");
 
 const photo = wiki.records.find((record) => record.id === "asset.photo.digital-district.001");
 const noPublicWikiRoute = !existsSync(path.join(repoRoot, "apps/www/src/app/knowledge-wiki")) && !existsSync(path.join(repoRoot, "apps/www/src/app/knowledge-bank"));

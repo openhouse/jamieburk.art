@@ -1,9 +1,9 @@
 {
   "id": "knowledge-wiki-foundation-D-certification",
-  "certifiedAt": "2026-07-18",
+  "certifiedAt": "2026-07-19",
   "profile": "foundation_ready",
-  "candidateFingerprint": "sha256:7533b88aa34368e75bffcaa298450c5e4fd32e7cfcfbea1279a2f21627f7bb7f",
-  "contractFingerprint": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
+  "candidateFingerprint": "sha256:fc7f3135f070ec1682f1776dde833a3e4e01270871730d122dd859230ee1848a",
+  "contractFingerprint": "sha256:4fd8e47766d2c7dfba7890dc552f03a552c2b3f0ec06cd0bdce1eba1cec21353",
   "consecutivePasses": 2,
   "unchangedCandidate": true,
   "independentJudgments": [

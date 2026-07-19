@@ -1,7 +1,7 @@
 {
-  "judgeId": "public-safety-composition-2026-07-19-nycartc-source-reencounter",
+  "judgeId": "codex-independent-systems-public-safety-2026-07-19-missing-pages-v3",
   "lens": "public-safety-composition",
-  "candidate": "sha256:c0c11470a5f7d43cacb32bf24d0197645302dc51f05983cd7fc2e146f169ed6f",
+  "candidate": "sha256:db863b7ccdb8ef4857a4423feb15faa60c5c28e69116f291c16d8a2d5f917457",
   "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
   "passes": true,
   "scores": {
@@ -17,97 +17,37 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The newspaper artifact and independently recovered Pitch article have stable intake and source identities. The newspaper is represented through bibliographic metadata and an opaque protected locator; the public article retains its verified live URL."
+      "observation": "The exact event chronology contains 33 rows matching the canonical dataset on date, title, host relationship, and venue or mode, while the thirty-fourth control slot remains explicitly unresolved."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The newspaper record separately identifies support for project origination, three named crew members at the reported stage, mid-voyage chronology, craft characteristics, and Jamie's attributed civic premise. Its boundaries reject Gulf completion, uninterrupted travel, sole credit, a complete labor roster, and republication rights."
-    },
-    {
-      "rubric": "source_decomposition",
-      "observation": "The contemporaneous Pitch source independently corroborates the collective crew, departure, recycled-material construction, distance, interruption, and repair context without establishing Gulf completion, a complete roster, uninterrupted travel, or sole work by Jamie."
+      "observation": "Across 20 referenced claims, 49 evidence relationships resolve to reviewed sources with explicit non-support fields; no private source is configured to render a public citation."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Origination, the three-person mid-voyage chronology, the recycled bicycle-powered artifact, Jamie's attributed civic premise, the later voyage account, and retrospective Gulf completion remain separate claims."
+      "observation": "The role vocabulary distinguishes independent implementation, origination, joint credit, collective production, bounded support, attributed memory, and unresolved authorship rather than reducing them to one credit claim."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "Each new claim resolves to a reviewed source through a specific evidence relationship and locator. Later Gulf completion remains directly supported by the separately reviewed 2009 Pitch follow-up, while the newspaper is used only as boundary evidence showing that the journey was still underway."
+      "observation": "The eight pages contain 34 canonical-reference occurrences spanning 23 current claims or inquiries with no unknown IDs, dangling relations, broken links, or fragment failures."
     },
     {
       "rubric": "status_separation",
-      "observation": "The three new claims are mature but qualified, editorially unused, citation-required, held, and assigned to no public surface. Knowledge maturity is not confused with rights clearance or editorial selection."
+      "observation": "Research access, repository inclusion, quotation, image reproduction, participant identification, collaborator attribution, editorial selection, and production publication remain separate decisions."
     },
     {
       "rubric": "project_context",
-      "observation": "The Water Publics dossier situates the raft within Jamie's longer participatory river practice while preserving collaborators, route stages, artifact implementation, later programs, source classes, and photo-research needs."
+      "observation": "Project afterlives distinguish archive survival, continued collective activity, collaborator-led continuation, attributed transition, municipal disposition, later exhibition, and later project development."
     },
     {
       "rubric": "research_honesty",
-      "observation": "Questions 74 through 76 pass. The newspaper pages, credited photographs, reporter contact information, full text, and private filesystem location are excluded. The two 2007 reports remain mid-voyage sources rather than completion evidence. Libby Hendon and Laura Mattingly retain crew credit, and room remains for unallocated labor."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "The raft remains a collective artifact. Approximate dimensions and propulsion details are not treated as engineering certification. Jamie's river premise remains attributed and distinct from measured civic impact, representation, or institutional endorsement."
+      "observation": "A decoded-leakage scan found no private machine paths, Drive coordinates, resource keys, signed URLs, or encoded equivalents; the pages also reject response totals as attendance and archive custody as authorship."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "No newspaper reproduction, page image, photograph, full article transcription, private path, or protected-source detail is projected. The current public portfolio remains unchanged, and every new projection is held with no assigned surface."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "The production record paraphrases findings, preserves rights and collective-credit boundaries, and defers the civic premise until it can be composed with collaborators, route, artifact, and later practice."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "Review of the retained lifecycle context and changed candidate surfaces found no regression in contract questions 1 through 73."
-    },
-    {
-      "rubric": "status_separation",
-      "observation": "The Knowledge Wiki README keeps record maturity, public safety, rights state, and portfolio selection separate. It treats frontmatter as governance metadata rather than a privacy control and leaves the protected source layer outside the repository."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "The Wiki foundation introduces no public route, no source reproduction, and no automatic projection. The Digital District photo remains represented only by a public-safe receipt with rights and consent human-blocked."
-    },
-    {
-      "rubric": "status_separation",
-      "observation": "The employment extension treats six current job descriptions as time-bounded opportunity context with official-source status, requirements, gaps, and acceptance conditions. It does not convert employer requirements into evidence about Jamie or promote fit hypotheses into confirmed accomplishment claims."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "Role-specific comparisons, named simulated reader lenses, private communication channels, and unresolved fit gaps remain internal. The only public edit is a concise evidence-backed description of Jamie's existing operating practice, not application targeting or evaluator narration."
-    },
-    {
-      "rubric": "capture_integrity",
-      "observation": "The exact NYC Artist Coalition manifest is stored outside git. The public repository retains only aggregate coverage, opaque locators, and bounded source synopses, with no Drive identifiers, resource key, raw folder lineage, private path, or item-level disposition ledger."
-    },
-    {
-      "rubric": "source_decomposition",
-      "observation": "All eight archive sources remain private or protected, reviewed, and non-renderable. The public-safe records identify evidentiary scope and non-support without exposing source bodies, working comments, participant information, or contact data."
-    },
-    {
-      "rubric": "claim_atomicity",
-      "observation": "Population closure, meeting operations, testimony participation, recommendation continuity, a prepared speech, campaign implementation, and the MARCH data-design lead remain separate claims with distinct support, boundaries, and anti-claims."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "Drive ownership, last-modifier metadata, task initials, and access are not treated as authorship, consent, completion, adoption, attendance, impact, or policy causality. A native-document re-encounter now directly attributes one narrow FOIL and reporting-legislation suggestion to Jamie while leaving authorship of the wider collaborative MARCH design unresolved."
-    },
-    {
-      "rubric": "status_separation",
-      "observation": "Source candidacy is not public-source status, close reading is not rights review, claim linking is not editorial selection, and a mature internal census remains editorially unused. The 1,413-item media and layered-production queue remains rights-blocked."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "No protected archive claim gains an active public projection. The technically significant MARCH data-design lead remains inferred and internal because authorship, factual inputs, implementation, validation, and safety are unresolved."
-    },
-    {
-      "rubric": "provenance_closure",
-      "observation": "The re-encounter records the native Google Docs representation and July 19, 2026 encounter date, distinguishes a visible suggestion from a full revision history, and updates the canonical source, claim boundary, inquiry, and Wiki pages without exposing document coordinates or raw collaborative text."
+      "observation": "The Digital District asset remains summary-only, protected, rights- and consent-review blocked, and unprojected; the new Wiki records introduce no app route or automatic portfolio surface."
     }
   ],
   "regressions": [],
-  "nextAction": "Keep the shared-folder corpus and 1,413-item media queue protected while Jamie and collaborators review complete revision history, authorship, consent, credit, licensing, and editorial purpose; treat the directly attributed MARCH suggestion as a narrow research finding, not a complete role or implementation claim."
+  "nextAction": "Keep private artifacts, participant data, testimony bodies, relationship graphs, family details, and uncleared media outside public projection; obtain explicit human authority before changing those states."
 }

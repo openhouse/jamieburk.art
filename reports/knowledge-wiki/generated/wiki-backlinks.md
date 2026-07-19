@@ -6,6 +6,7 @@
 
 Target: [asset.photo.digital-district.001](../../../docs/knowledge-bank/assets/digital-district-photo.md)
 
+- [Absences, protections, and permissions](../../../docs/knowledge-bank/indexes/absences-protections-and-permissions.md) — `documents` from `frontmatter`
 - [Knowledge Wiki foundation pilot](../../../docs/knowledge-bank/indexes/pilot.md) — `links_to` from `markdown`
 - [CallNYC](../../../docs/knowledge-bank/projects/callnyc.md) — `has_asset` from `frontmatter`
 
@@ -95,6 +96,14 @@ Target: [event.nycc.constituent-services-hackathon.2016](../../../docs/knowledge
 - [Civic Hall announcement of the January 2016 Council hackathon](../../../docs/knowledge-bank/sources/civic-hall-hackathon-announcement-2016.md) — `documents` from `frontmatter`
 - [New York City Council event-day CouncilStat post](../../../docs/knowledge-bank/sources/nyc-council-councilstat-hackathon-post-2016.md) — `documents` from `frontmatter`
 
+## Absences, protections, and permissions
+
+Target: [index.absences-protections-and-permissions](../../../docs/knowledge-bank/indexes/absences-protections-and-permissions.md)
+
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+
 ## Employment acceptance
 
 Target: [index.employment-acceptance](../../../docs/knowledge-bank/indexes/employment-acceptance.md)
@@ -116,9 +125,17 @@ Target: [index.knowledge-wiki](../../../docs/knowledge-bank/README.md)
 
 Target: [index.knowledge-wiki-missing-pages](../../../docs/knowledge-bank/indexes/missing-pages.md)
 
+- [Absences, protections, and permissions](../../../docs/knowledge-bank/indexes/absences-protections-and-permissions.md) — `part_of` from `frontmatter`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `documents` from `frontmatter`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+- [People, places, and community testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md) — `part_of` from `frontmatter`
+- [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `part_of` from `frontmatter`
+- [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `part_of` from `frontmatter`
+- [Scenes of the work](../../../docs/knowledge-bank/indexes/scenes-of-work.md) — `part_of` from `frontmatter`
 - [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `links_to` from `markdown`
+- [Art, life, waterways, and media archaeology, 2003-2011](../../../docs/knowledge-bank/timelines/art-life-waterways-and-media-archaeology-2003-2011.md) — `part_of` from `frontmatter`
+- [NYC Artist Coalition events and venues, 2017-2021](../../../docs/knowledge-bank/timelines/nycartc-events-and-venues-2017-2021.md) — `part_of` from `frontmatter`
+- [Participation infrastructure lineage, 2012-2026](../../../docs/knowledge-bank/timelines/participation-infrastructure-lineage-2012-2026.md) — `part_of` from `frontmatter`
 
 ## Knowledge Wiki foundation pilot
 
@@ -127,6 +144,41 @@ Target: [index.knowledge-wiki-pilot](../../../docs/knowledge-bank/indexes/pilot.
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `documents` from `frontmatter`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+
+## People, places, and community testimony
+
+Target: [index.people-places-and-community-testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md)
+
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+
+## Project afterlives and handoffs
+
+Target: [index.project-afterlives-and-handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md)
+
+- [Absences, protections, and permissions](../../../docs/knowledge-bank/indexes/absences-protections-and-permissions.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [KC Spaces Fund](../../../docs/knowledge-bank/projects/kc-spaces-fund.md) — `informed_by` from `frontmatter`
+
+## Role and collective authorship map
+
+Target: [index.role-and-collective-authorship](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md)
+
+- [Absences, protections, and permissions](../../../docs/knowledge-bank/indexes/absences-protections-and-permissions.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Scenes of the work](../../../docs/knowledge-bank/indexes/scenes-of-work.md) — `informed_by` from `frontmatter`
+- [KC Spaces Fund](../../../docs/knowledge-bank/projects/kc-spaces-fund.md) — `informed_by` from `frontmatter`
+
+## Scenes of the work
+
+Target: [index.scenes-of-work](../../../docs/knowledge-bank/indexes/scenes-of-work.md)
+
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+- [Art, life, waterways, and media archaeology, 2003-2011](../../../docs/knowledge-bank/timelines/art-life-waterways-and-media-archaeology-2003-2011.md) — `informed_by` from `frontmatter`
 
 ## MARCH data-design attribution and implementation inquiry
 
@@ -146,9 +198,11 @@ Target: [method.nycartc.public-meeting-and-testimony-participation](../../../doc
 
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [People, places, and community testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md) — `documents` from `frontmatter`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `links_to` from `markdown`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `uses_method` from `frontmatter`
 - [NYC Artist Coalition Cabaret Law testimony guide](../../../docs/knowledge-bank/sources/nycartc-testimony-guide-2017.md) — `links_to` from `markdown`
+- [NYC Artist Coalition events and venues, 2017-2021](../../../docs/knowledge-bank/timelines/nycartc-events-and-venues-2017-2021.md) — `informed_by` from `frontmatter`
 
 ## Source-Backed Team Memory
 
@@ -161,17 +215,26 @@ Target: [method.source-backed-team-memory](../../../docs/knowledge-bank/methods/
 - [Asana AI Implementation Manager, Service Management](../../../docs/knowledge-bank/opportunities/asana-ai-implementation.md) — `documents` from `frontmatter`
 - [CodePath Senior Program Manager, Claude Corps](../../../docs/knowledge-bank/opportunities/codepath-claude-corps.md) — `documents` from `frontmatter`
 - [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `uses_method` from `frontmatter`
+- [Participation infrastructure lineage, 2012-2026](../../../docs/knowledge-bank/timelines/participation-infrastructure-lineage-2012-2026.md) — `informed_by` from `frontmatter`
 
 ## Source re-encounter
 
 Target: [method.source-re-encounter](../../../docs/knowledge-bank/methods/source-re-encounter.md)
 
+- [Absences, protections, and permissions](../../../docs/knowledge-bank/indexes/absences-protections-and-permissions.md) — `uses_method` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [People, places, and community testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md) — `uses_method` from `frontmatter`
+- [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `uses_method` from `frontmatter`
+- [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `uses_method` from `frontmatter`
+- [Scenes of the work](../../../docs/knowledge-bank/indexes/scenes-of-work.md) — `uses_method` from `frontmatter`
 - [MARCH data-design attribution and implementation inquiry](../../../docs/knowledge-bank/inquiries/nycartc-march-data-design-attribution.md) — `uses_method` from `frontmatter`
 - [NYC Artist Coalition public-meeting and testimony participation](../../../docs/knowledge-bank/methods/nycartc-public-meeting-and-testimony-participation.md) — `uses_method` from `frontmatter`
 - [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `links_to` from `markdown`
+- [Art, life, waterways, and media archaeology, 2003-2011](../../../docs/knowledge-bank/timelines/art-life-waterways-and-media-archaeology-2003-2011.md) — `uses_method` from `frontmatter`
+- [NYC Artist Coalition events and venues, 2017-2021](../../../docs/knowledge-bank/timelines/nycartc-events-and-venues-2017-2021.md) — `uses_method` from `frontmatter`
 - [NYC Artist Coalition nightlife recommendations, 2017-2019](../../../docs/knowledge-bank/timelines/nycartc-nightlife-recommendations-2017-2019.md) — `uses_method` from `frontmatter`
+- [Participation infrastructure lineage, 2012-2026](../../../docs/knowledge-bank/timelines/participation-infrastructure-lineage-2012-2026.md) — `uses_method` from `frontmatter`
 
 ## ACLU Product Manager II, Discovery
 
@@ -239,11 +302,20 @@ Target: [project.callnyc](../../../docs/knowledge-bank/projects/callnyc.md)
 - [New York City Council constituent-services hackathon at Civic Hall](../../../docs/knowledge-bank/events/nyc-council-constituent-services-hackathon-2016.md) — `resulted_in` from `frontmatter`
 - [Knowledge Wiki foundation pilot](../../../docs/knowledge-bank/indexes/pilot.md) — `links_to` from `markdown`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+- [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `documents` from `frontmatter`
+- [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `documents` from `frontmatter`
 - [ACLU Product Manager II, Discovery](../../../docs/knowledge-bank/opportunities/aclu-product-manager-discovery.md) — `documents` from `frontmatter`
 - [PermitFlow Product Operations Manager](../../../docs/knowledge-bank/opportunities/permitflow-product-operations.md) — `documents` from `frontmatter`
 - [CallNYC portfolio projection](../../../docs/knowledge-bank/projections/work-callnyc.md) — `documents` from `frontmatter`
 - [CallNYC portfolio projection](../../../docs/knowledge-bank/projections/work-callnyc.md) — `links_to` from `markdown`
 - [Politico New York coverage of CallNYC](../../../docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md) — `documents` from `frontmatter`
+
+## KC Spaces Fund
+
+Target: [project.kc-spaces-fund](../../../docs/knowledge-bank/projects/kc-spaces-fund.md)
+
+- [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `documents` from `frontmatter`
+- [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `documents` from `frontmatter`
 
 ## NYC Artist Coalition
 
@@ -254,6 +326,8 @@ Target: [project.nyc-artist-coalition](../../../docs/knowledge-bank/projects/nyc
 - [MARCH open-data design lead](../../../docs/knowledge-bank/claims/nycartc-march-data-design-lead.md) — `part_of` from `frontmatter`
 - [NYC Artist Coalition nightlife recommendation continuity](../../../docs/knowledge-bank/claims/nycartc-nightlife-recommendation-continuity.md) — `part_of` from `frontmatter`
 - [NYC Artist Coalition public-meeting operating system](../../../docs/knowledge-bank/claims/nycartc-public-meeting-operating-system.md) — `part_of` from `frontmatter`
+- [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `documents` from `frontmatter`
+- [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `documents` from `frontmatter`
 - [MARCH data-design attribution and implementation inquiry](../../../docs/knowledge-bank/inquiries/nycartc-march-data-design-attribution.md) — `part_of` from `frontmatter`
 - [NYC Artist Coalition public-meeting and testimony participation](../../../docs/knowledge-bank/methods/nycartc-public-meeting-and-testimony-participation.md) — `part_of` from `frontmatter`
 - [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `part_of` from `frontmatter`
@@ -262,7 +336,9 @@ Target: [project.nyc-artist-coalition](../../../docs/knowledge-bank/projects/nyc
 - [NYC Artist Coalition public-meeting production playbook](../../../docs/knowledge-bank/sources/nycartc-public-meeting-playbook-2018.md) — `documents` from `frontmatter`
 - [NYC Artist Coalition shared-folder governed census](../../../docs/knowledge-bank/sources/nycartc-shared-folder-census-2026.md) — `documents` from `frontmatter`
 - [NYC Artist Coalition Cabaret Law testimony guide](../../../docs/knowledge-bank/sources/nycartc-testimony-guide-2017.md) — `documents` from `frontmatter`
+- [NYC Artist Coalition events and venues, 2017-2021](../../../docs/knowledge-bank/timelines/nycartc-events-and-venues-2017-2021.md) — `informed_by` from `frontmatter`
 - [NYC Artist Coalition nightlife recommendations, 2017-2019](../../../docs/knowledge-bank/timelines/nycartc-nightlife-recommendations-2017-2019.md) — `part_of` from `frontmatter`
+- [Participation infrastructure lineage, 2012-2026](../../../docs/knowledge-bank/timelines/participation-infrastructure-lineage-2012-2026.md) — `informed_by` from `frontmatter`
 
 ## NYC Artist Coalition shared-folder archival production
 
@@ -321,6 +397,7 @@ Target: [source.nycartc.testimony-guide.2017](../../../docs/knowledge-bank/sourc
 
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [People, places, and community testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md) — `uses_source` from `frontmatter`
 - [NYC Artist Coalition public-meeting and testimony participation](../../../docs/knowledge-bank/methods/nycartc-public-meeting-and-testimony-participation.md) — `uses_source` from `frontmatter`
 
 ## New York City Council event-day CouncilStat post
@@ -344,11 +421,41 @@ Target: [source.politico.callnyc.2016-03-14](../../../docs/knowledge-bank/source
 - [CallNYC portfolio projection](../../../docs/knowledge-bank/projections/work-callnyc.md) — `uses_source` from `frontmatter`
 - [CallNYC](../../../docs/knowledge-bank/projects/callnyc.md) — `uses_source` from `frontmatter`
 
+## Art, life, waterways, and media archaeology, 2003-2011
+
+Target: [timeline.art-life-waterways-media-archaeology.2003-2011](../../../docs/knowledge-bank/timelines/art-life-waterways-and-media-archaeology-2003-2011.md)
+
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+
+## NYC Artist Coalition events and venues, 2017-2021
+
+Target: [timeline.nycartc.events-and-venues.2017-2021](../../../docs/knowledge-bank/timelines/nycartc-events-and-venues-2017-2021.md)
+
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [People, places, and community testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md) — `documents` from `frontmatter`
+- [Scenes of the work](../../../docs/knowledge-bank/indexes/scenes-of-work.md) — `informed_by` from `frontmatter`
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `informed_by` from `frontmatter`
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `links_to` from `markdown`
+- [Participation infrastructure lineage, 2012-2026](../../../docs/knowledge-bank/timelines/participation-infrastructure-lineage-2012-2026.md) — `links_to` from `markdown`
+
 ## NYC Artist Coalition nightlife recommendations, 2017-2019
 
 Target: [timeline.nycartc.nightlife-recommendations.2017-2019](../../../docs/knowledge-bank/timelines/nycartc-nightlife-recommendations-2017-2019.md)
 
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `informed_by` from `frontmatter`
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `links_to` from `markdown`
+
+## Participation infrastructure lineage, 2012-2026
+
+Target: [timeline.participation-infrastructure.2012-2026](../../../docs/knowledge-bank/timelines/participation-infrastructure-lineage-2012-2026.md)
+
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `informed_by` from `frontmatter`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `links_to` from `markdown`

@@ -50,6 +50,12 @@ relations:
   - type: informed_by
     target: inquiry.nycartc.march-data-design-attribution
     href: ../inquiries/nycartc-march-data-design-attribution.md
+  - type: informed_by
+    target: timeline.nycartc.events-and-venues.2017-2021
+    href: ../timelines/nycartc-events-and-venues-2017-2021.md
+  - type: informed_by
+    target: timeline.participation-infrastructure.2012-2026
+    href: ../timelines/participation-infrastructure-lineage-2012-2026.md
 allowed_surfaces:
   - /work/fair-rent-nyc
 ---
@@ -61,9 +67,11 @@ future photo research concerning Jamie's coalition-building, civic systems,
 public web infrastructure, and cultural-space advocacy.
 
 The [participation method](../methods/nycartc-public-meeting-and-testimony-participation.md),
+[event-and-venue chronology](../timelines/nycartc-events-and-venues-2017-2021.md),
+[participation-infrastructure lineage](../timelines/participation-infrastructure-lineage-2012-2026.md),
 [nightlife recommendation timeline](../timelines/nycartc-nightlife-recommendations-2017-2019.md),
 and [MARCH attribution inquiry](../inquiries/nycartc-march-data-design-attribution.md)
-make three high-value archive paths directly inspectable while keeping source,
+make five high-value archive paths directly inspectable while keeping source,
 role, implementation, and publication boundaries intact.
 
 The first lifecycle run established founding-role attribution and 2017 Cabaret

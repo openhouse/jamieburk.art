@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "sha256:fca56116fc256ba50d294ecf0a63f5e2f785f3b8c0416179e1cf106152957ede",
+  "sourceFingerprint": "sha256:5c1a13697de700bbbb0d82db7be48c95206b7a0f8b4ef9464af684e571dcaa99",
   "byKind": {
     "asset": [
       "asset.photo.digital-district.001"
@@ -23,10 +23,15 @@
       "event.nycc.constituent-services-hackathon.2016"
     ],
     "index": [
+      "index.absences-protections-and-permissions",
       "index.employment-acceptance",
       "index.knowledge-wiki",
       "index.knowledge-wiki-missing-pages",
-      "index.knowledge-wiki-pilot"
+      "index.knowledge-wiki-pilot",
+      "index.people-places-and-community-testimony",
+      "index.project-afterlives-and-handoffs",
+      "index.role-and-collective-authorship",
+      "index.scenes-of-work"
     ],
     "research-inquiry": [
       "inquiry.nycartc.march-data-design-attribution"
@@ -50,6 +55,7 @@
     ],
     "project": [
       "project.callnyc",
+      "project.kc-spaces-fund",
       "project.nyc-artist-coalition"
     ],
     "research-run": [
@@ -66,7 +72,10 @@
       "source.politico.callnyc.2016-03-14"
     ],
     "timeline": [
-      "timeline.nycartc.nightlife-recommendations.2017-2019"
+      "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "timeline.nycartc.events-and-venues.2017-2021",
+      "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "timeline.participation-infrastructure.2012-2026"
     ]
   },
   "byStatus": {
@@ -90,9 +99,14 @@
       "claim.nycartc.public-meeting-operating-system",
       "correction.callnyc-years",
       "event.nycc.constituent-services-hackathon.2016",
+      "index.absences-protections-and-permissions",
       "index.knowledge-wiki",
       "index.knowledge-wiki-missing-pages",
       "index.knowledge-wiki-pilot",
+      "index.people-places-and-community-testimony",
+      "index.project-afterlives-and-handoffs",
+      "index.role-and-collective-authorship",
+      "index.scenes-of-work",
       "method.nycartc.public-meeting-and-testimony-participation",
       "method.source-backed-team-memory",
       "method.source-re-encounter",
@@ -109,10 +123,16 @@
       "source.nycartc.testimony-guide.2017",
       "source.nycc.councilstat-hackathon-post.2016",
       "source.politico.callnyc.2016-03-14",
-      "timeline.nycartc.nightlife-recommendations.2017-2019"
+      "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "timeline.nycartc.events-and-venues.2017-2021",
+      "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "timeline.participation-infrastructure.2012-2026"
     ],
     "superseded": [
       "claim.callnyc.project-years.legacy"
+    ],
+    "archived": [
+      "project.kc-spaces-fund"
     ]
   },
   "aliases": {
@@ -126,16 +146,20 @@
     "council event-day post": "source.nycc.councilstat-hackathon-post.2016",
     "current priority opportunities": "index.employment-acceptance",
     "digital district participant photograph": "asset.photo.digital-district.001",
+    "early participatory practice lineage": "timeline.art-life-waterways-media-archaeology.2003-2011",
     "january 2016 councilstat hackathon": "event.nycc.constituent-services-hackathon.2016",
     "knowledge bank": "index.knowledge-wiki",
+    "nyc artist coalition event chronology": "timeline.nycartc.events-and-venues.2017-2021",
     "nycartc": "project.nyc-artist-coalition",
     "oti technical operations": "opportunity.nyc-oti.technical-operations-manager.782369",
     "permitflow product operations": "opportunity.permitflow.product-operations-manager.8a6e6066",
     "politico callnyc article": "source.politico.callnyc.2016-03-14",
     "product operations and implementation": "capability.technical-operations",
+    "protected absence register": "index.absences-protections-and-permissions",
     "return to the originals": "method.source-re-encounter",
     "source backed team memory": "method.source-backed-team-memory",
     "wanted pages": "index.knowledge-wiki-missing-pages",
-    "wiki pilot": "index.knowledge-wiki-pilot"
+    "wiki pilot": "index.knowledge-wiki-pilot",
+    "wow list to knowledge wiki lineage": "timeline.participation-infrastructure.2012-2026"
   }
 }

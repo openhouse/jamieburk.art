@@ -1,6 +1,6 @@
 {
   "id": "knowledge-wiki-foundation",
-  "version": 2,
+  "version": 3,
   "profile": "foundation_ready",
   "principle": "Markdown is the record, the graph is compiled, and the portfolio is a governed projection.",
   "stopRule": {
@@ -30,6 +30,12 @@
     "source_reencounter_practice",
     "source_grounded_page_creation",
     "inquiry_integrity",
+    "priority_page_family_complete",
+    "priority_page_source_grounding",
+    "lineage_causal_restraint",
+    "collective_authorship_map_integrity",
+    "project_afterlife_integrity",
+    "protected_absence_integrity",
     "projection_restraint",
     "candidate_binding"
   ],
@@ -130,6 +136,54 @@
       "query": { "id": "inquiry.nycartc.march-data-design-attribution" },
       "expectedRecordIds": ["inquiry.nycartc.march-data-design-attribution"],
       "requiredBoundary": "does not establish complete authorship, implementation, validation, safety, adoption, or causal impact"
+    },
+    {
+      "id": "nycartc-events-and-venues",
+      "query": { "id": "timeline.nycartc.events-and-venues.2017-2021" },
+      "expectedRecordIds": ["timeline.nycartc.events-and-venues.2017-2021"],
+      "requiredBoundary": "Facebook response displays are not attendance, reach, demographic, endorsement, or policy-impact measures"
+    },
+    {
+      "id": "participation-infrastructure-lineage",
+      "query": { "id": "timeline.participation-infrastructure.2012-2026" },
+      "expectedRecordIds": ["timeline.participation-infrastructure.2012-2026"],
+      "requiredBoundary": "They do not yet allocate the complete design, publishing, facilitation, or founding work"
+    },
+    {
+      "id": "project-afterlives-and-handoffs",
+      "query": { "id": "index.project-afterlives-and-handoffs" },
+      "expectedRecordIds": ["index.project-afterlives-and-handoffs"],
+      "requiredBoundary": "The municipal action and organizational transition are not the same event"
+    },
+    {
+      "id": "role-and-collective-authorship",
+      "query": { "id": "index.role-and-collective-authorship" },
+      "expectedRecordIds": ["index.role-and-collective-authorship"],
+      "requiredBoundary": "Full archive access does not settle authorship by itself"
+    },
+    {
+      "id": "scenes-of-work",
+      "query": { "id": "index.scenes-of-work" },
+      "expectedRecordIds": ["index.scenes-of-work"],
+      "requiredBoundary": "A vivid first-person memory does not become independently corroborated because it is specific"
+    },
+    {
+      "id": "art-life-lineage",
+      "query": { "id": "timeline.art-life-waterways-media-archaeology.2003-2011" },
+      "expectedRecordIds": ["timeline.art-life-waterways-media-archaeology.2003-2011"],
+      "requiredBoundary": "It does not claim that each project caused the next or exhaust Jamie's work in the period"
+    },
+    {
+      "id": "people-places-community-testimony",
+      "query": { "id": "index.people-places-and-community-testimony" },
+      "expectedRecordIds": ["index.people-places-and-community-testimony"],
+      "requiredBoundary": "Being named or scheduled does not prove attendance, endorsement, agreement, or influence"
+    },
+    {
+      "id": "absences-protections-permissions",
+      "query": { "id": "index.absences-protections-and-permissions" },
+      "expectedRecordIds": ["index.absences-protections-and-permissions"],
+      "requiredBoundary": "Jamie's authorization allows agents to research. It does not manufacture third-party consent"
     }
   ],
   "humanTasks": [
@@ -214,6 +268,72 @@
         "source.nycartc.march-data-design-notes.2019"
       ],
       "requiredBoundary": "A narrow attributed suggestion does not establish complete design authorship or implementation."
+    },
+    {
+      "id": "find-event-and-venue-chronology",
+      "prompt": "Find the complete recovered NYC Artist Coalition event-and-venue chronology and explain its unresolved control slot.",
+      "expectedRecordIds": [
+        "timeline.nycartc.events-and-venues.2017-2021",
+        "project.nyc-artist-coalition"
+      ],
+      "requiredBoundary": "Do not invent the thirty-fourth event or convert Facebook response displays into attendance."
+    },
+    {
+      "id": "find-participation-lineage",
+      "prompt": "Trace the documented participation-infrastructure lineage from Sunday Dinner and WOW List through Call Script, NYC Artist Coalition, and source-backed memory.",
+      "expectedRecordIds": [
+        "timeline.participation-infrastructure.2012-2026",
+        "method.source-backed-team-memory"
+      ],
+      "requiredBoundary": "Project relationships and recurring methods are not a simple causal chain or a complete person-level attribution map."
+    },
+    {
+      "id": "find-project-afterlives",
+      "prompt": "Compare how CallNYC, KC Town Hall, KC Spaces Fund, NYC Artist Coalition, NTER CHNG, and Water Publics continued, transitioned, or became archival.",
+      "expectedRecordIds": [
+        "index.project-afterlives-and-handoffs",
+        "project.callnyc",
+        "project.kc-spaces-fund",
+        "project.nyc-artist-coalition"
+      ],
+      "requiredBoundary": "Administrative disposition, social handoff, archival survival, and a current service are different states."
+    },
+    {
+      "id": "find-role-and-authorship-boundaries",
+      "prompt": "Show the strongest current Jamie-role wording for several projects and explain where collective authorship remains unresolved.",
+      "expectedRecordIds": [
+        "index.role-and-collective-authorship",
+        "index.absences-protections-and-permissions"
+      ],
+      "requiredBoundary": "Do not infer authorship from archive custody, metadata, specificity, or full research access."
+    },
+    {
+      "id": "find-scenes-and-artistic-lineage",
+      "prompt": "Find concrete scenes of Jamie doing the work and connect them to the early art, life, waterways, and media-archaeology lineage.",
+      "expectedRecordIds": [
+        "index.scenes-of-work",
+        "timeline.art-life-waterways-media-archaeology.2003-2011"
+      ],
+      "requiredBoundary": "Retain each scene's evidence label, collaborator credit, participant protection, and image-rights state."
+    },
+    {
+      "id": "find-people-places-testimony",
+      "prompt": "Explain how places and testimony formats operated as participation infrastructure without exposing a private social graph.",
+      "expectedRecordIds": [
+        "index.people-places-and-community-testimony",
+        "method.nycartc.public-meeting-and-testimony-participation",
+        "timeline.nycartc.events-and-venues.2017-2021"
+      ],
+      "requiredBoundary": "Invitation, scheduling, attendance, testimony, response, and policy outcome remain distinct."
+    },
+    {
+      "id": "find-protected-absences",
+      "prompt": "Distinguish evidence that is not recovered, protected, rights-blocked, unresolved, intentionally absent, or mature but unselected.",
+      "expectedRecordIds": [
+        "index.absences-protections-and-permissions",
+        "index.knowledge-wiki-missing-pages"
+      ],
+      "requiredBoundary": "Research authorization is not third-party consent, copyright, collective authorship, or publication necessity."
     }
   ],
   "manualAuthorityGates": [

@@ -1,7 +1,7 @@
 {
-  "judgeId": "archival-editorial-2026-07-19-nycartc-source-reencounter",
+  "judgeId": "codex-independent-architecture-editorial-2026-07-19-missing-pages-v3",
   "lens": "archival-editorial",
-  "candidate": "sha256:c0c11470a5f7d43cacb32bf24d0197645302dc51f05983cd7fc2e146f169ed6f",
+  "candidate": "sha256:db863b7ccdb8ef4857a4423feb15faa60c5c28e69116f291c16d8a2d5f917457",
   "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
   "passes": true,
   "scores": {
@@ -17,97 +17,37 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The Kansas City Star artifact and independently recovered Pitch article have stable intake and source identities, explicit dispositions, project and entity relationships, and linked claim IDs. The Star artifact remains local-private behind an opaque protected locator; its pages are absent from the public repository."
+      "observation": "The eight new records have stable IDs, canonical paths, explicit review metadata, typed relations, and bounded canonical references; narrower artifact-authorship, oral-history, rights, private-bridge, and unresolved-event work remains in the wanted queue."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The Star and Pitch sources are decomposed separately. Their records distinguish support for origination, the three-person crew, July 21 departure, progress beyond 1,000 miles, craft construction, and Jamie's attributed civic premise from non-support for Gulf completion, uninterrupted travel, complete labor allocation, sole credit, engineering certification, and republication rights."
+      "observation": "The pages distinguish native documents, authenticated platform controls, public reporting, institutional program descriptions, protected packet review, participant photographs, attributed memory, and failed archive access rather than blending them into one evidence class."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Origination, the mid-voyage chronology, recycled bicycle-powered artifact, attributed civic premise, broader voyage account, and later Gulf completion remain separate claims. The records do not convert originating the idea into sole construction, the craft description into engineering certification, or an artistic premise into measured civic impact."
+      "observation": "Chronology, recurring method, project afterlife, individual role, scene, place, testimony, and protected absence remain distinct editorial objects; a vivid scene is not promoted into role, attendance, impact, or sole-authorship proof."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The mid-voyage and artifact claims resolve to contemporaneous Star reporting with independent Pitch corroboration. The civic-premise claim resolves only to Jamie's attributed statement in the Star. Later Gulf completion resolves to a separately reviewed 2009 Pitch source, while the 2007 Star functions only as boundary evidence showing that the journey was still underway."
+      "observation": "The new records resolve to current canonical claim and inquiry IDs, ordinary relative links, and source-reencounter methods without creating a competing source or claim registry."
     },
     {
       "rubric": "status_separation",
-      "observation": "The three new Water Publics claims are mature and qualified but editorially unused. Their citation-required projections remain on hold with no public surfaces. The protected Star source has public-metadata-only visibility, private preservation status, permission-needed rights status, and metadata-only display status."
+      "observation": "The system separates not recovered, located-not-read, protected, rights-blocked, collectively unresolved, attributed, intentionally absent, mature-but-unselected, and publicly projected states."
     },
     {
       "rubric": "project_context",
-      "observation": "The Water Publics dossier places the source cycle within a longer sequence of raft construction, collective travel, river encounters, and later participatory programming, with useful artifact, route, collaborator, rights, and visual-research context."
+      "observation": "The project pages now connect Open House and Water Publics to a longer artistic lineage, NYC Artist Coalition to events and participation infrastructure, and KC Spaces Fund to role and handoff records while preserving each project's own period and collaborators."
     },
     {
       "rubric": "research_honesty",
-      "observation": "Questions 74 through 76 pass. The newspaper remains bibliographic metadata only; the pages, credited photographs, reporter contact details, and private location are excluded. The two 2007 reports support a three-person mid-voyage chronology beyond 1,000 miles but not later Gulf completion. The raft remains a collective artifact, and Jamie's premise remains distinct from certification, impact, representation, or endorsement."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "The source cycle states that no stable public Kansas City Star URL was recovered rather than claiming none exists. It records the three named travelers as the crew at the reported stage while leaving room for departure participants, supporters, repair labor, and other contributions not exhaustively allocated by the sources."
+      "observation": "Both lineage pages reject simple causality; the event chronology preserves direct versus associated hosting and one unresolved control slot; the role map withholds artifact-level allocation pending collaborator review."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "No website surface changed. The records omit the PDF, page images, full article text, photographs, contact information, private filesystem location, and unrelated newspaper content. Titles and bibliographic facts are retained while article substance is paraphrased with explicit rights boundaries."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "Deterministic evaluation reproduced the exact candidate and contract, scored 100 of 100, and all 89 lifecycle regression tests passed, including protected metadata, collective credit, mid-voyage, sole-builder, impact, and private-path mutations."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "The candidate preserves the distinction between archival depth and rhetorical selection: mature evidence can remain available without being forced onto a hiring-focused public composition."
-    },
-    {
-      "rubric": "project_context",
-      "observation": "The Knowledge Wiki foundation changes only the root Wiki README within the lifecycle candidate. It preserves the citation registry as canonical for claims, sources, evidence, and corrections; identifies Markdown as contextual and relational; and adds a bounded CallNYC navigation pilot without revising the underlying lifecycle corpus."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "The renamed Knowledge Wiki remains explicitly internal, public-safe, and smaller than the private Source Vault. The README states that the portfolio is a selective projection and that supported or mature knowledge is not automatically selected or published."
-    },
-    {
-      "rubric": "capture_integrity",
-      "observation": "Six current opportunities preserve official employer URLs, access and review dates, source status, stable requirement IDs, hard screens, evidence routes, gaps, and one-year conditions. This present-tense hiring context is governed without being mistaken for archival proof."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "Title-blind discovery terms and three unrelated negative controls test whether the portfolio exposes transferable evidence rather than merely echoing target titles. Unresolved domain and artifact gaps remain visible, and simulated named-reader profiles explicitly disclaim real participation or endorsement."
-    },
-    {
-      "rubric": "capture_integrity",
-      "observation": "The authenticated NYC Artist Coalition shared-folder run accounts for all 2,192 reachable descendants in its named snapshot: 257 nested folders and 1,935 files, with one protected primary disposition per descendant, 18 empty folders separately resolved, no duplicate IDs, and no unresolved traversal errors."
-    },
-    {
-      "rubric": "source_decomposition",
-      "observation": "Eight governed archive sources distinguish the aggregate census from selected close reading of public-meeting, testimony, nightlife-recommendation, campaign, and data-design records. Every source states what it supports and what it does not establish."
-    },
-    {
-      "rubric": "status_separation",
-      "observation": "The run separates 2,192 inventoried and dispositioned descendants from 18 close-read documents, 201 source candidates, zero rights-reviewed assets, 18 claim-linked documents, and zero selected projections. The census is mature but editorially unused."
-    },
-    {
-      "rubric": "project_context",
-      "observation": "The project and Technical Operations paths translate the archive into timed delivery, participation design, requirements translation, cross-channel implementation, and handoff without retroactively assigning Jamie a formal title or every artifact."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "The report preserves the unresolved difference between the proposal's earlier 61 visible root items and the fresh snapshot's 50 root items, and it names deleted, unshared, revision-history, external, and rights scopes as excluded rather than implying universal archive coverage."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "Protected playbooks, drafts, comments, source bodies, media, and coordinates remain outside the public repository. New archive projections are held or absent; the MARCH data-design lead remains an internal inference pending attribution and implementation evidence."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "A present-day native-document re-encounter confirmed the meeting checklist, testimony participation path, delivered DCLA letter, and 2019 nightlife priorities. It narrowed the MARCH inquiry to one visible Jamie-attributed FOIL and reporting-legislation suggestion without allocating the wider collaborative passage or implying implementation."
-    },
-    {
-      "rubric": "status_separation",
-      "observation": "The wanted-pages index and source-reencounter method keep source availability, readability, knowledge maturity, publication safety, editorial selection, and librarian handoff distinct. Created pages coexist with deferred chronology, protected authorship mapping, and rights-blocked visual work."
+      "observation": "All eight new records have no allowed public surfaces, no public Wiki route was introduced, and protected media, private testimony, participant data, relationship graphs, and family details remain outside public projection."
     }
   ],
   "regressions": [],
-  "nextAction": "Continue selected NYC Artist Coalition close reading through the governed wanted-page queue; review the full MARCH revision sequence and seek collaborator-aware attribution; develop event chronology and item-level media rights while retaining protected-source, collective-credit, and no-projection boundaries."
+  "nextAction": "Stop the automated lifecycle loop for this candidate; retain collaborator consent, media rights, unfamiliar-reader navigation, Jamie editorial approval, and production observation as human gates."
 }

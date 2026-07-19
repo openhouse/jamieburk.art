@@ -55,6 +55,13 @@ and the [authoring guide](knowledge-wiki-authoring.md).
   contexts, requirement coverage, source freshness, and evaluation boundaries.
 - [Missing pages](indexes/missing-pages.md): the ranked editorial and research
   queue, including what was created, deferred, protected, or declined.
+- [Scenes of the work](indexes/scenes-of-work.md),
+  [participation infrastructure](timelines/participation-infrastructure-lineage-2012-2026.md),
+  and [artistic practice](timelines/art-life-waterways-and-media-archaeology-2003-2011.md):
+  the new source-grounded synthesis layer.
+- [Absences, protections, and permissions](indexes/absences-protections-and-permissions.md):
+  why inaccessible, private, rights-blocked, unresolved, and unselected
+  knowledge must remain distinguishable.
 - [NYC Artist Coalition shared-folder production](research/nycartc-shared-folder-archival-production-2026-07.md):
   complete archive accounting, protected dispositions, and selected close
   reading without publishing the source collection.
