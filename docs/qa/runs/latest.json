@@ -1,11 +1,11 @@
 {
   "version": "2026-07-17",
-  "candidateCommit": "b0e0f125ac9a807a940d8ed9f1f0efad2513a174",
-  "candidateContentHash": "0f1b8436ed829849f7f682604a0904732bca63e388d2665344be99e5232ed6ad",
+  "candidateCommit": "8f18ceb9ae770971315f1551a227781d99fa1fd6",
+  "candidateContentHash": "20a6b193600a5abc25f53df626d897f8ee33943aa3b982c301104d573d145193",
   "evidenceSnapshotHash": "cb48684c58c05167f82f79a095e18c300060ebd6ec4f7264a915badd8a7e0181",
   "rubricHashes": {
     "docs/qa/eval-control-plane-M.json": "a74fcf18450206612c4404afa5530d2b2b155f0769474afbe9c79799fa636156",
-    "docs/qa/knowledge-wiki-foundation-M.json": "95a058a20cf1374a831ff4a596d4d4f918872e48e187ff62bda0d4e9ca8aeb99",
+    "docs/qa/knowledge-wiki-foundation-M.json": "77d2d8e06144ae5fa53277960d676360d4bf8320cac62a4667d25a68e2a7fd00",
     "docs/qa/knowledge-lifecycle-M.json": "985c04abc88855520a08e478d16ef4b6747e065a660a55cc6ce65eb0cd592c24",
     "docs/qa/portfolio-readiness-M.json": "c5e3fb3c525057a775c30fd159ecb71ef18310e0e7a3ac500c5867d7ae393d7d",
     "docs/qa/blind-spot-readiness-M.json": "e80218264f03daf1447e0715b9801e1f993690889b64622ea3595ac744765b83",
@@ -21,7 +21,7 @@
   "checkerVersion": "composite-evals-M-v1",
   "command": "npm run check",
   "result": "pass",
-  "timestamp": "2026-07-19T15:03:39Z",
+  "timestamp": "2026-07-19T15:28:40Z",
   "reviewerClass": "deterministic-checker",
   "decision": "stop_threshold_met",
   "productionDecision": "stop_human_blocked",

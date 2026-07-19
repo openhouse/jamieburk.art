@@ -99,6 +99,19 @@ export const ALLOWED_RELATIONS = new Set([
   "related_to"
 ]);
 
+export const ALLOWED_SOURCE_RETURN_MODES = new Set([
+  "original-source-reread",
+  "source-family-reread",
+  "canonical-record-reread"
+]);
+
+export const ALLOWED_SOURCE_ACCESS_STATES = new Set([
+  "available",
+  "partial",
+  "public-only",
+  "blocked"
+]);
+
 const PRIVATE_PATH_PATTERN =
   /(?:\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|file:\/\/|[A-Za-z]:\\Users\\)/i;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
@@ -312,6 +325,164 @@ function validatePageShape(page, canonicalIds) {
       )
     );
   }
+
+  if (page.source_return !== undefined) {
+    const sourceReturn = page.source_return;
+    if (!sourceReturn || typeof sourceReturn !== "object" || Array.isArray(sourceReturn)) {
+      failures.push(
+        failure("source-return.shape", page.path, "source_return must be an object")
+      );
+    } else {
+      for (const field of ["encountered_on", "return_by"]) {
+        if (!DATE_PATTERN.test(sourceReturn[field] ?? "")) {
+          failures.push(
+            failure(
+              "source-return.date",
+              page.path,
+              `source_return.${field} must be a quoted YYYY-MM-DD date`
+            )
+          );
+        }
+      }
+      if (!ALLOWED_SOURCE_RETURN_MODES.has(sourceReturn.mode)) {
+        failures.push(
+          failure(
+            "source-return.mode",
+            page.path,
+            `Unknown source-return mode: ${sourceReturn.mode}`
+          )
+        );
+      }
+      if (!ALLOWED_SOURCE_ACCESS_STATES.has(sourceReturn.access_state)) {
+        failures.push(
+          failure(
+            "source-return.access-state",
+            page.path,
+            `Unknown source-return access state: ${sourceReturn.access_state}`
+          )
+        );
+      }
+      if (
+        sourceReturn.librarian_request !== undefined &&
+        (typeof sourceReturn.librarian_request !== "string" ||
+          !sourceReturn.librarian_request.trim())
+      ) {
+        failures.push(
+          failure(
+            "source-return.librarian-request",
+            page.path,
+            "source_return.librarian_request must be a non-empty public-safe request"
+          )
+        );
+      }
+      if (
+        sourceReturn.access_state === "blocked" &&
+        (typeof sourceReturn.librarian_request !== "string" ||
+          !sourceReturn.librarian_request.trim())
+      ) {
+        failures.push(
+          failure(
+            "source-return.blocked-without-request",
+            page.path,
+            "A blocked source return must state what the personal librarian can help uncover"
+          )
+        );
+      }
+      if (
+        !Array.isArray(sourceReturn.source_classes) ||
+        sourceReturn.source_classes.length === 0 ||
+        sourceReturn.source_classes.some(
+          (value) => typeof value !== "string" || !value.trim()
+        )
+      ) {
+        failures.push(
+          failure(
+            "source-return.source-classes",
+            page.path,
+            "source_return.source_classes must contain at least one non-empty label"
+          )
+        );
+      }
+      if (
+        typeof sourceReturn.changed_or_confirmed !== "string" ||
+        !sourceReturn.changed_or_confirmed.trim()
+      ) {
+        failures.push(
+          failure(
+            "source-return.finding",
+            page.path,
+            "source_return.changed_or_confirmed must record the present reading"
+          )
+        );
+      }
+      if (
+        !Array.isArray(sourceReturn.unresolved) ||
+        sourceReturn.unresolved.length === 0 ||
+        sourceReturn.unresolved.some(
+          (value) => typeof value !== "string" || !value.trim()
+        )
+      ) {
+        failures.push(
+          failure(
+            "source-return.unresolved",
+            page.path,
+            "source_return.unresolved must preserve at least one open question or explicit none-known statement"
+          )
+        );
+      }
+      if (
+        DATE_PATTERN.test(sourceReturn.encountered_on ?? "") &&
+        DATE_PATTERN.test(sourceReturn.return_by ?? "") &&
+        sourceReturn.return_by < sourceReturn.encountered_on
+      ) {
+        failures.push(
+          failure(
+            "source-return.order",
+            page.path,
+            "source_return.return_by cannot precede source_return.encountered_on"
+          )
+        );
+      }
+      if (
+        DATE_PATTERN.test(sourceReturn.encountered_on ?? "") &&
+        DATE_PATTERN.test(page.last_reviewed ?? "") &&
+        page.last_reviewed < sourceReturn.encountered_on
+      ) {
+        failures.push(
+          failure(
+            "source-return.review-order",
+            page.path,
+            "last_reviewed cannot precede source_return.encountered_on"
+          )
+        );
+      }
+    }
+  }
+
+  page.wanted.forEach((item, index) => {
+    if (!item || typeof item !== "object" || Array.isArray(item)) {
+      failures.push(
+        failure("wanted.shape", page.path, `Wanted page ${index + 1} must be an object`)
+      );
+      return;
+    }
+    if (!ID_PATTERN.test(item.id ?? "")) {
+      failures.push(
+        failure("wanted.id", page.path, `Wanted page ${index + 1} has an invalid ID`)
+      );
+    }
+    for (const field of ["proposed_title", "reason"]) {
+      if (typeof item[field] !== "string" || !item[field].trim()) {
+        failures.push(
+          failure(
+            "wanted.required",
+            page.path,
+            `Wanted page ${index + 1} requires ${field}`
+          )
+        );
+      }
+    }
+  });
 
   for (const ref of page.canonical_refs) {
     if (typeof ref !== "string" || !canonicalIds.has(ref)) {
@@ -571,7 +742,7 @@ export function compileWiki({
   repoRoot = REPO_ROOT,
   wikiRoot = path.join(repoRoot, "docs/knowledge-bank"),
   canonicalIds = getCanonicalIds(),
-  now = new Date("2026-07-18T00:00:00Z")
+  now = new Date()
 } = {}) {
   const files = walkMarkdown(wikiRoot);
   const caseMap = new Map();
@@ -629,6 +800,33 @@ export function compileWiki({
         );
       }
       aliasOwners.set(key, page.id);
+    }
+  }
+
+  const wantedOwners = new Map();
+  for (const page of pages) {
+    for (const item of page.wanted) {
+      if (!item || typeof item.id !== "string") continue;
+      if (wantedOwners.has(item.id)) {
+        failures.push(
+          failure(
+            "wanted.duplicate",
+            page.path,
+            `Wanted page is already requested by ${wantedOwners.get(item.id)}: ${item.id}`
+          )
+        );
+      } else {
+        wantedOwners.set(item.id, page.id);
+      }
+      if (pageById.has(item.id)) {
+        failures.push(
+          failure(
+            "wanted.resolved",
+            page.path,
+            `Wanted page now exists and must be removed from the queue: ${item.id}`
+          )
+        );
+      }
     }
   }
 
@@ -723,7 +921,23 @@ export function compileWiki({
       ...(page.surface ? { surface: page.surface } : {}),
       ...(page.publication_status ? { publicationStatus: page.publication_status } : {}),
       ...(page.rights_state ? { rightsState: page.rights_state } : {}),
-      ...(page.permission_status ? { permissionStatus: page.permission_status } : {})
+      ...(page.permission_status ? { permissionStatus: page.permission_status } : {}),
+      ...(page.source_return
+        ? {
+            sourceReturn: {
+              encounteredOn: page.source_return.encountered_on,
+              returnBy: page.source_return.return_by,
+              mode: page.source_return.mode,
+              accessState: page.source_return.access_state,
+              sourceClasses: [...asArray(page.source_return.source_classes)].sort(),
+              changedOrConfirmed: page.source_return.changed_or_confirmed,
+              unresolved: [...asArray(page.source_return.unresolved)],
+              ...(page.source_return.librarian_request
+                ? { librarianRequest: page.source_return.librarian_request }
+                : {})
+            }
+          }
+        : {})
     })),
     ["id"]
   );
@@ -745,6 +959,16 @@ export function compileWiki({
   const stale = nodes
     .filter((node) => DATE_PATTERN.test(node.reviewBy) && new Date(`${node.reviewBy}T23:59:59Z`) < now)
     .map((node) => node.id);
+  const sourceReturnsDue = nodes
+    .filter(
+      (node) =>
+        DATE_PATTERN.test(node.sourceReturn?.returnBy ?? "") &&
+        new Date(`${node.sourceReturn.returnBy}T23:59:59Z`) < now
+    )
+    .map((node) => node.id);
+  const blockedSourceReturns = nodes
+    .filter((node) => node.sourceReturn?.accessState === "blocked")
+    .map((node) => node.id);
 
   if (!pageById.has(ROOT_ID)) {
     failures.push(failure("navigation.root", posix(path.relative(repoRoot, wikiRoot)), `Missing root record: ${ROOT_ID}`));
@@ -757,6 +981,15 @@ export function compileWiki({
   }
   for (const id of stale) {
     warnings.push(warning("lifecycle.stale", pageById.get(id)?.path ?? id, `Record review date has passed: ${id}`));
+  }
+  for (const id of sourceReturnsDue) {
+    warnings.push(
+      warning(
+        "source-return.overdue",
+        pageById.get(id)?.path ?? id,
+        `Planned source-return date has passed: ${id}`
+      )
+    );
   }
 
   const relatedCount = semanticEdges.filter((edge) => edge.type === "related_to").length;
@@ -830,11 +1063,19 @@ export function compileWiki({
       ).length,
       rightsReviewCount: nodes.filter(
         (node) => node.kind === "asset" && node.rightsState !== "cleared"
-      ).length
+      ).length,
+      sourceReturnCount: nodes.filter((node) => node.sourceReturn).length,
+      originalSourceReturnCount: nodes.filter(
+        (node) => node.sourceReturn?.mode === "original-source-reread"
+      ).length,
+      sourceReturnsDueCount: sourceReturnsDue.length,
+      blockedSourceReturnCount: blockedSourceReturns.length
     },
     orphans,
     deadEnds,
     stale,
+    sourceReturnsDue,
+    blockedSourceReturns,
     wantedPages,
     corrections,
     contradictions,
@@ -881,6 +1122,10 @@ export function formatHealthMarkdown(health) {
     `- Corrections: ${health.metrics.correctionCount}`,
     `- Contradictions: ${health.metrics.contradictionCount}`,
     `- Stale pages: ${health.metrics.staleCount}`,
+    `- Source-return encounters: ${health.metrics.sourceReturnCount}`,
+    `- Original-source returns: ${health.metrics.originalSourceReturnCount}`,
+    `- Source returns due: ${health.metrics.sourceReturnsDueCount}`,
+    `- Blocked source returns: ${health.metrics.blockedSourceReturnCount}`,
     `- Rights-review records: ${health.metrics.rightsReviewCount}`,
     "",
     "## Hard failures",
@@ -895,6 +1140,15 @@ export function formatHealthMarkdown(health) {
   if (health.warnings.length === 0) lines.push("None.");
   for (const item of health.warnings) {
     lines.push(`- \`${item.code}\` ${item.file}:${item.line} - ${item.message}`);
+  }
+  lines.push("", "## Source-return queue", "");
+  if (health.sourceReturnsDue.length === 0) lines.push("- Due: none.");
+  else lines.push(`- Due: ${health.sourceReturnsDue.map((id) => `\`${id}\``).join(", ")}`);
+  if (health.blockedSourceReturns.length === 0) lines.push("- Blocked: none.");
+  else {
+    lines.push(
+      `- Blocked: ${health.blockedSourceReturns.map((id) => `\`${id}\``).join(", ")}`
+    );
   }
   lines.push("", "## Corrections and contradictions", "");
   if (health.corrections.length === 0) lines.push("- Corrections: none.");

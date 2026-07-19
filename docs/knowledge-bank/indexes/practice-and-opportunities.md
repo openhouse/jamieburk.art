@@ -6,15 +6,27 @@ status: maintained
 visibility: public-safe
 sensitivity: low
 owner: jamie
-last_reviewed: "2026-07-18"
-review_by: "2027-01-18"
+last_reviewed: "2026-07-19"
+review_by: "2027-01-19"
 canonical_path: docs/knowledge-bank/indexes/practice-and-opportunities.md
 discoverable: true
 relations:
   - type: documents
+    target: person.jamie-burkart
+  - type: documents
     target: capability.technical-operations
   - type: documents
+    target: capability.participatory-public-systems
+  - type: documents
+    target: method.structure-grows-from-the-material
+  - type: documents
+    target: method.present-grounded-source-return
+  - type: documents
+    target: method.collective-credit-and-protected-absence
+  - type: documents
     target: method.source-backed-team-memory
+  - type: documents
+    target: timeline.jamie-practice.2004-present
   - type: documents
     target: opportunity.nyc-oti.technical-operations-manager.782369
   - type: documents
@@ -39,8 +51,14 @@ relations:
 
 # Practice and opportunities
 
+- [Jamie Burkart](../people/jamie-burkart.md)
 - [Technical Operations capability](../capabilities/technical-operations.md)
+- [Participatory Public Systems](../projects/participatory-public-systems.md)
+- [Structure Grows from the Material](../methods/structure-grows-from-the-material.md)
+- [Present-Grounded Source Return](../methods/present-grounded-source-return.md)
+- [Collective Credit and Protected Absence](../methods/collective-credit-and-protected-absence.md)
 - [Source-Backed Team Memory method](../methods/source-backed-team-memory.md)
+- [Practice timeline](../timelines/practice-2004-present.md)
 - [OTI Technical Operations opportunity lens](../opportunities/oti-technical-operations.md)
 - [ACLU Product Discovery opportunity lens](../opportunities/aclu-product-discovery.md)
 - [Benepass Product Operations opportunity lens](../opportunities/benepass-product-operations.md)

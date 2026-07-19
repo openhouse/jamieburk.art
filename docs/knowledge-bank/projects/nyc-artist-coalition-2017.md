@@ -1,3 +1,48 @@
+---
+id: project.nyc-artist-coalition
+title: NYC Artist Coalition Civic Systems
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: moderate
+owner: jamie
+last_reviewed: "2026-07-19"
+review_by: "2027-01-19"
+canonical_path: docs/knowledge-bank/projects/nyc-artist-coalition-2017.md
+discoverable: true
+aliases:
+  - NYC Artist Coalition 2017 civic advocacy
+canonical_refs:
+  - CLM-NYCAC-CIVIC-ADVOCACY-2017
+  - CLM-NYCAC-PUBLIC-TESTIMONY-2017-2019
+  - CLM-NYCAC-GOVERNMENT-INTERFACE-2017-2019
+relations:
+  - type: part_of
+    target: organization.nyc-artist-coalition
+  - type: uses_method
+    target: method.collective-credit-and-protected-absence
+  - type: supports
+    target: capability.technical-operations
+  - type: supports
+    target: capability.participatory-public-systems
+  - type: informed_by
+    target: research-run.source-return.2026-07-19
+  - type: projected_to
+    target: portfolio.work.technical-operations
+source_return:
+  encountered_on: "2026-07-19"
+  return_by: "2027-01-19"
+  mode: original-source-reread
+  access_state: available
+  source_classes:
+    - official City Council hearing transcripts
+    - public campaign and social records
+    - authenticated shared-folder source census
+  changed_or_confirmed: "The present reading confirms Jamie's direct testimony, identity, web, participation, and documentation work while preserving policy outcomes as collective and institutional."
+  unresolved:
+    - "Further collaborator testimony could sharpen responsibility by campaign without implying sole causality."
+---
+
 # NYC Artist Coalition: 2017 Civic Advocacy
 
 ## Promoted Public Claims

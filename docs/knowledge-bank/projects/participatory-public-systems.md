@@ -1,3 +1,47 @@
+---
+id: capability.participatory-public-systems
+title: Participatory Public Systems
+kind: capability
+status: maintained
+visibility: public-safe
+sensitivity: moderate
+owner: jamie
+last_reviewed: "2026-07-19"
+review_by: "2027-01-19"
+canonical_path: docs/knowledge-bank/projects/participatory-public-systems.md
+discoverable: true
+canonical_refs:
+  - CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE
+  - CLM-RAFT-EXPEDITION-DESIGN-RESILIENCE
+relations:
+  - type: uses_method
+    target: method.structure-grows-from-the-material
+  - type: uses_method
+    target: method.collective-credit-and-protected-absence
+  - type: supports
+    target: capability.technical-operations
+  - type: informed_by
+    target: research-run.source-return.2026-07-19
+  - type: related_to
+    target: project.nter-chng
+  - type: related_to
+    target: project.sunday-dinner
+  - type: related_to
+    target: project.kc-town-hall
+source_return:
+  encountered_on: "2026-07-19"
+  return_by: "2027-01-19"
+  mode: source-family-reread
+  access_state: available
+  source_classes:
+    - public journalism and institutional event records
+    - project-authored public invitations
+    - public-safe social archive findings
+  changed_or_confirmed: "The current reading confirms participation as an implementation capability spanning shared space, journeys, software, hospitality, public meetings, and neighborhood fieldwork."
+  unresolved:
+    - "The waterways program family still needs its own governed project chronology and collaborator review."
+---
+
 # Participatory Public Systems
 
 ## Public-Safe Throughline

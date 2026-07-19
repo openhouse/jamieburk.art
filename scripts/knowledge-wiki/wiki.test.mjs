@@ -379,3 +379,124 @@ test("intentional leaves and accidental orphans remain distinct", () => {
   assert.ok(!result.health.orphans.includes("glossary.intentional-leaf"));
   assert.ok(!result.health.deadEnds.includes("glossary.intentional-leaf"));
 });
+
+test("a source return compiles into the graph and lifecycle metrics", () => {
+  const repoRoot = createValidFixture();
+  write(
+    repoRoot,
+    "docs/knowledge-bank/projects/sample.md",
+    frontmatter({
+      id: "project.sample",
+      title: "Sample project",
+      kind: "project",
+      canonicalPath: "docs/knowledge-bank/projects/sample.md",
+      relations: [{ type: "uses_source", target: "source.sample" }],
+      extra:
+        'source_return:\n  encountered_on: "2026-07-18"\n  return_by: "2026-10-18"\n  mode: original-source-reread\n  access_state: available\n  source_classes:\n    - original project record\n  changed_or_confirmed: "The current reading confirmed the bounded role."\n  unresolved:\n    - "Collaborator review remains open."\n',
+      body: "## Orientation\n\n[Sample source](../sources/sample.md)"
+    })
+  );
+  const result = compile(repoRoot);
+  const sample = result.graph.nodes.find((node) => node.id === "project.sample");
+  assert.equal(result.health.hardFailures.length, 0);
+  assert.equal(result.health.metrics.sourceReturnCount, 1);
+  assert.equal(result.health.metrics.originalSourceReturnCount, 1);
+  assert.equal(sample.sourceReturn.accessState, "available");
+  assert.equal(sample.sourceReturn.changedOrConfirmed, "The current reading confirmed the bounded role.");
+});
+
+test("malformed source-return metadata is rejected", () => {
+  const repoRoot = createValidFixture();
+  write(
+    repoRoot,
+    "docs/knowledge-bank/projects/sample.md",
+    frontmatter({
+      id: "project.sample",
+      title: "Sample project",
+      kind: "project",
+      canonicalPath: "docs/knowledge-bank/projects/sample.md",
+      relations: [{ type: "uses_source", target: "source.sample" }],
+      extra:
+        'source_return:\n  encountered_on: "July 18"\n  return_by: "2026-01-01"\n  mode: remembered-summary\n  access_state: maybe\n  source_classes: []\n  changed_or_confirmed: ""\n  unresolved: []\n',
+      body: "## Orientation\n\n[Sample source](../sources/sample.md)"
+    })
+  );
+  const codes = failureCodes(compile(repoRoot));
+  assert.ok(codes.has("source-return.date"));
+  assert.ok(codes.has("source-return.mode"));
+  assert.ok(codes.has("source-return.access-state"));
+  assert.ok(codes.has("source-return.source-classes"));
+  assert.ok(codes.has("source-return.finding"));
+  assert.ok(codes.has("source-return.unresolved"));
+});
+
+test("blocked source access requires a public-safe librarian request", () => {
+  const repoRoot = createValidFixture();
+  write(
+    repoRoot,
+    "docs/knowledge-bank/projects/sample.md",
+    frontmatter({
+      id: "project.sample",
+      title: "Sample project",
+      kind: "project",
+      canonicalPath: "docs/knowledge-bank/projects/sample.md",
+      relations: [{ type: "uses_source", target: "source.sample" }],
+      extra:
+        'source_return:\n  encountered_on: "2026-07-18"\n  return_by: "2026-10-18"\n  mode: original-source-reread\n  access_state: blocked\n  source_classes:\n    - unavailable original record\n  changed_or_confirmed: "The source could not be reached in this encounter."\n  unresolved:\n    - "The original record still needs review."\n',
+      body: "## Orientation\n\n[Sample source](../sources/sample.md)"
+    })
+  );
+  assert.ok(
+    failureCodes(compile(repoRoot)).has("source-return.blocked-without-request")
+  );
+});
+
+test("overdue source returns enter the review queue", () => {
+  const repoRoot = createValidFixture();
+  write(
+    repoRoot,
+    "docs/knowledge-bank/projects/sample.md",
+    frontmatter({
+      id: "project.sample",
+      title: "Sample project",
+      kind: "project",
+      canonicalPath: "docs/knowledge-bank/projects/sample.md",
+      relations: [{ type: "uses_source", target: "source.sample" }],
+      extra:
+        'source_return:\n  encountered_on: "2026-01-01"\n  return_by: "2026-02-01"\n  mode: source-family-reread\n  access_state: partial\n  source_classes:\n    - surviving source family\n  changed_or_confirmed: "The partial record confirmed the chronology."\n  unresolved:\n    - "One original document remains unavailable."\n  librarian_request: "Please help locate the original public program."\n',
+      body: "## Orientation\n\n[Sample source](../sources/sample.md)"
+    })
+  );
+  const result = compileWiki({
+    repoRoot,
+    wikiRoot: path.join(repoRoot, "docs/knowledge-bank"),
+    canonicalIds,
+    now: new Date("2026-07-18T00:00:00Z")
+  });
+  assert.deepEqual(result.health.sourceReturnsDue, ["project.sample"]);
+  assert.equal(result.health.metrics.sourceReturnsDueCount, 1);
+  assert.ok(
+    result.health.warnings.some((item) => item.code === "source-return.overdue")
+  );
+});
+
+test("wanted pages require a reason and leave the queue when created", () => {
+  const repoRoot = createValidFixture();
+  write(
+    repoRoot,
+    "docs/knowledge-bank/README.md",
+    frontmatter({
+      id: "index.knowledge-wiki",
+      title: "Knowledge Wiki",
+      kind: "index",
+      canonicalPath: "docs/knowledge-bank/README.md",
+      relations: [{ type: "documents", target: "project.sample" }],
+      extra:
+        'wanted:\n  - id: project.sample\n    proposed_title: Sample project\n    reason: ""\n',
+      body: "[Sample project](projects/sample.md#orientation)"
+    })
+  );
+  const codes = failureCodes(compile(repoRoot));
+  assert.ok(codes.has("wanted.required"));
+  assert.ok(codes.has("wanted.resolved"));
+});

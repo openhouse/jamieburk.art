@@ -21,6 +21,15 @@ const callnyc = read("docs/knowledge-bank/projects/callnyc.md");
 const correction = read("docs/knowledge-bank/corrections/callnyc-years.md");
 const media = read("docs/knowledge-bank/media/digital-district-photo.md");
 const technicalOperations = read("docs/knowledge-bank/capabilities/technical-operations.md");
+const projectsIndex = read("docs/knowledge-bank/indexes/projects.md");
+const sourceReturnMethod = read(
+  "docs/knowledge-bank/methods/present-grounded-source-return.md"
+);
+const schema = read("docs/knowledge-bank/schema.md");
+
+const missingPageIds = config.missingPageNodeIds;
+const sourceReturnConfig = config.sourceReturn;
+const wantedIds = new Set(first.graph.wantedPages.map((item) => item.id));
 
 const checks = new Map([
   [
@@ -95,6 +104,38 @@ const checks = new Map([
     "KW-014",
     config.humanEvaluationState === "not-run" &&
       config.machineCriteria.some((criterion) => criterion.id === "KW-014")
+  ],
+  [
+    "KW-015",
+    missingPageIds.every((id) => nodeById.has(id) && !wantedIds.has(id)) &&
+      [
+        "let-nyc-dance.md",
+        "office-of-nightlife-town-halls.md",
+        "talks-not-raids.md",
+        "fair-rent-nyc.md",
+        "save-nyc-spaces.md"
+      ].every((filename) => projectsIndex.includes(filename))
+  ],
+  [
+    "KW-016",
+    sourceReturnConfig.requiredNodeIds.every((id) => nodeById.get(id)?.sourceReturn) &&
+      first.health.metrics.sourceReturnCount >= sourceReturnConfig.minimumEncounterCount &&
+      first.health.metrics.originalSourceReturnCount >=
+        sourceReturnConfig.minimumOriginalSourceCount &&
+      first.health.metrics.sourceReturnsDueCount === 0 &&
+      first.health.wantedPages.length <= sourceReturnConfig.maximumOpenWantedPages &&
+      !first.health.hardFailures.some((item) => item.code.startsWith("source-return."))
+  ],
+  [
+    "KW-017",
+    sourceReturnMethod.includes("ask Jamie, the personal") &&
+      sourceReturnMethod.includes("npm run wiki:tasks") &&
+      schema.includes("librarian_request") &&
+      schema.includes("exact access method belongs in the authorized private source") &&
+      first.graph.nodes
+        .filter((node) => node.sourceReturn?.accessState === "blocked")
+        .every((node) => Boolean(node.sourceReturn.librarianRequest)) &&
+      !first.health.hardFailures.some((item) => item.code === "safety.private-path")
   ]
 ]);
 

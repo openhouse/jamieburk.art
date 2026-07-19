@@ -26,6 +26,7 @@ function usage() {
     `  npm run wiki:query -- --status maintained\n` +
     `  npm run wiki:query -- --surface /work/callnyc\n` +
     `  npm run wiki:query -- --canonical-ref CLM-CALLNYC-INDEPENDENT-FOLLOW-ON\n` +
+    `  npm run wiki:query -- --source-access blocked\n` +
     `  npm run wiki:query -- --backlinks project.callnyc\n` +
     `  Add --format json for machine-readable output.`);
 }
@@ -52,6 +53,11 @@ if (options.status) nodes = nodes.filter((node) => node.status === options.statu
 if (options.surface) nodes = nodes.filter((node) => node.surface === options.surface);
 if (options["canonical-ref"]) {
   nodes = nodes.filter((node) => node.canonicalRefs.includes(options["canonical-ref"]));
+}
+if (options["source-access"]) {
+  nodes = nodes.filter(
+    (node) => node.sourceReturn?.accessState === options["source-access"]
+  );
 }
 
 let output = { nodes };

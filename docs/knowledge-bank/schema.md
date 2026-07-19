@@ -75,6 +75,56 @@ Material corrections link the previous record, corrected record, reason,
 evidence authority, affected surfaces, and review state. Do not silently erase
 consequential wording or chronology changes.
 
+## Wanted pages
+
+Use a `wanted` entry on an index when a page is important but not ready to
+write:
+
+```yaml
+wanted:
+  - id: project.example
+    proposed_title: Example project
+    reason: A governed chronology is needed after the original records are recovered.
+```
+
+The ID, title, and reason are required. A wanted ID must be unique and must be
+removed from the queue when the governed page is created. `Not recovered` is a
+research state; it is not evidence that the project or source never existed.
+
+## Present-grounded source return
+
+Use `source_return` when a page is created or materially reconsidered by
+returning to its evidence:
+
+```yaml
+source_return:
+  encountered_on: "2026-07-19"
+  return_by: "2027-01-19"
+  mode: original-source-reread
+  access_state: available
+  source_classes:
+    - official hearing transcript
+    - original project website
+  changed_or_confirmed: "The current reading confirmed the implementation role and narrowed the outcome claim."
+  unresolved:
+    - "Collaborator review could further distinguish shared authorship."
+```
+
+Allowed modes are `original-source-reread`, `source-family-reread`, and
+`canonical-record-reread`. Allowed access states are `available`, `partial`,
+`public-only`, and `blocked`.
+
+If access is blocked, add a public-safe `librarian_request` stating what Jamie
+can help locate or authorize. Do not put local paths, cloud IDs, credentials,
+private filenames, participant details, or protected coordinates in this
+repository. The exact access method belongs in the authorized private source
+registry described by the dual-Wiki RFP.
+
+Source return does not grant publication permission, settle collective credit,
+clear media rights, prove causality, or replace Jamie's approval. `return_by`
+creates a review queue so a prior summary does not permanently substitute for
+looking again.
+
 ## Generated files
 
 `npm run wiki:graph` and `npm run wiki:report` write ignored, reproducible files
