@@ -1,15 +1,16 @@
 {
   "version": "2026-07-17",
-  "candidateCommit": "ac775c8f776fcb3cf49ac1bb58c8eadbe6eff1c0",
-  "candidateContentHash": "028035b9f44b7d556a51c6698a7363f6f632821e76944d411be5f7c596cea008",
+  "candidateCommit": "ac5b06515f0379dc4003dd73f810d1328c674be0",
+  "candidateContentHash": "b8d977c1fac698528e2caa70bce78b705482098552bc6fa74299c6bf00ac3cd2",
   "evidenceSnapshotHash": "2b683d6e01c2edeea1897ec8fd8d946d3e25ee10025dd06a2a65ed1c078236df",
   "rubricHashes": {
-    "docs/qa/eval-control-plane-M.json": "0cbf520b73baf49ad742ebe47f6252a76b77f36c2e2d439aa712378f4cfd1bc2",
+    "docs/qa/eval-control-plane-M.json": "a74fcf18450206612c4404afa5530d2b2b155f0769474afbe9c79799fa636156",
     "docs/qa/knowledge-wiki-foundation-M.json": "95a058a20cf1374a831ff4a596d4d4f918872e48e187ff62bda0d4e9ca8aeb99",
     "docs/qa/knowledge-lifecycle-M.json": "985c04abc88855520a08e478d16ef4b6747e065a660a55cc6ce65eb0cd592c24",
     "docs/qa/portfolio-readiness-M.json": "c5e3fb3c525057a775c30fd159ecb71ef18310e0e7a3ac500c5867d7ae393d7d",
     "docs/qa/blind-spot-readiness-M.json": "e80218264f03daf1447e0715b9801e1f993690889b64622ea3595ac744765b83",
-    "docs/qa/professor-lenses-M.json": "5ed860234247a4c65ff7d952d3a2e069ba22351ac6f5eced43e20967a66ab816"
+    "docs/qa/professor-lenses-M.json": "5ed860234247a4c65ff7d952d3a2e069ba22351ac6f5eced43e20967a66ab816",
+    "docs/qa/hiring-acceptance-M.json": "0659e2af66f572bf13edeedb4fdd0713d389c193e776adecf7f8a5fb67e577fb"
   },
   "policyHashes": {
     "AGENTS.md": "a35068d8387ca9a159971c33c883e5b3bf1a76e94260d7963fa26fdc0b249ba6",
@@ -20,7 +21,7 @@
   "checkerVersion": "composite-evals-M-v1",
   "command": "npm run check",
   "result": "pass",
-  "timestamp": "2026-07-18T20:45:04Z",
+  "timestamp": "2026-07-19T02:31:47Z",
   "reviewerClass": "deterministic-checker",
   "decision": "stop_threshold_met",
   "productionDecision": "stop_human_blocked",
@@ -31,6 +32,9 @@
     "Knowledge Wiki human retrieval sessions",
     "unfamiliar-reader sessions",
     "collaborator corroboration where consequential",
+    "Tier 1 opportunity reverification before application",
+    "ACLU retrospective product-brief human review",
+    "role-specific hiring-reader sessions",
     "five real-job comparisons",
     "hands-on accessibility and launch QA",
     "visual rights and consent review",
