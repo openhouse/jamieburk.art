@@ -35,6 +35,18 @@ relations:
     href: indexes/decision-records.md
     context: Decision reconstructions with evidence states, unknowns, and projection holds.
   - type: related_to
+    target: index.knowledge-wiki.canonical-story-bank
+    href: indexes/canonical-story-bank.md
+    context: Reusable five-part stories with collective context and honest limits attached.
+  - type: related_to
+    target: index.knowledge-wiki.claim-maturity
+    href: indexes/claim-maturity-dashboard.md
+    context: Selected holds and exact evidence or human decisions needed for advancement.
+  - type: related_to
+    target: index.knowledge-wiki.relational-infrastructure-atlas
+    href: indexes/relational-infrastructure-atlas.md
+    context: Human-readable semantics and anti-inferences for typed Wiki relations.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -84,6 +96,15 @@ The website should use the clearest subset for a specific audience and purpose.
   divergence without retrospective inevitability.
 - [Decision records](indexes/decision-records.md): bounded reconstructions that
   preserve actors, constraints, evidence states, artifacts, and unknowns.
+- [Canonical story bank](indexes/canonical-story-bank.md): five-part accounts
+  that keep situation, action, usable result, collective context, and limit
+  attached.
+- [Claim maturity dashboard](indexes/claim-maturity-dashboard.md): selected
+  claims and the smallest evidence or human decision that could advance them.
+- [Relational infrastructure atlas](indexes/relational-infrastructure-atlas.md):
+  what graph relations establish and what they cannot establish by themselves.
+- [Jamie at work](methods/jamie-at-work.md): the recurring professional action
+  across emerging artistic, civic, technical, and operational work.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.
@@ -104,6 +125,7 @@ The knowledge bank exists to:
 - separate verified scope from open questions;
 - make future edits easier to audit;
 - prevent both overstatement and understatement;
+- distinguish delivery, use, institutional adoption, and later change;
 - reduce the risk that private evidence leaks into public pages;
 - make the Technical Operations / Product Operations / Implementation story
   easier to maintain.

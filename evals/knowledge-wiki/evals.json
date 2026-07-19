@@ -139,6 +139,24 @@
         "councilstat_source_gap_closed",
         "interpretive_public_projection_selective"
       ]
+    },
+    {
+      "id": "knowledge-wiki-family-closure",
+      "criteria": [
+        "frozen_heads_exact",
+        "base_target_exact",
+        "one_canonical_architecture",
+        "every_donor_has_materialized_destination",
+        "selected_records_materialized",
+        "selected_records_navigable",
+        "closure_decision_links_outputs",
+        "census_conflict_preserved",
+        "personal_stakes_remains_human_gated",
+        "adoption_and_relation_boundaries_explicit",
+        "visual_rights_sequence_complete",
+        "no_public_wiki_or_proofs_route",
+        "human_authority_gates_open"
+      ]
     }
   ]
 }

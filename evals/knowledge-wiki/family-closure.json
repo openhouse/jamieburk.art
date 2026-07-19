@@ -1,0 +1,64 @@
+{
+  "suite": "knowledge-wiki-family-closure",
+  "version": 1,
+  "decisionDate": "2026-07-19",
+  "base": {
+    "branch": "develop",
+    "sha": "2ec37fe6e47d11e600ede204d19a98f7d3cff139"
+  },
+  "target": {
+    "branch": "feature/wiki-C",
+    "pullRequestBase": "develop"
+  },
+  "canonicalArchitecture": "feature/knowledge-wiki-E",
+  "expectedFrozenHeads": {
+    "feature/knowledge-wiki-A": "920f9024d7e058700f282e3e1e76188fe1c5294e",
+    "feature/knowledge-wiki-B": "268a92d794f5b604f4004fc9d6e5652f234fc61b",
+    "feature/knowledge-wiki-C": "6a2af7396240381ce04aad9b9129ba402b83c134",
+    "feature/knowledge-wiki-D": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b",
+    "feature/knowledge-wiki-E": "9f1bbfacec3edbfbc47a5200f777d4f498da0ec4"
+  },
+  "requiredRecords": [
+    ["source.knowledge-wiki.family-frozen-heads.2026-07-19", "docs/knowledge-bank/sources/knowledge-wiki-family-frozen-heads-2026-07-19.md"],
+    ["research.knowledge-wiki.family-closure.2026-07-19", "docs/knowledge-bank/research-runs/knowledge-wiki-family-closure-2026-07-19.md"],
+    ["decision.knowledge-wiki.family-closure", "docs/knowledge-bank/decisions/knowledge-wiki-family-closure.md"],
+    ["index.knowledge-wiki.canonical-story-bank", "docs/knowledge-bank/indexes/canonical-story-bank.md"],
+    ["method.public-knowledge-peoples-own-terms", "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md"],
+    ["method.identity-systems-shared-infrastructure", "docs/knowledge-bank/methods/identity-systems-as-shared-infrastructure.md"],
+    ["method.learning-through-making", "docs/knowledge-bank/methods/learning-through-making.md"],
+    ["method.jamie-at-work", "docs/knowledge-bank/methods/jamie-at-work.md"],
+    ["method.participation-relational-infrastructure", "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md"],
+    ["method.what-is-at-stake-for-me", "docs/knowledge-bank/methods/what-is-at-stake-for-me.md"],
+    ["method.outcomes-and-adoption", "docs/knowledge-bank/methods/outcomes-and-adoption.md"],
+    ["index.knowledge-wiki.claim-maturity", "docs/knowledge-bank/indexes/claim-maturity-dashboard.md"],
+    ["index.knowledge-wiki.relational-infrastructure-atlas", "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md"]
+  ],
+  "rootTargets": [
+    "index.knowledge-wiki.canonical-story-bank",
+    "index.knowledge-wiki.claim-maturity",
+    "index.knowledge-wiki.relational-infrastructure-atlas"
+  ],
+  "livingArchiveTargets": [
+    "method.jamie-at-work",
+    "method.participation-relational-infrastructure",
+    "method.public-knowledge-peoples-own-terms",
+    "method.identity-systems-shared-infrastructure",
+    "method.learning-through-making",
+    "method.outcomes-and-adoption",
+    "method.what-is-at-stake-for-me"
+  ],
+  "expectedCensus": {
+    "feature/knowledge-wiki-A": 2365,
+    "feature/knowledge-wiki-B": 2408,
+    "feature/knowledge-wiki-C": 2078,
+    "feature/knowledge-wiki-D": 2192,
+    "feature/knowledge-wiki-E": 2405
+  },
+  "disallowedPublicRoutePaths": [
+    "apps/www/src/app/proofs",
+    "apps/www/src/app/wiki",
+    "apps/www/src/app/knowledge",
+    "apps/www/src/app/knowledge-bank",
+    "apps/www/src/app/knowledge-wiki"
+  ]
+}

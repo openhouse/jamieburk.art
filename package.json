@@ -47,6 +47,7 @@
     "wiki:tasks": "node scripts/knowledge-wiki/wiki-tasks.mjs",
     "wiki:query": "node scripts/knowledge-wiki/wiki-query.mjs",
     "wiki:eval": "node scripts/knowledge-wiki/evaluate-wiki.mjs",
+    "wiki:eval:family-closure": "node scripts/knowledge-wiki/family-closure-eval.mjs",
     "wiki:hiring:public": "node scripts/knowledge-wiki/evaluate-hiring-acceptance.mjs",
     "wiki:hiring:gaps": "node scripts/knowledge-wiki/resolve-hiring-gaps.mjs",
     "wiki:employment:report": "node scripts/knowledge-wiki/report-employment-context.mjs",

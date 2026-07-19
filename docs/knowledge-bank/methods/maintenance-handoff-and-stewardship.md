@@ -22,6 +22,12 @@ relations:
   - type: uses_source
     target: source.jamie.writers-voice-synthesis.2026-07
     href: ../sources/writers-voice-synthesis-2026-07.md
+  - type: related_to
+    target: method.outcomes-and-adoption
+    href: outcomes-and-adoption.md
+  - type: related_to
+    target: index.knowledge-wiki.relational-infrastructure-atlas
+    href: ../indexes/relational-infrastructure-atlas.md
 ---
 
 # Maintenance, handoff, and stewardship
@@ -82,3 +88,12 @@ Stewardship is not permanent personal ownership, invisible unpaid availability,
 or permission to retain access after responsibility changes. A handoff record
 does not prove adoption or relieve receiving people and institutions of their
 own authority and care.
+
+## Evidence and credit
+
+Treat continued operation, repair, archival survival, retirement,
+administrative transfer, and social handoff as separate states. For each state,
+record the actor, artifact, authority, and date only to the resolution the
+evidence supports. Continued custody does not establish authorship; an artifact
+surviving does not establish adoption; and a transition record may remain
+publicly bounded to protect personal context.

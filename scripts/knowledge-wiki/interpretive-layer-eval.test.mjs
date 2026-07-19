@@ -21,8 +21,8 @@ test("interpretive layer baseline passes", () => {
   const evaluation = evaluateInterpretiveLayer({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    requiredRecords: 18,
-    decisionRecords: 5,
+    requiredRecords: 19,
+    decisionRecords: 6,
     sourceEncounterTargets: 13,
     protectedSourceTargets: 7
   });

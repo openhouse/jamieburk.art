@@ -18,6 +18,7 @@
     ["decision.hje.continuity-modernization", "docs/knowledge-bank/decisions/hje-continuity-modernization.md"],
     ["decision.kc-town-hall.listening-fieldwork", "docs/knowledge-bank/decisions/kc-town-hall-listening-fieldwork.md"],
     ["decision.knowledge-wiki.selective-projection", "docs/knowledge-bank/decisions/knowledge-wiki-selective-projection.md"],
+    ["decision.knowledge-wiki.family-closure", "docs/knowledge-bank/decisions/knowledge-wiki-family-closure.md"],
     ["source.good-times.open-house.2006-06-28", "docs/knowledge-bank/sources/good-times-open-house-2006-06-28.md"],
     ["source.councilstat.fuller-release.2016", "docs/knowledge-bank/sources/nycc-constituent-services-data-2016-05-27.md"],
     ["source.wowlist.repaired-transcript.2026", "docs/knowledge-bank/sources/wowlist-repaired-transcript-2026.md"],
@@ -39,7 +40,8 @@
     "decision.callnyc.issue-pathways",
     "decision.hje.continuity-modernization",
     "decision.kc-town-hall.listening-fieldwork",
-    "decision.knowledge-wiki.selective-projection"
+    "decision.knowledge-wiki.selective-projection",
+    "decision.knowledge-wiki.family-closure"
   ],
   "pressureProjects": [
     "project.callnyc",

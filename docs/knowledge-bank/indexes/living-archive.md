@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-07-19
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/indexes/living-archive.md
-summary: Task-oriented map of orientation, campaign, project, pressure, place, lineage, decision, capability, stewardship, source-return, role-fit, and visual-evidence pages.
+summary: Task-oriented map of orientation, campaign, project, pressure, place, lineage, decision, capability, stewardship, source-return, role-fit, story, claim-maturity, and visual-evidence pages.
 relations:
   - type: related_to
     target: person.jamie-burkart
@@ -58,6 +58,36 @@ relations:
   - type: related_to
     target: index.knowledge-wiki.visual-evidence
     href: visual-evidence.md
+  - type: related_to
+    target: index.knowledge-wiki.canonical-story-bank
+    href: canonical-story-bank.md
+  - type: related_to
+    target: index.knowledge-wiki.claim-maturity
+    href: claim-maturity-dashboard.md
+  - type: related_to
+    target: index.knowledge-wiki.relational-infrastructure-atlas
+    href: relational-infrastructure-atlas.md
+  - type: related_to
+    target: method.jamie-at-work
+    href: ../methods/jamie-at-work.md
+  - type: related_to
+    target: method.participation-relational-infrastructure
+    href: ../methods/participation-and-relational-infrastructure.md
+  - type: related_to
+    target: method.public-knowledge-peoples-own-terms
+    href: ../methods/public-knowledge-in-peoples-own-terms.md
+  - type: related_to
+    target: method.identity-systems-shared-infrastructure
+    href: ../methods/identity-systems-as-shared-infrastructure.md
+  - type: related_to
+    target: method.learning-through-making
+    href: ../methods/learning-through-making.md
+  - type: related_to
+    target: method.outcomes-and-adoption
+    href: ../methods/outcomes-and-adoption.md
+  - type: related_to
+    target: method.what-is-at-stake-for-me
+    href: ../methods/what-is-at-stake-for-me.md
   - type: related_to
     target: project.harry-j-epstein
     href: ../projects/harry-j-epstein.md
@@ -125,6 +155,8 @@ Jamie as personal librarian.
 
 - [Jamie Burkart](../people/jamie-burkart.md)
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md)
+- [Jamie at work](../methods/jamie-at-work.md)
+- [Learning through making](../methods/learning-through-making.md)
 - [Practice timeline, 2004-present](../timelines/practice-2004-present.md)
 - [Participatory public systems](../capabilities/participatory-public-systems.md)
 
@@ -137,6 +169,11 @@ Jamie as personal librarian.
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md)
 - [Civic, cultural, and technical translation](../capabilities/civic-cultural-and-technical-translation.md)
 - [Implementation and operational stewardship](../capabilities/implementation-and-operational-stewardship.md)
+- [Participation and relational infrastructure](../methods/participation-and-relational-infrastructure.md)
+- [Public knowledge in people's own terms](../methods/public-knowledge-in-peoples-own-terms.md)
+- [Identity systems as shared infrastructure](../methods/identity-systems-as-shared-infrastructure.md)
+- [Outcomes and adoption](../methods/outcomes-and-adoption.md)
+- [Relational infrastructure atlas](relational-infrastructure-atlas.md)
 
 ## Understand collective civic work
 
@@ -162,13 +199,19 @@ Jamie as personal librarian.
 
 - [Collective credit and protected absence](../methods/collective-credit-and-protected-absence.md)
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md)
+- [Canonical story bank](canonical-story-bank.md)
+- [Claim maturity dashboard](claim-maturity-dashboard.md)
 - [Visual evidence](visual-evidence.md)
+- [What is at stake for me](../methods/what-is-at-stake-for-me.md), an
+  AI-assisted first-person draft held for Jamie's line-by-line review
 
 ## Return to the material
 
 - [Situated source rereading](../methods/situated-source-rereading.md)
 - [Foundational source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md)
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md)
+- [Knowledge Wiki family closure review, July 19, 2026](../research-runs/knowledge-wiki-family-closure-2026-07-19.md)
+- [Knowledge Wiki family closure decision](../decisions/knowledge-wiki-family-closure.md)
 - [Open installation-title inquiry](../research-inquiries/ucsc-installation-title.md)
 - [Generated wanted pages](../_generated/wanted-pages.md)
 

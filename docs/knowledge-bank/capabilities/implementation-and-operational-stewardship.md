@@ -25,6 +25,12 @@ relations:
   - type: related_to
     target: project.kc-spaces-fund
     href: ../projects/kc-spaces-fund-orientation.md
+  - type: uses_method
+    target: method.outcomes-and-adoption
+    href: ../methods/outcomes-and-adoption.md
+  - type: related_to
+    target: index.knowledge-wiki.canonical-story-bank
+    href: ../indexes/canonical-story-bank.md
 ---
 
 # Implementation and operational stewardship
@@ -44,6 +50,10 @@ maintenance, documentation, access boundaries, and transfer.
 4. Keep ownership, renewals, credentials, source provenance, decisions, and
    unresolved risks legible.
 5. Prepare another person to continue, revise, or retire the system.
+
+For each implementation account, name separately what Jamie delivered, what
+another person used, what an authorized institution adopted, and what changed
+later. These states make the capability legible without inflating causality.
 
 ## Evidence map
 

@@ -28,6 +28,9 @@ relations:
   - type: related_to
     target: decision.knowledge-wiki.selective-projection
     href: ../decisions/knowledge-wiki-selective-projection.md
+  - type: related_to
+    target: decision.knowledge-wiki.family-closure
+    href: ../decisions/knowledge-wiki-family-closure.md
 ---
 
 # Decision records
@@ -44,6 +47,7 @@ the archive does not preserve.
 - [Harry J. Epstein: continuity-oriented modernization](../decisions/hje-continuity-modernization.md)
 - [KC Town Hall: listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md)
 - [Knowledge Wiki: deep bank and selective projection](../decisions/knowledge-wiki-selective-projection.md)
+- [Knowledge Wiki: close the A-E family into one canonical implementation](../decisions/knowledge-wiki-family-closure.md)
 
 ## Contract
 

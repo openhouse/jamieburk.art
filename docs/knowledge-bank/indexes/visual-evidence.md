@@ -65,3 +65,16 @@ identities, prohibited inferences, and the exact public surface under review.
 
 Visual discovery may suggest new research. It cannot promote a claim or clear
 an image automatically.
+
+## Promotion sequence
+
+1. Record the visual lead without importing a protected asset.
+2. State the claim or scene it may support.
+3. Verify identity, date, place, and caption against the source record.
+4. Determine copyright, license, consent, and fair-use posture.
+5. Obtain Jamie's editorial approval and any necessary collaborator approval.
+6. Publish only through an approved asset path and rerun public-safety checks.
+
+An image can remain useful research evidence while permanently held from public
+display. Evidentiary usefulness, identity, rights, consent, caption accuracy,
+and publication permission are separate decisions.
