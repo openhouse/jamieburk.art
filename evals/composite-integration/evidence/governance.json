@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "candidateStatus": "contract-frozen",
+  "layers": [
+    {
+      "id": "deterministic",
+      "status": "pass",
+      "evidence": "Deterministic hard gates independently evaluate frozen inputs, append-only history, semantic mutations, projection restraint, reviewability, and canonical regressions."
+    },
+    {
+      "id": "model",
+      "status": "pass",
+      "evidence": "The candidate-binding hard gate independently requires two passing judgments from distinct judges and lenses for the exact candidate and contract."
+    },
+    {
+      "id": "human-reader",
+      "status": "blocked",
+      "evidence": "No five-reader target-role study is present for the exact candidate."
+    },
+    {
+      "id": "rights-review",
+      "status": "blocked",
+      "evidence": "No complete candidate-bound rights review exists for the priority visual artifact set."
+    },
+    {
+      "id": "production",
+      "status": "blocked",
+      "evidence": "Production deployed-SHA, smoke, rollback, and indexing evidence do not exist for this integration candidate."
+    },
+    {
+      "id": "jamie-approval",
+      "status": "blocked",
+      "evidence": "Jamie approved the integration proposal, but approval of the exact final production candidate remains a later gate."
+    }
+  ]
+}

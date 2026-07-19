@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "sha256:a9a3c476f8cefe123025711a4ec08f2c9464a5ad1793630c535f1559988d7cdf",
+  "hardGates": {
+    "status": "pass",
+    "failures": []
+  },
+  "diagnostics": {
+    "records": 50,
+    "recordsByKind": {
+      "asset": 1,
+      "capability": 1,
+      "claim": 6,
+      "correction": 1,
+      "event": 1,
+      "index": 12,
+      "method": 3,
+      "opportunity": 6,
+      "projection": 2,
+      "project": 3,
+      "research-inquiry": 1,
+      "research-run": 1,
+      "source": 8,
+      "timeline": 4
+    },
+    "proseLinks": 97,
+    "typedRelations": 165,
+    "genericRelationRate": 0,
+    "discoverableRecords": 49,
+    "reachableDiscoverableRecords": 49,
+    "maximumRootDistance": 3,
+    "typeAwareOrphans": [],
+    "deadEnds": [],
+    "wantedPages": [],
+    "staleRecords": [],
+    "rightsBacklog": [
+      "asset.photo.digital-district.001"
+    ],
+    "humanReviewBacklog": [
+      {
+        "id": "asset.photo.digital-district.001",
+        "state": "human-blocked"
+      },
+      {
+        "id": "claim.nycartc.march-data-design-lead",
+        "state": "human-blocked"
+      },
+      {
+        "id": "claim.nycartc.nightlife-recommendation-continuity",
+        "state": "requested"
+      },
+      {
+        "id": "claim.nycartc.public-meeting-operating-system",
+        "state": "requested"
+      },
+      {
+        "id": "index.absences-protections-and-permissions",
+        "state": "human-blocked"
+      },
+      {
+        "id": "index.decisions-deliverables-operational-outcomes",
+        "state": "requested"
+      },
+      {
+        "id": "index.maintenance-and-care",
+        "state": "requested"
+      },
+      {
+        "id": "index.knowledge-wiki-missing-pages",
+        "state": "requested"
+      },
+      {
+        "id": "index.people-places-and-community-testimony",
+        "state": "requested"
+      },
+      {
+        "id": "index.project-afterlives-and-handoffs",
+        "state": "requested"
+      },
+      {
+        "id": "index.relational-infrastructure-atlas",
+        "state": "requested"
+      },
+      {
+        "id": "index.role-and-collective-authorship",
+        "state": "human-blocked"
+      },
+      {
+        "id": "index.scenes-of-work",
+        "state": "requested"
+      },
+      {
+        "id": "inquiry.nycartc.march-data-design-attribution",
+        "state": "requested"
+      },
+      {
+        "id": "method.nycartc.public-meeting-and-testimony-participation",
+        "state": "requested"
+      },
+      {
+        "id": "project.kc-spaces-fund",
+        "state": "requested"
+      },
+      {
+        "id": "project.nyc-artist-coalition",
+        "state": "requested"
+      },
+      {
+        "id": "research-run.nycartc.shared-folder.2026-07",
+        "state": "requested"
+      },
+      {
+        "id": "source.nycartc.march-data-design-notes.2019",
+        "state": "human-blocked"
+      },
+      {
+        "id": "source.nycartc.nightlife-recommendation-sequence.2017-2019",
+        "state": "human-blocked"
+      },
+      {
+        "id": "source.nycartc.public-meeting-playbook.2018",
+        "state": "human-blocked"
+      },
+      {
+        "id": "source.nycartc.shared-folder-census.2026",
+        "state": "requested"
+      },
+      {
+        "id": "source.nycartc.testimony-guide.2017",
+        "state": "human-blocked"
+      },
+      {
+        "id": "timeline.art-life-waterways-media-archaeology.2003-2011",
+        "state": "requested"
+      },
+      {
+        "id": "timeline.nycartc.events-and-venues.2017-2021",
+        "state": "requested"
+      },
+      {
+        "id": "timeline.nycartc.nightlife-recommendations.2017-2019",
+        "state": "requested"
+      },
+      {
+        "id": "timeline.participation-infrastructure.2012-2026",
+        "state": "requested"
+      }
+    ],
+    "employmentOpportunities": [
+      {
+        "id": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 5
+      },
+      {
+        "id": "opportunity.asana.ai-implementation-manager.8027437",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 6
+      },
+      {
+        "id": "opportunity.benepass.product-operations-manager.7f963a7a",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 5
+      },
+      {
+        "id": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 6
+      },
+      {
+        "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "deadline": "2026-08-07",
+        "requirements": 6
+      },
+      {
+        "id": "opportunity.permitflow.product-operations-manager.8a6e6066",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 6
+      }
+    ],
+    "roleCoverage": {
+      "opportunity.aclu.product-manager-ii-discovery.8482872002": {
+        "visible-proven": 3,
+        "visible-qualified": 1,
+        "visible-weak": 0,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 1,
+        "unknown": 0,
+        "not-applicable": 0
+      },
+      "opportunity.asana.ai-implementation-manager.8027437": {
+        "visible-proven": 1,
+        "visible-qualified": 4,
+        "visible-weak": 1,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 0,
+        "not-applicable": 0
+      },
+      "opportunity.benepass.product-operations-manager.7f963a7a": {
+        "visible-proven": 1,
+        "visible-qualified": 2,
+        "visible-weak": 2,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 0,
+        "not-applicable": 0
+      },
+      "opportunity.codepath.senior-program-manager-claude-corps.5182020007": {
+        "visible-proven": 2,
+        "visible-qualified": 3,
+        "visible-weak": 0,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 1,
+        "not-applicable": 0
+      },
+      "opportunity.nyc-oti.technical-operations-manager.782369": {
+        "visible-proven": 2,
+        "visible-qualified": 3,
+        "visible-weak": 1,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 0,
+        "not-applicable": 0
+      },
+      "opportunity.permitflow.product-operations-manager.8a6e6066": {
+        "visible-proven": 1,
+        "visible-qualified": 4,
+        "visible-weak": 1,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 0,
+        "not-applicable": 0
+      }
+    },
+    "warnings": []
+  },
+  "manualAuthorityGates": {
+    "humanNavigationStudy": "not-requested",
+    "collaboratorConsent": "not-requested",
+    "rightsClearance": "human-blocked",
+    "editorialApproval": "not-requested",
+    "productionObservation": "not-requested"
+  }
+}

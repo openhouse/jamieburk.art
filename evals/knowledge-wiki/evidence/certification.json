@@ -1,0 +1,22 @@
+{
+  "id": "knowledge-wiki-foundation-D-certification",
+  "certifiedAt": "2026-07-19",
+  "profile": "foundation_ready",
+  "candidateFingerprint": "sha256:43627c5f73e80ec26a09cd2e79e3645da71650cc84e211c1f20515860a363e8b",
+  "contractFingerprint": "sha256:dd6e660720efc391078459b6ff72dd393f44f1dd3ba324eb782abfd3529179ae",
+  "consecutivePasses": 2,
+  "unchangedCandidate": true,
+  "independentJudgments": [
+    "architecture-editorial",
+    "systems-public-safety"
+  ],
+  "automatedResult": "pass",
+  "manualAuthority": {
+    "humanNavigationStudy": "not-requested",
+    "collaboratorConsent": "not-requested",
+    "rightsClearance": "human-blocked",
+    "editorialApproval": "not-requested",
+    "productionObservation": "not-requested"
+  },
+  "stopReason": "The exact candidate met every automated foundation gate twice consecutively; further automation would not resolve the remaining human authority gates."
+}

@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "preparedAt": "2026-07-16",
+  "governingBranch": "feature/knowledge-c",
+  "principle": "Preserve every distinct capability through an explicit disposition while maintaining one canonical knowledge and evaluation architecture.",
+  "branches": [
+    {
+      "branch": "feature/evals-A",
+      "sourceCommit": "3757c4f529cc05d169f30ec059b13bea24cc75d1",
+      "decisions": [
+        {"capability":"separate launch, knowledge, and portfolio-effectiveness suites","artifact":"evals and scripts at the pinned branch head","disposition":"deduplicate","reason":"Feature/knowledge-c already separates portfolio readiness, knowledge lifecycle, and blind-spot diagnosis; the composite suite evaluates integration without replacing them.","verification":["composite contract canonical_architecture gate","npm run test:composite"]},
+        {"capability":"visible source receipt and evidence artifacts","artifact":"knowledge intake and evidence coverage records","disposition":"adapt","canonicalDestination":"docs/knowledge-bank/lifecycle/history.jsonl","reason":"An append-only receipt records future intake while canonical source and claim records stay in records.ts.","verification":["npm run test:knowledge-history","npm run query:knowledge -- --history-id HIST-2026-07-16-EVALS-FAMILY-INTAKE"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-B",
+      "sourceCommit": "67fc30427e544199540f81d6b50cf94ef8101f47",
+      "decisions": [
+        {"capability":"semantic mutation guards for role, metric, and attribution inflation","artifact":"eval and batch mutation tests","disposition":"adapt","canonicalDestination":"evals/composite-integration/fixtures/semantic-mutations.json","reason":"Fifteen small adversarial fixtures exercise the general failure modes without copying a parallel batch architecture.","verification":["every required semantic mutation is rejected"]},
+        {"capability":"batch-specific knowledge registries","artifact":"apps/www/src/data/knowledge-bank/*-batch-*.ts","disposition":"reject","reason":"Copying batch registries would compete with the canonical C records and lifecycle structure.","verification":["canonical_architecture gate","forbidden competing architecture check"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-C",
+      "sourceCommit": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
+      "decisions": [
+        {"capability":"governing portfolio, knowledge, and blind-spot eval architecture","artifact":"evals/portfolio-readiness, evals/knowledge-lifecycle, evals/blind-spots","disposition":"adopt","canonicalDestination":"evals/","reason":"This is the accepted, passing backbone from which feature/knowledge-c was created.","verification":["npm run evals:application","npm run evals:knowledge","blind-spot diagnostic"]},
+        {"capability":"candidate-bound Chad, Morse, and Sack lenses","artifact":"evals/portfolio-readiness/*-lens-judge.md","disposition":"adopt","canonicalDestination":"evals/portfolio-readiness/","reason":"The lenses are already first-class application hard gates and should not be recreated.","verification":["npm run test:evals","npm run evals:application"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-D",
+      "sourceCommit": "5a7095ffc8e064c5fff8a5acfb114e04f7114a15",
+      "decisions": [
+        {"capability":"public evidence presentation and responsive accessibility","artifact":"PublicArtifactFigure and compact case-study contrast changes","disposition":"deduplicate","reason":"The current C application candidate already passes its responsive-accessibility gate; no additional public UI change is justified by a failing criterion in this cycle.","verification":["responsive_accessibility hard gate","npm run evals:application"]},
+        {"capability":"rights-reviewed visual evidence closure","artifact":"visual-evidence inventory and public artifact paths","disposition":"defer","reason":"The current diagnostic correctly blocks visual closure until exact assets, rights, credits, context, and alt text are reviewed.","verification":["visual-evidence-coverage remains blocked","no unapproved media in public registry"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-E",
+      "sourceCommit": "d7d8e0d050b6a8c481fa5aaf2429d6427aa886ea",
+      "decisions": [
+        {"capability":"explicit publishing and human governance layers","artifact":"publishing governance and independent launch assessment","disposition":"adapt","canonicalDestination":"evals/composite-integration/evidence/governance.json","reason":"The composite records deterministic, model, human, rights, production, and Jamie-approval layers separately.","verification":["governance keeps human and operational approvals externally evidenced"]},
+        {"capability":"corroboration and media provenance registers","artifact":"corroboration and media registers","disposition":"deduplicate","reason":"Current source records already preserve support, non-support, visibility, rights, consent, and display status.","verification":["npm run knowledge-bank","npm run evals:knowledge"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-F",
+      "sourceCommit": "ba74618558e55a836d9a73b5293f6fdb45e684ff",
+      "decisions": [
+        {"capability":"proof-debt and blind-spot work queue","artifact":"proof-debt and blind-spot register","disposition":"adapt","canonicalDestination":"evals/blind-spots/suite.json","reason":"The C diagnostic already distinguishes blocked, partial, failed, and closed conditions and adds promotion discipline for mature unused claims.","verification":["npm run evals:blind-spots -w @jamie-burkart/www","diagnostic PASS with closure OPEN"]},
+        {"capability":"a second standalone deficit registry","artifact":"branch-specific proof-debt files","disposition":"reject","reason":"A parallel deficit registry would drift from the canonical blind-spot and research-inquiry records.","verification":["canonical_architecture gate"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-G",
+      "sourceCommit": "d97055d72d794b9ecfd338e10277e4feb14ea918",
+      "decisions": [
+        {"capability":"small reproducible fixtures and readiness ledgers","artifact":"mission classifiers, fixtures, and promotion slate","disposition":"adapt","canonicalDestination":"evals/composite-integration/fixtures/semantic-mutations.json","reason":"Compact fixtures provide repeatable failure evidence while the current promotion discipline remains canonical.","verification":["npm run test:composite","promotion-discipline blind-spot result"]},
+        {"capability":"photo discovery feedback loop","artifact":"photo loop and visual QA records","disposition":"defer","reason":"The concept is valuable, but no rights-reviewed asset set exists for this exact candidate.","verification":["rights-review governance layer remains blocked"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-H",
+      "sourceCommit": "934c1bdff4a478da56fde3a125d905e7e326b6f2",
+      "decisions": [
+        {"capability":"blind-reader and hiring-reader validation","artifact":"blind-reader protocol and release/readability evidence","disposition":"adapt","canonicalDestination":"evals/blind-spots/suite.json","reason":"The C suite requires five target-role readers and refuses to infer human behavior from LLM review.","verification":["human-reader-validation remains blocked without external evidence"]},
+        {"capability":"agency and collective-credit review","artifact":"Council transcript close reading and public-copy checks","disposition":"deduplicate","reason":"Current claim boundaries, knowledge tests, and Chad lens already enforce specific individual role within collective work.","verification":["npm run test:knowledge-lifecycle","npm run evals:application"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-I",
+      "sourceCommit": "793f7262cd3df8d7401d9b3e0f8209240d5fa640",
+      "decisions": [
+        {"capability":"candidate and contract fingerprints","artifact":"adversarial policy baselines and hybrid scorecards","disposition":"adapt","canonicalDestination":"scripts/run-composite-integration-evals.mjs","reason":"The composite binds baselines and independent judgments to separate candidate and contract fingerprints.","verification":["candidate-bound judgments reject stale candidate and contract hashes"]},
+        {"capability":"projection-binding and correction mutations","artifact":"policy and mutation fixtures","disposition":"adapt","canonicalDestination":"evals/composite-integration/fixtures/semantic-mutations.json","reason":"Generalized fixtures catch attribution, stage, evidence-role, anti-claim, and protected-projection drift.","verification":["every required semantic mutation is rejected"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-J",
+      "sourceCommit": "7e1b758b416bbe7c221f601e331696d95515c593",
+      "decisions": [
+        {"capability":"baseline, iteration, certification, and stop audit trail","artifact":"recursive run records and scoring scripts","disposition":"adapt","canonicalDestination":"evals/composite-integration/baselines and evals/composite-integration/runs","reason":"The cycle preserves a failing baseline, candidate-bound passing runs, and an explicit stop record without importing redundant historical reports.","verification":["baseline record exists","two exact-candidate passing run records","final stop record"]},
+        {"capability":"full branch-specific generated result history","artifact":"large run artifact set","disposition":"defer","reason":"Only records required to reproduce this integration belong in the reviewable composite PR.","verification":["integration delta reviewability gate"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-K",
+      "sourceCommit": "5b0cbcd1a7f913d2281c671e46903ad997a743f5",
+      "decisions": [
+        {"capability":"append-only intake, amendment, retirement, and promotion history","artifact":"append-only-history.mjs and JSONL governance records","disposition":"adapt","canonicalDestination":"scripts/lib/knowledge-history.mjs","reason":"A generic event stream adds operability around the C registry without becoming a second source of factual truth.","verification":["npm run test:knowledge-history","npm run check:knowledge-history"]},
+        {"capability":"source-to-claim-to-projection query tooling","artifact":"query-knowledge-lifecycle.mjs","disposition":"adapt","canonicalDestination":"scripts/query-knowledge-lifecycle.mjs","reason":"A redacted read-only query makes the canonical graph usable without exposing protected locators.","verification":["npm run query:knowledge -- --project callnyc","query output leak test"]},
+        {"capability":"second lifecycle schema","artifact":"lifecycle-schema.ts","disposition":"reject","reason":"The C schema already governs intake, sources, claims, inquiries, corrections, pages, and press collections.","verification":["canonical_architecture gate"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-L",
+      "sourceCommit": "68846b1f0a8672ff80598a7fef50ce5343c3e004",
+      "decisions": [
+        {"capability":"present-tense offer, outcome adoption, artistic continuity, and future-opportunity composition","artifact":"composition briefs and public-page changes","disposition":"deduplicate","reason":"The current application candidate already passes role clarity, role fit, reader effort, Chad, Morse, and Sack criteria; no public rewrite is supported by a failing eval in this cycle.","verification":["npm run evals:application"]},
+        {"capability":"collaborator corroboration register","artifact":"collaborator-corroboration-register.json","disposition":"defer","reason":"Corroboration requires actual collaborator contributions and permission; it cannot be manufactured during code integration.","verification":["human and collaborator evidence remains external"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-M",
+      "sourceCommit": "289dd4499eb3e7b78bc16b380a02ac180dca35bb",
+      "decisions": [
+        {"capability":"paired batch/development records and broad corpus accounting","artifact":"*-batch and *-development modules","disposition":"deduplicate","reason":"The C lifecycle records and archive-production modules already preserve recoverable population, method, gaps, source role, and projection boundaries without paired duplicate registries.","verification":["archive-denominator-integrity blind-spot result","89 knowledge lifecycle tests"]},
+        {"capability":"PDF readiness tooling in CI","artifact":"workflow package installation","disposition":"defer","reason":"The current local application eval validates the approved PDF; CI changes are outside the smallest composite integration patch unless the existing remote check fails.","verification":["resume_consistency hard gate"]}
+      ]
+    },
+    {
+      "branch": "feature/evals-N",
+      "sourceCommit": "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe",
+      "decisions": [
+        {"capability":"deterministic, model, human, rights, production, and approval separation","artifact":"human launch QA and blind-spot human status","disposition":"adapt","canonicalDestination":"evals/composite-integration/evidence/governance.json","reason":"The composite hard gate validates every layer and forbids external layers from passing without external evidence IDs.","verification":["governance keeps human and operational approvals externally evidenced"]},
+        {"capability":"artistic continuity and outcome-transfer maps","artifact":"docs/evals/artistic-continuity-map.md and outcome-transfer-matrix.md","disposition":"deduplicate","reason":"The existing Morse and Sack traces preserve artistic continuity, while source-backed public claims and project records preserve outcomes without another map.","verification":["morse_lens_review","sack_lens_review","npm run evals:knowledge"]},
+        {"capability":"human launch and hiring-reader completion","artifact":"human-launch-qa.md and hiring-reader-response-loop.md","disposition":"defer","reason":"Protocols can be preserved, but completion requires real target-role readers and Jamie's exact-candidate approval.","verification":["human-reader-validation remains blocked","jamie-approval governance layer remains blocked"]}
+      ]
+    }
+  ]
+}

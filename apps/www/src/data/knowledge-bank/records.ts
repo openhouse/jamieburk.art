@@ -1,7 +1,817 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import {
+  lifecycleClaims,
+  lifecycleResearchInquiries,
+  lifecycleSources
+} from "./lifecycle-records.ts";
+import {
+  icloudArchiveClaims,
+  icloudArchiveIntakes,
+  icloudArchiveProjects,
+  icloudArchiveResearchInquiries,
+  icloudArchiveSources
+} from "./icloud-archive-production.ts";
+import {
+  googleDriveArchiveClaims,
+  googleDriveArchiveIntakes,
+  googleDriveArchiveResearchInquiries,
+  googleDriveArchiveSources
+} from "./google-drive-archive-production.ts";
+import {
+  socialArchiveClaims,
+  socialArchiveIntakes,
+  socialArchiveProjects,
+  socialArchiveResearchInquiries,
+  socialArchiveSources
+} from "./social-archive-production.ts";
+import {
+  nycArtcFacebookEventClaims,
+  nycArtcFacebookEventEntities,
+  nycArtcFacebookEventIntakes,
+  nycArtcFacebookEventResearchInquiries,
+  nycArtcFacebookEventSources
+} from "./facebook-events-archive-production.ts";
+import {
+  personalWowlistFacebookEventClaims,
+  personalWowlistFacebookEventIntakes,
+  personalWowlistFacebookEventResearchInquiries,
+  personalWowlistFacebookEventSources
+} from "./personal-wowlist-facebook-events-archive-production.ts";
+import {
+  wowlistFacebookPostClaims,
+  wowlistFacebookPostIntakes,
+  wowlistFacebookPostResearchInquiries,
+  wowlistFacebookPostSources
+} from "./wowlist-facebook-posts-archive-production.ts";
+import {
+  nycArtcFacebookPostClaims,
+  nycArtcFacebookPostIntakes,
+  nycArtcFacebookPostResearchInquiries,
+  nycArtcFacebookPostSources
+} from "./nycartc-facebook-posts-archive-production.ts";
+import {
+  kcSpacesFundFacebookPostClaims,
+  kcSpacesFundFacebookPostIntakes,
+  kcSpacesFundFacebookPostResearchInquiries,
+  kcSpacesFundFacebookPostSources,
+  kcSpacesFundProject
+} from "./kcspacesfund-facebook-posts-archive-production.ts";
+import {
+  personalFacebookPostClaims,
+  personalFacebookPostIntakes,
+  personalFacebookPostResearchInquiries,
+  personalFacebookPostSources
+} from "./personal-facebook-posts-archive-production.ts";
+import {
+  campaignPressCollections,
+  campaignPressIntakes,
+  campaignPressSources
+} from "./press-catalog.ts";
+import {
+  clevelandAveProject,
+  kcTownHallClaims,
+  kcTownHallCorrections,
+  kcTownHallInquiry,
+  kcTownHallNeighborhoodInquiries,
+  kcTownHallTransitionInquiry,
+  kcTownHallIntakes,
+  kcTownHallPage,
+  kcTownHallProject,
+  kcTownHallSources,
+  tiredOfTiresProject
+} from "./kc-town-hall-council-action.ts";
+import {
+  nycArtcInstitutionalValueClaims,
+  nycArtcInstitutionalValueEntities,
+  nycArtcInstitutionalValueIntakes,
+  nycArtcInstitutionalValueResearchInquiries,
+  nycArtcInstitutionalValueSources
+} from "./nycartc-institutional-value.ts";
+import {
+  relationalInfrastructureClaims,
+  relationalInfrastructureIntakes,
+  relationalInfrastructureResearchInquiries,
+  relationalInfrastructureSources
+} from "./relational-infrastructure-archive-production.ts";
+import {
+  nycArtcSharedFolderClaims,
+  nycArtcSharedFolderIntakes,
+  nycArtcSharedFolderResearchInquiries,
+  nycArtcSharedFolderSources
+} from "./nycartc-shared-folder-archive-production.ts";
 
 const knowledgeBankInput = {
+  intakeItems: [
+    ...nycArtcSharedFolderIntakes,
+    ...relationalInfrastructureIntakes,
+    ...nycArtcInstitutionalValueIntakes,
+    ...personalFacebookPostIntakes,
+    ...kcSpacesFundFacebookPostIntakes,
+    ...nycArtcFacebookPostIntakes,
+    ...wowlistFacebookPostIntakes,
+    ...googleDriveArchiveIntakes,
+    ...socialArchiveIntakes,
+    ...personalWowlistFacebookEventIntakes,
+    ...nycArtcFacebookEventIntakes,
+    ...icloudArchiveIntakes,
+    ...campaignPressIntakes,
+    ...kcTownHallIntakes,
+    {
+      id: "INT-2026-07-13-PITCH-RAFT",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "The Pitch article about Jamie's 2007 experiential raft expedition and its relationship to Kansas City transportation history and the Missouri River.",
+      submittedUrl: "https://www.thepitchkc.com/when-artists-turn-huck-finn/",
+      projectIds: ["water-publics"],
+      entityIds: ["missouri-river"],
+      dateHints: ["2007-08-09"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-WATER-PITCH-HUCK-FINN-2007"],
+      claimIds: ["CLM-WATER-RAFT-ORIGINATION"],
+      inquiryIds: []
+    },
+    {
+      id: "INT-2026-07-13-CHARLOTTE-STREET-WATER",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "Charlotte Street program page for Great Accommodations, including its participatory river-city premise, outreach, programs, installation, and Jamie's account of the earlier raft journey.",
+      submittedUrl: "https://charlottestreet.org/event/great-accommodations-with-jamie-burkart-imagining-lifestyles-for-cities-on-the-water/",
+      projectIds: ["water-publics"],
+      entityIds: ["charlotte-street-foundation", "missouri-river", "mississippi-river"],
+      dateHints: ["2009-09-01", "2009-10-03"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-WATER-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009"],
+      claimIds: [
+        "CLM-WATER-RAFT-VOYAGE",
+        "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM"
+      ],
+      inquiryIds: []
+    },
+    {
+      id: "INT-2026-07-16-KC-STAR-RAFT",
+      kind: "artifact",
+      capturedAt: "2026-07-16",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "A locally preserved two-page reproduction of The Kansas City Star's November 15, 2007 front-page report on Release Yourself onto the Water Until It Tastes of Salt. The newspaper pages and photographs remain outside the public repository.",
+      projectIds: ["water-publics"],
+      entityIds: [
+        "kansas-city-star",
+        "libby-hendon",
+        "laura-mattingly",
+        "missouri-river",
+        "mississippi-river"
+      ],
+      dateHints: ["2007-11-15"],
+      sensitivity: "protected-reference",
+      availability: "local-private",
+      status: "promoted",
+      sourceIds: ["SRC-WATER-KC-STAR-GO-WITH-FLOW-2007"],
+      claimIds: [
+        "CLM-WATER-RAFT-ORIGINATION",
+        "CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE",
+        "CLM-WATER-RAFT-RECYCLED-BICYCLE-DESIGN",
+        "CLM-WATER-RAFT-CIVIC-PREMISE"
+      ],
+      inquiryIds: [],
+      protectedLocatorId: "kc-star-raft-article-pdf-2007"
+    },
+    {
+      id: "INT-2026-07-16-PITCH-RAFT-PART-III",
+      kind: "url",
+      capturedAt: "2026-07-16",
+      submittedBy: "Codex source-discovery review",
+      publicSafeDescription: "The Pitch's November 12, 2007 contemporaneous update on the raft project's collective crew, recycled-material construction, route, Coast Guard interruption, and travel beyond 1,000 miles.",
+      submittedUrl: "https://www.thepitchkc.com/artists-turned-huck-finn-part-iii/",
+      projectIds: ["water-publics"],
+      entityIds: [
+        "libby-hendon",
+        "laura-mattingly",
+        "missouri-river",
+        "mississippi-river"
+      ],
+      dateHints: ["2007-11-12"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-WATER-PITCH-HUCK-FINN-PART-III-2007"],
+      claimIds: [
+        "CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE",
+        "CLM-WATER-RAFT-RECYCLED-BICYCLE-DESIGN"
+      ],
+      inquiryIds: []
+    },
+    {
+      id: "INT-2026-07-13-GOOD-TIMES-OPEN-HOUSE",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "Good Times reporting on Jamie's 2006 Porter Bridge Gallery Open House as a ten-day experiment in communal living, facilitation, participation, and public documentation.",
+      submittedUrl: "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
+      projectIds: ["open-house"],
+      entityIds: ["porter-bridge-gallery"],
+      dateHints: ["2006-06-28"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006"],
+      claimIds: ["CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE"],
+      inquiryIds: []
+    },
+    {
+      id: "INT-2026-07-13-GOTHAMIST-CABARET",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "Gothamist reporting on Jamie's fire-code study groups, Cabaret Law repeal advocacy, and affiliation with NYC Artist Coalition.",
+      submittedUrl: "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-cabaret-law"],
+      dateHints: ["2017-06-19"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-GOTHAMIST-CABARET-2017"],
+      claimIds: ["CLM-NYCARTC-FOUNDING-ROLE", "CLM-NYCARTC-CABARET-LAW-ADVOCACY"],
+      inquiryIds: ["INQ-NYCARTC-CABARET-REPEAL-CAUSALITY"]
+    },
+    {
+      id: "INT-2026-07-13-NPR-NIGHTLIFE",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "NPR reporting on NYC Artist Coalition participation in Let NYC Dance, Jamie's founding affiliation, the Office of Nightlife, and the 2017 Cabaret Law campaign.",
+      submittedUrl: "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife?renderPlatform=nprone_ios&unified=true",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "let-nyc-dance", "nyc-cabaret-law", "nyc-office-of-nightlife"],
+      dateHints: ["2017-09-20"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-NPR-NIGHTLIFE-2017"],
+      claimIds: [
+        "CLM-NYCARTC-FOUNDING-ROLE",
+        "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+        "CLM-NYC-OFFICE-NIGHTLIFE-ESTABLISHMENT"
+      ],
+      inquiryIds: ["INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-CABARET-REPEAL-CAUSALITY"]
+    },
+    {
+      id: "INT-2026-07-13-GREENE-HILL-NEWSLETTER",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "Greene Hill Food Co-op Q&A with Jamie Burkart and Julia Fredenberg covering NYC Artist Coalition, Cabaret Law advocacy, and a September 28 Office of Nightlife town-hall invitation.",
+      submittedUrl: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition"],
+      dateHints: ["2017-09-28", "2017-12-19"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-GREENE-HILL-NEWSLETTER-2017"],
+      claimIds: [
+        "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+        "CLM-NYCARTC-SEPTEMBER-TOWN-HALL-INVITATION"
+      ],
+      inquiryIds: [
+        "INQ-NYCARTC-GREENE-HILL-RECOVERY",
+        "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"
+      ]
+    },
+    {
+      id: "INT-2026-07-13-NYC-COUNCIL-NIGHTLIFE",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Official New York City Council press release describing the August 24, 2017 vote on Introduction 1688-A to establish an Office of Nightlife and Nightlife Advisory Board.",
+      submittedUrl: "https://council.nyc.gov/press/2017/08/24/1453/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["new-york-city-council", "nyc-office-of-nightlife"],
+      dateHints: ["2017-08-24"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYC-COUNCIL-OFFICE-NIGHTLIFE-2017"],
+      claimIds: [
+        "CLM-NYC-OFFICE-NIGHTLIFE-ESTABLISHMENT",
+        "CLM-ESPINAL-NYCARTC-SPONSORED-MEASURES"
+      ],
+      inquiryIds: ["INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE"]
+    },
+    {
+      id: "INT-2026-07-13-NYC-COUNCIL-CABARET-VOTE",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Official New York City Council press release describing the October 31, 2017 vote on Introduction 1652-A to repeal the 1926 Cabaret Law while retaining specified security measures.",
+      submittedUrl: "https://council.nyc.gov/press/2017/10/31/1541/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["new-york-city-council", "nyc-cabaret-law"],
+      dateHints: ["2017-10-31"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYC-COUNCIL-CABARET-VOTE-2017"],
+      claimIds: [
+        "CLM-NYC-CABARET-LAW-COUNCIL-VOTE",
+        "CLM-ESPINAL-NYCARTC-SPONSORED-MEASURES"
+      ],
+      inquiryIds: ["INQ-NYCARTC-CABARET-REPEAL-CAUSALITY"]
+    },
+    {
+      id: "INT-2026-07-13-BNB-DIY-SPACES",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Bedford + Bowery reporting on an early NYC Artist Coalition meeting, Jamie's organizer role, and his attributed count of mutual-aid network signups.",
+      submittedUrl: "https://bedfordandbowery.com/2017/02/6-things-to-know-about-making-diy-spaces-work/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition"],
+      dateHints: ["2017-02-07"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-BNB-DIY-SPACES-2017"],
+      claimIds: [
+        "CLM-NYCARTC-EARLY-ORGANIZER-ROLE",
+        "CLM-NYCARTC-MUTUAL-AID-SIGNUPS"
+      ],
+      inquiryIds: []
+    },
+    {
+      id: "INT-2026-07-13-MIXMAG-CABARET-HEARING",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Mixmag reporting from a 2017 City Council hearing that identifies Jamie as an NYC Artist Coalition member and records his Cabaret Law testimony.",
+      submittedUrl: "https://mixmag.net/feature/let-nyc-dance-the-battle-to-save-new-york-citys-nightlife",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-cabaret-law", "new-york-city-council"],
+      dateHints: ["2017-09-20"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017"],
+      claimIds: [
+        "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+        "CLM-NYCARTC-CABARET-HEARING-TESTIMONY"
+      ],
+      inquiryIds: ["INQ-NYCARTC-CABARET-REPEAL-CAUSALITY"]
+    },
+    {
+      id: "INT-2026-07-13-NYCARTC-PRIORITIES",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "NYC Artist Coalition's public 2017 priorities page connecting mutual aid, Cabaret Law repeal, M.A.R.C.H. transparency, Office of Nightlife recommendations, and commercial affordability.",
+      submittedUrl: "https://nycartc.com/priorities/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: [
+        "nyc-artist-coalition",
+        "nyc-cabaret-law",
+        "nyc-office-of-nightlife",
+        "talks-not-raids"
+      ],
+      dateHints: ["2017-12-02"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-PRIORITIES-2017"],
+      claimIds: ["CLM-NYCARTC-PUBLIC-PRIORITIES"],
+      inquiryIds: [
+        "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE",
+        "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"
+      ]
+    },
+    {
+      id: "INT-2026-07-13-NIGHT-MAYOR-LETTER",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "NYC Artist Coalition's September 2017 letter to city cultural officials with Office of Nightlife recommendations and an October 11 Market Hotel town-hall invitation.",
+      submittedUrl: "https://savenycspaces.nycartc.com/download/Night-Mayor-Letter-MOME-9-23-17.pdf",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-office-of-nightlife", "market-hotel"],
+      dateHints: ["2017-09-08", "2017-10-11"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017"],
+      claimIds: [
+        "CLM-NYCARTC-OFFICE-NIGHTLIFE-RECOMMENDATIONS",
+        "CLM-NYCARTC-OCTOBER-TOWN-HALL"
+      ],
+      inquiryIds: [
+        "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE",
+        "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"
+      ]
+    },
+    {
+      id: "INT-2026-07-13-BNB-NIGHT-MAYOR-TOWN-HALL",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Bedford + Bowery's contemporaneous report on the October 11, 2017 Office of Nightlife town hall spearheaded by NYC Artist Coalition, with Jamie among coalition participants.",
+      submittedUrl: "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: [
+        "nyc-artist-coalition",
+        "nyc-office-of-nightlife",
+        "market-hotel",
+        "new-york-city-council"
+      ],
+      dateHints: ["2017-10-11", "2017-10-12"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017"],
+      claimIds: [
+        "CLM-NYCARTC-OCTOBER-TOWN-HALL",
+        "CLM-ESPINAL-NYCARTC-TOWN-HALL-PARTICIPATION"
+      ],
+      inquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"]
+    },
+    {
+      id: "INT-2026-07-13-NYC-NIGHTLIFE-REPORT",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "The Office of Nightlife's 2018-2021 report, which identifies a March 2018 NYC Artist Coalition town hall introducing the first nightlife director to broad stakeholders.",
+      submittedUrl: "https://www.nyc.gov/assets/sbs/downloads/pdf/about/reports/nightlife-report-june-2021.pdf",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-office-of-nightlife"],
+      dateHints: ["2018-03", "2021-06"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYC-NIGHTLIFE-REPORT-2021"],
+      claimIds: ["CLM-NYCARTC-MARCH-2018-TOWN-HALL"],
+      inquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"]
+    },
+    {
+      id: "INT-2026-07-13-COUNCIL-SBJSA-TRANSCRIPT",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Official October 22, 2018 City Council Small Business hearing transcript documenting Jamie's NYC Artist Coalition testimony on cultural-space safety, commercial affordability, and Intro 737.",
+      submittedUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: [
+        "nyc-artist-coalition",
+        "new-york-city-council",
+        "small-business-jobs-survival-act"
+      ],
+      dateHints: ["2018-10-22"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018"],
+      claimIds: ["CLM-NYCARTC-SBJSA-TESTIMONY-2018"],
+      inquiryIds: []
+    },
+    {
+      id: "INT-2026-07-13-TALKS-NOT-RAIDS",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "The public Talks Not Raids campaign surface, including its M.A.R.C.H. explainer, call script, Council-support tracker, coalition credits, and media kit.",
+      submittedUrl: "https://talksnotraids.com/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "talks-not-raids"],
+      dateHints: ["2018 onward"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN"],
+      claimIds: ["CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"],
+      inquiryIds: ["INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]
+    },
+    {
+      id: "INT-2026-07-13-COUNCIL-INTRO-1156",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Official City Council record for Intro 1156-2018, enacted as Local Law 220 of 2019 with M.A.R.C.H. reporting and notice provisions.",
+      submittedUrl: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["new-york-city-council", "talks-not-raids", "local-law-220-2019"],
+      dateHints: ["2018-10-17", "2019-12-15"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"],
+      claimIds: ["CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME"],
+      inquiryIds: ["INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]
+    },
+    {
+      id: "INT-2026-07-13-SAVE-NYC-SPACES",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "The public Save NYC Spaces campaign surface, including coalition credits, Jamie's attributed statement, Office of Nightlife priorities, press links, and downloadable media assets.",
+      submittedUrl: "https://savenycspaces.nycartc.com/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-office-of-nightlife", "save-nyc-spaces"],
+      dateHints: ["2017 onward"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN"],
+      claimIds: ["CLM-SAVE-NYC-SPACES-PUBLIC-CAMPAIGN"],
+      inquiryIds: ["INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE"]
+    },
+    {
+      id: "INT-2026-07-13-MEMORY-CALLNYC-COUNCIL-ENGAGEMENT",
+      kind: "metric",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "Research lead concerning engagement by New York City Council member accounts with the public CallNYC social-media account.",
+      projectIds: ["callnyc"],
+      entityIds: ["new-york-city-council"],
+      dateHints: ["2016"],
+      sensitivity: "public-safe",
+      availability: "unknown",
+      status: "deferred",
+      sourceIds: [],
+      claimIds: [],
+      inquiryIds: ["INQ-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"],
+      dispositionReason: "Requires a bounded account list, time window, metric definitions, capture method, and missing-post analysis before any number is publishable."
+    },
+    {
+      id: "INT-2026-07-13-MEMORY-NYCARTC-OFFICE-NIGHTLIFE-ROLE",
+      kind: "memory",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "Jamie's memory of an instrumental coalition role in creating New York City's first Office of Nightlife.",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-office-of-nightlife"],
+      dateHints: ["2017"],
+      sensitivity: "public-safe",
+      availability: "unknown",
+      status: "deferred",
+      sourceIds: [],
+      claimIds: [],
+      inquiryIds: ["INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE"],
+      dispositionReason: "Context and institutional outcome are sourced; Jamie's exact contribution requires additional public or collaborator evidence."
+    },
+    {
+      id: "INT-2026-07-13-MEMORY-NYCARTC-TOWN-HALLS",
+      kind: "memory",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "Jamie's account of helping establish and produce a recurring coalition participation system that connected cultural-space meetings, practical support, public event pages, hearings, and campaign action.",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-office-of-nightlife"],
+      dateHints: ["2017 onward"],
+      sensitivity: "public-safe",
+      availability: "unknown",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026"],
+      claimIds: ["CLM-FB-NYCARTC-PARTICIPATION-SYSTEM"],
+      inquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-FB-NYCARTC-EVENT-POPULATION"]
+    },
+    {
+      id: "INT-2026-07-13-MEMORY-TALKS-NOT-RAIDS-MARCH",
+      kind: "memory",
+      capturedAt: "2026-07-13",
+      submittedBy: "Jamie Burkart",
+      publicSafeDescription: "Jamie's memory of Talks Not Raids work seeking transparency about M.A.R.C.H. enforcement operations and contributing to their eventual disbandment.",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition"],
+      dateHints: ["2017 onward"],
+      sensitivity: "public-safe",
+      availability: "unknown",
+      status: "deferred",
+      sourceIds: [],
+      claimIds: [],
+      inquiryIds: ["INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"],
+      dispositionReason: "Requires public campaign artifacts, enforcement records, chronology, the official disposition of M.A.R.C.H., and evidence connecting coalition advocacy to the outcome."
+    }
+  ],
+  entities: [
+    ...nycArtcInstitutionalValueEntities,
+    ...nycArtcFacebookEventEntities,
+    {
+      id: "charlotte-street-foundation",
+      kind: "organization",
+      name: "Charlotte Street Foundation",
+      aliases: ["Charlotte Street"],
+      publicDescription: "Kansas City arts organization that presented Great Accommodations in 2009."
+    },
+    {
+      id: "fair-rent-nyc-campaign",
+      kind: "campaign",
+      name: "Fair Rent NYC",
+      aliases: ["FairRentNYC"],
+      publicDescription: "Coalition campaign and public web surface advocating Commercial Rent Stabilization and storefront stability."
+    },
+    {
+      id: "let-nyc-dance",
+      kind: "campaign",
+      name: "Let NYC Dance",
+      aliases: [],
+      publicDescription: "Collective campaign banner used by organizations advocating Cabaret Law repeal."
+    },
+    {
+      id: "local-law-220-2019",
+      kind: "law",
+      name: "Local Law 220 of 2019",
+      aliases: ["Intro 1156-2018", "Introduction 1156"],
+      publicDescription: "New York City law requiring specified reporting and notice related to M.A.R.C.H. operations and nightlife-establishment inspections."
+    },
+    {
+      id: "market-hotel",
+      kind: "venue",
+      name: "Market Hotel",
+      aliases: [],
+      publicDescription: "Brooklyn venue that hosted a documented October 2017 Office of Nightlife town hall."
+    },
+    {
+      id: "kansas-city-star",
+      kind: "publication",
+      name: "The Kansas City Star",
+      aliases: ["Kansas City Star", "The Star"],
+      publicDescription: "Kansas City newspaper that published a November 2007 front-page report on the raft project."
+    },
+    {
+      id: "laura-mattingly",
+      kind: "person",
+      name: "Laura Mattingly",
+      aliases: [],
+      publicDescription: "Artist and journalist publicly named as one of the three raft crew members in contemporaneous reporting."
+    },
+    {
+      id: "libby-hendon",
+      kind: "person",
+      name: "Libby Hendon",
+      aliases: [],
+      publicDescription: "Artist publicly named as one of the three raft crew members in contemporaneous reporting."
+    },
+    {
+      id: "mississippi-river",
+      kind: "place",
+      name: "Mississippi River",
+      aliases: [],
+      publicDescription: "River in the publicly described route and river-city network of Jamie's water projects."
+    },
+    {
+      id: "missouri-river",
+      kind: "place",
+      name: "Missouri River",
+      aliases: [],
+      publicDescription: "Kansas City's historic waterway and an organizing subject of Jamie's raft and participatory projects."
+    },
+    {
+      id: "new-york-city-council",
+      kind: "organization",
+      name: "New York City Council",
+      aliases: ["NYC Council"],
+      publicDescription: "Municipal legislative body appearing in CallNYC and nightlife-policy records."
+    },
+    {
+      id: "nyc-artist-coalition",
+      kind: "organization",
+      name: "NYC Artist Coalition",
+      aliases: ["NYC Arts Coalition"],
+      publicDescription: "Artist and cultural-space coalition active in New York City civic and nightlife advocacy."
+    },
+    {
+      id: "nyc-cabaret-law",
+      kind: "law",
+      name: "New York City Cabaret Law",
+      aliases: ["Cabaret Law", "1926 Cabaret Law"],
+      publicDescription: "1926 licensing law targeted by a collective 2017 repeal campaign."
+    },
+    {
+      id: "nyc-office-of-nightlife",
+      kind: "public-office",
+      name: "New York City Office of Nightlife",
+      aliases: ["Office of Nightlife"],
+      publicDescription: "Municipal office established in 2017 to engage nightlife stakeholders and review industry issues."
+    },
+    {
+      id: "porter-bridge-gallery",
+      kind: "venue",
+      name: "Porter Bridge Gallery",
+      aliases: [],
+      publicDescription: "University of California, Santa Cruz gallery where Open House took place in 2006."
+    },
+    {
+      id: "save-nyc-spaces",
+      kind: "campaign",
+      name: "Save NYC Spaces",
+      aliases: [],
+      publicDescription: "Coalition campaign asking the Office of Nightlife to support small, diverse cultural spaces."
+    },
+    {
+      id: "small-business-jobs-survival-act",
+      kind: "law",
+      name: "Small Business Jobs Survival Act",
+      aliases: ["SBJSA", "Intro 737"],
+      publicDescription: "Commercial lease-renewal proposal discussed at the October 22, 2018 City Council Small Business hearing."
+    },
+    {
+      id: "talks-not-raids",
+      kind: "campaign",
+      name: "Talks Not Raids",
+      aliases: ["#TalksNotRaids"],
+      publicDescription: "Coalition campaign seeking transparency and notice around M.A.R.C.H. operations."
+    }
+  ],
+  projects: [
+    kcSpacesFundProject,
+    ...socialArchiveProjects,
+    ...icloudArchiveProjects,
+    kcTownHallProject,
+    tiredOfTiresProject,
+    clevelandAveProject,
+    {
+      id: "callnyc",
+      title: "CallNYC",
+      summary: "Independent civic-data prototype translating CouncilStat constituent-services records into resident-facing pathways.",
+      status: "historical",
+      period: { start: "2016", end: "2016" },
+      entityIds: [],
+      publicSurfaceCandidates: ["/work/callnyc"],
+      photoResearchPrompts: [
+        "Interfaces, working sessions, and public artifacts that show how CouncilStat records became resident pathways."
+      ]
+    },
+    {
+      id: "nyc-artist-coalition",
+      title: "NYC Artist Coalition",
+      summary: "Collective civic, cultural-space, nightlife, public-web, and policy-communications work in which Jamie contributed coalition-building and operating infrastructure.",
+      status: "ongoing",
+      period: { start: "2017" },
+      entityIds: [
+        "nyc-artist-coalition",
+        "nyc-department-cultural-affairs",
+        "create-nyc",
+        "tom-finkelpearl",
+        "rafael-espinal",
+        "let-nyc-dance",
+        "fair-rent-nyc-campaign",
+        "nyc-cabaret-law",
+        "nyc-office-of-nightlife",
+        "new-york-city-council",
+        "market-hotel",
+        "save-nyc-spaces",
+        "small-business-jobs-survival-act",
+        "talks-not-raids",
+        "local-law-220-2019"
+      ],
+      publicSurfaceCandidates: ["/work/fair-rent-nyc", "/work/technical-operations"],
+      photoResearchPrompts: [
+        "Public rallies, hearings, town halls, working sessions, campaign sites, and facilitation moments that show Jamie's role without converting collective work into solo credit.",
+        "The October 11, 2017 Market Hotel town hall, the March 2018 Office of Nightlife introduction, and the October 22, 2018 Small Business hearing, with event identity and participant rights verified.",
+        "Talks Not Raids and Save NYC Spaces interface captures that show issue explanation, council-support tracking, calls to action, coalition credit, and media assets."
+      ]
+    },
+    {
+      id: "open-house",
+      title: "Open House",
+      summary: "Ten-day 2006 participatory gallery experiment in communal living, shared responsibility, facilitation, and public documentation.",
+      status: "historical",
+      period: { start: "2006", end: "2006" },
+      entityIds: ["porter-bridge-gallery"],
+      publicSurfaceCandidates: [],
+      photoResearchPrompts: [
+        "Wide views of the inhabited gallery, public participation, shared making, facilitation, and contemporaneous documentation with participant rights reviewed."
+      ]
+    },
+    {
+      id: "water-publics",
+      title: "Water Publics",
+      summary: "Raft, installation, correspondence, and participatory programs using connected waterways to help city residents imagine civic and regional relationships.",
+      status: "historical",
+      period: { start: "2007", end: "2009" },
+      entityIds: ["charlotte-street-foundation", "missouri-river", "mississippi-river"],
+      publicSurfaceCandidates: [],
+      photoResearchPrompts: [
+        "The bicycle-powered raft, river encounters, correspondence, maps, installation components, public programs, and resident participation along connected waterways."
+      ]
+    }
+  ],
   sources: [
+    ...nycArtcSharedFolderSources,
+    ...relationalInfrastructureSources,
+    ...nycArtcInstitutionalValueSources,
+    ...personalFacebookPostSources,
+    ...kcSpacesFundFacebookPostSources,
+    ...nycArtcFacebookPostSources,
+    ...wowlistFacebookPostSources,
+    ...googleDriveArchiveSources,
+    ...socialArchiveSources,
+    ...personalWowlistFacebookEventSources,
+    ...nycArtcFacebookEventSources,
+    ...icloudArchiveSources,
+    ...kcTownHallSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -16,6 +826,12 @@ const knowledgeBankInput = {
       preferredPublicUrl: "archive",
       publicCitation: "Civic Hall announcement of a January 30, 2016, 1-3 p.m. New York City Council hackathon focused on constituent services.",
       publicNote: "The archived Civic Hall page preserves the embedded social post. It is not a recovered Civic Hall calendar listing or event-detail page.",
+      projectIds: ["callnyc"],
+      intakeIds: [],
+      reviewStatus: "reviewed",
+      reviewedAt: "2026-07-11",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"],
+      legacyImportedAt: "2026-07-11",
       supportsGenerally: ["January 30, 2016", "1-3 p.m.", "New York City Council hackathon", "constituent-services purpose"],
       doesNotEstablish: ["a recovered Civic Hall calendar listing", "a dedicated event-detail page", "the complete formal event title", "the agenda", "the participant roster"]
     },
@@ -33,6 +849,12 @@ const knowledgeBankInput = {
       preferredPublicUrl: "archive",
       publicCitation: "New York City Council event-day post from Civic Hall identifying the gathering as the Council's first CouncilStat hackathon.",
       publicNote: "The source supports the narrower 'first CouncilStat hackathon' wording, not a broader historical superlative.",
+      projectIds: ["callnyc"],
+      intakeIds: [],
+      reviewStatus: "reviewed",
+      reviewedAt: "2026-07-11",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"],
+      legacyImportedAt: "2026-07-11",
       supportsGenerally: ["January 30, 2016", "Civic Hall", "first CouncilStat hackathon"],
       doesNotEstablish: ["broader historical hackathon superlatives", "the full agenda", "a complete attendee list", "formal winners", "CallNYC as an official submission"]
     },
@@ -48,6 +870,12 @@ const knowledgeBankInput = {
       preferredPublicUrl: "asset",
       publicCitation: "NYC Council-branded promotional graphic reading 'New York City Council Hackathon' and displaying labs.council.nyc.",
       publicNote: "The graphic supports the visible event branding, not a longer formal registration title.",
+      projectIds: ["callnyc"],
+      intakeIds: [],
+      reviewStatus: "reviewed",
+      reviewedAt: "2026-07-11",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"],
+      legacyImportedAt: "2026-07-11",
       supportsGenerally: ["New York City Council Hackathon branding", "labs.council.nyc"],
       doesNotEstablish: ["a longer formal registration title", "the agenda", "breakout structure", "participant roster"],
       media: {
@@ -66,6 +894,12 @@ const knowledgeBankInput = {
       preservationStatus: "private",
       publicCitation: "Participant photograph showing a placard reading 'Digital District - Help improve City Council District office operations.'",
       publicNote: "The photograph remains outside the public repository pending rights, consent, and editorial review.",
+      projectIds: ["callnyc"],
+      intakeIds: [],
+      reviewStatus: "reviewed",
+      reviewedAt: "2026-07-11",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"],
+      legacyImportedAt: "2026-07-11",
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001",
       supportsGenerally: ["Digital District placard wording", "breakout-table context", "collaborative working setting"],
       doesNotEstablish: ["the official event title", "the facilitator", "the complete agenda", "the event start time", "the identity or consent status of all people depicted"],
@@ -93,6 +927,12 @@ const knowledgeBankInput = {
       preferredPublicUrl: "archive",
       publicCitation: "Miranda Neubauer, 'Website provides new information about council members' focus,' Politico New York, March 14, 2016.",
       publicNote: "The reporting connects Jamie to the January event, the fuller data release, and his independent development and iteration of CallNYC.",
+      projectIds: ["callnyc"],
+      intakeIds: [],
+      reviewStatus: "reviewed",
+      reviewedAt: "2026-07-11",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"],
+      legacyImportedAt: "2026-07-11",
       supportsGenerally: ["CallNYC existed", "Jamie's relationship to the project", "CouncilStat and event relationship", "press date and coverage"],
       doesNotEstablish: ["CallNYC as an official Council product", "CallNYC as a formal hackathon submission", "CallNYC as a documented winner"]
     },
@@ -108,6 +948,12 @@ const knowledgeBankInput = {
       preferredPublicUrl: "canonical",
       publicCitation: "Public CallNYC source repository.",
       publicNote: "The repository documents the surviving implementation of the independent, archived prototype.",
+      projectIds: ["callnyc"],
+      intakeIds: [],
+      reviewStatus: "reviewed",
+      reviewedAt: "2026-07-11",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"],
+      legacyImportedAt: "2026-07-11",
       supportsGenerally: ["project implementation", "surviving source code"],
       doesNotEstablish: ["official Council ownership", "formal hackathon submission status", "current resident-service guidance"]
     },
@@ -119,17 +965,41 @@ const knowledgeBankInput = {
       preservationStatus: "private",
       publicCitation: "Documented 2026 Wayback/CDX review of Civic Hall event captures.",
       publicNote: "The bounded search recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
+      projectIds: ["callnyc"],
+      intakeIds: [],
+      reviewStatus: "reviewed",
+      reviewedAt: "2026-07-11",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"],
+      legacyImportedAt: "2026-07-11",
       protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001",
       supportsGenerally: ["bounded negative search finding", "research method and limitations"],
       doesNotEstablish: ["that no event page ever existed"]
-    }
+    },
+    ...lifecycleSources,
+    ...campaignPressSources
   ],
   claims: [
+    ...nycArtcSharedFolderClaims,
+    ...relationalInfrastructureClaims,
+    ...nycArtcInstitutionalValueClaims,
+    ...personalFacebookPostClaims,
+    ...kcSpacesFundFacebookPostClaims,
+    ...nycArtcFacebookPostClaims,
+    ...wowlistFacebookPostClaims,
+    ...nycArtcFacebookEventClaims,
+    ...googleDriveArchiveClaims,
+    ...socialArchiveClaims,
+    ...personalWowlistFacebookEventClaims,
+    ...icloudArchiveClaims,
+    ...kcTownHallClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
+      claimType: "chronology",
       internalClaim: "The New York City Council constituent-services hackathon took place at Civic Hall on January 30, 2016, from 1-3 p.m.",
       status: "confirmed",
+      publicationStatus: "public",
+      editorialStatus: "active",
       projections: [{ key: "case-study", text: "On January 30, 2016, the New York City Council held a 1-3 p.m. hackathon at Civic Hall focused on constituent services.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [
         { sourceId: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", relationship: "direct-support", supports: ["date", "time", "Council event", "constituent-services purpose"], confidence: "high", renderCitation: true },
@@ -141,20 +1011,26 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
       project: "callnyc",
+      claimType: "attributed-description",
       internalClaim: "The New York City Council described the gathering as its first CouncilStat hackathon.",
       status: "confirmed-with-boundary",
+      publicationStatus: "qualified",
+      editorialStatus: "active",
       projections: [{ key: "case-study", text: "The Council described the gathering as its first CouncilStat hackathon.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", relationship: "direct-support", supports: ["the Council's own first-CouncilStat description"], confidence: "high", renderCitation: true }],
-      boundaries: [],
+      boundaries: ["Preserve attribution to the Council and the narrower CouncilStat wording."],
       antiClaims: ["first civic-data hackathon", "first civic-tech hackathon", "the Council's first hackathon of any kind"],
       researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
       id: "CLM-CALLNYC-EVENT-BRANDING",
       project: "callnyc",
+      claimType: "attributed-description",
       internalClaim: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      publicationStatus: "qualified",
+      editorialStatus: "unused",
+      projections: [{ key: "case-study", text: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'", status: "hold", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC", relationship: "direct-support", supports: ["graphic wording", "event branding"], confidence: "high", renderCitation: true }],
       boundaries: ["Treat the wording as visible branding, not proof of a longer formal registration title."],
       antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
@@ -162,12 +1038,15 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
       project: "callnyc",
+      claimType: "activity",
       internalClaim: "After the fuller CouncilStat dataset was released, Jamie independently built CallNYC as a public-facing interpretation of those constituent-services records.",
       status: "confirmed-with-boundary",
+      publicationStatus: "qualified",
+      editorialStatus: "active",
       projections: [
         { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
         { key: "work-card", text: "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"] },
-        { key: "resume-html", text: "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"] }
+        { key: "resume-html", text: "Built CallNYC.org after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating public data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"] }
       ],
       evidence: [
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "direct-support", supports: ["sequence from the January event through the fuller data release", "Jamie's independent development and iteration", "Politico coverage"], confidence: "high", renderCitation: true },
@@ -180,8 +1059,11 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
       project: "callnyc",
+      claimType: "attributed-description",
       internalClaim: "CallNYC is an archived independent civic-data prototype, not an official or current New York City Council service.",
       status: "confirmed-with-boundary",
+      publicationStatus: "qualified",
+      editorialStatus: "active",
       projections: [{ key: "case-study", text: "CallNYC is an archived independent prototype, not an official or current New York City Council service.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [
         { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "direct-support", supports: ["surviving independent implementation"], confidence: "high", renderCitation: true },
@@ -193,8 +1075,11 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-DIGITAL-DISTRICT",
       project: "callnyc",
+      claimType: "activity",
       internalClaim: "A participant photograph documents a breakout table labeled 'Digital District - Help improve City Council District office operations.'",
       status: "use-with-care",
+      publicationStatus: "qualified",
+      editorialStatus: "candidate",
       projections: [{ key: "photo-caption", text: "Participant photograph documenting the Digital District breakout table.", status: "hold", citationRequired: true, surfaces: [] }],
       evidence: [{ sourceId: "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO", relationship: "private-support", supports: ["placard wording", "breakout-table context"], confidence: "high", renderCitation: false }],
       boundaries: ["Do not describe Digital District as the official event title.", "Do not publish the photograph before rights, consent, and editorial review."],
@@ -203,52 +1088,175 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED",
       project: "callnyc",
+      claimType: "negative-research-finding",
       internalClaim: "No Civic Hall calendar listing or dedicated event-detail page was recovered in the documented Wayback/CDX review.",
       status: "not-recovered",
+      publicationStatus: "internal-only",
+      editorialStatus: "active",
       projections: [{ key: "archive-note", text: "No Civic Hall calendar listing or dedicated event-detail page has been recovered in the documented Wayback/CDX review.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026", relationship: "direct-support", supports: ["bounded negative search finding"], confidence: "high", renderCitation: false }],
       boundaries: ["Negative search is not proof of nonexistence.", "The archived Civic Hall page preserves embedded social-feed evidence, not a recovered event listing."],
       antiClaims: ["No Civic Hall event page existed."],
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
-    }
+    },
+    ...lifecycleClaims
   ],
-  researchInquiries: [{
-    id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
-    project: "callnyc",
-    question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
-    methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
-    runAt: "2026-07-11",
-    resultStatus: "not-recovered",
-    findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
-    limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
-    sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
-    publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
-    protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }],
+  researchInquiries: [
+    ...nycArtcSharedFolderResearchInquiries,
+    ...relationalInfrastructureResearchInquiries,
+    ...nycArtcInstitutionalValueResearchInquiries,
+    ...personalFacebookPostResearchInquiries,
+    ...kcSpacesFundFacebookPostResearchInquiries,
+    ...nycArtcFacebookPostResearchInquiries,
+    ...wowlistFacebookPostResearchInquiries,
+    ...googleDriveArchiveResearchInquiries,
+    ...socialArchiveResearchInquiries,
+    ...personalWowlistFacebookEventResearchInquiries,
+    ...nycArtcFacebookEventResearchInquiries,
+    ...icloudArchiveResearchInquiries,
+    kcTownHallInquiry,
+    kcTownHallTransitionInquiry,
+    ...kcTownHallNeighborhoodInquiries,
+    {
+      id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+      project: "callnyc",
+      intakeIds: [],
+      question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
+      methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
+      runAt: "2026-07-11",
+      resultStatus: "not-recovered",
+      findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
+      limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
+      sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
+      publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
+      protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
+    },
+    ...lifecycleResearchInquiries
+  ],
   corrections: [
+    ...kcTownHallCorrections,
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
-    { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
+    { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "The Council described the gathering as its first CouncilStat hackathon.", reason: "The event-day Council post supports the narrower phrase only when its institutional attribution is preserved.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
+    { id: "COR-CALLNYC-RESUME-ATTRIBUTION-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon.", replacementText: "Built CallNYC.org after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall.", reason: "The resume should state Jamie's chronology and work directly; the Council's first-CouncilStat description belongs in its separately attributed, cited claim.", decidedAt: "2026-07-15", affectedSurfaces: ["/work", "/resume", "knowledge-bank", "resume PDF"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
   ],
-  pages: [{
-    id: "callnyc",
-    surface: "/work/callnyc",
-    sourceOrder: [
-      "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
-      "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
-      "SRC-CALLNYC-POLITICO-2016-03-14",
-      "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
-    ],
-    occurrences: [
-      { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
-      { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
-      { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
-      { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
-    ]
-  }]
+  pages: [
+    kcTownHallPage,
+    {
+      id: "callnyc",
+      surface: "/work/callnyc",
+      sourceOrder: [
+        "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+        "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-CALLNYC-GITHUB-REPOSITORY"
+      ],
+      occurrences: [
+        { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
+        { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
+      ]
+    },
+    {
+      id: "fair-rent-nyc",
+      surface: "/work/fair-rent-nyc",
+      sourceOrder: [
+        "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+        "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+        "SRC-FB-NYCARTC-EVENT-1833265643557435",
+        "SRC-FB-NYCARTC-EVENT-790581997948463",
+        "SRC-NYCARTC-BNB-DIY-SPACES-2017",
+        "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
+        "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+        "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+        "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+        "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
+        "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
+        "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+        "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+        "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+        "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"
+      ],
+      occurrences: [
+        {
+          id: "nycartc-founding-role",
+          claimId: "CLM-NYCARTC-FOUNDING-ROLE",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-NPR-NIGHTLIFE-2017", "SRC-NYCARTC-GOTHAMIST-CABARET-2017"]
+        },
+        {
+          id: "nycartc-participation-system",
+          claimId: "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-FB-NYCARTC-EVENT-1833265643557435",
+            "SRC-FB-NYCARTC-EVENT-790581997948463",
+            "SRC-NYCARTC-BNB-DIY-SPACES-2017"
+          ]
+        },
+        {
+          id: "nycartc-cabaret-advocacy",
+          claimId: "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+            "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+            "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017"
+          ]
+        },
+        {
+          id: "nycartc-campaign-press-corpus",
+          claimId: "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+            "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+            "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+            "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021"
+          ]
+        },
+        {
+          id: "nycartc-early-organizer",
+          claimId: "CLM-NYCARTC-EARLY-ORGANIZER-ROLE",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-BNB-DIY-SPACES-2017"]
+        },
+        {
+          id: "nycartc-mutual-aid-signups",
+          claimId: "CLM-NYCARTC-MUTUAL-AID-SIGNUPS",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-BNB-DIY-SPACES-2017"]
+        },
+        {
+          id: "nycartc-october-town-hall",
+          claimId: "CLM-NYCARTC-OCTOBER-TOWN-HALL",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017", "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017", "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017"]
+        },
+        {
+          id: "nycartc-sbjsa-testimony",
+          claimId: "CLM-NYCARTC-SBJSA-TESTIMONY-2018",
+          projection: "case-study",
+          sourceIds: ["SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018"]
+        },
+        {
+          id: "talks-not-raids-campaign",
+          claimId: "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN"]
+        },
+        {
+          id: "talks-not-raids-outcome",
+          claimId: "CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"]
+        }
+      ]
+    }
+  ],
+  pressCollections: campaignPressCollections
 } satisfies KnowledgeBank;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

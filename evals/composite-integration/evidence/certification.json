@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "certifiedAt": "2026-07-19",
+  "profile": "integration_ready",
+  "suite": "feature-evals-composite-integration-v5",
+  "status": "pass",
+  "candidate": "sha256:0b0b906a4cc40d7887943069e88ef70926a8815096818e4660cbe46283f72e83",
+  "contract": "sha256:77cb3d71fadfa7722b880dc75f6254a4418e269e42d40a7e82656aa58df9b895",
+  "consecutivePassingRuns": 2,
+  "independentJudgments": [
+    "codex-independent-composite-archival-editorial-2026-07-19-completed-synthesis-r8",
+    "codex-independent-composite-systems-public-safety-2026-07-19-completed-synthesis-r8"
+  ],
+  "relatedProfiles": {
+    "applicationReady": {
+      "status": "pass",
+      "score": 86.5,
+      "candidate": "sha256:013ae05c9ebe7959bf285288028a2be23a027b6d1cfced29e41f2608ecef37de",
+      "contract": "sha256:da6113f28c0331045a438a18b997bc8cc8303d64cbe31add9fcfd6d21dfd46a3",
+      "consecutivePassingRuns": 2
+    },
+    "knowledgeReady": {
+      "status": "pass",
+      "score": 100,
+      "candidate": "sha256:efea907e3632bcaa315a4058867c7067c21844e09c9b1c41f8dd10d18253c059",
+      "contract": "sha256:2f1d5f6cfeb00461b911bb1601cfa670f2de91e81a92d7a4270bdbeb81ae2f44",
+      "consecutivePassingRuns": 2
+    },
+    "knowledgeWiki": {
+      "status": "pass",
+      "candidate": "sha256:43627c5f73e80ec26a09cd2e79e3645da71650cc84e211c1f20515860a363e8b",
+      "contract": "sha256:dd6e660720efc391078459b6ff72dd393f44f1dd3ba324eb782abfd3529179ae",
+      "records": 50,
+      "consecutivePassingRuns": 2
+    },
+    "hiringAcceptance": {
+      "status": "pass",
+      "portfolioSnapshot": "sha256:d94cf7b38106bff30c19a331795c239e744690d0a806656a5a29764c1d8e8fa5",
+      "roleContext": "sha256:b303823ac0862f483666bcca2921af7a6fe8ac788a7df1db7d4d287fbbcefc5a",
+      "readerContext": "sha256:8e1573f686d41cfc9d2668a07ad4962de45978c30d3ec9729652ff86d88f3558",
+      "contract": "sha256:bf88066104927288487b27b7586b68c3ccc1c98689923b5cd07d649e217e9939",
+      "consecutivePassingRuns": 2
+    },
+    "blindSpotDiagnostic": {
+      "status": "pass",
+      "closure": "open",
+      "consecutivePassingRuns": 2
+    }
+  },
+  "externalGates": [
+    "candidate-bound human-reader study",
+    "collaborator consent and attribution review",
+    "rights review for priority visual evidence",
+    "human decision and submission for any live application",
+    "re-verification of mutable opportunity records on their recorded dates",
+    "production deploy, smoke, rollback, monitoring, and indexing evidence",
+    "Jamie approval of the exact production candidate"
+  ]
+}

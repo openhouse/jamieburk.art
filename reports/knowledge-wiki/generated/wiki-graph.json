@@ -1,0 +1,3825 @@
+{
+  "schemaVersion": 1,
+  "product": "Knowledge Wiki",
+  "compatibilityAlias": "Knowledge Bank",
+  "canonicalRoot": "docs/knowledge-bank",
+  "sourceCommit": "34b6c86682da02350f7b89c082873e687daab5d5",
+  "sourceFingerprint": "sha256:a9a3c476f8cefe123025711a4ec08f2c9464a5ad1793630c535f1559988d7cdf",
+  "nodes": [
+    {
+      "id": "asset.photo.digital-district.001",
+      "path": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "title": "Digital District breakout photograph",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "projectionStatus": "protected",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+      ],
+      "aliases": [
+        "Digital District participant photograph"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18",
+      "reviewState": "human-blocked",
+      "rightsState": "private-review",
+      "consentState": "review-needed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "capability.technical-operations",
+      "path": "docs/knowledge-bank/capabilities/technical-operations.md",
+      "title": "Technical Operations",
+      "kind": "capability",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "Product Operations and Implementation"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "claim.callnyc.hackathon-date-time",
+      "path": "docs/knowledge-bank/claims/callnyc-hackathon-date-time.md",
+      "title": "CallNYC workshop date and time",
+      "kind": "claim",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "ready",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-HACKATHON-DATE-TIME"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [
+        "/work/callnyc"
+      ],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "claim.callnyc.independent-follow-on",
+      "path": "docs/knowledge-bank/claims/callnyc-independent-follow-on.md",
+      "title": "CallNYC independent follow-on chronology",
+      "kind": "claim",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [
+        "/resume",
+        "/work/callnyc"
+      ],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "claim.callnyc.project-years.legacy",
+      "path": "docs/knowledge-bank/claims/callnyc-project-years-legacy.md",
+      "title": "Superseded CallNYC project date range",
+      "kind": "claim",
+      "status": "superseded",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "never-public",
+      "discoverable": false,
+      "canonicalRefs": [],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "resolved",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "claim.nycartc.march-data-design-lead",
+      "path": "docs/knowledge-bank/claims/nycartc-march-data-design-lead.md",
+      "title": "MARCH open-data design lead",
+      "kind": "claim",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "protected",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NYCARTC-MARCH-DATA-DESIGN-LEAD"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "claim.nycartc.nightlife-recommendation-continuity",
+      "path": "docs/knowledge-bank/claims/nycartc-nightlife-recommendation-continuity.md",
+      "title": "NYC Artist Coalition nightlife recommendation continuity",
+      "kind": "claim",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "pending",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NYCARTC-NIGHTLIFE-RECOMMENDATION-CONTINUITY"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "claim.nycartc.public-meeting-operating-system",
+      "path": "docs/knowledge-bank/claims/nycartc-public-meeting-operating-system.md",
+      "title": "NYC Artist Coalition public-meeting operating system",
+      "kind": "claim",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "pending",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "correction.callnyc-years",
+      "path": "docs/knowledge-bank/corrections/callnyc-years.md",
+      "title": "CallNYC chronology correction",
+      "kind": "correction",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "COR-CALLNYC-CHRONOLOGY-2026"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "resolved",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "event.nycc.constituent-services-hackathon.2016",
+      "path": "docs/knowledge-bank/events/nyc-council-constituent-services-hackathon-2016.md",
+      "title": "New York City Council constituent-services hackathon at Civic Hall",
+      "kind": "event",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "ready-with-attribution",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "January 2016 CouncilStat hackathon"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.absences-protections-and-permissions",
+      "path": "docs/knowledge-bank/indexes/absences-protections-and-permissions.md",
+      "title": "Absences, protections, and permissions",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "INQ-FB-NYCARTC-EVENT-POPULATION",
+        "INQ-KC-TOWN-HALL-PROJECT-TRANSITION",
+        "INQ-WOWLIST-CALLSCRIPT-NYCARTC-ROLE-ATTRIBUTION"
+      ],
+      "aliases": [
+        "Protected absence register"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.decisions-deliverables-operational-outcomes",
+      "path": "docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md",
+      "title": "Decisions, deliverables, and operational outcomes",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+        "CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION",
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "CLM-CRS-90-DAY-OPERATING-PLAN",
+        "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+        "CLM-CRS-PRIVACY-AWARE-RUNNING-MINUTES",
+        "CLM-CRS-RPIE-PUBLIC-BASELINE-PROPOSAL",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-KC-TOWN-HALL-BOARD-RECOMMENDATION",
+        "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+        "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-SCOPE",
+        "CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE",
+        "CLM-KC-TOWN-HALL-PRESENTER-ROLE",
+        "CLM-KC-TOWN-HALL-SURVEY-SYSTEM-ROLE",
+        "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
+        "CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE",
+        "CLM-KCSPACES-FUNDRAISING-OUTCOME",
+        "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+        "CLM-NYCARTC-FOUNDING-ROLE",
+        "CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM",
+        "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT",
+        "CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME"
+      ],
+      "aliases": [
+        "Operational outcomes",
+        "What Jamie made usable"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.employment-acceptance",
+      "path": "docs/knowledge-bank/indexes/employment-acceptance.md",
+      "title": "Employment acceptance",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "Current priority opportunities"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.knowledge-wiki",
+      "path": "docs/knowledge-bank/README.md",
+      "title": "Knowledge Wiki",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "Knowledge Bank"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.knowledge-wiki-missing-pages",
+      "path": "docs/knowledge-bank/indexes/missing-pages.md",
+      "title": "Knowledge Wiki missing pages",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "Wanted pages"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.knowledge-wiki-pilot",
+      "path": "docs/knowledge-bank/indexes/pilot.md",
+      "title": "Knowledge Wiki foundation pilot",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "Wiki pilot"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.maintenance-and-care",
+      "path": "docs/knowledge-bank/indexes/maintenance-and-care.md",
+      "title": "Maintenance and care",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CRS-PRIVACY-AWARE-RUNNING-MINUTES",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-SCOPE",
+        "CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE",
+        "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT"
+      ],
+      "aliases": [
+        "Care as operations",
+        "Sustaining systems"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.people-places-and-community-testimony",
+      "path": "docs/knowledge-bank/indexes/people-places-and-community-testimony.md",
+      "title": "People, places, and community testimony",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-FB-NYCARTC-PUBLIC-OFFICIAL-PROGRAMS",
+        "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+        "CLM-NYCARTC-TESTIMONY-PARTICIPATION-DESIGN"
+      ],
+      "aliases": [
+        "People speaking in places",
+        "Places, passages, and publics"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.project-afterlives-and-handoffs",
+      "path": "docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md",
+      "title": "Project afterlives and handoffs",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+        "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
+        "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.relational-infrastructure-atlas",
+      "path": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "title": "Relational infrastructure atlas",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION",
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "CLM-CALLSCRIPT-POPULAR-VOTE-NYCARTC-BRIDGE",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT",
+        "CLM-SUNDAY-DINNER-WORKBOOK-AGGREGATE",
+        "CLM-WOWLIST-DB-SNAPSHOT-SCALE-2017",
+        "CLM-WOWLIST-RELATIONAL-TAG-OVERLAP-2017"
+      ],
+      "aliases": [
+        "Human-readable Wiki Graph",
+        "Relational infrastructure map"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.role-and-collective-authorship",
+      "path": "docs/knowledge-bank/indexes/role-and-collective-authorship.md",
+      "title": "Role and collective authorship map",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+        "CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE",
+        "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
+        "CLM-NYCARTC-FOUNDING-ROLE",
+        "CLM-WATER-RAFT-ORIGINATION"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.scenes-of-work",
+      "path": "docs/knowledge-bank/indexes/scenes-of-work.md",
+      "title": "Scenes of the work",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+        "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "inquiry.nycartc.march-data-design-attribution",
+      "path": "docs/knowledge-bank/inquiries/nycartc-march-data-design-attribution.md",
+      "title": "MARCH data-design attribution and implementation inquiry",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "protected",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NYCARTC-MARCH-DATA-DESIGN-LEAD",
+        "INQ-NYCARTC-MARCH-DATA-DESIGN-AUTHORSHIP",
+        "SRC-NYCARTC-ARCHIVE-MARCH-DATA-DESIGN-NOTES-2019"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "method.nycartc.public-meeting-and-testimony-participation",
+      "path": "docs/knowledge-bank/methods/nycartc-public-meeting-and-testimony-participation.md",
+      "title": "NYC Artist Coalition public-meeting and testimony participation",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "pending",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM",
+        "CLM-NYCARTC-TESTIMONY-PARTICIPATION-DESIGN"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "method.source-backed-team-memory",
+      "path": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "title": "Source-Backed Team Memory",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "Source Backed Team Memory"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "method.source-re-encounter",
+      "path": "docs/knowledge-bank/methods/source-re-encounter.md",
+      "title": "Source re-encounter",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "Return to the originals"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+      "path": "docs/knowledge-bank/opportunities/aclu-product-manager-discovery.md",
+      "title": "ACLU Product Manager II, Discovery",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "ACLU Discovery"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21",
+      "reviewState": "completed",
+      "opportunityStatus": "live",
+      "verifiedAt": "2026-07-18",
+      "reverifyBy": "2026-07-21",
+      "roleRequirements": [
+        {
+          "id": "aclu.launched-product-brief",
+          "label": "Submit a redacted PRD or product brief for a launched product",
+          "priority": "hard",
+          "coverageStatus": "hard-screen",
+          "sourceStatus": "official-application",
+          "wikiEvidence": [
+            "project.callnyc",
+            "claim.callnyc.independent-follow-on"
+          ],
+          "publicEvidence": [
+            "/work/callnyc"
+          ],
+          "gapType": "application-artifact",
+          "nextAction": "Produce and human-review a retrospective CallNYC product brief before applying."
+        },
+        {
+          "id": "aclu.deep-discovery",
+          "label": "Lead structured discovery in complex stakeholder-rich environments",
+          "priority": "critical",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "project.callnyc",
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/callnyc",
+            "/work/fair-rent-nyc"
+          ],
+          "gapType": "none",
+          "nextAction": "Lead with listening, synthesis, and bounded recommendations."
+        },
+        {
+          "id": "aclu.alignment-without-authority",
+          "label": "Facilitate alignment without formal authority",
+          "priority": "critical",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/fair-rent-nyc",
+            "/work/technical-operations"
+          ],
+          "gapType": "none",
+          "nextAction": "Preserve collective credit while naming Jamie's facilitation artifacts."
+        },
+        {
+          "id": "aclu.governance-traceability",
+          "label": "Document governance decisions, action items, constraints, and follow-through",
+          "priority": "critical",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "method.source-backed-team-memory"
+          ],
+          "publicEvidence": [
+            "/lab/source-backed-team-memory",
+            "/work/fair-rent-nyc"
+          ],
+          "gapType": "none",
+          "nextAction": "Keep Known, Open, and Protected legible without importing private evidence."
+        },
+        {
+          "id": "aclu.genai-governance",
+          "label": "Evaluate emerging technology and support responsible GenAI governance",
+          "priority": "important",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "CLM-AI-EVALS-CERTIFICATE-COMPLETION-2026",
+            "method.source-backed-team-memory"
+          ],
+          "publicEvidence": [
+            "/lab/source-backed-team-memory",
+            "/resume"
+          ],
+          "gapType": "depth-and-application",
+          "nextAction": "Prepare one bounded example of an AI-assisted workflow and its human controls."
+        }
+      ],
+      "discoveryTerms": [
+        "build buy or stop recommendation",
+        "early-stage discovery",
+        "governance and decision traceability",
+        "non-technical stakeholder alignment",
+        "privacy and security constraints"
+      ],
+      "portfolioRoutes": [
+        "/",
+        "/contact",
+        "/lab/source-backed-team-memory",
+        "/resume",
+        "/work/callnyc",
+        "/work/fair-rent-nyc",
+        "/work/technical-operations"
+      ]
+    },
+    {
+      "id": "opportunity.asana.ai-implementation-manager.8027437",
+      "path": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "title": "Asana AI Implementation Manager, Service Management",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "Asana AI Implementation"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21",
+      "reviewState": "completed",
+      "opportunityStatus": "live",
+      "verifiedAt": "2026-07-18",
+      "reverifyBy": "2026-07-21",
+      "roleRequirements": [
+        {
+          "id": "asana.technical-implementation-years",
+          "label": "Three or more years in technical customer success, implementation, technical account management, or consulting",
+          "priority": "hard",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/resume",
+            "/work/harry-j-epstein"
+          ],
+          "gapType": "authority-and-title-translation",
+          "nextAction": "Lead with hands-on implementation outcomes, not only documentation practice."
+        },
+        {
+          "id": "asana.customer-implementation",
+          "label": "Guide customer planning, configuration, migration, and structured onboarding",
+          "priority": "critical",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/harry-j-epstein",
+            "/work/technical-operations"
+          ],
+          "gapType": "customer-specificity",
+          "nextAction": "Prepare one client-facing implementation example with role and outcome boundaries."
+        },
+        {
+          "id": "asana.risk-change-adoption",
+          "label": "Identify deployment risk and guide technical and behavioral change",
+          "priority": "critical",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/technical-operations",
+            "/work/harry-j-epstein"
+          ],
+          "gapType": "adoption-evidence",
+          "nextAction": "Verify one source-backed adoption or migration example before strengthening copy."
+        },
+        {
+          "id": "asana.ai-consulting",
+          "label": "Help customers evaluate and adopt AI workflows with executive and technical fluency",
+          "priority": "critical",
+          "coverageStatus": "visible-weak",
+          "sourceStatus": "partial",
+          "wikiEvidence": [
+            "method.source-backed-team-memory",
+            "CLM-AI-EVALS-CERTIFICATE-COMPLETION-2026"
+          ],
+          "publicEvidence": [
+            "/lab/source-backed-team-memory",
+            "/resume"
+          ],
+          "gapType": "customer-ai-experience",
+          "nextAction": "Treat this as a real gap unless a defensible customer-facing example is recovered."
+        },
+        {
+          "id": "asana.reusable-playbook",
+          "label": "Convert hands-on execution into a reusable implementation and change-management playbook",
+          "priority": "important",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "method.source-backed-team-memory",
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/lab/source-backed-team-memory",
+            "/work/technical-operations"
+          ],
+          "gapType": "none",
+          "nextAction": "Keep the method concrete and bounded rather than presenting a finished product."
+        },
+        {
+          "id": "asana.python-sql",
+          "label": "Familiarity with Python, SQL, analytics, and data integration patterns",
+          "priority": "important",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/wowlist",
+            "/resume"
+          ],
+          "gapType": "recency-and-depth",
+          "nextAction": "Prepare an honest current fluency statement and recent AI-evaluation work."
+        }
+      ],
+      "discoveryTerms": [
+        "change management",
+        "customer implementation",
+        "deployment risk and governance",
+        "reusable playbook",
+        "time to first value"
+      ],
+      "portfolioRoutes": [
+        "/",
+        "/about",
+        "/contact",
+        "/lab/source-backed-team-memory",
+        "/resume",
+        "/work/harry-j-epstein",
+        "/work/technical-operations"
+      ]
+    },
+    {
+      "id": "opportunity.benepass.product-operations-manager.7f963a7a",
+      "path": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "title": "Benepass Product Operations Manager",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "Benepass Product Operations"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21",
+      "reviewState": "completed",
+      "opportunityStatus": "live",
+      "verifiedAt": "2026-07-18",
+      "reverifyBy": "2026-07-21",
+      "roleRequirements": [
+        {
+          "id": "benepass.years-cross-functional",
+          "label": "Five to eight years in product operations, project management, or technical program management",
+          "priority": "hard",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/resume",
+            "/work/technical-operations"
+          ],
+          "gapType": "title-translation",
+          "nextAction": "Map the experience chronology without claiming a continuous Product Operations title."
+        },
+        {
+          "id": "benepass.launch-readiness",
+          "label": "Own launch plans, readiness criteria, risk, go or no-go, and post-launch learning",
+          "priority": "critical",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations",
+            "project.callnyc"
+          ],
+          "publicEvidence": [
+            "/work/technical-operations",
+            "/work/callnyc"
+          ],
+          "gapType": "authority-specificity",
+          "nextAction": "Prepare one example distinguishing recommendation authority from collective launch decisions."
+        },
+        {
+          "id": "benepass.product-engineering",
+          "label": "Work closely with Product and Engineering in a sprint environment",
+          "priority": "critical",
+          "coverageStatus": "visible-weak",
+          "sourceStatus": "partial",
+          "wikiEvidence": [
+            "project.callnyc"
+          ],
+          "publicEvidence": [
+            "/work/callnyc"
+          ],
+          "gapType": "source-review",
+          "nextAction": "Verify the strongest accurate team and sprint example before strengthening public copy."
+        },
+        {
+          "id": "benepass.ops-roadmap",
+          "label": "Synthesize operational asks into problem statements, priorities, and tradeoffs",
+          "priority": "critical",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "method.source-backed-team-memory",
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/lab/source-backed-team-memory",
+            "/work/technical-operations"
+          ],
+          "gapType": "none",
+          "nextAction": "Keep the translation from scattered context to decision-ready structure explicit."
+        },
+        {
+          "id": "benepass.quantification",
+          "label": "Quantify revenue, retention, efficiency, and risk to support prioritization",
+          "priority": "important",
+          "coverageStatus": "visible-weak",
+          "sourceStatus": "partial",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/harry-j-epstein"
+          ],
+          "gapType": "metric-specificity",
+          "nextAction": "Prepare bounded metrics with contribution language and source notes."
+        }
+      ],
+      "discoveryTerms": [
+        "downstream operational impact",
+        "launch readiness",
+        "operations roadmap",
+        "product and engineering translation",
+        "scalable runbooks"
+      ],
+      "portfolioRoutes": [
+        "/",
+        "/contact",
+        "/lab/source-backed-team-memory",
+        "/resume",
+        "/work/callnyc",
+        "/work/harry-j-epstein",
+        "/work/technical-operations"
+      ]
+    },
+    {
+      "id": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "path": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+      "title": "CodePath Senior Program Manager, Claude Corps",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "CodePath Claude Corps"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21",
+      "reviewState": "completed",
+      "opportunityStatus": "live",
+      "verifiedAt": "2026-07-18",
+      "reverifyBy": "2026-07-21",
+      "roleRequirements": [
+        {
+          "id": "codepath.complex-program-years",
+          "label": "Three or more years running complex multi-stakeholder projects or programs",
+          "priority": "hard",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/resume",
+            "/work/technical-operations"
+          ],
+          "gapType": "none",
+          "nextAction": "Use one end-to-end example with dependencies and recovery."
+        },
+        {
+          "id": "codepath.us-work-authorization",
+          "label": "United States work authorization without employer visa support",
+          "priority": "hard",
+          "coverageStatus": "unknown",
+          "sourceStatus": "applicant-confirmation-required",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/resume"
+          ],
+          "gapType": "protected-applicant-fact",
+          "nextAction": "Jamie answers privately in the application; do not encode the answer publicly."
+        },
+        {
+          "id": "codepath.master-plan",
+          "label": "Maintain a single accurate program plan across internal and external workstreams",
+          "priority": "critical",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "capability.technical-operations",
+            "method.source-backed-team-memory"
+          ],
+          "publicEvidence": [
+            "/work/technical-operations",
+            "/lab/source-backed-team-memory"
+          ],
+          "gapType": "none",
+          "nextAction": "Show how source-backed status and decision records prevent a person bottleneck."
+        },
+        {
+          "id": "codepath.partner-dependencies",
+          "label": "Manage partner commitments, dependencies, blockers, and executive reporting",
+          "priority": "critical",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/fair-rent-nyc",
+            "/work/technical-operations"
+          ],
+          "gapType": "example-specificity",
+          "nextAction": "Prepare a factual dependency-recovery example without exposing private correspondence."
+        },
+        {
+          "id": "codepath.ai-first-workflow",
+          "label": "Use AI tools as part of a repeatable, accountable operating workflow",
+          "priority": "critical",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "method.source-backed-team-memory",
+            "CLM-AI-EVALS-CERTIFICATE-COMPLETION-2026"
+          ],
+          "publicEvidence": [
+            "/lab/source-backed-team-memory",
+            "/resume"
+          ],
+          "gapType": "quantified-value",
+          "nextAction": "Define value in time saved, errors caught, or decisions clarified without invented metrics."
+        },
+        {
+          "id": "codepath.program-data",
+          "label": "Read program data and dashboards well enough to identify risk",
+          "priority": "important",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/harry-j-epstein",
+            "/work/technical-operations"
+          ],
+          "gapType": "public-specificity",
+          "nextAction": "Prepare one bounded analytics-to-action example."
+        }
+      ],
+      "discoveryTerms": [
+        "AI-first operations",
+        "handoff-ready systems",
+        "lightweight rigor",
+        "multi-partner program plan",
+        "single accurate operating view"
+      ],
+      "portfolioRoutes": [
+        "/",
+        "/contact",
+        "/lab/source-backed-team-memory",
+        "/resume",
+        "/work/196-sunday-dinner",
+        "/work/fair-rent-nyc",
+        "/work/technical-operations"
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "path": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "title": "NYC OTI Technical Operations Manager",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "OTI Technical Operations"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21",
+      "reviewState": "completed",
+      "opportunityStatus": "live",
+      "verifiedAt": "2026-07-18",
+      "reverifyBy": "2026-07-21",
+      "deadline": "2026-08-07",
+      "roleRequirements": [
+        {
+          "id": "oti.minimum-qualification",
+          "label": "Meet the posted education and experience minimum",
+          "priority": "hard",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "official-posting",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/resume"
+          ],
+          "gapType": "qualification-needs-human-confirmation",
+          "nextAction": "Confirm the application maps education and experience to one posted pathway."
+        },
+        {
+          "id": "oti.concurrent-delivery",
+          "label": "Coordinate concurrent projects and surface risk before public launch",
+          "priority": "critical",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "capability.technical-operations",
+            "project.callnyc"
+          ],
+          "publicEvidence": [
+            "/work/technical-operations",
+            "/work/callnyc"
+          ],
+          "gapType": "none",
+          "nextAction": "Keep the first-screen operating result concise."
+        },
+        {
+          "id": "oti.operating-documentation",
+          "label": "Build handbooks, runbooks, onboarding guides, and decision records people use",
+          "priority": "critical",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "method.source-backed-team-memory",
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/technical-operations",
+            "/lab/source-backed-team-memory"
+          ],
+          "gapType": "none",
+          "nextAction": "Preserve a concrete onboarding example in the proof map."
+        },
+        {
+          "id": "oti.product-team-coordination",
+          "label": "Work across product, design, engineering, legal, security, communications, and contracts",
+          "priority": "critical",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/technical-operations",
+            "/work/fair-rent-nyc"
+          ],
+          "gapType": "public-specificity",
+          "nextAction": "Use interview examples without implying every function participated in every project."
+        },
+        {
+          "id": "oti.government-hiring-procurement",
+          "label": "Navigate structured hiring, budgets, contracts, or public procurement",
+          "priority": "important",
+          "coverageStatus": "visible-weak",
+          "sourceStatus": "partial",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/technical-operations"
+          ],
+          "gapType": "source-review",
+          "nextAction": "Verify bounded public evidence before strengthening this signal."
+        },
+        {
+          "id": "oti.metrics-retros",
+          "label": "Report team health and operational metrics and improve systems through retrospectives",
+          "priority": "important",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/technical-operations"
+          ],
+          "gapType": "example-specificity",
+          "nextAction": "Prepare one source-backed metric and retrospective example for interview."
+        }
+      ],
+      "discoveryTerms": [
+        "cross-team dependencies",
+        "delivery coordination",
+        "onboarding and runbooks",
+        "operating backbone",
+        "public launch"
+      ],
+      "portfolioRoutes": [
+        "/",
+        "/contact",
+        "/lab/source-backed-team-memory",
+        "/resume",
+        "/work/callnyc",
+        "/work/fair-rent-nyc",
+        "/work/harry-j-epstein",
+        "/work/technical-operations"
+      ]
+    },
+    {
+      "id": "opportunity.permitflow.product-operations-manager.8a6e6066",
+      "path": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+      "title": "PermitFlow Product Operations Manager",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [
+        "PermitFlow Product Operations"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-07-21",
+      "reviewState": "completed",
+      "opportunityStatus": "live",
+      "verifiedAt": "2026-07-18",
+      "reverifyBy": "2026-07-21",
+      "roleRequirements": [
+        {
+          "id": "permitflow.product-operations-years",
+          "label": "Two or more years in Product Operations, Product Strategy, Business Operations, or a similar technology role",
+          "priority": "hard",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/resume",
+            "/work/technical-operations"
+          ],
+          "gapType": "title-translation",
+          "nextAction": "Map equivalent work without inventing a formal SaaS Product Operations title."
+        },
+        {
+          "id": "permitflow.product-lifecycle",
+          "label": "Improve the flow of customer insight and product data from discovery through launch and iteration",
+          "priority": "critical",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "project.callnyc",
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/callnyc",
+            "/work/technical-operations"
+          ],
+          "gapType": "product-data-specificity",
+          "nextAction": "Prepare one accurate feedback-to-change example."
+        },
+        {
+          "id": "permitflow.analytics-metrics",
+          "label": "Build dashboards, operating metrics, and experimentation frameworks",
+          "priority": "critical",
+          "coverageStatus": "visible-weak",
+          "sourceStatus": "partial",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/harry-j-epstein"
+          ],
+          "gapType": "metric-specificity",
+          "nextAction": "Recover source-backed analytics examples; do not imply formal experimentation ownership yet."
+        },
+        {
+          "id": "permitflow.launch-adoption",
+          "label": "Align Product, Engineering, Operations, Sales, and Customer Success around launch readiness and adoption",
+          "priority": "critical",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/technical-operations",
+            "/work/harry-j-epstein"
+          ],
+          "gapType": "team-function-specificity",
+          "nextAction": "Distinguish adjacent stakeholder work from direct Sales and Customer Success ownership."
+        },
+        {
+          "id": "permitflow.ai-automation",
+          "label": "Use AI tools and automation to improve workflows and decisions",
+          "priority": "important",
+          "coverageStatus": "visible-qualified",
+          "sourceStatus": "supported-with-boundary",
+          "wikiEvidence": [
+            "method.source-backed-team-memory",
+            "CLM-AI-EVALS-CERTIFICATE-COMPLETION-2026"
+          ],
+          "publicEvidence": [
+            "/lab/source-backed-team-memory",
+            "/resume"
+          ],
+          "gapType": "production-depth",
+          "nextAction": "Show bounded workflow value and human review rather than claiming production AI ownership."
+        },
+        {
+          "id": "permitflow.physical-public-process",
+          "label": "Understand complex physical-world and public-process workflows",
+          "priority": "important",
+          "coverageStatus": "visible-proven",
+          "sourceStatus": "supported",
+          "wikiEvidence": [
+            "capability.technical-operations"
+          ],
+          "publicEvidence": [
+            "/work/kc-town-hall",
+            "/work/callnyc"
+          ],
+          "gapType": "none",
+          "nextAction": "Connect built-environment experience to product judgment without implying permitting software expertise."
+        }
+      ],
+      "discoveryTerms": [
+        "customer feedback and data",
+        "fragmented public process",
+        "launch readiness",
+        "physical-world workflow",
+        "product lifecycle operations"
+      ],
+      "portfolioRoutes": [
+        "/",
+        "/contact",
+        "/lab/source-backed-team-memory",
+        "/resume",
+        "/work/callnyc",
+        "/work/harry-j-epstein",
+        "/work/kc-town-hall",
+        "/work/technical-operations"
+      ]
+    },
+    {
+      "id": "portfolio.work.callnyc",
+      "path": "docs/knowledge-bank/projections/work-callnyc.md",
+      "title": "CallNYC portfolio projection",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "ready",
+      "discoverable": true,
+      "canonicalRefs": [
+        "callnyc"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [
+        "/work/callnyc"
+      ],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "portfolio.work.technical-operations",
+      "path": "docs/knowledge-bank/projections/work-technical-operations.md",
+      "title": "Technical Operations portfolio projection",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [],
+      "aliases": [],
+      "allowedSurfaces": [
+        "/work/technical-operations"
+      ],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2026-10-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.callnyc",
+      "path": "docs/knowledge-bank/projects/callnyc.md",
+      "title": "CallNYC",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "ready",
+      "discoverable": true,
+      "canonicalRefs": [
+        "callnyc"
+      ],
+      "aliases": [
+        "Call NYC",
+        "CallNYC.org"
+      ],
+      "allowedSurfaces": [
+        "/work/callnyc"
+      ],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.kc-spaces-fund",
+      "path": "docs/knowledge-bank/projects/kc-spaces-fund.md",
+      "title": "KC Spaces Fund",
+      "kind": "project",
+      "status": "archived",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE",
+        "CLM-KCSPACES-FUNDRAISING-OUTCOME",
+        "CLM-KCSPACES-NAMING-SUPPORT"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "project.nyc-artist-coalition",
+      "path": "docs/knowledge-bank/projects/nyc-artist-coalition.md",
+      "title": "NYC Artist Coalition",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-NYCARTC-FOUNDING-ROLE",
+        "CLM-NYCARTC-MARCH-DATA-DESIGN-LEAD",
+        "CLM-NYCARTC-NIGHTLIFE-RECOMMENDATION-CONTINUITY",
+        "CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM"
+      ],
+      "aliases": [
+        "NYCArtC"
+      ],
+      "allowedSurfaces": [
+        "/work/fair-rent-nyc"
+      ],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "research-run.nycartc.shared-folder.2026-07",
+      "path": "docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md",
+      "title": "NYC Artist Coalition shared-folder archival production",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NYCARTC-SHARED-FOLDER-CENSUS-2026",
+        "SRC-NYCARTC-SHARED-FOLDER-CENSUS-2026"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "source.civichall.hackathon-announcement.2016",
+      "path": "docs/knowledge-bank/sources/civic-hall-hackathon-announcement-2016.md",
+      "title": "Civic Hall announcement of the January 2016 Council hackathon",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "ready",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433"
+      ],
+      "aliases": [
+        "Civic Hall event announcement"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "source.nycartc.march-data-design-notes.2019",
+      "path": "docs/knowledge-bank/sources/nycartc-march-data-design-notes-2019.md",
+      "title": "Collaborative MARCH open-data design notes",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "protected",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-NYCARTC-ARCHIVE-MARCH-DATA-DESIGN-NOTES-2019"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "source.nycartc.nightlife-recommendation-sequence.2017-2019",
+      "path": "docs/knowledge-bank/sources/nycartc-nightlife-recommendation-sequence-2017-2019.md",
+      "title": "NYC Artist Coalition nightlife recommendation sequence",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "protected",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-NYCARTC-ARCHIVE-NIGHTLIFE-RECOMMENDATION-SEQUENCE-2017-2019"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "source.nycartc.public-meeting-playbook.2018",
+      "path": "docs/knowledge-bank/sources/nycartc-public-meeting-playbook-2018.md",
+      "title": "NYC Artist Coalition public-meeting production playbook",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "protected",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-NYCARTC-ARCHIVE-PUBLIC-MEETING-PLAYBOOK-2018"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "source.nycartc.shared-folder-census.2026",
+      "path": "docs/knowledge-bank/sources/nycartc-shared-folder-census-2026.md",
+      "title": "NYC Artist Coalition shared-folder governed census",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-NYCARTC-SHARED-FOLDER-CENSUS-2026"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "source.nycartc.testimony-guide.2017",
+      "path": "docs/knowledge-bank/sources/nycartc-testimony-guide-2017.md",
+      "title": "NYC Artist Coalition Cabaret Law testimony guide",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "protected",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-NYCARTC-ARCHIVE-TESTIMONY-GUIDE-2017"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "human-blocked",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "source.nycc.councilstat-hackathon-post.2016",
+      "path": "docs/knowledge-bank/sources/nyc-council-councilstat-hackathon-post-2016.md",
+      "title": "New York City Council event-day CouncilStat post",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "ready-with-attribution",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"
+      ],
+      "aliases": [
+        "Council event-day post"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "source.politico.callnyc.2016-03-14",
+      "path": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
+      "title": "Politico New York coverage of CallNYC",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "projectionStatus": "ready",
+      "discoverable": true,
+      "canonicalRefs": [
+        "SRC-CALLNYC-POLITICO-2016-03-14"
+      ],
+      "aliases": [
+        "Politico CallNYC article"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-18",
+      "reviewBy": "2027-01-18",
+      "reviewState": "completed",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "path": "docs/knowledge-bank/timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "title": "Art, life, waterways, and media archaeology, 2003-2011",
+      "kind": "timeline",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM",
+        "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION",
+        "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
+        "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+        "CLM-TIME-IS-LONG-VHS-INSTALLATION",
+        "CLM-WATER-RAFT-ORIGINATION"
+      ],
+      "aliases": [
+        "Early participatory practice lineage"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "timeline.nycartc.events-and-venues.2017-2021",
+      "path": "docs/knowledge-bank/timelines/nycartc-events-and-venues-2017-2021.md",
+      "title": "NYC Artist Coalition events and venues, 2017-2021",
+      "kind": "timeline",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-FB-NYCARTC-EVENT-POPULATION",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-FB-NYCARTC-PUBLIC-OFFICIAL-PROGRAMS"
+      ],
+      "aliases": [
+        "NYC Artist Coalition event chronology"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "path": "docs/knowledge-bank/timelines/nycartc-nightlife-recommendations-2017-2019.md",
+      "title": "NYC Artist Coalition nightlife recommendations, 2017-2019",
+      "kind": "timeline",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "pending",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-NYCARTC-NIGHTLIFE-RECOMMENDATION-CONTINUITY",
+        "SRC-NYCARTC-ARCHIVE-NIGHTLIFE-RECOMMENDATION-SEQUENCE-2017-2019"
+      ],
+      "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "timeline.participation-infrastructure.2012-2026",
+      "path": "docs/knowledge-bank/timelines/participation-infrastructure-lineage-2012-2026.md",
+      "title": "Participation infrastructure lineage, 2012-2026",
+      "kind": "timeline",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLSCRIPT-POPULAR-VOTE-NYCARTC-BRIDGE",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT",
+        "CLM-WOWLIST-RELATIONAL-TAG-OVERLAP-2017"
+      ],
+      "aliases": [
+        "WOW List to Knowledge Wiki lineage"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "asset.photo.digital-district.001",
+      "type": "documents",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "source": "frontmatter",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "informed_by",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "frontmatter",
+      "href": "../indexes/decisions-deliverables-and-operational-outcomes.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "informed_by",
+      "to": "index.maintenance-and-care",
+      "source": "frontmatter",
+      "href": "../indexes/maintenance-and-care.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "markdown",
+      "href": "../indexes/decisions-deliverables-and-operational-outcomes.md",
+      "context": "operational-outcomes map"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "to": "index.maintenance-and-care",
+      "source": "markdown",
+      "href": "../indexes/maintenance-and-care.md",
+      "context": "maintenance-and-care index"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "to": "method.source-backed-team-memory",
+      "source": "markdown",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": "Source-Backed Team Memory"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "markdown",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": "OTI opportunity lens"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "to": "project.callnyc",
+      "source": "markdown",
+      "href": "../projects/callnyc.md",
+      "context": "CallNYC"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "markdown",
+      "href": "../projects/nyc-artist-coalition.md",
+      "context": "NYC Artist Coalition"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "projected_to",
+      "to": "portfolio.work.technical-operations",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "links_to",
+      "to": "source.civichall.hackathon-announcement.2016",
+      "source": "markdown",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md",
+      "context": "Civic Hall announcement"
+    },
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "links_to",
+      "to": "source.nycc.councilstat-hackathon-post.2016",
+      "source": "markdown",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md",
+      "context": "Council post"
+    },
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "projected_to",
+      "to": "portfolio.work.callnyc",
+      "source": "frontmatter",
+      "href": "../projections/work-callnyc.md"
+    },
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "uses_source",
+      "to": "source.civichall.hackathon-announcement.2016",
+      "source": "frontmatter",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md"
+    },
+    {
+      "from": "claim.callnyc.hackathon-date-time",
+      "type": "uses_source",
+      "to": "source.nycc.councilstat-hackathon-post.2016",
+      "source": "frontmatter",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "links_to",
+      "to": "source.politico.callnyc.2016-03-14",
+      "source": "markdown",
+      "href": "../sources/politico-callnyc-2016-03-14.md",
+      "context": "Politico coverage"
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "projected_to",
+      "to": "portfolio.work.callnyc",
+      "source": "frontmatter",
+      "href": "../projections/work-callnyc.md"
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "supersedes",
+      "to": "claim.callnyc.project-years.legacy",
+      "source": "frontmatter",
+      "href": "callnyc-project-years-legacy.md"
+    },
+    {
+      "from": "claim.callnyc.independent-follow-on",
+      "type": "uses_source",
+      "to": "source.politico.callnyc.2016-03-14",
+      "source": "frontmatter",
+      "href": "../sources/politico-callnyc-2016-03-14.md"
+    },
+    {
+      "from": "claim.callnyc.project-years.legacy",
+      "type": "documents",
+      "to": "correction.callnyc-years",
+      "source": "frontmatter",
+      "href": "../corrections/callnyc-years.md"
+    },
+    {
+      "from": "claim.callnyc.project-years.legacy",
+      "type": "links_to",
+      "to": "correction.callnyc-years",
+      "source": "markdown",
+      "href": "../corrections/callnyc-years.md",
+      "context": "correction"
+    },
+    {
+      "from": "claim.nycartc.march-data-design-lead",
+      "type": "links_to",
+      "to": "inquiry.nycartc.march-data-design-attribution",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md",
+      "context": "open inquiry"
+    },
+    {
+      "from": "claim.nycartc.march-data-design-lead",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "claim.nycartc.march-data-design-lead",
+      "type": "uses_source",
+      "to": "source.nycartc.march-data-design-notes.2019",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-march-data-design-notes-2019.md"
+    },
+    {
+      "from": "claim.nycartc.nightlife-recommendation-continuity",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "claim.nycartc.nightlife-recommendation-continuity",
+      "type": "uses_source",
+      "to": "source.nycartc.nightlife-recommendation-sequence.2017-2019",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-nightlife-recommendation-sequence-2017-2019.md"
+    },
+    {
+      "from": "claim.nycartc.public-meeting-operating-system",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "claim.nycartc.public-meeting-operating-system",
+      "type": "uses_source",
+      "to": "source.nycartc.public-meeting-playbook.2018",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-public-meeting-playbook-2018.md"
+    },
+    {
+      "from": "correction.callnyc-years",
+      "type": "documents",
+      "to": "claim.callnyc.independent-follow-on",
+      "source": "frontmatter",
+      "href": "../claims/callnyc-independent-follow-on.md"
+    },
+    {
+      "from": "correction.callnyc-years",
+      "type": "documents",
+      "to": "claim.callnyc.project-years.legacy",
+      "source": "frontmatter",
+      "href": "../claims/callnyc-project-years-legacy.md"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "links_to",
+      "to": "project.callnyc",
+      "source": "markdown",
+      "href": "../projects/callnyc.md",
+      "context": "CallNYC"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "links_to",
+      "to": "source.civichall.hackathon-announcement.2016",
+      "source": "markdown",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md",
+      "context": "Civic Hall announcement"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "links_to",
+      "to": "source.nycc.councilstat-hackathon-post.2016",
+      "source": "markdown",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md",
+      "context": "Council post"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "resulted_in",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "uses_source",
+      "to": "source.civichall.hackathon-announcement.2016",
+      "source": "frontmatter",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md"
+    },
+    {
+      "from": "event.nycc.constituent-services-hackathon.2016",
+      "type": "uses_source",
+      "to": "source.nycc.councilstat-hackathon-post.2016",
+      "source": "frontmatter",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
+    },
+    {
+      "from": "index.absences-protections-and-permissions",
+      "type": "documents",
+      "to": "asset.photo.digital-district.001",
+      "source": "frontmatter",
+      "href": "../assets/digital-district-photo.md"
+    },
+    {
+      "from": "index.absences-protections-and-permissions",
+      "type": "documents",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "index.absences-protections-and-permissions",
+      "type": "documents",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.absences-protections-and-permissions",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.absences-protections-and-permissions",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.employment-acceptance",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "to": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+      "source": "markdown",
+      "href": "../opportunities/aclu-product-manager-discovery.md",
+      "context": "ACLU Product Manager II, Discovery"
+    },
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "to": "opportunity.asana.ai-implementation-manager.8027437",
+      "source": "markdown",
+      "href": "../opportunities/asana-ai-implementation.md",
+      "context": "Asana AI Implementation Manager"
+    },
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "to": "opportunity.benepass.product-operations-manager.7f963a7a",
+      "source": "markdown",
+      "href": "../opportunities/benepass-product-operations.md",
+      "context": "Benepass Product Operations Manager"
+    },
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "to": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "source": "markdown",
+      "href": "../opportunities/codepath-claude-corps.md",
+      "context": "CodePath Senior Program Manager, Claude Corps"
+    },
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "markdown",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": "NYC OTI Technical Operations Manager"
+    },
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "to": "opportunity.permitflow.product-operations-manager.8a6e6066",
+      "source": "markdown",
+      "href": "../opportunities/permitflow-product-operations.md",
+      "context": "PermitFlow Product Operations Manager"
+    },
+    {
+      "from": "index.employment-acceptance",
+      "type": "part_of",
+      "to": "index.knowledge-wiki",
+      "source": "frontmatter",
+      "href": "../README.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.absences-protections-and-permissions",
+      "source": "frontmatter",
+      "href": "absences-protections-and-permissions.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "frontmatter",
+      "href": "decisions-deliverables-and-operational-outcomes.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.maintenance-and-care",
+      "source": "frontmatter",
+      "href": "maintenance-and-care.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.people-places-and-community-testimony",
+      "source": "frontmatter",
+      "href": "people-places-and-community-testimony.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.relational-infrastructure-atlas",
+      "source": "frontmatter",
+      "href": "relational-infrastructure-atlas.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.scenes-of-work",
+      "source": "frontmatter",
+      "href": "scenes-of-work.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "inquiry.nycartc.march-data-design-attribution",
+      "source": "frontmatter",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "frontmatter",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "source.nycartc.testimony-guide.2017",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-testimony-guide-2017.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "frontmatter",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.absences-protections-and-permissions",
+      "source": "markdown",
+      "href": "absences-protections-and-permissions.md",
+      "context": "Absences, protections, and permissions"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "markdown",
+      "href": "decisions-deliverables-and-operational-outcomes.md",
+      "context": "Decisions, deliverables, and operational outcomes"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.maintenance-and-care",
+      "source": "markdown",
+      "href": "maintenance-and-care.md",
+      "context": "Maintenance and care"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.people-places-and-community-testimony",
+      "source": "markdown",
+      "href": "people-places-and-community-testimony.md",
+      "context": "People, places, and community testimony"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.people-places-and-community-testimony",
+      "source": "markdown",
+      "href": "people-places-and-community-testimony.md",
+      "context": "People, places, and community testimony"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "markdown",
+      "href": "project-afterlives-and-handoffs.md",
+      "context": "Project afterlives and handoffs"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.relational-infrastructure-atlas",
+      "source": "markdown",
+      "href": "relational-infrastructure-atlas.md",
+      "context": "Relational infrastructure atlas"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.role-and-collective-authorship",
+      "source": "markdown",
+      "href": "role-and-collective-authorship.md",
+      "context": "Role and collective authorship map"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.scenes-of-work",
+      "source": "markdown",
+      "href": "scenes-of-work.md",
+      "context": "Scenes of the work"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "inquiry.nycartc.march-data-design-attribution",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md",
+      "context": "MARCH data-design attribution inquiry"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "markdown",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md",
+      "context": "Public-meeting and testimony participation"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "method.source-re-encounter",
+      "source": "markdown",
+      "href": "../methods/source-re-encounter.md",
+      "context": "Source re-encounter"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "source.nycartc.testimony-guide.2017",
+      "source": "markdown",
+      "href": "../sources/nycartc-testimony-guide-2017.md",
+      "context": "Cabaret Law testimony guide"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "markdown",
+      "href": "../timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "context": "Art, life, waterways, and media archaeology, 2003-2011"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "markdown",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md",
+      "context": "NYC Artist Coalition events and venues, 2017-2021"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "source": "markdown",
+      "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md",
+      "context": "Nightlife recommendation sequence, 2017-2019"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "markdown",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md",
+      "context": "Participation infrastructure lineage, 2012-2026"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "part_of",
+      "to": "index.knowledge-wiki",
+      "source": "frontmatter",
+      "href": "../README.md"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "asset.photo.digital-district.001",
+      "source": "markdown",
+      "href": "../assets/digital-district-photo.md",
+      "context": "Digital District photograph record"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "capability.technical-operations",
+      "source": "markdown",
+      "href": "../capabilities/technical-operations.md",
+      "context": "Technical Operations capability"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "claim.callnyc.hackathon-date-time",
+      "source": "markdown",
+      "href": "../claims/callnyc-hackathon-date-time.md",
+      "context": "Date and time claim"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "claim.callnyc.independent-follow-on",
+      "source": "markdown",
+      "href": "../claims/callnyc-independent-follow-on.md",
+      "context": "Independent follow-on claim"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "claim.callnyc.project-years.legacy",
+      "source": "markdown",
+      "href": "../claims/callnyc-project-years-legacy.md",
+      "context": "Superseded date-range wording"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "correction.callnyc-years",
+      "source": "markdown",
+      "href": "../corrections/callnyc-years.md",
+      "context": "CallNYC chronology correction"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "source": "markdown",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md",
+      "context": "January 2016 Council workshop"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "index.knowledge-wiki",
+      "source": "markdown",
+      "href": "../README.md",
+      "context": "Knowledge Wiki start page"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "method.source-backed-team-memory",
+      "source": "markdown",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": "Source-Backed Team Memory"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "markdown",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": "OTI opportunity lens"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "portfolio.work.callnyc",
+      "source": "markdown",
+      "href": "../projections/work-callnyc.md",
+      "context": "CallNYC public projection"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "portfolio.work.technical-operations",
+      "source": "markdown",
+      "href": "../projections/work-technical-operations.md",
+      "context": "Technical Operations projection"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "project.callnyc",
+      "source": "markdown",
+      "href": "../projects/callnyc.md",
+      "context": "CallNYC"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "source.civichall.hackathon-announcement.2016",
+      "source": "markdown",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md",
+      "context": "Civic Hall announcement"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "source.nycc.councilstat-hackathon-post.2016",
+      "source": "markdown",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md",
+      "context": "Council event-day post"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "links_to",
+      "to": "source.politico.callnyc.2016-03-14",
+      "source": "markdown",
+      "href": "../sources/politico-callnyc-2016-03-14.md",
+      "context": "Politico coverage"
+    },
+    {
+      "from": "index.knowledge-wiki-pilot",
+      "type": "part_of",
+      "to": "index.knowledge-wiki",
+      "source": "frontmatter",
+      "href": "../README.md"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "to": "index.employment-acceptance",
+      "source": "frontmatter",
+      "href": "indexes/employment-acceptance.md",
+      "context": "Current opportunity records, role coverage, and hiring-acceptance evaluation boundaries."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "indexes/missing-pages.md",
+      "context": "Prioritized wanted pages, source-reencounter status, and librarian handoffs."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "to": "index.knowledge-wiki-pilot",
+      "source": "frontmatter",
+      "href": "indexes/pilot.md",
+      "context": "Start-here map for the bounded foundation records."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "to": "research-run.nycartc.shared-folder.2026-07",
+      "source": "frontmatter",
+      "href": "research/nycartc-shared-folder-archival-production-2026-07.md",
+      "context": "Complete population accounting with selective, public-safe close reading."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.absences-protections-and-permissions",
+      "source": "markdown",
+      "href": "indexes/absences-protections-and-permissions.md",
+      "context": "Absences, protections, and permissions"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "markdown",
+      "href": "indexes/decisions-deliverables-and-operational-outcomes.md",
+      "context": "operational outcomes"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.employment-acceptance",
+      "source": "markdown",
+      "href": "indexes/employment-acceptance.md",
+      "context": "Employment acceptance"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "markdown",
+      "href": "indexes/missing-pages.md",
+      "context": "Missing pages"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.knowledge-wiki-pilot",
+      "source": "markdown",
+      "href": "indexes/pilot.md",
+      "context": "foundation pilot"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.knowledge-wiki-pilot",
+      "source": "markdown",
+      "href": "indexes/pilot.md",
+      "context": "Foundation pilot"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.maintenance-and-care",
+      "source": "markdown",
+      "href": "indexes/maintenance-and-care.md",
+      "context": "maintenance and care"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.relational-infrastructure-atlas",
+      "source": "markdown",
+      "href": "indexes/relational-infrastructure-atlas.md",
+      "context": "Relational infrastructure atlas"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.scenes-of-work",
+      "source": "markdown",
+      "href": "indexes/scenes-of-work.md",
+      "context": "Scenes of the work"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "project.callnyc",
+      "source": "markdown",
+      "href": "projects/callnyc.md",
+      "context": "projects/callnyc.md"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "research-run.nycartc.shared-folder.2026-07",
+      "source": "markdown",
+      "href": "research/nycartc-shared-folder-archival-production-2026-07.md",
+      "context": "NYC Artist Coalition shared-folder production"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "source": "markdown",
+      "href": "timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "context": "artistic practice"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "markdown",
+      "href": "timelines/participation-infrastructure-lineage-2012-2026.md",
+      "context": "participation infrastructure"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "index.scenes-of-work",
+      "source": "frontmatter",
+      "href": "scenes-of-work.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "documents",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "frontmatter",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "documents",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.people-places-and-community-testimony",
+      "type": "uses_source",
+      "to": "source.nycartc.testimony-guide.2017",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-testimony-guide-2017.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.project-afterlives-and-handoffs",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "documents",
+      "to": "index.people-places-and-community-testimony",
+      "source": "frontmatter",
+      "href": "people-places-and-community-testimony.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "documents",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "documents",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "index.maintenance-and-care",
+      "source": "markdown",
+      "href": "maintenance-and-care.md",
+      "context": "maintenance and care index"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "index.people-places-and-community-testimony",
+      "source": "markdown",
+      "href": "people-places-and-community-testimony.md",
+      "context": "people and places index"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "markdown",
+      "href": "project-afterlives-and-handoffs.md",
+      "context": "project-afterlives index"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "markdown",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md",
+      "context": "public-meeting and testimony method"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "method.source-backed-team-memory",
+      "source": "markdown",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": "Source-Backed Team Memory"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "method.source-re-encounter",
+      "source": "markdown",
+      "href": "../methods/source-re-encounter.md",
+      "context": "source-reencounter method"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "project.callnyc",
+      "source": "markdown",
+      "href": "../projects/callnyc.md",
+      "context": "CallNYC"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "markdown",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md",
+      "context": "event-and-venue chronology"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.role-and-collective-authorship",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.scenes-of-work",
+      "type": "informed_by",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.scenes-of-work",
+      "type": "informed_by",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "index.scenes-of-work",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.scenes-of-work",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "inquiry.nycartc.march-data-design-attribution",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "inquiry.nycartc.march-data-design-attribution",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "inquiry.nycartc.march-data-design-attribution",
+      "type": "uses_source",
+      "to": "source.nycartc.march-data-design-notes.2019",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-march-data-design-notes-2019.md"
+    },
+    {
+      "from": "method.nycartc.public-meeting-and-testimony-participation",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "method.nycartc.public-meeting-and-testimony-participation",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "source-re-encounter.md"
+    },
+    {
+      "from": "method.nycartc.public-meeting-and-testimony-participation",
+      "type": "uses_source",
+      "to": "source.nycartc.public-meeting-playbook.2018",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-public-meeting-playbook-2018.md"
+    },
+    {
+      "from": "method.nycartc.public-meeting-and-testimony-participation",
+      "type": "uses_source",
+      "to": "source.nycartc.testimony-guide.2017",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-testimony-guide-2017.md"
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "method.source-re-encounter",
+      "type": "informed_by",
+      "to": "research-run.nycartc.shared-folder.2026-07",
+      "source": "frontmatter",
+      "href": "../research/nycartc-shared-folder-archival-production-2026-07.md"
+    },
+    {
+      "from": "method.source-re-encounter",
+      "type": "part_of",
+      "to": "index.knowledge-wiki",
+      "source": "frontmatter",
+      "href": "../README.md"
+    },
+    {
+      "from": "method.source-re-encounter",
+      "type": "supports",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "source-backed-team-memory.md"
+    },
+    {
+      "from": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "opportunity.asana.ai-implementation-manager.8027437",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.asana.ai-implementation-manager.8027437",
+      "type": "documents",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "opportunity.benepass.product-operations-manager.7f963a7a",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "type": "documents",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "documents",
+      "to": "portfolio.work.technical-operations",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md"
+    },
+    {
+      "from": "opportunity.permitflow.product-operations-manager.8a6e6066",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.permitflow.product-operations-manager.8a6e6066",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "portfolio.work.callnyc",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "portfolio.work.callnyc",
+      "type": "links_to",
+      "to": "project.callnyc",
+      "source": "markdown",
+      "href": "../projects/callnyc.md",
+      "context": "CallNYC"
+    },
+    {
+      "from": "portfolio.work.callnyc",
+      "type": "uses_source",
+      "to": "source.politico.callnyc.2016-03-14",
+      "source": "frontmatter",
+      "href": "../sources/politico-callnyc-2016-03-14.md"
+    },
+    {
+      "from": "portfolio.work.technical-operations",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "portfolio.work.technical-operations",
+      "type": "documents",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "has_asset",
+      "to": "asset.photo.digital-district.001",
+      "source": "frontmatter",
+      "href": "../assets/digital-district-photo.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "informed_by",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "source": "frontmatter",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "projected_to",
+      "to": "portfolio.work.callnyc",
+      "source": "frontmatter",
+      "href": "../projections/work-callnyc.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "to": "source.civichall.hackathon-announcement.2016",
+      "source": "frontmatter",
+      "href": "../sources/civic-hall-hackathon-announcement-2016.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "to": "source.nycc.councilstat-hackathon-post.2016",
+      "source": "frontmatter",
+      "href": "../sources/nyc-council-councilstat-hackathon-post-2016.md"
+    },
+    {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "to": "source.politico.callnyc.2016-03-14",
+      "source": "frontmatter",
+      "href": "../sources/politico-callnyc-2016-03-14.md"
+    },
+    {
+      "from": "project.kc-spaces-fund",
+      "type": "informed_by",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "../indexes/project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "project.kc-spaces-fund",
+      "type": "informed_by",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "../indexes/role-and-collective-authorship.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
+      "to": "inquiry.nycartc.march-data-design-attribution",
+      "source": "frontmatter",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
+      "to": "research-run.nycartc.shared-folder.2026-07",
+      "source": "frontmatter",
+      "href": "../research/nycartc-shared-folder-archival-production-2026-07.md",
+      "context": "Complete governed census and priority close reading of the shared working archive."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
+      "to": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "to": "inquiry.nycartc.march-data-design-attribution",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md",
+      "context": "MARCH attribution inquiry"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "markdown",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md",
+      "context": "participation method"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "to": "research-run.nycartc.shared-folder.2026-07",
+      "source": "markdown",
+      "href": "../research/nycartc-shared-folder-archival-production-2026-07.md",
+      "context": "shared-folder archival-production pass"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "markdown",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md",
+      "context": "event-and-venue chronology"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "to": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "source": "markdown",
+      "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md",
+      "context": "nightlife recommendation timeline"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "markdown",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md",
+      "context": "participation-infrastructure lineage"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "supports",
+      "to": "claim.nycartc.march-data-design-lead",
+      "source": "frontmatter",
+      "href": "../claims/nycartc-march-data-design-lead.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "supports",
+      "to": "claim.nycartc.nightlife-recommendation-continuity",
+      "source": "frontmatter",
+      "href": "../claims/nycartc-nightlife-recommendation-continuity.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "supports",
+      "to": "claim.nycartc.public-meeting-operating-system",
+      "source": "frontmatter",
+      "href": "../claims/nycartc-public-meeting-operating-system.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "uses_method",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "frontmatter",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "uses_source",
+      "to": "source.nycartc.shared-folder-census.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-shared-folder-census-2026.md"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "to": "capability.technical-operations",
+      "source": "markdown",
+      "href": "../capabilities/technical-operations.md",
+      "context": "Technical Operations capability path"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "to": "claim.nycartc.march-data-design-lead",
+      "source": "markdown",
+      "href": "../claims/nycartc-march-data-design-lead.md",
+      "context": "held data-design lead"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "to": "claim.nycartc.nightlife-recommendation-continuity",
+      "source": "markdown",
+      "href": "../claims/nycartc-nightlife-recommendation-continuity.md",
+      "context": "recommendation-continuity claim"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "to": "claim.nycartc.public-meeting-operating-system",
+      "source": "markdown",
+      "href": "../claims/nycartc-public-meeting-operating-system.md",
+      "context": "public-meeting operating-system claim"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "markdown",
+      "href": "../indexes/missing-pages.md",
+      "context": "missing-pages index"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "to": "inquiry.nycartc.march-data-design-attribution",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md",
+      "context": "open inquiry"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "to": "method.source-re-encounter",
+      "source": "markdown",
+      "href": "../methods/source-re-encounter.md",
+      "context": "source re-encounter"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "supports",
+      "to": "claim.nycartc.march-data-design-lead",
+      "source": "frontmatter",
+      "href": "../claims/nycartc-march-data-design-lead.md"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "supports",
+      "to": "claim.nycartc.nightlife-recommendation-continuity",
+      "source": "frontmatter",
+      "href": "../claims/nycartc-nightlife-recommendation-continuity.md"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "supports",
+      "to": "claim.nycartc.public-meeting-operating-system",
+      "source": "frontmatter",
+      "href": "../claims/nycartc-public-meeting-operating-system.md"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "uses_source",
+      "to": "source.nycartc.shared-folder-census.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-shared-folder-census-2026.md"
+    },
+    {
+      "from": "source.civichall.hackathon-announcement.2016",
+      "type": "documents",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "source": "frontmatter",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
+    },
+    {
+      "from": "source.civichall.hackathon-announcement.2016",
+      "type": "links_to",
+      "to": "claim.callnyc.hackathon-date-time",
+      "source": "markdown",
+      "href": "../claims/callnyc-hackathon-date-time.md",
+      "context": "date and time claim"
+    },
+    {
+      "from": "source.nycartc.march-data-design-notes.2019",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "source.nycartc.march-data-design-notes.2019",
+      "type": "links_to",
+      "to": "claim.nycartc.march-data-design-lead",
+      "source": "markdown",
+      "href": "../claims/nycartc-march-data-design-lead.md",
+      "context": "held data-design lead"
+    },
+    {
+      "from": "source.nycartc.march-data-design-notes.2019",
+      "type": "links_to",
+      "to": "inquiry.nycartc.march-data-design-attribution",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md",
+      "context": "open attribution inquiry"
+    },
+    {
+      "from": "source.nycartc.nightlife-recommendation-sequence.2017-2019",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "source.nycartc.nightlife-recommendation-sequence.2017-2019",
+      "type": "links_to",
+      "to": "claim.nycartc.nightlife-recommendation-continuity",
+      "source": "markdown",
+      "href": "../claims/nycartc-nightlife-recommendation-continuity.md",
+      "context": "recommendation-continuity claim"
+    },
+    {
+      "from": "source.nycartc.public-meeting-playbook.2018",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "source.nycartc.public-meeting-playbook.2018",
+      "type": "links_to",
+      "to": "claim.nycartc.public-meeting-operating-system",
+      "source": "markdown",
+      "href": "../claims/nycartc-public-meeting-operating-system.md",
+      "context": "public-meeting operating-system claim"
+    },
+    {
+      "from": "source.nycartc.shared-folder-census.2026",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "source.nycartc.shared-folder-census.2026",
+      "type": "informed_by",
+      "to": "research-run.nycartc.shared-folder.2026-07",
+      "source": "frontmatter",
+      "href": "../research/nycartc-shared-folder-archival-production-2026-07.md"
+    },
+    {
+      "from": "source.nycartc.shared-folder-census.2026",
+      "type": "links_to",
+      "to": "research-run.nycartc.shared-folder.2026-07",
+      "source": "markdown",
+      "href": "../research/nycartc-shared-folder-archival-production-2026-07.md",
+      "context": "archival-production report"
+    },
+    {
+      "from": "source.nycartc.testimony-guide.2017",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "source.nycartc.testimony-guide.2017",
+      "type": "links_to",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "markdown",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md",
+      "context": "participation method"
+    },
+    {
+      "from": "source.nycc.councilstat-hackathon-post.2016",
+      "type": "documents",
+      "to": "event.nycc.constituent-services-hackathon.2016",
+      "source": "frontmatter",
+      "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
+    },
+    {
+      "from": "source.politico.callnyc.2016-03-14",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "source.politico.callnyc.2016-03-14",
+      "type": "links_to",
+      "to": "claim.callnyc.independent-follow-on",
+      "source": "markdown",
+      "href": "../claims/callnyc-independent-follow-on.md",
+      "context": "independent follow-on claim"
+    },
+    {
+      "from": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "type": "informed_by",
+      "to": "index.scenes-of-work",
+      "source": "frontmatter",
+      "href": "../indexes/scenes-of-work.md"
+    },
+    {
+      "from": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "../indexes/missing-pages.md"
+    },
+    {
+      "from": "timeline.art-life-waterways-media-archaeology.2003-2011",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "timeline.nycartc.events-and-venues.2017-2021",
+      "type": "informed_by",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "frontmatter",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "timeline.nycartc.events-and-venues.2017-2021",
+      "type": "informed_by",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "timeline.nycartc.events-and-venues.2017-2021",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "../indexes/missing-pages.md"
+    },
+    {
+      "from": "timeline.nycartc.events-and-venues.2017-2021",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "type": "uses_source",
+      "to": "source.nycartc.nightlife-recommendation-sequence.2017-2019",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-nightlife-recommendation-sequence-2017-2019.md"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "informed_by",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "informed_by",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "links_to",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "markdown",
+      "href": "nycartc-events-and-venues-2017-2021.md",
+      "context": "NYC Artist Coalition event chronology"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "../indexes/missing-pages.md"
+    },
+    {
+      "from": "timeline.participation-infrastructure.2012-2026",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    }
+  ]
+}

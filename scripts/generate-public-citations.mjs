@@ -17,7 +17,18 @@ const usedSourceIds = new Set(
 const publicRegistry = {
   sources: knowledgeBank.sources
     .filter((source) => usedSourceIds.has(source.id))
-    .map(({ protectedLocatorId: _protectedLocatorId, media: _media, supportsGenerally: _supportsGenerally, ...source }) => source),
+    .map(({
+      protectedLocatorId: _protectedLocatorId,
+      media: _media,
+      supportsGenerally: _supportsGenerally,
+      projectIds: _projectIds,
+      intakeIds: _intakeIds,
+      reviewStatus: _reviewStatus,
+      reviewedAt: _reviewedAt,
+      reviewedBy: _reviewedBy,
+      legacyImportedAt: _legacyImportedAt,
+      ...source
+    }) => source),
   claims: knowledgeBank.claims
     .filter((claim) => knowledgeBank.pages.some((page) => page.occurrences.some((occurrence) => occurrence.claimId === claim.id)))
     .map((claim) => ({

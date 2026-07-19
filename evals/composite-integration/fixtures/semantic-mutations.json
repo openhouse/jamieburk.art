@@ -1,0 +1,107 @@
+[
+  {
+    "id": "attribution-drop",
+    "type": "attribution-drop",
+    "original": { "attributionRequired": true, "attributionTokens": ["the Council described", "NYC Council described"] },
+    "mutated": { "text": "This was the first CouncilStat hackathon." },
+    "expectedCode": "attribution-dropped"
+  },
+  {
+    "id": "collective-to-sole-credit",
+    "type": "sole-credit",
+    "original": { "collective": true },
+    "mutated": { "text": "Jamie single-handedly created and led the coalition." },
+    "expectedCode": "sole-credit-inflation"
+  },
+  {
+    "id": "mention-to-endorsement",
+    "type": "mention-to-endorsement",
+    "original": { "evidenceKind": "social-mention" },
+    "mutated": { "text": "The Council member endorsed CallNYC." },
+    "expectedCode": "endorsement-inflation"
+  },
+  {
+    "id": "recoverable-to-lifetime",
+    "type": "mutable-to-lifetime",
+    "original": { "populationScope": "recoverable-current-surface" },
+    "mutated": { "text": "The complete lifetime history of every post." },
+    "expectedCode": "population-inflation"
+  },
+  {
+    "id": "records-to-impact",
+    "type": "aggregate-to-impact",
+    "original": { "unit": "database rows" },
+    "mutated": { "text": "The project reached and directly impacted 1,846 people." },
+    "expectedCode": "aggregate-inflation"
+  },
+  {
+    "id": "photograph-to-institutional-fact",
+    "type": "photo-institutional",
+    "original": { "soleSourceKind": "participant-photograph" },
+    "mutated": { "claimType": "institutional" },
+    "expectedCode": "photo-role-substitution"
+  },
+  {
+    "id": "stage-to-completion",
+    "type": "stage-inflation",
+    "original": { "supportedStage": "recommendation" },
+    "mutated": { "claimedStage": "completed" },
+    "expectedCode": "stage-inflation"
+  },
+  {
+    "id": "url-to-role-proof",
+    "type": "url-role",
+    "original": { "evidenceKind": "public-url-only" },
+    "mutated": { "roleClaim": true },
+    "expectedCode": "url-role-substitution"
+  },
+  {
+    "id": "memory-to-confirmed",
+    "type": "memory-confirmed",
+    "original": { "knowledgeStatus": "memory" },
+    "mutated": { "knowledgeStatus": "confirmed" },
+    "expectedCode": "memory-promotion"
+  },
+  {
+    "id": "not-recovered-to-never-existed",
+    "type": "negative-absolute",
+    "original": { "finding": "not-recovered" },
+    "mutated": { "text": "The event page never existed." },
+    "expectedCode": "negative-finding-inflation"
+  },
+  {
+    "id": "protected-to-public",
+    "type": "protected-public",
+    "original": { "visibility": "protected" },
+    "mutated": { "publicationStatus": "public" },
+    "expectedCode": "protected-projection"
+  },
+  {
+    "id": "non-support-to-positive-evidence",
+    "type": "non-support-positive",
+    "original": { "relationship": "does-not-support" },
+    "mutated": { "positiveSupport": true },
+    "expectedCode": "non-support-substitution"
+  },
+  {
+    "id": "anti-claim-conflict",
+    "type": "anti-claim-conflict",
+    "original": { "antiClaims": ["sole organizer"] },
+    "mutated": { "text": "Jamie was the sole organizer of the campaign." },
+    "expectedCode": "anti-claim-conflict"
+  },
+  {
+    "id": "stale-candidate-judgment",
+    "type": "stale-candidate",
+    "original": { "candidate": "sha256:current" },
+    "mutated": { "candidate": "sha256:previous" },
+    "expectedCode": "stale-candidate"
+  },
+  {
+    "id": "stale-contract-baseline",
+    "type": "stale-contract",
+    "original": { "contract": "sha256:current" },
+    "mutated": { "contract": "sha256:previous" },
+    "expectedCode": "stale-contract"
+  }
+]
