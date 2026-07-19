@@ -6,8 +6,8 @@ status: maintained
 visibility: public-safe
 sensitivity: low
 projection_status: never-public
-last_reviewed: "2026-07-18"
-review_by: "2027-01-18"
+last_reviewed: "2026-07-19"
+review_by: "2027-01-19"
 human_review_state: not-requested
 aliases: []
 canonical_path: docs/knowledge-wiki/indexes/capabilities-and-opportunities.md
@@ -22,7 +22,10 @@ These pages help an application teammate move from a role requirement to the
 smallest set of credible evidence.
 
 - [Technical Operations](../capabilities/technical-operations.md)
+- [Working Across the Civic Interface](../capabilities/civic-interface.md)
+- [Handoffs, Adoption, and Continuity](../capabilities/handoff-adoption-continuity.md)
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md)
+- [From Being There to Operating Structure](../methods/being-there-to-operating-structure.md)
 - [NYC Artist Coalition civic operations evidence](../applications/nycac-civic-operations-evidence.md)
 - [NYC OTI Technical Operations opportunity](../opportunities/oti-technical-operations.md)
 - [ACLU Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)

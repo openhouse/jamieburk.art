@@ -6,8 +6,8 @@ status: maintained
 visibility: public-safe
 sensitivity: low
 projection_status: never-public
-last_reviewed: "2026-07-18"
-review_by: "2027-01-18"
+last_reviewed: "2026-07-19"
+review_by: "2027-01-19"
 human_review_state: not-requested
 aliases:
   - Knowledge Bank start page
@@ -31,6 +31,9 @@ globally renamed.
 ## Start Here
 
 - [Projects](indexes/projects.md): begin with a body of work.
+- [Selected practice chronology](timelines/selected-practice-chronology.md):
+  move across two decades of source-backed work without treating the selection
+  as a complete life history.
 - [Sources](indexes/sources.md): inspect what an artifact establishes and what
   it does not.
 - [Claims and corrections](indexes/claims-and-corrections.md): follow approved
@@ -41,11 +44,17 @@ globally renamed.
   consent, and display as separate questions.
 - [Open questions](indexes/open-questions.md): distinguish wanted records from
   broken links and non-recovery from nonexistence.
+- [Evidence debt and promotion queue](indexes/evidence-debt-and-promotion-queue.md):
+  see what still needs a source return, collaborator correction, rights review,
+  or editorial decision.
 - [Retrieval tasks](evaluations/retrieval-tasks.md): test whether another person
   can find and trust an answer.
 - [NYC Artist Coalition archive evaluation](evaluations/nycac-shared-folder-coverage.md):
   test population closure, public safety, collective credit, and application
   usefulness.
+- [Missing pages and source return evaluation](evaluations/missing-pages-and-source-return.md):
+  test whether wanted pages remain grounded in fresh source review and open
+  human questions.
 
 ## Work Safely
 
@@ -65,6 +74,9 @@ npm run wiki:graph
 npm run wiki:report
 npm run wiki:tasks
 npm run wiki:query -- --help
+npm run wiki:eval
+npm run wiki:eval:source-return
+npm run wiki:test:source-return
 npm run wiki:opportunities
 npm run wiki:coverage
 npm run wiki:discovery

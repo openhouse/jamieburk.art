@@ -6,8 +6,8 @@ status: maintained
 visibility: public-safe
 sensitivity: low
 projection_status: never-public
-last_reviewed: "2026-07-18"
-review_by: "2027-01-18"
+last_reviewed: "2026-07-19"
+review_by: "2027-01-19"
 human_review_state: not-requested
 aliases: []
 canonical_path: docs/knowledge-wiki/indexes/projects.md
@@ -26,12 +26,30 @@ public boundary.
 
 - [CallNYC](../projects/callnyc.md): a 2016 independent civic-data prototype
   and the first bounded Knowledge Wiki pilot.
+- [WOW List](../projects/wowlist.md): a co-built community calendar product
+  joining event publishing, distribution, organizer support, and field
+  learning.
 
 ## Civic Participation And Cultural Infrastructure
 
 - [NYC Artist Coalition](../projects/nyc-artist-coalition.md): recurring
   participation, public identity, practical safety, civic translation, and a
   fully accounted shared-archive research layer.
+- [Fair Rent NYC and Commercial Rent Stabilization](../projects/fair-rent-nyc.md):
+  campaign operations, legislative provenance, and public-data proposals.
+- [KC Town Hall](../projects/kc-town-hall.md): physical restoration,
+  neighborhood listening, and municipal process with explicit role and privacy
+  boundaries.
+
+## Artistic And Participatory Practice
+
+- [Participatory Public Practice](../projects/participatory-public-practice.md):
+  art, hospitality, public encounter, shared governance, and documentation.
+- [Participation Infrastructure Lineage](../timelines/participation-infrastructure-lineage.md):
+  a source-backed throughline from gathering to digital, civic, and archival
+  systems.
+- [Selected Practice Chronology](../timelines/selected-practice-chronology.md):
+  a broader dated retrieval path that remains deliberately incomplete.
 
 The deeper compatibility layer retains additional public-safe
 [project research](../../knowledge-bank/README.md#projection-rule). Those notes

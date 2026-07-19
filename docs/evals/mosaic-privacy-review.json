@@ -4,7 +4,7 @@
   "reviewType": "public-safe editorial risk review",
   "isLegalReview": false,
   "isParticipantApproval": false,
-  "candidateFingerprint": "bc5414cc975e9a4d270526cf8fb077436282bb9713bb66c4f0b01a511d2476a7",
+  "candidateFingerprint": "9f52c6cdb449b9a7bd8cb351d43107a38558cf7d33391849205f9e530ce3c2c9",
   "findings": [
     {
       "id": "MPR-001",
@@ -54,12 +54,19 @@
       "risk": "Aggregate archive accounting could become reconstructable participant, strategy, or role evidence if exact locators or item metadata were projected publicly.",
       "decision": "publish-only-aggregate-census-and-keep-exact-manifest-protected",
       "appliesTo": ["nyc-artist-coalition", "knowledge-wiki", "applications", "compiled-output"]
+    },
+    {
+      "id": "MPR-008",
+      "combination": ["cross-project chronology", "protected source-class metadata", "open role or transition inquiry"],
+      "risk": "A broad synthesis could make private life circumstances, participant histories, or protected archive structure easier to infer even when individual fragments are public-safe.",
+      "decision": "generalize-source-position-and-omit-private-circumstances",
+      "appliesTo": ["knowledge-wiki", "selected-practice-chronology", "source-return-research-run", "handoff-and-continuity"]
     }
   ],
   "result": "pass-with-continuing-holds",
   "limitations": [
     "This review addresses combinations visible in the current public composition; it is not legal advice.",
     "It does not grant image rights, quotation permission, participant consent, collaborator consent, or production approval.",
-    "It must be rerun when a route adds a new identity, image, private-summary detail, or contact surface."
+    "It must be rerun when a route or cross-project synthesis adds a new identity, image, private-summary detail, source-position detail, or contact surface."
   ]
 }
