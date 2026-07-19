@@ -1,14 +1,19 @@
 type TagListProps = {
   tags: string[];
   compact?: boolean;
+  tone?: "default" | "inverted";
 };
 
-export function TagList({ tags, compact = false }: TagListProps) {
+export function TagList({ tags, compact = false, tone = "default" }: TagListProps) {
+  const toneClasses = tone === "inverted"
+    ? "border-jb-paper/45 bg-jb-paper text-jb-blue"
+    : "border-jb-blue/30 bg-jb-sky/15 text-jb-blue";
+
   return (
     <ul className={`flex flex-wrap gap-2 ${compact ? "text-xs" : "text-sm"}`}>
       {tags.map((tag) => (
         <li
-          className="rounded-full border border-jb-blue/30 bg-jb-sky/15 px-3 py-1 font-medium text-jb-blue"
+          className={`rounded-full border px-3 py-1 font-medium ${toneClasses}`}
           key={tag}
         >
           {tag}

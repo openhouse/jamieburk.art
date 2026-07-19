@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-19",
+  "project": "nyc-artist-coalition",
+  "method": {
+    "surface": "Authenticated Google Drive user interface",
+    "scope": "The accessible NYC Artist Coalition shared-folder population at capture time",
+    "rootSelection": "All 61 root items were selected and reconciled before recursive folder capture.",
+    "recursion": "Every accessible folder discovered through the interface was opened, inventoried, classified, and assigned one primary disposition.",
+    "contentReview": "A priority set of 63 text documents was exported privately and close-read across the main civic, campaign, meeting, and implementation clusters.",
+    "privateCustody": "Exact Drive identifiers, paths, filenames, owners, raw exports, excerpts, participant data, and the recursive manifest remain outside the public repository."
+  },
+  "populationReconciliation": {
+    "rootItems": 61,
+    "rootFolders": 47,
+    "rootFiles": 14,
+    "capturedFolders": 257,
+    "populationTotal": 2405,
+    "inventoriedTotal": 2405,
+    "classifiedTotal": 2405,
+    "dispositionedTotal": 2405,
+    "accessErrors": 0
+  },
+  "primaryDispositionCounts": {
+    "container-accounted": 257,
+    "priority-content-reviewed": 63,
+    "protected-metadata-only": 50,
+    "visual-rights-review": 1472,
+    "media-rights-review": 96,
+    "document-review-deferred": 338,
+    "technical-archive-deferred": 118,
+    "other-review-deferred": 11
+  },
+  "priorityReview": {
+    "documents": 63,
+    "characters": 351532,
+    "semanticClusters": [
+      "coalition operations and recurring meetings",
+      "Cabaret Law repeal and Let NYC Dance",
+      "Office of Nightlife and public town-hall production",
+      "M.A.R.C.H. accountability and Talks Not Raids",
+      "Commercial Rent Stabilization and Fair Rent NYC",
+      "CreateNYC recommendations and cultural policy",
+      "public-meeting production",
+      "campaign websites and public communications"
+    ],
+    "boundary": "Content review supports proposition-level summaries and research leads. It does not make the underlying documents public, clear collaborator quotations, or establish authorship where an artifact does not say who made it."
+  },
+  "promotedFindings": [
+    {
+      "id": "NYCAC-FINDING-PARTICIPATION-PLAYBOOK",
+      "status": "confirmed-with-boundary",
+      "summary": "A protected working guide identifies Jamie and Julia Fredenburg as its writers and describes a repeatable method connecting community listening, priority-setting, coalition building, Council outreach, public events, campaign materials, and sustained follow-through.",
+      "boundary": "Treat the guide as shared authorship and operating-method evidence, not proof that either writer solely created every tactic or caused the legislative outcomes."
+    },
+    {
+      "id": "NYCAC-FINDING-NIGHTLIFE-TOWN-HALL",
+      "status": "confirmed-with-boundary",
+      "summary": "A protected run-of-show documents Jamie and Olympia Kazi opening the Office of Nightlife town hall for NYC Artist Coalition and assigns Jamie presentation and documentation tasks; contemporary public reporting independently identifies Jamie as a coalition speaker and the coalition as the town-hall convener.",
+      "boundary": "Do not convert a shared run-of-show into sole production credit or infer attendance, endorsement, or policy causation."
+    },
+    {
+      "id": "NYCAC-FINDING-FAIRRENT-WEB",
+      "status": "confirmed-with-boundary",
+      "summary": "A protected implementation checklist headed for Jamie records completed Fair Rent NYC web tasks involving responsive presentation, testimonials, coalition and press modules, social sharing, data fixes, and campaign calls to action.",
+      "boundary": "Use this as corroboration of Jamie's implementation work, not sole authorship of campaign policy, copy, data, photography, design, or outcomes."
+    },
+    {
+      "id": "NYCAC-FINDING-PARTICIPATORY-GOVERNANCE",
+      "status": "use-with-care",
+      "summary": "Meeting artifacts show a recurring practice of agendas, ballots, priority voting, next-step assignment, practical safety work, and translation from participant concerns into campaign and government-facing action.",
+      "boundary": "The records support the form of the practice, not participant consensus, universal experience, audited attendance, or Jamie's authorship of every artifact."
+    }
+  ],
+  "publicationBoundary": {
+    "exactDriveIdsStored": false,
+    "exactPrivatePathsStored": false,
+    "rawDocumentsStored": false,
+    "rawExcerptsStored": false,
+    "participantOrContactDataStored": false,
+    "ownerOrEditorListsStored": false,
+    "privateMediaStored": false,
+    "rightsOrConsentInferred": false,
+    "privateManifestSha256": "f1b7669e2df30ffa3e78aa2bbb8e2b947cc49c20a1d7980285892b5d9b6f9951"
+  },
+  "limitations": [
+    "The census covers the population accessible to the authenticated account on July 19, 2026; deleted, removed, inaccessible, or never-shared material may exist outside it.",
+    "A folder or file's presence, owner label, or custody does not establish Jamie's authorship, approval, role, or permission to publish.",
+    "The whole population was inventoried and dispositioned; 63 priority documents were close-read. Content-reviewed total is intentionally smaller than population total.",
+    "Private working documents require public corroboration or collaborator review before stronger outcome, authorship, quotation, or causal claims are promoted.",
+    "Passing automated coverage and leakage checks does not complete Jamie review, collaborator review, rights review, application selection, or production approval."
+  ]
+}

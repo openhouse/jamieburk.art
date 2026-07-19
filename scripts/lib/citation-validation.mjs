@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
 
 const publicSurfaceFiles = [
@@ -36,27 +37,68 @@ function allStrings(value, strings = []) {
 
 export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   const errors = [];
+  const intakeById = new Map(knowledgeBank.intakeItems.map((item) => [item.id, item]));
+  const observationById = new Map(knowledgeBank.observations.map((item) => [item.id, item]));
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
   const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   const inquiryById = new Map(knowledgeBank.researchInquiries.map((inquiry) => [inquiry.id, inquiry]));
 
   for (const [label, items] of [
+    ["intake item", knowledgeBank.intakeItems],
+    ["observation", knowledgeBank.observations],
     ["source", knowledgeBank.sources],
     ["claim", knowledgeBank.claims],
     ["research inquiry", knowledgeBank.researchInquiries],
+    ["proof coverage target", knowledgeBank.proofCoverageTargets.map((item) => ({ id: item.proofId }))],
     ["correction", knowledgeBank.corrections],
     ["page", knowledgeBank.pages]
   ]) {
     for (const id of duplicateIds(items)) errors.push(`Duplicate ${label} ID: ${id}`);
   }
 
+  for (const intake of knowledgeBank.intakeItems) {
+    for (const sourceId of intake.sourceIds) {
+      if (!sourceById.has(sourceId)) errors.push(`Intake ${intake.id} references unknown source ${sourceId}`);
+    }
+    for (const observationId of intake.observationIds) {
+      const observation = observationById.get(observationId);
+      if (!observation) errors.push(`Intake ${intake.id} references unknown observation ${observationId}`);
+      else if (observation.intakeId !== intake.id) errors.push(`Observation ${observationId} points to ${observation.intakeId}, not ${intake.id}`);
+    }
+    for (const inquiryId of intake.researchInquiryIds) {
+      if (!inquiryById.has(inquiryId)) errors.push(`Intake ${intake.id} references unknown inquiry ${inquiryId}`);
+    }
+    if (intake.kind === "public-url" && !intake.sourceUrl) errors.push(`Public URL intake ${intake.id} has no sourceUrl`);
+    if (intake.kind === "photo-lead") {
+      if (!intake.observationIds.length || !intake.researchInquiryIds.length) errors.push(`Photo lead ${intake.id} lacks a visual observation or research inquiry`);
+      for (const observationId of intake.observationIds) {
+        const observation = observationById.get(observationId);
+        if (observation && observation.kind !== "visual-observation") errors.push(`Photo lead ${intake.id} uses non-visual observation ${observationId}`);
+      }
+    }
+    if (intake.disposition === "integrated" && (!intake.sourceIds.length || !intake.observationIds.length)) errors.push(`Integrated intake ${intake.id} lacks a source or observation`);
+    if (["captured", "researching"].includes(intake.disposition) && !intake.researchInquiryIds.length) errors.push(`Open intake ${intake.id} has no research inquiry`);
+  }
+
+  for (const observation of knowledgeBank.observations) {
+    if (!intakeById.has(observation.intakeId)) errors.push(`Observation ${observation.id} references unknown intake ${observation.intakeId}`);
+    if (observation.sourceId && !sourceById.has(observation.sourceId)) errors.push(`Observation ${observation.id} references unknown source ${observation.sourceId}`);
+    for (const sourceId of observation.comparisonSourceIds) if (!sourceById.has(sourceId)) errors.push(`Observation ${observation.id} references unknown comparison source ${sourceId}`);
+    for (const claimId of observation.claimIds) if (!claimById.has(claimId)) errors.push(`Observation ${observation.id} references unknown claim ${claimId}`);
+    for (const inquiryId of observation.researchInquiryIds) if (!inquiryById.has(inquiryId)) errors.push(`Observation ${observation.id} references unknown inquiry ${inquiryId}`);
+    if (["corroborated", "verified"].includes(observation.status) && !observation.sourceId) errors.push(`Verified observation ${observation.id} has no source`);
+    if (!observation.publicSafe && observation.claimIds.length) errors.push(`Non-public observation ${observation.id} is attached to a public-safe claim record`);
+  }
+
   for (const source of knowledgeBank.sources) {
     if (!source.publicCitation.trim()) errors.push(`Source ${source.id} has no public citation text`);
+    if (!source.doesNotEstablish.length) errors.push(`Source ${source.id} has no doesNotEstablish boundary`);
     if (source.visibility !== "public" && (source.canonicalUrl || source.archiveUrl || source.assetUrl)) errors.push(`Non-public source ${source.id} exposes a URL`);
     if (source.visibility === "public" && ["archived", "live-and-archived"].includes(source.preservationStatus) && !source.archiveUrl) errors.push(`Archived public source ${source.id} has no archive URL`);
   }
 
   for (const claim of knowledgeBank.claims) {
+    if (["confirmed", "confirmed-with-boundary"].includes(claim.status) && !claim.evidence.length) errors.push(`Confirmed claim ${claim.id} has no evidence`);
     for (const evidence of claim.evidence) {
       const source = sourceById.get(evidence.sourceId);
       if (!source) {
@@ -87,6 +129,7 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
 
     for (const projection of claim.projections) {
       if (projection.status === "active" && projection.citationRequired && !claim.evidence.some((evidence) => evidence.renderCitation)) errors.push(`Active cited projection ${claim.id}/${projection.key} has no renderable evidence`);
+      if (projection.status === "hold" && projection.surfaces.length) errors.push(`Held projection ${claim.id}/${projection.key} names a public surface`);
     }
   }
 
@@ -94,6 +137,25 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     for (const sourceId of inquiry.sourceIds) if (!sourceById.has(sourceId)) errors.push(`Inquiry ${inquiry.id} references unknown source ${sourceId}`);
     if (inquiry.resultStatus === "not-recovered" && !inquiry.limitations.length) errors.push(`Not-recovered inquiry ${inquiry.id} has no limitations`);
   }
+
+  for (const relation of knowledgeBank.agencyRelations) {
+    const declaredSupport = relation.sourceIds.flatMap(
+      (sourceId) => sourceById.get(sourceId)?.supportsGenerally.map(normalize) ?? []
+    );
+    for (const supportKey of relation.sourceSupportKeys) {
+      if (!declaredSupport.includes(normalize(supportKey))) errors.push(`Agency relation ${relation.id} uses undeclared source support: ${supportKey}`);
+    }
+  }
+
+  const proofIds = new Set(proofClaims.map((proof) => proof.id));
+  const coveredProofIds = new Set();
+  for (const target of knowledgeBank.proofCoverageTargets) {
+    coveredProofIds.add(target.proofId);
+    if (!proofIds.has(target.proofId)) errors.push(`Coverage target references unknown proof ${target.proofId}`);
+    for (const sourceId of target.sourceIds) if (!sourceById.has(sourceId)) errors.push(`Coverage target ${target.proofId} references unknown source ${sourceId}`);
+    for (const inquiryId of target.researchInquiryIds) if (!inquiryById.has(inquiryId)) errors.push(`Coverage target ${target.proofId} references unknown inquiry ${inquiryId}`);
+  }
+  for (const proofId of proofIds) if (!coveredProofIds.has(proofId)) errors.push(`Proof ${proofId} has no evidence-coverage disposition`);
 
   for (const correction of knowledgeBank.corrections) {
     if (!claimById.has(correction.claimId)) errors.push(`Correction ${correction.id} references unknown claim ${correction.claimId}`);
@@ -157,6 +219,10 @@ export function citationReport() {
   ]);
   const activeProjections = knowledgeBank.claims.flatMap((claim) => claim.projections.filter((item) => item.status === "active"));
   return {
+    intakeDispositions: countBy(knowledgeBank.intakeItems, "disposition"),
+    observationStatus: countBy(knowledgeBank.observations, "status"),
+    openResearchLeads: knowledgeBank.intakeItems.filter((item) => ["captured", "researching"].includes(item.disposition)).map((item) => item.id),
+    proofCoverageStatus: countBy(knowledgeBank.proofCoverageTargets, "status"),
     sourceKinds: countBy(knowledgeBank.sources, "kind"),
     sourceVisibility: countBy(knowledgeBank.sources, "visibility"),
     preservation: countBy(knowledgeBank.sources, "preservationStatus"),

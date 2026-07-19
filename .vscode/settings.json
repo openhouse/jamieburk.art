@@ -1,0 +1,13 @@
+{
+  "markdown.validate.enabled": true,
+  "markdown.validate.fileLinks.enabled": true,
+  "markdown.validate.fragmentLinks.enabled": true,
+  "markdown.validate.fileLinks.markdownFragmentLinks": "warning",
+  "markdown.validate.referenceLinks.enabled": "warning",
+  "markdown.updateLinksOnFileMove.enabled": "prompt",
+  "markdown.suggest.paths.enabled": true,
+  "markdown.suggest.paths.includeWorkspaceHeaderCompletions": "onDoubleHash",
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.security.level": "strict"
+}

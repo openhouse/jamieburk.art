@@ -22,7 +22,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
@@ -37,7 +37,7 @@ export function Hero() {
           aria-label="Representative operating-structure diagram"
           className="jb-artifact-surface rounded-lg border border-jb-ink/15 p-5 shadow-sm"
         >
-          <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink">
+          <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink md:grid-cols-1 lg:grid-cols-2">
             {[
               "Requirements",
               "Workflows",

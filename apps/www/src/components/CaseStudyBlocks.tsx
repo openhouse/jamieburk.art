@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
@@ -18,10 +19,10 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
       <h2 className="text-xl font-semibold" id="at-a-glance">
         At a glance
       </h2>
-      <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+      <dl className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
         {rows.map(([label, value]) => (
           <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+            <dt className="text-xs font-semibold uppercase text-jb-paper">
               {label}
             </dt>
             <dd className="mt-1 leading-6">{value}</dd>
@@ -29,11 +30,11 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="text-xs font-semibold uppercase text-jb-paper">
           Tags
         </p>
         <div className="mt-3">
-          <TagList compact tags={item.tags} />
+          <TagList compact tags={item.tags} tone="inverted" />
         </div>
       </div>
     </section>
@@ -67,15 +68,61 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
         Artifact gallery
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
-        {item.artifacts.map((artifact, index) => (
-          <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
-              {artifact.type} / 0{index + 1}
-            </p>
-            <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
-            <p className="mt-3 text-sm leading-6 text-jb-ink/72">{artifact.description}</p>
-          </JBCard>
-        ))}
+        {item.artifacts.map((artifact, index) => {
+          if (artifact.media) {
+            return (
+              <figure
+                className="overflow-hidden rounded-lg border border-jb-ink/15 bg-jb-paper shadow-sm md:col-span-2"
+                key={artifact.title}
+              >
+                <a className="block" href={artifact.media.href}>
+                  <Image
+                    alt={artifact.media.alt}
+                    className="aspect-[3/2] w-full object-cover object-top"
+                    height={800}
+                    sizes="(min-width: 768px) 66vw, 100vw"
+                    src={artifact.media.src}
+                    width={1200}
+                  />
+                </a>
+                <figcaption className="border-t border-jb-ink/10 p-5">
+                  <p className="text-xs font-semibold uppercase text-jb-blue">
+                    {artifact.type} / 0{index + 1}
+                  </p>
+                  <h3 className="mt-2 text-xl font-semibold text-jb-ink">
+                    {artifact.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-jb-ink/74">
+                    {artifact.description}
+                  </p>
+                  <p className="mt-3 text-sm leading-6 text-jb-ink/76">
+                    {artifact.media.caption}
+                  </p>
+                  <a
+                    className="mt-3 inline-block text-sm font-semibold text-jb-blue hover:text-jb-green"
+                    href={artifact.media.href}
+                  >
+                    View {artifact.media.sourceLabel}
+                  </a>
+                </figcaption>
+              </figure>
+            );
+          }
+
+          return (
+            <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
+              <p className="text-xs font-semibold uppercase text-jb-blue">
+                {artifact.type} / 0{index + 1}
+              </p>
+              <h3 className="mt-10 text-xl font-semibold text-jb-ink">
+                {artifact.title}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/72">
+                {artifact.description}
+              </p>
+            </JBCard>
+          );
+        })}
       </div>
     </section>
   );
@@ -89,9 +136,9 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
   ] as const;
 
   return (
-    <section aria-labelledby="known-open-protected">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
-        Known / Open / Protected
+    <section aria-labelledby="scope-and-sources">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="scope-and-sources">
+        Scope and sources
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
@@ -101,6 +148,22 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
           </JBCard>
         ))}
       </div>
+      {item.sourceLayer ? (
+        <p className="mt-5 max-w-4xl text-sm leading-6 text-jb-ink/72">
+          <strong className="text-jb-ink">Source basis:</strong> {item.sourceLayer}
+        </p>
+      ) : null}
+      {item.careNote || item.publicSafety?.note ? (
+        <details className="mt-4 max-w-4xl border-l-4 border-jb-ochre bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
+          <summary className="cursor-pointer font-semibold text-jb-blue">
+            Claim and care limits
+          </summary>
+          <div className="mt-3 space-y-2 leading-6">
+            {item.careNote ? <p>{item.careNote}</p> : null}
+            {item.publicSafety?.note ? <p>{item.publicSafety.note}</p> : null}
+          </div>
+        </details>
+      ) : null}
     </section>
   );
 }

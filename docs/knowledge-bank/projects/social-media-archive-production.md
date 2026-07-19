@@ -1,0 +1,330 @@
+# Project social-media archival production
+
+**Reviewed:** 2026-07-15
+**Method:** authenticated public X interface, public profile and post pages,
+public repost lists, bounded searches, official public-office records, public
+articles, and project-archive comparison.
+
+This is a public-safe research inventory. It preserves only public account
+identities, public posts, public interaction edges, bounded counts, and
+editorial limitations. It does not preserve credentials, cookies, session
+data, private messages, private account data, or unreleased collaborator
+materials.
+
+## Account registry
+
+| Project | Public account | Relationship | Finding |
+| --- | --- | --- | --- |
+| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | Dedicated | Recovered |
+| NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | Shared coalition identity | Recovered |
+| FairRentNYC | [@NYCArtC](https://x.com/NYCArtC) | Shared campaign identity | Recovered |
+| Talks Not Raids | [@NYCArtC](https://x.com/NYCArtC) | Shared campaign identity | Recovered |
+| Let NYC Dance | [@NYCArtC](https://x.com/NYCArtC) | Shared campaign identity | Recovered |
+| Save NYC Spaces | [@NYCArtC](https://x.com/NYCArtC) | Shared campaign identity | Recovered |
+| WOW List | [@wowlist](https://x.com/wowlist) | Dedicated | Recovered |
+| KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | Dedicated | Recovered |
+| KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | Dedicated | Recovered |
+| Harry J. Epstein Company | Not recovered | Open inquiry | Not evidence that none existed |
+| Sunday Dinner | Not recovered; adjacent evidence at [@wowlist](https://x.com/wowlist) | Open inquiry | Do not call @wowlist the Sunday Dinner account |
+| 196 | Not recovered | Open inquiry | Not evidence that none existed |
+| Source-Backed Team Memory | Not recovered | Open inquiry | Not evidence that none existed |
+| NTER CHNG | Not recovered | Open inquiry | Not evidence that none existed |
+
+Profile post and follower counts were recorded in the machine-readable module
+as a dated discovery snapshot. They will drift and are not promoted as impact
+claims.
+
+## CallNYC
+
+### Recovery method
+
+The profile reported 110 posts. A full-population disposition pass recovered
+107 distinct content objects and retained three explicit `not-recovered`
+population slots. This accounts for 100 percent of the reported population by
+disposition, not by recovered content.
+
+The recovered set contains 86 ordinary CallNYC-authored posts, six CallNYC
+replies, and 15 reposted external posts. All 41 CallNYC-authored or reply posts
+with displayed reposts were audited. They showed 74 reposts; current public
+lists exposed 63 account appearances from 46 distinct accounts, while 11
+displayed reposts had no currently public identity.
+
+The review established a lower bound of **at least 19 distinct serving Council
+member accounts** in public repost lists and recovered six Council-member-
+authored posts or replies explicitly involving CallNYC. Seventy-one recognition
+posts connected 26 Council handles to 61 distinct resident-facing issue pages.
+
+The complete method, 19-member evidence ledger, six authored interactions,
+84-URL inventory, stakeholder findings, and source-role boundaries are in the
+[CallNYC full social-population report](callnyc-social-population.md).
+
+### Engagement pattern
+
+CallNYC did not simply broadcast a generic project announcement. Its posts
+recognized Council offices associated with high constituent-service counts by
+issue and linked residents to issue pathways. Member amplification therefore
+formed a public loop between administrative records, office recognition, and
+resident guidance. The evidence supports attributable uptake; it does not
+establish formal endorsement, Council adoption, or official-service status.
+
+## NYC Artist Coalition
+
+### Facebook post population
+
+The [NYC Artist Coalition Facebook post report](nyc-artist-coalition-facebook-posts.md)
+preserves all 445 distinct posts exposed by the authenticated Page feed on July
+15, 2026, spanning 2017–2021. It inventories 67 cleaned off-Facebook routes,
+governs nine recovered sources, and classifies mission continuity, civic
+interfaces, and displayed interaction signals while withholding raw post bodies,
+interaction identities, authenticated data, and two sensitive exact routes.
+
+The result is a capture-date population, not a lifetime Meta export. Shared Page
+authorship remains unresolved: Jamie's predominant-use memory is a research lead,
+and the repository does not assign him every post.
+
+The `@NYCArtC` profile names four coalition campaigns: Save NYC Spaces, Let NYC
+Dance, Talks Not Raids, and Fair Rent NYC. The shared identity remained active
+across years of cultural-space, nightlife, enforcement, and commercial-rent
+work.
+
+### Bounded corpus
+
+- 202 external authored mentions recovered from a 2017-2019 search;
+- 212 external authored mentions recovered from a 2020-2025 search;
+- 175 campaign-tagged posts recovered from a 2017-2019 search;
+- 120 campaign-tagged posts recovered from a 2021-2025 search.
+
+The two campaign searches therefore recovered 295 campaign-tagged posts. These
+are bounded search results, not a complete lifetime corpus; search caps,
+ranking, deleted posts, private accounts, suspensions, and renames remain
+material limitations.
+
+### Complete retrievable-population review
+
+A later full-population pass exhausted the authenticated Posts and Posts &
+replies routes and reconciled them with exact yearly `from:NYCArtC` searches.
+The union yielded 3,123 unique source-status URLs: 608 coalition-account
+originals, 77 coalition-account replies, and 2,438 external-source statuses
+surfaced through native reposts. Every record in that retrievable union was
+reviewed.
+
+The profile reported 5,124 posts. X's documented display and indexing limits
+left 2,001 profile-counted records outside the recovered public union, so this
+is 100 percent review of the retrievable union and 60.9 percent coverage of the
+profile counter. Literal full-account recovery requires an account-owner X
+Archive; the remainder is not represented as absent or deleted.
+
+The corpus preserves 1,161 distinct posted short URLs and 623 visible source
+authors. Replayable overlapping subject rules identify 477 Fair Rent NYC, 192
+Save NYC Spaces, 97 Let NYC Dance, 62 Talks Not Raids, 57 nightlife-governance,
+and 98 artist-labor records. These are publishing-pattern counts, not measures
+of authorship, endorsement, reach, participation, causality, or impact.
+
+A separate bounded 2021-2026 incoming search rendered 98 records from 43
+authors; 75 records from 34 authors directly matched `@NYCArtC`, while 23 were
+surrounding conversation context. Source-network appearance through coalition
+reposting remains separate from this incoming-response evidence.
+
+The complete method, posted-source inventory, stakeholder relationship classes,
+platform boundary, and selective projection are in the
+[NYC Artist Coalition social-population report](nycac-social-population.md).
+
+### Serving Council-member authored mentions
+
+At least six serving Council member accounts authored public posts mentioning
+`@NYCArtC` in the recovered corpus:
+
+| Serving Council member | Example | Mission-relevant signal |
+| --- | --- | --- |
+| Rafael Espinal | [February 21, 2019](https://x.com/RLEspinal/status/1098626837821997056) | Save NYC Spaces, Talks Not Raids, and small-business advocacy |
+| Stephen Levin | [February 11, 2019](https://x.com/StephenLevin33/status/1095020293112979457) | Venue testimony and M.A.R.C.H. transparency |
+| Carlina Rivera | [October 20, 2018](https://x.com/CarlinaRivera/status/1053849469853274112) | Public testimony and small-business legislation |
+| Justin Brannan | [August 30, 2019](https://x.com/JustinBrannan/status/1167536258438115333) | Direct public reply to the coalition account |
+| Brad Lander | [January 28, 2021](https://x.com/bradlander/status/1354840336330330116) | Commercial Rent Stabilization |
+| Jimmy Van Bramer | [October 26, 2020](https://x.com/JimmyVanBramer/status/1320792543773282304) | Arts-worker and cultural-policy advocacy |
+
+Additional strong examples include Espinal's posts about the
+[Nightlife Mayor town hall](https://x.com/RLEspinal/status/978005203311001600),
+[Cabaret Law repeal](https://x.com/RLEspinal/status/924972124628049920),
+and the [Office of Nightlife bill signing](https://x.com/RLEspinal/status/910610976109719553),
+as well as Levin's [public hearing mobilization](https://x.com/StephenLevin33/status/1093220593317629952).
+
+Candidate posts before service and former-member posts after service were not
+counted as serving-member interactions. Reposts and likes were not included in
+this six-account authored-mention lower bound.
+
+### Identity, collaboration, and authorship
+
+[Document Journal](https://www.documentjournal.com/2018/02/taking-back-new-york-citys-nightlife/)
+separately identifies Jamie Burkart and Olympia Kazi with NYC Artist Coalition,
+documents the Let NYC Dance context, and quotes Olympia. The article misspells
+Jamie's surname as “Burkhart.” The public record supports a durable coalition
+identity used by respected collaborators; it does not identify who authored
+individual `@NYCArtC` posts.
+
+Jamie has supplied first-party context that he established the accounts. That
+memory is preserved as an authorship and account-history inquiry until a
+platform export, setup record, or collaborator confirmation supplies public
+corroboration. This boundary lets the knowledge bank recognize the identity
+system without converting shared account activity into individual speech.
+
+The issue history remains live. A 2025
+[Hell Gate report](https://hellgatenyc.com/cure-march-raids-2025-report/)
+described two nightlife multi-agency inspections in 2024 and nine in the first
+half of 2025, renewing questions about CURE and the enforcement problem Talks
+Not Raids addressed. That source supports continuing policy relevance, not
+individual causal credit.
+
+## WOW List
+
+Reconciled Posts and Replies crawls recovered all 38 posts displayed by the
+profile: 16 ordinary WOW List-authored posts, six replies, and 16 reposted
+external posts spanning February 2014 through January 2017. The population
+contains 35 distinct posted short URLs; all 35 resolved to public destinations
+during the review.
+
+- The [first recovered authored post](https://x.com/wowlist/status/433671630837919744)
+  credits “Richard & Jamie” and says the project grew from WOW List calendars
+  made at Sunday Dinner.
+- April 2015 replies explain followed local calendars, profiles, publishing an
+  event, and adding one event to multiple lists.
+- A [2016 product-support thread](https://x.com/wowlist/status/771457416298921985)
+  explains joining NYCdiy, adding shows, and receiving the weekly email.
+- [Shelby Turner's tutorial](https://www.youtube.com/watch?v=nQg47LtixPI)
+  and the [Santa Barbara DIY resource page](https://www.sbdiy.org/) independently
+  document organizer-facing use.
+- A bounded public search recovered eight independently authored posts linking
+  WOW List event or profile pages across music, performance, a neighborhood
+  forum, and an all-ages benefit.
+
+The 22 account-authored or reply posts displayed 20 reposts, 21 likes, and two
+replies at review time. All 10 with displayed reposts were audited; current
+public lists exposed 16 account appearances from eight distinct accounts, while
+four displayed reposts had no public identity. Original-author metrics on the
+16 reposted external posts are excluded from WOW List traction.
+
+The account also routed event, movement, and mutual-aid information across city
+scenes, including Black Lives Matter demonstrations, post-election marches,
+Standing Rock support, Ghost Ship relief and vigils, and support for DIY spaces.
+The strongest portfolio use is shared provenance, organizer workflow, and
+bounded independent adoption, not a claim that every post belonged to Jamie or
+that the historical product remains available.
+
+The complete method, URL inventory, source-role table, adoption ledger, and
+anti-inflation boundaries are in the
+[WOW List full social-population report](wowlist-social-population.md).
+
+### Facebook post population
+
+An authenticated page-owner pass separately recovered every distinct post
+exposed by the WOW List Facebook feed on July 15, 2026: 57 dated posts spanning
+April 2015 through March 2018. The public-safe ledger preserves 55 distinct
+posted URLs, including 30 WOW List routes and 25 external source routes. It
+classifies 17 product-onboarding or use records, 16 cross-city organizer
+records, 12 venue-safety or survival records, six mutual-aid or civic records,
+and three participatory product-governance records.
+
+The URL layer separately classifies mission context, evidentiary role, access,
+and preservation. Seven routes resolve to governed sources, including Shelby
+Turner's independent product tutorial; 48 remain inventory-only and not
+rechecked, which is distinct from dead, live, or historically nonexistent.
+
+Twenty-four posts display shared-source cards spanning artists, local
+organizers, advocacy groups, cultural spaces, and published media. These are
+source relationships, not unique stakeholder counts, formal partnerships, or
+post-level human authorship. At capture time, Facebook displayed likes on 41
+posts, comments on 12, and shares on ten. Those volatile counts are not reach,
+attendance, conversion, endorsement, mandate, or impact.
+
+Meta Business Suite's displayed `Lifetime` content window began in March 2019,
+after the recovered feed ended, and returned no activity. It could not serve as
+the historical population source. The stable terminal live-feed crawl and
+57-row reconciliation define completeness for this pass; a native owner export
+is still required for lifetime and publishing-identity claims.
+
+The complete method, 55-route inventory, source roles, privacy exclusions, and
+collective-credit boundary are in the
+[WOW List Facebook post report](wowlist-facebook-posts.md).
+
+## KC Town Hall
+
+Authenticated Posts and Replies passes recovered all 183 items displayed by the
+profile: 142 account posts, 13 account replies, and 28 reposts. A second
+traversal exactly matched the complete status-ID set.
+
+One hundred records concern resident tire intake, pickup coordination, result
+reporting, or program continuity. This is a recurring operating pattern, not an
+audited count of pickups or households.
+
+All 40 account-authored or reply statuses displaying reposts were audited. The
+70 displayed reposts yielded 45 currently public appearances from 33 distinct
+handles; 25 displayed identities remain unresolved. Seven appearances came from
+three then-sitting Council-member accounts. Separately, two sitting members
+authored direct responses in a 2019 neighborhood-business exchange.
+
+Those findings keep account outreach, project-selected amplification, public
+repost-list appearance, direct outside-authored response, and endorsement as
+different relationship types. They do not replace the municipal funding
+lifecycle, establish project completion, or assign every account post or field
+operation to Jamie. Historical phone numbers and addresses were deliberately
+excluded.
+
+The full method, URL inventory, source-role distinctions, public repost audit,
+and anti-inflation boundaries are in the
+[KC Town Hall full-population production note](../intake/2026-07-14-kctownhall-full-population-social-corpus.md).
+
+## KC Spaces Fund
+
+The bounded review recovered 34 of 35 posts displayed by the profile. Eleven
+distinct public `#FUNDED` grantee highlights were recovered between April and
+July 2020:
+
+1. [Latino Arts Foundation](https://x.com/KCSpacesFund/status/1251553551454797830)
+2. [UN/TUCK Queer & Trans Collective](https://x.com/KCSpacesFund/status/1253445776224722945)
+3. [GetWoke / Merrique Jenson](https://x.com/KCSpacesFund/status/1260590429730414592)
+4. [Trans Women of Color Collective](https://x.com/KCSpacesFund/status/1262524545275244545)
+5. [Blackbox on Troost](https://x.com/KCSpacesFund/status/1263599910781440000)
+6. [One Mic Stand KC](https://x.com/KCSpacesFund/status/1263927272802746368)
+7. [Farewell Transmission](https://x.com/KCSpacesFund/status/1270549089076359174)
+8. [Parker 2](https://x.com/KCSpacesFund/status/1271219713188810753)
+9. [Kansas City Textile Arts Center](https://x.com/KCSpacesFund/status/1272260009695551489)
+10. [SWAN](https://x.com/KCSpacesFund/status/1278061185871552512)
+11. [Vulpes Bastille](https://x.com/KCSpacesFund/status/1281300779266125826)
+
+This is a lower bound, not a complete grant ledger. The account also documented
+application timing, rolling $500 grant framing, geographic expansion, and a
+print fundraiser. Public organizer credit remains with the campaign's named
+organizers. Nothing in the social timeline establishes that Jamie selected
+grantees, ran the fundraiser, or authored each post.
+
+## Editorial decisions
+
+Promoted to a public case-study projection:
+
+- CallNYC's 61-issue-page distribution system and 19-member
+  Council-engagement lower bound;
+- NYC Artist Coalition's four-campaign identity and six-member authored-mention
+  lower bound, plus its complete 3,123-record retrievable-union review;
+- WOW List's shared Sunday Dinner provenance and historical product-support
+  workflow;
+- KC Town Hall's broader public-stewardship arc.
+
+Retained in the knowledge bank but held from the site:
+
+- KC Spaces Fund's 11 recovered public grantee highlights;
+- profile follower counts and engagement totals;
+- NYC Artist Coalition's dated 4,306-unit visible-interaction snapshot;
+- individual authorship and account-establishment claims;
+- incomplete account searches and not-recovered projects.
+
+## Stopping condition
+
+The production pass is complete when every recovered project-account
+relationship has a disposition; every promoted count has named public evidence,
+a collection method, and a lower-bound label; shared-account authorship remains
+unassigned; public-office status is cross-checked; and all private session,
+message, contact, and collaborator material remains outside the repository.
+
+For `@NYCArtC`, that stopping condition applies to the 3,123-record retrievable
+public union. The 2,001-record profile-counter remainder stays open until an
+owner archive can be transformed and reconciled in a private workspace.

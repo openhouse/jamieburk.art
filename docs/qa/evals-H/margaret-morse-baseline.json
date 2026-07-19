@@ -1,0 +1,21 @@
+{
+  "evaluator": "Prof. Margaret Morse lens source audit",
+  "phase": "baseline",
+  "commit": "5a8e2413572f539c71694fa88e9e31f8a75ac37b",
+  "score": 2,
+  "pass": false,
+  "evidence": [
+    "The About page named civic technology, cultural infrastructure, coalition work, and collective credit.",
+    "WOWList, Sunday Dinner / 196, and NYC Artist Coalition pages separately documented participation, care, and cultural-space practice."
+  ],
+  "gaps": [
+    "No public surface connected the artistic, civic, technical, and social practices as one lineage.",
+    "The dominant frame was organizational utility: workflows, interfaces, coordination, and handoffs.",
+    "Experimentation, attention, place, hospitality, embodiment, and how people inhabit systems were not legible as causes of the operating method."
+  ],
+  "safety_findings": [
+    "Collective-credit and privacy language was strong.",
+    "No protected UCSC educational record or private testimonial appeared on the public site."
+  ],
+  "recommendation": "Add one concise, public-source-backed threshold connecting the participatory artistic lineage to current operating practice, while keeping private praise and participant details out."
+}

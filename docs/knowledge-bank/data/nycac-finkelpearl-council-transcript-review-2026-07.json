@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-15",
+  "question": "In recovered official New York City Council hearing transcripts, where did DCLA Commissioner Tom Finkelpearl refer to NYC Artist Coalition?",
+  "scope": {
+    "committee": "New York City Council Committee on Cultural Affairs, Libraries and International Intergroup Relations",
+    "dateBoundary": "2014 through 2019",
+    "meetingInventorySource": "https://data.cityofnewyork.us/d/m48u-yjt8",
+    "route": "Official committee meeting pages to linked Legistar matter pages to attachments labeled Hearing Transcript",
+    "completeness": "bounded",
+    "scopeNote": "This is a complete search of the official transcript attachments recovered through the declared committee route, not every Council committee, every possible matter route, video, written testimony, or unrecovered record."
+  },
+  "search": {
+    "speakerVariants": [
+      "Finkelpearl",
+      "Finklepearl"
+    ],
+    "coalitionVariants": [
+      "NYC Artist Coalition",
+      "New York City Artist Coalition",
+      "NYC Artists Coalition",
+      "Artist Coalition"
+    ],
+    "method": [
+      "Recovered official committee meeting pages and their linked Legistar matter pages.",
+      "Downloaded every attachment labeled Hearing Transcript reached through that route.",
+      "Converted the PDFs to searchable text and searched spelling and name variants.",
+      "Deduplicated attachments by SHA-256 and read every candidate passage for speaker attribution and referent boundaries."
+    ]
+  },
+  "summary": {
+    "committeeMeetingPagesAttempted": 74,
+    "committeeMeetingPagesRecovered": 74,
+    "linkedMatterPages": 77,
+    "searchableTranscriptAttachments": 132,
+    "uniquePdfHashes": 91,
+    "attachmentsMentioningFinkelpearl": 46,
+    "artistCoalitionCandidateAttachments": 2,
+    "commissionerAttributedOccurrences": 1,
+    "nonCommissionerCandidateAttachments": 1
+  },
+  "commissionerOccurrence": {
+    "date": "2017-05-19",
+    "hearing": "Executive Budget Hearings - Cultural Affairs, Libraries and International Intergroup Relations",
+    "speaker": "DCLA Commissioner Tom Finkelpearl",
+    "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5271559&GUID=68A2E207-53EA-43CA-A03E-F879A113464E",
+    "matterUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3028986&GUID=DC99383D-8767-45D7-ADCF-6E0561D67767&Options=&Search=",
+    "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398466&GUID=ACA2E347-0B95-443A-8307-2E4E247839C3&Options=info|&Search=",
+    "sha256": "754bccbcb460d13a2b801900c61742a111da62fc00f966008c3137c0c821f975",
+    "locator": "Official transcript pp. 91-92; printed transcript p. 92, lines 7-24",
+    "shortQuote": "The NYC Artist Coalition formed after we hosted a meeting for DIY Arts Community this past January.",
+    "context": "Finkelpearl was explaining CreateNYC as a close reciprocal relationship with the public, DCLA's desire to expand direct public feedback, and the power of bringing people together around a common cause.",
+    "classification": "one substantive commissioner-attributed occurrence"
+  },
+  "nonCommissionerCandidate": {
+    "date": "2018-03-16",
+    "hearing": "Preliminary Budget Hearing - Cultural Affairs, Libraries and International Intergroup Relations",
+    "speaker": "Jamie Burkart",
+    "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6195706&GUID=7514BB5D-51E7-4B77-92D8-A3919828DBEB",
+    "matterUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3345079&GUID=46B15ACF-A1B1-44C7-B2BE-B6C22C771167&Options=&Search=",
+    "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398473&GUID=8CE00A3F-BA88-4C6D-B34E-313F3EFCD2D2&Options=info|&Search=",
+    "sha256": "0acd72ec4c2acec727d33291246b6ce4d82279d944dd5bde2800ce186167f3f5",
+    "locator": "Official transcript pp. 166-168",
+    "classification": "keyword candidate classified as not another Finkelpearl reference because Jamie, not Finkelpearl, was the speaker",
+    "relevance": "Jamie's testimony publicly described CreateNYC office hours as helping underground artists reach safety services and helping the City understand artists' lives."
+  },
+  "duplicateOfficialRoute": {
+    "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5271562&GUID=B1C39589-E332-4AF4-A654-21F176120F7C",
+    "sha256": "754bccbcb460d13a2b801900c61742a111da62fc00f966008c3137c0c821f975",
+    "note": "The joint hearing also appears under a Libraries matter as a byte-identical official attachment. It is the same hearing and occurrence, not a second substantive reference."
+  },
+  "negativeControls": [
+    {
+      "text": "It has had a huge influence both on the plan itself and our thinking related disability arts within the agency.",
+      "attribution": "Disability Arts NYC task force",
+      "notAttribution": "NYC Artist Coalition",
+      "reason": "The immediately preceding subject is the Disability Arts NYC task force formed around the plan; the following words specify disability arts."
+    }
+  ],
+  "findings": [
+    "One recovered official Council transcript contains a substantive Finkelpearl reference to NYC Artist Coalition: May 19, 2017.",
+    "A second candidate transcript from March 16, 2018 contains both names, but the coalition reference is Jamie Burkart's testimony and is not another Finkelpearl reference.",
+    "The May 19 joint hearing survives through two byte-identical official attachment routes and counts as one occurrence.",
+    "The transcript supports Finkelpearl's public selection of coalition formation as an example within a reciprocal public-engagement explanation; it does not establish private motive or institutional dependency."
+  ],
+  "limitations": [
+    "The recovered route is not exhaustive across all Council committees, written submissions, videos, non-transcript attachments, or records unavailable through the declared route.",
+    "Keyword counts do not establish who spoke; candidate passages required manual speaker attribution.",
+    "No additional commissioner-attributed occurrence surfaced in this recovered corpus, which is not equivalent to proof that no other reference ever existed.",
+    "The record supports public institutional function, not private motive, exclusive reliance, sole causation, or legislative authorship."
+  ]
+}

@@ -283,8 +283,14 @@ if (!/NEXT_PUBLIC_ROBOTS_POLICY\s*===\s*["']index["']/.test(siteUrlSource + next
   addFailure(siteUrlPath, "production indexing is not explicit opt-in");
 }
 
-if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConfigSource)) {
+const resumePdfRoute = "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf";
+
+if (!nextConfigSource.includes(`source: "${resumePdfRoute}"`) || !/X-Robots-Tag/.test(nextConfigSource)) {
   addFailure(nextConfigPath, "resume PDF noindex header is missing");
+}
+
+if (nextConfigSource.includes('source: "/resume/:path*"')) {
+  addFailure(nextConfigPath, "resume HTML route must remain eligible for indexing");
 }
 
 if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
