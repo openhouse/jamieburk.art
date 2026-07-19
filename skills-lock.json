@@ -1,59 +1,17 @@
 {
   "version": 1,
   "skills": {
-    "accessibility-review": {
-      "source": "anthropics/knowledge-work-plugins",
-      "sourceType": "github",
-      "skillPath": "design/skills/accessibility-review/SKILL.md",
-      "computedHash": "987e6d762060025045c4cc243cbc2feefc5397bb2998d666b4c334c4c1e19d8a"
-    },
-    "build-review-interface": {
-      "source": "hamelsmu/evals-skills",
-      "sourceType": "github",
-      "skillPath": "skills/build-review-interface/SKILL.md",
-      "computedHash": "84d8ca4a22bb327a672db920eb2387846ea202528a3c1a2e1d82dd5791b7ccdf"
-    },
     "content-strategy": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "skillPath": "skills/content-strategy/SKILL.md",
       "computedHash": "13824c129ab70874c57d766c2d844f8dac7a0b366845f108a73527c9d094c4f6"
     },
-    "copy-editing": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "skillPath": "skills/copy-editing/SKILL.md",
-      "computedHash": "ba4e44a8470b3ae2add3e0ffa74c85d8b0357db4ca2cf8cfa7b4abc9d94fc602"
-    },
     "copywriting": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "skillPath": "skills/copywriting/SKILL.md",
       "computedHash": "c8d63b1f77be04fd54981720de65697988810bd28331097dbe0aaf3e166d638a"
-    },
-    "domain-modeling": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "skillPath": "skills/engineering/domain-modeling/SKILL.md",
-      "computedHash": "363cb0f53b0b431e7c00086ad1f823500b7e1b70b5616ee969c979f0934e9e6e"
-    },
-    "error-analysis": {
-      "source": "hamelsmu/evals-skills",
-      "sourceType": "github",
-      "skillPath": "skills/error-analysis/SKILL.md",
-      "computedHash": "64840896ab089c9315fc69764e5ebba7d4c3468dabf69b04423c19e8d9c23c87"
-    },
-    "eval-audit": {
-      "source": "hamelsmu/evals-skills",
-      "sourceType": "github",
-      "skillPath": "skills/eval-audit/SKILL.md",
-      "computedHash": "996ef52f90673647106ac795600c6d32f82ac0e1a51564b3ea47d130c0145a45"
-    },
-    "evaluate-rag": {
-      "source": "hamelsmu/evals-skills",
-      "sourceType": "github",
-      "skillPath": "skills/evaluate-rag/SKILL.md",
-      "computedHash": "2ffd989e885c2eceeede12e4f3470926010bd07c87e36e7dd0c6af52c4597504"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
@@ -67,53 +25,17 @@
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "4eabc66183767153e404b39d1b839b1c37f2d82d86f0a0d7e880a579d8d62336"
     },
-    "grill-with-docs": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
-      "computedHash": "9c460cbd94fd3c63cdef967dbdb6e66ca687103cdc380cd37834e4d10b738f78"
-    },
     "impeccable": {
       "source": "pbakaus/impeccable",
       "sourceType": "github",
       "skillPath": ".agents/skills/impeccable/SKILL.md",
       "computedHash": "14b94c217b5a313cd69eccbed288cce844611f491df2d9e133fa10b19ff28a5a"
     },
-    "interviewing-evaluating-candidates": {
-      "source": "refoundai/lenny-skills",
-      "sourceType": "github",
-      "skillPath": "skills/interviewing-evaluating-candidates/SKILL.md",
-      "computedHash": "ce27c3d2c771cfe8cb6092bee23543a124d691aac7ac2c3d04263a8dbeb5705c"
-    },
-    "research": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "skillPath": "skills/engineering/research/SKILL.md",
-      "computedHash": "bd3e2c6826671d82c86ed0da3dac3370ebcf63b0fe847f91bb444e1fb7dac21b"
-    },
-    "research-synthesis": {
-      "source": "anthropics/knowledge-work-plugins",
-      "sourceType": "github",
-      "skillPath": "design/skills/research-synthesis/SKILL.md",
-      "computedHash": "b5974ce5ef910c9ce4061f5b123e3058afc1229102ad727e4e765048bc0d908a"
-    },
     "seo-audit": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "skillPath": "skills/seo-audit/SKILL.md",
       "computedHash": "f2dc52130189068981f21e1c0bdc4471ac7cd9b08d8a1320604411aa0f950385"
-    },
-    "skill-creator": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/skill-creator/SKILL.md",
-      "computedHash": "5ea13a6d9f0d4bb694405d79acd00cadec0d21bb138c4dd10fcf3c500cb835c2"
-    },
-    "validate-evaluator": {
-      "source": "hamelsmu/evals-skills",
-      "sourceType": "github",
-      "skillPath": "skills/validate-evaluator/SKILL.md",
-      "computedHash": "8e6639863c2ce7d9ce98975889e30ad472fe3767e38037ef3c5384ecb50c002b"
     },
     "verification-before-completion": {
       "source": "obra/superpowers",
@@ -132,12 +54,6 @@
       "sourceType": "github",
       "skillPath": "skills/webapp-testing/SKILL.md",
       "computedHash": "ad5b1fc52807e9afa4635e59218a026b164dc58b6c3f41b0f7c644dcd6ccf572"
-    },
-    "write-judge-prompt": {
-      "source": "hamelsmu/evals-skills",
-      "sourceType": "github",
-      "skillPath": "skills/write-judge-prompt/SKILL.md",
-      "computedHash": "e04b1f7bb7e9ba42804f5e7a555f480b0ac04412175703ace5338932b05b9f60"
     }
   }
 }
