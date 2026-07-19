@@ -25,7 +25,8 @@ is derived. The portfolio is selective.
 | Concern | Canonical owner |
 | --- | --- |
 | Page identity, orientation, authored links, and narrative context | Markdown and frontmatter in `docs/knowledge-bank/` |
-| Exact claims, sources, observations, evidence, anti-claims, and research tasks | `apps/www/src/data/knowledge-bank/records.ts` and its imported typed records |
+| Exact source-backed claims, sources, observations, evidence, anti-claims, and research tasks | `apps/www/src/data/knowledge-bank/records.ts` and its imported typed records |
+| Exact professional proof claims, public wording, guardrails, and projection surfaces | `apps/www/src/data/proofs.ts` |
 | Citation rendering and page plans | Existing citation registry and generated public registry |
 | Rights, consent, custody, and source visibility | Existing typed source and evidence records |
 | Corrections and superseded wording | Existing correction register |
@@ -36,6 +37,11 @@ is derived. The portfolio is selective.
 No wiki page may create a second claim, source, evidence, citation, rights, or
 correction system. It may point to canonical record IDs and explain their
 context without reproducing protected locators or unapproved content.
+
+The graph adapter includes only canonical records referenced by authored pages
+and the dependencies needed to understand them. Referenced proof claims appear
+as minimal `proof-claim` nodes; their exact wording and guardrails remain in
+`proofs.ts` and are not copied into generated graph payloads.
 
 ## Required frontmatter
 

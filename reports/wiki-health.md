@@ -3,18 +3,18 @@
 # Knowledge Wiki health
 
 **Status:** PASS
-**Graph fingerprint:** `cd159c65d2060039cbcb6545ea5e24db2becca62f7e55cbea7c16374c0e4b387`
+**Graph fingerprint:** `0a4125c8feafee7144ad1fa3a24fcb64f792d620ee0c127bf05ee7f9c4fd9581`
 
 ## Counts
 
 | Measure | Count |
 | --- | ---: |
-| markdown files | 63 |
-| authored pages | 27 |
+| markdown files | 73 |
+| authored pages | 37 |
 | migration candidates | 36 |
-| canonical nodes in pilot | 335 |
-| graph nodes | 362 |
-| graph edges | 1072 |
+| canonical nodes in pilot | 432 |
+| graph nodes | 469 |
+| graph edges | 1445 |
 | wanted pages | 1 |
 | orphans | 0 |
 | unreachable | 0 |

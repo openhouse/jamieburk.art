@@ -21,6 +21,16 @@ relations:
   - type: indexes
     target: project.fair-rent-nyc
   - type: indexes
+    target: project.harry-j-epstein
+  - type: indexes
+    target: project.let-nyc-dance
+  - type: indexes
+    target: project.talks-not-raids
+  - type: indexes
+    target: event.nycac.office-of-nightlife-town-hall-2017
+  - type: indexes
+    target: place.small-cultural-spaces
+  - type: indexes
     target: event.nycc.councilstat-hackathon-2016
   - type: indexes
     target: capability.technical-operations
@@ -30,6 +40,16 @@ relations:
     target: method.original-source-rereading
   - type: indexes
     target: method.transition-and-handoff
+  - type: indexes
+    target: method.jamie-at-work
+  - type: indexes
+    target: method.participation-and-relational-infrastructure
+  - type: indexes
+    target: method.outcomes-and-adoption
+  - type: indexes
+    target: policy.people-and-collective-credit
+  - type: indexes
+    target: index.claim-maturity-dashboard
   - type: indexes
     target: index.knowledge-wiki-project-dossiers
   - type: indexes
@@ -93,10 +113,20 @@ The Knowledge Wiki exists to:
 
 ## Start Here
 
+- [Jamie at Work](methods/jamie-at-work.md)
 - [NYC Artist Coalition](projects/nyc-artist-coalition.md)
+- [Let NYC Dance](projects/let-nyc-dance.md)
+- [Talks Not Raids](projects/talks-not-raids.md)
+- [Office of Nightlife town hall](events/office-of-nightlife-town-hall-2017.md)
 - [WOW List](projects/wowlist.md)
 - [KC Town Hall](projects/kc-town-hall.md)
 - [Fair Rent NYC and Commercial Rent Stabilization](projects/fair-rent-nyc.md)
+- [Harry J. Epstein Company](projects/harry-j-epstein.md)
+- [Participation and Relational Infrastructure](methods/participation-and-relational-infrastructure.md)
+- [Small Cultural Spaces Where Culture Is Born](places/small-cultural-spaces.md)
+- [Outcomes and Adoption](outcomes-and-adoption.md)
+- [People, Collective Credit, and Protected Absences](people-and-collective-credit.md)
+- [Claim Maturity Dashboard](claim-maturity-dashboard.md)
 - [CallNYC chronology and boundaries](projects/callnyc.md#corrected-chronology)
 - [CouncilStat hackathon event](events/councilstat-hackathon-2016.md)
 - [Technical Operations capability](capabilities/technical-operations.md)

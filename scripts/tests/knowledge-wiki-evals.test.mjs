@@ -2,7 +2,18 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { suitePath, validateWikiEvalSuite } from "../knowledge-wiki/check-wiki-evals.mjs";
-import { hashFiles, selectedCandidateFiles, sourceReturnPageSpecs, validateJudgmentPayload, validateSourceReturnText } from "../knowledge-wiki/run-wiki-evals.mjs";
+import {
+  campaignNarrativePageSpecs,
+  governancePageSpecs,
+  hashFiles,
+  practicePageSpecs,
+  selectedCandidateFiles,
+  sourceReturnPageSpecs,
+  validateJudgmentPayload,
+  validatePageSpecText,
+  validateSourceReturnText,
+} from "../knowledge-wiki/run-wiki-evals.mjs";
+import { compileKnowledgeWiki } from "../knowledge-wiki/lib.mjs";
 import { createHash } from "node:crypto";
 
 const suite = JSON.parse(readFileSync(suitePath, "utf8"));
@@ -63,4 +74,49 @@ test("new source practice evals remain blocking and bounded", () => {
   const sourceEval = suite.evals.find((entry) => entry.id === "KW-014");
   assert.ok(sourceEval.cannot_establish.includes("source completeness"));
   assert.ok(sourceEval.cannot_establish.includes("publication rights"));
+});
+
+test("campaign and ownership narratives satisfy bounded page contracts", () => {
+  for (const spec of campaignNarrativePageSpecs) {
+    const text = readFileSync(new URL(`../../${spec.path}`, import.meta.url), "utf8");
+    assert.deepEqual(validatePageSpecText(text, spec).errors, [], spec.id);
+  }
+  const graph = compileKnowledgeWiki().graph;
+  assert.equal(graph.nodes.find((node) => node.id === "hje-modernization-stewardship")?.kind, "proof-claim");
+});
+
+test("campaign narrative validation fails when collective-credit governance is removed", () => {
+  const spec = campaignNarrativePageSpecs[0];
+  const text = readFileSync(new URL(`../../${spec.path}`, import.meta.url), "utf8");
+  const mutated = text.replace("    target: policy.people-and-collective-credit", "    target: policy.credit-removed");
+  assert.ok(validatePageSpecText(mutated, spec).errors.some((error) => error.includes("policy.people-and-collective-credit")));
+});
+
+test("practice and place pages retain source return and embodied boundaries", () => {
+  for (const spec of practicePageSpecs) {
+    const text = readFileSync(new URL(`../../${spec.path}`, import.meta.url), "utf8");
+    assert.deepEqual(validatePageSpecText(text, spec).errors, [], spec.id);
+  }
+});
+
+test("collective-credit policy fails when protected absence is erased", () => {
+  const spec = governancePageSpecs[0];
+  const text = readFileSync(new URL(`../../${spec.path}`, import.meta.url), "utf8");
+  const mutated = text.replace("## Protected absence", "## Public names only");
+  assert.ok(validatePageSpecText(mutated, spec, { requireSourceReturn: false }).errors.some((error) => error.includes("Protected absence")));
+});
+
+test("claim maturity dashboard requires an explicit advancement test", () => {
+  const spec = governancePageSpecs.find((entry) => entry.id === "index.claim-maturity-dashboard");
+  const text = readFileSync(new URL(`../../${spec.path}`, import.meta.url), "utf8");
+  assert.deepEqual(validatePageSpecText(text, spec, { requireSourceReturn: false }).errors, []);
+  const mutated = text.replaceAll("Advancement test", "Possible next step");
+  assert.ok(validatePageSpecText(mutated, spec, { requireSourceReturn: false }).errors.some((error) => error.includes("Advancement test")));
+});
+
+test("new narrative, relational, and maturity evals are blocking and bounded", () => {
+  for (const id of ["KW-015", "KW-016", "KW-017"]) assert.equal(suite.evals.find((entry) => entry.id === id)?.blocking, true);
+  assert.ok(suite.evals.find((entry) => entry.id === "KW-015").cannot_establish.includes("individual legislative causality"));
+  assert.ok(suite.evals.find((entry) => entry.id === "KW-016").cannot_establish.includes("participant impact"));
+  assert.ok(suite.evals.find((entry) => entry.id === "KW-017").cannot_establish.includes("human publication approval"));
 });

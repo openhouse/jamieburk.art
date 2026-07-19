@@ -99,7 +99,7 @@ export const sourceReturnLabels = [
   "Next return",
 ];
 
-export const sourceReturnPageSpecs = [
+export const foundationOverviewPageSpecs = [
   {
     id: "project.nyc-artist-coalition",
     path: "docs/knowledge-bank/projects/nyc-artist-coalition.md",
@@ -132,6 +132,91 @@ export const sourceReturnPageSpecs = [
   },
 ];
 
+export const campaignNarrativePageSpecs = [
+  {
+    id: "project.let-nyc-dance",
+    path: "docs/knowledge-bank/projects/let-nyc-dance.md",
+    canonicalRefs: ["CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE", "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017", "SRC-NYCAC-LET-NYC-DANCE-PRESS-INDEX-2026-05-11"],
+    requiredHeadings: ["## Jamie's role", "## Outcome and attribution", "## Boundaries"],
+    requiredPhrases: ["multi-group campaign", "does not measure his causal share", "policy.people-and-collective-credit"],
+  },
+  {
+    id: "project.talks-not-raids",
+    path: "docs/knowledge-bank/projects/talks-not-raids.md",
+    canonicalRefs: ["CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY", "CLM-NYCAC-MARCH-TRANSPARENCY-LAW", "CLM-NYCAC-MARCH-REPLACED-BY-CURE", "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11"],
+    requiredHeadings: ["## Jamie's role", "## Outcomes and chronology", "## Boundaries"],
+    requiredPhrases: ["does not establish that Jamie", "not a full enforcement history", "policy.people-and-collective-credit"],
+  },
+  {
+    id: "event.nycac.office-of-nightlife-town-hall-2017",
+    path: "docs/knowledge-bank/events/office-of-nightlife-town-hall-2017.md",
+    canonicalRefs: ["CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL", "CLM-NYCAC-TOWN-HALL-PRODUCTION-ROLE-CANDIDATE", "SRC-NYCAC-FB-EVENT-NIGHT-MAYOR-TOWN-HALL-2017-10-11", "SRC-NYCAC-ARCHIVE-NIGHTLIFE-TOWN-HALL-2017"],
+    requiredHeadings: ["## Jamie's role", "## Why the event mattered", "## Boundaries"],
+    requiredPhrases: ["Jamie and Olympia Kazi", "not verified attendance", "policy.people-and-collective-credit"],
+  },
+  {
+    id: "project.harry-j-epstein",
+    path: "docs/knowledge-bank/projects/harry-j-epstein.md",
+    canonicalRefs: ["hje-modernization-stewardship", "hje-revenue-growth-contribution", "career-operating-structure-14-years"],
+    requiredHeadings: ["## Jamie's role", "## Business evidence", "## Boundaries"],
+    requiredPhrases: ["Harry J. Epstein Company team", "Contributed", "private business records remain protected"],
+  },
+];
+
+export const practicePageSpecs = [
+  {
+    id: "method.jamie-at-work",
+    path: "docs/knowledge-bank/methods/jamie-at-work.md",
+    canonicalRefs: ["career-operating-structure-14-years", "technical-operations-operating-backbone", "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM", "CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE", "hje-modernization-stewardship"],
+    requiredHeadings: ["## The recurring action", "## Professional value", "## Boundaries"],
+    requiredPhrases: ["emerging work", "actor, action, artifact, and usable result"],
+  },
+  {
+    id: "method.participation-and-relational-infrastructure",
+    path: "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md",
+    canonicalRefs: ["sunday-dinner-196-participation-infrastructure", "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD", "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN", "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM", "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE"],
+    requiredHeadings: ["## Recurring components", "## Lineage", "## Boundaries"],
+    requiredPhrases: ["invitation, orientation, presence, exchange, shared action, memory, and", "Do not infer impact"],
+  },
+  {
+    id: "place.small-cultural-spaces",
+    path: "docs/knowledge-bank/places/small-cultural-spaces.md",
+    canonicalRefs: ["CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE", "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE", "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM"],
+    requiredHeadings: ["## Places in the record", "## Public value without extraction", "## Boundaries"],
+    requiredPhrases: ["not interchangeable containers", "Preserve the places as contributors"],
+  },
+];
+
+export const governancePageSpecs = [
+  {
+    id: "policy.people-and-collective-credit",
+    path: "docs/knowledge-bank/people-and-collective-credit.md",
+    canonicalRefs: [],
+    requiredHeadings: ["## Credit record", "## Protected absence", "## Collective outcomes", "## Eval contract"],
+    requiredPhrases: ["Access authorization is not permission", "unknown authorship", "collaborator may correct role"],
+  },
+  {
+    id: "method.outcomes-and-adoption",
+    path: "docs/knowledge-bank/outcomes-and-adoption.md",
+    canonicalRefs: ["CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE", "CLM-NYCAC-MARCH-TRANSPARENCY-LAW", "CLM-NYCAC-MARCH-REPLACED-BY-CURE", "CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION", "CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN", "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN", "hje-revenue-growth-contribution"],
+    requiredHeadings: ["## Four-part test", "## Selected project distinctions", "## Evidence states", "## Anti-inflation rules", "## Advancement record"],
+    requiredPhrases: ["Jamie delivered", "Collaborators used", "Institution adopted", "Conditions changed", "A plan is not delivery"],
+  },
+  {
+    id: "index.claim-maturity-dashboard",
+    path: "docs/knowledge-bank/claim-maturity-dashboard.md",
+    canonicalRefs: ["hje-modernization-stewardship", "CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE", "CLM-NYCAC-TOWN-HALL-PRODUCTION-ROLE-CANDIDATE", "CLM-NYCAC-FAIRRENT-WEB-IMPLEMENTATION-CANDIDATE", "CLM-NYCAC-FIREGUARD-PASS-RATE-ATTESTED", "CLM-NTERCHNG-INSTALLATION-OPERATIONS", "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED"],
+    requiredHeadings: ["## Selected and bounded", "## Corroboration queue", "## Rights and completion hold", "## Negative knowledge", "## Required fields for every lane", "## Operating rules"],
+    requiredPhrases: ["Advancement test", "not a second claim registry", "never existed", "does not mutate the canonical record"],
+  },
+];
+
+export const sourceReturnPageSpecs = [
+  ...foundationOverviewPageSpecs,
+  ...campaignNarrativePageSpecs,
+  ...practicePageSpecs,
+];
+
 const privateLocatorPattern = /(?:file:\/\/|\/(?:Users|Volumes|private)\/|drive\.google\.com\/drive\/folders|resourcekey=|icloud\.com\/iclouddrive)/i;
 
 export function validateSourceReturnText(text) {
@@ -144,6 +229,15 @@ export function validateSourceReturnText(text) {
   return { errors };
 }
 
+export function validatePageSpecText(text, spec, { requireSourceReturn = true } = {}) {
+  const errors = requireSourceReturn ? [...validateSourceReturnText(text).errors] : [];
+  if (!new RegExp(`^id: ${spec.id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m").test(text)) errors.push(`Stable page ID is missing: ${spec.id}`);
+  for (const reference of spec.canonicalRefs) if (!text.includes(`  - ${reference}`)) errors.push(`Canonical reference is missing: ${reference}`);
+  for (const heading of spec.requiredHeadings) if (!text.includes(heading)) errors.push(`Required heading is missing: ${heading}`);
+  for (const phrase of spec.requiredPhrases ?? []) if (!text.includes(phrase)) errors.push(`Required phrase is missing: ${phrase}`);
+  return { errors };
+}
+
 function deterministicResults(compiled) {
   const byId = new Map(suite.evals.map((entry) => [entry.id, entry]));
   const results = [];
@@ -151,8 +245,13 @@ function deterministicResults(compiled) {
   const schema = readFileSync(path.join(repoRoot, "docs/knowledge-bank/schema.md"), "utf8");
   const noSecondTree = !existsSync(path.join(repoRoot, "docs/knowledge-wiki"));
   const derivedMarked = ["wiki-graph.json", "wiki-backlinks.json", "wiki-health.json"].every((name) => JSON.parse(readFileSync(path.join(repoRoot, "reports", name), "utf8")).generated === true) && readFileSync(path.join(repoRoot, "reports/wiki-health.md"), "utf8").startsWith("<!-- GENERATED FILE");
-  const authorityPass = noSecondTree && /Exact claims, sources, observations, evidence/.test(schema) && /work\.ts/.test(architecture) && derivedMarked;
-  results.push(result(byId.get("KW-001"), authorityPass ? 4 : 0, [`single compatibility root: ${noSecondTree}`, `generated artifacts marked: ${derivedMarked}`, "authority table assigns exact evidence records to existing typed registry"], authorityPass ? [] : ["Authority map, compatibility root, or generated marker is incomplete"]));
+  const authorityPass = noSecondTree
+    && /Exact source-backed claims, sources, observations, evidence/.test(schema)
+    && /proofs\.ts/.test(schema)
+    && /proof-claim/.test(schema)
+    && /work\.ts/.test(architecture)
+    && derivedMarked;
+  results.push(result(byId.get("KW-001"), authorityPass ? 4 : 0, [`single compatibility root: ${noSecondTree}`, `generated artifacts marked: ${derivedMarked}`, "authority table assigns source-backed and professional proof claims to their existing typed registries", "referenced proof claims serialize as minimal canonical adapter nodes"], authorityPass ? [] : ["Authority map, compatibility root, proof adapter, or generated marker is incomplete"]));
 
   const repeat = compileKnowledgeWiki();
   const structurePass = compiled.health.errors.length === 0 && compiled.health.counts.orphans === 0 && compiled.health.counts.unreachable === 0 && repeat.graph.fingerprint === compiled.graph.fingerprint;
@@ -196,22 +295,21 @@ function deterministicResults(compiled) {
   results.push(result(byId.get("KW-012"), 0, ["Human task protocol is present; no approval is inferred"], ["Exact-candidate Jamie approval and any applicable rights or collaborator decisions remain open"]));
 
   const nodeIds = new Set(compiled.graph.nodes.map((node) => node.id));
-  const sourceReturnChecks = sourceReturnPageSpecs.map((spec) => {
+  const checkPageSpec = (spec, requireSourceReturn = true) => {
     if (!existsSync(path.join(repoRoot, spec.path))) return { spec, errors: ["Page is missing"] };
     const text = readFileSync(path.join(repoRoot, spec.path), "utf8");
-    const errors = [...validateSourceReturnText(text).errors];
-    if (!new RegExp(`^id: ${spec.id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m").test(text)) errors.push(`Stable page ID is missing: ${spec.id}`);
+    const errors = [...validatePageSpecText(text, spec, { requireSourceReturn }).errors];
     for (const reference of spec.canonicalRefs) {
-      if (!text.includes(`  - ${reference}`)) errors.push(`Canonical reference is missing: ${reference}`);
       if (!nodeIds.has(reference)) errors.push(`Canonical reference does not resolve: ${reference}`);
     }
-    for (const heading of spec.requiredHeadings) if (!text.includes(heading)) errors.push(`Required boundary heading is missing: ${heading}`);
-    return { spec, errors };
-  });
-  const priorityIds = sourceReturnPageSpecs.map((spec) => spec.id);
+    return { spec, text, errors };
+  };
+  const sourceReturnChecks = sourceReturnPageSpecs.map((spec) => checkPageSpec(spec));
+  const foundationChecks = foundationOverviewPageSpecs.map((spec) => checkPageSpec(spec));
+  const priorityIds = foundationOverviewPageSpecs.map((spec) => spec.id);
   const rootTargets = new Set(compiled.graph.edges.filter((edge) => edge.from === "index.knowledge-wiki" && edge.type === "indexes").map((edge) => edge.to));
   const directoryTargets = new Set(compiled.graph.edges.filter((edge) => edge.from === "index.knowledge-wiki-project-dossiers" && edge.type === "indexes").map((edge) => edge.to));
-  const overviewPass = sourceReturnChecks.every((check) => check.errors.length === 0)
+  const overviewPass = foundationChecks.every((check) => check.errors.length === 0)
     && priorityIds.every((id) => nodeIds.has(id))
     && priorityIds.filter((id) => id.startsWith("project.")).every((id) => rootTargets.has(id) && directoryTargets.has(id))
     && rootTargets.has("method.transition-and-handoff");
@@ -219,8 +317,8 @@ function deterministicResults(compiled) {
     `priority overview and method nodes: ${priorityIds.filter((id) => nodeIds.has(id)).length}/${priorityIds.length}`,
     `root-indexed project overviews: ${priorityIds.filter((id) => id.startsWith("project.") && rootTargets.has(id)).length}/4`,
     `directory-indexed project overviews: ${priorityIds.filter((id) => id.startsWith("project.") && directoryTargets.has(id)).length}/4`,
-    `canonical/source-return page checks passing: ${sourceReturnChecks.filter((check) => check.errors.length === 0).length}/${sourceReturnChecks.length}`,
-  ], overviewPass ? [] : sourceReturnChecks.flatMap((check) => check.errors.map((error) => `${check.spec.id}: ${error}`))));
+    `canonical/source-return page checks passing: ${foundationChecks.filter((check) => check.errors.length === 0).length}/${foundationChecks.length}`,
+  ], overviewPass ? [] : foundationChecks.flatMap((check) => check.errors.map((error) => `${check.spec.id}: ${error}`))));
 
   const rereading = readFileSync(path.join(repoRoot, "docs/knowledge-bank/methods/original-source-rereading.md"), "utf8");
   const taskProtocolPass = tasks.pass && /TASK-WIKI-SOURCE-ACCESS/.test(tasks.output) && /"result_claims": false/.test(tasks.output);
@@ -249,6 +347,64 @@ function deterministicResults(compiled) {
     ...(!permissionBoundaryPass ? ["Access is not clearly separated from publication permission"] : []),
     ...(!taskProtocolPass ? ["Bounded personal-librarian task protocol is missing"] : []),
   ]));
+
+  const campaignChecks = campaignNarrativePageSpecs.map((spec) => checkPageSpec(spec));
+  const campaignIds = campaignNarrativePageSpecs.map((spec) => spec.id);
+  const proofNode = compiled.graph.nodes.find((node) => node.id === "hje-modernization-stewardship");
+  const campaignPass = campaignChecks.every((check) => check.errors.length === 0)
+    && campaignIds.every((id) => nodeIds.has(id) && rootTargets.has(id) && directoryTargets.has(id))
+    && proofNode?.kind === "proof-claim"
+    && !campaignChecks.some((check) => privateLocatorPattern.test(check.text));
+  results.push(result(byId.get("KW-015"), campaignPass ? 4 : 0, [
+    `campaign and ownership pages passing: ${campaignChecks.filter((check) => check.errors.length === 0).length}/${campaignChecks.length}`,
+    `root-indexed narratives: ${campaignIds.filter((id) => rootTargets.has(id)).length}/${campaignIds.length}`,
+    `project-directory narratives: ${campaignIds.filter((id) => directoryTargets.has(id)).length}/${campaignIds.length}`,
+    `structured proof claim adapted canonically: ${proofNode?.kind === "proof-claim"}`,
+    "role, usable result, collective or team credit, outcome, and boundary are page requirements",
+  ], campaignPass ? [] : campaignChecks.flatMap((check) => check.errors.map((error) => `${check.spec.id}: ${error}`))));
+
+  const practiceChecks = practicePageSpecs.map((spec) => checkPageSpec(spec));
+  const creditCheck = checkPageSpec(governancePageSpecs[0], false);
+  const practiceIds = [...practicePageSpecs.map((spec) => spec.id), governancePageSpecs[0].id];
+  const jamieProjectEdges = compiled.graph.edges.filter((edge) => edge.from === "method.jamie-at-work" && edge.type === "informed_by" && edge.to.startsWith("project."));
+  const participationProjectEdges = compiled.graph.edges.filter((edge) => edge.from === "method.participation-and-relational-infrastructure" && edge.type === "developed_through");
+  const placeEventEdge = compiled.graph.edges.some((edge) => edge.from === "place.small-cultural-spaces" && edge.to === "event.nycac.office-of-nightlife-town-hall-2017");
+  const creditGovernanceEdges = compiled.graph.edges.filter((edge) => edge.from === "policy.people-and-collective-credit" && edge.type === "governs");
+  const practicePass = practiceChecks.every((check) => check.errors.length === 0)
+    && creditCheck.errors.length === 0
+    && practiceIds.every((id) => nodeIds.has(id) && rootTargets.has(id))
+    && jamieProjectEdges.length >= 4
+    && participationProjectEdges.length >= 3
+    && placeEventEdge
+    && creditGovernanceEdges.length >= 4;
+  results.push(result(byId.get("KW-016"), practicePass ? 4 : 0, [
+    `practice and place source-return pages passing: ${practiceChecks.filter((check) => check.errors.length === 0).length}/${practiceChecks.length}`,
+    `people and collective-credit policy passing: ${creditCheck.errors.length === 0}`,
+    `Jamie-at-work project relations: ${jamieProjectEdges.length}`,
+    `participation developed-through relations: ${participationProjectEdges.length}`,
+    `place-to-event relation present: ${placeEventEdge}`,
+    `credit governance relations: ${creditGovernanceEdges.length}`,
+  ], practicePass ? [] : [
+    ...practiceChecks.flatMap((check) => check.errors.map((error) => `${check.spec.id}: ${error}`)),
+    ...creditCheck.errors.map((error) => `${creditCheck.spec.id}: ${error}`),
+  ]));
+
+  const outcomeChecks = governancePageSpecs.slice(1).map((spec) => checkPageSpec(spec, false));
+  const outcomeIds = governancePageSpecs.slice(1).map((spec) => spec.id);
+  const dashboardText = outcomeChecks.find((check) => check.spec.id === "index.claim-maturity-dashboard")?.text ?? "";
+  const negativeKnowledgePreserved = compiled.health.wanted_pages.some((item) => item.id === "wanted.callnyc.civic-hall-event-page" && item.status === "not-recovered")
+    && /not recovered/i.test(dashboardText)
+    && /never existed/i.test(dashboardText);
+  const outcomePass = outcomeChecks.every((check) => check.errors.length === 0)
+    && outcomeIds.every((id) => nodeIds.has(id) && rootTargets.has(id))
+    && negativeKnowledgePreserved
+    && !privateLocatorPattern.test(dashboardText);
+  results.push(result(byId.get("KW-017"), outcomePass ? 4 : 0, [
+    `outcome and maturity pages passing: ${outcomeChecks.filter((check) => check.errors.length === 0).length}/${outcomeChecks.length}`,
+    `root-indexed operational pages: ${outcomeIds.filter((id) => rootTargets.has(id)).length}/${outcomeIds.length}`,
+    `negative knowledge preserved: ${negativeKnowledgePreserved}`,
+    "dashboard rows require a canonical ID, current hold or use, and advancement test",
+  ], outcomePass ? [] : outcomeChecks.flatMap((check) => check.errors.map((error) => `${check.spec.id}: ${error}`))));
   return results;
 }
 

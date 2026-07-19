@@ -58,20 +58,22 @@ have occurred, and it does not create a public `/proofs` route.
 
 ## Knowledge Wiki source-return extension
 
-The July 19 Knowledge Wiki source-return candidate is bound to composite
-fingerprint
-`fd9a7e84ab82e9f289c517b31229d5927241fa04287c05aa5840461eff2d91b3`.
-It adds project overview pages and a present-tense original-source rereading
-practice without changing the public website projection.
+The July 19 Knowledge Wiki source-return and missing-pages candidate is bound
+to composite fingerprint
+`d347d31202a0e8ac6fde0dfbd0084680e997c97531214903eb6833aa5e402cef`.
+It adds project and campaign narratives, cross-project practice and governance
+pages, and present-tense original-source rereading without changing the public
+website projection.
 
 - staging and production environment contracts: pass;
 - exact-candidate Docker image:
-  `jamieburk-art:knowledge-wiki-C-source-rereading@sha256:654d2d0d03e441d64850791f1d0f08f2645c5cc55b94337db343f9f7c58c03a3`;
+  `jamieburk-art:knowledge-wiki-C-missing-pages@sha256:392b5289adef119c530a9b1a540bc144ee269d471f634844412b2e7c8dc023b7`;
 - 18 intended runtime endpoints: `200`;
 - prohibited `/proofs` route: expected `404`;
 - 56 responsive route-width pairs: pass with zero route, image, fragment,
   landmark, overflow, duplicate-ID, or browser-console failures;
-- two unchanged local composite passes: `0.9125`, above the `0.90` threshold;
+- two exact-candidate composite passes: `0.98`, above the `0.90` threshold;
+  the second records `consecutive_local_pass: true`;
 - fresh exact-candidate independent scores: `4/4` for `CI-007`, `CI-008`,
   and `CI-009`;
 - final bounded composite score: `0.98`.

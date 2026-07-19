@@ -242,6 +242,13 @@ function canonicalEntries(registry = knowledgeBank) {
   for (const record of registry.researchInquiries) add("research-inquiry", record, `Research inquiry ${record.id}`, "restricted", "moderate");
   for (const record of registry.corrections) add("correction", record, `Correction ${record.id}`, "public-safe", "low");
   for (const record of registry.pages) add("citation-page", record, `Citation plan: ${record.surface}`, "public-safe", "low");
+  for (const record of proofClaims) add(
+    "proof-claim",
+    record,
+    `Proof claim ${record.id}`,
+    "public-safe",
+    record.status === "careful" ? "moderate" : "low",
+  );
   return entries;
 }
 
@@ -340,6 +347,7 @@ export function compileKnowledgeWiki({ root = wikiRoot, registry = knowledgeBank
     if (byId.has(document.frontmatter.id)) addError(state, "duplicate-id", `Duplicate ID: ${document.frontmatter.id}`, document.path);
     else byId.set(document.frontmatter.id, document);
     for (const alias of normalizeArray(document.frontmatter.aliases)) {
+      if (typeof alias !== "string") continue;
       const key = alias.toLowerCase();
       if (byAlias.has(key) && byAlias.get(key) !== document.frontmatter.id) addError(state, "duplicate-alias", `Alias is used by multiple pages: ${alias}`, document.path);
       else byAlias.set(key, document.frontmatter.id);

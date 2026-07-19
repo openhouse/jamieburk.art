@@ -2,7 +2,7 @@
   "schema_version": 1,
   "generated": true,
   "generated_by": "npm run wiki:graph",
-  "graph_fingerprint": "cd159c65d2060039cbcb6545ea5e24db2becca62f7e55cbea7c16374c0e4b387",
+  "graph_fingerprint": "0a4125c8feafee7144ad1fa3a24fcb64f792d620ee0c127bf05ee7f9c4fd9581",
   "backlinks": {
     "capability.technical-operations": [
       {
@@ -13,6 +13,11 @@
       {
         "from": "index.knowledge-wiki",
         "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.jamie-at-work",
+        "type": "supports",
         "layer": "authored"
       },
       {
@@ -86,7 +91,17 @@
         "layer": "authored"
       },
       {
+        "from": "project.harry-j-epstein",
+        "type": "demonstrates",
+        "layer": "authored"
+      },
+      {
         "from": "project.kc-town-hall",
+        "type": "demonstrates",
+        "layer": "authored"
+      },
+      {
+        "from": "project.let-nyc-dance",
         "type": "demonstrates",
         "layer": "authored"
       },
@@ -101,8 +116,25 @@
         "layer": "authored"
       },
       {
+        "from": "project.talks-not-raids",
+        "type": "demonstrates",
+        "layer": "authored"
+      },
+      {
         "from": "project.wowlist",
         "type": "demonstrates",
+        "layer": "authored"
+      }
+    ],
+    "career-operating-structure-14-years": [
+      {
+        "from": "method.jamie-at-work",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "project.harry-j-epstein",
+        "type": "references",
         "layer": "authored"
       }
     ],
@@ -170,6 +202,11 @@
     "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED": [
       {
         "from": "event.nycc.councilstat-hackathon-2016",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "index.claim-maturity-dashboard",
         "type": "references",
         "layer": "authored"
       }
@@ -327,6 +364,11 @@
     ],
     "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN": [
       {
+        "from": "method.outcomes-and-adoption",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
         "from": "OBS-CRS-DATA-COMPLEMENTARY-LENSES",
         "type": "supports",
         "layer": "canonical-adapter"
@@ -380,6 +422,11 @@
       }
     ],
     "CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE": [
+      {
+        "from": "method.jamie-at-work",
+        "type": "references",
+        "layer": "authored"
+      },
       {
         "from": "method.transition-and-handoff",
         "type": "references",
@@ -485,6 +532,11 @@
     ],
     "CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN": [
       {
+        "from": "method.outcomes-and-adoption",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
         "from": "OBS-KCTH-CCED-BOARD-RECOMMENDATION",
         "type": "supports",
         "layer": "canonical-adapter"
@@ -552,6 +604,11 @@
       }
     ],
     "CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION": [
+      {
+        "from": "method.outcomes-and-adoption",
+        "type": "references",
+        "layer": "authored"
+      },
       {
         "from": "OBS-KCTH-JAMIE-PHASE-ONE-ROLE",
         "type": "supports",
@@ -761,6 +818,102 @@
         "layer": "canonical-adapter"
       }
     ],
+    "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION": [
+      {
+        "from": "OBS-NTERCHNG-ANH-ARTIST-INDEX",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-ANH-KANSAS-CITY-LAUNCH",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-ANH-PARTICIPATORY-SYSTEM",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-INSTALLER-ANH-STAGING-PLAN",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-NERMAN-CONTEXT",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION": [
+      {
+        "from": "OBS-NTERCHNG-ANH-COLLABORATIVE-CAPABILITIES",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-ANH-PARTICIPATORY-SYSTEM",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-HOMEPAGE-CREDIT-AND-VENUE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-INSTALLER-PRODUCTION-SCOPE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-PITCH-INSTALLATION-FORM",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-WORKING-DATED-EXCHANGES",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-NTERCHNG-INSTALLATION-OPERATIONS": [
+      {
+        "from": "index.claim-maturity-dashboard",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "OBS-NTERCHNG-INSTALLER-ANH-STAGING-PLAN",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-INSTALLER-PRODUCTION-SCOPE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-WORKING-DATED-EXCHANGES",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
     "CLM-NYCAC-CABARET-REPEAL-ADVOCACY": [
       {
         "from": "OBS-NYCAC-GOTHAMIST-CITY-HALL-RALLY",
@@ -774,6 +927,16 @@
       }
     ],
     "CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE": [
+      {
+        "from": "index.claim-maturity-dashboard",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "method.outcomes-and-adoption",
+        "type": "references",
+        "layer": "authored"
+      },
       {
         "from": "OBS-NYCAC-COUNCIL-CABARET-HEARING-RECORD",
         "type": "supports",
@@ -815,6 +978,11 @@
         "layer": "canonical-adapter"
       },
       {
+        "from": "project.let-nyc-dance",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
         "from": "project.nyc-artist-coalition",
         "type": "references",
         "layer": "authored"
@@ -850,6 +1018,11 @@
         "from": "OBS-NYCAC-FINKELPEARL-NAMES-COALITION",
         "type": "supports",
         "layer": "canonical-adapter"
+      },
+      {
+        "from": "place.small-cultural-spaces",
+        "type": "references",
+        "layer": "authored"
       },
       {
         "from": "project.nyc-artist-coalition",
@@ -889,6 +1062,77 @@
         "layer": "authored"
       }
     ],
+    "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION": [
+      {
+        "from": "OBS-NYCAC-FB-CAMPAIGN-EVOLUTION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-CIVIC-CULTURAL-SEQUENCE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-ROTATING-CULTURAL-SPACES",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-JAMIE-EVENT-SYSTEM-ACCOUNT",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-JAMIE-EVENT-ROLE-CORROBORATION",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT": [
+      {
+        "from": "OBS-NYCAC-FB-EVENT-POPULATION-RECONCILIATION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-EVENT-RESPONSE-SNAPSHOT",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-PROTECTED-RESEARCH-METHOD",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-ATTENDANCE-AND-OUTCOME-CORROBORATION",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-RECONCILE-UNMATERIALIZED-EVENT",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-NYCAC-FAIRRENT-WEB-IMPLEMENTATION-CANDIDATE": [
+      {
+        "from": "index.claim-maturity-dashboard",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "OBS-NYCAC-ARCHIVE-FAIRRENT-WEB-TASKS",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-SHARED-FOLDER-FAIRRENT-WEB-LINEAGE",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
     "CLM-NYCAC-FIRE-CODE-STUDY-GROUPS": [
       {
         "from": "OBS-NYCAC-GOTHAMIST-FIRE-CODE-STUDY",
@@ -908,12 +1152,29 @@
     ],
     "CLM-NYCAC-FIREGUARD-PASS-RATE-ATTESTED": [
       {
+        "from": "index.claim-maturity-dashboard",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
         "from": "OBS-TNR-COUNCIL-FIREGUARD-REPORT",
         "type": "supports",
         "layer": "canonical-adapter"
       },
       {
         "from": "RT-NYCAC-FIREGUARD-PASS-RATE-CORROBORATION",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE": [
+      {
+        "from": "OBS-NYCAC-JAMIE-EVENT-SYSTEM-ACCOUNT",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-JAMIE-EVENT-ROLE-CORROBORATION",
         "type": "investigates_claim",
         "layer": "canonical-adapter"
       }
@@ -937,6 +1198,11 @@
     ],
     "CLM-NYCAC-MARCH-REPLACED-BY-CURE": [
       {
+        "from": "method.outcomes-and-adoption",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
         "from": "OBS-TNR-MAYOR-CURE-COMMUNICATION",
         "type": "supports",
         "layer": "canonical-adapter"
@@ -950,9 +1216,19 @@
         "from": "project.nyc-artist-coalition",
         "type": "references",
         "layer": "authored"
+      },
+      {
+        "from": "project.talks-not-raids",
+        "type": "references",
+        "layer": "authored"
       }
     ],
     "CLM-NYCAC-MARCH-TRANSPARENCY-LAW": [
+      {
+        "from": "method.outcomes-and-adoption",
+        "type": "references",
+        "layer": "authored"
+      },
       {
         "from": "OBS-TNR-CAMPAIGN-BILL-1156",
         "type": "supports",
@@ -985,6 +1261,11 @@
       },
       {
         "from": "project.nyc-artist-coalition",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "project.talks-not-raids",
         "type": "references",
         "layer": "authored"
       }
@@ -1052,6 +1333,11 @@
     ],
     "CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL": [
       {
+        "from": "event.nycac.office-of-nightlife-town-hall-2017",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
         "from": "OBS-NYCAC-GREENE-HILL-TOWN-HALL",
         "type": "supports",
         "layer": "canonical-adapter"
@@ -1064,6 +1350,16 @@
     ],
     "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM": [
       {
+        "from": "method.jamie-at-work",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
         "from": "OBS-NYCAC-ARCHIVE-MUTUAL-SUPPORT-PURPOSE",
         "type": "supports",
         "layer": "canonical-adapter"
@@ -1072,6 +1368,11 @@
         "from": "OBS-NYCAC-ARCHIVE-PARTICIPATION-GUIDE",
         "type": "supports",
         "layer": "canonical-adapter"
+      },
+      {
+        "from": "place.small-cultural-spaces",
+        "type": "references",
+        "layer": "authored"
       },
       {
         "from": "project.nyc-artist-coalition",
@@ -1121,6 +1422,68 @@
         "layer": "authored"
       }
     ],
+    "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE": [
+      {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "OBS-NYCAC-FB-CAMPAIGN-EVOLUTION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-CIVIC-CULTURAL-SEQUENCE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-EVENT-ORGANIZER-RELATION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-EVENT-POPULATION-RECONCILIATION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-EVENT-POSTED-SOURCES",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-PROTECTED-RESEARCH-METHOD",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-ROTATING-CULTURAL-SPACES",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "place.small-cultural-spaces",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "RT-NYCAC-FB-ATTENDANCE-AND-OUTCOME-CORROBORATION",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-OUT-OF-INDEX-EVENT-CROSSWALK",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-RECONCILE-UNMATERIALIZED-EVENT",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
     "CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY": [
       {
         "from": "OBS-TNR-COUNCIL-JAMIE-TESTIMONY",
@@ -1131,6 +1494,60 @@
         "from": "project.nyc-artist-coalition",
         "type": "references",
         "layer": "authored"
+      },
+      {
+        "from": "project.talks-not-raids",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "CLM-NYCAC-TOWN-HALL-PRODUCTION-ROLE-CANDIDATE": [
+      {
+        "from": "event.nycac.office-of-nightlife-town-hall-2017",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "index.claim-maturity-dashboard",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "OBS-NYCAC-ARCHIVE-TOWN-HALL-PRODUCTION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-SHARED-FOLDER-TOWN-HALL-ROLE",
+        "type": "investigates_claim",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN": [
+      {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "OBS-OPEN-HOUSE-COMMUNAL-GOVERNANCE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-OPEN-HOUSE-GALLERY-EXPERIMENT",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-OPEN-HOUSE-SHOP-SHOWS",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-OPEN-HOUSE-TENDING-ROLE",
+        "type": "supports",
+        "layer": "canonical-adapter"
       }
     ],
     "CLM-SBU-STYLE-GUIDE-HANDOFF-SEED": [
@@ -1218,6 +1635,97 @@
       {
         "from": "OBS-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION",
         "type": "supports",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-WATERWAYS-EXPEDITION-CONCEPTION": [
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-ORIGIN",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-PITCH-EXPEDITION-IDEA",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-PITCH-RAFT-AND-TROLLEY",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD": [
+      {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-CULTURAL-CONNECTION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE": [
+      {
+        "from": "OBS-WATERWAYS-9NEWS-CREW",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-INTERRUPTION-AND-RESUMPTION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-ORIGIN",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-SCALE-AND-ROUTE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-PITCH-PART-III-DISTANCE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-PITCH-PART-III-ROUTE",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-SOUNDINGS-CONSTRUCTION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-SOUNDINGS-PARTICIPATION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-SOUNDINGS-RESUMPTION",
+        "type": "supports",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION",
+        "type": "investigates_claim",
         "layer": "canonical-adapter"
       }
     ],
@@ -1501,6 +2009,38 @@
         "layer": "authored"
       }
     ],
+    "event.nycac.office-of-nightlife-town-hall-2017": [
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "place.small-cultural-spaces",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.people-and-collective-credit",
+        "type": "governs",
+        "layer": "authored"
+      }
+    ],
     "event.nycc.councilstat-hackathon-2016": [
       {
         "from": "index.knowledge-wiki",
@@ -1515,6 +2055,67 @@
       {
         "from": "project.callnyc",
         "type": "informed_by",
+        "layer": "authored"
+      }
+    ],
+    "hje-modernization-stewardship": [
+      {
+        "from": "index.claim-maturity-dashboard",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "method.jamie-at-work",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "project.harry-j-epstein",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "hje-revenue-growth-contribution": [
+      {
+        "from": "method.outcomes-and-adoption",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "project.harry-j-epstein",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "index.claim-maturity-dashboard": [
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.outcomes-and-adoption",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.outcomes-and-adoption",
+        "type": "supports",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.knowledge-wiki-authoring",
+        "type": "links_to",
         "layer": "authored"
       }
     ],
@@ -1637,7 +2238,63 @@
         "layer": "canonical-adapter"
       }
     ],
+    "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "INQ-NTERCHNG-WORKING-DOCUMENTS-2026-07-15": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-INSTALLATION-OPERATIONS",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15": [
+      {
+        "from": "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      }
+    ],
     "INQ-NYCAC-SHARED-FOLDER-PRODUCTION-2026": [
+      {
+        "from": "CLM-NYCAC-FAIRRENT-WEB-IMPLEMENTATION-CANDIDATE",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      },
       {
         "from": "CLM-NYCAC-MACHINE-READABLE-CIVIC-DESIGN",
         "type": "has_research_inquiry",
@@ -1645,6 +2302,11 @@
       },
       {
         "from": "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM",
+        "type": "has_research_inquiry",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-TOWN-HALL-PRODUCTION-ROLE-CANDIDATE",
         "type": "has_research_inquiry",
         "layer": "canonical-adapter"
       }
@@ -1738,6 +2400,33 @@
         "layer": "canonical-adapter"
       }
     ],
+    "method.jamie-at-work": [
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "project.harry-j-epstein",
+        "type": "uses_method",
+        "layer": "authored"
+      }
+    ],
     "method.original-source-rereading": [
       {
         "from": "index.knowledge-wiki-project-dossiers",
@@ -1781,6 +2470,80 @@
       },
       {
         "from": "project.wowlist",
+        "type": "uses_method",
+        "layer": "authored"
+      }
+    ],
+    "method.outcomes-and-adoption": [
+      {
+        "from": "index.claim-maturity-dashboard",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.knowledge-wiki-authoring",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "project.harry-j-epstein",
+        "type": "governed_by",
+        "layer": "authored"
+      }
+    ],
+    "method.participation-and-relational-infrastructure": [
+      {
+        "from": "event.nycac.office-of-nightlife-town-hall-2017",
+        "type": "uses_method",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.jamie-at-work",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "place.small-cultural-spaces",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "project.let-nyc-dance",
+        "type": "uses_method",
+        "layer": "authored"
+      },
+      {
+        "from": "project.talks-not-raids",
         "type": "uses_method",
         "layer": "authored"
       }
@@ -1870,6 +2633,11 @@
       },
       {
         "from": "project.fair-rent-nyc",
+        "type": "uses_method",
+        "layer": "authored"
+      },
+      {
+        "from": "project.harry-j-epstein",
         "type": "uses_method",
         "layer": "authored"
       },
@@ -2494,6 +3262,93 @@
         "layer": "canonical-adapter"
       }
     ],
+    "OBS-NTERCHNG-ANH-ARTIST-INDEX": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NTERCHNG-ANH-COLLABORATIVE-CAPABILITIES": [
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NTERCHNG-ANH-KANSAS-CITY-LAUNCH": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NTERCHNG-ANH-PARTICIPATORY-SYSTEM": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NTERCHNG-HOMEPAGE-CREDIT-AND-VENUE": [
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NTERCHNG-INSTALLER-ANH-STAGING-PLAN": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-INSTALLATION-OPERATIONS",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NTERCHNG-INSTALLER-PRODUCTION-SCOPE": [
+      {
+        "from": "CLM-NTERCHNG-INSTALLATION-OPERATIONS",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NTERCHNG-NERMAN-CONTEXT": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NTERCHNG-PITCH-INSTALLATION-FORM": [
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NTERCHNG-WORKING-DATED-EXCHANGES": [
+      {
+        "from": "CLM-NTERCHNG-INSTALLATION-OPERATIONS",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NYCAC-ARCHIVE-FAIRRENT-WEB-TASKS": [
+      {
+        "from": "CLM-NYCAC-FAIRRENT-WEB-IMPLEMENTATION-CANDIDATE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
     "OBS-NYCAC-ARCHIVE-MUTUAL-SUPPORT-PURPOSE": [
       {
         "from": "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM",
@@ -2504,6 +3359,13 @@
     "OBS-NYCAC-ARCHIVE-PARTICIPATION-GUIDE": [
       {
         "from": "CLM-NYCAC-PARTICIPATION-TO-ACTION-SYSTEM",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NYCAC-ARCHIVE-TOWN-HALL-PRODUCTION": [
+      {
+        "from": "CLM-NYCAC-TOWN-HALL-PRODUCTION-ROLE-CANDIDATE",
         "type": "supported_by_observation",
         "layer": "canonical-adapter"
       }
@@ -2599,6 +3461,87 @@
         "layer": "canonical-adapter"
       }
     ],
+    "OBS-NYCAC-FB-CAMPAIGN-EVOLUTION": [
+      {
+        "from": "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NYCAC-FB-CIVIC-CULTURAL-SEQUENCE": [
+      {
+        "from": "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NYCAC-FB-EVENT-ORGANIZER-RELATION": [
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NYCAC-FB-EVENT-POPULATION-RECONCILIATION": [
+      {
+        "from": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NYCAC-FB-EVENT-POSTED-SOURCES": [
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NYCAC-FB-EVENT-RESPONSE-SNAPSHOT": [
+      {
+        "from": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NYCAC-FB-PROTECTED-RESEARCH-METHOD": [
+      {
+        "from": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-NYCAC-FB-ROTATING-CULTURAL-SPACES": [
+      {
+        "from": "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
     "OBS-NYCAC-FINKELPEARL-DIY-ORGANIZING": [
       {
         "from": "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
@@ -2678,6 +3621,18 @@
         "layer": "canonical-adapter"
       }
     ],
+    "OBS-NYCAC-JAMIE-EVENT-SYSTEM-ACCOUNT": [
+      {
+        "from": "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
     "OBS-NYCAC-NIGHT-MAYOR-RECOMMENDATIONS": [
       {
         "from": "CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE",
@@ -2731,6 +3686,34 @@
     "OBS-NYCAC-VICE-OFFICIAL-MEETING": [
       {
         "from": "CLM-NYCAC-POLICY-DATA-COMMUNICATIONS",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-OPEN-HOUSE-COMMUNAL-GOVERNANCE": [
+      {
+        "from": "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-OPEN-HOUSE-GALLERY-EXPERIMENT": [
+      {
+        "from": "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-OPEN-HOUSE-SHOP-SHOWS": [
+      {
+        "from": "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-OPEN-HOUSE-TENDING-ROLE": [
+      {
+        "from": "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN",
         "type": "supported_by_observation",
         "layer": "canonical-adapter"
       }
@@ -2899,6 +3882,112 @@
       },
       {
         "from": "CLM-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-9NEWS-CREW": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-KCSTAR-CULTURAL-CONNECTION": [
+      {
+        "from": "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-KCSTAR-INTERRUPTION-AND-RESUMPTION": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-KCSTAR-ORIGIN": [
+      {
+        "from": "CLM-WATERWAYS-EXPEDITION-CONCEPTION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD": [
+      {
+        "from": "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-KCSTAR-SCALE-AND-ROUTE": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-PITCH-EXPEDITION-IDEA": [
+      {
+        "from": "CLM-WATERWAYS-EXPEDITION-CONCEPTION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-PITCH-PART-III-DISTANCE": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-PITCH-PART-III-ROUTE": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-PITCH-RAFT-AND-TROLLEY": [
+      {
+        "from": "CLM-WATERWAYS-EXPEDITION-CONCEPTION",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-SOUNDINGS-CONSTRUCTION": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-SOUNDINGS-PARTICIPATION": [
+      {
+        "from": "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "supported_by_observation",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "OBS-WATERWAYS-SOUNDINGS-RESUMPTION": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
         "type": "supported_by_observation",
         "layer": "canonical-adapter"
       }
@@ -3211,7 +4300,39 @@
         "layer": "authored"
       }
     ],
+    "place.small-cultural-spaces": [
+      {
+        "from": "event.nycac.office-of-nightlife-town-hall-2017",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "related_to",
+        "layer": "authored"
+      }
+    ],
     "policy.knowledge-wiki-authoring": [
+      {
+        "from": "index.claim-maturity-dashboard",
+        "type": "governed_by",
+        "layer": "authored"
+      },
       {
         "from": "index.knowledge-wiki",
         "type": "governed_by",
@@ -3234,6 +4355,11 @@
       },
       {
         "from": "policy.knowledge-wiki-schema",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.people-and-collective-credit",
         "type": "related_to",
         "layer": "authored"
       }
@@ -3262,6 +4388,53 @@
       {
         "from": "policy.knowledge-wiki-authoring",
         "type": "related_to",
+        "layer": "authored"
+      }
+    ],
+    "policy.people-and-collective-credit": [
+      {
+        "from": "event.nycac.office-of-nightlife-town-hall-2017",
+        "type": "governed_by",
+        "layer": "authored"
+      },
+      {
+        "from": "index.claim-maturity-dashboard",
+        "type": "governed_by",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.outcomes-and-adoption",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.knowledge-wiki-authoring",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "project.let-nyc-dance",
+        "type": "governed_by",
+        "layer": "authored"
+      },
+      {
+        "from": "project.talks-not-raids",
+        "type": "governed_by",
         "layer": "authored"
       }
     ],
@@ -3369,6 +4542,33 @@
         "layer": "authored"
       }
     ],
+    "project.harry-j-epstein": [
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.jamie-at-work",
+        "type": "informed_by",
+        "layer": "authored"
+      }
+    ],
     "project.kc-town-hall": [
       {
         "from": "index.knowledge-wiki-project-dossiers",
@@ -3391,6 +4591,11 @@
         "layer": "authored"
       },
       {
+        "from": "method.jamie-at-work",
+        "type": "informed_by",
+        "layer": "authored"
+      },
+      {
         "from": "method.original-source-rereading",
         "type": "links_to",
         "layer": "authored"
@@ -3398,6 +4603,11 @@
       {
         "from": "method.original-source-rereading",
         "type": "supports",
+        "layer": "authored"
+      },
+      {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "developed_through",
         "layer": "authored"
       },
       {
@@ -3406,8 +4616,40 @@
         "layer": "authored"
       }
     ],
+    "project.let-nyc-dance": [
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.people-and-collective-credit",
+        "type": "governs",
+        "layer": "authored"
+      }
+    ],
     "project.nyc-artist-coalition": [
       {
+        "from": "event.nycac.office-of-nightlife-town-hall-2017",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
         "from": "index.knowledge-wiki-project-dossiers",
         "type": "indexes",
         "layer": "authored"
@@ -3425,6 +4667,11 @@
       {
         "from": "index.knowledge-wiki",
         "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "method.jamie-at-work",
+        "type": "informed_by",
         "layer": "authored"
       },
       {
@@ -3438,8 +4685,33 @@
         "layer": "authored"
       },
       {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "developed_through",
+        "layer": "authored"
+      },
+      {
+        "from": "place.small-cultural-spaces",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.people-and-collective-credit",
+        "type": "governs",
+        "layer": "authored"
+      },
+      {
         "from": "project.fair-rent-nyc",
         "type": "developed_through",
+        "layer": "authored"
+      },
+      {
+        "from": "project.let-nyc-dance",
+        "type": "related_to",
+        "layer": "authored"
+      },
+      {
+        "from": "project.talks-not-raids",
+        "type": "related_to",
         "layer": "authored"
       },
       {
@@ -3470,6 +4742,33 @@
         "layer": "authored"
       }
     ],
+    "project.talks-not-raids": [
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki-project-dossiers",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "indexes",
+        "layer": "authored"
+      },
+      {
+        "from": "index.knowledge-wiki",
+        "type": "links_to",
+        "layer": "authored"
+      },
+      {
+        "from": "policy.people-and-collective-credit",
+        "type": "governs",
+        "layer": "authored"
+      }
+    ],
     "project.wowlist": [
       {
         "from": "index.knowledge-wiki-project-dossiers",
@@ -3492,6 +4791,11 @@
         "layer": "authored"
       },
       {
+        "from": "method.jamie-at-work",
+        "type": "informed_by",
+        "layer": "authored"
+      },
+      {
         "from": "method.original-source-rereading",
         "type": "links_to",
         "layer": "authored"
@@ -3499,6 +4803,16 @@
       {
         "from": "method.original-source-rereading",
         "type": "supports",
+        "layer": "authored"
+      },
+      {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "developed_through",
+        "layer": "authored"
+      },
+      {
+        "from": "place.small-cultural-spaces",
+        "type": "related_to",
         "layer": "authored"
       }
     ],
@@ -3575,6 +4889,56 @@
         "layer": "canonical-adapter"
       }
     ],
+    "RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-INSTALLATION-OPERATIONS",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "RT-NYCAC-FB-ATTENDANCE-AND-OUTCOME-CORROBORATION": [
+      {
+        "from": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "RT-NYCAC-FB-JAMIE-EVENT-ROLE-CORROBORATION": [
+      {
+        "from": "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "RT-NYCAC-FB-OUT-OF-INDEX-EVENT-CROSSWALK": [
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "RT-NYCAC-FB-RECONCILE-UNMATERIALIZED-EVENT": [
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      }
+    ],
     "RT-NYCAC-FIREGUARD-PASS-RATE-CORROBORATION": [
       {
         "from": "CLM-NYCAC-FIREGUARD-PASS-RATE-ATTESTED",
@@ -3597,6 +4961,20 @@
       },
       {
         "from": "CLM-NYCAC-OFFICE-NIGHTLIFE-ACCOUNTABILITY",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "RT-NYCAC-SHARED-FOLDER-FAIRRENT-WEB-LINEAGE": [
+      {
+        "from": "CLM-NYCAC-FAIRRENT-WEB-IMPLEMENTATION-CANDIDATE",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "RT-NYCAC-SHARED-FOLDER-TOWN-HALL-ROLE": [
+      {
+        "from": "CLM-NYCAC-TOWN-HALL-PRODUCTION-ROLE-CANDIDATE",
         "type": "has_research_task",
         "layer": "canonical-adapter"
       }
@@ -3640,6 +5018,13 @@
     "RT-TEAMS-JPH-COVERAGE-GAPS": [
       {
         "from": "CLM-ICLOUD-WORKING-FOLDER-HANDOFF-PRACTICE",
+        "type": "has_research_task",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
         "type": "has_research_task",
         "layer": "canonical-adapter"
       }
@@ -4831,6 +6216,204 @@
         "layer": "canonical-adapter"
       }
     ],
+    "SRC-NTERCHNG-ANH-ARTIST-DETAIL-2011-05-18": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-ANH-COLLABORATIVE-CAPABILITIES",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-ANH-PARTICIPATORY-SYSTEM",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NTERCHNG-ANH-ARTIST-INDEX-2011-05-16": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-ANH-ARTIST-INDEX",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NTERCHNG-HOMEPAGE-2011-01-28": [
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-HOMEPAGE-CREDIT-AND-VENUE",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NTERCHNG-HOMEPAGE-2013-06-15": [
+      {
+        "from": "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NTERCHNG-INSTALLER-PLAN-2011-04-13": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-INSTALLATION-OPERATIONS",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NTERCHNG-WORKING-DOCUMENTS-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-INSTALLER-ANH-STAGING-PLAN",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-INSTALLER-PRODUCTION-SCOPE",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NTERCHNG-KC-STUDIO-ANH-2011-05-06": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "context",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-ANH-KANSAS-CITY-LAUNCH",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NTERCHNG-NERMAN-ANH-2011-04-30": [
+      {
+        "from": "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+        "type": "supports_boundary",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-NERMAN-CONTEXT",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NTERCHNG-PITCH-2010-01-07": [
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-PITCH-INSTALLATION-FORM",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NTERCHNG-WORKING-TRANSCRIPT-2011-04-06": [
+      {
+        "from": "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NTERCHNG-INSTALLATION-OPERATIONS",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NTERCHNG-WORKING-DOCUMENTS-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NTERCHNG-WORKING-DATED-EXCHANGES",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
     "SRC-NYCAC-ARCHIVE-CAMPAIGN-IMPLEMENTATION-2017-2019": [
       {
         "from": "INQ-NYCAC-SHARED-FOLDER-PRODUCTION-2026",
@@ -4840,6 +6423,11 @@
     ],
     "SRC-NYCAC-ARCHIVE-CIVIC-DATA-WEB-2019": [
       {
+        "from": "CLM-NYCAC-FAIRRENT-WEB-IMPLEMENTATION-CANDIDATE",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
         "from": "CLM-NYCAC-MACHINE-READABLE-CIVIC-DESIGN",
         "type": "private_support",
         "layer": "canonical-adapter"
@@ -4847,6 +6435,16 @@
       {
         "from": "INQ-NYCAC-SHARED-FOLDER-PRODUCTION-2026",
         "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-ARCHIVE-FAIRRENT-WEB-TASKS",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-SHARED-FOLDER-FAIRRENT-WEB-LINEAGE",
+        "type": "investigates_source",
         "layer": "canonical-adapter"
       }
     ],
@@ -4874,8 +6472,28 @@
     ],
     "SRC-NYCAC-ARCHIVE-NIGHTLIFE-TOWN-HALL-2017": [
       {
+        "from": "CLM-NYCAC-TOWN-HALL-PRODUCTION-ROLE-CANDIDATE",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "event.nycac.office-of-nightlife-town-hall-2017",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
         "from": "INQ-NYCAC-SHARED-FOLDER-PRODUCTION-2026",
         "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-ARCHIVE-TOWN-HALL-PRODUCTION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-SHARED-FOLDER-TOWN-HALL-ROLE",
+        "type": "investigates_source",
         "layer": "canonical-adapter"
       }
     ],
@@ -4965,6 +6583,11 @@
         "layer": "canonical-adapter"
       },
       {
+        "from": "project.talks-not-raids",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
         "from": "RT-NYCAC-FIREGUARD-PASS-RATE-CORROBORATION",
         "type": "investigates_source",
         "layer": "canonical-adapter"
@@ -5024,6 +6647,16 @@
         "layer": "canonical-adapter"
       },
       {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
         "from": "OBS-NYCAC-CREATENYC-AGENDA",
         "type": "observed_in",
         "layer": "canonical-adapter"
@@ -5031,6 +6664,11 @@
       {
         "from": "OBS-NYCAC-CREATENYC-TOWN-HALL",
         "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-ATTENDANCE-AND-OUTCOME-CORROBORATION",
+        "type": "investigates_source",
         "layer": "canonical-adapter"
       },
       {
@@ -5074,6 +6712,215 @@
       },
       {
         "from": "RT-NYCAC-INSTITUTIONAL-USE-CORROBORATION",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-EVENT-LINK-GOTHAMIST-FAIR-RENT-2019-11-06": [
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15": [
+      {
+        "from": "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+        "type": "context",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE",
+        "type": "context",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-CAMPAIGN-EVOLUTION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-CIVIC-CULTURAL-SEQUENCE",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-EVENT-ORGANIZER-RELATION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-EVENT-POPULATION-RECONCILIATION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-EVENT-POSTED-SOURCES",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-EVENT-RESPONSE-SNAPSHOT",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-ROTATING-CULTURAL-SPACES",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-ATTENDANCE-AND-OUTCOME-CORROBORATION",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-JAMIE-EVENT-ROLE-CORROBORATION",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-OUT-OF-INDEX-EVENT-CROSSWALK",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-RECONCILE-UNMATERIALIZED-EVENT",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FACEBOOK-EVENTS-RESEARCH-2026-07-15": [
+      {
+        "from": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "private_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-FB-PROTECTED-RESEARCH-METHOD",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-RECONCILE-UNMATERIALIZED-EVENT",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FB-EVENT-CABARET-HEARING-2017-06-19": [
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FB-EVENT-COVID-RELIEF-2020-03-16": [
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FB-EVENT-DCLA-DIY-SPACES-2017-01-27": [
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FB-EVENT-MAGICK-GENERAL-MEETING-2017-02-06": [
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FB-EVENT-MARCH-FAIR-RENT-2018-11-01": [
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FB-EVENT-MARCH-HEARING-2019-02-11": [
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-ATTENDANCE-AND-OUTCOME-CORROBORATION",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FB-EVENT-MARKET-HOTEL-TOWN-HALL-2017-03-30": [
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FB-EVENT-NIGHT-MAYOR-PANEL-2018-03-26": [
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-FB-EVENT-NIGHT-MAYOR-TOWN-HALL-2017-10-11": [
+      {
+        "from": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "event.nycac.office-of-nightlife-town-hall-2017",
+        "type": "references",
+        "layer": "authored"
+      },
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-ATTENDANCE-AND-OUTCOME-CORROBORATION",
         "type": "investigates_source",
         "layer": "canonical-adapter"
       }
@@ -5196,6 +7043,40 @@
         "layer": "canonical-adapter"
       }
     ],
+    "SRC-NYCAC-JAMIE-EVENT-SYSTEM-ACCOUNT-2026-07-15": [
+      {
+        "from": "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-NYCAC-JAMIE-EVENT-SYSTEM-ACCOUNT",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-JAMIE-EVENT-ROLE-CORROBORATION",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-NYCAC-LET-NYC-DANCE-PRESS-INDEX-2026-05-11": [
+      {
+        "from": "project.let-nyc-dance",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
     "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017": [
       {
         "from": "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
@@ -5211,6 +7092,11 @@
         "from": "OBS-NYCAC-FACTSHEET-MAPPING",
         "type": "observed_in",
         "layer": "canonical-adapter"
+      },
+      {
+        "from": "project.let-nyc-dance",
+        "type": "references",
+        "layer": "authored"
       }
     ],
     "SRC-NYCAC-MAYOR-CURE-2023-12-28": [
@@ -5244,6 +7130,11 @@
       {
         "from": "CLM-NYCAC-POLICY-DATA-COMMUNICATIONS",
         "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-NYCAC-TOWN-HALL-PRODUCTION-ROLE-CANDIDATE",
+        "type": "context",
         "layer": "canonical-adapter"
       },
       {
@@ -5318,6 +7209,11 @@
         "from": "OBS-TNR-CAMPAIGN-COALITION",
         "type": "observed_in",
         "layer": "canonical-adapter"
+      },
+      {
+        "from": "project.talks-not-raids",
+        "type": "references",
+        "layer": "authored"
       }
     ],
     "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21": [
@@ -5338,6 +7234,33 @@
       },
       {
         "from": "OBS-NYCAC-VICE-OFFICIAL-MEETING",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28": [
+      {
+        "from": "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-OPEN-HOUSE-COMMUNAL-GOVERNANCE",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-OPEN-HOUSE-GALLERY-EXPERIMENT",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-OPEN-HOUSE-SHOP-SHOWS",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-OPEN-HOUSE-TENDING-ROLE",
         "type": "observed_in",
         "layer": "canonical-adapter"
       }
@@ -5388,6 +7311,18 @@
       {
         "from": "OBS-SOCIAL-KCTH-PROFILE-SNAPSHOT",
         "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14": [
+      {
+        "from": "INQ-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-NYCAC-FB-OUT-OF-INDEX-EVENT-CROSSWALK",
+        "type": "investigates_source",
         "layer": "canonical-adapter"
       }
     ],
@@ -5586,6 +7521,136 @@
       {
         "from": "INQ-URBANHERM-FULL-POPULATION-2026-07-15",
         "type": "reviewed_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-WATERWAYS-9NEWS-VICKSBURG-2007-09-25": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-9NEWS-CREW",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-WATERWAYS-KC-STAR-2007-11-15": [
+      {
+        "from": "CLM-WATERWAYS-EXPEDITION-CONCEPTION",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-CULTURAL-CONNECTION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-INTERRUPTION-AND-RESUMPTION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-ORIGIN",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-KCSTAR-SCALE-AND-ROUTE",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-WATERWAYS-PITCH-2007-08-09": [
+      {
+        "from": "CLM-WATERWAYS-EXPEDITION-CONCEPTION",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-PITCH-EXPEDITION-IDEA",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-PITCH-RAFT-AND-TROLLEY",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-WATERWAYS-PITCH-PART-III-2007-11-12": [
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "direct_support",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-PITCH-PART-III-DISTANCE",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-PITCH-PART-III-ROUTE",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION",
+        "type": "investigates_source",
+        "layer": "canonical-adapter"
+      }
+    ],
+    "SRC-WATERWAYS-SOUNDINGS-RAFT-2007": [
+      {
+        "from": "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+        "type": "corroborating",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-SOUNDINGS-CONSTRUCTION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-SOUNDINGS-PARTICIPATION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "OBS-WATERWAYS-SOUNDINGS-RESUMPTION",
+        "type": "observed_in",
+        "layer": "canonical-adapter"
+      },
+      {
+        "from": "RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION",
+        "type": "investigates_source",
         "layer": "canonical-adapter"
       }
     ],
@@ -6086,6 +8151,20 @@
         "from": "OBS-WOWLIST-USER-TUTORIAL",
         "type": "observed_in",
         "layer": "canonical-adapter"
+      }
+    ],
+    "sunday-dinner-196-participation-infrastructure": [
+      {
+        "from": "method.participation-and-relational-infrastructure",
+        "type": "references",
+        "layer": "authored"
+      }
+    ],
+    "technical-operations-operating-backbone": [
+      {
+        "from": "method.jamie-at-work",
+        "type": "references",
+        "layer": "authored"
       }
     ]
   }

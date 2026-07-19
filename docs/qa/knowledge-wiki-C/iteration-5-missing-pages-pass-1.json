@@ -1,0 +1,349 @@
+{
+  "suite_id": "knowledge-wiki-foundation",
+  "suite_version": 1,
+  "label": "iteration-5-missing-pages-pass-1",
+  "candidate_fingerprint": "0d7606c34d1f571e20c541e5dafd3ab373eccbf1c1493568d95fcdee858f8453",
+  "rubric_fingerprint": "599ff099b8a0ad9cb55e3e2ec6ac06ce3363376debd393f6b300d812e2deca60",
+  "graph_fingerprint": "0a4125c8feafee7144ad1fa3a24fcb64f792d620ee0c127bf05ee7f9c4fd9581",
+  "generated_reports_current": true,
+  "implementation_weighted_score": 1,
+  "implementation_before_repeat": true,
+  "consecutive_unchanged_pass": false,
+  "implementation_criteria_met": false,
+  "release_criteria_met": false,
+  "decision": "continue_hill_climb",
+  "blocking_failures": [],
+  "missing_judgments": [],
+  "judgment_errors": [],
+  "human_open_items": [
+    "Jamie exact-candidate release decision",
+    "Any applicable collaborator-credit review",
+    "Any applicable media rights and consent decision"
+  ],
+  "evals": [
+    {
+      "eval_id": "KW-001",
+      "title": "One authority model without a second truth tree",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "single compatibility root: true",
+        "generated artifacts marked: true",
+        "authority table assigns source-backed and professional proof claims to their existing typed registries",
+        "referenced proof claims serialize as minimal canonical adapter nodes"
+      ],
+      "findings": [],
+      "recommended_next_move": "Remove the duplicate record and bind the surviving representation to its canonical owner."
+    },
+    {
+      "eval_id": "KW-002",
+      "title": "Stable identity, links, graph, and reachability",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "graph fingerprint: 0a4125c8feafee7144ad1fa3a24fcb64f792d620ee0c127bf05ee7f9c4fd9581",
+        "nodes: 469",
+        "edges: 1445",
+        "errors: 0",
+        "orphans: 0",
+        "unreachable: 0"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair the smallest authored or canonical relationship and regenerate."
+    },
+    {
+      "eval_id": "KW-003",
+      "title": "Evidence governance and protected-source thresholds",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "protected photo label: [protected source]",
+        "display state: hold",
+        "serialized graph contains no absolute private locator"
+      ],
+      "findings": [],
+      "recommended_next_move": "Reduce the derived node to approved metadata and restore the strictest applicable hold."
+    },
+    {
+      "eval_id": "KW-004",
+      "title": "Corrections, anti-claims, wanted pages, and negative knowledge",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 6,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "canonical CallNYC corrections represented: 3",
+        "authored correction paths: 4",
+        "wanted pages: 1",
+        "not-recovered canonical claim retained"
+      ],
+      "findings": [],
+      "recommended_next_move": "Restore the bounded search result and the canonical correction link."
+    },
+    {
+      "eval_id": "KW-005",
+      "title": "Job-search query usefulness",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 5,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "capability traversal resolves project, method, and opportunity",
+        "time claim resolves direct source",
+        "protected photo query stays redacted and exposes approved safe context",
+        "event-to-method multi-hop path resolves",
+        "unknown option fails closed"
+      ],
+      "findings": [],
+      "recommended_next_move": "Add the smallest relation or query affordance that answers the failed work question."
+    },
+    {
+      "eval_id": "KW-006",
+      "title": "VS Code reader and author experience",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "root Start Here present",
+        "VS Code Markdown validation enabled",
+        "authoring routes exact records to typed registry",
+        "human task output declares no result claims"
+      ],
+      "findings": [],
+      "recommended_next_move": "Remove setup friction or clarify the next human action without adding a second interface."
+    },
+    {
+      "eval_id": "KW-007",
+      "title": "Selective portfolio projection and prohibited-route guard",
+      "grader": "deterministic",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 7,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "public-safety check passes",
+        "projection-integrity check passes",
+        "route check passes",
+        "prohibited route files: 0"
+      ],
+      "findings": [],
+      "recommended_next_move": "Remove the accidental projection or bind it to an approved selected claim."
+    },
+    {
+      "eval_id": "KW-008",
+      "title": "Chad lens: hiring clarity and strategic depth",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": true,
+      "weight": 6,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/README.md:83-94 states the professional purpose, while lines 157-175 route hiring readers toward role-fit claims and away from an archive tour.",
+        "docs/knowledge-bank/methods/jamie-at-work.md:43-78 identifies a recurring sequence of actions, concrete artifacts, usable results, and the operating layer Jamie can own.",
+        "docs/knowledge-bank/projects/callnyc.md:43-57 identifies Jamie's independent action and the resulting public-data interpretation while excluding official-product, submission, and winner claims; lines 105-115 preserve the photograph boundary.",
+        "Query `npm run wiki:query -- --id capability.technical-operations` returns stable links from the capability to CallNYC, Source-Backed Team Memory, Jamie at Work, project demonstrations, and current opportunity records."
+      ],
+      "findings": [
+        "The compact capability page delegates much of its project-specific result and boundary detail to linked pages, so an isolated skim is less complete than the full retrieval path.",
+        "This criterion cannot establish fit for every employer or permission to publish held material."
+      ],
+      "recommended_next_move": "Make the strongest defensible professional action easier to retrieve and connect to present value."
+    },
+    {
+      "eval_id": "KW-009",
+      "title": "Jamie voice: tender civic architecture with editorial restraint",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": false,
+      "weight": 4,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/methods/jamie-at-work.md:33-55 treats uncertainty as an existing living structure and immediately translates that stance into five operational steps.",
+        "docs/knowledge-bank/methods/jamie-at-work.md:72-109 pairs warm language about agency and integrity with a precise ownership list, source-return record, and anti-abstraction boundary.",
+        "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md:31-51 turns relational care into inspectable components including invitation, orientation, encounter, agency, translation, memory, and continuation.",
+        "docs/knowledge-bank/authoring.md:22-42 gives a concise, executable workflow and explicitly distinguishes structural validation from publication permission."
+      ],
+      "findings": [
+        "Some phrases such as \"living structure\" and \"distributed listening surface\" require their neighboring concrete examples to retain operational clarity; the candidate generally supplies those examples.",
+        "This criterion cannot establish literal authorship by Jamie for AI-assisted text."
+      ],
+      "recommended_next_move": "Replace abstraction with one precise human consequence or operating action."
+    },
+    {
+      "eval_id": "KW-010",
+      "title": "Warren Sack lens: recursive systems become inspectable",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Query `npm run wiki:query -- --from event.nycc.councilstat-hackathon-2016 --to method.source-backed-team-memory --format json` returns a three-hop authored traversal: event `informed` CallNYC, CallNYC `demonstrates` Technical Operations, and the capability was `developed_through` Source-Backed Team Memory.",
+        "Query `npm run wiki:query -- --from COR-CALLNYC-EVENT-TIME-2026 --to SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433 --format json` returns a two-hop canonical traversal: the correction `corrects` the date-time claim, which has `direct_support` from the Civic Hall source.",
+        "docs/knowledge-bank/projects/callnyc.md:43-115 preserves chronology, sources, three correction decisions, approved bounded wording, and the protected-photograph threshold in one inspectable research context.",
+        "reports/wiki-health.json:5-18 binds the traversals to graph fingerprint `0a4125c8feafee7144ad1fa3a24fcb64f792d620ee0c127bf05ee7f9c4fd9581` with 469 nodes, 1,445 edges, zero orphans, zero unreachable nodes, and zero errors."
+      ],
+      "findings": [
+        "The general `--related` output is verbose, and directed traversal follows stored edge orientation, so a reader must formulate the correction-to-claim-to-source query in that direction.",
+        "This criterion cannot establish literal endorsement by Warren Sack."
+      ],
+      "recommended_next_move": "Add or repair one relation that turns a stated pattern into a traversable working form."
+    },
+    {
+      "eval_id": "KW-011",
+      "title": "Margaret Morse lens: embodied and relational knowledge remains present",
+      "grader": "llm_judge",
+      "external_judgment_required": true,
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/events/office-of-nightlife-town-hall-2017.md:31-70 connects a cultural venue, public authority, organizers, cohosts, production systems, participants, and bounded response metadata without reducing the event to an operational artifact.",
+        "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md:31-75 and 91-107 keep embodied encounter, agency, memory, continuation, refusal, nonparticipation, and protected absence present across artistic, civic, technical, and neighborhood work.",
+        "docs/knowledge-bank/places/small-cultural-spaces.md:25-65 names public places as contributors to knowledge and requires credit, context, consent, safety, and non-extractive representation.",
+        "Query `npm run wiki:query -- --id SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO --format json` returns a protected source with safe context, explicit non-establishments, `permission-needed` rights status, `review-needed` consent status, and public display on `hold`.",
+        "docs/knowledge-bank/people-and-collective-credit.md:43-74 treats protected absence as a meaningful governed state and separates access authorization from retention, quotation, naming, publication, and promotion."
+      ],
+      "findings": [
+        "The protected photograph can preserve only placard wording, breakout-table context, and a collaborative setting; identities, participant experience, and broader event meaning remain intentionally unavailable from that source alone.",
+        "This criterion cannot establish literal endorsement by Margaret Morse or consent to display protected media."
+      ],
+      "recommended_next_move": "Restore one concrete place, event, relation, or protected threshold without inventing access."
+    },
+    {
+      "eval_id": "KW-012",
+      "title": "Human authority and release decision remain honest",
+      "grader": "human_approval",
+      "external_judgment_required": true,
+      "blocking": true,
+      "weight": 9,
+      "score": 0,
+      "pass": false,
+      "evidence": [
+        "Human task protocol is present; no approval is inferred"
+      ],
+      "findings": [
+        "Exact-candidate Jamie approval and any applicable rights or collaborator decisions remain open"
+      ],
+      "recommended_next_move": "Report the candidate as implementation-ready but human-held until the named decision exists."
+    },
+    {
+      "eval_id": "KW-013",
+      "title": "Missing project overviews become bounded, traversable pages",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 7,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "priority overview and method nodes: 5/5",
+        "root-indexed project overviews: 4/4",
+        "directory-indexed project overviews: 4/4",
+        "canonical/source-return page checks passing: 5/5"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair the smallest missing overview, canonical reference, relation, or action-outcome boundary."
+    },
+    {
+      "eval_id": "KW-014",
+      "title": "Original-source access and present-tense rereading remain operational",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 6,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "priority source-return sections passing: 12/12",
+        "authoring fields present: true",
+        "explicit unavailable-source states present: true",
+        "access/publication boundary present: true",
+        "bounded librarian task protocol present: true"
+      ],
+      "findings": [],
+      "recommended_next_move": "Return to the original source or record the honest access state, bounded librarian request, and next question without exposing the locator."
+    },
+    {
+      "eval_id": "KW-015",
+      "title": "Campaign and ownership narratives separate contribution from institutional outcome",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 7,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "campaign and ownership pages passing: 4/4",
+        "root-indexed narratives: 4/4",
+        "project-directory narratives: 4/4",
+        "structured proof claim adapted canonically: true",
+        "role, usable result, collective or team credit, outcome, and boundary are page requirements"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair the smallest missing role, outcome, credit, canonical reference, or causality boundary in the failed narrative."
+    },
+    {
+      "eval_id": "KW-016",
+      "title": "Cross-project practice preserves participation, place, and protected people",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 6,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "practice and place source-return pages passing: 3/3",
+        "people and collective-credit policy passing: true",
+        "Jamie-at-work project relations: 4",
+        "participation developed-through relations: 3",
+        "place-to-event relation present: true",
+        "credit governance relations: 4"
+      ],
+      "findings": [],
+      "recommended_next_move": "Restore the missing project, place, person, credit, or protected-absence relation without exposing protected content."
+    },
+    {
+      "eval_id": "KW-017",
+      "title": "Outcomes and claim maturity expose the exact advancement test",
+      "grader": "hybrid",
+      "external_judgment_required": false,
+      "blocking": true,
+      "weight": 4,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "outcome and maturity pages passing: 2/2",
+        "root-indexed operational pages: 2/2",
+        "negative knowledge preserved: true",
+        "dashboard rows require a canonical ID, current hold or use, and advancement test"
+      ],
+      "findings": [],
+      "recommended_next_move": "Name the missing state, authority, boundary, or smallest evidence test and keep the canonical record authoritative."
+    }
+  ]
+}

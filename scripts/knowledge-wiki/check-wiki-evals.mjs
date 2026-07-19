@@ -13,7 +13,7 @@ export function validateWikiEvalSuite(suite) {
   requireValue(suite.version === 1, "suite.version must be 1");
   requireValue(suite.suite_id === "knowledge-wiki-foundation", "suite_id is invalid");
   requireValue(Array.isArray(suite.hard_constraints) && suite.hard_constraints.length >= 8, "at least eight hard constraints are required");
-  requireValue(Array.isArray(suite.evals) && suite.evals.length === 14, "exactly fourteen Knowledge Wiki evals are required");
+  requireValue(Array.isArray(suite.evals) && suite.evals.length === 17, "exactly seventeen Knowledge Wiki evals are required");
   requireValue(suite.optimization?.rubric_is_frozen_during_run === true, "rubric must be frozen during optimization");
   requireValue(suite.optimization?.optimizer_may_not_grade_own_patch === true, "optimizer may not grade its own patch");
   requireValue(suite.optimization?.holdout_judge_is_blind_to_patch_intent === true, "holdout judge must be blind to patch intent");

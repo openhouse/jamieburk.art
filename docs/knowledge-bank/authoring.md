@@ -41,6 +41,30 @@ Structure grows from the material under review.
    query that serves the intended reader.
 8. Treat a passing check as structural evidence, not publication permission.
 
+## Write a project or campaign narrative
+
+A canonical narrative should answer five questions without collapsing them:
+
+1. What did Jamie directly do?
+2. What artifact, workflow, event, or operating surface became usable?
+3. Who else contributed, hosted, participated, or held distinct authorship?
+4. Which owner, institution, legislature, agency, or team made the formal
+   decision?
+5. What later change is documented, and what causal interpretation remains
+   unsupported?
+
+Use [Outcomes and Adoption](outcomes-and-adoption.md) for the evidence states
+and [People, Collective Credit, and Protected Absences](people-and-collective-credit.md)
+for credit and consent requirements. A page should not become clearer by
+making its collaborators or places disappear.
+
+## Orient claim maturity
+
+An operational dashboard may point to canonical claim IDs, current holds, and
+the smallest advancement test. It may not restate exact claim wording as a
+second authority, change a typed status, infer rights, or promote a claim. See
+the [Claim Maturity Dashboard](claim-maturity-dashboard.md).
+
 ## Present-tense source return
 
 Archival production is recursive. A prior observation can orient a return, but

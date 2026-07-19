@@ -7,11 +7,11 @@ publication approval.
 ## Exact implementation candidate
 
 - candidate fingerprint:
-  `dfe1f8b5b3a81454d0597f421e82c5cbd7c955ed9da698e374fb70be46c3ca6d`
+  `0d7606c34d1f571e20c541e5dafd3ab373eccbf1c1493568d95fcdee858f8453`
 - rubric fingerprint:
-  `36198cf9a9eb5c5467c14146dd990f20107455f0e5579c7dd3b05db8e2569e74`
+  `599ff099b8a0ad9cb55e3e2ec6ac06ce3363376debd393f6b300d812e2deca60`
 - graph fingerprint:
-  `cd159c65d2060039cbcb6545ea5e24db2becca62f7e55cbea7c16374c0e4b387`
+  `0a4125c8feafee7144ad1fa3a24fcb64f792d620ee0c127bf05ee7f9c4fd9581`
 - implementation weighted score: `1.0000`
 - decision: `implementation_ready_human_held`
 
@@ -37,6 +37,13 @@ publication approval.
   all deterministic and external implementation criteria at score 4.
 - `iteration-4-source-rereading-pass-2.json`: second unchanged pass; the
   expanded implementation criterion is reached at weighted score 1.0000.
+- `iteration-5-missing-pages-holdout.json`: fresh independent read-only
+  judgment of the hiring, voice, recursive-systems, and embodied-knowledge
+  lenses against the expanded missing-pages candidate.
+- `iteration-5-missing-pages-pass-1.json`: first exact-candidate pass with all
+  deterministic and external implementation criteria at score 4.
+- `iteration-5-missing-pages-pass-2.json`: second unchanged pass; the expanded
+  implementation criterion is reached at weighted score 1.0000.
 
 ## Expanded candidate
 
@@ -47,6 +54,15 @@ pages to remain traversable, bounded, and tied to canonical records. They also
 require each materially researched priority page to retain its present
 question, inspected original, actual scope, changed and unchanged
 understanding, access boundary, and next return.
+
+The current expansion adds campaign narratives for Let NYC Dance and Talks Not
+Raids, an Office of Nightlife town-hall event page, and a Harry J. Epstein
+ownership narrative. It also adds Jamie-at-work, participation, place,
+collective-credit, outcomes, and claim-maturity pages. Three new blocking evals
+require those pages to distinguish individual contribution, collective use,
+formal authority, and later change; preserve participation, place, protected
+absence, and collective credit; and state the exact evidence test that would
+advance a held claim.
 
 The exact-candidate evidence does not assert that the accessible archive is
 complete, that every source should be processed, or that access authorization

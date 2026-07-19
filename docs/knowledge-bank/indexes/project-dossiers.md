@@ -20,6 +20,14 @@ relations:
     target: project.kc-town-hall
   - type: indexes
     target: project.fair-rent-nyc
+  - type: indexes
+    target: project.harry-j-epstein
+  - type: indexes
+    target: project.let-nyc-dance
+  - type: indexes
+    target: project.talks-not-raids
+  - type: indexes
+    target: event.nycac.office-of-nightlife-town-hall-2017
 ---
 
 # Project dossier directory
@@ -41,6 +49,21 @@ signal that every dossier has completed semantic migration.
   restoration, public funding chronology, and mission-aligned transition.
 - [Fair Rent NYC](../projects/fair-rent-nyc.md): campaign memory, policy
   provenance, coalition operations, and public-data product requirements.
+- [Harry J. Epstein Company](../projects/harry-j-epstein.md): long-term
+  e-commerce modernization, operating stewardship, and bounded business
+  evidence.
+
+## Campaign and event narratives
+
+- [Let NYC Dance](../projects/let-nyc-dance.md): Jamie's organizing and web-
+  infrastructure contributions within the multi-group campaign preceding
+  Cabaret Law repeal.
+- [Talks Not Raids](../projects/talks-not-raids.md): campaign research,
+  testimony, public action, Local Law 220, and the later MARCH-to-CURE
+  chronology.
+- [Office of Nightlife town hall](../events/office-of-nightlife-town-hall-2017.md):
+  a public cultural-space event, protected production evidence, collaborator
+  credit, and adoption boundaries.
 
 ## Participatory and cultural systems
 
@@ -81,7 +104,21 @@ signal that every dossier has completed semantic migration.
 
 ## Cross-project methods
 
+- [Jamie at Work](../methods/jamie-at-work.md): the recurring action of making
+  emerging work usable without treating uncertainty as failure.
+- [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md):
+  invitation, orientation, situated encounter, agency, memory, and
+  continuation across artistic, civic, technical, and neighborhood work.
 - [Original-source rereading](../methods/original-source-rereading.md): the
   present-tense return protocol and public-safe access map.
 - [Transition and handoff](../methods/transition-and-handoff.md): how Jamie
   makes work portable, bounded, and continuable through change.
+- [Small Cultural Spaces Where Culture Is Born](../places/small-cultural-spaces.md):
+  places and hosting labor retained as historical subjects rather than event
+  backdrops.
+- [Outcomes and Adoption](../outcomes-and-adoption.md): a four-part distinction
+  among delivery, use, formal adoption, and later change.
+- [People, Collective Credit, and Protected Absences](../people-and-collective-credit.md):
+  public credit, unknown authorship, consent, and protected presence.
+- [Claim Maturity Dashboard](../claim-maturity-dashboard.md): selected claims,
+  holds, and the exact test that could advance each item.
