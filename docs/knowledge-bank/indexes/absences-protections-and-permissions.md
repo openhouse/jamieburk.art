@@ -12,29 +12,10 @@ last_reviewed: 2026-07-19
 review_by: 2026-10-19
 review_state: human-blocked
 owner: Jamie Burkart
-aliases:
-  - Protected absence register
+aliases: ["Protected absence register"]
 canonical_path: docs/knowledge-bank/indexes/absences-protections-and-permissions.md
-canonical_refs:
-  - INQ-KC-TOWN-HALL-PROJECT-TRANSITION
-  - INQ-FB-NYCARTC-EVENT-POPULATION
-  - INQ-WOWLIST-CALLSCRIPT-NYCARTC-ROLE-ATTRIBUTION
-relations:
-  - type: part_of
-    target: index.knowledge-wiki-missing-pages
-    href: missing-pages.md
-  - type: documents
-    target: index.project-afterlives-and-handoffs
-    href: project-afterlives-and-handoffs.md
-  - type: documents
-    target: index.role-and-collective-authorship
-    href: role-and-collective-authorship.md
-  - type: documents
-    target: asset.photo.digital-district.001
-    href: ../assets/digital-district-photo.md
-  - type: uses_method
-    target: method.source-re-encounter
-    href: ../methods/source-re-encounter.md
+canonical_refs: ["INQ-KC-TOWN-HALL-PROJECT-TRANSITION","INQ-FB-NYCARTC-EVENT-POPULATION","INQ-WOWLIST-CALLSCRIPT-NYCARTC-ROLE-ATTRIBUTION"]
+relations: [{"type":"part_of","target":"index.knowledge-wiki-missing-pages","href":"missing-pages.md"},{"type":"documents","target":"index.project-afterlives-and-handoffs","href":"project-afterlives-and-handoffs.md"},{"type":"documents","target":"index.role-and-collective-authorship","href":"role-and-collective-authorship.md"},{"type":"documents","target":"asset.photo.digital-district.001","href":"../assets/digital-district-photo.md"},{"type":"uses_method","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"}]
 ---
 
 # Absences, Protections, And Permissions
@@ -53,7 +34,6 @@ unpublished, or simply unselected for the current portfolio argument.
 | Personal context intentionally absent | A private circumstance is not necessary to make the professional record accurate. | Family circumstances near the conclusion of KC Town Hall work. | No automatic research action. Preserve the boundary unless Jamie chooses a specific, necessary disclosure. |
 | Attributed transition | Jamie remembers a handoff, but recipient or timing is not publicly corroborated. | KC Town Hall stewardship transition. | Public organizational record or recipient confirmation. |
 | Mature but unselected | A defensible claim exists but is not needed on the current site. | Waterways and early participatory-art claims. | A future editorial argument, not a stronger truth status. |
-
 ## Permission Is Not A Single Switch
 
 Research access, repository inclusion, public quotation, image reproduction,
@@ -61,14 +41,12 @@ participant identification, collaborator attribution, and portfolio selection
 are separate permissions. Jamie's authorization allows agents to research. It
 does not manufacture third-party consent, copyright, collective authorship, or
 publication necessity.
-
 ## Protected Absence Rule
 
 Do not hill climb by erasing an absence, weakening its label, or moving private
 evidence into public text. Improve the system by making the reason for absence,
 the smallest useful next request, the decision owner, and the publication
 boundary easier to understand.
-
 ## Private/Public Architecture
 
 [RFP 0001](../../../rfps/0001-shared-core-private-public-knowledge-wikis.md)

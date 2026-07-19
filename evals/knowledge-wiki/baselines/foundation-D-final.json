@@ -1,6 +1,6 @@
 {
   "profile": "foundation_ready",
-  "candidateFingerprint": "sha256:fc7f3135f070ec1682f1776dde833a3e4e01270871730d122dd859230ee1848a",
+  "candidateFingerprint": "sha256:a45d73911c5d16c42ff68a170d0268afdb4c67db1ca04ec85459da1a9dc0f098",
   "contractFingerprint": "sha256:4fd8e47766d2c7dfba7890dc552f03a552c2b3f0ec06cd0bdce1eba1cec21353",
   "hardGates": 26,
   "records": 47,

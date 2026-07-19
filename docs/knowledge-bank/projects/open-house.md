@@ -1,4 +1,6 @@
-# Open House
+---
+---
+---pen House
 
 This dossier preserves public-safe evidence for the 2006 Porter Bridge Gallery
 Open House and its relationship to Jamie's longer participatory practice. It

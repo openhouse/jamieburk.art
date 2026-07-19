@@ -1,4 +1,6 @@
-# Water Publics
+---
+---
+---ater Publics
 
 This dossier connects the raft expedition, Great Accommodations, public
 programs, correspondence, installation work, and other participatory projects

@@ -12,26 +12,10 @@ last_reviewed: 2026-07-19
 review_by: 2026-10-19
 review_state: requested
 owner: Jamie Burkart
-aliases:
-  - NYC Artist Coalition event chronology
+aliases: ["NYC Artist Coalition event chronology"]
 canonical_path: docs/knowledge-bank/timelines/nycartc-events-and-venues-2017-2021.md
-canonical_refs:
-  - CLM-FB-NYCARTC-EVENT-POPULATION
-  - CLM-FB-NYCARTC-PARTICIPATION-SYSTEM
-  - CLM-FB-NYCARTC-PUBLIC-OFFICIAL-PROGRAMS
-relations:
-  - type: part_of
-    target: index.knowledge-wiki-missing-pages
-    href: ../indexes/missing-pages.md
-  - type: informed_by
-    target: project.nyc-artist-coalition
-    href: ../projects/nyc-artist-coalition.md
-  - type: uses_method
-    target: method.source-re-encounter
-    href: ../methods/source-re-encounter.md
-  - type: informed_by
-    target: method.nycartc.public-meeting-and-testimony-participation
-    href: ../methods/nycartc-public-meeting-and-testimony-participation.md
+canonical_refs: ["CLM-FB-NYCARTC-EVENT-POPULATION","CLM-FB-NYCARTC-PARTICIPATION-SYSTEM","CLM-FB-NYCARTC-PUBLIC-OFFICIAL-PROGRAMS"]
+relations: [{"type":"part_of","target":"index.knowledge-wiki-missing-pages","href":"../indexes/missing-pages.md"},{"type":"informed_by","target":"project.nyc-artist-coalition","href":"../projects/nyc-artist-coalition.md"},{"type":"uses_method","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"},{"type":"informed_by","target":"method.nycartc.public-meeting-and-testimony-participation","href":"../methods/nycartc-public-meeting-and-testimony-participation.md"}]
 ---
 
 # NYC Artist Coalition Events And Venues, 2017-2021
@@ -41,7 +25,6 @@ Facebook control into a complete institutional history. The source-centered
 [archival-production record](../research/nycartc-facebook-events-archival-production-2026-07.md)
 accounts for 34 displayed past-event slots: 33 recovered records and one slot
 whose title, date, host, and event identity remain unresolved.
-
 ## Present Source Encounter
 
 On July 19, 2026, the authenticated NYC Artist Coalition Facebook Page was
@@ -51,7 +34,6 @@ entries, including the October Relief Meeting and the Among Us Benefit Stream.
 This was an availability and representation check, not a new population
 recount. The governed July 14 census remains the basis for the 33-plus-one
 accounting below.
-
 ## Recovered Chronology
 
 | Date | Event | Relationship | Venue or mode | Primary program |
@@ -89,7 +71,6 @@ accounting below.
 | 2020-08-20 | Small Business Speakout | Associated | Online | Small-business recovery |
 | 2020-10-06 | October Relief Meeting - NYC Artist Coalition | Direct | Virtual | Relief and rent support |
 | 2021-01-29 | Among Us Benefit Stream | Associated | Online | Cultural-space relief |
-
 ## What The Sequence Supports
 
 - Twelve recovered records document recurring coalition meetings: ten in ten
@@ -101,7 +82,6 @@ accounting below.
 - Jamie describes helping establish and produce this recurring participation
   layer. The event archive establishes the collective system, not his exact
   responsibility for every event.
-
 ## Boundaries And Open Slot
 
 "Direct" means the current event card lists NYC Artist Coalition as host.

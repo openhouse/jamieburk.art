@@ -13,17 +13,8 @@ review_by: 2026-10-19
 review_state: requested
 owner: Jamie Burkart
 canonical_path: docs/knowledge-bank/projects/kc-spaces-fund.md
-canonical_refs:
-  - CLM-KCSPACES-FUNDRAISING-OUTCOME
-  - CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE
-  - CLM-KCSPACES-NAMING-SUPPORT
-relations:
-  - type: informed_by
-    target: index.project-afterlives-and-handoffs
-    href: ../indexes/project-afterlives-and-handoffs.md
-  - type: informed_by
-    target: index.role-and-collective-authorship
-    href: ../indexes/role-and-collective-authorship.md
+canonical_refs: ["CLM-KCSPACES-FUNDRAISING-OUTCOME","CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE","CLM-KCSPACES-NAMING-SUPPORT"]
+relations: [{"type":"informed_by","target":"index.project-afterlives-and-handoffs","href":"../indexes/project-afterlives-and-handoffs.md"},{"type":"informed_by","target":"index.role-and-collective-authorship","href":"../indexes/role-and-collective-authorship.md"}]
 ---
 
 # KC Spaces Fund

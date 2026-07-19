@@ -13,27 +13,8 @@ review_by: 2026-10-19
 review_state: requested
 owner: Jamie Burkart
 canonical_path: docs/knowledge-bank/indexes/people-places-and-community-testimony.md
-canonical_refs:
-  - CLM-FB-NYCARTC-PARTICIPATION-SYSTEM
-  - CLM-FB-NYCARTC-PUBLIC-OFFICIAL-PROGRAMS
-  - CLM-NYCARTC-TESTIMONY-PARTICIPATION-DESIGN
-  - CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY
-relations:
-  - type: part_of
-    target: index.knowledge-wiki-missing-pages
-    href: missing-pages.md
-  - type: documents
-    target: timeline.nycartc.events-and-venues.2017-2021
-    href: ../timelines/nycartc-events-and-venues-2017-2021.md
-  - type: documents
-    target: method.nycartc.public-meeting-and-testimony-participation
-    href: ../methods/nycartc-public-meeting-and-testimony-participation.md
-  - type: uses_source
-    target: source.nycartc.testimony-guide.2017
-    href: ../sources/nycartc-testimony-guide-2017.md
-  - type: uses_method
-    target: method.source-re-encounter
-    href: ../methods/source-re-encounter.md
+canonical_refs: ["CLM-FB-NYCARTC-PARTICIPATION-SYSTEM","CLM-FB-NYCARTC-PUBLIC-OFFICIAL-PROGRAMS","CLM-NYCARTC-TESTIMONY-PARTICIPATION-DESIGN","CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY"]
+relations: [{"type":"part_of","target":"index.knowledge-wiki-missing-pages","href":"missing-pages.md"},{"type":"documents","target":"timeline.nycartc.events-and-venues.2017-2021","href":"../timelines/nycartc-events-and-venues-2017-2021.md"},{"type":"documents","target":"method.nycartc.public-meeting-and-testimony-participation","href":"../methods/nycartc-public-meeting-and-testimony-participation.md"},{"type":"uses_source","target":"source.nycartc.testimony-guide.2017","href":"../sources/nycartc-testimony-guide-2017.md"},{"type":"uses_method","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"}]
 ---
 
 # People, Places, And Community Testimony
@@ -42,7 +23,6 @@ This index records public participation structures without publishing a social
 graph of private people. It treats places and testimony formats as historical
 actors while preserving the difference among invitation, presence, speech,
 response, and policy outcome.
-
 ## Places As Civic Infrastructure
 
 Ten recovered recurring coalition meetings name ten physical cultural spaces:
@@ -55,7 +35,6 @@ virtual rooms.
 The sequence supports a rotating-venue practice. It does not establish an
 uninterrupted monthly schedule, identical participation, or Jamie's production
 role at every location.
-
 ## Ways People Could Enter The Work
 
 - tell a short first-person story at a hearing;
@@ -71,7 +50,6 @@ role at every location.
 These are documented participation affordances. Their existence does not prove
 who used them, how many people participated, what they said, or what outcome a
 specific contribution caused.
-
 ## Public People And Protected People
 
 Public event records may name an elected official, commissioner, organizer,
@@ -85,7 +63,6 @@ and inferred relationship graphs do not belong in this public repository.
 Community testimony should enter the Wiki only through consented quotation,
 public testimony, responsibly summarized aggregate evidence, or another
 explicitly governed route.
-
 ## Research Need
 
 The next valuable layer is consented collaborator and participant memory about

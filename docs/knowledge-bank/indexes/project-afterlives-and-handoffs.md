@@ -13,26 +13,8 @@ review_by: 2026-10-19
 review_state: requested
 owner: Jamie Burkart
 canonical_path: docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md
-canonical_refs:
-  - CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS
-  - CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION
-  - CLM-KC-TOWN-HALL-UNUSED-ALLOCATION
-relations:
-  - type: part_of
-    target: index.knowledge-wiki-missing-pages
-    href: missing-pages.md
-  - type: documents
-    target: project.callnyc
-    href: ../projects/callnyc.md
-  - type: documents
-    target: project.kc-spaces-fund
-    href: ../projects/kc-spaces-fund.md
-  - type: documents
-    target: project.nyc-artist-coalition
-    href: ../projects/nyc-artist-coalition.md
-  - type: uses_method
-    target: method.source-re-encounter
-    href: ../methods/source-re-encounter.md
+canonical_refs: ["CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS","CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION","CLM-KC-TOWN-HALL-UNUSED-ALLOCATION"]
+relations: [{"type":"part_of","target":"index.knowledge-wiki-missing-pages","href":"missing-pages.md"},{"type":"documents","target":"project.callnyc","href":"../projects/callnyc.md"},{"type":"documents","target":"project.kc-spaces-fund","href":"../projects/kc-spaces-fund.md"},{"type":"documents","target":"project.nyc-artist-coalition","href":"../projects/nyc-artist-coalition.md"},{"type":"uses_method","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"}]
 ---
 
 # Project Afterlives And Handoffs
@@ -49,7 +31,6 @@ disposition, later exhibition, and editorial retirement separate.
 | KC Town Hall | Government records establish the 2019 appropriation and a later unused-allocation action. Jamie separately recalls transitioning stewardship to a mission-aligned organization. | The recipient and date of the transition are not publicly corroborated. The municipal action and organizational transition are not the same event. Private family circumstances are intentionally outside this account. |
 | NTER CHNG | Public archived records preserve joint creator credit and later inclusion in America: Now and Here. | Protected production records do not allocate every task or authorize participant-message publication. |
 | Water Publics | The 2007 raft record has a documented later life in Great Accommodations, which reframed river travel as a participatory installation and public-program structure. | The connection is documented project development, not a measured account of long-term community impact. |
-
 ## Handoff Questions
 
 For every project, ask:
@@ -61,7 +42,6 @@ For every project, ask:
   budget action?
 - What must remain absent because naming it would expose private circumstances
   without improving the professional account?
-
 ## Editorial Rule
 
 An unfinished record is not a failed project, and an archive is not proof of a

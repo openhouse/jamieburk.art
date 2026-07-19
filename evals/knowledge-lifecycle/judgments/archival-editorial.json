@@ -1,7 +1,7 @@
 {
   "judgeId": "codex-independent-architecture-editorial-2026-07-19-missing-pages-v3",
   "lens": "archival-editorial",
-  "candidate": "sha256:db863b7ccdb8ef4857a4423feb15faa60c5c28e69116f291c16d8a2d5f917457",
+  "candidate": "sha256:ad6fda3184c7e018b83fa125c3617ac22e57cf4f0d4b7683827bbb3cba23ecbc",
   "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
   "passes": true,
   "scores": {"capture_integrity":4,"source_decomposition":4,"claim_atomicity":4,"provenance_closure":4,"status_separation":4,"project_context":4,"research_honesty":4,"projection_restraint":4},

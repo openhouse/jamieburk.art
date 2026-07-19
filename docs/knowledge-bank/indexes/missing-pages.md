@@ -12,52 +12,9 @@ last_reviewed: 2026-07-19
 review_by: 2026-10-19
 review_state: requested
 owner: Jamie Burkart
-aliases:
-  - Wanted pages
+aliases: ["Wanted pages"]
 canonical_path: docs/knowledge-bank/indexes/missing-pages.md
-relations:
-  - type: part_of
-    target: index.knowledge-wiki
-    href: ../README.md
-  - type: documents
-    target: method.source-re-encounter
-    href: ../methods/source-re-encounter.md
-  - type: documents
-    target: method.nycartc.public-meeting-and-testimony-participation
-    href: ../methods/nycartc-public-meeting-and-testimony-participation.md
-  - type: documents
-    target: timeline.nycartc.nightlife-recommendations.2017-2019
-    href: ../timelines/nycartc-nightlife-recommendations-2017-2019.md
-  - type: documents
-    target: inquiry.nycartc.march-data-design-attribution
-    href: ../inquiries/nycartc-march-data-design-attribution.md
-  - type: documents
-    target: source.nycartc.testimony-guide.2017
-    href: ../sources/nycartc-testimony-guide-2017.md
-  - type: documents
-    target: timeline.nycartc.events-and-venues.2017-2021
-    href: ../timelines/nycartc-events-and-venues-2017-2021.md
-  - type: documents
-    target: timeline.participation-infrastructure.2012-2026
-    href: ../timelines/participation-infrastructure-lineage-2012-2026.md
-  - type: documents
-    target: index.project-afterlives-and-handoffs
-    href: project-afterlives-and-handoffs.md
-  - type: documents
-    target: index.role-and-collective-authorship
-    href: role-and-collective-authorship.md
-  - type: documents
-    target: index.scenes-of-work
-    href: scenes-of-work.md
-  - type: documents
-    target: timeline.art-life-waterways-media-archaeology.2003-2011
-    href: ../timelines/art-life-waterways-and-media-archaeology-2003-2011.md
-  - type: documents
-    target: index.people-places-and-community-testimony
-    href: people-places-and-community-testimony.md
-  - type: documents
-    target: index.absences-protections-and-permissions
-    href: absences-protections-and-permissions.md
+relations: [{"type":"part_of","target":"index.knowledge-wiki","href":"../README.md"},{"type":"documents","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"},{"type":"documents","target":"method.nycartc.public-meeting-and-testimony-participation","href":"../methods/nycartc-public-meeting-and-testimony-participation.md"},{"type":"documents","target":"timeline.nycartc.nightlife-recommendations.2017-2019","href":"../timelines/nycartc-nightlife-recommendations-2017-2019.md"},{"type":"documents","target":"inquiry.nycartc.march-data-design-attribution","href":"../inquiries/nycartc-march-data-design-attribution.md"},{"type":"documents","target":"source.nycartc.testimony-guide.2017","href":"../sources/nycartc-testimony-guide-2017.md"},{"type":"documents","target":"timeline.nycartc.events-and-venues.2017-2021","href":"../timelines/nycartc-events-and-venues-2017-2021.md"},{"type":"documents","target":"timeline.participation-infrastructure.2012-2026","href":"../timelines/participation-infrastructure-lineage-2012-2026.md"},{"type":"documents","target":"index.project-afterlives-and-handoffs","href":"project-afterlives-and-handoffs.md"},{"type":"documents","target":"index.role-and-collective-authorship","href":"role-and-collective-authorship.md"},{"type":"documents","target":"index.scenes-of-work","href":"scenes-of-work.md"},{"type":"documents","target":"timeline.art-life-waterways-media-archaeology.2003-2011","href":"../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"},{"type":"documents","target":"index.people-places-and-community-testimony","href":"people-places-and-community-testimony.md"},{"type":"documents","target":"index.absences-protections-and-permissions","href":"absences-protections-and-permissions.md"}]
 ---
 
 # Knowledge Wiki Missing Pages

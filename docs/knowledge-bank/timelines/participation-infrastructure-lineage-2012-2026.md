@@ -12,27 +12,10 @@ last_reviewed: 2026-07-19
 review_by: 2026-10-19
 review_state: requested
 owner: Jamie Burkart
-aliases:
-  - WOW List to Knowledge Wiki lineage
+aliases: ["WOW List to Knowledge Wiki lineage"]
 canonical_path: docs/knowledge-bank/timelines/participation-infrastructure-lineage-2012-2026.md
-canonical_refs:
-  - CLM-WOWLIST-RELATIONAL-TAG-OVERLAP-2017
-  - CLM-CALLSCRIPT-POPULAR-VOTE-NYCARTC-BRIDGE
-  - CLM-FB-NYCARTC-PARTICIPATION-SYSTEM
-  - CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT
-relations:
-  - type: part_of
-    target: index.knowledge-wiki-missing-pages
-    href: ../indexes/missing-pages.md
-  - type: informed_by
-    target: project.nyc-artist-coalition
-    href: ../projects/nyc-artist-coalition.md
-  - type: uses_method
-    target: method.source-re-encounter
-    href: ../methods/source-re-encounter.md
-  - type: informed_by
-    target: method.source-backed-team-memory
-    href: ../methods/source-backed-team-memory.md
+canonical_refs: ["CLM-WOWLIST-RELATIONAL-TAG-OVERLAP-2017","CLM-CALLSCRIPT-POPULAR-VOTE-NYCARTC-BRIDGE","CLM-FB-NYCARTC-PARTICIPATION-SYSTEM","CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT"]
+relations: [{"type":"part_of","target":"index.knowledge-wiki-missing-pages","href":"../indexes/missing-pages.md"},{"type":"informed_by","target":"project.nyc-artist-coalition","href":"../projects/nyc-artist-coalition.md"},{"type":"uses_method","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"},{"type":"informed_by","target":"method.source-backed-team-memory","href":"../methods/source-backed-team-memory.md"}]
 ---
 
 # Participation Infrastructure Lineage, 2012-2026
@@ -41,7 +24,6 @@ This is a lineage of recurring methods and documented project relationships,
 not a claim that one project single-handedly caused the next. It makes visible
 how gathering, routing, public identity, source association, and handoff recur
 across different projects and collaborators.
-
 ## Documented Sequence
 
 | Period | Surface | What the record supports |
@@ -56,7 +38,6 @@ The source-centered [WOW List, Sunday Dinner, and Call Script pass](../research/
 provides the aggregate and public-source basis for the middle of this sequence.
 The [NYC Artist Coalition event chronology](nycartc-events-and-venues-2017-2021.md)
 provides the collective event record.
-
 ## Recurring Operations
 
 Across the sequence, the evidence supports recurring operational concerns:
@@ -70,7 +51,6 @@ Across the sequence, the evidence supports recurring operational concerns:
 These are cross-project resonances. The Wiki does not infer that the same
 people, governance, technology, or decision rights carried across every
 project.
-
 ## Attribution Boundary
 
 Jamie describes bringing lessons from WOW List and event organizing into the
@@ -80,7 +60,6 @@ complete design, publishing, facilitation, or founding work among Jamie,
 Richard, early coalition collaborators, or other participants. A future
 person-level account requires collaborator corroboration and artifact-level
 provenance.
-
 ## Present Source Encounter
 
 On July 19, 2026, this page returned to the canonical claim registry, the

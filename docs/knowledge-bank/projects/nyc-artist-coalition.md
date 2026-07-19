@@ -12,52 +12,11 @@ last_reviewed: 2026-07-19
 review_by: 2026-10-19
 review_state: requested
 owner: Jamie Burkart
-aliases:
-  - NYCArtC
+aliases: ["NYCArtC"]
 canonical_path: docs/knowledge-bank/projects/nyc-artist-coalition.md
-canonical_refs:
-  - CLM-NYCARTC-FOUNDING-ROLE
-  - CLM-FB-NYCARTC-PARTICIPATION-SYSTEM
-  - CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM
-  - CLM-NYCARTC-NIGHTLIFE-RECOMMENDATION-CONTINUITY
-  - CLM-NYCARTC-MARCH-DATA-DESIGN-LEAD
-relations:
-  - type: informed_by
-    target: research-run.nycartc.shared-folder.2026-07
-    href: ../research/nycartc-shared-folder-archival-production-2026-07.md
-    context: Complete governed census and priority close reading of the shared working archive.
-  - type: uses_source
-    target: source.nycartc.shared-folder-census.2026
-    href: ../sources/nycartc-shared-folder-census-2026.md
-  - type: supports
-    target: claim.nycartc.public-meeting-operating-system
-    href: ../claims/nycartc-public-meeting-operating-system.md
-  - type: supports
-    target: claim.nycartc.nightlife-recommendation-continuity
-    href: ../claims/nycartc-nightlife-recommendation-continuity.md
-  - type: supports
-    target: claim.nycartc.march-data-design-lead
-    href: ../claims/nycartc-march-data-design-lead.md
-  - type: supports
-    target: capability.technical-operations
-    href: ../capabilities/technical-operations.md
-  - type: uses_method
-    target: method.nycartc.public-meeting-and-testimony-participation
-    href: ../methods/nycartc-public-meeting-and-testimony-participation.md
-  - type: informed_by
-    target: timeline.nycartc.nightlife-recommendations.2017-2019
-    href: ../timelines/nycartc-nightlife-recommendations-2017-2019.md
-  - type: informed_by
-    target: inquiry.nycartc.march-data-design-attribution
-    href: ../inquiries/nycartc-march-data-design-attribution.md
-  - type: informed_by
-    target: timeline.nycartc.events-and-venues.2017-2021
-    href: ../timelines/nycartc-events-and-venues-2017-2021.md
-  - type: informed_by
-    target: timeline.participation-infrastructure.2012-2026
-    href: ../timelines/participation-infrastructure-lineage-2012-2026.md
-allowed_surfaces:
-  - /work/fair-rent-nyc
+canonical_refs: ["CLM-NYCARTC-FOUNDING-ROLE","CLM-FB-NYCARTC-PARTICIPATION-SYSTEM","CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM","CLM-NYCARTC-NIGHTLIFE-RECOMMENDATION-CONTINUITY","CLM-NYCARTC-MARCH-DATA-DESIGN-LEAD"]
+relations: [{"type":"informed_by","target":"research-run.nycartc.shared-folder.2026-07","href":"../research/nycartc-shared-folder-archival-production-2026-07.md","context":"Complete governed census and priority close reading of the shared working archive."},{"type":"uses_source","target":"source.nycartc.shared-folder-census.2026","href":"../sources/nycartc-shared-folder-census-2026.md"},{"type":"supports","target":"claim.nycartc.public-meeting-operating-system","href":"../claims/nycartc-public-meeting-operating-system.md"},{"type":"supports","target":"claim.nycartc.nightlife-recommendation-continuity","href":"../claims/nycartc-nightlife-recommendation-continuity.md"},{"type":"supports","target":"claim.nycartc.march-data-design-lead","href":"../claims/nycartc-march-data-design-lead.md"},{"type":"supports","target":"capability.technical-operations","href":"../capabilities/technical-operations.md"},{"type":"uses_method","target":"method.nycartc.public-meeting-and-testimony-participation","href":"../methods/nycartc-public-meeting-and-testimony-participation.md"},{"type":"informed_by","target":"timeline.nycartc.nightlife-recommendations.2017-2019","href":"../timelines/nycartc-nightlife-recommendations-2017-2019.md"},{"type":"informed_by","target":"inquiry.nycartc.march-data-design-attribution","href":"../inquiries/nycartc-march-data-design-attribution.md"},{"type":"informed_by","target":"timeline.nycartc.events-and-venues.2017-2021","href":"../timelines/nycartc-events-and-venues-2017-2021.md"},{"type":"informed_by","target":"timeline.participation-infrastructure.2012-2026","href":"../timelines/participation-infrastructure-lineage-2012-2026.md"}]
+allowed_surfaces: ["/work/fair-rent-nyc"]
 ---
 
 # NYC Artist Coalition

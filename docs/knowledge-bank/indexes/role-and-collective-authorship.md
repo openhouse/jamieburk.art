@@ -13,30 +13,8 @@ review_by: 2026-10-19
 review_state: human-blocked
 owner: Jamie Burkart
 canonical_path: docs/knowledge-bank/indexes/role-and-collective-authorship.md
-canonical_refs:
-  - CLM-CALLNYC-INDEPENDENT-FOLLOW-ON
-  - CLM-NYCARTC-FOUNDING-ROLE
-  - CLM-FB-NYCARTC-PARTICIPATION-SYSTEM
-  - CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION
-  - CLM-WATER-RAFT-ORIGINATION
-  - CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE
-  - CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE
-relations:
-  - type: part_of
-    target: index.knowledge-wiki-missing-pages
-    href: missing-pages.md
-  - type: documents
-    target: project.callnyc
-    href: ../projects/callnyc.md
-  - type: documents
-    target: project.nyc-artist-coalition
-    href: ../projects/nyc-artist-coalition.md
-  - type: documents
-    target: project.kc-spaces-fund
-    href: ../projects/kc-spaces-fund.md
-  - type: uses_method
-    target: method.source-re-encounter
-    href: ../methods/source-re-encounter.md
+canonical_refs: ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON","CLM-NYCARTC-FOUNDING-ROLE","CLM-FB-NYCARTC-PARTICIPATION-SYSTEM","CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION","CLM-WATER-RAFT-ORIGINATION","CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE","CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE"]
+relations: [{"type":"part_of","target":"index.knowledge-wiki-missing-pages","href":"missing-pages.md"},{"type":"documents","target":"project.callnyc","href":"../projects/callnyc.md"},{"type":"documents","target":"project.nyc-artist-coalition","href":"../projects/nyc-artist-coalition.md"},{"type":"documents","target":"project.kc-spaces-fund","href":"../projects/kc-spaces-fund.md"},{"type":"uses_method","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"}]
 ---
 
 # Role And Collective Authorship Map
@@ -56,7 +34,6 @@ repository until a private Wiki and consent process exist.
 | KC Town Hall Phase One | Jamie states that he served as general contractor and coordinated the multi-trade work. | The project packet corroborates the scope, not the title or complete division of labor. It must not imply licensed performance of every trade. | Attributed and internal-only pending corroboration |
 | Public-meeting and testimony artifacts | The archive establishes a sophisticated collective operating system. | Metadata and custody do not establish Jamie's authorship of the playbook, guides, or every production task. | Collective system confirmed; artifact authorship open |
 | WOW List, Sunday Dinner, Call Script, and early coalition bridge | The project surfaces support a functional participation and routing bridge. | Person-level design, publishing, facilitation, and decision rights remain incompletely allocated. | Qualified lineage; collaborator review needed |
-
 ## Attribution Vocabulary
 
 - **Independent:** Jamie's individual implementation is directly supported.
@@ -70,7 +47,6 @@ repository until a private Wiki and consent process exist.
   stronger public use.
 - **Unresolved:** do not complete the attribution from metadata, custody, or
   confidence.
-
 ## What Would Strengthen The Map
 
 The next evidence should be small and specific: revision history for one

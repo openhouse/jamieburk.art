@@ -12,26 +12,10 @@ last_reviewed: 2026-07-19
 review_by: 2026-10-19
 review_state: requested
 owner: Jamie Burkart
-aliases:
-  - Early participatory practice lineage
+aliases: ["Early participatory practice lineage"]
 canonical_path: docs/knowledge-bank/timelines/art-life-waterways-and-media-archaeology-2003-2011.md
-canonical_refs:
-  - CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE
-  - CLM-TIME-IS-LONG-VHS-INSTALLATION
-  - CLM-WATER-RAFT-ORIGINATION
-  - CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM
-  - CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION
-  - CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION
-relations:
-  - type: part_of
-    target: index.knowledge-wiki-missing-pages
-    href: ../indexes/missing-pages.md
-  - type: informed_by
-    target: index.scenes-of-work
-    href: ../indexes/scenes-of-work.md
-  - type: uses_method
-    target: method.source-re-encounter
-    href: ../methods/source-re-encounter.md
+canonical_refs: ["CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE","CLM-TIME-IS-LONG-VHS-INSTALLATION","CLM-WATER-RAFT-ORIGINATION","CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM","CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION","CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"]
+relations: [{"type":"part_of","target":"index.knowledge-wiki-missing-pages","href":"../indexes/missing-pages.md"},{"type":"informed_by","target":"index.scenes-of-work","href":"../indexes/scenes-of-work.md"},{"type":"uses_method","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"}]
 ---
 
 # Art, Life, Waterways, And Media Archaeology, 2003-2011
@@ -41,7 +25,6 @@ hiring frame can otherwise flatten. It records documented projects and
 resonances among participation, situated media, collective responsibility,
 real-time representation, public space, and technical systems. It does not
 claim that each project caused the next or exhaust Jamie's work in the period.
-
 ## Timeline
 
 | Period | Project or practice | Public-safe evidence |
@@ -52,7 +35,6 @@ claim that each project caused the next or exhaust Jamie's work in the period.
 | 2007 | Bicycle-powered raft expedition | Contemporaneous reporting credited Jamie with originating the idea while documenting a collective crew, reused-material craft, and more than 1,000 miles of travel. Origination is not sole construction, operation, or authorship. |
 | September-October 2009 | Great Accommodations | Charlotte Street presented Jamie as spearheading a participatory river project combining mailed invitations, collected stories, interactive installation, public programs, and planned facilitation with collaborator Suzanne Hogan. Planned elements are not automatically completed outcomes. |
 | 2010-2011 | NTER CHNG | Public archived records jointly credit Drew Bolton, Jamie Burkart, and Garrett Fuselier with an interactive texting installation; America: Now and Here's archive documents the work in its May 2011 Kansas City launch. Protected working records preserve technical and spatial planning without allocating every task. |
-
 ## Recurring Questions
 
 - What happens when a gallery becomes a household, workshop, public meeting, or
@@ -66,7 +48,6 @@ claim that each project caused the next or exhaust Jamie's work in the period.
 
 These questions are an editorial synthesis. They are not source quotations or
 proof that Jamie used the same vocabulary at every point.
-
 ## Present Source Encounter
 
 On July 19, 2026, the public Good Times Open House feature, The Pitch's 2007
@@ -75,7 +56,6 @@ reopened and read against the current canonical claims. The direct Wayback
 representation of NTER CHNG did not return usable text in this pass; its
 existing archived-source close reading remains the governing basis, and no new
 NTER CHNG claim was promoted.
-
 ## Boundary
 
 This page may support future composition about Jamie's artistic and
