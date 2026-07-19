@@ -1188,6 +1188,26 @@
         "individual ownership of collective policy work",
         "policy causality"
       ]
+    },
+    {
+      "id": "SRC-NYCAC-SHARED-FOLDER-PUBLIC-CENSUS-2026",
+      "title": "NYC Artist Coalition shared-folder public-safe census",
+      "organization": "NYC Artist Coalition",
+      "author": "Codex public-safe archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-19",
+      "accessedAt": "2026-07-19",
+      "publicCitation": "Public-safe census of the authenticated NYC Artist Coalition shared archive, July 19, 2026.",
+      "publicNote": "The census accounts for 2,408 unique accessible items across 258 folders. Every item received a source class and one primary disposition; exact filenames, identifiers, content, and private locators remain outside the public repository.",
+      "doesNotEstablish": [
+        "Jamie's authorship of every item",
+        "permission to publish any underlying item",
+        "a complete record of deleted, inaccessible, external, or collaborator-held materials",
+        "individual causality for coalition, legislative, agency, or movement outcomes",
+        "that every file was content-read, rights-cleared, or selected for projection"
+      ]
     }
   ],
   "claims": [
@@ -3092,6 +3112,51 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-SHARED-ARCHIVE-CENSUS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "The governed project record accounts for 2,408 unique accessible shared-archive items across 258 folders; every item is classified and dispositioned while exact records remain protected.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-shared-folder"
+          ],
+          "rationale": "The aggregate census is useful provenance for researchers without exposing the private manifest or implying item-level review."
+        },
+        {
+          "key": "case-study",
+          "text": "A governed census now accounts for 2,408 accessible items across the coalition's shared archive, with every item classified and dispositioned while private records remain offline.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/nyc-artist-coalition"
+          ],
+          "rationale": "One concise sentence shows the depth and current governance of the project record without turning the portfolio into an archive catalog."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-SHARED-FOLDER-PUBLIC-CENSUS-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "2,408-item accessible population",
+            "258-folder traversal",
+            "complete inventory, classification, and disposition accounting"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "One hundred percent means every accessible item was accounted for and governed, not that every file body was close-read or copied into git.",
+        "Drive ownership, location, and modification metadata are not conclusive evidence of authorship, delivery, approval, or impact.",
+        "All underlying items remain protected until separate public-source, rights, consent, attribution, and editorial decisions are complete.",
+        "The accessible snapshot excludes deleted, no-longer-shared, external, and collaborator-held materials outside the folder."
+      ]
+    },
+    {
       "id": "CLM-OPEN-HOUSE-ITERATIVE-GOVERNANCE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -3594,7 +3659,8 @@
         "SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11",
         "SRC-NYCAC-TALKS-NOT-RAIDS",
         "SRC-NYC-COUNCIL-INTRO-1156-2018",
-        "SRC-NYC-MAYOR-CURE-2023-12-28"
+        "SRC-NYC-MAYOR-CURE-2023-12-28",
+        "SRC-NYCAC-SHARED-FOLDER-PUBLIC-CENSUS-2026"
       ],
       "occurrences": [
         {
@@ -3684,6 +3750,14 @@
             "SRC-NYCAC-TALKS-NOT-RAIDS",
             "SRC-NYC-COUNCIL-INTRO-1156-2018",
             "SRC-NYC-MAYOR-CURE-2023-12-28"
+          ]
+        },
+        {
+          "id": "governed-shared-archive",
+          "claimId": "CLM-NYCAC-SHARED-ARCHIVE-CENSUS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-SHARED-FOLDER-PUBLIC-CENSUS-2026"
           ]
         }
       ]

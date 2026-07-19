@@ -27,6 +27,12 @@ public boundary.
 - [CallNYC](../projects/callnyc.md): a 2016 independent civic-data prototype
   and the first bounded Knowledge Wiki pilot.
 
+## Civic Participation And Cultural Infrastructure
+
+- [NYC Artist Coalition](../projects/nyc-artist-coalition.md): recurring
+  participation, public identity, practical safety, civic translation, and a
+  fully accounted shared-archive research layer.
+
 The deeper compatibility layer retains additional public-safe
 [project research](../../knowledge-bank/README.md#projection-rule). Those notes
 remain evidence and governance context until a later migration decision.

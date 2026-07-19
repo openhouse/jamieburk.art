@@ -195,7 +195,7 @@ const workItemsInput = [
       "Artists and small cultural spaces held essential knowledge about safety, enforcement, licensing, affordability, and cultural policy, but that knowledge was distributed across people, neighborhoods, venues, and nights.",
     whatBecameUsable:
       "A recurring participation system, durable public identity, practical safety pathways, campaign websites, coalition recommendations, public testimony, and continuing routes between cultural-space experience and civic process.",
-    artifactTypes: ["website", "workflow", "public handout", "decision record", "press"],
+    artifactTypes: ["website", "workflow", "source map", "public handout", "decision record", "press"],
     artifacts: [
       {
         title: "Recurring participation system",
@@ -220,6 +220,12 @@ const workItemsInput = [
         description:
           "A public-record timeline separating Jamie's work, coalition action, legislation, agency decisions, and longer movement history.",
         type: "diagram"
+      },
+      {
+        title: "Governed project record",
+        description:
+          "A complete 2,408-item census separates public source leads, working records, media-rights questions, and protected operational material without publishing the underlying archive.",
+        type: "source map"
       }
     ],
     tags: [
@@ -248,7 +254,7 @@ const workItemsInput = [
     careNote:
       "This composition gives Jamie direct credit for documented work while preserving collaborator, movement, legislative, agency, venue, and participant credit.",
     sourceLayer:
-      "Council transcripts, DCLA records, independent reporting, public campaign sites, population-accounted public event and social records, and bounded first-hand context.",
+      "Council transcripts, DCLA records, independent reporting, public campaign sites, population-accounted public event and social records, a governed 2,408-item shared-archive census, and bounded first-hand context.",
     credits: [
       "Jamie Burkart",
       "NYC Artist Coalition collaborators",
@@ -260,7 +266,7 @@ const workItemsInput = [
         "Do not convert participation, quotation, access, testimony, or sequence into sole authorship, endorsement, government authority, or policy causality."
     },
     currentStatus:
-      "Public-safe source-backed case study. Exact individual event-production roles and new media remain under corroboration and rights review.",
+      "Public-safe source-backed case study with a complete shared-archive census. Exact item authorship, individual event-production roles, and new media remain under corroboration and rights review.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, coalition operations, public programs, stakeholder translation, safety systems, policy communications, and implementation support.",
@@ -269,15 +275,16 @@ const workItemsInput = [
       "Public identity and campaign web infrastructure",
       "Fire-code study groups, safety pathways, and public testimony",
       "Council and DCLA interfaces with bounded institutional recognition",
-      "Collectively credited Cabaret Law, Office of Nightlife, and M.A.R.C.H. accountability sequences"
+      "Collectively credited Cabaret Law, Office of Nightlife, and M.A.R.C.H. accountability sequences",
+      "Complete public-safe accounting of 2,408 accessible shared-archive items"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped operate recurring participation, public identity, safety, campaign, and government-facing testimony systems.",
+        "Jamie co-founded NYC Artist Coalition and helped operate recurring participation, public identity, safety, campaign, and government-facing testimony systems; the accessible shared archive is completely inventoried, classified, and dispositioned.",
       open:
-        "Exact individual production roles for every event, approved photographs, and collaborator quotations require corroboration, consent, and rights review.",
+        "Exact item authorship, individual production roles for every event, approved photographs, and collaborator quotations require corroboration, consent, and rights review.",
       protected:
-        "Private coalition notes, participant stories, contact data, legal-review materials, internal strategy, and unapproved media remain offline."
+        "The exact archive manifest, private coalition notes, participant stories, contact data, legal-review materials, internal strategy, and unapproved media remain offline."
     }
   },
   {

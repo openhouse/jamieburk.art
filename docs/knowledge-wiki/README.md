@@ -43,6 +43,9 @@ globally renamed.
   broken links and non-recovery from nonexistence.
 - [Retrieval tasks](evaluations/retrieval-tasks.md): test whether another person
   can find and trust an answer.
+- [NYC Artist Coalition archive evaluation](evaluations/nycac-shared-folder-coverage.md):
+  test population closure, public safety, collective credit, and application
+  usefulness.
 
 ## Work Safely
 

@@ -570,7 +570,8 @@ export const nycacDclaCouncilPages: CitationPage[] = [
       "SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11",
       "SRC-NYCAC-TALKS-NOT-RAIDS",
       "SRC-NYC-COUNCIL-INTRO-1156-2018",
-      "SRC-NYC-MAYOR-CURE-2023-12-28"
+      "SRC-NYC-MAYOR-CURE-2023-12-28",
+      "SRC-NYCAC-SHARED-FOLDER-PUBLIC-CENSUS-2026"
     ],
     occurrences: [
       {
@@ -659,6 +660,12 @@ export const nycacDclaCouncilPages: CitationPage[] = [
           "SRC-NYC-COUNCIL-INTRO-1156-2018",
           "SRC-NYC-MAYOR-CURE-2023-12-28"
         ]
+      },
+      {
+        id: "governed-shared-archive",
+        claimId: "CLM-NYCAC-SHARED-ARCHIVE-CENSUS",
+        projection: "case-study",
+        sourceIds: ["SRC-NYCAC-SHARED-FOLDER-PUBLIC-CENSUS-2026"]
       }
     ]
   }

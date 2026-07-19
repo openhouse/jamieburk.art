@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "corpus": "nyc-artist-coalition-shared-folder",
+  "snapshotDate": "2026-07-19",
+  "scope": {
+    "surface": "authenticated read-only shared-folder traversal",
+    "definition": "Every item reachable beneath the authorized shared-folder root at the snapshot date.",
+    "excluded": [
+      "deleted or trashed items",
+      "revision histories and resolved comments",
+      "items no longer shared with Jamie",
+      "access logs",
+      "collaborator-held materials outside the folder",
+      "external webpages or databases referenced by files"
+    ]
+  },
+  "population": {
+    "uniqueItems": 2408,
+    "foldersClosed": 258,
+    "rootItems": 61,
+    "rootFolders": 47,
+    "rootFiles": 14,
+    "bottomVerifiedFolders": 81,
+    "allRowsVisibleWithoutScrollFolders": 177,
+    "queuedFolders": 0,
+    "unresolvedFolders": 0
+  },
+  "coverage": {
+    "populationTotal": 2408,
+    "inventoriedTotal": 2408,
+    "classifiedTotal": 2408,
+    "dispositionedTotal": 2408,
+    "priorityDocumentMetadataReviewed": 9,
+    "contentReviewedTotal": 2,
+    "rightsReviewedTotal": 0,
+    "publicSourceTotal": 0,
+    "protectedTotal": 2408,
+    "claimLinkedTotal": 0,
+    "projectionSelectedTotal": 1
+  },
+  "formats": {
+    "Image": 1127,
+    "Adobe Photoshop": 336,
+    "Google Docs": 285,
+    "Shared folder": 257,
+    "PDF": 83,
+    "Video": 58,
+    "Javascript": 47,
+    "Binary": 44,
+    "Audio": 38,
+    "Text": 38,
+    "Microsoft Word": 24,
+    "Unknown": 21,
+    "Adobe Illustrator": 10,
+    "Shortcut to Image": 8,
+    "HTML": 7,
+    "Raw image": 6,
+    "SQL": 4,
+    "PostScript": 3,
+    "CSS": 2,
+    "Shortcut to Google Docs": 2,
+    "Compressed archive": 2,
+    "Microsoft PowerPoint": 2,
+    "Shortcut to Video": 1,
+    "Google Slides": 1,
+    "XML": 1,
+    "Google Forms": 1
+  },
+  "sourceClasses": {
+    "visualOrAudiovisualAsset": 1603,
+    "workingRecord": 319,
+    "structuralFolder": 257,
+    "publicArtifactLead": 189,
+    "protectedOperationalRecord": 39,
+    "fontAsset": 1
+  },
+  "primaryDispositions": {
+    "pendingRightsConsentAttributionOrJamieReview": 1896,
+    "protectedMetadataOnly": 511,
+    "rejectedFromClaimUseWithReason": 1
+  },
+  "missionClusters": {
+    "officeOfNightlife": 493,
+    "marchAccountability": 323,
+    "commercialRentStabilization": 310,
+    "cabaretLawRepeal": 184,
+    "fairRentNyc": 84,
+    "otherAndRoot": 1014
+  },
+  "custody": {
+    "exactManifestStoredOutsidePublicRepository": true,
+    "exactManifestSha256": "94d36f269cf4db36b64ca86210a58929bb64a2a0e599648a65919d88d0d9b5f8",
+    "rawContentInRepository": false,
+    "exactPrivateLocatorsInRepository": false
+  },
+  "boundaries": [
+    "One hundred percent means population accounting and governance, not universal content reading.",
+    "Drive ownership, folder location, and modification metadata are not authorship evidence.",
+    "Every underlying item remains protected pending separate rights, consent, attribution, and publication decisions.",
+    "Internal records do not independently establish public impact or policy causality."
+  ],
+  "antiClaims": [
+    "Jamie authored all items.",
+    "All items are approved for publication.",
+    "Every item was content-read or rights-reviewed.",
+    "The archive is the complete historical record of the coalition.",
+    "The archive proves sole causality for collective or institutional outcomes."
+  ]
+}

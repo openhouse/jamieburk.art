@@ -92,6 +92,24 @@ the clearer bounded claims about Jamie's identity-system contribution,
 attributable collaborator use, and directly recovered Council interactions.
 See `docs/knowledge-bank/runs/2026-07-15-nycartc-x-full-population.md`.
 
+## Governed shared archive
+
+The July 19, 2026, authenticated census accounts for all 2,408 unique
+accessible items across 258 folders in the coalition's shared archive. Every
+item received a source class and one primary disposition. The exact manifest,
+filenames, identifiers, document bodies, and private locators remain outside
+the public repository.
+
+This aggregate establishes archival breadth, custody, and research closure. It
+does not establish Jamie's authorship of every item, permission to publish the
+underlying archive, universal content or rights review, or individual causality
+for coalition and policy outcomes. Item-level contribution claims remain a
+staged inquiry tied to public corroboration and collaborator-aware review.
+
+See the [full-population intake receipt](../runs/2026-07-19-nycac-shared-folder-full-population.md),
+[role-attribution and rights note](nyc-artist-coalition-shared-folder.md), and
+[application brief](../briefs/nycac-civic-operations-application-brief.md).
+
 ## Facebook Page operating record
 
 The [Facebook post population](nyc-artist-coalition-facebook-posts.md) adds an

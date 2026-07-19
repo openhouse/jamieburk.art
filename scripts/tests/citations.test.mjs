@@ -43,7 +43,7 @@ test("new case-study citations expose only selected public sources", () => {
   assert.equal(resolveCitationReferences("wowlist").length, 18);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
   assert.equal(resolveCitationReferences("fair-rent-nyc").length, 2);
-  assert.equal(resolveCitationReferences("nyc-artist-coalition").length, 21);
+  assert.equal(resolveCitationReferences("nyc-artist-coalition").length, 22);
   assert.equal(resolveCitationReferences("kc-town-hall").length, 12);
   assert.deepEqual(
     resolveCitationOccurrence(
@@ -56,6 +56,13 @@ test("new case-study citations expose only selected public sources", () => {
       "SRC-NYCAC-NPR-2017-09-20",
       "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
     ]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "nyc-artist-coalition",
+      "governed-shared-archive"
+    ).sources.map((item) => item.source.id),
+    ["SRC-NYCAC-SHARED-FOLDER-PUBLIC-CENSUS-2026"]
   );
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "phase-one-completion").sources.map(

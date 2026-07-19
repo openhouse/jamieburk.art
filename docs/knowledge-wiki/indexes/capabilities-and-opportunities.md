@@ -23,6 +23,7 @@ smallest set of credible evidence.
 
 - [Technical Operations](../capabilities/technical-operations.md)
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md)
+- [NYC Artist Coalition civic operations evidence](../applications/nycac-civic-operations-evidence.md)
 - [NYC OTI Technical Operations opportunity](../opportunities/oti-technical-operations.md)
 - [ACLU Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)
 - [Benepass Product Operations Manager](../opportunities/benepass-product-operations.md)

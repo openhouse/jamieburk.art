@@ -28,5 +28,9 @@ typed source registry.
 - [New York City Council event-day post](../sources/nyc-council-councilstat-post-2016.md)
 - [Politico New York coverage](../sources/politico-callnyc-2016.md)
 
+## NYC Artist Coalition
+
+- [Shared-folder public-safe census](../sources/nycac-shared-folder-census-2026.md)
+
 Use the [claims and corrections index](claims-and-corrections.md) to see how
 these records bear on bounded propositions.

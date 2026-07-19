@@ -11,6 +11,11 @@ explains why this directory has not been renamed or copied wholesale.
 This directory remains the public-safe evidence and governance layer for Jamie
 Burkart's professional accomplishment claims.
 
+The [NYC Artist Coalition shared-folder census](runs/2026-07-19-nycac-shared-folder-full-population.md)
+is the current full-population example: every accessible item is accounted for
+and governed, while exact source coordinates and underlying private records
+remain outside the public repository.
+
 The repo is public. Do not put anything here that would be unsafe, unfair, too
 private, or too hard to defend if quoted in a newspaper.
 

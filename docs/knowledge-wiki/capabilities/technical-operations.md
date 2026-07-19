@@ -23,6 +23,9 @@ relations:
   - type: related_to
     target: opportunity.nyc-oti.technical-operations-manager.782369
     context: Current role-relevance path; not an application or hiring decision.
+  - type: related_to
+    target: project.nyc-artist-coalition
+    context: Coalition evidence demonstrates stakeholder translation, implementation across channels, bounded public-sector interfaces, and governed continuity.
 ---
 
 # Technical Operations
@@ -41,6 +44,11 @@ iteration from user concerns, and careful institutional boundaries.
 [Source-Backed Team Memory](../methods/source-backed-team-memory.md) demonstrates
 how sources, decisions, unresolved questions, corrections, runbooks, and
 handoffs can remain usable across people and time.
+
+The [NYC Artist Coalition](../projects/nyc-artist-coalition.md) record adds a
+public-facing implementation case: recurring participation, campaign and web
+systems, government interfaces, sensitive-information boundaries, and a
+completely accounted 2,408-item shared archive.
 
 ## Current Opportunity
 
