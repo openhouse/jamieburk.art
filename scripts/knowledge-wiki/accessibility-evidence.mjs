@@ -4,6 +4,23 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 
 export const accessibilityEvidencePath = "docs/qa/evals-H/responsive-route-matrix.json";
+export const canonicalAccessibilityRoutes = Object.freeze([
+  "/",
+  "/work",
+  "/work/technical-operations",
+  "/resume",
+  "/about",
+  "/contact",
+  "/colophon",
+  "/lab/source-backed-team-memory",
+  "/work/harry-j-epstein",
+  "/work/fair-rent-nyc",
+  "/work/callnyc",
+  "/work/wowlist",
+  "/work/196-sunday-dinner",
+  "/work/kc-town-hall"
+]);
+export const canonicalAccessibilityViewports = Object.freeze([360, 375, 768, 1280]);
 
 export function computePublicSurfaceFingerprint(repoRoot) {
   const files = execFileSync(
@@ -30,6 +47,9 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     readFileSync(path.join(repoRoot, accessibilityEvidencePath), "utf8")
   );
   const current = computePublicSurfaceFingerprint(repoRoot);
+  const canonicalCoverage =
+    JSON.stringify(report.routes) === JSON.stringify(canonicalAccessibilityRoutes) &&
+    JSON.stringify(report.viewports) === JSON.stringify(canonicalAccessibilityViewports);
   const expectedRows = report.routes.length * report.viewports.length;
   const observedKeys = new Set(report.rows.map((row) => `${row.viewport}:${row.path}`));
   const expectedKeys = new Set(
@@ -73,6 +93,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       report.reportVersion === 1 &&
       report.rows.length === expectedRows &&
       expectedRows === 56 &&
+      canonicalCoverage &&
       completeMatrix &&
       rowsPass &&
       summaryPasses &&
@@ -80,6 +101,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       report.publicSurfaceFileCount === current.fileCount,
     report,
     current,
+    canonicalCoverage,
     completeMatrix,
     rowsPass,
     summaryPasses

@@ -18,6 +18,7 @@ import {
   resolveHiringGaps
 } from "./employment-lib.mjs";
 import { validateResponsiveAccessibilityEvidence } from "./accessibility-evidence.mjs";
+import { findDisclosedProtectedIdentityDirectives } from "./privacy-boundaries.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -43,6 +44,7 @@ const requirementIds = opportunities.flatMap((record) =>
 );
 const privateVault = result.byId.get("source.vault.communication-history.metadata");
 const accessibilityEvidence = validateResponsiveAccessibilityEvidence(defaultRepoRoot);
+const disclosedProtectedIdentityDirectives = findDisclosedProtectedIdentityDirectives(defaultRepoRoot);
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -193,6 +195,7 @@ const checks = {
   anti_claims_preserved:
     claim?.anti_claims.length >= 3 &&
     claim.anti_claims.some((item) => item.includes("commissioned")),
+  protected_identity_directives_generic: disclosedProtectedIdentityDirectives.length === 0,
   human_gates_open:
     result.health.humanGates.length >= 5 &&
     result.health.humanGates.every((gate) => !["completed", "resolved"].includes(gate.state)),

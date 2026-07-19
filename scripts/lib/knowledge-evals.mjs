@@ -1557,7 +1557,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     "/Users/",
     "Mobile Documents",
     "CloudDocs",
-    "Jonathan Marmor",
+    "protected collaborator",
     "$2,500"
   ].some((privateText) => publicRegistryText.includes(privateText));
   const archiveProofCoverageComplete = Boolean(

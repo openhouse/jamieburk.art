@@ -57,6 +57,7 @@
         "private_paths_rejected",
         "rights_pending_fails_closed",
         "anti_claims_preserved",
+        "protected_identity_directives_generic",
         "human_gates_open"
       ]
     },

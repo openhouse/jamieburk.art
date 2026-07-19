@@ -180,5 +180,5 @@ coalition's collective credit.
 
 ## Source-Backed Team Memory
 
-Do not name Jonathan Marmor, publish pricing, publish private transcript
-context, or imply deployment inside his company.
+Do not identify the protected collaborator, publish pricing, publish private
+transcript context, or imply deployment inside a private company.

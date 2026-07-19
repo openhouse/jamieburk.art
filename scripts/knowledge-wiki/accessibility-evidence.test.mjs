@@ -28,3 +28,21 @@ test("an unverified lazy-image follow-up fails closed", () => {
   report.summary.allImagesLoadedAfterScroll = false;
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
+
+test("a coordinated canonical-route substitution fails closed", () => {
+  const report = structuredClone(current.report);
+  report.routes[0] = "/noncanonical-replacement";
+  for (const row of report.rows) {
+    if (row.path === "/") row.path = "/noncanonical-replacement";
+  }
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
+});
+
+test("a coordinated canonical-viewport substitution fails closed", () => {
+  const report = structuredClone(current.report);
+  report.viewports[0] = 1024;
+  for (const row of report.rows) {
+    if (row.viewport === 360) row.viewport = 1024;
+  }
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
+});
