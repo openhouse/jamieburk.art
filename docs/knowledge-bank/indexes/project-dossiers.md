@@ -12,6 +12,14 @@ relations:
     target: index.knowledge-wiki
   - type: indexes
     target: project.callnyc
+  - type: indexes
+    target: project.nyc-artist-coalition
+  - type: indexes
+    target: project.wowlist
+  - type: indexes
+    target: project.kc-town-hall
+  - type: indexes
+    target: project.fair-rent-nyc
 ---
 
 # Project dossier directory
@@ -20,10 +28,19 @@ This directory keeps public-safe research discoverable. Inclusion here is not
 portfolio selection, publication approval, proof of exhaustive recovery, or a
 signal that every dossier has completed semantic migration.
 
-## Connected pilot
+## Connected project overviews
 
 - [CallNYC](../projects/callnyc.md): corrected chronology, evidence posture,
   protected-media threshold, and public projection.
+- [NYC Artist Coalition](../projects/nyc-artist-coalition.md): formation,
+  recurring participation, civic translation, campaigns, outcomes, and
+  collective-credit boundaries.
+- [WOW List](../projects/wowlist.md): community calendar, public-life practice,
+  historical product scale, distribution, and co-builder credit.
+- [KC Town Hall](../projects/kc-town-hall.md): neighborhood process, Phase One
+  restoration, public funding chronology, and mission-aligned transition.
+- [Fair Rent NYC](../projects/fair-rent-nyc.md): campaign memory, policy
+  provenance, coalition operations, and public-data product requirements.
 
 ## Participatory and cultural systems
 
@@ -61,3 +78,10 @@ signal that every dossier has completed semantic migration.
 - [Personal Facebook posts](../projects/jamie-personal-facebook-posts.md):
   mission-routed professional research with private life kept outside the
   projection.
+
+## Cross-project methods
+
+- [Original-source rereading](../methods/original-source-rereading.md): the
+  present-tense return protocol and public-safe access map.
+- [Transition and handoff](../methods/transition-and-handoff.md): how Jamie
+  makes work portable, bounded, and continuable through change.

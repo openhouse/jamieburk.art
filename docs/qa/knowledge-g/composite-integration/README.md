@@ -55,3 +55,27 @@ optimizer passes:
 
 The candidate passes every local gate. It does not claim those human decisions
 have occurred, and it does not create a public `/proofs` route.
+
+## Knowledge Wiki source-return extension
+
+The July 19 Knowledge Wiki source-return candidate is bound to composite
+fingerprint
+`fd9a7e84ab82e9f289c517b31229d5927241fa04287c05aa5840461eff2d91b3`.
+It adds project overview pages and a present-tense original-source rereading
+practice without changing the public website projection.
+
+- staging and production environment contracts: pass;
+- exact-candidate Docker image:
+  `jamieburk-art:knowledge-wiki-C-source-rereading@sha256:654d2d0d03e441d64850791f1d0f08f2645c5cc55b94337db343f9f7c58c03a3`;
+- 18 intended runtime endpoints: `200`;
+- prohibited `/proofs` route: expected `404`;
+- 56 responsive route-width pairs: pass with zero route, image, fragment,
+  landmark, overflow, duplicate-ID, or browser-console failures;
+- two unchanged local composite passes: `0.9125`, above the `0.90` threshold;
+- fresh exact-candidate independent scores: `4/4` for `CI-007`, `CI-008`,
+  and `CI-009`;
+- final bounded composite score: `0.98`.
+
+`CI-012` remains open for Jamie's exact-candidate authority. The extension is
+engineering-ready and human-held; it is not a publication or production
+release decision.

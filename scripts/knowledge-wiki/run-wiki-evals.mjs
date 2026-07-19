@@ -89,6 +89,61 @@ export function validateJudgmentPayload(payload, candidateFingerprint, rubricFin
   return { errors, judgments };
 }
 
+export const sourceReturnLabels = [
+  "Question brought to the source",
+  "Original material reopened",
+  "Scope and completeness",
+  "What changed in this reading",
+  "What did not change",
+  "Access boundary",
+  "Next return",
+];
+
+export const sourceReturnPageSpecs = [
+  {
+    id: "project.nyc-artist-coalition",
+    path: "docs/knowledge-bank/projects/nyc-artist-coalition.md",
+    canonicalRefs: ["CLM-NYCAC-POLICY-DATA-COMMUNICATIONS", "SRC-NYCAC-COUNCIL-SMALL-BUSINESS-HEARING-2019-03-18"],
+    requiredHeadings: ["## Jamie's role", "## What the coalition accomplished", "## Boundaries"],
+  },
+  {
+    id: "project.wowlist",
+    path: "docs/knowledge-bank/projects/wowlist.md",
+    canonicalRefs: ["CLM-WOWLIST-DATABASE-SNAPSHOT-SCALE", "SRC-WOWLIST-SUNDAY-CALLSCRIPT-AGGREGATE-AUDIT-2026-07-15"],
+    requiredHeadings: ["## Jamie's role", "## Product and community practice", "## Boundaries"],
+  },
+  {
+    id: "project.kc-town-hall",
+    path: "docs/knowledge-bank/projects/kc-town-hall.md",
+    canonicalRefs: ["CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION", "CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT", "SRC-KCTH-CCED-PHASE-ONE-PACKET-2019"],
+    requiredHeadings: ["## Phase One restoration", "## Neighborhood process", "## Boundaries"],
+  },
+  {
+    id: "project.fair-rent-nyc",
+    path: "docs/knowledge-bank/projects/fair-rent-nyc.md",
+    canonicalRefs: ["CLM-CRS-COALITION-OPERATING-SYSTEM", "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN", "SRC-CRS-RUNNING-MINUTES-2026-05-15"],
+    requiredHeadings: ["## Operating structure", "## Policy provenance and public data", "## Boundaries"],
+  },
+  {
+    id: "method.transition-and-handoff",
+    path: "docs/knowledge-bank/methods/transition-and-handoff.md",
+    canonicalRefs: ["CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE", "CLM-KCTH-MISSION-ALIGNED-TRANSITION"],
+    requiredHeadings: ["## Observable pattern", "## Care is an operating requirement", "## Boundaries"],
+  },
+];
+
+const privateLocatorPattern = /(?:file:\/\/|\/(?:Users|Volumes|private)\/|drive\.google\.com\/drive\/folders|resourcekey=|icloud\.com\/iclouddrive)/i;
+
+export function validateSourceReturnText(text) {
+  const errors = [];
+  if (!/^## Present-tense source return$/m.test(text)) errors.push("Present-tense source return heading is required");
+  for (const label of sourceReturnLabels) {
+    if (!new RegExp(`^- \\*\\*${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}:\\*\\*`, "m").test(text)) errors.push(`Missing source-return field: ${label}`);
+  }
+  if (privateLocatorPattern.test(text)) errors.push("Private locator or authenticated resource key is prohibited");
+  return { errors };
+}
+
 function deterministicResults(compiled) {
   const byId = new Map(suite.evals.map((entry) => [entry.id, entry]));
   const results = [];
@@ -139,6 +194,61 @@ function deterministicResults(compiled) {
 
   for (const id of ["KW-008", "KW-009", "KW-010", "KW-011"]) results.push(result(byId.get(id), 0, ["Independent exact-candidate judgment required"], ["No valid external judgment supplied"]));
   results.push(result(byId.get("KW-012"), 0, ["Human task protocol is present; no approval is inferred"], ["Exact-candidate Jamie approval and any applicable rights or collaborator decisions remain open"]));
+
+  const nodeIds = new Set(compiled.graph.nodes.map((node) => node.id));
+  const sourceReturnChecks = sourceReturnPageSpecs.map((spec) => {
+    if (!existsSync(path.join(repoRoot, spec.path))) return { spec, errors: ["Page is missing"] };
+    const text = readFileSync(path.join(repoRoot, spec.path), "utf8");
+    const errors = [...validateSourceReturnText(text).errors];
+    if (!new RegExp(`^id: ${spec.id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m").test(text)) errors.push(`Stable page ID is missing: ${spec.id}`);
+    for (const reference of spec.canonicalRefs) {
+      if (!text.includes(`  - ${reference}`)) errors.push(`Canonical reference is missing: ${reference}`);
+      if (!nodeIds.has(reference)) errors.push(`Canonical reference does not resolve: ${reference}`);
+    }
+    for (const heading of spec.requiredHeadings) if (!text.includes(heading)) errors.push(`Required boundary heading is missing: ${heading}`);
+    return { spec, errors };
+  });
+  const priorityIds = sourceReturnPageSpecs.map((spec) => spec.id);
+  const rootTargets = new Set(compiled.graph.edges.filter((edge) => edge.from === "index.knowledge-wiki" && edge.type === "indexes").map((edge) => edge.to));
+  const directoryTargets = new Set(compiled.graph.edges.filter((edge) => edge.from === "index.knowledge-wiki-project-dossiers" && edge.type === "indexes").map((edge) => edge.to));
+  const overviewPass = sourceReturnChecks.every((check) => check.errors.length === 0)
+    && priorityIds.every((id) => nodeIds.has(id))
+    && priorityIds.filter((id) => id.startsWith("project.")).every((id) => rootTargets.has(id) && directoryTargets.has(id))
+    && rootTargets.has("method.transition-and-handoff");
+  results.push(result(byId.get("KW-013"), overviewPass ? 4 : 0, [
+    `priority overview and method nodes: ${priorityIds.filter((id) => nodeIds.has(id)).length}/${priorityIds.length}`,
+    `root-indexed project overviews: ${priorityIds.filter((id) => id.startsWith("project.") && rootTargets.has(id)).length}/4`,
+    `directory-indexed project overviews: ${priorityIds.filter((id) => id.startsWith("project.") && directoryTargets.has(id)).length}/4`,
+    `canonical/source-return page checks passing: ${sourceReturnChecks.filter((check) => check.errors.length === 0).length}/${sourceReturnChecks.length}`,
+  ], overviewPass ? [] : sourceReturnChecks.flatMap((check) => check.errors.map((error) => `${check.spec.id}: ${error}`))));
+
+  const rereading = readFileSync(path.join(repoRoot, "docs/knowledge-bank/methods/original-source-rereading.md"), "utf8");
+  const taskProtocolPass = tasks.pass && /TASK-WIKI-SOURCE-ACCESS/.test(tasks.output) && /"result_claims": false/.test(tasks.output);
+  const authoringLabelsPass = sourceReturnLabels.every((label) => authoring.includes(label));
+  const accessStatesPass = ["Not materialized", "Not recovered", "Deliberately not processed"].every((state) => rereading.includes(state));
+  const permissionBoundaryPass = /does not\s+automatically permit quotation, publication, retention, or promotion/i.test(rereading);
+  const rereadingPass = sourceReturnChecks.every((check) => check.errors.length === 0)
+    && /^## Source return protocol$/m.test(rereading)
+    && /^## Access classes$/m.test(rereading)
+    && /^## Personal librarian request$/m.test(rereading)
+    && accessStatesPass
+    && permissionBoundaryPass
+    && authoringLabelsPass
+    && taskProtocolPass
+    && !privateLocatorPattern.test(rereading);
+  results.push(result(byId.get("KW-014"), rereadingPass ? 4 : 0, [
+    `priority source-return sections passing: ${sourceReturnChecks.filter((check) => check.errors.length === 0).length}/${sourceReturnChecks.length}`,
+    `authoring fields present: ${authoringLabelsPass}`,
+    `explicit unavailable-source states present: ${accessStatesPass}`,
+    `access/publication boundary present: ${permissionBoundaryPass}`,
+    `bounded librarian task protocol present: ${taskProtocolPass}`,
+  ], rereadingPass ? [] : [
+    ...sourceReturnChecks.flatMap((check) => check.errors.map((error) => `${check.spec.id}: ${error}`)),
+    ...(!authoringLabelsPass ? ["Authoring guide is missing one or more source-return fields"] : []),
+    ...(!accessStatesPass ? ["Source access states are incomplete"] : []),
+    ...(!permissionBoundaryPass ? ["Access is not clearly separated from publication permission"] : []),
+    ...(!taskProtocolPass ? ["Bounded personal-librarian task protocol is missing"] : []),
+  ]));
   return results;
 }
 

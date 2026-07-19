@@ -32,9 +32,36 @@ Structure grows from the material under review.
    protected locator, excerpt, identity, or access path.
 5. Record absences honestly. Use `wanted` for a deliberate missing page and the
    canonical claim/task system for negative research and follow-up work.
-6. Run `npm run wiki:check`, `npm run wiki:test`, `npm run wiki:report`, and the
+6. When a page is created or materially revised through archival research,
+   return to original source material where access and rights permit. Add a
+   `Present-tense source return` section using the protocol below. If the source
+   is unavailable, record the attempted access class and route a librarian
+   request rather than substituting a prior summary.
+7. Run `npm run wiki:check`, `npm run wiki:test`, `npm run wiki:report`, and the
    query that serves the intended reader.
-7. Treat a passing check as structural evidence, not publication permission.
+8. Treat a passing check as structural evidence, not publication permission.
+
+## Present-tense source return
+
+Archival production is recursive. A prior observation can orient a return, but
+it cannot replace seeing the source again from the question we have now.
+
+Use these labels in every source-return section:
+
+- **Question brought to the source:** why this return matters now.
+- **Original material reopened:** public-safe source IDs and source classes,
+  without private locators or unapproved titles.
+- **Scope and completeness:** what was actually inspected and what was not.
+- **What changed in this reading:** a correction, stronger distinction, new
+  relationship, or explicit statement that nothing changed.
+- **What did not change:** the claims, anti-claims, or holds that remain.
+- **Access boundary:** public, authenticated, protected, not materialized, or
+  not recovered; authorization to access is not publication permission.
+- **Next return:** the next source, question, collaborator, or librarian request.
+
+Do not paste raw excerpts from protected sources. Exact claims, evidence,
+rights, and corrections remain in the typed canonical registry. See
+[original-source rereading](methods/original-source-rereading.md).
 
 ## Promote to the portfolio
 

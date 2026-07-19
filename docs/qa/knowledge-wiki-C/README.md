@@ -7,12 +7,12 @@ publication approval.
 ## Exact implementation candidate
 
 - candidate fingerprint:
-  `b4d409c0497e8857fc92afc7c3b8f6c420ca1519230b8af4590be56ca190fe6c`
+  `dfe1f8b5b3a81454d0597f421e82c5cbd7c955ed9da698e374fb70be46c3ca6d`
 - rubric fingerprint:
-  `5621d7b3e8f95713d0e76ce1b25c9c6964bb78811035cbb1457e5bc3de2eccf4`
+  `36198cf9a9eb5c5467c14146dd990f20107455f0e5579c7dd3b05db8e2569e74`
 - graph fingerprint:
-  `5aa51ddca50a192af564f9e05f99beed56768f40dc91d594d5713459cd16385f`
-- implementation weighted score: `0.9368`
+  `cd159c65d2060039cbcb6545ea5e24db2becca62f7e55cbea7c16374c0e4b387`
+- implementation weighted score: `1.0000`
 - decision: `implementation_ready_human_held`
 
 ## Iterations
@@ -31,6 +31,26 @@ publication approval.
 - `iteration-3-holdout-pass-1.json`: first final implementation pass.
 - `iteration-3-holdout-pass-2.json`: second unchanged final implementation
   pass; criterion reached.
+- `iteration-4-source-rereading-holdout.json`: fresh independent read-only
+  judgment bound to the expanded project-page and source-rereading candidate.
+- `iteration-4-source-rereading-pass-1.json`: first exact-candidate pass with
+  all deterministic and external implementation criteria at score 4.
+- `iteration-4-source-rereading-pass-2.json`: second unchanged pass; the
+  expanded implementation criterion is reached at weighted score 1.0000.
+
+## Expanded candidate
+
+This iteration adds authored overview pages for NYC Artist Coalition, WOW List,
+KC Town Hall, and Fair Rent NYC; a cross-project transition-and-handoff method;
+and an original-source rereading protocol. New blocking evals require those
+pages to remain traversable, bounded, and tied to canonical records. They also
+require each materially researched priority page to retain its present
+question, inspected original, actual scope, changed and unchanged
+understanding, access boundary, and next return.
+
+The exact-candidate evidence does not assert that the accessible archive is
+complete, that every source should be processed, or that access authorization
+grants permission to quote, retain, publish, or promote source material.
 
 ## What remains open
 

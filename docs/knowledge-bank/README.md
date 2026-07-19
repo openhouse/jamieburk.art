@@ -13,11 +13,23 @@ relations:
   - type: indexes
     target: project.callnyc
   - type: indexes
+    target: project.nyc-artist-coalition
+  - type: indexes
+    target: project.wowlist
+  - type: indexes
+    target: project.kc-town-hall
+  - type: indexes
+    target: project.fair-rent-nyc
+  - type: indexes
     target: event.nycc.councilstat-hackathon-2016
   - type: indexes
     target: capability.technical-operations
   - type: indexes
     target: method.source-backed-team-memory
+  - type: indexes
+    target: method.original-source-rereading
+  - type: indexes
+    target: method.transition-and-handoff
   - type: indexes
     target: index.knowledge-wiki-project-dossiers
   - type: indexes
@@ -81,10 +93,16 @@ The Knowledge Wiki exists to:
 
 ## Start Here
 
+- [NYC Artist Coalition](projects/nyc-artist-coalition.md)
+- [WOW List](projects/wowlist.md)
+- [KC Town Hall](projects/kc-town-hall.md)
+- [Fair Rent NYC and Commercial Rent Stabilization](projects/fair-rent-nyc.md)
 - [CallNYC chronology and boundaries](projects/callnyc.md#corrected-chronology)
 - [CouncilStat hackathon event](events/councilstat-hackathon-2016.md)
 - [Technical Operations capability](capabilities/technical-operations.md)
 - [Source-Backed Team Memory method](methods/source-backed-team-memory.md)
+- [Original-source rereading](methods/original-source-rereading.md)
+- [Transition and handoff](methods/transition-and-handoff.md)
 - [Project dossier directory](indexes/project-dossiers.md)
 - [Employment context and priority opportunities](employment/README.md)
 - [Schema and authority contract](schema.md)
