@@ -316,14 +316,20 @@ export const proofClaims: ProofClaim[] = [
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
     status: "careful",
-    supportLevel: "careful",
-    evidenceClass: ["approved-resume", "public-source", "jamie-review-confirmation"],
+    supportLevel: "strong",
+    evidenceClass: [
+      "approved-resume",
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
     publicWording:
       "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis:
+      "Approved resume language, Jamie confirmation, public campaign websites, and a complete public-safe census with selected close readings of the protected NYC Artist Coalition shared archive.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
@@ -346,7 +352,53 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-18"
+  },
+  {
+    id: "nyc-artist-coalition-fairrent-web-data-implementation",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "ai-assisted-archive-review",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "For FairRentNYC, Jamie translated campaign needs into a concrete web and data system: responsive public presentation, mapped and verified location data, reusable forms, sponsor sequencing, partner and press modules, and clear calls to action.",
+    shortWording: "Built FairRentNYC's web and campaign-data implementation layer",
+    detailedPublicWording:
+      "Jamie connected campaign strategy to implementation across responsive presentation, structured location data, geocoding and verification, reusable forms, sponsorship progress, partner and press modules, social presentation, and public calls to action.",
+    sourceBasis:
+      "A Jamie-attributed implementation checklist, a Jamie-authored campaign-architecture note, the surviving public FairRentNYC surface, and a public-safe authenticated archival review.",
+    sourceNote:
+      "The implementation record supports the documented workstream; the companion architecture note does not prove that every proposed feature shipped.",
+    whyItMatters:
+      "Makes Jamie's product, information-architecture, data-quality, and implementation role concrete for hiring readers.",
+    guardrail:
+      "Credit policy, copy, organizing, partnerships, and campaign outcomes collectively; do not expose the underlying private records.",
+    doNotSay: [
+      "Jamie solely owned or led FairRentNYC",
+      "Jamie authored every policy position or line of campaign copy",
+      "Every proposed feature shipped exactly as designed",
+      "Jamie's web work alone caused legislative sponsorship or policy outcomes"
+    ],
+    protectedBoundaries: [
+      "Private implementation records",
+      "Working links",
+      "Administrative details",
+      "Collaborator context",
+      "Contact and outreach records"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "web-implementation",
+      "information-architecture",
+      "data-quality",
+      "campaign-operations"
+    ],
+    lastReviewed: "2026-07-18"
   },
   {
     id: "nyc-artist-coalition-public-identity-system",
@@ -394,7 +446,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "Approved resume language, public campaign surfaces, official records, and selected close readings from a complete public-safe census of the protected NYC Artist Coalition shared archive.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -421,12 +473,12 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-18"
   },
   {
     id: "nyc-artist-coalition-participation-system",
     status: "careful",
-    supportLevel: "careful",
+    supportLevel: "strong",
     evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
     publicWording:
       "Helped establish and produce NYC Artist Coalition's recurring participation system across public event pages, rotating cultural-space meetings, practical support, hearings, and campaign action.",
@@ -434,7 +486,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie helped turn collective cultural-space concerns into repeatable public occasions for gathering, practical learning, priority-setting, testimony, and follow-through. The recovered Facebook event record accounts for 34 control slots: 33 public event records and one unresolved historical slot.",
     sourceBasis:
-      "Jamie confirmation, a 34-slot public-safe Facebook event census, selected public event pages, and independent reporting on Jamie's coalition advocacy and the Market Hotel town hall.",
+      "Jamie confirmation, a 34-slot public-safe Facebook event census, selected public event pages, independent reporting on Jamie's coalition advocacy and the Market Hotel town hall, and protected metadata for reusable meeting and participation templates.",
     whyItMatters:
       "Shows stakeholder convening and public participation as an operating system that connected listening, practical support, action design, and institutional interface.",
     guardrail:
@@ -462,7 +514,7 @@ export const proofClaims: ProofClaim[] = [
       "event-operations",
       "civic-implementation"
     ],
-    lastReviewed: "2026-07-13"
+    lastReviewed: "2026-07-18"
   },
   {
     id: "wowlist-community-platform",
@@ -874,6 +926,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "technical-operations-operating-backbone",
       "fair-rent-90-day-operating-plan",
+      "nyc-artist-coalition-fairrent-web-data-implementation",
       "hje-modernization-stewardship",
       "callnyc-civic-data-guidance",
       "kc-town-hall-phase-one-delivery",
@@ -904,6 +957,7 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "nyc-artist-coalition-fairrent-web-data-implementation",
       "nyc-artist-coalition-civic-systems",
       "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",

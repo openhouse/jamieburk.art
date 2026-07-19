@@ -1,8 +1,8 @@
 {
   "version": "2026-07-17",
-  "candidateCommit": "ac5b06515f0379dc4003dd73f810d1328c674be0",
-  "candidateContentHash": "b8d977c1fac698528e2caa70bce78b705482098552bc6fa74299c6bf00ac3cd2",
-  "evidenceSnapshotHash": "2b683d6e01c2edeea1897ec8fd8d946d3e25ee10025dd06a2a65ed1c078236df",
+  "candidateCommit": "20eb1891d81a597feb3cef9609906257fc108668",
+  "candidateContentHash": "b3644be2235d0440e3a88886bc42e8ba97789df1b14b16bb7af779adc8e9d5a2",
+  "evidenceSnapshotHash": "cb48684c58c05167f82f79a095e18c300060ebd6ec4f7264a915badd8a7e0181",
   "rubricHashes": {
     "docs/qa/eval-control-plane-M.json": "a74fcf18450206612c4404afa5530d2b2b155f0769474afbe9c79799fa636156",
     "docs/qa/knowledge-wiki-foundation-M.json": "95a058a20cf1374a831ff4a596d4d4f918872e48e187ff62bda0d4e9ca8aeb99",
@@ -21,7 +21,7 @@
   "checkerVersion": "composite-evals-M-v1",
   "command": "npm run check",
   "result": "pass",
-  "timestamp": "2026-07-19T02:31:47Z",
+  "timestamp": "2026-07-19T04:33:28Z",
   "reviewerClass": "deterministic-checker",
   "decision": "stop_threshold_met",
   "productionDecision": "stop_human_blocked",
@@ -38,6 +38,7 @@
     "five real-job comparisons",
     "hands-on accessibility and launch QA",
     "visual rights and consent review",
+    "NYC Artist Coalition archive item-level rights, consent, attribution, and Jamie editorial review",
     "staging deployment verification",
     "production deployment and indexing approval"
   ]

@@ -126,8 +126,8 @@ claim beyond the wording and guardrails here.
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
 **Status:** Careful
-**Support level:** Careful
-**Evidence class:** Approved resume / public project artifact / Jamie review confirmation
+**Support level:** Strong
+**Evidence class:** Approved resume / public project artifact / public-safe archive summary / Jamie review confirmation
 **Public wording:** Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.
 **Detailed public-safe wording:** Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
@@ -135,8 +135,24 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.
 **Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions; Jamie single-handedly caused policy outcomes.
 **Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.
+**Source basis:** Approved resume language, Jamie confirmation, public campaign websites, and a complete public-safe census with selected close readings of the protected NYC Artist Coalition shared archive.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-18
+
+## nyc-artist-coalition-fairrent-web-data-implementation - FairRentNYC web and data implementation
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary / AI-assisted archive review / Jamie review confirmation
+**Public wording:** For FairRentNYC, Jamie translated campaign needs into a concrete web and data system: responsive public presentation, mapped and verified location data, reusable forms, sponsor sequencing, partner and press modules, and clear calls to action.
+**Detailed public-safe wording:** Jamie connected campaign strategy to implementation across responsive presentation, structured location data, geocoding and verification, reusable forms, sponsorship progress, partner and press modules, social presentation, and public calls to action.
+**Where to project:** Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Makes Jamie's product, information-architecture, data-quality, and implementation role concrete for hiring readers.
+**Guardrail:** Credit policy, copy, organizing, partnerships, and campaign outcomes collectively; do not expose the underlying private records. The architecture note does not prove every proposed feature shipped.
+**Do not say:** Jamie solely owned or led FairRentNYC; Jamie authored every policy position or line of campaign copy; every proposed feature shipped exactly as designed; Jamie's web work alone caused legislative sponsorship or policy outcomes.
+**Protected boundaries:** Private implementation records, working links, administrative details, collaborator context, and contact or outreach records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-18
 
 ## nyc-artist-coalition-campaign-press-infrastructure - Campaign reporting context
 
@@ -181,7 +197,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-18
 
 ## nyc-artist-coalition-participation-system - Recurring public participation
 
@@ -196,7 +212,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie individually authored or solely produced every event; all 34 event pages were recovered; meetings occurred uninterrupted every month or always at a different venue; response totals equal attendance; the events alone caused policy outcomes.
 **Protected boundaries:** Guest identities, comments, invite context, collaborator correspondence, account administration, event credentials, and raw capture data stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-18
 
 ## nyc-artist-coalition-facebook-event-accounting - Event population control
 

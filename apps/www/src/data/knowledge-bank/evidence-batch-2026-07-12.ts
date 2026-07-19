@@ -691,6 +691,7 @@ export const evidenceBatchRecords: EvidenceBatch = {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
       sourceOrder: [
+        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
         "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
         "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
         "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017",
@@ -707,7 +708,6 @@ export const evidenceBatchRecords: EvidenceBatch = {
         "SRC-NYC-COUNCIL-INT-1156-2018",
         "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
         "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
-        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
         "SRC-CRS-FULLER-PUBLIC-BASELINE-2026",
         "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
         "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
@@ -724,6 +724,12 @@ export const evidenceBatchRecords: EvidenceBatch = {
           id: "crs-90-day-operating-plan",
           claimId: "CLM-CRS-90-DAY-OPERATING-PLAN",
           projection: "case-study"
+        },
+        {
+          id: "nycac-fairrent-web-data-implementation",
+          claimId: "CLM-NYCAC-FAIRRENT-WEB-DATA-IMPLEMENTATION",
+          projection: "case-study",
+          sourceIds: ["SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"]
         },
         {
           id: "nycac-public-testimony-2017-2019",

@@ -190,6 +190,7 @@ const workItemsInput = [
       "fair-rent-source-map",
       "fair-rent-public-data-pilot",
       "nyc-artist-coalition-public-web-infrastructure",
+      "nyc-artist-coalition-fairrent-web-data-implementation",
       "nyc-artist-coalition-public-identity-system",
       "nyc-artist-coalition-civic-systems",
       "nyc-artist-coalition-participation-system"
@@ -197,7 +198,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "A recurring public participation format, running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving public-data pilot brief, stakeholder follow-up notes, public-safe explanations, a shared public identity system, campaign websites, and durable campaign memory.",
+      "A recurring public participation format, running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving public-data pilot brief, stakeholder follow-up notes, public-safe explanations, a shared public identity system, and campaign websites with structured actions, mapped location data, reusable forms, and durable campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -235,6 +236,12 @@ const workItemsInput = [
         description:
           "A shared public identity across the coalition logo, @NYCArtC account, and website infrastructure for NYC Artist Coalition, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance.",
         type: "website"
+      },
+      {
+        title: "FairRentNYC web and data implementation",
+        description:
+          "A campaign implementation layer connecting responsive presentation, mapped and verified location data, reusable forms, sponsor sequencing, partner and press modules, and calls to action.",
+        type: "website"
       }
     ],
     tags: [
@@ -250,6 +257,8 @@ const workItemsInput = [
       "Source Mapping",
       "Action Tracking",
       "Campaign Websites",
+      "Campaign Data Quality",
+      "Information Architecture",
       "Public Identity Systems",
       "Stakeholder Convening",
       "Participation Systems",

@@ -2374,6 +2374,46 @@
         "Credit NYC Artist Coalition collectively; do not assign Jamie sole authorship of every recommendation, FOIL analysis, testimony, or policy outcome.",
         "Connect Jamie to the identity, web, participation, and documentation systems he helped build through separately supported claims."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-FAIRRENT-WEB-DATA-IMPLEMENTATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For FairRentNYC, Jamie translated campaign needs into a concrete web and data system: responsive public presentation, mapped and verified location data, reusable forms, sponsor sequencing, press and partner modules, and clear calls to action.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Translated FairRentNYC campaign needs into a web and data implementation system spanning responsive presentation, mapped location data, forms, sponsor sequencing, partner and press modules, and calls to action.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
+          "relationship": "corroborating",
+          "supports": [
+            "the surviving public FairRentNYC campaign surface"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The implementation record supports Jamie's documented workstream; the companion architecture note does not prove that every proposed feature shipped.",
+        "Credit campaign strategy, policy positions, copy, and outcomes collectively unless separately attributed.",
+        "Do not expose the underlying checklist, collaborator context, administrative details, or private working links."
+      ]
     }
   ],
   "pages": [
@@ -2468,6 +2508,7 @@
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
+        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
         "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
         "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
         "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017",
@@ -2484,7 +2525,6 @@
         "SRC-NYC-COUNCIL-INT-1156-2018",
         "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
         "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
-        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
         "SRC-CRS-FULLER-PUBLIC-BASELINE-2026",
         "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
         "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
@@ -2501,6 +2541,14 @@
           "id": "crs-90-day-operating-plan",
           "claimId": "CLM-CRS-90-DAY-OPERATING-PLAN",
           "projection": "case-study"
+        },
+        {
+          "id": "nycac-fairrent-web-data-implementation",
+          "claimId": "CLM-NYCAC-FAIRRENT-WEB-DATA-IMPLEMENTATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"
+          ]
         },
         {
           "id": "nycac-public-testimony-2017-2019",
