@@ -1,7 +1,7 @@
 {
   "version": "2026-07-17",
-  "candidateCommit": "20eb1891d81a597feb3cef9609906257fc108668",
-  "candidateContentHash": "b3644be2235d0440e3a88886bc42e8ba97789df1b14b16bb7af779adc8e9d5a2",
+  "candidateCommit": "b0e0f125ac9a807a940d8ed9f1f0efad2513a174",
+  "candidateContentHash": "0f1b8436ed829849f7f682604a0904732bca63e388d2665344be99e5232ed6ad",
   "evidenceSnapshotHash": "cb48684c58c05167f82f79a095e18c300060ebd6ec4f7264a915badd8a7e0181",
   "rubricHashes": {
     "docs/qa/eval-control-plane-M.json": "a74fcf18450206612c4404afa5530d2b2b155f0769474afbe9c79799fa636156",
@@ -13,7 +13,7 @@
     "docs/qa/hiring-acceptance-M.json": "0659e2af66f572bf13edeedb4fdd0713d389c193e776adecf7f8a5fb67e577fb"
   },
   "policyHashes": {
-    "AGENTS.md": "a35068d8387ca9a159971c33c883e5b3bf1a76e94260d7963fa26fdc0b249ba6",
+    "AGENTS.md": "fa3e8dee518f829336fa83eaebd739bcefc069eaa07eba3d7d11198a09473093",
     "scripts/check-public-safety.mjs": "969cc6c05308a0b0409f276ddd37bef56a983fc3b73aae85854a71539163b1cf",
     "docs/knowledge-bank/intake-and-maturation.md": "7fbde492bc54463e0b69c2ae9fa514e0d9c9b5aec3e348874c46b42b5235d175",
     "docs/knowledge-bank/citational-care.md": "1816fefd3427bde0856d14ec059504418046004e2946f07f31e19608b264d1a4"
@@ -21,7 +21,7 @@
   "checkerVersion": "composite-evals-M-v1",
   "command": "npm run check",
   "result": "pass",
-  "timestamp": "2026-07-19T04:33:28Z",
+  "timestamp": "2026-07-19T15:03:39Z",
   "reviewerClass": "deterministic-checker",
   "decision": "stop_threshold_met",
   "productionDecision": "stop_human_blocked",
@@ -39,6 +39,7 @@
     "hands-on accessibility and launch QA",
     "visual rights and consent review",
     "NYC Artist Coalition archive item-level rights, consent, attribution, and Jamie editorial review",
+    "RFP 0001 exploration after pull request 239 closes and Jamie names a champion",
     "staging deployment verification",
     "production deployment and indexing approval"
   ]

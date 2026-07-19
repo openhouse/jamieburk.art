@@ -98,6 +98,20 @@ The personal Facebook archival pass is documented through an aggregate-only
 and [bounded research report](docs/knowledge-bank/jamie-facebook-posts-2026-07-13.md).
 The raw personal corpus stays outside the repository.
 
+## Requests for Proposal
+
+Substantial future architecture, governance, product, and operating-model ideas
+develop under [`rfps/`](rfps/README.md) before implementation. RFPs are
+public-safe design documents. Proposal or acceptance does not by itself
+authorize implementation, publication, source access, migration, or
+deployment.
+
+The first proposal, [RFP 0001](rfps/0001-dual-knowledge-wiki-architecture.md),
+describes a deferred dual-Wiki architecture with a shared core package, a
+private personal Wiki, the current public professional Wiki, a separate source
+vault, and a human-gated promotion path. It must not be implemented as part of
+the pull request that introduced it.
+
 ## Environment
 
 Staging is the first deployment target and is non-indexable by default:

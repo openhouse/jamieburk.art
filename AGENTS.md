@@ -91,6 +91,15 @@ Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser
 private document browser, full photo archive, heavy animation, or major framework
 change for V1.
 
+## Requests for Proposal
+
+Use `rfps/` for substantial future architecture, governance, product, or
+operating-model changes. Follow `rfps/README.md` and begin with
+`rfps/0000-template.md`. An RFP records and develops a proposal; its presence or
+acceptance does not authorize implementation, publication, source access,
+migration, or deployment. RFPs are committed to this public repository and must
+remain public-safe.
+
 ## Deployment
 
 Staging first: `staging.jamieburk.art`, noindex.
