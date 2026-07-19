@@ -144,13 +144,16 @@ export const claimProjectionSchema = z.object({
     "resume-html",
     "technical-operations",
     "homepage",
+    "about",
     "photo-caption",
+    "photo-brief",
     "archive-note"
   ]),
   text: z.string().min(1),
   status: z.enum(["active", "hold", "deprecated", "disallowed"]),
   citationRequired: z.boolean(),
-  surfaces: z.array(z.string().min(1))
+  surfaces: z.array(z.string().min(1)),
+  rationale: z.string().min(1)
 });
 
 export const claimRecordSchema = z.object({
@@ -181,6 +184,7 @@ export const researchInquirySchema = z.object({
   methods: z.array(z.string().min(1)).min(1),
   runAt: z.iso.date(),
   resultStatus: z.enum([
+    "open",
     "recovered",
     "partially-recovered",
     "not-recovered",
@@ -192,6 +196,86 @@ export const researchInquirySchema = z.object({
   publicSummary: z.string().min(1).optional(),
   protectedLocatorId: stableIdSchema.optional()
 });
+
+export const intakeRecordSchema = z
+  .object({
+    id: stableIdSchema,
+    receivedAt: z.iso.date(),
+    kind: z.enum([
+      "public-url",
+      "public-artifact",
+      "public-safe-memory",
+      "claim-hypothesis",
+      "photo-lead",
+      "reader-feedback",
+      "correction"
+    ]),
+    visibility: z.enum(["public-safe", "protected-summary"]),
+    title: z.string().min(1),
+    description: z.string().min(1),
+    whyItMatters: z.string().min(1),
+    projectIds: z.array(stableIdSchema).min(1),
+    status: z.enum([
+      "captured",
+      "triaged",
+      "researching",
+      "matured",
+      "deferred",
+      "rejected"
+    ]),
+    disposition: z.enum([
+      "source-recorded",
+      "inquiry-opened",
+      "claim-created",
+      "correction-created",
+      "governance-updated",
+      "deferred-with-reason",
+      "rejected-with-reason"
+    ]),
+    dispositionNote: z.string().min(1),
+    sourceIds: z.array(stableIdSchema).default([]),
+    claimIds: z.array(stableIdSchema).default([]),
+    inquiryIds: z.array(stableIdSchema).default([]),
+    correctionIds: z.array(stableIdSchema).default([]),
+    relatedIntakeIds: z.array(stableIdSchema).default([]),
+    artifactPaths: z.array(z.string().min(1).regex(/^(?!\/)(?!.*\.\.).+$/)).default([]),
+    boundaries: z.array(z.string().min(1)).default([])
+  })
+  .superRefine((record, context) => {
+    const links = [
+      ...record.sourceIds,
+      ...record.claimIds,
+      ...record.inquiryIds,
+      ...record.correctionIds
+    ];
+    if (!links.length && !["deferred", "rejected"].includes(record.status)) {
+      context.addIssue({
+        code: "custom",
+        message: "Active intake requires a source, claim, inquiry, or correction link"
+      });
+    }
+    if (record.status === "matured" && !record.claimIds.length) {
+      context.addIssue({ code: "custom", message: "Matured intake requires a claim link" });
+    }
+    if (record.status === "researching" && !record.inquiryIds.length) {
+      context.addIssue({ code: "custom", message: "Researching intake requires an inquiry link" });
+    }
+    if (record.disposition === "source-recorded" && !record.sourceIds.length) {
+      context.addIssue({ code: "custom", message: "Source disposition requires a source link" });
+    }
+    if (record.disposition === "claim-created" && !record.claimIds.length) {
+      context.addIssue({ code: "custom", message: "Claim disposition requires a claim link" });
+    }
+    if (record.disposition === "inquiry-opened" && !record.inquiryIds.length) {
+      context.addIssue({ code: "custom", message: "Inquiry disposition requires an inquiry link" });
+    }
+    if (record.disposition === "governance-updated" && !record.artifactPaths.length) {
+      context.addIssue({ code: "custom", message: "Governance disposition requires an artifact path" });
+    }
+    if (record.kind === "reader-feedback" && record.claimIds.length) {
+      context.addIssue({ code: "custom", message: "Reader feedback cannot link directly to an accomplishment claim" });
+    }
+  });
 
 export const correctionRecordSchema = z.object({
   id: stableIdSchema,
@@ -219,6 +303,7 @@ export const citationPageSchema = z.object({
 });
 
 export const knowledgeBankSchema = z.object({
+  intake: z.array(intakeRecordSchema),
   sources: z.array(sourceRecordSchema),
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
@@ -231,7 +316,10 @@ export type EvidenceRelationship = z.infer<typeof evidenceRelationshipSchema>;
 export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
 export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
+export type IntakeRecord = z.infer<typeof intakeRecordSchema>;
+export type IntakeRecordInput = z.input<typeof intakeRecordSchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;
 export type KnowledgeBank = z.infer<typeof knowledgeBankSchema>;
+export type KnowledgeBankInput = z.input<typeof knowledgeBankSchema>;

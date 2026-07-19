@@ -1,0 +1,15 @@
+{
+  "markdown.validate.enabled": true,
+  "markdown.validate.fileLinks.enabled": "warning",
+  "markdown.validate.fragmentLinks.enabled": "warning",
+  "markdown.validate.fileLinks.markdownFragmentLinks": "inherit",
+  "markdown.validate.referenceLinks.enabled": "warning",
+  "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
+  "markdown.validate.unusedLinkDefinitions.enabled": "hint",
+  "markdown.updateLinksOnFileMove.enabled": "prompt",
+  "markdown.suggest.paths.enabled": true,
+  "markdown.suggest.paths.includeWorkspaceHeaderCompletions": "onDoubleHash",
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.security.level": "strict"
+}

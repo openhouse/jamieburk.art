@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "contractVersion": 4,
+  "optimizerIdentity": "Codex implementation agent for feature/knowledge-wiki-B editorial-depth run",
+  "contractFingerprint": "29b8a0a185bcabb3f1125b9c86b12f401f12eb2972594958ed1b19867b362498",
+  "candidateFingerprint": "b59c90dc4c55d5db60b1839bd05e6f76bd6bc7e62548479a79146e727c752995",
+  "candidateSha": "aaea3666787ed65121bb8b67f7a57a0d238d8303",
+  "decision": "pass_for_code_review",
+  "holdoutReceiptPaths": [
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-2.json"
+  ],
+  "humanGates": {
+    "PR-019": "pending-human-review",
+    "PR-025": "pending-human-review",
+    "rights": "pending-as-recorded-per-artifact",
+    "collaboratorConsent": "pending-as-recorded-per-artifact",
+    "productionApproval": "pending-exact-candidate-human-approval"
+  },
+  "instrumentDefects": [
+    "Iteration 1 found that holdoutResult.errors could overwrite structural validation errors in the composite return object; the merge order was corrected before scoring.",
+    "Iteration 2 found expected compiler worktree paths in non-public Next.js server implementation bundles; the leak checker was narrowed to rendered and publicly served text while retaining static-client scans.",
+    "Iteration 3 found that an empty holdout set normalized to Infinity through Math.min; missing receipts now normalize every criterion to zero and fail explicitly.",
+    "Iteration 4 discarded both first-pass holdouts after one judge identified an unbound mosaic receipt and thin mosaic, operator, rights, and re-entry mutation coverage. Those controls were added before a new candidate was frozen.",
+    "Iteration 5 discarded both second-pass holdouts after both judges identified that receipt agreement was not yet bound to the actual Git commit. Candidate ancestry, an evaluator-owned exact post-candidate allowlist, and duplicate-score rejection were added before new holdouts.",
+    "Iteration 6 discarded the next holdout after it showed that an evidence-only descendant could still be named as the candidate. Validation now requires the named commit itself to change implementation paths and reproduces the candidate fingerprint directly from that commit's Git tree.",
+    "Iteration 7 discarded a split holdout result after the conservative judge found operator graph bypass, route-to-manifest drift, and under-validated receipt evidence. Operator commands now validate the canonical graph and references, composition selections bind to the public registry, and receipt evidence must exist in the named candidate commit.",
+    "Iteration 8 discarded both unchanged-candidate holdouts after they found two existing-suite regressions plus gaps in donor decisions, public-wording mutations, query-mode coverage, survivorship exactness, claim budgets, render-path bindings, receipt schema and paths, post-candidate history inspection, and human-status lifecycle validation. The regressions and the evaluator were repaired before freezing another candidate.",
+    "Iteration 9 discarded two unchanged-candidate holdouts after both judges correctly declined to prove the unseen second receipt, revealing that receipt-level CI-007 scoring had been conflated with aggregate completion. Contract version two assigns individual judges the instrument and their own receipt, assigns pair validation to the deterministic checker, and removes the irrelevant same-calendar-day constraint while retaining exact SHA and fingerprint agreement.",
+    "Iteration 10 discarded the version-two receipts after the full repository gate exposed a stale source-code spelling assertion in KC-FB-005. Contract version three binds that existing role eval to the canonical Technical Operations projection registry, mutation-tests removal of the resolver, and includes the role eval itself in the candidate fingerprint.",
+    "The first holdout harness attempt used const fields without explicit JSON Schema types and was rejected by the response-format validator; the external harness schema was repaired and neither failed session was counted.",
+    "Iteration 11 invalidated the earlier receipts when the employment-context work expanded the exact candidate fingerprint scope. The implementation was frozen in commit 152df7eae55dc4d61c287fced16d995f48bbd3b0 before a new pair of read-only holdouts was requested.",
+    "Iteration 12 discarded both receipts after the holdouts found a post-freeze mosaic binding, truncated comma-bearing YAML, ranking-based negative-control rejection, incomplete official-source and reader-source semantics, weak proof-strength and hard-screen closure, and permissive dirty or offline snapshot packets. Candidate 7eccdb57c9ed8524feed8f220b3cf5351e06afca incorporated those repairs and expanded mutation coverage from 17 to 28 tests.",
+    "Iteration 13 discarded the split second-pair result after the stricter judge found a tautological six-role retrieval cutoff, mutable official facts and proof mappings, hidden Wiki interpretation in evaluator packets, forgeable snapshot provenance, optional compiled-output scanning, and internal claim prose in public queries. Candidate edeeef12f3b83f6eae0a104d3f526e7c2fd48cd5 adds eligible decoys, governed role fingerprints, official-fact-only evaluator context, live server SHA and pre/post-capture binding, fail-closed compiled scanning, public-projection-only query output, and 32 passing hiring mutations.",
+    "Iteration 14 discarded a valid but sub-threshold holdout pair whose conservative weighted score was 0.887 because the isolated clones lacked dependencies for independent operator execution. The candidate remained unchanged; dependencies were provisioned outside Git, and two fresh blind read-only judges directly ran the composite and hiring mutation suites plus employment evals. Their conservative aggregate passes at 0.95 with no critical regressions or instrument defects.",
+    "Iteration 15 discarded both first-pass NYCAC holdouts after they found incomplete candidate fingerprint coverage, an unbudgeted case-study projection, a stale mosaic binding, aggregate-only semantic checks, and a missing survivorship population. Contract version four binds every candidate-changed path, budgets and source-binds the projection, adds the archive population, and makes semantic mutations file-specific.",
+    "Iteration 16 discarded one otherwise-substantive version-four receipt because the evaluator fork inherited an unrelated untracked recommendations file, and interrupted a separate retry that did not return promptly. Two fresh read-only judges then evaluated clean isolated detached checkouts of unchanged candidate ad135d1d4cb960c68484dd1ebc508a0063aab140 and returned valid passing receipts with no critical regressions or instrument defects.",
+    "Iteration 17 discarded an initial source-return holdout after it demonstrated that the focused eval still passed when canonical authority references were removed from every new page and the research receipt. The evaluator now requires non-empty, resolvable canonical authorities on each page and the receipt, with page-level and receipt-level mutations. Two fresh read-only judges then evaluated clean isolated detached checkouts of unchanged candidate 00013499f2d07530a8d36c89828c73348f028afc and returned valid passing receipts with no critical regressions or instrument defects.",
+    "Iteration 18 discarded the first editorial-depth receipt set after one judge could not exercise temporary fixtures in a read-only environment and another found that candidate binding covered only the final commit instead of the full declared baseline-to-candidate lineage, while the baseline branch record contradicted the integration branch. The evaluator now reconciles both branches, requires baseline ancestry, fingerprints every non-evidence lineage path, and mutation-tests branch contradiction.",
+    "Iteration 19 discarded one otherwise favorable systems receipt because DNS isolation prevented the production build. Two fresh behaviorally read-only judges then evaluated clean isolated detached checkouts of unchanged repaired candidate aaea3666787ed65121bb8b67f7a57a0d238d8303. The second judge also completed a production build, staging runtime smoke, operator exercise, and complete focused governance checks; both returned passing receipts with no critical regressions or instrument defects."
+  ],
+  "candidateDefects": [],
+  "allowedPostCandidatePaths": [
+    "docs/evals/knowledge-composite-integration-state.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-integration.md",
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
+    "docs/evals/runs/2026-07-17-knowledge-composite-holdout-2.json"
+  ]
+}

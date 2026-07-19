@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "suite_id": "knowledge-wiki-foundation",
+  "title": "Knowledge Wiki bounded foundation",
+  "objective": "Establish a public-safe, VS Code-first Markdown reading surface and deterministic Wiki Graph over the existing governed knowledge lifecycle without duplicating canonical claims, sources, evidence, rights, corrections, citations, or public projections.",
+  "primary_brief": "M-knowledge-wiki-product-and-teammate-implementation-brief.md",
+  "guidance_precedence": ["M", "N", "D"],
+  "score_threshold": 100,
+  "score_maximum": 100,
+  "hard_constraints": [
+    "Do not add a public Wiki or Explorer route.",
+    "Do not globally rename Knowledge Bank paths, commands, imports, or historical records.",
+    "Do not create a second claim, source, citation, rights, correction, or projection authority.",
+    "Do not commit raw private evidence, private paths, participant lists, credentials, or unapproved media.",
+    "Do not turn non-recovery into nonexistence, mention into endorsement, or collective work into sole causality.",
+    "Do not represent automated checks as rights clearance, consent, editorial approval, hiring-reader comprehension, or production approval."
+  ],
+  "criteria": [
+    {
+      "id": "KW-001",
+      "title": "Naming, authority, and compatibility",
+      "weight": 12,
+      "blocking": true,
+      "pass": "Knowledge Wiki is canonical in current-facing docs, Knowledge Bank remains a documented alias, and one authority registry prevents parallel truth systems."
+    },
+    {
+      "id": "KW-002",
+      "title": "VS Code-first human navigation",
+      "weight": 10,
+      "blocking": true,
+      "pass": "Strict Markdown settings, a task-oriented root, edited hubs, ordinary relative links, and move guidance work without a custom frontend."
+    },
+    {
+      "id": "KW-003",
+      "title": "Stable identity and semantic relations",
+      "weight": 12,
+      "blocking": true,
+      "pass": "Pilot IDs are unique and path-independent, aliases do not collide, relation targets and shapes resolve, and rename fixtures preserve identity."
+    },
+    {
+      "id": "KW-004",
+      "title": "Evidence and authority alignment",
+      "weight": 12,
+      "blocking": true,
+      "pass": "Wiki source, claim, correction, citation, and proof references resolve against existing canonical records; claim-source closure and anti-claims remain visible."
+    },
+    {
+      "id": "KW-005",
+      "title": "Deterministic graph and derived views",
+      "weight": 12,
+      "blocking": true,
+      "pass": "One compiler emits deterministic graph, index, backlink, search, health, and graph-delta artifacts with authored and generated layers distinguished."
+    },
+    {
+      "id": "KW-006",
+      "title": "Structural and navigational health",
+      "weight": 10,
+      "blocking": true,
+      "pass": "File and fragment links resolve, all discoverable pilot pages are root-reachable, and wanted records, intentional leaves, accidental orphans, and dead ends remain distinct."
+    },
+    {
+      "id": "KW-007",
+      "title": "Privacy, rights, consent, and absence",
+      "weight": 12,
+      "blocking": true,
+      "pass": "Private locators fail, pending-rights media cannot project, noindex is not treated as privacy, and non-recovery cannot become positive evidence."
+    },
+    {
+      "id": "KW-008",
+      "title": "Correction and selective projection",
+      "weight": 8,
+      "blocking": true,
+      "pass": "CallNYC correction history resolves to canonical authority, superseded wording stays out of active projection, and the public case study remains smaller than the Wiki."
+    },
+    {
+      "id": "KW-009",
+      "title": "Operator and mutation coverage",
+      "weight": 8,
+      "blocking": true,
+      "pass": "Check, test, graph, report, task, query, and eval commands are bounded; seeded structural, semantic, evidentiary, and safety mutations fail for the expected reason."
+    },
+    {
+      "id": "KW-010",
+      "title": "Scope and outward-action discipline",
+      "weight": 4,
+      "blocking": true,
+      "pass": "No public UI, CMS, database, graph editor, full migration, or automatic publication is added; unresolved human and employment outcomes remain explicit."
+    }
+  ],
+  "human_evaluations": [
+    {
+      "id": "KW-H01",
+      "lens": "Jamie and Chad",
+      "question": "Can a teammate find Jamie as actor, his bounded action, its purpose, what became usable, and the collective or institutional limit?",
+      "state": "not-requested"
+    },
+    {
+      "id": "KW-H02",
+      "lens": "Abby Covert",
+      "question": "Can a new reader find the right record, understand the labels, and recover the CallNYC chronology without coaching?",
+      "state": "not-requested"
+    },
+    {
+      "id": "KW-H03",
+      "lens": "Audrey Tang and Sara Hendren",
+      "question": "Are governance, correction, relationship, rights, consent, and reversibility understandable to a person rather than merely valid to a parser?",
+      "state": "not-requested"
+    },
+    {
+      "id": "KW-H04",
+      "lens": "Jennifer Pahlka and Lisa Gelobter",
+      "question": "Can a hiring or delivery reader locate transferable operating evidence quickly without private explanation?",
+      "state": "not-requested"
+    }
+  ],
+  "machine_success_decision": "ready-for-code-review",
+  "machine_success_does_not_mean": [
+    "human retrieval success",
+    "rights clearance",
+    "participant consent",
+    "editorial approval",
+    "application approval",
+    "production approval"
+  ]
+}

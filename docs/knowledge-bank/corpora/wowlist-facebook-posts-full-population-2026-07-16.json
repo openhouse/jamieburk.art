@@ -1,0 +1,1052 @@
+{
+  "schemaVersion": 2,
+  "title": "WOW List Facebook posts: authenticated full-population public ledger",
+  "capturedAt": "2026-07-16",
+  "account": "WOW List",
+  "facebookPageId": "242582625948552",
+  "collectionSurfaces": [
+    "Facebook Professional Dashboard > Content Library > Published > Lifetime",
+    "Meta Business Suite > Content > Export metric data > Post > Creation date > Lifetime"
+  ],
+  "populationReconciliation": {
+    "coverageState": "complete-as-materialized",
+    "materializedRecordCount": 54,
+    "dateRange": {
+      "start": "2015-04-25",
+      "end": "2018-03-22"
+    },
+    "canonicalPublicPostCount": 54,
+    "legacyManagementContentIdCount": 54,
+    "terminalState": "The authenticated legacy table reached a stable no-growth terminal position in forward and reverse review.",
+    "boundary": "This accounts for 100% of the 54 records exposed by the authenticated legacy Lifetime table on July 15, 2026. Three owner-export jobs covering the chronology completed on July 16; one 29-row file was recovered and exactly reconciled. Deleted, removed, or otherwise unexposed history is not inferred."
+  },
+  "ownerExportReconciliation": {
+    "generatedAt": "2026-07-16",
+    "windows": [
+      {
+        "start": "2015-04-01",
+        "end": "2016-03-30",
+        "generationStatus": "completed",
+        "fileVerification": "blocked-by-browser-client"
+      },
+      {
+        "start": "2016-03-31",
+        "end": "2017-03-30",
+        "generationStatus": "completed",
+        "fileVerification": "verified",
+        "rowCount": 29
+      },
+      {
+        "start": "2017-03-31",
+        "end": "2018-03-30",
+        "generationStatus": "completed",
+        "fileVerification": "blocked-by-browser-client"
+      }
+    ],
+    "verifiedWindowCanonicalOrdinalStart": 4,
+    "verifiedWindowCanonicalOrdinalEnd": 32,
+    "exactCanonicalIdAgreement": 29,
+    "pageIdDistribution": {
+      "100079003246603": 7,
+      "242582625948552": 22
+    },
+    "creationDateAgreement": {
+      "sameCalendarDate": 27,
+      "ownerExportOneDayEarlier": 2,
+      "shiftedCanonicalOrdinals": [
+        12,
+        15
+      ],
+      "boundary": "The native export supplies timestamps while the legacy and detail surfaces supply rendered dates. Two late-evening export timestamps resolve to the prior calendar day; this is preserved as an interface/timezone boundary rather than silently forced into date identity."
+    },
+    "finding": "The recovered native owner-export file exactly matches canonical ordinals 4 through 32 from the prior publisher audit, while revealing that legacy management content IDs are not always the canonical public post IDs.",
+    "boundary": "The other two generated files were not recovered from the browser client. Their completed status does not substitute for file-level verification. The recovered file reports two Page IDs under the WOW List Page name; this is preserved as an unresolved Meta identity or migration artifact rather than interpreted as two projects."
+  },
+  "publishingAttribution": {
+    "canonicalPostCount": 54,
+    "detailsAttributedToJamieBurkart": 51,
+    "videoRedirectsWithoutRecoveredPublisherByline": 3,
+    "boundary": "Facebook's admin byline identifies the Page publisher. It does not establish sole authorship of quoted or shared material, sole ownership of WOW List, or exclusive management of every project platform. WOW List was co-built by Jamie Burkart and Richard Album."
+  },
+  "currentPageSnapshot": {
+    "observedOn": "2026-07-15",
+    "followers": 185,
+    "boundary": "This is a dated current Page-profile count, not historical reach during 2015-2018."
+  },
+  "tractionDisposition": {
+    "status": "held",
+    "finding": "Legacy management rows and the native owner export expose differently named and differently bounded interaction metrics.",
+    "boundary": "Admin analytics, per-post counters, comments, and engager identities remain protected. No reach, unique-person, attendance, endorsement, stakeholder-group, conversion, or impact claim is projected."
+  },
+  "linkInventory": {
+    "normalizedDistinctUrlCount": 42,
+    "links": [
+      "http://dodiy.org/",
+      "http://helptagon.better.space/",
+      "http://nycartc.com/speakout",
+      "http://phxdiy.com/",
+      "http://popular.vote/",
+      "http://silentbarn.org/2015/09/fire-aftermath",
+      "http://silentbarn.org/donate",
+      "http://wowlist.org/join",
+      "http://wowlist.org/pinkyswear",
+      "http://www.sbdiy.org/",
+      "http://www.seattlediy.org/",
+      "http://www.westword.com/arts/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025",
+      "https://meowwolf.com/diy/",
+      "https://wowlist.org/PhxDIY/join",
+      "https://wowlist.org/RichardAlbum/events/24160/basement-family--ohtis--richard-album--anna-burch",
+      "https://wowlist.org/SeattleDIY/events/23270/6th-annual-short-run-comix-festival",
+      "https://wowlist.org/chicagoart/join",
+      "https://wowlist.org/chidiy",
+      "https://wowlist.org/downwithtrump",
+      "https://wowlist.org/dozerdances",
+      "https://wowlist.org/events/18549/wow-list-site-design",
+      "https://wowlist.org/helptagon/events/18493/the-big-shlep-fire-recovery-dumpster-loading",
+      "https://wowlist.org/join",
+      "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees",
+      "https://wowlist.org/ladiy/join",
+      "https://wowlist.org/pacificnature",
+      "https://wowlist.org/pacificnature/join",
+      "https://wowlist.org/popularvote/events/25863/art-hero-email-template",
+      "https://wowlist.org/rapidpulse",
+      "https://wowlist.org/sbdiy",
+      "https://wowlist.org/seattlediy/join",
+      "https://wowlist.org/silentbarn",
+      "https://wowlist.org/sylvanannex",
+      "https://wowlist.org/sylvanannex/join",
+      "https://wowlist.org/theyellowdress/join",
+      "https://wowlist.org/waterislife",
+      "https://wowlist.org/womensmarch",
+      "https://wowlist.org/wowlists",
+      "https://www.indiegogo.com/projects/get-orange-county-diy-a-permanent-home",
+      "https://www.kickstarter.com/projects/sheastadiumbk/bring-back-shea-stadium",
+      "https://www.razoo.com/us/story/Trunk-Space-Opening",
+      "https://www.wowlist.org/richardkatyspringtour"
+    ],
+    "boundary": "Links were normalized by removing Facebook and campaign tracking parameters. Inclusion records circulation through the Page; it does not establish authorship, endorsement by linked organizations, or current availability."
+  },
+  "missionPatterns": {
+    "recordCounts": {
+      "community-calendar-onboarding": 18,
+      "event-and-artist-distribution": 17,
+      "cultural-space-support-and-mutual-aid": 19,
+      "civic-mobilization": 12,
+      "community-governance-and-product-feedback": 13,
+      "community-care-and-remembrance": 9,
+      "cultural-space-funding": 9
+    },
+    "overlapBoundary": "Theme counts overlap and must not be summed into a unique-record denominator.",
+    "stakeholderEngagementBoundary": "The captures do not provide an identity-complete population of reactors or commenters. Source authors, shared-post originators, mentions, and linked organizations are not counted as engagers or endorsements."
+  },
+  "closeReadSources": [
+    {
+      "id": "westword-denver-diy-fund",
+      "canonicalUrl": "https://www.westword.com/arts-culture/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025/",
+      "relationship": "posted-source-context",
+      "supports": "WOW List circulated reporting about a Denver Arts & Venues contribution to a Meow Wolf-administered fund for DIY and alternative spaces.",
+      "doesNotEstablish": "WOW List created, administered, funded, or caused the program."
+    },
+    {
+      "id": "new-yorker-dance-outlaws",
+      "canonicalUrl": "https://www.newyorker.com/magazine/2017/07/10/dance-outlaws-fight-for-the-right-to-party",
+      "relationship": "shared-source-context",
+      "supports": "The July 3, 2017 WOW List record circulated NYC Artist Coalition's call connected to reporting on the Cabaret Law repeal hearing.",
+      "doesNotEstablish": "WOW List authored the article or independently organized the hearing."
+    },
+    {
+      "id": "gothamist-silent-barn-fire",
+      "canonicalUrl": "https://gothamist.com/arts-entertainment/bushwick-venue-silent-barn-struggling-to-regroup-after-fire",
+      "relationship": "corroborating-field-context",
+      "supports": "Contemporaneous reporting corroborates the fire damage, displacement, donations, and repair context behind WOW List's September 30, 2015 recovery post.",
+      "doesNotEstablish": "WOW List caused donations, repairs, attendance, or the venue's recovery."
+    },
+    {
+      "id": "brokelyn-shea-stadium-kickstarter",
+      "canonicalUrl": "https://brokelyn.com/shea-needs-your-help/",
+      "relationship": "corroborating-field-context",
+      "supports": "Contemporaneous reporting corroborates Shea Stadium's 2017 $50,000 reopening campaign and code-compliance needs circulated by WOW List.",
+      "doesNotEstablish": "WOW List organized the campaign or caused its fundraising result."
+    },
+    {
+      "id": "state-press-trunk-space-new-home",
+      "canonicalUrl": "https://www.statepress.com/article/2016/10/spartscult-trunk-space-new-location",
+      "relationship": "corroborating-field-context",
+      "supports": "Reporting documents Trunk Space opening in a new downtown Phoenix home after the relocation effort circulated by WOW List.",
+      "doesNotEstablish": "WOW List secured the location, funded the move, or caused the reopening."
+    },
+    {
+      "id": "oc-punk-orange-county-diy",
+      "canonicalUrl": "https://orangecountypunkzine.tumblr.com/",
+      "relationship": "corroborating-field-context",
+      "supports": "A contemporaneous community archive corroborates Orange County DIY's effort to establish an all-ages, safer, sober, community-driven arts and music space.",
+      "doesNotEstablish": "WOW List owned the effort, set its strategy, or caused fundraising outcomes."
+    }
+  ],
+  "unresolvedRecords": [
+    {
+      "postId": "589905124549632",
+      "managementContentId": "474349854280380",
+      "publishedOn": "2016-11-16",
+      "detailRecovery": "available-video-redirect"
+    },
+    {
+      "postId": "572320439641434",
+      "managementContentId": "784241589579019",
+      "publishedOn": "2016-10-11",
+      "detailRecovery": "available-video-redirect"
+    },
+    {
+      "postId": "515811585292320",
+      "managementContentId": "612279440272072",
+      "publishedOn": "2016-05-23",
+      "detailRecovery": "available-video-redirect"
+    }
+  ],
+  "integrity": {
+    "canonicalPostIdCount": 54,
+    "canonicalPostIdSha256": "df7a415c346bceee628203b88b6c8eec9649ef598f64938537f3269985167890",
+    "managementContentIdSha256": "495e7065753e67f122a1da5eb20f3d783c245c1c6a6d25dc038b54f9dbca5a98",
+    "recordSemanticSha256": "ba951a427ee6ff2815f80c679be8eefdde499413593c071f6b37a9b75f48292d"
+  },
+  "publicSafety": {
+    "rawPostTextPublished": false,
+    "commentsPublished": false,
+    "engagerIdentitiesPublished": false,
+    "adminAnalyticsPublished": false,
+    "authenticatedSessionDataPublished": false,
+    "privatePathsPublished": false,
+    "rationale": "The public ledger preserves identifiers, dates, public URLs, source dispositions, classifications, counts, and integrity controls without republishing social copy, personal traces, or private analytics."
+  },
+  "records": [
+    {
+      "ordinal": 1,
+      "postId": "826673707539438",
+      "managementContentId": "826673707539438",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/826673707539438",
+      "publishedOn": "2018-03-22",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "http://phxdiy.com/"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "postId": "702379893302154",
+      "managementContentId": "615674916814852",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/702379893302154",
+      "publishedOn": "2017-07-03",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "civic-mobilization"
+      ],
+      "sourceLinks": [
+        "http://nycartc.com/speakout"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "postId": "661430584063752",
+      "managementContentId": "827528381753321",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/661430584063752",
+      "publishedOn": "2017-04-14",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "https://www.wowlist.org/richardkatyspringtour"
+      ]
+    },
+    {
+      "ordinal": 4,
+      "postId": "648642558675888",
+      "managementContentId": "553423799870261",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/648642558675888",
+      "publishedOn": "2017-03-22",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "cultural-space-funding"
+      ],
+      "sourceLinks": [
+        "https://www.kickstarter.com/projects/sheastadiumbk/bring-back-shea-stadium"
+      ]
+    },
+    {
+      "ordinal": 5,
+      "postId": "645446255662185",
+      "managementContentId": "595878562239280",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/645446255662185",
+      "publishedOn": "2017-03-15",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "cultural-space-funding"
+      ],
+      "sourceLinks": [
+        "https://meowwolf.com/diy/"
+      ]
+    },
+    {
+      "ordinal": 6,
+      "postId": "642655592607918",
+      "managementContentId": "615537193466325",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/642655592607918",
+      "publishedOn": "2017-03-09",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "cultural-space-funding"
+      ],
+      "sourceLinks": [
+        "http://www.westword.com/arts/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025",
+        "https://meowwolf.com/diy/"
+      ]
+    },
+    {
+      "ordinal": 7,
+      "postId": "623352527871558",
+      "managementContentId": "395159612579889",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/623352527871558",
+      "publishedOn": "2017-01-26",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 8,
+      "postId": "616983925175085",
+      "managementContentId": "402341115303704",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/616983925175085",
+      "publishedOn": "2017-01-13",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "civic-mobilization"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/womensmarch"
+      ]
+    },
+    {
+      "ordinal": 9,
+      "postId": "604149446458533",
+      "managementContentId": "2048664648673665",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/604149446458533",
+      "publishedOn": "2016-12-15",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "civic-mobilization"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/popularvote/events/25863/art-hero-email-template"
+      ]
+    },
+    {
+      "ordinal": 10,
+      "postId": "604041746469303",
+      "managementContentId": "599313648362395",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/604041746469303",
+      "publishedOn": "2016-12-15",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "community-care-and-remembrance"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 11,
+      "postId": "603121939894617",
+      "managementContentId": "603121939894617",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/603121939894617",
+      "publishedOn": "2016-12-13",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "community-care-and-remembrance"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 12,
+      "postId": "602887726584705",
+      "managementContentId": "602887726584705",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/602887726584705",
+      "publishedOn": "2016-12-13",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "community-care-and-remembrance"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 13,
+      "postId": "599802690226542",
+      "managementContentId": "599802690226542",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/599802690226542",
+      "publishedOn": "2016-12-07",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "civic-mobilization",
+        "community-care-and-remembrance"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 14,
+      "postId": "599384950268316",
+      "managementContentId": "599384950268316",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/599384950268316",
+      "publishedOn": "2016-12-06",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "civic-mobilization",
+        "community-care-and-remembrance"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 15,
+      "postId": "598204937052984",
+      "managementContentId": "598204937052984",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/598204937052984",
+      "publishedOn": "2016-12-04",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "civic-mobilization",
+        "community-care-and-remembrance"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 16,
+      "postId": "598119190394892",
+      "managementContentId": "598119190394892",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/598119190394892",
+      "publishedOn": "2016-12-03",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "civic-mobilization",
+        "community-care-and-remembrance"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 17,
+      "postId": "592336194306525",
+      "managementContentId": "776308270374370",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/592336194306525",
+      "publishedOn": "2016-11-21",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "civic-mobilization",
+        "community-care-and-remembrance",
+        "cultural-space-funding"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 18,
+      "postId": "589905124549632",
+      "managementContentId": "474349854280380",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/589905124549632",
+      "publishedOn": "2016-11-16",
+      "detailRecovery": "available-video-redirect",
+      "publisherAttribution": "not-recovered",
+      "themes": [
+        "civic-mobilization",
+        "community-care-and-remembrance"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 19,
+      "postId": "589463604593784",
+      "managementContentId": "3444488879163123",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/589463604593784",
+      "publishedOn": "2016-11-15",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "civic-mobilization"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/waterislife"
+      ]
+    },
+    {
+      "ordinal": 20,
+      "postId": "589231931283618",
+      "managementContentId": "1225240608296728",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/589231931283618",
+      "publishedOn": "2016-11-14",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "civic-mobilization"
+      ],
+      "sourceLinks": [
+        "http://popular.vote/"
+      ]
+    },
+    {
+      "ordinal": 21,
+      "postId": "586893981517413",
+      "managementContentId": "372733911724685",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/586893981517413",
+      "publishedOn": "2016-11-09",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "civic-mobilization"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/downwithtrump"
+      ]
+    },
+    {
+      "ordinal": 22,
+      "postId": "584845425055602",
+      "managementContentId": "1092151278354542",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/584845425055602",
+      "publishedOn": "2016-11-05",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/SeattleDIY/events/23270/6th-annual-short-run-comix-festival"
+      ]
+    },
+    {
+      "ordinal": 23,
+      "postId": "575941009279377",
+      "managementContentId": "582616683345158",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/575941009279377",
+      "publishedOn": "2016-10-19",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "cultural-space-funding"
+      ],
+      "sourceLinks": [
+        "https://www.razoo.com/us/story/Trunk-Space-Opening"
+      ]
+    },
+    {
+      "ordinal": 24,
+      "postId": "572320439641434",
+      "managementContentId": "784241589579019",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/572320439641434",
+      "publishedOn": "2016-10-11",
+      "detailRecovery": "available-video-redirect",
+      "publisherAttribution": "not-recovered",
+      "themes": [
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/RichardAlbum/events/24160/basement-family--ohtis--richard-album--anna-burch"
+      ]
+    },
+    {
+      "ordinal": 25,
+      "postId": "531156430424502",
+      "managementContentId": "465889255437173",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/531156430424502",
+      "publishedOn": "2016-07-03",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "cultural-space-funding"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 26,
+      "postId": "529797787227033",
+      "managementContentId": "1247980586042111",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/529797787227033",
+      "publishedOn": "2016-06-29",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "event-and-artist-distribution",
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/pacificnature",
+        "https://wowlist.org/pacificnature/join"
+      ]
+    },
+    {
+      "ordinal": 27,
+      "postId": "529669663906512",
+      "managementContentId": "635455484554648",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/529669663906512",
+      "publishedOn": "2016-06-29",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 28,
+      "postId": "529378613935617",
+      "managementContentId": "772247913975754",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/529378613935617",
+      "publishedOn": "2016-06-28",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "event-and-artist-distribution",
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "http://www.sbdiy.org/",
+        "https://wowlist.org/join",
+        "https://wowlist.org/sbdiy"
+      ]
+    },
+    {
+      "ordinal": 29,
+      "postId": "522920754581403",
+      "managementContentId": "912621086795144",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/522920754581403",
+      "publishedOn": "2016-06-10",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "cultural-space-funding"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 30,
+      "postId": "522381004635378",
+      "managementContentId": "439867211430162",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/522381004635378",
+      "publishedOn": "2016-06-09",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "event-and-artist-distribution",
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 31,
+      "postId": "515826801957465",
+      "managementContentId": "1223844915123207",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/515826801957465",
+      "publishedOn": "2016-05-23",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/PhxDIY/join"
+      ]
+    },
+    {
+      "ordinal": 32,
+      "postId": "515811585292320",
+      "managementContentId": "612279440272072",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/515811585292320",
+      "publishedOn": "2016-05-23",
+      "detailRecovery": "available-video-redirect",
+      "publisherAttribution": "not-recovered",
+      "themes": [
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "http://wowlist.org/join"
+      ]
+    },
+    {
+      "ordinal": 33,
+      "postId": "450622238477922",
+      "managementContentId": "1468331900260387",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/450622238477922",
+      "publishedOn": "2015-11-16",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/ladiy/join"
+      ]
+    },
+    {
+      "ordinal": 34,
+      "postId": "450595671813912",
+      "managementContentId": "390208053084284",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/450595671813912",
+      "publishedOn": "2015-11-16",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "http://wowlist.org/join"
+      ]
+    },
+    {
+      "ordinal": 35,
+      "postId": "449839565222856",
+      "managementContentId": "442502297943994",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/449839565222856",
+      "publishedOn": "2015-11-13",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "http://wowlist.org/pinkyswear"
+      ]
+    },
+    {
+      "ordinal": 36,
+      "postId": "447543708785775",
+      "managementContentId": "810458196897610",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/447543708785775",
+      "publishedOn": "2015-11-04",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/theyellowdress/join"
+      ]
+    },
+    {
+      "ordinal": 37,
+      "postId": "443131052560374",
+      "managementContentId": "758212962106196",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/443131052560374",
+      "publishedOn": "2015-10-17",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/events/18549/wow-list-site-design"
+      ]
+    },
+    {
+      "ordinal": 38,
+      "postId": "440608412812638",
+      "managementContentId": "1021853215171048",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/440608412812638",
+      "publishedOn": "2015-10-08",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "cultural-space-funding"
+      ],
+      "sourceLinks": [
+        "https://www.indiegogo.com/projects/get-orange-county-diy-a-permanent-home"
+      ]
+    },
+    {
+      "ordinal": 39,
+      "postId": "439926419547504",
+      "managementContentId": "442645834579354",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/439926419547504",
+      "publishedOn": "2015-10-05",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/join"
+      ]
+    },
+    {
+      "ordinal": 40,
+      "postId": "438721293001350",
+      "managementContentId": "1670688459980371",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/438721293001350",
+      "publishedOn": "2015-09-30",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "cultural-space-support-and-mutual-aid",
+        "cultural-space-funding"
+      ],
+      "sourceLinks": [
+        "http://helptagon.better.space/",
+        "http://silentbarn.org/2015/09/fire-aftermath",
+        "http://silentbarn.org/donate",
+        "https://wowlist.org/helptagon/events/18493/the-big-shlep-fire-recovery-dumpster-loading",
+        "https://wowlist.org/silentbarn"
+      ]
+    },
+    {
+      "ordinal": 41,
+      "postId": "435109090029237",
+      "managementContentId": "589965855932350",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/435109090029237",
+      "publishedOn": "2015-09-18",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/chicagoart/join"
+      ]
+    },
+    {
+      "ordinal": 42,
+      "postId": "433959393477540",
+      "managementContentId": "462837902243959",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/433959393477540",
+      "publishedOn": "2015-09-14",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "event-and-artist-distribution",
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "http://www.seattlediy.org/",
+        "https://wowlist.org/seattlediy/join",
+        "https://wowlist.org/wowlists"
+      ]
+    },
+    {
+      "ordinal": 43,
+      "postId": "430461273827352",
+      "managementContentId": "1382637575473340",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/430461273827352",
+      "publishedOn": "2015-09-03",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 44,
+      "postId": "425723747634438",
+      "managementContentId": "1088551895380212",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/425723747634438",
+      "publishedOn": "2015-08-22",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/sylvanannex",
+        "https://wowlist.org/sylvanannex/join"
+      ]
+    },
+    {
+      "ordinal": 45,
+      "postId": "422801284593351",
+      "managementContentId": "2365519876933394",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/422801284593351",
+      "publishedOn": "2015-08-14",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/join"
+      ]
+    },
+    {
+      "ordinal": 46,
+      "postId": "422738701266276",
+      "managementContentId": "614104380418879",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/422738701266276",
+      "publishedOn": "2015-08-14",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/join"
+      ]
+    },
+    {
+      "ordinal": 47,
+      "postId": "406350326238447",
+      "managementContentId": "637548830976301",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/406350326238447",
+      "publishedOn": "2015-06-25",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 48,
+      "postId": "406264956246984",
+      "managementContentId": "1457780247978283",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/406264956246984",
+      "publishedOn": "2015-06-25",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/dozerdances"
+      ]
+    },
+    {
+      "ordinal": 49,
+      "postId": "405879632952183",
+      "managementContentId": "493118805481988",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/405879632952183",
+      "publishedOn": "2015-06-24",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "artifact-requiring-close-reading"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 50,
+      "postId": "398906853649461",
+      "managementContentId": "429604159149838",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/398906853649461",
+      "publishedOn": "2015-06-04",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/rapidpulse"
+      ]
+    },
+    {
+      "ordinal": 51,
+      "postId": "396324050574408",
+      "managementContentId": "2246101618892726",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/396324050574408",
+      "publishedOn": "2015-05-29",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "http://dodiy.org/"
+      ]
+    },
+    {
+      "ordinal": 52,
+      "postId": "389607387912741",
+      "managementContentId": "413523614244534",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/389607387912741",
+      "publishedOn": "2015-05-13",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": []
+    },
+    {
+      "ordinal": 53,
+      "postId": "389058464634300",
+      "managementContentId": "602343061371478",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/389058464634300",
+      "publishedOn": "2015-05-11",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "community-calendar-onboarding",
+        "community-governance-and-product-feedback"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/chidiy"
+      ]
+    },
+    {
+      "ordinal": 54,
+      "postId": "384399728433507",
+      "managementContentId": "764410171449641",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/384399728433507",
+      "publishedOn": "2015-04-25",
+      "detailRecovery": "available-post",
+      "publisherAttribution": "jamie-burkart",
+      "themes": [
+        "event-and-artist-distribution"
+      ],
+      "sourceLinks": [
+        "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees"
+      ]
+    }
+  ]
+}

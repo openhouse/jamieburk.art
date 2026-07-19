@@ -3,6 +3,7 @@ import { APP_ENV, IS_PRODUCTION, ROBOTS_INDEXABLE, SITE_URL } from "@/lib/site-u
 export const dynamic = "force-dynamic";
 
 export function GET() {
+  const candidateSha = process.env.PORTFOLIO_CANDIDATE_SHA ?? null;
   return Response.json(
     {
       ok: true,
@@ -10,7 +11,8 @@ export function GET() {
       appEnv: APP_ENV,
       siteUrl: SITE_URL,
       isProduction: IS_PRODUCTION,
-      robotsIndexable: ROBOTS_INDEXABLE
+      robotsIndexable: ROBOTS_INDEXABLE,
+      candidateSha
     },
     {
       headers: ROBOTS_INDEXABLE

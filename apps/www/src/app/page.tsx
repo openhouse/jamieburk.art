@@ -18,7 +18,7 @@ const startHereLinks = [
   {
     href: "/work/technical-operations",
     label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for OTI, product operations, implementation, and delivery coordination."
+    note: "The fastest role-fit proof surface for technical operations, product operations, implementation, and delivery coordination."
   },
   {
     href: "/work/harry-j-epstein",
@@ -26,9 +26,9 @@ const startHereLinks = [
     note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
   },
   {
-    href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
+    href: "/work/nyc-artist-coalition",
+    label: "NYC Artist Coalition",
+    note: "Recurring participation, safety practice, public systems, and cultural-policy interfaces."
   },
   {
     href: "/work/callnyc",
