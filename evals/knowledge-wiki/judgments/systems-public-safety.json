@@ -6,93 +6,23 @@
   "contractFingerprint": "sha256:4fd8e47766d2c7dfba7890dc552f03a552c2b3f0ec06cd0bdce1eba1cec21353",
   "verdict": "pass",
   "criteria": [
-    {
-      "id": "candidate-and-contract-binding",
-      "status": "pass",
-      "finding": "Fresh content hashing under Node 26.4.0 exactly reproduced the supplied candidate and contract fingerprints. This judgment is the candidate-bound replacement for the stale receipt."
-    },
-    {
-      "id": "suite-v3-contract",
-      "status": "pass",
-      "finding": "Suite version 3 implements every declared hard gate, adds eight record-specific query benchmarks and corresponding human tasks, and preserves two independent judgments plus two unchanged consecutive passes as the automated stop rule."
-    },
-    {
-      "id": "graph-and-schema-validity",
-      "status": "pass",
-      "finding": "npm run wiki:check passed: 47 governed records, 223 total edges, and 46/46 discoverable records reachable. The evaluator independently reported 143 typed relations, 80 prose links, maximum root distance 3, and no schema, link, fragment, relation, or canonical-path errors."
-    },
-    {
-      "id": "stable-identity-and-relations",
-      "status": "pass",
-      "finding": "All eight new records use valid, unique path-independent stable IDs, exact canonical_path values, typed relations to existing targets, and ordinary valid relative links. No duplicate IDs, alias collisions, dangling targets, illegal relation shapes, or unreachable discoverable records were found."
-    },
-    {
-      "id": "canonical-reference-and-evidence-boundaries",
-      "status": "pass",
-      "finding": "The eight records contain 34 canonical-reference occurrences spanning 23 unique current records: 20 claims and three governed inquiries, with no unresolved reference. The claims carry 49 evidence relationships to reviewed sources, all 20 have explicit boundaries, 19 also have anti-claims, and no non-public source is configured to render a citation."
-    },
-    {
-      "id": "event-chronology-integrity",
-      "status": "pass",
-      "finding": "The new NYC Artist Coalition chronology contains 33 rows that exactly match the canonical event dataset on date, title, direct-versus-associated relationship, and venue or mode. It retains the unresolved thirty-fourth control slot and explicitly rejects interpreting platform response displays as attendance, reach, endorsement, demographics, or impact."
-    },
-    {
-      "id": "decoded-leakage-and-machine-path-risk",
-      "status": "pass",
-      "finding": "A read-only scan of 113 Knowledge Wiki, generated-report, and canonical-data files found no literal or recursively decoded private machine paths, file URLs, Drive-folder coordinates, resource keys, signed URLs, or base64-encoded equivalents. Decoding covered percent encoding, Unicode and hex escapes, HTML slash entities, escaped slashes, normalization, and base64 candidates."
-    },
-    {
-      "id": "rights-consent-and-source-access",
-      "status": "pass",
-      "finding": "Research access, repository inclusion, quotation, image reproduction, participant identification, collaborator attribution, and portfolio selection remain separate permissions. The Digital District asset stays summary-only, protected, private-review, consent-review-needed, human-blocked, and unprojected; the new records do not manufacture consent or clearance."
-    },
-    {
-      "id": "collective-attribution",
-      "status": "pass",
-      "finding": "The role map distinguishes independent implementation, origination, joint credit, collective production, bounded support, attributed memory, and unresolved authorship. It preserves named collaborators, rejects authorship inference from metadata or archive custody, and keeps artifact-level provenance and collaborator review outside the public repository and human-blocked."
-    },
-    {
-      "id": "noncausal-lineage",
-      "status": "pass",
-      "finding": "Both lineage records describe documented relationships, recurring methods, resonances, and editorial synthesis rather than a causal chain. They explicitly withhold complete design, publishing, facilitation, founding, task-allocation, and impact claims, and the scenes record does not convert vivid first-person memory into corroboration."
-    },
-    {
-      "id": "project-afterlife-distinctions",
-      "status": "pass",
-      "finding": "The afterlife record separates archival survival, continued collective activity, collaborator-led campaigning, attributed stewardship transition, administrative disposition, later exhibition, and later project development. It explicitly distinguishes municipal action from social handoff and an archive from a current service."
-    },
-    {
-      "id": "protected-personal-absence",
-      "status": "pass",
-      "finding": "The absence register distinguishes not recovered, located-not-read, protected, rights-blocked, collectively unresolved, attributed, intentionally absent, and mature-but-unselected states. It names only the bounded category of private family circumstances, discloses no details, and forbids hill-climbing by erasing the protected absence."
-    },
-    {
-      "id": "people-places-and-testimony-safety",
-      "status": "pass",
-      "finding": "The participation record treats public places and testimony formats as infrastructure while separating invitation, scheduling, attendance, speech, response, and outcome. It excludes guest lists, private identities, contact records, testimony bodies, reactions, and inferred relationship graphs from the public repository."
-    },
-    {
-      "id": "projection-restraint",
-      "status": "pass",
-      "finding": "All eight new records have empty allowed-surfaces arrays; careful synthesis records remain unselected and index records remain not-applicable. No public Knowledge Wiki or Knowledge Bank application route exists, no new app projection was introduced, and protected media remains unprojected."
-    },
-    {
-      "id": "query-and-mutation-checks",
-      "status": "pass",
-      "finding": "All 21 bounded query benchmarks passed. Four non-mutating Wiki tests passed, including current artifacts, graph determinism, query behavior, and the 11-fixture contract. Twelve write-dependent tests stopped before their assertions at mkdtemp with EPERM in the read-only review worktree; the unchanged core implementation, tests, and mutation fixture file have prior writable-environment certification for 16 assertions and 11 mutations, so this is an environment limitation rather than a code defect."
-    },
-    {
-      "id": "generated-artifacts-and-public-safety",
-      "status": "pass",
-      "finding": "Generated graph, index, backlinks, health, navigation, and delta artifacts match the authored records; the semantic graph fingerprint is sha256:1bb63d9a93c9888849c5647cb6195544a0ef0985a920d06b40364edd2793140e. knowledge-bank, public-safety, and git diff --check passed; the ten careful-claim warnings remain guardrail reminders rather than failures."
-    }
+    {"id":"candidate-and-contract-binding","status":"pass","finding":"Fresh content hashing under Node 26.4.0 exactly reproduced the supplied candidate and contract fingerprints. This judgment is the candidate-bound replacement for the stale receipt."},
+    {"id":"suite-v3-contract","status":"pass","finding":"Suite version 3 implements every declared hard gate, adds eight record-specific query benchmarks and corresponding human tasks, and preserves two independent judgments plus two unchanged consecutive passes as the automated stop rule."},
+    {"id":"graph-and-schema-validity","status":"pass","finding":"npm run wiki:check passed: 47 governed records, 223 total edges, and 46/46 discoverable records reachable. The evaluator independently reported 143 typed relations, 80 prose links, maximum root distance 3, and no schema, link, fragment, relation, or canonical-path errors."},
+    {"id":"stable-identity-and-relations","status":"pass","finding":"All eight new records use valid, unique path-independent stable IDs, exact canonical_path values, typed relations to existing targets, and ordinary valid relative links. No duplicate IDs, alias collisions, dangling targets, illegal relation shapes, or unreachable discoverable records were found."},
+    {"id":"canonical-reference-and-evidence-boundaries","status":"pass","finding":"The eight records contain 34 canonical-reference occurrences spanning 23 unique current records: 20 claims and three governed inquiries, with no unresolved reference. The claims carry 49 evidence relationships to reviewed sources, all 20 have explicit boundaries, 19 also have anti-claims, and no non-public source is configured to render a citation."},
+    {"id":"event-chronology-integrity","status":"pass","finding":"The new NYC Artist Coalition chronology contains 33 rows that exactly match the canonical event dataset on date, title, direct-versus-associated relationship, and venue or mode. It retains the unresolved thirty-fourth control slot and explicitly rejects interpreting platform response displays as attendance, reach, endorsement, demographics, or impact."},
+    {"id":"decoded-leakage-and-machine-path-risk","status":"pass","finding":"A read-only scan of 113 Knowledge Wiki, generated-report, and canonical-data files found no literal or recursively decoded private machine paths, file URLs, Drive-folder coordinates, resource keys, signed URLs, or base64-encoded equivalents. Decoding covered percent encoding, Unicode and hex escapes, HTML slash entities, escaped slashes, normalization, and base64 candidates."},
+    {"id":"rights-consent-and-source-access","status":"pass","finding":"Research access, repository inclusion, quotation, image reproduction, participant identification, collaborator attribution, and portfolio selection remain separate permissions. The Digital District asset stays summary-only, protected, private-review, consent-review-needed, human-blocked, and unprojected; the new records do not manufacture consent or clearance."},
+    {"id":"collective-attribution","status":"pass","finding":"The role map distinguishes independent implementation, origination, joint credit, collective production, bounded support, attributed memory, and unresolved authorship. It preserves named collaborators, rejects authorship inference from metadata or archive custody, and keeps artifact-level provenance and collaborator review outside the public repository and human-blocked."},
+    {"id":"noncausal-lineage","status":"pass","finding":"Both lineage records describe documented relationships, recurring methods, resonances, and editorial synthesis rather than a causal chain. They explicitly withhold complete design, publishing, facilitation, founding, task-allocation, and impact claims, and the scenes record does not convert vivid first-person memory into corroboration."},
+    {"id":"project-afterlife-distinctions","status":"pass","finding":"The afterlife record separates archival survival, continued collective activity, collaborator-led campaigning, attributed stewardship transition, administrative disposition, later exhibition, and later project development. It explicitly distinguishes municipal action from social handoff and an archive from a current service."},
+    {"id":"protected-personal-absence","status":"pass","finding":"The absence register distinguishes not recovered, located-not-read, protected, rights-blocked, collectively unresolved, attributed, intentionally absent, and mature-but-unselected states. It names only the bounded category of private family circumstances, discloses no details, and forbids hill-climbing by erasing the protected absence."},
+    {"id":"people-places-and-testimony-safety","status":"pass","finding":"The participation record treats public places and testimony formats as infrastructure while separating invitation, scheduling, attendance, speech, response, and outcome. It excludes guest lists, private identities, contact records, testimony bodies, reactions, and inferred relationship graphs from the public repository."},
+    {"id":"projection-restraint","status":"pass","finding":"All eight new records have empty allowed-surfaces arrays; careful synthesis records remain unselected and index records remain not-applicable. No public Knowledge Wiki or Knowledge Bank application route exists, no new app projection was introduced, and protected media remains unprojected."},
+    {"id":"query-and-mutation-checks","status":"pass","finding":"All 21 bounded query benchmarks passed. Four non-mutating Wiki tests passed, including current artifacts, graph determinism, query behavior, and the 11-fixture contract. Twelve write-dependent tests stopped before their assertions at mkdtemp with EPERM in the read-only review worktree; the unchanged core implementation, tests, and mutation fixture file have prior writable-environment certification for 16 assertions and 11 mutations, so this is an environment limitation rather than a code defect."},
+    {"id":"generated-artifacts-and-public-safety","status":"pass","finding":"Generated graph, index, backlinks, health, navigation, and delta artifacts match the authored records; the semantic graph fingerprint is sha256:1bb63d9a93c9888849c5647cb6195544a0ef0985a920d06b40364edd2793140e. knowledge-bank, public-safety, and git diff --check passed; the ten careful-claim warnings remain guardrail reminders rather than failures."}
   ],
-  "manualGates": {
-    "humanNavigationStudy": "open - no candidate-bound unfamiliar-reader navigation study is recorded",
-    "collaboratorConsent": "open - no candidate-bound collaborator consent or attribution approval is recorded",
-    "rightsClearance": "open - one protected asset remains private-review and rights clearance is human-blocked",
-    "editorialApproval": "open - no candidate-bound Jamie editorial approval is recorded",
-    "productionObservation": "open - no production observation is recorded and no public Wiki route exists"
-  },
+  "manualGates": {"humanNavigationStudy":"open - no candidate-bound unfamiliar-reader navigation study is recorded","collaboratorConsent":"open - no candidate-bound collaborator consent or attribution approval is recorded","rightsClearance":"open - one protected asset remains private-review and rights clearance is human-blocked","editorialApproval":"open - no candidate-bound Jamie editorial approval is recorded","productionObservation":"open - no production observation is recorded and no public Wiki route exists"},
   "remainingWork": "Persist this exact systems-public-safety receipt, then rerun npm run wiki:test and npm run evals:wiki under Node 26 in a writable environment to obtain fresh candidate-bound mutation evidence and satisfy the runner's candidate-binding gate. Human navigation, collaborator consent, rights clearance, editorial approval, and production observation must remain open until explicit candidate-bound human evidence exists."
 }

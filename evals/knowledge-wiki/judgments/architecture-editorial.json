@@ -6,73 +6,19 @@
   "contractFingerprint": "sha256:4fd8e47766d2c7dfba7890dc552f03a552c2b3f0ec06cd0bdce1eba1cec21353",
   "verdict": "pass",
   "criteria": [
-    {
-      "id": "authority-boundaries",
-      "status": "pass",
-      "finding": "The accepted ADR keeps Markdown context, canonical claims and sources, structured proofs, lifecycle history, protected evidence, generated artifacts, and portfolio projection under distinct authorities. The new pages reference canonical IDs without creating a competing claim registry."
-    },
-    {
-      "id": "reader-orientation",
-      "status": "pass",
-      "finding": "The root Start Here section, governed missing-pages index, eight plainly titled records, ordinary relative links, typed relations, and task-shaped v3 retrieval prompts provide bounded paths into chronology, roles, scenes, afterlives, testimony, and absences."
-    },
-    {
-      "id": "source-return-receipts",
-      "status": "pass",
-      "finding": "The source-reencounter method requires date, custody or account context, representation, comparison, access gaps, and librarian handoff. July 19 receipts distinguish native Docs, authenticated Facebook, public pages, protected prior review, and an unusable Wayback return without treating located as read or research access as publication permission."
-    },
-    {
-      "id": "page-usefulness",
-      "status": "pass",
-      "finding": "Each of the eight records answers a distinct editorial or research question, carries canonical references and explicit limitations, and leaves unresolved-event, artifact-authorship, oral-history, private-bridge, and visual-rights work in the wanted queue."
-    },
-    {
-      "id": "chronology-legibility",
-      "status": "pass",
-      "finding": "The events page reproduces the governed 33-record sequence in date order, preserves direct versus associated hosting and the unresolved thirty-fourth slot, and separates Facebook response signals from attendance. The 2003-2011 and 2012-2026 timelines clearly state periods, evidence types, and gaps."
-    },
-    {
-      "id": "non-causal-lineage",
-      "status": "pass",
-      "finding": "Both lineage pages frame recurrence as documented relationship, method, resonance, or editorial synthesis; explicitly reject simple causality; and keep person-level design, publishing, facilitation, founding, and task allocation unresolved where evidence is incomplete."
-    },
-    {
-      "id": "scenes-as-evidence-labelled-composition-material",
-      "status": "pass",
-      "finding": "The scenes index is explicitly composition material rather than portfolio copy. Each scene identifies its evidentiary basis and retains occurrence, attribution, participant-protection, corroboration, and image-rights limits."
-    },
-    {
-      "id": "collective-authorship-restraint",
-      "status": "pass",
-      "finding": "The role map distinguishes independent, originated, jointly credited, helped establish and produce, supported, attributed, and unresolved states. Canonical claims preserve collaborators, boundaries, anti-claims, and held or absent projections while artifact-level provenance and collaborator review remain human-blocked."
-    },
-    {
-      "id": "project-afterlife-distinctions",
-      "status": "pass",
-      "finding": "The afterlife index separates archived prototype, continued collective record, collaborator-led campaign, attributed stewardship transition, administrative withdrawal, later exhibition, and later project development. It explicitly distinguishes municipal action from social handoff and archival survival from a current service."
-    },
-    {
-      "id": "people-place-testimony-privacy",
-      "status": "pass",
-      "finding": "The participation index treats venues and testimony formats as infrastructure while separating invitation, scheduling, attendance, speech, response, and outcome. It excludes private participant, contact, testimony, reaction, and inferred-relationship data from the public repository."
-    },
-    {
-      "id": "protected-absences",
-      "status": "pass",
-      "finding": "The register distinguishes not recovered, located-not-read, protected, collectively unresolved, rights-blocked, intentionally absent personal context, attributed transition, and mature-but-unselected states, with bounded next requests and no pressure to erase protected absence."
-    },
-    {
-      "id": "projection-restraint",
-      "status": "pass",
-      "finding": "All eight records have empty allowed surfaces; synthesis pages are careful and index pages not-applicable. No public Knowledge Wiki or Knowledge Bank route exists, protected media remains unprojected, and generated health retains rights and human-review backlogs rather than translating structural success into publication approval."
-    }
+    {"id":"authority-boundaries","status":"pass","finding":"The accepted ADR keeps Markdown context, canonical claims and sources, structured proofs, lifecycle history, protected evidence, generated artifacts, and portfolio projection under distinct authorities. The new pages reference canonical IDs without creating a competing claim registry."},
+    {"id":"reader-orientation","status":"pass","finding":"The root Start Here section, governed missing-pages index, eight plainly titled records, ordinary relative links, typed relations, and task-shaped v3 retrieval prompts provide bounded paths into chronology, roles, scenes, afterlives, testimony, and absences."},
+    {"id":"source-return-receipts","status":"pass","finding":"The source-reencounter method requires date, custody or account context, representation, comparison, access gaps, and librarian handoff. July 19 receipts distinguish native Docs, authenticated Facebook, public pages, protected prior review, and an unusable Wayback return without treating located as read or research access as publication permission."},
+    {"id":"page-usefulness","status":"pass","finding":"Each of the eight records answers a distinct editorial or research question, carries canonical references and explicit limitations, and leaves unresolved-event, artifact-authorship, oral-history, private-bridge, and visual-rights work in the wanted queue."},
+    {"id":"chronology-legibility","status":"pass","finding":"The events page reproduces the governed 33-record sequence in date order, preserves direct versus associated hosting and the unresolved thirty-fourth slot, and separates Facebook response signals from attendance. The 2003-2011 and 2012-2026 timelines clearly state periods, evidence types, and gaps."},
+    {"id":"non-causal-lineage","status":"pass","finding":"Both lineage pages frame recurrence as documented relationship, method, resonance, or editorial synthesis; explicitly reject simple causality; and keep person-level design, publishing, facilitation, founding, and task allocation unresolved where evidence is incomplete."},
+    {"id":"scenes-as-evidence-labelled-composition-material","status":"pass","finding":"The scenes index is explicitly composition material rather than portfolio copy. Each scene identifies its evidentiary basis and retains occurrence, attribution, participant-protection, corroboration, and image-rights limits."},
+    {"id":"collective-authorship-restraint","status":"pass","finding":"The role map distinguishes independent, originated, jointly credited, helped establish and produce, supported, attributed, and unresolved states. Canonical claims preserve collaborators, boundaries, anti-claims, and held or absent projections while artifact-level provenance and collaborator review remain human-blocked."},
+    {"id":"project-afterlife-distinctions","status":"pass","finding":"The afterlife index separates archived prototype, continued collective record, collaborator-led campaign, attributed stewardship transition, administrative withdrawal, later exhibition, and later project development. It explicitly distinguishes municipal action from social handoff and archival survival from a current service."},
+    {"id":"people-place-testimony-privacy","status":"pass","finding":"The participation index treats venues and testimony formats as infrastructure while separating invitation, scheduling, attendance, speech, response, and outcome. It excludes private participant, contact, testimony, reaction, and inferred-relationship data from the public repository."},
+    {"id":"protected-absences","status":"pass","finding":"The register distinguishes not recovered, located-not-read, protected, collectively unresolved, rights-blocked, intentionally absent personal context, attributed transition, and mature-but-unselected states, with bounded next requests and no pressure to erase protected absence."},
+    {"id":"projection-restraint","status":"pass","finding":"All eight records have empty allowed surfaces; synthesis pages are careful and index pages not-applicable. No public Knowledge Wiki or Knowledge Bank route exists, protected media remains unprojected, and generated health retains rights and human-review backlogs rather than translating structural success into publication approval."}
   ],
-  "manualGates": {
-    "humanNavigationStudy": "open - no unfamiliar-reader navigation study is recorded; generated health says not-requested",
-    "collaboratorConsent": "open - no collaborator-consent evidence is recorded; consequential attribution and oral-history use remain pending human review",
-    "rightsClearance": "open - generated health remains human-blocked with one rights-backlog asset, and no source or image clearance resolves the gate",
-    "editorialApproval": "open - no candidate-bound Jamie editorial approval is recorded; generated health says not-requested",
-    "productionObservation": "open - no production observation is recorded and no public Wiki route exists; generated health says not-requested"
-  },
+  "manualGates": {"humanNavigationStudy":"open - no unfamiliar-reader navigation study is recorded; generated health says not-requested","collaboratorConsent":"open - no collaborator-consent evidence is recorded; consequential attribution and oral-history use remain pending human review","rightsClearance":"open - generated health remains human-blocked with one rights-backlog asset, and no source or image clearance resolves the gate","editorialApproval":"open - no candidate-bound Jamie editorial approval is recorded; generated health says not-requested","productionObservation":"open - no production observation is recorded and no public Wiki route exists; generated health says not-requested"},
   "remainingWork": "Architecture-editorial review passes for this exact candidate. Before any human-valid or production-ready claim, complete unfamiliar-reader navigation tasks, collaborator review and consent, media-rights clearance, Jamie editorial approval, and production observation. Full recursive certification must also rebind the stale judgment receipts and rerun mutation fixtures in a writable environment; wiki:check and the v3 editorial gates passed here, while the read-only sandbox prevented mutation-test fixture creation."
 }

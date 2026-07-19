@@ -4,49 +4,16 @@
   "candidate": "sha256:db863b7ccdb8ef4857a4423feb15faa60c5c28e69116f291c16d8a2d5f917457",
   "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
   "passes": true,
-  "scores": {
-    "capture_integrity": 4,
-    "source_decomposition": 4,
-    "claim_atomicity": 4,
-    "provenance_closure": 4,
-    "status_separation": 4,
-    "project_context": 4,
-    "research_honesty": 4,
-    "projection_restraint": 4
-  },
+  "scores": {"capture_integrity":4,"source_decomposition":4,"claim_atomicity":4,"provenance_closure":4,"status_separation":4,"project_context":4,"research_honesty":4,"projection_restraint":4},
   "evidence": [
-    {
-      "rubric": "capture_integrity",
-      "observation": "The exact event chronology contains 33 rows matching the canonical dataset on date, title, host relationship, and venue or mode, while the thirty-fourth control slot remains explicitly unresolved."
-    },
-    {
-      "rubric": "source_decomposition",
-      "observation": "Across 20 referenced claims, 49 evidence relationships resolve to reviewed sources with explicit non-support fields; no private source is configured to render a public citation."
-    },
-    {
-      "rubric": "claim_atomicity",
-      "observation": "The role vocabulary distinguishes independent implementation, origination, joint credit, collective production, bounded support, attributed memory, and unresolved authorship rather than reducing them to one credit claim."
-    },
-    {
-      "rubric": "provenance_closure",
-      "observation": "The eight pages contain 34 canonical-reference occurrences spanning 23 current claims or inquiries with no unknown IDs, dangling relations, broken links, or fragment failures."
-    },
-    {
-      "rubric": "status_separation",
-      "observation": "Research access, repository inclusion, quotation, image reproduction, participant identification, collaborator attribution, editorial selection, and production publication remain separate decisions."
-    },
-    {
-      "rubric": "project_context",
-      "observation": "Project afterlives distinguish archive survival, continued collective activity, collaborator-led continuation, attributed transition, municipal disposition, later exhibition, and later project development."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "A decoded-leakage scan found no private machine paths, Drive coordinates, resource keys, signed URLs, or encoded equivalents; the pages also reject response totals as attendance and archive custody as authorship."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "The Digital District asset remains summary-only, protected, rights- and consent-review blocked, and unprojected; the new Wiki records introduce no app route or automatic portfolio surface."
-    }
+    {"rubric":"capture_integrity","observation":"The exact event chronology contains 33 rows matching the canonical dataset on date, title, host relationship, and venue or mode, while the thirty-fourth control slot remains explicitly unresolved."},
+    {"rubric":"source_decomposition","observation":"Across 20 referenced claims, 49 evidence relationships resolve to reviewed sources with explicit non-support fields; no private source is configured to render a public citation."},
+    {"rubric":"claim_atomicity","observation":"The role vocabulary distinguishes independent implementation, origination, joint credit, collective production, bounded support, attributed memory, and unresolved authorship rather than reducing them to one credit claim."},
+    {"rubric":"provenance_closure","observation":"The eight pages contain 34 canonical-reference occurrences spanning 23 current claims or inquiries with no unknown IDs, dangling relations, broken links, or fragment failures."},
+    {"rubric":"status_separation","observation":"Research access, repository inclusion, quotation, image reproduction, participant identification, collaborator attribution, editorial selection, and production publication remain separate decisions."},
+    {"rubric":"project_context","observation":"Project afterlives distinguish archive survival, continued collective activity, collaborator-led continuation, attributed transition, municipal disposition, later exhibition, and later project development."},
+    {"rubric":"research_honesty","observation":"A decoded-leakage scan found no private machine paths, Drive coordinates, resource keys, signed URLs, or encoded equivalents; the pages also reject response totals as attendance and archive custody as authorship."},
+    {"rubric":"projection_restraint","observation":"The Digital District asset remains summary-only, protected, rights- and consent-review blocked, and unprojected; the new Wiki records introduce no app route or automatic portfolio surface."}
   ],
   "regressions": [],
   "nextAction": "Keep private artifacts, participant data, testimony bodies, relationship graphs, family details, and uncleared media outside public projection; obtain explicit human authority before changing those states."
