@@ -18,6 +18,10 @@ relations:
     target: index.knowledge-wiki.pilot
     href: indexes/pilot.md
     context: Bounded first implementation of stable identity and typed relations.
+  - type: related_to
+    target: index.knowledge-wiki.employment-context
+    href: indexes/employment-context.md
+    context: Present-tense opportunity research and public-only hiring evaluation.
 ---
 
 # Knowledge Wiki
@@ -54,6 +58,9 @@ The website should use the clearest subset for a specific audience and purpose.
   records.
 - [Wiki health report](../../reports/wiki-health.md): hard gates, diagnostics,
   and human work that automation cannot complete.
+- [Employment context](indexes/employment-context.md): live official-source
+  opportunities, stable requirement IDs, public-only reader evaluation, and
+  private job-search boundaries.
 - [Open questions](_generated/wanted-pages.md): deliberate missing knowledge,
   kept distinct from broken links and nonexistence.
 

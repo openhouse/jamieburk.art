@@ -1,6 +1,6 @@
 # ADR: Knowledge Wiki naming and canonicality
 
-**Status:** Accepted for the bounded foundation pilot  
+**Status:** Accepted for the bounded foundation and opportunity-aware tranche  
 **Date:** 2026-07-18  
 **Decision owner:** Jamie Burkart  
 
@@ -65,12 +65,31 @@ Passing automation does not establish collaborator consent, rights clearance,
 editorial approval, production observation, reader comprehension, or hiring
 outcomes. These remain explicit human gates.
 
+## Branch donor synthesis
+
+The `feature/knowledge-wiki-A` through `feature/knowledge-wiki-E` branches are a
+donor library, not systems to merge wholesale. This tranche preserves:
+
+- **A:** task-oriented, human-readable entry points;
+- **B:** source-channel coverage and reproducible operator views;
+- **C:** role-readiness matrices, projection bindings, and browser-facing QA;
+- **D:** separate document, semantic, evidence, and publication concerns,
+  including metadata-only treatment of protected sources;
+- **E:** one canonical root, type-aware graph checks, public-safety mutations,
+  exact-candidate bindings, retained dissent, and open human authority gates.
+
+The integration adds one opportunity contract and one evaluation family. It
+does not add a second claim registry, lifecycle engine, projection registry, or
+public Explorer.
+
 ## Consequences
 
 - No mass directory or package rename occurs in this pull request.
 - Existing citation and portfolio systems continue to operate.
 - The first compiler reads only Markdown pages with governed frontmatter while
   validating ordinary links across the complete transitional Markdown root.
-- The first public UI remains unchanged.
+- The first opportunity-aware tranche makes one bounded public wording change
+  on `/work/technical-operations`; opportunity context does not become an
+  employer-branded public page.
 - A future Knowledge Wiki Explorer, if warranted by real use, will be private,
   read-only first, and derived from the canonical graph export.

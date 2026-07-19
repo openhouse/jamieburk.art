@@ -15,6 +15,8 @@ import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { z } from "zod";
 
+import { employmentReportPaths } from "./employment-lib.mjs";
+
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   "../.."
@@ -126,6 +128,55 @@ const wantedSchema = z.object({
   reason: z.string().min(1)
 });
 
+const opportunityRequirementSchema = z.object({
+  id: stableIdSchema,
+  importance: z.enum(["critical", "important", "context"]),
+  kind: z.enum(["capability", "artifact", "screen", "condition"]),
+  text: z.string().min(1),
+  wiki_evidence: z.array(stableIdSchema).default([]),
+  public_evidence: z
+    .array(
+      z.object({
+        route: z.string().startsWith("/"),
+        needle: z.string().min(1)
+      })
+    )
+    .default([]),
+  status: z.enum([
+    "visible-proven",
+    "visible-qualified",
+    "visible-weak",
+    "wiki-proven-not-projected",
+    "source-needed",
+    "corroboration-needed",
+    "rights-blocked",
+    "experience-gap",
+    "hard-screen",
+    "unknown",
+    "not-applicable"
+  ]),
+  gap_type: z.enum([
+    "none",
+    "retrieval",
+    "source",
+    "modeling",
+    "wording",
+    "public-projection",
+    "experience",
+    "hard-screen",
+    "role-context",
+    "rights-or-consent"
+  ]),
+  next_action: z.string().min(1)
+});
+
+const opportunityScreenSchema = z.object({
+  id: stableIdSchema,
+  text: z.string().min(1),
+  state: z.enum(["met", "likely-met", "review-needed", "not-met", "unknown"]),
+  disposition: z.enum(["proceed", "verify", "conditional", "do-not-pursue"])
+});
+
 export const wikiRecordSchema = z
   .object({
     id: stableIdSchema,
@@ -180,7 +231,21 @@ export const wikiRecordSchema = z
       .optional(),
     credit_scope: z
       .enum(["individual", "shared", "collective", "institutional", "individual-and-collective"])
-      .optional()
+      .optional(),
+    canonical_url: z.string().url().optional(),
+    source_type: z.enum(["official-employer", "official-public-data", "protected-metadata"]).optional(),
+    opportunity_status: z.enum(["live", "closed", "historical-benchmark", "conditional"]).optional(),
+    verified_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    role_requirements: z.array(opportunityRequirementSchema).default([]),
+    hard_screens: z.array(opportunityScreenSchema).default([]),
+    portfolio_routes: z.array(z.string().startsWith("/")).default([]),
+    discovery_terms: z.array(z.string().min(1)).default([]),
+    confirmed_facts: z.array(z.string().min(1)).default([]),
+    inferences: z.array(z.string().min(1)).default([]),
+    unknowns: z.array(z.string().min(1)).default([]),
+    one_year_success_conditions: z.array(z.string().min(1)).default([]),
+    one_year_risk_conditions: z.array(z.string().min(1)).default([]),
+    interview_questions: z.array(z.string().min(1)).default([])
   })
   .passthrough()
   .superRefine((record, context) => {
@@ -210,6 +275,29 @@ export const wikiRecordSchema = z
         }
       }
     }
+    if (record.kind === "opportunity") {
+      for (const field of ["canonical_url", "source_type", "opportunity_status", "verified_at", "review_by"]) {
+        if (!record[field]) {
+          context.addIssue({ code: "custom", path: [field], message: `opportunity records require ${field}` });
+        }
+      }
+      if (record.role_requirements.length === 0) {
+        context.addIssue({ code: "custom", path: ["role_requirements"], message: "opportunity records require role requirements" });
+      }
+      if (record.hard_screens.length === 0) {
+        context.addIssue({ code: "custom", path: ["hard_screens"], message: "opportunity records require explicit hard-screen review" });
+      }
+      if (record.portfolio_routes.length === 0) {
+        context.addIssue({ code: "custom", path: ["portfolio_routes"], message: "opportunity records require public routes to review" });
+      }
+      if (record.discovery_terms.length < 3) {
+        context.addIssue({ code: "custom", path: ["discovery_terms"], message: "opportunity records require at least three title-blind discovery terms" });
+      }
+      const requirementIds = record.role_requirements.map((item) => item.id);
+      if (new Set(requirementIds).size !== requirementIds.length) {
+        context.addIssue({ code: "custom", path: ["role_requirements"], message: "requirement IDs must be unique within an opportunity" });
+      }
+    }
   });
 
 const privatePattern =
@@ -225,7 +313,8 @@ const generatedOutputs = [
   `${generatedRelativeRoot}/dead-ends.md`,
   `${generatedRelativeRoot}/wanted-pages.md`,
   `${generatedRelativeRoot}/corrections.md`,
-  `${generatedRelativeRoot}/rights-review.md`
+  `${generatedRelativeRoot}/rights-review.md`,
+  ...employmentReportPaths
 ];
 
 function normalizeYaml(value) {
@@ -487,6 +576,62 @@ export function compileWiki(options = {}) {
       } else {
         aliasOwner.set(normalized, record.id);
       }
+    }
+  }
+
+  const requirementOwner = new Map();
+  for (const record of records.filter((item) => item.kind === "opportunity")) {
+    for (const requirement of record.role_requirements) {
+      const owner = requirementOwner.get(requirement.id);
+      if (owner && owner !== record.id) {
+        issues.push(
+          makeIssue(
+            "DUPLICATE_REQUIREMENT_ID",
+            `${requirement.id} is already owned by ${owner}`,
+            record.path,
+            1
+          )
+        );
+      } else {
+        requirementOwner.set(requirement.id, record.id);
+      }
+      for (const evidenceId of requirement.wiki_evidence) {
+        if (!byId.has(evidenceId)) {
+          issues.push(
+            makeIssue(
+              "UNKNOWN_REQUIREMENT_EVIDENCE",
+              `${requirement.id} references unknown Wiki evidence ${evidenceId}`,
+              record.path,
+              1
+            )
+          );
+        }
+      }
+      for (const publicEvidence of requirement.public_evidence) {
+        if (!record.portfolio_routes.includes(publicEvidence.route)) {
+          issues.push(
+            makeIssue(
+              "UNDECLARED_PORTFOLIO_ROUTE",
+              `${requirement.id} uses ${publicEvidence.route}, which is absent from portfolio_routes`,
+              record.path,
+              1
+            )
+          );
+        }
+      }
+    }
+    if (
+      record.opportunity_status === "live" &&
+      record.hard_screens.some((screen) => screen.state === "not-met" && screen.disposition === "proceed")
+    ) {
+      issues.push(
+        makeIssue(
+          "IGNORED_HARD_SCREEN",
+          "a live opportunity cannot proceed past a known unmet hard screen",
+          record.path,
+          1
+        )
+      );
     }
   }
 
@@ -805,6 +950,10 @@ export function compileWiki(options = {}) {
       .sort()
       .map((type) => [type, edges.filter((edge) => edge.type === type).length])
   );
+  const opportunityRecords = records.filter((record) => record.kind === "opportunity");
+  const criticalRequirements = opportunityRecords.flatMap((record) =>
+    record.role_requirements.filter((requirement) => requirement.importance === "critical")
+  );
 
   const graph = {
     schemaVersion: 1,
@@ -843,6 +992,14 @@ export function compileWiki(options = {}) {
       stalePageCount: stale.length,
       correctionCount: corrections.length,
       rightsReviewCount: rightsReview.length,
+      opportunityCount: opportunityRecords.length,
+      liveOpportunityCount: opportunityRecords.filter((record) => record.opportunity_status === "live").length,
+      criticalRequirementCount: criticalRequirements.length,
+      criticalRequirementGapCount: criticalRequirements.filter((requirement) =>
+        ["source-needed", "corroboration-needed", "experience-gap", "hard-screen", "unknown"].includes(
+          requirement.status
+        )
+      ).length,
       warningCount: warnings.length,
       warnings
     },
@@ -915,6 +1072,10 @@ function healthMarkdown(result) {
     `- Stale pages: ${health.diagnostics.stalePageCount}`,
     `- Corrections: ${health.diagnostics.correctionCount}`,
     `- Rights-review queue: ${health.diagnostics.rightsReviewCount}`,
+    `- Opportunity records: ${health.diagnostics.opportunityCount}`,
+    `- Live opportunity records: ${health.diagnostics.liveOpportunityCount}`,
+    `- Critical role requirements: ${health.diagnostics.criticalRequirementCount}`,
+    `- Critical requirements requiring source, corroboration, experience, hard-screen, or unknown review: ${health.diagnostics.criticalRequirementGapCount}`,
     "",
     "## Human authority gates",
     ""
@@ -1160,6 +1321,23 @@ export function queryWiki(result, query) {
       opportunity: opportunity ?? null,
       connected: [...new Set(connected)].sort().map((id) => result.byId.get(id)).filter(Boolean)
     };
+  }
+  if (query.liveOpportunities) {
+    return {
+      query: "live-opportunities",
+      records: result.records
+        .filter((record) => record.kind === "opportunity" && record.opportunity_status === "live")
+        .sort((a, b) => a.review_by.localeCompare(b.review_by) || a.title.localeCompare(b.title))
+    };
+  }
+  if (query.requirement) {
+    for (const opportunity of result.records.filter((record) => record.kind === "opportunity")) {
+      const requirement = opportunity.role_requirements.find((item) => item.id === query.requirement);
+      if (requirement) {
+        return { query: "requirement", opportunity, requirement };
+      }
+    }
+    return { query: "requirement", opportunity: null, requirement: null };
   }
   return { query: "help" };
 }

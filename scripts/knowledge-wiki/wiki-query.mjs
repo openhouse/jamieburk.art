@@ -20,7 +20,9 @@ const query = {
   projectedTo: flags.get("projected-to"),
   rightsPending: flags.has("rights-pending"),
   corrections: flags.has("corrections"),
-  opportunity: flags.get("opportunity")
+  opportunity: flags.get("opportunity"),
+  liveOpportunities: flags.has("live-opportunities"),
+  requirement: flags.get("requirement")
 };
 const format = flags.get("format") ?? "text";
 
@@ -33,7 +35,9 @@ if (!Object.values(query).some(Boolean)) {
   --projected-to <projection-id>
   --rights-pending
   --corrections
-  --opportunity <opportunity-id>`);
+  --opportunity <opportunity-id>
+  --live-opportunities
+  --requirement <requirement-id>`);
   process.exit(0);
 }
 
@@ -75,6 +79,24 @@ if (answer.record !== undefined) {
     markdown ? "## Connected proof" : "Connected proof",
     "",
     ...answer.connected.map((record) => recordLine(record, markdown))
+  );
+} else if (answer.query === "live-opportunities") {
+  lines.push(
+    markdown ? "# Live opportunities" : "Live opportunities",
+    "",
+    ...answer.records.map(
+      (record) => `${recordLine(record, markdown)}\n  reverify by ${record.review_by}`
+    )
+  );
+} else if (answer.query === "requirement") {
+  lines.push(
+    markdown ? `# ${answer.requirement?.id ?? "Requirement not found"}` : answer.requirement?.id ?? "Requirement not found",
+    "",
+    answer.opportunity ? recordLine(answer.opportunity, markdown) : "Not found.",
+    "",
+    answer.requirement
+      ? `- ${answer.requirement.text}\n- status: ${answer.requirement.status}\n- gap: ${answer.requirement.gap_type}\n- next: ${answer.requirement.next_action}`
+      : ""
   );
 }
 

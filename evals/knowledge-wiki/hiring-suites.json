@@ -1,0 +1,68 @@
+{
+  "id": "current-priority-2026-07-18",
+  "version": 1,
+  "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
+  "opportunityPaths": [
+    "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+    "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+    "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+    "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+    "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+    "docs/knowledge-bank/opportunities/permitflow-product-operations.md"
+  ],
+  "readerPaths": [
+    "docs/qa/hiring-acceptance/readers/generic-recruiter.md",
+    "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
+    "docs/qa/hiring-acceptance/readers/aileen-palmer.md",
+    "docs/qa/hiring-acceptance/readers/herminia-ibarra.md",
+    "docs/qa/hiring-acceptance/readers/claudio-fernandez-araoz.md",
+    "docs/qa/hiring-acceptance/readers/amy-edmondson.md"
+  ],
+  "routeFiles": {
+    "/": ["apps/www/src/app/page.tsx", "apps/www/src/data/proofs.ts"],
+    "/work/technical-operations": ["apps/www/src/app/work/technical-operations/page.tsx", "apps/www/src/data/proofs.ts"],
+    "/work/callnyc": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+    "/work/fair-rent-nyc": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+    "/work/harry-j-epstein": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+    "/work/196-sunday-dinner": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+    "/work/kc-town-hall": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+    "/lab/source-backed-team-memory": ["apps/www/src/app/lab/source-backed-team-memory/page.tsx", "apps/www/src/data/proofs.ts"],
+    "/resume": ["apps/www/src/app/resume/page.tsx", "apps/www/src/data/proofs.ts"],
+    "/about": ["apps/www/src/app/about/page.tsx", "apps/www/src/data/proofs.ts"],
+    "/contact": ["apps/www/src/app/contact/page.tsx"]
+  },
+  "discoveryQueries": [
+    {
+      "id": "query.operating-backbone",
+      "terms": ["delivery coordination", "team operating systems", "onboarding documentation", "risk surfacing", "public launch"],
+      "expectedTopK": ["opportunity.nyc-oti.technical-operations-manager.782369", "opportunity.codepath.claude-corps.5182020007"],
+      "k": 3
+    },
+    {
+      "id": "query.discovery-governance",
+      "terms": ["structured discovery", "stakeholder listening", "privacy-aware product judgment", "decision traceability", "low-risk pilots"],
+      "expectedTopK": ["opportunity.aclu.product-manager-discovery.8482872002"],
+      "k": 3
+    },
+    {
+      "id": "query.product-operations-physical-world",
+      "terms": ["physical-world workflows", "public process", "product data", "customer insight", "AI automation"],
+      "expectedTopK": ["opportunity.permitflow.product-operations.8a6e6066"],
+      "k": 3
+    }
+  ],
+  "negativeControls": [
+    {
+      "id": "negative.licensed-clinical-laboratory",
+      "terms": ["operations", "public service", "reporting", "quality control"],
+      "hardScreens": ["New York State Clinical Laboratory Technologist License"],
+      "expectedDisposition": "exclude-hard-screen"
+    },
+    {
+      "id": "negative.windows-infrastructure-admin",
+      "terms": ["technical operations", "risk", "documentation", "stakeholders"],
+      "hardScreens": ["professional network administration certification", "hands-on Windows and network administration"],
+      "expectedDisposition": "exclude-hard-screen"
+    }
+  ]
+}

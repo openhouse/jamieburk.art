@@ -1,7 +1,7 @@
 {
   "suite": "knowledge-wiki-foundation-E",
-  "version": 1,
-  "authority": "M-knowledge-wiki-product-and-teammate-implementation-brief.md",
+  "version": 2,
+  "authority": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md, with M as the implementation spine",
   "principle": "Markdown is the record. The graph is compiled from the record. The portfolio is a selective projection from the governed system.",
   "scoring": "Every deterministic criterion blocks independently. Human authority gates must remain explicitly open until observed; they are not averaged into a synthetic score.",
   "lenses": [
@@ -13,7 +13,8 @@
         "single_physical_root",
         "canonicality_adr",
         "existing_authorities_preserved",
-        "no_public_ui_change",
+        "bounded_public_projection_change",
+        "branch_donor_synthesis",
         "no_explorer"
       ]
     },
@@ -64,8 +65,42 @@
       "criteria": [
         "graph_deterministic",
         "generated_outputs_current",
+        "employment_outputs_current",
         "mutation_suite",
         "legacy_checks_preserved"
+      ]
+    },
+    {
+      "id": "opportunity-governance",
+      "criteria": [
+        "tier_one_official_source_records",
+        "opportunity_contract_complete",
+        "stable_requirement_ids",
+        "operator_queries",
+        "hard_screens_explicit",
+        "confirmed_inferred_unknown_separate",
+        "one_year_fit_bounded",
+        "protected_communications_metadata_only"
+      ]
+    },
+    {
+      "id": "hiring-acceptance-separation",
+      "criteria": [
+        "public_evaluator_has_no_hidden_wiki",
+        "gap_resolver_separate",
+        "reader_profiles_disclaimed",
+        "candidate_and_context_hashes_present",
+        "role_contexts_fresh",
+        "external_outcomes_remain_open"
+      ]
+    },
+    {
+      "id": "opportunity-discovery",
+      "criteria": [
+        "title_blind_recall_passes",
+        "negative_controls_excluded",
+        "real_gaps_remain_visible",
+        "portfolio_projection_remains_selective"
       ]
     }
   ]

@@ -323,3 +323,121 @@ test("generated file cannot masquerade as an authored record", () => {
   mutate(root, "claims/claim.md", (value) => `<!-- GENERATED FILE. DO NOT EDIT. -->\n${value}`);
   assertIssue(compile(root), "GENERATED_AS_AUTHORED");
 });
+
+function addOpportunity(root) {
+  const wiki = path.join(root, "docs/knowledge-bank");
+  const sourcePath = path.join(wiki, "sources/job.md");
+  const opportunityPath = path.join(wiki, "opportunities/job.md");
+  mkdirSync(path.dirname(opportunityPath), { recursive: true });
+  writeFileSync(sourcePath, `---
+id: source.job.fixture
+title: Fixture official job
+kind: source
+status: maintained
+visibility: public
+sensitivity: low
+last_reviewed: 2026-07-18
+review_by: 2026-07-21
+canonical_path: docs/knowledge-bank/sources/job.md
+summary: Official fixture job source.
+source_kind: official-job-posting
+relations:
+  - type: supports
+    target: opportunity.fixture
+    href: ../opportunities/job.md
+---
+# Fixture source
+`);
+  writeFileSync(opportunityPath, `---
+id: opportunity.fixture
+title: Fixture opportunity
+kind: opportunity
+status: governed-open
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-18
+review_by: 2026-07-21
+canonical_path: docs/knowledge-bank/opportunities/job.md
+summary: Bounded fixture opportunity.
+canonical_url: https://example.com/job
+source_type: official-employer
+opportunity_status: live
+verified_at: 2026-07-18
+portfolio_routes:
+  - /work/fixture
+discovery_terms:
+  - delivery coordination
+  - risk surfacing
+  - operating systems
+hard_screens:
+  - id: screen.fixture
+    text: Human eligibility review.
+    state: review-needed
+    disposition: verify
+role_requirements:
+  - id: requirement.fixture.delivery
+    importance: critical
+    kind: capability
+    text: Coordinate delivery.
+    wiki_evidence:
+      - claim.fixture
+    public_evidence:
+      - route: /work/fixture
+        needle: Bounded fixture claim
+    status: visible-proven
+    gap_type: none
+    next_action: Preserve the bounded claim.
+relations:
+  - type: uses_source
+    target: source.job.fixture
+    href: ../sources/job.md
+evidence:
+  - target: source.job.fixture
+    relationship: direct-support
+    confidence: high
+    supports:
+      - official role facts
+---
+# Fixture opportunity
+`);
+  mutate(root, "README.md", (value) => `${value}\n[Opportunity](opportunities/job.md)\n`);
+}
+
+test("opportunity contract preserves requirements, freshness, screens, and official source", () => {
+  const root = fixture();
+  addOpportunity(root);
+  const result = compile(root);
+  assert.deepEqual(result.errors, []);
+  assert.equal(result.health.diagnostics.opportunityCount, 1);
+  assert.equal(result.health.diagnostics.criticalRequirementCount, 1);
+});
+
+test("unknown role-requirement evidence fails closed", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) => value.replace("- claim.fixture", "- claim.not-present"));
+  assertIssue(compile(root), "UNKNOWN_REQUIREMENT_EVIDENCE");
+});
+
+test("public requirement evidence must use a declared portfolio route", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) => value.replace("route: /work/fixture", "route: /work/undeclared"));
+  assertIssue(compile(root), "UNDECLARED_PORTFOLIO_ROUTE");
+});
+
+test("known unmet hard screen cannot be ignored", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) =>
+    value.replace("state: review-needed\n    disposition: verify", "state: not-met\n    disposition: proceed")
+  );
+  assertIssue(compile(root), "IGNORED_HARD_SCREEN");
+});
+
+test("stale live opportunity remains visible as a diagnostic failure", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) => value.replaceAll("2026-07-21", "2026-07-17"));
+  assertIssue(compile(root), "STALE");
+});
