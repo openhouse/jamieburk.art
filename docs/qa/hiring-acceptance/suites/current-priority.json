@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "name": "Current Tier 1 opportunity suite",
+  "opportunityIds": [
+    "opportunity.nyc-oti.technical-operations-manager.782369",
+    "opportunity.aclu.product-manager-ii.discovery.8482872002",
+    "opportunity.benepass.product-operations-manager",
+    "opportunity.codepath.senior-program-manager.claude-corps.5182020007",
+    "opportunity.asana.ai-implementation-manager.service-management.8027437",
+    "opportunity.permitflow.product-operations-manager"
+  ],
+  "targetOpportunityId": "opportunity.aclu.product-manager-ii.discovery.8482872002",
+  "developmentReaderIds": [
+    "reader.generic-recruiter",
+    "reader.generic-hiring-manager",
+    "reader.generic-role-peer",
+    "reader.herminia-ibarra",
+    "reader.claudio-fernandez-araoz"
+  ],
+  "holdoutReaderIds": [
+    "reader.amy-edmondson",
+    "reader.jennifer-pahlka",
+    "reader.cyd-harrell"
+  ],
+  "organizationContextReaderIds": {
+    "opportunity.nyc-oti.technical-operations-manager.782369": ["reader.lisa-gelobter"],
+    "opportunity.benepass.product-operations-manager": ["reader.aileen-palmer"]
+  },
+  "publicRouteSourcesPath": "docs/qa/hiring-acceptance/public-route-sources.json",
+  "readerProfilesPath": "docs/qa/hiring-acceptance/readers.json",
+  "discoveryBenchmarkPath": "docs/qa/hiring-acceptance/discovery-benchmark.json",
+  "minimumCriticalSignalRecall": 0.75,
+  "humanReaderState": "not-run",
+  "externalOutcomeState": "not-observed"
+}

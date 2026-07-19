@@ -40,3 +40,10 @@ supporting-materials/
 *.woff
 *.woff2
 reports/generated/
+reports/wiki-backlinks.json
+reports/wiki-graph.json
+reports/wiki-health.json
+reports/wiki-health.md
+reports/wiki-index.json
+reports/hiring/
+reports/wiki-role-coverage/

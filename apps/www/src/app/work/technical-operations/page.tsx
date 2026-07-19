@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import { technicalOperationsProofRows } from "@/data/proofs";
+import { currentPracticeProofs, technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 const operationsMap = [
@@ -24,12 +24,12 @@ const proofMap = [
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "campaign web and data implementation, shared memory, source maps, action tracking, stakeholder follow-up, and public/private boundary management."
   },
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "open-data translation into resident-facing guidance as an independent follow-on to the New York City Council's first CouncilStat hackathon."
   },
   {
     project: "WOWList",
@@ -68,15 +68,16 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="break-words text-4xl font-bold text-jb-ink">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding
-          materials, documentation systems, launch support, and durable
-          handoffs.
+          environments, I build operating structure so teams can clarify
+          ownership, coordinate delivery, launch public work, and maintain it
+          after handoff. That structure includes planning rhythms, decision
+          logs, action trackers, onboarding materials, documentation systems,
+          launch support, and durable handoffs.
         </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
@@ -104,6 +105,29 @@ export default function TechnicalOperationsPage() {
             ))}
           </dl>
         </JBCard>
+      </section>
+      <section aria-labelledby="recent-practice" className="mt-10">
+        <div className="jb-reading">
+          <h2 className="text-3xl font-semibold text-jb-ink" id="recent-practice">
+            Recent practice
+          </h2>
+          <p className="mt-3 leading-7 text-jb-ink/72">
+            Current work extends the same operating discipline into coalition
+            planning, source-backed team memory, and human-reviewed AI evaluation.
+          </p>
+        </div>
+        <div className="mt-5 grid gap-5 md:grid-cols-3">
+          {currentPracticeProofs.map((item) => (
+            <JBCard key={item.proofId}>
+              <p className="text-xs font-semibold uppercase text-jb-blue">
+                {item.period} / {item.context}
+              </p>
+              <p className="mt-4 leading-7 text-jb-ink/76">
+                {item.proof.shortWording ?? item.proof.publicWording}
+              </p>
+            </JBCard>
+          ))}
+        </div>
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {technicalOperationsProofRows.map((row) => (

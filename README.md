@@ -30,7 +30,15 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run wiki:check
+npm run wiki:test
+npm run wiki:eval
+npm run wiki:report
+npm run wiki:query -- --id project.callnyc
 npm run public-safety
+npm run check:knowledge-lifecycle
+npm run check:chad-lens
+npm run check:evals
 npm run check:routes
 npm run check:citations
 npm run test:citations
@@ -39,19 +47,21 @@ npm run preflight:staging
 npm run preflight:production
 ```
 
-## Knowledge Bank
+## Knowledge Wiki
 
-This repo includes a public-safe knowledge bank for professional claims:
+This repo includes a public-safe **Knowledge Wiki**, formerly called the
+Knowledge Bank. Its current compatibility paths are:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
 - `apps/www/src/data/knowledge-bank/records.ts`
 
-The website is a projection of this bank. Pages select, sequence, and phrase
+The Wiki is a Markdown-first editorial and research system with a compiled
+semantic graph. The website is a selective projection. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
 first adding a public-safe proof record.
 
-The knowledge bank is not a private archive. Do not commit raw transcripts,
+The Knowledge Wiki is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,
 client-private material, internal analytics, raw community records, unapproved
 photos, unapproved screenshots, or unapproved quotes.
@@ -59,12 +69,48 @@ photos, unapproved screenshots, or unapproved quotes.
 There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
-`npm run knowledge-bank` checks the proof schema, projection rules, and work
-metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+`npm run knowledge-bank` remains the compatibility command for the proof
+schema, projection rules, and work metadata. `npm run wiki:check` validates
+governed Markdown identity, links, typed relations, canonical references,
+rights, and projections; `npm run wiki:test` runs mutation regressions;
+`npm run wiki:eval` evaluates the bounded foundation; and
+`npm run wiki:report` creates ignored derived graph and health artifacts.
+`npm run check:routes` checks canonical routes and legacy redirects.
 `npm run check:citations` validates the source-to-projection graph and redacted
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+`docs/qa/recursive-evals-M.md` defines the repeatable launch-readiness loop for
+claim review, public-safety boundaries, hiring clarity, web QA, and production
+cutover checks. `npm run check:chad-lens` runs the deterministic hiring-clarity
+criterion. `npm run check:evals` combines that criterion with the existing
+knowledge-lifecycle, public-safety, and route gates; it does not create a second
+safety scanner.
+
+`docs/knowledge-bank/intake-and-maturation.md` defines how URLs, memories,
+artifacts, repositories, and photo discoveries enter the Knowledge Wiki,
+develop through research, and remain available even when they are not selected
+for the current public site.
+
+The personal Facebook archival pass is documented through an aggregate-only
+[1,243-record census](docs/knowledge-bank/jamie-facebook-post-census-2026-07-13.csv)
+and [bounded research report](docs/knowledge-bank/jamie-facebook-posts-2026-07-13.md).
+The raw personal corpus stays outside the repository.
+
+## Requests for Proposal
+
+Substantial future architecture, governance, product, and operating-model ideas
+develop under [`rfps/`](rfps/README.md) before implementation. RFPs are
+public-safe design documents. Proposal or acceptance does not by itself
+authorize implementation, publication, source access, migration, or
+deployment.
+
+The first proposal, [RFP 0001](rfps/0001-dual-knowledge-wiki-architecture.md),
+describes a deferred dual-Wiki architecture with a shared core package, a
+private personal Wiki, the current public professional Wiki, a separate source
+vault, and a human-gated promotion path. It must not be implemented as part of
+the pull request that introduced it.
 
 ## Environment
 
@@ -130,13 +176,13 @@ or serve private, proprietary, or unlicensed font files.
   Do not render that marker in production-facing pages; keep launch blockers in
   `docs/knowledge-bank/launch-blockers.md`.
 
-## Launch Blockers
+## Launch Readiness Review
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
+- Confirm public email, LinkedIn, GitHub, and resume links.
+- Confirm proof metrics use supportable, bounded wording.
+- Confirm collaborator names, photos, quotes, and artifacts are public-safe.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm public pages contain no TODO, placeholder, pending approval, or
+  before-launch language.

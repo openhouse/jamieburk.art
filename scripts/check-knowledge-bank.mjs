@@ -114,6 +114,7 @@ if (existsSync(path.join(repoRoot, "docs/proofs-bank.md")) && existsSync(claimsP
 const blockedRouteDirs = [
   "apps/www/src/app/proofs",
   "apps/www/src/app/knowledge-bank",
+  "apps/www/src/app/knowledge-wiki",
   "apps/www/src/app/public-claims"
 ];
 
@@ -289,6 +290,7 @@ for (const file of walk(docsRoot)) {
 for (const requiredDoc of [
   "README.md",
   "chad-lens.md",
+  "intake-and-maturation.md",
   "approval-register.md",
   "claims.md",
   "proofs.md",

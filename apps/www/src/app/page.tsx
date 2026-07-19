@@ -87,7 +87,7 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: ambiguous, high-context
+              These projects show a recurring pattern: emerging, high-context
               situations becoming usable systems, public-facing tools,
               documentation, decision trails, and durable handoffs.
             </p>
@@ -140,7 +140,7 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but loosely defined. I
+            I usually enter when the work is important and still emerging. I
             listen across stakeholders, map what is known and unknown, create
             the workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to
