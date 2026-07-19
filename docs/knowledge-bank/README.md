@@ -27,6 +27,14 @@ relations:
     href: indexes/living-archive.md
     context: Orientation, missing-page, project, and situated source-return map.
   - type: related_to
+    target: index.knowledge-wiki.project-lineages
+    href: indexes/project-lineages.md
+    context: Bounded inheritance, adaptation, and divergence across projects.
+  - type: related_to
+    target: index.knowledge-wiki.decision-records
+    href: indexes/decision-records.md
+    context: Decision reconstructions with evidence states, unknowns, and projection holds.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -72,6 +80,10 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Living archive](indexes/living-archive.md): Jamie, the practice throughline,
   the priority project and campaign cohort, ethical methods, visual evidence,
   and a dated return to original source material.
+- [Project lineages](indexes/project-lineages.md): inheritance, adaptation, and
+  divergence without retrospective inevitability.
+- [Decision records](indexes/decision-records.md): bounded reconstructions that
+  preserve actors, constraints, evidence states, artifacts, and unknowns.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.

@@ -1,6 +1,6 @@
 {
   "suite": "knowledge-wiki-foundation-E",
-  "version": 3,
+  "version": 4,
   "authority": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md, with M as the implementation spine",
   "principle": "Markdown is the record. The graph is compiled from the record. The portfolio is a selective projection from the governed system.",
   "scoring": "Every deterministic criterion blocks independently. Human authority gates must remain explicitly open until observed; they are not averaged into a synthetic score.",
@@ -119,6 +119,25 @@
         "protected_sources_metadata_only",
         "remaining_wants_explicit",
         "public_projection_still_selective"
+      ]
+    },
+    {
+      "id": "interpretive-layer-and-decision-records",
+      "criteria": [
+        "interpretive_records_materialized",
+        "interpretive_navigation_reachable",
+        "pressures_precede_responses_without_deficit",
+        "people_places_collective_credit_bounded",
+        "project_lineages_not_teleology",
+        "maintenance_handoff_is_delivery",
+        "capabilities_cross_project_and_evidence_bound",
+        "decision_contract_complete",
+        "decision_credit_and_projection_bounded",
+        "decision_query_operational",
+        "interpretive_source_return_current",
+        "interpretive_protected_sources_metadata_only",
+        "councilstat_source_gap_closed",
+        "interpretive_public_projection_selective"
       ]
     }
   ]

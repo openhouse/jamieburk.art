@@ -174,6 +174,12 @@ const sourceEncounterSchema = z.object({
   ])
 });
 
+const decisionOptionSchema = z.object({
+  option: z.string().min(1),
+  disposition: z.enum(["chosen", "not-chosen", "adapted", "not-observed"]),
+  evidence_state: z.enum(["documented", "inferred", "not-observed"])
+});
+
 const opportunityRequirementSchema = z.object({
   id: stableIdSchema,
   importance: z.enum(["critical", "important", "context"]),
@@ -240,6 +246,17 @@ export const wikiRecordSchema = z
     evidence: z.array(evidenceSchema).default([]),
     wanted: z.array(wantedSchema).default([]),
     source_encounter: sourceEncounterSchema.optional(),
+    decision_period: z.string().min(1).optional(),
+    decision_state: z
+      .enum(["documented", "documented-with-boundary", "inferred", "proposed", "superseded"])
+      .optional(),
+    decision_question: z.string().min(1).optional(),
+    decision_actors: z.array(z.string().min(1)).default([]),
+    constraints: z.array(z.string().min(1)).default([]),
+    options_considered: z.array(decisionOptionSchema).default([]),
+    chosen_course: z.string().min(1).optional(),
+    resulting_artifacts: z.array(stableIdSchema).default([]),
+    outcome_boundary: z.string().min(1).optional(),
     projection: projectionSchema.optional(),
     projection_status: z
       .enum(["active", "hold", "pending", "deprecated", "disallowed"])
@@ -329,6 +346,58 @@ export const wikiRecordSchema = z
           code: "custom",
           path: ["source_encounter", "source_states"],
           message: "source encounter targets must be unique"
+        });
+      }
+    }
+    if (record.kind === "decision") {
+      for (const field of [
+        "decision_period",
+        "decision_state",
+        "decision_question",
+        "chosen_course",
+        "outcome_boundary",
+        "credit_scope",
+        "projection"
+      ]) {
+        if (!record[field]) {
+          context.addIssue({
+            code: "custom",
+            path: [field],
+            message: `decision records require ${field}`
+          });
+        }
+      }
+      for (const field of [
+        "decision_actors",
+        "constraints",
+        "options_considered",
+        "resulting_artifacts",
+        "unknowns",
+        "anti_claims"
+      ]) {
+        if (!Array.isArray(record[field]) || record[field].length === 0) {
+          context.addIssue({
+            code: "custom",
+            path: [field],
+            message: `decision records require non-empty ${field}`
+          });
+        }
+      }
+      const chosenOptions = record.options_considered.filter(
+        (option) => option.disposition === "chosen"
+      );
+      if (chosenOptions.length !== 1) {
+        context.addIssue({
+          code: "custom",
+          path: ["options_considered"],
+          message: "decision records require exactly one chosen option"
+        });
+      }
+      if (record.projection?.status === "active") {
+        context.addIssue({
+          code: "custom",
+          path: ["projection", "status"],
+          message: "decision records require separate editorial review before active projection"
         });
       }
     }
@@ -627,6 +696,31 @@ export function compileWiki(options = {}) {
       byId.set(record.id, record);
     }
     byPath.set(record.path, record);
+  }
+
+  for (const record of records.filter((item) => item.kind === "decision")) {
+    const relationTargets = new Set(record.relations.map((relation) => relation.target));
+    for (const targetId of record.resulting_artifacts) {
+      if (!byId.has(targetId)) {
+        issues.push(
+          makeIssue(
+            "UNKNOWN_DECISION_ARTIFACT",
+            `decision artifact target ${targetId} does not exist`,
+            record.path,
+            1
+          )
+        );
+      } else if (!relationTargets.has(targetId)) {
+        issues.push(
+          makeIssue(
+            "UNLINKED_DECISION_ARTIFACT",
+            `decision artifact target ${targetId} requires a typed relation`,
+            record.path,
+            1
+          )
+        );
+      }
+    }
   }
 
   const aliasOwner = new Map();
@@ -1371,6 +1465,18 @@ export function queryWiki(result, query) {
   }
   if (query.corrections) {
     return { query: "corrections", records: result.health.corrections };
+  }
+  if (query.decisions) {
+    return {
+      query: "decisions",
+      records: result.records
+        .filter((record) => record.kind === "decision")
+        .sort(
+          (a, b) =>
+            a.decision_period.localeCompare(b.decision_period) ||
+            a.title.localeCompare(b.title)
+        )
+    };
   }
   if (query.opportunity) {
     const opportunity = result.byId.get(query.opportunity);

@@ -25,6 +25,15 @@ relations:
   - type: uses_source
     target: source.politico.callnyc.2016-03-14
     href: ../sources/politico-callnyc-2016-03-14.md
+  - type: uses_source
+    target: source.councilstat.fuller-release.2016
+    href: ../sources/nycc-constituent-services-data-2016-05-27.md
+  - type: uses_source
+    target: source.callnyc.source-repository
+    href: ../sources/callnyc-source-repository.md
+  - type: related_to
+    target: decision.callnyc.issue-pathways
+    href: ../decisions/callnyc-issue-pathways.md
   - type: uses_method
     target: method.source-backed-team-memory
     href: ../methods/source-backed-team-memory.md
@@ -38,10 +47,6 @@ relations:
   - type: projected_to
     target: portfolio.work.callnyc
     href: ../projections/work-callnyc.md
-wanted:
-  - id: source.councilstat.fuller-release.2016
-    proposed_title: Fuller CouncilStat constituent-services data release
-    reason: Needed to tighten the release-to-prototype chronology.
 ---
 
 # CallNYC citational record
@@ -82,6 +87,9 @@ product, a documented formal submission, or a documented winner.
 - New York City Council Hackathon promotional graphic.
 - Politico New York coverage dated March 14, 2016.
 - Public CallNYC GitHub repository.
+- Official May 2016 Council page documenting the fuller public-data release,
+  daily updates, the January Civic Hall hackathon, and participant suggestions
+  being implemented.
 - Participant photograph metadata held outside the public projection.
 - Documented Civic Hall Wayback/CDX research run held outside the app build.
 

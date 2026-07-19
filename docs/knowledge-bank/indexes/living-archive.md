@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-07-19
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/indexes/living-archive.md
-summary: Task-oriented map of the newly created orientation, campaign, project, capability, ethical-method, source-return, role-fit, and visual-evidence pages.
+summary: Task-oriented map of orientation, campaign, project, pressure, place, lineage, decision, capability, stewardship, source-return, role-fit, and visual-evidence pages.
 relations:
   - type: related_to
     target: person.jamie-burkart
@@ -28,6 +28,27 @@ relations:
   - type: related_to
     target: capability.participatory-public-systems
     href: ../capabilities/participatory-public-systems.md
+  - type: related_to
+    target: index.knowledge-wiki.pressures
+    href: what-the-work-was-up-against.md
+  - type: related_to
+    target: index.knowledge-wiki.people-places-work
+    href: people-places-and-work-between-them.md
+  - type: related_to
+    target: index.knowledge-wiki.project-lineages
+    href: project-lineages.md
+  - type: related_to
+    target: index.knowledge-wiki.decision-records
+    href: decision-records.md
+  - type: related_to
+    target: method.maintenance-handoff-stewardship
+    href: ../methods/maintenance-handoff-and-stewardship.md
+  - type: related_to
+    target: capability.civic-cultural-technical-translation
+    href: ../capabilities/civic-cultural-and-technical-translation.md
+  - type: related_to
+    target: capability.implementation-operational-stewardship
+    href: ../capabilities/implementation-and-operational-stewardship.md
   - type: related_to
     target: method.collective-credit-protected-absence
     href: ../methods/collective-credit-and-protected-absence.md
@@ -76,6 +97,9 @@ relations:
   - type: related_to
     target: research.foundational-source-return.2026-07-19
     href: ../research-runs/foundational-source-return-2026-07-19.md
+  - type: related_to
+    target: research.interpretive-layer-source-return.2026-07-19
+    href: ../research-runs/interpretive-layer-source-return-2026-07-19.md
 wanted:
   - id: source.nycac.founding-and-handoff.2016-2018
     proposed_title: NYC Artist Coalition founding and handoff source set
@@ -103,6 +127,16 @@ Jamie as personal librarian.
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md)
 - [Practice timeline, 2004-present](../timelines/practice-2004-present.md)
 - [Participatory public systems](../capabilities/participatory-public-systems.md)
+
+## Read across projects
+
+- [What the work was up against](what-the-work-was-up-against.md)
+- [People, places, and the work between them](people-places-and-work-between-them.md)
+- [Project lineages](project-lineages.md)
+- [Decision records](decision-records.md)
+- [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md)
+- [Civic, cultural, and technical translation](../capabilities/civic-cultural-and-technical-translation.md)
+- [Implementation and operational stewardship](../capabilities/implementation-and-operational-stewardship.md)
 
 ## Understand collective civic work
 
@@ -134,6 +168,7 @@ Jamie as personal librarian.
 
 - [Situated source rereading](../methods/situated-source-rereading.md)
 - [Foundational source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md)
+- [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md)
 - [Open installation-title inquiry](../research-inquiries/ucsc-installation-title.md)
 - [Generated wanted pages](../_generated/wanted-pages.md)
 

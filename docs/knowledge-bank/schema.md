@@ -100,6 +100,43 @@ Authorization to inspect a source never grants permission to quote, reproduce,
 attribute, or publish it. Contradictions remain explicit until a stronger
 source or authorized human review resolves them.
 
+## Decision records
+
+A `decision` is a bounded reconstruction of a consequential choice, not a
+success story written backward. Decision records require:
+
+```yaml
+decision_period: 2016-03
+decision_state: documented-with-boundary
+decision_question: What needed to become usable, and for whom?
+decision_actors:
+  - Jamie as independent implementer
+constraints:
+  - The public data was difficult for residents to interpret directly.
+options_considered:
+  - option: Organize records as resident-facing issue pathways.
+    disposition: chosen
+    evidence_state: documented
+  - option: Publish an undifferentiated mirror of the source data.
+    disposition: not-observed
+    evidence_state: not-observed
+chosen_course: Build an independent interpretation layer around issue pathways.
+resulting_artifacts:
+  - project.callnyc
+outcome_boundary: The surviving implementation documents the choice, not every deliberation that preceded it.
+unknowns:
+  - No complete contemporaneous product-decision log has been recovered.
+credit_scope: individual
+projection:
+  status: hold
+  surfaces: []
+```
+
+Every resulting artifact must exist and have a typed relation from the decision
+record. Exactly one option is marked `chosen`. An alternative may be
+`not-observed`; recording that absence is preferable to inventing a tradeoff.
+Decision pages remain held until a separate editorial projection review.
+
 ## Generated files
 
 Files under `_generated` and `reports/wiki-*` begin with a generated warning.

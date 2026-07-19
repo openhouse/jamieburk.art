@@ -20,6 +20,7 @@ import {
 import { validateResponsiveAccessibilityEvidence } from "./accessibility-evidence.mjs";
 import { findDisclosedProtectedIdentityDirectives } from "./privacy-boundaries.mjs";
 import { evaluateMissingPages } from "./missing-pages-eval.mjs";
+import { evaluateInterpretiveLayer } from "./interpretive-layer-eval.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -47,6 +48,7 @@ const privateVault = result.byId.get("source.vault.communication-history.metadat
 const accessibilityEvidence = validateResponsiveAccessibilityEvidence(defaultRepoRoot);
 const disclosedProtectedIdentityDirectives = findDisclosedProtectedIdentityDirectives(defaultRepoRoot);
 const missingPages = evaluateMissingPages({ result });
+const interpretiveLayer = evaluateInterpretiveLayer({ result });
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -209,7 +211,10 @@ const checks = {
   candidate_bound_accessibility_evidence: accessibilityEvidence.passed,
   mutation_suite:
     existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/wiki.test.mjs")) &&
-    existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/employment.test.mjs")),
+    existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/employment.test.mjs")) &&
+    existsSync(
+      path.join(defaultRepoRoot, "scripts/knowledge-wiki/interpretive-layer-eval.test.mjs")
+    ),
   legacy_checks_preserved:
     readFileSync(path.join(defaultRepoRoot, "package.json"), "utf8").includes("npm run check:citations") &&
     existsSync(path.join(defaultRepoRoot, "scripts/check-knowledge-bank.mjs")),
@@ -301,7 +306,8 @@ const checks = {
     opportunities.every((record) => !record.projection || record.projection.status !== "active") &&
     boundedPublicUiChange,
 
-  ...missingPages.checks
+  ...missingPages.checks,
+  ...interpretiveLayer.checks
 };
 
 let failed = 0;
