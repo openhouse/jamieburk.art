@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `9f8de25f72cc48fbd1ce86f4f82d3f9243f12b8b`
-**Generation time:** 2026-07-19T12:46:34-04:00
-**Source fingerprint:** `7ad4705ba07b2393a24bce5b69a5a880e4806f18888a3ee063e7528065bdf674`
+**Source commit:** `cd96f4b66a2e6c427de39495897ef1cbc1622f34`
+**Generation time:** 2026-07-19T13:46:15-04:00
+**Source fingerprint:** `1ba9159f377b9b0190feccb0f0b9e6edb757f276b7ca867ae211c7211950d566`
 
 ## application
 
@@ -15,6 +15,8 @@
 
 ## capability
 
+- [Civic, cultural, and technical translation](../capabilities/civic-cultural-and-technical-translation.md) - `capability.civic-cultural-technical-translation`
+- [Implementation and operational stewardship](../capabilities/implementation-and-operational-stewardship.md) - `capability.implementation-operational-stewardship`
 - [Participatory public systems](../capabilities/participatory-public-systems.md) - `capability.participatory-public-systems`
 - [Technical Operations](../capabilities/technical-operations.md) - `capability.technical-operations`
 
@@ -26,6 +28,14 @@
 ## correction
 
 - [CallNYC chronology correction](../corrections/callnyc-years-2026.md) - `correction.callnyc-years.2026`
+
+## decision
+
+- [CallNYC issue pathways for public constituent-services data](../decisions/callnyc-issue-pathways.md) - `decision.callnyc.issue-pathways`
+- [Harry J. Epstein continuity-oriented modernization](../decisions/hje-continuity-modernization.md) - `decision.hje.continuity-modernization`
+- [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
+- [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
+- [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
 
 ## evaluation
 
@@ -40,14 +50,19 @@
 ## index
 
 - [Knowledge Wiki](../README.md) - `index.knowledge-wiki`
+- [Decision records](../indexes/decision-records.md) - `index.knowledge-wiki.decision-records`
 - [Employment context and hiring acceptance](../indexes/employment-context.md) - `index.knowledge-wiki.employment-context`
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
+- [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
+- [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
+- [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
 
 ## method
 
 - [Collective credit and protected absence](../methods/collective-credit-and-protected-absence.md) - `method.collective-credit-protected-absence`
+- [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
@@ -99,11 +114,15 @@
 ## research-run
 
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
+- [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 
 ## source
 
+- [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
+- [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
+- [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
 - [Harry J. Epstein Company archival research brief, July 2026](../sources/hje-research-brief-2026-07.md) - `source.hje.research-brief.2026-07`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
@@ -113,6 +132,7 @@
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
 - [The Kansas City Star raft report, November 15, 2007](../sources/kansas-city-star-raft-2007-11-15.md) - `source.kansas-city-star.raft.2007-11-15`
+- [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
@@ -122,6 +142,7 @@
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
+- [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
 
 ## timeline
 
