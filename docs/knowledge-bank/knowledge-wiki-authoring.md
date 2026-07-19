@@ -116,8 +116,24 @@ npm run wiki:query -- --project callnyc
 npm run wiki:query -- --backlinks project.callnyc
 npm run wiki:query -- --surface /work/callnyc
 npm run evals:wiki
+npm run test:hiring
+npm run evals:hiring
 ```
 
 `wiki:tasks` prints human retrieval protocols; it does not fabricate human
 results. Existing `knowledge-bank` and `query:knowledge` commands remain
 compatibility interfaces for their current canonical layers.
+
+## Opportunity Records
+
+Use the official employer posting as the canonical source, record the
+verification window, and separate confirmed facts from inferences and unknowns.
+Give every requirement a stable ID and one role-coverage state. A live record
+must identify hard screens, title-blind discovery terms, public routes, and
+one-year success and risk conditions.
+
+Never store application status, warm-path notes, protected applicant facts, or
+private communications in a public opportunity record. The hiring evaluator
+receives only the public portfolio, public resume, sanitized role context, and
+reader context. The Wiki gap resolver runs afterward with public-safe Wiki
+evidence.

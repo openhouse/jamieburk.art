@@ -20,7 +20,8 @@ the human contract for the bounded foundation.
 
 Kind-specific records add fields such as `canonical_refs`, `allowed_surfaces`,
 `rights_state`, `consent_state`, `knowledge_status`, `previous_claim`,
-`corrected_claim`, and `affected_surfaces`.
+`corrected_claim`, `affected_surfaces`, and the governed opportunity fields
+below.
 
 ## Stable Identity
 
@@ -54,3 +55,31 @@ The pilot vocabulary is `part_of`, `informed_by`, `resulted_in`, `supports`,
 
 Inverse views are generated. Do not maintain duplicate inverse edges merely for
 symmetry.
+
+## Governed Employment Opportunities
+
+A live employment opportunity also records:
+
+- `canonical_url`, `source_type`, `opportunity_status`, `verified_at`, and
+  `reverify_by`;
+- posted compensation and location without private application decisions;
+- stable `role_requirements` with priority, source status, Wiki evidence,
+  public evidence, gap type, and next action;
+- title-blind `discovery_terms`;
+- portfolio routes a real hiring reader can inspect;
+- one-year success and risk conditions;
+- unknowns and interview questions.
+
+Live priority roles fail closed when their verification window expires. Closed
+roles may remain historical benchmarks, but must not surface as current.
+
+Role coverage uses these states:
+
+`visible-proven`, `visible-qualified`, `visible-weak`,
+`wiki-proven-not-projected`, `source-needed`, `corroboration-needed`,
+`rights-blocked`, `experience-gap`, `hard-screen`, `unknown`, and
+`not-applicable`.
+
+These states are not a score. They distinguish missing public communication,
+unfinished research, protected evidence, genuine experience gaps, and
+application gates so the system can recommend the right next action.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "sha256:b3915e8a6ee9cbcfdca68d332d873169cef82e03f9c0fddb1c4cdaab7f72379b",
+  "sourceFingerprint": "sha256:892af6db5c0c2de7fc909d3a1d50f3e48de89405a0261e7c5252b7d6fac1649c",
   "byKind": {
     "asset": [
       "asset.photo.digital-district.001"
@@ -20,6 +20,7 @@
       "event.nycc.constituent-services-hackathon.2016"
     ],
     "index": [
+      "index.employment-acceptance",
       "index.knowledge-wiki",
       "index.knowledge-wiki-pilot"
     ],
@@ -27,7 +28,12 @@
       "method.source-backed-team-memory"
     ],
     "opportunity": [
-      "opportunity.nyc-oti.technical-operations-manager.782369"
+      "opportunity.aclu.product-manager-ii-discovery.8482872002",
+      "opportunity.asana.ai-implementation-manager.8027437",
+      "opportunity.benepass.product-operations-manager.7f963a7a",
+      "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "opportunity.nyc-oti.technical-operations-manager.782369",
+      "opportunity.permitflow.product-operations-manager.8a6e6066"
     ],
     "projection": [
       "portfolio.work.callnyc",
@@ -45,7 +51,13 @@
   "byStatus": {
     "governed-open": [
       "asset.photo.digital-district.001",
-      "opportunity.nyc-oti.technical-operations-manager.782369"
+      "index.employment-acceptance",
+      "opportunity.aclu.product-manager-ii-discovery.8482872002",
+      "opportunity.asana.ai-implementation-manager.8027437",
+      "opportunity.benepass.product-operations-manager.7f963a7a",
+      "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "opportunity.nyc-oti.technical-operations-manager.782369",
+      "opportunity.permitflow.product-operations-manager.8a6e6066"
     ],
     "maintained": [
       "capability.technical-operations",
@@ -68,14 +80,20 @@
     ]
   },
   "aliases": {
+    "aclu discovery": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+    "asana ai implementation": "opportunity.asana.ai-implementation-manager.8027437",
+    "benepass product operations": "opportunity.benepass.product-operations-manager.7f963a7a",
     "call nyc": "project.callnyc",
     "callnyc.org": "project.callnyc",
     "civic hall event announcement": "source.civichall.hackathon-announcement.2016",
+    "codepath claude corps": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
     "council event-day post": "source.nycc.councilstat-hackathon-post.2016",
+    "current priority opportunities": "index.employment-acceptance",
     "digital district participant photograph": "asset.photo.digital-district.001",
     "january 2016 councilstat hackathon": "event.nycc.constituent-services-hackathon.2016",
     "knowledge bank": "index.knowledge-wiki",
     "oti technical operations": "opportunity.nyc-oti.technical-operations-manager.782369",
+    "permitflow product operations": "opportunity.permitflow.product-operations-manager.8a6e6066",
     "politico callnyc article": "source.politico.callnyc.2016-03-14",
     "product operations and implementation": "capability.technical-operations",
     "source backed team memory": "method.source-backed-team-memory",

@@ -20,6 +20,10 @@ relations:
     target: index.knowledge-wiki-pilot
     href: indexes/pilot.md
     context: Start-here map for the bounded foundation records.
+  - type: documents
+    target: index.employment-acceptance
+    href: indexes/employment-acceptance.md
+    context: Current opportunity records, role coverage, and hiring-acceptance evaluation boundaries.
 ---
 
 # Knowledge Wiki
@@ -39,6 +43,8 @@ and the [authoring guide](knowledge-wiki-authoring.md).
 
 - [Foundation pilot](indexes/pilot.md): bounded records that demonstrate the
   document, semantic, evidence, and governance graphs.
+- [Employment acceptance](indexes/employment-acceptance.md): current role
+  contexts, requirement coverage, source freshness, and evaluation boundaries.
 - [Projects](projects/): project histories and editorial boundaries.
 - [Sources and claims](citational-care.md): canonical citation and evidence
   workflow.

@@ -36,6 +36,8 @@ workspaces, Dockerfile, Dokku.
 - `npm run evals:application`
 - `npm run evals:production`
 - `npm run evals:composite`
+- `npm run test:hiring`
+- `npm run evals:hiring`
 
 ## Public-Safety Rules
 
@@ -125,6 +127,23 @@ readers, and use collective-work language where the work was collective.
 The application eval requires a dedicated `chad-editorial` judgment in addition
 to deterministic phrase checks. A generic hiring-manager pass cannot substitute
 for this review.
+
+## Employment Acceptance
+
+- Keep one professional frame; do not turn the portfolio into a separate site
+  for each employer.
+- Govern live opportunity facts with an official URL, verification date,
+  reverify date, stable requirement IDs, hard screens, and explicit unknowns.
+- The hiring evaluator may see only the public portfolio, public resume,
+  sanitized role context, and reader context.
+- Run the Wiki gap resolver afterward. Hidden evidence cannot persuade the
+  hiring evaluator.
+- Named reader profiles are simulated public-context lenses, never actual
+  participation, endorsement, private opinion, or hiring decisions.
+- Keep private application status, warm paths, work authorization, and
+  acceptance decisions outside the public repository.
+- Do not delay a live top-priority application more than one working day for
+  portfolio optimization.
 
 ## Recursive Evals
 

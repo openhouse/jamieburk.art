@@ -15,6 +15,12 @@
   ],
   "capability.technical-operations": [
     {
+      "from": "index.employment-acceptance",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
       "from": "index.knowledge-wiki-pilot",
       "type": "links_to",
       "source": "markdown",
@@ -27,7 +33,37 @@
       "href": "../capabilities/technical-operations.md"
     },
     {
+      "from": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.asana.ai-implementation-manager.8027437",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.benepass.product-operations-manager.7f963a7a",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
       "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "opportunity.permitflow.product-operations-manager.8a6e6066",
       "type": "documents",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md"
@@ -151,7 +187,27 @@
       "href": "../events/nyc-council-constituent-services-hackathon-2016.md"
     }
   ],
+  "index.employment-acceptance": [
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "indexes/employment-acceptance.md"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "indexes/employment-acceptance.md"
+    }
+  ],
   "index.knowledge-wiki": [
+    {
+      "from": "index.employment-acceptance",
+      "type": "part_of",
+      "source": "frontmatter",
+      "href": "../README.md"
+    },
     {
       "from": "index.knowledge-wiki-pilot",
       "type": "links_to",
@@ -203,11 +259,61 @@
       "type": "links_to",
       "source": "markdown",
       "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "opportunity.asana.ai-implementation-manager.8027437",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    },
+    {
+      "from": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md"
+    }
+  ],
+  "opportunity.aclu.product-manager-ii-discovery.8482872002": [
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../opportunities/aclu-product-manager-discovery.md"
+    }
+  ],
+  "opportunity.asana.ai-implementation-manager.8027437": [
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../opportunities/asana-ai-implementation.md"
+    }
+  ],
+  "opportunity.benepass.product-operations-manager.7f963a7a": [
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../opportunities/benepass-product-operations.md"
+    }
+  ],
+  "opportunity.codepath.senior-program-manager-claude-corps.5182020007": [
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../opportunities/codepath-claude-corps.md"
     }
   ],
   "opportunity.nyc-oti.technical-operations-manager.782369": [
     {
       "from": "capability.technical-operations",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../opportunities/oti-technical-operations.md"
+    },
+    {
+      "from": "index.employment-acceptance",
       "type": "links_to",
       "source": "markdown",
       "href": "../opportunities/oti-technical-operations.md"
@@ -223,6 +329,14 @@
       "type": "documents",
       "source": "frontmatter",
       "href": "../opportunities/oti-technical-operations.md"
+    }
+  ],
+  "opportunity.permitflow.product-operations-manager.8a6e6066": [
+    {
+      "from": "index.employment-acceptance",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../opportunities/permitflow-product-operations.md"
     }
   ],
   "portfolio.work.callnyc": [
@@ -307,6 +421,18 @@
       "type": "links_to",
       "source": "markdown",
       "href": "projects/callnyc.md"
+    },
+    {
+      "from": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "opportunity.permitflow.product-operations-manager.8a6e6066",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
     },
     {
       "from": "portfolio.work.callnyc",

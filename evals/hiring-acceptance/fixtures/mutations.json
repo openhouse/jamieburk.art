@@ -1,0 +1,15 @@
+[
+  { "id": "remove-strongest-proof", "expectedDetection": "critical evidence disappears" },
+  { "id": "hide-jamie-role", "expectedDetection": "Jamie's action becomes illegible" },
+  { "id": "replace-specificity-with-vague-language", "expectedDetection": "specific operating nouns disappear" },
+  { "id": "inflate-sole-credit", "expectedDetection": "sole-credit phrase appears" },
+  { "id": "add-unsupported-metric", "expectedDetection": "unsupported numeric impact appears" },
+  { "id": "hide-resume-contact", "expectedDetection": "required routes disappear" },
+  { "id": "densify-first-screen", "expectedDetection": "first-screen reader load exceeds bound" },
+  { "id": "stale-opportunity", "expectedDetection": "live verification window expires" },
+  { "id": "drop-hard-screen", "expectedDetection": "hard requirement disappears" },
+  { "id": "leak-protected-path", "expectedDetection": "private path enters public evaluator input" },
+  { "id": "remove-case-study", "expectedDetection": "declared evidence route disappears" },
+  { "id": "break-citation", "expectedDetection": "citation integrity check fails" },
+  { "id": "contradict-resume-category", "expectedDetection": "public professional category diverges" }
+]

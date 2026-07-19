@@ -3,12 +3,12 @@
 > Generated file. Do not edit directly.
 
 - Source commit: `34bcd6e49c1f838309a18443aaaa0376e4958679`
-- Source fingerprint: `sha256:b3915e8a6ee9cbcfdca68d332d873169cef82e03f9c0fddb1c4cdaab7f72379b`
+- Source fingerprint: `sha256:892af6db5c0c2de7fc909d3a1d50f3e48de89405a0261e7c5252b7d6fac1649c`
 - Hard gates: **PASS**
-- Records: 17
-- Typed relations: 35
-- Prose links: 32
-- Discoverable and reachable: 16/16
+- Records: 23
+- Typed relations: 47
+- Prose links: 39
+- Discoverable and reachable: 22/22
 - Maximum path from Start Here: 2
 
 ## Hard failures

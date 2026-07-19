@@ -30,5 +30,11 @@ This projection helps a hiring reader see Jamie's operating contribution:
 coordinating delivery, surfacing risk, creating usable documentation, supporting
 implementation, and improving working systems over time.
 
+The July 18 employment-context climb shortens the public introduction to one
+source-backed operating result: loosely defined work becomes clear plans,
+visible risks, decision and status records, onboarding guides, launch support,
+and durable handoffs. It does not claim formal ownership of every function or
+make the page specific to one employer.
+
 It remains a composed page. It does not automatically publish every matching
 claim, opportunity note, or archival record.

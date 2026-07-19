@@ -104,6 +104,29 @@ export const relationTypes = new Set([
   "uses_source"
 ]);
 
+export const opportunityStatuses = new Set([
+  "live",
+  "closed",
+  "historical-benchmark",
+  "availability-unknown"
+]);
+
+export const roleCoverageStatuses = new Set([
+  "visible-proven",
+  "visible-qualified",
+  "visible-weak",
+  "wiki-proven-not-projected",
+  "source-needed",
+  "corroboration-needed",
+  "rights-blocked",
+  "experience-gap",
+  "hard-screen",
+  "unknown",
+  "not-applicable"
+]);
+
+export const requirementPriorities = new Set(["hard", "critical", "important", "context"]);
+
 const publicVisibilities = new Set(["public", "public-safe"]);
 const protectedVisibilities = new Set(["restricted", "private", "permission-required"]);
 const allowedLeafKinds = new Set(["anti-claim", "asset", "claim", "correction", "source"]);
@@ -138,6 +161,20 @@ function normalizedArray(value) {
 function normalizedDate(value) {
   if (value instanceof Date) return value.toISOString().slice(0, 10);
   return typeof value === "string" ? value : undefined;
+}
+
+function normalizedRequirement(requirement) {
+  return {
+    id: requirement?.id,
+    label: requirement?.label,
+    priority: requirement?.priority,
+    coverageStatus: requirement?.coverage_status,
+    sourceStatus: requirement?.source_status,
+    wikiEvidence: normalizedArray(requirement?.wiki_evidence),
+    publicEvidence: normalizedArray(requirement?.public_evidence),
+    gapType: requirement?.gap_type,
+    nextAction: requirement?.next_action
+  };
 }
 
 function slugBase(value) {
@@ -244,6 +281,27 @@ function parseRecord(file) {
     correctedClaim: data.corrected_claim,
     affectedSurfaces: normalizedArray(data.affected_surfaces),
     absenceType: data.absence_type,
+    canonicalUrl: data.canonical_url,
+    sourceType: data.source_type,
+    opportunityStatus: data.opportunity_status,
+    verifiedAt: normalizedDate(data.verified_at),
+    reverifyBy: normalizedDate(data.reverify_by),
+    deadline: normalizedDate(data.deadline),
+    compensation: data.compensation,
+    location: data.location,
+    reportingLine: data.reporting_line,
+    namedPersonnel: normalizedArray(data.named_personnel),
+    hardRequirements: normalizedArray(data.hard_requirements),
+    preferredRequirements: normalizedArray(data.preferred_requirements),
+    roleRequirements: normalizedArray(data.role_requirements).map(normalizedRequirement),
+    discoveryTerms: normalizedArray(data.discovery_terms),
+    portfolioRoutes: normalizedArray(data.portfolio_routes),
+    confirmedFacts: normalizedArray(data.confirmed_facts),
+    inferences: normalizedArray(data.inferences),
+    unknowns: normalizedArray(data.unknowns),
+    oneYearSuccessConditions: normalizedArray(data.one_year_success_conditions),
+    oneYearRiskConditions: normalizedArray(data.one_year_risk_conditions),
+    interviewQuestions: normalizedArray(data.interview_questions),
     body: parsed.content,
     raw,
     file,
@@ -303,6 +361,7 @@ function inspectWiki(records, root, { allowMissingGenerated = false } = {}) {
   const warnings = [];
   const byId = new Map();
   const byPath = new Map(records.map((record) => [record.file, record]));
+  const allRecordIds = new Set(records.map((record) => record.id));
   const knownCanonicalIds = canonicalIds();
   const aliases = new Map();
 
@@ -363,6 +422,63 @@ function inspectWiki(records, root, { allowMissingGenerated = false } = {}) {
     if (record.kind === "correction") {
       if (!record.previousClaim || !record.correctedClaim) errors.push(`${prefix}: correction requires previous_claim and corrected_claim`);
       if (!record.affectedSurfaces.length) errors.push(`${prefix}: correction requires affected_surfaces`);
+    }
+    if (record.kind === "opportunity" && record.opportunityStatus) {
+      if (!opportunityStatuses.has(record.opportunityStatus)) {
+        errors.push(`${prefix}: unknown opportunity_status ${record.opportunityStatus}`);
+      }
+      if (!record.canonicalUrl || !record.sourceType || !record.verifiedAt || !record.reverifyBy) {
+        errors.push(`${prefix}: governed employment opportunity requires canonical_url, source_type, verified_at, and reverify_by`);
+      }
+      try {
+        if (record.canonicalUrl && new URL(record.canonicalUrl).protocol !== "https:") {
+          errors.push(`${prefix}: canonical_url must use HTTPS`);
+        }
+      } catch {
+        errors.push(`${prefix}: canonical_url is invalid`);
+      }
+      if (record.opportunityStatus === "live" && record.reverifyBy < new Date().toISOString().slice(0, 10)) {
+        errors.push(`${prefix}: live opportunity is stale and must be reverified or reclassified`);
+      }
+      if (record.roleRequirements.length < 3) {
+        errors.push(`${prefix}: live opportunity requires at least three role_requirements`);
+      }
+      const requirementIds = new Set();
+      for (const requirement of record.roleRequirements) {
+        if (!requirement.id || !stableIdPattern.test(requirement.id)) {
+          errors.push(`${prefix}: role requirement has an invalid stable ID ${requirement.id ?? "(missing)"}`);
+        } else if (requirementIds.has(requirement.id)) {
+          errors.push(`${prefix}: duplicate role requirement ID ${requirement.id}`);
+        } else requirementIds.add(requirement.id);
+        if (!requirement.label) errors.push(`${prefix}: role requirement ${requirement.id} needs a label`);
+        if (!requirementPriorities.has(requirement.priority)) {
+          errors.push(`${prefix}: role requirement ${requirement.id} has unknown priority ${requirement.priority}`);
+        }
+        if (!roleCoverageStatuses.has(requirement.coverageStatus)) {
+          errors.push(`${prefix}: role requirement ${requirement.id} has unknown coverage_status ${requirement.coverageStatus}`);
+        }
+        if (!requirement.sourceStatus) errors.push(`${prefix}: role requirement ${requirement.id} needs source_status`);
+        for (const evidenceId of requirement.wikiEvidence) {
+          if (!allRecordIds.has(evidenceId) && !knownCanonicalIds.has(evidenceId)) {
+            errors.push(`${prefix}: role requirement ${requirement.id} references unknown Wiki evidence ${evidenceId}`);
+          }
+        }
+        for (const route of requirement.publicEvidence) {
+          if (!/^\/(?:$|[a-z0-9][a-z0-9/-]*)$/.test(route)) {
+            errors.push(`${prefix}: role requirement ${requirement.id} has invalid public route ${route}`);
+          }
+        }
+      }
+      if (!record.roleRequirements.some((requirement) => requirement.priority === "hard")) {
+        errors.push(`${prefix}: opportunity must identify at least one hard requirement or application gate`);
+      }
+      if (record.discoveryTerms.length < 3) errors.push(`${prefix}: opportunity requires title-blind discovery_terms`);
+      if (!record.portfolioRoutes.includes("/resume") || !record.portfolioRoutes.includes("/contact")) {
+        errors.push(`${prefix}: opportunity portfolio_routes must include /resume and /contact`);
+      }
+      if (!record.oneYearSuccessConditions.length || !record.oneYearRiskConditions.length) {
+        errors.push(`${prefix}: opportunity requires one-year success and risk conditions`);
+      }
     }
   }
 
@@ -492,7 +608,14 @@ function semanticGraph(records, inspection, root) {
       reviewBy: record.reviewBy,
       reviewState: record.reviewState,
       rightsState: record.rightsState,
-      consentState: record.consentState
+      consentState: record.consentState,
+      opportunityStatus: record.opportunityStatus,
+      verifiedAt: record.verifiedAt,
+      reverifyBy: record.reverifyBy,
+      deadline: record.deadline,
+      roleRequirements: record.roleRequirements,
+      discoveryTerms: [...record.discoveryTerms].sort(),
+      portfolioRoutes: [...record.portfolioRoutes].sort()
     }))
     .sort((a, b) => a.id.localeCompare(b.id));
 
@@ -545,6 +668,18 @@ function healthReport(records, inspection, graph) {
   const rightsBacklog = records.filter((record) => record.kind === "asset" && record.rightsState && record.rightsState !== "cleared");
   const humanReviewBacklog = records.filter((record) => !["completed", "resolved"].includes(record.reviewState));
   const deadEnds = records.filter((record) => record.discoverable && (inspection.adjacency.get(record.id)?.size ?? 0) === 0);
+  const opportunities = records.filter((record) => record.kind === "opportunity" && record.opportunityStatus);
+  const roleCoverage = Object.fromEntries(
+    opportunities.map((record) => [
+      record.id,
+      Object.fromEntries(
+        [...roleCoverageStatuses].map((status) => [
+          status,
+          record.roleRequirements.filter((requirement) => requirement.coverageStatus === status).length
+        ])
+      )
+    ])
+  );
   return {
     schemaVersion: 1,
     sourceFingerprint: graph.sourceFingerprint,
@@ -571,6 +706,15 @@ function healthReport(records, inspection, graph) {
       staleRecords: stale.map((record) => record.id),
       rightsBacklog: rightsBacklog.map((record) => record.id),
       humanReviewBacklog: humanReviewBacklog.map((record) => ({ id: record.id, state: record.reviewState })),
+      employmentOpportunities: opportunities.map((record) => ({
+        id: record.id,
+        status: record.opportunityStatus,
+        verifiedAt: record.verifiedAt,
+        reverifyBy: record.reverifyBy,
+        deadline: record.deadline,
+        requirements: record.roleRequirements.length
+      })),
+      roleCoverage,
       warnings: inspection.warnings
     },
     manualAuthorityGates: {

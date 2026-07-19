@@ -37,9 +37,11 @@ npm run test:citations
 npm run test:evals
 npm run test:knowledge-history
 npm run test:composite
+npm run test:hiring
 npm run evals:application
 npm run evals:production
 npm run evals:composite
+npm run evals:hiring
 npm run report:citations
 npm run preflight:staging
 npm run preflight:production
@@ -81,11 +83,21 @@ npm run wiki:test
 npm run wiki:tasks
 npm run wiki:query -- --project callnyc
 npm run evals:wiki
+npm run test:hiring
+npm run evals:hiring
 ```
 
 Start with [the Knowledge Wiki](docs/knowledge-bank/README.md), its
 [architecture decision](docs/architecture/ADR-knowledge-wiki-name-and-model.md),
-and the [authoring guide](docs/knowledge-bank/knowledge-wiki-authoring.md).
+the [authoring guide](docs/knowledge-bank/knowledge-wiki-authoring.md), and the
+[hiring-acceptance protocol](docs/qa/hiring-acceptance/README.md).
+
+Governed opportunity records preserve official-source freshness, hard screens,
+role requirements, public evidence, Wiki gaps, and one-year success and risk
+conditions. `npm run evals:hiring` keeps the public-only hiring evaluator
+separate from the later Wiki gap resolver. It is an evaluation aid, not a
+prediction, application submission, named person's review, or employment
+acceptance decision.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.

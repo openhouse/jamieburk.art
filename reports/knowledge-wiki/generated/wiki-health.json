@@ -1,30 +1,30 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "sha256:b3915e8a6ee9cbcfdca68d332d873169cef82e03f9c0fddb1c4cdaab7f72379b",
+  "sourceFingerprint": "sha256:892af6db5c0c2de7fc909d3a1d50f3e48de89405a0261e7c5252b7d6fac1649c",
   "hardGates": {
     "status": "pass",
     "failures": []
   },
   "diagnostics": {
-    "records": 17,
+    "records": 23,
     "recordsByKind": {
       "asset": 1,
       "capability": 1,
       "claim": 3,
       "correction": 1,
       "event": 1,
-      "index": 2,
+      "index": 3,
       "method": 1,
-      "opportunity": 1,
+      "opportunity": 6,
       "projection": 2,
       "project": 1,
       "source": 3
     },
-    "proseLinks": 32,
-    "typedRelations": 35,
+    "proseLinks": 39,
+    "typedRelations": 47,
     "genericRelationRate": 0,
-    "discoverableRecords": 16,
-    "reachableDiscoverableRecords": 16,
+    "discoverableRecords": 22,
+    "reachableDiscoverableRecords": 22,
     "maximumRootDistance": 2,
     "typeAwareOrphans": [],
     "deadEnds": [],
@@ -39,6 +39,131 @@
         "state": "human-blocked"
       }
     ],
+    "employmentOpportunities": [
+      {
+        "id": "opportunity.aclu.product-manager-ii-discovery.8482872002",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 5
+      },
+      {
+        "id": "opportunity.asana.ai-implementation-manager.8027437",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 6
+      },
+      {
+        "id": "opportunity.benepass.product-operations-manager.7f963a7a",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 5
+      },
+      {
+        "id": "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 6
+      },
+      {
+        "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "deadline": "2026-08-07",
+        "requirements": 6
+      },
+      {
+        "id": "opportunity.permitflow.product-operations-manager.8a6e6066",
+        "status": "live",
+        "verifiedAt": "2026-07-18",
+        "reverifyBy": "2026-07-21",
+        "requirements": 6
+      }
+    ],
+    "roleCoverage": {
+      "opportunity.aclu.product-manager-ii-discovery.8482872002": {
+        "visible-proven": 3,
+        "visible-qualified": 1,
+        "visible-weak": 0,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 1,
+        "unknown": 0,
+        "not-applicable": 0
+      },
+      "opportunity.asana.ai-implementation-manager.8027437": {
+        "visible-proven": 1,
+        "visible-qualified": 4,
+        "visible-weak": 1,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 0,
+        "not-applicable": 0
+      },
+      "opportunity.benepass.product-operations-manager.7f963a7a": {
+        "visible-proven": 1,
+        "visible-qualified": 2,
+        "visible-weak": 2,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 0,
+        "not-applicable": 0
+      },
+      "opportunity.codepath.senior-program-manager-claude-corps.5182020007": {
+        "visible-proven": 2,
+        "visible-qualified": 3,
+        "visible-weak": 0,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 1,
+        "not-applicable": 0
+      },
+      "opportunity.nyc-oti.technical-operations-manager.782369": {
+        "visible-proven": 2,
+        "visible-qualified": 3,
+        "visible-weak": 1,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 0,
+        "not-applicable": 0
+      },
+      "opportunity.permitflow.product-operations-manager.8a6e6066": {
+        "visible-proven": 1,
+        "visible-qualified": 4,
+        "visible-weak": 1,
+        "wiki-proven-not-projected": 0,
+        "source-needed": 0,
+        "corroboration-needed": 0,
+        "rights-blocked": 0,
+        "experience-gap": 0,
+        "hard-screen": 0,
+        "unknown": 0,
+        "not-applicable": 0
+      }
+    },
     "warnings": []
   },
   "manualAuthorityGates": {
