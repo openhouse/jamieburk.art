@@ -1,6 +1,6 @@
 {
   "id": "knowledge-wiki-foundation",
-  "version": 1,
+  "version": 2,
   "profile": "foundation_ready",
   "principle": "Markdown is the record, the graph is compiled, and the portfolio is a governed projection.",
   "stopRule": {
@@ -26,6 +26,10 @@
     "archive_collective_credit",
     "archive_application_value",
     "archive_projection_restraint",
+    "missing_page_governance",
+    "source_reencounter_practice",
+    "source_grounded_page_creation",
+    "inquiry_integrity",
     "projection_restraint",
     "candidate_binding"
   ],
@@ -96,6 +100,36 @@
       "query": { "id": "claim.nycartc.march-data-design-lead" },
       "expectedRecordIds": ["claim.nycartc.march-data-design-lead"],
       "requiredBoundary": "cannot allocate the complete design passage to Jamie"
+    },
+    {
+      "id": "missing-pages-governance",
+      "query": { "id": "index.knowledge-wiki-missing-pages" },
+      "expectedRecordIds": ["index.knowledge-wiki-missing-pages"],
+      "requiredBoundary": "Full access authorization makes research possible. It does not make protected material public"
+    },
+    {
+      "id": "source-reencounter-method",
+      "query": { "id": "method.source-re-encounter" },
+      "expectedRecordIds": ["method.source-re-encounter"],
+      "requiredBoundary": "located and read must remain separate states"
+    },
+    {
+      "id": "nycartc-participation-method",
+      "query": { "id": "method.nycartc.public-meeting-and-testimony-participation" },
+      "expectedRecordIds": ["method.nycartc.public-meeting-and-testimony-participation"],
+      "requiredBoundary": "The evidence remains collective"
+    },
+    {
+      "id": "nycartc-nightlife-timeline",
+      "query": { "id": "timeline.nycartc.nightlife-recommendations.2017-2019" },
+      "expectedRecordIds": ["timeline.nycartc.nightlife-recommendations.2017-2019"],
+      "requiredBoundary": "not a complete campaign chronology"
+    },
+    {
+      "id": "nycartc-march-attribution-inquiry",
+      "query": { "id": "inquiry.nycartc.march-data-design-attribution" },
+      "expectedRecordIds": ["inquiry.nycartc.march-data-design-attribution"],
+      "requiredBoundary": "does not establish complete authorship, implementation, validation, safety, adoption, or causal impact"
     }
   ],
   "humanTasks": [
@@ -139,6 +173,47 @@
         "research-run.nycartc.shared-folder.2026-07"
       ],
       "requiredBoundary": "Do not infer authorship or individual task ownership from Drive metadata."
+    },
+    {
+      "id": "find-missing-pages",
+      "prompt": "What missing Knowledge Wiki pages matter most, which were created, and which remain deferred or protected?",
+      "expectedRecordIds": [
+        "index.knowledge-wiki-missing-pages",
+        "method.source-re-encounter",
+        "method.nycartc.public-meeting-and-testimony-participation",
+        "timeline.nycartc.nightlife-recommendations.2017-2019",
+        "inquiry.nycartc.march-data-design-attribution"
+      ],
+      "requiredBoundary": "A wanted page is not complete merely because an agent can locate a source."
+    },
+    {
+      "id": "find-source-reencounter-practice",
+      "prompt": "Explain how an agent should return to original source material and what to do when the current access method fails.",
+      "expectedRecordIds": [
+        "method.source-re-encounter",
+        "research-run.nycartc.shared-folder.2026-07"
+      ],
+      "requiredBoundary": "Research authorization is not publication permission."
+    },
+    {
+      "id": "find-participation-design",
+      "prompt": "Show how NYC Artist Coalition supported both meeting production and participant testimony without assigning the collective system to Jamie.",
+      "expectedRecordIds": [
+        "method.nycartc.public-meeting-and-testimony-participation",
+        "source.nycartc.public-meeting-playbook.2018",
+        "source.nycartc.testimony-guide.2017"
+      ],
+      "requiredBoundary": "Do not infer authorship, task ownership, usage totals, attendance, or policy impact."
+    },
+    {
+      "id": "find-march-attribution-inquiry",
+      "prompt": "What does the present MARCH source encounter attribute directly to Jamie, and what remains unresolved?",
+      "expectedRecordIds": [
+        "inquiry.nycartc.march-data-design-attribution",
+        "claim.nycartc.march-data-design-lead",
+        "source.nycartc.march-data-design-notes.2019"
+      ],
+      "requiredBoundary": "A narrow attributed suggestion does not establish complete design authorship or implementation."
     }
   ],
   "manualAuthorityGates": [

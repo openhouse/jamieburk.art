@@ -2,7 +2,7 @@
   "judgeId": "codex-independent-warren-sack-application-2026-07-19-nycartc-archive",
   "lens": "warren-sack",
   "candidate": "sha256:013ae05c9ebe7959bf285288028a2be23a027b6d1cfced29e41f2608ecef37de",
-  "contract": "sha256:263fff76f9ce28de1d6fba3257da149fe6575f5aa4264eb31cb5f72de0a5049a",
+  "contract": "sha256:da6113f28c0331045a438a18b997bc8cc8303d64cbe31add9fcfd6d21dfd46a3",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,

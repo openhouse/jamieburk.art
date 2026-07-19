@@ -210,10 +210,30 @@ frequently updated public datasets, use the reported data to explore preventive
 alerts, and explicitly address the danger that selective alerts could reproduce
 cultural bias.
 
-The document includes a Jamie-initialed edit invitation, but the first pass
-cannot allocate the complete design passage to him. No shipped or validated
-predictive system was recovered. The item remains an internal inquiry, not a
-portfolio claim. See the [held data-design lead](../claims/nycartc-march-data-design-lead.md).
+The July 19 native-document re-encounter exposed a visible suggestion attributed
+to Jamie connecting the proposal to existing FOIL data and possible reporting
+legislation. This supports a narrow contribution, but it still cannot allocate
+the complete design passage to him. No shipped or validated predictive system
+was recovered. The item remains an internal inquiry, not a portfolio claim.
+See the [held data-design lead](../claims/nycartc-march-data-design-lead.md) and
+the [open inquiry](../inquiries/nycartc-march-data-design-attribution.md).
+
+## Present-Day Source Re-Encounter
+
+On July 19, 2026, five selected original Google Docs were re-opened in their
+native interface: the public-meeting checklist, testimony guide, delivered DCLA
+letter, MARCH notes, and Office of Nightlife workshop priorities.
+
+The encounter confirmed the cross-channel meeting checklist, added the
+testimony guide's alternate participation path, visually confirmed the 2019
+priority sheet, and narrowed one MARCH attribution question. It did not make
+the raw bodies public, complete a full revision-history analysis, or change any
+rights or projection decision.
+
+This practice is now documented as [source re-encounter](../methods/source-re-encounter.md).
+The resulting [missing-pages index](../indexes/missing-pages.md) records both
+the pages created in this cycle and the pages that remain deferred or
+rights-blocked.
 
 ## Application Use
 

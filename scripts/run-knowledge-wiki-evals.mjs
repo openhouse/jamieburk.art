@@ -159,11 +159,17 @@ const archivePublicFiles = [
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
   "docs/knowledge-bank/sources/nycartc-shared-folder-census-2026.md",
   "docs/knowledge-bank/sources/nycartc-public-meeting-playbook-2018.md",
+  "docs/knowledge-bank/sources/nycartc-testimony-guide-2017.md",
   "docs/knowledge-bank/sources/nycartc-nightlife-recommendation-sequence-2017-2019.md",
   "docs/knowledge-bank/sources/nycartc-march-data-design-notes-2019.md",
   "docs/knowledge-bank/claims/nycartc-public-meeting-operating-system.md",
   "docs/knowledge-bank/claims/nycartc-nightlife-recommendation-continuity.md",
-  "docs/knowledge-bank/claims/nycartc-march-data-design-lead.md"
+  "docs/knowledge-bank/claims/nycartc-march-data-design-lead.md",
+  "docs/knowledge-bank/indexes/missing-pages.md",
+  "docs/knowledge-bank/methods/source-re-encounter.md",
+  "docs/knowledge-bank/methods/nycartc-public-meeting-and-testimony-participation.md",
+  "docs/knowledge-bank/timelines/nycartc-nightlife-recommendations-2017-2019.md",
+  "docs/knowledge-bank/inquiries/nycartc-march-data-design-attribution.md"
 ];
 const archivePublicCorpus = archivePublicFiles
   .filter((file) => existsSync(path.join(repoRoot, file)))
@@ -217,6 +223,99 @@ const archiveProjectionRestrained = archiveClaims.every((claim) =>
 gate("archive_projection_restraint", archiveProjectionRestrained, archiveProjectionRestrained
   ? "Protected close reading matured internal knowledge while all new public projections remain held or absent"
   : "A protected archive claim has escaped its editorial or surface boundary");
+
+const requiredMissingPageIds = [
+  "index.knowledge-wiki-missing-pages",
+  "method.source-re-encounter",
+  "source.nycartc.testimony-guide.2017",
+  "method.nycartc.public-meeting-and-testimony-participation",
+  "timeline.nycartc.nightlife-recommendations.2017-2019",
+  "inquiry.nycartc.march-data-design-attribution"
+];
+const requiredMissingPageRecords = requiredMissingPageIds
+  .map((id) => wiki.records.find((record) => record.id === id))
+  .filter(Boolean);
+const missingPageIndex = wiki.records.find((record) => record.id === "index.knowledge-wiki-missing-pages");
+const missingPageIndexText = normalizedText(missingPageIndex?.body ?? "");
+const missingPageRelations = new Set((missingPageIndex?.relations ?? []).map((relation) => relation.target));
+const missingPageGoverned = requiredMissingPageRecords.length === requiredMissingPageIds.length &&
+  requiredMissingPageIds.slice(1).every((id) => missingPageRelations.has(id)) &&
+  [
+    "created deferred protected or declined",
+    "event level chronology deferred",
+    "artifact level authorship map protected",
+    "public visual specimen",
+    "rights blocked",
+    "librarian handoff",
+    "full access authorization makes research possible it does not make protected material public"
+  ].every((term) => missingPageIndexText.includes(term));
+gate("missing_page_governance", missingPageGoverned, missingPageGoverned
+  ? "Six prioritized wanted pages exist, remain linked from one governed index, and preserve deferred, protected, rights-blocked, and librarian-handoff states"
+  : "The wanted-pages index, required pages, dispositions, or librarian handoff is incomplete");
+
+const sourceReencounter = wiki.records.find((record) => record.id === "method.source-re-encounter");
+const sourceReencounterText = normalizedText(sourceReencounter?.body ?? "");
+const sourceReencounterTargets = new Set((sourceReencounter?.relations ?? []).map((relation) => relation.target));
+const sourceReencounterReady = sourceReencounter?.kind === "method" &&
+  sourceReencounter?.lastReviewed === "2026-07-19" &&
+  sourceReencounterTargets.has("research-run.nycartc.shared-folder.2026-07") &&
+  sourceReencounterTargets.has("method.source-backed-team-memory") &&
+  [
+    "periodically returning to original material",
+    "record the date account or custody context and representation inspected",
+    "located and read must remain separate states",
+    "librarian handoff",
+    "full research authorization does not imply publication permission"
+  ].every((term) => sourceReencounterText.includes(term));
+gate("source_reencounter_practice", sourceReencounterReady, sourceReencounterReady
+  ? "The Wiki now requires dated return to original representations, changed-or-unchanged interpretation, explicit access gaps, and a librarian handoff without changing publication authority"
+  : "Source re-encounter is missing its method, present encounter, access-state distinction, or publication boundary");
+
+const sourceGroundedSpecs = [
+  {
+    id: "method.nycartc.public-meeting-and-testimony-participation",
+    sources: ["source.nycartc.public-meeting-playbook.2018", "source.nycartc.testimony-guide.2017"]
+  },
+  {
+    id: "timeline.nycartc.nightlife-recommendations.2017-2019",
+    sources: ["source.nycartc.nightlife-recommendation-sequence.2017-2019"]
+  },
+  {
+    id: "inquiry.nycartc.march-data-design-attribution",
+    sources: ["source.nycartc.march-data-design-notes.2019"]
+  }
+];
+const sourceGroundingFailures = [];
+for (const spec of sourceGroundedSpecs) {
+  const record = wiki.records.find((item) => item.id === spec.id);
+  const sourceTargets = new Set((record?.relations ?? []).filter((relation) => relation.type === "uses_source").map((relation) => relation.target));
+  const methodTargets = new Set((record?.relations ?? []).filter((relation) => relation.type === "uses_method").map((relation) => relation.target));
+  if (!record || record.lastReviewed !== "2026-07-19") sourceGroundingFailures.push(`${spec.id}: missing current reviewed record`);
+  if (!spec.sources.every((id) => sourceTargets.has(id))) sourceGroundingFailures.push(`${spec.id}: missing required original-source relation`);
+  if (!methodTargets.has("method.source-re-encounter")) sourceGroundingFailures.push(`${spec.id}: missing source-reencounter method relation`);
+  if (!normalizedText(record?.body ?? "").includes("july 19 2026")) sourceGroundingFailures.push(`${spec.id}: missing dated present encounter`);
+}
+gate("source_grounded_page_creation", sourceGroundingFailures.length === 0, sourceGroundingFailures.length
+  ? sourceGroundingFailures.join("; ")
+  : "Each new substantive page names its original-source relationships, present encounter date, source-reencounter method, and evidentiary boundary");
+
+const marchInquiry = wiki.records.find((record) => record.id === "inquiry.nycartc.march-data-design-attribution");
+const marchInquiryText = normalizedText(marchInquiry?.body ?? "");
+const marchCanonicalClaim = knowledgeBank.claims.find((claim) => claim.id === "CLM-NYCARTC-MARCH-DATA-DESIGN-LEAD");
+const marchInquiryIntegrity = marchInquiry?.kind === "research-inquiry" &&
+  marchInquiry?.status === "governed-open" &&
+  marchInquiry?.projectionStatus === "protected" &&
+  marchCanonicalClaim?.status === "inference" &&
+  marchCanonicalClaim?.publicationStatus === "internal-only" &&
+  marchCanonicalClaim?.projections.length === 0 &&
+  [
+    "direct support for a narrow contribution",
+    "complete authorship cannot yet be allocated",
+    "does not establish complete authorship implementation validation safety adoption or causal impact"
+  ].every((term) => marchInquiryText.includes(term));
+gate("inquiry_integrity", marchInquiryIntegrity, marchInquiryIntegrity
+  ? "The visible Jamie-attributed FOIL/reporting suggestion narrows one inquiry while the canonical claim remains an unprojected inference and implementation remains unresolved"
+  : "The MARCH source encounter has been promoted beyond its narrow attribution or no longer preserves inquiry and implementation boundaries");
 
 const photo = wiki.records.find((record) => record.id === "asset.photo.digital-district.001");
 const noPublicWikiRoute = !existsSync(path.join(repoRoot, "apps/www/src/app/knowledge-wiki")) && !existsSync(path.join(repoRoot, "apps/www/src/app/knowledge-bank"));

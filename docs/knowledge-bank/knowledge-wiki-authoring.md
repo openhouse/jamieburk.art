@@ -104,6 +104,22 @@ establish. Rights, consent, credit, and evidentiary value are separate. Never
 commit the full photo archive, private paths, face-recognition data, raw EXIF,
 participant lists, or unapproved images.
 
+## Missing Pages And Source Re-Encounter
+
+Use the [missing-pages index](indexes/missing-pages.md) to record the pages the
+Wiki most needs, including why each is created, deferred, protected,
+rights-blocked, or declined. Do not turn every source lead into a page merely to
+reduce an open count.
+
+Before creating or materially strengthening a page, return to the original
+source when access permits. Follow the [source re-encounter method](methods/source-re-encounter.md):
+record the date and representation, compare the source with current claims and
+anti-claims, preserve changed or unchanged interpretation, and ask the personal
+librarian for the smallest missing artifact or access path when blocked.
+
+Access authorization permits research. It does not confer publication rights,
+settle collaborative authorship, or close consent and editorial gates.
+
 ## Commands
 
 ```bash

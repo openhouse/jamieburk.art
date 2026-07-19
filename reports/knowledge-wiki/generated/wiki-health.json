@@ -1,31 +1,33 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "sha256:e7e19bdf3aaab92e935ae277e1e3d4b863c031ae8bb6e75fe9b16d6196ea4979",
+  "sourceFingerprint": "sha256:fca56116fc256ba50d294ecf0a63f5e2f785f3b8c0416179e1cf106152957ede",
   "hardGates": {
     "status": "pass",
     "failures": []
   },
   "diagnostics": {
-    "records": 32,
+    "records": 38,
     "recordsByKind": {
       "asset": 1,
       "capability": 1,
       "claim": 6,
       "correction": 1,
       "event": 1,
-      "index": 3,
-      "method": 1,
+      "index": 4,
+      "method": 3,
       "opportunity": 6,
       "projection": 2,
       "project": 2,
+      "research-inquiry": 1,
       "research-run": 1,
-      "source": 7
+      "source": 8,
+      "timeline": 1
     },
-    "proseLinks": 50,
-    "typedRelations": 72,
+    "proseLinks": 65,
+    "typedRelations": 96,
     "genericRelationRate": 0,
-    "discoverableRecords": 31,
-    "reachableDiscoverableRecords": 31,
+    "discoverableRecords": 37,
+    "reachableDiscoverableRecords": 37,
     "maximumRootDistance": 3,
     "typeAwareOrphans": [],
     "deadEnds": [],
@@ -52,6 +54,18 @@
         "state": "requested"
       },
       {
+        "id": "index.knowledge-wiki-missing-pages",
+        "state": "requested"
+      },
+      {
+        "id": "inquiry.nycartc.march-data-design-attribution",
+        "state": "requested"
+      },
+      {
+        "id": "method.nycartc.public-meeting-and-testimony-participation",
+        "state": "requested"
+      },
+      {
         "id": "project.nyc-artist-coalition",
         "state": "requested"
       },
@@ -73,6 +87,14 @@
       },
       {
         "id": "source.nycartc.shared-folder-census.2026",
+        "state": "requested"
+      },
+      {
+        "id": "source.nycartc.testimony-guide.2017",
+        "state": "human-blocked"
+      },
+      {
+        "id": "timeline.nycartc.nightlife-recommendations.2017-2019",
         "state": "requested"
       }
     ],

@@ -116,6 +116,15 @@ Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 - Do not rewrite or delete a committed line in
   `docs/knowledge-bank/lifecycle/history.jsonl`; add an amendment, retirement,
   or promotion-decision event instead.
+- Maintain `docs/knowledge-bank/indexes/missing-pages.md` as a ranked wanted-page
+  queue with created, deferred, protected, rights-blocked, and declined
+  dispositions. A located source does not make a page complete.
+- Periodically re-encounter original sources in their best available native
+  representation. Record the encounter date, representation, access gaps, what
+  changed or stayed bounded, and the next librarian handoff.
+- Full research authorization is not publication permission. Keep private
+  coordinates, raw bodies, collaborator-private metadata, rights decisions,
+  and unresolved attribution outside public Wiki prose.
 - Run `npm run evals:knowledge` before opening or updating a knowledge-bank PR.
 
 ## Chad Lens

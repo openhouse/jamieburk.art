@@ -2,8 +2,8 @@
   "id": "systems-public-safety",
   "reviewer": "Codex independent systems and public-safety review",
   "reviewedAt": "2026-07-19",
-  "candidateFingerprint": "sha256:5d2ecd9d94bcace0aedb37dfd23c82d1020fa87f4bddae4eee469b5d4b7eaabe",
-  "contractFingerprint": "sha256:c85490255586a68b34ae078946a15a831d99f61f45ca0b73fe811f7f58584e27",
+  "candidateFingerprint": "sha256:f167c57c0d1033f1aca9bf3150161c07747a42c5b2b92f270297af1b19bdaf3b",
+  "contractFingerprint": "sha256:ac528067225d1a32c38850a8de427ab77285966efa283f01f890158b28424f11",
   "verdict": "pass",
   "criteria": [
     {
@@ -55,6 +55,21 @@
       "id": "archive-protected-source-governance",
       "status": "pass",
       "finding": "All eight governed archive sources remain private or protected, have completed review metadata and explicit non-support fields, and generate no new active website projection."
+    },
+    {
+      "id": "missing-page-state-integrity",
+      "status": "pass",
+      "finding": "The wanted-page evaluator requires one indexed set of created, deferred, protected, and rights-blocked dispositions and fails if a required page or typed relation disappears. It does not equate a zero-broken-link graph with archival completeness."
+    },
+    {
+      "id": "source-access-state-integrity",
+      "status": "pass",
+      "finding": "The source re-encounter method distinguishes located, readable, native, exported, and inaccessible states; requires date, representation, changed interpretation, and librarian handoff; and keeps private coordinates and raw bodies outside the public repository."
+    },
+    {
+      "id": "inquiry-nonpromotion",
+      "status": "pass",
+      "finding": "The MARCH evaluator accepts the visible Jamie-attributed FOIL and reporting-legislation suggestion only as a narrow contribution. The canonical claim remains an internal-only inference with no projection, while complete authorship, implementation, validation, safety, adoption, and impact remain unresolved."
     }
   ],
   "manualGates": {
@@ -62,5 +77,5 @@
     "rightsClearance": "human-blocked",
     "productionObservation": "not-requested"
   },
-  "remainingWork": "Keep the participant photograph and NYC Artist Coalition media queue unprojected until rights, consent, credit, and editorial review are completed by people with authority; keep raw shared-folder material and private communication history outside hiring-evaluator inputs."
+  "remainingWork": "Keep the participant photograph and NYC Artist Coalition media queue unprojected until rights, consent, credit, and editorial review are completed by people with authority; complete revision-history and collaborator review through a protected workflow; and keep raw shared-folder material, source coordinates, and private communication history outside hiring-evaluator inputs."
 }

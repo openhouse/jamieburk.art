@@ -9,13 +9,25 @@
   "packets": [
     {
       "id": "portfolio-and-wiki-content",
-      "purpose": "Review the composed public change, governed Wiki records, current opportunity context, and reader contracts together.",
+      "purpose": "Review the composed public change, project and evidence records, current opportunity context, and reader-facing Wiki paths together.",
       "includes": [
-        "AGENTS.md",
-        "README.md",
-        "package.json",
         "apps/www",
-        "docs/knowledge-bank"
+        "docs/knowledge-bank/README.md",
+        "docs/knowledge-bank/assets",
+        "docs/knowledge-bank/capabilities",
+        "docs/knowledge-bank/claims",
+        "docs/knowledge-bank/claims.md",
+        "docs/knowledge-bank/corrections",
+        "docs/knowledge-bank/events",
+        "docs/knowledge-bank/inquiries",
+        "docs/knowledge-bank/methods",
+        "docs/knowledge-bank/opportunities",
+        "docs/knowledge-bank/projections",
+        "docs/knowledge-bank/projects",
+        "docs/knowledge-bank/research",
+        "docs/knowledge-bank/sources",
+        "docs/knowledge-bank/sources.md",
+        "docs/knowledge-bank/timelines"
       ]
     },
     {
@@ -29,8 +41,17 @@
     },
     {
       "id": "tooling-and-tests",
-      "purpose": "Review compilers, query surfaces, runners, checks, and mutation tests as the executable implementation layer.",
+      "purpose": "Review repository rules, Wiki governance, compilers, query surfaces, runners, checks, and mutation tests as the executable implementation layer.",
       "includes": [
+        "AGENTS.md",
+        "README.md",
+        "package.json",
+        "docs/knowledge-bank/anti-claims.md",
+        "docs/knowledge-bank/approval-register.md",
+        "docs/knowledge-bank/indexes",
+        "docs/knowledge-bank/knowledge-wiki-authoring.md",
+        "docs/knowledge-bank/knowledge-wiki-schema.md",
+        "docs/knowledge-bank/lifecycle/history.jsonl",
         "scripts"
       ]
     }

@@ -34,4 +34,10 @@ analysis. They do not allocate the complete passage to Jamie, verify adjacent
 campaign statistics, or establish that a predictive system was implemented,
 validated, safe, or used.
 
-See the [held data-design lead](../claims/nycartc-march-data-design-lead.md).
+A July 19, 2026 native-document re-encounter also exposed a visible suggestion
+attributed to Jamie asking whether existing FOIL data could support the work
+and what a reporting bill would need to add. This directly supports that narrow
+intervention, not authorship of the larger collaborative design.
+
+See the [held data-design lead](../claims/nycartc-march-data-design-lead.md) and
+the [open attribution inquiry](../inquiries/nycartc-march-data-design-attribution.md).

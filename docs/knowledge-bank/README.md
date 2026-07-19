@@ -8,7 +8,7 @@ visibility: public-safe
 sensitivity: low
 projection_status: not-applicable
 discoverable: true
-last_reviewed: 2026-07-18
+last_reviewed: 2026-07-19
 review_by: 2027-01-18
 review_state: completed
 owner: Jamie Burkart
@@ -24,6 +24,10 @@ relations:
     target: index.employment-acceptance
     href: indexes/employment-acceptance.md
     context: Current opportunity records, role coverage, and hiring-acceptance evaluation boundaries.
+  - type: documents
+    target: index.knowledge-wiki-missing-pages
+    href: indexes/missing-pages.md
+    context: Prioritized wanted pages, source-reencounter status, and librarian handoffs.
   - type: documents
     target: research-run.nycartc.shared-folder.2026-07
     href: research/nycartc-shared-folder-archival-production-2026-07.md
@@ -49,6 +53,8 @@ and the [authoring guide](knowledge-wiki-authoring.md).
   document, semantic, evidence, and governance graphs.
 - [Employment acceptance](indexes/employment-acceptance.md): current role
   contexts, requirement coverage, source freshness, and evaluation boundaries.
+- [Missing pages](indexes/missing-pages.md): the ranked editorial and research
+  queue, including what was created, deferred, protected, or declined.
 - [NYC Artist Coalition shared-folder production](research/nycartc-shared-folder-archival-production-2026-07.md):
   complete archive accounting, protected dispositions, and selected close
   reading without publishing the source collection.

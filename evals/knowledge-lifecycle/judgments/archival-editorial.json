@@ -1,7 +1,7 @@
 {
-  "judgeId": "archival-editorial-2026-07-19-nycartc-shared-folder",
+  "judgeId": "archival-editorial-2026-07-19-nycartc-source-reencounter",
   "lens": "archival-editorial",
-  "candidate": "sha256:efe9a7a5ba8bd8dc885113dad93bb84abf05c5cfc5847f92aefeebf2d3370ca9",
+  "candidate": "sha256:c0c11470a5f7d43cacb32bf24d0197645302dc51f05983cd7fc2e146f169ed6f",
   "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
   "passes": true,
   "scores": {
@@ -98,8 +98,16 @@
     {
       "rubric": "projection_restraint",
       "observation": "Protected playbooks, drafts, comments, source bodies, media, and coordinates remain outside the public repository. New archive projections are held or absent; the MARCH data-design lead remains an internal inference pending attribution and implementation evidence."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "A present-day native-document re-encounter confirmed the meeting checklist, testimony participation path, delivered DCLA letter, and 2019 nightlife priorities. It narrowed the MARCH inquiry to one visible Jamie-attributed FOIL and reporting-legislation suggestion without allocating the wider collaborative passage or implying implementation."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "The wanted-pages index and source-reencounter method keep source availability, readability, knowledge maturity, publication safety, editorial selection, and librarian handoff distinct. Created pages coexist with deferred chronology, protected authorship mapping, and rights-blocked visual work."
     }
   ],
   "regressions": [],
-  "nextAction": "Continue selected NYC Artist Coalition close reading through the governed queue; seek collaborator-aware artifact attribution and item-level media rights; retain the current protected-source, collective-credit, and no-projection boundaries until those decisions are made by people with authority."
+  "nextAction": "Continue selected NYC Artist Coalition close reading through the governed wanted-page queue; review the full MARCH revision sequence and seek collaborator-aware attribution; develop event chronology and item-level media rights while retaining protected-source, collective-credit, and no-projection boundaries."
 }

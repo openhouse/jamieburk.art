@@ -299,6 +299,12 @@
       "href": "../README.md"
     },
     {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "part_of",
+      "source": "frontmatter",
+      "href": "../README.md"
+    },
+    {
       "from": "index.knowledge-wiki-pilot",
       "type": "links_to",
       "source": "markdown",
@@ -309,6 +315,32 @@
       "type": "part_of",
       "source": "frontmatter",
       "href": "../README.md"
+    },
+    {
+      "from": "method.source-re-encounter",
+      "type": "part_of",
+      "source": "frontmatter",
+      "href": "../README.md"
+    }
+  ],
+  "index.knowledge-wiki-missing-pages": [
+    {
+      "from": "index.knowledge-wiki",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "indexes/missing-pages.md"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "indexes/missing-pages.md"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../indexes/missing-pages.md"
     }
   ],
   "index.knowledge-wiki-pilot": [
@@ -331,6 +363,82 @@
       "href": "indexes/pilot.md"
     }
   ],
+  "inquiry.nycartc.march-data-design-attribution": [
+    {
+      "from": "claim.nycartc.march-data-design-lead",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
+      "source": "frontmatter",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md"
+    },
+    {
+      "from": "source.nycartc.march-data-design-notes.2019",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../inquiries/nycartc-march-data-design-attribution.md"
+    }
+  ],
+  "method.nycartc.public-meeting-and-testimony-participation": [
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "uses_method",
+      "source": "frontmatter",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    },
+    {
+      "from": "source.nycartc.testimony-guide.2017",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md"
+    }
+  ],
   "method.source-backed-team-memory": [
     {
       "from": "capability.technical-operations",
@@ -351,6 +459,12 @@
       "href": "../methods/source-backed-team-memory.md"
     },
     {
+      "from": "method.source-re-encounter",
+      "type": "supports",
+      "source": "frontmatter",
+      "href": "source-backed-team-memory.md"
+    },
+    {
       "from": "opportunity.asana.ai-implementation-manager.8027437",
       "type": "documents",
       "source": "frontmatter",
@@ -367,6 +481,44 @@
       "type": "uses_method",
       "source": "frontmatter",
       "href": "../methods/source-backed-team-memory.md"
+    }
+  ],
+  "method.source-re-encounter": [
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "inquiry.nycartc.march-data-design-attribution",
+      "type": "uses_method",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "method.nycartc.public-meeting-and-testimony-participation",
+      "type": "uses_method",
+      "source": "frontmatter",
+      "href": "source-re-encounter.md"
+    },
+    {
+      "from": "research-run.nycartc.shared-folder.2026-07",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "type": "uses_method",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
     }
   ],
   "opportunity.aclu.product-manager-ii-discovery.8482872002": [
@@ -581,6 +733,18 @@
       "href": "../projects/nyc-artist-coalition.md"
     },
     {
+      "from": "inquiry.nycartc.march-data-design-attribution",
+      "type": "part_of",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "method.nycartc.public-meeting-and-testimony-participation",
+      "type": "part_of",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
       "from": "research-run.nycartc.shared-folder.2026-07",
       "type": "part_of",
       "source": "frontmatter",
@@ -609,6 +773,18 @@
       "type": "documents",
       "source": "frontmatter",
       "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "source.nycartc.testimony-guide.2017",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "type": "part_of",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
     }
   ],
   "research-run.nycartc.shared-folder.2026-07": [
@@ -623,6 +799,12 @@
       "type": "links_to",
       "source": "markdown",
       "href": "research/nycartc-shared-folder-archival-production-2026-07.md"
+    },
+    {
+      "from": "method.source-re-encounter",
+      "type": "informed_by",
+      "source": "frontmatter",
+      "href": "../research/nycartc-shared-folder-archival-production-2026-07.md"
     },
     {
       "from": "project.nyc-artist-coalition",
@@ -693,6 +875,12 @@
       "type": "uses_source",
       "source": "frontmatter",
       "href": "../sources/nycartc-march-data-design-notes-2019.md"
+    },
+    {
+      "from": "inquiry.nycartc.march-data-design-attribution",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-march-data-design-notes-2019.md"
     }
   ],
   "source.nycartc.nightlife-recommendation-sequence.2017-2019": [
@@ -701,11 +889,23 @@
       "type": "uses_source",
       "source": "frontmatter",
       "href": "../sources/nycartc-nightlife-recommendation-sequence-2017-2019.md"
+    },
+    {
+      "from": "timeline.nycartc.nightlife-recommendations.2017-2019",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-nightlife-recommendation-sequence-2017-2019.md"
     }
   ],
   "source.nycartc.public-meeting-playbook.2018": [
     {
       "from": "claim.nycartc.public-meeting-operating-system",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-public-meeting-playbook-2018.md"
+    },
+    {
+      "from": "method.nycartc.public-meeting-and-testimony-participation",
       "type": "uses_source",
       "source": "frontmatter",
       "href": "../sources/nycartc-public-meeting-playbook-2018.md"
@@ -723,6 +923,26 @@
       "type": "uses_source",
       "source": "frontmatter",
       "href": "../sources/nycartc-shared-folder-census-2026.md"
+    }
+  ],
+  "source.nycartc.testimony-guide.2017": [
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-testimony-guide-2017.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../sources/nycartc-testimony-guide-2017.md"
+    },
+    {
+      "from": "method.nycartc.public-meeting-and-testimony-participation",
+      "type": "uses_source",
+      "source": "frontmatter",
+      "href": "../sources/nycartc-testimony-guide-2017.md"
     }
   ],
   "source.nycc.councilstat-hackathon-post.2016": [
@@ -793,6 +1013,32 @@
       "type": "uses_source",
       "source": "frontmatter",
       "href": "../sources/politico-callnyc-2016-03-14.md"
+    }
+  ],
+  "timeline.nycartc.nightlife-recommendations.2017-2019": [
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
+      "source": "frontmatter",
+      "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md"
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "links_to",
+      "source": "markdown",
+      "href": "../timelines/nycartc-nightlife-recommendations-2017-2019.md"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
-  "judgeId": "public-safety-composition-2026-07-19-nycartc-shared-folder",
+  "judgeId": "public-safety-composition-2026-07-19-nycartc-source-reencounter",
   "lens": "public-safety-composition",
-  "candidate": "sha256:efe9a7a5ba8bd8dc885113dad93bb84abf05c5cfc5847f92aefeebf2d3370ca9",
+  "candidate": "sha256:c0c11470a5f7d43cacb32bf24d0197645302dc51f05983cd7fc2e146f169ed6f",
   "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
   "passes": true,
   "scores": {
@@ -93,7 +93,7 @@
     },
     {
       "rubric": "research_honesty",
-      "observation": "Drive ownership, last-modifier metadata, task initials, and access are not treated as authorship, consent, completion, adoption, attendance, impact, or policy causality. The archive preserves collective credit and keeps Jamie-specific evidence limited to named testimony and prepared-speaker records."
+      "observation": "Drive ownership, last-modifier metadata, task initials, and access are not treated as authorship, consent, completion, adoption, attendance, impact, or policy causality. A native-document re-encounter now directly attributes one narrow FOIL and reporting-legislation suggestion to Jamie while leaving authorship of the wider collaborative MARCH design unresolved."
     },
     {
       "rubric": "status_separation",
@@ -102,8 +102,12 @@
     {
       "rubric": "projection_restraint",
       "observation": "No protected archive claim gains an active public projection. The technically significant MARCH data-design lead remains inferred and internal because authorship, factual inputs, implementation, validation, and safety are unresolved."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "The re-encounter records the native Google Docs representation and July 19, 2026 encounter date, distinguishes a visible suggestion from a full revision history, and updates the canonical source, claim boundary, inquiry, and Wiki pages without exposing document coordinates or raw collaborative text."
     }
   ],
   "regressions": [],
-  "nextAction": "Keep the shared-folder corpus and 1,413-item media queue protected while Jamie and collaborators review authorship, consent, credit, licensing, and editorial purpose; use public reporting as the website citation basis until protected sources are separately cleared."
+  "nextAction": "Keep the shared-folder corpus and 1,413-item media queue protected while Jamie and collaborators review complete revision history, authorship, consent, credit, licensing, and editorial purpose; treat the directly attributed MARCH suggestion as a narrow research finding, not a complete role or implementation claim."
 }

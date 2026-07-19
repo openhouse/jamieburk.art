@@ -32,7 +32,12 @@ machine-readable reporting mapped to frequently updated public datasets,
 possible preventive alerts, and explicit concern about selective or culturally
 biased alerting.
 
-The current evidence cannot allocate the complete design passage to Jamie. No
-implemented or validated predictive system was recovered. This record remains
-internal and protected pending revision-history, collaborator, factual-input,
-and implementation review.
+A July 19, 2026 native-document re-encounter exposed a visible suggestion
+attributed to Jamie connecting the proposed work to existing FOIL data and
+possible reporting legislation. This directly supports a narrow intervention.
+
+The current evidence still cannot allocate the complete design passage to
+Jamie. No implemented or validated predictive system was recovered. This
+record remains an inference with no public projection pending revision-history,
+collaborator, factual-input, and implementation review. See the
+[open inquiry](../inquiries/nycartc-march-data-design-attribution.md).

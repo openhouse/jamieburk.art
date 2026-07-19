@@ -381,7 +381,7 @@ export const nycArtcSharedFolderSources = [
     preservationStatus: "private",
     capturedAt: "2026-07-19",
     publicCitation: "Protected collaborative MARCH data-design notes, reviewed July 19, 2026.",
-    publicNote: "The working notes explore machine-readable reporting fields, links to frequently updated open data, possible preventive alerts, and the risk of selective or culturally biased alerting.",
+    publicNote: "The working notes explore machine-readable reporting fields, links to frequently updated open data, possible preventive alerts, and the risk of selective or culturally biased alerting. A visible suggestion attributes to Jamie a narrow question about existing FOIL data and possible reporting legislation.",
     locator: "Public-safe source synopsis only; raw collaborative notes remain outside the repository.",
     projectIds: ["nyc-artist-coalition"],
     intakeIds: ["INT-2026-07-19-NYCARTC-MARCH-DATA-DESIGN"],
@@ -391,6 +391,7 @@ export const nycArtcSharedFolderSources = [
     reviewedBy: ["Codex authenticated Google Docs close reading"],
     supportsGenerally: [
       "a campaign-adjacent open-data design exploration",
+      "a visible Jamie-authored suggestion connecting existing FOIL data to possible reporting legislation",
       "machine-readable legislative reporting requirements",
       "mapping reported fields to frequently updated public data",
       "explicit ethical concern about selective or culturally biased alerts"
@@ -682,13 +683,13 @@ export const nycArtcSharedFolderClaims = [
       {
         sourceId: "SRC-NYCARTC-ARCHIVE-MARCH-DATA-DESIGN-NOTES-2019",
         relationship: "private-support",
-        supports: ["data-design concept", "legislative reporting requirements", "ethical risk recognition"],
+        supports: ["data-design concept", "Jamie's narrow FOIL and reporting-legislation intervention", "legislative reporting requirements", "ethical risk recognition"],
         confidence: "moderate",
         renderCitation: false
       }
     ],
     boundaries: [
-      "The collaborative notes contain a Jamie-initialed edit invitation but do not allocate the complete data-design passage to him.",
+      "A visible February 1, 2019 suggestion attributes a narrow FOIL and reporting-legislation intervention to Jamie, but the collaborative notes do not allocate the complete data-design passage to him.",
       "No predictive system is known to have been implemented."
     ],
     antiClaims: [
@@ -748,19 +749,21 @@ export const nycArtcSharedFolderResearchInquiries = [
     intakeIds: ["INT-2026-07-19-NYCARTC-MARCH-DATA-DESIGN"],
     question: "Can revision history or collaborator review attribute the MARCH open-data reporting and preventive-alert design passage to Jamie, and can its factual inputs be independently verified?",
     methods: [
-      "Close-read the protected collaborative working document.",
+      "Close-read the protected collaborative working document and re-opened it in the native Google Docs interface on July 19, 2026.",
       "Separated the design concept from adjacent campaign statistics and from implementation claims.",
-      "Recorded revision-history and collaborator review as the next attribution step."
+      "Distinguished visible suggestion attribution from a complete revision-history analysis.",
+      "Recorded full revision-history and collaborator review as the next attribution step."
     ],
     runAt: "2026-07-19",
     resultStatus: "partially-recovered",
     findings: [
       "The notes propose machine-readable reporting fields mapped to frequently updated open datasets.",
       "The notes consider preventive alerts and explicitly identify selective or culturally biased alerting as a risk.",
-      "A Jamie-initialed edit invitation appears in the collaborative document, but the current pass cannot allocate the complete design passage."
+      "The native document visibly attributes to Jamie a February 1, 2019 suggestion asking whether existing FOIL data could support the proposed work and what a reporting bill would need to provide.",
+      "That suggestion supports a narrow contribution, but the current pass cannot allocate the complete design passage."
     ],
     limitations: [
-      "Revision history was not reviewed in this pass.",
+      "The full revision sequence was not reviewed beyond visible current suggestion metadata.",
       "No implementation artifact or validation record was recovered.",
       "Adjacent campaign statistics require independent source verification."
     ],

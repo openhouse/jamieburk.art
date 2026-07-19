@@ -2,8 +2,8 @@
   "id": "architecture-editorial",
   "reviewer": "Codex independent architecture and editorial review",
   "reviewedAt": "2026-07-19",
-  "candidateFingerprint": "sha256:5d2ecd9d94bcace0aedb37dfd23c82d1020fa87f4bddae4eee469b5d4b7eaabe",
-  "contractFingerprint": "sha256:c85490255586a68b34ae078946a15a831d99f61f45ca0b73fe811f7f58584e27",
+  "candidateFingerprint": "sha256:f167c57c0d1033f1aca9bf3150161c07747a42c5b2b92f270297af1b19bdaf3b",
+  "contractFingerprint": "sha256:ac528067225d1a32c38850a8de427ab77285966efa283f01f890158b28424f11",
   "verdict": "pass",
   "criteria": [
     {
@@ -50,6 +50,21 @@
       "id": "archive-narrative-selectivity",
       "status": "pass",
       "finding": "The archive deepens the internal record while the website remains a selective projection; protected-only findings, unresolved MARCH data-design attribution, and raw working documents stay off public surfaces."
+    },
+    {
+      "id": "wanted-page-selectivity",
+      "status": "pass",
+      "finding": "The missing-pages index answers what the Wiki most needs while distinguishing pages created now from event chronology, authorship mapping, visual specimens, and private/public bridging that remain deferred, protected, rights-blocked, or proposed."
+    },
+    {
+      "id": "present-source-reading",
+      "status": "pass",
+      "finding": "Five original NYC Artist Coalition documents were re-opened in their native representation. The resulting pages record what the present encounter confirmed or narrowed without treating access as publication permission or erasing earlier uncertainty."
+    },
+    {
+      "id": "participation-and-inquiry-legibility",
+      "status": "pass",
+      "finding": "The participation method joins meeting production with testimony support, the recommendation timeline preserves continuity without claiming adoption, and the MARCH inquiry makes a narrow Jamie-attributed intervention legible without allocating complete authorship."
     }
   ],
   "manualGates": {
@@ -57,5 +72,5 @@
     "rightsClearance": "human-blocked",
     "editorialApproval": "not-requested"
   },
-  "remainingWork": "Run the documented retrieval tasks with unfamiliar human readers, obtain collaborator-aware artifact attribution, complete media rights review, and obtain Jamie's current-role priority decisions before treating navigation, archive role allocation, or opportunity selection as human-validated."
+  "remainingWork": "Run the expanded retrieval tasks with unfamiliar human readers, complete full revision-history and collaborator review for consequential attribution, develop the deferred event chronology, complete media rights review, and obtain Jamie's current-role priority decisions before treating navigation, archive role allocation, opportunity selection, or public projection as human-validated."
 }

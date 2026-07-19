@@ -41,6 +41,15 @@ relations:
   - type: supports
     target: capability.technical-operations
     href: ../capabilities/technical-operations.md
+  - type: uses_method
+    target: method.nycartc.public-meeting-and-testimony-participation
+    href: ../methods/nycartc-public-meeting-and-testimony-participation.md
+  - type: informed_by
+    target: timeline.nycartc.nightlife-recommendations.2017-2019
+    href: ../timelines/nycartc-nightlife-recommendations-2017-2019.md
+  - type: informed_by
+    target: inquiry.nycartc.march-data-design-attribution
+    href: ../inquiries/nycartc-march-data-design-attribution.md
 allowed_surfaces:
   - /work/fair-rent-nyc
 ---
@@ -50,6 +59,12 @@ allowed_surfaces:
 This dossier collects public-safe sources, claims, inquiries, boundaries, and
 future photo research concerning Jamie's coalition-building, civic systems,
 public web infrastructure, and cultural-space advocacy.
+
+The [participation method](../methods/nycartc-public-meeting-and-testimony-participation.md),
+[nightlife recommendation timeline](../timelines/nycartc-nightlife-recommendations-2017-2019.md),
+and [MARCH attribution inquiry](../inquiries/nycartc-march-data-design-attribution.md)
+make three high-value archive paths directly inspectable while keeping source,
+role, implementation, and publication boundaries intact.
 
 The first lifecycle run established founding-role attribution and 2017 Cabaret
 Law advocacy. A second ten-source research round develops the coalition's early
