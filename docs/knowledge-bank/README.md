@@ -59,6 +59,10 @@ and the [authoring guide](knowledge-wiki-authoring.md).
   [participation infrastructure](timelines/participation-infrastructure-lineage-2012-2026.md),
   and [artistic practice](timelines/art-life-waterways-and-media-archaeology-2003-2011.md):
   the new source-grounded synthesis layer.
+- [Relational infrastructure atlas](indexes/relational-infrastructure-atlas.md),
+  [operational outcomes](indexes/decisions-deliverables-and-operational-outcomes.md),
+  and [maintenance and care](indexes/maintenance-and-care.md): human-readable
+  routes through relationships, responsibility, delivery, results, and tending.
 - [Absences, protections, and permissions](indexes/absences-protections-and-permissions.md):
   why inaccessible, private, rights-blocked, unresolved, and unselected
   knowledge must remain distinguishable.

@@ -1,6 +1,6 @@
 {
   "id": "knowledge-wiki-foundation",
-  "version": 3,
+  "version": 4,
   "profile": "foundation_ready",
   "principle": "Markdown is the record, the graph is compiled, and the portfolio is a governed projection.",
   "stopRule": {
@@ -36,6 +36,10 @@
     "collective_authorship_map_integrity",
     "project_afterlife_integrity",
     "protected_absence_integrity",
+    "remaining_editorial_pages_complete",
+    "relational_atlas_integrity",
+    "operational_outcome_integrity",
+    "maintenance_care_integrity",
     "projection_restraint",
     "candidate_binding"
   ],
@@ -184,6 +188,30 @@
       "query": { "id": "index.absences-protections-and-permissions" },
       "expectedRecordIds": ["index.absences-protections-and-permissions"],
       "requiredBoundary": "Jamie's authorization allows agents to research. It does not manufacture third-party consent"
+    },
+    {
+      "id": "relational-infrastructure-atlas",
+      "query": { "id": "index.relational-infrastructure-atlas" },
+      "expectedRecordIds": ["index.relational-infrastructure-atlas"],
+      "requiredBoundary": "Typed proximity is not causality, attendance, authorship, endorsement, or measured impact"
+    },
+    {
+      "id": "operational-outcomes",
+      "query": { "id": "index.decisions-deliverables-operational-outcomes" },
+      "expectedRecordIds": ["index.decisions-deliverables-operational-outcomes"],
+      "requiredBoundary": "Government action is not Jamie's action"
+    },
+    {
+      "id": "maintenance-and-care",
+      "query": { "id": "index.maintenance-and-care" },
+      "expectedRecordIds": ["index.maintenance-and-care"],
+      "requiredBoundary": "The evidence does not support a single continuous maintenance role across all projects"
+    },
+    {
+      "id": "places-passages-publics-alias",
+      "query": { "id": "Places, passages, and publics" },
+      "expectedRecordIds": ["index.people-places-and-community-testimony"],
+      "requiredBoundary": "Geography is not background in this record"
     }
   ],
   "humanTasks": [
@@ -334,6 +362,45 @@
         "index.knowledge-wiki-missing-pages"
       ],
       "requiredBoundary": "Research authorization is not third-party consent, copyright, collective authorship, or publication necessity."
+    },
+    {
+      "id": "find-relational-infrastructure-atlas",
+      "prompt": "Trace a human-readable route through projects, methods, sources, claims, places, outcomes, and handoffs.",
+      "expectedRecordIds": [
+        "index.relational-infrastructure-atlas",
+        "timeline.participation-infrastructure.2012-2026",
+        "index.project-afterlives-and-handoffs"
+      ],
+      "requiredBoundary": "A typed relationship or backlink does not prove causality, authorship, attendance, endorsement, or impact."
+    },
+    {
+      "id": "compare-decisions-deliverables-outcomes",
+      "prompt": "Compare what was difficult, what Jamie was responsible for, what became usable, what the wider team or institution did, and what remains unknown across several projects.",
+      "expectedRecordIds": [
+        "index.decisions-deliverables-operational-outcomes",
+        "index.role-and-collective-authorship",
+        "capability.technical-operations"
+      ],
+      "requiredBoundary": "Do not turn a government action, collective outcome, delivered proposal, or public metric into sole personal impact."
+    },
+    {
+      "id": "find-maintenance-and-care",
+      "prompt": "Show how physical repair, digital continuity, recurring participation, information stewardship, governed memory, and handoff appear as distinct forms of maintenance.",
+      "expectedRecordIds": [
+        "index.maintenance-and-care",
+        "index.scenes-of-work",
+        "index.project-afterlives-and-handoffs"
+      ],
+      "requiredBoundary": "Keep source class, time period, collaborators, rights, and unknowns distinct for every example."
+    },
+    {
+      "id": "find-places-passages-publics",
+      "prompt": "Find the places, passages, and publics reading path without creating a duplicate page or exposing a private social graph.",
+      "expectedRecordIds": [
+        "index.people-places-and-community-testimony",
+        "index.relational-infrastructure-atlas"
+      ],
+      "requiredBoundary": "Places and participation routes may be documented without inferring private relationships or policy effects."
     }
   ],
   "manualAuthorityGates": [

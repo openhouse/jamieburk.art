@@ -4,7 +4,7 @@
   "compatibilityAlias": "Knowledge Bank",
   "canonicalRoot": "docs/knowledge-bank",
   "sourceCommit": "c61b801c6b01073257975658a8e7981f9977d8d4",
-  "sourceFingerprint": "sha256:82de06be508d0a7ffc4bc4d9afdcc6c9ca5f468b20d611b7ecc80e6f02bd21d0",
+  "sourceFingerprint": "sha256:3bac11bdab3f9f0476df310577b54841df275095899f4d8b0327b397f1d05733",
   "nodes": [
     {
       "id": "asset.photo.digital-district.001",
@@ -260,6 +260,48 @@
       "portfolioRoutes": []
     },
     {
+      "id": "index.decisions-deliverables-operational-outcomes",
+      "path": "docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md",
+      "title": "Decisions, deliverables, and operational outcomes",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+        "CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION",
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "CLM-CRS-90-DAY-OPERATING-PLAN",
+        "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+        "CLM-CRS-PRIVACY-AWARE-RUNNING-MINUTES",
+        "CLM-CRS-RPIE-PUBLIC-BASELINE-PROPOSAL",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-KC-TOWN-HALL-BOARD-RECOMMENDATION",
+        "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+        "CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE",
+        "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
+        "CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE",
+        "CLM-KCSPACES-FUNDRAISING-OUTCOME",
+        "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+        "CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM",
+        "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT",
+        "CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME"
+      ],
+      "aliases": [
+        "Operational outcomes",
+        "What Jamie made usable"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
       "id": "index.employment-acceptance",
       "path": "docs/knowledge-bank/indexes/employment-acceptance.md",
       "title": "Employment acceptance",
@@ -348,6 +390,37 @@
       "portfolioRoutes": []
     },
     {
+      "id": "index.maintenance-and-care",
+      "path": "docs/knowledge-bank/indexes/maintenance-and-care.md",
+      "title": "Maintenance and care",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "careful",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CRS-PRIVACY-AWARE-RUNNING-MINUTES",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+        "CLM-KC-TOWN-HALL-PHASE-ONE-SCOPE",
+        "CLM-KCSPACES-DIGITAL-OPERATIONS-ROLE",
+        "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT"
+      ],
+      "aliases": [
+        "Care as operations",
+        "Sustaining systems"
+      ],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
       "id": "index.people-places-and-community-testimony",
       "path": "docs/knowledge-bank/indexes/people-places-and-community-testimony.md",
       "title": "People, places, and community testimony",
@@ -363,7 +436,10 @@
         "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
         "CLM-NYCARTC-TESTIMONY-PARTICIPATION-DESIGN"
       ],
-      "aliases": [],
+      "aliases": [
+        "People speaking in places",
+        "Places, passages, and publics"
+      ],
       "allowedSurfaces": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19",
@@ -388,6 +464,38 @@
         "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"
       ],
       "aliases": [],
+      "allowedSurfaces": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19",
+      "reviewState": "requested",
+      "roleRequirements": [],
+      "discoveryTerms": [],
+      "portfolioRoutes": []
+    },
+    {
+      "id": "index.relational-infrastructure-atlas",
+      "path": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "title": "Relational infrastructure atlas",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "projectionStatus": "not-applicable",
+      "discoverable": true,
+      "canonicalRefs": [
+        "CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION",
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "CLM-CALLSCRIPT-POPULAR-VOTE-NYCARTC-BRIDGE",
+        "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+        "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT",
+        "CLM-SUNDAY-DINNER-WORKBOOK-AGGREGATE",
+        "CLM-WOWLIST-DB-SNAPSHOT-SCALE-2017",
+        "CLM-WOWLIST-RELATIONAL-TAG-OVERLAP-2017"
+      ],
+      "aliases": [
+        "Human-readable Wiki Graph",
+        "Relational infrastructure map"
+      ],
       "allowedSurfaces": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19",
@@ -1794,6 +1902,36 @@
     },
     {
       "from": "capability.technical-operations",
+      "type": "informed_by",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "frontmatter",
+      "href": "../indexes/decisions-deliverables-and-operational-outcomes.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "informed_by",
+      "to": "index.maintenance-and-care",
+      "source": "frontmatter",
+      "href": "../indexes/maintenance-and-care.md"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "markdown",
+      "href": "../indexes/decisions-deliverables-and-operational-outcomes.md",
+      "context": "operational-outcomes map"
+    },
+    {
+      "from": "capability.technical-operations",
+      "type": "links_to",
+      "to": "index.maintenance-and-care",
+      "source": "markdown",
+      "href": "../indexes/maintenance-and-care.md",
+      "context": "maintenance-and-care index"
+    },
+    {
+      "from": "capability.technical-operations",
       "type": "links_to",
       "to": "method.source-backed-team-memory",
       "source": "markdown",
@@ -2064,6 +2202,48 @@
       "href": "../methods/source-re-encounter.md"
     },
     {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "index.decisions-deliverables-operational-outcomes",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
       "from": "index.employment-acceptance",
       "type": "documents",
       "to": "capability.technical-operations",
@@ -2135,6 +2315,20 @@
     {
       "from": "index.knowledge-wiki-missing-pages",
       "type": "documents",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "frontmatter",
+      "href": "decisions-deliverables-and-operational-outcomes.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.maintenance-and-care",
+      "source": "frontmatter",
+      "href": "maintenance-and-care.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
       "to": "index.people-places-and-community-testimony",
       "source": "frontmatter",
       "href": "people-places-and-community-testimony.md"
@@ -2145,6 +2339,13 @@
       "to": "index.project-afterlives-and-handoffs",
       "source": "frontmatter",
       "href": "project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "documents",
+      "to": "index.relational-infrastructure-atlas",
+      "source": "frontmatter",
+      "href": "relational-infrastructure-atlas.md"
     },
     {
       "from": "index.knowledge-wiki-missing-pages",
@@ -2227,6 +2428,30 @@
     {
       "from": "index.knowledge-wiki-missing-pages",
       "type": "links_to",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "markdown",
+      "href": "decisions-deliverables-and-operational-outcomes.md",
+      "context": "Decisions, deliverables, and operational outcomes"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.maintenance-and-care",
+      "source": "markdown",
+      "href": "maintenance-and-care.md",
+      "context": "Maintenance and care"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.people-places-and-community-testimony",
+      "source": "markdown",
+      "href": "people-places-and-community-testimony.md",
+      "context": "People, places, and community testimony"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
       "to": "index.people-places-and-community-testimony",
       "source": "markdown",
       "href": "people-places-and-community-testimony.md",
@@ -2239,6 +2464,14 @@
       "source": "markdown",
       "href": "project-afterlives-and-handoffs.md",
       "context": "Project afterlives and handoffs"
+    },
+    {
+      "from": "index.knowledge-wiki-missing-pages",
+      "type": "links_to",
+      "to": "index.relational-infrastructure-atlas",
+      "source": "markdown",
+      "href": "relational-infrastructure-atlas.md",
+      "context": "Relational infrastructure atlas"
     },
     {
       "from": "index.knowledge-wiki-missing-pages",
@@ -2505,6 +2738,14 @@
     {
       "from": "index.knowledge-wiki",
       "type": "links_to",
+      "to": "index.decisions-deliverables-operational-outcomes",
+      "source": "markdown",
+      "href": "indexes/decisions-deliverables-and-operational-outcomes.md",
+      "context": "operational outcomes"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
       "to": "index.employment-acceptance",
       "source": "markdown",
       "href": "indexes/employment-acceptance.md",
@@ -2533,6 +2774,22 @@
       "source": "markdown",
       "href": "indexes/pilot.md",
       "context": "Foundation pilot"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.maintenance-and-care",
+      "source": "markdown",
+      "href": "indexes/maintenance-and-care.md",
+      "context": "maintenance and care"
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "links_to",
+      "to": "index.relational-infrastructure-atlas",
+      "source": "markdown",
+      "href": "indexes/relational-infrastructure-atlas.md",
+      "context": "Relational infrastructure atlas"
     },
     {
       "from": "index.knowledge-wiki",
@@ -2573,6 +2830,48 @@
       "source": "markdown",
       "href": "timelines/participation-infrastructure-lineage-2012-2026.md",
       "context": "participation infrastructure"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "frontmatter",
+      "href": "project-afterlives-and-handoffs.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "index.scenes-of-work",
+      "source": "frontmatter",
+      "href": "scenes-of-work.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition.md"
+    },
+    {
+      "from": "index.maintenance-and-care",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
     },
     {
       "from": "index.people-places-and-community-testimony",
@@ -2639,6 +2938,105 @@
     },
     {
       "from": "index.project-afterlives-and-handoffs",
+      "type": "uses_method",
+      "to": "method.source-re-encounter",
+      "source": "frontmatter",
+      "href": "../methods/source-re-encounter.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "documents",
+      "to": "index.people-places-and-community-testimony",
+      "source": "frontmatter",
+      "href": "people-places-and-community-testimony.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "documents",
+      "to": "index.role-and-collective-authorship",
+      "source": "frontmatter",
+      "href": "role-and-collective-authorship.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "documents",
+      "to": "timeline.participation-infrastructure.2012-2026",
+      "source": "frontmatter",
+      "href": "../timelines/participation-infrastructure-lineage-2012-2026.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "index.maintenance-and-care",
+      "source": "markdown",
+      "href": "maintenance-and-care.md",
+      "context": "maintenance and care index"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "index.people-places-and-community-testimony",
+      "source": "markdown",
+      "href": "people-places-and-community-testimony.md",
+      "context": "people and places index"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "index.project-afterlives-and-handoffs",
+      "source": "markdown",
+      "href": "project-afterlives-and-handoffs.md",
+      "context": "project-afterlives index"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "method.nycartc.public-meeting-and-testimony-participation",
+      "source": "markdown",
+      "href": "../methods/nycartc-public-meeting-and-testimony-participation.md",
+      "context": "public-meeting and testimony method"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "method.source-backed-team-memory",
+      "source": "markdown",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": "Source-Backed Team Memory"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "method.source-re-encounter",
+      "source": "markdown",
+      "href": "../methods/source-re-encounter.md",
+      "context": "source-reencounter method"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "project.callnyc",
+      "source": "markdown",
+      "href": "../projects/callnyc.md",
+      "context": "CallNYC"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "links_to",
+      "to": "timeline.nycartc.events-and-venues.2017-2021",
+      "source": "markdown",
+      "href": "../timelines/nycartc-events-and-venues-2017-2021.md",
+      "context": "event-and-venue chronology"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
+      "type": "part_of",
+      "to": "index.knowledge-wiki-missing-pages",
+      "source": "frontmatter",
+      "href": "missing-pages.md"
+    },
+    {
+      "from": "index.relational-infrastructure-atlas",
       "type": "uses_method",
       "to": "method.source-re-encounter",
       "source": "frontmatter",

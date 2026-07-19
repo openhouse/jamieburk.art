@@ -140,6 +140,29 @@ test("query benchmark returns bounded CallNYC records", () => {
   assert.equal(queryWiki(wiki, { canonicalRef: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433" }).nodes[0].id, "source.civichall.hackathon-announcement.2016");
 });
 
+test("relational atlas preserves noncausality and private-graph boundaries", () => {
+  const text = readFileSync(path.join(repoRoot, "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md"), "utf8").replace(/\s+/g, " ");
+  assert.match(text, /Typed proximity is not causality, attendance, authorship, endorsement, or measured impact/);
+  assert.match(text, /does not publish a private relationship graph/);
+  assert.match(text, /generated graph is an index, not an argument/);
+});
+
+test("operational outcomes keep responsibility, delivery, result, and unknown separate", () => {
+  const text = readFileSync(path.join(repoRoot, "docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md"), "utf8").replace(/\s+/g, " ");
+  assert.match(text, /Government action is not Jamie's action/);
+  assert.match(text, /A delivered artifact is not an adopted recommendation/);
+  assert.match(text, /No row may collapse difficulty, responsibility, deliverable, team outcome, and unknown into one sentence/);
+});
+
+test("maintenance and care preserve distinct modes and collective labor", () => {
+  const text = readFileSync(path.join(repoRoot, "docs/knowledge-bank/indexes/maintenance-and-care.md"), "utf8").replace(/\s+/g, " ");
+  for (const mode of ["Physical repair and sequencing", "Digital continuity", "Recurring participation", "Information stewardship", "Governed memory", "Responsible transition"]) {
+    assert.match(text, new RegExp(mode));
+  }
+  assert.match(text, /does not support a single continuous maintenance role across all projects/);
+  assert.match(text, /Care language must not obscure labor allocation/);
+});
+
 test("mutation fixture contract matches implemented adversarial cases", () => {
   const fixtures = JSON.parse(readFileSync(path.join(repoRoot, "evals/knowledge-wiki/fixtures/mutations.json"), "utf8"));
   assert.deepEqual(fixtures.map((fixture) => fixture.id).sort(), coveredMutationIds);

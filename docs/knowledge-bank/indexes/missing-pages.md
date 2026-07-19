@@ -14,7 +14,7 @@ review_state: requested
 owner: Jamie Burkart
 aliases: ["Wanted pages"]
 canonical_path: docs/knowledge-bank/indexes/missing-pages.md
-relations: [{"type":"part_of","target":"index.knowledge-wiki","href":"../README.md"},{"type":"documents","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"},{"type":"documents","target":"method.nycartc.public-meeting-and-testimony-participation","href":"../methods/nycartc-public-meeting-and-testimony-participation.md"},{"type":"documents","target":"timeline.nycartc.nightlife-recommendations.2017-2019","href":"../timelines/nycartc-nightlife-recommendations-2017-2019.md"},{"type":"documents","target":"inquiry.nycartc.march-data-design-attribution","href":"../inquiries/nycartc-march-data-design-attribution.md"},{"type":"documents","target":"source.nycartc.testimony-guide.2017","href":"../sources/nycartc-testimony-guide-2017.md"},{"type":"documents","target":"timeline.nycartc.events-and-venues.2017-2021","href":"../timelines/nycartc-events-and-venues-2017-2021.md"},{"type":"documents","target":"timeline.participation-infrastructure.2012-2026","href":"../timelines/participation-infrastructure-lineage-2012-2026.md"},{"type":"documents","target":"index.project-afterlives-and-handoffs","href":"project-afterlives-and-handoffs.md"},{"type":"documents","target":"index.role-and-collective-authorship","href":"role-and-collective-authorship.md"},{"type":"documents","target":"index.scenes-of-work","href":"scenes-of-work.md"},{"type":"documents","target":"timeline.art-life-waterways-media-archaeology.2003-2011","href":"../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"},{"type":"documents","target":"index.people-places-and-community-testimony","href":"people-places-and-community-testimony.md"},{"type":"documents","target":"index.absences-protections-and-permissions","href":"absences-protections-and-permissions.md"}]
+relations: [{"type":"part_of","target":"index.knowledge-wiki","href":"../README.md"},{"type":"documents","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"},{"type":"documents","target":"method.nycartc.public-meeting-and-testimony-participation","href":"../methods/nycartc-public-meeting-and-testimony-participation.md"},{"type":"documents","target":"timeline.nycartc.nightlife-recommendations.2017-2019","href":"../timelines/nycartc-nightlife-recommendations-2017-2019.md"},{"type":"documents","target":"inquiry.nycartc.march-data-design-attribution","href":"../inquiries/nycartc-march-data-design-attribution.md"},{"type":"documents","target":"source.nycartc.testimony-guide.2017","href":"../sources/nycartc-testimony-guide-2017.md"},{"type":"documents","target":"timeline.nycartc.events-and-venues.2017-2021","href":"../timelines/nycartc-events-and-venues-2017-2021.md"},{"type":"documents","target":"timeline.participation-infrastructure.2012-2026","href":"../timelines/participation-infrastructure-lineage-2012-2026.md"},{"type":"documents","target":"index.project-afterlives-and-handoffs","href":"project-afterlives-and-handoffs.md"},{"type":"documents","target":"index.role-and-collective-authorship","href":"role-and-collective-authorship.md"},{"type":"documents","target":"index.scenes-of-work","href":"scenes-of-work.md"},{"type":"documents","target":"timeline.art-life-waterways-media-archaeology.2003-2011","href":"../timelines/art-life-waterways-and-media-archaeology-2003-2011.md"},{"type":"documents","target":"index.people-places-and-community-testimony","href":"people-places-and-community-testimony.md"},{"type":"documents","target":"index.absences-protections-and-permissions","href":"absences-protections-and-permissions.md"},{"type":"documents","target":"index.relational-infrastructure-atlas","href":"relational-infrastructure-atlas.md"},{"type":"documents","target":"index.decisions-deliverables-operational-outcomes","href":"decisions-deliverables-and-operational-outcomes.md"},{"type":"documents","target":"index.maintenance-and-care","href":"maintenance-and-care.md"}]
 ---
 
 # Knowledge Wiki Missing Pages
@@ -63,6 +63,22 @@ can be revisited, and why a page was created, deferred, protected, or declined.
 8. [Absences, protections, and permissions](absences-protections-and-permissions.md)
    distinguishes missing evidence from material that is protected,
    rights-blocked, intentionally absent, or simply unselected.
+
+## Third Priority Page Family Created
+
+1. [Relational infrastructure atlas](relational-infrastructure-atlas.md)
+   interprets the derived Wiki Graph for human readers while refusing causal,
+   authorship, attendance, endorsement, or impact inference from proximity.
+2. [Decisions, deliverables, and operational outcomes](decisions-deliverables-and-operational-outcomes.md)
+   separates difficult conditions, Jamie's responsibility, usable artifacts,
+   wider results, and remaining unknowns.
+3. [Maintenance and care](maintenance-and-care.md) makes physical, digital,
+   participatory, informational, archival, and transition work visible without
+   erasing collaborators or inventing one continuous role.
+
+The earlier wish for a places, passages, and publics page is now a searchable
+alias and explicit section of [People, places, and community testimony](people-places-and-community-testimony.md),
+avoiding a competing page with the same evidence and purpose.
 
 ## Still Wanted
 

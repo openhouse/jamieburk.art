@@ -14,8 +14,10 @@ Target: [asset.photo.digital-district.001](../../../docs/knowledge-bank/assets/d
 
 Target: [capability.technical-operations](../../../docs/knowledge-bank/capabilities/technical-operations.md)
 
+- [Decisions, deliverables, and operational outcomes](../../../docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md) — `documents` from `frontmatter`
 - [Employment acceptance](../../../docs/knowledge-bank/indexes/employment-acceptance.md) — `documents` from `frontmatter`
 - [Knowledge Wiki foundation pilot](../../../docs/knowledge-bank/indexes/pilot.md) — `links_to` from `markdown`
+- [Maintenance and care](../../../docs/knowledge-bank/indexes/maintenance-and-care.md) — `documents` from `frontmatter`
 - [Source-Backed Team Memory](../../../docs/knowledge-bank/methods/source-backed-team-memory.md) — `supports` from `frontmatter`
 - [ACLU Product Manager II, Discovery](../../../docs/knowledge-bank/opportunities/aclu-product-manager-discovery.md) — `documents` from `frontmatter`
 - [Asana AI Implementation Manager, Service Management](../../../docs/knowledge-bank/opportunities/asana-ai-implementation.md) — `documents` from `frontmatter`
@@ -104,6 +106,16 @@ Target: [index.absences-protections-and-permissions](../../../docs/knowledge-ban
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
 
+## Decisions, deliverables, and operational outcomes
+
+Target: [index.decisions-deliverables-operational-outcomes](../../../docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md)
+
+- [Technical Operations](../../../docs/knowledge-bank/capabilities/technical-operations.md) — `informed_by` from `frontmatter`
+- [Technical Operations](../../../docs/knowledge-bank/capabilities/technical-operations.md) — `links_to` from `markdown`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+
 ## Employment acceptance
 
 Target: [index.employment-acceptance](../../../docs/knowledge-bank/indexes/employment-acceptance.md)
@@ -126,10 +138,13 @@ Target: [index.knowledge-wiki](../../../docs/knowledge-bank/README.md)
 Target: [index.knowledge-wiki-missing-pages](../../../docs/knowledge-bank/indexes/missing-pages.md)
 
 - [Absences, protections, and permissions](../../../docs/knowledge-bank/indexes/absences-protections-and-permissions.md) — `part_of` from `frontmatter`
+- [Decisions, deliverables, and operational outcomes](../../../docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md) — `part_of` from `frontmatter`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `documents` from `frontmatter`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+- [Maintenance and care](../../../docs/knowledge-bank/indexes/maintenance-and-care.md) — `part_of` from `frontmatter`
 - [People, places, and community testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md) — `part_of` from `frontmatter`
 - [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `part_of` from `frontmatter`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `part_of` from `frontmatter`
 - [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `part_of` from `frontmatter`
 - [Scenes of the work](../../../docs/knowledge-bank/indexes/scenes-of-work.md) — `part_of` from `frontmatter`
 - [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `links_to` from `markdown`
@@ -145,12 +160,26 @@ Target: [index.knowledge-wiki-pilot](../../../docs/knowledge-bank/indexes/pilot.
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
 
+## Maintenance and care
+
+Target: [index.maintenance-and-care](../../../docs/knowledge-bank/indexes/maintenance-and-care.md)
+
+- [Technical Operations](../../../docs/knowledge-bank/capabilities/technical-operations.md) — `informed_by` from `frontmatter`
+- [Technical Operations](../../../docs/knowledge-bank/capabilities/technical-operations.md) — `links_to` from `markdown`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `links_to` from `markdown`
+
 ## People, places, and community testimony
 
 Target: [index.people-places-and-community-testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md)
 
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `documents` from `frontmatter`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `links_to` from `markdown`
 
 ## Project afterlives and handoffs
 
@@ -159,15 +188,27 @@ Target: [index.project-afterlives-and-handoffs](../../../docs/knowledge-bank/ind
 - [Absences, protections, and permissions](../../../docs/knowledge-bank/indexes/absences-protections-and-permissions.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Maintenance and care](../../../docs/knowledge-bank/indexes/maintenance-and-care.md) — `documents` from `frontmatter`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `links_to` from `markdown`
 - [KC Spaces Fund](../../../docs/knowledge-bank/projects/kc-spaces-fund.md) — `informed_by` from `frontmatter`
+
+## Relational infrastructure atlas
+
+Target: [index.relational-infrastructure-atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md)
+
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
+- [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
 
 ## Role and collective authorship map
 
 Target: [index.role-and-collective-authorship](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md)
 
 - [Absences, protections, and permissions](../../../docs/knowledge-bank/indexes/absences-protections-and-permissions.md) — `documents` from `frontmatter`
+- [Decisions, deliverables, and operational outcomes](../../../docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `documents` from `frontmatter`
 - [Scenes of the work](../../../docs/knowledge-bank/indexes/scenes-of-work.md) — `informed_by` from `frontmatter`
 - [KC Spaces Fund](../../../docs/knowledge-bank/projects/kc-spaces-fund.md) — `informed_by` from `frontmatter`
 
@@ -178,6 +219,7 @@ Target: [index.scenes-of-work](../../../docs/knowledge-bank/indexes/scenes-of-wo
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+- [Maintenance and care](../../../docs/knowledge-bank/indexes/maintenance-and-care.md) — `documents` from `frontmatter`
 - [Art, life, waterways, and media archaeology, 2003-2011](../../../docs/knowledge-bank/timelines/art-life-waterways-and-media-archaeology-2003-2011.md) — `informed_by` from `frontmatter`
 
 ## MARCH data-design attribution and implementation inquiry
@@ -199,6 +241,7 @@ Target: [method.nycartc.public-meeting-and-testimony-participation](../../../doc
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
 - [People, places, and community testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md) — `documents` from `frontmatter`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `links_to` from `markdown`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `links_to` from `markdown`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `uses_method` from `frontmatter`
 - [NYC Artist Coalition Cabaret Law testimony guide](../../../docs/knowledge-bank/sources/nycartc-testimony-guide-2017.md) — `links_to` from `markdown`
@@ -211,6 +254,7 @@ Target: [method.source-backed-team-memory](../../../docs/knowledge-bank/methods/
 - [Technical Operations](../../../docs/knowledge-bank/capabilities/technical-operations.md) — `links_to` from `markdown`
 - [Technical Operations](../../../docs/knowledge-bank/capabilities/technical-operations.md) — `uses_method` from `frontmatter`
 - [Knowledge Wiki foundation pilot](../../../docs/knowledge-bank/indexes/pilot.md) — `links_to` from `markdown`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `links_to` from `markdown`
 - [Source re-encounter](../../../docs/knowledge-bank/methods/source-re-encounter.md) — `supports` from `frontmatter`
 - [Asana AI Implementation Manager, Service Management](../../../docs/knowledge-bank/opportunities/asana-ai-implementation.md) — `documents` from `frontmatter`
 - [CodePath Senior Program Manager, Claude Corps](../../../docs/knowledge-bank/opportunities/codepath-claude-corps.md) — `documents` from `frontmatter`
@@ -226,6 +270,8 @@ Target: [method.source-re-encounter](../../../docs/knowledge-bank/methods/source
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
 - [People, places, and community testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md) — `uses_method` from `frontmatter`
 - [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `uses_method` from `frontmatter`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `links_to` from `markdown`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `uses_method` from `frontmatter`
 - [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `uses_method` from `frontmatter`
 - [Scenes of the work](../../../docs/knowledge-bank/indexes/scenes-of-work.md) — `uses_method` from `frontmatter`
 - [MARCH data-design attribution and implementation inquiry](../../../docs/knowledge-bank/inquiries/nycartc-march-data-design-attribution.md) — `uses_method` from `frontmatter`
@@ -300,9 +346,11 @@ Target: [project.callnyc](../../../docs/knowledge-bank/projects/callnyc.md)
 - [Technical Operations](../../../docs/knowledge-bank/capabilities/technical-operations.md) — `links_to` from `markdown`
 - [New York City Council constituent-services hackathon at Civic Hall](../../../docs/knowledge-bank/events/nyc-council-constituent-services-hackathon-2016.md) — `links_to` from `markdown`
 - [New York City Council constituent-services hackathon at Civic Hall](../../../docs/knowledge-bank/events/nyc-council-constituent-services-hackathon-2016.md) — `resulted_in` from `frontmatter`
+- [Decisions, deliverables, and operational outcomes](../../../docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md) — `documents` from `frontmatter`
 - [Knowledge Wiki foundation pilot](../../../docs/knowledge-bank/indexes/pilot.md) — `links_to` from `markdown`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
 - [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `documents` from `frontmatter`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `links_to` from `markdown`
 - [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `documents` from `frontmatter`
 - [ACLU Product Manager II, Discovery](../../../docs/knowledge-bank/opportunities/aclu-product-manager-discovery.md) — `documents` from `frontmatter`
 - [PermitFlow Product Operations Manager](../../../docs/knowledge-bank/opportunities/permitflow-product-operations.md) — `documents` from `frontmatter`
@@ -314,6 +362,8 @@ Target: [project.callnyc](../../../docs/knowledge-bank/projects/callnyc.md)
 
 Target: [project.kc-spaces-fund](../../../docs/knowledge-bank/projects/kc-spaces-fund.md)
 
+- [Decisions, deliverables, and operational outcomes](../../../docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md) — `documents` from `frontmatter`
+- [Maintenance and care](../../../docs/knowledge-bank/indexes/maintenance-and-care.md) — `documents` from `frontmatter`
 - [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `documents` from `frontmatter`
 - [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `documents` from `frontmatter`
 
@@ -326,6 +376,8 @@ Target: [project.nyc-artist-coalition](../../../docs/knowledge-bank/projects/nyc
 - [MARCH open-data design lead](../../../docs/knowledge-bank/claims/nycartc-march-data-design-lead.md) — `part_of` from `frontmatter`
 - [NYC Artist Coalition nightlife recommendation continuity](../../../docs/knowledge-bank/claims/nycartc-nightlife-recommendation-continuity.md) — `part_of` from `frontmatter`
 - [NYC Artist Coalition public-meeting operating system](../../../docs/knowledge-bank/claims/nycartc-public-meeting-operating-system.md) — `part_of` from `frontmatter`
+- [Decisions, deliverables, and operational outcomes](../../../docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md) — `documents` from `frontmatter`
+- [Maintenance and care](../../../docs/knowledge-bank/indexes/maintenance-and-care.md) — `documents` from `frontmatter`
 - [Project afterlives and handoffs](../../../docs/knowledge-bank/indexes/project-afterlives-and-handoffs.md) — `documents` from `frontmatter`
 - [Role and collective authorship map](../../../docs/knowledge-bank/indexes/role-and-collective-authorship.md) — `documents` from `frontmatter`
 - [MARCH data-design attribution and implementation inquiry](../../../docs/knowledge-bank/inquiries/nycartc-march-data-design-attribution.md) — `part_of` from `frontmatter`
@@ -436,6 +488,7 @@ Target: [timeline.nycartc.events-and-venues.2017-2021](../../../docs/knowledge-b
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
 - [People, places, and community testimony](../../../docs/knowledge-bank/indexes/people-places-and-community-testimony.md) — `documents` from `frontmatter`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `links_to` from `markdown`
 - [Scenes of the work](../../../docs/knowledge-bank/indexes/scenes-of-work.md) — `informed_by` from `frontmatter`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `informed_by` from `frontmatter`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `links_to` from `markdown`
@@ -457,5 +510,6 @@ Target: [timeline.participation-infrastructure.2012-2026](../../../docs/knowledg
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `documents` from `frontmatter`
 - [Knowledge Wiki missing pages](../../../docs/knowledge-bank/indexes/missing-pages.md) — `links_to` from `markdown`
 - [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+- [Relational infrastructure atlas](../../../docs/knowledge-bank/indexes/relational-infrastructure-atlas.md) — `documents` from `frontmatter`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `informed_by` from `frontmatter`
 - [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `links_to` from `markdown`

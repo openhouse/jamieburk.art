@@ -441,6 +441,100 @@ gate("protected_absence_integrity", protectedAbsenceIntegrity, protectedAbsenceI
   ? "The Wiki distinguishes missing, unread, protected, rights-blocked, unresolved, intentionally absent, and unselected knowledge while forbidding private social-graph publication"
   : "Protected absence, permission separation, private-context restraint, or people-and-testimony safety has regressed");
 
+const remainingEditorialPageIds = [
+  "index.relational-infrastructure-atlas",
+  "index.decisions-deliverables-operational-outcomes",
+  "index.maintenance-and-care"
+];
+const remainingEditorialPages = remainingEditorialPageIds
+  .map((id) => wiki.records.find((record) => record.id === id))
+  .filter(Boolean);
+const peoplePlacesAliases = new Set((peoplePlaces?.aliases ?? []).map((alias) => normalizedText(alias)));
+const remainingEditorialPagesComplete = remainingEditorialPages.length === remainingEditorialPageIds.length &&
+  remainingEditorialPageIds.every((id) => priorityIndexTargets.has(id)) &&
+  remainingEditorialPages.every((record) => record.discoverable && record.lastReviewed === "2026-07-19" && record.allowedSurfaces.length === 0) &&
+  missingPageIndexText.includes("third priority page family created") &&
+  peoplePlacesAliases.has("places passages and publics") &&
+  peoplePlacesText.includes("geography is not background in this record");
+gate("remaining_editorial_pages_complete", remainingEditorialPagesComplete, remainingEditorialPagesComplete
+  ? "The three remaining authored synthesis pages exist, are indexed and unprojected, while the overlapping places-and-publics wish resolves through a searchable alias instead of a duplicate record"
+  : "The remaining page family, missing-page index links, review state, projection hold, or places-and-publics alias is incomplete");
+
+const relationalAtlas = wiki.records.find((record) => record.id === "index.relational-infrastructure-atlas");
+const relationalAtlasText = normalizedText(relationalAtlas?.body ?? "");
+const relationalAtlasIntegrity = relationalAtlas?.kind === "index" &&
+  relationalAtlas?.projectionStatus === "not-applicable" &&
+  relationalAtlas?.allowedSurfaces.length === 0 &&
+  relationalAtlas?.canonicalRefs.length >= 6 &&
+  [
+    "human readable guide to relationships already represented in the knowledge wiki",
+    "typed proximity is not causality attendance authorship endorsement or measured impact",
+    "does not publish a private relationship graph",
+    "archive custody does not establish authorship consent or permission",
+    "generated graph is an index not an argument",
+    "did not reopen every underlying private artifact"
+  ].every((term) => relationalAtlasText.includes(term));
+gate("relational_atlas_integrity", relationalAtlasIntegrity, relationalAtlasIntegrity
+  ? "The authored atlas explains typed Wiki routes while preventing proximity, backlinks, aggregate structure, or archive custody from becoming causality, authorship, attendance, impact, or a private social graph"
+  : "The relational atlas has weakened its human-readable purpose, public/private boundary, noncausality rule, or generated-versus-editorial distinction");
+
+const operationalOutcomes = wiki.records.find((record) => record.id === "index.decisions-deliverables-operational-outcomes");
+const operationalOutcomesText = normalizedText(operationalOutcomes?.body ?? "");
+const operationalOutcomeClaims = [
+  "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+  "CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME",
+  "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+  "CLM-KCSPACES-FUNDRAISING-OUTCOME",
+  "CLM-CRS-90-DAY-OPERATING-PLAN",
+  "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT"
+].map((id) => knowledgeBank.claims.find((claim) => claim.id === id));
+const operationalOutcomeIntegrity = operationalOutcomes?.kind === "index" &&
+  operationalOutcomes?.projectionStatus === "careful" &&
+  operationalOutcomes?.allowedSurfaces.length === 0 &&
+  operationalOutcomes?.canonicalRefs.length >= 12 &&
+  operationalOutcomeClaims.every((claim) => claim && claim.boundaries.length > 0) &&
+  [
+    "difficult condition",
+    "jamie s supported responsibility",
+    "deliverable or usable change",
+    "wider result",
+    "government action is not jamie s action",
+    "a delivered artifact is not an adopted recommendation",
+    "a public outcome can coexist with unresolved causal contribution",
+    "no row may collapse difficulty responsibility deliverable team outcome and unknown into one sentence",
+    "not automatic public copy"
+  ].every((term) => operationalOutcomesText.includes(term));
+gate("operational_outcome_integrity", operationalOutcomeIntegrity, operationalOutcomeIntegrity
+  ? "The operational evidence map separates difficulty, Jamie's supported responsibility, usable delivery, collective or institutional result, and unknown while retaining canonical claim boundaries"
+  : "The operational-outcomes page has collapsed responsibility, delivery, government or team action, causality, proposal status, or projection authority");
+
+const maintenanceCare = wiki.records.find((record) => record.id === "index.maintenance-and-care");
+const maintenanceCareText = normalizedText(maintenanceCare?.body ?? "");
+const maintenanceTargets = new Set((maintenanceCare?.relations ?? []).map((relation) => relation.target));
+const maintenanceCareIntegrity = maintenanceCare?.kind === "index" &&
+  maintenanceCare?.projectionStatus === "careful" &&
+  maintenanceCare?.allowedSurfaces.length === 0 &&
+  maintenanceCare?.canonicalRefs.length >= 7 &&
+  maintenanceTargets.has("capability.technical-operations") &&
+  maintenanceTargets.has("index.project-afterlives-and-handoffs") &&
+  [
+    "preserves usability safety continuity memory or a responsible transition over time",
+    "without treating care as an unmeasured virtue",
+    "physical repair and sequencing",
+    "digital continuity",
+    "recurring participation",
+    "information stewardship",
+    "governed memory",
+    "responsible transition",
+    "should not be collapsed into one metric",
+    "does not support a single continuous maintenance role across all projects",
+    "care language must not obscure labor allocation",
+    "creates no new rights role completion or impact claim"
+  ].every((term) => maintenanceCareText.includes(term));
+gate("maintenance_care_integrity", maintenanceCareIntegrity, maintenanceCareIntegrity
+  ? "Maintenance remains a source-bounded multi-mode operating practice with distinct labor, collaborators, time periods, outcomes, and handoff states rather than one continuous or heroic personal role"
+  : "The maintenance page has collapsed distinct modes, obscured labor allocation, inferred continuous responsibility, or created unsupported rights, role, completion, or impact claims");
+
 const photo = wiki.records.find((record) => record.id === "asset.photo.digital-district.001");
 const noPublicWikiRoute = !existsSync(path.join(repoRoot, "apps/www/src/app/knowledge-wiki")) && !existsSync(path.join(repoRoot, "apps/www/src/app/knowledge-bank"));
 const projectionSafe = photo?.allowedSurfaces.length === 0 && photo?.rightsState === "private-review" && noPublicWikiRoute;

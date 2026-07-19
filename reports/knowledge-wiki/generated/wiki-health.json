@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "sha256:82de06be508d0a7ffc4bc4d9afdcc6c9ca5f468b20d611b7ecc80e6f02bd21d0",
+  "sourceFingerprint": "sha256:3bac11bdab3f9f0476df310577b54841df275095899f4d8b0327b397f1d05733",
   "hardGates": {
     "status": "pass",
     "failures": []
   },
   "diagnostics": {
-    "records": 47,
+    "records": 50,
     "recordsByKind": {
       "asset": 1,
       "capability": 1,
       "claim": 6,
       "correction": 1,
       "event": 1,
-      "index": 9,
+      "index": 12,
       "method": 3,
       "opportunity": 6,
       "projection": 2,
@@ -23,11 +23,11 @@
       "source": 8,
       "timeline": 4
     },
-    "proseLinks": 80,
-    "typedRelations": 143,
+    "proseLinks": 97,
+    "typedRelations": 165,
     "genericRelationRate": 0,
-    "discoverableRecords": 46,
-    "reachableDiscoverableRecords": 46,
+    "discoverableRecords": 49,
+    "reachableDiscoverableRecords": 49,
     "maximumRootDistance": 3,
     "typeAwareOrphans": [],
     "deadEnds": [],
@@ -58,6 +58,14 @@
         "state": "human-blocked"
       },
       {
+        "id": "index.decisions-deliverables-operational-outcomes",
+        "state": "requested"
+      },
+      {
+        "id": "index.maintenance-and-care",
+        "state": "requested"
+      },
+      {
         "id": "index.knowledge-wiki-missing-pages",
         "state": "requested"
       },
@@ -67,6 +75,10 @@
       },
       {
         "id": "index.project-afterlives-and-handoffs",
+        "state": "requested"
+      },
+      {
+        "id": "index.relational-infrastructure-atlas",
         "state": "requested"
       },
       {

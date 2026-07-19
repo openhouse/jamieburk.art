@@ -12,6 +12,7 @@ last_reviewed: 2026-07-19
 review_by: 2026-10-19
 review_state: requested
 owner: Jamie Burkart
+aliases: ["People speaking in places","Places, passages, and publics"]
 canonical_path: docs/knowledge-bank/indexes/people-places-and-community-testimony.md
 canonical_refs: ["CLM-FB-NYCARTC-PARTICIPATION-SYSTEM","CLM-FB-NYCARTC-PUBLIC-OFFICIAL-PROGRAMS","CLM-NYCARTC-TESTIMONY-PARTICIPATION-DESIGN","CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY"]
 relations: [{"type":"part_of","target":"index.knowledge-wiki-missing-pages","href":"missing-pages.md"},{"type":"documents","target":"timeline.nycartc.events-and-venues.2017-2021","href":"../timelines/nycartc-events-and-venues-2017-2021.md"},{"type":"documents","target":"method.nycartc.public-meeting-and-testimony-participation","href":"../methods/nycartc-public-meeting-and-testimony-participation.md"},{"type":"uses_source","target":"source.nycartc.testimony-guide.2017","href":"../sources/nycartc-testimony-guide-2017.md"},{"type":"uses_method","target":"method.source-re-encounter","href":"../methods/source-re-encounter.md"}]
@@ -23,7 +24,12 @@ This index records public participation structures without publishing a social
 graph of private people. It treats places and testimony formats as historical
 actors while preserving the difference among invitation, presence, speech,
 response, and policy outcome.
-## Places As Civic Infrastructure
+## Places, Passages, And Publics
+
+Geography is not background in this record. Rivers, streets, neighborhood
+buildings, cultural venues, civic chambers, websites, and shared meals shaped
+how people could enter the work and how concerns could travel between cultural
+and civic settings.
 
 Ten recovered recurring coalition meetings name ten physical cultural spaces:
 Magick City, The Floasis, Muchmore's, The City Reliquary, Shoestring Press,
@@ -69,4 +75,3 @@ The next valuable layer is consented collaborator and participant memory about
 how particular spaces changed what could be heard or decided. That work should
 begin with a private interview and permissions workflow, not automatic
 extraction from social-media proximity.
-

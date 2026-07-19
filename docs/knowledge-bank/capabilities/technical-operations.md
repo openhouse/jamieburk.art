@@ -25,6 +25,12 @@ relations:
   - type: uses_method
     target: method.source-backed-team-memory
     href: ../methods/source-backed-team-memory.md
+  - type: informed_by
+    target: index.decisions-deliverables-operational-outcomes
+    href: ../indexes/decisions-deliverables-and-operational-outcomes.md
+  - type: informed_by
+    target: index.maintenance-and-care
+    href: ../indexes/maintenance-and-care.md
   - type: projected_to
     target: portfolio.work.technical-operations
     href: ../projections/work-technical-operations.md
@@ -53,3 +59,9 @@ testimony support, cross-channel campaigns, and repeated translation of lived
 experience into agency-facing requirements. It supports Jamie's technical and
 product-operations reading without retroactively assigning him a formal title
 or every artifact in a shared practice.
+
+The [operational-outcomes map](../indexes/decisions-deliverables-and-operational-outcomes.md)
+separates responsibility, deliverable, wider result, and unknown. The
+[maintenance-and-care index](../indexes/maintenance-and-care.md) makes recurring
+physical, digital, participatory, informational, and handoff work visible
+alongside launches.
