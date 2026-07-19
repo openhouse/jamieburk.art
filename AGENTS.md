@@ -164,6 +164,11 @@ Keep the frozen branches read-only, preserve one canonical architecture, bind
 judgments to the exact candidate and contract, and run `npm run
 evals:composite` twice without changes before stopping.
 
+When the candidate-bound integration exceeds the single-delta file ceiling,
+use the governed review-packet manifest. Every changed file must be committed
+and assigned exactly once; do not raise the existing packet thresholds to make
+an oversized integration pass.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

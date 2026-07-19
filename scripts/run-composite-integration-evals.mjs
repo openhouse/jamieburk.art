@@ -59,6 +59,11 @@ function diffStats(baseRef, include = () => true) {
   };
 }
 
+function summarizeDiffStats(stats) {
+  const { files: _files, ...summary } = stats;
+  return summary;
+}
+
 function runNode(relativePath, commandArgs = []) {
   try {
     const output = execFileSync(process.execPath, [path.join(repoRoot, relativePath), ...commandArgs], {
@@ -225,8 +230,8 @@ const result = {
   failedHardGates,
   failedRubrics,
   reviewStats: {
-    inheritedFromDevelop: inheritedStats,
-    integrationFromStart: integrationStats,
+    inheritedFromDevelop: summarizeDiffStats(inheritedStats),
+    integrationFromStart: summarizeDiffStats(integrationStats),
     mode: reviewability.mode,
     packets: reviewability.packetStats,
     dirtyCandidatePaths: dirtyPaths
