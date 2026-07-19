@@ -24,6 +24,10 @@ relations:
     target: index.employment-acceptance
     href: indexes/employment-acceptance.md
     context: Current opportunity records, role coverage, and hiring-acceptance evaluation boundaries.
+  - type: documents
+    target: research-run.nycartc.shared-folder.2026-07
+    href: research/nycartc-shared-folder-archival-production-2026-07.md
+    context: Complete population accounting with selective, public-safe close reading.
 ---
 
 # Knowledge Wiki
@@ -45,6 +49,9 @@ and the [authoring guide](knowledge-wiki-authoring.md).
   document, semantic, evidence, and governance graphs.
 - [Employment acceptance](indexes/employment-acceptance.md): current role
   contexts, requirement coverage, source freshness, and evaluation boundaries.
+- [NYC Artist Coalition shared-folder production](research/nycartc-shared-folder-archival-production-2026-07.md):
+  complete archive accounting, protected dispositions, and selected close
+  reading without publishing the source collection.
 - [Projects](projects/): project histories and editorial boundaries.
 - [Sources and claims](citational-care.md): canonical citation and evidence
   workflow.

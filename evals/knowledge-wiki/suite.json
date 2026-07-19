@@ -20,6 +20,12 @@
     "discoverability",
     "query_benchmark",
     "mutation_rejection",
+    "archive_population_closure",
+    "archive_disposition_governance",
+    "archive_public_safety",
+    "archive_collective_credit",
+    "archive_application_value",
+    "archive_projection_restraint",
     "projection_restraint",
     "candidate_binding"
   ],
@@ -69,6 +75,27 @@
       "query": { "id": "correction.callnyc-years" },
       "expectedRecordIds": ["correction.callnyc-years"],
       "requiredBoundary": "Consequential history remains visible"
+    },
+    {
+      "id": "nycartc-shared-folder-run",
+      "query": { "id": "research-run.nycartc.shared-folder.2026-07" },
+      "expectedRecordIds": ["research-run.nycartc.shared-folder.2026-07"],
+      "requiredBoundary": "Completeness here means complete accounting and governance"
+    },
+    {
+      "id": "nycartc-shared-folder-census",
+      "query": { "canonicalRef": "SRC-NYCARTC-SHARED-FOLDER-CENSUS-2026" },
+      "expectedRecordIds": [
+        "research-run.nycartc.shared-folder.2026-07",
+        "source.nycartc.shared-folder-census.2026"
+      ],
+      "requiredBoundary": "It does not establish authorship, rights, content-level review of every file"
+    },
+    {
+      "id": "nycartc-march-data-design-boundary",
+      "query": { "id": "claim.nycartc.march-data-design-lead" },
+      "expectedRecordIds": ["claim.nycartc.march-data-design-lead"],
+      "requiredBoundary": "cannot allocate the complete design passage to Jamie"
     }
   ],
   "humanTasks": [
@@ -101,6 +128,17 @@
       "prompt": "Show why the portfolio page is smaller than the underlying Wiki record.",
       "expectedRecordIds": ["portfolio.work.callnyc", "project.callnyc"],
       "requiredBoundary": "Mature knowledge can remain unselected."
+    },
+    {
+      "id": "find-nycartc-operating-system",
+      "prompt": "Explain how the NYC Artist Coalition shared archive strengthens Jamie's Technical Operations story without assigning him collective work.",
+      "expectedRecordIds": [
+        "capability.technical-operations",
+        "project.nyc-artist-coalition",
+        "claim.nycartc.public-meeting-operating-system",
+        "research-run.nycartc.shared-folder.2026-07"
+      ],
+      "requiredBoundary": "Do not infer authorship or individual task ownership from Drive metadata."
     }
   ],
   "manualAuthorityGates": [

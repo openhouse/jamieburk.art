@@ -24,6 +24,8 @@ Target: [capability.technical-operations](../../../docs/knowledge-bank/capabilit
 - [PermitFlow Product Operations Manager](../../../docs/knowledge-bank/opportunities/permitflow-product-operations.md) — `documents` from `frontmatter`
 - [Technical Operations portfolio projection](../../../docs/knowledge-bank/projections/work-technical-operations.md) — `documents` from `frontmatter`
 - [CallNYC](../../../docs/knowledge-bank/projects/callnyc.md) — `supports` from `frontmatter`
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `supports` from `frontmatter`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `links_to` from `markdown`
 
 ## CallNYC workshop date and time
 
@@ -47,6 +49,33 @@ Target: [claim.callnyc.project-years.legacy](../../../docs/knowledge-bank/claims
 - [CallNYC independent follow-on chronology](../../../docs/knowledge-bank/claims/callnyc-independent-follow-on.md) — `supersedes` from `frontmatter`
 - [CallNYC chronology correction](../../../docs/knowledge-bank/corrections/callnyc-years.md) — `documents` from `frontmatter`
 - [Knowledge Wiki foundation pilot](../../../docs/knowledge-bank/indexes/pilot.md) — `links_to` from `markdown`
+
+## MARCH open-data design lead
+
+Target: [claim.nycartc.march-data-design-lead](../../../docs/knowledge-bank/claims/nycartc-march-data-design-lead.md)
+
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `supports` from `frontmatter`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `links_to` from `markdown`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `supports` from `frontmatter`
+- [Collaborative MARCH open-data design notes](../../../docs/knowledge-bank/sources/nycartc-march-data-design-notes-2019.md) — `links_to` from `markdown`
+
+## NYC Artist Coalition nightlife recommendation continuity
+
+Target: [claim.nycartc.nightlife-recommendation-continuity](../../../docs/knowledge-bank/claims/nycartc-nightlife-recommendation-continuity.md)
+
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `supports` from `frontmatter`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `links_to` from `markdown`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `supports` from `frontmatter`
+- [NYC Artist Coalition nightlife recommendation sequence](../../../docs/knowledge-bank/sources/nycartc-nightlife-recommendation-sequence-2017-2019.md) — `links_to` from `markdown`
+
+## NYC Artist Coalition public-meeting operating system
+
+Target: [claim.nycartc.public-meeting-operating-system](../../../docs/knowledge-bank/claims/nycartc-public-meeting-operating-system.md)
+
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `supports` from `frontmatter`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `links_to` from `markdown`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `supports` from `frontmatter`
+- [NYC Artist Coalition public-meeting production playbook](../../../docs/knowledge-bank/sources/nycartc-public-meeting-playbook-2018.md) — `links_to` from `markdown`
 
 ## CallNYC chronology correction
 
@@ -98,6 +127,7 @@ Target: [method.source-backed-team-memory](../../../docs/knowledge-bank/methods/
 - [Knowledge Wiki foundation pilot](../../../docs/knowledge-bank/indexes/pilot.md) — `links_to` from `markdown`
 - [Asana AI Implementation Manager, Service Management](../../../docs/knowledge-bank/opportunities/asana-ai-implementation.md) — `documents` from `frontmatter`
 - [CodePath Senior Program Manager, Claude Corps](../../../docs/knowledge-bank/opportunities/codepath-claude-corps.md) — `documents` from `frontmatter`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `uses_method` from `frontmatter`
 
 ## ACLU Product Manager II, Discovery
 
@@ -171,6 +201,32 @@ Target: [project.callnyc](../../../docs/knowledge-bank/projects/callnyc.md)
 - [CallNYC portfolio projection](../../../docs/knowledge-bank/projections/work-callnyc.md) — `links_to` from `markdown`
 - [Politico New York coverage of CallNYC](../../../docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md) — `documents` from `frontmatter`
 
+## NYC Artist Coalition
+
+Target: [project.nyc-artist-coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md)
+
+- [Technical Operations](../../../docs/knowledge-bank/capabilities/technical-operations.md) — `documents` from `frontmatter`
+- [Technical Operations](../../../docs/knowledge-bank/capabilities/technical-operations.md) — `links_to` from `markdown`
+- [MARCH open-data design lead](../../../docs/knowledge-bank/claims/nycartc-march-data-design-lead.md) — `part_of` from `frontmatter`
+- [NYC Artist Coalition nightlife recommendation continuity](../../../docs/knowledge-bank/claims/nycartc-nightlife-recommendation-continuity.md) — `part_of` from `frontmatter`
+- [NYC Artist Coalition public-meeting operating system](../../../docs/knowledge-bank/claims/nycartc-public-meeting-operating-system.md) — `part_of` from `frontmatter`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `part_of` from `frontmatter`
+- [Collaborative MARCH open-data design notes](../../../docs/knowledge-bank/sources/nycartc-march-data-design-notes-2019.md) — `documents` from `frontmatter`
+- [NYC Artist Coalition nightlife recommendation sequence](../../../docs/knowledge-bank/sources/nycartc-nightlife-recommendation-sequence-2017-2019.md) — `documents` from `frontmatter`
+- [NYC Artist Coalition public-meeting production playbook](../../../docs/knowledge-bank/sources/nycartc-public-meeting-playbook-2018.md) — `documents` from `frontmatter`
+- [NYC Artist Coalition shared-folder governed census](../../../docs/knowledge-bank/sources/nycartc-shared-folder-census-2026.md) — `documents` from `frontmatter`
+
+## NYC Artist Coalition shared-folder archival production
+
+Target: [research-run.nycartc.shared-folder.2026-07](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md)
+
+- [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `documents` from `frontmatter`
+- [Knowledge Wiki](../../../docs/knowledge-bank/README.md) — `links_to` from `markdown`
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `informed_by` from `frontmatter`
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `links_to` from `markdown`
+- [NYC Artist Coalition shared-folder governed census](../../../docs/knowledge-bank/sources/nycartc-shared-folder-census-2026.md) — `informed_by` from `frontmatter`
+- [NYC Artist Coalition shared-folder governed census](../../../docs/knowledge-bank/sources/nycartc-shared-folder-census-2026.md) — `links_to` from `markdown`
+
 ## Civic Hall announcement of the January 2016 Council hackathon
 
 Target: [source.civichall.hackathon-announcement.2016](../../../docs/knowledge-bank/sources/civic-hall-hackathon-announcement-2016.md)
@@ -181,6 +237,31 @@ Target: [source.civichall.hackathon-announcement.2016](../../../docs/knowledge-b
 - [New York City Council constituent-services hackathon at Civic Hall](../../../docs/knowledge-bank/events/nyc-council-constituent-services-hackathon-2016.md) — `uses_source` from `frontmatter`
 - [Knowledge Wiki foundation pilot](../../../docs/knowledge-bank/indexes/pilot.md) — `links_to` from `markdown`
 - [CallNYC](../../../docs/knowledge-bank/projects/callnyc.md) — `uses_source` from `frontmatter`
+
+## Collaborative MARCH open-data design notes
+
+Target: [source.nycartc.march-data-design-notes.2019](../../../docs/knowledge-bank/sources/nycartc-march-data-design-notes-2019.md)
+
+- [MARCH open-data design lead](../../../docs/knowledge-bank/claims/nycartc-march-data-design-lead.md) — `uses_source` from `frontmatter`
+
+## NYC Artist Coalition nightlife recommendation sequence
+
+Target: [source.nycartc.nightlife-recommendation-sequence.2017-2019](../../../docs/knowledge-bank/sources/nycartc-nightlife-recommendation-sequence-2017-2019.md)
+
+- [NYC Artist Coalition nightlife recommendation continuity](../../../docs/knowledge-bank/claims/nycartc-nightlife-recommendation-continuity.md) — `uses_source` from `frontmatter`
+
+## NYC Artist Coalition public-meeting production playbook
+
+Target: [source.nycartc.public-meeting-playbook.2018](../../../docs/knowledge-bank/sources/nycartc-public-meeting-playbook-2018.md)
+
+- [NYC Artist Coalition public-meeting operating system](../../../docs/knowledge-bank/claims/nycartc-public-meeting-operating-system.md) — `uses_source` from `frontmatter`
+
+## NYC Artist Coalition shared-folder governed census
+
+Target: [source.nycartc.shared-folder-census.2026](../../../docs/knowledge-bank/sources/nycartc-shared-folder-census-2026.md)
+
+- [NYC Artist Coalition](../../../docs/knowledge-bank/projects/nyc-artist-coalition.md) — `uses_source` from `frontmatter`
+- [NYC Artist Coalition shared-folder archival production](../../../docs/knowledge-bank/research/nycartc-shared-folder-archival-production-2026-07.md) — `uses_source` from `frontmatter`
 
 ## New York City Council event-day CouncilStat post
 

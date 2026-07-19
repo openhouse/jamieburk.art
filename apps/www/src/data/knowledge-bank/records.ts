@@ -93,9 +93,16 @@ import {
   relationalInfrastructureResearchInquiries,
   relationalInfrastructureSources
 } from "./relational-infrastructure-archive-production.ts";
+import {
+  nycArtcSharedFolderClaims,
+  nycArtcSharedFolderIntakes,
+  nycArtcSharedFolderResearchInquiries,
+  nycArtcSharedFolderSources
+} from "./nycartc-shared-folder-archive-production.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...nycArtcSharedFolderIntakes,
     ...relationalInfrastructureIntakes,
     ...nycArtcInstitutionalValueIntakes,
     ...personalFacebookPostIntakes,
@@ -792,6 +799,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...nycArtcSharedFolderSources,
     ...relationalInfrastructureSources,
     ...nycArtcInstitutionalValueSources,
     ...personalFacebookPostSources,
@@ -971,6 +979,7 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...nycArtcSharedFolderClaims,
     ...relationalInfrastructureClaims,
     ...nycArtcInstitutionalValueClaims,
     ...personalFacebookPostClaims,
@@ -1093,6 +1102,7 @@ const knowledgeBankInput = {
     ...lifecycleClaims
   ],
   researchInquiries: [
+    ...nycArtcSharedFolderResearchInquiries,
     ...relationalInfrastructureResearchInquiries,
     ...nycArtcInstitutionalValueResearchInquiries,
     ...personalFacebookPostResearchInquiries,

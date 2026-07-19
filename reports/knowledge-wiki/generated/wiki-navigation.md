@@ -2,8 +2,8 @@
 
 > Generated file. Do not edit directly.
 
-- Discoverable and reachable: 22/22
-- Maximum path from Start Here: 2
+- Discoverable and reachable: 31/31
+- Maximum path from Start Here: 3
 
 ## Type-aware orphans
 

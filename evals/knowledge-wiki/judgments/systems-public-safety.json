@@ -1,9 +1,9 @@
 {
   "id": "systems-public-safety",
   "reviewer": "Codex independent systems and public-safety review",
-  "reviewedAt": "2026-07-18",
-  "candidateFingerprint": "sha256:ee45ef386c0123ae7fe63150a9f18511bb3cc585b502320d73fe39d92721aa09",
-  "contractFingerprint": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
+  "reviewedAt": "2026-07-19",
+  "candidateFingerprint": "sha256:5d2ecd9d94bcace0aedb37dfd23c82d1020fa87f4bddae4eee469b5d4b7eaabe",
+  "contractFingerprint": "sha256:c85490255586a68b34ae078946a15a831d99f61f45ca0b73fe811f7f58584e27",
   "verdict": "pass",
   "criteria": [
     {
@@ -35,6 +35,26 @@
       "id": "employment-source-and-gap-integrity",
       "status": "pass",
       "finding": "Opportunity validation requires official URLs, freshness, stable requirement and evidence IDs, explicit hard screens, title-blind discovery language, public routes, gaps, and one-year conditions; the evaluation handoff exposes only public-safe Wiki metadata after the public-only hiring judgment."
+    },
+    {
+      "id": "archive-population-and-disposition-integrity",
+      "status": "pass",
+      "finding": "The named authenticated snapshot closes its reachable population and assigns exactly one protected primary disposition per descendant while keeping metadata review, close reading, rights review, claim linking, and projection selection separate."
+    },
+    {
+      "id": "archive-leakage-control",
+      "status": "pass",
+      "finding": "The exact manifest is held outside git; public records contain aggregate counts, opaque locators, and bounded synopses without Drive identifiers, resource keys, private paths, raw bodies, comments, participant data, or uncleared media."
+    },
+    {
+      "id": "archive-credit-and-causality",
+      "status": "pass",
+      "finding": "Every new archive claim carries boundaries and anti-claims; Drive metadata and task initials are not treated as authorship, and working proposals are not converted into adoption, impact, or sole-causality claims."
+    },
+    {
+      "id": "archive-protected-source-governance",
+      "status": "pass",
+      "finding": "All eight governed archive sources remain private or protected, have completed review metadata and explicit non-support fields, and generate no new active website projection."
     }
   ],
   "manualGates": {
@@ -42,5 +62,5 @@
     "rightsClearance": "human-blocked",
     "productionObservation": "not-requested"
   },
-  "remainingWork": "Keep the participant photograph unprojected until rights, consent, credit, and editorial review are completed by people with authority, and keep private communication history outside hiring-evaluator inputs."
+  "remainingWork": "Keep the participant photograph and NYC Artist Coalition media queue unprojected until rights, consent, credit, and editorial review are completed by people with authority; keep raw shared-folder material and private communication history outside hiring-evaluator inputs."
 }

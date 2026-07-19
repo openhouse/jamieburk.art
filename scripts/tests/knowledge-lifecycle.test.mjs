@@ -211,10 +211,11 @@ test("mature unused claims remain out of public composition", () => {
       "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"
     ]
   );
-  assert.equal(unused.length, 28);
+  assert.equal(unused.length, 29);
   assert.equal(unused.some((claim) => claim.id === "CLM-WATER-RAFT-GULF-COMPLETION"), true);
   assert.equal(unused.some((claim) => claim.id === "CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION"), true);
   assert.equal(unused.some((claim) => claim.id === "CLM-JAMIE-NYCARTC-INSTITUTIONAL-BRIDGE-VALUE"), true);
+  assert.equal(unused.some((claim) => claim.id === "CLM-NYCARTC-SHARED-FOLDER-CENSUS-2026"), true);
   assert.equal(unused.every((claim) => claim.projections.every((item) => item.status !== "active")), true);
 });
 
@@ -1840,4 +1841,83 @@ test("institutional-value inquiry remains partially recovered", () => {
   inquiry.limitations = [];
   const result = validateKnowledgeLifecycle(bank, suite);
   assert.ok(result.findings.some((item) => item.code === "nycartc-institutional-inquiry-boundary"));
+});
+
+test("NYC Artist Coalition shared-folder production closes the governed population", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-SHARED-FOLDER-CENSUS-2026"
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NYCARTC-SHARED-FOLDER-CENSUS-2026"
+  );
+
+  assert.ok(claim);
+  assert.ok(source);
+  assert.match(claim.internalClaim, /2,192/);
+  assert.match(claim.internalClaim, /257 nested folders/);
+  assert.match(claim.internalClaim, /1,935 files/);
+  assert.equal(claim.publicationStatus, "internal-only");
+  assert.equal(claim.editorialStatus, "unused");
+  assert.deepEqual(claim.projections, []);
+  assert.equal(source.reviewStatus, "reviewed");
+  assert.equal(source.reviewDepth, "metadata");
+});
+
+test("NYC Artist Coalition archive sources remain protected and bounded", () => {
+  const sourceIds = [
+    "SRC-NYCARTC-SHARED-FOLDER-CENSUS-2026",
+    "SRC-NYCARTC-ARCHIVE-PUBLIC-MEETING-PLAYBOOK-2018",
+    "SRC-NYCARTC-ARCHIVE-TESTIMONY-GUIDE-2017",
+    "SRC-NYCARTC-ARCHIVE-JAMIE-CABARET-TESTIMONY-2017",
+    "SRC-NYCARTC-ARCHIVE-NIGHTLIFE-RECOMMENDATION-SEQUENCE-2017-2019",
+    "SRC-NYCARTC-ARCHIVE-JAMIE-NIGHTLIFE-SPEECH-2017",
+    "SRC-NYCARTC-ARCHIVE-MARCH-CAMPAIGN-GUIDES-2018-2019",
+    "SRC-NYCARTC-ARCHIVE-MARCH-DATA-DESIGN-NOTES-2019"
+  ];
+  const sources = sourceIds.map((id) => knowledgeBank.sources.find((source) => source.id === id));
+
+  assert.equal(sources.every(Boolean), true);
+  for (const source of sources) {
+    assert.equal(["private", "protected"].includes(source.visibility), true);
+    assert.equal(source.reviewStatus, "reviewed");
+    assert.equal(source.doesNotEstablish.length > 0, true);
+    assert.equal(source.url, undefined);
+  }
+
+  const serialized = JSON.stringify(sources);
+  assert.equal(serialized.includes("drive.google.com"), false);
+  assert.equal(serialized.includes("resourcekey="), false);
+  assert.equal(serialized.includes("/Users/"), false);
+});
+
+test("NYC Artist Coalition archive claims preserve collective credit and projection restraint", () => {
+  const claimIds = [
+    "CLM-NYCARTC-SHARED-FOLDER-CENSUS-2026",
+    "CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM",
+    "CLM-NYCARTC-TESTIMONY-PARTICIPATION-DESIGN",
+    "CLM-NYCARTC-NIGHTLIFE-RECOMMENDATION-CONTINUITY",
+    "CLM-NYCARTC-NIGHTLIFE-SPEECH-SCRIPT",
+    "CLM-NYCARTC-MARCH-CROSS-CHANNEL-IMPLEMENTATION",
+    "CLM-NYCARTC-MARCH-DATA-DESIGN-LEAD"
+  ];
+  const claims = claimIds.map((id) => knowledgeBank.claims.find((claim) => claim.id === id));
+  const dataLead = claims.find((claim) => claim.id === "CLM-NYCARTC-MARCH-DATA-DESIGN-LEAD");
+
+  assert.equal(claims.every(Boolean), true);
+  assert.equal(claims.every((claim) => claim.boundaries.length > 0), true);
+  assert.equal(claims.every((claim) => claim.antiClaims.length > 0), true);
+  assert.equal(
+    claims.every((claim) =>
+      claim.projections.every(
+        (projection) => projection.status !== "active" && projection.surfaces.length === 0
+      )
+    ),
+    true
+  );
+  assert.equal(dataLead.status, "inference");
+  assert.equal(dataLead.publicationStatus, "internal-only");
+  assert.equal(
+    dataLead.antiClaims.includes("Jamie independently designed or shipped a MARCH prediction product."),
+    true
+  );
 });

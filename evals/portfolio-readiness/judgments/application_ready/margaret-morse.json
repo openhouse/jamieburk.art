@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-margaret-morse-application-2026-07-18-wiki",
+  "judgeId": "codex-independent-margaret-morse-application-2026-07-19-nycartc-archive",
   "lens": "margaret-morse",
-  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
-  "contract": "sha256:3a6751a08338041e5ce7a24298d5fa9b4537217dadf012604d22aa02d4aa3d2f",
+  "candidate": "sha256:013ae05c9ebe7959bf285288028a2be23a027b6d1cfced29e41f2608ecef37de",
+  "contract": "sha256:263fff76f9ce28de1d6fba3257da149fe6575f5aa4264eb31cb5f72de0a5049a",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -109,6 +109,11 @@
       "rubric": "morse_lens",
       "route": "repository",
       "observation": "The employment extension preserves role requirements, gaps, and reader contexts as governed records while keeping the public composition selective. The candidate still needs approved material specimens before the embodied throughline can score higher."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "repository",
+      "observation": "The protected coalition archive deepens the record of gatherings as embodied, place-based, relational practice, but the current public candidate does not appropriate raw testimony, working records, or uncleared images to perform that depth. The existing score and material-evidence gap remain accurate."
     }
   ],
   "regressions": [],

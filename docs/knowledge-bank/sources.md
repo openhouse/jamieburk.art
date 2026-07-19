@@ -241,6 +241,22 @@ historic Page use. Neither source identifies the human publisher of individual
 historic posts or supports sole administration. See the [research
 note](research/nycartc-facebook-posts-archival-production-2026-07.md).
 
+## NYC Artist Coalition Shared-Folder Production
+
+The July 19, 2026 authenticated recursive census accounts for 2,192 reachable
+descendants: 257 nested folders and 1,935 files. A protected manifest outside
+git retains exact item coordinates and one primary disposition per descendant.
+Eighteen lower-risk, high-value working documents received selected close
+reading; none received rights clearance or automatic website selection.
+
+Public-safe source synopses cover the population census, a public-meeting
+playbook, testimony support, Jamie's named Cabaret Law testimony drafts, a
+2017-2019 nightlife-recommendation sequence, a final speech script, Talks Not
+Raids campaign guides, and collaborative M.A.R.C.H. data-design notes. These
+synopses preserve support and non-support fields without publishing raw bodies,
+Drive coordinates, comments, participant information, or uncleared media. See
+the [archival-production report](research/nycartc-shared-folder-archival-production-2026-07.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

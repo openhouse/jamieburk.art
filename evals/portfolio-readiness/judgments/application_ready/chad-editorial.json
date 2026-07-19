@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-chad-editor-application-2026-07-18-wiki",
+  "judgeId": "codex-independent-chad-editor-application-2026-07-19-nycartc-archive",
   "lens": "chad-editorial",
-  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
-  "contract": "sha256:3a6751a08338041e5ce7a24298d5fa9b4537217dadf012604d22aa02d4aa3d2f",
+  "candidate": "sha256:013ae05c9ebe7959bf285288028a2be23a027b6d1cfced29e41f2608ecef37de",
+  "contract": "sha256:263fff76f9ce28de1d6fba3257da149fe6575f5aa4264eb31cb5f72de0a5049a",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -104,6 +104,11 @@
       "rubric": "operational_confidence",
       "route": "repository",
       "observation": "The employment-acceptance contract adds six current role contexts, requirement-level fit and gap records, title-blind discovery controls, reader-specific simulated judgments, and exact-candidate binding without weakening public-safety gates or closing visual, production, rights, or human-approval gaps."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "repository",
+      "observation": "The refreshed public registry adds two useful boundaries to existing NYC Artist Coalition claims: protected operating records do not establish Jamie's authorship or every completed task, and prepared testimony drafts do not establish verbatim delivery or independently verify every metric. No visible portfolio copy or claim strength increased."
     }
   ],
   "regressions": [],

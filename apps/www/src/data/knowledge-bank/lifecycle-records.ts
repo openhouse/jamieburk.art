@@ -1111,9 +1111,17 @@ export const lifecycleClaims = [
         locator: "Article paragraphs on the Cabaret Law hearing and Jamie's testimony, especially lines 84-94.",
         confidence: "high",
         renderCitation: true
+      },
+      {
+        sourceId: "SRC-NYCARTC-ARCHIVE-JAMIE-CABARET-TESTIMONY-2017",
+        relationship: "private-support",
+        supports: ["Jamie's prepared testimony", "fire-safety work", "safety-and-trust argument"],
+        locator: "Public-safe source synopsis of protected June and September testimony drafts.",
+        confidence: "high",
+        renderCitation: false
       }
     ],
-    boundaries: ["Advocacy and coalition mobilization do not establish sole causality for legislative outcomes."],
+    boundaries: ["Advocacy and coalition mobilization do not establish sole causality for legislative outcomes.", "The protected drafts support Jamie's prepared arguments but do not establish that every sentence was delivered verbatim or independently verify every metric in the drafts."],
     antiClaims: ["Jamie alone repealed the Cabaret Law.", "NYC Artist Coalition acted without partner organizations."],
     researchInquiryIds: ["INQ-NYCARTC-CABARET-REPEAL-CAUSALITY"],
     reviewedAt: "2026-07-13",
@@ -1806,7 +1814,8 @@ export const lifecycleResearchInquiries = [
       "Preserved Jamie's memory as an inquiry and identified the minimum event, role, scale, credit, and outcome evidence needed.",
       "Closely read the recovered Greene Hill Q&A for bounded event evidence.",
       "Triangulated the coalition's October 11 invitation with contemporaneous reporting that the event occurred and a later official report documenting a separate March 2018 town hall.",
-      "Reconciled the complete displayed Facebook event control and close-read the recurring meetings, Market Hotel town hall, March 2018 panel, public-hearing paths, and response-versus-attendance boundary."
+      "Reconciled the complete displayed Facebook event control and close-read the recurring meetings, Market Hotel town hall, March 2018 panel, public-hearing paths, and response-versus-attendance boundary.",
+      "Close-read a protected final speech script naming Jamie and Olympia Kazi and a 2017-2019 sequence of Office of Nightlife recommendations while preserving the distinction between a prepared script, a planned date, and a completed event."
     ],
     runAt: "2026-07-14",
     resultStatus: "partially-recovered",
@@ -1815,7 +1824,8 @@ export const lifecycleResearchInquiries = [
       "NYC Artist Coalition's September letter and Bedford + Bowery reporting establish that the coalition spearheaded an October 11 Market Hotel town hall and identify Jamie among coalition participants.",
       "Independent Village Voice reporting described about one hundred people at the October Market Hotel town hall with Council members and city-agency representatives.",
       "The Office of Nightlife's report establishes that NYC Artist Coalition held another town hall in March 2018 to introduce the first nightlife director to broad stakeholders.",
-      "The Facebook event record documents a wider recurring participation system across cultural-space meetings, practical support, public hearings, and campaign action."
+      "The Facebook event record documents a wider recurring participation system across cultural-space meetings, practical support, public hearings, and campaign action.",
+      "A protected final script names Jamie and Olympia as intended speakers and preserves the coalition's small-cultural-space priorities, but does not by itself prove delivery or identify the exact event."
     ],
     limitations: [
       "The October report's about-one-hundred figure is journalistic, not audited; Facebook response displays are not attendance.",
@@ -1829,7 +1839,9 @@ export const lifecycleResearchInquiries = [
       "SRC-NYC-NIGHTLIFE-REPORT-2021",
       "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
       "SRC-FB-NYCARTC-EVENTS-CORPUS-2026",
-      "SRC-NYCARTC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026"
+      "SRC-NYCARTC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026",
+      "SRC-NYCARTC-ARCHIVE-JAMIE-NIGHTLIFE-SPEECH-2017",
+      "SRC-NYCARTC-ARCHIVE-NIGHTLIFE-RECOMMENDATION-SEQUENCE-2017-2019"
     ],
     publicSummary: "Public records establish coalition-organized Office of Nightlife town halls in October 2017 and March 2018; independent reporting described about one hundred people at the October event, and the broader event record supports Jamie's bounded contribution to a recurring participation system while preserving collective credit."
   },

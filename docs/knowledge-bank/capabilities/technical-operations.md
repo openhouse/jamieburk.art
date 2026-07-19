@@ -17,6 +17,9 @@ aliases:
 canonical_path: docs/knowledge-bank/capabilities/technical-operations.md
 relations:
   - type: documents
+    target: project.nyc-artist-coalition
+    href: ../projects/nyc-artist-coalition.md
+  - type: documents
     target: project.callnyc
     href: ../projects/callnyc.md
   - type: uses_method
@@ -43,3 +46,10 @@ independent implementation. [Source-Backed Team Memory](../methods/source-backed
 demonstrates a governed method for turning fragmented records into usable team
 knowledge. The [OTI opportunity lens](../opportunities/oti-technical-operations.md)
 selects relevant proof without changing the underlying record.
+
+The [NYC Artist Coalition](../projects/nyc-artist-coalition.md) archive adds a
+collective implementation path: timed public-meeting workflows, participant
+testimony support, cross-channel campaigns, and repeated translation of lived
+experience into agency-facing requirements. It supports Jamie's technical and
+product-operations reading without retroactively assigning him a formal title
+or every artifact in a shared practice.

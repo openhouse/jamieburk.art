@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-warren-sack-application-2026-07-18-wiki",
+  "judgeId": "codex-independent-warren-sack-application-2026-07-19-nycartc-archive",
   "lens": "warren-sack",
-  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
-  "contract": "sha256:3a6751a08338041e5ce7a24298d5fa9b4537217dadf012604d22aa02d4aa3d2f",
+  "candidate": "sha256:013ae05c9ebe7959bf285288028a2be23a027b6d1cfced29e41f2608ecef37de",
+  "contract": "sha256:263fff76f9ce28de1d6fba3257da149fe6575f5aa4264eb31cb5f72de0a5049a",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -109,6 +109,11 @@
       "rubric": "sack_lens",
       "route": "repository",
       "observation": "The employment extension makes role requirements, evidence routes, gaps, source freshness, reader contexts, and acceptance conditions inspectable through stable IDs. The public candidate remains text-led, so the existing score and visual-evidence limitation remain appropriate."
+    },
+    {
+      "rubric": "sack_lens",
+      "route": "repository",
+      "observation": "The archive now connects meeting workflows, testimony pathways, agency requirements, campaign channels, and a held data-design inquiry through stable source and claim relations. Because these additions remain behind the projection boundary, the public candidate's recursive-systems reading improves in provenance without claiming a shipped MARCH product."
     }
   ],
   "regressions": [],

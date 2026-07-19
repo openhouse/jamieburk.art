@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-hiring-manager-application-2026-07-18-wiki",
+  "judgeId": "codex-independent-hiring-manager-application-2026-07-19-nycartc-archive",
   "lens": "hiring-manager",
-  "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
-  "contract": "sha256:3a6751a08338041e5ce7a24298d5fa9b4537217dadf012604d22aa02d4aa3d2f",
+  "candidate": "sha256:013ae05c9ebe7959bf285288028a2be23a027b6d1cfced29e41f2608ecef37de",
+  "contract": "sha256:263fff76f9ce28de1d6fba3257da149fe6575f5aa4264eb31cb5f72de0a5049a",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -99,6 +99,11 @@
       "rubric": "operational_confidence",
       "route": "repository",
       "observation": "The candidate now sits behind an employment-acceptance layer covering six current roles, 34 stable requirements, explicit gaps, title-blind discovery, and simulated reader lenses. The one public edit reduces reader burden without turning role-specific evaluation narration into portfolio copy."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "repository",
+      "observation": "The regenerated citation registry adds archive-derived limitations to existing role and testimony claims without changing the rendered case study. The stronger internal evidence therefore improves interview preparation while the hiring-facing site retains its existing bounded wording."
     }
   ],
   "regressions": [],

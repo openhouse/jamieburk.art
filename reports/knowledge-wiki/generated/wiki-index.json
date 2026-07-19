@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "sha256:892af6db5c0c2de7fc909d3a1d50f3e48de89405a0261e7c5252b7d6fac1649c",
+  "sourceFingerprint": "sha256:e7e19bdf3aaab92e935ae277e1e3d4b863c031ae8bb6e75fe9b16d6196ea4979",
   "byKind": {
     "asset": [
       "asset.photo.digital-district.001"
@@ -11,7 +11,10 @@
     "claim": [
       "claim.callnyc.hackathon-date-time",
       "claim.callnyc.independent-follow-on",
-      "claim.callnyc.project-years.legacy"
+      "claim.callnyc.project-years.legacy",
+      "claim.nycartc.march-data-design-lead",
+      "claim.nycartc.nightlife-recommendation-continuity",
+      "claim.nycartc.public-meeting-operating-system"
     ],
     "correction": [
       "correction.callnyc-years"
@@ -40,10 +43,18 @@
       "portfolio.work.technical-operations"
     ],
     "project": [
-      "project.callnyc"
+      "project.callnyc",
+      "project.nyc-artist-coalition"
+    ],
+    "research-run": [
+      "research-run.nycartc.shared-folder.2026-07"
     ],
     "source": [
       "source.civichall.hackathon-announcement.2016",
+      "source.nycartc.march-data-design-notes.2019",
+      "source.nycartc.nightlife-recommendation-sequence.2017-2019",
+      "source.nycartc.public-meeting-playbook.2018",
+      "source.nycartc.shared-folder-census.2026",
       "source.nycc.councilstat-hackathon-post.2016",
       "source.politico.callnyc.2016-03-14"
     ]
@@ -63,6 +74,9 @@
       "capability.technical-operations",
       "claim.callnyc.hackathon-date-time",
       "claim.callnyc.independent-follow-on",
+      "claim.nycartc.march-data-design-lead",
+      "claim.nycartc.nightlife-recommendation-continuity",
+      "claim.nycartc.public-meeting-operating-system",
       "correction.callnyc-years",
       "event.nycc.constituent-services-hackathon.2016",
       "index.knowledge-wiki",
@@ -71,7 +85,13 @@
       "portfolio.work.callnyc",
       "portfolio.work.technical-operations",
       "project.callnyc",
+      "project.nyc-artist-coalition",
+      "research-run.nycartc.shared-folder.2026-07",
       "source.civichall.hackathon-announcement.2016",
+      "source.nycartc.march-data-design-notes.2019",
+      "source.nycartc.nightlife-recommendation-sequence.2017-2019",
+      "source.nycartc.public-meeting-playbook.2018",
+      "source.nycartc.shared-folder-census.2026",
       "source.nycc.councilstat-hackathon-post.2016",
       "source.politico.callnyc.2016-03-14"
     ],
@@ -92,6 +112,7 @@
     "digital district participant photograph": "asset.photo.digital-district.001",
     "january 2016 councilstat hackathon": "event.nycc.constituent-services-hackathon.2016",
     "knowledge bank": "index.knowledge-wiki",
+    "nycartc": "project.nyc-artist-coalition",
     "oti technical operations": "opportunity.nyc-oti.technical-operations-manager.782369",
     "permitflow product operations": "opportunity.permitflow.product-operations-manager.8a6e6066",
     "politico callnyc article": "source.politico.callnyc.2016-03-14",

@@ -1,3 +1,50 @@
+---
+wiki_record: true
+id: project.nyc-artist-coalition
+title: NYC Artist Coalition
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: moderate
+projection_status: careful
+discoverable: true
+last_reviewed: 2026-07-19
+review_by: 2026-10-19
+review_state: requested
+owner: Jamie Burkart
+aliases:
+  - NYCArtC
+canonical_path: docs/knowledge-bank/projects/nyc-artist-coalition.md
+canonical_refs:
+  - CLM-NYCARTC-FOUNDING-ROLE
+  - CLM-FB-NYCARTC-PARTICIPATION-SYSTEM
+  - CLM-NYCARTC-PUBLIC-MEETING-OPERATING-SYSTEM
+  - CLM-NYCARTC-NIGHTLIFE-RECOMMENDATION-CONTINUITY
+  - CLM-NYCARTC-MARCH-DATA-DESIGN-LEAD
+relations:
+  - type: informed_by
+    target: research-run.nycartc.shared-folder.2026-07
+    href: ../research/nycartc-shared-folder-archival-production-2026-07.md
+    context: Complete governed census and priority close reading of the shared working archive.
+  - type: uses_source
+    target: source.nycartc.shared-folder-census.2026
+    href: ../sources/nycartc-shared-folder-census-2026.md
+  - type: supports
+    target: claim.nycartc.public-meeting-operating-system
+    href: ../claims/nycartc-public-meeting-operating-system.md
+  - type: supports
+    target: claim.nycartc.nightlife-recommendation-continuity
+    href: ../claims/nycartc-nightlife-recommendation-continuity.md
+  - type: supports
+    target: claim.nycartc.march-data-design-lead
+    href: ../claims/nycartc-march-data-design-lead.md
+  - type: supports
+    target: capability.technical-operations
+    href: ../capabilities/technical-operations.md
+allowed_surfaces:
+  - /work/fair-rent-nyc
+---
+
 # NYC Artist Coalition
 
 This dossier collects public-safe sources, claims, inquiries, boundaries, and
@@ -42,6 +89,12 @@ individual and collective causal claims separate.
 - Jamie's documented organizer, practical safety, testimony, recurring-participation, and civic-systems contributions support an internal inference that he helped build this translation capacity while collective credit remains intact.
 - Call Script's public Page links to popular.vote and preserves a March 2, 2017 post routing people into the coalition's March general meeting at The Floasis. The agenda joined fire-guard training, arts-space town-hall strategy, community-space survey design, and member-led groups.
 - A private July 2017 WOW List snapshot independently preserves the underlying routing pattern: the January 27 DCLA meeting is tagged Popular Vote, Sunday Dinner, NYC Artist Coalition, and WOW a Day. This establishes project linkage, not person-level authorship, attendance, conversion, or founding causality.
+- An authenticated recursive census of the coalition's shared working archive accounts for 2,192 reachable descendants: 257 nested folders and 1,935 files. Every descendant received a protected primary disposition; exact Drive identifiers, paths, filenames, and source bodies remain outside git.
+- Priority close reading recovered a three-week public-meeting playbook spanning partner and elected-official outreach, testimony, web, print, press, social, video, and day-of follow-through. The playbook strengthens the collective participation-system record but does not allocate authorship or every task to Jamie.
+- A testimony guide helped participants translate lived experience into short Council testimony and provided an alternate submission route. It demonstrates participation design, not usage totals or legislative causality.
+- A 2017-2019 recommendation sequence documents repeated translation of cultural-space experience into implementable agency proposals, including confidential support, regulatory navigation, M.A.R.C.H. transparency, affordability, and displacement concerns.
+- Named Jamie testimony drafts independently deepen the record of his safety-and-trust argument for Cabaret Law repeal; public reporting remains the citation basis for the current website claim.
+- A collaborative M.A.R.C.H. working document preserves a technically significant open-data and preventive-alert design lead, including explicit concern about selective or culturally biased alerting. Individual authorship and implementation remain unresolved.
 
 ## Open Research
 
@@ -56,6 +109,9 @@ individual and collective causal claims separate.
 - Continued close reading of the 39 unique posted URL leads, with no promotion from route to source support until destination contents are verified.
 - Direct recollections from Finkelpearl, Espinal, Council or DCLA staff, and coalition collaborators about the value and limits of the relationship; current public records establish public framing and activity, not private motive.
 - Collaborator corroboration for Jamie's exact role in designing, publishing, and facilitating the Popular Vote / Call Script / NYC Artist Coalition handoff documented by the surviving project surfaces.
+- Revision-history and collaborator review for authorship of the shared public-meeting playbook, testimony guide, campaign production guides, and nightlife recommendation records.
+- Attribution and factual-input review for the M.A.R.C.H. open-data design lead; do not present it as Jamie's shipped product without that work.
+- Rights, consent, credit, and licensing review for the 1,413 media or layered-production descendants routed to the protected visual queue.
 
 ## Projection Decision
 
@@ -75,6 +131,12 @@ The relational-infrastructure pass adds one citation-ready but held Call Script
 claim and two internal aggregate claims. It strengthens the future account of
 how civic-action routing became coalition participation without changing the
 current public case-study copy in this cycle.
+
+The [shared-folder archival-production pass](../research/nycartc-shared-folder-archival-production-2026-07.md)
+adds population closure and deeper operating evidence. It strengthens the
+technical-operations and application record while leaving the public site
+selective. No new public claim is promoted solely from protected material in
+this cycle.
 
 ## Photo Research
 

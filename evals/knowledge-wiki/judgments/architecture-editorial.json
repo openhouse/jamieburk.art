@@ -1,9 +1,9 @@
 {
   "id": "architecture-editorial",
   "reviewer": "Codex independent architecture and editorial review",
-  "reviewedAt": "2026-07-18",
-  "candidateFingerprint": "sha256:ee45ef386c0123ae7fe63150a9f18511bb3cc585b502320d73fe39d92721aa09",
-  "contractFingerprint": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
+  "reviewedAt": "2026-07-19",
+  "candidateFingerprint": "sha256:5d2ecd9d94bcace0aedb37dfd23c82d1020fa87f4bddae4eee469b5d4b7eaabe",
+  "contractFingerprint": "sha256:c85490255586a68b34ae078946a15a831d99f61f45ca0b73fe811f7f58584e27",
   "verdict": "pass",
   "criteria": [
     {
@@ -35,6 +35,21 @@
       "id": "employment-acceptance-restraint",
       "status": "pass",
       "finding": "Six current opportunities retain official-source status, hard requirements, evidence routes, explicit gaps, and one-year acceptance conditions; simulated named-reader profiles are clearly labeled as lenses rather than participation, endorsement, or hiring decisions."
+    },
+    {
+      "id": "archive-comprehension",
+      "status": "pass",
+      "finding": "The NYC Artist Coalition research run distinguishes the complete 2,192-item governed population from 18 close-read documents, 201 source candidates, a 1,413-item rights queue, and zero selected projections."
+    },
+    {
+      "id": "archive-application-translation",
+      "status": "pass",
+      "finding": "The project and Technical Operations paths translate protected evidence into bounded readings of timed delivery, participation design, requirements translation, cross-channel implementation, and handoff without inventing a formal title."
+    },
+    {
+      "id": "archive-narrative-selectivity",
+      "status": "pass",
+      "finding": "The archive deepens the internal record while the website remains a selective projection; protected-only findings, unresolved MARCH data-design attribution, and raw working documents stay off public surfaces."
     }
   ],
   "manualGates": {
@@ -42,5 +57,5 @@
     "rightsClearance": "human-blocked",
     "editorialApproval": "not-requested"
   },
-  "remainingWork": "Run the documented retrieval tasks with unfamiliar human readers and obtain Jamie's current-role priority decisions before treating navigation or opportunity selection as human-validated."
+  "remainingWork": "Run the documented retrieval tasks with unfamiliar human readers, obtain collaborator-aware artifact attribution, complete media rights review, and obtain Jamie's current-role priority decisions before treating navigation, archive role allocation, or opportunity selection as human-validated."
 }

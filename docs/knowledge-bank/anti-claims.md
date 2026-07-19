@@ -189,6 +189,19 @@ Do not treat posted URLs as automatic corroboration or as proof of readership,
 clicks, conversion, partnership, or outcomes. Preserve the original authorship
 of Olympia Kazi's words and other quoted or shared material.
 
+## NYC Artist Coalition Shared Folder
+
+Do not describe 2,192 reachable descendants as 2,192 public sources, approved
+portfolio artifacts, unique projects, or close-read files. Do not treat folder
+access, ownership, last-modifier metadata, task initials, or working comments
+as authorship, consent, rights clearance, delivery, adoption, or impact.
+
+Do not assign every playbook, recommendation, campaign task, or design passage
+to Jamie. Do not describe the M.A.R.C.H. open-data lead as Jamie's shipped,
+validated, or safe predictive product. Do not publish raw documents, Drive
+coordinates, private paths, participant information, working comments, or
+uncleared media from the protected archive.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant

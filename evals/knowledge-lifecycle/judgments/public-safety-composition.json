@@ -1,8 +1,8 @@
 {
-  "judgeId": "public-safety-composition-2026-07-18-wiki-foundation",
+  "judgeId": "public-safety-composition-2026-07-19-nycartc-shared-folder",
   "lens": "public-safety-composition",
-  "candidate": "sha256:e5875a6b1adef3de4a8baadef889a26487666b3d4b33605d0ce51caa58d13f00",
-  "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
+  "candidate": "sha256:efe9a7a5ba8bd8dc885113dad93bb84abf05c5cfc5847f92aefeebf2d3370ca9",
+  "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -78,8 +78,32 @@
     {
       "rubric": "projection_restraint",
       "observation": "Role-specific comparisons, named simulated reader lenses, private communication channels, and unresolved fit gaps remain internal. The only public edit is a concise evidence-backed description of Jamie's existing operating practice, not application targeting or evaluator narration."
+    },
+    {
+      "rubric": "capture_integrity",
+      "observation": "The exact NYC Artist Coalition manifest is stored outside git. The public repository retains only aggregate coverage, opaque locators, and bounded source synopses, with no Drive identifiers, resource key, raw folder lineage, private path, or item-level disposition ledger."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "All eight archive sources remain private or protected, reviewed, and non-renderable. The public-safe records identify evidentiary scope and non-support without exposing source bodies, working comments, participant information, or contact data."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Population closure, meeting operations, testimony participation, recommendation continuity, a prepared speech, campaign implementation, and the MARCH data-design lead remain separate claims with distinct support, boundaries, and anti-claims."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Drive ownership, last-modifier metadata, task initials, and access are not treated as authorship, consent, completion, adoption, attendance, impact, or policy causality. The archive preserves collective credit and keeps Jamie-specific evidence limited to named testimony and prepared-speaker records."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "Source candidacy is not public-source status, close reading is not rights review, claim linking is not editorial selection, and a mature internal census remains editorially unused. The 1,413-item media and layered-production queue remains rights-blocked."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "No protected archive claim gains an active public projection. The technically significant MARCH data-design lead remains inferred and internal because authorship, factual inputs, implementation, validation, and safety are unresolved."
     }
   ],
   "regressions": [],
-  "nextAction": "Seek a lawful stable publisher or archival permalink for the newspaper citation and clarify image rights before any visual use; until then, keep the source metadata-only and all three new Water Publics projections held."
+  "nextAction": "Keep the shared-folder corpus and 1,413-item media queue protected while Jamie and collaborators review authorship, consent, credit, licensing, and editorial purpose; use public reporting as the website citation basis until protected sources are separately cleared."
 }

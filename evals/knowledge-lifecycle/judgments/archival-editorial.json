@@ -1,8 +1,8 @@
 {
-  "judgeId": "archival-editorial-2026-07-18-wiki-foundation",
+  "judgeId": "archival-editorial-2026-07-19-nycartc-shared-folder",
   "lens": "archival-editorial",
-  "candidate": "sha256:e5875a6b1adef3de4a8baadef889a26487666b3d4b33605d0ce51caa58d13f00",
-  "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
+  "candidate": "sha256:efe9a7a5ba8bd8dc885113dad93bb84abf05c5cfc5847f92aefeebf2d3370ca9",
+  "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -74,8 +74,32 @@
     {
       "rubric": "research_honesty",
       "observation": "Title-blind discovery terms and three unrelated negative controls test whether the portfolio exposes transferable evidence rather than merely echoing target titles. Unresolved domain and artifact gaps remain visible, and simulated named-reader profiles explicitly disclaim real participation or endorsement."
+    },
+    {
+      "rubric": "capture_integrity",
+      "observation": "The authenticated NYC Artist Coalition shared-folder run accounts for all 2,192 reachable descendants in its named snapshot: 257 nested folders and 1,935 files, with one protected primary disposition per descendant, 18 empty folders separately resolved, no duplicate IDs, and no unresolved traversal errors."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "Eight governed archive sources distinguish the aggregate census from selected close reading of public-meeting, testimony, nightlife-recommendation, campaign, and data-design records. Every source states what it supports and what it does not establish."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "The run separates 2,192 inventoried and dispositioned descendants from 18 close-read documents, 201 source candidates, zero rights-reviewed assets, 18 claim-linked documents, and zero selected projections. The census is mature but editorially unused."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The project and Technical Operations paths translate the archive into timed delivery, participation design, requirements translation, cross-channel implementation, and handoff without retroactively assigning Jamie a formal title or every artifact."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "The report preserves the unresolved difference between the proposal's earlier 61 visible root items and the fresh snapshot's 50 root items, and it names deleted, unshared, revision-history, external, and rights scopes as excluded rather than implying universal archive coverage."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "Protected playbooks, drafts, comments, source bodies, media, and coordinates remain outside the public repository. New archive projections are held or absent; the MARCH data-design lead remains an internal inference pending attribution and implementation evidence."
     }
   ],
   "regressions": [],
-  "nextAction": "Seek a stable licensed or archived public copy of the Kansas City Star article and collaborator evidence about design, fabrication, repair, and operating roles; retain the current metadata-only source and collective-credit boundaries unless those rights and allocations are independently confirmed."
+  "nextAction": "Continue selected NYC Artist Coalition close reading through the governed queue; seek collaborator-aware artifact attribution and item-level media rights; retain the current protected-source, collective-credit, and no-projection boundaries until those decisions are made by people with authority."
 }

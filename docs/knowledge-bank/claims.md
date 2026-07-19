@@ -438,6 +438,51 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie / collaborator confirmation
 **Last reviewed:** 2026-07-14
 
+## nycartc-public-meeting-operating-system - Collective event implementation
+
+**Status:** Hold for public projection
+**Support level:** Confirmed with boundary
+**Evidence class:** Protected project archive / corroborating public event corpus
+**Public wording:** No active public projection in this pass.
+**Detailed public-safe wording:** A surviving coalition playbook defines public meetings as a three-week operating system spanning partner, participant, elected-official, testimony, press, web, print, social, video, and day-of workflows.
+**Where to project:** Knowledge Wiki and application preparation. Consider Technical Operations after artifact-level attribution and editorial review.
+**Why it matters:** Makes recurring civic events legible as timed, cross-channel implementation rather than isolated gatherings.
+**Guardrail:** The playbook establishes collective operating design, not Jamie's authorship or responsibility for every task.
+**Do not say:** Jamie alone designed or executed every coalition meeting; every step occurred at every event; the playbook proves attendance or policy impact.
+**Protected boundaries:** Raw workflow, Drive coordinates, working comments, participant information, and private task notes remain outside the repository.
+**Review owner:** Jamie / collaborators
+**Last reviewed:** 2026-07-19
+
+## nycartc-nightlife-recommendation-continuity - Requirements translation
+
+**Status:** Hold for public projection
+**Support level:** Confirmed with boundary
+**Evidence class:** Protected recommendation sequence / corroborating public institutional records
+**Public wording:** No active public projection in this pass.
+**Detailed public-safe wording:** From 2017 through 2019, coalition records repeatedly translate cultural-space experience into concrete agency proposals and prioritize asks by what the Office of Nightlife could implement.
+**Where to project:** Knowledge Wiki and application preparation; later portfolio use requires attribution and editorial review.
+**Why it matters:** Documents continuity between listening, policy communication, requirements, and implementation feedback.
+**Guardrail:** Preserve collective credit and distinguish proposal, delivery, adoption, and outcome.
+**Do not say:** Jamie authored every recommendation; agencies adopted every proposal; NYC Artist Coalition alone created the Office of Nightlife.
+**Protected boundaries:** Raw letters, drafts, comments, and source coordinates remain outside the repository.
+**Review owner:** Jamie / collaborators
+**Last reviewed:** 2026-07-19
+
+## nycartc-march-data-design-lead - Held open-data inquiry
+
+**Status:** Internal only
+**Support level:** Inference
+**Evidence class:** Protected collaborative working document
+**Public wording:** No active public projection.
+**Detailed public-safe wording:** Collaborative M.A.R.C.H. notes explore machine-readable reporting linked to frequently updated public datasets, possible preventive alerts, and the risk of selective or culturally biased alerting.
+**Where to project:** Internal research only pending attribution and implementation review.
+**Why it matters:** Preserves a technically and ethically significant lead for later research.
+**Guardrail:** The current evidence cannot allocate the complete passage to Jamie, and no implemented or validated system was recovered.
+**Do not say:** Jamie independently designed or shipped a M.A.R.C.H. prediction product; the system was validated, safe, or used.
+**Protected boundaries:** Raw collaborative notes and working comments remain outside the repository.
+**Review owner:** Jamie / collaborators
+**Last reviewed:** 2026-07-19
+
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
 **Status:** Careful
