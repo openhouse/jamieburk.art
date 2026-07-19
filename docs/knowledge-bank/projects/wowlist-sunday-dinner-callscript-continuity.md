@@ -1,29 +1,3 @@
----
-id: project.sunday-dinner-196
-title: Sunday Dinner and 196 Artists Residency
-kind: project
-status: governed-open
-visibility: public-safe
-sensitivity: moderate
-last_reviewed: 2026-07-19
-review_by: 2026-10-19
-aliases:
-  - Sunday Dinner
-  - 196 Artists Residency
-canonical_path: docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md
-summary: Recurring hosting, onboarding, facilitation, documentation, and continuity practice connecting gatherings, artist support, community software, and civic participation.
-relations:
-  - type: related_to
-    target: person.jamie-burkart
-    href: ../people/jamie-burkart.md
-  - type: related_to
-    target: timeline.jamie-practice.2004-present
-    href: ../timelines/practice-2004-present.md
-  - type: supports
-    target: capability.participatory-public-systems
-    href: ../capabilities/participatory-public-systems.md
----
-
 # WOW List, Sunday Dinner, and Call Script continuity
 
 Date: 2026-07-15

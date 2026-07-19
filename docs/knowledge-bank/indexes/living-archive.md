@@ -42,22 +42,22 @@ relations:
     href: ../projects/harry-j-epstein.md
   - type: related_to
     target: project.wowlist
-    href: ../projects/wowlist-social-population.md
+    href: ../projects/wowlist-orientation.md
   - type: related_to
     target: project.sunday-dinner-196
-    href: ../projects/wowlist-sunday-dinner-callscript-continuity.md
+    href: ../projects/sunday-dinner-196-orientation.md
   - type: related_to
     target: project.kc-town-hall
-    href: ../projects/kc-town-hall.md
+    href: ../projects/kc-town-hall-orientation.md
   - type: related_to
     target: project.nter-chng
     href: ../projects/nter-chng.md
   - type: related_to
     target: project.kc-spaces-fund
-    href: ../projects/kc-spaces-fund-facebook-posts.md
+    href: ../projects/kc-spaces-fund-orientation.md
   - type: related_to
     target: project.waterways-participatory-art
-    href: ../projects/waterways-and-participatory-art.md
+    href: ../projects/waterways-participatory-art-orientation.md
   - type: related_to
     target: project.let-nyc-dance
     href: ../projects/let-nyc-dance.md
@@ -66,7 +66,7 @@ relations:
     href: ../projects/office-of-nightlife-town-halls.md
   - type: related_to
     target: project.talks-not-raids
-    href: ../projects/talks-not-raids.md
+    href: ../projects/talks-not-raids-orientation.md
   - type: related_to
     target: project.fair-rent-nyc
     href: ../projects/fair-rent-nyc.md
@@ -109,19 +109,19 @@ Jamie as personal librarian.
 - [NYC Artist Coalition](../organizations/nyc-artist-coalition.md)
 - [Let NYC Dance](../projects/let-nyc-dance.md)
 - [Office of Nightlife town halls](../projects/office-of-nightlife-town-halls.md)
-- [Talks Not Raids](../projects/talks-not-raids.md)
+- [Talks Not Raids](../projects/talks-not-raids-orientation.md)
 - [Fair Rent NYC](../projects/fair-rent-nyc.md)
 - [Save NYC Spaces](../projects/save-nyc-spaces.md)
 
 ## Traverse the governed project cohort
 
 - [Harry J. Epstein Company](../projects/harry-j-epstein.md)
-- [WOWList](../projects/wowlist-social-population.md)
-- [Sunday Dinner and 196 Artists Residency](../projects/wowlist-sunday-dinner-callscript-continuity.md)
-- [KC Town Hall](../projects/kc-town-hall.md)
+- [WOWList](../projects/wowlist-orientation.md)
+- [Sunday Dinner and 196 Artists Residency](../projects/sunday-dinner-196-orientation.md)
+- [KC Town Hall](../projects/kc-town-hall-orientation.md)
 - [NTER CHNG](../projects/nter-chng.md)
-- [KC Spaces Fund](../projects/kc-spaces-fund-facebook-posts.md)
-- [Waterways and participatory art](../projects/waterways-and-participatory-art.md)
+- [KC Spaces Fund](../projects/kc-spaces-fund-orientation.md)
+- [Waterways and participatory art](../projects/waterways-participatory-art-orientation.md)
 - [CallNYC](../projects/callnyc.md)
 
 ## Use the knowledge carefully

@@ -22,7 +22,7 @@ relations:
     href: let-nyc-dance.md
   - type: related_to
     target: project.talks-not-raids
-    href: talks-not-raids.md
+    href: talks-not-raids-orientation.md
 ---
 
 # Office of Nightlife town halls

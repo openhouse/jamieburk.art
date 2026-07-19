@@ -69,22 +69,22 @@ for the evidence boundaries around that present-tense argument.
 ### Technical and operational systems
 
 - [Harry J. Epstein Company](../projects/harry-j-epstein.md)
-- [WOWList](../projects/wowlist-social-population.md)
+- [WOWList](../projects/wowlist-orientation.md)
 - [CallNYC](../projects/callnyc.md)
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md)
 
 ### Civic and coalition systems
 
 - [NYC Artist Coalition](../organizations/nyc-artist-coalition.md)
-- [KC Town Hall](../projects/kc-town-hall.md)
-- [Talks Not Raids](../projects/talks-not-raids.md)
+- [KC Town Hall](../projects/kc-town-hall-orientation.md)
+- [Talks Not Raids](../projects/talks-not-raids-orientation.md)
 - [Fair Rent NYC](../projects/fair-rent-nyc.md)
 
 ### Artistic and participatory systems
 
-- [Waterways and participatory art](../projects/waterways-and-participatory-art.md)
+- [Waterways and participatory art](../projects/waterways-participatory-art-orientation.md)
 - [NTER CHNG](../projects/nter-chng.md)
-- [Sunday Dinner and 196 Artists Residency](../projects/wowlist-sunday-dinner-callscript-continuity.md)
+- [Sunday Dinner and 196 Artists Residency](../projects/sunday-dinner-196-orientation.md)
 - [Office of Nightlife town halls](../projects/office-of-nightlife-town-halls.md)
 
 ## Working throughline

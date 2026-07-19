@@ -1,26 +1,3 @@
----
-id: project.kc-town-hall
-title: KC Town Hall
-kind: project
-status: governed-open
-visibility: public-safe
-sensitivity: moderate
-last_reviewed: 2026-07-19
-review_by: 2026-10-19
-canonical_path: docs/knowledge-bank/projects/kc-town-hall.md
-summary: Adaptive-reuse, neighborhood fieldwork, resident-service, and public-benefit documentation project with municipal funding history kept distinct from disbursement and completion.
-relations:
-  - type: related_to
-    target: person.jamie-burkart
-    href: ../people/jamie-burkart.md
-  - type: related_to
-    target: timeline.jamie-practice.2004-present
-    href: ../timelines/practice-2004-present.md
-  - type: supports
-    target: capability.participatory-public-systems
-    href: ../capabilities/participatory-public-systems.md
----
-
 # KC Town Hall
 
 ## Defensible Record

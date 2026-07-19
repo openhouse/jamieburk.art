@@ -58,7 +58,7 @@ and Laura Mattingly more than 1,000 miles into a reclaimed-material raft
 journey from Kansas City into Louisiana. The report does not establish the
 final endpoint.
 
-See [Waterways and participatory art](../projects/waterways-and-participatory-art.md).
+See [Waterways and participatory art](../projects/waterways-participatory-art-orientation.md).
 
 ## 2009-2011: Legacy commerce and networked installation
 

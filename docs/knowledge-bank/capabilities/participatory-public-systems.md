@@ -21,7 +21,7 @@ relations:
     href: ../organizations/nyc-artist-coalition.md
   - type: related_to
     target: project.kc-town-hall
-    href: ../projects/kc-town-hall.md
+    href: ../projects/kc-town-hall-orientation.md
 ---
 
 # Participatory public systems

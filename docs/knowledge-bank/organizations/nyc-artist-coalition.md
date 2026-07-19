@@ -25,7 +25,7 @@ relations:
     href: ../projects/office-of-nightlife-town-halls.md
   - type: related_to
     target: project.talks-not-raids
-    href: ../projects/talks-not-raids.md
+    href: ../projects/talks-not-raids-orientation.md
   - type: related_to
     target: project.fair-rent-nyc
     href: ../projects/fair-rent-nyc.md
@@ -72,7 +72,7 @@ The governed record supports a recurring sequence:
 
 The coalition's campaigns include [Let NYC Dance](../projects/let-nyc-dance.md),
 [Office of Nightlife town halls](../projects/office-of-nightlife-town-halls.md),
-[Talks Not Raids](../projects/talks-not-raids.md),
+[Talks Not Raids](../projects/talks-not-raids-orientation.md),
 [Fair Rent NYC](../projects/fair-rent-nyc.md), and
 [Save NYC Spaces](../projects/save-nyc-spaces.md).
 

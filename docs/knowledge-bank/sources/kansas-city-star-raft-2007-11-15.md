@@ -16,7 +16,7 @@ rights_state: do-not-publish
 relations:
   - type: documents
     target: project.waterways-participatory-art
-    href: ../projects/waterways-and-participatory-art.md
+    href: ../projects/waterways-participatory-art-orientation.md
 ---
 
 # The Kansas City Star raft report, November 15, 2007

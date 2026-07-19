@@ -1,27 +1,3 @@
----
-id: project.kc-spaces-fund
-title: KC Spaces Fund
-kind: project
-status: maintained
-visibility: public-safe
-sensitivity: moderate
-last_reviewed: 2026-07-19
-review_by: 2026-10-19
-canonical_path: docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md
-summary: Collaborator-led 2020 mutual-aid campaign for Kansas City cultural spaces, supported by Jamie through bounded digital infrastructure and cross-channel identity work.
-credit_scope: collective
-relations:
-  - type: related_to
-    target: person.jamie-burkart
-    href: ../people/jamie-burkart.md
-  - type: related_to
-    target: timeline.jamie-practice.2004-present
-    href: ../timelines/practice-2004-present.md
-  - type: supports
-    target: capability.technical-operations
-    href: ../capabilities/technical-operations.md
----
-
 # KC Spaces Fund Facebook post population
 
 Reviewed: July 15, 2026
