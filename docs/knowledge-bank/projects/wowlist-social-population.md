@@ -1,3 +1,30 @@
+---
+id: project.wowlist
+title: WOWList
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-19
+review_by: 2026-10-19
+aliases:
+  - WOW List
+  - wowlist.org
+canonical_path: docs/knowledge-bank/projects/wowlist-social-population.md
+summary: Community-calendar platform co-built by Jamie Burkart and Richard Caceres around followable keyword communities, event distribution, and organizer adoption.
+credit_scope: shared
+relations:
+  - type: related_to
+    target: person.jamie-burkart
+    href: ../people/jamie-burkart.md
+  - type: related_to
+    target: timeline.jamie-practice.2004-present
+    href: ../timelines/practice-2004-present.md
+  - type: supports
+    target: capability.participatory-public-systems
+    href: ../capabilities/participatory-public-systems.md
+---
+
 # WOW List full social-population archival production
 
 **Reviewed:** 2026-07-15

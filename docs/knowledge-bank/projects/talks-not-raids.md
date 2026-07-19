@@ -1,3 +1,27 @@
+---
+id: project.talks-not-raids
+title: Talks Not Raids
+kind: project
+status: maintained
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-19
+review_by: 2026-10-19
+canonical_path: docs/knowledge-bank/projects/talks-not-raids.md
+summary: Coalition campaign for transparency and engagement alternatives concerning M.A.R.C.H. inspections, with advocacy, Council enactment, and agency implementation kept distinct.
+credit_scope: collective
+relations:
+  - type: part_of
+    target: organization.nyc-artist-coalition
+    href: ../organizations/nyc-artist-coalition.md
+  - type: related_to
+    target: project.office-of-nightlife-town-halls
+    href: office-of-nightlife-town-halls.md
+  - type: related_to
+    target: project.let-nyc-dance
+    href: let-nyc-dance.md
+---
+
 # Talks Not Raids and M.A.R.C.H.: bounded public record
 
 **Reviewed:** 2026-07-13

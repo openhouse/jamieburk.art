@@ -128,6 +128,52 @@ const wantedSchema = z.object({
   reason: z.string().min(1)
 });
 
+const sourceEncounterStateSchema = z.object({
+  target: stableIdSchema,
+  access_state: z.enum([
+    "reachable",
+    "partial",
+    "auth-required",
+    "permission-blocked",
+    "missing",
+    "stale",
+    "unconfigured"
+  ]),
+  materialization_state: z.enum([
+    "repository-file",
+    "local-materialized",
+    "public-web-archive",
+    "remote-materialized",
+    "not-materialized"
+  ]),
+  version_note: z.string().min(1)
+});
+
+const sourceEncounterSchema = z.object({
+  encounter_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  reader: z.string().min(1),
+  research_authority: z.enum([
+    "authorized-by-jamie",
+    "public-source",
+    "custodian-approved"
+  ]),
+  publication_authority: z.literal("separate-human-review"),
+  source_states: z.array(sourceEncounterStateSchema).min(1),
+  questions: z.array(z.string().min(1)).min(1),
+  prior_readings_consulted: z.array(z.string().min(1)).min(1),
+  new_observations: z.array(z.string().min(1)).min(1),
+  changed_interpretations: z.array(z.string().min(1)).min(1),
+  contradictions: z.array(z.string().min(1)).min(1),
+  records_affected: z.array(stableIdSchema).min(1),
+  limitations: z.array(z.string().min(1)).min(1),
+  librarian_requests: z.array(z.string().min(1)).min(1),
+  publication_decision: z.enum([
+    "public-safe-synthesis-only",
+    "hold",
+    "no-publication"
+  ])
+});
+
 const opportunityRequirementSchema = z.object({
   id: stableIdSchema,
   importance: z.enum(["critical", "important", "context"]),
@@ -193,6 +239,7 @@ export const wikiRecordSchema = z
     relations: z.array(relationSchema).default([]),
     evidence: z.array(evidenceSchema).default([]),
     wanted: z.array(wantedSchema).default([]),
+    source_encounter: sourceEncounterSchema.optional(),
     projection: projectionSchema.optional(),
     projection_status: z
       .enum(["active", "hold", "pending", "deprecated", "disallowed"])
@@ -267,6 +314,23 @@ export const wikiRecordSchema = z
     }
     if (record.kind === "source" && !record.source_kind) {
       context.addIssue({ code: "custom", path: ["source_kind"], message: "source records require source_kind" });
+    }
+    if (record.source_encounter && record.kind !== "research-run") {
+      context.addIssue({
+        code: "custom",
+        path: ["source_encounter"],
+        message: "source encounters belong on research-run records"
+      });
+    }
+    if (record.source_encounter) {
+      const sourceTargets = record.source_encounter.source_states.map((state) => state.target);
+      if (new Set(sourceTargets).size !== sourceTargets.length) {
+        context.addIssue({
+          code: "custom",
+          path: ["source_encounter", "source_states"],
+          message: "source encounter targets must be unique"
+        });
+      }
     }
     if (record.kind === "correction") {
       for (const field of ["previous_text", "replacement_text", "reason", "affected_surfaces"]) {

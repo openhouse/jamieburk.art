@@ -23,6 +23,10 @@ relations:
     href: indexes/employment-context.md
     context: Present-tense opportunity research and public-only hiring evaluation.
   - type: related_to
+    target: index.knowledge-wiki.living-archive
+    href: indexes/living-archive.md
+    context: Orientation, missing-page, project, and situated source-return map.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -65,6 +69,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Employment context](indexes/employment-context.md): live official-source
   opportunities, stable requirement IDs, public-only reader evaluation, and
   private job-search boundaries.
+- [Living archive](indexes/living-archive.md): Jamie, the practice throughline,
+  the priority project and campaign cohort, ethical methods, visual evidence,
+  and a dated return to original source material.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.

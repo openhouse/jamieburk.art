@@ -19,6 +19,7 @@ import {
 } from "./employment-lib.mjs";
 import { validateResponsiveAccessibilityEvidence } from "./accessibility-evidence.mjs";
 import { findDisclosedProtectedIdentityDirectives } from "./privacy-boundaries.mjs";
+import { evaluateMissingPages } from "./missing-pages-eval.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -45,6 +46,7 @@ const requirementIds = opportunities.flatMap((record) =>
 const privateVault = result.byId.get("source.vault.communication-history.metadata");
 const accessibilityEvidence = validateResponsiveAccessibilityEvidence(defaultRepoRoot);
 const disclosedProtectedIdentityDirectives = findDisclosedProtectedIdentityDirectives(defaultRepoRoot);
+const missingPages = evaluateMissingPages({ result });
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -297,7 +299,9 @@ const checks = {
     gapResolution.report.findings.some((item) => item.classification === "source-needs-close-reading"),
   portfolio_projection_remains_selective:
     opportunities.every((record) => !record.projection || record.projection.status !== "active") &&
-    boundedPublicUiChange
+    boundedPublicUiChange,
+
+  ...missingPages.checks
 };
 
 let failed = 0;

@@ -87,6 +87,19 @@ private path or media payload.
 `not-recovered` means a bounded search did not recover something. It never means
 the thing did not exist.
 
+## Situated source encounters
+
+A `research-run` may record a dated return to original or near-original
+material. The structured `source_encounter` contract records the reader,
+question, access and materialization state for every source, prior readings,
+new observations, changed interpretations, contradictions, limitations,
+affected records, and actionable librarian requests.
+
+Research authority and publication authority are separate required fields.
+Authorization to inspect a source never grants permission to quote, reproduce,
+attribute, or publish it. Contradictions remain explicit until a stronger
+source or authorized human review resolves them.
+
 ## Generated files
 
 Files under `_generated` and `reports/wiki-*` begin with a generated warning.
