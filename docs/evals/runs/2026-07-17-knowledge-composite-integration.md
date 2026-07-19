@@ -4,13 +4,13 @@ Date: 2026-07-19
 
 Branch: `feature/knowledge-wiki-B`
 
-Candidate commit: `00013499f2d07530a8d36c89828c73348f028afc`
+Candidate commit: `aaea3666787ed65121bb8b67f7a57a0d238d8303`
 
 Contract version: `4`
 
-Contract fingerprint: `dd791f7528801e996e4b34e8af03d3e715f171b366e50d14e83062b421194dc9`
+Contract fingerprint: `29b8a0a185bcabb3f1125b9c86b12f401f12eb2972594958ed1b19867b362498`
 
-Candidate fingerprint: `9f52c6cdb449b9a7bd8cb351d43107a38558cf7d33391849205f9e530ce3c2c9`
+Candidate fingerprint: `b59c90dc4c55d5db60b1839bd05e6f76bd6bc7e62548479a79146e727c752995`
 
 ## Decision
 
@@ -36,6 +36,25 @@ classes without publishing person-level rows, protected paths, raw artifacts,
 or private circumstances. Jamie's access authorization enables research but
 does not itself grant publication, quotation, image, rights, or consent
 permission.
+
+## Editorial Depth
+
+Four additional pages preserve dimensions that project summaries alone could
+not carry:
+
+- identity systems as shared infrastructure, with establishment, design,
+  administration, artifact authorship, and collective ownership kept distinct;
+- learning through making, including both strong analytical writing and the
+  documented tension between embodied work and assigned essay forms;
+- places where the work became real, without turning current access,
+  participant identity, or other people's lives into evidence; and
+- an explicitly AI-assisted first-person draft of what is at stake, held from
+  projection until Jamie reviews and authors it line by line.
+
+A new present-tense source-return record documents what was reopened, what the
+records support and do not support, what stayed protected, and which questions
+need Jamie's help as librarian. Private academic and voice materials remain
+offsite and are represented only by bounded public-safe authority records.
 
 ## NYC Artist Coalition Archive Scope
 
@@ -90,6 +109,22 @@ receipt, and page-level and receipt-level authority-removal mutations were
 added. Two fresh judges then reviewed clean isolated detached checkouts of the
 unchanged repaired candidate.
 
+The editorial-depth pass added a focused `100/100` evaluation with 16
+adversarial mutations. Early holdouts then did useful work: one could not
+exercise temporary fixtures under its read-only environment; another found
+that the composite candidate fingerprint was bound only to the final commit,
+not the full declared baseline-to-candidate lineage, and that the branch record
+did not distinguish lineage baseline from integration branch. Those receipts
+were discarded. Validation now reconciles both branches, requires baseline
+ancestry, fingerprints every non-evidence path changed across the full lineage,
+and mutation-tests contradictory branch records.
+
+One later systems receipt was also discarded when DNS isolation prevented its
+production build. Two fresh, behaviorally read-only judges then reviewed clean
+detached checkouts of the unchanged repaired candidate. One concentrated on
+provenance and governance; the other completed the production build, staging
+runtime smoke, lifecycle operators, and focused evaluation suites.
+
 ## Independent Holdouts
 
 Neither counted judge authored the patch, inspected optimization history, or
@@ -100,15 +135,15 @@ saw the other receipt.
 | CI-001 | 4 | 4 | 4 |
 | CI-002 | 4 | 4 | 4 |
 | CI-003 | 4 | 4 | 4 |
-| CI-004 | 3 | 3 | 3 |
+| CI-004 | 4 | 4 | 4 |
 | CI-005 | 4 | 4 | 4 |
 | CI-006 | 4 | 4 | 4 |
 | CI-007 | 3 | 3 | 4 |
 | CI-008 | 3 | 3 | 3 |
-| CI-009 | 3 | 4 | 3 |
+| CI-009 | 4 | 4 | 4 |
 
 The checker derives aggregate `CI-007 = 4` only after validating both exact
-receipts. The final weighted score is `0.938`, above the `0.900`
+receipts. The final weighted score is `0.975`, above the `0.900`
 implementation threshold, with every criterion at least `3`, all required
 criteria at `4`, and no critical regression or unresolved instrument defect.
 
@@ -118,15 +153,17 @@ Run on Node 26:
 
 - NYCAC census closure and public-safety check;
 - NYCAC focused archive eval: `100/100`;
-- 36 composite-integration mutation tests;
+- 37 composite-integration mutation tests;
 - 52 knowledge-lifecycle tests;
 - 10 citation tests;
 - 20 Knowledge Wiki mutation tests and `100/100` Wiki evaluation;
 - 11 source-return tests and `100/100` missing-pages evaluation;
+- 17 editorial-depth tests and `100/100` editorial-depth evaluation;
 - frozen 27-eval portfolio suite;
 - knowledge-bank and public-safety checks;
 - TypeScript, ESLint, and Next.js production build for 18 routes;
-- compiled-output leakage, route, robots, metadata, and runtime checks.
+- compiled-output leakage, route, robots, metadata, and staging runtime checks;
+- bounded intake validation plus held, research, and proof-debt query exercises.
 
 The public-safety checker retains 16 intentional careful-claim warnings and no
 failure. A first local build attempt exposed an x64 Node 24 / arm64 dependency
@@ -142,6 +179,7 @@ The following remain pending:
 - artifact-level rights and permissions;
 - collaborator and participant consent where required;
 - application-specific selection and wording approval;
+- Jamie's authorship review of the first-person stakes draft;
 - exact-candidate production approval;
 - explicit production-indexing approval.
 
