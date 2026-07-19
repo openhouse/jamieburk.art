@@ -139,6 +139,33 @@
         "councilstat_source_gap_closed",
         "interpretive_public_projection_selective"
       ]
+    },
+    {
+      "id": "knowledge-wiki-family-closure",
+      "criteria": [
+        "family_records_materialized",
+        "exact_frozen_donors_recorded",
+        "donor_provenance_preserved",
+        "root_and_closure_navigation",
+        "baseline_architecture_preserved",
+        "source_return_candidate_specific",
+        "editorial_compression_explicit",
+        "adoption_states_stay_distinct",
+        "identity_authorship_bounded",
+        "emerging_work_not_deficit",
+        "participation_keeps_people_as_agents",
+        "scenes_do_not_replace_evidence",
+        "outcomes_adoption_afterlives_separated",
+        "relations_do_not_become_causality",
+        "decision_and_outcome_layers_separated",
+        "role_credit_and_absence_bounded",
+        "research_agenda_keeps_maturity_separate",
+        "story_contract_bounded",
+        "learning_retains_writing_and_limits",
+        "first_person_authorship_human_controlled",
+        "family_public_projection_still_selective",
+        "family_public_safety_preserved"
+      ]
     }
   ]
 }

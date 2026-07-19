@@ -21,6 +21,7 @@ import { validateResponsiveAccessibilityEvidence } from "./accessibility-evidenc
 import { findDisclosedProtectedIdentityDirectives } from "./privacy-boundaries.mjs";
 import { evaluateMissingPages } from "./missing-pages-eval.mjs";
 import { evaluateInterpretiveLayer } from "./interpretive-layer-eval.mjs";
+import { evaluateFamilyClosure } from "./family-closure-eval.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -49,6 +50,7 @@ const accessibilityEvidence = validateResponsiveAccessibilityEvidence(defaultRep
 const disclosedProtectedIdentityDirectives = findDisclosedProtectedIdentityDirectives(defaultRepoRoot);
 const missingPages = evaluateMissingPages({ result });
 const interpretiveLayer = evaluateInterpretiveLayer({ result });
+const familyClosure = evaluateFamilyClosure({ result });
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -214,6 +216,9 @@ const checks = {
     existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/employment.test.mjs")) &&
     existsSync(
       path.join(defaultRepoRoot, "scripts/knowledge-wiki/interpretive-layer-eval.test.mjs")
+    ) &&
+    existsSync(
+      path.join(defaultRepoRoot, "scripts/knowledge-wiki/family-closure-eval.test.mjs")
     ),
   legacy_checks_preserved:
     readFileSync(path.join(defaultRepoRoot, "package.json"), "utf8").includes("npm run check:citations") &&
@@ -307,7 +312,8 @@ const checks = {
     boundedPublicUiChange,
 
   ...missingPages.checks,
-  ...interpretiveLayer.checks
+  ...interpretiveLayer.checks,
+  ...familyClosure.checks
 };
 
 let failed = 0;

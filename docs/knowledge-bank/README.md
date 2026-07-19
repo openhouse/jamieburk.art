@@ -35,6 +35,10 @@ relations:
     href: indexes/decision-records.md
     context: Decision reconstructions with evidence states, unknowns, and projection holds.
   - type: related_to
+    target: index.knowledge-wiki.family-closure
+    href: indexes/family-closure.md
+    context: Selective integration record for the frozen Knowledge Wiki A-E branch family.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -84,6 +88,9 @@ The website should use the clearest subset for a specific audience and purpose.
   divergence without retrospective inevitability.
 - [Decision records](indexes/decision-records.md): bounded reconstructions that
   preserve actors, constraints, evidence states, artifacts, and unknowns.
+- [Branch-family closure](indexes/family-closure.md): exact frozen donors,
+  selected strengths, consolidated pages, deliberate deferrals, and the human
+  gates still required before public projection.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.
