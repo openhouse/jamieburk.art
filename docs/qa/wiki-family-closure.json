@@ -1,0 +1,39 @@
+{
+  "suite": "feature/knowledge-wiki family closure",
+  "version": 1,
+  "decisionRecord": "docs/integration/wiki-family-closure.json",
+  "criteria": [
+    {
+      "id": "FAMILY-001",
+      "criterion": "Every frozen A-E branch has one immutable head, a named strength, a disposition, and at least one destination."
+    },
+    {
+      "id": "FAMILY-002",
+      "criterion": "The repo has one canonical Knowledge Wiki root and no public Wiki or proof-browser route."
+    },
+    {
+      "id": "FAMILY-003",
+      "criterion": "All five divergent NYC Artist Coalition census observations are preserved while the canonical total and its portfolio projection remain held."
+    },
+    {
+      "id": "FAMILY-004",
+      "criterion": "The selected cross-branch synthesis pages exist as governed, reachable pages in the canonical Wiki."
+    },
+    {
+      "id": "FAMILY-005",
+      "criterion": "Every path in the exact PR diff is assigned once to a review unit of no more than 50 paths and 10,000 added lines."
+    },
+    {
+      "id": "FAMILY-006",
+      "criterion": "Pull-request CI runs the repository check, including this closure suite and its mutation tests."
+    },
+    {
+      "id": "FAMILY-007",
+      "criterion": "Machine success does not impersonate content approval, rights clearance, production approval, or the merge decision."
+    },
+    {
+      "id": "FAMILY-008",
+      "criterion": "Branch-specific parallel roots, generated fixture corpora, and remote-ref-dependent checks are not required by the converged product."
+    }
+  ]
+}
