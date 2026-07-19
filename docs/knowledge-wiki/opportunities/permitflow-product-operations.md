@@ -32,6 +32,7 @@ reporting_line: {text: unknown, certainty: unknown}
 named_personnel: []
 hard_requirements: [requirement.permitflow.product-operations]
 preferred_requirements: []
+known_incompatible_hard_screens: []
 discovery_signals: [ambiguous-work, cross-functional-delivery, public-facing-systems, requirements, workflow-mapping, risk-and-dependencies, launch-readiness, stakeholder-translation, responsible-ai]
 role_requirements:
   - {id: requirement.permitflow.product-operations, importance: critical, kind: hard-screen, text: "Demonstrate product-operations ownership in a fast-moving technical environment.", proof_refs: [technical-operations-operating-backbone, wowlist-community-platform], wiki_records: [capability.technical-operations], public_routes: [/work/technical-operations, /work/callnyc], coverage_status: visible-qualified, gap_type: formal-role-title-gap, next_action: "Lead with owned systems and product decisions rather than title inflation."}

@@ -59,7 +59,7 @@ for (const id of requestedOpportunities) {
 const routes = requestedOpportunities.flatMap(
   (id) => opportunityById.get(id).data.portfolio_routes
 );
-const snapshot = await capturePublicSnapshot(baseUrl, routes);
+const snapshot = await capturePublicSnapshot(baseUrl, routes, binding);
 
 const packets = [];
 for (const opportunityId of requestedOpportunities) {

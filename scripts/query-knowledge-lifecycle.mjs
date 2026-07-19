@@ -64,8 +64,19 @@ const publicClaim = (claim) => ({
   id: claim.id,
   project: claim.project,
   status: claim.status,
-  claim: claim.internalClaim,
-  projections: claim.projections.map(({ key, status, surfaces, rationale }) => ({ key, status, surfaces, rationale })),
+  projections: claim.projections
+    .filter(
+      (projection) =>
+        projection.status === "active" &&
+        projection.surfaces.some((surface) => surface.startsWith("/"))
+    )
+    .map(({ key, text, status, surfaces, rationale }) => ({
+      key,
+      text,
+      status,
+      surfaces,
+      rationale
+    })),
   sourceIds: claim.evidence.map((item) => item.sourceId),
   inquiryIds: claim.researchInquiryIds,
   boundaries: claim.boundaries,

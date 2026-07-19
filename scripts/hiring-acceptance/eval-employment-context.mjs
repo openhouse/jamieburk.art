@@ -37,7 +37,13 @@ const checks = {
     readFileSync(resolve(REPO_ROOT, "docs/qa/hiring-acceptance/README.md"), "utf8").includes("not a second evidence registry"),
   "KWE-002":
     context.opportunities.length === 6 &&
-    hasNone("noncanonical-opportunity-source", "stale-opportunity", "missing-opportunity-field"),
+    hasNone(
+      "noncanonical-opportunity-source",
+      "stale-opportunity",
+      "missing-opportunity-field",
+      "official-role-fingerprint",
+      "official-role-fingerprint-set"
+    ),
   "KWE-003":
     hasNone(
       "duplicate-requirement-id",
@@ -53,6 +59,7 @@ const checks = {
   "KWE-005":
     validation.discovery.passed &&
     validation.metrics.titleBlindTopKRecall === 1 &&
+    validation.metrics.decoyControlsRejected === context.discovery.decoyControls.length &&
     validation.metrics.negativeControlsRejected === context.discovery.negativeControls.length,
   "KWE-006":
     runSource.includes("buildEvaluatorPacket") &&

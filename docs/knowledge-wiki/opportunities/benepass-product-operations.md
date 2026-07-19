@@ -33,6 +33,7 @@ named_personnel:
   - {person_id: reader.aileen-palmer, relationship: confirmed-direct-manager-context, certainty: confirmed}
 hard_requirements: [requirement.benepass.experience-range, requirement.benepass.product-engineering-partnership]
 preferred_requirements: []
+known_incompatible_hard_screens: []
 discovery_signals: [ambiguous-work, cross-functional-delivery, requirements, documentation, risk-and-dependencies, launch-readiness, stakeholder-translation]
 role_requirements:
   - {id: requirement.benepass.experience-range, importance: critical, kind: hard-screen, text: "Bring five to eight or more years in product operations or adjacent cross-functional program work.", proof_refs: [career-operating-structure-14-years], wiki_records: [capability.technical-operations], public_routes: [/resume, /work/technical-operations], coverage_status: visible-qualified, gap_type: role-title-translation, next_action: "Tie years to concrete operating work without claiming one continuous formal title."}

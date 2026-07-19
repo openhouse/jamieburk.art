@@ -17,5 +17,6 @@ console.log(
 );
 console.log(
   `Title-blind top-K recall: ${result.metrics.titleBlindTopKRecall}; ` +
-    `${result.metrics.negativeControlsRejected} negative controls rejected.`
+    `${result.metrics.decoyControlsRejected} eligible decoys and ` +
+    `${result.metrics.negativeControlsRejected} incompatible controls rejected.`
 );

@@ -18,14 +18,22 @@ contact graphs, interview notes, or raw communications here. The private source
 vault may inform a bounded research inquiry; it does not become evaluator input
 or public repository content.
 
-The hiring evaluator may receive only public route content, public opportunity
-context, and public reader context. The Wiki gap resolver is a separate operator
-that may inspect public-safe Wiki records after a missing public signal has been
-identified.
+The hiring evaluator may receive only live public route content, official role
+facts decomposed from the linked employer posting, and public reader context.
+Wiki-authored organizational interpretation, proof mappings, gap analysis,
+success conditions, and interview questions stay out of its packet. The Wiki
+gap resolver is a separate operator that may inspect public-safe Wiki records
+after a missing public signal has been identified.
 
 Evaluator packets require a clean Git worktree and a freshly captured live-HTTP
-snapshot with complete role routes and a content-derived hash. Offline snapshot
-files cannot be promoted into review packets.
+snapshot with complete role routes and a content-derived hash. The server's
+health response, pre-capture worktree, and post-capture worktree must bind to the
+same candidate SHA. Offline snapshot files cannot be promoted into review
+packets.
+
+Reviewed role facts and requirement-to-proof mappings have contract
+fingerprints. Reverification may update a role record and its fingerprint only
+in the same reviewed change; silent fact or mapping drift fails the suite.
 
 ## Operators
 

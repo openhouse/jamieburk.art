@@ -6,8 +6,8 @@ import { pathToFileURL } from "node:url";
 
 const help = `Usage: npm run check:compiled-lifecycle-leaks
 
-Scans redacted public registries, public text assets, and compiled Next.js text
-output when present. It rejects protected locators, machine-local paths,
+Scans redacted public registries, public text assets, and required compiled Next.js
+text output. It rejects protected locators, machine-local paths,
 credentials, raw-source markers, and phone-like strings in HTML. PDFs are not
 scanned because the approved resume PDF intentionally contains Jamie's phone.
 `;
@@ -18,6 +18,7 @@ const defaultRoots = [
   "apps/www/.next/server/app",
   "apps/www/.next/static"
 ];
+const defaultCompiledRoots = ["apps/www/.next/server/app", "apps/www/.next/static"];
 const textExtensions = new Set([".html", ".htm", ".js", ".mjs", ".json", ".txt", ".xml", ".css", ".map"]);
 function collect(target, files) {
   if (!existsSync(target)) return;
@@ -44,10 +45,27 @@ const forbidden = [
 const phoneLike = /(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}/;
 
 
-export function scanCompiledLifecycleLeaks(roots = defaultRoots) {
+export function scanCompiledLifecycleLeaks(
+  roots = defaultRoots,
+  {
+    requireCompiled = roots === defaultRoots,
+    compiledRoots = defaultCompiledRoots
+  } = {}
+) {
   const failures = [];
   const files = [];
+  if (requireCompiled) {
+    for (const compiledRoot of compiledRoots) {
+      if (!existsSync(compiledRoot)) failures.push(`${compiledRoot}: compiled output is missing`);
+    }
+  }
   roots.forEach((root) => collect(root, files));
+  if (
+    requireCompiled &&
+    !files.some((file) => file.includes(`${path.sep}.next${path.sep}`))
+  ) {
+    failures.push("apps/www/.next: no rendered or static text was available to scan");
+  }
   for (const file of files) {
     let content;
     try {

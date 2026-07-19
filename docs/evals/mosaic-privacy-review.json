@@ -4,7 +4,7 @@
   "reviewType": "public-safe editorial risk review",
   "isLegalReview": false,
   "isParticipantApproval": false,
-  "candidateFingerprint": "b93f397d30ca20898e9795f706b5e42352e65e495503010f593912a5156aca5f",
+  "candidateFingerprint": "ba0775ddfaaa4f3ec26af8caa3a914e902064966e499a9d94928f36e180b59dc",
   "findings": [
     {
       "id": "MPR-001",

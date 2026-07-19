@@ -51,6 +51,7 @@ hard_requirements:
 preferred_requirements:
   - requirement.oti.structured-hiring
   - requirement.oti.operating-documentation
+known_incompatible_hard_screens: []
 discovery_signals:
   - ambiguous-work
   - cross-functional-delivery

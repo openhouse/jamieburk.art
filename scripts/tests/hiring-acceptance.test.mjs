@@ -19,7 +19,13 @@ function errorCodes(result) {
   return new Set(result.errors.map((error) => error.code));
 }
 
-function publicSnapshot(routes, label = "Public content") {
+const DEFAULT_BINDING = {
+  candidateSha: "a".repeat(40),
+  worktreeClean: true,
+  worktreeStateHash: sha256("")
+};
+
+function publicSnapshot(routes, label = "Public content", binding = DEFAULT_BINDING) {
   const pages = routes.map((route) => ({
     route,
     status: 200,
@@ -28,6 +34,8 @@ function publicSnapshot(routes, label = "Public content") {
   }));
   return {
     source: "live-http",
+    candidateSha: binding.candidateSha,
+    worktreeStateHash: binding.worktreeStateHash,
     baseUrl: "https://example.test",
     snapshotHash: sha256(stableJson(pages)),
     pages
@@ -40,6 +48,7 @@ test("canonical employment context passes every machine hard gate", () => {
   assert.equal(result.metrics.opportunities, 6);
   assert.ok(result.metrics.requirements >= 47);
   assert.equal(result.metrics.titleBlindTopKRecall, 1);
+  assert.equal(result.discovery.decoysRejected, 3);
 });
 
 test("title-blind discovery never needs organization or role titles", () => {
@@ -65,13 +74,27 @@ test("title-blind discovery applies hard screens before signal ranking", () => {
   assert.equal(result.negativeControlsRejected, context.discovery.negativeControls.length);
 });
 
+test("title-blind discovery loses recall when a known-good role becomes incompatible", () => {
+  const context = cloneContext();
+  context.opportunities[0].data.known_incompatible_hard_screens = [
+    "verified-incompatible-fixture"
+  ];
+  const result = runTitleBlindDiscovery(context);
+  assert.ok(result.screenedOut.some((candidate) => candidate.id === context.opportunities[0].data.id));
+  assert.ok(result.recall < 1);
+  assert.equal(result.passed, false);
+});
+
 test("public evaluator context excludes Wiki-only evidence", () => {
   const opportunity = loadHiringContext().opportunities[0];
   const publicContext = publicOpportunityContext(opportunity);
   const raw = JSON.stringify(publicContext);
   assert.doesNotMatch(raw, /proof_refs|proofRefs|wiki_records|wikiRecords|coverage_status|gap_type/);
   assert.match(raw, /requirements/);
-  assert.match(raw, /portfolioRoutes/);
+  assert.doesNotMatch(
+    raw,
+    /organizationalContext|inferences|unknowns|oneYear|interviewQuestions|portfolioRoutes/
+  );
 });
 
 test("gap resolver remains a separate Wiki-aware operator", () => {
@@ -92,11 +115,7 @@ test("evaluator packet is deterministic for frozen inputs and leaves decision op
     opportunity,
     reader,
     snapshot,
-    binding: {
-      candidateSha: "a".repeat(40),
-      worktreeClean: true,
-      worktreeStateHash: sha256("")
-    },
+    binding: DEFAULT_BINDING,
     suite: context.suite,
     contract: context.contract,
     timestamp: "2026-07-18T12:00:00.000Z"
@@ -171,6 +190,19 @@ test("mutation rejects a role fact set detached from its official source", () =>
   const context = cloneContext();
   context.opportunities[0].data.official_source.supports = ["role_title"];
   assert.ok(errorCodes(validateHiringContext(context)).has("unsupported-role-fact-class"));
+});
+
+test("mutation rejects an official role fact changed without reviewed relocking", () => {
+  const context = cloneContext();
+  context.opportunities[0].data.compensation.maximum += 1;
+  assert.ok(errorCodes(validateHiringContext(context)).has("official-role-fingerprint"));
+});
+
+test("mutation rejects a requirement proof mapping changed without reviewed relocking", () => {
+  const context = cloneContext();
+  const requirements = context.opportunities[0].data.role_requirements;
+  requirements[0].proof_refs = [...requirements[1].proof_refs];
+  assert.ok(errorCodes(validateHiringContext(context)).has("official-role-fingerprint"));
 });
 
 test("mutation rejects visible-proven coverage backed only by weak proof debt", () => {
@@ -292,6 +324,27 @@ test("mutation rejects a forged or stale public snapshot hash", () => {
         contract: context.contract
       }),
     /snapshot hash/
+  );
+});
+
+test("mutation rejects a public snapshot bound to another candidate", () => {
+  const context = loadHiringContext();
+  const opportunity = context.opportunities[0];
+  const snapshot = publicSnapshot(opportunity.data.portfolio_routes, "Public content", {
+    ...DEFAULT_BINDING,
+    candidateSha: "b".repeat(40)
+  });
+  assert.throws(
+    () =>
+      buildEvaluatorPacket({
+        opportunity,
+        reader: context.readers[0],
+        snapshot,
+        binding: DEFAULT_BINDING,
+        suite: context.suite,
+        contract: context.contract
+      }),
+    /not bound to the evaluator candidate/
   );
 });
 

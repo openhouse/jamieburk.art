@@ -310,6 +310,28 @@ test("compiled leak scanner rejects private locators, credentials, and HTML phon
   }
 });
 
+test("compiled leak scanner fails closed when rendered output is absent", () => {
+  const directory = mkdtempSync(path.join(os.tmpdir(), "knowledge-leak-missing-build-"));
+  try {
+    const result = scanCompiledLifecycleLeaks([directory], {
+      requireCompiled: true,
+      compiledRoots: [
+        path.join(directory, ".next/server/app"),
+        path.join(directory, ".next/static")
+      ]
+    });
+    assert.match(result.failures.join("\n"), /compiled output is missing/);
+    assert.match(result.failures.join("\n"), /no rendered or static text/);
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test("public lifecycle query source cannot emit internal claim prose", () => {
+  const source = readFileSync("scripts/query-knowledge-lifecycle.mjs", "utf8");
+  assert.doesNotMatch(source, /claim\.internalClaim/);
+});
+
 test("human gates cannot be replaced by automated approval", () => {
   const state = clone(artifacts.state);
   state.humanGates["PR-019"] = "ai-approved";

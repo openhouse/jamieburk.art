@@ -5,6 +5,15 @@
   "objective": "Make the governed public-safe Wiki useful for present-tense opportunity research and bounded portfolio acceptance testing without exposing private job-search context or giving simulated readers hidden evidence.",
   "primary_brief": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md",
   "evaluation_model": "lexicographic-hard-gates",
+  "official_role_fingerprint_policy": "These hashes lock the reviewed official-role facts and the governed requirement-to-proof mappings. Reverification may update a role record and its hash only in the same reviewed change.",
+  "official_role_fingerprints": {
+    "opportunity.aclu.product-manager-ii-discovery.8482872002": "6575bd6f1d5a20c717d2dc4362deb037a754e0244bf9443256b0113e668650f4",
+    "opportunity.asana.ai-implementation-manager-service-management.8027437": "1e865330780a55dc750fefb0ffa25dfb90e450ebeac863dda5de24195bc038fe",
+    "opportunity.benepass.product-operations-manager.7f963a7a": "2a3df9d55484cbc70188046bc196bfd4dd23b92cc97acb47580074470d6e720e",
+    "opportunity.codepath.senior-program-manager-claude-corps.5182020007": "9298f488af3e9f4b7a7ce31b777f753af38571b0d5a2b19674cdc8925639659d",
+    "opportunity.nyc-oti.technical-operations-manager.782369": "7040ed603276458fb3b35adac19a89fe66396751a1bc529606eba3c3a5538a0b",
+    "opportunity.permitflow.product-operations-manager.8a6e6066": "cc5305f4e916c9bc51a1e015620a0ac74fece11e5a3657400f69e3c7bdf58dce"
+  },
   "priority_order": [
     "privacy-rights-consent-public-safety",
     "factual-support",

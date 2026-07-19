@@ -127,6 +127,7 @@ const REQUIRED_OPPORTUNITY_FIELDS = [
   "reporting_line",
   "hard_requirements",
   "preferred_requirements",
+  "known_incompatible_hard_screens",
   "discovery_signals",
   "role_requirements",
   "organizational_context",
@@ -152,6 +153,37 @@ export function stableJson(value) {
       .join(",")}}`;
   }
   return JSON.stringify(value);
+}
+
+const OFFICIAL_ROLE_FINGERPRINT_FIELDS = [
+  "organization",
+  "role_title",
+  "canonical_url",
+  "source_type",
+  "official_source",
+  "opportunity_status",
+  "verified_at",
+  "deadline",
+  "job_id",
+  "compensation",
+  "location",
+  "reporting_line",
+  "named_personnel",
+  "hard_requirements",
+  "preferred_requirements",
+  "known_incompatible_hard_screens",
+  "role_requirements",
+  "confirmed_facts"
+];
+
+export function officialRoleFingerprint(data) {
+  return sha256(
+    stableJson(
+      Object.fromEntries(
+        OFFICIAL_ROLE_FINGERPRINT_FIELDS.map((field) => [field, data[field] ?? null])
+      )
+    )
+  );
 }
 
 function readJson(path) {
@@ -249,6 +281,17 @@ export function validateHiringContext(context = loadHiringContext(), { asOf = "2
     add("tier-one-count", "docs/knowledge-wiki/opportunities", "Expected exactly six Tier 1 opportunities.");
   }
 
+  const lockedRoleFingerprints = context.contract.official_role_fingerprints ?? {};
+  const lockedRoleIds = Object.keys(lockedRoleFingerprints).sort();
+  const canonicalRoleIds = [...opportunityById.keys()].sort();
+  if (stableJson(lockedRoleIds) !== stableJson(canonicalRoleIds)) {
+    add(
+      "official-role-fingerprint-set",
+      relative(REPO_ROOT, EVAL_CONTRACT_PATH),
+      "The locked official-role fingerprint set must exactly match the six Tier 1 roles."
+    );
+  }
+
   for (const record of context.opportunities) {
     const data = record.data;
     validatePublicSafeRaw(record.raw, record.repoPath, errors);
@@ -262,6 +305,13 @@ export function validateHiringContext(context = loadHiringContext(), { asOf = "2
     }
     if (data.source_type !== "official-employer") {
       add("noncanonical-opportunity-source", record.repoPath, "Tier 1 source must be official-employer.");
+    }
+    if (officialRoleFingerprint(data) !== lockedRoleFingerprints[data.id]) {
+      add(
+        "official-role-fingerprint",
+        record.repoPath,
+        "Reviewed role facts or requirement-to-proof mappings changed without updating the governed fingerprint."
+      );
     }
     if (!/^https:\/\//.test(data.canonical_url ?? "")) {
       add("invalid-opportunity-url", record.repoPath, "canonical_url must be HTTPS.");
@@ -398,6 +448,13 @@ export function validateHiringContext(context = loadHiringContext(), { asOf = "2
         "Every typed hard screen must appear in hard_requirements and vice versa."
       );
     }
+    if (!Array.isArray(data.known_incompatible_hard_screens)) {
+      add(
+        "invalid-compatibility-control",
+        record.repoPath,
+        "known_incompatible_hard_screens must be an explicit array."
+      );
+    }
     const requirementText = (data.role_requirements ?? [])
       .map((requirement) => requirement.text)
       .join(" ");
@@ -508,7 +565,8 @@ export function validateHiringContext(context = loadHiringContext(), { asOf = "2
       sourceChannels: context.sourceChannels.channels?.length ?? 0,
       careerPhases: context.career.phases?.length ?? 0,
       titleBlindTopKRecall: discovery.recall,
-      negativeControlsRejected: discovery.negativeControlsRejected
+      negativeControlsRejected: discovery.negativeControlsRejected,
+      decoyControlsRejected: discovery.decoysRejected
     },
     discovery
   };
@@ -521,40 +579,53 @@ function overlapScore(candidateSignals, profileSignals) {
 
 export function runTitleBlindDiscovery(context = loadHiringContext()) {
   const profileSignals = context.discovery.profileSignals ?? [];
-  const opportunities = context.opportunities.map((record) => ({
+  const opportunities = context.opportunities.map((record, ordinal) => ({
     id: record.data.id,
     score: overlapScore(record.data.discovery_signals ?? [], profileSignals),
-    hardScreens: []
+    hardScreens: record.data.known_incompatible_hard_screens ?? [],
+    controlType: "known-good",
+    ordinal
   }));
-  const negativeControls = (context.discovery.negativeControls ?? []).map((candidate) => ({
+  const decoyControls = (context.discovery.decoyControls ?? []).map((candidate, index) => ({
     id: candidate.id,
     score: overlapScore(candidate.signals ?? [], profileSignals),
-    hardScreens: candidate.hardScreens ?? []
+    hardScreens: [],
+    controlType: "decoy",
+    ordinal: opportunities.length + index
   }));
-  const screenedOut = negativeControls.filter((candidate) => candidate.hardScreens.length > 0);
-  const eligible = [
-    ...opportunities,
-    ...negativeControls.filter((candidate) => candidate.hardScreens.length === 0)
-  ];
-  const ranked = eligible.sort(
-    (a, b) => b.score - a.score || a.id.localeCompare(b.id)
-  );
+  const negativeControls = (context.discovery.negativeControls ?? []).map((candidate, index) => ({
+    id: candidate.id,
+    score: overlapScore(candidate.signals ?? [], profileSignals),
+    hardScreens: candidate.hardScreens ?? [],
+    controlType: "hard-negative",
+    ordinal: opportunities.length + decoyControls.length + index
+  }));
+  const population = [...opportunities, ...decoyControls, ...negativeControls];
+  const screenedOut = population.filter((candidate) => candidate.hardScreens.length > 0);
+  const ranked = population
+    .filter((candidate) => candidate.hardScreens.length === 0)
+    .sort((a, b) => b.score - a.score || a.ordinal - b.ordinal);
   const topK = ranked.slice(0, context.discovery.topK ?? 6).map((candidate) => candidate.id);
   const knownGood = context.discovery.knownGoodOpportunityIds ?? [];
   const recalled = knownGood.filter((id) => topK.includes(id));
-  const rejected = screenedOut.filter((candidate) => !topK.includes(candidate.id));
+  const rejected = negativeControls.filter((candidate) => !topK.includes(candidate.id));
+  const decoysRejected = decoyControls.filter((candidate) => !topK.includes(candidate.id));
   const recall = knownGood.length ? recalled.length / knownGood.length : 0;
-  const passed = recall === 1 && rejected.length === negativeControls.length;
+  const passed =
+    recall === 1 &&
+    rejected.length === negativeControls.length &&
+    decoysRejected.length === decoyControls.length;
   return {
     passed,
     reason: passed
-      ? "Known-good roles lead title-blind retrieval and every negative control is rejected."
-      : `Recall ${recalled.length}/${knownGood.length}; rejected ${rejected.length}/${negativeControls.length} negative controls.`,
+      ? "Known-good roles lead title-blind retrieval; decoys rank below the cutoff; every incompatible control is rejected."
+      : `Recall ${recalled.length}/${knownGood.length}; rejected ${decoysRejected.length}/${decoyControls.length} decoys and ${rejected.length}/${negativeControls.length} hard negatives.`,
     recall,
     topK,
     ranked,
     screenedOut,
-    negativeControlsRejected: rejected.length
+    negativeControlsRejected: rejected.length,
+    decoysRejected: decoysRejected.length
   };
 }
 
@@ -576,14 +647,7 @@ export function publicOpportunityContext(record) {
       kind: requirement.kind,
       text: requirement.text
     })),
-    organizationalContext: data.organizational_context,
-    confirmedFacts: data.confirmed_facts,
-    inferences: data.inferences,
-    unknowns: data.unknowns,
-    portfolioRoutes: data.portfolio_routes,
-    oneYearSuccessConditions: data.one_year_success_conditions,
-    oneYearRiskConditions: data.one_year_risk_conditions,
-    interviewQuestions: data.interview_questions
+    confirmedFacts: data.confirmed_facts
   };
 }
 
@@ -615,7 +679,16 @@ function stripHtml(html) {
     .trim();
 }
 
-export async function capturePublicSnapshot(baseUrl, routes) {
+export async function capturePublicSnapshot(baseUrl, routes, binding = candidateBinding()) {
+  if (!binding.worktreeClean) {
+    throw new Error("Public snapshot capture requires a clean worktree.");
+  }
+  const healthResponse = await fetch(new URL("/api/health", baseUrl), { redirect: "error" });
+  if (!healthResponse.ok) throw new Error(`/api/health returned ${healthResponse.status}`);
+  const health = await healthResponse.json();
+  if (health.candidateSha !== binding.candidateSha) {
+    throw new Error("Served candidate SHA does not match the checked-out candidate.");
+  }
   const pages = [];
   for (const route of [...new Set(routes)].sort()) {
     const response = await fetch(new URL(route, baseUrl), { redirect: "follow" });
@@ -623,9 +696,19 @@ export async function capturePublicSnapshot(baseUrl, routes) {
     const html = await response.text();
     pages.push({ route, status: response.status, text: stripHtml(html), htmlHash: sha256(html) });
   }
+  const afterCapture = candidateBinding();
+  if (
+    !afterCapture.worktreeClean ||
+    afterCapture.candidateSha !== binding.candidateSha ||
+    afterCapture.worktreeStateHash !== binding.worktreeStateHash
+  ) {
+    throw new Error("Candidate or worktree changed during public snapshot capture.");
+  }
   const semantic = pages.map(({ route, status, text, htmlHash }) => ({ route, status, text, htmlHash }));
   return {
     source: "live-http",
+    candidateSha: binding.candidateSha,
+    worktreeStateHash: binding.worktreeStateHash,
     baseUrl,
     pages,
     snapshotHash: sha256(stableJson(semantic))
@@ -674,6 +757,12 @@ export function buildEvaluatorPacket({
   if (snapshot.source !== "live-http") {
     throw new Error("Evaluator packets require a live HTTP public snapshot.");
   }
+  if (
+    snapshot.candidateSha !== binding.candidateSha ||
+    snapshot.worktreeStateHash !== binding.worktreeStateHash
+  ) {
+    throw new Error("Public snapshot is not bound to the evaluator candidate state.");
+  }
   const snapshotRaw = stableJson(snapshot);
   for (const [pattern, label] of PRIVATE_PATTERNS) {
     if (pattern.test(snapshotRaw)) throw new Error(`Public snapshot contains ${label}.`);
@@ -687,7 +776,7 @@ export function buildEvaluatorPacket({
   ) {
     throw new Error("Evaluator identity cannot impersonate the configured reader lens.");
   }
-  const selectedRoutes = new Set(roleContext.portfolioRoutes);
+  const selectedRoutes = new Set(opportunity.data.portfolio_routes ?? []);
   const snapshotPages = snapshot.pages ?? [];
   const snapshotSemantic = snapshotPages.map(({ route, status, text, htmlHash }) => ({
     route,
@@ -707,13 +796,16 @@ export function buildEvaluatorPacket({
   if (missingRoutes.length) {
     throw new Error(`Public snapshot is missing required routes: ${missingRoutes.join(", ")}.`);
   }
-  const publicPages = roleContext.portfolioRoutes.map((route) => pageByRoute.get(route));
+  const publicPages = [...selectedRoutes].map((route) => pageByRoute.get(route));
   for (const page of publicPages) {
     if (page.status !== 200 || !page.text || !page.htmlHash) {
       throw new Error(`Public snapshot route ${page.route} is incomplete.`);
     }
   }
   const portfolioSnapshot = {
+    source: snapshot.source,
+    candidateSha: snapshot.candidateSha,
+    worktreeStateHash: snapshot.worktreeStateHash,
     baseUrl: snapshot.baseUrl,
     snapshotHash: snapshot.snapshotHash,
     pages: publicPages

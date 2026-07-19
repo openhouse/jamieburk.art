@@ -32,6 +32,7 @@ reporting_line: {text: Senior Director of AI Programs, certainty: confirmed-titl
 named_personnel: []
 hard_requirements: [requirement.codepath.program-management-experience]
 preferred_requirements: []
+known_incompatible_hard_screens: []
 discovery_signals: [ambiguous-work, cross-functional-delivery, documentation, risk-and-dependencies, onboarding, stakeholder-translation, responsible-ai]
 role_requirements:
   - {id: requirement.codepath.program-management-experience, importance: critical, kind: hard-screen, text: "Demonstrate senior ownership of complex multi-stakeholder programs.", proof_refs: [career-operating-structure-14-years, nyc-artist-coalition-participation-system], wiki_records: [capability.technical-operations], public_routes: [/resume, /work/technical-operations, /work/196-sunday-dinner], coverage_status: visible-qualified, gap_type: formal-program-scale-gap, next_action: "Use concrete scope, cadence, and dependency examples."}

@@ -22,6 +22,20 @@
     "opportunity.asana.ai-implementation-manager-service-management.8027437",
     "opportunity.permitflow.product-operations-manager.8a6e6066"
   ],
+  "decoyControls": [
+    {
+      "id": "decoy.generic-operations-analyst",
+      "signals": ["requirements", "documentation", "stakeholder-translation"]
+    },
+    {
+      "id": "decoy.community-program-coordinator",
+      "signals": ["onboarding", "stakeholder-translation", "public-facing-systems"]
+    },
+    {
+      "id": "decoy.web-content-manager",
+      "signals": ["documentation", "public-facing-systems"]
+    }
+  ],
   "negativeControls": [
     {"id":"negative.staff-backend-go","signals":["cross-functional-delivery"],"hardScreens":["seven-years-production-go"]},
     {"id":"negative.clinical-operations-director","signals":["workflow-mapping","documentation"],"hardScreens":["active-clinical-license"]},

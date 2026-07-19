@@ -14,10 +14,10 @@ distinct.
 
 The protocol treats the Knowledge Wiki as the sole evidence authority. Raw
 communications, application status, warm paths, private relationship context,
-and private source bodies remain outside Git. The public evaluator sees only
-rendered public routes plus public opportunity and reader context; a separate
-gap resolver may inspect public-safe Wiki records after a missing public signal
-has been identified.
+and private source bodies remain outside Git. The public evaluator sees only a
+candidate-bound live HTTP capture, official role facts decomposed from the
+employer posting, and public reader context; a separate gap resolver may inspect
+public-safe Wiki records after a missing public signal has been identified.
 
 ## What was tested
 
@@ -25,9 +25,11 @@ has been identified.
 - 7 reader contexts: 2 generic and 5 sourced, explicitly simulated profiles
 - 5 career phases and 10 source-channel coverage categories
 - title-blind recovery of all 6 known-good opportunities
-- rejection of 4 negative controls with hard credential, compensation, travel,
-  or technical screens
-- 28 mutation and isolation tests
+- rejection of 3 eligible decoys plus 4 negative controls with hard credential,
+  compensation, travel, or technical screens
+- 32 mutation and isolation tests
+- governed fingerprints for every reviewed role-fact and requirement-mapping
+  record
 - exact runtime binding for Git SHA, worktree state, public snapshot, role,
   reader, suite, timestamp, and development or holdout panel
 - Knowledge Wiki graph integrity, query behavior, source governance, public
@@ -53,6 +55,20 @@ role fact classes and named-reader notes to public sources, checks agency
 evidence strength, fingerprints dirty contents, requires clean live-HTTP
 snapshots with complete routes and content hashes, and mutation-tests each
 boundary.
+
+A second independent holdout pair was also discarded. One judge passed the
+repaired candidate; the stricter judge found that the six-slot retrieval test
+still had only six eligible roles, role facts and proof mappings could change
+without a reviewed content lock, Wiki-authored opportunity interpretation still
+entered evaluator packets, an arbitrary server could claim a snapshot label,
+compiled-output scanning could pass without a build, and the public query
+operator exposed internal claim prose. The next revision adds eligible decoys,
+explicit compatibility controls, exact role-record fingerprints, official-fact
+only evaluator context, SHA-bearing health and pre/post-capture binding,
+fail-closed compiled scanning, and active-public-projection-only query output.
+Two AI and governance mappings were also downgraded from `visible-proven` to
+`visible-qualified` because the record supports disciplined practice, not
+enterprise-scale ownership.
 
 The public copy does not claim structured government hiring ownership, public
 launch authority, or any other experience that the governed evidence does not
