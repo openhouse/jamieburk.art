@@ -1,8 +1,8 @@
 {
   "suite": "feature-evals-composite-integration-v5",
-  "candidate": "sha256:a5ce29a86509c983a35ec3918a46d32323a42232ee458051698e738cae988a3e",
-  "contract": "sha256:8050e085af60245109f3621b4c48308ba3b7720106072d64fb6d8046ed9ac8e9",
-  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-19-nycartc-r5",
+  "candidate": "sha256:7004a72cf29879277188328bb70ddc5a2e717e4e8124faa733fce408f9f20c66",
+  "contract": "sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332",
+  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-19-source-reencounter-r6",
   "lens": "systems-public-safety",
   "status": "pass",
   "scores": {
@@ -85,7 +85,7 @@
     {
       "rubric": "reviewability",
       "artifact": "evals/composite-integration/suite.json; scripts/run-composite-integration-evals.mjs; composite runner reviewStats",
-      "observation": "Version 5 rejects dirty candidate paths and assigns every committed bound file to exactly one of at most three packets. The exact delta contains 98 files split 48, 30, and 20; aggregate additions are 8,796; the largest file adds 917 lines. Unassigned, duplicate, empty, oversized, and uncommitted packet mutations fail without raising the original thresholds."
+      "observation": "Version 5 rejects dirty candidate paths and assigns every committed bound file to exactly one of at most three packets. The exact delta contains 104 files split 43, 30, and 31; aggregate additions are 9,390; the largest file adds 917 lines. Unassigned, duplicate, empty, oversized, and uncommitted packet mutations fail without raising the original thresholds."
     },
     {
       "rubric": "future_resilience",
@@ -105,7 +105,7 @@
     {
       "rubric": "exact-binding verification",
       "artifact": "node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The runner reproduced candidate sha256:a5ce29a86509c983a35ec3918a46d32323a42232ee458051698e738cae988a3e and contract sha256:8050e085af60245109f3621b4c48308ba3b7720106072d64fb6d8046ed9ac8e9 exactly. Deterministic gates and committed packet accounting passed, while current application, lifecycle, Wiki, and hiring suites independently reproduced their own exact candidate bindings."
+      "observation": "The runner reproduced candidate sha256:7004a72cf29879277188328bb70ddc5a2e717e4e8124faa733fce408f9f20c66 and contract sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332 exactly. Deterministic gates and committed packet accounting passed, while current application, lifecycle, Wiki, and hiring suites independently reproduced their own exact candidate bindings."
     },
     {
       "rubric": "public_safety",
@@ -116,12 +116,22 @@
       "rubric": "source_decomposition",
       "artifact": "apps/www/src/data/knowledge-bank/nycartc-shared-folder-archive-production.ts",
       "observation": "All eight archive sources are private or protected, reviewed, and non-renderable, with explicit support and non-support fields. All seven claims carry boundaries and anti-claims, and no new archive projection is active."
+    },
+    {
+      "rubric": "source_decomposition",
+      "artifact": "docs/knowledge-bank/methods/source-re-encounter.md; docs/knowledge-bank/methods/nycartc-public-meeting-and-testimony-participation.md; docs/knowledge-bank/inquiries/nycartc-march-data-design-attribution.md",
+      "observation": "The source-return loop records encounter date, representation, access failure, source relationships, and changed interpretation. It promotes only one narrow Jamie-attributed FOIL and reporting-legislation suggestion while keeping complete MARCH authorship and implementation unresolved."
+    },
+    {
+      "rubric": "semantic_resilience",
+      "artifact": "evals/knowledge-wiki/suite.json; scripts/run-knowledge-wiki-evals.mjs",
+      "observation": "The Wiki evaluator now fails if required wanted pages or typed links disappear, if source-grounded pages omit their dated original-source encounter, if located and readable states collapse, or if the MARCH inquiry is promoted beyond its internal inference boundary."
     }
   ],
   "regressions": [],
   "limitations": [
     "This systems-public-safety judgment is one of two reviews required for the exact Knowledge Wiki candidate; it does not certify its companion archival-editorial review.",
-    "The Knowledge Wiki validates a bounded 32-record corpus and does not imply that the full archive has been migrated or rights-cleared.",
+    "The Knowledge Wiki validates a bounded 38-record corpus and does not imply that the full archive has been migrated or rights-cleared.",
     "Current opportunity URLs and deadlines are mutable; their recorded re-verification dates remain operational requirements.",
     "Simulated named-reader profiles are evaluation contracts, not evidence of real participation, endorsement, opinion, or hiring decisions.",
     "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's approval of the exact final production candidate remain blocked. This model judgment does not close or substitute for any of them.",

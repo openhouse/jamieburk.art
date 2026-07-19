@@ -1,8 +1,8 @@
 {
   "suite": "feature-evals-composite-integration-v5",
-  "candidate": "sha256:a5ce29a86509c983a35ec3918a46d32323a42232ee458051698e738cae988a3e",
-  "contract": "sha256:8050e085af60245109f3621b4c48308ba3b7720106072d64fb6d8046ed9ac8e9",
-  "judgeId": "codex-independent-composite-archival-editorial-2026-07-19-nycartc-r5",
+  "candidate": "sha256:7004a72cf29879277188328bb70ddc5a2e717e4e8124faa733fce408f9f20c66",
+  "contract": "sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332",
+  "judgeId": "codex-independent-composite-archival-editorial-2026-07-19-source-reencounter-r6",
   "lens": "archival-editorial",
   "status": "pass",
   "scores": {
@@ -85,7 +85,7 @@
     {
       "rubric": "reviewability",
       "artifact": "evals/composite-integration/suite.json; scripts/run-composite-integration-evals.mjs; scripts/tests/composite-integration-evals.test.mjs",
-      "observation": "Version 5 preserves the original ceilings through three exact-accounting packets rather than raising them. The committed candidate contains 98 bound files: 48 portfolio-and-Wiki files, 30 evaluation files, and 20 tooling files. The aggregate adds 8,796 lines, the largest file adds 917, every file is assigned once, and no candidate-affecting working-tree path is dirty."
+      "observation": "Version 5 preserves the original ceilings through three exact-accounting packets rather than raising them. The committed candidate contains 104 bound files: 43 portfolio-and-Wiki files, 30 evaluation files, and 31 tooling-and-governance files. The aggregate adds 9,390 lines, the largest file adds 917, every file is assigned once, and no candidate-affecting working-tree path is dirty."
     },
     {
       "rubric": "future_resilience",
@@ -95,7 +95,7 @@
     {
       "rubric": "architectural_coherence",
       "artifact": "docs/architecture/ADR-knowledge-wiki-name-and-model.md; docs/knowledge-bank/README.md; scripts/lib/knowledge-wiki.mjs; reports/knowledge-wiki/generated/wiki-graph.json",
-      "observation": "The Knowledge Wiki is an authoring and navigation layer over the canonical records.ts architecture, not a competing public registry. Thirty-two governed Markdown records add typed relations, aliases, backlinks, health diagnostics, current opportunity context, and deterministic reports while retaining existing proof, citation, lifecycle, and publication controls. No public Wiki route was added."
+      "observation": "The Knowledge Wiki is an authoring and navigation layer over the canonical records.ts architecture, not a competing public registry. Thirty-eight governed Markdown records add typed relations, aliases, backlinks, health diagnostics, wanted-page governance, current opportunity context, and deterministic reports while retaining existing proof, citation, lifecycle, and publication controls. No public Wiki route was added."
     },
     {
       "rubric": "future_resilience",
@@ -105,7 +105,7 @@
     {
       "rubric": "exact-candidate verification",
       "artifact": "npm run test:composite; node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The repository reproduced candidate sha256:a5ce29a86509c983a35ec3918a46d32323a42232ee458051698e738cae988a3e and contract sha256:8050e085af60245109f3621b4c48308ba3b7720106072d64fb6d8046ed9ac8e9 exactly. Focused tests, semantic gates, committed-file accounting, bounded packets, source boundaries, and the application, lifecycle, Wiki, and hiring candidate bindings all passed before this judgment."
+      "observation": "The repository reproduced candidate sha256:7004a72cf29879277188328bb70ddc5a2e717e4e8124faa733fce408f9f20c66 and contract sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332 exactly. Focused tests, semantic gates, committed-file accounting, bounded packets, source boundaries, and the application, lifecycle, Wiki, and hiring candidate bindings all passed before this judgment."
     },
     {
       "rubric": "knowledge_capture",
@@ -115,13 +115,23 @@
     {
       "rubric": "collective_credit",
       "artifact": "docs/knowledge-bank/projects/nyc-artist-coalition.md; docs/knowledge-bank/anti-claims.md",
-      "observation": "The archive strengthens collective event operations, participation design, recommendation continuity, and campaign implementation while refusing to infer authorship from Drive metadata or task initials. Jamie-specific testimony remains distinct from shared playbooks, and the MARCH data-design lead remains an attribution inquiry."
+      "observation": "The archive strengthens collective event operations, participation design, recommendation continuity, and campaign implementation while refusing to infer authorship from Drive metadata or task initials. The present source encounter directly attributes one narrow FOIL and reporting-legislation suggestion to Jamie; the wider collaborative MARCH design remains an attribution and implementation inquiry."
+    },
+    {
+      "rubric": "source_decomposition",
+      "artifact": "docs/knowledge-bank/methods/source-re-encounter.md; docs/knowledge-bank/indexes/missing-pages.md; docs/knowledge-bank/inquiries/nycartc-march-data-design-attribution.md",
+      "observation": "The new method distinguishes located, readable, native, exported, and inaccessible source states; the wanted-page index preserves created, deferred, protected, and rights-blocked dispositions; and each substantive new page carries dated source relations and explicit non-support."
+    },
+    {
+      "rubric": "future_resilience",
+      "artifact": "evals/knowledge-wiki/suite.json; scripts/run-knowledge-wiki-evals.mjs; AGENTS.md",
+      "observation": "Four new hard gates and four human retrieval tasks make periodic return to original material, librarian handoff, missing-page governance, and non-promotion of unresolved inquiries repeatable across future agent passes."
     }
   ],
   "regressions": [],
   "limitations": [
     "This archival-editorial judgment is one of two reviews required for the exact Knowledge Wiki candidate; it does not certify its companion systems review.",
-    "The Knowledge Wiki covers a deliberately bounded 32-record governed corpus rather than the full knowledge archive.",
+    "The Knowledge Wiki covers a deliberately bounded 38-record governed corpus rather than the full knowledge archive.",
     "The six opportunity records are time-sensitive and require re-verification on their recorded dates; automated fit evaluation does not submit or authorize an application.",
     "Named reader profiles are simulated lenses only and do not establish participation, endorsement, opinion, or a hiring decision by those people.",
     "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's exact-production-candidate approval remain explicitly blocked. This judgment does not substitute for or close those gates.",
