@@ -2,7 +2,7 @@
   "judgeId": "codex-independent-warren-sack-application-2026-07-18-wiki",
   "lens": "warren-sack",
   "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
-  "contract": "sha256:f35c29a9eb885e5a07870f9cdb3c3709f802f07699de4d78b6207d3b9e45268f",
+  "contract": "sha256:3a6751a08338041e5ce7a24298d5fa9b4537217dadf012604d22aa02d4aa3d2f",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,

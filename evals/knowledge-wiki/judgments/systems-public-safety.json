@@ -2,7 +2,7 @@
   "id": "systems-public-safety",
   "reviewer": "Codex independent systems and public-safety review",
   "reviewedAt": "2026-07-18",
-  "candidateFingerprint": "sha256:b180818eee7376e329badfc0dc49e48dfeaa89d07d41f433eac3ab6a0150ed13",
+  "candidateFingerprint": "sha256:ee45ef386c0123ae7fe63150a9f18511bb3cc585b502320d73fe39d92721aa09",
   "contractFingerprint": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
   "verdict": "pass",
   "criteria": [
