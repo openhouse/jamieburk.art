@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Rights and consent review
 
-**Source commit:** `2db01848bfe2b4f24736cc0befd39710bec3e2db`
-**Generation time:** 2026-07-18T23:19:20-04:00
-**Source fingerprint:** `51874f3fcf222b00266d02d6ca39bee2a4b2f620564e97024fa151dcfbe18db6`
+**Source commit:** `8d2a3547a2cfce2c1dfc69fd64deae98aa79a1f5`
+**Generation time:** 2026-07-19T00:29:28-04:00
+**Source fingerprint:** `716079918f0338dc6f3c364231c440a08a8c80cbe4fae38e0c44d542781e0fa5`
 
 - `asset.photo.digital-district.001` - rights `permission-needed`, consent `review-needed`, display `hold`
