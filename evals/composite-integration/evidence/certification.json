@@ -1,29 +1,44 @@
 {
-  "version": 1,
-  "certifiedAt": "2026-07-16",
+  "version": 2,
+  "certifiedAt": "2026-07-18",
   "profile": "integration_ready",
-  "suite": "feature-evals-composite-integration-v4",
+  "suite": "feature-evals-composite-integration-v5",
   "status": "pass",
-  "candidate": "sha256:ea87f502439a2d1306f68f6316c43321fd299f59e561d9f991a92dbdf2951e77",
-  "contract": "sha256:0dde8926cd1afd7c7f89142ea2d9fe561fe88092d43fbaada0702b788b435e7d",
+  "candidate": "sha256:aafeb12274a9be0d4effe060b7b30ca255959e47b861d439891a79c2502fef20",
+  "contract": "sha256:0e94918879b96698c649c59edcdd39a675507c324b73e8a9ab6079e857f9dc7a",
   "consecutivePassingRuns": 2,
   "independentJudgments": [
-    "codex-independent-composite-archival-editorial-2026-07-16-r4",
-    "codex-independent-composite-systems-public-safety-2026-07-16-r4"
+    "codex-independent-composite-archival-editorial-2026-07-18-wiki-r5",
+    "codex-independent-composite-systems-public-safety-2026-07-18-wiki-r5"
   ],
   "relatedProfiles": {
     "applicationReady": {
       "status": "pass",
       "score": 86.5,
-      "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
-      "contract": "sha256:28367f9e75bdeb742746d55ac424c1af7731fc85a17aaa0aaaf06be3b252818d",
+      "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
+      "contract": "sha256:3a6751a08338041e5ce7a24298d5fa9b4537217dadf012604d22aa02d4aa3d2f",
       "consecutivePassingRuns": 2
     },
     "knowledgeReady": {
       "status": "pass",
       "score": 100,
-      "candidate": "sha256:d684e41f67ff31f16ce38e3e8778b808378331cb7a0533be0003fb75d4f0b120",
+      "candidate": "sha256:e5875a6b1adef3de4a8baadef889a26487666b3d4b33605d0ce51caa58d13f00",
       "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
+      "consecutivePassingRuns": 2
+    },
+    "knowledgeWiki": {
+      "status": "pass",
+      "candidate": "sha256:ee45ef386c0123ae7fe63150a9f18511bb3cc585b502320d73fe39d92721aa09",
+      "contract": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
+      "records": 23,
+      "consecutivePassingRuns": 2
+    },
+    "hiringAcceptance": {
+      "status": "pass",
+      "portfolioSnapshot": "sha256:d94cf7b38106bff30c19a331795c239e744690d0a806656a5a29764c1d8e8fa5",
+      "roleContext": "sha256:b303823ac0862f483666bcca2921af7a6fe8ac788a7df1db7d4d287fbbcefc5a",
+      "readerContext": "sha256:8e1573f686d41cfc9d2668a07ad4962de45978c30d3ec9729652ff86d88f3558",
+      "contract": "sha256:bf88066104927288487b27b7586b68c3ccc1c98689923b5cd07d649e217e9939",
       "consecutivePassingRuns": 2
     },
     "blindSpotDiagnostic": {
@@ -35,6 +50,8 @@
   "externalGates": [
     "candidate-bound human-reader study",
     "rights review for priority visual evidence",
+    "human decision and submission for any live application",
+    "re-verification of mutable opportunity records on their recorded dates",
     "production deploy, smoke, rollback, monitoring, and indexing evidence",
     "Jamie approval of the exact production candidate"
   ]

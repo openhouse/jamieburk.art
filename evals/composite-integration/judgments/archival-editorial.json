@@ -1,8 +1,8 @@
 {
-  "suite": "feature-evals-composite-integration-v4",
-  "candidate": "sha256:9460e2e9d601dcc4636d5aff439ea3a0687f5b55774b21f699677b63909c5df9",
-  "contract": "sha256:170874d49ff0b5f6c85579c2fcde8824e325e97fcb90dad3118e34e2ccf83bc7",
-  "judgeId": "codex-independent-composite-archival-editorial-2026-07-18-wiki-r2",
+  "suite": "feature-evals-composite-integration-v5",
+  "candidate": "sha256:aafeb12274a9be0d4effe060b7b30ca255959e47b861d439891a79c2502fef20",
+  "contract": "sha256:0e94918879b96698c649c59edcdd39a675507c324b73e8a9ab6079e857f9dc7a",
+  "judgeId": "codex-independent-composite-archival-editorial-2026-07-18-wiki-r5",
   "lens": "archival-editorial",
   "status": "pass",
   "scores": {
@@ -25,7 +25,7 @@
     {
       "rubric": "architectural_coherence",
       "artifact": "evals/composite-integration/suite.json; docs/evals/feature-evals-composite-integration.md; apps/www/src/data/knowledge-bank/records.ts",
-      "observation": "Version 4 preserves one governing architecture: records.ts remains the canonical knowledge graph, lifecycle-records.ts and append-only history provide operational provenance, public-registry.json is the redacted projection, and the portfolio, knowledge-lifecycle, blind-spot, and composite suites retain distinct responsibilities. Required canonical files exist and forbidden parallel registries and public evidence-browser routes are absent."
+      "observation": "Version 5 preserves one governing architecture: records.ts remains canonical for citational claims, the Markdown Wiki supplies governed context and navigation, lifecycle records preserve operational provenance, and portfolio, lifecycle, Wiki, hiring, blind-spot, and composite suites retain distinct responsibilities. Required canonical files exist and forbidden parallel registries and public evidence-browser routes are absent."
     },
     {
       "rubric": "knowledge_capture",
@@ -40,7 +40,7 @@
     {
       "rubric": "semantic_resilience",
       "artifact": "evals/composite-integration/fixtures/semantic-mutations.json; scripts/lib/composite-integration-evals.mjs; scripts/tests/composite-integration-evals.test.mjs",
-      "observation": "The focused test suite passed all nine tests, and all fifteen required semantic mutations were rejected, including attribution loss, sole-credit inflation, endorsement inflation, population and impact inflation, evidence-role substitution, stage inflation, memory promotion, negative-finding absolutism, protected projection, non-support inversion, anti-claim conflict, and stale candidate or contract bindings."
+      "observation": "The focused suite passed all ten tests. Fifteen semantic mutations reject attribution loss, sole-credit inflation, endorsement inflation, population and impact inflation, evidence-role substitution, stage inflation, memory promotion, negative-finding absolutism, protected projection, non-support inversion, anti-claim conflict, and stale bindings; packet tests additionally reject unassigned, overlapping, oversized, and uncommitted review surfaces."
     },
     {
       "rubric": "lifecycle_operability",
@@ -85,28 +85,35 @@
     {
       "rubric": "reviewability",
       "artifact": "evals/composite-integration/suite.json; scripts/run-composite-integration-evals.mjs; scripts/tests/composite-integration-evals.test.mjs",
-      "observation": "Version 4 computes integration statistics from the start SHA through isFingerprintBoundPath, so only candidate- or contract-bound paths count. Generated judgments, baselines, run records, certification, and the stop report are excluded from candidate accounting. The dedicated test passed, and the exact run reported 22 bound files, 1,975 added lines, and a 316-line largest addition, all within thresholds."
+      "observation": "Version 5 preserves the original ceilings through three exact-accounting packets rather than raising them. The committed candidate contains 76 bound files: 40 content files, 18 evaluation files, and 18 tooling files. The aggregate adds 6,973 lines, the largest file adds 917, every file is assigned once, and no candidate-affecting working-tree path is dirty."
     },
     {
       "rubric": "future_resilience",
       "artifact": "docs/evals/feature-evals-composite-integration.md; evals/composite-integration/evidence/branch-family-inventory.json; evals/composite-integration/evidence/governance.json",
-      "observation": "The contract history explicitly records and supersedes versions 1 through 3, while version 4 closes reviewability binding without rewriting prior evidence. Every frozen A-through-N source has an exact SHA and capability-level disposition, and deterministic, model, human-reader, rights, production, and approval evidence remain non-substitutable."
+      "observation": "The contract history preserves versions 1 through 4, while version 5 adds bounded review packets and includes Wiki and hiring suites in the no-regression boundary. Every frozen A-through-N source has an exact SHA and capability-level disposition, and deterministic, model, human-reader, rights, production, and approval evidence remain non-substitutable."
     },
     {
       "rubric": "architectural_coherence",
       "artifact": "docs/architecture/ADR-knowledge-wiki-name-and-model.md; docs/knowledge-bank/README.md; scripts/lib/knowledge-wiki.mjs; reports/knowledge-wiki/generated/wiki-graph.json",
-      "observation": "The Knowledge Wiki is an authoring and navigation layer over the canonical records.ts architecture, not a competing public registry. Seventeen governed Markdown records add typed relations, aliases, backlinks, health diagnostics, and deterministic reports while retaining the existing proof, citation, lifecycle, and publication controls. No public Wiki route was added."
+      "observation": "The Knowledge Wiki is an authoring and navigation layer over the canonical records.ts architecture, not a competing public registry. Twenty-three governed Markdown records add typed relations, aliases, backlinks, health diagnostics, current opportunity context, and deterministic reports while retaining existing proof, citation, lifecycle, and publication controls. No public Wiki route was added."
+    },
+    {
+      "rubric": "future_resilience",
+      "artifact": "docs/knowledge-bank/indexes/employment-acceptance.md; docs/knowledge-bank/opportunities; docs/qa/hiring-acceptance; evals/hiring-acceptance",
+      "observation": "Six official current opportunities are decomposed into 34 stable requirements with hard screens, evidence routes, unresolved gaps, freshness dates, and one-year acceptance conditions. Nine reader profiles are explicitly simulated, title-blind discovery outperforms three unrelated negative controls, and the public-only hiring judgment remains separated from later Wiki gap resolution."
     },
     {
       "rubric": "exact-candidate verification",
       "artifact": "npm run test:composite; node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The repository reproduced candidate sha256:9460e2e9d601dcc4636d5aff439ea3a0687f5b55774b21f699677b63909c5df9 and contract sha256:170874d49ff0b5f6c85579c2fcde8824e325e97fcb90dad3118e34e2ccf83bc7 exactly. All focused tests, deterministic rubric gates, reviewability accounting, and canonical regression checks passed; the exact generated Wiki run receipt is excluded consistently with the existing composite run receipt, while all implementation and contract files remain bound."
+      "observation": "The repository reproduced candidate sha256:aafeb12274a9be0d4effe060b7b30ca255959e47b861d439891a79c2502fef20 and contract sha256:0e94918879b96698c649c59edcdd39a675507c324b73e8a9ab6079e857f9dc7a exactly. Focused tests, semantic gates, committed-file accounting, bounded packets, source boundaries, and the application, lifecycle, Wiki, and hiring candidate bindings all passed before this judgment."
     }
   ],
   "regressions": [],
   "limitations": [
     "This archival-editorial judgment is one of two reviews required for the exact Knowledge Wiki candidate; it does not certify its companion systems review.",
-    "The Knowledge Wiki pilot covers a deliberately small governed corpus rather than the full knowledge archive.",
+    "The Knowledge Wiki covers a deliberately bounded 23-record governed corpus rather than the full knowledge archive.",
+    "The six opportunity records are time-sensitive and require re-verification on their recorded dates; automated fit evaluation does not submit or authorize an application.",
+    "Named reader profiles are simulated lenses only and do not establish participation, endorsement, opinion, or a hiring decision by those people.",
     "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's exact-production-candidate approval remain explicitly blocked. This judgment does not substitute for or close those gates.",
     "Rights-cleared visual evidence remains deferred, limiting Morse and Sack demonstration and preventing a production-readiness claim.",
     "The knowledge-bank check passed with ten warnings; they did not fail the canonical gate but remain review debt.",

@@ -55,7 +55,7 @@ generated Markdown reports. The generator was corrected, the reports were
 regenerated, and stale candidate binding failed as designed. Both independent
 judgments were rechecked against the corrected output.
 
-### Final Candidate
+### Foundation Candidate
 
 The independent judgments were re-performed and rebound after the Markdown
 views and generator correction were inspected.
@@ -71,6 +71,45 @@ views and generator correction were inspected.
 - Test assertions: 16 passing, including 11 cataloged mutation fixtures
 - Query benchmarks: 5 passing with material boundaries
 
+## Employment-Acceptance Extension
+
+The employment-context handoff added a present-tense acceptance layer without
+turning the portfolio into a job-matching product or converting employer
+requirements into proof about Jamie.
+
+- Six current opportunities were verified against official employer sources.
+- Thirty-four stable requirements preserve priority, coverage, evidence routes,
+  gaps, and next actions.
+- Nine reader profiles are explicitly simulated lenses, not real participation
+  or endorsement.
+- A public-only hiring evaluator is separated from a later public-safe Wiki gap
+  resolver.
+- Title-blind discovery ranks all six targets above nursing, senior Rust
+  engineering, and quota-carrying sales negative controls.
+- Thirteen hiring mutations and ten composite tests fail closed.
+- The Technical Operations opening was shortened to make Jamie, the operating
+  structure, and the usable outcomes immediately legible.
+- Local Playwright observation covered eleven routes at desktop, mobile,
+  200%-equivalent reflow, keyboard focus, and JavaScript-disabled settings.
+
+The larger integration retained the original review thresholds through three
+exact-accounting packets: 40 content files, 18 evaluation files, and 18 tooling
+files. Every bound file was committed and assigned exactly once.
+
+## Final Integrated Candidate
+
+- Composite candidate: `sha256:aafeb12274a9be0d4effe060b7b30ca255959e47b861d439891a79c2502fef20`
+- Composite contract: `sha256:0e94918879b96698c649c59edcdd39a675507c324b73e8a9ab6079e857f9dc7a`
+- Application candidate: `sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf`
+- Application score: 86.5/100 against an 86 threshold
+- Knowledge lifecycle score: 100/100
+- Governed Wiki records: 23
+- Typed relations: 47
+- Prose links: 39
+- Discoverable and reachable: 22/22
+- Composite score: 100/100; all ten hard gates and eight canonical
+  no-regression checks passed
+
 ## Manual Authority Gates
 
 - Human navigation study: `not-requested`
@@ -78,6 +117,9 @@ views and generator correction were inspected.
 - Rights clearance: `human-blocked`
 - Editorial approval: `not-requested`
 - Production observation: `not-requested`
+- Named-reader participation: `not-claimed`
+- Application submission: `human-only`
+- Employment acceptance: `human-only`
 
 The Digital District photograph remains outside the repository and outside all
 public projections. Its Wiki record is a public-safe receipt, not clearance.
@@ -87,5 +129,5 @@ public projections. Its Wiki record is a public-safe receipt, not clearance.
 Stop only after the exact final candidate passes twice consecutively without
 changes. Automated completion does not close the manual authority gates.
 
-**Result:** met. The final candidate and contract passed twice consecutively
-without changes. The automated foundation cycle stopped for human review.
+**Result:** met. The final integrated candidate and contract passed twice
+consecutively without changes. The automated cycle stopped for human review.

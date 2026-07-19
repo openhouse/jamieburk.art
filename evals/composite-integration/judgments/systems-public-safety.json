@@ -1,8 +1,8 @@
 {
-  "suite": "feature-evals-composite-integration-v4",
-  "candidate": "sha256:9460e2e9d601dcc4636d5aff439ea3a0687f5b55774b21f699677b63909c5df9",
-  "contract": "sha256:170874d49ff0b5f6c85579c2fcde8824e325e97fcb90dad3118e34e2ccf83bc7",
-  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-18-wiki-r2",
+  "suite": "feature-evals-composite-integration-v5",
+  "candidate": "sha256:aafeb12274a9be0d4effe060b7b30ca255959e47b861d439891a79c2502fef20",
+  "contract": "sha256:0e94918879b96698c649c59edcdd39a675507c324b73e8a9ab6079e857f9dc7a",
+  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-18-wiki-r5",
   "lens": "systems-public-safety",
   "status": "pass",
   "scores": {
@@ -25,7 +25,7 @@
     {
       "rubric": "architectural_coherence",
       "artifact": "evals/composite-integration/suite.json; docs/evals/feature-evals-composite-integration.md; apps/www/src/data/knowledge-bank/records.ts",
-      "observation": "Version 4 preserves one governing feature/knowledge-c architecture. Required canonical files exist, forbidden competing registries and public evidence-browser routes are absent, and the composite remains an integration evaluator rather than a replacement knowledge system."
+      "observation": "Version 5 preserves one governing feature/knowledge-c architecture. Required claim, lifecycle, Wiki, hiring, and portfolio files exist; forbidden competing registries and public evidence-browser routes are absent; and the composite remains an integration evaluator rather than a replacement knowledge system."
     },
     {
       "rubric": "knowledge_capture",
@@ -85,12 +85,12 @@
     {
       "rubric": "reviewability",
       "artifact": "evals/composite-integration/suite.json; scripts/run-composite-integration-evals.mjs; composite runner reviewStats",
-      "observation": "Version 4 counts only paths accepted by isFingerprintBoundPath. Composite judgments, certification, baselines, generated runs, and the stop record are excluded from both fingerprints and reviewability; ledger, governance, history, application judgments, and other gate inputs are bound. The exact delta was 22 files, 1,975 additions, and a 316-line largest addition, within every threshold."
+      "observation": "Version 5 rejects dirty candidate paths and assigns every committed bound file to exactly one of at most three packets. The exact delta contains 76 files split 40, 18, and 18; aggregate additions are 6,973; the largest file adds 917 lines. Unassigned, duplicate, empty, oversized, and uncommitted packet mutations fail without raising the original thresholds."
     },
     {
       "rubric": "future_resilience",
       "artifact": "docs/evals/feature-evals-composite-integration.md; evals/composite-integration/evidence/branch-family-inventory.json; governance policy",
-      "observation": "The v1-through-v4 contract history records each discovered boundary correction. All A-through-N heads are pinned and dispositioned, stale evidence is rejected, append-only provenance is verified against Git history, and deterministic, model, human-reader, rights, production, and Jamie-approval evidence are structurally non-substitutable."
+      "observation": "The v1-through-v5 contract history records each discovered boundary correction. All A-through-N heads are pinned and dispositioned, stale evidence is rejected, append-only provenance is verified against Git history, and deterministic, model, human-reader, rights, production, and Jamie-approval evidence are structurally non-substitutable."
     },
     {
       "rubric": "architectural_coherence",
@@ -98,15 +98,22 @@
       "observation": "The Knowledge Wiki extends the canonical knowledge architecture with fail-closed Markdown compilation, typed link validation, private-path and rights checks, query benchmarks, and mutation tests. It neither duplicates records.ts nor creates a public evidence browser, and its checks now run in the repository's normal verification pipeline."
     },
     {
+      "rubric": "future_resilience",
+      "artifact": "scripts/lib/hiring-acceptance.mjs; scripts/tests/hiring-acceptance.test.mjs; evals/hiring-acceptance/suite.json; docs/qa/hiring-acceptance",
+      "observation": "The hiring evaluator binds candidate commit, portfolio snapshot, role context, reader context, prompt, and contract separately. It evaluates only public portfolio evidence, hands public-safe Wiki metadata to a later gap resolver, detects 13 adversarial mutations, and keeps application submission, protected applicant answers, named-reader participation, and employment acceptance under human authority."
+    },
+    {
       "rubric": "exact-binding verification",
       "artifact": "node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The runner reproduced candidate sha256:9460e2e9d601dcc4636d5aff439ea3a0687f5b55774b21f699677b63909c5df9 and contract sha256:170874d49ff0b5f6c85579c2fcde8824e325e97fcb90dad3118e34e2ccf83bc7 exactly. All canonical regression checks passed, and reviewability remained calculated solely from candidate- or contract-bound paths: 50 files, with only the exact generated Wiki run receipt excluded alongside the existing generated composite receipt."
+      "observation": "The runner reproduced candidate sha256:aafeb12274a9be0d4effe060b7b30ca255959e47b861d439891a79c2502fef20 and contract sha256:0e94918879b96698c649c59edcdd39a675507c324b73e8a9ab6079e857f9dc7a exactly. Deterministic gates and committed packet accounting passed, while current application, lifecycle, Wiki, and hiring suites independently reproduced their own exact candidate bindings."
     }
   ],
   "regressions": [],
   "limitations": [
     "This systems-public-safety judgment is one of two reviews required for the exact Knowledge Wiki candidate; it does not certify its companion archival-editorial review.",
-    "The Knowledge Wiki foundation validates a bounded pilot corpus and does not imply that the full archive has been migrated or rights-cleared.",
+    "The Knowledge Wiki validates a bounded 23-record corpus and does not imply that the full archive has been migrated or rights-cleared.",
+    "Current opportunity URLs and deadlines are mutable; their recorded re-verification dates remain operational requirements.",
+    "Simulated named-reader profiles are evaluation contracts, not evidence of real participation, endorsement, opinion, or hiring decisions.",
     "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's approval of the exact final production candidate remain blocked. This model judgment does not close or substitute for any of them.",
     "Rights-cleared visual evidence remains deferred, limiting the Morse and Sack demonstrations and keeping application readiness distinct from production readiness.",
     "The governance model layer uses status pass to describe the functioning exact-binding control, while the runner separately reports the current candidate-binding evidence as incomplete. Certification should preserve that distinction and must not describe the candidate as having two judgments until both exact-bound records exist."
