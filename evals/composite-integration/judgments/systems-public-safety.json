@@ -1,8 +1,8 @@
 {
   "suite": "feature-evals-composite-integration-v5",
-  "candidate": "sha256:aafeb12274a9be0d4effe060b7b30ca255959e47b861d439891a79c2502fef20",
-  "contract": "sha256:0e94918879b96698c649c59edcdd39a675507c324b73e8a9ab6079e857f9dc7a",
-  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-18-wiki-r5",
+  "candidate": "sha256:a5ce29a86509c983a35ec3918a46d32323a42232ee458051698e738cae988a3e",
+  "contract": "sha256:8050e085af60245109f3621b4c48308ba3b7720106072d64fb6d8046ed9ac8e9",
+  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-19-nycartc-r5",
   "lens": "systems-public-safety",
   "status": "pass",
   "scores": {
@@ -85,7 +85,7 @@
     {
       "rubric": "reviewability",
       "artifact": "evals/composite-integration/suite.json; scripts/run-composite-integration-evals.mjs; composite runner reviewStats",
-      "observation": "Version 5 rejects dirty candidate paths and assigns every committed bound file to exactly one of at most three packets. The exact delta contains 76 files split 40, 18, and 18; aggregate additions are 6,973; the largest file adds 917 lines. Unassigned, duplicate, empty, oversized, and uncommitted packet mutations fail without raising the original thresholds."
+      "observation": "Version 5 rejects dirty candidate paths and assigns every committed bound file to exactly one of at most three packets. The exact delta contains 98 files split 48, 30, and 20; aggregate additions are 8,796; the largest file adds 917 lines. Unassigned, duplicate, empty, oversized, and uncommitted packet mutations fail without raising the original thresholds."
     },
     {
       "rubric": "future_resilience",
@@ -105,13 +105,23 @@
     {
       "rubric": "exact-binding verification",
       "artifact": "node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The runner reproduced candidate sha256:aafeb12274a9be0d4effe060b7b30ca255959e47b861d439891a79c2502fef20 and contract sha256:0e94918879b96698c649c59edcdd39a675507c324b73e8a9ab6079e857f9dc7a exactly. Deterministic gates and committed packet accounting passed, while current application, lifecycle, Wiki, and hiring suites independently reproduced their own exact candidate bindings."
+      "observation": "The runner reproduced candidate sha256:a5ce29a86509c983a35ec3918a46d32323a42232ee458051698e738cae988a3e and contract sha256:8050e085af60245109f3621b4c48308ba3b7720106072d64fb6d8046ed9ac8e9 exactly. Deterministic gates and committed packet accounting passed, while current application, lifecycle, Wiki, and hiring suites independently reproduced their own exact candidate bindings."
+    },
+    {
+      "rubric": "public_safety",
+      "artifact": "apps/www/src/data/knowledge-bank/nycartc-shared-folder-archive-production.ts; scripts/run-knowledge-wiki-evals.mjs; scripts/tests/knowledge-lifecycle.test.mjs",
+      "observation": "The exact shared-folder manifest remains outside git. Public records contain aggregate counts, opaque locators, and bounded synopses without Drive coordinates, resource keys, raw bodies, comments, participant data, or uncleared media; generic leakage tests reject those classes without reproducing the protected identifiers inside the test suite."
+    },
+    {
+      "rubric": "source_decomposition",
+      "artifact": "apps/www/src/data/knowledge-bank/nycartc-shared-folder-archive-production.ts",
+      "observation": "All eight archive sources are private or protected, reviewed, and non-renderable, with explicit support and non-support fields. All seven claims carry boundaries and anti-claims, and no new archive projection is active."
     }
   ],
   "regressions": [],
   "limitations": [
     "This systems-public-safety judgment is one of two reviews required for the exact Knowledge Wiki candidate; it does not certify its companion archival-editorial review.",
-    "The Knowledge Wiki validates a bounded 23-record corpus and does not imply that the full archive has been migrated or rights-cleared.",
+    "The Knowledge Wiki validates a bounded 32-record corpus and does not imply that the full archive has been migrated or rights-cleared.",
     "Current opportunity URLs and deadlines are mutable; their recorded re-verification dates remain operational requirements.",
     "Simulated named-reader profiles are evaluation contracts, not evidence of real participation, endorsement, opinion, or hiring decisions.",
     "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's approval of the exact final production candidate remain blocked. This model judgment does not close or substitute for any of them.",
