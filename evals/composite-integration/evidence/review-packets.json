@@ -15,8 +15,7 @@
         "README.md",
         "package.json",
         "apps/www",
-        "docs/knowledge-bank",
-        "docs/qa/hiring-acceptance"
+        "docs/knowledge-bank"
       ]
     },
     {
@@ -24,6 +23,7 @@
       "purpose": "Review frozen contracts, adversarial fixtures, candidate-bound judgments, and governance evidence as one integrity layer.",
       "includes": [
         "docs/evals",
+        "docs/qa/hiring-acceptance",
         "evals"
       ]
     },
