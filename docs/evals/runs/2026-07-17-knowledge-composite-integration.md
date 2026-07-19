@@ -1,136 +1,122 @@
 # Knowledge Composite Integration Run
 
-Date: 2026-07-18
+Date: 2026-07-19
 
-Branch: `feature/knowledge-n`
+Branch: `feature/knowledge-wiki-B`
 
-Candidate commit: `e677892d57260dc006cf69bf22e6067413b19469`
+Candidate commit: `ad135d1d4cb960c68484dd1ebc508a0063aab140`
 
-Contract version: `3`
+Contract version: `4`
 
-Contract fingerprint: `fce98cbbde355cdeb30c0b34cf7155d4628ca7f8bcad42506ef00237e3ca7ce1`
+Contract fingerprint: `721b3169a80742a3d91bf8465002bfdff6ecc7c96ac4a896197e3d824386d022`
 
-Candidate fingerprint: `be47c135e247fed17e6689e2cb3e1993027b4ae9e82bebc02ff0c03d1b5f3fc3`
+Candidate fingerprint: `bc5414cc975e9a4d270526cf8fb077436282bb9713bb66c4f0b01a511d2476a7`
 
 ## Decision
 
 `pass_for_code_review`
 
-The composite integration is ready for pull-request review. It is not yet
-approved for job-application sharing, production deployment, or production
-indexing. Those decisions remain bound to explicit human gates.
+The composite integration is ready for pull-request review. It is not approved
+for job-application sharing, production deployment, or production indexing.
+Those decisions remain bound to explicit human gates.
 
-## Integration Scope
+## NYC Artist Coalition Archive Scope
 
-The run began from the pinned `feature/knowledge-n` baseline at
-`10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe`. It inspected the complete
-`feature/evals-*` donor family A through N and selectively integrated durable
-controls into the canonical N lifecycle. The frozen contract records every
-accepted and rejected donor decision. No donor branch was merged or
-cherry-picked wholesale, and no second knowledge bank, publication registry,
-database, CMS, or public search surface was created.
+The authenticated archival-production pass closed the accessible shared-folder
+population at **2,408 unique items across 258 folders**. Every accessible item
+received an inventory record, a source class, and one primary disposition. The
+public repository stores only aggregate public-safe accounting and opaque
+custody metadata. The exact 4,439,361-byte item manifest remains outside Git
+with SHA-256
+`94d36f269cf4db36b64ca86210a58929bb64a2a0e599648a65919d88d0d9b5f8`.
 
-The resulting system adds:
+The lifecycle integration adds:
 
-- exact agency and collective-credit relations;
-- bounded intake, query, reporting, and compiled-leak controls;
-- selective composition manifests and mosaic-privacy review;
-- archival survivorship, rights separation, and research re-entry controls;
-- exact-candidate fingerprinting and two independent holdout receipts;
-- truthful separation of code-review, application-share, and production gates.
+- one public aggregate census source and one protected custody source;
+- one bounded census claim, one item-level role inquiry, and one matured intake;
+- a Knowledge Wiki project record, source record, research run, application
+  brief, capability linkage, and coverage evaluation;
+- one selective, cited case-study projection with an explicit archive boundary;
+- a survivorship entry that distinguishes accessible-population closure from
+  authorship, historical completeness, rights, consent, or individual credit;
+- a seven-criterion focused archive eval with file-specific semantic mutations.
+
+The site remains a composed portfolio rather than an archive browser. No exact
+folder URL, resource key, item locator, private filename inventory, raw content,
+or protected participant record entered Git.
 
 ## Recursive Hill Climb
 
-Ten iterations were required. The state record preserves the complete defect
-log. The substantial repairs included:
+The first NYCAC candidate passed its focused machine eval at `100/100`, but
+both independent version-three holdouts returned `iterate`. They found:
 
-1. Preserving structural validation errors during holdout aggregation.
-2. Narrowing compiled-output leak checks to publicly served text.
-3. Making missing holdouts fail explicitly instead of normalizing to infinity.
-4. Binding mosaic review and adding operator, rights, and re-entry mutations.
-5. Binding holdout agreement to an exact Git candidate.
-6. Requiring the named candidate commit itself to contain implementation work.
-7. Closing graph, composition-route, and receipt-evidence bypasses.
-8. Repairing lifecycle and knowledge-checker regressions while strengthening
-   donor decisions, public wording, query modes, survivorship, claim budgets,
-   receipt schema, history inspection, and human-status validation.
-9. Separating each judge's receipt-level trust decision from the deterministic
-   two-receipt aggregate, removing an evaluator contradiction without weakening
-   unchanged-candidate identity.
-10. Replacing a stale KC Spaces Fund source-spelling assertion with a semantic
-    check of the canonical projection registry, adding resolver-removal
-    mutation coverage, and fingerprinting the repaired legacy eval.
+1. Most new archive files were outside the candidate fingerprint.
+2. The public case-study projection was outside composition-budget accounting.
+3. The mosaic review was stale for the new candidate.
+4. The recovered population had not entered the survivorship exact set.
+5. Aggregate semantic checks could pass when a promise survived only in the
+   wrong artifact.
+
+Version four repaired those defects, fingerprinted every changed candidate
+path, added per-instance projection accounting and source binding, extended the
+survivorship register, and added file-specific mutations. One otherwise useful
+version-four receipt was discarded because its fork inherited an unrelated
+untracked file; an interrupted retry was also excluded. Two fresh judges then
+reviewed clean isolated detached checkouts of the unchanged candidate.
 
 ## Independent Holdouts
 
-Two distinct, read-only judges evaluated the unchanged version-three
-candidate. Neither authored the patch nor saw optimization history. Both bound
-their receipt to the exact SHA and fingerprints, reported no critical
-regression or unresolved instrument defect, and returned
-`pass_for_code_review`.
+Neither counted judge authored the patch, inspected optimization history, or
+saw the other receipt.
 
 | Criterion | Holdout 1 | Holdout 2 | Conservative aggregate |
 | --- | ---: | ---: | ---: |
 | CI-001 | 4 | 4 | 4 |
 | CI-002 | 4 | 4 | 4 |
 | CI-003 | 4 | 4 | 4 |
-| CI-004 | 4 | 3 | 3 |
+| CI-004 | 4 | 4 | 4 |
 | CI-005 | 4 | 4 | 4 |
 | CI-006 | 4 | 4 | 4 |
 | CI-007 | 3 | 3 | 4 |
-| CI-008 | 3 | 4 | 3 |
+| CI-008 | 3 | 3 | 3 |
 | CI-009 | 4 | 4 | 4 |
 
-The deterministic checker derives aggregate `CI-007 = 4` only after validating
-both exact independent receipts. The final weighted score is `0.950`, above the
-`0.900` implementation-review threshold, with every criterion at least `3` and
-all required criteria at `4`.
+The checker derives aggregate `CI-007 = 4` only after validating both exact
+receipts. The final weighted score is `0.975`, above the `0.900`
+implementation threshold, with every criterion at least `3`, all required
+criteria at `4`, and no critical regression or unresolved instrument defect.
 
 ## Verification Record
 
-The exact candidate or its unchanged public runtime passed:
+Run on Node 26:
 
+- NYCAC census closure and public-safety check;
+- NYCAC focused archive eval: `100/100`;
+- 36 composite-integration mutation tests;
 - 52 knowledge-lifecycle tests;
-- 33 composite-integration tests, including aggregate-derivation and legacy
-  role-eval binding mutations;
 - 10 citation tests;
-- the frozen 27-eval portfolio suite, including 18 portfolio-eval tests;
-- 5 blind-spot evidence tests;
-- the KC Spaces Fund Facebook role eval at `100/100`;
-- knowledge-bank, lifecycle, citation, corpus, route, metadata, robots, public
-  safety, and compiled-leak checks;
-- Node 26 TypeScript, ESLint, and Next.js production build;
-- a Docker staging build and 18-endpoint HTTP 200 runtime smoke;
-- staging robots behavior with indexing disabled;
-- responsive, metadata, link, and console browser QA before the final
-  evaluator-only changes. Version three did not change public runtime code.
+- 20 Knowledge Wiki mutation tests and `100/100` Wiki evaluation;
+- frozen 27-eval portfolio suite;
+- knowledge-bank and public-safety checks;
+- TypeScript, ESLint, and Next.js production build for 18 routes;
+- compiled-output leakage, route, robots, metadata, and runtime checks.
 
-The public-safety checker completed with 16 intentional review warnings and no
-failure. The host's optional native Node dependency was repaired by reinstalling
-dependencies under Node 26; `package-lock.json` was restored and no source
-change resulted. `npm audit` continues to report two moderate dependency
-vulnerabilities; they are recorded residual risk rather than a hidden pass.
-
-## Holdout Hygiene
-
-One attempted subagent exhausted its service quota without returning a receipt
-and was not counted. Two fallback attempts were also discarded: one was stopped
-after exceeding the bounded review task, and one incidentally exposed
-historical receipt text through an overbroad search. The counted second receipt
-used an explicit candidate-path allowlist and did not inspect historical
-receipts, state, the run report, or working-tree evidence.
+The public-safety checker retains 16 intentional careful-claim warnings and no
+failure. A first local build attempt exposed an x64 Node 24 / arm64 dependency
+mismatch; a lockfile-clean Node 26 reinstall repaired the environment without
+changing tracked files, and the production build then passed.
 
 ## Human Gates
 
-The following remain deliberately pending:
+The following remain pending:
 
-- `PR-019`: trusted hiring reader review;
-- `PR-025`: exact-candidate human launch QA;
+- `PR-019`: trusted hiring-reader review;
+- `PR-025`: exact-candidate hands-on launch QA;
 - artifact-level rights and permissions;
-- collaborator consent where recorded as required;
+- collaborator and participant consent where required;
+- application-specific selection and wording approval;
 - exact-candidate production approval;
-- explicit production indexing approval.
+- explicit production-indexing approval.
 
-No automated score, AI judgment, or protocol result has been represented as a
-human approval. The valid next action is pull-request review, followed by the
-named human gates before application sharing or production launch.
+No archive count, automated score, AI judgment, or protocol result is
+represented as human approval.

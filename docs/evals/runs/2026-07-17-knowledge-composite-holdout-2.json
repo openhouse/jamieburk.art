@@ -1,1 +1,70 @@
-{"version":1,"judgeIdentity":"knowledge-composite-employment-holdout-8","judgeRole":"read-only-independent","authoredPatch":false,"sawOptimizationHistory":false,"candidateSha":"edeeef12f3b83f6eae0a104d3f526e7c2fd48cd5","contractFingerprint":"8db0a1bf3c7bd29ea03e44be19bdfa67e5ade85f5a8e91acb42652e31c4a5b62","candidateFingerprint":"ba0775ddfaaa4f3ec26af8caa3a914e902064966e499a9d94928f36e180b59dc","evaluatedAt":"2026-07-18","scores":[{"id":"CI-001","score":4,"rationale":"Direct Git checks established the exact requested HEAD and a clean staged, unstaged, and untracked worktree. The version-three contract pins the lineage baseline, accounts for donors A-N with accepted and rejected decisions, preserves the canonical N lifecycle, and defines reproducible contract and candidate fingerprint scopes. Composite mutation tests passed for contract drift, donor loss, unbound render paths, arbitrary SHAs, post-candidate implementation drift, and hidden merge/history changes.","evidencePaths":[".agents/evals/knowledge-composite-integration.json","docs/evals/runs/2026-07-17-knowledge-composite-v3-baseline.md","docs/evals/knowledge-composite-integration.md","scripts/lib/knowledge-composite-validation.mjs","scripts/tests/knowledge-composite-evals.test.mjs"]},{"id":"CI-002","score":4,"rationale":"The composite suite passed all 35 tests, including exact-set graph validation and mutation-sensitive failures for missing agency classifications, unknown canonical support, broken canonical references, composition drift, survivorship drift, and absent compiled output. The lifecycle query returned bounded canonical claims, sources, inquiries, projections, and proof records with stable IDs and explicit boundaries; proof-debt remained visible rather than being deleted or promoted.","evidencePaths":["scripts/tests/knowledge-composite-evals.test.mjs","scripts/tests/knowledge-lifecycle.test.mjs","scripts/query-knowledge-lifecycle.mjs","scripts/lib/knowledge-operator-validation.mjs","apps/www/src/data/proofs.ts"]},{"id":"CI-003","score":4,"rationale":"Agency relations classify the public proof set with actor, bounded action, object, purpose, result, relationship, credit scope, support, confidence, and anti-claims. Composite and hiring mutation suites directly rejected missing classifications, sole-causality inflation, unsupported titles, collaborator erasure, endorsement drift, and public-route wording drift. Inspected examples consistently preserve Jamie's visible contribution while reserving collective, institutional, legislative, and participant credit.","evidencePaths":["apps/www/src/data/knowledge-bank/agency-relations.json","apps/www/src/data/proofs.ts","scripts/tests/knowledge-composite-evals.test.mjs","scripts/tests/hiring-acceptance.test.mjs","apps/www/src/app/work/technical-operations/page.tsx"]},{"id":"CI-004","score":3,"rationale":"All four operator help surfaces were directly inspected. Public-safe intake validation succeeded through stdin and explicitly created no canonical record or public claim; a protected local-path marker returned nonzero. Every documented bounded query mode ran successfully, and source inspection confirms a 120-character query cap, 100-row result cap, graph validation before operation, active-public-projection filtering, and exclusion of internal claim prose. The 35-test suite passed graph-break, unknown-reference, private-data, credential, phone-string, no-auto-promotion, and compiled-output fail-closed mutations. The score remains 3 because the direct review established the documented exact surface but did not establish strict rejection of every undocumented argument shape across the report and leak-check entry points.","evidencePaths":["scripts/knowledge-intake.mjs","scripts/query-knowledge-lifecycle.mjs","scripts/report-knowledge-lifecycle.mjs","scripts/check-compiled-lifecycle-leaks.mjs","scripts/lib/knowledge-operator-validation.mjs","scripts/tests/knowledge-composite-evals.test.mjs","docs/knowledge-wiki/README.md"]},{"id":"CI-005","score":4,"rationale":"The survivorship register and mutations enforce the reviewed population and status exact sets, graph-check project and inquiry references, preserve negative-search boundaries, keep rights dimensions separate, and block automatic claim promotion from photo or collaborator leads. Direct query results retained not-recovered and partially-recovered limitations, including explicit statements that negative search is not proof of nonexistence and that rights, consent, and display review remain required.","evidencePaths":["docs/knowledge-bank/archival-survivorship-register.json","scripts/tests/knowledge-composite-evals.test.mjs","scripts/query-knowledge-lifecycle.mjs","docs/knowledge-bank/framework.md"]},{"id":"CI-006","score":4,"rationale":"Composition validation covers every public route template and proof decision as exact sets, binds rendered selectors to canonical registries, counts proof and direct-projection selections against route budgets, and mutation-tests route, omission, selection, and binding drift. The candidate-bound mosaic review requires multiple combination-risk findings and continuing holds. Public queries expose selected projections and explicitly held mature claims without dumping protected locators or internal claim prose.","evidencePaths":["docs/evals/composition-manifest.json","docs/evals/mosaic-privacy-review.json","scripts/lib/knowledge-composite-validation.mjs","scripts/tests/knowledge-composite-evals.test.mjs","scripts/query-knowledge-lifecycle.mjs"]},{"id":"CI-007","score":3,"rationale":"This judge independently verified the exact clean candidate HEAD, used the frozen version-three contract, authored no patch, and did not inspect optimization history, either receipt, or another judge. The suite passed mutations for self-grading, candidate drift, duplicate scores, stale dates, invented evidence, unresolved defects, invalid receipt paths, missing holdouts, and post-candidate changes. Per the contract, this receipt-level score is 3; only deterministic aggregation of two valid unseen independent receipts may derive 4.","evidencePaths":[".agents/evals/knowledge-composite-integration.json","docs/evals/knowledge-composite-integration.md","scripts/lib/knowledge-composite-validation.mjs","scripts/tests/knowledge-composite-evals.test.mjs"]},{"id":"CI-008","score":3,"rationale":"Direct focused machine layers passed: 35/35 composite mutations, 32/32 hiring mutations, and all KWE-001 through KWE-010 employment gates. The compiled leak implementation fails closed without rendered output and scans public registries plus compiled HTML/static text for private paths, protected locators, credentials, raw-source markers, and phone-like HTML strings. The pinned baseline records a complete repository check on the frozen candidate and the release policy separates staging noindex, production indexing, browser/runtime evidence, and human approval. This holdout did not independently rerun the full build, browser, runtime-smoke, or environment-preflight layers, so 4 is not claimed.","evidencePaths":["package.json","docs/evals/runs/2026-07-17-knowledge-composite-v3-baseline.md","docs/evals/knowledge-composite-integration.md","scripts/check-compiled-lifecycle-leaks.mjs","scripts/tests/knowledge-composite-evals.test.mjs","scripts/tests/hiring-acceptance.test.mjs"]},{"id":"CI-009","score":4,"rationale":"The direct employment evaluation passed KWE-001 through KWE-010 and explicitly left human hiring, application, rights, and reader-response gates open. Composite mutations reject automated approval, and the lifecycle report preserves human-only blockers. Contract profiles keep application sharing, exact-candidate production QA, production approval, rights, consent, and indexing as reserved human decisions rather than consequences of machine or AI scores.","evidencePaths":[".agents/evals/knowledge-composite-integration.json",".agents/evals/knowledge-wiki-employment.json","scripts/hiring-acceptance/eval-employment-context.mjs","scripts/report-knowledge-lifecycle.mjs","scripts/tests/knowledge-composite-evals.test.mjs"]}],"criticalRegressions":[],"instrumentDefects":[],"decision":"pass_for_code_review"}
+{
+  "version": 1,
+  "judgeIdentity": "nycac-v4-clean-operations-holdout-4",
+  "judgeRole": "read-only-independent",
+  "authoredPatch": false,
+  "sawOptimizationHistory": false,
+  "candidateSha": "ad135d1d4cb960c68484dd1ebc508a0063aab140",
+  "contractFingerprint": "721b3169a80742a3d91bf8465002bfdff6ecc7c96ac4a896197e3d824386d022",
+  "candidateFingerprint": "bc5414cc975e9a4d270526cf8fb077436282bb9713bb66c4f0b01a511d2476a7",
+  "evaluatedAt": "2026-07-19",
+  "scores": [
+    {
+      "id": "CI-001",
+      "score": 4,
+      "rationale": "The version-four contract and lineage baseline are pinned, donor decisions are explicit, both fingerprints reproduce, and every path changed by the candidate commit is included in the fingerprint scope.",
+      "evidencePaths": [".agents/evals/knowledge-composite-integration.json", "docs/evals/runs/2026-07-19-knowledge-composite-v4-baseline.md", "scripts/lib/knowledge-composite-validation.mjs"]
+    },
+    {
+      "id": "CI-002",
+      "score": 4,
+      "rationale": "Canonical lifecycle and citation checks passed under Node 26; exact graph coverage, projections, intake disposition, public-registry redaction, and mutation-sensitive lifecycle tests remain coherent.",
+      "evidencePaths": ["apps/www/src/data/knowledge-bank/records.ts", "apps/www/src/data/knowledge-bank/public-registry.json", "scripts/tests/knowledge-lifecycle.test.mjs", "scripts/tests/citations.test.mjs"]
+    },
+    {
+      "id": "CI-003",
+      "score": 4,
+      "rationale": "Agency relations classify the proof bank as an exact set with bounded action, usable result, confidence, collective-credit scope, canonical support, and anti-claims; semantic mutations cover causality, title, endorsement, and collaborator erasure.",
+      "evidencePaths": ["apps/www/src/data/knowledge-bank/agency-relations.json", "scripts/lib/knowledge-composite-validation.mjs", "scripts/tests/knowledge-composite-evals.test.mjs"]
+    },
+    {
+      "id": "CI-004",
+      "score": 4,
+      "rationale": "The intake and query interfaces are operationally legible, bounded, non-promoting, and public-safe; stable-ID retrieval preserved boundaries and anti-claims without exposing protected locators.",
+      "evidencePaths": ["scripts/knowledge-intake.mjs", "scripts/query-knowledge-lifecycle.mjs", "scripts/report-knowledge-lifecycle.mjs", "scripts/lib/knowledge-operator-validation.mjs"]
+    },
+    {
+      "id": "CI-005",
+      "score": 4,
+      "rationale": "NYCAC is present in the survivorship exact set, accessible-population closure is bounded from historical completeness, six rights dimensions remain separate, and discoveries must re-enter through intake or inquiry.",
+      "evidencePaths": ["docs/knowledge-bank/archival-survivorship-register.json", "apps/www/src/data/knowledge-bank/nycac-shared-folder-archive-production.ts", "docs/knowledge-wiki/research-runs/nycac-shared-folder-2026.md", "scripts/lib/knowledge-composite-validation.mjs"]
+    },
+    {
+      "id": "CI-006",
+      "score": 4,
+      "rationale": "The NYCAC case-study projection is source-bound and counted within the instance budget; rendered output carries its citation and public boundary, while the mosaic review reproduces the candidate fingerprint and retains continuing holds.",
+      "evidencePaths": ["docs/evals/composition-manifest.json", "apps/www/src/data/proofs.ts", "apps/www/src/content/work/nyc-artist-coalition.mdx", "docs/evals/mosaic-privacy-review.json", "scripts/tests/knowledge-composite-evals.test.mjs"]
+    },
+    {
+      "id": "CI-007",
+      "score": 3,
+      "rationale": "This receipt independently reproduced the exact SHA and fingerprints from a clean detached checkout and found no instrument defect. Receipt-level trust is sound; only the deterministic two-receipt aggregate may derive score 4.",
+      "evidencePaths": [".agents/evals/knowledge-composite-integration.json", "docs/evals/knowledge-composite-integration.md", "scripts/lib/knowledge-composite-validation.mjs"]
+    },
+    {
+      "id": "CI-008",
+      "score": 3,
+      "rationale": "Node 26 typecheck, lint, production build, compiled-output leakage scan, public-safety scan, route check, and staging runtime smoke passed; staging emitted noindex metadata and disallow-all robots. Hands-on responsive, keyboard, screen-reader, Docker, and production cutover evidence correctly remain separate or pending.",
+      "evidencePaths": ["package.json", "apps/www/src/lib/site-url.ts", "apps/www/src/app/robots.ts", "docs/deployment.md", "docs/evals/human-launch-qa.md"]
+    },
+    {
+      "id": "CI-009",
+      "score": 4,
+      "rationale": "PR-019 and PR-025 remain explicitly pending with no reviewer or candidate approval, rights and consent remain separate, and production indexing still requires Jamie's exact-candidate human approval.",
+      "evidencePaths": ["docs/evals/blind-spot-human-status.json", "docs/evals/hiring-reader-response-loop.md", "docs/evals/human-launch-qa.md", "docs/production-readiness.md"]
+    }
+  ],
+  "criticalRegressions": [],
+  "instrumentDefects": [],
+  "decision": "pass_for_code_review"
+}

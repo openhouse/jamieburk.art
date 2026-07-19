@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "contractVersion": 3,
-  "optimizerIdentity": "Codex implementation agent for feature/knowledge-wiki-B employment-context run",
-  "contractFingerprint": "8db0a1bf3c7bd29ea03e44be19bdfa67e5ade85f5a8e91acb42652e31c4a5b62",
-  "candidateFingerprint": "ba0775ddfaaa4f3ec26af8caa3a914e902064966e499a9d94928f36e180b59dc",
-  "candidateSha": "edeeef12f3b83f6eae0a104d3f526e7c2fd48cd5",
+  "contractVersion": 4,
+  "optimizerIdentity": "Codex implementation agent for feature/knowledge-wiki-B NYCAC shared-folder run",
+  "contractFingerprint": "721b3169a80742a3d91bf8465002bfdff6ecc7c96ac4a896197e3d824386d022",
+  "candidateFingerprint": "bc5414cc975e9a4d270526cf8fb077436282bb9713bb66c4f0b01a511d2476a7",
+  "candidateSha": "ad135d1d4cb960c68484dd1ebc508a0063aab140",
   "decision": "pass_for_code_review",
   "holdoutReceiptPaths": [
     "docs/evals/runs/2026-07-17-knowledge-composite-holdout-1.json",
@@ -32,7 +32,9 @@
     "Iteration 11 invalidated the earlier receipts when the employment-context work expanded the exact candidate fingerprint scope. The implementation was frozen in commit 152df7eae55dc4d61c287fced16d995f48bbd3b0 before a new pair of read-only holdouts was requested.",
     "Iteration 12 discarded both receipts after the holdouts found a post-freeze mosaic binding, truncated comma-bearing YAML, ranking-based negative-control rejection, incomplete official-source and reader-source semantics, weak proof-strength and hard-screen closure, and permissive dirty or offline snapshot packets. Candidate 7eccdb57c9ed8524feed8f220b3cf5351e06afca incorporated those repairs and expanded mutation coverage from 17 to 28 tests.",
     "Iteration 13 discarded the split second-pair result after the stricter judge found a tautological six-role retrieval cutoff, mutable official facts and proof mappings, hidden Wiki interpretation in evaluator packets, forgeable snapshot provenance, optional compiled-output scanning, and internal claim prose in public queries. Candidate edeeef12f3b83f6eae0a104d3f526e7c2fd48cd5 adds eligible decoys, governed role fingerprints, official-fact-only evaluator context, live server SHA and pre/post-capture binding, fail-closed compiled scanning, public-projection-only query output, and 32 passing hiring mutations.",
-    "Iteration 14 discarded a valid but sub-threshold holdout pair whose conservative weighted score was 0.887 because the isolated clones lacked dependencies for independent operator execution. The candidate remained unchanged; dependencies were provisioned outside Git, and two fresh blind read-only judges directly ran the composite and hiring mutation suites plus employment evals. Their conservative aggregate passes at 0.95 with no critical regressions or instrument defects."
+    "Iteration 14 discarded a valid but sub-threshold holdout pair whose conservative weighted score was 0.887 because the isolated clones lacked dependencies for independent operator execution. The candidate remained unchanged; dependencies were provisioned outside Git, and two fresh blind read-only judges directly ran the composite and hiring mutation suites plus employment evals. Their conservative aggregate passes at 0.95 with no critical regressions or instrument defects.",
+    "Iteration 15 discarded both first-pass NYCAC holdouts after they found incomplete candidate fingerprint coverage, an unbudgeted case-study projection, a stale mosaic binding, aggregate-only semantic checks, and a missing survivorship population. Contract version four binds every candidate-changed path, budgets and source-binds the projection, adds the archive population, and makes semantic mutations file-specific.",
+    "Iteration 16 discarded one otherwise-substantive version-four receipt because the evaluator fork inherited an unrelated untracked recommendations file, and interrupted a separate retry that did not return promptly. Two fresh read-only judges then evaluated clean isolated detached checkouts of unchanged candidate ad135d1d4cb960c68484dd1ebc508a0063aab140 and returned valid passing receipts with no critical regressions or instrument defects."
   ],
   "candidateDefects": [],
   "allowedPostCandidatePaths": [
