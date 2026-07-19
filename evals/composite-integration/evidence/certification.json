@@ -1,36 +1,36 @@
 {
   "version": 2,
-  "certifiedAt": "2026-07-18",
+  "certifiedAt": "2026-07-19",
   "profile": "integration_ready",
   "suite": "feature-evals-composite-integration-v5",
   "status": "pass",
-  "candidate": "sha256:aafeb12274a9be0d4effe060b7b30ca255959e47b861d439891a79c2502fef20",
-  "contract": "sha256:0e94918879b96698c649c59edcdd39a675507c324b73e8a9ab6079e857f9dc7a",
+  "candidate": "sha256:2d02b48e1ffce0755af46161fa326a98ef1d4cbeeac6e0840471a5f24fa084f9",
+  "contract": "sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332",
   "consecutivePassingRuns": 2,
   "independentJudgments": [
-    "codex-independent-composite-archival-editorial-2026-07-18-wiki-r5",
-    "codex-independent-composite-systems-public-safety-2026-07-18-wiki-r5"
+    "codex-independent-composite-archival-editorial-2026-07-19-missing-pages-r7",
+    "codex-independent-composite-systems-public-safety-2026-07-19-missing-pages-r7"
   ],
   "relatedProfiles": {
     "applicationReady": {
       "status": "pass",
       "score": 86.5,
-      "candidate": "sha256:590f92bad30cfa4ac30c314a3fd86cbc91a1d83057e8431e41e9c27724972dbf",
-      "contract": "sha256:3a6751a08338041e5ce7a24298d5fa9b4537217dadf012604d22aa02d4aa3d2f",
+      "candidate": "sha256:013ae05c9ebe7959bf285288028a2be23a027b6d1cfced29e41f2608ecef37de",
+      "contract": "sha256:da6113f28c0331045a438a18b997bc8cc8303d64cbe31add9fcfd6d21dfd46a3",
       "consecutivePassingRuns": 2
     },
     "knowledgeReady": {
       "status": "pass",
       "score": 100,
-      "candidate": "sha256:e5875a6b1adef3de4a8baadef889a26487666b3d4b33605d0ce51caa58d13f00",
-      "contract": "sha256:5a83fd3f72903371f98ebf32f49ee97caf9e057a326bda0ae2e6189c7979ce7e",
+      "candidate": "sha256:ad6fda3184c7e018b83fa125c3617ac22e57cf4f0d4b7683827bbb3cba23ecbc",
+      "contract": "sha256:1fb5b545a3809982ef12166060d389e51154270a9d7ccece30f74e75ef1a12fd",
       "consecutivePassingRuns": 2
     },
     "knowledgeWiki": {
       "status": "pass",
-      "candidate": "sha256:ee45ef386c0123ae7fe63150a9f18511bb3cc585b502320d73fe39d92721aa09",
-      "contract": "sha256:b68eafc205a64bcc965d0946666e93b6ac4646d1b05c8fbeabe08edd2cfba5d0",
-      "records": 23,
+      "candidate": "sha256:a45d73911c5d16c42ff68a170d0268afdb4c67db1ca04ec85459da1a9dc0f098",
+      "contract": "sha256:4fd8e47766d2c7dfba7890dc552f03a552c2b3f0ec06cd0bdce1eba1cec21353",
+      "records": 47,
       "consecutivePassingRuns": 2
     },
     "hiringAcceptance": {

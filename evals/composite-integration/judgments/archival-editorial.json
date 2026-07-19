@@ -1,8 +1,8 @@
 {
   "suite": "feature-evals-composite-integration-v5",
-  "candidate": "sha256:7004a72cf29879277188328bb70ddc5a2e717e4e8124faa733fce408f9f20c66",
+  "candidate": "sha256:2d02b48e1ffce0755af46161fa326a98ef1d4cbeeac6e0840471a5f24fa084f9",
   "contract": "sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332",
-  "judgeId": "codex-independent-composite-archival-editorial-2026-07-19-source-reencounter-r6",
+  "judgeId": "codex-independent-composite-archival-editorial-2026-07-19-missing-pages-r7",
   "lens": "archival-editorial",
   "status": "pass",
   "scores": {
@@ -85,7 +85,7 @@
     {
       "rubric": "reviewability",
       "artifact": "evals/composite-integration/suite.json; scripts/run-composite-integration-evals.mjs; scripts/tests/composite-integration-evals.test.mjs",
-      "observation": "Version 5 preserves the original ceilings through three exact-accounting packets rather than raising them. The committed candidate contains 104 bound files: 43 portfolio-and-Wiki files, 30 evaluation files, and 31 tooling-and-governance files. The aggregate adds 9,390 lines, the largest file adds 917, every file is assigned once, and no candidate-affecting working-tree path is dirty."
+      "observation": "Version 5 preserves the original ceilings through three exact-accounting packets rather than raising them. The committed candidate contains 115 bound files: 49 portfolio-and-Wiki files, 30 evaluation files, and 36 tooling-and-governance files. The aggregate adds 9,993 lines, the largest file adds 917, every file is assigned once, and no candidate-affecting working-tree path is dirty."
     },
     {
       "rubric": "future_resilience",
@@ -95,7 +95,7 @@
     {
       "rubric": "architectural_coherence",
       "artifact": "docs/architecture/ADR-knowledge-wiki-name-and-model.md; docs/knowledge-bank/README.md; scripts/lib/knowledge-wiki.mjs; reports/knowledge-wiki/generated/wiki-graph.json",
-      "observation": "The Knowledge Wiki is an authoring and navigation layer over the canonical records.ts architecture, not a competing public registry. Thirty-eight governed Markdown records add typed relations, aliases, backlinks, health diagnostics, wanted-page governance, current opportunity context, and deterministic reports while retaining existing proof, citation, lifecycle, and publication controls. No public Wiki route was added."
+      "observation": "The Knowledge Wiki is an authoring and navigation layer over the canonical records.ts architecture, not a competing public registry. Forty-seven governed Markdown records add typed relations, aliases, backlinks, health diagnostics, wanted-page governance, current opportunity context, and deterministic reports while retaining existing proof, citation, lifecycle, and publication controls. No public Wiki route was added."
     },
     {
       "rubric": "future_resilience",
@@ -105,7 +105,7 @@
     {
       "rubric": "exact-candidate verification",
       "artifact": "npm run test:composite; node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The repository reproduced candidate sha256:7004a72cf29879277188328bb70ddc5a2e717e4e8124faa733fce408f9f20c66 and contract sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332 exactly. Focused tests, semantic gates, committed-file accounting, bounded packets, source boundaries, and the application, lifecycle, Wiki, and hiring candidate bindings all passed before this judgment."
+      "observation": "The repository reproduced candidate sha256:2d02b48e1ffce0755af46161fa326a98ef1d4cbeeac6e0840471a5f24fa084f9 and contract sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332 exactly. Focused tests, semantic gates, committed-file accounting, bounded packets, source boundaries, and the application, lifecycle, Wiki, and hiring candidate bindings all passed before this judgment."
     },
     {
       "rubric": "knowledge_capture",
@@ -125,13 +125,18 @@
     {
       "rubric": "future_resilience",
       "artifact": "evals/knowledge-wiki/suite.json; scripts/run-knowledge-wiki-evals.mjs; AGENTS.md",
-      "observation": "Four new hard gates and four human retrieval tasks make periodic return to original material, librarian handoff, missing-page governance, and non-promotion of unresolved inquiries repeatable across future agent passes."
+      "observation": "Suite version 3 adds six hard gates and seven human retrieval tasks for the eight-page family, making chronology, noncausal lineage, collective authorship, project afterlives, protected absence, people and place, and source-grounded scenes repeatable across future agent passes."
+    },
+    {
+      "rubric": "editorial_composition",
+      "artifact": "docs/knowledge-bank/indexes/missing-pages.md; docs/knowledge-bank/indexes/scenes-of-work.md; docs/knowledge-bank/indexes/absences-protections-and-permissions.md",
+      "observation": "The second priority family makes chronology, participation lineage, project afterlives, role and collective authorship, scenes, artistic practice, people and places, and protected absences directly navigable. It expands compositional depth without selecting every mature record for the portfolio or turning vivid memory into corroboration."
     }
   ],
   "regressions": [],
   "limitations": [
     "This archival-editorial judgment is one of two reviews required for the exact Knowledge Wiki candidate; it does not certify its companion systems review.",
-    "The Knowledge Wiki covers a deliberately bounded 38-record governed corpus rather than the full knowledge archive.",
+    "The Knowledge Wiki covers a deliberately bounded 47-record governed corpus rather than the full knowledge archive.",
     "The six opportunity records are time-sensitive and require re-verification on their recorded dates; automated fit evaluation does not submit or authorize an application.",
     "Named reader profiles are simulated lenses only and do not establish participation, endorsement, opinion, or a hiring decision by those people.",
     "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's exact-production-candidate approval remain explicitly blocked. This judgment does not substitute for or close those gates.",

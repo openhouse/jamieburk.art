@@ -1,8 +1,8 @@
 {
   "suite": "feature-evals-composite-integration-v5",
-  "candidate": "sha256:7004a72cf29879277188328bb70ddc5a2e717e4e8124faa733fce408f9f20c66",
+  "candidate": "sha256:2d02b48e1ffce0755af46161fa326a98ef1d4cbeeac6e0840471a5f24fa084f9",
   "contract": "sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332",
-  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-19-source-reencounter-r6",
+  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-19-missing-pages-r7",
   "lens": "systems-public-safety",
   "status": "pass",
   "scores": {
@@ -85,7 +85,7 @@
     {
       "rubric": "reviewability",
       "artifact": "evals/composite-integration/suite.json; scripts/run-composite-integration-evals.mjs; composite runner reviewStats",
-      "observation": "Version 5 rejects dirty candidate paths and assigns every committed bound file to exactly one of at most three packets. The exact delta contains 104 files split 43, 30, and 31; aggregate additions are 9,390; the largest file adds 917 lines. Unassigned, duplicate, empty, oversized, and uncommitted packet mutations fail without raising the original thresholds."
+      "observation": "Version 5 rejects dirty candidate paths and assigns every committed bound file to exactly one of at most three packets. The exact delta contains 115 files split 49, 30, and 36; aggregate additions are 9,993; the largest file adds 917 lines. Unassigned, duplicate, empty, oversized, and uncommitted packet mutations fail without raising the original thresholds."
     },
     {
       "rubric": "future_resilience",
@@ -105,7 +105,7 @@
     {
       "rubric": "exact-binding verification",
       "artifact": "node scripts/run-composite-integration-evals.mjs --json --no-report",
-      "observation": "The runner reproduced candidate sha256:7004a72cf29879277188328bb70ddc5a2e717e4e8124faa733fce408f9f20c66 and contract sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332 exactly. Deterministic gates and committed packet accounting passed, while current application, lifecycle, Wiki, and hiring suites independently reproduced their own exact candidate bindings."
+      "observation": "The runner reproduced candidate sha256:2d02b48e1ffce0755af46161fa326a98ef1d4cbeeac6e0840471a5f24fa084f9 and contract sha256:799b20f7ea03bf5e20a17c9f300d7bd700c41d61f63c65482c05fd9dcc11d332 exactly. Deterministic gates and committed packet accounting passed, while current application, lifecycle, Wiki, and hiring suites independently reproduced their own exact candidate bindings."
     },
     {
       "rubric": "public_safety",
@@ -125,13 +125,18 @@
     {
       "rubric": "semantic_resilience",
       "artifact": "evals/knowledge-wiki/suite.json; scripts/run-knowledge-wiki-evals.mjs",
-      "observation": "The Wiki evaluator now fails if required wanted pages or typed links disappear, if source-grounded pages omit their dated original-source encounter, if located and readable states collapse, or if the MARCH inquiry is promoted beyond its internal inference boundary."
+      "observation": "The Wiki evaluator now fails if required wanted pages or typed links disappear, if source-grounded pages omit their dated original-source encounter, if lineage becomes causal, if collective authorship is inflated, if handoff states collapse, if protected absence is erased, or if the MARCH inquiry is promoted beyond its internal inference boundary."
+    },
+    {
+      "rubric": "public_safety",
+      "artifact": "docs/knowledge-bank/indexes/role-and-collective-authorship.md; docs/knowledge-bank/indexes/people-places-and-community-testimony.md; docs/knowledge-bank/indexes/absences-protections-and-permissions.md",
+      "observation": "The new public-safe indexes explicitly exclude private revision histories, messages, contacts, testimony bodies, guest and attendee data, inferred relationship graphs, family details, and uncleared media. All eight pages have no allowed public surfaces, and authorization to research is not treated as third-party consent."
     }
   ],
   "regressions": [],
   "limitations": [
     "This systems-public-safety judgment is one of two reviews required for the exact Knowledge Wiki candidate; it does not certify its companion archival-editorial review.",
-    "The Knowledge Wiki validates a bounded 38-record corpus and does not imply that the full archive has been migrated or rights-cleared.",
+    "The Knowledge Wiki validates a bounded 47-record corpus and does not imply that the full archive has been migrated or rights-cleared.",
     "Current opportunity URLs and deadlines are mutable; their recorded re-verification dates remain operational requirements.",
     "Simulated named-reader profiles are evaluation contracts, not evidence of real participation, endorsement, opinion, or hiring decisions.",
     "Human-reader validation, rights review, production deployment and smoke evidence, and Jamie's approval of the exact final production candidate remain blocked. This model judgment does not close or substitute for any of them.",
