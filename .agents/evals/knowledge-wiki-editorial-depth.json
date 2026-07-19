@@ -1,0 +1,16 @@
+{
+  "name": "Knowledge Wiki editorial depth",
+  "version": "1.0.0",
+  "score_maximum": 100,
+  "score_threshold": 100,
+  "criteria": [
+    { "id": "ED-001", "title": "Editorial depth page set exists", "weight": 15, "blocking": true },
+    { "id": "ED-002", "title": "Pages preserve canonical authority and source-return structure", "weight": 15, "blocking": true },
+    { "id": "ED-003", "title": "Identity systems preserve attribution and rights boundaries", "weight": 15, "blocking": true },
+    { "id": "ED-004", "title": "Learning through making preserves evidence and educational boundaries", "weight": 15, "blocking": true },
+    { "id": "ED-005", "title": "Situated practice remains specific and consent-aware", "weight": 15, "blocking": true },
+    { "id": "ED-006", "title": "First-person stakes remain pending Jamie authorship", "weight": 10, "blocking": true },
+    { "id": "ED-007", "title": "Pages are discoverable and governed by fresh source return", "weight": 10, "blocking": true },
+    { "id": "ED-008", "title": "Adversarial mutation coverage exists", "weight": 5, "blocking": true }
+  ]
+}

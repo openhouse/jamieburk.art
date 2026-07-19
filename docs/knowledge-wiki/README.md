@@ -47,6 +47,10 @@ globally renamed.
 - [Evidence debt and promotion queue](indexes/evidence-debt-and-promotion-queue.md):
   see what still needs a source return, collaborator correction, rights review,
   or editorial decision.
+- [Places where the work became real](indexes/places-where-work-became-real.md):
+  retrieve situated work without treating places or people as scenery.
+- [What is at stake for me](methods/what-is-at-stake-for-me.md): read an
+  explicitly AI-assisted first-person draft awaiting Jamie's authorship review.
 - [Retrieval tasks](evaluations/retrieval-tasks.md): test whether another person
   can find and trust an answer.
 - [NYC Artist Coalition archive evaluation](evaluations/nycac-shared-folder-coverage.md):
@@ -55,6 +59,8 @@ globally renamed.
 - [Missing pages and source return evaluation](evaluations/missing-pages-and-source-return.md):
   test whether wanted pages remain grounded in fresh source review and open
   human questions.
+- [Editorial depth evaluation](evaluations/editorial-depth.md): test distinct
+  attribution, evidence, consent, and authorship gates for four deeper pages.
 
 ## Work Safely
 
@@ -77,6 +83,8 @@ npm run wiki:query -- --help
 npm run wiki:eval
 npm run wiki:eval:source-return
 npm run wiki:test:source-return
+npm run wiki:eval:editorial-depth
+npm run wiki:test:editorial-depth
 npm run wiki:opportunities
 npm run wiki:coverage
 npm run wiki:discovery

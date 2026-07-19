@@ -50,6 +50,12 @@ public boundary.
   systems.
 - [Selected Practice Chronology](../timelines/selected-practice-chronology.md):
   a broader dated retrieval path that remains deliberately incomplete.
+- [Places Where the Work Became Real](places-where-work-became-real.md):
+  galleries, waterways, tables, cultural spaces, neighborhood routes, and
+  construction sites as distinct conditions of practice.
+- [Learning Through Making](../methods/learning-through-making.md): the artistic
+  and technical lineage joining embodied inquiry, writing, prototypes,
+  participation, and revision.
 
 The deeper compatibility layer retains additional public-safe
 [project research](../../knowledge-bank/README.md#projection-rule). Those notes

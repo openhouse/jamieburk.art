@@ -4,7 +4,7 @@
   "reviewType": "public-safe editorial risk review",
   "isLegalReview": false,
   "isParticipantApproval": false,
-  "candidateFingerprint": "9f52c6cdb449b9a7bd8cb351d43107a38558cf7d33391849205f9e530ce3c2c9",
+  "candidateFingerprint": "89965d61bb0cdeffe2ce4131f6cca3a1f5be3c46b737a6d0bd2ca6db2ca88e12",
   "findings": [
     {
       "id": "MPR-001",
@@ -61,6 +61,13 @@
       "risk": "A broad synthesis could make private life circumstances, participant histories, or protected archive structure easier to infer even when individual fragments are public-safe.",
       "decision": "generalize-source-position-and-omit-private-circumstances",
       "appliesTo": ["knowledge-wiki", "selected-practice-chronology", "source-return-research-run", "handoff-and-continuity"]
+    },
+    {
+      "id": "MPR-009",
+      "combination": ["AI-assisted first-person draft", "cross-project chronology", "private voice corpus"],
+      "risk": "A bounded interpretive draft could be mistaken for Jamie-approved autobiography or make protected interior context inferable through cross-project synthesis.",
+      "decision": "label-pending-authorship-keep-private-voice-offsite-and-block-projection-until-jamie-review",
+      "appliesTo": ["what-is-at-stake-for-me", "selected-practice-chronology", "private-voice-source"]
     }
   ],
   "result": "pass-with-continuing-holds",

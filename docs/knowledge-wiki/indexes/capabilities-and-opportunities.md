@@ -26,6 +26,10 @@ smallest set of credible evidence.
 - [Handoffs, Adoption, and Continuity](../capabilities/handoff-adoption-continuity.md)
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md)
 - [From Being There to Operating Structure](../methods/being-there-to-operating-structure.md)
+- [Identity Systems as Shared Infrastructure](../methods/identity-systems-as-shared-infrastructure.md)
+- [Learning Through Making](../methods/learning-through-making.md)
+- [What Is at Stake for Me](../methods/what-is-at-stake-for-me.md), an
+  AI-assisted draft pending Jamie's authorship review
 - [NYC Artist Coalition civic operations evidence](../applications/nycac-civic-operations-evidence.md)
 - [NYC OTI Technical Operations opportunity](../opportunities/oti-technical-operations.md)
 - [ACLU Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)

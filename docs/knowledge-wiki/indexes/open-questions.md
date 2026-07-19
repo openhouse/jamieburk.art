@@ -33,6 +33,8 @@ source. That request appears on the [CallNYC project page](../projects/callnyc.m
 
 Open human decisions remain separate:
 
+- Jamie's line-by-line authorship review of the AI-assisted
+  [What Is at Stake for Me](../methods/what-is-at-stake-for-me.md) draft;
 - rights and consent review for the Digital District photograph;
 - trusted-reader retrieval and comprehension;
 - editorial selection for any new public projection;
