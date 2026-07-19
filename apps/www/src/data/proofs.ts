@@ -1009,6 +1009,24 @@ export const publicCompositionProofSelections = {
 
 export const publicCompositionCaseStudySelections = caseStudyProofIdsByInstance;
 
+export const publicCompositionCaseStudyClaimProjectionSelections = {
+  "harry-j-epstein": [],
+  "nyc-artist-coalition": [
+    "CLM-NYCAC-SHARED-ARCHIVE-CENSUS/case-study"
+  ],
+  "fair-rent-nyc": [],
+  callnyc: [],
+  wowlist: [],
+  "196-sunday-dinner": [],
+  "kc-town-hall": []
+} as const;
+
+const caseStudyClaimProjectionKeys = [
+  ...new Set(
+    Object.values(publicCompositionCaseStudyClaimProjectionSelections).flat()
+  )
+];
+
 export const publicCompositionClaimProjectionSelections = {
   home: [],
   "work-index": [],
@@ -1026,5 +1044,5 @@ export const publicCompositionClaimProjectionSelections = {
   contact: [],
   colophon: [],
   "source-backed-team-memory-lab": [],
-  "case-study-template": []
+  "case-study-template": caseStudyClaimProjectionKeys
 };

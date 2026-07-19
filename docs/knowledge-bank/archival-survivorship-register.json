@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewedAt": "2026-07-16",
+  "reviewedAt": "2026-07-19",
   "purpose": "Record what survived each bounded archival pass without treating non-recovery as proof of nonexistence.",
   "allowedStatuses": ["recovered", "partially-recovered", "not-recovered", "known-through-another-source"],
   "populations": [
@@ -60,6 +60,14 @@
       "status": "known-through-another-source",
       "finding": "Public ledgers retain minimized aggregates, cryptographic commitments, and selected public sources while authenticated item-level captures remain protected outside Git.",
       "boundary": "The public repo is intentionally not a reconstructable copy of private or authenticated account data."
+    },
+    {
+      "id": "SURV-NYCAC-SHARED-FOLDER",
+      "project": "nyc-artist-coalition",
+      "status": "recovered",
+      "inquiryId": "INQ-NYCAC-SHARED-ARCHIVE-ROLE-ATTRIBUTION-2026",
+      "finding": "The authenticated accessible population closed at 2,408 unique items across 258 folders, with one aggregate disposition per item and an exact protected custody manifest outside Git.",
+      "boundary": "Population closure does not establish authorship, publication permission, rights clearance, complete content review, historical completeness, or Jamie's individual role in every record."
     }
   ],
   "rightsDimensions": [

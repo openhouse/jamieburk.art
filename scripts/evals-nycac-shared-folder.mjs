@@ -5,6 +5,7 @@ import assert from "node:assert/strict";
 import {
   checkRepository,
   evaluateCensus,
+  evaluatePublicFileSemantics,
   evaluatePublicSemantics
 } from "./check-nycac-shared-folder-census.mjs";
 
@@ -129,11 +130,50 @@ const textMutations = [
   )
 ];
 
+const fileTextMutations = [
+  [
+    "docs/knowledge-bank/runs/2026-07-19-nycac-shared-folder-full-population.md",
+    (text) => text.replace(
+      /Folder access is not publication permission/gi,
+      "Folder access grants publication permission"
+    )
+  ],
+  [
+    "docs/knowledge-bank/projects/nyc-artist-coalition-shared-folder.md",
+    (text) => text.replace(/collective and institutional credit/gi, "project credit")
+  ],
+  [
+    "docs/knowledge-bank/briefs/nycac-civic-operations-application-brief.md",
+    (text) => text.replace(
+      /Jamie builds operating structure for ambiguous public-facing work/gi,
+      "The coalition did work"
+    )
+  ],
+  [
+    "docs/knowledge-wiki/evaluations/nycac-shared-folder-coverage.md",
+    (text) => text.replace(/human gates/gi, "automatic approvals")
+  ],
+  [
+    "apps/www/src/content/work/nyc-artist-coalition.mdx",
+    (text) => text.replace(
+      /exact\s+records\s+remain protected/gi,
+      "exact records are public"
+    )
+  ]
+];
+
+const fileTextMutationPasses = fileTextMutations.every(([relativePath, mutate]) => {
+  const candidate = { ...baseline.publicTexts };
+  candidate[relativePath] = mutate(candidate[relativePath]);
+  return evaluatePublicFileSemantics(candidate).length > 0;
+});
+
 score(
   "NYCAC-ARCHIVE-007",
   "Recursive mutation resistance",
   5,
   corpusMutationPasses &&
+    fileTextMutationPasses &&
     textMutations.every(
       (candidate) => evaluatePublicSemantics(candidate).length > 0
     )

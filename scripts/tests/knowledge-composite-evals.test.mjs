@@ -143,6 +143,23 @@ test("composition mutation catches rendered proof and direct-projection drift", 
   assert.match(errors, /direct claim projections must match the public composition registry exactly/);
 });
 
+test("case-study composition budgets direct projections by instance", () => {
+  const manifest = clone(artifacts.composition);
+  const surface = manifest.surfaces.find(
+    (item) => item.id === "case-study-template"
+  );
+  surface.selectedClaimProjectionKeysByInstance["nyc-artist-coalition"] = [];
+  const errors = validateComposition(manifest, artifacts.agency).join("\n");
+  assert.match(
+    errors,
+    /nyc-artist-coalition direct claim projections must match the public composition registry exactly/
+  );
+  assert.match(
+    errors,
+    /selectedClaimProjectionKeys must equal the union of its instances/
+  );
+});
+
 test("composition budget counts proofs and direct projections", () => {
   const manifest = clone(artifacts.composition);
   const surface = manifest.surfaces.find((item) => item.id === "technical-operations");
@@ -159,6 +176,20 @@ test("composition render paths stay bound to canonical selectors", () => {
       : source;
   });
   assert.match(errors.join("\n"), /work-index render path is not bound/);
+
+  const caseStudyErrors = validateCompositionSourceBindings((relativePath) => {
+    const source = readFileSync(relativePath, "utf8");
+    return relativePath === "apps/www/src/content/work/nyc-artist-coalition.mdx"
+      ? source.replaceAll(
+          "CLM-NYCAC-SHARED-ARCHIVE-CENSUS",
+          "CLM-UNBOUND-ARCHIVE-CENSUS"
+        )
+      : source;
+  });
+  assert.match(
+    caseStudyErrors.join("\n"),
+    /case-study-nyc-artist-coalition render path is not bound/
+  );
 });
 
 test("survivorship mutation catches historical absence overclaim", () => {
@@ -179,7 +210,9 @@ test("survivorship mutations preserve separate rights and non-automatic re-entry
 
 test("survivorship mutations catch population, status, project, and inquiry drift", () => {
   const register = clone(artifacts.survivorship);
-  register.populations.pop();
+  register.populations = register.populations.filter(
+    (item) => item.status !== "known-through-another-source"
+  );
   register.populations[0].project = "not-a-project";
   register.populations[0].inquiryId = "INQ-NOT-REAL";
   const errors = validateSurvivorship(register).join("\n");
@@ -192,7 +225,7 @@ test("survivorship mutations catch population, status, project, and inquiry drif
 test("mosaic review requires combinations, continuing holds, and candidate binding", () => {
   assert.deepEqual(validateMosaic(artifacts.mosaic), []);
   const mosaic = clone(artifacts.mosaic);
-  mosaic.findings.pop();
+  mosaic.findings = mosaic.findings.slice(0, 5);
   mosaic.findings[0].combination = ["one fragment"];
   let errors = validateMosaic(mosaic).join("\n");
   assert.match(errors, /at least six combination-risk findings/);
@@ -575,6 +608,18 @@ test("candidate binding rejects arbitrary SHAs and post-candidate implementation
   }, "candidate").join("\n");
   assert.match(errors, /implementation-changing commit/);
   assert.match(errors, /reproduce from the named Git commit tree/);
+
+  errors = validateCandidateGitBinding(state, {
+    headSha: "b".repeat(40),
+    commitExists: true,
+    candidateIsAncestor: true,
+    candidateChangedPaths: ["apps/www/src/data/knowledge-bank/records.ts"],
+    candidateFingerprint: "candidate",
+    changedPaths: [],
+    historyChangedPaths: [],
+    mergeCommits: []
+  }, "candidate", []).join("\n");
+  assert.match(errors, /scope omits implementation paths/);
 });
 
 test("missing holdouts normalize to zero instead of an accidental pass", () => {

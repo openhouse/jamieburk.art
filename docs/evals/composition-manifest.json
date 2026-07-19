@@ -131,7 +131,7 @@
       "intendedAction": "Inspect the evidence, compare another case, view technical operations, or contact Jamie.",
       "claimBudget": 6,
       "selectedProofIds": ["hje-modernization-stewardship", "hje-revenue-growth-contribution", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system", "fair-rent-campaign-memory", "fair-rent-source-map", "callnyc-civic-data-guidance", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "kc-town-hall-public-benefit-documentation"],
-      "selectedClaimProjectionKeys": [],
+      "selectedClaimProjectionKeys": ["CLM-NYCAC-SHARED-ARCHIVE-CENSUS/case-study"],
       "selectedProofIdsByInstance": {
         "harry-j-epstein": ["hje-modernization-stewardship", "hje-revenue-growth-contribution"],
         "nyc-artist-coalition": ["nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems", "nyc-artist-coalition-participation-system"],
@@ -140,6 +140,15 @@
         "wowlist": ["wowlist-community-platform"],
         "196-sunday-dinner": ["sunday-dinner-196-participation-infrastructure"],
         "kc-town-hall": ["kc-town-hall-public-benefit-documentation"]
+      },
+      "selectedClaimProjectionKeysByInstance": {
+        "harry-j-epstein": [],
+        "nyc-artist-coalition": ["CLM-NYCAC-SHARED-ARCHIVE-CENSUS/case-study"],
+        "fair-rent-nyc": [],
+        "callnyc": [],
+        "wowlist": [],
+        "196-sunday-dinner": [],
+        "kc-town-hall": []
       },
       "omissionRationale": "Each instance receives only its argument-bearing proof set. Eligible but unselected claims remain held in the canonical projection map rather than being dumped onto the page."
     }

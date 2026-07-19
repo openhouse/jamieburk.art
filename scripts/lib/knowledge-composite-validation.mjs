@@ -7,6 +7,7 @@ import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts
 import {
   proofClaims,
   publicCompositionCaseStudySelections,
+  publicCompositionCaseStudyClaimProjectionSelections,
   publicCompositionClaimProjectionSelections,
   publicCompositionProofSelections
 } from "../../apps/www/src/data/proofs.ts";
@@ -40,7 +41,8 @@ const expectedSurvivorshipPopulationIds = [
   "SURV-WOWLIST-DATABASE-BACKUPS",
   "SURV-KC-TOWN-HALL-MUNICIPAL-PACKET",
   "SURV-NTER-CHNG-PROJECT-SITE",
-  "SURV-PROTECTED-SOCIAL-CAPTURES"
+  "SURV-PROTECTED-SOCIAL-CAPTURES",
+  "SURV-NYCAC-SHARED-FOLDER"
 ];
 
 const compositionSourceBindingSpecs = [
@@ -49,6 +51,7 @@ const compositionSourceBindingSpecs = [
   { surface: "work-index", path: "apps/www/src/app/work/page.tsx", tokens: ["workItems", "requireReadyOrCarefulProof", "source-backed-team-memory-method"] },
   { surface: "case-study-template", path: "apps/www/src/app/work/[slug]/page.tsx", tokens: ["workItems"] },
   { surface: "case-study-template", path: "apps/www/src/data/work.ts", tokens: ["getClaimProjection"] },
+  { surface: "case-study-nyc-artist-coalition", path: "apps/www/src/content/work/nyc-artist-coalition.mdx", tokens: ["CLM-NYCAC-SHARED-ARCHIVE-CENSUS", "governed-shared-archive"] },
   { surface: "technical-operations", path: "apps/www/src/app/work/technical-operations/page.tsx", tokens: ["technicalOperationsProofRows", "technicalOperationsClaimProjectionRefs", "requireTechnicalOperationsProof"] },
   { surface: "resume", path: "apps/www/src/app/resume/page.tsx", tokens: ["resumeProofHighlights"] },
   { surface: "about", path: "apps/www/src/app/about/page.tsx", tokens: ["getClaimProjection", "requireReadyOrCarefulProof"] },
@@ -118,10 +121,10 @@ export function validateSuite(suite) {
   const expectedIds = Array.from({ length: 9 }, (_, index) => `CI-${String(index + 1).padStart(3, "0")}`);
   const allowedGraders = new Set(["deterministic", "hybrid"]);
 
-  requireValue(suite.version === 3, "Composite suite version must be 3");
+  requireValue(suite.version === 4, "Composite suite version must be 4");
   requireValue(suite.suite_id === "knowledge-composite-integration", "Composite suite ID is incorrect");
   requireValue(suite.baseline?.commit === "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe", "Baseline commit is not pinned");
-  requireValue(suite.baseline?.record === "docs/evals/runs/2026-07-17-knowledge-composite-v3-baseline.md", "Version-three baseline record is not pinned");
+  requireValue(suite.baseline?.record === "docs/evals/runs/2026-07-19-knowledge-composite-v4-baseline.md", "Version-four baseline record is not pinned");
   requireValue(suite.baseline?.wholesale_merges_or_cherry_picks === false, "Wholesale donor integration must remain false");
   requireValue(sameSet((suite.donors_inspected ?? []).map((item) => item.id), "ABCDEFGHIJKLMN".split("")), "Donor inventory must cover A-N exactly");
   for (const donor of suite.donors_inspected ?? []) {
@@ -269,12 +272,45 @@ export function validateComposition(manifest, agency, proofs = proofClaims) {
   if (!sameSet(caseTemplate?.instances ?? [], expectedCaseSlugs)) errors.push("Case-study composition must cover the exact canonical work-slug set");
   for (const slug of expectedCaseSlugs) {
     const ids = caseTemplate?.selectedProofIdsByInstance?.[slug];
-    if (!Array.isArray(ids)) errors.push(`Case-study composition is missing ${slug}`);
-    else if (ids.length > caseTemplate.claimBudget) errors.push(`Case study ${slug} exceeds its claim budget`);
-    else if (!sameSet(ids, publicCompositionCaseStudySelections[slug] ?? [])) errors.push(`Case study ${slug} must match the public composition registry exactly`);
+    const projectionKeys = caseTemplate?.selectedClaimProjectionKeysByInstance?.[slug];
+    if (!Array.isArray(ids) || !Array.isArray(projectionKeys)) {
+      errors.push(`Case-study composition is missing ${slug}`);
+    } else {
+      if (ids.length + projectionKeys.length > caseTemplate.claimBudget) {
+        errors.push(`Case study ${slug} exceeds its claim budget`);
+      }
+      if (!sameSet(ids, publicCompositionCaseStudySelections[slug] ?? [])) {
+        errors.push(`Case study ${slug} must match the public composition registry exactly`);
+      }
+      if (!sameSet(
+        projectionKeys,
+        publicCompositionCaseStudyClaimProjectionSelections[slug] ?? []
+      )) {
+        errors.push(`Case study ${slug} direct claim projections must match the public composition registry exactly`);
+      }
+      for (const compositeKey of projectionKeys) {
+        const splitAt = compositeKey.lastIndexOf("/");
+        const claimId = compositeKey.slice(0, splitAt);
+        const projectionKey = compositeKey.slice(splitAt + 1);
+        const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+        const projection = claim?.projections.find((item) => item.key === projectionKey);
+        const route = `/work/${slug}`;
+        if (!claim || !projection) {
+          errors.push(`Case study ${slug} references unknown direct claim projection ${compositeKey}`);
+        } else if (projection.status !== "active" || !projection.surfaces.includes(route)) {
+          errors.push(`Case study ${slug} direct claim projection ${compositeKey} is not active on ${route}`);
+        }
+      }
+    }
   }
   const caseUnion = new Set(Object.values(caseTemplate?.selectedProofIdsByInstance ?? {}).flat());
   if (!sameSet(caseUnion, caseTemplate?.selectedProofIds ?? [])) errors.push("Case-study selectedProofIds must equal the union of its instances");
+  const caseProjectionUnion = new Set(
+    Object.values(caseTemplate?.selectedClaimProjectionKeysByInstance ?? {}).flat()
+  );
+  if (!sameSet(caseProjectionUnion, caseTemplate?.selectedClaimProjectionKeys ?? [])) {
+    errors.push("Case-study selectedClaimProjectionKeys must equal the union of its instances");
+  }
 
   const unselected = manifest.unselectedProofDecisions ?? [];
   for (const decision of unselected) {
@@ -577,7 +613,12 @@ export function candidatePathExistsAtCommit(candidateSha, relativePath) {
   }
 }
 
-export function validateCandidateGitBinding(state, binding, expectedCandidateFingerprint) {
+export function validateCandidateGitBinding(
+  state,
+  binding,
+  expectedCandidateFingerprint,
+  candidateFingerprintScope = []
+) {
   const errors = [];
   if (!/^[a-f0-9]{40}$/.test(state.candidateSha ?? "")) {
     errors.push("State candidateSha must be a full implementation commit SHA");
@@ -594,6 +635,16 @@ export function validateCandidateGitBinding(state, binding, expectedCandidateFin
   }
   if (binding.candidateFingerprint !== expectedCandidateFingerprint) {
     errors.push("Candidate fingerprint must reproduce from the named Git commit tree");
+  }
+  const unboundCandidatePaths = (binding.candidateChangedPaths ?? []).filter(
+    (relativePath) =>
+      !expectedPostCandidatePaths.includes(relativePath) &&
+      !candidateFingerprintScope.includes(relativePath)
+  );
+  if (unboundCandidatePaths.length) {
+    errors.push(
+      `Candidate fingerprint scope omits implementation paths: ${unboundCandidatePaths.join(", ")}`
+    );
   }
   if ((binding.mergeCommits ?? []).length) {
     errors.push("Composite history must not contain wholesale donor merge commits");
@@ -656,7 +707,12 @@ export function validateCompositeArtifacts(artifacts, { requireHoldouts = true }
     if (state.candidateFingerprint !== expectedCandidateFingerprint) errors.push("State candidate fingerprint is stale");
     errors.push(...validateMosaic(mosaic, { expectedCandidateFingerprint, requireBinding: true }));
     const gitBinding = readGitCandidateBinding(suite, state.candidateSha);
-    errors.push(...validateCandidateGitBinding(state, gitBinding, expectedCandidateFingerprint));
+    errors.push(...validateCandidateGitBinding(
+      state,
+      gitBinding,
+      expectedCandidateFingerprint,
+      suite.candidate_fingerprint_scope
+    ));
     if (state.decision !== "pass_for_code_review") errors.push("Composite state decision must be pass_for_code_review");
     if ((state.holdoutReceiptPaths ?? []).length !== 2) errors.push("State must list exactly two holdout receipts");
     holdoutResult = validateHoldouts({

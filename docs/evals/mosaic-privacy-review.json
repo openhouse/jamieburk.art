@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "reviewedAt": "2026-07-18",
+  "reviewedAt": "2026-07-19",
   "reviewType": "public-safe editorial risk review",
   "isLegalReview": false,
   "isParticipantApproval": false,
-  "candidateFingerprint": "ba0775ddfaaa4f3ec26af8caa3a914e902064966e499a9d94928f36e180b59dc",
+  "candidateFingerprint": "bc5414cc975e9a4d270526cf8fb077436282bb9713bb66c4f0b01a511d2476a7",
   "findings": [
     {
       "id": "MPR-001",
@@ -47,6 +47,13 @@
       "risk": "Search indexing could amplify contact information beyond the intended application artifact.",
       "decision": "keep-phone-out-of-html-and-pdf-noindex-policy",
       "appliesTo": ["resume", "robots", "metadata"]
+    },
+    {
+      "id": "MPR-007",
+      "combination": ["authenticated shared-folder inventory", "item title or collaborator identity", "campaign and date cluster"],
+      "risk": "Aggregate archive accounting could become reconstructable participant, strategy, or role evidence if exact locators or item metadata were projected publicly.",
+      "decision": "publish-only-aggregate-census-and-keep-exact-manifest-protected",
+      "appliesTo": ["nyc-artist-coalition", "knowledge-wiki", "applications", "compiled-output"]
     }
   ],
   "result": "pass-with-continuing-holds",

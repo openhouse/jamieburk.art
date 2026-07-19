@@ -15,7 +15,7 @@ export const censusPath =
 export const expectedCensusSha256 =
   "c8ccf50784ae4a7f4792131c82d5753e3510dc26796f3039292fb03b745cb49c";
 
-const publicFiles = [
+export const publicFiles = [
   censusPath,
   "docs/knowledge-bank/runs/2026-07-19-nycac-shared-folder-full-population.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-shared-folder.md",
@@ -195,13 +195,69 @@ export function evaluatePublicSemantics(text) {
   return errors;
 }
 
+export function evaluatePublicFileSemantics(textByPath) {
+  const errors = [];
+  const requireIn = (relativePath, pattern, message) => {
+    if (!pattern.test(textByPath[relativePath] ?? "")) {
+      errors.push(`${relativePath}: ${message}`);
+    }
+  };
+
+  requireIn(
+    "docs/knowledge-bank/runs/2026-07-19-nycac-shared-folder-full-population.md",
+    /Folder access is not publication permission/i,
+    "access boundary missing"
+  );
+  requireIn(
+    "docs/knowledge-bank/runs/2026-07-19-nycac-shared-folder-full-population.md",
+    /not authorship/i,
+    "authorship boundary missing"
+  );
+  requireIn(
+    "docs/knowledge-bank/projects/nyc-artist-coalition-shared-folder.md",
+    /collective and institutional credit/i,
+    "collective-credit boundary missing"
+  );
+  requireIn(
+    "docs/knowledge-bank/briefs/nycac-civic-operations-application-brief.md",
+    /Jamie builds operating structure for ambiguous public-facing work/i,
+    "application actor sentence missing"
+  );
+  requireIn(
+    "docs/knowledge-bank/briefs/nycac-civic-operations-application-brief.md",
+    /what became usable/i,
+    "application result framing missing"
+  );
+  requireIn(
+    "docs/knowledge-wiki/evaluations/nycac-shared-folder-coverage.md",
+    /human gates/i,
+    "human-gate control missing"
+  );
+  requireIn(
+    "apps/www/src/content/work/nyc-artist-coalition.mdx",
+    /exact\s+records\s+remain protected/i,
+    "public archive boundary missing"
+  );
+  requireIn(
+    "apps/www/src/content/work/nyc-artist-coalition.mdx",
+    /collective outcomes/i,
+    "public collective-credit boundary missing"
+  );
+
+  return errors;
+}
+
 export function checkRepository() {
   const censusText = read(censusPath);
   const census = JSON.parse(censusText);
-  const publicText = publicFiles.map(read).join("\n");
+  const publicTexts = Object.fromEntries(
+    publicFiles.map((relativePath) => [relativePath, read(relativePath)])
+  );
+  const publicText = Object.values(publicTexts).join("\n");
   const errors = [
     ...evaluateCensus(census, censusText),
-    ...evaluatePublicSemantics(publicText)
+    ...evaluatePublicSemantics(publicText),
+    ...evaluatePublicFileSemantics(publicTexts)
   ];
 
   if (sha256(censusText) !== expectedCensusSha256) {
@@ -265,7 +321,7 @@ export function checkRepository() {
     errors.push("exact private manifest entered git");
   }
 
-  return { census, censusText, publicText, errors };
+  return { census, censusText, publicText, publicTexts, errors };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
