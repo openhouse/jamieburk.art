@@ -21,6 +21,8 @@ relations:
     target: index.knowledge-wiki.claims-and-corrections
   - type: documents
     target: index.knowledge-wiki.practice-and-opportunities
+  - type: documents
+    target: index.knowledge-wiki.research-agenda-and-held-claims
 wanted:
   - id: event.beta-nyc.school-of-data.2016
     proposed_title: BetaNYC School of Data presentation
@@ -49,8 +51,10 @@ is a smaller, selective projection.
   [claims and corrections index](indexes/claims-and-corrections.md).
 - **Tailor an application or interview story:** begin with
   [practice and opportunities](indexes/practice-and-opportunities.md).
-- **Add or move a governed page:** follow the
-  [page contract](schema.md).
+- **Add a new fragment:** use [New Fragment Intake](intake-and-maturation.md),
+  then follow the [page contract](schema.md) if it becomes a governed page.
+- **Continue open research:** use the
+  [Research Agenda and Held Claims](indexes/research-agenda-and-held-claims.md).
 - **Understand authority and migration:** read the
   [architecture decision](../architecture/ADR-knowledge-wiki-name-and-model.md).
 - **Inspect structural health:** run `npm run wiki:check`,

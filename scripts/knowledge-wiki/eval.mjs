@@ -25,11 +25,38 @@ const projectsIndex = read("docs/knowledge-bank/indexes/projects.md");
 const sourceReturnMethod = read(
   "docs/knowledge-bank/methods/present-grounded-source-return.md"
 );
+const implementationAdoption = read(
+  "docs/knowledge-bank/capabilities/implementation-adoption-and-handoff.md"
+);
+const campaignIdentity = read(
+  "docs/knowledge-bank/capabilities/campaign-identity-and-web-systems.md"
+);
+const researchAgenda = read(
+  "docs/knowledge-bank/indexes/research-agenda-and-held-claims.md"
+);
+const fragmentIntake = read("docs/knowledge-bank/intake-and-maturation.md");
+const practicesOfCare = read(
+  "docs/knowledge-bank/methods/practices-of-care-and-transition.md"
+);
+const publicKnowledge = read(
+  "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md"
+);
+const scenesOfWork = read("docs/knowledge-bank/indexes/scenes-of-work.md");
+const canonicalStoryBank = read(
+  "docs/knowledge-bank/indexes/canonical-story-bank.md"
+);
+const visualRightsQueue = read(
+  "docs/knowledge-bank/indexes/visual-evidence-and-rights-queue.md"
+);
 const schema = read("docs/knowledge-bank/schema.md");
 
 const missingPageIds = config.missingPageNodeIds;
+const advisoryWishlistIds = config.advisoryWishlistNodeIds;
 const sourceReturnConfig = config.sourceReturn;
 const wantedIds = new Set(first.graph.wantedPages.map((item) => item.id));
+const retrievalIds = new Set(
+  config.retrievalTasks.flatMap((task) => task.expectedIds)
+);
 
 const checks = new Map([
   [
@@ -136,6 +163,58 @@ const checks = new Map([
         .filter((node) => node.sourceReturn?.accessState === "blocked")
         .every((node) => Boolean(node.sourceReturn.librarianRequest)) &&
       !first.health.hardFailures.some((item) => item.code === "safety.private-path")
+  ],
+  [
+    "KW-018",
+    advisoryWishlistIds.length === 9 &&
+      new Set(advisoryWishlistIds).size === advisoryWishlistIds.length &&
+      advisoryWishlistIds.every(
+        (id) =>
+          nodeById.get(id)?.sourceReturn &&
+          nodeById.get(id)?.discoverable &&
+          !wantedIds.has(id) &&
+          retrievalIds.has(id)
+      ) &&
+      first.health.metrics.reachableDiscoverablePages ===
+        first.health.metrics.discoverablePages
+  ],
+  [
+    "KW-019",
+    implementationAdoption.includes("## Evidence states") &&
+      implementationAdoption.includes("One state does not prove the next") &&
+      campaignIdentity.includes("## Attribution boundary") &&
+      researchAgenda.includes("not a second claim registry") &&
+      researchAgenda.includes("### Adoption, transfer, and durability") &&
+      edgeKeys.has(
+        "capability.implementation-adoption-and-handoff|supports|capability.technical-operations"
+      ) &&
+      edgeKeys.has(
+        "capability.campaign-identity-and-web-systems|supports|organization.nyc-artist-coalition"
+      ) &&
+      edgeKeys.has(
+        "method.new-fragment-intake|supports|index.knowledge-wiki.research-agenda-and-held-claims"
+      )
+  ],
+  [
+    "KW-020",
+    fragmentIntake.includes("The intake record is a promise to account") &&
+      practicesOfCare.includes("Care is not a substitute for evidence") &&
+      publicKnowledge.includes("people remain speakers and contributors") &&
+      scenesOfWork.includes("not reconstructed dialogue or fictional") &&
+      canonicalStoryBank.includes("Tailor the selection, not the facts") &&
+      visualRightsQueue.includes("discovery as publication clearance") &&
+      edgeKeys.has(
+        "index.knowledge-wiki.canonical-story-bank|informed_by|index.knowledge-wiki.scenes-of-work"
+      ) &&
+      edgeKeys.has(
+        "index.knowledge-wiki.visual-evidence-and-rights-queue|documents|asset.callnyc.digital-district-photo"
+      ) &&
+      edgeKeys.has(
+        "method.public-knowledge-in-peoples-own-terms|uses_method|method.collective-credit-and-protected-absence"
+      ) &&
+      edgeKeys.has(
+        "method.practices-of-care-and-transition|supports|capability.implementation-adoption-and-handoff"
+      )
   ]
 ]);
 

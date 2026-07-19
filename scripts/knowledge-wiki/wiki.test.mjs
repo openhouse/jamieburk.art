@@ -500,3 +500,63 @@ test("wanted pages require a reason and leave the queue when created", () => {
   assert.ok(codes.has("wanted.required"));
   assert.ok(codes.has("wanted.resolved"));
 });
+
+test("the advisory wishlist is closed by governed source-return pages", () => {
+  const result = compileWiki();
+  const nodeById = new Map(result.graph.nodes.map((node) => [node.id, node]));
+  const wantedIds = new Set(result.graph.wantedPages.map((item) => item.id));
+  const advisoryWishlistIds = [
+    "capability.implementation-adoption-and-handoff",
+    "capability.campaign-identity-and-web-systems",
+    "index.knowledge-wiki.research-agenda-and-held-claims",
+    "method.new-fragment-intake",
+    "method.practices-of-care-and-transition",
+    "index.knowledge-wiki.scenes-of-work",
+    "method.public-knowledge-in-peoples-own-terms",
+    "index.knowledge-wiki.canonical-story-bank",
+    "index.knowledge-wiki.visual-evidence-and-rights-queue"
+  ];
+
+  assert.equal(result.health.hardFailures.length, 0);
+  for (const id of advisoryWishlistIds) {
+    assert.ok(nodeById.get(id)?.sourceReturn, `${id} needs a source return`);
+    assert.equal(nodeById.get(id)?.discoverable, true);
+    assert.equal(wantedIds.has(id), false);
+  }
+  assert.equal(
+    result.health.metrics.reachableDiscoverablePages,
+    result.health.metrics.discoverablePages
+  );
+});
+
+test("the source-to-story chain keeps evidence and publication gates separate", () => {
+  const result = compileWiki();
+  const edges = new Set(
+    result.graph.edges.map((edge) => `${edge.from}|${edge.type}|${edge.to}`)
+  );
+  const nodeById = new Map(result.graph.nodes.map((node) => [node.id, node]));
+
+  assert.ok(
+    edges.has(
+      "method.new-fragment-intake|supports|index.knowledge-wiki.research-agenda-and-held-claims"
+    )
+  );
+  assert.ok(
+    edges.has(
+      "index.knowledge-wiki.canonical-story-bank|informed_by|index.knowledge-wiki.scenes-of-work"
+    )
+  );
+  assert.ok(
+    edges.has(
+      "index.knowledge-wiki.visual-evidence-and-rights-queue|documents|asset.callnyc.digital-district-photo"
+    )
+  );
+  assert.notEqual(
+    nodeById.get("asset.callnyc.digital-district-photo")?.rightsState,
+    "cleared"
+  );
+  assert.notEqual(
+    nodeById.get("asset.callnyc.digital-district-photo")?.permissionStatus,
+    "approved"
+  );
+});

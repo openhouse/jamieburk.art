@@ -1,20 +1,29 @@
 {
   "version": 1,
   "name": "Knowledge Wiki foundation evals M",
-  "reviewedAt": "2026-07-18",
+  "reviewedAt": "2026-07-19",
   "rootId": "index.knowledge-wiki",
   "requiredNodeIds": [
     "anti-claim.callnyc.official-product",
     "asset.callnyc.digital-district-photo",
+    "capability.campaign-identity-and-web-systems",
+    "capability.implementation-adoption-and-handoff",
     "capability.technical-operations",
     "claim.callnyc.independent-follow-on",
     "correction.callnyc-years",
     "event.nycc.constituent-services-hackathon.2016",
     "index.knowledge-wiki",
     "index.knowledge-wiki.claims-and-corrections",
+    "index.knowledge-wiki.canonical-story-bank",
     "index.knowledge-wiki.practice-and-opportunities",
     "index.knowledge-wiki.projects",
+    "index.knowledge-wiki.research-agenda-and-held-claims",
+    "index.knowledge-wiki.scenes-of-work",
     "index.knowledge-wiki.sources",
+    "index.knowledge-wiki.visual-evidence-and-rights-queue",
+    "method.new-fragment-intake",
+    "method.practices-of-care-and-transition",
+    "method.public-knowledge-in-peoples-own-terms",
     "method.source-backed-team-memory",
     "opportunity.nyc-oti.technical-operations-manager.782369",
     "portfolio.work.callnyc",
@@ -36,8 +45,19 @@
     "project.fair-rent-nyc",
     "project.save-nyc-spaces"
   ],
+  "advisoryWishlistNodeIds": [
+    "capability.implementation-adoption-and-handoff",
+    "capability.campaign-identity-and-web-systems",
+    "index.knowledge-wiki.research-agenda-and-held-claims",
+    "method.new-fragment-intake",
+    "method.practices-of-care-and-transition",
+    "index.knowledge-wiki.scenes-of-work",
+    "method.public-knowledge-in-peoples-own-terms",
+    "index.knowledge-wiki.canonical-story-bank",
+    "index.knowledge-wiki.visual-evidence-and-rights-queue"
+  ],
   "sourceReturn": {
-    "minimumEncounterCount": 20,
+    "minimumEncounterCount": 29,
     "minimumOriginalSourceCount": 10,
     "maximumOpenWantedPages": 1,
     "requiredNodeIds": [
@@ -46,7 +66,16 @@
       "method.present-grounded-source-return",
       "method.collective-credit-and-protected-absence",
       "method.structure-grows-from-the-material",
+      "method.new-fragment-intake",
+      "method.practices-of-care-and-transition",
+      "method.public-knowledge-in-peoples-own-terms",
       "capability.participatory-public-systems",
+      "capability.implementation-adoption-and-handoff",
+      "capability.campaign-identity-and-web-systems",
+      "index.knowledge-wiki.research-agenda-and-held-claims",
+      "index.knowledge-wiki.scenes-of-work",
+      "index.knowledge-wiki.canonical-story-bank",
+      "index.knowledge-wiki.visual-evidence-and-rights-queue",
       "timeline.jamie-practice.2004-present",
       "research-run.source-return.2026-07-19",
       "project.harry-j-epstein",
@@ -160,6 +189,21 @@
       "id": "KW-017",
       "name": "Personal-librarian escalation",
       "criterion": "The public Wiki records what help is needed when access is blocked, reports the source-return queue, and keeps protected source coordinates outside the repository."
+    },
+    {
+      "id": "KW-018",
+      "name": "Advisory-wishlist closure",
+      "criterion": "Every page requested by the advisory wishlist is explicitly inventoried, governed, source-return-bearing, reachable, and absent from the unresolved wanted-page queue."
+    },
+    {
+      "id": "KW-019",
+      "name": "Implementation and research synthesis",
+      "criterion": "Cross-project capability and research pages distinguish designed, launched, used, adopted, handed-off, sustained, held, and unresolved states without replacing canonical claim authority."
+    },
+    {
+      "id": "KW-020",
+      "name": "Source-to-story editorial chain",
+      "criterion": "Fragments can move through research, scenes, canonical stories, and visual review while collective credit, evidence limits, rights, consent, and publication remain separate gates."
     }
   ],
   "retrievalTasks": [
@@ -237,6 +281,48 @@
         "method.present-grounded-source-return"
       ],
       "materialBoundary": "The public Wiki may state the source class and public-safe request; exact paths, cloud IDs, credentials, and protected locators remain outside the repository."
+    },
+    {
+      "id": "TASK-009",
+      "prompt": "Trace how Jamie's implementation work can move from a designed artifact through use, adoption, handoff, and sustained practice without collapsing those evidence states.",
+      "expectedIds": [
+        "capability.implementation-adoption-and-handoff",
+        "capability.campaign-identity-and-web-systems",
+        "project.harry-j-epstein",
+        "organization.nyc-artist-coalition"
+      ],
+      "materialBoundary": "Artifact existence, launch, adoption, transfer, and durability are separate claims; later use does not establish Jamie's authorship of every subsequent action."
+    },
+    {
+      "id": "TASK-010",
+      "prompt": "Place a new article, memory, photograph, metric, correction, or unresolved lead into the Wiki without prematurely promoting it to portfolio copy.",
+      "expectedIds": [
+        "method.new-fragment-intake",
+        "index.knowledge-wiki.research-agenda-and-held-claims",
+        "method.present-grounded-source-return"
+      ],
+      "materialBoundary": "Intake accounts for a fragment; it does not establish truth, publication permission, rights clearance, or editorial selection."
+    },
+    {
+      "id": "TASK-011",
+      "prompt": "Develop a vivid application story from a documented work scene while preserving canonical facts and visual-rights boundaries.",
+      "expectedIds": [
+        "index.knowledge-wiki.scenes-of-work",
+        "index.knowledge-wiki.canonical-story-bank",
+        "index.knowledge-wiki.visual-evidence-and-rights-queue"
+      ],
+      "materialBoundary": "Scene and story layers may select and sequence evidence but cannot invent dialogue, interiority, role, outcome, rights, or consent."
+    },
+    {
+      "id": "TASK-012",
+      "prompt": "Find the practices that preserve care, transition, collective credit, and public knowledge in participants' own terms.",
+      "expectedIds": [
+        "method.practices-of-care-and-transition",
+        "method.public-knowledge-in-peoples-own-terms",
+        "method.collective-credit-and-protected-absence",
+        "capability.participatory-public-systems"
+      ],
+      "materialBoundary": "Public usefulness does not authorize private testimony, participant records, transition causes, or sole-narrator framing."
     }
   ],
   "editorialLenses": [
@@ -263,6 +349,22 @@
     {
       "name": "Jamie Burkart, personal librarian",
       "question": "Can I see which original material the Wiki needs next, why it matters now, and what I can help locate without exposing protected coordinates?"
+    },
+    {
+      "name": "Lisa Gelobter",
+      "question": "Can I distinguish what Jamie designed, launched, helped people use, handed off, and can responsibly say remained functional?"
+    },
+    {
+      "name": "Vivian Gornick",
+      "question": "Can I see Jamie doing concrete work without invented scenes, dialogue, or interiority?"
+    },
+    {
+      "name": "Zora Neale Hurston",
+      "question": "Do participants remain speakers and makers of public knowledge rather than becoming material processed by Jamie's system?"
+    },
+    {
+      "name": "Deborah Treisman",
+      "question": "Can a source-backed scene become a concise application story without losing its collective context or honest limit?"
     }
   ],
   "humanEvaluationState": "not-run"

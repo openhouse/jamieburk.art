@@ -18,15 +18,33 @@ relations:
   - type: documents
     target: capability.participatory-public-systems
   - type: documents
+    target: capability.implementation-adoption-and-handoff
+  - type: documents
+    target: capability.campaign-identity-and-web-systems
+  - type: documents
     target: method.structure-grows-from-the-material
   - type: documents
     target: method.present-grounded-source-return
   - type: documents
     target: method.collective-credit-and-protected-absence
   - type: documents
+    target: method.new-fragment-intake
+  - type: documents
+    target: method.practices-of-care-and-transition
+  - type: documents
+    target: method.public-knowledge-in-peoples-own-terms
+  - type: documents
     target: method.source-backed-team-memory
   - type: documents
     target: timeline.jamie-practice.2004-present
+  - type: documents
+    target: index.knowledge-wiki.research-agenda-and-held-claims
+  - type: documents
+    target: index.knowledge-wiki.scenes-of-work
+  - type: documents
+    target: index.knowledge-wiki.canonical-story-bank
+  - type: documents
+    target: index.knowledge-wiki.visual-evidence-and-rights-queue
   - type: documents
     target: opportunity.nyc-oti.technical-operations-manager.782369
   - type: documents
@@ -54,11 +72,20 @@ relations:
 - [Jamie Burkart](../people/jamie-burkart.md)
 - [Technical Operations capability](../capabilities/technical-operations.md)
 - [Participatory Public Systems](../projects/participatory-public-systems.md)
+- [Implementation, Adoption, and Handoff](../capabilities/implementation-adoption-and-handoff.md)
+- [Campaign Identity and Web Systems](../capabilities/campaign-identity-and-web-systems.md)
 - [Structure Grows from the Material](../methods/structure-grows-from-the-material.md)
 - [Present-Grounded Source Return](../methods/present-grounded-source-return.md)
 - [Collective Credit and Protected Absence](../methods/collective-credit-and-protected-absence.md)
+- [New Fragment Intake](../intake-and-maturation.md)
+- [Practices of Care and Transition](../methods/practices-of-care-and-transition.md)
+- [Public Knowledge in People's Own Terms](../methods/public-knowledge-in-peoples-own-terms.md)
 - [Source-Backed Team Memory method](../methods/source-backed-team-memory.md)
 - [Practice timeline](../timelines/practice-2004-present.md)
+- [Research Agenda and Held Claims](research-agenda-and-held-claims.md)
+- [Scenes of Work](scenes-of-work.md)
+- [Canonical Story Bank](canonical-story-bank.md)
+- [Visual Evidence and Rights Queue](visual-evidence-and-rights-queue.md)
 - [OTI Technical Operations opportunity lens](../opportunities/oti-technical-operations.md)
 - [ACLU Product Discovery opportunity lens](../opportunities/aclu-product-discovery.md)
 - [Benepass Product Operations opportunity lens](../opportunities/benepass-product-operations.md)

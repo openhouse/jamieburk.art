@@ -91,6 +91,20 @@ The ID, title, and reason are required. A wanted ID must be unique and must be
 removed from the queue when the governed page is created. `Not recovered` is a
 research state; it is not evidence that the project or source never existed.
 
+## Advisory wishlist accounting
+
+When a review names a bounded set of pages to create, record every proposed
+stable ID in the applicable evaluation contract before implementation. The
+contract should test that each requested ID is either:
+
+- present as a governed, reachable page with a source return; or
+- still visible in the wanted-page queue with a reason.
+
+Completed advisory lists may remain in the evaluation contract as regression
+coverage. This prevents a green check from silently forgetting a requested page
+that was never entered into the queue. The wanted-page queue itself contains
+only unresolved work; resolved IDs must not remain there.
+
 ## Present-grounded source return
 
 Use `source_return` when a page is created or materially reconsidered by

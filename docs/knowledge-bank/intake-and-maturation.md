@@ -1,4 +1,41 @@
-# Intake and Maturation
+---
+id: method.new-fragment-intake
+title: New Fragment Intake
+kind: method
+status: maintained
+visibility: public-safe
+sensitivity: moderate
+owner: jamie
+last_reviewed: "2026-07-19"
+review_by: "2027-01-19"
+canonical_path: docs/knowledge-bank/intake-and-maturation.md
+discoverable: true
+aliases:
+  - Intake and Maturation
+relations:
+  - type: uses_method
+    target: method.present-grounded-source-return
+  - type: supports
+    target: index.knowledge-wiki.research-agenda-and-held-claims
+  - type: related_to
+    target: index.knowledge-wiki.visual-evidence-and-rights-queue
+  - type: related_to
+    target: method.collective-credit-and-protected-absence
+source_return:
+  encountered_on: "2026-07-19"
+  return_by: "2027-01-19"
+  mode: canonical-record-reread
+  access_state: available
+  source_classes:
+    - governed lifecycle registry
+    - public-safety and publication controls
+    - current agent intake protocol
+  changed_or_confirmed: "The current reading confirms one intake path for articles, memories, artifacts, metrics, corrections, photographs, and unresolved leads before any public projection decision."
+  unresolved:
+    - "A future private Wiki may hold authorized source coordinates, but this public repository still needs only public-safe intake descriptions."
+---
+
+# New Fragment Intake
 
 The knowledge bank is a place and a process. It can preserve more public-safe
 professional knowledge than the website currently uses without turning the
@@ -35,6 +72,20 @@ Capture
 
 `Eligible but unselected` is a successful state. A claim can be defensible and
 useful in the bank without appearing on the current website.
+
+## Fast path
+
+When a new fragment arrives, preserve five things before interpretation grows:
+
+1. what the fragment is;
+2. where and when it was encountered, using only public-safe coordinates here;
+3. what question or existing record it may inform;
+4. what it does and does not establish;
+5. the next disposition: research, hold, correction, promotion review, rights
+   review, or no further action.
+
+The intake record is a promise to account for the fragment, not a decision to
+publish it.
 
 ## Canonical Collections
 
