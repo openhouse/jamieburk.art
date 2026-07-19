@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "topK": 3,
+  "titleBlindCases": [
+    {
+      "id": "discovery.public-operating-backbone",
+      "query": "public delivery dependencies onboarding runbooks leadership reporting government",
+      "expectedOpportunityIds": ["opportunity.nyc-oti.technical-operations-manager.782369"]
+    },
+    {
+      "id": "discovery.discovery-governance",
+      "query": "structured discovery privacy counsel problem framing bounded pilot decision traceability",
+      "expectedOpportunityIds": ["opportunity.aclu.product-manager-ii.discovery.8482872002"]
+    },
+    {
+      "id": "discovery.launch-operations",
+      "query": "launch readiness downstream operational impact runbooks product engineering post-launch",
+      "expectedOpportunityIds": ["opportunity.benepass.product-operations-manager"]
+    },
+    {
+      "id": "discovery.multi-partner-ai-program",
+      "query": "master program plan partners AI workflow executive reporting handoff systems",
+      "expectedOpportunityIds": ["opportunity.codepath.senior-program-manager.claude-corps.5182020007"]
+    },
+    {
+      "id": "discovery.customer-ai-adoption",
+      "query": "customer implementation AI workflow migration change management first value playbook",
+      "expectedOpportunityIds": ["opportunity.asana.ai-implementation-manager.service-management.8027437"]
+    },
+    {
+      "id": "discovery.public-physical-process",
+      "query": "physical public process product data workflow bottleneck applied AI launch",
+      "expectedOpportunityIds": ["opportunity.permitflow.product-operations-manager"]
+    }
+  ],
+  "negativeControls": [
+    {
+      "id": "negative.registered-clinician",
+      "query": "licensed registered nurse acute bedside care medication administration"
+    },
+    {
+      "id": "negative.compiler-engineer",
+      "query": "principal rust compiler engineer LLVM code generation ten years"
+    },
+    {
+      "id": "negative.audit-partner",
+      "query": "CPA audit partner SEC reporting public accounting certification"
+    }
+  ]
+}

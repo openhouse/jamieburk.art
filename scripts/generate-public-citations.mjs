@@ -14,12 +14,28 @@ const usedSourceIds = new Set(
   }))
 );
 
+const publicClaimIds = new Set([
+  ...knowledgeBank.pages.flatMap((page) =>
+    page.occurrences.map((occurrence) => occurrence.claimId)
+  ),
+  ...knowledgeBank.claims
+    .filter((claim) =>
+      claim.projections.some(
+        (projection) =>
+          projection.status === "active" &&
+          projection.citationRequired === false &&
+          projection.surfaces.some((surface) => surface.startsWith("/"))
+      )
+    )
+    .map((claim) => claim.id)
+]);
+
 const publicRegistry = {
   sources: knowledgeBank.sources
     .filter((source) => usedSourceIds.has(source.id))
     .map(({ protectedLocatorId: _protectedLocatorId, media: _media, supportsGenerally: _supportsGenerally, ...source }) => source),
   claims: knowledgeBank.claims
-    .filter((claim) => knowledgeBank.pages.some((page) => page.occurrences.some((occurrence) => occurrence.claimId === claim.id)))
+    .filter((claim) => publicClaimIds.has(claim.id))
     .map((claim) => ({
       id: claim.id,
       status: claim.status,

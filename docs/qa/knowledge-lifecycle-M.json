@@ -1,0 +1,84 @@
+{
+  "version": "2026-07-17",
+  "objective": "Preserve generous public-safe intake, atomic evidence, calibrated claims, correction readiness, selective projection, and maintainable provenance without automatic publication.",
+  "operatorLedger": "docs/knowledge-bank/operator-intake-M.json",
+  "collectiveProjects": [
+    "nyc-artist-coalition",
+    "fair-rent-nyc",
+    "callnyc",
+    "wowlist",
+    "196-sunday-dinner",
+    "kc-town-hall",
+    "kc-spaces-fund",
+    "nter-chng"
+  ],
+  "populationBoundaryFiles": [
+    "docs/knowledge-bank/callnyc-post-census-2026-07-12.csv",
+    "docs/knowledge-bank/wowlist-post-census-2026-07-12.csv",
+    "docs/knowledge-bank/kctownhall-post-census-2026-07-12.csv",
+    "docs/knowledge-bank/nycartc-post-census-2026-07-12.csv",
+    "docs/knowledge-bank/urbanhermit-post-census-2026-07-13.csv"
+  ],
+  "criteria": [
+    {
+      "id": "KB-001",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Every canonical and operator intake has a stable ID, visibility, status, disposition, and safe forward path."
+    },
+    {
+      "id": "KB-002",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Sources preserve provenance, public-use boundaries, rights state, and opaque protected locators without exposing protected URLs."
+    },
+    {
+      "id": "KB-003",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Source readings decompose evidence into atomic assertions with confidence and explicit limitations."
+    },
+    {
+      "id": "KB-004",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Candidate, promotion, rejection, hold, and canonical claim states remain internally consistent."
+    },
+    {
+      "id": "KB-005",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Jamie's role, collective accomplishment, institutional action, use, outcome, transfer, and causality remain distinct."
+    },
+    {
+      "id": "KB-006",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "Contradictions, corrections, negative evidence, limitations, and unresolved questions remain traversable."
+    },
+    {
+      "id": "KB-007",
+      "state": "controlled",
+      "blockingLevel": "P0",
+      "criterion": "Editorial selection remains independent from evidence maturity and reversible by surface."
+    },
+    {
+      "id": "KB-008",
+      "state": "controlled-open",
+      "blockingLevel": "parallel",
+      "criterion": "Archive-population claims expose retrieval limits, deletion uncertainty, denominator gaps, and survivorship bias."
+    },
+    {
+      "id": "KB-009",
+      "state": "controlled-open",
+      "blockingLevel": "P2",
+      "criterion": "Visual discovery creates research leads while rights, consent, caption, and evidentiary use remain separate."
+    },
+    {
+      "id": "KB-010",
+      "state": "controlled",
+      "blockingLevel": "P1",
+      "criterion": "Maintenance reports expose stale reviews, duplicate IDs, orphaned records, unresolved holds, and projection drift."
+    }
+  ]
+}

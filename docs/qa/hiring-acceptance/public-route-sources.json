@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "routes": {
+    "/": [
+      "apps/www/src/app/page.tsx",
+      "apps/www/src/components/Hero.tsx",
+      "apps/www/src/components/CapabilityGrid.tsx",
+      "apps/www/src/components/ProofStrip.tsx"
+    ],
+    "/work/technical-operations": [
+      "apps/www/src/app/work/technical-operations/page.tsx"
+    ],
+    "/work/callnyc": [
+      "apps/www/src/app/work/[slug]/page.tsx",
+      "apps/www/src/content/work/callnyc.mdx"
+    ],
+    "/work/fair-rent-nyc": [
+      "apps/www/src/app/work/[slug]/page.tsx",
+      "apps/www/src/content/work/fair-rent-nyc.mdx"
+    ],
+    "/work/harry-j-epstein": [
+      "apps/www/src/app/work/[slug]/page.tsx",
+      "apps/www/src/content/work/harry-j-epstein.mdx"
+    ],
+    "/work/196-sunday-dinner": [
+      "apps/www/src/app/work/[slug]/page.tsx",
+      "apps/www/src/content/work/196-sunday-dinner.mdx"
+    ],
+    "/work/kc-town-hall": [
+      "apps/www/src/app/work/[slug]/page.tsx",
+      "apps/www/src/content/work/kc-town-hall.mdx"
+    ],
+    "/lab/source-backed-team-memory": [
+      "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+      "apps/www/src/content/lab/source-backed-team-memory.mdx"
+    ],
+    "/resume": [
+      "apps/www/src/app/resume/page.tsx",
+      "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+    ],
+    "/about": [
+      "apps/www/src/app/about/page.tsx"
+    ],
+    "/contact": [
+      "apps/www/src/app/contact/page.tsx"
+    ]
+  }
+}

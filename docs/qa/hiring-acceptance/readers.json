@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "profiles": [
+    {
+      "id": "reader.generic-recruiter",
+      "category": "generic-internal-reader",
+      "name": "Generic recruiter",
+      "lens": "Can the reader quickly identify role level, relevant outcomes, current contact path, and any hard screen requiring follow-up?",
+      "sources": [],
+      "disclaimer": "Constructed role lens, not an actual person's review."
+    },
+    {
+      "id": "reader.generic-hiring-manager",
+      "category": "generic-internal-reader",
+      "name": "Generic hiring manager",
+      "lens": "Can the reader see what Jamie owned, how he worked across functions, what became usable, and where evidence remains qualified?",
+      "sources": [],
+      "disclaimer": "Constructed role lens, not an actual person's review."
+    },
+    {
+      "id": "reader.generic-role-peer",
+      "category": "generic-internal-reader",
+      "name": "Generic role peer",
+      "lens": "Would the operating artifacts, cadences, and handoffs help a peer do real work without adding unnecessary bureaucracy?",
+      "sources": [],
+      "disclaimer": "Constructed role lens, not an actual person's review."
+    },
+    {
+      "id": "reader.lisa-gelobter",
+      "category": "confirmed-organization-context-reader",
+      "name": "Lisa Gelobter",
+      "lens": "Does the portfolio show public-interest technical delivery, team operating structure, honest reporting, and respect for government context?",
+      "sources": [
+        "https://www.nyc.gov/mayors-office/news/2026/02/mayor-mamdani-announces-key-appointments-to-three-city-agencies-"
+      ],
+      "sourceLastVerified": "2026-07-18",
+      "disclaimer": "Simulation based on public executive context. It is not Lisa Gelobter's actual opinion, participation, recommendation, or endorsement."
+    },
+    {
+      "id": "reader.aileen-palmer",
+      "category": "confirmed-direct-manager-context-reader",
+      "name": "Aileen Palmer",
+      "lens": "Does the portfolio show launch readiness, operational impact, Product and Engineering translation, runbooks, adoption, and post-launch learning?",
+      "sources": [
+        "https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/"
+      ],
+      "sourceLastVerified": "2026-07-18",
+      "disclaimer": "Simulation based on the public job posting's reporting context. It is not Aileen Palmer's actual opinion, participation, recommendation, or endorsement."
+    },
+    {
+      "id": "reader.herminia-ibarra",
+      "category": "career-and-mutual-fit-advisory-lens",
+      "name": "Herminia Ibarra",
+      "lens": "Does the portfolio make a coherent working identity visible through demonstrated experiments and practice rather than an abstract reinvention claim?",
+      "sources": [
+        "https://www.london.edu/faculty-and-research/faculty-profiles/h/herminia-ibarra"
+      ],
+      "sourceLastVerified": "2026-07-18",
+      "disclaimer": "Simulation based on public scholarship about leadership and career transitions. It is not Herminia Ibarra's actual opinion, participation, recommendation, or endorsement."
+    },
+    {
+      "id": "reader.claudio-fernandez-araoz",
+      "category": "selection-and-risk-advisory-lens",
+      "name": "Claudio Fernandez-Araoz",
+      "lens": "Does the evidence reduce hiring risk by making capabilities, potential, motivations, hard screens, and mutual conditions explicit?",
+      "sources": [
+        "https://www.egonzehnder.com/news/bnn-claudio-fernandez-araoz-on-hiring-the-best-of-the-best"
+      ],
+      "sourceLastVerified": "2026-07-18",
+      "disclaimer": "Simulation based on public work about talent and hiring decisions. It is not Claudio Fernandez-Araoz's actual opinion, participation, recommendation, or endorsement."
+    },
+    {
+      "id": "reader.amy-edmondson",
+      "category": "one-year-team-health-lens",
+      "name": "Amy C. Edmondson",
+      "lens": "Would the described operating practice help a team surface risk, learn, collaborate, and speak honestly after one year?",
+      "sources": [
+        "https://amycedmondson.com/about/"
+      ],
+      "sourceLastVerified": "2026-07-18",
+      "disclaimer": "Simulation based on public research about psychological safety, teaming, and organizational learning. It is not Amy Edmondson's actual opinion, participation, recommendation, or endorsement."
+    },
+    {
+      "id": "reader.jennifer-pahlka",
+      "category": "external-public-capacity-lens",
+      "name": "Jennifer Pahlka",
+      "lens": "Does the work strengthen government's practical capacity to deliver for the public rather than merely adding technology or process?",
+      "sources": [
+        "https://www.jenniferpahlka.com/about"
+      ],
+      "sourceLastVerified": "2026-07-18",
+      "disclaimer": "Simulation based on public work in digital government and state capacity. It is not Jennifer Pahlka's actual opinion, participation, recommendation, or endorsement."
+    },
+    {
+      "id": "reader.cyd-harrell",
+      "category": "external-civic-delivery-lens",
+      "name": "Cyd Harrell",
+      "lens": "Does Jamie show pragmatic civic practice, partnership with people already doing the work, stewardship, and durable change without a technology-savior frame?",
+      "sources": [
+        "https://codeforamerica.org/people/cyd-harrell/",
+        "https://digitalgovernmenthub.org/library/a-civic-technologists-practice-guide/"
+      ],
+      "sourceLastVerified": "2026-07-18",
+      "disclaimer": "Simulation based on public civic-technology practice context. It is not Cyd Harrell's actual opinion, participation, recommendation, or endorsement."
+    }
+  ]
+}

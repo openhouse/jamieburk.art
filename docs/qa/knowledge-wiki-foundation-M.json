@@ -1,0 +1,371 @@
+{
+  "version": 1,
+  "name": "Knowledge Wiki foundation evals M",
+  "reviewedAt": "2026-07-19",
+  "rootId": "index.knowledge-wiki",
+  "requiredNodeIds": [
+    "anti-claim.callnyc.official-product",
+    "asset.callnyc.digital-district-photo",
+    "capability.campaign-identity-and-web-systems",
+    "capability.implementation-adoption-and-handoff",
+    "capability.technical-operations",
+    "claim.callnyc.independent-follow-on",
+    "correction.callnyc-years",
+    "event.nycc.constituent-services-hackathon.2016",
+    "index.knowledge-wiki",
+    "index.knowledge-wiki.claims-and-corrections",
+    "index.knowledge-wiki.canonical-story-bank",
+    "index.knowledge-wiki.practice-and-opportunities",
+    "index.knowledge-wiki.projects",
+    "index.knowledge-wiki.research-agenda-and-held-claims",
+    "index.knowledge-wiki.scenes-of-work",
+    "index.knowledge-wiki.sources",
+    "index.knowledge-wiki.visual-evidence-and-rights-queue",
+    "method.new-fragment-intake",
+    "method.practices-of-care-and-transition",
+    "method.public-knowledge-in-peoples-own-terms",
+    "method.source-backed-team-memory",
+    "opportunity.nyc-oti.technical-operations-manager.782369",
+    "portfolio.work.callnyc",
+    "portfolio.work.technical-operations",
+    "project.callnyc",
+    "project.fair-rent-nyc",
+    "project.let-nyc-dance",
+    "project.office-of-nightlife-town-halls",
+    "project.save-nyc-spaces",
+    "project.talks-not-raids",
+    "source.civichall.hackathon-announcement.2016",
+    "source.nycc.councilstat-hackathon-post.2016",
+    "source.politico.callnyc.2016-03-14"
+  ],
+  "missingPageNodeIds": [
+    "project.let-nyc-dance",
+    "project.office-of-nightlife-town-halls",
+    "project.talks-not-raids",
+    "project.fair-rent-nyc",
+    "project.save-nyc-spaces"
+  ],
+  "advisoryWishlistNodeIds": [
+    "capability.implementation-adoption-and-handoff",
+    "capability.campaign-identity-and-web-systems",
+    "index.knowledge-wiki.research-agenda-and-held-claims",
+    "method.new-fragment-intake",
+    "method.practices-of-care-and-transition",
+    "index.knowledge-wiki.scenes-of-work",
+    "method.public-knowledge-in-peoples-own-terms",
+    "index.knowledge-wiki.canonical-story-bank",
+    "index.knowledge-wiki.visual-evidence-and-rights-queue"
+  ],
+  "sourceReturn": {
+    "minimumEncounterCount": 29,
+    "minimumOriginalSourceCount": 10,
+    "maximumOpenWantedPages": 1,
+    "requiredNodeIds": [
+      "person.jamie-burkart",
+      "organization.nyc-artist-coalition",
+      "method.present-grounded-source-return",
+      "method.collective-credit-and-protected-absence",
+      "method.structure-grows-from-the-material",
+      "method.new-fragment-intake",
+      "method.practices-of-care-and-transition",
+      "method.public-knowledge-in-peoples-own-terms",
+      "capability.participatory-public-systems",
+      "capability.implementation-adoption-and-handoff",
+      "capability.campaign-identity-and-web-systems",
+      "index.knowledge-wiki.research-agenda-and-held-claims",
+      "index.knowledge-wiki.scenes-of-work",
+      "index.knowledge-wiki.canonical-story-bank",
+      "index.knowledge-wiki.visual-evidence-and-rights-queue",
+      "timeline.jamie-practice.2004-present",
+      "research-run.source-return.2026-07-19",
+      "project.harry-j-epstein",
+      "project.wowlist",
+      "project.sunday-dinner",
+      "project.kc-town-hall",
+      "project.nter-chng",
+      "project.kc-spaces-fund",
+      "project.nyc-artist-coalition",
+      "project.let-nyc-dance",
+      "project.office-of-nightlife-town-halls",
+      "project.talks-not-raids",
+      "project.fair-rent-nyc",
+      "project.save-nyc-spaces"
+    ]
+  },
+  "requiredFiles": [
+    ".vscode/settings.json",
+    "docs/architecture/ADR-knowledge-wiki-name-and-model.md",
+    "docs/knowledge-bank/README.md",
+    "docs/knowledge-bank/schema.md",
+    "reports/knowledge-wiki-inventory.md"
+  ],
+  "forbiddenPublicPaths": [
+    "apps/www/src/app/knowledge-wiki",
+    "apps/www/src/app/knowledge-bank",
+    "apps/www/src/app/proofs"
+  ],
+  "machineCriteria": [
+    {
+      "id": "KW-001",
+      "name": "Naming and compatibility",
+      "criterion": "Knowledge Wiki is canonical, Knowledge Bank remains a documented compatibility alias, and no global path rename occurred."
+    },
+    {
+      "id": "KW-002",
+      "name": "Authority separation",
+      "criterion": "Markdown owns orientation and identity while existing structured records retain claims, evidence, corrections, citations, rights, and projection authority."
+    },
+    {
+      "id": "KW-003",
+      "name": "Stable pilot identity",
+      "criterion": "Every governed pilot record has a unique path-independent ID and a matching canonical_path."
+    },
+    {
+      "id": "KW-004",
+      "name": "Document graph integrity",
+      "criterion": "Relative Markdown files, case, and heading fragments resolve."
+    },
+    {
+      "id": "KW-005",
+      "name": "Semantic graph integrity",
+      "criterion": "Typed relations use the controlled vocabulary, target governed records, and obey kind constraints."
+    },
+    {
+      "id": "KW-006",
+      "name": "Canonical-reference closure",
+      "criterion": "Wiki pages reference real existing claim, source, correction, citation-page, or proof IDs instead of duplicating authority."
+    },
+    {
+      "id": "KW-007",
+      "name": "Correction traceability",
+      "criterion": "The CallNYC year correction connects prior wording, corrected wording, canonical claim, affected projection, and current project record."
+    },
+    {
+      "id": "KW-008",
+      "name": "Privacy and rights separation",
+      "criterion": "No private path or protected locator enters the Wiki, and evidentiary media remains distinct from publication clearance."
+    },
+    {
+      "id": "KW-009",
+      "name": "Task-oriented reachability",
+      "criterion": "Every discoverable pilot record is reachable from the start page through purposeful authored or semantic navigation."
+    },
+    {
+      "id": "KW-010",
+      "name": "Selective projection",
+      "criterion": "Public projection records identify their surfaces without making evidence maturity an automatic publication decision."
+    },
+    {
+      "id": "KW-011",
+      "name": "Bounded architecture",
+      "criterion": "No public Wiki route, Explorer, database, CMS, or second canonical record system is introduced."
+    },
+    {
+      "id": "KW-012",
+      "name": "Deterministic derivation",
+      "criterion": "The same authored input produces byte-identical semantic graph output."
+    },
+    {
+      "id": "KW-013",
+      "name": "Employment usefulness",
+      "criterion": "The graph can retrieve project evidence, correction history, capability, method, opportunity, and portfolio surfaces without exposing protected context."
+    },
+    {
+      "id": "KW-014",
+      "name": "Human authority",
+      "criterion": "Automated success does not claim human comprehension, collaborator consent, rights clearance, editorial approval, or hiring response."
+    },
+    {
+      "id": "KW-015",
+      "name": "Missing-page closure",
+      "criterion": "The five prioritized NYC Artist Coalition campaign pages exist as governed, navigable records and no longer remain in the wanted-page queue."
+    },
+    {
+      "id": "KW-016",
+      "name": "Present-grounded source return",
+      "criterion": "Priority pages record dated source encounters, access state, source classes, current findings, unresolved questions, and a future return date, with original-source returns represented."
+    },
+    {
+      "id": "KW-017",
+      "name": "Personal-librarian escalation",
+      "criterion": "The public Wiki records what help is needed when access is blocked, reports the source-return queue, and keeps protected source coordinates outside the repository."
+    },
+    {
+      "id": "KW-018",
+      "name": "Advisory-wishlist closure",
+      "criterion": "Every page requested by the advisory wishlist is explicitly inventoried, governed, source-return-bearing, reachable, and absent from the unresolved wanted-page queue."
+    },
+    {
+      "id": "KW-019",
+      "name": "Implementation and research synthesis",
+      "criterion": "Cross-project capability and research pages distinguish designed, launched, used, adopted, handed-off, sustained, held, and unresolved states without replacing canonical claim authority."
+    },
+    {
+      "id": "KW-020",
+      "name": "Source-to-story editorial chain",
+      "criterion": "Fragments can move through research, scenes, canonical stories, and visual review while collective credit, evidence limits, rights, consent, and publication remain separate gates."
+    }
+  ],
+  "retrievalTasks": [
+    {
+      "id": "TASK-001",
+      "prompt": "Find the current CallNYC chronology and the record that corrected its earlier years.",
+      "expectedIds": [
+        "project.callnyc",
+        "correction.callnyc-years"
+      ],
+      "materialBoundary": "The supported project year is 2016; the correction does not establish official Council ownership."
+    },
+    {
+      "id": "TASK-002",
+      "prompt": "Find the sources supporting the January 30, 2016 event date and the narrower first-CouncilStat description.",
+      "expectedIds": [
+        "source.civichall.hackathon-announcement.2016",
+        "source.nycc.councilstat-hackathon-post.2016"
+      ],
+      "materialBoundary": "The sources do not establish a complete formal title, participant roster, winners, or CallNYC as an official submission."
+    },
+    {
+      "id": "TASK-003",
+      "prompt": "Find the strongest bounded account of Jamie's role in CallNYC and where it appears publicly.",
+      "expectedIds": [
+        "claim.callnyc.independent-follow-on",
+        "portfolio.work.callnyc"
+      ],
+      "materialBoundary": "Jamie independently developed the follow-on project; he did not cause the data release or build an official Council product."
+    },
+    {
+      "id": "TASK-004",
+      "prompt": "Determine what the Digital District photograph supports and whether it may be published.",
+      "expectedIds": [
+        "asset.callnyc.digital-district-photo"
+      ],
+      "materialBoundary": "Visible text and table context are evidentiary; rights and consent remain uncleared and the image is not published."
+    },
+    {
+      "id": "TASK-005",
+      "prompt": "Find Jamie's Technical Operations capability, its source-backed method, and the OTI opportunity lens.",
+      "expectedIds": [
+        "capability.technical-operations",
+        "method.source-backed-team-memory",
+        "opportunity.nyc-oti.technical-operations-manager.782369"
+      ],
+      "materialBoundary": "The public Technical Operations page remains broadly useful rather than becoming an OTI-specific application page."
+    },
+    {
+      "id": "TASK-006",
+      "prompt": "Find the five campaign mechanisms carried by the NYC Artist Coalition public identity and distinguish Jamie's contribution from collective or institutional outcomes.",
+      "expectedIds": [
+        "organization.nyc-artist-coalition",
+        "project.let-nyc-dance",
+        "project.office-of-nightlife-town-halls",
+        "project.talks-not-raids",
+        "project.fair-rent-nyc",
+        "project.save-nyc-spaces"
+      ],
+      "materialBoundary": "Website, identity, testimony, participation, and implementation contributions may be attributed to Jamie where supported; campaign voice and policy outcomes remain collective and institutional."
+    },
+    {
+      "id": "TASK-007",
+      "prompt": "Determine when a Wiki page last returned to source material, what that encounter changed, what remains unresolved, and when the next return is due.",
+      "expectedIds": [
+        "method.present-grounded-source-return",
+        "research-run.source-return.2026-07-19"
+      ],
+      "materialBoundary": "A source encounter does not grant publication permission, rights clearance, consent, or automatic claim promotion."
+    },
+    {
+      "id": "TASK-008",
+      "prompt": "Find the process for asking Jamie, as personal librarian, to locate or authorize source material without publishing its protected coordinates.",
+      "expectedIds": [
+        "method.present-grounded-source-return"
+      ],
+      "materialBoundary": "The public Wiki may state the source class and public-safe request; exact paths, cloud IDs, credentials, and protected locators remain outside the repository."
+    },
+    {
+      "id": "TASK-009",
+      "prompt": "Trace how Jamie's implementation work can move from a designed artifact through use, adoption, handoff, and sustained practice without collapsing those evidence states.",
+      "expectedIds": [
+        "capability.implementation-adoption-and-handoff",
+        "capability.campaign-identity-and-web-systems",
+        "project.harry-j-epstein",
+        "organization.nyc-artist-coalition"
+      ],
+      "materialBoundary": "Artifact existence, launch, adoption, transfer, and durability are separate claims; later use does not establish Jamie's authorship of every subsequent action."
+    },
+    {
+      "id": "TASK-010",
+      "prompt": "Place a new article, memory, photograph, metric, correction, or unresolved lead into the Wiki without prematurely promoting it to portfolio copy.",
+      "expectedIds": [
+        "method.new-fragment-intake",
+        "index.knowledge-wiki.research-agenda-and-held-claims",
+        "method.present-grounded-source-return"
+      ],
+      "materialBoundary": "Intake accounts for a fragment; it does not establish truth, publication permission, rights clearance, or editorial selection."
+    },
+    {
+      "id": "TASK-011",
+      "prompt": "Develop a vivid application story from a documented work scene while preserving canonical facts and visual-rights boundaries.",
+      "expectedIds": [
+        "index.knowledge-wiki.scenes-of-work",
+        "index.knowledge-wiki.canonical-story-bank",
+        "index.knowledge-wiki.visual-evidence-and-rights-queue"
+      ],
+      "materialBoundary": "Scene and story layers may select and sequence evidence but cannot invent dialogue, interiority, role, outcome, rights, or consent."
+    },
+    {
+      "id": "TASK-012",
+      "prompt": "Find the practices that preserve care, transition, collective credit, and public knowledge in participants' own terms.",
+      "expectedIds": [
+        "method.practices-of-care-and-transition",
+        "method.public-knowledge-in-peoples-own-terms",
+        "method.collective-credit-and-protected-absence",
+        "capability.participatory-public-systems"
+      ],
+      "materialBoundary": "Public usefulness does not authorize private testimony, participant records, transition causes, or sole-narrator framing."
+    }
+  ],
+  "editorialLenses": [
+    {
+      "name": "Chad",
+      "question": "Can a hiring reader see what Jamie did, toward what end, and what became usable without opening the full archive?"
+    },
+    {
+      "name": "Abby Covert",
+      "question": "Can an unfamiliar teammate choose a task-oriented entrance and recover the right record without understanding the folder tree first?"
+    },
+    {
+      "name": "Shreya Shankar",
+      "question": "Do deterministic checks test evidence, correction, privacy, and projection failure modes rather than rewarding the presence of files?"
+    },
+    {
+      "name": "Mimi Onuoha",
+      "question": "Are protected absence, not-recovered material, rights, and public-safe metadata represented without turning omission into nonexistence?"
+    },
+    {
+      "name": "Amanda Clayman",
+      "question": "Does the system improve responsible action now while keeping human reviews and external outcomes honestly open?"
+    },
+    {
+      "name": "Jamie Burkart, personal librarian",
+      "question": "Can I see which original material the Wiki needs next, why it matters now, and what I can help locate without exposing protected coordinates?"
+    },
+    {
+      "name": "Lisa Gelobter",
+      "question": "Can I distinguish what Jamie designed, launched, helped people use, handed off, and can responsibly say remained functional?"
+    },
+    {
+      "name": "Vivian Gornick",
+      "question": "Can I see Jamie doing concrete work without invented scenes, dialogue, or interiority?"
+    },
+    {
+      "name": "Zora Neale Hurston",
+      "question": "Do participants remain speakers and makers of public knowledge rather than becoming material processed by Jamie's system?"
+    },
+    {
+      "name": "Deborah Treisman",
+      "question": "Can a source-backed scene become a concise application story without losing its collective context or honest limit?"
+    }
+  ],
+  "humanEvaluationState": "not-run"
+}

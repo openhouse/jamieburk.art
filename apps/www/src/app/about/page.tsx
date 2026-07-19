@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { Claim, References } from "@/components/citations";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -27,10 +28,24 @@ export default function AboutPage() {
           </p>
           <p>
             Across projects, I tend to do the same kind of work: clarify
-            ambiguous goals, translate between technical and nontechnical
+            emerging goals, translate between technical and nontechnical
             stakeholders, map workflows, build documentation, create usable
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.
+          </p>
+          <Claim
+            as="p"
+            claimId="CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE"
+            occurrenceId="participatory-public-systems-throughline"
+            pageId="about"
+            projection="about"
+            surface="/about"
+          />
+          <p>
+            That lineage still shapes how I work. I look for patterns connecting
+            people, information, and place; test them through interfaces,
+            workflows, and prototypes; and preserve room for participation,
+            hospitality, memory, and attention while making the work usable.
           </p>
           <p>
             I am currently focused on technical project management, product
@@ -46,6 +61,7 @@ export default function AboutPage() {
             work.
           </p>
         </div>
+        <References pageId="about" />
       </div>
       <div className="mt-12 max-w-3xl">
         <ContactCTA />
