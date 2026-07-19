@@ -20,6 +20,14 @@ function contrast(left, right) {
   return (lighter + 0.05) / (darker + 0.05);
 }
 
+function blend(foreground, background, opacity) {
+  const back = rgb(background);
+  return `#${rgb(foreground)
+    .map((value, index) => Math.round((value * opacity + back[index] * (1 - opacity)) * 255))
+    .map((value) => value.toString(16).padStart(2, "0"))
+    .join("")}`;
+}
+
 test("shared project labels and tags use WCAG AA color pairs", () => {
   assert.ok(contrast("#eeefec", "#0b5f81") >= 4.5);
 
@@ -37,4 +45,12 @@ test("small artifact and lab captions avoid low-opacity ink", () => {
   assert.ok(!lab.includes("text-jb-ink/68"));
   assert.ok(blocks.includes("text-jb-ink/76"));
   assert.ok(lab.includes("text-jb-ink/76"));
+});
+
+test("the lowest shared ink opacity remains AA on paper", () => {
+  const tokens = readFileSync(path.join(repoRoot, "apps/www/src/styles/tokens.css"), "utf8");
+  const ink = tokens.match(/--jb-oil-ink:\s*(#[0-9a-f]{6})/i)?.[1];
+  const paper = tokens.match(/--jb-oil-white:\s*(#[0-9a-f]{6})/i)?.[1];
+  assert.ok(ink && paper);
+  assert.ok(contrast(blend(ink, paper, 0.62), paper) >= 4.5);
 });
