@@ -3,7 +3,7 @@
   "product": "Knowledge Wiki",
   "compatibilityAlias": "Knowledge Bank",
   "canonicalRoot": "docs/knowledge-bank",
-  "sourceCommit": "34b6c86682da02350f7b89c082873e687daab5d5",
+  "sourceCommit": "5bd0420dd260974c256244ea7612281428d29b40",
   "sourceFingerprint": "sha256:3a1abafc1eefbe18ad808760c3d381e0ec39363b0ca969b50d07c0b921d49f49",
   "nodes": [
     {
