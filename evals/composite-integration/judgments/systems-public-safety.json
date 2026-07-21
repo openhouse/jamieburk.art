@@ -1,0 +1,103 @@
+{
+  "suite": "feature-evals-composite-integration-v5",
+  "candidate": "sha256:7c9a889425af071c342fa19b038739dba3aa849161489398018369e2f6f7da70",
+  "contract": "sha256:22be73cf9c5dd27f9e23850d5230213a6d7f3d90b1670b82513e1ed1cfa183a9",
+  "judgeId": "codex-independent-composite-systems-public-safety-2026-07-21-wiki-family-closure",
+  "lens": "systems-public-safety",
+  "status": "pass",
+  "scores": {
+    "architectural_coherence": 4,
+    "knowledge_capture": 4,
+    "source_decomposition": 4,
+    "semantic_resilience": 4,
+    "lifecycle_operability": 4,
+    "editorial_composition": 4,
+    "chad_lens": 3,
+    "morse_lens": 3,
+    "sack_lens": 3,
+    "collective_credit": 4,
+    "public_safety": 4,
+    "reader_effort": 3,
+    "reviewability": 4,
+    "future_resilience": 4
+  },
+  "evidence": [
+    {
+      "rubric": "architectural_coherence",
+      "artifact": "AGENTS.md; docs/architecture/knowledge-wiki-family-closure.md",
+      "observation": "The committed candidate keeps one canonical app, one Markdown Wiki root, one machine-readable claim registry, one graph compiler, and one selective public projection. No database, CMS, authentication layer, competing Wiki tree, or public archive browser is introduced."
+    },
+    {
+      "rubric": "knowledge_capture",
+      "artifact": "docs/knowledge-bank; scripts/lib/knowledge-wiki.mjs",
+      "observation": "Fresh graph compilation passes for 75 records, 392 edges, 252 typed relations, and 140 prose links. All 74 discoverable records are reachable and generated artifacts match the authored source."
+    },
+    {
+      "rubric": "source_decomposition",
+      "artifact": "apps/www/src/data/knowledge-bank/records.ts; scripts/check-knowledge-bank.mjs",
+      "observation": "The 188 canonical Wiki references resolve to the governed claim and source layer. Careful public claims retain guardrails; protected and metadata-only evidence cannot silently become positive public support."
+    },
+    {
+      "rubric": "semantic_resilience",
+      "artifact": "scripts/tests/composite-integration-evals.test.mjs; scripts/tests/knowledge-wiki.test.mjs",
+      "observation": "Composite contract tests and 20 Wiki tests pass. The system fails closed on stale bindings, attribution drops, sole-credit rewrites, stage inflation, private paths, invalid relations, anti-claim conflicts, premature publication, and negative-search overstatement."
+    },
+    {
+      "rubric": "lifecycle_operability",
+      "artifact": "scripts/lib/knowledge-history.mjs; scripts/lib/knowledge-lifecycle.mjs",
+      "observation": "Append-only history validation, dry-run recording, redacted queries, stable IDs, amendments, retirements, and promotion decisions remain operational. The exact lifecycle candidate passes at 100/100 with all 93 tests."
+    },
+    {
+      "rubric": "editorial_composition",
+      "artifact": "evals/knowledge-wiki/evidence/wiki-family-closure.json",
+      "observation": "Every frozen Wiki branch has an explicit strength and at least one adopted or adapted capability. Deferred, protected, deduplicated, and rejected items retain reasons, verification criteria, and canonical destinations where applicable."
+    },
+    {
+      "rubric": "chad_lens",
+      "artifact": "evals/portfolio-readiness/evidence/application-ready.json",
+      "observation": "The current public composition passes the Chad lens and application profile. Jamie's action and usable result are legible without erasing qualification or collective context; the evidence supports a score of 3."
+    },
+    {
+      "rubric": "morse_lens",
+      "artifact": "docs/knowledge-bank/timelines/art-life-waterways-and-media-archaeology-2003-2011.md",
+      "observation": "The candidate preserves embodied, artistic, spatial, and media-archaeological dimensions alongside operational work. Visual rights remain human-blocked, so the systems review retains the current score of 3."
+    },
+    {
+      "rubric": "sack_lens",
+      "artifact": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "observation": "Typed relations and bounded queries make systems inspectable without turning the graph into proof of causality or a private relationship map. Public demonstrations remain thinner than the internal record, supporting a score of 3."
+    },
+    {
+      "rubric": "collective_credit",
+      "artifact": "docs/knowledge-bank/indexes/role-and-collective-authorship.md; canonical anti-claims",
+      "observation": "Role states distinguish independent, originated, jointly credited, collective, supported, attributed, and unresolved work. Archive custody, account creation, attendance displays, and institutional association do not settle complete authorship or impact."
+    },
+    {
+      "rubric": "public_safety",
+      "artifact": "scripts/check-public-safety.mjs; scripts/check-routes.mjs",
+      "observation": "Public-safety, citation, knowledge-bank, and route checks pass. No private filesystem paths, authenticated source coordinates, raw community records, signed URLs, or protected visual assets are exposed, and no public Wiki route exists."
+    },
+    {
+      "rubric": "reader_effort",
+      "artifact": "reports/knowledge-wiki/generated/wiki-health.json; evals/knowledge-wiki/suite.json",
+      "observation": "Start Here, aliases, typed relations, and 32 bounded query benchmarks reduce retrieval burden. The system still requires editorial judgment and is intentionally not flattened into one universal page, supporting a score of 3."
+    },
+    {
+      "rubric": "reviewability",
+      "artifact": "evals/composite-integration/evidence/review-packets.json",
+      "observation": "All 142 candidate- or contract-bound integration files are committed and assigned exactly once across three bounded packets. The evaluator independently checks dirty candidate paths and inherited-delta accounting."
+    },
+    {
+      "rubric": "future_resilience",
+      "artifact": "evals/knowledge-wiki/suite.json; scripts/run-knowledge-wiki-evals.mjs",
+      "observation": "The new family-closure evaluator rejects suite/ledger drift, invalid or duplicate PR provenance, missing destinations, competing roots, unsupported decision projection, identity conflation, deficit framing, and causal lineage inflation. Two unchanged Wiki passes agree on the exact candidate and contract."
+    }
+  ],
+  "regressions": [],
+  "limitations": [
+    "Ten careful-wording warnings remain intentional editorial guardrails, not passing impact claims.",
+    "Human-reader validation, collaborator attribution, rights and consent, Jamie approval, deployment, indexing, rollback, and production observation remain open.",
+    "This systems judgment establishes integration readiness, not production readiness."
+  ],
+  "confidence": "high"
+}

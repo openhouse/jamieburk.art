@@ -1,0 +1,13 @@
+[
+  { "id": "broken-file-link", "expected": "broken file link" },
+  { "id": "broken-heading-fragment", "expected": "broken heading fragment" },
+  { "id": "duplicate-stable-id", "expected": "duplicate stable ID" },
+  { "id": "unknown-relation-target", "expected": "relation targets unknown record" },
+  { "id": "invalid-record-kind", "expected": "unknown kind" },
+  { "id": "invalid-relation-shape", "expected": "cannot target" },
+  { "id": "alias-collision", "expected": "alias collision" },
+  { "id": "private-path", "expected": "private path" },
+  { "id": "pending-public-projection", "expected": "cannot project publicly" },
+  { "id": "pending-rights-media", "expected": "public asset projection requires cleared rights" },
+  { "id": "not-recovered-to-never-existed", "expected": "not-recovered cannot be presented as never existed" }
+]

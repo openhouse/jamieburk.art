@@ -1,0 +1,78 @@
+{
+  "id": "systems-public-safety",
+  "reviewer": "Codex independent systems and public-safety review",
+  "reviewedAt": "2026-07-21",
+  "candidateFingerprint": "sha256:bfcd6d5c518e069b03b53fd8f3ad008a725d32ea151e610599ee1c8a98bf2c77",
+  "contractFingerprint": "sha256:2480948d8bd392f64805cad3ca5998c8fbd6df924ceb073a1e03431bf3820b2f",
+  "verdict": "pass",
+  "criteria": [
+    {
+      "id": "candidate-contract-and-source-binding",
+      "status": "pass",
+      "finding": "Node 26.5.0 reproduced both supplied fingerprints. Suite v6 pins five GitHub pull requests to full SHAs and requires the disposition ledger to match their branch, commit, PR number, and canonical PR URL."
+    },
+    {
+      "id": "eval-implementation-coverage",
+      "status": "pass",
+      "finding": "The suite declares 31 hard gates, 32 bounded query benchmarks, 24 human tasks, two independent judgments, and two unchanged consecutive passes. The runner fails closed on missing gate implementations and stale judgment fingerprints."
+    },
+    {
+      "id": "regression-and-mutation-coverage",
+      "status": "pass",
+      "finding": "All 20 Knowledge Wiki tests passed, including deterministic generation, stable identity after file moves, family closure, broken links and fragments, duplicate IDs, invalid relations, alias collisions, private paths, premature projection, rights failures, and negative-finding inflation."
+    },
+    {
+      "id": "graph-integrity-and-currentness",
+      "status": "pass",
+      "finding": "Fresh compilation reports 75 governed records, 392 edges, 252 typed relations, 140 prose links, and 74/74 discoverable records reachable. Generated artifacts match authored records and repeated compilation produced the same semantic graph fingerprint."
+    },
+    {
+      "id": "canonical-reference-integrity",
+      "status": "pass",
+      "finding": "The Wiki resolves 188 canonical references into the existing source, claim, evidence, inquiry, and correction registry. The integration adds bounded CouncilStat support without turning CallNYC into an official Council product or attributing the data release to Jamie."
+    },
+    {
+      "id": "public-safety-and-private-boundaries",
+      "status": "pass",
+      "finding": "Fresh knowledge-bank and public-safety checks passed. The integrated Wiki exposes no private filesystem coordinates, authenticated Drive coordinates, raw correspondence, participant records, signed URLs, or protected media identifiers. Research authorization remains distinct from publication permission."
+    },
+    {
+      "id": "rights-consent-and-protected-evidence",
+      "status": "pass",
+      "finding": "The Digital District photograph and other protected visual material remain unlinked and unprojected pending rights, credit, consent, and editorial review. Visual discovery and evidentiary value do not manufacture publication clearance."
+    },
+    {
+      "id": "collective-credit-and-role-integrity",
+      "status": "pass",
+      "finding": "The integrated records separate public organizer credit, Jamie's supported role, archive custody, account establishment, post authorship, collective ownership, agency authority, and later policy outcomes. The system rejects sole-credit and causal inflation."
+    },
+    {
+      "id": "decision-and-adoption-state-integrity",
+      "status": "pass",
+      "finding": "All required decision reconstructions remain pending with empty public surfaces. The implementation/adoption capability keeps designed, launched, used, adopted, handed off, and sustained distinct, and treats unobserved alternatives as unknown rather than invented rejected options."
+    },
+    {
+      "id": "route-and-projection-boundaries",
+      "status": "pass",
+      "finding": "Fresh route checks passed. No docs/knowledge-wiki tree and no /knowledge-wiki, /knowledge-bank, /proofs, or /public-claims application route exists; the deeper graph therefore does not silently become a public archive browser."
+    },
+    {
+      "id": "reviewability-and-scope",
+      "status": "pass",
+      "finding": "The integration delta from the D base is 46 files with 4,912 additions and 189 deletions, organized around one closure plan, one disposition ledger, one governed graph, and bounded review packets. No production deployment, CMS, database, authentication system, or private source vault is introduced."
+    },
+    {
+      "id": "manual-gates-remain-open",
+      "status": "pass",
+      "finding": "Automated success is not treated as collaborator consent, rights clearance, Jamie's editorial approval, application submission, deployment approval, indexing approval, or production observation."
+    }
+  ],
+  "manualGates": {
+    "humanNavigationStudy": "open - graph reachability does not replace a human retrieval session",
+    "collaboratorConsent": "open - archive access does not settle authorship or third-party consent",
+    "rightsClearance": "open - visual publication remains human-blocked",
+    "editorialApproval": "open - the exact candidate awaits Jamie's final review",
+    "productionObservation": "open - no deployment or production state is inferred"
+  },
+  "remainingWork": "Run two unchanged Wiki eval passes and the full Node 26 repository check. Push and inspect CI, then leave merge, public projection, and deployment to the named human authorities."
+}

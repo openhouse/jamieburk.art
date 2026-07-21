@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "id": "portfolio-blind-spots-v1",
+  "objective": "Keep the portfolio's known blind spots measurable without confusing an honest diagnosis with closure.",
+  "invariants": [
+    "A diagnostic pass means every blind spot has a current evidence-backed disposition; it does not mean every blind spot is closed.",
+    "The closure profile fails until all eight evaluations pass.",
+    "Missing human, visual-rights, production, or editorial evidence must remain missing rather than being inferred from proxy signals.",
+    "Archive completeness claims require a declared denominator, recovery method, and explicit gaps.",
+    "Strong mature claims must receive an editorial decision; maturity alone neither publishes nor buries them."
+  ],
+  "profiles": {
+    "diagnostic": {
+      "description": "Pass when all eight blind spots are evaluated with valid statuses and non-empty evidence.",
+      "requireAllEvaluations": true,
+      "requireStatus": null
+    },
+    "closure": {
+      "description": "Pass only when every blind spot is supported as closed by current evidence.",
+      "requireAllEvaluations": true,
+      "requireStatus": "pass"
+    }
+  },
+  "statuses": ["pass", "partial", "blocked", "fail", "invalid"],
+  "evaluations": [
+    {
+      "id": "visual-evidence-coverage",
+      "title": "Actual-work visual evidence",
+      "blindSpot": "A prose-heavy site can make built, spatial, technical, and relational work appear abstract.",
+      "criterion": "Every selected case study has rights-reviewed, public-safe, contextual visual evidence tied to claims, credits, and useful alt text.",
+      "closureEvidence": "Candidate-bound visual review covering all priority projects and at least twelve approved artifacts."
+    },
+    {
+      "id": "decisive-narrative",
+      "title": "Decisive hiring narrative",
+      "blindSpot": "Abundant evidence does not guarantee that a reader quickly understands Jamie's role, work, outcome, and fit.",
+      "criterion": "The current candidate passes role clarity, role fit, reader effort, Chad's lens, application path, and candidate-bound model review.",
+      "closureEvidence": "Current application-readiness report with the required scores and hard gates."
+    },
+    {
+      "id": "individual-role-attribution",
+      "title": "Individual-role attribution",
+      "blindSpot": "Collective outcomes are better documented than Jamie's exact operational contribution to several high-value projects.",
+      "criterion": "Each named inquiry is either recovered or conclusively not recovered; partial and inconclusive records remain visibly open and unprojected.",
+      "closureEvidence": "Resolved inquiry records with source-backed role allocation or a documented final negative finding."
+    },
+    {
+      "id": "archive-denominator-integrity",
+      "title": "Archive denominator integrity",
+      "blindSpot": "Authenticated platform views can be mistaken for immutable lifetime populations.",
+      "criterion": "Every declared social corpus records its recoverable population and explicitly states material historical, deletion, audience, authorship, or impact gaps.",
+      "closureEvidence": "Reviewed corpus records with population support and non-support boundaries."
+    },
+    {
+      "id": "human-reader-validation",
+      "title": "External human-reader validation",
+      "blindSpot": "Deterministic and LLM judges can form a closed evaluation loop that misses real hiring-reader behavior.",
+      "criterion": "At least five target-role readers evaluate the exact candidate using the same bounded comprehension and interview-interest tasks.",
+      "closureEvidence": "Candidate-bound, anonymized aggregate study evidence with no raw participant data."
+    },
+    {
+      "id": "change-reviewability",
+      "title": "Change reviewability",
+      "blindSpot": "A coherent knowledge graph can still arrive in a pull request too large for confident human review.",
+      "criterion": "The branch stays within review thresholds or is split into independently reviewable units with explicit human approval.",
+      "closureEvidence": "Git diff statistics within threshold or an approved decomposition record."
+    },
+    {
+      "id": "production-release-evidence",
+      "title": "Production release evidence",
+      "blindSpot": "Application readiness does not establish deployed-SHA, smoke, rollback, indexing, or approval readiness.",
+      "criterion": "The exact reviewed and deployed commit matches and production smoke, rollback, indexing, staging noindex, and human approval attestations all pass.",
+      "closureEvidence": "Explicit release attestations bound to the exact Git commit."
+    },
+    {
+      "id": "promotion-discipline",
+      "title": "Strong-claim promotion discipline",
+      "blindSpot": "Public-safety caution can silently become self-erasure when mature unused claims never receive an editorial decision.",
+      "criterion": "Every mature unused claim has a recent candidate-bound promote, defer, or not-for-current-purpose decision with a rationale.",
+      "closureEvidence": "Complete editorial decision coverage for the current mature-unused claim set."
+    }
+  ],
+  "targets": {
+    "visualProjects": [
+      "harry-j-epstein",
+      "fair-rent-nyc",
+      "callnyc",
+      "wowlist",
+      "196-sunday-dinner",
+      "kc-town-hall"
+    ],
+    "roleInquiries": [
+      "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE",
+      "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS",
+      "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH",
+      "INQ-NYCARTC-CABARET-REPEAL-CAUSALITY",
+      "INQ-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"
+    ],
+    "socialCorpusSources": [
+      "SRC-X-URBANHERMIT-CORPUS-2026",
+      "SRC-X-WOWLIST-CORPUS-2026",
+      "SRC-X-CALLNYC-CORPUS-2026",
+      "SRC-X-KC-TOWN-HALL-CORPUS-2026",
+      "SRC-X-NYCARTC-PARTIAL-CORPUS-2026",
+      "SRC-FB-WOWLIST-POST-CORPUS-2026",
+      "SRC-FB-NYCARTC-EVENTS-CORPUS-2026",
+      "SRC-FB-JAMIE-POST-CORPUS-2026",
+      "SRC-FB-NYCARTC-POST-CORPUS-2026",
+      "SRC-FB-KCSPACES-POST-CORPUS-2026"
+    ]
+  },
+  "thresholds": {
+    "minimumVisualArtifacts": 12,
+    "minimumHumanReaders": 5,
+    "maximumChangedFiles": 50,
+    "maximumAddedLines": 10000,
+    "maximumSingleFileAddedLines": 2000,
+    "promotionReviewMaxAgeDays": 90
+  },
+  "evidencePaths": {
+    "visual": "evals/blind-spots/evidence/visual-evidence.json",
+    "humanReaders": "evals/blind-spots/evidence/human-reader-validation.json",
+    "reviewability": "evals/blind-spots/evidence/reviewability.json",
+    "promotion": "evals/blind-spots/evidence/promotion-decisions.json"
+  }
+}

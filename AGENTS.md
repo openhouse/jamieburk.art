@@ -30,6 +30,14 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run test:evals`
+- `npm run test:knowledge-history`
+- `npm run test:composite`
+- `npm run evals:application`
+- `npm run evals:production`
+- `npm run evals:composite`
+- `npm run test:hiring`
+- `npm run evals:hiring`
 
 ## Public-Safety Rules
 
@@ -43,7 +51,26 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
-## Knowledge Bank
+## Knowledge Wiki
+
+Knowledge Wiki is the canonical current product name. Knowledge Bank remains a
+historical and command/path compatibility alias during migration.
+
+Markdown is the human record, the Wiki Graph is derived, and the portfolio is a
+selective projection. The current canonical Markdown root remains
+`docs/knowledge-bank/`; do not create a competing `docs/knowledge-wiki/` tree or
+perform a global rename without a reviewed migration.
+
+Use stable IDs, ordinary relative links, and governed typed relations. Paths and
+titles may change; stable IDs must survive. Run `npm run wiki:check`, `npm run
+wiki:test`, and `npm run evals:wiki` after changing governed records. Regenerate
+reports with `npm run wiki:report`; never hand-edit generated Wiki artifacts.
+
+Human comprehension, collaborator consent, rights clearance, editorial
+approval, and production observation remain manual gates. Do not translate an
+automated pass into human approval.
+
+### Compatibility Layer
 
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.
@@ -73,11 +100,83 @@ The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
+### Knowledge Lifecycle
+
+- Capture every submitted fragment with a stable intake ID and disposition.
+- Keep knowledge maturity, publication safety, and editorial selection separate.
+- A memory is a research lead, not a confirmed claim.
+- Closely read sources into both support and non-support fields.
+- Keep private originals outside the public repo behind opaque locator IDs.
+- Do not project every mature claim onto the site.
+- Use `npm run record:knowledge -- ...` to preview an append-only lifecycle
+  event. Add `--write` only after reviewing the complete event.
+- Use `npm run query:knowledge -- ...` for a redacted source, claim, project,
+  surface, intake, or history trace. Query output must not expose protected
+  locators.
+- Do not rewrite or delete a committed line in
+  `docs/knowledge-bank/lifecycle/history.jsonl`; add an amendment, retirement,
+  or promotion-decision event instead.
+- Maintain `docs/knowledge-bank/indexes/missing-pages.md` as a ranked wanted-page
+  queue with created, deferred, protected, rights-blocked, and declined
+  dispositions. A located source does not make a page complete.
+- Periodically re-encounter original sources in their best available native
+  representation. Record the encounter date, representation, access gaps, what
+  changed or stayed bounded, and the next librarian handoff.
+- Full research authorization is not publication permission. Keep private
+  coordinates, raw bodies, collaborator-private metadata, rights decisions,
+  and unresolved attribution outside public Wiki prose.
+- Run `npm run evals:knowledge` before opening or updating a knowledge-bank PR.
+
 ## Chad Lens
 
 Minimize the reader's burden. Make Jamie visible as the actor, explain what the
 work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
+
+The application eval requires a dedicated `chad-editorial` judgment in addition
+to deterministic phrase checks. A generic hiring-manager pass cannot substitute
+for this review.
+
+## Employment Acceptance
+
+- Keep one professional frame; do not turn the portfolio into a separate site
+  for each employer.
+- Govern live opportunity facts with an official URL, verification date,
+  reverify date, stable requirement IDs, hard screens, and explicit unknowns.
+- The hiring evaluator may see only the public portfolio, public resume,
+  sanitized role context, and reader context.
+- Run the Wiki gap resolver afterward. Hidden evidence cannot persuade the
+  hiring evaluator.
+- Named reader profiles are simulated public-context lenses, never actual
+  participation, endorsement, private opinion, or hiring decisions.
+- Keep private application status, warm paths, work authorization, and
+  acceptance decisions outside the public repository.
+- Do not delay a live top-priority application more than one working day for
+  portfolio optimization.
+
+## Recursive Evals
+
+Use `evals/portfolio-readiness/suite.json` as the frozen contract for an
+optimization cycle. Run deterministic gates before model judgment. Change one
+highest-value failing criterion at a time, compare against the accepted
+baseline, reject public-safety or claim-integrity regressions, and stop when the
+selected profile reaches its configured consecutive-pass criterion.
+
+Do not improve a score by editing the eval during a candidate comparison,
+hiding a finding, adding unsupported claims, publishing protected evidence, or
+moving internal evaluation narration into public copy. Application-ready does
+not imply production-ready.
+
+For `feature/evals-*` integration, use
+`evals/composite-integration/suite.json` and the A-through-N disposition ledger.
+Keep the frozen branches read-only, preserve one canonical architecture, bind
+judgments to the exact candidate and contract, and run `npm run
+evals:composite` twice without changes before stopping.
+
+When the candidate-bound integration exceeds the single-delta file ceiling,
+use the governed review-packet manifest. Every changed file must be committed
+and assigned exactly once; do not raise the existing packet thresholds to make
+an oversized integration pass.
 
 ## Scope Rules
 

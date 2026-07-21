@@ -1,0 +1,103 @@
+{
+  "suite": "feature-evals-composite-integration-v5",
+  "candidate": "sha256:7c9a889425af071c342fa19b038739dba3aa849161489398018369e2f6f7da70",
+  "contract": "sha256:22be73cf9c5dd27f9e23850d5230213a6d7f3d90b1670b82513e1ed1cfa183a9",
+  "judgeId": "codex-independent-composite-archival-editorial-2026-07-21-wiki-family-closure",
+  "lens": "archival-editorial",
+  "status": "pass",
+  "scores": {
+    "architectural_coherence": 4,
+    "knowledge_capture": 4,
+    "source_decomposition": 4,
+    "semantic_resilience": 4,
+    "lifecycle_operability": 4,
+    "editorial_composition": 4,
+    "chad_lens": 3,
+    "morse_lens": 3,
+    "sack_lens": 3,
+    "collective_credit": 4,
+    "public_safety": 4,
+    "reader_effort": 3,
+    "reviewability": 4,
+    "future_resilience": 4
+  },
+  "evidence": [
+    {
+      "rubric": "architectural_coherence",
+      "artifact": "docs/architecture/knowledge-wiki-family-closure.md; evals/knowledge-wiki/evidence/wiki-family-closure.json",
+      "observation": "The exact committed candidate preserves one authority model: docs/knowledge-bank is the Markdown record, records.ts is the canonical claim registry, one compiler derives the graph, and the portfolio remains a selective projection. The five frozen Wiki candidates are inputs to a disposition process rather than a merge queue."
+    },
+    {
+      "rubric": "knowledge_capture",
+      "artifact": "docs/knowledge-bank; reports/knowledge-wiki/generated/wiki-health.json",
+      "observation": "The integrated Wiki contains 75 governed records and 392 edges with 74/74 discoverable records reachable. It preserves source returns, missing pages, protected absences, project lineages, decision records, maintenance, handoff, place, identity, and story development without publishing raw private archives."
+    },
+    {
+      "rubric": "source_decomposition",
+      "artifact": "apps/www/src/data/knowledge-bank/records.ts; docs/knowledge-bank",
+      "observation": "The candidate resolves 188 canonical references. Campaign, event, project, and decision pages distinguish source support, non-support, Jamie's role, collective labor, institutional authority, later outcomes, unknowns, and anti-claims."
+    },
+    {
+      "rubric": "semantic_resilience",
+      "artifact": "evals/composite-integration/fixtures/semantic-mutations.json; scripts/tests/knowledge-wiki.test.mjs",
+      "observation": "All 15 composite semantic mutations are rejected. All 20 Wiki tests pass, including stable identity, source and relation failures, private paths, rights failures, premature projection, negative-finding inflation, and the PR-provenance family closure contract."
+    },
+    {
+      "rubric": "lifecycle_operability",
+      "artifact": "docs/knowledge-bank/lifecycle/history.jsonl; scripts/record-knowledge-event.mjs; scripts/query-knowledge-lifecycle.mjs",
+      "observation": "The append-only lifecycle remains operable with dry-run-before-write recording and redacted queries. All 93 lifecycle tests pass; the exact lifecycle candidate scores 100/100 with two distinct candidate-bound judgments."
+    },
+    {
+      "rubric": "editorial_composition",
+      "artifact": "evals/knowledge-wiki/evidence/wiki-family-closure.json; docs/knowledge-bank/indexes",
+      "observation": "The integration preserves the branches' strongest compatible work: maturation and story form; identity, embodied learning, place, and first-person stakes; campaign narratives; source-return governance; and pressure, lineage, decision, stewardship, and official CouncilStat context. Competing architectures are not imported."
+    },
+    {
+      "rubric": "chad_lens",
+      "artifact": "docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md; evals/portfolio-readiness",
+      "observation": "Jamie remains visible as the actor while difficult condition, supported responsibility, usable delivery, collective or institutional result, and evidentiary limit stay separate. The application profile passes at 86.5; necessary qualification keeps this a strong score of 3 rather than an inflated 4."
+    },
+    {
+      "rubric": "morse_lens",
+      "artifact": "docs/knowledge-bank/methods/learning-through-making.md; docs/knowledge-bank/indexes/maintenance-and-care.md",
+      "observation": "Artistic inquiry, embodiment, place, media archaeology, physical repair, digital continuity, and lived participation remain connected. Rights-cleared visual proof remains incomplete, so the public expression retains an honest score of 3."
+    },
+    {
+      "rubric": "sack_lens",
+      "artifact": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md; reports/knowledge-wiki/generated/wiki-graph.json",
+      "observation": "Typed relations make recurring social and technical structures inspectable while explicitly rejecting causality, attendance, authorship, endorsement, and impact inference from proximity or backlinks. Public artifacts still demonstrate less than the internal graph knows, supporting a score of 3."
+    },
+    {
+      "rubric": "collective_credit",
+      "artifact": "docs/knowledge-bank/projects/let-nyc-dance.md; docs/knowledge-bank/projects/talks-not-raids.md; docs/knowledge-bank/events/office-of-nightlife-town-hall-2017.md",
+      "observation": "Organizers, collaborators, venues, participants, public officials, agencies, tradespeople, institutions, and later stewards remain present. Legislation, policy changes, appropriations, public response, and project continuity are not converted into Jamie's sole authorship or causal impact."
+    },
+    {
+      "rubric": "public_safety",
+      "artifact": "scripts/check-public-safety.mjs; docs/knowledge-bank/indexes/absences-protections-and-permissions.md",
+      "observation": "Fresh knowledge-bank, public-safety, citation, and route checks pass. Private coordinates, raw correspondence, participant records, protected media, and inferred relationship graphs remain excluded; research authority is not treated as publication permission."
+    },
+    {
+      "rubric": "reader_effort",
+      "artifact": "docs/knowledge-bank/README.md; evals/knowledge-wiki/suite.json",
+      "observation": "All 32 bounded queries return expected records and limitations, and 74 discoverable records remain reachable. The internal system is intentionally denser than a portfolio and therefore earns a strong 3 rather than claiming zero reader burden."
+    },
+    {
+      "rubric": "reviewability",
+      "artifact": "evals/composite-integration/evidence/review-packets.json",
+      "observation": "The evaluator accounts for 142 candidate- or contract-bound files exactly once across three bounded review packets and reports the inherited delta separately. Candidate-affecting changes are committed and no threshold was raised to manufacture a pass."
+    },
+    {
+      "rubric": "future_resilience",
+      "artifact": "evals/knowledge-wiki/suite.json; evals/knowledge-wiki/evidence/certification.json",
+      "observation": "Suite v6 pins all five Knowledge Wiki PR heads by branch, full SHA, PR number, and URL; its two exact-candidate judgments and two unchanged passes agree. Human voice, attribution, rights, consent, editorial selection, deployment, and production observation remain non-substitutable gates."
+    }
+  ],
+  "regressions": [],
+  "limitations": [
+    "The application profile is ready for application use, not production release; production operations and Jamie's final approval remain blocked.",
+    "Rights-cleared visual evidence and candidate-bound human-reader studies remain open.",
+    "This receipt does not constitute collaborator consent, editorial approval, deployment approval, or production observation."
+  ],
+  "confidence": "high"
+}

@@ -1,0 +1,56 @@
+{
+  "suite": "feature-evals-composite-integration-v1",
+  "profile": "integration_ready",
+  "headSha": "6fe4fd198d24ef2560a74ac7a75e9aeb5fa01371",
+  "startingBranchSha": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
+  "candidate": "sha256:3e44463ed85dc5e7c5520c09364a58880bc3f49f7f66797844c7351aaca2e078",
+  "contract": "sha256:e8a2516f9b46174f2aed45490bca132e2e2b52c4ebb3178053cbcb5eed1e6df6",
+  "score": 89,
+  "threshold": 86,
+  "passed": false,
+  "scores": {
+    "architectural_coherence": 4,
+    "knowledge_capture": 2,
+    "source_decomposition": 4,
+    "semantic_resilience": 4,
+    "lifecycle_operability": 2,
+    "editorial_composition": 4,
+    "chad_lens": 4,
+    "morse_lens": 4,
+    "sack_lens": 4,
+    "collective_credit": 4,
+    "public_safety": 4,
+    "reader_effort": 4,
+    "reviewability": 4,
+    "future_resilience": 2
+  },
+  "failedHardGates": [
+    "frozen_source_integrity",
+    "branch_family_accounting",
+    "append_only_lifecycle",
+    "candidate_binding",
+    "governance_honesty"
+  ],
+  "failedRubrics": [
+    "knowledge_capture",
+    "lifecycle_operability",
+    "future_resilience"
+  ],
+  "reviewStats": {
+    "inheritedFromDevelop": {
+      "changedFiles": 113,
+      "addedLines": 31453,
+      "deletedLines": 366,
+      "maximumSingleFileAddedLines": 3025
+    },
+    "integrationFromStart": {
+      "changedFiles": 7,
+      "addedLines": 923,
+      "deletedLines": 0,
+      "maximumSingleFileAddedLines": 254
+    }
+  },
+  "regressionChecksSkipped": true,
+  "capturedAt": "2026-07-16",
+  "nextAction": "Create the A-through-N disposition ledger and append-only lifecycle command surface before requesting candidate-bound judgments."
+}

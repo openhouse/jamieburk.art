@@ -1,0 +1,73 @@
+{
+  "id": "architecture-editorial",
+  "reviewer": "Codex independent architecture and editorial review",
+  "reviewedAt": "2026-07-21",
+  "candidateFingerprint": "sha256:bfcd6d5c518e069b03b53fd8f3ad008a725d32ea151e610599ee1c8a98bf2c77",
+  "contractFingerprint": "sha256:2480948d8bd392f64805cad3ca5998c8fbd6df924ceb073a1e03431bf3820b2f",
+  "verdict": "pass",
+  "criteria": [
+    {
+      "id": "candidate-and-contract-binding",
+      "status": "pass",
+      "finding": "Node 26.5.0 reproduced the supplied candidate and suite-v6 contract fingerprints. The judgment files are outside both fingerprints, so recording this review does not change the candidate under review."
+    },
+    {
+      "id": "frozen-family-provenance",
+      "status": "pass",
+      "finding": "GitHub PR heads #239, #241, #242, #240, and #243 were inspected on July 21, 2026. The architecture note, suite, and ledger agree on all five branch names, full SHAs, PR numbers, and PR URLs; the evaluator rejects drift and duplicate PR identity."
+    },
+    {
+      "id": "one-authority-model",
+      "status": "pass",
+      "finding": "The integration retains docs/knowledge-bank as the sole Markdown root, records.ts as the canonical citation registry, one graph compiler, and the portfolio as a selective projection. It does not import the candidates' alternate Wiki roots, dossier schemas, runners, or public browsing routes."
+    },
+    {
+      "id": "branch-disposition-quality",
+      "status": "pass",
+      "finding": "Every frozen branch has an explicit strength and at least one adopted or adapted contribution. Deduplicated, protected, deferred, and rejected work carries a reason and verification criteria; HJE decision reconstruction remains deferred pending canonical evidence migration."
+    },
+    {
+      "id": "editorial-range-without-flattening",
+      "status": "pass",
+      "finding": "The integrated pages preserve A's maturation and story discipline, B's identity, embodied learning, place, and first-person stakes, C's campaign narratives, D's governance and source-return practice, and E's pressure, lineage, decision, stewardship, and CouncilStat framing. Artistic, civic, technical, and relational practice remain connected without being collapsed into one category."
+    },
+    {
+      "id": "collective-credit-and-institutional-causality",
+      "status": "pass",
+      "finding": "Let NYC Dance, Talks Not Raids, the Office of Nightlife town hall, KC Town Hall, and other collective records distinguish Jamie's supported action, collaborators' labor, institutional authority, later outcomes, and unknowns. Government or collective results are not rewritten as Jamie's sole causal impact."
+    },
+    {
+      "id": "identity-place-and-voice-boundaries",
+      "status": "pass",
+      "finding": "Identity establishment, account administration, artifact authorship, and collective ownership remain separate. Place supports retrieval without becoming a private social graph. The AI-assisted first-person stakes page remains human-blocked, unprojected, and approvable only by Jamie."
+    },
+    {
+      "id": "decision-lineage-and-adoption-restraint",
+      "status": "pass",
+      "finding": "Chronology and resemblance remain research prompts rather than causality. Decision records preserve unobserved alternatives as an evidence state. Designed, launched, used, adopted, handed off, and sustained remain distinct states, and one does not prove the next."
+    },
+    {
+      "id": "retrieval-and-comprehension",
+      "status": "pass",
+      "finding": "The candidate contains 75 governed records and 392 graph edges; 74/74 discoverable records are reachable. All 32 bounded queries return their expected records and limitations, including the branch-family closure path and the protected first-person review path."
+    },
+    {
+      "id": "projection-restraint",
+      "status": "pass",
+      "finding": "The integration deepens the internal public-safe Wiki without adding a public Wiki, Knowledge Bank, proofs, or public-claims route. New decision reconstructions and the first-person draft have no allowed public surfaces and remain pending human review."
+    },
+    {
+      "id": "manual-authority-remains-human",
+      "status": "pass",
+      "finding": "Automation does not claim Jamie's editorial approval, collaborator attribution or consent, visual rights clearance, unfamiliar-reader success, deployment approval, or production observation. Those gates remain explicit and open."
+    }
+  ],
+  "manualGates": {
+    "humanNavigationStudy": "open - structural reachability is green, but no candidate-bound unfamiliar-reader study is recorded",
+    "collaboratorConsent": "open - collective campaign wording still requires human attribution review where stronger public wording is sought",
+    "rightsClearance": "open - protected visual evidence remains private-review and human-blocked",
+    "editorialApproval": "open - Jamie has not yet accepted this exact candidate for merge or public projection",
+    "productionObservation": "open - no production deployment or observation is implied by this review"
+  },
+  "remainingWork": "Run the exact candidate through the unchanged two-pass Wiki stop rule and the repository-wide verification pipeline. Jamie's final review, collaborator and rights decisions, deployment, and production observation remain separate human gates."
+}

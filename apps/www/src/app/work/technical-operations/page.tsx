@@ -17,7 +17,7 @@ const operationsMap = [
 
 const proofMap = [
   {
-    project: "HJE",
+    project: "Harry J. Epstein Company",
     proof:
       "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
   },
@@ -60,7 +60,7 @@ const proofMap = [
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
   description:
-    "Role-specific proof surface for technical operations, implementation, product operations, documentation systems, and durable handoffs.",
+    "How Jamie Burkart builds operating structure for technical operations, implementation, product operations, documentation, and durable handoffs.",
   path: "/work/technical-operations"
 });
 
@@ -72,11 +72,9 @@ export default function TechnicalOperationsPage() {
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding
-          materials, documentation systems, launch support, and durable
-          handoffs.
+          I turn loosely defined work into operating systems teams can use:
+          clear plans, visible risks, decision and status records, onboarding
+          guides, launch support, and handoffs that let the work continue.
         </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">

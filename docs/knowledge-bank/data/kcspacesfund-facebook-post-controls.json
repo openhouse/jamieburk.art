@@ -1,0 +1,107 @@
+{
+  "capturedAt": "2026-07-14",
+  "page": "https://www.facebook.com/KCSpacesFund/",
+  "populationDefinition": "All Page-level post records currently recoverable from the KC Spaces Fund public Facebook Page's 2020 timeline in Jamie's authenticated view. Nested shared-story cards are not denominator records.",
+  "publicTimeline": {
+    "traversalPasses": 2,
+    "distinctScrollCadences": true,
+    "exactClassificationSetMatchAcrossPasses": true,
+    "retainedPagePosts": 37,
+    "firstTerminalNoAdditionCycles": 22,
+    "secondTerminalNoAdditionCycles": 20,
+    "recoveredStart": "2020-04-07",
+    "recoveredEnd": "2020-07-09",
+    "textBearingPosts": 33,
+    "noMessageAttachmentShells": 4,
+    "photoBearingPosts": 20,
+    "denominatorMethod": "Select outer Page records whose profile identity begins with KC Spaces Fund, including location-qualified Page posts; exclude nested shared-story cards; reconcile date plus photo fbid where available, otherwise date plus expanded outer message or attachment class.",
+    "nativeExport": false,
+    "deletionHistory": false,
+    "lifetimePopulationClaim": false
+  },
+  "currentProfileDisplay": {
+    "followers": 108,
+    "following": 1,
+    "meaning": "Mutable profile displays at capture, not historical reach or community size."
+  },
+  "namedGranteeOrDisbursementAnnouncements": {
+    "count": 12,
+    "names": [
+      "Latino Foundation for the Arts",
+      "UN/TUCK",
+      "Battery Tour / AY Young",
+      "Get Woke",
+      "Trans Women of Color Collective",
+      "Blackbox on Troost",
+      "One Mic Stand",
+      "Farewell Transmission",
+      "Parker 2",
+      "Kansas City Textile Arts Center",
+      "SWAN",
+      "Vulpes Bastille"
+    ],
+    "meaning": "Public announcement count, not a complete grant ledger or proof of every underlying payment event."
+  },
+  "currentVisibleReactionSnapshot": {
+    "postsWithVisibleReactions": 28,
+    "reactions": 117,
+    "like": 78,
+    "love": 39,
+    "otherReactionTypes": 0,
+    "topPost": {
+      "date": "2020-05-21",
+      "subject": "Blackbox on Troost funding announcement",
+      "reactions": 15,
+      "like": 12,
+      "love": 3
+    },
+    "meaning": "Mutable platform displays at capture, not unique people, reach, donor conversion, endorsement, causality, or impact."
+  },
+  "stakeholderResponseSample": {
+    "post": "https://www.facebook.com/photo/?fbid=136348721358895",
+    "date": "2020-05-21",
+    "visibleComments": 1,
+    "directGranteeThankYouComment": true,
+    "publicAccountGroupsVisibleInReactionPanel": [
+      "campaign organizer",
+      "grantee and peer cultural spaces",
+      "arts and cultural institutions"
+    ],
+    "meaning": "One bounded current public response sample, not campaign-wide endorsement, partnership, reach, or impact."
+  },
+  "postedUrlInventory": {
+    "uniqueNormalizedRouteStrings": 11,
+    "domains": [
+      "kcspacesfund.com",
+      "gofundme.com",
+      "odditiesprints.com",
+      "twocc.us"
+    ],
+    "domainCount": 4,
+    "embeddedDo816TitleOnlyLead": true,
+    "meaning": "Research and action routes; a posted URL is not proof of source truth, readership, endorsement, clicks, donation conversion, partnership, or outcomes."
+  },
+  "roleControls": {
+    "nonPosterRoleMemory": {
+      "statement": "Jamie states that he was not the stakeholder or owner posting through the KC Spaces Fund Facebook account.",
+      "status": "attributed-first-party",
+      "sourceId": "SRC-JAMIE-KCSPACES-NON-POSTER-MEMORY-2026"
+    },
+    "digitalOperationsArchive": {
+      "siteCommitsAuthoredByJamie": 73,
+      "fundraisingWidgetCommitsAuthoredByJamie": 10,
+      "campaignThemeCommitsAuthoredByJamie": 34,
+      "launchChecklistWebsiteAssignmentRecovered": true
+    },
+    "namingSupportMemory": "Jamie recalls supporting selection of a name available consistently across social platforms and domain names.",
+    "publicUniformIdentityOutcome": true,
+    "meaning": "Implementation records support Jamie's behind-the-scenes digital role. Naming support remains an attributed memory. Neither establishes public organizing, Page-post authorship, fundraising ownership, grant decisions, or sole naming authority."
+  },
+  "privateArtifactId": "kcspacesfund-facebook-public-post-census-2026-07-14",
+  "limitations": [
+    "This is 100% of the currently recoverable Page-level July 2026 surface, not an official Meta export of all posts ever created.",
+    "Deleted, unpublished, pre-migration-omitted, and otherwise unavailable records remain outside the observable population.",
+    "Page identity does not establish the human author or publisher of an individual post.",
+    "The record-level corpus, private engagement relationships, authentication state, and management controls remain outside the public repository."
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "candidate": "sha256:eb3fedaab32554f814331aa2dd3aa016cc46a3e641e5144849897f38cb920a54",
+  "reviewedAt": "2026-07-16",
+  "reviewedBy": [
+    "Codex editorial review using Chad's lens"
+  ],
+  "policy": "A promote decision selects a claim for a future bounded composition cycle. It does not activate a public projection by itself.",
+  "decisions": [
+    {
+      "claimId": "CLM-FINKELPEARL-NYCARTC-COUNCIL-TESTIMONY-2017",
+      "decision": "defer",
+      "rationale": "Strong institutional context for a future NYC Artist Coalition expansion, but not necessary to the current concise public argument.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-ESPINAL-NYCARTC-SPONSORED-MEASURES",
+      "decision": "not-for-current-purpose",
+      "rationale": "Useful legislative chronology, but it does not independently clarify Jamie's role and would add institutional detail without resolving attribution.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-ESPINAL-NYCARTC-TOWN-HALL-PARTICIPATION",
+      "decision": "defer",
+      "rationale": "Potentially useful in a future account of the coalition's public forums once the event narrative and Jamie's production role are composed together.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-WATER-RAFT-GULF-COMPLETION",
+      "decision": "promote",
+      "rationale": "A distinctive completed undertaking that can materially broaden the portfolio once the water-practice page has a concise role, chronology, credits, and visual plan.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-KC-TOWN-HALL-ELECTED-OFFICIAL-RESPONSE",
+      "decision": "not-for-current-purpose",
+      "rationale": "Public response is contextual evidence rather than a core restoration or neighborhood-operations outcome for the current case study.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-X-NYCARTC-CAMPAIGN-IDENTITY",
+      "decision": "not-for-current-purpose",
+      "rationale": "The account identity is valuable archival context but not presently a stronger hiring proof than the documented campaign systems themselves.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-MONTHLY-MUSIC-AUDIO-SORTING-PROTOTYPE",
+      "decision": "not-for-current-purpose",
+      "rationale": "Interesting creative-technical history, but peripheral to the current technical project management and implementation argument.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-HORSE-LORDS-TRUTHERS-VIDEO-CREDIT",
+      "decision": "not-for-current-purpose",
+      "rationale": "Preserve the credit in the bank; it does not currently warrant scarce public portfolio space.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
+      "decision": "defer",
+      "rationale": "Strong collaborative early-work evidence for a future creative-systems page, pending visual selection and a concise connection to Jamie's later practice.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION",
+      "decision": "defer",
+      "rationale": "Meaningful exhibition context that should travel with the installation claim rather than appear as an isolated credential.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NYCARTC-CREATENYC-COLLECTIVE-RECOMMENDATIONS",
+      "decision": "promote",
+      "rationale": "A strong account of the coalition converting dialogue into organized recommendations; compose with explicit collective credit and no individual causal inflation.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-TIME-IS-LONG-VHS-INSTALLATION",
+      "decision": "not-for-current-purpose",
+      "rationale": "Preserve as creative-practice depth, but it does not presently strengthen the selected application path.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-CLAUDETTE-AR-COLLABORATION",
+      "decision": "not-for-current-purpose",
+      "rationale": "The collaboration and credits are worth preserving, but are not selected for the current professional argument.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION",
+      "decision": "not-for-current-purpose",
+      "rationale": "Useful knowledge-stewardship history, but lower priority than Jamie's operating, campaign, and public implementation work.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
+      "decision": "not-for-current-purpose",
+      "rationale": "The later municipal disposition remains important provenance but should not be used as the public conclusion of Jamie's project account.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+      "decision": "promote",
+      "rationale": "Concrete evidence of Jamie designing a participatory vision and contact workflow; compose after public-safe artifact and data-boundary review.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-TIRED-OF-TIRES-OPERATING-PROGRAM",
+      "decision": "promote",
+      "rationale": "Strong recurring operations evidence connecting service design, city coordination, field execution, communications, and recordkeeping without relying on an unaudited impact total.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-CALLNYC-EVENT-BRANDING",
+      "decision": "not-for-current-purpose",
+      "rationale": "The breakout wording is useful chronology but less important than the already selected independent product and public-data story.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-WATER-RAFT-CONTEMPORANEOUS-VOYAGE",
+      "decision": "promote",
+      "rationale": "Independent contemporaneous chronology and collective crew credit materially strengthen a future Water Publics composition without requiring immediate publication.",
+      "reviewedAt": "2026-07-16"
+    },
+    {
+      "claimId": "CLM-WATER-RAFT-RECYCLED-BICYCLE-DESIGN",
+      "decision": "promote",
+      "rationale": "The built artifact makes Jamie's creative-technical practice legible, provided the composition preserves collective labor and waits for rights-approved visual evidence.",
+      "reviewedAt": "2026-07-16"
+    },
+    {
+      "claimId": "CLM-WATER-RAFT-CIVIC-PREMISE",
+      "decision": "defer",
+      "rationale": "The attributed civic premise should be composed with the route, artifact, collaborators, and later participatory river practice so it does not become an unsupported impact claim.",
+      "reviewedAt": "2026-07-16"
+    },
+    {
+      "claimId": "CLM-WATER-RAFT-ORIGINATION",
+      "decision": "defer",
+      "rationale": "Compose together with the voyage and Gulf completion rather than fragmenting the collaborative project history.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-WATER-RAFT-VOYAGE",
+      "decision": "defer",
+      "rationale": "Compose together with origination, completion, collaborators, route, and visual evidence in a future water-practice page.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-PROGRAM",
+      "decision": "defer",
+      "rationale": "Strong participatory-program evidence for a future water-publics narrative, pending selection of the most legible artifacts.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+      "decision": "defer",
+      "rationale": "Potential connective tissue for Jamie's long participatory practice, but it needs a bounded public composition rather than an isolated claim.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NYCARTC-SEPTEMBER-TOWN-HALL-INVITATION",
+      "decision": "not-for-current-purpose",
+      "rationale": "The invitation is weaker than the separately documented October event and its relationship to that event remains unresolved.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NYC-OFFICE-NIGHTLIFE-ESTABLISHMENT",
+      "decision": "not-for-current-purpose",
+      "rationale": "Institutional chronology alone does not establish Jamie's contribution; retain it as context until the role inquiry advances.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NYC-CABARET-LAW-COUNCIL-VOTE",
+      "decision": "defer",
+      "rationale": "The Council outcome is relevant, but should be composed only alongside Jamie's documented testimony and collective campaign activity.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NYCARTC-CABARET-HEARING-TESTIMONY",
+      "decision": "promote",
+      "rationale": "Direct evidence of Jamie translating cultural-space concerns into public testimony; prioritize for the next NYC Artist Coalition composition cycle with its source and collective context.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NYCARTC-PUBLIC-PRIORITIES",
+      "decision": "defer",
+      "rationale": "Useful connective account of the coalition's workstreams, but too broad to add without a focused public argument.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NYCARTC-OFFICE-NIGHTLIFE-RECOMMENDATIONS",
+      "decision": "promote",
+      "rationale": "Concrete collective output showing recommendations on trust, transparency, casework, permitting, affordability, and inclusion; compose without assigning individual authorship or adoption.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-NYCARTC-MARCH-2018-TOWN-HALL",
+      "decision": "defer",
+      "rationale": "Strong coalition chronology, but the official report does not name Jamie and should not be used as individual-role proof.",
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "claimId": "CLM-SAVE-NYC-SPACES-PUBLIC-CAMPAIGN",
+      "decision": "defer",
+      "rationale": "A substantial campaign-system record suitable for a later NYC Artist Coalition expansion with partner credits, Jamie's attributed statement, and visual evidence.",
+      "reviewedAt": "2026-07-15"
+    }
+  ]
+}

@@ -137,13 +137,14 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
+      "Built CallNYC.org after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating public data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
     shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
     detailedPublicWording:
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
       "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
-    guardrail: "Always describe it as archived and unofficial.",
+    guardrail:
+      "Always describe it as archived and unofficial. Keep the Council's attributed first-CouncilStat description in its separately cited claim.",
     doNotSay: [
       "Broader historical hackathon superlatives",
       "Official hackathon submission or winner",
@@ -211,7 +212,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+    sourceBasis:
+      "Approved resume language and a close-read May 2026 provenance-redline artifact represented only through public-safe metadata.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -227,7 +229,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
@@ -239,7 +241,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis:
+      "Approved resume language, Jamie confirmation, public campaign websites, and contemporaneous NPR and Gothamist reporting on Jamie's founding affiliation and coalition participation.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
@@ -262,7 +265,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
@@ -275,7 +278,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "Approved resume language, public campaign surfaces, contemporaneous Gothamist and NPR reporting, official Council outcome context, and public-safe NYC Artist Coalition project history.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -302,7 +305,7 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "wowlist-community-platform",
@@ -352,7 +355,10 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceBasis:
+      "Approved resume language, public-safe project history, and a protected workbook aggregate whose 346 numbered columns include 341 with at least one recorded Y mark.",
+    sourceNote:
+      "The workbook strengthens the 300+ scale claim but does not convert Y marks into audited attendance or prove an exact completed-event count.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -371,7 +377,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -426,18 +432,23 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    shortWording: "Supported adaptive reuse planning and public-benefit documentation",
+      "Jamie's approved public resume describes him as KC Town Hall co-founder and project manager who co-led redevelopment planning and public-benefit documentation; official records separately name Jamie as presenter and show the proposal advancing from a four-member CCED Board recommendation to City Council adoption and a $490,539 appropriation.",
+    shortWording: "Resume-described co-leadership of adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie's approved public resume describes him as KC Town Hall co-founder and project manager who co-led redevelopment planning and public-benefit documentation. The Board packet names him as presenter; official Council records document adoption of the recommendation and the appropriation.",
+    sourceBasis: "Canonical approved-resume source SRC-KC-TOWN-HALL-APPROVED-RESUME-2026; the 2019 CCED Board packet; the September 26, 2019, Council meeting record; authenticated Ordinance 190642 and Resolution 190649; and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "The public record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received, disbursed, or spent. Keep later administrative disposition distinct from Jamie's role and from the still-uncorroborated account of how project stewardship changed.",
     doNotSay: [
-      "Final funding received",
+      "Funding agreement executed",
+      "Funds received, disbursed, or spent",
+      "Council vote was unanimous",
+      "Jamie caused or controlled the Council action",
+      "Jamie abandoned the project",
+      "Project completed",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Official municipal endorsement beyond the recorded Board and Council actions"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -449,7 +460,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "source-backed-team-memory-method",
@@ -461,7 +472,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+    sourceBasis:
+      "Public-safe lab materials and a close-read June 2026 proposal-derived method summary; private commercial and collaborator context remains withheld.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -478,7 +490,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "technical-operations-operating-backbone",

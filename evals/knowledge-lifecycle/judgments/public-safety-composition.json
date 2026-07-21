@@ -1,0 +1,53 @@
+{
+  "judgeId": "codex-independent-public-safety-composition-2026-07-21-wiki-family-closure",
+  "lens": "public-safety-composition",
+  "candidate": "sha256:c6ebee8d616413639c28765850f7eed67023717d7416f52b33c66c05af5f1387",
+  "contract": "sha256:2f1d5f6cfeb00461b911bb1601cfa670f2de91e81a92d7a4270bdbeb81ae2f44",
+  "passes": true,
+  "scores": {
+    "capture_integrity": 4,
+    "source_decomposition": 4,
+    "claim_atomicity": 4,
+    "provenance_closure": 4,
+    "status_separation": 4,
+    "project_context": 4,
+    "research_honesty": 4,
+    "projection_restraint": 4
+  },
+  "evidence": [
+    {
+      "rubric": "capture_integrity",
+      "observation": "The exact candidate scored 100/100 with all deterministic lifecycle gates passing. The branch-family ledger accounts for each reviewed PR head and gives every selected, deferred, protected, deduplicated, or rejected capability an explicit disposition."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "Public-safe summaries do not expose authenticated cloud coordinates, raw source bodies, private correspondence, participant records, or protected media. Source access, close reading, source candidacy, rights review, and public projection remain distinct states."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "The integrated campaign and decision records preserve Jamie's supported action, collective work, institutional authority, later result, and remaining unknown as separate fields. Account establishment does not prove post authorship or collective ownership."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "Fresh Wiki checking passed for 75 governed records and 392 graph edges, with 74/74 discoverable records reachable. Generated artifacts match authored records, canonical references resolve, and the family-closure mutation and provenance checks pass."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "Confirmed, attributed, inferred, unresolved, internal-only, qualified, protected, candidate, unused, and human-blocked states remain distinct. Research authorization does not become quotation, rights, consent, or publication authority."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "Public-safety boundaries remain project-specific: CallNYC stays independent and unofficial; campaign outcomes retain collective and institutional causality; KC Town Hall work separates building, survey, funding, transition, and government-action records."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Fresh knowledge-bank, public-safety, route, and Wiki checks passed. The records reject private relationship inference, heroic continuity, sole-credit campaign narratives, unobserved decision alternatives, and impact claims derived from response counters or artifact custody."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "No /knowledge-wiki, /knowledge-bank, /proofs, or /public-claims route exists. The deeper internal graph remains a source for selective composition rather than an automatic public archive."
+    }
+  ],
+  "regressions": [],
+  "nextAction": "Rerun the unchanged lifecycle evaluator with the complementary archival-editorial judgment. Keep collaborator review, Jamie's voice approval, media rights, consent, public composition, deployment, and production observation open."
+}

@@ -1,0 +1,22 @@
+{
+  "profile": "foundation_ready",
+  "candidateFingerprint": "sha256:a45d73911c5d16c42ff68a170d0268afdb4c67db1ca04ec85459da1a9dc0f098",
+  "contractFingerprint": "sha256:4fd8e47766d2c7dfba7890dc552f03a552c2b3f0ec06cd0bdce1eba1cec21353",
+  "hardGates": 26,
+  "records": 47,
+  "typedRelations": 143,
+  "proseLinks": 80,
+  "discoverableRecords": 46,
+  "reachableDiscoverableRecords": 46,
+  "maximumRootDistance": 3,
+  "queryBenchmarks": 21,
+  "testAssertions": 16,
+  "mutationFixtures": 11,
+  "manualAuthorityGates": {
+    "humanNavigationStudy": "not-requested",
+    "collaboratorConsent": "not-requested",
+    "rightsClearance": "human-blocked",
+    "editorialApproval": "not-requested",
+    "productionObservation": "not-requested"
+  }
+}

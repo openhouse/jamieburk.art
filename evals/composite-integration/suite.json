@@ -1,0 +1,189 @@
+{
+  "version": 5,
+  "id": "feature-evals-composite-integration-v5",
+  "objective": "Integrate the strongest non-duplicative capabilities from the frozen feature/evals-A through feature/evals-N family into feature/knowledge-c without creating parallel knowledge or evaluation architectures.",
+  "startSha": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
+  "baselineRecord": "evals/composite-integration/baselines/feature-knowledge-c-contract-v5.json",
+  "ledgerPath": "evals/composite-integration/evidence/branch-family-inventory.json",
+  "historyPath": "docs/knowledge-bank/lifecycle/history.jsonl",
+  "governancePath": "evals/composite-integration/evidence/governance.json",
+  "reviewPacketPath": "evals/composite-integration/evidence/review-packets.json",
+  "judgmentDirectory": "evals/composite-integration/judgments",
+  "profiles": {
+    "integration_ready": {
+      "minimumWeightedScore": 86,
+      "minimumRubricScore": 3,
+      "requiredIndependentJudgments": 2,
+      "consecutivePassingRuns": 2
+    }
+  },
+  "invariants": [
+    "The frozen feature/evals branches remain read-only.",
+    "Feature/knowledge-c remains the governing architecture.",
+    "Knowledge maturity, publication safety, and editorial selection remain separate decisions.",
+    "The public site remains a composed projection rather than an evidence dump.",
+    "No score improves by weakening attribution, collective credit, anti-claims, or protected boundaries.",
+    "Deterministic, model, human, rights, and production evidence are never substituted for one another."
+  ],
+  "allowedDispositions": [
+    "adopt",
+    "adapt",
+    "deduplicate",
+    "defer",
+    "protect",
+    "reject"
+  ],
+  "frozenBranches": [
+    { "branch": "feature/evals-A", "sha": "3757c4f529cc05d169f30ec059b13bea24cc75d1" },
+    { "branch": "feature/evals-B", "sha": "67fc30427e544199540f81d6b50cf94ef8101f47" },
+    { "branch": "feature/evals-C", "sha": "ff440a9c9a15c844b779bbca0c1404eaebcb8031" },
+    { "branch": "feature/evals-D", "sha": "5a7095ffc8e064c5fff8a5acfb114e04f7114a15" },
+    { "branch": "feature/evals-E", "sha": "d7d8e0d050b6a8c481fa5aaf2429d6427aa886ea" },
+    { "branch": "feature/evals-F", "sha": "ba74618558e55a836d9a73b5293f6fdb45e684ff" },
+    { "branch": "feature/evals-G", "sha": "d97055d72d794b9ecfd338e10277e4feb14ea918" },
+    { "branch": "feature/evals-H", "sha": "934c1bdff4a478da56fde3a125d905e7e326b6f2" },
+    { "branch": "feature/evals-I", "sha": "793f7262cd3df8d7401d9b3e0f8209240d5fa640" },
+    { "branch": "feature/evals-J", "sha": "7e1b758b416bbe7c221f601e331696d95515c593" },
+    { "branch": "feature/evals-K", "sha": "5b0cbcd1a7f913d2281c671e46903ad997a743f5" },
+    { "branch": "feature/evals-L", "sha": "68846b1f0a8672ff80598a7fef50ce5343c3e004" },
+    { "branch": "feature/evals-M", "sha": "289dd4499eb3e7b78bc16b380a02ac180dca35bb" },
+    { "branch": "feature/evals-N", "sha": "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe" }
+  ],
+  "requiredHardGates": [
+    "frozen_source_integrity",
+    "branch_family_accounting",
+    "canonical_architecture",
+    "append_only_lifecycle",
+    "semantic_claim_integrity",
+    "projection_restraint",
+    "candidate_binding",
+    "reviewability_accounting",
+    "no_regression",
+    "governance_honesty"
+  ],
+  "rubrics": [
+    { "id": "architectural_coherence", "weight": 12, "gate": "canonical_architecture" },
+    { "id": "knowledge_capture", "weight": 10, "gate": "append_only_lifecycle" },
+    { "id": "source_decomposition", "weight": 10, "gate": "no_regression" },
+    { "id": "semantic_resilience", "weight": 10, "gate": "semantic_claim_integrity" },
+    { "id": "lifecycle_operability", "weight": 10, "gate": "append_only_lifecycle" },
+    { "id": "editorial_composition", "weight": 10, "gate": "projection_restraint" },
+    { "id": "chad_lens", "weight": 8, "gate": "no_regression" },
+    { "id": "morse_lens", "weight": 5, "gate": "no_regression" },
+    { "id": "sack_lens", "weight": 5, "gate": "no_regression" },
+    { "id": "collective_credit", "weight": 6, "gate": "semantic_claim_integrity" },
+    { "id": "public_safety", "weight": 6, "gate": "projection_restraint" },
+    { "id": "reader_effort", "weight": 4, "gate": "no_regression" },
+    { "id": "reviewability", "weight": 2, "gate": "reviewability_accounting" },
+    { "id": "future_resilience", "weight": 2, "gate": "branch_family_accounting" }
+  ],
+  "requiredCanonicalFiles": [
+    "apps/www/src/data/knowledge-bank/schema.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "scripts/lib/knowledge-lifecycle.mjs",
+    "scripts/run-knowledge-lifecycle-evals.mjs",
+    "scripts/lib/portfolio-evals.mjs",
+    "scripts/run-portfolio-evals.mjs",
+    "scripts/lib/blind-spot-evals.mjs",
+    "scripts/run-blind-spot-evals.mjs",
+    "scripts/lib/knowledge-wiki.mjs",
+    "scripts/run-knowledge-wiki-evals.mjs",
+    "scripts/lib/hiring-acceptance.mjs",
+    "scripts/run-hiring-acceptance-evals.mjs"
+  ],
+  "forbiddenArchitecturePaths": [
+    "apps/www/src/data/knowledge-bank/claims.json",
+    "apps/www/src/data/knowledge-bank/sources.json",
+    "apps/www/src/app/proofs/page.tsx",
+    "apps/www/src/app/knowledge-bank/page.tsx",
+    "apps/www/src/app/public-claims/page.tsx"
+  ],
+  "requiredLifecycleFiles": [
+    "docs/knowledge-bank/lifecycle/history.jsonl",
+    "scripts/lib/knowledge-history.mjs",
+    "scripts/record-knowledge-event.mjs",
+    "scripts/query-knowledge-lifecycle.mjs"
+  ],
+  "requiredHistoryEventTypes": [
+    "intake-receipt",
+    "promotion-decision"
+  ],
+  "requiredGovernanceLayers": [
+    "deterministic",
+    "model",
+    "human-reader",
+    "rights-review",
+    "production",
+    "jamie-approval"
+  ],
+  "allowedGovernanceStatuses": [
+    "pass",
+    "blocked",
+    "not-required"
+  ],
+  "semanticFixturePath": "evals/composite-integration/fixtures/semantic-mutations.json",
+  "requiredMutationIds": [
+    "attribution-drop",
+    "collective-to-sole-credit",
+    "mention-to-endorsement",
+    "recoverable-to-lifetime",
+    "records-to-impact",
+    "photograph-to-institutional-fact",
+    "stage-to-completion",
+    "url-to-role-proof",
+    "memory-to-confirmed",
+    "not-recovered-to-never-existed",
+    "protected-to-public",
+    "non-support-to-positive-evidence",
+    "anti-claim-conflict",
+    "stale-candidate-judgment",
+    "stale-contract-baseline"
+  ],
+  "candidatePaths": [
+    "AGENTS.md",
+    "README.md",
+    "package.json",
+    "apps/www/src/app",
+    "apps/www/src/components",
+    "apps/www/src/content",
+    "apps/www/src/data/knowledge-bank",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/site.ts",
+    "apps/www/src/data/work.ts",
+    "docs/evals",
+    "docs/knowledge-bank",
+    "docs/qa/hiring-acceptance",
+    "evals/blind-spots",
+    "evals/hiring-acceptance",
+    "evals/knowledge-lifecycle",
+    "evals/portfolio-readiness",
+    "scripts"
+  ],
+  "candidateIgnorePaths": [
+    "docs/evals/runs/feature-knowledge-c-composite.md",
+    "docs/evals/runs/feature-knowledge-wiki-D.md",
+    "evals/composite-integration/baselines",
+    "evals/composite-integration/judgments",
+    "evals/composite-integration/runs",
+    "evals/composite-integration/evidence/certification.json"
+  ],
+  "contractPaths": [
+    "docs/evals/feature-evals-composite-integration.md",
+    "evals/composite-integration/suite.json",
+    "evals/composite-integration/evidence/branch-family-inventory.json",
+    "evals/composite-integration/evidence/governance.json",
+    "evals/composite-integration/evidence/review-packets.json",
+    "evals/composite-integration/fixtures/semantic-mutations.json",
+    "scripts/lib/composite-integration-evals.mjs",
+    "scripts/run-composite-integration-evals.mjs",
+    "scripts/tests/composite-integration-evals.test.mjs"
+  ],
+  "reviewabilityThresholds": {
+    "maximumChangedFiles": 50,
+    "maximumAddedLines": 10000,
+    "maximumSingleFileAddedLines": 2000,
+    "maximumReviewPackets": 3
+  }
+}

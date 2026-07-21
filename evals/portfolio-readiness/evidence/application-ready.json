@@ -1,0 +1,206 @@
+{
+  "candidate": "sha256:013ae05c9ebe7959bf285288028a2be23a027b6d1cfced29e41f2608ecef37de",
+  "profile": "application_ready",
+  "performedAt": "2026-07-19",
+  "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, resume download, and JavaScript-disabled checks.",
+  "routes": [
+    {
+      "route": "/",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Jamie Burkart"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Jamie Burkart"
+      }
+    },
+    {
+      "route": "/work",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Selected work"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Selected work"
+      }
+    },
+    {
+      "route": "/work/technical-operations",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Technical Operations & Implementation"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Technical Operations & Implementation"
+      }
+    },
+    {
+      "route": "/resume",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Resume"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Resume"
+      }
+    },
+    {
+      "route": "/contact",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Contact"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Contact"
+      }
+    },
+    {
+      "route": "/about",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "About"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "About"
+      }
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Harry J. Epstein Company"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "Harry J. Epstein Company"
+      }
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "NYC Artist Coalition / FairRentNYC"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "NYC Artist Coalition / FairRentNYC"
+      }
+    },
+    {
+      "route": "/work/callnyc",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "CallNYC.org"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "CallNYC.org"
+      }
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "KC Town Hall LLC"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "KC Town Hall LLC"
+      }
+    },
+    {
+      "route": "/work/wowlist",
+      "desktop": {
+        "status": 200,
+        "overflow": false,
+        "h1": "WOWList.org"
+      },
+      "mobile": {
+        "status": 200,
+        "overflow": false,
+        "h1": "WOWList.org"
+      }
+    }
+  ],
+  "citations": {
+    "referenceCount": 8,
+    "backlinkCount": 8,
+    "localLinks": true,
+    "backlinks": true,
+    "accessibleLabels": true,
+    "referencesHeading": true
+  },
+  "fairRentCitations": {
+    "referenceCount": 21,
+    "backlinkCount": 21,
+    "sourceNoteCount": 15,
+    "localLinks": true,
+    "accessibleLabels": true,
+    "referencesHeading": true,
+    "firstTarget": "#cite-fair-rent-nyc-1",
+    "referenceTargetReached": true,
+    "backlinkTargetReached": true
+  },
+  "focusVisible": true,
+  "focusEvidence": "24 of 24 traversed controls exposed visible computed outlines.",
+  "zoom200": {
+    "passed": true,
+    "method": "Rendered each route at a 640x450 CSS-pixel viewport, the reflow equivalent of 200% browser zoom on a 1280x900 display.",
+    "routeCount": 11,
+    "overflowCount": 0
+  },
+  "keyboard": {
+    "passed": true,
+    "method": "Sent twenty-four real Tab key events on /work/callnyc and inspected document.activeElement plus computed focus outlines.",
+    "focusableCount": 24,
+    "visibleFocusCount": 24,
+    "citationFocusCount": 8
+  },
+  "resumeDownload": true,
+  "resumeStatus": 200,
+  "metadata": true,
+  "metadataEvidence": {
+    "canonical": "https://staging.jamieburk.art/resume",
+    "ogTitle": "Resume - Jamie Burkart",
+    "ogImage": "https://staging.jamieburk.art/opengraph-image",
+    "twitterCard": "summary_large_image"
+  },
+  "publicCopy": {
+    "resumeGovernanceNotePresent": false
+  },
+  "javascriptDisabled": {
+    "passed": true,
+    "routeCount": 11
+  },
+  "limitations": [
+    "The candidate was inspected locally with staging metadata defaults.",
+    "The 200% check uses the standards-equivalent halved CSS viewport rather than a browser chrome zoom control.",
+    "Project imagery remains a declared application deferral and production-readiness gap."
+  ]
+}

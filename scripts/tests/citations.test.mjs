@@ -11,7 +11,7 @@ test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-date-time").sources.map((item) => item.number), [1, 2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "first-councilstat-hackathon").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.number), [3, 4]);
-  assert.deepEqual(resolveCitationOccurrence("callnyc", "event-branding").sources.map((item) => item.number), [5]);
+  assert.throws(() => resolveCitationOccurrence("callnyc", "event-branding"), /Unknown citation occurrence/);
 });
 
 test("repeated sources retain one note and unique backlinks", () => {
@@ -28,6 +28,15 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
+test("KC Town Hall citations preserve role, Board, and Council order", () => {
+  assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "planning-and-documentation-role").sources.map((item) => item.number), [1]);
+  assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "presenter-role").sources.map((item) => item.number), [2]);
+  assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "board-recommendation").sources.map((item) => item.number), [2]);
+  assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "council-acceptance").sources.map((item) => item.number), [3, 4]);
+  assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "council-appropriation").sources.map((item) => item.number), [3, 5]);
+  assert.throws(() => resolveCitationOccurrence("kc-town-hall", "unused-allocation"), /Unknown citation occurrence/);
+});
+
 test("Claim resolver returns only active approved projections", () => {
   assert.match(getClaimProjection("CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "case-study", "/work/callnyc").text, /first CouncilStat hackathon/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
@@ -37,11 +46,14 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 3);
+  assert.ok(knowledgeBank.corrections.some((correction) => correction.id === "COR-KC-TOWN-HALL-FUNDING-STAGE-2026"));
 });
 
 test("negative research preserves scope and limitations", () => {
-  const inquiry = knowledgeBank.researchInquiries[0];
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-CALLNYC-CIVIC-HALL-PAGE-2026"
+  );
+  assert.ok(inquiry);
   assert.equal(inquiry.resultStatus, "not-recovered");
   assert.ok(inquiry.limitations.some((item) => /not proof of nonexistence/i.test(item)));
   assert.doesNotMatch(inquiry.publicSummary, /did not exist/i);

@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "recordedAt": "2026-07-19",
+  "targetBranch": "feature/wiki-D",
+  "targetBase": "develop",
+  "integrationBase": {
+    "branch": "feature/knowledge-wiki-D",
+    "sha": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b",
+    "reason": "D supplies the strongest canonical Markdown, graph, source-reencounter, missing-page, public-safety, and candidate-bound evaluation foundation."
+  },
+  "branches": [
+    {
+      "branch": "feature/knowledge-wiki-A",
+      "sourceCommit": "920f9024d7e058700f282e3e1e76188fe1c5294e",
+      "sourcePullRequest": 239,
+      "sourcePullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/239",
+      "strength": "Editorial maturation, story selection, adoption states, public knowledge, and visual-rights workflow.",
+      "decisions": [
+        {
+          "capability": "Implementation, adoption, and handoff states",
+          "disposition": "adapt",
+          "canonicalDestination": "docs/knowledge-bank/capabilities/implementation-adoption-and-handoff.md",
+          "verification": ["wiki record exists", "designed, launched, used, adopted, handed off, and sustained remain separate states"]
+        },
+        {
+          "capability": "Canonical story bank",
+          "disposition": "adapt",
+          "canonicalDestination": "docs/knowledge-bank/indexes/canonical-story-bank.md",
+          "verification": ["stories retain situation, action, usable result, collective context, and honest limit"]
+        },
+        {
+          "capability": "Public knowledge and visual-rights queues",
+          "disposition": "adapt",
+          "canonicalDestination": "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md",
+          "verification": ["community records remain protected", "visual discovery does not imply publication clearance"]
+        },
+        {
+          "capability": "Alternate Wiki and evaluation implementation",
+          "disposition": "deduplicate",
+          "reason": "D already supplies the governing compiler and eval architecture; importing another implementation would split authority.",
+          "verification": ["no second Wiki root or public route"]
+        }
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-B",
+      "sourceCommit": "268a92d794f5b604f4004fc9d6e5652f234fc61b",
+      "sourcePullRequest": 241,
+      "sourcePullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/241",
+      "strength": "Humanistic articulation of identity, embodied learning, place, and first-person stakes.",
+      "decisions": [
+        {
+          "capability": "Identity systems, learning through making, and place-oriented retrieval",
+          "disposition": "adapt",
+          "canonicalDestination": "docs/knowledge-bank/methods/identity-systems-as-shared-infrastructure.md",
+          "verification": ["pages use the canonical docs/knowledge-bank root", "authorship, account administration, and collective ownership remain separate"]
+        },
+        {
+          "capability": "AI-assisted first-person stakes draft",
+          "disposition": "protect",
+          "reason": "The draft is useful for Jamie's authorship review but cannot be auto-approved or publicly projected.",
+          "verification": ["review_state is human-blocked", "allowed_surfaces is empty"]
+        },
+        {
+          "capability": "Competing docs/knowledge-wiki tree",
+          "disposition": "reject",
+          "reason": "The approved compatibility root is docs/knowledge-bank; a second tree would create two sources of truth.",
+          "verification": ["docs/knowledge-wiki does not exist"]
+        }
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-C",
+      "sourceCommit": "6a2af7396240381ce04aad9b9129ba402b83c134",
+      "sourcePullRequest": 242,
+      "sourcePullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/242",
+      "strength": "Strong source-return narratives for Let NYC Dance, Talks Not Raids, and the Office of Nightlife town hall.",
+      "decisions": [
+        {
+          "capability": "Campaign and event narratives",
+          "disposition": "adapt",
+          "canonicalDestination": "docs/knowledge-bank/projects/let-nyc-dance.md",
+          "verification": ["Talks Not Raids and town-hall records also exist", "institutional outcomes remain collective and noncausal"]
+        },
+        {
+          "capability": "Alternate project-dossier and eval architecture",
+          "disposition": "deduplicate",
+          "reason": "Its strongest narratives fit the D graph without importing a competing schema or runner.",
+          "verification": ["one compiler", "one Wiki root", "one foundation eval contract"]
+        }
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-D",
+      "sourceCommit": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b",
+      "sourcePullRequest": 240,
+      "sourcePullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/240",
+      "strength": "Canonical governance, typed graph, source re-encounter, protected absences, missing-page practice, and exact-candidate evals.",
+      "decisions": [
+        {
+          "capability": "Canonical Wiki foundation",
+          "disposition": "adopt",
+          "canonicalDestination": "docs/knowledge-bank/README.md",
+          "verification": ["wiki:check passes", "generated graph is current", "human authority gates remain open"]
+        },
+        {
+          "capability": "Existing governed synthesis pages",
+          "disposition": "adopt",
+          "canonicalDestination": "docs/knowledge-bank/indexes/missing-pages.md",
+          "verification": ["source-return, rights, consent, and publication states remain distinct"]
+        }
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-E",
+      "sourceCommit": "9f1bbfacec3edbfbc47a5200f777d4f498da0ec4",
+      "sourcePullRequest": 243,
+      "sourcePullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/243",
+      "strength": "Pressure-before-response framing, project lineage, bounded decision reconstruction, stewardship, and official CouncilStat context.",
+      "decisions": [
+        {
+          "capability": "Pressures, lineages, and decision records",
+          "disposition": "adapt",
+          "canonicalDestination": "docs/knowledge-bank/indexes/what-the-work-was-up-against.md",
+          "verification": ["lineage does not imply causality", "decision records name unobserved alternatives instead of inventing them"]
+        },
+        {
+          "capability": "Official CouncilStat release source",
+          "disposition": "adapt",
+          "canonicalDestination": "docs/knowledge-bank/sources/nycc-constituent-services-data-2016-05-27.md",
+          "verification": ["official source does not make CallNYC a Council product"]
+        },
+        {
+          "capability": "HJE decision reconstruction",
+          "disposition": "defer",
+          "reason": "The D canonical registry does not yet contain the source and claim records needed to validate that decision at the same standard.",
+          "verification": ["deferred item remains named", "no unsupported HJE decision page is added"]
+        },
+        {
+          "capability": "Overlapping generated and evaluation architecture",
+          "disposition": "deduplicate",
+          "reason": "D's compiler and candidate-bound evals remain authoritative.",
+          "verification": ["generated files come from one compiler", "no parallel public Wiki route"]
+        }
+      ]
+    }
+  ],
+  "humanGates": [
+    "Jamie line-by-line authorship review of the first-person stakes draft",
+    "collaborator attribution review for collective campaign and event language",
+    "rights and consent review for every visual asset",
+    "Jamie editorial approval of any new public projection",
+    "production deployment, observation, rollback, and indexing approval"
+  ]
+}

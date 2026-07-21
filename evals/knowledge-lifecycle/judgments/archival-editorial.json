@@ -1,0 +1,53 @@
+{
+  "judgeId": "codex-independent-archival-editorial-2026-07-21-wiki-family-closure",
+  "lens": "archival-editorial",
+  "candidate": "sha256:c6ebee8d616413639c28765850f7eed67023717d7416f52b33c66c05af5f1387",
+  "contract": "sha256:2f1d5f6cfeb00461b911bb1601cfa670f2de91e81a92d7a4270bdbeb81ae2f44",
+  "passes": true,
+  "scores": {
+    "capture_integrity": 4,
+    "source_decomposition": 4,
+    "claim_atomicity": 4,
+    "provenance_closure": 4,
+    "status_separation": 4,
+    "project_context": 4,
+    "research_honesty": 4,
+    "projection_restraint": 4
+  },
+  "evidence": [
+    {
+      "rubric": "capture_integrity",
+      "observation": "Fresh lifecycle validation scored 100/100 with zero deterministic findings, and all 93 lifecycle regression and adversarial tests passed. Recursive candidate collection includes the newly integrated governed Wiki records rather than sampling only prior pages."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "The integrated A-E pages continue to distinguish source, what it supports, what it does not establish, present interpretation, access state, rights state, and next source-return action. Protected originals remain represented by bounded public-safe authority records."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Implementation states, campaign roles, institutional outcomes, event response displays, decision alternatives, and project afterlives remain separate claims. No page treats a launch as adoption, a social response as attendance, or a later government action as Jamie's action."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "The closure ledger binds every candidate branch to its GitHub PR and exact head SHA, and every adopted or adapted contribution resolves to the canonical docs/knowledge-bank graph. The Wiki resolves 188 canonical references and all 32 bounded retrieval benchmarks."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "Known, inferred, unresolved, protected, rights-blocked, selected, and unselected knowledge remain distinct. The first-person stakes draft and bounded decision reconstructions remain pending, unprojected, and human-held."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The integrated pages make artistic inquiry, identity infrastructure, place, event production, civic translation, technical operations, maintenance, and handoff retrievable without forcing them into one professional category or one causal career line."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Collective credit, institutional authority, collaborator labor, and archive limitations remain visible. Chronology and recurrence are treated as research prompts rather than proof of causality, sole authorship, adoption, attendance, or impact."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "No public Wiki or evidence-browser route is introduced. New internal records have empty allowed surfaces where human editorial, attribution, voice, rights, or consent review remains open."
+    }
+  ],
+  "regressions": [],
+  "nextAction": "Rerun the unchanged lifecycle evaluator with the complementary public-safety/composition judgment, then stop this lifecycle cycle if both receipts validate. Preserve human editorial, attribution, rights, consent, deployment, and production gates."
+}

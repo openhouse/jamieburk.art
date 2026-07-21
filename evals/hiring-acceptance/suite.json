@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "id": "hiring-acceptance-current-priority-2026-07-18",
+  "profile": "system-ready-application-active",
+  "targetOpportunityIds": [
+    "opportunity.nyc-oti.technical-operations-manager.782369",
+    "opportunity.aclu.product-manager-ii-discovery.8482872002",
+    "opportunity.benepass.product-operations-manager.7f963a7a",
+    "opportunity.codepath.senior-program-manager-claude-corps.5182020007",
+    "opportunity.asana.ai-implementation-manager.8027437",
+    "opportunity.permitflow.product-operations-manager.8a6e6066"
+  ],
+  "readerIds": [
+    "reader.generic-recruiter",
+    "reader.generic-hiring-manager",
+    "reader.lisa-gelobter",
+    "reader.aileen-palmer",
+    "reader.jennifer-pahlka",
+    "reader.cyd-harrell",
+    "reader.herminia-ibarra",
+    "reader.claudio-fernandez-araoz",
+    "reader.amy-edmondson"
+  ],
+  "developmentReaderIds": [
+    "reader.generic-recruiter",
+    "reader.generic-hiring-manager",
+    "reader.lisa-gelobter",
+    "reader.aileen-palmer",
+    "reader.jennifer-pahlka",
+    "reader.herminia-ibarra",
+    "reader.claudio-fernandez-araoz"
+  ],
+  "holdoutReaderIds": [
+    "reader.cyd-harrell",
+    "reader.amy-edmondson"
+  ],
+  "routes": [
+    "/",
+    "/work",
+    "/work/technical-operations",
+    "/work/callnyc",
+    "/work/harry-j-epstein",
+    "/work/fair-rent-nyc",
+    "/work/196-sunday-dinner",
+    "/lab/source-backed-team-memory",
+    "/resume",
+    "/about",
+    "/contact"
+  ],
+  "titleBlindCapabilityQuery": [
+    "turn ambiguous work into operating structure",
+    "coordinate dependencies and surface risk",
+    "translate technical work for non-technical stakeholders",
+    "build onboarding, runbooks, decision records, and handoffs",
+    "support public launch, adoption, and continuous learning"
+  ],
+  "negativeControls": [
+    {
+      "id": "negative.registered-nurse",
+      "title": "Registered Nurse",
+      "terms": ["active nursing license", "clinical care", "patient assessment"],
+      "hardScreen": "active nursing license"
+    },
+    {
+      "id": "negative.senior-backend-rust",
+      "title": "Senior Backend Engineer, Rust",
+      "terms": ["production Rust", "distributed systems", "compiler internals"],
+      "hardScreen": "production Rust"
+    },
+    {
+      "id": "negative.enterprise-sales",
+      "title": "Enterprise Account Executive",
+      "terms": ["quota carrying", "pipeline generation", "closing enterprise contracts"],
+      "hardScreen": "quota carrying sales tenure"
+    }
+  ],
+  "lexicographicPriorities": [
+    "safety-and-rights",
+    "factual-support",
+    "collective-credit",
+    "hard-role-requirements",
+    "wiki-coverage",
+    "public-coverage",
+    "simulated-advancement",
+    "one-year-fit",
+    "clarity",
+    "voice",
+    "concision-and-reader-load"
+  ],
+  "requiredGates": [
+    "wiki-integrity",
+    "tier-one-records",
+    "opportunity-freshness",
+    "requirement-coverage",
+    "reader-contracts",
+    "public-only-separation",
+    "title-blind-discovery",
+    "negative-controls",
+    "mutation-detection",
+    "bounded-oti-climb",
+    "candidate-bound-judgments"
+  ],
+  "manualAuthority": {
+    "applicationSubmission": "human-only",
+    "acluProductBriefApproval": "human-blocked",
+    "workAuthorizationAnswers": "private-human-only",
+    "namedReaderParticipation": "not-claimed",
+    "employmentAcceptance": "human-only"
+  },
+  "stopRules": {
+    "requiredConsecutivePasses": 2,
+    "maximumUnchangedCycles": 2,
+    "doNotDelayLiveApplicationWorkingDays": 1
+  }
+}

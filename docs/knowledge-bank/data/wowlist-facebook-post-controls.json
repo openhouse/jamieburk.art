@@ -1,0 +1,50 @@
+{
+  "capturedAt": "2026-07-14",
+  "page": "https://www.facebook.com/wowlist/",
+  "populationDefinition": "All unique post records currently recoverable from the WOW List public Facebook Page timeline in an authenticated Page-management view.",
+  "publicTimeline": {
+    "terminalTraversalPasses": 2,
+    "exactFingerprintMatchAcrossPasses": true,
+    "postLikeVariants": 56,
+    "excludedRenderArtifacts": 2,
+    "retainedUniquePosts": 54,
+    "publisherMetadata": {
+      "Jamie Burkart": 54
+    }
+  },
+  "surfaceReconciliation": {
+    "featuredRecords": 2,
+    "featuredRecordsWithinTimelinePopulation": 2,
+    "lifetimeContentLibraryRows": 5,
+    "contentLibraryRowsWithinTimelinePopulation": 5,
+    "contentLibraryIsHistoricalPopulationControl": false
+  },
+  "currentProfileDisplay": {
+    "followers": 185,
+    "meaning": "Mutable profile display at capture, not historic reach."
+  },
+  "currentEngagementDisplay": {
+    "postsWithVisibleReactions": 39,
+    "visibleReactions": 88,
+    "nineCityVideo": {
+      "likes": 13,
+      "comments": 3,
+      "views": 53
+    },
+    "meaning": "Mutable platform displays at capture, not attendance, historic reach, or project impact."
+  },
+  "postedUrlInventory": {
+    "resolvedOccurrences": 80,
+    "distinctResolvedDestinations": 71,
+    "wowlistOrgOccurrences": 20,
+    "titleOnlyDestinationCardsAlsoPresent": true,
+    "meaning": "Research routes; a posted URL is not proof of destination claims, endorsement, clicks, or outcomes."
+  },
+  "privateArtifactId": "wowlist-facebook-public-post-census-2026-07-14",
+  "limitations": [
+    "This is 100% of the currently recoverable public timeline population, not an official Meta export of all posts ever created.",
+    "Deleted, unpublished, pre-migration-omitted, and otherwise unavailable posts remain outside the observable population.",
+    "Facebook obfuscates many timeline timestamps and no longer exposes every historic outbound href.",
+    "Publisher metadata supports publishing activity, not sole administration, sole project ownership, or authorship of shared sources."
+  ]
+}
