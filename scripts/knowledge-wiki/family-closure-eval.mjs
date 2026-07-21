@@ -21,6 +21,23 @@ function sameSet(left, right) {
   return left.length === right.length && left.every((item) => right.includes(item));
 }
 
+const localeProbe = `
+  import { createHash } from "node:crypto";
+  import { buildGeneratedOutputs, compileWiki } from "./scripts/knowledge-wiki/lib.mjs";
+  const outputs = buildGeneratedOutputs(compileWiki());
+  process.stdout.write(
+    createHash("sha256").update(JSON.stringify(Object.entries(outputs))).digest("hex")
+  );
+`;
+
+function generatedDigest(repoRoot, locale) {
+  return execFileSync(process.execPath, ["--input-type=module", "--eval", localeProbe], {
+    cwd: repoRoot,
+    encoding: "utf8",
+    env: { ...process.env, LANG: locale, LC_ALL: locale }
+  });
+}
+
 export function evaluateFamilyClosure(options = {}) {
   const repoRoot = options.repoRoot ?? defaultRepoRoot;
   const result = options.result ?? compileWiki({ repoRoot });
@@ -244,6 +261,16 @@ export function evaluateFamilyClosure(options = {}) {
     packageManifest.scripts?.["check:rfps"] === "node scripts/check-rfps.mjs" &&
     packageManifest.scripts?.check?.includes("npm run check:rfps");
 
+  let generatedOutputsLocaleIndependent = options.localeDeterminismOverride;
+  if (generatedOutputsLocaleIndependent === undefined) {
+    try {
+      generatedOutputsLocaleIndependent =
+        generatedDigest(repoRoot, "C") === generatedDigest(repoRoot, "en_US.UTF-8");
+    } catch {
+      generatedOutputsLocaleIndependent = false;
+    }
+  }
+
   let diffHygieneClean = options.diffCheckOverride;
   if (diffHygieneClean === undefined) {
     try {
@@ -284,6 +311,7 @@ export function evaluateFamilyClosure(options = {}) {
     family_public_safety_preserved: publicSafetyPreserved,
     merge_readiness_ci_enforced: mergeReadinessCiEnforced,
     rfp_contract_enforced: rfpContractEnforced,
+    generated_outputs_locale_independent: generatedOutputsLocaleIndependent,
     diff_hygiene_clean: diffHygieneClean
   };
 

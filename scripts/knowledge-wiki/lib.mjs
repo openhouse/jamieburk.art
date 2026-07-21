@@ -25,6 +25,10 @@ export const defaultRepoRoot = path.resolve(
 export const wikiRelativeRoot = "docs/knowledge-bank";
 export const generatedRelativeRoot = `${wikiRelativeRoot}/_generated`;
 
+function compareText(a, b) {
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
 export const recordKinds = [
   "project",
   "person",
@@ -462,7 +466,7 @@ function normalizeYaml(value) {
 function walkFiles(root, predicate = () => true) {
   if (!existsSync(root)) return [];
   return readdirSync(root, { withFileTypes: true })
-    .sort((a, b) => a.name.localeCompare(b.name))
+    .sort((a, b) => compareText(a.name, b.name))
     .flatMap((entry) => {
       const absolute = path.join(root, entry.name);
       if (entry.isDirectory()) return walkFiles(absolute, predicate);
@@ -1065,7 +1069,7 @@ export function compileWiki(options = {}) {
 
   const authoredFiles = markdownFiles
     .map((absolute) => ({ path: relativeTo(repoRoot, absolute), content: readFileSync(absolute) }))
-    .sort((a, b) => a.path.localeCompare(b.path));
+    .sort((a, b) => compareText(a.path, b.path));
   const fingerprintHash = createHash("sha256");
   for (const file of authoredFiles) {
     fingerprintHash.update(file.path);
@@ -1089,13 +1093,13 @@ export function compileWiki(options = {}) {
       lastReviewed: record.last_reviewed,
       reviewBy: record.review_by ?? null
     }))
-    .sort((a, b) => a.id.localeCompare(b.id));
+    .sort((a, b) => compareText(a.id, b.id));
 
   edges.sort((a, b) =>
-    `${a.from}\0${a.type}\0${a.to}`.localeCompare(`${b.from}\0${b.type}\0${b.to}`)
+    compareText(`${a.from}\0${a.type}\0${a.to}`, `${b.from}\0${b.type}\0${b.to}`)
   );
   documentLinks.sort((a, b) =>
-    `${a.fromPath}\0${a.line}\0${a.toPath}`.localeCompare(`${b.fromPath}\0${b.line}\0${b.toPath}`)
+    compareText(`${a.fromPath}\0${a.line}\0${a.toPath}`, `${b.fromPath}\0${b.line}\0${b.toPath}`)
   );
 
   const byKind = Object.fromEntries(
@@ -1283,7 +1287,7 @@ function backlinksOutputs(result) {
       const outputPath = `${generatedRelativeRoot}/backlinks/${record.id}.md`;
       const lines = [generatedHeader(`Backlinks to ${record.title}`, result).trimEnd(), ""];
       const entries = incoming.get(record.id).sort((a, b) =>
-        `${a.from}\0${a.type}`.localeCompare(`${b.from}\0${b.type}`)
+        compareText(`${a.from}\0${a.type}`, `${b.from}\0${b.type}`)
       );
       if (!entries.length) lines.push("- None.");
       for (const entry of entries) {
@@ -1380,7 +1384,7 @@ export function buildGeneratedOutputs(result) {
     ),
     ...backlinksOutputs(result)
   };
-  return Object.fromEntries(Object.entries(outputs).sort(([a], [b]) => a.localeCompare(b)));
+  return Object.fromEntries(Object.entries(outputs).sort(([a], [b]) => compareText(a, b)));
 }
 
 export function writeGeneratedOutputs(result, mode = "all") {
@@ -1473,8 +1477,8 @@ export function queryWiki(result, query) {
         .filter((record) => record.kind === "decision")
         .sort(
           (a, b) =>
-            a.decision_period.localeCompare(b.decision_period) ||
-            a.title.localeCompare(b.title)
+            compareText(a.decision_period, b.decision_period) ||
+            compareText(a.title, b.title)
         )
     };
   }
@@ -1495,7 +1499,7 @@ export function queryWiki(result, query) {
       query: "live-opportunities",
       records: result.records
         .filter((record) => record.kind === "opportunity" && record.opportunity_status === "live")
-        .sort((a, b) => a.review_by.localeCompare(b.review_by) || a.title.localeCompare(b.title))
+        .sort((a, b) => compareText(a.review_by, b.review_by) || compareText(a.title, b.title))
     };
   }
   if (query.requirement) {

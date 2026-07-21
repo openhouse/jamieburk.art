@@ -24,7 +24,7 @@ test("branch-family closure baseline passes", () => {
     donors: 5,
     requiredRecords: 21,
     integratedRecords: 14,
-    blockingCriteria: 25
+    blockingCriteria: 26
   });
 });
 
@@ -198,6 +198,14 @@ test("the RFP contract must remain in the normal repository check", () => {
   );
   const evaluation = evaluateFamilyClosure({ result, packageOverride: packageManifest });
   assert.equal(evaluation.checks.rfp_contract_enforced, false);
+});
+
+test("generated outputs must remain independent of process locale", () => {
+  const evaluation = evaluateFamilyClosure({
+    result,
+    localeDeterminismOverride: false
+  });
+  assert.equal(evaluation.checks.generated_outputs_locale_independent, false);
 });
 
 test("diff hygiene is a blocking family-closure criterion", () => {

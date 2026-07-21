@@ -6,7 +6,7 @@
   "publicSurfaceFileCount": 109,
   "reboundAt": "2026-07-21T20:27:06Z",
   "reboundFromFingerprint": "b0815a5741e39995b724c56315af4ea008e80dec2727ac6ea4ac6647d6789b7a",
-  "reboundReason": "The rendered application and package lock are unchanged. The only public-surface-scope delta adds RFP validation to the root package scripts, so the completed browser matrix remains applicable to the same runtime surface.",
+  "reboundReason": "The rendered application and package lock are unchanged. Public-surface-scope deltas add RFP validation to the root package scripts and remove a blank line from a non-rendered knowledge-production module, so the completed browser matrix remains applicable to the same runtime surface.",
   "publicSurfaceScope": [
     "apps/www/**",
     "package.json",

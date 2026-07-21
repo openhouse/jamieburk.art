@@ -167,6 +167,7 @@
         "family_public_safety_preserved",
         "merge_readiness_ci_enforced",
         "rfp_contract_enforced",
+        "generated_outputs_locale_independent",
         "diff_hygiene_clean"
       ]
     }

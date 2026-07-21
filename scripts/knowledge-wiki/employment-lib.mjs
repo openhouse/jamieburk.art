@@ -20,6 +20,10 @@ const suitePath = "evals/knowledge-wiki/hiring-suites.json";
 const privatePattern =
   /(?:\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|Library\/CloudStorage|BEGIN (?:RSA |OPENSSH )?PRIVATE KEY)/i;
 
+function compareText(a, b) {
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
 function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
@@ -41,7 +45,7 @@ function dateText(value) {
 
 function stableHash(entries) {
   const hash = createHash("sha256");
-  for (const [key, value] of entries.sort(([a], [b]) => a.localeCompare(b))) {
+  for (const [key, value] of entries.sort(([a], [b]) => compareText(a, b))) {
     hash.update(key);
     hash.update("\0");
     hash.update(value);
@@ -438,7 +442,7 @@ function discoveryReport(result, suite) {
           opportunity.discovery_terms.some((candidate) => candidate.toLowerCase() === term.toLowerCase())
         ).length
       }))
-      .sort((a, b) => b.score - a.score || a.id.localeCompare(b.id));
+      .sort((a, b) => b.score - a.score || compareText(a.id, b.id));
     const topK = ranking.slice(0, query.k).map((item) => item.id);
     return {
       id: query.id,
