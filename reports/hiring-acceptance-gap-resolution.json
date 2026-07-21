@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "candidateSha": "ecb6d79bfddd647f8718068143ff6df24c58f594",
+  "portfolioSnapshotHash": "407a53865536333f15ebc661d5db05577cb01ebe20f0eb4b18c42b67a6dd9272",
+  "publicReportHash": "3caed6c510305d10fe5c805e9e128dd6822daf1681ef2b413ee30e90063a4c30",
+  "wikiSourceFingerprint": "fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a",
+  "findings": [
+    {
+      "findingId": "finding.requirement.oti.government-hiring-and-procurement",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.government-hiring-and-procurement",
+      "classification": "visible-weak-evidence-gap",
+      "wikiRecords": [
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Do not imply procurement authority; clarify adjacent government-process experience in the application.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu.facilitation-without-authority",
+      "opportunityId": "opportunity.aclu.product-manager-discovery.8482872002",
+      "requirementId": "requirement.aclu.facilitation-without-authority",
+      "classification": "visible-weak-evidence-gap",
+      "wikiRecords": [
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Name one bounded facilitation decision and its usable output.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu.product-brief",
+      "opportunityId": "opportunity.aclu.product-manager-discovery.8482872002",
+      "requirementId": "requirement.aclu.product-brief",
+      "classification": "wiki-proven-not-projected",
+      "wikiRecords": [
+        "project.callnyc"
+      ],
+      "currentStatus": "wiki-proven-not-projected",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Produce and human-review a redacted retrospective CallNYC product brief.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu.do-not-build-judgment",
+      "opportunityId": "opportunity.aclu.product-manager-discovery.8482872002",
+      "requirementId": "requirement.aclu.do-not-build-judgment",
+      "classification": "source-needs-close-reading",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "source-needed",
+      "gapType": "source",
+      "smallestResponsibleChange": "Revisit one bounded decision record; do not invent a do-not-build example.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.benepass.quantified-prioritization",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "requirementId": "requirement.benepass.quantified-prioritization",
+      "classification": "visible-weak-evidence-gap",
+      "wikiRecords": [],
+      "currentStatus": "visible-weak",
+      "gapType": "source",
+      "smallestResponsibleChange": "Use only supported HJE figures and explain the decision they informed.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.asana.implementation-ownership",
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "requirementId": "requirement.asana.implementation-ownership",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Distinguish direct client implementation from internal and public-facing delivery.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.asana.risk-and-change-management",
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "requirementId": "requirement.asana.risk-and-change-management",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Do not substitute general risk coordination for migration or configuration experience.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.permitflow.product-data",
+      "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
+      "requirementId": "requirement.permitflow.product-data",
+      "classification": "true-experience-gap",
+      "wikiRecords": [],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    }
+  ],
+  "humanApprovalRequired": true,
+  "disclaimer": "Gap resolution may query the public-safe Wiki; it cannot promote or publish a claim automatically."
+}

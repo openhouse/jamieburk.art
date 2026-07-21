@@ -1,0 +1,20 @@
+{
+  "id": "nycac-shared-folder-production-2026-07-19",
+  "title": "NYC Artist Coalition shared-folder archival production",
+  "candidate": "feature/knowledge-wiki-E",
+  "totalPoints": 100,
+  "criteria": [
+    { "id": "NYCAC-ROOT-RECONCILIATION", "points": 8 },
+    { "id": "NYCAC-POPULATION-CLOSURE", "points": 14 },
+    { "id": "NYCAC-DISPOSITION-CLOSURE", "points": 12 },
+    { "id": "NYCAC-CAPTURE-COVERAGE", "points": 8 },
+    { "id": "NYCAC-PRIORITY-REVIEW", "points": 8 },
+    { "id": "NYCAC-PROTECTED-SOURCE-GOVERNANCE", "points": 12 },
+    { "id": "NYCAC-PUBLIC-LEAKAGE-GUARD", "points": 12 },
+    { "id": "NYCAC-CREDIT-AND-BOUNDARIES", "points": 8 },
+    { "id": "NYCAC-SELECTIVE-PROJECTION", "points": 6 },
+    { "id": "NYCAC-PORTFOLIO-CLARITY", "points": 4 },
+    { "id": "NYCAC-APPLICATION-UTILITY", "points": 4 },
+    { "id": "NYCAC-HUMAN-GATES", "points": 4 }
+  ]
+}

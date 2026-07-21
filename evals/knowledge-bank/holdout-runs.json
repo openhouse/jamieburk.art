@@ -1,0 +1,837 @@
+{
+  "version": 1,
+  "runs": [
+    {
+      "judgeId": "independent-run-1-public-interest-red-team",
+      "completedAt": "2026-07-14T16:15:58Z",
+      "lens": "Fresh, skeptical public-interest portfolio editor and evaluation red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "candidate-independent-run-2",
+      "completedAt": "2026-07-14T16:20:16Z",
+      "lens": "Skeptical civic-policy researcher and adversarial evaluation engineer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-press-readings",
+      "completedAt": "2026-07-14T20:45:00-04:00",
+      "lens": "Protocol reset because the prior holdouts predated article-level maturation of the campaign press corpus",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the 44 reading records, partial-source boundary, redirect defense, direct-attribution observations, and decision to keep the corpus off the public site."
+      ]
+    },
+    {
+      "judgeId": "nycac-press-holdout-policy-editor-final-2026-07-14",
+      "completedAt": "2026-07-14T21:17:08-04:00",
+      "lens": "Skeptical civic-policy researcher, hiring editor, and adversarial evaluation engineer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-press-holdout-archivist-final-2026-07-14",
+      "completedAt": "2026-07-14T21:17:17-04:00",
+      "lens": "Skeptical public-interest archivist and public-safety and copyright editor",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-kc-town-hall-council-funding",
+      "completedAt": "2026-07-14T22:05:00-04:00",
+      "lens": "Protocol reset because the prior holdouts predated ingestion of the KC Town Hall Board recommendation, Council acceptance and appropriation, and later non-disbursement and withdrawal record",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 1, 1, 1, 1, 5, 5, 1, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the four official records, actor-action separation, appropriation-versus-disbursement boundary, later withdrawal and return, public projection, and adversarial eval gates."
+      ]
+    },
+    {
+      "judgeId": "kc-town-hall-holdout-municipal-archivist-2026-07-14",
+      "completedAt": "2026-07-14T22:09:19-04:00",
+      "lens": "Independent municipal archivist and public-record integrity reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "kc-town-hall-holdout-skeptical-editor-2026-07-14",
+      "completedAt": "2026-07-14T22:49:23-04:00",
+      "lens": "Independent skeptical hiring editor, civic-policy researcher, and causal-claims red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-kc-town-hall-stewardship-transition",
+      "completedAt": "2026-07-14T22:57:21-04:00",
+      "lens": "Protocol reset because the prior holdouts predated Jamie's bounded stewardship-transition memory lead and its explicit non-projection and privacy controls",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 1, 1, 5, 1, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that the stewardship transition remains an uncorroborated held memory lead, that the receiving organization is not identified, that private personal context is absent, and that the public website and municipal lifecycle claims remain unchanged."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-icloud-working-archive-production",
+      "completedAt": "2026-07-14T23:45:00-04:00",
+      "lens": "Protocol reset because the prior holdouts predated the public-safe production of Jamie Projects History, CRS, and job-hunt working archives",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 5, 1, 1, 1, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the nine intakes, eleven bounded sources, eighteen atomic observations, seven claims, four inquiries, private-source controls, protected website projections, held creative-technology claims, and adversarial regression tests."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-google-drive-shared-drive-production",
+      "completedAt": "2026-07-14T23:46:49-04:00",
+      "lens": "Protocol reset because the prior holdouts predated the public-safe production of Jamie's Google Drive Shared Drives",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 5, 1, 1, 1, 1, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the six Shared Drive intakes, six bounded protected sources, nine atomic observations, two selected workflow claims, four held research inquiries, private-data controls, media authorship and rights boundaries, website projection, content hash, and adversarial regression tests."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nter-chng-archival-recovery",
+      "completedAt": "2026-07-15T00:01:11-04:00",
+      "lens": "Protocol reset because the prior holdout state predated recovery of NTER CHNG's collaborative credit and America: Now and Here exhibition record",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 5, 1, 5, 1, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the archived shared creator credit, installation form and date triangulation, America: Now and Here inclusion, Nerman context boundary, held projection, component-labor anti-claims, updated content hash, and adversarial regression tests together with the cumulative Shared Drive production."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-count-preserving-red-team-rejected-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent municipal archivist and count-preserving mutation reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4],
+      "accepted": false,
+      "blockers": [
+        "Count-preserving claim rewrites and rendered-proof mutations remained acceptable after approval-hash refresh."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-remote-municipal-archivist-rejected-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Fresh independent municipal archivist, preservation specialist, and causal-claims red-team reviewer",
+      "weightedScore": 2.2,
+      "criterionScores": [5, 5, 1, 1, 1, 1, 1, 5, 1, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Approval-hash refresh defeated the initial content-hash gate for survey authorship, tire operations, Cleveland sole credit and capital causation, held projections, and public proof paraphrases."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-municipal-archivist-lexical-rejection-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent municipal archivist, preservation specialist, and causal-claims red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4],
+      "accepted": false,
+      "blockers": [
+        "Pronoun substitutions and adjacent vocabulary for resident polling, tire removal, corridor beautification, stabilization, and resident-input systems bypassed lexical guards after approval-hash refresh."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-skeptical-editor-surface-rejection-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent skeptical hiring editor, neighborhood-planning researcher, privacy reviewer, and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 3],
+      "accepted": false,
+      "blockers": [
+        "Initial build-out, finished cold-shell, Burkart, proposal-completion, proof, and MDX paraphrases exposed public-surface gaps after editable approval refreshes."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-public-review-report-rejection-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent municipal archivist, preservation specialist, and causal-claims red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4],
+      "accepted": false,
+      "blockers": [
+        "The public field-practice review document remained outside the initial code-level review locks."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-municipal-archivist-final-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent municipal archivist, preservation specialist, and causal-claims red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "kcth-field-holdout-skeptical-hiring-editor-final-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent skeptical hiring editor, neighborhood-planning researcher, privacy reviewer, and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-nycac-social-population-2026-07-15",
+      "completedAt": "2026-07-15T08:35:00Z",
+      "lens": "Protocol reset because the prior holdout state predated the 3,123-record NYC Artist Coalition retrievable-population production and selective website projection",
+      "weightedScore": 3.9,
+      "criterionScores": [5, 5, 5, 5, 1, 4, 5, 5, 5, 5, 5, 5, 5, 3, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect population reconciliation, row identity, repost-source and incoming-engagement separation, source-post date boundaries, displayed-interaction semantics, collective authorship, public-safety controls, the generated citation registry, and count-preserving mutation resistance."
+      ]
+    },
+    {
+      "judgeId": "nycac-social-holdout-archivist-preliminary-2026-07-15",
+      "completedAt": "2026-07-15T08:42:00Z",
+      "lens": "Independent social-movement archivist, public-record integrity reviewer, and platform-data provenance specialist",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-social-holdout-skeptical-editor-rejected-2026-07-15",
+      "completedAt": "2026-07-15T08:44:00Z",
+      "lens": "Independent skeptical hiring editor, civic-policy researcher, data-quality red-team reviewer, privacy and collective-credit editor",
+      "weightedScore": 4.5,
+      "criterionScores": [5, 5, 5, 5, 1, 4, 5, 5, 5, 5, 5, 5, 5, 3, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "The selected NYCAC claim was absent from the generated public citation registry.",
+        "Count-preserving author, source-date, displayed-destination, and classification-digest row mutations could bypass aggregate checks.",
+        "A passing review must inspect a frozen repaired revision."
+      ]
+    },
+    {
+      "judgeId": "nycac-social-holdout-data-integrity-stale-lock-rejected-2026-07-15",
+      "completedAt": "2026-07-15T09:02:00Z",
+      "lens": "Independent archival data-integrity engineer, platform provenance specialist, and adversarial evaluation reviewer",
+      "weightedScore": 2.2,
+      "criterionScores": [1, 5, 1, 1, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "The institutional related-claims approval lock was stale after the new NYC Artist Coalition claim entered the governed claim set.",
+        "The full knowledge-eval suite could not pass until the cumulative lock matched the independently recomputed claim-set digest."
+      ]
+    },
+    {
+      "judgeId": "nycac-social-holdout-hiring-editor-stale-lock-rejected-2026-07-15",
+      "completedAt": "2026-07-15T09:03:00Z",
+      "lens": "Independent skeptical public-interest hiring editor, civic-policy researcher, privacy and collective-credit reviewer",
+      "weightedScore": 2.2,
+      "criterionScores": [1, 5, 1, 1, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "The institutional related-claims approval lock did not match the current governed claim set.",
+        "The corrected lock changes the frozen revision and requires two fresh final holdouts."
+      ]
+    },
+    {
+      "judgeId": "nycac-social-holdout-data-integrity-final-2-2026-07-15",
+      "completedAt": "2026-07-15T09:04:00Z",
+      "lens": "Independent archival data-integrity engineer, platform provenance specialist, and adversarial evaluation reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-social-holdout-hiring-editor-final-2-2026-07-15",
+      "completedAt": "2026-07-15T09:04:16Z",
+      "lens": "Independent skeptical public-interest hiring editor, civic-policy researcher, privacy and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-urbanhermit-full-population-2026-07-15",
+      "completedAt": "2026-07-15T09:35:27Z",
+      "lens": "Protocol reset because the prior holdout state predated the 434-record Urbanhermit full live-profile population, personal-context controls, source maturation, and dedicated adversarial criterion",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the live-profile versus owner-archive boundary, row-level reconciliation, source authorship, posted-link and mission classifications, personal-context exclusions, stakeholder and interaction semantics, public safety, source-specific role claims, selective non-projection, and count-preserving mutation resistance on a frozen revision."
+      ]
+    },
+    {
+      "judgeId": "urbanhermit-holdout-hiring-editor-credit-2026-07-15-final-b",
+      "completedAt": "2026-07-15T09:57:00Z",
+      "lens": "Independent skeptical hiring editor, collective-credit reviewer, and public-interest portfolio editor",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "urbanhermit-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T10:00:00Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, and Git-history reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "The committed holdout regression still expected the superseded NYC Artist Coalition judge IDs instead of naming the Urbanhermit review cycle."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-urbanhermit-holdout-contract-2026-07-15",
+      "completedAt": "2026-07-15T10:01:16Z",
+      "lens": "Protocol reset after replacing the stale NYC Artist Coalition holdout regression with two predeclared Urbanhermit final reviewer IDs",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must review the repaired holdout contract and unchanged public-safe Urbanhermit content on a newly frozen revision."
+      ]
+    },
+    {
+      "judgeId": "urbanhermit-holdout-data-integrity-privacy-2026-07-15-final-c",
+      "completedAt": "2026-07-15T10:07:00Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, mutation-resistance, and Git-history reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "urbanhermit-holdout-hiring-editor-credit-2026-07-15-final-d",
+      "completedAt": "2026-07-15T10:07:35Z",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-events-2026-07-15",
+      "completedAt": "2026-07-15T14:30:00Z",
+      "lens": "Protocol reset because the prior holdout state predates the 34-slot NYC Artist Coalition Facebook event population, 33 recovered public records, unresolved-slot accounting, platform-volatility recheck, source routing, response-label controls, role boundaries, and dedicated adversarial criterion",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect population reconciliation, authenticated-public provenance, later route volatility, response-versus-attendance semantics, private-link exclusions, role attribution, collective credit, selective projection, and count-preserving mutation resistance on a frozen revision."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T11:11:16Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, mutation-resistance, and Git-history reviewer",
+      "weightedScore": 3.6,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "In-memory population overrides could add raw descriptions, attendee identities, contact data, meeting credentials, private documents, or session state while the event and safety criteria remained 5.",
+        "Count-preserving date, relation, venue, identity, availability, article-route, and withheld-link mutations could retain an event score of 5 because the review lock hashed only the on-disk fixture text.",
+        "The nonexistence check accepted an affirmative falsehood, and in-memory proof, source, and observation overclaims were outside the event review-lock digest."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-c",
+      "completedAt": "2026-07-15T07:25:58-04:00",
+      "lens": "Independent archival data-integrity, privacy, provenance, mutation-resistance, and Git-history reviewer",
+      "weightedScore": 3.2,
+      "criterionScores": [5, 5, 1, 5, 5, 1, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "The structural digest omitted the Facebook event review summary and article-source ID configuration.",
+        "Five reused press sources were omitted from the event digest and privacy scan, allowing source-level overclaim mutations to pass.",
+        "A reused article source could receive private contact, meeting, session, or local-path data while the event safety criterion remained 5.",
+        "The participation proof-coverage record and Fair Rent NYC page bindings were outside the event dependency digest."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-e",
+      "completedAt": "2026-07-15T11:44:34Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-f",
+      "completedAt": "2026-07-15T07:51:07-04:00",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-personal-wowlist-facebook-events-2026-07-15",
+      "completedAt": "2026-07-15T14:08:37Z",
+      "lens": "Protocol reset because the prior holdout state predates the 511-instance personal Facebook event census, zero-card current WOW List owner surface, anonymous public-safe ledger, selected public organizer records, source routes, milestone projections, and nineteenth adversarial criterion",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect population reconciliation, anonymous-ledger privacy, profile-association and organizer-attribution boundaries, source-route roles, response semantics, WOW List historical-zero framing, Sunday Dinner milestone limits, collective credit, selective projection, governance bindings, and count-preserving mutation resistance on a frozen revision."
+      ]
+    },
+    {
+      "judgeId": "personal-wowlist-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T14:20:53Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, mutation-resistance, and Git-history review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "personal-wowlist-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-b",
+      "completedAt": "2026-07-15T14:18:21Z",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, collective-credit reviewer, and archival interpretation reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-nter-chng-protected-artifacts-2026-07-15",
+      "completedAt": "2026-07-15T14:38:22Z",
+      "lens": "Protocol reset because the prior holdout state predates two protected NTER CHNG working artifacts, four bounded observations, revised shared-credit and hybrid-production evidence, participant-data exclusions, and approval-hash-resistant privacy and role tests",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect protected-source privacy, participant-data exclusion, public-safe paraphrase, prospective-plan boundaries, collective credit, component-labor non-attribution, held website status, and approval-hash-resistant mutation defenses on a frozen revision."
+      ]
+    },
+    {
+      "judgeId": "nter-chng-protected-artifacts-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T10:56:46-04:00",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 1,
+      "criterionScores": [1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Protected intake URLs and protected-to-public disposition changes survived an archive approval-hash refresh.",
+        "Participant email, quotation, and private logistics survived an archive approval-hash refresh.",
+        "Completed-work, individual-lead, Nerman-display, audience-traction, collaborator-erasure, and commission-and-award mutations survived an archive approval-hash refresh.",
+        "NTER CHNG copy placed in an unrelated active claim bypassed the held-claim projection check."
+      ]
+    },
+    {
+      "judgeId": "nter-chng-protected-artifacts-holdout-archival-credit-editor-2026-07-15-final-b",
+      "completedAt": "2026-07-15T14:54:46Z",
+      "lens": "Independent archival interpretation, collective-credit, public-safety, hiring-portfolio, and approval-hash-resistant adversarial review",
+      "weightedScore": 3,
+      "criterionScores": [5, 5, 1, 1, 5, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Collaborator erasure and sole-creation language did not fail the safety and agency criteria after an approval-hash refresh.",
+        "Software-lead and installation-lead titles did not fail maturation after an approval-hash refresh.",
+        "Completed restaging, commission, award, endorsement, audience, engagement, impact, adoption, and Barbara Kruger collaboration claims did not fail scope after an approval-hash refresh.",
+        "A participant-message quotation did not fail safety after an approval-hash refresh."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nter-chng-protected-artifact-review-locks-2026-07-15",
+      "completedAt": "2026-07-15T15:10:00Z",
+      "lens": "Protocol reset after converting every escaped protected-artifact mutation into an immutable semantic review lock and permanent adversarial regression",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that the repaired protected-intake, privacy, prospective-plan, collective-credit, individual-role, audience-impact, exhibition-status, and selective-projection controls reject their full attack matrices after ordinary approval hashes are refreshed."
+      ]
+    },
+    {
+      "judgeId": "nter-chng-protected-artifacts-holdout-data-integrity-privacy-2026-07-15-final-c",
+      "completedAt": "2026-07-15T15:18:03Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nter-chng-protected-artifacts-holdout-archival-credit-editor-2026-07-15-final-d",
+      "completedAt": "2026-07-15T11:18:09-04:00",
+      "lens": "Independent archival interpretation, collective-credit, public-safety, hiring-portfolio, and approval-hash-resistant mutation review of the frozen repaired candidate",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-wowlist-facebook-posts-2026-07-15",
+      "completedAt": "2026-07-15T16:05:40Z",
+      "lens": "Protocol reset because the prior holdout state predates the 57-post WOW List Facebook live-feed census, 55-route URL inventory, organizer-workflow and care-routing analysis, displayed-interaction boundaries, native-export gap, held projection decision, and twentieth adversarial criterion",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the frozen 57-row population reconciliation, raw-body and social-graph exclusions, URL source roles, shared-source and post-authorship semantics, collective credit, displayed-interaction limits, Business Suite versus live-feed boundary, native-export gap, held website projection, and count-preserving mutation resistance."
+      ]
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T16:20:42Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-b",
+      "completedAt": "2026-07-15T16:31:29Z",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, collective-credit reviewer, and archival interpretation reviewer",
+      "weightedScore": 4.6,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "The Shelby Turner tutorial route was misclassified as mutual-aid-and-civic-mobilization rather than independent product-use evidence.",
+        "The URL inventory lacked separate evidentiary role, access, and preservation dispositions for future recovery work.",
+        "The evaluator froze the faulty route classification instead of asserting the source-specific truth."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-wowlist-facebook-route-semantics-2026-07-15",
+      "completedAt": "2026-07-15T16:35:00Z",
+      "lens": "Protocol reset after repairing the Shelby tutorial classification and expanding every posted URL into separate mission-context, evidentiary-role, access, preservation, and governed-source fields",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify the repaired 55-route semantic inventory, the seven governed-source and 48 inventory-only dispositions, source-specific truth assertions, recovery-state boundaries, and the original population, privacy, credit, traction, and selective-projection controls."
+      ]
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-c",
+      "completedAt": "2026-07-15T12:53:39-04:00",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-d",
+      "completedAt": "2026-07-15T13:02:23-04:00",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, collective-credit reviewer, and archival interpretation reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Six governed routes lacked checksum-refresh-resistant exact semantic assertions: count-preserving evidence-role and governed-versus-inventory lifecycle swaps failed only the editable review checksum."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-wowlist-facebook-governed-route-semantics-2026-07-15",
+      "completedAt": "2026-07-15T17:08:00Z",
+      "lens": "Protocol reset after adding exact checksum-independent semantic assertions for all seven governed Facebook routes and permanent count-preserving role and lifecycle regressions",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that every governed route retains its exact URL, chronology, mission context, evidence role, recovered access state, preservation state, and source ID after ordinary review checksums are refreshed."
+      ]
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-e",
+      "completedAt": "2026-07-15T17:25:36Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-f",
+      "completedAt": "2026-07-15T13:38:22-04:00",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, collective-credit reviewer, archival interpretation reviewer, and checksum-refresh-resistant mutation reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Criterion 20 lacked checksum-independent semantic protection against ten adjacent editorial overclaims in held projection wording."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-wowlist-facebook-projection-semantics-2026-07-15",
+      "completedAt": "2026-07-15T17:45:00Z",
+      "lens": "Protocol reset after adding an exact checksum-independent semantic contract for every held WOW List Facebook projection and permanent regressions for ten adjacent editorial overclaims",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that passive sole credit, current access recast as historical authorship, distribution recast as agreement, issue context recast as coverage, source relationships recast as partnerships or adoption, route and interaction counts recast as impact, volatility omitted from maxima, capture completeness recast as lifetime history, and an empty bounded Business Suite window recast as historical nonexistence all fail independently of ordinary review checksums."
+      ]
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-g",
+      "completedAt": "2026-07-15T13:55:13-04:00",
+      "lens": "Fresh independent archival data-integrity, privacy, provenance, and mutation-resistance review of frozen commit dc89243c9b44645d4e71529d39ae5b8fee63ea7a",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-h",
+      "completedAt": "2026-07-15T13:53:19-04:00",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, collective-credit reviewer, archival interpretation reviewer, and checksum-refresh-resistant semantic reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-2026-07-15",
+      "completedAt": "2026-07-15T18:30:00-04:00",
+      "lens": "Protocol reset because the prior holdouts predated the 445-post NYC Artist Coalition Facebook Page census, 67-route source inventory, mission and stakeholder classifications, displayed-interaction boundaries, collective-authorship controls, selective website projection, and twenty-first deterministic criterion",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the frozen 445-row capture-date population, 598-to-445 render reconciliation, 67-route inventory, nine governed-source semantics, two withheld sensitive routes, mission and stakeholder reference boundaries, displayed interactions, shared-account authorship, raw-data exclusions, selective website projection, and count-preserving mutation resistance."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T15:10:16-04:00",
+      "lens": "Fresh independent archival data-integrity, privacy, provenance, source-closure, public-projection, and checksum-refresh-resistant mutation review of frozen commit 450830995e9c526af878af2b4353718758a079e1",
+      "weightedScore": 2.8,
+      "criterionScores": [5, 1, 1, 5, 5, 1, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Two committed tests failed: the aggregate test expected acceptance during the deliberate reset, and the report mutation did not cross a Markdown line break.",
+        "Count-preserving attacks could expose withheld Zoom or Google routes while moving the null disposition to another route.",
+        "Top-level and adjacent private-field injections relied on review locks instead of structural allowlists.",
+        "Several capture, authorship, stakeholder, and impact overclaims relied on editable locks instead of checksum-independent semantics.",
+        "Account-reference totals were aggregate-only rather than recomputable from rows.",
+        "Repeated content fingerprints prevented independent row-identity confirmation from the public-safe ledger."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-holdout-repair-2026-07-15",
+      "completedAt": "2026-07-15T15:35:00-04:00",
+      "lens": "Protocol reset after the rejected holdout prompted unique one-way row reconciliation hashes, row-level account-reference classifications, exact withheld-route semantics, complete object allowlists, hard-coded aggregate meanings, editorial inflation guards, and repaired mutation tests",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the repaired frozen candidate and verify that row identity, withheld-route privacy, object structure, account-reference semantics, editorial boundaries, and mutation tests now resist count-preserving and checksum-refresh attacks."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-d",
+      "completedAt": "2026-07-15T15:35:42-04:00",
+      "lens": "Fresh independent skeptical hiring, public-interest portfolio, civic-policy, collective-credit, and adversarial evaluation review of frozen commit fff947fe08d9925d99ca3777fd3164dcd99f04c0",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-c",
+      "completedAt": "2026-07-15T15:39:35-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, source-closure, projection, and mutation-resistance review of frozen commit fff947fe08d9925d99ca3777fd3164dcd99f04c0",
+      "weightedScore": 4.2,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "A checksum-independent work-page mutation claiming that zero displayed shares meant nobody shared the posts bypassed the editorial-inflation guard because its broad negation whitelist treated the word no as a safe boundary.",
+        "The committed mutation suite lacked a permanent regression for the unlocked work-page path."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-no-sharing-guard-2026-07-15",
+      "completedAt": "2026-07-15T15:43:54-04:00",
+      "lens": "Protocol reset after separating the dangerous no-sharing assertion from legitimate relationship-level negation and adding a permanent public-work-page regression",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that no displayed share label cannot become a claim of no sharing anywhere in claims, proofs, reports, or public work data while legitimate bounded negations remain accepted."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-e",
+      "completedAt": "2026-07-15T15:54:52-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, source-closure, projection, and mutation-resistance review of frozen commit 276b32634e5c9a6852c8bb617c97ff81257a8f86",
+      "weightedScore": 4.2,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "The unlocked work-page path still accepted the past-tense and pronoun variant Zero displayed shares meant nobody shared the posts because the permanent guard covered means, proves, shows, and no one only."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-f",
+      "completedAt": "2026-07-15T19:54:11Z",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, collective-credit reviewer, and checksum-refresh-resistant adversarial evaluator",
+      "weightedScore": 3.2,
+      "criterionScores": [5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Unlocked public work and checksum-refreshed proof paths still accepted passive sole authorship, source distribution as agreement, every linked article as coalition coverage, and reaction totals as unique people."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-assertion-families-2026-07-15",
+      "completedAt": "2026-07-15T15:56:43-04:00",
+      "lens": "Protocol reset after expanding checksum-independent editorial protection across tense, pronoun, passive-credit, source-agreement, coverage, and unique-person assertion families with explicit safe-negation regressions",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must invent adjacent public-work and proof wording and verify that sole credit, agreement or coverage, interaction-as-people, and no-sharing assertions fail independently of ordinary review checksums while their explicit negations remain valid."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-h",
+      "completedAt": "2026-07-15T16:13:14-04:00",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, collective-credit reviewer, and checksum-independent adversarial evaluation reviewer",
+      "weightedScore": 3.2,
+      "criterionScores": [5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Fresh adjacent formulations still bypassed the deny-list in unlocked work and checksum-refreshed proof fields, including sole authorship, current-custody authorship, source agreement, article coverage, stakeholder endorsement, policy causation, interactions as people, no-sharing inferences, and raw private prose."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-g",
+      "completedAt": "2026-07-15T16:16:05-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, source-closure, projection, and checksum-refresh-resistant mutation review of frozen commit 037b7bcfb1d49e8757d709bec161e3751191419a",
+      "weightedScore": 3.2,
+      "criterionScores": [5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Fresh prose variants and a sentence-wide negation bypass remained possible in work, proof, and report fields; review-summary metrics and private content inserted into allowed manifest metadata fields depended only on refreshable locks."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-structured-public-contracts-2026-07-15",
+      "completedAt": "2026-07-15T16:18:54-04:00",
+      "lens": "Protocol reset after replacing deny-list dependence with structured allowlisted contracts for work evidence, every public proof field, report blocks, manifest metadata, and review-summary values, plus clause-level negation handling",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must mutate the actual structured work-evidence array, proof fields, report block inventory, manifest metadata, and review-summary object and verify that unapproved assertions or private content fail by construction even when ordinary review checksums are refreshed."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-j",
+      "completedAt": "2026-07-15T16:38:44-04:00",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, collective-credit reviewer, and adversarial evaluation reviewer of frozen commit 0c9102943a7920f589a6dcdd6a8bb9ac8dc717e1",
+      "weightedScore": 4.2,
+      "criterionScores": [5, 5, 5, 5, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "The 445-post and 67-route aggregate existed only in unused data and was not reachable by a hiring reader on a rendered website surface."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-i",
+      "completedAt": "2026-07-15T16:39:20-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, source-closure, structured-contract, and mutation-resistance review of frozen commit 0c9102943a7920f589a6dcdd6a8bb9ac8dc717e1",
+      "weightedScore": 4.2,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Population, mission, stakeholder, route, and interaction aggregate summary values remained lock-only, allowing false metrics or private prose in approved structured fields after checksum refresh."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-rendered-proof-and-aggregate-contracts-2026-07-15",
+      "completedAt": "2026-07-15T16:42:23-04:00",
+      "lens": "Protocol reset after projecting the governed aggregate directly into the FairRentNYC case study and adding exact typed contracts for every manifest aggregate summary",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that the cited 445-post and 67-route claim is visibly rendered on the FairRentNYC case study and that every aggregate summary value rejects type, count, prose, and private-identity mutations independently of editable configuration and review checksums."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-k",
+      "completedAt": "2026-07-15T17:02:45-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, and mutation-resistance review of frozen commit 6f2b16cf148deaa53cdff04f9318205f5435c206",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-l",
+      "completedAt": "2026-07-15T17:03:43-04:00",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, collective-credit reviewer, and checksum-refresh-resistant adversarial evaluation reviewer of frozen commit 6f2b16cf148deaa53cdff04f9318205f5435c206",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "blind-spot-holdout-data-integrity-2026-07-15-b",
+      "completedAt": "2026-07-15T19:55:05-04:00",
+      "lens": "Fresh independent data-integrity, privacy, research-methods, and adversarial review of the initial 32-criterion blind-spot control candidate",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "accepted": false,
+      "blockers": [
+        "All eleven initial blind-spot controls accepted checksum-refreshed hostile rewrites because polarity-insensitive substring checks could retain required terms while reversing their meaning; no blind-spot mutation tests yet covered those attacks."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-blind-spot-semantic-review-locks-2026-07-15",
+      "completedAt": "2026-07-15T19:57:45-04:00",
+      "lens": "Protocol reset after replacing polarity-insensitive token checks with manifest, document, and per-control semantic review locks and adding eleven checksum-refresh mutation attacks",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that semantic reversals fail even when the editable approval checksum is refreshed, while the control plane still distinguishes governed gaps from resolved evidence."
+      ]
+    },
+    {
+      "judgeId": "blind-spot-holdout-hiring-credit-2026-07-15-final-a",
+      "completedAt": "2026-07-15T20:02:48-04:00",
+      "lens": "Fresh read-only skeptical hiring, public-interest, collective-credit, and evaluation audit of the 32-criterion candidate after semantic review-lock repair",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "blind-spot-holdout-data-integrity-2026-07-15-final-b",
+      "completedAt": "2026-07-15T20:02:59-04:00",
+      "lens": "Fresh independent read-only data-integrity, privacy, research-methods, and checksum-refresh-resistant adversarial review of the repaired 32-criterion candidate",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    }
+  ]
+}

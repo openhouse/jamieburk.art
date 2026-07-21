@@ -1,0 +1,36 @@
+{
+  "baseUrl": "http://127.0.0.1:3045",
+  "route": "/about",
+  "homepageAboutLink": {
+    "visible": true,
+    "href": "/about"
+  },
+  "contentAssertions": {
+    "throughLineHeading": "Systems people can inhabit",
+    "relationshipRows": 4,
+    "interfaceAndUseRows": 4,
+    "learningAndContinuityRows": 4,
+    "publicOpenHouseSourceLinks": 1
+  },
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "consoleErrors": 0,
+      "screenshot": "professor-lenses-about-desktop.png"
+    },
+    {
+      "name": "mobile",
+      "width": 375,
+      "height": 812,
+      "documentScrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "consoleErrors": 0,
+      "screenshot": "professor-lenses-about-mobile.png"
+    }
+  ],
+  "passed": true
+}

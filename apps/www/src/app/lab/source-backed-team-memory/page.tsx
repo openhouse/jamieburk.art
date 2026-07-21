@@ -1,7 +1,8 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
+import { Claim, References } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
-import { requireReadyOrCarefulProof } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -13,7 +14,20 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function SourceBackedTeamMemoryPage() {
-  const methodProof = requireReadyOrCarefulProof("source-backed-team-memory-method");
+  const workedExample = [
+    {
+      label: "Known",
+      text: "A public project brief records the launch date, intended audience, and approved owner of a decision."
+    },
+    {
+      label: "Open",
+      text: "Two meeting summaries describe adoption differently, so the shared record flags the discrepancy for review."
+    },
+    {
+      label: "Protected",
+      text: "Private transcripts, contact details, and unapproved collaborator context remain outside the public memory."
+    }
+  ];
 
   return (
     <article className="jb-frame py-12">
@@ -23,7 +37,11 @@ export default function SourceBackedTeamMemoryPage() {
           Source-Backed Team Memory
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          {methodProof.publicWording}
+          <Claim
+            claimId="CLM-SOURCE-BACKED-MEMORY-METHOD-2026"
+            projection="case-study"
+            surface="/lab/source-backed-team-memory"
+          />
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
@@ -35,6 +53,68 @@ export default function SourceBackedTeamMemoryPage() {
         <div className="mt-10 space-y-6">
           <SourceBackedMemory />
         </div>
+        <section className="mt-12 border-y border-jb-ink/12 py-10">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Worked example
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
+            One source enters; three review states remain visible
+          </h2>
+          <p className="mt-4 max-w-3xl leading-8 text-jb-ink/76">
+            This synthetic example shows the method without exposing a private
+            archive. The system does not force disagreement into certainty.
+            It preserves what is supported, what needs review, and what should
+            stay outside the public record.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {workedExample.map((item) => (
+              <div
+                className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5"
+                key={item.label}
+              >
+                <h3 className="text-xl font-semibold text-jb-blue">{item.label}</h3>
+                <p className="mt-3 text-sm leading-6 text-jb-ink/74">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="mt-12 grid gap-6 border-b border-jb-ink/12 pb-10 lg:grid-cols-[0.58fr_0.42fr] lg:items-center">
+          <figure className="overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">
+            <Image
+              alt="Certificate of completion for AI Evals for Engineers and PMs, awarded to James Burkart by Hamel Husain and Shreya Shankar through Maven."
+              className="h-auto w-full"
+              height={584}
+              sizes="(min-width: 1024px) 58vw, 100vw"
+              src="/artifacts/ai-evals/completion-certificate.jpg"
+              width={1024}
+            />
+            <figcaption className="border-t border-jb-ink/10 p-4 text-sm leading-6 text-jb-ink/76">
+              Public completion certificate. Professional development,
+              not instructor affiliation or a claim that the lab is production SaaS.
+            </figcaption>
+          </figure>
+          <div>
+            <p className="text-sm font-semibold uppercase text-jb-blue">
+              Evaluation practice
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
+              Human review is part of the system
+            </h2>
+            <p className="mt-4 leading-8 text-jb-ink/76">
+              <Claim
+                claimId="CLM-AI-EVALS-COURSE-COMPLETION-2026"
+                projection="case-study"
+                surface="/lab/source-backed-team-memory"
+                pageId="source-backed-team-memory"
+                occurrenceId="ai-evals-course-completion"
+              />{" "}
+              The coursework supports this lab&apos;s
+              emphasis on error analysis, annotation, traces, retrieval quality,
+              and reviewable failure modes.
+            </p>
+          </div>
+        </section>
+        <References pageId="source-backed-team-memory" />
         <div className="mt-10 flex flex-wrap gap-3">
           <JBButton href="/work" variant="secondary">
             View selected work

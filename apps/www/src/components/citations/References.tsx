@@ -20,11 +20,16 @@ export function References({ pageId }: ReferencesProps) {
         These notes preserve what each source supports and where its limits
         remain. See something that needs correction? <Link href="/contact">Contact Jamie</Link>.
       </p>
-      <ol>
-        {references.map((reference) => (
-          <SourceNote key={reference.source.id} {...reference} />
-        ))}
-      </ol>
+      <details className="mt-4">
+        <summary className="cursor-pointer font-semibold text-jb-blue">
+          View {references.length} source {references.length === 1 ? "note" : "notes"}
+        </summary>
+        <ol>
+          {references.map((reference) => (
+            <SourceNote key={reference.source.id} {...reference} />
+          ))}
+        </ol>
+      </details>
     </section>
   );
 }

@@ -3,13 +3,9 @@ import {
   AtAGlance,
   ArtifactGallery,
   ArtifactList,
-  CareNote,
   CreditsList,
   KnownOpenProtected,
   LinksList,
-  PublicSafetyNote,
-  SourceLayer,
-  VisibilityNote
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { References } from "@/components/citations";
@@ -39,10 +35,9 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </div>
         <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
           <AtAGlance item={item} />
-          <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
@@ -54,11 +49,6 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         <ArtifactList item={item} />
         <ArtifactGallery item={item} />
         <KnownOpenProtected item={item} />
-        <div className="grid gap-4 md:grid-cols-2">
-          <CareNote item={item} />
-          <PublicSafetyNote item={item} />
-          <SourceLayer item={item} />
-        </div>
         <LinksList item={item} />
         <CreditsList item={item} />
       </div>

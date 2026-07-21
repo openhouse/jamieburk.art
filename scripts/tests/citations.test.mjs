@@ -28,8 +28,35 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
+test("KC Town Hall keeps contribution evidence separate from municipal lifecycle evidence", () => {
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "council-appropriation-lifecycle").sources.map((item) => item.source.id),
+    [
+      "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+      "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+      "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+      "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+    ]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "jamie-planning-contribution").sources.map((item) => item.source.id),
+    ["SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "public-service-interface").sources.map((item) => item.source.id),
+    [
+      "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+      "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+      "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+      "SRC-KCMO-COUNCIL-ROSTER-2018",
+      "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"
+    ]
+  );
+});
+
 test("Claim resolver returns only active approved projections", () => {
   assert.match(getClaimProjection("CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "case-study", "/work/callnyc").text, /first CouncilStat hackathon/);
+  assert.match(getClaimProjection("CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE", "case-study", "/work/fair-rent-nyc").text, /3,123 unique public records/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
@@ -37,7 +64,11 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 3);
+  assert.equal(knowledgeBank.corrections.length, 4);
+  assert.ok(knowledgeBank.corrections.some((correction) =>
+    correction.id === "COR-NYCAC-CABARET-HEARING-DATE-2026" &&
+    correction.replacementText === "September 14, 2017"
+  ));
 });
 
 test("negative research preserves scope and limitations", () => {
@@ -62,4 +93,5 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(references, /role="doc-endnotes"/);
   assert.match(references, /<ol>/);
   assert.match(sourceNote, /role="doc-backlink"/);
+  assert.match(sourceNote, /Official document/);
 });
