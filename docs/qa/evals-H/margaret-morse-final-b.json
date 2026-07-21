@@ -1,0 +1,40 @@
+{
+  "evaluator": "Independent holdout reader - PR-015 Margaret Morse lens",
+  "reviewerId": "morse-b-employment-release",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The independently calculated fingerprint of the candidate subset matches the expected SHA-256.",
+    "The About page frames the lineage as systems people can inhabit, connecting relationships, participation, memory, continuity, and collective governance to artistic, civic, technical, and social practice.",
+    "Harry J. Epstein Company treats customer language, product judgment, institutional voice, internal habits, documentation, and customer follow-up as parts of one maintained operating system.",
+    "FairRentNYC and NYC Artist Coalition treat meetings, public sources, lived experience, collaborators, action pathways, minutes, question logs, source maps, and decision records as structural coalition infrastructure.",
+    "WOWList models organizers' existing community vocabulary through followable communities, distributed publishing, event workflows, digests, and embeddable calendars rather than imposing a centralized editorial structure.",
+    "Sunday Dinner and 196 explicitly turn hospitality, trust, invitations, hosting, onboarding, access handoffs, facilitation, consent, and recurring rhythms into participation infrastructure.",
+    "Source-Backed Team Memory makes human review, disagreement, protected context, and known/open/protected states structural parts of the method rather than optional safeguards.",
+    "Historical and current capability remain distinguishable: Open House is dated to 2006, WOWList and Sunday Dinner/196 are labeled historical, HJE and coalition work are dated through the present, and the lab is bounded as early research rather than a finished production product."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Collective work remains collectively credited, including participant governance, co-built platforms, collaborator-used civic systems, and explicit rejection of sole-causation claims.",
+    "The source note withholds protected educational records, grades, identifiers, private paths, correspondence, and testimonial projection.",
+    "The public course certificate is bounded as professional development, not affiliation, endorsement, or production-product proof.",
+    "No blocker involving protected educational records, participant privacy, collective credit, or historical-to-current overclaiming was found."
+  ],
+  "recommendation": "Pass PR-015 at score 4. The candidate demonstrates at least four project-specific continuities in which participation, hospitality, care, documentation, and relationships materially structure systems people use, influence, remember, and continue.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "processSessionId": "019f785d-3004-7d21-8fbe-6f16197f21a5",
+    "agentNickname": "Gibbs",
+    "model": "gpt-5.6-sol",
+    "reasoningEffort": "xhigh",
+    "sandbox": "read-only",
+    "ephemeral": true,
+    "resultTransport": "multi_agent_v1__wait_agent-completed",
+    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
+    "startedAt": "2026-07-19T03:13:20.894Z",
+    "completedAt": "2026-07-19T03:17:30.035Z"
+  }
+}

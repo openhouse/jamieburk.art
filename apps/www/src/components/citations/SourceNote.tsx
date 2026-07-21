@@ -20,7 +20,10 @@ export function SourceNote({ backlinks, noteId, number, source }: SourceNoteProp
   const secondaryLinks = [
     { label: "Original post", url: source.canonicalUrl },
     { label: "Archived copy", url: source.archiveUrl },
-    { label: "Image", url: source.assetUrl }
+    {
+      label: source.kind === "government-record" ? "Official document" : "Image",
+      url: source.assetUrl
+    }
   ].filter(
     (item, index, items) =>
       item.url &&

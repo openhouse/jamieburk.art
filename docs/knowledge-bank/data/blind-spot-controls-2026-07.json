@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-15",
+  "evaluationSemantics": {
+    "criterionPassMeaning": "The blind spot has an honest baseline, evidence plan, stopping rule, anti-gaming rule, and public-projection boundary. Passing does not mean the missing evidence has been recovered or the blind spot has been resolved.",
+    "instrumentedIsNotValidated": true,
+    "externalEvidenceCannotBeSynthesized": true
+  },
+  "knownLaunchTasksExcluded": [
+    "Jamie approves the exact production commit",
+    "Dokku, domain, TLS, smoke, and rollback verification",
+    "Explicit production indexing approval"
+  ],
+  "controls": [
+    {
+      "id": "BLIND-HUMAN-CORROBORATION",
+      "label": "Human collaborator corroboration",
+      "status": "open",
+      "baseline": {
+        "governedCollaboratorNotes": 0,
+        "interpretation": "The public repository currently contains no governed first-hand collaborator note. Participant memory and AI-assisted archival review are not collaborator testimony."
+      },
+      "currentEvidence": [
+        "Source-backed records, public documents, repositories, and participant-memory leads",
+        "Explicit source-role and first-hand-witness boundaries"
+      ],
+      "gap": "Material individual-role claims still need bounded corroboration from people who directly shared the work.",
+      "requiredEvidence": [
+        "At least three permissioned collaborator notes across at least two project families",
+        "Each note identifies first-hand scope, uncertainty, collective context, and permitted public use",
+        "Contradictions and corrections remain visible rather than averaged away"
+      ],
+      "passWhen": [
+        "Three governed collaborator notes exist across two project families",
+        "Every note records permission and quote or paraphrase terms",
+        "No note is represented as independent evidence when it merely repeats Jamie's prompt"
+      ],
+      "antiGaming": [
+        "Never synthesize or backfill collaborator testimony",
+        "Never attribute an AI archival review to a human witness",
+        "Never count a request for corroboration as corroboration"
+      ],
+      "nextAction": "Run a bounded corroboration sprint for NYC Artist Coalition, recent technical operations, and one Kansas City project.",
+      "publicProjectionRule": "Project collaborator evidence only after explicit use permission; preserve uncertainty and collective credit."
+    },
+    {
+      "id": "BLIND-POPULATION-DENOMINATOR",
+      "label": "Population denominator and archive completeness",
+      "status": "partially-controlled",
+      "baseline": {
+        "governedPopulationReviewCriteria": 9,
+        "interpretation": "Several social surfaces have capture-date censuses, but owner exports and inaccessible historical surfaces remain open in multiple records."
+      },
+      "currentEvidence": [
+        "Capture-date population manifests for selected X and Facebook surfaces",
+        "Explicit recovered, not-recovered, duplicate, withheld, and owner-export-gap dispositions"
+      ],
+      "gap": "A retrieved interface population is not necessarily a lifetime account population, and missing owner archives can change the denominator.",
+      "requiredEvidence": [
+        "Every completeness claim names the surface, account, capture date, and denominator",
+        "Owner-export and platform-access gaps remain explicit",
+        "Not recovered remains distinct from did not exist"
+      ],
+      "passWhen": [
+        "Every population claim has a bounded denominator and capture method",
+        "Every unresolved owner-export or platform gap has an inquiry and stopping condition",
+        "No capture-date census is described as lifetime-complete without an owner export"
+      ],
+      "antiGaming": [
+        "Never convert not recovered into did not exist",
+        "Never call an interface result a lifetime population without a complete owner export",
+        "Never hide duplicate, withheld, or unavailable rows to improve completeness"
+      ],
+      "nextAction": "Acquire and reconcile owner exports where available, beginning with the project accounts that currently have the widest stated gaps.",
+      "publicProjectionRule": "Publish only bounded counts with the surface and capture date close enough for a reader to understand the denominator."
+    },
+    {
+      "id": "BLIND-COLLECTIVE-REVIEW",
+      "label": "Collective credit and collaborator review",
+      "status": "open",
+      "baseline": {
+        "governedCollaboratorReviewRounds": 0,
+        "interpretation": "The knowledge bank models individual, shared, collective, and institutional agency, but no formal collaborator review round is recorded."
+      },
+      "currentEvidence": [
+        "Agency graph with explicit credit scopes",
+        "Claim-level boundaries against sole authorship and sole causation"
+      ],
+      "gap": "Structured credit rules do not substitute for the perspectives of collaborators whose work is represented.",
+      "requiredEvidence": [
+        "A correction and dissent path available to represented collaborators",
+        "A bounded review note for at least two collective projects",
+        "Attribution changes logged without suppressing disagreement"
+      ],
+      "passWhen": [
+        "At least two collective project records receive collaborator review",
+        "Reviewers can correct, qualify, or dissent without granting Jamie veto power over their account",
+        "Public copy distinguishes Jamie's contribution from coalition and institutional outcomes"
+      ],
+      "antiGaming": [
+        "Never treat silence or non-response as approval",
+        "Never require a collaborator to endorse the portfolio's interpretation",
+        "Never collapse collective work into sole credit"
+      ],
+      "nextAction": "Invite bounded review of the NYC Artist Coalition and KC Spaces Fund records with a plain-language correction and dissent option.",
+      "publicProjectionRule": "Use collaborator review to improve attribution, not to manufacture endorsement."
+    },
+    {
+      "id": "BLIND-RECENT-OPERATIONS",
+      "label": "Recent paid technical and operational evidence",
+      "status": "partially-controlled",
+      "baseline": {
+        "priorityProofIds": [
+          "hje-modernization-stewardship",
+          "source-backed-team-memory-method",
+          "sunday-dinner-196-participation-infrastructure"
+        ],
+        "interpretation": "Recent records show stewardship, residency workflow, and a source-backed method, but public evidence of paid operational delivery, release mechanics, and client outcomes remains uneven or protected."
+      },
+      "currentEvidence": [
+        "Public-safe Harry J. Epstein modernization and stewardship claim",
+        "A documented 2023 residency handoff workflow",
+        "A 2026 source-backed team-memory proposal and method"
+      ],
+      "gap": "The portfolio's strongest public civic history is deeper than its independently corroborated recent paid technical-operations record.",
+      "requiredEvidence": [
+        "Recent examples covering requirements, tool choices, release or deployment, quality checks, and handoff",
+        "Independent or approved aggregate corroboration of scope and outcome",
+        "Clear separation between delivered client work, an operating method, and a proposal"
+      ],
+      "passWhen": [
+        "At least two recent paid engagements have public-safe end-to-end operational proof",
+        "Each example names Jamie's role, collaborators, delivery boundary, and observable result",
+        "Proposals and pilots are not labeled as completed client delivery"
+      ],
+      "antiGaming": [
+        "Never present a proposal as delivered work",
+        "Never disclose protected client records to make a claim look recent",
+        "Never infer business outcome from technical activity alone"
+      ],
+      "nextAction": "Normalize two recent engagements into requirements-to-handoff proof records, seeking approved aggregate corroboration where direct materials are protected.",
+      "publicProjectionRule": "Project the clearest recent operational examples for hiring readers while keeping protected client detail outside the public repo."
+    },
+    {
+      "id": "BLIND-OUTCOME-EVIDENCE",
+      "label": "Outcome and impact evidence",
+      "status": "partially-controlled",
+      "baseline": {
+        "evidenceLevels": [
+          "activity",
+          "output",
+          "outcome",
+          "impact"
+        ],
+        "interpretation": "The bank preserves many activities and outputs and several institutional outcomes; longer-term impact evidence is less complete and often shared across many actors."
+      },
+      "currentEvidence": [
+        "Government records for selected legislative and funding outcomes",
+        "Bounded delivery and participation outputs",
+        "Explicit anti-causation and collective-credit rules"
+      ],
+      "gap": "Visible activity, event attendance, press, reactions, and implementation outputs can be mistaken for durable outcomes or attributable impact.",
+      "requiredEvidence": [
+        "Every public proof is classified as activity, output, outcome, or impact",
+        "Outcome and impact claims identify a source, time horizon, comparator where possible, and attribution boundary",
+        "Social engagement remains a distribution or response signal unless stronger evidence connects it to an outcome"
+      ],
+      "passWhen": [
+        "Every prominent proof names its evidence level",
+        "At least three portfolio projects have independently sourced outcome evidence",
+        "No activity or social metric is projected as impact"
+      ],
+      "antiGaming": [
+        "Never relabel output as outcome to improve the portfolio",
+        "Never use reactions, reposts, press volume, or attendance as impact by themselves",
+        "Never claim sole causal responsibility for a collective or institutional outcome"
+      ],
+      "nextAction": "Classify current proof claims by evidence level and prioritize outcome-source research for recent operations, NYC Artist Coalition, and KC Town Hall.",
+      "publicProjectionRule": "Use the strongest accurately classified evidence and state contribution separately from institutional result."
+    },
+    {
+      "id": "BLIND-ROLE-POSITIONING",
+      "label": "Role-specific positioning",
+      "status": "partially-controlled",
+      "baseline": {
+        "roleTracks": [
+          "technical project management",
+          "product operations",
+          "implementation"
+        ],
+        "interpretation": "The site and LLM evaluations address all three tracks, but the same evidence is not yet governed through an explicit role-to-proof projection map tested with real hiring readers."
+      },
+      "currentEvidence": [
+        "Role-fit language across work, resume, and technical-operations surfaces",
+        "LLM evaluations for positioning, evidence, voice, and reading burden"
+      ],
+      "gap": "A broad interdisciplinary record can read as diffuse when each target role requires a different ordering of the same proof.",
+      "requiredEvidence": [
+        "A role-to-proof map for all three target tracks",
+        "Role-specific page and resume variants that preserve the same canonical claims",
+        "Real-reader comprehension checks for role, level, and next-step fit"
+      ],
+      "passWhen": [
+        "Each role track has a ranked proof sequence and explicit exclusion rules",
+        "Unfamiliar readers can identify Jamie's target role and strongest matching evidence",
+        "Variants do not create unsupported or contradictory claims"
+      ],
+      "antiGaming": [
+        "Never change the underlying fact to fit a role",
+        "Never solve positioning by listing every project",
+        "Never treat an LLM's role classification as real-reader validation"
+      ],
+      "nextAction": "Create the three role-to-proof maps, then test one application-specific composition from each map.",
+      "publicProjectionRule": "Reorder and compress governed proof for the role; do not rewrite canonical facts."
+    },
+    {
+      "id": "BLIND-HIRING-USABILITY",
+      "label": "Fresh-human hiring usability",
+      "status": "open",
+      "baseline": {
+        "governedHumanSessions": 0,
+        "interpretation": "No governed usability record from an unfamiliar hiring reader is stored in the repository. LLM review is useful preflight evidence, not a substitute."
+      },
+      "currentEvidence": [
+        "Deterministic site checks",
+        "LLM evaluations for positioning, evidence, voice, and reading burden"
+      ],
+      "gap": "The system does not yet know whether an unfamiliar recruiter or hiring manager can quickly understand Jamie's role, evidence, and intended next step.",
+      "requiredEvidence": [
+        "At least five unfamiliar reviewers across at least two role families",
+        "At least three realistic tasks: identify role, find relevant proof, and decide or explain a next step",
+        "Time, success, confidence, misunderstanding, and correction data"
+      ],
+      "passWhen": [
+        "Five governed sessions are complete across two role families",
+        "At least four of five readers identify the intended role and one defensible supporting proof without coaching",
+        "Every material misunderstanding has a disposition or repair"
+      ],
+      "antiGaming": [
+        "Never count collaborators already familiar with the work as unfamiliar readers",
+        "Never coach a participant toward the intended answer",
+        "Never invent or simulate human usability results"
+      ],
+      "nextAction": "Run five short task-based sessions using the staging site and the role-specific resume, preserving only consented aggregate findings.",
+      "publicProjectionRule": "Use aggregate findings to improve hierarchy and language; do not publish participant identities or raw session material."
+    },
+    {
+      "id": "BLIND-JOB-FUNNEL",
+      "label": "Job-search funnel learning",
+      "status": "open",
+      "baseline": {
+        "governedAggregatePeriods": 0,
+        "rawDataLocation": "private-outside-public-repo",
+        "interpretation": "The public repository contains no governed aggregate application-funnel baseline, and employer, contact, and application-level records must remain private."
+      },
+      "currentEvidence": [
+        "A portfolio and role-fit evaluation system",
+        "Private job-search working materials outside the public repository"
+      ],
+      "gap": "Without aggregate funnel instrumentation, portfolio changes cannot be connected even cautiously to screens, interviews, referrals, or offers.",
+      "requiredEvidence": [
+        "Private event-level tracking with date range, role family, application variant, referral, screen, interview, decision, and source",
+        "Public-repo storage limited to de-identified aggregate periods and methodology",
+        "Enough observations to distinguish signal from one-off outcomes"
+      ],
+      "passWhen": [
+        "At least one governed aggregate period exists with a declared denominator",
+        "Application variants can be compared without exposing employers, contacts, or private correspondence",
+        "No causal portfolio claim is made from a small uncontrolled sample"
+      ],
+      "antiGaming": [
+        "Never place raw application, employer, contact, or correspondence data in the public repo",
+        "Never cherry-pick only successful applications",
+        "Never claim the portfolio caused an outcome from observational funnel data"
+      ],
+      "nextAction": "Define a private event schema and publish only a de-identified aggregate methodology plus a first bounded reporting period.",
+      "publicProjectionRule": "Keep the funnel private; only de-identified aggregate learning and methodology may enter the repository."
+    },
+    {
+      "id": "BLIND-EXTERNAL-VALIDITY",
+      "label": "External validity of the evaluation system",
+      "status": "open",
+      "baseline": {
+        "governedRealHumanJudgeRuns": 0,
+        "internalEvidenceTypes": [
+          "deterministic checks",
+          "LLM judges",
+          "mutation tests"
+        ],
+        "interpretation": "Internal checks show consistency and resistance to known failure modes; they do not establish real hiring-reader understanding or job-search outcomes."
+      },
+      "currentEvidence": [
+        "Deterministic repository checks",
+        "Adversarial mutation tests",
+        "Fresh LLM holdout reviews"
+      ],
+      "gap": "A system can optimize against its own judges while missing behaviors and interpretations that matter outside the system.",
+      "requiredEvidence": [
+        "Real-human hiring usability results",
+        "Periodic blind review of claims and role fit by people who did not author the criteria",
+        "Comparison between internal eval predictions and later aggregate funnel observations"
+      ],
+      "passWhen": [
+        "At least two independent human review rounds are governed",
+        "Internal and external disagreements are recorded and used to revise criteria",
+        "The system reports calibration limits rather than declaring itself validated"
+      ],
+      "antiGaming": [
+        "Never treat deterministic or LLM eval success as hiring impact",
+        "Never label an internal agent run as a human judgment",
+        "Never discard external disagreement because it lowers a score"
+      ],
+      "nextAction": "Pair the hiring-usability sessions with a blind claim-and-positioning review, then compare the external findings with current eval predictions.",
+      "publicProjectionRule": "Keep evaluation claims modest: the system controls evidence and composition risk; external human and outcome validation remains separate."
+    },
+    {
+      "id": "BLIND-VISUAL-EVIDENCE",
+      "label": "Visual archive, rights, and evidentiary use",
+      "status": "partially-controlled",
+      "baseline": {
+        "requiredDimensions": [
+          "rights",
+          "consent",
+          "provenance",
+          "caption",
+          "evidentiary-function"
+        ],
+        "interpretation": "The knowledge lifecycle includes a photo-feedback path and rejects self-interpreting images, but the large visual archive is not yet a governed public-ready corpus."
+      },
+      "currentEvidence": [
+        "Photo-feedback chain in the knowledge-bank lifecycle",
+        "Anti-gaming rule that a photograph is neither self-interpreting proof nor consent to publish"
+      ],
+      "gap": "Images can strengthen specificity, reveal new research leads, or expose people and contexts without adequate rights, consent, provenance, or captioning.",
+      "requiredEvidence": [
+        "Every selected image has rights, consent, provenance, caption, and evidentiary-function dispositions",
+        "Visual claims link back to governed sources or become research inquiries",
+        "Sensitive people, places, and documents receive explicit privacy review"
+      ],
+      "passWhen": [
+        "A pilot corpus for at least three priority projects passes all five dimensions",
+        "Every projected image has an accurate caption and use decision",
+        "Visual discoveries enter the claim lifecycle without becoming automatic proof"
+      ],
+      "antiGaming": [
+        "Never treat custody or presence in an archive as publication permission",
+        "Never treat an image as self-interpreting evidence",
+        "Never use visual drama to imply a role or outcome the record does not support"
+      ],
+      "nextAction": "Run a three-project photo-editor pilot with rights, consent, provenance, caption, and evidentiary-function review.",
+      "publicProjectionRule": "Publish only images with an explicit use decision and captions that state what the image does and does not show."
+    },
+    {
+      "id": "BLIND-VOICE-HUMAN-STAKES",
+      "label": "Writer's voice and human stakes",
+      "status": "partially-controlled",
+      "baseline": {
+        "requiredDimensions": [
+          "motive",
+          "relationship",
+          "learning",
+          "specificity"
+        ],
+        "interpretation": "The site has voice-focused LLM review, but evidence governance can flatten the lived motives, relationships, and learning that make the work intelligible."
+      },
+      "currentEvidence": [
+        "A writer's-voice reference and LLM voice evaluation",
+        "Project records with participant memory, context, and bounded first-person interpretation"
+      ],
+      "gap": "Proof language can become bloodless or generic, while ungoverned narrative can invent scenes, motives, or emotional certainty.",
+      "requiredEvidence": [
+        "Editorial review for motive, relationship, learning, and specificity",
+        "Dated or situated first-person material for any scene or remembered exchange",
+        "Clear distinction among fact, participant memory, interpretation, and public claim"
+      ],
+      "passWhen": [
+        "Every major case study includes a specific human stake without weakening source boundaries",
+        "Jamie confirms that the public composition sounds like him",
+        "No anecdote, quotation, motive, or emotional state is fabricated"
+      ],
+      "antiGaming": [
+        "Never fabricate an anecdote, quotation, motive, or emotional state",
+        "Never use generic inspiration language in place of a concrete stake",
+        "Never let proof jargon erase collaborators, conflict, uncertainty, or learning"
+      ],
+      "nextAction": "Run a voice-and-stakes editorial pass on the homepage and three priority case studies using dated, situated source material.",
+      "publicProjectionRule": "Compose from governed fact and attributed memory in Jamie's voice; keep the human reason visible and the epistemic status clear."
+    }
+  ]
+}

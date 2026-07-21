@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "decisionDate": "2026-07-19",
+  "base": {
+    "branch": "develop",
+    "sha": "2ec37fe6e47d11e600ede204d19a98f7d3cff139"
+  },
+  "target": {
+    "branch": "feature/wiki-C",
+    "pullRequestBase": "develop"
+  },
+  "canonicalArchitecture": "feature/knowledge-wiki-E",
+  "frozenDonors": [
+    {
+      "branch": "feature/knowledge-wiki-A",
+      "sha": "920f9024d7e058700f282e3e1e76188fe1c5294e",
+      "strength": "source-to-story editorial workflow, public knowledge in participants' own terms, and visual-rights sequencing",
+      "disposition": "adapted",
+      "destinations": [
+        "docs/knowledge-bank/indexes/canonical-story-bank.md",
+        "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md",
+        "docs/knowledge-bank/indexes/visual-evidence.md"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-B",
+      "sha": "268a92d794f5b604f4004fc9d6e5652f234fc61b",
+      "strength": "editorial depth across shared identity, embodied learning, situated work, and explicitly human-authored stakes",
+      "disposition": "adapted",
+      "destinations": [
+        "docs/knowledge-bank/methods/identity-systems-as-shared-infrastructure.md",
+        "docs/knowledge-bank/methods/learning-through-making.md",
+        "docs/knowledge-bank/methods/what-is-at-stake-for-me.md"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-C",
+      "sha": "6a2af7396240381ce04aad9b9129ba402b83c134",
+      "strength": "hiring-legible campaign narratives, outcome and adoption distinctions, and exact claim-advancement tests",
+      "disposition": "adapted",
+      "destinations": [
+        "docs/knowledge-bank/methods/outcomes-and-adoption.md",
+        "docs/knowledge-bank/indexes/claim-maturity-dashboard.md",
+        "docs/knowledge-bank/methods/jamie-at-work.md",
+        "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md",
+        "docs/knowledge-bank/projects/let-nyc-dance.md",
+        "docs/knowledge-bank/projects/talks-not-raids.md"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-D",
+      "sha": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b",
+      "strength": "human-readable relation semantics, operational evidence mapping, maintenance, and bounded review units",
+      "disposition": "adapted",
+      "destinations": [
+        "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+        "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
+        "docs/knowledge-bank/capabilities/implementation-and-operational-stewardship.md"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-E",
+      "sha": "9f1bbfacec3edbfbc47a5200f777d4f498da0ec4",
+      "strength": "canonical graph, interpretive layer, decision records, source return, opportunity context, and selective projection",
+      "disposition": "foundation",
+      "destinations": [
+        "docs/knowledge-bank",
+        "scripts/knowledge-wiki",
+        "evals/knowledge-wiki"
+      ]
+    }
+  ],
+  "closureRules": [
+    "One canonical Wiki compiler and one governed Markdown root remain.",
+    "Donor language is adapted to the canonical schema rather than copied as a parallel subsystem.",
+    "Every selected strength has a human-readable destination and an automated acceptance criterion.",
+    "Contradictory archive denominators remain distinct until a single reproducible census contract resolves them.",
+    "No Knowledge Wiki or proofs route is added to the public website.",
+    "Automated completion does not close Jamie review, collaborator credit, consent, rights, production, or hiring gates."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "evaluator": "Independent holdout reader applying PR-016",
+  "reviewerId": "sack-a-employment-release",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The computed SHA-256 for the candidate subset exactly matches the expected fingerprint.",
+    "apps/www/src/app/about/page.tsx:91-100 plainly states the recurring sequence: recognize relationships, observe, model, prototype, test with people, document, and enable continuation.",
+    "apps/www/src/app/about/page.tsx:103-223 traces relationships, interface and use, learning, documentation, and continuity through four distinct projects.",
+    "Harry J. Epstein connects stakeholder and operating relationships to a maintained customer interface, incremental releases, analytics-guided learning, reusable patterns, and team workflows.",
+    "FairRentNYC connects lived experience, public sources, policy actors, and collaborators to source maps, campaign interfaces, collective events, running minutes, action trackers, and recoverable decision context.",
+    "WOWList connects organizer vocabulary and informal networks to a keyword-community model, publishing interfaces, documented organizer use, support materials, and reusable distribution patterns while describing the work as co-built and historical.",
+    "CallNYC connects constituent-service records to issue-pathway modeling, a bounded public prototype, documented stakeholder interaction, iteration, public documentation, and a preserved implementation repository.",
+    "apps/www/src/data/work.ts distinguishes ongoing work from historical or archived projects: HJE and FairRentNYC are marked present, WOWList and 196 are historical, CallNYC is archived, and the team-memory lab is explicitly early.",
+    "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md:54-57 defines the lens as evidence across projects rather than abstract systems language or a historical tool list."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Collective credit is preserved: Open House is described as initiated by Jamie and collectively governed; WOWList is co-built; coalition outcomes remain collective.",
+    "Protected educational records, identifiers, correspondence, grades, and private archive paths are explicitly withheld and are not reproduced.",
+    "Historical work is labeled as historical or archived and is not presented as proof of current proficiency in historical toolsets.",
+    "The source note explicitly states that the faculty lenses are not endorsements; no named professor is represented as participating in this review or endorsing Jamie."
+  ],
+  "recommendation": "Pass for employment release under the existing collective-credit, privacy, historical-status, and anti-endorsement boundaries.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "processSessionId": "019f785d-32c0-7560-95c9-20df2f9c4702",
+    "agentNickname": "Franklin",
+    "model": "gpt-5.6-sol",
+    "reasoningEffort": "xhigh",
+    "sandbox": "read-only",
+    "ephemeral": true,
+    "resultTransport": "multi_agent_v1__wait_agent-completed",
+    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
+    "startedAt": "2026-07-19T03:13:21.573Z",
+    "completedAt": "2026-07-19T03:17:30.054Z"
+  }
+}

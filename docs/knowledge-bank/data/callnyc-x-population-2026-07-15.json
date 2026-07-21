@@ -1,0 +1,4530 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-15",
+  "account": "@CallNYCapp",
+  "publicSafety": {
+    "containsRawTweetBodies": false,
+    "containsPrivateSessionData": false,
+    "note": "Public status metadata, link destinations, issue classifications, and bounded engagement observations only."
+  },
+  "populationSummary": {
+    "account": "@CallNYCapp",
+    "profileDisplayedPostCount": 110,
+    "populationDispositionCount": 110,
+    "recoveredUniqueTimelineObjects": 107,
+    "unrecoveredProfileCountRemainder": 3,
+    "recoveredDateRange": [
+      "2016-03-05T15:55:49.000Z",
+      "2016-11-14T21:20:28.000Z"
+    ],
+    "methods": [
+      "Authenticated profile Posts timeline crawl",
+      "Authenticated profile Replies timeline crawl",
+      "Authenticated date-bounded chronological search",
+      "Internet Archive CDX status-URL lookup",
+      "Per-object classification of all recovered timeline records"
+    ],
+    "relationshipCounts": {
+      "project-post": 86,
+      "project-repost": 15,
+      "project-reply": 6
+    },
+    "contentRecoveryRate": 0.973,
+    "boundary": "The pass accounts for 100 percent of the profile-reported population by disposition, not by recovered content. Three profile-counted records remain not recovered."
+  },
+  "contentSystemSummary": {
+    "recognitionPostCount": 71,
+    "recognitionTargetHandleCount": 26,
+    "recognitionDistinctIssuePageCount": 61,
+    "uniqueMentionCount": 68,
+    "uniqueHashtagCount": 96,
+    "uniquePostedShortUrlCount": 84,
+    "issueFamilyCounts": {
+      "housing-and-tenants": 38,
+      "transportation-and-streets": 19,
+      "civic-technology-and-open-data": 15,
+      "parks-environment-and-sanitation": 12,
+      "immigration-and-legal-services": 9,
+      "culture-and-community": 6,
+      "jobs-and-economic-support": 6,
+      "benefits-and-social-services": 5,
+      "government-and-democracy": 3,
+      "health-and-safety": 3
+    },
+    "stakeholderGroupCounts": {
+      "Council institution": 88,
+      "New York City Council members and offices": 82,
+      "city agencies and executive offices": 12,
+      "civic-technology community": 10,
+      "community and cultural networks": 4,
+      "legal, housing, and service organizations": 3,
+      "press and journalism": 3
+    }
+  },
+  "engagementSummary": {
+    "callNycAuthoredOrReplyPostsWithDisplayedReposts": 41,
+    "displayedReposts": 74,
+    "currentlyPublicReposterAppearances": 63,
+    "distinctCurrentlyPublicReposterAccounts": 46,
+    "displayedRepostsWithoutPublicAccountIdentity": 11,
+    "serving2016CouncilMemberReposterLowerBound": 19,
+    "councilMemberAuthoredInteractionCount": 6,
+    "boundaries": [
+      "Metrics were observed on July 15, 2026 and can change.",
+      "Public repost lists may omit private, deleted, suspended, hidden, or renamed accounts.",
+      "Metrics on the 15 external posts reposted by CallNYC belong to the original authors and are not counted as CallNYC traction.",
+      "Interaction establishes attributable public contact, not endorsement of every CallNYC claim or design choice."
+    ]
+  },
+  "councilMemberReposters": [
+    {
+      "name": "Vanessa Gibson",
+      "handle": "@BPGibson2025",
+      "sourceStatusIds": [
+        "725334082364821504"
+      ]
+    },
+    {
+      "name": "Mathieu Eugene",
+      "handle": "@CMMathieuEugene",
+      "sourceStatusIds": [
+        "723546610576306176",
+        "726080902024040448",
+        "729832019304194052"
+      ]
+    },
+    {
+      "name": "Peter Koo",
+      "handle": "@CMPeterKoo",
+      "sourceStatusIds": [
+        "725403215282487296"
+      ]
+    },
+    {
+      "name": "Margaret Chin",
+      "handle": "@CM_MargaretChin",
+      "sourceStatusIds": [
+        "731212042863005697"
+      ]
+    },
+    {
+      "name": "Ruben Wills",
+      "handle": "@CM_RubenWills",
+      "sourceStatusIds": [
+        "731873940923109376"
+      ]
+    },
+    {
+      "name": "Chaim Deutsch",
+      "handle": "@ChaimDeutsch",
+      "sourceStatusIds": [
+        "724727480909705216",
+        "729830383689281537",
+        "732370968946065408",
+        "738140834973900800"
+      ]
+    },
+    {
+      "name": "Elizabeth Crowley",
+      "handle": "@ElizCrowleyNYC",
+      "sourceStatusIds": [
+        "725445909241278468",
+        "732752376709447680"
+      ]
+    },
+    {
+      "name": "Fernando Cabrera",
+      "handle": "@FCabreraNY",
+      "sourceStatusIds": [
+        "726900698827358208"
+      ]
+    },
+    {
+      "name": "I. Daneek Miller",
+      "handle": "@IDaneekMiller",
+      "sourceStatusIds": [
+        "727528637340241920"
+      ]
+    },
+    {
+      "name": "Jimmy Van Bramer",
+      "handle": "@JimmyVanBramer",
+      "sourceStatusIds": [
+        "775370427644411904"
+      ]
+    },
+    {
+      "name": "Mark Treyger",
+      "handle": "@MarkTreyger718",
+      "sourceStatusIds": [
+        "725084356432269313",
+        "727689676115611650"
+      ]
+    },
+    {
+      "name": "David Greenfield",
+      "handle": "@NYCGreenfield",
+      "sourceStatusIds": [
+        "726819779953188865",
+        "730856560071741440"
+      ]
+    },
+    {
+      "name": "Rafael Espinal",
+      "handle": "@RLEspinal",
+      "sourceStatusIds": [
+        "725783813880684544",
+        "734492930262585344"
+      ]
+    },
+    {
+      "name": "Antonio Reynoso",
+      "handle": "@ReynosoBrooklyn",
+      "sourceStatusIds": [
+        "753631998221033472"
+      ]
+    },
+    {
+      "name": "Ritchie Torres",
+      "handle": "@RitchieTorres",
+      "sourceStatusIds": [
+        "724986599419875333"
+      ]
+    },
+    {
+      "name": "Rosie Mendez",
+      "handle": "@RosieMendez",
+      "sourceStatusIds": [
+        "733027856025047041",
+        "734492930262585344"
+      ]
+    },
+    {
+      "name": "Steven Matteo",
+      "handle": "@StevenMatteo",
+      "sourceStatusIds": [
+        "725048363528392704",
+        "727919445763575809",
+        "748532929802997760"
+      ]
+    },
+    {
+      "name": "Ben Kallos",
+      "handle": "@BenKallos",
+      "sourceStatusIds": [
+        "724723473852059649",
+        "727251825414561792"
+      ]
+    },
+    {
+      "name": "Helen Rosenthal",
+      "handle": "@HelenRosenthal",
+      "sourceStatusIds": [
+        "723153082096345092",
+        "725789777673465857"
+      ]
+    }
+  ],
+  "councilMemberAuthoredInteractions": [
+    {
+      "name": "Peter Koo",
+      "handle": "@CMPeterKoo",
+      "interaction": "authored-wrapper-post",
+      "statusId": "725422741160079360",
+      "publishedAt": "2016-04-27",
+      "statusUrl": "https://x.com/CMPeterKoo/status/725422741160079360"
+    },
+    {
+      "name": "Steven Matteo",
+      "handle": "@StevenMatteo",
+      "interaction": "reply",
+      "statusId": "727621921341358081",
+      "publishedAt": "2016-05-03",
+      "statusUrl": "https://x.com/StevenMatteo/status/727621921341358081"
+    },
+    {
+      "name": "Ruben Wills",
+      "handle": "@CM_RubenWills",
+      "interaction": "reply",
+      "statusId": "732717792097603584",
+      "publishedAt": "2016-05-17",
+      "statusUrl": "https://x.com/CM_RubenWills/status/732717792097603584"
+    },
+    {
+      "name": "Helen Rosenthal",
+      "handle": "@HelenRosenthal",
+      "interaction": "authored-post",
+      "statusId": "780797474277511170",
+      "publishedAt": "2016-09-27",
+      "statusUrl": "https://x.com/HelenRosenthal/status/780797474277511170"
+    },
+    {
+      "name": "Mathieu Eugene",
+      "handle": "@CMMathieuEugene",
+      "interaction": "quote-post",
+      "statusId": "783305320508514304",
+      "publishedAt": "2016-10-04",
+      "statusUrl": "https://x.com/CMMathieuEugene/status/783305320508514304"
+    },
+    {
+      "name": "Margaret Chin",
+      "handle": "@CM_MargaretChin",
+      "interaction": "authored-reply",
+      "statusId": "884863588317442049",
+      "publishedAt": "2017-07-11",
+      "statusUrl": "https://x.com/CM_MargaretChin/status/884863588317442049"
+    }
+  ],
+  "sourceReadings": [
+    {
+      "sourceId": "SRC-CALLNYC-POLITICO-2016-03-14",
+      "role": "direct-project-coverage",
+      "postedInRecoveredPopulation": true,
+      "url": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+    },
+    {
+      "sourceId": "SRC-CALLNYC-PPF-COUNCILMATIC-VERIFIED",
+      "role": "civic-technology-peer-context",
+      "postedInRecoveredPopulation": false,
+      "url": "https://participatorypolitics.org/become-verified-on-nyc-councilmatic/"
+    },
+    {
+      "sourceId": "SRC-CALLNYC-GIZMODO-311-EXTENSION",
+      "role": "adjacent-open-data-context",
+      "postedInRecoveredPopulation": true,
+      "url": "https://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069"
+    },
+    {
+      "sourceId": "SRC-CALLNYC-GOTHAMIST-PULASKI",
+      "role": "issue-context",
+      "postedInRecoveredPopulation": true,
+      "url": "https://gothamist.com/news/long-overdue-pulaski-bridge-bike-path-will-officially-open-friday"
+    },
+    {
+      "sourceId": "SRC-CALLNYC-HRA-HOMELESSNESS-PREVENTION",
+      "role": "public-service-guidance",
+      "postedInRecoveredPopulation": true,
+      "url": "https://www.nyc.gov/site/hra/help/homelessness-prevention.page"
+    },
+    {
+      "sourceId": "SRC-CALLNYC-NYC-RENT-FREEZE",
+      "role": "public-service-guidance",
+      "postedInRecoveredPopulation": true,
+      "url": "https://www.nyc.gov/site/rentfreeze/index.page"
+    },
+    {
+      "sourceId": "SRC-CALLNYC-311-BUDDY",
+      "role": "adjacent-civic-technology-tool",
+      "postedInRecoveredPopulation": true,
+      "url": "https://chriswhong.github.io/311buddy/"
+    }
+  ],
+  "population": [
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/ppolitics/status/706146203604492288",
+      "statusId": "706146203604492288",
+      "authorHandle": "ppolitics",
+      "publishedAt": "2016-03-05T15:55:49.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/595mNVKE1j",
+          "displayedUrl": "http://nyctwg.org"
+        },
+        {
+          "shortUrl": "https://t.co/fxKlcXONki",
+          "displayedUrl": "http://labs.council.nyc"
+        },
+        {
+          "shortUrl": "https://t.co/0998D9hEqF",
+          "displayedUrl": "http://talk.beta.nyc"
+        }
+      ],
+      "mentions": [
+        "@ppolitics",
+        "@NYCCouncil",
+        "@betanyc"
+      ],
+      "hashtags": [
+        "#NYC",
+        "#opengov"
+      ],
+      "issueFamilies": [],
+      "stakeholderGroups": [
+        "Council institution",
+        "civic-technology community"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/706208629360304128",
+      "statusId": "706208629360304128",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-03-05T20:03:52.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "displayedUrl": "http://CallNYC.org"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#nycSoData",
+        "#OpenDataDay"
+      ],
+      "issueFamilies": [
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 9
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/707677287366467584",
+      "statusId": "707677287366467584",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-03-09T21:19:47.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "displayedUrl": "http://CallNYC.org"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CallNYC"
+      ],
+      "issueFamilies": [],
+      "stakeholderGroups": [
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/710150246781882369",
+      "statusId": "710150246781882369",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-03-16T17:06:27.000Z",
+      "relationship": "project-reply",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "displayedUrl": "http://CallNYC.org"
+        },
+        {
+          "shortUrl": "https://t.co/IBvFeEBZSP",
+          "displayedUrl": "http://WOWList.org"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@noneck"
+      ],
+      "hashtags": [],
+      "issueFamilies": [
+        "civic-technology-and-open-data",
+        "culture-and-community"
+      ],
+      "stakeholderGroups": [
+        "civic-technology community",
+        "community and cultural networks"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/710154803054301184",
+      "statusId": "710154803054301184",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-03-16T17:24:33.000Z",
+      "relationship": "project-reply",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/7mstGHJlRD",
+          "displayedUrl": "http://callnyc.org/finance/tax-preparation-assistance.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@noneck"
+      ],
+      "hashtags": [],
+      "issueFamilies": [
+        "jobs-and-economic-support"
+      ],
+      "stakeholderGroups": [
+        "civic-technology community"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/710498412349800450",
+      "statusId": "710498412349800450",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-03-17T16:09:56.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/uhtgJwS83b",
+          "displayedUrl": "http://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069",
+          "resolvedUrl": "https://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@alizauf"
+      ],
+      "hashtags": [
+        "#311"
+      ],
+      "issueFamilies": [],
+      "stakeholderGroups": [
+        "civic-technology community",
+        "press and journalism"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/710507767447031808",
+      "statusId": "710507767447031808",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-03-17T16:47:07.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/mnTxsOm2u5",
+          "displayedUrl": "http://politi.co/1RW5eXZ",
+          "resolvedUrl": "http://www.capitalnewyork.com/article/city-hall/2016/03/8593638/website-allows-getting-know-councilmembers-through-data"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@Politico"
+      ],
+      "hashtags": [],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "press and journalism"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/712349795403374592",
+      "statusId": "712349795403374592",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-03-22T18:46:40.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/o34NImeSCP",
+          "displayedUrl": "http://callnyc.org"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCCouncil",
+        "@JimmyVanBramer"
+      ],
+      "hashtags": [
+        "#MostService"
+      ],
+      "issueFamilies": [],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/713537148000018432",
+      "statusId": "713537148000018432",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-03-26T01:24:47.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/3FD3LmieU3",
+          "displayedUrl": "http://CallNYC.org/api/"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCCouncil",
+        "@ppolitics",
+        "@noneck"
+      ],
+      "hashtags": [
+        "#opendata"
+      ],
+      "issueFamilies": [
+        "civic-technology-and-open-data",
+        "government-and-democracy"
+      ],
+      "stakeholderGroups": [
+        "Council institution",
+        "civic-technology community"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/chris_whong/status/715139663384547328",
+      "statusId": "715139663384547328",
+      "authorHandle": "chris_whong",
+      "publishedAt": "2016-03-30T11:32:37.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/KvWTMollyY",
+          "displayedUrl": "http://bit.ly/1Y0gSCZ",
+          "resolvedUrl": "http://chriswhong.github.io/311buddy/"
+        }
+      ],
+      "mentions": [
+        "@chris_whong",
+        "@nyc311"
+      ],
+      "hashtags": [
+        "#opendata"
+      ],
+      "issueFamilies": [
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "civic-technology community"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 8
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/722837286476390401",
+      "statusId": "722837286476390401",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-20T17:20:13.000Z",
+      "relationship": "project-reply",
+      "sourceView": "with_replies",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/QLHrhiHP1y",
+          "displayedUrl": "http://callnyc.org/api/"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ppolitics",
+        "@noneck",
+        "@NYCCouncil"
+      ],
+      "hashtags": [],
+      "issueFamilies": [
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "Council institution",
+        "civic-technology community"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/722837868008177664",
+      "statusId": "722837868008177664",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-20T17:22:32.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/2ihtdXQMGs",
+          "displayedUrl": "http://callnyc.org/immigration/u-s-citizenship.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RitchieTorres",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#USCitizenship",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "immigration-and-legal-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/722928370237853696",
+      "statusId": "722928370237853696",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-20T23:22:09.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/fkq7hzWi6c",
+          "displayedUrl": "http://callnyc.org/cultural-affairs/libraries.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@StephenLevin33",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Libraries",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "culture-and-community"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/723132373114572801",
+      "statusId": "723132373114572801",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-21T12:52:47.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/R9Bx3XNjYv",
+          "displayedUrl": "http://callnyc.org/general-welfare/food-stamps.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#FoodStamps",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "benefits-and-social-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/723153082096345092",
+      "statusId": "723153082096345092",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-21T14:15:04.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/ZQZbxgPqPx",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/landlord-managing-agent-issues.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LandlordIssues",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/723249608659443712",
+      "statusId": "723249608659443712",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-21T20:38:38.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/jP1mkW2MfY",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-new-application.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ydanis",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHANewApplication",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/723313062950907905",
+      "statusId": "723313062950907905",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-22T00:50:47.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/kb8YHA4CCc",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-building-maintenance.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHABuildingMaintenance"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/723546610576306176",
+      "statusId": "723546610576306176",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-22T16:18:49.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/KaN1Ph34OH",
+          "displayedUrl": "http://callnyc.org/legal-services/immigration.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@CMMathieuEugene",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Immigration",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "immigration-and-legal-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/723547805709676544",
+      "statusId": "723547805709676544",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-22T16:23:34.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/t4aK6PYHIG",
+          "displayedUrl": "http://callnyc.org/parks/tree-planting-pruning.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCGreenfield",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TreePlanting",
+        "#EarthDay"
+      ],
+      "issueFamilies": [
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/724723473852059649",
+      "statusId": "724723473852059649",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-25T22:15:15.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/KUZBXbkGrp",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/construction-general.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@BenKallos",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#GeneralConstruction",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/724727480909705216",
+      "statusId": "724727480909705216",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-25T22:31:10.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/UwHNuZs1qj",
+          "displayedUrl": "http://callnyc.org/parks/park-maintenance.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ParkMaintenance",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/724767660353949697",
+      "statusId": "724767660353949697",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-26T01:10:50.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/D6cgQ300iJ",
+          "displayedUrl": "http://callnyc.org/quality-of-life/noise-other.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@Dromm25",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Noise",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "health-and-safety"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/724986599419875333",
+      "statusId": "724986599419875333",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-26T15:40:49.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/7mstGHJlRD",
+          "displayedUrl": "http://callnyc.org/finance/tax-preparation-assistance.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RitchieTorres",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TaxPrepAssistance",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "jobs-and-economic-support"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 4
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725048363528392704",
+      "statusId": "725048363528392704",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-26T19:46:15.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/CfUcCUgR5v",
+          "displayedUrl": "http://callnyc.org/transportation/street-resurfacing.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#StreetResurfacing",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets",
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 4
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725052316978663426",
+      "statusId": "725052316978663426",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-26T20:01:57.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/9GUjrTPVfR",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-transfers.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@MMViverito",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHATransfer",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725084356432269313",
+      "statusId": "725084356432269313",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-26T22:09:16.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/ixqxa8cPpB",
+          "displayedUrl": "http://callnyc.org/economy-jobs/seeking-employment.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@MarkTreyger718",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Employment",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "jobs-and-economic-support"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725334082364821504",
+      "statusId": "725334082364821504",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-27T14:41:35.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/KlskCGW2jn",
+          "displayedUrl": "http://callnyc.org/cultural-affairs/community-based-organization.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@Vanessalgibson",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CommunityBasedOrg"
+      ],
+      "issueFamilies": [
+        "culture-and-community"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725403215282487296",
+      "statusId": "725403215282487296",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-27T19:16:18.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/FZduliunTG",
+          "displayedUrl": "http://callnyc.org/utilities/lifeline.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@CMPeterKoo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Lifeline",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "benefits-and-social-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725445909241278468",
+      "statusId": "725445909241278468",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-27T22:05:57.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/dQTEpirK0c",
+          "displayedUrl": "http://callnyc.org/health/animal-care-wild-animal.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ElizCrowleyNYC",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#AnimalCare",
+        "#WildAnimal"
+      ],
+      "issueFamilies": [
+        "health-and-safety"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725447728503902211",
+      "statusId": "725447728503902211",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-27T22:13:11.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/1Uo5Non4dz",
+          "displayedUrl": "http://callnyc.org/immigration/city-services-and-benefits.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@cmenchaca",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CityServicesAndBenefits"
+      ],
+      "issueFamilies": [
+        "immigration-and-legal-services",
+        "benefits-and-social-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725462205173518338",
+      "statusId": "725462205173518338",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-27T23:10:42.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/f7sPewFLeA",
+          "displayedUrl": "http://callnyc.org/general-welfare/homeless-shelter-dhs.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RosieMendez",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#HomelessShelter",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725783813880684544",
+      "statusId": "725783813880684544",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-28T20:28:40.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/grEZDUYGgo",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/affordable-housing-apartment.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#AffordableHousing",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/Gothamist/status/725788478676570113",
+      "statusId": "725788478676570113",
+      "authorHandle": "Gothamist",
+      "publishedAt": "2016-04-28T20:47:12.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/nOPVwvQhOv",
+          "displayedUrl": "http://gothamist.com/2016/04/28/pulaski_bridge_bike_path.php",
+          "resolvedUrl": "https://gothamist.com/news/long-overdue-pulaski-bridge-bike-path-will-officially-open-friday"
+        }
+      ],
+      "mentions": [
+        "@Gothamist"
+      ],
+      "hashtags": [
+        "#bikenyc"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "press and journalism"
+      ],
+      "accessTimeEngagement": {
+        "replies": 2,
+        "reposts": 10,
+        "likes": 19
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725789777673465857",
+      "statusId": "725789777673465857",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-28T20:52:22.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/48kNXGpGNx",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/lease-issue.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LeaseIssue",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/725813046631911424",
+      "statusId": "725813046631911424",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-28T22:24:49.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/Ki4PWJgXMf",
+          "displayedUrl": "http://callnyc.org/land-use-and-zoning/land-use-application-process.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LandUseApplication"
+      ],
+      "issueFamilies": [],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/726080902024040448",
+      "statusId": "726080902024040448",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-04-29T16:09:11.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/BJ0kKbfsHS",
+          "displayedUrl": "http://callnyc.org/immigration/green-card.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@CMMathieuEugene",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#GreenCard",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "immigration-and-legal-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/726819779953188865",
+      "statusId": "726819779953188865",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-01T17:05:13.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/uRvk9DxiIn",
+          "displayedUrl": "http://callnyc.org/utilities/con-edison.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCGreenfield",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ConEdison",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "jobs-and-economic-support"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 7
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/726900698827358208",
+      "statusId": "726900698827358208",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-01T22:26:46.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/xGXnqIMgz2",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/rental-arrears.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@FCabreraNY",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#RentalArrears",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727164122106847233",
+      "statusId": "727164122106847233",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-02T15:53:31.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/NPe2gejGrr",
+          "displayedUrl": "http://callnyc.org/transportation/street-lights.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#StreetLights",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets",
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727218948127739905",
+      "statusId": "727218948127739905",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-02T19:31:22.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@CallNYCapp",
+        "@spedwybabs",
+        "@Organize20"
+      ],
+      "hashtags": [
+        "#CatPictures",
+        "#org20"
+      ],
+      "issueFamilies": [
+        "culture-and-community"
+      ],
+      "stakeholderGroups": [
+        "civic-technology community",
+        "community and cultural networks"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727251825414561792",
+      "statusId": "727251825414561792",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-02T21:42:01.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/ii9fYml6sq",
+          "displayedUrl": "http://callnyc.org/transportation/bicycles.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@BenKallos",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Bicycle",
+        "#BikeMonth",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727528637340241920",
+      "statusId": "727528637340241920",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-03T16:01:58.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/fs5dINLYGQ",
+          "displayedUrl": "http://callnyc.org/sanitation/snow-removal.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@IDaneekMiller",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SnowRemoval",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727601279984381952",
+      "statusId": "727601279984381952",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-03T20:50:37.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/lSRkB621fB",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/heat-hot-water.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@MMViverito",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Heat",
+        "#HotWater",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727619816081784832",
+      "statusId": "727619816081784832",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-03T22:04:17.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/0sswRK5kfj",
+          "displayedUrl": "http://callnyc.org/transportation/pot-holes.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#PotHoles",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727689676115611650",
+      "statusId": "727689676115611650",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-04T02:41:53.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/ipg2ACxsfA",
+          "displayedUrl": "http://callnyc.org/governmental-operations/voting-information.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@MarkTreyger718",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#VotingInfo",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "government-and-democracy"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727878157076959232",
+      "statusId": "727878157076959232",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-04T15:10:50.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "displayedUrl": "http://CallNYC.org"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CouncilStat",
+        "#OpenData"
+      ],
+      "issueFamilies": [
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727880846271782913",
+      "statusId": "727880846271782913",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-04T15:21:31.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "displayedUrl": "http://CallNYC.org"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCCouncil",
+        "@CivicHall",
+        "@cartoDB",
+        "@mapzen"
+      ],
+      "hashtags": [
+        "#ConstituentServices",
+        "#OpenData",
+        "#CouncilStat"
+      ],
+      "issueFamilies": [
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "Council institution",
+        "civic-technology community"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/727919445763575809",
+      "statusId": "727919445763575809",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-04T17:54:54.000Z",
+      "relationship": "project-reply",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/0sswRK5kfj",
+          "displayedUrl": "http://callnyc.org/transportation/pot-holes.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@StevenMatteo"
+      ],
+      "hashtags": [
+        "#ConstituentServices",
+        "#OpenData"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets",
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 5
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/728001482692399104",
+      "statusId": "728001482692399104",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-04T23:20:53.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/RakQv8ztqc",
+          "displayedUrl": "http://callnyc.org/transportation/pedestrian-safety.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@bradlander",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#PedestrianSafety",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CMPeterKoo/status/728259132705353728",
+      "statusId": "728259132705353728",
+      "authorHandle": "CMPeterKoo",
+      "publishedAt": "2016-05-05T16:24:42.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@CMPeterKoo",
+        "@JihaJacques",
+        "@NYCFinance",
+        "@SelfhelpNY"
+      ],
+      "hashtags": [
+        "#SCRIE",
+        "#DRIE"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "city agencies and executive offices",
+        "legal, housing, and service organizations"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 6,
+        "likes": 2
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/728333768226947077",
+      "statusId": "728333768226947077",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-05T21:21:16.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/II5uv5lxQV",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/eviction.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Eviction",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/728666490250113026",
+      "statusId": "728666490250113026",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-06T19:23:23.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/DBrHgcWshC",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/section-8.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Section8",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/728692814079463429",
+      "statusId": "728692814079463429",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-06T21:07:59.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "displayedUrl": "http://CallNYC.org"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ConstituentService",
+        "#Tech4all"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants",
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/darrenbloch/status/729670658406400001",
+      "statusId": "729670658406400001",
+      "authorHandle": "darrenbloch",
+      "publishedAt": "2016-05-09T13:53:36.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@darrenbloch",
+        "@deBlasioNYC"
+      ],
+      "hashtags": [
+        "#NYCdigital"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants",
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 5
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CivicHall/status/729673498608685058",
+      "statusId": "729673498608685058",
+      "authorHandle": "CivicHall",
+      "publishedAt": "2016-05-09T14:04:53.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@CivicHall",
+        "@BilldeBlasio"
+      ],
+      "hashtags": [
+        "#nycdigital"
+      ],
+      "issueFamilies": [
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "city agencies and executive offices",
+        "civic-technology community"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 5
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/NYCMayorsOffice/status/729676362634629120",
+      "statusId": "729676362634629120",
+      "authorHandle": "NYCMayorsOffice",
+      "publishedAt": "2016-05-09T14:16:16.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@NYCMayorsOffice",
+        "@BillDeBlasio"
+      ],
+      "hashtags": [
+        "#NYCdigital"
+      ],
+      "issueFamilies": [
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "city agencies and executive offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 13,
+        "likes": 14
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/729713874715455488",
+      "statusId": "729713874715455488",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-09T16:45:19.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@CallNYCapp",
+        "@BilldeBlasio"
+      ],
+      "hashtags": [
+        "#nycdigital"
+      ],
+      "issueFamilies": [
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [
+        "city agencies and executive offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/729737077340946432",
+      "statusId": "729737077340946432",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-09T18:17:31.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@CallNYCapp",
+        "@BilldeBlasio",
+        "@NYCCouncil",
+        "@galeabrewer"
+      ],
+      "hashtags": [
+        "#NYCDigital",
+        "#OpenData"
+      ],
+      "issueFamilies": [
+        "civic-technology-and-open-data",
+        "government-and-democracy"
+      ],
+      "stakeholderGroups": [
+        "Council institution",
+        "city agencies and executive offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/729741165273165824",
+      "statusId": "729741165273165824",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-09T18:33:46.000Z",
+      "relationship": "project-reply",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@CallNYCapp",
+        "@ibookery",
+        "@BilldeBlasio"
+      ],
+      "hashtags": [],
+      "issueFamilies": [],
+      "stakeholderGroups": [
+        "city agencies and executive offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/729757799647981570",
+      "statusId": "729757799647981570",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-09T19:39:52.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/rgMJ2CoXGE",
+          "displayedUrl": "http://bit.ly/homelessnessprevention",
+          "resolvedUrl": "https://www.nyc.gov/site/hra/help/homelessness-prevention.page"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCHRA"
+      ],
+      "hashtags": [
+        "#AntiEviction",
+        "#FreeLegalServices"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants",
+        "immigration-and-legal-services"
+      ],
+      "stakeholderGroups": [
+        "city agencies and executive offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/729830383689281537",
+      "statusId": "729830383689281537",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-10T00:28:17.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/YMBsQlYVUD",
+          "displayedUrl": "http://callnyc.org/parks/trees-and-sidewalks-program.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TreesAndSidewalksProgram"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets",
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/729832019304194052",
+      "statusId": "729832019304194052",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-10T00:34:47.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/hYFYASsn6j",
+          "displayedUrl": "http://callnyc.org/immigration/visas.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@CMMathieuEugene",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Visas",
+        "#Immigration"
+      ],
+      "issueFamilies": [
+        "immigration-and-legal-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/729835258808537088",
+      "statusId": "729835258808537088",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-10T00:47:40.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/hYFYASaMeL",
+          "displayedUrl": "http://callnyc.org/immigration/visas.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@CMMathieuEugene",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Visas"
+      ],
+      "issueFamilies": [
+        "immigration-and-legal-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/730739253358018561",
+      "statusId": "730739253358018561",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-12T12:39:49.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/kb8YHA4CCc",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-building-maintenance.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHABuildingMaintenance"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/730838778772893696",
+      "statusId": "730838778772893696",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-12T19:15:17.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "displayedUrl": "http://CallNYC.org"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@twitter",
+        "@NYCCouncil",
+        "@MMViverito",
+        "@JimmyVanBramer"
+      ],
+      "hashtags": [
+        "#CallNYC"
+      ],
+      "issueFamilies": [],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/730842213429710850",
+      "statusId": "730842213429710850",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-12T19:28:56.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/Rr2SCkG4ha",
+          "displayedUrl": "http://callnyc.org/transportation/traffic-enforcement.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TrafficEnforcement"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/730856560071741440",
+      "statusId": "730856560071741440",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-12T20:25:57.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/uIv6B7KlFk",
+          "displayedUrl": "http://callnyc.org/sanitation/dirty-sidewalk.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCGreenfield",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#DirtySidewalks",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets",
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 9
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/StephCW_/status/730862177037488128",
+      "statusId": "730862177037488128",
+      "authorHandle": "StephCW_",
+      "publishedAt": "2016-05-12T20:48:16.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/CPuzz8aIbk",
+          "displayedUrl": "http://callnyc.org"
+        }
+      ],
+      "mentions": [
+        "@StephCW_"
+      ],
+      "hashtags": [
+        "#dataisbeautiful"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants",
+        "civic-technology-and-open-data"
+      ],
+      "stakeholderGroups": [],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/731168037433450496",
+      "statusId": "731168037433450496",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-13T17:03:39.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/ffdda0QyEM",
+          "displayedUrl": "http://callnyc.org/general-welfare/medicaid.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Medicaid",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "benefits-and-social-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/731212042863005697",
+      "statusId": "731212042863005697",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-13T19:58:30.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/lSRkB621fB",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/heat-hot-water.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@CM_MargaretChin",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Heat",
+        "#HotWater"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/731254021000986624",
+      "statusId": "731254021000986624",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-13T22:45:19.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/LfBEH2jLbI",
+          "displayedUrl": "http://callnyc.org/transportation/buses.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@BenKallos",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Buses",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/731873940923109376",
+      "statusId": "731873940923109376",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-15T15:48:39.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/4HbbAUkItU",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/violation.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@CM_RubenWills",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#BuildingsViolation",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/732370968946065408",
+      "statusId": "732370968946065408",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-17T00:43:40.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/uRvk9DxiIn",
+          "displayedUrl": "http://callnyc.org/utilities/con-edison.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ConEdison",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "jobs-and-economic-support"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/732660179540578306",
+      "statusId": "732660179540578306",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-17T19:52:53.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/pTyzAfP1VC",
+          "displayedUrl": "http://callnyc.org/transportation/traffic-signals.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TrafficSignal",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/732687384597430273",
+      "statusId": "732687384597430273",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-17T21:40:59.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/s1o4UnLYUh",
+          "displayedUrl": "http://callnyc.org/governmental-operations/idnyc.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@MMViverito",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#IDNYC",
+        "#CallNYC"
+      ],
+      "issueFamilies": [],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/732752376709447680",
+      "statusId": "732752376709447680",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-18T01:59:15.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/rswa2xGz1k",
+          "displayedUrl": "http://callnyc.org/sanitation/recycling.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ElizCrowleyNYC",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Recycling",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/732928060635373569",
+      "statusId": "732928060635373569",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-18T13:37:21.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/d7ArO9ggzv",
+          "displayedUrl": "http://callnyc.org/health/hospital-facility-or-clinic.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@MarkTreyger718",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#HospitalFacility",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "health-and-safety"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/732959093225345024",
+      "statusId": "732959093225345024",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-18T15:40:40.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@CallNYCapp",
+        "@HelenRosenthal",
+        "@RentJustice",
+        "@galeabrewer",
+        "@CoreyinNYC",
+        "@DanGarodnick",
+        "@MarkLevineNYC",
+        "@GoddardRiv"
+      ],
+      "hashtags": [
+        "#RentStabilized",
+        "#RentGuidelinesBoard"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "city agencies and executive offices",
+        "legal, housing, and service organizations"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/733027856025047041",
+      "statusId": "733027856025047041",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-18T20:13:54.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/llG6NvBbg5",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/emergency-repairs.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RosieMendez",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#EmergencyRepairs",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/733063600152141825",
+      "statusId": "733063600152141825",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-18T22:35:56.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/VhFe6Rlsgt",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/rent-overcharges.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ydanis",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#RentOvercharges",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/ydanis/status/733089563334299648",
+      "statusId": "733089563334299648",
+      "authorHandle": "ydanis",
+      "publishedAt": "2016-05-19T00:19:06.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@ydanis",
+        "@CallNYCapp",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#RentOvercharges",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/733387247362379777",
+      "statusId": "733387247362379777",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-19T20:02:00.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/U2jumuuuMK",
+          "displayedUrl": "http://callnyc.org/finance/scrie.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SCRIE",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/733388862806982656",
+      "statusId": "733388862806982656",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-19T20:08:25.000Z",
+      "relationship": "project-reply",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/hbYVTNLDAJ",
+          "displayedUrl": "http://nyc.gov/rentfreeze"
+        },
+        {
+          "shortUrl": "https://t.co/wjTEKDJRnR",
+          "displayedUrl": "https://youtube.com/watch?v=vwpGGRK4JgA",
+          "resolvedUrl": "https://www.youtube.com/watch?v=vwpGGRK4JgA"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCSeniors",
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SCRIE",
+        "#RentFreeze"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution",
+        "city agencies and executive offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/RosieMendez/status/733410096915550208",
+      "statusId": "733410096915550208",
+      "authorHandle": "RosieMendez",
+      "publishedAt": "2016-05-19T21:32:47.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@RosieMendez",
+        "@Fadonna",
+        "@EvillPunki",
+        "@shyviviana",
+        "@CarlinaRivera",
+        "@CallNYCapp",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TeamRosie",
+        "#EmergencyRepairs",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CarlinaRivera/status/733440491673489408",
+      "statusId": "733440491673489408",
+      "authorHandle": "CarlinaRivera",
+      "publishedAt": "2016-05-19T23:33:34.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@CarlinaRivera",
+        "@CallNYCapp",
+        "@RosieMendez",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCtenants",
+        "#EmergencyRepairs",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/733649303223336960",
+      "statusId": "733649303223336960",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-20T13:23:19.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/eaopIEuKTI",
+          "displayedUrl": "http://callnyc.org/transportation/sidewalks.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@NYCGreenfield",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Sidewalks",
+        "#ImWalkinHere"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/734492930262585344",
+      "statusId": "734492930262585344",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-22T21:15:35.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/ZydpCtAgvM",
+          "displayedUrl": "http://callnyc.org/legal-services/housing.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Housing",
+        "#LegalServices",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants",
+        "immigration-and-legal-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/734897908353470464",
+      "statusId": "734897908353470464",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-24T00:04:49.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/tq0BISDhHW",
+          "displayedUrl": "http://callnyc.org/transportation/parking-permits.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ParkingPermits",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets",
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/735214806249144320",
+      "statusId": "735214806249144320",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-24T21:04:04.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/EZNfChqkZ9",
+          "displayedUrl": "http://callnyc.org/transportation/speed-bump-request.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SpeedBumpRequest",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/735644754340401152",
+      "statusId": "735644754340401152",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-26T01:32:31.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/eZOLTVq7Dd",
+          "displayedUrl": "http://callnyc.org/transportation/street-signs.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#StreetSigns",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets",
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/735914869782904832",
+      "statusId": "735914869782904832",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-26T19:25:52.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/WrNWyaz9jp",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/senior-housing.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SeniorHousing",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/736904163414675456",
+      "statusId": "736904163414675456",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-05-29T12:56:58.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/VVY0b0qR3v",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-misc.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@MMViverito",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHAMisc",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/738115545002807296",
+      "statusId": "738115545002807296",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-06-01T21:10:34.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/BJ0kKbfsHS",
+          "displayedUrl": "http://callnyc.org/immigration/green-card.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#GreenCard",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "immigration-and-legal-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/738140834973900800",
+      "statusId": "738140834973900800",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-06-01T22:51:03.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/FM6CIEx4Ih",
+          "displayedUrl": "http://callnyc.org/transportation/access-a-ride.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#AccessARide",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 4
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/738458056716091392",
+      "statusId": "738458056716091392",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-06-02T19:51:35.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/MIOl6874Ns",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/building-maintenance.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#BuildingMaintenance",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/748532929802997760",
+      "statusId": "748532929802997760",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-06-30T15:05:32.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/y8HNgKVmZy",
+          "displayedUrl": "http://callnyc.org/environment/street-flooding.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#StreetFlooding",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "transportation-and-streets",
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/753631998221033472",
+      "statusId": "753631998221033472",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-07-14T16:47:24.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/7mstGHrKt3",
+          "displayedUrl": "http://callnyc.org/finance/tax-preparation-assistance.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@CMReynoso34",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TaxPrep",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "jobs-and-economic-support"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/753678962501390336",
+      "statusId": "753678962501390336",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-07-14T19:54:01.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/kb8YHzN1dC",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-building-maintenance.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@MMViverito",
+        "@NYCHA",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution",
+        "city agencies and executive offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/773637656555163648",
+      "statusId": "773637656555163648",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-09-07T21:42:45.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/grEZDUYGgo",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/affordable-housing-apartment.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@JulissaFerreras",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#AffordableHousing",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/775370427644411904",
+      "statusId": "775370427644411904",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-09-12T16:28:10.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/kb8YHA4CCc",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-building-maintenance.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHABuildingMaintenance"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/776509377897500672",
+      "statusId": "776509377897500672",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-09-15T19:53:57.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/R9Bx3XvJ6X",
+          "displayedUrl": "http://callnyc.org/general-welfare/food-stamps.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@JulissaFerreras",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#FoodStamps",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "benefits-and-social-services"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/HelenRosenthal/status/780797474277511170",
+      "statusId": "780797474277511170",
+      "authorHandle": "HelenRosenthal",
+      "publishedAt": "2016-09-27T15:53:19.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/2uxB0ADLpY",
+          "displayedUrl": "http://callnyc.org"
+        }
+      ],
+      "mentions": [
+        "@HelenRosenthal",
+        "@NYCCouncil",
+        "@MFYLegal",
+        "@GoddardRiv",
+        "@HousingConCoord"
+      ],
+      "hashtags": [],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution",
+        "legal, housing, and service organizations"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/783022174890229760",
+      "statusId": "783022174890229760",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-10-03T19:13:28.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/4dT9nvJtsb",
+          "displayedUrl": "http://callnyc.org/housing-and-buildings/hpd-housing-lottery.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@CMMathieuEugene",
+        "@NYCCouncil",
+        "@NYCHousing"
+      ],
+      "hashtags": [
+        "#HPDHousingLottery",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution",
+        "city agencies and executive offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CMMathieuEugene/status/783305320508514304",
+      "statusId": "783305320508514304",
+      "authorHandle": "CMMathieuEugene",
+      "publishedAt": "2016-10-04T13:58:36.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [],
+      "mentions": [
+        "@CMMathieuEugene",
+        "@CallNYCapp",
+        "@NYCCouncil",
+        "@NYCHousing"
+      ],
+      "hashtags": [
+        "#housing",
+        "#HPDHousingLottery",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "housing-and-tenants"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution",
+        "city agencies and executive offices"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/CallNYCapp/status/783410245632655364",
+      "statusId": "783410245632655364",
+      "authorHandle": "CallNYCapp",
+      "publishedAt": "2016-10-04T20:55:32.000Z",
+      "relationship": "project-post",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/xRaVn9NchH",
+          "displayedUrl": "http://callnyc.org/environment/water-quality.html"
+        }
+      ],
+      "mentions": [
+        "@CallNYCapp",
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#WaterQuality",
+        "#CallNYC"
+      ],
+      "issueFamilies": [
+        "parks-environment-and-sanitation"
+      ],
+      "stakeholderGroups": [
+        "New York City Council members and offices",
+        "Council institution"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/wowlist/status/796473557387575297",
+      "statusId": "796473557387575297",
+      "authorHandle": "wowlist",
+      "publishedAt": "2016-11-09T22:04:28.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/D6udDGJ7Um",
+          "displayedUrl": "https://wowlist.org/DownWithTrump"
+        }
+      ],
+      "mentions": [
+        "@wowlist"
+      ],
+      "hashtags": [
+        "#DownWithTrump"
+      ],
+      "issueFamilies": [
+        "culture-and-community"
+      ],
+      "stakeholderGroups": [
+        "community and cultural networks"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 6
+      }
+    },
+    {
+      "populationDisposition": "recovered",
+      "statusUrl": "https://x.com/wowlist/status/798274424763981824",
+      "statusId": "798274424763981824",
+      "authorHandle": "wowlist",
+      "publishedAt": "2016-11-14T21:20:28.000Z",
+      "relationship": "project-repost",
+      "sourceView": "posts",
+      "postedUrls": [
+        {
+          "shortUrl": "https://t.co/O1euiAdPmX",
+          "displayedUrl": "http://popular.vote"
+        }
+      ],
+      "mentions": [
+        "@wowlist"
+      ],
+      "hashtags": [
+        "#NotMyPresident",
+        "#WeAreThePopularVote"
+      ],
+      "issueFamilies": [
+        "culture-and-community"
+      ],
+      "stakeholderGroups": [
+        "community and cultural networks"
+      ],
+      "accessTimeEngagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      }
+    },
+    {
+      "populationDisposition": "not-recovered",
+      "populationSlot": "UNRECOVERED-01",
+      "reason": "Counted by the profile total but not exposed as a unique status object in authenticated Posts, Replies, date-bounded live search, or the Internet Archive status-URL index at review time."
+    },
+    {
+      "populationDisposition": "not-recovered",
+      "populationSlot": "UNRECOVERED-02",
+      "reason": "Counted by the profile total but not exposed as a unique status object in authenticated Posts, Replies, date-bounded live search, or the Internet Archive status-URL index at review time."
+    },
+    {
+      "populationDisposition": "not-recovered",
+      "populationSlot": "UNRECOVERED-03",
+      "reason": "Counted by the profile total but not exposed as a unique status object in authenticated Posts, Replies, date-bounded live search, or the Internet Archive status-URL index at review time."
+    }
+  ],
+  "postedUrlInventory": [
+    {
+      "shortUrl": "https://t.co/595mNVKE1j",
+      "displayedUrl": "http://nyctwg.org",
+      "statusUrl": "https://x.com/ppolitics/status/706146203604492288"
+    },
+    {
+      "shortUrl": "https://t.co/fxKlcXONki",
+      "displayedUrl": "http://labs.council.nyc",
+      "statusUrl": "https://x.com/ppolitics/status/706146203604492288"
+    },
+    {
+      "shortUrl": "https://t.co/0998D9hEqF",
+      "displayedUrl": "http://talk.beta.nyc",
+      "statusUrl": "https://x.com/ppolitics/status/706146203604492288"
+    },
+    {
+      "shortUrl": "https://t.co/yLLGsC6DRO",
+      "displayedUrl": "http://CallNYC.org",
+      "statusUrl": "https://x.com/CallNYCapp/status/730838778772893696"
+    },
+    {
+      "shortUrl": "https://t.co/IBvFeEBZSP",
+      "displayedUrl": "http://WOWList.org",
+      "statusUrl": "https://x.com/CallNYCapp/status/710150246781882369"
+    },
+    {
+      "shortUrl": "https://t.co/7mstGHJlRD",
+      "displayedUrl": "http://callnyc.org/finance/tax-preparation-assistance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/724986599419875333"
+    },
+    {
+      "shortUrl": "https://t.co/uhtgJwS83b",
+      "displayedUrl": "http://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069",
+      "resolvedUrl": "https://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069",
+      "statusUrl": "https://x.com/CallNYCapp/status/710498412349800450"
+    },
+    {
+      "shortUrl": "https://t.co/mnTxsOm2u5",
+      "displayedUrl": "http://politi.co/1RW5eXZ",
+      "resolvedUrl": "http://www.capitalnewyork.com/article/city-hall/2016/03/8593638/website-allows-getting-know-councilmembers-through-data",
+      "statusUrl": "https://x.com/CallNYCapp/status/710507767447031808"
+    },
+    {
+      "shortUrl": "https://t.co/o34NImeSCP",
+      "displayedUrl": "http://callnyc.org",
+      "statusUrl": "https://x.com/CallNYCapp/status/712349795403374592"
+    },
+    {
+      "shortUrl": "https://t.co/3FD3LmieU3",
+      "displayedUrl": "http://CallNYC.org/api/",
+      "statusUrl": "https://x.com/CallNYCapp/status/713537148000018432"
+    },
+    {
+      "shortUrl": "https://t.co/KvWTMollyY",
+      "displayedUrl": "http://bit.ly/1Y0gSCZ",
+      "resolvedUrl": "http://chriswhong.github.io/311buddy/",
+      "statusUrl": "https://x.com/chris_whong/status/715139663384547328"
+    },
+    {
+      "shortUrl": "https://t.co/QLHrhiHP1y",
+      "displayedUrl": "http://callnyc.org/api/",
+      "statusUrl": "https://x.com/CallNYCapp/status/722837286476390401"
+    },
+    {
+      "shortUrl": "https://t.co/2ihtdXQMGs",
+      "displayedUrl": "http://callnyc.org/immigration/u-s-citizenship.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/722837868008177664"
+    },
+    {
+      "shortUrl": "https://t.co/fkq7hzWi6c",
+      "displayedUrl": "http://callnyc.org/cultural-affairs/libraries.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/722928370237853696"
+    },
+    {
+      "shortUrl": "https://t.co/R9Bx3XNjYv",
+      "displayedUrl": "http://callnyc.org/general-welfare/food-stamps.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723132373114572801"
+    },
+    {
+      "shortUrl": "https://t.co/ZQZbxgPqPx",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/landlord-managing-agent-issues.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723153082096345092"
+    },
+    {
+      "shortUrl": "https://t.co/jP1mkW2MfY",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-new-application.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723249608659443712"
+    },
+    {
+      "shortUrl": "https://t.co/kb8YHA4CCc",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/775370427644411904"
+    },
+    {
+      "shortUrl": "https://t.co/KaN1Ph34OH",
+      "displayedUrl": "http://callnyc.org/legal-services/immigration.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723546610576306176"
+    },
+    {
+      "shortUrl": "https://t.co/t4aK6PYHIG",
+      "displayedUrl": "http://callnyc.org/parks/tree-planting-pruning.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723547805709676544"
+    },
+    {
+      "shortUrl": "https://t.co/KUZBXbkGrp",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/construction-general.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/724723473852059649"
+    },
+    {
+      "shortUrl": "https://t.co/UwHNuZs1qj",
+      "displayedUrl": "http://callnyc.org/parks/park-maintenance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/724727480909705216"
+    },
+    {
+      "shortUrl": "https://t.co/D6cgQ300iJ",
+      "displayedUrl": "http://callnyc.org/quality-of-life/noise-other.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/724767660353949697"
+    },
+    {
+      "shortUrl": "https://t.co/CfUcCUgR5v",
+      "displayedUrl": "http://callnyc.org/transportation/street-resurfacing.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725048363528392704"
+    },
+    {
+      "shortUrl": "https://t.co/9GUjrTPVfR",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-transfers.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725052316978663426"
+    },
+    {
+      "shortUrl": "https://t.co/ixqxa8cPpB",
+      "displayedUrl": "http://callnyc.org/economy-jobs/seeking-employment.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725084356432269313"
+    },
+    {
+      "shortUrl": "https://t.co/KlskCGW2jn",
+      "displayedUrl": "http://callnyc.org/cultural-affairs/community-based-organization.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725334082364821504"
+    },
+    {
+      "shortUrl": "https://t.co/FZduliunTG",
+      "displayedUrl": "http://callnyc.org/utilities/lifeline.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725403215282487296"
+    },
+    {
+      "shortUrl": "https://t.co/dQTEpirK0c",
+      "displayedUrl": "http://callnyc.org/health/animal-care-wild-animal.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725445909241278468"
+    },
+    {
+      "shortUrl": "https://t.co/1Uo5Non4dz",
+      "displayedUrl": "http://callnyc.org/immigration/city-services-and-benefits.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725447728503902211"
+    },
+    {
+      "shortUrl": "https://t.co/f7sPewFLeA",
+      "displayedUrl": "http://callnyc.org/general-welfare/homeless-shelter-dhs.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725462205173518338"
+    },
+    {
+      "shortUrl": "https://t.co/grEZDUYGgo",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/affordable-housing-apartment.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/773637656555163648"
+    },
+    {
+      "shortUrl": "https://t.co/nOPVwvQhOv",
+      "displayedUrl": "http://gothamist.com/2016/04/28/pulaski_bridge_bike_path.php",
+      "resolvedUrl": "https://gothamist.com/news/long-overdue-pulaski-bridge-bike-path-will-officially-open-friday",
+      "statusUrl": "https://x.com/Gothamist/status/725788478676570113"
+    },
+    {
+      "shortUrl": "https://t.co/48kNXGpGNx",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/lease-issue.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725789777673465857"
+    },
+    {
+      "shortUrl": "https://t.co/Ki4PWJgXMf",
+      "displayedUrl": "http://callnyc.org/land-use-and-zoning/land-use-application-process.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725813046631911424"
+    },
+    {
+      "shortUrl": "https://t.co/BJ0kKbfsHS",
+      "displayedUrl": "http://callnyc.org/immigration/green-card.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/738115545002807296"
+    },
+    {
+      "shortUrl": "https://t.co/uRvk9DxiIn",
+      "displayedUrl": "http://callnyc.org/utilities/con-edison.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732370968946065408"
+    },
+    {
+      "shortUrl": "https://t.co/xGXnqIMgz2",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/rental-arrears.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/726900698827358208"
+    },
+    {
+      "shortUrl": "https://t.co/NPe2gejGrr",
+      "displayedUrl": "http://callnyc.org/transportation/street-lights.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727164122106847233"
+    },
+    {
+      "shortUrl": "https://t.co/ii9fYml6sq",
+      "displayedUrl": "http://callnyc.org/transportation/bicycles.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727251825414561792"
+    },
+    {
+      "shortUrl": "https://t.co/fs5dINLYGQ",
+      "displayedUrl": "http://callnyc.org/sanitation/snow-removal.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727528637340241920"
+    },
+    {
+      "shortUrl": "https://t.co/lSRkB621fB",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/heat-hot-water.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/731212042863005697"
+    },
+    {
+      "shortUrl": "https://t.co/0sswRK5kfj",
+      "displayedUrl": "http://callnyc.org/transportation/pot-holes.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727919445763575809"
+    },
+    {
+      "shortUrl": "https://t.co/ipg2ACxsfA",
+      "displayedUrl": "http://callnyc.org/governmental-operations/voting-information.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727689676115611650"
+    },
+    {
+      "shortUrl": "https://t.co/RakQv8ztqc",
+      "displayedUrl": "http://callnyc.org/transportation/pedestrian-safety.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/728001482692399104"
+    },
+    {
+      "shortUrl": "https://t.co/II5uv5lxQV",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/eviction.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/728333768226947077"
+    },
+    {
+      "shortUrl": "https://t.co/DBrHgcWshC",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/section-8.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/728666490250113026"
+    },
+    {
+      "shortUrl": "https://t.co/rgMJ2CoXGE",
+      "displayedUrl": "http://bit.ly/homelessnessprevention",
+      "resolvedUrl": "https://www.nyc.gov/site/hra/help/homelessness-prevention.page",
+      "statusUrl": "https://x.com/CallNYCapp/status/729757799647981570"
+    },
+    {
+      "shortUrl": "https://t.co/YMBsQlYVUD",
+      "displayedUrl": "http://callnyc.org/parks/trees-and-sidewalks-program.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/729830383689281537"
+    },
+    {
+      "shortUrl": "https://t.co/hYFYASsn6j",
+      "displayedUrl": "http://callnyc.org/immigration/visas.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/729832019304194052"
+    },
+    {
+      "shortUrl": "https://t.co/hYFYASaMeL",
+      "displayedUrl": "http://callnyc.org/immigration/visas.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/729835258808537088"
+    },
+    {
+      "shortUrl": "https://t.co/Rr2SCkG4ha",
+      "displayedUrl": "http://callnyc.org/transportation/traffic-enforcement.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/730842213429710850"
+    },
+    {
+      "shortUrl": "https://t.co/uIv6B7KlFk",
+      "displayedUrl": "http://callnyc.org/sanitation/dirty-sidewalk.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/730856560071741440"
+    },
+    {
+      "shortUrl": "https://t.co/CPuzz8aIbk",
+      "displayedUrl": "http://callnyc.org",
+      "statusUrl": "https://x.com/StephCW_/status/730862177037488128"
+    },
+    {
+      "shortUrl": "https://t.co/ffdda0QyEM",
+      "displayedUrl": "http://callnyc.org/general-welfare/medicaid.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/731168037433450496"
+    },
+    {
+      "shortUrl": "https://t.co/LfBEH2jLbI",
+      "displayedUrl": "http://callnyc.org/transportation/buses.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/731254021000986624"
+    },
+    {
+      "shortUrl": "https://t.co/4HbbAUkItU",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/violation.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/731873940923109376"
+    },
+    {
+      "shortUrl": "https://t.co/pTyzAfP1VC",
+      "displayedUrl": "http://callnyc.org/transportation/traffic-signals.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732660179540578306"
+    },
+    {
+      "shortUrl": "https://t.co/s1o4UnLYUh",
+      "displayedUrl": "http://callnyc.org/governmental-operations/idnyc.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732687384597430273"
+    },
+    {
+      "shortUrl": "https://t.co/rswa2xGz1k",
+      "displayedUrl": "http://callnyc.org/sanitation/recycling.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732752376709447680"
+    },
+    {
+      "shortUrl": "https://t.co/d7ArO9ggzv",
+      "displayedUrl": "http://callnyc.org/health/hospital-facility-or-clinic.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732928060635373569"
+    },
+    {
+      "shortUrl": "https://t.co/llG6NvBbg5",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/emergency-repairs.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/733027856025047041"
+    },
+    {
+      "shortUrl": "https://t.co/VhFe6Rlsgt",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/rent-overcharges.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/733063600152141825"
+    },
+    {
+      "shortUrl": "https://t.co/U2jumuuuMK",
+      "displayedUrl": "http://callnyc.org/finance/scrie.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/733387247362379777"
+    },
+    {
+      "shortUrl": "https://t.co/hbYVTNLDAJ",
+      "displayedUrl": "http://nyc.gov/rentfreeze",
+      "statusUrl": "https://x.com/CallNYCapp/status/733388862806982656"
+    },
+    {
+      "shortUrl": "https://t.co/wjTEKDJRnR",
+      "displayedUrl": "https://youtube.com/watch?v=vwpGGRK4JgA",
+      "resolvedUrl": "https://www.youtube.com/watch?v=vwpGGRK4JgA",
+      "statusUrl": "https://x.com/CallNYCapp/status/733388862806982656"
+    },
+    {
+      "shortUrl": "https://t.co/eaopIEuKTI",
+      "displayedUrl": "http://callnyc.org/transportation/sidewalks.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/733649303223336960"
+    },
+    {
+      "shortUrl": "https://t.co/ZydpCtAgvM",
+      "displayedUrl": "http://callnyc.org/legal-services/housing.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/734492930262585344"
+    },
+    {
+      "shortUrl": "https://t.co/tq0BISDhHW",
+      "displayedUrl": "http://callnyc.org/transportation/parking-permits.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/734897908353470464"
+    },
+    {
+      "shortUrl": "https://t.co/EZNfChqkZ9",
+      "displayedUrl": "http://callnyc.org/transportation/speed-bump-request.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/735214806249144320"
+    },
+    {
+      "shortUrl": "https://t.co/eZOLTVq7Dd",
+      "displayedUrl": "http://callnyc.org/transportation/street-signs.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/735644754340401152"
+    },
+    {
+      "shortUrl": "https://t.co/WrNWyaz9jp",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/senior-housing.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/735914869782904832"
+    },
+    {
+      "shortUrl": "https://t.co/VVY0b0qR3v",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-misc.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/736904163414675456"
+    },
+    {
+      "shortUrl": "https://t.co/FM6CIEx4Ih",
+      "displayedUrl": "http://callnyc.org/transportation/access-a-ride.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/738140834973900800"
+    },
+    {
+      "shortUrl": "https://t.co/MIOl6874Ns",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/building-maintenance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/738458056716091392"
+    },
+    {
+      "shortUrl": "https://t.co/y8HNgKVmZy",
+      "displayedUrl": "http://callnyc.org/environment/street-flooding.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/748532929802997760"
+    },
+    {
+      "shortUrl": "https://t.co/7mstGHrKt3",
+      "displayedUrl": "http://callnyc.org/finance/tax-preparation-assistance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/753631998221033472"
+    },
+    {
+      "shortUrl": "https://t.co/kb8YHzN1dC",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/753678962501390336"
+    },
+    {
+      "shortUrl": "https://t.co/R9Bx3XvJ6X",
+      "displayedUrl": "http://callnyc.org/general-welfare/food-stamps.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/776509377897500672"
+    },
+    {
+      "shortUrl": "https://t.co/2uxB0ADLpY",
+      "displayedUrl": "http://callnyc.org",
+      "statusUrl": "https://x.com/HelenRosenthal/status/780797474277511170"
+    },
+    {
+      "shortUrl": "https://t.co/4dT9nvJtsb",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/hpd-housing-lottery.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/783022174890229760"
+    },
+    {
+      "shortUrl": "https://t.co/xRaVn9NchH",
+      "displayedUrl": "http://callnyc.org/environment/water-quality.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/783410245632655364"
+    },
+    {
+      "shortUrl": "https://t.co/D6udDGJ7Um",
+      "displayedUrl": "https://wowlist.org/DownWithTrump",
+      "statusUrl": "https://x.com/wowlist/status/796473557387575297"
+    },
+    {
+      "shortUrl": "https://t.co/O1euiAdPmX",
+      "displayedUrl": "http://popular.vote",
+      "statusUrl": "https://x.com/wowlist/status/798274424763981824"
+    }
+  ]
+}

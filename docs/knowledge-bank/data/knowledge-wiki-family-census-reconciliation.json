@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-19",
+  "subject": "NYC Artist Coalition authenticated shared-folder census",
+  "universalMetricStatus": "disallowed",
+  "workingSnapshot": {
+    "branch": "feature/knowledge-wiki-E",
+    "population": 2405,
+    "meaning": "The recursive accessible population reported by the selected E research run.",
+    "boundary": "This is a run-specific working snapshot, not a universal archive size or a reconciliation of the other four captures."
+  },
+  "observations": [
+    {
+      "branch": "feature/knowledge-wiki-A",
+      "sha": "920f9024d7e058700f282e3e1e76188fe1c5294e",
+      "snapshotDate": "2026-07-18",
+      "population": 2365,
+      "folderCount": 258,
+      "fileCount": 2107,
+      "populationLabel": "accessible descendants",
+      "disposition": "preserved-noncanonical"
+    },
+    {
+      "branch": "feature/knowledge-wiki-B",
+      "sha": "268a92d794f5b604f4004fc9d6e5652f234fc61b",
+      "snapshotDate": "2026-07-19",
+      "population": 2408,
+      "folderCount": 258,
+      "fileCount": null,
+      "populationLabel": "unique accessible items",
+      "disposition": "preserved-noncanonical"
+    },
+    {
+      "branch": "feature/knowledge-wiki-C",
+      "sha": "6a2af7396240381ce04aad9b9129ba402b83c134",
+      "snapshotDate": "2026-07-19",
+      "population": 2078,
+      "folderCount": 253,
+      "fileCount": 1825,
+      "populationLabel": "items reachable beneath the authenticated shared folder",
+      "disposition": "preserved-noncanonical"
+    },
+    {
+      "branch": "feature/knowledge-wiki-D",
+      "sha": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b",
+      "snapshotDate": "2026-07-19",
+      "population": 2192,
+      "folderCount": 257,
+      "fileCount": 1935,
+      "populationLabel": "reachable shared-folder descendants",
+      "disposition": "preserved-noncanonical"
+    },
+    {
+      "branch": "feature/knowledge-wiki-E",
+      "sha": "9f1bbfacec3edbfbc47a5200f777d4f498da0ec4",
+      "snapshotDate": "2026-07-19",
+      "population": 2405,
+      "folderCount": 257,
+      "fileCount": null,
+      "populationLabel": "recursive accessible population",
+      "disposition": "selected-run-specific-snapshot"
+    }
+  ],
+  "unresolved": [
+    "The records do not establish that all five runs used identical roots, shortcut handling, duplicate rules, virtualized listings, or recovery behavior.",
+    "The three-item difference between B and E is unexplained.",
+    "The larger differences involving A, C, and D are unexplained and must not be silently normalized.",
+    "No family member establishes the complete historical archive beyond its accessible snapshot."
+  ],
+  "nextProtocol": [
+    "Declare one root identifier through an opaque protected locator.",
+    "Freeze one snapshot time and one authenticated account context.",
+    "Define inclusion for the root, folders, files, shortcuts, duplicates, inaccessible objects, and virtualized rows.",
+    "Store a protected immutable manifest and publish only aggregate closure plus a digest.",
+    "Reconcile traversal and item dispositions before promoting any new count."
+  ]
+}

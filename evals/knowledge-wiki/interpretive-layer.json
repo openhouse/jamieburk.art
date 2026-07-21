@@ -1,0 +1,82 @@
+{
+  "suite": "knowledge-wiki-interpretive-layer-and-decision-records",
+  "version": 1,
+  "encounterDate": "2026-07-19",
+  "sourceEncounterId": "research.interpretive-layer-source-return.2026-07-19",
+  "livingArchiveId": "index.knowledge-wiki.living-archive",
+  "decisionIndexId": "index.knowledge-wiki.decision-records",
+  "requiredRecords": [
+    ["index.knowledge-wiki.pressures", "docs/knowledge-bank/indexes/what-the-work-was-up-against.md"],
+    ["index.knowledge-wiki.people-places-work", "docs/knowledge-bank/indexes/people-places-and-work-between-them.md"],
+    ["index.knowledge-wiki.project-lineages", "docs/knowledge-bank/indexes/project-lineages.md"],
+    ["index.knowledge-wiki.decision-records", "docs/knowledge-bank/indexes/decision-records.md"],
+    ["method.maintenance-handoff-stewardship", "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md"],
+    ["capability.civic-cultural-technical-translation", "docs/knowledge-bank/capabilities/civic-cultural-and-technical-translation.md"],
+    ["capability.implementation-operational-stewardship", "docs/knowledge-bank/capabilities/implementation-and-operational-stewardship.md"],
+    ["decision.open-house.communal-governance", "docs/knowledge-bank/decisions/open-house-communal-governance.md"],
+    ["decision.callnyc.issue-pathways", "docs/knowledge-bank/decisions/callnyc-issue-pathways.md"],
+    ["decision.hje.continuity-modernization", "docs/knowledge-bank/decisions/hje-continuity-modernization.md"],
+    ["decision.kc-town-hall.listening-fieldwork", "docs/knowledge-bank/decisions/kc-town-hall-listening-fieldwork.md"],
+    ["decision.knowledge-wiki.selective-projection", "docs/knowledge-bank/decisions/knowledge-wiki-selective-projection.md"],
+    ["decision.knowledge-wiki.family-closure", "docs/knowledge-bank/decisions/knowledge-wiki-family-closure.md"],
+    ["source.good-times.open-house.2006-06-28", "docs/knowledge-bank/sources/good-times-open-house-2006-06-28.md"],
+    ["source.councilstat.fuller-release.2016", "docs/knowledge-bank/sources/nycc-constituent-services-data-2016-05-27.md"],
+    ["source.wowlist.repaired-transcript.2026", "docs/knowledge-bank/sources/wowlist-repaired-transcript-2026.md"],
+    ["source.kc-town-hall.cced-proposal.2019", "docs/knowledge-bank/sources/kc-town-hall-cced-proposal-2019.md"],
+    ["source.callnyc.source-repository", "docs/knowledge-bank/sources/callnyc-source-repository.md"],
+    ["research.interpretive-layer-source-return.2026-07-19", "docs/knowledge-bank/research-runs/interpretive-layer-source-return-2026-07-19.md"]
+  ],
+  "conceptRecordIds": [
+    "index.knowledge-wiki.pressures",
+    "index.knowledge-wiki.people-places-work",
+    "index.knowledge-wiki.project-lineages",
+    "index.knowledge-wiki.decision-records",
+    "method.maintenance-handoff-stewardship",
+    "capability.civic-cultural-technical-translation",
+    "capability.implementation-operational-stewardship"
+  ],
+  "decisionRecordIds": [
+    "decision.open-house.communal-governance",
+    "decision.callnyc.issue-pathways",
+    "decision.hje.continuity-modernization",
+    "decision.kc-town-hall.listening-fieldwork",
+    "decision.knowledge-wiki.selective-projection",
+    "decision.knowledge-wiki.family-closure"
+  ],
+  "pressureProjects": [
+    "project.callnyc",
+    "organization.nyc-artist-coalition",
+    "project.harry-j-epstein",
+    "project.wowlist",
+    "project.sunday-dinner-196",
+    "project.kc-town-hall",
+    "project.waterways-participatory-art",
+    "method.source-backed-team-memory"
+  ],
+  "sourceEncounterTargets": [
+    "source.resume.jamie-burkart.2026-06-11",
+    "source.ucsc.narrative-evaluations.2004-2006",
+    "source.good-times.open-house.2006-06-28",
+    "source.kansas-city-star.raft.2007-11-15",
+    "source.hje.research-brief.2026-07",
+    "source.wowlist.repaired-transcript.2026",
+    "source.kc-town-hall.cced-proposal.2019",
+    "source.councilstat.fuller-release.2016",
+    "source.callnyc.source-repository",
+    "source.nycac.running-minutes.2026",
+    "source.nycac.nightlife-forum-transcript.2026",
+    "source.jamie.writers-voice-synthesis.2026-07",
+    "source.nter-chng.archived-homepage.2011"
+  ],
+  "protectedSourceTargets": [
+    "source.ucsc.narrative-evaluations.2004-2006",
+    "source.hje.research-brief.2026-07",
+    "source.wowlist.repaired-transcript.2026",
+    "source.kc-town-hall.cced-proposal.2019",
+    "source.nycac.running-minutes.2026",
+    "source.nycac.nightlife-forum-transcript.2026",
+    "source.jamie.writers-voice-synthesis.2026-07"
+  ],
+  "publicRegistryPath": "apps/www/src/data/knowledge-bank/records.ts",
+  "councilSourceUrl": "https://council.nyc.gov/labs/2016/05/27/constituent-services-data/"
+}

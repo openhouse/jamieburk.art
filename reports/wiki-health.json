@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-21T16:28:12-04:00",
+  "sourceCommit": "32141a0afa323a02169f574c618e8a28ac8681da",
+  "sourceFingerprint": "83828c5ebc062da19ae1bd76ddee53c0cac1c25404e011beef323107a5a6d9a4",
+  "hardGates": {
+    "passed": true,
+    "errorCount": 0,
+    "errors": []
+  },
+  "diagnostics": {
+    "records": 99,
+    "byKind": {
+      "project": 14,
+      "person": 1,
+      "organization": 1,
+      "event": 1,
+      "source": 25,
+      "asset": 1,
+      "claim": 2,
+      "research-run": 4,
+      "research-inquiry": 1,
+      "decision": 6,
+      "correction": 1,
+      "method": 12,
+      "timeline": 1,
+      "application": 1,
+      "evaluation": 3,
+      "index": 12,
+      "capability": 4,
+      "opportunity": 6,
+      "projection": 3
+    },
+    "typedRelations": 387,
+    "evidenceRelations": 8,
+    "relationTypeCounts": {
+      "collaborated_with": 1,
+      "documents": 18,
+      "evidence:context": 1,
+      "evidence:direct-support": 6,
+      "evidence:private-support": 1,
+      "has_asset": 2,
+      "informed_by": 32,
+      "part_of": 9,
+      "projected_to": 6,
+      "related_to": 222,
+      "resulted_in": 5,
+      "supersedes": 1,
+      "supports": 19,
+      "uses_method": 17,
+      "uses_source": 55
+    },
+    "proseLinks": 297,
+    "rootReachable": 97,
+    "orphanCount": 0,
+    "deadEndCount": 0,
+    "wantedPageCount": 6,
+    "stalePageCount": 0,
+    "correctionCount": 1,
+    "rightsReviewCount": 1,
+    "opportunityCount": 6,
+    "liveOpportunityCount": 6,
+    "criticalRequirementCount": 22,
+    "criticalRequirementGapCount": 6,
+    "warningCount": 0,
+    "warnings": []
+  },
+  "humanGates": [
+    {
+      "id": "collaborator-review",
+      "state": "governed-open",
+      "authority": "named collaborators"
+    },
+    {
+      "id": "media-rights-and-consent",
+      "state": "human-blocked",
+      "authority": "rights holders and depicted people"
+    },
+    {
+      "id": "retrieval-task-study",
+      "state": "not-requested",
+      "authority": "fresh human readers"
+    },
+    {
+      "id": "editorial-projection-approval",
+      "state": "governed-open",
+      "authority": "Jamie and relevant editors"
+    },
+    {
+      "id": "production-observation",
+      "state": "not-requested",
+      "authority": "deployment owner"
+    },
+    {
+      "id": "hiring-outcomes",
+      "state": "not-requested",
+      "authority": "external readers and employers"
+    }
+  ],
+  "orphans": [],
+  "deadEnds": [],
+  "wanted": [
+    {
+      "id": "source.nycac.founding-and-handoff.2016-2018",
+      "proposed_title": "NYC Artist Coalition founding and handoff source set",
+      "reason": "Needed to deepen formation chronology and collaborator-specific credit with public-safe originals.",
+      "requestedBy": "index.knowledge-wiki.living-archive",
+      "path": "docs/knowledge-bank/indexes/living-archive.md"
+    },
+    {
+      "id": "source.wowlist.product-decision-history",
+      "proposed_title": "WOWList product decision history",
+      "reason": "Needed to connect database and code evidence with collaborator-reviewed product reasoning and adoption chronology.",
+      "requestedBy": "index.knowledge-wiki.living-archive",
+      "path": "docs/knowledge-bank/indexes/living-archive.md"
+    },
+    {
+      "id": "source.hje.component-role-corroboration",
+      "proposed_title": "Harry J. Epstein component-role corroboration",
+      "reason": "Needed to distinguish Jamie's implementation responsibility from public company history at component level.",
+      "requestedBy": "index.knowledge-wiki.living-archive",
+      "path": "docs/knowledge-bank/indexes/living-archive.md"
+    },
+    {
+      "id": "source.kc-town-hall.stewardship-transition",
+      "proposed_title": "KC Town Hall stewardship transition record",
+      "reason": "Needed to document the bounded handoff without recording private personal context.",
+      "requestedBy": "index.knowledge-wiki.living-archive",
+      "path": "docs/knowledge-bank/indexes/living-archive.md"
+    },
+    {
+      "id": "index.visual-rights-and-consent-register",
+      "proposed_title": "Private visual rights and consent register",
+      "reason": "Needed to connect approved or held project images with rights holders, represented-person review, crop limits, and publication decisions outside public Git.",
+      "requestedBy": "index.knowledge-wiki.visual-evidence",
+      "path": "docs/knowledge-bank/indexes/visual-evidence.md"
+    },
+    {
+      "id": "source.ucsc.installation-primary-record.2006",
+      "proposed_title": "Primary 2006 installation record",
+      "reason": "Needed to resolve the title from a contemporaneous invitation, checklist, photograph, gallery record, or artist file.",
+      "requestedBy": "research-inquiry.ucsc-installation-title",
+      "path": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md"
+    }
+  ],
+  "stale": [],
+  "corrections": [
+    {
+      "id": "correction.callnyc-years.2026",
+      "title": "CallNYC chronology correction",
+      "path": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
+      "humanReview": "resolved"
+    }
+  ],
+  "rightsReview": [
+    {
+      "id": "asset.photo.digital-district.001",
+      "path": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    }
+  ]
+}

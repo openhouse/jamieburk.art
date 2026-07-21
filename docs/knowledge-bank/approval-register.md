@@ -9,6 +9,12 @@ The repo is public. Approval here means approved for public-safe repository and 
 - LinkedIn: `https://linkedin.com/in/jamie-burkart` is approved for display.
 - GitHub: `https://github.com/openhouse` is approved for display.
 - Phone: do not display in website HTML. Phone may remain in the approved resume PDF.
+- AI Evals completion certificate: approved for public-safe display as
+  professional-development evidence.
+- Public-site screenshots captured from Harry J. Epstein Company,
+  FairRentNYC, and the archived CallNYC prototype for `feature/evals-H` are
+  approved for public PR review and portfolio projection. Captions must retain
+  source, scope, collective-credit, and archived-status boundaries.
 
 ## Approved With Guardrails
 
@@ -19,7 +25,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
-- KC Town Hall funding: tie the amount to a public funding recommendation unless final funding details are separately approved.
+- KC Town Hall funding: approved public wording may distinguish the $490,539 CCED Board recommendation, Council acceptance and negotiation authority, and the separate Council appropriation. It must also retain the 2022 no-disbursement and still-negotiating status and the 2024 withdrawal and return of the full unused amount. Municipal records support that institutional lifecycle; the approved resume separately supports Jamie's planning and documentation contribution.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 

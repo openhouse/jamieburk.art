@@ -1,0 +1,13 @@
+<!-- GENERATED FILE. DO NOT EDIT. -->
+# Backlinks to Jamie at work
+
+**Source commit:** `32141a0afa323a02169f574c618e8a28ac8681da`
+**Generation time:** 2026-07-21T16:28:12-04:00
+**Source fingerprint:** `83828c5ebc062da19ae1bd76ddee53c0cac1c25404e011beef323107a5a6d9a4`
+
+- [Close the Knowledge Wiki A-E family into one canonical implementation](../../decisions/knowledge-wiki-family-closure.md) - `related_to` (frontmatter)
+- [Canonical story bank](../../indexes/canonical-story-bank.md) - `related_to` (frontmatter)
+- [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
+- [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
+- [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
+- [What is at stake for me](../../methods/what-is-at-stake-for-me.md) - `informed_by` (frontmatter)

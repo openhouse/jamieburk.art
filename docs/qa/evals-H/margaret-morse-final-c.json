@@ -1,0 +1,43 @@
+{
+  "evaluator": "Independent holdout reader applying the fictionalized PR-015 Margaret Morse lens",
+  "reviewerId": "morse-c-employment-release",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The SHA-256 independently recomputed from the ordered eleven-file candidate subset exactly matches the expected fingerprint.",
+    "The homepage leads with technical project management, product operations, implementation, and durable handoffs; the global navigation provides a direct one-click path to About.",
+    "The About page keeps current professional focus primary while a bounded 'Systems people can inhabit' section explicitly connects artistic, civic, technical, and social practice.",
+    "The current Harry J. Epstein work connects attention to customer language and institutional voice with maintained interfaces, bounded analytics, incremental learning, and reusable workflows.",
+    "The 2017-Present NYC Artist Coalition and FairRentNYC work connects cultural-space experience, participation, public interfaces, source-backed documentation, stakeholder care, and collective continuity to clear employment capabilities.",
+    "The 2026 Source-Backed Team Memory lab demonstrates current investigation through reviewable, human-correctable operating memory while explicitly identifying itself as an early method rather than production SaaS.",
+    "Historical WOWList and Sunday Dinner / 196 continuities preserve community vocabulary, distributed participation, hospitality, place, artist support, consent, and situated learning without displacing the employment narrative.",
+    "The public Open House source supports the bounded historical account of a ten-day experiment, Jamie's initiating role, communal decision-making, public participation, and many-perspective documentation: https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
+    "The UCSC source note explicitly withholds raw educational records, grades, identifiers, private archive paths, correspondence, and unapproved testimonial material."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Open House is described with bounded initiation language and collective governance rather than solo authorship.",
+    "WOWList is identified as co-built, NYC Artist Coalition outcomes remain collective, and the 196 / Sunday Dinner community receives explicit credit.",
+    "The candidate does not reproduce protected educational records, private correspondence, student identifiers, private paths, or unapproved faculty testimonial text.",
+    "Historical projects are dated and distinguished from current capability; the current lab is explicitly bounded as early research and consulting practice.",
+    "The linked 2006 article contains sensitive participant circumstances, but the portfolio does not reproduce them and the knowledge-bank boundary prohibits renewed publication of participant identities, circumstances, or images without review.",
+    "No participation or endorsement by Margaret Morse, Warren Sack, or another named person is inferred from the lens, source note, or this evaluation."
+  ],
+  "recommendation": "Pass PR-015 for employment-facing use. The portfolio is job-useful while preserving artistic investigation, situated learning, and the Open House collective-governance boundary; retain the present historical/current labels and privacy controls.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "processSessionId": "019f785d-316a-7d60-a90e-a060ef98498b",
+    "agentNickname": "Bacon",
+    "model": "gpt-5.6-sol",
+    "reasoningEffort": "xhigh",
+    "sandbox": "read-only",
+    "ephemeral": true,
+    "resultTransport": "multi_agent_v1__wait_agent-completed",
+    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
+    "startedAt": "2026-07-19T03:13:21.244Z",
+    "completedAt": "2026-07-19T03:17:30.045Z"
+  }
+}

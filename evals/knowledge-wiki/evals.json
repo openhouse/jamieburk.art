@@ -1,0 +1,165 @@
+{
+  "suite": "knowledge-wiki-foundation-E",
+  "version": 5,
+  "authority": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md, with M as the implementation spine",
+  "principle": "Markdown is the record. The graph is compiled from the record. The portfolio is a selective projection from the governed system.",
+  "scoring": "Every deterministic criterion blocks independently. Human authority gates must remain explicitly open until observed; they are not averaged into a synthetic score.",
+  "lenses": [
+    {
+      "id": "architecture",
+      "criteria": [
+        "canonical_product_name",
+        "compatibility_alias",
+        "single_physical_root",
+        "canonicality_adr",
+        "existing_authorities_preserved",
+        "bounded_public_projection_change",
+        "branch_donor_synthesis",
+        "no_explorer"
+      ]
+    },
+    {
+      "id": "abby-information-architecture",
+      "criteria": [
+        "task_oriented_root",
+        "stable_unique_ids",
+        "aliases_unique",
+        "relative_links_resolve",
+        "heading_fragments_resolve",
+        "typed_targets_and_hrefs_align",
+        "pilot_reachable",
+        "type_aware_orphans"
+      ]
+    },
+    {
+      "id": "chad-professional-argument",
+      "criteria": [
+        "jamie_visible_as_actor",
+        "purpose_and_usable_result_visible",
+        "technical_operations_query",
+        "public_projection_smaller_than_wiki"
+      ]
+    },
+    {
+      "id": "gerdes-provenance",
+      "criteria": [
+        "source_identity_preserved",
+        "evidence_types_distinct",
+        "not_recovered_not_nonexistence",
+        "asset_evidence_not_rights"
+      ]
+    },
+    {
+      "id": "governance-and-citational-care",
+      "criteria": [
+        "claim_source_closure",
+        "correction_traceable",
+        "private_paths_rejected",
+        "rights_pending_fails_closed",
+        "anti_claims_preserved",
+        "protected_identity_directives_generic",
+        "human_gates_open"
+      ]
+    },
+    {
+      "id": "engineering",
+      "criteria": [
+        "graph_deterministic",
+        "generated_outputs_current",
+        "employment_outputs_current",
+        "candidate_bound_accessibility_evidence",
+        "mutation_suite",
+        "legacy_checks_preserved"
+      ]
+    },
+    {
+      "id": "opportunity-governance",
+      "criteria": [
+        "tier_one_official_source_records",
+        "opportunity_contract_complete",
+        "stable_requirement_ids",
+        "operator_queries",
+        "hard_screens_explicit",
+        "confirmed_inferred_unknown_separate",
+        "one_year_fit_bounded",
+        "protected_communications_metadata_only"
+      ]
+    },
+    {
+      "id": "hiring-acceptance-separation",
+      "criteria": [
+        "public_evaluator_has_no_hidden_wiki",
+        "gap_resolver_separate",
+        "reader_profiles_disclaimed",
+        "candidate_and_context_hashes_present",
+        "role_contexts_fresh",
+        "external_outcomes_remain_open"
+      ]
+    },
+    {
+      "id": "opportunity-discovery",
+      "criteria": [
+        "title_blind_recall_passes",
+        "negative_controls_excluded",
+        "real_gaps_remain_visible",
+        "portfolio_projection_remains_selective"
+      ]
+    },
+    {
+      "id": "living-archive-and-source-return",
+      "criteria": [
+        "priority_missing_pages_materialized",
+        "living_archive_reachable",
+        "source_return_current_and_complete",
+        "original_sources_materially_reached",
+        "prior_readings_and_changes_preserved",
+        "contradictions_remain_open",
+        "research_authority_not_publication",
+        "librarian_requests_actionable",
+        "protected_sources_metadata_only",
+        "remaining_wants_explicit",
+        "public_projection_still_selective"
+      ]
+    },
+    {
+      "id": "interpretive-layer-and-decision-records",
+      "criteria": [
+        "interpretive_records_materialized",
+        "interpretive_navigation_reachable",
+        "pressures_precede_responses_without_deficit",
+        "people_places_collective_credit_bounded",
+        "project_lineages_not_teleology",
+        "maintenance_handoff_is_delivery",
+        "capabilities_cross_project_and_evidence_bound",
+        "decision_contract_complete",
+        "decision_credit_and_projection_bounded",
+        "decision_query_operational",
+        "interpretive_source_return_current",
+        "interpretive_protected_sources_metadata_only",
+        "councilstat_source_gap_closed",
+        "interpretive_public_projection_selective"
+      ]
+    },
+    {
+      "id": "knowledge-wiki-family-closure",
+      "criteria": [
+        "frozen_heads_exact",
+        "base_target_exact",
+        "one_canonical_architecture",
+        "every_donor_has_materialized_destination",
+        "selected_records_materialized",
+        "selected_records_navigable",
+        "closure_decision_links_outputs",
+        "census_conflict_preserved",
+        "personal_stakes_remains_human_gated",
+        "adoption_and_relation_boundaries_explicit",
+        "visual_rights_sequence_complete",
+        "no_public_wiki_or_proofs_route",
+        "closure_public_surface_unchanged",
+        "pull_request_ci_runs_complete_check",
+        "final_review_packet_complete",
+        "human_authority_gates_open"
+      ]
+    }
+  ]
+}
