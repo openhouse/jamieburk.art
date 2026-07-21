@@ -103,6 +103,40 @@ test("a public proofs route fails the release boundary", () => {
   assert.equal(evaluation.checks.no_public_wiki_or_proofs_route, false);
 });
 
+test("a closure-layer public application change fails", () => {
+  const evaluation = evaluateFamilyClosure({
+    result,
+    changedSinceFoundation: ["apps/www/src/app/page.tsx"]
+  });
+  assert.equal(evaluation.checks.closure_public_surface_unchanged, false);
+});
+
+test("CI cannot substitute a partial check", () => {
+  const evaluation = evaluateFamilyClosure({
+    result,
+    fileOverrides: {
+      ".github/workflows/portfolio-readiness.yml": [
+        "pull_request:",
+        "fetch-depth: 0",
+        "node-version-file: .nvmrc",
+        "run: npm ci",
+        "run: npm run wiki:eval:family-closure"
+      ].join("\n")
+    }
+  });
+  assert.equal(evaluation.checks.pull_request_ci_runs_complete_check, false);
+});
+
+test("the final review packet cannot omit human authority", () => {
+  const evaluation = evaluateFamilyClosure({
+    result,
+    fileOverrides: {
+      "docs/integration/feature-wiki-C-final-review.md": "# Final review\n\n## Decision\n"
+    }
+  });
+  assert.equal(evaluation.checks.final_review_packet_complete, false);
+});
+
 test("visual evidence cannot skip rights sequencing", () => {
   const evaluation = evaluateFamilyClosure({
     result,

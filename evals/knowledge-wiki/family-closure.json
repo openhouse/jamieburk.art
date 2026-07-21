@@ -1,6 +1,6 @@
 {
   "suite": "knowledge-wiki-family-closure",
-  "version": 1,
+  "version": 2,
   "decisionDate": "2026-07-19",
   "base": {
     "branch": "develop",
@@ -60,5 +60,7 @@
     "apps/www/src/app/knowledge",
     "apps/www/src/app/knowledge-bank",
     "apps/www/src/app/knowledge-wiki"
-  ]
+  ],
+  "requiredReviewFile": "docs/integration/feature-wiki-C-final-review.md",
+  "requiredWorkflowFile": ".github/workflows/portfolio-readiness.yml"
 }

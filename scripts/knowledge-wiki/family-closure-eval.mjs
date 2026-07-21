@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -32,8 +33,38 @@ export function evaluateFamilyClosure(options = {}) {
     );
   const recordOverrides = options.recordOverrides ?? {};
   const sourceOverrides = options.sourceOverrides ?? {};
+  const fileOverrides = options.fileOverrides ?? {};
   const pathExists = options.pathExists ?? ((relativePath) => existsSync(path.join(repoRoot, relativePath)));
   const routePaths = options.routePaths ?? contract.disallowedPublicRoutePaths;
+
+  const fileSource = (relativePath) => {
+    if (Object.hasOwn(fileOverrides, relativePath)) return fileOverrides[relativePath];
+    return pathExists(relativePath) ? readFileSync(path.join(repoRoot, relativePath), "utf8") : "";
+  };
+
+  let changedSinceFoundation = options.changedSinceFoundation;
+  if (!changedSinceFoundation) {
+    const foundationSha = contract.expectedFrozenHeads[contract.canonicalArchitecture];
+    try {
+      const tracked = execFileSync("git", ["diff", "--name-only", foundationSha, "--"], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      })
+        .trim()
+        .split("\n")
+        .filter(Boolean);
+      const untracked = execFileSync("git", ["ls-files", "--others", "--exclude-standard"], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      })
+        .trim()
+        .split("\n")
+        .filter(Boolean);
+      changedSinceFoundation = [...new Set([...tracked, ...untracked])];
+    } catch {
+      changedSinceFoundation = null;
+    }
+  }
 
   const record = (id) =>
     Object.hasOwn(recordOverrides, id) ? recordOverrides[id] : result.byId.get(id);
@@ -60,6 +91,8 @@ export function evaluateFamilyClosure(options = {}) {
   const decision = record("decision.knowledge-wiki.family-closure");
   const decisionTargets = new Set(decision?.relations?.map((relation) => relation.target) ?? []);
   const stakes = record("method.what-is-at-stake-for-me");
+  const workflowSource = fileSource(contract.requiredWorkflowFile);
+  const reviewSource = fileSource(contract.requiredReviewFile);
   const censusByBranch = Object.fromEntries(
     (census.observations ?? []).map((observation) => [observation.branch, observation.population])
   );
@@ -143,6 +176,32 @@ export function evaluateFamilyClosure(options = {}) {
       expectedRecordIds.every(
         (id) => record(id)?.projection?.status !== "active" && record(id)?.projection_status !== "active"
       ),
+    closure_public_surface_unchanged:
+      Array.isArray(changedSinceFoundation) &&
+      !changedSinceFoundation.some((relativePath) => relativePath.startsWith("apps/www/src/")),
+    pull_request_ci_runs_complete_check:
+      pathExists(contract.requiredWorkflowFile) &&
+      /pull_request:/.test(workflowSource) &&
+      /fetch-depth:\s*0/.test(workflowSource) &&
+      /node-version-file:\s*\.nvmrc/.test(workflowSource) &&
+      /run:\s*npm ci/.test(workflowSource) &&
+      /run:\s*npm run check/.test(workflowSource),
+    final_review_packet_complete:
+      pathExists(contract.requiredReviewFile) &&
+      [
+        "## Decision",
+        "## What enters develop",
+        "## What does not enter develop",
+        "## Review path",
+        "## Machine acceptance",
+        "## Human acceptance still open"
+      ].every((heading) => reviewSource.includes(heading)) &&
+      ["A's", "B's", "C's", "D's", "feature/knowledge-wiki-E"].every(
+        (marker) => reviewSource.includes(marker)
+      ) &&
+      reviewSource.includes("no new public application source") &&
+      reviewSource.includes("A universal NYC Artist Coalition shared-folder count") &&
+      reviewSource.includes("npm run check"),
     human_authority_gates_open:
       result.health.humanGates.length >= 5 &&
       result.health.humanGates.every((gate) => !["completed", "resolved"].includes(gate.state))
