@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-19T13:46:15-04:00",
-  "sourceCommit": "cd96f4b66a2e6c427de39495897ef1cbc1622f34",
-  "sourceFingerprint": "1ba9159f377b9b0190feccb0f0b9e6edb757f276b7ca867ae211c7211950d566",
+  "generatedAt": "2026-07-19T16:28:03-04:00",
+  "sourceCommit": "2fc7783da2632f641384524c0c7a4e411f1ab9a9",
+  "sourceFingerprint": "83828c5ebc062da19ae1bd76ddee53c0cac1c25404e011beef323107a5a6d9a4",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -162,6 +162,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "decision.knowledge-wiki.family-closure",
+      "path": "docs/knowledge-bank/decisions/knowledge-wiki-family-closure.md",
+      "title": "Close the Knowledge Wiki A-E family into one canonical implementation",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Architecture and editorial decision selecting E as foundation, adapting distinctive strengths from A-D, and refusing to collapse contradictory archive denominators.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "decision.knowledge-wiki.selective-projection",
       "path": "docs/knowledge-bank/decisions/knowledge-wiki-selective-projection.md",
       "title": "Knowledge Wiki depth with selective public projection",
@@ -257,6 +270,32 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "index.knowledge-wiki.canonical-story-bank",
+      "path": "docs/knowledge-bank/indexes/canonical-story-bank.md",
+      "title": "Canonical story bank",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Editorial story patterns that keep situation, Jamie's action, usable result, collective context, and honest limit attached.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "index.knowledge-wiki.claim-maturity",
+      "path": "docs/knowledge-bank/indexes/claim-maturity-dashboard.md",
+      "title": "Claim maturity dashboard",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Operational view of selected claims, holds, and the smallest evidence or human decision that could advance each item.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-08-19"
+    },
+    {
       "id": "index.knowledge-wiki.decision-records",
       "path": "docs/knowledge-bank/indexes/decision-records.md",
       "title": "Decision records",
@@ -290,7 +329,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Task-oriented map of orientation, campaign, project, pressure, place, lineage, decision, capability, stewardship, source-return, role-fit, and visual-evidence pages.",
+      "summary": "Task-oriented map of orientation, campaign, project, pressure, place, lineage, decision, capability, stewardship, source-return, role-fit, story, claim-maturity, and visual-evidence pages.",
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
@@ -348,6 +387,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "path": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "title": "Relational infrastructure atlas",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Human-readable guide to what typed Wiki relations can establish, what they cannot, and how public and protected graphs remain distinct.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "index.knowledge-wiki.visual-evidence",
       "path": "docs/knowledge-bank/indexes/visual-evidence.md",
       "title": "Visual evidence index",
@@ -374,6 +426,45 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "method.identity-systems-shared-infrastructure",
+      "path": "docs/knowledge-bank/methods/identity-systems-as-shared-infrastructure.md",
+      "title": "Identity systems as shared infrastructure",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public identity as an operating layer that helps collaborators recognize, inhabit, and continue shared work.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19"
+    },
+    {
+      "id": "method.jamie-at-work",
+      "path": "docs/knowledge-bank/methods/jamie-at-work.md",
+      "title": "Jamie at work",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Cross-project account of Jamie's recurring action in making emerging work usable without treating uncertainty as a defect.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "method.learning-through-making",
+      "path": "docs/knowledge-bank/methods/learning-through-making.md",
+      "title": "Learning through making",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Artistic and technical inquiry through objects, prototypes, installations, participation, writing, and recursive revision.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19"
+    },
+    {
       "id": "method.maintenance-handoff-stewardship",
       "path": "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
       "title": "Maintenance, handoff, and stewardship",
@@ -385,6 +476,45 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "method.outcomes-and-adoption",
+      "path": "docs/knowledge-bank/methods/outcomes-and-adoption.md",
+      "title": "Outcomes and adoption",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Four-part test separating Jamie's delivery, collaborator use, institutional adoption, and later change.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "method.participation-relational-infrastructure",
+      "path": "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md",
+      "title": "Participation and relational infrastructure",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Method connecting invitation, orientation, situated encounter, agency, translation, memory, and continuation across Jamie's work.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "method.public-knowledge-peoples-own-terms",
+      "path": "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md",
+      "title": "Public knowledge in people's own terms",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Participation practice that keeps people as speakers and contributors while protecting private testimony and person-level records.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19"
     },
     {
       "id": "method.situated-source-rereading",
@@ -424,6 +554,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "method.what-is-at-stake-for-me",
+      "path": "docs/knowledge-bank/methods/what-is-at-stake-for-me.md",
+      "title": "What is at stake for me",
+      "kind": "method",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "AI-assisted first-person draft about participation, memory, public life, and structures people can inhabit, awaiting Jamie's line-by-line review.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-08-19"
     },
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
@@ -808,6 +951,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research.knowledge-wiki.family-closure.2026-07-19",
+      "path": "docs/knowledge-bank/research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "title": "Knowledge Wiki A-E family closure review",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Present-tense comparison of five passing Knowledge Wiki branches, their distinctive strengths, architectural overlap, and conflicting shared-folder census claims.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2026-10-19"
+    },
+    {
       "id": "research.nycac.shared-folder.2026-07-19",
       "path": "docs/knowledge-bank/research-runs/nycac-shared-folder-2026-07-19.md",
       "title": "NYC Artist Coalition shared-folder archival production",
@@ -1001,6 +1157,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.knowledge-wiki.family-frozen-heads.2026-07-19",
+      "path": "docs/knowledge-bank/sources/knowledge-wiki-family-frozen-heads-2026-07-19.md",
+      "title": "Frozen Knowledge Wiki A-E branch heads",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public Git branch snapshots used to close the five-branch Knowledge Wiki design family into one canonical implementation.",
+      "aliases": [],
+      "lastReviewed": "2026-07-19",
+      "reviewBy": "2027-01-19"
     },
     {
       "id": "source.nter-chng.archived-homepage.2011",
@@ -1230,6 +1399,14 @@
     {
       "from": "capability.implementation-operational-stewardship",
       "type": "related_to",
+      "to": "index.knowledge-wiki.canonical-story-bank",
+      "source": "frontmatter",
+      "href": "../indexes/canonical-story-bank.md",
+      "context": null
+    },
+    {
+      "from": "capability.implementation-operational-stewardship",
+      "type": "related_to",
       "to": "project.harry-j-epstein",
       "source": "frontmatter",
       "href": "../projects/harry-j-epstein.md",
@@ -1249,6 +1426,14 @@
       "to": "method.maintenance-handoff-stewardship",
       "source": "frontmatter",
       "href": "../methods/maintenance-handoff-and-stewardship.md",
+      "context": null
+    },
+    {
+      "from": "capability.implementation-operational-stewardship",
+      "type": "uses_method",
+      "to": "method.outcomes-and-adoption",
+      "source": "frontmatter",
+      "href": "../methods/outcomes-and-adoption.md",
       "context": null
     },
     {
@@ -1482,6 +1667,110 @@
       "context": null
     },
     {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "informed_by",
+      "to": "source.knowledge-wiki.family-frozen-heads.2026-07-19",
+      "source": "frontmatter",
+      "href": "../sources/knowledge-wiki-family-frozen-heads-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.canonical-story-bank",
+      "source": "frontmatter",
+      "href": "../indexes/canonical-story-bank.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.claim-maturity",
+      "source": "frontmatter",
+      "href": "../indexes/claim-maturity-dashboard.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.living-archive",
+      "source": "frontmatter",
+      "href": "../indexes/living-archive.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "source": "frontmatter",
+      "href": "../indexes/relational-infrastructure-atlas.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "method.identity-systems-shared-infrastructure",
+      "source": "frontmatter",
+      "href": "../methods/identity-systems-as-shared-infrastructure.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "method.jamie-at-work",
+      "source": "frontmatter",
+      "href": "../methods/jamie-at-work.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "method.learning-through-making",
+      "source": "frontmatter",
+      "href": "../methods/learning-through-making.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "method.outcomes-and-adoption",
+      "source": "frontmatter",
+      "href": "../methods/outcomes-and-adoption.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "method.participation-relational-infrastructure",
+      "source": "frontmatter",
+      "href": "../methods/participation-and-relational-infrastructure.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "method.public-knowledge-peoples-own-terms",
+      "source": "frontmatter",
+      "href": "../methods/public-knowledge-in-peoples-own-terms.md",
+      "context": null
+    },
+    {
+      "from": "decision.knowledge-wiki.family-closure",
+      "type": "related_to",
+      "to": "method.what-is-at-stake-for-me",
+      "source": "frontmatter",
+      "href": "../methods/what-is-at-stake-for-me.md",
+      "context": null
+    },
+    {
       "from": "decision.knowledge-wiki.selective-projection",
       "type": "informed_by",
       "to": "research.interpretive-layer-source-return.2026-07-19",
@@ -1602,6 +1891,94 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "related_to",
+      "to": "method.jamie-at-work",
+      "source": "frontmatter",
+      "href": "../methods/jamie-at-work.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "related_to",
+      "to": "method.outcomes-and-adoption",
+      "source": "frontmatter",
+      "href": "../methods/outcomes-and-adoption.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "related_to",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.canonical-story-bank",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.claim-maturity",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.claim-maturity",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "visual-evidence.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.claim-maturity",
+      "type": "related_to",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "../methods/collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.claim-maturity",
+      "type": "related_to",
+      "to": "method.outcomes-and-adoption",
+      "source": "frontmatter",
+      "href": "../methods/outcomes-and-adoption.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki.decision-records",
       "type": "informed_by",
       "to": "research.interpretive-layer-source-return.2026-07-19",
@@ -1631,6 +2008,14 @@
       "to": "decision.kc-town-hall.listening-fieldwork",
       "source": "frontmatter",
       "href": "../decisions/kc-town-hall-listening-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.knowledge-wiki.family-closure",
+      "source": "frontmatter",
+      "href": "../decisions/knowledge-wiki-family-closure.md",
       "context": null
     },
     {
@@ -1732,6 +2117,22 @@
     {
       "from": "index.knowledge-wiki.living-archive",
       "type": "related_to",
+      "to": "index.knowledge-wiki.canonical-story-bank",
+      "source": "frontmatter",
+      "href": "canonical-story-bank.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.claim-maturity",
+      "source": "frontmatter",
+      "href": "claim-maturity-dashboard.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
       "to": "index.knowledge-wiki.decision-records",
       "source": "frontmatter",
       "href": "decision-records.md",
@@ -1764,6 +2165,14 @@
     {
       "from": "index.knowledge-wiki.living-archive",
       "type": "related_to",
+      "to": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "source": "frontmatter",
+      "href": "relational-infrastructure-atlas.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
       "to": "index.knowledge-wiki.visual-evidence",
       "source": "frontmatter",
       "href": "visual-evidence.md",
@@ -1780,9 +2189,57 @@
     {
       "from": "index.knowledge-wiki.living-archive",
       "type": "related_to",
+      "to": "method.identity-systems-shared-infrastructure",
+      "source": "frontmatter",
+      "href": "../methods/identity-systems-as-shared-infrastructure.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "method.jamie-at-work",
+      "source": "frontmatter",
+      "href": "../methods/jamie-at-work.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "method.learning-through-making",
+      "source": "frontmatter",
+      "href": "../methods/learning-through-making.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
       "to": "method.maintenance-handoff-stewardship",
       "source": "frontmatter",
       "href": "../methods/maintenance-handoff-and-stewardship.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "method.outcomes-and-adoption",
+      "source": "frontmatter",
+      "href": "../methods/outcomes-and-adoption.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "method.participation-relational-infrastructure",
+      "source": "frontmatter",
+      "href": "../methods/participation-and-relational-infrastructure.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "method.public-knowledge-peoples-own-terms",
+      "source": "frontmatter",
+      "href": "../methods/public-knowledge-in-peoples-own-terms.md",
       "context": null
     },
     {
@@ -1799,6 +2256,14 @@
       "to": "method.structure-grows-from-material",
       "source": "frontmatter",
       "href": "../methods/structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "method.what-is-at-stake-for-me",
+      "source": "frontmatter",
+      "href": "../methods/what-is-at-stake-for-me.md",
       "context": null
     },
     {
@@ -2066,6 +2531,46 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.people-places-work",
+      "source": "frontmatter",
+      "href": "people-places-and-work-between-them.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "type": "related_to",
+      "to": "method.maintenance-handoff-stewardship",
+      "source": "frontmatter",
+      "href": "../methods/maintenance-handoff-and-stewardship.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "type": "related_to",
+      "to": "method.participation-relational-infrastructure",
+      "source": "frontmatter",
+      "href": "../methods/participation-and-relational-infrastructure.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "type": "related_to",
+      "to": "method.situated-source-rereading",
+      "source": "frontmatter",
+      "href": "../methods/situated-source-rereading.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki.visual-evidence",
       "type": "has_asset",
       "to": "asset.photo.digital-district.001",
@@ -2088,6 +2593,22 @@
       "source": "frontmatter",
       "href": "../research-runs/foundational-source-return-2026-07-19.md",
       "context": null
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.canonical-story-bank",
+      "source": "frontmatter",
+      "href": "indexes/canonical-story-bank.md",
+      "context": "Reusable five-part stories with collective context and honest limits attached."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.claim-maturity",
+      "source": "frontmatter",
+      "href": "indexes/claim-maturity-dashboard.md",
+      "context": "Selected holds and exact evidence or human decisions needed for advancement."
     },
     {
       "from": "index.knowledge-wiki",
@@ -2132,6 +2653,14 @@
     {
       "from": "index.knowledge-wiki",
       "type": "related_to",
+      "to": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "source": "frontmatter",
+      "href": "indexes/relational-infrastructure-atlas.md",
+      "context": "Human-readable semantics and anti-inferences for typed Wiki relations."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
       "to": "project.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "projects/nyc-artist-coalition-2017.md",
@@ -2162,6 +2691,126 @@
       "context": null
     },
     {
+      "from": "method.identity-systems-shared-infrastructure",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "method.identity-systems-shared-infrastructure",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "method.identity-systems-shared-infrastructure",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "method.identity-systems-shared-infrastructure",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.identity-systems-shared-infrastructure",
+      "type": "supports",
+      "to": "capability.implementation-operational-stewardship",
+      "source": "frontmatter",
+      "href": "../capabilities/implementation-and-operational-stewardship.md",
+      "context": null
+    },
+    {
+      "from": "method.jamie-at-work",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "method.jamie-at-work",
+      "type": "related_to",
+      "to": "method.participation-relational-infrastructure",
+      "source": "frontmatter",
+      "href": "participation-and-relational-infrastructure.md",
+      "context": null
+    },
+    {
+      "from": "method.jamie-at-work",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "method.jamie-at-work",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "method.jamie-at-work",
+      "type": "uses_method",
+      "to": "method.structure-grows-from-material",
+      "source": "frontmatter",
+      "href": "structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "method.learning-through-making",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "method.learning-through-making",
+      "type": "related_to",
+      "to": "method.structure-grows-from-material",
+      "source": "frontmatter",
+      "href": "structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "method.learning-through-making",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "method.learning-through-making",
+      "type": "related_to",
+      "to": "project.nter-chng",
+      "source": "frontmatter",
+      "href": "../projects/nter-chng.md",
+      "context": null
+    },
+    {
+      "from": "method.learning-through-making",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
       "from": "method.maintenance-handoff-stewardship",
       "type": "informed_by",
       "to": "research.interpretive-layer-source-return.2026-07-19",
@@ -2180,6 +2829,22 @@
     {
       "from": "method.maintenance-handoff-stewardship",
       "type": "related_to",
+      "to": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "source": "frontmatter",
+      "href": "../indexes/relational-infrastructure-atlas.md",
+      "context": null
+    },
+    {
+      "from": "method.maintenance-handoff-stewardship",
+      "type": "related_to",
+      "to": "method.outcomes-and-adoption",
+      "source": "frontmatter",
+      "href": "outcomes-and-adoption.md",
+      "context": null
+    },
+    {
+      "from": "method.maintenance-handoff-stewardship",
+      "type": "related_to",
       "to": "method.structure-grows-from-material",
       "source": "frontmatter",
       "href": "structure-grows-from-the-material.md",
@@ -2191,6 +2856,134 @@
       "to": "source.jamie.writers-voice-synthesis.2026-07",
       "source": "frontmatter",
       "href": "../sources/writers-voice-synthesis-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "method.outcomes-and-adoption",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "method.outcomes-and-adoption",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.claim-maturity",
+      "source": "frontmatter",
+      "href": "../indexes/claim-maturity-dashboard.md",
+      "context": null
+    },
+    {
+      "from": "method.outcomes-and-adoption",
+      "type": "supports",
+      "to": "capability.implementation-operational-stewardship",
+      "source": "frontmatter",
+      "href": "../capabilities/implementation-and-operational-stewardship.md",
+      "context": null
+    },
+    {
+      "from": "method.outcomes-and-adoption",
+      "type": "uses_method",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "method.participation-relational-infrastructure",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "method.participation-relational-infrastructure",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.participation-relational-infrastructure",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "method.participation-relational-infrastructure",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.participation-relational-infrastructure",
+      "type": "supports",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "method.participation-relational-infrastructure",
+      "type": "uses_method",
+      "to": "method.public-knowledge-peoples-own-terms",
+      "source": "frontmatter",
+      "href": "public-knowledge-in-peoples-own-terms.md",
+      "context": null
+    },
+    {
+      "from": "method.public-knowledge-peoples-own-terms",
+      "type": "informed_by",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "method.public-knowledge-peoples-own-terms",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.public-knowledge-peoples-own-terms",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "method.public-knowledge-peoples-own-terms",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.public-knowledge-peoples-own-terms",
+      "type": "supports",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "method.public-knowledge-peoples-own-terms",
+      "type": "uses_method",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "collective-credit-and-protected-absence.md",
       "context": null
     },
     {
@@ -2263,6 +3056,38 @@
       "to": "source.jamie.writers-voice-synthesis.2026-07",
       "source": "frontmatter",
       "href": "../sources/writers-voice-synthesis-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "method.what-is-at-stake-for-me",
+      "type": "informed_by",
+      "to": "method.jamie-at-work",
+      "source": "frontmatter",
+      "href": "jamie-at-work.md",
+      "context": null
+    },
+    {
+      "from": "method.what-is-at-stake-for-me",
+      "type": "informed_by",
+      "to": "method.learning-through-making",
+      "source": "frontmatter",
+      "href": "learning-through-making.md",
+      "context": null
+    },
+    {
+      "from": "method.what-is-at-stake-for-me",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "method.what-is-at-stake-for-me",
+      "type": "related_to",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "source": "frontmatter",
+      "href": "../research-runs/knowledge-wiki-family-closure-2026-07-19.md",
       "context": null
     },
     {
@@ -3334,6 +4159,22 @@
       "context": null
     },
     {
+      "from": "research.knowledge-wiki.family-closure.2026-07-19",
+      "type": "related_to",
+      "to": "decision.knowledge-wiki.family-closure",
+      "source": "frontmatter",
+      "href": "../decisions/knowledge-wiki-family-closure.md",
+      "context": null
+    },
+    {
+      "from": "research.knowledge-wiki.family-closure.2026-07-19",
+      "type": "uses_source",
+      "to": "source.knowledge-wiki.family-frozen-heads.2026-07-19",
+      "source": "frontmatter",
+      "href": "../sources/knowledge-wiki-family-frozen-heads-2026-07-19.md",
+      "context": null
+    },
+    {
       "from": "research.nycac.shared-folder.2026-07-19",
       "type": "documents",
       "to": "project.nyc-artist-coalition",
@@ -3518,6 +4359,14 @@
       "context": null
     },
     {
+      "from": "source.knowledge-wiki.family-frozen-heads.2026-07-19",
+      "type": "related_to",
+      "to": "decision.knowledge-wiki.family-closure",
+      "source": "frontmatter",
+      "href": "../decisions/knowledge-wiki-family-closure.md",
+      "context": null
+    },
+    {
       "from": "source.nter-chng.archived-homepage.2011",
       "type": "documents",
       "to": "project.nter-chng",
@@ -3689,7 +4538,7 @@
       "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
       "to": "project.harry-j-epstein",
       "fragment": null,
-      "line": 22,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -3698,7 +4547,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-orientation.md",
       "to": "project.kc-spaces-fund",
       "fragment": null,
-      "line": 25,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -3707,7 +4556,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 28,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -3716,7 +4565,7 @@
       "toPath": "docs/knowledge-bank/indexes/living-archive.md",
       "to": "index.knowledge-wiki.living-archive",
       "fragment": null,
-      "line": 30,
+      "line": 34,
       "kind": "link"
     },
     {
@@ -3762,6 +4611,24 @@
       "to": "portfolio.work.callnyc",
       "fragment": null,
       "line": 6,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/knowledge-wiki-family-closure.md",
+      "from": "decision.knowledge-wiki.family-closure",
+      "toPath": "docs/knowledge-bank/research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/knowledge-wiki-family-closure.md",
+      "from": "decision.knowledge-wiki.family-closure",
+      "toPath": "docs/integration/knowledge-wiki-family-closure.md",
+      "to": null,
+      "fragment": null,
+      "line": 14,
       "kind": "link"
     },
     {
@@ -3843,6 +4710,15 @@
       "to": "decision.knowledge-wiki.selective-projection",
       "fragment": null,
       "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/knowledge-wiki-family-closure.md",
+      "to": "decision.knowledge-wiki.family-closure",
+      "fragment": null,
+      "line": 16,
       "kind": "link"
     },
     {
@@ -3983,10 +4859,28 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
       "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/jamie-at-work.md",
+      "to": "method.jamie-at-work",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/learning-through-making.md",
+      "to": "method.learning-through-making",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
       "toPath": "docs/knowledge-bank/timelines/practice-2004-present.md",
       "to": "timeline.jamie-practice.2004-present",
       "fragment": null,
-      "line": 12,
+      "line": 14,
       "kind": "link"
     },
     {
@@ -3995,7 +4889,7 @@
       "toPath": "docs/knowledge-bank/capabilities/participatory-public-systems.md",
       "to": "capability.participatory-public-systems",
       "fragment": null,
-      "line": 13,
+      "line": 15,
       "kind": "link"
     },
     {
@@ -4004,7 +4898,7 @@
       "toPath": "docs/knowledge-bank/indexes/what-the-work-was-up-against.md",
       "to": "index.knowledge-wiki.pressures",
       "fragment": null,
-      "line": 17,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -4013,7 +4907,7 @@
       "toPath": "docs/knowledge-bank/indexes/people-places-and-work-between-them.md",
       "to": "index.knowledge-wiki.people-places-work",
       "fragment": null,
-      "line": 18,
+      "line": 20,
       "kind": "link"
     },
     {
@@ -4022,7 +4916,7 @@
       "toPath": "docs/knowledge-bank/indexes/project-lineages.md",
       "to": "index.knowledge-wiki.project-lineages",
       "fragment": null,
-      "line": 19,
+      "line": 21,
       "kind": "link"
     },
     {
@@ -4031,7 +4925,7 @@
       "toPath": "docs/knowledge-bank/indexes/decision-records.md",
       "to": "index.knowledge-wiki.decision-records",
       "fragment": null,
-      "line": 20,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -4040,7 +4934,7 @@
       "toPath": "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
       "to": "method.maintenance-handoff-stewardship",
       "fragment": null,
-      "line": 21,
+      "line": 23,
       "kind": "link"
     },
     {
@@ -4049,7 +4943,7 @@
       "toPath": "docs/knowledge-bank/capabilities/civic-cultural-and-technical-translation.md",
       "to": "capability.civic-cultural-technical-translation",
       "fragment": null,
-      "line": 22,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -4058,7 +4952,52 @@
       "toPath": "docs/knowledge-bank/capabilities/implementation-and-operational-stewardship.md",
       "to": "capability.implementation-operational-stewardship",
       "fragment": null,
-      "line": 23,
+      "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md",
+      "to": "method.participation-relational-infrastructure",
+      "fragment": null,
+      "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md",
+      "to": "method.public-knowledge-peoples-own-terms",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/identity-systems-as-shared-infrastructure.md",
+      "to": "method.identity-systems-shared-infrastructure",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/outcomes-and-adoption.md",
+      "to": "method.outcomes-and-adoption",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "to": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "fragment": null,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -4067,7 +5006,7 @@
       "toPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
       "to": "organization.nyc-artist-coalition",
       "fragment": null,
-      "line": 27,
+      "line": 34,
       "kind": "link"
     },
     {
@@ -4076,7 +5015,7 @@
       "toPath": "docs/knowledge-bank/projects/let-nyc-dance.md",
       "to": "project.let-nyc-dance",
       "fragment": null,
-      "line": 28,
+      "line": 35,
       "kind": "link"
     },
     {
@@ -4085,7 +5024,7 @@
       "toPath": "docs/knowledge-bank/projects/office-of-nightlife-town-halls.md",
       "to": "project.office-of-nightlife-town-halls",
       "fragment": null,
-      "line": 29,
+      "line": 36,
       "kind": "link"
     },
     {
@@ -4094,7 +5033,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
       "to": "project.talks-not-raids",
       "fragment": null,
-      "line": 30,
+      "line": 37,
       "kind": "link"
     },
     {
@@ -4103,7 +5042,7 @@
       "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
       "to": "project.fair-rent-nyc",
       "fragment": null,
-      "line": 31,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -4112,7 +5051,7 @@
       "toPath": "docs/knowledge-bank/projects/save-nyc-spaces.md",
       "to": "project.save-nyc-spaces",
       "fragment": null,
-      "line": 32,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -4121,7 +5060,7 @@
       "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
       "to": "project.harry-j-epstein",
       "fragment": null,
-      "line": 36,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -4130,7 +5069,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "to": "project.wowlist",
       "fragment": null,
-      "line": 37,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -4139,7 +5078,7 @@
       "toPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
       "to": "project.sunday-dinner-196",
       "fragment": null,
-      "line": 38,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -4148,7 +5087,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
       "to": "project.kc-town-hall",
       "fragment": null,
-      "line": 39,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -4157,7 +5096,7 @@
       "toPath": "docs/knowledge-bank/projects/nter-chng.md",
       "to": "project.nter-chng",
       "fragment": null,
-      "line": 40,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -4166,7 +5105,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-orientation.md",
       "to": "project.kc-spaces-fund",
       "fragment": null,
-      "line": 41,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -4175,7 +5114,7 @@
       "toPath": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
       "to": "project.waterways-participatory-art",
       "fragment": null,
-      "line": 42,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -4184,7 +5123,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 43,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -4193,7 +5132,7 @@
       "toPath": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "to": "method.collective-credit-protected-absence",
       "fragment": null,
-      "line": 47,
+      "line": 54,
       "kind": "link"
     },
     {
@@ -4202,7 +5141,25 @@
       "toPath": "docs/knowledge-bank/projections/role-fit-and-referral-map.md",
       "to": "portfolio.role-fit-referral-map",
       "fragment": null,
-      "line": 48,
+      "line": 55,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/indexes/canonical-story-bank.md",
+      "to": "index.knowledge-wiki.canonical-story-bank",
+      "fragment": null,
+      "line": 56,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/indexes/claim-maturity-dashboard.md",
+      "to": "index.knowledge-wiki.claim-maturity",
+      "fragment": null,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -4211,7 +5168,16 @@
       "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "to": "index.knowledge-wiki.visual-evidence",
       "fragment": null,
-      "line": 49,
+      "line": 58,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/methods/what-is-at-stake-for-me.md",
+      "to": "method.what-is-at-stake-for-me",
+      "fragment": null,
+      "line": 59,
       "kind": "link"
     },
     {
@@ -4220,7 +5186,7 @@
       "toPath": "docs/knowledge-bank/methods/situated-source-rereading.md",
       "to": "method.situated-source-rereading",
       "fragment": null,
-      "line": 53,
+      "line": 64,
       "kind": "link"
     },
     {
@@ -4229,7 +5195,7 @@
       "toPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
       "to": "research.foundational-source-return.2026-07-19",
       "fragment": null,
-      "line": 54,
+      "line": 65,
       "kind": "link"
     },
     {
@@ -4238,7 +5204,25 @@
       "toPath": "docs/knowledge-bank/research-runs/interpretive-layer-source-return-2026-07-19.md",
       "to": "research.interpretive-layer-source-return.2026-07-19",
       "fragment": null,
-      "line": 55,
+      "line": 66,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "to": "research.knowledge-wiki.family-closure.2026-07-19",
+      "fragment": null,
+      "line": 67,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/decisions/knowledge-wiki-family-closure.md",
+      "to": "decision.knowledge-wiki.family-closure",
+      "fragment": null,
+      "line": 68,
       "kind": "link"
     },
     {
@@ -4247,7 +5231,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md",
       "to": "research-inquiry.ucsc-installation-title",
       "fragment": null,
-      "line": 56,
+      "line": 69,
       "kind": "link"
     },
     {
@@ -4256,7 +5240,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 57,
+      "line": 70,
       "kind": "link"
     },
     {
@@ -4611,6 +5595,42 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "from": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "toPath": "docs/knowledge-bank/projects/callnyc.md",
+      "to": "project.callnyc",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "from": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "toPath": "docs/knowledge-bank/methods/situated-source-rereading.md",
+      "to": "method.situated-source-rereading",
+      "fragment": null,
+      "line": 40,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "from": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "toPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "to": "method.source-backed-team-memory",
+      "fragment": null,
+      "line": 41,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "from": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "toPath": "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
+      "to": "method.maintenance-handoff-stewardship",
+      "fragment": null,
+      "line": 48,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "from": "index.knowledge-wiki.visual-evidence",
       "toPath": "docs/knowledge-bank/assets/digital-district-photo.md",
@@ -4734,6 +5754,33 @@
       "to": "index.knowledge-wiki.living-archive",
       "fragment": null,
       "line": 50,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md",
+      "from": "method.public-knowledge-peoples-own-terms",
+      "toPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
+      "to": "project.kc-town-hall",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md",
+      "from": "method.public-knowledge-peoples-own-terms",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "to": "project.nyc-artist-coalition",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/public-knowledge-in-peoples-own-terms.md",
+      "from": "method.public-knowledge-peoples-own-terms",
+      "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "to": "project.wowlist",
+      "fragment": null,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -5327,7 +6374,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 112,
+      "line": 122,
       "kind": "link"
     },
     {
@@ -5336,7 +6383,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 113,
+      "line": 123,
       "kind": "link"
     },
     {
@@ -5345,7 +6392,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 116,
+      "line": 126,
       "kind": "link"
     },
     {
@@ -5354,7 +6401,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 120,
+      "line": 130,
       "kind": "link"
     },
     {
@@ -5363,7 +6410,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 127,
+      "line": 137,
       "kind": "link"
     },
     {
@@ -5372,7 +6419,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 132,
+      "line": 142,
       "kind": "link"
     },
     {
@@ -5381,7 +6428,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 138,
+      "line": 148,
       "kind": "link"
     },
     {
@@ -5390,7 +6437,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 143,
+      "line": 153,
       "kind": "link"
     },
     {
@@ -5399,7 +6446,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 149,
+      "line": 159,
       "kind": "link"
     },
     {
@@ -5408,7 +6455,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 151,
+      "line": 161,
       "kind": "link"
     },
     {
@@ -5417,7 +6464,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 157,
+      "line": 167,
       "kind": "link"
     },
     {
@@ -5426,7 +6473,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 159,
+      "line": 169,
       "kind": "link"
     },
     {
@@ -5435,7 +6482,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 167,
+      "line": 177,
       "kind": "link"
     },
     {
@@ -5444,7 +6491,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 173,
+      "line": 183,
       "kind": "link"
     },
     {
@@ -5453,7 +6500,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 175,
+      "line": 185,
       "kind": "link"
     },
     {
@@ -5462,7 +6509,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 181,
+      "line": 191,
       "kind": "link"
     },
     {
@@ -5471,7 +6518,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 187,
+      "line": 197,
       "kind": "link"
     },
     {
@@ -5480,7 +6527,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 193,
+      "line": 203,
       "kind": "link"
     },
     {
@@ -5489,7 +6536,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 199,
+      "line": 209,
       "kind": "link"
     },
     {
@@ -5498,7 +6545,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 205,
+      "line": 215,
       "kind": "link"
     },
     {
@@ -5507,7 +6554,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 211,
+      "line": 221,
       "kind": "link"
     },
     {
@@ -5516,7 +6563,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 213,
+      "line": 223,
       "kind": "link"
     },
     {
@@ -5525,7 +6572,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 219,
+      "line": 229,
       "kind": "link"
     },
     {
@@ -5534,7 +6581,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 224,
+      "line": 234,
       "kind": "link"
     },
     {
@@ -5543,7 +6590,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 226,
+      "line": 236,
       "kind": "link"
     },
     {
@@ -5552,7 +6599,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 233,
+      "line": 243,
       "kind": "link"
     },
     {
@@ -5561,7 +6608,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 235,
+      "line": 245,
       "kind": "link"
     },
     {
@@ -5570,7 +6617,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 241,
+      "line": 251,
       "kind": "link"
     },
     {
@@ -5579,7 +6626,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 243,
+      "line": 253,
       "kind": "link"
     },
     {
@@ -5588,7 +6635,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 248,
+      "line": 258,
       "kind": "link"
     },
     {
@@ -5597,7 +6644,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 250,
+      "line": 260,
       "kind": "link"
     },
     {
@@ -5606,7 +6653,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 256,
+      "line": 266,
       "kind": "link"
     },
     {
@@ -5615,25 +6662,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 258,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
-      "to": null,
-      "fragment": null,
-      "line": 265,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
-      "to": null,
-      "fragment": null,
-      "line": 267,
+      "line": 268,
       "kind": "link"
     },
     {
@@ -5648,10 +6677,28 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 275,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
+      "to": null,
+      "fragment": null,
+      "line": 277,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 273,
+      "line": 283,
       "kind": "link"
     },
     {
@@ -5660,25 +6707,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 276,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
-      "to": null,
-      "fragment": null,
-      "line": 281,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
-      "to": null,
-      "fragment": null,
-      "line": 282,
+      "line": 286,
       "kind": "link"
     },
     {
@@ -5688,6 +6717,24 @@
       "to": null,
       "fragment": null,
       "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 291,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 292,
       "kind": "link"
     },
     {
@@ -5756,10 +6803,46 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/canonical-story-bank.md",
+      "to": "index.knowledge-wiki.canonical-story-bank",
+      "fragment": null,
+      "line": 46,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/claim-maturity-dashboard.md",
+      "to": "index.knowledge-wiki.claim-maturity",
+      "fragment": null,
+      "line": 49,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
+      "to": "index.knowledge-wiki.relational-infrastructure-atlas",
+      "fragment": null,
+      "line": 51,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/methods/jamie-at-work.md",
+      "to": "method.jamie-at-work",
+      "fragment": null,
+      "line": 53,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 46,
+      "line": 55,
       "kind": "link"
     },
     {
@@ -5768,7 +6851,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 49,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -5777,7 +6860,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 55,
+      "line": 64,
       "kind": "link"
     },
     {
@@ -5976,6 +7059,15 @@
       "to": "source.nter-chng.archived-homepage.2011",
       "fragment": null,
       "line": 37,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/knowledge-wiki-family-closure-2026-07-19.md",
+      "from": "research.knowledge-wiki.family-closure.2026-07-19",
+      "toPath": "docs/knowledge-bank/data/knowledge-wiki-family-census-reconciliation.json",
+      "to": null,
+      "fragment": null,
+      "line": 29,
       "kind": "link"
     },
     {

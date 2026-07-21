@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `cd96f4b66a2e6c427de39495897ef1cbc1622f34`
-**Generation time:** 2026-07-19T13:46:15-04:00
-**Source fingerprint:** `1ba9159f377b9b0190feccb0f0b9e6edb757f276b7ca867ae211c7211950d566`
+**Source commit:** `2fc7783da2632f641384524c0c7a4e411f1ab9a9`
+**Generation time:** 2026-07-19T16:28:03-04:00
+**Source fingerprint:** `83828c5ebc062da19ae1bd76ddee53c0cac1c25404e011beef323107a5a6d9a4`
 
 `origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.
 
-- Nodes added: 86
+- Nodes added: 99
 - Nodes removed: 0
-- Edges added: 310
+- Edges added: 395
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 1
@@ -28,6 +28,7 @@
 - `decision.callnyc.issue-pathways`
 - `decision.hje.continuity-modernization`
 - `decision.kc-town-hall.listening-fieldwork`
+- `decision.knowledge-wiki.family-closure`
 - `decision.knowledge-wiki.selective-projection`
 - `decision.open-house.communal-governance`
 - `evaluation.employment-context.coverage.2026-07-18`
@@ -35,6 +36,8 @@
 - `evaluation.nycac.shared-folder-production.2026-07-19`
 - `event.nycc.constituent-services-hackathon.2016`
 - `index.knowledge-wiki`
+- `index.knowledge-wiki.canonical-story-bank`
+- `index.knowledge-wiki.claim-maturity`
 - `index.knowledge-wiki.decision-records`
 - `index.knowledge-wiki.employment-context`
 - `index.knowledge-wiki.living-archive`
@@ -42,12 +45,20 @@
 - `index.knowledge-wiki.pilot`
 - `index.knowledge-wiki.pressures`
 - `index.knowledge-wiki.project-lineages`
+- `index.knowledge-wiki.relational-infrastructure-atlas`
 - `index.knowledge-wiki.visual-evidence`
 - `method.collective-credit-protected-absence`
+- `method.identity-systems-shared-infrastructure`
+- `method.jamie-at-work`
+- `method.learning-through-making`
 - `method.maintenance-handoff-stewardship`
+- `method.outcomes-and-adoption`
+- `method.participation-relational-infrastructure`
+- `method.public-knowledge-peoples-own-terms`
 - `method.situated-source-rereading`
 - `method.source-backed-team-memory`
 - `method.structure-grows-from-material`
+- `method.what-is-at-stake-for-me`
 - `opportunity.aclu.product-manager-discovery.8482872002`
 - `opportunity.asana.ai-implementation.8027437`
 - `opportunity.benepass.product-operations.7f963a7a`
@@ -76,6 +87,7 @@
 - `research-inquiry.ucsc-installation-title`
 - `research.foundational-source-return.2026-07-19`
 - `research.interpretive-layer-source-return.2026-07-19`
+- `research.knowledge-wiki.family-closure.2026-07-19`
 - `research.nycac.shared-folder.2026-07-19`
 - `source.callnyc.source-repository`
 - `source.civichall.hackathon-announcement.2016`
@@ -91,6 +103,7 @@
 - `source.jobs.permitflow.product-operations.8a6e6066`
 - `source.kansas-city-star.raft.2007-11-15`
 - `source.kc-town-hall.cced-proposal.2019`
+- `source.knowledge-wiki.family-frozen-heads.2026-07-19`
 - `source.nter-chng.archived-homepage.2011`
 - `source.nycac.nightlife-forum-transcript.2026`
 - `source.nycac.running-minutes.2026`

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `cd96f4b66a2e6c427de39495897ef1cbc1622f34`
-**Generation time:** 2026-07-19T13:46:15-04:00
-**Source fingerprint:** `1ba9159f377b9b0190feccb0f0b9e6edb757f276b7ca867ae211c7211950d566`
+**Source commit:** `2fc7783da2632f641384524c0c7a4e411f1ab9a9`
+**Generation time:** 2026-07-19T16:28:03-04:00
+**Source fingerprint:** `83828c5ebc062da19ae1bd76ddee53c0cac1c25404e011beef323107a5a6d9a4`
 
 ## application
 
@@ -34,6 +34,7 @@
 - [CallNYC issue pathways for public constituent-services data](../decisions/callnyc-issue-pathways.md) - `decision.callnyc.issue-pathways`
 - [Harry J. Epstein continuity-oriented modernization](../decisions/hje-continuity-modernization.md) - `decision.hje.continuity-modernization`
 - [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
+- [Close the Knowledge Wiki A-E family into one canonical implementation](../decisions/knowledge-wiki-family-closure.md) - `decision.knowledge-wiki.family-closure`
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
 
@@ -50,6 +51,8 @@
 ## index
 
 - [Knowledge Wiki](../README.md) - `index.knowledge-wiki`
+- [Canonical story bank](../indexes/canonical-story-bank.md) - `index.knowledge-wiki.canonical-story-bank`
+- [Claim maturity dashboard](../indexes/claim-maturity-dashboard.md) - `index.knowledge-wiki.claim-maturity`
 - [Decision records](../indexes/decision-records.md) - `index.knowledge-wiki.decision-records`
 - [Employment context and hiring acceptance](../indexes/employment-context.md) - `index.knowledge-wiki.employment-context`
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
@@ -57,15 +60,23 @@
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
 - [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
+- [Relational infrastructure atlas](../indexes/relational-infrastructure-atlas.md) - `index.knowledge-wiki.relational-infrastructure-atlas`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
 
 ## method
 
 - [Collective credit and protected absence](../methods/collective-credit-and-protected-absence.md) - `method.collective-credit-protected-absence`
+- [Identity systems as shared infrastructure](../methods/identity-systems-as-shared-infrastructure.md) - `method.identity-systems-shared-infrastructure`
+- [Jamie at work](../methods/jamie-at-work.md) - `method.jamie-at-work`
+- [Learning through making](../methods/learning-through-making.md) - `method.learning-through-making`
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
+- [Outcomes and adoption](../methods/outcomes-and-adoption.md) - `method.outcomes-and-adoption`
+- [Participation and relational infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-relational-infrastructure`
+- [Public knowledge in people's own terms](../methods/public-knowledge-in-peoples-own-terms.md) - `method.public-knowledge-peoples-own-terms`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
+- [What is at stake for me](../methods/what-is-at-stake-for-me.md) - `method.what-is-at-stake-for-me`
 
 ## opportunity
 
@@ -115,6 +126,7 @@
 
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
+- [Knowledge Wiki A-E family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki.family-closure.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 
 ## source
@@ -133,6 +145,7 @@
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
 - [The Kansas City Star raft report, November 15, 2007](../sources/kansas-city-star-raft-2007-11-15.md) - `source.kansas-city-star.raft.2007-11-15`
 - [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
+- [Frozen Knowledge Wiki A-E branch heads](../sources/knowledge-wiki-family-frozen-heads-2026-07-19.md) - `source.knowledge-wiki.family-frozen-heads.2026-07-19`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`

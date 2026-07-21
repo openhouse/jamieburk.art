@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-19T15:17:14.875Z",
-  "baseUrl": "http://127.0.0.1:3043",
-  "publicSurfaceFingerprint": "7cee6413cccdbd7935dd1a52308e447636dd74d962b7cdb71cbd162bfc559ebc",
+  "checkedAt": "2026-07-19T20:10:53.521Z",
+  "baseUrl": "http://127.0.0.1:3044",
+  "publicSurfaceFingerprint": "e6195e1e2de29a03701eebd9c23c708d52fe2aac079f9f884069d407c3bc6e40",
   "publicSurfaceFileCount": 109,
   "publicSurfaceScope": [
     "apps/www/**",
