@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "certifiedAt": "2026-07-19",
+  "certifiedAt": "2026-07-21",
   "profile": "integration_ready",
   "suite": "feature-evals-composite-integration-v5",
   "status": "pass",
-  "candidate": "sha256:0b0b906a4cc40d7887943069e88ef70926a8815096818e4660cbe46283f72e83",
-  "contract": "sha256:77cb3d71fadfa7722b880dc75f6254a4418e269e42d40a7e82656aa58df9b895",
+  "candidate": "sha256:7c9a889425af071c342fa19b038739dba3aa849161489398018369e2f6f7da70",
+  "contract": "sha256:22be73cf9c5dd27f9e23850d5230213a6d7f3d90b1670b82513e1ed1cfa183a9",
   "consecutivePassingRuns": 2,
   "independentJudgments": [
-    "codex-independent-composite-archival-editorial-2026-07-19-completed-synthesis-r8",
-    "codex-independent-composite-systems-public-safety-2026-07-19-completed-synthesis-r8"
+    "codex-independent-composite-archival-editorial-2026-07-21-wiki-family-closure",
+    "codex-independent-composite-systems-public-safety-2026-07-21-wiki-family-closure"
   ],
   "relatedProfiles": {
     "applicationReady": {
@@ -22,15 +22,15 @@
     "knowledgeReady": {
       "status": "pass",
       "score": 100,
-      "candidate": "sha256:efea907e3632bcaa315a4058867c7067c21844e09c9b1c41f8dd10d18253c059",
+      "candidate": "sha256:c6ebee8d616413639c28765850f7eed67023717d7416f52b33c66c05af5f1387",
       "contract": "sha256:2f1d5f6cfeb00461b911bb1601cfa670f2de91e81a92d7a4270bdbeb81ae2f44",
       "consecutivePassingRuns": 2
     },
     "knowledgeWiki": {
       "status": "pass",
-      "candidate": "sha256:43627c5f73e80ec26a09cd2e79e3645da71650cc84e211c1f20515860a363e8b",
-      "contract": "sha256:dd6e660720efc391078459b6ff72dd393f44f1dd3ba324eb782abfd3529179ae",
-      "records": 50,
+      "candidate": "sha256:bfcd6d5c518e069b03b53fd8f3ad008a725d32ea151e610599ee1c8a98bf2c77",
+      "contract": "sha256:2480948d8bd392f64805cad3ca5998c8fbd6df924ceb073a1e03431bf3820b2f",
+      "records": 75,
       "consecutivePassingRuns": 2
     },
     "hiringAcceptance": {
