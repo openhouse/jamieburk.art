@@ -65,12 +65,14 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   sharedPublicSurfacesSha256: "1f46195106bbfa6af572a32f4ae9fb57a12e687bf1154fe92f0d6b0822635846",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
+// Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
+// repository diff hygiene. The report wording, evidence, and boundaries did not change.
 const NYCAC_SOCIAL_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "74725b915bee88b6d29fa484a2f9ecb0dd9fe2cdaaca75b4dc7c7e9b54107d46",
   recordsSha256: "71955963e22dc99454615aea10c56cf7749e1bdb3aabc26bcedad885013249a1",
   incomingRecordsSha256: "d190361370c1ce18723fc472d0b2fce6c9f520797c9fca32ae80c3912dc83a09",
   governedModuleSha256: "727178b4389b1def93fb99ea7a402b9fb70d48412ed05cb04745d6305910c55d",
-  publicReportSha256: "6a09c5f2fd3520b8238f5f54c2c4ceb3a2222fb72a6c09b64591ac3b4d6782cf"
+  publicReportSha256: "5424eb93fef4eb1e9b1b8b020a5de19ab61f74025411c998869f5f82bc771bcb"
 });
 const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "9fedab737b1e4d6ded779942203d4a77272fe0120663f50402c81bdbcdc0c455",
@@ -92,6 +94,8 @@ const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
+// Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
+// repository diff hygiene. The report wording, evidence, and boundaries did not change.
 const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "23c7d57699dc30d84d6738f7ece4b47f3497550fa2dd8690ca7c4a86719d70ef",
   manifestContentSha256: "62f09e7e53d5e28397ca25e948a77f7e1ec7e9e8a504b37c8e9343eae1faa090",
@@ -99,7 +103,7 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   canonicalKnowledgeSha256: "575a9c54527e5c42e7b38a077ef2438fac2073ab5eafc24656c2c677d43afaac",
   reviewConfigurationSha256: "939b9ccc09b790520450a8c3295f1436193c9c2e9c6505350fc4c0bfb23c86b0",
   governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
-  publicReportSha256: "46f3020a8bdf63ea6f0d9f4bbcb2b9a99dd4f6fe33cce152490778cd48f15d2f",
+  publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
   wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
   sundayDinnerMdxSha256: "2c9e22237d23a1b99262634f75cb24f7eeca300c0ed59e0dec26b6c3a54dd6be",
   proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"

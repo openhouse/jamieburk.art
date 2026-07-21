@@ -1,8 +1,8 @@
 # Knowledge Wiki inventory
 
-**Inventory date:** 2026-07-18  
-**Branch baseline:** `feature/knowledge-h` at `a28f3167`  
-**Physical Markdown root:** `docs/knowledge-bank`  
+**Inventory date:** 2026-07-18
+**Branch baseline:** `feature/knowledge-h` at `a28f3167`
+**Physical Markdown root:** `docs/knowledge-bank`
 
 ## Baseline
 

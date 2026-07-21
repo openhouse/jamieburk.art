@@ -24,7 +24,7 @@ relations:
 
 # Frozen Knowledge Wiki branch A
 
-**Branch:** `feature/knowledge-wiki-A`  
+**Branch:** `feature/knowledge-wiki-A`
 **Observed head:** `920f9024d7e058700f282e3e1e76188fe1c5294e`
 
 The closure review found A strongest at editorial operations: fragment intake,

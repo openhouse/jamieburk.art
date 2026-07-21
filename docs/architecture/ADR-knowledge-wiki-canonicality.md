@@ -1,8 +1,8 @@
 # ADR: Knowledge Wiki naming and canonicality
 
-**Status:** Accepted for the bounded foundation and opportunity-aware tranche  
-**Date:** 2026-07-18  
-**Decision owner:** Jamie Burkart  
+**Status:** Accepted for the bounded foundation and opportunity-aware tranche
+**Date:** 2026-07-18
+**Decision owner:** Jamie Burkart
 
 ## Decision
 

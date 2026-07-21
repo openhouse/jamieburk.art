@@ -1,6 +1,6 @@
 # KC Town Hall Council Funding Eval Run
 
-Date: 2026-07-14  
+Date: 2026-07-14
 Material-change reset: `material-change-reset-kc-town-hall-council-funding`
 
 ## Objective

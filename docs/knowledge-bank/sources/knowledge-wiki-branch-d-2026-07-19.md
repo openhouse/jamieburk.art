@@ -24,7 +24,7 @@ relations:
 
 # Frozen Knowledge Wiki branch D
 
-**Branch:** `feature/knowledge-wiki-D`  
+**Branch:** `feature/knowledge-wiki-D`
 **Observed head:** `e5a7ac607bfbd5a428bb18c2f7af5baad614132b`
 
 The closure review found D strongest at relational discipline: a human-readable

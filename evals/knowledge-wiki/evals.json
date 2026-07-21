@@ -164,7 +164,10 @@
         "learning_retains_writing_and_limits",
         "first_person_authorship_human_controlled",
         "family_public_projection_still_selective",
-        "family_public_safety_preserved"
+        "family_public_safety_preserved",
+        "merge_readiness_ci_enforced",
+        "rfp_contract_enforced",
+        "diff_hygiene_clean"
       ]
     }
   ]

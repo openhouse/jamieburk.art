@@ -24,7 +24,7 @@ relations:
 
 # Frozen Knowledge Wiki branch B
 
-**Branch:** `feature/knowledge-wiki-B`  
+**Branch:** `feature/knowledge-wiki-B`
 **Observed head:** `268a92d794f5b604f4004fc9d6e5652f234fc61b`
 
 The closure review found B strongest at editorial and interpretive depth:

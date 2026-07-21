@@ -129,4 +129,3 @@ if (failures.length) {
 }
 
 console.log(`RFP check passed: ${proposalFiles.length} numbered proposal(s), all indexed and structurally valid.`);
-

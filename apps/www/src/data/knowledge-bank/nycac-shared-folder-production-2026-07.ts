@@ -8,7 +8,6 @@ const sourceIds = {
   fairRentWeb: "SRC-NYCAC-FAIRRENT-WEB-CHECKLIST-2019",
   governance: "SRC-NYCAC-MEETING-GOVERNANCE-ARTIFACTS-2017-2019"
 } as const;
-
 export const nycacSharedFolderProduction = {
   intakeItems: [
     {
@@ -466,4 +465,3 @@ export const nycacSharedFolderProduction = {
     }
   ]
 } as const;
-

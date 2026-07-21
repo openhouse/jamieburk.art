@@ -1,8 +1,8 @@
 # Feature eval family composite
 
-**Suite:** `.agents/evals/feature-evals-composite.json`  
-**Integration register:** `docs/integration/feature-evals-composite.json`  
-**Writable branch:** `feature/knowledge-h`  
+**Suite:** `.agents/evals/feature-evals-composite.json`
+**Integration register:** `docs/integration/feature-evals-composite.json`
+**Writable branch:** `feature/knowledge-h`
 **Pull-request base:** `develop`
 
 ## Purpose

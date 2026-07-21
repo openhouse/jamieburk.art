@@ -24,7 +24,7 @@ relations:
 
 # Frozen Knowledge Wiki branch E
 
-**Branch:** `feature/knowledge-wiki-E`  
+**Branch:** `feature/knowledge-wiki-E`
 **Observed head:** `9f1bbfacec3edbfbc47a5200f777d4f498da0ec4`
 
 The closure review found E strongest at governance: one canonical Markdown

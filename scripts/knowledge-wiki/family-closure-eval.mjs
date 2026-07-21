@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -51,6 +52,13 @@ export function evaluateFamilyClosure(options = {}) {
   const publicRegistry = options.publicRegistryOverride ?? readFileSync(
     path.join(repoRoot, manifest.publicRegistryPath),
     "utf8"
+  );
+  const workflow = options.workflowOverride ?? readFileSync(
+    path.join(repoRoot, manifest.ciWorkflowPath),
+    "utf8"
+  );
+  const packageManifest = options.packageOverride ?? JSON.parse(
+    readFileSync(path.join(repoRoot, "package.json"), "utf8")
   );
 
   const recordsMaterialized = manifest.requiredRecords.every(([id, expectedPath]) => {
@@ -217,6 +225,40 @@ export function evaluateFamilyClosure(options = {}) {
 
   const publicSafetyPreserved = allNewIds.every((id) => !privatePattern.test(source(id)));
 
+  const mergeReadinessCiEnforced =
+    /pull_request:/.test(workflow) &&
+    /workflow_dispatch:/.test(workflow) &&
+    !/pull_request_target:/.test(workflow) &&
+    /ref:\s*\$\{\{\s*github\.event\.pull_request\.head\.sha\s*\|\|\s*github\.sha\s*\}\}/.test(
+      workflow
+    ) &&
+    /git rev-parse HEAD/.test(workflow) &&
+    /github\.event\.pull_request\.head\.sha/.test(workflow) &&
+    /node-version-file:\s*\.nvmrc/.test(workflow) &&
+    /run:\s*npm ci/.test(workflow) &&
+    /git diff --check\s+"origin\/\$\{GITHUB_BASE_REF\}\.\.\.HEAD"/.test(workflow) &&
+    /git diff --check\s+HEAD\^\.\.\.HEAD/.test(workflow) &&
+    /run:\s*npm run check/.test(workflow);
+
+  const rfpContractEnforced =
+    packageManifest.scripts?.["check:rfps"] === "node scripts/check-rfps.mjs" &&
+    packageManifest.scripts?.check?.includes("npm run check:rfps");
+
+  let diffHygieneClean = options.diffCheckOverride;
+  if (diffHygieneClean === undefined) {
+    try {
+      execFileSync("git", ["diff", "--check", manifest.baseRef], {
+        cwd: repoRoot,
+        stdio: "pipe"
+      });
+      execFileSync("git", ["diff", "--check"], { cwd: repoRoot, stdio: "pipe" });
+      execFileSync("git", ["diff", "--cached", "--check"], { cwd: repoRoot, stdio: "pipe" });
+      diffHygieneClean = true;
+    } catch {
+      diffHygieneClean = false;
+    }
+  }
+
   const checks = {
     family_records_materialized: recordsMaterialized,
     exact_frozen_donors_recorded: exactFrozenDonors,
@@ -239,7 +281,10 @@ export function evaluateFamilyClosure(options = {}) {
     learning_retains_writing_and_limits: learningRetainsWritingAndLimits,
     first_person_authorship_human_controlled: firstPersonAuthorshipHumanControlled,
     family_public_projection_still_selective: publicProjectionStillSelective,
-    family_public_safety_preserved: publicSafetyPreserved
+    family_public_safety_preserved: publicSafetyPreserved,
+    merge_readiness_ci_enforced: mergeReadinessCiEnforced,
+    rfp_contract_enforced: rfpContractEnforced,
+    diff_hygiene_clean: diffHygieneClean
   };
 
   return {

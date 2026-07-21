@@ -1,7 +1,7 @@
 # Composite governance repair before final holdouts
 
-**Date:** 2026-07-16  
-**Branch:** `feature/knowledge-h`  
+**Date:** 2026-07-16
+**Branch:** `feature/knowledge-h`
 **Status:** Candidate repaired; fresh final holdouts required
 
 ## Recursive progression

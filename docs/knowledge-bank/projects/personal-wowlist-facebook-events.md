@@ -1,7 +1,7 @@
 # Jamie Burkart and WOW List Facebook event archival production
 
-Reviewed: 2026-07-15  
-Scope: Jamie Burkart's authenticated personal Facebook Events index and the authenticated WOW List page-owner Events surface  
+Reviewed: 2026-07-15
+Scope: Jamie Burkart's authenticated personal Facebook Events index and the authenticated WOW List page-owner Events surface
 Public fixture: [`personal-wowlist-facebook-events-full-population.json`](../../../apps/www/src/data/knowledge-bank/fixtures/personal-wowlist-facebook-events-full-population.json)
 
 ## Answer first

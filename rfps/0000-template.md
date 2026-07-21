@@ -75,4 +75,3 @@ currently preferred.
 ## Unresolved questions
 
 - Record questions that must be answered before acceptance or implementation.
-

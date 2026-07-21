@@ -24,7 +24,7 @@ relations:
 
 # Frozen Knowledge Wiki branch C
 
-**Branch:** `feature/knowledge-wiki-C`  
+**Branch:** `feature/knowledge-wiki-C`
 **Observed head:** `6a2af7396240381ce04aad9b9129ba402b83c134`
 
 The closure review found C strongest at concrete professional legibility:

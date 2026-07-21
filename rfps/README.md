@@ -111,10 +111,9 @@ The validator checks numbering, required metadata and sections, known stages,
 index coverage, and common public-safety hazards. It cannot establish consensus,
 rights, consent, implementation readiness, or acceptance.
 
-The validator is intentionally not added to the root `npm run check` command in
-the current Knowledge Wiki candidate because changing that command would stale
-candidate-bound browser evidence. A follow-on implementation may add it after
-the current pull request closes and fresh candidate evidence is collected.
+The root `npm run check` command and pull-request CI both run this validator.
+That makes proposal structure and public-safety checks part of the same merge
+contract as the application, Knowledge Bank, and Knowledge Wiki checks.
 
 ## Prior art
 

@@ -1,7 +1,7 @@
 # NYC Artist Coalition social-population archival production
 
-**Reviewed:** 2026-07-15  
-**Account:** [@NYCArtC](https://x.com/NYCArtC)  
+**Reviewed:** 2026-07-15
+**Account:** [@NYCArtC](https://x.com/NYCArtC)
 **Status:** complete review of the retrievable public union; literal full-account
 recovery remains blocked on an account-owner X Archive.
 

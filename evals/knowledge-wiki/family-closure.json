@@ -112,5 +112,7 @@
     "index.knowledge-wiki.role-authorship-protected-absence"
   ],
   "publicRegistryPath": "apps/www/src/data/knowledge-bank/records.ts",
+  "ciWorkflowPath": ".github/workflows/portfolio-readiness.yml",
+  "baseRef": "origin/develop",
   "parallelWikiRoot": "docs/knowledge-wiki"
 }

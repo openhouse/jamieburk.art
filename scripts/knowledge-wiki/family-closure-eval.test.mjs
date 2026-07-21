@@ -24,7 +24,7 @@ test("branch-family closure baseline passes", () => {
     donors: 5,
     requiredRecords: 21,
     integratedRecords: 14,
-    blockingCriteria: 22
+    blockingCriteria: 25
   });
 });
 
@@ -139,4 +139,68 @@ test("new records cannot enter the public registry implicitly", () => {
     publicRegistryOverride: "method.what-is-at-stake-for-me"
   });
   assert.equal(evaluation.checks.family_public_projection_still_selective, false);
+});
+
+test("the merge candidate must keep exact-head pull-request CI", () => {
+  const evaluation = evaluateFamilyClosure({
+    result,
+    workflowOverride: "on:\n  pull_request:\njobs:\n  check:\n    steps: []\n"
+  });
+  assert.equal(evaluation.checks.merge_readiness_ci_enforced, false);
+});
+
+test("pull-request CI cannot substitute the synthetic merge ref", () => {
+  const workflowPath = path.join(
+    defaultRepoRoot,
+    ".github/workflows/portfolio-readiness.yml"
+  );
+  const workflow = readFileSync(workflowPath, "utf8").replace(
+    "ref: ${{ github.event.pull_request.head.sha || github.sha }}",
+    "ref: ${{ github.sha }}"
+  );
+  const evaluation = evaluateFamilyClosure({ result, workflowOverride: workflow });
+  assert.equal(evaluation.checks.merge_readiness_ci_enforced, false);
+});
+
+test("pull-request CI must verify the checked-out head SHA", () => {
+  const workflowPath = path.join(
+    defaultRepoRoot,
+    ".github/workflows/portfolio-readiness.yml"
+  );
+  const workflow = readFileSync(workflowPath, "utf8").replace(
+    /^\s*run: test "\$\(git rev-parse HEAD\)" = ".*"\n/m,
+    ""
+  );
+  const evaluation = evaluateFamilyClosure({ result, workflowOverride: workflow });
+  assert.equal(evaluation.checks.merge_readiness_ci_enforced, false);
+});
+
+test("manual CI dispatch keeps explicit diff hygiene", () => {
+  const workflowPath = path.join(
+    defaultRepoRoot,
+    ".github/workflows/portfolio-readiness.yml"
+  );
+  const workflow = readFileSync(workflowPath, "utf8").replace(
+    "run: git diff --check HEAD^...HEAD",
+    "run: true"
+  );
+  const evaluation = evaluateFamilyClosure({ result, workflowOverride: workflow });
+  assert.equal(evaluation.checks.merge_readiness_ci_enforced, false);
+});
+
+test("the RFP contract must remain in the normal repository check", () => {
+  const packageManifest = JSON.parse(
+    readFileSync(path.join(defaultRepoRoot, "package.json"), "utf8")
+  );
+  packageManifest.scripts.check = packageManifest.scripts.check.replace(
+    "npm run check:rfps && ",
+    ""
+  );
+  const evaluation = evaluateFamilyClosure({ result, packageOverride: packageManifest });
+  assert.equal(evaluation.checks.rfp_contract_enforced, false);
+});
+
+test("diff hygiene is a blocking family-closure criterion", () => {
+  const evaluation = evaluateFamilyClosure({ result, diffCheckOverride: false });
+  assert.equal(evaluation.checks.diff_hygiene_clean, false);
 });

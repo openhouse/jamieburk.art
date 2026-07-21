@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "composite-holdout-architecture-a-2026-07-19-family-closure",
+  "judgeId": "composite-holdout-architecture-a-2026-07-21-family-closure-final",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "d7e8bdb95261c5a328ac1ad5444d6b4b3b5255b7715ba9ee3fe1bf57dbed287d",
+  "candidateFingerprint": "bb8ed054c8bc8c28fd59ae9ba22c6905e511eabb5f3a9440016c6e448ff0b883",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,138 +12,133 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "npm run evals:composite passed COMP-001 with all 14 feature/evals-A through feature/evals-N heads matching the frozen rubric.",
-        "Independent ref inspection confirmed every required refs/remotes/origin head exactly.",
-        "The register identifies feature/knowledge-h as the integration branch, develop as the pull-request base, and frozen branches as reference-only."
+        "Independent Node 26 evaluation passed all 14 frozen composite branch decisions and exact refs.",
+        "Frozen Wiki donor refs resolved exactly: A 920f9024d7e058700f282e3e1e76188fe1c5294e, B 268a92d794f5b604f4004fc9d6e5652f234fc61b, C 6a2af7396240381ce04aad9b9129ba402b83c134, D e5a7ac607bfbd5a428bb18c2f7af5baad614132b, and E 9f1bbfacec3edbfbc47a5200f777d4f498da0ec4.",
+        "The integration suite and register identify develop as the target base."
       ],
-      "rationale": "The complete frozen evaluation-family inventory is exact, resolvable, and separated from the integration candidate."
+      "rationale": "The candidate is evaluated against the declared base and exact frozen inputs, with no substituted donor refs."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 integration-register entries contain a substantive already-present or adapt decision, rationale, existing destination paths, and verification IDs.",
-        "The register digest matched 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
-        "The register explicitly retains the selective H-derived website composition rather than projecting the deeper knowledge system automatically."
+        "The composite integration register passed all 14 decision checks with explicit rationales and canonical destinations.",
+        "The family-closure manifest traces five donor sources into 14 integrated records, and the evaluator passed 25 of 25 closure checks.",
+        "Direct inspection of frozen A-D content confirmed the claimed provenance; none of the 14 composite record blobs is a wholesale copy of an A-D blob.",
+        "Every integrated record has explicit informed_by provenance while preserving E's schema, projection states, and authority model."
       ],
-      "rationale": "Every frozen contribution has an inspectable disposition tied to real destinations, verification, and an explicit public-projection decision."
+      "rationale": "Donor contributions are materially adapted and provenance-bound, not decorative integration or fabricated attribution."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "No application file under apps/www and no dependency lock changed from frozen donor E; package.json only adds family-evaluation commands.",
-        "All 11 canonical architecture files remain present, while lifecycle-schema.ts, lifecycle-records.ts, development-records.ts, and docs/knowledge-wiki are absent.",
-        "E's schema, records, compiler, lifecycle, public registry, decision contracts, and projection boundary remain canonical.",
-        "All 21 family-closure records are held or pending and are absent from records.ts, public-registry.json, public.ts, and every application-facing knowledge import."
+        "All 11 canonical architecture files passed, with no forbidden lifecycle-schema, lifecycle-records, development-records, or docs/knowledge-wiki parallel root.",
+        "ADR-knowledge-wiki-canonicality.md keeps docs/knowledge-bank and the existing structured TypeScript authorities canonical.",
+        "No integrated family record is exposed through the public registry; the application consumes only the generated redacted projection.",
+        "Relative to frozen E, public routes, components, proofs, package lock, and public behavior remain semantically unchanged."
       ],
-      "rationale": "The integration is a semantic synthesis inside E's canonical architecture, with no parallel lifecycle root, competing schema, duplicate application, or implicit public projection."
+      "rationale": "The candidate extends E's canonical architecture without introducing a competing schema, registry, or public explorer."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The targeted lifecycle suite passed 4/4 tests.",
-        "Identical intake replay is idempotent, repeated artifacts with new IDs remain linked duplicates, and changed-content stable-ID collisions are rejected.",
-        "Lifecycle queries expose held knowledge, open inquiries, corrections, projection states, and orphan-source state."
+        "Composite lifecycle evaluation passed append, replay, duplicate, collision, and query behavior.",
+        "The full Knowledge Wiki test suite passed 83 of 83 tests.",
+        "Family mutation tests reject adoption-state collapse, identity and authorship inflation, causal-edge mutation, protected-path exposure, and unauthorized first-person activation."
       ],
-      "rationale": "Append safety and lifecycle retrieval continue to operate through the existing canonical model."
+      "rationale": "Lifecycle and governance semantics remain enforceable under replay and adversarial mutation."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Composite validation passed for 280 sources, 98 claims, 31 agency relations, and 4 corrections; citation, knowledge-bank, and public-safety checks also passed.",
-        "The closure contains exactly 21 required records: five donor sources, one source-return run, one closure index, and 14 authored composite records.",
-        "Independent comparison with all five frozen donor heads confirmed A's editorial queues and adoption precision, B's identity, learning, place, and held first-person stakes, C's professional action, participation, outcomes, and cultural-space framing, D's relation, maintenance, afterlife, authorship, and absence discipline, and E's canonical governance baseline.",
-        "Every A-D destination has an informed_by relation to its donor; E is traced as the unchanged canonical baseline through its source record, source-return run, and closure map.",
-        "The synthesis preserves collective credit, protected absence, separate rights and consent states, and explicit anti-causality boundaries."
+        "Composite graph checks passed with 280 sources, 98 claims, 31 agency relations, four corrections, and current derived outputs.",
+        "Knowledge Wiki checks reported 107 records, 435 semantic or evidence edges, 291 prose links, zero orphans, zero dead ends, and current generated reports.",
+        "Independent traversal found all 21 family-closure records reachable from the root and connected through typed edges.",
+        "Knowledge-bank, public-safety, citation, and ten citation tests passed; all family projections remain hold or pending.",
+        "Both updated report locks were independently verified as whitespace-only: git diff --ignore-all-space returned clean, and old and current file digests matched the declared lock transition."
       ],
-      "rationale": "Donor provenance is materially traceable without promoting donor assertions into independent career evidence or weakening source, claim, agency, correction, population, privacy, or permission contracts."
+      "rationale": "The graph is reachable and current, protected material remains outside public projection, and no causal, authorship, or derived-artifact inflation was found."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "npm run evals:composite passed COMP-006 with 14/14 professor-lens criteria.",
-        "The rendered application is unchanged and continues to consume only the redacted public registry and approved projections.",
-        "The public portfolio remains a selective hiring composition rather than a mirror of the 107-record Wiki.",
-        "The authored synthesis preserves visible professional agency, artistic and civic continuity, and a reconstructable observe-model-build-use-learn-revise-handoff practice without inflating adoption or impact."
+        "The professor-lens evaluator passed all 14 integrated records.",
+        "Manual inspection found explicit separation of delivery, use, adoption, institutionalization, maintenance, handoff, and archival states.",
+        "Composite records bound scenes, place, participation, research maturity, graph proximity, and government action against unsupported causal or authorship claims.",
+        "The candidate adds no semantic public route or portfolio-proof expansion."
       ],
-      "rationale": "The public surface remains purposeful and bounded while the internal composition layer becomes more useful for future human editorial selection."
+      "rationale": "The integrated material improves governed interpretive depth while remaining bounded, selective, and non-inflationary."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All five human-evidence blind-spot controls remain open with required evidence, anti-gaming rules, next actions, and projection boundaries.",
-        "The health report keeps collaborator review, rights and represented-person consent, fresh-reader retrieval, editorial projection approval, production observation, and hiring outcomes open.",
-        "The launch ledger still requires Jamie's exact-commit production approval, deployment and rollback verification, and explicit indexing approval.",
-        "The first-person page remains draft, human_review requested, projection pending with no surfaces, and explicitly resolvable only by Jamie."
+        "All five composite human-control checks passed and remained open.",
+        "First-person material is AI-assisted, draft, pending projection, and explicitly requires Jamie's review.",
+        "Role, collective authorship, protected absence, consent, quotation, reproduction, identification, attribution, and selection permissions remain distinct.",
+        "RFP-0001 remains proposed with no implementation and prohibits rollout before human acceptance."
       ],
-      "rationale": "Automated success governs known absences without synthesizing collaborator testimony, consent, editorial authority, employer judgment, hiring validation, or employment outcomes."
+      "rationale": "Automation does not manufacture human approval or weaken rights, consent, editorial, production, or represented-person gates."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent semantic recomputation matched the frozen rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
-        "npm run evals:composite passed COMP-008 with pinned base-suite, register, blind-spot, branch-namespace, grader-separation, and blocking-score semantics intact.",
-        "The family-closure evaluator passed 22/22 criteria and all 11 adversarial mutation tests.",
-        "The composite test run passed all 15 non-circular mutation and anti-gaming tests; its sole baseline acceptance failure was the expected stale-holdout COMP-009 state.",
-        "Wiki compilation remained deterministic, generated outputs were current, and stale generated evidence is tested to fail closed."
+        "The frozen rubric independently recomputed to c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
+        "COMP-001 through COMP-008 passed under Node v26.5.0.",
+        "Composite tests passed 15 of 16; the sole failure was the expected exact-candidate baseline caused only by excluded stale holdout judgments.",
+        "Family tests passed 17 of 17, Wiki tests passed 83 of 83, and Wiki evaluation passed 105 of 105 blocking criteria.",
+        "The GitHub workflow checks the pull-request head SHA directly, rejects synthetic merge-ref substitution, runs npm ci and npm run check under .nvmrc, and has no pull_request_target trigger.",
+        "RFP validation is enforced by the root check, and git diff --check passed against develop."
       ],
-      "rationale": "Frozen governance, deterministic generation, candidate binding, grader separation, review locks, and adversarial failure behavior resist checksum refreshes, decorative provenance, private leakage, self-grading, and compensating scores."
+      "rationale": "The rubric, mutation defenses, CI identity, governance checks, and independent source inspection prevent evaluator self-grading or synthetic-candidate substitution."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent source-tree enumeration produced exactly 704 files and fingerprint d7e8bdb95261c5a328ac1ad5444d6b4b3b5255b7715ba9ee3fe1bf57dbed287d before and after inspection.",
-        "The only exclusions were the two paths declared by candidate_identity.exclude_only.",
-        "npm run evals:composite passed COMP-001 through COMP-008 and failed COMP-009 only because both installed judgments target older fingerprint 7c0e790127e1a283cbf64df50a656aa07d224735a6ecfcf51cbea90a3b78a128.",
-        "No donor judgment or generated branch report was imported as portable evidence; generated graph and health outputs were rebuilt for this integration source state.",
-        "Wiki tests passed 77/77; Wiki evaluation passed 102/102 blocking criteria across 12 lenses; graph checks reported 107 nodes, 435 semantic/evidence edges, 291 prose links, and zero orphans.",
-        "All 21 required records are root-reachable; every record has typed connectivity and every composite record has an ordinary-link path from the root through the closure index.",
-        "The worktree remained unchanged throughout the read-only evaluation."
+        "Independent recomputation under Node v26.5.0 bound exactly 705 files to bb8ed054c8bc8c28fd59ae9ba22c6905e511eabb5f3a9440016c6e448ff0b883.",
+        "The candidate identity excluded exactly the two declared circular judgment files and no others.",
+        "The installed holdouts bind the prior 704-file fingerprint d7e8bdb95261c5a328ac1ad5444d6b4b3b5255b7715ba9ee3fe1bf57dbed287d, establishing that their failure is stale circular state rather than a source defect.",
+        "This read-only independent judgment inspected the exact current workflow, RFP contract, donor integrations, graph records, generated reports, report-lock diffs, and open human gates without finding a blocking defect."
       ],
-      "rationale": "The exact candidate and stopping machinery are stable. The two future fresh holdout records are intentionally excluded circular installation state and are not a candidate defect."
+      "rationale": "The only COMP-009 failure in the installed evaluator is the expected circular holdout staleness; the exact current candidate independently satisfies the architecture-and-governance holdout."
     }
   ],
   "notObserved": [],
   "findings": [
-    "Frozen donor heads independently matched A 920f9024d7e058700f282e3e1e76188fe1c5294e, B 268a92d794f5b604f4004fc9d6e5652f234fc61b, C 6a2af7396240381ce04aad9b9129ba402b83c134, D e5a7ac607bfbd5a428bb18c2f7af5baad614132b, and E 9f1bbfacec3edbfbc47a5200f777d4f498da0ec4.",
-    "The 14 composite records materially adapt donor strengths into E's schema; cross-blob comparisons confirm they are not wholesale donor-file imports.",
-    "Branch B's competing docs/knowledge-wiki root and other donors' incompatible lifecycle structures were deliberately excluded.",
-    "The first-person synthesis remains visibly AI-assisted, pending, unprojected, and locked to Jamie's line-by-line authorship review.",
-    "All closure records remain outside the application registry and public rendering path.",
-    "The accessibility receipt candidly records its package-script-only fingerprint rebound; apps/www and package-lock.json are unchanged, and all six accessibility-evidence tests pass.",
-    "Generated health and graph artifacts are current and retain open human authority gates.",
-    "No non-circular blocking defect was found."
+    "No blocking architecture, provenance, graph, privacy, currentness, CI, governance, or evaluator-independence finding was identified.",
+    "Nonblocking: the accessibility receipt's rebound reason names the RFP package-script delta but omits a blank-line-only cleanup in one application data file; its current fingerprint is exact, its tests pass, and the omitted delta has no rendered or runtime effect.",
+    "Collaborator and represented-person review, consent, media and quotation rights, Jamie's editorial and application selection, production approval, deployment, indexing, fresh-reader or hiring validation, and employment outcomes remain open human gates.",
+    "The two excluded installed holdout artifacts should be refreshed against this exact fingerprint as post-judgment bookkeeping; their stale state must not be represented as current evidence."
   ],
-  "recommendation": "Accept this exact candidate for installation of fresh provenance-bound holdout judgments, then rerun the composite evaluator after both current-candidate records are present. This acceptance authorizes review only; collaborator review, represented-person consent, media and quotation rights, Jamie editorial and application selection, production approval, deployment, indexing, employer judgment, hiring validation, and employment outcomes remain open human gates.",
+  "recommendation": "Accept this exact candidate for the independent architecture-and-governance holdout. Refresh the circular holdout artifacts against the verified fingerprint, then proceed only through the remaining human review and rights gates; this verdict does not authorize deployment, indexing, publication, or merge absent those gates.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f7c02-b9b5-7d82-bdc4-3d78cf49236f",
-    "agentNickname": "Schrodinger",
-    "model": "gpt-5.6-sol",
+    "processSessionId": "019f8680-193c-7c52-9f4a-cf6f3da399cf",
+    "agentNickname": "Ampere",
+    "model": "inherited-current-model",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "You are a fresh independent holdout judge for the exact integrated feature/wiki-E candidate.\n\nWork READ-ONLY in /private/tmp/jamieburk-art-wiki-E. Do not edit, format, generate, stage, commit, or mutate any file. You did not optimize this candidate. Ignore all prior holdout conclusions and inspect independently.\n\nEvaluate all nine blocking criteria in .agents/evals/feature-evals-composite.json. Expected frozen rubric SHA-256: c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Expected source-tree candidate fingerprint: d7e8bdb95261c5a328ac1ad5444d6b4b3b5255b7715ba9ee3fe1bf57dbed287d across exactly 704 files. The two paths in candidate_identity.exclude_only are the only exclusions.\n\nThis candidate closes the frozen feature/knowledge-wiki-A through feature/knowledge-wiki-E family by semantically integrating their best distinctive contributions into E's canonical schema, governance, generated views, and public-projection boundary. Inspect at minimum:\n- docs/knowledge-bank/research-runs/knowledge-wiki-family-closure-2026-07-19.md\n- docs/knowledge-bank/indexes/family-closure.md\n- docs/knowledge-bank/README.md and repository README.md\n- the five docs/knowledge-bank/sources/knowledge-wiki-branch-*.md donor records\n- evals/knowledge-wiki/family-closure.json\n- scripts/knowledge-wiki/family-closure-eval.mjs and family-closure-eval.test.mjs\n- all 14 composite records listed in the family-closure manifest\n- generated graph and health reports\n- the public registry and application-facing knowledge surfaces\n- the frozen donor refs origin/feature/knowledge-wiki-A through origin/feature/knowledge-wiki-E.\n\nVerify independently:\n- exact frozen donor heads A 920f9024d7e058700f282e3e1e76188fe1c5294e, B 268a92d794f5b604f4004fc9d6e5652f234fc61b, C 6a2af7396240381ce04aad9b9129ba402b83c134, D e5a7ac607bfbd5a428bb18c2f7af5baad614132b, E 9f1bbfacec3edbfbc47a5200f777d4f498da0ec4;\n- each donor is materially represented and traceable through source record, closure run, closure map, and authored synthesis;\n- the closure contains exactly 21 required records: 5 donor sources, 1 source-return run, 1 closure index, and 14 composite pages;\n- E remains the canonical schema/compiler/governance baseline; no parallel lifecycle root, competing schema, or duplicate public application was imported;\n- the synthesis preserves A's work queues, scenes, story structure, and adoption precision; B's identity infrastructure, learning-through-making, place, and first-person stakes; C's Jamie-at-work, participation, outcomes, and cultural-space framing; D's relation semantics, decisions/outcomes, maintenance/afterlives, and collective authorship/protected absence;\n- first-person material remains held for Jamie's explicit human review and has not been silently projected;\n- donor files and generated branch reports were not copied wholesale; stale candidate-bound judgments were replaced, not treated as portable evidence;\n- every composite record is ordinary-link reachable from the root and typed-relation connected;\n- collective credit, protected absence, rights, consent, and unsupported causality remain bounded;\n- none of the 21 family-closure records entered the public application registry;\n- generated outputs are current; family closure passes 22/22 criteria and 11/11 adversarial mutations; Wiki tests pass 77/77; Wiki evaluation passes 102 blocking criteria across 12 lenses; graph reports 107 nodes, 435 semantic/evidence edges, 291 prose links, and 0 orphans;\n- changing package.json only added evaluation scripts, no app code or dependency lock changed, and the accessibility receipt was candidly rebound to the unchanged public surface;\n- all collaborator review, represented-person consent, media and quotation rights, Jamie editorial/application selection, production, deployment, indexing, employer judgment, hiring validation, and employment outcomes remain open human gates.\n\nRun npm run evals:composite and other targeted READ-ONLY checks as useful. Before installing fresh holdouts, COMP-001 through COMP-008 should pass and COMP-009 should fail only because the two installed judgments target an older candidate. Independently verify candidate fingerprint and file count. Score every criterion only 4/pass or 0/fail. Any non-circular blocker rejects; notObserved must be empty for acceptance. Do not count the absence of your future record and the other fresh holdout as a candidate defect.\n\nReturn ONLY valid JSON with: runVersion (2), judgeId, grader (\"independent_llm_judge\"), independentFromOptimizer (true), rubricSha256, candidateFingerprint, verdict, scores (exactly nine objects with criterionId COMP-001 through COMP-009, score, pass, evidence array of strings, rationale), notObserved, findings, and recommendation. If and only if accepted, verdict MUST be the exact string \"accepted\".\n\nYour distinctive lens is architecture and provenance: exact-candidate identity, donor traceability, canonical schema integrity, graph closure, review-lock preservation, privacy, source contracts, deterministic generation, and anti-gaming. Set judgeId to composite-holdout-architecture-a-2026-07-19-family-closure.",
-    "promptSha256": "97a2baa86f4121bcf14a6664ae206d542208685a48eaf983c78699fab3da2513",
+    "prompt": "You are the final independent architecture-and-governance holdout for the jamieburk.art feature/wiki-E candidate.\n\nOperate read-only. Do not edit, stage, commit, or push anything. Inspect the exact source tree at /private/tmp/jamieburk-art-wiki-E. The pull request targets develop. The five frozen donor branches are feature/knowledge-wiki-A through feature/knowledge-wiki-E; feature/knowledge-wiki-E is intended to remain the canonical architecture while A-D contribute governed strengths through explicit integration records.\n\nThe candidate identity contract excludes only these two circular judgment files:\n- docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json\n- docs/evals/runs/2026-07-16-feature-evals-composite-final-b.json\n\nIndependently recompute and verify that the remaining source tree binds 705 files to candidate fingerprint bb8ed054c8bc8c28fd59ae9ba22c6905e511eabb5f3a9440016c6e448ff0b883. If it does not, reject.\n\nRead the frozen composite rubric and evaluator, integration register, family-closure manifest/evaluator/tests, Knowledge Wiki graph/governance records, public projection boundary, GitHub workflow, RFP validator/documentation, and relevant generated reports. Run appropriate read-only checks under Node 26. Treat a stale installed holdout failure in COMP-009 as expected circular state only if COMP-001 through COMP-008 pass and you independently find the candidate acceptable. Look specifically for parallel schemas, decorative integration, fabricated donor provenance, missing graph reachability, causal or authorship inflation, protected-data leakage, stale derived artifacts, weakened human gates, synthetic-merge-ref CI, and evaluator self-grading. The recent report-lock updates must be justified by an actual whitespace-only diff rather than assumed.\n\nReturn only one valid JSON object, with no Markdown fence or surrounding prose, using this shape:\n{\n  \"runVersion\": 2,\n  \"judgeId\": \"composite-holdout-architecture-a-2026-07-21-family-closure-final\",\n  \"grader\": \"independent_llm_judge\",\n  \"independentFromOptimizer\": true,\n  \"rubricSha256\": \"<verified rubric digest>\",\n  \"candidateFingerprint\": \"<verified candidate fingerprint>\",\n  \"verdict\": \"accepted\" or \"rejected\",\n  \"scores\": [\n    {\n      \"criterionId\": \"COMP-001\",\n      \"score\": 0 to 4,\n      \"pass\": true or false,\n      \"evidence\": [\"specific inspected evidence\"],\n      \"rationale\": \"bounded rationale\"\n    }\n  ],\n  \"notObserved\": [\"anything material you could not verify\"],\n  \"findings\": [\"blocking and nonblocking findings\"],\n  \"recommendation\": \"clear recommendation\"\n}\nInclude exactly one score for each COMP-001 through COMP-009. Acceptance requires every criterion to pass at score 4 and no blocking finding. Do not claim human approval, collaborator review, rights or consent clearance, deployment, indexing, hiring validation, or employment outcomes unless directly evidenced; these should remain open gates.",
+    "promptSha256": "5db554dfe0480e3946d9f254a26374b7c7228581a8de39e81b81563c5cb1c9d0",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-19T20:13:01.232Z",
-    "completedAt": "2026-07-19T20:21:01.710Z",
-    "judgmentSha256": "8cde494387610b839d630440978d204c5d696de21441db45db7b65856d8d3f75"
+    "startedAt": "2026-07-21T21:06:09.846Z",
+    "completedAt": "2026-07-21T21:25:59.561Z",
+    "judgmentSha256": "97528905d23c3491c6c17b8fb1d6bdc5dbd464345a389bb047f718fdf88eb5aa"
   }
 }

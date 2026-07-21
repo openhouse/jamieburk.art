@@ -764,4 +764,3 @@ rediscovering access paths and coverage boundaries.
   review of semantic changes?
 - What observation period and evidence should be required before the architecture
   becomes `recommended`?
-

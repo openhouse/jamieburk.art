@@ -1,7 +1,7 @@
 # Composite integration baseline
 
-**Date:** 2026-07-16  
-**Candidate:** `934c1bdff4a478da56fde3a125d905e7e326b6f2`  
+**Date:** 2026-07-16
+**Candidate:** `934c1bdff4a478da56fde3a125d905e7e326b6f2`
 **Branch:** `feature/knowledge-h`
 
 ## Observed baseline

@@ -1,9 +1,9 @@
 # Knowledge Wiki foundation E recursive evaluation
 
-**Date:** 2026-07-18  
+**Date:** 2026-07-18
 **Authority:** M product and teammate implementation brief, with N and D used
-only where M left implementation detail open  
-**Branch:** `feature/knowledge-wiki-E`  
+only where M left implementation detail open
+**Branch:** `feature/knowledge-wiki-E`
 
 ## Baseline
 

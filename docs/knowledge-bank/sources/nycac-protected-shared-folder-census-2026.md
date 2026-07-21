@@ -59,4 +59,3 @@ The machine-readable public-safe aggregate is
 - close reading of every inventoried item;
 - participant consensus, attendance, endorsement, reach, or impact;
 - causal responsibility for legislation, agency action, or coalition outcomes.
-
