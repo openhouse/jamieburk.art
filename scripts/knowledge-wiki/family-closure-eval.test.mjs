@@ -16,6 +16,12 @@ function cloneClosure() {
   );
 }
 
+function cloneContract() {
+  return structuredClone(
+    JSON.parse(requireJson("evals/knowledge-wiki/family-closure.json"))
+  );
+}
+
 function cloneCensus() {
   return structuredClone(
     JSON.parse(
@@ -46,6 +52,21 @@ test("a donor SHA cannot drift", () => {
   const closure = cloneClosure();
   closure.frozenDonors[0].sha = "0".repeat(40);
   const evaluation = evaluateFamilyClosure({ result, closure });
+  assert.equal(evaluation.checks.frozen_heads_exact, false);
+});
+
+test("coordinated donor-head fabrication cannot manufacture agreement", () => {
+  const contract = cloneContract();
+  const closure = cloneClosure();
+  const census = cloneCensus();
+  const branch = "feature/knowledge-wiki-A";
+  const fabricated = "0".repeat(40);
+
+  contract.expectedFrozenHeads[branch] = fabricated;
+  closure.frozenDonors.find((donor) => donor.branch === branch).sha = fabricated;
+  census.observations.find((observation) => observation.branch === branch).sha = fabricated;
+
+  const evaluation = evaluateFamilyClosure({ result, contract, closure, census });
   assert.equal(evaluation.checks.frozen_heads_exact, false);
 });
 
