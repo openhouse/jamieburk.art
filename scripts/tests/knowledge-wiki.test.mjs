@@ -167,12 +167,21 @@ test("A-E family closure uses one canonical Wiki and preserves human gates", () 
   const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/knowledge-wiki/suite.json"), "utf8"));
   const ledger = JSON.parse(readFileSync(path.join(repoRoot, suite.familyClosure.ledgerPath), "utf8"));
   const wiki = loadKnowledgeWiki({ failOnErrors: true });
-  assert.equal(suite.version, 5);
+  assert.equal(suite.version, 6);
   assert.equal(ledger.branches.length, 5);
   assert.deepEqual(
     ledger.branches.map((entry) => entry.sourceCommit),
     suite.familyClosure.frozenBranches.map((entry) => entry.sha)
   );
+  assert.deepEqual(
+    ledger.branches.map((entry) => entry.sourcePullRequest),
+    suite.familyClosure.frozenBranches.map((entry) => entry.pullRequest)
+  );
+  assert.deepEqual(
+    ledger.branches.map((entry) => entry.sourcePullRequestUrl),
+    suite.familyClosure.frozenBranches.map((entry) => entry.pullRequestUrl)
+  );
+  assert.equal(new Set(ledger.branches.map((entry) => entry.sourcePullRequest)).size, ledger.branches.length);
   assert.ok(suite.familyClosure.requiredRecordIds.every((id) => wiki.records.some((record) => record.id === id)));
   assert.ok(!existsSync(path.join(repoRoot, "docs/knowledge-wiki")));
   const stakes = wiki.records.find((record) => record.id === "method.what-is-at-stake-for-me");

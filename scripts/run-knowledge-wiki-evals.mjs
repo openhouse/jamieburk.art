@@ -541,6 +541,7 @@ const familyLedger = JSON.parse(readFileSync(path.join(repoRoot, familyLedgerPat
 const allowedFamilyDispositions = new Set(suite.familyClosure.allowedDispositions);
 const familyFindings = [];
 const familyEntries = new Map((familyLedger.branches ?? []).map((entry) => [entry.branch, entry]));
+const familyPullRequests = new Set();
 for (const frozen of suite.familyClosure.frozenBranches) {
   const entry = familyEntries.get(frozen.branch);
   if (!entry) {
@@ -548,6 +549,14 @@ for (const frozen of suite.familyClosure.frozenBranches) {
     continue;
   }
   if (entry.sourceCommit !== frozen.sha) familyFindings.push(`${frozen.branch}: source SHA does not match the frozen contract`);
+  if (entry.sourcePullRequest !== frozen.pullRequest) familyFindings.push(`${frozen.branch}: pull request does not match the frozen contract`);
+  if (entry.sourcePullRequestUrl !== frozen.pullRequestUrl) familyFindings.push(`${frozen.branch}: pull-request URL does not match the frozen contract`);
+  const expectedPullRequestUrl = `https://github.com/openhouse/jamieburk.art/pull/${frozen.pullRequest}`;
+  if (!Number.isInteger(frozen.pullRequest) || frozen.pullRequest < 1 || frozen.pullRequestUrl !== expectedPullRequestUrl) {
+    familyFindings.push(`${frozen.branch}: frozen pull-request provenance is invalid`);
+  }
+  if (familyPullRequests.has(frozen.pullRequest)) familyFindings.push(`${frozen.branch}: pull request is duplicated in the frozen family`);
+  familyPullRequests.add(frozen.pullRequest);
   if (!entry.strength) familyFindings.push(`${frozen.branch}: strength is not recorded`);
   if (!(entry.decisions ?? []).some((decision) => ["adopt", "adapt"].includes(decision.disposition))) {
     familyFindings.push(`${frozen.branch}: no adopted or adapted contribution`);

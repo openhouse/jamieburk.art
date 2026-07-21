@@ -1,9 +1,9 @@
 {
   "id": "knowledge-wiki-foundation-D-certification",
-  "certifiedAt": "2026-07-19",
+  "certifiedAt": "2026-07-21",
   "profile": "foundation_ready",
-  "candidateFingerprint": "sha256:43627c5f73e80ec26a09cd2e79e3645da71650cc84e211c1f20515860a363e8b",
-  "contractFingerprint": "sha256:dd6e660720efc391078459b6ff72dd393f44f1dd3ba324eb782abfd3529179ae",
+  "candidateFingerprint": "sha256:bfcd6d5c518e069b03b53fd8f3ad008a725d32ea151e610599ee1c8a98bf2c77",
+  "contractFingerprint": "sha256:2480948d8bd392f64805cad3ca5998c8fbd6df924ceb073a1e03431bf3820b2f",
   "consecutivePasses": 2,
   "unchangedCandidate": true,
   "independentJudgments": [
@@ -18,5 +18,5 @@
     "editorialApproval": "not-requested",
     "productionObservation": "not-requested"
   },
-  "stopReason": "The exact candidate met every automated foundation gate twice consecutively; further automation would not resolve the remaining human authority gates."
+  "stopReason": "The exact A-E closure candidate met all 31 automated foundation gates twice consecutively under suite v6; further automation would not resolve the remaining human authority gates."
 }

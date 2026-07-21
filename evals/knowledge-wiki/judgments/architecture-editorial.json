@@ -1,1 +1,73 @@
-{"id":"architecture-editorial","reviewer":"Codex independent architecture and editorial review","reviewedAt":"2026-07-19","candidateFingerprint":"sha256:43627c5f73e80ec26a09cd2e79e3645da71650cc84e211c1f20515860a363e8b","contractFingerprint":"sha256:dd6e660720efc391078459b6ff72dd393f44f1dd3ba324eb782abfd3529179ae","verdict":"pass","criteria":[{"id":"candidate-and-contract-binding","status":"pass","finding":"Fresh Node 26.5.0 hashing reproduced both supplied fingerprints exactly for HEAD 4088c3b4a2a2cc7b7fd2a3b7b390e6847545ce7a and suite v4. The read-only review left the working tree unchanged."},{"id":"architecture-and-exact-diff","status":"pass","finding":"The exact five-commit diff from origin/feature/knowledge-wiki-D preserves Markdown as the human record, the generated graph as derived output, canonical records as the claim layer, and the portfolio as selective projection. The core Wiki library, mutation contract, architecture decision, and authoring contract are unchanged."},{"id":"suite-v4-evaluator-and-tests","status":"pass","finding":"Suite v4 declares 30 hard gates, 25 bounded queries, 21 human tasks, two independent judgments, and two unchanged consecutive passes. The evaluator implements every declared gate and fails closed on missing implementations. The supplied writable primary run reports 19/19 tests passing; freshly, seven non-writing tests passed and all twelve fixture tests stopped at mkdtemp EPERM before assertions, with no assertion failure observed."},{"id":"page-usefulness-and-nonduplication","status":"pass","finding":"The three synthesis pages answer distinct questions about relational meaning, operational responsibility and outcomes, and maintenance plurality. Each is linked from Start Here at distance 1; the existing people-and-places record is reachable at distance 2. The Places, passages, and publics alias resolves uniquely to that record, avoiding a duplicate page."},{"id":"operational-map-six-corrected-references","status":"pass","finding":"All six corrected direct references resolve to current canonical claims: NYC Artist Coalition founding role, KC Town Hall Phase One scope, general-contractor role, neighborhood survey, survey-system role, and presenter role. Their evidence, status, boundaries, and anti-claims support the map's qualified wording without upgrading private or first-person evidence."},{"id":"canonical-claims-and-status-separation","status":"pass","finding":"The three synthesis pages and alias-bearing index contain 31 unique canonical claim references. None is missing or lacks evidence or boundaries; 30 have explicit anti-claims, while the inherently limiting archived-unofficial-status claim retains an explicit boundary. Internal-only, qualified, active, candidate, unused, requested, and human-blocked states remain distinct."},{"id":"relational-meaning-and-collective-credit","status":"pass","finding":"The atlas treats the generated graph as an index rather than an argument and explicitly withholds causality, authorship, attendance, endorsement, impact, consent, and private social-graph inference. The synthesis retains collaborators, institutions, tradespeople, participants, and later stewards rather than assigning collective systems to Jamie."},{"id":"operational-separation-and-causal-restraint","status":"pass","finding":"Each operational-map row separates difficult condition, Jamie's supported responsibility, usable delivery, wider collective or institutional result, and evidentiary boundary. Government action, legislation, fundraising totals, delivered proposals, and public amplification are not converted into Jamie's sole causal impact or adopted outcomes."},{"id":"maintenance-plurality","status":"pass","finding":"Maintenance remains six source-bounded modes: physical sequencing, digital continuity, recurring participation, information stewardship, governed memory, and responsible transition. The page rejects a single continuous heroic role and preserves distinct periods, collaborators, labor allocation, rights, outcomes, and unknowns."},{"id":"graph-determinism-and-current-provenance","status":"pass","finding":"Fresh compilation reports 50 records, 262 edges, 165 typed relations, 97 prose links, and 49/49 discoverable records reachable within maximum distance 3. Two compilations produced semantic graph fingerprint sha256:5faa46180ad7b18236cdf2902f74df28e73a488b9ab6d13c1da98d9b5d82879c. Generated artifacts exactly match source fingerprint sha256:a9a3c476f8cefe123025711a4ec08f2c9464a5ad1793630c535f1559988d7cdf and the last source-affecting commit 34b6c86682da02350f7b89c082873e687daab5d5."},{"id":"projection-restraint-and-manual-authority","status":"pass","finding":"The reviewed synthesis records have no allowed public surfaces, no portfolio application or canonical-claim file changed, and no public Wiki, Knowledge Bank, proofs, or public-claims route was introduced. Fresh knowledge-bank, public-safety, route, citation, artifact-currentness, and diff checks passed. Automated results leave navigation, consent, rights, Jamie approval, deployment, and production observation open."}],"manualGates":{"humanNavigationStudy":"open - structural reachability is green, but no candidate-bound unfamiliar-reader navigation study is recorded","collaboratorConsent":"open - no candidate-bound collaborator consent or attribution approval is recorded","rightsClearance":"open - the Digital District asset remains private-review and human-blocked","editorialApproval":"open - Jamie has not approved this exact candidate or authorized deployment","productionObservation":"open - no deployment, production smoke test, or production observation was performed"},"remainingWork":"Persist this exact architecture-editorial receipt, obtain a systems-public-safety judgment bound to the same fingerprints, and run evals:wiki twice unchanged in a writable Node 26 environment. Human navigation, collaborator consent, rights clearance, Jamie approval, deployment, and production observation remain separate open gates."}
+{
+  "id": "architecture-editorial",
+  "reviewer": "Codex independent architecture and editorial review",
+  "reviewedAt": "2026-07-21",
+  "candidateFingerprint": "sha256:bfcd6d5c518e069b03b53fd8f3ad008a725d32ea151e610599ee1c8a98bf2c77",
+  "contractFingerprint": "sha256:2480948d8bd392f64805cad3ca5998c8fbd6df924ceb073a1e03431bf3820b2f",
+  "verdict": "pass",
+  "criteria": [
+    {
+      "id": "candidate-and-contract-binding",
+      "status": "pass",
+      "finding": "Node 26.5.0 reproduced the supplied candidate and suite-v6 contract fingerprints. The judgment files are outside both fingerprints, so recording this review does not change the candidate under review."
+    },
+    {
+      "id": "frozen-family-provenance",
+      "status": "pass",
+      "finding": "GitHub PR heads #239, #241, #242, #240, and #243 were inspected on July 21, 2026. The architecture note, suite, and ledger agree on all five branch names, full SHAs, PR numbers, and PR URLs; the evaluator rejects drift and duplicate PR identity."
+    },
+    {
+      "id": "one-authority-model",
+      "status": "pass",
+      "finding": "The integration retains docs/knowledge-bank as the sole Markdown root, records.ts as the canonical citation registry, one graph compiler, and the portfolio as a selective projection. It does not import the candidates' alternate Wiki roots, dossier schemas, runners, or public browsing routes."
+    },
+    {
+      "id": "branch-disposition-quality",
+      "status": "pass",
+      "finding": "Every frozen branch has an explicit strength and at least one adopted or adapted contribution. Deduplicated, protected, deferred, and rejected work carries a reason and verification criteria; HJE decision reconstruction remains deferred pending canonical evidence migration."
+    },
+    {
+      "id": "editorial-range-without-flattening",
+      "status": "pass",
+      "finding": "The integrated pages preserve A's maturation and story discipline, B's identity, embodied learning, place, and first-person stakes, C's campaign narratives, D's governance and source-return practice, and E's pressure, lineage, decision, stewardship, and CouncilStat framing. Artistic, civic, technical, and relational practice remain connected without being collapsed into one category."
+    },
+    {
+      "id": "collective-credit-and-institutional-causality",
+      "status": "pass",
+      "finding": "Let NYC Dance, Talks Not Raids, the Office of Nightlife town hall, KC Town Hall, and other collective records distinguish Jamie's supported action, collaborators' labor, institutional authority, later outcomes, and unknowns. Government or collective results are not rewritten as Jamie's sole causal impact."
+    },
+    {
+      "id": "identity-place-and-voice-boundaries",
+      "status": "pass",
+      "finding": "Identity establishment, account administration, artifact authorship, and collective ownership remain separate. Place supports retrieval without becoming a private social graph. The AI-assisted first-person stakes page remains human-blocked, unprojected, and approvable only by Jamie."
+    },
+    {
+      "id": "decision-lineage-and-adoption-restraint",
+      "status": "pass",
+      "finding": "Chronology and resemblance remain research prompts rather than causality. Decision records preserve unobserved alternatives as an evidence state. Designed, launched, used, adopted, handed off, and sustained remain distinct states, and one does not prove the next."
+    },
+    {
+      "id": "retrieval-and-comprehension",
+      "status": "pass",
+      "finding": "The candidate contains 75 governed records and 392 graph edges; 74/74 discoverable records are reachable. All 32 bounded queries return their expected records and limitations, including the branch-family closure path and the protected first-person review path."
+    },
+    {
+      "id": "projection-restraint",
+      "status": "pass",
+      "finding": "The integration deepens the internal public-safe Wiki without adding a public Wiki, Knowledge Bank, proofs, or public-claims route. New decision reconstructions and the first-person draft have no allowed public surfaces and remain pending human review."
+    },
+    {
+      "id": "manual-authority-remains-human",
+      "status": "pass",
+      "finding": "Automation does not claim Jamie's editorial approval, collaborator attribution or consent, visual rights clearance, unfamiliar-reader success, deployment approval, or production observation. Those gates remain explicit and open."
+    }
+  ],
+  "manualGates": {
+    "humanNavigationStudy": "open - structural reachability is green, but no candidate-bound unfamiliar-reader study is recorded",
+    "collaboratorConsent": "open - collective campaign wording still requires human attribution review where stronger public wording is sought",
+    "rightsClearance": "open - protected visual evidence remains private-review and human-blocked",
+    "editorialApproval": "open - Jamie has not yet accepted this exact candidate for merge or public projection",
+    "productionObservation": "open - no production deployment or observation is implied by this review"
+  },
+  "remainingWork": "Run the exact candidate through the unchanged two-pass Wiki stop rule and the repository-wide verification pipeline. Jamie's final review, collaborator and rights decisions, deployment, and production observation remain separate human gates."
+}

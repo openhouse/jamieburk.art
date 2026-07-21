@@ -1,6 +1,6 @@
 {
   "id": "knowledge-wiki-foundation",
-  "version": 5,
+  "version": 6,
   "profile": "foundation_ready",
   "principle": "Markdown is the record, the graph is compiled, and the portfolio is a governed projection.",
   "familyClosure": {
@@ -15,11 +15,11 @@
       "apps/www/src/app/knowledge-bank"
     ],
     "frozenBranches": [
-      { "branch": "feature/knowledge-wiki-A", "sha": "920f9024d7e058700f282e3e1e76188fe1c5294e" },
-      { "branch": "feature/knowledge-wiki-B", "sha": "268a92d794f5b604f4004fc9d6e5652f234fc61b" },
-      { "branch": "feature/knowledge-wiki-C", "sha": "6a2af7396240381ce04aad9b9129ba402b83c134" },
-      { "branch": "feature/knowledge-wiki-D", "sha": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b" },
-      { "branch": "feature/knowledge-wiki-E", "sha": "9f1bbfacec3edbfbc47a5200f777d4f498da0ec4" }
+      { "branch": "feature/knowledge-wiki-A", "sha": "920f9024d7e058700f282e3e1e76188fe1c5294e", "pullRequest": 239, "pullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/239" },
+      { "branch": "feature/knowledge-wiki-B", "sha": "268a92d794f5b604f4004fc9d6e5652f234fc61b", "pullRequest": 241, "pullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/241" },
+      { "branch": "feature/knowledge-wiki-C", "sha": "6a2af7396240381ce04aad9b9129ba402b83c134", "pullRequest": 242, "pullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/242" },
+      { "branch": "feature/knowledge-wiki-D", "sha": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b", "pullRequest": 240, "pullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/240" },
+      { "branch": "feature/knowledge-wiki-E", "sha": "9f1bbfacec3edbfbc47a5200f777d4f498da0ec4", "pullRequest": 243, "pullRequestUrl": "https://github.com/openhouse/jamieburk.art/pull/243" }
     ],
     "requiredRecordIds": [
       "capability.implementation-adoption-and-handoff",

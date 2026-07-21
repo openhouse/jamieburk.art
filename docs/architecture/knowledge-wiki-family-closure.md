@@ -16,6 +16,24 @@ The integration retains one authority model:
   registry;
 - private originals remain outside the public repository.
 
+## Frozen Inputs
+
+The GitHub pull-request heads are the review inputs. Same-named local branches
+are not authoritative because a local ref may predate or diverge from the
+submitted branch.
+
+| Candidate | Pull request | Frozen head |
+|---|---:|---|
+| `feature/knowledge-wiki-A` | [#239](https://github.com/openhouse/jamieburk.art/pull/239) | `920f9024d7e058700f282e3e1e76188fe1c5294e` |
+| `feature/knowledge-wiki-B` | [#241](https://github.com/openhouse/jamieburk.art/pull/241) | `268a92d794f5b604f4004fc9d6e5652f234fc61b` |
+| `feature/knowledge-wiki-C` | [#242](https://github.com/openhouse/jamieburk.art/pull/242) | `6a2af7396240381ce04aad9b9129ba402b83c134` |
+| `feature/knowledge-wiki-D` | [#240](https://github.com/openhouse/jamieburk.art/pull/240) | `e5a7ac607bfbd5a428bb18c2f7af5baad614132b` |
+| `feature/knowledge-wiki-E` | [#243](https://github.com/openhouse/jamieburk.art/pull/243) | `9f1bbfacec3edbfbc47a5200f777d4f498da0ec4` |
+
+These coordinates were verified against GitHub on July 21, 2026. Normal builds
+remain network-independent; the committed closure contract preserves the
+reviewed coordinates and fails if its suite and disposition ledger drift.
+
 ## Plan
 
 1. Adopt D's graph, governance, source re-encounter, missing-page practice, and
