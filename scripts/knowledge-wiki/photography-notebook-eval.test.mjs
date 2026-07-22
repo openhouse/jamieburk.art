@@ -21,9 +21,9 @@ test("photography working notebook baseline passes", () => {
   const evaluation = evaluatePhotographyNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    records: 4,
+    records: 6,
     entryHeadings: 11,
-    blockingCriteria: 12
+    blockingCriteria: 18
   });
 });
 
@@ -127,6 +127,82 @@ test("the creative grammar keeps the complete three-part movement", () => {
     sourceOverrides: { [id]: mutated }
   });
   assert.equal(evaluation.checks.creative_sequence_grammar_preserved, false);
+});
+
+test("the residency proposal remains an accepted but reviewable entryway", () => {
+  const id = "project.photography.field-set-001-residency";
+  const proposal = cloneRecord(id);
+  proposal.human_review = "completed";
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    recordOverrides: { [id]: proposal }
+  });
+  assert.equal(evaluation.checks.residency_proposal_is_governed_entryway, false);
+});
+
+test("the proposal cannot be converted into a production contract", () => {
+  const id = "project.photography.field-set-001-residency";
+  const mutated = sourceFor(id).replace(
+    /instrument of attention, not a contract/gi,
+    "binding production agreement"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.residency_proposal_is_not_contract, false);
+});
+
+test("changing course remains evidence of attention rather than failure", () => {
+  const id = "project.photography.field-set-001-residency";
+  const mutated = sourceFor(id).replace(
+    "Changing course is evidence that attention is operating, not a failure",
+    "Changing course is a failure to execute"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.residency_permission_to_depart_preserved, false);
+});
+
+test("success cannot require a finished or public result", () => {
+  const id = "project.photography.field-set-001-residency";
+  const mutated = sourceFor(id).replace(
+    /Success does not require a finished artifact, a fixed number of selects, or a\s+public result/,
+    "Success requires a finished public exhibition"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.residency_success_not_output_or_publication, false);
+});
+
+test("artistic freedom cannot erase privacy and consent boundaries", () => {
+  const id = "project.photography.field-set-001-residency";
+  const mutated = sourceFor(id).replace(
+    /Play\s+does not override privacy, provenance, attribution, rights, consent, factual\s+review, or Jamie's approval/,
+    "Play overrides all publication boundaries"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.residency_freedom_remains_ethically_bounded, false);
+});
+
+test("the Teju Cole precedent cannot be sharpened beyond the sources", () => {
+  const id = "source.teju-cole.far-away-from-here.2015";
+  const mutated = sourceFor(id).replace(
+    /he did some Lagos\s+and other writing/,
+    "he abandoned all writing"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.teju_cole_reference_is_source_honest, false);
 });
 
 test("notebook IDs cannot enter the public registry implicitly", () => {

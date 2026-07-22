@@ -17,6 +17,10 @@ relations:
   - type: related_to
     target: index.knowledge-wiki.photography-notebook
     href: README.md
+  - type: related_to
+    target: project.photography.field-set-001-residency
+    href: field-set-001-residency-proposal.md
+    context: The residency proposal supplies time, place, hospitality, and permission for the first encounter.
   - type: uses_method
     target: method.photography.invitation-container-emergence
     href: editorial-grammar.md
@@ -38,6 +42,9 @@ anti_claims:
 ---
 
 # Field Set 001
+
+The [working residency proposal](field-set-001-residency-proposal.md) begins
+this inquiry at 196 without turning its possible forms into required outputs.
 
 ## Research question
 

@@ -78,6 +78,11 @@ observations. Its first inquiry, [Field Set 001](../photography/field-set-001.md
 describes a proposed private rough-draft field without treating it as an audited
 population or publication set.
 
+[Release Yourself Into the Archive](../photography/field-set-001-residency-proposal.md)
+gives that inquiry an up-to-two-week residency container at 196. The proposal
+protects attention and permission to change course; it does not require a
+finished artifact or relax any visual safety and publication gate.
+
 The notebook is intentionally more permissive about uncertainty and experiment
 than an asset record. It is not more permissive about privacy, source identity,
 rights, consent, attribution, factual scope, or publication authority.

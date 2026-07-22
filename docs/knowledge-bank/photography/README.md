@@ -22,6 +22,14 @@ relations:
     target: research-inquiry.photography.field-set-001
     href: field-set-001.md
     context: First proposed private rough-draft field for close reading.
+  - type: related_to
+    target: project.photography.field-set-001-residency
+    href: field-set-001-residency-proposal.md
+    context: Artist-residency proposal that begins the first pass while protecting permission to change course.
+  - type: informed_by
+    target: source.teju-cole.far-away-from-here.2015
+    href: ../sources/teju-cole-far-away-from-here-2015.md
+    context: Public source note for the residency precedent behind the proposal's permission to depart.
   - type: uses_method
     target: method.photography.invitation-container-emergence
     href: editorial-grammar.md
@@ -72,6 +80,8 @@ count, completed intake, rights-cleared set, or promise of publication.
 
 ## Notebook map
 
+- [Release Yourself Into the Archive](field-set-001-residency-proposal.md) is
+  the working artist-residency proposal for beginning the first pass at 196.
 - [Field Set 001](field-set-001.md) records the purpose, current state, and
   proposed close-reading passes for the first private working field.
 - [Invitation, container, emergence](editorial-grammar.md) develops a
@@ -81,6 +91,9 @@ count, completed intake, rights-cleared set, or promise of publication.
 - [Visual evidence index](../indexes/visual-evidence.md) remains the broader
   governed map of approved, held, metadata-only, missing, and research-needed
   visual material.
+- [Teju Cole's Zurich residency](../sources/teju-cole-far-away-from-here-2015.md)
+  grounds the proposal's precedent while preserving the difference between
+  Jamie's remembered lesson and the source's exact scope.
 
 ## Working agreements
 

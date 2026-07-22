@@ -42,6 +42,8 @@ export function evaluatePhotographyNotebook(options = {}) {
   const field = record("research-inquiry.photography.field-set-001");
   const grammar = record("method.photography.invitation-container-emergence");
   const entry = record("method.photography.notebook-entry");
+  const proposal = record("project.photography.field-set-001-residency");
+  const tejuSource = record("source.teju-cole.far-away-from-here.2015");
   const notebookIds = manifest.requiredRecords.map((item) => item.id);
   const notebookTargets = notebook?.relations?.map((relation) => relation.target) ?? [];
   const notebookSources = notebookIds.map(source);
@@ -49,6 +51,8 @@ export function evaluatePhotographyNotebook(options = {}) {
   const fieldSource = normalized("research-inquiry.photography.field-set-001");
   const grammarSource = normalized("method.photography.invitation-container-emergence");
   const entrySource = source("method.photography.notebook-entry");
+  const proposalSource = normalized("project.photography.field-set-001-residency");
+  const tejuSourceText = normalized("source.teju-cole.far-away-from-here.2015");
   const publicRegistry =
     options.publicRegistryOverride ??
     readFileSync(path.join(repoRoot, manifest.publicRegistryPath), "utf8");
@@ -59,7 +63,9 @@ export function evaluatePhotographyNotebook(options = {}) {
       item?.path === expected.path &&
       item?.canonical_path === expected.path &&
       item?.kind === expected.kind &&
-      ["governed-open", "draft"].includes(item.status)
+      (expected.status
+        ? item.status === expected.status
+        : ["governed-open", "draft"].includes(item.status))
     );
   });
 
@@ -150,6 +156,78 @@ export function evaluatePhotographyNotebook(options = {}) {
       normalized("method.photography.notebook-entry")
     );
 
+  const residencyProposalIsGovernedEntryway =
+    proposal?.kind === "project" &&
+    proposal?.status === "draft" &&
+    proposal?.human_review === "requested" &&
+    proposal?.relations?.some(
+      (relation) => relation.target === "project.sunday-dinner-196"
+    ) &&
+    proposal?.relations?.some(
+      (relation) => relation.target === "research-inquiry.photography.field-set-001"
+    ) &&
+    proposal?.relations?.some(
+      (relation) => relation.target === "source.teju-cole.far-away-from-here.2015"
+    ) &&
+    /AI-assisted first-person draft/i.test(proposalSource) &&
+    /up to two weeks/i.test(proposalSource) &&
+    /begins now, with the writing of this proposal/i.test(proposalSource) &&
+    /I receive and accept this proposal/i.test(proposalSource);
+
+  const residencyProposalIsNotContract =
+    /instrument of attention, not a contract/i.test(proposalSource) &&
+    /will not be judged by whether the work resembles what I could imagine before entering it/i.test(
+      proposalSource
+    ) &&
+    /No finished work is owed/i.test(proposalSource) &&
+    proposal?.anti_claims?.some((item) =>
+      /not a contract, production schedule, or promise of a finished work/i.test(item)
+    );
+
+  const residencyPermissionToDepartPreserved =
+    /permission to go where it needs to go/i.test(proposalSource) &&
+    /Changing course is evidence that attention is operating, not a failure/i.test(
+      proposalSource
+    ) &&
+    /permission to wander, change course, rest, return/i.test(proposalSource) &&
+    /grammar should change when the photographs resist it/i.test(grammarSource);
+
+  const residencySuccessNotOutputOrPublication =
+    /Success does not require a finished artifact, a fixed number of selects, or a public result/i.test(
+      proposalSource
+    ) &&
+    /no public-facing work at all/i.test(proposalSource) &&
+    /no publication candidates remained acceptable/i.test(proposalSource) &&
+    proposal?.projection?.status === "hold" &&
+    proposal.projection.surfaces.length === 0;
+
+  const residencyFreedomRemainsEthicallyBounded =
+    /artistic freedom inside the practice, not freedom from responsibility/i.test(
+      proposalSource
+    ) &&
+    /Play does not override privacy, provenance, attribution, rights, consent, factual review, or Jamie's approval/i.test(
+      proposalSource
+    ) &&
+    /A private image can transform the artist's understanding without ever becoming public/i.test(
+      proposalSource
+    );
+
+  const tejuColeReferenceIsSourceHonest =
+    tejuSource?.kind === "source" &&
+    tejuSource?.status === "maintained" &&
+    tejuSource?.canonical_url ===
+      "https://www.nytimes.com/2015/09/27/magazine/far-away-from-here.html" &&
+    /June through November 2014/i.test(tejuSourceText) &&
+    /nonfiction manuscript about Lagos/i.test(tejuSourceText) &&
+    /he did some Lagos and other writing/i.test(tejuSourceText) &&
+    /majority of his time went into traveling around Switzerland and making photographs/i.test(
+      tejuSourceText
+    ) &&
+    /developed across 2014-2019 into \*Fernweh\*/i.test(tejuSourceText) &&
+    /Do not sharpen the story into "Cole went to write and wrote nothing\."/i.test(
+      tejuSourceText
+    );
+
   const projectionRemainsHold =
     manifest.requiredRecords.every((expected) => {
       const item = record(expected.id);
@@ -169,6 +247,12 @@ export function evaluatePhotographyNotebook(options = {}) {
     creative_sequence_grammar_preserved: creativeSequenceGrammarPreserved,
     play_counterreading_and_empty_outcome_allowed: playCounterreadingAndEmptyOutcomeAllowed,
     notebook_entry_contract_complete: notebookEntryContractComplete,
+    residency_proposal_is_governed_entryway: residencyProposalIsGovernedEntryway,
+    residency_proposal_is_not_contract: residencyProposalIsNotContract,
+    residency_permission_to_depart_preserved: residencyPermissionToDepartPreserved,
+    residency_success_not_output_or_publication: residencySuccessNotOutputOrPublication,
+    residency_freedom_remains_ethically_bounded: residencyFreedomRemainsEthicallyBounded,
+    teju_cole_reference_is_source_honest: tejuColeReferenceIsSourceHonest,
     photography_projection_remains_hold: projectionRemainsHold
   };
 
