@@ -7,6 +7,20 @@ const protectedLocatorPattern =
   /(?:\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|Library\/CloudStorage|\.photoslibrary\b|BEGIN (?:RSA |OPENSSH )?PRIVATE KEY)/i;
 const embeddedMediaPattern =
   /(?:data:image\/[a-z+.-]+;base64|!\[[^\]]*\]\((?:file:|data:)|<img\b[^>]*\bsrc=["'](?:file:|data:))/i;
+const sourceIdentifierPattern =
+  /(?:\b(?:IMG|DSC|PXL|SAM|DCIM)[-_]?\d{3,}\.(?:jpe?g|png|heic|tiff?)\b|\b(?:source|asset|photo|image)\s+(?:identifier|id|uuid)\s*[:=]\s*\S+)/i;
+const gpsPayloadPattern =
+  /(?:\bGPS(?: coordinates?)?\s*[:=]\s*)?[-+]?\d{1,2}\.\d{4,}\s*,\s*[-+]?\d{1,3}\.\d{4,}/i;
+const derivedPrivatePayloadPattern =
+  /(?:\b(?:face|people|person)\s+label\s*[:=]\s*["']?[A-Z][^\n,;]{1,80}|\bOCR(?: text)?\s*[:=]\s*["']?[^\n]{4,160}|\bpreview(?: path| locator| URL| URI)?\s*[:=]\s*\S+)/i;
+const automatedAuthorityPattern =
+  /(?:\b(?:model|AI|algorithm|classifier|confidence|score)\b.{0,100}\b(?:automatically\s+)?(?:clears?|closes?|approves?|authorizes?|waives?|overrides?|releases?|publishes?)\b|\b(?:clears?|closes?|approves?|authorizes?|waives?|overrides?|releases?|publishes?)\b.{0,100}\b(?:by|from|using)\b.{0,40}\b(?:model|AI|algorithm|classifier|confidence|score)\b)/i;
+const unsupportedClaimPromotionPattern =
+  /(?:\b(?:visible observation|photograph|photo|image)\b.{0,120}\b(?:directly|automatically|alone|without corroboration)\b.{0,80}\b(?:verified factual claim|claim|proves?|confirms?|establishes?)\b|\b(?:promotes?|converts?)\b.{0,100}\b(?:visible observation|photograph|photo|image)\b.{0,100}\b(?:verified factual claim|claim|proof)\b)/i;
+const forcedCoveragePattern =
+  /(?:\bevery\s+(?:project|period|person|place)\b.{0,100}\b(?:equal|quota|coverage|represented)|\bevery\s+(?:photograph|photo|image)\b.{0,80}\b(?:must|shall|required)\b.{0,40}\bclassif)/i;
+const falseCompletionPattern =
+  /\b(?:private field|field corpus 001|corpus)\b.{0,40}\b(?:is|has been|was)\s+(?:now\s+)?(?:frozen|ingested|assembled|complete|finalized)\b/i;
 
 function loadManifest(repoRoot) {
   return JSON.parse(
@@ -64,7 +78,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     /planned rough-draft selection of approximately\s+1,000 photographs/i.test(fieldSource) &&
     /private field has not yet been frozen or ingested/i.test(fieldSource) &&
     /Neither number is an independently frozen source count/i.test(fieldSource) &&
-    !/1,000 photographs (?:were|have been|are now) (?:selected|ingested|frozen)/i.test(fieldSource);
+    !/1,000 photographs (?:were|have been|are now) (?:selected|ingested|frozen)/i.test(fieldSource) &&
+    !falseCompletionPattern.test(fieldSource);
 
   const attentionNotPublication =
     /select for attention, not publication/i.test(notebookSource) &&
@@ -84,13 +99,15 @@ export function evaluatePhotographyNotebook(options = {}) {
     /sequences and near-duplicates/i.test(fieldSource) &&
     /Unclassified material is a\s+valid and useful state/i.test(fieldSource) &&
     /No coverage quota is required/i.test(fieldSource) &&
-    /complicate,\s+contradict, or replace them/i.test(fieldSource);
+    /complicate,\s+contradict, or replace them/i.test(fieldSource) &&
+    !forcedCoveragePattern.test(fieldSource);
 
   const observationsRemainQuestions =
     /visible observations, memories, interpretations, and supported facts\s+as different things/i.test(notebookSource) &&
     /Route factual propositions to a research inquiry/i.test(notebookSource) &&
     /photograph alone cannot establish identity, consent, authorship,\s+causation, endorsement/i.test(fieldSource) &&
-    /seek corroborating sources and\s+collaborator knowledge/i.test(fieldSource);
+    /seek corroborating sources and\s+collaborator knowledge/i.test(fieldSource) &&
+    !unsupportedClaimPromotionPattern.test(fieldSource);
 
   const collectiveAgencyAndAbsencePreserved =
     /participants remain individual agents/i.test(fieldSource) &&
@@ -101,6 +118,9 @@ export function evaluatePhotographyNotebook(options = {}) {
   const publicNotebookContainsNoPrivatePayload =
     !protectedLocatorPattern.test(combinedSource) &&
     !embeddedMediaPattern.test(combinedSource) &&
+    !sourceIdentifierPattern.test(combinedSource) &&
+    !gpsPayloadPattern.test(combinedSource) &&
+    !derivedPrivatePayloadPattern.test(combinedSource) &&
     /Keep exact source identifiers, filenames, paths, previews, contact sheets/i.test(notebookSource) &&
     /No photographs, source\s+identifiers, image-level metadata, or private encounter notes are recorded/i.test(fieldSource);
 
@@ -119,7 +139,8 @@ export function evaluatePhotographyNotebook(options = {}) {
       fieldSource.toLowerCase().includes(gate.toLowerCase())
     ) &&
     (fieldSource.match(/- \[ \]/g) ?? []).length === manifest.humanGates.length &&
-    /cannot close these gates/i.test(fieldSource);
+    /cannot close these gates/i.test(fieldSource) &&
+    !automatedAuthorityPattern.test(combinedSource);
 
   const noPublicPhotoRoute =
     !existsSync(path.join(repoRoot, "apps/www/src/app/photos")) &&
