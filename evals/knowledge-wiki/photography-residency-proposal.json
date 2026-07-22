@@ -1,0 +1,47 @@
+{
+  "suite": "photography-residency-proposal",
+  "version": 1,
+  "principle": "A residency proposal establishes protected intent and support while preserving the artist's right to deviate, rest, refuse, change form, or remain incomplete.",
+  "notebookId": "index.knowledge-wiki.photography-notebook",
+  "projectId": "project.sunday-dinner-196",
+  "methodId": "method.photographic-archive-fieldwork",
+  "proposalId": "research.photography-first-pass-residency-proposal.2026-07-22",
+  "evaluationId": "evaluation.photography-residency-proposal.2026-07-22",
+  "processSourceId": "source.teju-cole.far-away-from-here-process.2016",
+  "catalogSourceId": "source.open-library.known-and-strange-things-contents.2016",
+  "requiredRecords": [
+    [
+      "research.photography-first-pass-residency-proposal.2026-07-22",
+      "docs/knowledge-bank/research-runs/photography-first-pass-residency-proposal-2026-07-22.md"
+    ],
+    [
+      "evaluation.photography-residency-proposal.2026-07-22",
+      "docs/knowledge-bank/evaluations/photography-residency-proposal.md"
+    ],
+    [
+      "source.teju-cole.far-away-from-here-process.2016",
+      "docs/knowledge-bank/sources/teju-cole-far-away-from-here-process-2016.md"
+    ],
+    [
+      "source.open-library.known-and-strange-things-contents.2016",
+      "docs/knowledge-bank/sources/open-library-known-and-strange-things-contents-2016.md"
+    ]
+  ],
+  "criteria": [
+    "residency_proposal_records_materialized",
+    "residency_proposal_navigation_reachable",
+    "proposal_intent_not_contract",
+    "rough_field_not_quota",
+    "artistic_form_may_change",
+    "deviation_rest_refusal_protected",
+    "residency_time_place_bounded",
+    "hospitality_outcomes_not_inferred",
+    "teju_process_source_bounded",
+    "proposal_acceptance_not_publication",
+    "photography_human_gates_intact",
+    "proposal_eval_nonprescriptive",
+    "residency_proposal_projection_held",
+    "residency_proposal_public_boundary_clean",
+    "residency_proposal_eval_wired"
+  ]
+}

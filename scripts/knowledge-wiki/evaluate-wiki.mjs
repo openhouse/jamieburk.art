@@ -23,6 +23,7 @@ import { evaluateMissingPages } from "./missing-pages-eval.mjs";
 import { evaluateInterpretiveLayer } from "./interpretive-layer-eval.mjs";
 import { evaluateFamilyClosure } from "./family-closure-eval.mjs";
 import { evaluatePhotographyNotebook } from "./photography-notebook-eval.mjs";
+import { evaluatePhotographyResidencyProposal } from "./photography-residency-proposal-eval.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -53,6 +54,7 @@ const missingPages = evaluateMissingPages({ result });
 const interpretiveLayer = evaluateInterpretiveLayer({ result });
 const familyClosure = evaluateFamilyClosure({ result });
 const photographyNotebook = evaluatePhotographyNotebook({ result });
+const photographyResidencyProposal = evaluatePhotographyResidencyProposal({ result });
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -224,6 +226,12 @@ const checks = {
     ) &&
     existsSync(
       path.join(defaultRepoRoot, "scripts/knowledge-wiki/photography-notebook-eval.test.mjs")
+    ) &&
+    existsSync(
+      path.join(
+        defaultRepoRoot,
+        "scripts/knowledge-wiki/photography-residency-proposal-eval.test.mjs"
+      )
     ),
   legacy_checks_preserved:
     readFileSync(path.join(defaultRepoRoot, "package.json"), "utf8").includes("npm run check:citations") &&
@@ -319,7 +327,8 @@ const checks = {
   ...missingPages.checks,
   ...interpretiveLayer.checks,
   ...familyClosure.checks,
-  ...photographyNotebook.checks
+  ...photographyNotebook.checks,
+  ...photographyResidencyProposal.checks
 };
 
 let failed = 0;

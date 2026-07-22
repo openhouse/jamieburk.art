@@ -23,6 +23,9 @@ relations:
   - type: informed_by
     target: research.photography-notebook-opening.2026-07-22
     href: ../research-runs/photography-notebook-opening-2026-07-22.md
+  - type: informed_by
+    target: research.photography-first-pass-residency-proposal.2026-07-22
+    href: ../research-runs/photography-first-pass-residency-proposal-2026-07-22.md
   - type: related_to
     target: evaluation.photography-notebook.2026-07-22
     href: ../evaluations/photography-working-notebook.md
@@ -111,6 +114,7 @@ unanswered questions; they do not require premature interpretation.
 ## Current entries
 
 - [Opening the photography notebook, July 22, 2026](../research-runs/photography-notebook-opening-2026-07-22.md)
+- [The archive answers back - a 196 photography residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md)
 
 ## Private working material
 

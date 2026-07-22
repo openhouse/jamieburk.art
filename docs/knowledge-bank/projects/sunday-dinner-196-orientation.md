@@ -5,7 +5,7 @@ kind: project
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-07-22
 review_by: 2026-10-19
 aliases:
   - Sunday Dinner
@@ -22,6 +22,9 @@ relations:
   - type: supports
     target: capability.participatory-public-systems
     href: ../capabilities/participatory-public-systems.md
+  - type: related_to
+    target: research.photography-first-pass-residency-proposal.2026-07-22
+    href: ../research-runs/photography-first-pass-residency-proposal-2026-07-22.md
 ---
 
 # Sunday Dinner and 196 Artists Residency orientation
@@ -35,3 +38,8 @@ claiming that every participant shared the same experience.
 The review-locked [continuity report](wowlist-sunday-dinner-callscript-continuity.md)
 keeps the protected database and attendance evidence, public Call Script
 record, chronology, and privacy boundaries separate.
+
+The [photography first-pass residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md)
+uses the 196 hosting practice as a present-tense container for Jamie's own
+archive work. It is an accepted experiment, not a historical resident outcome
+or a publication decision.
