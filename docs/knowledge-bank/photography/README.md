@@ -35,6 +35,10 @@ relations:
     href: proof-of-life.md
     context: First bounded archive encounter and one-image private working-album proof.
   - type: related_to
+    target: research.photography.field-set-001-completion.2026-07-22
+    href: field-set-001-completion.md
+    context: Completed exact private rough field, recursive evaluation, and non-destructive membership verification.
+  - type: related_to
     target: source.vault.apple-photos.metadata
     href: ../sources/apple-photos-archive-metadata.md
     context: Metadata-only boundary for the private lifetime photo archive.
@@ -86,9 +90,9 @@ completed the review required for that exact public use.
 - Let visual findings create research questions without automatically becoming
   evidence or public copy.
 
-Jamie has proposed assembling a private rough-draft field of approximately
-1,000 photographs. That target is a creative orientation, not an audited corpus
-count, completed intake, rights-cleared set, or promise of publication.
+Jamie has completed an exact private rough-draft field of 1,000 photographs.
+That field is an editor-ready place to begin looking, not a representative
+archive sample, rights-cleared set, final edit, or promise of publication.
 
 ## Notebook map
 
@@ -101,6 +105,9 @@ count, completed intake, rights-cleared set, or promise of publication.
 - [Proof of Life](proof-of-life.md) records the first private archive encounter:
   one locally inspected photograph, one exact working-album membership, and no
   public asset or publication decision.
+- [Field Set 001 completion](field-set-001-completion.md) records the exact
+  private 1,000-photo rough field, its recursive visual review, and verified
+  non-destructive album commit without exposing its membership or pixels.
 - [Apple Photos archive boundary](../sources/apple-photos-archive-metadata.md)
   records what the private source can support and what must remain outside Git.
 - [Field Set 001](field-set-001.md) records the purpose, current state, and

@@ -47,6 +47,9 @@ export function evaluatePhotographyNotebook(options = {}) {
     "decision.photography.field-set-001-residency-acceptance"
   );
   const proofOfLife = record("research.photography.proof-of-life.2026-07-22");
+  const fieldCompletion = record(
+    "research.photography.field-set-001-completion.2026-07-22"
+  );
   const photoArchiveSource = record("source.vault.apple-photos.metadata");
   const tejuSource = record("source.teju-cole.far-away-from-here.2015");
   const notebookIds = manifest.requiredRecords.map((item) => item.id);
@@ -62,6 +65,9 @@ export function evaluatePhotographyNotebook(options = {}) {
   );
   const proofOfLifeSource = normalized(
     "research.photography.proof-of-life.2026-07-22"
+  );
+  const fieldCompletionSource = normalized(
+    "research.photography.field-set-001-completion.2026-07-22"
   );
   const photoArchiveSourceText = normalized("source.vault.apple-photos.metadata");
   const tejuSourceText = normalized("source.teju-cole.far-away-from-here.2015");
@@ -102,15 +108,51 @@ export function evaluatePhotographyNotebook(options = {}) {
     /private and remains outside this repository/i.test(allNotebookSource) &&
     /public-safe aggregate/i.test(allNotebookSource);
 
-  const fieldSetProvisional =
+  const fieldSetCompletedPrivateRoughField =
     field?.kind === "research-inquiry" &&
     field?.status === "governed-open" &&
     field?.projection?.status === "hold" &&
     field.projection.surfaces.length === 0 &&
-    /approximately 1,000 photographs/i.test(fieldSource) &&
-    /not yet been received, counted, audited/i.test(fieldSource) &&
+    /exact private rough-draft master of 1,000 unique/i.test(fieldSource) &&
+    /broad 1,800-image candidate field/i.test(fieldSource) &&
+    /61 fit the proposed editorial view, one did not, and two remained uncertain/i.test(
+      fieldSource
+    ) &&
+    /98\.39% precision and complete review coverage/i.test(fieldSource) &&
     /not a publication set/i.test(fieldSource) &&
-    field.anti_claims?.some((item) => /not an exact population claim/i.test(item));
+    field.anti_claims?.some((item) => /not a representative population/i.test(item));
+
+  const fieldSetCompletionPreservesPublicationBoundary =
+    fieldCompletion?.kind === "research-run" &&
+    fieldCompletion?.status === "maintained" &&
+    fieldCompletion?.human_review === "governed-open" &&
+    fieldCompletion?.source_encounter?.research_authority === "authorized-by-jamie" &&
+    fieldCompletion?.source_encounter?.publication_authority ===
+      "separate-human-review" &&
+    /exact private master of 1,000 unique still photographs/i.test(
+      fieldCompletionSource
+    ) &&
+    /1,800 candidate images were locally inspected without external upload/i.test(
+      fieldCompletionSource
+    ) &&
+    /Four recursive visual-review rounds/i.test(fieldCompletionSource) &&
+    /61 fits, one rejection, and two uncertainties/i.test(fieldCompletionSource) &&
+    /98\.39% precision and 100% coverage/i.test(fieldCompletionSource) &&
+    /ten-image canary passed/i.test(fieldCompletionSource) &&
+    /unchanged production plan ran twice with identical/i.test(
+      fieldCompletionSource
+    ) &&
+    /read-only verifier confirmed 13 governed albums/i.test(
+      fieldCompletionSource
+    ) &&
+    /Original photographs, metadata, People associations, dates, places, favorites, source membership, and prior working versions were not edited/i.test(
+      fieldCompletionSource
+    ) &&
+    /Selection does not confer publication permission/i.test(
+      fieldCompletionSource
+    ) &&
+    fieldCompletion?.projection?.status === "hold" &&
+    fieldCompletion.projection.surfaces.length === 0;
 
   const exactIdentityAndNonmutation =
     /read-only against the source/i.test(fieldSource) &&
@@ -141,7 +183,7 @@ export function evaluatePhotographyNotebook(options = {}) {
     /Agents may identify missing review but cannot grant rights, consent, attribution, factual clearance, or publication permission/i.test(
       allNotebookSource
     ) &&
-    [notebook, field, grammar, entry, proofOfLife].every(
+    [notebook, field, grammar, entry, proofOfLife, fieldCompletion].every(
       (item) => item?.human_review === "governed-open"
     );
 
@@ -386,7 +428,9 @@ export function evaluatePhotographyNotebook(options = {}) {
     photography_notebook_records_materialized: recordsMaterialized,
     photography_notebook_reachable: navigationReachable,
     photography_notebook_public_private_boundary: publicPrivateBoundary,
-    field_set_provisional_not_population_claim: fieldSetProvisional,
+    field_set_completed_private_rough_field: fieldSetCompletedPrivateRoughField,
+    field_set_completion_preserves_publication_boundary:
+      fieldSetCompletionPreservesPublicationBoundary,
     field_set_exact_identity_and_nonmutation: exactIdentityAndNonmutation,
     observation_interpretation_claim_separated: observationInterpretationSeparated,
     selection_rights_consent_publication_separated: selectionAndPublicationSeparated,

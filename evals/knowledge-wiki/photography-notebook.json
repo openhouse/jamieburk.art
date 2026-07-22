@@ -44,6 +44,12 @@
       "status": "maintained"
     },
     {
+      "id": "research.photography.field-set-001-completion.2026-07-22",
+      "path": "docs/knowledge-bank/photography/field-set-001-completion.md",
+      "kind": "research-run",
+      "status": "maintained"
+    },
+    {
       "id": "source.vault.apple-photos.metadata",
       "path": "docs/knowledge-bank/sources/apple-photos-archive-metadata.md",
       "kind": "source"
@@ -72,7 +78,8 @@
     "photography_notebook_records_materialized",
     "photography_notebook_reachable",
     "photography_notebook_public_private_boundary",
-    "field_set_provisional_not_population_claim",
+    "field_set_completed_private_rough_field",
+    "field_set_completion_preserves_publication_boundary",
     "field_set_exact_identity_and_nonmutation",
     "observation_interpretation_claim_separated",
     "selection_rights_consent_publication_separated",

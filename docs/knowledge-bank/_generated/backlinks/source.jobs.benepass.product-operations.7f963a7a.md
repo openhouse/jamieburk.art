@@ -3,7 +3,7 @@
 
 **Source commit:** `20c284ae54feffa213864cae257898c8fb5003d1`
 **Generation time:** 2026-07-22T10:34:25-04:00
-**Source fingerprint:** `c493f5d006b35a18605ff42d3a64e31e1792e28a44803746011fc322f0adb41c`
+**Source fingerprint:** `6db69408faf5e91c7dd07f48792fe9fc5fef93578fc66601d64ff7243ddab424`
 
 - [Benepass - Product Operations Manager](../../opportunities/benepass-product-operations.md) - `evidence:direct-support` (evidence)
 - [Benepass - Product Operations Manager](../../opportunities/benepass-product-operations.md) - `prose_link` (markdown)

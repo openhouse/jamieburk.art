@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-22T10:34:25-04:00",
   "sourceCommit": "20c284ae54feffa213864cae257898c8fb5003d1",
-  "sourceFingerprint": "c493f5d006b35a18605ff42d3a64e31e1792e28a44803746011fc322f0adb41c",
+  "sourceFingerprint": "6db69408faf5e91c7dd07f48792fe9fc5fef93578fc66601d64ff7243ddab424",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -1045,7 +1045,7 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Provisional public-safe research plan for close reading a private rough-draft field of approximately 1,000 photographs without treating it as a final select.\n",
+      "summary": "Public-safe research record for close reading an exact private rough-draft field of 1,000 photographs without treating it as a final select.\n",
       "aliases": [
         "First thousand photographs"
       ],
@@ -1116,6 +1116,21 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.photography.field-set-001-completion.2026-07-22",
+      "path": "docs/knowledge-bank/photography/field-set-001-completion.md",
+      "title": "Field Set 001 completion",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe completion record for an exact, privately held 1,000-photo rough field created for portfolio research during Residency 001.\n",
+      "aliases": [
+        "First 1,000 rough photo select completion"
+      ],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
     },
     {
       "id": "research.photography.proof-of-life.2026-07-22",
@@ -2894,6 +2909,14 @@
       "source": "frontmatter",
       "href": "field-set-001.md",
       "context": "First proposed private rough-draft field for close reading."
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
+      "type": "related_to",
+      "to": "research.photography.field-set-001-completion.2026-07-22",
+      "source": "frontmatter",
+      "href": "field-set-001-completion.md",
+      "context": "Completed exact private rough field, recursive evaluation, and non-destructive membership verification."
     },
     {
       "from": "index.knowledge-wiki.photography-notebook",
@@ -4694,10 +4717,18 @@
     {
       "from": "research-inquiry.photography.field-set-001",
       "type": "related_to",
+      "to": "research.photography.field-set-001-completion.2026-07-22",
+      "source": "frontmatter",
+      "href": "field-set-001-completion.md",
+      "context": "Governed public-safe receipt for the exact private rough field and its recursive visual evaluation."
+    },
+    {
+      "from": "research-inquiry.photography.field-set-001",
+      "type": "related_to",
       "to": "research.photography.proof-of-life.2026-07-22",
       "source": "frontmatter",
       "href": "proof-of-life.md",
-      "context": "One-image systems proof completed before the proposed field is assembled."
+      "context": "One-image systems proof completed before the full field was assembled."
     },
     {
       "from": "research-inquiry.photography.field-set-001",
@@ -5017,6 +5048,46 @@
       "to": "source.nycac.shared-folder-census.2026",
       "source": "frontmatter",
       "href": "../sources/nycac-protected-shared-folder-census-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.photography.field-set-001-completion.2026-07-22",
+      "type": "part_of",
+      "to": "project.photography.field-set-001-residency",
+      "source": "frontmatter",
+      "href": "field-set-001-residency-proposal.md",
+      "context": null
+    },
+    {
+      "from": "research.photography.field-set-001-completion.2026-07-22",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "../indexes/visual-evidence.md",
+      "context": null
+    },
+    {
+      "from": "research.photography.field-set-001-completion.2026-07-22",
+      "type": "related_to",
+      "to": "research-inquiry.photography.field-set-001",
+      "source": "frontmatter",
+      "href": "field-set-001.md",
+      "context": null
+    },
+    {
+      "from": "research.photography.field-set-001-completion.2026-07-22",
+      "type": "related_to",
+      "to": "research.photography.proof-of-life.2026-07-22",
+      "source": "frontmatter",
+      "href": "proof-of-life.md",
+      "context": null
+    },
+    {
+      "from": "research.photography.field-set-001-completion.2026-07-22",
+      "type": "uses_source",
+      "to": "source.vault.apple-photos.metadata",
+      "source": "frontmatter",
+      "href": "../sources/apple-photos-archive-metadata.md",
       "context": null
     },
     {
@@ -7417,7 +7488,7 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 104,
+      "line": 107,
       "kind": "link"
     },
     {
@@ -7450,10 +7521,19 @@
     {
       "fromPath": "docs/knowledge-bank/photography/README.md",
       "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/photography/field-set-001-completion.md",
+      "to": "research.photography.field-set-001-completion.2026-07-22",
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
       "toPath": "docs/knowledge-bank/sources/apple-photos-archive-metadata.md",
       "to": "source.vault.apple-photos.metadata",
       "fragment": null,
-      "line": 39,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -7462,7 +7542,7 @@
       "toPath": "docs/knowledge-bank/photography/field-set-001.md",
       "to": "research-inquiry.photography.field-set-001",
       "fragment": null,
-      "line": 41,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -7471,7 +7551,7 @@
       "toPath": "docs/knowledge-bank/photography/editorial-grammar.md",
       "to": "method.photography.invitation-container-emergence",
       "fragment": null,
-      "line": 43,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -7480,7 +7560,7 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 45,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -7489,7 +7569,7 @@
       "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "to": "index.knowledge-wiki.visual-evidence",
       "fragment": null,
-      "line": 47,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -7498,7 +7578,7 @@
       "toPath": "docs/knowledge-bank/sources/teju-cole-far-away-from-here-2015.md",
       "to": "source.teju-cole.far-away-from-here.2015",
       "fragment": null,
-      "line": 50,
+      "line": 53,
       "kind": "link"
     },
     {
@@ -7516,7 +7596,16 @@
       "toPath": "docs/knowledge-bank/photography/proof-of-life.md",
       "to": "research.photography.proof-of-life.2026-07-22",
       "fragment": null,
-      "line": 23,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/field-set-001.md",
+      "from": "research-inquiry.photography.field-set-001",
+      "toPath": "docs/knowledge-bank/photography/field-set-001-completion.md",
+      "to": "research.photography.field-set-001-completion.2026-07-22",
+      "fragment": null,
+      "line": 29,
       "kind": "link"
     },
     {

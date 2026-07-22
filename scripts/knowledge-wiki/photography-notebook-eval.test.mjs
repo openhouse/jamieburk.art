@@ -21,9 +21,9 @@ test("photography working notebook baseline passes", () => {
   const evaluation = evaluatePhotographyNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    records: 9,
+    records: 10,
     entryHeadings: 11,
-    blockingCriteria: 25
+    blockingCriteria: 26
   });
 });
 
@@ -54,8 +54,40 @@ test("the rough field cannot activate itself as a public projection", () => {
     result,
     recordOverrides: { [field.id]: field }
   });
-  assert.equal(evaluation.checks.field_set_provisional_not_population_claim, false);
+  assert.equal(evaluation.checks.field_set_completed_private_rough_field, false);
   assert.equal(evaluation.checks.photography_projection_remains_hold, false);
+});
+
+test("the completed field must retain its exact private rough-field status", () => {
+  const id = "research.photography.field-set-001-completion.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /exact private master of\s+1,000 unique still photographs/i,
+    "approximate public collection"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.field_set_completion_preserves_publication_boundary,
+    false
+  );
+});
+
+test("completion cannot confer publication permission", () => {
+  const id = "research.photography.field-set-001-completion.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    "Selection does not confer publication permission",
+    "Selection grants publication permission"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.field_set_completion_preserves_publication_boundary,
+    false
+  );
 });
 
 test("matching counts cannot replace exact private membership", () => {

@@ -3,7 +3,7 @@
 
 **Source commit:** `20c284ae54feffa213864cae257898c8fb5003d1`
 **Generation time:** 2026-07-22T10:34:25-04:00
-**Source fingerprint:** `c493f5d006b35a18605ff42d3a64e31e1792e28a44803746011fc322f0adb41c`
+**Source fingerprint:** `6db69408faf5e91c7dd07f48792fe9fc5fef93578fc66601d64ff7243ddab424`
 
 ## application
 
@@ -141,6 +141,7 @@
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
+- [Field Set 001 completion](../photography/field-set-001-completion.md) - `research.photography.field-set-001-completion.2026-07-22`
 - [Proof of Life](../photography/proof-of-life.md) - `research.photography.proof-of-life.2026-07-22`
 
 ## source

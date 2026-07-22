@@ -11,8 +11,8 @@ aliases:
   - First thousand photographs
 canonical_path: docs/knowledge-bank/photography/field-set-001.md
 summary: >
-  Provisional public-safe research plan for close reading a private rough-draft
-  field of approximately 1,000 photographs without treating it as a final select.
+  Public-safe research record for close reading an exact private rough-draft
+  field of 1,000 photographs without treating it as a final select.
 relations:
   - type: related_to
     target: index.knowledge-wiki.photography-notebook
@@ -24,7 +24,11 @@ relations:
   - type: related_to
     target: research.photography.proof-of-life.2026-07-22
     href: proof-of-life.md
-    context: One-image systems proof completed before the proposed field is assembled.
+    context: One-image systems proof completed before the full field was assembled.
+  - type: related_to
+    target: research.photography.field-set-001-completion.2026-07-22
+    href: field-set-001-completion.md
+    context: Governed public-safe receipt for the exact private rough field and its recursive visual evaluation.
   - type: uses_method
     target: method.photography.invitation-container-emergence
     href: editorial-grammar.md
@@ -39,8 +43,8 @@ projection:
   surfaces: []
 human_review: governed-open
 anti_claims:
-  - The field has not yet been ingested, audited, or represented in this repository.
-  - Approximately 1,000 is a proposed working scale, not an exact population claim.
+  - The 1,000-photo master is an exact private working field, not a representative population of Jamie's archive.
+  - No photograph, preview, contact sheet, filename, identifier, or private receipt is published in this repository.
   - Inclusion is not proof of importance, representativeness, authorship, rights, consent, or publication fitness.
   - Exclusion from this field does not imply that an image or project lacks value.
 ---
@@ -58,18 +62,23 @@ records of care rather than as an immediate portfolio shortlist?
 
 ## Current state
 
-Jamie is assembling a private rough-draft field with a working target of
-approximately 1,000 photographs. The set has not yet been received, counted,
-audited, or reviewed through the Knowledge Wiki. No membership list, source
-locator, preview, or photograph is committed here.
+Field Set 001 now exists as an exact private rough-draft master of 1,000 unique
+still photographs inside the authorized residency workspace. It was composed
+from a broad 1,800-image candidate field after local inspection and four rounds
+of recursive visual review. The final stratified review considered 64 images:
+61 fit the proposed editorial view, one did not, and two remained uncertain.
+That yielded 98.39% precision and complete review coverage under the declared
+evaluation policy; every view passed its threshold.
 
-This record establishes a place to remember the question while the material is
-still forming. It does not certify that Field Set 001 exists as a frozen corpus.
+The field also retains separate private review surfaces: 140 held images were
+excluded from the master, 601 master images carry an existing People
+association, and 56 remain context-uncertain. Those overlays are research aids,
+not identity, consent, authorship, or publication decisions.
 
-The [Proof of Life encounter](proof-of-life.md) established that one exact
-private working-album membership can be created and read back inside the
-authorized residency workspace. That one-image proof does not change the
-field's unassembled and unaudited state.
+The [Proof of Life encounter](proof-of-life.md) remains the earlier one-image
+systems proof. The [completion record](field-set-001-completion.md) documents
+the full field at a public-safe aggregate level. No membership list, source
+locator, preview, contact sheet, or photograph is committed here.
 
 ## What may belong in the field
 
@@ -120,15 +129,18 @@ The public Wiki may record aggregate method and public-safe findings. Exact
 membership, filenames, source locations, previews, and review decisions remain
 in the private system.
 
-## Completion criteria
+## Completion receipt
 
-Field Set 001 becomes a stable private research field only when Jamie confirms
-its intended scope and a private receipt records exact membership, source
-representation, capture date, integrity state, and nonmutation. It may still
-change later, but any changed membership creates a new version rather than
-silently rewriting the evaluated field.
+The first pass completed its declared private workflow: local pixel inspection,
+sensitive-material quarantine, recursive visual evaluation, exact-membership
+validation, a ten-image write canary, production commit, unchanged rerun, and
+independent read-only verification. The verifier confirmed all governed album
+memberships, no master/HOLD overlap, no members outside the frozen source, and
+no source mutation caused by the operation. No external upload occurred.
 
-A successful first pass may produce:
+This is a stable editor-ready rough field, not a final edit. It may still change
+later, but any changed membership creates a new version rather than silently
+rewriting the evaluated field. The completed first pass may now produce:
 
 - a set of provisional motifs and counter-motifs;
 - new project or source-research questions;
