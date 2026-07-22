@@ -1,6 +1,6 @@
 {
   "suite": "knowledge-wiki-foundation-E",
-  "version": 4,
+  "version": 5,
   "authority": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md, with M as the implementation spine",
   "principle": "Markdown is the record. The graph is compiled from the record. The portfolio is a selective projection from the governed system.",
   "scoring": "Every deterministic criterion blocks independently. Human authority gates must remain explicitly open until observed; they are not averaged into a synthetic score.",
@@ -169,6 +169,25 @@
         "rfp_contract_enforced",
         "generated_outputs_locale_independent",
         "diff_hygiene_clean"
+      ]
+    },
+    {
+      "id": "photography-field-notebook",
+      "criteria": [
+        "photography_notebook_materialized",
+        "photography_notebook_reachable",
+        "field_corpus_state_truthful",
+        "attention_not_publication",
+        "four_photo_layers_distinct",
+        "experimental_space_preserved",
+        "photo_observations_remain_questions",
+        "collective_agency_and_absence_preserved",
+        "public_notebook_has_no_private_payload",
+        "photo_encounters_are_additive",
+        "photo_publication_gates_human",
+        "no_public_photo_route",
+        "photo_rfp_boundary_preserved",
+        "photo_source_non_mutation_preserved"
       ]
     }
   ]

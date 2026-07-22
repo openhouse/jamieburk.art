@@ -3,7 +3,7 @@
 
 **Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
 **Generation time:** 2026-07-21T17:51:37-04:00
-**Source fingerprint:** `fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a`
+**Source fingerprint:** `6d9a41664eb53bda182489112a28cb1001a0e8fa2dae6e528d2f36c0a7af73f7`
 
 ## application
 
@@ -59,6 +59,7 @@
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
 - [Outcomes, Adoption, and Afterlives](../indexes/outcomes-adoption-and-afterlives.md) - `index.knowledge-wiki.outcomes-adoption-afterlives`
 - [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
+- [Photography field notebook](../notebooks/photography/README.md) - `index.knowledge-wiki.photography-notebook`
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
 - [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
@@ -127,6 +128,7 @@
 
 ## research-inquiry
 
+- [Field Corpus 001](../notebooks/photography/field-corpus-001.md) - `research-inquiry.photography.field-corpus-001`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
 ## research-run

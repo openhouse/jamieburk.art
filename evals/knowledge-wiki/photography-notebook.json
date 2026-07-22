@@ -1,0 +1,23 @@
+{
+  "suite": "knowledge-wiki-photography-field-notebook",
+  "version": 1,
+  "notebookId": "index.knowledge-wiki.photography-notebook",
+  "notebookPath": "docs/knowledge-bank/notebooks/photography/README.md",
+  "fieldId": "research-inquiry.photography.field-corpus-001",
+  "fieldPath": "docs/knowledge-bank/notebooks/photography/field-corpus-001.md",
+  "visualIndexId": "index.knowledge-wiki.visual-evidence",
+  "rfpPath": "rfps/0002-lifetime-photo-archive-fieldwork.md",
+  "principle": "The notebook creates room for play and situated looking while keeping attention, evidence, clearance, and publication as separate states.",
+  "humanGates": [
+    "source and version identity",
+    "photographer and credit",
+    "depicted-person consent",
+    "rights and license",
+    "privacy and safety",
+    "supported context and prohibited inferences",
+    "crop and edit limits",
+    "caption and alt text",
+    "destination and duration",
+    "Jamie's final editorial approval"
+  ]
+}

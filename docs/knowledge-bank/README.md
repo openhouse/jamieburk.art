@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
+last_reviewed: 2026-07-22
 review_by: 2027-01-18
 aliases:
   - Knowledge Bank
@@ -26,6 +26,10 @@ relations:
     target: index.knowledge-wiki.living-archive
     href: indexes/living-archive.md
     context: Orientation, missing-page, project, and situated source-return map.
+  - type: related_to
+    target: index.knowledge-wiki.photography-notebook
+    href: notebooks/photography/README.md
+    context: Public-safe working notebook for exploratory photographic fieldwork.
   - type: related_to
     target: index.knowledge-wiki.project-lineages
     href: indexes/project-lineages.md
@@ -84,6 +88,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Living archive](indexes/living-archive.md): Jamie, the practice throughline,
   the priority project and campaign cohort, ethical methods, visual evidence,
   and a dated return to original source material.
+- [Photography field notebook](notebooks/photography/README.md): exploratory
+  questions, sequence sketches, visual patterns, counterreadings, and dated
+  public-safe changes in understanding.
 - [Project lineages](indexes/project-lineages.md): inheritance, adaptation, and
   divergence without retrospective inevitability.
 - [Decision records](indexes/decision-records.md): bounded reconstructions that
