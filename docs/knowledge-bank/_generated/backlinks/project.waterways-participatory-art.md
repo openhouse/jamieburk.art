@@ -3,7 +3,7 @@
 
 **Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
 **Generation time:** 2026-07-21T17:51:37-04:00
-**Source fingerprint:** `fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a`
+**Source fingerprint:** `277a84f803966f0181545f8d0ae66a07025f2800f047bf381656bd4d2c3564c6`
 
 - [Open House communal governance inside negotiated boundaries](../../decisions/open-house-communal-governance.md) - `resulted_in` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
@@ -11,6 +11,7 @@
 - [People, places, and the work between them](../../indexes/people-places-and-work-between-them.md) - `prose_link` (markdown)
 - [What the work was up against](../../indexes/what-the-work-was-up-against.md) - `prose_link` (markdown)
 - [Scenes and Places of Work](../../indexes/scenes-and-places-of-work.md) - `related_to` (frontmatter)
+- [Release / water / salt - visual sequence sketch](../../notebooks/photography/sketches/release-water-salt.md) - `related_to` (frontmatter)
 - [Learning Through Making](../../methods/learning-through-making.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Open House at UC Santa Cruz](../../sources/good-times-open-house-2006-06-28.md) - `documents` (frontmatter)

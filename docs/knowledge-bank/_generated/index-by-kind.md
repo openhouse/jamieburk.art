@@ -3,7 +3,7 @@
 
 **Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
 **Generation time:** 2026-07-21T17:51:37-04:00
-**Source fingerprint:** `fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a`
+**Source fingerprint:** `277a84f803966f0181545f8d0ae66a07025f2800f047bf381656bd4d2c3564c6`
 
 ## application
 
@@ -59,6 +59,7 @@
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
 - [Outcomes, Adoption, and Afterlives](../indexes/outcomes-adoption-and-afterlives.md) - `index.knowledge-wiki.outcomes-adoption-afterlives`
 - [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
+- [Photography working notebook](../notebooks/photography/README.md) - `index.knowledge-wiki.photo-notebook`
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
 - [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
@@ -67,6 +68,7 @@
 - [Role, Collective Authorship, and Protected Absence](../indexes/role-collective-authorship-and-protected-absence.md) - `index.knowledge-wiki.role-authorship-protected-absence`
 - [Scenes and Places of Work](../indexes/scenes-and-places-of-work.md) - `index.knowledge-wiki.scenes-and-places-of-work`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
+- [Release / water / salt - visual sequence sketch](../notebooks/photography/sketches/release-water-salt.md) - `index.photo-notebook.sketch.release-water-salt`
 
 ## method
 
@@ -76,6 +78,7 @@
 - [Learning Through Making](../methods/learning-through-making.md) - `method.learning-through-making`
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
+- [Public-safe photographic field-note method](../notebooks/photography/field-note-template.md) - `method.photo-notebook.field-note`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
@@ -127,6 +130,7 @@
 
 ## research-inquiry
 
+- [Open questions for photographic reading](../notebooks/photography/open-questions.md) - `research-inquiry.photo-notebook.open-questions`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
 ## research-run

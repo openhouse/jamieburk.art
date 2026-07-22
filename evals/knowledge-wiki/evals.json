@@ -141,6 +141,25 @@
       ]
     },
     {
+      "id": "photography-working-notebook",
+      "criteria": [
+        "photo_notebook_records_materialized",
+        "photo_notebook_navigation_reachable",
+        "photo_working_states_remain_provisional",
+        "photo_rough_cohort_not_population_claim",
+        "photo_creative_latitude_preserved",
+        "photo_observation_interpretation_separated",
+        "photo_counter_reading_and_absence_preserved",
+        "photo_represented_people_remain_agents",
+        "photo_visual_leads_cannot_self_promote",
+        "photo_human_publication_gates_remain_open",
+        "photo_sequence_sketch_remains_interpretive",
+        "photo_open_questions_stay_generative",
+        "photo_notebook_public_safety_preserved",
+        "photo_rfp_boundary_retained"
+      ]
+    },
+    {
       "id": "knowledge-wiki-family-closure",
       "criteria": [
         "family_records_materialized",

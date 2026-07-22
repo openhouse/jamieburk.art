@@ -14,6 +14,9 @@ relations:
     target: asset.photo.digital-district.001
     href: ../assets/digital-district-photo.md
   - type: related_to
+    target: index.knowledge-wiki.photo-notebook
+    href: ../notebooks/photography/README.md
+  - type: related_to
     target: person.jamie-burkart
     href: ../people/jamie-burkart.md
   - type: related_to
@@ -65,3 +68,10 @@ identities, prohibited inferences, and the exact public surface under review.
 
 Visual discovery may suggest new research. It cannot promote a claim or clear
 an image automatically.
+
+## Working notebook
+
+The [photography working notebook](../notebooks/photography/README.md) is the
+public-safe sketchpad for provisional readings, open questions, montage, and
+photo-editor leads. It contains no photographs or private catalog data. A
+notebook entry is not evidence, a caption, or publication approval.

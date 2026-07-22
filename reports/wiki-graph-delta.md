@@ -3,123 +3,20 @@
 
 **Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
 **Generation time:** 2026-07-21T17:51:37-04:00
-**Source fingerprint:** `fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a`
+**Source fingerprint:** `277a84f803966f0181545f8d0ae66a07025f2800f047bf381656bd4d2c3564c6`
 
-`origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.
+Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 107
+- Nodes added: 4
 - Nodes removed: 0
-- Edges added: 435
+- Edges added: 16
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 1
 
 ## Added nodes
 
-- `application.nycac.civic-product-operations`
-- `asset.photo.digital-district.001`
-- `capability.civic-cultural-technical-translation`
-- `capability.implementation-adoption-and-handoff`
-- `capability.implementation-operational-stewardship`
-- `capability.participatory-public-systems`
-- `capability.technical-operations`
-- `claim.callnyc.independent-follow-on`
-- `claim.nycac.advocacy-operating-playbook`
-- `correction.callnyc-years.2026`
-- `decision.callnyc.issue-pathways`
-- `decision.hje.continuity-modernization`
-- `decision.kc-town-hall.listening-fieldwork`
-- `decision.knowledge-wiki.selective-projection`
-- `decision.open-house.communal-governance`
-- `evaluation.employment-context.coverage.2026-07-18`
-- `evaluation.knowledge-wiki.retrieval-tasks`
-- `evaluation.nycac.shared-folder-production.2026-07-19`
-- `event.nycc.constituent-services-hackathon.2016`
-- `index.knowledge-wiki`
-- `index.knowledge-wiki.canonical-story-bank`
-- `index.knowledge-wiki.decision-records`
-- `index.knowledge-wiki.decisions-deliverables-operational-outcomes`
-- `index.knowledge-wiki.employment-context`
-- `index.knowledge-wiki.family-closure`
-- `index.knowledge-wiki.living-archive`
-- `index.knowledge-wiki.outcomes-adoption-afterlives`
-- `index.knowledge-wiki.people-places-work`
-- `index.knowledge-wiki.pilot`
-- `index.knowledge-wiki.pressures`
-- `index.knowledge-wiki.project-lineages`
-- `index.knowledge-wiki.relational-infrastructure-atlas`
-- `index.knowledge-wiki.research-agenda-and-held-claims`
-- `index.knowledge-wiki.role-authorship-protected-absence`
-- `index.knowledge-wiki.scenes-and-places-of-work`
-- `index.knowledge-wiki.visual-evidence`
-- `method.collective-credit-protected-absence`
-- `method.identity-systems-as-shared-infrastructure`
-- `method.jamie-at-work`
-- `method.learning-through-making`
-- `method.maintenance-handoff-stewardship`
-- `method.participation-and-relational-infrastructure`
-- `method.situated-source-rereading`
-- `method.source-backed-team-memory`
-- `method.structure-grows-from-material`
-- `method.what-is-at-stake-for-me`
-- `opportunity.aclu.product-manager-discovery.8482872002`
-- `opportunity.asana.ai-implementation.8027437`
-- `opportunity.benepass.product-operations.7f963a7a`
-- `opportunity.codepath.claude-corps.5182020007`
-- `opportunity.nyc-oti.technical-operations-manager.782369`
-- `opportunity.permitflow.product-operations.8a6e6066`
-- `organization.nyc-artist-coalition`
-- `person.jamie-burkart`
-- `place.small-cultural-spaces`
-- `portfolio.role-fit-referral-map`
-- `portfolio.work.callnyc`
-- `portfolio.work.technical-operations`
-- `project.callnyc`
-- `project.fair-rent-nyc`
-- `project.harry-j-epstein`
-- `project.kc-spaces-fund`
-- `project.kc-town-hall`
-- `project.let-nyc-dance`
-- `project.nter-chng`
-- `project.nyc-artist-coalition`
-- `project.office-of-nightlife-town-halls`
-- `project.save-nyc-spaces`
-- `project.sunday-dinner-196`
-- `project.talks-not-raids`
-- `project.waterways-participatory-art`
-- `project.wowlist`
-- `research-inquiry.ucsc-installation-title`
-- `research.foundational-source-return.2026-07-19`
-- `research.interpretive-layer-source-return.2026-07-19`
-- `research.knowledge-wiki-family-closure.2026-07-19`
-- `research.nycac.shared-folder.2026-07-19`
-- `source.callnyc.source-repository`
-- `source.civichall.hackathon-announcement.2016`
-- `source.councilstat.fuller-release.2016`
-- `source.good-times.open-house.2006-06-28`
-- `source.hje.research-brief.2026-07`
-- `source.jamie.writers-voice-synthesis.2026-07`
-- `source.jobs.aclu.product-discovery.8482872002`
-- `source.jobs.asana.ai-implementation.8027437`
-- `source.jobs.benepass.product-operations.7f963a7a`
-- `source.jobs.codepath.claude-corps.5182020007`
-- `source.jobs.oti.technical-operations.782369`
-- `source.jobs.permitflow.product-operations.8a6e6066`
-- `source.kansas-city-star.raft.2007-11-15`
-- `source.kc-town-hall.cced-proposal.2019`
-- `source.knowledge-wiki.branch-a.2026-07-19`
-- `source.knowledge-wiki.branch-b.2026-07-19`
-- `source.knowledge-wiki.branch-c.2026-07-19`
-- `source.knowledge-wiki.branch-d.2026-07-19`
-- `source.knowledge-wiki.branch-e.2026-07-19`
-- `source.nter-chng.archived-homepage.2011`
-- `source.nycac.nightlife-forum-transcript.2026`
-- `source.nycac.running-minutes.2026`
-- `source.nycac.shared-folder-census.2026`
-- `source.nycc.councilstat-hackathon-post.2016`
-- `source.politico.callnyc.2016-03-14`
-- `source.resume.jamie-burkart.2026-06-11`
-- `source.ucsc.narrative-evaluations.2004-2006`
-- `source.vault.communication-history.metadata`
-- `source.wowlist.repaired-transcript.2026`
-- `timeline.jamie-practice.2004-present`
+- `index.knowledge-wiki.photo-notebook`
+- `index.photo-notebook.sketch.release-water-salt`
+- `method.photo-notebook.field-note`
+- `research-inquiry.photo-notebook.open-questions`

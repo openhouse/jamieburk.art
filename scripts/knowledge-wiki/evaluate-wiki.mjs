@@ -22,6 +22,7 @@ import { findDisclosedProtectedIdentityDirectives } from "./privacy-boundaries.m
 import { evaluateMissingPages } from "./missing-pages-eval.mjs";
 import { evaluateInterpretiveLayer } from "./interpretive-layer-eval.mjs";
 import { evaluateFamilyClosure } from "./family-closure-eval.mjs";
+import { evaluatePhotoNotebook } from "./photo-notebook-eval.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -51,6 +52,7 @@ const disclosedProtectedIdentityDirectives = findDisclosedProtectedIdentityDirec
 const missingPages = evaluateMissingPages({ result });
 const interpretiveLayer = evaluateInterpretiveLayer({ result });
 const familyClosure = evaluateFamilyClosure({ result });
+const photoNotebook = evaluatePhotoNotebook({ result });
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -313,6 +315,7 @@ const checks = {
 
   ...missingPages.checks,
   ...interpretiveLayer.checks,
+  ...photoNotebook.checks,
   ...familyClosure.checks
 };
 

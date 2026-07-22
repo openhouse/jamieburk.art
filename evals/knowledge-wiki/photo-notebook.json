@@ -1,0 +1,23 @@
+{
+  "suite": "knowledge-wiki-photography-working-notebook",
+  "version": 1,
+  "notebookId": "index.knowledge-wiki.photo-notebook",
+  "fieldNoteId": "method.photo-notebook.field-note",
+  "questionsId": "research-inquiry.photo-notebook.open-questions",
+  "sketchId": "index.photo-notebook.sketch.release-water-salt",
+  "requiredRecords": [
+    ["index.knowledge-wiki.photo-notebook", "docs/knowledge-bank/notebooks/photography/README.md"],
+    ["method.photo-notebook.field-note", "docs/knowledge-bank/notebooks/photography/field-note-template.md"],
+    ["research-inquiry.photo-notebook.open-questions", "docs/knowledge-bank/notebooks/photography/open-questions.md"],
+    ["index.photo-notebook.sketch.release-water-salt", "docs/knowledge-bank/notebooks/photography/sketches/release-water-salt.md"]
+  ],
+  "navigationIds": [
+    "index.knowledge-wiki",
+    "index.knowledge-wiki.living-archive",
+    "index.knowledge-wiki.visual-evidence"
+  ],
+  "publicRegistryPath": "apps/www/src/data/knowledge-bank/records.ts",
+  "notebookRoot": "docs/knowledge-bank/notebooks/photography",
+  "rfpPath": "rfps/0002-lifelong-photo-archive-selection-and-publication.md",
+  "minimumOpenQuestions": 20
+}

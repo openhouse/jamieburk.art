@@ -42,6 +42,10 @@ relations:
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
+  - type: related_to
+    target: index.knowledge-wiki.photo-notebook
+    href: notebooks/photography/README.md
+    context: Public-safe studio surface for provisional visual readings and sequence sketches.
 ---
 
 # Knowledge Wiki
@@ -94,6 +98,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.
+- [Photography working notebook](notebooks/photography/README.md): provisional
+  visual readings, open questions, field-note method, and sequence sketches;
+  no photographs or private catalog data.
 - [Open questions](_generated/wanted-pages.md): deliberate missing knowledge,
   kept distinct from broken links and nonexistence.
 
