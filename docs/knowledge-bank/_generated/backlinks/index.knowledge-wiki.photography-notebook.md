@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Photography field notebook
 
-**Source commit:** `e776f86233d6bb707ea749903a310a6d5bcd897d`
-**Generation time:** 2026-07-22T15:03:16-04:00
-**Source fingerprint:** `bf6cd65be54688e48845c4894a501e95ab810b2c04bf4f72a791cd92745bca61`
+**Source commit:** `9196a8471392f46b5624253269702544b17861e5`
+**Generation time:** 2026-07-22T15:13:20-04:00
+**Source fingerprint:** `2beb50c4d57aa6c43bb7b396d983371b6960c1ec61afb722cd4576e0ae58db13`
 
 - [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
 - [Knowledge Wiki](../../README.md) - `related_to` (frontmatter)
