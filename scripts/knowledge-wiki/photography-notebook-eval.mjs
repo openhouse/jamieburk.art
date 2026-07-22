@@ -124,7 +124,7 @@ export function evaluatePhotographyNotebook(options = {}) {
     field?.status === "draft" &&
     field?.canonical_path === manifest.fieldPath &&
     proposal?.kind === "research-inquiry" &&
-    proposal?.status === "draft" &&
+    proposal?.status === "governed-open" &&
     proposal?.canonical_path === manifest.proposalPath;
 
   const notebookReachable =
@@ -273,6 +273,20 @@ export function evaluatePhotographyNotebook(options = {}) {
     /open librarian inquiry/i.test(proposalSource) &&
     !falselyResolvedRememberedSourcePattern.test(proposalSource);
 
+  const humanHostAcceptanceRecorded =
+    proposal?.status === "governed-open" &&
+    proposalSource.includes(
+      `Accepted by ${manifest.residencyAcceptance.acceptedBy} on ${manifest.residencyAcceptance.acceptedOn}`
+    ) &&
+    proposalSource.includes(
+      `Host response, ${manifest.residencyAcceptance.acceptedOn}`
+    ) &&
+    proposalSource.includes(manifest.residencyAcceptance.wording) &&
+    /This acceptance opens the residency/i.test(proposalSource) &&
+    /does not turn the proposal into a\s+contract, determine its medium or outcome, or close any publication gate/i.test(
+      proposalSource
+    );
+
   const checks = {
     photography_notebook_materialized: notebookAreaMaterialized,
     photography_notebook_reachable: notebookReachable,
@@ -294,7 +308,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     residency_container_not_deadline: residencyContainerNotDeadline,
     open_ended_outcome_protected: openEndedOutcomeProtected,
     host_acceptance_preserves_artist_agency: hostAcceptancePreservesArtistAgency,
-    remembered_teju_source_positioned_honestly: rememberedSourcePositionedHonestly
+    remembered_teju_source_positioned_honestly: rememberedSourcePositionedHonestly,
+    human_host_acceptance_recorded: humanHostAcceptanceRecorded
   };
 
   return {

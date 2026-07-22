@@ -48,7 +48,7 @@ function manifestForFieldSource(fieldSource) {
 test("photography notebook baseline passes", () => {
   const evaluation = evaluatePhotographyNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
-  assert.equal(evaluation.counts.blockingCriteria, 21);
+  assert.equal(evaluation.counts.blockingCriteria, 22);
   assert.equal(evaluation.counts.humanGates, 10);
   assert.equal(evaluation.counts.governedRecords, 3);
 });
@@ -266,4 +266,18 @@ test("the remembered Teju Cole source cannot be silently marked recovered", () =
     evaluation.checks.remembered_teju_source_positioned_honestly,
     false
   );
+});
+
+test("the accepted residency requires Jamie's dated human welcome", () => {
+  const id = "research-inquiry.photography.196-first-pass-proposal";
+  const proposalSource = sourceFor(id).replace(
+    "> Your proposal is accepted. Welcome.",
+    "> Proposal accepted by an automated workflow."
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ proposal: proposalSource }),
+    sourceOverrides: { [id]: proposalSource }
+  });
+  assert.equal(evaluation.checks.human_host_acceptance_recorded, false);
 });

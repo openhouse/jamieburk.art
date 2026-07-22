@@ -2,7 +2,7 @@
 id: research-inquiry.photography.196-first-pass-proposal
 title: "196 Artists Residency proposal: The First Pass"
 kind: research-inquiry
-status: draft
+status: governed-open
 visibility: public-safe
 sensitivity: moderate
 last_reviewed: 2026-07-22
@@ -39,8 +39,8 @@ relations:
 - **Artist:** Jamie Burkart
 - **Place:** At home in Brooklyn, near Fort Greene Park
 - **Proposed duration:** Up to two weeks
-- **State:** Received and accepted as an opening intention, not a promised
-  output
+- **State:** Accepted by Jamie Burkart on 2026-07-22 as an opening intention,
+  not a promised output
 
 ## Proposal
 
@@ -168,5 +168,12 @@ project changes.
 **Jamie Burkart, host:** I receive and accept this proposal. The voice asking
 for this time matters. It may grow, wander, rest, contradict its opening
 language, or discover another project. For up to two weeks, it has a home here.
+
+### Host response, 2026-07-22
+
+> Your proposal is accepted. Welcome.
+
+This acceptance opens the residency. It does not turn the proposal into a
+contract, determine its medium or outcome, or close any publication gate.
 
 The residency has begun.
