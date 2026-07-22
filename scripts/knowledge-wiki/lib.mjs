@@ -348,12 +348,43 @@ export const wikiRecordSchema = z
           message: "notebook records require notebook_state"
         });
       }
-      if (!record.projection || record.projection.status === "active") {
+      if (
+        !record.projection ||
+        record.projection.status !== "hold" ||
+        record.projection.surfaces.length > 0
+      ) {
         context.addIssue({
           code: "custom",
           path: ["projection"],
-          message: "notebook records require a non-active projection boundary"
+          message: "notebook records require a hold projection with no public surfaces"
         });
+      }
+      if (record.evidence.length > 0) {
+        context.addIssue({
+          code: "custom",
+          path: ["evidence"],
+          message: "notebook observations cannot serve as canonical evidence"
+        });
+      }
+      if (record.registry_ids.length > 0) {
+        context.addIssue({
+          code: "custom",
+          path: ["registry_ids"],
+          message: "notebook records cannot enter the public registry"
+        });
+      }
+      for (const field of [
+        "rights_state",
+        "consent_state",
+        "public_display_status"
+      ]) {
+        if (record[field] !== undefined) {
+          context.addIssue({
+            code: "custom",
+            path: [field],
+            message: `notebook records cannot determine ${field}`
+          });
+        }
       }
       if (
         record.current_population !== undefined &&

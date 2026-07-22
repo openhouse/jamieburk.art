@@ -38,6 +38,47 @@ test("a notebook cannot activate itself on the portfolio", () => {
   assert.equal(wikiRecordSchema.safeParse(notebook).success, false);
 });
 
+test("a notebook cannot name a public projection surface", () => {
+  const notebook = cloneRecord("notebook.photography");
+  notebook.projection = { status: "hold", surfaces: ["/work"] };
+  assert.equal(wikiRecordSchema.safeParse(notebook).success, false);
+});
+
+test("a notebook observation cannot become canonical evidence", () => {
+  const notebook = cloneRecord("notebook.photography");
+  notebook.evidence = [
+    {
+      target: "source.jamie.writers-voice-synthesis.2026-07",
+      relationship: "context",
+      confidence: "limited",
+      supports: ["A provisional notebook observation."]
+    }
+  ];
+  assert.equal(wikiRecordSchema.safeParse(notebook).success, false);
+});
+
+test("a notebook cannot determine rights, consent, or public display", () => {
+  for (const [field, value] of [
+    ["rights_state", "cleared"],
+    ["consent_state", "cleared"],
+    ["public_display_status", "cleared"]
+  ]) {
+    const notebook = cloneRecord("notebook.photography");
+    notebook[field] = value;
+    assert.equal(
+      wikiRecordSchema.safeParse(notebook).success,
+      false,
+      `accepted notebook authority field: ${field}`
+    );
+  }
+});
+
+test("a notebook cannot declare public registry membership", () => {
+  const notebook = cloneRecord("notebook.photography");
+  notebook.registry_ids = ["public.claim.example"];
+  assert.equal(wikiRecordSchema.safeParse(notebook).success, false);
+});
+
 test("the field cannot claim a population beyond its target", () => {
   const field = cloneRecord("notebook.photography.field.v01");
   field.current_population = 1001;
