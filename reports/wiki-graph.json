@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T09:26:44-04:00",
-  "sourceCommit": "9816707beac6f683107e722db9315e6bd30c837d",
-  "sourceFingerprint": "e71c73b05e7eb164ed6710006dd80a96f00c18b2deb4075e00ccc700e1e428e0",
+  "generatedAt": "2026-07-22T10:34:25-04:00",
+  "sourceCommit": "20c284ae54feffa213864cae257898c8fb5003d1",
+  "sourceFingerprint": "c493f5d006b35a18605ff42d3a64e31e1792e28a44803746011fc322f0adb41c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -1118,6 +1118,21 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research.photography.proof-of-life.2026-07-22",
+      "path": "docs/knowledge-bank/photography/proof-of-life.md",
+      "title": "Proof of Life",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe record of the residency's first bounded Apple Photos encounter: one privately inspected photograph placed in one private working album, with publication held.\n",
+      "aliases": [
+        "Residency 001 first archive encounter"
+      ],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
+    },
+    {
       "id": "source.callnyc.source-repository",
       "path": "docs/knowledge-bank/sources/callnyc-source-repository.md",
       "title": "CallNYC public source repository",
@@ -1483,6 +1498,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.vault.apple-photos.metadata",
+      "path": "docs/knowledge-bank/sources/apple-photos-archive-metadata.md",
+      "title": "Apple Photos archive - public-safe metadata boundary",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only boundary for Jamie's private lifetime photo archive; no image, preview, filename, face manifest, identifier, location, receipt, or machine path is committed.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
     },
     {
       "id": "source.vault.communication-history.metadata",
@@ -2869,6 +2897,22 @@
     },
     {
       "from": "index.knowledge-wiki.photography-notebook",
+      "type": "related_to",
+      "to": "research.photography.proof-of-life.2026-07-22",
+      "source": "frontmatter",
+      "href": "proof-of-life.md",
+      "context": "First bounded archive encounter and one-image private working-album proof."
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
+      "type": "related_to",
+      "to": "source.vault.apple-photos.metadata",
+      "source": "frontmatter",
+      "href": "../sources/apple-photos-archive-metadata.md",
+      "context": "Metadata-only boundary for the private lifetime photo archive."
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
       "type": "uses_method",
       "to": "method.photography.invitation-container-emergence",
       "source": "frontmatter",
@@ -3242,6 +3286,14 @@
       "source": "frontmatter",
       "href": "../research-runs/foundational-source-return-2026-07-19.md",
       "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence",
+      "type": "related_to",
+      "to": "research.photography.proof-of-life.2026-07-22",
+      "source": "frontmatter",
+      "href": "../photography/proof-of-life.md",
+      "context": "First private working-album encounter, recorded without exposing or approving the photograph."
     },
     {
       "from": "method.collective-credit-protected-absence",
@@ -4641,6 +4693,14 @@
     },
     {
       "from": "research-inquiry.photography.field-set-001",
+      "type": "related_to",
+      "to": "research.photography.proof-of-life.2026-07-22",
+      "source": "frontmatter",
+      "href": "proof-of-life.md",
+      "context": "One-image systems proof completed before the proposed field is assembled."
+    },
+    {
+      "from": "research-inquiry.photography.field-set-001",
       "type": "uses_method",
       "to": "method.photography.invitation-container-emergence",
       "source": "frontmatter",
@@ -4960,6 +5020,62 @@
       "context": null
     },
     {
+      "from": "research.photography.proof-of-life.2026-07-22",
+      "type": "part_of",
+      "to": "project.photography.field-set-001-residency",
+      "source": "frontmatter",
+      "href": "field-set-001-residency-proposal.md",
+      "context": "Establishes contact with the archive inside the accepted residency."
+    },
+    {
+      "from": "research.photography.proof-of-life.2026-07-22",
+      "type": "related_to",
+      "to": "decision.photography.field-set-001-residency-acceptance",
+      "source": "frontmatter",
+      "href": "field-set-001-residency-acceptance.md",
+      "context": "Begins after Jamie's welcome and acceptance."
+    },
+    {
+      "from": "research.photography.proof-of-life.2026-07-22",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": "First situated entry in the photography working notebook."
+    },
+    {
+      "from": "research.photography.proof-of-life.2026-07-22",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "../indexes/visual-evidence.md",
+      "context": "Records a held private photograph without creating a public asset record."
+    },
+    {
+      "from": "research.photography.proof-of-life.2026-07-22",
+      "type": "related_to",
+      "to": "research-inquiry.photography.field-set-001",
+      "source": "frontmatter",
+      "href": "field-set-001.md",
+      "context": "A one-image systems proof, not the proposed thousand-image field."
+    },
+    {
+      "from": "research.photography.proof-of-life.2026-07-22",
+      "type": "uses_method",
+      "to": "method.photography.notebook-entry",
+      "source": "frontmatter",
+      "href": "notebook-entry-template.md",
+      "context": "Separates visible observation, interpretation, limits, and next action."
+    },
+    {
+      "from": "research.photography.proof-of-life.2026-07-22",
+      "type": "uses_source",
+      "to": "source.vault.apple-photos.metadata",
+      "source": "frontmatter",
+      "href": "../sources/apple-photos-archive-metadata.md",
+      "context": "Governed public-safe boundary for the private source archive."
+    },
+    {
       "from": "source.callnyc.source-repository",
       "type": "documents",
       "to": "project.callnyc",
@@ -5214,6 +5330,22 @@
       "source": "frontmatter",
       "href": "../photography/field-set-001-residency-proposal.md",
       "context": "Provides the source-honest precedent for allowing a residency's material to redirect its proposed form."
+    },
+    {
+      "from": "source.vault.apple-photos.metadata",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "../photography/README.md",
+      "context": "Private source boundary for the residency's public-safe working notes."
+    },
+    {
+      "from": "source.vault.apple-photos.metadata",
+      "type": "related_to",
+      "to": "research.photography.proof-of-life.2026-07-22",
+      "source": "frontmatter",
+      "href": "../photography/proof-of-life.md",
+      "context": "Source boundary used by the first one-image archive encounter."
     },
     {
       "from": "source.vault.communication-history.metadata",
@@ -6902,6 +7034,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/visual-evidence.md",
+      "from": "index.knowledge-wiki.visual-evidence",
+      "toPath": "docs/knowledge-bank/photography/proof-of-life.md",
+      "to": "research.photography.proof-of-life.2026-07-22",
+      "fragment": null,
+      "line": 60,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/what-the-work-was-up-against.md",
       "from": "index.knowledge-wiki.pressures",
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
@@ -7273,6 +7414,15 @@
     {
       "fromPath": "docs/knowledge-bank/photography/README.md",
       "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
+      "to": "method.photography.notebook-entry",
+      "fragment": null,
+      "line": 104,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
       "toPath": "docs/knowledge-bank/photography/field-set-001-residency-proposal.md",
       "to": "project.photography.field-set-001-residency",
       "fragment": null,
@@ -7291,10 +7441,28 @@
     {
       "fromPath": "docs/knowledge-bank/photography/README.md",
       "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/photography/proof-of-life.md",
+      "to": "research.photography.proof-of-life.2026-07-22",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/sources/apple-photos-archive-metadata.md",
+      "to": "source.vault.apple-photos.metadata",
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
       "toPath": "docs/knowledge-bank/photography/field-set-001.md",
       "to": "research-inquiry.photography.field-set-001",
       "fragment": null,
-      "line": 36,
+      "line": 41,
       "kind": "link"
     },
     {
@@ -7303,7 +7471,7 @@
       "toPath": "docs/knowledge-bank/photography/editorial-grammar.md",
       "to": "method.photography.invitation-container-emergence",
       "fragment": null,
-      "line": 38,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -7312,7 +7480,7 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 40,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -7321,7 +7489,7 @@
       "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "to": "index.knowledge-wiki.visual-evidence",
       "fragment": null,
-      "line": 42,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -7330,16 +7498,7 @@
       "toPath": "docs/knowledge-bank/sources/teju-cole-far-away-from-here-2015.md",
       "to": "source.teju-cole.far-away-from-here.2015",
       "fragment": null,
-      "line": 45,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/photography/README.md",
-      "from": "index.knowledge-wiki.photography-notebook",
-      "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
-      "to": "method.photography.notebook-entry",
-      "fragment": null,
-      "line": 99,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -7349,6 +7508,15 @@
       "to": "decision.photography.field-set-001-residency-acceptance",
       "fragment": null,
       "line": 120,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/field-set-001.md",
+      "from": "research-inquiry.photography.field-set-001",
+      "toPath": "docs/knowledge-bank/photography/proof-of-life.md",
+      "to": "research.photography.proof-of-life.2026-07-22",
+      "fragment": null,
+      "line": 23,
       "kind": "link"
     },
     {

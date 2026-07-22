@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Participatory public systems
 
-**Source commit:** `9816707beac6f683107e722db9315e6bd30c837d`
-**Generation time:** 2026-07-22T09:26:44-04:00
-**Source fingerprint:** `e71c73b05e7eb164ed6710006dd80a96f00c18b2deb4075e00ccc700e1e428e0`
+**Source commit:** `20c284ae54feffa213864cae257898c8fb5003d1`
+**Generation time:** 2026-07-22T10:34:25-04:00
+**Source fingerprint:** `c493f5d006b35a18605ff42d3a64e31e1792e28a44803746011fc322f0adb41c`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
