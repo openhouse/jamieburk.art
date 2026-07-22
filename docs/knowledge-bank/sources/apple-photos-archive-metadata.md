@@ -12,7 +12,7 @@ summary: Metadata-only boundary for Jamie's private lifetime photo archive; no i
 source_kind: protected-photo-archive
 opaque_locator: vault.source.apple-photos
 coverage_date: 2026-07-22
-access_state: partial
+access_state: reachable
 normalization_state: partial
 identity_resolution_state: human-review-required
 public_use_status: summary-only
@@ -23,7 +23,8 @@ known_gaps:
   - The 600,000-plus scale is Jamie's approximate description, not a frozen census.
   - Dates, locations, album names, formats, and embedded metadata vary across decades and source media.
   - Existing People associations are substantial private retrieval labor, not a complete or public identity graph.
-  - The documented AppleScript interface is available; the current PhotoKit helper remains permission-blocked.
+  - PhotoKit, AppleScript, private inventory, osxphotos, and ExifTool access passed bounded July 22 canaries; access remains environment- and authorization-dependent.
+  - The preferred read-only SQLite commit verifier remains blocked by macOS privacy for the available Python process identities.
 relations:
   - type: related_to
     target: index.knowledge-wiki.photography-notebook
@@ -32,7 +33,7 @@ relations:
   - type: related_to
     target: research.photography.proof-of-life.2026-07-22
     href: ../photography/proof-of-life.md
-    context: Source boundary used by the first one-image archive encounter.
+    context: Source boundary used by the first two bounded archive encounters.
 ---
 
 # Apple Photos archive - public-safe metadata boundary
@@ -56,7 +57,14 @@ permission. Exact filenames, source identifiers, locations, previews, contact
 sheets, receipts, face associations, and machine configuration remain private.
 
 For the July 22, 2026 first encounter, the archive was reached through Apple
-Photos' documented scripting interface. The installed skill source was current,
-but its version-2 PhotoKit helper remained permission-blocked. That partial
-tool state must be repaired and reverified before the helper is described as
-operational.
+Photos' documented scripting interface while the then-current version-2
+PhotoKit helper remained permission-blocked. After the helper integration was
+repaired, version 2.5 passed a zero-image live authorization and frozen-source
+canary. A one-record osxphotos read probe and the private fourteen-family
+capability report also passed. The helper then inspected one exact image and
+completed an exact two-member private album plan twice with stable results.
+
+This later success does not erase the earlier failure or make access permanent.
+The preferred WAL-aware read-only SQLite verifier remained blocked by macOS
+privacy. Tool receipts establish specific operations; they do not establish
+publication permission, universal future readiness, or the meaning of an image.

@@ -75,10 +75,13 @@ excluded from the master, 601 master images carry an existing People
 association, and 56 remain context-uncertain. Those overlays are research aids,
 not identity, consent, authorship, or publication decisions.
 
-The [Proof of Life encounter](proof-of-life.md) remains the earlier one-image
-systems proof. The [completion record](field-set-001-completion.md) documents
-the full field at a public-safe aggregate level. No membership list, source
-locator, preview, contact sheet, or photograph is committed here.
+The [Proof of Life encounter](proof-of-life.md) established that two exact
+private images can be found, looked at, and held together inside the authorized
+residency workspace without becoming public assets. The first image entered
+through a documented scripting path; the second followed a repaired-helper
+return. The [completion record](field-set-001-completion.md) documents the full
+field at a public-safe aggregate level. No membership list, source locator,
+preview, contact sheet, or photograph is committed here.
 
 ## What may belong in the field
 

@@ -33,7 +33,7 @@ relations:
   - type: related_to
     target: research.photography.proof-of-life.2026-07-22
     href: proof-of-life.md
-    context: First bounded archive encounter and one-image private working-album proof.
+    context: First two bounded archive encounters and exact two-image private working-album proof.
   - type: related_to
     target: research.photography.field-set-001-completion.2026-07-22
     href: field-set-001-completion.md
@@ -103,8 +103,9 @@ archive sample, rights-cleared set, final edit, or promise of publication.
   decision that begins the residency without converting it into a deliverables
   contract or publication approval.
 - [Proof of Life](proof-of-life.md) records the first private archive encounter:
-  one locally inspected photograph, one exact working-album membership, and no
-  public asset or publication decision.
+  an initial one-image threshold followed by a repaired-helper return, two
+  locally inspected photographs held in one exact working album, and no public
+  asset or publication decision.
 - [Field Set 001 completion](field-set-001-completion.md) records the exact
   private 1,000-photo rough field, its recursive visual review, and verified
   non-destructive album commit without exposing its membership or pixels.
