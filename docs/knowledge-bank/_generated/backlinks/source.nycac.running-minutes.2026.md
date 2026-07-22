@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Commercial Rent Stabilization collaboration running minutes, 2026
 
-**Source commit:** `e8836ff7874048c03ea31af56829cfd9f0305785`
-**Generation time:** 2026-07-22T09:21:29-04:00
-**Source fingerprint:** `2c8e7a0e46ac9e61c38b8a78de81cc03e282de75113b7ed6c23faed694390c64`
+**Source commit:** `0b88bf9fac3552f00e0d3d38fb0e41d8f14a9cff`
+**Generation time:** 2026-07-22T09:34:20-04:00
+**Source fingerprint:** `a31eb5705d611b1b15981a96e2c07230634f2728dd7d129df74ac62b76379455`
 
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `uses_source` (frontmatter)
 - [Fair Rent NYC](../../projects/fair-rent-nyc.md) - `uses_source` (frontmatter)
