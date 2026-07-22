@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Wanted pages
 
-**Source commit:** `b2e0df26dace00a298b011c28defcd20e584a016`
-**Generation time:** 2026-07-22T09:49:12-04:00
-**Source fingerprint:** `5ab71aefbd6c5e023602e2060a8d5dc90344e76615c2688efca043515de6be4a`
+**Source commit:** `819add3ec5ad5f1103193042a44e3952320719d9`
+**Generation time:** 2026-07-22T09:54:54-04:00
+**Source fingerprint:** `34fbee9b1d952bf0ea9c1c5acdf15ae09b942baca7a074dc993c29700f4eeb85`
 
 - `source.nycac.founding-and-handoff.2016-2018` - NYC Artist Coalition founding and handoff source set; requested by `index.knowledge-wiki.living-archive`: Needed to deepen formation chronology and collaborator-specific credit with public-safe originals.
 - `source.wowlist.product-decision-history` - WOWList product decision history; requested by `index.knowledge-wiki.living-archive`: Needed to connect database and code evidence with collaborator-reviewed product reasoning and adoption chronology.
