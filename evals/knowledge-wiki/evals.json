@@ -197,6 +197,7 @@
         "photo_source_and_prior_structure_unchanged",
         "one_image_not_archive_scale_evidence",
         "studio_connection_public_boundary_clean",
+        "studio_connection_branch_history_boundary_clean",
         "studio_connection_selection_not_publication",
         "studio_connection_projection_held",
         "studio_connection_eval_non_authoritative",
