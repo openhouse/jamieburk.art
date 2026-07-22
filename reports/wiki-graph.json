@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T09:54:54-04:00",
-  "sourceCommit": "819add3ec5ad5f1103193042a44e3952320719d9",
-  "sourceFingerprint": "34fbee9b1d952bf0ea9c1c5acdf15ae09b942baca7a074dc993c29700f4eeb85",
+  "generatedAt": "2026-07-22T15:03:16-04:00",
+  "sourceCommit": "e776f86233d6bb707ea749903a310a6d5bcd897d",
+  "sourceFingerprint": "bf6cd65be54688e48845c4894a501e95ab810b2c04bf4f72a791cd92745bca61",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
