@@ -30,6 +30,14 @@ relations:
     target: decision.photography.field-set-001-residency-acceptance
     href: field-set-001-residency-acceptance.md
     context: Jamie's dated acceptance and welcome, with asset and authorship boundaries preserved.
+  - type: related_to
+    target: research.photography.proof-of-life.2026-07-22
+    href: proof-of-life.md
+    context: First bounded archive encounter and one-image private working-album proof.
+  - type: related_to
+    target: source.vault.apple-photos.metadata
+    href: ../sources/apple-photos-archive-metadata.md
+    context: Metadata-only boundary for the private lifetime photo archive.
   - type: informed_by
     target: source.teju-cole.far-away-from-here.2015
     href: ../sources/teju-cole-far-away-from-here-2015.md
@@ -90,6 +98,11 @@ count, completed intake, rights-cleared set, or promise of publication.
 - [Acceptance and welcome](field-set-001-residency-acceptance.md) records the
   decision that begins the residency without converting it into a deliverables
   contract or publication approval.
+- [Proof of Life](proof-of-life.md) records the first private archive encounter:
+  one locally inspected photograph, one exact working-album membership, and no
+  public asset or publication decision.
+- [Apple Photos archive boundary](../sources/apple-photos-archive-metadata.md)
+  records what the private source can support and what must remain outside Git.
 - [Field Set 001](field-set-001.md) records the purpose, current state, and
   proposed close-reading passes for the first private working field.
 - [Invitation, container, emergence](editorial-grammar.md) develops a

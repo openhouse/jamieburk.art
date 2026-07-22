@@ -23,6 +23,10 @@ relations:
     target: index.knowledge-wiki.photography-notebook
     href: ../photography/README.md
     context: Working room for provisional visual questions, sequences, and public-safe observations.
+  - type: related_to
+    target: research.photography.proof-of-life.2026-07-22
+    href: ../photography/proof-of-life.md
+    context: First private working-album encounter, recorded without exposing or approving the photograph.
 wanted:
   - id: index.visual-rights-and-consent-register
     proposed_title: Private visual rights and consent register
@@ -86,3 +90,8 @@ finished artifact or relax any visual safety and publication gate.
 The notebook is intentionally more permissive about uncertainty and experiment
 than an asset record. It is not more permissive about privacy, source identity,
 rights, consent, attribution, factual scope, or publication authority.
+
+[Proof of Life](../photography/proof-of-life.md) is the notebook's first
+situated archive encounter. Its exact private membership was created and read
+back inside the residency workspace, while the photograph, identifiers,
+receipts, rights state, and publication decision remain held outside public Git.

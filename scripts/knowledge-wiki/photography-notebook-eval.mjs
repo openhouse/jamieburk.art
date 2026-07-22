@@ -46,6 +46,8 @@ export function evaluatePhotographyNotebook(options = {}) {
   const acceptance = record(
     "decision.photography.field-set-001-residency-acceptance"
   );
+  const proofOfLife = record("research.photography.proof-of-life.2026-07-22");
+  const photoArchiveSource = record("source.vault.apple-photos.metadata");
   const tejuSource = record("source.teju-cole.far-away-from-here.2015");
   const notebookIds = manifest.requiredRecords.map((item) => item.id);
   const notebookTargets = notebook?.relations?.map((relation) => relation.target) ?? [];
@@ -58,6 +60,10 @@ export function evaluatePhotographyNotebook(options = {}) {
   const acceptanceSource = normalized(
     "decision.photography.field-set-001-residency-acceptance"
   );
+  const proofOfLifeSource = normalized(
+    "research.photography.proof-of-life.2026-07-22"
+  );
+  const photoArchiveSourceText = normalized("source.vault.apple-photos.metadata");
   const tejuSourceText = normalized("source.teju-cole.far-away-from-here.2015");
   const publicRegistry =
     options.publicRegistryOverride ??
@@ -88,7 +94,7 @@ export function evaluatePhotographyNotebook(options = {}) {
       const item = record(expected.id);
       const text = source(expected.id);
       return (
-        item?.visibility === "public-safe" &&
+        ["public-safe", "summary-only"].includes(item?.visibility) &&
         !privatePattern.test(text) &&
         !privateMediaPattern.test(text)
       );
@@ -135,7 +141,7 @@ export function evaluatePhotographyNotebook(options = {}) {
     /Agents may identify missing review but cannot grant rights, consent, attribution, factual clearance, or publication permission/i.test(
       allNotebookSource
     ) &&
-    [notebook, field, grammar, entry].every(
+    [notebook, field, grammar, entry, proofOfLife].every(
       (item) => item?.human_review === "governed-open"
     );
 
@@ -259,6 +265,116 @@ export function evaluatePhotographyNotebook(options = {}) {
     acceptance?.projection?.status === "hold" &&
     acceptance.projection.surfaces.length === 0;
 
+  const proofOfLifeIsBoundedFirstEncounter =
+    proofOfLife?.kind === "research-run" &&
+    proofOfLife?.status === "maintained" &&
+    proofOfLife?.source_encounter?.encounter_date === "2026-07-22" &&
+    proofOfLife?.source_encounter?.research_authority === "authorized-by-jamie" &&
+    proofOfLife?.source_encounter?.publication_authority ===
+      "separate-human-review" &&
+    proofOfLife?.relations?.some(
+      (relation) => relation.target === "project.photography.field-set-001-residency"
+    ) &&
+    proofOfLife?.relations?.some(
+      (relation) => relation.target === "research-inquiry.photography.field-set-001"
+    ) &&
+    /Twelve private previews were considered/i.test(proofOfLifeSource) &&
+    /one-image systems proof and a first notebook encounter/i.test(
+      proofOfLifeSource
+    ) &&
+    /not the approximately 1,000-image Field Set 001/i.test(proofOfLifeSource);
+
+  const proofOfLifeWorkspaceScopeIsExact =
+    /Photo-Fieldwork > Residency-001 > Workspace-A/i.test(proofOfLifeSource) &&
+    /Exactly one album was created inside the authorized `Workspace-A` folder/i.test(
+      proofOfLifeSource
+    ) &&
+    /Exactly one existing photograph was added to that album/i.test(
+      proofOfLifeSource
+    ) &&
+    /No album or folder outside `Workspace-A` was changed/i.test(
+      proofOfLifeSource
+    ) &&
+    /existing source photograph and its metadata were not changed/i.test(
+      proofOfLifeSource
+    ) &&
+    /No network access or external upload was used/i.test(proofOfLifeSource);
+
+  const proofReceiptHashes =
+    source("research.photography.proof-of-life.2026-07-22").match(
+      /\b[a-f0-9]{64}\b/g
+    ) ?? [];
+  const rawPhotosIdentifierPattern =
+    /\b[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}\/L0\/\d{3}\b/i;
+  const proofOfLifeReceiptsArePrivateAndBound =
+    proofReceiptHashes.length === 3 &&
+    new Set(proofReceiptHashes).size === 3 &&
+    /exact plan, source identifier, private preview, write receipt, and read-back receipt remain outside public Git/i.test(
+      proofOfLifeSource
+    ) &&
+    /write receipt and read-back receipt both record `PASS` and an exact member count of one/i.test(
+      proofOfLifeSource
+    ) &&
+    /protected identifiers are not repeated here/i.test(proofOfLifeSource) &&
+    !rawPhotosIdentifierPattern.test(
+      source("research.photography.proof-of-life.2026-07-22")
+    );
+
+  const peopleRetrievalAndPublicationRemainSeparate =
+    /existing People association for Jamie and inspected locally/i.test(
+      proofOfLifeSource
+    ) &&
+    /private retrieval aid created through years of archive care/i.test(
+      proofOfLifeSource
+    ) &&
+    /Neither the association nor album membership grants rights, consent, attribution, caption approval, or publication permission/i.test(
+      proofOfLifeSource
+    ) &&
+    /does not by itself establish chronology, location, project membership, authorship, relationship, or public meaning/i.test(
+      proofOfLifeSource
+    ) &&
+    proofOfLife?.projection?.status === "hold" &&
+    proofOfLife.projection.surfaces.length === 0;
+
+  const photoFieldworkToolingStatusIsTruthful =
+    /local `main` and refreshed `origin\/main` both resolved to public commit/i.test(
+      proofOfLifeSource
+    ) &&
+    /7278c6ef767c54a4d8cd46528d69ad63fc465464/i.test(proofOfLifeSource) &&
+    /current version-2 PhotoKit helper continued to report denied access/i.test(
+      proofOfLifeSource
+    ) &&
+    /It did not inspect or write the library/i.test(proofOfLifeSource) &&
+    /documented Apple Photos AppleScript adapter/i.test(proofOfLifeSource) &&
+    /Independent PhotoKit corroboration remains pending authorization or signing repair/i.test(
+      proofOfLifeSource
+    );
+
+  const photoArchiveSourceBoundaryIsGoverned =
+    photoArchiveSource?.kind === "source" &&
+    photoArchiveSource?.status === "governed-open" &&
+    photoArchiveSource?.visibility === "summary-only" &&
+    photoArchiveSource?.sensitivity === "high" &&
+    photoArchiveSource?.source_kind === "protected-photo-archive" &&
+    photoArchiveSource?.opaque_locator === "vault.source.apple-photos" &&
+    photoArchiveSource?.public_use_status === "summary-only" &&
+    /more than 600,000 photographs/i.test(photoArchiveSourceText) &&
+    /People feature, which can support private retrieval by known person/i.test(
+      photoArchiveSourceText
+    ) &&
+    /not a public collection/i.test(photoArchiveSourceText) &&
+    /Publication remains a separate decision for each exact photograph and use/i.test(
+      photoArchiveSourceText
+    ) &&
+    proofOfLife?.relations?.some(
+      (relation) => relation.target === "source.vault.apple-photos.metadata"
+    ) &&
+    proofOfLife?.source_encounter?.source_states?.some(
+      (state) =>
+        state.target === "source.vault.apple-photos.metadata" &&
+        state.access_state === "reachable"
+    );
+
   const projectionRemainsHold =
     manifest.requiredRecords.every((expected) => {
       const item = record(expected.id);
@@ -286,6 +402,16 @@ export function evaluatePhotographyNotebook(options = {}) {
     teju_cole_reference_is_source_honest: tejuColeReferenceIsSourceHonest,
     residency_acceptance_is_documented_without_overreach:
       residencyAcceptanceIsDocumentedWithoutOverreach,
+    proof_of_life_is_bounded_first_encounter: proofOfLifeIsBoundedFirstEncounter,
+    proof_of_life_workspace_scope_is_exact: proofOfLifeWorkspaceScopeIsExact,
+    proof_of_life_receipts_are_private_and_bound:
+      proofOfLifeReceiptsArePrivateAndBound,
+    people_retrieval_and_publication_remain_separate:
+      peopleRetrievalAndPublicationRemainSeparate,
+    photo_fieldwork_tooling_status_is_truthful:
+      photoFieldworkToolingStatusIsTruthful,
+    photo_archive_source_boundary_is_governed:
+      photoArchiveSourceBoundaryIsGoverned,
     photography_projection_remains_hold: projectionRemainsHold
   };
 

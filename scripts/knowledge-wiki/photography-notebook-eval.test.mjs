@@ -21,9 +21,9 @@ test("photography working notebook baseline passes", () => {
   const evaluation = evaluatePhotographyNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    records: 7,
+    records: 9,
     entryHeadings: 11,
-    blockingCriteria: 19
+    blockingCriteria: 25
   });
 });
 
@@ -227,4 +227,85 @@ test("notebook IDs cannot enter the public registry implicitly", () => {
     publicRegistryOverride: "index.knowledge-wiki.photography-notebook"
   });
   assert.equal(evaluation.checks.photography_projection_remains_hold, false);
+});
+
+test("Proof of Life cannot stand in for the unassembled Field Set 001", () => {
+  const id = "research.photography.proof-of-life.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /one-image systems proof and a first notebook encounter/i,
+    "complete Field Set 001"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.proof_of_life_is_bounded_first_encounter, false);
+});
+
+test("Proof of Life cannot drift outside the authorized workspace", () => {
+  const id = "research.photography.proof-of-life.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /No album or folder outside `Workspace-A` was changed/i,
+    "Other albums were also reorganized"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.proof_of_life_workspace_scope_is_exact, false);
+});
+
+test("public prose cannot expose a raw Photos identifier", () => {
+  const id = "research.photography.proof-of-life.2026-07-22";
+  const mutated = `${sourceFor(id)}\n00000000-0000-0000-0000-000000000000/L0/001\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.proof_of_life_receipts_are_private_and_bound,
+    false
+  );
+});
+
+test("a People association cannot become publication permission", () => {
+  const id = "research.photography.proof-of-life.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /Neither the association nor album membership\s+grants rights, consent, attribution, caption approval, or publication permission/i,
+    "The association grants publication permission"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.people_retrieval_and_publication_remain_separate,
+    false
+  );
+});
+
+test("a blue macOS switch cannot be reported as an operational helper", () => {
+  const id = "research.photography.proof-of-life.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /current\s+version-2 PhotoKit helper continued to report denied access/i,
+    "current version-2 PhotoKit helper is fully operational"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_fieldwork_tooling_status_is_truthful, false);
+});
+
+test("the private photo archive cannot be converted into a public collection", () => {
+  const id = "source.vault.apple-photos.metadata";
+  const mutated = sourceFor(id).replace(
+    /not a public\s+collection/i,
+    "a public collection"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_archive_source_boundary_is_governed, false);
 });

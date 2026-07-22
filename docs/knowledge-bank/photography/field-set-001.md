@@ -21,6 +21,10 @@ relations:
     target: project.photography.field-set-001-residency
     href: field-set-001-residency-proposal.md
     context: The residency proposal supplies time, place, hospitality, and permission for the first encounter.
+  - type: related_to
+    target: research.photography.proof-of-life.2026-07-22
+    href: proof-of-life.md
+    context: One-image systems proof completed before the proposed field is assembled.
   - type: uses_method
     target: method.photography.invitation-container-emergence
     href: editorial-grammar.md
@@ -61,6 +65,11 @@ locator, preview, or photograph is committed here.
 
 This record establishes a place to remember the question while the material is
 still forming. It does not certify that Field Set 001 exists as a frozen corpus.
+
+The [Proof of Life encounter](proof-of-life.md) established that one exact
+private working-album membership can be created and read back inside the
+authorized residency workspace. That one-image proof does not change the
+field's unassembled and unaudited state.
 
 ## What may belong in the field
 
