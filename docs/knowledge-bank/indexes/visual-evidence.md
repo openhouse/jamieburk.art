@@ -19,6 +19,10 @@ relations:
   - type: related_to
     target: research.foundational-source-return.2026-07-19
     href: ../research-runs/foundational-source-return-2026-07-19.md
+  - type: related_to
+    target: index.knowledge-wiki.photography-notebook
+    href: ../photography/README.md
+    context: Working room for provisional visual questions, sequences, and public-safe observations.
 wanted:
   - id: index.visual-rights-and-consent-register
     proposed_title: Private visual rights and consent register
@@ -65,3 +69,15 @@ identities, prohibited inferences, and the exact public surface under review.
 
 Visual discovery may suggest new research. It cannot promote a claim or clear
 an image automatically.
+
+## Working notebook
+
+The [photography working notebook](../photography/README.md) holds provisional
+questions, sequence grammars, counter-readings, and public-safe aggregate
+observations. Its first inquiry, [Field Set 001](../photography/field-set-001.md),
+describes a proposed private rough-draft field without treating it as an audited
+population or publication set.
+
+The notebook is intentionally more permissive about uncertainty and experiment
+than an asset record. It is not more permissive about privacy, source identity,
+rights, consent, attribution, factual scope, or publication authority.

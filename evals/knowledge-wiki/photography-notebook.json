@@ -1,0 +1,56 @@
+{
+  "suite": "knowledge-wiki-photography-working-notebook",
+  "version": 1,
+  "notebookId": "index.knowledge-wiki.photography-notebook",
+  "visualEvidenceId": "index.knowledge-wiki.visual-evidence",
+  "publicRegistryPath": "apps/www/src/data/knowledge-bank/public-registry.json",
+  "requiredRecords": [
+    {
+      "id": "index.knowledge-wiki.photography-notebook",
+      "path": "docs/knowledge-bank/photography/README.md",
+      "kind": "index"
+    },
+    {
+      "id": "research-inquiry.photography.field-set-001",
+      "path": "docs/knowledge-bank/photography/field-set-001.md",
+      "kind": "research-inquiry"
+    },
+    {
+      "id": "method.photography.invitation-container-emergence",
+      "path": "docs/knowledge-bank/photography/editorial-grammar.md",
+      "kind": "method"
+    },
+    {
+      "id": "method.photography.notebook-entry",
+      "path": "docs/knowledge-bank/photography/notebook-entry-template.md",
+      "kind": "method"
+    }
+  ],
+  "requiredEntryHeadings": [
+    "Entry status",
+    "Prompt or question",
+    "Material reviewed",
+    "What is visible",
+    "Interpretations and hypotheses",
+    "What this does not establish",
+    "Relationships and collective credit",
+    "Safety, rights, and consent",
+    "Editorial function",
+    "Open questions",
+    "Decision and next action"
+  ],
+  "criteria": [
+    "photography_notebook_records_materialized",
+    "photography_notebook_reachable",
+    "photography_notebook_public_private_boundary",
+    "field_set_provisional_not_population_claim",
+    "field_set_exact_identity_and_nonmutation",
+    "observation_interpretation_claim_separated",
+    "selection_rights_consent_publication_separated",
+    "human_holds_cannot_be_agent_cleared",
+    "creative_sequence_grammar_preserved",
+    "play_counterreading_and_empty_outcome_allowed",
+    "notebook_entry_contract_complete",
+    "photography_projection_remains_hold"
+  ]
+}

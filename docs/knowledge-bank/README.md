@@ -27,6 +27,10 @@ relations:
     href: indexes/living-archive.md
     context: Orientation, missing-page, project, and situated source-return map.
   - type: related_to
+    target: index.knowledge-wiki.photography-notebook
+    href: photography/README.md
+    context: Public-safe sketchpad for provisional photographic questions and editorial experiments.
+  - type: related_to
     target: index.knowledge-wiki.project-lineages
     href: indexes/project-lineages.md
     context: Bounded inheritance, adaptation, and divergence across projects.
@@ -84,6 +88,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Living archive](indexes/living-archive.md): Jamie, the practice throughline,
   the priority project and campaign cohort, ethical methods, visual evidence,
   and a dated return to original source material.
+- [Photography working notebook](photography/README.md): a public-safe sketchpad
+  for Field Set 001, close-reading notes, sequence experiments, and visual
+  questions that have not become claims or publication candidates.
 - [Project lineages](indexes/project-lineages.md): inheritance, adaptation, and
   divergence without retrospective inevitability.
 - [Decision records](indexes/decision-records.md): bounded reconstructions that

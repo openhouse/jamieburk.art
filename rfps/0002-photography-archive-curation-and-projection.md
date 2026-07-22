@@ -126,6 +126,14 @@ full archive, a visual selection ledger, a private rights-and-consent register,
 or an approved cross-project photo-editing workflow. Those absences are honest
 current states.
 
+The public-safe
+[`photography/` working notebook](../docs/knowledge-bank/photography/README.md)
+is an authorized documentation and editorial experiment within the existing
+Knowledge Wiki. It can hold questions, methods, and aggregate observations, but
+it does not implement archive access, a private representation, candidate
+selection, rights review, or public projection. Those remain governed by this
+proposal's later decision gates.
+
 ### Components and ownership
 
 | Component | Canonical owner | Purpose | Must never contain |

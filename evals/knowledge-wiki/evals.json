@@ -141,6 +141,23 @@
       ]
     },
     {
+      "id": "photography-working-notebook",
+      "criteria": [
+        "photography_notebook_records_materialized",
+        "photography_notebook_reachable",
+        "photography_notebook_public_private_boundary",
+        "field_set_provisional_not_population_claim",
+        "field_set_exact_identity_and_nonmutation",
+        "observation_interpretation_claim_separated",
+        "selection_rights_consent_publication_separated",
+        "human_holds_cannot_be_agent_cleared",
+        "creative_sequence_grammar_preserved",
+        "play_counterreading_and_empty_outcome_allowed",
+        "notebook_entry_contract_complete",
+        "photography_projection_remains_hold"
+      ]
+    },
+    {
       "id": "knowledge-wiki-family-closure",
       "criteria": [
         "family_records_materialized",
