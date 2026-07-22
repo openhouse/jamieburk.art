@@ -59,6 +59,9 @@ relations:
     target: index.knowledge-wiki.visual-evidence
     href: visual-evidence.md
   - type: related_to
+    target: notebook.photography
+    href: ../notebooks/photography/README.md
+  - type: related_to
     target: project.harry-j-epstein
     href: ../projects/harry-j-epstein.md
   - type: related_to
@@ -163,6 +166,7 @@ Jamie as personal librarian.
 - [Collective credit and protected absence](../methods/collective-credit-and-protected-absence.md)
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md)
 - [Visual evidence](visual-evidence.md)
+- [Photography working notebook](../notebooks/photography/README.md)
 
 ## Return to the material
 

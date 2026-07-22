@@ -100,6 +100,31 @@ Authorization to inspect a source never grants permission to quote, reproduce,
 attribute, or publish it. Contradictions remain explicit until a stronger
 source or authorized human review resolves them.
 
+## Working notebooks
+
+A `notebook` is a public-safe editorial workspace for provisional observations,
+questions, vocabulary, and experiments. It is not a source, claim, asset-rights
+record, or public projection. Notebook records require a `notebook_state` and a
+non-active projection boundary:
+
+```yaml
+kind: notebook
+notebook_state: assembling
+field_version: v01
+target_population: 1000
+current_population: 0
+projection:
+  status: hold
+  surfaces: []
+```
+
+Population fields describe the governed working field, not a claim that an
+archive search is complete. A notebook may link to source, asset, project, and
+claim records, but its observations do not become evidence merely because they
+were written down. Raw photographs, private source coordinates, people-tag
+exports, face embeddings, and unreviewed identifying metadata remain outside
+the public repository.
+
 ## Decision records
 
 A `decision` is a bounded reconstruction of a consequential choice, not a

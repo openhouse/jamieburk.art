@@ -106,6 +106,24 @@ Run its deterministic checks before promoting a claim or source into a public
 page. The bank should become deeper with each pass while the public site remains
 selective.
 
+## Photography Notebook
+
+- Use `docs/knowledge-bank/notebooks/photography/` for public-safe field notes,
+  provisional visual readings, sequence sketches, and version reviews.
+- A notebook is not a source, claim, rights record, consent record, or public
+  projection. Keep notebook projection status on hold.
+- Keep original images, previews, library paths, people tags, face embeddings,
+  reconnecting identifiers, and private rights or consent details outside the
+  public repository.
+- Separate visible observation, reviewed metadata, attributed memory,
+  interpretation, research leads, and supported claims.
+- Selection is not publication. Evidence value, rights, consent, safety,
+  editorial selection, and surface approval remain independent decisions.
+- Preserve outliers, contradiction, competing sequences, and protected absence.
+  Do not turn the first photo field into a deterministic aesthetic ranking.
+- Run `npm run wiki:test` and `npm run wiki:eval` after changing the notebook or
+  its governing schema.
+
 ## Repository Feature Proposals
 
 Use `rfps/` for substantial architecture, governance, privacy-boundary, data

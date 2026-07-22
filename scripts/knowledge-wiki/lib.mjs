@@ -46,6 +46,7 @@ export const recordKinds = [
   "timeline",
   "application",
   "evaluation",
+  "notebook",
   "index",
   "glossary",
   "anti-claim",
@@ -265,6 +266,12 @@ export const wikiRecordSchema = z
     projection_status: z
       .enum(["active", "hold", "pending", "deprecated", "disallowed"])
       .optional(),
+    notebook_state: z
+      .enum(["exploratory", "assembling", "reading", "sequencing", "paused", "superseded"])
+      .optional(),
+    field_version: z.string().regex(/^v\d{2}(?:-[A-Z])?$/).optional(),
+    target_population: z.number().int().positive().optional(),
+    current_population: z.number().int().nonnegative().optional(),
     registry_ids: z.array(z.string().min(1)).default([]),
     anti_claims: z.array(z.string().min(1)).default([]),
     human_review: z
@@ -332,6 +339,33 @@ export const wikiRecordSchema = z
     }
     if (record.kind === "projection" && !record.projection_status) {
       context.addIssue({ code: "custom", path: ["projection_status"], message: "projection records require projection_status" });
+    }
+    if (record.kind === "notebook") {
+      if (!record.notebook_state) {
+        context.addIssue({
+          code: "custom",
+          path: ["notebook_state"],
+          message: "notebook records require notebook_state"
+        });
+      }
+      if (!record.projection || record.projection.status === "active") {
+        context.addIssue({
+          code: "custom",
+          path: ["projection"],
+          message: "notebook records require a non-active projection boundary"
+        });
+      }
+      if (
+        record.current_population !== undefined &&
+        record.target_population !== undefined &&
+        record.current_population > record.target_population
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["current_population"],
+          message: "notebook current_population cannot exceed target_population"
+        });
+      }
     }
     if (record.kind === "source" && !record.source_kind) {
       context.addIssue({ code: "custom", path: ["source_kind"], message: "source records require source_kind" });
@@ -607,7 +641,7 @@ function isExternalLink(url) {
 function relationShapeAllowed(fromKind, type, toKind) {
   if (["related_to", "mentions", "contradicts", "collaborated_with"].includes(type)) return true;
   const shapes = {
-    part_of: ["project", "event", "organization", "timeline", "application"],
+    part_of: ["project", "event", "organization", "timeline", "application", "notebook"],
     informed_by: ["event", "source", "method", "research-run", "research-inquiry"],
     resulted_in: ["project", "event", "decision", "correction"],
     supports: ["claim", "capability", "opportunity"],

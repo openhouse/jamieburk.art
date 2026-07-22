@@ -19,6 +19,9 @@ relations:
   - type: related_to
     target: research.foundational-source-return.2026-07-19
     href: ../research-runs/foundational-source-return-2026-07-19.md
+  - type: related_to
+    target: notebook.photography
+    href: ../notebooks/photography/README.md
 wanted:
   - id: index.visual-rights-and-consent-register
     proposed_title: Private visual rights and consent register
@@ -65,3 +68,7 @@ identities, prohibited inferences, and the exact public surface under review.
 
 Visual discovery may suggest new research. It cannot promote a claim or clear
 an image automatically.
+
+The [photography working notebook](../notebooks/photography/README.md) is where
+provisional visual readings, field versions, and sequence experiments can
+develop. It remains separate from this governed evidence and rights index.

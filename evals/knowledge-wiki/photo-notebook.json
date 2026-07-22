@@ -1,0 +1,25 @@
+{
+  "suite": "knowledge-wiki-photography-working-notebook",
+  "version": 1,
+  "principle": "The notebook protects experimental visual reading while keeping observation, memory, interpretation, evidence, rights, consent, and publication distinct.",
+  "notebookRootId": "notebook.photography",
+  "fieldId": "notebook.photography.field.v01",
+  "vocabularyId": "notebook.photography.vocabulary",
+  "sequenceId": "notebook.photography.sequence-sketches",
+  "templatesId": "notebook.photography.templates",
+  "fieldVersion": "v01",
+  "targetPopulation": 1000,
+  "requiredRecords": [
+    ["notebook.photography", "docs/knowledge-bank/notebooks/photography/README.md"],
+    ["notebook.photography.field.v01", "docs/knowledge-bank/notebooks/photography/field-v01.md"],
+    ["notebook.photography.vocabulary", "docs/knowledge-bank/notebooks/photography/editorial-vocabulary.md"],
+    ["notebook.photography.sequence-sketches", "docs/knowledge-bank/notebooks/photography/sequence-sketches.md"],
+    ["notebook.photography.templates", "docs/knowledge-bank/notebooks/photography/templates.md"]
+  ],
+  "navigationParents": [
+    "index.knowledge-wiki",
+    "index.knowledge-wiki.living-archive",
+    "index.knowledge-wiki.visual-evidence"
+  ],
+  "publicRegistryPath": "apps/www/src/data/knowledge-bank/public-registry.json"
+}

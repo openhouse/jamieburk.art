@@ -1,0 +1,181 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
+
+import {
+  compileWiki,
+  defaultRepoRoot,
+  wikiRecordSchema
+} from "./lib.mjs";
+
+const privatePattern =
+  /(?:\/Users\/|\/Volumes\/|Mobile Documents|Library\/CloudStorage|\.photoslibrary\b|BEGIN (?:RSA |OPENSSH )?PRIVATE KEY)/i;
+
+function loadManifest(repoRoot) {
+  return JSON.parse(
+    readFileSync(
+      path.join(repoRoot, "evals/knowledge-wiki/photo-notebook.json"),
+      "utf8"
+    )
+  );
+}
+
+export function evaluatePhotoNotebook(options = {}) {
+  const repoRoot = options.repoRoot ?? defaultRepoRoot;
+  const result = options.result ?? compileWiki({ repoRoot });
+  const manifest = options.manifest ?? loadManifest(repoRoot);
+  const recordOverrides = options.recordOverrides ?? {};
+  const sourceOverrides = options.sourceOverrides ?? {};
+
+  const record = (id) => {
+    if (Object.hasOwn(recordOverrides, id)) return recordOverrides[id];
+    return result.byId.get(id);
+  };
+  const source = (id) => {
+    if (Object.hasOwn(sourceOverrides, id)) return sourceOverrides[id];
+    const item = record(id);
+    return item ? readFileSync(path.join(repoRoot, item.path), "utf8") : "";
+  };
+  const normalized = (id) => source(id).replace(/\s+/g, " ");
+
+  const requiredIds = manifest.requiredRecords.map(([id]) => id);
+  const notebook = record(manifest.notebookRootId);
+  const field = record(manifest.fieldId);
+  const vocabulary = normalized(manifest.vocabularyId);
+  const sequences = normalized(manifest.sequenceId);
+  const templates = normalized(manifest.templatesId);
+  const notebookSource = normalized(manifest.notebookRootId);
+  const fieldSource = normalized(manifest.fieldId);
+  const publicRegistry =
+    options.publicRegistryOverride ??
+    readFileSync(path.join(repoRoot, manifest.publicRegistryPath), "utf8");
+
+  const photographyNotebookRecordsMaterialized = manifest.requiredRecords.every(
+    ([id, expectedPath]) => {
+      const item = record(id);
+      return item?.path === expectedPath && item?.canonical_path === expectedPath;
+    }
+  );
+
+  const notebookTargets = notebook?.relations?.map((relation) => relation.target) ?? [];
+  const photographyNotebookReachable =
+    manifest.navigationParents.every((parentId) =>
+      record(parentId)?.relations?.some(
+        (relation) => relation.target === manifest.notebookRootId
+      )
+    ) &&
+    requiredIds
+      .filter((id) => id !== manifest.notebookRootId)
+      .every((id) => notebookTargets.includes(id)) &&
+    requiredIds.every((id) => result.reachable.has(id));
+
+  const photographyNotebookContractBounded = requiredIds.every((id) => {
+    const item = record(id);
+    return (
+      item?.kind === "notebook" &&
+      item.notebook_state &&
+      item.projection?.status === "hold" &&
+      item.projection.surfaces.length === 0 &&
+      wikiRecordSchema.safeParse(item).success
+    );
+  });
+
+  const photographyFieldIsRoughDraftNotCompletion =
+    field?.notebook_state === "assembling" &&
+    field.field_version === manifest.fieldVersion &&
+    field.target_population === manifest.targetPopulation &&
+    field.current_population === 0 &&
+    /rough editorial draft, not a ranked shortlist, representative sample, complete archive census/i.test(
+      notebookSource
+    ) &&
+    /does not measure work that may be underway in a private curation environment/i.test(
+      fieldSource
+    ) &&
+    /will not establish archive completeness, editorial quality, rights, consent, or publication readiness/i.test(
+      fieldSource
+    );
+
+  const photographyEpistemicLanesSeparate = [
+    "What is visibly present",
+    "What metadata reports",
+    "What Jamie or a collaborator remembers",
+    "Editorial interpretation",
+    "Research leads",
+    "Supported claim link"
+  ].every((heading) => templates.includes(`## ${heading}`)) &&
+    /Treat memory as attributed context and a research lead, not automatic proof/i.test(
+      templates
+    ) &&
+    /Link only to a separately governed claim/i.test(templates);
+
+  const photographySelectionPublicationRightsSeparate =
+    /Selection is not publication/i.test(notebookSource) &&
+    /Editorial interest, evidence value, rights, consent, safety, and public-surface approval are separate decisions/i.test(
+      notebookSource
+    ) &&
+    /Approved public surface: none unless Jamie records a separate approval/i.test(
+      templates
+    );
+
+  const photographyExperimentRemainsOpen =
+    /not a deterministic scoring system/i.test(vocabulary) &&
+    /Outliers remain available because contradiction and surprise are information, not failed scores/i.test(
+      vocabulary
+    ) &&
+    /not narratives the photographs must illustrate/i.test(sequences) &&
+    /Preserve versions that fail or contradict one another/i.test(sequences) &&
+    !/^\s*(?:score|rank):/im.test(source(manifest.templatesId));
+
+  const photographyPeopleRemainAgents =
+    /People remain agents/i.test(notebookSource) &&
+    /Do not use faces as shorthand for community/i.test(notebookSource) &&
+    /make Jamie the default center of collective scenes/i.test(notebookSource) &&
+    /without becoming the hero of every collective scene/i.test(sequences) &&
+    /Protected absence is meaningful/i.test(notebookSource);
+
+  const photographyDiscoveryDoesNotAutoPromoteClaims =
+    /create an intake or inquiry, but it cannot automatically mature a memory or interpretation into a claim/i.test(
+      notebookSource
+    ) &&
+    /A notebook entry can remain valuable even when it never becomes a public caption, claim, or image/i.test(
+      templates
+    );
+
+  const requiredSources = requiredIds.map(source);
+  const photographyPrivateArchiveBoundary =
+    requiredSources.every((text) => !privatePattern.test(text)) &&
+    /original or preview image files unless separately approved/i.test(notebookSource) &&
+    /people-tag exports, face embeddings/i.test(notebookSource) &&
+    /private field manifest remains the authority/i.test(notebookSource) &&
+    requiredSources.every((text) => !/!\[[^\]]*\]\([^)]*\)/.test(text));
+
+  const photographyPublicProjectionSelective =
+    requiredIds.every((id) => !publicRegistry.includes(id)) &&
+    requiredIds.every((id) => record(id)?.projection?.status === "hold");
+
+  const checks = {
+    photography_notebook_records_materialized: photographyNotebookRecordsMaterialized,
+    photography_notebook_reachable: photographyNotebookReachable,
+    photography_notebook_contract_bounded: photographyNotebookContractBounded,
+    photography_field_is_rough_draft_not_completion: photographyFieldIsRoughDraftNotCompletion,
+    photography_epistemic_lanes_separate: photographyEpistemicLanesSeparate,
+    photography_selection_publication_rights_separate: photographySelectionPublicationRightsSeparate,
+    photography_experiment_remains_open: photographyExperimentRemainsOpen,
+    photography_people_remain_agents: photographyPeopleRemainAgents,
+    photography_discovery_does_not_auto_promote_claims: photographyDiscoveryDoesNotAutoPromoteClaims,
+    photography_private_archive_boundary: photographyPrivateArchiveBoundary,
+    photography_public_projection_selective: photographyPublicProjectionSelective
+  };
+
+  return {
+    passed: Object.values(checks).every(Boolean),
+    checks,
+    failures: Object.entries(checks)
+      .filter(([, passed]) => !passed)
+      .map(([id]) => id),
+    counts: {
+      requiredRecords: requiredIds.length,
+      targetPopulation: field?.target_population ?? null,
+      currentPopulation: field?.current_population ?? null
+    }
+  };
+}
