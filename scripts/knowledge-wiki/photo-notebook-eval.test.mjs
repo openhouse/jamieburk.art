@@ -21,9 +21,9 @@ test("photography working notebook passes every bounded criterion", () => {
   const evaluation = evaluatePhotoNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    records: 5,
+    records: 6,
     openQuestions: 26,
-    notebookFiles: 5
+    notebookFiles: 6
   });
 });
 
@@ -285,4 +285,70 @@ test("proposal acceptance must remain a dated human decision", () => {
     recordOverrides: { [proposal.id]: proposal }
   });
   assert.equal(evaluation.checks.photo_proposal_human_acceptance_recorded, false);
+});
+
+test("the local canary must remain membership-only and independently verified", () => {
+  const id = "evaluation.photo-notebook.local-photos-canary.2026-07-22";
+  const mutated = sourceFor(id)
+    .replace("added one existing photograph by membership only", "rewrote one photograph")
+    .replace("independent read-only verifier", "helper self-report");
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_canary_selection_and_write_bounded, false);
+  assert.equal(
+    evaluation.checks.photo_canary_receipts_and_verification_complete,
+    false
+  );
+});
+
+test("the local canary cannot expose private identifiers or paths", () => {
+  const id = "evaluation.photo-notebook.local-photos-canary.2026-07-22";
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: {
+      [id]: `${sourceFor(id)}\n/Volumes/private/photo-library/11111111-2222-3333-4444-555555555555/L0/040\n`
+    }
+  });
+  assert.equal(evaluation.checks.photo_canary_private_material_absent, false);
+  assert.equal(evaluation.checks.photo_notebook_public_safety_preserved, false);
+});
+
+test("the local canary cannot erase a failed receipt or source-state gap", () => {
+  const id = "evaluation.photo-notebook.local-photos-canary.2026-07-22";
+  const mutated = sourceFor(id)
+    .replace(/differed by five source\s+items/, "were always identical")
+    .replace(/It was not counted as\s+a pass\./, "It was counted as a pass.");
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_canary_friction_and_repair_preserved, false);
+});
+
+test("the local canary cannot become publication clearance", () => {
+  const id = "evaluation.photo-notebook.local-photos-canary.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /does not select or clear a photograph for the portfolio or\s+publication/,
+    "selects and clears a photograph for portfolio publication"
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_canary_publication_gate_remains_human, false);
+});
+
+test("the local canary cannot claim changes beyond the authorized workspace", () => {
+  const id = "evaluation.photo-notebook.local-photos-canary.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /or anything outside the owner-authorized private\s+workspace/,
+    "and reorganized albums outside the workspace"
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_canary_no_upload_or_collateral_mutation, false);
 });

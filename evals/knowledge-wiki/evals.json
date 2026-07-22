@@ -165,7 +165,15 @@
         "photo_proposal_reference_source_position_honest",
         "photo_proposal_care_boundaries_explicit",
         "photo_proposal_authorship_position_honest",
-        "photo_proposal_human_acceptance_recorded"
+        "photo_proposal_human_acceptance_recorded",
+        "photo_canary_relation_and_record_closed",
+        "photo_canary_skill_and_local_access_verified",
+        "photo_canary_selection_and_write_bounded",
+        "photo_canary_receipts_and_verification_complete",
+        "photo_canary_no_upload_or_collateral_mutation",
+        "photo_canary_friction_and_repair_preserved",
+        "photo_canary_private_material_absent",
+        "photo_canary_publication_gate_remains_human"
       ]
     },
     {

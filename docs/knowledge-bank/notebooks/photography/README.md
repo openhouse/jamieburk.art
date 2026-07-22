@@ -28,6 +28,9 @@ relations:
   - type: related_to
     target: index.photo-notebook.proposal.first-pass-196
     href: proposals/first-pass-at-196.md
+  - type: related_to
+    target: evaluation.photo-notebook.local-photos-canary.2026-07-22
+    href: field-notes/first-local-photos-canary.md
 projection:
   status: hold
   surfaces: []
@@ -134,6 +137,7 @@ authority for a particular image or use.
 ## Work surfaces
 
 - [First Pass: A Photo Residency at 196](proposals/first-pass-at-196.md)
+- [First local Apple Photos canary](field-notes/first-local-photos-canary.md)
 - [Open visual questions](open-questions.md)
 - [Public-safe field-note template](field-note-template.md)
 - [Release / water / salt sequence sketch](sketches/release-water-salt.md)

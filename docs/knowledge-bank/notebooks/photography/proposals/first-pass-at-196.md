@@ -33,6 +33,9 @@ relations:
   - type: informed_by
     target: research-inquiry.teju-cole.residency-photography-reference
     href: ../../../research-inquiries/teju-cole-residency-photography-reference.md
+  - type: related_to
+    target: evaluation.photo-notebook.local-photos-canary.2026-07-22
+    href: ../field-notes/first-local-photos-canary.md
 projection:
   status: hold
   surfaces: []

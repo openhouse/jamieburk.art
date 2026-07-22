@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { compileWiki, defaultRepoRoot } from "./lib.mjs";
 
 const privatePattern =
-  /(?:\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|Library\/CloudStorage|BEGIN (?:RSA |OPENSSH )?PRIVATE KEY)/i;
+  /(?:\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|Library\/CloudStorage|BEGIN (?:RSA |OPENSSH )?PRIVATE KEY|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|\/L0\/0\d{2})/i;
 
 function loadManifest(repoRoot) {
   return JSON.parse(
@@ -46,6 +46,7 @@ export function evaluatePhotoNotebook(options = {}) {
   const questions = record(manifest.questionsId);
   const sketch = record(manifest.sketchId);
   const proposal = record(manifest.proposalId);
+  const canary = record(manifest.canaryId);
   const residencyProject = record(manifest.residencyProjectId);
   const referenceInquiry = record(manifest.referenceInquiryId);
   const notebookRecords = manifest.requiredRecords.map(([id]) => record(id)).filter(Boolean);
@@ -65,6 +66,7 @@ export function evaluatePhotoNotebook(options = {}) {
   const questionsSource = normalized(manifest.questionsId);
   const sketchSource = normalized(manifest.sketchId);
   const proposalSource = normalized(manifest.proposalId);
+  const canarySource = normalized(manifest.canaryId);
   const referenceInquirySource = normalized(manifest.referenceInquiryId);
   const allNotebookSource = manifest.requiredRecords.map(([id]) => source(id)).join("\n");
 
@@ -90,7 +92,8 @@ export function evaluatePhotoNotebook(options = {}) {
       manifest.fieldNoteId,
       manifest.questionsId,
       manifest.sketchId,
-      manifest.proposalId
+      manifest.proposalId,
+      manifest.canaryId
     ].every((id) =>
       notebookTargets.includes(id)
     ) &&
@@ -103,9 +106,10 @@ export function evaluatePhotoNotebook(options = {}) {
     questions?.status === "governed-open" &&
     sketch?.status === "draft" &&
     proposal?.status === "draft" &&
+    canary?.status === "maintained" &&
     notebookRecords.every(
       (item) =>
-        ["index", "method", "research-inquiry"].includes(item.kind) &&
+        ["index", "method", "research-inquiry", "evaluation"].includes(item.kind) &&
         item.projection?.status === "hold" &&
         item.projection?.surfaces?.length === 0
     );
@@ -329,6 +333,96 @@ export function evaluatePhotoNotebook(options = {}) {
       proposalSource
     );
 
+  const canaryRelationAndRecordClosed =
+    notebookTargets.includes(manifest.canaryId) &&
+    proposal?.relations?.some(
+      (relation) => relation.type === "related_to" && relation.target === manifest.canaryId
+    ) &&
+    canary?.relations?.some(
+      (relation) => relation.target === manifest.notebookId
+    ) &&
+    canary?.relations?.some(
+      (relation) => relation.target === manifest.proposalId
+    ) &&
+    canary?.relations?.some(
+      (relation) => relation.target === manifest.fieldNoteId
+    );
+
+  const canarySkillAndLocalAccessVerified =
+    /installed `curate-apple-photos` skill was verified against the current checked-out `openhouse\/photo-fieldwork` `origin\/main`/i.test(
+      canarySource
+    ) &&
+    /fresh, zero-image authorization check confirmed local PhotoKit access/i.test(
+      canarySource
+    ) &&
+    /network access disabled/i.test(canarySource);
+
+  const canarySelectionAndWriteBounded =
+    /Four candidates were retrieved through Jamie's existing People association/i.test(
+      canarySource
+    ) &&
+    /all four belonged to the frozen source/i.test(canarySource) &&
+    /All four generated previews were decoded and inspected locally/i.test(canarySource) &&
+    /Three were held because background privacy or represented-person and collective-credit questions/i.test(
+      canarySource
+    ) &&
+    /created one private studio album and added one existing photograph by membership only/i.test(
+      canarySource
+    );
+
+  const canaryReceiptsAndVerificationComplete =
+    /two fresh production executions with distinct nonces and the same one-member result/i.test(
+      canarySource
+    ) &&
+    /independent read-only verifier confirmed the exact folder parent chain/i.test(
+      canarySource
+    ) &&
+    /zero missing or unexpected members/i.test(canarySource) &&
+    /zero members outside the frozen source/i.test(canarySource) &&
+    /zero safety-HOLD overlap/i.test(canarySource) &&
+    /unchanged source count and identifier digest/i.test(canarySource);
+
+  const canaryNoUploadOrCollateralMutation =
+    /No network access or external upload occurred/i.test(canarySource) &&
+    /did not change originals, edits, metadata, dates, locations, faces, People associations, favorites, source albums/i.test(
+      canarySource
+    ) &&
+    /or anything outside the owner-authorized private workspace/i.test(canarySource);
+
+  const canaryFrictionAndRepairPreserved =
+    /differed by five source items/i.test(canarySource) &&
+    /The cause was not inferred/i.test(canarySource) &&
+    /Three initially exported preview copies retained source-bearing EXIF and failed the privacy verifier/i.test(
+      canarySource
+    ) &&
+    /Only the generated local copies were sanitized; Apple Photos originals were not touched/i.test(
+      canarySource
+    ) &&
+    /interrupted without a completion receipt/i.test(canarySource) &&
+    /It was not counted as a pass/i.test(canarySource) &&
+    /new nonce-bound execution completed/i.test(canarySource) &&
+    /independently checked for idempotence/i.test(canarySource);
+
+  const canaryPrivateMaterialAbsent =
+    !privatePattern.test(source(manifest.canaryId)) &&
+    /contains no photograph, preview, contact sheet, asset identifier, filename, local path, private folder or album title/i.test(
+      canarySource
+    ) &&
+    /face record, coordinate, image-level metadata, or scene description/i.test(
+      canarySource
+    );
+
+  const canaryPublicationGateRemainsHuman =
+    /does not select or clear a photograph for the portfolio or publication/i.test(
+      canarySource
+    ) &&
+    /Any later use still requires Jamie's explicit approval for a named image, derivative, and surface/i.test(
+      canarySource
+    ) &&
+    /rights-holder or represented-person authority/i.test(canarySource) &&
+    canary?.projection?.status === "hold" &&
+    canary?.projection?.surfaces?.length === 0;
+
   const checks = {
     photo_notebook_records_materialized: recordsMaterialized,
     photo_notebook_navigation_reachable: navigationReachable,
@@ -353,7 +447,16 @@ export function evaluatePhotoNotebook(options = {}) {
       proposalReferenceSourcePositionHonest,
     photo_proposal_care_boundaries_explicit: proposalCareBoundariesExplicit,
     photo_proposal_authorship_position_honest: proposalAuthorshipPositionHonest,
-    photo_proposal_human_acceptance_recorded: proposalHumanAcceptanceRecorded
+    photo_proposal_human_acceptance_recorded: proposalHumanAcceptanceRecorded,
+    photo_canary_relation_and_record_closed: canaryRelationAndRecordClosed,
+    photo_canary_skill_and_local_access_verified: canarySkillAndLocalAccessVerified,
+    photo_canary_selection_and_write_bounded: canarySelectionAndWriteBounded,
+    photo_canary_receipts_and_verification_complete:
+      canaryReceiptsAndVerificationComplete,
+    photo_canary_no_upload_or_collateral_mutation: canaryNoUploadOrCollateralMutation,
+    photo_canary_friction_and_repair_preserved: canaryFrictionAndRepairPreserved,
+    photo_canary_private_material_absent: canaryPrivateMaterialAbsent,
+    photo_canary_publication_gate_remains_human: canaryPublicationGateRemainsHuman
   };
 
   return {
