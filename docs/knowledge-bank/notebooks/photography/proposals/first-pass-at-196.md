@@ -9,6 +9,11 @@ last_reviewed: 2026-07-22
 review_by: 2026-10-22
 canonical_path: docs/knowledge-bank/notebooks/photography/proposals/first-pass-at-196.md
 summary: Accepted, nonbinding artist proposal for Jamie's first encounter with a roughly 1,000-photograph working field from his lifetime archive at the 196 Artists Residency.
+proposal_state: accepted
+accepted_on: 2026-07-22
+accepted_by: Jamie Burkart
+accepting_program: 196 Artists Residency
+acceptance_authority: human-confirmed
 relations:
   - type: related_to
     target: index.knowledge-wiki.photo-notebook
@@ -149,6 +154,21 @@ Acceptance means the need named here deserves protected time, attention,
 encouragement, and room. It does not bind the work to its forecast. Jamie may
 go where the work needs to go.
 
-This page is an AI-assisted draft composed from Jamie's statements on July 22,
-2026. Jamie remains its author and final editor. It is held from portfolio
-projection while the residency work is still becoming.
+## Acceptance record
+
+On July 22, 2026, Jamie Burkart explicitly accepted the proposal for 196
+Artists Residency:
+
+> Your proposal is accepted. Welcome.
+
+This is a human acceptance recorded from Jamie's direct instruction. It was not
+inferred or granted by an evaluator or AI agent. Acceptance authorizes the
+residency to begin. It does not approve any photograph for publication, close
+the artistic questions, or bind the work to a deliverable.
+
+This page began as an AI-assisted draft composed from Jamie's statements on
+July 22, 2026. Jamie explicitly accepted the proposal and remains its author
+and final editor. The record remains `status: draft` so its language can evolve
+with the residency; its `proposal_state: accepted` preserves the decision to
+begin. It is held from portfolio projection while the residency work is still
+becoming.

@@ -300,11 +300,34 @@ export function evaluatePhotoNotebook(options = {}) {
     proposal?.projection?.surfaces?.length === 0;
 
   const proposalAuthorshipPositionHonest =
-    /This page is an AI-assisted draft composed from Jamie's statements/i.test(
+    /This page began as an AI-assisted draft composed from Jamie's statements/i.test(
       proposalSource
     ) &&
-    /Jamie remains its author and final editor/i.test(proposalSource) &&
+    /Jamie explicitly accepted the proposal and remains its author and final editor/i.test(
+      proposalSource
+    ) &&
     /held from portfolio projection/i.test(proposalSource);
+
+  const proposalHumanAcceptanceRecorded =
+    proposal?.proposal_state === "accepted" &&
+    proposal?.accepted_on === "2026-07-22" &&
+    proposal?.accepted_by === "Jamie Burkart" &&
+    proposal?.accepting_program === "196 Artists Residency" &&
+    proposal?.acceptance_authority === "human-confirmed" &&
+    /Your proposal is accepted\. Welcome\./i.test(proposalSource) &&
+    /human acceptance recorded from Jamie's direct instruction/i.test(
+      proposalSource
+    ) &&
+    /It was not inferred or granted by an evaluator or AI agent/i.test(
+      proposalSource
+    ) &&
+    /Acceptance authorizes the residency to begin/i.test(proposalSource) &&
+    /The record remains `status: draft` so its language can evolve with the residency/i.test(
+      proposalSource
+    ) &&
+    /`proposal_state: accepted` preserves the decision to begin/i.test(
+      proposalSource
+    );
 
   const checks = {
     photo_notebook_records_materialized: recordsMaterialized,
@@ -329,7 +352,8 @@ export function evaluatePhotoNotebook(options = {}) {
     photo_proposal_reference_source_position_honest:
       proposalReferenceSourcePositionHonest,
     photo_proposal_care_boundaries_explicit: proposalCareBoundariesExplicit,
-    photo_proposal_authorship_position_honest: proposalAuthorshipPositionHonest
+    photo_proposal_authorship_position_honest: proposalAuthorshipPositionHonest,
+    photo_proposal_human_acceptance_recorded: proposalHumanAcceptanceRecorded
   };
 
   return {

@@ -264,10 +264,25 @@ test("AI assistance cannot be presented as Jamie's already approved final prose"
   const id = "index.photo-notebook.proposal.first-pass-196";
   const mutated = sourceFor(id)
     .replace("an AI-assisted draft", "Jamie's final unassisted statement")
-    .replace("Jamie remains its author and final editor.", "No human review is needed.");
+    .replace(
+      "Jamie explicitly accepted the proposal and remains its author and final editor.",
+      "No human review is needed."
+    );
   const evaluation = evaluatePhotoNotebook({
     result,
     sourceOverrides: { [id]: mutated }
   });
   assert.equal(evaluation.checks.photo_proposal_authorship_position_honest, false);
+});
+
+test("proposal acceptance must remain a dated human decision", () => {
+  const proposal = cloneRecord("index.photo-notebook.proposal.first-pass-196");
+  proposal.proposal_state = "pending";
+  proposal.accepted_by = "AI evaluator";
+  proposal.acceptance_authority = "automated";
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    recordOverrides: { [proposal.id]: proposal }
+  });
+  assert.equal(evaluation.checks.photo_proposal_human_acceptance_recorded, false);
 });
