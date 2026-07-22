@@ -26,6 +26,9 @@ relations:
   - type: informed_by
     target: research.photography-first-pass-residency-proposal.2026-07-22
     href: ../research-runs/photography-first-pass-residency-proposal-2026-07-22.md
+  - type: informed_by
+    target: research.photography-studio-connection.2026-07-22
+    href: ../research-runs/photography-studio-connection-2026-07-22.md
   - type: related_to
     target: evaluation.photography-notebook.2026-07-22
     href: ../evaluations/photography-working-notebook.md
@@ -47,11 +50,15 @@ purpose is to create enough room for the archive to answer back.
 
 ## Current state
 
-The first private field is planned, not completed. No photograph from the
-private archive has been inspected for this Wiki room, and no image is selected,
-cleared, or projected by this page. The
+The proposed rough-draft field remains open and incomplete. A deliberately
+small private technical contact is now complete: local previews were inspected,
+one person-free still was placed in a one-image proof album inside Jamie's
+granted Photos workspace, and its exact membership was independently verified.
+The image itself remains outside Git and held from publication. The
 [opening note](../research-runs/photography-notebook-opening-2026-07-22.md)
-records what is known before the first bounded encounter.
+preserves what was known before contact; the
+[first-contact entry](../research-runs/photography-studio-connection-2026-07-22.md)
+records what changed.
 
 ## Rules of play
 
@@ -115,6 +122,7 @@ unanswered questions; they do not require premature interpretation.
 
 - [Opening the photography notebook, July 22, 2026](../research-runs/photography-notebook-opening-2026-07-22.md)
 - [The archive answers back - a 196 photography residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md) - accepted and welcomed by Jamie on July 22, 2026; the form remains open.
+- [First contact with the private photo field, July 22, 2026](../research-runs/photography-studio-connection-2026-07-22.md) - one locally inspected, privately held image; verified catalog membership is not publication clearance.
 
 ## Private working material
 

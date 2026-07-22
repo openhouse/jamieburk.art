@@ -1,0 +1,46 @@
+{
+  "suite": "photography-studio-connection",
+  "version": 1,
+  "principle": "A successful private photo-catalog operation is real only when it is locally inspected, workspace-bounded, fail-closed, receipt-bound, rerun, independently verified, and still separate from publication authority.",
+  "notebookId": "index.knowledge-wiki.photography-notebook",
+  "methodId": "method.photographic-archive-fieldwork",
+  "proposalId": "research.photography-first-pass-residency-proposal.2026-07-22",
+  "runId": "research.photography-studio-connection.2026-07-22",
+  "evaluationId": "evaluation.photography-studio-connection.2026-07-22",
+  "sourceId": "source.openhouse.photo-fieldwork.2026-07-22",
+  "requiredRecords": [
+    [
+      "research.photography-studio-connection.2026-07-22",
+      "docs/knowledge-bank/research-runs/photography-studio-connection-2026-07-22.md"
+    ],
+    [
+      "evaluation.photography-studio-connection.2026-07-22",
+      "docs/knowledge-bank/evaluations/photography-studio-connection.md"
+    ],
+    [
+      "source.openhouse.photo-fieldwork.2026-07-22",
+      "docs/knowledge-bank/sources/openhouse-photo-fieldwork-2026-07-22.md"
+    ]
+  ],
+  "criteria": [
+    "studio_connection_records_materialized",
+    "studio_connection_navigation_reachable",
+    "photo_skill_upstream_and_source_frozen",
+    "photo_capability_gap_explicit",
+    "photo_workspace_write_bounded",
+    "people_tags_private_not_inference",
+    "photo_inspection_local_only",
+    "photo_holds_excluded",
+    "photo_release_gates_passed",
+    "receiptless_launch_fails_closed",
+    "photo_membership_idempotently_verified",
+    "photo_source_and_prior_structure_unchanged",
+    "one_image_not_archive_scale_evidence",
+    "studio_connection_public_boundary_clean",
+    "studio_connection_branch_history_boundary_clean",
+    "studio_connection_selection_not_publication",
+    "studio_connection_projection_held",
+    "studio_connection_eval_non_authoritative",
+    "studio_connection_eval_wired"
+  ]
+}

@@ -23,6 +23,9 @@ relations:
   - type: related_to
     target: index.knowledge-wiki.visual-evidence
     href: ../indexes/visual-evidence.md
+  - type: informed_by
+    target: research.photography-studio-connection.2026-07-22
+    href: ../research-runs/photography-studio-connection-2026-07-22.md
 ---
 
 # Photographic archive fieldwork
@@ -61,6 +64,17 @@ remain in a protected local layer.
    context as separate questions.
 9. Bind any approval to an exact asset version and a specific public use.
 10. Return new factual leads to the Knowledge Bank intake and review lifecycle.
+
+## Private catalog mutation boundary
+
+The source library remains read-only at the database layer. When Jamie grants a
+specific Apple Photos workspace, a governed helper may create folders or albums
+and add existing membership only within that workspace. Every such operation
+requires a frozen source contract, exact plan, excluded HOLD set, fresh app
+receipt, nonce-distinct rerun, and independent WAL-aware read-only verification.
+It may not delete assets, move prior collections, change originals or metadata,
+alter favorites, infer or edit People, or treat catalog membership as
+publication clearance.
 
 ## What an image does not establish
 

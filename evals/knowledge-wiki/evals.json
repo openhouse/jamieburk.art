@@ -181,6 +181,29 @@
       ]
     },
     {
+      "id": "photography-studio-connection",
+      "criteria": [
+        "studio_connection_records_materialized",
+        "studio_connection_navigation_reachable",
+        "photo_skill_upstream_and_source_frozen",
+        "photo_capability_gap_explicit",
+        "photo_workspace_write_bounded",
+        "people_tags_private_not_inference",
+        "photo_inspection_local_only",
+        "photo_holds_excluded",
+        "photo_release_gates_passed",
+        "receiptless_launch_fails_closed",
+        "photo_membership_idempotently_verified",
+        "photo_source_and_prior_structure_unchanged",
+        "one_image_not_archive_scale_evidence",
+        "studio_connection_public_boundary_clean",
+        "studio_connection_selection_not_publication",
+        "studio_connection_projection_held",
+        "studio_connection_eval_non_authoritative",
+        "studio_connection_eval_wired"
+      ]
+    },
+    {
       "id": "knowledge-wiki-family-closure",
       "criteria": [
         "family_records_materialized",
