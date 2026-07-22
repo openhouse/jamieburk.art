@@ -5,11 +5,20 @@
   "fieldNoteId": "method.photo-notebook.field-note",
   "questionsId": "research-inquiry.photo-notebook.open-questions",
   "sketchId": "index.photo-notebook.sketch.release-water-salt",
+  "proposalId": "index.photo-notebook.proposal.first-pass-196",
+  "residencyProjectId": "project.sunday-dinner-196",
+  "referenceInquiryId": "research-inquiry.teju-cole.residency-photography-reference",
+  "referenceSources": [
+    ["source.teju-cole.zurich-writer-residency.2014", "docs/knowledge-bank/sources/teju-cole-zurich-writer-residency-2014.md"],
+    ["source.teju-cole.fernweh-residency-context.2020", "docs/knowledge-bank/sources/teju-cole-fernweh-residency-context-2020.md"]
+  ],
+  "referenceInquiryPath": "docs/knowledge-bank/research-inquiries/teju-cole-residency-photography-reference.md",
   "requiredRecords": [
     ["index.knowledge-wiki.photo-notebook", "docs/knowledge-bank/notebooks/photography/README.md"],
     ["method.photo-notebook.field-note", "docs/knowledge-bank/notebooks/photography/field-note-template.md"],
     ["research-inquiry.photo-notebook.open-questions", "docs/knowledge-bank/notebooks/photography/open-questions.md"],
-    ["index.photo-notebook.sketch.release-water-salt", "docs/knowledge-bank/notebooks/photography/sketches/release-water-salt.md"]
+    ["index.photo-notebook.sketch.release-water-salt", "docs/knowledge-bank/notebooks/photography/sketches/release-water-salt.md"],
+    ["index.photo-notebook.proposal.first-pass-196", "docs/knowledge-bank/notebooks/photography/proposals/first-pass-at-196.md"]
   ],
   "navigationIds": [
     "index.knowledge-wiki",

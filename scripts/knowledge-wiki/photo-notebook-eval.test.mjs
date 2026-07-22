@@ -21,9 +21,9 @@ test("photography working notebook passes every bounded criterion", () => {
   const evaluation = evaluatePhotoNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    records: 4,
+    records: 5,
     openQuestions: 26,
-    notebookFiles: 4
+    notebookFiles: 5
   });
 });
 
@@ -151,4 +151,123 @@ test("Jamie and represented-person review cannot be automated away", () => {
     sourceOverrides: { [id]: mutated }
   });
   assert.equal(evaluation.checks.photo_human_publication_gates_remain_open, false);
+});
+
+test("the accepted proposal must remain reachable from the notebook and residency", () => {
+  const notebook = cloneRecord("index.knowledge-wiki.photo-notebook");
+  notebook.relations = notebook.relations.filter(
+    (relation) => relation.target !== "index.photo-notebook.proposal.first-pass-196"
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    recordOverrides: { [notebook.id]: notebook }
+  });
+  assert.equal(evaluation.checks.photo_notebook_navigation_reachable, false);
+});
+
+test("the proposal cannot be hardened into a contract", () => {
+  const id = "index.photo-notebook.proposal.first-pass-196";
+  const mutated = sourceFor(id)
+    .replace("This proposal is not a contract.", "This proposal is a binding contract.")
+    .replace(
+      "I will not be judged against the work forecast here.",
+      "I will be judged against the work forecast here."
+    )
+    .replace(
+      "Departure is evidence of attention, not failure.",
+      "Departure is failure."
+    );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_proposal_departure_protected, false);
+});
+
+test("the proposal cannot impose required production outputs", () => {
+  const id = "index.photo-notebook.proposal.first-pass-196";
+  const mutated = sourceFor(id)
+    .replace("invitations, not required deliverables", "required deliverables")
+    .replace("no public artifact at all", "a minimum 100-image public artifact");
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_proposal_outputs_not_required, false);
+});
+
+test("acceptance must honor the artist's need without binding the forecast", () => {
+  const id = "index.photo-notebook.proposal.first-pass-196";
+  const mutated = sourceFor(id)
+    .replace(
+      "196 Artists Residency receives and accepts this proposal.",
+      "196 Artists Residency conditionally approves this deliverable plan."
+    )
+    .replace(
+      "It does not bind the work to its forecast.",
+      "It binds the work to its forecast."
+    );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_proposal_accepted_as_permission, false);
+});
+
+test("the remembered Teju Cole lesson cannot masquerade as a recovered quotation", () => {
+  const id = "index.photo-notebook.proposal.first-pass-196";
+  const mutated = sourceFor(id)
+    .replace("Jamie remembers an essay", "The definitive essay proves")
+    .replace(
+      "The exact essay, book, and wording Jamie remembers have not yet been recovered.",
+      "The exact quotation is verified."
+    )
+    .replace(
+      "an artistic permission, not as a verified quotation",
+      "a verified quotation and biographical fact"
+    );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.photo_proposal_reference_source_position_honest,
+    false
+  );
+});
+
+test("the public proposal cannot expose the residency's exact address", () => {
+  const id = "index.photo-notebook.proposal.first-pass-196";
+  const mutated = sourceFor(id).replace(
+    "Its exact address remains private.",
+    "Its exact street address is published below."
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_proposal_site_duration_bounded, false);
+});
+
+test("the draft proposal cannot activate itself on the portfolio", () => {
+  const proposal = cloneRecord("index.photo-notebook.proposal.first-pass-196");
+  proposal.projection = { status: "active", surfaces: ["/work/photography"] };
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    recordOverrides: { [proposal.id]: proposal }
+  });
+  assert.equal(evaluation.checks.photo_working_states_remain_provisional, false);
+  assert.equal(evaluation.checks.photo_proposal_care_boundaries_explicit, false);
+});
+
+test("AI assistance cannot be presented as Jamie's already approved final prose", () => {
+  const id = "index.photo-notebook.proposal.first-pass-196";
+  const mutated = sourceFor(id)
+    .replace("an AI-assisted draft", "Jamie's final unassisted statement")
+    .replace("Jamie remains its author and final editor.", "No human review is needed.");
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photo_proposal_authorship_position_honest, false);
 });

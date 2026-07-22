@@ -45,8 +45,13 @@ export function evaluatePhotoNotebook(options = {}) {
   const fieldNote = record(manifest.fieldNoteId);
   const questions = record(manifest.questionsId);
   const sketch = record(manifest.sketchId);
+  const proposal = record(manifest.proposalId);
+  const residencyProject = record(manifest.residencyProjectId);
+  const referenceInquiry = record(manifest.referenceInquiryId);
   const notebookRecords = manifest.requiredRecords.map(([id]) => record(id)).filter(Boolean);
   const notebookTargets = notebook?.relations?.map((relation) => relation.target) ?? [];
+  const residencyProjectTargets =
+    residencyProject?.relations?.map((relation) => relation.target) ?? [];
   const notebookFiles = options.notebookFilesOverride ?? listFiles(
     path.join(repoRoot, manifest.notebookRoot)
   );
@@ -59,6 +64,8 @@ export function evaluatePhotoNotebook(options = {}) {
   const fieldNoteSource = normalized(manifest.fieldNoteId);
   const questionsSource = normalized(manifest.questionsId);
   const sketchSource = normalized(manifest.sketchId);
+  const proposalSource = normalized(manifest.proposalId);
+  const referenceInquirySource = normalized(manifest.referenceInquiryId);
   const allNotebookSource = manifest.requiredRecords.map(([id]) => source(id)).join("\n");
 
   const recordsMaterialized = manifest.requiredRecords.every(([id, expectedPath]) => {
@@ -66,14 +73,28 @@ export function evaluatePhotoNotebook(options = {}) {
     return item?.path === expectedPath && item?.canonical_path === expectedPath;
   });
 
+  const referenceRecordsMaterialized =
+    referenceInquiry?.path === manifest.referenceInquiryPath &&
+    referenceInquiry?.canonical_path === manifest.referenceInquiryPath &&
+    manifest.referenceSources.every(([id, expectedPath]) => {
+      const item = record(id);
+      return item?.path === expectedPath && item?.canonical_path === expectedPath;
+    });
+
   const navigationReachable =
     recordsMaterialized &&
     manifest.navigationIds.every((id) =>
       record(id)?.relations?.some((relation) => relation.target === manifest.notebookId)
     ) &&
-    [manifest.fieldNoteId, manifest.questionsId, manifest.sketchId].every((id) =>
+    [
+      manifest.fieldNoteId,
+      manifest.questionsId,
+      manifest.sketchId,
+      manifest.proposalId
+    ].every((id) =>
       notebookTargets.includes(id)
     ) &&
+    residencyProjectTargets.includes(manifest.proposalId) &&
     manifest.requiredRecords.every(([id]) => result.reachable.has(id));
 
   const workingStatesRemainProvisional =
@@ -81,6 +102,7 @@ export function evaluatePhotoNotebook(options = {}) {
     fieldNote?.status === "draft" &&
     questions?.status === "governed-open" &&
     sketch?.status === "draft" &&
+    proposal?.status === "draft" &&
     notebookRecords.every(
       (item) =>
         ["index", "method", "research-inquiry"].includes(item.kind) &&
@@ -187,6 +209,103 @@ export function evaluatePhotoNotebook(options = {}) {
     /private photo catalog/i.test(notebookSource) &&
     /Do not place photographs, contact sheets/i.test(notebookSource);
 
+  const proposalAcceptedAsPermission =
+    /The residency begins when the proposal is written/i.test(proposalSource) &&
+    /Writing it is a promise to myself/i.test(proposalSource) &&
+    /the voice asking for this time matters/i.test(proposalSource) &&
+    /deserves time and space to be nourished/i.test(proposalSource) &&
+    /196 Artists Residency receives and accepts this proposal/i.test(proposalSource) &&
+    /It does not bind the work to its forecast/i.test(proposalSource);
+
+  const proposalDepartureProtected =
+    /This proposal is not a contract/i.test(proposalSource) &&
+    /I will not be judged against the work forecast here/i.test(proposalSource) &&
+    /may change medium, method, question, scale, pace, or direction/i.test(
+      proposalSource
+    ) &&
+    /Departure is evidence of attention, not failure/i.test(proposalSource) &&
+    /I retain the right to stop/i.test(proposalSource);
+
+  const proposalOutputsNotRequired =
+    /invitations, not required deliverables/i.test(proposalSource) &&
+    /no public artifact at all/i.test(proposalSource) &&
+    /Success is not counted in images processed/i.test(proposalSource) &&
+    !/(?:must deliver|required output|minimum \d+ images)/i.test(proposalSource);
+
+  const proposalSiteAndDurationBounded =
+    /For up to two weeks/i.test(proposalSource) &&
+    /home-based hosting practice in Brooklyn, near Fort Greene Park/i.test(
+      proposalSource
+    ) &&
+    /Its exact address remains private/i.test(proposalSource) &&
+    proposal?.relations?.some(
+      (relation) =>
+        relation.type === "part_of" && relation.target === manifest.residencyProjectId
+    ) &&
+    residencyProjectTargets.includes(manifest.proposalId);
+
+  const proposalFirstPassStaysOpen =
+    /not proposing to find the best thousand photographs/i.test(proposalSource) &&
+    /encounter a field large enough that the photographs can begin speaking back/i.test(
+      proposalSource
+    ) &&
+    /The structure grows from the material/i.test(proposalSource) &&
+    /No photograph is selected, cleared, captioned, or published by this proposal/i.test(
+      proposalSource
+    ) &&
+    /go where the work needs to go/i.test(proposalSource);
+
+  const proposalReferenceSourcePositionHonest =
+    referenceRecordsMaterialized &&
+    manifest.referenceSources.every(([id]) =>
+      proposal?.relations?.some(
+        (relation) => relation.type === "uses_source" && relation.target === id
+      )
+    ) &&
+    proposal?.relations?.some(
+      (relation) =>
+        relation.type === "informed_by" &&
+        relation.target === manifest.referenceInquiryId
+    ) &&
+    manifest.referenceSources.every(([id]) =>
+      referenceInquiry?.relations?.some(
+        (relation) => relation.type === "uses_source" && relation.target === id
+      )
+    ) &&
+    /Jamie remembers an essay/i.test(proposalSource) &&
+    /exact essay, book, and wording Jamie remembers have not yet been recovered/i.test(
+      proposalSource
+    ) &&
+    /artistic permission, not as a verified quotation/i.test(proposalSource) &&
+    /Do not quote or upgrade the remembered account into verified biography/i.test(
+      referenceInquirySource
+    );
+
+  const proposalCareBoundariesExplicit =
+    /working cohort, contact sheets, filenames, identifiers, locations, and image-level notes remain private/i.test(
+      proposalSource
+    ) &&
+    [
+      "authorship",
+      "rights",
+      "consent",
+      "represented-person agency",
+      "collective credit",
+      "caption",
+      "alt text",
+      "named surface"
+    ].every((phrase) => proposalSource.includes(phrase)) &&
+    /Looking is not ownership, and discovery is not permission/i.test(proposalSource) &&
+    proposal?.projection?.status === "hold" &&
+    proposal?.projection?.surfaces?.length === 0;
+
+  const proposalAuthorshipPositionHonest =
+    /This page is an AI-assisted draft composed from Jamie's statements/i.test(
+      proposalSource
+    ) &&
+    /Jamie remains its author and final editor/i.test(proposalSource) &&
+    /held from portfolio projection/i.test(proposalSource);
+
   const checks = {
     photo_notebook_records_materialized: recordsMaterialized,
     photo_notebook_navigation_reachable: navigationReachable,
@@ -201,7 +320,16 @@ export function evaluatePhotoNotebook(options = {}) {
     photo_sequence_sketch_remains_interpretive: sequenceSketchRemainsInterpretive,
     photo_open_questions_stay_generative: openQuestionsStayGenerative,
     photo_notebook_public_safety_preserved: notebookPublicSafetyPreserved,
-    photo_rfp_boundary_retained: rfpBoundaryRetained
+    photo_rfp_boundary_retained: rfpBoundaryRetained,
+    photo_proposal_accepted_as_permission: proposalAcceptedAsPermission,
+    photo_proposal_departure_protected: proposalDepartureProtected,
+    photo_proposal_outputs_not_required: proposalOutputsNotRequired,
+    photo_proposal_site_duration_bounded: proposalSiteAndDurationBounded,
+    photo_proposal_first_pass_stays_open: proposalFirstPassStaysOpen,
+    photo_proposal_reference_source_position_honest:
+      proposalReferenceSourcePositionHonest,
+    photo_proposal_care_boundaries_explicit: proposalCareBoundariesExplicit,
+    photo_proposal_authorship_position_honest: proposalAuthorshipPositionHonest
   };
 
   return {

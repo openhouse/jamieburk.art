@@ -5,7 +5,7 @@ kind: project
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-07-22
 review_by: 2026-10-19
 aliases:
   - Sunday Dinner
@@ -22,6 +22,9 @@ relations:
   - type: supports
     target: capability.participatory-public-systems
     href: ../capabilities/participatory-public-systems.md
+  - type: related_to
+    target: index.photo-notebook.proposal.first-pass-196
+    href: ../notebooks/photography/proposals/first-pass-at-196.md
 ---
 
 # Sunday Dinner and 196 Artists Residency orientation
@@ -35,3 +38,16 @@ claiming that every participant shared the same experience.
 The review-locked [continuity report](wowlist-sunday-dinner-callscript-continuity.md)
 keeps the protected database and attendance evidence, public Call Script
 record, chronology, and privacy boundaries separate.
+
+## Current studio experiment
+
+In July 2026, Jamie wrote and accepted [a first-pass photography
+proposal](../notebooks/photography/proposals/first-pass-at-196.md) to enter his
+own home and lifetime photo archive as a resident artist for up to two weeks.
+The proposal formalizes a principle Jamie describes using with visiting
+artists: writing a proposal begins a residency and honors an artistic need; it
+does not contract the artist to deliver the forecast work.
+
+This current proposal documents Jamie's stated practice and permission for the
+photo experiment. It does not establish that every past resident received the
+same terms, duration, onboarding, or experience.
