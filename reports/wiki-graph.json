@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-22T09:17:43-04:00",
   "sourceCommit": "8d137ef65e921950e70f00ec89ac925e54e72d63",
-  "sourceFingerprint": "6d9a41664eb53bda182489112a28cb1001a0e8fa2dae6e528d2f36c0a7af73f7",
+  "sourceFingerprint": "5ab71aefbd6c5e023602e2060a8d5dc90344e76615c2688efca043515de6be4a",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -975,6 +975,19 @@
       ],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research-inquiry.photography.196-first-pass-proposal",
+      "path": "docs/knowledge-bank/notebooks/photography/196-first-pass-proposal.md",
+      "title": "196 Artists Residency proposal: The First Pass",
+      "kind": "research-inquiry",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Jamie's self-directed 196 Artists Residency proposal for an exploratory first encounter with a rough field of photographs, with permission to change course as the archive and apartment disclose what the work needs to become.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-08-22"
     },
     {
       "id": "research-inquiry.photography.field-corpus-001",
@@ -2727,6 +2740,14 @@
     {
       "from": "index.knowledge-wiki.photography-notebook",
       "type": "related_to",
+      "to": "research-inquiry.photography.196-first-pass-proposal",
+      "source": "frontmatter",
+      "href": "196-first-pass-proposal.md",
+      "context": "Self-directed residency proposal that protects attention, divergence, and open-ended form."
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
+      "type": "related_to",
       "to": "research-inquiry.photography.field-corpus-001",
       "source": "frontmatter",
       "href": "field-corpus-001.md",
@@ -4369,6 +4390,38 @@
       "context": null
     },
     {
+      "from": "research-inquiry.photography.196-first-pass-proposal",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": "The proposal establishes the first residency frame for the photography notebook."
+    },
+    {
+      "from": "research-inquiry.photography.196-first-pass-proposal",
+      "type": "related_to",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../../projects/sunday-dinner-196-orientation.md",
+      "context": "The proposal draws on Jamie's practice of receiving artists and making room for their work at 196."
+    },
+    {
+      "from": "research-inquiry.photography.196-first-pass-proposal",
+      "type": "related_to",
+      "to": "research-inquiry.photography.field-corpus-001",
+      "source": "frontmatter",
+      "href": "field-corpus-001.md",
+      "context": "The planned rough field is the material for this first encounter."
+    },
+    {
+      "from": "research-inquiry.photography.196-first-pass-proposal",
+      "type": "uses_method",
+      "to": "method.structure-grows-from-material",
+      "source": "frontmatter",
+      "href": "../../methods/structure-grows-from-the-material.md",
+      "context": "The form of the project may change through sustained attention to the photographs."
+    },
+    {
       "from": "research-inquiry.photography.field-corpus-001",
       "type": "informed_by",
       "to": "method.structure-grows-from-material",
@@ -4391,6 +4444,14 @@
       "source": "frontmatter",
       "href": "../../indexes/visual-evidence.md",
       "context": "Evidence value and publication permission remain separate."
+    },
+    {
+      "from": "research-inquiry.photography.field-corpus-001",
+      "type": "related_to",
+      "to": "research-inquiry.photography.196-first-pass-proposal",
+      "source": "frontmatter",
+      "href": "196-first-pass-proposal.md",
+      "context": "The proposal gives the first encounter a time-bound but non-prescriptive residency frame."
     },
     {
       "from": "research-inquiry.ucsc-installation-title",
@@ -6741,10 +6802,19 @@
     {
       "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
       "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/notebooks/photography/196-first-pass-proposal.md",
+      "to": "research-inquiry.photography.196-first-pass-proposal",
+      "fragment": null,
+      "line": 79,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
       "toPath": "docs/knowledge-bank/notebooks/photography/field-corpus-001.md",
       "to": "research-inquiry.photography.field-corpus-001",
       "fragment": null,
-      "line": 79,
+      "line": 83,
       "kind": "link"
     },
     {

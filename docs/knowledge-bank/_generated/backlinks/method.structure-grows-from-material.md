@@ -3,7 +3,7 @@
 
 **Source commit:** `8d137ef65e921950e70f00ec89ac925e54e72d63`
 **Generation time:** 2026-07-22T09:17:43-04:00
-**Source fingerprint:** `6d9a41664eb53bda182489112a28cb1001a0e8fa2dae6e528d2f36c0a7af73f7`
+**Source fingerprint:** `5ab71aefbd6c5e023602e2060a8d5dc90344e76615c2688efca043515de6be4a`
 
 - [Participatory public systems](../../capabilities/participatory-public-systems.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
@@ -13,5 +13,6 @@
 - [Project lineages](../../indexes/project-lineages.md) - `related_to` (frontmatter)
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `uses_method` (frontmatter)
+- [196 Artists Residency proposal: The First Pass](../../notebooks/photography/196-first-pass-proposal.md) - `uses_method` (frontmatter)
 - [Field Corpus 001](../../notebooks/photography/field-corpus-001.md) - `informed_by` (frontmatter)
 - [Jamie Burkart writer's voice synthesis, July 2026](../../sources/writers-voice-synthesis-2026-07.md) - `documents` (frontmatter)

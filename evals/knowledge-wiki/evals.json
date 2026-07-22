@@ -188,7 +188,13 @@
         "photo_publication_gates_human",
         "no_public_photo_route",
         "photo_rfp_boundary_preserved",
-        "photo_source_non_mutation_preserved"
+        "photo_source_non_mutation_preserved",
+        "residency_proposal_not_contract",
+        "artistic_divergence_protected",
+        "residency_container_not_deadline",
+        "open_ended_outcome_protected",
+        "host_acceptance_preserves_artist_agency",
+        "remembered_teju_source_positioned_honestly"
       ]
     }
   ]

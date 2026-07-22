@@ -22,28 +22,52 @@ function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
-function manifestForFieldSource(fieldSource) {
+function manifestForSources(overrides = {}) {
   const manifest = JSON.parse(
     readFileSync(
       path.join(defaultRepoRoot, "evals/knowledge-wiki/photography-notebook.json"),
       "utf8"
     )
   );
-  manifest.contentBindings.field = sha256(fieldSource);
+  manifest.contentBindings.notebook = sha256(
+    overrides.notebook ?? sourceFor(manifest.notebookId)
+  );
+  manifest.contentBindings.field = sha256(
+    overrides.field ?? sourceFor(manifest.fieldId)
+  );
+  manifest.contentBindings.proposal = sha256(
+    overrides.proposal ?? sourceFor(manifest.proposalId)
+  );
   return manifest;
+}
+
+function manifestForFieldSource(fieldSource) {
+  return manifestForSources({ field: fieldSource });
 }
 
 test("photography notebook baseline passes", () => {
   const evaluation = evaluatePhotographyNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
-  assert.equal(evaluation.counts.blockingCriteria, 15);
+  assert.equal(evaluation.counts.blockingCriteria, 21);
   assert.equal(evaluation.counts.humanGates, 10);
+  assert.equal(evaluation.counts.governedRecords, 3);
 });
 
 test("a missing field corpus page fails the notebook contract", () => {
   const evaluation = evaluatePhotographyNotebook({
     result,
     recordOverrides: { "research-inquiry.photography.field-corpus-001": null }
+  });
+  assert.equal(evaluation.checks.photography_notebook_materialized, false);
+  assert.equal(evaluation.checks.photography_notebook_reachable, false);
+});
+
+test("a missing residency proposal fails the notebook contract", () => {
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    recordOverrides: {
+      "research-inquiry.photography.196-first-pass-proposal": null
+    }
   });
   assert.equal(evaluation.checks.photography_notebook_materialized, false);
   assert.equal(evaluation.checks.photography_notebook_reachable, false);
@@ -158,4 +182,88 @@ test("a coordinated final-narrative claim still fails semantic review", () => {
     sourceOverrides: { [id]: fieldSource }
   });
   assert.equal(evaluation.checks.attention_not_publication, false);
+});
+
+test("the residency proposal cannot be converted into a delivery contract", () => {
+  const id = "research-inquiry.photography.196-first-pass-proposal";
+  const proposalSource = `${sourceFor(id)}\n\nThe proposal functions as a contract.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ proposal: proposalSource }),
+    sourceOverrides: { [id]: proposalSource }
+  });
+  assert.equal(evaluation.checks.residency_proposal_not_contract, false);
+});
+
+test("changing course cannot be recast as residency failure", () => {
+  const id = "research-inquiry.photography.196-first-pass-proposal";
+  const proposalSource = `${sourceFor(id)}\n\nChanging course counts as failure.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ proposal: proposalSource }),
+    sourceOverrides: { [id]: proposalSource }
+  });
+  assert.equal(evaluation.checks.artistic_divergence_protected, false);
+  assert.equal(evaluation.checks.residency_proposal_not_contract, false);
+});
+
+test("the two-week container cannot become a mandatory deadline", () => {
+  const id = "research-inquiry.photography.196-first-pass-proposal";
+  const proposalSource = `${sourceFor(id)}\n\nTwo weeks is a mandatory deadline.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ proposal: proposalSource }),
+    sourceOverrides: { [id]: proposalSource }
+  });
+  assert.equal(evaluation.checks.residency_container_not_deadline, false);
+});
+
+test("the residency cannot require a publishable output", () => {
+  const id = "research-inquiry.photography.196-first-pass-proposal";
+  const proposalSource = `${sourceFor(id)}\n\nThe artist must produce a publishable photo portfolio.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ proposal: proposalSource }),
+    sourceOverrides: { [id]: proposalSource }
+  });
+  assert.equal(evaluation.checks.open_ended_outcome_protected, false);
+});
+
+test("the project cannot be required to remain photography", () => {
+  const id = "research-inquiry.photography.196-first-pass-proposal";
+  const proposalSource = `${sourceFor(id)}\n\nThe project must remain photography.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ proposal: proposalSource }),
+    sourceOverrides: { [id]: proposalSource }
+  });
+  assert.equal(evaluation.checks.artistic_divergence_protected, false);
+});
+
+test("host acceptance cannot become publication clearance", () => {
+  const id = "research-inquiry.photography.196-first-pass-proposal";
+  const proposalSource = `${sourceFor(id)}\n\nAcceptance authorizes publication and public use.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ proposal: proposalSource }),
+    sourceOverrides: { [id]: proposalSource }
+  });
+  assert.equal(
+    evaluation.checks.host_acceptance_preserves_artist_agency,
+    false
+  );
+});
+
+test("the remembered Teju Cole source cannot be silently marked recovered", () => {
+  const id = "research-inquiry.photography.196-first-pass-proposal";
+  const proposalSource = `${sourceFor(id)}\n\nThe exact source has been verified and recovered.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ proposal: proposalSource }),
+    sourceOverrides: { [id]: proposalSource }
+  });
+  assert.equal(
+    evaluation.checks.remembered_teju_source_positioned_honestly,
+    false
+  );
 });

@@ -25,6 +25,10 @@ relations:
     href: field-corpus-001.md
     context: First exploratory selection and close-reading sketchpad.
   - type: related_to
+    target: research-inquiry.photography.196-first-pass-proposal
+    href: 196-first-pass-proposal.md
+    context: Self-directed residency proposal that protects attention, divergence, and open-ended form.
+  - type: related_to
     target: method.structure-grows-from-material
     href: ../../methods/structure-grows-from-the-material.md
     context: The notebook lets structure emerge from attentive encounters with the material.
@@ -107,6 +111,10 @@ observations merely to make the notebook look complete.
 
 ## Open field
 
+- [196 Artists Residency proposal: The First Pass](196-first-pass-proposal.md):
+  Jamie's self-directed invitation to spend up to two weeks with the first
+  rough field. The proposal establishes intent without prescribing an output
+  or treating a change of direction as failure.
 - [Field Corpus 001](field-corpus-001.md): Jamie's planned rough-draft select
   of approximately 1,000 photographs. The private selection has not yet been
   frozen or ingested.

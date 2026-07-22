@@ -17,6 +17,10 @@ projection:
   surfaces: []
 relations:
   - type: related_to
+    target: research-inquiry.photography.196-first-pass-proposal
+    href: 196-first-pass-proposal.md
+    context: The proposal gives the first encounter a time-bound but non-prescriptive residency frame.
+  - type: related_to
     target: index.knowledge-wiki.photography-notebook
     href: README.md
     context: Governed public-safe notebook and entry contract.

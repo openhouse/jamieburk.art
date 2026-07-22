@@ -22,6 +22,20 @@ const forcedCoveragePattern =
   /(?:\bevery\s+(?:project|period|person|place)\b.{0,100}\b(?:equal|quota|coverage|represented)|\bevery\s+(?:photograph|photo|image)\b.{0,80}\b(?:must|shall|required)\b.{0,40}\bclassif)/i;
 const falseCompletionPattern =
   /(?:\b(?:private field|field corpus 001|corpus|selection)\b.{0,60}\b(?:is|has been|was|stands)\s+(?:now\s+)?(?:frozen|ingested|assembled|complete|completed|final|finalized|ready)\b|\b(?:finished|completed|finalized)\s+(?:assembling|selecting|ingesting|freezing)\b.{0,60}\b(?:field|corpus|selection)\b)/i;
+const proposalContractPattern =
+  /(?:\bproposal (?:is|becomes|functions as) (?:a )?(?:contract|deliverable agreement)\b|\bartist (?:must|shall|is required to) (?:complete|deliver|produce|follow)\b.{0,80}\b(?:proposal|promised project|deliverable)\b)/i;
+const divergenceFailurePattern =
+  /(?:\b(?:departure|deviation|changing course|a different project)\b.{0,80}\b(?:is (?:a )?(?:failure|breach|noncompliance)|counts as (?:a )?(?:failure|breach|noncompliance)|means (?:a )?(?:failure|breach|noncompliance)|constitutes (?:a )?(?:failure|breach|noncompliance))\b|\bartist will be judged\b.{0,100}\b(?:follow|complete|deliver|proposal)\b)/i;
+const forcedOutcomePattern =
+  /(?:\bmust produce\b.{0,80}\b(?:public|publishable|exhibition|book|portfolio|photograph|photo)\b|\bsuccess (?:is|will be) measured by\b.{0,80}\b(?:number|count|quantity|publishable|output)\b)/i;
+const fixedMediumPattern =
+  /(?:\bproject (?:must|shall|is required to) (?:remain|stay|continue as) (?:a )?(?:photography|photo)\b|\bchanging from photography\b.{0,50}\b(?:not allowed|forbidden|failure)\b)/i;
+const hardDeadlinePattern =
+  /(?:\b(?:two weeks|fourteen days)\b.{0,50}\b(?:hard|mandatory|required)\b.{0,20}\bdeadline\b|\bmust (?:finish|complete|deliver)\b.{0,80}\b(?:within|by the end of) (?:two weeks|fourteen days)\b)/i;
+const acceptancePublicationPattern =
+  /(?:\bacceptance (?:clears|authorizes|grants|supplies|constitutes)\b.{0,80}\b(?:publication|public use|consent|rights|license)\b|\baccepted proposal\b.{0,80}\b(?:may be published|is cleared)\b)/i;
+const falselyResolvedRememberedSourcePattern =
+  /(?:\bTeju Cole (?:wrote|said|described)\b.{0,80}\b(?:exactly|verbatim|in the essay titled)\b|\b(?:exact )?source (?:has been|is) (?:verified|confirmed|recovered)\b)/i;
 
 function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
@@ -69,15 +83,18 @@ export function evaluatePhotographyNotebook(options = {}) {
   const root = record("index.knowledge-wiki");
   const notebook = record(manifest.notebookId);
   const field = record(manifest.fieldId);
+  const proposal = record(manifest.proposalId);
   const visualIndex = record(manifest.visualIndexId);
   const notebookSource = source(manifest.notebookId);
   const fieldSource = source(manifest.fieldId);
-  const combinedSource = `${notebookSource}\n${fieldSource}`;
+  const proposalSource = source(manifest.proposalId);
+  const combinedSource = `${notebookSource}\n${fieldSource}\n${proposalSource}`;
   const rfpSource = readFileSync(path.join(repoRoot, manifest.rfpPath), "utf8");
 
   const contentBindingsCurrent =
     sha256(notebookSource) === manifest.contentBindings.notebook &&
-    sha256(fieldSource) === manifest.contentBindings.field;
+    sha256(fieldSource) === manifest.contentBindings.field &&
+    sha256(proposalSource) === manifest.contentBindings.proposal;
 
   const machineClosesHumanGate = passageMatchesGroups(combinedSource, [
     /\b(?:machine|model|AI|algorithm|automation|automated|classifier|confidence|score|agent)\b/i,
@@ -105,16 +122,24 @@ export function evaluatePhotographyNotebook(options = {}) {
     notebook?.canonical_path === manifest.notebookPath &&
     field?.kind === "research-inquiry" &&
     field?.status === "draft" &&
-    field?.canonical_path === manifest.fieldPath;
+    field?.canonical_path === manifest.fieldPath &&
+    proposal?.kind === "research-inquiry" &&
+    proposal?.status === "draft" &&
+    proposal?.canonical_path === manifest.proposalPath;
 
   const notebookReachable =
     Boolean(notebook) &&
     Boolean(field) &&
+    Boolean(proposal) &&
     root?.relations?.some((relation) => relation.target === manifest.notebookId) &&
     visualIndex?.relations?.some((relation) => relation.target === manifest.notebookId) &&
     notebook?.relations?.some((relation) => relation.target === manifest.fieldId) &&
+    notebook?.relations?.some((relation) => relation.target === manifest.proposalId) &&
+    proposal?.relations?.some((relation) => relation.target === manifest.fieldId) &&
+    proposal?.relations?.some((relation) => relation.target === "project.sunday-dinner-196") &&
     result.reachable.has(manifest.notebookId) &&
-    result.reachable.has(manifest.fieldId);
+    result.reachable.has(manifest.fieldId) &&
+    result.reachable.has(manifest.proposalId);
 
   const fieldCorpusStateTruthful =
     /planned rough-draft selection of approximately\s+1,000 photographs/i.test(fieldSource) &&
@@ -204,6 +229,50 @@ export function evaluatePhotographyNotebook(options = {}) {
     /authoritative originals, edits, metadata, and existing organization/i.test(notebookSource) &&
     /Private, unchanged, and outside this repository/i.test(notebookSource);
 
+  const proposalIsNotAContract =
+    /artist residency starts when the proposal is\s+written/i.test(proposalSource) &&
+    /proposal is not a contract/i.test(proposalSource) &&
+    /artist will not be judged by\s+whether they do what they promised/i.test(proposalSource) &&
+    /promise is to make room for the\s+need, not to predict its eventual form/i.test(proposalSource) &&
+    !proposalContractPattern.test(proposalSource) &&
+    !divergenceFailurePattern.test(proposalSource);
+
+  const artisticDivergenceProtected =
+    /permission to go where the work needs to go/i.test(proposalSource) &&
+    /Changing course is not a failure/i.test(proposalSource) &&
+    /Photography is the point of entry, not a rule governing the\s+exit/i.test(proposalSource) &&
+    /grow, wander, rest, contradict its opening\s+language, or discover another project/i.test(proposalSource) &&
+    !fixedMediumPattern.test(proposalSource) &&
+    !divergenceFailurePattern.test(proposalSource);
+
+  const residencyContainerNotDeadline =
+    /Proposed duration:\*\* Up to two weeks/i.test(proposalSource) &&
+    /Up to two weeks is a container, not a deadline/i.test(proposalSource) &&
+    /may pause, shorten,\s+continue in another form, or redirect itself/i.test(proposalSource) &&
+    /Duration does not determine success/i.test(proposalSource) &&
+    !hardDeadlinePattern.test(proposalSource);
+
+  const openEndedOutcomeProtected =
+    /These are affordances, not requirements/i.test(proposalSource) &&
+    /photographic\s+edit, an essay, a book dummy, an installation sketch, a conversation, a map, a\s+new question, or work in another medium/i.test(proposalSource) &&
+    /may yield no public object during\s+the residency/i.test(proposalSource) &&
+    /not promising a deliverable/i.test(proposalSource) &&
+    !forcedOutcomePattern.test(proposalSource);
+
+  const hostAcceptancePreservesArtistAgency =
+    /both artist and host/i.test(proposalSource) &&
+    /keep\s+those roles distinct enough/i.test(proposalSource) &&
+    /As host, I receive and accept\s+this proposal/i.test(proposalSource) &&
+    /Acceptance of this proposal is not\s+publication clearance/i.test(proposalSource) &&
+    !acceptancePublicationPattern.test(proposalSource);
+
+  const rememberedSourcePositionedHonestly =
+    /story I remember from one of Teju\s+Cole's books/i.test(proposalSource) &&
+    /exact essay, book, and page have not been recovered/i.test(proposalSource) &&
+    /not presented as a\s+verified quotation or exact paraphrase from Cole/i.test(proposalSource) &&
+    /open librarian inquiry/i.test(proposalSource) &&
+    !falselyResolvedRememberedSourcePattern.test(proposalSource);
+
   const checks = {
     photography_notebook_materialized: notebookAreaMaterialized,
     photography_notebook_reachable: notebookReachable,
@@ -219,7 +288,13 @@ export function evaluatePhotographyNotebook(options = {}) {
     photo_publication_gates_human: publicationGatesRemainHuman,
     no_public_photo_route: noPublicPhotoRoute,
     photo_rfp_boundary_preserved: rfpBoundaryPreserved,
-    photo_source_non_mutation_preserved: nextPassDoesNotMutateSource
+    photo_source_non_mutation_preserved: nextPassDoesNotMutateSource,
+    residency_proposal_not_contract: proposalIsNotAContract,
+    artistic_divergence_protected: artisticDivergenceProtected,
+    residency_container_not_deadline: residencyContainerNotDeadline,
+    open_ended_outcome_protected: openEndedOutcomeProtected,
+    host_acceptance_preserves_artist_agency: hostAcceptancePreservesArtistAgency,
+    remembered_teju_source_positioned_honestly: rememberedSourcePositionedHonestly
   };
 
   return {
@@ -231,7 +306,7 @@ export function evaluatePhotographyNotebook(options = {}) {
     counts: {
       blockingCriteria: Object.keys(checks).length,
       humanGates: manifest.humanGates.length,
-      governedRecords: 2
+      governedRecords: 3
     }
   };
 }

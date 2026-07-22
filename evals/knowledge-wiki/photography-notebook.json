@@ -1,15 +1,18 @@
 {
   "suite": "knowledge-wiki-photography-field-notebook",
-  "version": 1,
+  "version": 2,
   "notebookId": "index.knowledge-wiki.photography-notebook",
   "notebookPath": "docs/knowledge-bank/notebooks/photography/README.md",
   "fieldId": "research-inquiry.photography.field-corpus-001",
   "fieldPath": "docs/knowledge-bank/notebooks/photography/field-corpus-001.md",
+  "proposalId": "research-inquiry.photography.196-first-pass-proposal",
+  "proposalPath": "docs/knowledge-bank/notebooks/photography/196-first-pass-proposal.md",
   "visualIndexId": "index.knowledge-wiki.visual-evidence",
   "rfpPath": "rfps/0002-lifetime-photo-archive-fieldwork.md",
   "contentBindings": {
-    "notebook": "bfeed1201c9b494ee0cce1606fb4b3fe8caf7f52150f7183cd4507ca43b21644",
-    "field": "413ddbd1c29502565748f6afe6f8d1bb192066dc8abdbf338bd8a6462fee338c"
+    "notebook": "09cfc65e2870af24d89388749b71d3cf44e5ee63d8b87d45f5a4d1be867a8a97",
+    "field": "5944293e74dfb2ff2d3a29268e16949d786897c41872611ec4343ad8cac9991a",
+    "proposal": "181f98978db8348f3c144b07dd20de3a59fe98acc0c9d612cf3daa11560fe7ef"
   },
   "principle": "The notebook creates room for play and situated looking while keeping attention, evidence, clearance, and publication as separate states.",
   "humanGates": [
