@@ -114,7 +114,7 @@ unanswered questions; they do not require premature interpretation.
 ## Current entries
 
 - [Opening the photography notebook, July 22, 2026](../research-runs/photography-notebook-opening-2026-07-22.md)
-- [The archive answers back - a 196 photography residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md)
+- [The archive answers back - a 196 photography residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md) - accepted and welcomed by Jamie on July 22, 2026; the form remains open.
 
 ## Private working material
 

@@ -9,7 +9,7 @@ last_reviewed: 2026-07-22
 review_by: 2026-08-22
 canonical_path: docs/knowledge-bank/research-runs/photography-first-pass-residency-proposal-2026-07-22.md
 summary: Jamie's proposal to give the first photographic archive pass up to two weeks of residency time at 196, with declared intent, no fixed deliverable, and explicit permission for the work to discover another form.
-human_review: governed-open
+human_review: completed
 projection_status: hold
 projection:
   status: hold
@@ -58,6 +58,7 @@ source_encounter:
   new_observations:
     - Jamie's remembered residency example can now be identified as Cole's Far Away From Here process with strong source support.
     - The source supports change of artistic direction, while the proposal-as-permission philosophy remains Jamie's own 196 practice.
+    - On July 22, 2026, Jamie explicitly accepted the proposal and welcomed the residency to begin.
   changed_interpretations:
     - The first pass is better framed as a residency than as a selection task because protected time, attention, place, and permission to deviate are part of the method.
   contradictions:
@@ -210,7 +211,16 @@ Success is that the voice asking for this time was heard; that the conditions
 for sustained attention were made real; that the archive was approached with
 curiosity and care; and that the work was allowed to go where it needed to go.
 
-## Acceptance
+## Acceptance record
+
+On July 22, 2026, after reviewing this proposal, Jamie Burkart, acting as both
+the artist and the host of 196, replied: "Your proposal is accepted. Welcome."
+
+This is a documented human decision, not an inference from the proposal's
+wording or an acceptance issued by an AI system. It gives the protected
+first-pass residency permission to begin. It does not certify that the
+residency has occurred, set a compulsory start or end date, promise an outcome,
+or approve an image, interpretation, claim, or public surface.
 
 The 196 practice receives this proposal as accepted. The time is legitimate.
 The questions deserve nourishment. Deviation, incompletion, rest, refusal, and

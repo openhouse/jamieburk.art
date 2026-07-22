@@ -171,6 +171,7 @@
         "residency_time_place_bounded",
         "hospitality_outcomes_not_inferred",
         "teju_process_source_bounded",
+        "residency_human_acceptance_recorded",
         "proposal_acceptance_not_publication",
         "photography_human_gates_intact",
         "proposal_eval_nonprescriptive",

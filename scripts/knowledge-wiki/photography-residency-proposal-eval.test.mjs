@@ -24,7 +24,7 @@ test("photography residency proposal baseline passes", () => {
   const evaluation = evaluatePhotographyResidencyProposal({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.equal(evaluation.counts.requiredRecords, 4);
-  assert.equal(evaluation.counts.blockingCriteria, 15);
+  assert.equal(evaluation.counts.blockingCriteria, 16);
 });
 
 test("a missing proposal fails materialization", () => {
@@ -144,6 +144,28 @@ test("the Cole process cannot become endorsement of 196", () => {
     sourceOverrides: { [proposalId]: mutated }
   });
   assert.equal(evaluation.checks.teju_process_source_bounded, false);
+});
+
+test("the recorded human acceptance cannot return to an open review state", () => {
+  const proposal = cloneRecord(proposalId);
+  proposal.human_review = "governed-open";
+  const evaluation = evaluatePhotographyResidencyProposal({
+    result,
+    recordOverrides: { [proposal.id]: proposal }
+  });
+  assert.equal(evaluation.checks.residency_human_acceptance_recorded, false);
+});
+
+test("AI cannot substitute itself for Jamie's acceptance", () => {
+  const mutated = source(proposalId).replace(
+    /Jamie Burkart, acting as both\s+the artist and the host of 196, replied: "Your proposal is accepted\. Welcome\."/,
+    'Codex, acting as an AI evaluator, replied: "Your proposal is accepted. Welcome."'
+  );
+  const evaluation = evaluatePhotographyResidencyProposal({
+    result,
+    sourceOverrides: { [proposalId]: mutated }
+  });
+  assert.equal(evaluation.checks.residency_human_acceptance_recorded, false);
 });
 
 test("proposal acceptance cannot become publication clearance", () => {

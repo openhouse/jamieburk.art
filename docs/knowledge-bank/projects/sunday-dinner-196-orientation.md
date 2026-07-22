@@ -41,5 +41,6 @@ record, chronology, and privacy boundaries separate.
 
 The [photography first-pass residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md)
 uses the 196 hosting practice as a present-tense container for Jamie's own
-archive work. It is an accepted experiment, not a historical resident outcome
-or a publication decision.
+archive work. Jamie explicitly accepted and welcomed the proposal on July 22,
+2026. That human acceptance opens the experiment; it is not a historical
+resident outcome, a required deliverable, or a publication decision.

@@ -48,6 +48,9 @@ was meaningful.
   experience or that hosting caused another person's outcomes.
 - The Teju Cole source supports a change of artistic direction; it cannot become
   a claim that Cole authored, modeled, or endorsed the 196 practice.
+- The acceptance record identifies Jamie's dated decision as the human artist
+  and host. AI may preserve and test that record but cannot issue, revoke, or
+  simulate the acceptance.
 - Proposal acceptance authorizes protected experimentation only. It cannot
   approve an image, interpretation, claim, caption, or public surface.
 - Photography safety, authorship, rights, consent, collective-credit, and
@@ -76,4 +79,6 @@ through `npm run wiki:test`.
 
 A green result means the conditions for play remain available. It does not mean
 the residency has occurred, that the rough field exists, that a photograph is
-good, or that any result should be published.
+good, or that any result should be published. The proposal's human acceptance
+is recorded; every later rights, consent, safety, interpretation, and
+publication decision remains separate.

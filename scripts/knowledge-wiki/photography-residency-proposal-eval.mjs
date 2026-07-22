@@ -120,7 +120,9 @@ export function evaluatePhotographyResidencyProposal(options = {}) {
     /hospitality is not an outcome claim/i.test(proposalSource) &&
     /does not claim that every 196 resident had the same experience/i.test(proposalSource) &&
     /hosting caused another person's outcomes/i.test(evaluationSource) &&
-    /accepted experiment, not a historical resident outcome/i.test(projectSource);
+    /human acceptance opens the experiment; it is not a historical resident outcome, a required deliverable, or a publication decision/i.test(
+      projectSource
+    );
 
   const tejuProcessSourceBounded =
     processSource?.canonical_url ===
@@ -134,6 +136,19 @@ export function evaluatePhotographyResidencyProposal(options = {}) {
     /lists \*Far Away From Here\*/i.test(catalogSourceText) &&
     /does not claim that Cole stated the 196 residency philosophy, modeled this program, or endorsed this project/i.test(
       proposalSource
+    );
+
+  const humanAcceptanceRecorded =
+    proposal?.human_review === "completed" &&
+    /on July 22, 2026, after reviewing this proposal, Jamie Burkart, acting as both the artist and the host of 196, replied: "Your proposal is accepted\. Welcome\."/i.test(
+      proposalSource
+    ) &&
+    /documented human decision, not an inference from the proposal's wording or an acceptance issued by an AI system/i.test(
+      proposalSource
+    ) &&
+    /does not certify that the residency has occurred/i.test(proposalSource) &&
+    /AI may preserve and test that record but cannot issue, revoke, or simulate the acceptance/i.test(
+      evaluationSource
     );
 
   const acceptanceNotPublication =
@@ -207,6 +222,7 @@ export function evaluatePhotographyResidencyProposal(options = {}) {
     residency_time_place_bounded: timePlaceBounded,
     hospitality_outcomes_not_inferred: hospitalityOutcomesNotInferred,
     teju_process_source_bounded: tejuProcessSourceBounded,
+    residency_human_acceptance_recorded: humanAcceptanceRecorded,
     proposal_acceptance_not_publication: acceptanceNotPublication,
     photography_human_gates_intact: photographyHumanGatesIntact,
     proposal_eval_nonprescriptive: proposalEvalNonprescriptive,
