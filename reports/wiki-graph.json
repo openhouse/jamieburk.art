@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T09:30:06-04:00",
-  "sourceCommit": "df993dca3443f5528eb3921bfe91131809a2ec91",
-  "sourceFingerprint": "66f12ad6f723f1da92feeadc315c3984ac33a0a0e5aba6617d0f45a2f4b57a74",
+  "generatedAt": "2026-07-22T15:30:03-04:00",
+  "sourceCommit": "bdc27b3e63ba4b378a985eec2df02caf1a318f52",
+  "sourceFingerprint": "28111bc3d6623d2477d2f633d61cecda99fdf0e431577c1218154098da7e1b74",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -238,6 +238,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "evaluation.photo-notebook.local-photos-canary.2026-07-22",
+      "path": "docs/knowledge-bank/notebooks/photography/field-notes/first-local-photos-canary.md",
+      "title": "First local Apple Photos canary",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe receipt note for the first one-image, membership-only test of the private photography residency workspace.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
     },
     {
       "id": "event.nycc.constituent-services-hackathon.2016",
@@ -2027,6 +2040,30 @@
       "context": null
     },
     {
+      "from": "evaluation.photo-notebook.local-photos-canary.2026-07-22",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photo-notebook",
+      "source": "frontmatter",
+      "href": "../README.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.photo-notebook.local-photos-canary.2026-07-22",
+      "type": "related_to",
+      "to": "index.photo-notebook.proposal.first-pass-196",
+      "source": "frontmatter",
+      "href": "../proposals/first-pass-at-196.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.photo-notebook.local-photos-canary.2026-07-22",
+      "type": "uses_method",
+      "to": "method.photo-notebook.field-note",
+      "source": "frontmatter",
+      "href": "../field-note-template.md",
+      "context": null
+    },
+    {
       "from": "event.nycc.constituent-services-hackathon.2016",
       "type": "resulted_in",
       "to": "project.callnyc",
@@ -2797,6 +2834,14 @@
     {
       "from": "index.knowledge-wiki.photo-notebook",
       "type": "related_to",
+      "to": "evaluation.photo-notebook.local-photos-canary.2026-07-22",
+      "source": "frontmatter",
+      "href": "field-notes/first-local-photos-canary.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photo-notebook",
+      "type": "related_to",
       "to": "index.knowledge-wiki.visual-evidence",
       "source": "frontmatter",
       "href": "../../indexes/visual-evidence.md",
@@ -3216,6 +3261,14 @@
       "to": "project.sunday-dinner-196",
       "source": "frontmatter",
       "href": "../../../projects/sunday-dinner-196-orientation.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-notebook.proposal.first-pass-196",
+      "type": "related_to",
+      "to": "evaluation.photo-notebook.local-photos-canary.2026-07-22",
+      "source": "frontmatter",
+      "href": "../field-notes/first-local-photos-canary.md",
       "context": null
     },
     {
@@ -6996,10 +7049,19 @@
     {
       "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
       "from": "index.knowledge-wiki.photo-notebook",
+      "toPath": "docs/knowledge-bank/notebooks/photography/field-notes/first-local-photos-canary.md",
+      "to": "evaluation.photo-notebook.local-photos-canary.2026-07-22",
+      "fragment": null,
+      "line": 103,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "index.knowledge-wiki.photo-notebook",
       "toPath": "docs/knowledge-bank/notebooks/photography/open-questions.md",
       "to": "research-inquiry.photo-notebook.open-questions",
       "fragment": null,
-      "line": 103,
+      "line": 104,
       "kind": "link"
     },
     {
@@ -7008,7 +7070,7 @@
       "toPath": "docs/knowledge-bank/notebooks/photography/field-note-template.md",
       "to": "method.photo-notebook.field-note",
       "fragment": null,
-      "line": 104,
+      "line": 105,
       "kind": "link"
     },
     {
@@ -7017,7 +7079,7 @@
       "toPath": "docs/knowledge-bank/notebooks/photography/sketches/release-water-salt.md",
       "to": "index.photo-notebook.sketch.release-water-salt",
       "fragment": null,
-      "line": 105,
+      "line": 106,
       "kind": "link"
     },
     {
@@ -7026,7 +7088,7 @@
       "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "to": "index.knowledge-wiki.visual-evidence",
       "fragment": null,
-      "line": 106,
+      "line": 107,
       "kind": "link"
     },
     {
@@ -7035,7 +7097,7 @@
       "toPath": "rfps/0002-lifelong-photo-archive-selection-and-publication.md",
       "to": null,
       "fragment": null,
-      "line": 107,
+      "line": 108,
       "kind": "link"
     },
     {
