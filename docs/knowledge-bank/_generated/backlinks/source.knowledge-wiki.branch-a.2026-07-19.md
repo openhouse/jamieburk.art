@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Frozen Knowledge Wiki branch A
 
-**Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
-**Generation time:** 2026-07-21T17:51:37-04:00
+**Source commit:** `cde24f29110c604fcb855139beadc426b6c63f28`
+**Generation time:** 2026-07-22T09:02:44-04:00
 **Source fingerprint:** `eda16d869f6b313ffdb573588bb5b10515aa08b8826dcf7ad3f73a2b3e65c1f8`
 
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `informed_by` (frontmatter)
