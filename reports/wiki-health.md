@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki health
 
-**Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
-**Generation time:** 2026-07-21T17:51:37-04:00
-**Source fingerprint:** `fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a`
+**Source commit:** `d2a87898290d987eeab59e440512e04403dfbc91`
+**Generation time:** 2026-07-22T18:54:44-04:00
+**Source fingerprint:** `48b7897fabc676ad79eb346a335a54c232e9a87b97ff2eb453363dee4b855683`
 
 Wiki health is reported as hard gates, diagnostics, and human authority gates. These are not averaged into one synthetic score.
 
@@ -15,11 +15,11 @@ Wiki health is reported as hard gates, diagnostics, and human authority gates. T
 
 ## Diagnostics
 
-- Governed records: 107
-- Typed relations: 427
+- Governed records: 112
+- Typed relations: 447
 - Evidence relations: 8
-- Prose links: 291
-- Root-reachable governed records: 106
+- Prose links: 298
+- Root-reachable governed records: 111
 - Type-aware orphans: 0
 - Type-aware dead ends: 0
 - Wanted pages: 6

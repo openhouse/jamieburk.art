@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T17:51:37-04:00",
-  "sourceCommit": "76a4328d235b4c97f1d61beab8a982fe12015dff",
-  "sourceFingerprint": "fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a",
+  "generatedAt": "2026-07-22T18:54:44-04:00",
+  "sourceCommit": "d2a87898290d987eeab59e440512e04403dfbc91",
+  "sourceFingerprint": "48b7897fabc676ad79eb346a335a54c232e9a87b97ff2eb453363dee4b855683",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -606,6 +606,71 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "notebook.photography",
+      "path": "docs/knowledge-bank/notebooks/photography/README.md",
+      "title": "Photography working notebook",
+      "kind": "notebook",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe working notebook for the versioned, experimental photo layer and its relationship to the Knowledge Wiki.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "notebook.photography.field.v01",
+      "path": "docs/knowledge-bank/notebooks/photography/field-v01.md",
+      "title": "Photography field v01",
+      "kind": "notebook",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Assembly record for a rough 1,000-photo editor field drawn from Jamie's lifetime archive.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-08-22"
+    },
+    {
+      "id": "notebook.photography.sequence-sketches",
+      "path": "docs/knowledge-bank/notebooks/photography/sequence-sketches.md",
+      "title": "Photography sequence sketches",
+      "kind": "notebook",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Competing provisional arrangements for testing what the photography can make available to a stranger.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "notebook.photography.templates",
+      "path": "docs/knowledge-bank/notebooks/photography/templates.md",
+      "title": "Photography notebook templates",
+      "kind": "notebook",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe templates that keep visual observation, memory, interpretation, research, rights, and publication decisions separate.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "notebook.photography.vocabulary",
+      "path": "docs/knowledge-bank/notebooks/photography/editorial-vocabulary.md",
+      "title": "Provisional photography vocabulary",
+      "kind": "notebook",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Revisable visual lenses for noticing how Jamie's projects make participation, care, agency, and transformation perceptible.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
     },
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
@@ -1997,6 +2062,14 @@
     {
       "from": "index.knowledge-wiki",
       "type": "related_to",
+      "to": "notebook.photography",
+      "source": "frontmatter",
+      "href": "notebooks/photography/README.md",
+      "context": "Public-safe working notebook for the experimental photography layer."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
       "to": "project.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "projects/nyc-artist-coalition-2017.md",
@@ -2432,6 +2505,14 @@
       "to": "method.structure-grows-from-material",
       "source": "frontmatter",
       "href": "../methods/structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.living-archive",
+      "type": "related_to",
+      "to": "notebook.photography",
+      "source": "frontmatter",
+      "href": "../notebooks/photography/README.md",
       "context": null
     },
     {
@@ -3013,6 +3094,14 @@
     {
       "from": "index.knowledge-wiki.visual-evidence",
       "type": "related_to",
+      "to": "notebook.photography",
+      "source": "frontmatter",
+      "href": "../notebooks/photography/README.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence",
+      "type": "related_to",
       "to": "person.jamie-burkart",
       "source": "frontmatter",
       "href": "../people/jamie-burkart.md",
@@ -3400,6 +3489,142 @@
       "to": "index.knowledge-wiki.scenes-and-places-of-work",
       "source": "frontmatter",
       "href": "../indexes/scenes-and-places-of-work.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "../../indexes/visual-evidence.md",
+      "context": "The governed index keeps evidence value, rights, consent, and public display separate."
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
+      "to": "notebook.photography.field.v01",
+      "source": "frontmatter",
+      "href": "field-v01.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
+      "to": "notebook.photography.sequence-sketches",
+      "source": "frontmatter",
+      "href": "sequence-sketches.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
+      "to": "notebook.photography.templates",
+      "source": "frontmatter",
+      "href": "templates.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
+      "to": "notebook.photography.vocabulary",
+      "source": "frontmatter",
+      "href": "editorial-vocabulary.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography",
+      "type": "uses_method",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "../../methods/collective-credit-and-protected-absence.md",
+      "context": "People remain subjects, and protected absence is an editorial option."
+    },
+    {
+      "from": "notebook.photography",
+      "type": "uses_method",
+      "to": "method.structure-grows-from-material",
+      "source": "frontmatter",
+      "href": "../../methods/structure-grows-from-the-material.md",
+      "context": "The notebook permits its vocabulary and structures to develop through close reading."
+    },
+    {
+      "from": "notebook.photography.field.v01",
+      "type": "part_of",
+      "to": "notebook.photography",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.field.v01",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "../../indexes/visual-evidence.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.sequence-sketches",
+      "type": "part_of",
+      "to": "notebook.photography",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.sequence-sketches",
+      "type": "related_to",
+      "to": "notebook.photography.vocabulary",
+      "source": "frontmatter",
+      "href": "editorial-vocabulary.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.templates",
+      "type": "part_of",
+      "to": "notebook.photography",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.templates",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "../../indexes/visual-evidence.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.templates",
+      "type": "uses_method",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "../../methods/collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.vocabulary",
+      "type": "part_of",
+      "to": "notebook.photography",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.vocabulary",
+      "type": "related_to",
+      "to": "project.waterways-participatory-art",
+      "source": "frontmatter",
+      "href": "../../projects/waterways-participatory-art-orientation.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.vocabulary",
+      "type": "uses_method",
+      "to": "method.participation-and-relational-infrastructure",
+      "source": "frontmatter",
+      "href": "../../methods/participation-and-relational-infrastructure.md",
       "context": null
     },
     {
@@ -4926,7 +5151,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 115,
+      "line": 117,
       "kind": "link"
     },
     {
@@ -4935,7 +5160,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 116,
+      "line": 118,
       "kind": "link"
     },
     {
@@ -4944,7 +5169,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 119,
+      "line": 121,
       "kind": "link"
     },
     {
@@ -4953,7 +5178,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 123,
+      "line": 125,
       "kind": "link"
     },
     {
@@ -4962,7 +5187,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 130,
+      "line": 132,
       "kind": "link"
     },
     {
@@ -4971,7 +5196,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 135,
+      "line": 137,
       "kind": "link"
     },
     {
@@ -4980,7 +5205,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 141,
+      "line": 143,
       "kind": "link"
     },
     {
@@ -4989,7 +5214,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 146,
+      "line": 148,
       "kind": "link"
     },
     {
@@ -4998,7 +5223,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 152,
+      "line": 154,
       "kind": "link"
     },
     {
@@ -5007,7 +5232,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 154,
+      "line": 156,
       "kind": "link"
     },
     {
@@ -5016,7 +5241,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 160,
+      "line": 162,
       "kind": "link"
     },
     {
@@ -5025,7 +5250,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 162,
+      "line": 164,
       "kind": "link"
     },
     {
@@ -5034,7 +5259,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 170,
+      "line": 172,
       "kind": "link"
     },
     {
@@ -5043,7 +5268,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 176,
+      "line": 178,
       "kind": "link"
     },
     {
@@ -5052,7 +5277,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 178,
+      "line": 180,
       "kind": "link"
     },
     {
@@ -5061,7 +5286,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 184,
+      "line": 186,
       "kind": "link"
     },
     {
@@ -5070,7 +5295,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 190,
+      "line": 192,
       "kind": "link"
     },
     {
@@ -5079,7 +5304,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 196,
+      "line": 198,
       "kind": "link"
     },
     {
@@ -5088,7 +5313,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 202,
+      "line": 204,
       "kind": "link"
     },
     {
@@ -5097,7 +5322,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 208,
+      "line": 210,
       "kind": "link"
     },
     {
@@ -5106,7 +5331,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 214,
+      "line": 216,
       "kind": "link"
     },
     {
@@ -5115,7 +5340,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 216,
+      "line": 218,
       "kind": "link"
     },
     {
@@ -5124,7 +5349,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 222,
+      "line": 224,
       "kind": "link"
     },
     {
@@ -5133,7 +5358,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 227,
+      "line": 229,
       "kind": "link"
     },
     {
@@ -5142,7 +5367,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 229,
+      "line": 231,
       "kind": "link"
     },
     {
@@ -5151,7 +5376,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 236,
+      "line": 238,
       "kind": "link"
     },
     {
@@ -5160,7 +5385,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 238,
+      "line": 240,
       "kind": "link"
     },
     {
@@ -5169,7 +5394,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 244,
+      "line": 246,
       "kind": "link"
     },
     {
@@ -5178,7 +5403,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 246,
+      "line": 248,
       "kind": "link"
     },
     {
@@ -5187,7 +5412,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 251,
+      "line": 253,
       "kind": "link"
     },
     {
@@ -5196,16 +5421,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 253,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
-      "to": null,
-      "fragment": null,
-      "line": 259,
+      "line": 255,
       "kind": "link"
     },
     {
@@ -5220,7 +5436,7 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
+      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
       "to": null,
       "fragment": null,
       "line": 261,
@@ -5229,16 +5445,16 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 268,
+      "line": 263,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
       "line": 270,
@@ -5247,19 +5463,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
+      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
-      "line": 276,
+      "line": 272,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 279,
+      "line": 278,
       "kind": "link"
     },
     {
@@ -5274,10 +5490,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 281,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 284,
+      "line": 286,
       "kind": "link"
     },
     {
@@ -5286,7 +5511,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 285,
+      "line": 287,
       "kind": "link"
     },
     {
@@ -5337,10 +5562,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "to": "notebook.photography",
+      "fragment": null,
+      "line": 42,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/indexes/project-lineages.md",
       "to": "index.knowledge-wiki.project-lineages",
       "fragment": null,
-      "line": 42,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -5349,7 +5583,7 @@
       "toPath": "docs/knowledge-bank/indexes/decision-records.md",
       "to": "index.knowledge-wiki.decision-records",
       "fragment": null,
-      "line": 44,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -5358,7 +5592,7 @@
       "toPath": "docs/knowledge-bank/indexes/family-closure.md",
       "to": "index.knowledge-wiki.family-closure",
       "fragment": null,
-      "line": 46,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -5367,7 +5601,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 49,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -5376,7 +5610,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 52,
+      "line": 54,
       "kind": "link"
     },
     {
@@ -5385,7 +5619,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 58,
+      "line": 60,
       "kind": "link"
     },
     {
@@ -6093,10 +6327,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
       "from": "index.knowledge-wiki.living-archive",
+      "toPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "to": "notebook.photography",
+      "fragment": null,
+      "line": 50,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
+      "from": "index.knowledge-wiki.living-archive",
       "toPath": "docs/knowledge-bank/methods/situated-source-rereading.md",
       "to": "method.situated-source-rereading",
       "fragment": null,
-      "line": 53,
+      "line": 54,
       "kind": "link"
     },
     {
@@ -6105,7 +6348,7 @@
       "toPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
       "to": "research.foundational-source-return.2026-07-19",
       "fragment": null,
-      "line": 54,
+      "line": 55,
       "kind": "link"
     },
     {
@@ -6114,7 +6357,7 @@
       "toPath": "docs/knowledge-bank/research-runs/interpretive-layer-source-return-2026-07-19.md",
       "to": "research.interpretive-layer-source-return.2026-07-19",
       "fragment": null,
-      "line": 55,
+      "line": 56,
       "kind": "link"
     },
     {
@@ -6123,7 +6366,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md",
       "to": "research-inquiry.ucsc-installation-title",
       "fragment": null,
-      "line": 56,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -6132,7 +6375,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 57,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -6496,6 +6739,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/visual-evidence.md",
+      "from": "index.knowledge-wiki.visual-evidence",
+      "toPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "to": "notebook.photography",
+      "fragment": null,
+      "line": 43,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/what-the-work-was-up-against.md",
       "from": "index.knowledge-wiki.pressures",
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
@@ -6619,6 +6871,42 @@
       "to": "capability.technical-operations",
       "fragment": null,
       "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/notebooks/photography/field-v01.md",
+      "to": "notebook.photography.field.v01",
+      "fragment": null,
+      "line": 58,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/notebooks/photography/editorial-vocabulary.md",
+      "to": "notebook.photography.vocabulary",
+      "fragment": null,
+      "line": 59,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/notebooks/photography/sequence-sketches.md",
+      "to": "notebook.photography.sequence-sketches",
+      "fragment": null,
+      "line": 60,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/notebooks/photography/templates.md",
+      "to": "notebook.photography.templates",
+      "fragment": null,
+      "line": 61,
       "kind": "link"
     },
     {
