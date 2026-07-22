@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-22T10:34:25-04:00",
   "sourceCommit": "20c284ae54feffa213864cae257898c8fb5003d1",
-  "sourceFingerprint": "c493f5d006b35a18605ff42d3a64e31e1792e28a44803746011fc322f0adb41c",
+  "sourceFingerprint": "380cadfb19c16e2efb820186f7e10b62ef9766b6aee403820405850e4fb8aff1",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -1125,7 +1125,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Public-safe record of the residency's first bounded Apple Photos encounter: one privately inspected photograph placed in one private working album, with publication held.\n",
+      "summary": "Public-safe record of the residency's first two bounded Apple Photos encounters: two privately inspected photographs held together in one private working album, with publication held.\n",
       "aliases": [
         "Residency 001 first archive encounter"
       ],
@@ -2901,7 +2901,7 @@
       "to": "research.photography.proof-of-life.2026-07-22",
       "source": "frontmatter",
       "href": "proof-of-life.md",
-      "context": "First bounded archive encounter and one-image private working-album proof."
+      "context": "First two bounded archive encounters and exact two-image private working-album proof."
     },
     {
       "from": "index.knowledge-wiki.photography-notebook",
@@ -5057,7 +5057,7 @@
       "to": "research-inquiry.photography.field-set-001",
       "source": "frontmatter",
       "href": "field-set-001.md",
-      "context": "A one-image systems proof, not the proposed thousand-image field."
+      "context": "A two-image systems proof, not the proposed thousand-image field."
     },
     {
       "from": "research.photography.proof-of-life.2026-07-22",
@@ -5345,7 +5345,7 @@
       "to": "research.photography.proof-of-life.2026-07-22",
       "source": "frontmatter",
       "href": "../photography/proof-of-life.md",
-      "context": "Source boundary used by the first one-image archive encounter."
+      "context": "Source boundary used by the first two bounded archive encounters."
     },
     {
       "from": "source.vault.communication-history.metadata",
@@ -7417,7 +7417,7 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 104,
+      "line": 105,
       "kind": "link"
     },
     {
@@ -7453,7 +7453,7 @@
       "toPath": "docs/knowledge-bank/sources/apple-photos-archive-metadata.md",
       "to": "source.vault.apple-photos.metadata",
       "fragment": null,
-      "line": 39,
+      "line": 40,
       "kind": "link"
     },
     {
@@ -7462,7 +7462,7 @@
       "toPath": "docs/knowledge-bank/photography/field-set-001.md",
       "to": "research-inquiry.photography.field-set-001",
       "fragment": null,
-      "line": 41,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -7471,7 +7471,7 @@
       "toPath": "docs/knowledge-bank/photography/editorial-grammar.md",
       "to": "method.photography.invitation-container-emergence",
       "fragment": null,
-      "line": 43,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -7480,7 +7480,7 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 45,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -7489,7 +7489,7 @@
       "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "to": "index.knowledge-wiki.visual-evidence",
       "fragment": null,
-      "line": 47,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -7498,7 +7498,7 @@
       "toPath": "docs/knowledge-bank/sources/teju-cole-far-away-from-here-2015.md",
       "to": "source.teju-cole.far-away-from-here.2015",
       "fragment": null,
-      "line": 50,
+      "line": 51,
       "kind": "link"
     },
     {

@@ -33,7 +33,7 @@ relations:
   - type: related_to
     target: research.photography.proof-of-life.2026-07-22
     href: proof-of-life.md
-    context: First bounded archive encounter and one-image private working-album proof.
+    context: First two bounded archive encounters and exact two-image private working-album proof.
   - type: related_to
     target: source.vault.apple-photos.metadata
     href: ../sources/apple-photos-archive-metadata.md
@@ -99,8 +99,9 @@ count, completed intake, rights-cleared set, or promise of publication.
   decision that begins the residency without converting it into a deliverables
   contract or publication approval.
 - [Proof of Life](proof-of-life.md) records the first private archive encounter:
-  one locally inspected photograph, one exact working-album membership, and no
-  public asset or publication decision.
+  an initial one-image threshold followed by a repaired-helper return, two
+  locally inspected photographs held in one exact working album, and no public
+  asset or publication decision.
 - [Apple Photos archive boundary](../sources/apple-photos-archive-metadata.md)
   records what the private source can support and what must remain outside Git.
 - [Field Set 001](field-set-001.md) records the purpose, current state, and

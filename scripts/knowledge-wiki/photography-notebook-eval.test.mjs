@@ -23,7 +23,7 @@ test("photography working notebook baseline passes", () => {
   assert.deepEqual(evaluation.counts, {
     records: 9,
     entryHeadings: 11,
-    blockingCriteria: 25
+    blockingCriteria: 29
   });
 });
 
@@ -232,7 +232,7 @@ test("notebook IDs cannot enter the public registry implicitly", () => {
 test("Proof of Life cannot stand in for the unassembled Field Set 001", () => {
   const id = "research.photography.proof-of-life.2026-07-22";
   const mutated = sourceFor(id).replace(
-    /one-image systems proof and a first notebook encounter/i,
+    /small systems proof and a first notebook encounter/i,
     "complete Field Set 001"
   );
   const evaluation = evaluatePhotographyNotebook({
@@ -284,17 +284,68 @@ test("a People association cannot become publication permission", () => {
   );
 });
 
-test("a blue macOS switch cannot be reported as an operational helper", () => {
+test("the repaired helper cannot erase the earlier authorization failure", () => {
   const id = "research.photography.proof-of-life.2026-07-22";
   const mutated = sourceFor(id).replace(
-    /current\s+version-2 PhotoKit helper continued to report denied access/i,
-    "current version-2 PhotoKit helper is fully operational"
+    /The earlier version-2 helper failure remains part of the history\./i,
+    "The helper always worked and no repair was needed."
   );
   const evaluation = evaluatePhotographyNotebook({
     result,
     sourceOverrides: { [id]: mutated }
   });
   assert.equal(evaluation.checks.photo_fieldwork_tooling_status_is_truthful, false);
+});
+
+test("the live helper canary cannot be removed from the return", () => {
+  const id = "research.photography.proof-of-life.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /zero-image, no-write live authorization canary against the frozen source/i,
+    "an unbounded helper launch"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.helper_return_inspection_is_bounded, false);
+});
+
+test("the second image cannot displace the first album member", () => {
+  const id = "research.photography.proof-of-life.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /preserved the first album member/i,
+    "replaced the first album member"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.proof_of_life_exact_two_preserves_first, false);
+});
+
+test("a scripting readback cannot be promoted to catalog-level verification", () => {
+  const id = "research.photography.proof-of-life.2026-07-22";
+  const mutated = sourceFor(id).replace(
+    /are not described\s+as equivalent to independent\s+catalog-level verification/i,
+    "are fully equivalent to independent catalog-level verification"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.helper_verification_tiers_remain_truthful, false);
+});
+
+test("helper success cannot clear either photograph for publication", () => {
+  const id = "research.photography.proof-of-life.2026-07-22";
+  const proof = cloneRecord(id);
+  proof.projection = { status: "active", surfaces: ["/work"] };
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    recordOverrides: { [id]: proof }
+  });
+  assert.equal(evaluation.checks.helper_success_does_not_clear_publication, false);
+  assert.equal(evaluation.checks.photography_projection_remains_hold, false);
 });
 
 test("the private photo archive cannot be converted into a public collection", () => {

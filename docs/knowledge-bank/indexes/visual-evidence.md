@@ -93,5 +93,5 @@ rights, consent, attribution, factual scope, or publication authority.
 
 [Proof of Life](../photography/proof-of-life.md) is the notebook's first
 situated archive encounter. Its exact private membership was created and read
-back inside the residency workspace, while the photograph, identifiers,
+back inside the residency workspace, while both photographs, identifiers,
 receipts, rights state, and publication decision remain held outside public Git.

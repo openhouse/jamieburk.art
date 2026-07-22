@@ -66,10 +66,12 @@ locator, preview, or photograph is committed here.
 This record establishes a place to remember the question while the material is
 still forming. It does not certify that Field Set 001 exists as a frozen corpus.
 
-The [Proof of Life encounter](proof-of-life.md) established that one exact
-private working-album membership can be created and read back inside the
-authorized residency workspace. That one-image proof does not change the
-field's unassembled and unaudited state.
+The [Proof of Life encounter](proof-of-life.md) established that two exact
+private images can be found, looked at, and held together inside the authorized
+residency workspace without becoming public assets. The first image entered
+through a documented scripting path; the second followed a repaired-helper
+return. That two-image proof does not change the field's unassembled and
+unaudited state.
 
 ## What may belong in the field
 

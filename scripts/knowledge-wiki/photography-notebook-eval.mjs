@@ -279,7 +279,7 @@ export function evaluatePhotographyNotebook(options = {}) {
       (relation) => relation.target === "research-inquiry.photography.field-set-001"
     ) &&
     /Twelve private previews were considered/i.test(proofOfLifeSource) &&
-    /one-image systems proof and a first notebook encounter/i.test(
+    /small systems proof and a first notebook encounter/i.test(
       proofOfLifeSource
     ) &&
     /not the approximately 1,000-image Field Set 001/i.test(proofOfLifeSource);
@@ -290,6 +290,9 @@ export function evaluatePhotographyNotebook(options = {}) {
       proofOfLifeSource
     ) &&
     /Exactly one existing photograph was added to that album/i.test(
+      proofOfLifeSource
+    ) &&
+    /created no folder or album and changed no source image or metadata/i.test(
       proofOfLifeSource
     ) &&
     /No album or folder outside `Workspace-A` was changed/i.test(
@@ -307,9 +310,9 @@ export function evaluatePhotographyNotebook(options = {}) {
   const rawPhotosIdentifierPattern =
     /\b[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}\/L0\/\d{3}\b/i;
   const proofOfLifeReceiptsArePrivateAndBound =
-    proofReceiptHashes.length === 3 &&
-    new Set(proofReceiptHashes).size === 3 &&
-    /exact plan, source identifier, private preview, write receipt, and read-back receipt remain outside public Git/i.test(
+    proofReceiptHashes.length === 10 &&
+    new Set(proofReceiptHashes).size === 10 &&
+    /exact first plan, source identifier, private preview, write receipt, and read-back receipt remain outside public Git/i.test(
       proofOfLifeSource
     ) &&
     /write receipt and read-back receipt both record `PASS` and an exact member count of one/i.test(
@@ -319,6 +322,48 @@ export function evaluatePhotographyNotebook(options = {}) {
     !rawPhotosIdentifierPattern.test(
       source("research.photography.proof-of-life.2026-07-22")
     );
+
+  const helperReturnInspectionIsBounded =
+    /zero-image, no-write live authorization canary against the frozen source/i.test(
+      proofOfLifeSource
+    ) &&
+    /inspected exactly one proposed companion/i.test(proofOfLifeSource) &&
+    /one private, metadata-minimized preview/i.test(proofOfLifeSource) &&
+    /OCR, image classification, and face detection were disabled/i.test(
+      proofOfLifeSource
+    ) &&
+    /Network access and external upload remained disabled/i.test(proofOfLifeSource);
+
+  const proofOfLifeExactTwoPreservesFirst =
+    /preserved the first album member/i.test(proofOfLifeSource) &&
+    /added exactly one existing second photograph/i.test(proofOfLifeSource) &&
+    /completed twice with distinct nonces and the same stable two-member result/i.test(
+      proofOfLifeSource
+    ) &&
+    /Both helper receipts report an exact album count of two/i.test(
+      proofOfLifeSource
+    ) &&
+    /both expected members, and zero unexpected members/i.test(proofOfLifeSource);
+
+  const helperVerificationTiersRemainTruthful =
+    /preferred WAL-aware read-only SQLite verifier could not open the Photos catalog because macOS denied both available Python process identities/i.test(
+      proofOfLifeSource
+    ) &&
+    /separate Photos scripting verification and two consistent helper receipts provide useful corroboration, but are not described as equivalent to independent catalog-level verification/i.test(
+      proofOfLifeSource
+    ) &&
+    /catalog-level verification/i.test(proofOfLife?.anti_claims?.join(" ") ?? "");
+
+  const helperSuccessDoesNotClearPublication =
+    /Neither selected photograph is approved for the repository, portfolio, or any public surface/i.test(
+      proofOfLife?.anti_claims?.join(" ") ?? ""
+    ) &&
+    /passing helper operation does not clear publication/i.test(
+      proofOfLife?.anti_claims?.join(" ") ?? ""
+    ) &&
+    /both photographs on publication hold/i.test(proofOfLifeSource) &&
+    proofOfLife?.projection?.status === "hold" &&
+    proofOfLife.projection.surfaces.length === 0;
 
   const peopleRetrievalAndPublicationRemainSeparate =
     /existing People association for Jamie and inspected locally/i.test(
@@ -340,13 +385,14 @@ export function evaluatePhotographyNotebook(options = {}) {
     /local `main` and refreshed `origin\/main` both resolved to public commit/i.test(
       proofOfLifeSource
     ) &&
-    /7278c6ef767c54a4d8cd46528d69ad63fc465464/i.test(proofOfLifeSource) &&
-    /current version-2 PhotoKit helper continued to report denied access/i.test(
+    /33082a9f17e8d9d6b1b3947d14db7f4559af5e01/i.test(proofOfLifeSource) &&
+    /earlier version-2 helper failure remains part of the history/i.test(
       proofOfLifeSource
     ) &&
-    /It did not inspect or write the library/i.test(proofOfLifeSource) &&
-    /documented Apple Photos AppleScript adapter/i.test(proofOfLifeSource) &&
-    /Independent PhotoKit corroboration remains pending authorization or signing repair/i.test(
+    /repaired version-2\.5 app later passed static and live authorization checks/i.test(
+      proofOfLifeSource
+    ) &&
+    /86-test regression suite, helper typecheck, and 138 eval expectations passed/i.test(
       proofOfLifeSource
     );
 
@@ -406,6 +452,10 @@ export function evaluatePhotographyNotebook(options = {}) {
     proof_of_life_workspace_scope_is_exact: proofOfLifeWorkspaceScopeIsExact,
     proof_of_life_receipts_are_private_and_bound:
       proofOfLifeReceiptsArePrivateAndBound,
+    helper_return_inspection_is_bounded: helperReturnInspectionIsBounded,
+    proof_of_life_exact_two_preserves_first: proofOfLifeExactTwoPreservesFirst,
+    helper_verification_tiers_remain_truthful: helperVerificationTiersRemainTruthful,
+    helper_success_does_not_clear_publication: helperSuccessDoesNotClearPublication,
     people_retrieval_and_publication_remain_separate:
       peopleRetrievalAndPublicationRemainSeparate,
     photo_fieldwork_tooling_status_is_truthful:

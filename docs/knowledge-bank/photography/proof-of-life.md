@@ -11,8 +11,8 @@ aliases:
   - Residency 001 first archive encounter
 canonical_path: docs/knowledge-bank/photography/proof-of-life.md
 summary: >
-  Public-safe record of the residency's first bounded Apple Photos encounter:
-  one privately inspected photograph placed in one private working album, with publication held.
+  Public-safe record of the residency's first two bounded Apple Photos encounters:
+  two privately inspected photographs held together in one private working album, with publication held.
 relations:
   - type: related_to
     target: index.knowledge-wiki.photography-notebook
@@ -33,7 +33,7 @@ relations:
   - type: related_to
     target: research-inquiry.photography.field-set-001
     href: field-set-001.md
-    context: A one-image systems proof, not the proposed thousand-image field.
+    context: A two-image systems proof, not the proposed thousand-image field.
   - type: uses_method
     target: method.photography.notebook-entry
     href: notebook-entry-template.md
@@ -55,7 +55,7 @@ source_encounter:
     - target: source.vault.apple-photos.metadata
       access_state: reachable
       materialization_state: local-materialized
-      version_note: Live private library reached through Apple Photos' documented scripting interface; current PhotoKit helper remained permission-blocked.
+      version_note: Live private library first reached through Apple Photos' documented scripting interface; the repaired PhotoKit helper later passed its live canary, inspected one image, and completed an exact two-member album plan.
   questions:
     - Can the residency establish a bounded, reversible working relationship with the private archive before assembling Field Set 001?
     - What kind of image can mark first contact without being forced to represent the archive or the portfolio?
@@ -66,11 +66,13 @@ source_encounter:
     - A distributed People-based sample quickly produced images spanning ordinary life, travel, self-presentation, documents, and unresolved contexts.
     - The selected frame felt valuable as presence and rest rather than as professional proof.
     - Exact one-item membership can be created and read back inside the authorized workspace through the documented scripting interface.
+    - After the helper repair, a second image could be inspected and added through the stable app identity with the source frozen and network access disabled.
+    - The two images create a provisional relation between rest in daylight and playful encounter at night.
   changed_interpretations:
     - The first useful album can be a studio threshold rather than a portfolio category or project claim.
     - Tool readiness must distinguish current source, visible permission settings, successful API authorization, and verified operations.
   contradictions:
-    - macOS displayed Full Access for the version-2 helper while PhotoKit continued to report denied authorization.
+    - The initial helper reported denied authorization despite a visible Full Access setting; a later version passed live authorization after the helper integration was repaired.
   records_affected:
     - source.vault.apple-photos.metadata
     - research-inquiry.photography.field-set-001
@@ -78,15 +80,16 @@ source_encounter:
   limitations:
     - The encounter considered twelve private previews, not a representative archive sample.
     - The selected image's date, place, project, and photographer were not established.
-    - Independent PhotoKit corroboration could not be completed while the helper remained permission-blocked.
+    - The helper return inspected one proposed companion, not a representative archive sample.
+    - The preferred read-only SQLite verifier remained blocked by macOS privacy; a separate read-only Photos scripting check passed, but is not equivalent to catalog-level verification.
   librarian_requests:
     - Preserve any future source context that can establish the selected image's date, place, project, or photographer without assuming those facts from appearance.
   publication_decision: hold
 anti_claims:
-  - The selected photograph is not approved for the repository, portfolio, or any public surface.
-  - One successful membership operation does not establish that Field Set 001 has been assembled or evaluated.
+  - Neither selected photograph is approved for the repository, portfolio, or any public surface.
+  - Two successful membership operations do not establish that Field Set 001 has been assembled or evaluated.
   - Existing People associations support private retrieval; they do not establish public identity, consent, or permission.
-  - The current PhotoKit helper is not operational merely because its source and skill installation are current.
+  - A passing helper operation does not clear publication or replace independent catalog-level verification.
 ---
 
 # Proof of Life
@@ -98,13 +101,16 @@ previews were considered. One existing photograph was placed in a new private
 album named `Proof of Life`, inside the already-existing
 `Photo-Fieldwork > Residency-001 > Workspace-A` hierarchy.
 
-This is a one-image systems proof and a first notebook encounter. It is not the
+Later that day, after Jamie repaired Photo Fieldwork's permissioned helper, one
+proposed companion was inspected again through the helper itself and added to
+the same album. `Proof of Life` now holds exactly two private photographs. This
+remains a small systems proof and a first notebook encounter. It is not the
 approximately 1,000-image Field Set 001, a portfolio selection, or a claim that
 the archive has been comprehensively searched.
 
 ## What is visible
 
-The held photograph shows a younger Jamie at rest against weathered vertical
+The first held photograph shows a younger Jamie at rest against weathered vertical
 boards, eyes closed in direct sunlight. A broad hat sits behind his head. He
 wears overalls and a red bandanna. The frame is close, horizontal, and quiet.
 
@@ -112,6 +118,17 @@ The image was selected because it felt like presence rather than professional
 proof: a person inside weather, clothing, rest, and a lived material world.
 That is an editorial response, not an established account of the image's date,
 place, project, photographer, or original intention.
+
+The second held photograph shows Jamie coming toward the camera at night in
+paper 3-D glasses, a pale long-sleeved shirt, shorts, and a backpack. A bicycle
+wheel appears behind him. Direct flash separates his moving figure from the
+dark surroundings. The image feels less like a portrait than an encounter:
+playful, provisional, and already inside some event or projection.
+
+Held together, the photographs make a small interval between release and
+arrival, rest and participation, sunlight and flash. This is a provisional
+sequence reading. It does not establish that the images share a project,
+location, photographer, period, or original purpose.
 
 ## Exact operation
 
@@ -124,7 +141,7 @@ place, project, photographer, or original intention.
 - A separate read-only hierarchical query verified one uniquely named album,
   the expected parent, and the exact one-item membership.
 
-The exact plan, source identifier, private preview, write receipt, and read-back
+The exact first plan, source identifier, private preview, write receipt, and read-back
 receipt remain outside public Git. Their SHA-256 bindings are recorded here so
 the public-safe account cannot silently drift away from the private operation:
 
@@ -137,20 +154,68 @@ the public-safe account cannot silently drift away from the private operation:
 The write receipt and read-back receipt both record `PASS` and an exact member
 count of one. Their protected identifiers are not repeated here.
 
+## Helper return
+
+The repaired helper was exercised through its stable macOS app identity rather
+than as a bare executable. Before selecting or writing anything, it passed a
+zero-image, no-write live authorization canary against the frozen source. A
+bounded one-record osxphotos probe also passed, and the private capability
+report marked all fourteen declared insight families available.
+
+The helper then inspected exactly one proposed companion. It exported one
+private, metadata-minimized preview for local review; preview verification
+reported one valid image and no invalid image. OCR, image classification, and
+face detection were disabled for this pass. Network access and external upload
+remained disabled.
+
+The reviewed exact-membership plan then:
+
+- resolved the existing `Photo-Fieldwork > Residency-001 > Workspace-A`
+  hierarchy and existing `Proof of Life` album;
+- preserved the first album member;
+- added exactly one existing second photograph;
+- rejected unexpected membership rather than deleting or replacing it;
+- created no folder or album and changed no source image or metadata; and
+- completed twice with distinct nonces and the same stable two-member result.
+
+The helper-return plan, private previews, identifiers, receipts, and verification
+records remain outside public Git. Their bindings are recorded without exposing
+the protected contents:
+
+| Private helper-return artifact | SHA-256 |
+| --- | --- |
+| Inspection plan | `5a814c1e6add055cf72e48906a614815bf699c6470c98975685e3933e212b033` |
+| Inspection receipt | `ff28c746a9fab9ec9e5eccfec1425715fc9d109136fb9660f3c5cca4cd5e8620` |
+| Exact two-member plan | `337dcd7cfad7ead155c7b01a921033506b33f83400cf2da624d2ce7414d921b8` |
+| First helper write receipt | `4d05aaedf4ec850b804ab9e2bf1d4d8d931d4c2274e0b42d116d565b8f96d823` |
+| Idempotence helper receipt | `0daa9292d240667a5716bbec971b123e003cb40e4621eb147af6a2d88ecc6e16` |
+| Read-only Photos verification | `2a15de3a33b0541ce49cae7aa4287b2bc5dbe3aaa085070888fd44180cebe859` |
+| Receipt-structure comparison | `dcbeba32396a756c953f8742c213a0a8288d5ded143ef13b18eb9040d753772d` |
+
+Both helper receipts report an exact album count of two. The separate read-only
+Photos scripting check verified the nested hierarchy, both expected members,
+and zero unexpected members after the idempotence run.
+
 ## Tool readiness
 
 The installed `curate-apple-photos` skill resolves to the current clean
 Photo Fieldwork checkout. On this encounter, local `main` and refreshed
 `origin/main` both resolved to public commit
-[`7278c6ef767c54a4d8cd46528d69ad63fc465464`](https://github.com/openhouse/photo-fieldwork/tree/7278c6ef767c54a4d8cd46528d69ad63fc465464).
+[`33082a9f17e8d9d6b1b3947d14db7f4559af5e01`](https://github.com/openhouse/photo-fieldwork/tree/33082a9f17e8d9d6b1b3947d14db7f4559af5e01).
+The installed skill now links to that durable canonical checkout rather than a
+temporary proof directory. The repository's 86-test regression suite, helper
+typecheck, and 138 eval expectations passed before the operation.
 
-That source check does not mean every adapter is operational. The current
-version-2 PhotoKit helper continued to report denied access after its visible
-macOS Full Access setting was refreshed. It did not inspect or write the
-library. The successful membership operation instead used the documented
-Apple Photos AppleScript adapter, followed by a separate read-only AppleScript
-query. Independent PhotoKit corroboration remains pending authorization or
-signing repair.
+The earlier version-2 helper failure remains part of the history. The repaired
+version-2.5 app later passed static and live authorization checks and performed
+the bounded inspection and write described above. This confirms the operation,
+not universal future tool readiness.
+
+The preferred WAL-aware read-only SQLite verifier could not open the Photos
+catalog because macOS denied both available Python process identities. That
+failure was preserved. The separate Photos scripting verification and two
+consistent helper receipts provide useful corroboration, but are not described
+as equivalent to independent catalog-level verification.
 
 ## What this does not establish
 
@@ -165,8 +230,9 @@ private receipt is present in this repository.
 
 ## Decision and next action
 
-Keep `Proof of Life` as a private working album and its photograph on
-publication hold. Let the image remain a first encounter rather than forcing it
-to represent the residency. Continue exploratory retrieval inside `Workspace-A`,
-repair the current PhotoKit helper before treating it as operational, and allow
-later photographs to confirm, complicate, or displace this first response.
+Keep `Proof of Life` as a private working album and both photographs on
+publication hold. Let the pair remain a first encounter rather than forcing it
+to represent the residency. Continue exploratory retrieval inside `Workspace-A`.
+Before any release claim, restore the preferred independent catalog verifier or
+record an explicitly reviewed substitute. Allow later photographs to confirm,
+complicate, or displace this first response.
