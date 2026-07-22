@@ -98,6 +98,7 @@ that an agent, test, or informal participant has human decision authority.
 | RFP | Title | Stage | Champion |
 |---|---|---|---|
 | [0001](./0001-shared-core-public-private-knowledge-wikis.md) | Shared Core for Public and Private Knowledge Wikis | `proposed` | Jamie Burkart |
+| [0002](./0002-lifelong-photo-archive-selection-and-publication.md) | Lifelong Photo Archive Selection and Publication | `proposed` | Jamie Burkart |
 
 ## Validation
 
