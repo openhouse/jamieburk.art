@@ -43,6 +43,9 @@ export function evaluatePhotographyNotebook(options = {}) {
   const grammar = record("method.photography.invitation-container-emergence");
   const entry = record("method.photography.notebook-entry");
   const proposal = record("project.photography.field-set-001-residency");
+  const acceptance = record(
+    "decision.photography.field-set-001-residency-acceptance"
+  );
   const tejuSource = record("source.teju-cole.far-away-from-here.2015");
   const notebookIds = manifest.requiredRecords.map((item) => item.id);
   const notebookTargets = notebook?.relations?.map((relation) => relation.target) ?? [];
@@ -52,6 +55,9 @@ export function evaluatePhotographyNotebook(options = {}) {
   const grammarSource = normalized("method.photography.invitation-container-emergence");
   const entrySource = source("method.photography.notebook-entry");
   const proposalSource = normalized("project.photography.field-set-001-residency");
+  const acceptanceSource = normalized(
+    "decision.photography.field-set-001-residency-acceptance"
+  );
   const tejuSourceText = normalized("source.teju-cole.far-away-from-here.2015");
   const publicRegistry =
     options.publicRegistryOverride ??
@@ -158,7 +164,7 @@ export function evaluatePhotographyNotebook(options = {}) {
 
   const residencyProposalIsGovernedEntryway =
     proposal?.kind === "project" &&
-    proposal?.status === "draft" &&
+    proposal?.status === "maintained" &&
     proposal?.human_review === "requested" &&
     proposal?.relations?.some(
       (relation) => relation.target === "project.sunday-dinner-196"
@@ -228,6 +234,31 @@ export function evaluatePhotographyNotebook(options = {}) {
       tejuSourceText
     );
 
+  const residencyAcceptanceIsDocumentedWithoutOverreach =
+    acceptance?.kind === "decision" &&
+    acceptance?.status === "maintained" &&
+    acceptance?.decision_state === "documented" &&
+    acceptance?.human_review === "completed" &&
+    acceptance?.decision_actors?.some((actor) =>
+      /Jamie Burkart as host of 196 Artists Residency/i.test(actor)
+    ) &&
+    acceptance?.options_considered?.filter(
+      (option) => option.disposition === "chosen"
+    ).length === 1 &&
+    acceptance?.resulting_artifacts?.includes(
+      "project.photography.field-set-001-residency"
+    ) &&
+    /Your proposal is accepted\. Welcome\./i.test(acceptanceSource) &&
+    /The first working period may begin/i.test(acceptanceSource) &&
+    /does not approve any photograph, identity, caption, claim, sequence, crop, rights determination, consent determination, or public use/i.test(
+      acceptanceSource
+    ) &&
+    /AI-assisted first-person proposal remains available for Jamie's line-by-line authorship review/i.test(
+      acceptanceSource
+    ) &&
+    acceptance?.projection?.status === "hold" &&
+    acceptance.projection.surfaces.length === 0;
+
   const projectionRemainsHold =
     manifest.requiredRecords.every((expected) => {
       const item = record(expected.id);
@@ -253,6 +284,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     residency_success_not_output_or_publication: residencySuccessNotOutputOrPublication,
     residency_freedom_remains_ethically_bounded: residencyFreedomRemainsEthicallyBounded,
     teju_cole_reference_is_source_honest: tejuColeReferenceIsSourceHonest,
+    residency_acceptance_is_documented_without_overreach:
+      residencyAcceptanceIsDocumentedWithoutOverreach,
     photography_projection_remains_hold: projectionRemainsHold
   };
 

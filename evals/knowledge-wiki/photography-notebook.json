@@ -29,7 +29,13 @@
       "id": "project.photography.field-set-001-residency",
       "path": "docs/knowledge-bank/photography/field-set-001-residency-proposal.md",
       "kind": "project",
-      "status": "draft"
+      "status": "maintained"
+    },
+    {
+      "id": "decision.photography.field-set-001-residency-acceptance",
+      "path": "docs/knowledge-bank/photography/field-set-001-residency-acceptance.md",
+      "kind": "decision",
+      "status": "maintained"
     },
     {
       "id": "source.teju-cole.far-away-from-here.2015",
@@ -69,6 +75,7 @@
     "residency_success_not_output_or_publication",
     "residency_freedom_remains_ethically_bounded",
     "teju_cole_reference_is_source_honest",
+    "residency_acceptance_is_documented_without_overreach",
     "photography_projection_remains_hold"
   ]
 }

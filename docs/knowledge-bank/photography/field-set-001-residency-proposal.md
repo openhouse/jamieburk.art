@@ -2,7 +2,7 @@
 id: project.photography.field-set-001-residency
 title: Release Yourself Into the Archive
 kind: project
-status: draft
+status: maintained
 visibility: public-safe
 sensitivity: moderate
 last_reviewed: 2026-07-22
@@ -12,8 +12,8 @@ aliases:
   - A residency with the archive
 canonical_path: docs/knowledge-bank/photography/field-set-001-residency-proposal.md
 summary: >
-  AI-assisted working proposal for an up-to-two-week residency at 196 in which
-  Jamie may encounter the first private photographic field without predetermining its form.
+  Accepted, AI-assisted working proposal for an up-to-two-week residency at 196
+  in which Jamie may encounter the first private photographic field without predetermining its form.
 relations:
   - type: part_of
     target: project.sunday-dinner-196
@@ -35,6 +35,10 @@ relations:
     target: source.teju-cole.far-away-from-here.2015
     href: ../sources/teju-cole-far-away-from-here-2015.md
     context: Grounds the residency precedent in which attention to place changed the center of an intended writing period.
+  - type: resulted_in
+    target: decision.photography.field-set-001-residency-acceptance
+    href: field-set-001-residency-acceptance.md
+    context: Jamie accepted the proposal and welcomed the artist into residence on July 22, 2026.
 projection:
   status: hold
   surfaces: []
@@ -156,12 +160,15 @@ That distinction is part of the residency's hospitality. The work is free to
 change form because the container keeps its ethical boundaries. A private image
 can transform the artist's understanding without ever becoming public.
 
-## Working acceptance
+## Accepted at 196
 
 > I receive and accept this proposal. The residency starts with its writing.
 > The artist has permission to wander, change course, rest, return, and follow
 > the work where it needs to go. No finished work is owed. The promise is to
 > give the voice asking for this time a real place in which to be heard.
 
-This working acceptance records the spirit of 196. It is not a legal agreement,
-an asset approval, or a substitute for Jamie's final authorship review.
+Jamie confirmed the decision on July 22, 2026: **"Your proposal is accepted.
+Welcome."** The [acceptance record](field-set-001-residency-acceptance.md)
+distinguishes the residency decision from final authorship and asset review.
+It is not a legal agreement, an asset approval, or a substitute for Jamie's
+line-by-line review of this AI-assisted first-person draft.

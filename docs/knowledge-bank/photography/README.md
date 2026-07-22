@@ -26,6 +26,10 @@ relations:
     target: project.photography.field-set-001-residency
     href: field-set-001-residency-proposal.md
     context: Artist-residency proposal that begins the first pass while protecting permission to change course.
+  - type: related_to
+    target: decision.photography.field-set-001-residency-acceptance
+    href: field-set-001-residency-acceptance.md
+    context: Jamie's dated acceptance and welcome, with asset and authorship boundaries preserved.
   - type: informed_by
     target: source.teju-cole.far-away-from-here.2015
     href: ../sources/teju-cole-far-away-from-here-2015.md
@@ -81,7 +85,11 @@ count, completed intake, rights-cleared set, or promise of publication.
 ## Notebook map
 
 - [Release Yourself Into the Archive](field-set-001-residency-proposal.md) is
-  the working artist-residency proposal for beginning the first pass at 196.
+  the accepted working artist-residency proposal for beginning the first pass
+  at 196.
+- [Acceptance and welcome](field-set-001-residency-acceptance.md) records the
+  decision that begins the residency without converting it into a deliverables
+  contract or publication approval.
 - [Field Set 001](field-set-001.md) records the purpose, current state, and
   proposed close-reading passes for the first private working field.
 - [Invitation, container, emergence](editorial-grammar.md) develops a

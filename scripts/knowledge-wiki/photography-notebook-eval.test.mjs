@@ -21,9 +21,9 @@ test("photography working notebook baseline passes", () => {
   const evaluation = evaluatePhotographyNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    records: 6,
+    records: 7,
     entryHeadings: 11,
-    blockingCriteria: 18
+    blockingCriteria: 19
   });
 });
 
@@ -138,6 +138,22 @@ test("the residency proposal remains an accepted but reviewable entryway", () =>
     recordOverrides: { [id]: proposal }
   });
   assert.equal(evaluation.checks.residency_proposal_is_governed_entryway, false);
+});
+
+test("residency acceptance cannot approve photographs or public use", () => {
+  const id = "decision.photography.field-set-001-residency-acceptance";
+  const mutated = sourceFor(id).replace(
+    /does not approve any photograph, identity,\s+caption, claim, sequence, crop, rights determination, consent determination, or\s+public use/,
+    "approves all photographs and public uses"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.residency_acceptance_is_documented_without_overreach,
+    false
+  );
 });
 
 test("the proposal cannot be converted into a production contract", () => {

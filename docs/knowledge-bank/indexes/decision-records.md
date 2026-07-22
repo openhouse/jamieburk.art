@@ -28,6 +28,9 @@ relations:
   - type: related_to
     target: decision.knowledge-wiki.selective-projection
     href: ../decisions/knowledge-wiki-selective-projection.md
+  - type: related_to
+    target: decision.photography.field-set-001-residency-acceptance
+    href: ../photography/field-set-001-residency-acceptance.md
 ---
 
 # Decision records
@@ -44,6 +47,7 @@ the archive does not preserve.
 - [Harry J. Epstein: continuity-oriented modernization](../decisions/hje-continuity-modernization.md)
 - [KC Town Hall: listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md)
 - [Knowledge Wiki: deep bank and selective projection](../decisions/knowledge-wiki-selective-projection.md)
+- [Photography Field Set 001: residency acceptance and welcome](../photography/field-set-001-residency-acceptance.md)
 
 ## Contract
 
