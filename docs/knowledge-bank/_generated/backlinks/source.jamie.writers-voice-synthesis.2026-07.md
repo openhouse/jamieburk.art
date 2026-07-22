@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Jamie Burkart writer's voice synthesis, July 2026
 
-**Source commit:** `77db2bdd70cad2ef5275c1fae6f6257e1a29ae0b`
-**Generation time:** 2026-07-22T09:17:33-04:00
-**Source fingerprint:** `0ab20406ead167188b693619730ca80d519134eefa02b1faa263fc556bdce2ac`
+**Source commit:** `df993dca3443f5528eb3921bfe91131809a2ec91`
+**Generation time:** 2026-07-22T09:30:06-04:00
+**Source fingerprint:** `66f12ad6f723f1da92feeadc315c3984ac33a0a0e5aba6617d0f45a2f4b57a74`
 
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `uses_source` (frontmatter)
 - [Structure grows from the material](../../methods/structure-grows-from-the-material.md) - `uses_source` (frontmatter)

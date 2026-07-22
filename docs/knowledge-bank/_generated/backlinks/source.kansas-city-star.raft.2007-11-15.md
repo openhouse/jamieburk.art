@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to The Kansas City Star raft report, November 15, 2007
 
-**Source commit:** `77db2bdd70cad2ef5275c1fae6f6257e1a29ae0b`
-**Generation time:** 2026-07-22T09:17:33-04:00
-**Source fingerprint:** `0ab20406ead167188b693619730ca80d519134eefa02b1faa263fc556bdce2ac`
+**Source commit:** `df993dca3443f5528eb3921bfe91131809a2ec91`
+**Generation time:** 2026-07-22T09:30:06-04:00
+**Source fingerprint:** `66f12ad6f723f1da92feeadc315c3984ac33a0a0e5aba6617d0f45a2f4b57a74`
 
 - [Waterways and participatory art orientation](../../projects/waterways-participatory-art-orientation.md) - `uses_source` (frontmatter)
 - [Foundational Wiki page source return, July 19, 2026](../../research-runs/foundational-source-return-2026-07-19.md) - `prose_link` (markdown)

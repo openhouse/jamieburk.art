@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition application brief
 
-**Source commit:** `77db2bdd70cad2ef5275c1fae6f6257e1a29ae0b`
-**Generation time:** 2026-07-22T09:17:33-04:00
-**Source fingerprint:** `0ab20406ead167188b693619730ca80d519134eefa02b1faa263fc556bdce2ac`
+**Source commit:** `df993dca3443f5528eb3921bfe91131809a2ec91`
+**Generation time:** 2026-07-22T09:30:06-04:00
+**Source fingerprint:** `66f12ad6f723f1da92feeadc315c3984ac33a0a0e5aba6617d0f45a2f4b57a74`
 
 - [Shared NYC Artist Coalition advocacy operating playbook](../../claims/nycac-advocacy-operating-playbook.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition](../../projects/nyc-artist-coalition-2017.md) - `prose_link` (markdown)
