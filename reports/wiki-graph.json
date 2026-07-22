@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T10:34:25-04:00",
-  "sourceCommit": "20c284ae54feffa213864cae257898c8fb5003d1",
-  "sourceFingerprint": "6db69408faf5e91c7dd07f48792fe9fc5fef93578fc66601d64ff7243ddab424",
+  "generatedAt": "2026-07-22T17:15:29-04:00",
+  "sourceCommit": "f7649056d726d50ec6e5560aee2a2f7c6dbcd54a",
+  "sourceFingerprint": "b3f34572a59f2f36271daef793b5c79b28201243a2b504791fc85c8b1abc3e9c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -1140,7 +1140,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Public-safe record of the residency's first bounded Apple Photos encounter: one privately inspected photograph placed in one private working album, with publication held.\n",
+      "summary": "Public-safe record of the residency's first two bounded Apple Photos encounters: two privately inspected photographs held together in one private working album, with publication held.\n",
       "aliases": [
         "Residency 001 first archive encounter"
       ],
@@ -2924,7 +2924,7 @@
       "to": "research.photography.proof-of-life.2026-07-22",
       "source": "frontmatter",
       "href": "proof-of-life.md",
-      "context": "First bounded archive encounter and one-image private working-album proof."
+      "context": "First two bounded archive encounters and exact two-image private working-album proof."
     },
     {
       "from": "index.knowledge-wiki.photography-notebook",
@@ -5128,7 +5128,7 @@
       "to": "research-inquiry.photography.field-set-001",
       "source": "frontmatter",
       "href": "field-set-001.md",
-      "context": "A one-image systems proof, not the proposed thousand-image field."
+      "context": "A two-image systems proof, not the proposed thousand-image field."
     },
     {
       "from": "research.photography.proof-of-life.2026-07-22",
@@ -5416,7 +5416,7 @@
       "to": "research.photography.proof-of-life.2026-07-22",
       "source": "frontmatter",
       "href": "../photography/proof-of-life.md",
-      "context": "Source boundary used by the first one-image archive encounter."
+      "context": "Source boundary used by the first two bounded archive encounters."
     },
     {
       "from": "source.vault.communication-history.metadata",
@@ -7488,7 +7488,7 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 107,
+      "line": 108,
       "kind": "link"
     },
     {
@@ -7524,7 +7524,7 @@
       "toPath": "docs/knowledge-bank/photography/field-set-001-completion.md",
       "to": "research.photography.field-set-001-completion.2026-07-22",
       "fragment": null,
-      "line": 39,
+      "line": 40,
       "kind": "link"
     },
     {
@@ -7533,7 +7533,7 @@
       "toPath": "docs/knowledge-bank/sources/apple-photos-archive-metadata.md",
       "to": "source.vault.apple-photos.metadata",
       "fragment": null,
-      "line": 42,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -7542,7 +7542,7 @@
       "toPath": "docs/knowledge-bank/photography/field-set-001.md",
       "to": "research-inquiry.photography.field-set-001",
       "fragment": null,
-      "line": 44,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -7551,7 +7551,7 @@
       "toPath": "docs/knowledge-bank/photography/editorial-grammar.md",
       "to": "method.photography.invitation-container-emergence",
       "fragment": null,
-      "line": 46,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -7560,7 +7560,7 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 48,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -7569,7 +7569,7 @@
       "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "to": "index.knowledge-wiki.visual-evidence",
       "fragment": null,
-      "line": 50,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -7578,7 +7578,7 @@
       "toPath": "docs/knowledge-bank/sources/teju-cole-far-away-from-here-2015.md",
       "to": "source.teju-cole.far-away-from-here.2015",
       "fragment": null,
-      "line": 53,
+      "line": 54,
       "kind": "link"
     },
     {
@@ -7605,7 +7605,7 @@
       "toPath": "docs/knowledge-bank/photography/field-set-001-completion.md",
       "to": "research.photography.field-set-001-completion.2026-07-22",
       "fragment": null,
-      "line": 29,
+      "line": 32,
       "kind": "link"
     },
     {
