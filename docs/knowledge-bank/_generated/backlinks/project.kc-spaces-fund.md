@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Spaces Fund
 
-**Source commit:** `cde24f29110c604fcb855139beadc426b6c63f28`
-**Generation time:** 2026-07-22T09:02:44-04:00
-**Source fingerprint:** `eda16d869f6b313ffdb573588bb5b10515aa08b8826dcf7ad3f73a2b3e65c1f8`
+**Source commit:** `e8836ff7874048c03ea31af56829cfd9f0305785`
+**Generation time:** 2026-07-22T09:21:29-04:00
+**Source fingerprint:** `2c8e7a0e46ac9e61c38b8a78de81cc03e282de75113b7ed6c23faed694390c64`
 
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `prose_link` (markdown)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `related_to` (frontmatter)

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `cde24f29110c604fcb855139beadc426b6c63f28`
-**Generation time:** 2026-07-22T09:02:44-04:00
-**Source fingerprint:** `eda16d869f6b313ffdb573588bb5b10515aa08b8826dcf7ad3f73a2b3e65c1f8`
+**Source commit:** `e8836ff7874048c03ea31af56829cfd9f0305785`
+**Generation time:** 2026-07-22T09:21:29-04:00
+**Source fingerprint:** `2c8e7a0e46ac9e61c38b8a78de81cc03e282de75113b7ed6c23faed694390c64`
 
 ## application
 
@@ -44,6 +44,7 @@
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
 - [Photography working notebook evaluation](../evaluations/photography-working-notebook.md) - `evaluation.photography-notebook.2026-07-22`
+- [Photography residency proposal evaluation](../evaluations/photography-residency-proposal.md) - `evaluation.photography-residency-proposal.2026-07-22`
 
 ## event
 
@@ -138,6 +139,7 @@
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
+- [The archive answers back - a 196 photography residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md) - `research.photography-first-pass-residency-proposal.2026-07-22`
 - [Opening the photography working notebook](../research-runs/photography-notebook-opening-2026-07-22.md) - `research.photography-notebook-opening.2026-07-22`
 
 ## source
@@ -166,8 +168,10 @@
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
 - [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
+- [Known and Strange Things catalog and contents record](../sources/open-library-known-and-strange-things-contents-2016.md) - `source.open-library.known-and-strange-things-contents.2016`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
+- [Teju Cole on the making of Far Away From Here](../sources/teju-cole-far-away-from-here-process-2016.md) - `source.teju-cole.far-away-from-here-process.2016`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`

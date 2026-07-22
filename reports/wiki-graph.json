@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T09:02:44-04:00",
-  "sourceCommit": "cde24f29110c604fcb855139beadc426b6c63f28",
-  "sourceFingerprint": "eda16d869f6b313ffdb573588bb5b10515aa08b8826dcf7ad3f73a2b3e65c1f8",
+  "generatedAt": "2026-07-22T09:21:29-04:00",
+  "sourceCommit": "e8836ff7874048c03ea31af56829cfd9f0305785",
+  "sourceFingerprint": "2c8e7a0e46ac9e61c38b8a78de81cc03e282de75113b7ed6c23faed694390c64",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -248,6 +248,19 @@
       "visibility": "public-safe",
       "sensitivity": "low",
       "summary": "Executable contract preserving the photography notebook as a generative, source-returnable, private-by-default, human-governed working space rather than an automatic publication pipeline.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "evaluation.photography-residency-proposal.2026-07-22",
+      "path": "docs/knowledge-bank/evaluations/photography-residency-proposal.md",
+      "title": "Photography residency proposal evaluation",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Executable contract ensuring that the first-pass residency proposal creates protected time and permission to discover rather than a productivity contract, aesthetic rubric, or publication shortcut.",
       "aliases": [],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2026-10-22"
@@ -957,7 +970,7 @@
         "Sunday Dinner",
         "196 Artists Residency"
       ],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-07-22",
       "reviewBy": "2026-10-19"
     },
     {
@@ -1066,6 +1079,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "path": "docs/knowledge-bank/research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
+      "title": "The archive answers back - a 196 photography residency proposal",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Jamie's proposal to give the first photographic archive pass up to two weeks of residency time at 196, with declared intent, no fixed deliverable, and explicit permission for the work to discover another form.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-08-22"
     },
     {
       "id": "research.photography-notebook-opening.2026-07-22",
@@ -1393,6 +1419,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.open-library.known-and-strange-things-contents.2016",
+      "path": "docs/knowledge-bank/sources/open-library-known-and-strange-things-contents-2016.md",
+      "title": "Known and Strange Things catalog and contents record",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public catalog record identifying Far Away From Here among the essays collected in Teju Cole's 2016 book Known and Strange Things.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2027-01-22"
+    },
+    {
       "id": "source.politico.callnyc.2016-03-14",
       "path": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
       "title": "Website provides new information about council members' focus",
@@ -1417,6 +1456,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.teju-cole.far-away-from-here-process.2016",
+      "path": "docs/knowledge-bank/sources/teju-cole-far-away-from-here-process-2016.md",
+      "title": "Teju Cole on the making of Far Away From Here",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "A published interview in which Teju Cole describes arriving at a Zurich writing residency with a Lagos manuscript and finding that most of his time moved toward traveling, looking, and making photographs.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2027-01-22"
     },
     {
       "id": "source.ucsc.narrative-evaluations.2004-2006",
@@ -1996,6 +2048,30 @@
       "to": "research.photography-notebook-opening.2026-07-22",
       "source": "frontmatter",
       "href": "../research-runs/photography-notebook-opening-2026-07-22.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.photography-residency-proposal.2026-07-22",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "../indexes/photography-working-notebook.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.photography-residency-proposal.2026-07-22",
+      "type": "related_to",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../projects/sunday-dinner-196-orientation.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.photography-residency-proposal.2026-07-22",
+      "type": "related_to",
+      "to": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "source": "frontmatter",
+      "href": "../research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
       "context": null
     },
     {
@@ -2756,6 +2832,14 @@
       "to": "method.collective-credit-protected-absence",
       "source": "frontmatter",
       "href": "../methods/collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
+      "type": "informed_by",
+      "to": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "source": "frontmatter",
+      "href": "../research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
       "context": null
     },
     {
@@ -4381,6 +4465,14 @@
     {
       "from": "project.sunday-dinner-196",
       "type": "related_to",
+      "to": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "source": "frontmatter",
+      "href": "../research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
+      "context": null
+    },
+    {
+      "from": "project.sunday-dinner-196",
+      "type": "related_to",
       "to": "timeline.jamie-practice.2004-present",
       "source": "frontmatter",
       "href": "../timelines/practice-2004-present.md",
@@ -4768,6 +4860,54 @@
       "to": "source.nycac.shared-folder-census.2026",
       "source": "frontmatter",
       "href": "../sources/nycac-protected-shared-folder-census-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "type": "related_to",
+      "to": "evaluation.photography-residency-proposal.2026-07-22",
+      "source": "frontmatter",
+      "href": "../evaluations/photography-residency-proposal.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "../indexes/photography-working-notebook.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "type": "related_to",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../projects/sunday-dinner-196-orientation.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "type": "uses_method",
+      "to": "method.photographic-archive-fieldwork",
+      "source": "frontmatter",
+      "href": "../methods/photographic-archive-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "type": "uses_source",
+      "to": "source.open-library.known-and-strange-things-contents.2016",
+      "source": "frontmatter",
+      "href": "../sources/open-library-known-and-strange-things-contents-2016.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "type": "uses_source",
+      "to": "source.teju-cole.far-away-from-here-process.2016",
+      "source": "frontmatter",
+      "href": "../sources/teju-cole-far-away-from-here-process-2016.md",
       "context": null
     },
     {
@@ -6407,10 +6547,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
       "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
+      "to": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "fragment": null,
+      "line": 82,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
+      "from": "index.knowledge-wiki.photography-notebook",
       "toPath": "docs/knowledge-bank/evaluations/photography-working-notebook.md",
       "to": "evaluation.photography-notebook.2026-07-22",
       "fragment": null,
-      "line": 98,
+      "line": 99,
       "kind": "link"
     },
     {
@@ -7413,6 +7562,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
+      "from": "project.sunday-dinner-196",
+      "toPath": "docs/knowledge-bank/research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
+      "to": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
       "from": "project.talks-not-raids",
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
@@ -7698,6 +7856,15 @@
       "to": null,
       "fragment": null,
       "line": 55,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
+      "from": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "toPath": "docs/knowledge-bank/evaluations/photography-residency-proposal.md",
+      "to": "evaluation.photography-residency-proposal.2026-07-22",
+      "fragment": null,
+      "line": 142,
       "kind": "link"
     },
     {
