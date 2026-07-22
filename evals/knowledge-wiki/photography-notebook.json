@@ -7,6 +7,10 @@
   "fieldPath": "docs/knowledge-bank/notebooks/photography/field-corpus-001.md",
   "visualIndexId": "index.knowledge-wiki.visual-evidence",
   "rfpPath": "rfps/0002-lifetime-photo-archive-fieldwork.md",
+  "contentBindings": {
+    "notebook": "bfeed1201c9b494ee0cce1606fb4b3fe8caf7f52150f7183cd4507ca43b21644",
+    "field": "413ddbd1c29502565748f6afe6f8d1bb192066dc8abdbf338bd8a6462fee338c"
+  },
   "principle": "The notebook creates room for play and situated looking while keeping attention, evidence, clearance, and publication as separate states.",
   "humanGates": [
     "source and version identity",

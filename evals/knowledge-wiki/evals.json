@@ -176,6 +176,7 @@
       "criteria": [
         "photography_notebook_materialized",
         "photography_notebook_reachable",
+        "photography_notebook_content_bound",
         "field_corpus_state_truthful",
         "attention_not_publication",
         "four_photo_layers_distinct",

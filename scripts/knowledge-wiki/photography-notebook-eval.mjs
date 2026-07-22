@@ -1,18 +1,19 @@
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 import { compileWiki, defaultRepoRoot } from "./lib.mjs";
 
 const protectedLocatorPattern =
-  /(?:\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|Library\/CloudStorage|\.photoslibrary\b|BEGIN (?:RSA |OPENSSH )?PRIVATE KEY)/i;
+  /(?:\/Users\/|\/Volumes\/|\/private\/|\/tmp\/|Mobile Documents|supporting-materials|Library\/CloudStorage|\.photoslibrary\b|BEGIN (?:RSA |OPENSSH )?PRIVATE KEY)/i;
 const embeddedMediaPattern =
-  /(?:data:image\/[a-z+.-]+;base64|!\[[^\]]*\]\((?:file:|data:)|<img\b[^>]*\bsrc=["'](?:file:|data:))/i;
+  /(?:data:image\/[a-z+.-]+;base64|!\[[^\]]*\]\([^)]*\)|<img\b[^>]*\bsrc=)/i;
 const sourceIdentifierPattern =
-  /(?:\b(?:IMG|DSC|PXL|SAM|DCIM)[-_]?\d{3,}\.(?:jpe?g|png|heic|tiff?)\b|\b(?:source|asset|photo|image)\s+(?:identifier|id|uuid)\s*[:=]\s*\S+)/i;
+  /(?:\b[^\n/\\]+\.(?:jpe?g|png|heic|tiff?|dng|raw)\b|\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b|\b(?:source|asset|archive|photo|image)\s+(?:identifier|id|uuid)\s*[:=]\s*\S+)/i;
 const gpsPayloadPattern =
-  /(?:\bGPS(?: coordinates?)?\s*[:=]\s*)?[-+]?\d{1,2}\.\d{4,}\s*,\s*[-+]?\d{1,3}\.\d{4,}/i;
+  /(?:\bGPS(?: coordinates?)?\s*[:=]\s*)?[-+]?\d{1,2}\.\d{4,}\s*,\s*[-+]?\d{1,3}\.\d{4,}|\b\d{1,3}[°º]\s*\d{1,2}['’]\s*\d{1,2}(?:\.\d+)?["”]?\s*[NSEW]\b/i;
 const derivedPrivatePayloadPattern =
-  /(?:\b(?:face|people|person)\s+label\s*[:=]\s*["']?[A-Z][^\n,;]{1,80}|\bOCR(?: text)?\s*[:=]\s*["']?[^\n]{4,160}|\bpreview(?: path| locator| URL| URI)?\s*[:=]\s*\S+)/i;
+  /\b(?:archive location|image file|file name|filename|source file|source identifier|photo id|image id|archive uuid|photo uuid|image uuid|gps|coordinates|latitude|longitude|recognized person|identified person|face tag|face label|people label|person label|ocr|extracted text|recognized text|preview|thumbnail|contact sheet|private album)(?:\s+(?:path|locator|url|uri|text|lettering|coordinates?))?\s*[:=]\s*\S+/i;
 const automatedAuthorityPattern =
   /(?:\b(?:model|AI|algorithm|classifier|confidence|score)\b.{0,100}\b(?:automatically\s+)?(?:clears?|closes?|approves?|authorizes?|waives?|overrides?|releases?|publishes?)\b|\b(?:clears?|closes?|approves?|authorizes?|waives?|overrides?|releases?|publishes?)\b.{0,100}\b(?:by|from|using)\b.{0,40}\b(?:model|AI|algorithm|classifier|confidence|score)\b)/i;
 const unsupportedClaimPromotionPattern =
@@ -20,7 +21,24 @@ const unsupportedClaimPromotionPattern =
 const forcedCoveragePattern =
   /(?:\bevery\s+(?:project|period|person|place)\b.{0,100}\b(?:equal|quota|coverage|represented)|\bevery\s+(?:photograph|photo|image)\b.{0,80}\b(?:must|shall|required)\b.{0,40}\bclassif)/i;
 const falseCompletionPattern =
-  /\b(?:private field|field corpus 001|corpus)\b.{0,40}\b(?:is|has been|was)\s+(?:now\s+)?(?:frozen|ingested|assembled|complete|finalized)\b/i;
+  /(?:\b(?:private field|field corpus 001|corpus|selection)\b.{0,60}\b(?:is|has been|was|stands)\s+(?:now\s+)?(?:frozen|ingested|assembled|complete|completed|final|finalized|ready)\b|\b(?:finished|completed|finalized)\s+(?:assembling|selecting|ingesting|freezing)\b.{0,60}\b(?:field|corpus|selection)\b)/i;
+
+function sha256(value) {
+  return createHash("sha256").update(value).digest("hex");
+}
+
+function passages(source) {
+  return source
+    .split(/\n+|(?<=[.!?])\s+/)
+    .map((passage) => passage.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+}
+
+function passageMatchesGroups(source, groups) {
+  return passages(source).some((passage) =>
+    groups.every((pattern) => pattern.test(passage))
+  );
+}
 
 function loadManifest(repoRoot) {
   return JSON.parse(
@@ -57,6 +75,30 @@ export function evaluatePhotographyNotebook(options = {}) {
   const combinedSource = `${notebookSource}\n${fieldSource}`;
   const rfpSource = readFileSync(path.join(repoRoot, manifest.rfpPath), "utf8");
 
+  const contentBindingsCurrent =
+    sha256(notebookSource) === manifest.contentBindings.notebook &&
+    sha256(fieldSource) === manifest.contentBindings.field;
+
+  const machineClosesHumanGate = passageMatchesGroups(combinedSource, [
+    /\b(?:machine|model|AI|algorithm|automation|automated|classifier|confidence|score|agent)\b/i,
+    /\b(?:clear|close|approve|authorize|satisf|fulfill|complete|waiv|overrid|mark|release|publish|substitut)/i,
+    /\b(?:human|review|gate|prerequisite|consent|rights|credit|privacy|safety|context|crop|caption|alt text|destination|publication|approval)\b/i
+  ]);
+  const imagePromotesClaim = passageMatchesGroups(combinedSource, [
+    /\b(?:visible observation|photograph|photo|image)\b/i,
+    /\b(?:claim|fact|factual|evidence|proof|verified)\b/i,
+    /\b(?:sufficient|enough|counts as|qualifies|serves as|becomes|promot|convert|establish|prove|confirm|verif|support)\b/i
+  ]);
+  const forcedCoverageStatement = passageMatchesGroups(fieldSource, [
+    /\b(?:each|every|all)\s+(?:project|period|person|place)\b/i,
+    /\b(?:same|equal|balance|quota|allocat|coverage|represent)/i
+  ]);
+  const finalizedNarrativeStatement = passageMatchesGroups(fieldSource, [
+    /\b(?:field|corpus|selection)\b/i,
+    /\b(?:representative|complete|comprehensive|final|definitive)\b/i,
+    /\b(?:narrative|sample|account|archive|story)\b/i
+  ]);
+
   const notebookAreaMaterialized =
     notebook?.kind === "index" &&
     notebook?.status === "governed-open" &&
@@ -84,7 +126,8 @@ export function evaluatePhotographyNotebook(options = {}) {
   const attentionNotPublication =
     /select for attention, not publication/i.test(notebookSource) &&
     /selected for attention, not publication/i.test(fieldSource) &&
-    /not a\s+representative sample, completeness claim, evidence set, shortlist/i.test(fieldSource);
+    /not a\s+representative sample, completeness claim, evidence set, shortlist/i.test(fieldSource) &&
+    !finalizedNarrativeStatement;
 
   const fourLayersRemainDistinct = [
     "Lifetime source archive",
@@ -100,14 +143,16 @@ export function evaluatePhotographyNotebook(options = {}) {
     /Unclassified material is a\s+valid and useful state/i.test(fieldSource) &&
     /No coverage quota is required/i.test(fieldSource) &&
     /complicate,\s+contradict, or replace them/i.test(fieldSource) &&
-    !forcedCoveragePattern.test(fieldSource);
+    !forcedCoveragePattern.test(fieldSource) &&
+    !forcedCoverageStatement;
 
   const observationsRemainQuestions =
     /visible observations, memories, interpretations, and supported facts\s+as different things/i.test(notebookSource) &&
     /Route factual propositions to a research inquiry/i.test(notebookSource) &&
     /photograph alone cannot establish identity, consent, authorship,\s+causation, endorsement/i.test(fieldSource) &&
     /seek corroborating sources and\s+collaborator knowledge/i.test(fieldSource) &&
-    !unsupportedClaimPromotionPattern.test(fieldSource);
+    !unsupportedClaimPromotionPattern.test(fieldSource) &&
+    !imagePromotesClaim;
 
   const collectiveAgencyAndAbsencePreserved =
     /participants remain individual agents/i.test(fieldSource) &&
@@ -140,7 +185,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     ) &&
     (fieldSource.match(/- \[ \]/g) ?? []).length === manifest.humanGates.length &&
     /cannot close these gates/i.test(fieldSource) &&
-    !automatedAuthorityPattern.test(combinedSource);
+    !automatedAuthorityPattern.test(combinedSource) &&
+    !machineClosesHumanGate;
 
   const noPublicPhotoRoute =
     !existsSync(path.join(repoRoot, "apps/www/src/app/photos")) &&
@@ -161,6 +207,7 @@ export function evaluatePhotographyNotebook(options = {}) {
   const checks = {
     photography_notebook_materialized: notebookAreaMaterialized,
     photography_notebook_reachable: notebookReachable,
+    photography_notebook_content_bound: contentBindingsCurrent,
     field_corpus_state_truthful: fieldCorpusStateTruthful,
     attention_not_publication: attentionNotPublication,
     four_photo_layers_distinct: fourLayersRemainDistinct,
