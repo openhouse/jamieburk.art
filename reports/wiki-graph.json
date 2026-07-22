@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T09:34:20-04:00",
-  "sourceCommit": "0b88bf9fac3552f00e0d3d38fb0e41d8f14a9cff",
-  "sourceFingerprint": "a31eb5705d611b1b15981a96e2c07230634f2728dd7d129df74ac62b76379455",
+  "generatedAt": "2026-07-22T16:14:48-04:00",
+  "sourceCommit": "45f4d584f19840092b5d9523f5845b9aefa0a793",
+  "sourceFingerprint": "7fb2948ad03db839ecde0323e9ebc50c8f0f7a5293dfb67ebc0269fa3925e124",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -261,6 +261,19 @@
       "visibility": "public-safe",
       "sensitivity": "low",
       "summary": "Executable contract ensuring that the first-pass residency proposal creates protected time and permission to discover rather than a productivity contract, aesthetic rubric, or publication shortcut.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "evaluation.photography-studio-connection.2026-07-22",
+      "path": "docs/knowledge-bank/evaluations/photography-studio-connection.md",
+      "title": "Photography studio connection evaluation",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Executable contract proving that the first private Apple Photos contact is real, workspace-bounded, locally inspected, fail-closed, independently verified, and still held from publication.",
       "aliases": [],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2026-10-22"
@@ -1107,6 +1120,19 @@
       "reviewBy": "2026-08-22"
     },
     {
+      "id": "research.photography-studio-connection.2026-07-22",
+      "path": "docs/knowledge-bank/research-runs/photography-studio-connection-2026-07-22.md",
+      "title": "First contact with the private photo field",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe account of a local-only Apple Photos connection, a one-image private proof album, and the exact safety and verification boundaries that keep this first contact distinct from publication.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-08-22"
+    },
+    {
       "id": "source.callnyc.source-repository",
       "path": "docs/knowledge-bank/sources/callnyc-source-repository.md",
       "title": "CallNYC public source repository",
@@ -1430,6 +1456,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2027-01-22"
+    },
+    {
+      "id": "source.openhouse.photo-fieldwork.2026-07-22",
+      "path": "docs/knowledge-bank/sources/openhouse-photo-fieldwork-2026-07-22.md",
+      "title": "openhouse/photo-fieldwork",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public software repository for a local-first, fail-closed Apple Photos curation workflow with source freezing, visual review, membership-only catalog plans, receipts, reruns, and independent verification.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
     },
     {
       "id": "source.politico.callnyc.2016-03-14",
@@ -2072,6 +2111,30 @@
       "to": "research.photography-first-pass-residency-proposal.2026-07-22",
       "source": "frontmatter",
       "href": "../research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.photography-studio-connection.2026-07-22",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "../indexes/photography-working-notebook.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.photography-studio-connection.2026-07-22",
+      "type": "related_to",
+      "to": "research.photography-studio-connection.2026-07-22",
+      "source": "frontmatter",
+      "href": "../research-runs/photography-studio-connection-2026-07-22.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.photography-studio-connection.2026-07-22",
+      "type": "uses_method",
+      "to": "method.photographic-archive-fieldwork",
+      "source": "frontmatter",
+      "href": "../methods/photographic-archive-fieldwork.md",
       "context": null
     },
     {
@@ -2852,6 +2915,14 @@
     },
     {
       "from": "index.knowledge-wiki.photography-notebook",
+      "type": "informed_by",
+      "to": "research.photography-studio-connection.2026-07-22",
+      "source": "frontmatter",
+      "href": "../research-runs/photography-studio-connection-2026-07-22.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
       "type": "related_to",
       "to": "evaluation.photography-notebook.2026-07-22",
       "source": "frontmatter",
@@ -3528,6 +3599,14 @@
       "to": "method.situated-source-rereading",
       "source": "frontmatter",
       "href": "situated-source-rereading.md",
+      "context": null
+    },
+    {
+      "from": "method.photographic-archive-fieldwork",
+      "type": "informed_by",
+      "to": "research.photography-studio-connection.2026-07-22",
+      "source": "frontmatter",
+      "href": "../research-runs/photography-studio-connection-2026-07-22.md",
       "context": null
     },
     {
@@ -4932,6 +5011,46 @@
       "to": "method.photographic-archive-fieldwork",
       "source": "frontmatter",
       "href": "../methods/photographic-archive-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-studio-connection.2026-07-22",
+      "type": "informed_by",
+      "to": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "source": "frontmatter",
+      "href": "photography-first-pass-residency-proposal-2026-07-22.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-studio-connection.2026-07-22",
+      "type": "related_to",
+      "to": "evaluation.photography-studio-connection.2026-07-22",
+      "source": "frontmatter",
+      "href": "../evaluations/photography-studio-connection.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-studio-connection.2026-07-22",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "../indexes/photography-working-notebook.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-studio-connection.2026-07-22",
+      "type": "uses_method",
+      "to": "method.photographic-archive-fieldwork",
+      "source": "frontmatter",
+      "href": "../methods/photographic-archive-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-studio-connection.2026-07-22",
+      "type": "uses_source",
+      "to": "source.openhouse.photo-fieldwork.2026-07-22",
+      "source": "frontmatter",
+      "href": "../sources/openhouse-photo-fieldwork-2026-07-22.md",
       "context": null
     },
     {
@@ -6529,10 +6648,10 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
       "from": "index.knowledge-wiki.photography-notebook",
-      "toPath": "docs/knowledge-bank/research-runs/photography-notebook-opening-2026-07-22.md",
-      "to": "research.photography-notebook-opening.2026-07-22",
+      "toPath": "docs/knowledge-bank/evaluations/photography-working-notebook.md",
+      "to": "evaluation.photography-notebook.2026-07-22",
       "fragment": null,
-      "line": 18,
+      "line": 104,
       "kind": "link"
     },
     {
@@ -6541,7 +6660,25 @@
       "toPath": "docs/knowledge-bank/research-runs/photography-notebook-opening-2026-07-22.md",
       "to": "research.photography-notebook-opening.2026-07-22",
       "fragment": null,
-      "line": 81,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
+      "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/research-runs/photography-studio-connection-2026-07-22.md",
+      "to": "research.photography-studio-connection.2026-07-22",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
+      "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/research-runs/photography-notebook-opening-2026-07-22.md",
+      "to": "research.photography-notebook-opening.2026-07-22",
+      "fragment": null,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -6550,16 +6687,16 @@
       "toPath": "docs/knowledge-bank/research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
       "to": "research.photography-first-pass-residency-proposal.2026-07-22",
       "fragment": null,
-      "line": 82,
+      "line": 86,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
       "from": "index.knowledge-wiki.photography-notebook",
-      "toPath": "docs/knowledge-bank/evaluations/photography-working-notebook.md",
-      "to": "evaluation.photography-notebook.2026-07-22",
+      "toPath": "docs/knowledge-bank/research-runs/photography-studio-connection-2026-07-22.md",
+      "to": "research.photography-studio-connection.2026-07-22",
       "fragment": null,
-      "line": 99,
+      "line": 87,
       "kind": "link"
     },
     {
@@ -7009,7 +7146,7 @@
       "toPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
       "to": "index.knowledge-wiki.photography-notebook",
       "fragment": null,
-      "line": 49,
+      "line": 60,
       "kind": "link"
     },
     {
@@ -7865,6 +8002,15 @@
       "to": "evaluation.photography-residency-proposal.2026-07-22",
       "fragment": null,
       "line": 151,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/photography-studio-connection-2026-07-22.md",
+      "from": "research.photography-studio-connection.2026-07-22",
+      "toPath": "docs/knowledge-bank/evaluations/photography-studio-connection.md",
+      "to": "evaluation.photography-studio-connection.2026-07-22",
+      "fragment": null,
+      "line": 132,
       "kind": "link"
     },
     {

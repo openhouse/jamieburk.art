@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `0b88bf9fac3552f00e0d3d38fb0e41d8f14a9cff`
-**Generation time:** 2026-07-22T09:34:20-04:00
-**Source fingerprint:** `a31eb5705d611b1b15981a96e2c07230634f2728dd7d129df74ac62b76379455`
+**Source commit:** `45f4d584f19840092b5d9523f5845b9aefa0a793`
+**Generation time:** 2026-07-22T16:14:48-04:00
+**Source fingerprint:** `7fb2948ad03db839ecde0323e9ebc50c8f0f7a5293dfb67ebc0269fa3925e124`
 
 ## application
 
@@ -45,6 +45,7 @@
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
 - [Photography working notebook evaluation](../evaluations/photography-working-notebook.md) - `evaluation.photography-notebook.2026-07-22`
 - [Photography residency proposal evaluation](../evaluations/photography-residency-proposal.md) - `evaluation.photography-residency-proposal.2026-07-22`
+- [Photography studio connection evaluation](../evaluations/photography-studio-connection.md) - `evaluation.photography-studio-connection.2026-07-22`
 
 ## event
 
@@ -141,6 +142,7 @@
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 - [The archive answers back - a 196 photography residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md) - `research.photography-first-pass-residency-proposal.2026-07-22`
 - [Opening the photography working notebook](../research-runs/photography-notebook-opening-2026-07-22.md) - `research.photography-notebook-opening.2026-07-22`
+- [First contact with the private photo field](../research-runs/photography-studio-connection-2026-07-22.md) - `research.photography-studio-connection.2026-07-22`
 
 ## source
 
@@ -169,6 +171,7 @@
 - [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
 - [Known and Strange Things catalog and contents record](../sources/open-library-known-and-strange-things-contents-2016.md) - `source.open-library.known-and-strange-things-contents.2016`
+- [openhouse/photo-fieldwork](../sources/openhouse-photo-fieldwork-2026-07-22.md) - `source.openhouse.photo-fieldwork.2026-07-22`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Teju Cole on the making of Far Away From Here](../sources/teju-cole-far-away-from-here-process-2016.md) - `source.teju-cole.far-away-from-here-process.2016`
