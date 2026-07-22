@@ -5,11 +5,17 @@ kind: index
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-07-22
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/indexes/visual-evidence.md
 summary: Public-safe map of visual evidence that is approved, metadata-only, held for review, missing, or still awaiting research across Jamie's projects.
 relations:
+  - type: related_to
+    target: index.knowledge-wiki.photography-notebook
+    href: photography-working-notebook.md
+  - type: uses_method
+    target: method.photographic-archive-fieldwork
+    href: ../methods/photographic-archive-fieldwork.md
   - type: has_asset
     target: asset.photo.digital-district.001
     href: ../assets/digital-district-photo.md
@@ -29,6 +35,12 @@ wanted:
 
 Visual records are evidence, editorial material, and records of other people's
 presence. Those functions must remain distinct.
+
+The [Photography working notebook](photography-working-notebook.md) is the
+public-safe sketchpad for questions, constellations, and dated encounters. The
+[photographic archive fieldwork method](../methods/photographic-archive-fieldwork.md)
+keeps that experimentation connected to source identity, privacy, rights,
+consent, and specific-use approval.
 
 ## Current states
 

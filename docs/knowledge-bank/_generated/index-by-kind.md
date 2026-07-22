@@ -3,7 +3,7 @@
 
 **Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
 **Generation time:** 2026-07-21T17:51:37-04:00
-**Source fingerprint:** `fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a`
+**Source fingerprint:** `eda16d869f6b313ffdb573588bb5b10515aa08b8826dcf7ad3f73a2b3e65c1f8`
 
 ## application
 
@@ -43,6 +43,7 @@
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
+- [Photography working notebook evaluation](../evaluations/photography-working-notebook.md) - `evaluation.photography-notebook.2026-07-22`
 
 ## event
 
@@ -59,6 +60,7 @@
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
 - [Outcomes, Adoption, and Afterlives](../indexes/outcomes-adoption-and-afterlives.md) - `index.knowledge-wiki.outcomes-adoption-afterlives`
 - [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
+- [Photography working notebook](../indexes/photography-working-notebook.md) - `index.knowledge-wiki.photography-notebook`
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
 - [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
@@ -76,6 +78,7 @@
 - [Learning Through Making](../methods/learning-through-making.md) - `method.learning-through-making`
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
+- [Photographic archive fieldwork](../methods/photographic-archive-fieldwork.md) - `method.photographic-archive-fieldwork`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
@@ -135,6 +138,7 @@
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
+- [Opening the photography working notebook](../research-runs/photography-notebook-opening-2026-07-22.md) - `research.photography-notebook-opening.2026-07-22`
 
 ## source
 

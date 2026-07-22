@@ -1,0 +1,61 @@
+{
+  "suite": "photography-working-notebook",
+  "version": 1,
+  "principle": "Protect a generous photographic sketchpad without converting private archive access, provisional selection, or AI assistance into evidence or publication authority.",
+  "livingArchiveId": "index.knowledge-wiki.living-archive",
+  "visualIndexId": "index.knowledge-wiki.visual-evidence",
+  "notebookId": "index.knowledge-wiki.photography-notebook",
+  "methodId": "method.photographic-archive-fieldwork",
+  "openingRunId": "research.photography-notebook-opening.2026-07-22",
+  "evaluationId": "evaluation.photography-notebook.2026-07-22",
+  "workstreamPath": "docs/photography/README.md",
+  "workspaceRoot": "docs/photography",
+  "requiredRecords": [
+    [
+      "index.knowledge-wiki.photography-notebook",
+      "docs/knowledge-bank/indexes/photography-working-notebook.md"
+    ],
+    [
+      "method.photographic-archive-fieldwork",
+      "docs/knowledge-bank/methods/photographic-archive-fieldwork.md"
+    ],
+    [
+      "research.photography-notebook-opening.2026-07-22",
+      "docs/knowledge-bank/research-runs/photography-notebook-opening-2026-07-22.md"
+    ],
+    [
+      "evaluation.photography-notebook.2026-07-22",
+      "docs/knowledge-bank/evaluations/photography-working-notebook.md"
+    ]
+  ],
+  "notebookEntrySections": [
+    "Present question",
+    "Bounded source field",
+    "Material access state",
+    "What was looked at",
+    "Emerging constellations",
+    "Close visual observations",
+    "Contradictions and anti-claims",
+    "Protected absences",
+    "Source and librarian requests",
+    "Rights, consent, and safety state",
+    "Editorial hypotheses",
+    "Publication decision"
+  ],
+  "criteria": [
+    "photography_records_materialized",
+    "photography_navigation_reachable",
+    "provisional_field_remains_open",
+    "play_precedes_fixed_taxonomy",
+    "opening_encounter_state_honest",
+    "photographic_source_return_durable",
+    "photo_lifecycle_states_separate",
+    "visual_inference_bounded",
+    "photography_public_boundary_clean",
+    "opening_workspace_contains_no_photo_assets",
+    "photography_projection_held",
+    "photography_human_authority_preserved",
+    "notebook_entry_contract_complete",
+    "photography_eval_wired"
+  ]
+}

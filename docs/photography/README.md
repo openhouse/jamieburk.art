@@ -9,6 +9,11 @@ public asset library, or a pool of automatically publishable images. This first
 commit establishes the working boundary only. It does not inspect, copy,
 modify, ingest, select, or publish any photograph or private metadata.
 
+Public-safe reflection, questions, and dated source-return notes belong in the
+[Photography working notebook](../knowledge-bank/indexes/photography-working-notebook.md).
+The notebook can grow without turning the private archive into a repository
+dependency.
+
 ## Purposes
 
 Photography may help us:

@@ -3,10 +3,11 @@
 
 **Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
 **Generation time:** 2026-07-21T17:51:37-04:00
-**Source fingerprint:** `fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a`
+**Source fingerprint:** `eda16d869f6b313ffdb573588bb5b10515aa08b8826dcf7ad3f73a2b3e65c1f8`
 
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
+- [Photography working notebook](../../indexes/photography-working-notebook.md) - `related_to` (frontmatter)
 - [Visual evidence index](../../indexes/visual-evidence.md) - `related_to` (frontmatter)
 - [Structure grows from the material](../../methods/structure-grows-from-the-material.md) - `related_to` (frontmatter)
 - [Role-fit and referral map](../../projections/role-fit-and-referral-map.md) - `related_to` (frontmatter)

@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-19
+last_reviewed: 2026-07-22
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/indexes/living-archive.md
 summary: Task-oriented map of orientation, campaign, project, pressure, place, lineage, decision, capability, stewardship, source-return, role-fit, and visual-evidence pages.
@@ -58,6 +58,9 @@ relations:
   - type: related_to
     target: index.knowledge-wiki.visual-evidence
     href: visual-evidence.md
+  - type: related_to
+    target: index.knowledge-wiki.photography-notebook
+    href: photography-working-notebook.md
   - type: related_to
     target: project.harry-j-epstein
     href: ../projects/harry-j-epstein.md
@@ -163,6 +166,7 @@ Jamie as personal librarian.
 - [Collective credit and protected absence](../methods/collective-credit-and-protected-absence.md)
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md)
 - [Visual evidence](visual-evidence.md)
+- [Photography working notebook](photography-working-notebook.md)
 
 ## Return to the material
 
