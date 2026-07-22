@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `79c16216d265249cb5932eea54de27259a1837b2`
-**Generation time:** 2026-07-22T09:00:02-04:00
-**Source fingerprint:** `277a84f803966f0181545f8d0ae66a07025f2800f047bf381656bd4d2c3564c6`
+**Source commit:** `77db2bdd70cad2ef5275c1fae6f6257e1a29ae0b`
+**Generation time:** 2026-07-22T09:17:33-04:00
+**Source fingerprint:** `0ab20406ead167188b693619730ca80d519134eefa02b1faa263fc556bdce2ac`
 
 ## application
 
@@ -68,6 +68,7 @@
 - [Role, Collective Authorship, and Protected Absence](../indexes/role-collective-authorship-and-protected-absence.md) - `index.knowledge-wiki.role-authorship-protected-absence`
 - [Scenes and Places of Work](../indexes/scenes-and-places-of-work.md) - `index.knowledge-wiki.scenes-and-places-of-work`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
+- [First Pass: A Photo Residency at 196](../notebooks/photography/proposals/first-pass-at-196.md) - `index.photo-notebook.proposal.first-pass-196`
 - [Release / water / salt - visual sequence sketch](../notebooks/photography/sketches/release-water-salt.md) - `index.photo-notebook.sketch.release-water-salt`
 
 ## method
@@ -131,6 +132,7 @@
 ## research-inquiry
 
 - [Open questions for photographic reading](../notebooks/photography/open-questions.md) - `research-inquiry.photo-notebook.open-questions`
+- [Recover Jamie's Teju Cole residency and photography reference](../research-inquiries/teju-cole-residency-photography-reference.md) - `research-inquiry.teju-cole.residency-photography-reference`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
 ## research-run
@@ -168,6 +170,8 @@
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
+- [Estranged in Switzerland - Teju Cole pictures the silence](../sources/teju-cole-fernweh-residency-context-2020.md) - `source.teju-cole.fernweh-residency-context.2020`
+- [Teju Cole - Writers in Residence Zurich profile](../sources/teju-cole-zurich-writer-residency-2014.md) - `source.teju-cole.zurich-writer-residency.2014`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
