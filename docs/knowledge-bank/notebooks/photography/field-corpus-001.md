@@ -40,11 +40,18 @@ relations:
 
 Jamie plans to assemble an exploratory rough-draft selection of approximately
 1,000 photographs from a lifetime archive he describes as containing more than
-600,000 photographs. Neither number is an independently frozen source count.
+600,000 photographs. The operational source has now been privately frozen and
+verified; its exact count and digest remain outside public Git. The planned
+1,000-photograph field has not been assembled.
 
 The private field has not yet been frozen or ingested. No photographs, source
 identifiers, image-level metadata, or private encounter notes are recorded on
 this page.
+
+A one-photo operational canary has been completed inside the authorized
+residency workspace. It tests the bounded local workflow. It is not Field
+Corpus 001 and does not complete the larger edit. It carries no claim of
+representativeness and is not a publication candidate.
 
 This field is selected for attention, not publication. It is not a
 representative sample, completeness claim, evidence set, shortlist, or promise
@@ -102,6 +109,7 @@ contradict, or replace them.
 | Encounter date | Private field version | Question | Public-safe change in understanding | Open boundary |
 | --- | --- | --- | --- | --- |
 | 2026-07-22 | Not yet frozen | What kind of field will make close reading possible without predetermining the story? | Established an exploratory notebook, provisional visual grammar, and a strict separation between attention and publication. | The private corpus still needs to be assembled and encountered. |
+| 2026-07-22 | One-photo operational canary | Can the local system look at a photograph and make one non-destructive studio placement without exceeding the authorized workspace? | A privacy-validated derivative was visually reviewed; the stable local helper created one album with one existing source membership; an identical rerun was idempotent; independent read-only catalog verification confirmed the folder chain, membership, and unchanged source. No external upload occurred. | Derivatives retaining source-bearing metadata were rejected before visual review. A broad metadata adapter did not complete its one-record probe within the bounded run and remains unverified. The larger field is still unassembled, and every publication gate remains open. |
 
 Future entries should be additive and dated. They may summarize a private
 encounter without exposing filenames, locators, people labels, raw metadata, or
@@ -151,6 +159,31 @@ scope. A photograph alone cannot establish identity, consent, authorship,
 causation, endorsement, or the complete meaning of an event.
 
 No research leads have yet been produced from the private field.
+
+## Operational canary boundary
+
+The canary establishes only that the currently configured local path can:
+
+- bind work to a privately frozen source contract;
+- inspect local pixels through the stable permissioned helper with network
+  access disabled;
+- reject preview derivatives that retain source-bearing metadata;
+- create one album and add one existing membership within the authorized
+  residency workspace;
+- rerun the same plan without adding another album or membership; and
+- verify hierarchy, exact membership, and source continuity independently
+  through a read-only catalog snapshot.
+
+The exact photograph, album and folder names, source and collection
+identifiers, filenames, paths, previews, People associations, metadata,
+receipts, and verification artifacts remain in the private workspace. The
+canary does not establish archive-wide metadata availability: the broad
+metadata adapter's one-record probe timed out and remains explicitly
+unverified for this run.
+
+Operational success does not confer rights, consent, factual authority,
+representativeness, accessibility, publication readiness, or permission to
+change anything outside the authorized workspace.
 
 ## Publication gates
 

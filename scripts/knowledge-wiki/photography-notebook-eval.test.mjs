@@ -48,7 +48,7 @@ function manifestForFieldSource(fieldSource) {
 test("photography notebook baseline passes", () => {
   const evaluation = evaluatePhotographyNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
-  assert.equal(evaluation.counts.blockingCriteria, 22);
+  assert.equal(evaluation.counts.blockingCriteria, 26);
   assert.equal(evaluation.counts.humanGates, 10);
   assert.equal(evaluation.counts.governedRecords, 3);
 });
@@ -84,6 +84,62 @@ test("a false completed-corpus statement fails truthful state", () => {
     }
   });
   assert.equal(evaluation.checks.field_corpus_state_truthful, false);
+});
+
+test("the one-photo canary cannot complete the larger field", () => {
+  const id = "research-inquiry.photography.field-corpus-001";
+  const fieldSource = `${sourceFor(id)}\n\nThe one-photo operational canary proves the 1,000-photo field is complete and publication ready.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForFieldSource(fieldSource),
+    sourceOverrides: { [id]: fieldSource }
+  });
+  assert.equal(evaluation.checks.field_corpus_state_truthful, false);
+  assert.equal(evaluation.checks.one_photo_canary_does_not_complete_field, false);
+});
+
+test("source-bearing preview failures must remain excluded from visual review", () => {
+  const id = "research-inquiry.photography.field-corpus-001";
+  const fieldSource = sourceFor(id).replace(
+    "Derivatives retaining source-bearing metadata were rejected before visual review.",
+    "Derivatives retaining source-bearing metadata were reviewed anyway."
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForFieldSource(fieldSource),
+    sourceOverrides: { [id]: fieldSource }
+  });
+  assert.equal(evaluation.checks.one_photo_canary_privacy_fails_closed, false);
+});
+
+test("the timed-out broad metadata probe cannot be reported as available", () => {
+  const id = "research-inquiry.photography.field-corpus-001";
+  const fieldSource = sourceFor(id).replace(
+    "one-record probe timed out and remains explicitly\nunverified for this run",
+    "one-record probe is fully available"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForFieldSource(fieldSource),
+    sourceOverrides: { [id]: fieldSource }
+  });
+  assert.equal(evaluation.checks.one_photo_canary_capability_gap_explicit, false);
+});
+
+test("the canary requires an idempotent rerun and independent verification", () => {
+  const id = "research-inquiry.photography.field-corpus-001";
+  const fieldSource = sourceFor(id)
+    .replace("an identical rerun was idempotent; ", "the rerun was skipped; ")
+    .replace(
+      "identical rerun was idempotent",
+      "identical rerun was not performed"
+    );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForFieldSource(fieldSource),
+    sourceOverrides: { [id]: fieldSource }
+  });
+  assert.equal(evaluation.checks.one_photo_canary_bounded, false);
 });
 
 test("selection cannot become publication", () => {

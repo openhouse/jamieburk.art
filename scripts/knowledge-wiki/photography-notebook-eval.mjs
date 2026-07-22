@@ -36,6 +36,8 @@ const acceptancePublicationPattern =
   /(?:\bacceptance (?:clears|authorizes|grants|supplies|constitutes)\b.{0,80}\b(?:publication|public use|consent|rights|license)\b|\baccepted proposal\b.{0,80}\b(?:may be published|is cleared)\b)/i;
 const falselyResolvedRememberedSourcePattern =
   /(?:\bTeju Cole (?:wrote|said|described)\b.{0,80}\b(?:exactly|verbatim|in the essay titled)\b|\b(?:exact )?source (?:has been|is) (?:verified|confirmed|recovered)\b)/i;
+const canaryCompletionPattern =
+  /(?:\bone-photo (?:operational )?canary\b.{0,140}\b(?:completes?|completed|proves?|establishes?)\b.{0,100}\b(?:field corpus 001|1,000-photo(?:graph)? field|archive-wide|publication readiness|publication ready)\b|\b(?:field corpus 001|1,000-photo(?:graph)? field)\b.{0,100}\b(?:is|has been|was)\b.{0,30}\b(?:assembled|complete|completed|frozen|ingested|publication ready)\b)/i;
 
 function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
@@ -144,9 +146,40 @@ export function evaluatePhotographyNotebook(options = {}) {
   const fieldCorpusStateTruthful =
     /planned rough-draft selection of approximately\s+1,000 photographs/i.test(fieldSource) &&
     /private field has not yet been frozen or ingested/i.test(fieldSource) &&
-    /Neither number is an independently frozen source count/i.test(fieldSource) &&
+    /operational source has now been privately frozen and\s+verified/i.test(fieldSource) &&
+    /exact count and digest remain outside public Git/i.test(fieldSource) &&
+    /planned\s+1,000-photograph field has not been assembled/i.test(fieldSource) &&
     !/1,000 photographs (?:were|have been|are now) (?:selected|ingested|frozen)/i.test(fieldSource) &&
-    !falseCompletionPattern.test(fieldSource);
+    !falseCompletionPattern.test(fieldSource) &&
+    !canaryCompletionPattern.test(fieldSource);
+
+  const onePhotoCanaryBounded =
+    /one-photo operational canary has been completed/i.test(fieldSource) &&
+    /stable local helper created one album with one existing source membership/i.test(fieldSource) &&
+    /identical rerun was idempotent/i.test(fieldSource) &&
+    /independent read-only catalog verification confirmed the folder chain,\s+membership, and unchanged source/i.test(fieldSource) &&
+    /No external upload occurred/i.test(fieldSource) &&
+    /create one album and add one existing membership within the authorized\s+residency workspace/i.test(fieldSource);
+
+  const onePhotoCanaryPrivacyFailsClosed =
+    /Derivatives retaining source-bearing metadata were rejected before visual review/i.test(fieldSource) &&
+    /exact photograph, album and folder names, source and collection\s+identifiers, filenames, paths, previews, People associations, metadata,\s+receipts, and verification artifacts remain in the private workspace/i.test(fieldSource) &&
+    !protectedLocatorPattern.test(fieldSource) &&
+    !sourceIdentifierPattern.test(fieldSource) &&
+    !embeddedMediaPattern.test(fieldSource);
+
+  const onePhotoCanaryCapabilityGapExplicit =
+    /broad metadata adapter did not complete its one-record probe within the bounded run and remains unverified/i.test(fieldSource) &&
+    /does not establish archive-wide metadata availability/i.test(fieldSource) &&
+    /one-record probe timed out and remains explicitly\s+unverified for this run/i.test(fieldSource);
+
+  const onePhotoCanaryDoesNotCompleteField =
+    /It is not Field\s+Corpus 001 and does not complete the larger edit/i.test(fieldSource) &&
+    /It carries no claim of\s+representativeness and is not a publication candidate/i.test(fieldSource) &&
+    /The larger field is still unassembled/i.test(fieldSource) &&
+    /every publication gate remains open/i.test(fieldSource) &&
+    /Operational success does not confer rights, consent, factual authority,\s+representativeness, accessibility, publication readiness/i.test(fieldSource) &&
+    !canaryCompletionPattern.test(fieldSource);
 
   const attentionNotPublication =
     /select for attention, not publication/i.test(notebookSource) &&
@@ -292,6 +325,10 @@ export function evaluatePhotographyNotebook(options = {}) {
     photography_notebook_reachable: notebookReachable,
     photography_notebook_content_bound: contentBindingsCurrent,
     field_corpus_state_truthful: fieldCorpusStateTruthful,
+    one_photo_canary_bounded: onePhotoCanaryBounded,
+    one_photo_canary_privacy_fails_closed: onePhotoCanaryPrivacyFailsClosed,
+    one_photo_canary_capability_gap_explicit: onePhotoCanaryCapabilityGapExplicit,
+    one_photo_canary_does_not_complete_field: onePhotoCanaryDoesNotCompleteField,
     attention_not_publication: attentionNotPublication,
     four_photo_layers_distinct: fourLayersRemainDistinct,
     experimental_space_preserved: experimentalSpacePreserved,
