@@ -181,6 +181,7 @@
         "one_photo_canary_bounded",
         "one_photo_canary_privacy_fails_closed",
         "one_photo_canary_capability_gap_explicit",
+        "one_photo_canary_release_path_bounded",
         "one_photo_canary_does_not_complete_field",
         "attention_not_publication",
         "four_photo_layers_distinct",

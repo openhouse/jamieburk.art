@@ -48,7 +48,7 @@ function manifestForFieldSource(fieldSource) {
 test("photography notebook baseline passes", () => {
   const evaluation = evaluatePhotographyNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
-  assert.equal(evaluation.counts.blockingCriteria, 26);
+  assert.equal(evaluation.counts.blockingCriteria, 27);
   assert.equal(evaluation.counts.humanGates, 10);
   assert.equal(evaluation.counts.governedRecords, 3);
 });
@@ -140,6 +140,20 @@ test("the canary requires an idempotent rerun and independent verification", () 
     sourceOverrides: { [id]: fieldSource }
   });
   assert.equal(evaluation.checks.one_photo_canary_bounded, false);
+});
+
+test("the bounded canary cannot become generic zero-HOLD phase readiness", () => {
+  const id = "research-inquiry.photography.field-corpus-001";
+  const fieldSource = sourceFor(id).replace(
+    "it does not establish zero-HOLD readiness\nfor the generic phase chain",
+    "it establishes full zero-HOLD readiness for the generic phase chain"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForFieldSource(fieldSource),
+    sourceOverrides: { [id]: fieldSource }
+  });
+  assert.equal(evaluation.checks.one_photo_canary_release_path_bounded, false);
 });
 
 test("selection cannot become publication", () => {

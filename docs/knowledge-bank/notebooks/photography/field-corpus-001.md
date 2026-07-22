@@ -181,6 +181,13 @@ canary does not establish archive-wide metadata availability: the broad
 metadata adapter's one-record probe timed out and remains explicitly
 unverified for this run.
 
+The generic release state machine also did not accept the legitimate empty
+HOLD manifest produced by this one-photo evaluation. The canary therefore used
+the reviewed membership-only plan through the same stable helper, followed by
+two nonce-bound receipts and the existing independent verifier. This proves
+the exact bounded catalog action; it does not establish zero-HOLD readiness
+for the generic phase chain.
+
 Operational success does not confer rights, consent, factual authority,
 representativeness, accessibility, publication readiness, or permission to
 change anything outside the authorized workspace.

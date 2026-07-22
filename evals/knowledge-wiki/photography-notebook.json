@@ -1,6 +1,6 @@
 {
   "suite": "knowledge-wiki-photography-field-notebook",
-  "version": 4,
+  "version": 5,
   "notebookId": "index.knowledge-wiki.photography-notebook",
   "notebookPath": "docs/knowledge-bank/notebooks/photography/README.md",
   "fieldId": "research-inquiry.photography.field-corpus-001",
@@ -11,7 +11,7 @@
   "rfpPath": "rfps/0002-lifetime-photo-archive-fieldwork.md",
   "contentBindings": {
     "notebook": "09cfc65e2870af24d89388749b71d3cf44e5ee63d8b87d45f5a4d1be867a8a97",
-    "field": "0f0cfea374c9ba59614edae6f1c2d5ed8dcd222173c389e0151408bb4d8a3cdf",
+    "field": "fd3d68c263cf7ef1e5467af4f456643a596ab7bb6144e64d759be62b73d6913a",
     "proposal": "68a4cdc3b33aae711186572e35fd16d95076289b807ec285355e866d50053120"
   },
   "residencyAcceptance": {

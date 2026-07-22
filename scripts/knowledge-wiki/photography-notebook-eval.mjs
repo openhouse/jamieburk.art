@@ -173,6 +173,12 @@ export function evaluatePhotographyNotebook(options = {}) {
     /does not establish archive-wide metadata availability/i.test(fieldSource) &&
     /one-record probe timed out and remains explicitly\s+unverified for this run/i.test(fieldSource);
 
+  const onePhotoCanaryReleasePathBounded =
+    /generic release state machine also did not accept the legitimate empty\s+HOLD manifest/i.test(fieldSource) &&
+    /reviewed membership-only plan through the same stable helper/i.test(fieldSource) &&
+    /two nonce-bound receipts and the existing independent verifier/i.test(fieldSource) &&
+    /does not establish zero-HOLD readiness\s+for the generic phase chain/i.test(fieldSource);
+
   const onePhotoCanaryDoesNotCompleteField =
     /It is not Field\s+Corpus 001 and does not complete the larger edit/i.test(fieldSource) &&
     /It carries no claim of\s+representativeness and is not a publication candidate/i.test(fieldSource) &&
@@ -328,6 +334,7 @@ export function evaluatePhotographyNotebook(options = {}) {
     one_photo_canary_bounded: onePhotoCanaryBounded,
     one_photo_canary_privacy_fails_closed: onePhotoCanaryPrivacyFailsClosed,
     one_photo_canary_capability_gap_explicit: onePhotoCanaryCapabilityGapExplicit,
+    one_photo_canary_release_path_bounded: onePhotoCanaryReleasePathBounded,
     one_photo_canary_does_not_complete_field: onePhotoCanaryDoesNotCompleteField,
     attention_not_publication: attentionNotPublication,
     four_photo_layers_distinct: fourLayersRemainDistinct,
