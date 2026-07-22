@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T09:16:39-04:00",
-  "sourceCommit": "fb10714b838718c8739fdaf0af983a76a8130ab1",
-  "sourceFingerprint": "7fa7231f602f1e3b8b479184707cfa63032b80c530d8273fa2d9e9388b4f86c1",
+  "generatedAt": "2026-07-22T09:26:44-04:00",
+  "sourceCommit": "9816707beac6f683107e722db9315e6bd30c837d",
+  "sourceFingerprint": "e71c73b05e7eb164ed6710006dd80a96f00c18b2deb4075e00ccc700e1e428e0",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -199,6 +199,21 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "decision.photography.field-set-001-residency-acceptance",
+      "path": "docs/knowledge-bank/photography/field-set-001-residency-acceptance.md",
+      "title": "Acceptance of Release Yourself Into the Archive",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Jamie's documented acceptance, as host of 196, of the first photo-archive residency proposal and its permission to follow the work where it needs to go.",
+      "aliases": [
+        "Field Set 001 residency acceptance"
+      ],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-10-22"
     },
     {
       "id": "evaluation.employment-context.coverage.2026-07-18",
@@ -940,10 +955,10 @@
       "path": "docs/knowledge-bank/photography/field-set-001-residency-proposal.md",
       "title": "Release Yourself Into the Archive",
       "kind": "project",
-      "status": "draft",
+      "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "AI-assisted working proposal for an up-to-two-week residency at 196 in which Jamie may encounter the first private photographic field without predetermining its form.\n",
+      "summary": "Accepted, AI-assisted working proposal for an up-to-two-week residency at 196 in which Jamie may encounter the first private photographic field without predetermining its form.\n",
       "aliases": [
         "Field Set 001 residency proposal",
         "A residency with the archive"
@@ -1973,6 +1988,30 @@
       "context": null
     },
     {
+      "from": "decision.photography.field-set-001-residency-acceptance",
+      "type": "part_of",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../projects/sunday-dinner-196-orientation.md",
+      "context": "Applies the proposal-and-acceptance practice of 196 to Jamie's archival work."
+    },
+    {
+      "from": "decision.photography.field-set-001-residency-acceptance",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": "Begins the notebook's first situated working period."
+    },
+    {
+      "from": "decision.photography.field-set-001-residency-acceptance",
+      "type": "related_to",
+      "to": "project.photography.field-set-001-residency",
+      "source": "frontmatter",
+      "href": "field-set-001-residency-proposal.md",
+      "context": "Records the decision that moves the proposal from invitation into an accepted residency."
+    },
+    {
       "from": "evaluation.employment-context.coverage.2026-07-18",
       "type": "related_to",
       "to": "index.knowledge-wiki.employment-context",
@@ -2202,6 +2241,14 @@
       "to": "decision.open-house.communal-governance",
       "source": "frontmatter",
       "href": "../decisions/open-house-communal-governance.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.photography.field-set-001-residency-acceptance",
+      "source": "frontmatter",
+      "href": "../photography/field-set-001-residency-acceptance.md",
       "context": null
     },
     {
@@ -2779,6 +2826,14 @@
       "source": "frontmatter",
       "href": "../sources/teju-cole-far-away-from-here-2015.md",
       "context": "Public source note for the residency precedent behind the proposal's permission to depart."
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
+      "type": "related_to",
+      "to": "decision.photography.field-set-001-residency-acceptance",
+      "source": "frontmatter",
+      "href": "field-set-001-residency-acceptance.md",
+      "context": "Jamie's dated acceptance and welcome, with asset and authorship boundaries preserved."
     },
     {
       "from": "index.knowledge-wiki.photography-notebook",
@@ -4426,6 +4481,14 @@
     },
     {
       "from": "project.photography.field-set-001-residency",
+      "type": "resulted_in",
+      "to": "decision.photography.field-set-001-residency-acceptance",
+      "source": "frontmatter",
+      "href": "field-set-001-residency-acceptance.md",
+      "context": "Jamie accepted the proposal and welcomed the artist into residence on July 22, 2026."
+    },
+    {
+      "from": "project.photography.field-set-001-residency",
       "type": "uses_method",
       "to": "method.photography.invitation-container-emergence",
       "source": "frontmatter",
@@ -5894,6 +5957,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/photography/field-set-001-residency-acceptance.md",
+      "to": "decision.photography.field-set-001-residency-acceptance",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
@@ -7210,10 +7282,19 @@
     {
       "fromPath": "docs/knowledge-bank/photography/README.md",
       "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/photography/field-set-001-residency-acceptance.md",
+      "to": "decision.photography.field-set-001-residency-acceptance",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
       "toPath": "docs/knowledge-bank/photography/field-set-001.md",
       "to": "research-inquiry.photography.field-set-001",
       "fragment": null,
-      "line": 32,
+      "line": 36,
       "kind": "link"
     },
     {
@@ -7222,7 +7303,7 @@
       "toPath": "docs/knowledge-bank/photography/editorial-grammar.md",
       "to": "method.photography.invitation-container-emergence",
       "fragment": null,
-      "line": 34,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -7231,7 +7312,7 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 36,
+      "line": 40,
       "kind": "link"
     },
     {
@@ -7240,7 +7321,7 @@
       "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "to": "index.knowledge-wiki.visual-evidence",
       "fragment": null,
-      "line": 38,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -7249,7 +7330,7 @@
       "toPath": "docs/knowledge-bank/sources/teju-cole-far-away-from-here-2015.md",
       "to": "source.teju-cole.far-away-from-here.2015",
       "fragment": null,
-      "line": 41,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -7258,7 +7339,16 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 95,
+      "line": 99,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/field-set-001-residency-proposal.md",
+      "from": "project.photography.field-set-001-residency",
+      "toPath": "docs/knowledge-bank/photography/field-set-001-residency-acceptance.md",
+      "to": "decision.photography.field-set-001-residency-acceptance",
+      "fragment": null,
+      "line": 120,
       "kind": "link"
     },
     {

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `fb10714b838718c8739fdaf0af983a76a8130ab1`
-**Generation time:** 2026-07-22T09:16:39-04:00
-**Source fingerprint:** `7fa7231f602f1e3b8b479184707cfa63032b80c530d8273fa2d9e9388b4f86c1`
+**Source commit:** `9816707beac6f683107e722db9315e6bd30c837d`
+**Generation time:** 2026-07-22T09:26:44-04:00
+**Source fingerprint:** `e71c73b05e7eb164ed6710006dd80a96f00c18b2deb4075e00ccc700e1e428e0`
 
 ## application
 
@@ -37,6 +37,7 @@
 - [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
+- [Acceptance of Release Yourself Into the Archive](../photography/field-set-001-residency-acceptance.md) - `decision.photography.field-set-001-residency-acceptance`
 
 ## evaluation
 
