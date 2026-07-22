@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T08:59:08-04:00",
-  "sourceCommit": "85e1ab83cdeb6fe9d4287e9be370d7f4168fe804",
-  "sourceFingerprint": "6895da7f243280243fd6ffae3d76331b6870f53e753683396445666e5286b554",
+  "generatedAt": "2026-07-22T09:16:39-04:00",
+  "sourceCommit": "fb10714b838718c8739fdaf0af983a76a8130ab1",
+  "sourceFingerprint": "7fa7231f602f1e3b8b479184707cfa63032b80c530d8273fa2d9e9388b4f86c1",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -936,6 +936,22 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "project.photography.field-set-001-residency",
+      "path": "docs/knowledge-bank/photography/field-set-001-residency-proposal.md",
+      "title": "Release Yourself Into the Archive",
+      "kind": "project",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "AI-assisted working proposal for an up-to-two-week residency at 196 in which Jamie may encounter the first private photographic field without predetermining its form.\n",
+      "aliases": [
+        "Field Set 001 residency proposal",
+        "A residency with the archive"
+      ],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-08-22"
+    },
+    {
       "id": "project.save-nyc-spaces",
       "path": "docs/knowledge-bank/projects/save-nyc-spaces.md",
       "title": "Save NYC Spaces",
@@ -1423,6 +1439,22 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.teju-cole.far-away-from-here.2015",
+      "path": "docs/knowledge-bank/sources/teju-cole-far-away-from-here-2015.md",
+      "title": "Teju Cole's Zurich residency and Far Away From Here",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public source note confirming that Cole arrived at a six-month Zurich writing residency with a Lagos manuscript and devoted much of the period to photographing Switzerland.",
+      "aliases": [
+        "Far Away From Here",
+        "Teju Cole Zurich residency"
+      ],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2027-01-22"
     },
     {
       "id": "source.ucsc.narrative-evaluations.2004-2006",
@@ -2742,6 +2774,14 @@
     },
     {
       "from": "index.knowledge-wiki.photography-notebook",
+      "type": "informed_by",
+      "to": "source.teju-cole.far-away-from-here.2015",
+      "source": "frontmatter",
+      "href": "../sources/teju-cole-far-away-from-here-2015.md",
+      "context": "Public source note for the residency precedent behind the proposal's permission to depart."
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
       "type": "related_to",
       "to": "index.knowledge-wiki.visual-evidence",
       "source": "frontmatter",
@@ -2755,6 +2795,14 @@
       "source": "frontmatter",
       "href": "../methods/structure-grows-from-the-material.md",
       "context": "The notebook lets its useful structure develop through situated attention."
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
+      "type": "related_to",
+      "to": "project.photography.field-set-001-residency",
+      "source": "frontmatter",
+      "href": "field-set-001-residency-proposal.md",
+      "context": "Artist-residency proposal that begins the first pass while protecting permission to change course."
     },
     {
       "from": "index.knowledge-wiki.photography-notebook",
@@ -4345,6 +4393,46 @@
       "context": null
     },
     {
+      "from": "project.photography.field-set-001-residency",
+      "type": "informed_by",
+      "to": "source.teju-cole.far-away-from-here.2015",
+      "source": "frontmatter",
+      "href": "../sources/teju-cole-far-away-from-here-2015.md",
+      "context": "Grounds the residency precedent in which attention to place changed the center of an intended writing period."
+    },
+    {
+      "from": "project.photography.field-set-001-residency",
+      "type": "part_of",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../projects/sunday-dinner-196-orientation.md",
+      "context": "Uses the residency's proposal-and-acceptance practice as a container for Jamie's own archival work."
+    },
+    {
+      "from": "project.photography.field-set-001-residency",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": "Begins the first creative working period inside the photography notebook."
+    },
+    {
+      "from": "project.photography.field-set-001-residency",
+      "type": "related_to",
+      "to": "research-inquiry.photography.field-set-001",
+      "source": "frontmatter",
+      "href": "field-set-001.md",
+      "context": "Names the provisional private field the residency will encounter."
+    },
+    {
+      "from": "project.photography.field-set-001-residency",
+      "type": "uses_method",
+      "to": "method.photography.invitation-container-emergence",
+      "source": "frontmatter",
+      "href": "editorial-grammar.md",
+      "context": "Holds the existing grammar lightly enough for the photographs to revise it."
+    },
+    {
       "from": "project.save-nyc-spaces",
       "type": "part_of",
       "to": "organization.nyc-artist-coalition",
@@ -4479,6 +4567,14 @@
       "source": "frontmatter",
       "href": "../indexes/visual-evidence.md",
       "context": null
+    },
+    {
+      "from": "research-inquiry.photography.field-set-001",
+      "type": "related_to",
+      "to": "project.photography.field-set-001-residency",
+      "source": "frontmatter",
+      "href": "field-set-001-residency-proposal.md",
+      "context": "The residency proposal supplies time, place, hospitality, and permission for the first encounter."
     },
     {
       "from": "research-inquiry.photography.field-set-001",
@@ -5047,6 +5143,14 @@
       "source": "frontmatter",
       "href": "../claims/callnyc-independent-follow-on.md",
       "context": null
+    },
+    {
+      "from": "source.teju-cole.far-away-from-here.2015",
+      "type": "documents",
+      "to": "project.photography.field-set-001-residency",
+      "source": "frontmatter",
+      "href": "../photography/field-set-001-residency-proposal.md",
+      "context": "Provides the source-honest precedent for allowing a residency's material to redirect its proposed form."
     },
     {
       "from": "source.vault.communication-history.metadata",
@@ -6717,6 +6821,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/visual-evidence.md",
+      "from": "index.knowledge-wiki.visual-evidence",
+      "toPath": "docs/knowledge-bank/photography/field-set-001-residency-proposal.md",
+      "to": "project.photography.field-set-001-residency",
+      "fragment": null,
+      "line": 51,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/what-the-work-was-up-against.md",
       "from": "index.knowledge-wiki.pressures",
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
@@ -7088,10 +7201,19 @@
     {
       "fromPath": "docs/knowledge-bank/photography/README.md",
       "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/photography/field-set-001-residency-proposal.md",
+      "to": "project.photography.field-set-001-residency",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
       "toPath": "docs/knowledge-bank/photography/field-set-001.md",
       "to": "research-inquiry.photography.field-set-001",
       "fragment": null,
-      "line": 30,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -7100,7 +7222,7 @@
       "toPath": "docs/knowledge-bank/photography/editorial-grammar.md",
       "to": "method.photography.invitation-container-emergence",
       "fragment": null,
-      "line": 32,
+      "line": 34,
       "kind": "link"
     },
     {
@@ -7109,7 +7231,7 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 34,
+      "line": 36,
       "kind": "link"
     },
     {
@@ -7118,7 +7240,16 @@
       "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "to": "index.knowledge-wiki.visual-evidence",
       "fragment": null,
-      "line": 36,
+      "line": 38,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/sources/teju-cole-far-away-from-here-2015.md",
+      "to": "source.teju-cole.far-away-from-here.2015",
+      "fragment": null,
+      "line": 41,
       "kind": "link"
     },
     {
@@ -7127,7 +7258,16 @@
       "toPath": "docs/knowledge-bank/photography/notebook-entry-template.md",
       "to": "method.photography.notebook-entry",
       "fragment": null,
-      "line": 90,
+      "line": 95,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/photography/field-set-001.md",
+      "from": "research-inquiry.photography.field-set-001",
+      "toPath": "docs/knowledge-bank/photography/field-set-001-residency-proposal.md",
+      "to": "project.photography.field-set-001-residency",
+      "fragment": null,
+      "line": 4,
       "kind": "link"
     },
     {

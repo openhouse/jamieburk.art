@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `85e1ab83cdeb6fe9d4287e9be370d7f4168fe804`
-**Generation time:** 2026-07-22T08:59:08-04:00
-**Source fingerprint:** `6895da7f243280243fd6ffae3d76331b6870f53e753683396445666e5286b554`
+**Source commit:** `fb10714b838718c8739fdaf0af983a76a8130ab1`
+**Generation time:** 2026-07-22T09:16:39-04:00
+**Source fingerprint:** `7fa7231f602f1e3b8b479184707cfa63032b80c530d8273fa2d9e9388b4f86c1`
 
 ## application
 
@@ -116,6 +116,7 @@
 - [NTER CHNG](../projects/nter-chng.md) - `project.nter-chng`
 - [NYC Artist Coalition](../projects/nyc-artist-coalition-2017.md) - `project.nyc-artist-coalition`
 - [Office of Nightlife town halls](../projects/office-of-nightlife-town-halls.md) - `project.office-of-nightlife-town-halls`
+- [Release Yourself Into the Archive](../photography/field-set-001-residency-proposal.md) - `project.photography.field-set-001-residency`
 - [Save NYC Spaces](../projects/save-nyc-spaces.md) - `project.save-nyc-spaces`
 - [Sunday Dinner and 196 Artists Residency orientation](../projects/sunday-dinner-196-orientation.md) - `project.sunday-dinner-196`
 - [Talks Not Raids orientation](../projects/talks-not-raids-orientation.md) - `project.talks-not-raids`
@@ -168,6 +169,7 @@
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
+- [Teju Cole's Zurich residency and Far Away From Here](../sources/teju-cole-far-away-from-here-2015.md) - `source.teju-cole.far-away-from-here.2015`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
