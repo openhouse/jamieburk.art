@@ -50,6 +50,7 @@ export default function AboutPage() {
         className="mt-14"
         imageClassName="aspect-[16/9] object-cover"
         photo={portfolioPhotos.raftRiverboat}
+        priority
         sizes="(max-width: 1280px) 100vw, 1240px"
       />
 
