@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -11,19 +11,24 @@ const sourceNotePath = path.join(
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
 );
 
-const candidateRelativePaths = [
+function walk(relativeDirectory) {
+  const directory = path.join(repoRoot, relativeDirectory);
+  return readdirSync(directory).flatMap((name) => {
+    const relativePath = path.join(relativeDirectory, name);
+    return statSync(path.join(repoRoot, relativePath)).isDirectory()
+      ? walk(relativePath)
+      : [relativePath];
+  });
+}
+
+const candidateRelativePaths = [...new Set([
   ".agents/evals/portfolio-production-readiness.json",
-  "apps/www/src/app/about/page.tsx",
-  "apps/www/src/app/page.tsx",
-  "apps/www/src/app/work/technical-operations/page.tsx",
-  "apps/www/src/content/work/harry-j-epstein.mdx",
-  "apps/www/src/content/work/wowlist.mdx",
-  "apps/www/src/content/work/callnyc.mdx",
-  "apps/www/src/content/work/196-sunday-dinner.mdx",
-  "apps/www/src/content/work/fair-rent-nyc.mdx",
-  "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
-  "apps/www/src/data/work.ts"
-];
+  "docs/design/layout-E-photo-integration.md",
+  "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+  ...walk("apps/www/src"),
+  ...walk("apps/www/public/images/photo-fieldwork"),
+  ...walk("docs/qa/layout-E")
+])].sort();
 
 const finalScorecardRelativePaths = [
   "docs/qa/evals-H/margaret-morse-final-a.json",
@@ -34,7 +39,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58";
+const approvedCandidateSha256 = "a780e84a1135c2de557b85d9befd1a496458b972865a6bf5ff7002c1c8b77aa4";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -54,7 +59,7 @@ function joined(entry) {
 function loadCandidateFiles() {
   return Object.fromEntries(candidateRelativePaths.map((relativePath) => [
     relativePath,
-    readFileSync(path.join(repoRoot, relativePath), "utf8")
+    readFileSync(path.join(repoRoot, relativePath))
   ]));
 }
 
@@ -203,7 +208,7 @@ export function evaluateProfessorLenses({
     ),
     criterion(
       "candidate-fingerprint",
-      "The holdout result remains bound to the exact evaluated rubric and public candidate files.",
+      "The holdout result remains bound to the exact evaluated rubric, full application source, selected image derivatives, design record, and rendered layout evidence.",
       candidateSha256 === approvedCandidateSha256,
       `Candidate SHA-256: ${candidateSha256}`
     ),

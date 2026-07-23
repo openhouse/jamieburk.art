@@ -83,19 +83,45 @@ try {
 }
 
 const publicUiChanged = changedPaths.some((file) =>
-  /^(?:apps\/www\/src\/(?:app|components)|apps\/www\/src\/data\/work\.ts|apps\/www\/public\/)/.test(file)
+  /^(?:apps\/www\/src\/(?:app|components|styles)|apps\/www\/src\/data\/(?:work|colors|photography)\.ts|apps\/www\/public\/)/.test(file)
 );
 const changedPublicUiPaths = changedPaths.filter((file) =>
-  /^(?:apps\/www\/src\/(?:app|components)|apps\/www\/src\/data\/work\.ts|apps\/www\/public\/)/.test(file)
+  /^(?:apps\/www\/src\/(?:app|components|styles)|apps\/www\/src\/data\/(?:work|colors|photography)\.ts|apps\/www\/public\/)/.test(file)
 );
 const technicalOperationsPath = "apps/www/src/app/work/technical-operations/page.tsx";
 const technicalOperationsSource = readFileSync(path.join(defaultRepoRoot, technicalOperationsPath), "utf8");
 const boundedPublicUiPaths = [
+  "apps/www/public/images/photo-fieldwork/dcla-listening-room.jpg",
+  "apps/www/public/images/photo-fieldwork/fair-rent-city-hall.jpg",
+  "apps/www/public/images/photo-fieldwork/fair-rent-field-materials.jpg",
+  "apps/www/public/images/photo-fieldwork/jamie-self-portrait-2026.jpg",
+  "apps/www/public/images/photo-fieldwork/let-nyc-dance.jpg",
+  "apps/www/public/images/photo-fieldwork/nycac-screen-printing.jpg",
+  "apps/www/public/images/photo-fieldwork/raft-delta-queen.jpg",
+  "apps/www/public/images/photo-fieldwork/repeal-cabaret-law.jpg",
+  "apps/www/public/images/photo-fieldwork/talks-not-raids.jpg",
+  "apps/www/src/app/about/page.tsx",
+  "apps/www/src/app/colophon/page.tsx",
   "apps/www/src/app/globals.css",
   "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+  "apps/www/src/app/layout.tsx",
+  "apps/www/src/app/page.tsx",
+  "apps/www/src/app/work/page.tsx",
   technicalOperationsPath,
+  "apps/www/src/components/CapabilityGrid.tsx",
   "apps/www/src/components/CaseStudyBlocks.tsx",
-  "apps/www/src/components/TagList.tsx"
+  "apps/www/src/components/CaseStudyLayout.tsx",
+  "apps/www/src/components/Hero.tsx",
+  "apps/www/src/components/JBButton.tsx",
+  "apps/www/src/components/PhotoFigure.tsx",
+  "apps/www/src/components/ResumeCTA.tsx",
+  "apps/www/src/components/SiteFooter.tsx",
+  "apps/www/src/components/SiteHeader.tsx",
+  "apps/www/src/components/TagList.tsx",
+  "apps/www/src/components/WorkCard.tsx",
+  "apps/www/src/data/colors.ts",
+  "apps/www/src/data/photography.ts",
+  "apps/www/src/styles/tokens.css"
 ].sort();
 const boundedPublicUiChange = JSON.stringify(changedPublicUiPaths.sort()) ===
   JSON.stringify(boundedPublicUiPaths);

@@ -1,0 +1,67 @@
+{
+  "suite": "layout-photography-integration-v1",
+  "purpose": "Keep the photography-led redesign expressive, legible, public-safe, and accountable as the site evolves.",
+  "threshold": "All blocking criteria pass.",
+  "criteria": [
+    {
+      "id": "LAYOUT-001",
+      "name": "Photography is structural",
+      "blocking": true,
+      "criterion": "The homepage uses a real selected photograph as its full-bleed hero and includes image-led editorial sequences below the first viewport."
+    },
+    {
+      "id": "LAYOUT-002",
+      "name": "Stable image geometry",
+      "blocking": true,
+      "criterion": "Shared image components reserve aspect ratios so photographs, captions, and loading states do not shift the page."
+    },
+    {
+      "id": "LAYOUT-003",
+      "name": "Situated captions",
+      "blocking": true,
+      "criterion": "Every selected archive photograph has non-empty alt text, caption, credit, context, and a stable public identifier."
+    },
+    {
+      "id": "LAYOUT-004",
+      "name": "Collective credit",
+      "blocking": true,
+      "criterion": "Campaign sequences explicitly resist sole-authorship implications and describe Jamie's role within collective work."
+    },
+    {
+      "id": "LAYOUT-005",
+      "name": "Public-safe derivatives",
+      "blocking": true,
+      "criterion": "Committed image derivatives contain no embedded metadata, private local paths, library UUIDs, or held-sensitive asset references."
+    },
+    {
+      "id": "LAYOUT-006",
+      "name": "Human publication gate",
+      "blocking": true,
+      "criterion": "The repository states that final rights, credit, crop, represented-person dignity, and production approval remain human decisions."
+    },
+    {
+      "id": "LAYOUT-007",
+      "name": "Human Index material system",
+      "blocking": true,
+      "criterion": "The global theme uses the approved work-jacket blue, institutional green, red-pencil accent, graphite, and corroboration colors without gradient decoration."
+    },
+    {
+      "id": "LAYOUT-008",
+      "name": "Hiring path remains clear",
+      "blocking": true,
+      "criterion": "Photography does not displace the role-fit path, resume, selected work, or contact actions."
+    },
+    {
+      "id": "LAYOUT-009",
+      "name": "Practice remains plural",
+      "blocking": true,
+      "criterion": "The about page and project pages connect artistic, civic, technical, and social practice without reducing every image to organizational utility."
+    },
+    {
+      "id": "LAYOUT-010",
+      "name": "Responsive first viewport",
+      "blocking": true,
+      "criterion": "Header, hero type, commands, and a hint of following content fit without overlap at mobile and desktop widths."
+    }
+  ]
+}

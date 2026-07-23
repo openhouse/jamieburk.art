@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { PhotoFigure } from "@/components/PhotoFigure";
+import { photos } from "@/data/photography";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -12,41 +14,40 @@ export const metadata: Metadata = createMetadata({
 
 export default function AboutPage() {
   return (
-    <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">About</h1>
-        <div className="mt-8 space-y-6 text-xl leading-9 text-jb-ink/78">
-          <p>
-            I am Jamie Burkart, a technical project manager and implementation
-            lead based in Brooklyn.
-          </p>
-          <p>
-            My work sits where the stakes are human and the operating structure
-            is still forming: civic technology, small-business operations,
-            public-facing tools, cultural infrastructure, coalition work, and
-            knowledge systems.
-          </p>
-          <p>
-            Across projects, I tend to do the same kind of work: clarify
-            ambiguous goals, translate between technical and nontechnical
-            stakeholders, map workflows, build documentation, create usable
-            interfaces, coordinate implementation, and leave behind handoffs
-            people can use after the meeting or launch is over.
-          </p>
-          <p>
-            I am currently focused on technical project management, product
-            operations, implementation, business analysis, civic/govtech
-            delivery, and source-backed knowledge systems.
-          </p>
+    <div className="py-12">
+      <section className="jb-frame grid gap-10 lg:grid-cols-[0.56fr_0.44fr] lg:items-end">
+        <div>
+          <p className="jb-eyebrow text-jb-blue">About</p>
+          <h1 className="mt-3 text-5xl font-bold text-jb-ink">Jamie Burkart</h1>
+          <div className="mt-7 space-y-5 text-xl leading-9 text-jb-ink/78">
+            <p>
+              I am a technical project manager and implementation lead based in
+              Brooklyn. I build operating structure where the stakes are human
+              and the structure is still forming.
+            </p>
+            <p>
+              My work moves across civic technology, small-business operations,
+              public tools, cultural infrastructure, coalition work, and
+              knowledge systems. The recurring practice is to listen, clarify,
+              translate, build, document, and leave behind something other people
+              can inhabit and continue.
+            </p>
+            <p>
+              I am currently focused on technical project management, product
+              operations, implementation, business analysis, civic and govtech
+              delivery, and source-backed knowledge systems.
+            </p>
+          </div>
         </div>
-        <section className="mt-12 border-t border-jb-blue/20 pt-8">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
-            The through line
-          </p>
+        <PhotoFigure mode="portrait" photo={photos.selfPortrait} priority />
+      </section>
+      <div className="jb-frame">
+        <section className="mt-16 border-t border-jb-blue/20 pt-10">
+          <p className="jb-eyebrow text-jb-blue">The through line</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
             Systems people can inhabit
           </h2>
-          <div className="mt-5 space-y-5 text-lg leading-8 text-jb-ink/78">
+          <div className="jb-reading mt-5 space-y-5 text-lg leading-8 text-jb-ink/78">
             <p>
               This practice began before I called it technical operations. In{" "}
               <Link
@@ -222,7 +223,7 @@ export default function AboutPage() {
             </article>
           </div>
         </section>
-        <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
+        <div className="mt-10 max-w-3xl border-l-4 border-jb-blue bg-jb-sky/15 p-5">
           <p className="leading-8 text-jb-ink/78">
             I value public benefit, accessibility, source-backed memory, careful
             claims, collective credit, consent, privacy, repair, and
@@ -231,8 +232,10 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-      <div className="mt-12 max-w-3xl">
-        <ContactCTA />
+      <div className="jb-frame mt-12">
+        <div className="max-w-3xl">
+          <ContactCTA />
+        </div>
       </div>
     </div>
   );

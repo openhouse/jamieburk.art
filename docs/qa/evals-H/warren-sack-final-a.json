@@ -1,41 +1,41 @@
 {
-  "evaluator": "Independent holdout reader applying PR-016",
-  "reviewerId": "sack-a-employment-release",
+  "evaluator": "Codex independent holdout reader",
+  "reviewerId": "sack-a-layout-E-v2",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "a780e84a1135c2de557b85d9befd1a496458b972865a6bf5ff7002c1c8b77aa4",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The computed SHA-256 for the candidate subset exactly matches the expected fingerprint.",
-    "apps/www/src/app/about/page.tsx:91-100 plainly states the recurring sequence: recognize relationships, observe, model, prototype, test with people, document, and enable continuation.",
-    "apps/www/src/app/about/page.tsx:103-223 traces relationships, interface and use, learning, documentation, and continuity through four distinct projects.",
-    "Harry J. Epstein connects stakeholder and operating relationships to a maintained customer interface, incremental releases, analytics-guided learning, reusable patterns, and team workflows.",
-    "FairRentNYC connects lived experience, public sources, policy actors, and collaborators to source maps, campaign interfaces, collective events, running minutes, action trackers, and recoverable decision context.",
-    "WOWList connects organizer vocabulary and informal networks to a keyword-community model, publishing interfaces, documented organizer use, support materials, and reusable distribution patterns while describing the work as co-built and historical.",
-    "CallNYC connects constituent-service records to issue-pathway modeling, a bounded public prototype, documented stakeholder interaction, iteration, public documentation, and a preserved implementation repository.",
-    "apps/www/src/data/work.ts distinguishes ongoing work from historical or archived projects: HJE and FairRentNYC are marked present, WOWList and 196 are historical, CallNYC is archived, and the team-memory lab is explicitly early.",
-    "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md:54-57 defines the lens as evidence across projects rather than abstract systems language or a historical tool list."
+    "Fresh `npm run evals:professor-lenses` output failed only `unanimous-holdouts`; `candidate-fingerprint` was not among the failures, confirming the bound candidate. The stale holdout-scorecard state was not scored against it.",
+    "The method is plainly reachable from the homepage’s visible About navigation. `apps/www/src/app/about/page.tsx:98-101` states the complete recursive sequence—observe relationships, model a system, prototype an interface, test it with people, and document for continuation—and lines 64-93 link directly to project evidence.",
+    "FairRentNYC provides a complete continuity: lived experience, meetings, sources, and public actors are observed; campaign memory and source maps model the system; campaign sites and participation pathways provide interfaces; recurring meetings, ballots, practical sessions, hearings, and public actions demonstrate collective use; running minutes, decision records, action trackers, and source trails enable continuation (`about/page.tsx:135-162`; `fair-rent-nyc.mdx:76-94`; `nycac-facebook-events-2026-07.ts:415-432`).",
+    "WOWList provides a second continuity: organizers’ existing language and decentralized distribution needs are observed; followable keyword communities model that social structure; publishing, profiles, followed lists, digests, and calendars form the interface; independently documented tutorials, local calendars, and historical database activity show real use; support workflows and reusable publishing/deployment patterns preserve learning for iteration (`wowlist.mdx:3-11,49-55`; `about/page.tsx:165-191`; `social-media-production-2026-07.ts:137`; `participation-continuity-2026-07.ts:464-480`).",
+    "196 / Sunday Dinner provides a third continuity: hospitality, trust, artist support, and recurring rhythms are observed; structured invitations, onboarding, hosting, and access workflows model the system; those practices form the participation interface; the bounded 300+ gathering record demonstrates sustained social use; a documented residency handoff and protected operating-sheet workflow support continuation without exposing participants (`about/page.tsx:194-220`; `196-sunday-dinner.mdx:3-53`; `google-drive-production-2026-07.ts:398-467`).",
+    "CallNYC supplies additional inspectable continuity: it identifies the gap between civic data and resident decisions, models issue pathways and district context, implements an unofficial resident-facing prototype, records bounded public interactions from at least 19 serving Council-member accounts, and preserves implementation and scope limits in a public repository (`callnyc.mdx:30-66`; `social-media-production-2026-07.ts:135`).",
+    "Employment relevance is unmistakable: the rendered homepage leads with Technical Project Manager / Product Operations / Implementation, while `work/technical-operations/page.tsx:10-68,129-175` connects delivery coordination, risk, stakeholder dependencies, onboarding, documentation, launch support, and handoffs to eight named proof surfaces.",
+    "Claims remain bounded and collectively credited: WOWList is consistently “co-built”; Fair Rent copy rejects individual policy causation; Sunday Dinner preserves co-organizer and community credit; the hero caption places Jamie inside a multi-person system rather than as captain; and the Fair Rent photo sequence explicitly rejects sole authorship (`Hero.tsx:43-47`; `CaseStudyLayout.tsx:62-83`).",
+    "Historical lineage is not inflated into present proficiency. The scoped surfaces contain no Max/Jitter, peer-reviewed-research, or disciplinary-invention claim. The lab is labeled early research/method/consulting practice and explicitly not production SaaS, while coursework is described as professional development rather than affiliation or deployment (`source-backed-team-memory/page.tsx:46-51,91-114`)."
   ],
   "gaps": [],
   "safety_findings": [
-    "Collective credit is preserved: Open House is described as initiated by Jamie and collectively governed; WOWList is co-built; coalition outcomes remain collective.",
-    "Protected educational records, identifiers, correspondence, grades, and private archive paths are explicitly withheld and are not reproduced.",
-    "Historical work is labeled as historical or archived and is not presented as proof of current proficiency in historical toolsets.",
-    "The source note explicitly states that the faculty lenses are not endorsements; no named professor is represented as participating in this review or endorsing Jamie."
+    "No actual unsafe publication or authorization contradiction remains for this public PR-review candidate. `docs/design/layout-E-photo-integration.md:47-71` records authorization and an asset-level decision for all nine derivatives, removes two intimate gathering images lacking represented-person approval, excludes private metadata and locators, and retains rights, exact credit, crop, dignity, and production approval as human gates.",
+    "The rendered screenshots preserve the documented boundaries: the hero carries its collective-role caption immediately below the image, and the Fair Rent sequence visibly identifies the photographs as collective situations rather than sole-authorship evidence.",
+    "The open production gate is correctly scoped and does not imply production clearance."
   ],
-  "recommendation": "Pass for employment release under the existing collective-credit, privacy, historical-status, and anti-endorsement boundaries.",
+  "recommendation": "Pass PR-016 at score 4 for the current public pull-request review candidate; retain all stated production rights, credit, dignity, crop, and final-approval gates.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-32c0-7560-95c9-20df2f9c4702",
-    "agentNickname": "Franklin",
+    "provider": "codex-exec",
+    "processSessionId": "019f8caf-01b4-7fd3-a69e-3d5ea82f652d",
     "model": "gpt-5.6-sol",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:21.573Z",
-    "completedAt": "2026-07-19T03:17:30.054Z"
+    "promptSha256": "a36e5cdc958979a8366b6ce9855cecdaa289837f526a5041d293bb81e5be2a31",
+    "resultSha256": "006f887377116c8400229e39e7f2c9d33c9a3c0053d38f8e6a5c5c24c90b0615",
+    "resultTransport": "codex-exec-output-last-message",
+    "operatorAttestation": "Recorded verbatim from a completed independent read-only Codex result by the parent orchestrator.",
+    "startedAt": "2026-07-23T01:55:00.000Z",
+    "completedAt": "2026-07-23T02:00:00.000Z"
   }
 }

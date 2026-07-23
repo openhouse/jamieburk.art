@@ -3,16 +3,11 @@ import type { Route } from "next";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
+import { PhotoFigure } from "@/components/PhotoFigure";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
+import { photos } from "@/data/photography";
 import { featuredWork } from "@/data/work";
-
-const transformations = [
-  ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
-  ["Legacy operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
-];
 
 const startHereLinks = [
   {
@@ -46,28 +41,29 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="jb-frame py-12">
-        <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
-          <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">Start here</p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              Quick path through the portfolio
+      <section className="jb-frame py-14 md:py-18">
+        <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr]">
+          <div>
+            <p className="jb-eyebrow text-jb-blue">Start here</p>
+            <h2 className="mt-3 max-w-lg text-3xl font-bold text-jb-ink">
+              A quick path through the work
             </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              New to my work? These pages give the clearest route through the
-              site for hiring managers, referrers, civic-tech peers, and
-              collaborators.
+            <p className="mt-4 max-w-xl leading-8 text-jb-ink/76">
+              For hiring managers and collaborators: begin with role fit, then
+              follow the projects into the fuller practice.
             </p>
           </div>
-          <div className="grid gap-3">
+          <div className="border-t border-jb-ink/18">
             {startHereLinks.map((item) => (
               <Link
-                className="rounded-lg border border-jb-ink/12 bg-jb-warm p-4 hover:border-jb-blue/40 hover:bg-jb-sky/14"
+                className="group grid gap-2 border-b border-jb-ink/14 py-4 sm:grid-cols-[0.42fr_0.58fr]"
                 href={item.href as Route}
                 key={item.href}
               >
-                <span className="font-semibold text-jb-blue">{item.label}</span>
-                <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
+                <span className="font-semibold text-jb-blue group-hover:text-jb-green">
+                  {item.label}
+                </span>
+                <span className="text-sm leading-6 text-jb-ink/70">
                   {item.note}
                 </span>
               </Link>
@@ -76,15 +72,31 @@ export default function HomePage() {
         </div>
       </section>
       <ProofStrip />
+      <section className="jb-image-text-band">
+        <PhotoFigure
+          className="jb-image-text-band-photo"
+          photo={photos.dclaListeningRoom}
+          sizes="(min-width: 1024px) 60vw, 100vw"
+        />
+        <div className="jb-image-text-band-copy">
+          <p className="jb-eyebrow text-jb-blue">Participation infrastructure</p>
+          <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+            Listening is an operating system
+          </h2>
+          <p className="mt-5 text-xl leading-8 text-jb-ink/76">
+            The work often begins before a requirement exists. A room, a meal,
+            a public tool, or a recurring meeting can make it possible for
+            people to name what matters and recognize a coherence they can act on.
+          </p>
+        </div>
+      </section>
       <CapabilityGrid />
-      <section className="jb-frame py-16">
+      <section className="jb-frame border-t border-jb-ink/16 py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
-              Selected systems
-            </p>
+            <p className="jb-eyebrow text-jb-blue">Selected systems</p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              Proof across operating, civic, and community systems
+              Work across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
               These projects show a recurring pattern: ambiguous, high-context
@@ -96,46 +108,33 @@ export default function HomePage() {
             View all work
           </Link>
         </div>
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+        <div className="mt-8 border-t border-jb-ink/18">
           {featuredWork.map((item) => (
             <WorkCard item={item} key={item.slug} />
           ))}
         </div>
       </section>
-      <section className="bg-jb-warm/80 py-16">
-        <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
-              Operating motif
-            </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              What was unclear becomes usable
+      <section className="jb-material-band">
+        <div className="jb-frame grid gap-8 lg:grid-cols-[0.62fr_0.38fr] lg:items-end">
+          <PhotoFigure photo={photos.screenPrinting} sizes="(min-width: 1024px) 62vw, 100vw" />
+          <div className="pb-2">
+            <p className="jb-eyebrow text-jb-ochre">Operational production</p>
+            <h2 className="mt-3 text-3xl font-bold text-white">
+              Care for the container is part of the work
             </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
+            <p className="mt-5 text-lg leading-8 text-white/78">
+              Requirements and runbooks matter. So do the shirts, maps, meals,
+              invitations, rooms, and small acts of maintenance that let people
+              enter a project and make it their own.
             </p>
           </div>
-          <dl className="grid gap-3">
-            {transformations.map(([from, to]) => (
-              <div
-                className="grid gap-2 rounded-lg border border-jb-ink/12 bg-jb-paper p-4 sm:grid-cols-[1fr_auto_1fr]"
-                key={from}
-              >
-                <dt className="font-semibold text-jb-ink">{from}</dt>
-                <dd className="hidden text-jb-blue sm:block">to</dd>
-                <dd className="font-semibold text-jb-green">{to}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
+          <p className="jb-eyebrow text-jb-blue">How I work</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-            Clarify to Structure to Build to Document to Transfer
+            Clarify / structure / build / document / transfer
           </h2>
         </div>
         <div className="space-y-7">

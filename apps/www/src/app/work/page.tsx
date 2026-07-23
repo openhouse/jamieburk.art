@@ -14,14 +14,17 @@ export const metadata: Metadata = createMetadata({
 export default function WorkPage() {
   return (
     <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">Selected work</h1>
+      <div className="grid gap-8 lg:grid-cols-[0.38fr_0.62fr] lg:items-end">
+        <div>
+          <p className="jb-eyebrow text-jb-blue">Portfolio index</p>
+          <h1 className="mt-3 text-5xl font-bold text-jb-ink">Selected work</h1>
+        </div>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           These case studies show a recurring pattern: real needs becoming
           clearer requirements, usable systems, public-facing tools,
           documentation, decision trails, and durable handoffs.
         </p>
-        <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
+        <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold lg:col-start-2">
           <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
             Technical Operations proof page
           </Link>
@@ -38,7 +41,7 @@ export default function WorkPage() {
             return (
               <section key={group}>
                 <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
-                <div className="mt-5 rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5">
+                <div className="mt-5 border-y border-jb-ink/15 py-6">
                   <h3 className="text-2xl font-semibold text-jb-ink">
                     Source-Backed Team Memory / Noting.us
                   </h3>
@@ -67,7 +70,7 @@ export default function WorkPage() {
           return (
             <section key={group}>
               <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
-              <div className="mt-5 grid gap-5 lg:grid-cols-2">
+              <div className="mt-5 border-t border-jb-ink/18">
                 {groupedItems.map((item) => (
                   <WorkCard item={item} key={item.slug} />
                 ))}

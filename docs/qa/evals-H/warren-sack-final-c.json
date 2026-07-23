@@ -1,42 +1,41 @@
 {
   "evaluator": "Codex independent holdout reader",
-  "reviewerId": "sack-c-employment-release",
+  "reviewerId": "sack-c-layout-E-v2",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "a780e84a1135c2de557b85d9befd1a496458b972865a6bf5ff7002c1c8b77aa4",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The independently computed SHA-256 for the ordered public candidate subset exactly matches the expected candidate hash.",
-    "The About page plainly states the recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "Harry J. Epstein Company supplies current implementation proof: a maintained storefront, customer ordering, recurring operational questions, bounded analytics, incremental releases, reusable content patterns, clearer workflows, and durable digital operations.",
-    "NYC Artist Coalition and FairRentNYC connect stakeholder relationships and public information architecture to campaign websites, public action pathways, collective use, running minutes, source maps, decision records, question logs, and action trackers.",
-    "Sunday Dinner and 196 connect hospitality and trust to invitations, onboarding, access handoffs, facilitation, recurring use, documented continuity, and privacy-bounded operating records, including recent 2023 and 2025 workflow evidence.",
-    "WOWList is presented as co-built historical work with concrete organizer use and dated operating evidence; its historical status and shared credit prevent it from being mistaken for present proficiency or a solely authored current deployment.",
-    "CallNYC is explicitly labeled an archived, unofficial prototype whose historical guidance must not be used as a current civic service.",
-    "Source-Backed Team Memory coherently transfers the method into present implementation practice while explicitly identifying itself as an early method rather than production SaaS, a completed client deployment, or automated judgment.",
-    "The Technical Operations page consolidates the cross-project transfer into current role language covering requirements, delivery rhythms, risk signals, onboarding materials, runbooks, decision records, launch support, and durable handoffs.",
-    "The source note keeps dated coursework contextual, withholds protected educational records and correspondence, and prohibits claims of disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current proficiency in historical tools."
+    "`npm run evals:professor-lenses` reported only the expected `unanimous-holdouts` stale-scorecard failure; `candidate-fingerprint` was not among the failures, verifying fingerprint `a780e84a1135c2de557b85d9befd1a496458b972865a6bf5ff7002c1c8b77aa4`.",
+    "The About page plainly states the complete recursive method—observe relationships, model a system, prototype an interface, test it with people, and document for continuation—and links directly to project evidence (`apps/www/src/app/about/page.tsx:64-101`). The homepage and attached desktop/mobile renders make About and the hiring path readily accessible.",
+    "FairRentNYC reconstructs the full sequence: lived experience, meetings, sources, and actors are modeled through source maps and decision records; campaign sites and public pathways become interfaces; collaborators use them through town halls, hearings, sessions, and actions; running minutes, question logs, and trackers preserve continuity (`apps/www/src/app/about/page.tsx:135-161`; `apps/www/src/content/work/fair-rent-nyc.mdx:1-5,63-94,132-136`).",
+    "WOWList begins with organizers’ existing language and distributed relationships, models them as keyword communities, delivers publishing, digest, and calendar interfaces, documents real organizer use, and converts learning into reusable publishing and deployment patterns (`apps/www/src/app/about/page.tsx:165-190`; `apps/www/src/content/work/wowlist.mdx:3-11,49-55`).",
+    "CallNYC observes the gap between administrative data and resident decisions, models issue pathways and district context, prototypes a public interface, receives documented public and Council interaction, iterates, and preserves its implementation and source trail for further work (`apps/www/src/content/work/callnyc.mdx:30-66`).",
+    "Employment relevance is immediate in the rendered homepage—Technical Project Manager / Product Operations / Implementation—and the Technical Operations surface translates the method into requirements, delivery rhythms, decision records, onboarding, launch support, and durable handoffs with linked project proof (`apps/www/src/app/work/technical-operations/page.tsx:122-140,157-205`).",
+    "Claims remain bounded: WOWList is explicitly co-built; FairRentNYC preserves collective campaign credit and disclaims solo policy causality; CallNYC is archived, independent, and unofficial; Source-Backed Team Memory is labeled early practice rather than production SaaS (`apps/www/src/content/work/wowlist.mdx:1-3,49-51`; `apps/www/src/content/work/fair-rent-nyc.mdx:63,134`; `apps/www/src/content/work/callnyc.mdx:45-78`; `apps/www/src/app/lab/source-backed-team-memory/page.tsx:35-50`).",
+    "The four attached renders visibly support the source judgment: clear first-viewport role fit on desktop and mobile, a legible About/through-line surface, and a FairRentNYC sequence connecting listening, material production, and collective public action."
   ],
   "gaps": [],
   "safety_findings": [
-    "Collective credit is preserved for Open House participants, coalition collaborators, WOWList collaborators, and community work.",
-    "Protected educational records, identifiers, correspondence, private archive locations, participant records, and unapproved testimonials remain outside the public projection.",
-    "Historical prototypes and platforms are visibly distinguished from current services and current implementation capability.",
-    "No faculty participation, endorsement, or testimonial is claimed."
+    "No actual contradiction or unsafe publication remains for this public PR-review candidate.",
+    "The manifest and committed directory contain exactly the nine ledgered derivatives, with descriptive alt text, contextual captions, credit, context, and crop data (`apps/www/src/data/photography.ts:1-102`).",
+    "The review record explicitly removes the two intimate gathering images lacking represented-person approval and retains production rights, exact-credit, crop, dignity, and final-approval gates (`docs/design/layout-E-photo-integration.md:47-71`). Those open production gates are appropriate and are not a PR-016 failure.",
+    "No inspected public surface claims disciplinary invention, peer-reviewed research, current Max/Jitter proficiency, production deployment, or sole authorship inferred from historical coursework."
   ],
-  "recommendation": "Pass PR-016 for the evaluated candidate. The project-specific interfaces, actual use, operating systems, learning loops, and handoffs form a coherent present-day implementation narrative without converting protected coursework or archived prototypes into production-deployment claims.",
+  "recommendation": "Pass PR-016 at score 4 for this exact public pull-request review candidate; retain all recorded human production-approval gates before deployment or indexing.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3606-7fe2-9906-a82acf75ec86",
-    "agentNickname": "Darwin",
+    "provider": "codex-exec",
+    "processSessionId": "019f8caf-017d-7913-aea0-f5c25cf763f3",
     "model": "gpt-5.6-sol",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:22.360Z",
-    "completedAt": "2026-07-19T03:17:30.074Z"
+    "promptSha256": "a36e5cdc958979a8366b6ce9855cecdaa289837f526a5041d293bb81e5be2a31",
+    "resultSha256": "9fd193665b6a0673336bc78cd4bdd13ced385cce65ce39b7d4a50221b35847b8",
+    "resultTransport": "codex-exec-output-last-message",
+    "operatorAttestation": "Recorded verbatim from a completed independent read-only Codex result by the parent orchestrator.",
+    "startedAt": "2026-07-23T01:55:00.000Z",
+    "completedAt": "2026-07-23T02:00:00.000Z"
   }
 }

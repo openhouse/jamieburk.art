@@ -177,7 +177,7 @@ export default function TechnicalOperationsPage() {
         {technicalOperationsProofRows.map((row) => (
           <JBCard id={row.capability.toLowerCase().replaceAll(" ", "-")} key={row.capability}>
             <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
-            <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
+            <p className="mt-3 text-sm leading-6 text-jb-ink/74">{row.toward}</p>
             <ul className="mt-5 space-y-3 text-jb-ink/76">
               {row.proofs.map((proof) => {
                 const destination = proofDestinations[proof.id];

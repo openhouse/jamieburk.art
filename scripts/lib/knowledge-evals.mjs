@@ -62,7 +62,7 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   governedKnowledgeSha256: "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
   proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
   caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-  sharedPublicSurfacesSha256: "1f46195106bbfa6af572a32f4ae9fb57a12e687bf1154fe92f0d6b0822635846",
+  sharedPublicSurfacesSha256: "2c98339a9618b4ec1ffb031a4c2901735e875682a02cd1ee6cb85e418508dc45",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for

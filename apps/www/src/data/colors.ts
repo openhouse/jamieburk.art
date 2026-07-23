@@ -1,19 +1,19 @@
 export const colors = {
-  broadwayBlue: "#0b5f81",
-  oilWhite: "#eeefec",
-  oilBlack: "#343435",
-  darkGray: "#5e5f61",
-  deepGreen: "#1f5c3e",
-  vandykeBrown: "#76533a",
-  yellowOchre: "#e9b64e",
-  lemonYellow: "#f7ec86",
-  paleOrange: "#fce1d1",
-  paleBlue: "#74c2e5",
-  classicRose: "#e2aeb4",
-  cadmiumRed: "#d73d36",
-  sapGreen: "#34a63c",
-  warmGray: "#d9d1c7",
-  paperCream: "#f7f4ee"
+  broadwayBlue: "#2f6f89",
+  oilWhite: "#ffffff",
+  oilBlack: "#1a232b",
+  darkGray: "#5d6871",
+  deepGreen: "#4e6f61",
+  vandykeBrown: "#6d5548",
+  yellowOchre: "#d1a23f",
+  lemonYellow: "#f4e5a8",
+  paleOrange: "#f3d8c9",
+  paleBlue: "#b9d9e8",
+  classicRose: "#d8a9b4",
+  cadmiumRed: "#c83b32",
+  sapGreen: "#4a7f4f",
+  warmGray: "#d9e4e9",
+  paperCream: "#f3f6f8"
 } as const;
 
 export const oilPastelPalette = [
