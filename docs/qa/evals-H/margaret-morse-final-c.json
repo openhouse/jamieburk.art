@@ -1,43 +1,42 @@
 {
-  "evaluator": "Independent holdout reader applying the fictionalized PR-015 Margaret Morse lens",
-  "reviewerId": "morse-c-employment-release",
+  "evaluator": "Codex independent holdout evaluator",
+  "reviewerId": "morse-c-native-layout-final-v3",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The SHA-256 independently recomputed from the ordered eleven-file candidate subset exactly matches the expected fingerprint.",
-    "The homepage leads with technical project management, product operations, implementation, and durable handoffs; the global navigation provides a direct one-click path to About.",
-    "The About page keeps current professional focus primary while a bounded 'Systems people can inhabit' section explicitly connects artistic, civic, technical, and social practice.",
-    "The current Harry J. Epstein work connects attention to customer language and institutional voice with maintained interfaces, bounded analytics, incremental learning, and reusable workflows.",
-    "The 2017-Present NYC Artist Coalition and FairRentNYC work connects cultural-space experience, participation, public interfaces, source-backed documentation, stakeholder care, and collective continuity to clear employment capabilities.",
-    "The 2026 Source-Backed Team Memory lab demonstrates current investigation through reviewable, human-correctable operating memory while explicitly identifying itself as an early method rather than production SaaS.",
-    "Historical WOWList and Sunday Dinner / 196 continuities preserve community vocabulary, distributed participation, hospitality, place, artist support, consent, and situated learning without displacing the employment narrative.",
-    "The public Open House source supports the bounded historical account of a ten-day experiment, Jamie's initiating role, communal decision-making, public participation, and many-perspective documentation: https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
-    "The UCSC source note explicitly withholds raw educational records, grades, identifiers, private archive paths, correspondence, and unapproved testimonial material."
+    "Recomputed SHA-256 twice from the 46 candidateRelativePaths in scripts/lib/professor-lens-eval.mjs, preserving the declared order and hashing path + NUL + raw bytes + NUL. Both results matched 5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac.",
+    "The primary navigation links directly from the homepage to /about. Desktop and mobile browser captures show About available in one click, and the rendered About page visibly presents the heading \"Systems people can inhabit\" with the artistic, civic, technical, and social through-line.",
+    "The professional role remains unmistakable: the homepage leads with \"Technical Project Manager / Product Operations / Implementation,\" while About identifies Jamie as a technical project manager and implementation lead before adding artist and operational steward. Project pages repeatedly translate the lineage into role-fit evidence.",
+    "Open House supplies an artistic and participatory origin through a public article: a ten-day gallery experiment initiated by Jamie but collectively governed through making, living, negotiation, and many-perspective documentation. The page does not claim sole authorship or reproduce participant details.",
+    "WOWList provides a public-safe continuity through place, participation, and distributed agency: it is described as co-built, credits Richard and Jamie in the governed evidence, and lets organizers publish through community vocabulary instead of a central editorial taxonomy.",
+    "Sunday Dinner and 196 provide a second current continuity through hospitality, embodiment, care, access, return, and artist support. The rendered blank hosting-handoff specimen exposes observation, modeling, invitation, feedback, revision, and transfer while expressly excluding names, attendance, addresses, credentials, correspondence, and unapproved images.",
+    "NYC Artist Coalition and FairRentNYC provide a third current continuity through civic participation, situated attention, documentation, public testimony, recurring meetings, source maps, decision memory, and action pathways. The case study separates Jamie's implementation and organizing role from coalition accomplishments, Council action, and collaborators' work.",
+    "Harry J. Epstein provides a fourth continuity connecting technical stewardship with attention to customer language, institutional memory, public voice, team feedback, incremental releases, and maintainable handoffs rather than treating administration as neutral throughput.",
+    "Responsive evidence covers the seven relevant routes at 360, 375, 768, and 1280 CSS pixels: all 28 rows returned HTTP 200 with one H1, no axe violations, no horizontal overflow, no failed requests, and no broken images after scrolling. Independent desktop and mobile captures of Home, About, FairRentNYC, and Sunday Dinner show the evaluated content rendered coherently.",
+    "All 13 registered branch-review photographs were inspected directly and their SHA-256 values matched the photo-review register. Captions preserve collective framing across the six civic/collective images and three raft images; the four Jamie portraits support professional identity without displacing project evidence. No image depicts an obviously private or degrading situation."
   ],
-  "gaps": [],
+  "gaps": [
+    "Production publication remains gated on exact crop and caption review, photographer identification and rights, consent and dignity, collective credit, final public usefulness, and Jamie's approval of this unchanged candidate.",
+    "The photographs include identifiable participants and incidental people. Branch-review authorization supports develop/staging evaluation, but the repository does not establish final individual consent or publication rights for every depicted person.",
+    "The held Social Information Spaces educational-record claim and the Margaret Morse recommendation must remain unprojected unless separately authorized and corroborated through an approved public source."
+  ],
   "safety_findings": [
-    "Open House is described with bounded initiation language and collective governance rather than solo authorship.",
-    "WOWList is identified as co-built, NYC Artist Coalition outcomes remain collective, and the 196 / Sunday Dinner community receives explicit credit.",
-    "The candidate does not reproduce protected educational records, private correspondence, student identifiers, private paths, or unapproved faculty testimonial text.",
-    "Historical projects are dated and distinguished from current capability; the current lab is explicitly bounded as early research and consulting practice.",
-    "The linked 2006 article contains sensitive participant circumstances, but the portfolio does not reproduce them and the knowledge-bank boundary prohibits renewed publication of participant identities, circumstances, or images without review.",
-    "No participation or endorsement by Margaret Morse, Warren Sack, or another named person is inferred from the lens, source note, or this evaluation."
+    "The rendered surfaces contain no Margaret Morse or Warren Sack testimonial, faculty praise, educational grade, student identifier, educational email address, private archive path, or quotation from a protected narrative evaluation.",
+    "The protected Social Information Spaces record is marked protected/private; its only projection is held with no public surface. The public About lineage instead relies on the public Good Times Open House article.",
+    "Sunday Dinner and 196 keep participant evidence aggregate and explicitly withhold guest lists, contact details, attendance histories, correspondence, access information, source reproductions, and unapproved media.",
+    "FairRentNYC visibly credits coalition collaborators and advocates, labels campaign outcomes collective, and avoids claiming that Jamie alone caused policy outcomes or supplied official legal analysis.",
+    "The 13 photographs are uniformly marked branch-review in source metadata and governed markup. Public-safety automation also reports photography as pending exact-image production approval; that machine pass is not publication clearance."
   ],
-  "recommendation": "Pass PR-015 for employment-facing use. The portfolio is job-useful while preserving artistic investigation, situated learning, and the Open House collective-governance boundary; retain the present historical/current labels and privacy controls.",
+  "recommendation": "Pass PR-015 at score 4 for develop/staging review. The candidate establishes a visible, evidence-backed inhabited-systems lineage without obscuring Jamie's technical professional role or converting collective practice into personal utility. Keep production blocked until the exact-image human review, rights and consent checks, collective-credit review, and Jamie approval are recorded against this unchanged fingerprint.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-316a-7d60-a90e-a060ef98498b",
-    "agentNickname": "Bacon",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "model": "gpt-5",
+    "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:21.244Z",
-    "completedAt": "2026-07-19T03:17:30.045Z"
+    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
   }
 }

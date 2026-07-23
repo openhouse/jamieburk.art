@@ -268,3 +268,76 @@ export function LinksList({ item }: { item: WorkMeta }) {
     </section>
   );
 }
+
+const hostingHandoffStages = [
+  {
+    label: "Observe",
+    prompt: "What does this visit or gathering need in order to be possible?"
+  },
+  {
+    label: "Model",
+    prompt: "Name responsibilities, access conditions, and points of support."
+  },
+  {
+    label: "Interface",
+    prompt: "Prepare invitations, onboarding, arrival cues, and ways to ask for help."
+  },
+  {
+    label: "Use and notice",
+    prompt: "Record questions, friction, repeated needs, and what helped participation."
+  },
+  {
+    label: "Revise",
+    prompt: "What should change next time, and what remains open?"
+  },
+  {
+    label: "Hand off",
+    prompt: "Continue, revise, or stop. What does the next host need to know?"
+  }
+] as const;
+
+export function HostingHandoffTemplate() {
+  return (
+    <section
+      aria-labelledby="hosting-handoff-template"
+      className="my-8 border border-jb-ink/25 bg-jb-paper"
+    >
+      <header className="border-b border-jb-ink/25 px-5 py-4 sm:px-6">
+        <p className="text-xs font-semibold uppercase text-jb-blue">
+          Public-safe operating specimen
+        </p>
+        <h3
+          className="mt-2 text-xl font-semibold text-jb-ink"
+          id="hosting-handoff-template"
+        >
+          Hosting handoff template
+        </h3>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-jb-ink/76">
+          A blank working sheet for turning attention into a repeatable, revisable
+          practice of welcome.
+        </p>
+      </header>
+
+      <ol className="grid list-none gap-px bg-jb-ink/20 p-0 sm:grid-cols-2">
+        {hostingHandoffStages.map((stage, index) => (
+          <li className="bg-jb-paper p-5 sm:p-6" key={stage.label}>
+            <p className="text-xs font-semibold uppercase text-jb-blue">
+              0{index + 1} / {stage.label}
+            </p>
+            <p className="mt-3 text-sm leading-6 text-jb-ink/82">{stage.prompt}</p>
+            <div aria-hidden="true" className="mt-6 space-y-3">
+              <div className="border-b border-jb-ink/20" />
+              <div className="border-b border-jb-ink/20" />
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <footer className="border-t border-jb-ink/25 bg-jb-mist px-5 py-4 text-xs leading-5 text-jb-ink/72 sm:px-6">
+        <strong className="text-jb-ink">Publication boundary:</strong> This blank
+        derivative never records names, contact information, attendance, addresses,
+        access credentials, private correspondence, or unapproved images.
+      </footer>
+    </section>
+  );
+}

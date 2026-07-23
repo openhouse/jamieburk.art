@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
-import { JBCard } from "@/components/JBCard";
+import { PhotoFigure } from "@/components/PhotoFigure";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { photos } from "@/data/photography";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
@@ -128,37 +129,81 @@ export const metadata: Metadata = createMetadata({
 
 export default function TechnicalOperationsPage() {
   return (
-    <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">
-          Technical Operations & Implementation
-        </h1>
-        <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          I create the operating backbone complex teams need to move: clear
-          requirements, delivery rhythms, decision records, risk signals,
-          onboarding materials, operating documentation, launch support, and
-          durable handoffs.
-        </p>
-      </div>
-      <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
-        <JBCard>
-          <h2 className="text-2xl font-semibold text-jb-ink">
+    <>
+      <header className="border-b border-jb-ink/15 bg-jb-warm py-12">
+        <div className="jb-frame grid gap-10 lg:grid-cols-[0.52fr_0.48fr] lg:items-center">
+          <div className="jb-reading">
+            <p className="jb-section-index">Role-fit proof surface</p>
+            <h1 className="mt-3 text-4xl font-bold leading-tight text-jb-ink sm:text-5xl">
+              Technical Operations & Implementation
+            </h1>
+            <p className="mt-5 text-xl leading-8 text-jb-ink/76">
+              I create the operating backbone complex teams need to move: clear
+              requirements, delivery rhythms, decision records, risk signals,
+              onboarding materials, launch support, and durable handoffs.
+            </p>
+          </div>
+          <PhotoFigure
+            imageClassName="aspect-[4/3]"
+            photo={photos.dclaMeeting}
+            priority
+            sizes="(min-width: 1100px) 48vw, 100vw"
+          />
+        </div>
+      </header>
+
+      <section className="jb-frame grid gap-10 py-16 lg:grid-cols-[0.42fr_0.58fr]">
+        <div>
+          <p className="jb-section-index">Operating responsibilities</p>
+          <h2 className="mt-3 text-3xl font-bold text-jb-ink">
             How this maps to team operations
           </h2>
-          <ul className="mt-5 space-y-3 text-jb-ink/76">
-            {operationsMap.map((item) => (
-              <li className="flex gap-3" key={item}>
-                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-green" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </JBCard>
-        <JBCard>
-          <h2 className="text-2xl font-semibold text-jb-ink">Proof map</h2>
-          <dl className="mt-5 space-y-4" id="proof-map">
+        </div>
+        <ol className="border-b border-jb-ink/20">
+          {operationsMap.map((item, index) => (
+            <li
+              className="grid grid-cols-[2.5rem_1fr] gap-3 border-t border-jb-ink/20 py-4 leading-7 text-jb-ink/76"
+              key={item}
+            >
+              <span className="jb-meta-label text-xs text-jb-red">0{index + 1}</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="jb-dark-photo-section border-y border-jb-ink/15 bg-jb-neutral py-16 text-white">
+        <div className="jb-frame">
+          <div className="grid gap-8 lg:grid-cols-[0.35fr_0.65fr]">
+            <div>
+              <p className="jb-section-index text-jb-orange">The container in use</p>
+              <h2 className="mt-3 text-3xl font-bold text-white">
+                Implementation is social and material.
+              </h2>
+              <p className="mt-5 leading-7 text-white/72">
+                A workflow succeeds when people can enter it, use it together,
+                adapt it, and carry it forward.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <PhotoFigure imageClassName="aspect-[4/3]" photo={photos.councilHearingRoom} />
+              <PhotoFigure imageClassName="aspect-[4/3]" photo={photos.fairRentHandbills} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="jb-frame py-16">
+        <div className="grid gap-10 lg:grid-cols-[0.3fr_0.7fr]">
+          <div>
+            <p className="jb-section-index">Proof map</p>
+            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+              Eight settings, one operating practice
+            </h2>
+          </div>
+          <dl className="grid gap-x-8 md:grid-cols-2" id="proof-map">
             {proofMap.map((item) => (
-              <div key={item.project}>
+              <div className="jb-editorial-rule py-5" key={item.project}>
                 <dt className="font-semibold">
                   <Link
                     className="text-jb-blue hover:text-jb-green"
@@ -167,54 +212,57 @@ export default function TechnicalOperationsPage() {
                     {item.project}
                   </Link>
                 </dt>
-                <dd className="mt-1 leading-7 text-jb-ink/72">{item.proof}</dd>
+                <dd className="mt-2 leading-7 text-jb-ink/72">{item.proof}</dd>
               </div>
             ))}
           </dl>
-        </JBCard>
+        </div>
       </section>
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {technicalOperationsProofRows.map((row) => (
-          <JBCard id={row.capability.toLowerCase().replaceAll(" ", "-")} key={row.capability}>
-            <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
-            <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
-            <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {row.proofs.map((proof) => {
-                const destination = proofDestinations[proof.id];
-                return (
-                  <li className="flex gap-3" key={proof.id}>
-                    <span
-                      aria-hidden="true"
-                      className="mt-2 h-2 w-2 rounded-full bg-jb-ochre"
-                    />
-                    <span>
-                      {destination ? (
-                        <Link
-                          className="font-semibold text-jb-blue hover:text-jb-green"
-                          href={destination.href}
-                        >
-                          {destination.project}
-                        </Link>
-                      ) : (
-                        <span className="font-semibold text-jb-ink">
-                          KC Spaces Fund
+
+      <section className="border-y border-jb-ink/15 bg-jb-warm py-16">
+        <div className="jb-frame">
+          <p className="jb-section-index">Evidence by capability</p>
+          <div className="mt-6 grid gap-x-10 md:grid-cols-2">
+            {technicalOperationsProofRows.map((row) => (
+              <section
+                className="jb-editorial-rule py-6"
+                id={row.capability.toLowerCase().replaceAll(" ", "-")}
+                key={row.capability}
+              >
+                <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
+                <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
+                <ul className="mt-5 space-y-4 text-jb-ink/76">
+                  {row.proofs.map((proof) => {
+                    const destination = proofDestinations[proof.id];
+                    return (
+                      <li className="border-l-2 border-jb-red pl-4" key={proof.id}>
+                        {destination ? (
+                          <Link
+                            className="font-semibold text-jb-blue hover:text-jb-green"
+                            href={destination.href}
+                          >
+                            {destination.project}
+                          </Link>
+                        ) : (
+                          <span className="font-semibold text-jb-ink">KC Spaces Fund</span>
+                        )}
+                        <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
+                          {proof.shortWording ?? proof.publicWording}
                         </span>
-                      )}
-                      <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
-                        {proof.shortWording ?? proof.publicWording}
-                      </span>
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
-          </JBCard>
-        ))}
-      </div>
-      <div className="mt-10 grid gap-5 lg:grid-cols-2">
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="jb-frame grid gap-5 py-14 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

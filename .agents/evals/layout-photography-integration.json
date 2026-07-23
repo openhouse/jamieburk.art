@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "suite_id": "layout-photography-integration",
+  "candidate": "features/layout-A",
+  "purpose": "Keep photography structurally integrated, editorially legible, and human-gated as the portfolio layout evolves.",
+  "score_scale": {
+    "minimum": 0,
+    "maximum": 4,
+    "passing": 4
+  },
+  "evals": [
+    {
+      "id": "LAYOUT-001",
+      "lens": "Yolanda Cuomo",
+      "title": "Photographic sequence carries the argument",
+      "weight": 16,
+      "grader": "hybrid",
+      "blocking": true,
+      "criterion": "The opening, project, civic-process, archive, and river images form distinct editorial sequences rather than a decorative gallery."
+    },
+    {
+      "id": "LAYOUT-002",
+      "lens": "Abbott Miller",
+      "title": "Editorial architecture remains coherent",
+      "weight": 14,
+      "grader": "hybrid",
+      "blocking": true,
+      "criterion": "Image, type, rule, interval, and evidence create a repeatable hierarchy on desktop and mobile."
+    },
+    {
+      "id": "LAYOUT-003",
+      "lens": "Gail Anderson",
+      "title": "Type and color stay warm, direct, and legible",
+      "weight": 13,
+      "grader": "hybrid",
+      "blocking": true,
+      "criterion": "The Human Index palette supports meaning without overwhelming photographs or long-form reading."
+    },
+    {
+      "id": "LAYOUT-004",
+      "lens": "Ingeborg Gerdes",
+      "title": "Emergence remains visible",
+      "weight": 13,
+      "grader": "human_approval",
+      "blocking": false,
+      "criterion": "The design leaves room for discovery and does not reduce artistic, civic, or relational practice to organizational utility."
+    },
+    {
+      "id": "LAYOUT-005",
+      "lens": "Zora Neale Hurston",
+      "title": "Collective life retains dignity and voice",
+      "weight": 12,
+      "grader": "human_approval",
+      "blocking": true,
+      "criterion": "Project photographs preserve collective credit and do not make Jamie the sole narrator of shared work."
+    },
+    {
+      "id": "LAYOUT-006",
+      "lens": "Vivian Gornick",
+      "title": "Scenes make the worker visible",
+      "weight": 12,
+      "grader": "hybrid",
+      "blocking": false,
+      "criterion": "The portfolio shows Jamie in concrete scenes of coordination, fabrication, listening, hospitality, and transition."
+    },
+    {
+      "id": "LAYOUT-007",
+      "lens": "Margaret Morse",
+      "title": "Photography conveys embodied time",
+      "weight": 10,
+      "grader": "human_approval",
+      "blocking": false,
+      "criterion": "Sequences convey performance, duration, atmosphere, and the relation between project container and lived event."
+    },
+    {
+      "id": "LAYOUT-008",
+      "lens": "Deborah Treisman",
+      "title": "The public edit is restrained",
+      "weight": 10,
+      "grader": "hybrid",
+      "blocking": true,
+      "criterion": "Every image and caption earns its place; the homepage introduces while deeper pages carry detail."
+    }
+  ],
+  "human_gate": {
+    "required": true,
+    "applies_before": "production publication",
+    "review": [
+      "exact crop and caption",
+      "credit and rights",
+      "consent and dignity",
+      "collective credit",
+      "final public usefulness"
+    ],
+    "machine_pass_is_not_clearance": true
+  }
+}

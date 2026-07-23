@@ -1,45 +1,45 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: jamie --default;
+  themes: human-index --default;
 }
 @plugin "daisyui/theme" {
-  name: "jamie";
+  name: "human-index";
   default: true;
   prefersdark: false;
   color-scheme: light;
 
-  --color-base-100: #eeefec;
-  --color-base-200: #f7f4ee;
-  --color-base-300: #d9d1c7;
-  --color-base-content: #1b1b1c;
+  --color-base-100: #ffffff;
+  --color-base-200: #f3f6f8;
+  --color-base-300: #d9e4e9;
+  --color-base-content: #1a232b;
 
-  --color-primary: #0b5f81;
-  --color-primary-content: #eeefec;
+  --color-primary: #2f6f89;
+  --color-primary-content: #ffffff;
 
-  --color-secondary: #1f5c3e;
-  --color-secondary-content: #eeefec;
+  --color-secondary: #4e6f61;
+  --color-secondary-content: #ffffff;
 
-  --color-accent: #e9b64e;
-  --color-accent-content: #1b1b1c;
+  --color-accent: #c83b32;
+  --color-accent-content: #ffffff;
 
-  --color-neutral: #5e5f61;
-  --color-neutral-content: #eeefec;
+  --color-neutral: #222b36;
+  --color-neutral-content: #f4f6f7;
 
-  --color-info: #74c2e5;
-  --color-info-content: #1b1b1c;
-  --color-success: #34a63c;
-  --color-success-content: #eeefec;
-  --color-warning: #f7ec86;
-  --color-warning-content: #1b1b1c;
-  --color-error: #d73d36;
-  --color-error-content: #eeefec;
+  --color-info: #4c97c2;
+  --color-info-content: #1a232b;
+  --color-success: #4a7f4f;
+  --color-success-content: #ffffff;
+  --color-warning: #d1a23f;
+  --color-warning-content: #1a232b;
+  --color-error: #a52a24;
+  --color-error-content: #ffffff;
 
-  --radius-selector: 0.35rem;
-  --radius-field: 0.35rem;
-  --radius-box: 0.5rem;
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
 
   --border: 1px;
-  --depth: 0;
+  --depth: 1;
   --noise: 0;
 }
 
@@ -59,6 +59,8 @@
   --color-jb-orange: var(--jb-pale-orange);
   --color-jb-sky: var(--jb-pale-blue);
   --color-jb-rose: var(--jb-classic-rose);
+  --color-jb-red: var(--jb-correction-red);
+  --color-jb-neutral: var(--jb-graphite);
   --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
   --font-label: var(--font-oswald), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
@@ -72,11 +74,7 @@ html {
 
 body {
   min-width: 0;
-  background:
-    linear-gradient(90deg, rgba(11, 95, 129, 0.026) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(118, 83, 58, 0.024) 1px, transparent 1px),
-    var(--jb-oil-white);
-  background-size: 42px 42px;
+  background: var(--jb-oil-white);
   color: var(--jb-oil-ink);
   font-family: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
   font-size: 17px;
@@ -90,7 +88,7 @@ h2 {
 }
 
 ::selection {
-  background: rgba(233, 182, 78, 0.45);
+  background: rgba(209, 162, 63, 0.45);
 }
 
 :focus-visible {
@@ -123,21 +121,11 @@ h2 {
 }
 
 .jb-rule {
-  border-image: linear-gradient(
-      90deg,
-      var(--jb-broadway-blue),
-      var(--jb-yellow-ochre),
-      var(--jb-deep-green)
-    )
-    1;
+  border-color: var(--jb-correction-red);
 }
 
 .jb-artifact-surface {
-  background:
-    linear-gradient(135deg, rgba(116, 194, 229, 0.24), transparent 34%),
-    linear-gradient(225deg, rgba(252, 225, 209, 0.55), transparent 45%),
-    linear-gradient(0deg, rgba(247, 236, 134, 0.24), transparent 58%),
-    #f7f4ee;
+  background: var(--jb-oil-paper);
 }
 
 .jb-label,
@@ -148,6 +136,152 @@ h2 {
   letter-spacing: 0.055em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.jb-home-hero {
+  height: min(44rem, 76svh);
+  min-height: 34rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.jb-home-hero::after {
+  background: rgba(255, 255, 255, 0.88);
+  content: "";
+  inset: 0 53% 0 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.jb-home-hero-copy {
+  align-self: center;
+  max-width: 40rem;
+  padding-block: 3rem;
+  position: relative;
+  width: 47%;
+  z-index: 2;
+}
+
+.jb-home-hero-copy::before {
+  background: var(--jb-correction-red);
+  content: "";
+  height: 0.35rem;
+  left: 0;
+  position: absolute;
+  top: 1.5rem;
+  width: 4.5rem;
+}
+
+.jb-photo-figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.jb-photo-frame {
+  background: var(--jb-pale-blue);
+  overflow: hidden;
+  position: relative;
+}
+
+.jb-photo-caption {
+  align-items: start;
+  border-top: 1px solid color-mix(in srgb, var(--jb-oil-ink) 18%, transparent);
+  color: color-mix(in srgb, var(--jb-oil-ink) 78%, transparent);
+  display: grid;
+  font-size: 0.875rem;
+  gap: 0.5rem 1rem;
+  line-height: 1.5;
+  padding-block: 0.75rem;
+}
+
+.jb-photo-source {
+  color: color-mix(in srgb, var(--jb-oil-ink) 72%, transparent);
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.jb-photo-essay {
+  display: grid;
+  gap: 2rem 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.jb-dark-photo-section .jb-photo-caption {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.jb-dark-photo-section .jb-photo-source {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.jb-dark-photo-section .jb-section-index {
+  color: var(--jb-paper);
+}
+
+.jb-section-index {
+  color: var(--jb-correction-red);
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.jb-section-index.jb-section-index-light {
+  color: var(--jb-paper);
+}
+
+.jb-editorial-rule {
+  border-top: 1px solid color-mix(in srgb, var(--jb-oil-ink) 22%, transparent);
+}
+
+.jb-image-link {
+  display: block;
+  overflow: hidden;
+}
+
+.jb-image-link img {
+  transition: transform 280ms ease;
+}
+
+.jb-image-link:hover img {
+  transform: scale(1.018);
+}
+
+@media (min-width: 720px) {
+  .jb-photo-caption {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .jb-home-hero {
+    height: min(43rem, 79svh);
+    min-height: 35rem;
+  }
+
+  .jb-home-hero::after {
+    background: rgba(255, 255, 255, 0.9);
+    inset: 0 0 27% 0;
+  }
+
+  .jb-home-hero-copy {
+    align-self: start;
+    padding-block: 2.5rem;
+    width: 100%;
+  }
+
+  .jb-home-hero-copy::before {
+    top: 1.25rem;
+  }
+
+  .jb-photo-essay {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .jb-citation {

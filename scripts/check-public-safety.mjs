@@ -50,6 +50,7 @@ const resumePath = path.join(
   repoRoot,
   "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
 );
+const photographyPath = path.join(repoRoot, "apps/www/src/data/photography.ts");
 
 function walk(dir) {
   if (!existsSync(dir)) return [];
@@ -297,6 +298,23 @@ if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
   failures.push(
     `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
   );
+}
+
+if (existsSync(photographyPath)) {
+  const photographySource = readText(photographyPath);
+  if (/publicationStatus\s*=\s*["']branch-review["']/.test(photographySource)) {
+    if (isProduction) {
+      addFailure(
+        photographyPath,
+        "branch-review photography must receive exact-image human approval before production"
+      );
+    } else {
+      addWarning(
+        photographyPath,
+        "photography is enabled for branch review; exact-image production approval remains pending"
+      );
+    }
+  }
 }
 
 if (warnings.length) {

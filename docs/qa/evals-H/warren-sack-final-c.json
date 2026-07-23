@@ -1,42 +1,39 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "sack-c-employment-release",
+  "evaluator": "Codex independent native holdout evaluator",
+  "reviewerId": "sack-c-native-layout-final-v3",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The independently computed SHA-256 for the ordered public candidate subset exactly matches the expected candidate hash.",
-    "The About page plainly states the recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "Harry J. Epstein Company supplies current implementation proof: a maintained storefront, customer ordering, recurring operational questions, bounded analytics, incremental releases, reusable content patterns, clearer workflows, and durable digital operations.",
-    "NYC Artist Coalition and FairRentNYC connect stakeholder relationships and public information architecture to campaign websites, public action pathways, collective use, running minutes, source maps, decision records, question logs, and action trackers.",
-    "Sunday Dinner and 196 connect hospitality and trust to invitations, onboarding, access handoffs, facilitation, recurring use, documented continuity, and privacy-bounded operating records, including recent 2023 and 2025 workflow evidence.",
-    "WOWList is presented as co-built historical work with concrete organizer use and dated operating evidence; its historical status and shared credit prevent it from being mistaken for present proficiency or a solely authored current deployment.",
-    "CallNYC is explicitly labeled an archived, unofficial prototype whose historical guidance must not be used as a current civic service.",
-    "Source-Backed Team Memory coherently transfers the method into present implementation practice while explicitly identifying itself as an early method rather than production SaaS, a completed client deployment, or automated judgment.",
-    "The Technical Operations page consolidates the cross-project transfer into current role language covering requirements, delivery rhythms, risk signals, onboarding materials, runbooks, decision records, launch support, and durable handoffs.",
-    "The source note keeps dated coursework contextual, withholds protected educational records and correspondence, and prohibits claims of disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current proficiency in historical tools."
+    "Recomputed SHA-256 over all 46 candidateRelativePaths in declared order using path + NUL + raw bytes + NUL; result exactly matched 5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac.",
+    "The rendered About surface states the recursive method plainly and links project evidence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "Three current public-safe loops are reconstructable. Harry J. Epstein Company is dated 2012-Present and connects customer and team observation to requirements, a maintained public storefront, bounded analytics feedback, incremental releases, reusable patterns, and team handoff. NYC Artist Coalition / FairRentNYC is dated 2017-Present and connects meetings and sources to source maps and decision memory, campaign interfaces and public participation, feedback, running minutes, and reviewable handoffs. Sunday Dinner / 196 is dated 2010s-Present and connects hospitality needs to participation operations, invitations and onboarding, recurring-use feedback, revision, and governed handoffs.",
+    "The HJE page supplies an inspectable current storefront screenshot and public link rather than tool-list copy. The FairRentNYC page supplies extensive cited public evidence, five collective-work photographs, a July 2026 campaign-surface capture, public links, source boundaries, and explicit collaborator credits.",
+    "The rendered HostingHandoffTemplate on /work/196-sunday-dinner is a genuine blank operating worksheet, not merely an artifact description: it provides writable stages for Observe, Model, Interface, Use and notice, Revise, and Hand off. Its footer explicitly prohibits names, contact information, attendance, addresses, access credentials, private correspondence, and unapproved images; adjacent copy states that it is not a participant record or reproduction of protected files.",
+    "The 196 case study also distinguishes the specimen from its protected operating evidence: it identifies a 2023 residency handoff, a 2025 operating sheet, public milestone records, aggregate continuity, and protected participant-level records.",
+    "Temporal status is disciplined: HJE and FairRentNYC are current; 196 Artists Residency is active while the Sunday Dinner governed record is bounded through 2025; WOWList and CallNYC are visibly historical or archived rather than presented as current systems.",
+    "Collective credit is preserved across Open House participants, NYC Artist Coalition and Commercial Rent Stabilization collaborators, the 196 / Sunday Dinner community, WOWList collaborators, the Harry J. Epstein Company team, and the named raft co-organizers. Policy, participation, and expedition outcomes are not assigned solely to Jamie.",
+    "The protected 2006 Social Information Spaces record remains held and is explicitly barred from supporting invention of structural equivalence, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency. No such claims appear on the active public surfaces. The separate 2026 AI-evals certificate is framed only as professional development, not endorsement or production proof.",
+    "Browser evidence records successful desktop and mobile renders of About, FairRentNYC, and 196 with no console errors, page errors, horizontal overflow, broken controls, or missing meaningful alt text. The responsive matrix covers 14 routes at 360, 375, 768, and 1280 CSS pixels: 56 successful rows, zero axe violations, zero overflow elements, zero failed requests, and zero broken images after scrolling.",
+    "Visually inspected all 13 branch-review photographs across the rendered homepage, technical-operations, About, FairRentNYC, and Colophon surfaces. All 13 file hashes match the photo register. Captions distinguish personal portraiture, collective civic work, campaign artifacts, public institutions, and the collective raft expedition without converting photographs into causal or sole-authorship proof.",
+    "Held images WEB-CAND-009 and WEB-CAND-024 remain excluded from public use: the former lacks sufficiently specific task and project context, and the latter exposes a named artist without recorded exact-image approval."
   ],
   "gaps": [],
   "safety_findings": [
-    "Collective credit is preserved for Open House participants, coalition collaborators, WOWList collaborators, and community work.",
-    "Protected educational records, identifiers, correspondence, private archive locations, participant records, and unapproved testimonials remain outside the public projection.",
-    "Historical prototypes and platforms are visibly distinguished from current services and current implementation capability.",
-    "No faculty participation, endorsement, or testimonial is claimed."
+    "This score clears PR-016 for develop/staging review only; it is not production publication clearance.",
+    "All 13 photographs remain branch-review assets. Production publication is still gated on exact crop and caption, photographer and rights review, consent and dignity, collective credit, final public usefulness, and Jamie's approval of the unchanged candidate.",
+    "Protected educational records, participant records, attendance data, correspondence, access details, private analytics, coalition strategy, and legal-review context remain withheld.",
+    "The blank 196 specimen preserves the participant-record boundary while still exposing enough operating structure to be genuinely inspectable."
   ],
-  "recommendation": "Pass PR-016 for the evaluated candidate. The project-specific interfaces, actual use, operating systems, learning loops, and handoffs form a coherent present-day implementation narrative without converting protected coursework or archived prototypes into production-deployment claims.",
+  "recommendation": "Accept PR-016 at score 4 for develop/staging review. Preserve staging and production gates, and do not publish or enable indexing until the exact-image human review and Jamie's approval of the unchanged candidate are recorded.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3606-7fe2-9906-a82acf75ec86",
-    "agentNickname": "Darwin",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "model": "gpt-5",
+    "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:22.360Z",
-    "completedAt": "2026-07-19T03:17:30.074Z"
+    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
   }
 }

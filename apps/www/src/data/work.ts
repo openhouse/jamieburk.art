@@ -469,9 +469,9 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Creates and sustains repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
-    years: "2010s",
+    years: "2010s-Present",
     status: "Short proof page",
     featured: true,
     priority: 5,
@@ -481,13 +481,13 @@ const workItemsInput = [
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
       "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
-    artifactTypes: ["photo sequence", "workflow", "template"],
+    artifactTypes: ["template", "workflow", "meeting memory"],
     artifacts: [
       {
-        title: "Gathering rhythm",
+        title: "Public-safe hosting handoff template",
         description:
-          "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
-        type: "workflow"
+          "Rendered above, this blank tool organizes observation, participation, feedback, revision, and handoff without reproducing participant records.",
+        type: "template"
       }
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
@@ -495,9 +495,10 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe claims, a blank operating derivative, and public milestones are projected here. Protected source records are not reproduced.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
-    currentStatus: "Public-safe summary only.",
+    currentStatus:
+      "196 Artists Residency remains active; the governed Sunday Dinner operating record extends through 2025.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
@@ -509,9 +510,9 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie created and sustains participation infrastructure across recurring gatherings and artist-residency contexts; the page includes a blank public-safe derivative of the hosting workflow.",
       open:
-        "Named participants, photos, and artifacts require consent and approval.",
+        "Named participants, exact participant media, and source-record reproductions require consent and approval.",
       protected:
         "Raw guest data, private records, attendance lists, addresses, and unapproved images are omitted."
     }

@@ -1,40 +1,44 @@
 {
-  "evaluator": "Independent holdout reader - PR-015 Margaret Morse lens",
-  "reviewerId": "morse-b-employment-release",
+  "evaluator": "Codex independent Margaret Morse inhabited-systems holdout evaluator",
+  "reviewerId": "morse-b-native-layout-final-v3",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The independently calculated fingerprint of the candidate subset matches the expected SHA-256.",
-    "The About page frames the lineage as systems people can inhabit, connecting relationships, participation, memory, continuity, and collective governance to artistic, civic, technical, and social practice.",
-    "Harry J. Epstein Company treats customer language, product judgment, institutional voice, internal habits, documentation, and customer follow-up as parts of one maintained operating system.",
-    "FairRentNYC and NYC Artist Coalition treat meetings, public sources, lived experience, collaborators, action pathways, minutes, question logs, source maps, and decision records as structural coalition infrastructure.",
-    "WOWList models organizers' existing community vocabulary through followable communities, distributed publishing, event workflows, digests, and embeddable calendars rather than imposing a centralized editorial structure.",
-    "Sunday Dinner and 196 explicitly turn hospitality, trust, invitations, hosting, onboarding, access handoffs, facilitation, consent, and recurring rhythms into participation infrastructure.",
-    "Source-Backed Team Memory makes human review, disagreement, protected context, and known/open/protected states structural parts of the method rather than optional safeguards.",
-    "Historical and current capability remain distinguishable: Open House is dated to 2006, WOWList and Sunday Dinner/196 are labeled historical, HJE and coalition work are dated through the present, and the lab is bounded as early research rather than a finished production product."
+    "Independently recomputed the fingerprint over all 46 candidateRelativePaths in declared order using path + NUL + raw bytes + NUL; it exactly matched 5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac.",
+    "The homepage identifies Jamie as a technical project manager focused on product operations and implementation, and its persistent About link reaches /about in one click. The rendered About surface retains that professional framing while explicitly connecting artistic, civic, technical, and social practice under 'Systems people can inhabit.'",
+    "Continuity 1: Open House establishes experimentation, collective governance, public participation, communal living, and many-perspective documentation; Sunday Dinner/196 carries hospitality, trust, arrival, access, facilitation, feedback, revision, and handoff into a public-safe hosting template without exposing participant records.",
+    "Continuity 2: WOWList translates organizers' existing language for scenes, interests, venues, and places into followable keyword communities, publishing workflows, and reusable distribution infrastructure that participants could use and influence without one central editorial taxonomy.",
+    "Continuity 3: NYC Artist Coalition/FairRentNYC translates lived cultural-space experience, recurring meetings, testimony, public sources, and unresolved questions into campaign interfaces, source maps, decision memory, action pathways, and reviewable handoffs. The case study repeatedly limits individual causation and credits coalition collaborators and advocates.",
+    "Continuity 4: The About-page raft sequence adds embodiment, duration, atmosphere, improvisation, public encounter, and geographic place. It names Libby Hendon and Laura Mattingly, describes the expedition as collective labor, and explicitly rejects solo-achievement and finished-impact framing.",
+    "The rendered Sunday Dinner/196 case study makes the distinction from conventional administration inspectable: its specimen moves through Observe, Model, Interface, Use and Notice, Revise, and Hand Off, ending with what a future host needs to continue. The page protects names, contacts, attendance, addresses, access credentials, correspondence, and unapproved images.",
+    "Professional role clarity remains strong across the homepage, About introduction and closing CTA, technical-operations route, and case-study role-fit panels: technical project management, implementation, product operations, documentation architecture, onboarding, facilitation, and durable handoffs remain the primary employment narrative.",
+    "Protected-source controls are explicit: the UCSC evaluations remain protected educational records; raw text, grades, identifiers, private paths, and correspondence are excluded. The historical record is protected/private, its claim projection is held, and four targeted exposure patterns produced no matches.",
+    "Testimonial authority is not manufactured. The source note says the Margaret Morse recommendation was only a research lead and is neither quoted nor projected; the separate Maven certificate is labeled professional development rather than instructor endorsement or production-product proof.",
+    "All 13 branch-review photograph files matched the register's individual SHA-256 values and were visually inspected. Their metadata supplies meaningful alt text, captions, archive labels, branch-review status, and collective framing where people appear. The browser record reports captions for every governed photograph on the audited routes.",
+    "Responsive evidence covers the relevant routes at 360, 375, 768, and 1280 CSS pixels with HTTP 200, one H1, a main landmark, no overflow, no post-scroll broken images, no unlabeled images, no failed requests, and no reported axe violations. Independent inspection of desktop and mobile screenshots found the inhabited-systems argument and role framing legible."
   ],
-  "gaps": [],
+  "gaps": [
+    "Production publication is not cleared: every photograph remains branch-review only, and the register requires exact crop and caption review, photographer and rights confirmation, consent and dignity review, collective-credit review, final public-usefulness review, and Jamie's approval of the unchanged candidate.",
+    "The raft archive does not yet provide a complete crew, builder, rider, host, donor, legal-support, or route-community roster; the public copy appropriately presents that chronology as continuing research.",
+    "Additional named Sunday Dinner/196 participants, participant media, and source-record reproductions remain unavailable without specific consent and approval; the current summary-only treatment is appropriate."
+  ],
   "safety_findings": [
-    "Collective work remains collectively credited, including participant governance, co-built platforms, collaborator-used civic systems, and explicit rejection of sole-causation claims.",
-    "The source note withholds protected educational records, grades, identifiers, private paths, correspondence, and testimonial projection.",
-    "The public course certificate is bounded as professional development, not affiliation, endorsement, or production-product proof.",
-    "No blocker involving protected educational records, participant privacy, collective credit, or historical-to-current overclaiming was found."
+    "No protected educational-record quotation, student identifier, educational email address, private absolute path, or raw narrative-evaluation filename was found in the audited public-safe implementation.",
+    "Open House governance, the raft expedition, WOWList, Sunday Dinner/196, and coalition work retain collective framing; no audited surface claims sole authorship of shared outcomes.",
+    "Sunday Dinner/196 uses aggregate evidence and a blank derivative rather than guest lists, attendance histories, access details, private correspondence, or participant images.",
+    "Public-event and historical photographs include identifiable people, but they are explicitly confined to develop/staging branch review pending rights, consent, dignity, credit, and exact-image human approval. A machine pass is not publication clearance.",
+    "No faculty testimonial or recommendation is projected as endorsement. The public professional-development certificate is explicitly bounded against instructor affiliation and production claims."
   ],
-  "recommendation": "Pass PR-015 at score 4. The candidate demonstrates at least four project-specific continuities in which participation, hospitality, care, documentation, and relationships materially structure systems people use, influence, remember, and continue.",
+  "recommendation": "Pass PR-015 at score 4 for develop/staging review. The candidate provides a visible, evidence-backed inhabited-systems threshold within two clicks, traces more than three public-safe continuities, preserves professional role clarity, and maintains collective-credit and privacy boundaries. Keep production publication blocked until the unchanged candidate and all 13 exact photographs complete the recorded human rights, consent, dignity, caption, credit, usefulness, and Jamie-approval gates.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3004-7d21-8fbe-6f16197f21a5",
-    "agentNickname": "Gibbs",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "model": "gpt-5",
+    "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:20.894Z",
-    "completedAt": "2026-07-19T03:17:30.035Z"
+    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
   }
 }

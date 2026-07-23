@@ -1,43 +1,41 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "sack-b-employment-release",
+  "evaluator": "Codex independent read-only holdout evaluator",
+  "reviewerId": "sack-b-native-layout-final-v3",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The SHA-256 independently recomputed from the ordered candidate paths and NUL-delimited hashing procedure exactly matches the expected candidate hash.",
-    "/about states the recursive method plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "The About-page comparisons connect relationship models, interfaces and use, and learning and continuity across Harry J. Epstein Company, FairRentNYC, WOWList, and Sunday Dinner / 196.",
-    "Harry J. Epstein Company shows current relational systems work: customer language, product judgment, institutional knowledge, and operating habits become a maintained storefront, reusable content patterns, incremental releases, and team workflows.",
-    "FairRentNYC shows sophisticated social-software reasoning: stakeholders, lived experience, meetings, public sources, protected context, and open questions become campaign interfaces, participation pathways, source maps, decision records, action trackers, and recoverable collective memory.",
-    "WOWList is correctly presented as historical and co-built. It models informal relationships among scenes, interests, places, and venues as followable keyword communities supporting distributed publishing, event discovery, digests, and embeddable calendars.",
-    "CallNYC is correctly labeled as an archived, unofficial prototype. It converts constituent-services records and administrative categories into issue pathways, district context, resident-facing guidance, public documentation, and explicit limitations.",
-    "Sunday Dinner / 196 treats hospitality, trust, shared space, invitations, onboarding, access handoffs, and recurring rhythms as participation infrastructure while withholding private community records.",
-    "Source-Backed Team Memory is presented as a current early method rather than deployed software. Its Known / Open / Protected model, source-linked workflow, human review, correction, and transfer pattern demonstrate present relational information-structure reasoning.",
-    "The UCSC source note treats the educational records as protected rubric context, preserves collective credit, and explicitly bars claims of structural-equivalence invention, peer-reviewed research, production deployment from coursework, sole authorship, or present proficiency in historical tools."
+    "Recomputed the SHA-256 from all 46 candidateRelativePaths in declared order using path + NUL + raw bytes + NUL; it exactly matched 5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac.",
+    "The rendered /about surface states the recursive method plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. It is directly reachable from the primary navigation.",
+    "Three current public-safe loops are explicitly reconstructable on /about: Harry J. Epstein Company (2012-Present), NYC Artist Coalition / FairRentNYC (2017-Present), and Sunday Dinner and 196 (2010s-Present). Each names observation, modeling, interface, use and feedback, revision and handoff, and an evidence boundary.",
+    "Harry J. Epstein supplies inspectable present-role evidence through a maintained public storefront captured in July 2026, long-running implementation details, customer and team feedback, incremental releases, reusable content patterns, and protected internal-data boundaries.",
+    "NYC Artist Coalition / FairRentNYC supplies inspectable collective-use evidence through a current campaign surface, retained implementation history, public testimony and reporting, source and decision-memory structures, action pathways, and photographs of meetings, hearings, handbills, and collective campaign activity. The case study expressly rejects sole causation and sole ownership of policy outcomes.",
+    "The rendered /work/196-sunday-dinner page contains a genuine usable blank operating specimen rather than capability copy alone: a six-stage hosting handoff sheet with concrete prompts and writing space for Observe, Model, Interface, Use and notice, Revise, and Hand off. Adjacent bounded claims tie it to a documented 2023 residency handoff, a structured 2025 operating sheet, and public 2014 and 2016 milestones.",
+    "The hosting specimen has an explicit participant-record boundary: it excludes names, contact information, attendance, addresses, access credentials, private correspondence, and unapproved images; the page separately states that it is a public-safe derivative, not a participant record or reproduction of protected source files.",
+    "Temporal status is differentiated rather than flattened: HJE, FairRentNYC, and 196 are current; WOWList is labeled historical; CallNYC is archived; Source-Backed Team Memory is labeled an early method and consulting practice rather than production SaaS.",
+    "Dated coursework is bounded. Open House is identified as a collective ten-day UCSC experiment from 2006, while the protected Social Information Spaces record remains held with no active public projection. The 2026 Maven certificate is framed only as professional development, not instructor affiliation, endorsement, or production proof.",
+    "Anti-overclaim controls expressly reject invention of structural equivalence, peer-reviewed or production-deployed status for the 2006 prototype, sole authorship of collective coursework, and current Max/Jitter proficiency. Collective credit is also preserved across Open House, the raft expedition, WOWList, Sunday Dinner, and coalition work.",
+    "All 13 branch-review photograph files were visually inspected and independently hashed; every digest matches the photo review register. Their captions preserve collective context, and all remain marked branch-review rather than production-approved.",
+    "WEB-CAND-009 and WEB-CAND-024 remain excluded from the public photo set with recorded reasons concerning insufficient project specificity and missing exact-image approval for a named artist. Only the 13 registered review photographs are present under apps/www/public/photos.",
+    "The responsive evidence is bound to the current 124-file public surface fingerprint ebff13b91663a262477f50e59a3369a16b264f06ce430be6ae0c4dcc7dadf47e. Its 56 Playwright rows cover 14 routes at 360, 375, 768, and 1280 pixels with zero accessibility violations, overflow elements, broken images after scrolling, unlabeled images, failed requests, or unsuccessful responses.",
+    "Desktop and mobile rendered records for /about, /work/fair-rent-nyc, and /work/196-sunday-dinner show the method, project evidence, photographs, handoff specimen, boundaries, source notes, known/open/protected sections, and collective credits as actual rendered content."
   ],
   "gaps": [],
   "safety_findings": [
-    "Public project language consistently distinguishes individual contributions from collective outcomes through terms such as co-built, co-founded, collaborators, collectively governed, and campaign accomplishments remain collective.",
-    "Historical projects and archived prototypes are visibly distinguished from current work and present capability.",
-    "No public candidate page claims formal structural-equivalence research or current Max/Jitter proficiency.",
-    "Protected educational records, identifiers, correspondence, private paths, and raw evaluation text are not reproduced on the public surfaces.",
-    "The source note explicitly says the lenses are not endorsements and does not represent any named person as participating in this evaluation."
+    "The 13 photographs include identifiable participants and incidental people and remain subject to exact crop, caption, photographer and rights, consent and dignity, collective-credit, public-usefulness, and Jamie approval gates before production publication.",
+    "The two held images must remain excluded unless their recorded specificity and exact-image approval issues are resolved through human review.",
+    "Protected participant records, access details, private correspondence, coalition context, and UCSC educational records remain outside the public projection; the blank Sunday Dinner derivative must not be replaced by participant-level material without consent and approval.",
+    "This result supports develop/staging review only. The responsive and machine checks are not production publication clearance, and the unchanged candidate still requires the recorded human production gates."
   ],
-  "recommendation": "Pass PR-016 for employment release. The candidate demonstrates sophisticated relational and social-system reasoning across current and historical work while maintaining the required attribution, privacy, chronology, and anti-overclaim boundaries.",
+  "recommendation": "Pass PR-016 at score 4 for develop/staging review. The recursive systems sequence is specific, rendered, and inspectable across three current public-safe projects, including a genuine bounded hosting-handoff specimen. Preserve every photography, participant-record, educational-record, collective-credit, indexing, and final human-approval gate before production.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3430-7501-b79e-615807b4265c",
-    "agentNickname": "Halley",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "model": "gpt-5",
+    "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:21.927Z",
-    "completedAt": "2026-07-19T03:17:30.064Z"
+    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
   }
 }

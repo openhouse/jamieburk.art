@@ -1,0 +1,686 @@
+[
+  {
+    "route": "/",
+    "viewportName": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/home-desktop.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/home-desktop-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": true,
+    "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 5970,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "Jamie Burkart smiling in New York City Council chambers, wearing a blue work jacket and carrying a clipboard and papers.",
+        "complete": true,
+        "naturalWidth": 960,
+        "naturalHeight": 640,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fjamie-council-chamber.jpg&w=1920&q=75"
+      },
+      {
+        "alt": "Harry J. Epstein Company storefront showing navigation, product search, editorial artwork, video, and commerce controls.",
+        "complete": true,
+        "naturalWidth": 460,
+        "naturalHeight": 306,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=640&q=75"
+      },
+      {
+        "alt": "A large group of FairRentNYC participants holds a Commercial Rent Stabilization banner and raises their hands.",
+        "complete": true,
+        "naturalWidth": 460,
+        "naturalHeight": 307,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-nyc-group.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Archived CallNYC prototype showing issue navigation, resident guidance, and a Council member service profile.",
+        "complete": true,
+        "naturalWidth": 460,
+        "naturalHeight": 307,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Fcallnyc%2Farchived-prototype.png&w=640&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 0,
+    "governedPhotoCaptionCount": 0
+  },
+  {
+    "route": "/work",
+    "viewportName": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/work-desktop.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/work-desktop-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "Selected Work - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 4066,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "Harry J. Epstein Company storefront showing navigation, product search, editorial artwork, video, and commerce controls.",
+        "complete": true,
+        "naturalWidth": 460,
+        "naturalHeight": 306,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=640&q=75"
+      },
+      {
+        "alt": "A large group of FairRentNYC participants holds a Commercial Rent Stabilization banner and raises their hands.",
+        "complete": true,
+        "naturalWidth": 460,
+        "naturalHeight": 307,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-nyc-group.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Archived CallNYC prototype showing issue navigation, resident guidance, and a Council member service profile.",
+        "complete": true,
+        "naturalWidth": 460,
+        "naturalHeight": 307,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Fcallnyc%2Farchived-prototype.png&w=640&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 0,
+    "governedPhotoCaptionCount": 0
+  },
+  {
+    "route": "/work/technical-operations",
+    "viewportName": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/work-technical-operations-desktop.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/work-technical-operations-desktop-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "Technical Operations & Implementation - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 4665,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "A facilitator addresses a crowded meeting of cultural-space participants seated in a large room.",
+        "complete": true,
+        "naturalWidth": 691,
+        "naturalHeight": 460,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fdcla-diy-spaces-meeting.jpg&w=750&q=75"
+      },
+      {
+        "alt": "Participants and public officials sit around tables in a New York City Council hearing room.",
+        "complete": true,
+        "naturalWidth": 720,
+        "naturalHeight": 480,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fcouncil-hearing-room.jpg&w=750&q=75"
+      },
+      {
+        "alt": "Bilingual FairRentNYC Pass Intro 93 handbills arranged on a wooden table.",
+        "complete": true,
+        "naturalWidth": 720,
+        "naturalHeight": 540,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-handbills.jpg&w=750&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 3,
+    "governedPhotoCaptionCount": 3
+  },
+  {
+    "route": "/about",
+    "viewportName": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/about-desktop.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/about-desktop-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "About - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 6454,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "Jamie Burkart in a suit on a New York City street, with a pedestrian signal and tall buildings behind him.",
+        "complete": true,
+        "naturalWidth": 662,
+        "naturalHeight": 496,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fjamie-city-portrait.jpg&w=750&q=75"
+      },
+      {
+        "alt": "Jamie Burkart standing beside an urban waterway beneath a cloudy sky.",
+        "complete": true,
+        "naturalWidth": 547,
+        "naturalHeight": 730,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fjamie-waterfront-portrait.jpg&w=640&q=75"
+      },
+      {
+        "alt": "People gather on a rocky riverbank around a handmade raft flying an American flag.",
+        "complete": true,
+        "naturalWidth": 1100,
+        "naturalHeight": 728,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fraft-arrival.jpg&w=1200&q=75"
+      },
+      {
+        "alt": "A person sits on a handmade red raft floating in pale fog, reflected in still water.",
+        "complete": true,
+        "naturalWidth": 547,
+        "naturalHeight": 814,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fraft-in-fog.jpg&w=640&q=75"
+      },
+      {
+        "alt": "A small handmade raft floats near the much larger Delta Queen riverboat.",
+        "complete": true,
+        "naturalWidth": 892,
+        "naturalHeight": 588,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fraft-and-delta-queen.jpg&w=1080&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 5,
+    "governedPhotoCaptionCount": 5
+  },
+  {
+    "route": "/work/fair-rent-nyc",
+    "viewportName": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/work-fair-rent-nyc-desktop.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/work-fair-rent-nyc-desktop-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 8496,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "A large group of FairRentNYC participants holds a Commercial Rent Stabilization banner and raises their hands.",
+        "complete": true,
+        "naturalWidth": 1100,
+        "naturalHeight": 733,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-nyc-group.jpg&w=1200&q=75"
+      },
+      {
+        "alt": "NYC Artist Coalition participants carry a Legalize Dance banner through a city parade.",
+        "complete": true,
+        "naturalWidth": 1036,
+        "naturalHeight": 692,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Flegalize-dance-parade.jpg&w=1080&q=75"
+      },
+      {
+        "alt": "Council Member Rafael Espinal stands before a Repeal the Cabaret Law banner with NYC Artist Coalition participants on City Hall steps.",
+        "complete": true,
+        "naturalWidth": 518,
+        "naturalHeight": 345,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fcabaret-law-hearing-steps.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Participants and public officials sit around tables in a New York City Council hearing room.",
+        "complete": true,
+        "naturalWidth": 518,
+        "naturalHeight": 345,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fcouncil-hearing-room.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Bilingual FairRentNYC Pass Intro 93 handbills arranged on a wooden table.",
+        "complete": true,
+        "naturalWidth": 518,
+        "naturalHeight": 388,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-handbills.jpg&w=640&q=75"
+      },
+      {
+        "alt": "FairRentNYC campaign homepage with Commercial Rent Stabilization call to action and public reference library.",
+        "complete": true,
+        "naturalWidth": 950,
+        "naturalHeight": 633,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=1080&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 5,
+    "governedPhotoCaptionCount": 5
+  },
+  {
+    "route": "/work/196-sunday-dinner",
+    "viewportName": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/work-196-sunday-dinner-desktop.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/work-196-sunday-dinner-desktop-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 4307,
+    "brokenControls": [],
+    "images": [],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 0,
+    "governedPhotoCaptionCount": 0
+  },
+  {
+    "route": "/colophon",
+    "viewportName": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/colophon-desktop.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/colophon-desktop-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "Colophon - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 1510,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "Jamie Burkart photographing himself in an apartment mirror with a compact camera.",
+        "complete": true,
+        "naturalWidth": 604,
+        "naturalHeight": 403,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fjamie-mirror-camera.jpg&w=640&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 1,
+    "governedPhotoCaptionCount": 1
+  },
+  {
+    "route": "/",
+    "viewportName": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/home-mobile.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/home-mobile-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": true,
+    "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 11084,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "Jamie Burkart smiling in New York City Council chambers, wearing a blue work jacket and carrying a clipboard and papers.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fjamie-council-chamber.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Harry J. Epstein Company storefront showing navigation, product search, editorial artwork, video, and commerce controls.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 259,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=640&q=75"
+      },
+      {
+        "alt": "A large group of FairRentNYC participants holds a Commercial Rent Stabilization banner and raises their hands.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-nyc-group.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Archived CallNYC prototype showing issue navigation, resident guidance, and a Council member service profile.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Fcallnyc%2Farchived-prototype.png&w=640&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 0,
+    "governedPhotoCaptionCount": 0
+  },
+  {
+    "route": "/work",
+    "viewportName": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/work-mobile.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/work-mobile-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "Selected Work - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 8309,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "Harry J. Epstein Company storefront showing navigation, product search, editorial artwork, video, and commerce controls.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 259,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=640&q=75"
+      },
+      {
+        "alt": "A large group of FairRentNYC participants holds a Commercial Rent Stabilization banner and raises their hands.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-nyc-group.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Archived CallNYC prototype showing issue navigation, resident guidance, and a Council member service profile.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Fcallnyc%2Farchived-prototype.png&w=640&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 0,
+    "governedPhotoCaptionCount": 0
+  },
+  {
+    "route": "/work/technical-operations",
+    "viewportName": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/work-technical-operations-mobile.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/work-technical-operations-mobile-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "Technical Operations & Implementation - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 8438,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "A facilitator addresses a crowded meeting of cultural-space participants seated in a large room.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fdcla-diy-spaces-meeting.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Participants and public officials sit around tables in a New York City Council hearing room.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fcouncil-hearing-room.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Bilingual FairRentNYC Pass Intro 93 handbills arranged on a wooden table.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 292,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-handbills.jpg&w=640&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 3,
+    "governedPhotoCaptionCount": 3
+  },
+  {
+    "route": "/about",
+    "viewportName": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/about-mobile.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/about-mobile-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "About - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 9536,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "Jamie Burkart in a suit on a New York City street, with a pedestrian signal and tall buildings behind him.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 292,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fjamie-city-portrait.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Jamie Burkart standing beside an urban waterway beneath a cloudy sky.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 520,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fjamie-waterfront-portrait.jpg&w=640&q=75"
+      },
+      {
+        "alt": "People gather on a rocky riverbank around a handmade raft flying an American flag.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 258,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fraft-arrival.jpg&w=640&q=75"
+      },
+      {
+        "alt": "A person sits on a handmade red raft floating in pale fog, reflected in still water.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 580,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fraft-in-fog.jpg&w=640&q=75"
+      },
+      {
+        "alt": "A small handmade raft floats near the much larger Delta Queen riverboat.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 257,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fraft-and-delta-queen.jpg&w=640&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 5,
+    "governedPhotoCaptionCount": 5
+  },
+  {
+    "route": "/work/fair-rent-nyc",
+    "viewportName": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/work-fair-rent-nyc-mobile.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/work-fair-rent-nyc-mobile-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 11967,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "A large group of FairRentNYC participants holds a Commercial Rent Stabilization banner and raises their hands.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-nyc-group.jpg&w=640&q=75"
+      },
+      {
+        "alt": "NYC Artist Coalition participants carry a Legalize Dance banner through a city parade.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Flegalize-dance-parade.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Council Member Rafael Espinal stands before a Repeal the Cabaret Law banner with NYC Artist Coalition participants on City Hall steps.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fcabaret-law-hearing-steps.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Participants and public officials sit around tables in a New York City Council hearing room.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fcouncil-hearing-room.jpg&w=640&q=75"
+      },
+      {
+        "alt": "Bilingual FairRentNYC Pass Intro 93 handbills arranged on a wooden table.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 292,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Ffair-rent-handbills.jpg&w=640&q=75"
+      },
+      {
+        "alt": "FairRentNYC campaign homepage with Commercial Rent Stabilization call to action and public reference library.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=640&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 5,
+    "governedPhotoCaptionCount": 5
+  },
+  {
+    "route": "/work/196-sunday-dinner",
+    "viewportName": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/work-196-sunday-dinner-mobile.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/work-196-sunday-dinner-mobile-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 7022,
+    "brokenControls": [],
+    "images": [],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 0,
+    "governedPhotoCaptionCount": 0
+  },
+  {
+    "route": "/colophon",
+    "viewportName": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "screenshot": "/private/tmp/layout-a-photo-review/rendered/colophon-mobile.png",
+    "viewportScreenshot": "/private/tmp/layout-a-photo-review/rendered/colophon-mobile-viewport.png",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "homeNextSectionVisible": null,
+    "title": "Colophon - Jamie Burkart",
+    "h1Count": 1,
+    "mainCount": 1,
+    "navCount": 2,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 2563,
+    "brokenControls": [],
+    "images": [
+      {
+        "alt": "Jamie Burkart photographing himself in an apartment mirror with a compact camera.",
+        "complete": true,
+        "naturalWidth": 390,
+        "naturalHeight": 260,
+        "src": "http://127.0.0.1:3048/_next/image?url=%2Fphotos%2Fjamie-mirror-camera.jpg&w=640&q=75"
+      }
+    ],
+    "emptyMeaningfulAltCount": 0,
+    "governedPhotoCount": 1,
+    "governedPhotoCaptionCount": 1
+  }
+]

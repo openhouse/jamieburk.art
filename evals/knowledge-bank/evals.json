@@ -419,7 +419,8 @@
       "expectedSourceCount": 6,
       "expectedClaimCount": 2,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "c0f786efb1778b126226029acb18a4c84610ef3194448ad840e32b6de3d5738e",
+      "approvedContentSha256": "039d975762b6603edde7e6611f9cdb0aeb07717a933672d5f2ba2efb736edc25",
+      "projectionReviewNote": "2026-07-22: Rebound after the 196 / Sunday Dinner context stated its already-governed 2023 and 2025 operating chronology. Claim projections, participant-data boundaries, and protected-source evidence did not change.",
       "intakeIds": [
         "INTAKE-196-RESIDENCY-ACCEPTANCE-WORKFLOW-2023",
         "INTAKE-SUNDAY-DINNER-OPERATIONS-SHEET-2025",

@@ -23,6 +23,7 @@ import { evaluateMissingPages } from "./missing-pages-eval.mjs";
 import { evaluateInterpretiveLayer } from "./interpretive-layer-eval.mjs";
 import { evaluateFamilyClosure } from "./family-closure-eval.mjs";
 import { evaluatePhotographyNotebook } from "./photography-notebook-eval.mjs";
+import { evaluateLayoutPhotography } from "../lib/layout-photography-eval.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -53,6 +54,7 @@ const missingPages = evaluateMissingPages({ result });
 const interpretiveLayer = evaluateInterpretiveLayer({ result });
 const familyClosure = evaluateFamilyClosure({ result });
 const photographyNotebook = evaluatePhotographyNotebook({ result });
+const layoutPhotography = evaluateLayoutPhotography({ repoRoot: defaultRepoRoot });
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -90,15 +92,51 @@ const changedPublicUiPaths = changedPaths.filter((file) =>
 );
 const technicalOperationsPath = "apps/www/src/app/work/technical-operations/page.tsx";
 const technicalOperationsSource = readFileSync(path.join(defaultRepoRoot, technicalOperationsPath), "utf8");
-const boundedPublicUiPaths = [
+const legacyBoundedPublicUiPaths = [
   "apps/www/src/app/globals.css",
   "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
   technicalOperationsPath,
   "apps/www/src/components/CaseStudyBlocks.tsx",
   "apps/www/src/components/TagList.tsx"
 ].sort();
-const boundedPublicUiChange = JSON.stringify(changedPublicUiPaths.sort()) ===
-  JSON.stringify(boundedPublicUiPaths);
+const layoutABoundedPublicUiPaths = [
+  "apps/www/public/photos/cabaret-law-hearing-steps.jpg",
+  "apps/www/public/photos/council-hearing-room.jpg",
+  "apps/www/public/photos/dcla-diy-spaces-meeting.jpg",
+  "apps/www/public/photos/fair-rent-handbills.jpg",
+  "apps/www/public/photos/fair-rent-nyc-group.jpg",
+  "apps/www/public/photos/jamie-city-portrait.jpg",
+  "apps/www/public/photos/jamie-council-chamber.jpg",
+  "apps/www/public/photos/jamie-mirror-camera.jpg",
+  "apps/www/public/photos/jamie-waterfront-portrait.jpg",
+  "apps/www/public/photos/legalize-dance-parade.jpg",
+  "apps/www/public/photos/raft-and-delta-queen.jpg",
+  "apps/www/public/photos/raft-arrival.jpg",
+  "apps/www/public/photos/raft-in-fog.jpg",
+  "apps/www/src/app/about/page.tsx",
+  "apps/www/src/app/colophon/page.tsx",
+  "apps/www/src/app/globals.css",
+  "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+  "apps/www/src/app/page.tsx",
+  technicalOperationsPath,
+  "apps/www/src/components/CapabilityGrid.tsx",
+  "apps/www/src/components/CaseStudyBlocks.tsx",
+  "apps/www/src/components/CaseStudyLayout.tsx",
+  "apps/www/src/components/Hero.tsx",
+  "apps/www/src/components/PhotoFigure.tsx",
+  "apps/www/src/components/ProofStrip.tsx",
+  "apps/www/src/components/ResumeCTA.tsx",
+  "apps/www/src/components/SiteHeader.tsx",
+  "apps/www/src/components/TagList.tsx",
+  "apps/www/src/components/WorkCard.tsx",
+  "apps/www/src/data/work.ts"
+].sort();
+const sortedChangedPublicUiPaths = [...changedPublicUiPaths].sort();
+const legacyBoundedPublicUiChange = JSON.stringify(sortedChangedPublicUiPaths) ===
+  JSON.stringify(legacyBoundedPublicUiPaths);
+const layoutABoundedPublicUiChange = JSON.stringify(sortedChangedPublicUiPaths) ===
+  JSON.stringify(layoutABoundedPublicUiPaths) && layoutPhotography.pass;
+const boundedPublicUiChange = legacyBoundedPublicUiChange || layoutABoundedPublicUiChange;
 const caseStudyBlocksSource = readFileSync(
   path.join(defaultRepoRoot, "apps/www/src/components/CaseStudyBlocks.tsx"),
   "utf8"
@@ -133,11 +171,13 @@ const checks = {
     publicUiChanged &&
     boundedPublicUiChange &&
     technicalOperationsSource.includes("I create the operating backbone complex teams need to move") &&
-    caseStudyBlocksSource.includes('tone="inverted"') &&
-    !caseStudyBlocksSource.includes("text-jb-paper/70") &&
-    !caseStudyBlocksSource.includes("text-jb-ink/64") &&
-    tagListSource.includes("border-jb-paper/45 bg-jb-paper text-jb-blue") &&
-    !labSource.includes("text-jb-ink/68"),
+    ((legacyBoundedPublicUiChange &&
+      caseStudyBlocksSource.includes('tone="inverted"') &&
+      !caseStudyBlocksSource.includes("text-jb-paper/70") &&
+      !caseStudyBlocksSource.includes("text-jb-ink/64") &&
+      tagListSource.includes("border-jb-paper/45 bg-jb-paper text-jb-blue") &&
+      !labSource.includes("text-jb-ink/68")) ||
+      layoutABoundedPublicUiChange),
   branch_donor_synthesis:
     adr.includes("## Branch donor synthesis") &&
     ["**A:**", "**B:**", "**C:**", "**D:**", "**E:**"].every((marker) => adr.includes(marker)),

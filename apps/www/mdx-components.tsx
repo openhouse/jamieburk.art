@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import { Cite, Claim, References } from "@/components/citations";
+import { HostingHandoffTemplate } from "@/components/CaseStudyBlocks";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -20,6 +21,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     Cite,
     Claim,
     References,
+    HostingHandoffTemplate,
     ...components
   };
 }

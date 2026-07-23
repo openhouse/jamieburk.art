@@ -10,9 +10,14 @@ const sourceNotePath = path.join(
   repoRoot,
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
 );
+const historicalKnowledgePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/historical-knowledge.ts"
+);
 
 const candidateRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
+  "apps/www/src/data/knowledge-bank/historical-knowledge.ts",
   "apps/www/src/app/about/page.tsx",
   "apps/www/src/app/page.tsx",
   "apps/www/src/app/work/technical-operations/page.tsx",
@@ -22,7 +27,41 @@ const candidateRelativePaths = [
   "apps/www/src/content/work/196-sunday-dinner.mdx",
   "apps/www/src/content/work/fair-rent-nyc.mdx",
   "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
-  "apps/www/src/data/work.ts"
+  "apps/www/src/content/lab/source-backed-team-memory.mdx",
+  "apps/www/src/data/work.ts",
+  "apps/www/src/app/globals.css",
+  "apps/www/src/styles/tokens.css",
+  "apps/www/src/components/Hero.tsx",
+  "apps/www/src/components/PhotoFigure.tsx",
+  "apps/www/src/components/ProofStrip.tsx",
+  "apps/www/src/components/ResumeCTA.tsx",
+  "apps/www/src/components/SiteHeader.tsx",
+  "apps/www/src/components/WorkCard.tsx",
+  "apps/www/src/components/CaseStudyLayout.tsx",
+  "apps/www/src/components/CaseStudyBlocks.tsx",
+  "apps/www/mdx-components.tsx",
+  "apps/www/src/data/photography.ts",
+  "apps/www/src/lib/site-url.ts",
+  "apps/www/next.config.ts",
+  "scripts/check-public-safety.mjs",
+  ".agents/evals/layout-photography-integration.json",
+  "docs/qa/layout-A/photo-review-register.json",
+  "docs/qa/layout-A/browser-qa.json",
+  "docs/qa/evals-H/responsive-route-matrix.json",
+  "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+  "apps/www/public/photos/cabaret-law-hearing-steps.jpg",
+  "apps/www/public/photos/council-hearing-room.jpg",
+  "apps/www/public/photos/dcla-diy-spaces-meeting.jpg",
+  "apps/www/public/photos/fair-rent-handbills.jpg",
+  "apps/www/public/photos/fair-rent-nyc-group.jpg",
+  "apps/www/public/photos/jamie-city-portrait.jpg",
+  "apps/www/public/photos/jamie-council-chamber.jpg",
+  "apps/www/public/photos/jamie-mirror-camera.jpg",
+  "apps/www/public/photos/jamie-waterfront-portrait.jpg",
+  "apps/www/public/photos/legalize-dance-parade.jpg",
+  "apps/www/public/photos/raft-and-delta-queen.jpg",
+  "apps/www/public/photos/raft-arrival.jpg",
+  "apps/www/public/photos/raft-in-fog.jpg",
 ];
 
 const finalScorecardRelativePaths = [
@@ -34,7 +73,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58";
+const approvedCandidateSha256 = "5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -54,7 +93,7 @@ function joined(entry) {
 function loadCandidateFiles() {
   return Object.fromEntries(candidateRelativePaths.map((relativePath) => [
     relativePath,
-    readFileSync(path.join(repoRoot, relativePath), "utf8")
+    readFileSync(path.join(repoRoot, relativePath))
   ]));
 }
 
@@ -70,6 +109,7 @@ export function evaluateProfessorLenses({
   suite = JSON.parse(readFileSync(suitePath, "utf8")),
   aboutText = readFileSync(aboutPath, "utf8"),
   sourceNoteText = readFileSync(sourceNotePath, "utf8"),
+  historicalKnowledgeText = readFileSync(historicalKnowledgePath, "utf8"),
   candidateFiles = loadCandidateFiles(),
   finalScorecards = finalScorecardRelativePaths.map((relativePath) =>
     JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"))
@@ -79,12 +119,42 @@ export function evaluateProfessorLenses({
   const sack = suite.evals.find((entry) => entry.id === "PR-016");
   const morseText = joined(morse);
   const sackText = joined(sack);
-  const combinedPublicText = `${aboutText}\n${sourceNoteText}`;
+  const combinedPublicText = `${aboutText}\n${sourceNoteText}\n${historicalKnowledgeText}`;
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
   const candidateSha256 = fingerprintCandidate(candidateFiles);
-  const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
-  const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
-  const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
+  const observedRows = Math.max(
+    aboutText.match(/Observed:<\/strong>/g)?.length ?? 0,
+    aboutText.match(/observed:\s*[\n\r]+\s*"/g)?.length ?? 0
+  );
+  const modelRows = Math.max(
+    aboutText.match(/Modeled:<\/strong>/g)?.length ?? 0,
+    aboutText.match(/model:\s*[\n\r]+\s*"/g)?.length ?? 0
+  );
+  const interfaceRows = Math.max(
+    aboutText.match(/Interface:<\/strong>/g)?.length ?? 0,
+    aboutText.match(/interface:\s*[\n\r]+\s*"/g)?.length ?? 0
+  );
+  const feedbackRows = Math.max(
+    aboutText.match(/Use and feedback:/g)?.length ?? 0,
+    aboutText.match(/feedback:\s*[\n\r]+\s*"/g)?.length ?? 0
+  );
+  const handoffRows = Math.max(
+    aboutText.match(/Revision and handoff:/g)?.length ?? 0,
+    aboutText.match(/handoff:\s*[\n\r]+\s*"/g)?.length ?? 0
+  );
+  const evidenceRows = Math.max(
+    aboutText.match(/Evidence boundary:/g)?.length ?? 0,
+    aboutText.match(/evidence:\s*[\n\r]+\s*"/g)?.length ?? 0
+  );
+  const caseStudyBlocksText = candidateFiles[
+    "apps/www/src/components/CaseStudyBlocks.tsx"
+  ]?.toString() ?? "";
+  const mdxComponentsText = candidateFiles["apps/www/mdx-components.tsx"]?.toString() ?? "";
+  const sundayDinnerText = candidateFiles[
+    "apps/www/src/content/work/196-sunday-dinner.mdx"
+  ]?.toString() ?? "";
+  const includesProjectHref = (href) =>
+    aboutText.includes(`href=\"${href}\"`) || aboutText.includes(`href: \"${href}\"`);
 
   const criteria = [
     criterion(
@@ -149,14 +219,34 @@ export function evaluateProfessorLenses({
         "/work/196-sunday-dinner",
         "/work/fair-rent-nyc",
         "/lab/source-backed-team-memory"
-      ].every((href) => aboutText.includes(`href=\"${href}\"`)),
+      ].every(includesProjectHref),
       "HJE, WOWList, Sunday Dinner / 196, NYC Artist Coalition, and team-memory links checked."
     ),
     criterion(
       "project-specific-loops",
-      "Four examples distinguish relationship models, actual interfaces and use, and learning and continuity.",
-      relationshipRows >= 4 && interfaceRows >= 4 && learningRows >= 4,
-      `${relationshipRows} relationship rows; ${interfaceRows} interface-and-use rows; ${learningRows} learning-and-continuity rows.`
+      "Four examples distinguish observation, modeling, interface, social use and feedback, revision and handoff, and public evidence boundaries.",
+      observedRows >= 4 && modelRows >= 4 && interfaceRows >= 4 &&
+        feedbackRows >= 4 && handoffRows >= 4 && evidenceRows >= 4,
+      `${observedRows} observed; ${modelRows} modeled; ${interfaceRows} interface; ${feedbackRows} feedback; ${handoffRows} handoff; ${evidenceRows} evidence-boundary rows.`
+    ),
+    criterion(
+      "inspectable-third-current-loop",
+      "A third current project exposes a genuine public-safe operating specimen rather than only capability language.",
+      [
+        "HostingHandoffTemplate",
+        "Observe",
+        "Model",
+        "Interface",
+        "Use and notice",
+        "Revise",
+        "Hand off",
+        "Publication boundary:"
+      ].every((fragment) => caseStudyBlocksText.includes(fragment)) &&
+        mdxComponentsText.includes("HostingHandoffTemplate") &&
+        sundayDinnerText.includes("<HostingHandoffTemplate />") &&
+        sundayDinnerText.includes("public-safe derivative") &&
+        sundayDinnerText.includes("not a participant record"),
+      "The rendered 196 hosting template and its participant-record boundary were checked."
     ),
     criterion(
       "open-house-boundary",
@@ -188,6 +278,19 @@ export function evaluateProfessorLenses({
         sourceNoteText.includes("private archive paths") &&
         sourceNoteText.includes("related correspondence"),
       "Protected-source exclusions checked."
+    ),
+    criterion(
+      "bounded-educational-derivative",
+      "The public repository retains only a held, non-quoting derivative of the protected course record.",
+      historicalKnowledgeText.includes('id: "SRC-SOCIAL-INFO-SPACES-EVALUATION-2006"') &&
+        historicalKnowledgeText.includes('visibility: "protected"') &&
+        historicalKnowledgeText.includes('preservationStatus: "private"') &&
+        historicalKnowledgeText.includes('status: "hold"') &&
+        historicalKnowledgeText.includes("permission to quote the evaluation publicly") &&
+        !/(?:student id|grade:\s*["']?[a-f][+-]?|excellent student|outstanding insights|extremely impressive|private\s+archive\s+path\s*[:=]\s*\/(?:Users|Volumes))/i.test(
+          historicalKnowledgeText
+        ),
+      "Protected source status, held projection, anti-claim, and raw-record exclusion checked."
     ),
     criterion(
       "no-private-fragments",

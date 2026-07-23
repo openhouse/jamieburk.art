@@ -12,6 +12,10 @@ const sourceNoteText = readFileSync(
   path.join(repoRoot, "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"),
   "utf8"
 );
+const historicalKnowledgeText = readFileSync(
+  path.join(repoRoot, "apps/www/src/data/knowledge-bank/historical-knowledge.ts"),
+  "utf8"
+);
 const suite = JSON.parse(
   readFileSync(path.join(repoRoot, ".agents/evals/portfolio-production-readiness.json"), "utf8")
 );
@@ -42,6 +46,18 @@ test("guard rejects an incomplete recursive systems sequence", () => {
   assert.equal(result.criteria.find((item) => item.id === "recursive-sequence")?.pass, false);
 });
 
+test("guard rejects collapsing project-specific use and feedback into generic capability copy", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText: aboutText
+      .replaceAll("feedback:", "capabilities:")
+      .replaceAll("Use and feedback:", "Capabilities:"),
+    sourceNoteText
+  });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "project-specific-loops")?.pass, false);
+});
+
 test("guard rejects private educational-record identifiers", () => {
   const result = evaluateProfessorLenses({
     suite,
@@ -50,6 +66,20 @@ test("guard rejects private educational-record identifiers", () => {
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "no-private-fragments")?.pass, false);
+});
+
+test("guard rejects raw evaluative praise or grades in the held derivative", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    historicalKnowledgeText: `${historicalKnowledgeText}\nGrade: A\nExcellent student`
+  });
+  assert.equal(result.pass, false);
+  assert.equal(
+    result.criteria.find((item) => item.id === "bounded-educational-derivative")?.pass,
+    false
+  );
 });
 
 test("guard rejects weakening the Sack anti-overclaim rubric", () => {

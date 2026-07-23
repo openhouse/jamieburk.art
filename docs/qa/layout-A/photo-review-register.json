@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "candidate": "features/layout-A",
+  "date": "2026-07-22",
+  "branchReviewAuthorization": "Jamie explicitly authorized actual photo integration in this pull-request worktree for design review.",
+  "productionPublicationStatus": "pending-exact-image-human-review",
+  "productionGate": [
+    "exact crop and caption",
+    "photographer and rights",
+    "consent and dignity",
+    "collective credit",
+    "final public usefulness",
+    "Jamie approval of the unchanged candidate"
+  ],
+  "items": [
+    {
+      "candidateId": "WEB-CAND-001",
+      "src": "/photos/jamie-city-portrait.jpg",
+      "sha256": "4577c2d6da23317ca821f8a2240eab4e21d565168973a690faf3ba30d09df661",
+      "subjectClass": "Jamie",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-002",
+      "src": "/photos/jamie-council-chamber.jpg",
+      "sha256": "9ed636cbeefeb3812825081601f8e5bce4771b4fb1b536ef4351f2f214de14a3",
+      "subjectClass": "Jamie in public institution",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-003",
+      "src": "/photos/jamie-waterfront-portrait.jpg",
+      "sha256": "53283228b0703eeda47c272c481710ef1ca09d74093904968eaebbdb6725f34a",
+      "subjectClass": "Jamie",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-004",
+      "src": "/photos/jamie-mirror-camera.jpg",
+      "sha256": "74d8932069f4adc5c8d790c33e4f436be7bdc3aebe34ec513f45ba611396b2ed",
+      "subjectClass": "Jamie self-portrait",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-010",
+      "src": "/photos/dcla-diy-spaces-meeting.jpg",
+      "sha256": "08414a31d7849d745fc1b06c4a105ab615430cd65d767ff61cda6644b5d74990",
+      "subjectClass": "public cultural-space meeting",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-013",
+      "src": "/photos/fair-rent-nyc-group.jpg",
+      "sha256": "e8b1b338f623d35eabebef51256ba915dc048b88adfd6511586f66c79280677e",
+      "subjectClass": "collective campaign gathering",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-014",
+      "src": "/photos/legalize-dance-parade.jpg",
+      "sha256": "060c5024513f11d39c9e6dbc529d115d5e6d3024bbd4315a0c3ebf5d95d75f3a",
+      "subjectClass": "collective public parade",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-015",
+      "src": "/photos/cabaret-law-hearing-steps.jpg",
+      "sha256": "95bbd06afb32c72e6e858e6850962c8e3b404ed74fdc972cf9447b3a6509743b",
+      "subjectClass": "collective public civic event",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-019",
+      "src": "/photos/fair-rent-handbills.jpg",
+      "sha256": "730a035edfe26986f2d952e382d21ab38586fa1a2cd94a083ce7374ffe204edd",
+      "subjectClass": "campaign artifact without people",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-039",
+      "src": "/photos/council-hearing-room.jpg",
+      "sha256": "faaf096dfac2f85516c63bdc1e6b42656909035f11176fab3cd53431c9d6f765",
+      "subjectClass": "public Council hearing",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-029",
+      "src": "/photos/raft-arrival.jpg",
+      "sha256": "f3bc7f3ff9878eb83fd1300174c946debb4180623fa4a76032880bb2fad418bd",
+      "subjectClass": "collective historical river scene",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-031",
+      "src": "/photos/raft-in-fog.jpg",
+      "sha256": "60db114464b3fddea43d29ff76ccb862648200009bf549ed68bec857f2d5eac1",
+      "subjectClass": "historical raft scene with crew member",
+      "status": "branch-review"
+    },
+    {
+      "candidateId": "WEB-CAND-033",
+      "src": "/photos/raft-and-delta-queen.jpg",
+      "sha256": "048dd23d0a1faa1d0d6b37a3d8d88d55f1ff860fa6fb17f106d3aa99c3147cc2",
+      "subjectClass": "historical river scene with incidental people",
+      "status": "branch-review"
+    }
+  ],
+  "heldAfterEditorialReview": [
+    {
+      "candidateId": "WEB-CAND-009",
+      "photoFieldworkId": "PHOTO-FIELDWORK-009",
+      "reason": "Returned to the archive because the visible task, maker, and project context are not specific enough for public proof."
+    },
+    {
+      "candidateId": "WEB-CAND-024",
+      "photoFieldworkId": "PHOTO-FIELDWORK-024",
+      "reason": "Returned to the archive because the welcome card visibly names an artist whose exact-image approval is not recorded."
+    }
+  ]
+}

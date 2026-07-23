@@ -1,40 +1,46 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "morse-a-employment-release",
+  "evaluator": "Independent Prof. Margaret Morse inhabited-systems holdout evaluator",
+  "reviewerId": "morse-a-native-layout-final-v3",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The recomputed SHA-256 exactly matches the expected candidate fingerprint.",
-    "The About page provides a visible through-line from the 2006 Open House experiment to WOWList, Sunday Dinner and 196, NYC Artist Coalition work, and source-backed team memory, explicitly connecting artistic, civic, technical, and social practice.",
-    "The linked [Good Times Open House report](https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html) supplies the media-archaeological and embodied basis: art-life experimentation, Ant Farm and Fluxus lineages, attentive observation, many-perspective documentation, communal space, and participants changing their bodily behavior in relation to recording media.",
-    "The four About-page continuity examples distinguish relationships, interface and use, and learning and continuity. They show people influencing systems through language, participation, hospitality, shared space, documentation, and recurring practice rather than receiving conventional administrative services.",
-    "Sunday Dinner and 196 make hospitality, trust, artist support, access, facilitation, consent, and living social practice concrete; WOWList connects community vocabulary to a distributed technical platform; coalition work connects lived cultural-space experience to civic interfaces and shared memory.",
-    "The homepage and technical-operations page maintain clear employment relevance, while the About-page threshold prevents the practice from being reduced to organizational utility.",
-    "Historical projects are labeled as historical or archived, while current capability is supported separately by present-tense operating work and the bounded 2026 source-backed-memory lab."
+    "Recomputed SHA-256 over all 46 candidateRelativePaths in the declared order using path + NUL + raw bytes + NUL; result exactly matched 5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac.",
+    "The homepage establishes the professional role immediately as Technical Project Manager / Product Operations / Implementation, supplies direct technical-operations and resume paths, and preserves a visible transition into the broader work.",
+    "The About page is one click from the homepage and presents the explicit threshold Systems people can inhabit, connecting artistic, civic, technical, and social practice through participation, memory, continuation, recursive testing, and handoff.",
+    "The Open House continuity is supported by the linked [Good Times Open House report](https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html): a ten-day experiment joining art and life, communal responsibility, public participation, attention, embodied use, and many-perspective documentation. The portfolio attributes initiation to Jamie while retaining collective governance.",
+    "Sunday Dinner / 196 traces hospitality, trust, artist support, onboarding, access, facilitation, return, and care. Its rendered blank hosting-handoff template makes the operating practice inspectable while explicitly excluding names, contact information, attendance, addresses, access credentials, private correspondence, and source-record reproduction.",
+    "WOWList traces social origin into technical form: community vocabulary becomes followable keyword communities, publishing, event distribution, support, and reusable deployment patterns. The case study says co-built, and its active evidence preserves Richard, organizers, participants, and collaborators rather than assigning sole authorship.",
+    "NYC Artist Coalition / FairRentNYC traces place-based listening, participation, public meetings, source mapping, decision memory, campaign interfaces, testimony, handbills, and sustained follow-through. The rendered case repeatedly limits Jamie's claim to implementation and stewardship while keeping campaign strategy, policy outcomes, and public accomplishments collective.",
+    "The About page adds embodied artistic continuity through the river expedition: material improvisation, atmosphere, interruption, adaptation, public encounter, and a project container people could enter and change. It names Libby Hendon and Laura Mattingly and rejects solo-achievement framing.",
+    "Rendered desktop and mobile records for the homepage, About, FairRentNYC, Sunday Dinner / 196, work index, and technical-operations surface showed coherent hierarchy, readable continuity, complete images, no horizontal overflow, and no broken controls. The responsive matrix independently records 32 relevant route-width checks at 360, 375, 768, and 1280 pixels with HTTP 200, zero axe violations, zero overflow, zero failed requests, zero unlabeled images, and zero broken images after scrolling.",
+    "All 13 branch-review photographs were visually inspected and their hashes matched the review register. The portraits establish professional and personal presence; civic photographs show meetings, public testimony, shared campaign identity, artifacts, and institutional settings; river photographs convey collective activity, atmosphere, duration, and scale. Captions consistently describe collective scenes rather than assigning Jamie ownership of participants' labor.",
+    "No protected UCSC evaluation text or private recommendation is quoted on the rendered portfolio. The protected educational-record-derived claim remains held with no public surface, and the source note explicitly excludes raw evaluations, grades, identifiers, private paths, correspondence, and unapproved testimonial projection.",
+    "The candidate distinguishes operating systems from conventional administration: structures are evaluated by whether people can enter, influence, use, remember, revise, and continue them. This supports the target professional role without reducing Jamie to organizational utility."
   ],
-  "gaps": [],
+  "gaps": [
+    "Production publication remains blocked on documented human review of each photograph's exact crop, caption, photographer and rights, consent and dignity, collective credit, public usefulness, and Jamie's approval of the unchanged candidate.",
+    "The visible captions use archive-level source labels rather than final photographer or rights credits; that is acceptable for branch review only and must be resolved before production publication.",
+    "The external Open House article contains participant circumstances and faculty quotations that the portfolio correctly does not reproduce. Any future excerpt, photograph, or testimonial projection from that source requires a separate privacy, consent, provenance, and editorial decision."
+  ],
   "safety_findings": [
-    "Open House is credited as collectively governed, and WOWList, coalition work, CallNYC, and Sunday Dinner retain explicit collaborator or community credit.",
-    "The source note states that protected educational records, grades, identifiers, private paths, correspondence, and raw record text are withheld.",
-    "No faculty testimonial is projected, and the public certificate is explicitly bounded as professional development rather than instructor affiliation or production proof.",
-    "The candidate does not convert historical coursework or tools into claims of present proficiency, sole authorship, research invention, or production deployment.",
-    "Sensitive guest histories, correspondence, attendance information, access details, and unapproved images remain outside the public projection."
+    "The six prohibited final scorecards were not consulted.",
+    "Participant-level Sunday Dinner and residency records remain excluded; only aggregates, bounded public milestones, and a blank derivative template are rendered.",
+    "Collective-credit boundaries are explicit for Open House, WOWList, NYC Artist Coalition / FairRentNYC, Sunday Dinner / 196, Harry J. Epstein Company, and the river expedition.",
+    "No faculty testimonial or protected educational-record quotation is projected as authority for Jamie's professional claims.",
+    "All 13 photographs remain marked branch-review; their presence in a machine-validated candidate is not consent, rights clearance, or production approval.",
+    "No romanticized account of participant vulnerability is reproduced on the portfolio surface. The Open House link is used for bounded lineage rather than to appropriate participant circumstances.",
+    "Machine and responsive checks support develop/staging readiness only; they do not satisfy the required human production gate."
   ],
-  "recommendation": "Pass PR-015 for this bound candidate. Preserve the collective-credit, consent, historical-current, and protected-record boundaries in any subsequent release.",
+  "recommendation": "Pass PR-015 at score 4 for develop/staging review. Preserve the current inhabited-systems threshold and professional-role hierarchy. Do not authorize production publication until the unchanged candidate receives the recorded exact-image, rights, consent, dignity, collective-credit, testimonial, and Jamie-approval reviews; rerun this holdout if any candidate-affecting content changes.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-2eb5-7373-9689-d6f7c69238cf",
-    "agentNickname": "Rawls",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "model": "gpt-5",
+    "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:20.561Z",
-    "completedAt": "2026-07-19T03:17:30.027Z"
+    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
   }
 }
