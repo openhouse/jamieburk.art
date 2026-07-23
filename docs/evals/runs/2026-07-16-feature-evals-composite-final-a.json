@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "composite-holdout-photos-bounded-architecture-a-2026-07-22",
+  "judgeId": "composite-holdout-photo-residency-architecture-a-2026-07-22",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "7a3454240780cc10b4050d80ed2edda27b66ad709722fec0d0857591472e1eb0",
+  "candidateFingerprint": "225769967deed61fdbfddf9db56904da0f76d680eb5fbbc5a522820e591a0c6b",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,117 +12,122 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Clean HEAD remained 96b4a9a207d6745254349376d7b6a9e580960035 and origin/develop is an ancestor.",
-        "The composite evaluator resolved all 14 frozen feature/evals-A through feature/evals-N heads and passed COMP-001."
+        "Initial and final status were clean at HEAD 27068aade63c19bb609a6354bd9dddfbf99211ce.",
+        "origin/develop at 4b6bc3bff48f4fbefdda2f42aec327645f6a357c is an ancestor of HEAD.",
+        "The evaluator resolved and accepted all 14 frozen feature/evals-A through feature/evals-N heads."
       ],
-      "rationale": "The committed candidate has the required develop ancestry and preserves the exact frozen donor-family inventory."
+      "rationale": "Candidate identity, develop ancestry, and the frozen donor-family inventory match the contract."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 integration decisions contain allowed dispositions, rationale, existing destinations, and criterion references.",
-        "The reviewed integration-register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d."
+        "All 14 integration decisions retain allowed dispositions, rationale, existing destinations, and verification references.",
+        "The integration register matched reviewed digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d."
       ],
-      "rationale": "The integration remains inspectable and bound to the reviewed register."
+      "rationale": "The committed integration remains inspectable and bound to the reviewed decision register."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The composite evaluator found all 11 canonical files and zero forbidden parallel lifecycle roots.",
-        "Five photography records exist under docs/knowledge-bank/notebooks/photography, are graph-reachable, use kind notebook, hold projection, and empty surfaces.",
-        "The notebook IDs are absent from public-registry.json, and the feature changes no apps/www/src/app route."
+        "All 11 canonical architecture files exist and zero forbidden parallel lifecycle roots were found.",
+        "Six photography notebook records exist under docs/knowledge-bank/notebooks/photography and are graph-reachable.",
+        "Every notebook uses kind notebook, projection status hold, and an empty surfaces list.",
+        "The residency proposal is explicitly accepted and nonbinding; no feature file appears under apps/ or adds a public route."
       ],
-      "rationale": "The notebook extends the canonical Markdown and Wiki Graph architecture without becoming a public projection or parallel claims system."
+      "rationale": "The photography work extends the canonical Markdown and Wiki Graph architecture without creating a parallel system or public projection."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Canonical intake replay, duplicate preservation, held-claim, inquiry, correction, and orphan queries passed.",
-        "Notebook schema mutations reject canonical evidence and public registry IDs.",
-        "The notebook contract states that visual discovery may open research but cannot automatically promote memory or interpretation into a claim."
+        "Canonical intake replay, duplicate preservation, stable-ID collision protection, held-claim, inquiry, correction, and orphan queries passed.",
+        "Notebook schema controls reject canonical evidence, registry IDs, and structured rights, consent, or public-display determinations.",
+        "All 16 photography tests passed, including mutations against automatic evidence promotion and publication clearance."
       ],
-      "rationale": "Lifecycle behavior remains append-safe, and notebook material cannot bypass governed claim maturation."
+      "rationale": "Append-safe lifecycle behavior remains intact, and notebook selection or interpretation cannot bypass governed claim maturation."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "wiki:check passed with 112 records, 455 semantic/evidence edges, 298 prose links, and current generated outputs.",
-        "All five notebook records have empty evidence and registry_ids and no structured rights_state, consent_state, or public_display_status.",
-        "The feature changes 135 Markdown, 5 JSON, and 4 MJS files, with no media or route files, binary entries, data images, actual private coordinates, photo identifiers, people-tag exports, face data, or protected locators.",
-        "The only photo-library path-like value is an intentionally synthetic fail-closed mutation fixture, not candidate data or a real source coordinate."
+        "wiki:check passed with 113 records, 461 semantic/evidence edges, 300 prose links, and current generated outputs.",
+        "The feature diff contains 137 Markdown, 7 JSON, and 4 MJS files, with no app files, media files, binary entries, previews, data-image payloads, Apple Photos identifiers, helper receipts, People exports, face data, protected locators, or actual private source coordinates.",
+        "The sole photo-library path-shaped string is a synthetic fail-closed mutation fixture and not a source coordinate.",
+        "The arrival note records a bounded operational canary, two nonce-bound matching runs, and independent live-catalog verification while withholding the image, identifier, count, path, receipts, and catalog coordinates."
       ],
-      "rationale": "Source, claim, agency, population, and photo-provenance boundaries validate without introducing media or private archive material."
+      "rationale": "Source, claim, agency, population, and photo-provenance boundaries validate without committing private archive material."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "wiki:eval passed 13 lenses and 117 blocking criteria, including all 11 photography criteria.",
+        "wiki:eval passed 13 lenses and 121 blocking criteria, including all 15 photography criteria.",
         "The composite professor evaluation passed 14/14 criteria while mature held claims remained off a public proofs route.",
-        "Notebook text preserves collective agency, non-heroic authorship, contradiction, outliers, competing sequences, and protected absence."
+        "The public graph summary describes an accepted, nonbinding proposal and does not convert selection into evidence, rights, consent, editorial approval, or publication permission.",
+        "The Teju Cole touchstone remains explicitly attributed to Jamie's memory rather than asserted as a verified account of Cole's text."
       ],
-      "rationale": "The portfolio remains selective while the notebook supports open-ended visual inquiry without flattening collective work into a heroic or predetermined narrative."
+      "rationale": "The portfolio remains selective while the notebook preserves attributed memory, provisional interpretation, and open-ended inquiry."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All five composite human-evidence controls remain explicitly open under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "Rights and consent remain human-blocked; collaborator and editorial review remain governed-open; production observation, hiring outcomes, and fresh-reader study remain not requested.",
-        "Production commit approval, deployment verification, and indexing approval remain excluded launch tasks; the employment report retains humanApprovalRequired true."
+        "All 5 human-evidence controls remain explicitly open under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "Private household access, equipment custody, and precise coordinates remain outside the public notebook.",
+        "Existing People associations may guide private research but explicitly do not confer consent or authorize identification.",
+        "Rights, consent, collaborator, editorial, publication, production deployment, indexing, hiring, and employment gates remain human-controlled or externally unresolved."
       ],
-      "rationale": "Rights, consent, collaborator, editorial, publication, deployment, indexing, hiring, and employment authority remain unresolved human or external gates."
+      "rationale": "The structural pass governs absences and boundaries without synthesizing human approval or external validation."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "An independent semantic recomputation matched frozen rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
-        "COMP-001 through COMP-008 passed in the composite evaluator.",
-        "All 15 non-circular composite mutation tests passed; the sole baseline failure was the permitted stale installed COMP-009 identity."
+        "Independent semantic recomputation matched frozen rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
+        "COMP-001 through COMP-008 passed in evals:composite.",
+        "All 15 composite mutation cases passed; the sole baseline failure was the permitted stale installed COMP-009 identity.",
+        "Field v01 remains assembling toward 1,000 with committed public-safe count zero and rejects ranking, representativeness, archive completeness, and publication readiness."
       ],
-      "rationale": "The frozen rubric, grader separation, currentness checks, and fail-closed mutation controls resist semantic weakening and score compensation."
+      "rationale": "The frozen rubric, grader separation, currentness checks, and fail-closed mutations resist semantic weakening and score compensation."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent byte-framed traversal bound exactly 719 source-tree files, excluding only the two declared judgment JSON files, to 7a3454240780cc10b4050d80ed2edda27b66ad709722fec0d0857591472e1eb0.",
-        "The two predecessor judgments remain valid and complete against the same rubric but target the earlier fingerprint f74a425afd6696d479e0de823ec3520185a20928070148cda3b2c5c8db9fe404.",
-        "Final verification under Node v26.5.0 found clean status, unchanged HEAD, origin/develop ancestry, 719 files, and the unchanged requested fingerprint."
+        "Node v26.5.0 byte-framed traversal bound exactly 721 source-tree files, excluding only the two declared composite judgment JSON files, to 225769967deed61fdbfddf9db56904da0f76d680eb5fbbc5a522820e591a0c6b.",
+        "Both installed predecessor holdouts remain accepted, complete, independent judgments against the same rubric but target superseded fingerprint 7a3454240780cc10b4050d80ed2edda27b66ad709722fec0d0857591472e1eb0.",
+        "Final verification found clean status, unchanged HEAD, retained origin/develop ancestry, 721 files, and the unchanged requested fingerprint."
       ],
-      "rationale": "The installed COMP-009 failure is solely exact-candidate staleness. This fresh read-only judgment accepts the unchanged candidate as one permitted replacement and does not substitute for a distinct companion replacement."
+      "rationale": "Installed COMP-009 is stale solely because its predecessor holdouts bind a different candidate. This judgment accepts the exact current candidate as one permitted replacement; a distinct companion replacement is still required before installed COMP-009 becomes green."
     }
   ],
   "notObserved": [],
   "findings": [],
-  "recommendation": "Accept this committed candidate within the finite structural contract and record this judgment as the exact-candidate architecture replacement. Install a distinct companion exact-candidate holdout before treating repository COMP-009 as green. Automated acceptance does not imply rights, consent, collaborator, editorial, publication, deployment, indexing, hiring, employment, or other human approval.",
+  "recommendation": "Accept HEAD 27068aade63c19bb609a6354bd9dddfbf99211ce within this finite structural contract and record this judgment as one exact-candidate architecture and provenance replacement. Obtain a distinct companion holdout for the same rubric and fingerprint before treating repository COMP-009 as current. Automated acceptance does not imply rights, consent, collaborator, editorial, publication, deployment, indexing, hiring, employment, or any other human approval or external outcome.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f8c0c-2b75-7211-bb21-d732516b8d14",
-    "agentNickname": "Mill",
+    "processSessionId": "019f8c56-72cb-7813-a298-e5050cc11616",
+    "agentNickname": "Sagan",
     "model": "inherited-current-model",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "Conduct a fresh, read-only, bounded architecture and provenance holdout for jamieburk.art feature/photos-D.\n\nWork only in /private/tmp/jamieburk-art-feature-photos-D. Do not edit, generate, stage, commit, or push. Bind the review to clean HEAD 96b4a9a207d6745254349376d7b6a9e580960035, origin/develop ancestry, exactly 719 source-tree files after excluding only the two composite judgment JSON files, candidate fingerprint 7a3454240780cc10b4050d80ed2edda27b66ad709722fec0d0857591472e1eb0, and frozen rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Reject any identity mismatch.\n\nThis is a finite structural review, not an open-ended natural-language fuzzing exercise. Judge only the committed candidate and these boundaries:\n\n- five photography notebook records exist under the canonical docs/knowledge-bank tree and are graph-reachable;\n- notebook records use kind notebook, projection status hold, and no projection surfaces;\n- notebook records cannot carry canonical evidence, registry IDs, structured rights determinations, structured consent determinations, or structured public-display determinations;\n- the public registry contains no notebook IDs and the feature adds no public route;\n- the feature diff contains no photograph, preview, private source coordinate, Apple Photos identifier, people-tag export, face data, protected locator, or data image;\n- field v01 is assembling toward 1,000 with committed public-safe count zero and does not claim ranking, representativeness, completeness, or publication readiness;\n- observation, reviewed metadata, attributed memory, interpretation, research leads, and separately governed claims remain distinct;\n- selection does not imply evidence, rights, consent, safety, editorial approval, or publication;\n- collective agency, non-heroic authorship, contradiction, outliers, competing sequences, and protected absence remain available;\n- all human rights, consent, collaborator, editorial, publication, deployment, indexing, hiring, and employment gates remain open.\n\nUse Node 26.5.0. Verify wiki:check at 112 records, 455 edges, and 298 prose links; wiki:employment:check; wiki:test at 97/97 including 12 photo tests; wiki:eval at 13 lenses and 117 criteria including 11 photo criteria; evals:composite COMP-001 through COMP-008; and the 15 non-circular composite mutations. COMP-009 may be stale solely because predecessor holdouts target a different source fingerprint; this review may serve as one exact-candidate replacement. Confirm final clean status and unchanged identity.\n\nReturn only valid JSON with runVersion 2; judgeId \"composite-holdout-photos-bounded-architecture-a-2026-07-22\"; grader \"independent_llm_judge\"; independentFromOptimizer true; verified rubricSha256 and candidateFingerprint; verdict; scores containing COMP-001 through COMP-009 exactly once, each with 0-or-4 score, pass, evidence, and rationale; notObserved; findings; recommendation. Acceptance requires all nine criteria at 4/pass and no blocker within this finite contract. Automated acceptance must not imply any human approval or external outcome.\n",
-    "promptSha256": "b71fb7242077602dac421a310d8ebe24456227d6309c104af1df15e235da022c",
+    "prompt": "Conduct a fresh, read-only, bounded architecture and provenance holdout for\njamieburk.art feature/photos-D.\n\nWork only in /private/tmp/jamieburk-art-feature-photos-D. Do not edit,\ngenerate, stage, commit, or push. Start by loading Node 26 with\n`source /Users/jburkart/.nvm/nvm.sh && nvm use`. Bind the review to clean HEAD\n27068aade63c19bb609a6354bd9dddfbf99211ce, origin/develop ancestry, exactly\n721 source-tree files after excluding only the two composite judgment JSON\nfiles, candidate fingerprint\n225769967deed61fdbfddf9db56904da0f76d680eb5fbbc5a522820e591a0c6b, and\nfrozen rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.\nReject any identity mismatch.\n\nThis is a finite structural review, not an open-ended natural-language fuzzing\nexercise. Judge only the committed candidate and these boundaries:\n\n- six photography notebook records exist under the canonical\n  docs/knowledge-bank tree and are graph-reachable;\n- the accepted residency proposal is explicitly nonbinding and remains on hold\n  with no public projection surfaces;\n- the Proof of Life arrival note records only a bounded operational canary,\n  two nonce-bound matching runs, and independent catalog verification;\n- no image, preview, Apple Photos identifier, private source coordinate,\n  helper receipt, People export, face data, or protected locator is committed;\n- the public summary does not convert selection into evidence, rights,\n  consent, editorial approval, or publication permission;\n- the Teju Cole touchstone remains Jamie's attributed memory rather than an\n  unsourced claim about the published text;\n- hospitality and access remain bounded: private household access details,\n  equipment custody, and precise coordinates are not published;\n- People associations may guide local research but do not confer consent;\n- field v01 remains assembling toward 1,000 with committed public-safe count\n  zero and is not a representative sample, archive census, or ranked shortlist;\n- all human rights, consent, collaborator, editorial, publication, deployment,\n  indexing, hiring, and employment gates remain open.\n\nUse Node 26.5.0. Verify wiki:check at 113 records, 461 edges, and 300 prose\nlinks; wiki:employment:check; wiki:test at 101/101 including 16 photo tests;\nwiki:eval at 13 lenses and 121 criteria including 15 photo criteria;\nevals:composite COMP-001 through COMP-008; and the composite mutation tests.\nCOMP-009 may be stale solely because predecessor holdouts target a different\nsource fingerprint; this review may serve as one exact-candidate replacement.\nConfirm final clean status and unchanged identity.\n\nReturn only valid JSON with runVersion 2; judgeId\n\"composite-holdout-photo-residency-architecture-a-2026-07-22\"; grader\n\"independent_llm_judge\"; independentFromOptimizer true; verified\nrubricSha256 and candidateFingerprint; verdict; scores containing COMP-001\nthrough COMP-009 exactly once, each with 0-or-4 score, pass, evidence, and\nrationale; notObserved; findings; recommendation. Acceptance requires all nine\ncriteria at 4/pass and no blocker within this finite contract. Automated\nacceptance must not imply any human approval or external outcome.\n",
+    "promptSha256": "5837a8fca136673654f7b197eaba09ab4f828335fd15ab2de318347df4ca3f8a",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-22T18:57:15-04:00",
-    "completedAt": "2026-07-22T19:07:55-04:00",
-    "judgmentSha256": "78e93a4de39d6cdfd6175401d797b8fd2106dc2acaef8e180981d275fd47cec0"
+    "startedAt": "2026-07-22T20:17:30-04:00",
+    "completedAt": "2026-07-22T20:25:50-04:00",
+    "judgmentSha256": "59bad09035b13ce2002b9b422f0757c95287df2d500ca151dabf9fc29a8383b7"
   }
 }

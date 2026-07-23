@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "composite-holdout-photos-bounded-editorial-b-2026-07-22",
+  "judgeId": "composite-holdout-photo-residency-editorial-b-2026-07-22",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "7a3454240780cc10b4050d80ed2edda27b66ad709722fec0d0857591472e1eb0",
+  "candidateFingerprint": "225769967deed61fdbfddf9db56904da0f76d680eb5fbbc5a522820e591a0c6b",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,21 +12,21 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "HEAD remained exactly 96b4a9a207d6745254349376d7b6a9e580960035 with a clean worktree before and after review.",
+        "HEAD remained exactly 27068aade63c19bb609a6354bd9dddfbf99211ce with a clean worktree before and after review.",
         "origin/develop at 4b6bc3bff48f4fbefdda2f42aec327645f6a357c is an ancestor of HEAD.",
         "The composite evaluator verified all 14 frozen feature/evals-A through feature/evals-N decisions and heads."
       ],
-      "rationale": "The bounded candidate descends from the required base and retains the complete frozen reference family."
+      "rationale": "The candidate matches the required identity, ancestry, and frozen branch-family inventory."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 integration decisions retain valid dispositions, rationales, destinations, and verification criteria.",
-        "The integration register recomputed to reviewed digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d."
+        "All 14 integration decisions retain valid dispositions, rationales, destination paths, and verification criteria.",
+        "The integration register matched reviewed digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d."
       ],
-      "rationale": "The integration remains inspectable and deliberate; the photography addition does not introduce an unrecorded parallel architecture."
+      "rationale": "The integration remains inspectable and the residency work introduces no undeclared architecture or public projection."
     },
     {
       "criterionId": "COMP-003",
@@ -34,30 +34,31 @@
       "pass": true,
       "evidence": [
         "All 11 canonical knowledge-architecture files remain present and no forbidden parallel lifecycle root exists.",
-        "The feature makes no change under apps/www, adds no public portfolio route, and adds no notebook ID to the public registry.",
-        "Every photography notebook record has projection status hold with an empty surfaces list."
+        "The feature changes no file under apps/www, adds no public portfolio route, and places no notebook ID in the public registry.",
+        "All six photography notebook records use kind notebook, projection status hold, and empty projection surfaces."
       ],
-      "rationale": "The notebook lives inside the canonical Knowledge Wiki while the public portfolio remains a selective projection."
+      "rationale": "The residency proposal remains inside the canonical Knowledge Wiki while the portfolio stays selectively projected."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The composite evaluator exercised idempotent intake replay, linked duplicate preservation, lifecycle queries, corrections, held claims, and orphan checks successfully.",
-        "wiki:check compiled 112 records, 455 semantic or evidence edges, and 298 prose links with no stale generated output."
+        "The composite evaluator successfully exercised idempotent intake replay, linked duplicate preservation, lifecycle queries, corrections, held claims, and orphan checks.",
+        "wiki:check passed at exactly 113 records, 461 semantic or evidence edges, and 300 prose links with generated outputs current.",
+        "wiki:employment:check confirmed all eight employment-context and hiring-acceptance reports current."
       ],
-      "rationale": "The new notebook kind preserves the existing append-safe lifecycle and graph behavior."
+      "rationale": "The notebook and residency additions preserve the existing append-safe lifecycle and graph behavior."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Canonical validation passed for 280 sources, 98 claims, 31 agency relations, and four corrections; wiki:employment:check confirmed all eight reports current.",
-        "No changed file is an image, video, photo sidecar, or binary, and the notebook Markdown contains no image embed.",
-        "No image identity, preview, identifying metadata, face data, or reconnecting locator is present; the sole photo-library path-shaped value is a synthetic fail-closed mutation fixture.",
-        "public-safety and route checks passed, and git diff --check reported no error."
+        "Canonical validation passed for 280 sources, 98 claims, 31 agency relations, and four corrections.",
+        "The candidate diff adds no image, video, photo sidecar, or other media file, and the notebook Markdown contains no image embed.",
+        "The committed residency record contains no image identity, private source path, source count, receipt, catalog coordinate, or identifying metadata.",
+        "Public-safety and route checks passed, and git diff --check reported no error."
       ],
       "rationale": "Source, claim, agency, privacy, and generated-output integrity remain bounded without committing protected photographic material."
     },
@@ -66,12 +67,13 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "The five linked notebook records form a usable sketchpad for field versions, close-reading notes, provisional vocabulary, research leads, and competing sequences.",
-        "Field v01 targets 1,000 photographs while recording zero committed identities and explicitly rejects best, top, complete, representative, ranked, and publication-ready interpretations.",
-        "Templates separate visible observation, reviewed metadata, attributed memory, editorial interpretation, research leads, and separately governed supported claims.",
-        "The editorial language keeps participants as agents, avoids making Jamie the default hero, preserves contradiction and refusal, and treats protected absence as meaningful."
+        "The proposal calls itself an opening rather than a contract, promises support rather than enforcement, makes all traces optional, and allows changes of question, method, scale, medium, pace, or destination.",
+        "The Teju Cole story is explicitly attributed to Jamie's memory and withheld from source-verified literary status.",
+        "Hospitality gives the practice a temporary home while withholding private access instructions, household details, equipment custody, and precise coordinates.",
+        "The arrival note records a private Proof of Life album with one existing-asset membership; its tree-and-water description is labeled delegated editorial interpretation and explicitly denied representative, thesis, public-selection, or publication-approval status.",
+        "People names are limited to private research navigation without consent or relationship authority, while the 1,000-photo field preserves mistakes, apparatus, weather, maintenance, thresholds, aftermaths, contradiction, refusal, outliers, and surprise."
       ],
-      "rationale": "The committed system fulfills the bounded photography-notebook brief without converting the experiment into a ranking, proof set, or Jamie-centered portfolio narrative."
+      "rationale": "The committed system fulfills the accepted residency and Proof of Life brief as a warm, revisable invitation without converting intimacy into obligation, evidence, or publication."
     },
     {
       "criterionId": "COMP-007",
@@ -79,34 +81,34 @@
       "pass": true,
       "evidence": [
         "All five composite human-evidence controls remain open under reviewed digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "Notebook prose and templates keep selection, evidence, rights, consent, safety, represented-person review, editorial approval, and publication as separate decisions.",
-        "Existing Wiki governance keeps deployment, indexing, hiring validation, and employment outcomes under external human authority."
+        "Notebook prose keeps selection, evidence, rights, consent, represented-person review, editorial approval, public display, and publication separate.",
+        "Existing governance keeps deployment, indexing, hiring validation, and employment outcomes under human authority."
       ],
-      "rationale": "The notebook governs uncertainty and protected absence without synthesizing consent, endorsement, clearance, or outcome evidence."
+      "rationale": "The residency records bounded activity without synthesizing consent, endorsement, clearance, approval, or external outcomes."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "An independent canonical recomputation matched rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
-        "Using Node v26.5.0, wiki:test passed 97 of 97 tests, including all 12 focused photography tests.",
-        "wiki:eval passed 13 lenses and all 117 blocking criteria, including all 11 photography criteria.",
-        "COMP-001 through COMP-008 passed; 15 of 16 composite mutation tests passed, with the sole baseline failure caused by the expressly permitted stale holdouts."
+        "The frozen rubric recomputed to c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
+        "Using Node v26.5.0, wiki:test passed 101 of 101 tests, including all 16 focused photography tests.",
+        "wiki:eval passed 13 lenses and all 121 blocking criteria, including all 15 photography criteria.",
+        "COMP-001 through COMP-008 passed, and all 15 composite mutation defenses passed; the sole 16-test baseline failure was the expressly permitted stale exact-candidate holdout state."
       ],
-      "rationale": "Frozen governance, structural photo boundaries, mutation defenses, and human-authority separation remain executable."
+      "rationale": "Frozen governance, residency boundaries, mutation defenses, and human-authority separation remain executable."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "An independent byte-framed traversal found 721 tracked or unignored files and excluded exactly the two declared installed judgments, producing exactly 719 candidate files.",
-        "The independently recomputed candidate fingerprint is 7a3454240780cc10b4050d80ed2edda27b66ad709722fec0d0857591472e1eb0.",
-        "The installed COMP-009 failure is solely that both excluded judgments bind the superseded candidate; no other composite criterion failed.",
-        "This fresh read-only judgment accepts the exact clean candidate as one replacement holdout."
+        "Two independent byte-framed traversals found exactly 721 candidate source-tree files after excluding only the two declared judgment records.",
+        "Both traversals produced candidate fingerprint 225769967deed61fdbfddf9db56904da0f76d680eb5fbbc5a522820e591a0c6b.",
+        "The installed COMP-009 failure is solely that both excluded judgments bind a superseded candidate; no other composite criterion failed.",
+        "Final status was clean, HEAD and ancestry were unchanged, and this fresh read-only judgment accepts the exact candidate as one replacement holdout."
       ],
-      "rationale": "Candidate identity and stopping conditions are stable; only installation of fresh provenance-bound replacement judgments remains."
+      "rationale": "Candidate identity is stable and the bounded review has no blocker; repository COMP-009 remains pending installation of this result and a distinct companion replacement."
     }
   ],
   "notObserved": [],
@@ -115,21 +117,21 @@
     "COMP-009 remains stale in the repository until this judgment and a distinct companion judgment replace the two superseded records.",
     "Automated acceptance establishes no rights, consent, collaborator endorsement, editorial approval, publication approval, deployment, indexing, hiring validation, or employment outcome."
   ],
-  "recommendation": "Accept exact HEAD 96b4a9a207d6745254349376d7b6a9e580960035 as the bounded photography editorial and public-safety holdout. Install this judgment as one replacement and obtain a distinct companion judgment for the same rubric and fingerprint before treating COMP-009 as current.",
+  "recommendation": "Accept exact HEAD 27068aade63c19bb609a6354bd9dddfbf99211ce as the bounded residency editorial and public-safety holdout. Install this judgment as one replacement and obtain a distinct companion judgment for the same rubric and candidate fingerprint before treating repository COMP-009 as current.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f8c0c-2dc1-7590-8b6c-82e9e22a04f1",
-    "agentNickname": "Laplace",
+    "processSessionId": "019f8c56-74e5-7661-9493-3ff19fc473ee",
+    "agentNickname": "Hilbert",
     "model": "inherited-current-model",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "Independently conduct a fresh, read-only, bounded editorial and public-safety holdout for jamieburk.art feature/photos-D.\n\nReview only /private/tmp/jamieburk-art-feature-photos-D without mutation. Require clean HEAD 96b4a9a207d6745254349376d7b6a9e580960035, origin/develop ancestry, exactly 719 candidate files after the two declared judgment exclusions, fingerprint 7a3454240780cc10b4050d80ed2edda27b66ad709722fec0d0857591472e1eb0, and rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Reject mismatch.\n\nThis review is deliberately bounded. Do not perform open-ended synonym generation or attempt to prove that regular expressions understand every possible English sentence. Inspect whether the committed system fulfills the actual photography-notebook brief:\n\n- it creates a useful public-safe working notebook and sketchpad inside the canonical Knowledge Wiki;\n- field v01 makes room for an experimental 1,000-photo rough draft without claiming best, complete, representative, ranked, or publication-ready status;\n- the notebook supports provisional observation, attributed memory, interpretation, research leads, visual vocabulary, versioning, and competing sequences;\n- people remain agents rather than scenery, Jamie is not made the hero of every collective scene, and protected absence remains meaningful;\n- no image, preview, private coordinate, identifying photo metadata, face data, or protected source detail is committed;\n- typed records cannot activate public projection, carry canonical evidence, enter the registry, or determine rights, consent, or public display;\n- no public portfolio route or apps/www projection is added;\n- selection, evidence, rights, consent, safety, editorial approval, represented-person review, publication, deployment, indexing, hiring, and employment remain separate human decisions.\n\nUse Node 26.5.0 and verify wiki:check at 112/455/298; wiki:employment:check; wiki:test 97/97 including 12 focused photo tests; wiki:eval 13 lenses, 117 blocking criteria, and 11 photo criteria; COMP-001 through COMP-008; the exact 719-file fingerprint; and clean status. COMP-009 may remain stale only because two superseded judgments have not yet been replaced; this review may serve as one replacement.\n\nReturn only valid JSON with runVersion 2; judgeId \"composite-holdout-photos-bounded-editorial-b-2026-07-22\"; grader \"independent_llm_judge\"; independentFromOptimizer true; verified rubricSha256 and candidateFingerprint; verdict; scores for COMP-001 through COMP-009 exactly once with score, pass, evidence, and rationale; notObserved; findings; recommendation. Accept only if the finite contract has no blocker. Automated acceptance establishes no rights, consent, collaborator endorsement, editorial approval, publication approval, deployment, indexing, hiring validation, or employment outcome.\n",
-    "promptSha256": "7679053b3e1544699fc50206253581f93b097406c088d6f7a2c6666df64db1f5",
+    "prompt": "Independently conduct a fresh, read-only, bounded editorial and public-safety\nholdout for jamieburk.art feature/photos-D.\n\nReview only /private/tmp/jamieburk-art-feature-photos-D without mutation.\nStart with `source /Users/jburkart/.nvm/nvm.sh && nvm use`. Require clean HEAD\n27068aade63c19bb609a6354bd9dddfbf99211ce, origin/develop ancestry, exactly\n721 candidate source-tree files after the two declared judgment exclusions,\nfingerprint 225769967deed61fdbfddf9db56904da0f76d680eb5fbbc5a522820e591a0c6b,\nand rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.\nReject mismatch.\n\nThis review is deliberately bounded. Inspect whether the committed system\nfulfills the actual accepted residency and Proof of Life brief:\n\n- the proposal is a warm invitation and a promise of support, not a contract\n  or required-output list;\n- the resident may change question, method, scale, medium, pace, or destination\n  and is not obligated to convert intimacy into output;\n- Jamie's remembered Teju Cole story is labeled as memory and not presented as\n  source-verified literary evidence;\n- hospitality gives the practice a temporary home without publishing private\n  access instructions, household details, equipment custody, or coordinates;\n- the completed Proof of Life canary records a private album with one existing\n  asset, but commits no image, image identity, private path, source count,\n  receipt, catalog coordinate, or identifying metadata;\n- the selected frame's public-safe description remains interpretation, not a\n  representative image, residency thesis, public selection, or publication\n  approval;\n- People names may help find the spaces of people's lives but never confer\n  consent, settle relationships, or turn people into categories;\n- the 1,000-photo field remains open to mistakes, apparatus, weather,\n  maintenance, thresholds, aftermaths, contradiction, refusal, and surprise;\n- no public portfolio route or apps/www projection is added;\n- rights, consent, represented-person review, editorial approval, publication,\n  deployment, indexing, hiring, and employment remain human decisions.\n\nUse Node 26.5.0 and verify wiki:check at 113/461/300;\nwiki:employment:check; wiki:test 101/101 including 16 focused photo tests;\nwiki:eval 13 lenses, 121 blocking criteria, and 15 photo criteria; COMP-001\nthrough COMP-008; exact 721-file fingerprint; composite mutation tests; and\nclean final status. COMP-009 may remain stale only because two superseded\njudgments have not yet been replaced; this review may serve as one replacement.\n\nReturn only valid JSON with runVersion 2; judgeId\n\"composite-holdout-photo-residency-editorial-b-2026-07-22\"; grader\n\"independent_llm_judge\"; independentFromOptimizer true; verified\nrubricSha256 and candidateFingerprint; verdict; scores for COMP-001 through\nCOMP-009 exactly once with score, pass, evidence, and rationale; notObserved;\nfindings; recommendation. Accept only if the finite contract has no blocker.\nAutomated acceptance establishes no rights, consent, collaborator endorsement,\neditorial approval, publication approval, deployment, indexing, hiring\nvalidation, or employment outcome.\n",
+    "promptSha256": "0a15bd92e5e233cade321bbc2c4c91123dff8dcc62b9196d7d832bc85178d717",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-22T18:57:15-04:00",
-    "completedAt": "2026-07-22T19:07:55-04:00",
-    "judgmentSha256": "53f577f1ef75605ad8023cd089d30043bf2dd4726b5a2fc5483e4a0f280e2503"
+    "startedAt": "2026-07-22T20:17:30-04:00",
+    "completedAt": "2026-07-22T20:26:05-04:00",
+    "judgmentSha256": "81fae3d0c3fc24661f5253a95c1edc18cc8a17d027c3958d05559b9003bfcb6b"
   }
 }
