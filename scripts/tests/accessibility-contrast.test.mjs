@@ -29,13 +29,16 @@ function blend(foreground, background, opacity) {
 }
 
 test("shared project labels and tags use WCAG AA color pairs", () => {
-  assert.ok(contrast("#eeefec", "#0b5f81") >= 4.5);
-
+  const tokens = readFileSync(path.join(repoRoot, "apps/www/src/styles/tokens.css"), "utf8");
   const blocks = readFileSync(path.join(repoRoot, "apps/www/src/components/CaseStudyBlocks.tsx"), "utf8");
   const tags = readFileSync(path.join(repoRoot, "apps/www/src/components/TagList.tsx"), "utf8");
+  const primary = tokens.match(/--jb-broadway-blue:\s*(#[0-9a-f]{6})/i)?.[1];
+  const paper = tokens.match(/--jb-oil-white:\s*(#[0-9a-f]{6})/i)?.[1];
+  assert.ok(primary && paper);
+  assert.ok(contrast(paper, primary) >= 4.5);
   assert.ok(!blocks.includes("text-jb-paper/70"));
   assert.ok(blocks.includes('tone="inverted"'));
-  assert.ok(tags.includes("border-jb-paper/45 bg-jb-paper text-jb-blue"));
+  assert.ok(tags.includes("border-white/45 text-white"));
 });
 
 test("small artifact and lab captions avoid low-opacity ink", () => {

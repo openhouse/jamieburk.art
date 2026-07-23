@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { FieldPhoto } from "@/components/FieldPhoto";
+import { portfolioPhotos } from "@/data/photography";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -12,10 +14,13 @@ export const metadata: Metadata = createMetadata({
 
 export default function AboutPage() {
   return (
-    <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">About</h1>
-        <div className="mt-8 space-y-6 text-xl leading-9 text-jb-ink/78">
+    <div className="jb-frame py-14">
+      <div className="grid gap-8 lg:grid-cols-[0.32fr_0.68fr]">
+        <div>
+          <p className="jb-section-label">Practice and approach</p>
+          <h1 className="mt-3 text-6xl leading-none text-jb-ink">About</h1>
+        </div>
+        <div className="max-w-3xl space-y-6 text-xl leading-9 text-jb-ink/78">
           <p>
             I am Jamie Burkart, a technical project manager and implementation
             lead based in Brooklyn.
@@ -28,7 +33,7 @@ export default function AboutPage() {
           </p>
           <p>
             Across projects, I tend to do the same kind of work: clarify
-            ambiguous goals, translate between technical and nontechnical
+            emerging goals, translate between technical and nontechnical
             stakeholders, map workflows, build documentation, create usable
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.
@@ -39,11 +44,19 @@ export default function AboutPage() {
             delivery, and source-backed knowledge systems.
           </p>
         </div>
-        <section className="mt-12 border-t border-jb-blue/20 pt-8">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
-            The through line
-          </p>
-          <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+      </div>
+
+      <FieldPhoto
+        className="mt-14"
+        imageClassName="aspect-[16/9] object-cover"
+        photo={portfolioPhotos.raftRiverboat}
+        sizes="(max-width: 1280px) 100vw, 1240px"
+      />
+
+      <div className="max-w-4xl">
+        <section className="mt-16 border-t border-jb-blue/25 pt-8">
+          <p className="jb-section-label">The through line</p>
+          <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
             Systems people can inhabit
           </h2>
           <div className="mt-5 space-y-5 text-lg leading-8 text-jb-ink/78">
@@ -222,7 +235,7 @@ export default function AboutPage() {
             </article>
           </div>
         </section>
-        <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
+        <div className="mt-10 border-l-4 border-jb-blue bg-jb-warm p-5">
           <p className="leading-8 text-jb-ink/78">
             I value public benefit, accessibility, source-backed memory, careful
             claims, collective credit, consent, privacy, repair, and

@@ -8,9 +8,9 @@ import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
 
 const transformations = [
-  ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
-  ["Legacy operations", "maintainable e-commerce workflows"],
+  ["Emerging stakeholder context", "shared decision records"],
+  ["Public data awaiting translation", "civic guidance and source maps"],
+  ["Long-running operations", "maintainable e-commerce workflows"],
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
 
@@ -46,11 +46,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="jb-frame py-12">
-        <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
+      <section className="jb-frame py-16">
+        <div className="grid gap-10 lg:grid-cols-[0.36fr_0.64fr]">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">Start here</p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+            <p className="jb-section-label">Start here</p>
+            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
               Quick path through the portfolio
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
@@ -59,15 +59,17 @@ export default function HomePage() {
               collaborators.
             </p>
           </div>
-          <div className="grid gap-3">
+          <div>
             {startHereLinks.map((item) => (
               <Link
-                className="rounded-lg border border-jb-ink/12 bg-jb-warm p-4 hover:border-jb-blue/40 hover:bg-jb-sky/14"
+                className="jb-index-link group hover:text-jb-blue sm:grid-cols-[0.42fr_0.58fr] sm:items-baseline"
                 href={item.href as Route}
                 key={item.href}
               >
-                <span className="font-semibold text-jb-blue">{item.label}</span>
-                <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
+                <span className="text-lg font-semibold text-jb-blue group-hover:text-jb-green">
+                  {item.label}
+                </span>
+                <span className="block text-sm leading-6 text-jb-ink/70">
                   {item.note}
                 </span>
               </Link>
@@ -80,15 +82,13 @@ export default function HomePage() {
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
-              Selected systems
-            </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+            <p className="jb-section-label">Selected systems</p>
+            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: ambiguous, high-context
-              situations becoming usable systems, public-facing tools,
+              These projects show a recurring pattern: emerging, high-context
+              work becoming usable systems, public-facing tools,
               documentation, decision trails, and durable handoffs.
             </p>
           </div>
@@ -96,20 +96,18 @@ export default function HomePage() {
             View all work
           </Link>
         </div>
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+        <div className="mt-8">
           {featuredWork.map((item) => (
             <WorkCard item={item} key={item.slug} />
           ))}
         </div>
       </section>
-      <section className="bg-jb-warm/80 py-16">
+      <section className="border-y border-jb-ink/15 bg-jb-warm py-16">
         <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
-              Operating motif
-            </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              What was unclear becomes usable
+            <p className="jb-section-label">Operating motif</p>
+            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
+              Structure grows from the material
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
               The projects differ, but the move is consistent: clarify what is
@@ -117,14 +115,17 @@ export default function HomePage() {
               people can act on.
             </p>
           </div>
-          <dl className="grid gap-3">
-            {transformations.map(([from, to]) => (
+          <dl className="border-t border-jb-ink/20">
+            {transformations.map(([from, to], index) => (
               <div
-                className="grid gap-2 rounded-lg border border-jb-ink/12 bg-jb-paper p-4 sm:grid-cols-[1fr_auto_1fr]"
+                className="grid gap-2 border-b border-jb-ink/20 py-5 sm:grid-cols-[3rem_1fr_auto_1fr] sm:items-baseline"
                 key={from}
               >
+                <span className="font-label text-sm text-jb-blue">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <dt className="font-semibold text-jb-ink">{from}</dt>
-                <dd className="hidden text-jb-blue sm:block">to</dd>
+                <dd className="hidden text-jb-blue sm:block">becomes</dd>
                 <dd className="font-semibold text-jb-green">{to}</dd>
               </div>
             ))}
@@ -133,9 +134,9 @@ export default function HomePage() {
       </section>
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
-          <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-            Clarify to Structure to Build to Document to Transfer
+          <p className="jb-section-label">How I work</p>
+          <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
+            Listen. Map. Build. Document. Transfer.
           </h2>
         </div>
         <div className="space-y-7">
