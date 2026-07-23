@@ -11,17 +11,31 @@ const sourceNotePath = path.join(
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
 );
 
-const candidateRelativePaths = [
+export const professorCandidateRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
+  "DESIGN.md",
+  "apps/www/public/images/field-notes/jamie-east-river.webp",
+  "apps/www/public/images/field-notes/paper-trimming.webp",
+  "apps/www/public/images/field-notes/printed-editions.webp",
+  "apps/www/public/images/field-notes/raft-riverboat.webp",
   "apps/www/src/app/about/page.tsx",
+  "apps/www/src/app/colophon/page.tsx",
+  "apps/www/src/app/globals.css",
+  "apps/www/src/app/layout.tsx",
   "apps/www/src/app/page.tsx",
+  "apps/www/src/app/work/page.tsx",
   "apps/www/src/app/work/technical-operations/page.tsx",
+  "apps/www/src/components/FieldPhoto.tsx",
+  "apps/www/src/components/SiteFooter.tsx",
+  "apps/www/src/components/SiteHeader.tsx",
+  "apps/www/src/components/Hero.tsx",
   "apps/www/src/content/work/harry-j-epstein.mdx",
   "apps/www/src/content/work/wowlist.mdx",
   "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/content/work/196-sunday-dinner.mdx",
   "apps/www/src/content/work/fair-rent-nyc.mdx",
   "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+  "apps/www/src/data/photography.ts",
   "apps/www/src/data/work.ts"
 ];
 
@@ -52,16 +66,17 @@ function joined(entry) {
 }
 
 function loadCandidateFiles() {
-  return Object.fromEntries(candidateRelativePaths.map((relativePath) => [
+  return Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
     relativePath,
-    readFileSync(path.join(repoRoot, relativePath), "utf8")
+    readFileSync(path.join(repoRoot, relativePath))
   ]));
 }
 
-function fingerprintCandidate(candidateFiles) {
+export function fingerprintProfessorCandidate(candidateFiles) {
   const hash = createHash("sha256");
-  for (const relativePath of candidateRelativePaths) {
-    hash.update(relativePath).update("\0").update(candidateFiles[relativePath] ?? "").update("\0");
+  for (const relativePath of professorCandidateRelativePaths) {
+    const content = candidateFiles[relativePath] ?? Buffer.alloc(0);
+    hash.update(relativePath).update("\0").update(content).update("\0");
   }
   return hash.digest("hex");
 }
@@ -81,7 +96,7 @@ export function evaluateProfessorLenses({
   const sackText = joined(sack);
   const combinedPublicText = `${aboutText}\n${sourceNoteText}`;
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
-  const candidateSha256 = fingerprintCandidate(candidateFiles);
+  const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
   const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
   const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;

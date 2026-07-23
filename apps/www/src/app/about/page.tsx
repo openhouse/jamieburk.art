@@ -113,16 +113,27 @@ export default function AboutPage() {
               and handoffs matter because people have to inhabit them.
             </p>
           </div>
+          <div className="mt-8 border-y border-jb-ink/12 py-4">
+            <p className="jb-section-label">Three current systems loops</p>
+            <p className="mt-2 max-w-3xl leading-7 text-jb-ink/72">
+              Each example follows the same movement from observed relationships
+              to a working model, an interface used with people, and a documented
+              way to learn, revise, and continue.
+            </p>
+          </div>
           <div className="mt-8 divide-y divide-jb-ink/12 border-y border-jb-ink/12">
             <article className="py-6">
-              <h3 className="text-xl font-semibold text-jb-ink">
-                <Link
-                  className="text-jb-blue hover:text-jb-green"
-                  href="/work/harry-j-epstein"
-                >
-                  Harry J. Epstein Company
-                </Link>
-              </h3>
+              <div className="flex flex-wrap items-baseline justify-between gap-3">
+                <h3 className="text-xl font-semibold text-jb-ink">
+                  <Link
+                    className="text-jb-blue hover:text-jb-green"
+                    href="/work/harry-j-epstein"
+                  >
+                    Harry J. Epstein Company
+                  </Link>
+                </h3>
+                <span className="jb-section-label">Current</span>
+              </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
@@ -130,9 +141,15 @@ export default function AboutPage() {
                   internal operating habits.
                 </p>
                 <p>
+                  <strong className="text-jb-ink">Model:</strong>{" "}
+                  product, content, marketing, ordering, and follow-up treated
+                  as one customer and team system rather than separate tasks.
+                </p>
+                <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
                   a maintained storefront joining product discovery, content,
-                  marketing, ordering, and customer follow-up.
+                  marketing, ordering, and customer follow-up, released and
+                  refined through real customer and team use.
                 </p>
                 <p>
                   <strong className="text-jb-ink">
@@ -145,19 +162,27 @@ export default function AboutPage() {
               </div>
             </article>
             <article className="py-6">
-              <h3 className="text-xl font-semibold text-jb-ink">
-                <Link
-                  className="text-jb-blue hover:text-jb-green"
-                  href="/work/fair-rent-nyc"
-                >
-                  NYC Artist Coalition and FairRentNYC
-                </Link>
-              </h3>
+              <div className="flex flex-wrap items-baseline justify-between gap-3">
+                <h3 className="text-xl font-semibold text-jb-ink">
+                  <Link
+                    className="text-jb-blue hover:text-jb-green"
+                    href="/work/fair-rent-nyc"
+                  >
+                    NYC Artist Coalition and FairRentNYC
+                  </Link>
+                </h3>
+                <span className="jb-section-label">Current</span>
+              </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
                   lived experience in cultural spaces, recurring meetings,
                   public sources, open questions, and city and state actors.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">Model:</strong>{" "}
+                  testimony, policy lineage, unresolved questions, decisions,
+                  and accountable actors held in one recoverable civic record.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
@@ -174,6 +199,54 @@ export default function AboutPage() {
                 </p>
               </div>
             </article>
+            <article className="py-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-3">
+                <h3 className="text-xl font-semibold text-jb-ink">
+                  <Link
+                    className="text-jb-blue hover:text-jb-green"
+                    href="/lab/source-backed-team-memory"
+                  >
+                    Source-backed team memory
+                  </Link>
+                </h3>
+                <span className="jb-section-label">Current lab</span>
+              </div>
+              <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
+                <p>
+                  <strong className="text-jb-ink">Relationships:</strong>{" "}
+                  sources, claims, decisions, contributors, open questions,
+                  corrections, and the audiences who need to trust the record.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">Model:</strong>{" "}
+                  structured records keep evidence, agency, confidence,
+                  public-use boundaries, and projection status distinct.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">Interface and use:</strong>{" "}
+                  this portfolio, its agent-readable checks, and its review
+                  reports form a working prototype tested through iterative
+                  research and human review.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">
+                    Learning and continuity:
+                  </strong>{" "}
+                  citations, decision records, correction paths, evaluation
+                  receipts, and explicit human gates let another collaborator
+                  inspect what is known and safely continue the work.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div className="mt-8 border-y border-jb-ink/12 py-4">
+            <p className="jb-section-label">Earlier continuities</p>
+            <p className="mt-2 max-w-3xl leading-7 text-jb-ink/72">
+              These earlier projects remain part of the method&apos;s lineage. They
+              are not presented as current deployments.
+            </p>
+          </div>
+          <div className="divide-y divide-jb-ink/12 border-b border-jb-ink/12">
             <article className="py-6">
               <h3 className="text-xl font-semibold text-jb-ink">
                 <Link

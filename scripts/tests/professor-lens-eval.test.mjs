@@ -4,7 +4,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
-import { evaluateProfessorLenses } from "../lib/professor-lens-eval.mjs";
+import {
+  evaluateProfessorLenses,
+  professorCandidateRelativePaths
+} from "../lib/professor-lens-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const aboutText = readFileSync(path.join(repoRoot, "apps/www/src/app/about/page.tsx"), "utf8");
@@ -110,5 +113,26 @@ test("guard rejects a scorecard bound to another public candidate", () => {
     finalScorecards: staleScorecards
   });
   assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+test("guard binds visual-system and photo changes to a new candidate", () => {
+  const candidateFiles = Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
+    relativePath,
+    readFileSync(path.join(repoRoot, relativePath))
+  ]));
+  candidateFiles["apps/www/src/app/globals.css"] = Buffer.concat([
+    candidateFiles["apps/www/src/app/globals.css"],
+    Buffer.from("\n/* unreviewed visual change */\n")
+  ]);
+
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    candidateFiles
+  });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
 });
