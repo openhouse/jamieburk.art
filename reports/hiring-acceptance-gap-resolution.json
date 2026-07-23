@@ -3,7 +3,7 @@
   "candidateSha": "ecb6d79bfddd647f8718068143ff6df24c58f594",
   "portfolioSnapshotHash": "407a53865536333f15ebc661d5db05577cb01ebe20f0eb4b18c42b67a6dd9272",
   "publicReportHash": "3caed6c510305d10fe5c805e9e128dd6822daf1681ef2b413ee30e90063a4c30",
-  "wikiSourceFingerprint": "2beb50c4d57aa6c43bb7b396d983371b6960c1ec61afb722cd4576e0ae58db13",
+  "wikiSourceFingerprint": "404077c2277724a0cd97abde4ca20f64519ec27106361a032596c9ea336f5ed8",
   "findings": [
     {
       "findingId": "finding.requirement.oti.government-hiring-and-procurement",

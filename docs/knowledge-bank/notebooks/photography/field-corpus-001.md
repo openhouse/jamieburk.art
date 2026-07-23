@@ -109,7 +109,7 @@ contradict, or replace them.
 | Encounter date | Private field version | Question | Public-safe change in understanding | Open boundary |
 | --- | --- | --- | --- | --- |
 | 2026-07-22 | Not yet frozen | What kind of field will make close reading possible without predetermining the story? | Established an exploratory notebook, provisional visual grammar, and a strict separation between attention and publication. | The private corpus still needs to be assembled and encountered. |
-| 2026-07-22 | One-photo operational canary | Can the local system look at a photograph and make one non-destructive studio placement without exceeding the authorized workspace? | A privacy-validated derivative was visually reviewed; the stable local helper created one album with one existing source membership; an identical rerun was idempotent; independent read-only catalog verification confirmed the folder chain, membership, and unchanged source. No external upload occurred. | Derivatives retaining source-bearing metadata were rejected before visual review. A broad metadata adapter did not complete its one-record probe within the bounded run and remains unverified. The larger field is still unassembled, and every publication gate remains open. |
+| 2026-07-22 | One-photo operational canary | Can the local system look at a photograph and make one non-destructive studio placement without exceeding the authorized workspace? | A privacy-validated derivative was visually reviewed; the stable local helper created one additive workspace album with one existing source membership pointer; an identical rerun was idempotent; independent read-only catalog verification confirmed the folder chain, membership, and that source records and pre-existing organization were not modified. No external upload occurred. | The new workspace album is a bounded catalog addition, so this entry does not claim the whole Photos library was unchanged. Derivatives retaining source-bearing metadata were rejected before visual review. A broad metadata adapter did not complete its one-record probe within the bounded run and remains unverified. The larger field is still unassembled, and every publication gate remains open. |
 
 Future entries should be additive and dated. They may summarize a private
 encounter without exposing filenames, locators, people labels, raw metadata, or
@@ -168,8 +168,8 @@ The canary establishes only that the currently configured local path can:
 - inspect local pixels through the stable permissioned helper with network
   access disabled;
 - reject preview derivatives that retain source-bearing metadata;
-- create one album and add one existing membership within the authorized
-  residency workspace;
+- create one additive album and add one existing membership pointer within the
+  authorized residency workspace;
 - rerun the same plan without adding another album or membership; and
 - verify hierarchy, exact membership, and source continuity independently
   through a read-only catalog snapshot.
@@ -187,6 +187,10 @@ the reviewed membership-only plan through the same stable helper, followed by
 two nonce-bound receipts and the existing independent verifier. This proves
 the exact bounded catalog action; it does not establish zero-HOLD readiness
 for the generic phase chain.
+
+The canary did make a bounded catalog addition. No source asset or pre-existing
+collection was edited, moved, deleted, retagged, or changed. All catalog writes
+targeted the authorized workspace namespace.
 
 Operational success does not confer rights, consent, factual authority,
 representativeness, accessibility, publication readiness, or permission to
@@ -212,7 +216,8 @@ cannot close these gates.
 
 ## Next pass
 
-Assemble the private rough-draft field without mutating the source archive.
-Then record a dated, public-safe account of what the first encounter made newly
-visible, what remained uncertain, and which bounded question should organize
-the next pass.
+Assemble the private rough-draft field without mutating source records or
+pre-existing organization. Create only additive membership pointers inside the
+authorized workspace. Then record a dated, public-safe account of what the
+first encounter made newly visible, what remained uncertain, and which bounded
+question should organize the next pass.

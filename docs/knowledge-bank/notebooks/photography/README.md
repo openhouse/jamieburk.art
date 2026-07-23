@@ -69,8 +69,8 @@ private-workspace implementation, image ingestion, or publication.
 
 | Layer | Purpose | Boundary |
 | --- | --- | --- |
-| Lifetime source archive | Preserve the authoritative originals, edits, metadata, and existing organization. | Private, unchanged, and outside this repository. |
-| Private field corpus | Hold the versioned selection, source bindings, previews, and image-level working notes. | Private working space; selection is not publication clearance. |
+| Lifetime source records | Preserve the authoritative originals, edits, metadata, and pre-existing organization. | Private and read-only for fieldwork; outside this repository. |
+| Private field corpus | Hold the versioned selection, source bindings, previews, image-level working notes, and additive workspace collections. | Private working space; workspace collections may add membership pointers but may not alter source records or pre-existing organization. Selection is not publication clearance. |
 | Public-safe notebook | Retain aggregate observations, questions, sequence sketches, limitations, and changes in interpretation. | This directory; no protected pixels or reconstructive locators. |
 | Selective public projection | Compose the smallest sufficient set for a particular reader and purpose. | Separate human review of the exact photograph, crop, caption, credit, alt text, and destination. |
 

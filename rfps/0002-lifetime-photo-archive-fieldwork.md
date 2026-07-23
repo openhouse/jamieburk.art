@@ -47,7 +47,8 @@ archive that made those selections possible.
 
 ## Goals
 
-- Preserve originals, metadata, albums, people associations, and prior edits.
+- Preserve originals, metadata, pre-existing albums, people associations, and
+  prior edits.
 - Keep source access, previews, manifests, exact locations, and sensitive
   observations in a private local workspace.
 - Create repeatable briefs for project, practice, period, relationship, and
@@ -74,12 +75,19 @@ archive that made those selections possible.
   labels as narrative authority.
 - Automatically promoting an image, interpretation, or visual lead to the
   public portfolio.
-- Modifying or reorganizing the source Apple Photos library as part of research.
+- Modifying source assets or pre-existing Apple Photos organization as part of
+  research. Additive albums and membership pointers are permitted only inside
+  a separately named workspace that Jamie has explicitly authorized.
 
 ## Terminology
 
-- **Source archive:** The existing private photo library and its originals,
-  metadata, albums, edits, and people associations.
+- **Source records:** The existing originals, metadata, pre-existing albums,
+  edits, favorites, and people associations. These authoritative records are
+  read-only for fieldwork.
+- **Additive workspace collections:** New folders, albums, and membership
+  pointers created only inside an explicitly authorized workspace namespace.
+  They organize fieldwork without moving, editing, deleting, or changing an
+  original or any pre-existing collection.
 - **Private fieldwork workspace:** A local, access-controlled workspace for
   source fingerprints, retrieval plans, previews, manifests, observations,
   safety holds, and evaluation evidence.
@@ -98,9 +106,12 @@ archive that made those selections possible.
 
 ### Four boundaries
 
-1. **Private source boundary.** The source archive remains authoritative and
+1. **Private source boundary.** Source records remain authoritative and
    unchanged. A private machine profile identifies access methods and freezes a
-   source count plus identifier digest for each research run.
+   source count plus identifier digest for each research run. A fieldwork run
+   may add membership pointers only inside an explicitly authorized workspace;
+   this is a bounded catalog addition, not a claim that the whole Photos library
+   is unchanged.
 2. **Private fieldwork boundary.** Retrieval plans, local previews, exact
    identifiers, faces, raw OCR, locations, and safety decisions remain outside
    the public repository. Every run is versioned and reproducible against its
@@ -121,7 +132,9 @@ archive that made those selections possible.
    as cloud-only assets, missing originals, scans with unreliable dates, and
    unsupported media types.
 3. Retrieve a broad candidate field using existing metadata and relationships
-   without changing the source library.
+   without changing source records or pre-existing organization. When Jamie has
+   authorized it, write only additive workspace albums and membership pointers
+   under the named workspace namespace.
 4. Inspect pixels locally. Keep previews offline, stripped of unnecessary
    metadata, and bound to the frozen run.
 5. Classify visible fit, uncertainty, safety state, and error category. Keep an
@@ -166,7 +179,10 @@ Controls must fail closed:
 - no external upload of originals or previews;
 - no public source paths, local identifiers, face labels, raw OCR, or exact
   coordinates;
-- no write access to the Photos database;
+- no direct write access to the Photos database; bounded workspace additions
+  must go through the permissioned Photos API helper;
+- no moving, deleting, editing, or changing metadata, People associations,
+  favorites, or membership in pre-existing albums;
 - no release from HOLD by an automated score;
 - no claim that matching counts prove matching source membership;
 - no use of archive access as evidence of authorship or permission; and
@@ -199,7 +215,8 @@ or presence in an editor field does not substitute for these gates.
 1. **Proposal:** Review this public design and identify which decisions belong
    in a private companion specification.
 2. **Private orientation:** Establish the machine profile, access method,
-   source freeze, non-destructive guarantees, and recovery procedure.
+   source freeze, source-record guarantees, authorized workspace namespace,
+   and recovery procedure.
 3. **Bounded pilot:** Choose one small, low-risk question and create a private
    candidate field without publishing images.
 4. **Evaluation:** Test retrieval quality, sensitive-material holds, duplicate
@@ -226,7 +243,9 @@ Before advancing from `proposed`:
 - The private workspace owner, storage boundary, backup posture, and access
   method are named outside public Git.
 - The first pilot question and exclusion boundaries are chosen.
-- The workflow demonstrates that it cannot mutate the source library.
+- The workflow demonstrates that it cannot mutate source records or
+  pre-existing organization and cannot write outside the authorized workspace
+  namespace.
 - Synthetic tests demonstrate fail-closed behavior for source drift, sensitive
   material, holdout contamination, and publication-boundary leakage.
 - Human authorities for identity, rights, consent, credit, safety, and final

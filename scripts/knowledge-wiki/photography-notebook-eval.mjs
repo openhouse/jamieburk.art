@@ -38,6 +38,8 @@ const falselyResolvedRememberedSourcePattern =
   /(?:\bTeju Cole (?:wrote|said|described)\b.{0,80}\b(?:exactly|verbatim|in the essay titled)\b|\b(?:exact )?source (?:has been|is) (?:verified|confirmed|recovered)\b)/i;
 const canaryCompletionPattern =
   /(?:\bone-photo (?:operational )?canary\b.{0,140}\b(?:completes?|completed|proves?|establishes?)\b.{0,100}\b(?:field corpus 001|1,000-photo(?:graph)? field|archive-wide|publication readiness|publication ready)\b|\b(?:field corpus 001|1,000-photo(?:graph)? field)\b.{0,100}\b(?:is|has been|was)\b.{0,30}\b(?:assembled|complete|completed|frozen|ingested|publication ready)\b)/i;
+const unauthorizedCatalogMutationPattern =
+  /(?:(?<!not )\b(?:edit|move|delete|retag|reorganize|modify|change)\w*\b.{0,100}\b(?:source asset|original|pre-existing (?:album|collection|organization)|people association|favorite|metadata)\b|\b(?:outside|beyond)\b.{0,60}\bauthorized workspace\b.{0,60}\b(?:write|album|membership|collection)\b|\b(?:album|catalog|membership)\s+write\b.{0,60}\b(?:outside|beyond)\b.{0,60}\bauthorized workspace\b)/i;
 
 function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
@@ -155,11 +157,11 @@ export function evaluatePhotographyNotebook(options = {}) {
 
   const onePhotoCanaryBounded =
     /one-photo operational canary has been completed/i.test(fieldSource) &&
-    /stable local helper created one album with one existing source membership/i.test(fieldSource) &&
+    /stable local helper created one additive workspace album with one existing source membership pointer/i.test(fieldSource) &&
     /identical rerun was idempotent/i.test(fieldSource) &&
-    /independent read-only catalog verification confirmed the folder chain,\s+membership, and unchanged source/i.test(fieldSource) &&
+    /independent read-only catalog verification confirmed the folder chain,\s+membership, and that source records and pre-existing organization were not modified/i.test(fieldSource) &&
     /No external upload occurred/i.test(fieldSource) &&
-    /create one album and add one existing membership within the authorized\s+residency workspace/i.test(fieldSource);
+    /create one additive album and add one existing membership pointer within the\s+authorized residency workspace/i.test(fieldSource);
 
   const onePhotoCanaryPrivacyFailsClosed =
     /Derivatives retaining source-bearing metadata were rejected before visual review/i.test(fieldSource) &&
@@ -194,7 +196,7 @@ export function evaluatePhotographyNotebook(options = {}) {
     !finalizedNarrativeStatement;
 
   const fourLayersRemainDistinct = [
-    "Lifetime source archive",
+    "Lifetime source records",
     "Private field corpus",
     "Public-safe notebook",
     "Selective public projection"
@@ -264,9 +266,14 @@ export function evaluatePhotographyNotebook(options = {}) {
     /does not authorize archive access,\s+private-workspace implementation, image ingestion, or publication/i.test(notebookSource);
 
   const nextPassDoesNotMutateSource =
-    /without mutating the source archive/i.test(fieldSource) &&
-    /authoritative originals, edits, metadata, and existing organization/i.test(notebookSource) &&
-    /Private, unchanged, and outside this repository/i.test(notebookSource);
+    /without mutating source records or\s+pre-existing organization/i.test(fieldSource) &&
+    /Create only additive membership pointers inside the\s+authorized workspace/i.test(fieldSource) &&
+    /authoritative originals, edits, metadata, and pre-existing organization/i.test(notebookSource) &&
+    /Private and read-only for fieldwork; outside this repository/i.test(notebookSource) &&
+    /bounded catalog addition/i.test(fieldSource) &&
+    /No source asset or pre-existing\s+collection was edited, moved, deleted, retagged, or changed/i.test(fieldSource) &&
+    /All catalog writes\s+targeted the authorized workspace namespace/i.test(fieldSource) &&
+    !unauthorizedCatalogMutationPattern.test(fieldSource);
 
   const proposalIsNotAContract =
     /artist residency starts when the proposal is\s+written/i.test(proposalSource) &&

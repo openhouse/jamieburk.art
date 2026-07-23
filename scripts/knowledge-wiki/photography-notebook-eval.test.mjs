@@ -142,6 +142,28 @@ test("the canary requires an idempotent rerun and independent verification", () 
   assert.equal(evaluation.checks.one_photo_canary_bounded, false);
 });
 
+test("workspace albums cannot be confused with unchanged whole-library state", () => {
+  const id = "research-inquiry.photography.field-corpus-001";
+  const fieldSource = `${sourceFor(id)}\n\nThe helper reorganized a pre-existing album and the whole Photos library remained unchanged.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForFieldSource(fieldSource),
+    sourceOverrides: { [id]: fieldSource }
+  });
+  assert.equal(evaluation.checks.photo_source_non_mutation_preserved, false);
+});
+
+test("catalog writes outside the authorized workspace fail source custody", () => {
+  const id = "research-inquiry.photography.field-corpus-001";
+  const fieldSource = `${sourceFor(id)}\n\nAn album write outside the authorized workspace is permitted.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForFieldSource(fieldSource),
+    sourceOverrides: { [id]: fieldSource }
+  });
+  assert.equal(evaluation.checks.photo_source_non_mutation_preserved, false);
+});
+
 test("the bounded canary cannot become generic zero-HOLD phase readiness", () => {
   const id = "research-inquiry.photography.field-corpus-001";
   const fieldSource = sourceFor(id).replace(

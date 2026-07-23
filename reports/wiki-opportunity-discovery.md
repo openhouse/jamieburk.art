@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity discovery recall
 
-**Wiki fingerprint:** `2beb50c4d57aa6c43bb7b396d983371b6960c1ec61afb722cd4576e0ae58db13`
+**Wiki fingerprint:** `404077c2277724a0cd97abde4ca20f64519ec27106361a032596c9ea336f5ed8`
 **Overall:** PASS
 
 ## Title-blind queries
