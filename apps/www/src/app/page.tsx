@@ -115,21 +115,21 @@ export default function HomePage() {
               people can act on.
             </p>
           </div>
-          <dl className="border-t border-jb-ink/20">
+          <ol className="border-t border-jb-ink/20">
             {transformations.map(([from, to], index) => (
-              <div
+              <li
                 className="grid gap-2 border-b border-jb-ink/20 py-5 sm:grid-cols-[3rem_1fr_auto_1fr] sm:items-baseline"
                 key={from}
               >
                 <span className="font-label text-sm text-jb-blue">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <dt className="font-semibold text-jb-ink">{from}</dt>
-                <dd className="hidden text-jb-blue sm:block">becomes</dd>
-                <dd className="font-semibold text-jb-green">{to}</dd>
-              </div>
+                <p className="font-semibold text-jb-ink">{from}</p>
+                <span className="hidden text-jb-blue sm:block">becomes</span>
+                <p className="font-semibold text-jb-green">{to}</p>
+              </li>
             ))}
-          </dl>
+          </ol>
         </div>
       </section>
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
