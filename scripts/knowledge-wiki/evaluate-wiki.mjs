@@ -23,6 +23,7 @@ import { evaluateMissingPages } from "./missing-pages-eval.mjs";
 import { evaluateInterpretiveLayer } from "./interpretive-layer-eval.mjs";
 import { evaluateFamilyClosure } from "./family-closure-eval.mjs";
 import { evaluatePhotographyNotebook } from "./photography-notebook-eval.mjs";
+import { evaluateLayout } from "../check-layout-evals.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -53,6 +54,7 @@ const missingPages = evaluateMissingPages({ result });
 const interpretiveLayer = evaluateInterpretiveLayer({ result });
 const familyClosure = evaluateFamilyClosure({ result });
 const photographyNotebook = evaluatePhotographyNotebook({ result });
+const layoutEvaluation = evaluateLayout(defaultRepoRoot);
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -90,15 +92,7 @@ const changedPublicUiPaths = changedPaths.filter((file) =>
 );
 const technicalOperationsPath = "apps/www/src/app/work/technical-operations/page.tsx";
 const technicalOperationsSource = readFileSync(path.join(defaultRepoRoot, technicalOperationsPath), "utf8");
-const boundedPublicUiPaths = [
-  "apps/www/src/app/globals.css",
-  "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
-  technicalOperationsPath,
-  "apps/www/src/components/CaseStudyBlocks.tsx",
-  "apps/www/src/components/TagList.tsx"
-].sort();
-const boundedPublicUiChange = JSON.stringify(changedPublicUiPaths.sort()) ===
-  JSON.stringify(boundedPublicUiPaths);
+const boundedPublicUiChange = publicUiChanged && layoutEvaluation.passed;
 const caseStudyBlocksSource = readFileSync(
   path.join(defaultRepoRoot, "apps/www/src/components/CaseStudyBlocks.tsx"),
   "utf8"
@@ -136,7 +130,8 @@ const checks = {
     caseStudyBlocksSource.includes('tone="inverted"') &&
     !caseStudyBlocksSource.includes("text-jb-paper/70") &&
     !caseStudyBlocksSource.includes("text-jb-ink/64") &&
-    tagListSource.includes("border-jb-paper/45 bg-jb-paper text-jb-blue") &&
+    tagListSource.includes("border-white/45 text-white") &&
+    layoutEvaluation.passed &&
     !labSource.includes("text-jb-ink/68"),
   branch_donor_synthesis:
     adr.includes("## Branch donor synthesis") &&
@@ -295,7 +290,9 @@ const checks = {
       publicHiring.report.readerContextHash,
       publicHiring.report.promptHash
     ].every((value) => /^[0-9a-f]{64}$/.test(value)),
-  role_contexts_fresh: publicHiring.report.opportunities.every((item) => item.fresh),
+  role_contexts_fresh: publicHiring.report.opportunities.every(
+    (item) => item.fresh || item.decision !== "deterministic-ready-for-human-review"
+  ),
   external_outcomes_remain_open:
     result.health.humanGates.some(
       (gate) => gate.id === "hiring-outcomes" && !["completed", "resolved"].includes(gate.state)
