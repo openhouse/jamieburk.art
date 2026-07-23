@@ -80,18 +80,25 @@ export function evaluatePhotoNotebook(options = {}) {
     );
   });
 
-  const photographyFieldIsRoughDraftNotCompletion =
-    field?.notebook_state === "assembling" &&
+  const photographyPrivateFieldCompletionIsBounded =
+    field?.notebook_state === "private-field-complete" &&
     field.field_version === manifest.fieldVersion &&
     field.target_population === manifest.targetPopulation &&
     field.current_population === 0 &&
+    field.private_verified_population === manifest.privateVerifiedPopulation &&
     /rough editorial draft, not a ranked shortlist, representative sample, complete archive census/i.test(
       notebookSource
     ) &&
-    /does not measure work that may be underway in a private curation environment/i.test(
+    /private `v02` field is complete at exactly 1,000 unique photographs/i.test(
       fieldSource
     ) &&
-    /will not establish archive completeness, editorial quality, rights, consent, or publication readiness/i.test(
+    /current committed public-safe notebook population remains zero/i.test(
+      fieldSource
+    ) &&
+    /does not establish archive completeness, representativeness, editorial quality, rights, consent, credit, safety for a public destination, or publication readiness/i.test(
+      fieldSource
+    ) &&
+    /editor-ready rough field, not a final edit/i.test(
       fieldSource
     );
 
@@ -196,7 +203,7 @@ export function evaluatePhotoNotebook(options = {}) {
     photography_notebook_records_materialized: photographyNotebookRecordsMaterialized,
     photography_notebook_reachable: photographyNotebookReachable,
     photography_notebook_contract_bounded: photographyNotebookContractBounded,
-    photography_field_is_rough_draft_not_completion: photographyFieldIsRoughDraftNotCompletion,
+    photography_private_field_completion_is_bounded: photographyPrivateFieldCompletionIsBounded,
     photography_epistemic_lanes_separate: photographyEpistemicLanesSeparate,
     photography_selection_publication_rights_separate: photographySelectionPublicationRightsSeparate,
     photography_experiment_remains_open: photographyExperimentRemainsOpen,
@@ -219,7 +226,8 @@ export function evaluatePhotoNotebook(options = {}) {
     counts: {
       requiredRecords: requiredIds.length,
       targetPopulation: field?.target_population ?? null,
-      currentPopulation: field?.current_population ?? null
+      currentPopulation: field?.current_population ?? null,
+      privateVerifiedPopulation: field?.private_verified_population ?? null
     }
   };
 }

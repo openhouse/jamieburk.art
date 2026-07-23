@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-22T20:16:20-04:00",
   "sourceCommit": "e0dbceaf6b9080a99b5536e75a173d9e24be4918",
-  "sourceFingerprint": "08939e9a11416a85cd05531a3a60b44630090befc193b1bee7277a059ef9cd0a",
+  "sourceFingerprint": "b27cd68f151901005431f75597639a0031bc0f739b24c0f66840ec52e3a1cac3",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -623,12 +623,12 @@
     {
       "id": "notebook.photography.field.v01",
       "path": "docs/knowledge-bank/notebooks/photography/field-v01.md",
-      "title": "Photography field v01",
+      "title": "Photography first field",
       "kind": "notebook",
       "status": "draft",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Assembly record for a rough 1,000-photo editor field drawn from Jamie's lifetime archive.",
+      "summary": "Public-safe completion record for a private 1,000-photo rough editor field drawn from Jamie's lifetime archive.",
       "aliases": [],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2026-08-22"
@@ -6985,7 +6985,16 @@
       "toPath": "docs/knowledge-bank/notebooks/photography/residency-proposal-v01.md",
       "to": "notebook.photography.residency-proposal.v01",
       "fragment": null,
-      "line": 23,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/residency-proposal-v01.md",
+      "from": "notebook.photography.residency-proposal.v01",
+      "toPath": "docs/knowledge-bank/notebooks/photography/field-v01.md",
+      "to": "notebook.photography.field.v01",
+      "fragment": null,
+      "line": 116,
       "kind": "link"
     },
     {

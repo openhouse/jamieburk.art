@@ -177,7 +177,7 @@
         "photography_notebook_records_materialized",
         "photography_notebook_reachable",
         "photography_notebook_contract_bounded",
-        "photography_field_is_rough_draft_not_completion",
+        "photography_private_field_completion_is_bounded",
         "photography_epistemic_lanes_separate",
         "photography_selection_publication_rights_separate",
         "photography_experiment_remains_open",

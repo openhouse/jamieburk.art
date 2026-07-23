@@ -3,7 +3,7 @@
 
 **Source commit:** `e0dbceaf6b9080a99b5536e75a173d9e24be4918`
 **Generation time:** 2026-07-22T20:16:20-04:00
-**Source fingerprint:** `08939e9a11416a85cd05531a3a60b44630090befc193b1bee7277a059ef9cd0a`
+**Source fingerprint:** `b27cd68f151901005431f75597639a0031bc0f739b24c0f66840ec52e3a1cac3`
 
 - [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
 - [Knowledge Wiki](../../README.md) - `related_to` (frontmatter)
@@ -11,7 +11,7 @@
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [Visual evidence index](../../indexes/visual-evidence.md) - `prose_link` (markdown)
 - [Visual evidence index](../../indexes/visual-evidence.md) - `related_to` (frontmatter)
-- [Photography field v01](../../notebooks/photography/field-v01.md) - `part_of` (frontmatter)
+- [Photography first field](../../notebooks/photography/field-v01.md) - `part_of` (frontmatter)
 - [A room for the archive](../../notebooks/photography/residency-proposal-v01.md) - `part_of` (frontmatter)
 - [Photography sequence sketches](../../notebooks/photography/sequence-sketches.md) - `part_of` (frontmatter)
 - [Photography notebook templates](../../notebooks/photography/templates.md) - `part_of` (frontmatter)

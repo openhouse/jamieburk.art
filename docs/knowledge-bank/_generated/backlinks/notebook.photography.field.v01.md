@@ -1,10 +1,11 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
-# Backlinks to Photography field v01
+# Backlinks to Photography first field
 
 **Source commit:** `e0dbceaf6b9080a99b5536e75a173d9e24be4918`
 **Generation time:** 2026-07-22T20:16:20-04:00
-**Source fingerprint:** `08939e9a11416a85cd05531a3a60b44630090befc193b1bee7277a059ef9cd0a`
+**Source fingerprint:** `b27cd68f151901005431f75597639a0031bc0f739b24c0f66840ec52e3a1cac3`
 
 - [Photography working notebook](../../notebooks/photography/README.md) - `prose_link` (markdown)
 - [Photography working notebook](../../notebooks/photography/README.md) - `related_to` (frontmatter)
+- [A room for the archive](../../notebooks/photography/residency-proposal-v01.md) - `prose_link` (markdown)
 - [A room for the archive](../../notebooks/photography/residency-proposal-v01.md) - `related_to` (frontmatter)

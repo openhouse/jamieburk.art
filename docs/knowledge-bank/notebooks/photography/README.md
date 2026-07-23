@@ -99,7 +99,7 @@ field manifest remains the authority for reconnecting a note to an original.
 
 ## Notebook map
 
-- [Field v01](field-v01.md): the assembling 1,000-photo rough draft.
+- [First field](field-v01.md): the independently verified private v02 field of 1,000 photographs; no photo assets are committed here.
 - [Editorial vocabulary](editorial-vocabulary.md): provisional lenses for close reading.
 - [Sequence sketches](sequence-sketches.md): arrangements to test rather than stories to prove.
 - [Working templates](templates.md): image notes, sequence experiments, and field-version reviews.

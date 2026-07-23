@@ -135,3 +135,16 @@ The image, identifier, source count, private path, helper receipts, and catalog
 coordinates remain outside public Git. Completion confirms only that the
 bounded local workflow works; it does not approve the selected photograph for
 publication or establish what the larger residency will become.
+
+## First field note
+
+The residency has now produced its first broad private field: exactly 1,000
+unique photographs in a versioned Apple Photos workspace, with ten provisional
+editor views. The same production plan completed twice, and an independent
+read-only catalog pass verified every album and membership. The public-safe
+[field record](field-v01.md) carries the method and boundary without carrying
+photo identities, pixels, People names, private paths, or safety holds into Git.
+
+This completes the first pass promised to the practice, not the archive's
+meaning. The field is ready to be lived with, discussed, contradicted, and
+edited. No selected photograph is thereby approved for publication.

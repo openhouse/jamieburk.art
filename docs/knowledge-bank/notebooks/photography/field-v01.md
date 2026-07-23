@@ -1,6 +1,6 @@
 ---
 id: notebook.photography.field.v01
-title: Photography field v01
+title: Photography first field
 kind: notebook
 status: draft
 visibility: public-safe
@@ -8,11 +8,12 @@ sensitivity: moderate
 last_reviewed: 2026-07-22
 review_by: 2026-08-22
 canonical_path: docs/knowledge-bank/notebooks/photography/field-v01.md
-summary: Assembly record for a rough 1,000-photo editor field drawn from Jamie's lifetime archive.
-notebook_state: assembling
-field_version: v01
+summary: Public-safe completion record for a private 1,000-photo rough editor field drawn from Jamie's lifetime archive.
+notebook_state: private-field-complete
+field_version: v02
 target_population: 1000
 current_population: 0
+private_verified_population: 1000
 projection:
   status: hold
   surfaces: []
@@ -28,19 +29,26 @@ relations:
     href: residency-proposal-v01.md
 ---
 
-# Photography field v01
+# Photography first field
 
 ## State
 
-`v01` is assembling. Its target population is 1,000 photographs. The current
-committed public-safe notebook count is zero because no private photo identity,
-preview, or note has yet passed into this repository. This does not measure work
-that may be underway in a private curation environment.
+The private `v02` field is complete at exactly 1,000 unique photographs. A
+private manifest, two distinct nonce-bound production receipts, and a fresh
+read-only catalog verification agreed on the same field, album memberships,
+and workspace relationships. The frozen source contained 603,830 visible
+stills at the time of the pass. Inspection stayed local and made no external
+image or metadata upload.
 
-The field will become a bounded working population only when a private manifest
-and its verification receipt agree on the same 1,000 stable photo identities.
-That receipt will establish which field was read. It will not establish archive
-completeness, editorial quality, rights, consent, or publication readiness.
+The current committed public-safe notebook population remains zero. No photo
+identity, preview, People name, private locator, safety hold, or source path is
+stored in this repository. The private manifest remains authoritative for the
+completed field.
+
+Operational completion establishes which private field was assembled and
+verified. It does not establish archive completeness, representativeness,
+editorial quality, rights, consent, credit, safety for a public destination, or
+publication readiness.
 
 ## Purpose
 
@@ -53,7 +61,25 @@ The accepted [residency proposal](residency-proposal-v01.md) is an invitation
 to begin, not a contract for what the field must become. The method and eventual
 form may change in response to the photographs.
 
-## Assembly guardrails
+## How the field was made
+
+The pass retrieved broadly across the full source, locally inspected 1,800
+candidates, and recursively revised the selection after looking at exact
+previews. The final candidate-bound evaluation reviewed 60 photographs across
+ten working views: 57 fit the field and three were rejected for repetition.
+The resulting 0.95 precision and 1.00 coverage passed the frozen thresholds.
+
+The views hold surprise, people as agents, hospitality, maintenance, public
+assembly, water and weather, art and play, interfaces, neighborhood life, and
+Jamie's contextual presence in the work. They are editor hypotheses, not tags,
+claims about people, or a sequence the photographs must illustrate.
+
+Potentially sensitive material was separated before ranking and remained in a
+private hold. Inclusion in the 1,000-photo field still requires later image-by-
+image rights, consent, dignity, credit, caption, claim, crop, and destination
+review before any public use.
+
+## Continuing guardrails
 
 - Do not optimize for a predetermined portfolio story or numerical aesthetic score.
 - Do not describe this as the best, top, complete, or representative 1,000.
@@ -76,7 +102,8 @@ form may change in response to the photographs.
 
 ## Completion boundary
 
-Field assembly is complete only when the exact private population, version,
-count, and verification receipt agree. Close reading, sequencing, factual
+Field assembly is complete because the exact private population, version,
+count, two production receipts, and independent verification agree. This is an
+editor-ready rough field, not a final edit. Close reading, sequencing, factual
 research, rights review, represented-person care, Jamie's editorial approval,
 and public composition remain later and independent gates.

@@ -267,11 +267,20 @@ export const wikiRecordSchema = z
       .enum(["active", "hold", "pending", "deprecated", "disallowed"])
       .optional(),
     notebook_state: z
-      .enum(["exploratory", "assembling", "reading", "sequencing", "paused", "superseded"])
+      .enum([
+        "exploratory",
+        "assembling",
+        "private-field-complete",
+        "reading",
+        "sequencing",
+        "paused",
+        "superseded"
+      ])
       .optional(),
     field_version: z.string().regex(/^v\d{2}(?:-[A-Z])?$/).optional(),
     target_population: z.number().int().positive().optional(),
     current_population: z.number().int().nonnegative().optional(),
+    private_verified_population: z.number().int().nonnegative().optional(),
     registry_ids: z.array(z.string().min(1)).default([]),
     anti_claims: z.array(z.string().min(1)).default([]),
     human_review: z
@@ -395,6 +404,17 @@ export const wikiRecordSchema = z
           code: "custom",
           path: ["current_population"],
           message: "notebook current_population cannot exceed target_population"
+        });
+      }
+      if (
+        record.private_verified_population !== undefined &&
+        record.target_population !== undefined &&
+        record.private_verified_population > record.target_population
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["private_verified_population"],
+          message: "notebook private_verified_population cannot exceed target_population"
         });
       }
     }

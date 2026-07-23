@@ -23,7 +23,8 @@ test("photography notebook baseline passes", () => {
   assert.deepEqual(evaluation.counts, {
     requiredRecords: 6,
     targetPopulation: 1000,
-    currentPopulation: 0
+    currentPopulation: 0,
+    privateVerifiedPopulation: 1000
   });
 });
 
@@ -79,16 +80,29 @@ test("a notebook cannot declare public registry membership", () => {
   assert.equal(wikiRecordSchema.safeParse(notebook).success, false);
 });
 
-test("the field cannot claim a population beyond its target", () => {
+test("the field cannot claim a private verified population beyond its target", () => {
   const field = cloneRecord("notebook.photography.field.v01");
-  field.current_population = 1001;
+  field.private_verified_population = 1001;
   const evaluation = evaluatePhotoNotebook({
     result,
     recordOverrides: { [field.id]: field }
   });
   assert.equal(evaluation.checks.photography_notebook_contract_bounded, false);
-  assert.equal(evaluation.checks.photography_field_is_rough_draft_not_completion, false);
+  assert.equal(evaluation.checks.photography_private_field_completion_is_bounded, false);
   assert.equal(wikiRecordSchema.safeParse(field).success, false);
+});
+
+test("private completion cannot become a public committed photo population", () => {
+  const field = cloneRecord("notebook.photography.field.v01");
+  field.current_population = 1000;
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    recordOverrides: { [field.id]: field }
+  });
+  assert.equal(
+    evaluation.checks.photography_private_field_completion_is_bounded,
+    false
+  );
 });
 
 test("visual interpretation cannot silently become evidence", () => {

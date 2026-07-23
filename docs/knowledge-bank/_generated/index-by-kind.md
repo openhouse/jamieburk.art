@@ -3,7 +3,7 @@
 
 **Source commit:** `e0dbceaf6b9080a99b5536e75a173d9e24be4918`
 **Generation time:** 2026-07-22T20:16:20-04:00
-**Source fingerprint:** `08939e9a11416a85cd05531a3a60b44630090befc193b1bee7277a059ef9cd0a`
+**Source fingerprint:** `b27cd68f151901005431f75597639a0031bc0f739b24c0f66840ec52e3a1cac3`
 
 ## application
 
@@ -84,7 +84,7 @@
 ## notebook
 
 - [Photography working notebook](../notebooks/photography/README.md) - `notebook.photography`
-- [Photography field v01](../notebooks/photography/field-v01.md) - `notebook.photography.field.v01`
+- [Photography first field](../notebooks/photography/field-v01.md) - `notebook.photography.field.v01`
 - [A room for the archive](../notebooks/photography/residency-proposal-v01.md) - `notebook.photography.residency-proposal.v01`
 - [Photography sequence sketches](../notebooks/photography/sequence-sketches.md) - `notebook.photography.sequence-sketches`
 - [Photography notebook templates](../notebooks/photography/templates.md) - `notebook.photography.templates`
