@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "composite-holdout-photos-c-public-value-final2-2026-07-22",
+  "judgeId": "composite-holdout-layout-c-public-value-2026-07-22",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "e89ef0ecfedc7a76fe3c5009df66c04c0333f6297f2effdca6039e1ffa7f9fac",
+  "candidateFingerprint": "eb3813586c68fba83a33b10050bdf7be75f23db22a2ed921951eb1f2355d43c7",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,126 +12,126 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "HEAD remained 03ece993d316b1a762841963639d8933a9993803 with a clean worktree.",
-        "Develop commit 4b6bc3bff48f4fbefdda2f42aec327645f6a357c is an ancestor of HEAD.",
-        "The composite evaluator confirmed all 14 frozen A-N branch decisions."
+        "HEAD was exactly 42ae0b499247b5a26461ab3459e0632df71fd6af before and after review, with an empty porcelain status.",
+        "The evaluator resolved all 14 frozen feature/evals-A through feature/evals-N heads through refs/remotes/origin.",
+        "The integration register retains writable branch feature/knowledge-h and pull-request base develop."
       ],
-      "rationale": "Candidate identity, ancestry, and frozen donor inventory are correct."
+      "rationale": "The exact candidate and frozen donor-family identity are intact."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 integration decisions retain allowed dispositions, rationales, existing destinations, and verification mappings.",
-        "The integration register matched reviewed digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d."
+        "All 14 branch decisions use an allowed disposition and retain substantive rationale, existing destination paths, and criterion mappings.",
+        "The integration register independently matched digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "The register records deliberate website projection and non-projection decisions."
       ],
-      "rationale": "Integration decisions remain complete and inspectable."
+      "rationale": "The composite remains traceable to explicit, inspectable integration choices."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 11 canonical knowledge files exist and no forbidden parallel lifecycle root is present.",
-        "The 140-file develop diff contains no binary file and no apps/www change.",
-        "The photography notebook remains a held projection inside the single Knowledge Wiki architecture.",
-        "No public photo route, archive browser, photograph, preview, or public application asset was introduced."
+        "All 11 canonical knowledge files exist and none of the three forbidden parallel lifecycle roots exists.",
+        "The public registry retains only claims, pages, and sources, citation validation confirmed its redacted currentness, and no public proofs route exists.",
+        "The public composition remains a role-led portfolio with selected work, bounded continuities, and held mature claims rather than a knowledge-bank mirror."
       ],
-      "rationale": "The completed repair preserves one canonical architecture and adds no public archive surface."
+      "rationale": "One canonical architecture supplies a selective public projection."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Composite lifecycle evaluation passed canonical replay, linked duplicate preservation, held-claim, inquiry, correction, and orphan queries."
+        "Four lifecycle tests passed: identical replay is idempotent, a repeated artifact receives a linked duplicate record, changed content under a stable ID is rejected, and held knowledge, inquiries, corrections, and projection states remain queryable.",
+        "The composite evaluator also exercised held claims, unresolved inquiries, corrections, and a zero-orphan-source result."
       ],
-      "rationale": "Append-safe lifecycle behavior remains intact."
+      "rationale": "Lifecycle behavior is append-safe and exposes the states required for responsible continuation."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Composite validation passed for 280 sources, 98 claims, 31 agency relations, and 4 corrections.",
-        "Knowledge Wiki currentness passed at 110 records, 449 semantic/evidence edges, and 296 prose links.",
-        "All eight employment-context and hiring-acceptance reports were current.",
-        "All 120 generated Wiki outputs now bind authored source commit b335446c4823b0d5d821f025523c7fd8cac12a85, generation time 2026-07-22T21:05:22-04:00, and source fingerprint 404077c2277724a0cd97abde4ca20f64519ec27106361a032596c9ea336f5ed8.",
-        "An independent currentness check found zero stale generated outputs."
+        "Canonical validation passed for 280 sources, 98 claims, 31 agency relations, and 4 corrections, including population and does-not-establish boundaries.",
+        "Knowledge Wiki currentness passed at 110 records, 449 semantic or evidence edges, and 296 prose links; all eight employment and hiring outputs were current.",
+        "Citation, route, and public-safety checks passed. The public-safety check retained guardrail warnings for 11 careful claims rather than weakening them.",
+        "Collective work remains bounded: Open House governance is participant-collective, WOWList is co-built, coalition outcomes remain collective, and FairRentNYC rejects solo policy causality."
       ],
-      "rationale": "Canonical records and every derived receipt are current against the committed authored repair."
+      "rationale": "Sources, claims, agency, corrections, population limits, and derived evidence remain current and publicly bounded."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 professor-lens criteria and all 27 photography-field-notebook criteria passed.",
-        "RFP 0002 defines source records as read-only originals, metadata, edits, favorites, People associations, pre-existing albums, and pre-existing organization.",
-        "Additive workspace collections are separately defined as new folders, albums, and membership pointers confined to Jamie's explicitly authorized namespace.",
-        "The canary discloses its bounded catalog addition and explicitly states that this is not a claim that the whole Photos library remained unchanged.",
-        "The notebook continues to protect unclassified material, counterreadings, changed direction, collective agency, and the possibility of no public output."
+        "The homepage names Jamie and the Technical Project Manager, Product Operations, and Implementation role immediately; its start-here index and emerging-to-usable framing reduce hiring-reader burden.",
+        "About exposes three explicit current loops for Harry J. Epstein Company, NYC Artist Coalition and FairRentNYC, and Source-Backed Team Memory, each distinguishing relationships, model, interface and use, and learning and continuity.",
+        "WOWList and Sunday Dinner or 196 remain separately labeled earlier continuities, preserving hospitality, participation, trust, artistic practice, and consent without presenting them as current deployments.",
+        "Visual inspection found four honest editorial photographs: Jamie in an inhabited East River setting, a handmade raft beside the Delta Queen, hands aligning paper at a trimmer, and printed editions on a worktable. Their captions do not treat them as project proof or assign unverified artwork authorship.",
+        "The four WebPs match manifest dimensions and webpmux reported no EXIF, XMP, ICC, animation, or other embedded features.",
+        "The exact 25-file professor candidate independently fingerprinted to 636bdcf6b19e31dbf5e51530da4b407d2adfee38605e94c58cd67169e0322d3d; all 14 professor criteria and six fresh 4/pass holdouts target that candidate."
       ],
-      "rationale": "The repaired custody contract is accurate, comprehensible, and compatible with photographic ethics, artistic freedom, and collective agency."
+      "rationale": "The Human Index design makes Jamie's agency and usable results legible while preserving inhabited systems, recursive learning, artistic freedom, collective agency, and editorial restraint."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All five human-evidence controls remain explicitly open.",
-        "All 27 targeted photography mutation tests passed.",
-        "Dedicated mutations reject reorganization of a pre-existing album and any catalog write outside the authorized workspace.",
-        "The contract prohibits changing source assets, metadata, People associations, favorites, edits, pre-existing membership, or pre-existing organization.",
-        "Rights, consent, credit, identity, safety, context, crop, caption, alt text, destination, and final editorial approval remain human gates."
+        "All five governed human-evidence controls remain open: corroboration, collective review, hiring usability, job funnel, and external validity.",
+        "Each control retains evidence requirements, anti-gaming rules, a next action, and a public-projection boundary; simulated evaluation is explicitly not external validation.",
+        "The photo manifest records Jamie authorization while declining to assert third-party authorship or rights, and DESIGN.md keeps photographer, depicted-person, visible-artwork, caption, collaborator, and final publication review under human authority.",
+        "Hiring reports classify evidence gaps and require human approval rather than converting simulated readers or portfolio checks into hiring validation."
       ],
-      "rationale": "The repaired boundary fails closed and does not convert bounded operational success into human authority."
+      "rationale": "Known absences are governed and actionable without being synthesized closed."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The frozen rubric independently recomputed to c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
-        "COMP-001 through COMP-008 passed deterministically.",
-        "All 112 Knowledge Wiki tests and all 133 blocking Wiki criteria passed with human authority gates open.",
-        "The two-commit repair is exact: b335446c4823b0d5d821f025523c7fd8cac12a85 contains the authored custody repair, and its child 03ece993d316b1a762841963639d8933a9993803 changes only the 120 generated Wiki receipts.",
-        "RFP validation, public-safety validation, route validation, generated-output locale invariance, diff hygiene, and exact-head CI contract checks passed."
+        "The frozen composite rubric independently recomputed to c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
+        "The base portfolio suite passed with 16 criteria, 13 blocking criteria, and an exact 100-point weight budget.",
+        "Twenty-one layout, contrast, responsive-evidence, and professor mutation tests passed, including rejection of private locators, missing captions, decorative gradients, erased collective governance, incomplete recursive loops, stale holdouts, and visual-candidate drift.",
+        "Fifteen composite governance and mutation cases passed; the sole test failure was the expected pre-install exact-candidate acceptance assertion caused by COMP-009.",
+        "No weighted result compensates for a blocking failure, and human production approval remains mandatory."
       ],
-      "rationale": "Frozen governance and the two-commit authored-then-derived sequence now provide exact, non-circular repair evidence."
+      "rationale": "Frozen semantics, candidate binding, mutation resistance, and human authority prevent score gaming."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent byte-framed traversals bound exactly 716 tracked or unignored files, excluding only the two declared holdout records, to e89ef0ecfedc7a76fe3c5009df66c04c0333f6297f2effdca6039e1ffa7f9fac.",
-        "The two excluded installed judgments target prior fingerprint 05c36cc3d04042eeb2794afeb9a41c3643e5efed1c5967acd446c9686f0905fc.",
-        "The pre-install composite failure was confined to COMP-009; COMP-001 through COMP-008 passed.",
-        "After all read-only checks, HEAD, fingerprint, file count, and clean worktree remained unchanged.",
-        "The workflow checks out and verifies the pull-request head SHA; no hosted result is credited before installation and push."
+        "Independent byte-framed evaluation bound exactly 725 tracked or unignored files, excluding only the two declared holdout records, to eb3813586c68fba83a33b10050bdf7be75f23db22a2ed921951eb1f2355d43c7.",
+        "Both excluded installed judgments still target prior fingerprint e89ef0ecfedc7a76fe3c5009df66c04c0333f6297f2effdca6039e1ffa7f9fac.",
+        "The pre-install composite evaluator passed COMP-001 through COMP-008 and failed only COMP-009 because fresh exact-candidate composite holdouts are not yet installed.",
+        "After all checks, HEAD, the 725-file count, candidate fingerprint, rubric digest, and clean worktree remained unchanged.",
+        "The hosted workflow checks out and verifies the pull-request head SHA, but no hosted result is credited before installation and push."
       ],
-      "rationale": "This judgment accepts the stable exact candidate while preserving fresh companion-holdout and hosted exact-head CI requirements."
+      "rationale": "This judgment accepts the stable exact candidate while requiring installation with a distinct companion judgment and subsequent hosted exact-head verification."
     }
   ],
   "notObserved": [],
   "findings": [],
-  "recommendation": "Accept exact candidate 03ece993d316b1a762841963639d8933a9993803 for installation with a distinct independent companion judgment. Push the resulting exact head and require hosted exact-head CI before merge. This verdict does not accept RFP 0002 or authorize further archive access, source ingestion, identity decisions, rights, consent, credit, editorial selection, publication, deployment, indexing, hiring validation, or employment outcomes.",
+  "recommendation": "Accept exact candidate 42ae0b499247b5a26461ab3459e0632df71fd6af for installation with a distinct independent companion judgment. Recompute the candidate after installation, push the resulting exact head, and require hosted exact-head CI before merge. Keep photographic rights and caption review, collaborator approval, human production approval, deployment, indexing, real-human hiring validation, job-funnel validation, and employment outcomes explicitly open.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f89a1-5fdb-7d93-9feb-97b247b165ca",
-    "agentNickname": "Fermat",
+    "processSessionId": "019f8ce9-d889-77a0-81c8-9cf47dfe59be",
+    "agentNickname": "Goodall",
     "model": "gpt-5.6-sol",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "You are an independent final holdout judge for the completed jamieburk.art feature/photos-C candidate.\n\nOperate read-only in /private/tmp/jamieburk-art-feature-photos-C. Do not edit, generate, stage, commit, push, or create a pull request. The worktree must remain clean. Verify HEAD 03ece993d316b1a762841963639d8933a9993803, descended from develop 4b6bc3bff48f4fbefdda2f42aec327645f6a357c.\n\nCandidate identity excludes only:\n- docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json\n- docs/evals/runs/2026-07-16-feature-evals-composite-final-b.json\n\nIndependently verify exactly 716 bound files and fingerprint e89ef0ecfedc7a76fe3c5009df66c04c0333f6297f2effdca6039e1ffa7f9fac. Reject on mismatch.\n\nThe candidate is deliberately a two-commit repair:\n1. b335446c4823b0d5d821f025523c7fd8cac12a85 clarifies the source-custody contract and adds mutation tests.\n2. 03ece993d316b1a762841963639d8933a9993803 regenerates all derived Wiki receipts after the authored source commit existed.\n\nVerify that source records and pre-existing organization are read-only; additive workspace folders, albums, and membership pointers are permitted only in Jamie's authorized workspace; the canary truthfully discloses its bounded catalog addition; no whole-library unchanged claim survives; mutations reject pre-existing-album reorganization and outside-workspace writes; generated outputs now bind source commit b335446c4823b0d5d821f025523c7fd8cac12a85 and are current; COMP-001 through COMP-008 pass; COMP-009 fails before installation only because the excluded holdouts target a prior fingerprint. Run appropriate read-only checks.\n\nReturn only valid JSON without markdown:\n{\n  \"runVersion\": 2,\n  \"judgeId\": \"<judge id below>\",\n  \"grader\": \"independent_llm_judge\",\n  \"independentFromOptimizer\": true,\n  \"rubricSha256\": \"<verified>\",\n  \"candidateFingerprint\": \"<verified>\",\n  \"verdict\": \"accepted\" or \"rejected\",\n  \"scores\": [{\"criterionId\":\"COMP-001\",\"score\":0 or 4,\"pass\":true or false,\"evidence\":[\"specific evidence\"],\"rationale\":\"bounded rationale\"}],\n  \"notObserved\": [],\n  \"findings\": [],\n  \"recommendation\": \"clear recommendation\"\n}\nInclude COMP-001 through COMP-009 exactly once. Acceptance requires every criterion at 4/pass, no blocking finding, no material notObserved, exact clean-candidate currentness, and the repaired custody contract. Require push plus hosted exact-head CI after installation. Keep RFP acceptance, further archive access, source ingestion, identity, rights, consent, credit, editorial selection, publication, deployment, indexing, hiring validation, and employment outcomes open.\n\nYour judgeId is \"composite-holdout-photos-c-public-value-final2-2026-07-22\". Judge photographic ethics, artistic freedom, public value, collective agency, public-safe restraint, and comprehensibility to future editors.",
-    "promptSha256": "ddd1e8fff7232de22443c85c27088557871231a1ba6acc5914b2cedfc1e5c83f",
-    "judgmentSha256": "a0f3729cb8b06e2c0fd4c4eafdae444d19763c45e174c1735d11a1ea9349c1dc",
+    "prompt": "You are an independent final composite holdout judge for jamieburk.art features/layout-C.\n\nOperate read-only in /private/tmp/jamieburk-art-features-layout-C. Do not edit, generate, stage, commit, push, or create a pull request. The worktree must remain clean.\n\nVerify exact HEAD 42ae0b499247b5a26461ab3459e0632df71fd6af. Candidate identity excludes only:\n- docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json\n- docs/evals/runs/2026-07-16-feature-evals-composite-final-b.json\n\nIndependently verify exactly 725 bound files and the byte-framed candidate fingerprint eb3813586c68fba83a33b10050bdf7be75f23db22a2ed921951eb1f2355d43c7 using scripts/lib/composite-integration-eval.mjs. Reject on mismatch. Independently verify the frozen composite rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.\n\nRead .agents/evals/feature-evals-composite.json and inspect evidence needed for COMP-001 through COMP-009. The candidate includes a Human Index frontend redesign and four publication-bounded photographs, a photo manifest, exact visual candidate professor-lens binding, three explicit current systems loops, a 56-row responsive/axe report at public fingerprint 5a42a5d53d5fcaac783970211461594ff0ac119336def1f181d7e7f4a48921d1, current Wiki and hiring reports, six fresh 4/pass professor holdouts at visual candidate 636bdcf6b19e31dbf5e51530da4b407d2adfee38605e94c58cd67169e0322d3d, and layout mutation tests. Run appropriate read-only checks. The pre-install composite evaluator should pass COMP-001 through COMP-008 and fail only COMP-009 because the two excluded files still target a prior fingerprint. Do not credit facts you did not observe.\n\nReturn ONLY valid JSON without Markdown:\n{\n  \"runVersion\": 2,\n  \"judgeId\": \"<assigned>\",\n  \"grader\": \"independent_llm_judge\",\n  \"independentFromOptimizer\": true,\n  \"rubricSha256\": \"c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340\",\n  \"candidateFingerprint\": \"eb3813586c68fba83a33b10050bdf7be75f23db22a2ed921951eb1f2355d43c7\",\n  \"verdict\": \"accepted\" or \"rejected\",\n  \"scores\": [\n    {\"criterionId\":\"COMP-001\",\"score\":0 or 4,\"pass\":true or false,\"evidence\":[\"specific evidence\"],\"rationale\":\"bounded rationale\"}\n  ],\n  \"notObserved\": [],\n  \"findings\": [],\n  \"recommendation\": \"clear bounded recommendation\"\n}\nInclude COMP-001 through COMP-009 exactly once. Acceptance requires every criterion at 4/pass, no blocking finding, no material notObserved, exact candidate identity, current derived evidence, public safety, collective credit, accessible responsive behavior, and an honest visual/photographic projection. Require push plus hosted exact-head CI after installation. Keep photographic rights and caption review, collaborator approval, human production approval, deployment, indexing, hiring validation, and employment outcomes open.\n\nJudge public value, editorial clarity, photography ethics, artistic freedom, Chad's lens, Margaret Morse's inhabited-systems lens, Warren Sack's recursive-systems lens, collective agency, hiring comprehension, accessibility, and whether the website remains selective rather than a claims database.\n\nYour judgeId is \"composite-holdout-layout-c-public-value-2026-07-22\".",
+    "promptSha256": "f87126e4f05149969d8322bcf336d7042e02552838a08627876b3b8608edfd4b",
+    "judgmentSha256": "4a6c6c7331c9a3f90088c647fdb45a1b81a8c59e9ebf676b7902103d091e5ca6",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-23T01:10:30Z",
-    "completedAt": "2026-07-23T01:15:00Z"
+    "startedAt": "2026-07-23T02:59:23.398Z",
+    "completedAt": "2026-07-23T03:09:47.039Z"
   }
 }
