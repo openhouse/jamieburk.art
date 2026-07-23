@@ -1,12 +1,13 @@
 {
   "suite": "knowledge-wiki-photography-working-notebook",
-  "version": 1,
+  "version": 2,
   "principle": "The notebook protects experimental visual reading while keeping observation, memory, interpretation, evidence, rights, consent, and publication distinct.",
   "notebookRootId": "notebook.photography",
   "fieldId": "notebook.photography.field.v01",
   "vocabularyId": "notebook.photography.vocabulary",
   "sequenceId": "notebook.photography.sequence-sketches",
   "templatesId": "notebook.photography.templates",
+  "proposalId": "notebook.photography.residency-proposal.v01",
   "fieldVersion": "v01",
   "targetPopulation": 1000,
   "requiredRecords": [
@@ -14,7 +15,8 @@
     ["notebook.photography.field.v01", "docs/knowledge-bank/notebooks/photography/field-v01.md"],
     ["notebook.photography.vocabulary", "docs/knowledge-bank/notebooks/photography/editorial-vocabulary.md"],
     ["notebook.photography.sequence-sketches", "docs/knowledge-bank/notebooks/photography/sequence-sketches.md"],
-    ["notebook.photography.templates", "docs/knowledge-bank/notebooks/photography/templates.md"]
+    ["notebook.photography.templates", "docs/knowledge-bank/notebooks/photography/templates.md"],
+    ["notebook.photography.residency-proposal.v01", "docs/knowledge-bank/notebooks/photography/residency-proposal-v01.md"]
   ],
   "navigationParents": [
     "index.knowledge-wiki",

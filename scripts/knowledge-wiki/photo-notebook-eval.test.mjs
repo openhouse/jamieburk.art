@@ -21,7 +21,7 @@ test("photography notebook baseline passes", () => {
   const evaluation = evaluatePhotoNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    requiredRecords: 5,
+    requiredRecords: 6,
     targetPopulation: 1000,
     currentPopulation: 0
   });
@@ -150,4 +150,70 @@ test("notebook IDs cannot enter the public registry implicitly", () => {
     publicRegistryOverride: "notebook.photography"
   });
   assert.equal(evaluation.checks.photography_public_projection_selective, false);
+});
+
+test("the residency proposal cannot become a deliverables contract", () => {
+  const id = "notebook.photography.residency-proposal.v01";
+  const mutated = sourceFor(id)
+    .replace(
+      /The proposal\s+is an opening, not a contract\./,
+      "The proposal is a binding deliverables contract."
+    )
+    .replace(
+      /will not be judged on the basis of\s+doing what was promised here/,
+      "will be judged on the basis of delivering everything promised here"
+    );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.photography_residency_proposal_preserves_play,
+    false
+  );
+});
+
+test("residency hospitality cannot publish private access details", () => {
+  const id = "notebook.photography.residency-proposal.v01";
+  const mutated = sourceFor(id).replace(
+    /Private access instructions, household details, equipment custody, and precise\s+residential coordinates remain in resident orientation rather than this public\s+notebook\./,
+    "Private access instructions and precise residential coordinates belong in this public notebook."
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.photography_residency_hospitality_is_bounded,
+    false
+  );
+});
+
+test("the Teju Cole touchstone cannot become an unsourced textual claim", () => {
+  const id = "notebook.photography.residency-proposal.v01";
+  const mutated = sourceFor(id).replace(
+    /This is recorded as Jamie's remembered\s+touchstone, not yet as a source-verified account of Cole's text\./,
+    "This is a verified quotation and account of Cole's published text."
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.photography_residency_touchstone_is_attributed_memory,
+    false
+  );
+});
+
+test("Proof of Life cannot become publication approval", () => {
+  const id = "notebook.photography.residency-proposal.v01";
+  const mutated = sourceFor(id).replace(
+    /does not approve the selected photograph for\s+publication or establish what the larger residency will become/,
+    "approves the selected photograph for every public use"
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(evaluation.checks.photography_proof_of_life_is_bounded, false);
 });

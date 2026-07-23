@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-22T18:54:44-04:00",
   "sourceCommit": "d2a87898290d987eeab59e440512e04403dfbc91",
-  "sourceFingerprint": "48b7897fabc676ad79eb346a335a54c232e9a87b97ff2eb453363dee4b855683",
+  "sourceFingerprint": "08939e9a11416a85cd05531a3a60b44630090befc193b1bee7277a059ef9cd0a",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -629,6 +629,19 @@
       "visibility": "public-safe",
       "sensitivity": "moderate",
       "summary": "Assembly record for a rough 1,000-photo editor field drawn from Jamie's lifetime archive.",
+      "aliases": [],
+      "lastReviewed": "2026-07-22",
+      "reviewBy": "2026-08-22"
+    },
+    {
+      "id": "notebook.photography.residency-proposal.v01",
+      "path": "docs/knowledge-bank/notebooks/photography/residency-proposal-v01.md",
+      "title": "A room for the archive",
+      "kind": "notebook",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Accepted, nonbinding artist-residency proposal for the first experimental encounter with Jamie's photo archive.",
       "aliases": [],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2026-08-22"
@@ -3510,6 +3523,14 @@
     {
       "from": "notebook.photography",
       "type": "related_to",
+      "to": "notebook.photography.residency-proposal.v01",
+      "source": "frontmatter",
+      "href": "residency-proposal-v01.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
       "to": "notebook.photography.sequence-sketches",
       "source": "frontmatter",
       "href": "sequence-sketches.md",
@@ -3561,6 +3582,46 @@
       "to": "index.knowledge-wiki.visual-evidence",
       "source": "frontmatter",
       "href": "../../indexes/visual-evidence.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.field.v01",
+      "type": "related_to",
+      "to": "notebook.photography.residency-proposal.v01",
+      "source": "frontmatter",
+      "href": "residency-proposal-v01.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.residency-proposal.v01",
+      "type": "part_of",
+      "to": "notebook.photography",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.residency-proposal.v01",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "../../indexes/visual-evidence.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.residency-proposal.v01",
+      "type": "related_to",
+      "to": "notebook.photography.field.v01",
+      "source": "frontmatter",
+      "href": "field-v01.md",
+      "context": null
+    },
+    {
+      "from": "notebook.photography.residency-proposal.v01",
+      "type": "uses_method",
+      "to": "method.structure-grows-from-material",
+      "source": "frontmatter",
+      "href": "../../methods/structure-grows-from-the-material.md",
       "context": null
     },
     {
@@ -6907,6 +6968,24 @@
       "to": "notebook.photography.templates",
       "fragment": null,
       "line": 61,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/notebooks/photography/residency-proposal-v01.md",
+      "to": "notebook.photography.residency-proposal.v01",
+      "fragment": null,
+      "line": 62,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/field-v01.md",
+      "from": "notebook.photography.field.v01",
+      "toPath": "docs/knowledge-bank/notebooks/photography/residency-proposal-v01.md",
+      "to": "notebook.photography.residency-proposal.v01",
+      "fragment": null,
+      "line": 23,
       "kind": "link"
     },
     {

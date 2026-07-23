@@ -43,6 +43,7 @@ export function evaluatePhotoNotebook(options = {}) {
   const vocabulary = normalized(manifest.vocabularyId);
   const sequences = normalized(manifest.sequenceId);
   const templates = normalized(manifest.templatesId);
+  const proposal = normalized(manifest.proposalId);
   const notebookSource = normalized(manifest.notebookRootId);
   const fieldSource = normalized(manifest.fieldId);
   const publicRegistry =
@@ -140,6 +141,45 @@ export function evaluatePhotoNotebook(options = {}) {
       templates
     );
 
+  const photographyResidencyProposalPreservesPlay =
+    /The proposal is an opening, not a contract/i.test(proposal) &&
+    /will not be judged on the basis of doing what was promised here/i.test(
+      proposal
+    ) &&
+    /free to change its question, method, scale, medium, pace, or destination/i.test(
+      proposal
+    ) &&
+    /possible traces, not required deliverables/i.test(proposal) &&
+    /not obligated to turn intimacy into output/i.test(proposal) &&
+    /The proposal remains revisable\. The welcome remains/i.test(proposal);
+
+  const photographyResidencyTouchstoneIsAttributedMemory =
+    /Jamie often tells a story he remembers from an essay by Teju Cole/i.test(
+      proposal
+    ) &&
+    /recorded as Jamie's remembered touchstone, not yet as a source-verified account/i.test(
+      proposal
+    );
+
+  const photographyResidencyHospitalityIsBounded =
+    /Private access instructions, household details, equipment custody, and precise residential coordinates remain in resident orientation/i.test(
+      proposal
+    ) &&
+    /Hospitality is not permission to publish a private place/i.test(proposal) &&
+    /Existing People names may guide private research/i.test(proposal) &&
+    /unnamed faces will not be identified/i.test(proposal);
+
+  const photographyProofOfLifeIsBounded =
+    /operational canary and a threshold gesture, not a representative image, finished artwork, public selection, or proof of the archive's meaning/i.test(
+      proposal
+    ) &&
+    /Completion confirms only that the bounded local workflow works/i.test(
+      proposal
+    ) &&
+    /does not approve the selected photograph for publication or establish what the larger residency will become/i.test(
+      proposal
+    );
+
   const requiredSources = requiredIds.map(source);
   const photographyPrivateArchiveBoundary =
     requiredSources.every((text) => !privatePattern.test(text)) &&
@@ -162,6 +202,10 @@ export function evaluatePhotoNotebook(options = {}) {
     photography_experiment_remains_open: photographyExperimentRemainsOpen,
     photography_people_remain_agents: photographyPeopleRemainAgents,
     photography_discovery_does_not_auto_promote_claims: photographyDiscoveryDoesNotAutoPromoteClaims,
+    photography_residency_proposal_preserves_play: photographyResidencyProposalPreservesPlay,
+    photography_residency_touchstone_is_attributed_memory: photographyResidencyTouchstoneIsAttributedMemory,
+    photography_residency_hospitality_is_bounded: photographyResidencyHospitalityIsBounded,
+    photography_proof_of_life_is_bounded: photographyProofOfLifeIsBounded,
     photography_private_archive_boundary: photographyPrivateArchiveBoundary,
     photography_public_projection_selective: photographyPublicProjectionSelective
   };

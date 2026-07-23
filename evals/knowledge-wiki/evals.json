@@ -183,6 +183,10 @@
         "photography_experiment_remains_open",
         "photography_people_remain_agents",
         "photography_discovery_does_not_auto_promote_claims",
+        "photography_residency_proposal_preserves_play",
+        "photography_residency_touchstone_is_attributed_memory",
+        "photography_residency_hospitality_is_bounded",
+        "photography_proof_of_life_is_bounded",
         "photography_private_archive_boundary",
         "photography_public_projection_selective"
       ]

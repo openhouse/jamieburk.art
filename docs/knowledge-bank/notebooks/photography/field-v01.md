@@ -23,6 +23,9 @@ relations:
   - type: related_to
     target: index.knowledge-wiki.visual-evidence
     href: ../../indexes/visual-evidence.md
+  - type: related_to
+    target: notebook.photography.residency-proposal.v01
+    href: residency-proposal-v01.md
 ---
 
 # Photography field v01
@@ -45,6 +48,10 @@ Create enough room to encounter the archive before compressing it into a public
 argument. This pass should include obvious project anchors as well as intervals,
 apparatus, thresholds, maintenance, travel, weather, empty places, aftermaths,
 and images whose relevance is not yet understood.
+
+The accepted [residency proposal](residency-proposal-v01.md) is an invitation
+to begin, not a contract for what the field must become. The method and eventual
+form may change in response to the photographs.
 
 ## Assembly guardrails
 

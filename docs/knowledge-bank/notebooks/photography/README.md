@@ -38,6 +38,9 @@ relations:
   - type: related_to
     target: notebook.photography.templates
     href: templates.md
+  - type: related_to
+    target: notebook.photography.residency-proposal.v01
+    href: residency-proposal-v01.md
 ---
 
 # Photography working notebook
@@ -100,6 +103,7 @@ field manifest remains the authority for reconnecting a note to an original.
 - [Editorial vocabulary](editorial-vocabulary.md): provisional lenses for close reading.
 - [Sequence sketches](sequence-sketches.md): arrangements to test rather than stories to prove.
 - [Working templates](templates.md): image notes, sequence experiments, and field-version reviews.
+- [Residency proposal v01](residency-proposal-v01.md): an accepted, nonbinding invitation to begin before the outcome is known.
 
 The notebook is intentionally allowed to change. Stable IDs preserve continuity;
 Git history preserves revision; the governing boundaries keep experimentation
