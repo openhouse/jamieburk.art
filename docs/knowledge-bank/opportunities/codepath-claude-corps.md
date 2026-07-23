@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-07-22
+review_by: 2026-07-25
 canonical_path: docs/knowledge-bank/opportunities/codepath-claude-corps.md
 summary: Public-safe requirement and portfolio-coverage map for CodePath's live Senior Program Manager, Claude Corps role.
 canonical_url: https://job-boards.greenhouse.io/codepath/jobs/5182020007
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-18
+verified_at: 2026-07-22
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -131,7 +131,7 @@ evidence:
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts and requirements as rechecked July 18, 2026
+      - official role facts and requirements as rechecked July 22, 2026
 human_review: governed-open
 ---
 

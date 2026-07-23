@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-07-22
+review_by: 2026-07-25
 canonical_path: docs/knowledge-bank/opportunities/benepass-product-operations.md
 summary: Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.
 canonical_url: https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-18
+verified_at: 2026-07-22
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -112,7 +112,7 @@ evidence:
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts and requirements as rechecked July 18, 2026
+      - official role facts and requirements as rechecked July 22, 2026
 human_review: governed-open
 ---
 

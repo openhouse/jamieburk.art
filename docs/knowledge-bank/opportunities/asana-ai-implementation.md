@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-07-22
+review_by: 2026-07-25
 canonical_path: docs/knowledge-bank/opportunities/asana-ai-implementation.md
 summary: Public-safe requirement and portfolio-coverage map for Asana's live AI Implementation Manager, Service Management role.
 canonical_url: https://asana.com/jobs/apply/8027437
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-18
+verified_at: 2026-07-22
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -29,7 +29,7 @@ discovery_terms:
   - time to value
   - reusable playbooks
 confirmed_facts:
-  - Asana's official New York jobs surface listed the role on July 18, 2026.
+  - Asana's official New York jobs surface listed the role on July 22, 2026.
   - The supplied official-role review describes a New York hybrid or eligible US-remote context and a $133,000 to $151,000 estimated base range.
 inferences: []
 unknowns:
@@ -110,7 +110,7 @@ evidence:
     relationship: context
     confidence: moderate
     supports:
-      - official role listing and supplied role-context facts as rechecked July 18, 2026
+      - official role listing and supplied role-context facts as rechecked July 22, 2026
 human_review: governed-open
 ---
 
