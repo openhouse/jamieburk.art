@@ -1,40 +1,42 @@
 {
   "evaluator": "Codex independent holdout reader",
-  "reviewerId": "morse-a-employment-release",
+  "reviewerId": "morse-a-layout-c-final2-2026-07-22",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "636bdcf6b19e31dbf5e51530da4b407d2adfee38605e94c58cd67169e0322d3d",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The recomputed SHA-256 exactly matches the expected candidate fingerprint.",
-    "The About page provides a visible through-line from the 2006 Open House experiment to WOWList, Sunday Dinner and 196, NYC Artist Coalition work, and source-backed team memory, explicitly connecting artistic, civic, technical, and social practice.",
-    "The linked [Good Times Open House report](https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html) supplies the media-archaeological and embodied basis: art-life experimentation, Ant Farm and Fluxus lineages, attentive observation, many-perspective documentation, communal space, and participants changing their bodily behavior in relation to recording media.",
-    "The four About-page continuity examples distinguish relationships, interface and use, and learning and continuity. They show people influencing systems through language, participation, hospitality, shared space, documentation, and recurring practice rather than receiving conventional administrative services.",
-    "Sunday Dinner and 196 make hospitality, trust, artist support, access, facilitation, consent, and living social practice concrete; WOWList connects community vocabulary to a distributed technical platform; coalition work connects lived cultural-space experience to civic interfaces and shared memory.",
-    "The homepage and technical-operations page maintain clear employment relevance, while the About-page threshold prevents the practice from being reduced to organizational utility.",
-    "Historical projects are labeled as historical or archived, while current capability is supported separately by present-tense operating work and the bounded 2026 source-backed-memory lab."
+    "Observed HEAD 58a84daf354d3c39990d0b3f3d6e7bc6abe6e37c, with no staged, unstaged, or untracked files before or after review.",
+    "Independently recomputed SHA-256 over all 25 professorCandidateRelativePaths in exported order using path, NUL, binary file content, NUL; the result was exactly 636bdcf6b19e31dbf5e51530da4b407d2adfee38605e94c58cd67169e0322d3d.",
+    "PR-015 is a blocking LLM-judge criterion whose observed pass criteria require a visible professional through-line, at least three public-safe continuities, inhabitable and continuable systems, collective credit, and protected-source exclusion.",
+    "The About page is one navigation click from Home and first establishes Jamie's current technical-project-management and implementation role. Its bounded through-line then explicitly connects artistic, civic, technical, and social practice without reorganizing the portfolio as an artist biography.",
+    "About distinctly presents three current systems loops: Harry J. Epstein Company, NYC Artist Coalition/FairRentNYC, and Source-Backed Team Memory. Each exposes relationships, a model, interface and use, and learning and continuity.",
+    "WOWList and Sunday Dinner/196 are separately labeled earlier continuities. Across the five examples, observed copy connects community language, cultural-space advocacy, hospitality, trust, participation, documentation, customer and collaborator relationships, technical interfaces, memory, and durable continuation.",
+    "Visual inspection of all four candidate WebPs found a person situated at the East River, a handmade raft beside an inhabited riverboat, hands aligning paper at a trimmer, and printed editions on a working table. Together they supply embodiment, place, experimentation, material attention, and care while captions avoid treating the images as project proof or assigning artwork authorship.",
+    "The four WebPs have dimensions matching the manifest and contain only VP8 image chunks, with no EXIF, XMP, or ICC metadata chunks. FieldPhoto supplies stable dimensions, descriptive alt text, captions, and archive credits.",
+    "The source note records that protected UCSC evaluations, grades, identifiers, private paths, correspondence, and unapproved testimonial text are withheld. Open House is projected only as an initiated ten-day experiment whose participants collectively governed the space.",
+    "Independently recomputed the public-surface fingerprint across 115 tracked files as 5a42a5d53d5fcaac783970211461594ff0ac119336def1f181d7e7f4a48921d1. The stored matrix contains all 56 route-viewport combinations, and every row and summary field passes the stated axe, overflow, image, request, response, heading, and landmark checks."
   ],
   "gaps": [],
   "safety_findings": [
-    "Open House is credited as collectively governed, and WOWList, coalition work, CallNYC, and Sunday Dinner retain explicit collaborator or community credit.",
-    "The source note states that protected educational records, grades, identifiers, private paths, correspondence, and raw record text are withheld.",
-    "No faculty testimonial is projected, and the public certificate is explicitly bounded as professional development rather than instructor affiliation or production proof.",
-    "The candidate does not convert historical coursework or tools into claims of present proficiency, sole authorship, research invention, or production deployment.",
-    "Sensitive guest histories, correspondence, attendance information, access details, and unapproved images remain outside the public projection."
+    "Open House initiation is distinguished from collective governance, and no participant identity, protected educational-record text, private correspondence, or faculty testimonial is projected.",
+    "WOWList is described as co-built; NYC Artist Coalition outcomes remain collective; Sunday Dinner/196 preserves consent boundaries around guest histories, correspondence, access details, and unapproved images.",
+    "The photo manifest marks the derivatives Jamie-authorized while expressly declining to assert third-party authorship or rights. Any collaborator, depicted-person, or visible-artwork rights determination remains a separate human gate.",
+    "The candidate and design contract explicitly preserve separate human gates for rights, collaborator credit, production approval, deployment, and indexing."
   ],
-  "recommendation": "Pass PR-015 for this bound candidate. Preserve the collective-credit, consent, historical-current, and protected-record boundaries in any subsequent release.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate hash. Install any fresh deterministic receipt or scorecard only against the unchanged candidate; do not treat this holdout result as rights clearance, collaborator approval, production authorization, deployment approval, or permission to enable indexing.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-2eb5-7373-9689-d6f7c69238cf",
-    "agentNickname": "Rawls",
+    "processSessionId": "019f8cd5-8169-7981-8274-f1f98f519071",
+    "agentNickname": "Confucius",
     "model": "gpt-5.6-sol",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:20.561Z",
-    "completedAt": "2026-07-19T03:17:30.027Z"
+    "operatorAttestation": "Judgment content recorded verbatim from a completed native subagent result; process provenance added by the parent orchestrator.",
+    "startedAt": "2026-07-23T02:37:10.374Z",
+    "completedAt": "2026-07-23T02:57:37.929Z"
   }
 }

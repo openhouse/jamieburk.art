@@ -1,40 +1,43 @@
 {
-  "evaluator": "Independent holdout reader - PR-015 Margaret Morse lens",
-  "reviewerId": "morse-b-employment-release",
+  "evaluator": "Codex independent holdout reader",
+  "reviewerId": "morse-b-layout-c-final2-2026-07-22",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "636bdcf6b19e31dbf5e51530da4b407d2adfee38605e94c58cd67169e0322d3d",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The independently calculated fingerprint of the candidate subset matches the expected SHA-256.",
-    "The About page frames the lineage as systems people can inhabit, connecting relationships, participation, memory, continuity, and collective governance to artistic, civic, technical, and social practice.",
-    "Harry J. Epstein Company treats customer language, product judgment, institutional voice, internal habits, documentation, and customer follow-up as parts of one maintained operating system.",
-    "FairRentNYC and NYC Artist Coalition treat meetings, public sources, lived experience, collaborators, action pathways, minutes, question logs, source maps, and decision records as structural coalition infrastructure.",
-    "WOWList models organizers' existing community vocabulary through followable communities, distributed publishing, event workflows, digests, and embeddable calendars rather than imposing a centralized editorial structure.",
-    "Sunday Dinner and 196 explicitly turn hospitality, trust, invitations, hosting, onboarding, access handoffs, facilitation, consent, and recurring rhythms into participation infrastructure.",
-    "Source-Backed Team Memory makes human review, disagreement, protected context, and known/open/protected states structural parts of the method rather than optional safeguards.",
-    "Historical and current capability remain distinguishable: Open House is dated to 2006, WOWList and Sunday Dinner/196 are labeled historical, HJE and coalition work are dated through the present, and the lab is bounded as early research rather than a finished production product."
+    "HEAD is exactly 58a84daf354d3c39990d0b3f3d6e7bc6abe6e37c, and the worktree remained clean after inspection.",
+    "Independent binary-safe hashing of all 25 ordered professorCandidateRelativePaths using path, NUL, file bytes, NUL produced 636bdcf6b19e31dbf5e51530da4b407d2adfee38605e94c58cd67169e0322d3d.",
+    "About presents Jamie's technical project management and implementation role first, then preserves an explicit artistic, civic, technical, and social lineage through Open House, three current systems loops, and separately labeled earlier continuities.",
+    "The HJE, NYC Artist Coalition/FairRentNYC, and Source-Backed Team Memory loops each expose relationships, a system model, an interface used with people, and documented learning or continuity.",
+    "WOWList and Sunday Dinner/196 retain non-instrumental dimensions including community vocabulary, hospitality, trust, artist support, shared space, participation, and consent rather than appearing only as hiring proof.",
+    "The recursive method is stated plainly as observing relationships, modeling a system, prototyping an interface, testing it with people, and documenting enough for others to continue.",
+    "The photographs operate editorially: Jamie's East River portrait situates the employment argument in an inhabited civic landscape; the handmade raft beside the Delta Queen introduces scale and improvised structure before the About through-line; and the Colophon images directly connect material attention, tools, and printed work to the site's construction.",
+    "All four WebP derivatives have stable manifest dimensions, factual alt text and captions, placement limits, publication boundaries, and no EXIF, XMP, or IPTC metadata detected.",
+    "Independent validation of the responsive report recomputed public fingerprint 5a42a5d53d5fcaac783970211461594ff0ac119336def1f181d7e7f4a48921d1 from 115 tracked public-surface files and confirmed 56 unique rows covering 14 routes at four widths, with zero recorded axe violations, overflow elements, broken or unlabeled images, failed requests, bad responses, or heading and landmark failures.",
+    "The UCSC source note withholds raw evaluations, grades, identifiers, archive paths, correspondence, and testimonial projection; the separate Maven certificate is visibly labeled as approved professional development rather than faculty affiliation or production-product proof."
   ],
   "gaps": [],
   "safety_findings": [
-    "Collective work remains collectively credited, including participant governance, co-built platforms, collaborator-used civic systems, and explicit rejection of sole-causation claims.",
-    "The source note withholds protected educational records, grades, identifiers, private paths, correspondence, and testimonial projection.",
-    "The public course certificate is bounded as professional development, not affiliation, endorsement, or production-product proof.",
-    "No blocker involving protected educational records, participant privacy, collective credit, or historical-to-current overclaiming was found."
+    "Open House is credited as participant-governed, WOWList is co-built, coalition outcomes remain collective, and FairRentNYC explicitly rejects solo policy causality.",
+    "Sunday Dinner/196 withholds guest data, attendance history, correspondence, access details, and unapproved images; coalition pages similarly withhold private notes, legal-review context, stakeholder information, and strategy material.",
+    "The photo manifest records Jamie's authorization while explicitly declining to assert third-party authorship or rights. Photographer, depicted-person, and visible-artwork clearance therefore remain separate human rights-review gates.",
+    "No protected UCSC educational record, private faculty correspondence, or unapproved testimonial is quoted or projected.",
+    "This judgment does not clear collaborator approval, production deployment, or indexing."
   ],
-  "recommendation": "Pass PR-015 at score 4. The candidate demonstrates at least four project-specific continuities in which participation, hospitality, care, documentation, and relationships materially structure systems people use, influence, remember, and continue.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate. Preserve the present collective-credit, consent, protected-record, and historical-versus-current boundaries, and require separate human clearance for photographic rights, collaborators, production, deployment, and indexing.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3004-7d21-8fbe-6f16197f21a5",
-    "agentNickname": "Gibbs",
+    "processSessionId": "019f8cd5-8300-7dd1-b138-10d92d7261c2",
+    "agentNickname": "Banach",
     "model": "gpt-5.6-sol",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:20.894Z",
-    "completedAt": "2026-07-19T03:17:30.035Z"
+    "operatorAttestation": "Judgment content recorded verbatim from a completed native subagent result; process provenance added by the parent orchestrator.",
+    "startedAt": "2026-07-23T02:37:10.374Z",
+    "completedAt": "2026-07-23T02:57:37.929Z"
   }
 }
