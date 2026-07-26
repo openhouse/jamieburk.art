@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-23T02:36:25.196Z",
-  "baseUrl": "http://127.0.0.1:3047",
-  "publicSurfaceFingerprint": "5a42a5d53d5fcaac783970211461594ff0ac119336def1f181d7e7f4a48921d1",
+  "checkedAt": "2026-07-26T19:01:06.311Z",
+  "baseUrl": "http://127.0.0.1:3048",
+  "publicSurfaceFingerprint": "1987413dc1725865379becc15a5c288522299bc3156ea5d84a28b219b4db4b87",
   "publicSurfaceFileCount": 115,
   "publicSurfaceScope": [
     "apps/www/**",
@@ -1104,12 +1104,12 @@
     "criticalAxeViolations": 0,
     "overflowElements": 0,
     "brokenImagesAfterScroll": 0,
-    "unloadedImagesBeforeScroll": 8,
-    "lazyImagesObserved": 24,
     "unlabeledImages": 0,
     "failedRequests": 0,
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
+    "lazyImagesObserved": 24,
+    "unloadedImagesBeforeScroll": 8,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   }
