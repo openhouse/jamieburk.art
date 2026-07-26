@@ -251,7 +251,7 @@ const checks = {
       (record) =>
         record.canonical_url &&
         record.source_type === "official-employer" &&
-        record.opportunity_status === "live" &&
+        ["live", "closed"].includes(record.opportunity_status) &&
         record.verified_at &&
         record.review_by &&
         record.portfolio_routes.length > 0 &&
@@ -260,7 +260,7 @@ const checks = {
   stable_requirement_ids:
     requirementIds.length >= 25 && new Set(requirementIds).size === requirementIds.length,
   operator_queries:
-    queryWiki(result, { liveOpportunities: true }).records.length === 6 &&
+    queryWiki(result, { liveOpportunities: true }).records.length === 5 &&
     queryWiki(result, { requirement: "requirement.oti.delivery-coordination" }).opportunity?.id ===
       "opportunity.nyc-oti.technical-operations-manager.782369",
   hard_screens_explicit: opportunities.every((record) => record.hard_screens.length > 0),
@@ -307,7 +307,9 @@ const checks = {
       publicHiring.report.readerContextHash,
       publicHiring.report.promptHash
     ].every((value) => /^[0-9a-f]{64}$/.test(value)),
-  role_contexts_fresh: publicHiring.report.opportunities.every((item) => item.fresh),
+  role_contexts_fresh: publicHiring.report.opportunities.every((item) =>
+    item.live ? item.fresh : item.decision === "not-live"
+  ),
   external_outcomes_remain_open:
     result.health.humanGates.some(
       (gate) => gate.id === "hiring-outcomes" && !["completed", "resolved"].includes(gate.state)

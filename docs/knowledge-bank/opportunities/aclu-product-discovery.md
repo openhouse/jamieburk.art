@@ -126,7 +126,7 @@ evidence:
     relationship: direct-support
     confidence: high
     supports:
-      - official role requirements and application artifact as rechecked July 18, 2026
+      - official role requirements and application artifact as rechecked July 26, 2026
 human_review: governed-open
 ---
 

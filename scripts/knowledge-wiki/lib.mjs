@@ -316,6 +316,11 @@ export const wikiRecordSchema = z
     credit_scope: z
       .enum(["individual", "shared", "collective", "institutional", "individual-and-collective"])
       .optional(),
+    source_kind: z.string().min(1).optional(),
+    url: z.string().url().optional(),
+    retrieved_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    availability_state: z.enum(["available", "not-listed", "unknown"]).optional(),
+    availability_checked_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
     canonical_url: z.string().url().optional(),
     source_type: z.enum(["official-employer", "official-public-data", "protected-metadata"]).optional(),
     opportunity_status: z.enum(["live", "closed", "historical-benchmark", "conditional"]).optional(),
@@ -420,6 +425,23 @@ export const wikiRecordSchema = z
     }
     if (record.kind === "source" && !record.source_kind) {
       context.addIssue({ code: "custom", path: ["source_kind"], message: "source records require source_kind" });
+    }
+    if (record.kind === "source" && record.source_kind === "official-job-posting") {
+      for (const field of [
+        "url",
+        "retrieved_at",
+        "availability_state",
+        "availability_checked_at",
+        "review_by"
+      ]) {
+        if (!record[field]) {
+          context.addIssue({
+            code: "custom",
+            path: [field],
+            message: `official job sources require ${field}`
+          });
+        }
+      }
     }
     if (record.source_encounter && record.kind !== "research-run") {
       context.addIssue({
@@ -828,6 +850,66 @@ export function compileWiki(options = {}) {
 
   const requirementOwner = new Map();
   for (const record of records.filter((item) => item.kind === "opportunity")) {
+    const officialSources = [...new Set([
+      ...record.evidence.map((item) => item.target),
+      ...record.relations
+        .filter((relation) => relation.type === "uses_source")
+        .map((relation) => relation.target)
+    ])]
+      .map((id) => byId.get(id))
+      .filter(
+        (source) =>
+          source?.kind === "source" &&
+          source.source_kind === "official-job-posting"
+      );
+
+    if (officialSources.length !== 1) {
+      issues.push(
+        makeIssue(
+          "OPPORTUNITY_OFFICIAL_SOURCE_COUNT",
+          `opportunity requires exactly one official job source; found ${officialSources.length}`,
+          record.path,
+          1
+        )
+      );
+    } else {
+      const [source] = officialSources;
+      const reviewFieldsMatch =
+        record.verified_at === source.availability_checked_at &&
+        record.last_reviewed === source.last_reviewed &&
+        record.review_by === source.review_by;
+      if (!reviewFieldsMatch) {
+        issues.push(
+          makeIssue(
+            "OPPORTUNITY_SOURCE_STALE",
+            "opportunity freshness must match the official source availability review",
+            record.path,
+            1
+          )
+        );
+      }
+      if (record.opportunity_status === "live" && source.availability_state !== "available") {
+        issues.push(
+          makeIssue(
+            "OPPORTUNITY_SOURCE_UNAVAILABLE",
+            "a live opportunity requires an official source currently marked available",
+            record.path,
+            1
+          )
+        );
+      }
+      if (record.opportunity_status === "closed" && source.availability_state === "available") {
+        issues.push(
+          makeIssue(
+            "OPPORTUNITY_SOURCE_STATUS_MISMATCH",
+            "a closed opportunity cannot use an official source currently marked available",
+            record.path,
+            1
+          )
+        );
+      }
+    }
+
     for (const requirement of record.role_requirements) {
       const owner = requirementOwner.get(requirement.id);
       if (owner && owner !== record.id) {

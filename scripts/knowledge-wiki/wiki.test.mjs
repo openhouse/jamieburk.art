@@ -341,6 +341,10 @@ review_by: 2026-07-21
 canonical_path: docs/knowledge-bank/sources/job.md
 summary: Official fixture job source.
 source_kind: official-job-posting
+url: https://example.com/job
+retrieved_at: 2026-07-18
+availability_state: available
+availability_checked_at: 2026-07-18
 relations:
   - type: supports
     target: opportunity.fixture
@@ -452,4 +456,29 @@ test("stale live opportunity remains visible as a diagnostic failure", () => {
   addOpportunity(root);
   mutate(root, "opportunities/job.md", (value) => value.replaceAll("2026-07-21", "2026-07-17"));
   assertIssue(compile(root), "STALE");
+});
+
+test("opportunity freshness cannot advance without its official source review", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) => value.replaceAll("2026-07-18", "2026-07-19"));
+  assertIssue(compile(root), "OPPORTUNITY_SOURCE_STALE");
+});
+
+test("a live opportunity cannot rely on a source no longer listed", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "sources/job.md", (value) =>
+    value.replace("availability_state: available", "availability_state: not-listed")
+  );
+  assertIssue(compile(root), "OPPORTUNITY_SOURCE_UNAVAILABLE");
+});
+
+test("a closed opportunity cannot retain an available source state", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) =>
+    value.replace("opportunity_status: live", "opportunity_status: closed")
+  );
+  assertIssue(compile(root), "OPPORTUNITY_SOURCE_STATUS_MISMATCH");
 });

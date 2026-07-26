@@ -110,7 +110,7 @@ evidence:
     relationship: context
     confidence: moderate
     supports:
-      - official role listing and supplied role-context facts as rechecked July 18, 2026
+      - official role listing and supplied role-context facts as rechecked July 26, 2026
 human_review: governed-open
 ---
 

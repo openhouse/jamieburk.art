@@ -81,6 +81,24 @@ graphic, document, audio file, or video. Evidence value and publication rights
 are separate. Rights-pending assets stay metadata-only and must not contain a
 private path or media payload.
 
+Official job sources also record the state of the employer-controlled listing:
+
+```yaml
+source_kind: official-job-posting
+url: https://example.org/jobs/role-id
+retrieved_at: 2026-07-26
+availability_state: available
+availability_checked_at: 2026-07-26
+```
+
+`retrieved_at` records the most recent successful reading of the posting.
+`availability_checked_at` records the latest official-source liveness check.
+They may differ when a previously retrieved posting is no longer listed.
+Opportunity freshness must match the official source's availability review. A
+`live` opportunity requires `availability_state: available`; a closed
+opportunity cannot retain that state. This keeps a date-only record edit from
+turning stale external state into a current hiring claim.
+
 ## Wanted pages
 
 `wanted` records name deliberate research needs without creating broken links.

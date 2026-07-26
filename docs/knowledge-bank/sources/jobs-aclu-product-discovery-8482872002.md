@@ -5,13 +5,15 @@ kind: source
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-07-26
+review_by: 2026-07-29
 canonical_path: docs/knowledge-bank/sources/jobs-aclu-product-discovery-8482872002.md
-summary: Official ACLU posting for the term-limited Product Manager II, Discovery role, rechecked July 18, 2026.
+summary: Official ACLU posting for the term-limited Product Manager II, Discovery role, rechecked July 26, 2026.
 source_kind: official-job-posting
 url: https://job-boards.greenhouse.io/aclu/jobs/8482872002
-retrieved_at: 2026-07-18
+retrieved_at: 2026-07-26
+availability_state: available
+availability_checked_at: 2026-07-26
 relations:
   - type: supports
     target: opportunity.aclu.product-manager-discovery.8482872002
