@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "composite-holdout-layout-d-repaired-b-2026-07-26",
+  "judgeId": "composite-holdout-layout-d-source-verified-b-2026-07-26",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "35f23ed2f86168ec3e9f280f59809ea88f5fb4f6488be4b6f2240467f0c68087",
+  "candidateFingerprint": "933000649426f8871658d1b2e0af8cc0ec80ec63586f85e84454b324f2e3f6e9",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,128 +12,121 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 feature/evals-A through feature/evals-N heads resolve exactly through refs/remotes/origin.",
-        "The integration branch remains feature/knowledge-h with develop as the pull-request base.",
-        "All frozen branches remain reference-only."
+        "Independent evaluation resolved all 14 feature/evals-A through feature/evals-N refs to the frozen heads and confirmed 14/14 register decisions, writable branch feature/knowledge-h, and pull-request base develop.",
+        "Frozen branch-head digest efa94ea9c3b7190deca61024093d30e4d78a2efdebf04b78b5d6857d9df7a002 matched; fresh branch-omission and fabricated-head mutations failed closed."
       ],
-      "rationale": "The frozen family inventory is complete, exact, and unchanged."
+      "rationale": "The complete frozen family identity and reference-only integration inventory remain intact."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 branches have one permitted integration decision with rationale, existing destinations, verification criteria, and projection treatment.",
-        "The register matches reviewed digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d."
+        "All 14 integration decisions use allowed dispositions and include substantive rationale, existing destinations, verification IDs, and an explicit website projection decision.",
+        "The reviewed register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d; missing-destination and decorative-rationale mutations were rejected."
       ],
-      "rationale": "Integration decisions remain inspectable and destination-bound."
+      "rationale": "The disposition ledger remains complete, inspectable, and bound to real canonical destinations."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 11 canonical knowledge files exist.",
-        "No forbidden parallel lifecycle architecture exists.",
-        "The public application uses the redacted claims, pages, sources, and proof projections without adding a public knowledge or proofs route."
+        "All 11 canonical H-derived files exist, no forbidden parallel lifecycle roots are present, and the public registry exposes only claims, pages, and sources.",
+        "The frozen base portfolio suite remains bound, while the public application consumes redacted projections and excludes private archive coordinates."
       ],
-      "rationale": "The H-derived knowledge architecture remains singular and canonical."
+      "rationale": "The repair preserves one canonical Knowledge Wiki architecture and does not introduce a parallel source or lifecycle layer."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Lifecycle evaluation exercised idempotent replay, linked duplicate preservation, collision rejection, held claims, inquiries, corrections, and orphan queries.",
-        "All affected lifecycle and knowledge tests passed under Node 26."
+        "Canonical lifecycle execution exercised idempotent intake replay, linked duplicate preservation, changed-content collision rejection, and queries for held claims, inquiries, corrections, projection states, and orphan sources.",
+        "The fresh knowledge mutation suite passed 196/196 tests, including KC Town Hall shared-surface, WOWList event, privacy, population, authorship, and causal-overclaim locks."
       ],
-      "rationale": "Intake and lifecycle operations remain append-safe and fail closed."
+      "rationale": "Append-only lifecycle behavior and governed queries remain deterministic and fail closed under adversarial mutation."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Knowledge evaluation now passes 5/5 across all 32 criteria with no below-minimum criterion.",
-        "The Google Drive bundle actual and approved digests both equal 923b2e826d5d34ab18566e5cdf32344244f277eca11385342e933dc860c34f74.",
-        "KC Town Hall field-practice reports reviewLocksMatch=true with counts, sources, claims, evidence closure, protected hold, overclaim, outcome, coverage, report, and safety checks all true.",
-        "Personal/WOWList Facebook events reports reviewLocksMatch=true with population, ledger, attribution, source-route, projection, governance, privacy, and report checks all true.",
-        "Canonical validation covers 280 sources, 98 claims, 31 agency relations, and four corrections; citation, public-safety, and generated-output checks passed."
+        "A fresh official-source check found ACLU 8482872002, Asana 8027437, CodePath 5182020007, NYC OTI 782369, and PermitFlow 8a6e6066-1a9a-4026-aa81-e855741b2922 currently available; Benepass 7f963a7a-aaad-456b-b12b-7f34b35d51cf remained absent from the employer Ashby feed.",
+        "The repaired records model five opportunities live/available and Benepass closed/not-listed. For each pair, opportunity verified_at, last_reviewed, and review_by match the official source availability_checked_at, last_reviewed, and review_by; Benepass correctly retains retrieved_at 2026-07-18 while recording availability_checked_at 2026-07-26.",
+        "Wiki validation passed for 280 sources, 98 claims, 31 agency relations, and 4 corrections; citation, public-safety, route, RFP, and 196 knowledge-mutation checks passed without protected leakage or credit inflation.",
+        "Generated Wiki and all eight employment outputs passed currentness checks; the hiring report marks Benepass live false, fresh false, decision not-live and retains five current live roles."
       ],
-      "rationale": "The three stale locks were narrowly rebound to reviewed content without weakening claim, evidence, privacy, or collective-credit semantics."
+      "rationale": "The prior stale-source blocker is substantively repaired: current external availability, source-level review dates, opportunity freshness, generated outputs, claim boundaries, and collective credit now agree."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The site remains a selective portfolio projection with mature held claims kept off public proof routes.",
-        "All 14 professor-lens criteria and nine associated mutation tests passed.",
-        "The public composition identifies Jamie's actions and usable results while preserving shared and institutional credit.",
-        "The artistic, civic, technical, relational, and social through-line remains reconstructable through observe, model, prototype, use, learn, revise, and handoff."
+        "Layout-photography evaluation passed 12/12 criteria and deliberately projects exactly 7/7 metadata-minimized photographs while preserving role, selected work, resume, contact, proof, and quieter evidence surfaces instead of mirroring the archive.",
+        "Each photograph remains production hold, rights review-required, credit review-required, and represented-person context-and-consent-review-required; the visible boundary denies sole authorship, attendance, impact, endorsement, and reuse permission.",
+        "Professor lenses passed 14/14 criteria, preserving supported agency, collective credit, artistic/civic/technical continuity, and the observe-model-prototype-use-learn-revise-handoff sequence."
       ],
-      "rationale": "The repaired candidate remains purposeful, legible, continuous, and bounded against self-erasure or inflation."
+      "rationale": "The photographic composition remains selective and legible, and visual presence does not become rights clearance, consent, causal proof, or sole credit."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All five required human-evidence controls remain open under reviewed digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "Collaborator review, hiring usability, job-funnel learning, external validity, rights, consent, and editorial approval are not synthesized closed.",
-        "Each gap retains evidence requirements, anti-gaming rules, next action, and a projection boundary."
+        "All 5/5 human-evidence controls remain open with evidence requirements, anti-gaming rules, next actions, and public-projection boundaries.",
+        "The photo records and layout notebook retain Jamie editorial approval, image-by-image rights and credit review, represented-person dignity/context/consent review, factual review, assistive-technology review, and production observation as manual gates.",
+        "Hiring outputs identify every reader as simulated and explicitly deny actual participation, endorsement, opinion, hiring decisions, or employment outcomes."
       ],
-      "rationale": "Blind spots remain honest, actionable, and controlled by the appropriate humans."
+      "rationale": "Automated success remains governed preflight evidence and does not synthesize human corroboration, collaborator consent, publication authority, hiring usability, or production approval."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The semantic rubric independently recomputes to c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
-        "The repair changed only three reviewed digest values and explanatory comments; no predicate, threshold, criterion, or mutation was weakened.",
-        "All 196 knowledge mutations passed, including hash-refresh attacks, shared-surface bypasses, premature projection, sole-credit inflation, private leakage, and protected-source publication.",
-        "All 15 composite mutations passed with the prohibited holdout files absent, including rubric weakening, fabricated heads, stale outputs, optimizer self-grading, provenance collapse, synthetic human evidence, and blocker compensation."
+        "The semantic rubric digest independently recomputed to c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
+        "Eleven fresh composite mutations rejected branch omission, missing destinations, checksum semantic weakening, fabricated heads, decorative decisions, base-suite weakening, stale generated files, optimizer self-grading, synthetic human closure, source identity mutation, and score compensation.",
+        "Three new Wiki adversarial tests passed: opportunity freshness cannot advance without official-source review, a live opportunity cannot use a not-listed source, and a closed opportunity cannot retain an available source. The full Wiki suite passed 106/106 tests."
       ],
-      "rationale": "Frozen governance resists score gaming and the narrow rebound survives adversarial mutation."
+      "rationale": "The repair closes the prior date-only score-gaming path while preserving the frozen rubric, grader separation, digest bindings, and uncompensated blocker semantics."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The complete 737-file source tree independently hashes to 35f23ed2f86168ec3e9f280f59809ea88f5fb4f6488be4b6f2240467f0c68087 with only the two declared composite result records excluded.",
-        "The responsive receipt matches the current 119-file public-surface fingerprint d3c7e3e801ac56ea09522496adcf8cdfdadf356257b96bc54ce06c7fb6f66558.",
-        "All 56 route-viewport rows report zero accessibility violations, overflow, failed requests, broken decoded images, unlabeled images, and homepage first-viewport failures.",
-        "Seven metadata-minimized photographs retain explicit branch-review authorization, captions, alt text, production holds, rights and credit review, represented-person care and consent review, and visible anti-inference boundaries.",
-        "All affected deterministic and mutation checks passed, and the final source-tree fingerprint remained unchanged after verification."
+        "Final fingerprint recomputation covered 737 tracked or unignored source-tree files, excluded only the two prohibited holdout records, and matched 933000649426f8871658d1b2e0af8cc0ec80ec63586f85e84454b324f2e3f6e9 before and after review; git status and diff checks remained clean.",
+        "Candidate-bound responsive/accessibility validation passed: public-surface fingerprint d3c7e3e801ac56ea09522496adcf8cdfdadf356257b96bc54ce06c7fb6f66558 covers 14 routes at 360, 375, 768, and 1280 pixels with 56 rows, zero axe violations, overflow, broken or unlabeled images, failed requests, non-success responses, heading/landmark failures, or first-viewport failures, and complete lazy-image follow-up.",
+        "This B judgment is independently bound to the exact candidate, frozen prompt, process session, model, read-only sandbox, timestamps, transport, and judgment digest; all nine criteria score 4 and all production authority remains open."
       ],
-      "rationale": "This independent read-only judgment is bound to the exact repaired candidate and frozen rubric; the candidate satisfies the stopping contract without converting process evidence into human approval."
+      "rationale": "The repaired source tree is stable and candidate-current for this independent stopping judgment; repository-level acceptance still depends on pairing distinct same-candidate holdouts and never substitutes for human production approval."
     }
   ],
   "notObserved": [],
   "findings": [
-    "The previous Google Drive, KC Town Hall shared-surface, and WOWList event lock failures are repaired and independently verified.",
-    "The rebound is narrow and substantive: changed public wording and shared surfaces were reviewed while unrelated corpus, proof, event, and governance locks remained unchanged.",
-    "No identity drift, private leakage, unsupported sole credit, outcome inflation, stale generated artifact, hidden deterministic failure, or eval weakening was found.",
-    "The two installed composite holdout JSON files were not read or used.",
-    "Rights, consent, collaborator review, editorial approval, deployment, production observation, indexing, hiring validation, and employment outcomes remain open human or external gates."
+    "The prior Benepass blocker is repaired: the official posting remains absent and is modeled as closed/not-listed rather than live or fresh.",
+    "Five live opportunity records were independently confirmed against current official employer listings and are date-aligned with their official source records.",
+    "The new source/opportunity coupling rejects all three requested mismatch paths, and generated Wiki/employment outputs are current from repair commit 860b2db944ab16d764a782a8ebc5083e356bae08.",
+    "No private coordinates, raw communications, unsupported sole authorship, protected-evidence projection, stale external-state claim, rights clearance, consent closure, hiring outcome, deployment approval, or indexing approval was observed.",
+    "All seven photographs remain a bounded branch composition with production, rights, credit, represented-person, editorial, accessibility-human-review, and deployment-observation gates open."
   ],
-  "recommendation": "Accept this exact candidate for the composite stopping decision, subject to independent pair-level provenance recording. Do not interpret acceptance as rights clearance, consent, editorial or collaborator approval, deployment authorization, indexing approval, hiring validation, employment approval, or evidence of external outcomes.",
+  "recommendation": "Accept this exact source-tree candidate as the repaired composite stopping candidate, subject to the required distinct same-candidate holdout pairing and unchanged-tree verification. Reverify time-sensitive job listings before outward use and preserve every rights, consent, credit, collaborator, editorial, accessibility, deployment, indexing, hiring, and employment gate. Acceptance grants none of those human or external approvals.",
   "provenance": {
     "provider": "codex-native-subagent",
     "processSessionId": "019f9eda-a1ec-78e2-b19b-04d2671d7ef4",
-    "agentNickname": "Plato",
-    "model": "gpt-5.6-sol",
+    "agentNickname": "layout-d-source-verified-b",
+    "model": "gpt-5",
     "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "Perform a fresh adversarial stopping review of repaired layout-D candidate 35f23ed2f86168ec3e9f280f59809ea88f5fb4f6488be4b6f2240467f0c68087 in /private/tmp/jamieburk-art-features-layout-D against frozen rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Read only; do not edit and do not read the two installed composite holdout JSON files. Confirm the previous stale Google Drive projection, KC Town Hall shared-surface, and WOWList event review locks were substantively reviewed, narrowly rebound, and now survive all affected deterministic and mutation checks. Then independently judge every COMP-001 through COMP-009 criterion, exact candidate identity, photography governance, public safety, responsive/accessibility evidence, claim integrity, collective credit, and open human gates. Return valid JSON only with runVersion 2; judgeId \"composite-holdout-layout-d-repaired-b-2026-07-26\"; grader \"independent_llm_judge\"; independentFromOptimizer true; rubricSha256; candidateFingerprint; verdict; nine score objects exactly once with criterionId, score 0 or 4, pass, evidence[], rationale; notObserved; findings; recommendation. Reject any red gate, stale evidence, identity drift, overclaim, leakage, or eval weakening. Acceptance never implies any human approval or external outcome.",
-    "promptSha256": "181c34cd0781106e11b3f024adf1b7d5ae0a2609df81b842753ad9d7dd4c6155",
+    "prompt": "Re-review only the repaired candidate. Perform a fresh adversarial read-only stopping review of exact source-tree candidate 933000649426f8871658d1b2e0af8cc0ec80ec63586f85e84454b324f2e3f6e9 in /private/tmp/jamieburk-art-features-layout-D against frozen rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Do not edit. Do not read or reuse the two installed composite final judgment JSON files. Confirm your prior blockers are substantively repaired: Benepass absent from the current employer feed is modeled closed/not-listed; five live roles are source-verified; official source availability dates and opportunity freshness must match; live/closed availability mismatches fail; three adversarial tests cover those paths; Wiki/employment outputs are current. Then independently judge COMP-001 through COMP-009, visual rights/consent boundaries, candidate identity, responsive/accessibility evidence, public safety, claim integrity, collective credit, eval immutability, and open human gates. Return valid JSON only with runVersion 2; judgeId \"composite-holdout-layout-d-source-verified-b-2026-07-26\"; grader \"independent_llm_judge\"; independentFromOptimizer true; rubricSha256; candidateFingerprint; verdict; nine score objects exactly once with criterionId, score 0 or 4, pass, evidence[], rationale; notObserved; findings; recommendation; and provenance including provider codex-native-subagent, your processSessionId, nickname, model, reasoningEffort, sandbox read-only, ephemeral true, exact prompt, promptSha256, resultTransport multi_agent_v1__wait_agent-completed, operatorAttestation, startedAt, completedAt, judgmentSha256. Reject any stale external-state claim, hidden failure, rights overreach, score gaming, or human-gate closure.",
+    "promptSha256": "00f521a82d57e1a5fc8c3da6b2d83b6770696163c61aa79a2e029936128f26d6",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-26T14:47:44Z",
-    "completedAt": "2026-07-26T14:53:52Z",
-    "judgmentSha256": "7f221da64d19e2725f4dabd60d3f37e6df2b9ffd7fffd3f424b2812e9bef4554"
+    "startedAt": "2026-07-26T15:22:54Z",
+    "completedAt": "2026-07-26T15:26:01Z",
+    "judgmentSha256": "c31f54f06b9d0b3e6c407345d420b66a084b4e13b2c93ac9ccf53647b94a4f9a"
   }
 }
