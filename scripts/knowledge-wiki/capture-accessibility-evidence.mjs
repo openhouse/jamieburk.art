@@ -93,33 +93,38 @@ try {
         }
         document.body.focus();
       });
-      for (let index = 0; index < 12; index += 1) {
+      for (
+        let attempts = 0;
+        keyboardTargets.length < 12 && attempts < 30;
+        attempts += 1
+      ) {
         await page.keyboard.press("Tab");
-        keyboardTargets.push(
-          await page.evaluate(() => {
-            const element = document.activeElement;
-            if (!(element instanceof HTMLElement)) {
-              return { key: "none", visible: false };
-            }
-            const rect = element.getBoundingClientRect();
-            return {
-              key: [
-                element.tagName,
-                element.id,
-                element.getAttribute("href"),
-                element.getAttribute("aria-label"),
-                element.textContent?.trim().slice(0, 40)
-              ]
-                .filter(Boolean)
-                .join("|"),
-              visible:
-                rect.width > 0 &&
-                rect.height > 0 &&
-                getComputedStyle(element).visibility !== "hidden" &&
-                getComputedStyle(element).display !== "none"
-            };
-          })
-        );
+        const target = await page.evaluate(() => {
+          const element = document.activeElement;
+          if (!(element instanceof HTMLElement)) {
+            return { key: "none", visible: false };
+          }
+          const rect = element.getBoundingClientRect();
+          return {
+            key: [
+              element.tagName,
+              element.id,
+              element.getAttribute("href"),
+              element.getAttribute("aria-label"),
+              element.textContent?.trim().slice(0, 40)
+            ]
+              .filter(Boolean)
+              .join("|"),
+            visible:
+              rect.width > 0 &&
+              rect.height > 0 &&
+              getComputedStyle(element).visibility !== "hidden" &&
+              getComputedStyle(element).display !== "none"
+          };
+        });
+        if (!target.key.startsWith("NEXTJS-PORTAL")) {
+          keyboardTargets.push(target);
+        }
       }
       const firstKeyboardTarget = keyboardTargets[0]?.key ?? "";
       const keyboardDistinctTargets = new Set(
@@ -128,6 +133,9 @@ try {
       const keyboardInvisibleTargets = keyboardTargets.filter(
         (target) => !target.visible
       ).length;
+      const keyboardInvisibleTargetKeys = keyboardTargets
+        .filter((target) => !target.visible)
+        .map((target) => target.key);
 
       const axe = await page.evaluate(async () => {
         const result = await globalThis.axe.run(document, {
@@ -182,6 +190,36 @@ try {
           }
         ).length;
         const images = [...document.images];
+        const photoOccurrences = [
+          ...document.querySelectorAll("[data-photo-placement]")
+        ].map((element) => {
+          const image = element.querySelector("img");
+          const captionContainer =
+            element.querySelector("figcaption") ??
+            element.querySelector(".jb-hero-caption");
+          const captionParts = [
+            ...(captionContainer?.querySelectorAll("span") ?? [])
+          ].map((part) => part.textContent?.trim() ?? "");
+          let derivative = image?.currentSrc ?? image?.getAttribute("src") ?? "";
+          try {
+            const parsed = new URL(derivative, location.origin);
+            derivative =
+              parsed.searchParams.get("url") ?? parsed.pathname;
+          } catch {
+            // Keep the browser-provided value for reporting.
+          }
+          return {
+            placementId: element.getAttribute("data-photo-placement"),
+            photoId: element.getAttribute("data-photo-id"),
+            declaredRoute: element.getAttribute("data-photo-route"),
+            renderedRoute: location.pathname,
+            crop: element.getAttribute("data-photo-crop"),
+            derivative,
+            alt: image?.getAttribute("alt") ?? "",
+            caption: captionParts[0] ?? "",
+            credit: captionParts[1] ?? ""
+          };
+        });
         return {
           clientWidth,
           scrollWidth: document.documentElement.scrollWidth,
@@ -194,6 +232,7 @@ try {
           unlabeledImages: images.filter(
             (image) => !image.hasAttribute("alt") || image.alt.trim() === ""
           ).length,
+          photoOccurrences,
           title: document.title
         };
       });
@@ -229,6 +268,7 @@ try {
         keyboardTargetsObserved: keyboardTargets.length,
         keyboardDistinctTargets,
         keyboardInvisibleTargets,
+        keyboardInvisibleTargetKeys,
         keyboardTrapDetected: keyboardDistinctTargets < 3,
         ...after,
         failedRequests
@@ -262,7 +302,7 @@ const report = {
     "package-lock.json"
   ],
   method:
-    "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; 12-step keyboard traversal with skip-link-first assertion; six candidate-bound viewport screenshots; overflow, landmarks, headings, alt text, request failures, and explicit full-page scroll before final image decode checks",
+    "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; 12-step keyboard traversal with skip-link-first assertion; six candidate-bound viewport screenshots; overflow, landmarks, headings, alt text, request failures, governed photo occurrence identity, and explicit full-page scroll before final image decode checks",
   routes,
   viewports,
   screenshots,
@@ -296,6 +336,10 @@ const report = {
     keyboardRowsChecked: rows.length,
     keyboardRowsPassed,
     screenshotsCaptured: screenshots.length,
+    photoOccurrenceRowsChecked: rows.length,
+    photoOccurrencesAtDesktop: rows
+      .filter((row) => row.viewport === 1280)
+      .reduce((sum, row) => sum + row.photoOccurrences.length, 0),
     lazyImageFollowUpPerformed: true,
     allImagesLoadedAfterScroll: rows.every(
       (row) => row.brokenImagesAfterScroll === 0

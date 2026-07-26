@@ -13,6 +13,7 @@
     "photo_public_derivatives_reconciled",
     "photo_derivative_integrity",
     "photo_placements_and_edition_governed",
+    "photo_browser_occurrences_bound",
     "photo_occurrence_copy_bound",
     "photo_caption_credit_rendered",
     "photo_recollection_nonpublishing",

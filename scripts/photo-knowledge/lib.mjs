@@ -10,6 +10,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import ts from "typescript";
 
+import {
+  computePublicSurfaceFingerprint
+} from "../knowledge-wiki/accessibility-evidence.mjs";
 import { compileWiki } from "../knowledge-wiki/lib.mjs";
 import { publicPhotoManifest } from "../../apps/www/src/data/photography.ts";
 
@@ -19,6 +22,8 @@ export const defaultRepoRoot = path.resolve(
 );
 
 export const manifestPath = "docs/knowledge-bank/data/photo-knowledge.json";
+const responsiveEvidencePath =
+  "docs/qa/evals-H/responsive-route-matrix.json";
 
 const requiredRecordIds = [
   "photo.east-river-manhattan-bridge.2022",
@@ -61,6 +66,7 @@ const expectedCommands = [
   "photos:impact",
   "photos:health",
   "photos:edition",
+  "photos:withdrawal-plan",
   "photos:recollection",
   "photos:test"
 ];
@@ -227,6 +233,88 @@ function sha256(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
 }
 
+function canonicalJson(value) {
+  if (Array.isArray(value)) return value.map(canonicalJson);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value)
+        .sort(([left], [right]) => left.localeCompare(right))
+        .map(([key, entry]) => [key, canonicalJson(entry)])
+    );
+  }
+  return value;
+}
+
+function compareOccurrenceRows(left, right) {
+  return compareText(left.placementId, right.placementId);
+}
+
+export function validateBrowserPhotoOccurrences({
+  evidence,
+  manifest,
+  repoRoot = defaultRepoRoot
+}) {
+  const current = computePublicSurfaceFingerprint(repoRoot);
+  const expectedByRoute = new Map();
+  for (const photo of manifest.photos) {
+    for (const placement of photo.placements) {
+      const row = {
+        placementId: placement.id,
+        photoId: photo.id,
+        declaredRoute: placement.route,
+        renderedRoute: placement.route,
+        crop: placement.crop,
+        derivative: photo.src,
+        alt: photo.alt,
+        caption: photo.caption,
+        credit: photo.credit
+      };
+      const existing = expectedByRoute.get(placement.route) ?? [];
+      existing.push(row);
+      expectedByRoute.set(placement.route, existing);
+    }
+  }
+  const rows = Array.isArray(evidence?.rows) ? evidence.rows : [];
+  const viewports = Array.isArray(evidence?.viewports) ? evidence.viewports : [];
+  const routes = Array.isArray(evidence?.routes) ? evidence.routes : [];
+  const matrixComplete =
+    rows.length === viewports.length * routes.length &&
+    viewports.every((viewport) =>
+      routes.every((route) =>
+        rows.some((row) => row.viewport === viewport && row.path === route)
+      )
+    );
+  const rowsBound = matrixComplete && rows.every((row) => {
+    const actual = Array.isArray(row.photoOccurrences)
+      ? [...row.photoOccurrences].sort(compareOccurrenceRows)
+      : null;
+    const expected = [...(expectedByRoute.get(row.path) ?? [])]
+      .sort(compareOccurrenceRows);
+    return actual !== null &&
+      JSON.stringify(canonicalJson(actual)) ===
+        JSON.stringify(canonicalJson(expected));
+  });
+  const expectedCount = [...expectedByRoute.values()]
+    .reduce((sum, routeRows) => sum + routeRows.length, 0);
+  const desktopRows = rows.filter((row) => row.viewport === 1280);
+  const observedDesktopCount = desktopRows.reduce(
+    (sum, row) =>
+      sum + (Array.isArray(row.photoOccurrences) ? row.photoOccurrences.length : 0),
+    0
+  );
+  return {
+    passed:
+      evidence?.publicSurfaceFingerprint === current.fingerprint &&
+      evidence?.publicSurfaceFileCount === current.fileCount &&
+      rowsBound &&
+      observedDesktopCount === expectedCount,
+    expectedCount,
+    observedDesktopCount,
+    rowsBound,
+    current
+  };
+}
+
 function readWebpDimensions(bytes) {
   const marker = Buffer.from([0x9d, 0x01, 0x2a]);
   const markerIndex = bytes.indexOf(marker);
@@ -245,10 +333,76 @@ export function loadPhotoKnowledge(repoRoot = defaultRepoRoot) {
   return JSON.parse(readFileSync(path.join(repoRoot, manifestPath), "utf8"));
 }
 
+export function buildWithdrawalPlan(
+  manifest,
+  photoId,
+  sitePhotos = publicPhotoManifest
+) {
+  const photo = manifest.photos.find((item) => item.id === photoId);
+  if (!photo) throw new Error(`Unknown photo: ${photoId}`);
+  const activeProjection = sitePhotos.find((item) => item.wikiId === photoId);
+  return {
+    id: `withdrawal.${photoId}`,
+    photoId,
+    status: "human-review-required",
+    writesApplied: false,
+    activeProjectionPresent: Boolean(activeProjection),
+    currentOccurrences: photo.placements.map((placement) => ({
+      placementId: placement.id,
+      route: placement.route,
+      derivativeId: photo.derivativeId,
+      priorState: {
+        staging: placement.staging,
+        production: placement.production,
+        indexing: placement.indexing
+      }
+    })),
+    requiredActions: [
+      "Place every current occurrence and the containing edition on hold.",
+      "Remove the photo from the public manifest and every rendered route.",
+      "Remove the public derivative when no separately approved occurrence uses it.",
+      "Append a tombstoned historical occurrence without a private source locator.",
+      "Regenerate usage, impact, health, Wiki, accessibility, and public-safety evidence.",
+      "Require Jamie and any applicable creator, rights, consent, credit, and represented-person reviewers to approve a later restoration."
+    ],
+    historicalOccurrencePolicy:
+      "Retain route, placement, derivative identity, prior state, and withdrawal reason as a non-rendering tombstone; never retain a private source locator.",
+    rollbackPolicy:
+      "Restoration is a new human-reviewed publication decision, not an automatic reversal.",
+    humanAuthority:
+      "This plan is advisory. It does not remove, restore, publish, deploy, or index anything."
+  };
+}
+
 export function applyPhotoRevocation(manifest, photoId) {
   const next = structuredClone(manifest);
   const photo = next.photos.find((item) => item.id === photoId);
   if (!photo) throw new Error(`Unknown photo: ${photoId}`);
+  const plan = buildWithdrawalPlan(next, photoId);
+  next.historicalOccurrences ??= [];
+  next.withdrawalPlans ??= [];
+  for (const placement of photo.placements) {
+    next.historicalOccurrences.push({
+      id: `history.${placement.id}.withdrawn`,
+      photoId,
+      placementId: placement.id,
+      derivativeId: photo.derivativeId,
+      route: placement.route,
+      component: placement.component,
+      crop: placement.crop,
+      priorState: {
+        staging: placement.staging,
+        production: placement.production,
+        indexing: placement.indexing
+      },
+      lifecycleState: "withdrawal-planned",
+      renders: false
+    });
+  }
+  next.withdrawalPlans = [
+    ...next.withdrawalPlans.filter((item) => item.photoId !== photoId),
+    plan
+  ];
   photo.permissionState = "revoked";
   photo.productionApproval = "hold";
   for (const placement of photo.placements) {
@@ -273,6 +427,11 @@ export function evaluatePhotoKnowledge(options = {}) {
   const packageManifest =
     options.packageManifest ??
     JSON.parse(readFileSync(path.join(repoRoot, "package.json"), "utf8"));
+  const responsiveEvidence =
+    options.responsiveEvidence ??
+    JSON.parse(
+      readFileSync(path.join(repoRoot, responsiveEvidencePath), "utf8")
+    );
   const rfcIndex =
     options.rfcIndex ??
     readFileSync(path.join(repoRoot, "rfcs/README.md"), "utf8");
@@ -319,6 +478,8 @@ export function evaluatePhotoKnowledge(options = {}) {
   const photoManifestExact =
     manifest.schemaVersion === 1 &&
     manifest.governingRfc === "rfcs/0003-living-photographic-knowledge-loop.md" &&
+    Array.isArray(manifest.historicalOccurrences) &&
+    Array.isArray(manifest.withdrawalPlans) &&
     manifest.photos.length === 6 &&
     new Set(manifestIds).size === manifestIds.length &&
     photoRecordIds.every((id) => manifestIds.includes(id));
@@ -383,6 +544,11 @@ export function evaluatePhotoKnowledge(options = {}) {
         matches[0].component === placement.component
       );
     });
+  const browserOccurrences = validateBrowserPhotoOccurrences({
+    evidence: responsiveEvidence,
+    manifest,
+    repoRoot
+  });
 
   const preferredCreatorAndHistory =
     east?.creator_statements?.some(
@@ -525,7 +691,13 @@ export function evaluatePhotoKnowledge(options = {}) {
     /\{photo\.caption\}/.test(heroSource) &&
     /\{photo\.credit\}/.test(heroSource) &&
     /\{media\.caption\}/.test(applicationSource(workCardPath)) &&
-    /\{fieldPhoto\.credit\}/.test(applicationSource(workCardPath));
+    /<FieldPhoto/.test(applicationSource(workCardPath)) &&
+    /photoId="photo\.kc-town-hall-before"/.test(
+      applicationSource(workCardPath)
+    ) &&
+    /placementId="placement\.work\.kc-town-hall-before\.layout-b"/.test(
+      applicationSource(workCardPath)
+    );
 
   const surfaceFiles = [
     ...walkFiles(path.join(repoRoot, "rfcs")),
@@ -537,7 +709,7 @@ export function evaluatePhotoKnowledge(options = {}) {
     path.join(repoRoot, "apps/www/src/data/photography.ts")
   ];
   const protectedPathPattern = new RegExp(
-    `(?:${["/", "Users", "/"].join("")}|${["/", "Volumes", "/"].join("")}|Mobile Documents|Photos\\.sqlite|Library/Photos|file://)`,
+    `(?:${["/", "Users", "/"].join("")}|${["/", "Volumes", "/"].join("")}|${["/", "private", "/", "(?:tmp|var/folders)", "/"].join("")}|${["/", "tmp", "/"].join("")}|${["/", "var", "/", "folders", "/"].join("")}|Mobile Documents|Photos\\.sqlite|Library/Photos|file://)`,
     "i"
   );
   const protectedAssetPattern =
@@ -590,9 +762,36 @@ export function evaluatePhotoKnowledge(options = {}) {
         placement.indexing === "hold"
     ) &&
     revoked.edition.production === "hold" &&
-    revoked.edition.indexing === "hold";
+    revoked.edition.indexing === "hold" &&
+    revoked.historicalOccurrences.filter(
+      (item) => item.photoId === east.id && item.renders === false
+    ).length === eastManifest.placements.length &&
+    revoked.withdrawalPlans.some(
+      (plan) =>
+        plan.photoId === east.id &&
+        plan.status === "human-review-required" &&
+        plan.writesApplied === false &&
+        /new human-reviewed publication decision/i.test(plan.rollbackPolicy)
+    );
+  const sitePhotoIds = new Set(sitePhotos.map((photo) => photo.wikiId));
   const persistedRevocationFailsClosed = manifest.photos.every((photo) => {
     if (!withdrawalPermissionStates.has(photo.permissionState)) return true;
+    const historicalPlacementIds = new Set(
+      (manifest.historicalOccurrences ?? [])
+        .filter(
+          (item) =>
+            item.photoId === photo.id &&
+            item.renders === false &&
+            item.lifecycleState === "withdrawn"
+        )
+        .map((item) => item.placementId)
+    );
+    const implementedPlan = (manifest.withdrawalPlans ?? []).find(
+      (plan) =>
+        plan.photoId === photo.id &&
+        plan.status === "implemented" &&
+        plan.writesApplied === true
+    );
     return (
       photo.productionApproval === "hold" &&
       photo.placements.every(
@@ -604,7 +803,19 @@ export function evaluatePhotoKnowledge(options = {}) {
       manifest.edition.status === "withdrawal-review" &&
       manifest.edition.staging === "hold" &&
       manifest.edition.production === "hold" &&
-      manifest.edition.indexing === "hold"
+      manifest.edition.indexing === "hold" &&
+      !sitePhotoIds.has(photo.id) &&
+      !existsSync(
+        path.join(
+          repoRoot,
+          "apps/www/public",
+          photo.src.replace(/^\//, "")
+        )
+      ) &&
+      photo.placements.every((placement) =>
+        historicalPlacementIds.has(placement.id)
+      ) &&
+      Boolean(implementedPlan)
     );
   });
   const revocationFailsClosed =
@@ -644,6 +855,7 @@ export function evaluatePhotoKnowledge(options = {}) {
     photo_derivative_integrity: derivativeIntegrity,
     photo_placements_and_edition_governed:
       placementsGoverned && renderedOccurrencesBound,
+    photo_browser_occurrences_bound: browserOccurrences.passed,
     photo_occurrence_copy_bound: occurrenceCopyBound,
     photo_caption_credit_rendered: captionAndCreditRendered,
     photo_recollection_nonpublishing: recollectionNonpublishing,
@@ -678,11 +890,136 @@ export function evaluatePhotoKnowledge(options = {}) {
   };
 }
 
+export function compilePhotoEdition(manifest) {
+  const occurrences = manifest.photos
+    .flatMap((photo) =>
+      photo.placements.map((placement) => ({
+        placement: placement.id,
+        asset: photo.id,
+        derivative: photo.derivativeId,
+        route: placement.route,
+        component: placement.component,
+        crop: placement.crop,
+        caption: photo.caption,
+        credit: photo.credit,
+        staging: placement.staging,
+        production: placement.production,
+        indexing: placement.indexing
+      }))
+    )
+    .sort((left, right) => compareText(left.placement, right.placement));
+  return {
+    ...manifest.edition,
+    occurrences,
+    historicalOccurrences: manifest.historicalOccurrences ?? [],
+    protectedAbsences: manifest.protectedAbsences.map((item) => item.id),
+    selectedByAutomation: false
+  };
+}
+
+export function comparePhotoEditions(current, comparison) {
+  const currentByPlacement = new Map(
+    current.occurrences.map((item) => [item.placement, item])
+  );
+  const comparisonByPlacement = new Map(
+    comparison.occurrences.map((item) => [item.placement, item])
+  );
+  const added = [...currentByPlacement.keys()]
+    .filter((id) => !comparisonByPlacement.has(id))
+    .sort();
+  const removed = [...comparisonByPlacement.keys()]
+    .filter((id) => !currentByPlacement.has(id))
+    .sort();
+  const changed = [...currentByPlacement.keys()]
+    .filter((id) => comparisonByPlacement.has(id))
+    .filter(
+      (id) =>
+        JSON.stringify(canonicalJson(currentByPlacement.get(id))) !==
+        JSON.stringify(canonicalJson(comparisonByPlacement.get(id)))
+    )
+    .sort()
+    .map((id) => ({
+      placement: id,
+      before: comparisonByPlacement.get(id),
+      after: currentByPlacement.get(id)
+    }));
+  return {
+    from: comparison.id,
+    to: current.id,
+    added,
+    removed,
+    changed,
+    automaticSelection: false
+  };
+}
+
+export function buildPhotoImpact({
+  manifest,
+  wiki,
+  photoId = "photo.east-river-manhattan-bridge.2022",
+  changeType = "record-change"
+}) {
+  const photo = manifest.photos.find((item) => item.id === photoId);
+  const impactedWikiRecords = [...wiki.byId.values()]
+    .filter(
+      (record) =>
+        record.id === photoId ||
+        record.relations?.some((relation) => relation.target === photoId)
+    )
+    .map((record) => ({ id: record.id, path: record.path }))
+    .sort((a, b) => compareText(a.id, b.id));
+  return {
+    photoId,
+    changeType,
+    found: Boolean(photo),
+    wikiRecords: impactedWikiRecords,
+    manifest: photo ? manifestPath : null,
+    routes: photo?.placements.map((placement) => placement.route) ?? [],
+    placements: photo?.placements.map((placement) => placement.id) ?? [],
+    components: photo?.placements.map((placement) => placement.component) ?? [],
+    derivative: photo?.src ?? null,
+    portfolioEditions: photo ? [manifest.edition.id] : [],
+    reports: expectedReports,
+    humanReviews: photo
+      ? [
+          "creator and credit",
+          "permission and rights",
+          "represented-person consent when applicable",
+          "caption and crop",
+          "final editorial selection",
+          "production deployment and indexing"
+        ]
+      : [],
+    unmeasured: [
+      "visitor understanding",
+      "hiring outcome",
+      "production performance",
+      "indexing outcome"
+    ],
+    withdrawalPlan:
+      photo && changeType === "withdrawal"
+        ? buildWithdrawalPlan(manifest, photoId)
+        : null
+  };
+}
+
 export function buildPhotoReports(options = {}) {
   const repoRoot = options.repoRoot ?? defaultRepoRoot;
   const manifest = options.manifest ?? loadPhotoKnowledge(repoRoot);
+  const sitePhotos = options.publicPhotoManifest ?? publicPhotoManifest;
+  const responsiveEvidence =
+    options.responsiveEvidence ??
+    JSON.parse(
+      readFileSync(path.join(repoRoot, responsiveEvidencePath), "utf8")
+    );
   const evaluation =
-    options.evaluation ?? evaluatePhotoKnowledge({ repoRoot, manifest });
+    options.evaluation ??
+    evaluatePhotoKnowledge({
+      repoRoot,
+      manifest,
+      publicPhotoManifest: sitePhotos,
+      responsiveEvidence
+    });
   const wiki = options.wiki ?? compileWiki({ repoRoot });
   const renderedOccurrences =
     options.renderedOccurrences ?? collectRenderedPhotoOccurrences(repoRoot);
@@ -716,7 +1053,7 @@ export function buildPhotoReports(options = {}) {
       (a, b) =>
         compareText(a.route, b.route) || compareText(a.id, b.id)
     );
-  const usage = placementRows.map((row) => ({
+  const activeUsage = placementRows.map((row) => ({
     asset: row.asset,
     derivative: row.derivative,
     placement: row.id,
@@ -726,11 +1063,28 @@ export function buildPhotoReports(options = {}) {
     staging: row.staging,
     production: row.production,
     indexing: row.indexing,
+    lifecycle: "current",
     rendered:
       renderedOccurrences.filter(
         (occurrence) => occurrence.placementId === row.id
       ).length === 1
   }));
+  const historicalUsage = (manifest.historicalOccurrences ?? []).map(
+    (row) => ({
+      asset: row.photoId,
+      derivative: row.derivativeId,
+      placement: row.placementId,
+      route: row.route,
+      component: row.component,
+      crop: row.crop,
+      staging: row.priorState?.staging ?? "unknown",
+      production: row.priorState?.production ?? "unknown",
+      indexing: row.priorState?.indexing ?? "unknown",
+      lifecycle: row.lifecycleState,
+      rendered: false
+    })
+  );
+  const usage = [...activeUsage, ...historicalUsage];
   const permissionRows = rows.map(
     ({ id, creatorState, permissionState, sourceBinding, productionApproval }) => ({
       id,
@@ -742,42 +1096,38 @@ export function buildPhotoReports(options = {}) {
   );
   const impactPhotoId =
     options.impactPhotoId ?? "photo.east-river-manhattan-bridge.2022";
-  const impactPhoto = manifest.photos.find((photo) => photo.id === impactPhotoId);
-  const impactedWikiRecords = [...wiki.byId.values()]
-    .filter(
-      (record) =>
-        record.id === impactPhotoId ||
-        record.relations?.some((relation) => relation.target === impactPhotoId)
-    )
-    .map((record) => ({ id: record.id, path: record.path }))
-    .sort((a, b) => compareText(a.id, b.id));
-  const impact = {
+  const impactChangeType = options.impactChangeType ?? "record-change";
+  const impact = buildPhotoImpact({
+    manifest,
+    wiki,
     photoId: impactPhotoId,
-    found: Boolean(impactPhoto),
-    wikiRecords: impactedWikiRecords,
-    manifest: impactPhoto ? manifestPath : null,
-    routes: impactPhoto?.placements.map((placement) => placement.route) ?? [],
-    placements:
-      impactPhoto?.placements.map((placement) => placement.id) ?? [],
-    portfolioEditions: impactPhoto ? [manifest.edition.id] : [],
-    reports: expectedReports,
-    humanReviews: impactPhoto
-      ? [
-          "creator and credit",
-          "permission and rights",
-          "represented-person consent when applicable",
-          "caption and crop",
-          "final editorial selection",
-          "production deployment and indexing"
-        ]
-      : [],
-    unmeasured: [
-      "visitor understanding",
-      "hiring outcome",
-      "production performance",
-      "indexing outcome"
-    ]
-  };
+    changeType: impactChangeType
+  });
+  const browserOccurrenceValidation = validateBrowserPhotoOccurrences({
+    evidence: responsiveEvidence,
+    manifest,
+    repoRoot
+  });
+  const withdrawalConflicts = manifest.photos
+    .filter((photo) => withdrawalPermissionStates.has(photo.permissionState))
+    .flatMap((photo) => {
+      const findings = [];
+      if (sitePhotos.some((sitePhoto) => sitePhoto.wikiId === photo.id)) {
+        findings.push(`${photo.id}: active public manifest entry remains`);
+      }
+      if (
+        existsSync(
+          path.join(
+            repoRoot,
+            "apps/www/public",
+            photo.src.replace(/^\//, "")
+          )
+        )
+      ) {
+        findings.push(`${photo.id}: public derivative remains`);
+      }
+      return findings;
+    });
   const health = {
     evaluationPassed: evaluation.passed,
     staleReviewRecords: [...wiki.byId.values()]
@@ -796,12 +1146,32 @@ export function buildPhotoReports(options = {}) {
       )
       .map((row) => row.id),
     unrenderedPlacements: usage
-      .filter((row) => !row.rendered)
+      .filter((row) => row.lifecycle === "current" && !row.rendered)
       .map((row) => row.placement),
     unusedDerivatives: rows
       .filter((row) => row.routes.length === 0)
       .map((row) => row.derivativeId),
     protectedAbsences: manifest.protectedAbsences.map((item) => item.id),
+    runtimeOccurrenceEvidence: {
+      passed: browserOccurrenceValidation.passed,
+      expectedDesktopOccurrences: browserOccurrenceValidation.expectedCount,
+      observedDesktopOccurrences:
+        browserOccurrenceValidation.observedDesktopCount
+    },
+    historicalOccurrenceCount: historicalUsage.length,
+    withdrawalPlanCount: (manifest.withdrawalPlans ?? []).length,
+    withdrawalConflicts,
+    maintenance: {
+      publicSurfaceEvidenceCurrent:
+        browserOccurrenceValidation.current.fingerprint ===
+        responsiveEvidence.publicSurfaceFingerprint,
+      currentOccurrencesAccountedFor:
+        activeUsage.every((row) => row.rendered),
+      historicalOccurrencesNeverRender:
+        historicalUsage.every((row) => row.rendered === false),
+      automaticWithdrawal: false,
+      automaticRestoration: false
+    },
     serendipity: {
       openRecollections: [
         "source.recollection.jamie.canoe-commuting.2026-07"
@@ -810,24 +1180,7 @@ export function buildPhotoReports(options = {}) {
       automaticPromotion: false
     }
   };
-  const edition = {
-    ...manifest.edition,
-    occurrences: placementRows.map((row) => ({
-      placement: row.id,
-      asset: row.asset,
-      derivative: row.derivative,
-      route: row.route,
-      component: row.component,
-      crop: row.crop,
-      caption: row.caption,
-      credit: row.credit,
-      staging: row.staging,
-      production: row.production,
-      indexing: row.indexing
-    })),
-    protectedAbsences: manifest.protectedAbsences.map((item) => item.id),
-    selectedByAutomation: false
-  };
+  const edition = compilePhotoEdition(manifest);
   const report = {
     schemaVersion: 1,
     generatedFor: "feature/photo-knowledge-B",
@@ -871,7 +1224,7 @@ export function buildPhotoReports(options = {}) {
         `| ${row.route} | ${row.id} | ${row.asset} | ${row.component} | ${row.crop} | ${row.caption} | ${row.credit} | ${row.staging} | ${row.production} | ${row.indexing} |`
     ),
     "",
-    "## East River impact",
+    `## Impact: ${impact.photoId}`,
     "",
     `- Affected Wiki records: ${impact.wikiRecords.map((record) => `\`${record.id}\``).join(", ")}.`,
     `- Affected routes: ${impact.routes.map((route) => `\`${route}\``).join(", ")}.`,

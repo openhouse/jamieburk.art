@@ -1,45 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Route } from "next";
+import { FieldPhoto } from "@/components/FieldPhoto";
 import { StatusBadge } from "@/components/StatusBadge";
 import { TagList } from "@/components/TagList";
-import {
-  assertPhotoPlacement,
-  getCaseStudyPhoto
-} from "@/data/photography";
+import { getCaseStudyPhoto } from "@/data/photography";
 import type { WorkMeta } from "@/types/work";
 
 type WorkCardProps = {
   item: WorkMeta;
+  includeCaseStudyPhoto?: boolean;
 };
 
-export function WorkCard({ item }: WorkCardProps) {
-  const fieldPhoto = getCaseStudyPhoto(item.slug);
-  if (fieldPhoto) {
-    assertPhotoPlacement(
-      fieldPhoto,
-      "photo.kc-town-hall-before",
-      "placement.work.kc-town-hall-before.layout-b"
-    );
-  }
+export function WorkCard({
+  item,
+  includeCaseStudyPhoto = false
+}: WorkCardProps) {
+  const fieldPhoto = includeCaseStudyPhoto
+    ? getCaseStudyPhoto(item.slug)
+    : undefined;
   const artifactMedia = item.artifacts.find((artifact) => artifact.media)?.media;
-  const media = fieldPhoto
+  const media = artifactMedia
     ? {
-        alt: fieldPhoto.alt,
-        caption: fieldPhoto.caption,
-        height: fieldPhoto.height,
-        src: fieldPhoto.src,
-        width: fieldPhoto.width
+        alt: artifactMedia.alt,
+        caption: artifactMedia.caption,
+        height: 800,
+        src: artifactMedia.src,
+        width: 1200
       }
-    : artifactMedia
-      ? {
-          alt: artifactMedia.alt,
-          caption: artifactMedia.caption,
-          height: 800,
-          src: artifactMedia.src,
-          width: 1200
-        }
-      : undefined;
+    : undefined;
+  const hasMedia = Boolean(fieldPhoto || media);
 
   return (
     <article className="jb-work-row">
@@ -51,7 +41,7 @@ export function WorkCard({ item }: WorkCardProps) {
         </div>
         <div
           className={
-            media
+            hasMedia
               ? "grid min-w-0 gap-6 lg:grid-cols-[minmax(0,0.62fr)_minmax(220px,0.38fr)]"
               : "min-w-0"
           }
@@ -88,13 +78,17 @@ export function WorkCard({ item }: WorkCardProps) {
               Read case study
             </Link>
           </div>
-          {media ? (
-            <figure
-              data-photo-crop="aspect-[4/3] object-cover object-top"
-              data-photo-id="photo.kc-town-hall-before"
-              data-photo-placement="placement.work.kc-town-hall-before.layout-b"
-              data-photo-route="/work"
-            >
+          {fieldPhoto ? (
+            <FieldPhoto
+              crop="aspect-[4/3] object-cover object-top"
+              photo={fieldPhoto}
+              photoId="photo.kc-town-hall-before"
+              placementId="placement.work.kc-town-hall-before.layout-b"
+              route="/work"
+              sizes="(min-width: 1024px) 28vw, 100vw"
+            />
+          ) : media ? (
+            <figure>
               <Image
                 alt={media.alt}
                 className="aspect-[4/3] w-full object-cover object-top"
@@ -105,9 +99,6 @@ export function WorkCard({ item }: WorkCardProps) {
               />
               <figcaption className="border-b border-jb-ink/12 py-2 text-xs leading-5 text-jb-ink/68">
                 <span>{media.caption}</span>
-                {fieldPhoto ? (
-                  <span className="mt-1 block">{fieldPhoto.credit}</span>
-                ) : null}
               </figcaption>
             </figure>
           ) : null}

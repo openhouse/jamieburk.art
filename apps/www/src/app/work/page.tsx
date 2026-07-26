@@ -86,7 +86,11 @@ export default function WorkPage() {
               </div>
               <div className="mt-5">
                 {groupedItems.map((item) => (
-                  <WorkCard item={item} key={item.slug} />
+                  <WorkCard
+                    includeCaseStudyPhoto
+                    item={item}
+                    key={item.slug}
+                  />
                 ))}
               </div>
             </section>

@@ -2301,6 +2301,7 @@ npm run photos:usage
 npm run photos:impact
 npm run photos:health
 npm run photos:edition
+npm run photos:withdrawal-plan
 npm run photos:recollection
 npm run photos:test
 ```
@@ -2388,6 +2389,12 @@ Generate the maintenance and serendipity diagnostics defined in section 19.
 
 Compile and compare the exact occurrence set for a named portfolio edition
 without choosing the edition automatically.
+
+#### `photos:withdrawal-plan`
+
+Compile the current routes, derivatives, historical-occurrence obligations,
+regeneration steps, rollback boundary, and human review gates for withdrawing a
+named photo. The command is advisory and applies no writes.
 
 #### `photos:recollection`
 

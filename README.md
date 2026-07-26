@@ -75,6 +75,21 @@ discussion; it does not authorize implementation. Run `npm run check:rfcs` to
 validate the RFC index, metadata, required design sections, and public-safety basics. The root
 `npm run check` command and pull-request CI both enforce this contract.
 
+## Photographic Knowledge Loop
+
+RFC 0003 is implemented through the public-safe photo records in
+`docs/knowledge-bank/data/photo-knowledge.json` and the local commands under
+`scripts/photo-knowledge/`. Source pixels, private archive identifiers,
+permission correspondence, and protected locators remain outside public Git.
+
+Use `npm run photos:report` to regenerate the governed report, then
+`npm run photos:check` and `npm run photos:test` to verify it. The
+`photos:placements`, `photos:permissions`, `photos:usage`, `photos:impact`,
+`photos:health`, and `photos:edition` commands query the current verified
+state. `photos:curatorial:run`, `photos:recollection`, and
+`photos:withdrawal-plan` produce named advisory packets; none may publish,
+withdraw, restore, deploy, or index a photograph.
+
 ## Environment
 
 Staging is the first deployment target and is non-indexable by default:

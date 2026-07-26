@@ -33,6 +33,12 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:knowledge-evals`
 - `npm run test:knowledge-evals`
 - `npm run report:knowledge-evals`
+- `npm run photos:report`
+- `npm run photos:check`
+- `npm run photos:test`
+- `npm run photos:curatorial:run -- --photo <id> --placement <id>`
+- `npm run photos:impact -- --photo <id> --change withdrawal`
+- `npm run photos:withdrawal-plan -- --photo <id>`
 
 ## Public-Safety Rules
 

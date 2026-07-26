@@ -2,7 +2,7 @@
 
 - Photos: 6
 - Placements: 11
-- Blocking criteria: 20
+- Blocking criteria: 21
 - Deterministic status: PASS
 - Production: open
 - Indexing: open
@@ -34,7 +34,7 @@
 | /work/kc-town-hall | placement.kc-town-hall.tired-of-tires-load.layout-b | photo.tired-of-tires-load | apps/www/src/components/CaseStudyLayout.tsx | aspect-[4/3] object-cover | A neighborhood tire-removal load ready for the city recycling center. | Jamie Burkart archive. Photographer credit under review. | pending | open | open |
 | /work/technical-operations | placement.technical-operations.paper-trimming.layout-b | photo.paper-trimming | apps/www/src/app/work/technical-operations/page.tsx | aspect-[16/9] object-cover | Paper aligned at the trimming table. | Jamie Burkart archive. Photographer credit under review. | pending | open | open |
 
-## East River impact
+## Impact: photo.east-river-manhattan-bridge.2022
 
 - Affected Wiki records: `edition.portfolio.layout-b.2026-07`, `evaluation.photo-curation.home-east-river.2026-07-26`, `index.knowledge-wiki.photographic-knowledge-loop`, `index.photo-set.east-river-canoe.2022`, `photo.east-river-manhattan-bridge.2022`, `portfolio.photo.home-east-river.layout-b`, `source.permission.elana-gordon.east-river-portfolio`, `source.photo-metadata.east-river.2022`, `source.recollection.jamie.canoe-commuting.2026-07`.
 - Affected routes: `/`.

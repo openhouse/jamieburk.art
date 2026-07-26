@@ -149,6 +149,31 @@ export function computeHoldoutJudgmentDigest(run) {
   return sha256(holdoutJudgmentPayload(run));
 }
 
+export function validateAcceptedHoldoutScores(run, requiredCriterionIds) {
+  if (!Array.isArray(run.scores)) return false;
+  const observedIds = run.scores.map((score) => score.criterionId);
+  return (
+    run.scores.length === requiredCriterionIds.length &&
+    new Set(observedIds).size === requiredCriterionIds.length &&
+    requiredCriterionIds.every((id) => observedIds.includes(id)) &&
+    run.scores.every(
+      (score) =>
+        requiredCriterionIds.includes(score.criterionId) &&
+        score.score === 4 &&
+        score.pass === true &&
+        Array.isArray(score.evidence) &&
+        score.evidence.length > 0 &&
+        typeof score.rationale === "string" &&
+        score.rationale.trim().length > 0
+    ) &&
+    Array.isArray(run.findings) &&
+    run.findings.length === 0 &&
+    typeof run.recommendation === "string" &&
+    run.recommendation.trim().length > 0 &&
+    !/\breject\b|\bdo not accept\b|\bblocking\b/i.test(run.recommendation)
+  );
+}
+
 export function checkCompositeDerivedCurrentness() {
   try {
     const wiki = compileWiki();
@@ -443,9 +468,7 @@ export function evaluateCompositeIntegration({
       run.candidateFingerprint === candidateFingerprint &&
       run.verdict === "accepted" &&
       Array.isArray(run.notObserved) && run.notObserved.length === 0 &&
-      requiredCriterionIds.every((id) =>
-        run.scores.some((score) => score.criterionId === id && score.score === 4 && score.pass === true)
-      )
+      validateAcceptedHoldoutScores(run, requiredCriterionIds)
     );
   results.push(criterion(
     "COMP-009",

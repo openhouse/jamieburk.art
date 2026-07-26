@@ -1,15 +1,15 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-26T19:18:21.029Z",
-  "baseUrl": "http://127.0.0.1:3042",
-  "publicSurfaceFingerprint": "42e84681770cb5638ac1db3ca32fd1228ac1290ee8e8df82c627c2902dd6212e",
+  "checkedAt": "2026-07-26T20:08:27.894Z",
+  "baseUrl": "http://127.0.0.1:3052",
+  "publicSurfaceFingerprint": "831eb12aac0b95f45b7a4a1b509e484eb3bca7a31d4fe278d8a4b5a22b8288bb",
   "publicSurfaceFileCount": 117,
   "publicSurfaceScope": [
     "tracked and unignored apps/www/**",
     "package.json",
     "package-lock.json"
   ],
-  "method": "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; 12-step keyboard traversal with skip-link-first assertion; six candidate-bound viewport screenshots; overflow, landmarks, headings, alt text, request failures, and explicit full-page scroll before final image decode checks",
+  "method": "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; 12-step keyboard traversal with skip-link-first assertion; six candidate-bound viewport screenshots; overflow, landmarks, headings, alt text, request failures, governed photo occurrence identity, and explicit full-page scroll before final image decode checks",
   "routes": [
     "/",
     "/work",
@@ -37,13 +37,13 @@
       "viewport": 360,
       "path": "/",
       "file": "docs/qa/evals-H/layout-B-screenshots/home-mobile.png",
-      "sha256": "d6b5d58da1a64707612b02483923876f7c5dd9ef96933b3a52cde0319356e91d"
+      "sha256": "477083b243e45af6ec452429b1ec8d6e06f9da083763b0a6d3d060e28478b6d8"
     },
     {
       "viewport": 375,
       "path": "/work/technical-operations",
       "file": "docs/qa/evals-H/layout-B-screenshots/technical-operations-mobile.png",
-      "sha256": "adf0465c6ffac99991ef3540194afd888b9a4d1e9b8404baef886a703e4cfe92"
+      "sha256": "f8a7b3888d50063e4b8b40cbaabbbb6caea055794a77867e999a9d6f089033cd"
     },
     {
       "viewport": 375,
@@ -55,19 +55,19 @@
       "viewport": 1280,
       "path": "/",
       "file": "docs/qa/evals-H/layout-B-screenshots/home-desktop.png",
-      "sha256": "b927c2b361ad42508ed0ff431f61ee6040fd9ad1f225d728fb5cfcd3bb203165"
+      "sha256": "322464fc8430284c9b6bbe522f36c1e64a0b50c2000587ee31cb26623d6a23d2"
     },
     {
       "viewport": 1280,
       "path": "/about",
       "file": "docs/qa/evals-H/layout-B-screenshots/about-desktop.png",
-      "sha256": "2e5113ee58f7c9099b61f8fca43725e25a9de9c8f56b4895a03f92f18e0d4d14"
+      "sha256": "b21687b2730fa793c81abfffdb7785ec5000aee522c478484af7ff22dbf0f7f9"
     },
     {
       "viewport": 1280,
       "path": "/work/kc-town-hall",
       "file": "docs/qa/evals-H/layout-B-screenshots/kc-town-hall-desktop.png",
-      "sha256": "e84406a8fd71efb975d2c9e310c42170c954ae979b88d03a58b8e66c19469fff"
+      "sha256": "a9e4da74f8edd321810ef6227cbd1ce9379d066c273fc70c60a0b5db9c9f6263"
     }
   ],
   "rows": [
@@ -85,6 +85,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -93,6 +94,52 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.home.hero.east-river.layout-b",
+          "photoId": "photo.east-river-manhattan-bridge.2022",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "object-cover object-[68%_center] sm:object-center",
+          "derivative": "/images/field-notes/jamie-east-river.webp",
+          "alt": "Jamie Burkart standing at the East River shoreline beneath the Manhattan Bridge.",
+          "caption": "At the East River beneath the Manhattan Bridge, 2022.",
+          "credit": "Photograph by Elana Gordon. From Jamie Burkart’s photo archive."
+        },
+        {
+          "placementId": "placement.home.sequence.kc-town-hall-before.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.home.sequence.tired-of-tires-load.layout-b",
+          "photoId": "photo.tired-of-tires-load",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/tired-of-tires-load.webp",
+          "alt": "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
+          "caption": "A neighborhood tire-removal load ready for the city recycling center.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.home.sequence.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
       "failedRequests": []
     },
@@ -110,6 +157,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -118,6 +166,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.work.kc-town-hall-before.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/work",
+          "renderedRoute": "/work",
+          "crop": "aspect-[4/3] object-cover object-top",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Selected Work - Jamie Burkart",
       "failedRequests": []
     },
@@ -135,6 +196,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -143,6 +205,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.technical-operations.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/work/technical-operations",
+          "renderedRoute": "/work/technical-operations",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Technical Operations & Implementation - Jamie Burkart",
       "failedRequests": []
     },
@@ -160,6 +235,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 11,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -168,6 +244,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Resume - Jamie Burkart",
       "failedRequests": []
     },
@@ -185,6 +262,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 10,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -193,6 +271,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.about.raft-riverboat.layout-b",
+          "photoId": "photo.raft-riverboat",
+          "declaredRoute": "/about",
+          "renderedRoute": "/about",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/raft-riverboat.webp",
+          "alt": "A small handmade raft on a wide river beside the Delta Queen riverboat.",
+          "caption": "A handmade raft and the Delta Queen on the river.",
+          "credit": "Jamie Burkart archive; public Flickr corpus. Photographer credit under review."
+        }
+      ],
       "title": "About - Jamie Burkart",
       "failedRequests": []
     },
@@ -210,6 +301,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -218,6 +310,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Contact - Jamie Burkart",
       "failedRequests": []
     },
@@ -235,6 +328,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 9,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -243,6 +337,30 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.colophon.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/colophon",
+          "renderedRoute": "/colophon",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.colophon.printed-editions.layout-b",
+          "photoId": "photo.printed-editions",
+          "declaredRoute": "/colophon",
+          "renderedRoute": "/colophon",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/printed-editions.webp",
+          "alt": "Small folded printed editions stand among tools on a worktable.",
+          "caption": "Small printed editions in progress.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Colophon - Jamie Burkart",
       "failedRequests": []
     },
@@ -260,6 +378,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -268,6 +387,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Source-Backed Team Memory - Jamie Burkart",
       "failedRequests": []
     },
@@ -285,6 +405,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -293,6 +414,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Harry J. Epstein Company - Jamie Burkart",
       "failedRequests": []
     },
@@ -310,6 +432,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -318,6 +441,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
       "failedRequests": []
     },
@@ -335,6 +459,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -343,6 +468,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "CallNYC.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -360,6 +486,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -368,6 +495,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "WOWList.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -385,6 +513,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 11,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -393,6 +522,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
       "failedRequests": []
     },
@@ -410,6 +540,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 360,
       "scrollWidth": 360,
@@ -418,6 +549,30 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.kc-town-hall.hero.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/work/kc-town-hall",
+          "renderedRoute": "/work/kc-town-hall",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.kc-town-hall.tired-of-tires-load.layout-b",
+          "photoId": "photo.tired-of-tires-load",
+          "declaredRoute": "/work/kc-town-hall",
+          "renderedRoute": "/work/kc-town-hall",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/tired-of-tires-load.webp",
+          "alt": "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
+          "caption": "A neighborhood tire-removal load ready for the city recycling center.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "KC Town Hall LLC - Jamie Burkart",
       "failedRequests": []
     },
@@ -435,6 +590,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -443,6 +599,52 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.home.hero.east-river.layout-b",
+          "photoId": "photo.east-river-manhattan-bridge.2022",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "object-cover object-[68%_center] sm:object-center",
+          "derivative": "/images/field-notes/jamie-east-river.webp",
+          "alt": "Jamie Burkart standing at the East River shoreline beneath the Manhattan Bridge.",
+          "caption": "At the East River beneath the Manhattan Bridge, 2022.",
+          "credit": "Photograph by Elana Gordon. From Jamie Burkart’s photo archive."
+        },
+        {
+          "placementId": "placement.home.sequence.kc-town-hall-before.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.home.sequence.tired-of-tires-load.layout-b",
+          "photoId": "photo.tired-of-tires-load",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/tired-of-tires-load.webp",
+          "alt": "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
+          "caption": "A neighborhood tire-removal load ready for the city recycling center.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.home.sequence.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
       "failedRequests": []
     },
@@ -460,6 +662,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -468,6 +671,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.work.kc-town-hall-before.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/work",
+          "renderedRoute": "/work",
+          "crop": "aspect-[4/3] object-cover object-top",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Selected Work - Jamie Burkart",
       "failedRequests": []
     },
@@ -485,6 +701,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -493,6 +710,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.technical-operations.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/work/technical-operations",
+          "renderedRoute": "/work/technical-operations",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Technical Operations & Implementation - Jamie Burkart",
       "failedRequests": []
     },
@@ -510,6 +740,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 11,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -518,6 +749,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Resume - Jamie Burkart",
       "failedRequests": []
     },
@@ -535,6 +767,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 10,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -543,6 +776,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.about.raft-riverboat.layout-b",
+          "photoId": "photo.raft-riverboat",
+          "declaredRoute": "/about",
+          "renderedRoute": "/about",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/raft-riverboat.webp",
+          "alt": "A small handmade raft on a wide river beside the Delta Queen riverboat.",
+          "caption": "A handmade raft and the Delta Queen on the river.",
+          "credit": "Jamie Burkart archive; public Flickr corpus. Photographer credit under review."
+        }
+      ],
       "title": "About - Jamie Burkart",
       "failedRequests": []
     },
@@ -560,6 +806,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -568,6 +815,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Contact - Jamie Burkart",
       "failedRequests": []
     },
@@ -585,6 +833,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 9,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -593,6 +842,30 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.colophon.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/colophon",
+          "renderedRoute": "/colophon",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.colophon.printed-editions.layout-b",
+          "photoId": "photo.printed-editions",
+          "declaredRoute": "/colophon",
+          "renderedRoute": "/colophon",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/printed-editions.webp",
+          "alt": "Small folded printed editions stand among tools on a worktable.",
+          "caption": "Small printed editions in progress.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Colophon - Jamie Burkart",
       "failedRequests": []
     },
@@ -610,6 +883,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -618,6 +892,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Source-Backed Team Memory - Jamie Burkart",
       "failedRequests": []
     },
@@ -635,6 +910,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -643,6 +919,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Harry J. Epstein Company - Jamie Burkart",
       "failedRequests": []
     },
@@ -660,6 +937,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -668,6 +946,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
       "failedRequests": []
     },
@@ -685,6 +964,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -693,6 +973,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "CallNYC.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -710,6 +991,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -718,6 +1000,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "WOWList.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -735,6 +1018,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 11,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -743,6 +1027,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
       "failedRequests": []
     },
@@ -760,6 +1045,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 375,
       "scrollWidth": 375,
@@ -768,6 +1054,30 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.kc-town-hall.hero.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/work/kc-town-hall",
+          "renderedRoute": "/work/kc-town-hall",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.kc-town-hall.tired-of-tires-load.layout-b",
+          "photoId": "photo.tired-of-tires-load",
+          "declaredRoute": "/work/kc-town-hall",
+          "renderedRoute": "/work/kc-town-hall",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/tired-of-tires-load.webp",
+          "alt": "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
+          "caption": "A neighborhood tire-removal load ready for the city recycling center.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "KC Town Hall LLC - Jamie Burkart",
       "failedRequests": []
     },
@@ -785,6 +1095,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -793,6 +1104,52 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.home.hero.east-river.layout-b",
+          "photoId": "photo.east-river-manhattan-bridge.2022",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "object-cover object-[68%_center] sm:object-center",
+          "derivative": "/images/field-notes/jamie-east-river.webp",
+          "alt": "Jamie Burkart standing at the East River shoreline beneath the Manhattan Bridge.",
+          "caption": "At the East River beneath the Manhattan Bridge, 2022.",
+          "credit": "Photograph by Elana Gordon. From Jamie Burkart’s photo archive."
+        },
+        {
+          "placementId": "placement.home.sequence.kc-town-hall-before.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.home.sequence.tired-of-tires-load.layout-b",
+          "photoId": "photo.tired-of-tires-load",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/tired-of-tires-load.webp",
+          "alt": "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
+          "caption": "A neighborhood tire-removal load ready for the city recycling center.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.home.sequence.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
       "failedRequests": []
     },
@@ -810,6 +1167,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -818,6 +1176,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.work.kc-town-hall-before.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/work",
+          "renderedRoute": "/work",
+          "crop": "aspect-[4/3] object-cover object-top",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Selected Work - Jamie Burkart",
       "failedRequests": []
     },
@@ -835,6 +1206,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -843,6 +1215,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.technical-operations.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/work/technical-operations",
+          "renderedRoute": "/work/technical-operations",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Technical Operations & Implementation - Jamie Burkart",
       "failedRequests": []
     },
@@ -860,6 +1245,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 9,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -868,6 +1254,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Resume - Jamie Burkart",
       "failedRequests": []
     },
@@ -885,6 +1272,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -893,6 +1281,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.about.raft-riverboat.layout-b",
+          "photoId": "photo.raft-riverboat",
+          "declaredRoute": "/about",
+          "renderedRoute": "/about",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/raft-riverboat.webp",
+          "alt": "A small handmade raft on a wide river beside the Delta Queen riverboat.",
+          "caption": "A handmade raft and the Delta Queen on the river.",
+          "credit": "Jamie Burkart archive; public Flickr corpus. Photographer credit under review."
+        }
+      ],
       "title": "About - Jamie Burkart",
       "failedRequests": []
     },
@@ -910,6 +1311,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 11,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -918,6 +1320,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Contact - Jamie Burkart",
       "failedRequests": []
     },
@@ -935,6 +1338,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 8,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -943,6 +1347,30 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.colophon.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/colophon",
+          "renderedRoute": "/colophon",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.colophon.printed-editions.layout-b",
+          "photoId": "photo.printed-editions",
+          "declaredRoute": "/colophon",
+          "renderedRoute": "/colophon",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/printed-editions.webp",
+          "alt": "Small folded printed editions stand among tools on a worktable.",
+          "caption": "Small printed editions in progress.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Colophon - Jamie Burkart",
       "failedRequests": []
     },
@@ -960,6 +1388,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -968,6 +1397,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Source-Backed Team Memory - Jamie Burkart",
       "failedRequests": []
     },
@@ -985,6 +1415,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -993,6 +1424,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Harry J. Epstein Company - Jamie Burkart",
       "failedRequests": []
     },
@@ -1010,6 +1442,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -1018,6 +1451,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
       "failedRequests": []
     },
@@ -1035,6 +1469,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -1043,6 +1478,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "CallNYC.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -1060,6 +1496,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -1068,6 +1505,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "WOWList.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -1085,6 +1523,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -1093,6 +1532,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
       "failedRequests": []
     },
@@ -1110,6 +1550,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 768,
       "scrollWidth": 768,
@@ -1118,6 +1559,30 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.kc-town-hall.hero.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/work/kc-town-hall",
+          "renderedRoute": "/work/kc-town-hall",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.kc-town-hall.tired-of-tires-load.layout-b",
+          "photoId": "photo.tired-of-tires-load",
+          "declaredRoute": "/work/kc-town-hall",
+          "renderedRoute": "/work/kc-town-hall",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/tired-of-tires-load.webp",
+          "alt": "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
+          "caption": "A neighborhood tire-removal load ready for the city recycling center.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "KC Town Hall LLC - Jamie Burkart",
       "failedRequests": []
     },
@@ -1135,6 +1600,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1143,6 +1609,52 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.home.hero.east-river.layout-b",
+          "photoId": "photo.east-river-manhattan-bridge.2022",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "object-cover object-[68%_center] sm:object-center",
+          "derivative": "/images/field-notes/jamie-east-river.webp",
+          "alt": "Jamie Burkart standing at the East River shoreline beneath the Manhattan Bridge.",
+          "caption": "At the East River beneath the Manhattan Bridge, 2022.",
+          "credit": "Photograph by Elana Gordon. From Jamie Burkart’s photo archive."
+        },
+        {
+          "placementId": "placement.home.sequence.kc-town-hall-before.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.home.sequence.tired-of-tires-load.layout-b",
+          "photoId": "photo.tired-of-tires-load",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/tired-of-tires-load.webp",
+          "alt": "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
+          "caption": "A neighborhood tire-removal load ready for the city recycling center.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.home.sequence.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/",
+          "renderedRoute": "/",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
       "failedRequests": []
     },
@@ -1160,6 +1672,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1168,6 +1681,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.work.kc-town-hall-before.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/work",
+          "renderedRoute": "/work",
+          "crop": "aspect-[4/3] object-cover object-top",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Selected Work - Jamie Burkart",
       "failedRequests": []
     },
@@ -1185,6 +1711,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1193,6 +1720,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.technical-operations.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/work/technical-operations",
+          "renderedRoute": "/work/technical-operations",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Technical Operations & Implementation - Jamie Burkart",
       "failedRequests": []
     },
@@ -1210,6 +1750,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 9,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1218,6 +1759,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Resume - Jamie Burkart",
       "failedRequests": []
     },
@@ -1235,6 +1777,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1243,6 +1786,19 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.about.raft-riverboat.layout-b",
+          "photoId": "photo.raft-riverboat",
+          "declaredRoute": "/about",
+          "renderedRoute": "/about",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/raft-riverboat.webp",
+          "alt": "A small handmade raft on a wide river beside the Delta Queen riverboat.",
+          "caption": "A handmade raft and the Delta Queen on the river.",
+          "credit": "Jamie Burkart archive; public Flickr corpus. Photographer credit under review."
+        }
+      ],
       "title": "About - Jamie Burkart",
       "failedRequests": []
     },
@@ -1260,6 +1816,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 11,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1268,6 +1825,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Contact - Jamie Burkart",
       "failedRequests": []
     },
@@ -1285,6 +1843,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 8,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1293,6 +1852,30 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.colophon.paper-trimming.layout-b",
+          "photoId": "photo.paper-trimming",
+          "declaredRoute": "/colophon",
+          "renderedRoute": "/colophon",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/paper-trimming.webp",
+          "alt": "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
+          "caption": "Paper aligned at the trimming table.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.colophon.printed-editions.layout-b",
+          "photoId": "photo.printed-editions",
+          "declaredRoute": "/colophon",
+          "renderedRoute": "/colophon",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/printed-editions.webp",
+          "alt": "Small folded printed editions stand among tools on a worktable.",
+          "caption": "Small printed editions in progress.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "Colophon - Jamie Burkart",
       "failedRequests": []
     },
@@ -1310,6 +1893,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1318,6 +1902,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Source-Backed Team Memory - Jamie Burkart",
       "failedRequests": []
     },
@@ -1335,6 +1920,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1343,6 +1929,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Harry J. Epstein Company - Jamie Burkart",
       "failedRequests": []
     },
@@ -1360,6 +1947,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1368,6 +1956,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
       "failedRequests": []
     },
@@ -1385,6 +1974,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1393,6 +1983,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "CallNYC.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -1410,6 +2001,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1418,6 +2010,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "WOWList.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -1435,6 +2028,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1443,6 +2037,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
       "failedRequests": []
     },
@@ -1460,6 +2055,7 @@
       "keyboardTargetsObserved": 12,
       "keyboardDistinctTargets": 12,
       "keyboardInvisibleTargets": 0,
+      "keyboardInvisibleTargetKeys": [],
       "keyboardTrapDetected": false,
       "clientWidth": 1280,
       "scrollWidth": 1280,
@@ -1468,6 +2064,30 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "placementId": "placement.kc-town-hall.hero.layout-b",
+          "photoId": "photo.kc-town-hall-before",
+          "declaredRoute": "/work/kc-town-hall",
+          "renderedRoute": "/work/kc-town-hall",
+          "crop": "aspect-[16/9] object-cover",
+          "derivative": "/images/field-notes/kc-town-hall-before.webp",
+          "alt": "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
+          "caption": "KC Town Hall before Phase 1 restoration work.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        },
+        {
+          "placementId": "placement.kc-town-hall.tired-of-tires-load.layout-b",
+          "photoId": "photo.tired-of-tires-load",
+          "declaredRoute": "/work/kc-town-hall",
+          "renderedRoute": "/work/kc-town-hall",
+          "crop": "aspect-[4/3] object-cover",
+          "derivative": "/images/field-notes/tired-of-tires-load.webp",
+          "alt": "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
+          "caption": "A neighborhood tire-removal load ready for the city recycling center.",
+          "credit": "Jamie Burkart archive. Photographer credit under review."
+        }
+      ],
       "title": "KC Town Hall LLC - Jamie Burkart",
       "failedRequests": []
     }
@@ -1487,6 +2107,8 @@
     "keyboardRowsChecked": 56,
     "keyboardRowsPassed": 56,
     "screenshotsCaptured": 6,
+    "photoOccurrenceRowsChecked": 56,
+    "photoOccurrencesAtDesktop": 11,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   }

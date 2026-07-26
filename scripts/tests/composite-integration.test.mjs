@@ -8,13 +8,54 @@ import {
   computeHoldoutJudgmentDigest,
   computeCompositeRubricDigest,
   evaluateCompositeIntegration,
-  listCompositeCandidateFiles
+  listCompositeCandidateFiles,
+  validateAcceptedHoldoutScores
 } from "../lib/composite-integration-eval.mjs";
 
 const suite = JSON.parse(readFileSync(".agents/evals/feature-evals-composite.json", "utf8"));
 const register = JSON.parse(readFileSync("docs/integration/feature-evals-composite.json", "utf8"));
 const portfolioSuite = JSON.parse(readFileSync(".agents/evals/portfolio-production-readiness.json", "utf8"));
 const blindSpots = JSON.parse(readFileSync("docs/knowledge-bank/data/blind-spot-controls-2026-07.json", "utf8"));
+
+function makeAcceptedHoldout(judgeId, processSessionId, prompt) {
+  const run = {
+    runVersion: 2,
+    judgeId,
+    grader: "independent_llm_judge",
+    independentFromOptimizer: true,
+    rubricSha256: suite.rubric_sha256,
+    candidateFingerprint: computeCompositeCandidateFingerprint(suite),
+    verdict: "accepted",
+    scores: suite.criteria.map((item) => ({
+      criterionId: item.id,
+      score: 4,
+      pass: true,
+      evidence: ["Independent fixture evidence."],
+      rationale: "Independent fixture rationale."
+    })),
+    notObserved: [],
+    findings: [],
+    recommendation: "Accept fixture.",
+    provenance: {
+      provider: "codex-native-subagent",
+      processSessionId,
+      agentNickname: `fixture-${judgeId}`,
+      model: "gpt-5.6-sol",
+      reasoningEffort: "xhigh",
+      sandbox: "read-only",
+      ephemeral: true,
+      prompt,
+      promptSha256: createHash("sha256").update(prompt).digest("hex"),
+      judgmentSha256: "",
+      resultTransport: "multi_agent_v1__wait_agent-completed",
+      operatorAttestation: "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
+      startedAt: "2026-07-16T22:00:00-04:00",
+      completedAt: "2026-07-16T22:01:00-04:00"
+    }
+  };
+  run.provenance.judgmentSha256 = computeHoldoutJudgmentDigest(run);
+  return run;
+}
 
 test("composite integration accepts the frozen exact candidate", () => {
   const result = evaluateCompositeIntegration();
@@ -230,6 +271,48 @@ test("holdout judgment digest binds run version and complete process provenance"
   const original = computeHoldoutJudgmentDigest(run);
   run.provenance.processSessionId = "019f6dcf-cea1-7c90-87fc-697e7e2a5a85";
   assert.notEqual(computeHoldoutJudgmentDigest(run), original);
+});
+
+test("accepted holdouts require exactly one uncontradicted score per criterion", () => {
+  const requiredIds = suite.criteria.map((item) => item.id);
+  const holdouts = [
+    makeAcceptedHoldout(
+      "judge-strict-a",
+      "019f6dcf-ca71-79a1-913e-291b235e4ede",
+      "Strict holdout prompt A."
+    ),
+    makeAcceptedHoldout(
+      "judge-strict-b",
+      "019f6dcf-cea1-7c90-87fc-697e7e2a5a85",
+      "Strict holdout prompt B."
+    )
+  ];
+  holdouts[0].scores.push({
+    criterionId: "COMP-006",
+    score: 0,
+    pass: false,
+    evidence: ["Contradictory evidence."],
+    rationale: "Contradictory rationale."
+  });
+  holdouts[0].findings.push("Blocking contradiction.");
+  holdouts[0].recommendation = "Reject this contradictory fixture.";
+  holdouts[0].provenance.judgmentSha256 =
+    computeHoldoutJudgmentDigest(holdouts[0]);
+  assert.equal(
+    validateAcceptedHoldoutScores(holdouts[0], requiredIds),
+    false
+  );
+  const result = evaluateCompositeIntegration({
+    suite,
+    register,
+    portfolioSuite,
+    blindSpots,
+    holdouts
+  });
+  assert.equal(
+    result.criteria.find((item) => item.id === "COMP-009")?.pass,
+    false
+  );
 });
 
 test("human evidence controls cannot be synthesized closed", () => {

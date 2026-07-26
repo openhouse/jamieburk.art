@@ -99,6 +99,19 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       row.keyboardDistinctTargets >= 3 &&
       row.keyboardInvisibleTargets === 0 &&
       row.keyboardTrapDetected === false &&
+      Array.isArray(row.photoOccurrences) &&
+      row.photoOccurrences.every(
+        (occurrence) =>
+          typeof occurrence.placementId === "string" &&
+          typeof occurrence.photoId === "string" &&
+          occurrence.declaredRoute === row.path &&
+          occurrence.renderedRoute === row.path &&
+          typeof occurrence.crop === "string" &&
+          typeof occurrence.derivative === "string" &&
+          typeof occurrence.alt === "string" &&
+          typeof occurrence.caption === "string" &&
+          typeof occurrence.credit === "string"
+      ) &&
       /^4\./.test(row.axeVersion)
   );
   const screenshotsPass =
@@ -124,6 +137,8 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.summary.keyboardRowsChecked === expectedRows &&
     report.summary.keyboardRowsPassed === expectedRows &&
     report.summary.screenshotsCaptured === 6 &&
+    report.summary.photoOccurrenceRowsChecked === expectedRows &&
+    report.summary.photoOccurrencesAtDesktop === 11 &&
     report.summary.lazyImagesObserved > 0 &&
     report.summary.unloadedImagesBeforeScroll > 0 &&
     report.summary.lazyImageFollowUpPerformed === true &&

@@ -10,6 +10,45 @@
     "indexing": "open",
     "occurrences": [
       {
+        "placement": "placement.about.raft-riverboat.layout-b",
+        "asset": "photo.raft-riverboat",
+        "derivative": "derivative.raft-riverboat.layout-b",
+        "route": "/about",
+        "component": "apps/www/src/app/about/page.tsx",
+        "crop": "aspect-[4/3] object-cover",
+        "caption": "A handmade raft and the Delta Queen on the river.",
+        "credit": "Jamie Burkart archive; public Flickr corpus. Photographer credit under review.",
+        "staging": "pending",
+        "production": "open",
+        "indexing": "open"
+      },
+      {
+        "placement": "placement.colophon.paper-trimming.layout-b",
+        "asset": "photo.paper-trimming",
+        "derivative": "derivative.paper-trimming.layout-b",
+        "route": "/colophon",
+        "component": "apps/www/src/app/colophon/page.tsx",
+        "crop": "aspect-[4/3] object-cover",
+        "caption": "Paper aligned at the trimming table.",
+        "credit": "Jamie Burkart archive. Photographer credit under review.",
+        "staging": "pending",
+        "production": "open",
+        "indexing": "open"
+      },
+      {
+        "placement": "placement.colophon.printed-editions.layout-b",
+        "asset": "photo.printed-editions",
+        "derivative": "derivative.printed-editions.layout-b",
+        "route": "/colophon",
+        "component": "apps/www/src/app/colophon/page.tsx",
+        "crop": "aspect-[4/3] object-cover",
+        "caption": "Small printed editions in progress.",
+        "credit": "Jamie Burkart archive. Photographer credit under review.",
+        "staging": "pending",
+        "production": "open",
+        "indexing": "open"
+      },
+      {
         "placement": "placement.home.hero.east-river.layout-b",
         "asset": "photo.east-river-manhattan-bridge.2022",
         "derivative": "derivative.east-river-manhattan-bridge.layout-b",
@@ -62,58 +101,6 @@
         "indexing": "open"
       },
       {
-        "placement": "placement.about.raft-riverboat.layout-b",
-        "asset": "photo.raft-riverboat",
-        "derivative": "derivative.raft-riverboat.layout-b",
-        "route": "/about",
-        "component": "apps/www/src/app/about/page.tsx",
-        "crop": "aspect-[4/3] object-cover",
-        "caption": "A handmade raft and the Delta Queen on the river.",
-        "credit": "Jamie Burkart archive; public Flickr corpus. Photographer credit under review.",
-        "staging": "pending",
-        "production": "open",
-        "indexing": "open"
-      },
-      {
-        "placement": "placement.colophon.paper-trimming.layout-b",
-        "asset": "photo.paper-trimming",
-        "derivative": "derivative.paper-trimming.layout-b",
-        "route": "/colophon",
-        "component": "apps/www/src/app/colophon/page.tsx",
-        "crop": "aspect-[4/3] object-cover",
-        "caption": "Paper aligned at the trimming table.",
-        "credit": "Jamie Burkart archive. Photographer credit under review.",
-        "staging": "pending",
-        "production": "open",
-        "indexing": "open"
-      },
-      {
-        "placement": "placement.colophon.printed-editions.layout-b",
-        "asset": "photo.printed-editions",
-        "derivative": "derivative.printed-editions.layout-b",
-        "route": "/colophon",
-        "component": "apps/www/src/app/colophon/page.tsx",
-        "crop": "aspect-[4/3] object-cover",
-        "caption": "Small printed editions in progress.",
-        "credit": "Jamie Burkart archive. Photographer credit under review.",
-        "staging": "pending",
-        "production": "open",
-        "indexing": "open"
-      },
-      {
-        "placement": "placement.work.kc-town-hall-before.layout-b",
-        "asset": "photo.kc-town-hall-before",
-        "derivative": "derivative.kc-town-hall-before.layout-b",
-        "route": "/work",
-        "component": "apps/www/src/components/WorkCard.tsx",
-        "crop": "aspect-[4/3] object-cover object-top",
-        "caption": "KC Town Hall before Phase 1 restoration work.",
-        "credit": "Jamie Burkart archive. Photographer credit under review.",
-        "staging": "pending",
-        "production": "open",
-        "indexing": "open"
-      },
-      {
         "placement": "placement.kc-town-hall.hero.layout-b",
         "asset": "photo.kc-town-hall-before",
         "derivative": "derivative.kc-town-hall-before.layout-b",
@@ -151,8 +138,22 @@
         "staging": "pending",
         "production": "open",
         "indexing": "open"
+      },
+      {
+        "placement": "placement.work.kc-town-hall-before.layout-b",
+        "asset": "photo.kc-town-hall-before",
+        "derivative": "derivative.kc-town-hall-before.layout-b",
+        "route": "/work",
+        "component": "apps/www/src/components/WorkCard.tsx",
+        "crop": "aspect-[4/3] object-cover object-top",
+        "caption": "KC Town Hall before Phase 1 restoration work.",
+        "credit": "Jamie Burkart archive. Photographer credit under review.",
+        "staging": "pending",
+        "production": "open",
+        "indexing": "open"
       }
     ],
+    "historicalOccurrences": [],
     "protectedAbsences": [
       "absence.intimate-gatherings.layout-b"
     ],
@@ -170,6 +171,7 @@
       "photo_public_derivatives_reconciled": true,
       "photo_derivative_integrity": true,
       "photo_placements_and_edition_governed": true,
+      "photo_browser_occurrences_bound": true,
       "photo_occurrence_copy_bound": true,
       "photo_caption_credit_rendered": true,
       "photo_recollection_nonpublishing": true,
@@ -187,7 +189,7 @@
       "photos": 6,
       "placements": 11,
       "requiredRecords": 17,
-      "blockingCriteria": 20,
+      "blockingCriteria": 21,
       "productionOpen": 6
     }
   },
@@ -471,6 +473,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -483,6 +486,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -495,6 +499,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -507,6 +512,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -519,6 +525,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -531,6 +538,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -543,6 +551,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -555,6 +564,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -567,6 +577,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -579,6 +590,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     },
     {
@@ -591,6 +603,7 @@
       "staging": "pending",
       "production": "open",
       "indexing": "open",
+      "lifecycle": "current",
       "rendered": true
     }
   ],
@@ -640,6 +653,7 @@
   ],
   "impact": {
     "photoId": "photo.east-river-manhattan-bridge.2022",
+    "changeType": "record-change",
     "found": true,
     "wikiRecords": [
       {
@@ -686,6 +700,10 @@
     "placements": [
       "placement.home.hero.east-river.layout-b"
     ],
+    "components": [
+      "apps/www/src/components/Hero.tsx"
+    ],
+    "derivative": "/images/field-notes/jamie-east-river.webp",
     "portfolioEditions": [
       "edition.portfolio.layout-b.2026-07"
     ],
@@ -707,7 +725,8 @@
       "hiring outcome",
       "production performance",
       "indexing outcome"
-    ]
+    ],
+    "withdrawalPlan": null
   },
   "health": {
     "evaluationPassed": true,
@@ -724,6 +743,21 @@
     "protectedAbsences": [
       "absence.intimate-gatherings.layout-b"
     ],
+    "runtimeOccurrenceEvidence": {
+      "passed": true,
+      "expectedDesktopOccurrences": 11,
+      "observedDesktopOccurrences": 11
+    },
+    "historicalOccurrenceCount": 0,
+    "withdrawalPlanCount": 0,
+    "withdrawalConflicts": [],
+    "maintenance": {
+      "publicSurfaceEvidenceCurrent": true,
+      "currentOccurrencesAccountedFor": true,
+      "historicalOccurrencesNeverRender": true,
+      "automaticWithdrawal": false,
+      "automaticRestoration": false
+    },
     "serendipity": {
       "openRecollections": [
         "source.recollection.jamie.canoe-commuting.2026-07"

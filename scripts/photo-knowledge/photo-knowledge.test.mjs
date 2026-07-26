@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { execFileSync, spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import test from "node:test";
@@ -7,6 +8,10 @@ import { publicPhotoManifest } from "../../apps/www/src/data/photography.ts";
 import { compileWiki } from "../knowledge-wiki/lib.mjs";
 import {
   applyPhotoRevocation,
+  buildPhotoReports,
+  buildWithdrawalPlan,
+  comparePhotoEditions,
+  compilePhotoEdition,
   defaultRepoRoot,
   evaluatePhotoKnowledge,
   loadPhotoKnowledge
@@ -21,7 +26,7 @@ test("RFC 0003 photographic knowledge baseline passes", () => {
   assert.equal(result.passed, true, result.failures.join(", "));
   assert.equal(result.counts.photos, 6);
   assert.equal(result.counts.placements, 11);
-  assert.equal(result.counts.blockingCriteria, 20);
+  assert.equal(result.counts.blockingCriteria, 21);
 });
 
 test("a derivative checksum drift fails closed", () => {
@@ -106,6 +111,29 @@ test("a declared component and crop must match the rendered occurrence", () => {
   assert.equal(result.checks.photo_placements_and_edition_governed, false);
 });
 
+test("browser evidence must match the actual route occurrence population", () => {
+  const evidence = JSON.parse(
+    readFileSync(
+      path.join(
+        defaultRepoRoot,
+        "docs/qa/evals-H/responsive-route-matrix.json"
+      ),
+      "utf8"
+    )
+  );
+  const changed = structuredClone(evidence);
+  const workRow = changed.rows.find(
+    (row) => row.viewport === 1280 && row.path === "/work"
+  );
+  workRow.photoOccurrences.push({
+    ...workRow.photoOccurrences[0],
+    placementId: "placement.work.kc-town-hall-before.layout-b",
+    photoId: "photo.kc-town-hall-before"
+  });
+  const result = evaluatePhotoKnowledge({ responsiveEvidence: changed });
+  assert.equal(result.checks.photo_browser_occurrences_bound, false);
+});
+
 test("alt text and caption drift cannot leave the site projection green", () => {
   const sitePhotos = structuredClone(publicPhotoManifest);
   sitePhotos[0].alt = "";
@@ -121,8 +149,8 @@ test("every rendered photo pathway must preserve caption and credit", () => {
     "utf8"
   );
   const changed = original.replace(
-    "{fieldPhoto.credit}",
-    "{/* credit omitted */}"
+    '<FieldPhoto\n              crop="aspect-[4/3] object-cover object-top"',
+    '<div\n              data-credit-omitted="true"'
   );
   const result = evaluatePhotoKnowledge({
     applicationSourceOverrides: { [workCardPath]: changed }
@@ -251,6 +279,111 @@ test("revocation places the photo, occurrence, and edition on hold", () => {
   assert(photo.placements.every((placement) => placement.production === "hold"));
   assert.equal(changed.edition.production, "hold");
   assert.equal(changed.edition.indexing, "hold");
+  assert.equal(changed.historicalOccurrences.length, 1);
+  assert.equal(changed.historicalOccurrences[0].renders, false);
+  assert.equal(changed.withdrawalPlans.length, 1);
+  assert.equal(changed.withdrawalPlans[0].writesApplied, false);
+  assert.equal(changed.withdrawalPlans[0].activeProjectionPresent, true);
+});
+
+test("withdrawal planning is specific, historical, and non-executing", () => {
+  const plan = buildWithdrawalPlan(
+    manifest(),
+    "photo.kc-town-hall-before"
+  );
+  assert.equal(plan.currentOccurrences.length, 3);
+  assert.equal(plan.activeProjectionPresent, true);
+  assert.equal(plan.writesApplied, false);
+  assert.match(plan.historicalOccurrencePolicy, /non-rendering tombstone/i);
+  assert.match(plan.rollbackPolicy, /new human-reviewed publication decision/i);
+  assert(plan.requiredActions.some((action) => /public derivative/i.test(action)));
+});
+
+test("edition comparison reports additions, removals, and changed occurrences", () => {
+  const current = compilePhotoEdition(manifest());
+  const previous = structuredClone(current);
+  previous.id = "edition.portfolio.layout-b.previous";
+  previous.occurrences.shift();
+  previous.occurrences[0].caption = "Earlier caption.";
+  previous.occurrences.push({
+    ...structuredClone(previous.occurrences[0]),
+    placement: "placement.retired.example"
+  });
+  const comparison = comparePhotoEditions(current, previous);
+  assert(comparison.added.length >= 1);
+  assert.deepEqual(comparison.removed, ["placement.retired.example"]);
+  assert(comparison.changed.length >= 1);
+  assert.equal(comparison.automaticSelection, false);
+});
+
+test("edition CLI rejects an unavailable comparison snapshot", () => {
+  const result = spawnSync(
+    process.execPath,
+    [
+      "scripts/photo-knowledge/report.mjs",
+      "--section",
+      "edition",
+      "--compare",
+      "docs/knowledge-bank/data/photo-editions/missing.json"
+    ],
+    { cwd: defaultRepoRoot, encoding: "utf8" }
+  );
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /Unknown comparison edition/);
+});
+
+test("curatorial run is bound to a named asset and occurrence", () => {
+  const output = execFileSync(
+    process.execPath,
+    [
+      "scripts/photo-knowledge/curatorial.mjs",
+      "--run",
+      "--photo",
+      "photo.kc-town-hall-before",
+      "--placement",
+      "placement.work.kc-town-hall-before.layout-b"
+    ],
+    { cwd: defaultRepoRoot, encoding: "utf8" }
+  );
+  const proposal = JSON.parse(output);
+  assert.equal(proposal.asset.id, "photo.kc-town-hall-before");
+  assert.equal(
+    proposal.occurrence.id,
+    "placement.work.kc-town-hall-before.layout-b"
+  );
+  assert.equal(proposal.occurrence.route, "/work");
+  assert.equal(proposal.writesApplied, false);
+  assert.equal(proposal.lead.automaticSelection, false);
+});
+
+test("curatorial run rejects an unknown asset", () => {
+  const result = spawnSync(
+    process.execPath,
+    [
+      "scripts/photo-knowledge/curatorial.mjs",
+      "--run",
+      "--photo",
+      "photo.not-registered"
+    ],
+    { cwd: defaultRepoRoot, encoding: "utf8" }
+  );
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /Unknown photo/);
+});
+
+test("impact and health expose withdrawal and runtime consequences", () => {
+  const report = JSON.parse(
+    buildPhotoReports({
+      impactPhotoId: "photo.kc-town-hall-before",
+      impactChangeType: "withdrawal"
+    })["reports/photo-knowledge.json"]
+  );
+  assert.equal(report.impact.withdrawalPlan.photoId, "photo.kc-town-hall-before");
+  assert.equal(report.impact.withdrawalPlan.writesApplied, false);
+  assert.equal(report.impact.routes.length, 3);
+  assert.equal(report.health.runtimeOccurrenceEvidence.expectedDesktopOccurrences, 11);
+  assert.equal(report.health.maintenance.automaticWithdrawal, false);
+  assert.equal(report.health.maintenance.automaticRestoration, false);
 });
 
 test("an RFC stage regression fails the implementation contract", () => {
@@ -271,4 +404,28 @@ test("a protected local locator fails the public boundary", () => {
     publicBoundaryExtraSources: [protectedLocator]
   });
   assert.equal(result.checks.photo_public_boundary_clean, false);
+});
+
+test("a private tmp locator fails the public boundary", () => {
+  const protectedLocator = ["/", "private", "/tmp/photo-original.jpg"].join("");
+  const result = evaluatePhotoKnowledge({
+    publicBoundaryExtraSources: [protectedLocator]
+  });
+  assert.equal(result.checks.photo_public_boundary_clean, false);
+});
+
+test("a private tmp locator in introduced history fails closed", () => {
+  const protectedLocator = ["/", "private", "/tmp/photo-original.jpg"].join("");
+  const result = evaluatePhotoKnowledge({
+    introducedHistorySources: [
+      {
+        relativePath: "docs/knowledge-bank/assets/leaked-private-tmp.md",
+        text: protectedLocator
+      }
+    ]
+  });
+  assert.equal(
+    result.checks.photo_introduced_history_boundary_clean,
+    false
+  );
 });
