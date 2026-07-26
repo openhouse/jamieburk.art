@@ -65,7 +65,7 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   // Re-reviewed 2026-07-22 for layout-A. Technical Operations changed its
   // visual structure and photographs; the KC Town Hall wording stayed fixed,
   // and every held field-practice assertion remains outside public projection.
-  sharedPublicSurfacesSha256: "e08fd220a4d09dd905021f0387876f5bb7707915dff91ab24faab85c2dc2cbdc",
+  sharedPublicSurfacesSha256: "f9d289998c09693eede1889575cacd0c16069e717937a47565ed3dcedf6969a7",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-22 after the 196 / Sunday Dinner context paragraph was
@@ -110,7 +110,7 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
   wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
-  sundayDinnerMdxSha256: "ffbaa95786f175b0fe5580d325a1254caca92b75ad9df3792da948881a865d09",
+  sundayDinnerMdxSha256: "0c031ebe09e9f19fc1df5d804b2b02b5f2a7baf324a3e517251024730fbd8e3f",
   proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({

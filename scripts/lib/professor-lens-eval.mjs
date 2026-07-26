@@ -73,7 +73,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac";
+const approvedCandidateSha256 = "3949d5546e16656987ea437ad0129f0a338f1c6bbc67f3ca94fa12d7d0e062d5";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },

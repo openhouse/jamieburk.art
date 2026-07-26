@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Career trajectory coverage
 
-**Wiki fingerprint:** `b3f34572a59f2f36271daef793b5c79b28201243a2b504791fc85c8b1abc3e9c`
+**Wiki fingerprint:** `f6f17275c542fcf5d0ca5e725b5006e3eca44f5c45216deb66084b6110b83716`
 
 | Period | Focus | Status | Gap |
 |---|---|---|---|

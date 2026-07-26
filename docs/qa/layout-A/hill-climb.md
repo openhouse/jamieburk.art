@@ -1,6 +1,6 @@
 # Layout A hill climb
 
-Date: 2026-07-22
+Date: 2026-07-26
 
 ## Candidate
 
@@ -33,6 +33,9 @@ Date: 2026-07-22
 19. Expanded the About-page project traces into explicit observed / modeled / interface / use-and-feedback / revision-and-handoff sequences, with public evidence boundaries for current and historical work.
 20. Added the original Photo Fieldwork aliases for both held images and corrected river subject classifications to acknowledge visible people.
 21. Replaced the 196 page's descriptive artifact card with a rendered, blank hosting handoff template that makes observation, modeling, interface, use, revision, and handoff inspectable while explicitly excluding participant records.
+22. Unified the small correction labels with the Human Index accent red (`#c83b32`) after live axe inspection found the previous rose-red below AA on white and blue-grey reading surfaces.
+23. Rebound three Knowledge Bank review receipts after inspecting the final 196 specimen and Technical Operations composition; all semantic, privacy, projection, protected-source, participant-data, and overclaim mutation checks remain closed.
+24. Reverified all six governed opportunity records against their official employer surfaces on July 26 and advanced their next review date to August 2; every existing hard screen, unknown, and evidence gap remains intact.
 
 ## Lens record
 
@@ -61,8 +64,15 @@ Executable checks can establish asset integrity, metadata coverage, route projec
 - **Response:** no criterion was weakened. The browser evidence was regenerated from successful 200 responses, source-to-web held identifiers were made explicit, river classifications were corrected, and each project trace now shows its recursive stages and evidence boundary.
 - **Iteration 3, inspectable-current-work holdout: 3/4.** Five readers accepted the candidate, while the strictest Warren Sack reader found that the third current-project trace described the 196 operating model without exposing a genuine public-safe specimen.
 - **Response:** no criterion was weakened. The 196 page now renders a blank hosting handoff template that carries the complete recursive sequence and an explicit publication boundary; participant data and protected source files remain absent.
+- **Final accessibility iteration: live color-contrast failure.** Reconstructing the browser instrument after a disconnected session exposed the earlier correction-red token at 4.41:1 on white and 4.07:1 on the blue-grey reading field.
+- **Response:** the token now uses the supplied Human Index correction red, a regression test binds both reading-surface ratios, the homepage live axe result is empty, and all 56 route/viewport states pass with zero violations.
+- **Knowledge Bank integration iteration: 1.6/5.** The complete repository check exposed stale review bindings for the finalized 196 specimen, the Sunday Dinner MDX surface, and the KC Town Hall text embedded in the redesigned Technical Operations composition.
+- **Response:** the three exact receipts were renewed only after their substantive protections were inspected. The Knowledge Bank returned to 5/5 and all 196 adversarial tests passed without weakening a criterion.
+- **Hiring-acceptance iteration: stale role contexts.** The Wiki correctly failed because six opportunity records had passed their July 21 review date.
+- **Response:** all six official employer pages were rechecked on July 26, remained live, and now carry an August 2 review date. No screen, requirement, unknown, or source claim was relaxed.
 - **Final holdouts:** recorded only after three fresh Margaret Morse and three fresh Warren Sack readers independently accept one unchanged candidate at 4/4.
-- **Candidate binding:** the unchanged candidate submitted to final holdouts is `5464996ef0426b103f92276b2c5a9f52a45c53e580701712dfcd164cfdf0d7ac`. Its responsive public-surface record contains 124 files and fingerprint `ebff13b91663a262477f50e59a3369a16b264f06ce430be6ae0c4dcc7dadf47e`.
+- **Candidate binding:** the unchanged candidate submitted to final holdouts is `3949d5546e16656987ea437ad0129f0a338f1c6bbc67f3ca94fa12d7d0e062d5`. Its responsive public-surface record contains 124 files and fingerprint `c3afd958f0c141e905d4cfd8d7dea4960369f4d0834d35d3b3a799168f1d7d92`.
+- **Composite stopping rule:** two distinct architecture and public-value holdouts are renewed only after the complete source candidate, generated reports, review receipts, and dated opportunity records stop changing.
 
 ## Rendered evidence
 

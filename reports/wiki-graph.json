@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T17:23:56-04:00",
-  "sourceCommit": "dbb7f37feef38494b0e786967fe386f385123f86",
-  "sourceFingerprint": "b3f34572a59f2f36271daef793b5c79b28201243a2b504791fc85c8b1abc3e9c",
+  "generatedAt": "2026-07-23T18:43:04-04:00",
+  "sourceCommit": "3d2872dbe8708146f3edc0e589586d69b462a4ce",
+  "sourceFingerprint": "f6f17275c542fcf5d0ca5e725b5006e3eca44f5c45216deb66084b6110b83716",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -675,8 +675,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for ACLU's live term-limited Product Manager II, Discovery role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-02"
     },
     {
       "id": "opportunity.asana.ai-implementation.8027437",
@@ -688,8 +688,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for Asana's live AI Implementation Manager, Service Management role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-02"
     },
     {
       "id": "opportunity.benepass.product-operations.7f963a7a",
@@ -701,8 +701,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-02"
     },
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
@@ -714,8 +714,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for CodePath's live Senior Program Manager, Claude Corps role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-02"
     },
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -727,8 +727,8 @@
       "sensitivity": "low",
       "summary": "Public-safe, source-backed requirement and portfolio-coverage map for NYC OTI's live Technical Operations Manager role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-02"
     },
     {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
@@ -740,8 +740,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for PermitFlow's live Product Operations Manager role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-02"
     },
     {
       "id": "organization.nyc-artist-coalition",

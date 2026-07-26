@@ -54,3 +54,13 @@ test("the lowest shared ink opacity remains AA on paper", () => {
   assert.ok(ink && paper);
   assert.ok(contrast(blend(ink, paper, 0.62), paper) >= 4.5);
 });
+
+test("small correction-red labels remain AA on both reading surfaces", () => {
+  const tokens = readFileSync(path.join(repoRoot, "apps/www/src/styles/tokens.css"), "utf8");
+  const red = tokens.match(/--jb-correction-red:\s*(#[0-9a-f]{6})/i)?.[1];
+  const white = tokens.match(/--jb-oil-white:\s*(#[0-9a-f]{6})/i)?.[1];
+  const paper = tokens.match(/--jb-oil-paper:\s*(#[0-9a-f]{6})/i)?.[1];
+  assert.ok(red && white && paper);
+  assert.ok(contrast(red, white) >= 4.5);
+  assert.ok(contrast(red, paper) >= 4.5);
+});
