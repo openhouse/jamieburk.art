@@ -519,7 +519,7 @@ function healthMarkdown(model, evaluation) {
   const rows = Object.entries(evaluation.checks)
     .map(([id, passed]) => `| ${id} | ${passed ? "PASS" : "FAIL"} |`)
     .join("\n");
-  return `${generatedWarning}\n\n# Photo knowledge health\n\nCandidate fingerprint: \`${model.candidate.fingerprint}\`  \nCandidate files: ${model.candidate.fileCount}\n\n| Check | State |\n|---|---|\n${rows}\n\n## Open human gates\n\n- Jamie production approval\n- indexing approval\n- any later crop, context, destination, or permission change\n\nAutomated PASS is verification evidence, not publication authority.\n`;
+  return `${generatedWarning}\n\n# Photo knowledge health\n\nCandidate fingerprint: \`${model.candidate.fingerprint}\`\nCandidate files: ${model.candidate.fileCount}\n\n| Check | State |\n|---|---|\n${rows}\n\n## Open human gates\n\n- Jamie production approval\n- indexing approval\n- any later crop, context, destination, or permission change\n\nAutomated PASS is verification evidence, not publication authority.\n`;
 }
 
 export function renderPhotoReport(model, evaluation, kind = "health") {
