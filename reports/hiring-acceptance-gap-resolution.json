@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "ecb6d79bfddd647f8718068143ff6df24c58f594",
+  "candidateSha": "79aaaf168f00a18ce9bbf20c9c59e8fc4c90b1db",
   "portfolioSnapshotHash": "d0c2128cdc0de5675fb359cfa60882035e58cf55052e9211b4dbd5776610a5b9",
-  "publicReportHash": "48f2fa6628df2d9b4532dfcdf47a731a7de714d812b15706d9ba6ef305757694",
-  "wikiSourceFingerprint": "18adb6f807a9cdc24699608154906dde9d13dc008277a5d69fc28683f1499463",
+  "publicReportHash": "94b08827bc6055c5d3e988db340be6d0d91c575a88331b677910510d869338e1",
+  "wikiSourceFingerprint": "31294ffd390c163733f2b6dc52c39358e814b61af74b3f1d2388424a23a800e1",
   "findings": [
     {
       "findingId": "finding.requirement.oti.government-hiring-and-procurement",

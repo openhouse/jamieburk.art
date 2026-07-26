@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-ecb6d79bfddd",
-  "generatedAt": "2026-07-19T03:17:54-04:00",
-  "candidateSha": "ecb6d79bfddd647f8718068143ff6df24c58f594",
-  "candidatePathsClean": false,
+  "runId": "hiring-public-79aaaf168f00",
+  "generatedAt": "2026-07-26T11:05:35-04:00",
+  "candidateSha": "79aaaf168f00a18ce9bbf20c9c59e8fc4c90b1db",
+  "candidatePathsClean": true,
   "portfolioSnapshotHash": "d0c2128cdc0de5675fb359cfa60882035e58cf55052e9211b4dbd5776610a5b9",
-  "roleContextHash": "e609dbecd2231409330b4a992e1c2fa0cb8786cf463c1e4c9bfa450e0fcd3d90",
+  "roleContextHash": "a83e7df574fd0b4919ac034b134d42887231428efa4d9902e1a82395dc75a29d",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -139,7 +139,7 @@
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
       "title": "NYC OTI - Technical Operations Manager 782369",
-      "roleContextHash": "4443fecc128f7e7e13e165e23bc2846a6920495f212337a4b742c5cb14cff65d",
+      "roleContextHash": "f564251023e1541faa941ad33d295b821ed484bc27a5ff51823007ac607b4bf2",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -233,7 +233,7 @@
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
       "title": "ACLU - Product Manager II, Discovery",
-      "roleContextHash": "a217336b36261188e093f36243b5efa4ba5541047a31b63a76529bc7a4b44541",
+      "roleContextHash": "1f63d16b5aef1662e84413aa418385d1c425ff5a687099cb4447f09d4aa3c38b",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -305,7 +305,7 @@
     {
       "id": "opportunity.benepass.product-operations.7f963a7a",
       "title": "Benepass - Product Operations Manager",
-      "roleContextHash": "ca08b3bbab09c784fe9698076f2429dd184df02ab13cf6c41d4211c15cc9c69b",
+      "roleContextHash": "11cc5a959621938a987d94a4048a3cbf7f8bb7836b480c37db8a804699e53a5b",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -374,7 +374,7 @@
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
       "title": "CodePath - Senior Program Manager, Claude Corps",
-      "roleContextHash": "6941a72320948903c2d926f890378cd0e8b82896cc621764cf6d5ba684ee50dd",
+      "roleContextHash": "efad3c7511b88f87d346ee9e364fcdd80ca07afec67cf6789456ad580d083e2e",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -456,7 +456,7 @@
     {
       "id": "opportunity.asana.ai-implementation.8027437",
       "title": "Asana - AI Implementation Manager, Service Management",
-      "roleContextHash": "75ad7e8205334925037e3ce1f47fe209d04784345d2116732d948ecc408c9c00",
+      "roleContextHash": "e3692b1dc4784bc44b603bce54a649fa08659f7340ee6b5b94d8df15f2f3d004",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -523,7 +523,7 @@
     {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
       "title": "PermitFlow - Product Operations Manager",
-      "roleContextHash": "1d9ad0b5b0ab64748850defd6fca850568cb0c90a58f16bc17ef6a6cd54383f3",
+      "roleContextHash": "7ee6136393bae13113964aa4476c1b10fb6de8bdd6d140a8c07da68ea458d4ff",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,

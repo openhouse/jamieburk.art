@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Town Hall listening within fieldwork
 
-**Source commit:** `0df0738f1ff6e12f88b1616a52b67154a3a2c0fc`
-**Generation time:** 2026-07-22T23:48:11-04:00
-**Source fingerprint:** `18adb6f807a9cdc24699608154906dde9d13dc008277a5d69fc28683f1499463`
+**Source commit:** `79aaaf168f00a18ce9bbf20c9c59e8fc4c90b1db`
+**Generation time:** 2026-07-26T11:05:35-04:00
+**Source fingerprint:** `31294ffd390c163733f2b6dc52c39358e814b61af74b3f1d2388424a23a800e1`
 
 - [Decision records](../../indexes/decision-records.md) - `prose_link` (markdown)
 - [Decision records](../../indexes/decision-records.md) - `related_to` (frontmatter)
