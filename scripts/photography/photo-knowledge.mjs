@@ -70,8 +70,45 @@ export const canary = {
     "e2746073bf4dc7b3648b19c4e1eff8fbd4bdf8d5c196de2cc5a0f19d22aebd89",
   correctedPhotographySourceSha:
     "dc1cdbc6496cc1c5f70cd85c815ef840e1763bb1cbaf5c325a1f1d9a4501969f",
+  rendererSources: [
+    {
+      path: "apps/www/src/components/Hero.tsx",
+      snapshot:
+        "docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/components/Hero.tsx",
+      sha256:
+        "9126f3fd6a1a0117b1270c796b7e4afe677fa755bc6beeec4aa90dd6de9cbf6d"
+    },
+    {
+      path: "apps/www/src/app/page.tsx",
+      snapshot:
+        "docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/app/page.tsx",
+      sha256:
+        "6521616938ac69d27b8321b897892cd4fda32c318421e7cb666cc9c82b78d130"
+    },
+    {
+      path: "apps/www/src/data/photography.ts",
+      snapshot:
+        "docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/data/photography.ts",
+      sha256:
+        "dc1cdbc6496cc1c5f70cd85c815ef840e1763bb1cbaf5c325a1f1d9a4501969f"
+    },
+    {
+      path: "apps/www/src/app/globals.css",
+      snapshot:
+        "docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/app/globals.css",
+      sha256:
+        "d49422f139fcf57efbc620cf366b5cbe9e9e68d1a899ddaa854a995021577978"
+    },
+    {
+      path: "apps/www/src/styles/tokens.css",
+      snapshot:
+        "docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/styles/tokens.css",
+      sha256:
+        "0a17667b30a657c5ea6c4c627453211660df3ef1b061ed4c83d90cd79aaab890"
+    }
+  ],
   renderReceiptSha:
-    "59130c03589cf3b134063f5459924559188e98d39b5b55c4735df1812075a213",
+    "0aa8126c4350396ba29aaa5b432a749c07217836b5ed1fed37e8666c6693085d",
   mobileEvidenceSha:
     "2765480352a9b561abfbf05630984b1bc1d6ed745d7ce70f5b59e9f41bb6362f",
   desktopEvidenceSha:
@@ -212,21 +249,9 @@ export function validateRollbackDrill(receipt) {
   };
 }
 
-function gitTreeFileDigest(tree, relativePath, root = repoRoot) {
-  try {
-    return sha256(
-      execFileSync("git", ["show", `${tree}:${relativePath}`], {
-        cwd: root,
-        stdio: ["ignore", "pipe", "ignore"]
-      })
-    );
-  } catch {
-    return null;
-  }
-}
-
 export function validateRenderReceipt(receipt, root = repoRoot) {
   const viewports = receipt.viewports ?? [];
+  const rendererSources = receipt.candidate?.renderer_sources ?? [];
   const expectedScreenshots = new Map([
     [`${canary.mobileEvidencePath}:360x800`, canary.mobileEvidenceSha],
     [`${canary.desktopEvidencePath}:1280x900`, canary.desktopEvidenceSha]
@@ -257,11 +282,13 @@ export function validateRenderReceipt(receipt, root = repoRoot) {
       receipt.candidate?.tree === canary.correctedCandidateTree &&
       receipt.candidate?.corrected_source_sha256 ===
         canary.correctedPhotographySourceSha &&
-      gitTreeFileDigest(
-        canary.correctedCandidateTree,
-        "apps/www/src/data/photography.ts",
-        root
-      ) === canary.correctedPhotographySourceSha &&
+      JSON.stringify(rendererSources) === JSON.stringify(canary.rendererSources) &&
+      rendererSources.every((entry) =>
+        storedDigestMatches(
+          { path: entry.snapshot, sha256: entry.sha256 },
+          root
+        )
+      ) &&
       viewportsPass &&
       /does not close/.test(receipt.release_boundary ?? ""),
     viewports
@@ -732,13 +759,13 @@ export function validateCanary({
         canary.correctionPatchSha &&
       sha256(readFileSync(absolute(canary.renderReceiptPath, root))) ===
         canary.renderReceiptSha &&
-      projection.renderer_sources?.every(
-        (entry) =>
-          gitTreeFileDigest(
-            canary.correctedCandidateTree,
-            entry.path,
-            root
-          ) === entry.sha256
+      JSON.stringify(projection.renderer_sources) ===
+        JSON.stringify(canary.rendererSources) &&
+      projection.renderer_sources?.every((entry) =>
+        storedDigestMatches(
+          { path: entry.snapshot, sha256: entry.sha256 },
+          root
+        )
       ) &&
       projection.adjacent_copy?.role ===
         "Technical Project Manager - Product Operations & Implementation" &&

@@ -158,6 +158,14 @@ test("responsive rendering receipt rejects a changed screenshot claim", () => {
   assert.equal(validateRenderReceipt(receipt).pass, false);
 });
 
+test("responsive rendering receipt rejects a changed renderer snapshot claim", () => {
+  const receipt = JSON.parse(
+    readFileSync(path.join(repoRoot, canary.renderReceiptPath), "utf8")
+  );
+  receipt.candidate.renderer_sources[0].sha256 = "0".repeat(64);
+  assert.equal(validateRenderReceipt(receipt).pass, false);
+});
+
 test("RCV, panel votes, and aggregate scores cannot authorize selection", () => {
   const projection = structuredClone(readRecord(canary.projectionPath).data);
   const permission = readRecord(canary.permissionPath).data;

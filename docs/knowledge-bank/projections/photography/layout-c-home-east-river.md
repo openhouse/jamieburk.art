@@ -26,7 +26,7 @@ candidate_patch:
 candidate_tree: 3059ab6209621cfbca60d352dd83cc596675600a
 render_receipt:
   path: docs/qa/photo-knowledge/layout-c-render-receipt.json
-  sha256: 59130c03589cf3b134063f5459924559188e98d39b5b55c4735df1812075a213
+  sha256: 0aa8126c4350396ba29aaa5b432a749c07217836b5ed1fed37e8666c6693085d
 route: /
 component: Hero
 purpose:
@@ -77,14 +77,19 @@ actions:
     href: /resume
 renderer_sources:
   - path: apps/www/src/components/Hero.tsx
+    snapshot: docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/components/Hero.tsx
     sha256: 9126f3fd6a1a0117b1270c796b7e4afe677fa755bc6beeec4aa90dd6de9cbf6d
   - path: apps/www/src/app/page.tsx
+    snapshot: docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/app/page.tsx
     sha256: 6521616938ac69d27b8321b897892cd4fda32c318421e7cb666cc9c82b78d130
   - path: apps/www/src/data/photography.ts
+    snapshot: docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/data/photography.ts
     sha256: dc1cdbc6496cc1c5f70cd85c815ef840e1763bb1cbaf5c325a1f1d9a4501969f
   - path: apps/www/src/app/globals.css
+    snapshot: docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/app/globals.css
     sha256: d49422f139fcf57efbc620cf366b5cbe9e9e68d1a899ddaa854a995021577978
   - path: apps/www/src/styles/tokens.css
+    snapshot: docs/qa/photo-knowledge/layout-c-renderer-sources/apps/www/src/styles/tokens.css
     sha256: 0a17667b30a657c5ea6c4c627453211660df3ef1b061ed4c83d90cd79aaab890
 alt_text: >
   Jamie Burkart in a life vest holding a canoe paddle on the East River

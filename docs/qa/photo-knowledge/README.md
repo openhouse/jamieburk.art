@@ -13,6 +13,12 @@ Patch SHA-256:
 Resulting Git tree: `3059ab6209621cfbca60d352dd83cc596675600a`
 Rendering receipt: `layout-c-render-receipt.json`
 
+The corrected candidate tree was created locally and is not a
+network-addressable Git ref. Its five renderer sources are therefore preserved
+as exact, checksummed snapshots under `layout-c-renderer-sources/`. Fresh clones
+validate those committed snapshots instead of depending on an unreferenced
+object in one operator's local Git database.
+
 | Evidence | CSS viewport | SHA-256 |
 |---|---:|---|
 | `layout-c-home-360x800.png` | 360 x 800 | `2765480352a9b561abfbf05630984b1bc1d6ed745d7ce70f5b59e9f41bb6362f` |
