@@ -1,38 +1,44 @@
 {
-  "evaluator": "Codex native independent holdout evaluator",
-  "reviewerId": "sack-b-native-layout-final-v5",
+  "evaluator": "Codex independent sanitized-dossier holdout evaluator",
+  "reviewerId": "sack-b-photo-knowledge-rebound",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "3949d5546e16656987ea437ad0129f0a338f1c6bbc67f3ca94fa12d7d0e062d5",
+  "candidateSha256": "47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed SHA-256 over all 46 candidateRelativePaths in declared order using path + NUL + raw bytes + NUL; the final and initial digests both equal 3949d5546e16656987ea437ad0129f0a338f1c6bbc67f3ca94fa12d7d0e062d5.",
-    "The globally visible About link reaches /about in one click. Its rendered through-line plainly states the recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "Three current public-safe systems traces are specific and linked: Harry J. Epstein Company (2012-Present), NYC Artist Coalition / FairRentNYC (2017-Present), and Sunday Dinner / 196 (2010s-Present). Each exposes observed relationships, a system model, interface, social use and feedback, revision/handoff, and an evidence boundary.",
-    "Harry J. Epstein supplies present-role evidence through a July 2026 public-storefront capture, an inspectable live storefront link, maintained e-commerce and content patterns, recurring customer/team feedback, incremental releases, and contribution-bounded outcome language; private analytics and operating detail remain protected.",
-    "FairRentNYC supplies inspectable collective evidence through sourced organizing and testimony, retained implementation history, public campaign sites, a July 2026 campaign capture, five civic-process photographs, a 30+ page campaign-memory structure, source mapping, decision records, action tracking, and explicit rejection of individual policy causation or sole authorship.",
-    "The rendered /work/196-sunday-dinner page contains a genuine blank operating worksheet, not capability copy: Observe, Model, Interface, Use and notice, Revise, and Hand off each have actionable prompts and writing space. The footer explicitly excludes names, contact information, attendance, addresses, credentials, correspondence, and unapproved images; adjacent copy states that it is not a participant record or reproduction of protected sources.",
-    "Sunday Dinner / 196 also provides dated operating proof: a governed 2023 residency handoff, a 2025 invitation/attendance/follow-up operating sheet, bounded 100th and 200th public milestones with Jamie and Julia credited appropriately, aggregate 300+ continuity evidence, and community credit.",
-    "The protected 2006 Social Information Spaces record remains held and unrendered. Its internal record expressly limits the material to dated coursework and rejects structural-equivalence invention, peer-reviewed research, production deployment, sole authorship of collective coursework, and present Max/Jitter proficiency. The public Open House lineage instead uses a public 2006 source and credits collective governance and documentation.",
-    "All 13 branch-review JPEGs were visually inspected in the current rendered pages; their independently recomputed hashes match the review register. Each has alt text, caption, archive label, branch-review status, and no EXIF/GPS marker. Captions preserve collective framing for civic and river work.",
-    "WEB-CAND-009 and WEB-CAND-024 remain held with specific editorial reasons and are absent from application source and browser records; the broader held-candidate set checked by the photography contract is also absent.",
-    "The responsive public-surface fingerprint independently recomputes to c3afd958f0c141e905d4cfd8d7dea4960369f4d0834d35d3b3a799168f1d7d92 across 124 tracked files. All 56 route/viewport rows cover 14 canonical routes at 360, 375, 768, and 1280 pixels with successful responses, zero axe violations, zero overflow elements, no failed requests, valid landmarks/headings, and all lazy images decoded after scroll.",
-    "Current desktop and mobile captures show the recursive About trace, civic evidence, all photographic sequences, and the Sunday Dinner worksheet as legible and materially integrated. The machine photography contract passes 13/13 while explicitly retaining the human publication gate."
+    "candidate-manifest.json independently recomputes across all 46 ordered files to 47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9, exactly matching the declared candidate identity.",
+    "The rendered homepage route / states the complete method at zero clicks: observe relationships, model the emerging system, prototype an interface, test through social or collective use, then document revision and handoff. runtime-evidence/holdout-home.png confirms that this is visible rather than metadata-only.",
+    "The rendered /about route provides a one-click, project-linked reconstruction table. It marks Harry J. Epstein Company, NYC Artist Coalition / FairRentNYC, and Sunday Dinner and 196 as current and gives each an observed, modeled, interface, use-and-feedback, revision-and-handoff, and evidence-boundary account.",
+    "On /work/harry-j-epstein, the current operating loop traces customer and team observations into a joined requirements model, a maintained storefront and operating routines, feedback from questions and bounded analytics, and reusable release patterns. runtime-evidence/holdout-work-harry-j-epstein.png supplies an inspectable public storefront artifact and bounded analytics summary.",
+    "On /work/fair-rent-nyc, social structure becomes information architecture through source maps, question logs, provenance records, decision memory, and action tracking; these connect to campaign sites, town halls, hearings, handbills, and public action pathways. The rendered page supplies a campaign-site capture, collective-use photographs, public-source notes, and continuity artifacts rather than capability language alone.",
+    "On /work/196-sunday-dinner, the rendered operating loop explicitly covers observation, a connected participation model, invitations and onboarding as interfaces, testing through recurring social use, and documented revision and handoff. Its proof map makes the 2014/2016 milestones, governed 2023 residency handoff, 2025 operating schema, and blank hosting-handoff specimen inspectable.",
+    "apps/www/src/components/CaseStudyBlocks.tsx implements the Sunday Dinner specimen as six concrete stages: Observe, Model, Interface, Use and notice, Revise, and Hand off, with an explicit boundary excluding participant records.",
+    "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md and apps/www/src/data/knowledge-bank/historical-knowledge.ts keep the 2006 coursework protected and held from active projection. They explicitly reject disciplinary invention, peer-reviewed research, production deployment, sole authorship, and present Max/Jitter proficiency.",
+    "docs/qa/evals-H/responsive-route-matrix.json covers 14 routes at 360, 375, 768, and 1280 pixels: all 56 rows return 200 with zero overflow, axe violations, broken images, unlabeled images, or failed requests, supporting practical visibility of the evaluated surfaces."
   ],
-  "gaps": [],
+  "gaps": [
+    "The two evidence reports carry different public-surface fingerprints, and the supplied screenshots are listed separately rather than included in the 46-file digest. The rendered claims were therefore cross-checked directly against manifest-bound source files, but stronger screenshot-to-candidate binding would improve provenance.",
+    "HJE internal analytics, customer data, and workflow diagrams and Sunday Dinner participant records remain intentionally protected; their public proof relies on bounded summaries, public surfaces, governed schemas, and derivatives.",
+    "This score establishes PR-016 content completeness only. It does not establish publication clearance or production readiness."
+  ],
   "safety_findings": [
-    "This is approval for develop/staging review only; a machine pass is not publication clearance.",
-    "All 13 photographs remain branch-review assets pending unchanged-candidate human review of exact crops and captions, photographer and rights status, consent and dignity, collective credit, public usefulness, and Jamie approval.",
-    "The production public-safety preflight hard-fails while photography remains branch-review. Protected educational records, participant records, private coalition context, analytics, credentials, correspondence, and unapproved images remain excluded."
+    "All 13 registered photographs independently match their recorded SHA-256 values, but every item remains branch-review. Human image rights, photographer attribution, exact credit/crop/caption, represented-person consent and dignity, collective credit, final public usefulness, and Jamie approval of the unchanged candidate remain open gates.",
+    "scripts/check-public-safety.mjs treats branch-review photography as a production failure, scans for protected paths, credentials, transcripts, and unsafe approval markers, and requires explicit production indexing opt-in.",
+    "FairRentNYC visibly credits collaborators and advocates, describes outcomes as collective, and withholds legal-review material, stakeholder lists, private strategy, emails, and unapproved quotations. Sunday Dinner similarly excludes names, attendance, correspondence, addresses, and access details.",
+    "Deployment and indexing remain open human release gates. apps/www/next.config.ts defaults to staging/noindex behavior and requires an explicit production environment plus NEXT_PUBLIC_ROBOTS_POLICY=index before indexing."
   ],
-  "recommendation": "Approve PR-016 at score 4 for develop/staging review. Preserve staging noindex and the existing production block; do not grant production publication clearance until the exact-image human gates and Jamie approval are completed against this unchanged candidate.",
+  "recommendation": "For independent run sack-b, pass PR-016 at score 4. The candidate makes the recursive social-systems method visible and reconstructable across three current projects with bounded, inspectable proof. Preserve branch-review status until every listed human gate is satisfied. Record this solely as a simulated Warren Sack lens, not the named professor's participation, quotation, endorsement, or judgment.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "model": "gpt-5",
-    "reasoningEffort": "high",
+    "processSessionId": "019fa08a-2f07-7303-9d9a-5d9041704b01",
+    "agentNickname": "Galileo",
+    "model": "inherited-current-model",
+    "reasoningEffort": "inherited",
     "sandbox": "read-only",
     "ephemeral": true,
-    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
+    "startedAt": "2026-07-26T22:27:15.848Z",
+    "completedAt": "2026-07-26T22:32:15.066Z",
+    "operatorAttestation": "Produced by a fresh separate Codex process that received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

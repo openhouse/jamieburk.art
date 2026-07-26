@@ -585,13 +585,15 @@ const knowledgeBankInput = {
     sourceOrder: [
       "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
       "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
-      "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
+      "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+      "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
     ],
     occurrences: [
       { id: "protected-attendance-corroboration", claimId: "CLM-SUNDAY-DINNER-300-PLUS-CORROBORATION", projection: "case-study", sourceIds: ["SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },
       { id: "residency-onboarding-workflow", claimId: "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW-2023", projection: "case-study" },
       { id: "sunday-dinner-invitation-operations", claimId: "CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025", projection: "case-study" },
-      { id: "facebook-milestones", claimId: "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES", projection: "case-study", sourceIds: ["SRC-FACEBOOK-SUNDAY-DINNER-100-2014", "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"] }
+      { id: "facebook-milestones", claimId: "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES", projection: "case-study", sourceIds: ["SRC-FACEBOOK-SUNDAY-DINNER-100-2014", "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"] },
+      { id: "community-profile", claimId: "CLM-COMMUNITY-SUNDAY-DINNER-WOW-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] }
     ]
   }, {
     id: "source-backed-team-memory",

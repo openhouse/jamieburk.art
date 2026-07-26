@@ -1,40 +1,44 @@
 {
-  "evaluator": "Codex independent read-only holdout evaluator",
-  "reviewerId": "sack-a-native-layout-final-v5",
+  "evaluator": "Codex independent sanitized-dossier holdout evaluator",
+  "reviewerId": "sack-a-photo-knowledge-rebound",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "3949d5546e16656987ea437ad0129f0a338f1c6bbc67f3ca94fa12d7d0e062d5",
+  "candidateSha256": "47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed SHA-256 over all 46 candidateRelativePaths in declared order using path + NUL + raw bytes + NUL; result exactly matched 3949d5546e16656987ea437ad0129f0a338f1c6bbc67f3ca94fa12d7d0e062d5.",
-    "The current rendered About page is directly reachable from the homepage navigation and plainly states the recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "Harry J. Epstein Company is explicitly current (2012-Present) and supplies a complete trace from customer language and operating habits through an integrated requirements model, maintained public storefront, customer/team feedback, incremental releases, reusable patterns, and team handoffs. The July 2026 storefront capture is inspectable while analytics and customer data remain bounded.",
-    "NYC Artist Coalition / FairRentNYC is explicitly current (2017-Present) and supplies the strongest collective trace: lived experience, meetings and public sources become source maps and decision memory, then campaign sites, town halls, hearings, handbills and action pathways; public use exposes missing context, and running minutes and decision trails support continuation. Current screenshots, campaign artifacts, testimony, public links and five collective-work photographs make the evidence inspectable.",
-    "Sunday Dinner and 196 is explicitly current (2010s-Present). The rendered page ties recurring hosting and participation feedback to a governed 2023 residency handoff, a 2025 operating sheet, public milestones, and a six-stage HostingHandoffTemplate. The template is a genuine inspectable public-safe operating derivative, not capability copy: it prompts Observe, Model, Interface, Use and notice, Revise and Hand off, and explicitly excludes participant records.",
-    "Temporal labels are disciplined: WOWList is identified as historical, CallNYC as archived, and Source-Backed Team Memory as an early method rather than production SaaS. The required three-current-project trace therefore rests on HJE, NYC Artist Coalition / FairRentNYC, and Sunday Dinner / 196 rather than laundering historical work into present proficiency.",
-    "The responsive evidence was independently rebound successfully: public-surface fingerprint c3afd958f0c141e905d4cfd8d7dea4960369f4d0834d35d3b3a799168f1d7d92 matches the current 124-file surface; all 56 route/viewport rows cover 14 routes at 360, 375, 768 and 1280 pixels with no axe violations, overflow, broken post-scroll images, unlabeled images, failed requests, or invalid heading/landmark rows.",
-    "The current browser record contains 14 desktop/mobile rows across seven key routes, all HTTP 200 with no console errors, page errors, overflow, broken images, or held-image references. Current desktop and mobile renders show the recursive traces and the complete blank 196 handoff specimen.",
-    "All 13 branch-review photographs were visually inspected. Their registered SHA-256 values match the exact JPEG bytes, EXIF/GPS markers are absent, and captions and archive labels preserve collective framing. WEB-CAND-009 and WEB-CAND-024 remain excluded; neither their IDs nor held filenames appear on the public surface or in browser evidence.",
-    "Dated coursework is bounded correctly. Open House is supported by a public 2006 source and described as initiated by Jamie but collectively governed. Protected UCSC records remain withheld and held; the source note explicitly rejects structural-equivalence invention, peer-reviewed research, production deployment, sole authorship, and current Max/Jitter proficiency claims.",
-    "Collective credit is explicit for HJE staff, NYC Artist Coalition collaborators and advocates, the 196 / Sunday Dinner community, Open House participants, and the raft crew. Outcome language repeatedly rejects solo causation and preserves source, consent, privacy and participant-record boundaries.",
-    "Staging public-safety checks pass with the photography warning intact. A production-mode preflight fails specifically because branch-review photography lacks exact-image human approval, demonstrating that the production gate remains effective."
+    "candidate-manifest.json lists 46 candidate files with none missing; recomputation using the declared path-plus-NUL-plus-bytes-plus-NUL algorithm produced 47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9, exactly matching the identity contract.",
+    "The rendered homepage route / visibly states the complete method in plain language: observe relationships, model the emerging system, prototype an interface, test it through social or collective use, then document revision and handoff. The supplied desktop and mobile screenshots show this as a legible HOW I WORK section.",
+    "The one-click /about route repeats the recursive sequence and provides project-by-project Observed, Modeled, Interface, Use and feedback, Revision and handoff, and Evidence boundary fields for Harry J. Epstein Company, NYC Artist Coalition / FairRentNYC, WOWList, and Sunday Dinner and 196.",
+    "The rendered /work/harry-j-epstein route makes a current 2012-Present operating loop reconstructable from customer and team observations through requirements modeling, the storefront and operating routines, bounded analytics and recurring questions, incremental revision, and reusable team workflows. Its rendered artifact gallery includes an inspectable public-storefront capture and bounded analytics summary.",
+    "The rendered /work/196-sunday-dinner route traces the full sequence through artist needs, a connected participation model, invitations and onboarding interfaces, social use evidenced by public milestone records and governed operating forms, and documented 2023 and 2025 handoffs. Its visible blank Hosting handoff template and operating-schema panels make the loop inspectable without exposing participant records.",
+    "The rendered /work/fair-rent-nyc route connects social structure and information architecture directly: listening meetings and ballots become run-of-show documents, public event pages, hearings, campaign actions, source maps, question logs, decision memory, and action tracking. Campaign screenshots, public photographs, a source-map artifact, meeting-memory structure, and collective-credit language ground participation, learning, and continuity.",
+    "apps/www/src/data/knowledge-bank/historical-knowledge.ts keeps CLM-SOCIAL-INFO-SPACES-PROTOTYPE on hold with no public surfaces and explicit prohibitions against claims of structural-equivalence invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency. The public /about lineage instead uses the separately public-sourced, dated 2006 Open House example and describes its governance collectively.",
+    "docs/qa/evals-H/responsive-route-matrix.json reports 56 successful checks across 14 routes and four viewport widths, with zero axe violations, overflow elements, broken images after scrolling, unlabeled images, failed requests, or non-success responses. The supplied route screenshots visually confirm that the method and project proof remain legible on desktop and mobile."
   ],
-  "gaps": [],
+  "gaps": [
+    "Human image rights, photographer attribution, represented-person consent and dignity, exact credit, crop and caption, collective credit, and final public usefulness remain open.",
+    "Jamie approval of the exact unchanged candidate remains open.",
+    "Deployment and indexing remain open human-controlled production gates; the dossier does not establish either.",
+    "These open gates do not reduce the PR-016 content score because every supplied photograph remains explicitly labeled branch-review and the candidate does not represent review evidence as publication clearance."
+  ],
   "safety_findings": [
-    "Machine and holdout passes are not publication clearance.",
-    "All 13 photographs remain branch-review assets pending exact crop, caption, photographer/rights, consent, dignity, collective-credit, usefulness, and Jamie approval of the unchanged candidate.",
-    "The 196 specimen explicitly excludes names, contact information, attendance, addresses, access credentials, private correspondence and unapproved images, and the page separately states that it is not a participant record.",
-    "Protected educational records, private coalition context, customer data, analytics, participant histories and access details remain outside the public projection.",
-    "Develop/staging review preserves noindex and human production gates; production publication must remain blocked until those gates are completed."
+    "docs/qa/layout-A/photo-review-register.json marks all 13 included photographs branch-review and sets productionPublicationStatus to pending-exact-image-human-review; it also records two held images excluded for insufficient public-proof context or missing exact-image approval.",
+    "apps/www/src/data/photography.ts attaches a publication boundary to every governed image, while scripts/check-public-safety.mjs warns on branch-review photography outside production and makes that state a production failure.",
+    "The FairRentNYC and Sunday Dinner surfaces visibly separate Known, Open, and Protected material, preserve collective credit, and exclude private coalition strategy, legal-review material, stakeholder information, participant identities, attendance records, correspondence, addresses, access details, and unapproved images.",
+    "scripts/check-public-safety.mjs enforces private-path, credential, confidential-marker, transcript-exposure, resume, noindex, and explicit indexing-opt-in checks. Inspection of the script is evidence of the intended gate, not evidence that deployment or production clearance has occurred."
   ],
-  "recommendation": "Pass PR-016 at score 4 for develop/staging review. Preserve the exact candidate and responsive fingerprints, do not carry this judgment across candidate changes, and do not publish the photographs or enable production indexing until exact-image human review, rights and consent checks, collective-credit review, and Jamie approval are recorded.",
+  "recommendation": "Pass PR-016 at score 4 for independent simulated Warren Sack lens run sack-a. Preserve the current recursive-method surface and three-project proof chain, and do not proceed to publication, deployment, or indexing until every listed human gate is resolved against the unchanged candidate.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "model": "gpt-5",
-    "reasoningEffort": "high",
+    "processSessionId": "019fa08a-2b79-7982-8ed3-1d76a54485ad",
+    "agentNickname": "Linnaeus",
+    "model": "inherited-current-model",
+    "reasoningEffort": "inherited",
     "sandbox": "read-only",
     "ephemeral": true,
-    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
+    "startedAt": "2026-07-26T22:27:15.848Z",
+    "completedAt": "2026-07-26T22:30:25.994Z",
+    "operatorAttestation": "Produced by a fresh separate Codex process that received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

@@ -1456,6 +1456,39 @@
       ]
     },
     {
+      "id": "CLM-COMMUNITY-SUNDAY-DINNER-WOW-2017",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A 2017 Greene Hill Food Co-op profile documented Jamie and Julia hosting weekly Sunday dinners open to the community alongside WOW List's community-event publishing.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+          "relationship": "direct-support",
+          "supports": [
+            "weekly Sunday dinners",
+            "open community invitation",
+            "WOW List community-event publishing",
+            "Jamie and Julia's shared role"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Do not infer attendance totals or full project duration from this source.",
+        "Keep hosting credit shared with Julia Fredenberg."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -2818,7 +2851,8 @@
       "sourceOrder": [
         "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
         "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
-        "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
+        "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+        "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
       ],
       "occurrences": [
         {
@@ -2846,6 +2880,14 @@
           "sourceIds": [
             "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
             "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
+          ]
+        },
+        {
+          "id": "community-profile",
+          "claimId": "CLM-COMMUNITY-SUNDAY-DINNER-WOW-2017",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
           ]
         }
       ]

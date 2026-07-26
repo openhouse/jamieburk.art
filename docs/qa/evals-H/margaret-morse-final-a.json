@@ -1,45 +1,48 @@
 {
-  "evaluator": "Codex independent native holdout evaluator",
-  "reviewerId": "morse-a-native-layout-final-v5",
+  "evaluator": "Codex independent sanitized-dossier holdout evaluator",
+  "reviewerId": "morse-a-photo-knowledge-rebound",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "3949d5546e16656987ea437ad0129f0a338f1c6bbc67f3ca94fa12d7d0e062d5",
+  "candidateSha256": "47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently hashed all 46 declared candidateRelativePaths in exact order as path + NUL + raw bytes + NUL; the result exactly matched 3949d5546e16656987ea437ad0129f0a338f1c6bbc67f3ca94fa12d7d0e062d5. The prohibited six final scorecards were not read or used.",
-    "The homepage first viewport clearly identifies Jamie as a Technical Project Manager / Product Operations / Implementation practitioner. Persistent navigation reaches /about in one click, where the visible 'Systems people can inhabit' surface explicitly connects artistic, civic, technical, and social practice without turning the site into an artist biography.",
-    "The public Open House source, [Good Times: Open House](https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html), independently supports the ten-day experiment, communal responsibility, public participation, attention to embodied life, many-perspective documentation, and process-over-product lineage. The portfolio projects only the bounded collective account and does not reproduce the article's vulnerable participant detail or faculty praise.",
-    "WOWList supplies a first continuity through experimentation, place, participation, and attention: organizers' existing language for scenes, venues, and interests became followable keyword communities, publishing workflows, digests, and reusable distribution patterns. The page credits Jamie as co-builder/product operator with collaborators and marks the scale as historical.",
-    "Sunday Dinner / 196 supplies a second continuity through hospitality, embodiment, care, participation, and continuation. Its inspectable blank hosting-handoff specimen moves through Observe, Model, Interface, Use and notice, Revise, and Hand off while explicitly excluding names, attendance, addresses, credentials, correspondence, and unapproved images.",
-    "NYC Artist Coalition / FairRentNYC supplies a third continuity through lived cultural-space knowledge, collective participation, documentation, institutional passage, and care. Meetings, practical sessions, hearings, public pathways, running minutes, source maps, question logs, and decision trails are presented as shared infrastructure; policy and campaign outcomes remain expressly collective.",
-    "The About-page river sequence adds atmosphere, material improvisation, public encounter, embodiment, and place. Source and captions name Libby Hendon and Laura Mattingly, retain collective expedition credit, and avoid converting route, participation, or later outcomes into a solo impact claim.",
-    "Professional role clarity remains strong throughout: the homepage, About introduction, Technical Operations page, work index, case-study role-fit fields, resume actions, and contact CTA consistently frame technical project management, implementation, product operations, documentation architecture, onboarding, and durable handoff.",
-    "All 13 registered branch-review photographs were visually inspected. Their raw bytes independently match every declared SHA-256, their captions and alt text preserve collective settings and visible people, and ExifTool found no embedded artist, owner, serial, GPS, location, comment, title, or subject metadata.",
-    "Current screenshots dated 2026-07-26 show a coherent Human Index visual system across homepage desktop/mobile, About mobile, and FairRentNYC desktop. The photographs carry professional presence, crowded-room participation, collective action, public artifacts, river scale, and atmosphere rather than functioning as decorative trophies.",
-    "The current 124-file responsive public-surface fingerprint independently recomputes to c3afd958f0c141e905d4cfd8d7dea4960369f4d0834d35d3b3a799168f1d7d92. Its 56 route/viewport rows cover 14 routes at 360, 375, 768, and 1280 pixels with zero bad rows, axe violations, overflow elements, failed requests, broken post-scroll images, unlabeled images, or heading/landmark failures.",
-    "The correction-red accessibility hill climb is confirmed in source and tests: #c83b32 measures 5.09:1 against white and 4.69:1 against the blue-grey paper surface. All 14 focused accessibility and layout-photography tests passed.",
-    "Protected-source controls hold: public surfaces contain no Max/Jitter, structural-equivalence, protected-evaluation, faculty-testimonial, student-identifier, private-path, educational-email, or raw-record-filename projection. The Maven certificate is explicitly bounded as professional development rather than endorsement or production-product proof.",
-    "Production gates are executable and explicit. A production-mode public-safety run fails because all 13 photographs remain branch-review, while the register requires exact crop and caption, photographer and rights review, consent and dignity review, collective credit, public usefulness, and Jamie's approval of the unchanged candidate."
+    "candidate-manifest.json lists 46 ordered files; independently applying SHA-256 over each path, NUL, raw bytes, and NUL produced 47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9, exactly matching the identity contract.",
+    "The homepage route / immediately identifies Jamie as a Technical Project Manager working across product operations and implementation, then connects operating, civic, community, and knowledge systems through the visible language of relationships, participation, documentation, agency, continuity, and structures people can inhabit.",
+    "apps/www/src/components/SiteHeader.tsx makes /about directly reachable from the homepage. On that one-click route, the rendered 'Systems people can inhabit' section explicitly connects artistic, civic, technical, and social practice through Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition, and source-backed team memory.",
+    "The /about practice matrix supplies at least three current continuities: Harry J. Epstein Company turns attentive observation and recurring feedback into revisable workflows; NYC Artist Coalition / FairRentNYC turns participation, lived experience, source maps, meetings, and decision memory into collective continuity; Sunday Dinner and 196 turn hospitality, artist support, arrival, access, facilitation, and return into repeatable handoffs.",
+    "The rendered /work/196-sunday-dinner route shows why this is more than conventional administration: participants enter and shape a living practice, social use reveals needs, the public-safe specimen asks what to observe and revise, and the handoff explicitly permits continuation, revision, or stopping.",
+    "The rendered /work/fair-rent-nyc route treats documentation as participatory infrastructure. Source maps preserve disagreement and uncertainty, running minutes let collaborators recover context, public interfaces create action pathways, and campaign outcomes remain explicitly collective.",
+    "The rendered /lab/source-backed-team-memory route extends the same practice into technical work through human-correctable Known/Open/Protected states. It rejects automated trust, surveillance, and private-archive browsing while keeping decisions inspectable and transferable.",
+    "The professional role remains clear rather than obscured: /, /about, /work/technical-operations, and the project pages repeatedly translate the inhabited-systems method into requirements, implementation, product operations, onboarding, documentation, risk handling, launch support, and durable handoffs.",
+    "docs/qa/evals-H/responsive-route-matrix.json records 56 successful route-viewport checks across 14 routes and four widths, with zero axe violations, overflow elements, broken images after scrolling, unlabeled images, failed requests, or heading/landmark failures. The supplied desktop and mobile screenshots visibly preserve the role-first hierarchy and project continuity."
   ],
   "gaps": [
-    "Production publication remains intentionally blocked until every one of the 13 photographs receives exact-image human review for crop, caption, photographer/rights, represented-person consent and dignity, collective credit, and public usefulness.",
-    "After any image, crop, caption, registry status, or other candidate-affecting change, both candidate and responsive fingerprints, browser evidence, and approval receipts must be regenerated; this score does not carry forward to a changed candidate."
+    "All 13 governed photographs remain at explicit branch-review status. Human image rights, represented-person consent and dignity, exact crop, caption, and credit require exact-image review.",
+    "Collective credit must receive final human review for every image and public claim, especially NYC Artist Coalition, FairRentNYC, Sunday Dinner and 196, Open House, and the river expedition.",
+    "Final public usefulness and Jamie approval of this unchanged candidate remain open human gates.",
+    "Deployment and indexing remain open; this branch-review score is not production publication clearance.",
+    "This is the single morse-a holdout scorecard; the rubric's separate three-judge median requirement is not established by this run alone."
   ],
   "safety_findings": [
-    "Identifiable participants appear in the meeting, coalition, hearing, parade, and river photographs. Branch-review authorization supports develop/staging design review only and is not consent, rights clearance, or production publication approval.",
-    "Collective credit is preserved for Open House participants, WOWList collaborators and organizers, the 196 / Sunday Dinner community, NYC Artist Coalition collaborators and advocates, and the river expedition crew.",
-    "Participant-level Sunday Dinner and residency records remain protected; the public specimen is blank and aggregate claims explicitly reject unique-person, attendance, endorsement, or consent inferences.",
-    "Protected UCSC educational records, private correspondence, archive paths, identifiers, and testimonial language are withheld. The linked public article is used as a source, but its faculty praise and vulnerable-participant narrative are not projected into the portfolio.",
-    "The production preflight correctly fails closed on branch-review photography. A machine pass, staging render, or this holdout score is not publication clearance."
+    "docs/qa/layout-A/photo-review-register.json marks production publication pending and names the required human gates. Independently hashing all 13 supplied photo files matched every registered SHA-256; two less-supported candidates remain explicitly held out.",
+    "apps/www/src/data/knowledge-bank/historical-knowledge.ts marks the UCSC educational source protected and private, keeps its claim projection at hold with no surfaces, and requires public corroboration before activation. No application source imports this data file, and no rendered route quotes a faculty evaluation, grade, private correspondence, or testimonial as public authority.",
+    "The /about Open House lineage is grounded in the separately identified public Good Times article and describes participant governance and many-perspective documentation collectively; it does not convert protected educational records into endorsement.",
+    "The /work/196-sunday-dinner surface publishes aggregate continuity, public milestones, and a blank derivative only. Participant rows, identities, contact details, attendance values, correspondence, addresses, access credentials, and unapproved images are explicitly excluded.",
+    "The FairRentNYC surface repeatedly distinguishes Jamie's implementation and stewardship from collective campaigns and policy outcomes, protects legal-review and stakeholder context, and does not claim official authority or solo causation.",
+    "scripts/check-public-safety.mjs scans for private-source paths, transcript exposure, confidential markers, credentials, permissive indexing, and missing resume noindex controls; in production mode it treats branch-review photography as a blocking failure rather than publication clearance."
   ],
-  "recommendation": "Pass PR-015 at score 4 for develop/staging review. The candidate makes Jamie's inhabited-systems lineage exceptional, specific, inspectable, professionally coherent, and source-bounded. Keep staging non-indexed and do not promote or publish the photographs until the exact-image human gates are completed and all evidence is rebound to the unchanged approved candidate.",
+  "recommendation": "morse-a recommends PR-015 content passage at score 4. The candidate presents an exceptional, visible, public-safe inhabited-systems threshold that strengthens Jamie's technical-operations positioning. Preserve the protected-source holds and complete every listed human, deployment, and indexing gate before publication.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "model": "gpt-5",
-    "reasoningEffort": "high",
+    "processSessionId": "019fa08a-250d-7a41-9f18-45418610be46",
+    "agentNickname": "Noether",
+    "model": "inherited-current-model",
+    "reasoningEffort": "inherited",
     "sandbox": "read-only",
     "ephemeral": true,
-    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
+    "startedAt": "2026-07-26T22:27:15.848Z",
+    "completedAt": "2026-07-26T22:32:01.373Z",
+    "operatorAttestation": "Produced by a fresh separate Codex process that received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

@@ -159,19 +159,18 @@ export default function HomePage() {
       </section>
 
       <section className="jb-frame grid gap-10 py-16 lg:grid-cols-[0.38fr_0.62fr]">
-        <div>
-          <p className="jb-section-index">How I work</p>
-          <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-            Clarify / Structure / Build / Document / Transfer
-          </h2>
-        </div>
-        <div className="space-y-7">
-          <p className="text-xl leading-9 text-jb-ink/78">
-            I listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch and
-            adoption, and leave behind materials that make the work easier to
-            maintain.
-          </p>
+          <div>
+            <p className="jb-section-index">How I work</p>
+            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+              Observe / Model / Prototype / Test / Revise / Hand off
+            </h2>
+          </div>
+          <div className="space-y-7">
+            <p className="text-xl leading-9 text-jb-ink/78">
+              I observe relationships, model the emerging system, prototype an
+              interface, test it through social or collective use, then document
+              revision and handoff so other people can maintain and change the work.
+            </p>
           <ContactCTA />
         </div>
       </section>

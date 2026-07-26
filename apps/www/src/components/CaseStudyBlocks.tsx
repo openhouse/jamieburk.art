@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
+import { publicSourcesById } from "@/data/knowledge-bank";
 import type { WorkMeta } from "@/types/work";
 
 export function AtAGlance({ item }: { item: WorkMeta }) {
@@ -337,6 +338,140 @@ export function HostingHandoffTemplate() {
         <strong className="text-jb-ink">Publication boundary:</strong> This blank
         derivative never records names, contact information, attendance, addresses,
         access credentials, private correspondence, or unapproved images.
+      </footer>
+    </section>
+  );
+}
+
+const sundayDinnerMilestoneSources = [
+  publicSourcesById["SRC-FACEBOOK-SUNDAY-DINNER-100-2014"],
+  publicSourcesById["SRC-FACEBOOK-SUNDAY-DINNER-200-2016"],
+  publicSourcesById["SRC-NYCAC-GREENE-HILL-QA-2017-12-19"]
+];
+
+export function SundayDinnerEvidenceMap() {
+  return (
+    <section
+      aria-labelledby="sunday-dinner-evidence-map"
+      className="my-8 border border-jb-ink/25 bg-jb-paper"
+    >
+      <header className="border-b border-jb-ink/25 px-5 py-4 sm:px-6">
+        <p className="text-xs font-semibold uppercase text-jb-blue">
+          Inspectable proof map
+        </p>
+        <h3
+          className="mt-2 text-xl font-semibold text-jb-ink"
+          id="sunday-dinner-evidence-map"
+        >
+          Recurrence, operating form, and handoff
+        </h3>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-jb-ink/76">
+          Three bounded records let a reader reconstruct how a living social
+          practice became repeatable without exposing the people who inhabited it.
+        </p>
+      </header>
+
+      <ol className="grid list-none gap-px bg-jb-ink/20 p-0 lg:grid-cols-3">
+        <li className="bg-jb-paper p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase text-jb-blue">
+            01 / Recurring public use
+          </p>
+          <h4 className="mt-3 text-lg font-semibold text-jb-ink">
+            100th and 200th milestone records
+          </h4>
+          <p className="mt-3 text-sm leading-6 text-jb-ink/76">
+            Public event pages from 2014 and 2016 show the practice returning
+            through time. A 2017 community profile separately describes Jamie
+            and Julia hosting weekly dinners open to the community and using
+            WOW List for community-event publishing.
+          </p>
+          <ul className="mt-4 space-y-2 text-sm font-semibold text-jb-blue">
+            {sundayDinnerMilestoneSources.map((source) => (
+              <li key={source.id}>
+                <a href={source.canonicalUrl}>{source.title}</a>
+              </li>
+            ))}
+          </ul>
+        </li>
+
+        <li className="bg-jb-paper p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase text-jb-blue">
+            02 / Residency handoff
+          </p>
+          <h4 className="mt-3 text-lg font-semibold text-jb-ink">
+            Governed 2023 workflow
+          </h4>
+          <p className="mt-3 text-sm leading-6 text-jb-ink/76">
+            A protected acceptance record supports a public-safe sequence:
+            proposal review, video-call onboarding, configuring the space around
+            an artist&apos;s needs, and independent access for the resident and a
+            collaborator.
+          </p>
+          <ol className="mt-4 border-y border-jb-ink/15 text-sm">
+            {[
+              ["01", "Proposal review", "acceptance and open questions"],
+              ["02", "Orientation", "video-call onboarding"],
+              ["03", "Configuration", "space shaped around the practice"],
+              ["04", "Access handoff", "independent resident access"]
+            ].map(([number, label, value]) => (
+              <li
+                className="grid grid-cols-[2rem_0.8fr_1.2fr] gap-2 border-b border-jb-ink/15 py-2 last:border-b-0"
+                key={number}
+              >
+                <span className="text-xs font-semibold text-jb-red">{number}</span>
+                <strong className="text-jb-ink">{label}</strong>
+                <span className="text-jb-ink/70">{value}</span>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-4 text-xs leading-5 text-jb-ink/68">
+            The person, correspondence, dates, location, and access details stay
+            private. The record proves a documented handoff, not an artistic
+            outcome or a universal residency procedure.
+          </p>
+        </li>
+
+        <li className="bg-jb-paper p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase text-jb-blue">
+            03 / Recurring operations
+          </p>
+          <h4 className="mt-3 text-lg font-semibold text-jb-ink">
+            Governed 2025 operating schema
+          </h4>
+          <p className="mt-3 text-sm leading-6 text-jb-ink/76">
+            A later working sheet organizes dates and themes, invitations,
+            response status, attendance, and follow-up across recurring
+            gatherings. Only the field structure informs this public account.
+          </p>
+          <dl className="mt-4 grid grid-cols-2 gap-px border border-jb-ink/15 bg-jb-ink/15 text-sm">
+            {[
+              ["Gathering", "date and theme"],
+              ["Invitation", "outreach state"],
+              ["Response", "reply state"],
+              ["Attendance", "private field"],
+              ["Follow-up", "next action"],
+              ["Review", "what changes next"]
+            ].map(([label, value]) => (
+              <div className="bg-jb-paper p-3" key={label}>
+                <dt className="text-xs font-semibold uppercase text-jb-blue">
+                  {label}
+                </dt>
+                <dd className="mt-1 text-jb-ink/70">{value}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-4 text-xs leading-5 text-jb-ink/68">
+            No participant row, contact detail, private response, or attendance
+            value enters the site. The schema shows an operating interface, not
+            consent, endorsement, or a causal revision history.
+          </p>
+        </li>
+      </ol>
+
+      <footer className="border-t border-jb-ink/25 bg-jb-mist px-5 py-4 text-sm leading-6 text-jb-ink/74 sm:px-6">
+        Together these records make recurring social use, interface design, and
+        handoff inspectable. The blank specimen below shows the review questions
+        that keep the method revisable; it is a derivative, not a private record.
       </footer>
     </section>
   );
