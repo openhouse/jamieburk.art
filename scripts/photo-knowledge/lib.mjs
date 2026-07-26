@@ -202,6 +202,10 @@ export function evaluatePhotoKnowledge(options = {}) {
     records,
     suite.clearance_correction_id
   );
+  const oralHistoryInquiry = recordById(
+    records,
+    "research-inquiry.photo.hardhat-worksite-oral-history"
+  );
 
   const recordsAreSchemaValidAndComplete =
     records.every((record) => !record.error && record.data) &&
@@ -344,6 +348,38 @@ export function evaluatePhotoKnowledge(options = {}) {
       `${hero}\n${home}`
     );
 
+  const oralHistoryInquiryIsBoundedAndNonProjecting =
+    oralHistoryInquiry?.kind === "research-inquiry" &&
+    oralHistoryInquiry?.status === "governed-open" &&
+    oralHistoryInquiry?.private_source_binding?.opaque_id ===
+      "photo-inquiry-hardhat-worksite-001" &&
+    oralHistoryInquiry?.private_source_binding?.status ===
+      "private-reinspection-required" &&
+    oralHistoryInquiry?.publication_status === "hold" &&
+    oralHistoryInquiry?.projection?.status === "hold" &&
+    oralHistoryInquiry?.projection?.surfaces?.length === 0 &&
+    oralHistoryInquiry?.visible_observations?.length === 3 &&
+    oralHistoryInquiry?.oral_history_questions?.length >= 8 &&
+    oralHistoryInquiry?.research_follow_up?.length >= 4 &&
+    oralHistoryInquiry?.anti_claims?.includes(
+      "The photograph establishes the project, place, or date."
+    ) &&
+    oralHistoryInquiry?.anti_claims?.includes(
+      "Jamie's recollection alone confirms an institutional or collective outcome."
+    ) &&
+    oralHistoryInquiry?.anti_claims?.includes(
+      "Selection for oral history approves the photograph for the portfolio."
+    ) &&
+    !privatePattern.test(JSON.stringify(oralHistoryInquiry)) &&
+    !privatePattern.test(
+      source(
+        "docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md"
+      ) ?? ""
+    ) &&
+    !/hardhat-worksite|photo-inquiry-hardhat-worksite-001/i.test(
+      `${photographyData}\n${hero}\n${home}`
+    );
+
   const selectedResumeOption = resumeDecision?.options_considered?.filter(
     (option) => option.disposition === "chosen"
   );
@@ -467,6 +503,8 @@ export function evaluatePhotoKnowledge(options = {}) {
       occurrenceIsDestinationBoundAndReversible,
     recollection_remains_dated_and_non_projecting:
       recollectionRemainsDatedAndNonProjecting,
+    oral_history_inquiry_is_bounded_and_non_projecting:
+      oralHistoryInquiryIsBoundedAndNonProjecting,
     protected_absence_is_governed: protectedAbsenceIsGoverned,
     curatorial_process_preserves_artistic_authority:
       curatorialProcessPreservesArtisticAuthority,

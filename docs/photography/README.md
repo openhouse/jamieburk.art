@@ -33,6 +33,7 @@ selected photograph may remain blocked from production.
 - [Source binding](source-binding.md)
 - [Portfolio editions](portfolio-editions.md)
 - [Recollection and correction](recollection-and-correction.md)
+- [Oral history from an image](oral-history-from-an-image.md)
 - [Contributor pull-request template](contributor-pull-request-template.md)
 
 Run `npm run photos:check`, `npm run photos:test`, and

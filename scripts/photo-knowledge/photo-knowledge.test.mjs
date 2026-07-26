@@ -242,6 +242,75 @@ test("a recollection cannot activate its own public projection", () => {
   );
 });
 
+test("an oral-history inquiry cannot activate its own public projection", () => {
+  const file =
+    "docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: {
+      [file]: source(file)
+        .replace("publication_status: hold", "publication_status: ready")
+        .replace("surfaces: []", "surfaces: [homepage]")
+    },
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.oral_history_inquiry_is_bounded_and_non_projecting,
+    false
+  );
+});
+
+test("an oral-history inquiry cannot convert metadata into project fact", () => {
+  const file =
+    "docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: {
+      [file]: source(file).replace(
+        "The photograph establishes the project, place, or date.",
+        "The photograph establishes the KC Town Hall project in November 2018."
+      )
+    },
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.oral_history_inquiry_is_bounded_and_non_projecting,
+    false
+  );
+});
+
+test("an oral-history inquiry cannot promote recollection to collective fact", () => {
+  const file =
+    "docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: {
+      [file]: source(file).replace(
+        "Jamie's recollection alone confirms an institutional or collective outcome.",
+        "Jamie's recollection confirms the project's collective outcome."
+      )
+    },
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.oral_history_inquiry_is_bounded_and_non_projecting,
+    false
+  );
+});
+
+test("a private photo identifier fails the oral-history inquiry boundary", () => {
+  const file =
+    "docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: {
+      [file]: `${source(file)}\nPrivate photo: 2bf11f72-b335-4091-97da-a078cb6766fe\n`
+    },
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.oral_history_inquiry_is_bounded_and_non_projecting,
+    false
+  );
+  assert.equal(result.checks.private_material_is_absent, false);
+});
+
 test("a private source path fails the trust boundary", () => {
   const file =
     "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md";

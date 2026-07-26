@@ -3,13 +3,13 @@
 
 **Source commit:** `786fd03838b01ffa493884c4c26b0d3cc31224bf`
 **Generation time:** 2026-07-26T16:13:52-04:00
-**Source fingerprint:** `56bd77afa590b441a12be21a81fad663446a8ffd3ce315166f11eaebc8a50348`
+**Source fingerprint:** `2cb74d7a836e4541b23971dbd069d807e272c35968dba3ca11f8df59e2b04bb0`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 20
+- Nodes added: 21
 - Nodes removed: 0
-- Edges added: 65
+- Edges added: 67
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 2
@@ -33,6 +33,7 @@ Compared with the graph artifact on `origin/develop`.
 - `projection.photo.layout-d.home.east-river`
 - `projection.photo.layout-d.resume.protected-absence`
 - `research-inquiry.photo.documented-canoe-bike-journeys`
+- `research-inquiry.photo.hardhat-worksite-oral-history`
 - `source.permission.elana-gordon.east-river.2026-07`
 - `source.photo-metadata.east-river.2022.public-safe`
 - `source.recollection.jamie-canoe-commuting.2026-07`

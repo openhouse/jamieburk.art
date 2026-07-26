@@ -21,7 +21,8 @@
     "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
     "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
     "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
-    "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md"
+    "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+    "docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md"
   ],
   "required_guides": [
     "docs/photography/README.md",
@@ -31,6 +32,7 @@
     "docs/photography/source-binding.md",
     "docs/photography/portfolio-editions.md",
     "docs/photography/recollection-and-correction.md",
+    "docs/photography/oral-history-from-an-image.md",
     "docs/photography/contributor-pull-request-template.md"
   ],
   "required_reports": [
@@ -49,6 +51,7 @@
     "application_manifest_resolves_to_wiki",
     "occurrence_is_destination_bound_and_reversible",
     "recollection_remains_dated_and_non_projecting",
+    "oral_history_inquiry_is_bounded_and_non_projecting",
     "protected_absence_is_governed",
     "curatorial_process_preserves_artistic_authority",
     "portfolio_edition_is_complete",

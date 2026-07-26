@@ -60,6 +60,10 @@ relations:
     target: edition.layout-d.photo-knowledge.2026-07
     href: ../../projections/photography/layout-d-portfolio-edition.md
     context: Dated occurrence set for the RFC 0003 implementation.
+  - type: related_to
+    target: research-inquiry.photo.hardhat-worksite-oral-history
+    href: ../../research-inquiries/hardhat-worksite-oral-history.md
+    context: A held inquiry returning one private worksite photograph to Jamie before any claim, caption, or placement is proposed.
 ---
 
 # Photography working notebook
@@ -129,6 +133,9 @@ field manifest remains the authority for reconnecting a note to an original.
 - [RFC 0003 photography guide](../../../photography/README.md): the living
   asset, occurrence, edition, recollection, correction, and rights workflow
   proven through the East River canary.
+- [Oral history from an image](../../../photography/oral-history-from-an-image.md):
+  a three-lane protocol separating visible observation, first-person
+  recollection, and research or rights follow-up.
 
 ## RFC 0003 Canary Map
 
@@ -141,6 +148,7 @@ field manifest remains the authority for reconnecting a note to an original.
 - [Resume protected absence](../../projections/photography/layout-d-resume-protected-absence.md)
 - [Layout D portfolio edition](../../projections/photography/layout-d-portfolio-edition.md)
 - [Bicycle-canoe research inquiry](../../research-inquiries/documented-canoe-bike-journeys.md)
+- [Hardhat worksite oral-history inquiry](../../research-inquiries/hardhat-worksite-oral-history.md)
 
 The notebook is intentionally allowed to change. Stable IDs preserve continuity;
 Git history preserves revision; the governing boundaries keep experimentation

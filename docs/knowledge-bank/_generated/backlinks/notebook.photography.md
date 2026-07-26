@@ -3,7 +3,7 @@
 
 **Source commit:** `786fd03838b01ffa493884c4c26b0d3cc31224bf`
 **Generation time:** 2026-07-26T16:13:52-04:00
-**Source fingerprint:** `56bd77afa590b441a12be21a81fad663446a8ffd3ce315166f11eaebc8a50348`
+**Source fingerprint:** `2cb74d7a836e4541b23971dbd069d807e272c35968dba3ca11f8df59e2b04bb0`
 
 - [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
 - [Knowledge Wiki](../../README.md) - `related_to` (frontmatter)
@@ -17,3 +17,4 @@
 - [Photography sequence sketches](../../notebooks/photography/sequence-sketches.md) - `part_of` (frontmatter)
 - [Photography notebook templates](../../notebooks/photography/templates.md) - `part_of` (frontmatter)
 - [Provisional photography vocabulary](../../notebooks/photography/editorial-vocabulary.md) - `part_of` (frontmatter)
+- [Hardhat worksite photograph oral-history inquiry](../../research-inquiries/hardhat-worksite-oral-history.md) - `related_to` (frontmatter)
