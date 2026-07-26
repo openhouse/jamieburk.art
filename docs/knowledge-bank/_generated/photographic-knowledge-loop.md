@@ -4,7 +4,7 @@
 
 - Edition: `edition.portfolio.layout-b.2026-07`
 - Photos: 6
-- Placements: 14
+- Placements: 11
 - Production: `open`
 - Indexing: `open`
 
