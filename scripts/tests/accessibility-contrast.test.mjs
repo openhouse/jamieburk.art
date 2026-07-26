@@ -29,7 +29,13 @@ function blend(foreground, background, opacity) {
 }
 
 test("shared project labels and tags use WCAG AA color pairs", () => {
-  assert.ok(contrast("#eeefec", "#0b5f81") >= 4.5);
+  const tokens = readFileSync(path.join(repoRoot, "apps/www/src/styles/tokens.css"), "utf8");
+  const paper = tokens.match(/--jb-oil-white:\s*(#[0-9a-f]{6})/i)?.[1];
+  const blue = tokens.match(/--jb-broadway-blue:\s*(#[0-9a-f]{6})/i)?.[1];
+  const green = tokens.match(/--jb-deep-green:\s*(#[0-9a-f]{6})/i)?.[1];
+  assert.ok(paper && blue && green);
+  assert.ok(contrast(paper, blue) >= 4.5);
+  assert.ok(contrast(paper, green) >= 4.5);
 
   const blocks = readFileSync(path.join(repoRoot, "apps/www/src/components/CaseStudyBlocks.tsx"), "utf8");
   const tags = readFileSync(path.join(repoRoot, "apps/www/src/components/TagList.tsx"), "utf8");

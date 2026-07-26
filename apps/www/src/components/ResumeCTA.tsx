@@ -3,9 +3,9 @@ import { site } from "@/data/site";
 
 export function ResumeCTA() {
   return (
-    <section className="rounded-lg border border-jb-blue/25 bg-jb-blue p-6 text-jb-paper">
+    <section className="rounded border border-jb-blue/25 bg-jb-blue p-6 text-jb-paper">
       <h2 className="text-2xl font-semibold">Resume</h2>
-      <p className="mt-3 leading-7 text-jb-paper/82">
+      <p className="mt-3 leading-7 text-white">
         Technical project management, product operations, implementation,
         documentation systems, civic technology, and public-facing tools.
       </p>

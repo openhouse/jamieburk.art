@@ -471,7 +471,7 @@ const workItemsInput = [
     summary:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
-    years: "2010s",
+    years: "2012-Present",
     status: "Short proof page",
     featured: true,
     priority: 5,

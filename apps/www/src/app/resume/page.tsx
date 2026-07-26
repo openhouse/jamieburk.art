@@ -40,7 +40,7 @@ export default function ResumePage() {
             artifact; email is available on the contact page.
           </p>
         </div>
-        <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+        <aside className="rounded border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
           <ul className="mt-5 space-y-4 text-jb-ink/76">
             {resumeProofHighlights.map((proof) => (

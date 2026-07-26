@@ -1,42 +1,38 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "sack-c-employment-release",
+  "evaluator": "Independent holdout reviewer using the imagined Prof. Warren Sack rubric; not a real-person endorsement",
+  "reviewerId": "sack-c-layout-B-final",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "b9044a428a83acc943b4d3ed50f042781846b0d43fa9185579dd91f529ffb80f",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The independently computed SHA-256 for the ordered public candidate subset exactly matches the expected candidate hash.",
-    "The About page plainly states the recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "Harry J. Epstein Company supplies current implementation proof: a maintained storefront, customer ordering, recurring operational questions, bounded analytics, incremental releases, reusable content patterns, clearer workflows, and durable digital operations.",
-    "NYC Artist Coalition and FairRentNYC connect stakeholder relationships and public information architecture to campaign websites, public action pathways, collective use, running minutes, source maps, decision records, question logs, and action trackers.",
-    "Sunday Dinner and 196 connect hospitality and trust to invitations, onboarding, access handoffs, facilitation, recurring use, documented continuity, and privacy-bounded operating records, including recent 2023 and 2025 workflow evidence.",
-    "WOWList is presented as co-built historical work with concrete organizer use and dated operating evidence; its historical status and shared credit prevent it from being mistaken for present proficiency or a solely authored current deployment.",
-    "CallNYC is explicitly labeled an archived, unofficial prototype whose historical guidance must not be used as a current civic service.",
-    "Source-Backed Team Memory coherently transfers the method into present implementation practice while explicitly identifying itself as an early method rather than production SaaS, a completed client deployment, or automated judgment.",
-    "The Technical Operations page consolidates the cross-project transfer into current role language covering requirements, delivery rhythms, risk signals, onboarding materials, runbooks, decision records, launch support, and durable handoffs.",
-    "The source note keeps dated coursework contextual, withholds protected educational records and correspondence, and prohibits claims of disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current proficiency in historical tools."
+    "The About source and screenshot state the recursive sequence literally and make it reconstructable through concrete projects.",
+    "Harry J. Epstein Company (2012-Present) connects customer and operating relationships to one commerce journey, maintained interface use, incremental releases, and reusable workflows.",
+    "NYC Artist Coalition and FairRentNYC (2017-Present) connect lived experience and civic relationships to coalition memory, campaign and participation interfaces, collective use, and durable documentation.",
+    "196 Artists Residency and Sunday Dinner (2012-Present) connect hospitality and trust to a care-centered operating model, recurring gatherings and residencies, and continuity through onboarding, facilitation, documentation, and access handoffs.",
+    "The screenshots identify roles, current status, contexts, and visibility boundaries while distinguishing full case studies from summary-only evidence."
   ],
-  "gaps": [],
+  "gaps": [
+    "HJE testing is summarized through bounded analytics and incremental releases rather than a public user-testing artifact.",
+    "The 196 loop remains summary-only because participant-level evidence is protected."
+  ],
   "safety_findings": [
-    "Collective credit is preserved for Open House participants, coalition collaborators, WOWList collaborators, and community work.",
-    "Protected educational records, identifiers, correspondence, private archive locations, participant records, and unapproved testimonials remain outside the public projection.",
-    "Historical prototypes and platforms are visibly distinguished from current services and current implementation capability.",
-    "No faculty participation, endorsement, or testimonial is claimed."
+    "No protected educational-record content or professor endorsement is projected.",
+    "Coalition outcomes retain collective credit and avoid sole-causation claims.",
+    "Private analytics, community records, guest histories, correspondence, and unapproved images remain excluded.",
+    "This score does not approve production photography, captions, credit, rights, consent, deployment, or indexing."
   ],
-  "recommendation": "Pass PR-016 for the evaluated candidate. The project-specific interfaces, actual use, operating systems, learning loops, and handoffs form a coherent present-day implementation narrative without converting protected coursework or archived prototypes into production-deployment claims.",
+  "recommendation": "Pass PR-016 at score 4 for this frozen public pull-request candidate and preserve all explicit human gates.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3606-7fe2-9906-a82acf75ec86",
-    "agentNickname": "Darwin",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
-    "sandbox": "read-only",
+    "processSessionId": "019f9e82-4cae-7f53-a732-bfc1fee85609",
+    "agentNickname": "Poincare",
+    "model": "inherited-parent-model",
+    "reasoningEffort": "inherited",
+    "sandbox": "isolated-read-only-evidence",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:22.360Z",
-    "completedAt": "2026-07-19T03:17:30.074Z"
+    "operatorAttestation": "Faithfully transcribed from a completed independent holdout result by the parent orchestrator."
   }
 }

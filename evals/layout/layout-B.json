@@ -1,0 +1,59 @@
+{
+  "id": "layout-B-photographic-portfolio-v1",
+  "title": "Layout B: person, practice, consequence",
+  "intent": "Photography changes the public portfolio's argument and rhythm while hiring clarity, accessibility, evidence discipline, and human publication authority remain intact.",
+  "criteria": [
+    {
+      "id": "manifest-bound-field",
+      "blocking": true,
+      "criterion": "Exactly six low-exposure derivatives are registered with dimensions, alt text, caption, honest credit status, placements, subject exposure, working-review authorization, and an open production gate."
+    },
+    {
+      "id": "metadata-and-locator-safety",
+      "blocking": true,
+      "criterion": "Public files and source contain no EXIF/XMP payload, archive UUID, original camera filename, or protected filesystem path."
+    },
+    {
+      "id": "person-practice-consequence",
+      "blocking": true,
+      "criterion": "The home hero names and pictures Jamie; field images then make place, service, and handwork visible without exposing recognizable third parties."
+    },
+    {
+      "id": "hiring-reader-burden",
+      "blocking": true,
+      "criterion": "The first viewport states Jamie's literal role and offer, presents direct Work and Resume actions, and leads into a compact route index and proof."
+    },
+    {
+      "id": "editorial-integration",
+      "blocking": true,
+      "criterion": "Photography changes Home, About, Technical Operations, KC Town Hall, and Colophon through stable, captioned placements rather than decorative card thumbnails."
+    },
+    {
+      "id": "human-index-material-system",
+      "blocking": true,
+      "criterion": "The supplied Human Index palette and semantic theme are active; gradients, orbs, bokeh, oversized radii, and decorative paper simulation are absent."
+    },
+    {
+      "id": "responsive-accessible-images",
+      "blocking": true,
+      "criterion": "Images use Next Image, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, useful alt text, visible captions, and reduced-motion support."
+    },
+    {
+      "id": "work-index-not-card-grid",
+      "blocking": true,
+      "criterion": "Work is presented as paced, rule-based rows that keep role, years, evidence, and public media together instead of a generic card grid."
+    },
+    {
+      "id": "human-authority-open",
+      "blocking": true,
+      "criterion": "Public pull-request review is explicitly distinct from final production selection, caption, credit, rights, consent, and represented-person approval."
+    }
+  ],
+  "human_review": [
+    "Does the first viewport feel like Jamie rather than a generic portfolio?",
+    "Can a hiring reader understand Jamie's role and next action in ten seconds?",
+    "Do photographs operationalize care, place, and material practice without romanticizing other people's lives?",
+    "Does the sequence preserve artistic, civic, technical, and social dimensions together?",
+    "Would Jamie publish each image, caption, and credit in production after final review?"
+  ]
+}

@@ -13,32 +13,44 @@ export const metadata: Metadata = createMetadata({
 
 export default function WorkPage() {
   return (
-    <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">Selected work</h1>
-        <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          These case studies show a recurring pattern: real needs becoming
-          clearer requirements, usable systems, public-facing tools,
-          documentation, decision trails, and durable handoffs.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
+    <div className="jb-frame py-14">
+      <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
+        <div>
+          <p className="jb-section-label">Portfolio index</p>
+          <h1 className="mt-3 text-5xl leading-none text-jb-ink sm:text-6xl">
+            Selected work
+          </h1>
+        </div>
+        <div className="max-w-3xl">
+          <p className="text-xl leading-8 text-jb-ink/76">
+            Real needs become clearer requirements, usable systems,
+            public-facing tools, decision trails, documentation, and durable
+            handoffs.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-5 text-sm font-semibold">
           <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
             Technical Operations proof page
           </Link>
           <Link className="text-jb-blue hover:text-jb-green" href="/lab/source-backed-team-memory">
             Source-backed memory lab
           </Link>
+          </div>
         </div>
       </div>
-      <div className="mt-12 space-y-14">
-        {workGroups.map((group) => {
+      <div className="mt-16 space-y-16">
+        {workGroups.map((group, groupIndex) => {
           const groupedItems = workItems.filter((item) => item.group === group);
 
           if (group === "Source-backed memory / AI lab") {
             return (
-              <section key={group}>
-                <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
-                <div className="mt-5 rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5">
+              <section className="grid gap-6 lg:grid-cols-[0.24fr_0.76fr]" key={group}>
+                <div>
+                  <p className="jb-section-label">
+                    {String(groupIndex + 1).padStart(2, "0")}
+                  </p>
+                  <h2 className="mt-2 text-2xl font-semibold text-jb-ink">{group}</h2>
+                </div>
+                <div className="border-y border-jb-ink/15 py-6">
                   <h3 className="text-2xl font-semibold text-jb-ink">
                     Source-Backed Team Memory / Noting.us
                   </h3>
@@ -66,8 +78,13 @@ export default function WorkPage() {
 
           return (
             <section key={group}>
-              <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
-              <div className="mt-5 grid gap-5 lg:grid-cols-2">
+              <div className="grid gap-3 lg:grid-cols-[0.24fr_0.76fr]">
+                <p className="jb-section-label">
+                  {String(groupIndex + 1).padStart(2, "0")}
+                </p>
+                <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
+              </div>
+              <div className="mt-5">
                 {groupedItems.map((item) => (
                   <WorkCard item={item} key={item.slug} />
                 ))}

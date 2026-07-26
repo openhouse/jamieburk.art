@@ -2,8 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { FieldPhoto } from "@/components/FieldPhoto";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { portfolioPhotos } from "@/data/photography";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
@@ -128,20 +130,30 @@ export const metadata: Metadata = createMetadata({
 
 export default function TechnicalOperationsPage() {
   return (
-    <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">
-          Technical Operations & Implementation
-        </h1>
-        <p className="mt-5 text-xl leading-8 text-jb-ink/76">
+    <div className="jb-frame py-14">
+      <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr]">
+        <div>
+          <p className="jb-section-label">Role-fit proof surface</p>
+          <h1 className="mt-3 text-4xl leading-tight text-jb-ink sm:text-5xl">
+            Technical Operations & Implementation
+          </h1>
+        </div>
+        <p className="max-w-3xl text-xl leading-8 text-jb-ink/76">
           I create the operating backbone complex teams need to move: clear
           requirements, delivery rhythms, decision records, risk signals,
           onboarding materials, operating documentation, launch support, and
           durable handoffs.
         </p>
       </div>
+      <FieldPhoto
+        className="mt-12"
+        imageClassName="aspect-[16/9]"
+        photo={portfolioPhotos.paperTrimming}
+        priority
+        sizes="(max-width: 1280px) 100vw, 1240px"
+      />
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
-        <JBCard>
+        <section className="border-y border-jb-ink/15 py-6">
           <h2 className="text-2xl font-semibold text-jb-ink">
             How this maps to team operations
           </h2>
@@ -153,8 +165,8 @@ export default function TechnicalOperationsPage() {
               </li>
             ))}
           </ul>
-        </JBCard>
-        <JBCard>
+        </section>
+        <section className="border-y border-jb-ink/15 py-6">
           <h2 className="text-2xl font-semibold text-jb-ink">Proof map</h2>
           <dl className="mt-5 space-y-4" id="proof-map">
             {proofMap.map((item) => (
@@ -171,7 +183,7 @@ export default function TechnicalOperationsPage() {
               </div>
             ))}
           </dl>
-        </JBCard>
+        </section>
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {technicalOperationsProofRows.map((row) => (

@@ -1,40 +1,37 @@
 {
-  "evaluator": "Independent holdout reader - PR-015 Margaret Morse lens",
-  "reviewerId": "morse-b-employment-release",
+  "evaluator": "Imagined Prof. Margaret Morse lens rubric; not a real-person endorsement",
+  "reviewerId": "morse-b-layout-B-final",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "b9044a428a83acc943b4d3ed50f042781846b0d43fa9185579dd91f529ffb80f",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The independently calculated fingerprint of the candidate subset matches the expected SHA-256.",
-    "The About page frames the lineage as systems people can inhabit, connecting relationships, participation, memory, continuity, and collective governance to artistic, civic, technical, and social practice.",
-    "Harry J. Epstein Company treats customer language, product judgment, institutional voice, internal habits, documentation, and customer follow-up as parts of one maintained operating system.",
-    "FairRentNYC and NYC Artist Coalition treat meetings, public sources, lived experience, collaborators, action pathways, minutes, question logs, source maps, and decision records as structural coalition infrastructure.",
-    "WOWList models organizers' existing community vocabulary through followable communities, distributed publishing, event workflows, digests, and embeddable calendars rather than imposing a centralized editorial structure.",
-    "Sunday Dinner and 196 explicitly turn hospitality, trust, invitations, hosting, onboarding, access handoffs, facilitation, consent, and recurring rhythms into participation infrastructure.",
-    "Source-Backed Team Memory makes human review, disagreement, protected context, and known/open/protected states structural parts of the method rather than optional safeguards.",
-    "Historical and current capability remain distinguishable: Open House is dated to 2006, WOWList and Sunday Dinner/196 are labeled historical, HJE and coalition work are dated through the present, and the lab is bounded as early research rather than a finished production product."
+    "The About throughline connects artistic, civic, technical, and social practice without displacing the Technical Project Manager and implementation positioning.",
+    "Open House connects experimentation and collective governance to making, living, negotiation, and many-perspective documentation.",
+    "Sunday Dinner and 196 connect hospitality, onboarding, facilitation, trust, documentation, privacy, and continuity to a repeatable operating system.",
+    "NYC Artist Coalition and FairRentNYC connect participation, lived experience, coalition memory, source mapping, coordination, and documentation while preserving mixed public and private boundaries.",
+    "Harry J. Epstein Company treats customer language, product judgment, public voice, interfaces, learning, and handoffs as one inhabitable operating journey.",
+    "Collective roles remain bounded through participant governance, helped-build, many-collaborators, and co-led language."
   ],
-  "gaps": [],
+  "gaps": [
+    "The 196 summary could name the participant community collectively nearer its singular Created formulation."
+  ],
   "safety_findings": [
-    "Collective work remains collectively credited, including participant governance, co-built platforms, collaborator-used civic systems, and explicit rejection of sole-causation claims.",
-    "The source note withholds protected educational records, grades, identifiers, private paths, correspondence, and testimonial projection.",
-    "The public course certificate is bounded as professional development, not affiliation, endorsement, or production-product proof.",
-    "No blocker involving protected educational records, participant privacy, collective credit, or historical-to-current overclaiming was found."
+    "No protected educational record, private correspondence, participant identity, or unapproved testimonial was visible in the isolated evidence.",
+    "FairRentNYC and 196 retain explicit private-source, consent, and participant-record boundaries.",
+    "Photography, deployment, production publication, and indexing remain separate human gates."
   ],
-  "recommendation": "Pass PR-015 at score 4. The candidate demonstrates at least four project-specific continuities in which participation, hospitality, care, documentation, and relationships materially structure systems people use, influence, remember, and continue.",
+  "recommendation": "Pass this PR-015 holdout at score 4 for the frozen candidate while preserving all explicit human gates.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3004-7d21-8fbe-6f16197f21a5",
-    "agentNickname": "Gibbs",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
-    "sandbox": "read-only",
+    "processSessionId": "019f9e81-cda1-7ae2-b527-7d7d91eeb87c",
+    "agentNickname": "Harvey",
+    "model": "inherited-parent-model",
+    "reasoningEffort": "inherited",
+    "sandbox": "isolated-read-only-evidence",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:20.894Z",
-    "completedAt": "2026-07-19T03:17:30.035Z"
+    "operatorAttestation": "Faithfully transcribed from a completed independent holdout result by the parent orchestrator."
   }
 }

@@ -2,43 +2,45 @@ import Link from "next/link";
 import type { Route } from "next";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
+import { FieldPhoto } from "@/components/FieldPhoto";
 import { Hero } from "@/components/Hero";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
+import { portfolioPhotos } from "@/data/photography";
 import { featuredWork } from "@/data/work";
 
 const transformations = [
-  ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
-  ["Legacy operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
+  ["Stakeholder context in motion", "shared decision records"],
+  ["Public data awaiting translation", "resident-facing guidance"],
+  ["Long-running operations", "maintainable workflows"],
+  ["Recurring gatherings", "participation infrastructure"]
 ];
 
 const startHereLinks = [
   {
     href: "/work/technical-operations",
     label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for public-sector technical operations, product operations, implementation, and delivery coordination."
+    note: "Role-fit proof for public-sector technical operations, product operations, implementation, and delivery coordination."
   },
   {
     href: "/work/harry-j-epstein",
     label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
+    note: "Long-running e-commerce, analytics, content, marketing, and operations modernization."
   },
   {
     href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
+    label: "NYC Artist Coalition / FairRentNYC",
+    note: "Coalition operations, campaign memory, source maps, public events, and cultural-space advocacy."
   },
   {
     href: "/work/callnyc",
     label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
+    note: "Civic open data translated into issue pathways and resident-facing guidance."
   },
   {
     href: "/resume",
     label: "Resume",
-    note: "PDF for applications and hiring workflows."
+    note: "Application-ready PDF and a concise account of roles, capabilities, and outcomes."
   }
 ];
 
@@ -46,28 +48,31 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="jb-frame py-12">
-        <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
+
+      <section className="jb-frame py-16">
+        <div className="grid gap-10 lg:grid-cols-[0.34fr_0.66fr]">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">Start here</p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              Quick path through the portfolio
+            <p className="jb-section-label">Start here</p>
+            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
+              A clear route through the work
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              New to my work? These pages give the clearest route through the
-              site for hiring managers, referrers, civic-tech peers, and
-              collaborators.
+              For hiring managers, referrers, civic-tech peers, and
+              collaborators: begin with the operating role, then follow the
+              proof most relevant to you.
             </p>
           </div>
-          <div className="grid gap-3">
+          <div>
             {startHereLinks.map((item) => (
               <Link
-                className="rounded-lg border border-jb-ink/12 bg-jb-warm p-4 hover:border-jb-blue/40 hover:bg-jb-sky/14"
+                className="jb-index-link group sm:grid-cols-[0.42fr_0.58fr] sm:items-baseline"
                 href={item.href as Route}
                 key={item.href}
               >
-                <span className="font-semibold text-jb-blue">{item.label}</span>
-                <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
+                <span className="text-lg font-semibold text-jb-blue group-hover:text-jb-green">
+                  {item.label}
+                </span>
+                <span className="block text-sm leading-6 text-jb-ink/70">
                   {item.note}
                 </span>
               </Link>
@@ -75,76 +80,117 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       <ProofStrip />
-      <CapabilityGrid />
+
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
-              Selected systems
-            </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+            <p className="jb-section-label">Selected systems</p>
+            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: ambiguous, high-context
-              situations becoming usable systems, public-facing tools,
-              documentation, decision trails, and durable handoffs.
+              The settings differ. The recurring action is to listen, make the
+              work legible, build what people can use, and leave continuity
+              behind.
             </p>
           </div>
-          <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
+          <Link
+            className="border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+            href="/work"
+          >
             View all work
           </Link>
         </div>
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+        <div className="mt-8">
           {featuredWork.map((item) => (
             <WorkCard item={item} key={item.slug} />
           ))}
         </div>
       </section>
-      <section className="bg-jb-warm/80 py-16">
-        <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
-              Operating motif
-            </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              What was unclear becomes usable
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
+
+      <section className="border-y border-jb-ink/12 bg-jb-warm py-16">
+        <div className="jb-frame">
+          <div className="grid gap-8 lg:grid-cols-[0.38fr_0.62fr] lg:items-end">
+            <div>
+              <p className="jb-section-label">In the field</p>
+              <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
+                Operating structure has a material life
+              </h2>
+            </div>
+            <p className="max-w-3xl text-xl leading-9 text-jb-ink/76">
+              A building, a neighborhood route, a measured stack of paper:
+              project operations happen in places, with tools, over time. The
+              structure matters because people have to inhabit it.
             </p>
           </div>
-          <dl className="grid gap-3">
-            {transformations.map(([from, to]) => (
-              <div
-                className="grid gap-2 rounded-lg border border-jb-ink/12 bg-jb-paper p-4 sm:grid-cols-[1fr_auto_1fr]"
-                key={from}
-              >
-                <dt className="font-semibold text-jb-ink">{from}</dt>
-                <dd className="hidden text-jb-blue sm:block">to</dd>
-                <dd className="font-semibold text-jb-green">{to}</dd>
-              </div>
-            ))}
-          </dl>
+          <div className="jb-photo-sequence mt-10">
+            <FieldPhoto
+              imageClassName="aspect-[16/9]"
+              photo={portfolioPhotos.kcTownHallBefore}
+              sizes="(max-width: 1280px) 100vw, 1240px"
+            />
+            <FieldPhoto
+              imageClassName="aspect-[4/3]"
+              photo={portfolioPhotos.tiredOfTiresLoad}
+              sizes="(max-width: 768px) 100vw, 58vw"
+            />
+            <FieldPhoto
+              imageClassName="aspect-[4/3]"
+              photo={portfolioPhotos.paperTrimming}
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+          </div>
         </div>
       </section>
-      <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
+
+      <CapabilityGrid />
+
+      <section className="jb-frame py-16">
+        <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr]">
+          <div className="jb-reading">
+            <p className="jb-section-label">Operating motif</p>
+            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
+              Structure grows from the material
+            </h2>
+            <p className="mt-4 leading-8 text-jb-ink/76">
+              Clarify what is known, protect what should stay private, and
+              leave behind material people can act on.
+            </p>
+          </div>
+          <ol className="border-t border-jb-ink/20">
+            {transformations.map(([from, to], index) => (
+              <li
+                className="grid gap-2 border-b border-jb-ink/20 py-5 sm:grid-cols-[3rem_1fr_auto_1fr] sm:items-baseline"
+                key={from}
+              >
+                <span className="font-label text-sm text-jb-blue">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="font-semibold text-jb-ink">{from}</p>
+                <span className="hidden text-jb-blue sm:block">becomes</span>
+                <p className="font-semibold text-jb-green">{to}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="jb-frame grid gap-8 border-t border-jb-ink/12 py-16 lg:grid-cols-[0.4fr_0.6fr]">
         <div>
-          <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
-          <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-            Clarify to Structure to Build to Document to Transfer
+          <p className="jb-section-label">How I work</p>
+          <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
+            Listen. Map. Build. Document. Transfer.
           </h2>
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but loosely defined. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
+            I usually enter when the work is important and its operating
+            structure is still forming. I listen across stakeholders, map what
+            is known and unknown, create the workflows or documentation the
+            team needs, support launch and adoption, and leave materials that
+            make the work easier to maintain.
           </p>
           <ContactCTA />
         </div>

@@ -15,7 +15,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
   ];
 
   return (
-    <section aria-labelledby="at-a-glance" className="rounded-lg bg-jb-blue p-5 text-jb-paper">
+    <section aria-labelledby="at-a-glance" className="rounded bg-jb-blue p-5 text-jb-paper">
       <h2 className="text-xl font-semibold" id="at-a-glance">
         At a glance
       </h2>
@@ -50,7 +50,7 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {item.artifactTypes.map((artifact) => (
           <li
-            className="rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium text-jb-ink"
+            className="rounded border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium text-jb-ink"
             key={artifact}
           >
             {artifact}
@@ -72,7 +72,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
           if (artifact.media) {
             return (
               <figure
-                className="overflow-hidden rounded-lg border border-jb-ink/15 bg-jb-paper shadow-sm md:col-span-2"
+                className="overflow-hidden rounded border border-jb-ink/15 bg-jb-paper shadow-sm md:col-span-2"
                 key={artifact.title}
               >
                 <a className="block" href={artifact.media.href}>
@@ -184,7 +184,7 @@ function NoteBlock({
   }[tone];
 
   return (
-    <section className={`rounded-lg border p-5 ${styles}`}>
+    <section className={`rounded border p-5 ${styles}`}>
       <h2 className="text-xl font-semibold text-jb-ink">{title}</h2>
       <div className="mt-3 text-sm leading-6 text-jb-ink/76">{children}</div>
     </section>
@@ -257,7 +257,7 @@ export function LinksList({ item }: { item: WorkMeta }) {
         {item.links.map((link) => (
           <li key={link.url}>
             <a
-              className="inline-flex rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-jb-blue hover:border-jb-blue/40 hover:text-jb-green"
+              className="inline-flex rounded border border-jb-ink/12 bg-jb-paper px-4 py-3 text-jb-blue hover:border-jb-blue/40 hover:text-jb-green"
               href={link.url}
             >
               {link.label}

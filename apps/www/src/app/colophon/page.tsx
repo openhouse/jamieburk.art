@@ -1,47 +1,90 @@
 import type { Metadata } from "next";
-import { JBCard } from "@/components/JBCard";
+import { FieldPhoto } from "@/components/FieldPhoto";
+import { portfolioPhotos } from "@/data/photography";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Colophon - Jamie Burkart",
   description:
-    "Colophon for Jamie Burkart's public-safe portfolio and future living notebook.",
+    "Colophon for Jamie Burkart's public-safe portfolio and living knowledge practice.",
   path: "/colophon"
 });
 
 const details = [
-  "Static-first Next.js App Router site with local MDX content",
-  "Public-safe artifacts, claim discipline, and visible content-status notes",
-  "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
-  "Karla for body/UI text and League Spartan for display headings",
-  "No private or proprietary font files are committed or served",
-  "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
-  "Staging-first Docker / Dokku deployment with staging noindex by default",
-  "No invasive tracking in V1"
+  ["System", "Static-first Next.js App Router site with local MDX content"],
+  [
+    "Evidence",
+    "Public-safe artifacts, claim discipline, governed citations, and visible limits"
+  ],
+  [
+    "Access",
+    "Semantic HTML, keyboard focus, reduced motion, readable type, and responsive layouts"
+  ],
+  ["Type", "Karla for prose and interface; Oswald for compact labels and indexes"],
+  ["Fonts", "No private or proprietary font files are committed or served"],
+  [
+    "Color",
+    "Work-jacket blue, institutional green, graphite, red pencil, and calibrated white surfaces"
+  ],
+  ["Deployment", "Docker and Dokku, staging-first, with staging noindex by default"],
+  ["Tracking", "No invasive analytics in V1"]
 ];
 
 export default function ColophonPage() {
   return (
-    <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">Colophon</h1>
-        <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-          This site is built as a small public proof surface and future living
-          notebook. It uses local MDX content, public-safe artifacts, and
-          intentionally limited tracking. The design uses Broadway blue, Jamie&apos;s
-          oil-pastel palette, and a quiet proportional grid derived from his
-          print-layout sketchpad. Staging is reviewable but not indexable, and
-          production should only become indexable after content and metadata
-          review.
+    <div className="jb-frame py-14">
+      <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
+        <div>
+          <p className="jb-section-label">Materials and methods</p>
+          <h1 className="mt-3 text-5xl leading-none text-jb-ink sm:text-6xl">
+            Colophon
+          </h1>
+        </div>
+        <p className="max-w-3xl text-xl leading-8 text-jb-ink/76">
+          This site is a small public proof surface projected from a deeper
+          source-backed knowledge practice. Its design treats photography,
+          captions, evidence, type, and code as working material. Staging is
+          reviewable but not indexable; production photography still requires
+          Jamie&apos;s final selection, caption, credit, rights, and consent review.
         </p>
       </div>
-      <div className="mt-10 grid gap-4 md:grid-cols-2">
-        {details.map((detail) => (
-          <JBCard key={detail}>
-            <p className="leading-7 text-jb-ink/76">{detail}</p>
-          </JBCard>
-        ))}
+
+      <div className="mt-14 grid gap-5 md:grid-cols-2">
+        <FieldPhoto
+          imageClassName="aspect-[4/3]"
+          photo={portfolioPhotos.paperTrimming}
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+        <FieldPhoto
+          imageClassName="aspect-[4/3]"
+          photo={portfolioPhotos.printedEditions}
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </div>
+
+      <section className="mt-16 grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
+        <div>
+          <p className="jb-section-label">Build register</p>
+          <h2 className="mt-3 text-3xl text-jb-ink">
+            A maintainable public surface
+          </h2>
+        </div>
+        <dl className="border-t border-jb-ink/15">
+          {details.map(([label, detail]) => (
+            <div
+              className="grid gap-2 border-b border-jb-ink/15 py-4 sm:grid-cols-[0.25fr_0.75fr]"
+              key={label}
+            >
+              <dt className="font-label text-sm font-semibold uppercase text-jb-blue">
+                {label}
+              </dt>
+              <dd className="leading-7 text-jb-ink/76">{detail}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
     </div>
   );
 }

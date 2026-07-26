@@ -13,7 +13,7 @@ export function TagList({ tags, compact = false, tone = "default" }: TagListProp
     <ul className={`flex flex-wrap gap-2 ${compact ? "text-xs" : "text-sm"}`}>
       {tags.map((tag) => (
         <li
-          className={`rounded-full border px-3 py-1 font-medium ${toneClasses}`}
+          className={`rounded border px-3 py-1 font-medium ${toneClasses}`}
           key={tag}
         >
           {tag}

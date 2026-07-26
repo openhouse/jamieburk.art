@@ -18,7 +18,7 @@ export default function ContactPage() {
           For roles, referrals, consulting conversations, or collaboration, email
           Jamie.
         </p>
-        <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
+        <div className="mt-8 rounded border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
             <div>
               <dt className="font-semibold text-jb-ink">Email</dt>
