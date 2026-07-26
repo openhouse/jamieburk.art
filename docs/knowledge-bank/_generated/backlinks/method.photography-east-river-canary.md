@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to East River photographic knowledge-loop tutorial
 
-**Source commit:** `f194002821fd76e672746a39d5de357d649ad0a6`
-**Generation time:** 2026-07-26T14:37:27-04:00
-**Source fingerprint:** `bd87d2be75f772d644c70c46bbea8412378de7dba35c37646c1acac8a50a98da`
+**Source commit:** `0a86e7f4c2493c173e0abaa7e19ec6f22d6b3df2`
+**Generation time:** 2026-07-26T15:08:48-04:00
+**Source fingerprint:** `d5e3529c5580d3590e3c8c24947c2080325e727de616f156a879113fcd267815`
 
 - [Photography knowledge loop](../../indexes/photography.md) - `prose_link` (markdown)
 - [Photography knowledge loop](../../indexes/photography.md) - `uses_method` (frontmatter)

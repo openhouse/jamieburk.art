@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T14:37:27-04:00",
-  "sourceCommit": "f194002821fd76e672746a39d5de357d649ad0a6",
-  "sourceFingerprint": "bd87d2be75f772d644c70c46bbea8412378de7dba35c37646c1acac8a50a98da",
+  "generatedAt": "2026-07-26T15:08:48-04:00",
+  "sourceCommit": "0a86e7f4c2493c173e0abaa7e19ec6f22d6b3df2",
+  "sourceFingerprint": "d5e3529c5580d3590e3c8c24947c2080325e727de616f156a879113fcd267815",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
@@ -32,7 +32,7 @@
       "opportunity": 6,
       "projection": 5
     },
-    "typedRelations": 485,
+    "typedRelations": 487,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 2,
@@ -44,14 +44,14 @@
       "informed_by": 45,
       "part_of": 9,
       "projected_to": 7,
-      "related_to": 287,
+      "related_to": 289,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
       "uses_method": 23,
       "uses_source": 64
     },
-    "proseLinks": 318,
+    "proseLinks": 320,
     "rootReachable": 124,
     "orphanCount": 0,
     "deadEndCount": 0,

@@ -1,15 +1,15 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-26T19:01:06.311Z",
+  "checkedAt": "2026-07-26T19:17:09.199Z",
   "baseUrl": "http://127.0.0.1:3048",
-  "publicSurfaceFingerprint": "1987413dc1725865379becc15a5c288522299bc3156ea5d84a28b219b4db4b87",
+  "publicSurfaceFingerprint": "7c95832da14be0bb9117dda87390c6beb40986672461fe71fe86f8b0c1394bdb",
   "publicSurfaceFileCount": 115,
   "publicSurfaceScope": [
     "apps/www/**",
     "package.json",
     "package-lock.json"
   ],
-  "method": "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; overflow, landmarks, headings, alt text, request failures, and explicit full-page scroll before final image decode checks",
+  "method": "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; overflow, landmarks, headings, alt text, request failures, explicit full-page scroll before final image decode checks, and focused homepage caption/credit occurrence checks",
   "routes": [
     "/",
     "/work",
@@ -1098,6 +1098,63 @@
       "failedRequests": []
     }
   ],
+  "focusedVisualReview": {
+    "route": "/",
+    "expectedCaption": "At the East River beneath the Manhattan Bridge, 2022.",
+    "expectedCredit": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+    "minimumCaptionFontSizePx": 12.48,
+    "occurrences": [
+      {
+        "viewport": 360,
+        "captionPresent": true,
+        "captionPartCount": 2,
+        "captionText": "At the East River beneath the Manhattan Bridge, 2022.",
+        "creditText": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+        "computedFontSizePx": 12.48,
+        "computedLineHeight": "17.472px",
+        "captionWithinViewport": true,
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
+      },
+      {
+        "viewport": 375,
+        "captionPresent": true,
+        "captionPartCount": 2,
+        "captionText": "At the East River beneath the Manhattan Bridge, 2022.",
+        "creditText": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+        "computedFontSizePx": 12.48,
+        "computedLineHeight": "17.472px",
+        "captionWithinViewport": true,
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
+      },
+      {
+        "viewport": 768,
+        "captionPresent": true,
+        "captionPartCount": 2,
+        "captionText": "At the East River beneath the Manhattan Bridge, 2022.",
+        "creditText": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+        "computedFontSizePx": 12.48,
+        "computedLineHeight": "17.472px",
+        "captionWithinViewport": true,
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
+      },
+      {
+        "viewport": 1280,
+        "captionPresent": true,
+        "captionPartCount": 2,
+        "captionText": "At the East River beneath the Manhattan Bridge, 2022.",
+        "creditText": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+        "computedFontSizePx": 12.48,
+        "computedLineHeight": "17.472px",
+        "captionWithinViewport": true,
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
+      }
+    ],
+    "passed": true
+  },
   "summary": {
     "rowCount": 56,
     "axeViolations": 0,

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T14:37:27-04:00",
-  "sourceCommit": "f194002821fd76e672746a39d5de357d649ad0a6",
-  "sourceFingerprint": "bd87d2be75f772d644c70c46bbea8412378de7dba35c37646c1acac8a50a98da",
+  "generatedAt": "2026-07-26T15:08:48-04:00",
+  "sourceCommit": "0a86e7f4c2493c173e0abaa7e19ec6f22d6b3df2",
+  "sourceFingerprint": "d5e3529c5580d3590e3c8c24947c2080325e727de616f156a879113fcd267815",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -370,7 +370,7 @@
       "sensitivity": "low",
       "summary": "Index of bounded decision reconstructions preserving actors, constraints, alternatives, artifacts, outcomes, unknowns, and projection holds.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
     },
     {
@@ -2477,6 +2477,22 @@
       "to": "decision.open-house.communal-governance",
       "source": "frontmatter",
       "href": "../decisions/open-house-communal-governance.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.photo.layout-c.home-east-river.v1",
+      "source": "frontmatter",
+      "href": "../decisions/photography/layout-c-home-east-river-v1.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.photo.layout-c.resume-no-photo.v1",
+      "source": "frontmatter",
+      "href": "../decisions/photography/layout-c-resume-no-photo-v1.md",
       "context": null
     },
     {
@@ -6312,6 +6328,24 @@
       "to": "decision.knowledge-wiki.selective-projection",
       "fragment": null,
       "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
+      "to": "decision.photo.layout-c.home-east-river.v1",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
+      "to": "decision.photo.layout-c.resume-no-photo.v1",
+      "fragment": null,
+      "line": 17,
       "kind": "link"
     },
     {
