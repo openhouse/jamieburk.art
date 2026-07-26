@@ -300,13 +300,17 @@ export function evaluatePhotoKnowledgeModel(model) {
     east?.caption === canary.publicCopy.caption &&
     east?.credit === canary.publicCopy.credit &&
     east?.knowledgeStatus === "bound" &&
+    east?.releaseState?.production === "open" &&
+    east?.releaseState?.indexing === "open" &&
     east?.captionAssertionIds?.every((id) => statementIds.has(id)) &&
     east?.creditAssertionIds?.every((id) => statementIds.has(id)) &&
     publicPhotoManifest?.filter((item) => item.id !== "east-river").every(
       (item) =>
         item.wikiId === null &&
         item.knowledgeStatus === "phase-2-reconciliation-pending" &&
-        item.placementIds.length === 0
+        item.placementIds.length === 0 &&
+        item.releaseState?.production === "open" &&
+        item.releaseState?.indexing === "open"
     );
 
   const privateResolutionAttested =
@@ -341,7 +345,10 @@ export function evaluatePhotoKnowledgeModel(model) {
       ) &&
       photographer?.title === "Elana Gordon" &&
       correction?.previous_text === "From Jamie Burkart's photo archive." &&
-      correction?.replacement_text === canary.publicCopy.credit,
+      correction?.replacement_text === canary.publicCopy.credit &&
+      /Elana Gordon is credited as photographer/.test(east?.publicUseBoundary ?? "") &&
+      /no broader rights are asserted/.test(east?.publicUseBoundary ?? "") &&
+      !/no third-party authorship/.test(east?.publicUseBoundary ?? ""),
     permission_scope_exact_and_fail_closed:
       permission?.permission_capsule?.required_credit === "Photograph by Elana Gordon." &&
       permission?.permission_capsule?.derivative_scope === "Current Layout C crop and transform" &&
@@ -437,7 +444,14 @@ export function evaluatePhotoKnowledgeModel(model) {
       Boolean(inquiry),
     selective_projection:
       checks.protected_absence_not_auto_filled &&
-      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 1,
+      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 1 &&
+      publicPhotoManifest
+        ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
+        .every(
+          (item) =>
+            item.releaseState?.production === "open" &&
+            item.releaseState?.indexing === "open"
+        ),
     teammate_reproducibility:
       [
         "photos:check",

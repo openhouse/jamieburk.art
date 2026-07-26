@@ -164,7 +164,7 @@ h2 {
 .jb-hero-caption {
   bottom: 1rem;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   line-height: 1.4;
   max-width: 24rem;
   position: absolute;
@@ -198,7 +198,7 @@ h2 {
   color: color-mix(in srgb, var(--jb-oil-ink) 72%, transparent);
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   gap: 0.25rem 1.25rem;
   justify-content: space-between;
   line-height: 1.5;

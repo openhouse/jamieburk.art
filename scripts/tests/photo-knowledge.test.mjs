@@ -58,6 +58,15 @@ test("creator and archive custody cannot collapse into one attribution", async (
   assert.equal(result.checks.creator_credit_and_custody_distinct, false);
 });
 
+test("a corrected creator credit cannot retain the pre-identification boundary", async () => {
+  const model = await baselineModel();
+  model.portfolioPhotos.eastRiver.publicUseBoundary =
+    "Authorized by Jamie for this portfolio layout; no third-party authorship or rights are asserted.";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.creator_credit_and_custody_distinct, false);
+  assert.equal(result.passed, false);
+});
+
 test("a production-approved permission mutation fails the open human gate", async () => {
   const model = await baselineModel();
   model.recordsById[model.canary.permissionSourceId].permission_capsule.production = "approved";
@@ -141,6 +150,15 @@ test("binding every public photograph defeats selective materialization", async 
   model.publicPhotoManifest[1].wikiId = "asset.photo.auto-generated";
   const result = evaluatePhotoKnowledgeModel(model);
   assert.equal(result.criteria.selective_projection, false);
+});
+
+test("a pending photograph cannot receive automated production approval", async () => {
+  const model = await baselineModel();
+  model.publicPhotoManifest[1].releaseState.production = "approved";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.manifest_wiki_placement_alignment, false);
+  assert.equal(result.criteria.selective_projection, false);
+  assert.equal(result.passed, false);
 });
 
 test("production and indexing approval cannot be automated", async () => {

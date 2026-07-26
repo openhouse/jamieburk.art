@@ -14,6 +14,12 @@ export type PortfolioPhoto = {
   knowledgeStatus: "bound" | "phase-2-reconciliation-pending";
   placements: readonly ("home" | "about" | "colophon")[];
   publicationStatus: "jamie-authorized";
+  releaseState: {
+    publicGit: "approved";
+    staging: "approved";
+    production: "open";
+    indexing: "open";
+  };
   publicUseBoundary: string;
 };
 
@@ -40,8 +46,14 @@ export const portfolioPhotos = {
     knowledgeStatus: "bound",
     placements: ["home"],
     publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
     publicUseBoundary:
-      "Authorized by Jamie for this portfolio layout; no third-party authorship or rights are asserted."
+      "Elana Gordon is credited as photographer. Use is bounded to this approved portfolio occurrence; no broader rights are asserted."
   },
   raftRiverboat: {
     id: "raft-riverboat",
@@ -59,8 +71,14 @@ export const portfolioPhotos = {
     knowledgeStatus: "phase-2-reconciliation-pending",
     placements: ["about"],
     publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
     publicUseBoundary:
-      "Authorized by Jamie for this portfolio layout; no third-party authorship or rights are asserted."
+      "Jamie authorized this exact staging portfolio occurrence; creator, credit, and broader-rights reconciliation remain open."
   },
   paperTrimming: {
     id: "paper-trimming",
@@ -78,8 +96,14 @@ export const portfolioPhotos = {
     knowledgeStatus: "phase-2-reconciliation-pending",
     placements: ["colophon"],
     publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
     publicUseBoundary:
-      "Authorized by Jamie for this portfolio layout; visible objects are described without assigning authorship."
+      "Jamie authorized this exact staging portfolio occurrence; creator, depicted-work, credit, and broader-rights reconciliation remain open."
   },
   printedEditions: {
     id: "printed-editions",
@@ -97,8 +121,14 @@ export const portfolioPhotos = {
     knowledgeStatus: "phase-2-reconciliation-pending",
     placements: ["colophon"],
     publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
     publicUseBoundary:
-      "Authorized by Jamie for this portfolio layout; visible objects are described without assigning authorship."
+      "Jamie authorized this exact staging portfolio occurrence; creator, depicted-work, credit, and broader-rights reconciliation remain open."
   }
 } as const satisfies Record<string, PortfolioPhoto>;
 
