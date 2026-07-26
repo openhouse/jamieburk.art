@@ -41,9 +41,13 @@ workspaces, Dockerfile, Dokku.
 - `npm run photos:withdrawal-plan -- --photo <id>`
 
 Treat an implemented photo withdrawal as monotonic across repository history.
-Restoration requires a new canonical decision record with explicit Jamie
-review; a rollback, revert, or older manifest may not silently reactivate the
-image.
+Restoration requires a later, newly materialized canonical decision whose own
+record identifies the photo and implemented withdrawal, documents Jamie's
+completed review, resolves every applicable creator, rights, consent, credit,
+crop, caption, represented-person, editorial, production, deployment, and
+indexing gate, and binds regenerated occurrence evidence. Manifest approval
+fields alone are not authority. A rollback, revert, or older manifest may not
+silently reactivate the image.
 
 ## Public-Safety Rules
 

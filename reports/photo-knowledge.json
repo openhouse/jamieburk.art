@@ -192,6 +192,7 @@
       "requiredRecords": 17,
       "blockingCriteria": 22,
       "historicalRevocationConflicts": 0,
+      "restorationDecisionConflicts": 0,
       "productionOpen": 6
     }
   },

@@ -184,6 +184,29 @@ const decisionOptionSchema = z.object({
   evidence_state: z.enum(["documented", "inferred", "not-observed"])
 });
 
+const restorationGateNames = [
+  "creator",
+  "rights",
+  "consent",
+  "exact-credit",
+  "crop",
+  "caption",
+  "represented-person",
+  "editorial",
+  "production",
+  "deployment",
+  "indexing"
+];
+
+const restorationGateReviewSchema = z.object({
+  gate: z.enum(restorationGateNames),
+  status: z.enum(["cleared", "not-applicable"]),
+  reviewed_by: z.string().min(1),
+  reviewed_at: z
+    .string()
+    .refine((value) => !Number.isNaN(Date.parse(value)), "use an ISO date or date-time")
+});
+
 const opportunityRequirementSchema = z.object({
   id: stableIdSchema,
   importance: z.enum(["critical", "important", "context"]),
@@ -261,6 +284,28 @@ export const wikiRecordSchema = z
     chosen_course: z.string().min(1).optional(),
     resulting_artifacts: z.array(stableIdSchema).default([]),
     outcome_boundary: z.string().min(1).optional(),
+    restoration_action: z
+      .literal("restore-photo-projection")
+      .optional(),
+    restoration_photo_id: stableIdSchema.optional(),
+    restoration_withdrawal_plan_id: stableIdSchema.optional(),
+    restoration_decided_at: z
+      .string()
+      .refine(
+        (value) => !Number.isNaN(Date.parse(value)),
+        "use an ISO date or date-time"
+      )
+      .optional(),
+    restoration_approved_by: z.string().min(1).optional(),
+    restoration_human_reviewed: z.boolean().optional(),
+    restoration_gate_reviews: z
+      .array(restorationGateReviewSchema)
+      .optional(),
+    restoration_occurrence_ids: z.array(stableIdSchema).optional(),
+    restoration_public_surface_fingerprint: z
+      .string()
+      .regex(/^[a-f0-9]{64}$/)
+      .optional(),
     projection: projectionSchema.optional(),
     projection_status: z
       .enum(["active", "hold", "pending", "deprecated", "disallowed"])
@@ -402,6 +447,61 @@ export const wikiRecordSchema = z
           code: "custom",
           path: ["projection", "status"],
           message: "decision records require separate editorial review before active projection"
+        });
+      }
+    }
+    if (record.restoration_action) {
+      if (record.kind !== "decision") {
+        context.addIssue({
+          code: "custom",
+          path: ["restoration_action"],
+          message: "photo restoration belongs on a canonical decision record"
+        });
+      }
+      for (const field of [
+        "restoration_photo_id",
+        "restoration_withdrawal_plan_id",
+        "restoration_decided_at",
+        "restoration_approved_by",
+        "restoration_public_surface_fingerprint"
+      ]) {
+        if (!record[field]) {
+          context.addIssue({
+            code: "custom",
+            path: [field],
+            message: `photo restoration requires ${field}`
+          });
+        }
+      }
+      if (
+        record.restoration_human_reviewed !== true ||
+        record.human_review !== "completed"
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["restoration_human_reviewed"],
+          message: "photo restoration requires completed human review"
+        });
+      }
+      const gateNames = (record.restoration_gate_reviews ?? []).map(
+        (review) => review.gate
+      );
+      if (
+        gateNames.length !== restorationGateNames.length ||
+        new Set(gateNames).size !== restorationGateNames.length ||
+        !restorationGateNames.every((gate) => gateNames.includes(gate))
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["restoration_gate_reviews"],
+          message: "photo restoration requires one review for every governed gate"
+        });
+      }
+      if ((record.restoration_occurrence_ids ?? []).length === 0) {
+        context.addIssue({
+          code: "custom",
+          path: ["restoration_occurrence_ids"],
+          message: "photo restoration requires exact occurrence IDs"
         });
       }
     }

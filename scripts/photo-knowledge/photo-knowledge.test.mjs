@@ -14,11 +14,149 @@ import {
   compilePhotoEdition,
   defaultRepoRoot,
   evaluatePhotoKnowledge,
-  loadPhotoKnowledge
+  loadPhotoKnowledge,
+  validateRestorationDecision
 } from "./lib.mjs";
 
 function manifest() {
   return structuredClone(loadPhotoKnowledge());
+}
+
+const restorationPhotoId = "photo.east-river-manhattan-bridge.2022";
+const restorationPlanId = `withdrawal.${restorationPhotoId}`;
+const restorationRecordId = "decision.photo.restoration.east-river.2026-07-27";
+const restorationRecordPath =
+  "docs/knowledge-bank/decisions/photo-restoration-east-river-2026-07-27.md";
+const restorationImplementedAt = "2026-07-26T10:00:00Z";
+const restorationDecidedAt = "2026-07-27T15:00:00Z";
+const restorationGates = [
+  "creator",
+  "rights",
+  "consent",
+  "exact-credit",
+  "crop",
+  "caption",
+  "represented-person",
+  "editorial",
+  "production",
+  "deployment",
+  "indexing"
+];
+
+function historicalWithdrawal() {
+  const withdrawn = applyPhotoRevocation(manifest(), restorationPhotoId);
+  withdrawn.historicalOccurrences[0].lifecycleState = "withdrawn";
+  withdrawn.withdrawalPlans[0].status = "implemented";
+  withdrawn.withdrawalPlans[0].writesApplied = true;
+  withdrawn.withdrawalPlans[0].implementedAt = restorationImplementedAt;
+  return withdrawn;
+}
+
+function restorationFixture() {
+  const current = manifest();
+  const photo = current.photos.find((item) => item.id === restorationPhotoId);
+  const responsiveEvidence = JSON.parse(
+    readFileSync(
+      path.join(
+        defaultRepoRoot,
+        "docs/qa/evals-H/responsive-route-matrix.json"
+      ),
+      "utf8"
+    )
+  );
+  const decision = {
+    id: `restoration.${restorationPhotoId}.2026-07-27`,
+    photoId: restorationPhotoId,
+    withdrawalPlanId: restorationPlanId,
+    decisionRecordId: restorationRecordId,
+    status: "approved",
+    humanReviewed: true,
+    approvedBy: "Jamie Burkart",
+    decidedAt: restorationDecidedAt
+  };
+  const record = {
+    id: restorationRecordId,
+    kind: "decision",
+    path: restorationRecordPath,
+    canonical_path: restorationRecordPath,
+    decision_state: "documented",
+    human_review: "completed",
+    last_reviewed: "2026-07-27",
+    chosen_course:
+      `Restore ${restorationPhotoId} after ${restorationPlanId} as a new review candidate.`,
+    resulting_artifacts: [restorationPhotoId],
+    projection: { status: "pending", surfaces: [] },
+    restoration_action: "restore-photo-projection",
+    restoration_photo_id: restorationPhotoId,
+    restoration_withdrawal_plan_id: restorationPlanId,
+    restoration_decided_at: restorationDecidedAt,
+    restoration_approved_by: "Jamie Burkart",
+    restoration_human_reviewed: true,
+    restoration_gate_reviews: restorationGates.map((gate) => ({
+      gate,
+      status: gate === "represented-person" ? "not-applicable" : "cleared",
+      reviewed_by: gate === "creator" ? "Elana Gordon" : "Jamie Burkart",
+      reviewed_at: "2026-07-27T12:00:00Z"
+    })),
+    restoration_occurrence_ids: photo.placements.map(
+      (placement) => placement.id
+    ),
+    restoration_public_surface_fingerprint:
+      responsiveEvidence.publicSurfaceFingerprint
+  };
+  const recordText = [
+    "# Restore the East River photograph",
+    "",
+    `Jamie Burkart approves a new review candidate for ${restorationPhotoId}.`,
+    `This decision follows implemented withdrawal plan ${restorationPlanId}.`
+  ].join("\n");
+  return {
+    current,
+    decision,
+    record,
+    recordText,
+    responsiveEvidence
+  };
+}
+
+function evaluateRestoration({
+  recordMutation,
+  decisionMutation,
+  decisionHistoryFirst = false
+} = {}) {
+  const withdrawn = historicalWithdrawal();
+  const fixture = restorationFixture();
+  const decision = {
+    ...fixture.decision,
+    ...(decisionMutation ?? {})
+  };
+  const record = {
+    ...fixture.record,
+    ...(recordMutation ?? {})
+  };
+  fixture.current.restorationDecisions.push(decision);
+  const wiki = compileWiki();
+  wiki.byId.set(decision.decisionRecordId, record);
+  const withdrawalEntry = {
+    commit: "withdrawal-commit",
+    relativePath: "docs/knowledge-bank/data/photo-knowledge.json",
+    text: JSON.stringify(withdrawn)
+  };
+  const decisionEntry = {
+    commit: "restoration-decision-commit",
+    relativePath: record.path,
+    text: fixture.recordText
+  };
+  return evaluatePhotoKnowledge({
+    manifest: fixture.current,
+    wiki,
+    sourceOverrides: {
+      [decision.decisionRecordId]: fixture.recordText
+    },
+    introducedHistorySources: decisionHistoryFirst
+      ? [decisionEntry, withdrawalEntry]
+      : [withdrawalEntry, decisionEntry]
+  });
 }
 
 test("RFC 0003 photographic knowledge baseline passes", () => {
@@ -455,42 +593,117 @@ test("an implemented withdrawal cannot be erased by repository rollback", () => 
 });
 
 test("restoration requires a new canonical human-reviewed decision", () => {
-  const withdrawn = applyPhotoRevocation(
-    manifest(),
-    "photo.east-river-manhattan-bridge.2022"
-  );
-  withdrawn.historicalOccurrences[0].lifecycleState = "withdrawn";
-  withdrawn.withdrawalPlans[0].status = "implemented";
-  withdrawn.withdrawalPlans[0].writesApplied = true;
-  const current = manifest();
-  current.restorationDecisions.push({
-    id: "restoration.photo.east-river.example",
-    photoId: "photo.east-river-manhattan-bridge.2022",
-    withdrawalPlanId:
-      "withdrawal.photo.east-river-manhattan-bridge.2022",
-    decisionRecordId: "decision.photo.restoration.example",
-    status: "approved",
-    humanReviewed: true,
-    approvedBy: "Jamie Burkart",
-    decidedAt: "2026-07-26"
-  });
-  const wiki = compileWiki();
-  wiki.byId.set("decision.photo.restoration.example", {
-    id: "decision.photo.restoration.example",
-    kind: "decision"
-  });
-  const result = evaluatePhotoKnowledge({
-    manifest: current,
-    wiki,
-    introducedHistorySources: [
-      {
-        relativePath: "docs/knowledge-bank/data/photo-knowledge.json",
-        text: JSON.stringify(withdrawn)
-      }
-    ]
-  });
+  const result = evaluateRestoration();
   assert.equal(
     result.checks.photo_historical_revocation_monotonic,
     true
+  );
+  assert.equal(result.counts.restorationDecisionConflicts, 0);
+});
+
+test("an unrelated or contradictory decision cannot authorize restoration", () => {
+  const result = evaluateRestoration({
+    recordMutation: {
+      restoration_action: undefined,
+      chosen_course:
+        "Represent a protected absence and continue to withhold photographs."
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+  assert.equal(result.counts.restorationDecisionConflicts, 1);
+});
+
+test("a restoration decision must be materialized after the withdrawal", () => {
+  const result = evaluateRestoration({ decisionHistoryFirst: true });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("manifest approval fields cannot replace canonical human review", () => {
+  const result = evaluateRestoration({
+    recordMutation: {
+      human_review: "not-requested",
+      restoration_human_reviewed: false,
+      restoration_gate_reviews: []
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("restoration must postdate the implemented withdrawal", () => {
+  const result = evaluateRestoration({
+    decisionMutation: {
+      decidedAt: "2026-07-25T15:00:00Z"
+    },
+    recordMutation: {
+      restoration_decided_at: "2026-07-25T15:00:00Z",
+      last_reviewed: "2026-07-25"
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("restoration binds every governed gate and regenerated occurrence evidence", () => {
+  const fixture = restorationFixture();
+  const valid = validateRestorationDecision({
+    decision: fixture.decision,
+    record: fixture.record,
+    recordText: fixture.recordText,
+    withdrawal: {
+      photoId: restorationPhotoId,
+      withdrawalPlanId: restorationPlanId,
+      implementedAt: restorationImplementedAt,
+      commitOrder: 0
+    },
+    materializedVersion: {
+      commitOrder: 1,
+      text: fixture.recordText
+    },
+    expectedOccurrenceIds:
+      fixture.record.restoration_occurrence_ids,
+    publicSurfaceFingerprint:
+      fixture.responsiveEvidence.publicSurfaceFingerprint
+  });
+  assert.equal(valid, true);
+
+  const missingRightsGate = {
+    ...fixture.record,
+    restoration_gate_reviews:
+      fixture.record.restoration_gate_reviews.filter(
+        (review) => review.gate !== "rights"
+      )
+  };
+  assert.equal(
+    validateRestorationDecision({
+      decision: fixture.decision,
+      record: missingRightsGate,
+      recordText: fixture.recordText,
+      withdrawal: {
+        photoId: restorationPhotoId,
+        withdrawalPlanId: restorationPlanId,
+        implementedAt: restorationImplementedAt,
+        commitOrder: 0
+      },
+      materializedVersion: {
+        commitOrder: 1,
+        text: fixture.recordText
+      },
+      expectedOccurrenceIds:
+        fixture.record.restoration_occurrence_ids,
+      publicSurfaceFingerprint:
+        fixture.responsiveEvidence.publicSurfaceFingerprint
+    }),
+    false
   );
 });

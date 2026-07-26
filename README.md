@@ -91,8 +91,11 @@ state. `photos:curatorial:run`, `photos:recollection`, and
 withdraw, restore, deploy, or index a photograph.
 
 An implemented withdrawal remains authoritative across branch history. A later
-active projection requires a new canonical, human-reviewed restoration
-decision; checking out older content is never a publication decision.
+active projection requires a later canonical restoration decision that names
+the photo and prior withdrawal, contains Jamie's completed human review,
+accounts for every applicable authority gate, and binds regenerated occurrence
+evidence. Manifest fields alone cannot authorize restoration; checking out
+older content is never a publication decision.
 
 ## Environment
 

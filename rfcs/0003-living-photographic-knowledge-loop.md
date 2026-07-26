@@ -2398,10 +2398,13 @@ named photo. The command is advisory and applies no writes.
 
 An implemented withdrawal or non-rendering withdrawn tombstone is monotonic
 across repository history. A revert or checkout may not silently reactivate the
-photograph. Any later restoration must add a new canonical decision record,
-identify the prior withdrawal plan, record Jamie's explicit human review, and
-then regenerate the complete occurrence, edition, accessibility, and safety
-evidence for the new candidate.
+photograph. Any later restoration must materialize in a later commit as a new
+canonical decision record whose own content identifies the photo and prior
+implemented withdrawal, records Jamie's completed human review, accounts for
+creator, rights, consent, exact-credit, crop, caption, represented-person,
+editorial, production, deployment, and indexing review, and binds the exact
+restored occurrences to regenerated public-surface evidence. Manifest approval
+fields alone are not authority.
 
 #### `photos:recollection`
 
