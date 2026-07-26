@@ -16,7 +16,7 @@ review_areas:
   - editorial
   - accessibility
   - developer-experience
-implementation: https://github.com/openhouse/jamieburk.art/tree/feature/photo-knowledge-A
+implementation: https://github.com/openhouse/jamieburk.art/pull/261
 supersedes: []
 superseded_by: null
 ---

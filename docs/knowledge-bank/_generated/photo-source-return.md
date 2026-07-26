@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Photo source-return queue
 
-**Source fingerprint:** `8558df8058822f59e51ff4b3ae582c6621f2f5fff9682531e1a30029d04d1537`
+**Source fingerprint:** `7e6524ac0350ef2d6788aec2b82a4c6f7064db4b96a4a22f871e76ca81bc00a4`
 
 ## Complete the Layout A Council chamber source and rights record
 
