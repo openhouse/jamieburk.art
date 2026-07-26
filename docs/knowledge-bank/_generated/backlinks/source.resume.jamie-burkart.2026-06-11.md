@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Jamie Burkart resume, June 11, 2026
 
-**Source commit:** `2b58f5bc35047273b08b2b34d0bd4c8d47cf65b4`
-**Generation time:** 2026-07-26T10:36:48-04:00
+**Source commit:** `a345240851a4a5ec701b234811c9f688f98ece73`
+**Generation time:** 2026-07-26T10:54:42-04:00
 **Source fingerprint:** `6d0b4bd7236a21b37503908a7e4e0006d87c7b55dddc6a153d40ae2d4a341e96`
 
 - [Foundational Wiki page source return, July 19, 2026](../../research-runs/foundational-source-return-2026-07-19.md) - `prose_link` (markdown)
