@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Waterways and participatory art orientation
 
-**Source commit:** `02d3de4cd6a22f5ccc214d56d3c7fb9577ff60a9`
-**Generation time:** 2026-07-22T23:10:49-04:00
-**Source fingerprint:** `236c6d0d9ebab4d22b1681a5a1497213204536491223cfe43bb718013fc7b376`
+**Source commit:** `3c48977efa488f9ef8011a4430f8af5223277fd4`
+**Generation time:** 2026-07-26T18:31:48-04:00
+**Source fingerprint:** `c2becfa5af8739ad67cd64c79d5dce13e1b553f82bc969d447057ee5308717ae`
 
 - [Open House communal governance inside negotiated boundaries](../../decisions/open-house-communal-governance.md) - `resulted_in` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
@@ -16,4 +16,5 @@
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Open House at UC Santa Cruz](../../sources/good-times-open-house-2006-06-28.md) - `documents` (frontmatter)
 - [The Kansas City Star raft report, November 15, 2007](../../sources/kansas-city-star-raft-2007-11-15.md) - `documents` (frontmatter)
+- [Jamie Burkart recollection of bicycle-canoe commuting](../../sources/recollections/jamie-canoe-commuting-2026-07.md) - `related_to` (frontmatter)
 - [Jamie Burkart practice timeline, 2004-present](../../timelines/practice-2004-present.md) - `prose_link` (markdown)

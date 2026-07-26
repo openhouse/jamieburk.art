@@ -1,40 +1,48 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "morse-a-layout-E-v2",
+  "evaluator": "Margaret Morse lens final holdout A, AI-simulated independent read-only evaluator",
+  "reviewerId": "margaret-morse-final-a",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "a780e84a1135c2de557b85d9befd1a496458b972865a6bf5ff7002c1c8b77aa4",
+  "candidateSha256": "3de3dbf72c8bd922b8c211ab686a5ce790f48466411f669fea37404bd6e09d3e",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Fingerprint verification passed: `npm run evals:professor-lenses` reported only the expected holdout-scorecard failure; `candidate-fingerprint` was not among the failures.",
-    "Immediate role relevance is unmistakable in both homepage renders and `Hero.tsx:21-38`: Technical Project Manager / Product Operations / Implementation, usable systems, shared memory, public tools, durable handoffs, selected work, and resume.",
-    "The two-click `/about` path makes the full lineage inspectable. `about/page.tsx:52-101` connects the collectively governed Open House experiment to WOWList, Sunday Dinner/196, NYC Artist Coalition, and source-backed team memory, explicitly joining artistic, civic, technical, and social practice around participation, memory, continuation, and inhabitable systems.",
-    "At least three continuities are concrete rather than decorative: FairRentNYC connects public meetings, campaign sites, source maps, question logs, and action trackers (`about/page.tsx:135-162`); WOWList turns organizer language into distributed publishing infrastructure (`about/page.tsx:165-191`); Sunday Dinner/196 connects hospitality, onboarding, facilitation, trust, consent, and repeatable rhythms (`about/page.tsx:194-220`).",
-    "The homepage translates that lineage into operating practice: listening before requirements (`page.tsx:75-90`), material care through shirts, maps, meals, invitations, and maintenance (`page.tsx:117-129`), and stakeholder listening, workflows, documentation, adoption, and handoff (`page.tsx:133-146`).",
-    "The rendered photography makes atmosphere, place, embodiment, and material labor visible without displacing professional legibility: the raft hero remains paired with role-fit copy; the About portrait situates Jamie within 196; and the Fair Rent sequence visibly moves from a listening room to campaign production.",
-    "Collective credit is explicit throughout. The hero caption rejects a captain narrative (`photography.ts:15-18`); Fair Rent captions assign outcomes to many participants (`photography.ts:35-38`); and the photo sequence states that the photographs do not assign sole authorship (`CaseStudyLayout.tsx:63-82`).",
-    "The photo manifest supplies descriptive alt text, contextual captions, credits, context categories, and stable crops for all nine selected images (`photography.ts:11-101`), while `PhotoFigure.tsx:28-44` confirms those captions and credits are rendered.",
-    "The public-review authorization and production boundary are coherent: `layout-E-photo-integration.md:47-71` records all nine asset decisions, limits authorization to this PR surface, retains rights/credit/dignity/crop/final approval as human gates, and documents removal of two intimate gathering images lacking represented-person approval.",
-    "Protected-source exclusion is explicit and consistent: the Margaret Morse testimonial is not projected, UCSC educational records remain outside the repository and site, and no faculty testimonial or protected content appears on About (`ucsc-professor-lenses-2026-07-15.md:23-44,59-65`)."
+    "Recomputed the professor candidate fingerprint over all 135 script-selected files; it exactly matches the required SHA-256.",
+    "The candidate-specific professor-lens evaluation passed 13 of 13 criteria when prior final scorecards were intentionally excluded.",
+    "The primary navigation reaches About in one click. The rendered About page visibly introduces The through line and Systems people can inhabit while retaining Jamie's technical project-management positioning.",
+    "About explicitly connects artistic, civic, technical, and social practice and links Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition work, source-backed team memory, and Harry J. Epstein Company.",
+    "Five project rows separately describe relationships, interface and use, and learning and continuity, making participation, memory, influence, and continuation inspectable rather than merely asserted.",
+    "Experimentation and many-perspective documentation appear through Open House; hospitality through Sunday Dinner and 196; attention through photography and listening; care through consent and maintenance; inhabited systems through collective use, correction, handoff, and continuation.",
+    "The homepage and Fair Rent sequence reinforce the through-line with Listening is an operating system, Care for the container is part of the work, material production, public rooms, embodied action, and explicit collective-credit language.",
+    "RFC 0003 is current, canonical, and implementing. The deterministic photo-governance check passed 26 of 26 criteria, and its test suite passed 20 of 20 tests.",
+    "The East River derivative is approved only for public Git; its corrected Layout C occurrence remains candidate-hold with exact-occurrence, mobile-crop dignity, creator-crop, production, and indexing review open.",
+    "The active Layout E manifest contains exactly eight unique legacy JPEG derivatives. Each retains asset-specific human gates for rights, credit, crop, dignity, represented-person review, or production approval.",
+    "The child-visible Talks Not Raids derivative is absent from the active manifest and current image tree; its governed decision remains hold pending child-specific dignity, represented-person, creator, rights, crop, destination, and history/cache review.",
+    "Responsive evidence includes desktop homepage, desktop About, mobile homepage, and desktop Fair Rent sequence captures. Visual inspection found coherent framing and readable hierarchy; the layout evaluator passed 10 of 10 checks and its tests passed 3 of 3.",
+    "A scan of 114 text files within the 135-file candidate found no student identifier, educational email address, private absolute path, or raw narrative-evaluation filename."
   ],
-  "gaps": [],
+  "gaps": [
+    "The separate RFC 0003 aggregate evaluator remains at 96.4 percent because PHOTO-022 found zero exact-candidate Markdown holdouts in evals/photo-knowledge/holdouts. This is an aggregate evidence-process gap, not a PR-015 content failure, and this JSON is not that Markdown artifact.",
+    "The three-judge PR-015 median was not assessed because prior reviewer conclusions were excluded as instructed; this scorecard evaluates holdout A independently."
+  ],
   "safety_findings": [
-    "No actual contradiction, protected-source projection, unapproved intimate image, romanticized vulnerability, or unsafe claim was found on the reviewed public PR surfaces."
+    "No protected educational record is quoted or actively projected. The bounded internal synthesis remains visibility-protected and held with no public surface, while raw records, grades, identifiers, archive paths, correspondence, and unapproved testimonial text remain excluded.",
+    "No public route or component names a professor as an endorser. The source note and RFC explicitly identify named lenses as AI simulations rather than participation, private belief, endorsement, permission, or approval.",
+    "Open House is grounded in a public article and preserves participant governance and collective documentation rather than converting initiation into sole authorship.",
+    "Campaign captions and the Fair Rent sequence explicitly retain collective outcome and authorship credit.",
+    "East River source-level permission is bounded and cleared for the discussed portfolio use, but exact occurrence and release gates remain open. The eight legacy Layout E assets retain open rights and exact-use gates.",
+    "Production deployment, indexing, rights completion, exact credit and crop, represented-person dignity, and Jamie approval remain human decisions and are not closed by this evaluation."
   ],
-  "recommendation": "Pass PR-015 at score 4 for public pull-request review. Preserve the recorded human gates before any production publication.",
+  "recommendation": "Pass the exact candidate at score 4 under PR-015. The portfolio preserves an unusually clear threshold where artistic, civic, technical, and social practice remain connected through experimentation, hospitality, attention, documentation, care, and systems people can inhabit and continue. Preserve every current hold and do not treat this scorecard as production, indexing, rights, or PHOTO-022 aggregate-holdout approval.",
   "provenance": {
-    "provider": "codex-exec",
-    "processSessionId": "11448",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "provider": "codex-native-subagent",
+    "processSessionId": "019fa0a6-302b-7a72-bc65-700a468f9050",
+    "agentNickname": "Cicero",
+    "model": "inherited-current-model",
+    "reasoningEffort": "inherited-parent",
     "sandbox": "read-only",
     "ephemeral": true,
-    "promptSha256": "e221b116a217734f3fbb18d738d1bff67d9738c094972fb03eade3141b601bd9",
-    "resultSha256": "1a382537d944bb125a171bb131c96c17959815ab5a326fc62793567dc5dbed6c",
-    "resultTransport": "codex-exec-output-last-message",
-    "operatorAttestation": "Recorded verbatim from a completed independent read-only Codex result by the parent orchestrator.",
-    "startedAt": "2026-07-23T01:55:00.000Z",
-    "completedAt": "2026-07-23T02:00:00.000Z"
+    "resultTransport": "multi_agent_v1__wait_agent-completed",
+    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
   }
 }

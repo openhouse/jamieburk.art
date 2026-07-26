@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "public_derivatives_without_asset_records": [],
+  "active_occurrences_with_stale_permission": [],
+  "preferred_creator_credit_mismatches": [],
+  "unsupported_caption_assertions": [],
+  "revoked_occurrences_referenced_by_app": [],
+  "gate_state_conflicts": [],
+  "open_human_gates": [
+    "jamie_exact_occurrence",
+    "mobile_crop_dignity_review",
+    "creator_exact_crop_review",
+    "production",
+    "indexing"
+  ]
+}

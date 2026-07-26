@@ -1,39 +1,41 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "sack-b-layout-E-v2",
+  "evaluator": "Independent final holdout, Warren Sack lens",
+  "reviewerId": "warren-sack-final-b",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "a780e84a1135c2de557b85d9befd1a496458b972865a6bf5ff7002c1c8b77aa4",
+  "candidateSha256": "3de3dbf72c8bd922b8c211ab686a5ce790f48466411f669fea37404bd6e09d3e",
   "score": 4,
   "pass": true,
   "evidence": [
-    "`npm run evals:professor-lenses` reported only the expected `unanimous-holdouts` stale-scorecard failure; `candidate-fingerprint` was absent, confirming candidate `a780e84a1135c2de557b85d9befd1a496458b972865a6bf5ff7002c1c8b77aa4`.",
-    "The About page, one navigation click from the homepage, plainly names the recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. It links directly to project evidence.",
-    "FairRentNYC completes the sequence through listening rooms and stakeholder/source relationships; source maps and Known/Open/Protected documentation architecture; campaign websites and field materials; collective meetings, hearings, town halls, and public actions; and running minutes, decision records, action trackers, source notes, and shared campaign memory.",
-    "WOWList completes the sequence through organizers’ existing scene/place/venue vocabulary; a followable keyword-community model; a Django/PostgreSQL/PostGIS and Ember interface; documented organizer use across roughly 35 city ecosystems; and support threads, tutorials, reusable publishing patterns, and maintainable deployment continuity. Jamie is consistently identified as a co-builder, not sole author.",
-    "CallNYC completes the sequence by observing the gap between administrative data and resident decisions; modeling issue pathways and district context; building an independent public prototype; receiving attributable public interaction and press coverage; and preserving the implementation, sources, limitations, and archived-status documentation for further inspection.",
-    "Sunday Dinner / 196 supplies an additional social-system continuity: trust and recurring participation were modeled into invitations, hosting rhythms, onboarding, facilitation, access handoffs, and continuity practices tested across 300+ gatherings and 20+ resident artists, while private histories and unapproved images remain protected.",
-    "Employment relevance is prominent in the rendered homepage and technical-operations surface: Technical Project Manager / Product Operations / Implementation, role-fit navigation, requirements, risks, coordination, onboarding, runbooks, decision records, launch support, and durable handoffs are tied to inspectable projects rather than presented as a tool list.",
-    "Claims and images remain bounded. FairRent language repeatedly preserves collective causation and authorship; CallNYC is labeled independent, archived, unofficial, and non-current; no surface infers present Max/Jitter proficiency, peer-reviewed research, production deployment, or disciplinary invention from historical coursework.",
-    "The photo manifest contains exactly the nine ledgered derivatives. The two intimate gathering images are absent. Captions preserve collective credit, and the design record distinguishes Jamie’s authorization for this public PR review from the still-open production rights, exact-credit, dignity, crop, and final-approval gates."
+    "Independent recomputation through scripts/lib/professor-lens-eval.mjs, with finalScorecards explicitly excluded, produced the required candidate SHA-256 and passed all 13 non-scorecard criteria.",
+    "The persistent navigation reaches /about in one click. That page plainly names the recursive sequence and links readers directly to inspectable project evidence.",
+    "The About page compares five projects through repeated Relationships, Interface and use, and Learning and continuity rows, making the recurring method specific without claiming structural equivalence.",
+    "FairRentNYC traces lived experience, meetings, sources, and institutional actors into source maps, participation systems, campaign interfaces, collective public use, running minutes, decision records, action tracking, and continued work.",
+    "WOWList traces community vocabulary and informal networks into a keyword-community model, publishing and distribution interfaces, documented organizer use, support workflows, and reusable deployment patterns while preserving shared credit.",
+    "Sunday Dinner and 196 trace hospitality, trust, shared space, and recurring rhythms into invitations, onboarding, facilitation, access handoffs, documented operating workflows, aggregate continuity evidence, and explicit consent boundaries.",
+    "Harry J. Epstein Company connects customer language, product judgment, public voice, and operating habits to a maintained storefront, customer and team use, bounded analytics, incremental releases, reusable content patterns, and clearer workflows.",
+    "RFC 0003 and the East River canary expose a complete recursive learning loop: source relationships, structured records, a composed interface, exact-candidate review, creator correction, recollection, research return, rollback, and a teachable handoff.",
+    "CallNYC remains explicitly archived, independent, unofficial, and non-current; Source-Backed Team Memory remains explicitly an early method with a synthetic example rather than production SaaS.",
+    "Read-only photo governance verification passed 26 of 26 checks, 20 of 20 tests, and the 100 percent hard-gate evaluation."
   ],
   "gaps": [],
   "safety_findings": [
-    "No contradiction or unsafe publication was found in the reviewed PR candidate. The remaining image decisions are explicitly production-stage human gates, not missing authorization for this public pull-request review."
+    "No active public route claims invention of structural equivalence, peer-reviewed research, production deployment from coursework, sole authorship of collective coursework, or current Max/Jitter proficiency.",
+    "The held Warren Sack coursework record is excluded from the generated public registry and active route projections; raw educational records, grades, identifiers, paths, and correspondence remain withheld.",
+    "Collective credit and causal boundaries are explicit across Open House, WOWList, Sunday Dinner, NYC Artist Coalition, CallNYC, and photographic captions.",
+    "RFC 0003 correctly keeps the Layout C occurrence on hold and keeps production, indexing, exact-use, crop, rights, and dignity approvals as separate human gates. The active Layout E legacy photo cohort is not represented as fully migrated or cleared.",
+    "Automated checks and this lens judgment provide verification evidence only; they do not confer rights, consent, represented-person approval, Jamie approval, production approval, or indexing approval."
   ],
-  "recommendation": "Pass PR-016 at score 4 for the current review candidate; retain every documented production approval gate before deployment.",
+  "recommendation": "Pass PR-016 at score 4 for this exact candidate. Use this holdout only as the Warren Sack lens judgment and preserve every stated human release, rights, dignity, production, and indexing gate.",
   "provenance": {
-    "provider": "codex-exec",
-    "processSessionId": "019f8caf-0c8c-7010-a063-695be37d781a",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "provider": "codex-native-subagent",
+    "processSessionId": "019fa0b8-78eb-79c3-b22f-60c6293cd5de",
+    "agentNickname": "Poincare",
+    "model": "inherited-current-model",
+    "reasoningEffort": "inherited-parent",
     "sandbox": "read-only",
     "ephemeral": true,
-    "promptSha256": "a36e5cdc958979a8366b6ce9855cecdaa289837f526a5041d293bb81e5be2a31",
-    "resultSha256": "20f5b805fff68e280391fdec8043417e6881e4849738bbb5ddc9b37f378e4198",
-    "resultTransport": "codex-exec-output-last-message",
-    "operatorAttestation": "Recorded verbatim from a completed independent read-only Codex result by the parent orchestrator.",
-    "startedAt": "2026-07-23T01:55:00.000Z",
-    "completedAt": "2026-07-23T02:00:00.000Z"
+    "resultTransport": "multi_agent_v1__wait_agent-completed",
+    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
   }
 }

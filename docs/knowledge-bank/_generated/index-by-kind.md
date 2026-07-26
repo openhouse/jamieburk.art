@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `02d3de4cd6a22f5ccc214d56d3c7fb9577ff60a9`
-**Generation time:** 2026-07-22T23:10:49-04:00
-**Source fingerprint:** `236c6d0d9ebab4d22b1681a5a1497213204536491223cfe43bb718013fc7b376`
+**Source commit:** `3c48977efa488f9ef8011a4430f8af5223277fd4`
+**Generation time:** 2026-07-26T18:31:48-04:00
+**Source fingerprint:** `c2becfa5af8739ad67cd64c79d5dce13e1b553f82bc969d447057ee5308717ae`
 
 ## application
 
@@ -12,6 +12,7 @@
 ## asset
 
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
+- [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) - `asset.photo.east-river-manhattan-bridge.2022.001`
 
 ## capability
 
@@ -37,9 +38,13 @@
 - [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
+- [Protect intimate gathering photographs from automatic portfolio promotion](../decisions/photography/intimate-gatherings-protected-absence.md) - `decision.photo.intimate-gatherings.protected-absence.v1`
+- [Select the East River photograph as a Layout C homepage candidate](../decisions/photography/layout-c-home-east-river-v1.md) - `decision.photo.layout-c.home-east-river.v1`
+- [Hold the Talks Not Raids photograph pending child-specific review](../decisions/photography/talks-not-raids-child-review-hold.md) - `decision.photo.talks-not-raids.child-review-hold.v1`
 
 ## evaluation
 
+- [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
@@ -61,6 +66,7 @@
 - [Outcomes, Adoption, and Afterlives](../indexes/outcomes-adoption-and-afterlives.md) - `index.knowledge-wiki.outcomes-adoption-afterlives`
 - [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
 - [Photography working notebook](../notebooks/photography/README.md) - `index.knowledge-wiki.photo-notebook`
+- [Living photographic knowledge](../indexes/photography.md) - `index.knowledge-wiki.photography`
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
 - [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
@@ -71,6 +77,7 @@
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
 - [First Pass: A Photo Residency at 196](../notebooks/photography/proposals/first-pass-at-196.md) - `index.photo-notebook.proposal.first-pass-196`
 - [Release / water / salt - visual sequence sketch](../notebooks/photography/sketches/release-water-salt.md) - `index.photo-notebook.sketch.release-water-salt`
+- [East River canoe outing, 2022](../indexes/photo-sets/east-river-canoe-2022.md) - `index.photo-set.east-river-canoe.2022`
 
 ## method
 
@@ -126,12 +133,15 @@
 
 ## projection
 
+- [Layout C photographic portfolio edition](../projections/photography/edition-layout-c-2026-07.md) - `edition.layout-c.2026-07`
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
 
 ## research-inquiry
 
+- [Documented bicycle-canoe journeys](../research-inquiries/documented-canoe-bike-journeys.md) - `research-inquiry.documented-canoe-bike-journeys`
 - [Open questions for photographic reading](../notebooks/photography/open-questions.md) - `research-inquiry.photo-notebook.open-questions`
 - [Recover Jamie's Teju Cole residency and photography reference](../research-inquiries/teju-cole-residency-photography-reference.md) - `research-inquiry.teju-cole.residency-photography-reference`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
@@ -169,7 +179,10 @@
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
 - [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
+- [Elana Gordon permission for East River portfolio photographs](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
+- [East River 2022 public-safe photo metadata and local verification](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
+- [Jamie Burkart recollection of bicycle-canoe commuting](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Estranged in Switzerland - Teju Cole pictures the silence](../sources/teju-cole-fernweh-residency-context-2020.md) - `source.teju-cole.fernweh-residency-context.2020`
 - [Teju Cole - Writers in Residence Zurich profile](../sources/teju-cole-zurich-writer-residency-2014.md) - `source.teju-cole.zurich-writer-residency.2014`

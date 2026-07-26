@@ -1,0 +1,12 @@
+{
+  "asset": "asset.photo.east-river-manhattan-bridge.2022.001",
+  "occurrences": [
+    {
+      "id": "projection.photo.layout-c.home.east-river",
+      "edition": "edition.layout-c.2026-07",
+      "route": "/",
+      "state": "candidate-hold",
+      "active_in_current_application": false
+    }
+  ]
+}

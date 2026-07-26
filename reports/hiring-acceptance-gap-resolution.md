@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `02d3de4cd6a22f5ccc214d56d3c7fb9577ff60a9`
-**Public report hash:** `9e7644c897ea3ae537f9034b5d7a2806bc0956ef0018085c82f608e687d920fb`
-**Wiki fingerprint:** `236c6d0d9ebab4d22b1681a5a1497213204536491223cfe43bb718013fc7b376`
+**Candidate commit:** `3c48977efa488f9ef8011a4430f8af5223277fd4`
+**Public report hash:** `1f2a88e785667ed8d1e67c5ad8d6f36592b6de6f51e3db104fd714d69a2b83b8`
+**Wiki fingerprint:** `c2becfa5af8739ad67cd64c79d5dce13e1b553f82bc969d447057ee5308717ae`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -13,7 +13,6 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 - `requirement.aclu.facilitation-without-authority` - **visible-weak-evidence-gap**; Name one bounded facilitation decision and its usable output.
 - `requirement.aclu.product-brief` - **wiki-proven-not-projected**; Produce and human-review a redacted retrospective CallNYC product brief.
 - `requirement.aclu.do-not-build-judgment` - **source-needs-close-reading**; Revisit one bounded decision record; do not invent a do-not-build example.
-- `requirement.benepass.quantified-prioritization` - **visible-weak-evidence-gap**; Use only supported HJE figures and explain the decision they informed.
 - `requirement.asana.implementation-ownership` - **true-experience-gap**; Distinguish direct client implementation from internal and public-facing delivery.
 - `requirement.asana.risk-and-change-management` - **true-experience-gap**; Do not substitute general risk coordination for migration or configuration experience.
 - `requirement.permitflow.product-data` - **true-experience-gap**; Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.

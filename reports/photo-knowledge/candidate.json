@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-07-26",
+  "source_commit": "eed3629a170bdf724be1e2f0018054ec4e1b2201",
+  "candidate_fingerprint": "cd5f3c1427c82622f08d963cade61d277da583072774f5eac685e55b4486916b",
+  "candidate_file_count": 662,
+  "exclusions": [
+    "^docs\\/knowledge-bank\\/_generated\\/",
+    "^reports\\/photo-knowledge\\/",
+    "^evals\\/photo-knowledge\\/holdouts\\/",
+    "^docs\\/qa\\/evals-H\\/(?:margaret-morse|warren-sack)-final-[abc]\\.json$",
+    "^docs\\/evals\\/runs\\/2026-07-16-feature-evals-composite-final-[ab]\\.json$",
+    "^apps\\/www\\/next-env\\.d\\.ts$",
+    "^node_modules\\/",
+    "^apps\\/www\\/\\.next\\/"
+  ],
+  "exact_candidate_note": "Any candidate-affecting change invalidates this receipt and every bound holdout."
+}

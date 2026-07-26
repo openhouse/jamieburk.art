@@ -1,38 +1,43 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "morse-c-layout-E-v2",
+  "evaluator": "OpenAI Codex independent holdout",
+  "reviewerId": "margaret-morse-final-c",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "a780e84a1135c2de557b85d9befd1a496458b972865a6bf5ff7002c1c8b77aa4",
+  "candidateSha256": "3de3dbf72c8bd922b8c211ab686a5ce790f48466411f669fea37404bd6e09d3e",
   "score": 4,
   "pass": true,
   "evidence": [
-    "`npm run evals:professor-lenses` accepted the exact bound candidate fingerprint: `candidate-fingerprint` was not among the failures; only the expected stale holdout-scorecard gate failed.",
-    "The desktop and mobile homepage renders make employment relevance immediate: “Technical Project Manager / Product Operations / Implementation,” a concrete operating-structure proposition, and prominent work/resume actions all appear in the first viewport. The raft caption explicitly places Jamie inside a shared system rather than above it as captain (`Hero.tsx:21-46`).",
-    "The About surface is one navigation click from the homepage and explicitly connects artistic, civic, technical, and social practice through Open House, WOWList, Sunday Dinner/196, coalition work, and source-backed memory (`about/page.tsx:46-101`). Its Open House account is supported by the public [Good Times source](https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html), which documents collective governance, public participation, attention, experimentation, and many-perspective documentation.",
-    "Four inspectable continuity traces exceed the three-project threshold (`about/page.tsx:105-223`): Harry J. Epstein converts customer language and institutional habits into maintained workflows; FairRentNYC joins lived experience, meetings, public interfaces, source maps, minutes, and action trails; WOWList converts community vocabulary into distributed publishing infrastructure; Sunday Dinner/196 turns hospitality, trust, invitations, onboarding, and access handoffs into repeatable continuity while withholding private histories.",
-    "The visual composition materially strengthens the lens: the homepage names listening as an operating system and care for the container as part of operational production (`page.tsx:75-128`), while the rendered Fair Rent sequence moves visibly from a listening room to material production. Its introduction states that the photographs neither assign sole authorship nor detach Jamie from collective situations (`CaseStudyLayout.tsx:62-83`).",
-    "The work remains inspectable rather than atmospheric alone: case studies render canonical references (`CaseStudyLayout.tsx:45-48`), the Fair Rent render exposes 23 source notes, and the case copy translates the lineage into recognizable hiring proof—technical project management, coalition operations, documentation architecture, source-backed decision support, and implementation (`fair-rent-nyc.mdx:132-136`)."
+    "Independently imported scripts/lib/professor-lens-eval.mjs with finalScorecards explicitly set to an empty array. It recomputed the required SHA-256 and passed all 13 candidate and content criteria, leaving only aggregate holdout unanimity intentionally unassessed.",
+    "The global navigation reaches /about in one click. Its rendered evidence and source present the role first, followed by the visible through-line 'Systems people can inhabit' connecting artistic, civic, technical, and social practice.",
+    "The About page traces Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, Harry J. Epstein Company, and living photographic knowledge through five explicit relationship, interface-and-use, and learning-and-continuity sequences.",
+    "Experimentation appears in the collectively governed ten-day Open House gallery experiment; hospitality and care appear in Sunday Dinner and 196; participation and documentation appear in coalition rooms, public tools, minutes, source maps, and action trackers; attention and material practice remain visible through photography, screen printing, hosting, and maintenance.",
+    "The public language explains the difference from conventional administration: people can recognize relationships, participate, influence the form, remember what happened, and continue the work. The recursive sequence names observation, modeling, interface prototyping, social testing, and documentary handoff.",
+    "Rendered homepage and Fair Rent evidence preserve professional clarity while using photographs to carry shared journey, atmosphere, public gathering, embodied labor, materials, and collective action rather than treating images as decoration or proof of sole authorship.",
+    "RFC 0003 keeps curation artist-led, begins with a visitor problem, evaluates complete inhabited occurrences, preserves blind and contextual readings, records dissent and protected absence, and returns recollection or correction without automatically changing public pages.",
+    "Read-only verification passed photo governance 26/26, photo tests 20/20, and the public-safety check. The working tree status fingerprint was unchanged afterward."
   ],
-  "gaps": [],
+  "gaps": [
+    "The eight active Layout E photographs remain a documented legacy migration cohort. Asset-specific creator, rights, dignity, crop, occurrence, and production decisions are still open and must not be inferred from this score.",
+    "The East River canary is fully bound but its corrected Layout C occurrence remains inactive and on candidate hold pending exact-use, dignity, creator-crop, production, and indexing review.",
+    "The bound screenshot set includes desktop About evidence but no mobile About screenshot; this does not defeat the one-click lineage or the inspected source, but it remains a responsive-evidence gap."
+  ],
   "safety_findings": [
-    "No actual contradiction or unsafe publication remains for this public PR-review candidate. The ledger records Jamie’s branch-specific authorization for all nine derivatives, keeps production rights, exact credit, crop, dignity, and final approval as human gates, and documents removal of the two intimate gathering images without represented-person approval (`layout-E-photo-integration.md:47-71`). The public asset directory contains exactly those nine ledgered images.",
-    "Collective credit is explicit throughout: campaign outcomes belong to many organizers and advocates, public-event captions call the campaigns collective work (`photography.ts:32-40,72-100`), the raft caption rejects captain framing, and the Fair Rent case rejects sole policy causation (`fair-rent-nyc.mdx:63,132-136`). The imagery shows public actions, material work, a public meeting, a distant shared raft, and Jamie’s authorized self-portrait—not intimate or exploitative projections.",
-    "Protected educational records and private praise remain excluded. The source note withholds the Margaret Morse recommendation, raw UCSC evaluations, grades, identifiers, correspondence, and historical overclaims (`ucsc-professor-lenses-2026-07-15.md:23-44`). The portfolio links to public reporting but does not reproduce its vulnerable participant details or romanticize them. EXIF inspection found no embedded archive, author, GPS, or private-library metadata in the nine JPEG derivatives."
+    "No PR-015-blocking privacy or protected-source disclosure was found. UCSC educational records, private correspondence, identifiers, paths, and unapproved testimonial language remain excluded.",
+    "Open House governance, WOWList authorship, coalition outcomes, public events, and photographic sequences retain collective credit and do not imply sole causality or authority.",
+    "The child-visible Talks Not Raids derivative is absent from the active tree and composition, and intimate-gathering photographs remain protected absences pending specific human review.",
+    "East River permission is destination-bounded, non-transferable, and summarized without publishing the private exchange.",
+    "Public-Git review authorization, automated checks, and this holdout do not close production, indexing, final rights, exact-credit, crop, or represented-person gates."
   ],
-  "recommendation": "Pass PR-015 at score 4 for the current public pull-request review candidate; retain the recorded human production-approval gates before deployment.",
+  "recommendation": "Pass PR-015 at score 4 for the exact bound candidate. The artistic, civic, technical, and social practice is exceptionally visible, specific, inspectable, and responsibly bounded. Treat this as lens approval only and preserve every stated human rights, dignity, credit, crop, production, and indexing gate.",
   "provenance": {
-    "provider": "codex-exec",
-    "processSessionId": "28329",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "provider": "codex-native-subagent",
+    "processSessionId": "019fa0b8-5a04-7bf2-a578-a42a7942a6c7",
+    "agentNickname": "Pascal",
+    "model": "inherited-current-model",
+    "reasoningEffort": "inherited-parent",
     "sandbox": "read-only",
     "ephemeral": true,
-    "promptSha256": "e221b116a217734f3fbb18d738d1bff67d9738c094972fb03eade3141b601bd9",
-    "resultSha256": "7a6c21813fd3d11a7df9e28296225ce8cba29c982041237c66dbe1c786dff1ea",
-    "resultTransport": "codex-exec-output-last-message",
-    "operatorAttestation": "Recorded verbatim from a completed independent read-only Codex result by the parent orchestrator.",
-    "startedAt": "2026-07-23T01:55:00.000Z",
-    "completedAt": "2026-07-23T02:00:00.000Z"
+    "resultTransport": "multi_agent_v1__wait_agent-completed",
+    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
   }
 }

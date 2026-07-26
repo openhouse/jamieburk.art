@@ -1,0 +1,26 @@
+{
+  "changed_property": "preferred creator attribution or permission",
+  "affected_records": [
+    "asset.photo.east-river-manhattan-bridge.2022.001",
+    "source.permission.elana-gordon.east-river.2026-07",
+    "projection.photo.layout-c.home.east-river",
+    "edition.layout-c.2026-07"
+  ],
+  "affected_files": [
+    "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+    "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+    "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
+    "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
+    "apps/www/src/data/photography.ts"
+  ],
+  "required_human_review": [
+    "credit",
+    "caption",
+    "exact crop and route",
+    "Jamie exact-occurrence approval",
+    "mobile crop dignity review",
+    "creator exact-crop review",
+    "production",
+    "indexing"
+  ]
+}

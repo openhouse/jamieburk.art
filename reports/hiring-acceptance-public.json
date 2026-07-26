@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-02d3de4cd6a2",
-  "generatedAt": "2026-07-22T23:10:49-04:00",
-  "candidateSha": "02d3de4cd6a22f5ccc214d56d3c7fb9577ff60a9",
+  "runId": "hiring-public-3c48977efa48",
+  "generatedAt": "2026-07-26T18:31:48-04:00",
+  "candidateSha": "3c48977efa488f9ef8011a4430f8af5223277fd4",
   "candidatePathsClean": true,
-  "portfolioSnapshotHash": "a2415cd0370ea2095daae27260af02bb1390d6cd9f77c2be769a6ce5fa3d3584",
-  "roleContextHash": "41a1e87d401227cce881d9b079c9bfde8798604f2debf8fd2c027289e585c95d",
+  "portfolioSnapshotHash": "e142861828e839ca3b0131f53b5cb84f3490b797e2ef5098a7ad1ab8cd7a2d2f",
+  "roleContextHash": "5edbc1d0c3f5200096475ecc9e79893c8ffe24eac53e563f3470982f1fedeb8d",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -139,7 +139,7 @@
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
       "title": "NYC OTI - Technical Operations Manager 782369",
-      "roleContextHash": "40fd375e79fd71ec6519f4ccc1fda5adfe6ee353f0a75105a17894022bbd4838",
+      "roleContextHash": "f564251023e1541faa941ad33d295b821ed484bc27a5ff51823007ac607b4bf2",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -233,7 +233,7 @@
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
       "title": "ACLU - Product Manager II, Discovery",
-      "roleContextHash": "9b6503d0a33402c277e1d74a13f0b378f15d23c192dd897932141e31d0b56d8f",
+      "roleContextHash": "1f63d16b5aef1662e84413aa418385d1c425ff5a687099cb4447f09d4aa3c38b",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -303,78 +303,9 @@
       ]
     },
     {
-      "id": "opportunity.benepass.product-operations.7f963a7a",
-      "title": "Benepass - Product Operations Manager",
-      "roleContextHash": "dbc316724b402bd6323460fda4c8a668bd6ea5a9016358a47a114e9bad1bd09c",
-      "live": true,
-      "fresh": true,
-      "hardScreenBlocked": false,
-      "decision": "deterministic-ready-for-human-review",
-      "observed": 3,
-      "requirementTotal": 4,
-      "criticalObserved": 3,
-      "criticalTotal": 4,
-      "requirementCoverage": [
-        {
-          "requirementId": "requirement.benepass.launch-readiness",
-          "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "public launch",
-            "surface risks early"
-          ]
-        },
-        {
-          "requirementId": "requirement.benepass.product-engineering-translation",
-          "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "product, engineering, security, legal"
-          ]
-        },
-        {
-          "requirementId": "requirement.benepass.runbooks-and-learning",
-          "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "handbooks, runbooks",
-            "retrospectives"
-          ]
-        },
-        {
-          "requirementId": "requirement.benepass.quantified-prioritization",
-          "importance": "critical",
-          "observed": false,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-weak",
-          "routes": [
-            "/work/harry-j-epstein"
-          ],
-          "evidenceNeedles": [
-            "revenue"
-          ]
-        }
-      ]
-    },
-    {
       "id": "opportunity.codepath.claude-corps.5182020007",
       "title": "CodePath - Senior Program Manager, Claude Corps",
-      "roleContextHash": "77d0ad40652db6e904b9d2f079058ace2b87b4d40c3e57b710330150bd977172",
+      "roleContextHash": "efad3c7511b88f87d346ee9e364fcdd80ca07afec67cf6789456ad580d083e2e",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -456,7 +387,7 @@
     {
       "id": "opportunity.asana.ai-implementation.8027437",
       "title": "Asana - AI Implementation Manager, Service Management",
-      "roleContextHash": "afad95a7853b78b0164c1074731e68f1ca3048427bf6d05926618217dd75d85c",
+      "roleContextHash": "dc21d9099e903645eb19fc2c52f1506e611804fab04e9dc02c68324660003294",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -523,7 +454,7 @@
     {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
       "title": "PermitFlow - Product Operations Manager",
-      "roleContextHash": "ddaeb940706c6feb0af7436a92f1ddab21d6a4ce53fa5b5db785f1af0baf46ca",
+      "roleContextHash": "7ee6136393bae13113964aa4476c1b10fb6de8bdd6d140a8c07da68ea458d4ff",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,

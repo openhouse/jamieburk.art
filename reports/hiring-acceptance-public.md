@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `02d3de4cd6a22f5ccc214d56d3c7fb9577ff60a9`
-**Portfolio snapshot:** `a2415cd0370ea2095daae27260af02bb1390d6cd9f77c2be769a6ce5fa3d3584`
-**Role-context hash:** `41a1e87d401227cce881d9b079c9bfde8798604f2debf8fd2c027289e585c95d`
+**Candidate commit:** `3c48977efa488f9ef8011a4430f8af5223277fd4`
+**Portfolio snapshot:** `e142861828e839ca3b0131f53b5cb84f3490b797e2ef5098a7ad1ab8cd7a2d2f`
+**Role-context hash:** `5edbc1d0c3f5200096475ecc9e79893c8ffe24eac53e563f3470982f1fedeb8d`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -42,20 +42,6 @@
 - `requirement.aclu.privacy-and-governance`: **observed** on `/lab/source-backed-team-memory`
 - `requirement.aclu.product-brief`: **not observed**
 - `requirement.aclu.do-not-build-judgment`: **not observed**
-
-### Benepass - Product Operations Manager
-
-- Deterministic disposition: `deterministic-ready-for-human-review`
-- Critical signals observed: 3/4
-- All signals observed: 3/4
-- Opportunity status live: yes
-- Role context current at candidate time: yes
-- Exclusionary hard screen recorded: no
-
-- `requirement.benepass.launch-readiness`: **observed** on `/work/technical-operations`
-- `requirement.benepass.product-engineering-translation`: **observed** on `/work/technical-operations`
-- `requirement.benepass.runbooks-and-learning`: **observed** on `/work/technical-operations`
-- `requirement.benepass.quantified-prioritization`: **not observed** on `/work/harry-j-epstein`
 
 ### CodePath - Senior Program Manager, Claude Corps
 
