@@ -77,7 +77,10 @@ record(
 );
 record(
   "LAYOUT-004",
-  caseStudy.includes("do not assign sole authorship") && caseStudy.includes("collective situations") && manifest.includes("The campaign was collective work"),
+  caseStudy.includes("do not assign sole authorship") &&
+    caseStudy.includes("collective situations") &&
+    manifest.includes("The campaign and its outcomes belong to the many organizers") &&
+    manifest.includes("people make it together"),
   "Campaign sequencing and captions explicitly retain collective authorship and bounded role language."
 );
 record(

@@ -22,7 +22,7 @@ test("all selected archive images are referenced by the typed manifest", () => {
   const imageNames = fs.readdirSync(directory).filter((name) => name.endsWith(".jpg")).sort();
   const manifest = read("apps/www/src/data/photography.ts");
 
-  assert.equal(imageNames.length, 9);
+  assert.equal(imageNames.length, 8);
   for (const imageName of imageNames) {
     assert.match(manifest, new RegExp(`/images/photo-fieldwork/${imageName.replaceAll(".", "\\.")}`));
   }
