@@ -1,12 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import { portfolioPhotos } from "@/data/photography";
+import {
+  assertPhotoPlacement,
+  portfolioPhotos
+} from "@/data/photography";
 
 export function Hero() {
   const photo = portfolioPhotos.eastRiver;
+  const photoId = "photo.east-river-manhattan-bridge.2022";
+  const placementId = "placement.home.hero.east-river.layout-b";
+  assertPhotoPlacement(photo, photoId, placementId);
 
   return (
-    <section aria-labelledby="home-title" className="jb-hero">
+    <section
+      aria-labelledby="home-title"
+      className="jb-hero"
+      data-photo-crop="object-cover object-[68%_center] sm:object-center"
+      data-photo-id="photo.east-river-manhattan-bridge.2022"
+      data-photo-placement="placement.home.hero.east-river.layout-b"
+      data-photo-route="/"
+    >
       <div className="jb-hero-image">
         <Image
           alt={photo.alt}

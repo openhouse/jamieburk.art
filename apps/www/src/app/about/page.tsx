@@ -47,9 +47,12 @@ export default function AboutPage() {
           </div>
         </div>
         <FieldPhoto
-          imageClassName="aspect-[4/3]"
+          crop="aspect-[4/3] object-cover"
+          photoId="photo.raft-riverboat"
+          placementId="placement.about.raft-riverboat.layout-b"
           photo={portfolioPhotos.raftRiverboat}
           priority
+          route="/about"
           sizes="(max-width: 1024px) 100vw, 52vw"
         />
       </div>

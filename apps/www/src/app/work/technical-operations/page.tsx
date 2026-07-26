@@ -147,9 +147,12 @@ export default function TechnicalOperationsPage() {
       </div>
       <FieldPhoto
         className="mt-12"
-        imageClassName="aspect-[16/9]"
+        crop="aspect-[16/9] object-cover"
+        photoId="photo.paper-trimming"
+        placementId="placement.technical-operations.paper-trimming.layout-b"
         photo={portfolioPhotos.paperTrimming}
         priority
+        route="/work/technical-operations"
         sizes="(max-width: 1280px) 100vw, 1240px"
       />
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">

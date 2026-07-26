@@ -178,7 +178,7 @@ The first viewport joins:
 - Jamie's body and canoe equipment;
 - the literal professional identity
   "Technical Project Manager — Product Operations & Implementation";
-- the sentence "I help emerging work become usable systems";
+- the sentence "I create operating structure for complex public-facing teams";
 - immediate Work and Résumé actions;
 - the factual caption "At the East River beneath the Manhattan Bridge, 2022."
 

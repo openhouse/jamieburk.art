@@ -127,18 +127,27 @@ export default function HomePage() {
           </div>
           <div className="jb-photo-sequence mt-10">
             <FieldPhoto
-              imageClassName="aspect-[16/9]"
+              crop="aspect-[16/9] object-cover"
+              photoId="photo.kc-town-hall-before"
+              placementId="placement.home.sequence.kc-town-hall-before.layout-b"
               photo={portfolioPhotos.kcTownHallBefore}
+              route="/"
               sizes="(max-width: 1280px) 100vw, 1240px"
             />
             <FieldPhoto
-              imageClassName="aspect-[4/3]"
+              crop="aspect-[4/3] object-cover"
+              photoId="photo.tired-of-tires-load"
+              placementId="placement.home.sequence.tired-of-tires-load.layout-b"
               photo={portfolioPhotos.tiredOfTiresLoad}
+              route="/"
               sizes="(max-width: 768px) 100vw, 58vw"
             />
             <FieldPhoto
-              imageClassName="aspect-[4/3]"
+              crop="aspect-[4/3] object-cover"
+              photoId="photo.paper-trimming"
+              placementId="placement.home.sequence.paper-trimming.layout-b"
               photo={portfolioPhotos.paperTrimming}
+              route="/"
               sizes="(max-width: 768px) 100vw, 40vw"
             />
           </div>

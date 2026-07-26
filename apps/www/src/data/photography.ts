@@ -62,16 +62,13 @@ export const portfolioPhotos = {
     height: 844,
     wikiId: "photo.raft-riverboat",
     derivativeId: "derivative.raft-riverboat.layout-b",
-    placementIds: [
-      "placement.home.sequence.raft-riverboat.layout-b",
-      "placement.about.raft-riverboat.layout-b"
-    ],
+    placementIds: ["placement.about.raft-riverboat.layout-b"],
     editionId: "edition.portfolio.layout-b.2026-07",
     alt: "A small handmade raft on a wide river beside the Delta Queen riverboat.",
     caption: "A handmade raft and the Delta Queen on the river.",
     credit:
       "Jamie Burkart archive; public Flickr corpus. Photographer credit under review.",
-    placements: ["home", "about"],
+    placements: ["about"],
     subjectExposure: "no-identifiable-people",
     publicationStatus: "jamie-authorized-working-review",
     productionApproval: "open",
@@ -108,14 +105,13 @@ export const portfolioPhotos = {
     derivativeId: "derivative.tired-of-tires-load.layout-b",
     placementIds: [
       "placement.home.sequence.tired-of-tires-load.layout-b",
-      "placement.technical-operations.tired-of-tires-load.layout-b",
       "placement.kc-town-hall.tired-of-tires-load.layout-b"
     ],
     editionId: "edition.portfolio.layout-b.2026-07",
     alt: "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
     caption: "A neighborhood tire-removal load ready for the city recycling center.",
     credit: archiveCredit,
-    placements: ["home", "technical-operations", "kc-town-hall"],
+    placements: ["home", "kc-town-hall"],
     subjectExposure: "no-identifiable-people",
     publicationStatus: "jamie-authorized-working-review",
     productionApproval: "open",
@@ -150,15 +146,12 @@ export const portfolioPhotos = {
     height: 956,
     wikiId: "photo.printed-editions",
     derivativeId: "derivative.printed-editions.layout-b",
-    placementIds: [
-      "placement.home.sequence.printed-editions.layout-b",
-      "placement.colophon.printed-editions.layout-b"
-    ],
+    placementIds: ["placement.colophon.printed-editions.layout-b"],
     editionId: "edition.portfolio.layout-b.2026-07",
     alt: "Small folded printed editions stand among tools on a worktable.",
     caption: "Small printed editions in progress.",
     credit: archiveCredit,
-    placements: ["home", "colophon"],
+    placements: ["colophon"],
     subjectExposure: "no-identifiable-people",
     publicationStatus: "jamie-authorized-working-review",
     productionApproval: "open",
@@ -167,6 +160,21 @@ export const portfolioPhotos = {
 } as const satisfies Record<string, PortfolioPhoto>;
 
 export const publicPhotoManifest = Object.values(portfolioPhotos);
+
+export function assertPhotoPlacement(
+  photo: PortfolioPhoto,
+  photoId: PortfolioPhoto["wikiId"],
+  placementId: PortfolioPhoto["placementIds"][number]
+) {
+  if (
+    photo.wikiId !== photoId ||
+    !(photo.placementIds as readonly string[]).includes(placementId)
+  ) {
+    throw new Error(
+      `Photo placement mismatch: ${photoId} at ${placementId}`
+    );
+  }
+}
 
 export const caseStudyPhotos = {
   "kc-town-hall": portfolioPhotos.kcTownHallBefore

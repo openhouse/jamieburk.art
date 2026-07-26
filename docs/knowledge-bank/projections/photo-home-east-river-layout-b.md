@@ -37,7 +37,8 @@ image + crop + typography + copy + caption + credit + sequence + viewport + acti
 
 The current working occurrence uses the full `4:3` derivative with
 object-position behavior defined in the homepage component, the literal
-professional role, the sentence "I help emerging work become usable systems,"
-the corrected caption and credit, and immediate Work and Résumé actions.
+professional role, the sentence "I create operating structure for complex
+public-facing teams," the corrected caption and credit, and immediate Work and
+Résumé actions.
 
 Staging, production, and indexing remain explicit and independent.

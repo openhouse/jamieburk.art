@@ -51,15 +51,21 @@ export default function ColophonPage() {
 
       <div className="mt-14 grid gap-5 md:grid-cols-2">
         <FieldPhoto
-          imageClassName="aspect-[4/3]"
+          crop="aspect-[4/3] object-cover"
+          photoId="photo.paper-trimming"
+          placementId="placement.colophon.paper-trimming.layout-b"
           photo={portfolioPhotos.paperTrimming}
           priority
+          route="/colophon"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
         <FieldPhoto
-          imageClassName="aspect-[4/3]"
+          crop="aspect-[4/3] object-cover"
+          photoId="photo.printed-editions"
+          placementId="placement.colophon.printed-editions.layout-b"
           photo={portfolioPhotos.printedEditions}
           priority
+          route="/colophon"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>

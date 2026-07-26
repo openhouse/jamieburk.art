@@ -3,7 +3,10 @@ import Link from "next/link";
 import type { Route } from "next";
 import { StatusBadge } from "@/components/StatusBadge";
 import { TagList } from "@/components/TagList";
-import { getCaseStudyPhoto } from "@/data/photography";
+import {
+  assertPhotoPlacement,
+  getCaseStudyPhoto
+} from "@/data/photography";
 import type { WorkMeta } from "@/types/work";
 
 type WorkCardProps = {
@@ -12,6 +15,13 @@ type WorkCardProps = {
 
 export function WorkCard({ item }: WorkCardProps) {
   const fieldPhoto = getCaseStudyPhoto(item.slug);
+  if (fieldPhoto) {
+    assertPhotoPlacement(
+      fieldPhoto,
+      "photo.kc-town-hall-before",
+      "placement.work.kc-town-hall-before.layout-b"
+    );
+  }
   const artifactMedia = item.artifacts.find((artifact) => artifact.media)?.media;
   const media = fieldPhoto
     ? {
@@ -79,7 +89,12 @@ export function WorkCard({ item }: WorkCardProps) {
             </Link>
           </div>
           {media ? (
-            <figure>
+            <figure
+              data-photo-crop="aspect-[4/3] object-cover object-top"
+              data-photo-id="photo.kc-town-hall-before"
+              data-photo-placement="placement.work.kc-town-hall-before.layout-b"
+              data-photo-route="/work"
+            >
               <Image
                 alt={media.alt}
                 className="aspect-[4/3] w-full object-cover object-top"
@@ -89,7 +104,10 @@ export function WorkCard({ item }: WorkCardProps) {
                 width={media.width}
               />
               <figcaption className="border-b border-jb-ink/12 py-2 text-xs leading-5 text-jb-ink/68">
-                {media.caption}
+                <span>{media.caption}</span>
+                {fieldPhoto ? (
+                  <span className="mt-1 block">{fieldPhoto.credit}</span>
+                ) : null}
               </figcaption>
             </figure>
           ) : null}

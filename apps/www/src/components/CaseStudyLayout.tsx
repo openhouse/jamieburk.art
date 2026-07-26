@@ -35,9 +35,12 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           {leadPhoto ? (
             <FieldPhoto
               className="mt-10"
-              imageClassName="aspect-[16/9]"
+              crop="aspect-[16/9] object-cover"
+              photoId="photo.kc-town-hall-before"
+              placementId="placement.kc-town-hall.hero.layout-b"
               photo={leadPhoto}
               priority
+              route="/work/kc-town-hall"
               sizes="(max-width: 1024px) 100vw, 70vw"
             />
           ) : null}
@@ -74,8 +77,11 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
                 </p>
               </div>
               <FieldPhoto
-                imageClassName="aspect-[4/3]"
+                crop="aspect-[4/3] object-cover"
+                photoId="photo.tired-of-tires-load"
+                placementId="placement.kc-town-hall.tired-of-tires-load.layout-b"
                 photo={portfolioPhotos.tiredOfTiresLoad}
+                route="/work/kc-town-hall"
                 sizes="(max-width: 1024px) 100vw, 66vw"
               />
             </div>

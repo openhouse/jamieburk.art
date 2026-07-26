@@ -20,7 +20,8 @@ test("RFC 0003 photographic knowledge baseline passes", () => {
   const result = evaluatePhotoKnowledge();
   assert.equal(result.passed, true, result.failures.join(", "));
   assert.equal(result.counts.photos, 6);
-  assert.equal(result.counts.blockingCriteria, 17);
+  assert.equal(result.counts.placements, 11);
+  assert.equal(result.counts.blockingCriteria, 20);
 });
 
 test("a derivative checksum drift fails closed", () => {
@@ -87,6 +88,107 @@ test("production and indexing cannot be silently approved", () => {
   const result = evaluatePhotoKnowledge({ manifest: changed });
   assert.equal(result.checks.photo_human_gates_open, false);
   assert.equal(result.checks.photo_placements_and_edition_governed, false);
+});
+
+test("a declared route must match a rendered occurrence", () => {
+  const changed = manifest();
+  changed.photos[0].placements[0].route = "/nonexistent-photo-route";
+  const result = evaluatePhotoKnowledge({ manifest: changed });
+  assert.equal(result.checks.photo_placements_and_edition_governed, false);
+});
+
+test("a declared component and crop must match the rendered occurrence", () => {
+  const changed = manifest();
+  changed.photos[0].placements[0].component =
+    "apps/www/src/app/about/page.tsx";
+  changed.photos[0].placements[0].crop = "object-contain";
+  const result = evaluatePhotoKnowledge({ manifest: changed });
+  assert.equal(result.checks.photo_placements_and_edition_governed, false);
+});
+
+test("alt text and caption drift cannot leave the site projection green", () => {
+  const sitePhotos = structuredClone(publicPhotoManifest);
+  sitePhotos[0].alt = "";
+  sitePhotos[0].caption = "Unsupported replacement caption.";
+  const result = evaluatePhotoKnowledge({ publicPhotoManifest: sitePhotos });
+  assert.equal(result.checks.photo_manifest_exact_and_bound, false);
+});
+
+test("every rendered photo pathway must preserve caption and credit", () => {
+  const workCardPath = "apps/www/src/components/WorkCard.tsx";
+  const original = readFileSync(
+    path.join(defaultRepoRoot, workCardPath),
+    "utf8"
+  );
+  const changed = original.replace(
+    "{fieldPhoto.credit}",
+    "{/* credit omitted */}"
+  );
+  const result = evaluatePhotoKnowledge({
+    applicationSourceOverrides: { [workCardPath]: changed }
+  });
+  assert.equal(result.checks.photo_caption_credit_rendered, false);
+});
+
+test("a persisted revoked permission with active placements fails closed", () => {
+  const changed = manifest();
+  changed.photos[0].permissionState = "revoked";
+  const result = evaluatePhotoKnowledge({ manifest: changed });
+  assert.equal(result.checks.photo_revocation_fails_closed, false);
+  assert.equal(result.passed, false);
+});
+
+test("unresolved rights work cannot be synthetically closed", () => {
+  const wiki = compileWiki();
+  for (const id of [
+    "photo.raft-riverboat",
+    "photo.kc-town-hall-before",
+    "photo.tired-of-tires-load",
+    "photo.paper-trimming",
+    "photo.printed-editions"
+  ]) {
+    const record = structuredClone(wiki.byId.get(id));
+    record.rights_state = "cleared";
+    record.creator_state = "confirmed";
+    wiki.byId.set(id, record);
+  }
+  const result = evaluatePhotoKnowledge({ wiki });
+  assert.equal(result.checks.photo_human_gates_open, false);
+});
+
+test("introduced branch history leakage fails the public boundary", () => {
+  const protectedLocator = ["/", "Volumes", "/private/photo-library"].join("");
+  const result = evaluatePhotoKnowledge({
+    introducedHistorySources: [
+      {
+        relativePath: "docs/knowledge-bank/assets/leaked.md",
+        text: protectedLocator
+      }
+    ]
+  });
+  assert.equal(
+    result.checks.photo_introduced_history_boundary_clean,
+    false
+  );
+});
+
+test("obsolete homepage occurrence copy fails closed", () => {
+  const id = "portfolio.photo.home-east-river.layout-b";
+  const wiki = compileWiki();
+  const record = wiki.byId.get(id);
+  const original = readFileSync(
+    path.join(defaultRepoRoot, record.path),
+    "utf8"
+  );
+  const changed = original.replace(
+    "I create operating structure for complex\npublic-facing teams",
+    "I help emerging work become usable systems"
+  );
+  const result = evaluatePhotoKnowledge({
+    wiki,
+    sourceOverrides: { [id]: changed }
+  });
+  assert.equal(result.checks.photo_occurrence_copy_bound, false);
 });
 
 test("a recollection cannot automatically become a public projection", () => {
@@ -164,8 +266,9 @@ test("an RFC stage regression fails the implementation contract", () => {
 });
 
 test("a protected local locator fails the public boundary", () => {
+  const protectedLocator = ["/", "Volumes", "/private/photo-library"].join("");
   const result = evaluatePhotoKnowledge({
-    publicBoundaryExtraSources: ["/Volumes/private/photo-library"]
+    publicBoundaryExtraSources: [protectedLocator]
   });
   assert.equal(result.checks.photo_public_boundary_clean, false);
 });
