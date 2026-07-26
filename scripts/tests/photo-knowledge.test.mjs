@@ -166,4 +166,5 @@ test("the RFC terminology cannot regress to RFP", async () => {
   );
   const result = evaluatePhotoKnowledgeModel(model);
   assert.equal(result.checks.rfc_authority_and_scope_current, false);
+  assert.equal(result.passed, false);
 });

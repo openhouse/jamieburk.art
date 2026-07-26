@@ -12,6 +12,7 @@
     ]
   },
   "hardGates": [
+    "records_materialized",
     "no_private_locator_leakage",
     "private_binding_opaque_and_resolvable",
     "derivative_integrity_and_metadata_stripping",
@@ -24,6 +25,7 @@
     "recollection_does_not_auto_project",
     "automated_selection_prohibited",
     "production_and_indexing_human_gated",
+    "rfc_authority_and_scope_current",
     "exact_candidate_receipt_current"
   ],
   "criteria": [
