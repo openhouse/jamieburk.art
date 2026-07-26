@@ -2,17 +2,17 @@
 id: opportunity.benepass.product-operations.7f963a7a
 title: Benepass - Product Operations Manager
 kind: opportunity
-status: governed-open
+status: archived
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-22
-review_by: 2026-07-25
+last_reviewed: 2026-07-26
+review_by: 2026-08-26
 canonical_path: docs/knowledge-bank/opportunities/benepass-product-operations.md
-summary: Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.
+summary: Historical public-safe requirement and portfolio-coverage map for Benepass's closed Product Operations Manager posting.
 canonical_url: https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-07-22
+opportunity_status: closed
+verified_at: 2026-07-26
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -27,6 +27,7 @@ discovery_terms:
   - runbooks
   - post-launch learning
 confirmed_facts:
+  - Benepass's official Ashby public job board no longer returned this posting ID on July 26, 2026.
   - The role is US remote and reports to Head of Customer Operations Aileen Palmer.
   - The posted base salary is $150,000 to $180,000 plus equity.
   - The role makes go/no-go recommendations and owns an Ops-to-Product prioritization system.

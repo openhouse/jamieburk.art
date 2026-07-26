@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-22
-review_by: 2026-07-25
+last_reviewed: 2026-07-26
+review_by: 2026-07-29
 canonical_path: docs/knowledge-bank/opportunities/permitflow-product-operations.md
 summary: Public-safe requirement and portfolio-coverage map for PermitFlow's live Product Operations Manager role.
 canonical_url: https://jobs.ashbyhq.com/permitflow/8a6e6066-1a9a-4026-aa81-e855741b2922/
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-22
+verified_at: 2026-07-26
 portfolio_routes:
   - /
   - /work/technical-operations

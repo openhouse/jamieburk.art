@@ -39,6 +39,7 @@ const opportunityQuery = queryWiki(result, {
   opportunity: "opportunity.nyc-oti.technical-operations-manager.782369"
 });
 const opportunities = result.records.filter((record) => record.kind === "opportunity");
+const liveOpportunities = opportunities.filter((record) => record.opportunity_status === "live");
 const publicHiring = evaluatePublicHiring(defaultRepoRoot);
 const gapResolution = resolveHiringGaps(result, publicHiring.report);
 const employmentOutputs = buildEmploymentOutputs(result, publicHiring, gapResolution);
@@ -99,7 +100,6 @@ const boundedPublicUiPaths = [
   "apps/www/public/images/photo-fieldwork/nycac-screen-printing.jpg",
   "apps/www/public/images/photo-fieldwork/raft-delta-queen.jpg",
   "apps/www/public/images/photo-fieldwork/repeal-cabaret-law.jpg",
-  "apps/www/public/images/photo-fieldwork/talks-not-raids.jpg",
   "apps/www/public/images/field-notes/jamie-east-river.webp",
   "apps/www/src/app/about/page.tsx",
   "apps/www/src/app/colophon/page.tsx",
@@ -266,7 +266,9 @@ const checks = {
       (record) =>
         record.canonical_url &&
         record.source_type === "official-employer" &&
-        record.opportunity_status === "live" &&
+        ["live", "closed", "historical-benchmark", "conditional"].includes(
+          record.opportunity_status
+        ) &&
         record.verified_at &&
         record.review_by &&
         record.portfolio_routes.length > 0 &&
@@ -275,7 +277,10 @@ const checks = {
   stable_requirement_ids:
     requirementIds.length >= 25 && new Set(requirementIds).size === requirementIds.length,
   operator_queries:
-    queryWiki(result, { liveOpportunities: true }).records.length === 6 &&
+    liveOpportunities.length === publicHiring.report.opportunities.length &&
+    publicHiring.report.opportunities.every((record) => record.live) &&
+    queryWiki(result, { liveOpportunities: true }).records.length ===
+      liveOpportunities.length &&
     queryWiki(result, { requirement: "requirement.oti.delivery-coordination" }).opportunity?.id ===
       "opportunity.nyc-oti.technical-operations-manager.782369",
   hard_screens_explicit: opportunities.every((record) => record.hard_screens.length > 0),

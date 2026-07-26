@@ -1,11 +1,10 @@
 {
-  "id": "current-priority-2026-07-18",
-  "version": 1,
+  "id": "current-priority-2026-07-26",
+  "version": 2,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "opportunityPaths": [
     "docs/knowledge-bank/opportunities/oti-technical-operations.md",
     "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
-    "docs/knowledge-bank/opportunities/benepass-product-operations.md",
     "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
     "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
     "docs/knowledge-bank/opportunities/permitflow-product-operations.md"

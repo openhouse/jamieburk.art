@@ -34,7 +34,7 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
   assert.equal(report.publicSafety.privateMarkerCount, 0);
   assert.equal(report.publicSafety.protectedWikiReceived, false);
   assert.equal(report.publicSafety.rawCommunicationsReceived, false);
-  assert.equal(report.opportunities.length, 6);
+  assert.equal(report.opportunities.length, loadHiringSuite(defaultRepoRoot).opportunityPaths.length);
   assert.ok(!JSON.stringify(report).includes("wikiRecords"));
 });
 

@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-22
-review_by: 2026-07-25
+last_reviewed: 2026-07-26
+review_by: 2026-07-29
 canonical_path: docs/knowledge-bank/opportunities/aclu-product-discovery.md
 summary: Public-safe requirement and portfolio-coverage map for ACLU's live term-limited Product Manager II, Discovery role.
 canonical_url: https://job-boards.greenhouse.io/aclu/jobs/8482872002
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-22
+verified_at: 2026-07-26
 portfolio_routes:
   - /
   - /work/callnyc
