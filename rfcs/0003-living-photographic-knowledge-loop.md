@@ -2403,8 +2403,14 @@ canonical decision record whose own content identifies the photo and prior
 implemented withdrawal, records Jamie's completed human review, accounts for
 creator, rights, consent, exact-credit, crop, caption, represented-person,
 editorial, production, deployment, and indexing review, and binds the exact
-restored occurrences to regenerated public-surface evidence. Manifest approval
-fields alone are not authority.
+restored occurrences to regenerated public-surface evidence. Every gate names
+its authority and supporting Knowledge Wiki records. Creator, rights,
+exact-credit, crop, caption, editorial, production, deployment, and indexing
+cannot be waived as not applicable; open production, deployment, and indexing
+reviews remain separate gates rather than synthetic approvals. A restoration
+record must be internally affirmative, materialized after the withdrawal, and
+no later than the actual review time. Contradictory prose, future dates, and
+manifest approval fields alone are not authority.
 
 #### `photos:recollection`
 

@@ -43,11 +43,14 @@ workspaces, Dockerfile, Dokku.
 Treat an implemented photo withdrawal as monotonic across repository history.
 Restoration requires a later, newly materialized canonical decision whose own
 record identifies the photo and implemented withdrawal, documents Jamie's
-completed review, resolves every applicable creator, rights, consent, credit,
-crop, caption, represented-person, editorial, production, deployment, and
-indexing gate, and binds regenerated occurrence evidence. Manifest approval
-fields alone are not authority. A rollback, revert, or older manifest may not
-silently reactivate the image.
+completed review, accounts for every creator, rights, consent, credit, crop,
+caption, represented-person, editorial, production, deployment, and indexing
+gate through its required authority and evidence, and binds regenerated
+occurrence evidence. Always-applicable gates cannot be waived, open production
+gates cannot be mislabeled as cleared, and future-dated or semantically
+contradictory records fail closed. Manifest approval fields alone are not
+authority. A rollback, revert, or older manifest may not silently reactivate
+the image.
 
 ## Public-Safety Rules
 

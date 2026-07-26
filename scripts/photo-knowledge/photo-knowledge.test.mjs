@@ -5,7 +5,10 @@ import path from "node:path";
 import test from "node:test";
 
 import { publicPhotoManifest } from "../../apps/www/src/data/photography.ts";
-import { compileWiki } from "../knowledge-wiki/lib.mjs";
+import {
+  compileWiki,
+  wikiRecordSchema
+} from "../knowledge-wiki/lib.mjs";
 import {
   applyPhotoRevocation,
   buildPhotoReports,
@@ -24,11 +27,11 @@ function manifest() {
 
 const restorationPhotoId = "photo.east-river-manhattan-bridge.2022";
 const restorationPlanId = `withdrawal.${restorationPhotoId}`;
-const restorationRecordId = "decision.photo.restoration.east-river.2026-07-27";
+const restorationRecordId = "decision.photo.restoration.east-river.2026-07-25";
 const restorationRecordPath =
-  "docs/knowledge-bank/decisions/photo-restoration-east-river-2026-07-27.md";
-const restorationImplementedAt = "2026-07-26T10:00:00Z";
-const restorationDecidedAt = "2026-07-27T15:00:00Z";
+  "docs/knowledge-bank/decisions/photo-restoration-east-river-2026-07-25.md";
+const restorationImplementedAt = "2026-07-24T10:00:00Z";
+const restorationDecidedAt = "2026-07-25T15:00:00Z";
 const restorationGates = [
   "creator",
   "rights",
@@ -65,7 +68,7 @@ function restorationFixture() {
     )
   );
   const decision = {
-    id: `restoration.${restorationPhotoId}.2026-07-27`,
+    id: `restoration.${restorationPhotoId}.2026-07-25`,
     photoId: restorationPhotoId,
     withdrawalPlanId: restorationPlanId,
     decisionRecordId: restorationRecordId,
@@ -74,30 +77,111 @@ function restorationFixture() {
     approvedBy: "Jamie Burkart",
     decidedAt: restorationDecidedAt
   };
+  const approvalStatement =
+    `Jamie Burkart approved restoration of ${restorationPhotoId} after ` +
+    `implemented withdrawal ${restorationPlanId}.`;
+  const gateEvidence = {
+    creator: ["source.permission.elana-gordon.east-river-portfolio"],
+    rights: ["source.permission.elana-gordon.east-river-portfolio"],
+    consent: ["decision.photo.home-east-river.layout-b"],
+    "exact-credit": [
+      "source.permission.elana-gordon.east-river-portfolio"
+    ],
+    crop: ["evaluation.photo-curation.home-east-river.2026-07-26"],
+    caption: ["evaluation.photo-curation.home-east-river.2026-07-26"],
+    "represented-person": ["decision.photo.home-east-river.layout-b"],
+    editorial: ["evaluation.photo-curation.home-east-river.2026-07-26"],
+    production: ["edition.portfolio.layout-b.2026-07"],
+    deployment: ["edition.portfolio.layout-b.2026-07"],
+    indexing: ["edition.portfolio.layout-b.2026-07"]
+  };
+  const gatePolicy = {
+    creator: ["cleared", "creator-or-rights-holder"],
+    rights: ["cleared", "creator-or-rights-holder"],
+    consent: ["cleared", "represented-person-or-consent-authority"],
+    "exact-credit": ["cleared", "creator-and-editorial-owner"],
+    crop: ["cleared", "creator-and-editorial-owner"],
+    caption: ["cleared", "creator-and-editorial-owner"],
+    "represented-person": ["cleared", "represented-person"],
+    editorial: ["cleared", "portfolio-owner"],
+    production: ["open-separated-gate", "production-owner"],
+    deployment: ["open-separated-gate", "deployment-owner"],
+    indexing: ["open-separated-gate", "indexing-owner"]
+  };
   const record = {
     id: restorationRecordId,
+    title: "Restore the East River photograph to working review",
     kind: "decision",
+    status: "governed-open",
+    visibility: "public-safe",
+    sensitivity: "moderate",
+    last_reviewed: "2026-07-25",
+    review_by: "2026-10-25",
     path: restorationRecordPath,
     canonical_path: restorationRecordPath,
+    summary:
+      "Jamie-reviewed restoration decision for a working-review projection; production and indexing remain separate.",
+    decision_period: "2026-07",
     decision_state: "documented",
+    decision_question:
+      `Should ${restorationPhotoId} be restored after ${restorationPlanId} as a new working-review projection?`,
+    decision_actors: [
+      "Jamie Burkart as portfolio decision owner",
+      "Elana Gordon as creator and rights authority"
+    ],
+    constraints: [
+      "Restoration cannot silently reverse an implemented withdrawal.",
+      "Production, deployment, and indexing remain separate gates."
+    ],
+    options_considered: [
+      {
+        option:
+          `Restore ${restorationPhotoId} after implemented withdrawal ${restorationPlanId} as a new working-review projection.`,
+        disposition: "chosen",
+        evidence_state: "documented"
+      },
+      {
+        option: "Continue the current withdrawal.",
+        disposition: "not-chosen",
+        evidence_state: "documented"
+      }
+    ],
     human_review: "completed",
-    last_reviewed: "2026-07-27",
     chosen_course:
       `Restore ${restorationPhotoId} after ${restorationPlanId} as a new review candidate.`,
     resulting_artifacts: [restorationPhotoId],
+    outcome_boundary:
+      "This restores a working-review projection only; production, deployment, and indexing remain open.",
+    credit_scope: "individual-and-collective",
+    unknowns: [
+      "A later edition may require a different crop or caption."
+    ],
+    anti_claims: [
+      "Working-review restoration is not production publication approval."
+    ],
     projection: { status: "pending", surfaces: [] },
     restoration_action: "restore-photo-projection",
     restoration_photo_id: restorationPhotoId,
     restoration_withdrawal_plan_id: restorationPlanId,
+    restoration_withdrawal_implemented_at: restorationImplementedAt,
     restoration_decided_at: restorationDecidedAt,
     restoration_approved_by: "Jamie Burkart",
     restoration_human_reviewed: true,
-    restoration_gate_reviews: restorationGates.map((gate) => ({
-      gate,
-      status: gate === "represented-person" ? "not-applicable" : "cleared",
-      reviewed_by: gate === "creator" ? "Elana Gordon" : "Jamie Burkart",
-      reviewed_at: "2026-07-27T12:00:00Z"
-    })),
+    restoration_approval_statement: approvalStatement,
+    restoration_gate_reviews: restorationGates.map((gate) => {
+      const [status, authority] = gatePolicy[gate];
+      return {
+        gate,
+        status,
+        authority,
+        reviewed_by:
+          ["creator", "rights"].includes(gate)
+            ? "Elana Gordon"
+            : "Jamie Burkart",
+        reviewed_at: "2026-07-25T12:00:00Z",
+        evidence_ids: gateEvidence[gate]
+      };
+    }),
     restoration_occurrence_ids: photo.placements.map(
       (placement) => placement.id
     ),
@@ -107,8 +191,9 @@ function restorationFixture() {
   const recordText = [
     "# Restore the East River photograph",
     "",
-    `Jamie Burkart approves a new review candidate for ${restorationPhotoId}.`,
-    `This decision follows implemented withdrawal plan ${restorationPlanId}.`
+    approvalStatement,
+    "",
+    "The restored occurrence remains a working-review candidate. Production, deployment, and indexing remain open."
   ].join("\n");
   return {
     current,
@@ -122,7 +207,8 @@ function restorationFixture() {
 function evaluateRestoration({
   recordMutation,
   decisionMutation,
-  decisionHistoryFirst = false
+  decisionHistoryFirst = false,
+  recordTextMutation
 } = {}) {
   const withdrawn = historicalWithdrawal();
   const fixture = restorationFixture();
@@ -142,16 +228,17 @@ function evaluateRestoration({
     relativePath: "docs/knowledge-bank/data/photo-knowledge.json",
     text: JSON.stringify(withdrawn)
   };
+  const recordText = recordTextMutation ?? fixture.recordText;
   const decisionEntry = {
     commit: "restoration-decision-commit",
     relativePath: record.path,
-    text: fixture.recordText
+    text: recordText
   };
   return evaluatePhotoKnowledge({
     manifest: fixture.current,
     wiki,
     sourceOverrides: {
-      [decision.decisionRecordId]: fixture.recordText
+      [decision.decisionRecordId]: recordText
     },
     introducedHistorySources: decisionHistoryFirst
       ? [decisionEntry, withdrawalEntry]
@@ -641,11 +728,11 @@ test("manifest approval fields cannot replace canonical human review", () => {
 test("restoration must postdate the implemented withdrawal", () => {
   const result = evaluateRestoration({
     decisionMutation: {
-      decidedAt: "2026-07-25T15:00:00Z"
+      decidedAt: "2026-07-23T15:00:00Z"
     },
     recordMutation: {
-      restoration_decided_at: "2026-07-25T15:00:00Z",
-      last_reviewed: "2026-07-25"
+      restoration_decided_at: "2026-07-23T15:00:00Z",
+      last_reviewed: "2026-07-23"
     }
   });
   assert.equal(
@@ -656,6 +743,7 @@ test("restoration must postdate the implemented withdrawal", () => {
 
 test("restoration binds every governed gate and regenerated occurrence evidence", () => {
   const fixture = restorationFixture();
+  const knownRecordIds = new Set(compileWiki().byId.keys());
   const valid = validateRestorationDecision({
     decision: fixture.decision,
     record: fixture.record,
@@ -673,7 +761,9 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
     expectedOccurrenceIds:
       fixture.record.restoration_occurrence_ids,
     publicSurfaceFingerprint:
-      fixture.responsiveEvidence.publicSurfaceFingerprint
+      fixture.responsiveEvidence.publicSurfaceFingerprint,
+    knownRecordIds,
+    now: Date.parse("2026-07-26T23:59:59Z")
   });
   assert.equal(valid, true);
 
@@ -702,8 +792,103 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
       expectedOccurrenceIds:
         fixture.record.restoration_occurrence_ids,
       publicSurfaceFingerprint:
-        fixture.responsiveEvidence.publicSurfaceFingerprint
+        fixture.responsiveEvidence.publicSurfaceFingerprint,
+      knownRecordIds,
+      now: Date.parse("2026-07-26T23:59:59Z")
     }),
+    false
+  );
+});
+
+test("the full Wiki schema rejects contradictory restoration semantics", () => {
+  const fixture = restorationFixture();
+  assert.equal(wikiRecordSchema.safeParse(fixture.record).success, true);
+
+  const contradictory = {
+    ...fixture.record,
+    chosen_course: "Do not restore this photograph.",
+    anti_claims: [
+      "Jamie Burkart directed the team not to restore this photograph."
+    ]
+  };
+  assert.equal(wikiRecordSchema.safeParse(contradictory).success, false);
+
+  const result = evaluateRestoration({
+    recordMutation: {
+      chosen_course: contradictory.chosen_course,
+      anti_claims: contradictory.anti_claims
+    },
+    recordTextMutation: [
+      "# Do not restore",
+      "",
+      fixture.record.restoration_approval_statement,
+      "",
+      "Jamie Burkart did not approve publication and directed the team not to restore this photograph."
+    ].join("\n")
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("always-applicable restoration gates cannot be waived", () => {
+  const fixture = restorationFixture();
+  const allNotApplicable = fixture.record.restoration_gate_reviews.map(
+    (review) => ({
+      ...review,
+      status: "not-applicable",
+      evidence_ids: []
+    })
+  );
+  const result = evaluateRestoration({
+    recordMutation: {
+      restoration_gate_reviews: allNotApplicable
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+  assert.equal(
+    wikiRecordSchema.safeParse({
+      ...fixture.record,
+      restoration_gate_reviews: allNotApplicable
+    }).success,
+    false
+  );
+});
+
+test("future-dated restoration review fails closed", () => {
+  const fixture = restorationFixture();
+  const future = "2099-01-01T12:00:00Z";
+  const result = evaluateRestoration({
+    decisionMutation: { decidedAt: future },
+    recordMutation: {
+      last_reviewed: "2099-01-01",
+      restoration_decided_at: future,
+      restoration_gate_reviews:
+        fixture.record.restoration_gate_reviews.map((review) => ({
+          ...review,
+          reviewed_at: future
+        }))
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("stale restored occurrence evidence fails closed", () => {
+  const result = evaluateRestoration({
+    recordMutation: {
+      restoration_public_surface_fingerprint: "0".repeat(64),
+      restoration_occurrence_ids: ["placement.stale.example"]
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
     false
   );
 });

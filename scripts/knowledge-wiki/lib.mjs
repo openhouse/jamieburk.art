@@ -198,13 +198,74 @@ const restorationGateNames = [
   "indexing"
 ];
 
+const restorationGatePolicy = {
+  creator: {
+    authority: "creator-or-rights-holder",
+    statuses: ["cleared"]
+  },
+  rights: {
+    authority: "creator-or-rights-holder",
+    statuses: ["cleared"]
+  },
+  consent: {
+    authority: "represented-person-or-consent-authority",
+    statuses: ["cleared", "not-applicable"]
+  },
+  "exact-credit": {
+    authority: "creator-and-editorial-owner",
+    statuses: ["cleared"]
+  },
+  crop: {
+    authority: "creator-and-editorial-owner",
+    statuses: ["cleared"]
+  },
+  caption: {
+    authority: "creator-and-editorial-owner",
+    statuses: ["cleared"]
+  },
+  "represented-person": {
+    authority: "represented-person",
+    statuses: ["cleared", "not-applicable"]
+  },
+  editorial: {
+    authority: "portfolio-owner",
+    statuses: ["cleared"]
+  },
+  production: {
+    authority: "production-owner",
+    statuses: ["open-separated-gate"]
+  },
+  deployment: {
+    authority: "deployment-owner",
+    statuses: ["open-separated-gate"]
+  },
+  indexing: {
+    authority: "indexing-owner",
+    statuses: ["open-separated-gate"]
+  }
+};
+
 const restorationGateReviewSchema = z.object({
   gate: z.enum(restorationGateNames),
-  status: z.enum(["cleared", "not-applicable"]),
+  status: z.enum(["cleared", "not-applicable", "open-separated-gate"]),
+  authority: z.enum([
+    "creator-or-rights-holder",
+    "represented-person-or-consent-authority",
+    "creator-and-editorial-owner",
+    "represented-person",
+    "portfolio-owner",
+    "production-owner",
+    "deployment-owner",
+    "indexing-owner"
+  ]),
   reviewed_by: z.string().min(1),
   reviewed_at: z
     .string()
-    .refine((value) => !Number.isNaN(Date.parse(value)), "use an ISO date or date-time")
+    .refine(
+      (value) => !Number.isNaN(Date.parse(value)),
+      "use an ISO date or date-time"
+    ),
+  evidence_ids: z.array(stableIdSchema).min(1)
 });
 
 const opportunityRequirementSchema = z.object({
@@ -289,6 +350,13 @@ export const wikiRecordSchema = z
       .optional(),
     restoration_photo_id: stableIdSchema.optional(),
     restoration_withdrawal_plan_id: stableIdSchema.optional(),
+    restoration_withdrawal_implemented_at: z
+      .string()
+      .refine(
+        (value) => !Number.isNaN(Date.parse(value)),
+        "use an ISO date or date-time"
+      )
+      .optional(),
     restoration_decided_at: z
       .string()
       .refine(
@@ -298,6 +366,7 @@ export const wikiRecordSchema = z
       .optional(),
     restoration_approved_by: z.string().min(1).optional(),
     restoration_human_reviewed: z.boolean().optional(),
+    restoration_approval_statement: z.string().min(1).optional(),
     restoration_gate_reviews: z
       .array(restorationGateReviewSchema)
       .optional(),
@@ -461,8 +530,10 @@ export const wikiRecordSchema = z
       for (const field of [
         "restoration_photo_id",
         "restoration_withdrawal_plan_id",
+        "restoration_withdrawal_implemented_at",
         "restoration_decided_at",
         "restoration_approved_by",
+        "restoration_approval_statement",
         "restoration_public_surface_fingerprint"
       ]) {
         if (!record[field]) {
@@ -497,11 +568,63 @@ export const wikiRecordSchema = z
           message: "photo restoration requires one review for every governed gate"
         });
       }
+      for (const review of record.restoration_gate_reviews ?? []) {
+        const policy = restorationGatePolicy[review.gate];
+        if (
+          !policy?.statuses.includes(review.status) ||
+          review.authority !== policy.authority
+        ) {
+          context.addIssue({
+            code: "custom",
+            path: ["restoration_gate_reviews", review.gate],
+            message: "photo restoration gate status and authority do not match policy"
+          });
+        }
+      }
       if ((record.restoration_occurrence_ids ?? []).length === 0) {
         context.addIssue({
           code: "custom",
           path: ["restoration_occurrence_ids"],
           message: "photo restoration requires exact occurrence IDs"
+        });
+      }
+      const decidedAt = Date.parse(record.restoration_decided_at ?? "");
+      const implementedAt = Date.parse(
+        record.restoration_withdrawal_implemented_at ?? ""
+      );
+      if (
+        Number.isNaN(decidedAt) ||
+        Number.isNaN(implementedAt) ||
+        decidedAt <= implementedAt ||
+        decidedAt > Date.now()
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["restoration_decided_at"],
+          message: "photo restoration must postdate withdrawal and cannot be future-dated"
+        });
+      }
+      const chosenOptions = record.options_considered.filter(
+        (option) => option.disposition === "chosen"
+      );
+      const expectedChoice =
+        `Restore ${record.restoration_photo_id} after implemented withdrawal ` +
+        `${record.restoration_withdrawal_plan_id} as a new working-review projection.`;
+      const contradictoryRestoration =
+        /(?:\bdo not restore\b|\bnot to restore\b|\brestoration (?:is|was) (?:not approved|rejected|denied)\b)/i;
+      if (
+        chosenOptions.length !== 1 ||
+        chosenOptions[0].option !== expectedChoice ||
+        chosenOptions[0].evidence_state !== "documented" ||
+        contradictoryRestoration.test(record.chosen_course ?? "") ||
+        record.anti_claims.some((item) =>
+          contradictoryRestoration.test(item)
+        )
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["chosen_course"],
+          message: "photo restoration decision semantics contradict or fail to express the chosen restoration"
         });
       }
     }

@@ -93,8 +93,10 @@ withdraw, restore, deploy, or index a photograph.
 An implemented withdrawal remains authoritative across branch history. A later
 active projection requires a later canonical restoration decision that names
 the photo and prior withdrawal, contains Jamie's completed human review,
-accounts for every applicable authority gate, and binds regenerated occurrence
-evidence. Manifest fields alone cannot authorize restoration; checking out
+accounts for every authority gate with gate-specific evidence, and binds
+regenerated occurrence evidence. Always-applicable gates cannot be waived,
+open production gates remain open, and contradictory or future-dated records
+fail closed. Manifest fields alone cannot authorize restoration; checking out
 older content is never a publication decision.
 
 ## Environment
