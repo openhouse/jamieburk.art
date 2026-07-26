@@ -1,0 +1,97 @@
+{
+  "suite_id": "living-photographic-knowledge-loop",
+  "version": 1,
+  "status": "IMPLEMENTING-PASS",
+  "records": [
+    {
+      "id": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md"
+    },
+    {
+      "id": "correction.photo.east-river.clearance-scope.2026-07",
+      "kind": "correction",
+      "path": "docs/knowledge-bank/corrections/photography/east-river-clearance-scope-2026-07.md"
+    },
+    {
+      "id": "index.photo-set.east-river-canoe.2022",
+      "kind": "index",
+      "path": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md"
+    },
+    {
+      "id": "source.photo-metadata.east-river.2022.public-safe",
+      "kind": "source",
+      "path": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md"
+    },
+    {
+      "id": "source.permission.elana-gordon.east-river.2026-07",
+      "kind": "source",
+      "path": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md"
+    },
+    {
+      "id": "evaluation.curatorial.layout-d.home-east-river.v1",
+      "kind": "evaluation",
+      "path": "docs/knowledge-bank/evaluations/curatorial/layout-d-home-east-river-v1.md"
+    },
+    {
+      "id": "decision.photo.layout-d.home-east-river.v1",
+      "kind": "decision",
+      "path": "docs/knowledge-bank/decisions/photography/layout-d-home-east-river-v1.md"
+    },
+    {
+      "id": "decision.photo.layout-d.resume.protected-absence",
+      "kind": "decision",
+      "path": "docs/knowledge-bank/decisions/photography/layout-d-resume-protected-absence.md"
+    },
+    {
+      "id": "projection.photo.layout-d.home.east-river",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md"
+    },
+    {
+      "id": "projection.photo.layout-d.resume.protected-absence",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md"
+    },
+    {
+      "id": "edition.layout-d.photo-knowledge.2026-07",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md"
+    },
+    {
+      "id": "source.recollection.jamie-canoe-commuting.2026-07",
+      "kind": "source",
+      "path": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md"
+    },
+    {
+      "id": "research-inquiry.photo.documented-canoe-bike-journeys",
+      "kind": "research-inquiry",
+      "path": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md"
+    }
+  ],
+  "checks": {
+    "records_are_schema_valid_and_complete": true,
+    "derivative_is_exact_and_metadata_minimized": true,
+    "statement_provenance_and_creator_correction_are_valid": true,
+    "permission_capsule_is_bounded": true,
+    "caption_and_credit_assertions_resolve": true,
+    "application_manifest_resolves_to_wiki": true,
+    "occurrence_is_destination_bound_and_reversible": true,
+    "recollection_remains_dated_and_non_projecting": true,
+    "protected_absence_is_governed": true,
+    "curatorial_process_preserves_artistic_authority": true,
+    "portfolio_edition_is_complete": true,
+    "feedback_correction_is_append_only_and_fail_closed": true,
+    "private_material_is_absent": true,
+    "rfc_terminology_is_canonical": true,
+    "human_gates_remain_open": true
+  },
+  "manual_gates": {
+    "private_source_binding_independently_verified": "open",
+    "private_permission_evidence_reinspected": "open",
+    "jamie_final_crop_and_production_approval": "open",
+    "staging_observation": "open",
+    "indexing_approval": "open"
+  },
+  "public_boundary": "No private paths, source identifiers, raw correspondence, People associations, or exact coordinates are included."
+}

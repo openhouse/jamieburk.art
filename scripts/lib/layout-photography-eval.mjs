@@ -229,7 +229,9 @@ export function evaluateLayoutPhotography(options = {}) {
     photographyData.includes("A displayed image does not by itself establish") &&
     photographyData.includes("sole authorship") &&
     photographyData.includes("permission for reuse outside this portfolio") &&
-    hero.includes("photoDisplayBoundary") &&
+    photographyData.includes("The photograph documents a setting") &&
+    photographyData.includes("does not by itself prove authorship") &&
+    hero.includes("photoHeroBoundary") &&
     caseStudy.includes("photoDisplayBoundary") &&
     about.includes("photoDisplayBoundary") &&
     home.includes("photoDisplayBoundary") &&

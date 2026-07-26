@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { photographs, photoDisplayBoundary } from "@/data/photography";
+import type { CSSProperties } from "react";
+import { photographs, photoHeroBoundary } from "@/data/photography";
 
 export function Hero() {
   const image = photographs.eastRiver;
@@ -14,6 +15,12 @@ export function Hero() {
         priority
         sizes="100vw"
         src={image.src}
+        style={
+          {
+            "--jb-photo-position": image.objectPosition,
+            "--jb-photo-mobile-position": image.mobileObjectPosition
+          } as CSSProperties
+        }
       />
       <div aria-hidden="true" className="jb-photo-hero-scrim" />
       <div className="jb-frame jb-photo-hero-content">
@@ -57,7 +64,7 @@ export function Hero() {
             systems / Public-facing tools
           </p>
           <p className="jb-photo-hero-context">
-            {image.caption} {image.credit}. {photoDisplayBoundary}
+            {image.caption} {image.credit}. {photoHeroBoundary}
           </p>
         </div>
       </div>

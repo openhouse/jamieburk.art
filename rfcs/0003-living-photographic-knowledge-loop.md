@@ -30,6 +30,12 @@ superseded_by: null
 > authorized implementation of RFC 0003 on July 26, 2026; the document is
 > therefore in `implementing` stage.
 >
+> The accepted draft studied Layout C as its first complete example. The active
+> implementation begins from frozen `features/layout-D` and uses Layout D IDs,
+> paths, crops, records, and edition names. Later Layout C references are
+> preserved as design history or illustrative examples, not active canonical
+> implementation coordinates.
+>
 > Draft design history refers to an RFC 0002 concerning lifelong photo-archive
 > selection and publication. It is not yet canonical in this branch. RFC 0003
 > therefore restates and enforces the necessary private-archive, selection,
@@ -94,11 +100,11 @@ correct attribution, identify related frames, or open new research inquiries.
 Those returns may inform later curatorial work without automatically changing
 the current site.
 
-The first complete canary will be the 2022 East River photograph currently used
-as the Layout C homepage hero. The first iteration will preserve its current
-composition, add the newly confirmed photographer credit to Elana Gordon,
-record the permission scope privately and safely, create a first-class Wiki
-asset record and placement record, and record Jamie's canoe-commuting
+The first complete canary is the 2022 East River photograph now used as the
+Layout D homepage hero. The first iteration preserves the composition's
+purpose, adds the newly confirmed photographer credit to Elana Gordon, records
+the reported permission scope privately and safely, creates a first-class Wiki
+asset record and placement record, and records Jamie's canoe-commuting
 recollection as a distinct dated source.
 
 The governing principle is:
@@ -899,13 +905,13 @@ docs/knowledge-bank/
 │       └── east-river-canoe-2022.md
 ├── evaluations/
 │   └── curatorial/
-│       └── layout-c-home-east-river-v1.md
+│       └── layout-d-home-east-river-v1.md
 ├── decisions/
 │   └── photography/
-│       └── layout-c-home-east-river-v1.md
+│       └── layout-d-home-east-river-v1.md
 ├── projections/
 │   └── photography/
-│       └── layout-c-home-east-river.md
+│       └── layout-d-home-east-river.md
 ├── sources/
 │   ├── photo-metadata/
 │   │   └── east-river-2022-public-safe.md
@@ -1031,14 +1037,14 @@ review_by: 2027-01-24
 canonical_path: docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md
 summary: >
   Public-safe record for a 2022 East River photograph of Jamie Burkart,
-  made by Elana Gordon and used as the Layout C homepage hero.
+  made by Elana Gordon and used as the Layout D homepage hero.
 
 private_source_binding:
   provider: photo-fieldwork
   opaque_id: pfwpub_REPLACE_WITH_PRIVATE_GENERATED_ID
 
 public_derivatives:
-  - id: derivative.photo.east-river.layout-c.v1
+  - id: derivative.photo.east-river.layout-d.v1
     path: apps/www/public/images/field-notes/jamie-east-river.webp
     media_type: image/webp
     width: 1280
@@ -1075,7 +1081,7 @@ statements:
     confidence: high
     references:
       - source.photo-metadata.east-river.2022.public-safe
-      - source.visual-review.east-river.layout-c
+      - source.visual-review.east-river.layout-d
 
   - id: statement.photo.east-river.custody.v1
     property: archive_custody
@@ -1102,9 +1108,9 @@ relations:
     context: One of several photographs from the same outing.
 
   - type: projected_to
-    target: projection.photo.layout-c.home.east-river
-    href: ../../projections/photography/layout-c-home-east-river.md
-    context: Homepage hero placement in Layout C.
+    target: projection.photo.layout-d.home.east-river
+    href: ../../projections/photography/layout-d-home-east-river.md
+    context: Homepage hero placement in Layout D.
 
   - type: resulted_in
     target: source.recollection.jamie-canoe-commuting.2026-07
@@ -1240,9 +1246,9 @@ last_reviewed: 2026-07-24
 canonical_path: docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md
 summary: >
   Elana Gordon confirmed that she made the East River photographs shared in a
-  private July 2026 exchange and granted Jamie permission to use the shared
-  photographs on his portfolio site. Elana said credit was optional; Jamie
-  elected to credit her.
+  Jamie reports that Elana Gordon confirmed making the East River photographs
+  in a private July 2026 exchange and granted their use on his portfolio site.
+  Elana said credit was optional; Jamie elected to credit her.
 
 private_evidence:
   system: source-vault
@@ -1250,7 +1256,7 @@ private_evidence:
 
 permission:
   holder: person.elana-gordon
-  status: granted
+  status: reported-granted
   scope:
     - portfolio-site-use
     - photographs-shared-in-the-referenced-exchange
@@ -1575,14 +1581,15 @@ A curatorial proposal is stored as an `evaluation` record.
 
 ```yaml
 ---
-id: evaluation.curatorial.layout-c.home-east-river.v1
-title: Layout C homepage East River curatorial proposal
+id: evaluation.curatorial.layout-d.home-east-river.v1
+title: Layout D homepage East River curatorial proposal
 kind: evaluation
 evaluation_type: curatorial-proposal
 status: maintained
 visibility: public-safe
 sensitivity: low
-candidate_commit: fea303e54c6b5fae36caee872a2a7450501f9e11
+source_parent_commit: REPLACE_WITH_FIRST_AUTHORED_IMPLEMENTATION_COMMIT
+candidate_identity: governed-professor-and-composite-fingerprints
 created_at: 2026-07-23
 panel:
   id: portfolio-photography-artists-v1
@@ -1673,17 +1680,17 @@ Example:
 
 ```yaml
 ---
-id: projection.photo.layout-c.home.east-river
-title: Layout C homepage East River occurrence
+id: projection.photo.layout-d.home.east-river
+title: Layout D homepage East River occurrence
 kind: projection
 projection_type: photo-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
 
-portfolio_edition: edition.layout-c.2026-07
+portfolio_edition: edition.layout-d.photo-knowledge.2026-07
 asset: asset.photo.east-river-manhattan-bridge.2022.001
-derivative: derivative.photo.east-river.layout-c.v1
+derivative: derivative.photo.east-river.layout-d.v1
 route: /
 component: Hero
 purpose:
@@ -1698,7 +1705,7 @@ sequence:
 
 crop:
   desktop: 50% 50%
-  mobile: 73% 50%
+  mobile: 70% 50%
 
 alt_text: >
   Jamie Burkart in a life vest holding a canoe paddle on the East River
@@ -1719,7 +1726,7 @@ credit:
 permission_source: source.permission.elana-gordon.east-river.2026-07
 
 approval:
-  public_git: approved
+  public_git: jamie-authorized-branch-review
   staging: approved
   production: open
   indexing: open
@@ -1739,19 +1746,20 @@ compositions, for example:
 
 ```yaml
 ---
-id: edition.layout-c.2026-07
-title: Layout C photographic portfolio edition
+id: edition.layout-d.photo-knowledge.2026-07
+title: Layout D photographic portfolio edition
 kind: projection
 projection_type: portfolio-edition
-candidate_commit: fea303e54c6b5fae36caee872a2a7450501f9e11
+source_parent_commit: REPLACE_WITH_FIRST_AUTHORED_IMPLEMENTATION_COMMIT
+candidate_identity: governed-professor-and-composite-fingerprints
 status: staging
 purpose:
   - hiring-orientation
   - personal-presence
   - editorial-coherence
 occurrences:
-  - projection.photo.layout-c.home.east-river
-  - projection.photo.layout-c.about.raft-riverboat
+  - projection.photo.layout-d.home.east-river
+  - projection.photo.layout-d.resume.protected-absence
 human_gates:
   - Jamie production approval
   - indexing approval
@@ -1874,7 +1882,7 @@ visibility: internal
 sensitivity: moderate
 author: person.jamie-burkart
 recorded_at: 2026-07-24
-prompted_by: projection.photo.layout-c.home.east-river
+prompted_by: projection.photo.layout-d.home.east-river
 
 time_scope:
   value: recurring-practice
@@ -1887,7 +1895,7 @@ aliases:
   - cannuting
 
 summary: >
-  Seeing the Layout C East River photograph prompted Jamie to recall a recurring
+  Seeing the Layout D East River photograph prompted Jamie to recall a recurring
   practice of transporting a canoe by bicycle using a handmade trailer and
   using the coupled bicycle, paddle, canoe, and trailer as a lightweight
   participatory land–water travel system.
@@ -2246,7 +2254,7 @@ Suggested configuration:
 
 ```json
 {
-  "runId": "layout-c-home-east-river-v2",
+  "runId": "layout-d-home-east-river-v2",
   "panelContextPaths": [
     "evals/curatorial-perspectives/ingeborg-gerdes.md",
     "evals/curatorial-perspectives/margaret-morse.md",
@@ -2268,7 +2276,7 @@ Suggested configuration:
     "/about",
     "/work/technical-operations"
   ],
-  "outputPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v2.md"
+  "outputPath": "docs/knowledge-bank/evaluations/curatorial/layout-d-home-east-river-v2.md"
 }
 ```
 
@@ -2421,12 +2429,12 @@ The first implementation is deliberately narrow.
 
 From the current record:
 
-- a public derivative already exists in Layout C;
+- a public derivative originated in Layout C and is used by this Layout D canary;
 - the public place label is East River beneath the Manhattan Bridge;
 - capture year is 2022;
 - archive custody is Jamie's photo archive;
 - Elana Gordon confirmed creator attribution;
-- Elana granted permission for the portfolio use discussed;
+- Jamie reports that Elana granted permission for the portfolio use discussed;
 - Jamie chose to credit her;
 - several related frames exist.
 
@@ -2478,7 +2486,7 @@ The canary passes when:
 [ ] raw messages remain outside public Git
 [ ] the public credit is corrected
 [ ] date and place claims have declared bases and precision
-[ ] Layout C still works at required viewports
+[ ] Layout D still works at required viewports
 [ ] the placement has staging, production, and indexing states
 [ ] the recollection is recorded without automatically expanding the homepage
 [ ] revocation and rollback are tested
@@ -2903,7 +2911,7 @@ No step automatically advances the next human gate.
 - Create the public-safe permission capsule.
 - Create the asset, set, evaluation, decision, projection, recollection, and
   inquiry records.
-- Add `wikiId` and placement binding to the existing Layout C manifest.
+- Add `wikiId` and placement binding to the existing Layout D manifest.
 - Correct the public creator credit.
 - Add validation and rollback tests.
 - Keep production and indexing open.
@@ -2912,8 +2920,8 @@ No step automatically advances the next human gate.
 
 Apply the architecture to:
 
-- the other three Layout C photographs;
-- the nine Layout E photographs;
+- the other seven Layout D photographs;
+- the Layout E photographs;
 - current public artifacts that function as images.
 
 For each, assign:
@@ -3327,8 +3335,9 @@ remain detached from a durable model.
   distinct journey?
 - Which parts of the canoe-commuting recollection belong in a future public
   essay, About page, project record, or nowhere public?
-- Should Layout C remain the canonical canary after attribution correction, or
-  should Layout E provide a second canary for multi-image sequence governance?
+- Should Layout D remain the canonical canary after attribution correction, or
+  should another edition provide a second canary for multi-image sequence
+  governance?
 - Should the draft RFC 0002 lineage be made canonical, consolidated into RFC
   0003, or preserved only as design history?
 - What observation period and number of completed loops are sufficient for the

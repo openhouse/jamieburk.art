@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `860b2db944ab16d764a782a8ebc5083e356bae08`
-**Generation time:** 2026-07-26T11:21:23-04:00
-**Source fingerprint:** `8c01d29504bdbc08ef4edc64b7e4ee797a1eea7ced2d4ec0478d9c2289050340`
+**Source commit:** `84fbf9ce0a748534568441f890af1b3e052833c2`
+**Generation time:** 2026-07-26T14:54:56-04:00
+**Source fingerprint:** `56bd77afa590b441a12be21a81fad663446a8ffd3ce315166f11eaebc8a50348`
 
 ## application
 
@@ -12,6 +12,7 @@
 ## asset
 
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
+- [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) - `asset.photo.east-river-manhattan-bridge.2022.001`
 
 ## capability
 
@@ -29,6 +30,7 @@
 ## correction
 
 - [CallNYC chronology correction](../corrections/callnyc-years-2026.md) - `correction.callnyc-years.2026`
+- [East River clearance-scope correction](../corrections/photography/east-river-clearance-scope-2026-07.md) - `correction.photo.east-river.clearance-scope.2026-07`
 
 ## decision
 
@@ -37,9 +39,12 @@
 - [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
+- [Select East River photograph for the Layout D homepage canary](../decisions/photography/layout-d-home-east-river-v1.md) - `decision.photo.layout-d.home-east-river.v1`
+- [Keep the Layout D resume route photograph-free](../decisions/photography/layout-d-resume-protected-absence.md) - `decision.photo.layout-d.resume.protected-absence`
 
 ## evaluation
 
+- [Layout D homepage East River curatorial proposal](../evaluations/curatorial/layout-d-home-east-river-v1.md) - `evaluation.curatorial.layout-d.home-east-river.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
@@ -67,6 +72,7 @@
 - [Role, Collective Authorship, and Protected Absence](../indexes/role-collective-authorship-and-protected-absence.md) - `index.knowledge-wiki.role-authorship-protected-absence`
 - [Scenes and Places of Work](../indexes/scenes-and-places-of-work.md) - `index.knowledge-wiki.scenes-and-places-of-work`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
+- [East River canoe outing, 2022](../indexes/photo-sets/east-river-canoe-2022.md) - `index.photo-set.east-river-canoe.2022`
 
 ## method
 
@@ -131,12 +137,16 @@
 
 ## projection
 
+- [Layout D photographic portfolio edition](../projections/photography/layout-d-portfolio-edition.md) - `edition.layout-d.photo-knowledge.2026-07`
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Layout D homepage East River occurrence](../projections/photography/layout-d-home-east-river.md) - `projection.photo.layout-d.home.east-river`
+- [Layout D resume protected absence](../projections/photography/layout-d-resume-protected-absence.md) - `projection.photo.layout-d.resume.protected-absence`
 
 ## research-inquiry
 
+- [Documented bicycle-canoe journeys](../research-inquiries/documented-canoe-bike-journeys.md) - `research-inquiry.photo.documented-canoe-bike-journeys`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
 ## research-run
@@ -172,7 +182,10 @@
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
 - [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
+- [Elana Gordon permission for East River portfolio photographs](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
+- [Public-safe East River derivative and metadata review](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
+- [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`

@@ -157,7 +157,7 @@ h2 {
 
 .jb-photo-hero-media {
   object-fit: cover;
-  object-position: 50% 46%;
+  object-position: var(--jb-photo-position, 50% 46%);
   z-index: -2;
 }
 
@@ -279,7 +279,10 @@ h2 {
   }
 
   .jb-photo-hero-media {
-    object-position: 42% 50%;
+    object-position: var(
+      --jb-photo-mobile-position,
+      var(--jb-photo-position, 42% 50%)
+    );
   }
 
   .jb-photo-hero-scrim {

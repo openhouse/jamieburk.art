@@ -17,6 +17,7 @@ const recordSchema = z
     title: z.string().min(1),
     kind: z.enum([
       "asset",
+      "correction",
       "index",
       "source",
       "evaluation",
@@ -197,6 +198,10 @@ export function evaluatePhotoKnowledge(options = {}) {
     records,
     "decision.photo.layout-d.resume.protected-absence"
   );
+  const clearanceCorrection = recordById(
+    records,
+    suite.clearance_correction_id
+  );
 
   const recordsAreSchemaValidAndComplete =
     records.every((record) => !record.error && record.data) &&
@@ -259,11 +264,14 @@ export function evaluatePhotoKnowledge(options = {}) {
     permission?.kind === "source" &&
     permission?.source_kind === "private-permission-summary" &&
     permission?.visibility === "summary-only" &&
-    permission?.permission?.status === "granted" &&
+    permission?.permission?.status === "reported-granted" &&
     permission?.permission?.scope?.includes("portfolio-site-use") &&
     permission?.permission?.future_unrelated_uses === "not-granted" &&
     permission?.private_evidence?.reinspection_state ===
       "human-review-required-before-production" &&
+    asset?.rights_state === "permission-needed" &&
+    asset?.consent_state === "review-needed" &&
+    asset?.public_display_status === "hold" &&
     !privatePattern.test(JSON.stringify(permission)) &&
     !/@/.test(permission?.summary ?? "");
 
@@ -285,6 +293,7 @@ export function evaluatePhotoKnowledge(options = {}) {
   const photographyData =
     source("apps/www/src/data/photography.ts") ?? "";
   const hero = source("apps/www/src/components/Hero.tsx") ?? "";
+  const globals = source("apps/www/src/app/globals.css") ?? "";
   const home = source("apps/www/src/app/page.tsx") ?? "";
   const resume = source("apps/www/src/app/resume/page.tsx") ?? "";
   const applicationManifestResolvesToWiki =
@@ -297,7 +306,17 @@ export function evaluatePhotoKnowledge(options = {}) {
     ) &&
     photographyData.includes(`src: "${derivative?.path?.replace("apps/www/public", "")}"`) &&
     photographyData.includes("Photograph by Elana Gordon") &&
-    hero.includes("photographs.eastRiver");
+    photographyData.includes('objectPosition: "50% 50%"') &&
+    photographyData.includes('mobileObjectPosition: "70% 50%"') &&
+    hero.includes("photographs.eastRiver") &&
+    hero.includes('"--jb-photo-position": image.objectPosition') &&
+    hero.includes(
+      '"--jb-photo-mobile-position": image.mobileObjectPosition'
+    ) &&
+    globals.includes(
+      "object-position: var(--jb-photo-position, 50% 46%)"
+    ) &&
+    globals.includes("--jb-photo-mobile-position");
 
   const occurrenceIsDestinationBoundAndReversible =
     occurrence?.asset === suite.canary_asset_id &&
@@ -305,7 +324,10 @@ export function evaluatePhotoKnowledge(options = {}) {
     occurrence?.portfolio_edition === suite.portfolio_edition_id &&
     occurrence?.route === "/" &&
     occurrence?.component === "Hero" &&
-    occurrence?.approval?.public_git === "approved" &&
+    occurrence?.crop?.desktop === "50% 50%" &&
+    occurrence?.crop?.mobile === "70% 50%" &&
+    occurrence?.approval?.public_git ===
+      "jamie-authorized-branch-review" &&
     occurrence?.approval?.staging === "approved" &&
     occurrence?.approval?.production === "open" &&
     occurrence?.approval?.indexing === "open" &&
@@ -352,19 +374,45 @@ export function evaluatePhotoKnowledge(options = {}) {
       "An aggregate score, vote, or RCV selected or published the image."
     );
 
-  const candidateCommit = evaluation?.candidate_commit;
+  const sourceParentCommit = evaluation?.source_parent_commit;
   const portfolioEditionIsComplete =
     edition?.projection_type === "portfolio-edition" &&
     edition?.occurrences?.includes(suite.canary_occurrence_id) &&
     edition?.occurrences?.includes(suite.protected_absence_id) &&
-    edition?.candidate_commit === candidateCommit &&
-    /^[0-9a-f]{40}$/.test(candidateCommit ?? "") &&
+    edition?.source_parent_commit === sourceParentCommit &&
+    /^[0-9a-f]{40}$/.test(sourceParentCommit ?? "") &&
+    edition?.candidate_identity ===
+      "governed-professor-and-composite-fingerprints" &&
+    evaluation?.candidate_identity ===
+      "governed-professor-and-composite-fingerprints" &&
     Array.isArray(edition?.human_gates) &&
     edition.human_gates.length >= 4;
+
+  const feedbackCorrectionIsAppendOnlyAndFailClosed =
+    clearanceCorrection?.kind === "correction" &&
+    clearanceCorrection?.previous_text?.includes("rights_state: cleared") &&
+    clearanceCorrection?.replacement_text?.includes(
+      "rights_state: permission-needed"
+    ) &&
+    clearanceCorrection?.replacement_text?.includes(
+      "consent_state: review-needed"
+    ) &&
+    clearanceCorrection?.replacement_text?.includes(
+      "public_display_status: hold"
+    ) &&
+    clearanceCorrection?.human_review === "governed-open" &&
+    clearanceCorrection?.production_effect === "remains-on-hold" &&
+    clearanceCorrection?.affected_surfaces?.includes(
+      suite.canary_asset_id
+    ) &&
+    clearanceCorrection?.affected_surfaces?.includes(
+      suite.canary_occurrence_id
+    );
 
   const boundaryFiles = [
     ...suite.required_records,
     ...suite.required_guides,
+    "apps/www/src/app/globals.css",
     "apps/www/src/data/photography.ts",
     "apps/www/src/components/Hero.tsx",
     "rfcs/0003-living-photographic-knowledge-loop.md"
@@ -396,6 +444,10 @@ export function evaluatePhotoKnowledge(options = {}) {
     suite.thresholds?.implementing_does_not_imply_operational === true &&
     asset?.private_source_binding?.status ===
       "pending-independent-verification" &&
+    permission?.permission?.status === "reported-granted" &&
+    asset?.rights_state === "permission-needed" &&
+    asset?.consent_state === "review-needed" &&
+    asset?.public_display_status === "hold" &&
     occurrence?.approval?.production === "open" &&
     occurrence?.approval?.indexing === "open";
 
@@ -419,6 +471,8 @@ export function evaluatePhotoKnowledge(options = {}) {
     curatorial_process_preserves_artistic_authority:
       curatorialProcessPreservesArtisticAuthority,
     portfolio_edition_is_complete: portfolioEditionIsComplete,
+    feedback_correction_is_append_only_and_fail_closed:
+      feedbackCorrectionIsAppendOnlyAndFailClosed,
     private_material_is_absent: privateMaterialIsAbsent,
     rfc_terminology_is_canonical: rfcTerminologyIsCanonical,
     human_gates_remain_open: humanGatesRemainOpen
@@ -503,9 +557,9 @@ are intentionally excluded.
 Generated from public-safe permission and occurrence records. Do not edit by
 hand. This report is not a rights grant.
 
-| Occurrence | Creator | Permission scope | Public Git | Staging | Production | Indexing |
+| Occurrence | Creator | Permission state | Consent state | Public Git | Production | Indexing |
 | --- | --- | --- | --- | --- | --- | --- |
-| \`${suite.canary_occurrence_id}\` | Elana Gordon | ${permission?.permission?.scope?.join(", ") ?? "unknown"} | ${occurrence?.approval?.public_git ?? "unknown"} | ${occurrence?.approval?.staging ?? "unknown"} | ${occurrence?.approval?.production ?? "unknown"} | ${occurrence?.approval?.indexing ?? "unknown"} |
+| \`${suite.canary_occurrence_id}\` | Elana Gordon | ${permission?.permission?.status ?? "unknown"}; ${asset?.rights_state ?? "unknown"} | ${asset?.consent_state ?? "unknown"} | ${occurrence?.approval?.public_git ?? "unknown"} | ${occurrence?.approval?.production ?? "unknown"} | ${occurrence?.approval?.indexing ?? "unknown"} |
 
 Private evidence reinspection and private source-binding verification remain
 open human gates.
@@ -529,6 +583,7 @@ Changing the creator, permission, derivative, caption assertions, or protected
 state requires review of:
 
 - [East River asset](../assets/photographs/east-river-manhattan-bridge-2022.md)
+- [Clearance-scope correction](../corrections/photography/east-river-clearance-scope-2026-07.md)
 - [Permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md)
 - [Curatorial proposal](../evaluations/curatorial/layout-d-home-east-river-v1.md)
 - [Selection decision](../decisions/photography/layout-d-home-east-river-v1.md)

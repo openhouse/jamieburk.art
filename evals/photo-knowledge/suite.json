@@ -7,8 +7,10 @@
   "canary_occurrence_id": "projection.photo.layout-d.home.east-river",
   "portfolio_edition_id": "edition.layout-d.photo-knowledge.2026-07",
   "protected_absence_id": "projection.photo.layout-d.resume.protected-absence",
+  "clearance_correction_id": "correction.photo.east-river.clearance-scope.2026-07",
   "required_records": [
     "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+    "docs/knowledge-bank/corrections/photography/east-river-clearance-scope-2026-07.md",
     "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
     "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
     "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
@@ -50,6 +52,7 @@
     "protected_absence_is_governed",
     "curatorial_process_preserves_artistic_authority",
     "portfolio_edition_is_complete",
+    "feedback_correction_is_append_only_and_fail_closed",
     "private_material_is_absent",
     "rfc_terminology_is_canonical",
     "generated_reports_are_current",

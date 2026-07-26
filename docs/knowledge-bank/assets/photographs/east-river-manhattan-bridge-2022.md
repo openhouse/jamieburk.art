@@ -10,9 +10,9 @@ last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md
 summary: Public-safe record for a 2022 East River photograph of Jamie Burkart, made by Elana Gordon and used in the Layout D homepage hero.
-rights_state: cleared
-consent_state: cleared
-public_display_status: cleared
+rights_state: permission-needed
+consent_state: review-needed
+public_display_status: hold
 private_source_binding:
   provider: photo-fieldwork
   status: pending-independent-verification
@@ -78,6 +78,10 @@ anti_claims:
   - Permission for this portfolio use grants future unrestricted use.
 relations:
   - type: related_to
+    target: correction.photo.east-river.clearance-scope.2026-07
+    href: ../../corrections/photography/east-river-clearance-scope-2026-07.md
+    context: Preserves the independent-review correction from unscoped clearance labels to occurrence-specific states.
+  - type: related_to
     target: index.photo-set.east-river-canoe.2022
     href: ../../indexes/photo-sets/east-river-canoe-2022.md
     context: Public-safe member of a privately bounded related-frame set.
@@ -122,7 +126,8 @@ fact.
 
 ## Governance
 
-The public derivative and bounded permission summary are reviewable here. Raw
-permission correspondence, source identifiers, exact private coordinates,
-related private frames, and the unresolved private source binding remain
-outside public Git.
+The public derivative and bounded permission summary are reviewable here.
+Jamie's authorization covers this exact public-branch review occurrence; it is
+not production approval. Raw permission correspondence, source identifiers,
+exact private coordinates, related private frames, and the unresolved private
+source binding remain outside public Git.

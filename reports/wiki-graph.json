@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T11:21:23-04:00",
-  "sourceCommit": "860b2db944ab16d764a782a8ebc5083e356bae08",
-  "sourceFingerprint": "8c01d29504bdbc08ef4edc64b7e4ee797a1eea7ced2d4ec0478d9c2289050340",
+  "generatedAt": "2026-07-26T14:54:56-04:00",
+  "sourceCommit": "84fbf9ce0a748534568441f890af1b3e052833c2",
+  "sourceFingerprint": "56bd77afa590b441a12be21a81fad663446a8ffd3ce315166f11eaebc8a50348",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -30,6 +30,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "path": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "title": "East River beneath the Manhattan Bridge, 2022",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a 2022 East River photograph of Jamie Burkart, made by Elana Gordon and used in the Layout D homepage hero.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
     },
     {
       "id": "capability.civic-cultural-technical-translation",
@@ -136,6 +149,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "correction.photo.east-river.clearance-scope.2026-07",
+      "path": "docs/knowledge-bank/corrections/photography/east-river-clearance-scope-2026-07.md",
+      "title": "East River clearance-scope correction",
+      "kind": "correction",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Preserves the independent-review correction from global clearance labels to occurrence-specific reported-permission, represented-person-review, and production-hold states.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
       "id": "decision.callnyc.issue-pathways",
       "path": "docs/knowledge-bank/decisions/callnyc-issue-pathways.md",
       "title": "CallNYC issue pathways for public constituent-services data",
@@ -199,6 +225,58 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "decision.photo.layout-d.home-east-river.v1",
+      "path": "docs/knowledge-bank/decisions/photography/layout-d-home-east-river-v1.md",
+      "title": "Select East River photograph for the Layout D homepage canary",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded editorial decision to advance the East River photograph as the Layout D homepage hero for public-branch and staging review.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "decision.photo.layout-d.resume.protected-absence",
+      "path": "docs/knowledge-bank/decisions/photography/layout-d-resume-protected-absence.md",
+      "title": "Keep the Layout D resume route photograph-free",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Explicit no-photo decision preserving the resume route as a focused reading and download surface.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "edition.layout-d.photo-knowledge.2026-07",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "title": "Layout D photographic portfolio edition",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Dated public composition binding the East River homepage occurrence and the resume protected absence to one reviewable portfolio edition.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "evaluation.curatorial.layout-d.home-east-river.v1",
+      "path": "docs/knowledge-bank/evaluations/curatorial/layout-d-home-east-river-v1.md",
+      "title": "Layout D homepage East River curatorial proposal",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Blind and contextual review record for using the East River photograph in the Layout D homepage hero.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "evaluation.employment-context.coverage.2026-07-18",
@@ -478,6 +556,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.photo-set.east-river-canoe.2022",
+      "path": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+      "title": "East River canoe outing, 2022",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe set record for related East River photographs made during one canoe outing in 2022.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
       "id": "method.collective-credit-protected-absence",
       "path": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "title": "Collective credit and protected absence",
@@ -641,7 +732,7 @@
       "status": "draft",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Public-safe editorial record for the first bounded portfolio layout experiment using seven photographs from the verified private field.",
+      "summary": "Public-safe editorial record for the bounded Layout D experiment and its East River RFC 0003 canary, using eight metadata-minimized photographic derivatives.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-26"
@@ -1055,6 +1146,45 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "projection.photo.layout-d.home.east-river",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md",
+      "title": "Layout D homepage East River occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact staging occurrence binding the East River derivative, homepage route, hero component, crop, caption, credit, and open release gates.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.resume.protected-absence",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
+      "title": "Layout D resume protected absence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Portfolio-edition occurrence recording the intentional decision not to place a photograph on the resume route.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "research-inquiry.photo.documented-canoe-bike-journeys",
+      "path": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+      "title": "Documented bicycle-canoe journeys",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Bounded inquiry into distinct bicycle-canoe journey instances documented in authorized private archive material.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "research-inquiry.ucsc-installation-title",
       "path": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md",
       "title": "Resolve the 2006 New York installation title",
@@ -1432,6 +1562,32 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.permission.elana-gordon.east-river.2026-07",
+      "path": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "title": "Elana Gordon permission for East River portfolio photographs",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Jamie reports that Elana Gordon confirmed making the East River photographs shared in a private July 2026 exchange and granted portfolio-site use; raw correspondence remains private.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "source.photo-metadata.east-river.2022.public-safe",
+      "path": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
+      "title": "Public-safe East River derivative and metadata review",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "low",
+      "summary": "Public-safe review of the committed East River derivative, its established year and landmark-level place label, and archive custody.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
       "id": "source.politico.callnyc.2016-03-14",
       "path": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
       "title": "Website provides new information about council members' focus",
@@ -1443,6 +1599,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.recollection.jamie-canoe-commuting.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "title": "Jamie Burkart recollection of bicycle-canoe journeys",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Dated public-safe first-person recollection prompted by seeing the East River photograph in a portfolio composition.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
     },
     {
       "id": "source.resume.jamie-burkart.2026-06-11",
@@ -1542,6 +1711,38 @@
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
       "context": null
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.home.east-river",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-east-river.md",
+      "context": "Homepage hero occurrence in the Layout D portfolio edition."
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "related_to",
+      "to": "correction.photo.east-river.clearance-scope.2026-07",
+      "source": "frontmatter",
+      "href": "../../corrections/photography/east-river-clearance-scope-2026-07.md",
+      "context": "Preserves the independent-review correction from unscoped clearance labels to occurrence-specific states."
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "related_to",
+      "to": "index.photo-set.east-river-canoe.2022",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/east-river-canoe-2022.md",
+      "context": "Public-safe member of a privately bounded related-frame set."
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "related_to",
+      "to": "source.recollection.jamie-canoe-commuting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "context": "Encountering the composed image prompted a dated first-person recollection."
     },
     {
       "from": "capability.civic-cultural-technical-translation",
@@ -1838,6 +2039,22 @@
       "context": null
     },
     {
+      "from": "correction.photo.east-river.clearance-scope.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.east-river.clearance-scope.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.home.east-river",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-east-river.md",
+      "context": null
+    },
+    {
       "from": "decision.callnyc.issue-pathways",
       "type": "informed_by",
       "to": "research.interpretive-layer-source-return.2026-07-19",
@@ -1972,6 +2189,86 @@
       "source": "frontmatter",
       "href": "../sources/good-times-open-house-2006-06-28.md",
       "context": null
+    },
+    {
+      "from": "decision.photo.layout-d.home-east-river.v1",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.layout-d.home-east-river.v1",
+      "type": "related_to",
+      "to": "evaluation.curatorial.layout-d.home-east-river.v1",
+      "source": "frontmatter",
+      "href": "../../evaluations/curatorial/layout-d-home-east-river-v1.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.layout-d.home-east-river.v1",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.home.east-river",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.layout-d.resume.protected-absence",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.resume.protected-absence",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-resume-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "has_asset",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.home.east-river",
+      "source": "frontmatter",
+      "href": "layout-d-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.resume.protected-absence",
+      "source": "frontmatter",
+      "href": "layout-d-resume-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.layout-d.home-east-river.v1",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.layout-d.home-east-river.v1",
+      "type": "resulted_in",
+      "to": "decision.photo.layout-d.home-east-river.v1",
+      "source": "frontmatter",
+      "href": "../../decisions/photography/layout-d-home-east-river-v1.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.layout-d.home-east-river.v1",
+      "type": "uses_source",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": "Provides the bounded creator and permission result."
     },
     {
       "from": "evaluation.employment-context.coverage.2026-07-18",
@@ -3142,6 +3439,22 @@
       "context": null
     },
     {
+      "from": "index.photo-set.east-river-canoe.2022",
+      "type": "has_asset",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": "The only currently public member of the set."
+    },
+    {
+      "from": "index.photo-set.east-river-canoe.2022",
+      "type": "related_to",
+      "to": "source.recollection.jamie-canoe-commuting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "context": "Later recollection about a recurring bicycle-canoe practice."
+    },
+    {
       "from": "method.collective-credit-protected-absence",
       "type": "related_to",
       "to": "method.source-backed-team-memory",
@@ -3516,6 +3829,38 @@
       "source": "frontmatter",
       "href": "../indexes/scenes-and-places-of-work.md",
       "context": null
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": "RFC 0003 East River canary asset."
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
+      "to": "decision.photo.layout-d.resume.protected-absence",
+      "source": "frontmatter",
+      "href": "../../decisions/photography/layout-d-resume-protected-absence.md",
+      "context": "Explicit no-photo decision in the same portfolio edition."
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-portfolio-edition.md",
+      "context": "Dated occurrence set for the RFC 0003 implementation."
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
+      "to": "evaluation.curatorial.layout-d.home-east-river.v1",
+      "source": "frontmatter",
+      "href": "../../evaluations/curatorial/layout-d-home-east-river-v1.md",
+      "context": "Blind and contextual curatorial proposal for the canary occurrence."
     },
     {
       "from": "notebook.photography",
@@ -4642,6 +4987,70 @@
       "context": null
     },
     {
+      "from": "projection.photo.layout-d.home.east-river",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.east-river",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.east-river",
+      "type": "related_to",
+      "to": "source.recollection.jamie-canoe-commuting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.east-river",
+      "type": "uses_source",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.resume.protected-absence",
+      "type": "related_to",
+      "to": "decision.photo.layout-d.resume.protected-absence",
+      "source": "frontmatter",
+      "href": "../../decisions/photography/layout-d-resume-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.resume.protected-absence",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.photo.documented-canoe-bike-journeys",
+      "type": "informed_by",
+      "to": "source.recollection.jamie-canoe-commuting.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.photo.documented-canoe-bike-journeys",
+      "type": "related_to",
+      "to": "index.photo-set.east-river-canoe.2022",
+      "source": "frontmatter",
+      "href": "../indexes/photo-sets/east-river-canoe-2022.md",
+      "context": null
+    },
+    {
       "from": "research-inquiry.ucsc-installation-title",
       "type": "uses_source",
       "to": "source.ucsc.narrative-evaluations.2004-2006",
@@ -5178,6 +5587,22 @@
       "context": null
     },
     {
+      "from": "source.permission.elana-gordon.east-river.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": "Supports bounded creator attribution and portfolio-use permission."
+    },
+    {
+      "from": "source.photo-metadata.east-river.2022.public-safe",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
       "from": "source.politico.callnyc.2016-03-14",
       "type": "documents",
       "to": "project.callnyc",
@@ -5191,6 +5616,22 @@
       "to": "claim.callnyc.independent-follow-on",
       "source": "frontmatter",
       "href": "../claims/callnyc-independent-follow-on.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.jamie-canoe-commuting.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.jamie-canoe-commuting.2026-07",
+      "type": "related_to",
+      "to": "research-inquiry.photo.documented-canoe-bike-journeys",
+      "source": "frontmatter",
+      "href": "../../research-inquiries/documented-canoe-bike-journeys.md",
       "context": null
     },
     {
@@ -5735,6 +6176,15 @@
       "fragment": null,
       "line": 60,
       "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "toPath": "apps/www/public/images/field-notes/jamie-east-river.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
     },
     {
       "fromPath": "docs/knowledge-bank/capabilities/civic-cultural-and-technical-translation.md",
@@ -6547,6 +6997,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+      "from": "index.photo-set.east-river-canoe.2022",
+      "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/pilot.md",
       "from": "index.knowledge-wiki.pilot",
       "toPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
@@ -7039,6 +7498,96 @@
       "to": "notebook.photography.layout-study.d",
       "fragment": null,
       "line": 63,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/photography/README.md",
+      "to": null,
+      "fragment": null,
+      "line": 66,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "fragment": null,
+      "line": 72,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+      "to": "index.photo-set.east-river-canoe.2022",
+      "fragment": null,
+      "line": 73,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-d-home-east-river-v1.md",
+      "to": "evaluation.curatorial.layout-d.home-east-river.v1",
+      "fragment": null,
+      "line": 74,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-d-home-east-river-v1.md",
+      "to": "decision.photo.layout-d.home-east-river.v1",
+      "fragment": null,
+      "line": 75,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-d-resume-protected-absence.md",
+      "to": "decision.photo.layout-d.resume.protected-absence",
+      "fragment": null,
+      "line": 76,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md",
+      "to": "projection.photo.layout-d.home.east-river",
+      "fragment": null,
+      "line": 77,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
+      "to": "projection.photo.layout-d.resume.protected-absence",
+      "fragment": null,
+      "line": 78,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "fragment": null,
+      "line": 79,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+      "to": "research-inquiry.photo.documented-canoe-bike-journeys",
+      "fragment": null,
+      "line": 80,
       "kind": "link"
     },
     {

@@ -16,7 +16,7 @@ private_evidence:
   reinspection_state: human-review-required-before-production
 permission:
   holder: Elana Gordon
-  status: granted
+  status: reported-granted
   scope:
     - portfolio-site-use
     - photographs-shared-in-the-referenced-exchange
@@ -39,10 +39,13 @@ relations:
 
 # Elana Gordon Permission Summary
 
-Jamie supplied the bounded result through RFC 0003: Elana Gordon confirmed that
-she made the referenced East River photographs and granted their use on Jamie's
-portfolio site. Elana said credit was optional; Jamie chose to credit her.
+Jamie supplied the bounded result through RFC 0003: he reports that Elana
+Gordon confirmed making the referenced East River photographs and granted
+their use on Jamie's portfolio site. Elana said credit was optional; Jamie
+chose to credit her.
 
 This implementation did not reinspect or commit the raw private exchange.
 Private evidence reinspection remains a named production gate. The public
 record deliberately says no more than the granted scope supports.
+
+The machine-readable `reported-granted` state preserves that distinction.

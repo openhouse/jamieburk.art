@@ -1,24 +1,28 @@
 {
-  "evaluator": "Fictionalized Warren Sack recursive-social-systems lens; independent simulation, not Warren Sack's actual view or endorsement",
-  "reviewerId": "sack-layout-final-a",
+  "evaluator": "Fictionalized Warren Sack recursive-social-systems lens; no participation or endorsement",
+  "reviewerId": "sack-photo-final-a",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "0a404b5cbdf0aed6b18252ef59637a28dd5a33d0e4b660d76f35141c2c727e79",
+  "candidateSha256": "f717709536e14c1a4bec3a9b26a2bb62e4f9e338386d5a13538b92c7c8793b93",
   "score": 4,
   "pass": true,
   "evidence": [
-    "About states the recursive method in plain language one navigation step from the homepage and links to project evidence.",
-    "HJE reconstructs customer language and operating habits through an integrated storefront, real use, analytics-informed releases, reusable patterns, and continuing stewardship.",
-    "NYCAC and FairRent reconstruct listening, sources, actors, participation models, public use, running memory, and sustained follow-through.",
-    "WOWList reconstructs organizer vocabulary through a keyword-community model, publishing and calendar interfaces, documented use, and reusable distribution patterns.",
-    "Sunday Dinner and 196 reconstruct hospitality and artist needs through invitation, onboarding, configuration, recurring use, a needs-to-space revision, and continuity handoffs.",
-    "Responsive evidence covers 14 routes at four viewports with no reported accessibility, overflow, broken-image, or landmark failures."
+    "Recomputed the SHA-256 over all 57 candidateRelativePaths; it exactly matches the supplied candidate hash.",
+    "The 375px and 1440px homepage captures preserve Jamie's identity, role, proposition, primary actions, and a route to the method. About is one click from the homepage; it names the five-stage recursive sequence and links directly to project evidence.",
+    "The responsive matrix covers 14 routes at four viewports: 56 successful rows, zero axe violations, overflow elements, failed requests, broken images after scrolling, unlabeled images, or invalid homepage first-viewport results.",
+    "NYC Artist Coalition/FairRentNYC traces relationships among lived experience, meetings, sources, questions, and public actors; models them through ballots, source maps, and decision architecture; implements campaign and event interfaces; tests them through meetings, hearings, town halls, and actions; and transfers context through minutes, question logs, action trackers, and 30-plus campaign-memory pages.",
+    "WOWList traces organizer vocabulary and informal networks into a keyword-community model, a Django/PostgreSQL/PostGIS and Ember interface, documented organizer use and historical participation counts, then support guidance, reusable publishing patterns, and preserved source/interface artifacts.",
+    "196/Sunday Dinner traces hospitality, trust, artist needs, and recurring rhythms into invitation and participation systems; treats onboarding, hosting, facilitation, and access as social interfaces; documents repeated collective use through bounded milestones; and provides an explicit repeatable residency and access handoff.",
+    "CallNYC independently corroborates the pattern: constituent-service relationships became issue-pathway information architecture, a resident-facing prototype, documented public interaction, and a preserved repository, source trail, limitations, and archived handoff.",
+    "Project pages provide inspectable screenshots or preserved artifacts, governed claim text, references, public links, source boundaries, credits, and Known/Open/Protected disclosures rather than relying on abstract systems language.",
+    "The coursework audit passes: Open House is dated public lineage with initiation separated from collective governance; protected UCSC records remain withheld; the site makes no claim of disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency."
   ],
   "gaps": [],
   "safety_findings": [
-    "Collective credit, historical status, and archival limitations are preserved.",
-    "Protected participant records, correspondence, access details, analytics, coalition context, and educational records remain withheld.",
-    "All seven photographs retain open rights, credit, represented-person care and consent, editorial, and production-observation gates."
+    "No Warren Sack participation, endorsement, testimonial, protected evaluation text, student identifier, educational email, or real private archive path is projected.",
+    "Collective credit and non-causation boundaries remain explicit for Open House, WOWList, NYC Artist Coalition, Sunday Dinner, and campaign outcomes.",
+    "Photography remains a bounded branch trial. Rights, final credit, represented-person care and consent, private permission reinspection, production approval, and indexing approval remain open where recorded.",
+    "This lens score is evidence of PR-016 content quality only; it does not clear photography, production deployment, indexing, or any human approval gate."
   ],
-  "recommendation": "Accept PR-016 at 4 for this exact candidate and keep every human photography and production gate open."
+  "recommendation": "Pass PR-016 at 4 for this exact candidate. Preserve the current anti-overclaim language and all open photography and production gates."
 }

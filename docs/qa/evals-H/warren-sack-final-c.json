@@ -1,23 +1,29 @@
 {
-  "evaluator": "Fictionalized Warren Sack recursive social-systems lens; independent simulation, not a real Warren Sack review or endorsement",
-  "reviewerId": "sack-layout-final-c",
+  "evaluator": "Fictionalized Warren Sack recursive-social-systems lens; not Warren Sack participation or endorsement.",
+  "reviewerId": "sack-photo-final-c",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "0a404b5cbdf0aed6b18252ef59637a28dd5a33d0e4b660d76f35141c2c727e79",
+  "candidateSha256": "f717709536e14c1a4bec3a9b26a2bb62e4f9e338386d5a13538b92c7c8793b93",
   "score": 4,
   "pass": true,
   "evidence": [
-    "About plainly states the recursive method through relationships, interface and use, and learning and continuity.",
-    "HJE, FairRentNYC and NYC Artist Coalition, WOWList, Sunday Dinner and 196, and CallNYC expose bounded sequences from observed relations through interfaces, social use, revision, and handoff.",
-    "Source-Backed Team Memory is correctly labeled as an early method with a synthetic example rather than production adoption.",
-    "Project artifacts and all seven photographs distinguish interface evidence, project setting, interpretation, participation, authorship, impact, and permission.",
-    "The responsive receipt covers 14 routes at 360, 375, 768, and 1280 pixels with no reported accessibility, overflow, image, request, or homepage-clipping failures."
+    "Independently recomputed the requested SHA-256 across all 57 candidate paths; it matches exactly.",
+    "Both homepage captures visibly provide 'Read the through line'; one click reaches /about, where the complete method is stated plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "Harry J. Epstein Company reconstructs the sequence from customer language, product judgment, and operating habits through requirements and reusable content models, incremental storefront interfaces, customer and staff use, and repeatable workflows. Its maintained public storefront and approved screenshot are inspectable.",
+    "NYC Artist Coalition / FairRentNYC moves from lived experience, meetings, sources, and institutional relationships into source maps and decision structures, campaign sites and public pathways, collective meetings and actions, then running minutes, action trackers, and shared campaign memory. The page supplies a campaign screenshot, public links, citations, and collective-credit limits.",
+    "WOWList moves from organizers' existing scene, place, venue, and interest vocabulary into a keyword-community model, a Django/PostGIS/Ember interface, documented organizer use, support threads, tutorials, and reusable publishing patterns. Preserved interface assets and source-backed historical counts make the proof inspectable without implying current service or sole authorship.",
+    "CallNYC moves from constituent-service data and resident information gaps into issue-pathway information architecture, an independent public prototype, documented public circulation, and a preserved repository and source trail. The page clearly marks it archived, unofficial, and independent.",
+    "The candidate connects social structure and information architecture to participation, usable interfaces, learning, and continuity rather than presenting disconnected outputs or a tool list.",
+    "The coursework audit passes: protected UCSC records remain withheld; Open House is bounded public lineage; the visible Maven credential is framed only as professional development. No public claim asserts disciplinary invention, structural-equivalence authorship, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency from protected records.",
+    "The candidate-bound responsive matrix passes all 56 route/viewport rows across 360, 375, 768, and 1280 pixels with no HTTP failures, axe violations, overflow, broken images after scrolling, unlabeled images, failed requests, or landmark failures."
   ],
-  "gaps": [],
+  "gaps": [
+    "Non-blocking evidence-capture caveat: several below-fold lazy-media regions were blank in the first supplied long screenshots, although the candidate-bound matrix reported successful image decoding after explicit full-page scrolling; later recaptures resolved this limitation."
+  ],
   "safety_findings": [
-    "No consequential invention, structural-equivalence, peer-reviewed-research, sole-authorship, universal-deployment, or current historical-tool claim appears.",
-    "Collective credit and archived, unofficial, and non-current boundaries are preserved.",
-    "All photographs remain on explicit production hold."
+    "Collective projects retain shared credit, and archived or experimental projects retain explicit status limits.",
+    "No protected educational-record text, private source path, private correspondence, testimonial projection, or historical-tool proficiency claim appears on the reviewed public surfaces.",
+    "Photography remains a bounded branch trial: production rights, final credit, represented-person care and consent, Jamie approval, staging observation, and indexing approval remain open human gates."
   ],
-  "recommendation": "Accept this exact candidate as a score-4 PR-016 holdout and require a fresh fingerprint and independent holdout after any candidate-affecting change."
+  "recommendation": "Pass PR-016 at score 4 for this exact candidate only. Preserve the candidate binding and anti-overclaim language; do not translate this holdout into photography clearance, production approval, deployment, or indexing authority."
 }

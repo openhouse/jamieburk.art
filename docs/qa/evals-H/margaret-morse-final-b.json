@@ -1,23 +1,26 @@
 {
-  "evaluator": "Fictionalized Prof. Margaret Morse lens; simulated PR-015 evaluation, not endorsement by the real professor",
-  "reviewerId": "morse-layout-final-b",
+  "evaluator": "Fictionalized Prof. Margaret Morse inhabited-systems lens; simulated PR-015 evaluation, not participation or endorsement by the real professor",
+  "reviewerId": "morse-photo-final-b",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "0a404b5cbdf0aed6b18252ef59637a28dd5a33d0e4b660d76f35141c2c727e79",
+  "candidateSha256": "f717709536e14c1a4bec3a9b26a2bb62e4f9e338386d5a13538b92c7c8793b93",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The first viewport preserves immediate professional legibility over an image of a real civic institution.",
-    "The candidate-bound geometry receipt covers 56 route and viewport combinations with no horizontal overflow, broken images, failed requests, accessibility violations, or homepage first-viewport failures.",
-    "The photographic sequence makes place and embodied work concrete through a Council hearing, coalition listening room, Fair Rent rally, cultural-space town hall, restoration worksite, waterways raft, and Sunday Dinner preparation.",
-    "The About through-line connects artistic, civic, technical, and social practice without displacing the professional frame.",
-    "Hospitality and participation are operationalized through invitations, preparation, onboarding, access handoffs, facilitation, trust, public meetings, hearings, keyword communities, and interfaces people can shape."
+    "The SHA-256 was independently reproduced across all 57 candidate paths.",
+    "The 375px and 1440px first viewports retain Jamie's identity, target role, operating proposition, work and resume actions, embodied presence, and a visible next-section threshold.",
+    "The homepage and one-click About through-line explicitly join artistic, civic, technical, and social practice while keeping technical project management, product operations, and implementation primary.",
+    "Open House traces experimentation and collective governance into interfaces people can inhabit; WOWList traces place-based community vocabulary into distributed publishing infrastructure.",
+    "Sunday Dinner traces hospitality, care, onboarding, facilitation, and consent-aware continuity; NYC Artist Coalition traces attention and participation into meetings, public pathways, source maps, minutes, decision memory, and handoff.",
+    "The homepage links directly to role-fit proof and case studies; the fuller inhabited-systems account is one click away, satisfying the two-click requirement.",
+    "The responsive matrix covers 56 route-viewport rows with no axe violations, overflow, failed requests, unlabeled images, broken images after scroll, or first-viewport failures; its follow-up confirms all lazy images loaded after scrolling."
   ],
   "gaps": [],
   "safety_findings": [
-    "Collective credit remains intact across Open House, coalition work, WOWList, and Sunday Dinner.",
-    "The private editor field, reconnecting identifiers, guest histories, contact details, correspondence, and unapproved images remain outside the public projection.",
-    "Photography and production approval remain open human gates."
+    "Open House, WOWList, coalition work, and Sunday Dinner retain collective-credit language and avoid sole-authorship or outcome-causation claims.",
+    "Guest histories, contact and attendance records, private correspondence, protected educational records, identifiers, archive coordinates, and unapproved images remain outside the public projection.",
+    "No faculty testimonial is quoted or projected; the public recommendation remains only a withheld research lead, and the lens is explicitly non-endorsing.",
+    "East River permission is bounded as reported-granted while rights remain permission-needed, consent review-needed, and public display on hold; the other seven photographs remain on production hold for rights, credit, and represented-person review."
   ],
-  "recommendation": "Pass at 4 for this exact candidate and preserve every stated photography-production hold."
+  "recommendation": "Pass PR-015 at 4 for this exact branch-review candidate. Preserve all production and indexing holds until Jamie approval, private permission reinspection, source-binding verification, and image-by-image rights, credit, crop, and represented-person review are complete."
 }

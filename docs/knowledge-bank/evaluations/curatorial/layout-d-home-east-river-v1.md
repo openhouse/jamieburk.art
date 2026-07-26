@@ -10,7 +10,8 @@ last_reviewed: 2026-07-26
 review_by: 2026-08-26
 canonical_path: docs/knowledge-bank/evaluations/curatorial/layout-d-home-east-river-v1.md
 summary: Blind and contextual review record for using the East River photograph in the Layout D homepage hero.
-candidate_commit: PENDING_SOURCE_COMMIT
+source_parent_commit: 84fbf9ce0a748534568441f890af1b3e052833c2
+candidate_identity: governed-professor-and-composite-fingerprints
 portfolio_edition: edition.layout-d.photo-knowledge.2026-07
 panel:
   id: portfolio-photography-artists-v1
@@ -88,3 +89,7 @@ object.
 The proposal advances the East River frame for branch and staging review. It
 does not close production, source-binding, permission-reinspection, crop, or
 indexing gates.
+
+The source parent identifies the first authored implementation commit. Current
+candidate identity is carried by the exact file-set fingerprints and browser
+receipt; it is not represented as a self-referential Git commit.

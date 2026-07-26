@@ -118,6 +118,19 @@ test("removing the photo evidence boundary fails closed", () => {
   assert.equal(evaluation.checks.photo_evidence_boundary_is_visible, false);
 });
 
+test("the compact hero boundary cannot disappear behind the longer site note", () => {
+  const file = "apps/www/src/components/Hero.tsx";
+  const evaluation = evaluateLayoutPhotography({
+    sourceOverrides: {
+      [file]: source(file).replaceAll(
+        "photoHeroBoundary",
+        "photoDisplayBoundary"
+      )
+    }
+  });
+  assert.equal(evaluation.checks.photo_evidence_boundary_is_visible, false);
+});
+
 test("project cards cannot return to miniature case studies", () => {
   const file = "apps/www/src/components/WorkCard.tsx";
   const evaluation = evaluateLayoutPhotography({

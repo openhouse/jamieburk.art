@@ -22,6 +22,7 @@ export const candidateRelativePaths = [
   "apps/www/public/images/field-v02/nightlife-town-hall.jpg",
   "apps/www/public/images/field-v02/raft-in-fog.jpg",
   "apps/www/public/images/field-v02/sunday-dinner-preparation.jpg",
+  "apps/www/public/images/field-notes/jamie-east-river.webp",
   "apps/www/src/app/about/page.tsx",
   "apps/www/src/app/globals.css",
   "apps/www/src/app/page.tsx",
@@ -44,6 +45,29 @@ export const candidateRelativePaths = [
   "apps/www/src/styles/tokens.css",
   "apps/www/src/types/work.ts",
   "docs/knowledge-bank/notebooks/photography/layout-study-d.md",
+  "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+  "docs/knowledge-bank/corrections/photography/east-river-clearance-scope-2026-07.md",
+  "docs/knowledge-bank/decisions/photography/layout-d-home-east-river-v1.md",
+  "docs/knowledge-bank/decisions/photography/layout-d-resume-protected-absence.md",
+  "docs/knowledge-bank/evaluations/curatorial/layout-d-home-east-river-v1.md",
+  "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+  "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md",
+  "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+  "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
+  "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+  "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+  "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
+  "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
+  "docs/knowledge-bank/_generated/photo-impact.md",
+  "docs/knowledge-bank/_generated/photo-rights-review.md",
+  "docs/knowledge-bank/_generated/photography-index.md",
+  "docs/knowledge-bank/_generated/public-photo-placements.md",
+  "docs/photography/README.md",
+  "evals/photo-knowledge/suite.json",
+  "reports/photo-knowledge.json",
+  "rfcs/0003-living-photographic-knowledge-loop.md",
+  "scripts/photo-knowledge/lib.mjs",
+  "scripts/photo-knowledge/photo-knowledge.test.mjs",
   "docs/qa/evals-H/responsive-route-matrix.json"
 ];
 
@@ -56,7 +80,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "0a404b5cbdf0aed6b18252ef59637a28dd5a33d0e4b660d76f35141c2c727e79";
+const approvedCandidateSha256 = "f717709536e14c1a4bec3a9b26a2bb62e4f9e338386d5a13538b92c7c8793b93";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },

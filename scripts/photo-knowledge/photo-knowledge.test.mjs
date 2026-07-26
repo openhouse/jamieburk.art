@@ -120,6 +120,60 @@ test("permission cannot silently expand to unrelated uses", () => {
   assert.equal(result.checks.permission_capsule_is_bounded, false);
 });
 
+test("reported permission cannot become automated clearance", () => {
+  const file =
+    "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "status: reported-granted",
+      "status: granted"
+    ),
+    skipGenerated: true
+  });
+  assert.equal(result.checks.permission_capsule_is_bounded, false);
+});
+
+test("revoked permission fails the active occurrence closed", () => {
+  const file =
+    "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "status: reported-granted",
+      "status: revoked"
+    ),
+    skipGenerated: true
+  });
+  assert.equal(result.checks.permission_capsule_is_bounded, false);
+  assert.equal(result.checks.human_gates_remain_open, false);
+});
+
+test("global clearance labels conflict with open human gates", () => {
+  const file =
+    "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: {
+      [file]: source(file)
+        .replace(
+          "rights_state: permission-needed",
+          "rights_state: cleared"
+        )
+        .replace(
+          "consent_state: review-needed",
+          "consent_state: cleared"
+        )
+        .replace(
+          "public_display_status: hold",
+          "public_display_status: cleared"
+        )
+    },
+    skipGenerated: true
+  });
+  assert.equal(result.checks.permission_capsule_is_bounded, false);
+  assert.equal(result.checks.human_gates_remain_open, false);
+});
+
 test("credit must follow the preferred creator statement", () => {
   const file =
     "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md";
@@ -153,6 +207,22 @@ test("staging cannot confer production and indexing approval", () => {
     false
   );
   assert.equal(result.checks.human_gates_remain_open, false);
+});
+
+test("the governed crop must drive the rendered hero", () => {
+  const file = "apps/www/src/data/photography.ts";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      'mobileObjectPosition: "70% 50%"',
+      'mobileObjectPosition: "42% 50%"'
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.application_manifest_resolves_to_wiki,
+    false
+  );
 });
 
 test("a recollection cannot activate its own public projection", () => {
@@ -242,4 +312,21 @@ test("a fabricated verified binding fails without changing the human gate", () =
   });
   assert.equal(result.checks.private_material_is_absent, false);
   assert.equal(result.checks.human_gates_remain_open, false);
+});
+
+test("feedback correction cannot erase the rejected clearance state", () => {
+  const file =
+    "docs/knowledge-bank/corrections/photography/east-river-clearance-scope-2026-07.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "rights_state: cleared",
+      "rights_state: unknown"
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.feedback_correction_is_append_only_and_fail_closed,
+    false
+  );
 });

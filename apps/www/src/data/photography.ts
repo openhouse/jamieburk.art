@@ -18,6 +18,7 @@ type VisualBase = {
   caption: string;
   credit: string;
   objectPosition?: string;
+  mobileObjectPosition?: string;
   wikiId?: string;
   derivativeId?: string;
   placementIds?: readonly string[];
@@ -51,6 +52,7 @@ export const photographs = {
     credit:
       "Photograph by Elana Gordon. From Jamie Burkart's photo archive",
     objectPosition: "50% 50%",
+    mobileObjectPosition: "70% 50%",
     kind: "photograph",
     review: {
       workingUse: "authorized-for-feature-photo-knowledge-D-review",
@@ -261,3 +263,6 @@ export const workVisuals: Partial<Record<string, PortfolioVisual>> = {
 
 export const photoDisplayBoundary =
   "These photographs document public or project settings. A displayed image does not by itself establish sole authorship, attendance, impact, endorsement, or permission for reuse outside this portfolio. Jamie approved this bounded branch trial; final production rights, credit, and represented-person care and consent review remain open.";
+
+export const photoHeroBoundary =
+  "The photograph documents a setting; it does not by itself prove authorship, impact, endorsement, or permission for reuse.";

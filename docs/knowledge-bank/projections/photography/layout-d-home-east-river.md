@@ -41,7 +41,7 @@ credit:
     - statement.photo.east-river.custody.v1
 permission_source: source.permission.elana-gordon.east-river.2026-07
 approval:
-  public_git: approved
+  public_git: jamie-authorized-branch-review
   staging: approved
   production: open
   indexing: open
@@ -74,5 +74,6 @@ occurrence binds the derivative, route, component, crop family, caption, credit,
 sequence position, and release states.
 
 The first viewport retains Jamie's name, literal role family, operating
-proposition, Work action, Resume action, and a visible path into the next
-section. Production and indexing remain open.
+proposition, Work action, Resume action, Jamie's embodied presence in both
+governed crops, and a visible path into the next section. Production and
+indexing remain open.

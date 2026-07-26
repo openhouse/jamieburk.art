@@ -11,7 +11,8 @@ review_by: 2026-08-26
 canonical_path: docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md
 summary: Dated public composition binding the East River homepage occurrence and the resume protected absence to one reviewable portfolio edition.
 projection_status: pending
-candidate_commit: PENDING_SOURCE_COMMIT
+source_parent_commit: 84fbf9ce0a748534568441f890af1b3e052833c2
+candidate_identity: governed-professor-and-composite-fingerprints
 purpose:
   - hiring-orientation
   - personal-presence
@@ -45,3 +46,8 @@ relations:
 This edition treats the public site as a dated composition. It can be compared,
 superseded, partially withdrawn, or rolled back without rewriting the
 photograph's documentary record.
+
+The source parent identifies the first authored implementation commit. Exact
+candidate receipts bind the later generated graph, browser evidence, and
+independent holdouts without requiring this record to contain its own future
+commit hash.
