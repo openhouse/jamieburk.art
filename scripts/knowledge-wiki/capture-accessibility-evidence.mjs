@@ -200,7 +200,10 @@ try {
 
       const screenshotName = screenshotPlan.get(`${viewport}:${route}`);
       if (screenshotName) {
-        await page.evaluate(() => scrollTo(0, 0));
+        await page.goto(`${baseUrl}${route}`, {
+          waitUntil: "networkidle",
+          timeout: 30_000
+        });
         await page.waitForTimeout(100);
         const absoluteFile = path.join(screenshotDirectory, screenshotName);
         await page.screenshot({ path: absoluteFile, fullPage: false });
