@@ -395,12 +395,61 @@ function sameReviewerSet(left, right) {
     JSON.stringify([...right].sort(compareText));
 }
 
+function preferredCreators(record) {
+  const creators = [];
+  if (typeof record?.creator === "string") creators.push(record.creator);
+  for (const statement of record?.creator_statements ?? []) {
+    if (
+      statement.rank === "preferred" &&
+      typeof statement.value === "string"
+    ) {
+      creators.push(statement.value);
+    }
+  }
+  return [...new Set(creators)];
+}
+
+function requiredReviewersForGate(
+  gate,
+  evidenceRecord,
+  photoRecord,
+  portfolioOwner
+) {
+  const creators = preferredCreators(photoRecord);
+  const evidenceCreators = preferredCreators(evidenceRecord);
+  switch (gate) {
+    case "creator":
+      return evidenceCreators;
+    case "rights":
+      return evidenceRecord.rights_holders?.length > 0
+        ? evidenceRecord.rights_holders
+        : evidenceCreators;
+    case "consent":
+      return evidenceRecord.consent_authorities ?? [];
+    case "represented-person":
+      return evidenceRecord.represented_people ?? [];
+    case "exact-credit":
+    case "crop":
+    case "caption":
+      return [...new Set([...creators, portfolioOwner])];
+    case "editorial":
+    case "production":
+    case "deployment":
+    case "indexing":
+      return [portfolioOwner];
+    default:
+      return [];
+  }
+}
+
 function restorationEvidenceSupportsGate(
   gate,
   record,
   photoId,
   gateReview,
-  decidedAt
+  decidedAt,
+  photoRecord,
+  portfolioOwner
 ) {
   const relevant =
     record?.id === photoId ||
@@ -425,6 +474,15 @@ function restorationEvidenceSupportsGate(
     Number.isNaN(evidenceReviewedAt) ||
     evidenceReviewedAt > decidedAt
   ) {
+    return false;
+  }
+  const requiredReviewers = requiredReviewersForGate(
+    gate,
+    record,
+    photoRecord,
+    portfolioOwner
+  );
+  if (!sameReviewerSet(gateReview.reviewed_by, requiredReviewers)) {
     return false;
   }
   switch (gate) {
@@ -467,14 +525,16 @@ function restorationEvidenceSupportsGate(
       return (
         record.credit_review_state === "cleared" &&
         (
-          record.kind === "source" &&
-          record.permission_state === "cleared-bounded" &&
-          typeof record.creator === "string"
-        ) ||
-        (
-          record.kind === "asset" &&
-          record.creator_statements?.some(
-            (statement) => statement.rank === "preferred"
+          (
+            record.kind === "source" &&
+            record.permission_state === "cleared-bounded" &&
+            typeof record.creator === "string"
+          ) ||
+          (
+            record.kind === "asset" &&
+            record.creator_statements?.some(
+              (statement) => statement.rank === "preferred"
+            )
           )
         )
       );
@@ -551,6 +611,7 @@ export function validateRestorationDecision({
     ? record.restoration_gate_reviews
     : [];
   const gateNames = gateReviews.map((review) => review.gate);
+  const photoRecord = recordById?.get(decision.photoId);
   const gatesExact =
     gateReviews.length === requiredRestorationGates.length &&
     new Set(gateNames).size === requiredRestorationGates.length &&
@@ -580,7 +641,9 @@ export function validateRestorationDecision({
               evidenceRecord,
               decision.photoId,
               review,
-              decidedAt
+              decidedAt,
+              photoRecord,
+              decision.approvedBy
             )
           );
         }) &&

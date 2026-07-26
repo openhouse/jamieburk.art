@@ -278,7 +278,9 @@ function restorationEvidenceMap(fixture = restorationFixture()) {
     ["consent", "exact-credit", "caption", "represented-person"],
     {
       credit_review_state: "cleared",
-      caption_review_state: "cleared"
+      caption_review_state: "cleared",
+      represented_people: ["Jamie Burkart"],
+      consent_authorities: ["Jamie Burkart"]
     }
   );
   withReviews(
@@ -304,7 +306,8 @@ function evaluateRestoration({
   recordMutation,
   decisionMutation,
   decisionHistoryFirst = false,
-  recordTextMutation
+  recordTextMutation,
+  evidenceRecordsMutation
 } = {}) {
   const withdrawn = historicalWithdrawal();
   const fixture = restorationFixture();
@@ -318,7 +321,9 @@ function evaluateRestoration({
   };
   fixture.current.restorationDecisions.push(decision);
   const wiki = compileWiki();
-  wiki.byId = restorationEvidenceMap(fixture);
+  const evidenceRecords = restorationEvidenceMap(fixture);
+  evidenceRecordsMutation?.(evidenceRecords);
+  wiki.byId = evidenceRecords;
   wiki.byId.set(decision.decisionRecordId, record);
   const withdrawalEntry = {
     commit: "withdrawal-commit",
@@ -946,6 +951,52 @@ test("restoration rejects arbitrary reviewer identities", () => {
   const result = evaluateRestoration({
     recordMutation: {
       restoration_gate_reviews: arbitraryReviewer.restoration_gate_reviews
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("restoration rejects coordinated non-human reviewer substitution", () => {
+  const fixture = restorationFixture();
+  const automatedReviews = fixture.record.restoration_gate_reviews.map(
+    (review) => ({
+      ...review,
+      reviewed_by: ["Automated evaluator"]
+    })
+  );
+  const result = evaluateRestoration({
+    recordMutation: {
+      restoration_gate_reviews: automatedReviews
+    },
+    evidenceRecordsMutation(records) {
+      for (const [id, record] of records) {
+        if (!Array.isArray(record.photo_gate_reviews)) continue;
+        records.set(id, {
+          ...record,
+          photo_gate_reviews: record.photo_gate_reviews.map((review) => ({
+            ...review,
+            reviewed_by: ["Automated evaluator"]
+          }))
+        });
+      }
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("restoration requires cleared exact-credit state for every evidence record", () => {
+  const result = evaluateRestoration({
+    evidenceRecordsMutation(records) {
+      records.set(restorationPhotoId, {
+        ...records.get(restorationPhotoId),
+        credit_review_state: "human-review-requested"
+      });
     }
   });
   assert.equal(
