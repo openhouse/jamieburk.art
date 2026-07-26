@@ -1,29 +1,31 @@
 {
   "evaluator": "Independent holdout reviewer using the imagined Prof. Margaret Morse lens rubric; not a real-person endorsement",
-  "reviewerId": "morse-a-layout-B-final",
+  "reviewerId": "morse-a-photo-knowledge-B-final",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "b9044a428a83acc943b4d3ed50f042781846b0d43fa9185579dd91f529ffb80f",
+  "candidateSha256": "ca6d9ec5e5100eb6fabf941a81d76e7199e4e892f68711b2547be5714b27feea",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The homepage establishes Jamie's technical project management, product operations, and implementation role immediately while keeping listening, translation, usable tools, and continuity visible.",
-    "The one-click About surface names Systems people can inhabit and explicitly connects artistic, civic, technical, and social practice.",
-    "Open House, 196 Artists Residency and Sunday Dinner, NYC Artist Coalition and FairRentNYC, and Harry J. Epstein Company make experimentation, hospitality, participation, documentation, institutional voice, and continuity operational rather than decorative.",
-    "The portfolio clearly distinguishes these systems from conventional administration: people can recognize relationships, participate, remember, influence structures through use, and continue the work.",
-    "Collective agency remains visible through participant governance, founding-member and organizer roles, collaborator language, and bounded first-person claims."
+    "Verified repository HEAD 40ef582a07dc2c211f0ca476d62db9dba6c2dbc5 and independently recomputed the required professor-file SHA-256.",
+    "The homepage gives a stranger a clear professional frame, audience-specific starting routes, selected operating, civic, and community systems, and a concise method centered on listening, mapping, building, documenting, and transfer.",
+    "The About surface explicitly connects artistic, civic, technical, and social practice through Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition work, and source-backed team memory without turning the portfolio into an artist biography.",
+    "Experimentation, hospitality, participation, attention, documentation, care, and inhabited systems are operationalized through relationship models, usable interfaces, recurring participation rhythms, reviewable records, learning loops, privacy choices, and handoffs that others can continue.",
+    "The project pages substantiate the through-line with distinct operating forms: customer and product stewardship, distributed community publishing, civic-data translation, coalition memory, and consent-bounded hosting and residency infrastructure.",
+    "Collective agency remains visible through co-built, collaborator-led, collectively governed, contributed-to, and community-credit language; individual responsibility is named without converting shared outcomes into sole-authorship claims.",
+    "The source note and public copy consistently withhold protected educational records, private correspondence, identifiers, archive paths, participant histories, legal-review context, stakeholder data, and unapproved testimonials or images."
   ],
   "gaps": [],
   "safety_findings": [
-    "No romanticized vulnerability, private-source quotation, participant record, protected educational record, or unapproved testimonial projection was visible in the isolated evidence.",
-    "Photographer credit remains under review, and photo selection, captions, credit, rights, consent, deployment, and indexing remain separate human gates.",
-    "This score evaluates PR-015 only for the frozen public pull-request candidate and does not approve any photograph for production publication."
+    "The imagined professor lens is clearly framed as an evaluative rubric rather than a real-person endorsement or testimonial.",
+    "Protected educational records inform the rubric only; their wording, grades, identifiers, correspondence, and private locations are neither quoted nor projected.",
+    "Production photography selection, exact-image rights, consent, dignity, credit and crop approval, deployment, and production indexing remain explicit human gates and are not approved by this scorecard."
   ],
-  "recommendation": "Pass PR-015 at score 4 for this frozen candidate. Preserve the explicit human gates and do not represent this review as a real-person endorsement.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate. Preserve the bounded About-page through-line and collective-credit language, and do not treat this holdout as approval for production photography, rights, consent, deployment, or indexing.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f9e81-b01d-7be2-b60c-ca9313b5349a",
-    "agentNickname": "Ohm",
+    "processSessionId": "019f9fe0-b807-7182-a165-eec7df2bb83b",
+    "agentNickname": "Pascal",
     "model": "inherited-parent-model",
     "reasoningEffort": "inherited",
     "sandbox": "isolated-read-only-evidence",

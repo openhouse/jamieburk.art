@@ -1,33 +1,32 @@
 {
-  "evaluator": "Independent holdout reviewer using the imagined Prof. Warren Sack rubric; not a real-person endorsement",
-  "reviewerId": "sack-c-layout-B-final",
+  "evaluator": "Independent holdout reviewer applying the imagined Prof. Warren Sack rubric; not a real-person endorsement",
+  "reviewerId": "sack-c-photo-knowledge-B-final",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "b9044a428a83acc943b4d3ed50f042781846b0d43fa9185579dd91f529ffb80f",
+  "candidateSha256": "ca6d9ec5e5100eb6fabf941a81d76e7199e4e892f68711b2547be5714b27feea",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The About source and screenshot state the recursive sequence literally and make it reconstructable through concrete projects.",
-    "Harry J. Epstein Company (2012-Present) connects customer and operating relationships to one commerce journey, maintained interface use, incremental releases, and reusable workflows.",
-    "NYC Artist Coalition and FairRentNYC (2017-Present) connect lived experience and civic relationships to coalition memory, campaign and participation interfaces, collective use, and durable documentation.",
-    "196 Artists Residency and Sunday Dinner (2012-Present) connect hospitality and trust to a care-centered operating model, recurring gatherings and residencies, and continuity through onboarding, facilitation, documentation, and access handoffs.",
-    "The screenshots identify roles, current status, contexts, and visibility boundaries while distinguishing full case studies from summary-only evidence."
+    "The read-only candidate HEAD is 40ef582a07dc2c211f0ca476d62db9dba6c2dbc5, and an independent recomputation across the eleven candidate paths produces the supplied SHA-256.",
+    "The About page plainly states the recursive method and links it to project evidence rather than leaving it as an abstract tool list.",
+    "Harry J. Epstein Company connects customer language and operating habits to a maintained storefront used for discovery and ordering; recurring operational questions and bounded analytics guided incremental releases, while reusable content and operating patterns supplied team continuity.",
+    "NYC Artist Coalition and FairRentNYC connect lived experience, meetings, sources, and civic actors to campaign sites, ballots, town halls, hearings, practical sessions, and action pathways used with collaborators; minutes, source maps, question logs, decision records, and action trackers preserve learning and handoff.",
+    "Sunday Dinner and 196 treat invitations, gatherings, residencies, onboarding, facilitation, and access as social interfaces used repeatedly by participants; response, attendance, and follow-up fields support iteration, and the documented residency workflow provides a concrete handoff without claiming an artist outcome.",
+    "WOWList and CallNYC strengthen the historical lineage without being counted as current proof, while Source-Backed Team Memory remains an early method with a synthetic example rather than an adopted production system.",
+    "The added photo identifiers, placement identifiers, routes, and crop metadata validate occurrences and emit data attributes; they do not replace the surrounding public explanation.",
+    "The bounded source note withholds protected UCSC records, identifiers, private paths, correspondence, and testimonial projection."
   ],
-  "gaps": [
-    "HJE testing is summarized through bounded analytics and incremental releases rather than a public user-testing artifact.",
-    "The 196 loop remains summary-only because participant-level evidence is protected."
-  ],
+  "gaps": [],
   "safety_findings": [
-    "No protected educational-record content or professor endorsement is projected.",
-    "Coalition outcomes retain collective credit and avoid sole-causation claims.",
-    "Private analytics, community records, guest histories, correspondence, and unapproved images remain excluded.",
-    "This score does not approve production photography, captions, credit, rights, consent, deployment, or indexing."
+    "No protected-coursework text, faculty endorsement, disciplinary-invention claim, peer-reviewed-research claim, structural-equivalence claim, current Max/Jitter proficiency claim, or coursework-derived production-deployment claim appears on the reviewed public surfaces.",
+    "Collective agency remains explicit and launch, adoption, interaction, attendance, and longer-term outcome are not collapsed.",
+    "All final photograph, caption, crop, credit, rights, consent, production publication, deployment, and indexing decisions remain human gates."
   ],
-  "recommendation": "Pass PR-016 at score 4 for this frozen public pull-request candidate and preserve all explicit human gates.",
+  "recommendation": "Pass PR-016 at score 4 for this exact candidate. Preserve the independent-review requirement and every human media and release gate.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f9e82-4cae-7f53-a732-bfc1fee85609",
-    "agentNickname": "Poincare",
+    "processSessionId": "019f9fe1-8620-7550-bc1e-f2c7b9a632e9",
+    "agentNickname": "Rawls",
     "model": "inherited-parent-model",
     "reasoningEffort": "inherited",
     "sandbox": "isolated-read-only-evidence",
