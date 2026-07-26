@@ -5,7 +5,7 @@ kind: index
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-22
+last_reviewed: 2026-07-26
 review_by: 2026-08-22
 canonical_path: docs/knowledge-bank/notebooks/photography/README.md
 summary: >
@@ -28,6 +28,10 @@ relations:
     target: research-inquiry.photography.196-first-pass-proposal
     href: 196-first-pass-proposal.md
     context: Self-directed residency proposal that protects attention, divergence, and open-ended form.
+  - type: related_to
+    target: research-inquiry.photography.oral-history-stewardship-afterlife-001
+    href: oral-history-stewardship-afterlife-001.md
+    context: First governed photo-to-oral-history prompt, held outside claim and publication states.
   - type: related_to
     target: method.structure-grows-from-material
     href: ../../methods/structure-grows-from-the-material.md
@@ -115,9 +119,13 @@ observations merely to make the notebook look complete.
   Jamie's self-directed invitation to spend up to two weeks with the first
   rough field. The proposal establishes intent without prescribing an output
   or treating a change of direction as failure.
-- [Field Corpus 001](field-corpus-001.md): Jamie's planned rough-draft select
-  of approximately 1,000 photographs. The private selection has not yet been
-  frozen or ingested.
+- [Field Corpus 001](field-corpus-001.md): Jamie's rough-draft select of 1,000
+  photographs. The private field and a smaller editor-ready proposal have been
+  assembled and verified; neither is publication clearance.
+- [Oral history prompt 001](oral-history-stewardship-afterlife-001.md): one
+  privately held photograph selected to invite Jamie's recollection about
+  stewardship, relationship, and project afterlife. The prompt is not a claim,
+  caption, or publication decision.
 
 The notebook will grow through dated encounters. New structure should answer
 what the photographs make newly perceptible, not impose a complete taxonomy in

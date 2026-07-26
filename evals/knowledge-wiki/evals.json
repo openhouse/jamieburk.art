@@ -200,7 +200,12 @@
         "open_ended_outcome_protected",
         "host_acceptance_preserves_artist_agency",
         "remembered_teju_source_positioned_honestly",
-        "human_host_acceptance_recorded"
+        "human_host_acceptance_recorded",
+        "oral_history_prompt_bounded",
+        "oral_history_intake_cannot_auto_promote",
+        "oral_history_research_and_credit_open",
+        "oral_history_privacy_fails_closed",
+        "oral_history_not_publication"
       ]
     }
   ]

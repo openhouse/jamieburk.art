@@ -5,13 +5,13 @@ kind: research-inquiry
 status: draft
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-22
+last_reviewed: 2026-07-26
 review_by: 2026-08-22
 canonical_path: docs/knowledge-bank/notebooks/photography/field-corpus-001.md
 summary: >
-  Working sketchpad for Jamie's planned rough-draft selection of approximately
-  1,000 photographs, held as a private exploratory field rather than a
-  completeness claim, evidence set, or publication candidate.
+  Working sketchpad for Jamie's completed private rough-draft field of 1,000
+  photographs, held as an exploratory field rather than a representative
+  sample, evidence set, or publication candidate.
 projection:
   status: hold
   surfaces: []
@@ -32,26 +32,33 @@ relations:
     target: index.knowledge-wiki.visual-evidence
     href: ../../indexes/visual-evidence.md
     context: Evidence value and publication permission remain separate.
+  - type: related_to
+    target: research-inquiry.photography.oral-history-stewardship-afterlife-001
+    href: oral-history-stewardship-afterlife-001.md
+    context: One photograph from the private editorial field now opens a bounded oral-history inquiry.
 ---
 
 # Field Corpus 001
 
 ## Present state
 
-Jamie plans to assemble an exploratory rough-draft selection of approximately
-1,000 photographs from a lifetime archive he describes as containing more than
-600,000 photographs. The operational source has now been privately frozen and
-verified; its exact count and digest remain outside public Git. The planned
-1,000-photograph field has not been assembled.
+Jamie assembled an exploratory rough-draft field of 1,000 photographs from a
+lifetime archive he describes as containing more than 600,000 photographs.
+The private field was completed and independently verified on 2026-07-22. A
+separate 24-photo editor-ready proposal was then created and verified from the
+field. Neither selection is a representative sample, evidence set, rights
+clearance, or publication decision.
 
-The private field has not yet been frozen or ingested. No photographs, source
-identifiers, image-level metadata, or private encounter notes are recorded on
-this page.
+The exact source contract, membership digest, photographs, source identifiers,
+image-level metadata, private contact sheets, and private encounter notes
+remain outside public Git.
 
-A one-photo operational canary has been completed inside the authorized
+A one-photo operational canary was also completed inside the authorized
 residency workspace. It tests the bounded local workflow. It is not Field
-Corpus 001 and does not complete the larger edit. It carries no claim of
+Corpus 001 and did not complete the larger edit. It carries no claim of
 representativeness and is not a publication candidate.
+Field Corpus 001 was completed through the separate 1,000-photo field process
+described above.
 
 This field is selected for attention, not publication. It is not a
 representative sample, completeness claim, evidence set, shortlist, or promise
@@ -110,6 +117,9 @@ contradict, or replace them.
 | --- | --- | --- | --- | --- |
 | 2026-07-22 | Not yet frozen | What kind of field will make close reading possible without predetermining the story? | Established an exploratory notebook, provisional visual grammar, and a strict separation between attention and publication. | The private corpus still needs to be assembled and encountered. |
 | 2026-07-22 | One-photo operational canary | Can the local system look at a photograph and make one non-destructive studio placement without exceeding the authorized workspace? | A privacy-validated derivative was visually reviewed; the stable local helper created one additive workspace album with one existing source membership pointer; an identical rerun was idempotent; independent read-only catalog verification confirmed the folder chain, membership, and that source records and pre-existing organization were not modified. No external upload occurred. | The new workspace album is a bounded catalog addition, so this entry does not claim the whole Photos library was unchanged. Derivatives retaining source-bearing metadata were rejected before visual review. A broad metadata adapter did not complete its one-record probe within the bounded run and remains unverified. The larger field is still unassembled, and every publication gate remains open. |
+| 2026-07-22 | Field Corpus 001 | What becomes perceptible when a large rough field is allowed to remain heterogeneous? | The 1,000-photo private field was completed and independently verified without moving pixels or private image-level records into public Git. | Completion establishes a working field, not representative coverage, factual authority, or publication readiness. |
+| 2026-07-22 | Website Select 001 | Which photographs might reduce a hiring reader's burden while preserving artistic, civic, technical, and relational depth? | A 24-photo editor-ready proposal was completed after a full-field census and individual review of the selected photographs. | Every proposed photograph still requires exact rights, consent, credit, context, crop, caption, alt-text, destination, and Jamie approval. |
+| 2026-07-26 | Oral history prompt 001 | Can one photograph make a project afterlife and stewardship transition more researchable without exposing protected context? | One privately held photograph was selected for attention and a public-safe question set was opened for Jamie. | The image, locator, People associations, exact metadata, and Jamie's not-yet-received recollection remain outside this record. No claim or publication state changed. |
 
 Future entries should be additive and dated. They may summarize a private
 encounter without exposing filenames, locators, people labels, raw metadata, or
@@ -158,7 +168,10 @@ collaborator knowledge, preserve counterevidence, and resolve agency and credit
 scope. A photograph alone cannot establish identity, consent, authorship,
 causation, endorsement, or the complete meaning of an event.
 
-No research leads have yet been produced from the private field.
+The first governed lead asks about a scene provisionally associated with KC
+Town Hall's stewardship afterlife. See
+[Oral history prompt 001](oral-history-stewardship-afterlife-001.md). The lead
+is an invitation to recollection and corroboration, not a factual claim.
 
 ## Operational canary boundary
 
@@ -216,8 +229,9 @@ cannot close these gates.
 
 ## Next pass
 
-Assemble the private rough-draft field without mutating source records or
-pre-existing organization. Create only additive membership pointers inside the
-authorized workspace. Then record a dated, public-safe account of what the
-first encounter made newly visible, what remained uncertain, and which bounded
-question should organize the next pass.
+Receive Jamie's response to the first oral-history prompt, distinguish
+recollection from visible observation, and return to corroborating records and
+collaborator knowledge. Continue private close readings without mutating source
+records or pre-existing organization. Create only additive membership pointers
+inside the authorized workspace, and record only dated public-safe changes in
+understanding here.
