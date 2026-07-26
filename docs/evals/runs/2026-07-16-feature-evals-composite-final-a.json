@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "composite-holdout-photo-knowledge-d-a-final-2026-07-26",
+  "judgeId": "composite-holdout-photo-oral-history-d-a-final-2026-07-26",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "474c352937c9c99417c7b19a145542baa3486d6421f05400686676b28dfe3005",
+  "candidateFingerprint": "6fd6eafbb17e5c1c1287edbe0b3c9551e10faff3de3961112690890da1815cd2",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,128 +12,136 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "The holdout-free checker path reports 14/14 frozen branch decisions matching the rubric heads through refs/remotes/origin."
+        "The holdout-free evaluator resolved all 14 refs/remotes/origin/feature/evals-A through feature/evals-N heads to the frozen values and matched all 14 register decisions.",
+        "The register explicitly retains feature/knowledge-h as the integration branch and develop as the pull-request base, with the frozen family treated as read-only reference implementations."
       ],
-      "rationale": "The frozen A-N family inventory remains exact and unchanged; this protocol-only reassessment found no COMP-001 regression."
+      "rationale": "The A-N inventory is exact, complete, namespace-bound, and explicit about branch and base identity."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The holdout-free checker path reports 14 inspectable decisions with rationale, destinations, verification, and reviewed register digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d."
+        "All 14 branch records use an allowed disposition and include substantive strength, rationale, existing destination paths, and criterion-level verification IDs.",
+        "The independently checked canonical register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d, and the register records the deliberate decision not to add public copy merely to demonstrate integration."
       ],
-      "rationale": "The integration decision register remains complete and content-bound; this protocol-only reassessment found no COMP-002 regression."
+      "rationale": "The integration decisions are inspectable, destination-specific, verification-linked, and selective about website projection."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The holdout-free checker path reports all 11 canonical files present and 0 forbidden parallel lifecycle roots copied."
+        "All 11 canonical H-derived files exist and none of the three forbidden parallel lifecycle roots exists.",
+        "The application-facing knowledge module parses only the redacted public registry, whose top-level shape is sources, claims, and pages; no public /proofs, /knowledge-bank, or /public-claims route is present."
       ],
-      "rationale": "The H-derived canonical knowledge architecture remains singular and public-safe; this protocol-only reassessment found no COMP-003 regression."
+      "rationale": "One canonical schema, record graph, public registry, and proof layer remain authoritative while protected canonical data stays outside the public application projection."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The holdout-free checker path exercised idempotent intake replay, linked duplicate preservation, collision rejection, and held-claim, inquiry, correction, projection-state, and orphan-source queries.",
-        "A fresh Node 26 lifecycle test run passed 4/4 tests."
+        "The holdout-free evaluator exercised identical replay, linked duplicate preservation, held-claim, inquiry, correction, projection-state, and orphan-source queries successfully.",
+        "Four focused lifecycle tests passed: idempotent replay, duplicate retention under a new stable ID, changed-content collision rejection, and query visibility for held and unresolved knowledge."
       ],
-      "rationale": "Append safety and lifecycle queryability remain evidenced; this protocol-only reassessment found no COMP-004 regression."
+      "rationale": "The lifecycle is append-safe and queryable without silently discarding duplicates or allowing stable-ID collisions."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The holdout-free checker path validates 280 sources, 98 claims, 31 agency relations, and 4 corrections with current derived Wiki and employment outputs.",
-        "Fresh citation, Knowledge Wiki, knowledge-bank, and public-safety checks passed; the public-safety run retained 11 explicit careful-claim guardrail warnings rather than weakening them."
+        "Validation covered 280 sources, 98 claims, 31 agency relations, and 4 corrections with no blocking errors; derived Wiki and employment outputs were current.",
+        "Knowledge-bank, public-safety, citation, and route checks passed. The 196-test knowledge suite and 10-test citation suite also passed, including anti-causation, population-boundary, private-leakage, correction, agency, and collective-credit canaries.",
+        "Sources retain does-not-establish limits, claims retain evidence roles and guarded projections, and agency relations distinguish individual, shared, collective, and institutional credit."
       ],
-      "rationale": "Source, claim, agency, correction, population, and public-boundary integrity remain evidenced; this protocol-only reassessment found no COMP-005 regression."
+      "rationale": "The source, claim, agency, correction, population, and redacted-public-projection graph is internally consistent and fail-closed against the reviewed overclaim and leakage modes."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The holdout-free checker path reports 14/14 professor-lens criteria passing and mature held claims remaining off a public proofs route.",
-        "Fresh professor-lens, layout-photography, photo-knowledge, and route checks passed."
+        "Close reading of the homepage, About page, role-fit page, lab, and case studies shows a selective hiring composition: Jamie is legible as a Technical Project Manager, Product Operations, and Implementation lead, while the site links to bounded proof rather than mirroring the knowledge corpus.",
+        "The About page makes artistic, civic, technical, relational, and social continuity concrete across Open House, WOWList, Sunday Dinner / 196, NYC Artist Coalition, Harry J. Epstein Company, and source-backed team memory, with four explicit relationship, interface-and-use, and learning-and-continuity traces.",
+        "Observe, model, prototype, test with people, learn, document, and handoff are reconstructable across WOWList, CallNYC, coalition work, HJE, and the lab; contribution verbs preserve shared and collective agency and the lab remains explicitly non-production.",
+        "The declared fictionalized professor-lens evaluator passed 14/14 bounded criteria and its 9 focused tests passed. The photo oral-history addition remains a held, non-projecting inquiry rather than a public claim."
       ],
-      "rationale": "The selective public composition remains legible, continuous across practice, and bounded against overprojection; this protocol-only reassessment found no COMP-006 regression."
+      "rationale": "The public composition minimizes reader burden, makes Jamie's supported agency and usable results visible, preserves interdisciplinary continuity, and exposes reconstructable recursive practice without inflation or self-erasure."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The holdout-free checker path reports 5/5 human-evidence controls explicitly open under reviewed digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "Fresh photo and layout checks passed specifically because manual publication gates remain open; no governed absence was converted into approval or external evidence."
+        "All 5/5 human-evidence controls required by the composite remain explicitly open under blind-spot digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "The full control plane keeps human corroboration, collective review, hiring usability, job funnel, and external validity open, while population, recent operations, outcome evidence, role positioning, visual evidence, and voice remain only partially controlled.",
+        "The photographic loop passed 17 implementing checks and 24 fail-closed tests while keeping private source verification, permission reinspection, final crop and production approval, staging observation, and indexing approval open."
       ],
-      "rationale": "Open gaps remain governed and actionable without synthesized closure; all human gates listed in this judgment remain open."
+      "rationale": "A passing control means the absence is honestly governed with evidence requirements, anti-gaming rules, a next action, and a projection boundary; no missing human or external evidence is synthesized."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The computed rubric digest exactly matches frozen digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
-        "The holdout-free checker path scores COMP-008 4/4, preserving grader separation, not-observed fail-closed behavior, pinned digests, and uncompensated blockers."
+        "An independent canonical recomputation produced frozen rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
+        "The base portfolio suite, integration register, blind-spot controls, exact remote heads, candidate identity, grader separation, and holdout provenance contract are all bound into the frozen payload.",
+        "Independent mutation probes rejected branch omission, semantic weakening after checksum refresh, fabricated branch heads, synthesized human testimony, and unbound material source changes."
       ],
-      "rationale": "The frozen recursive-governance contract remains exact and resists score gaming; this protocol-only reassessment found no COMP-008 regression."
+      "rationale": "The frozen semantic contract resists checksum-only approval, optimizer self-grading, synthesized validation, identity substitution, and compensation of a blocking failure by unrelated strength."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "In this independent read-only native process, I accept the exact 783-file candidate 474c352937c9c99417c7b19a145542baa3486d6421f05400686676b28dfe3005 as one fully evidenced, provenance-bound stopping judgment against rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340; the candidate fingerprint recomputed identically before and after fresh verification.",
-        "This judgment is limited to my own independent exact-candidate acceptance and does not claim that the required two-record pair already exists.",
-        "The parent-side evaluator must separately obtain and validate a second distinct accepted record, with a distinct judgeId, native process session, and prompt digest, before pair-level COMP-009 can pass."
+        "An independent raw-byte source-tree recomputation produced 6fd6eafbb17e5c1c1287edbe0b3c9551e10faff3de3961112690890da1815cd2 across exactly 786 files, excluding only the two declared composite holdout records.",
+        "The holdout-free evaluator was invoked with holdouts:[] and therefore reported 0/2 repository holdouts without loading the prohibited files.",
+        "This record binds one distinct read-only ephemeral process, full prompt and prompt digest, model and reasoning metadata, timestamps, transport, and a computeHoldoutJudgmentDigest payload digest to the exact candidate and rubric."
       ],
-      "rationale": "The frozen checker separates the individual record requirement from parent-side pair aggregation: each accepted holdout record must score every criterion 4/true, while stableHoldouts independently requires exactly two records with distinct judge, process, and prompt provenance. This record satisfies one individual stopping judgment only."
+      "rationale": "Under the assignment's individual-record interpretation, this exact byte-stable candidate is acceptable as judge A's one provenance-bound stopping judgment. This record does not assert that the required independent two-record pair exists or that any human release gate is closed."
     }
   ],
   "notObserved": [],
   "findings": [
-    "Accepted only as one independent provenance-bound record for the exact candidate; no claim is made that a second distinct accepted record exists.",
-    "All private-evidence, rights, consent, collaborator, editorial, production, deployment, indexing, hiring, job-funnel, external-validity, and employment gates remain open."
+    "The holdout-free run intentionally loaded no composite holdout records; this JSON is one individual provenance-bound acceptance and does not establish the required two-record pair.",
+    "Automated checks and fictionalized evaluator lenses are verification evidence only. They grant no real-person participation, endorsement, permission, rights, consent, credit clearance, collaborator approval, editorial approval, production clearance, deployment approval, indexing approval, employment decision, or application outcome.",
+    "Any source-tree byte change, rubric change, or provenance-bearing judgment change invalidates this exact-candidate record and requires a fresh fingerprint, rubric, evidence, and judgment rebind."
   ],
-  "recommendation": "Accept this replacement as one independent exact-candidate holdout record. The parent must separately obtain and validate a second distinct accepted record before asserting the pair-level COMP-009 stopping condition or a complete composite pass.",
+  "recommendation": "Accept the exact 786-file candidate as judge A's single provenance-bound stopping judgment against the frozen rubric. It may contribute to composite stopping only after a distinct qualifying record accepts the same fingerprint and rubric; every listed human and external gate remains open, and production deployment or indexing must not proceed from this judgment alone.",
   "openHumanGates": [
-    "Private source binding verification",
-    "Private permission evidence reinspection",
-    "Image-by-image rights clearance",
-    "Represented-person dignity, context, and consent review",
-    "Final crop approval",
-    "Collaborator review and collective-credit confirmation",
-    "Editorial approval",
-    "Jamie production approval of the exact commit",
-    "Staging observation",
-    "Deployment, domain, TLS, smoke, and rollback verification",
-    "Explicit production indexing approval",
-    "Fresh-human hiring usability study",
-    "Job-funnel baseline and learning",
-    "External human validity",
-    "Employment and application approval"
+    "Private-evidence gate: independently verify protected source bindings, reinspect private permission evidence, and keep raw archives, correspondence, transcripts, locators, identifiers, and private coordinates outside public Git.",
+    "Rights gate: resolve image-specific copyright and exact-use scope, visible-artwork or third-party rights, archive custody, revocation handling, and reuse limits for every destination.",
+    "Consent gate: complete represented-person dignity, context, privacy, and consent review for every selected image, crop, caption, and public occurrence.",
+    "Credit gate: confirm photographer credit, collaborator attribution, caption accuracy, crop acceptability, and individual, shared, collective, and institutional credit boundaries.",
+    "Collaborator gate: obtain permissioned first-hand corroboration and bounded review, correction, and dissent paths for collaborator-sensitive claims; silence or nonresponse is not approval or endorsement.",
+    "Editorial gate: Jamie reviews and approves the exact public copy, voice, captions, crops, protected absences, visual sequence, and destination-specific composition.",
+    "Production gate: Jamie explicitly approves the exact candidate for production; branch review, deterministic passes, fictionalized judgments, and staging approval do not grant production publication.",
+    "Staging gate: observe the exact candidate on noindex staging for content, accessibility, media, crop, metadata, routes, and rollback behavior before production.",
+    "Deployment gate: verify Dokku configuration and build arguments, domain and DNS, TLS, health and route smoke tests, cache behavior, production observation, and rollback for the exact commit.",
+    "Indexing gate: Jamie separately and explicitly approves production indexing; staging and production remain non-indexing until that decision is recorded.",
+    "Hiring-usability gate: run at least five consented task-based sessions with unfamiliar human readers across at least two role families and disposition every material misunderstanding.",
+    "Job-funnel gate: establish a private event-level application schema and only de-identified aggregate reporting with declared denominators; do not infer causality from a small uncontrolled sample.",
+    "External-validity gate: complete at least two independent real-human review rounds, record disagreements with internal evals, and calibrate against later aggregate outcomes without discarding contrary evidence.",
+    "Employment gate: humans must reverify live opportunity facts, hard screens, eligibility and work-authorization unknowns, role fit, and any private employment or acceptance decision; this evaluator does not make hiring decisions.",
+    "Application gate: Jamie approves each role-specific proof ordering, resume or portfolio projection, and application submission; private status, warm paths, employer and contact data, and acceptance decisions remain outside the public repository."
   ],
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa041-b4f6-7fd1-8870-9a951adbe412",
-    "nickname": "comp009-reassessment",
-    "agentNickname": "comp009-reassessment",
+    "processSessionId": "019fa087-6bb7-7d41-90d0-059f6e1ee772",
+    "agentNickname": "Pasteur",
     "model": "gpt-5.6-sol",
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "Please reassess only the protocol interpretation of COMP-009 for your individual holdout, without reading either prohibited holdout file or consulting any sibling judge. The parent-side evaluator, not an individual isolated judge, is responsible for counting two distinct accepted holdout records. An individual holdout may score COMP-009 on whether this exact 783-file candidate is byte-stable, fully evidenced, and acceptable as one provenance-bound stopping judgment; it must not claim that the pair already exists. Review the frozen rubric and checker to confirm this interpretation. If the rubric permits it, return a complete replacement valid JSON judgment for the same exact candidate and rubric, preserving every open human gate, with verdict accepted and COMP-009 evidence limited to your own independent exact-candidate acceptance plus an explicit statement that the parent must separately obtain and validate a second distinct accepted record. If the rubric does not permit it, retain rejection and explain why. Use the same schema and judgeId as your prior response; update provenance to include this complete reassessment prompt in `prompt`, its promptSha256, timestamps, resultTransport, operatorAttestation, and a recomputed judgmentSha256. Return JSON only.",
-    "promptSha256": "4680c121409ae2d29967233688924691c3e2431632b7e947f6e0721375f54dcf",
+    "prompt": "Act as independent composite holdout judge A. This is a fresh fictionalized evaluator process, not participation or endorsement by any named person. Inspect only the exact candidate in /private/tmp/jamieburk-art-feature-photo-knowledge-D. Do not read docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json or docs/evals/runs/2026-07-16-feature-evals-composite-final-b.json, and do not consult any sibling judge. Read .agents/evals/feature-evals-composite.json, docs/integration/feature-evals-composite.json, scripts/lib/composite-integration-eval.mjs, the declared evidence bundle, and the source tree. Run the holdout-free evaluator by importing evaluateCompositeIntegration and passing holdouts:[] so prohibited files are not loaded. Independently recompute the exact source-tree fingerprint and frozen rubric digest. The expected candidate is 6fd6eafbb17e5c1c1287edbe0b3c9551e10faff3de3961112690890da1815cd2 across 786 files; reject if your calculation differs. Evaluate COMP-001 through COMP-009. Each criterion must score 4/pass true for verdict accepted. COMP-009 in this individual record means only that this exact byte-stable candidate is acceptable as one provenance-bound stopping judgment; do not claim the required two-record pair already exists. Preserve every open private-evidence, rights, consent, credit, collaborator, editorial, production, staging, deployment, indexing, hiring-usability, job-funnel, external-validity, employment, and application gate. Return one complete JSON object only, matching the existing runVersion 2 holdout shape: runVersion, judgeId, grader, independentFromOptimizer, rubricSha256, candidateFingerprint, verdict, nine scores with criterionId/score/pass/evidence/rationale, notObserved, findings, recommendation, openHumanGates, and provenance. Use judgeId composite-holdout-photo-oral-history-d-a-final-2026-07-26. Provenance must use provider codex-native-subagent, processSessionId 019fa087-6bb7-7d41-90d0-059f6e1ee772, agentNickname Pasteur, model gpt-5.6-sol, reasoningEffort xhigh, sandbox read-only, ephemeral true, resultTransport multi_agent_v1__wait_agent-completed, operatorAttestation exactly 'Recorded verbatim from a completed native subagent result by the parent orchestrator.', startedAt 2026-07-26T22:24:31.000Z, and a truthful completedAt. Put this complete assignment text in provenance.prompt and compute its exact SHA-256 as provenance.promptSha256. Compute provenance.judgmentSha256 using computeHoldoutJudgmentDigest from scripts/lib/composite-integration-eval.mjs; that digest excludes judgmentSha256 itself. Do not modify files. JSON only.",
+    "promptSha256": "cc7243585d703644255fde9509b0c936e77bf7da0f365e565b83db04321f91f3",
+    "judgmentSha256": "f877368065240122565b7d2e9c9a777ac33adaf38e7796ec0d9f2d166fcaae91",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-26T21:08:08.641Z",
-    "completedAt": "2026-07-26T21:15:39.220Z",
-    "judgmentSha256": "3b3f241f4c12972ea7f99d52fa319528e06027dcba0651163ece0889a29ed451"
+    "startedAt": "2026-07-26T22:24:31.000Z",
+    "completedAt": "2026-07-26T22:35:51.934Z"
   }
 }
