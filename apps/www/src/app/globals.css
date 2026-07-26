@@ -272,7 +272,7 @@ h2 {
   }
 
   .jb-hero-credit {
-    color: color-mix(in srgb, var(--jb-oil-ink) 58%, transparent);
+    color: color-mix(in srgb, var(--jb-oil-ink) 72%, transparent);
   }
 }
 

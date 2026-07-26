@@ -1,6 +1,6 @@
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 export const accessibilityEvidencePath = "docs/qa/evals-H/responsive-route-matrix.json";
@@ -25,7 +25,15 @@ export const canonicalAccessibilityViewports = Object.freeze([360, 375, 768, 128
 export function computePublicSurfaceFingerprint(repoRoot) {
   const files = execFileSync(
     "git",
-    ["ls-files", "apps/www", "package.json", "package-lock.json"],
+    [
+      "ls-files",
+      "--cached",
+      "--others",
+      "--exclude-standard",
+      "apps/www",
+      "package.json",
+      "package-lock.json"
+    ],
     { cwd: repoRoot, encoding: "utf8" }
   )
     .trim()
@@ -40,6 +48,20 @@ export function computePublicSurfaceFingerprint(repoRoot) {
     hash.update("\0");
   }
   return { fingerprint: hash.digest("hex"), fileCount: files.length };
+}
+
+function hashFile(repoRoot, relativePath) {
+  if (
+    typeof relativePath !== "string" ||
+    path.isAbsolute(relativePath) ||
+    relativePath.includes("..") ||
+    !existsSync(path.join(repoRoot, relativePath))
+  ) {
+    return null;
+  }
+  return createHash("sha256")
+    .update(readFileSync(path.join(repoRoot, relativePath)))
+    .digest("hex");
 }
 
 export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride) {
@@ -71,8 +93,24 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       row.failedRequests.length === 0 &&
       row.h1Count === 1 &&
       row.mainPresent === true &&
+      row.skipLinkPresent === true &&
+      row.skipLinkWasFirst === true &&
+      row.keyboardTargetsObserved >= 3 &&
+      row.keyboardDistinctTargets >= 3 &&
+      row.keyboardInvisibleTargets === 0 &&
+      row.keyboardTrapDetected === false &&
       /^4\./.test(row.axeVersion)
   );
+  const screenshotsPass =
+    Array.isArray(report.screenshots) &&
+    report.screenshots.length === 6 &&
+    report.screenshots.every(
+      (screenshot) =>
+        canonicalAccessibilityRoutes.includes(screenshot.path) &&
+        canonicalAccessibilityViewports.includes(screenshot.viewport) &&
+        /^[a-f0-9]{64}$/.test(screenshot.sha256) &&
+        hashFile(repoRoot, screenshot.file) === screenshot.sha256
+    );
   const summaryPasses =
     report.summary.rowCount === expectedRows &&
     report.summary.axeViolations === 0 &&
@@ -83,6 +121,9 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.summary.failedRequests === 0 &&
     report.summary.nonSuccessResponses === 0 &&
     report.summary.invalidHeadingOrLandmarkRows === 0 &&
+    report.summary.keyboardRowsChecked === expectedRows &&
+    report.summary.keyboardRowsPassed === expectedRows &&
+    report.summary.screenshotsCaptured === 6 &&
     report.summary.lazyImagesObserved > 0 &&
     report.summary.unloadedImagesBeforeScroll > 0 &&
     report.summary.lazyImageFollowUpPerformed === true &&
@@ -96,6 +137,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       canonicalCoverage &&
       completeMatrix &&
       rowsPass &&
+      screenshotsPass &&
       summaryPasses &&
       report.publicSurfaceFingerprint === current.fingerprint &&
       report.publicSurfaceFileCount === current.fileCount,
@@ -104,6 +146,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     canonicalCoverage,
     completeMatrix,
     rowsPass,
+    screenshotsPass,
     summaryPasses
   };
 }

@@ -60,3 +60,15 @@ test("the lowest shared ink opacity remains AA on paper", () => {
   assert.ok(ink && paper);
   assert.ok(contrast(blend(ink, paper, 0.62), paper) >= 4.5);
 });
+
+test("the mobile hero credit remains AA on its paper band", () => {
+  const tokens = readFileSync(path.join(repoRoot, "apps/www/src/styles/tokens.css"), "utf8");
+  const styles = readFileSync(path.join(repoRoot, "apps/www/src/app/globals.css"), "utf8");
+  const ink = tokens.match(/--jb-oil-ink:\s*(#[0-9a-f]{6})/i)?.[1];
+  const paper = tokens.match(/--jb-oil-white:\s*(#[0-9a-f]{6})/i)?.[1];
+  const creditOpacity = styles.match(
+    /\.jb-hero-credit\s*\{\s*color:\s*color-mix\(in srgb,\s*var\(--jb-oil-ink\)\s*(\d+)%/m
+  )?.[1];
+  assert.ok(ink && paper && creditOpacity);
+  assert.ok(contrast(blend(ink, paper, Number(creditOpacity) / 100), paper) >= 4.5);
+});
