@@ -493,6 +493,7 @@ function branchHistoryPublicSafety(root = repoRoot) {
     ],
     { cwd: root, encoding: "utf8", maxBuffer: 50 * 1024 * 1024 }
   );
+  const addedContent = addedPatchContent(patch);
   const patterns = [
     { pattern: /\/(?:Users|Volumes)\//, label: "absolute private path" },
     {
@@ -506,8 +507,16 @@ function branchHistoryPublicSafety(root = repoRoot) {
     { pattern: /private[_]preview_sha256/i, label: "private preview fingerprint" }
   ];
   return patterns
-    .filter(({ pattern }) => pattern.test(patch))
+    .filter(({ pattern }) => pattern.test(addedContent))
     .map(({ label }) => `introduced branch history contains ${label}`);
+}
+
+export function addedPatchContent(patch) {
+  return String(patch)
+    .split(/\r?\n/)
+    .filter((line) => line.startsWith("+") && !line.startsWith("+++"))
+    .map((line) => line.slice(1))
+    .join("\n");
 }
 
 export function quoteUntrustedSourceText(text) {

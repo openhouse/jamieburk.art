@@ -5,6 +5,7 @@ import path from "node:path";
 import test from "node:test";
 
 import {
+  addedPatchContent,
   canary,
   parseWebpDimensions,
   quoteUntrustedSourceText,
@@ -17,6 +18,20 @@ import {
   validateRenderReceipt,
   validateRollbackDrill
 } from "./photo-knowledge.mjs";
+
+test("branch-history safety scans additions but not removed legacy locators", () => {
+  const uuid = ["7f963a7a", "aaad", "456b", "b12b", "7f34b35d51cf"].join("-");
+  const patch = [
+    "diff --git a/example.md b/example.md",
+    "--- a/example.md",
+    "+++ b/example.md",
+    `-https://example.test/${uuid}`,
+    "+Archived source is no longer live."
+  ].join("\n");
+
+  assert.doesNotMatch(addedPatchContent(patch), new RegExp(uuid));
+  assert.match(addedPatchContent(`${patch}\n+${uuid}`), new RegExp(uuid));
+});
 
 test("the complete East River canary passes deterministic validation", () => {
   const result = validateCanary();
