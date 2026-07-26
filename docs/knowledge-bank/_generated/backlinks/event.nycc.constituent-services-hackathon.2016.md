@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to New York City Council constituent-services hackathon
 
-**Source commit:** `3d2872dbe8708146f3edc0e589586d69b462a4ce`
-**Generation time:** 2026-07-23T18:43:04-04:00
+**Source commit:** `5ff0668bc0794441c8be17933bc81d24acf0c7f4`
+**Generation time:** 2026-07-26T09:11:56-04:00
 **Source fingerprint:** `f6f17275c542fcf5d0ca5e725b5006e3eca44f5c45216deb66084b6110b83716`
 
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `prose_link` (markdown)
