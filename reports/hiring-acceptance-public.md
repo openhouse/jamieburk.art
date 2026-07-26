@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `79aaaf168f00a18ce9bbf20c9c59e8fc4c90b1db`
+**Candidate commit:** `860b2db944ab16d764a782a8ebc5083e356bae08`
 **Portfolio snapshot:** `d0c2128cdc0de5675fb359cfa60882035e58cf55052e9211b4dbd5776610a5b9`
-**Role-context hash:** `a83e7df574fd0b4919ac034b134d42887231428efa4d9902e1a82395dc75a29d`
+**Role-context hash:** `30c9cecf21eb63fd922c1004c0ab807b70f9f1158997d4655d44d56528840db3`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -45,11 +45,11 @@
 
 ### Benepass - Product Operations Manager
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `not-live`
 - Critical signals observed: 3/4
 - All signals observed: 3/4
-- Opportunity status live: yes
-- Role context current at candidate time: yes
+- Opportunity status live: no
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.benepass.launch-readiness`: **observed** on `/work/technical-operations`
