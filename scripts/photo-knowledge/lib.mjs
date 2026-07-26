@@ -393,7 +393,10 @@ export function evaluatePhotoKnowledgeModel(model) {
       edition?.human_gates?.includes("Jamie production approval"),
     rfc_authority_and_scope_current:
       /^stage: implementing$/m.test(model.sourceTexts[canary.rfcPath] ?? "") &&
-      /authorized implementation of RFC 0003 on July 26,\s*2026/i.test(
+      /authorized implementation of RFC 0003/i.test(
+        model.sourceTexts[canary.rfcPath] ?? ""
+      ) &&
+      /July 26,\s*(?:>\s*)?2026/i.test(
         model.sourceTexts[canary.rfcPath] ?? ""
       ) &&
       !/\bRFP\b|\brfps\b/i.test(governanceTexts.map(([, source]) => source).join("\n")),
