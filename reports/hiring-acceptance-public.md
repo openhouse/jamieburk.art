@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `fbf861a86b5cd85de6264f7e54d3cd8b17ae993d`
+**Candidate commit:** `2b58f5bc35047273b08b2b34d0bd4c8d47cf65b4`
 **Portfolio snapshot:** `44a86476eac253c22480bd92b9cc5b9c0d8a9797aa435db01cb5c0c40a70ccfe`
-**Role-context hash:** `e609dbecd2231409330b4a992e1c2fa0cb8786cf463c1e4c9bfa450e0fcd3d90`
+**Role-context hash:** `69feb671e08db40b5aa72b8e4701b6ef2400dfc7e3a523684009d652a21510da`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -14,11 +14,11 @@
 
 ### NYC OTI - Technical Operations Manager 782369
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `deterministic-ready-for-human-review`
 - Critical signals observed: 4/4
 - All signals observed: 5/6
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.oti.delivery-coordination`: **observed** on `/work/technical-operations`
@@ -34,7 +34,7 @@
 - Critical signals observed: 2/4
 - All signals observed: 2/5
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.aclu.discovery-and-synthesis`: **observed** on `/work/technical-operations`
@@ -45,10 +45,10 @@
 
 ### Benepass - Product Operations Manager
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `not-live`
 - Critical signals observed: 3/4
 - All signals observed: 3/4
-- Opportunity status live: yes
+- Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
@@ -59,11 +59,11 @@
 
 ### CodePath - Senior Program Manager, Claude Corps
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `deterministic-ready-for-human-review`
 - Critical signals observed: 4/4
 - All signals observed: 5/5
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.codepath.master-program-plan`: **observed** on `/work/technical-operations`
@@ -78,7 +78,7 @@
 - Critical signals observed: 1/3
 - All signals observed: 2/4
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
@@ -92,7 +92,7 @@
 - Critical signals observed: 2/3
 - All signals observed: 3/4
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.permitflow.physical-public-systems`: **observed** on `/work/kc-town-hall`, `/work/callnyc`
