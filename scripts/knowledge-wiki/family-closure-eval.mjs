@@ -257,9 +257,9 @@ export function evaluateFamilyClosure(options = {}) {
     /git diff --check\s+HEAD\^\.\.\.HEAD/.test(workflow) &&
     /run:\s*npm run check/.test(workflow);
 
-  const rfpContractEnforced =
-    packageManifest.scripts?.["check:rfps"] === "node scripts/check-rfps.mjs" &&
-    packageManifest.scripts?.check?.includes("npm run check:rfps");
+  const rfcContractEnforced =
+    packageManifest.scripts?.["check:rfcs"] === "node scripts/check-rfcs.mjs" &&
+    packageManifest.scripts?.check?.includes("npm run check:rfcs");
 
   let generatedOutputsLocaleIndependent = options.localeDeterminismOverride;
   if (generatedOutputsLocaleIndependent === undefined) {
@@ -310,7 +310,7 @@ export function evaluateFamilyClosure(options = {}) {
     family_public_projection_still_selective: publicProjectionStillSelective,
     family_public_safety_preserved: publicSafetyPreserved,
     merge_readiness_ci_enforced: mergeReadinessCiEnforced,
-    rfp_contract_enforced: rfpContractEnforced,
+    rfc_contract_enforced: rfcContractEnforced,
     generated_outputs_locale_independent: generatedOutputsLocaleIndependent,
     diff_hygiene_clean: diffHygieneClean
   };

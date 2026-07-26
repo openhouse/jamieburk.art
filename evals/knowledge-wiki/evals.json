@@ -166,7 +166,7 @@
         "family_public_projection_still_selective",
         "family_public_safety_preserved",
         "merge_readiness_ci_enforced",
-        "rfp_contract_enforced",
+        "rfc_contract_enforced",
         "generated_outputs_locale_independent",
         "diff_hygiene_clean"
       ]
@@ -192,7 +192,7 @@
         "photo_encounters_are_additive",
         "photo_publication_gates_human",
         "no_public_photo_route",
-        "photo_rfp_boundary_preserved",
+        "photo_rfc_boundary_preserved",
         "photo_source_non_mutation_preserved",
         "residency_proposal_not_contract",
         "artistic_divergence_protected",

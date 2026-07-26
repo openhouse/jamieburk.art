@@ -69,9 +69,9 @@ public registry; `npm run test:citations` runs citation regressions; and
 ## Repository Feature Proposals
 
 Substantial architecture, governance, privacy-boundary, or cross-system changes
-begin as versioned proposals under [`rfps/`](./rfps/README.md). Merging a
+begin as versioned proposals under [`rfcs/`](./rfcs/README.md). Merging a
 proposal in `proposed` or `exploring` state preserves the idea for discussion; it
-does not authorize implementation. Run `npm run check:rfps` to validate the RFP
+does not authorize implementation. Run `npm run check:rfcs` to validate the RFC
 index, metadata, required design sections, and public-safety basics. The root
 `npm run check` command and pull-request CI both enforce this contract.
 

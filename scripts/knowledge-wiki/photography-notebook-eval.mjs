@@ -93,7 +93,7 @@ export function evaluatePhotographyNotebook(options = {}) {
   const fieldSource = source(manifest.fieldId);
   const proposalSource = source(manifest.proposalId);
   const combinedSource = `${notebookSource}\n${fieldSource}\n${proposalSource}`;
-  const rfpSource = readFileSync(path.join(repoRoot, manifest.rfpPath), "utf8");
+  const rfcSource = readFileSync(path.join(repoRoot, manifest.rfcPath), "utf8");
 
   const contentBindingsCurrent =
     sha256(notebookSource) === manifest.contentBindings.notebook &&
@@ -260,9 +260,9 @@ export function evaluatePhotographyNotebook(options = {}) {
     notebook?.projection?.status !== "active" &&
     field?.projection?.status !== "active";
 
-  const rfpBoundaryPreserved =
-    /^stage: proposed$/m.test(rfpSource) &&
-    /RFP remains proposed/i.test(notebookSource) &&
+  const rfcBoundaryPreserved =
+    /^stage: proposed$/m.test(rfcSource) &&
+    /RFC remains proposed/i.test(notebookSource) &&
     /does not authorize archive access,\s+private-workspace implementation, image ingestion, or publication/i.test(notebookSource);
 
   const nextPassDoesNotMutateSource =
@@ -352,7 +352,7 @@ export function evaluatePhotographyNotebook(options = {}) {
     photo_encounters_are_additive: encounterHistoryIsAdditive,
     photo_publication_gates_human: publicationGatesRemainHuman,
     no_public_photo_route: noPublicPhotoRoute,
-    photo_rfp_boundary_preserved: rfpBoundaryPreserved,
+    photo_rfc_boundary_preserved: rfcBoundaryPreserved,
     photo_source_non_mutation_preserved: nextPassDoesNotMutateSource,
     residency_proposal_not_contract: proposalIsNotAContract,
     artistic_divergence_protected: artisticDivergenceProtected,

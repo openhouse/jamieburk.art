@@ -45,8 +45,8 @@ a portfolio composition. Everything written here is still in a public
 repository and must be safe to quote in a newspaper.
 
 The governing proposal is
-[RFP 0002: Lifetime Photo Archive Fieldwork and Selective Publication](../../../../rfps/0002-lifetime-photo-archive-fieldwork.md).
-The RFP remains proposed. This notebook does not authorize archive access,
+[RFC 0002: Lifetime Photo Archive Fieldwork and Selective Publication](../../../../rfcs/0002-lifetime-photo-archive-fieldwork.md).
+The RFC remains proposed. This notebook does not authorize archive access,
 private-workspace implementation, image ingestion, or publication.
 
 ## Working agreement
