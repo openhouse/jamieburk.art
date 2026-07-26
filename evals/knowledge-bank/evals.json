@@ -256,7 +256,7 @@
       "expectedSourceCount": 17,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "f8061855fc0d467ccbe6862b9b8272ff2405fc9f8ee8cd72691628d6a69a16fd",
+      "approvedContentSha256": "d2c3cc1443f7ddb1e5008f11094fb0bc2bc9b21e2167ac4aa5033553d51539e9",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",
@@ -419,7 +419,7 @@
       "expectedSourceCount": 6,
       "expectedClaimCount": 2,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "c0f786efb1778b126226029acb18a4c84610ef3194448ad840e32b6de3d5738e",
+      "approvedContentSha256": "3df04c1e3d60308852ebfa127db428042927078bef2005f41e0eb00303602501",
       "intakeIds": [
         "INTAKE-196-RESIDENCY-ACCEPTANCE-WORKFLOW-2023",
         "INTAKE-SUNDAY-DINNER-OPERATIONS-SHEET-2025",

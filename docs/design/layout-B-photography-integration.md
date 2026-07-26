@@ -52,3 +52,15 @@ dimensions, route placement, responsive behavior, alt text, captions, and
 absence of private locators. It may not approve production publication,
 photographer credit, rights, consent, collective attribution, or the reader's
 human response.
+
+## Review-Lock Rebinding
+
+The Layout B candidate changes one reviewed Sunday Dinner / 196 sentence from
+past tense to a continuing-practice description and reduces three Lab corner
+radii without changing their source-backed claims or publication boundaries.
+The archive, Shared Drive, personal-event, and KC Town Hall shared-surface locks
+were rebound on 2026-07-26 only after six independent professor-lens holdouts
+accepted the exact public candidate. This records candidate integrity; it does
+not supply Jamie approval, collaborator review, photo rights, consent, final
+editorial selection, deployment approval, indexing approval, hiring validation,
+or employment outcomes.
