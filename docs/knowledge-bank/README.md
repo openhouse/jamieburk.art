@@ -31,6 +31,10 @@ relations:
     href: notebooks/photography/README.md
     context: Public-safe working notebook for exploratory photographic fieldwork.
   - type: related_to
+    target: index.knowledge-wiki.photography
+    href: indexes/photography.md
+    context: Governed photo assets, exact occurrences, corrections, recollections, and human release gates.
+  - type: related_to
     target: index.knowledge-wiki.project-lineages
     href: indexes/project-lineages.md
     context: Bounded inheritance, adaptation, and divergence across projects.
@@ -91,6 +95,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Photography field notebook](notebooks/photography/README.md): exploratory
   questions, sequence sketches, visual patterns, counterreadings, and dated
   public-safe changes in understanding.
+- [Photography knowledge loop](indexes/photography.md): first-class photo
+  records, exact page occurrences, credit corrections, recollections, protected
+  absence, and release gates implemented through the East River canary.
 - [Project lineages](indexes/project-lineages.md): inheritance, adaptation, and
   divergence without retrospective inevitability.
 - [Decision records](indexes/decision-records.md): bounded reconstructions that

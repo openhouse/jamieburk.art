@@ -53,7 +53,8 @@ export function Hero() {
         </div>
       </div>
       <p className="jb-hero-caption">
-        {photo.caption} {photo.credit}
+        <span className="block">{photo.caption}</span>
+        <span className="mt-1 block text-white/92">{photo.credit}</span>
       </p>
     </section>
   );

@@ -1,0 +1,61 @@
+{
+  "suite": "living-photographic-knowledge-loop",
+  "version": 1,
+  "principle": "Artists choose; archival production supports; the Knowledge Wiki remembers; rights govern; the portfolio composes; Jamie decides what becomes public.",
+  "hillClimbProtocol": {
+    "method": "Improve the lowest failing criterion with one bounded change, rerun every affected deterministic check and mutation test, and retain the change only when truth, privacy, credit, dignity, accessibility, and human authority do not regress.",
+    "stopRules": [
+      "Stop when the remaining decision belongs to Jamie, the photographer, a represented person, a collaborator, legal counsel, or another named human.",
+      "Stop when further retrieval is unlikely to change the current page decision.",
+      "Stop when the current composition already solves the visitor problem.",
+      "Stop when the system begins forcing the archive to explain more than the page needs."
+    ]
+  },
+  "hardGates": [
+    "no_private_locator_leakage",
+    "private_binding_opaque_and_resolvable",
+    "derivative_integrity_and_metadata_stripping",
+    "creator_credit_and_custody_distinct",
+    "permission_scope_exact_and_fail_closed",
+    "caption_assertions_source_bound",
+    "manifest_wiki_placement_alignment",
+    "revocation_and_rollback_available",
+    "protected_absence_not_auto_filled",
+    "recollection_does_not_auto_project",
+    "automated_selection_prohibited",
+    "production_and_indexing_human_gated",
+    "exact_candidate_receipt_current"
+  ],
+  "criteria": [
+    {
+      "id": "documentary_integrity",
+      "threshold": 1,
+      "description": "Creator, custody, permission, visible observation, metadata, recollection, and interpretation remain distinct and source-bound."
+    },
+    {
+      "id": "placement_coherence",
+      "threshold": 1,
+      "description": "The photograph has a distinct homepage job while Jamie's literal role and next actions remain legible."
+    },
+    {
+      "id": "artist_led_curation",
+      "threshold": 1,
+      "description": "Blind and contextual passes, a lead, a meaningful alternative, and dissent remain advisory rather than voting authority."
+    },
+    {
+      "id": "living_return",
+      "threshold": 1,
+      "description": "The occurrence can prompt a dated recollection, correction, or inquiry without automatically changing public copy."
+    },
+    {
+      "id": "selective_projection",
+      "threshold": 1,
+      "description": "One canary becomes deeply governed while the remaining public photographs stay in a declared reconciliation queue and the site remains composed."
+    },
+    {
+      "id": "teammate_reproducibility",
+      "threshold": 1,
+      "description": "A teammate can validate, report, inspect impact, test rollback, and understand the human gates without reconstructing the workflow from chat."
+    }
+  ]
+}

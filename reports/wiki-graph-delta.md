@@ -1,21 +1,143 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `cb9dd7b36538082805f12cad2a440e07e415e33b`
-**Generation time:** 2026-07-22T21:55:36-04:00
-**Source fingerprint:** `404077c2277724a0cd97abde4ca20f64519ec27106361a032596c9ea336f5ed8`
+**Source commit:** `f194002821fd76e672746a39d5de357d649ad0a6`
+**Generation time:** 2026-07-26T14:37:27-04:00
+**Source fingerprint:** `bd87d2be75f772d644c70c46bbea8412378de7dba35c37646c1acac8a50a98da`
 
-Compared with the graph artifact on `origin/develop`.
+`origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.
 
-- Nodes added: 3
+- Nodes added: 125
 - Nodes removed: 0
-- Edges added: 14
+- Edges added: 493
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 1
 
 ## Added nodes
 
+- `application.nycac.civic-product-operations`
+- `asset.photo.digital-district.001`
+- `asset.photo.east-river-manhattan-bridge.2022.001`
+- `capability.civic-cultural-technical-translation`
+- `capability.implementation-adoption-and-handoff`
+- `capability.implementation-operational-stewardship`
+- `capability.participatory-public-systems`
+- `capability.technical-operations`
+- `claim.callnyc.independent-follow-on`
+- `claim.nycac.advocacy-operating-playbook`
+- `correction.callnyc-years.2026`
+- `correction.photo.east-river-credit.2026-07`
+- `decision.callnyc.issue-pathways`
+- `decision.hje.continuity-modernization`
+- `decision.kc-town-hall.listening-fieldwork`
+- `decision.knowledge-wiki.selective-projection`
+- `decision.open-house.communal-governance`
+- `decision.photo.layout-c.home-east-river.v1`
+- `decision.photo.layout-c.resume-no-photo.v1`
+- `edition.layout-c.2026-07`
+- `evaluation.curatorial.layout-c.home-east-river.v1`
+- `evaluation.employment-context.coverage.2026-07-18`
+- `evaluation.knowledge-wiki.retrieval-tasks`
+- `evaluation.nycac.shared-folder-production.2026-07-19`
+- `event.nycc.constituent-services-hackathon.2016`
+- `index.knowledge-wiki`
+- `index.knowledge-wiki.canonical-story-bank`
+- `index.knowledge-wiki.decision-records`
+- `index.knowledge-wiki.decisions-deliverables-operational-outcomes`
+- `index.knowledge-wiki.employment-context`
+- `index.knowledge-wiki.family-closure`
+- `index.knowledge-wiki.living-archive`
+- `index.knowledge-wiki.outcomes-adoption-afterlives`
+- `index.knowledge-wiki.people-places-work`
+- `index.knowledge-wiki.photography`
 - `index.knowledge-wiki.photography-notebook`
+- `index.knowledge-wiki.pilot`
+- `index.knowledge-wiki.pressures`
+- `index.knowledge-wiki.project-lineages`
+- `index.knowledge-wiki.relational-infrastructure-atlas`
+- `index.knowledge-wiki.research-agenda-and-held-claims`
+- `index.knowledge-wiki.role-authorship-protected-absence`
+- `index.knowledge-wiki.scenes-and-places-of-work`
+- `index.knowledge-wiki.visual-evidence`
+- `index.photo-set.east-river-canoe.2022`
+- `method.collective-credit-protected-absence`
+- `method.identity-systems-as-shared-infrastructure`
+- `method.jamie-at-work`
+- `method.learning-through-making`
+- `method.maintenance-handoff-stewardship`
+- `method.participation-and-relational-infrastructure`
+- `method.photography-east-river-canary`
+- `method.situated-source-rereading`
+- `method.source-backed-team-memory`
+- `method.structure-grows-from-material`
+- `method.what-is-at-stake-for-me`
+- `opportunity.aclu.product-manager-discovery.8482872002`
+- `opportunity.asana.ai-implementation.8027437`
+- `opportunity.benepass.product-operations.7f963a7a`
+- `opportunity.codepath.claude-corps.5182020007`
+- `opportunity.nyc-oti.technical-operations-manager.782369`
+- `opportunity.permitflow.product-operations.8a6e6066`
+- `organization.nyc-artist-coalition`
+- `person.elana-gordon`
+- `person.jamie-burkart`
+- `place.small-cultural-spaces`
+- `portfolio.role-fit-referral-map`
+- `portfolio.work.callnyc`
+- `portfolio.work.technical-operations`
+- `project.callnyc`
+- `project.fair-rent-nyc`
+- `project.harry-j-epstein`
+- `project.kc-spaces-fund`
+- `project.kc-town-hall`
+- `project.let-nyc-dance`
+- `project.nter-chng`
+- `project.nyc-artist-coalition`
+- `project.office-of-nightlife-town-halls`
+- `project.save-nyc-spaces`
+- `project.sunday-dinner-196`
+- `project.talks-not-raids`
+- `project.waterways-participatory-art`
+- `project.wowlist`
+- `projection.photo.layout-c.home.east-river`
+- `research-inquiry.documented-canoe-bike-journeys`
 - `research-inquiry.photography.196-first-pass-proposal`
 - `research-inquiry.photography.field-corpus-001`
+- `research-inquiry.ucsc-installation-title`
+- `research.foundational-source-return.2026-07-19`
+- `research.interpretive-layer-source-return.2026-07-19`
+- `research.knowledge-wiki-family-closure.2026-07-19`
+- `research.nycac.shared-folder.2026-07-19`
+- `source.callnyc.source-repository`
+- `source.civichall.hackathon-announcement.2016`
+- `source.councilstat.fuller-release.2016`
+- `source.good-times.open-house.2006-06-28`
+- `source.hje.research-brief.2026-07`
+- `source.jamie.writers-voice-synthesis.2026-07`
+- `source.jobs.aclu.product-discovery.8482872002`
+- `source.jobs.asana.ai-implementation.8027437`
+- `source.jobs.benepass.product-operations.7f963a7a`
+- `source.jobs.codepath.claude-corps.5182020007`
+- `source.jobs.oti.technical-operations.782369`
+- `source.jobs.permitflow.product-operations.8a6e6066`
+- `source.kansas-city-star.raft.2007-11-15`
+- `source.kc-town-hall.cced-proposal.2019`
+- `source.knowledge-wiki.branch-a.2026-07-19`
+- `source.knowledge-wiki.branch-b.2026-07-19`
+- `source.knowledge-wiki.branch-c.2026-07-19`
+- `source.knowledge-wiki.branch-d.2026-07-19`
+- `source.knowledge-wiki.branch-e.2026-07-19`
+- `source.nter-chng.archived-homepage.2011`
+- `source.nycac.nightlife-forum-transcript.2026`
+- `source.nycac.running-minutes.2026`
+- `source.nycac.shared-folder-census.2026`
+- `source.nycc.councilstat-hackathon-post.2016`
+- `source.permission.elana-gordon.east-river.2026-07`
+- `source.photo-metadata.east-river.2022.public-safe`
+- `source.politico.callnyc.2016-03-14`
+- `source.recollection.jamie-canoe-commuting.2026-07`
+- `source.resume.jamie-burkart.2026-06-11`
+- `source.ucsc.narrative-evaluations.2004-2006`
+- `source.vault.communication-history.metadata`
+- `source.wowlist.repaired-transcript.2026`
+- `timeline.jamie-practice.2004-present`

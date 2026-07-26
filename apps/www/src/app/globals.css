@@ -166,7 +166,7 @@ h2 {
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.72rem;
   line-height: 1.4;
-  max-width: 20rem;
+  max-width: 24rem;
   position: absolute;
   right: max(1rem, calc((100vw - 1240px) / 2));
   text-align: right;
