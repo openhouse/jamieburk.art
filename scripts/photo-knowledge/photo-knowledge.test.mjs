@@ -302,10 +302,36 @@ function restorationEvidenceMap(fixture = restorationFixture()) {
   return records;
 }
 
+function restorationEvidenceVersions(records, commitOrder = 1) {
+  const evidenceIds = [
+    ...new Set(
+      restorationFixture().record.restoration_gate_reviews.flatMap(
+        (review) => review.evidence_ids
+      )
+    )
+  ];
+  return new Map(
+    evidenceIds.map((id, entryIndex) => {
+      const currentText = JSON.stringify(records.get(id));
+      return [
+        id,
+        {
+          commit: "evidence-review-commit",
+          commitOrder,
+          entryIndex,
+          text: currentText,
+          currentText
+        }
+      ];
+    })
+  );
+}
+
 function evaluateRestoration({
   recordMutation,
   decisionMutation,
   decisionHistoryFirst = false,
+  evidenceHistoryAfterDecision = false,
   recordTextMutation,
   evidenceRecordsMutation
 } = {}) {
@@ -336,15 +362,33 @@ function evaluateRestoration({
     relativePath: record.path,
     text: recordText
   };
+  const evidenceIds = [
+    ...new Set(
+      record.restoration_gate_reviews.flatMap(
+        (review) => review.evidence_ids
+      )
+    )
+  ];
+  const evidenceSourceOverrides = Object.fromEntries(
+    evidenceIds.map((id) => [id, JSON.stringify(evidenceRecords.get(id))])
+  );
+  const evidenceEntries = evidenceIds.map((id) => ({
+    commit: "evidence-review-commit",
+    relativePath: evidenceRecords.get(id).path,
+    text: evidenceSourceOverrides[id]
+  }));
   return evaluatePhotoKnowledge({
     manifest: fixture.current,
     wiki,
     sourceOverrides: {
+      ...evidenceSourceOverrides,
       [decision.decisionRecordId]: recordText
     },
     introducedHistorySources: decisionHistoryFirst
-      ? [decisionEntry, withdrawalEntry]
-      : [withdrawalEntry, decisionEntry]
+      ? [decisionEntry, withdrawalEntry, ...evidenceEntries]
+      : evidenceHistoryAfterDecision
+        ? [withdrawalEntry, decisionEntry, ...evidenceEntries]
+        : [withdrawalEntry, ...evidenceEntries, decisionEntry]
   });
 }
 
@@ -865,6 +909,8 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
     publicSurfaceFingerprint:
       fixture.responsiveEvidence.publicSurfaceFingerprint,
     recordById,
+    evidenceMaterializedVersions:
+      restorationEvidenceVersions(recordById),
     now: Date.parse("2026-07-26T23:59:59Z")
   });
   assert.equal(valid, true);
@@ -896,6 +942,8 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
       publicSurfaceFingerprint:
         fixture.responsiveEvidence.publicSurfaceFingerprint,
       recordById,
+      evidenceMaterializedVersions:
+        restorationEvidenceVersions(recordById),
       now: Date.parse("2026-07-26T23:59:59Z")
     }),
     false
@@ -931,6 +979,8 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
       publicSurfaceFingerprint:
         fixture.responsiveEvidence.publicSurfaceFingerprint,
       recordById: weakenedRecordById,
+      evidenceMaterializedVersions:
+        restorationEvidenceVersions(weakenedRecordById),
       now: Date.parse("2026-07-26T23:59:59Z")
     }),
     false
@@ -1031,6 +1081,8 @@ test("restoration rejects unresolved or later evidence", () => {
       publicSurfaceFingerprint:
         fixture.responsiveEvidence.publicSurfaceFingerprint,
       recordById: unresolvedRecords,
+      evidenceMaterializedVersions:
+        restorationEvidenceVersions(unresolvedRecords),
       now: Date.parse("2026-07-26T23:59:59Z")
     }),
     false
@@ -1063,8 +1115,20 @@ test("restoration rejects unresolved or later evidence", () => {
       publicSurfaceFingerprint:
         fixture.responsiveEvidence.publicSurfaceFingerprint,
       recordById: laterRecords,
+      evidenceMaterializedVersions:
+        restorationEvidenceVersions(laterRecords),
       now: Date.parse("2026-07-27T23:59:59Z")
     }),
+    false
+  );
+});
+
+test("backdated evidence materialized after the decision fails closed", () => {
+  const result = evaluateRestoration({
+    evidenceHistoryAfterDecision: true
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
     false
   );
 });

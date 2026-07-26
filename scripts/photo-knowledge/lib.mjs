@@ -592,6 +592,7 @@ export function validateRestorationDecision({
   expectedOccurrenceIds,
   publicSurfaceFingerprint,
   recordById,
+  evidenceMaterializedVersions,
   now = Date.now()
 }) {
   if (!decision || !record || !withdrawal || !materializedVersion) {
@@ -634,7 +635,11 @@ export function validateRestorationDecision({
         new Set(review.evidence_ids).size === review.evidence_ids.length &&
         review.evidence_ids.every((id) => {
           const evidenceRecord = recordById?.get(id);
+          const evidenceVersion = evidenceMaterializedVersions?.get(id);
           return (
+            evidenceVersion &&
+            evidenceVersion.commitOrder <= materializedVersion.commitOrder &&
+            evidenceVersion.text === evidenceVersion.currentText &&
             policy.evidenceKinds.includes(evidenceRecord?.kind) &&
             restorationEvidenceSupportsGate(
               review.gate,
@@ -1295,6 +1300,63 @@ export function evaluatePhotoKnowledge(options = {}) {
             right.entryIndex - left.entryIndex
         )
         .find((version) => version.text === recordText);
+      const evidenceIds = [
+        ...new Set(
+          (record?.restoration_gate_reviews ?? [])
+            .flatMap((review) => review.evidence_ids ?? [])
+        )
+      ];
+      const evidenceMaterializedVersions = new Map(
+        evidenceIds.map((evidenceId) => {
+          const evidenceRecord = byId.get(evidenceId);
+          const currentText = source(evidenceId);
+          let version = [
+            ...(historicalWithdrawalState.pathVersions.get(
+              evidenceRecord?.path
+            ) ?? [])
+          ]
+            .filter(
+              (candidate) =>
+                candidate.commitOrder <= (materializedVersion?.commitOrder ?? -1)
+            )
+            .sort(
+              (left, right) =>
+                right.commitOrder - left.commitOrder ||
+                right.entryIndex - left.entryIndex
+            )
+            .find((candidate) => candidate.text === currentText);
+          if (!version && evidenceRecord?.path) {
+            try {
+              const baselineText = execFileSync(
+                "git",
+                ["show", `${introducedHistoryBase}:${evidenceRecord.path}`],
+                {
+                  cwd: repoRoot,
+                  encoding: "utf8",
+                  maxBuffer: 20 * 1024 * 1024,
+                  stdio: ["ignore", "pipe", "ignore"]
+                }
+              );
+              if (baselineText === currentText) {
+                version = {
+                  commit: introducedHistoryBase,
+                  commitOrder: -1,
+                  entryIndex: -1,
+                  text: baselineText
+                };
+              }
+            } catch {
+              // Evidence introduced after the base must appear in path history.
+            }
+          }
+          return [
+            evidenceId,
+            version
+              ? { ...version, currentText }
+              : undefined
+          ];
+        })
+      );
       return validateRestorationDecision({
         decision,
         record,
@@ -1305,6 +1367,7 @@ export function evaluatePhotoKnowledge(options = {}) {
         publicSurfaceFingerprint:
           responsiveEvidence.publicSurfaceFingerprint,
         recordById: byId,
+        evidenceMaterializedVersions,
         now: options.now ?? Date.now()
       });
     });
