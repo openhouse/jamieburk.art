@@ -98,6 +98,17 @@ const requiredRestorationGates = [
   "deployment",
   "indexing"
 ];
+const authorityRegistryPurpose =
+  "Identify the human reviewers whose authority counts for a photo gate " +
+  "without allowing a restoration decision or its evidence records to " +
+  "redefine them.";
+const authorityRegistryDenials = [
+  "production publication approval",
+  "deployment approval",
+  "indexing approval",
+  "a broader copyright license",
+  "consent for a materially different use"
+];
 const restorationGatePolicy = {
   creator: {
     authority: "creator-or-rights-holder",
@@ -397,6 +408,54 @@ function sameReviewerSet(left, right) {
     JSON.stringify([...right].sort(compareText));
 }
 
+function exactKeys(value, expected) {
+  return (
+    value &&
+    typeof value === "object" &&
+    !Array.isArray(value) &&
+    JSON.stringify(Object.keys(value).sort(compareText)) ===
+      JSON.stringify([...expected].sort(compareText))
+  );
+}
+
+function authorityRegistryPolicyBound(registry) {
+  return (
+    exactKeys(registry, ["version", "policy", "photos"]) &&
+    registry.version === 1 &&
+    exactKeys(registry.policy, [
+      "purpose",
+      "updatesRequire",
+      "doesNotEstablish"
+    ]) &&
+    registry.policy.purpose === authorityRegistryPurpose &&
+    registry.policy.updatesRequire === "Jamie Burkart review" &&
+    JSON.stringify(registry.policy.doesNotEstablish) ===
+      JSON.stringify(authorityRegistryDenials) &&
+    Array.isArray(registry.photos) &&
+    registry.photos.length > 0 &&
+    new Set(registry.photos.map((entry) => entry.photoId)).size ===
+      registry.photos.length &&
+    registry.photos.every(
+      (entry) =>
+        exactKeys(entry, [
+          "photoId",
+          "status",
+          "attestedBy",
+          "attestedAt",
+          "basisRecordIds",
+          "gateReviewers"
+        ]) &&
+        entry.status === "human-attested" &&
+        entry.attestedBy === "Jamie Burkart" &&
+        !Number.isNaN(Date.parse(entry.attestedAt ?? "")) &&
+        Array.isArray(entry.basisRecordIds) &&
+        entry.basisRecordIds.length > 0 &&
+        new Set(entry.basisRecordIds).size === entry.basisRecordIds.length &&
+        exactKeys(entry.gateReviewers, requiredRestorationGates)
+    )
+  );
+}
+
 function preferredCreators(record) {
   const creators = [];
   if (typeof record?.creator === "string") creators.push(record.creator);
@@ -643,7 +702,7 @@ export function validateRestorationDecision({
   );
   const authorityAttestedAt = Date.parse(authorityEntry?.attestedAt ?? "");
   const authorityBound =
-    authorityRegistry?.policy?.updatesRequire === "Jamie Burkart review" &&
+    authorityRegistryPolicyBound(authorityRegistry) &&
     authorityEntry?.status === "human-attested" &&
     authorityEntry?.attestedBy === "Jamie Burkart" &&
     !Number.isNaN(authorityAttestedAt) &&
@@ -1602,11 +1661,7 @@ export function evaluatePhotoKnowledge(options = {}) {
     (entry) => entry.photoId === east?.id
   );
   const authorityRegistryBounded =
-    authorityRegistry.version === 1 &&
-    authorityRegistry.policy?.updatesRequire === "Jamie Burkart review" &&
-    authorityRegistry.policy?.doesNotEstablish?.includes(
-      "production publication approval"
-    ) &&
+    authorityRegistryPolicyBound(authorityRegistry) &&
     eastAuthority?.status === "human-attested" &&
     eastAuthority?.attestedBy === "Jamie Burkart" &&
     eastAuthority?.basisRecordIds?.includes(east.id) &&

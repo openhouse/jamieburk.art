@@ -1277,6 +1277,40 @@ test("authority attestation materialized after the decision fails closed", () =>
   );
 });
 
+test("authority registry cannot grant publication authority", () => {
+  const mutations = [
+    (registry) => {
+      registry.policy.purpose =
+        "Approve production publication, deployment, and indexing.";
+    },
+    (registry) => {
+      registry.policy.grants = [
+        "production publication approval",
+        "deployment approval",
+        "indexing approval"
+      ];
+    },
+    (registry) => {
+      registry.policy.doesNotEstablish = [
+        "production publication approval"
+      ];
+    }
+  ];
+  for (const mutate of mutations) {
+    const result = evaluateRestoration({
+      authorityRegistryMutation: mutate
+    });
+    assert.equal(
+      result.checks.photo_authority_registry_bounded,
+      false
+    );
+    assert.equal(
+      result.checks.photo_historical_revocation_monotonic,
+      false
+    );
+  }
+});
+
 test("the full Wiki schema rejects contradictory restoration semantics", () => {
   const fixture = restorationFixture();
   assert.equal(wikiRecordSchema.safeParse(fixture.record).success, true);
