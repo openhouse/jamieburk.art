@@ -382,6 +382,91 @@ function canonicalJson(value) {
   return value;
 }
 
+function restorationEvidenceSupportsGate(gate, record, photoId) {
+  const relevant =
+    record?.id === photoId ||
+    record?.relations?.some((relation) => relation.target === photoId);
+  if (!relevant) return false;
+  switch (gate) {
+    case "creator":
+      return (
+        (
+          record.kind === "source" &&
+          record.permission_state === "cleared-bounded" &&
+          typeof record.creator === "string"
+        ) ||
+        (
+          record.kind === "asset" &&
+          record.creator_statements?.some(
+            (statement) =>
+              statement.rank === "preferred" &&
+              typeof statement.value === "string"
+          )
+        )
+      );
+    case "rights":
+      return (
+        (
+          record.kind === "source" &&
+          record.permission_state === "cleared-bounded"
+        ) ||
+        (record.kind === "asset" && record.rights_state === "cleared")
+      );
+    case "consent":
+    case "represented-person":
+      return record.kind === "asset" && record.consent_state === "cleared";
+    case "exact-credit":
+      return (
+        (
+          record.kind === "source" &&
+          record.permission_state === "cleared-bounded" &&
+          typeof record.creator === "string"
+        ) ||
+        (
+          record.kind === "asset" &&
+          record.creator_statements?.some(
+            (statement) => statement.rank === "preferred"
+          )
+        )
+      );
+    case "crop":
+      return (
+        record.kind === "evaluation" &&
+        record.panel_authority === "advisory-only" &&
+        typeof record.lead === "string" &&
+        typeof record.dissent === "string"
+      );
+    case "caption":
+      return record.kind === "asset" && typeof record.caption === "string";
+    case "editorial":
+      return (
+        record.kind === "evaluation" &&
+        record.panel_authority === "advisory-only" &&
+        typeof record.lead === "string"
+      );
+    case "production":
+      return (
+        record.kind === "projection" &&
+        record.production_state === "open" &&
+        record.projection_status === "pending"
+      );
+    case "deployment":
+      return (
+        record.kind === "projection" &&
+        record.production_state === "open" &&
+        record.projection_status === "pending"
+      );
+    case "indexing":
+      return (
+        record.kind === "projection" &&
+        record.indexing_state === "open" &&
+        record.projection_status === "pending"
+      );
+    default:
+      return false;
+  }
+}
+
 export function validateRestorationDecision({
   decision,
   record,
@@ -427,14 +512,13 @@ export function validateRestorationDecision({
         new Set(review.evidence_ids).size === review.evidence_ids.length &&
         review.evidence_ids.every((id) => {
           const evidenceRecord = recordById?.get(id);
-          const relevant =
-            evidenceRecord?.id === decision.photoId ||
-            evidenceRecord?.relations?.some(
-              (relation) => relation.target === decision.photoId
-            );
           return (
             policy.evidenceKinds.includes(evidenceRecord?.kind) &&
-            relevant
+            restorationEvidenceSupportsGate(
+              review.gate,
+              evidenceRecord,
+              decision.photoId
+            )
           );
         }) &&
         !Number.isNaN(reviewedAt) &&

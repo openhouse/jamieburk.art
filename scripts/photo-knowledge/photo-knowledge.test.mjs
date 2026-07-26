@@ -85,10 +85,11 @@ function restorationFixture() {
     rights: ["source.permission.elana-gordon.east-river-portfolio"],
     consent: [restorationPhotoId],
     "exact-credit": [
-      "source.permission.elana-gordon.east-river-portfolio"
+      "source.permission.elana-gordon.east-river-portfolio",
+      restorationPhotoId
     ],
     crop: ["evaluation.photo-curation.home-east-river.2026-07-26"],
-    caption: ["evaluation.photo-curation.home-east-river.2026-07-26"],
+    caption: [restorationPhotoId],
     "represented-person": [restorationPhotoId],
     editorial: ["evaluation.photo-curation.home-east-river.2026-07-26"],
     production: ["edition.portfolio.layout-b.2026-07"],
@@ -796,6 +797,41 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
       publicSurfaceFingerprint:
         fixture.responsiveEvidence.publicSurfaceFingerprint,
       recordById,
+      now: Date.parse("2026-07-26T23:59:59Z")
+    }),
+    false
+  );
+
+  const weakenedRecordById = new Map(recordById);
+  weakenedRecordById.set(
+    "source.permission.elana-gordon.east-river-portfolio",
+    {
+      ...recordById.get(
+        "source.permission.elana-gordon.east-river-portfolio"
+      ),
+      permission_state: "review-needed"
+    }
+  );
+  assert.equal(
+    validateRestorationDecision({
+      decision: fixture.decision,
+      record: fixture.record,
+      recordText: fixture.recordText,
+      withdrawal: {
+        photoId: restorationPhotoId,
+        withdrawalPlanId: restorationPlanId,
+        implementedAt: restorationImplementedAt,
+        commitOrder: 0
+      },
+      materializedVersion: {
+        commitOrder: 1,
+        text: fixture.recordText
+      },
+      expectedOccurrenceIds:
+        fixture.record.restoration_occurrence_ids,
+      publicSurfaceFingerprint:
+        fixture.responsiveEvidence.publicSurfaceFingerprint,
+      recordById: weakenedRecordById,
       now: Date.parse("2026-07-26T23:59:59Z")
     }),
     false
