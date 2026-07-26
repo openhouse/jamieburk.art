@@ -29,6 +29,15 @@ test("an unverified lazy-image follow-up fails closed", () => {
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
 
+test("an overlapping photo credit occurrence fails closed", () => {
+  const report = structuredClone(current.report);
+  report.focusedVisualReview.occurrences[0].captionOverlapsPrimaryCopy = true;
+  report.focusedVisualReview.passed = false;
+  const result = validateResponsiveAccessibilityEvidence(defaultRepoRoot, report);
+  assert.equal(result.focusedVisualReviewPasses, false);
+  assert.equal(result.passed, false);
+});
+
 test("a coordinated canonical-route substitution fails closed", () => {
   const report = structuredClone(current.report);
   report.routes[0] = "/noncanonical-replacement";

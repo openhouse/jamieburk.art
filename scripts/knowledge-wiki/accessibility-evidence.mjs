@@ -87,6 +87,22 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.summary.unloadedImagesBeforeScroll > 0 &&
     report.summary.lazyImageFollowUpPerformed === true &&
     report.summary.allImagesLoadedAfterScroll === true;
+  const focusedVisualReviewPasses =
+    report.focusedVisualReview?.route === "/" &&
+    report.focusedVisualReview?.passed === true &&
+    report.focusedVisualReview?.occurrences?.length ===
+      canonicalAccessibilityViewports.length &&
+    report.focusedVisualReview.occurrences.every(
+      (occurrence) =>
+        canonicalAccessibilityViewports.includes(occurrence.viewport) &&
+        occurrence.captionPresent === true &&
+        occurrence.captionPartCount === 2 &&
+        occurrence.captionAndCreditSeparated === true &&
+        occurrence.computedFontSizePx >=
+          report.focusedVisualReview.minimumCaptionFontSizePx &&
+        occurrence.captionWithinViewport === true &&
+        occurrence.captionOverlapsPrimaryCopy === false
+    );
 
   return {
     passed:
@@ -97,6 +113,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       completeMatrix &&
       rowsPass &&
       summaryPasses &&
+      focusedVisualReviewPasses &&
       report.publicSurfaceFingerprint === current.fingerprint &&
       report.publicSurfaceFileCount === current.fileCount,
     report,
@@ -104,6 +121,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     canonicalCoverage,
     completeMatrix,
     rowsPass,
-    summaryPasses
+    summaryPasses,
+    focusedVisualReviewPasses
   };
 }
