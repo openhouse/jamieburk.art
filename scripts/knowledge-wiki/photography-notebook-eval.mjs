@@ -40,6 +40,8 @@ const canaryCompletionPattern =
   /(?:\bone-photo (?:operational )?canary\b.{0,140}\b(?:completes?|completed|proves?|establishes?)\b.{0,100}\b(?:field corpus 001|1,000-photo(?:graph)? field|archive-wide|publication readiness|publication ready)\b|\b(?:field corpus 001|1,000-photo(?:graph)? field)\b.{0,100}\b(?:completed|assembled|frozen|ingested)\b.{0,80}\b(?:by|through)\b.{0,40}\bone-photo (?:operational )?canary\b)/i;
 const oralHistoryAutoPromotionPattern =
   /\b(?:oral history|recollection|Jamie['’]s response|response)\b.{0,120}\b(?:automatically|directly|without review)\b.{0,100}\b(?:verified claim|claim|approves? publication|publication approval|public caption|rights clearance)\b/i;
+const protectedCircumstanceDisclosurePattern =
+  /\b(?:family|medical|health|financial|legal|housing|relationship|personal)\s+(?:crisis|emergency|hardship|conflict|breakdown)\b/i;
 const unauthorizedCatalogMutationPattern =
   /(?:(?<!not )\b(?:edit|move|delete|retag|reorganize|modify|change)\w*\b.{0,100}\b(?:source asset|original|pre-existing (?:album|collection|organization)|people association|favorite|metadata)\b|\b(?:outside|beyond)\b.{0,60}\bauthorized workspace\b.{0,60}\b(?:write|album|membership|collection)\b|\b(?:album|catalog|membership)\s+write\b.{0,60}\b(?:outside|beyond)\b.{0,60}\bauthorized workspace\b)/i;
 
@@ -390,7 +392,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     !embeddedMediaPattern.test(oralHistorySource) &&
     !sourceIdentifierPattern.test(oralHistorySource) &&
     !gpsPayloadPattern.test(oralHistorySource) &&
-    !derivedPrivatePayloadPattern.test(oralHistorySource);
+    !derivedPrivatePayloadPattern.test(oralHistorySource) &&
+    !protectedCircumstanceDisclosurePattern.test(oralHistorySource);
 
   const oralHistoryNotPublication =
     oralHistory?.projection?.status === "hold" &&

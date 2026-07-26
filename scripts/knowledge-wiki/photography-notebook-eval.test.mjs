@@ -129,6 +129,18 @@ test("oral-history private locators fail closed", () => {
   assert.equal(evaluation.checks.oral_history_privacy_fails_closed, false);
 });
 
+test("oral-history public notes cannot name a protected circumstance category", () => {
+  const id =
+    "research-inquiry.photography.oral-history-stewardship-afterlife-001";
+  const oralHistorySource = `${sourceFor(id)}\n\nThe transition followed a family crisis.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ oralHistory: oralHistorySource }),
+    sourceOverrides: { [id]: oralHistorySource }
+  });
+  assert.equal(evaluation.checks.oral_history_privacy_fails_closed, false);
+});
+
 test("an embedded oral-history photograph fails the public notebook boundary", () => {
   const id =
     "research-inquiry.photography.oral-history-stewardship-afterlife-001";

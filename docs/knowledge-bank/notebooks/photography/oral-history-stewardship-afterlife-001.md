@@ -54,10 +54,11 @@ not a conclusion established by the photograph.
 ## Why ask now
 
 The existing KC Town Hall record distinguishes Phase One delivery from the
-later mission-aligned transition and keeps the surrounding family crisis
-private. This photograph may help Jamie describe the professional substance of
-the handoff: relationship, stewardship, building knowledge, continuity, and
-what another organization was prepared to carry forward.
+later mission-aligned transition while keeping unrelated private context
+outside the public record. This photograph may help Jamie describe the
+professional substance of the handoff: relationship, stewardship, building
+knowledge, continuity, and what another organization was prepared to carry
+forward.
 
 The useful question is not whether the photograph proves a success. It is what
 Jamie remembers that can guide a return to records, collaborator knowledge,
