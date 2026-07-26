@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Wanted pages
 
-**Source commit:** `a345240851a4a5ec701b234811c9f688f98ece73`
-**Generation time:** 2026-07-26T10:54:42-04:00
+**Source commit:** `cc04ebfd37e758de7636a2757974bfb53fb7ef7b`
+**Generation time:** 2026-07-26T14:55:39-04:00
 **Source fingerprint:** `fca64f8666fa9da6da50095c5d2735e20b5964e01144d0bbc1092918198dab12`
 
 - `source.nycac.founding-and-handoff.2016-2018` - NYC Artist Coalition founding and handoff source set; requested by `index.knowledge-wiki.living-archive`: Needed to deepen formation chronology and collaborator-specific credit with public-safe originals.
