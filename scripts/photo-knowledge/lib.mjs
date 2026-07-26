@@ -382,11 +382,51 @@ function canonicalJson(value) {
   return value;
 }
 
-function restorationEvidenceSupportsGate(gate, record, photoId) {
+function sameReviewerSet(left, right) {
+  if (!Array.isArray(left) || !Array.isArray(right)) return false;
+  if (
+    left.length === 0 ||
+    new Set(left).size !== left.length ||
+    new Set(right).size !== right.length
+  ) {
+    return false;
+  }
+  return JSON.stringify([...left].sort(compareText)) ===
+    JSON.stringify([...right].sort(compareText));
+}
+
+function restorationEvidenceSupportsGate(
+  gate,
+  record,
+  photoId,
+  gateReview,
+  decidedAt
+) {
   const relevant =
     record?.id === photoId ||
     record?.relations?.some((relation) => relation.target === photoId);
   if (!relevant) return false;
+  const recordReviewedAt = Date.parse(record.last_reviewed ?? "");
+  if (Number.isNaN(recordReviewedAt) || recordReviewedAt > decidedAt) {
+    return false;
+  }
+  const evidenceReview = record.photo_gate_reviews?.find(
+    (review) =>
+      review.photo_id === photoId &&
+      review.gate === gate &&
+      review.status === gateReview.status &&
+      review.authority === gateReview.authority &&
+      review.reviewed_at === gateReview.reviewed_at &&
+      sameReviewerSet(review.reviewed_by, gateReview.reviewed_by)
+  );
+  const evidenceReviewedAt = Date.parse(evidenceReview?.reviewed_at ?? "");
+  if (
+    !evidenceReview ||
+    Number.isNaN(evidenceReviewedAt) ||
+    evidenceReviewedAt > decidedAt
+  ) {
+    return false;
+  }
   switch (gate) {
     case "creator":
       return (
@@ -414,9 +454,18 @@ function restorationEvidenceSupportsGate(gate, record, photoId) {
       );
     case "consent":
     case "represented-person":
-      return record.kind === "asset" && record.consent_state === "cleared";
+      return (
+        record.kind === "asset" &&
+        (
+          (gateReview.status === "cleared" &&
+            record.consent_state === "cleared") ||
+          (gateReview.status === "not-applicable" &&
+            record.consent_state === "not-applicable")
+        )
+      );
     case "exact-credit":
       return (
+        record.credit_review_state === "cleared" &&
         (
           record.kind === "source" &&
           record.permission_state === "cleared-bounded" &&
@@ -433,16 +482,23 @@ function restorationEvidenceSupportsGate(gate, record, photoId) {
       return (
         record.kind === "evaluation" &&
         record.panel_authority === "advisory-only" &&
-        typeof record.lead === "string" &&
-        typeof record.dissent === "string"
+        record.review_resolution === "resolved" &&
+        record.crop_review_state === "cleared" &&
+        record.projection?.status === "pending"
       );
     case "caption":
-      return record.kind === "asset" && typeof record.caption === "string";
+      return (
+        record.kind === "asset" &&
+        typeof record.caption === "string" &&
+        record.caption_review_state === "cleared"
+      );
     case "editorial":
       return (
         record.kind === "evaluation" &&
         record.panel_authority === "advisory-only" &&
-        typeof record.lead === "string"
+        record.review_resolution === "resolved" &&
+        record.editorial_review_state === "cleared" &&
+        record.projection?.status === "pending"
       );
     case "production":
       return (
@@ -505,8 +561,13 @@ export function validateRestorationDecision({
       return (
         policy?.statuses.includes(review.status) &&
         review.authority === policy.authority &&
-        typeof review.reviewed_by === "string" &&
-        review.reviewed_by.trim().length > 0 &&
+        Array.isArray(review.reviewed_by) &&
+        review.reviewed_by.length > 0 &&
+        review.reviewed_by.every(
+          (reviewer) =>
+            typeof reviewer === "string" && reviewer.trim().length > 0
+        ) &&
+        new Set(review.reviewed_by).size === review.reviewed_by.length &&
         Array.isArray(review.evidence_ids) &&
         review.evidence_ids.length > 0 &&
         new Set(review.evidence_ids).size === review.evidence_ids.length &&
@@ -517,7 +578,9 @@ export function validateRestorationDecision({
             restorationEvidenceSupportsGate(
               review.gate,
               evidenceRecord,
-              decision.photoId
+              decision.photoId,
+              review,
+              decidedAt
             )
           );
         }) &&

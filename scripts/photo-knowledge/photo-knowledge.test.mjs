@@ -27,11 +27,12 @@ function manifest() {
 
 const restorationPhotoId = "photo.east-river-manhattan-bridge.2022";
 const restorationPlanId = `withdrawal.${restorationPhotoId}`;
-const restorationRecordId = "decision.photo.restoration.east-river.2026-07-25";
+const restorationRecordId = "decision.photo.restoration.east-river.2026-07-26";
 const restorationRecordPath =
-  "docs/knowledge-bank/decisions/photo-restoration-east-river-2026-07-25.md";
+  "docs/knowledge-bank/decisions/photo-restoration-east-river-2026-07-26.md";
 const restorationImplementedAt = "2026-07-24T10:00:00Z";
-const restorationDecidedAt = "2026-07-25T15:00:00Z";
+const restorationDecidedAt = "2026-07-26T20:00:00Z";
+const restorationReviewedAt = "2026-07-26T12:00:00Z";
 const restorationGates = [
   "creator",
   "rights",
@@ -68,7 +69,7 @@ function restorationFixture() {
     )
   );
   const decision = {
-    id: `restoration.${restorationPhotoId}.2026-07-25`,
+    id: `restoration.${restorationPhotoId}.2026-07-26`,
     photoId: restorationPhotoId,
     withdrawalPlanId: restorationPlanId,
     decisionRecordId: restorationRecordId,
@@ -97,17 +98,57 @@ function restorationFixture() {
     indexing: ["edition.portfolio.layout-b.2026-07"]
   };
   const gatePolicy = {
-    creator: ["cleared", "creator-or-rights-holder"],
-    rights: ["cleared", "creator-or-rights-holder"],
-    consent: ["cleared", "represented-person-or-consent-authority"],
-    "exact-credit": ["cleared", "creator-and-editorial-owner"],
-    crop: ["cleared", "creator-and-editorial-owner"],
-    caption: ["cleared", "creator-and-editorial-owner"],
-    "represented-person": ["cleared", "represented-person"],
-    editorial: ["cleared", "portfolio-owner"],
-    production: ["open-separated-gate", "production-owner"],
-    deployment: ["open-separated-gate", "deployment-owner"],
-    indexing: ["open-separated-gate", "indexing-owner"]
+    creator: [
+      "cleared",
+      "creator-or-rights-holder",
+      ["Elana Gordon"]
+    ],
+    rights: [
+      "cleared",
+      "creator-or-rights-holder",
+      ["Elana Gordon"]
+    ],
+    consent: [
+      "cleared",
+      "represented-person-or-consent-authority",
+      ["Jamie Burkart"]
+    ],
+    "exact-credit": [
+      "cleared",
+      "creator-and-editorial-owner",
+      ["Elana Gordon", "Jamie Burkart"]
+    ],
+    crop: [
+      "cleared",
+      "creator-and-editorial-owner",
+      ["Elana Gordon", "Jamie Burkart"]
+    ],
+    caption: [
+      "cleared",
+      "creator-and-editorial-owner",
+      ["Elana Gordon", "Jamie Burkart"]
+    ],
+    "represented-person": [
+      "cleared",
+      "represented-person",
+      ["Jamie Burkart"]
+    ],
+    editorial: ["cleared", "portfolio-owner", ["Jamie Burkart"]],
+    production: [
+      "open-separated-gate",
+      "production-owner",
+      ["Jamie Burkart"]
+    ],
+    deployment: [
+      "open-separated-gate",
+      "deployment-owner",
+      ["Jamie Burkart"]
+    ],
+    indexing: [
+      "open-separated-gate",
+      "indexing-owner",
+      ["Jamie Burkart"]
+    ]
   };
   const record = {
     id: restorationRecordId,
@@ -116,8 +157,8 @@ function restorationFixture() {
     status: "governed-open",
     visibility: "public-safe",
     sensitivity: "moderate",
-    last_reviewed: "2026-07-25",
-    review_by: "2026-10-25",
+    last_reviewed: "2026-07-26",
+    review_by: "2026-10-26",
     path: restorationRecordPath,
     canonical_path: restorationRecordPath,
     summary:
@@ -172,16 +213,13 @@ function restorationFixture() {
     restoration_human_reviewed: true,
     restoration_approval_statement: approvalStatement,
     restoration_gate_reviews: restorationGates.map((gate) => {
-      const [status, authority] = gatePolicy[gate];
+      const [status, authority, reviewedBy] = gatePolicy[gate];
       return {
         gate,
         status,
         authority,
-        reviewed_by:
-          ["creator", "rights"].includes(gate)
-            ? "Elana Gordon"
-            : "Jamie Burkart",
-        reviewed_at: "2026-07-25T12:00:00Z",
+        reviewed_by: reviewedBy,
+        reviewed_at: restorationReviewedAt,
         evidence_ids: gateEvidence[gate]
       };
     }),
@@ -207,6 +245,61 @@ function restorationFixture() {
   };
 }
 
+function restorationEvidenceMap(fixture = restorationFixture()) {
+  const records = new Map(compileWiki().byId);
+  const reviews = new Map(
+    fixture.record.restoration_gate_reviews.map((review) => [
+      review.gate,
+      {
+        photo_id: restorationPhotoId,
+        gate: review.gate,
+        status: review.status,
+        authority: review.authority,
+        reviewed_by: review.reviewed_by,
+        reviewed_at: review.reviewed_at,
+        scope: "Exact working-review restoration occurrence."
+      }
+    ])
+  );
+  const withReviews = (id, gates, additions = {}) => {
+    records.set(id, {
+      ...records.get(id),
+      ...additions,
+      photo_gate_reviews: gates.map((gate) => reviews.get(gate))
+    });
+  };
+  withReviews(
+    "source.permission.elana-gordon.east-river-portfolio",
+    ["creator", "rights", "exact-credit"],
+    { credit_review_state: "cleared" }
+  );
+  withReviews(
+    restorationPhotoId,
+    ["consent", "exact-credit", "caption", "represented-person"],
+    {
+      credit_review_state: "cleared",
+      caption_review_state: "cleared"
+    }
+  );
+  withReviews(
+    "evaluation.photo-curation.home-east-river.2026-07-26",
+    ["crop", "editorial"],
+    {
+      review_resolution: "resolved",
+      crop_review_state: "cleared",
+      editorial_review_state: "cleared",
+      projection: { status: "pending", surfaces: [] },
+      dissent:
+        "Resolved for the exact working-review occurrence; production remains open."
+    }
+  );
+  withReviews(
+    "edition.portfolio.layout-b.2026-07",
+    ["production", "deployment", "indexing"]
+  );
+  return records;
+}
+
 function evaluateRestoration({
   recordMutation,
   decisionMutation,
@@ -225,6 +318,7 @@ function evaluateRestoration({
   };
   fixture.current.restorationDecisions.push(decision);
   const wiki = compileWiki();
+  wiki.byId = restorationEvidenceMap(fixture);
   wiki.byId.set(decision.decisionRecordId, record);
   const withdrawalEntry = {
     commit: "withdrawal-commit",
@@ -746,7 +840,7 @@ test("restoration must postdate the implemented withdrawal", () => {
 
 test("restoration binds every governed gate and regenerated occurrence evidence", () => {
   const fixture = restorationFixture();
-  const recordById = compileWiki().byId;
+  const recordById = restorationEvidenceMap(fixture);
   const valid = validateRestorationDecision({
     decision: fixture.decision,
     record: fixture.record,
@@ -833,6 +927,92 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
         fixture.responsiveEvidence.publicSurfaceFingerprint,
       recordById: weakenedRecordById,
       now: Date.parse("2026-07-26T23:59:59Z")
+    }),
+    false
+  );
+});
+
+test("restoration rejects arbitrary reviewer identities", () => {
+  const fixture = restorationFixture();
+  const arbitraryReviewer = {
+    ...fixture.record,
+    restoration_gate_reviews: fixture.record.restoration_gate_reviews.map(
+      (review) => ({
+        ...review,
+        reviewed_by: ["Automated evaluator"]
+      })
+    )
+  };
+  const result = evaluateRestoration({
+    recordMutation: {
+      restoration_gate_reviews: arbitraryReviewer.restoration_gate_reviews
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("restoration rejects unresolved or later evidence", () => {
+  const fixture = restorationFixture();
+  const unresolvedRecords = restorationEvidenceMap(fixture);
+  const evaluationId =
+    "evaluation.photo-curation.home-east-river.2026-07-26";
+  unresolvedRecords.set(evaluationId, compileWiki().byId.get(evaluationId));
+  assert.equal(
+    validateRestorationDecision({
+      decision: fixture.decision,
+      record: fixture.record,
+      recordText: fixture.recordText,
+      withdrawal: {
+        photoId: restorationPhotoId,
+        withdrawalPlanId: restorationPlanId,
+        implementedAt: restorationImplementedAt,
+        commitOrder: 0
+      },
+      materializedVersion: {
+        commitOrder: 1,
+        text: fixture.recordText
+      },
+      expectedOccurrenceIds:
+        fixture.record.restoration_occurrence_ids,
+      publicSurfaceFingerprint:
+        fixture.responsiveEvidence.publicSurfaceFingerprint,
+      recordById: unresolvedRecords,
+      now: Date.parse("2026-07-26T23:59:59Z")
+    }),
+    false
+  );
+
+  const laterRecords = restorationEvidenceMap(fixture);
+  const sourceId =
+    "source.permission.elana-gordon.east-river-portfolio";
+  laterRecords.set(sourceId, {
+    ...laterRecords.get(sourceId),
+    last_reviewed: "2026-07-27"
+  });
+  assert.equal(
+    validateRestorationDecision({
+      decision: fixture.decision,
+      record: fixture.record,
+      recordText: fixture.recordText,
+      withdrawal: {
+        photoId: restorationPhotoId,
+        withdrawalPlanId: restorationPlanId,
+        implementedAt: restorationImplementedAt,
+        commitOrder: 0
+      },
+      materializedVersion: {
+        commitOrder: 1,
+        text: fixture.recordText
+      },
+      expectedOccurrenceIds:
+        fixture.record.restoration_occurrence_ids,
+      publicSurfaceFingerprint:
+        fixture.responsiveEvidence.publicSurfaceFingerprint,
+      recordById: laterRecords,
+      now: Date.parse("2026-07-27T23:59:59Z")
     }),
     false
   );

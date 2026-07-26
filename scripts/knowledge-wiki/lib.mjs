@@ -258,7 +258,7 @@ const restorationGateReviewSchema = z.object({
     "deployment-owner",
     "indexing-owner"
   ]),
-  reviewed_by: z.string().min(1),
+  reviewed_by: z.array(z.string().min(1)).min(1),
   reviewed_at: z
     .string()
     .refine(
@@ -266,6 +266,35 @@ const restorationGateReviewSchema = z.object({
       "use an ISO date or date-time"
     ),
   evidence_ids: z.array(stableIdSchema).min(1)
+});
+
+const photoGateEvidenceReviewSchema = z.object({
+  photo_id: stableIdSchema,
+  gate: z.enum(restorationGateNames),
+  status: z.enum([
+    "cleared",
+    "not-applicable",
+    "open-separated-gate",
+    "human-review-requested"
+  ]),
+  authority: z.enum([
+    "creator-or-rights-holder",
+    "represented-person-or-consent-authority",
+    "creator-and-editorial-owner",
+    "represented-person",
+    "portfolio-owner",
+    "production-owner",
+    "deployment-owner",
+    "indexing-owner"
+  ]),
+  reviewed_by: z.array(z.string().min(1)).min(1),
+  reviewed_at: z
+    .string()
+    .refine(
+      (value) => !Number.isNaN(Date.parse(value)),
+      "use an ISO date or date-time"
+    ),
+  scope: z.string().min(1)
 });
 
 const opportunityRequirementSchema = z.object({
@@ -369,6 +398,9 @@ export const wikiRecordSchema = z
     restoration_approval_statement: z.string().min(1).optional(),
     restoration_gate_reviews: z
       .array(restorationGateReviewSchema)
+      .optional(),
+    photo_gate_reviews: z
+      .array(photoGateEvidenceReviewSchema)
       .optional(),
     restoration_occurrence_ids: z.array(stableIdSchema).optional(),
     restoration_public_surface_fingerprint: z
