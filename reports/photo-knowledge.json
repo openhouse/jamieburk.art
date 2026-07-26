@@ -182,6 +182,7 @@
       "photo_introduced_history_boundary_clean": true,
       "photo_historical_revocation_monotonic": true,
       "photo_revocation_fails_closed": true,
+      "photo_authority_registry_bounded": true,
       "photo_commands_wired": true,
       "photo_human_gates_open": true
     },
@@ -190,7 +191,7 @@
       "photos": 6,
       "placements": 11,
       "requiredRecords": 17,
-      "blockingCriteria": 22,
+      "blockingCriteria": 23,
       "historicalRevocationConflicts": 0,
       "restorationDecisionConflicts": 0,
       "productionOpen": 6
