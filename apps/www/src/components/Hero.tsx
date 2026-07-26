@@ -3,7 +3,7 @@ import Link from "next/link";
 import { photographs, photoDisplayBoundary } from "@/data/photography";
 
 export function Hero() {
-  const image = photographs.cabaretLawHearing;
+  const image = photographs.eastRiver;
 
   return (
     <section className="jb-photo-hero border-b-4 jb-rule">

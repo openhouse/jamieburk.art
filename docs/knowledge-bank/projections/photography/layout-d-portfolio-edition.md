@@ -1,0 +1,47 @@
+---
+id: edition.layout-d.photo-knowledge.2026-07
+title: Layout D photographic portfolio edition
+kind: projection
+projection_type: portfolio-edition
+status: maintained
+visibility: public-safe
+sensitivity: low
+last_reviewed: 2026-07-26
+review_by: 2026-08-26
+canonical_path: docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md
+summary: Dated public composition binding the East River homepage occurrence and the resume protected absence to one reviewable portfolio edition.
+projection_status: pending
+candidate_commit: PENDING_SOURCE_COMMIT
+purpose:
+  - hiring-orientation
+  - personal-presence
+  - editorial-coherence
+occurrences:
+  - projection.photo.layout-d.home.east-river
+  - projection.photo.layout-d.resume.protected-absence
+human_gates:
+  - Jamie production approval.
+  - Private source-binding verification.
+  - Permission evidence reinspection.
+  - Staging observation.
+  - Separate indexing approval.
+anti_claims:
+  - This edition is the final interpretation of the archive.
+  - A green automated evaluation closes a human gate.
+relations:
+  - type: has_asset
+    target: asset.photo.east-river-manhattan-bridge.2022.001
+    href: ../../assets/photographs/east-river-manhattan-bridge-2022.md
+  - type: related_to
+    target: projection.photo.layout-d.home.east-river
+    href: layout-d-home-east-river.md
+  - type: related_to
+    target: projection.photo.layout-d.resume.protected-absence
+    href: layout-d-resume-protected-absence.md
+---
+
+# Layout D Photographic Portfolio Edition
+
+This edition treats the public site as a dated composition. It can be compared,
+superseded, partially withdrawn, or rolled back without rewriting the
+photograph's documentary record.

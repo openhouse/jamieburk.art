@@ -143,6 +143,7 @@ export default function HomePage() {
         </div>
         <div className="jb-photo-sequence">
           {[
+            photographs.cabaretLawHearing,
             photographs.artistCoalitionListeningRoom,
             photographs.kcTownHallWork,
             photographs.sundayDinnerPreparation

@@ -8,7 +8,7 @@ sensitivity: moderate
 last_reviewed: 2026-07-26
 review_by: 2026-08-26
 canonical_path: docs/knowledge-bank/notebooks/photography/layout-study-d.md
-summary: Public-safe editorial record for the first bounded portfolio layout experiment using seven photographs from the verified private field.
+summary: Public-safe editorial record for the bounded Layout D experiment and its East River RFC 0003 canary, using eight metadata-minimized photographic derivatives.
 notebook_state: sequencing
 projection:
   status: hold
@@ -32,7 +32,7 @@ relations:
 
 ## Status
 
-Jamie authorized a bounded branch experiment in which seven
+Jamie authorized a bounded branch experiment in which eight
 metadata-minimized photographic derivatives enter the portfolio layout. The
 experiment tests the total visual experience before production approval. It
 does not publish the private 1,000-photo editor field, expose reconnecting
@@ -54,6 +54,7 @@ reader to use quickly?
 
 | Working scene | Layout function | Working-use status | Production gate | Boundary |
 | --- | --- | --- | --- | --- |
+| East River homepage canary | Joins personal presence, public landscape, and immediate role orientation in the first viewport. | Authorized for `feature/photo-knowledge-D` public-Git and staging review; Elana Gordon is the preferred creator attribution. | Hold: production, indexing, private permission reinspection, final crop, and private source-binding verification. | The photograph does not establish the recurring practice remembered later, Jamie's professional role, or future unrestricted use. |
 | Cabaret Law hearing room | Places Jamie's professional frame inside a real public institution and a collective civic setting. | Authorized for `features/layout-D` review; public legislative setting reviewed with no sensitive context observed. | Hold: rights, final credit, and represented-person care and consent review. | The photograph does not establish individual causation, attendance completeness, or endorsement. |
 | Waterways raft in fog | Opens the artistic and operational idea of a project as a container people can inhabit. | Authorized for `features/layout-D` review; a bundled adult is visible on deck and no sensitive context is observed. | Hold: rights, final credit, and represented-person care and consent review. | The caption is interpretation, not proof that every later project derives from the raft. |
 | NYC Artist Coalition listening room | Makes listening, public assembly, and many-person participation visible. | Authorized for `features/layout-D` review; civic meeting context reviewed with no sensitive context observed. | Hold: rights, final credit, and represented-person care and consent review. | People remain participants, not visual shorthand for community or support. |
@@ -65,6 +66,10 @@ reader to use quickly?
 Public project-screen captures remain distinct from photographs. They show
 interfaces and artifacts rather than being treated as equivalent visual
 evidence.
+
+Private source binding verification remains open for the East River canary.
+The public record must not fabricate an opaque binding merely to make an
+automated criterion pass.
 
 ## Compositional findings
 

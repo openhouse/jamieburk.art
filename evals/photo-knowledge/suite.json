@@ -1,0 +1,70 @@
+{
+  "suite_id": "living-photographic-knowledge-loop",
+  "version": 1,
+  "rfc": "rfcs/0003-living-photographic-knowledge-loop.md",
+  "canary_asset_id": "asset.photo.east-river-manhattan-bridge.2022.001",
+  "canary_derivative_id": "derivative.photo.east-river.layout-d.v1",
+  "canary_occurrence_id": "projection.photo.layout-d.home.east-river",
+  "portfolio_edition_id": "edition.layout-d.photo-knowledge.2026-07",
+  "protected_absence_id": "projection.photo.layout-d.resume.protected-absence",
+  "required_records": [
+    "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+    "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+    "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
+    "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+    "docs/knowledge-bank/evaluations/curatorial/layout-d-home-east-river-v1.md",
+    "docs/knowledge-bank/decisions/photography/layout-d-home-east-river-v1.md",
+    "docs/knowledge-bank/decisions/photography/layout-d-resume-protected-absence.md",
+    "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md",
+    "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
+    "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+    "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
+    "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md"
+  ],
+  "required_guides": [
+    "docs/photography/README.md",
+    "docs/photography/east-river-canary.md",
+    "docs/photography/curatorial-studio.md",
+    "docs/photography/rights-and-permission.md",
+    "docs/photography/source-binding.md",
+    "docs/photography/portfolio-editions.md",
+    "docs/photography/recollection-and-correction.md",
+    "docs/photography/contributor-pull-request-template.md"
+  ],
+  "required_reports": [
+    "docs/knowledge-bank/_generated/photography-index.md",
+    "docs/knowledge-bank/_generated/photo-rights-review.md",
+    "docs/knowledge-bank/_generated/public-photo-placements.md",
+    "docs/knowledge-bank/_generated/photo-impact.md",
+    "reports/photo-knowledge.json"
+  ],
+  "criteria": [
+    "records_are_schema_valid_and_complete",
+    "derivative_is_exact_and_metadata_minimized",
+    "statement_provenance_and_creator_correction_are_valid",
+    "permission_capsule_is_bounded",
+    "caption_and_credit_assertions_resolve",
+    "application_manifest_resolves_to_wiki",
+    "occurrence_is_destination_bound_and_reversible",
+    "recollection_remains_dated_and_non_projecting",
+    "protected_absence_is_governed",
+    "curatorial_process_preserves_artistic_authority",
+    "portfolio_edition_is_complete",
+    "private_material_is_absent",
+    "rfc_terminology_is_canonical",
+    "generated_reports_are_current",
+    "human_gates_remain_open"
+  ],
+  "manual_gates": {
+    "private_source_binding_independently_verified": "open",
+    "private_permission_evidence_reinspected": "open",
+    "jamie_final_crop_and_production_approval": "open",
+    "staging_observation": "open",
+    "indexing_approval": "open"
+  },
+  "thresholds": {
+    "all_deterministic_criteria_must_pass": true,
+    "manual_gates_must_remain_explicit": true,
+    "implementing_does_not_imply_operational": true
+  }
+}

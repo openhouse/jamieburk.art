@@ -1,8 +1,10 @@
 type PhotoWorkingReview = {
-  workingUse: "authorized-for-features-layout-D-review";
+  workingUse:
+    | "authorized-for-features-layout-D-review"
+    | "authorized-for-feature-photo-knowledge-D-review";
   production: "hold";
-  rights: "review-required";
-  credit: "review-required";
+  rights: "review-required" | "portfolio-use-reported";
+  credit: "review-required" | "confirmed";
   context: "reviewed-no-sensitive-context-observed";
   contextNote: string;
   representedPeople: "context-and-consent-review-required";
@@ -16,6 +18,9 @@ type VisualBase = {
   caption: string;
   credit: string;
   objectPosition?: string;
+  wikiId?: string;
+  derivativeId?: string;
+  placementIds?: readonly string[];
 };
 
 export type PortfolioVisual =
@@ -33,6 +38,31 @@ export type PortfolioVisual =
     });
 
 export const photographs = {
+  eastRiver: {
+    wikiId: "asset.photo.east-river-manhattan-bridge.2022.001",
+    derivativeId: "derivative.photo.east-river.layout-d.v1",
+    placementIds: ["projection.photo.layout-d.home.east-river"],
+    src: "/images/field-notes/jamie-east-river.webp",
+    width: 1280,
+    height: 960,
+    alt:
+      "Jamie Burkart in a life vest holding a canoe paddle on the East River shoreline beneath the Manhattan Bridge.",
+    caption: "At the East River beneath the Manhattan Bridge, 2022.",
+    credit:
+      "Photograph by Elana Gordon. From Jamie Burkart's photo archive",
+    objectPosition: "50% 50%",
+    kind: "photograph",
+    review: {
+      workingUse: "authorized-for-feature-photo-knowledge-D-review",
+      production: "hold",
+      rights: "portfolio-use-reported",
+      credit: "confirmed",
+      context: "reviewed-no-sensitive-context-observed",
+      contextNote:
+        "Jamie is the only clearly represented person; public place precision is limited to a landmark.",
+      representedPeople: "context-and-consent-review-required"
+    }
+  },
   raftInFog: {
     src: "/images/field-v02/raft-in-fog.jpg",
     width: 860,

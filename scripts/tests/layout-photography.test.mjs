@@ -25,8 +25,8 @@ test("the layout and photography baseline passes", () => {
   const evaluation = evaluateLayoutPhotography();
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    requiredPhotoAssets: 7,
-    projectedPhotoAssets: 7
+    requiredPhotoAssets: 8,
+    projectedPhotoAssets: 8
   });
 });
 

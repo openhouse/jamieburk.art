@@ -4,6 +4,13 @@
   "principle": "Photography must improve a stranger's understanding of Jamie's practice while preserving factual, collective-credit, privacy, rights, consent, and responsive-design boundaries.",
   "required_photo_assets": [
     {
+      "key": "eastRiver",
+      "path": "apps/www/public/images/field-notes/jamie-east-river.webp",
+      "width": 1280,
+      "height": 960,
+      "projection_marker": "photographs.eastRiver"
+    },
+    {
       "key": "raftInFog",
       "path": "apps/www/public/images/field-v02/raft-in-fog.jpg",
       "width": 860,
@@ -63,7 +70,8 @@
     "apps/www/src/app/about/page.tsx",
     "apps/www/src/app/globals.css",
     "apps/www/src/styles/tokens.css",
-    "docs/knowledge-bank/notebooks/photography/layout-study-d.md"
+    "docs/knowledge-bank/notebooks/photography/layout-study-d.md",
+    "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md"
   ],
   "public_projection_files": [
     "apps/www/public/artifacts/wowlist/being-there.png",
@@ -75,6 +83,7 @@
     "apps/www/public/images/field-v02/nightlife-town-hall.jpg",
     "apps/www/public/images/field-v02/raft-in-fog.jpg",
     "apps/www/public/images/field-v02/sunday-dinner-preparation.jpg",
+    "apps/www/public/images/field-notes/jamie-east-river.webp",
     "apps/www/src/app/about/page.tsx",
     "apps/www/src/app/globals.css",
     "apps/www/src/app/lab/source-backed-team-memory/page.tsx",

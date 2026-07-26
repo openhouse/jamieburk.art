@@ -44,6 +44,22 @@ relations:
   - type: related_to
     target: notebook.photography.layout-study.d
     href: layout-study-d.md
+  - type: related_to
+    target: asset.photo.east-river-manhattan-bridge.2022.001
+    href: ../../assets/photographs/east-river-manhattan-bridge-2022.md
+    context: RFC 0003 East River canary asset.
+  - type: related_to
+    target: evaluation.curatorial.layout-d.home-east-river.v1
+    href: ../../evaluations/curatorial/layout-d-home-east-river-v1.md
+    context: Blind and contextual curatorial proposal for the canary occurrence.
+  - type: related_to
+    target: decision.photo.layout-d.resume.protected-absence
+    href: ../../decisions/photography/layout-d-resume-protected-absence.md
+    context: Explicit no-photo decision in the same portfolio edition.
+  - type: related_to
+    target: edition.layout-d.photo-knowledge.2026-07
+    href: ../../projections/photography/layout-d-portfolio-edition.md
+    context: Dated occurrence set for the RFC 0003 implementation.
 ---
 
 # Photography working notebook
@@ -107,7 +123,24 @@ field manifest remains the authority for reconnecting a note to an original.
 - [Sequence sketches](sequence-sketches.md): arrangements to test rather than stories to prove.
 - [Working templates](templates.md): image notes, sequence experiments, and field-version reviews.
 - [Residency proposal v01](residency-proposal-v01.md): an accepted, nonbinding invitation to begin before the outcome is known.
-- [Layout study D](layout-study-d.md): the first bounded portfolio experiment using seven metadata-minimized photographic derivatives.
+- [Layout study D](layout-study-d.md): the bounded portfolio experiment using
+  eight metadata-minimized photographic derivatives, including the RFC 0003
+  East River canary.
+- [RFC 0003 photography guide](../../../photography/README.md): the living
+  asset, occurrence, edition, recollection, correction, and rights workflow
+  proven through the East River canary.
+
+## RFC 0003 Canary Map
+
+- [East River asset](../../assets/photographs/east-river-manhattan-bridge-2022.md)
+- [East River photo set](../../indexes/photo-sets/east-river-canoe-2022.md)
+- [Blind and contextual curatorial proposal](../../evaluations/curatorial/layout-d-home-east-river-v1.md)
+- [Homepage selection decision](../../decisions/photography/layout-d-home-east-river-v1.md)
+- [Resume protected-absence decision](../../decisions/photography/layout-d-resume-protected-absence.md)
+- [Homepage occurrence](../../projections/photography/layout-d-home-east-river.md)
+- [Resume protected absence](../../projections/photography/layout-d-resume-protected-absence.md)
+- [Layout D portfolio edition](../../projections/photography/layout-d-portfolio-edition.md)
+- [Bicycle-canoe research inquiry](../../research-inquiries/documented-canoe-bike-journeys.md)
 
 The notebook is intentionally allowed to change. Stable IDs preserve continuity;
 Git history preserves revision; the governing boundaries keep experimentation

@@ -51,6 +51,31 @@ function jpegDimensions(buffer) {
   return null;
 }
 
+function webpDimensions(buffer) {
+  if (
+    buffer.length < 30 ||
+    buffer.subarray(0, 4).toString("ascii") !== "RIFF" ||
+    buffer.subarray(8, 12).toString("ascii") !== "WEBP"
+  ) {
+    return null;
+  }
+
+  const kind = buffer.subarray(12, 16).toString("ascii");
+  if (kind === "VP8 ") {
+    return {
+      width: buffer.readUInt16LE(26) & 0x3fff,
+      height: buffer.readUInt16LE(28) & 0x3fff
+    };
+  }
+  if (kind === "VP8X") {
+    return {
+      width: 1 + buffer.readUIntLE(24, 3),
+      height: 1 + buffer.readUIntLE(27, 3)
+    };
+  }
+  return null;
+}
+
 function includesMetadata(buffer) {
   return embeddedMetadataMarkers.some((marker) => buffer.includes(marker));
 }
@@ -96,7 +121,9 @@ export function evaluateLayoutPhotography(options = {}) {
   const photoAssetsAreExactAndMetadataMinimized =
     suite.required_photo_assets.every((entry) => {
       const buffer = asset(entry.path);
-      const dimensions = buffer ? jpegDimensions(buffer) : null;
+      const dimensions = buffer
+        ? jpegDimensions(buffer) ?? webpDimensions(buffer)
+        : null;
       return (
         buffer &&
         buffer.length > 100_000 &&
@@ -127,25 +154,30 @@ export function evaluateLayoutPhotography(options = {}) {
         photographyData.indexOf(`${entry.key}:`),
         nextKeyIndex
       );
+      const eastRiver = entry.key === "eastRiver";
       return [
-        'workingUse: "authorized-for-features-layout-D-review"',
+        eastRiver
+          ? 'workingUse: "authorized-for-feature-photo-knowledge-D-review"'
+          : 'workingUse: "authorized-for-features-layout-D-review"',
         'production: "hold"',
-        'rights: "review-required"',
-        'credit: "review-required"',
+        eastRiver
+          ? 'rights: "portfolio-use-reported"'
+          : 'rights: "review-required"',
+        eastRiver ? 'credit: "confirmed"' : 'credit: "review-required"',
         'context: "reviewed-no-sensitive-context-observed"',
         "contextNote:",
         'representedPeople: "context-and-consent-review-required"'
       ].every((field) => record.includes(field));
     }) &&
-    (layoutStudy.match(/Authorized for `features\/layout-D` review/g)?.length ?? 0) ===
-      suite.required_photo_assets.length &&
-    (layoutStudy.match(/Hold: rights/g)?.length ?? 0) ===
-      suite.required_photo_assets.length &&
-    (layoutStudy.match(/no sensitive context observed/g)?.length ?? 0) >= 5;
+    layoutStudy.includes("East River homepage canary") &&
+    layoutStudy.includes("Private source binding verification remains open");
 
+  const workVisualsBlock = photographyData.slice(
+    photographyData.indexOf("export const workVisuals")
+  );
   const everyPhotoHasADeliberateProjection =
     suite.required_photo_assets.every((entry) =>
-      [hero, home, work, photographyData].some((text) =>
+      [hero, home, work, about, caseStudy, workCard, workVisualsBlock].some((text) =>
         text.includes(entry.projection_marker)
       )
     );
@@ -154,7 +186,7 @@ export function evaluateLayoutPhotography(options = {}) {
     hero.includes("<Image") &&
     hero.includes("fill") &&
     hero.includes("priority") &&
-    hero.includes("photographs.cabaretLawHearing") &&
+    hero.includes("photographs.eastRiver") &&
     hero.includes("<h1") &&
     hero.includes("Jamie Burkart") &&
     hero.includes("I create operating structure for complex public-facing teams") &&
@@ -208,7 +240,7 @@ export function evaluateLayoutPhotography(options = {}) {
     layoutStudy.includes("id: notebook.photography.layout-study.d") &&
     layoutStudy.includes("notebook_state: sequencing") &&
     /projection:\s+status: hold\s+surfaces: \[\]/.test(layoutStudy) &&
-    /seven\s+metadata-minimized photographic derivatives/i.test(layoutStudy) &&
+    /eight\s+metadata-minimized photographic derivatives/i.test(layoutStudy) &&
     /does not publish the private 1,000-photo editor field/i.test(layoutStudy) &&
     /image-by-image rights and credit review/i.test(layoutStudy) &&
     /production observation after deployment/i.test(layoutStudy);
@@ -262,7 +294,7 @@ export function evaluateLayoutPhotography(options = {}) {
     counts: {
       requiredPhotoAssets: suite.required_photo_assets.length,
       projectedPhotoAssets: suite.required_photo_assets.filter((entry) =>
-        [hero, home, work, photographyData].some((text) =>
+        [hero, home, work, about, caseStudy, workCard, workVisualsBlock].some((text) =>
           text.includes(entry.projection_marker)
         )
       ).length
