@@ -15,6 +15,9 @@ projection:
   surfaces: []
 relations:
   - type: related_to
+    target: index.knowledge-wiki.photographic-knowledge-loop
+    href: photographic-knowledge-loop.md
+  - type: related_to
     target: index.knowledge-wiki.visual-evidence
     href: visual-evidence.md
   - type: uses_method

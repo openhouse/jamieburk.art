@@ -3,7 +3,7 @@
 
 **Source commit:** `a345240851a4a5ec701b234811c9f688f98ece73`
 **Generation time:** 2026-07-26T10:54:42-04:00
-**Source fingerprint:** `6d0b4bd7236a21b37503908a7e4e0006d87c7b55dddc6a153d40ae2d4a341e96`
+**Source fingerprint:** `fca64f8666fa9da6da50095c5d2735e20b5964e01144d0bbc1092918198dab12`
 
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `evidence:direct-support` (evidence)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `prose_link` (markdown)

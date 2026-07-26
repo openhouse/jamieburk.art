@@ -205,6 +205,28 @@
       ]
     },
     {
+      "id": "living-photographic-knowledge-loop",
+      "criteria": [
+        "photo_rfc_0003_implementing_and_indexed",
+        "photo_records_materialized",
+        "photo_manifest_exact_and_bound",
+        "photo_east_river_private_binding_opaque",
+        "photo_creator_correction_and_history_preserved",
+        "photo_permission_bounded_and_private",
+        "photo_public_derivatives_reconciled",
+        "photo_derivative_integrity",
+        "photo_placements_and_edition_governed",
+        "photo_recollection_nonpublishing",
+        "photo_inquiry_avoids_photo_counting",
+        "photo_curatorial_authority_advisory",
+        "photo_protected_absence_first_class",
+        "photo_public_boundary_clean",
+        "photo_revocation_fails_closed",
+        "photo_commands_wired",
+        "photo_human_gates_open"
+      ]
+    },
+    {
       "id": "knowledge-wiki-family-closure",
       "criteria": [
         "family_records_materialized",
@@ -230,7 +252,7 @@
         "family_public_projection_still_selective",
         "family_public_safety_preserved",
         "merge_readiness_ci_enforced",
-        "rfp_contract_enforced",
+        "rfc_contract_enforced",
         "generated_outputs_locale_independent",
         "diff_hygiene_clean"
       ]

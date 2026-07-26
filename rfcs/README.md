@@ -1,19 +1,19 @@
-# Repository Feature Proposals
+# Repository RFCs
 
-Repository Feature Proposals (RFPs) are durable design documents for substantial
+Requests for Comments (RFCs) are durable design documents for substantial
 changes to this monorepo, its knowledge systems, and their governance. They give
 an idea a stable home before implementation and preserve the reasoning after a
 decision is made.
 
 This process borrows from the Ember.js RFC process: substantial changes are
 written down, discussed through pull requests, assigned a champion, advanced
-through explicit stages, and kept as part of the project's history. This repo
-uses the name RFP because proposals may concern research practice, editorial
-governance, privacy, and organizational design as well as software interfaces.
+through explicit stages, and kept as part of the project's history. RFCs here
+may concern research practice, editorial governance, privacy, and
+organizational design as well as software interfaces.
 
-## When to write an RFP
+## When to write an RFC
 
-Use an RFP when a proposal would do one or more of the following:
+Use an RFC when a proposal would do one or more of the following:
 
 - create or substantially change shared architecture or an API;
 - introduce a repository, package, application, data model, or workflow;
@@ -23,23 +23,23 @@ Use an RFP when a proposal would do one or more of the following:
 - materially change how the Knowledge Wiki is operated or understood.
 
 Routine fixes, bounded content additions, documentation corrections, and
-implementation work already authorized by an accepted RFP can use ordinary pull
+implementation work already authorized by an accepted RFC can use ordinary pull
 requests.
 
 ## Principles
 
-- **Discussion before commitment.** A proposed RFP is permission to examine an
+- **Discussion before commitment.** A proposed RFC is permission to examine an
   idea, not permission to implement it.
-- **Explicit human authority.** Jamie is the decision owner unless an RFP names
-  another authorized human. Agents may draft, test, and critique RFPs but may not
+- **Explicit human authority.** Jamie is the decision owner unless an RFC names
+  another authorized human. Agents may draft, test, and critique RFCs but may not
   advance a human decision gate.
-- **Durable reasoning.** Accepted, closed, and superseded RFPs remain in Git so
+- **Durable reasoning.** Accepted, closed, and superseded RFCs remain in Git so
   future readers can recover the context and alternatives.
 - **Implementation is evidence.** Prototypes may answer open questions, but a
   prototype does not silently make its interfaces accepted.
-- **Public-safe repository.** Every committed RFP is public. Private examples,
+- **Public-safe repository.** Every committed RFC is public. Private examples,
   credentials, protected locators, correspondence, and source material stay out.
-- **Smallest sufficient process.** The RFP should be proportionate to the
+- **Smallest sufficient process.** The RFC should be proportionate to the
   proposal's consequences. The template may be concise when the idea is narrow.
 
 ## Stages
@@ -50,12 +50,12 @@ requests.
 | `exploring` | The direction is promising, but material questions or experiments remain. | Decision owner |
 | `accepted` | The design is sufficiently specified and authorized for implementation. | Decision owner after review |
 | `implementing` | Work is underway against the accepted design and acceptance criteria. | Champion with implementation evidence |
-| `operational` | The implementation is in use, documented, and verified against the RFP. | Decision owner |
+| `operational` | The implementation is in use, documented, and verified against the RFC. | Decision owner |
 | `recommended` | The implementation has survived real use and is the preferred default. | Decision owner after an observation period |
-| `closed` | A proposed or exploring RFP will not proceed. | Decision owner or author withdrawal |
-| `superseded` | A later RFP replaces this one. | Decision owner, with a replacement link |
+| `closed` | A proposed or exploring RFC will not proceed. | Decision owner or author withdrawal |
+| `superseded` | A later RFC replaces this one. | Decision owner, with a replacement link |
 
-Merging a `proposed` or `exploring` RFP into `develop` does not accept it. The
+Merging a `proposed` or `exploring` RFC into `develop` does not accept it. The
 stage in front matter is authoritative.
 
 ## Workflow
@@ -66,20 +66,20 @@ stage in front matter is authoritative.
    where a section genuinely does not apply.
 3. Open a pull request. The pull request is the primary discussion surface.
 4. Name a champion and the relevant review areas. Record substantive objections
-   and unresolved questions in the RFP as it evolves.
-5. Run `node scripts/check-rfps.mjs` and the repository checks affected by the
+   and unresolved questions in the RFC as it evolves.
+5. Run `node scripts/check-rfcs.mjs` and the repository checks affected by the
    proposal.
 6. Jamie or the named human decision owner explicitly records any stage change.
-7. Implementation pull requests link the accepted RFP and identify deviations.
-8. After implementation and real use, advance the RFP or document why it was
+7. Implementation pull requests link the accepted RFC and identify deviations.
+8. After implementation and real use, advance the RFC or document why it was
    closed, discontinued, or superseded.
 
-Major changes to an accepted design require a new RFP. Small clarifications may
+Major changes to an accepted design require a new RFC. Small clarifications may
 amend the existing document if the decision history remains legible.
 
 ## Review areas
 
-An RFP may name any relevant review areas. Common areas include:
+An RFC may name any relevant review areas. Common areas include:
 
 - `knowledge-architecture`
 - `public-portfolio`
@@ -95,16 +95,18 @@ that an agent, test, or informal participant has human decision authority.
 
 ## Index
 
-| RFP | Title | Stage | Champion |
+| RFC | Title | Stage | Champion |
 |---|---|---|---|
 | [0001](./0001-shared-core-public-private-knowledge-wikis.md) | Shared Core for Public and Private Knowledge Wikis | `proposed` | Jamie Burkart |
+| [0002](./0002-lifelong-photo-archive-selection-and-publication.md) | Lifelong Photo Archive Selection and Publication | `proposed` | Jamie Burkart |
+| [0003](./0003-living-photographic-knowledge-loop.md) | Living Photographic Knowledge Loop and Artist-Led Curatorial System | `implementing` | Jamie Burkart |
 
 ## Validation
 
 Run:
 
 ```bash
-node scripts/check-rfps.mjs
+node scripts/check-rfcs.mjs
 ```
 
 The validator checks numbering, required metadata and sections, known stages,

@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-26T14:07:24.647Z",
-  "baseUrl": "http://127.0.0.1:3000",
-  "publicSurfaceFingerprint": "94818a9b9588a01ce56cf15d0c0e9fdf445fa46eae87e3d452150fc59042cd27",
+  "checkedAt": "2026-07-26T18:50:33.261Z",
+  "baseUrl": "http://127.0.0.1:3042",
+  "publicSurfaceFingerprint": "34ab537582845c1f3553fea0ea26fe80f900cf69e1935d010cda72353cb5da60",
   "publicSurfaceFileCount": 117,
   "publicSurfaceScope": [
     "tracked and unignored apps/www/**",
@@ -37,13 +37,13 @@
       "viewport": 360,
       "path": "/",
       "file": "docs/qa/evals-H/layout-B-screenshots/home-mobile.png",
-      "sha256": "3f1baa2813b3f97580d945b68378c2fd560a7223c49d577ea9f53a988cf27f01"
+      "sha256": "d6b5d58da1a64707612b02483923876f7c5dd9ef96933b3a52cde0319356e91d"
     },
     {
       "viewport": 375,
       "path": "/work/technical-operations",
       "file": "docs/qa/evals-H/layout-B-screenshots/technical-operations-mobile.png",
-      "sha256": "8ea2cf6924191faa6df45a7de4c2417761aaeee3c0f4628393e3b7711eed4299"
+      "sha256": "adf0465c6ffac99991ef3540194afd888b9a4d1e9b8404baef886a703e4cfe92"
     },
     {
       "viewport": 375,
@@ -55,19 +55,19 @@
       "viewport": 1280,
       "path": "/",
       "file": "docs/qa/evals-H/layout-B-screenshots/home-desktop.png",
-      "sha256": "559ae46876fbebd968063ff288de0c7c72bd4cfe7500b6c03b6bd7b3bf6b058b"
+      "sha256": "b927c2b361ad42508ed0ff431f61ee6040fd9ad1f225d728fb5cfcd3bb203165"
     },
     {
       "viewport": 1280,
       "path": "/about",
       "file": "docs/qa/evals-H/layout-B-screenshots/about-desktop.png",
-      "sha256": "9852909aefa631a8e57bd37f39124bfd7f19c290d7fd4cda2ea3c65d5cb042ee"
+      "sha256": "2e5113ee58f7c9099b61f8fca43725e25a9de9c8f56b4895a03f92f18e0d4d14"
     },
     {
       "viewport": 1280,
       "path": "/work/kc-town-hall",
       "file": "docs/qa/evals-H/layout-B-screenshots/kc-town-hall-desktop.png",
-      "sha256": "3123045310b5426b51e65a5b5886c46aa1a8bfde78dc189f16bc8573e9c6a8c8"
+      "sha256": "e84406a8fd71efb975d2c9e310c42170c954ae979b88d03a58b8e66c19469fff"
     }
   ],
   "rows": [
@@ -76,7 +76,7 @@
       "path": "/",
       "httpStatus": 200,
       "imageCount": 7,
-      "unloadedImages": 7,
+      "unloadedImages": 5,
       "lazyImages": 6,
       "axeVersion": "4.12.1",
       "violations": [],
@@ -1126,7 +1126,7 @@
       "path": "/",
       "httpStatus": 200,
       "imageCount": 7,
-      "unloadedImages": 3,
+      "unloadedImages": 4,
       "lazyImages": 6,
       "axeVersion": "4.12.1",
       "violations": [],
@@ -1451,7 +1451,7 @@
       "path": "/work/kc-town-hall",
       "httpStatus": 200,
       "imageCount": 2,
-      "unloadedImages": 0,
+      "unloadedImages": 1,
       "lazyImages": 1,
       "axeVersion": "4.12.1",
       "violations": [],

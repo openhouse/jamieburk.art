@@ -7,6 +7,10 @@ export type PortfolioPhoto = {
     | "paper-trimming"
     | "printed-editions";
   src: string;
+  wikiId: `photo.${string}`;
+  derivativeId: `derivative.${string}`;
+  placementIds: readonly `placement.${string}`[];
+  editionId: "edition.portfolio.layout-b.2026-07";
   width: number;
   height: number;
   alt: string;
@@ -38,9 +42,13 @@ export const portfolioPhotos = {
     src: "/images/field-notes/jamie-east-river.webp",
     width: 1280,
     height: 960,
+    wikiId: "photo.east-river-manhattan-bridge.2022",
+    derivativeId: "derivative.east-river-manhattan-bridge.layout-b",
+    placementIds: ["placement.home.hero.east-river.layout-b"],
+    editionId: "edition.portfolio.layout-b.2026-07",
     alt: "Jamie Burkart standing at the East River shoreline beneath the Manhattan Bridge.",
-    caption: "Jamie at the East River beneath the Manhattan Bridge, 2022.",
-    credit: archiveCredit,
+    caption: "At the East River beneath the Manhattan Bridge, 2022.",
+    credit: "Photograph by Elana Gordon. From Jamie Burkart’s photo archive.",
     placements: ["home"],
     subjectExposure: "self-only",
     publicationStatus: "jamie-authorized-working-review",
@@ -52,6 +60,13 @@ export const portfolioPhotos = {
     src: "/images/field-notes/raft-riverboat.webp",
     width: 1280,
     height: 844,
+    wikiId: "photo.raft-riverboat",
+    derivativeId: "derivative.raft-riverboat.layout-b",
+    placementIds: [
+      "placement.home.sequence.raft-riverboat.layout-b",
+      "placement.about.raft-riverboat.layout-b"
+    ],
+    editionId: "edition.portfolio.layout-b.2026-07",
     alt: "A small handmade raft on a wide river beside the Delta Queen riverboat.",
     caption: "A handmade raft and the Delta Queen on the river.",
     credit:
@@ -67,6 +82,14 @@ export const portfolioPhotos = {
     src: "/images/field-notes/kc-town-hall-before.webp",
     width: 1280,
     height: 854,
+    wikiId: "photo.kc-town-hall-before",
+    derivativeId: "derivative.kc-town-hall-before.layout-b",
+    placementIds: [
+      "placement.home.sequence.kc-town-hall-before.layout-b",
+      "placement.work.kc-town-hall-before.layout-b",
+      "placement.kc-town-hall.hero.layout-b"
+    ],
+    editionId: "edition.portfolio.layout-b.2026-07",
     alt: "The long-vacant brick KC Town Hall building at a Kansas City street corner before restoration work.",
     caption: "KC Town Hall before Phase 1 restoration work.",
     credit: archiveCredit,
@@ -81,6 +104,14 @@ export const portfolioPhotos = {
     src: "/images/field-notes/tired-of-tires-load.webp",
     width: 1276,
     height: 956,
+    wikiId: "photo.tired-of-tires-load",
+    derivativeId: "derivative.tired-of-tires-load.layout-b",
+    placementIds: [
+      "placement.home.sequence.tired-of-tires-load.layout-b",
+      "placement.technical-operations.tired-of-tires-load.layout-b",
+      "placement.kc-town-hall.tired-of-tires-load.layout-b"
+    ],
+    editionId: "edition.portfolio.layout-b.2026-07",
     alt: "A yellow dump truck loaded with discarded tires collected from a Kansas City neighborhood.",
     caption: "A neighborhood tire-removal load ready for the city recycling center.",
     credit: archiveCredit,
@@ -95,6 +126,14 @@ export const portfolioPhotos = {
     src: "/images/field-notes/paper-trimming.webp",
     width: 1276,
     height: 956,
+    wikiId: "photo.paper-trimming",
+    derivativeId: "derivative.paper-trimming.layout-b",
+    placementIds: [
+      "placement.home.sequence.paper-trimming.layout-b",
+      "placement.technical-operations.paper-trimming.layout-b",
+      "placement.colophon.paper-trimming.layout-b"
+    ],
+    editionId: "edition.portfolio.layout-b.2026-07",
     alt: "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
     caption: "Paper aligned at the trimming table.",
     credit: archiveCredit,
@@ -109,6 +148,13 @@ export const portfolioPhotos = {
     src: "/images/field-notes/printed-editions.webp",
     width: 1276,
     height: 956,
+    wikiId: "photo.printed-editions",
+    derivativeId: "derivative.printed-editions.layout-b",
+    placementIds: [
+      "placement.home.sequence.printed-editions.layout-b",
+      "placement.colophon.printed-editions.layout-b"
+    ],
+    editionId: "edition.portfolio.layout-b.2026-07",
     alt: "Small folded printed editions stand among tools on a worktable.",
     caption: "Small printed editions in progress.",
     credit: archiveCredit,

@@ -3,7 +3,7 @@
 
 **Source commit:** `a345240851a4a5ec701b234811c9f688f98ece73`
 **Generation time:** 2026-07-26T10:54:42-04:00
-**Source fingerprint:** `6d0b4bd7236a21b37503908a7e4e0006d87c7b55dddc6a153d40ae2d4a341e96`
+**Source fingerprint:** `fca64f8666fa9da6da50095c5d2735e20b5964e01144d0bbc1092918198dab12`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `related_to` (frontmatter)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `supports` (frontmatter)
@@ -21,6 +21,7 @@
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `related_to` (frontmatter)
+- [Paper trimming in progress](../../assets/paper-trimming.md) - `related_to` (frontmatter)
 - [Role-fit and referral map](../../projections/role-fit-and-referral-map.md) - `related_to` (frontmatter)
 - [Technical Operations portfolio projection](../../projections/work-technical-operations.md) - `related_to` (frontmatter)
 - [CallNYC](../../projects/callnyc.md) - `supports` (frontmatter)

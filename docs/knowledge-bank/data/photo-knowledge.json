@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "governingRfc": "rfcs/0003-living-photographic-knowledge-loop.md",
+  "governingPrinciple": "Artists choose. Archival production supports. The Knowledge Wiki remembers. Rights govern. The portfolio composes. Jamie decides what becomes public.",
+  "edition": {
+    "id": "edition.portfolio.layout-b.2026-07",
+    "status": "working-review",
+    "staging": "pending",
+    "production": "open",
+    "indexing": "open"
+  },
+  "photos": [
+    {
+      "id": "photo.east-river-manhattan-bridge.2022",
+      "publicId": "pfwpub_e6e1c543a48c4bdf17966c53",
+      "derivativeId": "derivative.east-river-manhattan-bridge.layout-b",
+      "src": "/images/field-notes/jamie-east-river.webp",
+      "sha256": "748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621",
+      "width": 1280,
+      "height": 960,
+      "alt": "Jamie Burkart standing at the East River shoreline beneath the Manhattan Bridge.",
+      "caption": "At the East River beneath the Manhattan Bridge, 2022.",
+      "credit": "Photograph by Elana Gordon. From Jamie Burkart’s photo archive.",
+      "creatorState": "confirmed",
+      "permissionState": "cleared-bounded",
+      "permissionScope": "Portfolio use discussed with the photographer; no broader license is inferred.",
+      "sourceBinding": "verified-private",
+      "productionApproval": "open",
+      "placements": [
+        {
+          "id": "placement.home.hero.east-river.layout-b",
+          "route": "/",
+          "role": "first-viewport orientation",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        }
+      ]
+    },
+    {
+      "id": "photo.raft-riverboat",
+      "derivativeId": "derivative.raft-riverboat.layout-b",
+      "src": "/images/field-notes/raft-riverboat.webp",
+      "sha256": "ced398bbacc78eedbda290a46897b29ebac360327e487a58844f3f3ff1656de9",
+      "width": 1280,
+      "height": 844,
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open",
+      "placements": [
+        {
+          "id": "placement.home.sequence.raft-riverboat.layout-b",
+          "route": "/",
+          "role": "long-practice sequence",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        },
+        {
+          "id": "placement.about.raft-riverboat.layout-b",
+          "route": "/about",
+          "role": "practice context",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        }
+      ]
+    },
+    {
+      "id": "photo.kc-town-hall-before",
+      "derivativeId": "derivative.kc-town-hall-before.layout-b",
+      "src": "/images/field-notes/kc-town-hall-before.webp",
+      "sha256": "d45b6531cd21c3efe5345bdb71c63e4d471bcb7664c99f6d0a2eb67ae2c233b1",
+      "width": 1280,
+      "height": 854,
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open",
+      "placements": [
+        {
+          "id": "placement.home.sequence.kc-town-hall-before.layout-b",
+          "route": "/",
+          "role": "implementation sequence",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        },
+        {
+          "id": "placement.work.kc-town-hall-before.layout-b",
+          "route": "/work",
+          "role": "case-study orientation",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        },
+        {
+          "id": "placement.kc-town-hall.hero.layout-b",
+          "route": "/work/kc-town-hall",
+          "role": "site-before-work context",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        }
+      ]
+    },
+    {
+      "id": "photo.tired-of-tires-load",
+      "derivativeId": "derivative.tired-of-tires-load.layout-b",
+      "src": "/images/field-notes/tired-of-tires-load.webp",
+      "sha256": "780e030569c0fc37be5c7c976ea44e73ed5014eb67fb56fdaa9e943e743fc047",
+      "width": 1276,
+      "height": 956,
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open",
+      "placements": [
+        {
+          "id": "placement.home.sequence.tired-of-tires-load.layout-b",
+          "route": "/",
+          "role": "maintenance sequence",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        },
+        {
+          "id": "placement.technical-operations.tired-of-tires-load.layout-b",
+          "route": "/work/technical-operations",
+          "role": "operational detail",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        },
+        {
+          "id": "placement.kc-town-hall.tired-of-tires-load.layout-b",
+          "route": "/work/kc-town-hall",
+          "role": "neighborhood operations",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        }
+      ]
+    },
+    {
+      "id": "photo.paper-trimming",
+      "derivativeId": "derivative.paper-trimming.layout-b",
+      "src": "/images/field-notes/paper-trimming.webp",
+      "sha256": "4389860218c84a8542fb687de33247614d9dc5d9a498367b769f1a2a786daf76",
+      "width": 1276,
+      "height": 956,
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open",
+      "placements": [
+        {
+          "id": "placement.home.sequence.paper-trimming.layout-b",
+          "route": "/",
+          "role": "work-in-hand sequence",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        },
+        {
+          "id": "placement.technical-operations.paper-trimming.layout-b",
+          "route": "/work/technical-operations",
+          "role": "operational detail",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        },
+        {
+          "id": "placement.colophon.paper-trimming.layout-b",
+          "route": "/colophon",
+          "role": "making-process context",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        }
+      ]
+    },
+    {
+      "id": "photo.printed-editions",
+      "derivativeId": "derivative.printed-editions.layout-b",
+      "src": "/images/field-notes/printed-editions.webp",
+      "sha256": "2837dc1a550a14f05a443371f3d36d9e530128dce09477b4ca9a8e123d4fbff8",
+      "width": 1276,
+      "height": 956,
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open",
+      "placements": [
+        {
+          "id": "placement.home.sequence.printed-editions.layout-b",
+          "route": "/",
+          "role": "publication sequence",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        },
+        {
+          "id": "placement.colophon.printed-editions.layout-b",
+          "route": "/colophon",
+          "role": "making-process context",
+          "staging": "pending",
+          "production": "open",
+          "indexing": "open"
+        }
+      ]
+    }
+  ],
+  "protectedAbsences": [
+    {
+      "id": "absence.intimate-gatherings.layout-b",
+      "scope": "Current portfolio edition",
+      "reason": "Intimate gathering photographs remain withheld while consent, credit, and compositional necessity are unresolved.",
+      "status": "chosen"
+    }
+  ]
+}

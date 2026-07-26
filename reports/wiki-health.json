@@ -2,63 +2,63 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T10:54:42-04:00",
   "sourceCommit": "a345240851a4a5ec701b234811c9f688f98ece73",
-  "sourceFingerprint": "6d0b4bd7236a21b37503908a7e4e0006d87c7b55dddc6a153d40ae2d4a341e96",
+  "sourceFingerprint": "fca64f8666fa9da6da50095c5d2735e20b5964e01144d0bbc1092918198dab12",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 118,
+    "records": 135,
     "byKind": {
       "project": 14,
       "person": 1,
       "organization": 1,
       "event": 1,
       "place": 1,
-      "source": 32,
-      "asset": 1,
+      "source": 35,
+      "asset": 7,
       "claim": 2,
       "research-run": 7,
-      "research-inquiry": 1,
-      "decision": 5,
+      "research-inquiry": 2,
+      "decision": 7,
       "correction": 1,
       "method": 11,
       "timeline": 1,
       "application": 1,
-      "evaluation": 6,
-      "index": 18,
+      "evaluation": 7,
+      "index": 20,
       "capability": 5,
       "opportunity": 6,
-      "projection": 3
+      "projection": 5
     },
-    "typedRelations": 465,
+    "typedRelations": 506,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 1,
-      "documents": 18,
+      "documents": 19,
       "evidence:context": 1,
       "evidence:direct-support": 6,
       "evidence:private-support": 1,
-      "has_asset": 2,
-      "informed_by": 49,
+      "has_asset": 9,
+      "informed_by": 50,
       "part_of": 9,
-      "projected_to": 6,
-      "related_to": 266,
+      "projected_to": 7,
+      "related_to": 293,
       "resulted_in": 5,
       "supersedes": 1,
       "supports": 19,
       "uses_method": 27,
-      "uses_source": 62
+      "uses_source": 66
     },
-    "proseLinks": 304,
-    "rootReachable": 114,
+    "proseLinks": 317,
+    "rootReachable": 126,
     "orphanCount": 0,
     "deadEndCount": 0,
-    "wantedPageCount": 6,
+    "wantedPageCount": 7,
     "stalePageCount": 0,
     "correctionCount": 1,
-    "rightsReviewCount": 1,
+    "rightsReviewCount": 6,
     "opportunityCount": 6,
     "liveOpportunityCount": 5,
     "criticalRequirementCount": 22,
@@ -137,6 +137,13 @@
       "path": "docs/knowledge-bank/indexes/visual-evidence.md"
     },
     {
+      "id": "source.canoe-bike.journey-log",
+      "proposed_title": "Dated canoe-bike journey records",
+      "reason": "Needed to establish separately documented instances, route bounds, and uncertainty without counting near-duplicate photographs as journeys.",
+      "requestedBy": "research-inquiry.canoe-bike-journeys",
+      "path": "docs/knowledge-bank/research-inquiries/canoe-bike-journeys.md"
+    },
+    {
       "id": "source.ucsc.installation-primary-record.2006",
       "proposed_title": "Primary 2006 installation record",
       "reason": "Needed to resolve the title from a contemporaneous invitation, checklist, photograph, gallery record, or artist file.",
@@ -160,6 +167,41 @@
       "rightsState": "permission-needed",
       "consentState": "review-needed",
       "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "photo.kc-town-hall-before",
+      "path": "docs/knowledge-bank/assets/kc-town-hall-before.md",
+      "rightsState": "unknown",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "cleared"
+    },
+    {
+      "id": "photo.paper-trimming",
+      "path": "docs/knowledge-bank/assets/paper-trimming.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "cleared"
+    },
+    {
+      "id": "photo.printed-editions",
+      "path": "docs/knowledge-bank/assets/printed-editions.md",
+      "rightsState": "unknown",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "cleared"
+    },
+    {
+      "id": "photo.raft-riverboat",
+      "path": "docs/knowledge-bank/assets/raft-riverboat.md",
+      "rightsState": "unknown",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "cleared"
+    },
+    {
+      "id": "photo.tired-of-tires-load",
+      "path": "docs/knowledge-bank/assets/tired-of-tires-load.md",
+      "rightsState": "unknown",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "cleared"
     }
   ]
 }

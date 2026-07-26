@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "feature/photo-knowledge-B",
+  "governingRfc": "rfcs/0003-living-photographic-knowledge-loop.md",
+  "edition": {
+    "id": "edition.portfolio.layout-b.2026-07",
+    "status": "working-review",
+    "staging": "pending",
+    "production": "open",
+    "indexing": "open"
+  },
+  "evaluation": {
+    "passed": true,
+    "checks": {
+      "photo_rfc_0003_implementing_and_indexed": true,
+      "photo_records_materialized": true,
+      "photo_manifest_exact_and_bound": true,
+      "photo_east_river_private_binding_opaque": true,
+      "photo_creator_correction_and_history_preserved": true,
+      "photo_permission_bounded_and_private": true,
+      "photo_public_derivatives_reconciled": true,
+      "photo_derivative_integrity": true,
+      "photo_placements_and_edition_governed": true,
+      "photo_recollection_nonpublishing": true,
+      "photo_inquiry_avoids_photo_counting": true,
+      "photo_curatorial_authority_advisory": true,
+      "photo_protected_absence_first_class": true,
+      "photo_public_boundary_clean": true,
+      "photo_revocation_fails_closed": true,
+      "photo_commands_wired": true,
+      "photo_human_gates_open": true
+    },
+    "failures": [],
+    "counts": {
+      "photos": 6,
+      "placements": 14,
+      "requiredRecords": 17,
+      "blockingCriteria": 17,
+      "productionOpen": 6
+    }
+  },
+  "photos": [
+    {
+      "id": "photo.east-river-manhattan-bridge.2022",
+      "derivativeId": "derivative.east-river-manhattan-bridge.layout-b",
+      "routes": [
+        "/"
+      ],
+      "creatorState": "confirmed",
+      "permissionState": "cleared-bounded",
+      "sourceBinding": "verified-private",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.kc-town-hall-before",
+      "derivativeId": "derivative.kc-town-hall-before.layout-b",
+      "routes": [
+        "/",
+        "/work",
+        "/work/kc-town-hall"
+      ],
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.paper-trimming",
+      "derivativeId": "derivative.paper-trimming.layout-b",
+      "routes": [
+        "/",
+        "/work/technical-operations",
+        "/colophon"
+      ],
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.printed-editions",
+      "derivativeId": "derivative.printed-editions.layout-b",
+      "routes": [
+        "/",
+        "/colophon"
+      ],
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.raft-riverboat",
+      "derivativeId": "derivative.raft-riverboat.layout-b",
+      "routes": [
+        "/",
+        "/about"
+      ],
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.tired-of-tires-load",
+      "derivativeId": "derivative.tired-of-tires-load.layout-b",
+      "routes": [
+        "/",
+        "/work/technical-operations",
+        "/work/kc-town-hall"
+      ],
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    }
+  ],
+  "placements": [
+    {
+      "photoId": "photo.east-river-manhattan-bridge.2022",
+      "id": "placement.home.hero.east-river.layout-b",
+      "route": "/",
+      "role": "first-viewport orientation",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.kc-town-hall-before",
+      "id": "placement.home.sequence.kc-town-hall-before.layout-b",
+      "route": "/",
+      "role": "implementation sequence",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.paper-trimming",
+      "id": "placement.home.sequence.paper-trimming.layout-b",
+      "route": "/",
+      "role": "work-in-hand sequence",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.printed-editions",
+      "id": "placement.home.sequence.printed-editions.layout-b",
+      "route": "/",
+      "role": "publication sequence",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.raft-riverboat",
+      "id": "placement.home.sequence.raft-riverboat.layout-b",
+      "route": "/",
+      "role": "long-practice sequence",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.tired-of-tires-load",
+      "id": "placement.home.sequence.tired-of-tires-load.layout-b",
+      "route": "/",
+      "role": "maintenance sequence",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.raft-riverboat",
+      "id": "placement.about.raft-riverboat.layout-b",
+      "route": "/about",
+      "role": "practice context",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.paper-trimming",
+      "id": "placement.colophon.paper-trimming.layout-b",
+      "route": "/colophon",
+      "role": "making-process context",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.printed-editions",
+      "id": "placement.colophon.printed-editions.layout-b",
+      "route": "/colophon",
+      "role": "making-process context",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.kc-town-hall-before",
+      "id": "placement.work.kc-town-hall-before.layout-b",
+      "route": "/work",
+      "role": "case-study orientation",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.kc-town-hall-before",
+      "id": "placement.kc-town-hall.hero.layout-b",
+      "route": "/work/kc-town-hall",
+      "role": "site-before-work context",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.tired-of-tires-load",
+      "id": "placement.kc-town-hall.tired-of-tires-load.layout-b",
+      "route": "/work/kc-town-hall",
+      "role": "neighborhood operations",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.paper-trimming",
+      "id": "placement.technical-operations.paper-trimming.layout-b",
+      "route": "/work/technical-operations",
+      "role": "operational detail",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    },
+    {
+      "photoId": "photo.tired-of-tires-load",
+      "id": "placement.technical-operations.tired-of-tires-load.layout-b",
+      "route": "/work/technical-operations",
+      "role": "operational detail",
+      "staging": "pending",
+      "production": "open",
+      "indexing": "open"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "photo.east-river-manhattan-bridge.2022",
+      "creatorState": "confirmed",
+      "permissionState": "cleared-bounded",
+      "sourceBinding": "verified-private",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.kc-town-hall-before",
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.paper-trimming",
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.printed-editions",
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.raft-riverboat",
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    },
+    {
+      "id": "photo.tired-of-tires-load",
+      "creatorState": "under-review",
+      "permissionState": "review-needed",
+      "sourceBinding": "not-materialized",
+      "productionApproval": "open"
+    }
+  ],
+  "impact": {
+    "photoId": "photo.east-river-manhattan-bridge.2022",
+    "currentPlacement": "placement.home.hero.east-river.layout-b",
+    "verifiedChanges": [
+      "creator credit corrected",
+      "private source binding verified",
+      "permission scope summarized without raw correspondence",
+      "recollection returned to research without automatic publication"
+    ],
+    "unmeasured": [
+      "visitor understanding",
+      "hiring outcome",
+      "production performance",
+      "indexing outcome"
+    ]
+  },
+  "protectedAbsences": [
+    {
+      "id": "absence.intimate-gatherings.layout-b",
+      "scope": "Current portfolio edition",
+      "reason": "Intimate gathering photographs remain withheld while consent, credit, and compositional necessity are unresolved.",
+      "status": "chosen"
+    }
+  ]
+}

@@ -39,6 +39,10 @@ relations:
     href: indexes/family-closure.md
     context: Selective integration record for the frozen Knowledge Wiki A-E branch family.
   - type: related_to
+    target: index.knowledge-wiki.photographic-knowledge-loop
+    href: indexes/photographic-knowledge-loop.md
+    context: Governed path from private source binding through curation, placement, recollection, correction, and portfolio editions.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -91,6 +95,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Branch-family closure](indexes/family-closure.md): exact frozen donors,
   selected strengths, consolidated pages, deliberate deferrals, and the human
   gates still required before public projection.
+- [Photographic knowledge loop](indexes/photographic-knowledge-loop.md):
+  governed file pages, permissions, curation, placements, recollections,
+  protected absences, and dated portfolio editions.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.

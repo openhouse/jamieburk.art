@@ -26,6 +26,7 @@ import { evaluatePhotographyNotebook } from "./photography-notebook-eval.mjs";
 import { evaluatePhotographyResidencyProposal } from "./photography-residency-proposal-eval.mjs";
 import { evaluatePhotographyStudioConnection } from "./photography-studio-connection-eval.mjs";
 import { allLayoutBPhotoApprovalsOpen } from "./layout-b-projection-eval.mjs";
+import { evaluatePhotoKnowledge } from "../photo-knowledge/lib.mjs";
 import { publicPhotoManifest } from "../../apps/www/src/data/photography.ts";
 
 const suite = JSON.parse(
@@ -62,6 +63,7 @@ const familyClosure = evaluateFamilyClosure({ result });
 const photographyNotebook = evaluatePhotographyNotebook({ result });
 const photographyResidencyProposal = evaluatePhotographyResidencyProposal({ result });
 const photographyStudioConnection = evaluatePhotographyStudioConnection({ result });
+const photographicKnowledgeLoop = evaluatePhotoKnowledge({ wiki: result });
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -389,7 +391,8 @@ const checks = {
   ...familyClosure.checks,
   ...photographyNotebook.checks,
   ...photographyResidencyProposal.checks,
-  ...photographyStudioConnection.checks
+  ...photographyStudioConnection.checks,
+  ...photographicKnowledgeLoop.checks
 };
 
 let failed = 0;

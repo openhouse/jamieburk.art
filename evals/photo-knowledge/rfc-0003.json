@@ -1,0 +1,25 @@
+{
+  "id": "photo-knowledge-rfc-0003",
+  "title": "Living Photographic Knowledge Loop",
+  "governingRfc": "rfcs/0003-living-photographic-knowledge-loop.md",
+  "humanAuthority": "Jamie decides what becomes public; creators, represented people, rights holders, deployment owners, and readers retain their own gates.",
+  "criteria": [
+    "photo_rfc_0003_implementing_and_indexed",
+    "photo_records_materialized",
+    "photo_manifest_exact_and_bound",
+    "photo_east_river_private_binding_opaque",
+    "photo_creator_correction_and_history_preserved",
+    "photo_permission_bounded_and_private",
+    "photo_public_derivatives_reconciled",
+    "photo_derivative_integrity",
+    "photo_placements_and_edition_governed",
+    "photo_recollection_nonpublishing",
+    "photo_inquiry_avoids_photo_counting",
+    "photo_curatorial_authority_advisory",
+    "photo_protected_absence_first_class",
+    "photo_public_boundary_clean",
+    "photo_revocation_fails_closed",
+    "photo_commands_wired",
+    "photo_human_gates_open"
+  ]
+}
