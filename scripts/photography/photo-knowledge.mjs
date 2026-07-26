@@ -493,6 +493,10 @@ function branchHistoryPublicSafety(root = repoRoot) {
     ],
     { cwd: root, encoding: "utf8", maxBuffer: 50 * 1024 * 1024 }
   );
+  return scanAddedHistoryPublicSafety(patch);
+}
+
+export function scanAddedHistoryPublicSafety(patch) {
   const addedContent = addedPatchContent(patch);
   const patterns = [
     { pattern: /\/(?:Users|Volumes)\//, label: "absolute private path" },
@@ -504,7 +508,9 @@ function branchHistoryPublicSafety(root = repoRoot) {
       pattern: /\b(?:IMG|DSC|PXL)_\d+\.(?:jpe?g|heic|png)\b/i,
       label: "source filename"
     },
-    { pattern: /private[_]preview_sha256/i, label: "private preview fingerprint" }
+    { pattern: /\b(?:latitude|longitude)\s*:\s*-?\d/i, label: "exact coordinate" },
+    { pattern: /private[_]preview_sha256/i, label: "private preview fingerprint" },
+    { pattern: /Photos\.sqlite|Photos Library\.photoslibrary/i, label: "private library locator" }
   ];
   return patterns
     .filter(({ pattern }) => pattern.test(addedContent))

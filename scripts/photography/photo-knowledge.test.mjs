@@ -11,6 +11,7 @@ import {
   quoteUntrustedSourceText,
   readRecord,
   repoRoot,
+  scanAddedHistoryPublicSafety,
   scanPhotoPublicSafety,
   validateCanary,
   validateCuratorialReceipt,
@@ -21,16 +22,29 @@ import {
 
 test("branch-history safety scans additions but not removed legacy locators", () => {
   const uuid = ["7f963a7a", "aaad", "456b", "b12b", "7f34b35d51cf"].join("-");
+  const coordinate = ["lati", "tude", ": ", "40.7"].join("");
+  const library = ["Photos", ".sqlite"].join("");
   const patch = [
     "diff --git a/example.md b/example.md",
     "--- a/example.md",
     "+++ b/example.md",
     `-https://example.test/${uuid}`,
+    `-${coordinate}`,
+    `-${library}`,
     "+Archived source is no longer live."
   ].join("\n");
 
   assert.doesNotMatch(addedPatchContent(patch), new RegExp(uuid));
-  assert.match(addedPatchContent(`${patch}\n+${uuid}`), new RegExp(uuid));
+  assert.deepEqual(scanAddedHistoryPublicSafety(patch), []);
+  assert.deepEqual(scanAddedHistoryPublicSafety(`${patch}\n+${uuid}`), [
+    "introduced branch history contains source UUID"
+  ]);
+  assert.deepEqual(scanAddedHistoryPublicSafety(`${patch}\n+${coordinate}`), [
+    "introduced branch history contains exact coordinate"
+  ]);
+  assert.deepEqual(scanAddedHistoryPublicSafety(`${patch}\n+${library}`), [
+    "introduced branch history contains private library locator"
+  ]);
 });
 
 test("the complete East River canary passes deterministic validation", () => {

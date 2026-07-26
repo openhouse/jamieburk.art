@@ -24,6 +24,7 @@ export function WorkCard({ item }: WorkCardProps) {
           <PhotoFigure
             className="jb-work-row-image"
             photo={visual}
+            priority={item.priority === 1}
             sizes="(min-width: 1024px) 38vw, 100vw"
           />
         </Link>

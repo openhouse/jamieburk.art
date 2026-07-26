@@ -74,10 +74,9 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
             <div className="jb-photo-sequence mt-8">
               {fairRentPhotoEssay.map((photo) => (
                 <PhotoFigure
-                  className={photo.id === "photo-nycac-talks-not-raids" ? "jb-photo-sequence-wide" : ""}
                   key={photo.id}
                   photo={photo}
-                  sizes={photo.id === "photo-nycac-talks-not-raids" ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
+                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
               ))}
             </div>
