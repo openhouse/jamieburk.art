@@ -1,0 +1,125 @@
+{
+  "suite_id": "portfolio-layout-photography",
+  "version": 1,
+  "principle": "Photography must improve a stranger's understanding of Jamie's practice while preserving factual, collective-credit, privacy, rights, consent, and responsive-design boundaries.",
+  "required_photo_assets": [
+    {
+      "key": "raftInFog",
+      "path": "apps/www/public/images/field-v02/raft-in-fog.jpg",
+      "width": 860,
+      "height": 1280,
+      "projection_marker": "photographs.raftInFog"
+    },
+    {
+      "key": "cabaretLawHearing",
+      "path": "apps/www/public/images/field-v02/cabaret-law-hearing.jpg",
+      "width": 1368,
+      "height": 912,
+      "projection_marker": "photographs.cabaretLawHearing"
+    },
+    {
+      "key": "fairRentRally",
+      "path": "apps/www/public/images/field-v02/fair-rent-rally.jpg",
+      "width": 1368,
+      "height": 912,
+      "projection_marker": "photographs.fairRentRally"
+    },
+    {
+      "key": "kcTownHallWork",
+      "path": "apps/www/public/images/field-v02/historic-restoration-work.jpg",
+      "width": 1280,
+      "height": 854,
+      "projection_marker": "photographs.kcTownHallWork"
+    },
+    {
+      "key": "sundayDinnerPreparation",
+      "path": "apps/www/public/images/field-v02/sunday-dinner-preparation.jpg",
+      "width": 956,
+      "height": 1276,
+      "projection_marker": "photographs.sundayDinnerPreparation"
+    },
+    {
+      "key": "artistCoalitionListeningRoom",
+      "path": "apps/www/public/images/field-v02/artist-coalition-listening-room.jpg",
+      "width": 1280,
+      "height": 854,
+      "projection_marker": "photographs.artistCoalitionListeningRoom"
+    },
+    {
+      "key": "nightlifeTownHall",
+      "path": "apps/www/public/images/field-v02/nightlife-town-hall.jpg",
+      "width": 1368,
+      "height": 912,
+      "projection_marker": "photographs.nightlifeTownHall"
+    }
+  ],
+  "source_files": [
+    "apps/www/src/data/photography.ts",
+    "apps/www/src/components/Hero.tsx",
+    "apps/www/src/components/WorkCard.tsx",
+    "apps/www/src/components/CaseStudyLayout.tsx",
+    "apps/www/src/app/page.tsx",
+    "apps/www/src/app/work/page.tsx",
+    "apps/www/src/app/about/page.tsx",
+    "apps/www/src/app/globals.css",
+    "apps/www/src/styles/tokens.css",
+    "docs/knowledge-bank/notebooks/photography/layout-study-d.md"
+  ],
+  "public_projection_files": [
+    "apps/www/public/artifacts/wowlist/being-there.png",
+    "apps/www/public/artifacts/wowlist/project-identity.png",
+    "apps/www/public/images/field-v02/artist-coalition-listening-room.jpg",
+    "apps/www/public/images/field-v02/cabaret-law-hearing.jpg",
+    "apps/www/public/images/field-v02/fair-rent-rally.jpg",
+    "apps/www/public/images/field-v02/historic-restoration-work.jpg",
+    "apps/www/public/images/field-v02/nightlife-town-hall.jpg",
+    "apps/www/public/images/field-v02/raft-in-fog.jpg",
+    "apps/www/public/images/field-v02/sunday-dinner-preparation.jpg",
+    "apps/www/src/app/about/page.tsx",
+    "apps/www/src/app/globals.css",
+    "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+    "apps/www/src/app/layout.tsx",
+    "apps/www/src/app/page.tsx",
+    "apps/www/src/app/work/page.tsx",
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "apps/www/src/components/CapabilityGrid.tsx",
+    "apps/www/src/components/CaseStudyBlocks.tsx",
+    "apps/www/src/components/CaseStudyLayout.tsx",
+    "apps/www/src/components/ContactCTA.tsx",
+    "apps/www/src/components/Hero.tsx",
+    "apps/www/src/components/JBButton.tsx",
+    "apps/www/src/components/JBCard.tsx",
+    "apps/www/src/components/ResumeCTA.tsx",
+    "apps/www/src/components/SiteFooter.tsx",
+    "apps/www/src/components/SiteHeader.tsx",
+    "apps/www/src/components/TagList.tsx",
+    "apps/www/src/components/WorkCard.tsx",
+    "apps/www/src/data/work.ts"
+  ],
+  "criteria": [
+    "photo_assets_are_exact_and_metadata_minimized",
+    "photo_records_are_complete_and_public_safe",
+    "working_branch_review_is_explicit_per_image",
+    "every_photo_has_a_deliberate_projection",
+    "hero_is_image_led_and_role_legible",
+    "layout_uses_human_index_material_palette",
+    "photography_is_responsive_and_non_decorative",
+    "project_cards_remain_scannable",
+    "photo_evidence_boundary_is_visible",
+    "layout_study_is_governed",
+    "private_archive_coordinates_are_absent",
+    "manual_publication_gates_remain_open"
+  ],
+  "manual_gates": {
+    "jamie_final_editorial_approval": "required",
+    "image_by_image_rights_review": "required",
+    "represented_person_care_and_consent_review": "required",
+    "credit_review": "required",
+    "production_observation": "required"
+  },
+  "thresholds": {
+    "all_deterministic_criteria_must_pass": true,
+    "manual_gates_must_remain_explicit": true,
+    "application_ready_does_not_imply_production_approved": true
+  }
+}

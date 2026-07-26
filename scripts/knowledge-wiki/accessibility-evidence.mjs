@@ -71,6 +71,12 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       row.failedRequests.length === 0 &&
       row.h1Count === 1 &&
       row.mainPresent === true &&
+      (row.path !== "/" ||
+        (row.firstViewport?.identityVisible === true &&
+          row.firstViewport?.roleVisible === true &&
+          row.firstViewport?.propositionVisible === true &&
+          row.firstViewport?.heroContentClipped === false &&
+          row.firstViewport?.nextSectionHintVisible === true)) &&
       /^4\./.test(row.axeVersion)
   );
   const summaryPasses =
@@ -83,6 +89,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.summary.failedRequests === 0 &&
     report.summary.nonSuccessResponses === 0 &&
     report.summary.invalidHeadingOrLandmarkRows === 0 &&
+    report.summary.invalidHomepageFirstViewportRows === 0 &&
     report.summary.lazyImagesObserved > 0 &&
     report.summary.unloadedImagesBeforeScroll > 0 &&
     report.summary.lazyImageFollowUpPerformed === true &&
@@ -90,7 +97,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
 
   return {
     passed:
-      report.reportVersion === 1 &&
+      report.reportVersion === 2 &&
       report.rows.length === expectedRows &&
       expectedRows === 56 &&
       canonicalCoverage &&

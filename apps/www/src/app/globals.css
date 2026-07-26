@@ -1,45 +1,45 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: jamie --default;
+  themes: human-index --default;
 }
 @plugin "daisyui/theme" {
-  name: "jamie";
+  name: "human-index";
   default: true;
   prefersdark: false;
   color-scheme: light;
 
-  --color-base-100: #eeefec;
-  --color-base-200: #f7f4ee;
-  --color-base-300: #d9d1c7;
-  --color-base-content: #1b1b1c;
+  --color-base-100: #ffffff;
+  --color-base-200: #f3f6f8;
+  --color-base-300: #d9e4e9;
+  --color-base-content: #1a232b;
 
-  --color-primary: #0b5f81;
-  --color-primary-content: #eeefec;
+  --color-primary: #2f6f89;
+  --color-primary-content: #ffffff;
 
-  --color-secondary: #1f5c3e;
-  --color-secondary-content: #eeefec;
+  --color-secondary: #4e6f61;
+  --color-secondary-content: #ffffff;
 
-  --color-accent: #e9b64e;
-  --color-accent-content: #1b1b1c;
+  --color-accent: #c83b32;
+  --color-accent-content: #ffffff;
 
-  --color-neutral: #5e5f61;
-  --color-neutral-content: #eeefec;
+  --color-neutral: #222b36;
+  --color-neutral-content: #f4f6f7;
 
-  --color-info: #74c2e5;
-  --color-info-content: #1b1b1c;
-  --color-success: #34a63c;
-  --color-success-content: #eeefec;
-  --color-warning: #f7ec86;
-  --color-warning-content: #1b1b1c;
-  --color-error: #d73d36;
-  --color-error-content: #eeefec;
+  --color-info: #4c97c2;
+  --color-info-content: #1a232b;
+  --color-success: #4a7f4f;
+  --color-success-content: #ffffff;
+  --color-warning: #d1a23f;
+  --color-warning-content: #1a232b;
+  --color-error: #a52a24;
+  --color-error-content: #ffffff;
 
-  --radius-selector: 0.35rem;
-  --radius-field: 0.35rem;
-  --radius-box: 0.5rem;
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
 
   --border: 1px;
-  --depth: 0;
+  --depth: 1;
   --noise: 0;
 }
 
@@ -59,6 +59,7 @@
   --color-jb-orange: var(--jb-pale-orange);
   --color-jb-sky: var(--jb-pale-blue);
   --color-jb-rose: var(--jb-classic-rose);
+  --color-jb-graphite: var(--jb-graphite);
   --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
   --font-label: var(--font-oswald), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
@@ -72,11 +73,7 @@ html {
 
 body {
   min-width: 0;
-  background:
-    linear-gradient(90deg, rgba(11, 95, 129, 0.026) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(118, 83, 58, 0.024) 1px, transparent 1px),
-    var(--jb-oil-white);
-  background-size: 42px 42px;
+  background: var(--jb-oil-white);
   color: var(--jb-oil-ink);
   font-family: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
   font-size: 17px;
@@ -122,22 +119,20 @@ h2 {
   transform: translateY(0);
 }
 
+.jb-primary-nav {
+  scrollbar-width: none;
+}
+
+.jb-primary-nav::-webkit-scrollbar {
+  display: none;
+}
+
 .jb-rule {
-  border-image: linear-gradient(
-      90deg,
-      var(--jb-broadway-blue),
-      var(--jb-yellow-ochre),
-      var(--jb-deep-green)
-    )
-    1;
+  border-color: var(--jb-correction-red);
 }
 
 .jb-artifact-surface {
-  background:
-    linear-gradient(135deg, rgba(116, 194, 229, 0.24), transparent 34%),
-    linear-gradient(225deg, rgba(252, 225, 209, 0.55), transparent 45%),
-    linear-gradient(0deg, rgba(247, 236, 134, 0.24), transparent 58%),
-    #f7f4ee;
+  background: var(--jb-oil-paper);
 }
 
 .jb-label,
@@ -145,9 +140,167 @@ h2 {
 .jb-meta-label {
   font-family: var(--font-label);
   font-weight: 600;
-  letter-spacing: 0.055em;
+  letter-spacing: 0;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.jb-photo-hero {
+  align-items: flex-end;
+  background: var(--jb-graphite);
+  display: flex;
+  height: clamp(34rem, calc(100svh - 8rem), 44rem);
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.jb-photo-hero-media {
+  object-fit: cover;
+  object-position: 50% 46%;
+  z-index: -2;
+}
+
+.jb-photo-hero-scrim {
+  background: rgba(16, 28, 36, 0.62);
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.jb-photo-hero-content {
+  color: #ffffff;
+  padding-bottom: clamp(1.75rem, 4.5vw, 3.75rem);
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+.jb-photo-hero-copy {
+  max-width: 52rem;
+}
+
+.jb-photo-hero h1 {
+  font-size: clamp(3.5rem, 7.2vw, 6.5rem);
+  line-height: 0.92;
+  text-wrap: balance;
+}
+
+.jb-photo-hero a:focus-visible {
+  outline-color: #ffffff;
+}
+
+.jb-photo-hero-context {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  margin-top: 1rem;
+  max-width: 42rem;
+}
+
+.jb-photo-sequence {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+  grid-template-rows: repeat(2, minmax(13rem, 1fr));
+  min-height: 34rem;
+}
+
+.jb-photo-sequence figure {
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.jb-photo-sequence figure:first-child {
+  grid-row: 1 / span 2;
+}
+
+.jb-photo-sequence img {
+  object-fit: cover;
+}
+
+.jb-photo-sequence figcaption {
+  background: rgba(26, 35, 43, 0.82);
+  bottom: 0;
+  color: #ffffff;
+  font-size: 0.82rem;
+  left: 0;
+  line-height: 1.45;
+  max-width: 31rem;
+  padding: 0.65rem 0.8rem;
+  position: absolute;
+}
+
+.jb-project-cover {
+  aspect-ratio: 3 / 2;
+  background: var(--jb-oil-paper);
+  overflow: hidden;
+  position: relative;
+}
+
+.jb-project-cover img {
+  object-fit: cover;
+}
+
+.jb-case-visual {
+  aspect-ratio: 16 / 7;
+  background: var(--jb-oil-paper);
+  overflow: hidden;
+  position: relative;
+}
+
+.jb-case-visual img {
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .jb-photo-hero {
+    height: clamp(34rem, calc(100svh - 6rem), 40rem);
+  }
+
+  .jb-photo-hero-content {
+    padding-bottom: 1.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .jb-photo-hero h1 {
+    font-size: clamp(3.25rem, 13vw, 4.5rem);
+  }
+
+  .jb-photo-hero-detail,
+  .jb-photo-hero-location {
+    display: none;
+  }
+
+  .jb-photo-hero-actions {
+    margin-top: 1.25rem;
+  }
+
+  .jb-photo-hero-context {
+    margin-top: 0.75rem;
+  }
+
+  .jb-photo-hero-media {
+    object-position: 42% 50%;
+  }
+
+  .jb-photo-hero-scrim {
+    background: rgba(16, 28, 36, 0.68);
+  }
+
+  .jb-photo-sequence {
+    display: block;
+  }
+
+  .jb-photo-sequence figure {
+    aspect-ratio: 4 / 3;
+  }
+
+  .jb-photo-sequence figure:first-child {
+    aspect-ratio: 3 / 4;
+  }
+
+  .jb-case-visual {
+    aspect-ratio: 4 / 3;
+  }
 }
 
 .jb-citation {

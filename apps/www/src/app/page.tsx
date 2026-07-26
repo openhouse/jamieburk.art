@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Route } from "next";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
@@ -5,14 +6,8 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
+import { photographs, photoDisplayBoundary } from "@/data/photography";
 import { featuredWork } from "@/data/work";
-
-const transformations = [
-  ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
-  ["Legacy operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
-];
 
 const startHereLinks = [
   {
@@ -46,43 +41,37 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="jb-frame py-12">
-        <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
+      <section className="border-b border-jb-ink/12 bg-white">
+        <div className="jb-frame grid gap-8 py-10 lg:grid-cols-[0.34fr_0.66fr]">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">Start here</p>
+            <p className="jb-label text-sm text-jb-blue">Start here</p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              Quick path through the portfolio
+              A quick route through the work
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              New to my work? These pages give the clearest route through the
-              site for hiring managers, referrers, civic-tech peers, and
-              collaborators.
+              Begin with role fit, then move into the case studies and the
+              source-backed record beneath them.
             </p>
           </div>
-          <div className="grid gap-3">
+          <div className="divide-y divide-jb-ink/12 border-y border-jb-ink/12">
             {startHereLinks.map((item) => (
               <Link
-                className="rounded-lg border border-jb-ink/12 bg-jb-warm p-4 hover:border-jb-blue/40 hover:bg-jb-sky/14"
+                className="grid gap-1 py-4 hover:bg-jb-warm sm:grid-cols-[0.4fr_0.6fr] sm:gap-5 sm:px-3"
                 href={item.href as Route}
                 key={item.href}
               >
                 <span className="font-semibold text-jb-blue">{item.label}</span>
-                <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
-                  {item.note}
-                </span>
+                <span className="text-sm leading-6 text-jb-ink/72">{item.note}</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
       <ProofStrip />
-      <CapabilityGrid />
-      <section className="jb-frame py-16">
+      <section className="jb-frame py-20">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
-              Selected systems
-            </p>
+            <p className="jb-label text-sm text-jb-blue">Selected systems</p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
               Proof across operating, civic, and community systems
             </h2>
@@ -102,38 +91,84 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-      <section className="bg-jb-warm/80 py-16">
-        <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
-              Operating motif
-            </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              What was unclear becomes usable
+      <section aria-labelledby="field-heading" className="bg-jb-graphite text-white">
+        <div className="jb-frame grid gap-10 py-14 lg:grid-cols-[0.38fr_0.62fr] lg:items-end">
+          <div className="max-w-md">
+            <p className="jb-label text-sm text-jb-sky">From the working field</p>
+            <h2 className="mt-3 text-4xl font-bold" id="field-heading">
+              The system is a container people can inhabit
             </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
+            <p className="mt-5 text-lg leading-8 text-white/78">
+              Across waterways, public meetings, cultural spaces, and digital
+              tools, the recurring work is to make participation legible,
+              resilient, and possible without scripting what people will do
+              together.
             </p>
+            <Link
+              className="mt-7 inline-block font-semibold text-white underline decoration-jb-ochre decoration-2 underline-offset-4"
+              href="/about"
+            >
+              Read the through line
+            </Link>
           </div>
-          <dl className="grid gap-3">
-            {transformations.map(([from, to]) => (
-              <div
-                className="grid gap-2 rounded-lg border border-jb-ink/12 bg-jb-paper p-4 sm:grid-cols-[1fr_auto_1fr]"
-                key={from}
-              >
-                <dt className="font-semibold text-jb-ink">{from}</dt>
-                <dd className="hidden text-jb-blue sm:block">to</dd>
-                <dd className="font-semibold text-jb-green">{to}</dd>
-              </div>
-            ))}
-          </dl>
+          <figure>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                alt={photographs.raftInFog.alt}
+                fill
+                sizes="(min-width: 1024px) 62vw, 100vw"
+                src={photographs.raftInFog.src}
+                style={{ objectFit: "cover", objectPosition: "50% 62%" }}
+              />
+            </div>
+            <figcaption className="mt-3 text-sm leading-6 text-white/70">
+              {photographs.raftInFog.caption} {photographs.raftInFog.credit}.
+            </figcaption>
+          </figure>
         </div>
       </section>
+      <section aria-labelledby="sequence-heading" className="py-20">
+        <div className="jb-frame mb-8 grid gap-4 md:grid-cols-[0.35fr_0.65fr] md:items-end">
+          <div>
+            <p className="jb-label text-sm text-jb-blue">Scenes of the work</p>
+            <h2 className="mt-3 text-3xl font-bold text-jb-ink" id="sequence-heading">
+              Listen. Build. Hand onward.
+            </h2>
+          </div>
+          <p className="max-w-2xl text-lg leading-8 text-jb-ink/74">
+            Photography makes the operational practice visible: rooms where
+            people speak, project sites where material decisions meet, and
+            gatherings where shared priorities take form.
+          </p>
+        </div>
+        <div className="jb-photo-sequence">
+          {[
+            photographs.artistCoalitionListeningRoom,
+            photographs.kcTownHallWork,
+            photographs.sundayDinnerPreparation
+          ].map((image) => (
+            <figure key={image.src}>
+              <Image
+                alt={image.alt}
+                fill
+                sizes="(min-width: 1024px) 66vw, 100vw"
+                src={image.src}
+                style={{ objectPosition: image.objectPosition }}
+              />
+              <figcaption>
+                {image.caption} {image.credit}.
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <p className="jb-frame mt-5 text-sm leading-6 text-jb-ink/68">
+          {photoDisplayBoundary}
+        </p>
+      </section>
+      <CapabilityGrid />
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
+          <p className="jb-label text-sm text-jb-blue">How I work</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
             Clarify to Structure to Build to Document to Transfer
           </h2>

@@ -4,7 +4,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
-import { evaluateProfessorLenses } from "../lib/professor-lens-eval.mjs";
+import {
+  candidateRelativePaths,
+  evaluateProfessorLenses
+} from "../lib/professor-lens-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const aboutText = readFileSync(path.join(repoRoot, "apps/www/src/app/about/page.tsx"), "utf8");
@@ -111,4 +114,56 @@ test("guard rejects a scorecard bound to another public candidate", () => {
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+test("guard binds holdouts to photography and layout source", () => {
+  const candidateFiles = Object.fromEntries(
+    candidateRelativePaths.map((relativePath) => [
+      relativePath,
+      readFileSync(path.join(repoRoot, relativePath))
+    ])
+  );
+  candidateFiles["apps/www/src/data/photography.ts"] = Buffer.concat([
+    candidateFiles["apps/www/src/data/photography.ts"],
+    Buffer.from("\n// changed visual candidate\n")
+  ]);
+
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    candidateFiles
+  });
+  assert.equal(result.pass, false);
+  assert.equal(
+    result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass,
+    false
+  );
+});
+
+test("guard binds holdouts to the governed Sunday Dinner learning loop", () => {
+  const candidateFiles = Object.fromEntries(
+    candidateRelativePaths.map((relativePath) => [
+      relativePath,
+      readFileSync(path.join(repoRoot, relativePath))
+    ])
+  );
+  const sourcePath =
+    "apps/www/src/data/knowledge-bank/google-drive-production-2026-07.ts";
+  candidateFiles[sourcePath] = Buffer.concat([
+    candidateFiles[sourcePath],
+    Buffer.from("\n// changed source-backed learning loop\n")
+  ]);
+
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    candidateFiles
+  });
+  assert.equal(result.pass, false);
+  assert.equal(
+    result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass,
+    false
+  );
 });

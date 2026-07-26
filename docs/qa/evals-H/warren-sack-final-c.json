@@ -1,42 +1,23 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "sack-c-employment-release",
+  "evaluator": "Fictionalized Warren Sack recursive social-systems lens; independent simulation, not a real Warren Sack review or endorsement",
+  "reviewerId": "sack-layout-final-c",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "0a404b5cbdf0aed6b18252ef59637a28dd5a33d0e4b660d76f35141c2c727e79",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The independently computed SHA-256 for the ordered public candidate subset exactly matches the expected candidate hash.",
-    "The About page plainly states the recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "Harry J. Epstein Company supplies current implementation proof: a maintained storefront, customer ordering, recurring operational questions, bounded analytics, incremental releases, reusable content patterns, clearer workflows, and durable digital operations.",
-    "NYC Artist Coalition and FairRentNYC connect stakeholder relationships and public information architecture to campaign websites, public action pathways, collective use, running minutes, source maps, decision records, question logs, and action trackers.",
-    "Sunday Dinner and 196 connect hospitality and trust to invitations, onboarding, access handoffs, facilitation, recurring use, documented continuity, and privacy-bounded operating records, including recent 2023 and 2025 workflow evidence.",
-    "WOWList is presented as co-built historical work with concrete organizer use and dated operating evidence; its historical status and shared credit prevent it from being mistaken for present proficiency or a solely authored current deployment.",
-    "CallNYC is explicitly labeled an archived, unofficial prototype whose historical guidance must not be used as a current civic service.",
-    "Source-Backed Team Memory coherently transfers the method into present implementation practice while explicitly identifying itself as an early method rather than production SaaS, a completed client deployment, or automated judgment.",
-    "The Technical Operations page consolidates the cross-project transfer into current role language covering requirements, delivery rhythms, risk signals, onboarding materials, runbooks, decision records, launch support, and durable handoffs.",
-    "The source note keeps dated coursework contextual, withholds protected educational records and correspondence, and prohibits claims of disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current proficiency in historical tools."
+    "About plainly states the recursive method through relationships, interface and use, and learning and continuity.",
+    "HJE, FairRentNYC and NYC Artist Coalition, WOWList, Sunday Dinner and 196, and CallNYC expose bounded sequences from observed relations through interfaces, social use, revision, and handoff.",
+    "Source-Backed Team Memory is correctly labeled as an early method with a synthetic example rather than production adoption.",
+    "Project artifacts and all seven photographs distinguish interface evidence, project setting, interpretation, participation, authorship, impact, and permission.",
+    "The responsive receipt covers 14 routes at 360, 375, 768, and 1280 pixels with no reported accessibility, overflow, image, request, or homepage-clipping failures."
   ],
   "gaps": [],
   "safety_findings": [
-    "Collective credit is preserved for Open House participants, coalition collaborators, WOWList collaborators, and community work.",
-    "Protected educational records, identifiers, correspondence, private archive locations, participant records, and unapproved testimonials remain outside the public projection.",
-    "Historical prototypes and platforms are visibly distinguished from current services and current implementation capability.",
-    "No faculty participation, endorsement, or testimonial is claimed."
+    "No consequential invention, structural-equivalence, peer-reviewed-research, sole-authorship, universal-deployment, or current historical-tool claim appears.",
+    "Collective credit and archived, unofficial, and non-current boundaries are preserved.",
+    "All photographs remain on explicit production hold."
   ],
-  "recommendation": "Pass PR-016 for the evaluated candidate. The project-specific interfaces, actual use, operating systems, learning loops, and handoffs form a coherent present-day implementation narrative without converting protected coursework or archived prototypes into production-deployment claims.",
-  "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3606-7fe2-9906-a82acf75ec86",
-    "agentNickname": "Darwin",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
-    "sandbox": "read-only",
-    "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:22.360Z",
-    "completedAt": "2026-07-19T03:17:30.074Z"
-  }
+  "recommendation": "Accept this exact candidate as a score-4 PR-016 holdout and require a fresh fingerprint and independent holdout after any candidate-affecting change."
 }

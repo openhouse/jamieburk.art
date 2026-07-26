@@ -40,10 +40,12 @@ and workspace relationships. The frozen source contained 603,830 visible
 stills at the time of the pass. Inspection stayed local and made no external
 image or metadata upload.
 
-The current committed public-safe notebook population remains zero. No photo
-identity, preview, People name, private locator, safety hold, or source path is
-stored in this repository. The private manifest remains authoritative for the
-completed field.
+The current committed public-safe notebook population remains zero: no private
+field identity, People name, reconnecting locator, safety hold, or source path
+is stored in this notebook. A later bounded [layout study](layout-study-d.md)
+introduces seven metadata-minimized derivatives into an experimental portfolio
+branch under Jamie's editorial authorization. Those derivatives do not expose
+the private field manifest or change its authority.
 
 Operational completion establishes which private field was assembled and
 verified. It does not establish archive completeness, representativeness,

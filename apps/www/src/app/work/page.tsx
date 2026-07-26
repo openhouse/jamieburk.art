@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { WorkCard } from "@/components/WorkCard";
+import { photographs, photoDisplayBoundary } from "@/data/photography";
 import { workGroups, workItems } from "@/data/work";
 import { createMetadata } from "@/lib/metadata";
 
@@ -13,24 +15,51 @@ export const metadata: Metadata = createMetadata({
 
 export default function WorkPage() {
   return (
-    <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">Selected work</h1>
-        <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          These case studies show a recurring pattern: real needs becoming
-          clearer requirements, usable systems, public-facing tools,
-          documentation, decision trails, and durable handoffs.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
-          <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
-            Technical Operations proof page
-          </Link>
-          <Link className="text-jb-blue hover:text-jb-green" href="/lab/source-backed-team-memory">
-            Source-backed memory lab
-          </Link>
+    <div>
+      <header className="jb-frame py-12">
+        <div className="jb-reading">
+          <p className="jb-label text-sm text-jb-blue">Case studies</p>
+          <h1 className="mt-3 text-5xl font-bold text-jb-ink">Selected work</h1>
+          <p className="mt-5 text-xl leading-8 text-jb-ink/76">
+            These case studies show a recurring pattern: real needs becoming
+            clearer requirements, usable systems, public-facing tools,
+            documentation, decision trails, and durable handoffs.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-5 text-sm font-semibold">
+            <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
+              Technical Operations proof page
+            </Link>
+            <Link className="text-jb-blue hover:text-jb-green" href="/lab/source-backed-team-memory">
+              Source-backed memory lab
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="mt-12 space-y-14">
+      </header>
+      <figure className="bg-jb-graphite text-white">
+        <div className="jb-frame py-5">
+          <div className="relative aspect-[16/7] overflow-hidden max-md:aspect-[4/3]">
+            <Image
+              alt={photographs.nightlifeTownHall.alt}
+              fill
+              priority
+              sizes="(min-width: 1100px) 1100px, 100vw"
+              src={photographs.nightlifeTownHall.src}
+              style={{
+                objectFit: "cover",
+                objectPosition: photographs.nightlifeTownHall.objectPosition
+              }}
+            />
+          </div>
+          <figcaption className="mt-3 grid gap-1 text-sm leading-6 text-white/70 md:grid-cols-[1fr_auto]">
+            <span>{photographs.nightlifeTownHall.caption}</span>
+            <span>{photographs.nightlifeTownHall.credit}</span>
+          </figcaption>
+          <p className="mt-3 max-w-4xl text-sm leading-6 text-white/70">
+            {photoDisplayBoundary}
+          </p>
+        </div>
+      </figure>
+      <div className="jb-frame mt-14 space-y-16">
         {workGroups.map((group) => {
           const groupedItems = workItems.filter((item) => item.group === group);
 
@@ -38,7 +67,7 @@ export default function WorkPage() {
             return (
               <section key={group}>
                 <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
-                <div className="mt-5 rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5">
+                <div className="mt-5 border-l-4 border-jb-green bg-jb-warm p-6">
                   <h3 className="text-2xl font-semibold text-jb-ink">
                     Source-Backed Team Memory / Noting.us
                   </h3>

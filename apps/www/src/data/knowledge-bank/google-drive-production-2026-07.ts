@@ -401,7 +401,7 @@ export const googleDriveProductionJuly2026 = {
       status: "confirmed-with-boundary",
       projections: [{
         key: "case-study",
-        text: "Jamie documented a repeatable residency handoff: proposal review, video-call onboarding, space configuration, and independent access for the resident artist and a collaborator.",
+        text: "Jamie documented a repeatable residency handoff: proposal review and video-call onboarding surfaced an accepted artist's needs; the space was configured around those needs before the workflow continued to independent access for the artist and a collaborator.",
         status: "active",
         citationRequired: false,
         surfaces: ["/work/196-sunday-dinner"]

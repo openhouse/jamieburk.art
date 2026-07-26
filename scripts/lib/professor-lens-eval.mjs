@@ -11,18 +11,40 @@ const sourceNotePath = path.join(
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
 );
 
-const candidateRelativePaths = [
+export const candidateRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
+  "apps/www/public/artifacts/wowlist/being-there.png",
+  "apps/www/public/artifacts/wowlist/project-identity.png",
+  "apps/www/public/images/field-v02/artist-coalition-listening-room.jpg",
+  "apps/www/public/images/field-v02/cabaret-law-hearing.jpg",
+  "apps/www/public/images/field-v02/fair-rent-rally.jpg",
+  "apps/www/public/images/field-v02/historic-restoration-work.jpg",
+  "apps/www/public/images/field-v02/nightlife-town-hall.jpg",
+  "apps/www/public/images/field-v02/raft-in-fog.jpg",
+  "apps/www/public/images/field-v02/sunday-dinner-preparation.jpg",
   "apps/www/src/app/about/page.tsx",
+  "apps/www/src/app/globals.css",
   "apps/www/src/app/page.tsx",
+  "apps/www/src/app/work/page.tsx",
   "apps/www/src/app/work/technical-operations/page.tsx",
+  "apps/www/src/components/CaseStudyLayout.tsx",
+  "apps/www/src/components/CaseStudyBlocks.tsx",
+  "apps/www/src/components/Hero.tsx",
+  "apps/www/src/components/WorkCard.tsx",
   "apps/www/src/content/work/harry-j-epstein.mdx",
   "apps/www/src/content/work/wowlist.mdx",
   "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/content/work/196-sunday-dinner.mdx",
   "apps/www/src/content/work/fair-rent-nyc.mdx",
   "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
-  "apps/www/src/data/work.ts"
+  "apps/www/src/data/photography.ts",
+  "apps/www/src/data/knowledge-bank/google-drive-production-2026-07.ts",
+  "apps/www/src/data/knowledge-bank/public-registry.json",
+  "apps/www/src/data/work.ts",
+  "apps/www/src/styles/tokens.css",
+  "apps/www/src/types/work.ts",
+  "docs/knowledge-bank/notebooks/photography/layout-study-d.md",
+  "docs/qa/evals-H/responsive-route-matrix.json"
 ];
 
 const finalScorecardRelativePaths = [
@@ -34,7 +56,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58";
+const approvedCandidateSha256 = "0a404b5cbdf0aed6b18252ef59637a28dd5a33d0e4b660d76f35141c2c727e79";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -54,7 +76,7 @@ function joined(entry) {
 function loadCandidateFiles() {
   return Object.fromEntries(candidateRelativePaths.map((relativePath) => [
     relativePath,
-    readFileSync(path.join(repoRoot, relativePath), "utf8")
+    readFileSync(path.join(repoRoot, relativePath))
   ]));
 }
 

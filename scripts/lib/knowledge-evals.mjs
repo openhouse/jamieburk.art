@@ -56,13 +56,16 @@ const blindSpotControlsPath = path.join(
   "docs/knowledge-bank/data/blind-spot-controls-2026-07.json"
 );
 export const blindSpotControls = JSON.parse(readFileSync(blindSpotControlsPath, "utf8"));
+// Re-reviewed 2026-07-26 after the governed photography layout added media
+// fields and WOWList artifacts to the shared work index. KC Town Hall wording,
+// proof projections, case-study copy, and source relationships did not change.
 const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   corpusSha256: "7344b91556feaffebbcf4394b0b6cca9ac005c8d94d3b325dce97c557fc1cdc1",
   canonicalRecordsSha256: "00d2c80af90f0584311a5557e2ad02a8b67d63e7b1c5719a2418d82f692d4865",
   governedKnowledgeSha256: "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
   proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
   caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-  sharedPublicSurfacesSha256: "1f46195106bbfa6af572a32f4ae9fb57a12e687bf1154fe92f0d6b0822635846",
+  sharedPublicSurfacesSha256: "5940a23479c712ad32c6cbf64ca298a894500cbd4e64fd0fc7b181e2ff183d97",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
@@ -94,8 +97,10 @@ const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
-// Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
-// repository diff hygiene. The report wording, evidence, and boundaries did not change.
+// Re-reviewed 2026-07-26 after adding two metadata-minimized historical
+// interface artifacts and explicit anti-inference wording to the WOWList page.
+// Population records, event claims, source relationships, and proof wording did
+// not change.
 const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "23c7d57699dc30d84d6738f7ece4b47f3497550fa2dd8690ca7c4a86719d70ef",
   manifestContentSha256: "62f09e7e53d5e28397ca25e948a77f7e1ec7e9e8a504b37c8e9343eae1faa090",
@@ -104,7 +109,7 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   reviewConfigurationSha256: "939b9ccc09b790520450a8c3295f1436193c9c2e9c6505350fc4c0bfb23c86b0",
   governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
-  wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
+  wowListMdxSha256: "bcfb73aabc9bd05555388e2601d9d63fdff7eac835bc336c639c3241325bfdb0",
   sundayDinnerMdxSha256: "2c9e22237d23a1b99262634f75cb24f7eeca300c0ed59e0dec26b6c3a54dd6be",
   proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
 });

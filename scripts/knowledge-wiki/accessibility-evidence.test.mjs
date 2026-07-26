@@ -46,3 +46,13 @@ test("a coordinated canonical-viewport substitution fails closed", () => {
   }
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
+
+test("a vertically clipped homepage identity fails closed", () => {
+  const report = structuredClone(current.report);
+  const homepage = report.rows.find(
+    (row) => row.path === "/" && row.viewport === 375
+  );
+  homepage.firstViewport.identityVisible = false;
+  homepage.firstViewport.heroContentClipped = true;
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
+});

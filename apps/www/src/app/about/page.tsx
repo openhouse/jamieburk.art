@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { photographs, photoDisplayBoundary } from "@/data/photography";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -13,32 +15,51 @@ export const metadata: Metadata = createMetadata({
 export default function AboutPage() {
   return (
     <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">About</h1>
-        <div className="mt-8 space-y-6 text-xl leading-9 text-jb-ink/78">
-          <p>
-            I am Jamie Burkart, a technical project manager and implementation
-            lead based in Brooklyn.
-          </p>
-          <p>
-            My work sits where the stakes are human and the operating structure
-            is still forming: civic technology, small-business operations,
-            public-facing tools, cultural infrastructure, coalition work, and
-            knowledge systems.
-          </p>
-          <p>
-            Across projects, I tend to do the same kind of work: clarify
-            ambiguous goals, translate between technical and nontechnical
-            stakeholders, map workflows, build documentation, create usable
-            interfaces, coordinate implementation, and leave behind handoffs
-            people can use after the meeting or launch is over.
-          </p>
-          <p>
-            I am currently focused on technical project management, product
-            operations, implementation, business analysis, civic/govtech
-            delivery, and source-backed knowledge systems.
-          </p>
+      <div className="grid gap-10 lg:grid-cols-[0.52fr_0.48fr] lg:items-center">
+        <div>
+          <p className="jb-label text-sm text-jb-blue">Practice and approach</p>
+          <h1 className="mt-3 text-5xl font-bold text-jb-ink">About</h1>
+          <div className="mt-8 space-y-6 text-xl leading-9 text-jb-ink/78">
+            <p>
+              I am Jamie Burkart, a technical project manager and implementation
+              lead based in Brooklyn.
+            </p>
+            <p>
+              I work where human stakes are high and the operating structure is
+              still forming: civic technology, small-business operations,
+              cultural infrastructure, coalition work, and knowledge systems.
+            </p>
+            <p>
+              Across projects, I turn ambiguity into requirements, workflows,
+              documentation, implementation, and handoffs people can continue.
+            </p>
+          </div>
         </div>
+        <figure>
+          <div className="relative aspect-[3/4] overflow-hidden bg-jb-warm">
+            <Image
+              alt={photographs.sundayDinnerPreparation.alt}
+              fill
+              priority
+              sizes="(min-width: 1024px) 48vw, 100vw"
+              src={photographs.sundayDinnerPreparation.src}
+              style={{
+                objectFit: "cover",
+                objectPosition: photographs.sundayDinnerPreparation.objectPosition
+              }}
+            />
+          </div>
+          <figcaption className="mt-3 text-sm leading-6 text-jb-ink/68">
+            {photographs.sundayDinnerPreparation.caption}{" "}
+            {photographs.sundayDinnerPreparation.credit}.
+          </figcaption>
+        </figure>
+      </div>
+      <div className="jb-reading">
+        <p className="mt-8 border-l-4 border-jb-ochre bg-jb-warm px-4 py-3 text-sm leading-6 text-jb-ink/72">
+          <strong className="text-jb-ink">Image boundary:</strong>{" "}
+          {photoDisplayBoundary}
+        </p>
         <section className="mt-12 border-t border-jb-blue/20 pt-8">
           <p className="text-sm font-semibold uppercase text-jb-blue">
             The through line
@@ -222,7 +243,7 @@ export default function AboutPage() {
             </article>
           </div>
         </section>
-        <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
+        <div className="mt-10 border-l-4 border-jb-blue bg-jb-sky/25 p-5">
           <p className="leading-8 text-jb-ink/78">
             I value public benefit, accessibility, source-backed memory, careful
             claims, collective credit, consent, privacy, repair, and

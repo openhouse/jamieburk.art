@@ -1,43 +1,24 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "sack-b-employment-release",
+  "evaluator": "Fictionalized Prof. Warren Sack lens, independently simulated by Codex; not Warren Sack's view",
+  "reviewerId": "sack-layout-final-b",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "0a404b5cbdf0aed6b18252ef59637a28dd5a33d0e4b660d76f35141c2c727e79",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The SHA-256 independently recomputed from the ordered candidate paths and NUL-delimited hashing procedure exactly matches the expected candidate hash.",
-    "/about states the recursive method plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "The About-page comparisons connect relationship models, interfaces and use, and learning and continuity across Harry J. Epstein Company, FairRentNYC, WOWList, and Sunday Dinner / 196.",
-    "Harry J. Epstein Company shows current relational systems work: customer language, product judgment, institutional knowledge, and operating habits become a maintained storefront, reusable content patterns, incremental releases, and team workflows.",
-    "FairRentNYC shows sophisticated social-software reasoning: stakeholders, lived experience, meetings, public sources, protected context, and open questions become campaign interfaces, participation pathways, source maps, decision records, action trackers, and recoverable collective memory.",
-    "WOWList is correctly presented as historical and co-built. It models informal relationships among scenes, interests, places, and venues as followable keyword communities supporting distributed publishing, event discovery, digests, and embeddable calendars.",
-    "CallNYC is correctly labeled as an archived, unofficial prototype. It converts constituent-services records and administrative categories into issue pathways, district context, resident-facing guidance, public documentation, and explicit limitations.",
-    "Sunday Dinner / 196 treats hospitality, trust, shared space, invitations, onboarding, access handoffs, and recurring rhythms as participation infrastructure while withholding private community records.",
-    "Source-Backed Team Memory is presented as a current early method rather than deployed software. Its Known / Open / Protected model, source-linked workflow, human review, correction, and transfer pattern demonstrate present relational information-structure reasoning.",
-    "The UCSC source note treats the educational records as protected rubric context, preserves collective credit, and explicitly bars claims of structural-equivalence invention, peer-reviewed research, production deployment from coursework, sole authorship, or present proficiency in historical tools."
+    "The About page names the recursive systems sequence and links directly to project evidence.",
+    "Harry J. Epstein, NYC Artist Coalition and FairRentNYC, WOWList, and Sunday Dinner and 196 each provide reconstructable loops from observed relationships through models, interfaces, social use, specific revisions, and continuation mechanisms.",
+    "Seven metadata-minimized photographs function as landmarks for institutions, assembly, restoration, hospitality, and field practice while remaining distinct from interface proof.",
+    "The candidate-bound responsive report passed all 56 route and viewport rows without reported accessibility, overflow, request, image, landmark, or homepage first-viewport failures."
   ],
-  "gaps": [],
+  "gaps": [
+    "WOWList preserves identity artwork rather than a full historical interface capture.",
+    "Detailed HJE revision and handoff artifacts remain protected."
+  ],
   "safety_findings": [
-    "Public project language consistently distinguishes individual contributions from collective outcomes through terms such as co-built, co-founded, collaborators, collectively governed, and campaign accomplishments remain collective.",
-    "Historical projects and archived prototypes are visibly distinguished from current work and present capability.",
-    "No public candidate page claims formal structural-equivalence research or current Max/Jitter proficiency.",
-    "Protected educational records, identifiers, correspondence, private paths, and raw evaluation text are not reproduced on the public surfaces.",
-    "The source note explicitly says the lenses are not endorsements and does not represent any named person as participating in this evaluation."
+    "Collective causality, current and historical status, protected evidence, and photography-production boundaries remain explicit.",
+    "No consequential privacy, causality, disciplinary, authorship, deployment, or historical-proficiency overclaim was observed."
   ],
-  "recommendation": "Pass PR-016 for employment release. The candidate demonstrates sophisticated relational and social-system reasoning across current and historical work while maintaining the required attribution, privacy, chronology, and anti-overclaim boundaries.",
-  "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3430-7501-b79e-615807b4265c",
-    "agentNickname": "Halley",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
-    "sandbox": "read-only",
-    "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:21.927Z",
-    "completedAt": "2026-07-19T03:17:30.064Z"
-  }
+  "recommendation": "Accept this exact candidate as a PR-016 holdout score of 4 while preserving every stated boundary and open human gate."
 }

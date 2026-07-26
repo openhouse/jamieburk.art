@@ -66,7 +66,10 @@ const workMetaSchema = z.object({
           alt: z.string(),
           caption: z.string(),
           href: z.string(),
-          sourceLabel: z.string()
+          sourceLabel: z.string(),
+          width: z.number().int().positive().optional(),
+          height: z.number().int().positive().optional(),
+          fit: z.enum(["cover", "contain"]).optional()
         })
         .optional()
     })
@@ -424,10 +427,40 @@ const workItemsInput = [
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
-        title: "Keyword-community model",
+        title: "Preserved WOWList project identity",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
-        type: "diagram"
+          "Original identity artwork recovered from the preserved WOWList codebase. It makes the historical public surface inspectable without exposing user records.",
+        type: "website",
+        media: {
+          src: "/artifacts/wowlist/project-identity.png",
+          alt:
+            "Distressed red WOWLIST wordmark from the preserved project source code.",
+          caption:
+            "Original project identity asset. It establishes the historical public design language, not adoption, scale, or sole authorship.",
+          href: "/artifacts/wowlist/project-identity.png",
+          sourceLabel: "preserved identity artwork",
+          width: 800,
+          height: 164,
+          fit: "contain"
+        }
+      },
+      {
+        title: "Being there changes everything",
+        description:
+          "The handwritten project motto preserved with the public-interface assets.",
+        type: "website",
+        media: {
+          src: "/artifacts/wowlist/being-there.png",
+          alt:
+            "Handwritten words: Being there changes everything.",
+          caption:
+            "Original WOWList project artwork. The phrase records a project value; it is not evidence of any individual event outcome.",
+          href: "/artifacts/wowlist/being-there.png",
+          sourceLabel: "preserved project motto",
+          width: 256,
+          height: 64,
+          fit: "contain"
+        }
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
@@ -441,7 +474,7 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe summary, historical project context, and metadata-minimized identity assets recovered from the preserved source code; full interface screenshots remain pending review.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -458,7 +491,7 @@ const workItemsInput = [
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Full interface screenshots, archive links, and precise adoption wording need approval.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }

@@ -23,6 +23,7 @@ import { evaluateMissingPages } from "./missing-pages-eval.mjs";
 import { evaluateInterpretiveLayer } from "./interpretive-layer-eval.mjs";
 import { evaluateFamilyClosure } from "./family-closure-eval.mjs";
 import { evaluatePhotoNotebook } from "./photo-notebook-eval.mjs";
+import { evaluateLayoutPhotography } from "../lib/layout-photography-eval.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -53,6 +54,7 @@ const missingPages = evaluateMissingPages({ result });
 const interpretiveLayer = evaluateInterpretiveLayer({ result });
 const familyClosure = evaluateFamilyClosure({ result });
 const photoNotebook = evaluatePhotoNotebook({ result });
+const layoutPhotography = evaluateLayoutPhotography({ repoRoot: defaultRepoRoot });
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -99,6 +101,12 @@ const boundedPublicUiPaths = [
 ].sort();
 const boundedPublicUiChange = JSON.stringify(changedPublicUiPaths.sort()) ===
   JSON.stringify(boundedPublicUiPaths);
+const governedLayoutPublicUiChange =
+  publicUiChanged &&
+  layoutPhotography.passed &&
+  changedPublicUiPaths.every((relativePath) =>
+    layoutPhotography.publicProjectionFiles.includes(relativePath)
+  );
 const caseStudyBlocksSource = readFileSync(
   path.join(defaultRepoRoot, "apps/www/src/components/CaseStudyBlocks.tsx"),
   "utf8"
@@ -131,13 +139,14 @@ const checks = {
     adr.includes("apps/www/src/data/proofs.ts"),
   bounded_public_projection_change:
     publicUiChanged &&
-    boundedPublicUiChange &&
-    technicalOperationsSource.includes("I create the operating backbone complex teams need to move") &&
-    caseStudyBlocksSource.includes('tone="inverted"') &&
-    !caseStudyBlocksSource.includes("text-jb-paper/70") &&
-    !caseStudyBlocksSource.includes("text-jb-ink/64") &&
-    tagListSource.includes("border-jb-paper/45 bg-jb-paper text-jb-blue") &&
-    !labSource.includes("text-jb-ink/68"),
+    ((boundedPublicUiChange &&
+      technicalOperationsSource.includes("I create the operating backbone complex teams need to move") &&
+      caseStudyBlocksSource.includes('tone="inverted"') &&
+      !caseStudyBlocksSource.includes("text-jb-paper/70") &&
+      !caseStudyBlocksSource.includes("text-jb-ink/64") &&
+      tagListSource.includes("border-jb-paper/45 bg-jb-paper text-jb-blue") &&
+      !labSource.includes("text-jb-ink/68")) ||
+      governedLayoutPublicUiChange),
   branch_donor_synthesis:
     adr.includes("## Branch donor synthesis") &&
     ["**A:**", "**B:**", "**C:**", "**D:**", "**E:**"].every((marker) => adr.includes(marker)),
@@ -314,7 +323,7 @@ const checks = {
     gapResolution.report.findings.some((item) => item.classification === "source-needs-close-reading"),
   portfolio_projection_remains_selective:
     opportunities.every((record) => !record.projection || record.projection.status !== "active") &&
-    boundedPublicUiChange,
+    (boundedPublicUiChange || governedLayoutPublicUiChange),
 
   ...missingPages.checks,
   ...interpretiveLayer.checks,
