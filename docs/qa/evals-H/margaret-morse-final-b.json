@@ -1,43 +1,47 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "morse-b-layout-c-final2-2026-07-22",
+  "evaluator": "Codex bounded holdout reader B applying the imagined Prof. Margaret Morse lens, not an endorsement",
+  "reviewerId": "morse-b-photo-knowledge-c-f67dfb-2026-07-26",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "636bdcf6b19e31dbf5e51530da4b407d2adfee38605e94c58cd67169e0322d3d",
+  "candidateSha256": "f67dfb357367da9e5e33f58230e934f80da09deeb45bf7745d0210b5c7831f54",
   "score": 4,
   "pass": true,
   "evidence": [
-    "HEAD is exactly 58a84daf354d3c39990d0b3f3d6e7bc6abe6e37c, and the worktree remained clean after inspection.",
-    "Independent binary-safe hashing of all 25 ordered professorCandidateRelativePaths using path, NUL, file bytes, NUL produced 636bdcf6b19e31dbf5e51530da4b407d2adfee38605e94c58cd67169e0322d3d.",
-    "About presents Jamie's technical project management and implementation role first, then preserves an explicit artistic, civic, technical, and social lineage through Open House, three current systems loops, and separately labeled earlier continuities.",
-    "The HJE, NYC Artist Coalition/FairRentNYC, and Source-Backed Team Memory loops each expose relationships, a system model, an interface used with people, and documented learning or continuity.",
-    "WOWList and Sunday Dinner/196 retain non-instrumental dimensions including community vocabulary, hospitality, trust, artist support, shared space, participation, and consent rather than appearing only as hiring proof.",
-    "The recursive method is stated plainly as observing relationships, modeling a system, prototyping an interface, testing it with people, and documenting enough for others to continue.",
-    "The photographs operate editorially: Jamie's East River portrait situates the employment argument in an inhabited civic landscape; the handmade raft beside the Delta Queen introduces scale and improvised structure before the About through-line; and the Colophon images directly connect material attention, tools, and printed work to the site's construction.",
-    "All four WebP derivatives have stable manifest dimensions, factual alt text and captions, placement limits, publication boundaries, and no EXIF, XMP, or IPTC metadata detected.",
-    "Independent validation of the responsive report recomputed public fingerprint 5a42a5d53d5fcaac783970211461594ff0ac119336def1f181d7e7f4a48921d1 from 115 tracked public-surface files and confirmed 56 unique rows covering 14 routes at four widths, with zero recorded axe violations, overflow elements, broken or unlabeled images, failed requests, bad responses, or heading and landmark failures.",
-    "The UCSC source note withholds raw evaluations, grades, identifiers, archive paths, correspondence, and testimonial projection; the separate Maven certificate is visibly labeled as approved professional development rather than faculty affiliation or production-product proof."
+    "Binary-safe recomputation over all 117 ordered professorCandidateRelativePaths reproduced the assigned SHA-256 exactly.",
+    "The homepage preserves immediate hiring clarity: Jamie's name, literal Technical Project Manager role, operating proposition, Work action, and Resume action all remain in the first viewport.",
+    "The East River photograph establishes body, weather, shoreline, bridge, paddle, life vest, and public landscape without being presented as proof of profession, leadership, journey frequency, or project outcomes.",
+    "Within one navigation click, About explicitly joins artistic, civic, technical, and social practice through five public-safe continuities.",
+    "About explains why these systems differ from conventional administration: people must be able to inhabit, influence, remember, revise, and continue them.",
+    "The raft, trimming-table, and printed-edition photographs extend the visual language toward waterways, material process, making, and ordinary work without serving as quantitative or causal proof.",
+    "Open House activity and governance remain collective; WOWList is co-built; coalition accomplishments remain collective; Sunday Dinner and 196 preserve consent boundaries.",
+    "The East River occurrence separates creator attribution from archive custody in the manifest, Wiki asset, permission capsule, correction, and placement records.",
+    "All 56 route-and-viewport combinations are bound to the exact 115-file public surface and pass the reported accessibility, overflow, image, heading, landmark, and request checks.",
+    "Focused checks at 360, 375, 768, and 1280 pixels confirm that caption and credit are separate, within the viewport, and do not overlap primary copy.",
+    "RFC 0003 keeps artistic selection, archival support, rights governance, portfolio composition, and Jamie's publication authority distinct.",
+    "The three additional photographs are explicitly phase-2-reconciliation-pending, and production and indexing remain open."
   ],
-  "gaps": [],
+  "gaps": [
+    "The three phase-two occurrences require creator, credit, depicted-work, and rights reconciliation before production consideration.",
+    "Real no-context reader observations remain an open research question rather than invented validation."
+  ],
   "safety_findings": [
-    "Open House is credited as participant-governed, WOWList is co-built, coalition outcomes remain collective, and FairRentNYC explicitly rejects solo policy causality.",
-    "Sunday Dinner/196 withholds guest data, attendance history, correspondence, access details, and unapproved images; coalition pages similarly withhold private notes, legal-review context, stakeholder information, and strategy material.",
-    "The photo manifest records Jamie's authorization while explicitly declining to assert third-party authorship or rights. Photographer, depicted-person, and visible-artwork clearance therefore remain separate human rights-review gates.",
-    "No protected UCSC educational record, private faculty correspondence, or unapproved testimonial is quoted or projected.",
-    "This judgment does not clear collaborator approval, production deployment, or indexing."
+    "No protected educational record, private correspondence, private archive locator, student identifier, or unapproved testimonial is projected.",
+    "Photographer credit and archive custody are distinct and internally consistent for the East River canary.",
+    "Collective civic, cultural, and community work retains collective credit and bounded causality.",
+    "This holdout pass is not rights clearance, production authorization, deployment approval, or indexing approval."
   ],
-  "recommendation": "Pass PR-015 at 4 for this exact candidate. Preserve the present collective-credit, consent, protected-record, and historical-versus-current boundaries, and require separate human clearance for photographic rights, collaborators, production, deployment, and indexing.",
+  "recommendation": "Pass PR-015 at score 4 for the exact candidate. Preserve the situated photographic threshold, role-first first viewport, Elana Gordon attribution, collective-credit language, and protected-source exclusions.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019f8cd5-8300-7dd1-b138-10d92d7261c2",
-    "agentNickname": "Banach",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
-    "sandbox": "read-only",
-    "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Judgment content recorded verbatim from a completed native subagent result; process provenance added by the parent orchestrator.",
-    "startedAt": "2026-07-23T02:37:10.374Z",
-    "completedAt": "2026-07-23T02:57:37.929Z"
+    "provider": "OpenAI Codex",
+    "reviewMode": "bounded read-only holdout",
+    "reviewerRole": "reader B",
+    "reviewedAt": "2026-07-26",
+    "candidatePathCount": 117,
+    "candidateFingerprintRecomputed": true,
+    "responsivePublicSurfaceFileCount": 115,
+    "responsiveRowsReviewed": 56,
+    "focusedCaptionViewports": [360, 375, 768, 1280],
+    "photographicDerivativesVisuallyInspected": 4,
+    "filesEdited": false
   }
 }
