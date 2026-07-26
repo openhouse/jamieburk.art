@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T15:18:07-04:00",
-  "sourceCommit": "ac7cf602d16106c41dacbe8422e9138a4298a3e2",
-  "sourceFingerprint": "d5e3529c5580d3590e3c8c24947c2080325e727de616f156a879113fcd267815",
+  "generatedAt": "2026-07-26T18:17:40-04:00",
+  "sourceCommit": "ce32d4eb8ed9bfd4d60228efbc4a23eaccd43b18",
+  "sourceFingerprint": "3b6b4fb0dcd38ba8f92b8eb471514b74e8d1532bad79c9e9f036eff637ddbead",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -474,7 +474,7 @@
       "sensitivity": "moderate",
       "summary": "Public-safe working notebook for exploratory photographic reading, sequence sketches, research questions, and the governed movement from a private field corpus toward selective public use.\n",
       "aliases": [],
-      "lastReviewed": "2026-07-22",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-22"
     },
     {
@@ -1153,10 +1153,23 @@
       "status": "draft",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Working sketchpad for Jamie's planned rough-draft selection of approximately 1,000 photographs, held as a private exploratory field rather than a completeness claim, evidence set, or publication candidate.\n",
+      "summary": "Working sketchpad for Jamie's completed private rough-draft field of 1,000 photographs, held as an exploratory field rather than a representative sample, evidence set, or publication candidate.\n",
       "aliases": [],
-      "lastReviewed": "2026-07-22",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-22"
+    },
+    {
+      "id": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "path": "docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md",
+      "title": "Oral history prompt 001: Stewardship afterlife",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed prompt for inviting Jamie's recollection around one privately held photograph provisionally associated with KC Town Hall's later stewardship, while keeping recollection, corroborated fact, and publication separate.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "research-inquiry.ucsc-installation-title",
@@ -3176,6 +3189,14 @@
       "context": "First exploratory selection and close-reading sketchpad."
     },
     {
+      "from": "index.knowledge-wiki.photography-notebook",
+      "type": "related_to",
+      "to": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "source": "frontmatter",
+      "href": "oral-history-stewardship-afterlife-001.md",
+      "context": "First governed photo-to-oral-history prompt, held outside claim and publication states."
+    },
+    {
       "from": "index.knowledge-wiki.pilot",
       "type": "related_to",
       "to": "capability.technical-operations",
@@ -4978,6 +4999,46 @@
       "source": "frontmatter",
       "href": "196-first-pass-proposal.md",
       "context": "The proposal gives the first encounter a time-bound but non-prescriptive residency frame."
+    },
+    {
+      "from": "research-inquiry.photography.field-corpus-001",
+      "type": "related_to",
+      "to": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "source": "frontmatter",
+      "href": "oral-history-stewardship-afterlife-001.md",
+      "context": "One photograph from the private editorial field now opens a bounded oral-history inquiry."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.living-archive",
+      "source": "frontmatter",
+      "href": "../../indexes/living-archive.md",
+      "context": "The inquiry may help locate a public-safe stewardship-transition record without exposing protected personal context."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": "The notebook governs the separation of attention, recollection, research, and publication."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": "Private archive context provisionally associates the scene with the project's later stewardship."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
+      "to": "research-inquiry.photography.field-corpus-001",
+      "source": "frontmatter",
+      "href": "field-corpus-001.md",
+      "context": "The photograph was encountered through the completed private field and its editor-ready proposal."
     },
     {
       "from": "research-inquiry.ucsc-installation-title",
@@ -7552,6 +7613,24 @@
       "to": "research-inquiry.photography.field-corpus-001",
       "fragment": null,
       "line": 83,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md",
+      "to": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "fragment": null,
+      "line": 86,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/field-corpus-001.md",
+      "from": "research-inquiry.photography.field-corpus-001",
+      "toPath": "docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md",
+      "to": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "fragment": null,
+      "line": 134,
       "kind": "link"
     },
     {

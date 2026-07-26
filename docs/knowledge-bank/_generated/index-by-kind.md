@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `ac7cf602d16106c41dacbe8422e9138a4298a3e2`
-**Generation time:** 2026-07-26T15:18:07-04:00
-**Source fingerprint:** `d5e3529c5580d3590e3c8c24947c2080325e727de616f156a879113fcd267815`
+**Source commit:** `ce32d4eb8ed9bfd4d60228efbc4a23eaccd43b18`
+**Generation time:** 2026-07-26T18:17:40-04:00
+**Source fingerprint:** `3b6b4fb0dcd38ba8f92b8eb471514b74e8d1532bad79c9e9f036eff637ddbead`
 
 ## application
 
@@ -142,6 +142,7 @@
 - [Documented bicycle-canoe journeys](../research-inquiries/documented-canoe-bike-journeys.md) - `research-inquiry.documented-canoe-bike-journeys`
 - [196 Artists Residency proposal: The First Pass](../notebooks/photography/196-first-pass-proposal.md) - `research-inquiry.photography.196-first-pass-proposal`
 - [Field Corpus 001](../notebooks/photography/field-corpus-001.md) - `research-inquiry.photography.field-corpus-001`
+- [Oral history prompt 001: Stewardship afterlife](../notebooks/photography/oral-history-stewardship-afterlife-001.md) - `research-inquiry.photography.oral-history-stewardship-afterlife-001`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
 ## research-run

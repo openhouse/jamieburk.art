@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `ac7cf602d16106c41dacbe8422e9138a4298a3e2`
-**Generation time:** 2026-07-26T15:18:07-04:00
-**Source fingerprint:** `d5e3529c5580d3590e3c8c24947c2080325e727de616f156a879113fcd267815`
+**Source commit:** `ce32d4eb8ed9bfd4d60228efbc4a23eaccd43b18`
+**Generation time:** 2026-07-26T18:17:40-04:00
+**Source fingerprint:** `3b6b4fb0dcd38ba8f92b8eb471514b74e8d1532bad79c9e9f036eff637ddbead`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 18
+- Nodes added: 19
 - Nodes removed: 0
-- Edges added: 60
+- Edges added: 66
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 1
@@ -31,6 +31,7 @@ Compared with the graph artifact on `origin/develop`.
 - `research-inquiry.documented-canoe-bike-journeys`
 - `research-inquiry.photography.196-first-pass-proposal`
 - `research-inquiry.photography.field-corpus-001`
+- `research-inquiry.photography.oral-history-stewardship-afterlife-001`
 - `source.permission.elana-gordon.east-river.2026-07`
 - `source.photo-metadata.east-river.2022.public-safe`
 - `source.recollection.jamie-canoe-commuting.2026-07`
