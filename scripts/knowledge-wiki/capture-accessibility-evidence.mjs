@@ -82,7 +82,7 @@ try {
             (image) => !image.complete || image.naturalWidth === 0
           ).length,
           lazyImages: images.filter((image) => image.loading === "lazy").length,
-          skipLinkPresent: Boolean(document.querySelector('a[href="#main-content"]'))
+          skipLinkPresent: Boolean(document.querySelector('a[href="#main"]'))
         };
       });
 
@@ -115,9 +115,8 @@ try {
               visible:
                 rect.width > 0 &&
                 rect.height > 0 &&
-                rect.bottom >= 0 &&
-                rect.top <= innerHeight &&
-                getComputedStyle(element).visibility !== "hidden"
+                getComputedStyle(element).visibility !== "hidden" &&
+                getComputedStyle(element).display !== "none"
             };
           })
         );
@@ -223,7 +222,7 @@ try {
         axeVersion: axe.version,
         violations: axe.violations,
         skipLinkPresent: before.skipLinkPresent,
-        skipLinkWasFirst: firstKeyboardTarget.includes("#main-content"),
+        skipLinkWasFirst: firstKeyboardTarget.includes("#main"),
         keyboardTargetsObserved: keyboardTargets.length,
         keyboardDistinctTargets,
         keyboardInvisibleTargets,
