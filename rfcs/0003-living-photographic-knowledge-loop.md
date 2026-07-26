@@ -2411,7 +2411,12 @@ reviews remain separate gates rather than synthetic approvals. A restoration
 record must be internally affirmative, materialized after the withdrawal, and
 no later than the actual review time. Each gate's evidence must be a
 gate-appropriate Wiki record connected to the named photograph, not merely an
-existing record. The canonical decision body and semantic fields use a
+existing record. Evidence records do not establish their own authority. A
+separate Jamie-reviewed photo-authority registry identifies the human reviewers
+whose authority counts for each gate; the restoration decision and its evidence
+cannot redefine those identities. The registry and the exact evidence text must
+exist in repository history no later than the restoration decision. The
+canonical decision body and semantic fields use a
 constrained generated template; interpretive narrative belongs in a separate
 record and cannot silently alter the decision. Contradictory additions, future
 dates, and manifest approval fields alone are not authority.

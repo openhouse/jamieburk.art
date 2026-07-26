@@ -53,6 +53,12 @@ verified private source binding and bounded creator permission summary. The
 other five derivatives remain explicitly open for source binding, creator,
 rights, caption, and production review.
 
+The [photo authority registry](../data/photo-authorities.json) separately
+records whose human review counts for each East River gate. Evidence can support
+a gate but cannot redefine its creator, rights, consent, represented-person, or
+portfolio authority. The registry does not approve production, deployment,
+indexing, a broader license, or a materially different use.
+
 ## Nonpublishing boundary
 
 Curatorial proposals, recollections, related frames, and research returns do

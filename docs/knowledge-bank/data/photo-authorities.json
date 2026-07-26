@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "policy": {
+    "purpose": "Identify the human reviewers whose authority counts for a photo gate without allowing a restoration decision or its evidence records to redefine them.",
+    "updatesRequire": "Jamie Burkart review",
+    "doesNotEstablish": [
+      "production publication approval",
+      "deployment approval",
+      "indexing approval",
+      "a broader copyright license",
+      "consent for a materially different use"
+    ]
+  },
+  "photos": [
+    {
+      "photoId": "photo.east-river-manhattan-bridge.2022",
+      "status": "human-attested",
+      "attestedBy": "Jamie Burkart",
+      "attestedAt": "2026-07-26T12:00:00Z",
+      "basisRecordIds": [
+        "photo.east-river-manhattan-bridge.2022",
+        "source.permission.elana-gordon.east-river-portfolio"
+      ],
+      "gateReviewers": {
+        "creator": [
+          "Elana Gordon"
+        ],
+        "rights": [
+          "Elana Gordon"
+        ],
+        "consent": [
+          "Jamie Burkart"
+        ],
+        "exact-credit": [
+          "Elana Gordon",
+          "Jamie Burkart"
+        ],
+        "crop": [
+          "Elana Gordon",
+          "Jamie Burkart"
+        ],
+        "caption": [
+          "Elana Gordon",
+          "Jamie Burkart"
+        ],
+        "represented-person": [
+          "Jamie Burkart"
+        ],
+        "editorial": [
+          "Jamie Burkart"
+        ],
+        "production": [
+          "Jamie Burkart"
+        ],
+        "deployment": [
+          "Jamie Burkart"
+        ],
+        "indexing": [
+          "Jamie Burkart"
+        ]
+      }
+    }
+  ]
+}

@@ -17,12 +17,17 @@ import {
   compilePhotoEdition,
   defaultRepoRoot,
   evaluatePhotoKnowledge,
+  loadPhotoAuthorityRegistry,
   loadPhotoKnowledge,
   validateRestorationDecision
 } from "./lib.mjs";
 
 function manifest() {
   return structuredClone(loadPhotoKnowledge());
+}
+
+function authorityRegistry() {
+  return structuredClone(loadPhotoAuthorityRegistry());
 }
 
 const restorationPhotoId = "photo.east-river-manhattan-bridge.2022";
@@ -327,13 +332,26 @@ function restorationEvidenceVersions(records, commitOrder = 1) {
   );
 }
 
+function restorationAuthorityVersion(registry, commitOrder = 1) {
+  const currentText = JSON.stringify(registry);
+  return {
+    commit: "authority-attestation-commit",
+    commitOrder,
+    entryIndex: 0,
+    text: currentText,
+    currentText
+  };
+}
+
 function evaluateRestoration({
   recordMutation,
   decisionMutation,
   decisionHistoryFirst = false,
   evidenceHistoryAfterDecision = false,
+  authorityHistoryAfterDecision = false,
   recordTextMutation,
-  evidenceRecordsMutation
+  evidenceRecordsMutation,
+  authorityRegistryMutation
 } = {}) {
   const withdrawn = historicalWithdrawal();
   const fixture = restorationFixture();
@@ -349,6 +367,9 @@ function evaluateRestoration({
   const wiki = compileWiki();
   const evidenceRecords = restorationEvidenceMap(fixture);
   evidenceRecordsMutation?.(evidenceRecords);
+  const authorities = authorityRegistry();
+  authorityRegistryMutation?.(authorities);
+  const authorityRegistryText = JSON.stringify(authorities);
   wiki.byId = evidenceRecords;
   wiki.byId.set(decision.decisionRecordId, record);
   const withdrawalEntry = {
@@ -377,18 +398,47 @@ function evaluateRestoration({
     relativePath: evidenceRecords.get(id).path,
     text: evidenceSourceOverrides[id]
   }));
+  const authorityEntry = {
+    commit: "authority-attestation-commit",
+    relativePath: "docs/knowledge-bank/data/photo-authorities.json",
+    text: authorityRegistryText
+  };
   return evaluatePhotoKnowledge({
     manifest: fixture.current,
+    authorityRegistry: authorities,
+    authorityRegistryText,
     wiki,
     sourceOverrides: {
       ...evidenceSourceOverrides,
       [decision.decisionRecordId]: recordText
     },
     introducedHistorySources: decisionHistoryFirst
-      ? [decisionEntry, withdrawalEntry, ...evidenceEntries]
-      : evidenceHistoryAfterDecision
-        ? [withdrawalEntry, decisionEntry, ...evidenceEntries]
-        : [withdrawalEntry, ...evidenceEntries, decisionEntry]
+      ? [
+          decisionEntry,
+          withdrawalEntry,
+          authorityEntry,
+          ...evidenceEntries
+        ]
+      : authorityHistoryAfterDecision
+        ? [
+            withdrawalEntry,
+            ...evidenceEntries,
+            decisionEntry,
+            authorityEntry
+          ]
+        : evidenceHistoryAfterDecision
+        ? [
+            withdrawalEntry,
+            authorityEntry,
+            decisionEntry,
+            ...evidenceEntries
+          ]
+        : [
+            withdrawalEntry,
+            authorityEntry,
+            ...evidenceEntries,
+            decisionEntry
+          ]
   });
 }
 
@@ -397,7 +447,7 @@ test("RFC 0003 photographic knowledge baseline passes", () => {
   assert.equal(result.passed, true, result.failures.join(", "));
   assert.equal(result.counts.photos, 6);
   assert.equal(result.counts.placements, 11);
-  assert.equal(result.counts.blockingCriteria, 22);
+  assert.equal(result.counts.blockingCriteria, 23);
 });
 
 test("a derivative checksum drift fails closed", () => {
@@ -890,6 +940,7 @@ test("restoration must postdate the implemented withdrawal", () => {
 test("restoration binds every governed gate and regenerated occurrence evidence", () => {
   const fixture = restorationFixture();
   const recordById = restorationEvidenceMap(fixture);
+  const authorities = authorityRegistry();
   const valid = validateRestorationDecision({
     decision: fixture.decision,
     record: fixture.record,
@@ -911,6 +962,9 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
     recordById,
     evidenceMaterializedVersions:
       restorationEvidenceVersions(recordById),
+    authorityRegistry: authorities,
+    authorityRegistryMaterializedVersion:
+      restorationAuthorityVersion(authorities),
     now: Date.parse("2026-07-26T23:59:59Z")
   });
   assert.equal(valid, true);
@@ -944,6 +998,9 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
       recordById,
       evidenceMaterializedVersions:
         restorationEvidenceVersions(recordById),
+      authorityRegistry: authorities,
+      authorityRegistryMaterializedVersion:
+        restorationAuthorityVersion(authorities),
       now: Date.parse("2026-07-26T23:59:59Z")
     }),
     false
@@ -981,6 +1038,9 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
       recordById: weakenedRecordById,
       evidenceMaterializedVersions:
         restorationEvidenceVersions(weakenedRecordById),
+      authorityRegistry: authorities,
+      authorityRegistryMaterializedVersion:
+        restorationAuthorityVersion(authorities),
       now: Date.parse("2026-07-26T23:59:59Z")
     }),
     false
@@ -1040,6 +1100,73 @@ test("restoration rejects coordinated non-human reviewer substitution", () => {
   );
 });
 
+test("restoration evidence cannot redefine external human authority", () => {
+  const cases = [
+    {
+      gate: "rights",
+      evidenceId: "source.permission.elana-gordon.east-river-portfolio",
+      mutate(record) {
+        return { ...record, rights_holders: ["Automated evaluator"] };
+      }
+    },
+    {
+      gate: "consent",
+      evidenceId: restorationPhotoId,
+      mutate(record) {
+        return {
+          ...record,
+          consent_authorities: ["Automated evaluator"]
+        };
+      }
+    },
+    {
+      gate: "represented-person",
+      evidenceId: restorationPhotoId,
+      mutate(record) {
+        return {
+          ...record,
+          represented_people: ["Automated evaluator"]
+        };
+      }
+    }
+  ];
+  for (const attack of cases) {
+    const result = evaluateRestoration({
+      recordMutation: {
+        restoration_gate_reviews:
+          restorationFixture().record.restoration_gate_reviews.map(
+            (review) =>
+              review.gate === attack.gate
+                ? {
+                    ...review,
+                    reviewed_by: ["Automated evaluator"]
+                  }
+                : review
+          )
+      },
+      evidenceRecordsMutation(records) {
+        const record = attack.mutate(records.get(attack.evidenceId));
+        records.set(attack.evidenceId, {
+          ...record,
+          photo_gate_reviews: record.photo_gate_reviews.map((review) =>
+            review.gate === attack.gate
+              ? {
+                  ...review,
+                  reviewed_by: ["Automated evaluator"]
+                }
+              : review
+          )
+        });
+      }
+    });
+    assert.equal(
+      result.checks.photo_historical_revocation_monotonic,
+      false,
+      attack.gate
+    );
+  }
+});
+
 test("restoration requires cleared exact-credit state for every evidence record", () => {
   const result = evaluateRestoration({
     evidenceRecordsMutation(records) {
@@ -1057,6 +1184,7 @@ test("restoration requires cleared exact-credit state for every evidence record"
 
 test("restoration rejects unresolved or later evidence", () => {
   const fixture = restorationFixture();
+  const authorities = authorityRegistry();
   const unresolvedRecords = restorationEvidenceMap(fixture);
   const evaluationId =
     "evaluation.photo-curation.home-east-river.2026-07-26";
@@ -1083,6 +1211,9 @@ test("restoration rejects unresolved or later evidence", () => {
       recordById: unresolvedRecords,
       evidenceMaterializedVersions:
         restorationEvidenceVersions(unresolvedRecords),
+      authorityRegistry: authorities,
+      authorityRegistryMaterializedVersion:
+        restorationAuthorityVersion(authorities),
       now: Date.parse("2026-07-26T23:59:59Z")
     }),
     false
@@ -1117,6 +1248,9 @@ test("restoration rejects unresolved or later evidence", () => {
       recordById: laterRecords,
       evidenceMaterializedVersions:
         restorationEvidenceVersions(laterRecords),
+      authorityRegistry: authorities,
+      authorityRegistryMaterializedVersion:
+        restorationAuthorityVersion(authorities),
       now: Date.parse("2026-07-27T23:59:59Z")
     }),
     false
@@ -1126,6 +1260,16 @@ test("restoration rejects unresolved or later evidence", () => {
 test("backdated evidence materialized after the decision fails closed", () => {
   const result = evaluateRestoration({
     evidenceHistoryAfterDecision: true
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("authority attestation materialized after the decision fails closed", () => {
+  const result = evaluateRestoration({
+    authorityHistoryAfterDecision: true
   });
   assert.equal(
     result.checks.photo_historical_revocation_monotonic,

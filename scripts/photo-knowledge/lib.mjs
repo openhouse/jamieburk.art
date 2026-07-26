@@ -22,6 +22,8 @@ export const defaultRepoRoot = path.resolve(
 );
 
 export const manifestPath = "docs/knowledge-bank/data/photo-knowledge.json";
+export const authorityRegistryPath =
+  "docs/knowledge-bank/data/photo-authorities.json";
 const responsiveEvidencePath =
   "docs/qa/evals-H/responsive-route-matrix.json";
 
@@ -409,36 +411,50 @@ function preferredCreators(record) {
   return [...new Set(creators)];
 }
 
-function requiredReviewersForGate(
+function requiredReviewersForGate(gate, photoId, authorityRegistry) {
+  const authority = authorityRegistry?.photos?.find(
+    (entry) => entry.photoId === photoId
+  );
+  return authority?.gateReviewers?.[gate] ?? [];
+}
+
+function evidenceAuthorityFactsMatch(
   gate,
   evidenceRecord,
   photoRecord,
-  portfolioOwner
+  requiredReviewers
 ) {
-  const creators = preferredCreators(photoRecord);
+  const photoCreators = preferredCreators(photoRecord);
   const evidenceCreators = preferredCreators(evidenceRecord);
   switch (gate) {
     case "creator":
-      return evidenceCreators;
-    case "rights":
-      return evidenceRecord.rights_holders?.length > 0
+      return sameReviewerSet(evidenceCreators, requiredReviewers);
+    case "rights": {
+      const rightsHolders = evidenceRecord.rights_holders?.length > 0
         ? evidenceRecord.rights_holders
         : evidenceCreators;
+      return sameReviewerSet(rightsHolders, requiredReviewers);
+    }
     case "consent":
-      return evidenceRecord.consent_authorities ?? [];
+      return sameReviewerSet(
+        evidenceRecord.consent_authorities,
+        requiredReviewers
+      );
     case "represented-person":
-      return evidenceRecord.represented_people ?? [];
+      return sameReviewerSet(
+        evidenceRecord.represented_people,
+        requiredReviewers
+      );
     case "exact-credit":
     case "crop":
     case "caption":
-      return [...new Set([...creators, portfolioOwner])];
-    case "editorial":
-    case "production":
-    case "deployment":
-    case "indexing":
-      return [portfolioOwner];
+      return requiredReviewers.every(
+        (reviewer) =>
+          photoCreators.includes(reviewer) ||
+          reviewer === "Jamie Burkart"
+      );
     default:
-      return [];
+      return true;
   }
 }
 
@@ -449,7 +465,7 @@ function restorationEvidenceSupportsGate(
   gateReview,
   decidedAt,
   photoRecord,
-  portfolioOwner
+  authorityRegistry
 ) {
   const relevant =
     record?.id === photoId ||
@@ -478,11 +494,18 @@ function restorationEvidenceSupportsGate(
   }
   const requiredReviewers = requiredReviewersForGate(
     gate,
-    record,
-    photoRecord,
-    portfolioOwner
+    photoId,
+    authorityRegistry
   );
-  if (!sameReviewerSet(gateReview.reviewed_by, requiredReviewers)) {
+  if (
+    !sameReviewerSet(gateReview.reviewed_by, requiredReviewers) ||
+    !evidenceAuthorityFactsMatch(
+      gate,
+      record,
+      photoRecord,
+      requiredReviewers
+    )
+  ) {
     return false;
   }
   switch (gate) {
@@ -593,6 +616,8 @@ export function validateRestorationDecision({
   publicSurfaceFingerprint,
   recordById,
   evidenceMaterializedVersions,
+  authorityRegistry,
+  authorityRegistryMaterializedVersion,
   now = Date.now()
 }) {
   if (!decision || !record || !withdrawal || !materializedVersion) {
@@ -613,6 +638,41 @@ export function validateRestorationDecision({
     : [];
   const gateNames = gateReviews.map((review) => review.gate);
   const photoRecord = recordById?.get(decision.photoId);
+  const authorityEntry = authorityRegistry?.photos?.find(
+    (entry) => entry.photoId === decision.photoId
+  );
+  const authorityAttestedAt = Date.parse(authorityEntry?.attestedAt ?? "");
+  const authorityBound =
+    authorityRegistry?.policy?.updatesRequire === "Jamie Burkart review" &&
+    authorityEntry?.status === "human-attested" &&
+    authorityEntry?.attestedBy === "Jamie Burkart" &&
+    !Number.isNaN(authorityAttestedAt) &&
+    authorityAttestedAt <= decidedAt &&
+    authorityAttestedAt <= now &&
+    Array.isArray(authorityEntry?.basisRecordIds) &&
+    authorityEntry.basisRecordIds.length > 0 &&
+    authorityEntry.basisRecordIds.every((id) => recordById?.has(id)) &&
+    requiredRestorationGates.every((gate) => {
+      const reviewers = authorityEntry?.gateReviewers?.[gate];
+      return (
+        Array.isArray(reviewers) &&
+        reviewers.length > 0 &&
+        new Set(reviewers).size === reviewers.length &&
+        reviewers.every(
+          (reviewer) =>
+            typeof reviewer === "string" &&
+            reviewer.trim().includes(" ") &&
+            !/(?:automated|evaluator|agent|system|model|bot|artificial intelligence)/i.test(
+              reviewer
+            )
+        )
+      );
+    }) &&
+    authorityRegistryMaterializedVersion &&
+    authorityRegistryMaterializedVersion.commitOrder <=
+      materializedVersion.commitOrder &&
+    authorityRegistryMaterializedVersion.text ===
+      authorityRegistryMaterializedVersion.currentText;
   const gatesExact =
     gateReviews.length === requiredRestorationGates.length &&
     new Set(gateNames).size === requiredRestorationGates.length &&
@@ -648,7 +708,7 @@ export function validateRestorationDecision({
               review,
               decidedAt,
               photoRecord,
-              decision.approvedBy
+              authorityRegistry
             )
           );
         }) &&
@@ -732,6 +792,7 @@ export function validateRestorationDecision({
     record.restoration_public_surface_fingerprint ===
       publicSurfaceFingerprint &&
     JSON.stringify(occurrenceIds) === JSON.stringify(expectedIds) &&
+    authorityBound &&
     gatesExact &&
     recordTextBound &&
     materializationBound
@@ -826,6 +887,12 @@ export function loadPhotoKnowledge(repoRoot = defaultRepoRoot) {
   return JSON.parse(readFileSync(path.join(repoRoot, manifestPath), "utf8"));
 }
 
+export function loadPhotoAuthorityRegistry(repoRoot = defaultRepoRoot) {
+  return JSON.parse(
+    readFileSync(path.join(repoRoot, authorityRegistryPath), "utf8")
+  );
+}
+
 export function buildWithdrawalPlan(
   manifest,
   photoId,
@@ -918,6 +985,11 @@ export function applyPhotoRevocation(manifest, photoId) {
 export function evaluatePhotoKnowledge(options = {}) {
   const repoRoot = options.repoRoot ?? defaultRepoRoot;
   const manifest = options.manifest ?? loadPhotoKnowledge(repoRoot);
+  const authorityRegistry =
+    options.authorityRegistry ?? loadPhotoAuthorityRegistry(repoRoot);
+  const authorityRegistryText =
+    options.authorityRegistryText ??
+    readFileSync(path.join(repoRoot, authorityRegistryPath), "utf8");
   const sitePhotos = options.publicPhotoManifest ?? publicPhotoManifest;
   const wiki = options.wiki ?? compileWiki({ repoRoot });
   const packageManifest =
@@ -1226,6 +1298,7 @@ export function evaluatePhotoKnowledge(options = {}) {
       .filter(Boolean)
       .map((record) => path.join(repoRoot, record.path)),
     path.join(repoRoot, manifestPath),
+    path.join(repoRoot, authorityRegistryPath),
     path.join(repoRoot, "apps/www/src/data/photography.ts")
   ];
   const protectedPathPattern = new RegExp(
@@ -1357,6 +1430,45 @@ export function evaluatePhotoKnowledge(options = {}) {
           ];
         })
       );
+      let authorityRegistryMaterializedVersion = [
+        ...(historicalWithdrawalState.pathVersions.get(
+          authorityRegistryPath
+        ) ?? [])
+      ]
+        .filter(
+          (candidate) =>
+            candidate.commitOrder <= (materializedVersion?.commitOrder ?? -1)
+        )
+        .sort(
+          (left, right) =>
+            right.commitOrder - left.commitOrder ||
+            right.entryIndex - left.entryIndex
+        )
+        .find((candidate) => candidate.text === authorityRegistryText);
+      if (!authorityRegistryMaterializedVersion) {
+        try {
+          const baselineText = execFileSync(
+            "git",
+            ["show", `${introducedHistoryBase}:${authorityRegistryPath}`],
+            {
+              cwd: repoRoot,
+              encoding: "utf8",
+              maxBuffer: 20 * 1024 * 1024,
+              stdio: ["ignore", "pipe", "ignore"]
+            }
+          );
+          if (baselineText === authorityRegistryText) {
+            authorityRegistryMaterializedVersion = {
+              commit: introducedHistoryBase,
+              commitOrder: -1,
+              entryIndex: -1,
+              text: baselineText
+            };
+          }
+        } catch {
+          // A new authority registry must appear before the decision in history.
+        }
+      }
       return validateRestorationDecision({
         decision,
         record,
@@ -1368,6 +1480,14 @@ export function evaluatePhotoKnowledge(options = {}) {
           responsiveEvidence.publicSurfaceFingerprint,
         recordById: byId,
         evidenceMaterializedVersions,
+        authorityRegistry,
+        authorityRegistryMaterializedVersion:
+          authorityRegistryMaterializedVersion
+            ? {
+                ...authorityRegistryMaterializedVersion,
+                currentText: authorityRegistryText
+              }
+            : undefined,
         now: options.now ?? Date.now()
       });
     });
@@ -1478,6 +1598,43 @@ export function evaluatePhotoKnowledge(options = {}) {
     packageManifest.scripts?.check?.includes("npm run photos:check") &&
     packageManifest.scripts?.check?.includes("npm run photos:test");
 
+  const eastAuthority = authorityRegistry.photos?.find(
+    (entry) => entry.photoId === east?.id
+  );
+  const authorityRegistryBounded =
+    authorityRegistry.version === 1 &&
+    authorityRegistry.policy?.updatesRequire === "Jamie Burkart review" &&
+    authorityRegistry.policy?.doesNotEstablish?.includes(
+      "production publication approval"
+    ) &&
+    eastAuthority?.status === "human-attested" &&
+    eastAuthority?.attestedBy === "Jamie Burkart" &&
+    eastAuthority?.basisRecordIds?.includes(east.id) &&
+    eastAuthority?.basisRecordIds?.includes(permission.id) &&
+    sameReviewerSet(
+      eastAuthority?.gateReviewers?.creator,
+      preferredCreators(east)
+    ) &&
+    sameReviewerSet(
+      eastAuthority?.gateReviewers?.rights,
+      [permission.creator]
+    ) &&
+    sameReviewerSet(
+      eastAuthority?.gateReviewers?.consent,
+      ["Jamie Burkart"]
+    ) &&
+    sameReviewerSet(
+      eastAuthority?.gateReviewers?.["represented-person"],
+      ["Jamie Burkart"]
+    ) &&
+    ["editorial", "production", "deployment", "indexing"].every(
+      (gate) =>
+        sameReviewerSet(
+          eastAuthority?.gateReviewers?.[gate],
+          ["Jamie Burkart"]
+        )
+    );
+
   const humanGatesOpen =
     manifest.edition.production === "open" &&
     manifest.edition.indexing === "open" &&
@@ -1518,6 +1675,7 @@ export function evaluatePhotoKnowledge(options = {}) {
     photo_introduced_history_boundary_clean: introducedHistoryBoundaryClean,
     photo_historical_revocation_monotonic: historicalRevocationFailsClosed,
     photo_revocation_fails_closed: revocationFailsClosed,
+    photo_authority_registry_bounded: authorityRegistryBounded,
     photo_commands_wired: commandsWired,
     photo_human_gates_open: humanGatesOpen
   };
