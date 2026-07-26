@@ -1,0 +1,69 @@
+{
+  "generated": true,
+  "passed": true,
+  "checks": {
+    "records_materialized": true,
+    "no_private_locator_leakage": true,
+    "private_binding_opaque_and_resolvable": true,
+    "derivative_integrity_and_metadata_stripping": true,
+    "creator_credit_and_custody_distinct": true,
+    "permission_scope_exact_and_fail_closed": true,
+    "caption_assertions_source_bound": true,
+    "manifest_wiki_placement_alignment": true,
+    "revocation_and_rollback_available": true,
+    "protected_absence_not_auto_filled": true,
+    "recollection_does_not_auto_project": true,
+    "automated_selection_prohibited": true,
+    "production_and_indexing_human_gated": true,
+    "rfc_authority_and_scope_current": true,
+    "exact_candidate_receipt_current": true
+  },
+  "criteria": {
+    "documentary_integrity": true,
+    "placement_coherence": true,
+    "artist_led_curation": true,
+    "living_return": true,
+    "selective_projection": true,
+    "teammate_reproducibility": true
+  },
+  "failedHardGates": [],
+  "failedCriteria": [],
+  "candidate": {
+    "fingerprint": "4d28ea06a786765beeacbcf24ba5de08cab4294a8ec8ad28828214f2cb67bd8d",
+    "fileCount": 28,
+    "files": [
+      "apps/www/public/images/field-notes/jamie-east-river.webp",
+      "apps/www/src/app/globals.css",
+      "apps/www/src/components/Hero.tsx",
+      "apps/www/src/data/photography.ts",
+      "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
+      "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
+      "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
+      "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
+      "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+      "docs/knowledge-bank/indexes/photography.md",
+      "docs/knowledge-bank/people/elana-gordon.md",
+      "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
+      "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
+      "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+      "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
+      "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "docs/knowledge-bank/workflows/photography-east-river-canary.md",
+      "evals/photo-knowledge/canary.json",
+      "evals/photo-knowledge/curatorial/layout-c-home-east-river-v1.json",
+      "evals/photo-knowledge/evals.json",
+      "rfcs/0003-living-photographic-knowledge-loop.md",
+      "scripts/check-photo-knowledge-evals.mjs",
+      "scripts/photo-knowledge/cli.mjs",
+      "scripts/photo-knowledge/lib.mjs",
+      "scripts/photo-knowledge/verify-private-binding.mjs",
+      "scripts/tests/photo-knowledge.test.mjs"
+    ]
+  },
+  "humanGates": [
+    "Jamie production approval",
+    "indexing approval"
+  ]
+}
