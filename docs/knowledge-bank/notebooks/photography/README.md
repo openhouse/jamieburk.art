@@ -142,4 +142,4 @@ authority for a particular image or use.
 - [Public-safe field-note template](field-note-template.md)
 - [Release / water / salt sequence sketch](sketches/release-water-salt.md)
 - [Visual evidence index](../../indexes/visual-evidence.md)
-- [Photography RFP](../../../../rfps/0002-lifelong-photo-archive-selection-and-publication.md)
+- [Photography RFC](../../../../rfcs/0002-lifelong-photo-archive-selection-and-publication.md)

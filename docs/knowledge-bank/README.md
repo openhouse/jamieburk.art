@@ -46,6 +46,10 @@ relations:
     target: index.knowledge-wiki.photo-notebook
     href: notebooks/photography/README.md
     context: Public-safe studio surface for provisional visual readings and sequence sketches.
+  - type: related_to
+    target: index.knowledge-wiki.photography
+    href: indexes/photography.md
+    context: Governed photo assets, occurrences, editions, rights summaries, recollections, and protected absences.
 ---
 
 # Knowledge Wiki
@@ -101,6 +105,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Photography working notebook](notebooks/photography/README.md): provisional
   visual readings, open questions, field-note method, and sequence sketches;
   no photographs or private catalog data.
+- [Living photographic knowledge](indexes/photography.md): governed photo
+  assets, source summaries, curatorial proposals, exact occurrences, editions,
+  recollections, research returns, and protected absences.
 - [Open questions](_generated/wanted-pages.md): deliberate missing knowledge,
   kept distinct from broken links and nonexistence.
 

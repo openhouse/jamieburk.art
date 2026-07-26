@@ -29,6 +29,6 @@
   ],
   "publicRegistryPath": "apps/www/src/data/knowledge-bank/records.ts",
   "notebookRoot": "docs/knowledge-bank/notebooks/photography",
-  "rfpPath": "rfps/0002-lifelong-photo-archive-selection-and-publication.md",
+  "rfcPath": "rfcs/0002-lifelong-photo-archive-selection-and-publication.md",
   "minimumOpenQuestions": 20
 }

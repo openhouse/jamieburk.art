@@ -24,14 +24,22 @@ const expectedImages = [
   "jamie-self-portrait-2026.jpg",
   "fair-rent-field-materials.jpg",
   "repeal-cabaret-law.jpg",
-  "talks-not-raids.jpg",
   "let-nyc-dance.jpg"
 ];
 
 const results = [];
 const record = (id, pass, evidence) => results.push({ id, pass, evidence });
 
-const selectedBlocks = [...manifest.matchAll(/id: "(photo-[^"]+)"[\s\S]*?src: "([^"]+)"[\s\S]*?alt: "([^"]+)"[\s\S]*?caption:\s*\n?\s*"([^"]+)"[\s\S]*?credit: "([^"]+)"[\s\S]*?context: "([^"]+)"/g)];
+const activeManifestStart = manifest.indexOf("export const photos = {");
+const activeManifestEnd = manifest.indexOf(
+  "} satisfies Record<string, PhotoAsset>;",
+  activeManifestStart
+);
+const activeManifest =
+  activeManifestStart >= 0 && activeManifestEnd > activeManifestStart
+    ? manifest.slice(activeManifestStart, activeManifestEnd)
+    : "";
+const selectedBlocks = [...activeManifest.matchAll(/id: "(photo-[^"]+)"[\s\S]*?src: "([^"]+)"[\s\S]*?alt: "([^"]+)"[\s\S]*?caption:\s*\n?\s*"([^"]+)"[\s\S]*?credit: "([^"]+)"[\s\S]*?context: "([^"]+)"/g)];
 const selectedIds = selectedBlocks.map((match) => match[1]);
 const selectedSources = selectedBlocks.map((match) => match[2]);
 const fieldsComplete = selectedBlocks.every((match) => match.slice(1).every((value) => value.trim().length > 0));
@@ -64,7 +72,7 @@ record(
 );
 record(
   "LAYOUT-003",
-  selectedBlocks.length === 9 && fieldsComplete && new Set(selectedIds).size === 9 && new Set(selectedSources).size === 9,
+  selectedBlocks.length === 8 && fieldsComplete && new Set(selectedIds).size === 8 && new Set(selectedSources).size === 8,
   `${selectedBlocks.length} selected photographs have complete, unique manifest records.`
 );
 record(
@@ -75,12 +83,12 @@ record(
 record(
   "LAYOUT-005",
   imagesValid && jpegMetadataFree && privateReferenceFree,
-  "All 9 JPEG derivatives are valid, metadata-light, and disconnected from private paths and held-sensitive references."
+  "All 8 active JPEG derivatives are valid, metadata-light, and disconnected from private paths and held-sensitive references."
 );
 record(
   "LAYOUT-006",
-  /public pull-request review/.test(designRecord) && /production approval remains an open human decision/i.test(designRecord) && /held back/.test(designRecord) && selectedIds.every((id) => designRecord.includes(`\`${id}\``)),
-  "The design record names the authorized review surface, records every selected asset, preserves production approval as a human gate, and records held-back images."
+  /public pull-request review/.test(designRecord) && /production approval remains an open human decision/i.test(designRecord) && /held back/.test(designRecord) && /child-specific dignity review/i.test(designRecord) && selectedIds.every((id) => designRecord.includes(`\`${id}\``)),
+  "The design record names the authorized review surface, records every active asset, preserves production approval as a human gate, and records held images."
 );
 record(
   "LAYOUT-007",

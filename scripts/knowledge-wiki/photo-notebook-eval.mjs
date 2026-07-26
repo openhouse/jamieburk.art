@@ -207,9 +207,9 @@ export function evaluatePhotoNotebook(options = {}) {
     manifest.requiredRecords.every(([id]) => !publicRegistry.includes(id)) &&
     notebookRecords.every((item) => !["asset", "source", "claim", "projection"].includes(item.kind));
 
-  const rfpBoundaryRetained =
-    existsSync(path.join(repoRoot, manifest.rfpPath)) &&
-    /Photography RFP/i.test(source(manifest.notebookId)) &&
+  const rfcBoundaryRetained =
+    existsSync(path.join(repoRoot, manifest.rfcPath)) &&
+    /Photography RFC/i.test(source(manifest.notebookId)) &&
     /private photo catalog/i.test(notebookSource) &&
     /Do not place photographs, contact sheets/i.test(notebookSource);
 
@@ -437,7 +437,7 @@ export function evaluatePhotoNotebook(options = {}) {
     photo_sequence_sketch_remains_interpretive: sequenceSketchRemainsInterpretive,
     photo_open_questions_stay_generative: openQuestionsStayGenerative,
     photo_notebook_public_safety_preserved: notebookPublicSafetyPreserved,
-    photo_rfp_boundary_retained: rfpBoundaryRetained,
+    photo_rfc_boundary_retained: rfcBoundaryRetained,
     photo_proposal_accepted_as_permission: proposalAcceptedAsPermission,
     photo_proposal_departure_protected: proposalDepartureProtected,
     photo_proposal_outputs_not_required: proposalOutputsNotRequired,

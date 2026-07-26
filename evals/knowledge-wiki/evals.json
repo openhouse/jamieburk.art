@@ -156,7 +156,7 @@
         "photo_sequence_sketch_remains_interpretive",
         "photo_open_questions_stay_generative",
         "photo_notebook_public_safety_preserved",
-        "photo_rfp_boundary_retained",
+        "photo_rfc_boundary_retained",
         "photo_proposal_accepted_as_permission",
         "photo_proposal_departure_protected",
         "photo_proposal_outputs_not_required",
@@ -202,7 +202,7 @@
         "family_public_projection_still_selective",
         "family_public_safety_preserved",
         "merge_readiness_ci_enforced",
-        "rfp_contract_enforced",
+        "rfc_contract_enforced",
         "generated_outputs_locale_independent",
         "diff_hygiene_clean"
       ]

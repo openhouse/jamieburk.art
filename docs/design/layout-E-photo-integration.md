@@ -46,11 +46,28 @@ Captions must not convert proximity into sole authorship. Collective campaigns r
 
 ## Public Derivatives
 
-The branch contains nine selected JPEG preview derivatives. Embedded archive metadata and private library coordinates are not carried into the public assets. Source-library identifiers, private filesystem paths, and held-sensitive images do not enter application code, captions, or this record.
+The active composition contains eight selected JPEG preview derivatives.
+Embedded archive metadata and private library coordinates are not carried into
+the public assets. Source-library identifiers and private filesystem paths do
+not enter application code, captions, or this record.
 
 Jamie authorized these derivatives for public pull-request review as part of this actual layout experiment on July 22, 2026. That authorization names this working branch and review surface. Production approval remains an open human decision, including final rights, exact credit, crop, and represented-person dignity review. Passing an automated check is not publication clearance.
 
 Two small-space gathering images in the initial edit, one from Sunday Dinner and one from an NYC Artist Coalition monthly meeting, were held back and removed from the public branch after independent review found no asset-specific represented-person approval record. The omission is intentional. Those images may return only through a later, recorded human decision.
+
+RFC 0003 begins with one fully bound East River canary. The eight active
+Layout E derivatives remain a legacy migration cohort: their current public
+review authorization is recorded here, but they do not inherit the canary's
+permission capsule or exact-use clearance. Each needs its own creator, rights,
+dignity, crop, and occurrence record before the system may call the cohort
+fully migrated.
+
+The Talks Not Raids image is withdrawn from the active composition because a
+child is visible and no child-specific dignity or represented-person review is
+recorded. This branch removes the derivative from its current tree. Its prior
+working-branch history is not silently rewritten; history treatment, cache
+treatment, or any future return requires an explicit human decision by the
+appropriate authorities.
 
 The raft now carries its collective-role caption immediately beneath the hero. The image therefore cannot quietly recast Jamie as captain: it identifies his work as tending a sound, stable, shared experience inside a multi-person project.
 
@@ -65,7 +82,7 @@ The raft now carries its collective-role caption immediately beneath the hero. T
 | `photo-jamie-self-portrait-2026` | About | Jamie alone in his home/work space | Include; Jamie made and authorized the self-portrait | Open: final crop and production approval |
 | `photo-fair-rent-field-materials` | Fair Rent lineage | No people; public campaign materials | Include as a material record without private notes or contact data | Open: final rights and crop review |
 | `photo-nycac-repeal-cabaret-law` | Fair Rent lineage | Public campaign action at City Hall | Include with artists, advocates, and officials credited collectively | Open: exact credit, rights, and final represented-person review |
-| `photo-nycac-talks-not-raids` | Fair Rent lineage | Public press action near City Hall | Include with the campaign demand and collective-work boundary | Open: exact credit, rights, and final represented-person review |
+| `photo-nycac-talks-not-raids` | Withdrawn from active composition | Public press action near City Hall; a child is visible | Hold pending exact-use review; do not render | Open: exact credit, rights, child-specific dignity review, final represented-person review, and history/cache treatment |
 | `photo-nycac-let-nyc-dance` | Fair Rent lineage | Public Dance Parade action | Include with embodied public culture and collective making named | Open: exact credit, rights, and final represented-person review |
 
 This ledger records inclusion in the public working branch, not blanket clearance for every future surface. A public-event context reduces the privacy expectation but does not erase photographer rights, dignity, or correction obligations.

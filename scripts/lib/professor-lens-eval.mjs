@@ -25,8 +25,20 @@ const candidateRelativePaths = [...new Set([
   ".agents/evals/portfolio-production-readiness.json",
   "docs/design/layout-E-photo-integration.md",
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+  "rfcs/0003-living-photographic-knowledge-loop.md",
   ...walk("apps/www/src"),
   ...walk("apps/www/public/images/photo-fieldwork"),
+  ...walk("apps/www/public/images/field-notes"),
+  ...walk("docs/photography"),
+  ...walk("docs/knowledge-bank/assets/photographs"),
+  ...walk("docs/knowledge-bank/indexes/photo-sets"),
+  ...walk("docs/knowledge-bank/sources/photo-metadata"),
+  ...walk("docs/knowledge-bank/sources/permissions"),
+  ...walk("docs/knowledge-bank/sources/recollections"),
+  ...walk("docs/knowledge-bank/evaluations/curatorial"),
+  ...walk("docs/knowledge-bank/decisions/photography"),
+  ...walk("docs/knowledge-bank/projections/photography"),
+  "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
   ...walk("docs/qa/layout-E")
 ])].sort();
 
@@ -39,7 +51,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "a780e84a1135c2de557b85d9befd1a496458b972865a6bf5ff7002c1c8b77aa4";
+const approvedCandidateSha256 = "3f65f2e11b609f2f230c7b5c61ce24e07427d3b0700be5d165027e1775366e53";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },

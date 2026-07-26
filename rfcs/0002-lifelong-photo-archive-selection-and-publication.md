@@ -1,5 +1,5 @@
 ---
-rfp: 2
+rfc: 2
 title: Lifelong Photo Archive Selection and Publication
 stage: proposed
 start_date: 2026-07-22
@@ -79,7 +79,7 @@ forcing every discovery into the public portfolio.
   publication permission.
 - Do not automatically promote photographs or photograph-derived claims into
   the portfolio, resume, applications, or social media.
-- Do not implement the private/public shared core proposed in RFP 0001 merely
+- Do not implement the private/public shared core proposed in RFC 0001 merely
   by merging this proposal.
 
 ## Terminology
@@ -319,7 +319,7 @@ underused.
   source population?
 - What does the reported archive count include, and how should edited versions,
   bursts, screenshots, scans, videos, and duplicates be counted?
-- Where should the private catalog and review decisions live before RFP 0001 is
+- Where should the private catalog and review decisions live before RFC 0001 is
   accepted or implemented?
 - Which project offers the best bounded pilot with useful images and tractable
   rights questions?

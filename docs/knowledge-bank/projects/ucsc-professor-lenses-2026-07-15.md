@@ -59,7 +59,7 @@ across current projects, not abstract systems language or a historical tool list
 ## Projection decision
 
 The About page now connects the public Open House record to current and
-historical work, then compares four public-safe examples through relationship,
+historical work, then compares five public-safe examples through relationship,
 interface and use, and learning and continuity. The copy names the recurring
 method once, keeps Open House's governance collective, and publishes no faculty
 testimonial or protected educational-record content.

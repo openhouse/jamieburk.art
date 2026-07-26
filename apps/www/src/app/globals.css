@@ -335,13 +335,9 @@ h2 {
   grid-template-columns: minmax(15rem, 0.38fr) minmax(0, 0.62fr);
 }
 
-.jb-work-row-image {
-  height: 100%;
-}
-
 .jb-work-row-image > div {
-  aspect-ratio: auto !important;
-  height: 100%;
+  aspect-ratio: 3 / 2 !important;
+  height: auto;
   min-height: 22rem;
   width: 100%;
 }

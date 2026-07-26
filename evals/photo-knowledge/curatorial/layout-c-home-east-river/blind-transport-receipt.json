@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run": "blind",
+  "separate_process_context": true,
+  "network": "not-used",
+  "repository_context": "not-delivered",
+  "private_archive": "not-delivered",
+  "delivered_items": [
+    {
+      "kind": "text-prompt",
+      "sha256": "350df7bb1060f71f113d16eba20419b5fb86f2dfa579d480f852b0aac5e54f95"
+    },
+    {
+      "kind": "image",
+      "label": "Candidate A",
+      "sha256": "748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621"
+    },
+    {
+      "kind": "image",
+      "label": "Candidate B",
+      "sha256": "ced398bbacc78eedbda290a46897b29ebac360327e487a58844f3f3ff1656de9"
+    }
+  ],
+  "excluded_context": [
+    "identity",
+    "place",
+    "date",
+    "creator",
+    "source filename",
+    "project history",
+    "career context",
+    "rights record",
+    "private metadata"
+  ],
+  "operator_attestation": "The blind reader received the prompt and two image payloads in a separate model process before the contextual process was started.",
+  "model_identifier_returned_by_tool": false,
+  "publication_authority": "none"
+}

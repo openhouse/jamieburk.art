@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "field_id": "blind-field.layout-c.home-east-river.v1",
+  "privacy_boundary": "Public derivative bytes only. Provenance, filenames, people, place, date, project, career, rights, and narrative context were not delivered.",
+  "candidates": [
+    {
+      "label": "A",
+      "sha256": "748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "label": "B",
+      "sha256": "ced398bbacc78eedbda290a46897b29ebac360327e487a58844f3f3ff1656de9",
+      "width": 1280,
+      "height": 844
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-07-26",
+  "mode": "production-build",
+  "candidate": {
+    "base_commit": "fea303e54c6b5fae36caee872a2a7450501f9e11",
+    "patch_path": "docs/qa/photo-knowledge/layout-c-credit-correction.patch",
+    "patch_sha256": "e2746073bf4dc7b3648b19c4e1eff8fbd4bdf8d5c196de2cc5a0f19d22aebd89",
+    "tree": "3059ab6209621cfbca60d352dd83cc596675600a",
+    "corrected_source_sha256": "dc1cdbc6496cc1c5f70cd85c815ef840e1763bb1cbaf5c325a1f1d9a4501969f"
+  },
+  "route": "/",
+  "viewports": [
+    {
+      "width": 360,
+      "height": 800,
+      "screenshot": "docs/qa/photo-knowledge/layout-c-home-360x800.png",
+      "sha256": "2765480352a9b561abfbf05630984b1bc1d6ed745d7ce70f5b59e9f41bb6362f",
+      "http_status": 200,
+      "corrected_credit_present": true,
+      "horizontal_overflow": false,
+      "images_loaded": true,
+      "failed_requests": 0
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "screenshot": "docs/qa/photo-knowledge/layout-c-home-1280x900.png",
+      "sha256": "89ad3b6a6dc190e78e34b8ed682410aa827504bd22ab5557b5934f7d8e8ee6ae",
+      "http_status": 200,
+      "corrected_credit_present": true,
+      "horizontal_overflow": false,
+      "images_loaded": true,
+      "failed_requests": 0
+    }
+  ],
+  "operator_attestation": "Each screenshot was captured from the corrected candidate's production build after the route returned HTTP 200, the corrected credit was found in the rendered document, all images completed successfully, and horizontal overflow and failed-request counts were zero.",
+  "release_boundary": "This receipt proves the rendered candidate and viewport facts. It does not close exact-occurrence, dignity, creator crop, production, or indexing gates."
+}

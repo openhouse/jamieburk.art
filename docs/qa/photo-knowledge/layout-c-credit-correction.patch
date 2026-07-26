@@ -1,0 +1,13 @@
+diff --git a/apps/www/src/data/photography.ts b/apps/www/src/data/photography.ts
+index 9827b5ca2f32aa929fc13735bf86631555f4651c..fcc38802c50c4dab957b376f2dd7d533d47a7168 100644
+--- a/apps/www/src/data/photography.ts
++++ b/apps/www/src/data/photography.ts
+@@ -19,7 +19,7 @@ export const portfolioPhotos = {
+     height: 960,
+     alt: "Jamie Burkart at the East River shoreline beneath the Manhattan Bridge.",
+     caption: "At the East River beneath the Manhattan Bridge, 2022.",
+-    credit: "From Jamie Burkart's photo archive.",
++    credit: "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+     placements: ["home"],
+     publicationStatus: "jamie-authorized",
+     publicUseBoundary:

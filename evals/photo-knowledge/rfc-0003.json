@@ -1,0 +1,39 @@
+{
+  "id": "photo-knowledge-rfc-0003",
+  "version": 1,
+  "threshold": 1,
+  "hill_climb": {
+    "method": "Improve the lowest failing criterion with one bounded change, rerun every affected hard gate, and retain the change only if privacy, rights, collective credit, accessibility, artistic authority, and exact-candidate binding do not regress.",
+    "stop": "Stop when all criteria pass or the remaining decision belongs to Jamie, a creator, a represented person, a rights holder, or another named human."
+  },
+  "criteria": [
+    { "id": "RFC-001", "check": "rfc_terminology", "hard_gate": true, "weight": 1 },
+    { "id": "RFC-002", "check": "canonical_rfc", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-001", "check": "photo_asset", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-002", "check": "private_binding", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-003", "check": "exact_derivative", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-004", "check": "creator_correction", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-005", "check": "bounded_permission", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-006", "check": "caption_assertions", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-007", "check": "occurrence_gates", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-008", "check": "portfolio_edition", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-009", "check": "curatorial_session", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-010", "check": "selection_decision", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-011", "check": "recollection_return", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-012", "check": "research_inquiry", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-013", "check": "protected_absence", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-014", "check": "photo_set", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-015", "check": "metadata_precision", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-016", "check": "typed_manifest_binding", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-017", "check": "teaching_path", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-018", "check": "public_safety", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-019", "check": "branch_history_public_safety", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-020", "check": "record_graph", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-021", "check": "candidate_binding", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-022", "check": "independent_holdouts", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-023", "check": "rollback_drill", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-024", "check": "responsive_render_receipt", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-025", "check": "active_candidate_separation", "hard_gate": true, "weight": 1 },
+    { "id": "PHOTO-026", "check": "legacy_child_hold", "hard_gate": true, "weight": 1 }
+  ]
+}

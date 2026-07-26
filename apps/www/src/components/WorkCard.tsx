@@ -18,13 +18,12 @@ export function WorkCard({ item }: WorkCardProps) {
       {visual ? (
         <Link
           aria-label={`Read ${item.title}`}
-          className="min-w-0 overflow-hidden"
+          className="min-w-0"
           href={`/work/${item.slug}` as Route}
         >
           <PhotoFigure
             className="jb-work-row-image"
             photo={visual}
-            showCaption={false}
             sizes="(min-width: 1024px) 38vw, 100vw"
           />
         </Link>

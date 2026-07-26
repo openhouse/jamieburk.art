@@ -100,6 +100,7 @@ const boundedPublicUiPaths = [
   "apps/www/public/images/photo-fieldwork/raft-delta-queen.jpg",
   "apps/www/public/images/photo-fieldwork/repeal-cabaret-law.jpg",
   "apps/www/public/images/photo-fieldwork/talks-not-raids.jpg",
+  "apps/www/public/images/field-notes/jamie-east-river.webp",
   "apps/www/src/app/about/page.tsx",
   "apps/www/src/app/colophon/page.tsx",
   "apps/www/src/app/globals.css",

@@ -37,7 +37,7 @@ chosen_course: Keep the repository's Knowledge Wiki public-safe and substantiall
 resulting_artifacts:
   - index.knowledge-wiki.living-archive
   - portfolio.role-fit-referral-map
-outcome_boundary: The current repository implements a public-safe Wiki, governed evaluations, and selective projections; the proposed sibling private Wiki and shared core package remain an RFP rather than a shipped system.
+outcome_boundary: The current repository implements a public-safe Wiki, governed evaluations, and selective projections; the proposed sibling private Wiki and shared core package remain an RFC rather than a shipped system.
 credit_scope: individual-and-collective
 projection:
   status: hold

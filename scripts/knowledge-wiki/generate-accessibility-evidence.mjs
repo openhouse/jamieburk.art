@@ -98,6 +98,26 @@ try {
           clientWidth: document.documentElement.clientWidth,
           scrollWidth: document.documentElement.scrollWidth,
           overflowElements,
+          workIndexPhotoCaptionCount: document.querySelectorAll(
+            ".jb-work-row-with-image .jb-photo-caption"
+          ).length,
+          clippedPhotoCaptions: Array.from(
+            document.querySelectorAll(".jb-work-row-with-image .jb-photo-caption")
+          ).filter((caption) => {
+            const figure = caption.closest("figure");
+            const link = caption.closest("a");
+            const captionRect = caption.getBoundingClientRect();
+            const figureRect = figure?.getBoundingClientRect();
+            const linkRect = link?.getBoundingClientRect();
+            return (
+              !figureRect ||
+              !linkRect ||
+              captionRect.top < figureRect.top - 1 ||
+              captionRect.bottom > figureRect.bottom + 1 ||
+              captionRect.top < linkRect.top - 1 ||
+              captionRect.bottom > linkRect.bottom + 1
+            );
+          }).length,
           h1Count: document.querySelectorAll("h1").length,
           mainPresent: Boolean(document.querySelector("main")),
           brokenImagesAfterScroll: images.filter(
@@ -145,7 +165,11 @@ const report = {
   baseUrl,
   publicSurfaceFingerprint: fingerprint.fingerprint,
   publicSurfaceFileCount: fingerprint.fileCount,
-  publicSurfaceScope: ["apps/www/**", "package.json", "package-lock.json"],
+  publicSurfaceScope: [
+    "apps/www/** except generated apps/www/next-env.d.ts",
+    "package.json",
+    "package-lock.json"
+  ],
   method:
     "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; overflow, landmarks, headings, alt text, request failures, and explicit full-page scroll before final image decode checks",
   routes: [...canonicalAccessibilityRoutes],
@@ -158,6 +182,7 @@ const report = {
       (row) => row.violations.filter((violation) => violation.impact === "critical").length
     ),
     overflowElements: sum((row) => row.overflowElements),
+    clippedPhotoCaptions: sum((row) => row.clippedPhotoCaptions),
     brokenImagesAfterScroll: sum((row) => row.brokenImagesAfterScroll),
     unlabeledImages: sum((row) => row.unlabeledImages),
     failedRequests: sum((row) => row.failedRequests.length),

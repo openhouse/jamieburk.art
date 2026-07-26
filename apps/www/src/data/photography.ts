@@ -6,7 +6,34 @@ export type PhotoAsset = {
   credit: string;
   context: "self-portrait" | "public-event" | "project-documentation" | "material-record";
   objectPosition?: string;
+  wikiId?: string;
+  derivativeId?: string;
+  placementIds?: readonly string[];
+  governanceStatus?: "candidate-hold" | "approved";
 };
+
+export type GovernedPhotoAsset = PhotoAsset & {
+  wikiId: string;
+  derivativeId: string;
+  placementIds: readonly string[];
+  governanceStatus: "candidate-hold" | "approved";
+};
+
+export const governedPhotoCandidates = {
+  eastRiverLayoutC: {
+    id: "photo-east-river-layout-c",
+    wikiId: "asset.photo.east-river-manhattan-bridge.2022.001",
+    derivativeId: "derivative.photo.east-river.layout-c.v1",
+    placementIds: ["projection.photo.layout-c.home.east-river"],
+    governanceStatus: "candidate-hold",
+    src: "/images/field-notes/jamie-east-river.webp",
+    alt: "Jamie Burkart in a life vest holding a canoe paddle on the East River shoreline beneath the Manhattan Bridge.",
+    caption: "At the East River beneath the Manhattan Bridge, 2022.",
+    credit: "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+    context: "project-documentation",
+    objectPosition: "73% 50%"
+  } satisfies GovernedPhotoAsset,
+} satisfies Record<string, GovernedPhotoAsset>;
 
 export const photos = {
   raftDeltaQueen: {
@@ -79,16 +106,6 @@ export const photos = {
     context: "public-event",
     objectPosition: "50% 47%"
   },
-  talksNotRaids: {
-    id: "photo-nycac-talks-not-raids",
-    src: "/images/photo-fieldwork/talks-not-raids.jpg",
-    alt: "Advocates and public officials stand behind a large Talks Not Raids banner at a press event near New York City Hall.",
-    caption:
-      "Talks Not Raids asked for transparency and a different relationship between city enforcement and cultural spaces. The campaign was collective work.",
-    credit: "NYC Artist Coalition project archive",
-    context: "public-event",
-    objectPosition: "50% 50%"
-  },
   letNycDance: {
     id: "photo-nycac-let-nyc-dance",
     src: "/images/photo-fieldwork/let-nyc-dance.jpg",
@@ -133,7 +150,6 @@ export const fairRentPhotoEssay = [
   photos.dclaListeningRoom,
   photos.screenPrinting,
   photos.repealCabaretLaw,
-  photos.talksNotRaids,
   photos.letNycDance,
   photos.fairRentMaterials
 ];

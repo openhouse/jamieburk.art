@@ -221,6 +221,39 @@ export default function AboutPage() {
                 </p>
               </div>
             </article>
+            <article className="py-6">
+              <h3 className="text-xl font-semibold text-jb-ink">
+                <Link
+                  className="text-jb-blue hover:text-jb-green"
+                  href="/colophon"
+                >
+                  Living photographic knowledge
+                </Link>
+              </h3>
+              <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
+                <p>
+                  <strong className="text-jb-ink">Relationships:</strong>{" "}
+                  artists, archive sources, creators, represented people,
+                  editors, portfolio readers, and the places photographs return
+                  us to.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">Interface and use:</strong>{" "}
+                  a current pilot joining private source binding, permission
+                  capsules, public-safe derivatives, exact occurrences,
+                  curatorial proposals, and human release gates.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">
+                    Learning and continuity:
+                  </strong>{" "}
+                  creator correction, responsive crop review, rollback drills,
+                  and recollection returned by composition become durable Wiki
+                  records and a teachable handoff instead of disappearing into
+                  one layout pass.
+                </p>
+              </div>
+            </article>
           </div>
         </section>
         <div className="mt-10 max-w-3xl border-l-4 border-jb-blue bg-jb-sky/15 p-5">

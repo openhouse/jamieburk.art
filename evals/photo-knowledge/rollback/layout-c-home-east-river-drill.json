@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "drill_id": "rollback-drill.layout-c.home-east-river.v1",
+  "drill_date": "2026-07-26",
+  "mode": "public-safe-simulation",
+  "scenario": "The exact occurrence is revoked while a hand-authored manifest still references its placement ID.",
+  "before": {
+    "occurrence_status": "candidate-hold",
+    "manifest_reference_present": true,
+    "public_route_may_resolve": true
+  },
+  "actions": {
+    "manifest_reference_removed": true,
+    "occurrence_marked_withdrawn": true,
+    "correction_record_created": true,
+    "credit_and_history_preserved": true,
+    "route_verified_without_occurrence": true,
+    "cache_review_recorded": true,
+    "derived_reports_regenerated": true
+  },
+  "after": {
+    "manifest_reference_present": false,
+    "public_route_resolves_without_occurrence": true,
+    "private_source_binding_unchanged": true,
+    "git_history_retained": true
+  },
+  "outcome": "pass",
+  "authority_boundary": "The drill validates process shape. It does not revoke the current candidate or replace a real human withdrawal decision."
+}

@@ -29,6 +29,14 @@ test("an unverified lazy-image follow-up fails closed", () => {
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
 
+test("a clipped work-index caption fails closed", () => {
+  const report = structuredClone(current.report);
+  const workRow = report.rows.find((row) => row.path === "/work");
+  workRow.clippedPhotoCaptions = 1;
+  report.summary.clippedPhotoCaptions = 1;
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
+});
+
 test("a coordinated canonical-route substitution fails closed", () => {
   const report = structuredClone(current.report);
   report.routes[0] = "/noncanonical-replacement";

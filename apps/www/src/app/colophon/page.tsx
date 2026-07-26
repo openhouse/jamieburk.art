@@ -16,6 +16,7 @@ const details = [
   "No private or proprietary font files are committed or served",
   "The Human Index palette begins with the blue of Jamie's work jacket and distinguishes work, stewardship, correction, and corroboration",
   "Photographs are selected from Jamie's archive, stripped of embedded metadata, and published with contextual captions and project-level credit",
+  "A living photographic knowledge pilot binds source, creator, permission, derivative, occurrence, correction, rollback, and human release gates without treating automation as publication authority",
   "Staging-first Docker / Dokku deployment with staging noindex by default",
   "No invasive tracking in V1"
 ];

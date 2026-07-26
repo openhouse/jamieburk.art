@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run": "contextual",
+  "separate_process_context": true,
+  "network": "not-used",
+  "private_archive": "not-delivered",
+  "delivered_items": [
+    {
+      "kind": "text-prompt",
+      "sha256": "2382996ce97664661e088cf85d2c593a1556989d7568762787697fd37a98dcf5"
+    },
+    {
+      "kind": "blind-result",
+      "sha256": "561f2ff0baf391bd434bfff90e60e748b87ce4135f66ff331a069f22d8491d34"
+    },
+    {
+      "kind": "public-safe-context",
+      "sha256": "d646501c3d313dd2e5bfe9f8d93561499a4409d8abbde702561df4e67e1a307e"
+    },
+    {
+      "kind": "responsive-screenshot",
+      "viewport": "360x800",
+      "sha256": "2765480352a9b561abfbf05630984b1bc1d6ed745d7ce70f5b59e9f41bb6362f"
+    },
+    {
+      "kind": "responsive-screenshot",
+      "viewport": "1280x900",
+      "sha256": "89ad3b6a6dc190e78e34b8ed682410aa827504bd22ab5557b5934f7d8e8ee6ae"
+    }
+  ],
+  "stored_result": {
+    "path": "evals/photo-knowledge/curatorial/layout-c-home-east-river/contextual-result.md",
+    "sha256": "86bce139414997ef816cf3821cfd1c02f232143d8e2ebf4f85e9ea50d5385489",
+    "normalization": "Headings, punctuation, and line wrapping were normalized to repository Markdown style without changing the substantive reading."
+  },
+  "operator_attestation": "The contextual reader received the completed blind result, final public-safe context, and both corrected production screenshots in a separate model process after the blind process had completed.",
+  "model_identifier_returned_by_tool": false,
+  "publication_authority": "none"
+}

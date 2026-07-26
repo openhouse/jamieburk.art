@@ -31,6 +31,7 @@ export function computePublicSurfaceFingerprint(repoRoot) {
     .trim()
     .split("\n")
     .filter(Boolean)
+    .filter((relativePath) => relativePath !== "apps/www/next-env.d.ts")
     .sort();
   const hash = createHash("sha256");
   for (const relativePath of files) {
@@ -66,6 +67,8 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       row.httpStatus < 400 &&
       row.violations.length === 0 &&
       row.overflowElements === 0 &&
+      row.clippedPhotoCaptions === 0 &&
+      (row.path !== "/work" || row.workIndexPhotoCaptionCount >= 3) &&
       row.brokenImagesAfterScroll === 0 &&
       row.unlabeledImages === 0 &&
       row.failedRequests.length === 0 &&
@@ -78,6 +81,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.summary.axeViolations === 0 &&
     report.summary.criticalAxeViolations === 0 &&
     report.summary.overflowElements === 0 &&
+    report.summary.clippedPhotoCaptions === 0 &&
     report.summary.brokenImagesAfterScroll === 0 &&
     report.summary.unlabeledImages === 0 &&
     report.summary.failedRequests === 0 &&

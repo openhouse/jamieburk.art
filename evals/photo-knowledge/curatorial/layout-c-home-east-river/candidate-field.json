@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "field_id": "curatorial-field.layout-c.home-east-river.v1",
+  "privacy_boundary": "Public historical derivatives and one no-photo counterfactual only. No private archive field, metadata, source identifier, path, or represented-person record is included.",
+  "candidates": [
+    {
+      "label": "A",
+      "kind": "public-derivative",
+      "sha256": "748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "label": "B",
+      "kind": "historical-public-derivative",
+      "git_commit": "fea303e54c6b5fae36caee872a2a7450501f9e11",
+      "repository_path": "apps/www/public/images/field-notes/raft-riverboat.webp",
+      "sha256": "ced398bbacc78eedbda290a46897b29ebac360327e487a58844f3f3ff1656de9",
+      "width": 1280,
+      "height": 844
+    },
+    {
+      "label": "NO_PHOTO",
+      "kind": "counterfactual"
+    }
+  ]
+}
