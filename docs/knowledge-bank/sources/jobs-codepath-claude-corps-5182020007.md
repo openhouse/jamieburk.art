@@ -5,13 +5,13 @@ kind: source
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-07-26
+review_by: 2026-07-29
 canonical_path: docs/knowledge-bank/sources/jobs-codepath-claude-corps-5182020007.md
-summary: Official CodePath posting for Senior Program Manager, Claude Corps, rechecked July 18, 2026.
+summary: Official CodePath posting for Senior Program Manager, Claude Corps, rechecked July 26, 2026.
 source_kind: official-job-posting
 url: https://job-boards.greenhouse.io/codepath/jobs/5182020007
-retrieved_at: 2026-07-18
+retrieved_at: 2026-07-26
 relations:
   - type: supports
     target: opportunity.codepath.claude-corps.5182020007

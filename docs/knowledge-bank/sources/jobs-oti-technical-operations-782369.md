@@ -5,13 +5,13 @@ kind: source
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-07-26
+review_by: 2026-07-29
 canonical_path: docs/knowledge-bank/sources/jobs-oti-technical-operations-782369.md
-summary: Official City of New York posting for the OTI Technical Operations Manager role, rechecked July 18, 2026.
+summary: Official City of New York posting for the OTI Technical Operations Manager role, rechecked July 26, 2026.
 source_kind: official-job-posting
 url: https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321
-retrieved_at: 2026-07-18
+retrieved_at: 2026-07-26
 relations:
   - type: supports
     target: opportunity.nyc-oti.technical-operations-manager.782369

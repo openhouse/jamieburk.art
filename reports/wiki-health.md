@@ -3,7 +3,7 @@
 
 **Source commit:** `0d36b3e32002c7f1df457af87c6d4c64babfb211`
 **Generation time:** 2026-07-26T09:36:52-04:00
-**Source fingerprint:** `7fb2948ad03db839ecde0323e9ebc50c8f0f7a5293dfb67ebc0269fa3925e124`
+**Source fingerprint:** `6d0b4bd7236a21b37503908a7e4e0006d87c7b55dddc6a153d40ae2d4a341e96`
 
 Wiki health is reported as hard gates, diagnostics, and human authority gates. These are not averaged into one synthetic score.
 
@@ -27,7 +27,7 @@ Wiki health is reported as hard gates, diagnostics, and human authority gates. T
 - Corrections: 1
 - Rights-review queue: 1
 - Opportunity records: 6
-- Live opportunity records: 6
+- Live opportunity records: 5
 - Critical role requirements: 22
 - Critical requirements requiring source, corroboration, experience, hard-screen, or unknown review: 6
 

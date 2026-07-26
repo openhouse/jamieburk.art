@@ -5,8 +5,8 @@ kind: evaluation
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-07-26
+review_by: 2026-07-29
 canonical_path: docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md
 summary: Public-safe baseline for career-trajectory and source-channel coverage; protected evidence is represented only by boundaries and opaque metadata.
 evaluation_type: employment-context
@@ -61,12 +61,12 @@ career_coverage:
     gap: The lab must remain accurately described as developing until a production adoption case exists.
 source_channels:
   - channel: official public web
-    coverage_date: 2026-07-18
+    coverage_date: 2026-07-26
     access_state: available
     normalization_state: bounded-manual-review
     identity_resolution_state: not-applicable
     public_use_boundary: cite official pages; recheck live roles every 48 to 72 hours
-    known_gaps: source pages can change or close
+    known_gaps: source pages can change or close; the Benepass role moved to a closed benchmark during this review
   - channel: public repositories and project code
     coverage_date: 2026-07-18
     access_state: partial

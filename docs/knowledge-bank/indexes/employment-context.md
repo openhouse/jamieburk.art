@@ -5,10 +5,10 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-07-26
+review_by: 2026-07-29
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
-summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
+summary: Task-oriented entry point for current and recently closed opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
 relations:
   - type: related_to
     target: opportunity.nyc-oti.technical-operations-manager.782369
@@ -44,7 +44,7 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 
 - [NYC OTI - Technical Operations Manager](../opportunities/oti-technical-operations.md)
 - [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)
-- [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
+- [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) (closed benchmark as of July 26)
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md)
 - [Asana - AI Implementation Manager](../opportunities/asana-ai-implementation.md)
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)

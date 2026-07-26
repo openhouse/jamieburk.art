@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T09:36:52-04:00",
   "sourceCommit": "0d36b3e32002c7f1df457af87c6d4c64babfb211",
-  "sourceFingerprint": "7fb2948ad03db839ecde0323e9ebc50c8f0f7a5293dfb67ebc0269fa3925e124",
+  "sourceFingerprint": "6d0b4bd7236a21b37503908a7e4e0006d87c7b55dddc6a153d40ae2d4a341e96",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
@@ -60,7 +60,7 @@
     "correctionCount": 1,
     "rightsReviewCount": 1,
     "opportunityCount": 6,
-    "liveOpportunityCount": 6,
+    "liveOpportunityCount": 5,
     "criticalRequirementCount": 22,
     "criticalRequirementGapCount": 6,
     "warningCount": 0,

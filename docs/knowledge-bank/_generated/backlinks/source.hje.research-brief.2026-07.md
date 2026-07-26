@@ -3,7 +3,7 @@
 
 **Source commit:** `0d36b3e32002c7f1df457af87c6d4c64babfb211`
 **Generation time:** 2026-07-26T09:36:52-04:00
-**Source fingerprint:** `7fb2948ad03db839ecde0323e9ebc50c8f0f7a5293dfb67ebc0269fa3925e124`
+**Source fingerprint:** `6d0b4bd7236a21b37503908a7e4e0006d87c7b55dddc6a153d40ae2d4a341e96`
 
 - [Harry J. Epstein continuity-oriented modernization](../../decisions/hje-continuity-modernization.md) - `uses_source` (frontmatter)
 - [Harry J. Epstein Company digital operations](../../projects/harry-j-epstein.md) - `uses_source` (frontmatter)

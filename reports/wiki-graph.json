@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T09:36:52-04:00",
   "sourceCommit": "0d36b3e32002c7f1df457af87c6d4c64babfb211",
-  "sourceFingerprint": "7fb2948ad03db839ecde0323e9ebc50c8f0f7a5293dfb67ebc0269fa3925e124",
+  "sourceFingerprint": "6d0b4bd7236a21b37503908a7e4e0006d87c7b55dddc6a153d40ae2d4a341e96",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -210,8 +210,8 @@
       "sensitivity": "moderate",
       "summary": "Public-safe baseline for career-trajectory and source-channel coverage; protected evidence is represented only by boundaries and opaque metadata.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "evaluation.knowledge-wiki.retrieval-tasks",
@@ -355,10 +355,10 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
+      "summary": "Task-oriented entry point for current and recently closed opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -680,10 +680,10 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe requirement and portfolio-coverage map for ACLU's live term-limited Product Manager II, Discovery role.",
+      "summary": "Public-safe requirement and portfolio-coverage map for ACLU's live term-limited Product Manager II, Discovery role, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "opportunity.asana.ai-implementation.8027437",
@@ -693,10 +693,10 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe requirement and portfolio-coverage map for Asana's live AI Implementation Manager, Service Management role.",
+      "summary": "Public-safe requirement and portfolio-coverage map for Asana's live AI Implementation Manager, Service Management role, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "opportunity.benepass.product-operations.7f963a7a",
@@ -706,10 +706,10 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.",
+      "summary": "Public-safe historical requirement and portfolio-coverage map for Benepass's Product Operations Manager role, retained after the official route stopped returning the posting on July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
@@ -719,10 +719,10 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe requirement and portfolio-coverage map for CodePath's live Senior Program Manager, Claude Corps role.",
+      "summary": "Public-safe requirement and portfolio-coverage map for CodePath's live Senior Program Manager, Claude Corps role, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -732,10 +732,10 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe, source-backed requirement and portfolio-coverage map for NYC OTI's live Technical Operations Manager role.",
+      "summary": "Public-safe, source-backed requirement and portfolio-coverage map for NYC OTI's live Technical Operations Manager role, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
@@ -745,10 +745,10 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe requirement and portfolio-coverage map for PermitFlow's live Product Operations Manager role.",
+      "summary": "Public-safe requirement and portfolio-coverage map for PermitFlow's live Product Operations Manager role, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "organization.nyc-artist-coalition",
@@ -1218,10 +1218,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official ACLU posting for the term-limited Product Manager II, Discovery role, rechecked July 18, 2026.",
+      "summary": "Official ACLU posting for the term-limited Product Manager II, Discovery role, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "source.jobs.asana.ai-implementation.8027437",
@@ -1231,10 +1231,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official Asana posting context for AI Implementation Manager, Service Management, rechecked July 18, 2026.",
+      "summary": "Official Asana posting context for AI Implementation Manager, Service Management, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "source.jobs.benepass.product-operations.7f963a7a",
@@ -1244,10 +1244,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official Benepass posting for a Product Operations Manager, rechecked July 18, 2026.",
+      "summary": "Official Benepass Product Operations Manager route, retained as a closed benchmark after it stopped returning a posting object on July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "source.jobs.codepath.claude-corps.5182020007",
@@ -1257,10 +1257,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official CodePath posting for Senior Program Manager, Claude Corps, rechecked July 18, 2026.",
+      "summary": "Official CodePath posting for Senior Program Manager, Claude Corps, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "source.jobs.oti.technical-operations.782369",
@@ -1270,10 +1270,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official City of New York posting for the OTI Technical Operations Manager role, rechecked July 18, 2026.",
+      "summary": "Official City of New York posting for the OTI Technical Operations Manager role, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "source.jobs.permitflow.product-operations.8a6e6066",
@@ -1283,10 +1283,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official PermitFlow posting for a Product Operations Manager, rechecked July 18, 2026.",
+      "summary": "Official PermitFlow posting for a Product Operations Manager, rechecked July 26, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-07-29"
     },
     {
       "id": "source.kansas-city-star.raft.2007-11-15",
