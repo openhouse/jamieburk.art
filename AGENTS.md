@@ -48,9 +48,11 @@ caption, represented-person, editorial, production, deployment, and indexing
 gate through its required authority and evidence, and binds regenerated
 occurrence evidence. Always-applicable gates cannot be waived, open production
 gates cannot be mislabeled as cleared, and future-dated or semantically
-contradictory records fail closed. Manifest approval fields alone are not
-authority. A rollback, revert, or older manifest may not silently reactivate
-the image.
+contradictory records fail closed. Gate evidence must be a relevant Wiki record
+connected to the named photograph. Restoration decision prose uses the
+constrained generated template; additional narrative is non-authoritative and
+belongs in a separate record. Manifest approval fields alone are not authority.
+A rollback, revert, or older manifest may not silently reactivate the image.
 
 ## Public-Safety Rules
 

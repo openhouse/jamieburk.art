@@ -95,9 +95,11 @@ active projection requires a later canonical restoration decision that names
 the photo and prior withdrawal, contains Jamie's completed human review,
 accounts for every authority gate with gate-specific evidence, and binds
 regenerated occurrence evidence. Always-applicable gates cannot be waived,
-open production gates remain open, and contradictory or future-dated records
-fail closed. Manifest fields alone cannot authorize restoration; checking out
-older content is never a publication decision.
+open production gates remain open, and each evidence record must be connected
+to the named photograph. The canonical restoration decision uses constrained
+generated semantics, so contradictory additions and future-dated records fail
+closed. Manifest fields alone cannot authorize restoration; checking out older
+content is never a publication decision.
 
 ## Environment
 

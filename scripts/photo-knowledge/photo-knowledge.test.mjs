@@ -83,13 +83,13 @@ function restorationFixture() {
   const gateEvidence = {
     creator: ["source.permission.elana-gordon.east-river-portfolio"],
     rights: ["source.permission.elana-gordon.east-river-portfolio"],
-    consent: ["decision.photo.home-east-river.layout-b"],
+    consent: [restorationPhotoId],
     "exact-credit": [
       "source.permission.elana-gordon.east-river-portfolio"
     ],
     crop: ["evaluation.photo-curation.home-east-river.2026-07-26"],
     caption: ["evaluation.photo-curation.home-east-river.2026-07-26"],
-    "represented-person": ["decision.photo.home-east-river.layout-b"],
+    "represented-person": [restorationPhotoId],
     editorial: ["evaluation.photo-curation.home-east-river.2026-07-26"],
     production: ["edition.portfolio.layout-b.2026-07"],
     deployment: ["edition.portfolio.layout-b.2026-07"],
@@ -120,7 +120,7 @@ function restorationFixture() {
     path: restorationRecordPath,
     canonical_path: restorationRecordPath,
     summary:
-      "Jamie-reviewed restoration decision for a working-review projection; production and indexing remain separate.",
+      "Jamie-reviewed restoration decision for a working-review projection; production, deployment, and indexing remain separate.",
     decision_period: "2026-07",
     decision_state: "documented",
     decision_question:
@@ -148,7 +148,7 @@ function restorationFixture() {
     ],
     human_review: "completed",
     chosen_course:
-      `Restore ${restorationPhotoId} after ${restorationPlanId} as a new review candidate.`,
+      `Restore ${restorationPhotoId} after implemented withdrawal ${restorationPlanId} as a new working-review projection. Production, deployment, and indexing remain open separate human gates.`,
     resulting_artifacts: [restorationPhotoId],
     outcome_boundary:
       "This restores a working-review projection only; production, deployment, and indexing remain open.",
@@ -157,6 +157,8 @@ function restorationFixture() {
       "A later edition may require a different crop or caption."
     ],
     anti_claims: [
+      "A later human-reviewed withdrawal remains available.",
+      "Restoration does not broaden creator permission or represented-person consent.",
       "Working-review restoration is not production publication approval."
     ],
     projection: { status: "pending", surfaces: [] },
@@ -189,11 +191,11 @@ function restorationFixture() {
       responsiveEvidence.publicSurfaceFingerprint
   };
   const recordText = [
-    "# Restore the East River photograph",
+    "# Restore photo projection",
     "",
     approvalStatement,
     "",
-    "The restored occurrence remains a working-review candidate. Production, deployment, and indexing remain open."
+    "This record restores only the exact named working-review occurrences. Production, deployment, and indexing remain open separate human gates."
   ].join("\n");
   return {
     current,
@@ -743,7 +745,7 @@ test("restoration must postdate the implemented withdrawal", () => {
 
 test("restoration binds every governed gate and regenerated occurrence evidence", () => {
   const fixture = restorationFixture();
-  const knownRecordIds = new Set(compileWiki().byId.keys());
+  const recordById = compileWiki().byId;
   const valid = validateRestorationDecision({
     decision: fixture.decision,
     record: fixture.record,
@@ -762,7 +764,7 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
       fixture.record.restoration_occurrence_ids,
     publicSurfaceFingerprint:
       fixture.responsiveEvidence.publicSurfaceFingerprint,
-    knownRecordIds,
+    recordById,
     now: Date.parse("2026-07-26T23:59:59Z")
   });
   assert.equal(valid, true);
@@ -793,7 +795,7 @@ test("restoration binds every governed gate and regenerated occurrence evidence"
         fixture.record.restoration_occurrence_ids,
       publicSurfaceFingerprint:
         fixture.responsiveEvidence.publicSurfaceFingerprint,
-      knownRecordIds,
+      recordById,
       now: Date.parse("2026-07-26T23:59:59Z")
     }),
     false
@@ -832,6 +834,38 @@ test("the full Wiki schema rejects contradictory restoration semantics", () => {
   );
 });
 
+test("restoration chosen course must use the affirmative canonical template", () => {
+  const result = evaluateRestoration({
+    recordMutation: {
+      chosen_course:
+        `Discuss ${restorationPhotoId} and ${restorationPlanId} at a later review.`
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+});
+
+test("restoration body rejects equivalent contradictory additions", () => {
+  const fixture = restorationFixture();
+  for (const contradiction of [
+    "Jamie later reversed that decision; the photograph must remain withdrawn.",
+    "Restoration must not proceed.",
+    "Keep the photograph withdrawn.",
+    "The photograph remains prohibited from the working review."
+  ]) {
+    const result = evaluateRestoration({
+      recordTextMutation: `${fixture.recordText}\n\n${contradiction}`
+    });
+    assert.equal(
+      result.checks.photo_historical_revocation_monotonic,
+      false,
+      contradiction
+    );
+  }
+});
+
 test("always-applicable restoration gates cannot be waived", () => {
   const fixture = restorationFixture();
   const allNotApplicable = fixture.record.restoration_gate_reviews.map(
@@ -855,6 +889,25 @@ test("always-applicable restoration gates cannot be waived", () => {
       ...fixture.record,
       restoration_gate_reviews: allNotApplicable
     }).success,
+    false
+  );
+});
+
+test("restoration gate evidence must be relevant to the named photograph", () => {
+  const fixture = restorationFixture();
+  const unrelatedEvidence = fixture.record.restoration_gate_reviews.map(
+    (review) => ({
+      ...review,
+      evidence_ids: ["person.jamie-burkart"]
+    })
+  );
+  const result = evaluateRestoration({
+    recordMutation: {
+      restoration_gate_reviews: unrelatedEvidence
+    }
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
     false
   );
 });

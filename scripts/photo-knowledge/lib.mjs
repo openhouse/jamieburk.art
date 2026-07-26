@@ -99,47 +99,58 @@ const requiredRestorationGates = [
 const restorationGatePolicy = {
   creator: {
     authority: "creator-or-rights-holder",
-    statuses: ["cleared"]
+    statuses: ["cleared"],
+    evidenceKinds: ["source", "asset"]
   },
   rights: {
     authority: "creator-or-rights-holder",
-    statuses: ["cleared"]
+    statuses: ["cleared"],
+    evidenceKinds: ["source", "asset"]
   },
   consent: {
     authority: "represented-person-or-consent-authority",
-    statuses: ["cleared", "not-applicable"]
+    statuses: ["cleared", "not-applicable"],
+    evidenceKinds: ["source", "asset", "decision"]
   },
   "exact-credit": {
     authority: "creator-and-editorial-owner",
-    statuses: ["cleared"]
+    statuses: ["cleared"],
+    evidenceKinds: ["source", "asset", "decision"]
   },
   crop: {
     authority: "creator-and-editorial-owner",
-    statuses: ["cleared"]
+    statuses: ["cleared"],
+    evidenceKinds: ["evaluation", "decision", "asset"]
   },
   caption: {
     authority: "creator-and-editorial-owner",
-    statuses: ["cleared"]
+    statuses: ["cleared"],
+    evidenceKinds: ["evaluation", "decision", "asset"]
   },
   "represented-person": {
     authority: "represented-person",
-    statuses: ["cleared", "not-applicable"]
+    statuses: ["cleared", "not-applicable"],
+    evidenceKinds: ["asset", "decision", "source"]
   },
   editorial: {
     authority: "portfolio-owner",
-    statuses: ["cleared"]
+    statuses: ["cleared"],
+    evidenceKinds: ["evaluation", "decision"]
   },
   production: {
     authority: "production-owner",
-    statuses: ["open-separated-gate"]
+    statuses: ["open-separated-gate"],
+    evidenceKinds: ["projection"]
   },
   deployment: {
     authority: "deployment-owner",
-    statuses: ["open-separated-gate"]
+    statuses: ["open-separated-gate"],
+    evidenceKinds: ["projection"]
   },
   indexing: {
     authority: "indexing-owner",
-    statuses: ["open-separated-gate"]
+    statuses: ["open-separated-gate"],
+    evidenceKinds: ["projection"]
   }
 };
 let introducedHistoryCache;
@@ -379,7 +390,7 @@ export function validateRestorationDecision({
   materializedVersion,
   expectedOccurrenceIds,
   publicSurfaceFingerprint,
-  knownRecordIds,
+  recordById,
   now = Date.now()
 }) {
   if (!decision || !record || !withdrawal || !materializedVersion) {
@@ -414,7 +425,18 @@ export function validateRestorationDecision({
         Array.isArray(review.evidence_ids) &&
         review.evidence_ids.length > 0 &&
         new Set(review.evidence_ids).size === review.evidence_ids.length &&
-        review.evidence_ids.every((id) => knownRecordIds?.has(id)) &&
+        review.evidence_ids.every((id) => {
+          const evidenceRecord = recordById?.get(id);
+          const relevant =
+            evidenceRecord?.id === decision.photoId ||
+            evidenceRecord?.relations?.some(
+              (relation) => relation.target === decision.photoId
+            );
+          return (
+            policy.evidenceKinds.includes(evidenceRecord?.kind) &&
+            relevant
+          );
+        }) &&
         !Number.isNaN(reviewedAt) &&
         reviewedAt >= implementedAt &&
         reviewedAt <= decidedAt &&
@@ -428,6 +450,18 @@ export function validateRestorationDecision({
   const approvalStatement =
     `Jamie Burkart approved restoration of ${decision.photoId} after ` +
     `implemented withdrawal ${decision.withdrawalPlanId}.`;
+  const expectedChosenCourse =
+    `Restore ${decision.photoId} after implemented withdrawal ` +
+    `${decision.withdrawalPlanId} as a new working-review projection. ` +
+    "Production, deployment, and indexing remain open separate human gates.";
+  const expectedBody = [
+    "# Restore photo projection",
+    "",
+    approvalStatement,
+    "",
+    "This record restores only the exact named working-review occurrences. " +
+      "Production, deployment, and indexing remain open separate human gates."
+  ].join("\n");
   const sourceParts =
     typeof recordText === "string"
       ? recordText.split(/^---\s*$/m)
@@ -436,8 +470,6 @@ export function validateRestorationDecision({
     sourceParts.length >= 3
       ? sourceParts.slice(2).join("\n---\n")
       : recordText;
-  const contradictoryRestoration =
-    /(?:\bdo not restore\b|\bnot to restore\b|\brestoration (?:is|was) (?:not approved|rejected|denied)\b)/i;
   const chosenOptions = Array.isArray(record.options_considered)
     ? record.options_considered.filter(
       (option) => option.disposition === "chosen"
@@ -453,12 +485,8 @@ export function validateRestorationDecision({
     recordText.includes(decision.photoId) &&
     recordText.includes(decision.withdrawalPlanId) &&
     record.restoration_approval_statement === approvalStatement &&
-    recordBody.includes(approvalStatement) &&
-    !contradictoryRestoration.test(recordBody) &&
-    !contradictoryRestoration.test(record.chosen_course ?? "") &&
-    !(record.anti_claims ?? []).some((item) =>
-      contradictoryRestoration.test(item)
-    );
+    recordBody.trim() === expectedBody &&
+    record.chosen_course === expectedChosenCourse;
   const materializationBound =
     materializedVersion.commitOrder > withdrawal.commitOrder &&
     materializedVersion.text === recordText;
@@ -1066,7 +1094,7 @@ export function evaluatePhotoKnowledge(options = {}) {
         expectedOccurrenceIds,
         publicSurfaceFingerprint:
           responsiveEvidence.publicSurfaceFingerprint,
-        knownRecordIds: new Set(byId.keys()),
+        recordById: byId,
         now: options.now ?? Date.now()
       });
     });

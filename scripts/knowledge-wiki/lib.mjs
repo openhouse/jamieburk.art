@@ -610,21 +610,43 @@ export const wikiRecordSchema = z
       const expectedChoice =
         `Restore ${record.restoration_photo_id} after implemented withdrawal ` +
         `${record.restoration_withdrawal_plan_id} as a new working-review projection.`;
-      const contradictoryRestoration =
-        /(?:\bdo not restore\b|\bnot to restore\b|\brestoration (?:is|was) (?:not approved|rejected|denied)\b)/i;
+      const expectedChosenCourse =
+        `${expectedChoice} Production, deployment, and indexing remain open ` +
+        "separate human gates.";
+      const expectedQuestion =
+        `Should ${record.restoration_photo_id} be restored after ` +
+        `${record.restoration_withdrawal_plan_id} as a new working-review projection?`;
+      const expectedSummary =
+        "Jamie-reviewed restoration decision for a working-review projection; " +
+        "production, deployment, and indexing remain separate.";
+      const expectedOutcome =
+        "This restores a working-review projection only; production, deployment, " +
+        "and indexing remain open.";
+      const expectedAntiClaims = [
+        "A later human-reviewed withdrawal remains available.",
+        "Restoration does not broaden creator permission or represented-person consent.",
+        "Working-review restoration is not production publication approval."
+      ];
+      const expectedApprovalStatement =
+        `Jamie Burkart approved restoration of ${record.restoration_photo_id} ` +
+        `after implemented withdrawal ${record.restoration_withdrawal_plan_id}.`;
       if (
         chosenOptions.length !== 1 ||
         chosenOptions[0].option !== expectedChoice ||
         chosenOptions[0].evidence_state !== "documented" ||
-        contradictoryRestoration.test(record.chosen_course ?? "") ||
-        record.anti_claims.some((item) =>
-          contradictoryRestoration.test(item)
-        )
+        record.chosen_course !== expectedChosenCourse ||
+        record.decision_question !== expectedQuestion ||
+        record.summary !== expectedSummary ||
+        record.outcome_boundary !== expectedOutcome ||
+        record.restoration_approval_statement !==
+          expectedApprovalStatement ||
+        JSON.stringify([...record.anti_claims].sort()) !==
+          JSON.stringify(expectedAntiClaims)
       ) {
         context.addIssue({
           code: "custom",
           path: ["chosen_course"],
-          message: "photo restoration decision semantics contradict or fail to express the chosen restoration"
+          message: "photo restoration decision must use the constrained canonical semantics"
         });
       }
     }
