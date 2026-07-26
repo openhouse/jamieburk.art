@@ -44,6 +44,7 @@ export const candidateRelativePaths = [
   "apps/www/src/data/work.ts",
   "apps/www/src/styles/tokens.css",
   "apps/www/src/types/work.ts",
+  "docs/knowledge-bank/notebooks/photography/README.md",
   "docs/knowledge-bank/notebooks/photography/layout-study-d.md",
   "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
   "docs/knowledge-bank/corrections/photography/east-river-clearance-scope-2026-07.md",
@@ -55,6 +56,7 @@ export const candidateRelativePaths = [
   "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
   "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
   "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+  "docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md",
   "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
   "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
   "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
@@ -63,6 +65,7 @@ export const candidateRelativePaths = [
   "docs/knowledge-bank/_generated/photography-index.md",
   "docs/knowledge-bank/_generated/public-photo-placements.md",
   "docs/photography/README.md",
+  "docs/photography/oral-history-from-an-image.md",
   "evals/photo-knowledge/suite.json",
   "reports/photo-knowledge.json",
   "rfcs/0003-living-photographic-knowledge-loop.md",
@@ -80,7 +83,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "f717709536e14c1a4bec3a9b26a2bb62e4f9e338386d5a13538b92c7c8793b93";
+const approvedCandidateSha256 = "f4530b135bb432928181b6a2bd8bdcdc7487c131df06490fe1aff2ee0a82e202";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
