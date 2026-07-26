@@ -1,0 +1,24 @@
+{
+  "sourceFingerprint": "8558df8058822f59e51ff4b3ae582c6621f2f5fff9682531e1a30029d04d1537",
+  "assets": [
+    {
+      "id": "asset.photo.jamie-council-chamber.layout-a",
+      "derivative": "derivative.photo.jamie-council-chamber.layout-a.v1",
+      "occurrences": [
+        "projection.photo.layout-a.home.hero.council-chamber"
+      ],
+      "editions": [
+        "projection.edition.layout-a.branch-review.2026-07"
+      ],
+      "routes": [
+        "/"
+      ]
+    }
+  ],
+  "migration": {
+    "manifestPhotos": 13,
+    "governedAssets": 1,
+    "governedOccurrences": 1,
+    "remaining": 12
+  }
+}

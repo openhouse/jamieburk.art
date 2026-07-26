@@ -1,0 +1,14 @@
+<!-- GENERATED FILE. DO NOT EDIT. -->
+# Backlinks to Layout A homepage Council chamber occurrence
+
+**Source commit:** `5ff0668bc0794441c8be17933bc81d24acf0c7f4`
+**Generation time:** 2026-07-26T09:11:56-04:00
+**Source fingerprint:** `bcec29b9add0fc8d72d87175a3460dd4b8b7fc87061cfa0af21e747cd3c697a7`
+
+- [Jamie Burkart in a Council chamber, Layout A](../../assets/photographs/jamie-council-chamber-layout-a.md) - `projected_to` (frontmatter)
+- [Use the Council chamber image for Layout A branch review](../../decisions/photography/layout-a-home-council-chamber-v1.md) - `related_to` (frontmatter)
+- [Layout A homepage Council chamber curatorial proposal](../../evaluations/curatorial/layout-a-home-council-chamber-v1.md) - `related_to` (frontmatter)
+- [Living photographic knowledge](../../indexes/photography.md) - `prose_link` (markdown)
+- [Living photographic knowledge](../../indexes/photography.md) - `related_to` (frontmatter)
+- [Artist-led photographic knowledge loop](../../methods/artist-led-photographic-curation.md) - `related_to` (frontmatter)
+- [Layout A photographic branch-review edition](../../projections/photography/layout-a-branch-review-edition-2026-07.md) - `related_to` (frontmatter)

@@ -1,6 +1,6 @@
 ---
-rfp: 0
-title: RFP title
+rfc: 0
+title: RFC title
 stage: proposed
 start_date: YYYY-MM-DD
 authors:
@@ -14,7 +14,7 @@ supersedes: []
 superseded_by: null
 ---
 
-# RFP title
+# RFC title
 
 ## Summary
 
@@ -46,7 +46,7 @@ important edge cases and include concrete examples where useful.
 ## Security and privacy
 
 Describe trust boundaries, sensitive data, credentials, rights, consent, likely
-leakage paths, and fail-closed behavior. Remember that this RFP is public.
+leakage paths, and fail-closed behavior. Remember that this RFC is public.
 
 ## Publication workflow
 
@@ -61,7 +61,7 @@ testing, and observation after release.
 ## Decision gates
 
 List the evidence and human decisions required to advance through the relevant
-RFP stages.
+RFC stages.
 
 ## Drawbacks
 

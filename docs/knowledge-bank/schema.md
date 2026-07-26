@@ -81,6 +81,37 @@ graphic, document, audio file, or video. Evidence value and publication rights
 are separate. Rights-pending assets stay metadata-only and must not contain a
 private path or media payload.
 
+### Photographic assets and occurrences
+
+RFC 0003 extends `asset`, `evaluation`, `source`, and `projection` rather than
+creating a parallel photo database. A governed photograph uses
+`media_type: photograph` and `photo_knowledge_version: 1`. It separates:
+
+- a public stable ID from its private source binding;
+- a source photograph from an exact public derivative;
+- visible observation from metadata, recollection, and interpretation;
+- creator attribution from archive custody;
+- permission from represented-person, caption, crop, and collective-credit
+  review;
+- a photograph from each exact route and component where it occurs.
+
+Private source bindings expose only a public ID and a state such as
+`pending-private-verification`; private locators remain outside Git. Every
+committed derivative records dimensions, checksum, MIME type, stripped-metadata
+state, and branch-review or publication status.
+
+A photographic public occurrence is a `projection` with
+`projection_type: photo-occurrence`. It binds one derivative to one route,
+component, placement key, caption, credit, and nine-dimensional approval
+record. An occurrence cannot become `active` without production, photographer
+rights, and represented-person approval. A `portfolio-edition` projection
+groups exact occurrences against one reviewed Git candidate.
+
+Curatorial proposals are `evaluation` records with
+`evaluation_type: curatorial-proposal`. A named artistic lens must be explicitly
+identified as simulated. Curatorial output never clears a human gate or acts as
+an endorsement.
+
 ## Wanted pages
 
 `wanted` records name deliberate research needs without creating broken links.

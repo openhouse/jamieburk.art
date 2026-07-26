@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T09:11:56-04:00",
   "sourceCommit": "5ff0668bc0794441c8be17933bc81d24acf0c7f4",
-  "sourceFingerprint": "f6f17275c542fcf5d0ca5e725b5006e3eca44f5c45216deb66084b6110b83716",
+  "sourceFingerprint": "bcec29b9add0fc8d72d87175a3460dd4b8b7fc87061cfa0af21e747cd3c697a7",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -30,6 +30,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "asset.photo.jamie-council-chamber.layout-a",
+      "path": "docs/knowledge-bank/assets/photographs/jamie-council-chamber-layout-a.md",
+      "title": "Jamie Burkart in a Council chamber, Layout A",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for the Council chamber photograph used as the Layout A homepage hero during branch review.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
     },
     {
       "id": "capability.civic-cultural-technical-translation",
@@ -216,6 +229,32 @@
       "reviewBy": "2026-10-22"
     },
     {
+      "id": "decision.photography.layout-a.home-council-chamber.v1",
+      "path": "docs/knowledge-bank/decisions/photography/layout-a-home-council-chamber-v1.md",
+      "title": "Use the Council chamber image for Layout A branch review",
+      "kind": "decision",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded record of the Layout A homepage image choice for branch review, not production publication.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "evaluation.curatorial.layout-a.home-council-chamber.v1",
+      "path": "docs/knowledge-bank/evaluations/curatorial/layout-a-home-council-chamber-v1.md",
+      "title": "Layout A homepage Council chamber curatorial proposal",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Simulated-lens review of the Council chamber image as Layout A's homepage branch-review occurrence, preserving dissent and human publication gates.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "evaluation.employment-context.coverage.2026-07-18",
       "path": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "title": "Employment context coverage baseline - July 18, 2026",
@@ -389,6 +428,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.knowledge-wiki.photography",
+      "path": "docs/knowledge-bank/indexes/photography.md",
+      "title": "Living photographic knowledge",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Start-here record for RFC 0003's public-safe photographic asset, occurrence, curatorial, rights, recollection, correction, and portfolio-edition loop.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "index.knowledge-wiki.photography-notebook",
       "path": "docs/knowledge-bank/photography/README.md",
       "title": "Photography working notebook",
@@ -508,6 +560,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.photo-set.layout-a.council-chamber",
+      "path": "docs/knowledge-bank/indexes/photo-sets/layout-a-council-chamber.md",
+      "title": "Layout A Council chamber photo set",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe set record for the one Council chamber derivative promoted into the RFC 0003 pilot and the related private population that remains withheld.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "method.collective-credit-protected-absence",
       "path": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "title": "Collective credit and protected absence",
@@ -584,6 +649,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "method.photography.artist-led-curatorial-loop",
+      "path": "docs/knowledge-bank/methods/artist-led-photographic-curation.md",
+      "title": "Artist-led photographic knowledge loop",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded method for artist-led selection, archival source return, public-safe knowledge capture, exact-occurrence review, and human publication authority.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
     },
     {
       "id": "method.photography.invitation-container-emergence",
@@ -1038,6 +1116,32 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "projection.edition.layout-a.branch-review.2026-07",
+      "path": "docs/knowledge-bank/projections/photography/layout-a-branch-review-edition-2026-07.md",
+      "title": "Layout A photographic branch-review edition",
+      "kind": "projection",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Partial RFC 0003 edition record for the exact frozen Layout A donor, with one fully governed canary and the remaining photo manifest queued for migration.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-a.home.hero.council-chamber",
+      "path": "docs/knowledge-bank/projections/photography/layout-a-home-hero-council-chamber.md",
+      "title": "Layout A homepage Council chamber occurrence",
+      "kind": "projection",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact branch-review occurrence binding the governed Council chamber derivative to Layout A's homepage hero.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
       "id": "research-inquiry.photography.field-set-001",
       "path": "docs/knowledge-bank/photography/field-set-001.md",
       "title": "Field Set 001",
@@ -1051,6 +1155,19 @@
       ],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "research-inquiry.photography.layout-a.council-chamber",
+      "path": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md",
+      "title": "Complete the Layout A Council chamber source and rights record",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Bounded source-return work for photographer identity, permission, exact event, private binding verification, and final occurrence review.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "research-inquiry.ucsc-installation-title",
@@ -1395,6 +1512,19 @@
       "reviewBy": "2027-01-19"
     },
     {
+      "id": "source.layout-a.photo-review-register.2026-07",
+      "path": "docs/knowledge-bank/sources/photo-metadata/layout-a-photo-review-register-2026-07.md",
+      "title": "Layout A public-safe photo review register",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public repository register for Layout A derivative checksums, visible subject classes, branch-review state, and final human publication gates.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "source.nter-chng.archived-homepage.2011",
       "path": "docs/knowledge-bank/sources/nter-chng-archived-homepage-2011.md",
       "title": "Archived NTER CHNG project homepage",
@@ -1460,6 +1590,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.permission-status.layout-a.council-chamber.2026-07",
+      "path": "docs/knowledge-bank/sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
+      "title": "Layout A Council chamber permission research status",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe statement that no verified photographer identity or bounded permission capsule is yet attached to the Layout A Council chamber occurrence.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
       "id": "source.politico.callnyc.2016-03-14",
       "path": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
       "title": "Website provides new information about council members' focus",
@@ -1471,6 +1614,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.recollection.jamie-public-facing-civic-work.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/jamie-public-facing-civic-work-2026-07.md",
+      "title": "Jamie recollection on tending public-facing civic work",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe, dated paraphrase of Jamie's account of operational stewardship, public identity systems, listening, and collective agency in civic work.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
     },
     {
       "id": "source.resume.jamie-burkart.2026-06-11",
@@ -1541,6 +1697,19 @@
       "reviewBy": "2026-10-18"
     },
     {
+      "id": "source.visual-review.layout-a.council-chamber.2026-07",
+      "path": "docs/knowledge-bank/sources/photo-metadata/layout-a-council-chamber-visual-review-2026-07.md",
+      "title": "Layout A Council chamber public-derivative visual review",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Dated visual review of the metadata-stripped public derivative, limited to visible observations and derivative integrity.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "source.wowlist.repaired-transcript.2026",
       "path": "docs/knowledge-bank/sources/wowlist-repaired-transcript-2026.md",
       "title": "What is WOW List repaired transcript",
@@ -1599,6 +1768,46 @@
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
       "context": null
+    },
+    {
+      "from": "asset.photo.jamie-council-chamber.layout-a",
+      "type": "projected_to",
+      "to": "projection.photo.layout-a.home.hero.council-chamber",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-a-home-hero-council-chamber.md",
+      "context": "Exact Layout A homepage branch-review occurrence."
+    },
+    {
+      "from": "asset.photo.jamie-council-chamber.layout-a",
+      "type": "related_to",
+      "to": "index.photo-set.layout-a.council-chamber",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/layout-a-council-chamber.md",
+      "context": "Public member of a larger private set whose details remain withheld."
+    },
+    {
+      "from": "asset.photo.jamie-council-chamber.layout-a",
+      "type": "related_to",
+      "to": "source.permission-status.layout-a.council-chamber.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
+      "context": "Current public-safe permission research status."
+    },
+    {
+      "from": "asset.photo.jamie-council-chamber.layout-a",
+      "type": "related_to",
+      "to": "source.recollection.jamie-public-facing-civic-work.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/jamie-public-facing-civic-work-2026-07.md",
+      "context": "Broader first-person practice context, not event evidence."
+    },
+    {
+      "from": "asset.photo.jamie-council-chamber.layout-a",
+      "type": "related_to",
+      "to": "source.visual-review.layout-a.council-chamber.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/layout-a-council-chamber-visual-review-2026-07.md",
+      "context": "Public-derivative visual review."
     },
     {
       "from": "capability.civic-cultural-technical-translation",
@@ -2055,6 +2264,54 @@
       "context": "Records the decision that moves the proposal from invitation into an accepted residency."
     },
     {
+      "from": "decision.photography.layout-a.home-council-chamber.v1",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "Selected branch-review asset."
+    },
+    {
+      "from": "decision.photography.layout-a.home-council-chamber.v1",
+      "type": "related_to",
+      "to": "evaluation.curatorial.layout-a.home-council-chamber.v1",
+      "source": "frontmatter",
+      "href": "../../evaluations/curatorial/layout-a-home-council-chamber-v1.md",
+      "context": "Non-authoritative curatorial review."
+    },
+    {
+      "from": "decision.photography.layout-a.home-council-chamber.v1",
+      "type": "related_to",
+      "to": "projection.photo.layout-a.home.hero.council-chamber",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-a-home-hero-council-chamber.md",
+      "context": "Exact occurrence produced by the bounded decision."
+    },
+    {
+      "from": "evaluation.curatorial.layout-a.home-council-chamber.v1",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "Lead image under review."
+    },
+    {
+      "from": "evaluation.curatorial.layout-a.home-council-chamber.v1",
+      "type": "related_to",
+      "to": "projection.photo.layout-a.home.hero.council-chamber",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-a-home-hero-council-chamber.md",
+      "context": "Exact occurrence evaluated."
+    },
+    {
+      "from": "evaluation.curatorial.layout-a.home-council-chamber.v1",
+      "type": "uses_source",
+      "to": "source.visual-review.layout-a.council-chamber.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/layout-a-council-chamber-visual-review-2026-07.md",
+      "context": "Visible observations only."
+    },
+    {
       "from": "evaluation.employment-context.coverage.2026-07-18",
       "type": "related_to",
       "to": "index.knowledge-wiki.employment-context",
@@ -2149,6 +2406,14 @@
       "source": "frontmatter",
       "href": "indexes/living-archive.md",
       "context": "Orientation, missing-page, project, and situated source-return map."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography",
+      "source": "frontmatter",
+      "href": "indexes/photography.md",
+      "context": "Governed asset, occurrence, rights, curatorial, recollection, and portfolio-edition loop."
     },
     {
       "from": "index.knowledge-wiki",
@@ -2863,6 +3128,70 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "Layout A's homepage image is the first governed canary."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "decision.photography.layout-a.home-council-chamber.v1",
+      "source": "frontmatter",
+      "href": "../decisions/photography/layout-a-home-council-chamber-v1.md",
+      "context": "Bounded branch-review selection decision and its open gates."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "evaluation.curatorial.layout-a.home-council-chamber.v1",
+      "source": "frontmatter",
+      "href": "../evaluations/curatorial/layout-a-home-council-chamber-v1.md",
+      "context": "Simulated-lens curatorial proposal with human authority preserved."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "index.photo-set.layout-a.council-chamber",
+      "source": "frontmatter",
+      "href": "photo-sets/layout-a-council-chamber.md",
+      "context": "Public-safe set record for the current canary and withheld private population."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "method.photography.artist-led-curatorial-loop",
+      "source": "frontmatter",
+      "href": "../methods/artist-led-photographic-curation.md",
+      "context": "Artist-led selection and source-return method."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.edition.layout-a.branch-review.2026-07",
+      "source": "frontmatter",
+      "href": "../projections/photography/layout-a-branch-review-edition-2026-07.md",
+      "context": "First partial portfolio edition, bound to the frozen Layout A donor."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.layout-a.home.hero.council-chamber",
+      "source": "frontmatter",
+      "href": "../projections/photography/layout-a-home-hero-council-chamber.md",
+      "context": "Exact homepage occurrence for the governed public derivative."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "research-inquiry.photography.layout-a.council-chamber",
+      "source": "frontmatter",
+      "href": "../research-inquiries/photography/layout-a-council-chamber.md",
+      "context": "Photographer, permission, exact-event, and source-binding questions."
+    },
+    {
       "from": "index.knowledge-wiki.photography-notebook",
       "type": "informed_by",
       "to": "source.teju-cole.far-away-from-here.2015",
@@ -3319,6 +3648,14 @@
       "context": "First private working-album encounter, recorded without exposing or approving the photograph."
     },
     {
+      "from": "index.photo-set.layout-a.council-chamber",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "Only the governed public derivative is named here."
+    },
+    {
       "from": "method.collective-credit-protected-absence",
       "type": "related_to",
       "to": "method.source-backed-team-memory",
@@ -3589,6 +3926,22 @@
       "source": "frontmatter",
       "href": "collective-credit-and-protected-absence.md",
       "context": null
+    },
+    {
+      "from": "method.photography.artist-led-curatorial-loop",
+      "type": "related_to",
+      "to": "evaluation.curatorial.layout-a.home-council-chamber.v1",
+      "source": "frontmatter",
+      "href": "../evaluations/curatorial/layout-a-home-council-chamber-v1.md",
+      "context": "First simulated-lens proposal using the method."
+    },
+    {
+      "from": "method.photography.artist-led-curatorial-loop",
+      "type": "related_to",
+      "to": "projection.photo.layout-a.home.hero.council-chamber",
+      "source": "frontmatter",
+      "href": "../projections/photography/layout-a-home-hero-council-chamber.md",
+      "context": "First exact occurrence governed by the method."
     },
     {
       "from": "method.photography.invitation-container-emergence",
@@ -4691,6 +5044,54 @@
       "context": null
     },
     {
+      "from": "projection.edition.layout-a.branch-review.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-a.home.hero.council-chamber",
+      "source": "frontmatter",
+      "href": "layout-a-home-hero-council-chamber.md",
+      "context": "First governed occurrence in this partial edition."
+    },
+    {
+      "from": "projection.photo.layout-a.home.hero.council-chamber",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "Exact source asset and derivative record."
+    },
+    {
+      "from": "projection.photo.layout-a.home.hero.council-chamber",
+      "type": "related_to",
+      "to": "decision.photography.layout-a.home-council-chamber.v1",
+      "source": "frontmatter",
+      "href": "../../decisions/photography/layout-a-home-council-chamber-v1.md",
+      "context": "Bounded selection decision."
+    },
+    {
+      "from": "projection.photo.layout-a.home.hero.council-chamber",
+      "type": "related_to",
+      "to": "evaluation.curatorial.layout-a.home-council-chamber.v1",
+      "source": "frontmatter",
+      "href": "../../evaluations/curatorial/layout-a-home-council-chamber-v1.md",
+      "context": "Simulated-lens review of the complete occurrence."
+    },
+    {
+      "from": "projection.photo.layout-a.home.hero.council-chamber",
+      "type": "related_to",
+      "to": "projection.edition.layout-a.branch-review.2026-07",
+      "source": "frontmatter",
+      "href": "layout-a-branch-review-edition-2026-07.md",
+      "context": "Partial branch-review portfolio edition."
+    },
+    {
+      "from": "projection.photo.layout-a.home.hero.council-chamber",
+      "type": "related_to",
+      "to": "source.permission-status.layout-a.council-chamber.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
+      "context": "Fail-closed photographer and permission status."
+    },
+    {
       "from": "research-inquiry.photography.field-set-001",
       "type": "related_to",
       "to": "index.knowledge-wiki.photography-notebook",
@@ -4745,6 +5146,22 @@
       "source": "frontmatter",
       "href": "notebook-entry-template.md",
       "context": null
+    },
+    {
+      "from": "research-inquiry.photography.layout-a.council-chamber",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "The inquiry governs missing evidence for the current canary."
+    },
+    {
+      "from": "research-inquiry.photography.layout-a.council-chamber",
+      "type": "related_to",
+      "to": "source.permission-status.layout-a.council-chamber.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
+      "context": "Current fail-closed permission state."
     },
     {
       "from": "research-inquiry.ucsc-installation-title",
@@ -5331,6 +5748,14 @@
       "context": "Preserves the exact E baseline from which feature/wiki-E begins."
     },
     {
+      "from": "source.layout-a.photo-review-register.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "Records the canary derivative checksum and branch-review boundary."
+    },
+    {
       "from": "source.nter-chng.archived-homepage.2011",
       "type": "documents",
       "to": "project.nter-chng",
@@ -5379,6 +5804,22 @@
       "context": null
     },
     {
+      "from": "source.permission-status.layout-a.council-chamber.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "Keeps the rights gate open until evidence is privately verified."
+    },
+    {
+      "from": "source.permission-status.layout-a.council-chamber.2026-07",
+      "type": "related_to",
+      "to": "research-inquiry.photography.layout-a.council-chamber",
+      "source": "frontmatter",
+      "href": "../../research-inquiries/photography/layout-a-council-chamber.md",
+      "context": "Defines the next rights and attribution research work."
+    },
+    {
       "from": "source.politico.callnyc.2016-03-14",
       "type": "documents",
       "to": "project.callnyc",
@@ -5393,6 +5834,14 @@
       "source": "frontmatter",
       "href": "../claims/callnyc-independent-follow-on.md",
       "context": null
+    },
+    {
+      "from": "source.recollection.jamie-public-facing-civic-work.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "The composed image prompted source return, not event identification."
     },
     {
       "from": "source.teju-cole.far-away-from-here.2015",
@@ -5425,6 +5874,14 @@
       "source": "frontmatter",
       "href": "../evaluations/employment-context-coverage-2026-07-18.md",
       "context": null
+    },
+    {
+      "from": "source.visual-review.layout-a.council-chamber.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "Supports visible-observation statements, not event or impact claims."
     },
     {
       "from": "source.wowlist.repaired-transcript.2026",
@@ -5490,7 +5947,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 118,
+      "line": 121,
       "kind": "link"
     },
     {
@@ -5499,7 +5956,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 119,
+      "line": 122,
       "kind": "link"
     },
     {
@@ -5508,7 +5965,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 122,
+      "line": 125,
       "kind": "link"
     },
     {
@@ -5517,7 +5974,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 126,
+      "line": 129,
       "kind": "link"
     },
     {
@@ -5526,7 +5983,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 133,
+      "line": 136,
       "kind": "link"
     },
     {
@@ -5535,7 +5992,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 138,
+      "line": 141,
       "kind": "link"
     },
     {
@@ -5544,7 +6001,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 144,
+      "line": 147,
       "kind": "link"
     },
     {
@@ -5553,7 +6010,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 149,
+      "line": 152,
       "kind": "link"
     },
     {
@@ -5562,7 +6019,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 155,
+      "line": 158,
       "kind": "link"
     },
     {
@@ -5571,7 +6028,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 157,
+      "line": 160,
       "kind": "link"
     },
     {
@@ -5580,7 +6037,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 163,
+      "line": 166,
       "kind": "link"
     },
     {
@@ -5589,7 +6046,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 165,
+      "line": 168,
       "kind": "link"
     },
     {
@@ -5598,7 +6055,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 173,
+      "line": 176,
       "kind": "link"
     },
     {
@@ -5607,7 +6064,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 179,
+      "line": 182,
       "kind": "link"
     },
     {
@@ -5616,7 +6073,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 181,
+      "line": 184,
       "kind": "link"
     },
     {
@@ -5625,7 +6082,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 187,
+      "line": 190,
       "kind": "link"
     },
     {
@@ -5634,7 +6091,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 193,
+      "line": 196,
       "kind": "link"
     },
     {
@@ -5643,7 +6100,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 199,
+      "line": 202,
       "kind": "link"
     },
     {
@@ -5652,7 +6109,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 205,
+      "line": 208,
       "kind": "link"
     },
     {
@@ -5661,7 +6118,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 211,
+      "line": 214,
       "kind": "link"
     },
     {
@@ -5670,7 +6127,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 217,
+      "line": 220,
       "kind": "link"
     },
     {
@@ -5679,7 +6136,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 219,
+      "line": 222,
       "kind": "link"
     },
     {
@@ -5688,7 +6145,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 225,
+      "line": 228,
       "kind": "link"
     },
     {
@@ -5697,7 +6154,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 230,
+      "line": 233,
       "kind": "link"
     },
     {
@@ -5706,7 +6163,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 232,
+      "line": 235,
       "kind": "link"
     },
     {
@@ -5715,7 +6172,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 239,
+      "line": 242,
       "kind": "link"
     },
     {
@@ -5724,7 +6181,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 241,
+      "line": 244,
       "kind": "link"
     },
     {
@@ -5733,7 +6190,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 247,
+      "line": 250,
       "kind": "link"
     },
     {
@@ -5742,7 +6199,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 249,
+      "line": 252,
       "kind": "link"
     },
     {
@@ -5751,7 +6208,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 254,
+      "line": 257,
       "kind": "link"
     },
     {
@@ -5760,7 +6217,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 256,
+      "line": 259,
       "kind": "link"
     },
     {
@@ -5778,7 +6235,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 262,
+      "line": 265,
       "kind": "link"
     },
     {
@@ -5787,7 +6244,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 264,
+      "line": 267,
       "kind": "link"
     },
     {
@@ -5796,7 +6253,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 271,
+      "line": 274,
       "kind": "link"
     },
     {
@@ -5805,16 +6262,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
-      "line": 273,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
-      "to": null,
-      "fragment": null,
-      "line": 279,
+      "line": 276,
       "kind": "link"
     },
     {
@@ -5829,7 +6277,7 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
       "line": 282,
@@ -5838,10 +6286,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 285,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 287,
+      "line": 290,
       "kind": "link"
     },
     {
@@ -5850,7 +6307,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 288,
+      "line": 291,
       "kind": "link"
     },
     {
@@ -5910,10 +6367,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/photography.md",
+      "to": "index.knowledge-wiki.photography",
+      "fragment": null,
+      "line": 45,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/indexes/project-lineages.md",
       "to": "index.knowledge-wiki.project-lineages",
       "fragment": null,
-      "line": 45,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -5922,7 +6388,7 @@
       "toPath": "docs/knowledge-bank/indexes/decision-records.md",
       "to": "index.knowledge-wiki.decision-records",
       "fragment": null,
-      "line": 47,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -5931,7 +6397,7 @@
       "toPath": "docs/knowledge-bank/indexes/family-closure.md",
       "to": "index.knowledge-wiki.family-closure",
       "fragment": null,
-      "line": 49,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -5940,7 +6406,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 52,
+      "line": 55,
       "kind": "link"
     },
     {
@@ -5949,7 +6415,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 55,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -5958,8 +6424,17 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 61,
+      "line": 64,
       "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/photographs/jamie-council-chamber-layout-a.md",
+      "from": "asset.photo.jamie-council-chamber.layout-a",
+      "toPath": "apps/www/public/photos/jamie-council-chamber.jpg",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
     },
     {
       "fromPath": "docs/knowledge-bank/capabilities/civic-cultural-and-technical-translation.md",
@@ -6769,6 +7244,123 @@
       "to": "project.kc-town-hall",
       "fragment": null,
       "line": 49,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/jamie-council-chamber-layout-a.md",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/layout-a-council-chamber.md",
+      "to": "index.photo-set.layout-a.council-chamber",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/photo-metadata/layout-a-council-chamber-visual-review-2026-07.md",
+      "to": "source.visual-review.layout-a.council-chamber.2026-07",
+      "fragment": null,
+      "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/photo-metadata/layout-a-photo-review-register-2026-07.md",
+      "to": "source.layout-a.photo-review-register.2026-07",
+      "fragment": null,
+      "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
+      "to": "source.permission-status.layout-a.council-chamber.2026-07",
+      "fragment": null,
+      "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/recollections/jamie-public-facing-civic-work-2026-07.md",
+      "to": "source.recollection.jamie-public-facing-civic-work.2026-07",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md",
+      "to": "research-inquiry.photography.layout-a.council-chamber",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/methods/artist-led-photographic-curation.md",
+      "to": "method.photography.artist-led-curatorial-loop",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-a-home-council-chamber-v1.md",
+      "to": "evaluation.curatorial.layout-a.home-council-chamber.v1",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-a-home-council-chamber-v1.md",
+      "to": "decision.photography.layout-a.home-council-chamber.v1",
+      "fragment": null,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-a-home-hero-council-chamber.md",
+      "to": "projection.photo.layout-a.home.hero.council-chamber",
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-a-branch-review-edition-2026-07.md",
+      "to": "projection.edition.layout-a.branch-review.2026-07",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
+      "to": null,
+      "fragment": null,
+      "line": 8,
       "kind": "link"
     },
     {

@@ -2,37 +2,37 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T09:11:56-04:00",
   "sourceCommit": "5ff0668bc0794441c8be17933bc81d24acf0c7f4",
-  "sourceFingerprint": "f6f17275c542fcf5d0ca5e725b5006e3eca44f5c45216deb66084b6110b83716",
+  "sourceFingerprint": "bcec29b9add0fc8d72d87175a3460dd4b8b7fc87061cfa0af21e747cd3c697a7",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 117,
+    "records": 130,
     "byKind": {
       "project": 15,
       "person": 1,
       "organization": 1,
       "event": 1,
       "place": 1,
-      "source": 31,
-      "asset": 1,
+      "source": 35,
+      "asset": 2,
       "claim": 2,
       "research-run": 6,
-      "research-inquiry": 2,
-      "decision": 6,
+      "research-inquiry": 3,
+      "decision": 7,
       "correction": 1,
-      "method": 12,
+      "method": 13,
       "timeline": 1,
       "application": 1,
-      "evaluation": 3,
-      "index": 18,
+      "evaluation": 4,
+      "index": 20,
       "capability": 5,
       "opportunity": 6,
-      "projection": 3
+      "projection": 5
     },
-    "typedRelations": 479,
+    "typedRelations": 515,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 1,
@@ -43,22 +43,22 @@
       "has_asset": 2,
       "informed_by": 45,
       "part_of": 13,
-      "projected_to": 6,
-      "related_to": 278,
+      "projected_to": 7,
+      "related_to": 312,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
       "uses_method": 28,
-      "uses_source": 61
+      "uses_source": 62
     },
-    "proseLinks": 312,
-    "rootReachable": 116,
+    "proseLinks": 327,
+    "rootReachable": 129,
     "orphanCount": 0,
     "deadEndCount": 0,
-    "wantedPageCount": 6,
+    "wantedPageCount": 8,
     "stalePageCount": 0,
     "correctionCount": 1,
-    "rightsReviewCount": 1,
+    "rightsReviewCount": 2,
     "opportunityCount": 6,
     "liveOpportunityCount": 6,
     "criticalRequirementCount": 22,
@@ -137,6 +137,20 @@
       "path": "docs/knowledge-bank/indexes/visual-evidence.md"
     },
     {
+      "id": "wanted.photography.layout-a.council-chamber.private-binding",
+      "proposed_title": "Verified private source binding",
+      "reason": "Bind the public ID to the exact private source without publishing a locator.",
+      "requestedBy": "research-inquiry.photography.layout-a.council-chamber",
+      "path": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md"
+    },
+    {
+      "id": "wanted.photography.layout-a.council-chamber.permission",
+      "proposed_title": "Bounded photographer permission capsule",
+      "reason": "Record exact destination scope and credit requirements without publishing correspondence.",
+      "requestedBy": "research-inquiry.photography.layout-a.council-chamber",
+      "path": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md"
+    },
+    {
       "id": "source.ucsc.installation-primary-record.2006",
       "proposed_title": "Primary 2006 installation record",
       "reason": "Needed to resolve the title from a contemporaneous invitation, checklist, photograph, gallery record, or artist file.",
@@ -160,6 +174,13 @@
       "rightsState": "permission-needed",
       "consentState": "review-needed",
       "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.jamie-council-chamber.layout-a",
+      "path": "docs/knowledge-bank/assets/photographs/jamie-council-chamber-layout-a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "branch-review"
     }
   ]
 }

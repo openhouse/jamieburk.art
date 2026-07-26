@@ -3,7 +3,7 @@
 
 **Source commit:** `5ff0668bc0794441c8be17933bc81d24acf0c7f4`
 **Generation time:** 2026-07-26T09:11:56-04:00
-**Source fingerprint:** `f6f17275c542fcf5d0ca5e725b5006e3eca44f5c45216deb66084b6110b83716`
+**Source fingerprint:** `bcec29b9add0fc8d72d87175a3460dd4b8b7fc87061cfa0af21e747cd3c697a7`
 
 ## application
 
@@ -12,6 +12,7 @@
 ## asset
 
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
+- [Jamie Burkart in a Council chamber, Layout A](../assets/photographs/jamie-council-chamber-layout-a.md) - `asset.photo.jamie-council-chamber.layout-a`
 
 ## capability
 
@@ -38,9 +39,11 @@
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
 - [Acceptance of Release Yourself Into the Archive](../photography/field-set-001-residency-acceptance.md) - `decision.photography.field-set-001-residency-acceptance`
+- [Use the Council chamber image for Layout A branch review](../decisions/photography/layout-a-home-council-chamber-v1.md) - `decision.photography.layout-a.home-council-chamber.v1`
 
 ## evaluation
 
+- [Layout A homepage Council chamber curatorial proposal](../evaluations/curatorial/layout-a-home-council-chamber-v1.md) - `evaluation.curatorial.layout-a.home-council-chamber.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
@@ -60,6 +63,7 @@
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
 - [Outcomes, Adoption, and Afterlives](../indexes/outcomes-adoption-and-afterlives.md) - `index.knowledge-wiki.outcomes-adoption-afterlives`
 - [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
+- [Living photographic knowledge](../indexes/photography.md) - `index.knowledge-wiki.photography`
 - [Photography working notebook](../photography/README.md) - `index.knowledge-wiki.photography-notebook`
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
@@ -69,6 +73,7 @@
 - [Role, Collective Authorship, and Protected Absence](../indexes/role-collective-authorship-and-protected-absence.md) - `index.knowledge-wiki.role-authorship-protected-absence`
 - [Scenes and Places of Work](../indexes/scenes-and-places-of-work.md) - `index.knowledge-wiki.scenes-and-places-of-work`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
+- [Layout A Council chamber photo set](../indexes/photo-sets/layout-a-council-chamber.md) - `index.photo-set.layout-a.council-chamber`
 
 ## method
 
@@ -78,6 +83,7 @@
 - [Learning Through Making](../methods/learning-through-making.md) - `method.learning-through-making`
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
+- [Artist-led photographic knowledge loop](../methods/artist-led-photographic-curation.md) - `method.photography.artist-led-curatorial-loop`
 - [Invitation, container, emergence](../photography/editorial-grammar.md) - `method.photography.invitation-container-emergence`
 - [Photography notebook entry template](../photography/notebook-entry-template.md) - `method.photography.notebook-entry`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
@@ -129,10 +135,13 @@
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Layout A photographic branch-review edition](../projections/photography/layout-a-branch-review-edition-2026-07.md) - `projection.edition.layout-a.branch-review.2026-07`
+- [Layout A homepage Council chamber occurrence](../projections/photography/layout-a-home-hero-council-chamber.md) - `projection.photo.layout-a.home.hero.council-chamber`
 
 ## research-inquiry
 
 - [Field Set 001](../photography/field-set-001.md) - `research-inquiry.photography.field-set-001`
+- [Complete the Layout A Council chamber source and rights record](../research-inquiries/photography/layout-a-council-chamber.md) - `research-inquiry.photography.layout-a.council-chamber`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
 ## research-run
@@ -165,17 +174,21 @@
 - [Frozen Knowledge Wiki branch C](../sources/knowledge-wiki-branch-c-2026-07-19.md) - `source.knowledge-wiki.branch-c.2026-07-19`
 - [Frozen Knowledge Wiki branch D](../sources/knowledge-wiki-branch-d-2026-07-19.md) - `source.knowledge-wiki.branch-d.2026-07-19`
 - [Frozen Knowledge Wiki branch E](../sources/knowledge-wiki-branch-e-2026-07-19.md) - `source.knowledge-wiki.branch-e.2026-07-19`
+- [Layout A public-safe photo review register](../sources/photo-metadata/layout-a-photo-review-register-2026-07.md) - `source.layout-a.photo-review-register.2026-07`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
 - [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
+- [Layout A Council chamber permission research status](../sources/permissions/layout-a-council-chamber-permission-status-2026-07.md) - `source.permission-status.layout-a.council-chamber.2026-07`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
+- [Jamie recollection on tending public-facing civic work](../sources/recollections/jamie-public-facing-civic-work-2026-07.md) - `source.recollection.jamie-public-facing-civic-work.2026-07`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Teju Cole's Zurich residency and Far Away From Here](../sources/teju-cole-far-away-from-here-2015.md) - `source.teju-cole.far-away-from-here.2015`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Apple Photos archive - public-safe metadata boundary](../sources/apple-photos-archive-metadata.md) - `source.vault.apple-photos.metadata`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
+- [Layout A Council chamber public-derivative visual review](../sources/photo-metadata/layout-a-council-chamber-visual-review-2026-07.md) - `source.visual-review.layout-a.council-chamber.2026-07`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
 
 ## timeline

@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "suite_id": "photo-knowledge-loop-rfc-0003",
+  "rfc": 3,
+  "donor": {
+    "branch": "features/layout-A",
+    "commit": "ce5184bc84a2666f252f1b02a4fc34c006aa1b7d"
+  },
+  "canary": {
+    "manifestKey": "councilChamber",
+    "assetId": "asset.photo.jamie-council-chamber.layout-a",
+    "derivativeId": "derivative.photo.jamie-council-chamber.layout-a.v1",
+    "occurrenceId": "projection.photo.layout-a.home.hero.council-chamber",
+    "editionId": "projection.edition.layout-a.branch-review.2026-07",
+    "route": "/",
+    "component": "Hero",
+    "placementKey": "home.hero"
+  },
+  "criteria": [
+    {
+      "id": "PHOTO-KNOWLEDGE-001",
+      "lens": "Abby Covert",
+      "criterion": "RFC 0003 extends the governed Knowledge Wiki with stable identities and no parallel public database.",
+      "weight": 10
+    },
+    {
+      "id": "PHOTO-KNOWLEDGE-002",
+      "lens": "Shreya Shankar",
+      "criterion": "Manifest, asset, derivative, occurrence, and edition IDs resolve consistently.",
+      "weight": 10
+    },
+    {
+      "id": "PHOTO-KNOWLEDGE-003",
+      "lens": "Mimi Onuoha",
+      "criterion": "Private source binding remains opaque, fail-closed, and free of private paths or identifying source fingerprints.",
+      "weight": 10
+    },
+    {
+      "id": "PHOTO-KNOWLEDGE-004",
+      "lens": "Yolanda Cuomo",
+      "criterion": "The exact occurrence binds image, crop, copy context, caption, credit, viewport, and action without confusing custody and authorship.",
+      "weight": 10
+    },
+    {
+      "id": "PHOTO-KNOWLEDGE-005",
+      "lens": "Zora Neale Hurston",
+      "criterion": "Visible observation, metadata, first-person recollection, interpretation, and collective context remain distinct.",
+      "weight": 10
+    },
+    {
+      "id": "PHOTO-KNOWLEDGE-006",
+      "lens": "Margaret Morse",
+      "criterion": "Curatorial evaluation preserves embodiment, dissent, and artistic openness without scoring or automated publication.",
+      "weight": 10
+    },
+    {
+      "id": "PHOTO-KNOWLEDGE-007",
+      "lens": "Deborah Treisman",
+      "criterion": "Caption and credit assertions resolve to bounded statements, and unknowns are not polished into facts.",
+      "weight": 10
+    },
+    {
+      "id": "PHOTO-KNOWLEDGE-008",
+      "lens": "Cyd Harrell",
+      "criterion": "Rights, represented-person, artwork, caption, collective-credit, staging, production, and indexing gates remain separate.",
+      "weight": 10
+    },
+    {
+      "id": "PHOTO-KNOWLEDGE-009",
+      "lens": "Dominic P. Berg",
+      "criterion": "Generated placement, rights, impact, usage, and health views are deterministic and current.",
+      "weight": 10
+    },
+    {
+      "id": "PHOTO-KNOWLEDGE-010",
+      "lens": "Amanda Clayman",
+      "criterion": "The pilot reports one completed canary and twelve migration items without treating incompleteness as shame or false completion.",
+      "weight": 10
+    }
+  ],
+  "hard_gates": [
+    "No private path, People label, coordinate, raw permission correspondence, or private source locator enters public Git.",
+    "No occurrence becomes active while photographer rights, represented-person review, production, or indexing remain open.",
+    "Named artistic lenses are explicitly simulations, not participation or endorsement.",
+    "A derivative checksum mismatch fails the build.",
+    "Jamie approves any production publication and indexing change separately."
+  ],
+  "human_gate": {
+    "required": true,
+    "machine_pass_is_not_clearance": true,
+    "open_by_design": [
+      "exact private source binding",
+      "photographer attribution and permission",
+      "represented-person and visible-artwork review",
+      "exact caption, credit, and crop",
+      "staging",
+      "production",
+      "indexing",
+      "Jamie approval of an unchanged candidate"
+    ]
+  }
+}

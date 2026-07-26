@@ -106,14 +106,14 @@ Run its deterministic checks before promoting a claim or source into a public
 page. The bank should become deeper with each pass while the public site remains
 selective.
 
-## Repository Feature Proposals
+## Repository Requests for Comments
 
-Use `rfps/` for substantial architecture, governance, privacy-boundary, data
+Use `rfcs/` for substantial architecture, governance, privacy-boundary, data
 model, package, repository, or cross-system proposals. Follow
-`rfps/0000-template.md` and run `node scripts/check-rfps.mjs`. A merged `proposed` or
-`exploring` RFP is preserved for review; it is not implementation authorization.
-Agents may draft, critique, prototype, and test an RFP but may not advance a
-decision that the RFP reserves for Jamie or another named human decision owner.
+`rfcs/0000-template.md` and run `node scripts/check-rfcs.mjs`. A merged `proposed` or
+`exploring` RFC is preserved for review; it is not implementation authorization.
+Agents may draft, critique, prototype, and test an RFC but may not advance a
+decision that the RFC reserves for Jamie or another named human decision owner.
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

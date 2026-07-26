@@ -21,8 +21,11 @@ export function PhotoFigure({
   return (
     <figure
       className={`jb-photo-figure ${className}`}
+      data-derivative-id={photo.derivativeId}
+      data-placement-ids={photo.placementIds?.join(" ")}
       data-photo-id={photo.id}
       data-publication-status={photo.publicationStatus}
+      data-wiki-id={photo.wikiId}
     >
       <div className="jb-photo-frame">
         <Image

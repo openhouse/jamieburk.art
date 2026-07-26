@@ -8,6 +8,9 @@ export type PortfolioPhoto = {
   caption: string;
   archiveLabel: string;
   objectPosition?: string;
+  wikiId?: string;
+  derivativeId?: string;
+  placementIds?: readonly string[];
   publicationBoundary: string;
   publicationStatus: "branch-review";
 };
@@ -41,6 +44,9 @@ export const photos = {
       "Jamie in New York City Council chambers with the working materials of public-facing civic work.",
     archiveLabel: "Jamie Burkart photo archive",
     objectPosition: "54% 40%",
+    wikiId: "asset.photo.jamie-council-chamber.layout-a",
+    derivativeId: "derivative.photo.jamie-council-chamber.layout-a.v1",
+    placementIds: ["projection.photo.layout-a.home.hero.council-chamber"],
     publicationBoundary,
     publicationStatus
   },

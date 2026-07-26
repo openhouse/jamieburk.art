@@ -177,63 +177,6 @@ export default function AboutPage() {
         />
       </section>
 
-      <section className="jb-dark-photo-section border-y border-jb-ink/15 bg-jb-neutral py-16 text-white">
-        <div className="jb-frame">
-          <div className="grid gap-8 lg:grid-cols-[0.38fr_0.62fr]">
-            <div>
-              <p className="jb-section-index text-jb-orange">
-                2007 / historical / collective river expedition
-              </p>
-              <h2 className="mt-3 text-4xl font-bold leading-tight text-white">
-                Release yourself onto the water until it tastes of salt.
-              </h2>
-            </div>
-            <div className="space-y-5 text-lg leading-8 text-white/78">
-              <p>
-                I originated and organized a reclaimed-material,
-                bicycle-powered raft expedition with Libby Hendon and Laura
-                Mattingly. Contemporary reporting documented us more than
-                1,000 miles from Kansas City into Louisiana, with material
-                improvisation, public encounters, interruption, adaptation,
-                and continued travel shaping the work. An earlier{" "}
-                <Link
-                  className="font-semibold text-jb-orange hover:text-white"
-                  href="https://www.thepitchkc.com/when-artists-turn-huck-finn/"
-                >
-                  Pitch report
-                </Link>{" "}
-                records the raft&apos;s reclaimed construction and early journey.
-              </p>
-              <p>
-                I understood my role as tending a project container people
-                could enter, change, and leave. The archive treats the route,
-                full crew chronology, and collective labor as continuing
-                research, not as a solo achievement or a finished impact claim.
-              </p>
-            </div>
-          </div>
-          <div aria-label="Arrival, release, and public geography on the river" className="mt-10 space-y-7">
-            <PhotoFigure
-              imageClassName="aspect-[16/9]"
-              photo={photos.raftArrival}
-              sizes="(min-width: 1100px) 1100px, 100vw"
-            />
-            <div className="grid gap-7 md:grid-cols-[0.38fr_0.62fr] md:items-start">
-              <PhotoFigure
-                imageClassName="aspect-[3/4]"
-                photo={photos.raftFog}
-                sizes="(min-width: 1100px) 38vw, 100vw"
-              />
-              <PhotoFigure
-                imageClassName="aspect-[4/3]"
-                photo={photos.raftDeltaQueen}
-                sizes="(min-width: 1100px) 62vw, 100vw"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="jb-frame py-16">
         <div className="grid gap-10 lg:grid-cols-[0.3fr_0.7fr]">
           <div>
@@ -289,6 +232,63 @@ export default function AboutPage() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="jb-dark-photo-section border-y border-jb-ink/15 bg-jb-neutral py-16 text-white">
+        <div className="jb-frame">
+          <div className="grid gap-8 lg:grid-cols-[0.38fr_0.62fr]">
+            <div>
+              <p className="jb-section-index text-jb-orange">
+                2007 / historical / collective river expedition
+              </p>
+              <h2 className="mt-3 text-4xl font-bold leading-tight text-white">
+                Release yourself onto the water until it tastes of salt.
+              </h2>
+            </div>
+            <div className="space-y-5 text-lg leading-8 text-white/78">
+              <p>
+                I originated and organized a reclaimed-material,
+                bicycle-powered raft expedition with Libby Hendon and Laura
+                Mattingly. Contemporary reporting documented us more than
+                1,000 miles from Kansas City into Louisiana, with material
+                improvisation, public encounters, interruption, adaptation,
+                and continued travel shaping the work. An earlier{" "}
+                <Link
+                  className="font-semibold text-jb-orange hover:text-white"
+                  href="https://www.thepitchkc.com/when-artists-turn-huck-finn/"
+                >
+                  Pitch report
+                </Link>{" "}
+                records the raft&apos;s reclaimed construction and early journey.
+              </p>
+              <p>
+                I understood my role as tending a project container people
+                could enter, change, and leave. The archive treats the route,
+                full crew chronology, and collective labor as continuing
+                research, not as a solo achievement or a finished impact claim.
+              </p>
+            </div>
+          </div>
+          <div aria-label="Arrival, release, and public geography on the river" className="mt-10 space-y-7">
+            <PhotoFigure
+              imageClassName="aspect-[16/9]"
+              photo={photos.raftArrival}
+              sizes="(min-width: 1100px) 1100px, 100vw"
+            />
+            <div className="grid gap-7 md:grid-cols-[0.38fr_0.62fr] md:items-start">
+              <PhotoFigure
+                imageClassName="aspect-[3/4]"
+                photo={photos.raftFog}
+                sizes="(min-width: 1100px) 38vw, 100vw"
+              />
+              <PhotoFigure
+                imageClassName="aspect-[4/3]"
+                photo={photos.raftDeltaQueen}
+                sizes="(min-width: 1100px) 62vw, 100vw"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

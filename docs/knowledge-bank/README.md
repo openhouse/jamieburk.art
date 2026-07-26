@@ -31,6 +31,10 @@ relations:
     href: photography/README.md
     context: Public-safe sketchpad for provisional photographic questions and editorial experiments.
   - type: related_to
+    target: index.knowledge-wiki.photography
+    href: indexes/photography.md
+    context: Governed asset, occurrence, rights, curatorial, recollection, and portfolio-edition loop.
+  - type: related_to
     target: index.knowledge-wiki.project-lineages
     href: indexes/project-lineages.md
     context: Bounded inheritance, adaptation, and divergence across projects.
@@ -91,6 +95,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Photography working notebook](photography/README.md): a public-safe sketchpad
   for Field Set 001, close-reading notes, sequence experiments, and visual
   questions that have not become claims or publication candidates.
+- [Living photographic knowledge](indexes/photography.md): the RFC 0003 asset,
+  derivative, occurrence, curatorial, rights, recollection, correction, and
+  portfolio-edition system.
 - [Project lineages](indexes/project-lineages.md): inheritance, adaptation, and
   divergence without retrospective inevitability.
 - [Decision records](indexes/decision-records.md): bounded reconstructions that

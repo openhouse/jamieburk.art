@@ -126,6 +126,73 @@ const projectionSchema = z.object({
   surfaces: z.array(z.string())
 });
 
+const privateSourceBindingSchema = z.object({
+  provider: z.literal("photo-fieldwork"),
+  status: z.enum([
+    "pending-private-verification",
+    "verified-private",
+    "revoked",
+    "not-applicable"
+  ]),
+  public_id: stableIdSchema
+});
+
+const publicDerivativeSchema = z.object({
+  id: stableIdSchema,
+  path: z.string().startsWith("apps/www/public/"),
+  media_type: z.enum(["image/jpeg", "image/webp", "image/png"]),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  checksum: z.string().regex(/^[a-f0-9]{64}$/),
+  metadata_stripped: z.literal(true),
+  status: z.enum(["branch-review", "staging-candidate", "approved", "retired"])
+});
+
+const photoStatementSchema = z.object({
+  id: stableIdSchema,
+  property: z.string().min(1),
+  value: z.union([z.string().min(1), z.number(), z.boolean()]),
+  precision: z.string().min(1).optional(),
+  rank: z.enum(["preferred", "normal", "deprecated"]),
+  confidence: z.enum(["high", "moderate", "limited"]),
+  references: z.array(stableIdSchema).default([]),
+  supersedes: z.array(stableIdSchema).default([]),
+  superseded_by: z.array(stableIdSchema).default([])
+});
+
+const photoApprovalSchema = z.object({
+  public_git: z.enum(["approved", "open", "blocked", "revoked"]),
+  photographer_rights: z.enum(["approved", "open", "blocked", "revoked"]),
+  represented_people: z.enum(["approved", "open", "blocked", "not-applicable"]),
+  visible_artwork: z.enum(["approved", "open", "blocked", "not-applicable"]),
+  caption_credit_crop: z.enum(["approved", "open", "blocked"]),
+  collective_credit: z.enum(["approved", "open", "blocked", "not-applicable"]),
+  staging: z.enum(["approved", "open", "blocked"]),
+  production: z.enum(["approved", "open", "blocked"]),
+  indexing: z.enum(["approved", "open", "blocked"])
+});
+
+const photoCaptionSchema = z.object({
+  text: z.string().min(1),
+  assertions: z.array(stableIdSchema).default([])
+});
+
+const photoCreditSchema = z.object({
+  text: z.string().min(1),
+  assertions: z.array(stableIdSchema).default([])
+});
+
+const photoCropSchema = z.object({
+  desktop: z.string().min(1),
+  mobile: z.string().min(1)
+});
+
+const curatorialPanelSchema = z.object({
+  id: stableIdSchema,
+  simulation_notice: z.literal(true),
+  lenses: z.array(z.string().min(1)).min(1)
+});
+
 const wantedSchema = z.object({
   id: stableIdSchema,
   proposed_title: z.string().min(1),
@@ -265,6 +332,34 @@ export const wikiRecordSchema = z
     projection_status: z
       .enum(["active", "hold", "pending", "deprecated", "disallowed"])
       .optional(),
+    projection_type: z
+      .enum(["photo-occurrence", "portfolio-edition"])
+      .optional(),
+    photo_knowledge_version: z.literal(1).optional(),
+    media_type: z.string().min(1).optional(),
+    private_source_binding: privateSourceBindingSchema.optional(),
+    public_derivatives: z.array(publicDerivativeSchema).default([]),
+    statements: z.array(photoStatementSchema).default([]),
+    visible_observations: z.array(z.string().min(1)).default([]),
+    interpretation_boundary: z.string().min(1).optional(),
+    evaluation_type: z.string().min(1).optional(),
+    panel: curatorialPanelSchema.optional(),
+    candidate_commit: z.string().regex(/^[a-f0-9]{40}$/).optional(),
+    portfolio_edition: stableIdSchema.optional(),
+    asset: stableIdSchema.optional(),
+    derivative: stableIdSchema.optional(),
+    route: z.string().startsWith("/").optional(),
+    component: z.string().min(1).optional(),
+    placement_key: stableIdSchema.optional(),
+    purpose: z.array(z.string().min(1)).default([]),
+    alt_text: z.string().min(1).optional(),
+    caption: photoCaptionSchema.optional(),
+    credit: photoCreditSchema.optional(),
+    crop: photoCropSchema.optional(),
+    approval: photoApprovalSchema.optional(),
+    occurrences: z.array(stableIdSchema).default([]),
+    human_gates: z.array(z.string().min(1)).default([]),
+    source_class: z.string().min(1).optional(),
     registry_ids: z.array(z.string().min(1)).default([]),
     anti_claims: z.array(z.string().min(1)).default([]),
     human_review: z
@@ -285,7 +380,7 @@ export const wikiRecordSchema = z
       .enum(["cleared", "review-needed", "not-applicable", "do-not-publish"])
       .optional(),
     public_display_status: z
-      .enum(["cleared", "metadata-only", "hold", "do-not-publish"])
+      .enum(["cleared", "branch-review", "metadata-only", "hold", "do-not-publish"])
       .optional(),
     claim_status: z
       .enum([
@@ -330,8 +425,111 @@ export const wikiRecordSchema = z
         }
       }
     }
+    if (
+      record.kind === "asset" &&
+      record.media_type === "photograph" &&
+      record.photo_knowledge_version === 1
+    ) {
+      for (const field of ["private_source_binding", "interpretation_boundary"]) {
+        if (!record[field]) {
+          context.addIssue({
+            code: "custom",
+            path: [field],
+            message: `photo-knowledge assets require ${field}`
+          });
+        }
+      }
+      if (record.public_derivatives.length === 0) {
+        context.addIssue({
+          code: "custom",
+          path: ["public_derivatives"],
+          message: "photo-knowledge assets require at least one governed public derivative"
+        });
+      }
+      if (record.visible_observations.length === 0) {
+        context.addIssue({
+          code: "custom",
+          path: ["visible_observations"],
+          message: "photo-knowledge assets require visible observations"
+        });
+      }
+    }
     if (record.kind === "projection" && !record.projection_status) {
       context.addIssue({ code: "custom", path: ["projection_status"], message: "projection records require projection_status" });
+    }
+    if (record.kind === "projection" && record.projection_type === "photo-occurrence") {
+      for (const field of [
+        "portfolio_edition",
+        "asset",
+        "derivative",
+        "route",
+        "component",
+        "placement_key",
+        "alt_text",
+        "caption",
+        "credit",
+        "crop",
+        "approval"
+      ]) {
+        if (!record[field]) {
+          context.addIssue({
+            code: "custom",
+            path: [field],
+            message: `photo occurrences require ${field}`
+          });
+        }
+      }
+      if (record.purpose.length === 0) {
+        context.addIssue({
+          code: "custom",
+          path: ["purpose"],
+          message: "photo occurrences require at least one purpose"
+        });
+      }
+      if (
+        record.projection_status === "active" &&
+        (record.approval?.production !== "approved" ||
+          record.approval?.photographer_rights !== "approved" ||
+          !["approved", "not-applicable"].includes(record.approval?.represented_people))
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["approval"],
+          message: "active photo occurrences require production, rights, and represented-person approval"
+        });
+      }
+    }
+    if (record.kind === "projection" && record.projection_type === "portfolio-edition") {
+      if (!record.candidate_commit) {
+        context.addIssue({
+          code: "custom",
+          path: ["candidate_commit"],
+          message: "portfolio editions require an exact candidate commit"
+        });
+      }
+      if (record.occurrences.length === 0) {
+        context.addIssue({
+          code: "custom",
+          path: ["occurrences"],
+          message: "portfolio editions require at least one photo occurrence"
+        });
+      }
+    }
+    if (record.kind === "evaluation" && record.evaluation_type === "curatorial-proposal") {
+      if (!record.panel) {
+        context.addIssue({
+          code: "custom",
+          path: ["panel"],
+          message: "curatorial proposals require a simulated-panel disclosure"
+        });
+      }
+      if (record.human_gates.length === 0) {
+        context.addIssue({
+          code: "custom",
+          path: ["human_gates"],
+          message: "curatorial proposals require explicit human gates"
+        });
+      }
     }
     if (record.kind === "source" && !record.source_kind) {
       context.addIssue({ code: "custom", path: ["source_kind"], message: "source records require source_kind" });

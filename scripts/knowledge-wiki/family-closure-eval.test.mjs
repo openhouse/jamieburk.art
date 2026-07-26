@@ -188,16 +188,16 @@ test("manual CI dispatch keeps explicit diff hygiene", () => {
   assert.equal(evaluation.checks.merge_readiness_ci_enforced, false);
 });
 
-test("the RFP contract must remain in the normal repository check", () => {
+test("the RFC contract must remain in the normal repository check", () => {
   const packageManifest = JSON.parse(
     readFileSync(path.join(defaultRepoRoot, "package.json"), "utf8")
   );
   packageManifest.scripts.check = packageManifest.scripts.check.replace(
-    "npm run check:rfps && ",
+    "npm run check:rfcs && ",
     ""
   );
   const evaluation = evaluateFamilyClosure({ result, packageOverride: packageManifest });
-  assert.equal(evaluation.checks.rfp_contract_enforced, false);
+  assert.equal(evaluation.checks.rfc_contract_enforced, false);
 });
 
 test("generated outputs must remain independent of process locale", () => {

@@ -1,5 +1,5 @@
 ---
-rfp: 1
+rfc: 1
 title: Shared Core for Public and Private Knowledge Wikis
 stage: proposed
 start_date: 2026-07-19
@@ -28,7 +28,7 @@ Create a reusable Knowledge Wiki core package consumed by two sibling systems:
 Jamie's public professional Knowledge Wiki in `jamieburk.art` and a separate
 private personal Knowledge Wiki. Keep original and highly sensitive source
 material in a local Source Vault beneath both systems. Move knowledge toward the
-public Wiki only through an explicit, reviewed publication packet. This RFP
+public Wiki only through an explicit, reviewed publication packet. This RFC
 defines the intended architecture and governance but does not authorize its
 implementation before the current Knowledge Wiki pull request is closed and this
 proposal is separately accepted.
@@ -88,7 +88,7 @@ as it moves through research, maturation, and composition.
 
 ## Non-goals
 
-- This RFP does not create the private repository, publish a package, migrate
+- This RFC does not create the private repository, publish a package, migrate
   current records, or change the portfolio website.
 - It does not make the public Wiki a public editing platform or anonymous wiki.
 - It does not put passwords, tokens, browser cookies, credentials, or signing
@@ -175,7 +175,7 @@ openhouse/jamieburk.art
   apps/www/
   packages/knowledge-wiki-core/     # initial package source, if accepted
   docs/knowledge-bank/              # current public Wiki root during migration
-  rfps/
+  rfcs/
 
 jamie-knowledge-private             # proposed private repository name
   apps/wiki/
@@ -194,7 +194,7 @@ repository remains a future option if neutral ownership or release cadence
 becomes valuable.
 
 The private repository name, host, visibility, encryption, and backup policy are
-not accepted by this RFP. They require a threat-model review before creation.
+not accepted by this RFC. They require a threat-model review before creation.
 
 ### Core package responsibilities
 
@@ -545,11 +545,11 @@ Wiki. A claim may be public, mature, and intentionally unused.
 ## Rollout plan
 
 No rollout begins until the current `feature/knowledge-wiki-E` pull request is
-closed and this RFP advances to `accepted` through an explicit Jamie decision.
+closed and this RFC advances to `accepted` through an explicit Jamie decision.
 
 ### Phase 0: Preserve the proposal
 
-- Merge this RFP in `proposed` state.
+- Merge this RFC in `proposed` state.
 - Collect comments and concrete use cases.
 - Make no repository, package, or private-data migration.
 
@@ -568,7 +568,7 @@ closed and this RFP advances to `accepted` through an explicit Jamie decision.
   adapter.
 - Prove byte-equivalent or semantically equivalent public outputs.
 - Test the package tarball for content leakage.
-- Keep the prototype removable until the RFP reaches `accepted`.
+- Keep the prototype removable until the RFC reaches `accepted`.
 
 ### Phase 3: Private Wiki pilot
 
@@ -601,7 +601,7 @@ closed and this RFP advances to `accepted` through an explicit Jamie decision.
 - Consider `recommended` only after sustained use demonstrates that the shared
   package improves return-to-source, public safety, and compositional clarity.
 - If the package's ownership inside `jamieburk.art` creates friction, propose a
-  separate RFP to extract it into an independent public repository.
+  separate RFC to extract it into an independent public repository.
 
 ### Rollback
 
@@ -633,7 +633,7 @@ review artifacts and must not be required to recover the private source graph.
 
 ### To advance to `implementing`
 
-- An implementation plan references an accepted RFP revision.
+- An implementation plan references an accepted RFC revision.
 - Baseline public outputs and failure fixtures are bound to the implementation
   candidate.
 - The work has a named human review owner and a rollback path.

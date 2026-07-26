@@ -164,10 +164,9 @@ export function evaluateInterpretiveLayer(options = {}) {
   const queriedDecisionIds = queryWiki(result, { decisions: true }).records.map(
     (item) => item.id
   );
-  const decisionQueryOperational = sameSet(
-    queriedDecisionIds,
-    manifest.decisionRecordIds
-  );
+  const decisionQueryOperational =
+    manifest.decisionRecordIds.every((id) => queriedDecisionIds.includes(id)) &&
+    queriedDecisionIds.every((id) => result.byId.get(id)?.kind === "decision");
 
   const interpretiveSourceReturnCurrent =
     encounterRecord?.kind === "research-run" &&

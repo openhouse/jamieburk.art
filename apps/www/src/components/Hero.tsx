@@ -6,7 +6,12 @@ export function Hero() {
   const photo = photos.councilChamber;
 
   return (
-    <section className="jb-home-hero border-b-4 jb-rule">
+    <section
+      className="jb-home-hero border-b-4 jb-rule"
+      data-derivative-id={photo.derivativeId}
+      data-placement-id={photo.placementIds?.[0]}
+      data-wiki-id={photo.wikiId}
+    >
       <Image
         alt={photo.alt}
         className="object-cover"

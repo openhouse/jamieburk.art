@@ -6,8 +6,8 @@ import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const rfpRoot = path.join(repoRoot, "rfps");
-const indexPath = path.join(rfpRoot, "README.md");
+const rfcRoot = path.join(repoRoot, "rfcs");
+const indexPath = path.join(rfcRoot, "README.md");
 const failures = [];
 
 const allowedStages = new Set([
@@ -22,7 +22,7 @@ const allowedStages = new Set([
 ]);
 
 const requiredMetadata = [
-  "rfp",
+  "rfc",
   "title",
   "stage",
   "start_date",
@@ -55,17 +55,17 @@ function fail(file, message) {
   failures.push(`${path.relative(repoRoot, file)} - ${message}`);
 }
 
-if (!existsSync(rfpRoot)) {
-  console.error("RFP check failed:\n- rfps/ is missing");
+if (!existsSync(rfcRoot)) {
+  console.error("RFC check failed:\n- rfcs/ is missing");
   process.exit(1);
 }
 
 if (!existsSync(indexPath)) {
-  fail(indexPath, "RFP index is missing");
+  fail(indexPath, "RFC index is missing");
 }
 
 const index = existsSync(indexPath) ? readFileSync(indexPath, "utf8") : "";
-const proposalFiles = readdirSync(rfpRoot)
+const proposalFiles = readdirSync(rfcRoot)
   .filter((name) => /^\d{4}-.+\.md$/.test(name) && !name.startsWith("0000-"))
   .sort();
 const seenNumbers = new Set();
@@ -75,7 +75,7 @@ if (!proposalFiles.length) {
 }
 
 for (const name of proposalFiles) {
-  const file = path.join(rfpRoot, name);
+  const file = path.join(rfcRoot, name);
   const source = readFileSync(file, "utf8");
   const { data, content } = matter(source);
   const filenameNumber = Number(name.slice(0, 4));
@@ -84,12 +84,12 @@ for (const name of proposalFiles) {
     if (!Object.hasOwn(data, field)) fail(file, `missing front-matter field: ${field}`);
   }
 
-  if (!Number.isInteger(data.rfp) || data.rfp <= 0) {
-    fail(file, "rfp must be a positive integer");
+  if (!Number.isInteger(data.rfc) || data.rfc <= 0) {
+    fail(file, "rfc must be a positive integer");
   } else {
-    if (data.rfp !== filenameNumber) fail(file, "front-matter rfp does not match filename");
-    if (seenNumbers.has(data.rfp)) fail(file, `duplicate RFP number: ${data.rfp}`);
-    seenNumbers.add(data.rfp);
+    if (data.rfc !== filenameNumber) fail(file, "front-matter rfc does not match filename");
+    if (seenNumbers.has(data.rfc)) fail(file, `duplicate RFC number: ${data.rfc}`);
+    seenNumbers.add(data.rfc);
   }
 
   if (!allowedStages.has(data.stage)) fail(file, `unknown stage: ${data.stage}`);
@@ -99,7 +99,7 @@ for (const name of proposalFiles) {
   }
   if (!Array.isArray(data.supersedes)) fail(file, "supersedes must be a list");
   if (data.stage === "superseded" && !data.superseded_by) {
-    fail(file, "superseded RFPs must name superseded_by");
+    fail(file, "superseded RFCs must name superseded_by");
   }
 
   for (const section of requiredSections) {
@@ -123,9 +123,9 @@ for (const name of proposalFiles) {
 }
 
 if (failures.length) {
-  console.error("RFP check failed:");
+  console.error("RFC check failed:");
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
 
-console.log(`RFP check passed: ${proposalFiles.length} numbered proposal(s), all indexed and structurally valid.`);
+console.log(`RFC check passed: ${proposalFiles.length} numbered proposal(s), all indexed and structurally valid.`);

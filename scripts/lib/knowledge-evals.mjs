@@ -99,8 +99,10 @@ const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
-// Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
-// repository diff hygiene. The report wording, evidence, and boundaries did not change.
+// Re-reviewed 2026-07-26 after adding the public-safe Sunday Dinner operating
+// loop. The new process description adds no event-count, attendance, authorship,
+// participant-record, or independent-audit claim and preserves every existing
+// Facebook evidence boundary.
 const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "23c7d57699dc30d84d6738f7ece4b47f3497550fa2dd8690ca7c4a86719d70ef",
   manifestContentSha256: "62f09e7e53d5e28397ca25e948a77f7e1ec7e9e8a504b37c8e9343eae1faa090",
@@ -110,7 +112,7 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
   wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
-  sundayDinnerMdxSha256: "0c031ebe09e9f19fc1df5d804b2b02b5f2a7baf324a3e517251024730fbd8e3f",
+  sundayDinnerMdxSha256: "fa3eace4598b55a431e4befb01a3915cf16058393ca5129185da78c9a12afab6",
   proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({

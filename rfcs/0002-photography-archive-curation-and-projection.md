@@ -1,5 +1,5 @@
 ---
-rfp: 2
+rfc: 2
 title: Photography archive curation and public projection
 stage: proposed
 start_date: 2026-07-22
@@ -272,7 +272,7 @@ IDs and typed relations.
 
 ## Decision gates
 
-The RFP may advance from `proposed` to `exploring` only when Jamie approves the
+The RFC may advance from `proposed` to `exploring` only when Jamie approves the
 three pilot questions, private access boundary, authorized reviewers, and probe
 stopping conditions.
 
