@@ -1,36 +1,40 @@
 {
-  "evaluator": "Independent holdout reviewer using the imagined Prof. Margaret Morse lens rubric; not a real-person endorsement",
-  "reviewerId": "morse-a-photo-knowledge-B-final",
+  "evaluator": "Imagined Prof. Margaret Morse evaluative lens; not a quotation or endorsement",
+  "reviewerId": "morse-a-photo-knowledge-B-ce7fb0d1",
   "phase": "holdout",
   "lensId": "PR-015",
   "candidateSha256": "ca6d9ec5e5100eb6fabf941a81d76e7199e4e892f68711b2547be5714b27feea",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Verified repository HEAD 40ef582a07dc2c211f0ca476d62db9dba6c2dbc5 and independently recomputed the required professor-file SHA-256.",
-    "The homepage gives a stranger a clear professional frame, audience-specific starting routes, selected operating, civic, and community systems, and a concise method centered on listening, mapping, building, documenting, and transfer.",
-    "The About surface explicitly connects artistic, civic, technical, and social practice through Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition work, and source-backed team memory without turning the portfolio into an artist biography.",
-    "Experimentation, hospitality, participation, attention, documentation, care, and inhabited systems are operationalized through relationship models, usable interfaces, recurring participation rhythms, reviewable records, learning loops, privacy choices, and handoffs that others can continue.",
-    "The project pages substantiate the through-line with distinct operating forms: customer and product stewardship, distributed community publishing, civic-data translation, coalition memory, and consent-bounded hosting and residency infrastructure.",
-    "Collective agency remains visible through co-built, collaborator-led, collectively governed, contributed-to, and community-credit language; individual responsibility is named without converting shared outcomes into sole-authorship claims.",
-    "The source note and public copy consistently withhold protected educational records, private correspondence, identifiers, archive paths, participant histories, legal-review context, stakeholder data, and unapproved testimonials or images."
+    "The reviewer independently recomputed the SHA-256 over the 11 ordered candidate paths and matched the required candidate digest.",
+    "The global navigation places the About surface one click from the homepage while the homepage first establishes Jamie as a technical operations and implementation practitioner.",
+    "The About page explicitly connects artistic, civic, technical, and social practice while preserving clear technical project management, implementation, product operations, and civic-delivery role language.",
+    "Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, Harry J. Epstein Company, and Source-Backed Team Memory supply distinct public-safe evidence of experimentation, participation, hospitality, attention, documentation, care, place, and systems people can inhabit.",
+    "The distinguishing principle is stated directly: people must be able to recognize relationships, participate, remember what happened, influence use, and continue the work.",
+    "Collective credit is explicit and avoids converting collectively governed work, co-built systems, coalition formation, public policy outcomes, or community practices into sole-authorship claims.",
+    "Guest histories, attendance records, private correspondence, community records, access details, legal-review material, stakeholder lists, raw strategy context, and unapproved images or quotations remain excluded.",
+    "The public-safe UCSC note withholds raw educational records, grades, identifiers, private paths, correspondence, testimonial language, and the held structural-equivalence claim."
   ],
-  "gaps": [],
+  "gaps": [
+    "No blocking PR-015 gap was found in the exact candidate.",
+    "Photography and production decisions remain separate human gates."
+  ],
   "safety_findings": [
-    "The imagined professor lens is clearly framed as an evaluative rubric rather than a real-person endorsement or testimonial.",
-    "Protected educational records inform the rubric only; their wording, grades, identifiers, correspondence, and private locations are neither quoted nor projected.",
-    "Production photography selection, exact-image rights, consent, dignity, credit and crop approval, deployment, and production indexing remain explicit human gates and are not approved by this scorecard."
+    "No protected educational record, private correspondence, archive locator, student identifier, educational email, or raw evaluation filename was projected.",
+    "No professor testimonial is quoted or used as public authority.",
+    "This score does not approve photography, deployment, publication, or indexing."
   ],
-  "recommendation": "Pass PR-015 at 4 for this exact candidate. Preserve the bounded About-page through-line and collective-credit language, and do not treat this holdout as approval for production photography, rights, consent, deployment, or indexing.",
+  "recommendation": "Accept the exact candidate at score 4 for PR-015. Preserve the collective-credit and protected-source boundaries, and keep all photography and production decisions behind their stated human gates.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f9fe0-b807-7182-a165-eec7df2bb83b",
-    "agentNickname": "Pascal",
+    "processSessionId": "019fa014-6bed-77c3-ac66-67161b2337fd",
+    "agentNickname": "Banach",
     "model": "inherited-parent-model",
     "reasoningEffort": "inherited",
     "sandbox": "isolated-read-only-evidence",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Faithfully transcribed from a completed independent holdout result by the parent orchestrator."
+    "operatorAttestation": "Faithfully summarized from a completed independent holdout result by the parent orchestrator."
   }
 }

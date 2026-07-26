@@ -1,36 +1,37 @@
 {
-  "evaluator": "Independent holdout reviewer using the imagined Prof. Margaret Morse lens rubric; not a real-person endorsement",
-  "reviewerId": "morse-b-photo-knowledge-B-final",
+  "evaluator": "Imagined Prof. Margaret Morse evaluative lens; not a quotation or endorsement",
+  "reviewerId": "morse-b-photo-knowledge-B-ce7fb0d1",
   "phase": "holdout",
   "lensId": "PR-015",
   "candidateSha256": "ca6d9ec5e5100eb6fabf941a81d76e7199e4e892f68711b2547be5714b27feea",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Verified the clean read-only candidate at HEAD 40ef582a07dc2c211f0ca476d62db9dba6c2dbc5 and independently confirmed the professor-lens candidate fingerprint.",
-    "The desktop and mobile homepage screenshots keep Jamie and the literal Technical Project Manager, Product Operations, and Implementation role immediately legible while the East River portrait establishes embodied practice, public landscape, movement, and material readiness.",
-    "The About page names the practice as artistic, civic, technical, and social and connects Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition work, and source-backed team memory through the question of how people participate, remember, influence, and continue systems.",
-    "At least four continuities distinguish relationships, interfaces and use, and learning: participant governance in Open House; organizer vocabulary shaping WOWList; hospitality and returning participants shaping Sunday Dinner and 196; and collaborators recovering decisions and carrying coalition work forward.",
-    "Photography works as situated evidence rather than spectacle: the raft and riverboat hold media-archaeological continuity; the KC Town Hall building establishes place and afterlife; the tire-removal load shows neighborhood care as material operation; and hands at the trimming table connect technical operations to embodied making.",
-    "The candidate-bound responsive matrix reports no broken images after scrolling, unlabeled images, overflow, failed requests, or accessibility violations across its reviewed routes and viewports.",
-    "Collective agency remains visible through co-built, collectively governed, and collaborator language; private gathering records and intimate photographs are deliberately withheld."
+    "The reviewer independently recomputed the SHA-256 from the 11 ordered candidate paths and matched the required candidate digest.",
+    "The About page names Jamie's professional role first, then creates a hiring-legible threshold where artistic, civic, technical, and social practice remain connected through systems people can inhabit.",
+    "Open House is described as an experiment Jamie initiated but participants collectively governed, preserving participant agency.",
+    "WOWList begins with organizers' language and distributed publishing needs, identifies the platform as co-built, and treats community vocabulary as formative rather than administrative data.",
+    "Sunday Dinner and 196 make hospitality, trust, return, shared space, and artist support constitutive of the operating practice while withholding private guest and access records.",
+    "NYC Artist Coalition and FairRentNYC connect lived experience, meetings, events, testimony, documentation, and collective action while expressly preserving collective outcomes.",
+    "Harry J. Epstein Company retains product judgment, humor, customer language, and institutional knowledge while translating them into maintainable workflows.",
+    "Source-Backed Team Memory preserves known, open, and protected states, keeps disagreement visible, and rejects surveillance, private-archive browsing, and automated replacement of judgment.",
+    "No protected evaluation, private praise, educational identifier, private path, or educational email is projected."
   ],
   "gaps": [],
   "safety_findings": [
-    "No private or collective life is used as visual spectacle in the reviewed candidate; the edition favors Jamie, places, structures, tools, and material traces while documenting intimate gathering photography as a protected absence.",
-    "The East River photograph has bounded creator attribution and permission, but final production selection remains open. The other five derivatives retain explicit creator, source, rights, caption, consent where applicable, and production-review holds.",
-    "This holdout score does not approve any photograph, rights determination, consent decision, deployment, production publication, or indexing."
+    "No blocking PR-015 safety defect was found.",
+    "Photography rights, consent, exact credit, crop, caption, represented-person review, deployment, publication, and indexing remain human gates."
   ],
-  "recommendation": "Pass PR-015 at score 4 for this exact frozen review candidate. Preserve the protected absence and require exact-image human review before any production release.",
+  "recommendation": "Accept PR-015 for this exact candidate. The portfolio makes Jamie's professional value legible without reducing participation, hospitality, artistic inquiry, collective agency, or protected absences to organizational utility.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f9fe0-e541-78f1-a4df-83a53b5fde38",
-    "agentNickname": "Schrodinger",
+    "processSessionId": "019fa014-9a28-7370-900f-735d01b2d545",
+    "agentNickname": "Mendel",
     "model": "inherited-parent-model",
     "reasoningEffort": "inherited",
     "sandbox": "isolated-read-only-evidence",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Faithfully transcribed from a completed independent holdout result by the parent orchestrator."
+    "operatorAttestation": "Faithfully summarized from a completed independent holdout result by the parent orchestrator."
   }
 }

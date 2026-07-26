@@ -1,37 +1,35 @@
 {
-  "evaluator": "Independent holdout reviewer applying the imagined Prof. Warren Sack rubric; not a real-person endorsement",
-  "reviewerId": "sack-a-photo-knowledge-B-final",
+  "evaluator": "Imagined Prof. Warren Sack evaluative lens; not a quotation or endorsement",
+  "reviewerId": "sack-a-photo-knowledge-B-ce7fb0d1",
   "phase": "holdout",
   "lensId": "PR-016",
   "candidateSha256": "ca6d9ec5e5100eb6fabf941a81d76e7199e4e892f68711b2547be5714b27feea",
   "score": 4,
   "pass": true,
   "evidence": [
-    "HEAD is exactly 40ef582a07dc2c211f0ca476d62db9dba6c2dbc5, and an independent recomputation across every professor candidate path produced the supplied SHA-256.",
-    "The About page plainly names the recursive method and links directly to concrete evidence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "Harry J. Epstein Company supplies a current complete loop: customer language, product judgment, public voice, and operating habits become one modeled operating journey; a maintained storefront supports customer and team use; operational questions and bounded analytics guide incremental releases; reusable content and operating patterns leave clearer workflows for continuation.",
-    "NYC Artist Coalition and FairRentNYC supply a current complete collective loop: lived experience, meetings, public sources, and government relationships become coalition memory; campaign sites, practical sessions, town halls, hearings, and action pathways support collective use; minutes, source maps, decision records, question logs, and action trackers preserve learning and handoff context.",
-    "Sunday Dinner and 196 supply a current complete social loop: hospitality, trust, artist support, shared space, and return rhythms become recurring invitation, hosting, onboarding, facilitation, and access-handoff systems; gatherings and residencies are the used interface; response, attendance, follow-up, consent boundaries, and a documented residency handoff support learning and continuation.",
-    "The sequence is demonstrated through project-specific relationships, models, interfaces, use, learning, and transfer rather than inferred from the technical-operations capability list.",
-    "The public-safe professor source note keeps protected educational records withheld and expressly bars claims of structural-equivalence invention, peer-reviewed research, production deployment, sole authorship, or present proficiency in the historical toolset."
+    "The reviewer verified HEAD ce7fb0d1d9d48f47aeda164a435d0e4935f7e613 and independently recomputed the required SHA-256 over the 11 candidate paths.",
+    "The About page visibly states the method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "Harry J. Epstein Company reconstructs the sequence through customer and operating relationships, an integrated journey model, a maintained storefront, recurring use, and reusable workflows carried forward by the team.",
+    "NYC Artist Coalition and FairRentNYC reconstruct it through lived experience, meetings, sources, government relationships, coalition memory, campaign interfaces, social use, and reviewable continuity records.",
+    "Sunday Dinner and 196 reconstruct it through hospitality, trust, shared space, invitations, onboarding, facilitation, access handoffs, participatory use, and repeatable rhythms with consent boundaries.",
+    "WOWList supplies additional historical continuity from community relationships and vocabulary to publishing interfaces, distributed use, and reusable deployment patterns.",
+    "Source-Backed Team Memory supplies a bounded current method from approved source through structured records, drafts, decisions, questions, human review, and continuation.",
+    "Project pages provide inspectable, project-specific proof rather than abstract systems vocabulary alone.",
+    "Collective credit is preserved across co-built, collaborator, community, and collectively governed work.",
+    "No claim of structural-equivalence invention, peer-reviewed research, protected-coursework deployment, sole authorship, or current Max/Jitter proficiency appears."
   ],
   "gaps": [],
-  "safety_findings": [
-    "No claim of current Max/Jitter proficiency or structural-equivalence lineage was found.",
-    "Collective authorship is preserved for Open House, WOWList, NYC Artist Coalition, campaign outcomes, Sunday Dinner, and other collaborative work.",
-    "The Source-Backed Team Memory lab is explicitly an early method using a synthetic example, not production SaaS or a deployed client system.",
-    "Passing PR-016 does not clear release, deployment, production cutover, photography, or indexing."
-  ],
-  "recommendation": "Pass PR-016 at 4 for this exact candidate. Preserve the candidate binding and anti-overclaim language.",
+  "safety_findings": [],
+  "recommendation": "Accept this exact candidate at score 4 for PR-016. The judgment does not approve photography, represented-person review, deployment, publication, or indexing.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f9fe1-34c6-78a1-8fd2-44524d28c22f",
-    "agentNickname": "Linnaeus",
+    "processSessionId": "019fa014-8a06-7502-8496-8579cb1d8583",
+    "agentNickname": "Bacon",
     "model": "inherited-parent-model",
     "reasoningEffort": "inherited",
     "sandbox": "isolated-read-only-evidence",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Faithfully transcribed from a completed independent holdout result by the parent orchestrator."
+    "operatorAttestation": "Faithfully summarized from a completed independent holdout result by the parent orchestrator."
   }
 }

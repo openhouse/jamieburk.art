@@ -1,37 +1,37 @@
 {
-  "evaluator": "Independent holdout reviewer applying the imagined Prof. Warren Sack rubric; not a real-person endorsement",
-  "reviewerId": "sack-b-photo-knowledge-B-final",
+  "evaluator": "Imagined Prof. Warren Sack evaluative lens; not a quotation or endorsement",
+  "reviewerId": "sack-b-photo-knowledge-B-ce7fb0d1",
   "phase": "holdout",
   "lensId": "PR-016",
   "candidateSha256": "ca6d9ec5e5100eb6fabf941a81d76e7199e4e892f68711b2547be5714b27feea",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Verified the read-only candidate at HEAD 40ef582a07dc2c211f0ca476d62db9dba6c2dbc5 with a clean worktree and independently recomputed the professor-candidate fingerprint.",
-    "The primary navigation reaches About directly from the homepage. That page plainly names the recursive method and links to project evidence.",
-    "Three current public-safe implementation loops make the complete sequence reconstructable: HJE, NYC Artist Coalition and FairRentNYC, and 196 and Sunday Dinner.",
-    "HJE connects customer language, product judgment, public voice, and operating habits to a unified customer and operating journey; the maintained storefront is the used interface, recurring operational questions and bounded analytics guide incremental releases, and reusable content and workflow patterns provide continuity.",
-    "NYC Artist Coalition and FairRentNYC connect lived experience, recurring meetings, public sources, open questions, and civic actors to coalition memory and information architecture; campaign sites, gatherings, hearings, and action pathways support collective use, while minutes, source maps, decision records, question logs, and action trackers preserve feedback and handoff.",
-    "196 and Sunday Dinner connect hospitality, trust, artist support, shared space, and recurring participation to invitations, onboarding, facilitation, documentation, and access handoffs. Gatherings and residencies are the used interface, and the documented residency handoff shows continuation without publishing participant records.",
-    "WOWList is correctly treated as a co-built historical foundation, CallNYC as an archived unofficial prototype, and Source-Backed Team Memory as an early method with a synthetic example rather than a deployed client system.",
-    "The site does not claim structural equivalence, disciplinary invention, peer-reviewed research, current Max/Jitter proficiency, or technical authority derived from protected educational records."
+    "The reviewer independently recomputed the SHA-256 over the 11 ordered candidate paths and matched the required candidate hash.",
+    "The About page plainly states the recursive method and grounds it in project-specific relationship, model, interface-and-use, learning, and continuity rows.",
+    "Harry J. Epstein Company provides a complete current loop from customer and operating relationships through a maintained storefront, use by customers and staff, incremental learning, and team continuity.",
+    "NYC Artist Coalition and FairRentNYC provide a complete civic loop from lived experience and public evidence through coalition memory, campaign interfaces, collective use, and recoverable minutes, maps, questions, and actions.",
+    "Sunday Dinner and 196 provide a complete participation loop from hospitality and shared space through invitations, onboarding, facilitation, access handoffs, repeated use, and consent-bounded continuation.",
+    "WOWList provides additional bounded historical evidence from community vocabulary and relationships through publishing and distribution interfaces to distributed organizer adoption.",
+    "Collective credit is explicit, including co-built, collectively governed, collaborator, community, and collective-outcome language.",
+    "Protected coursework remains lineage only and does not support claims of invention, peer review, deployment, sole authorship, or present historical-tool proficiency.",
+    "The source-backed-memory lab remains an early method with human review and a synthetic example rather than finished production software."
   ],
-  "gaps": [],
-  "safety_findings": [
-    "Protected educational records, grades, identifiers, archive paths, correspondence, and faculty testimonial language remain outside the public projection.",
-    "No current-tool proficiency, sole-authorship, peer-reviewed-research, disciplinary-invention, or unsupported deployment claim was found.",
-    "This PR-016 pass does not close human review for photographs, captions, crop, credit, rights, consent, release approval, deployment, or indexing."
+  "gaps": [
+    "Public summaries appropriately withhold private operating artifacts.",
+    "Human photographic and publication gates remain open."
   ],
-  "recommendation": "Pass PR-016 at score 4 for this exact candidate. Preserve every stated human media and release gate.",
+  "safety_findings": [],
+  "recommendation": "Accept this exact candidate at score 4 for PR-016. Keep all separate human publication and photographic approval gates open.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019f9fe1-5b5b-7522-937d-e6653581a766",
-    "agentNickname": "Kuhn",
+    "processSessionId": "019fa014-aa92-7081-a771-a79ca2662bb0",
+    "agentNickname": "Meitner",
     "model": "inherited-parent-model",
     "reasoningEffort": "inherited",
     "sandbox": "isolated-read-only-evidence",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Faithfully transcribed from a completed independent holdout result by the parent orchestrator."
+    "operatorAttestation": "Faithfully summarized from a completed independent holdout result by the parent orchestrator."
   }
 }
