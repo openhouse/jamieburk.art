@@ -43,7 +43,7 @@ export default function SourceBackedTeamMemoryPage() {
             surface="/lab/source-backed-team-memory"
           />
         </p>
-        <div className="mt-6 rounded border border-jb-ochre/50 bg-jb-lemon/25 p-5">
+        <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
             production SaaS, chatbot, surveillance system, AI replacement for
@@ -69,7 +69,7 @@ export default function SourceBackedTeamMemoryPage() {
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {workedExample.map((item) => (
               <div
-                className="rounded border border-jb-ink/12 bg-jb-warm p-5"
+                className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5"
                 key={item.label}
               >
                 <h3 className="text-xl font-semibold text-jb-blue">{item.label}</h3>
@@ -79,7 +79,7 @@ export default function SourceBackedTeamMemoryPage() {
           </div>
         </section>
         <section className="mt-12 grid gap-6 border-b border-jb-ink/12 pb-10 lg:grid-cols-[0.58fr_0.42fr] lg:items-center">
-          <figure className="overflow-hidden rounded border border-jb-ink/12 bg-jb-paper">
+          <figure className="overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">
             <Image
               alt="Certificate of completion for AI Evals for Engineers and PMs, awarded to James Burkart by Hamel Husain and Shreya Shankar through Maven."
               className="h-auto w-full"
