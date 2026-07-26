@@ -25,6 +25,8 @@ import { evaluateFamilyClosure } from "./family-closure-eval.mjs";
 import { evaluatePhotographyNotebook } from "./photography-notebook-eval.mjs";
 import { evaluatePhotographyResidencyProposal } from "./photography-residency-proposal-eval.mjs";
 import { evaluatePhotographyStudioConnection } from "./photography-studio-connection-eval.mjs";
+import { allLayoutBPhotoApprovalsOpen } from "./layout-b-projection-eval.mjs";
+import { publicPhotoManifest } from "../../apps/www/src/data/photography.ts";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -126,10 +128,6 @@ const legacyBoundedPublicUiChange = JSON.stringify([...changedPublicUiPaths].sor
 const layoutBManifestPath = "apps/www/src/data/photography.ts";
 const layoutBDesignPath = "docs/design/layout-B-photography-integration.md";
 const layoutBEvalPath = "evals/layout/layout-B.json";
-const layoutBManifestSource = readFileSync(
-  path.join(defaultRepoRoot, layoutBManifestPath),
-  "utf8"
-);
 const governedLayoutBPublicUiChange =
   layoutBChangedPaths.includes(layoutBDesignPath) &&
   layoutBChangedPaths.includes(layoutBEvalPath) &&
@@ -146,7 +144,7 @@ const governedLayoutBPublicUiChange =
       "apps/www/src/data/knowledge-bank/records.ts"
     ].includes(file)
   ) &&
-  (layoutBManifestSource.match(/productionApproval:\s*"open"/g) ?? []).length >= 6;
+  allLayoutBPhotoApprovalsOpen(publicPhotoManifest);
 const boundedPublicUiChange =
   legacyBoundedPublicUiChange || governedLayoutBPublicUiChange;
 const caseStudyBlocksSource = readFileSync(
