@@ -22,6 +22,7 @@
     "photo_protected_absence_first_class",
     "photo_public_boundary_clean",
     "photo_introduced_history_boundary_clean",
+    "photo_historical_revocation_monotonic",
     "photo_revocation_fails_closed",
     "photo_commands_wired",
     "photo_human_gates_open"

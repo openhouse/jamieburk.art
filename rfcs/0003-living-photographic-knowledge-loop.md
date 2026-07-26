@@ -2396,6 +2396,13 @@ Compile the current routes, derivatives, historical-occurrence obligations,
 regeneration steps, rollback boundary, and human review gates for withdrawing a
 named photo. The command is advisory and applies no writes.
 
+An implemented withdrawal or non-rendering withdrawn tombstone is monotonic
+across repository history. A revert or checkout may not silently reactivate the
+photograph. Any later restoration must add a new canonical decision record,
+identify the prior withdrawal plan, record Jamie's explicit human review, and
+then regenerate the complete occurrence, edition, accessibility, and safety
+evidence for the new candidate.
+
 #### `photos:recollection`
 
 Create a dated recollection, correction, or no-action scaffold for a named asset

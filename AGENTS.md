@@ -40,6 +40,11 @@ workspaces, Dockerfile, Dokku.
 - `npm run photos:impact -- --photo <id> --change withdrawal`
 - `npm run photos:withdrawal-plan -- --photo <id>`
 
+Treat an implemented photo withdrawal as monotonic across repository history.
+Restoration requires a new canonical decision record with explicit Jamie
+review; a rollback, revert, or older manifest may not silently reactivate the
+image.
+
 ## Public-Safety Rules
 
 Do not publish private emails, raw transcripts, private coalition notes,

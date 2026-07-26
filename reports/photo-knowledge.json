@@ -180,6 +180,7 @@
       "photo_protected_absence_first_class": true,
       "photo_public_boundary_clean": true,
       "photo_introduced_history_boundary_clean": true,
+      "photo_historical_revocation_monotonic": true,
       "photo_revocation_fails_closed": true,
       "photo_commands_wired": true,
       "photo_human_gates_open": true
@@ -189,7 +190,8 @@
       "photos": 6,
       "placements": 11,
       "requiredRecords": 17,
-      "blockingCriteria": 21,
+      "blockingCriteria": 22,
+      "historicalRevocationConflicts": 0,
       "productionOpen": 6
     }
   },
@@ -750,6 +752,7 @@
     },
     "historicalOccurrenceCount": 0,
     "withdrawalPlanCount": 0,
+    "restorationDecisionCount": 0,
     "withdrawalConflicts": [],
     "maintenance": {
       "publicSurfaceEvidenceCurrent": true,

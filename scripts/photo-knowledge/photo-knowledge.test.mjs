@@ -26,7 +26,7 @@ test("RFC 0003 photographic knowledge baseline passes", () => {
   assert.equal(result.passed, true, result.failures.join(", "));
   assert.equal(result.counts.photos, 6);
   assert.equal(result.counts.placements, 11);
-  assert.equal(result.counts.blockingCriteria, 21);
+  assert.equal(result.counts.blockingCriteria, 22);
 });
 
 test("a derivative checksum drift fails closed", () => {
@@ -427,5 +427,70 @@ test("a private tmp locator in introduced history fails closed", () => {
   assert.equal(
     result.checks.photo_introduced_history_boundary_clean,
     false
+  );
+});
+
+test("an implemented withdrawal cannot be erased by repository rollback", () => {
+  const withdrawn = applyPhotoRevocation(
+    manifest(),
+    "photo.east-river-manhattan-bridge.2022"
+  );
+  withdrawn.historicalOccurrences[0].lifecycleState = "withdrawn";
+  withdrawn.withdrawalPlans[0].status = "implemented";
+  withdrawn.withdrawalPlans[0].writesApplied = true;
+  const result = evaluatePhotoKnowledge({
+    introducedHistorySources: [
+      {
+        relativePath: "docs/knowledge-bank/data/photo-knowledge.json",
+        text: JSON.stringify(withdrawn)
+      }
+    ]
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    false
+  );
+  assert.equal(result.counts.historicalRevocationConflicts, 1);
+  assert.equal(result.passed, false);
+});
+
+test("restoration requires a new canonical human-reviewed decision", () => {
+  const withdrawn = applyPhotoRevocation(
+    manifest(),
+    "photo.east-river-manhattan-bridge.2022"
+  );
+  withdrawn.historicalOccurrences[0].lifecycleState = "withdrawn";
+  withdrawn.withdrawalPlans[0].status = "implemented";
+  withdrawn.withdrawalPlans[0].writesApplied = true;
+  const current = manifest();
+  current.restorationDecisions.push({
+    id: "restoration.photo.east-river.example",
+    photoId: "photo.east-river-manhattan-bridge.2022",
+    withdrawalPlanId:
+      "withdrawal.photo.east-river-manhattan-bridge.2022",
+    decisionRecordId: "decision.photo.restoration.example",
+    status: "approved",
+    humanReviewed: true,
+    approvedBy: "Jamie Burkart",
+    decidedAt: "2026-07-26"
+  });
+  const wiki = compileWiki();
+  wiki.byId.set("decision.photo.restoration.example", {
+    id: "decision.photo.restoration.example",
+    kind: "decision"
+  });
+  const result = evaluatePhotoKnowledge({
+    manifest: current,
+    wiki,
+    introducedHistorySources: [
+      {
+        relativePath: "docs/knowledge-bank/data/photo-knowledge.json",
+        text: JSON.stringify(withdrawn)
+      }
+    ]
+  });
+  assert.equal(
+    result.checks.photo_historical_revocation_monotonic,
+    true
   );
 });

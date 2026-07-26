@@ -229,6 +229,47 @@ function readIntroducedHistorySources(repoRoot = defaultRepoRoot) {
   }
 }
 
+function collectHistoricalWithdrawalPhotoIds(entries) {
+  const ids = new Set();
+  for (const entry of entries ?? []) {
+    if (
+      typeof entry === "string" ||
+      entry.relativePath !== manifestPath
+    ) {
+      continue;
+    }
+    try {
+      const snapshot = JSON.parse(entry.text);
+      for (const photo of snapshot.photos ?? []) {
+        if (withdrawalPermissionStates.has(photo.permissionState)) {
+          ids.add(photo.id);
+        }
+      }
+      for (const occurrence of snapshot.historicalOccurrences ?? []) {
+        if (
+          occurrence.photoId &&
+          occurrence.renders === false &&
+          occurrence.lifecycleState === "withdrawn"
+        ) {
+          ids.add(occurrence.photoId);
+        }
+      }
+      for (const plan of snapshot.withdrawalPlans ?? []) {
+        if (
+          plan.photoId &&
+          plan.status === "implemented" &&
+          plan.writesApplied === true
+        ) {
+          ids.add(plan.photoId);
+        }
+      }
+    } catch {
+      // Only a structured historical manifest can establish a withdrawal.
+    }
+  }
+  return ids;
+}
+
 function sha256(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
 }
@@ -381,6 +422,7 @@ export function applyPhotoRevocation(manifest, photoId) {
   const plan = buildWithdrawalPlan(next, photoId);
   next.historicalOccurrences ??= [];
   next.withdrawalPlans ??= [];
+  next.restorationDecisions ??= [];
   for (const placement of photo.placements) {
     next.historicalOccurrences.push({
       id: `history.${placement.id}.withdrawn`,
@@ -475,11 +517,28 @@ export function evaluatePhotoKnowledge(options = {}) {
 
   const recordsMaterialized = requiredRecordIds.every((id) => byId.has(id));
   const manifestIds = manifest.photos.map((photo) => photo.id);
+  const restorationDecisionsWellFormed =
+    Array.isArray(manifest.restorationDecisions) &&
+    manifest.restorationDecisions.every((decision) => {
+      const record = byId.get(decision.decisionRecordId);
+      return (
+        manifestIds.includes(decision.photoId) &&
+        decision.status === "approved" &&
+        decision.humanReviewed === true &&
+        decision.approvedBy === "Jamie Burkart" &&
+        decision.withdrawalPlanId === `withdrawal.${decision.photoId}` &&
+        typeof decision.decidedAt === "string" &&
+        !Number.isNaN(Date.parse(decision.decidedAt)) &&
+        record?.kind === "decision"
+      );
+    });
   const photoManifestExact =
     manifest.schemaVersion === 1 &&
     manifest.governingRfc === "rfcs/0003-living-photographic-knowledge-loop.md" &&
     Array.isArray(manifest.historicalOccurrences) &&
     Array.isArray(manifest.withdrawalPlans) &&
+    Array.isArray(manifest.restorationDecisions) &&
+    restorationDecisionsWellFormed &&
     manifest.photos.length === 6 &&
     new Set(manifestIds).size === manifestIds.length &&
     photoRecordIds.every((id) => manifestIds.includes(id));
@@ -750,6 +809,41 @@ export function evaluatePhotoKnowledge(options = {}) {
         )
       );
     });
+  const historicalWithdrawalPhotoIds =
+    collectHistoricalWithdrawalPhotoIds(introducedHistory);
+  const restorationDecisionIsValid = (photoId) =>
+    (manifest.restorationDecisions ?? []).some((decision) => {
+      const record = byId.get(decision.decisionRecordId);
+      return (
+        decision.photoId === photoId &&
+        decision.status === "approved" &&
+        decision.humanReviewed === true &&
+        decision.approvedBy === "Jamie Burkart" &&
+        decision.withdrawalPlanId === `withdrawal.${photoId}` &&
+        typeof decision.decidedAt === "string" &&
+        !Number.isNaN(Date.parse(decision.decidedAt)) &&
+        record?.kind === "decision"
+      );
+    });
+  const historicalRevocationConflicts = [
+    ...historicalWithdrawalPhotoIds
+  ].filter((photoId) => {
+    const photo = manifest.photos.find((item) => item.id === photoId);
+    const activeProjection =
+      photo &&
+      !withdrawalPermissionStates.has(photo.permissionState) &&
+      photo.productionApproval === "open" &&
+      photo.placements.some(
+        (placement) =>
+          placement.production !== "hold" ||
+          placement.indexing !== "hold"
+      ) &&
+      sitePhotos.some((sitePhoto) => sitePhoto.wikiId === photoId);
+    return activeProjection && !restorationDecisionIsValid(photoId);
+  });
+  const historicalRevocationFailsClosed =
+    Array.isArray(introducedHistory) &&
+    historicalRevocationConflicts.length === 0;
   const revoked = applyPhotoRevocation(manifest, east.id);
   const revokedEast = revoked.photos.find((photo) => photo.id === east.id);
   const simulatedRevocationFailsClosed =
@@ -864,6 +958,7 @@ export function evaluatePhotoKnowledge(options = {}) {
     photo_protected_absence_first_class: protectedAbsenceFirstClass,
     photo_public_boundary_clean: currentBoundaryClean,
     photo_introduced_history_boundary_clean: introducedHistoryBoundaryClean,
+    photo_historical_revocation_monotonic: historicalRevocationFailsClosed,
     photo_revocation_fails_closed: revocationFailsClosed,
     photo_commands_wired: commandsWired,
     photo_human_gates_open: humanGatesOpen
@@ -883,6 +978,7 @@ export function evaluatePhotoKnowledge(options = {}) {
       ),
       requiredRecords: requiredRecordIds.length,
       blockingCriteria: Object.keys(checks).length,
+      historicalRevocationConflicts: historicalRevocationConflicts.length,
       productionOpen: manifest.photos.filter(
         (photo) => photo.productionApproval === "open"
       ).length
@@ -1160,6 +1256,7 @@ export function buildPhotoReports(options = {}) {
     },
     historicalOccurrenceCount: historicalUsage.length,
     withdrawalPlanCount: (manifest.withdrawalPlans ?? []).length,
+    restorationDecisionCount: (manifest.restorationDecisions ?? []).length,
     withdrawalConflicts,
     maintenance: {
       publicSurfaceEvidenceCurrent:

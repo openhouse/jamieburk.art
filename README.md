@@ -90,6 +90,10 @@ state. `photos:curatorial:run`, `photos:recollection`, and
 `photos:withdrawal-plan` produce named advisory packets; none may publish,
 withdraw, restore, deploy, or index a photograph.
 
+An implemented withdrawal remains authoritative across branch history. A later
+active projection requires a new canonical, human-reviewed restoration
+decision; checking out older content is never a publication decision.
+
 ## Environment
 
 Staging is the first deployment target and is non-indexable by default:
