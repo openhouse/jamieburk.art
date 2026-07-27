@@ -1,30 +1,41 @@
 ---
-candidate_fingerprint: 73ddca0031cf3fe79a5228e277a82e672451243b00e8260758206bbdcbacbbba
-source_commit: 1134d17895009653d4525375ca82cca44f2b8841
-reviewer: "Fresh independent photo-governance holdout"
-reviewed_at: "2026-07-26T22:17:53-04:00"
+candidate_fingerprint: a1c9d31c9e792a0e7f61166472e078944f8320dc20b9cfe9589f85b99fb6e7e6
+source_commit: 8e679670fcf3d321c5e7f91178615b684c15161c
+reviewer: "Final independent photo-governance holdout"
+reviewed_at: "2026-07-27T02:38:39Z"
 verdict: pass
 independent_read_only: true
 ---
 
-# Independent Photo-Governance Holdout
+# Final Independent Photo-Governance Holdout
 
 ## Evidence
 
-- Recomputed the sorted 700-file candidate as SHA-256 over repeated `relative path + NUL + raw bytes + NUL`; result exactly matched `73ddca0031cf3fe79a5228e277a82e672451243b00e8260758206bbdcbacbbba`.
-- `HEAD` exactly matched source commit `1134d17895009653d4525375ca82cca44f2b8841`. Before/after worktree status was unchanged; the two pre-existing modified receipt files are explicitly excluded from the candidate digest.
-- Under supported Node `v26.5.0`: photo checks passed 26/26, photo tests 22/22, layout evaluation 10/10, layout tests 3/3, accessibility evidence tests 7/7, contrast tests 3/3, RFC validation passed, and public-safety validation passed.
-- The current 119-file public-surface fingerprint independently reproduced as `8be191e5d04214d3a2e71190ca3ed4f2984c5a9011cce4316d221e77a68182ac`. Its 56-row browser/axe matrix covers 14 routes at four viewports with zero accessibility violations, overflow, clipped photo captions, broken post-scroll images, unlabeled images, failed requests, or invalid heading/landmark rows.
-- RFC 0003 boundaries are preserved: private source authority remains outside public Git; source asset, public derivative, occurrence, edition, permission evidence, custody, creator attribution, and recollection remain distinct.
-- Permission is destination-bound, non-transferable, non-sublicensable, and not granted for unrelated future use. Public records retain only bounded summaries and opaque private references.
-- Protected absence remains affirmative and fail-closed: intimate gatherings and the child-visible legacy image remain held without public surfaces or automated promotion.
-- Rollback is checksummed and tested as a public-safe simulation: placement removal, withdrawal state, correction, cache review, report regeneration, preserved credit/history, and unchanged private binding are explicit.
-- Artistic selection, dignity, rights, production, and indexing cannot be authorized by scores, RCV, panels, agents, tests, or this holdout. Existing holdouts and final professor/composite scorecards were not read; `photos:eval` was not run because it reads holdouts.
+- Independently enumerated the candidate using the receipt exclusions and `git ls-files --cached --others --exclude-standard`, sorted by relative path. SHA-256 over `path`, NUL, file bytes, NUL reproduced **700 files** and fingerprint `a1c9d31c9e792a0e7f61166472e078944f8320dc20b9cfe9589f85b99fb6e7e6`.
+- Confirmed HEAD is source commit `8e679670fcf3d321c5e7f91178615b684c15161c`. Its committed delta comprises regenerated Knowledge Wiki and hiring metadata. The only worktree changes remained the two pre-existing regenerated candidate receipts; this review made no repository edits.
+- Reconstructed the historical Layout C candidate in an isolated temporary clone. Applying the checksummed correction patch to base `fea303e54c6b5fae36caee872a2a7450501f9e11` reproduced tree `3059ab6209621cfbca60d352dd83cc596675600a`.
+- RFC 0003 keeps private source pixels, locators, People data, coordinates, permission correspondence, and source fingerprints outside public Git. The public records expose bounded summaries and a random opaque binding.
+- Source asset, public derivative, curatorial proposal, decision, occurrence, and portfolio edition remain distinct. The East River occurrence is structurally separated from the active Layout E manifest and remains `candidate-hold`.
+- Creator, custody, metadata, permission, caption assertions, credit assertions, recollection, and interpretation remain separately sourced. The later recollection does not silently alter homepage copy or authorize journey-count claims.
+- Permission is recorded as destination-bound, non-transferable, non-sublicensable, and not a general license. The repository-hosting interpretation is explicitly attributed to Jamie rather than represented as technical wording used by the creator.
+- Protected absence is affirmative and fail-closed. Intimate gatherings remain absent by default, and the child-visible Talks Not Raids occurrence remains withdrawn pending specific human review.
+- Rollback evidence preserves attribution and history while removing placement references, recording correction and cache review, and leaving real withdrawal authority human.
+- The responsive public-surface digest independently reproduced as `8be191e5d04214d3a2e71190ca3ed4f2984c5a9011cce4316d221e77a68182ac` across 119 files. Its 56-row matrix covers 14 routes at four viewports with zero axe violations, overflow elements, clipped captions, broken post-scroll images, unlabeled images, failed requests, or heading/landmark failures.
+- The browser report’s embedded commit predates HEAD, but its content-addressed 119-file public-surface digest matches the current bytes. The current candidate receipt binds that unchanged scope to the specified source commit.
+- Deterministic results: photo checks **26/26**, photo tests **22/22**, accessibility-evidence tests **7/7**, contrast tests **3/3**, lifecycle tests **4/4**, with RFC structure and public-safety checks passing.
+- Existing photo-knowledge holdouts and final professor/composite scorecards were not read or used.
 
 ## Open Human Gates
 
-Jamie exact-occurrence and final editorial approval; creator and rights authority for the exact use; exact credit, crop, caption, context, route, and sequence; represented-person dignity and consent; production; deployment; and indexing all remain open.
+- Jamie’s approval of each exact occurrence and final editorial selection.
+- Creator and rights-holder authority, including review of the underlying private evidence and any changed destination, route, crop, context, or purpose.
+- Exact credit, crop, caption, alt text, sequence, viewport behavior, and surrounding context.
+- Represented-person dignity and consent, including collaborator and guardian review where applicable.
+- Collective-credit accuracy and protection against sole-authorship or causal overclaim.
+- Production approval, deployment, cache verification, and indexing approval.
+- Execution of any real revocation, takedown, or rollback. The deterministic drill proves process shape only.
+- Draft PR evidence, browser evidence, and green automation do not close any of these gates.
 
 ## Recommendation
 
-Pass as draft PR evidence for this exact unchanged candidate only. Do not treat this verdict as publication clearance or as authority to merge, deploy, index, or broaden permission. Reproduce the fingerprint and rebind all evidence after any candidate-affecting change; preserve protected absences and rollback capability.
+Accept this as a passing independent read-only photo-governance holdout for this exact 700-file candidate only. Preserve every listed human gate as blocking. Any candidate-affecting byte change invalidates this verdict and requires a new fingerprint, browser/accessibility binding, and independent review.
