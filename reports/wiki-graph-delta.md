@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `3e73a92cdd014497d0fcf6fb6947cd718f26c149`
-**Generation time:** 2026-07-26T18:09:29-04:00
-**Source fingerprint:** `6122dbe02375404ee0855c5a7bffda58d98bb54a39a9b46da14cec15107a94d9`
+**Source commit:** `7b236c87dd6046015857e1aea1d70fc6921dc18c`
+**Generation time:** 2026-07-26T23:42:37-04:00
+**Source fingerprint:** `3287f59c330c386c0a9d2f021656cc3cc94a4948e246e4407085ec225a329ae6`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 50
+- Nodes added: 53
 - Nodes removed: 0
-- Edges added: 155
+- Edges added: 167
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 11
@@ -42,6 +42,8 @@ Compared with the graph artifact on `origin/develop`.
 - `notebook.photography.templates`
 - `notebook.photography.vocabulary`
 - `projection.photo.layout-d.about.sunday-dinner-preparation`
+- `projection.photo.layout-d.home-work-card.fair-rent-rally`
+- `projection.photo.layout-d.home-work-card.sunday-dinner-preparation`
 - `projection.photo.layout-d.home.cabaret-law-hearing`
 - `projection.photo.layout-d.home.dcla-listening-room`
 - `projection.photo.layout-d.home.east-river`
@@ -50,6 +52,7 @@ Compared with the graph artifact on `origin/develop`.
 - `projection.photo.layout-d.home.sunday-dinner-preparation`
 - `projection.photo.layout-d.resume.protected-absence`
 - `projection.photo.layout-d.work-index.fair-rent-rally`
+- `projection.photo.layout-d.work-index.kc-town-hall-collaborator`
 - `projection.photo.layout-d.work-index.nightlife-town-hall`
 - `projection.photo.layout-d.work-index.sunday-dinner-preparation`
 - `projection.photo.layout-d.work.fair-rent-rally`

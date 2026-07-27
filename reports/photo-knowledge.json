@@ -194,9 +194,19 @@
       "path": "docs/knowledge-bank/projections/photography/layout-d-work-fair-rent-rally.md"
     },
     {
+      "id": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-work-card-fair-rent-rally.md"
+    },
+    {
       "id": "projection.photo.layout-d.home.sunday-dinner-preparation",
       "kind": "projection",
       "path": "docs/knowledge-bank/projections/photography/layout-d-home-sunday-dinner-preparation.md"
+    },
+    {
+      "id": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-work-card-sunday-dinner-preparation.md"
     },
     {
       "id": "projection.photo.layout-d.about.sunday-dinner-preparation",
@@ -207,6 +217,11 @@
       "id": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
       "kind": "projection",
       "path": "docs/knowledge-bank/projections/photography/layout-d-work-index-sunday-dinner-preparation.md"
+    },
+    {
+      "id": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-index-kc-town-hall-collaborator.md"
     },
     {
       "id": "projection.photo.layout-d.work.sunday-dinner-preparation",

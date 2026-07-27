@@ -1,5 +1,5 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
-# Backlinks to Layout D homepage Sunday Dinner preparation occurrence
+# Backlinks to Layout D homepage Sunday Dinner work-card occurrence
 
 **Source commit:** `7b236c87dd6046015857e1aea1d70fc6921dc18c`
 **Generation time:** 2026-07-26T23:42:37-04:00

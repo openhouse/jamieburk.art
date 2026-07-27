@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T18:09:29-04:00",
-  "sourceCommit": "3e73a92cdd014497d0fcf6fb6947cd718f26c149",
-  "sourceFingerprint": "6122dbe02375404ee0855c5a7bffda58d98bb54a39a9b46da14cec15107a94d9",
+  "generatedAt": "2026-07-26T23:42:37-04:00",
+  "sourceCommit": "7b236c87dd6046015857e1aea1d70fc6921dc18c",
+  "sourceFingerprint": "3287f59c330c386c0a9d2f021656cc3cc94a4948e246e4407085ec225a329ae6",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -78,7 +78,7 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Governed record for the Fair Rent rally photograph used on the work index and case study.",
+      "summary": "Governed record for the Fair Rent rally photograph used on the homepage, work index, and case study.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-26"
@@ -1302,6 +1302,32 @@
       "reviewBy": "2026-08-26"
     },
     {
+      "id": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-work-card-fair-rent-rally.md",
+      "title": "Layout D homepage Fair Rent work-card occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Homepage WorkCard occurrence for the Fair Rent rally photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-work-card-sunday-dinner-preparation.md",
+      "title": "Layout D homepage Sunday Dinner work-card occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Homepage WorkCard occurrence for the Sunday Dinner preparation photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
       "id": "projection.photo.layout-d.home.cabaret-law-hearing",
       "path": "docs/knowledge-bank/projections/photography/layout-d-home-cabaret-law-hearing.md",
       "title": "Layout D homepage Cabaret Law hearing occurrence",
@@ -1401,6 +1427,19 @@
       "visibility": "public-safe",
       "sensitivity": "moderate",
       "summary": "Work-index occurrence for the Fair Rent rally photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-index-kc-town-hall-collaborator.md",
+      "title": "Layout D work-index KC Town Hall collaborator occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Work-index WorkCard occurrence for the KC Town Hall collaborator worksite photograph.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-26"
@@ -2161,6 +2200,14 @@
     {
       "from": "asset.photo.fair-rent-rally.2019",
       "type": "projected_to",
+      "to": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-work-card-fair-rent-rally.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.fair-rent-rally.2019",
+      "type": "projected_to",
       "to": "projection.photo.layout-d.work-index.fair-rent-rally",
       "source": "frontmatter",
       "href": "../../projections/photography/layout-d-work-index-fair-rent-rally.md",
@@ -2180,6 +2227,14 @@
       "to": "projection.photo.layout-d.home.kc-town-hall-collaborator",
       "source": "frontmatter",
       "href": "../../projections/photography/layout-d-home-kc-town-hall-collaborator.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-work-index-kc-town-hall-collaborator.md",
       "context": null
     },
     {
@@ -2292,6 +2347,14 @@
       "to": "projection.photo.layout-d.about.sunday-dinner-preparation",
       "source": "frontmatter",
       "href": "../../projections/photography/layout-d-about-sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.sunday-dinner.preparation",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-work-card-sunday-dinner-preparation.md",
       "context": null
     },
     {
@@ -2815,6 +2878,22 @@
     {
       "from": "edition.layout-d.photo-knowledge.2026-07",
       "type": "related_to",
+      "to": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+      "source": "frontmatter",
+      "href": "layout-d-home-work-card-fair-rent-rally.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "layout-d-home-work-card-sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
       "to": "projection.photo.layout-d.home.cabaret-law-hearing",
       "source": "frontmatter",
       "href": "layout-d-home-cabaret-law-hearing.md",
@@ -2874,6 +2953,14 @@
       "to": "projection.photo.layout-d.work-index.fair-rent-rally",
       "source": "frontmatter",
       "href": "layout-d-work-index-fair-rent-rally.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+      "source": "frontmatter",
+      "href": "layout-d-work-index-kc-town-hall-collaborator.md",
       "context": null
     },
     {
@@ -5761,6 +5848,38 @@
       "context": null
     },
     {
+      "from": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+      "type": "related_to",
+      "to": "asset.photo.fair-rent-rally.2019",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/fair-rent-rally-2019.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.preparation",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.layout-d.home.cabaret-law-hearing",
       "type": "related_to",
       "to": "asset.photo.cabaret-law-hearing.2017",
@@ -5898,6 +6017,22 @@
     },
     {
       "from": "projection.photo.layout-d.work-index.fair-rent-rally",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-collaborator-worksite-2018.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
       "type": "related_to",
       "to": "edition.layout-d.photo-knowledge.2026-07",
       "source": "frontmatter",
@@ -9063,10 +9198,28 @@
     {
       "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
       "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-work-card-fair-rent-rally.md",
+      "to": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-work-card-sunday-dinner-preparation.md",
+      "to": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-about-sunday-dinner-preparation.md",
       "to": "projection.photo.layout-d.about.sunday-dinner-preparation",
       "fragment": null,
-      "line": 21,
+      "line": 23,
       "kind": "link"
     },
     {
@@ -9075,7 +9228,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-nightlife-town-hall.md",
       "to": "projection.photo.layout-d.work-index.nightlife-town-hall",
       "fragment": null,
-      "line": 22,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -9084,7 +9237,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-fair-rent-rally.md",
       "to": "projection.photo.layout-d.work-index.fair-rent-rally",
       "fragment": null,
-      "line": 23,
+      "line": 25,
       "kind": "link"
     },
     {
@@ -9093,7 +9246,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-fair-rent-rally.md",
       "to": "projection.photo.layout-d.work.fair-rent-rally",
       "fragment": null,
-      "line": 24,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -9102,7 +9255,16 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-sunday-dinner-preparation.md",
       "to": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
       "fragment": null,
-      "line": 25,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-kc-town-hall-collaborator.md",
+      "to": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+      "fragment": null,
+      "line": 28,
       "kind": "link"
     },
     {
@@ -9111,7 +9273,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-sunday-dinner-preparation.md",
       "to": "projection.photo.layout-d.work.sunday-dinner-preparation",
       "fragment": null,
-      "line": 26,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -9120,7 +9282,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-kc-town-hall-collaborator.md",
       "to": "projection.photo.layout-d.work.kc-town-hall-collaborator",
       "fragment": null,
-      "line": 27,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -9129,7 +9291,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
       "to": "projection.photo.layout-d.resume.protected-absence",
       "fragment": null,
-      "line": 28,
+      "line": 31,
       "kind": "link"
     },
     {

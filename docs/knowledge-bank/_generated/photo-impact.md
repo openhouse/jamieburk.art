@@ -24,6 +24,6 @@ state requires review of:
 - `apps/www/src/data/photography.ts`
 - `apps/www/src/components/Hero.tsx`
 
-The current edition contains 14 governed
+The current edition contains 17 governed
 occurrences, including one protected absence. Unresolved photo records remain
 held even when their branch-review derivatives are present in public Git.
