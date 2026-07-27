@@ -37,6 +37,14 @@ test("a clipped work-index caption fails closed", () => {
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
 
+test("a collapsed work-index caption column fails closed", () => {
+  const report = structuredClone(current.report);
+  const workRow = report.rows.find((row) => row.path === "/work" && row.viewport === 900);
+  workRow.collapsedPhotoCaptionColumns = 1;
+  report.summary.collapsedPhotoCaptionColumns = 1;
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
+});
+
 test("a coordinated canonical-route substitution fails closed", () => {
   const report = structuredClone(current.report);
   report.routes[0] = "/noncanonical-replacement";

@@ -20,7 +20,15 @@ export const canonicalAccessibilityRoutes = Object.freeze([
   "/work/196-sunday-dinner",
   "/work/kc-town-hall"
 ]);
-export const canonicalAccessibilityViewports = Object.freeze([360, 375, 768, 1280]);
+export const canonicalAccessibilityViewports = Object.freeze([
+  360,
+  375,
+  768,
+  900,
+  1024,
+  1100,
+  1280
+]);
 
 export function computePublicSurfaceFingerprint(repoRoot) {
   const files = execFileSync(
@@ -68,6 +76,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       row.violations.length === 0 &&
       row.overflowElements === 0 &&
       row.clippedPhotoCaptions === 0 &&
+      row.collapsedPhotoCaptionColumns === 0 &&
       (row.path !== "/work" || row.workIndexPhotoCaptionCount >= 3) &&
       row.brokenImagesAfterScroll === 0 &&
       row.unlabeledImages === 0 &&
@@ -82,6 +91,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.summary.criticalAxeViolations === 0 &&
     report.summary.overflowElements === 0 &&
     report.summary.clippedPhotoCaptions === 0 &&
+    report.summary.collapsedPhotoCaptionColumns === 0 &&
     report.summary.brokenImagesAfterScroll === 0 &&
     report.summary.unlabeledImages === 0 &&
     report.summary.failedRequests === 0 &&
@@ -96,7 +106,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     passed:
       report.reportVersion === 1 &&
       report.rows.length === expectedRows &&
-      expectedRows === 56 &&
+      expectedRows === 98 &&
       canonicalCoverage &&
       completeMatrix &&
       rowsPass &&

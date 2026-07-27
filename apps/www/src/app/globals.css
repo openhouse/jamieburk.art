@@ -342,6 +342,14 @@ h2 {
   width: 100%;
 }
 
+.jb-work-row-image .jb-photo-caption {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.jb-work-row-image .jb-photo-credit {
+  white-space: normal;
+}
+
 .jb-work-row-index {
   align-items: flex-start;
   color: var(--jb-broadway-blue);

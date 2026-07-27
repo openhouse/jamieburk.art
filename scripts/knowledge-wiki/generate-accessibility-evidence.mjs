@@ -118,6 +118,15 @@ try {
               captionRect.bottom > linkRect.bottom + 1
             );
           }).length,
+          collapsedPhotoCaptionColumns: Array.from(
+            document.querySelectorAll(".jb-work-row-with-image .jb-photo-caption")
+          ).filter((caption) => {
+            const captionRect = caption.getBoundingClientRect();
+            return Array.from(caption.children).some((child) => {
+              const childWidth = child.getBoundingClientRect().width;
+              return childWidth < Math.min(120, captionRect.width * 0.35);
+            });
+          }).length,
           h1Count: document.querySelectorAll("h1").length,
           mainPresent: Boolean(document.querySelector("main")),
           brokenImagesAfterScroll: images.filter(
@@ -171,7 +180,7 @@ const report = {
     "package-lock.json"
   ],
   method:
-    "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; overflow, landmarks, headings, alt text, request failures, and explicit full-page scroll before final image decode checks",
+    "Playwright Chromium; 14 canonical routes at 360, 375, 768, 900, 1024, 1100, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; overflow, work-card caption track collapse, landmarks, headings, alt text, request failures, and explicit full-page scroll before final image decode checks",
   routes: [...canonicalAccessibilityRoutes],
   viewports: [...canonicalAccessibilityViewports],
   rows,
@@ -183,6 +192,7 @@ const report = {
     ),
     overflowElements: sum((row) => row.overflowElements),
     clippedPhotoCaptions: sum((row) => row.clippedPhotoCaptions),
+    collapsedPhotoCaptionColumns: sum((row) => row.collapsedPhotoCaptionColumns),
     brokenImagesAfterScroll: sum((row) => row.brokenImagesAfterScroll),
     unlabeledImages: sum((row) => row.unlabeledImages),
     failedRequests: sum((row) => row.failedRequests.length),
