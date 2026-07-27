@@ -418,6 +418,16 @@ function exactKeys(value, expected) {
   );
 }
 
+function isHumanAuthorityName(reviewer) {
+  return (
+    typeof reviewer === "string" &&
+    reviewer.trim().includes(" ") &&
+    !/(?:automated|evaluator|agent|system|model|bot|artificial intelligence)/i.test(
+      reviewer
+    )
+  );
+}
+
 function authorityRegistryPolicyBound(registry) {
   return (
     exactKeys(registry, ["version", "policy", "photos"]) &&
@@ -451,7 +461,16 @@ function authorityRegistryPolicyBound(registry) {
         Array.isArray(entry.basisRecordIds) &&
         entry.basisRecordIds.length > 0 &&
         new Set(entry.basisRecordIds).size === entry.basisRecordIds.length &&
-        exactKeys(entry.gateReviewers, requiredRestorationGates)
+        exactKeys(entry.gateReviewers, requiredRestorationGates) &&
+        requiredRestorationGates.every((gate) => {
+          const reviewers = entry.gateReviewers[gate];
+          return (
+            Array.isArray(reviewers) &&
+            reviewers.length > 0 &&
+            new Set(reviewers).size === reviewers.length &&
+            reviewers.every(isHumanAuthorityName)
+          );
+        })
     )
   );
 }
@@ -507,10 +526,9 @@ function evidenceAuthorityFactsMatch(
     case "exact-credit":
     case "crop":
     case "caption":
-      return requiredReviewers.every(
-        (reviewer) =>
-          photoCreators.includes(reviewer) ||
-          reviewer === "Jamie Burkart"
+      return sameReviewerSet(
+        requiredReviewers,
+        [...new Set([...photoCreators, "Jamie Burkart"])]
       );
     default:
       return true;
@@ -717,14 +735,7 @@ export function validateRestorationDecision({
         Array.isArray(reviewers) &&
         reviewers.length > 0 &&
         new Set(reviewers).size === reviewers.length &&
-        reviewers.every(
-          (reviewer) =>
-            typeof reviewer === "string" &&
-            reviewer.trim().includes(" ") &&
-            !/(?:automated|evaluator|agent|system|model|bot|artificial intelligence)/i.test(
-              reviewer
-            )
-        )
+        reviewers.every(isHumanAuthorityName)
       );
     }) &&
     authorityRegistryMaterializedVersion &&
@@ -1662,6 +1673,11 @@ export function evaluatePhotoKnowledge(options = {}) {
   );
   const authorityRegistryBounded =
     authorityRegistryPolicyBound(authorityRegistry) &&
+    authorityRegistry.photos.every(
+      (entry) =>
+        byId.has(entry.photoId) &&
+        entry.basisRecordIds.every((id) => byId.has(id))
+    ) &&
     eastAuthority?.status === "human-attested" &&
     eastAuthority?.attestedBy === "Jamie Burkart" &&
     eastAuthority?.basisRecordIds?.includes(east.id) &&
@@ -1681,6 +1697,13 @@ export function evaluatePhotoKnowledge(options = {}) {
     sameReviewerSet(
       eastAuthority?.gateReviewers?.["represented-person"],
       ["Jamie Burkart"]
+    ) &&
+    ["exact-credit", "crop", "caption"].every(
+      (gate) =>
+        sameReviewerSet(
+          eastAuthority?.gateReviewers?.[gate],
+          ["Elana Gordon", "Jamie Burkart"]
+        )
     ) &&
     ["editorial", "production", "deployment", "indexing"].every(
       (gate) =>

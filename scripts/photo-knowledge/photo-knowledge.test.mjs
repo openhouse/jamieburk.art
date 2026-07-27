@@ -1294,6 +1294,24 @@ test("authority registry cannot grant publication authority", () => {
       registry.policy.doesNotEstablish = [
         "production publication approval"
       ];
+    },
+    (registry) => {
+      registry.photos.push({
+        ...structuredClone(registry.photos[0]),
+        photoId: "photo.kc-town-hall-before",
+        basisRecordIds: ["photo.kc-town-hall-before"],
+        gateReviewers: Object.fromEntries(
+          restorationGates.map((gate) => [
+            gate,
+            ["Automated evaluator"]
+          ])
+        )
+      });
+    },
+    (registry) => {
+      for (const gate of ["exact-credit", "crop", "caption"]) {
+        registry.photos[0].gateReviewers[gate] = ["Jamie Burkart"];
+      }
     }
   ];
   for (const mutate of mutations) {
