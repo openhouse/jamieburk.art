@@ -41,6 +41,10 @@ relations:
     href: ../methods/artist-led-photographic-curation.md
     context: Artist-led selection and source-return method.
   - type: related_to
+    target: method.photography.oral-history-return
+    href: ../methods/photographic-oral-history-return.md
+    context: Governed return from one exact photograph to situated first-person memory.
+  - type: related_to
     target: research-inquiry.photography.layout-a.council-chamber
     href: ../research-inquiries/photography/layout-a-council-chamber.md
     context: Photographer, permission, exact-event, and source-binding questions.
@@ -74,6 +78,7 @@ The governed loop includes:
 - the [first-person recollection](../sources/recollections/jamie-public-facing-civic-work-2026-07.md);
 - the [source-return inquiry](../research-inquiries/photography/layout-a-council-chamber.md);
 - the [artist-led curatorial method](../methods/artist-led-photographic-curation.md);
+- the [photographic oral-history return](../methods/photographic-oral-history-return.md);
 - the [simulated-lens proposal](../evaluations/curatorial/layout-a-home-council-chamber-v1.md);
 - the [branch-review decision](../decisions/photography/layout-a-home-council-chamber-v1.md);
 - the [exact homepage occurrence](../projections/photography/layout-a-home-hero-council-chamber.md);

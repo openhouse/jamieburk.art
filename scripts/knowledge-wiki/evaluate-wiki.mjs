@@ -92,6 +92,8 @@ const changedPublicUiPaths = changedPaths.filter((file) =>
 );
 const technicalOperationsPath = "apps/www/src/app/work/technical-operations/page.tsx";
 const technicalOperationsSource = readFileSync(path.join(defaultRepoRoot, technicalOperationsPath), "utf8");
+const opengraphImagePath = "apps/www/src/app/opengraph-image.tsx";
+const opengraphImageSource = readFileSync(path.join(defaultRepoRoot, opengraphImagePath), "utf8");
 const legacyBoundedPublicUiPaths = [
   "apps/www/src/app/globals.css",
   "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
@@ -117,6 +119,7 @@ const layoutABoundedPublicUiPaths = [
   "apps/www/src/app/colophon/page.tsx",
   "apps/www/src/app/globals.css",
   "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+  opengraphImagePath,
   "apps/www/src/app/page.tsx",
   technicalOperationsPath,
   "apps/www/src/components/CapabilityGrid.tsx",
@@ -177,7 +180,15 @@ const checks = {
       !caseStudyBlocksSource.includes("text-jb-ink/64") &&
       tagListSource.includes("border-jb-paper/45 bg-jb-paper text-jb-blue") &&
       !labSource.includes("text-jb-ink/68")) ||
-      layoutABoundedPublicUiChange),
+      (layoutABoundedPublicUiChange &&
+        opengraphImageSource.includes(
+          "I create operating structure for complex public-facing teams."
+        ) &&
+        opengraphImageSource.includes('background: "#ffffff"') &&
+        opengraphImageSource.includes('color: "#1a232b"') &&
+        !opengraphImageSource.includes(
+          "I turn ambiguous work into usable systems."
+        ))),
   branch_donor_synthesis:
     adr.includes("## Branch donor synthesis") &&
     ["**A:**", "**B:**", "**C:**", "**D:**", "**E:**"].every((marker) => adr.includes(marker)),

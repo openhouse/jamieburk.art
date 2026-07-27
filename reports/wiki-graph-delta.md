@@ -3,13 +3,13 @@
 
 **Source commit:** `c2dc5ab10d10a24e5530ec9cb900ab43fc57228f`
 **Generation time:** 2026-07-26T16:25:53-04:00
-**Source fingerprint:** `1d8444d10910370f91129e01f868f06db5174330744a74a4ac91269e1c1cf32e`
+**Source fingerprint:** `250ea71b038286cf5949ab9deccc5a472330051e21034b806b12b8a1cfd5ce7b`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 23
+- Nodes added: 24
 - Nodes removed: 0
-- Edges added: 88
+- Edges added: 93
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 2
@@ -26,6 +26,7 @@ Compared with the graph artifact on `origin/develop`.
 - `method.photography.artist-led-curatorial-loop`
 - `method.photography.invitation-container-emergence`
 - `method.photography.notebook-entry`
+- `method.photography.oral-history-return`
 - `project.photography.field-set-001-residency`
 - `projection.edition.layout-a.branch-review.2026-07`
 - `projection.photo.layout-a.home.hero.council-chamber`

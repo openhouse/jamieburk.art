@@ -155,7 +155,7 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
         </p>
       ) : null}
       {item.careNote || item.publicSafety?.note ? (
-        <details className="mt-4 max-w-4xl border-l-4 border-jb-ochre bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
+        <details className="mt-4 max-w-4xl border border-jb-ochre/60 bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
           <summary className="cursor-pointer font-semibold text-jb-blue">
             Claim and care limits
           </summary>

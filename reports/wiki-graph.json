@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T16:25:53-04:00",
   "sourceCommit": "c2dc5ab10d10a24e5530ec9cb900ab43fc57228f",
-  "sourceFingerprint": "1d8444d10910370f91129e01f868f06db5174330744a74a4ac91269e1c1cf32e",
+  "sourceFingerprint": "250ea71b038286cf5949ab9deccc5a472330051e21034b806b12b8a1cfd5ce7b",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -690,6 +690,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "method.photography.oral-history-return",
+      "path": "docs/knowledge-bank/methods/photographic-oral-history-return.md",
+      "title": "Photographic oral-history return",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A governed method for returning one exact photograph to Jamie, receiving first-person memory without treating it as settled fact, and maturing that memory through source, rights, collective-credit, and publication review.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
     },
     {
       "id": "method.situated-source-rereading",
@@ -3170,6 +3183,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "related_to",
+      "to": "method.photography.oral-history-return",
+      "source": "frontmatter",
+      "href": "../methods/photographic-oral-history-return.md",
+      "context": "Governed return from one exact photograph to situated first-person memory."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
       "to": "projection.edition.layout-a.branch-review.2026-07",
       "source": "frontmatter",
       "href": "../projections/photography/layout-a-branch-review-edition-2026-07.md",
@@ -3990,6 +4011,30 @@
       "source": "frontmatter",
       "href": "editorial-grammar.md",
       "context": null
+    },
+    {
+      "from": "method.photography.oral-history-return",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "The exact public derivative returned for first-person context."
+    },
+    {
+      "from": "method.photography.oral-history-return",
+      "type": "related_to",
+      "to": "method.photography.artist-led-curatorial-loop",
+      "source": "frontmatter",
+      "href": "artist-led-photographic-curation.md",
+      "context": "Oral history is one source-return path inside the wider photographic loop."
+    },
+    {
+      "from": "method.photography.oral-history-return",
+      "type": "related_to",
+      "to": "research-inquiry.photography.layout-a.council-chamber",
+      "source": "frontmatter",
+      "href": "../research-inquiries/photography/layout-a-council-chamber.md",
+      "context": "The homepage canary is the first governed use of this method."
     },
     {
       "from": "method.situated-source-rereading",
@@ -5154,6 +5199,14 @@
       "source": "frontmatter",
       "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
       "context": "The inquiry governs missing evidence for the current canary."
+    },
+    {
+      "from": "research-inquiry.photography.layout-a.council-chamber",
+      "type": "related_to",
+      "to": "method.photography.oral-history-return",
+      "source": "frontmatter",
+      "href": "../../methods/photographic-oral-history-return.md",
+      "context": "Governs how the exact image is returned and how recollection matures."
     },
     {
       "from": "research-inquiry.photography.layout-a.council-chamber",
@@ -7321,10 +7374,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/methods/photographic-oral-history-return.md",
+      "to": "method.photography.oral-history-return",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-a-home-council-chamber-v1.md",
       "to": "evaluation.curatorial.layout-a.home-council-chamber.v1",
       "fragment": null,
-      "line": 30,
+      "line": 31,
       "kind": "link"
     },
     {
@@ -7333,7 +7395,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-a-home-council-chamber-v1.md",
       "to": "decision.photography.layout-a.home-council-chamber.v1",
       "fragment": null,
-      "line": 31,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -7342,7 +7404,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-a-home-hero-council-chamber.md",
       "to": "projection.photo.layout-a.home.hero.council-chamber",
       "fragment": null,
-      "line": 32,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -7351,7 +7413,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-a-branch-review-edition-2026-07.md",
       "to": "projection.edition.layout-a.branch-review.2026-07",
       "fragment": null,
-      "line": 33,
+      "line": 34,
       "kind": "link"
     },
     {
@@ -8540,6 +8602,15 @@
       "to": null,
       "fragment": null,
       "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md",
+      "from": "research-inquiry.photography.layout-a.council-chamber",
+      "toPath": "docs/knowledge-bank/methods/photographic-oral-history-return.md",
+      "to": "method.photography.oral-history-return",
+      "fragment": null,
+      "line": 9,
       "kind": "link"
     },
     {

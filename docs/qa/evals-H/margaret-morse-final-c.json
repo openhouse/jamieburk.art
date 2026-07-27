@@ -1,47 +1,36 @@
 {
   "evaluator": "Codex independent sanitized-dossier holdout evaluator",
-  "reviewerId": "morse-c-photo-knowledge-rebound",
+  "reviewerId": "morse-c-photo-knowledge-hiring-readiness-2026-07-26",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9",
+  "candidateSha256": "192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d",
   "score": 4,
   "pass": true,
   "evidence": [
-    "candidate-manifest.json lists 46 ordered files; independently applying SHA-256(path + NUL + raw bytes + NUL) produced 47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9, matching the identity contract.",
-    "The homepage / identifies Jamie immediately as a Technical Project Manager / Product Operations / Implementation practitioner, while apps/www/src/components/SiteHeader.tsx makes /about reachable in one click.",
-    "The rendered /about threshold, grounded in apps/www/src/app/about/page.tsx, explicitly connects artistic, civic, technical, and social practice under “Systems people can inhabit” without displacing the professional role.",
-    "On /about, three current continuities are explicit: Harry J. Epstein Company (2012-Present), NYC Artist Coalition / FairRentNYC (2017-Present), and Sunday Dinner / 196 (2010s-Present). Each traces observation, modeling, interface, social use, revision, handoff, and an evidence boundary.",
-    "/work/harry-j-epstein shows attention to customer language, institutional voice, recurring feedback, incremental revision, and maintainable handoff, distinguishing Jamie’s operating practice from generic administration.",
-    "/work/fair-rent-nyc makes civic systems visibly participatory and collective through meetings, hearings, public invitations, source maps, decision memory, campaign interfaces, and photographs captioned as shared work rather than solo accomplishment.",
-    "/work/196-sunday-dinner provides the strongest hospitality and embodied-practice proof: invitation, arrival, access, hosting, participation, departure, artist support, social testing, and a revisable hosting-handoff specimen are rendered as one inhabited operating sequence.",
-    "/work/technical-operations states that implementation is social and material and succeeds when people can enter, use, adapt, and carry a workflow forward; this makes the difference from conventional administration professionally legible.",
-    "docs/qa/evals-H/responsive-route-matrix.json reports 56 checks across 14 routes at 360, 375, 768, and 1280 pixels with zero overflow, axe violations, broken images after scrolling, unlabeled images, failed requests, or non-success responses.",
-    "runtime-evidence/rendered-surface-evidence.json contains no rendered Margaret Morse or Warren Sack attribution, faculty evaluation, protected educational-record text, or Social Information Spaces authority claim."
+    "`candidate-manifest.json` independently validates: recomputing SHA-256 over all 46 ordered candidate paths produced `192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d`, with no missing files and all declared screenshots present.",
+    "The threshold is visible within one click: rendered `/` clearly positions Jamie for technical project management, product operations, and implementation, while `/about` explicitly connects artistic, civic, technical, and social practice.",
+    "Rendered `/work/harry-j-epstein` traces a 2012-Present system shaped by customer language, product judgment, public voice, recurring use, bounded analytics, revision, and reusable handoff.",
+    "Rendered `/work/fair-rent-nyc` traces a 2017-Present civic system through cultural-space experience, meetings, public sources, town halls, hearings, campaign interfaces, source maps, decision memory, and action tracking.",
+    "Rendered `/work/196-sunday-dinner` traces a 2010s-Present practice of hospitality, artist support, onboarding, facilitation, access handoff, recurrence, and revision without exposing participant records.",
+    "The rendered `/lab/source-backed-team-memory` adds a current technical-social continuity: operating memory remains source-linked, human-correctable, and divided into Known, Open, and Protected states.",
+    "A hiring reader can distinguish these systems from conventional administration through the recurring sequence in `apps/www/src/app/about/page.tsx`: observe relationships, model an emerging system, prototype an interface, test through social or collective use, then revise and hand off.",
+    "Protected UCSC evaluations inform only the rubric; no faculty testimonial, grade, student identifier, or protected evaluation content is projected."
   ],
-  "gaps": [
-    "Human image rights, represented-person consent and dignity, exact credit, crop and caption, collective credit, and final public usefulness remain open for the exact images.",
-    "Jamie’s approval of the unchanged candidate remains required.",
-    "Deployment and indexing remain open release gates.",
-    "The dossier supplies scripts/check-public-safety.mjs but not an exact-candidate execution transcript; this does not contradict the PR-015 content finding but remains release evidence to attach."
-  ],
+  "gaps": [],
   "safety_findings": [
-    "All 13 supplied photo files independently match the SHA-256 values in docs/qa/layout-A/photo-review-register.json, and every item remains explicitly marked branch-review rather than production-cleared.",
-    "The register records two editorial holdouts, including one image withheld because a named artist lacked recorded exact-image approval.",
-    "Protected UCSC records remain bounded in apps/www/src/data/knowledge-bank/historical-knowledge.ts: the relevant projection is hold-only with no public surfaces, while /about relies on the public Open House article and preserves collective governance.",
-    "Private participant material is not reproduced on /work/196-sunday-dinner: names, rows, attendance values, correspondence, addresses, access details, and unapproved images remain excluded; only aggregate claims, public milestones, field structure, and a blank derivative are shown.",
-    "Collective credit holds across the reviewed surfaces through named collaborators where public, community and coalition credits, shared-account attribution limits, collective captions, and explicit rejection of solo policy or expedition causality."
+    "All 13 supplied photographs remain `branch-review`; exact crop and caption, photographer and rights review, represented-person consent and dignity, collective credit, final public usefulness, and Jamie's approval remain open.",
+    "Deployment, production indexing, and exact-candidate publication approval remain open; the dossier supplies review evidence, not release clearance.",
+    "Participant records, private strategy, legal-review material, stakeholder lists, emails, and unapproved quotations remain protected."
   ],
-  "recommendation": "morse-c: Pass at 4. The candidate presents an exceptional, inspectable threshold where hospitality, embodied participation, place, documentation, and care explain why Jamie’s systems are inhabitable and transferable while the target technical-operations role remains unmistakable. Preserve the current protected-source and collective-credit boundaries, and complete every listed human and release gate before publication. This is a simulated Margaret Morse lens, not the professor’s participation, quotation, endorsement, or judgment.",
+  "recommendation": "Pass PR-015 at score 4 for the exact validated candidate. Preserve the collective-credit and protected-source boundaries, keep photographs in branch review, and revalidate after any candidate or image change.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa08a-26ab-79c1-bff5-506d67532fef",
-    "agentNickname": "Newton",
+    "processSessionId": "019fa0e7-c4e3-7c50-b3bd-007057b2cbe5",
+    "agentNickname": "Arendt",
     "model": "inherited-current-model",
     "reasoningEffort": "inherited",
     "sandbox": "read-only",
     "ephemeral": true,
-    "startedAt": "2026-07-26T22:27:15.848Z",
-    "completedAt": "2026-07-26T22:34:36.150Z",
-    "operatorAttestation": "Produced by a fresh separate Codex process that received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
+    "operatorAttestation": "Installed from the fresh separate Codex process result. The process received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

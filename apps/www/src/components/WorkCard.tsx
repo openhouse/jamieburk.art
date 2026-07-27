@@ -42,6 +42,7 @@ export function WorkCard({ item, compact = false }: WorkCardProps) {
               alt={image.alt}
               className="aspect-[4/3] w-full object-cover"
               height={image.height}
+              priority={!compact && item.slug === "harry-j-epstein"}
               sizes="(min-width: 768px) 32vw, 100vw"
               src={image.src}
               style={{ objectPosition: image.objectPosition }}

@@ -1,43 +1,36 @@
 {
   "evaluator": "Codex independent sanitized-dossier holdout evaluator",
-  "reviewerId": "sack-c-photo-knowledge-rebound",
+  "reviewerId": "sack-c-photo-knowledge-hiring-readiness-2026-07-26",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9",
+  "candidateSha256": "192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d",
   "score": 4,
   "pass": true,
   "evidence": [
-    "candidate-manifest.json lists 46 files; independently applying SHA-256(path + NUL + raw bytes + NUL) in manifest order produced 47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9, exactly matching the identity contract.",
-    "The rendered homepage at / visibly states: observe relationships, model the emerging system, prototype an interface, test it through social or collective use, then document revision and handoff. runtime-evidence/holdout-home.png and docs/qa/layout-A/home-mobile.png confirm that this method is legible without leaving the homepage.",
-    "The rendered /about surface links directly to Harry J. Epstein Company, NYC Artist Coalition / FairRentNYC, WOWList, and Sunday Dinner and 196, then traces each through observed relationships, model, interface, use and feedback, revision and handoff, and evidence boundary. apps/www/src/app/about/page.tsx supplies the corresponding inspectable structure.",
-    "At /work/harry-j-epstein, the rendered current operating loop connects customer and team relationships to an integrated product-information, ordering, marketing, analytics, and follow-up model; the storefront and internal routines form the interface; bounded questions and analytics drive revision; reusable content patterns and workflows provide handoff. runtime-evidence/holdout-work-harry-j-epstein.png also visibly supplies the storefront artifact, analytics boundary, scope controls, and team credit.",
-    "At /work/196-sunday-dinner, the rendered loop is reconstructable through concrete proof: public 100th and 200th gathering records, a governed 2023 residency handoff, a governed 2025 operating schema, and a blank public-safe hosting template. apps/www/src/content/work/196-sunday-dinner.mdx explicitly maps observe, model, prototype an interface, test through social use, and document revision and handoff while refusing to claim a complete causal revision history.",
-    "At /work/fair-rent-nyc, social structure and information architecture visibly connect recurring meetings, public sources, open questions, source maps, provenance records, decision memory, and action tracking to campaign sites, town halls, hearings, public pathways, collective participation, and recoverable handoffs. The rendered page and apps/www/src/content/work/fair-rent-nyc.mdx distinguish Jamie's implementation from collective campaign authorship and policy outcomes.",
-    "The coursework audit is bounded correctly: docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md keeps protected UCSC evaluations withheld; apps/www/src/data/knowledge-bank/historical-knowledge.ts holds the Max/Jitter-era claim from public projection and explicitly rejects invention, peer-reviewed research, production deployment, sole authorship, and current proficiency. The public /about page uses only the dated, collectively governed Open House lineage.",
-    "docs/qa/evals-H/responsive-route-matrix.json records 56 successful checks across 14 routes at 360, 375, 768, and 1280 pixels, with zero axe violations, overflow, broken images after scroll, unlabeled images, failed requests, heading failures, or main-landmark failures."
+    "Identity contract validated independently: hashing every ordered candidateRelativePaths entry using path + NUL + raw bytes + NUL reproduced candidate-manifest.json SHA-256 192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d, with no missing candidate files.",
+    "The rendered homepage `/` states the complete method in plain language and links directly to project evidence.",
+    "The rendered `/about` route makes the method recursive and distinguishes current HJE, NYC Artist Coalition / FairRentNYC, and Sunday Dinner / 196 from historical WOWList.",
+    "The HJE trace runs from customer language and operating habits through requirements, storefront and routines, feedback, revision, and team-maintainable handoff.",
+    "The Sunday Dinner / 196 trace runs from artist and participation needs through invitations, onboarding, access handoffs, recurring social use, a governed handoff, and an operating schema.",
+    "The NYC Artist Coalition / FairRentNYC trace runs from lived experience, meetings, sources, and institutional actors through source maps, public interfaces, collective use, running minutes, and reviewable decision trails.",
+    "Across those projects, information architecture is visibly tied to social structure, participation, learning, and continuity rather than presented as a tool list.",
+    "Bounded coursework is not substituted for current proof and rejects disciplinary invention, peer-reviewed or production deployment, sole authorship, and present Max/Jitter proficiency."
   ],
-  "gaps": [
-    "Human image rights, represented-person consent and dignity, exact credit, crop, and caption, collective credit, final public usefulness, Jamie approval of the unchanged candidate, deployment, and indexing remain open human gates. Their explicit branch-review status does not reduce this otherwise complete content score.",
-    "The rendered-evidence JSON contains capture-machine screenshot paths outside the dossier, although corresponding sanitized screenshot copies were supplied and inspected inside runtime-evidence/. This is evidence-package housekeeping rather than a PR-016 content failure."
-  ],
+  "gaps": [],
   "safety_findings": [
-    "docs/qa/layout-A/photo-review-register.json marks all 13 included photographs branch-review and productionPublicationStatus pending-exact-image-human-review; all 13 registered image SHA-256 values match the supplied files.",
-    "apps/www/src/data/photography.ts repeats the unresolved exact crop, caption, credit, rights, consent, dignity, and collective-credit boundary. scripts/check-public-safety.mjs turns branch-review photography into a production failure while retaining it as a non-production warning.",
-    "The public-safety script also rejects private-path material, raw or private transcript exposure, credentials, confidential markers, permissive-by-default robots behavior, and production without explicit indexing opt-in.",
-    "Collective and privacy boundaries are visible in the FairRentNYC and Sunday Dinner surfaces: campaign outcomes remain collective, participant-level records stay protected, and the public hosting specimen is explicitly derivative rather than a reproduced private record.",
-    "This sack-c result is a simulated expert lens only and is not Warren Sack's participation, quotation, endorsement, or judgment."
+    "Production image clearance remains open; every integrated photograph is branch-review and every exact-image human gate remains pending.",
+    "Machine evaluation is not publication clearance and does not complete rights, consent, dignity, credit, crop, caption, usefulness, or Jamie approval.",
+    "The sanitized dossier demonstrates rendered review, not production deployment or indexing authorization."
   ],
-  "recommendation": "PASS at score 4 for independent run sack-c. The recursive method is plainly visible, three current projects make it reconstructable through inspectable interfaces and operating evidence, and the historical lineage is carefully bounded. Preserve the current anti-overclaim language and branch-review status, and do not deploy or enable indexing until every listed human gate is closed against the unchanged candidate.",
+  "recommendation": "Pass PR-016 at score 4 under this simulated lens. Preserve the exact candidate identity and coursework boundaries, and do not publish or index until all human gates are explicitly completed.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa08a-3203-7720-93e4-22f320e84abf",
-    "agentNickname": "Bohr",
+    "processSessionId": "019fa0e8-28e0-7922-8763-50a381bce5ce",
+    "agentNickname": "Erdos",
     "model": "inherited-current-model",
     "reasoningEffort": "inherited",
     "sandbox": "read-only",
     "ephemeral": true,
-    "startedAt": "2026-07-26T22:27:15.848Z",
-    "completedAt": "2026-07-26T22:31:06.254Z",
-    "operatorAttestation": "Produced by a fresh separate Codex process that received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
+    "operatorAttestation": "Installed from the fresh separate Codex process result. The process received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

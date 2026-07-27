@@ -1,27 +1,41 @@
 ---
 name: "Jamie Burkart Portfolio"
-description: "Public-safe portfolio for technical project management, product operations, implementation, and civic documentation work."
+description: "A public-safe professional index of operating structure, collective work, evidence, and care."
 colors:
-  broadway-blue: "#0b5f81"
-  oil-white: "#eeefec"
-  oil-paper: "#f7f4ee"
-  oil-ink: "#343435"
-  dark-gray: "#5e5f61"
-  deep-green: "#1f5c3e"
-  vandyke-brown: "#76533a"
-  yellow-ochre: "#e9b64e"
-  lemon-yellow: "#f7ec86"
-  pale-orange: "#fce1d1"
-  pale-blue: "#74c2e5"
-  classic-rose: "#e2aeb4"
+  base-white: "#ffffff"
+  reading-surface: "#f3f6f8"
+  soft-rule: "#d9e4e9"
+  ink: "#1a232b"
+  muted-ink: "#66737b"
+  public-blue: "#0b5f81"
+  work-jacket-blue: "#2f6f89"
+  protected-green: "#4e6f61"
+  outcome-green: "#245b3e"
+  correction-red: "#c83b32"
+  machine-graphite: "#222b36"
+  observed-blue: "#4c97c2"
+  corroborated-green: "#4a7f4f"
+  disputed-ochre: "#d1a23f"
+  harm-red: "#a52a24"
+  vandyke-brown: "#765c4c"
+  lemon-field: "#f3df9a"
+  pale-orange: "#efd5c7"
+  pale-blue: "#d9e4e9"
+  classic-rose: "#d5b8bc"
+  selection-overlay: "#d1a23f73"
+  hero-wash: "#ffffffe0"
+  hero-wash-mobile: "#ffffffe6"
+  light-rule: "#ffffff40"
+  light-copy: "#ffffffeb"
+  light-source: "#ffffffc7"
 typography:
   display:
-    fontFamily: "League Spartan, Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Karla, ui-sans-serif, system-ui, sans-serif"
     fontWeight: 700
-    lineHeight: 1.02
+    lineHeight: 1
     letterSpacing: "0"
   headline:
-    fontFamily: "League Spartan, Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Karla, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.875rem"
     fontWeight: 700
     lineHeight: 1.2
@@ -39,15 +53,16 @@ typography:
     lineHeight: 1.65
     letterSpacing: "0"
   label:
-    fontFamily: "Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Oswald, Arial Narrow, ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
-    fontWeight: 700
+    fontWeight: 600
     lineHeight: 1.2
-    letterSpacing: "0"
+    letterSpacing: "0.055em"
 rounded:
-  selector: "0.35rem"
-  field: "0.35rem"
-  box: "0.5rem"
+  inline: "0.15rem"
+  selector: "0.25rem"
+  field: "0.25rem"
+  box: "0.25rem"
   card: "0.5rem"
   pill: "999px"
 spacing:
@@ -59,203 +74,207 @@ spacing:
   section: "4rem"
 components:
   button-primary:
-    backgroundColor: "{colors.broadway-blue}"
-    textColor: "{colors.oil-white}"
-    rounded: "{rounded.field}"
-    padding: "0.75rem 1rem"
+    backgroundColor: "{colors.work-jacket-blue}"
+    textColor: "{colors.base-white}"
+    rounded: "{rounded.card}"
+    padding: "0.75rem 1.25rem"
   button-secondary:
-    backgroundColor: "{colors.oil-paper}"
-    textColor: "{colors.oil-ink}"
-    rounded: "{rounded.field}"
-    padding: "0.75rem 1rem"
+    backgroundColor: "{colors.base-white}"
+    textColor: "{colors.public-blue}"
+    rounded: "{rounded.card}"
+    padding: "0.75rem 1.25rem"
   button-ghost:
-    backgroundColor: "transparent"
-    textColor: "{colors.broadway-blue}"
-    rounded: "{rounded.field}"
-    padding: "0.75rem 1rem"
+    backgroundColor: "{colors.base-white}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.card}"
+    padding: "0.75rem 1.25rem"
   card:
-    backgroundColor: "{colors.oil-paper}"
-    textColor: "{colors.oil-ink}"
+    backgroundColor: "{colors.reading-surface}"
+    textColor: "{colors.ink}"
     rounded: "{rounded.card}"
     padding: "1.25rem"
   status-chip:
-    backgroundColor: "{colors.oil-white}"
-    textColor: "{colors.oil-ink}"
+    backgroundColor: "{colors.base-white}"
+    textColor: "{colors.ink}"
     rounded: "{rounded.pill}"
-    padding: "0.35rem 0.65rem"
+    padding: "0.25rem 0.75rem"
 ---
 
 # Design System: Jamie Burkart Portfolio
 
 ## 1. Overview
 
-**Creative North Star: "The Public Workbench"**
+**Creative North Star: "The Human Index"**
 
-The system should feel like a careful working table where evidence has been
-sorted, labeled, and made usable without exposing private source material. It
-uses print-adjacent restraint, civic color, readable type, and modest component
-structure to make complex work legible.
+The portfolio is a public workbench: a calm, legible place where evidence,
+photographs, collective credit, and operating decisions have been sorted and
+made usable. Its visual language comes from working materials Jamie actually
+uses: a blue work jacket, correction marks, public records, meeting packets,
+index cards, and practical institutional forms.
 
-This is a brand surface, but the brand is the operating practice. The design
-must create trust through order, language, and public-safety boundaries rather
-than spectacle. It rejects generic SaaS drama, consultant hype, private archive
-behavior, and decorative AI-template flourishes.
+The brand is the practice. The site should help a hiring reader see how Jamie
+turns emerging work into structure while preserving the people, limits, and
+sources that make each account trustworthy. Photography supplies presence and
+particularity. Type and layout supply the durable handoff.
 
 **Key Characteristics:**
 - Public-safe before persuasive.
 - Dense enough to show real work, calm enough to scan.
-- Warm, precise, and modular.
-- Evidence-led, never inflated.
-- Human without becoming decorative.
+- Precise, warm, modular, and ethically grounded.
+- Evidence-led without resembling an archive browser.
+- Human presence without decorative sentiment.
 
 ## 2. Colors
 
-The palette is civic and archival: blue and green carry structure and trust,
-ochre adds a restrained signal color, and warm paper tones support long reading.
+The palette combines calibrated white and blue-grey reading surfaces with a
+work-jacket blue, institutional green, graphite, and red-pencil correction.
+Secondary pastels appear only as quiet evidence and artifact fields.
 
 ### Primary
-- **Broadway Blue** (`--jb-broadway-blue`): Primary action, links, status emphasis,
-  proof-strip surfaces, and structural accents.
+- **Work-Jacket Blue:** Primary controls and the ordinary presence of work.
+- **Public Blue:** Links, navigation emphasis, and civic-facing structure.
 
 ### Secondary
-- **Deep Green** (`--jb-deep-green`): Outcome language, role-fit emphasis, and
-  quieter confidence after the primary action color has done its work.
-- **Yellow Ochre** (`--jb-yellow-ochre`): Selection, focus visibility, and sparing
-  highlight moments.
+- **Protected Green:** Stewardship, privacy, and supporting systems.
+- **Outcome Green:** Results and role-fit emphasis.
+- **Correction Red:** Attribution, repair, and accountable intervention.
 
 ### Tertiary
-- **Pale Blue, Pale Orange, Lemon Yellow, Classic Rose**: Supporting artifact
-  surface colors. Use them as soft evidence-layer cues, never as a rainbow
-  decoration system.
+- **Observed Blue:** Information received or witnessed but not necessarily verified.
+- **Corroborated Green:** Independent support exists.
+- **Disputed Ochre:** Sources conflict or human review remains open.
+- **Harm Red:** Unsafe, destructive, or irreversible action.
 
 ### Neutral
-- **Oil White** (`--jb-oil-white`): Main page ground.
-- **Oil Paper** (`--jb-oil-paper`): Alternate section and card surface.
-- **Oil Ink** (`--jb-oil-ink`): Primary text.
-- **Dark Gray** (`--jb-dark-gray`): Secondary text only when contrast remains
-  comfortably readable.
-- **Vandyke Brown** (`--jb-vandyke-brown`): Archival warmth and rule accents.
+- **Base White:** Calibrated page ground and the photographic reference point.
+- **Reading Surface:** Secondary reading bands and restrained cards.
+- **Soft Rule:** Dividers and low-emphasis containment.
+- **Ink:** Primary text.
+- **Muted Ink:** Secondary text only at accessible contrast.
+- **Machine Graphite:** Asserted information, machinery, and formal authority.
+- **Vandyke Brown:** Archival warmth used sparingly.
 
 ### Named Rules
 
-**The Public-Safety Color Rule.** Color must clarify status, evidence, action,
-or reading hierarchy. If color only decorates, remove it.
+**The Semantic Color Rule.** Color must clarify status, evidence, action, or
+reading hierarchy. If color only decorates, remove it.
 
-**The Ochre Rarity Rule.** Yellow ochre earns attention through scarcity. Use it
-for focus, selection, and occasional proof, not as a general accent wash.
+**The Correction Rule.** Red marks accountable intervention, not generic
+urgency. Harm has its own darker red.
+
+**The Ochre Rarity Rule.** Ochre earns attention through scarcity. Reserve it
+for focus, selection, disputed state, and occasional proof.
 
 ## 3. Typography
 
-**Display Font:** League Spartan with Karla and system sans fallbacks.
+**Display Font:** Karla with system sans fallbacks.
 **Body Font:** Karla with system sans fallbacks.
-**Label/Mono Font:** Karla; there is no mono system in the current site.
+**Label Font:** Oswald with Arial Narrow and system sans fallbacks.
 
-**Character:** The pairing is practical and public-facing. League Spartan gives
-headings a sturdy placard quality; Karla keeps long summaries readable,
-approachable, and unshowy.
+**Character:** Karla keeps the site direct, humane, and highly readable. Oswald
+creates a narrow civic-label voice for compact metadata without competing with
+the body copy.
 
 ### Hierarchy
-
-- **Display** (700, large responsive heading, tight line-height): Hero identity
-  and major page titles only.
-- **Headline** (700, 1.875rem, 1.2 line-height): Section headers and case-study
-  landmarks.
-- **Title** (600, 1.25rem, 1.35 line-height): Card titles, artifact names, and
-  sidebar blocks.
-- **Body** (400, 17px, generous line-height): Project summaries, notes, care
-  language, and MDX case-study prose. Keep reading measures near 65-75
-  characters.
-- **Label** (700, 0.875rem): Status, navigation, and compact metadata.
+- **Display** (700, responsive, 1 line-height): Jamie's name and true page titles.
+- **Headline** (700, 1.875rem, 1.2 line-height): Section and case-study landmarks.
+- **Title** (600, 1.25rem, 1.35 line-height): Card titles and artifact names.
+- **Body** (400, 17px, 1.65 line-height): Summaries, notes, and case-study prose,
+  generally held to 65-75 characters.
+- **Label** (600, 0.875rem, 0.055em tracking): Navigation, status, source, and
+  compact metadata. Uppercase is reserved for labels, not every section.
 
 ### Named Rules
 
-**The Plain Evidence Rule.** Use type weight, spacing, and placement before
-inventing visual effects. No gradient text, no ornamental tracking, no clever
-typographic gimmicks.
+**The Plain Evidence Rule.** Use weight, spacing, and placement before visual
+effects. Letter spacing is zero except for the established label voice.
+
+**The Scale Rule.** Hero-scale type belongs only in a hero. Dense professional
+surfaces use smaller, tighter headings.
 
 ## 4. Elevation
 
-This system is flat by default. Depth comes from borders, tonal surface changes,
-section rhythm, and reading hierarchy. The current soft shadow is a minor
-affordance on cards and artifact surfaces; it must stay quiet and never combine
-with heavy blur or glossy glass effects.
+The system is flat by default. Depth comes from full borders, tonal surface
+changes, photography, and reading hierarchy. A quiet two-pixel surface shadow
+may separate an individual card or artifact, but no page section floats as a
+decorative panel.
 
 ### Shadow Vocabulary
-
-- **Quiet Surface Shadow** (`shadow-sm`): A low-contrast lift for cards or
-  representative artifact panels only.
+- **Quiet Surface Shadow** (`0 1px 2px rgba(26, 35, 43, 0.08)`): Individual
+  cards and representative artifacts only.
 
 ### Named Rules
 
-**The Flat Workbench Rule.** Surfaces rest on the page. Lift appears only when it
-helps a card or artifact read as a discrete object.
+**The Flat Workbench Rule.** Surfaces rest on the page. Lift appears only when
+it helps an actual object read as discrete.
+
+**The Full-Border Rule.** Use a complete one-pixel boundary or none. Thick
+colored side stripes are forbidden.
 
 ## 5. Components
 
 ### Buttons
-
-- **Shape:** Modest rounded rectangle (0.35rem).
-- **Primary:** Broadway Blue background with Oil White text; use for the main
-  route forward.
-- **Hover / Focus:** Hover may shift toward Deep Green. Focus must preserve the
-  visible Yellow Ochre outline.
-- **Secondary / Ghost:** Secondary uses the warm surface and a full border.
-  Ghost keeps the page quiet and should remain text-forward.
+- **Shape:** Stable, modest rounded rectangles with an 0.5rem radius.
+- **Primary:** Work-Jacket Blue with white text and 0.75rem by 1.25rem padding.
+- **Hover / Focus:** Hover reinforces the civic palette. Focus uses a visible
+  three-pixel ochre outline with offset.
+- **Secondary / Ghost:** Secondary is a full Public Blue outline. Ghost is
+  text-led and gains only a pale blue hover field.
 
 ### Chips
-
-- **Style:** Compact, rounded metadata labels with clear contrast.
-- **State:** Chips are informational unless explicitly wired as filters later;
-  do not imply interactivity without behavior.
+- **Style:** Compact metadata with full borders or solid semantic fills.
+- **State:** Chips communicate status unless explicitly implemented as controls.
 
 ### Cards / Containers
-
-- **Corner Style:** Gentle radius (0.5rem), never pill-shaped.
-- **Background:** Oil Paper or Oil White, selected for reading contrast.
-- **Shadow Strategy:** Quiet Surface Shadow only; no dramatic card stacks.
-- **Border:** One-pixel ink-tinted borders for containment.
-- **Internal Padding:** 1.25rem is the common content-card baseline.
+- **Corner Style:** Modest 0.5rem radius.
+- **Background:** Base White or Reading Surface.
+- **Shadow Strategy:** Quiet Surface Shadow only.
+- **Border:** One-pixel ink-tinted full borders.
+- **Internal Padding:** 1.25rem baseline.
 
 ### Inputs / Fields
-
-No mature form system exists yet. If fields are added, use Oil White or Oil
-Paper surfaces, one-pixel borders, 0.35rem radius, strong visible focus, clear
-labels, and plain error text.
+- **Style:** White or Reading Surface, one-pixel full border, 0.25rem radius.
+- **Focus:** Three-pixel ochre outline with offset.
+- **Error / Disabled:** Error uses Harm Red and plain language. Disabled state
+  remains legible and never relies on opacity alone.
 
 ### Navigation
 
-Navigation is restrained and text-led. It should help a reviewer move between
-work, resume, about, contact, and lab surfaces without turning into a product
-app shell.
+Navigation is restrained and text-led. It must let a time-limited hiring reader
+move directly among Work, Resume, About, and Contact. Mobile navigation uses a
+real disclosure control, stable touch targets, and visible focus.
 
-### Signature Component
+### Photography
 
-The case-study model is the signature system: status, visibility, what was
-unclear, what became usable, artifacts, source layer, known/open/protected, care
-notes, and credits. Preserve that information architecture wherever possible.
+A photograph is an occurrence, not decoration. The asset, derivative, crop,
+caption, credit, surrounding copy, viewport, destination, and action are
+reviewed together. Public-repo presence does not by itself clear production,
+indexing, rights, consent, or exact credit.
+
+### Case Studies
+
+The case-study model is the signature information system: what was unclear,
+what became usable, Jamie's role, collective context, artifacts, sources,
+known/open/protected boundaries, care notes, and credits.
 
 ## 6. Do's and Don'ts
 
 ### Do:
-
-- **Do** keep public safety visible in the structure of every case study.
-- **Do** use Broadway Blue for primary action and Deep Green for outcome-oriented
-  emphasis.
-- **Do** keep summaries scannable while preserving nuance.
-- **Do** use representative diagrams, approved artifacts, and redacted examples
-  instead of raw private material.
-- **Do** keep focus states highly visible and reduced-motion behavior intact.
+- **Do** make the role, action, outcome, source basis, and honest limit scan quickly.
+- **Do** use photography to reveal real work, people, place, and participation.
+- **Do** preserve collective credit, consent, rights, attribution, and protected absence.
+- **Do** keep focus states, keyboard paths, reduced motion, and contrast at WCAG 2.2 AA or better.
+- **Do** keep public safety visible in case-study and photographic structures.
 
 ### Don't:
-
 - **Don't** make the site feel like a generic SaaS landing page, a private
   archive browser, a consultant hype funnel, a heavy animated portfolio, or a
   decorative AI-generated template.
-- **Don't** publish private emails, raw transcripts, private coalition notes,
-  legal-review materials, private correspondence, internal analytics,
-  client-private material, unapproved photos, private fonts, or named
-  stakeholder details without approval.
+- **Don't** publish inflated claims, unapproved metrics, raw transcripts,
+  private coalition notes, legal-review materials, private correspondence,
+  internal analytics, client-private material, unapproved photos, private
+  fonts, or unapproved stakeholder details.
 - **Don't** use gradient text, glassmorphism, giant hero metrics, decorative
-  side-stripe borders, or endlessly repeated icon-card grids.
-- **Don't** over-round cards or panels beyond the existing 0.5rem card radius.
-- **Don't** let color or visual texture compete with the evidence.
+  side-stripe borders, repeated icon-card grids, or decorative background grids.
+- **Don't** make every section an uppercase eyebrow or numbered index.
+- **Don't** over-round cards or nest cards inside cards.

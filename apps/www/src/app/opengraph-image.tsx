@@ -14,8 +14,8 @@ export default function Image() {
       <div
         style={{
           alignItems: "flex-start",
-          background: "#eeefec",
-          color: "#343435",
+          background: "#ffffff",
+          color: "#1a232b",
           display: "flex",
           flexDirection: "column",
           fontFamily: "sans-serif",
@@ -27,7 +27,7 @@ export default function Image() {
       >
         <div
           style={{
-            background: "#0b5f81",
+            background: "#c83b32",
             height: "12px",
             marginBottom: "54px",
             width: "100%"
@@ -39,8 +39,8 @@ export default function Image() {
         <div style={{ fontSize: 88, fontWeight: 800, marginTop: 24 }}>
           Jamie Burkart
         </div>
-        <div style={{ color: "#1f5c3e", fontSize: 42, fontWeight: 700, marginTop: 28 }}>
-          I turn ambiguous work into usable systems.
+        <div style={{ color: "#245b3e", fontSize: 42, fontWeight: 700, marginTop: 28 }}>
+          I create operating structure for complex public-facing teams.
         </div>
       </div>
     ),

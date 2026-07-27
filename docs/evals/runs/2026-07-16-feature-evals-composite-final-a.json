@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "composite-holdout-photo-knowledge-ci-rebind-a-2026-07-26",
+  "judgeId": "composite-holdout-photo-knowledge-hiring-readiness-a-2026-07-26",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "1b42d1a5f255c4722527e157beaa547b4b6e3d8f684d425dc928633c0f836f62",
+  "candidateFingerprint": "8e924450f0ac88851de5afee312469ad28128a687c02e7c68b4f8d8598ad85ce",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,138 +12,124 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independently resolved refs/remotes/origin/feature/evals-A through feature/evals-N; all 14 heads match the frozen expected SHAs.",
-        "The integration register contains exactly one decision for each frozen branch and declares writableBranch feature/knowledge-h with pullRequestBase develop.",
-        "The deterministic composite evaluator passed COMP-001 with 14/14 branch decisions."
+        "The frozen A-N inventory contains exactly 14 decisions, and every recorded origin ref resolves to its required head.",
+        "The register names feature/knowledge-h as the writable branch and develop as the pull-request base."
       ],
-      "rationale": "The complete frozen branch family, identities, integration branch, and base are exact and inspectable."
+      "rationale": "The exact frozen branch family and integration boundary are complete and internally consistent."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent canonicalization reproduced integration-register SHA-256 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
-        "All 14 entries use allowed selective dispositions, provide substantive rationale and verification identifiers, and name existing destination paths.",
-        "The register preserves frozen branches as read-only references and does not direct a wholesale branch merge."
+        "All 14 register entries use an allowed decision, provide substantive strength and rationale text, name existing destinations, and reference composite criteria.",
+        "The canonical register digest independently resolves to 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "The website decision explicitly preserves selective composition instead of projecting the full knowledge architecture."
       ],
-      "rationale": "The selective integration is reconstructable from explicit reviewed decisions."
+      "rationale": "Integration choices are inspectable, destination-bound, and protected by an exact reviewed digest."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 11 canonical Knowledge Bank files exist, while lifecycle-schema.ts, lifecycle-records.ts, development-records.ts, and a parallel docs/knowledge-wiki root are absent.",
-        "RFC 0003 explicitly complements RFC 0002, supersedes nothing, and extends the canonical docs/knowledge-bank Wiki with asset, derivative, occurrence, and edition records.",
-        "The repository repair leaves rfcs as the canonical root; scripts/check-rfcs.mjs passed all three indexed RFCs.",
-        "Public application imports use the fail-closed Knowledge Bank facade, which exposes only public sources, confirmed claims, and allowlisted active projections."
+        "All 11 canonical architecture files exist and none of the three forbidden parallel lifecycle roots exists.",
+        "The application-facing knowledge-bank index exports public.ts and schema.ts; no public application module imports records.ts, historical-knowledge.ts, agency-graph.ts, or lifecycle-operations.ts.",
+        "The public registry exposes only claims, pages, and sources through redacted schemas."
       ],
-      "rationale": "RFC 0003 extends the canonical architecture without creating a parallel lifecycle database or public mirror."
+      "rationale": "The candidate extends one canonical knowledge architecture and keeps protected implementation records out of public rendering."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All four lifecycle-operation tests passed: identical replay is idempotent, repeated artifacts receive linked duplicate identities, changed content at a stable identity is rejected, and held claims, inquiries, corrections, projections, and orphan sources remain queryable.",
-        "All seven photo-loop mutation tests passed, rejecting checksum drift, missing application binding, private locators, unresolved caption assertions, and production approval ahead of rights review.",
-        "Photo-knowledge validation passed 10/10 with generated outputs current and human gates still open.",
-        "The Council-chamber canary links an asset, derivative, occurrence, edition, application manifest entry, and opaque private-source binding without exposing private pixels, paths, or library identifiers."
+        "Lifecycle tests verified identical stable-record replay is idempotent, a repeated artifact with a new ID is preserved as a linked duplicate, and a changed-content stable-ID collision is rejected.",
+        "Queries expose mature held claims, unresolved inquiries, corrections, projection state, and zero orphan sources.",
+        "The lifecycle and knowledge mutation run completed 200/200 tests."
       ],
-      "rationale": "The living photo loop is reconstructable and fails closed on identity, provenance, privacy, assertions, and approval order."
+      "rationale": "Intake is append-safe and lifecycle state remains queryable without destructive deduplication or silent promotion."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Canonical validation passed for 280 sources, 98 claims, 31 agency relations, and 4 corrections.",
-        "Current Wiki reports contain 130 records, 515 typed plus 8 evidence edges, 327 prose links, zero orphans, zero dead ends, and two rights-review items.",
-        "Wiki currentness checks passed, and employment checks confirmed all eight generated hiring-context reports current.",
-        "The four regenerated hiring-acceptance Markdown and JSON outputs record source commit d52277b216fc85fbf9bc37576071992b47969a42, candidatePathsClean true, and no protected Wiki or raw-communication intake.",
-        "Knowledge Wiki tests passed 115/115, including privacy, relation, collective-credit, endorsement, stale-evidence, and generated-file mutation defenses."
+        "A fresh compile produced 131 records, 520 typed relations, 8 evidence relations, 329 prose links, zero compiler errors, zero orphans, zero dead ends, and two rights-review records.",
+        "Canonical validation covered 280 sources, 98 claims, 31 agency relations, and 4 corrections with bounded population and agency semantics.",
+        "Generated Wiki and employment outputs passed exact currentness checks with no stale files."
       ],
-      "rationale": "Graph and generated-state integrity are current while private evidence, collective agency, and bounded claims remain protected."
+      "rationale": "The graph is current and source, evidence, credit, correction, population, and public-private boundaries remain structurally enforced."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The professor-lens suite passed 16/16 and independent enumeration reproduced the exact 46-file dossier fingerprint 47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9.",
-        "All six fresh scorecards have distinct reviewer and process-session identifiers, score 4/pass, bind that exact dossier, and identify themselves as simulated judgments rather than named-person participation or endorsement.",
-        "Homepage, About, Sunday Dinner, HJE, FairRentNYC, Technical Operations, and lab projections expose selective, role-clear public narratives with visible evidence boundaries and protected absences.",
-        "Generated desktop and mobile screenshots were visually inspected for representative homepage, About, FairRentNYC, and HJE surfaces without observed overlap, truncation, or broken primary imagery.",
-        "No /proofs page or apps/www/src/app/proofs/page.tsx exists."
+        "The professor evaluator passed 16/16 criteria.",
+        "The 46-file dossier independently recomputed to 192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d; all six distinct read-only scorecards target that digest and score 4/pass.",
+        "HJE, FairRentNYC, Sunday Dinner/196, About, Technical Operations, and the lab expose bounded operating loops while retaining collective-credit and protected-source limits.",
+        "No /proofs route exists, and mature held material remains outside public projection."
       ],
-      "rationale": "The public site is a selective, inspectable projection rather than a Wiki mirror or synthetic proof surface."
+      "rationale": "The public site is a selective professional and artistic composition, not a Wiki mirror, while the required practice continuities remain reconstructable."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The five controls for human corroboration, collective review, hiring usability, job-funnel evidence, and external validity remain explicitly open with required evidence, anti-gaming rules, next actions, and projection boundaries.",
-        "Independent hashing reproduced blind-spot digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "All 13 registered photographs remain branch-review, and their current files independently match the register's SHA-256 values.",
-        "The governed photo occurrence leaves rights, represented-person dignity and consent, artwork review, exact crop, caption and credit, staging, production, and indexing unresolved.",
-        "Public-safety passed in non-production mode with the expected branch-review warning and retains a production failure for unresolved photography."
+        "All five human-evidence controls for corroboration, collective review, hiring usability, job-funnel learning, and external validity remain open under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "Each control retains required evidence, anti-gaming rules, a next action, and a public-projection boundary.",
+        "The Wiki separately reports collaborator review, media rights and consent, editorial approval, production observation, retrieval study, and hiring outcomes as unresolved human-authority gates."
       ],
-      "rationale": "Machine evidence records known absences honestly and does not manufacture human clearance."
+      "rationale": "Passing controls govern missing evidence without manufacturing human validation or publication authority."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent canonical hashing reproduced frozen rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
-        "Fifteen of sixteen composite contract and mutation tests passed; the sole failure was the top-level acceptance assertion caused only by the deliberately stale excluded receipts.",
-        "The passing mutations cover branch omission, fabricated refs, semantic rubric weakening, checksum refresh gaming, decorative records, stale generated state, source mutation, optimizer self-grading, provenance collapse, synthetic human evidence, and blocker compensation.",
-        "Independent enumeration reproduced the exact 124-file public-surface fingerprint d4c07d0058b4b16f1e54acd32cf61ad3115b9067a7c813f73d23d319587b8527.",
-        "The 56-row matrix covers 14 canonical routes at 360, 375, 768, and 1280 pixels with zero axe violations, overflow, post-scroll image failures, unlabeled images, failed requests, non-success responses, or heading and landmark failures.",
-        "apps/www/next-env.d.ts uses the production .next/types/routes.d.ts declaration and is included in the current accessibility binding."
+        "The independently recomputed rubric digest matches c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340 and the separately pinned constant.",
+        "Fifteen targeted composite mutation tests rejected branch omission, semantic weakening with checksum refresh, fabricated heads, decorative records, stale outputs, optimizer self-grading, provenance collapse, synthesized human evidence, and score compensation.",
+        "Responsive evidence validates 56 states across 14 canonical routes and four widths with all failure totals zero and current 124-file fingerprint 475bf95fa3156252c01c8a3dd509d90bc3f6ceb2e03f442b44cf9c0c2c5aaf72.",
+        "Knowledge Wiki evaluation passed 136/136 blocking criteria across 13 lenses."
       ],
-      "rationale": "Frozen governance, exact-surface accessibility evidence, evaluator separation, and mutation defenses resist stale-state and checksum gaming."
+      "rationale": "Frozen governance, exact-candidate evidence, mutation resistance, and non-compensable blocking semantics are current and fail closed."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independently enumerated 805 cached or unignored paths and excluded only the two declared holdout receipts, yielding exactly 803 candidate files.",
-        "Independent hashing of each sorted path, byte length, and raw file content reproduced candidate fingerprint 1b42d1a5f255c4722527e157beaa547b4b6e3d8f684d425dc928633c0f836f62.",
-        "The only worktree modifications are the four regenerated hiring-acceptance report files; their exact bytes are included in candidate identity, while the evaluator's source candidate paths report clean.",
-        "Both excluded receipts bind earlier fingerprint 420fd14049865ac082856d6b7196f1d7ed264a2733b3cd033c395eed42b29935, fully explaining the current deterministic COMP-009 failure.",
-        "No blocker beyond those deliberately stale excluded receipts was found.",
-        "This judgment agrees to serve as one replacement receipt only when installed with one distinct, provenance-bound independent companion judgment accepting the same unchanged fingerprint and frozen rubric."
+        "An independent source-tree calculation reproduced exactly 806 files and SHA-256 8e924450f0ac88851de5afee312469ad28128a687c02e7c68b4f8d8598ad85ce using the two and only two declared receipt exclusions.",
+        "COMP-001 through COMP-008 have no blocker or material not-observed evidence; the excluded old receipts are stale as expected under the bootstrap rule.",
+        "This result may become one stopping receipt only when installed with a distinct provenance-bound independent companion that accepts the same unchanged 806-file candidate and frozen rubric."
       ],
-      "rationale": "Under the stated bootstrap rule, the exact candidate is eligible for acceptance conditional only on paired installation."
+      "rationale": "The exact candidate is eligible for the paired stopping decision, conditional solely on distinct companion installation."
     }
   ],
   "notObserved": [],
   "findings": [
-    "COMP-001 through COMP-008 pass independently and deterministically; no additional architecture, provenance, portability, graph-currentness, public-safety, or evaluator-immutability blocker was found.",
-    "The repository-level composite command still fails COMP-009 solely because both deliberately excluded receipts bind the prior candidate; this proposed judgment does not conceal that stale state.",
-    "RFC 0003 remains an implementing extension of the canonical Knowledge Wiki. Its governed photo edition contains one occurrence and explicitly records twelve remaining migration items.",
-    "Every photograph remains branch-review, and no public /proofs route exists.",
-    "Human approval, image rights, represented-person consent and dignity, collective credit, exact crop, caption and credit, public usefulness, deployment, indexing, hiring validation, and employment outcomes remain open and are not implied by this acceptance."
+    "All 13 photographs and their review-register entries remain branch-review; all file checksums match, only one photograph has completed first-class Wiki occurrence governance, and twelve remain in the explicit migration queue.",
+    "Photographer rights, represented-person and artwork review, exact caption, credit and crop, collective credit, staging, production, indexing, and Jamie approval remain open.",
+    "Hiring-reader validation, application approval, deployment observation, job-funnel evidence, and employment outcomes remain human or external gates.",
+    "Machine, browser, professor-lens, and composite passes provide candidate-bound review evidence only; they do not confer publication or production approval."
   ],
-  "recommendation": "Accept this exact 803-file candidate only by installing this proposed receipt together with one distinct, provenance-bound independent companion judgment for unchanged fingerprint 1b42d1a5f255c4722527e157beaa547b4b6e3d8f684d425dc928633c0f836f62 and frozen rubric c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Re-run the deterministic composite gate after paired installation. Do not treat acceptance as publication, rights, consent, collective-credit, deployment, indexing, hiring-usability, or employment-outcome approval.",
+  "recommendation": "Accept this exact candidate for paired holdout installation. Install this judgment only with a distinct provenance-bound companion accepting the unchanged fingerprint and rubric; then rerun the composite gate without altering any candidate file. Keep publication, rights, consent, exact-image review, deployment, indexing, hiring validation, and employment outcomes blocked on their named human authorities.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa0b4-1bc9-7271-94f8-e614f0d0f217",
-    "agentNickname": "Locke",
+    "processSessionId": "019fa0f0-40dd-7e11-a94b-c6b064640cc4",
+    "agentNickname": "Hooke",
     "model": "inherited-current-model",
     "reasoningEffort": "inherited",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "You are an independent read-only composite holdout judge for the public-repository candidate in /private/tmp/jamieburk-art-photo-knowledge-A.\n\nDo not edit, generate, stage, commit, push, install, or write any repository file. Do not trust this prompt's claims without verification. Inspect only the public-repository candidate and generated QA screenshots. This is a simulated evaluator judgment, not participation or endorsement by any named person.\n\nCandidate identity is defined by scripts/lib/composite-integration-eval.mjs: every path from git ls-files --cached --others --exclude-standard, excluding only docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json and docs/evals/runs/2026-07-16-feature-evals-composite-final-b.json. Independently verify exactly 803 candidate files and SHA-256 fingerprint 1b42d1a5f255c4722527e157beaa547b4b6e3d8f684d425dc928633c0f836f62. Reject if count or fingerprint differs. Frozen rubric digest: c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.\n\nInspect .agents/evals/feature-evals-composite.json; scripts/lib/composite-integration-eval.mjs; the canonical Knowledge Wiki records and current generated reports; RFC 0003 and its RFP-to-RFC repository repair; the photo knowledge-loop implementation; asset/derivative/occurrence/edition schemas; photo review register and production gate; governed homepage canary and migration backlog; Sunday Dinner, HJE, FairRentNYC, About, Technical Operations, and lab projections; all six fresh professor-lens scorecards; the responsive route matrix and generated screenshots; Knowledge Bank evaluation and mutation defenses; public-safety boundaries; and open human gates. Independently evaluate COMP-001 through COMP-009.\n\nKnown observations to verify, not assume: COMP-001 through COMP-008 currently pass deterministically and COMP-009 alone fails because the two excluded receipts bind an earlier candidate. The four hiring-acceptance reports were regenerated from the clean exact source candidate and now record candidatePathsClean true and source commit d52277b216fc85fbf9bc37576071992b47969a42; verify their currentness rather than accepting this statement. The Wiki reports 130 records, 523 typed/evidence edges, 327 prose links, zero orphans/dead ends, and two rights-review items. The 56-state responsive matrix covers 14 routes at four widths and reports zero axe violations, overflow, broken images after scroll, unlabeled images, failed requests, non-success responses, or heading/landmark failures; its exact public-surface fingerprint is d4c07d0058b4b16f1e54acd32cf61ad3115b9067a7c813f73d23d319587b8527. The professor suite reports 16/16 and its six fresh independent judgments all score 4 for the exact 46-file dossier fingerprint 47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9. Every photo remains branch-review. No /proofs page exists. Human approval, image rights, represented-person consent and dignity, collective credit, exact crop/caption/credit, public usefulness, deployment, indexing, hiring validation, and employment outcomes remain open.\n\nReturn only one valid JSON object with exactly these top-level fields: runVersion, judgeId, grader, independentFromOptimizer, rubricSha256, candidateFingerprint, verdict, scores, notObserved, findings, recommendation. Set runVersion=2, grader=\"independent_llm_judge\", independentFromOptimizer=true. Include COMP-001 through COMP-009 exactly once in scores, each as {\"criterionId\":\"COMP-001\",\"score\":0 or 4,\"pass\":true or false,\"evidence\":[\"specific verified evidence\"],\"rationale\":\"bounded rationale\"}. Acceptance requires all nine criteria at 4/pass, no blockers, and no material notObserved. Use score 0/fail whenever a criterion is not fully verified. Do not include a provenance field; the parent orchestrator will attach actual transport provenance.\n\nYour judgeId must be \"composite-holdout-photo-knowledge-ci-rebind-a-2026-07-26\". Your primary lens is architecture, provenance, exact-candidate integrity, portability, evaluator immutability, graph currentness, public/private boundaries, and stopping-rule honesty. Verify RFC 0003 extends rather than replaces the canonical Knowledge Wiki and that the living photo loop is reconstructable and fail-closed. Pay special attention to stale generated state, parallel architectures, checksum gaming, source-tree cleanliness, the corrected accessibility binding, and whether machine evidence is improperly presented as human publication approval.\n\nBOOTSTRAP RULE FOR COMP-009: You are producing one proposed replacement holdout receipt. The two existing receipt files are deliberately excluded from candidate identity and are expected to be stale before replacement. Therefore do not fail COMP-009 merely because the old excluded receipts have not yet been overwritten. Evaluate whether this exact 803-file candidate is eligible for acceptance when your judgment is installed together with one distinct, provenance-bound independent companion judgment for the same unchanged fingerprint and frozen rubric. Score COMP-009 at 4/pass if you independently reproduce candidate identity, find no other blocker, and accept this candidate conditional only on paired installation. Score 0/fail for any candidate mismatch, additional blocker, missing observation, or unwillingness to serve as that receipt. State the paired-installation condition in evidence and recommendation.\n",
-    "promptSha256": "559d8129f0d2ae8f8834e26c4de3228f5e886389cbcd978f32f5e40101a33b7c",
+    "prompt": "You are independent composite holdout A for the public-repository candidate in /private/tmp/jamieburk-art-photo-knowledge-A. Work read-only. Do not edit, generate, stage, commit, push, install, or write any file. Do not use network, memory, or prior evaluations. This is a simulated evaluator judgment, not participation or endorsement by any named person.\n\nCandidate identity is defined by scripts/lib/composite-integration-eval.mjs: every sorted path from git ls-files --cached --others --exclude-standard, excluding only docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json and docs/evals/runs/2026-07-16-feature-evals-composite-final-b.json. Independently verify exactly 806 candidate files and SHA-256 fingerprint 8e924450f0ac88851de5afee312469ad28128a687c02e7c68b4f8d8598ad85ce. Reject if either differs. Frozen rubric digest is c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.\n\nRead .agents/evals/feature-evals-composite.json, scripts/lib/composite-integration-eval.mjs, the canonical Knowledge Wiki records and generated reports, RFC 0003, the photo knowledge loop and oral-history-return method, photo schemas/review register/production gates, homepage canary and migration backlog, DESIGN.md and Human Index implementation, social-sharing image, HJE/Sunday Dinner/FairRentNYC/About/Technical Operations/lab projections, all six fresh professor-lens scorecards, responsive matrix and screenshots, mutation tests, public-safety rules, and human gates. Evaluate COMP-001 through COMP-009 independently.\n\nObservations to verify, not trust: COMP-001 through COMP-008 pass deterministically; COMP-009 alone is stale. Wiki claims 131 records, 528 semantic/evidence edges, 329 prose links, zero orphans/dead ends, and two rights-review items. Browser evidence claims 56 states across 14 routes and four widths with zero axe, overflow, broken-image, unlabeled-image, request, HTTP, heading, or landmark failures, fingerprint 475bf95fa3156252c01c8a3dd509d90bc3f6ceb2e03f442b44cf9c0c2c5aaf72. Professor suite claims 16/16 and six independent 4/pass judgments bound to 46-file dossier 192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d. All photos remain branch-review; no /proofs route exists; rights, consent, credit/crop, publication, deployment, indexing, hiring validation, and employment outcomes remain human gates.\n\nReturn only one valid JSON object with exactly these top-level fields: runVersion, judgeId, grader, independentFromOptimizer, rubricSha256, candidateFingerprint, verdict, scores, notObserved, findings, recommendation. Set runVersion=2, judgeId=\"composite-holdout-photo-knowledge-hiring-readiness-a-2026-07-26\", grader=\"independent_llm_judge\", independentFromOptimizer=true. Include COMP-001 through COMP-009 exactly once in scores as {\"criterionId\":\"COMP-001\",\"score\":0 or 4,\"pass\":true or false,\"evidence\":[\"specific verified evidence\"],\"rationale\":\"bounded rationale\"}. Acceptance requires all nine at 4/pass, no blocker, and no material notObserved. Do not include provenance; the parent attaches transport provenance.\n\nPrimary lens: architecture, exact-candidate integrity, portability, graph currentness, public/private boundaries, selective projection, and stopping-rule honesty. Reject decorative governance, stale evidence, checksum gaming, parallel architectures, or machine evidence presented as human publication approval.\n\nBOOTSTRAP RULE FOR COMP-009: The two excluded old receipts are expected to be stale before replacement and must not alone fail COMP-009. Score COMP-009 4/pass only if you reproduce the exact 806-file fingerprint, find no other blocker, and agree for this result to become one receipt only when installed with a distinct provenance-bound companion accepting the same unchanged candidate and rubric. Otherwise fail. State the paired-installation condition in evidence and recommendation.",
+    "promptSha256": "ec4a27b0c8770b0bcd2d167e48b6bbde23193b974e9322f4c5b021232bfe4e67",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-26T23:13:05.989Z",
-    "completedAt": "2026-07-26T23:27:25.383Z",
-    "judgmentSha256": "b57d5d208d6a014fa25c14b1398efe731241148105ded740cd2231e0e8cb90e3"
+    "startedAt": "2026-07-27T00:39:46.926Z",
+    "completedAt": "2026-07-27T00:39:46.926Z",
+    "judgmentSha256": "da25f48cbd5e77b5c2cdedc1dbaeb4c4d0b5f8f503855052afe4e6bcee6fd8b4"
   }
 }

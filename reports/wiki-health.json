@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T16:25:53-04:00",
   "sourceCommit": "c2dc5ab10d10a24e5530ec9cb900ab43fc57228f",
-  "sourceFingerprint": "1d8444d10910370f91129e01f868f06db5174330744a74a4ac91269e1c1cf32e",
+  "sourceFingerprint": "250ea71b038286cf5949ab9deccc5a472330051e21034b806b12b8a1cfd5ce7b",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 130,
+    "records": 131,
     "byKind": {
       "project": 15,
       "person": 1,
@@ -23,7 +23,7 @@
       "research-inquiry": 3,
       "decision": 7,
       "correction": 1,
-      "method": 13,
+      "method": 14,
       "timeline": 1,
       "application": 1,
       "evaluation": 4,
@@ -32,7 +32,7 @@
       "opportunity": 6,
       "projection": 5
     },
-    "typedRelations": 515,
+    "typedRelations": 520,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 1,
@@ -44,18 +44,18 @@
       "informed_by": 45,
       "part_of": 13,
       "projected_to": 7,
-      "related_to": 312,
+      "related_to": 317,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
       "uses_method": 28,
       "uses_source": 62
     },
-    "proseLinks": 327,
-    "rootReachable": 129,
+    "proseLinks": 329,
+    "rootReachable": 130,
     "orphanCount": 0,
     "deadEndCount": 0,
-    "wantedPageCount": 8,
+    "wantedPageCount": 9,
     "stalePageCount": 0,
     "correctionCount": 1,
     "rightsReviewCount": 2,
@@ -135,6 +135,13 @@
       "reason": "Needed to connect approved or held project images with rights holders, represented-person review, crop limits, and publication decisions outside public Git.",
       "requestedBy": "index.knowledge-wiki.visual-evidence",
       "path": "docs/knowledge-bank/indexes/visual-evidence.md"
+    },
+    {
+      "id": "wanted.photography.layout-a.council-chamber.oral-history",
+      "proposed_title": "Jamie's bounded first-person account of the photographed scene",
+      "reason": "Recover event, work, collective context, and uncertainty without treating memory as rights clearance.",
+      "requestedBy": "research-inquiry.photography.layout-a.council-chamber",
+      "path": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md"
     },
     {
       "id": "wanted.photography.layout-a.council-chamber.private-binding",

@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public photo placements
 
-**Source fingerprint:** `7e6524ac0350ef2d6788aec2b82a4c6f7064db4b96a4a22f871e76ca81bc00a4`
+**Source fingerprint:** `d381b50adf25f838e2742cd28b7b3d246ea550b4dceb93cf25537035e0adb9c9`
 
 | Occurrence | Route | Component | Derivative | State |
 |---|---|---|---|---|

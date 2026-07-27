@@ -1,48 +1,35 @@
 {
   "evaluator": "Codex independent sanitized-dossier holdout evaluator",
-  "reviewerId": "morse-a-photo-knowledge-rebound",
+  "reviewerId": "morse-a-photo-knowledge-hiring-readiness-2026-07-26",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9",
+  "candidateSha256": "192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d",
   "score": 4,
   "pass": true,
   "evidence": [
-    "candidate-manifest.json lists 46 ordered files; independently applying SHA-256 over each path, NUL, raw bytes, and NUL produced 47066d3b2850f40f151db0386f0c2e834c0f992bee07cae8bb221135f949d8e9, exactly matching the identity contract.",
-    "The homepage route / immediately identifies Jamie as a Technical Project Manager working across product operations and implementation, then connects operating, civic, community, and knowledge systems through the visible language of relationships, participation, documentation, agency, continuity, and structures people can inhabit.",
-    "apps/www/src/components/SiteHeader.tsx makes /about directly reachable from the homepage. On that one-click route, the rendered 'Systems people can inhabit' section explicitly connects artistic, civic, technical, and social practice through Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition, and source-backed team memory.",
-    "The /about practice matrix supplies at least three current continuities: Harry J. Epstein Company turns attentive observation and recurring feedback into revisable workflows; NYC Artist Coalition / FairRentNYC turns participation, lived experience, source maps, meetings, and decision memory into collective continuity; Sunday Dinner and 196 turn hospitality, artist support, arrival, access, facilitation, and return into repeatable handoffs.",
-    "The rendered /work/196-sunday-dinner route shows why this is more than conventional administration: participants enter and shape a living practice, social use reveals needs, the public-safe specimen asks what to observe and revise, and the handoff explicitly permits continuation, revision, or stopping.",
-    "The rendered /work/fair-rent-nyc route treats documentation as participatory infrastructure. Source maps preserve disagreement and uncertainty, running minutes let collaborators recover context, public interfaces create action pathways, and campaign outcomes remain explicitly collective.",
-    "The rendered /lab/source-backed-team-memory route extends the same practice into technical work through human-correctable Known/Open/Protected states. It rejects automated trust, surveillance, and private-archive browsing while keeping decisions inspectable and transferable.",
-    "The professional role remains clear rather than obscured: /, /about, /work/technical-operations, and the project pages repeatedly translate the inhabited-systems method into requirements, implementation, product operations, onboarding, documentation, risk handling, launch support, and durable handoffs.",
-    "docs/qa/evals-H/responsive-route-matrix.json records 56 successful route-viewport checks across 14 routes and four widths, with zero axe violations, overflow elements, broken images after scrolling, unlabeled images, failed requests, or heading/landmark failures. The supplied desktop and mobile screenshots visibly preserve the role-first hierarchy and project continuity."
+    "Self-validation of candidate-manifest.json recomputed SHA-256 192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d across all 46 ordered candidate paths; it matches the declared candidateSha256, with no missing paths and all declared screenshots present.",
+    "The two-click threshold is actually one click: the rendered `/` surface and runtime-evidence/holdout-home.png expose About in primary navigation, while `/about` and runtime-evidence/holdout-about.png visibly connect artistic, civic, technical, and social practice under 'Systems people can inhabit.'",
+    "Current continuity 1: apps/www/src/content/work/harry-j-epstein.mdx and rendered `/work/harry-j-epstein` trace 2012-Present work from attention to customer language and institutional voice through requirements, a maintained storefront, feedback from customer and team questions, reusable patterns, and handoffs the team can continue using.",
+    "Current continuity 2: apps/www/src/content/work/fair-rent-nyc.mdx and rendered `/work/fair-rent-nyc` trace 2017-Present civic practice from lived experience and recurring meetings through source maps, public interfaces, collective use, reviewable decision memory, and documentation collaborators can recover and continue.",
+    "Current continuity 3: apps/www/src/content/work/196-sunday-dinner.mdx and rendered `/work/196-sunday-dinner` trace 2010s-Present hospitality and artist support through invitations, onboarding, access handoffs, recurring social use, a governed handoff, and a public-safe blank specimen that makes revision and future hosting inspectable.",
+    "A hiring reader can distinguish these systems from conventional administration because `/`, `/about`, and `/work/technical-operations` repeatedly connect operations to relationships, participation, feedback, agency, memory, revision, and handoff: people can enter, influence, maintain, and change the resulting system.",
+    "Protected-source controls hold: apps/www/src/data/knowledge-bank/historical-knowledge.ts marks the educational-record claim protected and its projection held with no surfaces, while docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md confirms that no faculty testimonial or protected evaluation content is projected."
   ],
-  "gaps": [
-    "All 13 governed photographs remain at explicit branch-review status. Human image rights, represented-person consent and dignity, exact crop, caption, and credit require exact-image review.",
-    "Collective credit must receive final human review for every image and public claim, especially NYC Artist Coalition, FairRentNYC, Sunday Dinner and 196, Open House, and the river expedition.",
-    "Final public usefulness and Jamie approval of this unchanged candidate remain open human gates.",
-    "Deployment and indexing remain open; this branch-review score is not production publication clearance.",
-    "This is the single morse-a holdout scorecard; the rubric's separate three-judge median requirement is not established by this run alone."
-  ],
+  "gaps": [],
   "safety_findings": [
-    "docs/qa/layout-A/photo-review-register.json marks production publication pending and names the required human gates. Independently hashing all 13 supplied photo files matched every registered SHA-256; two less-supported candidates remain explicitly held out.",
-    "apps/www/src/data/knowledge-bank/historical-knowledge.ts marks the UCSC educational source protected and private, keeps its claim projection at hold with no surfaces, and requires public corroboration before activation. No application source imports this data file, and no rendered route quotes a faculty evaluation, grade, private correspondence, or testimonial as public authority.",
-    "The /about Open House lineage is grounded in the separately identified public Good Times article and describes participant governance and many-perspective documentation collectively; it does not convert protected educational records into endorsement.",
-    "The /work/196-sunday-dinner surface publishes aggregate continuity, public milestones, and a blank derivative only. Participant rows, identities, contact details, attendance values, correspondence, addresses, access credentials, and unapproved images are explicitly excluded.",
-    "The FairRentNYC surface repeatedly distinguishes Jamie's implementation and stewardship from collective campaigns and policy outcomes, protects legal-review and stakeholder context, and does not claim official authority or solo causation.",
-    "scripts/check-public-safety.mjs scans for private-source paths, transcript exposure, confidential markers, credentials, permissive indexing, and missing resume noindex controls; in production mode it treats branch-review photography as a blocking failure rather than publication clearance."
+    "docs/qa/layout-A/photo-review-register.json marks production publication as pending exact-image human review, and every integrated photograph remains branch-review. Photographer and rights verification, represented-person consent and dignity, exact crop and caption, final credit, collective-credit review, and Jamie's approval of the unchanged candidate remain mandatory human gates.",
+    "Deployment and indexing approval remain open human release gates. This PR-015 pass evaluates the candidate's content and boundaries only; it is not publication clearance or authorization to deploy or enable indexing.",
+    "Private participant material is not exposed on `/work/196-sunday-dinner`, and protected educational records are not used as public authority."
   ],
-  "recommendation": "morse-a recommends PR-015 content passage at score 4. The candidate presents an exceptional, visible, public-safe inhabited-systems threshold that strengthens Jamie's technical-operations positioning. Preserve the protected-source holds and complete every listed human, deployment, and indexing gate before publication.",
+  "recommendation": "Pass PR-015 at score 4. Preserve the current inhabited-systems threshold and keep production blocked until the exact-image, consent, rights, credit/crop, Jamie-approval, deployment, and indexing gates are completed.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa08a-250d-7a41-9f18-45418610be46",
-    "agentNickname": "Noether",
+    "processSessionId": "019fa0e7-8a6b-7ff3-8696-b4868bdd616c",
+    "agentNickname": "Gibbs",
     "model": "inherited-current-model",
     "reasoningEffort": "inherited",
     "sandbox": "read-only",
     "ephemeral": true,
-    "startedAt": "2026-07-26T22:27:15.848Z",
-    "completedAt": "2026-07-26T22:32:01.373Z",
-    "operatorAttestation": "Produced by a fresh separate Codex process that received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
+    "operatorAttestation": "Installed from the fresh separate Codex process result. The process received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

@@ -1,119 +1,75 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-06T10:15:27Z",
+  "generatedAt": "2026-07-26T23:48:17Z",
   "title": "Design System: Jamie Burkart Portfolio",
   "extensions": {
     "colorMeta": {
-      "broadway-blue": {
+      "work-jacket-blue": {
         "role": "primary",
-        "displayName": "Broadway Blue",
+        "displayName": "Work-Jacket Blue",
+        "canonical": "#2f6f89",
+        "tonalRamp": ["#0f2935", "#173b4c", "#214f65", "#2f6f89", "#5f91a7", "#91b4c3", "#c4d8e0", "#edf4f6"]
+      },
+      "public-blue": {
+        "role": "primary",
+        "displayName": "Public Blue",
         "canonical": "#0b5f81",
-        "tonalRamp": [
-          "oklch(15% 0.055 230)",
-          "oklch(26% 0.075 230)",
-          "oklch(37% 0.095 230)",
-          "oklch(48% 0.105 230)",
-          "oklch(60% 0.09 230)",
-          "oklch(72% 0.065 230)",
-          "oklch(84% 0.04 230)",
-          "oklch(95% 0.018 230)"
-        ]
+        "tonalRamp": ["#062634", "#08384b", "#094b66", "#0b5f81", "#3e81a0", "#75a7bc", "#b0ccd7", "#e6f0f4"]
       },
-      "oil-white": {
-        "role": "neutral",
-        "displayName": "Oil White",
-        "canonical": "#eeefec",
-        "tonalRamp": [
-          "oklch(18% 0.006 110)",
-          "oklch(30% 0.007 110)",
-          "oklch(42% 0.008 110)",
-          "oklch(55% 0.009 110)",
-          "oklch(68% 0.01 110)",
-          "oklch(80% 0.011 110)",
-          "oklch(90% 0.012 110)",
-          "oklch(96% 0.012 110)"
-        ]
-      },
-      "oil-paper": {
-        "role": "neutral",
-        "displayName": "Oil Paper",
-        "canonical": "#f7f4ee",
-        "tonalRamp": [
-          "oklch(18% 0.01 85)",
-          "oklch(30% 0.012 85)",
-          "oklch(42% 0.014 85)",
-          "oklch(55% 0.016 85)",
-          "oklch(68% 0.018 85)",
-          "oklch(81% 0.02 85)",
-          "oklch(91% 0.022 85)",
-          "oklch(97% 0.022 85)"
-        ]
-      },
-      "oil-ink": {
-        "role": "neutral",
-        "displayName": "Oil Ink",
-        "canonical": "#343435",
-        "tonalRamp": [
-          "#1c1c1d",
-          "#272728",
-          "#343435",
-          "#4a4a4b",
-          "#626263",
-          "#818182",
-          "#b5b5b5",
-          "#ececec"
-        ]
-      },
-      "deep-green": {
+      "protected-green": {
         "role": "secondary",
-        "displayName": "Deep Green",
-        "canonical": "#1f5c3e",
-        "tonalRamp": [
-          "oklch(15% 0.05 150)",
-          "oklch(26% 0.07 150)",
-          "oklch(37% 0.085 150)",
-          "oklch(48% 0.09 150)",
-          "oklch(60% 0.075 150)",
-          "oklch(72% 0.055 150)",
-          "oklch(84% 0.035 150)",
-          "oklch(95% 0.016 150)"
-        ]
+        "displayName": "Protected Green",
+        "canonical": "#4e6f61",
+        "tonalRamp": ["#1b2923", "#293c34", "#385044", "#4e6f61", "#739083", "#9aafa5", "#c6d2cc", "#eef2f0"]
       },
-      "yellow-ochre": {
+      "correction-red": {
         "role": "accent",
-        "displayName": "Yellow Ochre",
-        "canonical": "#e9b64e",
-        "tonalRamp": [
-          "oklch(20% 0.06 82)",
-          "oklch(32% 0.08 82)",
-          "oklch(44% 0.1 82)",
-          "oklch(56% 0.12 82)",
-          "oklch(68% 0.125 82)",
-          "oklch(78% 0.1 82)",
-          "oklch(88% 0.065 82)",
-          "oklch(96% 0.03 82)"
-        ]
+        "displayName": "Correction Red",
+        "canonical": "#c83b32",
+        "tonalRamp": ["#411310", "#611d18", "#852820", "#aa3129", "#c83b32", "#dd716a", "#edaaa6", "#f9e5e3"]
+      },
+      "disputed-ochre": {
+        "role": "accent",
+        "displayName": "Disputed Ochre",
+        "canonical": "#d1a23f",
+        "tonalRamp": ["#3a2c0f", "#584316", "#785c1e", "#9d7929", "#d1a23f", "#ddbd75", "#ead8ad", "#f8f1df"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1a232b",
+        "tonalRamp": ["#11171c", "#1a232b", "#2b3843", "#46545f", "#66737b", "#929ba1", "#c5cacd", "#f0f2f3"]
+      },
+      "reading-surface": {
+        "role": "neutral",
+        "displayName": "Reading Surface",
+        "canonical": "#f3f6f8",
+        "tonalRamp": ["#20272b", "#343f46", "#53616a", "#77858d", "#a2adb3", "#cbd2d6", "#e5eaed", "#f3f6f8"]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero identity and major page titles only."
+        "purpose": "Jamie's name and true page titles."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section headers and case-study landmarks."
+        "purpose": "Section and case-study landmarks."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Long summaries, notes, care language, and MDX case-study prose."
+        "purpose": "Long summaries, care language, and case-study prose."
+      },
+      "label": {
+        "displayName": "Civic Label",
+        "purpose": "Navigation, status, source, and compact metadata."
       }
     },
     "shadows": [
       {
         "name": "quiet-surface-shadow",
-        "value": "shadow-sm",
-        "purpose": "Low-contrast lift for cards or representative artifact panels only."
+        "value": "0 1px 2px rgba(26, 35, 43, 0.08)",
+        "purpose": "Individual cards and representative artifacts only."
       }
     ],
     "motion": [
@@ -123,24 +79,20 @@
         "purpose": "Small state changes such as skip-link reveal and hover feedback."
       },
       {
+        "name": "image-hover",
+        "value": "280ms ease",
+        "purpose": "Restrained image-link enlargement without changing layout."
+      },
+      {
         "name": "reduced-motion",
         "value": "@media (prefers-reduced-motion: reduce)",
-        "purpose": "Disable animation and smooth scrolling for users requesting reduced motion."
+        "purpose": "Make animation effectively immediate when reduced motion is requested."
       }
     ],
     "breakpoints": [
-      {
-        "name": "sm",
-        "value": "640px"
-      },
-      {
-        "name": "md",
-        "value": "768px"
-      },
-      {
-        "name": "lg",
-        "value": "1024px"
-      }
+      {"name": "sm", "value": "640px"},
+      {"name": "md", "value": "768px"},
+      {"name": "lg", "value": "1024px"}
     ]
   },
   "components": [
@@ -148,88 +100,75 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Main forward action for work, resume, and contact paths.",
-      "html": "<button class=\"ds-button-primary\">View selected work</button>",
-      "css": ".ds-button-primary { background: var(--jb-broadway-blue, #0b5f81); color: var(--jb-oil-white, #eeefec); border: 1px solid var(--jb-broadway-blue, #0b5f81); border-radius: 0.35rem; padding: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease; } .ds-button-primary:hover { background: var(--jb-deep-green, #1f5c3e); border-color: var(--jb-deep-green, #1f5c3e); } .ds-button-primary:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "description": "The main forward route for a hiring reader.",
+      "html": "<a class=\"ds-button-primary\" href=\"#\">See technical operations</a>",
+      "css": ".ds-button-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; max-width: 100%; padding: 0.75rem 1.25rem; border: 1px solid #2f6f89; border-radius: 0.5rem; background: #2f6f89; color: #fff; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.25; text-align: center; text-decoration: none; } .ds-button-primary:hover { background: #245b3e; border-color: #245b3e; } .ds-button-primary:focus-visible { outline: 3px solid #d1a23f; outline-offset: 3px; }"
     },
     {
       "name": "Secondary Button",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Quiet secondary route for resume and supporting actions.",
-      "html": "<button class=\"ds-button-secondary\">Download resume</button>",
-      "css": ".ds-button-secondary { background: var(--jb-oil-paper, #f7f4ee); color: var(--jb-oil-ink, #343435); border: 1px solid rgba(52, 52, 53, 0.2); border-radius: 0.35rem; padding: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: border-color 160ms ease, color 160ms ease; } .ds-button-secondary:hover { border-color: var(--jb-broadway-blue, #0b5f81); color: var(--jb-broadway-blue, #0b5f81); } .ds-button-secondary:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "description": "A clear supporting route such as the resume.",
+      "html": "<a class=\"ds-button-secondary\" href=\"#\">View resume</a>",
+      "css": ".ds-button-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; max-width: 100%; padding: 0.75rem 1.25rem; border: 1px solid #0b5f81; border-radius: 0.5rem; background: #fff; color: #0b5f81; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.25; text-align: center; text-decoration: none; } .ds-button-secondary:hover { background: #0b5f81; color: #fff; } .ds-button-secondary:focus-visible { outline: 3px solid #d1a23f; outline-offset: 3px; }"
     },
     {
       "name": "Status Chip",
       "kind": "chip",
       "refersTo": "status-chip",
-      "description": "Compact public-safety and page-status metadata.",
-      "html": "<span class=\"ds-status-chip\">Public-safe summary only</span>",
-      "css": ".ds-status-chip { display: inline-flex; align-items: center; width: fit-content; border: 1px solid rgba(52, 52, 53, 0.18); border-radius: 999px; background: var(--jb-oil-white, #eeefec); color: var(--jb-oil-ink, #343435); padding: 0.35rem 0.65rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 700; line-height: 1.1; }"
+      "description": "Compact status or public-safety metadata.",
+      "html": "<span class=\"ds-status-chip\">Public-safe summary</span>",
+      "css": ".ds-status-chip { display: inline-flex; align-items: center; width: fit-content; padding: 0.25rem 0.75rem; border: 1px solid rgba(26, 35, 43, 0.18); border-radius: 999px; background: #fff; color: #1a232b; font-family: Oswald, Arial Narrow, ui-sans-serif, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.055em; text-transform: uppercase; }"
     },
     {
       "name": "Work Card",
       "kind": "card",
       "refersTo": "card",
-      "description": "Scannable case-study preview with public-safe evidence structure.",
-      "html": "<article class=\"ds-work-card\"><span class=\"ds-status-chip\">Full case study</span><h3>Harry J. Epstein Company</h3><p class=\"ds-work-card-subtitle\">E-commerce and operations modernization</p><p>Helped a legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.</p></article>",
-      "css": ".ds-work-card { background: var(--jb-oil-paper, #f7f4ee); color: var(--jb-oil-ink, #343435); border: 1px solid rgba(52, 52, 53, 0.15); border-radius: 0.5rem; padding: 1.25rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; box-shadow: 0 1px 2px rgba(52, 52, 53, 0.08); max-width: 32rem; } .ds-work-card h3 { margin: 1rem 0 0.35rem; color: var(--jb-oil-ink, #343435); font-size: 1.5rem; line-height: 1.2; font-weight: 700; } .ds-work-card p { margin: 0.75rem 0 0; font-size: 1rem; line-height: 1.6; } .ds-work-card-subtitle { color: var(--jb-deep-green, #1f5c3e); font-weight: 700; } .ds-work-card:focus-within { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "description": "A scannable case-study preview with evidence context.",
+      "html": "<article class=\"ds-work-card\"><span class=\"ds-card-label\">Technical operations</span><h3>Harry J. Epstein Company</h3><p>Made a legacy operating environment more usable across e-commerce, analytics, content, and workflow.</p></article>",
+      "css": ".ds-work-card { max-width: 32rem; padding: 1.25rem; border: 1px solid rgba(26, 35, 43, 0.15); border-radius: 0.5rem; background: #f3f6f8; color: #1a232b; box-shadow: 0 1px 2px rgba(26, 35, 43, 0.08); font-family: Karla, ui-sans-serif, system-ui, sans-serif; } .ds-work-card h3 { margin: 0.75rem 0 0; font-size: 1.5rem; line-height: 1.2; } .ds-work-card p { margin: 0.75rem 0 0; max-width: 65ch; line-height: 1.6; } .ds-card-label { color: #0b5f81; font-family: Oswald, Arial Narrow, ui-sans-serif, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.055em; text-transform: uppercase; } .ds-work-card:focus-within { outline: 3px solid #d1a23f; outline-offset: 3px; }"
     },
     {
       "name": "Text Navigation",
       "kind": "nav",
       "refersTo": "navigation",
-      "description": "Restrained route set for portfolio review, not an app shell.",
+      "description": "A restrained route set for time-limited portfolio review.",
       "html": "<nav class=\"ds-nav\"><a href=\"#\">Work</a><a href=\"#\">Resume</a><a href=\"#\">About</a><a href=\"#\">Contact</a></nav>",
-      "css": ".ds-nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; } .ds-nav a { color: var(--jb-oil-ink, #343435); text-decoration: none; font-size: 0.95rem; font-weight: 700; line-height: 1.2; } .ds-nav a:hover { color: var(--jb-broadway-blue, #0b5f81); } .ds-nav a:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "css": ".ds-nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; } .ds-nav a { color: #1a232b; font-size: 0.95rem; font-weight: 700; line-height: 1.2; text-decoration: none; } .ds-nav a:hover { color: #0b5f81; } .ds-nav a:focus-visible { outline: 3px solid #d1a23f; outline-offset: 3px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Public Workbench",
-    "overview": "The system should feel like a careful working table where evidence has been sorted, labeled, and made usable without exposing private source material. It uses print-adjacent restraint, civic color, readable type, and modest component structure to make complex work legible.\n\nThis is a brand surface, but the brand is the operating practice. The design must create trust through order, language, and public-safety boundaries rather than spectacle. It rejects generic SaaS drama, consultant hype, private archive behavior, and decorative AI-template flourishes.",
+    "northStar": "The Human Index",
+    "overview": "The portfolio is a public workbench: a calm, legible place where evidence, photographs, collective credit, and operating decisions have been sorted and made usable. Its visual language comes from working materials Jamie actually uses: a blue work jacket, correction marks, public records, meeting packets, index cards, and practical institutional forms.\n\nThe brand is the practice. The site should help a hiring reader see how Jamie turns emerging work into structure while preserving the people, limits, and sources that make each account trustworthy. Photography supplies presence and particularity. Type and layout supply the durable handoff.",
     "keyCharacteristics": [
       "Public-safe before persuasive.",
       "Dense enough to show real work, calm enough to scan.",
-      "Warm, precise, and modular.",
-      "Evidence-led, never inflated.",
-      "Human without becoming decorative."
+      "Precise, warm, modular, and ethically grounded.",
+      "Evidence-led without resembling an archive browser.",
+      "Human presence without decorative sentiment."
     ],
     "rules": [
-      {
-        "name": "The Public-Safety Color Rule",
-        "body": "Color must clarify status, evidence, action, or reading hierarchy. If color only decorates, remove it.",
-        "section": "colors"
-      },
-      {
-        "name": "The Ochre Rarity Rule",
-        "body": "Yellow ochre earns attention through scarcity. Use it for focus, selection, and occasional proof, not as a general accent wash.",
-        "section": "colors"
-      },
-      {
-        "name": "The Plain Evidence Rule",
-        "body": "Use type weight, spacing, and placement before inventing visual effects. No gradient text, no ornamental tracking, no clever typographic gimmicks.",
-        "section": "typography"
-      },
-      {
-        "name": "The Flat Workbench Rule",
-        "body": "Surfaces rest on the page. Lift appears only when it helps a card or artifact read as a discrete object.",
-        "section": "elevation"
-      }
+      {"name": "The Semantic Color Rule", "body": "Color must clarify status, evidence, action, or reading hierarchy. If color only decorates, remove it.", "section": "colors"},
+      {"name": "The Correction Rule", "body": "Red marks accountable intervention, not generic urgency. Harm has its own darker red.", "section": "colors"},
+      {"name": "The Ochre Rarity Rule", "body": "Ochre earns attention through scarcity. Reserve it for focus, selection, disputed state, and occasional proof.", "section": "colors"},
+      {"name": "The Plain Evidence Rule", "body": "Use weight, spacing, and placement before visual effects. Letter spacing is zero except for the established label voice.", "section": "typography"},
+      {"name": "The Scale Rule", "body": "Hero-scale type belongs only in a hero. Dense professional surfaces use smaller, tighter headings.", "section": "typography"},
+      {"name": "The Flat Workbench Rule", "body": "Surfaces rest on the page. Lift appears only when it helps an actual object read as discrete.", "section": "elevation"},
+      {"name": "The Full-Border Rule", "body": "Use a complete one-pixel boundary or none. Thick colored side stripes are forbidden.", "section": "elevation"}
     ],
     "dos": [
-      "Do keep public safety visible in the structure of every case study.",
-      "Do use Broadway Blue for primary action and Deep Green for outcome-oriented emphasis.",
-      "Do keep summaries scannable while preserving nuance.",
-      "Do use representative diagrams, approved artifacts, and redacted examples instead of raw private material.",
-      "Do keep focus states highly visible and reduced-motion behavior intact."
+      "Do make the role, action, outcome, source basis, and honest limit scan quickly.",
+      "Do use photography to reveal real work, people, place, and participation.",
+      "Do preserve collective credit, consent, rights, attribution, and protected absence.",
+      "Do keep focus states, keyboard paths, reduced motion, and contrast at WCAG 2.2 AA or better.",
+      "Do keep public safety visible in case-study and photographic structures."
     ],
     "donts": [
       "Don't make the site feel like a generic SaaS landing page, a private archive browser, a consultant hype funnel, a heavy animated portfolio, or a decorative AI-generated template.",
-      "Don't publish private emails, raw transcripts, private coalition notes, legal-review materials, private correspondence, internal analytics, client-private material, unapproved photos, private fonts, or named stakeholder details without approval.",
-      "Don't use gradient text, glassmorphism, giant hero metrics, decorative side-stripe borders, or endlessly repeated icon-card grids.",
-      "Don't over-round cards or panels beyond the existing 0.5rem card radius.",
-      "Don't let color or visual texture compete with the evidence."
+      "Don't publish inflated claims, unapproved metrics, raw transcripts, private coalition notes, legal-review materials, private correspondence, internal analytics, client-private material, unapproved photos, private fonts, or unapproved stakeholder details.",
+      "Don't use gradient text, glassmorphism, giant hero metrics, decorative side-stripe borders, repeated icon-card grids, or decorative background grids.",
+      "Don't make every section an uppercase eyebrow or numbered index.",
+      "Don't over-round cards or nest cards inside cards."
     ]
   }
 }
