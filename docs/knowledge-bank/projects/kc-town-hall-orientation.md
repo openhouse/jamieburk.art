@@ -19,16 +19,29 @@ relations:
   - type: supports
     target: capability.participatory-public-systems
     href: ../capabilities/participatory-public-systems.md
+  - type: has_asset
+    target: asset.kc-town-hall.proposal-rendering.2019
+    href: ../assets/kc-town-hall-proposal-rendering-2019.md
+    context: Public-safe derivative of a proposal page, limited to the rendering and proposal title.
+  - type: has_asset
+    target: asset.photo.kc-town-hall.hardhat-worksite.2018
+    href: ../assets/photographs/kc-town-hall-hardhat-worksite-2018.md
+    context: Governed worksite photograph with rights and exact-date questions still open.
+  - type: has_asset
+    target: asset.photo.kc-town-hall.collaborator-worksite.2018
+    href: ../assets/photographs/kc-town-hall-collaborator-worksite-2018.md
+    context: Governed collaborator photograph preserving consent and collective-credit review.
 ---
 
 # KC Town Hall orientation
 
 KC Town Hall joined adaptive-reuse planning, first-phase construction
 coordination, neighborhood listening, resident-service work, and public-benefit
-documentation. Jamie's archival record distinguishes his planning and field
-practice from the CCED Board's recommendation, the Council's acceptance and
-appropriation, later non-disbursement, project withdrawal, and return of the
-unused appropriation.
+documentation. The 2019 proposal identifies Jamie and Julia as founders and
+project managers. Jamie's archival record distinguishes that project role and
+field practice from the CCED Board's recommendation, the Council's acceptance
+and appropriation, later non-disbursement, project withdrawal, and return of
+the unused appropriation.
 
 The review-locked [defensible record](kc-town-hall.md) and
 [field-practice report](../intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md) preserve the detailed

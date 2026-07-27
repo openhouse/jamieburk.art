@@ -3,8 +3,11 @@
 
 **Source commit:** `3e73a92cdd014497d0fcf6fb6947cd718f26c149`
 **Generation time:** 2026-07-26T18:09:29-04:00
-**Source fingerprint:** `2cb74d7a836e4541b23971dbd069d807e272c35968dba3ca11f8df59e2b04bb0`
+**Source fingerprint:** `6122dbe02375404ee0855c5a7bffda58d98bb54a39a9b46da14cec15107a94d9`
 
+- [KC Town Hall mixed-use proposal rendering](../../assets/kc-town-hall-proposal-rendering-2019.md) - `related_to` (frontmatter)
+- [KC Town Hall collaborator worksite photograph](../../assets/photographs/kc-town-hall-collaborator-worksite-2018.md) - `related_to` (frontmatter)
+- [KC Town Hall hard-hat worksite photograph](../../assets/photographs/kc-town-hall-hardhat-worksite-2018.md) - `related_to` (frontmatter)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
 - [Participatory public systems](../../capabilities/participatory-public-systems.md) - `related_to` (frontmatter)
@@ -24,3 +27,5 @@
 - [Participation and Relational Infrastructure](../../methods/participation-and-relational-infrastructure.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [KC Town Hall CCED proposal bundle, 2019](../../sources/kc-town-hall-cced-proposal-2019.md) - `documents` (frontmatter)
+- [Jamie Burkart recollection prompted by a KC Town Hall collaborator photograph](../../sources/recollections/kc-town-hall-collaborator-photo-oral-history-2026-07.md) - `related_to` (frontmatter)
+- [Jamie Burkart recollection prompted by the KC Town Hall hard-hat photograph](../../sources/recollections/kc-town-hall-hardhat-oral-history-2026-07.md) - `related_to` (frontmatter)

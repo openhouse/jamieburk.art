@@ -412,7 +412,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities; a July 2017 production snapshot recorded 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -472,7 +472,7 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. Treat city-key activity as product reach, not adoption or official chapters.",
     sourceLayer:
       "Public-safe summary, historical project context, and metadata-minimized identity assets recovered from the preserved source code; full interface screenshots remain pending review.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
@@ -485,13 +485,13 @@ const workItemsInput = [
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Roughly 35 city ecosystems reached"
+      "35 city-region keys with at least 50 posts in the July 2017 snapshot"
     ],
     knownOpenProtected: {
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Full interface screenshots, archive links, and precise adoption wording need approval.",
+        "Full interface screenshots and additional archive links need review.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -555,8 +555,8 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund.",
-    role: "Project Planning & Documentation Support",
+      "Co-founded and project-managed adaptive-reuse planning and public-benefit documentation for a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund.",
+    role: "Co-Founder & Project Manager",
     years: "2019-2024 public record",
     status: "Short proof page",
     featured: false,
@@ -569,9 +569,25 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "A coordinated mixed-use proposal, first-phase scope, neighborhood-listening process, public-benefit documentation, and municipal-review package for an adaptive-reuse effort.",
+    artifactTypes: ["diagram", "guide", "source map", "template"],
     artifacts: [
+      {
+        title: "Four retail spaces and three homes",
+        description:
+          "A public-safe crop from the 2019 proposal shows the intended mixed-use program without publishing the bundle's financial, contact, or personal pages.",
+        type: "diagram",
+        media: {
+          src: "/artifacts/kc-town-hall/proposal-rendering.webp",
+          alt: "Architectural rendering of the historic brick KC Town Hall building with four colorful ground-floor storefronts and residential windows above.",
+          caption:
+            "Cropped excerpt from the 2019 KC Town Hall proposal. The rendering documents the intended mixed-use program; it is not an as-built record.",
+          href: "/artifacts/kc-town-hall/proposal-rendering.webp",
+          sourceLabel: "public-safe proposal rendering",
+          width: 1400,
+          height: 840
+        }
+      },
       {
         title: "Public-benefit documentation set",
         description:
@@ -589,7 +605,7 @@ const workItemsInput = [
     currentStatus: "The project later withdrew; the full unused appropriation returned to the fund in 2024.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Long-horizon project management, adaptive-reuse coordination, public-benefit documentation, stakeholder listening, and implementation support.",
     evidence: [
       "Redevelopment planning",
       "Public-benefit documentation",
@@ -600,7 +616,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-led adaptive reuse planning and public-benefit documentation. Official records establish the municipal funding lifecycle; the complete surviving public-account corpus separately documents a collective resident intake, service-coordination, and reporting workflow.",
+        "The 2019 proposal identifies Jamie and Julia as founders and project managers. Official records establish the municipal funding lifecycle; the complete surviving public-account corpus separately documents a collective resident intake, service-coordination, and reporting workflow.",
       open:
         "The legislative records do not establish Jamie's individual causal role in the Board or Council actions or explain why the project withdrew.",
       protected:

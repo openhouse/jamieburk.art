@@ -30,6 +30,14 @@ relations:
     target: evaluation.nycac.shared-folder-production.2026-07-19
     href: ../evaluations/nycac-shared-folder-production-2026-07-19.md
     context: Deterministic coverage, leakage, credit, and projection criteria.
+  - type: related_to
+    target: event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27
+    href: ../events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md
+    context: Early formation-interval meeting with the agency-host and coalition-mobilization boundary preserved.
+  - type: informed_by
+    target: research.nycac.dcla-photograph-source-return.2026-07
+    href: ../research-runs/nycac-dcla-photograph-source-return-2026-07.md
+    context: Present-day source return joining the photograph, event records, document chain, and explicit retrieval gaps.
 human_review: governed-open
 ---
 
@@ -226,6 +234,15 @@ use it. See the
 the corpus method, candidate disposition, duplicate control, and the important
 boundary that Finkelpearl's "huge influence" statement referred to the
 Disability Arts NYC task force, not NYC Artist Coalition.
+
+## January 2017 source return
+
+The [January 27 DCLA meeting](../events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md)
+and its [photograph source-return run](../research-runs/nycac-dcla-photograph-source-return-2026-07.md)
+preserve an early formation-interval chronology without turning an
+agency-hosted meeting into a coalition-owned event. The
+[audio, speaker-spreadsheet, and discourse-map inquiry](../research-inquiries/nycac-dcla-audio-speaker-map.md)
+keeps missing originals and quotation permissions open.
 
 ## Boundaries
 

@@ -40,7 +40,7 @@ const proofMap = [
     project: "WOWList",
     href: "/work/wowlist",
     proof:
-      "Jamie co-built a community-calendar platform that helped local arts and music organizers distribute events across roughly 35 city ecosystems."
+      "Jamie co-built a community-calendar platform whose July 2017 production snapshot recorded 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts."
   },
   {
     project: "196 / Sunday Dinner",
@@ -58,7 +58,7 @@ const proofMap = [
     project: "KC Town Hall",
     href: "/work/kc-town-hall",
     proof:
-      "Jamie co-led redevelopment planning and public-benefit documentation for the proposed adaptive reuse of a long-vacant historic building."
+      "Jamie co-founded and project-managed adaptive-reuse planning and public-benefit documentation for a long-vacant historic building."
   },
   {
     project: "Source-Backed Team Memory",

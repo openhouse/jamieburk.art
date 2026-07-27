@@ -3,7 +3,7 @@
 
 **Source commit:** `3e73a92cdd014497d0fcf6fb6947cd718f26c149`
 **Generation time:** 2026-07-26T18:09:29-04:00
-**Source fingerprint:** `2cb74d7a836e4541b23971dbd069d807e272c35968dba3ca11f8df59e2b04bb0`
+**Source fingerprint:** `6122dbe02375404ee0855c5a7bffda58d98bb54a39a9b46da14cec15107a94d9`
 
 ## application
 
@@ -11,8 +11,18 @@
 
 ## asset
 
+- [KC Town Hall mixed-use proposal rendering](../assets/kc-town-hall-proposal-rendering-2019.md) - `asset.kc-town-hall.proposal-rendering.2019`
+- [Cabaret Law repeal hearing photograph](../assets/photographs/cabaret-law-hearing-2017.md) - `asset.photo.cabaret-law-hearing.2017`
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
 - [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) - `asset.photo.east-river-manhattan-bridge.2022.001`
+- [Fair Rent rally photograph, November 2019](../assets/photographs/fair-rent-rally-2019.md) - `asset.photo.fair-rent-rally.2019`
+- [KC Town Hall collaborator worksite photograph](../assets/photographs/kc-town-hall-collaborator-worksite-2018.md) - `asset.photo.kc-town-hall.collaborator-worksite.2018`
+- [KC Town Hall hard-hat worksite photograph](../assets/photographs/kc-town-hall-hardhat-worksite-2018.md) - `asset.photo.kc-town-hall.hardhat-worksite.2018`
+- [Night Mayor town hall photograph, October 2017](../assets/photographs/nightlife-town-hall-2017.md) - `asset.photo.nightlife-town-hall.2017`
+- [Commercial-rent data fieldwork at 250 Broadway](../assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md) - `asset.photo.nyc-council.commercial-rent-fieldwork.2026`
+- [DCLA listening-room photograph, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac.dcla-listening-room.2017-01-27`
+- [Waterways raft held at the bank in fog](../assets/photographs/raft-in-fog-waterways.md) - `asset.photo.raft-in-fog.waterways`
+- [Sunday Dinner food preparation photograph](../assets/photographs/sunday-dinner-preparation.md) - `asset.photo.sunday-dinner.preparation`
 
 ## capability
 
@@ -51,6 +61,7 @@
 
 ## event
 
+- [NYC DIY spaces meeting at the Department of Cultural Affairs](../events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md) - `event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27`
 - [New York City Council constituent-services hackathon](../events/nycc-constituent-services-hackathon-2016.md) - `event.nycc.constituent-services-hackathon.2016`
 
 ## index
@@ -141,13 +152,27 @@
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Layout D About-page Sunday Dinner preparation occurrence](../projections/photography/layout-d-about-sunday-dinner-preparation.md) - `projection.photo.layout-d.about.sunday-dinner-preparation`
+- [Layout D homepage Cabaret Law hearing occurrence](../projections/photography/layout-d-home-cabaret-law-hearing.md) - `projection.photo.layout-d.home.cabaret-law-hearing`
+- [Layout D homepage DCLA listening-room occurrence](../projections/photography/layout-d-home-dcla-listening-room.md) - `projection.photo.layout-d.home.dcla-listening-room`
 - [Layout D homepage East River occurrence](../projections/photography/layout-d-home-east-river.md) - `projection.photo.layout-d.home.east-river`
+- [Layout D homepage KC Town Hall collaborator occurrence](../projections/photography/layout-d-home-kc-town-hall-collaborator.md) - `projection.photo.layout-d.home.kc-town-hall-collaborator`
+- [Layout D homepage raft-in-fog occurrence](../projections/photography/layout-d-home-raft-in-fog.md) - `projection.photo.layout-d.home.raft-in-fog`
+- [Layout D homepage Sunday Dinner preparation occurrence](../projections/photography/layout-d-home-sunday-dinner-preparation.md) - `projection.photo.layout-d.home.sunday-dinner-preparation`
 - [Layout D resume protected absence](../projections/photography/layout-d-resume-protected-absence.md) - `projection.photo.layout-d.resume.protected-absence`
+- [Layout D work-index Fair Rent rally occurrence](../projections/photography/layout-d-work-index-fair-rent-rally.md) - `projection.photo.layout-d.work-index.fair-rent-rally`
+- [Layout D work-index Night Mayor town hall occurrence](../projections/photography/layout-d-work-index-nightlife-town-hall.md) - `projection.photo.layout-d.work-index.nightlife-town-hall`
+- [Layout D work-index Sunday Dinner preparation occurrence](../projections/photography/layout-d-work-index-sunday-dinner-preparation.md) - `projection.photo.layout-d.work-index.sunday-dinner-preparation`
+- [Layout D FairRentNYC case-study rally occurrence](../projections/photography/layout-d-work-fair-rent-rally.md) - `projection.photo.layout-d.work.fair-rent-rally`
+- [Layout D KC Town Hall case-study collaborator occurrence](../projections/photography/layout-d-work-kc-town-hall-collaborator.md) - `projection.photo.layout-d.work.kc-town-hall-collaborator`
+- [Layout D Sunday Dinner case-study preparation occurrence](../projections/photography/layout-d-work-sunday-dinner-preparation.md) - `projection.photo.layout-d.work.sunday-dinner-preparation`
 
 ## research-inquiry
 
+- [DCLA audio, speaker spreadsheet, and discourse-map inquiry](../research-inquiries/nycac-dcla-audio-speaker-map.md) - `research-inquiry.nycac.dcla-audio-speaker-map`
 - [Documented bicycle-canoe journeys](../research-inquiries/documented-canoe-bike-journeys.md) - `research-inquiry.photo.documented-canoe-bike-journeys`
 - [Hardhat worksite photograph oral-history inquiry](../research-inquiries/hardhat-worksite-oral-history.md) - `research-inquiry.photo.hardhat-worksite-oral-history`
+- [250 Broadway commercial-rent fieldwork source return](../research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md) - `research-inquiry.photo.nyc-council-commercial-rent-fieldwork`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
 ## research-run
@@ -155,6 +180,7 @@
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
+- [NYC Artist Coalition DCLA photograph source return](../research-runs/nycac-dcla-photograph-source-return-2026-07.md) - `research.nycac.dcla-photograph-source-return.2026-07`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 
 ## source
@@ -187,6 +213,9 @@
 - [Public-safe East River derivative and metadata review](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
+- [Jamie Burkart recollection prompted by a KC Town Hall collaborator photograph](../sources/recollections/kc-town-hall-collaborator-photo-oral-history-2026-07.md) - `source.recollection.kc-town-hall-collaborator-photo.2026-07`
+- [Jamie Burkart recollection prompted by the KC Town Hall hard-hat photograph](../sources/recollections/kc-town-hall-hardhat-oral-history-2026-07.md) - `source.recollection.kc-town-hall-hardhat.2026-07`
+- [Jamie Burkart recollection of commercial-rent data fieldwork at 250 Broadway](../sources/recollections/nyc-council-commercial-rent-fieldwork-2026-07.md) - `source.recollection.nyc-council-commercial-rent-fieldwork.2026-07`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`

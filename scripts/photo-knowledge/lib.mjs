@@ -23,7 +23,9 @@ const recordSchema = z
       "evaluation",
       "decision",
       "projection",
-      "research-inquiry"
+      "research-inquiry",
+      "research-run",
+      "event"
     ]),
     status: z.string().min(1),
     visibility: z.string().min(1),
@@ -206,6 +208,66 @@ export function evaluatePhotoKnowledge(options = {}) {
     records,
     "research-inquiry.photo.hardhat-worksite-oral-history"
   );
+  const dclaEvent = recordById(
+    records,
+    "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27"
+  );
+  const dclaAsset = recordById(
+    records,
+    "asset.photo.nycac.dcla-listening-room.2017-01-27"
+  );
+  const dclaRun = recordById(
+    records,
+    "research.nycac.dcla-photograph-source-return.2026-07"
+  );
+  const dclaInquiry = recordById(
+    records,
+    "research-inquiry.nycac.dcla-audio-speaker-map"
+  );
+  const dclaOccurrence = recordById(
+    records,
+    "projection.photo.layout-d.home.dcla-listening-room"
+  );
+  const hardhatAsset = recordById(
+    records,
+    "asset.photo.kc-town-hall.hardhat-worksite.2018"
+  );
+  const collaboratorAsset = recordById(
+    records,
+    "asset.photo.kc-town-hall.collaborator-worksite.2018"
+  );
+  const hardhatRecollection = recordById(
+    records,
+    "source.recollection.kc-town-hall-hardhat.2026-07"
+  );
+  const collaboratorRecollection = recordById(
+    records,
+    "source.recollection.kc-town-hall-collaborator-photo.2026-07"
+  );
+  const collaboratorHomeOccurrence = recordById(
+    records,
+    "projection.photo.layout-d.home.kc-town-hall-collaborator"
+  );
+  const collaboratorWorkOccurrence = recordById(
+    records,
+    "projection.photo.layout-d.work.kc-town-hall-collaborator"
+  );
+  const proposalAsset = recordById(
+    records,
+    "asset.kc-town-hall.proposal-rendering.2019"
+  );
+  const councilAsset = recordById(
+    records,
+    "asset.photo.nyc-council.commercial-rent-fieldwork.2026"
+  );
+  const councilRecollection = recordById(
+    records,
+    "source.recollection.nyc-council-commercial-rent-fieldwork.2026-07"
+  );
+  const councilInquiry = recordById(
+    records,
+    "research-inquiry.photo.nyc-council-commercial-rent-fieldwork"
+  );
 
   const recordsAreSchemaValidAndComplete =
     records.every((record) => !record.error && record.data) &&
@@ -354,7 +416,7 @@ export function evaluatePhotoKnowledge(options = {}) {
     oralHistoryInquiry?.private_source_binding?.opaque_id ===
       "photo-inquiry-hardhat-worksite-001" &&
     oralHistoryInquiry?.private_source_binding?.status ===
-      "private-reinspection-required" &&
+      "oral-history-returned-private-reinspection-required" &&
     oralHistoryInquiry?.publication_status === "hold" &&
     oralHistoryInquiry?.projection?.status === "hold" &&
     oralHistoryInquiry?.projection?.surfaces?.length === 0 &&
@@ -378,6 +440,257 @@ export function evaluatePhotoKnowledge(options = {}) {
     ) &&
     !/hardhat-worksite|photo-inquiry-hardhat-worksite-001/i.test(
       `${photographyData}\n${hero}\n${home}`
+    );
+
+  const sourceReturnRecordsAreBounded =
+    dclaAsset?.rights_state === "unknown" &&
+    dclaAsset?.consent_state === "review-needed" &&
+    dclaAsset?.public_display_status === "hold" &&
+    dclaAsset?.creator?.value === "open" &&
+    /not a photographer credit, quotation, endorsement, or consent grant/i.test(
+      dclaAsset?.identity_assertions?.standing_participant
+        ?.publication_boundary ?? ""
+    ) &&
+    dclaAsset?.frame_relationship?.status === "same-sequence-cluster" &&
+    /different frame/i.test(dclaAsset?.frame_relationship?.boundary ?? "") &&
+    /must not be merged across frames/i.test(
+      dclaAsset?.frame_relationship?.boundary ?? ""
+    ) &&
+    dclaInquiry?.publication_status === "hold" &&
+    dclaInquiry?.projection?.status === "hold" &&
+    dclaInquiry?.projection?.surfaces?.length === 0 &&
+    dclaInquiry?.anti_claims?.includes(
+      "Recording a public meeting grants unrestricted publication rights to every voice."
+    ) &&
+    [hardhatRecollection, collaboratorRecollection, councilRecollection].every(
+      (item) =>
+        item?.source_kind === "first-person-recollection" &&
+        item?.visibility === "summary-only" &&
+        item?.projection?.status === "hold" &&
+        item?.projection?.surfaces?.length === 0 &&
+        typeof item?.protected_boundary === "string" &&
+        item.protected_boundary.length > 60
+    ) &&
+    [hardhatAsset, collaboratorAsset, councilAsset].every(
+      (item) =>
+        item?.rights_state === "unknown" &&
+        item?.consent_state === "review-needed" &&
+        item?.public_display_status === "hold" &&
+        item?.private_source_binding?.status ===
+          "private-reinspection-required"
+    ) &&
+    hardhatAsset?.creator_statement?.confirmation_state === "open" &&
+    collaboratorAsset?.creator_statement?.confirmation_state === "open" &&
+    councilAsset?.creator?.value === "open" &&
+    hardhatAsset?.anti_claims?.includes(
+      "Archive custody establishes creator credit or publication rights."
+    ) &&
+    collaboratorAsset?.anti_claims?.includes(
+      "Archive custody establishes copyright or creator credit."
+    ) &&
+    councilAsset?.anti_claims?.includes(
+      "Archive custody establishes photographer credit or publication rights."
+    ) &&
+    hardhatRecollection?.anti_claims?.includes(
+      "The recollection independently confirms every construction responsibility or project outcome."
+    ) &&
+    collaboratorRecollection?.anti_claims?.includes(
+      "The photograph proves sole authorship or sole operational responsibility."
+    ) &&
+    councilRecollection?.anti_claims?.includes(
+      "The photograph proves the Council adopted or endorsed the proposal."
+    ) &&
+    councilInquiry?.publication_status === "hold" &&
+    councilInquiry?.projection?.status === "hold" &&
+    councilInquiry?.projection?.surfaces?.length === 0 &&
+    councilInquiry?.anti_claims?.includes(
+      "Presence at 250 Broadway establishes Council employment, endorsement, or adoption."
+    );
+
+  const formationAndHostBoundariesArePreserved =
+    /Department of Cultural Affairs hosted the official meeting/i.test(
+      dclaEvent?.host_boundary ?? ""
+    ) &&
+    /coalition and Call Script infrastructure mobilized/i.test(
+      dclaEvent?.host_boundary ?? ""
+    ) &&
+    /one real-world meeting/i.test(
+      dclaEvent?.platform_record_boundary ?? ""
+    ) &&
+    /not a sole-founder or single-instant creation event/i.test(
+      dclaEvent?.formation_boundary ?? ""
+    ) &&
+    dclaEvent?.anti_claims?.includes(
+      "NYC Artist Coalition solely organized the official DCLA meeting."
+    ) &&
+    dclaEvent?.anti_claims?.includes(
+      "Jamie alone founded NYC Artist Coalition at this meeting."
+    ) &&
+    dclaRun?.method_boundary ===
+      "The February 6 selection was a participatory vote, not ranked-choice voting." &&
+    dclaRun?.anti_claims?.includes(
+      "A filename makes a coalition follow-up message DCLA-authored."
+    ) &&
+    dclaRun?.source_encounter?.publication_authority ===
+      "separate-human-review" &&
+    dclaRun?.source_encounter?.publication_decision ===
+      "public-safe-synthesis-only";
+
+  const pendingOccurrences = [
+    dclaOccurrence,
+    collaboratorHomeOccurrence,
+    collaboratorWorkOccurrence
+  ];
+  const newOccurrencesPreserveOpenHumanGates =
+    pendingOccurrences.every(
+      (item) =>
+        item?.projection_status === "pending" &&
+        item?.approval?.public_git ===
+          "jamie-authorized-branch-review" &&
+        item?.approval?.production === "open" &&
+        item?.approval?.indexing === "open" &&
+        /not yet confirmed/i.test(item?.credit?.text ?? "") &&
+        typeof item?.rollback?.action === "string" &&
+        item.rollback.action.length > 30
+    ) &&
+    edition?.occurrences?.includes(dclaOccurrence?.id) &&
+    edition?.occurrences?.includes(collaboratorHomeOccurrence?.id) &&
+    edition?.occurrences?.includes(collaboratorWorkOccurrence?.id);
+
+  const displayedPhotoGovernance = [
+    {
+      assetId: suite.canary_asset_id,
+      derivativeId: suite.canary_derivative_id,
+      occurrenceIds: [suite.canary_occurrence_id]
+    },
+    {
+      assetId: "asset.photo.raft-in-fog.waterways",
+      derivativeId: "derivative.photo.raft-in-fog.layout-d.v1",
+      occurrenceIds: ["projection.photo.layout-d.home.raft-in-fog"]
+    },
+    {
+      assetId: "asset.photo.cabaret-law-hearing.2017",
+      derivativeId: "derivative.photo.cabaret-law-hearing.layout-d.v1",
+      occurrenceIds: [
+        "projection.photo.layout-d.home.cabaret-law-hearing"
+      ]
+    },
+    {
+      assetId: "asset.photo.fair-rent-rally.2019",
+      derivativeId: "derivative.photo.fair-rent-rally.layout-d.v1",
+      occurrenceIds: [
+        "projection.photo.layout-d.work-index.fair-rent-rally",
+        "projection.photo.layout-d.work.fair-rent-rally"
+      ]
+    },
+    {
+      assetId: "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      derivativeId:
+        "derivative.photo.kc-town-hall.collaborator-worksite.layout-d.v1",
+      occurrenceIds: [
+        "projection.photo.layout-d.home.kc-town-hall-collaborator",
+        "projection.photo.layout-d.work.kc-town-hall-collaborator"
+      ]
+    },
+    {
+      assetId: "asset.photo.sunday-dinner.preparation",
+      derivativeId:
+        "derivative.photo.sunday-dinner-preparation.layout-d.v1",
+      occurrenceIds: [
+        "projection.photo.layout-d.home.sunday-dinner-preparation",
+        "projection.photo.layout-d.about.sunday-dinner-preparation",
+        "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+        "projection.photo.layout-d.work.sunday-dinner-preparation"
+      ]
+    },
+    {
+      assetId: "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      derivativeId:
+        "derivative.photo.nycac.dcla-listening-room.layout-d.v1",
+      occurrenceIds: [
+        "projection.photo.layout-d.home.dcla-listening-room"
+      ]
+    },
+    {
+      assetId: "asset.photo.nightlife-town-hall.2017",
+      derivativeId: "derivative.photo.nightlife-town-hall.layout-d.v1",
+      occurrenceIds: [
+        "projection.photo.layout-d.work-index.nightlife-town-hall"
+      ]
+    }
+  ];
+  const allDisplayedPhotographsAreGoverned =
+    displayedPhotoGovernance.every(
+      ({ assetId, derivativeId, occurrenceIds }) => {
+        const governedAsset = recordMap.get(assetId);
+        const governedDerivative = governedAsset?.public_derivatives?.find(
+          (item) => item.id === derivativeId
+        );
+        return (
+          governedAsset?.kind === "asset" &&
+          governedAsset?.media_type === "photograph" &&
+          governedAsset?.public_display_status === "hold" &&
+          ["unknown", "permission-needed"].includes(
+            governedAsset?.rights_state
+          ) &&
+          governedAsset?.consent_state === "review-needed" &&
+          typeof governedAsset?.private_source_binding?.status === "string" &&
+          governedAsset.private_source_binding.status.length > 10 &&
+          Boolean(governedDerivative?.path) &&
+          photographyData.includes(`wikiId: "${assetId}"`) &&
+          photographyData.includes(`"${derivativeId}"`) &&
+          occurrenceIds.every((occurrenceId) => {
+            const governedOccurrence = recordMap.get(occurrenceId);
+            return (
+              photographyData.includes(`"${occurrenceId}"`) &&
+              governedOccurrence?.projection_type === "photo-occurrence" &&
+              governedOccurrence?.projection_status === "pending" &&
+              governedOccurrence?.portfolio_edition ===
+                suite.portfolio_edition_id &&
+              governedOccurrence?.asset === assetId &&
+              governedOccurrence?.derivative === derivativeId &&
+              /^\/(?:|[a-z0-9/-]+)$/.test(governedOccurrence?.route ?? "") &&
+              governedOccurrence?.approval?.public_git ===
+                "jamie-authorized-branch-review" &&
+              governedOccurrence?.approval?.production === "open" &&
+              governedOccurrence?.approval?.indexing === "open" &&
+              typeof governedOccurrence?.rollback?.action === "string" &&
+              governedOccurrence.rollback.action.length > 30 &&
+              edition?.occurrences?.includes(occurrenceId)
+            );
+          })
+        );
+      }
+    ) &&
+    displayedPhotoGovernance.flatMap((item) => item.occurrenceIds).length === 13;
+
+  const proposalDerivative = proposalAsset?.public_derivatives?.[0];
+  const proposalBuffer = proposalDerivative?.path
+    ? readAsset(repoRoot, proposalDerivative.path, assetOverrides)
+    : null;
+  const proposalDimensions = proposalBuffer
+    ? imageDimensions(proposalBuffer)
+    : null;
+  const proposalDerivativeIsPublicSafe =
+    proposalAsset?.rights_state === "cleared" &&
+    proposalAsset?.consent_state === "not-applicable" &&
+    proposalAsset?.public_display_status === "cleared" &&
+    proposalDerivative?.id ===
+      "derivative.kc-town-hall.proposal-rendering.public-safe.v1" &&
+    Boolean(proposalBuffer) &&
+    proposalDimensions?.width === 1400 &&
+    proposalDimensions?.height === 840 &&
+    sha256(proposalBuffer) === proposalDerivative?.checksum &&
+    proposalDerivative?.metadata_stripped === true &&
+    !hasEmbeddedMetadata(proposalBuffer) &&
+    /Contact, financial, banking, personal, family, and support-letter pages are excluded/i.test(
+      proposalAsset?.source_boundary ?? ""
+    ) &&
+    proposalAsset?.anti_claims?.includes(
+      "The rendering proves the proposed program was completed."
+    ) &&
+    proposalAsset?.anti_claims?.includes(
+      "Cropping the proposal clears its excluded private pages for publication."
     );
 
   const selectedResumeOption = resumeDecision?.options_considered?.filter(
@@ -463,6 +776,16 @@ export function evaluatePhotoKnowledge(options = {}) {
     asset?.private_source_binding?.opaque_id === null;
 
   const packageManifest = JSON.parse(source("package.json") ?? "{}");
+  const knowledgeWikiNameAndAliasesAreCanonical =
+    source("README.md")?.includes("## Knowledge Wiki") &&
+    source("AGENTS.md")?.includes("## Knowledge Wiki") &&
+    packageManifest.scripts?.["knowledge-wiki"] ===
+      "npm run wiki:check" &&
+    packageManifest.scripts?.["check:knowledge-wiki"] ===
+      "npm run wiki:check" &&
+    typeof packageManifest.scripts?.["knowledge-bank"] === "string" &&
+    existsSync(path.join(repoRoot, "docs/knowledge-bank")) &&
+    !existsSync(path.join(repoRoot, "docs/knowledge-wiki"));
   const rfcTerminologyIsCanonical =
     source("rfcs/README.md")?.includes("# Requests for Comments") &&
     source("rfcs/0003-living-photographic-knowledge-loop.md")?.includes(
@@ -505,6 +828,16 @@ export function evaluatePhotoKnowledge(options = {}) {
       recollectionRemainsDatedAndNonProjecting,
     oral_history_inquiry_is_bounded_and_non_projecting:
       oralHistoryInquiryIsBoundedAndNonProjecting,
+    source_return_records_are_bounded:
+      sourceReturnRecordsAreBounded,
+    formation_and_host_boundaries_are_preserved:
+      formationAndHostBoundariesArePreserved,
+    new_occurrences_preserve_open_human_gates:
+      newOccurrencesPreserveOpenHumanGates,
+    all_displayed_photographs_are_governed:
+      allDisplayedPhotographsAreGoverned,
+    proposal_derivative_is_public_safe:
+      proposalDerivativeIsPublicSafe,
     protected_absence_is_governed: protectedAbsenceIsGoverned,
     curatorial_process_preserves_artistic_authority:
       curatorialProcessPreservesArtisticAuthority,
@@ -512,6 +845,8 @@ export function evaluatePhotoKnowledge(options = {}) {
     feedback_correction_is_append_only_and_fail_closed:
       feedbackCorrectionIsAppendOnlyAndFailClosed,
     private_material_is_absent: privateMaterialIsAbsent,
+    knowledge_wiki_name_and_aliases_are_canonical:
+      knowledgeWikiNameAndAliasesAreCanonical,
     rfc_terminology_is_canonical: rfcTerminologyIsCanonical,
     human_gates_remain_open: humanGatesRemainOpen
   };
@@ -577,14 +912,52 @@ export function renderPhotoReports({ suite, records, checks }) {
   const edition = recordData.find(
     (record) => record.id === suite.portfolio_edition_id
   );
+  const dclaAsset = recordData.find(
+    (record) =>
+      record.id === "asset.photo.nycac.dcla-listening-room.2017-01-27"
+  );
+  const dclaOccurrence = recordData.find(
+    (record) =>
+      record.id === "projection.photo.layout-d.home.dcla-listening-room"
+  );
+  const hardhatAsset = recordData.find(
+    (record) =>
+      record.id === "asset.photo.kc-town-hall.hardhat-worksite.2018"
+  );
+  const collaboratorAsset = recordData.find(
+    (record) =>
+      record.id === "asset.photo.kc-town-hall.collaborator-worksite.2018"
+  );
+  const collaboratorHomeOccurrence = recordData.find(
+    (record) =>
+      record.id ===
+      "projection.photo.layout-d.home.kc-town-hall-collaborator"
+  );
+  const collaboratorWorkOccurrence = recordData.find(
+    (record) =>
+      record.id ===
+      "projection.photo.layout-d.work.kc-town-hall-collaborator"
+  );
+  const councilAsset = recordData.find(
+    (record) =>
+      record.id === "asset.photo.nyc-council.commercial-rent-fieldwork.2026"
+  );
+  const proposalAsset = recordData.find(
+    (record) => record.id === "asset.kc-town-hall.proposal-rendering.2019"
+  );
 
   const photographyIndex = `# Photography Index
 
-Generated from governed RFC 0003 canary records. Do not edit by hand.
+Generated from governed RFC 0003 records. Do not edit by hand.
 
-| Asset | Creator | Derivative | Current occurrence | Production |
+| Asset | Creator | Derivative | Current occurrence | Public display |
 | --- | --- | --- | --- | --- |
-| [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) | Elana Gordon | \`${asset?.public_derivatives?.[0]?.id ?? "missing"}\` | [Homepage hero](../projections/photography/layout-d-home-east-river.md) | ${occurrence?.approval?.production ?? "unknown"} |
+| [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) | Elana Gordon | \`${asset?.public_derivatives?.[0]?.id ?? "missing"}\` | [Homepage hero](../projections/photography/layout-d-home-east-river.md) | ${asset?.public_display_status ?? "unknown"} |
+| [DCLA listening room, 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) | Open | \`${dclaAsset?.public_derivatives?.[0]?.id ?? "missing"}\` | [Homepage sequence](../projections/photography/layout-d-home-dcla-listening-room.md) | ${dclaAsset?.public_display_status ?? "unknown"} |
+| [KC Town Hall hard-hat worksite](../assets/photographs/kc-town-hall-hardhat-worksite-2018.md) | Recollection; confirmation open | None | Research only | ${hardhatAsset?.public_display_status ?? "unknown"} |
+| [KC Town Hall collaborator worksite](../assets/photographs/kc-town-hall-collaborator-worksite-2018.md) | Recollection; confirmation open | \`${collaboratorAsset?.public_derivatives?.[0]?.id ?? "missing"}\` | [Homepage](../projections/photography/layout-d-home-kc-town-hall-collaborator.md); [case study](../projections/photography/layout-d-work-kc-town-hall-collaborator.md) | ${collaboratorAsset?.public_display_status ?? "unknown"} |
+| [Commercial-rent fieldwork at 250 Broadway](../assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md) | Open | None | Research only | ${councilAsset?.public_display_status ?? "unknown"} |
+| [KC Town Hall proposal rendering](../assets/kc-town-hall-proposal-rendering-2019.md) | Project proposal; individual visual authorship open | \`${proposalAsset?.public_derivatives?.[0]?.id ?? "missing"}\` | KC Town Hall case study | ${proposalAsset?.public_display_status ?? "unknown"} |
 
 Private source identifiers, related-frame counts, and permission correspondence
 are intentionally excluded.
@@ -595,27 +968,36 @@ are intentionally excluded.
 Generated from public-safe permission and occurrence records. Do not edit by
 hand. This report is not a rights grant.
 
-| Occurrence | Creator | Permission state | Consent state | Public Git | Production | Indexing |
+| Occurrence or asset | Creator | Rights state | Consent state | Public Git | Production | Indexing |
 | --- | --- | --- | --- | --- | --- | --- |
 | \`${suite.canary_occurrence_id}\` | Elana Gordon | ${permission?.permission?.status ?? "unknown"}; ${asset?.rights_state ?? "unknown"} | ${asset?.consent_state ?? "unknown"} | ${occurrence?.approval?.public_git ?? "unknown"} | ${occurrence?.approval?.production ?? "unknown"} | ${occurrence?.approval?.indexing ?? "unknown"} |
+| \`${dclaOccurrence?.id ?? "missing"}\` | Open | ${dclaAsset?.rights_state ?? "unknown"} | ${dclaAsset?.consent_state ?? "unknown"} | ${dclaOccurrence?.approval?.public_git ?? "unknown"} | ${dclaOccurrence?.approval?.production ?? "unknown"} | ${dclaOccurrence?.approval?.indexing ?? "unknown"} |
+| \`${collaboratorHomeOccurrence?.id ?? "missing"}\` | Recollection; confirmation open | ${collaboratorAsset?.rights_state ?? "unknown"} | ${collaboratorAsset?.consent_state ?? "unknown"} | ${collaboratorHomeOccurrence?.approval?.public_git ?? "unknown"} | ${collaboratorHomeOccurrence?.approval?.production ?? "unknown"} | ${collaboratorHomeOccurrence?.approval?.indexing ?? "unknown"} |
+| \`${collaboratorWorkOccurrence?.id ?? "missing"}\` | Recollection; confirmation open | ${collaboratorAsset?.rights_state ?? "unknown"} | ${collaboratorAsset?.consent_state ?? "unknown"} | ${collaboratorWorkOccurrence?.approval?.public_git ?? "unknown"} | ${collaboratorWorkOccurrence?.approval?.production ?? "unknown"} | ${collaboratorWorkOccurrence?.approval?.indexing ?? "unknown"} |
+| \`${hardhatAsset?.id ?? "missing"}\` | Recollection; confirmation open | ${hardhatAsset?.rights_state ?? "unknown"} | ${hardhatAsset?.consent_state ?? "unknown"} | research only | not applicable | not applicable |
+| \`${councilAsset?.id ?? "missing"}\` | Open | ${councilAsset?.rights_state ?? "unknown"} | ${councilAsset?.consent_state ?? "unknown"} | research only | not applicable | not applicable |
 
-Private evidence reinspection and private source-binding verification remain
-open human gates.
+Private evidence reinspection, photographer confirmation, represented-person
+review, production approval, and indexing approval remain open human gates.
 `;
 
   const placements = `# Public Photo Placements
 
 Generated from the current portfolio edition. Do not edit by hand.
 
-| Occurrence | Route | Component | Derivative | Caption | Credit |
-| --- | --- | --- | --- | --- | --- |
-| \`${suite.canary_occurrence_id}\` | \`${occurrence?.route ?? "unknown"}\` | ${occurrence?.component ?? "unknown"} | \`${occurrence?.derivative ?? "unknown"}\` | ${occurrence?.caption?.text ?? "unknown"} | ${occurrence?.credit?.text ?? "unknown"} |
-| \`${suite.protected_absence_id}\` | \`/resume\` | ResumePage | Protected absence | No photograph in this edition. | Not applicable |
+| Occurrence | Status | Route | Component | Derivative | Caption | Credit |
+| --- | --- | --- | --- | --- | --- | --- |
+| \`${suite.canary_occurrence_id}\` | active on branch; production open | \`${occurrence?.route ?? "unknown"}\` | ${occurrence?.component ?? "unknown"} | \`${occurrence?.derivative ?? "unknown"}\` | ${occurrence?.caption?.text ?? "unknown"} | ${occurrence?.credit?.text ?? "unknown"} |
+| \`${dclaOccurrence?.id ?? "missing"}\` | ${dclaOccurrence?.projection_status ?? "unknown"} | \`${dclaOccurrence?.route ?? "unknown"}\` | ${dclaOccurrence?.component ?? "unknown"} | \`${dclaOccurrence?.derivative ?? "unknown"}\` | ${dclaOccurrence?.caption?.text ?? "unknown"} | ${dclaOccurrence?.credit?.text ?? "unknown"} |
+| \`${collaboratorHomeOccurrence?.id ?? "missing"}\` | ${collaboratorHomeOccurrence?.projection_status ?? "unknown"} | \`${collaboratorHomeOccurrence?.route ?? "unknown"}\` | ${collaboratorHomeOccurrence?.component ?? "unknown"} | \`${collaboratorHomeOccurrence?.derivative ?? "unknown"}\` | ${collaboratorHomeOccurrence?.caption?.text ?? "unknown"} | ${collaboratorHomeOccurrence?.credit?.text ?? "unknown"} |
+| \`${collaboratorWorkOccurrence?.id ?? "missing"}\` | ${collaboratorWorkOccurrence?.projection_status ?? "unknown"} | \`${collaboratorWorkOccurrence?.route ?? "unknown"}\` | ${collaboratorWorkOccurrence?.component ?? "unknown"} | \`${collaboratorWorkOccurrence?.derivative ?? "unknown"}\` | ${collaboratorWorkOccurrence?.caption?.text ?? "unknown"} | ${collaboratorWorkOccurrence?.credit?.text ?? "unknown"} |
+| \`${suite.protected_absence_id}\` | protected absence | \`/resume\` | ResumePage | Protected absence | No photograph in this edition. | Not applicable |
 `;
 
   const impact = `# Photo Impact
 
-Generated dependency view for the East River canary. Do not edit by hand.
+Generated dependency view for the current photographic Wiki cohort. Do not
+edit by hand.
 
 Changing the creator, permission, derivative, caption assertions, or protected
 state requires review of:
@@ -627,11 +1009,20 @@ state requires review of:
 - [Selection decision](../decisions/photography/layout-d-home-east-river-v1.md)
 - [Homepage occurrence](../projections/photography/layout-d-home-east-river.md)
 - [Portfolio edition](../projections/photography/layout-d-portfolio-edition.md)
+- [DCLA meeting and photographic source return](../research-runs/nycac-dcla-photograph-source-return-2026-07.md)
+- [DCLA listening-room occurrence](../projections/photography/layout-d-home-dcla-listening-room.md)
+- [KC Town Hall hard-hat oral-history source](../sources/recollections/kc-town-hall-hardhat-oral-history-2026-07.md)
+- [KC Town Hall collaborator oral-history source](../sources/recollections/kc-town-hall-collaborator-photo-oral-history-2026-07.md)
+- [KC Town Hall homepage occurrence](../projections/photography/layout-d-home-kc-town-hall-collaborator.md)
+- [KC Town Hall case-study occurrence](../projections/photography/layout-d-work-kc-town-hall-collaborator.md)
+- [250 Broadway source-return inquiry](../research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md)
+- [KC Town Hall proposal rendering](../assets/kc-town-hall-proposal-rendering-2019.md)
 - \`apps/www/src/data/photography.ts\`
 - \`apps/www/src/components/Hero.tsx\`
 
 The current edition contains ${edition?.occurrences?.length ?? 0} governed
-occurrences, including one protected absence.
+occurrences, including one protected absence. Unresolved photo records remain
+held even when their branch-review derivatives are present in public Git.
 `;
 
   const reportJson = `${JSON.stringify(

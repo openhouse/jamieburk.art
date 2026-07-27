@@ -72,6 +72,151 @@
       "id": "research-inquiry.photo.hardhat-worksite-oral-history",
       "kind": "research-inquiry",
       "path": "docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md"
+    },
+    {
+      "id": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "kind": "event",
+      "path": "docs/knowledge-bank/events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md"
+    },
+    {
+      "id": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md"
+    },
+    {
+      "id": "research.nycac.dcla-photograph-source-return.2026-07",
+      "kind": "research-run",
+      "path": "docs/knowledge-bank/research-runs/nycac-dcla-photograph-source-return-2026-07.md"
+    },
+    {
+      "id": "research-inquiry.nycac.dcla-audio-speaker-map",
+      "kind": "research-inquiry",
+      "path": "docs/knowledge-bank/research-inquiries/nycac-dcla-audio-speaker-map.md"
+    },
+    {
+      "id": "projection.photo.layout-d.home.dcla-listening-room",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-dcla-listening-room.md"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.hardhat-worksite.2018",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-hardhat-worksite-2018.md"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-collaborator-worksite-2018.md"
+    },
+    {
+      "id": "source.recollection.kc-town-hall-hardhat.2026-07",
+      "kind": "source",
+      "path": "docs/knowledge-bank/sources/recollections/kc-town-hall-hardhat-oral-history-2026-07.md"
+    },
+    {
+      "id": "source.recollection.kc-town-hall-collaborator-photo.2026-07",
+      "kind": "source",
+      "path": "docs/knowledge-bank/sources/recollections/kc-town-hall-collaborator-photo-oral-history-2026-07.md"
+    },
+    {
+      "id": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-kc-town-hall-collaborator.md"
+    },
+    {
+      "id": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-kc-town-hall-collaborator.md"
+    },
+    {
+      "id": "asset.kc-town-hall.proposal-rendering.2019",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/kc-town-hall-proposal-rendering-2019.md"
+    },
+    {
+      "id": "asset.photo.nyc-council.commercial-rent-fieldwork.2026",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md"
+    },
+    {
+      "id": "source.recollection.nyc-council-commercial-rent-fieldwork.2026-07",
+      "kind": "source",
+      "path": "docs/knowledge-bank/sources/recollections/nyc-council-commercial-rent-fieldwork-2026-07.md"
+    },
+    {
+      "id": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
+      "kind": "research-inquiry",
+      "path": "docs/knowledge-bank/research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md"
+    },
+    {
+      "id": "asset.photo.raft-in-fog.waterways",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/raft-in-fog-waterways.md"
+    },
+    {
+      "id": "asset.photo.cabaret-law-hearing.2017",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/cabaret-law-hearing-2017.md"
+    },
+    {
+      "id": "asset.photo.fair-rent-rally.2019",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/fair-rent-rally-2019.md"
+    },
+    {
+      "id": "asset.photo.sunday-dinner.preparation",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/sunday-dinner-preparation.md"
+    },
+    {
+      "id": "asset.photo.nightlife-town-hall.2017",
+      "kind": "asset",
+      "path": "docs/knowledge-bank/assets/photographs/nightlife-town-hall-2017.md"
+    },
+    {
+      "id": "projection.photo.layout-d.home.raft-in-fog",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-raft-in-fog.md"
+    },
+    {
+      "id": "projection.photo.layout-d.home.cabaret-law-hearing",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-cabaret-law-hearing.md"
+    },
+    {
+      "id": "projection.photo.layout-d.work-index.fair-rent-rally",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-index-fair-rent-rally.md"
+    },
+    {
+      "id": "projection.photo.layout-d.work.fair-rent-rally",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-fair-rent-rally.md"
+    },
+    {
+      "id": "projection.photo.layout-d.home.sunday-dinner-preparation",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-sunday-dinner-preparation.md"
+    },
+    {
+      "id": "projection.photo.layout-d.about.sunday-dinner-preparation",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-about-sunday-dinner-preparation.md"
+    },
+    {
+      "id": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-index-sunday-dinner-preparation.md"
+    },
+    {
+      "id": "projection.photo.layout-d.work.sunday-dinner-preparation",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-sunday-dinner-preparation.md"
+    },
+    {
+      "id": "projection.photo.layout-d.work-index.nightlife-town-hall",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-index-nightlife-town-hall.md"
     }
   ],
   "checks": {
@@ -84,11 +229,17 @@
     "occurrence_is_destination_bound_and_reversible": true,
     "recollection_remains_dated_and_non_projecting": true,
     "oral_history_inquiry_is_bounded_and_non_projecting": true,
+    "source_return_records_are_bounded": true,
+    "formation_and_host_boundaries_are_preserved": true,
+    "new_occurrences_preserve_open_human_gates": true,
+    "all_displayed_photographs_are_governed": true,
+    "proposal_derivative_is_public_safe": true,
     "protected_absence_is_governed": true,
     "curatorial_process_preserves_artistic_authority": true,
     "portfolio_edition_is_complete": true,
     "feedback_correction_is_append_only_and_fail_closed": true,
     "private_material_is_absent": true,
+    "knowledge_wiki_name_and_aliases_are_canonical": true,
     "rfc_terminology_is_canonical": true,
     "human_gates_remain_open": true
   },

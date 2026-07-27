@@ -19,6 +19,9 @@ relations:
   - type: related_to
     target: decision.kc-town-hall.listening-fieldwork
     href: ../decisions/kc-town-hall-listening-fieldwork.md
+  - type: related_to
+    target: asset.kc-town-hall.proposal-rendering.2019
+    href: ../assets/kc-town-hall-proposal-rendering-2019.md
 ---
 
 # KC Town Hall CCED proposal bundle, 2019
@@ -35,3 +38,8 @@ The bundle also contains financial, banking, property, professional, and
 personal material that must not enter public Git. It does not independently
 verify every later field-practice memory, survey response, construction role,
 funding outcome, or stewardship transition.
+
+A separately governed [public-safe rendering crop](../assets/kc-town-hall-proposal-rendering-2019.md)
+shows the proposed four-retail-space and three-home program without exposing
+the bundle's protected pages. The rendering documents intent, not completed
+construction.

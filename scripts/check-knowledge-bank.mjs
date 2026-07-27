@@ -309,16 +309,16 @@ for (const requiredDoc of [
 }
 
 if (warnings.length) {
-  console.warn("Knowledge-bank warnings:");
+  console.warn("Knowledge Wiki warnings:");
   for (const warning of warnings) console.warn(`- ${warning}`);
 }
 
 if (failures.length) {
-  console.error("Knowledge-bank check failed:");
+  console.error("Knowledge Wiki check failed:");
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
 
 console.log(
-  `Knowledge-bank check passed${warnings.length ? ` with ${warnings.length} warning(s)` : ""}.`
+  `Knowledge Wiki check passed${warnings.length ? ` with ${warnings.length} warning(s)` : ""}.`
 );

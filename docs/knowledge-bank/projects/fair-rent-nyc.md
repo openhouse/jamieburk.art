@@ -20,6 +20,14 @@ relations:
   - type: related_to
     target: project.save-nyc-spaces
     href: save-nyc-spaces.md
+  - type: related_to
+    target: research-inquiry.photo.nyc-council-commercial-rent-fieldwork
+    href: ../research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md
+    context: Source-return inquiry for a 250 Broadway photograph and associated commercial-rent data fieldwork.
+  - type: has_asset
+    target: asset.photo.nyc-council.commercial-rent-fieldwork.2026
+    href: ../assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md
+    context: Governed photograph whose institutional setting does not establish endorsement or adoption.
 ---
 
 # Fair Rent NYC
@@ -41,6 +49,11 @@ The 2026 record documents work to preserve earlier Fair Rent NYC campaign
 history while coordinating with current small-business and policy partners. It
 keeps city and state lanes distinct, identifies legal and policy questions,
 and treats data, contacts, stories, and publication as governed resources.
+
+The [250 Broadway photographic source-return inquiry](../research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md)
+records a present-day research lead connecting a Council setting, field
+materials, and commercial-rent public-data work. The photograph does not
+establish Council endorsement, adoption, or institutional authorship.
 
 ## Boundary
 

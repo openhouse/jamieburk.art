@@ -3,7 +3,7 @@
 
 **Source commit:** `3e73a92cdd014497d0fcf6fb6947cd718f26c149`
 **Generation time:** 2026-07-26T18:09:29-04:00
-**Source fingerprint:** `2cb74d7a836e4541b23971dbd069d807e272c35968dba3ca11f8df59e2b04bb0`
+**Source fingerprint:** `6122dbe02375404ee0855c5a7bffda58d98bb54a39a9b46da14cec15107a94d9`
 
 - `source.nycac.founding-and-handoff.2016-2018` - NYC Artist Coalition founding and handoff source set; requested by `index.knowledge-wiki.living-archive`: Needed to deepen formation chronology and collaborator-specific credit with public-safe originals.
 - `source.wowlist.product-decision-history` - WOWList product decision history; requested by `index.knowledge-wiki.living-archive`: Needed to connect database and code evidence with collaborator-reviewed product reasoning and adoption chronology.

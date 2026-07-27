@@ -8,11 +8,11 @@ sensitivity: moderate
 last_reviewed: 2026-07-26
 review_by: 2026-10-26
 canonical_path: docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md
-summary: Public-safe questions for returning one privately held worksite photograph to Jamie for first-person context before any claim, caption, or placement is proposed.
+summary: Public-safe source-return record for a privately held worksite photograph after Jamie supplied first-person context, with metadata, corroboration, credit, rights, and placement questions still open.
 question: What work, relationships, decisions, and responsibilities surround this photograph, and what would a fair public account require?
 private_source_binding:
   opaque_id: photo-inquiry-hardhat-worksite-001
-  status: private-reinspection-required
+  status: oral-history-returned-private-reinspection-required
 visible_observations:
   - Jamie is visibly represented wearing a hardhat, safety glasses, gloves, and a blue work jacket.
   - Jamie holds or stands beside a diagonal metal member in a worksite setting.
@@ -29,9 +29,9 @@ oral_history_questions:
   - What language did people at the site use for the place and what it could become?
   - Should this image remain private, return for research, or be considered for a specific portfolio surface?
 research_follow_up:
-  - Record Jamie's response as a dated first-person recollection, not a confirmed claim.
   - Reinspect the original in its private context and identify adjacent frames.
   - Seek corroborating project records for chronology, responsibilities, and outcomes.
+  - Confirm the remembered photographer and review the exact intended use.
   - Resolve photographer, credit, consent, and exact-use permission before any public derivative is created.
 publication_status: hold
 projection:
@@ -48,6 +48,14 @@ relations:
     target: notebook.photography
     href: ../notebooks/photography/README.md
     context: The photography notebook holds this inquiry without projecting the image publicly.
+  - type: related_to
+    target: source.recollection.kc-town-hall-hardhat.2026-07
+    href: ../sources/recollections/kc-town-hall-hardhat-oral-history-2026-07.md
+    context: Jamie's dated oral history remains a first-person source rather than a confirmed project claim.
+  - type: related_to
+    target: asset.photo.kc-town-hall.hardhat-worksite.2018
+    href: ../assets/photographs/kc-town-hall-hardhat-worksite-2018.md
+    context: The photograph now has a governed metadata-only asset record.
 ---
 
 # Hardhat Worksite Photograph Oral-History Inquiry
@@ -57,11 +65,12 @@ material work visible while leaving consequential context unknown. The image is
 an invitation to remember and research, not evidence of a complete project
 history.
 
-The first response should distinguish visible observation, first-person
-recollection, and research or rights follow-up. No photograph, private
-identifier, library coordinate, or inferred project assignment is stored in
-this public record.
+Jamie's response is now preserved as a public-safe first-person source summary.
+It distinguishes visible observation, recollection, and research or rights
+follow-up. No photograph, private identifier, library coordinate, raw
+transcript, or protected relational context is stored in this public record.
 
-The image remains outside the portfolio. A later public proposal would require
-a separately governed asset record, source binding, caption, credit, rights and
-consent review, destination-specific curatorial decision, and Jamie's approval.
+The image remains outside the portfolio. Its governed asset record stays on
+hold. A later public proposal would require a source binding, derivative,
+caption, credit, rights and consent review, destination-specific curatorial
+decision, and Jamie's approval.

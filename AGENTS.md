@@ -46,7 +46,7 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
-## Knowledge Bank
+## Knowledge Wiki
 
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.
@@ -121,7 +121,7 @@ selective.
   editorial selection, and surface approval remain independent decisions.
 - Preserve outliers, contradiction, competing sequences, and protected absence.
   Do not turn the first photo field into a deterministic aesthetic ranking.
-- Run `npm run wiki:test` and `npm run wiki:eval` after changing the notebook or
+- Run `npm run wiki:test` and `npm run evals:wiki` after changing the notebook or
   its governing schema.
 
 ## Requests for Comments

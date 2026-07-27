@@ -2,25 +2,25 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T18:09:29-04:00",
   "sourceCommit": "3e73a92cdd014497d0fcf6fb6947cd718f26c149",
-  "sourceFingerprint": "2cb74d7a836e4541b23971dbd069d807e272c35968dba3ca11f8df59e2b04bb0",
+  "sourceFingerprint": "6122dbe02375404ee0855c5a7bffda58d98bb54a39a9b46da14cec15107a94d9",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 128,
+    "records": 157,
     "byKind": {
       "project": 14,
       "person": 1,
       "organization": 1,
-      "event": 1,
+      "event": 2,
       "place": 1,
-      "source": 32,
-      "asset": 2,
+      "source": 35,
+      "asset": 12,
       "claim": 2,
-      "research-run": 4,
-      "research-inquiry": 3,
+      "research-run": 5,
+      "research-inquiry": 5,
       "decision": 7,
       "correction": 2,
       "method": 10,
@@ -31,35 +31,35 @@
       "index": 18,
       "capability": 5,
       "opportunity": 6,
-      "projection": 6
+      "projection": 18
     },
-    "typedRelations": 494,
+    "typedRelations": 582,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 1,
-      "documents": 18,
+      "documents": 19,
       "evidence:context": 1,
       "evidence:direct-support": 6,
       "evidence:private-support": 1,
-      "has_asset": 4,
-      "informed_by": 44,
+      "has_asset": 8,
+      "informed_by": 45,
       "part_of": 15,
-      "projected_to": 7,
-      "related_to": 291,
+      "projected_to": 19,
+      "related_to": 360,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
       "uses_method": 27,
-      "uses_source": 61
+      "uses_source": 62
     },
-    "proseLinks": 317,
-    "rootReachable": 123,
+    "proseLinks": 338,
+    "rootReachable": 140,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
     "correctionCount": 2,
-    "rightsReviewCount": 2,
+    "rightsReviewCount": 11,
     "opportunityCount": 6,
     "liveOpportunityCount": 5,
     "criticalRequirementCount": 22,
@@ -169,9 +169,72 @@
       "publicDisplayStatus": "hold"
     },
     {
+      "id": "asset.photo.cabaret-law-hearing.2017",
+      "path": "docs/knowledge-bank/assets/photographs/cabaret-law-hearing-2017.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
       "id": "asset.photo.east-river-manhattan-bridge.2022.001",
       "path": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.fair-rent-rally.2019",
+      "path": "docs/knowledge-bank/assets/photographs/fair-rent-rally-2019.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-collaborator-worksite-2018.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.hardhat-worksite.2018",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-hardhat-worksite-2018.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.nightlife-town-hall.2017",
+      "path": "docs/knowledge-bank/assets/photographs/nightlife-town-hall-2017.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.nyc-council.commercial-rent-fieldwork.2026",
+      "path": "docs/knowledge-bank/assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.raft-in-fog.waterways",
+      "path": "docs/knowledge-bank/assets/photographs/raft-in-fog-waterways.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.sunday-dinner.preparation",
+      "path": "docs/knowledge-bank/assets/photographs/sunday-dinner-preparation.md",
+      "rightsState": "unknown",
       "consentState": "review-needed",
       "publicDisplayStatus": "hold"
     }

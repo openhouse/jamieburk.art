@@ -66,6 +66,9 @@ export const photographs = {
     }
   },
   raftInFog: {
+    wikiId: "asset.photo.raft-in-fog.waterways",
+    derivativeId: "derivative.photo.raft-in-fog.layout-d.v1",
+    placementIds: ["projection.photo.layout-d.home.raft-in-fog"],
     src: "/images/field-v02/raft-in-fog.jpg",
     width: 860,
     height: 1280,
@@ -88,6 +91,9 @@ export const photographs = {
     }
   },
   cabaretLawHearing: {
+    wikiId: "asset.photo.cabaret-law-hearing.2017",
+    derivativeId: "derivative.photo.cabaret-law-hearing.layout-d.v1",
+    placementIds: ["projection.photo.layout-d.home.cabaret-law-hearing"],
     src: "/images/field-v02/cabaret-law-hearing.jpg",
     width: 1368,
     height: 912,
@@ -95,7 +101,7 @@ export const photographs = {
       "A crowded New York City Council hearing room with attendees facing a panel.",
     caption:
       "Attendees face the Council panel during the public hearing on repealing the Cabaret Law, September 2017.",
-    credit: "Photo: Jamie Burkart",
+    credit: "Jamie Burkart photo archive",
     objectPosition: "50% 46%",
     kind: "photograph",
     review: {
@@ -109,6 +115,12 @@ export const photographs = {
     }
   },
   fairRentRally: {
+    wikiId: "asset.photo.fair-rent-rally.2019",
+    derivativeId: "derivative.photo.fair-rent-rally.layout-d.v1",
+    placementIds: [
+      "projection.photo.layout-d.work-index.fair-rent-rally",
+      "projection.photo.layout-d.work.fair-rent-rally"
+    ],
     src: "/images/field-v02/fair-rent-rally.jpg",
     width: 1368,
     height: 912,
@@ -130,6 +142,13 @@ export const photographs = {
     }
   },
   kcTownHallWork: {
+    wikiId: "asset.photo.kc-town-hall.collaborator-worksite.2018",
+    derivativeId:
+      "derivative.photo.kc-town-hall.collaborator-worksite.layout-d.v1",
+    placementIds: [
+      "projection.photo.layout-d.home.kc-town-hall-collaborator",
+      "projection.photo.layout-d.work.kc-town-hall-collaborator"
+    ],
     src: "/images/field-v02/historic-restoration-work.jpg",
     width: 1280,
     height: 854,
@@ -137,7 +156,8 @@ export const photographs = {
       "Jamie and a project collaborator standing inside a brick building during restoration work.",
     caption:
       "Jamie and a project collaborator pause inside KC Town Hall during restoration work.",
-    credit: "KC Town Hall project archive",
+    credit:
+      "Photographer not yet confirmed. KC Town Hall project archive",
     objectPosition: "50% 43%",
     kind: "photograph",
     review: {
@@ -151,6 +171,15 @@ export const photographs = {
     }
   },
   sundayDinnerPreparation: {
+    wikiId: "asset.photo.sunday-dinner.preparation",
+    derivativeId:
+      "derivative.photo.sunday-dinner-preparation.layout-d.v1",
+    placementIds: [
+      "projection.photo.layout-d.home.sunday-dinner-preparation",
+      "projection.photo.layout-d.about.sunday-dinner-preparation",
+      "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+      "projection.photo.layout-d.work.sunday-dinner-preparation"
+    ],
     src: "/images/field-v02/sunday-dinner-preparation.jpg",
     width: 956,
     height: 1276,
@@ -172,6 +201,10 @@ export const photographs = {
     }
   },
   artistCoalitionListeningRoom: {
+    wikiId: "asset.photo.nycac.dcla-listening-room.2017-01-27",
+    derivativeId:
+      "derivative.photo.nycac.dcla-listening-room.layout-d.v1",
+    placementIds: ["projection.photo.layout-d.home.dcla-listening-room"],
     src: "/images/field-v02/artist-coalition-listening-room.jpg",
     width: 1280,
     height: 854,
@@ -179,7 +212,8 @@ export const photographs = {
       "People seated closely in a large meeting room while one participant stands to speak.",
     caption:
       "A participant speaks while the room listens at a Department of Cultural Affairs meeting with DIY and alternative cultural-space communities, January 2017.",
-    credit: "NYC Artist Coalition photo archive",
+    credit:
+      "Photographer not yet confirmed. NYC Artist Coalition archive",
     objectPosition: "50% 52%",
     kind: "photograph",
     review: {
@@ -193,6 +227,11 @@ export const photographs = {
     }
   },
   nightlifeTownHall: {
+    wikiId: "asset.photo.nightlife-town-hall.2017",
+    derivativeId: "derivative.photo.nightlife-town-hall.layout-d.v1",
+    placementIds: [
+      "projection.photo.layout-d.work-index.nightlife-town-hall"
+    ],
     src: "/images/field-v02/nightlife-town-hall.jpg",
     width: 1368,
     height: 912,

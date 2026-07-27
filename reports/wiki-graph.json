@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T18:09:29-04:00",
   "sourceCommit": "3e73a92cdd014497d0fcf6fb6947cd718f26c149",
-  "sourceFingerprint": "2cb74d7a836e4541b23971dbd069d807e272c35968dba3ca11f8df59e2b04bb0",
+  "sourceFingerprint": "6122dbe02375404ee0855c5a7bffda58d98bb54a39a9b46da14cec15107a94d9",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -17,6 +17,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "asset.kc-town-hall.proposal-rendering.2019",
+      "path": "docs/knowledge-bank/assets/kc-town-hall-proposal-rendering-2019.md",
+      "title": "KC Town Hall mixed-use proposal rendering",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Metadata-minimized crop of the mixed-use rendering from the 2019 KC Town Hall proposal, separated from private financial, contact, and family material.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "asset.photo.cabaret-law-hearing.2017",
+      "path": "docs/knowledge-bank/assets/photographs/cabaret-law-hearing-2017.md",
+      "title": "Cabaret Law repeal hearing photograph",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed record for the public-hearing photograph used in the homepage scenes sequence.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "asset.photo.digital-district.001",
@@ -43,6 +69,110 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "asset.photo.fair-rent-rally.2019",
+      "path": "docs/knowledge-bank/assets/photographs/fair-rent-rally-2019.md",
+      "title": "Fair Rent rally photograph, November 2019",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed record for the Fair Rent rally photograph used on the work index and case study.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-collaborator-worksite-2018.md",
+      "title": "KC Town Hall collaborator worksite photograph",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed record for the KC Town Hall case-study photograph of Jamie and one project collaborator inside the building during restoration.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.hardhat-worksite.2018",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-hardhat-worksite-2018.md",
+      "title": "KC Town Hall hard-hat worksite photograph",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Metadata-only record for a KC Town Hall photograph of Jamie in worksite safety equipment during the restoration period.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "asset.photo.nightlife-town-hall.2017",
+      "path": "docs/knowledge-bank/assets/photographs/nightlife-town-hall-2017.md",
+      "title": "Night Mayor town hall photograph, October 2017",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed record for the crowded cultural-space town hall photograph used on the work index.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "asset.photo.nyc-council.commercial-rent-fieldwork.2026",
+      "path": "docs/knowledge-bank/assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md",
+      "title": "Commercial-rent data fieldwork at 250 Broadway",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Metadata-only record for a 2026 photograph of Jamie at 250 Broadway holding a clipboard during commercial-rent data fieldwork.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md",
+      "title": "DCLA listening-room photograph, January 2017",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed record for a photograph of a crowded DCLA listening room during the January 27, 2017 DIY-spaces meeting.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "asset.photo.raft-in-fog.waterways",
+      "path": "docs/knowledge-bank/assets/photographs/raft-in-fog-waterways.md",
+      "title": "Waterways raft held at the bank in fog",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed record for the fog-bound raft photograph used on the homepage.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "asset.photo.sunday-dinner.preparation",
+      "path": "docs/knowledge-bank/assets/photographs/sunday-dinner-preparation.md",
+      "title": "Sunday Dinner food preparation photograph",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed record for the food-preparation photograph used across the homepage, About page, work index, and Sunday Dinner case study.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "capability.civic-cultural-technical-translation",
@@ -260,7 +390,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Dated public composition binding the East River homepage occurrence and the resume protected absence to one reviewable portfolio edition.",
+      "summary": "Dated public composition binding every displayed Layout D photograph and the resume protected absence to one reviewable portfolio edition.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-26"
@@ -316,6 +446,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "path": "docs/knowledge-bank/events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md",
+      "title": "NYC DIY spaces meeting at the Department of Cultural Affairs",
+      "kind": "event",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "January 27, 2017 Department of Cultural Affairs meeting about DIY and alternative cultural spaces following the Ghost Ship fire, with coalition and Call Script infrastructure mobilizing participation around the official agency encounter.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
     },
     {
       "id": "event.nycc.constituent-services-hackathon.2016",
@@ -1146,6 +1289,45 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "projection.photo.layout-d.about.sunday-dinner-preparation",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-about-sunday-dinner-preparation.md",
+      "title": "Layout D About-page Sunday Dinner preparation occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "About-page occurrence for the Sunday Dinner preparation photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.home.cabaret-law-hearing",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-cabaret-law-hearing.md",
+      "title": "Layout D homepage Cabaret Law hearing occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Homepage scene occurrence for the Cabaret Law repeal hearing photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.home.dcla-listening-room",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-dcla-listening-room.md",
+      "title": "Layout D homepage DCLA listening-room occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Homepage sequence occurrence binding the DCLA listening-room derivative to a bounded caption, unresolved photographer credit, and open production gates.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
       "id": "projection.photo.layout-d.home.east-river",
       "path": "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md",
       "title": "Layout D homepage East River occurrence",
@@ -1154,6 +1336,45 @@
       "visibility": "public-safe",
       "sensitivity": "low",
       "summary": "Exact staging occurrence binding the East River derivative, homepage route, hero component, crop, caption, credit, and open release gates.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-kc-town-hall-collaborator.md",
+      "title": "Layout D homepage KC Town Hall collaborator occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Homepage sequence occurrence binding the KC Town Hall collaborator photograph to collective work language and open credit and consent gates.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.home.raft-in-fog",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-raft-in-fog.md",
+      "title": "Layout D homepage raft-in-fog occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Homepage occurrence binding the raft-in-fog derivative to a bounded caption and open release gates.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.home.sunday-dinner-preparation",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-home-sunday-dinner-preparation.md",
+      "title": "Layout D homepage Sunday Dinner preparation occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Homepage scene occurrence for the Sunday Dinner preparation photograph.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-26"
@@ -1170,6 +1391,97 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "projection.photo.layout-d.work-index.fair-rent-rally",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-index-fair-rent-rally.md",
+      "title": "Layout D work-index Fair Rent rally occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Work-index occurrence for the Fair Rent rally photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.work-index.nightlife-town-hall",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-index-nightlife-town-hall.md",
+      "title": "Layout D work-index Night Mayor town hall occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Work-index lead occurrence for the crowded Night Mayor town hall photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-index-sunday-dinner-preparation.md",
+      "title": "Layout D work-index Sunday Dinner preparation occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Work-index occurrence for the Sunday Dinner preparation photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.work.fair-rent-rally",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-fair-rent-rally.md",
+      "title": "Layout D FairRentNYC case-study rally occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Case-study occurrence for the Fair Rent rally photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-kc-town-hall-collaborator.md",
+      "title": "Layout D KC Town Hall case-study collaborator occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "KC Town Hall case-study header occurrence for the collaborator worksite photograph with collective language and open rights, credit, and consent gates.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.photo.layout-d.work.sunday-dinner-preparation",
+      "path": "docs/knowledge-bank/projections/photography/layout-d-work-sunday-dinner-preparation.md",
+      "title": "Layout D Sunday Dinner case-study preparation occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Case-study occurrence for the Sunday Dinner preparation photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "research-inquiry.nycac.dcla-audio-speaker-map",
+      "path": "docs/knowledge-bank/research-inquiries/nycac-dcla-audio-speaker-map.md",
+      "title": "DCLA audio, speaker spreadsheet, and discourse-map inquiry",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "high",
+      "summary": "Retrieval plan for the still-missing DCLA event recording, Jamie's speaker-and-affiliation spreadsheet, and the interactive discussion map later visible in public coverage.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
     },
     {
       "id": "research-inquiry.photo.documented-canoe-bike-journeys",
@@ -1192,10 +1504,23 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Public-safe questions for returning one privately held worksite photograph to Jamie for first-person context before any claim, caption, or placement is proposed.",
+      "summary": "Public-safe source-return record for a privately held worksite photograph after Jamie supplied first-person context, with metadata, corroboration, credit, rights, and placement questions still open.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
+      "path": "docs/knowledge-bank/research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md",
+      "title": "250 Broadway commercial-rent fieldwork source return",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "high",
+      "summary": "Retrieval and corroboration plan for the 2026 Council-setting photograph, its photographer, event chronology, 43-minute recording, proposal packet, and follow-up.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
     },
     {
       "id": "research-inquiry.ucsc-installation-title",
@@ -1248,6 +1573,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.nycac.dcla-photograph-source-return.2026-07",
+      "path": "docs/knowledge-bank/research-runs/nycac-dcla-photograph-source-return-2026-07.md",
+      "title": "NYC Artist Coalition DCLA photograph source return",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe account of returning the DCLA listening-room photograph to first-person memory, contemporaneous documents, authenticated mail search, and a bounded retrieval agenda.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
     },
     {
       "id": "research.nycac.shared-folder.2026-07-19",
@@ -1627,6 +1965,45 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "source.recollection.kc-town-hall-collaborator-photo.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/kc-town-hall-collaborator-photo-oral-history-2026-07.md",
+      "title": "Jamie Burkart recollection prompted by a KC Town Hall collaborator photograph",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe source summary of a July 26, 2026 oral history about KC Town Hall site selection, access and equipment systems, restoration interfaces, and collaborative craft.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "source.recollection.kc-town-hall-hardhat.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/kc-town-hall-hardhat-oral-history-2026-07.md",
+      "title": "Jamie Burkart recollection prompted by the KC Town Hall hard-hat photograph",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe source summary of a July 26, 2026 oral history about KC Town Hall worksite coordination, craft learning, proposal development, and neighborhood listening.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "source.recollection.nyc-council-commercial-rent-fieldwork.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/nyc-council-commercial-rent-fieldwork-2026-07.md",
+      "title": "Jamie Burkart recollection of commercial-rent data fieldwork at 250 Broadway",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe source summary of a July 26, 2026 oral history prompted by a photograph of Jamie carrying coalition and commercial-rent data materials at 250 Broadway.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
       "id": "source.resume.jamie-burkart.2026-06-11",
       "path": "docs/knowledge-bank/sources/jamie-resume-2026-06-11.md",
       "title": "Jamie Burkart resume, June 11, 2026",
@@ -1718,6 +2095,30 @@
       "context": null
     },
     {
+      "from": "asset.kc-town-hall.proposal-rendering.2019",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "asset.kc-town-hall.proposal-rendering.2019",
+      "type": "related_to",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.cabaret-law-hearing.2017",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.home.cabaret-law-hearing",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-cabaret-law-hearing.md",
+      "context": null
+    },
+    {
       "from": "asset.photo.digital-district.001",
       "type": "part_of",
       "to": "project.callnyc",
@@ -1756,6 +2157,166 @@
       "source": "frontmatter",
       "href": "../../sources/recollections/jamie-canoe-commuting-2026-07.md",
       "context": "Encountering the composed image prompted a dated first-person recollection."
+    },
+    {
+      "from": "asset.photo.fair-rent-rally.2019",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.work-index.fair-rent-rally",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-work-index-fair-rent-rally.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.fair-rent-rally.2019",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.work.fair-rent-rally",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-work-fair-rent-rally.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-kc-town-hall-collaborator.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-work-kc-town-hall-collaborator.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "type": "related_to",
+      "to": "source.recollection.kc-town-hall-collaborator-photo.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-collaborator-photo-oral-history-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.hardhat-worksite.2018",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.hardhat-worksite.2018",
+      "type": "related_to",
+      "to": "source.recollection.kc-town-hall-hardhat.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-hardhat-oral-history-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nightlife-town-hall.2017",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.work-index.nightlife-town-hall",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-work-index-nightlife-town-hall.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council.commercial-rent-fieldwork.2026",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council.commercial-rent-fieldwork.2026",
+      "type": "related_to",
+      "to": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
+      "source": "frontmatter",
+      "href": "../../research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council.commercial-rent-fieldwork.2026",
+      "type": "related_to",
+      "to": "source.recollection.nyc-council-commercial-rent-fieldwork.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/nyc-council-commercial-rent-fieldwork-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.home.dcla-listening-room",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-dcla-listening-room.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "type": "related_to",
+      "to": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "source": "frontmatter",
+      "href": "../../events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "type": "related_to",
+      "to": "research.nycac.dcla-photograph-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../../research-runs/nycac-dcla-photograph-source-return-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.raft-in-fog.waterways",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.home.raft-in-fog",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-raft-in-fog.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.sunday-dinner.preparation",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.about.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-about-sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.sunday-dinner.preparation",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.home.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-home-sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.sunday-dinner.preparation",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-work-index-sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.sunday-dinner.preparation",
+      "type": "projected_to",
+      "to": "projection.photo.layout-d.work.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-d-work-sunday-dinner-preparation.md",
+      "context": null
     },
     {
       "from": "capability.civic-cultural-technical-translation",
@@ -2246,6 +2807,30 @@
     {
       "from": "edition.layout-d.photo-knowledge.2026-07",
       "type": "related_to",
+      "to": "projection.photo.layout-d.about.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "layout-d-about-sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.home.cabaret-law-hearing",
+      "source": "frontmatter",
+      "href": "layout-d-home-cabaret-law-hearing.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.home.dcla-listening-room",
+      "source": "frontmatter",
+      "href": "layout-d-home-dcla-listening-room.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
       "to": "projection.photo.layout-d.home.east-river",
       "source": "frontmatter",
       "href": "layout-d-home-east-river.md",
@@ -2254,9 +2839,81 @@
     {
       "from": "edition.layout-d.photo-knowledge.2026-07",
       "type": "related_to",
+      "to": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+      "source": "frontmatter",
+      "href": "layout-d-home-kc-town-hall-collaborator.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.home.raft-in-fog",
+      "source": "frontmatter",
+      "href": "layout-d-home-raft-in-fog.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.home.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "layout-d-home-sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
       "to": "projection.photo.layout-d.resume.protected-absence",
       "source": "frontmatter",
       "href": "layout-d-resume-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.work-index.fair-rent-rally",
+      "source": "frontmatter",
+      "href": "layout-d-work-index-fair-rent-rally.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.work-index.nightlife-town-hall",
+      "source": "frontmatter",
+      "href": "layout-d-work-index-nightlife-town-hall.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "layout-d-work-index-sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.work.fair-rent-rally",
+      "source": "frontmatter",
+      "href": "layout-d-work-fair-rent-rally.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+      "source": "frontmatter",
+      "href": "layout-d-work-kc-town-hall-collaborator.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-d.work.sunday-dinner-preparation",
+      "source": "frontmatter",
+      "href": "layout-d-work-sunday-dinner-preparation.md",
       "context": null
     },
     {
@@ -2322,6 +2979,30 @@
       "source": "frontmatter",
       "href": "../research-runs/nycac-shared-folder-2026-07-19.md",
       "context": null
+    },
+    {
+      "from": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "type": "related_to",
+      "to": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-dcla-listening-room-2017.md",
+      "context": "A governed photograph documents the listening-room setting without proving remarks or attendance."
+    },
+    {
+      "from": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "The meeting is an early formation-interval event in the coalition's history."
+    },
+    {
+      "from": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "type": "related_to",
+      "to": "research.nycac.dcla-photograph-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../research-runs/nycac-dcla-photograph-source-return-2026-07.md",
+      "context": "The source-return run reconciles the image, event, document chain, and open retrieval work."
     },
     {
       "from": "event.nycc.constituent-services-hackathon.2016",
@@ -4665,6 +5346,14 @@
     },
     {
       "from": "project.fair-rent-nyc",
+      "type": "has_asset",
+      "to": "asset.photo.nyc-council.commercial-rent-fieldwork.2026",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md",
+      "context": "Governed photograph whose institutional setting does not establish endorsement or adoption."
+    },
+    {
+      "from": "project.fair-rent-nyc",
       "type": "part_of",
       "to": "organization.nyc-artist-coalition",
       "source": "frontmatter",
@@ -4678,6 +5367,14 @@
       "source": "frontmatter",
       "href": "save-nyc-spaces.md",
       "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "related_to",
+      "to": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
+      "source": "frontmatter",
+      "href": "../research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md",
+      "context": "Source-return inquiry for a 250 Broadway photograph and associated commercial-rent data fieldwork."
     },
     {
       "from": "project.fair-rent-nyc",
@@ -4742,6 +5439,30 @@
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
       "context": null
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "has_asset",
+      "to": "asset.kc-town-hall.proposal-rendering.2019",
+      "source": "frontmatter",
+      "href": "../assets/kc-town-hall-proposal-rendering-2019.md",
+      "context": "Public-safe derivative of a proposal page, limited to the rendering and proposal title."
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-collaborator-worksite-2018.md",
+      "context": "Governed collaborator photograph preserving consent and collective-credit review."
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.hardhat-worksite.2018",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-hardhat-worksite-2018.md",
+      "context": "Governed worksite photograph with rights and exact-date questions still open."
     },
     {
       "from": "project.kc-town-hall",
@@ -4818,6 +5539,14 @@
     {
       "from": "project.nyc-artist-coalition",
       "type": "informed_by",
+      "to": "research.nycac.dcla-photograph-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../research-runs/nycac-dcla-photograph-source-return-2026-07.md",
+      "context": "Present-day source return joining the photograph, event records, document chain, and explicit retrieval gaps."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "informed_by",
       "to": "research.nycac.shared-folder.2026-07-19",
       "source": "frontmatter",
       "href": "../research-runs/nycac-shared-folder-2026-07-19.md",
@@ -4846,6 +5575,14 @@
       "source": "frontmatter",
       "href": "../evaluations/nycac-shared-folder-production-2026-07-19.md",
       "context": "Deterministic coverage, leakage, credit, and projection criteria."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "source": "frontmatter",
+      "href": "../events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md",
+      "context": "Early formation-interval meeting with the agency-host and coalition-mobilization boundary preserved."
     },
     {
       "from": "project.nyc-artist-coalition",
@@ -5008,6 +5745,54 @@
       "context": null
     },
     {
+      "from": "projection.photo.layout-d.about.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.preparation",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.about.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.cabaret-law-hearing",
+      "type": "related_to",
+      "to": "asset.photo.cabaret-law-hearing.2017",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/cabaret-law-hearing-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.cabaret-law-hearing",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.dcla-listening-room",
+      "type": "related_to",
+      "to": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-dcla-listening-room-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.dcla-listening-room",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.layout-d.home.east-river",
       "type": "related_to",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
@@ -5040,6 +5825,54 @@
       "context": null
     },
     {
+      "from": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-collaborator-worksite-2018.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.raft-in-fog",
+      "type": "related_to",
+      "to": "asset.photo.raft-in-fog.waterways",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/raft-in-fog-waterways.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.raft-in-fog",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.preparation",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.home.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.layout-d.resume.protected-absence",
       "type": "related_to",
       "to": "decision.photo.layout-d.resume.protected-absence",
@@ -5053,6 +5886,118 @@
       "to": "edition.layout-d.photo-knowledge.2026-07",
       "source": "frontmatter",
       "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work-index.fair-rent-rally",
+      "type": "related_to",
+      "to": "asset.photo.fair-rent-rally.2019",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/fair-rent-rally-2019.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work-index.fair-rent-rally",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work-index.nightlife-town-hall",
+      "type": "related_to",
+      "to": "asset.photo.nightlife-town-hall.2017",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nightlife-town-hall-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work-index.nightlife-town-hall",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.preparation",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work.fair-rent-rally",
+      "type": "related_to",
+      "to": "asset.photo.fair-rent-rally.2019",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/fair-rent-rally-2019.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work.fair-rent-rally",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-collaborator-worksite-2018.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.preparation",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/sunday-dinner-preparation.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-d.work.sunday-dinner-preparation",
+      "type": "related_to",
+      "to": "edition.layout-d.photo-knowledge.2026-07",
+      "source": "frontmatter",
+      "href": "layout-d-portfolio-edition.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.nycac.dcla-audio-speaker-map",
+      "type": "related_to",
+      "to": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "source": "frontmatter",
+      "href": "../events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.nycac.dcla-audio-speaker-map",
+      "type": "related_to",
+      "to": "research.nycac.dcla-photograph-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../research-runs/nycac-dcla-photograph-source-return-2026-07.md",
       "context": null
     },
     {
@@ -5074,10 +6019,50 @@
     {
       "from": "research-inquiry.photo.hardhat-worksite-oral-history",
       "type": "related_to",
+      "to": "asset.photo.kc-town-hall.hardhat-worksite.2018",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-hardhat-worksite-2018.md",
+      "context": "The photograph now has a governed metadata-only asset record."
+    },
+    {
+      "from": "research-inquiry.photo.hardhat-worksite-oral-history",
+      "type": "related_to",
       "to": "notebook.photography",
       "source": "frontmatter",
       "href": "../notebooks/photography/README.md",
       "context": "The photography notebook holds this inquiry without projecting the image publicly."
+    },
+    {
+      "from": "research-inquiry.photo.hardhat-worksite-oral-history",
+      "type": "related_to",
+      "to": "source.recollection.kc-town-hall-hardhat.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/recollections/kc-town-hall-hardhat-oral-history-2026-07.md",
+      "context": "Jamie's dated oral history remains a first-person source rather than a confirmed project claim."
+    },
+    {
+      "from": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
+      "type": "related_to",
+      "to": "asset.photo.nyc-council.commercial-rent-fieldwork.2026",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
+      "type": "related_to",
+      "to": "source.recollection.nyc-council-commercial-rent-fieldwork.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/recollections/nyc-council-commercial-rent-fieldwork-2026-07.md",
+      "context": null
     },
     {
       "from": "research-inquiry.ucsc-installation-title",
@@ -5344,6 +6329,30 @@
       "context": null
     },
     {
+      "from": "research.nycac.dcla-photograph-source-return.2026-07",
+      "type": "documents",
+      "to": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "source": "frontmatter",
+      "href": "../events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md",
+      "context": null
+    },
+    {
+      "from": "research.nycac.dcla-photograph-source-return.2026-07",
+      "type": "related_to",
+      "to": "research-inquiry.nycac.dcla-audio-speaker-map",
+      "source": "frontmatter",
+      "href": "../research-inquiries/nycac-dcla-audio-speaker-map.md",
+      "context": null
+    },
+    {
+      "from": "research.nycac.dcla-photograph-source-return.2026-07",
+      "type": "uses_source",
+      "to": "source.nycac.shared-folder-census.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycac-protected-shared-folder-census-2026.md",
+      "context": null
+    },
+    {
       "from": "research.nycac.shared-folder.2026-07-19",
       "type": "documents",
       "to": "project.nyc-artist-coalition",
@@ -5522,6 +6531,14 @@
     {
       "from": "source.kc-town-hall.cced-proposal.2019",
       "type": "related_to",
+      "to": "asset.kc-town-hall.proposal-rendering.2019",
+      "source": "frontmatter",
+      "href": "../assets/kc-town-hall-proposal-rendering-2019.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.cced-proposal.2019",
+      "type": "related_to",
       "to": "decision.kc-town-hall.listening-fieldwork",
       "source": "frontmatter",
       "href": "../decisions/kc-town-hall-listening-fieldwork.md",
@@ -5661,6 +6678,70 @@
       "to": "research-inquiry.photo.documented-canoe-bike-journeys",
       "source": "frontmatter",
       "href": "../../research-inquiries/documented-canoe-bike-journeys.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.kc-town-hall-collaborator-photo.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-collaborator-worksite-2018.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.kc-town-hall-collaborator-photo.2026-07",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.kc-town-hall-hardhat.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.hardhat-worksite.2018",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-hardhat-worksite-2018.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.kc-town-hall-hardhat.2026-07",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.kc-town-hall-hardhat.2026-07",
+      "type": "related_to",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.nyc-council-commercial-rent-fieldwork.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.nyc-council.commercial-rent-fieldwork.2026",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.nyc-council-commercial-rent-fieldwork.2026-07",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.nyc-council-commercial-rent-fieldwork.2026-07",
+      "type": "related_to",
+      "to": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
+      "source": "frontmatter",
+      "href": "../../research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md",
       "context": null
     },
     {
@@ -6207,9 +7288,27 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/assets/kc-town-hall-proposal-rendering-2019.md",
+      "from": "asset.kc-town-hall.proposal-rendering.2019",
+      "toPath": "apps/www/public/artifacts/kc-town-hall/proposal-rendering.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
+    },
+    {
       "fromPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "from": "asset.photo.east-river-manhattan-bridge.2022.001",
       "toPath": "apps/www/public/images/field-notes/jamie-east-river.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md",
+      "from": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "toPath": "apps/www/public/images/field-v02/artist-coalition-listening-room.jpg",
       "to": null,
       "fragment": null,
       "line": 4,
@@ -7908,6 +9007,132 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md",
+      "to": "projection.photo.layout-d.home.east-river",
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-raft-in-fog.md",
+      "to": "projection.photo.layout-d.home.raft-in-fog",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-cabaret-law-hearing.md",
+      "to": "projection.photo.layout-d.home.cabaret-law-hearing",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-dcla-listening-room.md",
+      "to": "projection.photo.layout-d.home.dcla-listening-room",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-kc-town-hall-collaborator.md",
+      "to": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-sunday-dinner-preparation.md",
+      "to": "projection.photo.layout-d.home.sunday-dinner-preparation",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-about-sunday-dinner-preparation.md",
+      "to": "projection.photo.layout-d.about.sunday-dinner-preparation",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-nightlife-town-hall.md",
+      "to": "projection.photo.layout-d.work-index.nightlife-town-hall",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-fair-rent-rally.md",
+      "to": "projection.photo.layout-d.work-index.fair-rent-rally",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-fair-rent-rally.md",
+      "to": "projection.photo.layout-d.work.fair-rent-rally",
+      "fragment": null,
+      "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-sunday-dinner-preparation.md",
+      "to": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+      "fragment": null,
+      "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-sunday-dinner-preparation.md",
+      "to": "projection.photo.layout-d.work.sunday-dinner-preparation",
+      "fragment": null,
+      "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-kc-town-hall-collaborator.md",
+      "to": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
+      "from": "edition.layout-d.photo-knowledge.2026-07",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
+      "to": "projection.photo.layout-d.resume.protected-absence",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "from": null,
       "toPath": "docs/knowledge-bank/data/blind-spot-controls-2026-07.json",
@@ -7971,6 +9196,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md",
+      "to": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "from": null,
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
@@ -7994,7 +9228,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 11,
+      "line": 12,
       "kind": "link"
     },
     {
@@ -8003,7 +9237,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 12,
+      "line": 13,
       "kind": "link"
     },
     {
@@ -8049,6 +9283,33 @@
       "to": null,
       "fragment": null,
       "line": 191,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md",
+      "to": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
+      "fragment": null,
+      "line": 198,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/research-runs/nycac-dcla-photograph-source-return-2026-07.md",
+      "to": "research.nycac.dcla-photograph-source-return.2026-07",
+      "fragment": null,
+      "line": 199,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/research-inquiries/nycac-dcla-audio-speaker-map.md",
+      "to": "research-inquiry.nycac.dcla-audio-speaker-map",
+      "fragment": null,
+      "line": 202,
       "kind": "link"
     },
     {
@@ -8544,6 +9805,15 @@
       "to": null,
       "fragment": null,
       "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/kc-town-hall-cced-proposal-2019.md",
+      "from": "source.kc-town-hall.cced-proposal.2019",
+      "toPath": "docs/knowledge-bank/assets/kc-town-hall-proposal-rendering-2019.md",
+      "to": "asset.kc-town-hall.proposal-rendering.2019",
+      "fragment": null,
+      "line": 17,
       "kind": "link"
     },
     {

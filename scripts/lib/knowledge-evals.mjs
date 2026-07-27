@@ -56,16 +56,17 @@ const blindSpotControlsPath = path.join(
   "docs/knowledge-bank/data/blind-spot-controls-2026-07.json"
 );
 export const blindSpotControls = JSON.parse(readFileSync(blindSpotControlsPath, "utf8"));
-// Re-reviewed 2026-07-26 after the governed photography layout added media
-// fields and WOWList artifacts to the shared work index. KC Town Hall wording,
-// proof projections, case-study copy, and source relationships did not change.
+// Re-reviewed 2026-07-26 after the governed photography work added the bounded
+// KC Town Hall role wording, worksite image, and public-safe proposal rendering.
+// The new caption is an intended-program artifact, not an as-built record; the
+// field-practice claims remain held and the institutional lifecycle is unchanged.
 const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   corpusSha256: "7344b91556feaffebbcf4394b0b6cca9ac005c8d94d3b325dce97c557fc1cdc1",
   canonicalRecordsSha256: "00d2c80af90f0584311a5557e2ad02a8b67d63e7b1c5719a2418d82f692d4865",
-  governedKnowledgeSha256: "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
+  governedKnowledgeSha256: "899dc28f9fd9e63034b11ef2f5985b7a49f494ddf365f4d873e6598f3efe98c0",
   proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
   caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-  sharedPublicSurfacesSha256: "5940a23479c712ad32c6cbf64ca298a894500cbd4e64fd0fc7b181e2ff183d97",
+  sharedPublicSurfacesSha256: "66d49ae7551123c0f548ddf1800d0455c79c9eb19b9c363d10c0e649922e3d87",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for

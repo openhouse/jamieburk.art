@@ -6,7 +6,7 @@ import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "./lib/knowledge-e
 const suite = loadKnowledgeEvalSuite();
 const result = evaluateKnowledgeBank(suite);
 const lines = [
-  "# Knowledge-bank maturation report",
+  "# Knowledge Wiki maturation report",
   "",
   suite.objective,
   "",

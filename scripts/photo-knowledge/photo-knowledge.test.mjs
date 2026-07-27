@@ -24,6 +24,39 @@ test("the East River canary and living loop pass deterministically", () => {
   assert.equal(result.status, "IMPLEMENTING-PASS");
 });
 
+test("every displayed photograph requires a governed occurrence", () => {
+  const file = "apps/www/src/data/photography.ts";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      'wikiId: "asset.photo.raft-in-fog.waterways"',
+      'wikiId: "asset.photo.raft-in-fog.ungoverned"'
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.all_displayed_photographs_are_governed,
+    false
+  );
+});
+
+test("the portfolio edition cannot omit a displayed occurrence", () => {
+  const file =
+    "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "  - projection.photo.layout-d.home.raft-in-fog\n",
+      ""
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.all_displayed_photographs_are_governed,
+    false
+  );
+});
+
 test("a missing derivative fails closed", () => {
   const result = evaluatePhotoKnowledge({
     assetOverrides: {
@@ -291,6 +324,139 @@ test("an oral-history inquiry cannot promote recollection to collective fact", (
   });
   assert.equal(
     result.checks.oral_history_inquiry_is_bounded_and_non_projecting,
+    false
+  );
+});
+
+test("an agency-hosted meeting cannot become a coalition-owned event", () => {
+  const file =
+    "docs/knowledge-bank/events/nyc-diy-spaces-post-ghost-ship-dcla-2017-01-27.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "The Department of Cultural Affairs hosted the official meeting",
+      "NYC Artist Coalition hosted the official meeting"
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.formation_and_host_boundaries_are_preserved,
+    false
+  );
+});
+
+test("the DCLA participatory vote cannot be relabeled as RCV", () => {
+  const file =
+    "docs/knowledge-bank/research-runs/nycac-dcla-photograph-source-return-2026-07.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "The February 6 selection was a participatory vote, not ranked-choice voting.",
+      "The February 6 selection used ranked-choice voting."
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.formation_and_host_boundaries_are_preserved,
+    false
+  );
+});
+
+test("a photographed identity cannot become quotation or consent", () => {
+  const file =
+    "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "Identity is not a photographer credit, quotation, endorsement, or consent grant.",
+      "Identity confirms the quotation, endorsement, and consent grant."
+    ),
+    skipGenerated: true
+  });
+  assert.equal(result.checks.source_return_records_are_bounded, false);
+});
+
+test("adjacent DCLA frames cannot be collapsed into one visual record", () => {
+  const file =
+    "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "The committed derivative is a different frame from the blue-jacket, rear-view image that initiated the oral-history return; visible observations must not be merged across frames.",
+      "The committed derivative and the oral-history image are the same frame."
+    ),
+    skipGenerated: true
+  });
+  assert.equal(result.checks.source_return_records_are_bounded, false);
+});
+
+test("a KC Town Hall recollection cannot confirm every construction duty", () => {
+  const file =
+    "docs/knowledge-bank/sources/recollections/kc-town-hall-hardhat-oral-history-2026-07.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "The recollection independently confirms every construction responsibility or project outcome.",
+      "The recollection confirms every construction responsibility and project outcome."
+    ),
+    skipGenerated: true
+  });
+  assert.equal(result.checks.source_return_records_are_bounded, false);
+});
+
+test("archive custody cannot silently become photographer credit", () => {
+  const file =
+    "docs/knowledge-bank/assets/photographs/kc-town-hall-collaborator-worksite-2018.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "Archive custody establishes copyright or creator credit.",
+      "Archive custody establishes the photographer and copyright."
+    ),
+    skipGenerated: true
+  });
+  assert.equal(result.checks.source_return_records_are_bounded, false);
+});
+
+test("a Council backdrop cannot become institutional adoption", () => {
+  const file =
+    "docs/knowledge-bank/research-inquiries/nyc-council-commercial-rent-fieldwork-source-return.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "Presence at 250 Broadway establishes Council employment, endorsement, or adoption.",
+      "Presence at 250 Broadway establishes Council endorsement and adoption."
+    ),
+    skipGenerated: true
+  });
+  assert.equal(result.checks.source_return_records_are_bounded, false);
+});
+
+test("modified proposal pixels fail the public-safe derivative contract", () => {
+  const relativePath =
+    "apps/www/public/artifacts/kc-town-hall/proposal-rendering.webp";
+  const original = readFileSync(path.join(defaultRepoRoot, relativePath));
+  const mutated = Buffer.from(original);
+  mutated[mutated.length - 1] ^= 0xff;
+  const result = evaluatePhotoKnowledge({
+    assetOverrides: { [relativePath]: mutated },
+    skipGenerated: true
+  });
+  assert.equal(result.checks.proposal_derivative_is_public_safe, false);
+});
+
+test("Knowledge Wiki cannot regress to Knowledge Bank as the current product name", () => {
+  const file = "README.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "## Knowledge Wiki",
+      "## Knowledge Bank"
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.knowledge_wiki_name_and_aliases_are_canonical,
     false
   );
 });

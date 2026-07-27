@@ -25,7 +25,7 @@ export function Hero() {
       <div aria-hidden="true" className="jb-photo-hero-scrim" />
       <div className="jb-frame jb-photo-hero-content">
         <div className="jb-photo-hero-copy">
-          <p className="text-sm font-semibold uppercase text-white/88">
+          <p className="jb-photo-hero-role text-sm font-semibold uppercase text-white/88">
             Technical Project Manager - Product Operations & Implementation
           </p>
           <h1 className="mt-5 font-display font-bold text-white">
