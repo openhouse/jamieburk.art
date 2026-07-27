@@ -145,7 +145,7 @@ export function buildProfessorCandidateReceipt() {
         sha256: publicSurface.publicSurfaceFingerprint,
         fileCount: publicSurface.publicSurfaceFileCount,
         purpose:
-          "Binds the 56-row browser and axe matrix to apps/www plus package manifests."
+          "Binds the 98-row browser and axe matrix to apps/www plus package manifests."
       },
       photoKnowledge: {
         sha256: photoCandidate.candidate_fingerprint,
