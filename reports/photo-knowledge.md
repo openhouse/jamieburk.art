@@ -2,7 +2,7 @@
 
 - Photos: 6
 - Placements: 11
-- Blocking criteria: 23
+- Blocking criteria: 25
 - Deterministic status: PASS
 - Production: open
 - Indexing: open

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `cb2b72a9839919bccd82577a83fe86dc6fe7e3fa`
-**Generation time:** 2026-07-26T20:31:54-04:00
-**Source fingerprint:** `18cf23009ad432f86d70aa43987323a9e859112b35cf0d5f358f2702eb65cdba`
+**Source commit:** `6d7fabb19d4691952c5d28fb13c48d56900c9231`
+**Generation time:** 2026-07-26T21:46:49-04:00
+**Source fingerprint:** `94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c`
 
 ## application
 
@@ -145,6 +145,7 @@
 
 ## research-inquiry
 
+- [Recover the context of a CallNYC interface-in-use photograph](../research-inquiries/callnyc-interface-photo-oral-history.md) - `research-inquiry.callnyc-interface-photo-oral-history`
 - [Document bicycle-canoe journeys](../research-inquiries/canoe-bike-journeys.md) - `research-inquiry.canoe-bike-journeys`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
@@ -154,6 +155,7 @@
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
+- [First field and website-shortlist close reading](../research-runs/photography-first-field-close-reading-2026-07-26.md) - `research.photography-first-field-close-reading.2026-07-26`
 - [The archive answers back - a 196 photography residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md) - `research.photography-first-pass-residency-proposal.2026-07-22`
 - [Opening the photography working notebook](../research-runs/photography-notebook-opening-2026-07-22.md) - `research.photography-notebook-opening.2026-07-22`
 - [First contact with the private photo field](../research-runs/photography-studio-connection-2026-07-22.md) - `research.photography-studio-connection.2026-07-22`

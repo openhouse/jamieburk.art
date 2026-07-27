@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `cb2b72a9839919bccd82577a83fe86dc6fe7e3fa`
-**Generation time:** 2026-07-26T20:31:54-04:00
-**Source fingerprint:** `18cf23009ad432f86d70aa43987323a9e859112b35cf0d5f358f2702eb65cdba`
+**Source commit:** `6d7fabb19d4691952c5d28fb13c48d56900c9231`
+**Generation time:** 2026-07-26T21:46:49-04:00
+**Source fingerprint:** `94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 28
+- Nodes added: 30
 - Nodes removed: 0
-- Edges added: 79
+- Edges added: 87
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 6
@@ -34,7 +34,9 @@ Compared with the graph artifact on `origin/develop`.
 - `photo.raft-riverboat`
 - `photo.tired-of-tires-load`
 - `portfolio.photo.home-east-river.layout-b`
+- `research-inquiry.callnyc-interface-photo-oral-history`
 - `research-inquiry.canoe-bike-journeys`
+- `research.photography-first-field-close-reading.2026-07-26`
 - `research.photography-first-pass-residency-proposal.2026-07-22`
 - `research.photography-notebook-opening.2026-07-22`
 - `research.photography-studio-connection.2026-07-22`

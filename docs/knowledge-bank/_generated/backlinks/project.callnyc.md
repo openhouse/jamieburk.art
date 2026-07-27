@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to CallNYC
 
-**Source commit:** `cb2b72a9839919bccd82577a83fe86dc6fe7e3fa`
-**Generation time:** 2026-07-26T20:31:54-04:00
-**Source fingerprint:** `18cf23009ad432f86d70aa43987323a9e859112b35cf0d5f358f2702eb65cdba`
+**Source commit:** `6d7fabb19d4691952c5d28fb13c48d56900c9231`
+**Generation time:** 2026-07-26T21:46:49-04:00
+**Source fingerprint:** `94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
@@ -31,6 +31,7 @@
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [CallNYC portfolio projection](../../projections/work-callnyc.md) - `related_to` (frontmatter)
+- [Recover the context of a CallNYC interface-in-use photograph](../../research-inquiries/callnyc-interface-photo-oral-history.md) - `related_to` (frontmatter)
 - [CallNYC public source repository](../../sources/callnyc-source-repository.md) - `documents` (frontmatter)
 - [New York City Council Constituent Services Data release](../../sources/nycc-constituent-services-data-2016-05-27.md) - `documents` (frontmatter)
 - [Website provides new information about council members' focus](../../sources/politico-callnyc-2016-03-14.md) - `documents` (frontmatter)

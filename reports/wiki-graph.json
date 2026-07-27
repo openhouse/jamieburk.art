@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T20:31:54-04:00",
-  "sourceCommit": "cb2b72a9839919bccd82577a83fe86dc6fe7e3fa",
-  "sourceFingerprint": "18cf23009ad432f86d70aa43987323a9e859112b35cf0d5f358f2702eb65cdba",
+  "generatedAt": "2026-07-26T21:46:49-04:00",
+  "sourceCommit": "6d7fabb19d4691952c5d28fb13c48d56900c9231",
+  "sourceFingerprint": "94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -1198,6 +1198,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research-inquiry.callnyc-interface-photo-oral-history",
+      "path": "docs/knowledge-bank/research-inquiries/callnyc-interface-photo-oral-history.md",
+      "title": "Recover the context of a CallNYC interface-in-use photograph",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Held oral-history inquiry for a private shortlist photograph that appears to show a CallNYC issue-route interface in use without treating the image as proof of adoption, endorsement, outcome, consent, or publication permission.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
       "id": "research-inquiry.canoe-bike-journeys",
       "path": "docs/knowledge-bank/research-inquiries/canoe-bike-journeys.md",
       "title": "Document bicycle-canoe journeys",
@@ -1274,6 +1287,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.photography-first-field-close-reading.2026-07-26",
+      "path": "docs/knowledge-bank/research-runs/photography-first-field-close-reading-2026-07-26.md",
+      "title": "First field and website-shortlist close reading",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe aggregate record of a completed private 1,000-image field, full visual inspection, an 18-image website shortlist, and the human gates that keep editorial attention distinct from publication.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "research.photography-first-pass-residency-proposal.2026-07-22",
@@ -3281,6 +3307,14 @@
     {
       "from": "index.knowledge-wiki.photography-notebook",
       "type": "informed_by",
+      "to": "research.photography-first-field-close-reading.2026-07-26",
+      "source": "frontmatter",
+      "href": "../research-runs/photography-first-field-close-reading-2026-07-26.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
+      "type": "informed_by",
       "to": "research.photography-first-pass-residency-proposal.2026-07-22",
       "source": "frontmatter",
       "href": "../research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
@@ -5131,6 +5165,30 @@
       "context": null
     },
     {
+      "from": "research-inquiry.callnyc-interface-photo-oral-history",
+      "type": "informed_by",
+      "to": "research.photography-first-field-close-reading.2026-07-26",
+      "source": "frontmatter",
+      "href": "../research-runs/photography-first-field-close-reading-2026-07-26.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.callnyc-interface-photo-oral-history",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.callnyc-interface-photo-oral-history",
+      "type": "uses_method",
+      "to": "method.photographic-archive-fieldwork",
+      "source": "frontmatter",
+      "href": "../methods/photographic-archive-fieldwork.md",
+      "context": null
+    },
+    {
       "from": "research-inquiry.canoe-bike-journeys",
       "type": "related_to",
       "to": "index.photo-set.east-river-canoe.2022",
@@ -5448,6 +5506,38 @@
       "to": "source.nycac.shared-folder-census.2026",
       "source": "frontmatter",
       "href": "../sources/nycac-protected-shared-folder-census-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-field-close-reading.2026-07-26",
+      "type": "informed_by",
+      "to": "research.photography-first-pass-residency-proposal.2026-07-22",
+      "source": "frontmatter",
+      "href": "photography-first-pass-residency-proposal-2026-07-22.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-field-close-reading.2026-07-26",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "../indexes/photography-working-notebook.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-field-close-reading.2026-07-26",
+      "type": "related_to",
+      "to": "research-inquiry.callnyc-interface-photo-oral-history",
+      "source": "frontmatter",
+      "href": "../research-inquiries/callnyc-interface-photo-oral-history.md",
+      "context": null
+    },
+    {
+      "from": "research.photography-first-field-close-reading.2026-07-26",
+      "type": "uses_method",
+      "to": "method.photographic-archive-fieldwork",
+      "source": "frontmatter",
+      "href": "../methods/photographic-archive-fieldwork.md",
       "context": null
     },
     {
@@ -7326,7 +7416,16 @@
       "toPath": "docs/knowledge-bank/evaluations/photography-working-notebook.md",
       "to": "evaluation.photography-notebook.2026-07-22",
       "fragment": null,
-      "line": 104,
+      "line": 108,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
+      "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/research-runs/photography-first-field-close-reading-2026-07-26.md",
+      "to": "research.photography-first-field-close-reading.2026-07-26",
+      "fragment": null,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -7335,25 +7434,7 @@
       "toPath": "docs/knowledge-bank/research-runs/photography-notebook-opening-2026-07-22.md",
       "to": "research.photography-notebook-opening.2026-07-22",
       "fragment": null,
-      "line": 20,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
-      "from": "index.knowledge-wiki.photography-notebook",
-      "toPath": "docs/knowledge-bank/research-runs/photography-studio-connection-2026-07-22.md",
-      "to": "research.photography-studio-connection.2026-07-22",
-      "fragment": null,
-      "line": 22,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
-      "from": "index.knowledge-wiki.photography-notebook",
-      "toPath": "docs/knowledge-bank/research-runs/photography-notebook-opening-2026-07-22.md",
-      "to": "research.photography-notebook-opening.2026-07-22",
-      "fragment": null,
-      "line": 85,
+      "line": 87,
       "kind": "link"
     },
     {
@@ -7362,7 +7443,7 @@
       "toPath": "docs/knowledge-bank/research-runs/photography-first-pass-residency-proposal-2026-07-22.md",
       "to": "research.photography-first-pass-residency-proposal.2026-07-22",
       "fragment": null,
-      "line": 86,
+      "line": 88,
       "kind": "link"
     },
     {
@@ -7371,7 +7452,25 @@
       "toPath": "docs/knowledge-bank/research-runs/photography-studio-connection-2026-07-22.md",
       "to": "research.photography-studio-connection.2026-07-22",
       "fragment": null,
-      "line": 87,
+      "line": 89,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
+      "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/research-runs/photography-first-field-close-reading-2026-07-26.md",
+      "to": "research.photography-first-field-close-reading.2026-07-26",
+      "fragment": null,
+      "line": 90,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography-working-notebook.md",
+      "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/research-inquiries/callnyc-interface-photo-oral-history.md",
+      "to": "research-inquiry.callnyc-interface-photo-oral-history",
+      "fragment": null,
+      "line": 91,
       "kind": "link"
     },
     {

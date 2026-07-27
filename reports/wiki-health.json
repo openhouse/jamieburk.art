@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T20:31:54-04:00",
-  "sourceCommit": "cb2b72a9839919bccd82577a83fe86dc6fe7e3fa",
-  "sourceFingerprint": "18cf23009ad432f86d70aa43987323a9e859112b35cf0d5f358f2702eb65cdba",
+  "generatedAt": "2026-07-26T21:46:49-04:00",
+  "sourceCommit": "6d7fabb19d4691952c5d28fb13c48d56900c9231",
+  "sourceFingerprint": "94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 135,
+    "records": 137,
     "byKind": {
       "project": 14,
       "person": 1,
@@ -19,8 +19,8 @@
       "source": 35,
       "asset": 7,
       "claim": 2,
-      "research-run": 7,
-      "research-inquiry": 2,
+      "research-run": 8,
+      "research-inquiry": 3,
       "decision": 7,
       "correction": 1,
       "method": 11,
@@ -32,7 +32,7 @@
       "opportunity": 6,
       "projection": 5
     },
-    "typedRelations": 506,
+    "typedRelations": 514,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 1,
@@ -41,21 +41,21 @@
       "evidence:direct-support": 6,
       "evidence:private-support": 1,
       "has_asset": 9,
-      "informed_by": 50,
+      "informed_by": 53,
       "part_of": 9,
       "projected_to": 7,
-      "related_to": 293,
+      "related_to": 296,
       "resulted_in": 5,
       "supersedes": 1,
       "supports": 19,
-      "uses_method": 27,
+      "uses_method": 29,
       "uses_source": 66
     },
-    "proseLinks": 318,
-    "rootReachable": 126,
+    "proseLinks": 319,
+    "rootReachable": 128,
     "orphanCount": 0,
     "deadEndCount": 0,
-    "wantedPageCount": 7,
+    "wantedPageCount": 8,
     "stalePageCount": 0,
     "correctionCount": 1,
     "rightsReviewCount": 6,
@@ -135,6 +135,13 @@
       "reason": "Needed to connect approved or held project images with rights holders, represented-person review, crop limits, and publication decisions outside public Git.",
       "requestedBy": "index.knowledge-wiki.visual-evidence",
       "path": "docs/knowledge-bank/indexes/visual-evidence.md"
+    },
+    {
+      "id": "source.oral-history.jamie.callnyc-interface-photo",
+      "proposed_title": "Jamie Burkart oral history for the CallNYC interface-in-use photograph",
+      "reason": "Needed to recover photographer, represented person, date, setting, audience, purpose, sequence, what changed or was learned, and exact publication and credit boundaries.",
+      "requestedBy": "research-inquiry.callnyc-interface-photo-oral-history",
+      "path": "docs/knowledge-bank/research-inquiries/callnyc-interface-photo-oral-history.md"
     },
     {
       "id": "source.canoe-bike.journey-log",

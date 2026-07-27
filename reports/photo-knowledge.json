@@ -176,6 +176,8 @@
       "photo_caption_credit_rendered": true,
       "photo_recollection_nonpublishing": true,
       "photo_inquiry_avoids_photo_counting": true,
+      "photo_callnyc_oral_history_default_closed": true,
+      "photo_first_field_close_reading_bounded": true,
       "photo_curatorial_authority_advisory": true,
       "photo_protected_absence_first_class": true,
       "photo_public_boundary_clean": true,
@@ -190,8 +192,8 @@
     "counts": {
       "photos": 6,
       "placements": 11,
-      "requiredRecords": 17,
-      "blockingCriteria": 23,
+      "requiredRecords": 19,
+      "blockingCriteria": 25,
       "historicalRevocationConflicts": 0,
       "restorationDecisionConflicts": 0,
       "productionOpen": 6
