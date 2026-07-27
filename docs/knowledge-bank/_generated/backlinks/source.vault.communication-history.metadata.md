@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Protected communication history - public-safe metadata boundary
 
-**Source commit:** `c2dc5ab10d10a24e5530ec9cb900ab43fc57228f`
-**Generation time:** 2026-07-26T16:25:53-04:00
+**Source commit:** `f0dec3a060c62eb96c05075940d233ef6ea88f7e`
+**Generation time:** 2026-07-26T20:43:26-04:00
 **Source fingerprint:** `250ea71b038286cf5949ab9deccc5a472330051e21034b806b12b8a1cfd5ce7b`
 
 - [Employment context coverage baseline - July 18, 2026](../../evaluations/employment-context-coverage-2026-07-18.md) - `uses_source` (frontmatter)
