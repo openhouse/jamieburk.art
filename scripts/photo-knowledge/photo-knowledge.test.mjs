@@ -1325,6 +1325,17 @@ test("authority registry cannot grant publication authority", () => {
       for (const gate of ["exact-credit", "crop", "caption"]) {
         registry.photos[0].gateReviewers[gate] = ["Jamie Burkart"];
       }
+    },
+    (registry) => {
+      registry.photos[0].basisRecordIds.push(
+        "photo.kc-town-hall-before"
+      );
+    },
+    (registry) => {
+      registry.photos[0].basisRecordIds = [
+        restorationPhotoId,
+        "evaluation.photo-curation.home-east-river.2026-07-26"
+      ];
     }
   ];
   for (const mutate of mutations) {

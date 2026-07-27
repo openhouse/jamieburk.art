@@ -109,6 +109,12 @@ const authorityRegistryDenials = [
   "a broader copyright license",
   "consent for a materially different use"
 ];
+const authorityCanaryPhotoId =
+  "photo.east-river-manhattan-bridge.2022";
+const authorityCanaryBasisRecordIds = [
+  authorityCanaryPhotoId,
+  "source.permission.elana-gordon.east-river-portfolio"
+];
 const restorationGatePolicy = {
   creator: {
     authority: "creator-or-rights-holder",
@@ -443,6 +449,9 @@ function authorityRegistryPolicyBound(registry) {
       JSON.stringify(authorityRegistryDenials) &&
     Array.isArray(registry.photos) &&
     registry.photos.length === 1 &&
+    registry.photos[0]?.photoId === authorityCanaryPhotoId &&
+    JSON.stringify(registry.photos[0]?.basisRecordIds) ===
+      JSON.stringify(authorityCanaryBasisRecordIds) &&
     new Set(registry.photos.map((entry) => entry.photoId)).size ===
       registry.photos.length &&
     registry.photos.every(
