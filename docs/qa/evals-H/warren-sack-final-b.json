@@ -1,41 +1,40 @@
 {
-  "evaluator": "Independent final holdout, Warren Sack lens",
+  "evaluator": "Warren Sack lens final holdout B, AI-simulated independent read-only evaluator",
   "reviewerId": "warren-sack-final-b",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "3de3dbf72c8bd922b8c211ab686a5ce790f48466411f669fea37404bd6e09d3e",
+  "lens": "PR-016",
+  "judge": "B",
+  "date": "2026-07-26",
+  "candidateSha256": "262adf6fd61b1190cc45e40c92ca361a6d60ac4fefcab674dcbadfda9efa1f48",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independent recomputation through scripts/lib/professor-lens-eval.mjs, with finalScorecards explicitly excluded, produced the required candidate SHA-256 and passed all 13 non-scorecard criteria.",
-    "The persistent navigation reaches /about in one click. That page plainly names the recursive sequence and links readers directly to inspectable project evidence.",
-    "The About page compares five projects through repeated Relationships, Interface and use, and Learning and continuity rows, making the recurring method specific without claiming structural equivalence.",
-    "FairRentNYC traces lived experience, meetings, sources, and institutional actors into source maps, participation systems, campaign interfaces, collective public use, running minutes, decision records, action tracking, and continued work.",
-    "WOWList traces community vocabulary and informal networks into a keyword-community model, publishing and distribution interfaces, documented organizer use, support workflows, and reusable deployment patterns while preserving shared credit.",
-    "Sunday Dinner and 196 trace hospitality, trust, shared space, and recurring rhythms into invitations, onboarding, facilitation, access handoffs, documented operating workflows, aggregate continuity evidence, and explicit consent boundaries.",
-    "Harry J. Epstein Company connects customer language, product judgment, public voice, and operating habits to a maintained storefront, customer and team use, bounded analytics, incremental releases, reusable content patterns, and clearer workflows.",
-    "RFC 0003 and the East River canary expose a complete recursive learning loop: source relationships, structured records, a composed interface, exact-candidate review, creator correction, recollection, research return, rollback, and a teachable handoff.",
-    "CallNYC remains explicitly archived, independent, unofficial, and non-current; Source-Backed Team Memory remains explicitly an early method with a synthetic example rather than production SaaS.",
-    "Read-only photo governance verification passed 26 of 26 checks, 20 of 20 tests, and the 100 percent hard-gate evaluation."
+    "Independent recomputation over the evaluator-defined 145-file candidate produced the requested SHA-256 exactly; the input set contained neither final scorecards nor photo holdouts.",
+    "All 13 deterministic non-final professor-lens criteria passed with final scorecards explicitly omitted.",
+    "The homepage provides a direct About path. About plainly states the recursive sequence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue, and links it to inspectable project evidence.",
+    "At least three strong traces are reconstructable: HJE connects customer language and operating habits to a maintained storefront, real customer and team use, incremental learning, and reusable workflows; NYC Artist Coalition and FairRent connect lived experience, meetings, sources, and public actors to campaign and participation interfaces, collective use, and recoverable minutes, source maps, decisions, and action trackers; WOWList connects organizer vocabulary to keyword-community architecture, distributed publishing interfaces, organizer use, and reusable deployment patterns.",
+    "Source-Backed Team Memory and the photographic Knowledge Wiki make recursion especially inspectable: Known, Open, and Protected records, human review, permission and occurrence models, rendered compositions, correction and recollection returns, research inquiries, rollback, and teachable handoffs remain distinct stages rather than abstract systems language.",
+    "The UCSC source note treats protected educational records as rubric-design context only, withholds raw text and identifiers, and explicitly rejects structural-equivalence invention, peer-reviewed-research, production-deployment, sole-authorship, and current-Max/Jitter claims.",
+    "Committed Layout E and professor-lens snapshots demonstrate role clarity, navigation, the rendered About through-line, project rows, and responsive behavior. Historical Layout C snapshots and their receipt bind viewport, credit, image-load, overflow, and request evidence without converting that evidence into release approval.",
+    "Fresh read-only checks passed: photo knowledge 26/26; Knowledge Wiki 129 records, 504 semantic/evidence edges, and 315 prose links; all three RFCs structurally valid; citation registry current and redacted; knowledge-bank validation passed with careful-claim guardrail warnings preserved."
   ],
-  "gaps": [],
-  "safety_findings": [
-    "No active public route claims invention of structural equivalence, peer-reviewed research, production deployment from coursework, sole authorship of collective coursework, or current Max/Jitter proficiency.",
-    "The held Warren Sack coursework record is excluded from the generated public registry and active route projections; raw educational records, grades, identifiers, paths, and correspondence remain withheld.",
-    "Collective credit and causal boundaries are explicit across Open House, WOWList, Sunday Dinner, NYC Artist Coalition, CallNYC, and photographic captions.",
-    "RFC 0003 correctly keeps the Layout C occurrence on hold and keeps production, indexing, exact-use, crop, rights, and dignity approvals as separate human gates. The active Layout E legacy photo cohort is not represented as fully migrated or cleared.",
-    "Automated checks and this lens judgment provide verification evidence only; they do not confer rights, consent, represented-person approval, Jamie approval, production approval, or indexing approval."
+  "limitations": [
+    "Final scorecards, photo holdouts, composite finals, and other agents were not inspected; this score is judge B only and does not establish the three-judge median or aggregate launch result.",
+    "The full professor-specific snapshots predate the current candidate. The later About change is an additive fifth systems example, while the scored method and original four project traces remain unchanged; no fresh renderer capture documents that additive row.",
+    "The Layout C renderer evidence is a historical staging candidate, not the current active homepage and not production evidence.",
+    "Jamie approval, exact-occurrence review, creator and represented-person rights, dignity and crop review, production deployment, and indexing remain open human gates. Automated checks and this score do not close them."
   ],
-  "recommendation": "Pass PR-016 at score 4 for this exact candidate. Use this holdout only as the Warren Sack lens judgment and preserve every stated human release, rights, dignity, production, and indexing gate.",
+  "recommendation": "Record judge B as score 4/pass for PR-016: the recursive social-systems method is exceptional, specific, inspectable, and trustworthy across multiple current projects. Carry this result into the independent aggregate only after the remaining judges are evaluated, and preserve every stated human release gate.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa0b8-78eb-79c3-b22f-60c6293cd5de",
-    "agentNickname": "Poincare",
+    "processSessionId": "019fa0e5-aeb5-7f31-93ad-61a37fe871ee",
+    "agentNickname": "Herschel",
     "model": "inherited-current-model",
     "reasoningEffort": "inherited-parent",
     "sandbox": "read-only",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
+    "operatorAttestation": "The completed native subagent result is recorded verbatim in the judge, date, candidateSha256, score, pass, evidence, limitations, and recommendation fields; repository identity and provenance fields were added by the parent orchestrator."
   }
 }

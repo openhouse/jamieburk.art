@@ -1,44 +1,42 @@
 {
-  "evaluator": "AI-simulated Warren Sack lens final holdout A",
+  "evaluator": "Warren Sack lens final holdout A, AI-simulated independent read-only evaluator",
   "reviewerId": "warren-sack-final-a",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "3de3dbf72c8bd922b8c211ab686a5ce790f48466411f669fea37404bd6e09d3e",
+  "lens": "PR-016",
+  "judge": "A",
+  "date": "2026-07-26",
+  "candidateSha256": "262adf6fd61b1190cc45e40c92ca361a6d60ac4fefcab674dcbadfda9efa1f48",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independent recomputation over the 135 files identified by professor-lens-eval.mjs produced the exact required candidate SHA-256.",
-    "The About page is directly reachable from primary navigation and plainly states the complete recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "About supplies five distinct relationship, interface-and-use, and learning-and-continuity traces, linking to HJE, Fair Rent, WOWList, Sunday Dinner and 196, Source-Backed Team Memory, and the photographic-system colophon.",
-    "HJE traces customer language, product knowledge, and operating habits into a maintained storefront used by customers and internal stakeholders, followed by reusable workflows and incremental releases.",
-    "Fair Rent traces lived experience, meetings, sources, and civic actors into campaign sites, town halls, hearings, action pathways, minutes, source maps, decision records, and durable coalition continuity while retaining collective credit.",
-    "The living photographic knowledge pilot traces artists, sources, creators, represented people, and readers into a governed asset and occurrence model, typed application interface, human curatorial review, Wiki records, correction paths, rollback, and documented handoff.",
-    "RFC 0003 is canonical and implementing on this branch. The deterministic photo-governance check passed 26 of 26 criteria and its mutation suite passed 20 of 20 tests.",
-    "The active Layout E manifest contains exactly eight unique JPEG derivatives. The governed East River candidate is structurally separate, and the child-visible Talks Not Raids derivative and manifest entry are absent from the current tree.",
-    "The broader RFC 0003 candidate receipt matches its live 662-file fingerprint exactly. Curatorial, candidate-tree, renderer-source, responsive screenshot, and rollback receipts are checksum-bound and reject input drift.",
-    "Rollback preserves creator credit, source binding, correction history, and Git history while removing placement references, checking caches, verifying routes, and regenerating reports.",
-    "The protected structural-equivalence and Max/Jitter history remains held and explicitly bounded as dated coursework, not invention, peer-reviewed research, current proficiency, sole authorship, or production deployment.",
-    "Rendered home, About, and Fair Rent evidence shows a visible About route, collective-role captions, legible project continuity, and no conversion of photographic proximity into solo authorship.",
-    "Layout photography passed 10 of 10 evaluator criteria and 3 of 3 tests."
+    "The evaluator independently reproduced the exact candidate fingerprint and passed all 13 substantive controls when final scorecards were omitted; only the intentionally absent unanimous-holdouts control remained open.",
+    "The About page is directly reachable from the global navigation and plainly states the recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. It links readers to inspectable project evidence.",
+    "WOWList makes the sequence reconstructable: organizers' existing vocabulary and social relations informed a keyword-community model; followable communities, event publishing, digests, and embeddable calendars became usable interfaces; distributed organizer use informed reusable publishing and deployment patterns.",
+    "NYC Artist Coalition and FairRentNYC make the sequence reconstructable: recurring meetings, lived cultural-space experience, public sources, open questions, and government actors informed campaign and coordination systems; websites, town halls, hearings, practical sessions, and action pathways supported collective use; minutes, source maps, question logs, and action trackers preserved learning and handoff context.",
+    "Harry J. Epstein Company makes the sequence reconstructable: customer language, product judgment, public voice, and operating habits informed an integrated storefront and operational model; customers and internal stakeholders used the resulting product-discovery, ordering, content, marketing, and follow-up interfaces; recurring questions and bounded analytics drove incremental releases, reusable patterns, and clearer workflows.",
+    "CallNYC supplies a fourth bounded trace: CouncilStat records were interpreted as resident problems, modeled as issue pathways and district context, implemented as an independent public interface, exposed to public and Council-member contact, and preserved through a public repository, press trail, archival status, and explicit limitations.",
+    "The living photographic knowledge loop extends the method rather than decorating it: archive relationships become governed asset, statement, permission, occurrence, edition, and inquiry records; the corrected Layout C interface was tested at mobile and desktop viewports; checksummed renderer snapshots and a render receipt make the historical candidate portable to fresh clones and document its handoff.",
+    "The protected UCSC record is used only to define an evaluative lineage. The public source note and knowledge-bank boundaries explicitly reject claims that Jamie invented structural equivalence, produced peer-reviewed research, deployed a production system, solely authored collective coursework, or retains current Max/Jitter proficiency.",
+    "Collective credit, protected sources, unknowns, anti-claims, archived status, and no-photo decisions remain visible throughout the project and photographic records, preventing the recursive-systems argument from becoming a generalized authorship or impact claim."
   ],
-  "gaps": [],
-  "safety_findings": [
-    "The eight active Layout E assets remain a legacy migration cohort authorized only for public pull-request review; asset-specific creator, rights, dignity, crop, occurrence, and production gates remain open.",
-    "The East River occurrence remains on hold with Jamie exact-occurrence approval, mobile-crop dignity review, creator crop review, production approval, and indexing approval open.",
-    "The Talks Not Raids hold does not resolve prior Git distribution, caches, or history treatment; those remain explicit human and, where appropriate, legal decisions.",
-    "Protected educational records, correspondence, identifiers, and private archive locators remain withheld, and no faculty endorsement is claimed.",
-    "Passing checks and this holdout do not authorize production deployment, indexing, rights clearance, consent, or publication."
+  "limitations": [
+    "The historical coursework remains protected, and no original public prototype code, screenshots, or independently permissioned faculty statement currently corroborates its detailed contents; it therefore remains lineage rather than present-role proof.",
+    "Several project pages document public use, operating continuity, or bounded adoption rather than controlled outcome studies. The candidate appropriately avoids converting contact, platform activity, or interface availability into universal adoption or causality.",
+    "The professor-lens screenshots are static evidence. Current source and Layout E screenshots support the visible method, but this judgment did not conduct a new live browser interaction or deployment test.",
+    "The corrected Layout C East River composition is a historical candidate on hold, not the active homepage or a production-cleared occurrence.",
+    "Human gates remain: Jamie's final editorial and production approval; creator and rights-holder authorization; represented-person dignity and consent review; exact caption, credit, crop, context, and occurrence approval; deployment; and indexing. This score does not clear or replace any of them."
   ],
-  "recommendation": "Pass at 4 for PR-016 on this exact candidate. Preserve the fingerprint binding and rerun the holdout after any candidate-affecting change; keep all named human release gates open.",
+  "recommendation": "Pass PR-016 at 4 for this exact candidate. Preserve the bounded coursework treatment and all human publication gates; future changes to application source, photographic evidence, rubric language, or renderer snapshots require a new candidate fingerprint and fresh independent judgment.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa0a6-5749-7783-9edd-ea3439088d76",
-    "agentNickname": "Popper",
+    "processSessionId": "019fa0e2-4184-7ed1-b013-b1aa449ea60f",
+    "agentNickname": "Feynman",
     "model": "inherited-current-model",
     "reasoningEffort": "inherited-parent",
     "sandbox": "read-only",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator."
+    "operatorAttestation": "The completed native subagent result is recorded verbatim in the judge, date, candidateSha256, score, pass, evidence, limitations, and recommendation fields; repository identity and provenance fields were added by the parent orchestrator."
   }
 }
