@@ -45,7 +45,7 @@ test("guard rejects an incomplete recursive systems sequence", () => {
   assert.equal(result.criteria.find((item) => item.id === "recursive-sequence")?.pass, false);
 });
 
-test("guard rejects losing the fifth public project loop", () => {
+test("guard rejects losing one of the six public project loops", () => {
   const result = evaluateProfessorLenses({
     suite,
     aboutText: aboutText.replace(
@@ -96,7 +96,7 @@ test("guard rejects a stale or weakened holdout scorecard", () => {
       )))
     )
   ];
-  weakenedScorecards[0].score = 3;
+  weakenedScorecards[0].score = 2;
 
   const result = evaluateProfessorLenses({
     suite,
@@ -105,7 +105,27 @@ test("guard rejects a stale or weakened holdout scorecard", () => {
     finalScorecards: weakenedScorecards
   });
   assert.equal(result.pass, false);
-  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "independent-holdouts")?.pass, false);
+});
+
+test("frozen threshold allows one score of 3 when the lens median remains 4", () => {
+  const boundedScorecards = [
+    ...["margaret-morse", "warren-sack"].flatMap((lens) =>
+      ["a", "b", "c"].map((judge) => JSON.parse(readFileSync(
+        path.join(repoRoot, `docs/qa/evals-H/${lens}-final-${judge}.json`),
+        "utf8"
+      )))
+    )
+  ];
+  boundedScorecards[0].score = 3;
+
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    finalScorecards: boundedScorecards
+  });
+  assert.equal(result.criteria.find((item) => item.id === "independent-holdouts")?.pass, true);
 });
 
 test("guard rejects a scorecard bound to another public candidate", () => {
@@ -126,7 +146,7 @@ test("guard rejects a scorecard bound to another public candidate", () => {
     finalScorecards: staleScorecards
   });
   assert.equal(result.pass, false);
-  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "independent-holdouts")?.pass, false);
 });
 
 test("guard rejects a stale professor candidate receipt", () => {

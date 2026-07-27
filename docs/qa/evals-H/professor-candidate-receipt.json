@@ -1,9 +1,9 @@
 {
   "receiptVersion": 1,
   "generatedAt": "2026-07-26",
-  "sourceCommit": "13574a7f59fb2482b37db8ef2daa78805e995f7f",
-  "candidateSha256": "d7c0d8f50f345fee3e880ccc8b6e8f614b7eb8600a657e9687103d2938396125",
-  "candidateFileCount": 161,
+  "sourceCommit": "e922014969409d4fa6ec32c4d26fa3816c5375b8",
+  "candidateSha256": "46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341",
+  "candidateFileCount": 162,
   "algorithm": "SHA-256 over each sorted relative path, NUL, file bytes, NUL.",
   "candidateFiles": [
     ".agents/evals/portfolio-production-readiness.json",
@@ -123,6 +123,7 @@
     "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
     "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
     "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md",
+    "docs/knowledge-bank/methods/recursive-social-systems-trace.md",
     "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
     "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
     "docs/knowledge-bank/projects/fair-rent-nyc.md",
@@ -170,12 +171,12 @@
   ],
   "distinctCandidateScopes": {
     "professorLens": {
-      "sha256": "d7c0d8f50f345fee3e880ccc8b6e8f614b7eb8600a657e9687103d2938396125",
-      "fileCount": 161,
+      "sha256": "46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341",
+      "fileCount": 162,
       "purpose": "Binds PR-015 and PR-016 to the rubric, application source, selected derivatives, design record, photography governance, and rendered layout evidence."
     },
     "responsivePublicSurface": {
-      "sha256": "ca13cbc344f24b89bf56265ab9c2938f5120388496b7ebb79e8403a6f62eb4fc",
+      "sha256": "8be191e5d04214d3a2e71190ca3ed4f2984c5a9011cce4316d221e77a68182ac",
       "fileCount": 119,
       "purpose": "Binds the 56-row browser and axe matrix to apps/www plus package manifests."
     },

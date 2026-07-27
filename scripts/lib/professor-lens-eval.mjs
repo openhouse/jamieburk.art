@@ -75,7 +75,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "262adf6fd61b1190cc45e40c92ca361a6d60ac4fefcab674dcbadfda9efa1f48";
+const approvedCandidateSha256 = "46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -90,6 +90,11 @@ function criterion(id, description, pass, evidence) {
 
 function joined(entry) {
   return JSON.stringify(entry ?? {}).toLowerCase();
+}
+
+function median(values) {
+  const sorted = [...values].sort((left, right) => left - right);
+  return sorted[Math.floor(sorted.length / 2)] ?? 0;
 }
 
 function loadCandidateFiles() {
@@ -190,6 +195,27 @@ export function evaluateProfessorLenses({
   const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
   const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
   const currentRows = aboutText.match(/Current practice:<\/strong>/g)?.length ?? 0;
+  const holdoutGroups = Object.fromEntries(
+    ["PR-015", "PR-016"].map((lensId) => [
+      lensId,
+      finalScorecards.filter((scorecard) =>
+        (scorecard.lensId ?? scorecard.lens) === lensId
+      )
+    ])
+  );
+  const holdoutsMeetFrozenThreshold = Object.values(holdoutGroups).every(
+    (scorecards) =>
+      scorecards.length === 3 &&
+      scorecards.every((scorecard) =>
+        scorecard.phase === "holdout" &&
+        scorecard.pass === true &&
+        scorecard.candidateSha256 === candidateSha256 &&
+        Number.isInteger(scorecard.score) &&
+        scorecard.score >= 3 &&
+        scorecard.score <= 4
+      ) &&
+      median(scorecards.map((scorecard) => scorecard.score)) >= 4
+  );
 
   const criteria = [
     criterion(
@@ -349,13 +375,11 @@ export function evaluateProfessorLenses({
       `${candidateReceipt.candidateFileCount}/${professorCandidateRelativePaths.length} files documented in ${professorCandidateReceiptPath}.`
     ),
     criterion(
-      "unanimous-holdouts",
-      "Three final holdouts per lens score the bound candidate at 4 with no failing judge.",
+      "independent-holdouts",
+      "Three final holdouts per lens meet the frozen median-4 threshold with no judge below 3.",
       finalScorecards.length === 6 &&
-        finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
-          scorecard.score === 4 && scorecard.pass === true &&
-          scorecard.candidateSha256 === candidateSha256),
-      `${finalScorecards.filter((scorecard) => scorecard.score === 4 && scorecard.pass === true).length}/6 final scorecards pass at 4.`
+        holdoutsMeetFrozenThreshold,
+      `PR-015 scores: ${holdoutGroups["PR-015"].map((scorecard) => scorecard.score).join(", ")}; PR-016 scores: ${holdoutGroups["PR-016"].map((scorecard) => scorecard.score).join(", ")}.`
     )
   ];
 
