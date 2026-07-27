@@ -31,6 +31,9 @@ relations:
   - type: related_to
     target: evaluation.photo-notebook.local-photos-canary.2026-07-22
     href: field-notes/first-local-photos-canary.md
+  - type: related_to
+    target: research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26
+    href: field-notes/sunday-dinner-map-table-oral-history.md
 projection:
   status: hold
   surfaces: []
@@ -138,6 +141,7 @@ authority for a particular image or use.
 
 - [First Pass: A Photo Residency at 196](proposals/first-pass-at-196.md)
 - [First local Apple Photos canary](field-notes/first-local-photos-canary.md)
+- [Sunday Dinner map-table oral-history prompt](field-notes/sunday-dinner-map-table-oral-history.md)
 - [Open visual questions](open-questions.md)
 - [Public-safe field-note template](field-note-template.md)
 - [Release / water / salt sequence sketch](sketches/release-water-salt.md)

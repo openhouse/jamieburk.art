@@ -256,7 +256,7 @@ export default function AboutPage() {
             </article>
           </div>
         </section>
-        <div className="mt-10 max-w-3xl border-l-4 border-jb-blue bg-jb-sky/15 p-5">
+        <div className="mt-10 max-w-3xl border border-jb-blue/30 bg-jb-sky/15 p-5">
           <p className="leading-8 text-jb-ink/78">
             I value public benefit, accessibility, source-backed memory, careful
             claims, collective credit, consent, privacy, repair, and

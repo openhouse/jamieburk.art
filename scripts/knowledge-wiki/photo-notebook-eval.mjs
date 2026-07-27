@@ -47,6 +47,7 @@ export function evaluatePhotoNotebook(options = {}) {
   const sketch = record(manifest.sketchId);
   const proposal = record(manifest.proposalId);
   const canary = record(manifest.canaryId);
+  const oralHistoryInquiry = record(manifest.oralHistoryInquiryId);
   const residencyProject = record(manifest.residencyProjectId);
   const referenceInquiry = record(manifest.referenceInquiryId);
   const notebookRecords = manifest.requiredRecords.map(([id]) => record(id)).filter(Boolean);
@@ -67,6 +68,7 @@ export function evaluatePhotoNotebook(options = {}) {
   const sketchSource = normalized(manifest.sketchId);
   const proposalSource = normalized(manifest.proposalId);
   const canarySource = normalized(manifest.canaryId);
+  const oralHistoryInquirySource = normalized(manifest.oralHistoryInquiryId);
   const referenceInquirySource = normalized(manifest.referenceInquiryId);
   const allNotebookSource = manifest.requiredRecords.map(([id]) => source(id)).join("\n");
 
@@ -93,7 +95,8 @@ export function evaluatePhotoNotebook(options = {}) {
       manifest.questionsId,
       manifest.sketchId,
       manifest.proposalId,
-      manifest.canaryId
+      manifest.canaryId,
+      manifest.oralHistoryInquiryId
     ].every((id) =>
       notebookTargets.includes(id)
     ) &&
@@ -423,6 +426,51 @@ export function evaluatePhotoNotebook(options = {}) {
     canary?.projection?.status === "hold" &&
     canary?.projection?.surfaces?.length === 0;
 
+  const oralHistoryReturnSeparatesEvidence =
+    /Jamie's oral history has not yet been recorded/i.test(
+      oralHistoryInquirySource
+    ) &&
+    /No answer is presumed below/i.test(oralHistoryInquirySource) &&
+    [
+      "Visible observation",
+      "first-person memory",
+      "collaborator confirmation",
+      "public-source corroboration"
+    ].every((phrase) => oralHistoryInquirySource.includes(phrase)) &&
+    /dated first-person source with its uncertainty intact/i.test(
+      oralHistoryInquirySource
+    ) &&
+    /does not authorize a caption, claim, asset record, or site change/i.test(
+      oralHistoryInquirySource
+    );
+
+  const oralHistoryPublicationGateRemainsHuman =
+    /Default: \*\*hold\*\*/i.test(oralHistoryInquirySource) &&
+    [
+      "photographer and rights",
+      "represented-person dignity and consent",
+      "collective credit",
+      "exact derivative",
+      "crop",
+      "caption",
+      "alt text",
+      "destination",
+      "audience",
+      "Jamie's approval"
+    ].every((phrase) => oralHistoryInquirySource.includes(phrase)) &&
+    /Make no automatic portfolio change/i.test(oralHistoryInquirySource) &&
+    oralHistoryInquiry?.kind === "research-inquiry" &&
+    oralHistoryInquiry?.status === "governed-open" &&
+    oralHistoryInquiry?.projection?.status === "hold" &&
+    oralHistoryInquiry?.projection?.surfaces?.length === 0;
+
+  const oralHistoryPrivateMaterialAbsent =
+    !privatePattern.test(source(manifest.oralHistoryInquiryId)) &&
+    /photograph, catalog coordinate, filename, source path, and represented-person identities remain outside public Git/i.test(
+      oralHistoryInquirySource
+    ) &&
+    /image is shown privately to Jamie/i.test(oralHistoryInquirySource);
+
   const checks = {
     photo_notebook_records_materialized: recordsMaterialized,
     photo_notebook_navigation_reachable: navigationReachable,
@@ -456,7 +504,13 @@ export function evaluatePhotoNotebook(options = {}) {
     photo_canary_no_upload_or_collateral_mutation: canaryNoUploadOrCollateralMutation,
     photo_canary_friction_and_repair_preserved: canaryFrictionAndRepairPreserved,
     photo_canary_private_material_absent: canaryPrivateMaterialAbsent,
-    photo_canary_publication_gate_remains_human: canaryPublicationGateRemainsHuman
+    photo_canary_publication_gate_remains_human: canaryPublicationGateRemainsHuman,
+    photo_oral_history_return_separates_evidence:
+      oralHistoryReturnSeparatesEvidence,
+    photo_oral_history_publication_gate_remains_human:
+      oralHistoryPublicationGateRemainsHuman,
+    photo_oral_history_private_material_absent:
+      oralHistoryPrivateMaterialAbsent
   };
 
   return {

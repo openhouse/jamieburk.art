@@ -21,9 +21,9 @@ test("photography working notebook passes every bounded criterion", () => {
   const evaluation = evaluatePhotoNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    records: 6,
+    records: 7,
     openQuestions: 26,
-    notebookFiles: 6
+    notebookFiles: 7
   });
 });
 
@@ -351,4 +351,64 @@ test("the local canary cannot claim changes beyond the authorized workspace", ()
     sourceOverrides: { [id]: mutated }
   });
   assert.equal(evaluation.checks.photo_canary_no_upload_or_collateral_mutation, false);
+});
+
+test("an oral-history prompt cannot prewrite Jamie's answer or collapse evidence lanes", () => {
+  const id =
+    "research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26";
+  const mutated = sourceFor(id)
+    .replace(
+      "Jamie's oral history has not yet been recorded. No answer is presumed below.",
+      "Jamie's oral history confirms the interpretation below."
+    )
+    .replace(
+      "Visible observation, first-person memory, collaborator confirmation, and public-source corroboration remain separate evidence lanes.",
+      "The photograph and memory prove the public claim."
+    );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.photo_oral_history_return_separates_evidence,
+    false
+  );
+});
+
+test("an oral-history response cannot clear its own portfolio occurrence", () => {
+  const id =
+    "research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26";
+  const inquiry = cloneRecord(id);
+  inquiry.projection = { status: "active", surfaces: ["/"] };
+  const mutated = sourceFor(id)
+    .replace("Default: **hold**.", "Default: **publish**.")
+    .replace(
+      "Make no automatic portfolio change.",
+      "Publish the image and update the homepage automatically."
+    );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    recordOverrides: { [id]: inquiry },
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.photo_oral_history_publication_gate_remains_human,
+    false
+  );
+});
+
+test("an oral-history field note cannot expose a private photo locator", () => {
+  const id =
+    "research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26";
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: {
+      [id]: `${sourceFor(id)}\n/Volumes/private/11111111-2222-3333-4444-555555555555/L0/040\n`
+    }
+  });
+  assert.equal(
+    evaluation.checks.photo_oral_history_private_material_absent,
+    false
+  );
+  assert.equal(evaluation.checks.photo_notebook_public_safety_preserved, false);
 });

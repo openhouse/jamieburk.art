@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T19:50:09-04:00",
   "sourceCommit": "d04d248aebfc5b07d7548cc745d5268c3b470e63",
-  "sourceFingerprint": "5113eb511d96c10e9d8d9881c455f65879842d3acb74a3f74e03f8b24c54b166",
+  "sourceFingerprint": "781ddf4d9f4bda6e09df98c2a87854894c895bc0166377df3064c33d3ab406b6",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -1170,6 +1170,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26",
+      "path": "docs/knowledge-bank/notebooks/photography/field-notes/sunday-dinner-map-table-oral-history.md",
+      "title": "Sunday Dinner map-table oral-history prompt",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Held public-safe field note for inviting Jamie's oral history in response to one privately reviewed Sunday Dinner photograph without publishing the image, its private locator, represented-person identities, or a prewritten meaning.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
     },
     {
       "id": "research-inquiry.teju-cole.residency-photography-reference",
@@ -3178,6 +3191,14 @@
     },
     {
       "from": "index.knowledge-wiki.photo-notebook",
+      "type": "related_to",
+      "to": "research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26",
+      "source": "frontmatter",
+      "href": "field-notes/sunday-dinner-map-table-oral-history.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photo-notebook",
       "type": "uses_method",
       "to": "method.structure-grows-from-material",
       "source": "frontmatter",
@@ -5058,6 +5079,30 @@
       "to": "index.knowledge-wiki.visual-evidence",
       "source": "frontmatter",
       "href": "../../indexes/visual-evidence.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26",
+      "type": "related_to",
+      "to": "decision.photo.intimate-gatherings.protected-absence.v1",
+      "source": "frontmatter",
+      "href": "../../../decisions/photography/intimate-gatherings-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photo-notebook",
+      "source": "frontmatter",
+      "href": "../README.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26",
+      "type": "uses_method",
+      "to": "method.photo-notebook.field-note",
+      "source": "frontmatter",
+      "href": "../field-note-template.md",
       "context": null
     },
     {
@@ -7615,10 +7660,19 @@
     {
       "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
       "from": "index.knowledge-wiki.photo-notebook",
+      "toPath": "docs/knowledge-bank/notebooks/photography/field-notes/sunday-dinner-map-table-oral-history.md",
+      "to": "research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26",
+      "fragment": null,
+      "line": 104,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "index.knowledge-wiki.photo-notebook",
       "toPath": "docs/knowledge-bank/notebooks/photography/open-questions.md",
       "to": "research-inquiry.photo-notebook.open-questions",
       "fragment": null,
-      "line": 104,
+      "line": 105,
       "kind": "link"
     },
     {
@@ -7627,7 +7681,7 @@
       "toPath": "docs/knowledge-bank/notebooks/photography/field-note-template.md",
       "to": "method.photo-notebook.field-note",
       "fragment": null,
-      "line": 105,
+      "line": 106,
       "kind": "link"
     },
     {
@@ -7636,7 +7690,7 @@
       "toPath": "docs/knowledge-bank/notebooks/photography/sketches/release-water-salt.md",
       "to": "index.photo-notebook.sketch.release-water-salt",
       "fragment": null,
-      "line": 106,
+      "line": 107,
       "kind": "link"
     },
     {
@@ -7645,7 +7699,7 @@
       "toPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "to": "index.knowledge-wiki.visual-evidence",
       "fragment": null,
-      "line": 107,
+      "line": 108,
       "kind": "link"
     },
     {
@@ -7654,7 +7708,7 @@
       "toPath": "rfcs/0002-lifelong-photo-archive-selection-and-publication.md",
       "to": null,
       "fragment": null,
-      "line": 108,
+      "line": 109,
       "kind": "link"
     },
     {

@@ -1,131 +1,199 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-06T10:15:27Z",
+  "generatedAt": "2026-07-26T20:58:45-04:00",
   "title": "Design System: Jamie Burkart Portfolio",
   "extensions": {
     "colorMeta": {
-      "broadway-blue": {
+      "hospital-jacket-blue": {
         "role": "primary",
-        "displayName": "Broadway Blue",
-        "canonical": "#0b5f81",
+        "displayName": "Hospital-Jacket Blue",
+        "canonical": "#2f6f89",
         "tonalRamp": [
-          "oklch(15% 0.055 230)",
-          "oklch(26% 0.075 230)",
-          "oklch(37% 0.095 230)",
-          "oklch(48% 0.105 230)",
-          "oklch(60% 0.09 230)",
-          "oklch(72% 0.065 230)",
-          "oklch(84% 0.04 230)",
-          "oklch(95% 0.018 230)"
+          "oklch(18% 0.045 226)",
+          "oklch(29% 0.061 226)",
+          "oklch(40% 0.077 226)",
+          "oklch(51% 0.083 226)",
+          "oklch(62% 0.072 226)",
+          "oklch(73% 0.056 226)",
+          "oklch(84% 0.035 226)",
+          "oklch(95% 0.015 226)"
         ]
       },
-      "oil-white": {
+      "reading-white": {
         "role": "neutral",
-        "displayName": "Oil White",
-        "canonical": "#eeefec",
+        "displayName": "Reading White",
+        "canonical": "#ffffff",
         "tonalRamp": [
-          "oklch(18% 0.006 110)",
-          "oklch(30% 0.007 110)",
-          "oklch(42% 0.008 110)",
-          "oklch(55% 0.009 110)",
-          "oklch(68% 0.01 110)",
-          "oklch(80% 0.011 110)",
-          "oklch(90% 0.012 110)",
-          "oklch(96% 0.012 110)"
+          "#1a232b",
+          "#36414a",
+          "#56616a",
+          "#78828a",
+          "#9da5ab",
+          "#c3c8cc",
+          "#e3e6e8",
+          "#ffffff"
         ]
       },
-      "oil-paper": {
+      "institutional-blue-gray": {
         "role": "neutral",
-        "displayName": "Oil Paper",
-        "canonical": "#f7f4ee",
+        "displayName": "Institutional Blue-Gray",
+        "canonical": "#f3f6f8",
         "tonalRamp": [
-          "oklch(18% 0.01 85)",
-          "oklch(30% 0.012 85)",
-          "oklch(42% 0.014 85)",
-          "oklch(55% 0.016 85)",
-          "oklch(68% 0.018 85)",
-          "oklch(81% 0.02 85)",
-          "oklch(91% 0.022 85)",
-          "oklch(97% 0.022 85)"
+          "oklch(18% 0.008 228)",
+          "oklch(30% 0.009 228)",
+          "oklch(42% 0.01 228)",
+          "oklch(55% 0.011 228)",
+          "oklch(68% 0.012 228)",
+          "oklch(80% 0.013 228)",
+          "oklch(91% 0.012 228)",
+          "oklch(97% 0.009 228)"
         ]
       },
-      "oil-ink": {
+      "ink": {
         "role": "neutral",
-        "displayName": "Oil Ink",
-        "canonical": "#343435",
+        "displayName": "Ink",
+        "canonical": "#1a232b",
         "tonalRamp": [
-          "#1c1c1d",
-          "#272728",
-          "#343435",
-          "#4a4a4b",
-          "#626263",
-          "#818182",
-          "#b5b5b5",
-          "#ececec"
+          "#10161b",
+          "#1a232b",
+          "#303a43",
+          "#4e5861",
+          "#707981",
+          "#959ca2",
+          "#c0c5c9",
+          "#eef0f1"
         ]
       },
-      "deep-green": {
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#222b36",
+        "tonalRamp": [
+          "#11161c",
+          "#222b36",
+          "#39434f",
+          "#555f6a",
+          "#747d86",
+          "#969da4",
+          "#c1c5c9",
+          "#eef0f2"
+        ]
+      },
+      "stewardship-green": {
         "role": "secondary",
-        "displayName": "Deep Green",
-        "canonical": "#1f5c3e",
+        "displayName": "Stewardship Green",
+        "canonical": "#4e6f61",
         "tonalRamp": [
-          "oklch(15% 0.05 150)",
-          "oklch(26% 0.07 150)",
-          "oklch(37% 0.085 150)",
-          "oklch(48% 0.09 150)",
-          "oklch(60% 0.075 150)",
-          "oklch(72% 0.055 150)",
-          "oklch(84% 0.035 150)",
-          "oklch(95% 0.016 150)"
+          "oklch(18% 0.035 157)",
+          "oklch(29% 0.048 157)",
+          "oklch(40% 0.06 157)",
+          "oklch(51% 0.065 157)",
+          "oklch(62% 0.057 157)",
+          "oklch(73% 0.045 157)",
+          "oklch(84% 0.029 157)",
+          "oklch(95% 0.013 157)"
         ]
       },
-      "yellow-ochre": {
-        "role": "accent",
-        "displayName": "Yellow Ochre",
-        "canonical": "#e9b64e",
+      "observed-blue": {
+        "role": "tertiary",
+        "displayName": "Observed Blue",
+        "canonical": "#4c97c2",
         "tonalRamp": [
-          "oklch(20% 0.06 82)",
-          "oklch(32% 0.08 82)",
-          "oklch(44% 0.1 82)",
-          "oklch(56% 0.12 82)",
-          "oklch(68% 0.125 82)",
-          "oklch(78% 0.1 82)",
-          "oklch(88% 0.065 82)",
-          "oklch(96% 0.03 82)"
+          "oklch(18% 0.05 235)",
+          "oklch(29% 0.07 235)",
+          "oklch(40% 0.09 235)",
+          "oklch(51% 0.105 235)",
+          "oklch(62% 0.1 235)",
+          "oklch(73% 0.08 235)",
+          "oklch(84% 0.05 235)",
+          "oklch(95% 0.02 235)"
+        ]
+      },
+      "corroborated-green": {
+        "role": "tertiary",
+        "displayName": "Corroborated Green",
+        "canonical": "#4a7f4f",
+        "tonalRamp": [
+          "oklch(18% 0.05 145)",
+          "oklch(29% 0.07 145)",
+          "oklch(40% 0.09 145)",
+          "oklch(51% 0.1 145)",
+          "oklch(62% 0.085 145)",
+          "oklch(73% 0.065 145)",
+          "oklch(84% 0.04 145)",
+          "oklch(95% 0.018 145)"
+        ]
+      },
+      "disputed-ochre": {
+        "role": "tertiary",
+        "displayName": "Disputed Ochre",
+        "canonical": "#d1a23f",
+        "tonalRamp": [
+          "oklch(20% 0.05 82)",
+          "oklch(32% 0.075 82)",
+          "oklch(44% 0.095 82)",
+          "oklch(56% 0.11 82)",
+          "oklch(68% 0.105 82)",
+          "oklch(78% 0.085 82)",
+          "oklch(88% 0.055 82)",
+          "oklch(96% 0.025 82)"
+        ]
+      },
+      "correction-red": {
+        "role": "tertiary",
+        "displayName": "Correction Red",
+        "canonical": "#c83b32",
+        "tonalRamp": [
+          "oklch(18% 0.07 27)",
+          "oklch(29% 0.11 27)",
+          "oklch(40% 0.15 27)",
+          "oklch(51% 0.18 27)",
+          "oklch(62% 0.16 27)",
+          "oklch(73% 0.12 27)",
+          "oklch(84% 0.075 27)",
+          "oklch(95% 0.03 27)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero identity and major page titles only."
+        "purpose": "Jamie's name and true page titles only."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section headers and case-study landmarks."
+        "purpose": "Section propositions and case-study landmarks."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project and artifact titles."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Long summaries, notes, care language, and MDX case-study prose."
+        "purpose": "Narrative, evidence summaries, captions, and care language."
+      },
+      "label": {
+        "displayName": "Machine Label",
+        "purpose": "Navigation, status, metadata, and occasional orientation."
       }
     },
     "shadows": [
       {
         "name": "quiet-surface-shadow",
-        "value": "shadow-sm",
-        "purpose": "Low-contrast lift for cards or representative artifact panels only."
+        "value": "0 1px 2px rgba(26, 35, 43, 0.08)",
+        "purpose": "Low lift for a genuinely discrete card or artifact only."
       }
     ],
     "motion": [
       {
         "name": "state-transition",
         "value": "160ms ease",
-        "purpose": "Small state changes such as skip-link reveal and hover feedback."
+        "purpose": "Compact navigation, link, and skip-link feedback."
       },
       {
         "name": "reduced-motion",
         "value": "@media (prefers-reduced-motion: reduce)",
-        "purpose": "Disable animation and smooth scrolling for users requesting reduced motion."
+        "purpose": "Collapse animation and smooth scrolling without hiding content."
       }
     ],
     "breakpoints": [
@@ -148,88 +216,99 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Main forward action for work, resume, and contact paths.",
+      "description": "The main route into selected work or the next hiring action.",
       "html": "<button class=\"ds-button-primary\">View selected work</button>",
-      "css": ".ds-button-primary { background: var(--jb-broadway-blue, #0b5f81); color: var(--jb-oil-white, #eeefec); border: 1px solid var(--jb-broadway-blue, #0b5f81); border-radius: 0.35rem; padding: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease; } .ds-button-primary:hover { background: var(--jb-deep-green, #1f5c3e); border-color: var(--jb-deep-green, #1f5c3e); } .ds-button-primary:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "css": ".ds-button-primary { min-height: 44px; background: var(--jb-broadway-blue, #2f6f89); color: #fff; border: 1px solid var(--jb-broadway-blue, #2f6f89); border-radius: 0.25rem; padding: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; transition: background-color 160ms ease, border-color 160ms ease; } .ds-button-primary:hover { background: var(--jb-deep-green, #4e6f61); border-color: var(--jb-deep-green, #4e6f61); } .ds-button-primary:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #d1a23f); outline-offset: 3px; }"
     },
     {
-      "name": "Secondary Button",
+      "name": "Inverted Button",
       "kind": "button",
-      "refersTo": "button-secondary",
-      "description": "Quiet secondary route for resume and supporting actions.",
-      "html": "<button class=\"ds-button-secondary\">Download resume</button>",
-      "css": ".ds-button-secondary { background: var(--jb-oil-paper, #f7f4ee); color: var(--jb-oil-ink, #343435); border: 1px solid rgba(52, 52, 53, 0.2); border-radius: 0.35rem; padding: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: border-color 160ms ease, color 160ms ease; } .ds-button-secondary:hover { border-color: var(--jb-broadway-blue, #0b5f81); color: var(--jb-broadway-blue, #0b5f81); } .ds-button-secondary:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "refersTo": "button-inverted",
+      "description": "A secondary command over a dark photographic field.",
+      "html": "<button class=\"ds-button-inverted\">View resume</button>",
+      "css": ".ds-button-inverted { min-height: 44px; background: #fff; color: var(--jb-graphite, #222b36); border: 1px solid #fff; border-radius: 0.25rem; padding: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; transition: color 160ms ease, border-color 160ms ease; } .ds-button-inverted:hover { color: var(--jb-broadway-blue, #2f6f89); border-color: var(--jb-yellow-ochre, #d1a23f); } .ds-button-inverted:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #d1a23f); outline-offset: 3px; }"
     },
     {
       "name": "Status Chip",
       "kind": "chip",
       "refersTo": "status-chip",
-      "description": "Compact public-safety and page-status metadata.",
-      "html": "<span class=\"ds-status-chip\">Public-safe summary only</span>",
-      "css": ".ds-status-chip { display: inline-flex; align-items: center; width: fit-content; border: 1px solid rgba(52, 52, 53, 0.18); border-radius: 999px; background: var(--jb-oil-white, #eeefec); color: var(--jb-oil-ink, #343435); padding: 0.35rem 0.65rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 700; line-height: 1.1; }"
+      "description": "Compact status and visibility metadata that never impersonates clearance.",
+      "html": "<span class=\"ds-status-chip\">Public-safe summary</span>",
+      "css": ".ds-status-chip { display: inline-flex; align-items: center; width: fit-content; border: 1px solid rgba(26, 35, 43, 0.2); border-radius: 999px; background: #fff; color: var(--jb-oil-ink, #1a232b); padding: 0.35rem 0.65rem; font-family: Oswald, Arial Narrow, ui-sans-serif, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.055em; line-height: 1.1; text-transform: uppercase; }"
     },
     {
-      "name": "Work Card",
+      "name": "Project Row",
       "kind": "card",
-      "refersTo": "card",
-      "description": "Scannable case-study preview with public-safe evidence structure.",
-      "html": "<article class=\"ds-work-card\"><span class=\"ds-status-chip\">Full case study</span><h3>Harry J. Epstein Company</h3><p class=\"ds-work-card-subtitle\">E-commerce and operations modernization</p><p>Helped a legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.</p></article>",
-      "css": ".ds-work-card { background: var(--jb-oil-paper, #f7f4ee); color: var(--jb-oil-ink, #343435); border: 1px solid rgba(52, 52, 53, 0.15); border-radius: 0.5rem; padding: 1.25rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; box-shadow: 0 1px 2px rgba(52, 52, 53, 0.08); max-width: 32rem; } .ds-work-card h3 { margin: 1rem 0 0.35rem; color: var(--jb-oil-ink, #343435); font-size: 1.5rem; line-height: 1.2; font-weight: 700; } .ds-work-card p { margin: 0.75rem 0 0; font-size: 1rem; line-height: 1.6; } .ds-work-card-subtitle { color: var(--jb-deep-green, #1f5c3e); font-weight: 700; } .ds-work-card:focus-within { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "refersTo": "project-row",
+      "description": "A bordered reading row joining one image or index with situation, contribution, and route.",
+      "html": "<article class=\"ds-project-row\"><div class=\"ds-project-image\" aria-hidden=\"true\"></div><div><span class=\"ds-label\">Civic systems / 2016-2025</span><h3>NYC Artist Coalition</h3><p>Listening, campaign infrastructure, and public documentation.</p><a href=\"#\">Read case study</a></div></article>",
+      "css": ".ds-project-row { display: grid; grid-template-columns: minmax(15rem, 0.38fr) minmax(0, 0.62fr); gap: 2rem; border-bottom: 1px solid rgba(26, 35, 43, 0.16); color: var(--jb-oil-ink, #1a232b); font-family: Karla, ui-sans-serif, system-ui, sans-serif; } .ds-project-image { min-height: 15rem; background: var(--jb-oil-paper, #f3f6f8); } .ds-project-row > div:last-child { padding: 2rem 0; } .ds-project-row h3 { margin: 0.75rem 0; font-family: Iowan Old Style, Baskerville, Georgia, serif; font-size: 1.875rem; line-height: 1.2; } .ds-project-row p { max-width: 56ch; line-height: 1.65; } .ds-project-row a { color: var(--jb-broadway-blue, #2f6f89); font-weight: 700; } .ds-label { color: var(--jb-broadway-blue, #2f6f89); font-family: Oswald, Arial Narrow, ui-sans-serif, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.055em; text-transform: uppercase; } @media (max-width: 767px) { .ds-project-row { grid-template-columns: 1fr; gap: 0; } }"
     },
     {
-      "name": "Text Navigation",
+      "name": "Photo Caption",
+      "kind": "custom",
+      "refersTo": "photo-caption",
+      "description": "A factual caption and explicit credit beneath a stable photographic occurrence.",
+      "html": "<figcaption class=\"ds-photo-caption\"><span>A campaign meeting in a small cultural space.</span><span>Photograph credit reviewed separately.</span></figcaption>",
+      "css": ".ds-photo-caption { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.75rem; border-bottom: 1px solid rgba(26, 35, 43, 0.15); padding: 0.75rem 0; color: var(--jb-oil-ink, #1a232b); font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 0.8rem; line-height: 1.5; } .ds-photo-caption span:last-child { color: rgba(26, 35, 43, 0.74); white-space: nowrap; } @media (max-width: 767px) { .ds-photo-caption { grid-template-columns: 1fr; } .ds-photo-caption span:last-child { white-space: normal; } }"
+    },
+    {
+      "name": "Primary Navigation",
       "kind": "nav",
       "refersTo": "navigation",
-      "description": "Restrained route set for portfolio review, not an app shell.",
-      "html": "<nav class=\"ds-nav\"><a href=\"#\">Work</a><a href=\"#\">Resume</a><a href=\"#\">About</a><a href=\"#\">Contact</a></nav>",
-      "css": ".ds-nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; } .ds-nav a { color: var(--jb-oil-ink, #343435); text-decoration: none; font-size: 0.95rem; font-weight: 700; line-height: 1.2; } .ds-nav a:hover { color: var(--jb-broadway-blue, #0b5f81); } .ds-nav a:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "description": "A compact sticky route set for work, about, resume, and contact.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Work</a><a href=\"#\">About</a><a href=\"#\">Resume</a><a href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: stretch; border-bottom: 1px solid rgba(26, 35, 43, 0.16); background: #fff; font-family: Karla, ui-sans-serif, system-ui, sans-serif; } .ds-nav a { display: inline-flex; min-height: 44px; align-items: center; border-left: 1px solid rgba(26, 35, 43, 0.1); color: rgba(26, 35, 43, 0.76); padding: 0 0.75rem; text-decoration: none; font-size: 0.875rem; font-weight: 500; } .ds-nav a:hover { background: var(--jb-oil-paper, #f3f6f8); color: var(--jb-broadway-blue, #2f6f89); } .ds-nav a:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #d1a23f); outline-offset: -3px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Public Workbench",
-    "overview": "The system should feel like a careful working table where evidence has been sorted, labeled, and made usable without exposing private source material. It uses print-adjacent restraint, civic color, readable type, and modest component structure to make complex work legible.\n\nThis is a brand surface, but the brand is the operating practice. The design must create trust through order, language, and public-safety boundaries rather than spectacle. It rejects generic SaaS drama, consultant hype, private archive behavior, and decorative AI-template flourishes.",
+    "northStar": "The Living Public Workbench",
+    "overview": "The site is an inhabited working surface, not a showroom. Documentary photographs supply place, weather, bodies, materials, and the scale of collective action. Type and rules orient a stranger through the work while the Knowledge Wiki, citations, captions, and care limits keep the public argument answerable to evidence and people.\n\nThe first viewport should establish Jamie, the literal field of the work, and the role he is seeking. Deeper sections move between photographic presence and quietly structured records. The interface recedes when an image needs room and becomes more explicit when evidence, limits, or a next action must be read.",
     "keyCharacteristics": [
-      "Public-safe before persuasive.",
-      "Dense enough to show real work, calm enough to scan.",
-      "Warm, precise, and modular.",
-      "Evidence-led, never inflated.",
-      "Human without becoming decorative."
+      "Photographic before decorative.",
+      "Direct enough for a time-limited hiring reader.",
+      "Source-backed without turning the page into an archive browser.",
+      "Warm through human presence, not ornamental softness.",
+      "Collective-credit and protected-absence aware.",
+      "Flat, stable, and materially legible."
     ],
     "rules": [
       {
-        "name": "The Public-Safety Color Rule",
-        "body": "Color must clarify status, evidence, action, or reading hierarchy. If color only decorates, remove it.",
+        "name": "The Status Is Not Authority Rule",
+        "body": "A semantic color may orient review; it never clears a claim, photograph, or release gate.",
         "section": "colors"
       },
       {
-        "name": "The Ochre Rarity Rule",
-        "body": "Yellow ochre earns attention through scarcity. Use it for focus, selection, and occasional proof, not as a general accent wash.",
-        "section": "colors"
+        "name": "The Photograph Gets a Job Rule",
+        "body": "An image must contribute presence, place, relation, process, contradiction, or material evidence. If it merely fills space, remove it.",
+        "section": "layout"
       },
       {
-        "name": "The Plain Evidence Rule",
-        "body": "Use type weight, spacing, and placement before inventing visual effects. No gradient text, no ornamental tracking, no clever typographic gimmicks.",
-        "section": "typography"
-      },
-      {
-        "name": "The Flat Workbench Rule",
-        "body": "Surfaces rest on the page. Lift appears only when it helps a card or artifact read as a discrete object.",
+        "name": "The Surface Before Shadow Rule",
+        "body": "Prefer a tonal change or full rule before a shadow. Never pair a decorative wide shadow with a one-pixel border.",
         "section": "elevation"
+      },
+      {
+        "name": "The Practical Corner Rule",
+        "body": "Shape communicates handle, label, or containment. No large rounded panels, floating capsules, or cards nested inside cards.",
+        "section": "shapes"
       }
     ],
     "dos": [
-      "Do keep public safety visible in the structure of every case study.",
-      "Do use Broadway Blue for primary action and Deep Green for outcome-oriented emphasis.",
-      "Do keep summaries scannable while preserving nuance.",
-      "Do use representative diagrams, approved artifacts, and redacted examples instead of raw private material.",
-      "Do keep focus states highly visible and reduced-motion behavior intact."
+      "Do let the first viewport establish Jamie, role fit, and the actual field of work.",
+      "Do alternate photographic presence with quiet, highly scannable evidence.",
+      "Do keep captions factual, credits explicit, and interpretation bounded.",
+      "Do show collective activity without using collaborators as background proof of Jamie's importance.",
+      "Do preserve strong visible focus, semantic structure, stable image dimensions, and reduced-motion behavior.",
+      "Do let protected absence remain an intentional editorial result."
     ],
     "donts": [
-      "Don't make the site feel like a generic SaaS landing page, a private archive browser, a consultant hype funnel, a heavy animated portfolio, or a decorative AI-generated template.",
-      "Don't publish private emails, raw transcripts, private coalition notes, legal-review materials, private correspondence, internal analytics, client-private material, unapproved photos, private fonts, or named stakeholder details without approval.",
-      "Don't use gradient text, glassmorphism, giant hero metrics, decorative side-stripe borders, or endlessly repeated icon-card grids.",
-      "Don't over-round cards or panels beyond the existing 0.5rem card radius.",
-      "Don't let color or visual texture compete with the evidence."
+      "Don't make the site feel like a generic SaaS landing page, private archive browser, consultant hype funnel, or decorative AI template.",
+      "Don't use an unapproved photograph, crop, caption, credit, name, metric, or collective outcome to close a persuasive gap.",
+      "Don't use thick side-rule callouts, gradient text, glassmorphism, decorative grids, giant metrics, or repeated identical card sections.",
+      "Don't over-round working surfaces or place cards inside cards.",
+      "Don't treat a strong image, oral history, green evaluation, or merged pull request as automatic publication authority.",
+      "Don't let citations overwhelm the stranger's primary reading path."
     ]
   }
 }

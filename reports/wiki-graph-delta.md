@@ -3,13 +3,13 @@
 
 **Source commit:** `d04d248aebfc5b07d7548cc745d5268c3b470e63`
 **Generation time:** 2026-07-26T19:50:09-04:00
-**Source fingerprint:** `5113eb511d96c10e9d8d9881c455f65879842d3acb74a3f74e03f8b24c54b166`
+**Source fingerprint:** `781ddf4d9f4bda6e09df98c2a87854894c895bc0166377df3064c33d3ab406b6`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 22
+- Nodes added: 23
 - Nodes removed: 0
-- Edges added: 69
+- Edges added: 73
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 1
@@ -32,6 +32,7 @@ Compared with the graph artifact on `origin/develop`.
 - `projection.photo.layout-c.home.east-river`
 - `research-inquiry.documented-canoe-bike-journeys`
 - `research-inquiry.photo-notebook.open-questions`
+- `research-inquiry.photo-notebook.sunday-dinner-map-table.oral-history.2026-07-26`
 - `research-inquiry.teju-cole.residency-photography-reference`
 - `source.permission.elana-gordon.east-river.2026-07`
 - `source.photo-metadata.east-river.2022.public-safe`
