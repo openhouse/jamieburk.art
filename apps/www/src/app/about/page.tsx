@@ -100,6 +100,14 @@ export default function AboutPage() {
               document enough for others to continue. Requirements, interfaces,
               and handoffs matter because people have to inhabit them.
             </p>
+            <p>
+              Three current traces are marked below. They show the method in
+              active campaign coordination, this source-backed portfolio and
+              Knowledge Wiki, and the living photographic-knowledge pilot.
+              Earlier work remains visible as lineage. A current trace means
+              the practice and its reviewable artifacts are active; it does not
+              imply client adoption, production deployment, or sole authorship.
+            </p>
           </div>
           <div className="mt-8 divide-y divide-jb-ink/12 border-y border-jb-ink/12">
             <article className="py-6">
@@ -112,6 +120,11 @@ export default function AboutPage() {
                 </Link>
               </h3>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
+                <p>
+                  <strong className="text-jb-ink">Model:</strong>{" "}
+                  product taxonomy, content patterns, account states, and
+                  recurring operating workflows.
+                </p>
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
                   customer language, product judgment, public voice, and
@@ -143,9 +156,19 @@ export default function AboutPage() {
               </h3>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
+                  <strong className="text-jb-ink">Current practice:</strong>{" "}
+                  2026 campaign coordination with current small-business and
+                  policy partners.
+                </p>
+                <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
                   lived experience in cultural spaces, recurring meetings,
                   public sources, open questions, and city and state actors.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">Model:</strong>{" "}
+                  distinct city and state lanes, legislative provenance,
+                  source status, decision memory, and assigned next steps.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
@@ -172,6 +195,11 @@ export default function AboutPage() {
                 </Link>
               </h3>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
+                <p>
+                  <strong className="text-jb-ink">Model:</strong>{" "}
+                  people, places, events, keywords, organizer permissions, and
+                  reusable publishing relationships.
+                </p>
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
                   the language organizers already used for scenes, interests,
@@ -202,6 +230,11 @@ export default function AboutPage() {
               </h3>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
+                  <strong className="text-jb-ink">Model:</strong>{" "}
+                  a recurring host rhythm, invitation and access practices, and
+                  participant authority over private histories and images.
+                </p>
+                <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
                   hospitality, trust, artist support, shared space, and the
                   rhythms of returning.
@@ -225,6 +258,51 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold text-jb-ink">
                 <Link
                   className="text-jb-blue hover:text-jb-green"
+                  href="/lab/source-backed-team-memory"
+                >
+                  Source-Backed Team Memory and this Knowledge Wiki
+                </Link>
+              </h3>
+              <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
+                <p>
+                  <strong className="text-jb-ink">Current practice:</strong>{" "}
+                  this portfolio and its public-safe Knowledge Wiki are the
+                  method&apos;s live operating test.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">Relationships:</strong>{" "}
+                  sources, claims, contributors, contradictions, open
+                  questions, protected context, audiences, and publication
+                  decisions.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">Model:</strong>{" "}
+                  stable records and typed relations keep known, open,
+                  protected, corrected, and projected states distinct.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">Interface and use:</strong>{" "}
+                  Jamie and AI-assisted editors work through a Markdown Wiki,
+                  compiler checks, selective public pages, and independent
+                  evaluation receipts rather than treating generated copy as
+                  authority.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">
+                    Learning and continuity:
+                  </strong>{" "}
+                  corrections, wanted records, source-return dates, evaluation
+                  failures, and publication holds remain visible so another
+                  editor can inspect and continue the work. This is active
+                  method evidence, not a client-adoption or production-SaaS
+                  claim.
+                </p>
+              </div>
+            </article>
+            <article className="py-6">
+              <h3 className="text-xl font-semibold text-jb-ink">
+                <Link
+                  className="text-jb-blue hover:text-jb-green"
                   href="/colophon"
                 >
                   Living photographic knowledge
@@ -232,10 +310,21 @@ export default function AboutPage() {
               </h3>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
+                  <strong className="text-jb-ink">Current practice:</strong>{" "}
+                  this pull request is a governed pilot joining selection,
+                  composition, oral-history return, and exact-use review.
+                </p>
+                <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
                   artists, archive sources, creators, represented people,
                   editors, portfolio readers, and the places photographs return
                   us to.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">Model:</strong>{" "}
+                  private source assets, public-safe derivatives, photo sets,
+                  occurrences, permissions, recollections, decisions, and
+                  human release gates.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
@@ -249,8 +338,10 @@ export default function AboutPage() {
                   </strong>{" "}
                   creator correction, responsive crop review, rollback drills,
                   and recollection returned by composition become durable Wiki
-                  records and a teachable handoff instead of disappearing into
-                  one layout pass.
+                  records and a teachable handoff. In this pass, a held
+                  gathering photograph produced an oral-history inquiry instead
+                  of entering the site without context, credit, or represented
+                  person review.
                 </p>
               </div>
             </article>

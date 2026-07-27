@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `d04d248aebfc5b07d7548cc745d5268c3b470e63`
-**Generation time:** 2026-07-26T19:50:09-04:00
-**Source fingerprint:** `781ddf4d9f4bda6e09df98c2a87854894c895bc0166377df3064c33d3ab406b6`
+**Source commit:** `ac5466f07fe11f46a4db474529d292a687f11584`
+**Generation time:** 2026-07-26T21:31:54-04:00
+**Source fingerprint:** `a60365c43bf2ec9820b71ac84b2385f6c58a081809677a270052b9b2bd6ba005`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 23
+- Nodes added: 24
 - Nodes removed: 0
-- Edges added: 73
+- Edges added: 78
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 1
@@ -29,6 +29,7 @@ Compared with the graph artifact on `origin/develop`.
 - `index.photo-notebook.sketch.release-water-salt`
 - `index.photo-set.east-river-canoe.2022`
 - `method.photo-notebook.field-note`
+- `method.recursive-social-systems-trace`
 - `projection.photo.layout-c.home.east-river`
 - `research-inquiry.documented-canoe-bike-journeys`
 - `research-inquiry.photo-notebook.open-questions`

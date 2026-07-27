@@ -55,6 +55,30 @@ export default function SourceBackedTeamMemoryPage() {
         </div>
         <section className="mt-12 border-y border-jb-ink/12 py-10">
           <p className="text-sm font-semibold uppercase text-jb-blue">
+            Current operating test
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
+            The method is building this portfolio
+          </h2>
+          <p className="mt-4 leading-8 text-jb-ink/76">
+            This public-safe Knowledge Wiki is a live, bounded use of the
+            method. Jamie and AI-assisted editors observe relationships among
+            sources, claims, contributors, contradictions, and audiences; model
+            them as stable records and typed relations; and work through a
+            Markdown Wiki, compiler checks, selective website projections, and
+            independent evaluation receipts.
+          </p>
+          <p className="mt-4 leading-8 text-jb-ink/76">
+            Corrections, failed evaluations, wanted records, source-return
+            dates, and publication holds remain visible so another editor can
+            inspect and continue the work. This is evidence of the method in
+            current use on Jamie&apos;s professional archive. It is not evidence
+            of external client adoption, production-scale deployment, or
+            autonomous AI authority.
+          </p>
+        </section>
+        <section className="mt-12 border-y border-jb-ink/12 py-10">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
             Worked example
           </p>
           <h2 className="mt-3 text-3xl font-semibold text-jb-ink">

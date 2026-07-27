@@ -14,6 +14,9 @@ const sourceNotePath = path.join(
 export const professorCandidateReceiptPath =
   "docs/qa/evals-H/professor-candidate-receipt.json";
 
+const recursiveTracePath =
+  "docs/knowledge-bank/methods/recursive-social-systems-trace.md";
+
 function walk(relativeDirectory) {
   const directory = path.join(repoRoot, relativeDirectory);
   return readdirSync(directory).flatMap((name) => {
@@ -36,6 +39,7 @@ export const professorCandidateRelativePaths = [...new Set([
   "docs/knowledge-bank/decisions/hje-continuity-modernization.md",
   "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
   "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md",
+  recursiveTracePath,
   "docs/knowledge-bank/sources/hje-research-brief-2026-07.md",
   "docs/knowledge-bank/sources/nycac-running-minutes-2026.md",
   "docs/knowledge-bank/sources/wowlist-repaired-transcript-2026.md",
@@ -181,6 +185,7 @@ export function evaluateProfessorLenses({
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
   const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
   const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
+  const currentRows = aboutText.match(/Current practice:<\/strong>/g)?.length ?? 0;
 
   const criteria = [
     criterion(
@@ -250,9 +255,10 @@ export function evaluateProfessorLenses({
     ),
     criterion(
       "project-specific-loops",
-      "Four examples distinguish relationship models, actual interfaces and use, and learning and continuity.",
-      relationshipRows >= 5 && interfaceRows >= 5 && learningRows >= 5,
-      `${relationshipRows} relationship rows; ${interfaceRows} interface-and-use rows; ${learningRows} learning-and-continuity rows.`
+      "Six examples distinguish relationship models, interfaces and use, and learning and continuity; three are explicitly current.",
+      relationshipRows >= 6 && interfaceRows >= 6 && learningRows >= 6 &&
+        currentRows >= 3,
+      `${relationshipRows} relationship rows; ${interfaceRows} interface-and-use rows; ${learningRows} learning-and-continuity rows; ${currentRows} current-practice rows.`
     ),
     criterion(
       "open-house-boundary",

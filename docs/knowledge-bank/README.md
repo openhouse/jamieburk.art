@@ -50,6 +50,10 @@ relations:
     target: index.knowledge-wiki.photography
     href: indexes/photography.md
     context: Governed photo assets, occurrences, editions, rights summaries, recollections, and protected absences.
+  - type: related_to
+    target: method.recursive-social-systems-trace
+    href: methods/recursive-social-systems-trace.md
+    context: Current public-safe reconstruction of relationships, models, interfaces, use, learning, and handoff across three active practices.
 ---
 
 # Knowledge Wiki
@@ -108,6 +112,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Living photographic knowledge](indexes/photography.md): governed photo
   assets, source summaries, curatorial proposals, exact occurrences, editions,
   recollections, research returns, and protected absences.
+- [Recursive social-systems trace](methods/recursive-social-systems-trace.md):
+  three current, bounded examples connecting relationship observation to a
+  model, interface, social use, learning, and handoff.
 - [Open questions](_generated/wanted-pages.md): deliberate missing knowledge,
   kept distinct from broken links and nonexistence.
 

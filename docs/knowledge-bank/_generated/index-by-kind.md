@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `d04d248aebfc5b07d7548cc745d5268c3b470e63`
-**Generation time:** 2026-07-26T19:50:09-04:00
-**Source fingerprint:** `781ddf4d9f4bda6e09df98c2a87854894c895bc0166377df3064c33d3ab406b6`
+**Source commit:** `ac5466f07fe11f46a4db474529d292a687f11584`
+**Generation time:** 2026-07-26T21:31:54-04:00
+**Source fingerprint:** `a60365c43bf2ec9820b71ac84b2385f6c58a081809677a270052b9b2bd6ba005`
 
 ## application
 
@@ -88,6 +88,7 @@
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
 - [Public-safe photographic field-note method](../notebooks/photography/field-note-template.md) - `method.photo-notebook.field-note`
+- [Recursive social-systems trace](../methods/recursive-social-systems-trace.md) - `method.recursive-social-systems-trace`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
