@@ -91,8 +91,9 @@ deployment.
 
 ## Living photographic knowledge
 
-**Current status:** The photo-knowledge pull request is a governed pilot joining
-selection, composition, exact-use review, oral-history return, and rollback.
+**Current status:** The living photographic-knowledge practice is a governed
+pilot joining selection, composition, exact-use review, oral-history return,
+and rollback.
 
 - **Relationships observed:** source photographs, creators, represented people,
   editors, project histories, destinations, crops, captions, permissions, and

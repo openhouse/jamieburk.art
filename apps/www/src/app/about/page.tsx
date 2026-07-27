@@ -311,7 +311,7 @@ export default function AboutPage() {
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
                   <strong className="text-jb-ink">Current practice:</strong>{" "}
-                  this pull request is a governed pilot joining selection,
+                  the living photographic-knowledge pilot joins selection,
                   composition, oral-history return, and exact-use review.
                 </p>
                 <p>
