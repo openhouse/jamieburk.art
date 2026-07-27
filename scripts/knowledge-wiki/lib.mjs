@@ -16,6 +16,17 @@ import { unified } from "unified";
 import { z } from "zod";
 
 import { employmentReportPaths } from "./employment-lib.mjs";
+import {
+  authorityCanaryDecisionId,
+  authorityCanaryDecisionPath,
+  authorityCanaryPhotoId,
+  authorityCanaryGateReviewers,
+  requiredRestorationGates,
+  restorationEmptyListFields,
+  restorationGatePolicy,
+  restorationRecordAllowedKeys,
+  sameAuthoritySet
+} from "../photo-knowledge/restoration-policy.mjs";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -24,6 +35,41 @@ export const defaultRepoRoot = path.resolve(
 
 export const wikiRelativeRoot = "docs/knowledge-bank";
 export const generatedRelativeRoot = `${wikiRelativeRoot}/_generated`;
+const responsivePhotoEvidencePath =
+  "docs/qa/evals-H/responsive-route-matrix.json";
+let restorationSurfaceBindingCache;
+
+function restorationSurfaceBinding() {
+  if (restorationSurfaceBindingCache !== undefined) {
+    return restorationSurfaceBindingCache;
+  }
+  try {
+    const evidence = JSON.parse(
+      readFileSync(
+        path.join(defaultRepoRoot, responsivePhotoEvidencePath),
+        "utf8"
+      )
+    );
+    const occurrenceIds = [
+      ...new Set(
+        (evidence.rows ?? [])
+          .flatMap((row) => row.photoOccurrences ?? [])
+          .filter(
+            (occurrence) =>
+              occurrence.photoId === authorityCanaryPhotoId
+          )
+          .map((occurrence) => occurrence.placementId)
+      )
+    ].sort();
+    restorationSurfaceBindingCache = {
+      publicSurfaceFingerprint: evidence.publicSurfaceFingerprint,
+      occurrenceIds
+    };
+  } catch {
+    restorationSurfaceBindingCache = null;
+  }
+  return restorationSurfaceBindingCache;
+}
 
 function compareText(a, b) {
   return a < b ? -1 : a > b ? 1 : 0;
@@ -184,66 +230,7 @@ const decisionOptionSchema = z.object({
   evidence_state: z.enum(["documented", "inferred", "not-observed"])
 });
 
-const restorationGateNames = [
-  "creator",
-  "rights",
-  "consent",
-  "exact-credit",
-  "crop",
-  "caption",
-  "represented-person",
-  "editorial",
-  "production",
-  "deployment",
-  "indexing"
-];
-
-const restorationGatePolicy = {
-  creator: {
-    authority: "creator-or-rights-holder",
-    statuses: ["cleared"]
-  },
-  rights: {
-    authority: "creator-or-rights-holder",
-    statuses: ["cleared"]
-  },
-  consent: {
-    authority: "represented-person-or-consent-authority",
-    statuses: ["cleared", "not-applicable"]
-  },
-  "exact-credit": {
-    authority: "creator-and-editorial-owner",
-    statuses: ["cleared"]
-  },
-  crop: {
-    authority: "creator-and-editorial-owner",
-    statuses: ["cleared"]
-  },
-  caption: {
-    authority: "creator-and-editorial-owner",
-    statuses: ["cleared"]
-  },
-  "represented-person": {
-    authority: "represented-person",
-    statuses: ["cleared", "not-applicable"]
-  },
-  editorial: {
-    authority: "portfolio-owner",
-    statuses: ["cleared"]
-  },
-  production: {
-    authority: "production-owner",
-    statuses: ["open-separated-gate"]
-  },
-  deployment: {
-    authority: "deployment-owner",
-    statuses: ["open-separated-gate"]
-  },
-  indexing: {
-    authority: "indexing-owner",
-    statuses: ["open-separated-gate"]
-  }
-};
+const restorationGateNames = requiredRestorationGates;
 
 const restorationGateReviewSchema = z.object({
   gate: z.enum(restorationGateNames),
@@ -346,8 +333,7 @@ const opportunityScreenSchema = z.object({
   disposition: z.enum(["proceed", "verify", "conditional", "do-not-pursue"])
 });
 
-export const wikiRecordSchema = z
-  .object({
+const wikiRecordShape = {
     id: stableIdSchema,
     title: z.string().min(1),
     kind: z.enum(recordKinds),
@@ -460,7 +446,10 @@ export const wikiRecordSchema = z
     one_year_success_conditions: z.array(z.string().min(1)).default([]),
     one_year_risk_conditions: z.array(z.string().min(1)).default([]),
     interview_questions: z.array(z.string().min(1)).default([])
-  })
+  };
+
+export const wikiRecordSchema = z
+  .object(wikiRecordShape)
   .passthrough()
   .superRefine((record, context) => {
     if (record.kind === "claim" && !record.claim_status) {
@@ -552,6 +541,17 @@ export const wikiRecordSchema = z
       }
     }
     if (record.restoration_action) {
+      const unknownKeys = Object.keys(record).filter(
+        (key) => !restorationRecordAllowedKeys.includes(key)
+      );
+      if (unknownKeys.length > 0) {
+        context.addIssue({
+          code: "custom",
+          path: [unknownKeys[0]],
+          message:
+            "photo restoration records reject unknown top-level fields"
+        });
+      }
       if (record.kind !== "decision") {
         context.addIssue({
           code: "custom",
@@ -602,14 +602,31 @@ export const wikiRecordSchema = z
       }
       for (const review of record.restoration_gate_reviews ?? []) {
         const policy = restorationGatePolicy[review.gate];
+        const reviewedAt = Date.parse(review.reviewed_at ?? "");
+        const decidedAt = Date.parse(record.restoration_decided_at ?? "");
+        const implementedAt = Date.parse(
+          record.restoration_withdrawal_implemented_at ?? ""
+        );
         if (
           !policy?.statuses.includes(review.status) ||
-          review.authority !== policy.authority
+          review.authority !== policy.authority ||
+          !sameAuthoritySet(
+            review.reviewed_by,
+            authorityCanaryGateReviewers[review.gate]
+          ) ||
+          new Set(review.evidence_ids).size !== review.evidence_ids.length ||
+          Number.isNaN(reviewedAt) ||
+          Number.isNaN(decidedAt) ||
+          Number.isNaN(implementedAt) ||
+          reviewedAt < implementedAt ||
+          reviewedAt > decidedAt ||
+          reviewedAt > Date.now()
         ) {
           context.addIssue({
             code: "custom",
             path: ["restoration_gate_reviews", review.gate],
-            message: "photo restoration gate status and authority do not match policy"
+            message:
+              "photo restoration gate review does not match exact authority, evidence, and time policy"
           });
         }
       }
@@ -685,7 +702,20 @@ export const wikiRecordSchema = z
       const expectedApprovalStatement =
         `Jamie Burkart approved restoration of ${record.restoration_photo_id} ` +
         `after implemented withdrawal ${record.restoration_withdrawal_plan_id}.`;
+      const surfaceBinding = restorationSurfaceBinding();
       if (
+        record.id !== authorityCanaryDecisionId ||
+        record.title !==
+          "Restore the East River photograph to working review" ||
+        record.canonical_path !== authorityCanaryDecisionPath ||
+        record.review_by !== "2026-10-26" ||
+        record.decision_period !== "2026-07" ||
+        record.restoration_photo_id !== authorityCanaryPhotoId ||
+        record.restoration_approved_by !== "Jamie Burkart" ||
+        !restorationEmptyListFields.every(
+          (field) =>
+            Array.isArray(record[field]) && record[field].length === 0
+        ) ||
         chosenOptions.length !== 1 ||
         chosenOptions[0].option !== expectedChoice ||
         chosenOptions[0].evidence_state !== "documented" ||
@@ -709,6 +739,11 @@ export const wikiRecordSchema = z
           JSON.stringify(expectedUnknowns) ||
         JSON.stringify(record.projection) !==
           JSON.stringify({ status: "pending", surfaces: [] }) ||
+        JSON.stringify(
+          [...(record.restoration_occurrence_ids ?? [])].sort()
+        ) !== JSON.stringify(surfaceBinding?.occurrenceIds ?? []) ||
+        record.restoration_public_surface_fingerprint !==
+          surfaceBinding?.publicSurfaceFingerprint ||
         record.restoration_approval_statement !==
           expectedApprovalStatement ||
         JSON.stringify([...record.anti_claims].sort()) !==

@@ -32,6 +32,9 @@ relations:
   - type: informed_by
     target: research.photography-studio-connection.2026-07-22
     href: ../research-runs/photography-studio-connection-2026-07-22.md
+  - type: informed_by
+    target: research.photography-first-field-close-reading.2026-07-26
+    href: ../research-runs/photography-first-field-close-reading-2026-07-26.md
   - type: related_to
     target: evaluation.photography-notebook.2026-07-22
     href: ../evaluations/photography-working-notebook.md
@@ -53,15 +56,17 @@ purpose is to create enough room for the archive to answer back.
 
 ## Current state
 
-The proposed rough-draft field remains open and incomplete. A deliberately
-small private technical contact is now complete: local previews were inspected,
-one person-free still was placed in a one-image proof album inside Jamie's
-granted Photos workspace, and its exact membership was independently verified.
-The image itself remains outside Git and held from publication. The
-[opening note](../research-runs/photography-notebook-opening-2026-07-22.md)
-preserves what was known before contact; the
-[first-contact entry](../research-runs/photography-studio-connection-2026-07-22.md)
-records what changed.
+The rough-draft field is now materially complete as a private working set:
+1,000 unique still photographs were assembled and independently verified in
+Jamie's granted Photos workspace. A later pass inspected the full field and
+created an 18-image editorial shortlist in a separately verified private album
+system.
+
+Neither field is a representative sample, final edit, or publication slate.
+All images remain outside Git and held behind rights, consent, safety, credit,
+caption, crop, context, editorial, and Jamie-approval gates. The
+[first-field close reading](../research-runs/photography-first-field-close-reading-2026-07-26.md)
+records the aggregate result and the limits of the July 26 return.
 
 ## Rules of play
 
@@ -126,6 +131,8 @@ unanswered questions; they do not require premature interpretation.
 - [Opening the photography notebook, July 22, 2026](../research-runs/photography-notebook-opening-2026-07-22.md)
 - [The archive answers back - a 196 photography residency proposal](../research-runs/photography-first-pass-residency-proposal-2026-07-22.md) - accepted and welcomed by Jamie on July 22, 2026; the form remains open.
 - [First contact with the private photo field, July 22, 2026](../research-runs/photography-studio-connection-2026-07-22.md) - one locally inspected, privately held image; verified catalog membership is not publication clearance.
+- [First field and website-shortlist close reading, July 26, 2026](../research-runs/photography-first-field-close-reading-2026-07-26.md) - the private 1,000-image field and 18-image shortlist are complete and verified; publication remains held.
+- [CallNYC interface-in-use oral-history inquiry](../research-inquiries/callnyc-interface-photo-oral-history.md) - a held visual lead awaiting context, rights, consent, credit, caption, crop, and specific-use review.
 
 ## Private working material
 

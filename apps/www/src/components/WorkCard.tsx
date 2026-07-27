@@ -10,11 +10,13 @@ import type { WorkMeta } from "@/types/work";
 type WorkCardProps = {
   item: WorkMeta;
   includeCaseStudyPhoto?: boolean;
+  imagePriority?: boolean;
 };
 
 export function WorkCard({
   item,
-  includeCaseStudyPhoto = false
+  includeCaseStudyPhoto = false,
+  imagePriority = false
 }: WorkCardProps) {
   const fieldPhoto = includeCaseStudyPhoto
     ? getCaseStudyPhoto(item.slug)
@@ -93,6 +95,7 @@ export function WorkCard({
                 alt={media.alt}
                 className="aspect-[4/3] w-full object-cover object-top"
                 height={media.height}
+                priority={imagePriority}
                 sizes="(min-width: 1024px) 28vw, 100vw"
                 src={media.src}
                 width={media.width}

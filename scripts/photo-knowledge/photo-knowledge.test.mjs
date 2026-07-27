@@ -447,7 +447,7 @@ test("RFC 0003 photographic knowledge baseline passes", () => {
   assert.equal(result.passed, true, result.failures.join(", "));
   assert.equal(result.counts.photos, 6);
   assert.equal(result.counts.placements, 11);
-  assert.equal(result.counts.blockingCriteria, 23);
+  assert.equal(result.counts.blockingCriteria, 25);
 });
 
 test("a derivative checksum drift fails closed", () => {
@@ -665,6 +665,33 @@ test("journey counts cannot be inferred from photo counts", () => {
   });
   assert.equal(result.checks.photo_inquiry_avoids_photo_counting, false);
   assert.match(original, /Count journeys, not photographs/);
+});
+
+test("a CallNYC oral-history lead cannot automatically become public", () => {
+  const wiki = compileWiki();
+  const id = "research-inquiry.callnyc-interface-photo-oral-history";
+  const record = structuredClone(wiki.byId.get(id));
+  record.projection_status = "active";
+  record.projection = { status: "active", surfaces: ["/work/callnyc"] };
+  wiki.byId.set(id, record);
+  const result = evaluatePhotoKnowledge({ wiki });
+  assert.equal(result.checks.photo_callnyc_oral_history_default_closed, false);
+});
+
+test("the first field remains an editorial field rather than a publication edit", () => {
+  const wiki = compileWiki();
+  const id = "research.photography-first-field-close-reading.2026-07-26";
+  const record = wiki.byId.get(id);
+  const original = readFileSync(path.join(defaultRepoRoot, record.path), "utf8");
+  const changed = original.replace(
+    "This is not a publication edit.",
+    "This is a publication edit."
+  );
+  const result = evaluatePhotoKnowledge({
+    wiki,
+    sourceOverrides: { [id]: changed }
+  });
+  assert.equal(result.checks.photo_first_field_close_reading_bounded, false);
 });
 
 test("curatorial ranking cannot become publication authority", () => {
@@ -1437,6 +1464,102 @@ test("restoration rejects contradictory side-channel semantics", () => {
       result.checks.photo_historical_revocation_monotonic,
       false,
       JSON.stringify(mutation)
+    );
+  }
+});
+
+test("the full Wiki schema rejects stale or forged restoration authority", () => {
+  const fixture = restorationFixture();
+  const future = "2099-01-01T12:00:00Z";
+  const mutations = [
+    {
+      restoration_approved_by: "Automated evaluator"
+    },
+    {
+      restoration_gate_reviews:
+        fixture.record.restoration_gate_reviews.map((review) =>
+          review.gate === "editorial"
+            ? { ...review, reviewed_by: ["Automated evaluator"] }
+            : review
+        )
+    },
+    {
+      restoration_gate_reviews:
+        fixture.record.restoration_gate_reviews.map((review) =>
+          review.gate === "editorial"
+            ? { ...review, reviewed_at: future }
+            : review
+        )
+    },
+    {
+      restoration_occurrence_ids: ["placement.stale.example"]
+    },
+    {
+      restoration_public_surface_fingerprint: "0".repeat(64)
+    },
+    {
+      production_approved: true
+    },
+    {
+      confirmed_facts: ["Production publication is approved."]
+    }
+  ];
+
+  for (const mutation of mutations) {
+    assert.equal(
+      wikiRecordSchema.safeParse({
+        ...fixture.record,
+        ...mutation
+      }).success,
+      false,
+      JSON.stringify(mutation)
+    );
+    const result = evaluateRestoration({ recordMutation: mutation });
+    assert.equal(
+      result.checks.photo_historical_revocation_monotonic,
+      false,
+      JSON.stringify(mutation)
+    );
+  }
+});
+
+test("direct restoration validation rejects coordinated authority substitution", () => {
+  const fixture = restorationFixture();
+  for (const gate of ["editorial", "production"]) {
+    const forgedReviews = fixture.record.restoration_gate_reviews.map(
+      (review) =>
+        review.gate === gate
+          ? { ...review, reviewed_by: ["Alice Example"] }
+          : review
+    );
+    const result = evaluateRestoration({
+      recordMutation: { restoration_gate_reviews: forgedReviews },
+      authorityRegistryMutation: (registry) => {
+        registry.photos[0].gateReviewers[gate] = ["Alice Example"];
+      },
+      evidenceRecordsMutation: (records) => {
+        for (const [id, record] of records) {
+          records.set(id, {
+            ...record,
+            photo_gate_reviews: (record.photo_gate_reviews ?? []).map(
+              (review) =>
+                review.gate === gate
+                  ? { ...review, reviewed_by: ["Alice Example"] }
+                  : review
+            )
+          });
+        }
+      }
+    });
+    assert.equal(
+      result.checks.photo_authority_registry_bounded,
+      false,
+      gate
+    );
+    assert.equal(
+      result.checks.photo_historical_revocation_monotonic,
+      false,
+      gate
     );
   }
 });

@@ -87,6 +87,7 @@ export default function WorkPage() {
               <div className="mt-5">
                 {groupedItems.map((item) => (
                   <WorkCard
+                    imagePriority={item.slug === workItems[0]?.slug}
                     includeCaseStudyPhoto
                     item={item}
                     key={item.slug}

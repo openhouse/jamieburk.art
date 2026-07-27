@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-26T20:08:27.894Z",
-  "baseUrl": "http://127.0.0.1:3052",
-  "publicSurfaceFingerprint": "831eb12aac0b95f45b7a4a1b509e484eb3bca7a31d4fe278d8a4b5a22b8288bb",
+  "checkedAt": "2026-07-27T01:40:32.078Z",
+  "baseUrl": "http://127.0.0.1:3042",
+  "publicSurfaceFingerprint": "4defc51b55ce3da37e38d1eda65f595753edbc1fae0c6d55ef1110ee318870f0",
   "publicSurfaceFileCount": 117,
   "publicSurfaceScope": [
     "tracked and unignored apps/www/**",
@@ -37,37 +37,37 @@
       "viewport": 360,
       "path": "/",
       "file": "docs/qa/evals-H/layout-B-screenshots/home-mobile.png",
-      "sha256": "477083b243e45af6ec452429b1ec8d6e06f9da083763b0a6d3d060e28478b6d8"
+      "sha256": "9f01252bfde5b943124b938bc8fd9d897f870dba5f92c24b9b0a92cf40afdd70"
     },
     {
       "viewport": 375,
       "path": "/work/technical-operations",
       "file": "docs/qa/evals-H/layout-B-screenshots/technical-operations-mobile.png",
-      "sha256": "f8a7b3888d50063e4b8b40cbaabbbb6caea055794a77867e999a9d6f089033cd"
+      "sha256": "593c2efdfb3e73341fc5cf9c33d171d3b93df5aca4138440a2f022c551bc9e60"
     },
     {
       "viewport": 375,
       "path": "/about",
       "file": "docs/qa/evals-H/layout-B-screenshots/about-mobile.png",
-      "sha256": "7d4da6ae7aea7e762e65c4e448e8e461136fd2cdba7296e26340522233a75e82"
+      "sha256": "a21d6919b0b9254246de0e40e183b876497e56c9015e52aa801568c7c96a1d1f"
     },
     {
       "viewport": 1280,
       "path": "/",
       "file": "docs/qa/evals-H/layout-B-screenshots/home-desktop.png",
-      "sha256": "322464fc8430284c9b6bbe522f36c1e64a0b50c2000587ee31cb26623d6a23d2"
+      "sha256": "a4f4c0e929931cad3322933aa53bd15a152e6ce489c569f9da3c1b4f24cc3d6e"
     },
     {
       "viewport": 1280,
       "path": "/about",
       "file": "docs/qa/evals-H/layout-B-screenshots/about-desktop.png",
-      "sha256": "b21687b2730fa793c81abfffdb7785ec5000aee522c478484af7ff22dbf0f7f9"
+      "sha256": "cf8f1a06b5d6b8bdb62371ba2cf811fb40a17a4a662106c7addb1643c7ec0001"
     },
     {
       "viewport": 1280,
       "path": "/work/kc-town-hall",
       "file": "docs/qa/evals-H/layout-B-screenshots/kc-town-hall-desktop.png",
-      "sha256": "a9e4da74f8edd321810ef6227cbd1ce9379d066c273fc70c60a0b5db9c9f6263"
+      "sha256": "cdeae2b4ae11e525a5d299e4e5fbcb4b9d3fab8aa83dc12dd9c7a2e99ec50e06"
     }
   ],
   "rows": [
@@ -149,7 +149,7 @@
       "httpStatus": 200,
       "imageCount": 4,
       "unloadedImages": 2,
-      "lazyImages": 4,
+      "lazyImages": 3,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -396,8 +396,8 @@
       "path": "/work/harry-j-epstein",
       "httpStatus": 200,
       "imageCount": 1,
-      "unloadedImages": 1,
-      "lazyImages": 1,
+      "unloadedImages": 0,
+      "lazyImages": 0,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -450,8 +450,8 @@
       "path": "/work/callnyc",
       "httpStatus": 200,
       "imageCount": 1,
-      "unloadedImages": 1,
-      "lazyImages": 1,
+      "unloadedImages": 0,
+      "lazyImages": 0,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -654,7 +654,7 @@
       "httpStatus": 200,
       "imageCount": 4,
       "unloadedImages": 2,
-      "lazyImages": 4,
+      "lazyImages": 3,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -902,7 +902,7 @@
       "httpStatus": 200,
       "imageCount": 1,
       "unloadedImages": 0,
-      "lazyImages": 1,
+      "lazyImages": 0,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -955,8 +955,8 @@
       "path": "/work/callnyc",
       "httpStatus": 200,
       "imageCount": 1,
-      "unloadedImages": 1,
-      "lazyImages": 1,
+      "unloadedImages": 0,
+      "lazyImages": 0,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -1159,7 +1159,7 @@
       "httpStatus": 200,
       "imageCount": 4,
       "unloadedImages": 1,
-      "lazyImages": 4,
+      "lazyImages": 3,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -1407,7 +1407,7 @@
       "httpStatus": 200,
       "imageCount": 1,
       "unloadedImages": 0,
-      "lazyImages": 1,
+      "lazyImages": 0,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -1461,7 +1461,7 @@
       "httpStatus": 200,
       "imageCount": 1,
       "unloadedImages": 0,
-      "lazyImages": 1,
+      "lazyImages": 0,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -1664,7 +1664,7 @@
       "httpStatus": 200,
       "imageCount": 4,
       "unloadedImages": 0,
-      "lazyImages": 4,
+      "lazyImages": 3,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -1912,7 +1912,7 @@
       "httpStatus": 200,
       "imageCount": 1,
       "unloadedImages": 0,
-      "lazyImages": 1,
+      "lazyImages": 0,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -1966,7 +1966,7 @@
       "httpStatus": 200,
       "imageCount": 1,
       "unloadedImages": 0,
-      "lazyImages": 1,
+      "lazyImages": 0,
       "axeVersion": "4.12.1",
       "violations": [],
       "skipLinkPresent": true,
@@ -2098,8 +2098,8 @@
     "criticalAxeViolations": 0,
     "overflowElements": 0,
     "brokenImagesAfterScroll": 0,
-    "unloadedImagesBeforeScroll": 32,
-    "lazyImagesObserved": 60,
+    "unloadedImagesBeforeScroll": 29,
+    "lazyImagesObserved": 48,
     "unlabeledImages": 0,
     "failedRequests": 0,
     "nonSuccessResponses": 0,

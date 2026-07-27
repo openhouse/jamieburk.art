@@ -90,7 +90,7 @@ h2 {
 }
 
 ::selection {
-  background: rgba(76, 151, 194, 0.35);
+  background: color-mix(in srgb, var(--color-info) 35%, transparent);
 }
 
 :focus-visible {
@@ -128,7 +128,8 @@ h2 {
 
 .jb-artifact-surface {
   background: var(--jb-oil-paper);
-  border-left: 4px solid var(--jb-broadway-blue);
+  border: 1px solid
+    color-mix(in srgb, var(--jb-broadway-blue) 35%, transparent);
 }
 
 .jb-hero {
@@ -139,7 +140,7 @@ h2 {
 }
 
 .jb-hero::after {
-  background: rgba(20, 29, 35, 0.58);
+  background: color-mix(in srgb, var(--jb-oil-ink) 58%, transparent);
   content: "";
   inset: 0;
   pointer-events: none;
@@ -311,7 +312,7 @@ h2 {
 }
 
 .jb-citation a:focus-visible {
-  border-radius: 0.15rem;
+  border-radius: 0.25rem;
   outline: 3px solid var(--jb-yellow-ochre);
   outline-offset: 2px;
 }
@@ -354,8 +355,8 @@ h2 {
 
 .jb-endnotes li:target {
   background: color-mix(in srgb, var(--jb-lemon-yellow) 30%, transparent);
-  border-left: 4px solid var(--jb-yellow-ochre);
-  margin-left: -1rem;
+  outline: 2px solid var(--jb-yellow-ochre);
+  outline-offset: 2px;
   padding: 0.75rem 1rem;
 }
 

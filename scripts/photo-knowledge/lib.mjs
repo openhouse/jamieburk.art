@@ -15,6 +15,20 @@ import {
 } from "../knowledge-wiki/accessibility-evidence.mjs";
 import { compileWiki } from "../knowledge-wiki/lib.mjs";
 import { publicPhotoManifest } from "../../apps/www/src/data/photography.ts";
+import {
+  authorityCanaryBasisRecordIds,
+  authorityCanaryDecisionId,
+  authorityCanaryDecisionPath,
+  authorityCanaryGateReviewers,
+  authorityCanaryPhotoId,
+  authorityRegistryDenials,
+  authorityRegistryPurpose,
+  requiredRestorationGates,
+  restorationEmptyListFields,
+  restorationGatePolicy,
+  restorationRecordAllowedKeys,
+  sameAuthoritySet
+} from "./restoration-policy.mjs";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -40,6 +54,8 @@ const requiredRecordIds = [
   "source.permission.elana-gordon.east-river-portfolio",
   "source.recollection.jamie.canoe-commuting.2026-07",
   "research-inquiry.canoe-bike-journeys",
+  "research-inquiry.callnyc-interface-photo-oral-history",
+  "research.photography-first-field-close-reading.2026-07-26",
   "evaluation.photo-curation.home-east-river.2026-07-26",
   "decision.photo.home-east-river.layout-b",
   "decision.photo.protected-absence.layout-b",
@@ -85,93 +101,6 @@ const withdrawalPermissionStates = new Set([
   "rights-blocked",
   "withdrawn"
 ]);
-const requiredRestorationGates = [
-  "creator",
-  "rights",
-  "consent",
-  "exact-credit",
-  "crop",
-  "caption",
-  "represented-person",
-  "editorial",
-  "production",
-  "deployment",
-  "indexing"
-];
-const authorityRegistryPurpose =
-  "Identify the human reviewers whose authority counts for a photo gate " +
-  "without allowing a restoration decision or its evidence records to " +
-  "redefine them.";
-const authorityRegistryDenials = [
-  "production publication approval",
-  "deployment approval",
-  "indexing approval",
-  "a broader copyright license",
-  "consent for a materially different use"
-];
-const authorityCanaryPhotoId =
-  "photo.east-river-manhattan-bridge.2022";
-const authorityCanaryBasisRecordIds = [
-  authorityCanaryPhotoId,
-  "source.permission.elana-gordon.east-river-portfolio"
-];
-const restorationGatePolicy = {
-  creator: {
-    authority: "creator-or-rights-holder",
-    statuses: ["cleared"],
-    evidenceKinds: ["source", "asset"]
-  },
-  rights: {
-    authority: "creator-or-rights-holder",
-    statuses: ["cleared"],
-    evidenceKinds: ["source", "asset"]
-  },
-  consent: {
-    authority: "represented-person-or-consent-authority",
-    statuses: ["cleared", "not-applicable"],
-    evidenceKinds: ["source", "asset", "decision"]
-  },
-  "exact-credit": {
-    authority: "creator-and-editorial-owner",
-    statuses: ["cleared"],
-    evidenceKinds: ["source", "asset", "decision"]
-  },
-  crop: {
-    authority: "creator-and-editorial-owner",
-    statuses: ["cleared"],
-    evidenceKinds: ["evaluation", "decision", "asset"]
-  },
-  caption: {
-    authority: "creator-and-editorial-owner",
-    statuses: ["cleared"],
-    evidenceKinds: ["evaluation", "decision", "asset"]
-  },
-  "represented-person": {
-    authority: "represented-person",
-    statuses: ["cleared", "not-applicable"],
-    evidenceKinds: ["asset", "decision", "source"]
-  },
-  editorial: {
-    authority: "portfolio-owner",
-    statuses: ["cleared"],
-    evidenceKinds: ["evaluation", "decision"]
-  },
-  production: {
-    authority: "production-owner",
-    statuses: ["open-separated-gate"],
-    evidenceKinds: ["projection"]
-  },
-  deployment: {
-    authority: "deployment-owner",
-    statuses: ["open-separated-gate"],
-    evidenceKinds: ["projection"]
-  },
-  indexing: {
-    authority: "indexing-owner",
-    statuses: ["open-separated-gate"],
-    evidenceKinds: ["projection"]
-  }
-};
 let introducedHistoryCache;
 
 function compareText(a, b) {
@@ -402,16 +331,7 @@ function canonicalJson(value) {
 }
 
 function sameReviewerSet(left, right) {
-  if (!Array.isArray(left) || !Array.isArray(right)) return false;
-  if (
-    left.length === 0 ||
-    new Set(left).size !== left.length ||
-    new Set(right).size !== right.length
-  ) {
-    return false;
-  }
-  return JSON.stringify([...left].sort(compareText)) ===
-    JSON.stringify([...right].sort(compareText));
+  return sameAuthoritySet(left, right);
 }
 
 function exactKeys(value, expected) {
@@ -477,7 +397,11 @@ function authorityRegistryPolicyBound(registry) {
             Array.isArray(reviewers) &&
             reviewers.length > 0 &&
             new Set(reviewers).size === reviewers.length &&
-            reviewers.every(isHumanAuthorityName)
+            reviewers.every(isHumanAuthorityName) &&
+            sameReviewerSet(
+              reviewers,
+              authorityCanaryGateReviewers[gate]
+            )
           );
         })
     )
@@ -873,6 +797,20 @@ export function validateRestorationDecision({
     chosenOptions[0].evidence_state === "documented" &&
     chosenOptions[0].option === expectedChoice;
   const canonicalSemanticsBound =
+    record.id === authorityCanaryDecisionId &&
+    record.title ===
+      "Restore the East River photograph to working review" &&
+    record.canonical_path === authorityCanaryDecisionPath &&
+    record.review_by === "2026-10-26" &&
+    record.decision_period === "2026-07" &&
+    Object.keys(record).every((key) =>
+      restorationRecordAllowedKeys.includes(key)
+    ) &&
+    restorationEmptyListFields.every(
+      (field) =>
+        record[field] === undefined ||
+        (Array.isArray(record[field]) && record[field].length === 0)
+    ) &&
     record.status === "governed-open" &&
     record.visibility === "public-safe" &&
     record.sensitivity === "moderate" &&
@@ -1173,6 +1111,12 @@ export function evaluatePhotoKnowledge(options = {}) {
     "source.recollection.jamie.canoe-commuting.2026-07"
   );
   const inquiry = byId.get("research-inquiry.canoe-bike-journeys");
+  const callnycInquiry = byId.get(
+    "research-inquiry.callnyc-interface-photo-oral-history"
+  );
+  const firstFieldCloseReading = byId.get(
+    "research.photography-first-field-close-reading.2026-07-26"
+  );
   const curation = byId.get(
     "evaluation.photo-curation.home-east-river.2026-07-26"
   );
@@ -1800,6 +1744,37 @@ export function evaluatePhotoKnowledge(options = {}) {
         );
       });
 
+  const callnycInquirySource = source(callnycInquiry?.id);
+  const callnycOralHistoryDefaultClosed =
+    callnycInquiry?.status === "governed-open" &&
+    callnycInquiry?.visibility === "public-safe" &&
+    callnycInquiry?.projection_status === "hold" &&
+    JSON.stringify(callnycInquiry?.projection) ===
+      JSON.stringify({ status: "hold", surfaces: [] }) &&
+    callnycInquiry?.relations?.some(
+      (relation) => relation.target === "project.callnyc"
+    ) &&
+    /does not establish/i.test(callnycInquirySource) &&
+    /remains in the private editor field/i.test(callnycInquirySource) &&
+    /publication permission/i.test(callnycInquirySource);
+
+  const firstFieldCloseReadingBounded =
+    firstFieldCloseReading?.status === "maintained" &&
+    firstFieldCloseReading?.visibility === "public-safe" &&
+    firstFieldCloseReading?.projection_status === "hold" &&
+    JSON.stringify(firstFieldCloseReading?.projection) ===
+      JSON.stringify({ status: "hold", surfaces: [] }) &&
+    /1,000 unique still\s+photographs/i.test(
+      source(firstFieldCloseReading?.id)
+    ) &&
+    /18-image editorial\s+shortlist/i.test(
+      source(firstFieldCloseReading?.id)
+    ) &&
+    /not a publication edit/i.test(source(firstFieldCloseReading?.id)) &&
+    /live PhotoKit authorization check\s+timed out/i.test(
+      source(firstFieldCloseReading?.id)
+    );
+
   const checks = {
     photo_rfc_0003_implementing_and_indexed: rfcImplementing,
     photo_records_materialized: recordsMaterialized,
@@ -1816,6 +1791,9 @@ export function evaluatePhotoKnowledge(options = {}) {
     photo_caption_credit_rendered: captionAndCreditRendered,
     photo_recollection_nonpublishing: recollectionNonpublishing,
     photo_inquiry_avoids_photo_counting: inquiryAvoidsPhotoCounting,
+    photo_callnyc_oral_history_default_closed:
+      callnycOralHistoryDefaultClosed,
+    photo_first_field_close_reading_bounded: firstFieldCloseReadingBounded,
     photo_curatorial_authority_advisory: curatorialAuthorityAdvisory,
     photo_protected_absence_first_class: protectedAbsenceFirstClass,
     photo_public_boundary_clean: currentBoundaryClean,

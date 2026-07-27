@@ -80,6 +80,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                     alt={artifact.media.alt}
                     className="aspect-[3/2] w-full object-cover object-top"
                     height={800}
+                    priority={index === 0}
                     sizes="(min-width: 768px) 66vw, 100vw"
                     src={artifact.media.src}
                     width={1200}
@@ -154,7 +155,7 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
         </p>
       ) : null}
       {item.careNote || item.publicSafety?.note ? (
-        <details className="mt-4 max-w-4xl border-l-4 border-jb-ochre bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
+        <details className="mt-4 max-w-4xl border border-jb-ochre/45 bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
           <summary className="cursor-pointer font-semibold text-jb-blue">
             Claim and care limits
           </summary>
