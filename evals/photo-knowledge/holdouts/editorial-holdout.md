@@ -1,105 +1,29 @@
 ---
-candidate_fingerprint: "3467feb1203122bd490fddb3cb555165356d6dcc69707576b277ad795f6d4446"
-source_commit: "80d910ea27fbb76c3775e170a5d2b33fff1e39c6"
+candidate_fingerprint: 73ddca0031cf3fe79a5228e277a82e672451243b00e8260758206bbdcbacbbba
+source_commit: 1134d17895009653d4525375ca82cca44f2b8841
 reviewer: "Fresh independent editorial and accessibility photo holdout"
-reviewed_at: "2026-07-27T00:22:03Z"
+reviewed_at: 2026-07-26T22:20:37-04:00
 verdict: pass
 independent_read_only: true
 ---
 
-# Editorial And Accessibility Holdout
+# Independent Editorial and Accessibility Photo Holdout
 
 ## Evidence
 
-- Independently reproduced the declared 667-file candidate fingerprint under
-  Node 26.5.0 at the specified source commit.
-- All 26 deterministic photo-knowledge checks passed. All 22 mutation and
-  governance tests passed, including tests for private-locator leakage in
-  committed QA evidence, renderer-snapshot drift, revoked occurrences,
-  permission expansion, responsive evidence drift, protected absence, and
-  non-human selection authority.
-- All seven candidate-bound accessibility-evidence tests passed. The bound
-  matrix covers 14 canonical routes at 360, 375, 768, and 1280 CSS pixels: 56
-  successful observations with no axe violations, horizontal overflow,
-  clipped captions, broken images after scrolling, unlabeled images, failed
-  requests, or invalid heading and landmark rows.
-- An independent live browser pass examined the homepage, About page, and
-  FairRentNYC case study at 360 and 1280 pixels. All six route-viewport
-  combinations returned HTTP 200. After explicitly scrolling each lazy image
-  into view and awaiting decode, every image loaded. No unlabeled images,
-  clipped captions, horizontal overflow, failed requests, or WCAG 2.0/2.1
-  A/AA axe violations were observed.
-- Keyboard sampling on the homepage reached the skip link, identity link, and
-  primary navigation in logical order. Each sampled focus target displayed a
-  three-pixel solid outline.
-- The photographic sequence is editorially coherent. The raft introduces
-  collective scale and shared risk; the listening room shows participation
-  becoming public work; screen printing reveals material production; the
-  self-portrait establishes Jamie's situated presence; and the Fair Rent
-  sequence moves from listening through making to public action and field
-  materials.
-- Captions do interpretive work without asking photographs to prove outcomes.
-  The raft caption expressly rejects a captaincy claim, and the Fair Rent
-  introduction and captions preserve collective campaign authorship.
-- All active photographs have distinct descriptive alt text, contextual
-  captions, project-level credits, stable aspect-ratio containers, responsive
-  `sizes`, and deliberate crop positions. Priority loading is reserved for
-  lead or first-viewport images; remaining images use lazy loading
-  successfully.
-- Visual inspection found the selected photographs legible, specific, and
-  mutually differentiated. Their documentary textures support the portfolio's
-  account of operational stewardship without becoming decorative stock
-  imagery.
-- Metadata inspection of the active derivatives, held East River derivative,
-  and committed QA screenshots found no embedded GPS coordinates, owner names,
-  serial numbers, creator metadata, or source timestamps in the inspected
-  fields.
-- Public-safety scanning, including `docs/qa/photo-knowledge`, found no private
-  filesystem paths, source filenames, Photos-library locators, source UUIDs,
-  exact coordinates, or private-preview fingerprints.
-- Protected absence is operational. Intimate gathering photographs remain
-  withheld by default. The child-visible Talks Not Raids photograph is absent
-  from the active application and current public-image tree pending
-  child-specific dignity, represented-person, creator, and rights review.
-- The East River photograph remains structurally separate from the active
-  Layout E manifest with `candidate-hold` status. Its projection,
-  public-display, consent, production, and indexing states remain held or open.
-- The historical Layout C occurrence is bound to a checksummed correction
-  patch, corrected creator credit, five committed renderer snapshots,
-  responsive screenshots, and a production-render receipt.
-- Fresh-clone portability was independently verified. A disposable
-  `--no-local` clone did not contain the unreferenced corrected Layout C Git
-  tree, yet the committed renderer snapshots supported all deterministic
-  checks and photo tests. Historical validation therefore does not depend on
-  one operator's private Git object database.
+- Reproduced the candidate fingerprint from 700 sorted file paths and bytes: `73ddca0031cf3fe79a5228e277a82e672451243b00e8260758206bbdcbacbbba`. `HEAD` matches the requested source commit.
+- Deterministic checks passed: photo knowledge `26/26`, photo tests `22/22`, layout evaluation `10/10`, layout tests `3/3`, and accessibility-evidence tests `7/7`.
+- The eight-image edit is coherent: raft hero, listening room, production table, About self-portrait, Fair Rent lead, and a room-to-making-to-public-action-to-materials essay. Photography supports the hiring path; role fit, selected work, resume, and contact remain explicit.
+- All eight active assets have distinct descriptive alt text, contextual captions, credits, stable crop positions, and metadata-light derivatives. Captions preserve collective authorship. Archive-level credits remain appropriately provisional rather than pretending exact creator attribution.
+- Current 119-file public-surface fingerprint `8be191e5d04214d3a2e71190ca3ed4f2984c5a9011cce4316d221e77a68182ac` validates the candidate-bound 56-row matrix: 14 routes at 360, 375, 768, and 1280 pixels; zero axe violations, overflow, clipped captions, broken or unlabeled images, failed requests, or heading/landmark failures.
+- Lazy loading is demonstrated rather than inferred: 60 lazy-image observations, 55 images initially unloaded, explicit full-page follow-up, and all images loaded afterward. Priority is reserved for immediate lead images.
+- The held Sunday Dinner photograph correctly produced a source-free oral-history invitation, not publication. Jamie has not supplied the oral history, and the image lacks exact-use rights, creator credit, represented-person review, caption, alt, crop, and destination approval. An automatic ninth image would turn discovery into authorization and risk treating an intimate relationship as professional scenery.
+- Read-only status was unchanged; no files were edited.
 
 ## Open Human Gates
 
-- Jamie's final editorial and exact-occurrence approval.
-- Creator and rights-holder authorization for each active Layout E photograph.
-- Exact creator credit, caption, crop, context, and destination review for the
-  active photographic cohort.
-- Represented-person dignity, privacy, and depiction review, including
-  responsive crops.
-- Appropriate child or guardian review before any future Talks Not Raids
-  occurrence.
-- Human or legal judgment about prior Git distribution, caches, and history
-  treatment for withdrawn material.
-- East River mobile-crop dignity review and Elana Gordon's exact-crop review.
-- Manual assistive-technology and broader human accessibility review.
-- Production activation, deployment, and post-deployment verification.
-- Indexing approval.
+Jamie approval; creator and rights-holder authority; exact credit, crop, caption, context, and destination; represented-person dignity and consent; production approval; deployment; and indexing remain open. The withdrawn child-visible photograph and protected intimate-gathering images remain held.
 
 ## Recommendation
 
-Accept this exact candidate as an editorial and accessibility **pass** for
-continued draft pull-request review.
-
-Commit the 667 reviewed candidate files without modification and reproduce the
-fingerprint in hosted CI. Any change to pixels, alt text, caption, credit,
-crop, sequence, renderer, responsive behavior, or candidate-bound evidence
-requires a new fingerprint and fresh holdout.
-
-This review does not confer rights, consent, exact credit or crop approval,
-dignity clearance, production approval, deployment approval, or indexing
-approval.
+Accept this exact candidate as passing draft PR evidence only. Retain the current eight-image edit and the oral-history hold; add no ninth image by quota or automation. Reproduce all fingerprints and rerun responsive, accessibility, and independent review after any candidate-affecting change.

@@ -1,7 +1,7 @@
 {
   "receiptVersion": 1,
   "generatedAt": "2026-07-26",
-  "sourceCommit": "e922014969409d4fa6ec32c4d26fa3816c5375b8",
+  "sourceCommit": "1134d17895009653d4525375ca82cca44f2b8841",
   "candidateSha256": "46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341",
   "candidateFileCount": 162,
   "algorithm": "SHA-256 over each sorted relative path, NUL, file bytes, NUL.",
@@ -181,8 +181,8 @@
       "purpose": "Binds the 56-row browser and axe matrix to apps/www plus package manifests."
     },
     "photoKnowledge": {
-      "sha256": "9e011d36b3576e394a51a819eb0d66de56dd9590255589d5d8e6d32c334d6d64",
-      "fileCount": 699,
+      "sha256": "73ddca0031cf3fe79a5228e277a82e672451243b00e8260758206bbdcbacbbba",
+      "fileCount": 700,
       "purpose": "Binds the broader RFC 0003 source-tree candidate while excluding circular generated reports and holdouts."
     }
   },

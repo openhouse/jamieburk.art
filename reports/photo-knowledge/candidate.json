@@ -1,8 +1,8 @@
 {
   "generated_at": "2026-07-26",
-  "source_commit": "13574a7f59fb2482b37db8ef2daa78805e995f7f",
-  "candidate_fingerprint": "9e011d36b3576e394a51a819eb0d66de56dd9590255589d5d8e6d32c334d6d64",
-  "candidate_file_count": 699,
+  "source_commit": "1134d17895009653d4525375ca82cca44f2b8841",
+  "candidate_fingerprint": "73ddca0031cf3fe79a5228e277a82e672451243b00e8260758206bbdcbacbbba",
+  "candidate_file_count": 700,
   "exclusions": [
     "^docs\\/knowledge-bank\\/_generated\\/",
     "^reports\\/photo-knowledge\\/",
