@@ -173,7 +173,10 @@
         "photo_canary_no_upload_or_collateral_mutation",
         "photo_canary_friction_and_repair_preserved",
         "photo_canary_private_material_absent",
-        "photo_canary_publication_gate_remains_human"
+        "photo_canary_publication_gate_remains_human",
+        "photo_oral_history_return_separates_evidence",
+        "photo_oral_history_publication_gate_remains_human",
+        "photo_oral_history_private_material_absent"
       ]
     },
     {
