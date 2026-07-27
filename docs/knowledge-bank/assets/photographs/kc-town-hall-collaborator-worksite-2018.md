@@ -23,6 +23,7 @@ public_derivatives:
     media_type: image/jpeg
     width: 1280
     height: 854
+    checksum: ba5294cd45b817ecc383941411743e8608f37bd9b5306ef4a22170004bed40c2
     metadata_stripped: true
     status: branch-review
 visible_observations:

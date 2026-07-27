@@ -472,7 +472,7 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. Treat city-key activity as product reach, not adoption or official chapters.",
+      "Historical proof page. Treat the July 2017 city-key counts as database activity, not adoption, official chapters, or current activity.",
     sourceLayer:
       "Public-safe summary, historical project context, and metadata-minimized identity assets recovered from the preserved source code; full interface screenshots remain pending review.",
     credits: ["Jamie Burkart", "WOWList collaborators"],

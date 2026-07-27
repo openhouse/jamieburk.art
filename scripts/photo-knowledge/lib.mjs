@@ -99,6 +99,59 @@ function imageDimensions(buffer) {
     }
   }
 
+  if (
+    buffer.length >= 4 &&
+    buffer[0] === 0xff &&
+    buffer[1] === 0xd8
+  ) {
+    const startOfFrameMarkers = new Set([
+      0xc0, 0xc1, 0xc2, 0xc3,
+      0xc5, 0xc6, 0xc7,
+      0xc9, 0xca, 0xcb,
+      0xcd, 0xce, 0xcf
+    ]);
+    let offset = 2;
+
+    while (offset + 3 < buffer.length) {
+      if (buffer[offset] !== 0xff) {
+        offset += 1;
+        continue;
+      }
+
+      while (offset < buffer.length && buffer[offset] === 0xff) {
+        offset += 1;
+      }
+      if (offset >= buffer.length) return null;
+
+      const marker = buffer[offset];
+      offset += 1;
+
+      if (marker === 0xd9 || marker === 0xda) return null;
+      if (marker === 0x01 || (marker >= 0xd0 && marker <= 0xd7)) {
+        continue;
+      }
+      if (offset + 1 >= buffer.length) return null;
+
+      const segmentLength = buffer.readUInt16BE(offset);
+      if (
+        segmentLength < 2 ||
+        offset + segmentLength > buffer.length
+      ) {
+        return null;
+      }
+
+      if (startOfFrameMarkers.has(marker)) {
+        if (segmentLength < 7) return null;
+        return {
+          width: buffer.readUInt16BE(offset + 5),
+          height: buffer.readUInt16BE(offset + 3)
+        };
+      }
+
+      offset += segmentLength;
+    }
+  }
+
   return null;
 }
 
@@ -656,8 +709,37 @@ export function evaluatePhotoKnowledge(options = {}) {
             (item) => item.id === placement.derivativeId
           );
           const governedOccurrence = recordMap.get(placement.occurrenceId);
+          const derivativeBuffer = governedDerivative?.path
+            ? readAsset(repoRoot, governedDerivative.path, assetOverrides)
+            : null;
+          const derivativeDimensions = derivativeBuffer
+            ? imageDimensions(derivativeBuffer)
+            : null;
+          const assetSourceStart = photographyData.indexOf(
+            `wikiId: "${assetId}"`
+          );
+          const assetSourceEnd = assetSourceStart >= 0
+            ? photographyData.indexOf("review: {", assetSourceStart)
+            : -1;
+          const assetSourceBlock =
+            assetSourceStart >= 0 && assetSourceEnd > assetSourceStart
+              ? photographyData.slice(assetSourceStart, assetSourceEnd)
+              : "";
+          const normalizedAssetSourceBlock = assetSourceBlock.replace(
+            /\s+/g,
+            " "
+          );
+          const canonicalCaption = governedOccurrence?.caption?.text;
+          const canonicalCredit = governedOccurrence?.credit?.text;
           return (
-            Boolean(governedDerivative?.path) &&
+            Boolean(derivativeBuffer) &&
+            typeof governedDerivative?.checksum === "string" &&
+            governedDerivative.checksum.length === 64 &&
+            sha256(derivativeBuffer) === governedDerivative.checksum &&
+            derivativeDimensions?.width === governedDerivative?.width &&
+            derivativeDimensions?.height === governedDerivative?.height &&
+            governedDerivative?.metadata_stripped === true &&
+            !hasEmbeddedMetadata(derivativeBuffer) &&
             governedOccurrence?.projection_type === "photo-occurrence" &&
             governedOccurrence?.projection_status === "pending" &&
             governedOccurrence?.portfolio_edition ===
@@ -671,7 +753,15 @@ export function evaluatePhotoKnowledge(options = {}) {
             governedOccurrence?.approval?.production === "open" &&
             governedOccurrence?.approval?.indexing === "open" &&
             typeof governedOccurrence?.rollback?.action === "string" &&
-            governedOccurrence.rollback.action.length > 30
+            governedOccurrence.rollback.action.length > 30 &&
+            typeof canonicalCaption === "string" &&
+            normalizedAssetSourceBlock.includes(
+              JSON.stringify(canonicalCaption)
+            ) &&
+            typeof canonicalCredit === "string" &&
+            normalizedAssetSourceBlock.includes(
+              JSON.stringify(canonicalCredit)
+            )
           );
         })
       );

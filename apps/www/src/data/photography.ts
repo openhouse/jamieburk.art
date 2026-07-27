@@ -107,7 +107,7 @@ export const photographs = {
       "Jamie Burkart in a life vest holding a canoe paddle on the East River shoreline beneath the Manhattan Bridge.",
     caption: "At the East River beneath the Manhattan Bridge, 2022.",
     credit:
-      "Photograph by Elana Gordon. From Jamie Burkart's photo archive",
+      "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
     objectPosition: "50% 50%",
     mobileObjectPosition: "70% 50%",
     kind: "photograph",
@@ -133,7 +133,7 @@ export const photographs = {
       "A red handmade raft resting at the edge of still water in dense fog while a bundled person sits on deck.",
     caption:
       "The waterways project raft held at the bank in fog: a social and technical container made for a journey with other people.",
-    credit: "Photographer not yet confirmed. Jamie Burkart photo archive",
+    credit: "Photographer not yet confirmed. Jamie Burkart photo archive.",
     objectPosition: "50% 56%",
     kind: "photograph",
     review: {
@@ -160,7 +160,7 @@ export const photographs = {
       "A crowded New York City Council hearing room with attendees facing a panel.",
     caption:
       "Attendees face the Council panel during the public hearing on repealing the Cabaret Law, September 2017.",
-    credit: "Photographer not yet confirmed. Jamie Burkart photo archive",
+    credit: "Photographer not yet confirmed. Jamie Burkart photo archive.",
     objectPosition: "50% 46%",
     kind: "photograph",
     review: {
@@ -185,7 +185,7 @@ export const photographs = {
     caption:
       "A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019.",
     credit:
-      "Photographer not yet confirmed. NYC Artist Coalition photo archive",
+      "Photographer not yet confirmed. NYC Artist Coalition photo archive.",
     objectPosition: "50% 45%",
     kind: "photograph",
     review: {
@@ -213,7 +213,7 @@ export const photographs = {
     caption:
       "Jamie and a project collaborator pause inside KC Town Hall during restoration work.",
     credit:
-      "Photographer not yet confirmed. KC Town Hall project archive",
+      "Photographer not yet confirmed. KC Town Hall project archive.",
     objectPosition: "50% 43%",
     kind: "photograph",
     review: {
@@ -240,7 +240,7 @@ export const photographs = {
       "Jamie wearing an apron and seasoning a tray of food in an apartment kitchen.",
     caption:
       "Preparing food at 196, where hospitality supported a recurring participation practice.",
-    credit: "Photographer not yet confirmed. Jamie Burkart photo archive",
+    credit: "Photographer not yet confirmed. Jamie Burkart photo archive.",
     objectPosition: "50% 43%",
     kind: "photograph",
     review: {
@@ -268,7 +268,7 @@ export const photographs = {
     caption:
       "A participant speaks while the room listens at a Department of Cultural Affairs meeting with DIY and alternative cultural-space communities, January 2017.",
     credit:
-      "Photographer not yet confirmed. NYC Artist Coalition archive",
+      "Photographer not yet confirmed. NYC Artist Coalition archive.",
     objectPosition: "50% 52%",
     kind: "photograph",
     review: {
@@ -295,7 +295,7 @@ export const photographs = {
     caption:
       "A speaker addresses a packed Night Mayor town hall in a small cultural space, October 2017.",
     credit:
-      "Photographer not yet confirmed. NYC Artist Coalition photo archive",
+      "Photographer not yet confirmed. NYC Artist Coalition photo archive.",
     objectPosition: "50% 52%",
     kind: "photograph",
     review: {

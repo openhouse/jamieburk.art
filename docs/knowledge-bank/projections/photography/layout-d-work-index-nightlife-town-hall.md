@@ -19,7 +19,7 @@ component: WorkIndexLead
 caption:
   text: A speaker addresses a packed Night Mayor town hall in a small cultural space, October 2017.
 credit:
-  text: Photographer not yet confirmed. NYC Artist Coalition archive.
+  text: Photographer not yet confirmed. NYC Artist Coalition photo archive.
 approval:
   public_git: jamie-authorized-branch-review
   staging: open

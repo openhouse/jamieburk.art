@@ -19,7 +19,7 @@ component: WorkCard
 caption:
   text: A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019.
 credit:
-  text: Photographer not yet confirmed. NYC Artist Coalition archive.
+  text: Photographer not yet confirmed. NYC Artist Coalition photo archive.
 approval:
   public_git: jamie-authorized-branch-review
   staging: open

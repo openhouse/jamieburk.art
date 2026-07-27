@@ -122,6 +122,56 @@ test("modified pixels fail the checksum contract", () => {
   );
 });
 
+test("every displayed derivative requires an exact checksum", () => {
+  const file =
+    "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "    checksum: 7fbdc57b788c7e3ed30f4ed789012dfebdb203a29b7d6b70e21bc51fccb7f5a0\n",
+      ""
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.all_displayed_photographs_are_governed,
+    false
+  );
+});
+
+test("modified displayed JPEG pixels fail the portfolio checksum contract", () => {
+  const relativePath =
+    "apps/www/public/images/field-v02/artist-coalition-listening-room.jpg";
+  const original = readFileSync(path.join(defaultRepoRoot, relativePath));
+  const mutated = Buffer.from(original);
+  mutated[mutated.length - 1] ^= 0xff;
+  const result = evaluatePhotoKnowledge({
+    assetOverrides: { [relativePath]: mutated },
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.all_displayed_photographs_are_governed,
+    false
+  );
+});
+
+test("displayed occurrence copy must match its governed caption and credit", () => {
+  const file =
+    "docs/knowledge-bank/projections/photography/layout-d-work-index-nightlife-town-hall.md";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "Photographer not yet confirmed. NYC Artist Coalition photo archive",
+      "Photographer not yet confirmed. Unverified archive"
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.all_displayed_photographs_are_governed,
+    false
+  );
+});
+
 test("embedded metadata fails closed", () => {
   const relativePath =
     "apps/www/public/images/field-notes/jamie-east-river.webp";
