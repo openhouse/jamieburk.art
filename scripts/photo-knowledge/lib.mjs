@@ -95,6 +95,50 @@ const expectedReports = [
   "docs/knowledge-bank/_generated/photographic-knowledge-loop.md"
 ];
 
+const heldResearchRecordKeys = [
+  "aliases",
+  "anti_claims",
+  "canonical_path",
+  "confirmed_facts",
+  "constraints",
+  "decision_actors",
+  "discovery_terms",
+  "evidence",
+  "hard_screens",
+  "headings",
+  "id",
+  "inferences",
+  "interview_questions",
+  "kind",
+  "last_reviewed",
+  "one_year_risk_conditions",
+  "one_year_success_conditions",
+  "options_considered",
+  "path",
+  "portfolio_routes",
+  "projection",
+  "projection_status",
+  "registry_ids",
+  "relations",
+  "resulting_artifacts",
+  "review_by",
+  "role_requirements",
+  "sensitivity",
+  "status",
+  "summary",
+  "title",
+  "unknowns",
+  "visibility",
+  "wanted"
+].sort(compareText);
+
+const publicationAuthorityContradictions = [
+  /\bpublication[- ]approved\b/i,
+  /\b(?:rights|consent|public[- ]display|publication|production|deployment|indexing)(?:\s+status)?\s*[:=-]?\s*(?:approved|cleared|granted|complete)\b/i,
+  /\b(?:approved|cleared)\s+for\s+(?:public[- ]display|publication|production|deployment|indexing)\b/i,
+  /\b(?:this|the)\s+(?:image|photo|photograph|shortlist|field)\s+(?:is\s+)?(?:approved|cleared)\b/i
+];
+
 const introducedHistoryBase = "origin/features/layout-B";
 const withdrawalPermissionStates = new Set([
   "revoked",
@@ -105,6 +149,18 @@ let introducedHistoryCache;
 
 function compareText(a, b) {
   return a < b ? -1 : a > b ? 1 : 0;
+}
+
+function heldResearchRecordIsDefaultClosed(record, sourceText) {
+  if (!record) return false;
+  const exactKeys =
+    JSON.stringify(Object.keys(record).sort(compareText)) ===
+    JSON.stringify(heldResearchRecordKeys);
+  const semanticSurface = `${JSON.stringify(record)}\n${sourceText}`;
+  return exactKeys &&
+    publicationAuthorityContradictions.every(
+      (pattern) => !pattern.test(semanticSurface)
+    );
 }
 
 function walkFiles(root) {
@@ -1746,6 +1802,10 @@ export function evaluatePhotoKnowledge(options = {}) {
 
   const callnycInquirySource = source(callnycInquiry?.id);
   const callnycOralHistoryDefaultClosed =
+    heldResearchRecordIsDefaultClosed(
+      callnycInquiry,
+      callnycInquirySource
+    ) &&
     callnycInquiry?.status === "governed-open" &&
     callnycInquiry?.visibility === "public-safe" &&
     callnycInquiry?.projection_status === "hold" &&
@@ -1759,6 +1819,10 @@ export function evaluatePhotoKnowledge(options = {}) {
     /publication permission/i.test(callnycInquirySource);
 
   const firstFieldCloseReadingBounded =
+    heldResearchRecordIsDefaultClosed(
+      firstFieldCloseReading,
+      source(firstFieldCloseReading?.id)
+    ) &&
     firstFieldCloseReading?.status === "maintained" &&
     firstFieldCloseReading?.visibility === "public-safe" &&
     firstFieldCloseReading?.projection_status === "hold" &&

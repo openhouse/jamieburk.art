@@ -1,0 +1,37 @@
+{
+  "evaluator": "Codex",
+  "reviewerId": "Morse C",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "610717d9fda397652d39ff20873507b3ec436d712635fbab3faa8947a626f87c",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The ordered 11-file fingerprint was independently recomputed and exactly matched the requested candidate SHA-256.",
+    "Hiring legibility remains primary: the homepage directs hiring readers to Technical Operations, while /about opens by identifying Jamie as a technical project manager and implementation lead.",
+    "The /about through-line connects artistic, civic, technical, and social practice through Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition, and Source-Backed Team Memory.",
+    "Three current implementation loops distinguish relationships, system models, interfaces and use, and learning and continuity. This makes experimentation, participation, hospitality, attention, documentation, care, and continuation concrete rather than merely thematic.",
+    "The portfolio explains the difference from conventional administration directly: people must be able to inhabit, influence, remember, and continue the systems, with requirements and handoffs changing through use.",
+    "Collective credit is disciplined throughout: Open House is described as initiated by Jamie and collectively governed by participants; WOWList is co-built; NYC Artist Coalition outcomes remain collective; project metadata credits teams, communities, advocates, and collaborators.",
+    "The UCSC projection is bounded to a public Open House article and a concise practice lineage. No protected evaluation, private correspondence, student identifier, educational email address, private archive path, raw evaluation filename, or faculty testimonial appears in the bound public candidate.",
+    "Sunday Dinner and coalition materials explicitly keep guest histories, attendance records, correspondence, legal-review context, stakeholder information, and unapproved images or quotations outside the public record.",
+    "The shared site header provides a direct homepage-to-/about navigation path, satisfying the rubric's within-two-click requirement in one click."
+  ],
+  "gaps": [
+    "No rendered screenshot was produced during this source-only read-only holdout; the navigation path and visible copy were verified directly in source.",
+    "The evaluator helper still contains an older approvedCandidateSha256 and its UCSC source note is outside the 11-file fingerprint. These are evidence-aggregation provenance issues, not blocking defects in the reviewed public candidate."
+  ],
+  "safety_findings": [
+    "No protected UCSC educational-record content or unapproved testimonial is projected.",
+    "No student identifier, private absolute path, educational email address, or raw narrative-evaluation filename was found.",
+    "Participant privacy and consent boundaries are explicit for community, coalition, and source-backed-memory work.",
+    "Contribution language does not convert collective governance, organizing, platform adoption, or policy outcomes into sole authorship or causality."
+  ],
+  "recommendation": "Award the exact candidate the maximum PR-015 score. Preserve this scorecard against the recomputed digest, then rebind the evaluator helper and source-note provenance before automated aggregation.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Codex",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

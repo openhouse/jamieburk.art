@@ -1,0 +1,34 @@
+{
+  "evaluator": "Codex native independent holdout",
+  "reviewerId": "Morse A",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "5036ea58e320385d8289b7a971c9c91da6e43b37e54cdc67a4869039a613081f",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The independently recomputed ordered 11-file fingerprint exactly matches 5036ea58e320385d8289b7a971c9c91da6e43b37e54cdc67a4869039a613081f.",
+    "apps/www/src/app/about/page.tsx presents the concise threshold 'Systems people can inhabit,' explicitly connecting artistic, civic, technical, and social practice through Open House, WOWList, Sunday Dinner / 196, NYC Artist Coalition, and source-backed team memory.",
+    "The About page makes the distinction from conventional administration legible: systems help people recognize relationships, participate, remember, influence use, and continue the work.",
+    "Three current implementation loops trace relationships, models, interfaces and use, and learning and continuity through Harry J. Epstein Company, NYC Artist Coalition / FairRentNYC, and Sunday Dinner / 196; WOWList supplies a fourth historical continuity.",
+    "apps/www/src/app/page.tsx gives hiring readers an early 'Start here' route to Technical Operations, lead proofs, and the resume while retaining material, place-based language about operating systems people inhabit.",
+    "apps/www/src/app/work/technical-operations/page.tsx places 'View resume' and 'Contact Jamie' immediately after the role proposition, improving application legibility without displacing the civic, cultural, and relational proof map.",
+    "The case-study files preserve specific practice evidence: WOWList connects community vocabulary to co-built platform workflows; Sunday Dinner / 196 connects hospitality, trust, onboarding, and continuity; FairRentNYC connects collective civic action to source-backed coalition memory; CallNYC connects public data to resident-facing use.",
+    "apps/www/src/data/work.ts reinforces contribution boundaries with co-built, co-led, contributed-to, helped-structure, stewarded, supported, and translated language, alongside explicit collaborator credits and Known/Open/Protected fields."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No student identifier, private absolute path, educational email address, raw narrative-evaluation filename, or unapproved testimonial text was found in the ordered candidate files.",
+    "Open House is framed as initiated by Jamie and collectively governed by participants, avoiding solo-production language.",
+    "NYC Artist Coalition and FairRentNYC outcomes remain explicitly collective, with private notes, legal-review material, stakeholder lists, strategy context, emails, and unapproved quotes excluded.",
+    "Sunday Dinner / 196 keeps guest histories, contact and attendance records, private correspondence, access details, addresses, and unapproved images outside the public site.",
+    "Source-Backed Team Memory uses a synthetic example and explicitly keeps private transcripts, contact details, and unapproved collaborator context outside public memory."
+  ],
+  "recommendation": "Pass at score 4. Preserve the early application actions and the concise inhabited-systems through-line together; they make the professional role easier to act on without reducing the artistic, civic, technical, and social practice to organizational utility.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Morse A",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

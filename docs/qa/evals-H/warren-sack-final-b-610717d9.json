@@ -1,0 +1,37 @@
+{
+  "evaluator": "Codex native independent holdout",
+  "reviewerId": "sack-b",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "610717d9fda397652d39ff20873507b3ec436d712635fbab3faa8947a626f87c",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The ordered 11-file candidate digest was independently recomputed before and after review and matched the requested SHA-256 exactly; the worktree remained unmodified.",
+    "The About page states the recursive method plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. About is directly available from the homepage's global navigation and links onward to project evidence.",
+    "Harry J. Epstein continuity: customer language, product judgment, public voice, and operating habits become a unified product-and-ordering journey, then a maintained storefront used by customers and staff; recurring questions and bounded analytics inform releases, while reusable content and workflow patterns support team continuation.",
+    "NYC Artist Coalition and FairRentNYC continuity: lived experience, meetings, public sources, unresolved questions, and civic actors become coalition memory connecting testimony, policy lineage, decisions, and actions; campaign sites, town halls, hearings, and practical sessions are used collectively; minutes, source maps, question logs, and action trackers provide durable handoff.",
+    "Sunday Dinner and 196 continuity: hospitality, trust, artist support, shared space, and recurring participation become a care-centered operating rhythm; gatherings and residencies function as the interface and are shaped through repeated social use; onboarding, access handoffs, documentation practices, and repeatable rhythms sustain continuation without exposing participant histories.",
+    "WOWList supplies a corroborating historical continuity: organizers' existing vocabulary becomes a keyword-community model, organizer publishing and event-distribution interfaces, documented use across distributed communities, and reusable publishing and deployment patterns.",
+    "Inspectability is substantive rather than tool-list based: the HJE and FairRentNYC records provide existing public-site screenshots, captions, source labels, public links, artifact descriptions, source boundaries, and credits; CallNYC adds an inspectable archived prototype and repository with conspicuous unofficial and non-current labeling.",
+    "The shared data layer records project-specific credits, Known/Open/Protected boundaries, source layers, current status, and collaborator-sensitive guardrails, while the case-study presentation exposes artifacts, credits, source limits, and protected categories to readers."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Collective credit is preserved through co-built, co-led, contributed-to, collaborator, team, community, and collectively governed wording; no reviewed public surface claims sole authorship.",
+    "FairRentNYC explicitly keeps campaign accomplishments collective and disclaims solo policy causality and official legal analysis.",
+    "Protected records, correspondence, participant histories, contact details, private analytics, legal-review materials, stakeholder lists, raw strategy context, and unapproved images or quotations remain excluded or explicitly bounded.",
+    "No student identifier, educational email address, private absolute path, or raw narrative-evaluation filename appears in the reviewed public candidate.",
+    "The candidate makes no claim of structural equivalence, peer-reviewed research, disciplinary invention, or current Max/Jitter proficiency.",
+    "Dated Open House material is framed as a 2006 historical foundation with collective governance, not evidence of current technical proficiency or production deployment.",
+    "The visible AI-evaluation coursework is labeled professional development and explicitly does not establish instructor affiliation, production SaaS, automated trust, or replacement of human judgment.",
+    "CallNYC is repeatedly marked archived, unofficial, and non-current, preventing historical civic data from being mistaken for current official guidance."
+  ],
+  "recommendation": "Pass PR-016 at 4. The candidate makes the recursive social-systems method directly legible, reconstructs it through at least three distinct current continuities, supplies inspectable project evidence and durable handoffs, and preserves every required attribution and anti-overclaim boundary.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Sack B",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

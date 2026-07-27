@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-27T01:40:32.078Z",
+  "checkedAt": "2026-07-27T03:11:48.433Z",
   "baseUrl": "http://127.0.0.1:3042",
-  "publicSurfaceFingerprint": "4defc51b55ce3da37e38d1eda65f595753edbc1fae0c6d55ef1110ee318870f0",
+  "publicSurfaceFingerprint": "55c4445e07508229af5fb1d9631c2e187871e42a13e4695e1080bd2faf83fea5",
   "publicSurfaceFileCount": 117,
   "publicSurfaceScope": [
     "tracked and unignored apps/www/**",
@@ -43,7 +43,7 @@
       "viewport": 375,
       "path": "/work/technical-operations",
       "file": "docs/qa/evals-H/layout-B-screenshots/technical-operations-mobile.png",
-      "sha256": "593c2efdfb3e73341fc5cf9c33d171d3b93df5aca4138440a2f022c551bc9e60"
+      "sha256": "9b0ec077b8ca840e1aac3084718ea15731f961c618fd9a039ccae7397465f427"
     },
     {
       "viewport": 375,

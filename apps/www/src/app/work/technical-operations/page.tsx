@@ -4,6 +4,7 @@ import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { FieldPhoto } from "@/components/FieldPhoto";
 import { JBCard } from "@/components/JBCard";
+import { JBButton } from "@/components/JBButton";
 import { ResumeCTA } from "@/components/ResumeCTA";
 import { portfolioPhotos } from "@/data/photography";
 import { technicalOperationsProofRows } from "@/data/proofs";
@@ -144,6 +145,17 @@ export default function TechnicalOperationsPage() {
           onboarding materials, operating documentation, launch support, and
           durable handoffs.
         </p>
+      </div>
+      <div
+        aria-label="Application actions"
+        className="mt-7 flex flex-wrap gap-3"
+      >
+        <JBButton href="/resume" variant="secondary">
+          View resume
+        </JBButton>
+        <JBButton href="/contact" variant="ghost">
+          Contact Jamie
+        </JBButton>
       </div>
       <FieldPhoto
         className="mt-12"

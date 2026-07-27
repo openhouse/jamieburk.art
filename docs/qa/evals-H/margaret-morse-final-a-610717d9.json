@@ -1,0 +1,34 @@
+{
+  "evaluator": "Margaret Morse lens",
+  "reviewerId": "Morse A",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "610717d9fda397652d39ff20873507b3ec436d712635fbab3faa8947a626f87c",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The ordered digest of all 11 declared candidate files independently recomputes to the requested SHA-256.",
+    "The homepage and Technical Operations page foreground Jamie as a Technical Project Manager focused on Product Operations and Implementation before introducing the broader practice lineage.",
+    "The About page explicitly connects artistic, civic, technical, and social practice through the visible 'Systems people can inhabit' section.",
+    "Four project traces distinguish relationships, interfaces and use, and learning and continuity. HJE shows attentive stewardship; NYC Artist Coalition shows collective civic memory; Sunday Dinner and 196 show hospitality and care; WOWList shows distributed cultural participation.",
+    "The portfolio distinguishes Jamie's systems from conventional administration by requiring that people recognize relationships, participate, remember, influence use, and continue the work.",
+    "The shared navigation exposes About directly from the homepage, and the About surface links onward to five public-safe continuities, satisfying the two-click requirement.",
+    "Collective authorship is explicit: Open House participants collectively governed the experiment, WOWList is co-built, coalition accomplishments remain collective, and structured work records credit teams, collaborators, advocates, and communities.",
+    "Hiring legibility remains strong because the practice lineage is subordinate to clear role positioning and repeatedly translates participation, care, documentation, and continuity into implementation and operating capabilities."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "A scan of all 11 candidate files found no student identifier, private absolute path, educational email address, or raw narrative-evaluation filename.",
+    "Protected educational records, private correspondence, unapproved testimonials, guest histories, contact details, legal-review material, and private coalition context are excluded rather than quoted or projected.",
+    "Sunday Dinner and 196 use aggregate operating evidence and explicitly withhold attendance histories, access details, correspondence, and unapproved images.",
+    "FairRentNYC separates public evidence from protected coordination and rejects solo causality, official legal authority, and individual ownership of collective policy outcomes.",
+    "Source-Backed Team Memory is framed as bounded, synthetic, human-reviewed practice rather than production SaaS, automated trust, or a private archive browser."
+  ],
+  "recommendation": "Pass PR-015 at score 4. The exact candidate preserves a specific, inspectable connection among artistic, civic, technical, and social practice while strengthening rather than weakening public hiring legibility.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Codex",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

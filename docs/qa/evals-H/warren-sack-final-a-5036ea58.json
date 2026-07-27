@@ -1,0 +1,39 @@
+{
+  "evaluator": "Prof. Warren Sack lens: recursive social systems",
+  "reviewerId": "Sack A",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "5036ea58e320385d8289b7a971c9c91da6e43b37e54cdc67a4869039a613081f",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The SHA-256 independently recomputes to 5036ea58e320385d8289b7a971c9c91da6e43b37e54cdc67a4869039a613081f using the script's ordered 11 paths and path-NUL-content-NUL hashing contract.",
+    "Harry J. Epstein continuity: customer language, product judgment, public voice, and operating habits -> one operating journey joining discovery, ordering, content, marketing, and follow-up -> maintained storefront -> customer and internal-team use -> operational questions and bounded analytics guide incremental releases -> reusable content, workflows, and operating patterns support handoff.",
+    "NYC Artist Coalition / FairRentNYC continuity: lived experience, meetings, public sources, open questions, and public actors -> coalition memory linking testimony, policy lineage, evidence, decisions, and actions -> campaign sites, town halls, hearings, sessions, and action pathways -> use with many collaborators -> collaborators recover context and review decisions -> running minutes, source maps, question logs, decision records, and action trackers carry the work forward.",
+    "Sunday Dinner / 196 continuity: hospitality, trust, artist support, shared space, and returning participants -> invitations, hosting, onboarding, facilitation, and access handoffs modeled as one operating rhythm -> gatherings and residencies -> participants enter, work, return, and shape the practice -> repeatable rhythms support learning and continuation -> documentation practices and access handoffs preserve continuity while consent boundaries protect private records.",
+    "WOWList supplies a fourth continuity: organizer vocabulary and distributed scenes -> keyword-community product model -> followable communities, publishing, digests, and embeddable calendars -> real organizer distribution across multiple city ecosystems -> distribution needs shape reusable patterns -> maintainable publishing and low-cost deployment patterns replace dependence on one central calendar.",
+    "The About page plainly states the recursive method as observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Its project links connect the method directly to current public-safe evidence.",
+    "About is exposed through primary navigation, and its method surface links directly to HJE, FairRentNYC, Sunday Dinner / 196, WOWList, and Source-Backed Team Memory, satisfying the homepage-to-method-to-proof path.",
+    "The Technical Operations page connects the same method to application-ready operating practice through requirements, delivery rhythms, decision records, onboarding materials, launch support, and durable handoffs rather than presenting a detached tool list.",
+    "The new application actions occur immediately after the role proposition and before the photograph, operations map, and proof map. The labeled action group offers truthful View resume and Contact Jamie destinations before the reader enters the long evidence surface.",
+    "CallNYC demonstrates bounded information architecture: administrative records become issue pathways, district context, and next-step guidance, with explicit unofficial, archived, non-current, and non-City-service limits."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No public candidate text claims structural equivalence or disciplinary invention.",
+    "No public candidate text claims peer-reviewed research.",
+    "No protected coursework is used to claim production deployment; Source-Backed Team Memory is explicitly labeled early research / method / consulting practice and not finished production SaaS.",
+    "Sole-authorship overclaim is actively resisted through co-built, collaborator, contribution, stewardship, and collective-outcome language across WOWList, coalition work, KC Town Hall, and related proof surfaces.",
+    "No public candidate text claims current Max/Jitter proficiency.",
+    "Dated lineage is bounded: Open House is described as a 2006 experiment with collective governance, while visible AI Evals coursework is framed as professional development rather than instructor affiliation, certification authority, or production proof.",
+    "CallNYC rejects official City affiliation and current-service implications; FairRentNYC rejects solo policy causality and official legal-analysis implications.",
+    "Private records, correspondence, stakeholder context, analytics, guest histories, contact details, and unapproved images remain explicitly excluded."
+  ],
+  "recommendation": "Pass at score 4. The candidate makes the recursive method explicit, reconstructable across more than three project-specific continuities, professionally actionable, and disciplined against every assigned overclaim category without a blocking gap.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Sack A",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

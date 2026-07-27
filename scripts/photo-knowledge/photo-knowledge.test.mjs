@@ -678,6 +678,37 @@ test("a CallNYC oral-history lead cannot automatically become public", () => {
   assert.equal(result.checks.photo_callnyc_oral_history_default_closed, false);
 });
 
+test("a CallNYC oral-history lead rejects contradictory approval side channels", () => {
+  const id = "research-inquiry.callnyc-interface-photo-oral-history";
+
+  const wikiWithApprovalFields = compileWiki();
+  const record = structuredClone(wikiWithApprovalFields.byId.get(id));
+  Object.assign(record, {
+    rights_state: "cleared",
+    consent_state: "cleared",
+    public_display_status: "cleared",
+    human_review: "completed",
+    production_approval: "approved"
+  });
+  wikiWithApprovalFields.byId.set(id, record);
+  assert.equal(
+    evaluatePhotoKnowledge({ wiki: wikiWithApprovalFields })
+      .checks.photo_callnyc_oral_history_default_closed,
+    false
+  );
+
+  const wikiWithContradictorySummary = compileWiki();
+  const contradictory = structuredClone(wikiWithContradictorySummary.byId.get(id));
+  contradictory.summary =
+    "Publication-approved photograph cleared for production deployment and indexing.";
+  wikiWithContradictorySummary.byId.set(id, contradictory);
+  assert.equal(
+    evaluatePhotoKnowledge({ wiki: wikiWithContradictorySummary })
+      .checks.photo_callnyc_oral_history_default_closed,
+    false
+  );
+});
+
 test("the first field remains an editorial field rather than a publication edit", () => {
   const wiki = compileWiki();
   const id = "research.photography-first-field-close-reading.2026-07-26";
@@ -692,6 +723,34 @@ test("the first field remains an editorial field rather than a publication edit"
     sourceOverrides: { [id]: changed }
   });
   assert.equal(result.checks.photo_first_field_close_reading_bounded, false);
+});
+
+test("the first field rejects contradictory publication authority", () => {
+  const wiki = compileWiki();
+  const id = "research.photography-first-field-close-reading.2026-07-26";
+  const record = structuredClone(wiki.byId.get(id));
+  record.publication_status = "approved";
+  wiki.byId.set(id, record);
+  assert.equal(
+    evaluatePhotoKnowledge({ wiki })
+      .checks.photo_first_field_close_reading_bounded,
+    false
+  );
+
+  const cleanWiki = compileWiki();
+  const original = readFileSync(
+    path.join(defaultRepoRoot, cleanWiki.byId.get(id).path),
+    "utf8"
+  );
+  assert.equal(
+    evaluatePhotoKnowledge({
+      wiki: cleanWiki,
+      sourceOverrides: {
+        [id]: `${original}\n\nThe shortlist is approved for publication.`
+      }
+    }).checks.photo_first_field_close_reading_bounded,
+    false
+  );
 });
 
 test("curatorial ranking cannot become publication authority", () => {

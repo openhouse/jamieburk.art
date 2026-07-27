@@ -1,0 +1,37 @@
+{
+  "evaluator": "Warren Sack lens independent holdout",
+  "reviewerId": "sack-c",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "5036ea58e320385d8289b7a971c9c91da6e43b37e54cdc67a4869039a613081f",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Recomputed the SHA-256 from the 11 ordered candidate paths using path, NUL, UTF-8 file content, and NUL; it exactly matches the supplied digest.",
+    "PR-016 defines the full recursive sequence and makes coursework boundaries and forbidden overclaims blocking requirements.",
+    "The primary navigation links directly from the homepage to /about, where the method is plainly stated as observing relationships, modeling a system, prototyping an interface, testing it with people, and documenting enough for others to continue.",
+    "Harry J. Epstein Company traces customer language, product judgment, and operating habits into a unified operating model, maintained storefront, incremental releases, analytics-guided learning, reusable content patterns, and durable workflows.",
+    "NYC Artist Coalition and FairRentNYC trace lived experience, meetings, public sources, policy questions, and civic actors into coalition memory, campaign interfaces, collective public use, source maps, decision records, action trackers, and recoverable handoffs.",
+    "Sunday Dinner and 196 trace hospitality, trust, artist support, shared space, and recurring participation into an onboarding and facilitation model, gatherings and residencies used and shaped by participants, repeatable rhythms, access handoffs, and consent-bounded continuity.",
+    "CallNYC and WOWList provide additional concrete prototype-to-public-system continuity through issue-pathway information architecture, an archived implementation repository, keyword-community modeling, organizer publishing workflows, and documented collective use.",
+    "Inspectable proof includes approved public screenshots for HJE, FairRentNYC, and CallNYC, public destination links, CallNYC's repository and press trail, and bounded artifact descriptions in work.ts.",
+    "Collective credit is explicit: Open House was initiated by Jamie and collectively governed; WOWList is co-built; coalition outcomes are expressly not attributed to one person; collaborator credits are retained throughout work.ts.",
+    "Protected evidence is consistently bounded: private dashboards, customer data, coalition notes, legal-review material, stakeholder lists, correspondence, guest records, contact details, and unapproved images remain excluded.",
+    "The public candidate makes no claim of structural equivalence, peer-reviewed research, disciplinary invention, production deployment, sole authorship, or current Max/Jitter proficiency. Source-Backed Team Memory is explicitly labeled early research and not production SaaS.",
+    "Dated lineage remains contextual: the 2006 Open House reference establishes a bounded historical foundation without converting protected coursework into proof of current technical proficiency."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No protected educational record, private correspondence, identifier, private archive path, or unapproved testimonial is projected into the reviewed public files.",
+    "Contribution language preserves collective authorship and avoids solo causality across community, coalition, civic, and platform work.",
+    "Archived and experimental systems are clearly distinguished from current official services and production software.",
+    "Sensitive operating evidence is summarized or withheld without weakening the public explanation of Jamie's role and method."
+  ],
+  "recommendation": "Pass at score 4. Preserve the exact candidate, collective-credit language, protected-evidence boundaries, and explicit non-production qualifications; rebind the fingerprint and repeat holdout review after any candidate-file change.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Sack C",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

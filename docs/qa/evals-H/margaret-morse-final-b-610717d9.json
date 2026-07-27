@@ -1,0 +1,36 @@
+{
+  "evaluator": "Morse B",
+  "reviewerId": "morse-b",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "610717d9fda397652d39ff20873507b3ec436d712635fbab3faa8947a626f87c",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Recomputed the ordered 11-file fingerprint using the path, NUL, content, NUL algorithm declared in scripts/lib/professor-lens-eval.mjs; it exactly matches the requested candidate SHA-256.",
+    "The homepage foregrounds Jamie as a technical project manager and implementation lead, then frames his recurring practice as listening, making work legible, building usable structures, and leaving continuity behind.",
+    "The About page creates the required threshold without becoming an artist biography: it explicitly connects artistic, civic, technical, and social practice under 'Systems people can inhabit' while preserving clear hiring positioning.",
+    "Open House supplies bounded evidence of experimentation, place, participation, and many-perspective documentation: Jamie initiated the ten-day gallery experiment while participants collectively governed the inhabited space.",
+    "Sunday Dinner and 196 connect hospitality, trust, artist support, shared space, recurring invitations, onboarding, facilitation, access handoffs, care, and return into a repeatable operating rhythm.",
+    "NYC Artist Coalition and FairRentNYC connect lived experience and recurring meetings to campaign sites, town halls, hearings, source maps, question logs, decision records, and action trackers that collaborators can review and continue.",
+    "WOWList connects organizers' own language for scenes, interests, places, and venues to followable communities, event publishing, distributed use, and reusable publishing patterns; both the case study and work registry describe it as co-built.",
+    "Harry J. Epstein Company demonstrates attention to customer language, product judgment, institutional voice, and operating habits through a maintained storefront and incremental workflows rather than generic administration.",
+    "The recurring distinction is explicit and reconstructable: systems should help people recognize relationships, participate, remember what happened, influence use, and continue the work; requirements, interfaces, documentation, and handoffs matter because people inhabit them.",
+    "Source-Backed Team Memory extends the lineage through a synthetic Known/Open/Protected example that preserves disagreement, requires human review, and excludes private transcripts, contact details, and unapproved collaborator context."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No blocking protected-source exposure was found in the 11 candidate files: no student identifier, educational email, private absolute path, raw narrative-evaluation filename, protected educational quotation, or projected testimonial appears.",
+    "Collective credit is consistently preserved through 'co-built,' 'co-led,' 'many collaborators,' named collaborator credits, participant governance, and explicit rejection of solo policy causality.",
+    "Sunday Dinner and 196 keep guest lists, contact details, attendance histories, private correspondence, access details, addresses, and unapproved images outside the public site.",
+    "NYC Artist Coalition and FairRentNYC separate public evidence from private strategy, legal-review context, stakeholder information, private coordination, and unapproved quotations.",
+    "The candidate avoids romanticized vulnerability and uses care, hospitality, consent, and privacy as operating constraints rather than testimonial authority."
+  ],
+  "recommendation": "Pass PR-015 at score 4. The exact candidate makes experimentation, hospitality, attention, documentation, care, place, and inhabited systems specific and professionally legible across more than three public-safe continuities, with no blocking collective-credit or protected-source gap.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Codex",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

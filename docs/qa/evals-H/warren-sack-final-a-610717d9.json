@@ -1,0 +1,38 @@
+{
+  "evaluator": "Warren Sack lens",
+  "reviewerId": "Sack A",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "610717d9fda397652d39ff20873507b3ec436d712635fbab3faa8947a626f87c",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Independent ordered-path SHA-256 reconstruction matched the assigned candidate before and after review; the worktree remained clean.",
+    "PR-016 is a blocking LLM-judge rubric requiring three reconstructable relationship-to-model-to-interface-to-social-use-to-handoff sequences and rejection of five specified anti-overclaims.",
+    "The homepage establishes hiring legibility through Technical Operations and Implementation positioning, named proof routes, and the operating sequence Listen, Map, Build, Document, Transfer.",
+    "The About page plainly names the recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "Harry J. Epstein Company reconstructs customer and organizational relationships, an integrated operating model, a maintained storefront used by customers and stakeholders, iterative learning, and reusable workflows.",
+    "NYC Artist Coalition and FairRentNYC reconstruct lived experience and collaborator relationships, coalition-memory and source models, campaign and convening interfaces used collectively, and running records that support review and continuation.",
+    "Sunday Dinner and 196 reconstruct hospitality and trust relationships, a care-centered operating rhythm, gatherings and residencies shaped through participation, and repeatable continuity practices with consent boundaries.",
+    "WOWList and CallNYC provide supplementary continuity: community vocabulary becomes platform logic and organizer workflows; civic records become issue pathways, a public prototype, documented limitations, and a preserved implementation.",
+    "The data layer supplies inspectable public artifacts for HJE, FairRentNYC, and CallNYC with image paths, useful alternative text, captions, source labels, and bounded status notes.",
+    "Source-Backed Team Memory is explicitly an early method rather than production SaaS and demonstrates Known, Open, and Protected review states with human review retained.",
+    "Collective credit is explicit through co-built, collectively governed, collaborator-built, contributed-to, and campaign-accomplishments-remain-collective language, reinforced by project credit arrays.",
+    "The anti-overclaim audit found no public assertion of structural equivalence, disciplinary invention, peer-reviewed research, sole authorship, or current Max/Jitter proficiency. The dated Open House lineage is identified as a 2006 experiment and does not project protected coursework as present proficiency."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No blocking protected-source exposure was found in the 11 candidate files.",
+    "Private correspondence, educational records, identifiers, archive paths, stakeholder information, legal-review context, guest histories, customer data, and unapproved images are withheld or expressly excluded.",
+    "CallNYC is bounded as independent, archived, unofficial, and non-current rather than an official City service.",
+    "FairRentNYC does not attribute collective policy outcomes or official legal analysis solely to Jamie.",
+    "No student identifier, educational email address, private absolute path, or raw narrative-evaluation filename was found on the reviewed public surfaces."
+  ],
+  "recommendation": "Pass PR-016 at score 4 for this exact candidate. The recurring systems method is unusually explicit, project-specific, hiring-legible, collectively credited, and disciplined about protected evidence and historical lineage.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Sack A",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

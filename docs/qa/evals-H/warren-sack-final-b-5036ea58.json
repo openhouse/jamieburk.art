@@ -1,0 +1,30 @@
+{
+  "evaluator": "Codex",
+  "reviewerId": "Sack B",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "5036ea58e320385d8289b7a971c9c91da6e43b37e54cdc67a4869039a613081f",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Recomputed the SHA-256 over the exact ordered 11 paths from scripts/lib/professor-lens-eval.mjs; it matches 5036ea58e320385d8289b7a971c9c91da6e43b37e54cdc67a4869039a613081f.",
+    "The About surface plainly states the recursive method as observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue, then links directly to project evidence (apps/www/src/app/about/page.tsx:79-123).",
+    "Harry J. Epstein loop: customer language, product judgment, public voice, and operating habits become one product-to-follow-up model; the maintained storefront is used by customers and staff; bounded analytics guide releases; reusable content and workflows provide continuity (apps/www/src/app/about/page.tsx:127-159; apps/www/src/content/work/harry-j-epstein.mdx:3-21).",
+    "NYC Artist Coalition and FairRentNYC loop: lived experience, meetings, sources, questions, and government actors become coalition memory; campaign sites, town halls, hearings, sessions, and action pathways support collective use; minutes, source maps, question logs, decision records, and trackers preserve learning and handoff (apps/www/src/app/about/page.tsx:162-194; apps/www/src/content/work/fair-rent-nyc.mdx:3-5,90-94,132-136).",
+    "Sunday Dinner and 196 loop: hospitality, trust, artist support, shared space, and returning relationships become a care-centered operating rhythm; gatherings and residencies are the social interface; onboarding, access handoffs, documentation, repeatable rhythms, and consent boundaries support continuation (apps/www/src/app/about/page.tsx:197-229; apps/www/src/content/work/196-sunday-dinner.mdx:3-7,47-53).",
+    "Hiring legibility is immediate: Jamie is identified as a technical project manager and implementation lead, the target role families are named, and the value proposition connects workflows, interfaces, implementation, documentation, and durable handoffs (apps/www/src/app/about/page.tsx:24-45; apps/www/src/app/work/technical-operations/page.tsx:137-147).",
+    "Mobile application actions are placed immediately after the Technical Operations role statement and before the lead image. The always-visible flex-wrap container exposes truthful View resume and Contact Jamie actions without requiring readers to traverse the proof inventory (apps/www/src/app/work/technical-operations/page.tsx:149-169).",
+    "Every specified anti-overclaim was tested across the ten public candidate files: no structural-equivalence, peer-reviewed-research, disciplinary-invention, production-deployment-from-coursework, sole-authorship-from-coursework, or current-Max/Jitter-proficiency claim appears.",
+    "The dated UCSC lineage is bounded as a 2006 experiment Jamie initiated while participants collectively governed it. Current work remains separately evidenced through co-built, collaborator-used, contribution, and collective-accomplishment language (apps/www/src/app/about/page.tsx:67-76; apps/www/src/content/work/wowlist.mdx:51-55; apps/www/src/content/work/fair-rent-nyc.mdx:63,134).",
+    "Adjacent overclaim controls are explicit: CallNYC is archived, unofficial, independent, and not Council-commissioned; Source-Backed Team Memory is early research/method practice rather than production SaaS or automated judgment (apps/www/src/content/work/callnyc.mdx:47-51,66-78; apps/www/src/app/lab/source-backed-team-memory/page.tsx:46-50,63-67,91-93)."
+  ],
+  "gaps": [],
+  "safety_findings": [],
+  "recommendation": "Pass at score 4. The candidate makes at least three complete recursive social-system loops inspectable, preserves strong hiring and mobile application paths, and contains no blocking anti-overclaim or public-safety gap.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Sack B",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

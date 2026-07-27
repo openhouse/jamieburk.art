@@ -32,6 +32,17 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           </h1>
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
+          <div
+            aria-label="Application actions"
+            className="mt-6 flex flex-wrap gap-3 lg:hidden"
+          >
+            <JBButton href="/resume" variant="secondary">
+              View resume
+            </JBButton>
+            <JBButton href="/contact" variant="ghost">
+              Contact Jamie
+            </JBButton>
+          </div>
           {leadPhoto ? (
             <FieldPhoto
               className="mt-10"
@@ -51,7 +62,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </div>
         <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
           <AtAGlance item={item} />
-          <div className="flex flex-wrap gap-3">
+          <div className="hidden flex-wrap gap-3 lg:flex">
             <JBButton href="/resume" variant="secondary">
               View resume
             </JBButton>

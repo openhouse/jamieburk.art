@@ -1,0 +1,35 @@
+{
+  "evaluator": "Prof. Margaret Morse lens: inhabited systems",
+  "reviewerId": "morse-b",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "5036ea58e320385d8289b7a971c9c91da6e43b37e54cdc67a4869039a613081f",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The SHA-256 recomputed from the ordered 11-file candidate exactly matches 5036ea58e320385d8289b7a971c9c91da6e43b37e54cdc67a4869039a613081f.",
+    "The About page preserves a concise threshold between artistic, civic, technical, and social practice while keeping Jamie's technical project management and implementation role primary.",
+    "The About page names the inhabited-systems method plainly: recognize relationships, participate, remember what happened, and continue the work.",
+    "WOWList connects experimentation and distributed participation to community vocabulary, keyword interfaces, organizer publishing, and reusable deployment patterns.",
+    "Sunday Dinner and 196 connect hospitality, place, trust, artist support, embodied return, and care-centered operating rhythms to onboarding, facilitation, access handoffs, and continuity.",
+    "NYC Artist Coalition and FairRentNYC connect civic attention and participation to meetings, testimony, public interfaces, source maps, decision records, action tracking, and collectively usable memory.",
+    "Harry J. Epstein Company adds a distinct continuity grounded in attention to customer language, institutional voice, product knowledge, material operations, incremental learning, and maintainable workflows.",
+    "Source-Backed Team Memory extends documentation and care through human-correctable Known, Open, and Protected states without presenting automated trust or a finished production product.",
+    "The Technical Operations application actions clarify the professional destination with direct View resume and Contact Jamie labels; their wrapping layout supports mobile use without inserting conversion language into the practice narrative.",
+    "The project evidence consistently shows why these systems differ from conventional administration: participants can shape interfaces, recover context, influence activity, and continue the work."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Open House is framed as initiated by Jamie and collectively governed by participants, avoiding sole-author attribution.",
+    "Coalition and platform work retains collective credit and explicitly limits causal or ownership claims.",
+    "Guest histories, attendance data, correspondence, access details, private coalition context, protected educational records, unapproved testimonials, and unapproved images remain excluded.",
+    "The reviewed candidate contains no projected private praise, participant vulnerability, private archive path, educational identifier, or educational email address."
+  ],
+  "recommendation": "Accept this exact candidate for PR-015. It presents an exceptional, specific, public-safe account of experimentation, hospitality, attention, documentation, care, place, and inhabited systems across more than three continuities, while the mobile application actions remain restrained and professionally clarifying.",
+  "provenance": {
+    "provider": "codex-native-subagent",
+    "agentNickname": "Morse B",
+    "sandbox": "isolated-read-only-evidence",
+    "ephemeral": true
+  }
+}

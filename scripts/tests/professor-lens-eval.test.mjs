@@ -15,6 +15,7 @@ const sourceNoteText = readFileSync(
 const suite = JSON.parse(
   readFileSync(path.join(repoRoot, ".agents/evals/portfolio-production-readiness.json"), "utf8")
 );
+const scorecardGeneration = "5036ea58";
 
 test("professor lenses pass every bounded criterion", () => {
   const result = evaluateProfessorLenses({ suite, aboutText, sourceNoteText });
@@ -75,7 +76,7 @@ test("guard rejects a stale or weakened holdout scorecard", () => {
   const weakenedScorecards = [
     ...["margaret-morse", "warren-sack"].flatMap((lens) =>
       ["a", "b", "c"].map((judge) => JSON.parse(readFileSync(
-        path.join(repoRoot, `docs/qa/evals-H/${lens}-final-${judge}.json`),
+        path.join(repoRoot, `docs/qa/evals-H/${lens}-final-${judge}-${scorecardGeneration}.json`),
         "utf8"
       )))
     )
@@ -96,7 +97,7 @@ test("guard rejects a scorecard bound to another public candidate", () => {
   const staleScorecards = [
     ...["margaret-morse", "warren-sack"].flatMap((lens) =>
       ["a", "b", "c"].map((judge) => JSON.parse(readFileSync(
-        path.join(repoRoot, `docs/qa/evals-H/${lens}-final-${judge}.json`),
+        path.join(repoRoot, `docs/qa/evals-H/${lens}-final-${judge}-${scorecardGeneration}.json`),
         "utf8"
       )))
     )
