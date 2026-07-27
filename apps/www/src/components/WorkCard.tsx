@@ -67,7 +67,7 @@ export function WorkCard({ item, placementContext }: WorkCardProps) {
         <TagList compact tags={item.tags.slice(0, 4)} />
         {visual ? (
           <p className="border-t border-jb-ink/10 pt-3 text-xs leading-5 text-jb-ink/68">
-            {visual.caption} {visual.credit}.
+            {visual.caption} {visual.credit}
           </p>
         ) : null}
         <Link

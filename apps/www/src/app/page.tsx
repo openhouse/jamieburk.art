@@ -135,7 +135,7 @@ export default function HomePage() {
               />
             </div>
             <figcaption className="mt-3 text-sm leading-6 text-white/70">
-              {photographs.raftInFog.caption} {photographs.raftInFog.credit}.
+              {photographs.raftInFog.caption} {photographs.raftInFog.credit}
             </figcaption>
           </figure>
         </div>
@@ -185,7 +185,7 @@ export default function HomePage() {
                 style={{ objectPosition: image.objectPosition }}
               />
               <figcaption>
-                {image.caption} {image.credit}.
+                {image.caption} {image.credit}
               </figcaption>
             </figure>
           ))}

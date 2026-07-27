@@ -60,7 +60,7 @@ export default function AboutPage() {
           </div>
           <figcaption className="mt-3 text-sm leading-6 text-jb-ink/68">
             {photographs.sundayDinnerPreparation.caption}{" "}
-            {photographs.sundayDinnerPreparation.credit}.
+            {photographs.sundayDinnerPreparation.credit}
           </figcaption>
         </figure>
       </div>

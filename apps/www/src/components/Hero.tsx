@@ -72,7 +72,7 @@ export function Hero() {
             systems / Public-facing tools
           </p>
           <p className="jb-photo-hero-context">
-            {image.caption} {image.credit}. {photoHeroBoundary}
+            {image.caption} {image.credit} {photoHeroBoundary}
           </p>
         </div>
       </div>

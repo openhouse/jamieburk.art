@@ -93,6 +93,22 @@ test("a rendered WorkCard cannot drop its occurrence binding", () => {
   );
 });
 
+test("a renderer cannot append punctuation to a governed credit", () => {
+  const file = "apps/www/src/components/WorkCard.tsx";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "{visual.caption} {visual.credit}",
+      "{visual.caption} {visual.credit}."
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.all_displayed_photographs_are_governed,
+    false
+  );
+});
+
 test("a missing derivative fails closed", () => {
   const result = evaluatePhotoKnowledge({
     assetOverrides: {

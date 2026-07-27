@@ -679,7 +679,12 @@ export function evaluatePhotoKnowledge(options = {}) {
     caseStudyLayout.includes(
       'getPhotoOccurrenceId(visual, "case-study.hero")'
     ) &&
-    caseStudyLayout.includes("data-photo-occurrence={occurrenceId}");
+    caseStudyLayout.includes("data-photo-occurrence={occurrenceId}") &&
+    !hero.includes("{image.credit}.") &&
+    !home.includes("{photographs.raftInFog.credit}.") &&
+    !home.includes("{image.credit}.") &&
+    !about.includes("{photographs.sundayDinnerPreparation.credit}.") &&
+    !workCard.includes("{visual.credit}.");
 
   const allDisplayedPhotographsAreGoverned =
     placementRegistryIsComplete &&
