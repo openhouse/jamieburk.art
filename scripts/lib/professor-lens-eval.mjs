@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,6 +11,8 @@ const sourceNotePath = path.join(
   repoRoot,
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
 );
+export const professorCandidateReceiptPath =
+  "docs/qa/evals-H/professor-candidate-receipt.json";
 
 function walk(relativeDirectory) {
   const directory = path.join(repoRoot, relativeDirectory);
@@ -21,11 +24,27 @@ function walk(relativeDirectory) {
   });
 }
 
-const candidateRelativePaths = [...new Set([
+export const professorCandidateRelativePaths = [...new Set([
   ".agents/evals/portfolio-production-readiness.json",
   "docs/design/layout-E-photo-integration.md",
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+  "docs/knowledge-bank/projects/harry-j-epstein.md",
+  "docs/knowledge-bank/projects/fair-rent-nyc.md",
+  "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+  "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
+  "docs/knowledge-bank/projects/wowlist-orientation.md",
+  "docs/knowledge-bank/decisions/hje-continuity-modernization.md",
+  "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
+  "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md",
+  "docs/knowledge-bank/sources/hje-research-brief-2026-07.md",
+  "docs/knowledge-bank/sources/nycac-running-minutes-2026.md",
+  "docs/knowledge-bank/sources/wowlist-repaired-transcript-2026.md",
+  "docs/qa/evals-H/professor-lenses-about-desktop.png",
+  "docs/qa/evals-H/professor-lenses-about-mobile.png",
+  "docs/qa/evals-H/professor-lenses-browser-qa.json",
+  "docs/qa/evals-H/responsive-route-matrix.json",
   "rfcs/0003-living-photographic-knowledge-loop.md",
+  "scripts/generate-professor-browser-evidence.mjs",
   ...walk("apps/www/src"),
   ...walk("apps/www/public/images/photo-fieldwork"),
   ...walk("apps/www/public/images/field-notes"),
@@ -70,18 +89,65 @@ function joined(entry) {
 }
 
 function loadCandidateFiles() {
-  return Object.fromEntries(candidateRelativePaths.map((relativePath) => [
+  return Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
     relativePath,
     readFileSync(path.join(repoRoot, relativePath))
   ]));
 }
 
-function fingerprintCandidate(candidateFiles) {
+export function fingerprintProfessorCandidate(candidateFiles = loadCandidateFiles()) {
   const hash = createHash("sha256");
-  for (const relativePath of candidateRelativePaths) {
+  for (const relativePath of professorCandidateRelativePaths) {
     hash.update(relativePath).update("\0").update(candidateFiles[relativePath] ?? "").update("\0");
   }
   return hash.digest("hex");
+}
+
+export function buildProfessorCandidateReceipt() {
+  const candidateSha256 = fingerprintProfessorCandidate();
+  const publicSurface = JSON.parse(readFileSync(
+    path.join(repoRoot, "docs/qa/evals-H/responsive-route-matrix.json"),
+    "utf8"
+  ));
+  const photoCandidate = JSON.parse(readFileSync(
+    path.join(repoRoot, "reports/photo-knowledge/candidate.json"),
+    "utf8"
+  ));
+  return {
+    receiptVersion: 1,
+    generatedAt: "2026-07-26",
+    sourceCommit: execFileSync("git", ["rev-parse", "HEAD"], {
+      cwd: repoRoot,
+      encoding: "utf8"
+    }).trim(),
+    candidateSha256,
+    candidateFileCount: professorCandidateRelativePaths.length,
+    algorithm:
+      "SHA-256 over each sorted relative path, NUL, file bytes, NUL.",
+    candidateFiles: professorCandidateRelativePaths,
+    distinctCandidateScopes: {
+      professorLens: {
+        sha256: candidateSha256,
+        fileCount: professorCandidateRelativePaths.length,
+        purpose:
+          "Binds PR-015 and PR-016 to the rubric, application source, selected derivatives, design record, photography governance, and rendered layout evidence."
+      },
+      responsivePublicSurface: {
+        sha256: publicSurface.publicSurfaceFingerprint,
+        fileCount: publicSurface.publicSurfaceFileCount,
+        purpose:
+          "Binds the 56-row browser and axe matrix to apps/www plus package manifests."
+      },
+      photoKnowledge: {
+        sha256: photoCandidate.candidate_fingerprint,
+        fileCount: photoCandidate.candidate_file_count,
+        purpose:
+          "Binds the broader RFC 0003 source-tree candidate while excluding circular generated reports and holdouts."
+      }
+    },
+    exactCandidateNote:
+      "These three digests intentionally differ because they certify different scopes. A scorecard must reproduce the professorLens digest."
+  };
 }
 
 export function evaluateProfessorLenses({
@@ -89,6 +155,10 @@ export function evaluateProfessorLenses({
   aboutText = readFileSync(aboutPath, "utf8"),
   sourceNoteText = readFileSync(sourceNotePath, "utf8"),
   candidateFiles = loadCandidateFiles(),
+  candidateReceipt = JSON.parse(readFileSync(
+    path.join(repoRoot, professorCandidateReceiptPath),
+    "utf8"
+  )),
   finalScorecards = finalScorecardRelativePaths.map((relativePath) =>
     JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"))
   )
@@ -99,7 +169,15 @@ export function evaluateProfessorLenses({
   const sackText = joined(sack);
   const combinedPublicText = `${aboutText}\n${sourceNoteText}`;
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
-  const candidateSha256 = fingerprintCandidate(candidateFiles);
+  const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
+  const responsiveEvidence = JSON.parse(readFileSync(
+    path.join(repoRoot, "docs/qa/evals-H/responsive-route-matrix.json"),
+    "utf8"
+  ));
+  const photoCandidateReceipt = JSON.parse(readFileSync(
+    path.join(repoRoot, "reports/photo-knowledge/candidate.json"),
+    "utf8"
+  ));
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
   const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
   const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
@@ -173,7 +251,7 @@ export function evaluateProfessorLenses({
     criterion(
       "project-specific-loops",
       "Four examples distinguish relationship models, actual interfaces and use, and learning and continuity.",
-      relationshipRows >= 4 && interfaceRows >= 4 && learningRows >= 4,
+      relationshipRows >= 5 && interfaceRows >= 5 && learningRows >= 5,
       `${relationshipRows} relationship rows; ${interfaceRows} interface-and-use rows; ${learningRows} learning-and-continuity rows.`
     ),
     criterion(
@@ -224,6 +302,26 @@ export function evaluateProfessorLenses({
       "The holdout result remains bound to the exact evaluated rubric, full application source, selected image derivatives, design record, and rendered layout evidence.",
       candidateSha256 === approvedCandidateSha256,
       `Candidate SHA-256: ${candidateSha256}`
+    ),
+    criterion(
+      "candidate-receipt",
+      "A reproducible receipt distinguishes the professor, responsive-public-surface, and photo-knowledge candidate scopes.",
+      candidateReceipt.receiptVersion === 1 &&
+        candidateReceipt.candidateSha256 === candidateSha256 &&
+        candidateReceipt.candidateFileCount === professorCandidateRelativePaths.length &&
+        JSON.stringify(candidateReceipt.candidateFiles) ===
+          JSON.stringify(professorCandidateRelativePaths) &&
+        candidateReceipt.distinctCandidateScopes?.professorLens?.sha256 === candidateSha256 &&
+        candidateReceipt.distinctCandidateScopes?.responsivePublicSurface?.sha256 ===
+          responsiveEvidence.publicSurfaceFingerprint &&
+        candidateReceipt.distinctCandidateScopes?.responsivePublicSurface?.fileCount ===
+          responsiveEvidence.publicSurfaceFileCount &&
+        candidateReceipt.distinctCandidateScopes?.photoKnowledge?.sha256 ===
+          photoCandidateReceipt.candidate_fingerprint &&
+        candidateReceipt.distinctCandidateScopes?.photoKnowledge?.fileCount ===
+          photoCandidateReceipt.candidate_file_count &&
+        candidateReceipt.exactCandidateNote.includes("intentionally differ"),
+      `${candidateReceipt.candidateFileCount}/${professorCandidateRelativePaths.length} files documented in ${professorCandidateReceiptPath}.`
     ),
     criterion(
       "unanimous-holdouts",

@@ -4,7 +4,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
-import { evaluateProfessorLenses } from "../lib/professor-lens-eval.mjs";
+import {
+  evaluateProfessorLenses,
+  professorCandidateRelativePaths
+} from "../lib/professor-lens-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const aboutText = readFileSync(path.join(repoRoot, "apps/www/src/app/about/page.tsx"), "utf8");
@@ -40,6 +43,19 @@ test("guard rejects an incomplete recursive systems sequence", () => {
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "recursive-sequence")?.pass, false);
+});
+
+test("guard rejects losing the fifth public project loop", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText: aboutText.replace(
+      /<article className="py-6">\s*<h3[\s\S]*?Living photographic knowledge[\s\S]*?<\/article>/,
+      ""
+    ),
+    sourceNoteText
+  });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "project-specific-loops")?.pass, false);
 });
 
 test("guard rejects private educational-record identifiers", () => {
@@ -111,4 +127,28 @@ test("guard rejects a scorecard bound to another public candidate", () => {
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+test("guard rejects a stale professor candidate receipt", () => {
+  const staleReceipt = {
+    receiptVersion: 1,
+    candidateSha256: "0".repeat(64),
+    candidateFileCount: professorCandidateRelativePaths.length,
+    candidateFiles: professorCandidateRelativePaths,
+    distinctCandidateScopes: {
+      professorLens: { sha256: "0".repeat(64) },
+      responsivePublicSurface: { sha256: "1".repeat(64) },
+      photoKnowledge: { sha256: "2".repeat(64) }
+    },
+    exactCandidateNote: "These scopes intentionally differ."
+  };
+
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    candidateReceipt: staleReceipt
+  });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "candidate-receipt")?.pass, false);
 });

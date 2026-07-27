@@ -42,6 +42,8 @@
     "test:composite": "node --test scripts/tests/composite-integration.test.mjs",
     "test:lifecycle-operations": "node --test scripts/tests/lifecycle-operations.test.mjs",
     "evals:professor-lenses": "node scripts/evals-professor-lenses.mjs",
+    "evals:professor-lenses:receipt": "node scripts/write-professor-candidate-receipt.mjs",
+    "evals:professor-lenses:browser": "node scripts/generate-professor-browser-evidence.mjs",
     "test:professor-lenses": "node --test scripts/tests/professor-lens-eval.test.mjs",
     "test:accessibility-contrast": "node --test scripts/tests/accessibility-contrast.test.mjs",
     "test:accessibility-evidence": "node --test scripts/knowledge-wiki/accessibility-evidence.test.mjs",
