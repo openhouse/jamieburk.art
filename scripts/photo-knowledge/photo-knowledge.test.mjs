@@ -1385,6 +1385,62 @@ test("the full Wiki schema rejects contradictory restoration semantics", () => {
   );
 });
 
+test("restoration rejects contradictory side-channel semantics", () => {
+  const fixture = restorationFixture();
+  const mutations = [
+    {
+      constraints: [
+        ...fixture.record.constraints,
+        "Production publication, deployment, and indexing are approved."
+      ]
+    },
+    {
+      unknowns: [
+        "The photograph must remain withdrawn and restoration must not proceed."
+      ]
+    },
+    {
+      resulting_artifacts: [
+        restorationPhotoId,
+        "photo.kc-town-hall-before"
+      ]
+    },
+    {
+      decision_actors: [
+        ...fixture.record.decision_actors,
+        "Automated system as final publication approver"
+      ]
+    },
+    {
+      options_considered: [
+        ...fixture.record.options_considered,
+        {
+          option: "Publish immediately to production.",
+          disposition: "chosen",
+          evidence_state: "documented"
+        }
+      ]
+    }
+  ];
+
+  for (const mutation of mutations) {
+    assert.equal(
+      wikiRecordSchema.safeParse({
+        ...fixture.record,
+        ...mutation
+      }).success,
+      false,
+      JSON.stringify(mutation)
+    );
+    const result = evaluateRestoration({ recordMutation: mutation });
+    assert.equal(
+      result.checks.photo_historical_revocation_monotonic,
+      false,
+      JSON.stringify(mutation)
+    );
+  }
+});
+
 test("restoration chosen course must use the affirmative canonical template", () => {
   const result = evaluateRestoration({
     recordMutation: {

@@ -804,10 +804,49 @@ export function validateRestorationDecision({
   const approvalStatement =
     `Jamie Burkart approved restoration of ${decision.photoId} after ` +
     `implemented withdrawal ${decision.withdrawalPlanId}.`;
-  const expectedChosenCourse =
+  const expectedChoice =
     `Restore ${decision.photoId} after implemented withdrawal ` +
-    `${decision.withdrawalPlanId} as a new working-review projection. ` +
+    `${decision.withdrawalPlanId} as a new working-review projection.`;
+  const expectedChosenCourse =
+    `${expectedChoice} ` +
     "Production, deployment, and indexing remain open separate human gates.";
+  const expectedActors = [
+    "Jamie Burkart as portfolio decision owner",
+    "Elana Gordon as creator and rights authority"
+  ];
+  const expectedConstraints = [
+    "Restoration cannot silently reverse an implemented withdrawal.",
+    "Production, deployment, and indexing remain separate gates."
+  ];
+  const expectedOptions = [
+    {
+      option: expectedChoice,
+      disposition: "chosen",
+      evidence_state: "documented"
+    },
+    {
+      option: "Continue the current withdrawal.",
+      disposition: "not-chosen",
+      evidence_state: "documented"
+    }
+  ];
+  const expectedUnknowns = [
+    "A later edition may require a different crop or caption."
+  ];
+  const expectedAntiClaims = [
+    "A later human-reviewed withdrawal remains available.",
+    "Restoration does not broaden creator permission or represented-person consent.",
+    "Working-review restoration is not production publication approval."
+  ];
+  const expectedSummary =
+    "Jamie-reviewed restoration decision for a working-review projection; " +
+    "production, deployment, and indexing remain separate.";
+  const expectedQuestion =
+    `Should ${decision.photoId} be restored after ` +
+    `${decision.withdrawalPlanId} as a new working-review projection?`;
+  const expectedOutcome =
+    "This restores a working-review projection only; production, deployment, " +
+    "and indexing remain open.";
   const expectedBody = [
     "# Restore photo projection",
     "",
@@ -832,8 +871,28 @@ export function validateRestorationDecision({
   const chosenOptionBound =
     chosenOptions.length === 1 &&
     chosenOptions[0].evidence_state === "documented" &&
-    chosenOptions[0].option ===
-      `Restore ${decision.photoId} after implemented withdrawal ${decision.withdrawalPlanId} as a new working-review projection.`;
+    chosenOptions[0].option === expectedChoice;
+  const canonicalSemanticsBound =
+    record.status === "governed-open" &&
+    record.visibility === "public-safe" &&
+    record.sensitivity === "moderate" &&
+    record.summary === expectedSummary &&
+    record.decision_question === expectedQuestion &&
+    record.credit_scope === "individual-and-collective" &&
+    record.outcome_boundary === expectedOutcome &&
+    JSON.stringify(record.decision_actors) ===
+      JSON.stringify(expectedActors) &&
+    JSON.stringify(record.constraints) ===
+      JSON.stringify(expectedConstraints) &&
+    JSON.stringify(record.options_considered) ===
+      JSON.stringify(expectedOptions) &&
+    JSON.stringify(record.resulting_artifacts) ===
+      JSON.stringify([decision.photoId]) &&
+    JSON.stringify(record.unknowns) === JSON.stringify(expectedUnknowns) &&
+    JSON.stringify(record.anti_claims) ===
+      JSON.stringify(expectedAntiClaims) &&
+    JSON.stringify(record.projection) ===
+      JSON.stringify({ status: "pending", surfaces: [] });
   const recordTextBound =
     typeof recordText === "string" &&
     recordText.includes(decision.photoId) &&
@@ -863,6 +922,7 @@ export function validateRestorationDecision({
     record.restoration_approved_by === "Jamie Burkart" &&
     record.restoration_human_reviewed === true &&
     chosenOptionBound &&
+    canonicalSemanticsBound &&
     record.last_reviewed === decision.decidedAt.slice(0, 10) &&
     record.projection?.status === "pending" &&
     record.resulting_artifacts?.includes(decision.photoId) &&

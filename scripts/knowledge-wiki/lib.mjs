@@ -659,6 +659,29 @@ export const wikiRecordSchema = z
         "Restoration does not broaden creator permission or represented-person consent.",
         "Working-review restoration is not production publication approval."
       ];
+      const expectedActors = [
+        "Jamie Burkart as portfolio decision owner",
+        "Elana Gordon as creator and rights authority"
+      ];
+      const expectedConstraints = [
+        "Restoration cannot silently reverse an implemented withdrawal.",
+        "Production, deployment, and indexing remain separate gates."
+      ];
+      const expectedOptions = [
+        {
+          option: expectedChoice,
+          disposition: "chosen",
+          evidence_state: "documented"
+        },
+        {
+          option: "Continue the current withdrawal.",
+          disposition: "not-chosen",
+          evidence_state: "documented"
+        }
+      ];
+      const expectedUnknowns = [
+        "A later edition may require a different crop or caption."
+      ];
       const expectedApprovalStatement =
         `Jamie Burkart approved restoration of ${record.restoration_photo_id} ` +
         `after implemented withdrawal ${record.restoration_withdrawal_plan_id}.`;
@@ -670,6 +693,22 @@ export const wikiRecordSchema = z
         record.decision_question !== expectedQuestion ||
         record.summary !== expectedSummary ||
         record.outcome_boundary !== expectedOutcome ||
+        record.credit_scope !== "individual-and-collective" ||
+        record.status !== "governed-open" ||
+        record.visibility !== "public-safe" ||
+        record.sensitivity !== "moderate" ||
+        JSON.stringify(record.decision_actors) !==
+          JSON.stringify(expectedActors) ||
+        JSON.stringify(record.constraints) !==
+          JSON.stringify(expectedConstraints) ||
+        JSON.stringify(record.options_considered) !==
+          JSON.stringify(expectedOptions) ||
+        JSON.stringify(record.resulting_artifacts) !==
+          JSON.stringify([record.restoration_photo_id]) ||
+        JSON.stringify(record.unknowns) !==
+          JSON.stringify(expectedUnknowns) ||
+        JSON.stringify(record.projection) !==
+          JSON.stringify({ status: "pending", surfaces: [] }) ||
         record.restoration_approval_statement !==
           expectedApprovalStatement ||
         JSON.stringify([...record.anti_claims].sort()) !==
