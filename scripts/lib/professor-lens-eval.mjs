@@ -39,6 +39,7 @@ const candidateRelativePaths = [...new Set([
   ...walk("docs/knowledge-bank/decisions/photography"),
   ...walk("docs/knowledge-bank/projections/photography"),
   "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+  ...walk("docs/qa/photo-knowledge"),
   ...walk("docs/qa/layout-E")
 ])].sort();
 
@@ -51,7 +52,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "0f4b61fb988c5b554bbe796f7ccd985f42f50868d9b44c7260db4614db58f20b";
+const approvedCandidateSha256 = "262adf6fd61b1190cc45e40c92ca361a6d60ac4fefcab674dcbadfda9efa1f48";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
