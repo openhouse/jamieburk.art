@@ -358,23 +358,42 @@ export function evaluatePhotoKnowledge(options = {}) {
 
   const photographyData =
     source("apps/www/src/data/photography.ts") ?? "";
+  const placementRegistrySource =
+    source("apps/www/src/data/photo-placement-registry.json") ?? "";
+  let placementRegistry = { placements: [] };
+  try {
+    placementRegistry = JSON.parse(placementRegistrySource);
+  } catch {
+    placementRegistry = { placements: [] };
+  }
   const hero = source("apps/www/src/components/Hero.tsx") ?? "";
+  const workCard = source("apps/www/src/components/WorkCard.tsx") ?? "";
+  const caseStudyLayout =
+    source("apps/www/src/components/CaseStudyLayout.tsx") ?? "";
   const globals = source("apps/www/src/app/globals.css") ?? "";
   const home = source("apps/www/src/app/page.tsx") ?? "";
+  const about = source("apps/www/src/app/about/page.tsx") ?? "";
+  const workIndex = source("apps/www/src/app/work/page.tsx") ?? "";
   const resume = source("apps/www/src/app/resume/page.tsx") ?? "";
   const applicationManifestResolvesToWiki =
     photographyData.includes(`wikiId: "${suite.canary_asset_id}"`) &&
     photographyData.includes(
       `derivativeId: "${suite.canary_derivative_id}"`
     ) &&
-    photographyData.includes(
-      `placementIds: ["${suite.canary_occurrence_id}"]`
+    placementRegistry.placements?.some(
+      (placement) =>
+        placement.occurrenceId === suite.canary_occurrence_id &&
+        placement.assetId === suite.canary_asset_id &&
+        placement.derivativeId === suite.canary_derivative_id &&
+        placement.context === "home.hero"
     ) &&
     photographyData.includes(`src: "${derivative?.path?.replace("apps/www/public", "")}"`) &&
     photographyData.includes("Photograph by Elana Gordon") &&
     photographyData.includes('objectPosition: "50% 50%"') &&
     photographyData.includes('mobileObjectPosition: "70% 50%"') &&
     hero.includes("photographs.eastRiver") &&
+    hero.includes('getPhotoOccurrenceId(image, "home.hero")') &&
+    hero.includes("data-photo-occurrence={occurrenceId}") &&
     hero.includes('"--jb-photo-position": image.objectPosition') &&
     hero.includes(
       '"--jb-photo-mobile-position": image.mobileObjectPosition'
@@ -557,112 +576,106 @@ export function evaluatePhotoKnowledge(options = {}) {
     edition?.occurrences?.includes(collaboratorHomeOccurrence?.id) &&
     edition?.occurrences?.includes(collaboratorWorkOccurrence?.id);
 
-  const displayedPhotoGovernance = [
-    {
-      assetId: suite.canary_asset_id,
-      derivativeId: suite.canary_derivative_id,
-      occurrenceIds: [suite.canary_occurrence_id]
-    },
-    {
-      assetId: "asset.photo.raft-in-fog.waterways",
-      derivativeId: "derivative.photo.raft-in-fog.layout-d.v1",
-      occurrenceIds: ["projection.photo.layout-d.home.raft-in-fog"]
-    },
-    {
-      assetId: "asset.photo.cabaret-law-hearing.2017",
-      derivativeId: "derivative.photo.cabaret-law-hearing.layout-d.v1",
-      occurrenceIds: [
-        "projection.photo.layout-d.home.cabaret-law-hearing"
-      ]
-    },
-    {
-      assetId: "asset.photo.fair-rent-rally.2019",
-      derivativeId: "derivative.photo.fair-rent-rally.layout-d.v1",
-      occurrenceIds: [
-        "projection.photo.layout-d.work-index.fair-rent-rally",
-        "projection.photo.layout-d.work.fair-rent-rally"
-      ]
-    },
-    {
-      assetId: "asset.photo.kc-town-hall.collaborator-worksite.2018",
-      derivativeId:
-        "derivative.photo.kc-town-hall.collaborator-worksite.layout-d.v1",
-      occurrenceIds: [
-        "projection.photo.layout-d.home.kc-town-hall-collaborator",
-        "projection.photo.layout-d.work.kc-town-hall-collaborator"
-      ]
-    },
-    {
-      assetId: "asset.photo.sunday-dinner.preparation",
-      derivativeId:
-        "derivative.photo.sunday-dinner-preparation.layout-d.v1",
-      occurrenceIds: [
-        "projection.photo.layout-d.home.sunday-dinner-preparation",
-        "projection.photo.layout-d.about.sunday-dinner-preparation",
-        "projection.photo.layout-d.work-index.sunday-dinner-preparation",
-        "projection.photo.layout-d.work.sunday-dinner-preparation"
-      ]
-    },
-    {
-      assetId: "asset.photo.nycac.dcla-listening-room.2017-01-27",
-      derivativeId:
-        "derivative.photo.nycac.dcla-listening-room.layout-d.v1",
-      occurrenceIds: [
-        "projection.photo.layout-d.home.dcla-listening-room"
-      ]
-    },
-    {
-      assetId: "asset.photo.nightlife-town-hall.2017",
-      derivativeId: "derivative.photo.nightlife-town-hall.layout-d.v1",
-      occurrenceIds: [
-        "projection.photo.layout-d.work-index.nightlife-town-hall"
-      ]
-    }
-  ];
-  const allDisplayedPhotographsAreGoverned =
-    displayedPhotoGovernance.every(
-      ({ assetId, derivativeId, occurrenceIds }) => {
-        const governedAsset = recordMap.get(assetId);
-        const governedDerivative = governedAsset?.public_derivatives?.find(
-          (item) => item.id === derivativeId
-        );
-        return (
-          governedAsset?.kind === "asset" &&
-          governedAsset?.media_type === "photograph" &&
-          governedAsset?.public_display_status === "hold" &&
-          ["unknown", "permission-needed"].includes(
-            governedAsset?.rights_state
-          ) &&
-          governedAsset?.consent_state === "review-needed" &&
-          typeof governedAsset?.private_source_binding?.status === "string" &&
-          governedAsset.private_source_binding.status.length > 10 &&
-          Boolean(governedDerivative?.path) &&
-          photographyData.includes(`wikiId: "${assetId}"`) &&
-          photographyData.includes(`"${derivativeId}"`) &&
-          occurrenceIds.every((occurrenceId) => {
-            const governedOccurrence = recordMap.get(occurrenceId);
-            return (
-              photographyData.includes(`"${occurrenceId}"`) &&
-              governedOccurrence?.projection_type === "photo-occurrence" &&
-              governedOccurrence?.projection_status === "pending" &&
-              governedOccurrence?.portfolio_edition ===
-                suite.portfolio_edition_id &&
-              governedOccurrence?.asset === assetId &&
-              governedOccurrence?.derivative === derivativeId &&
-              /^\/(?:|[a-z0-9/-]+)$/.test(governedOccurrence?.route ?? "") &&
-              governedOccurrence?.approval?.public_git ===
-                "jamie-authorized-branch-review" &&
-              governedOccurrence?.approval?.production === "open" &&
-              governedOccurrence?.approval?.indexing === "open" &&
-              typeof governedOccurrence?.rollback?.action === "string" &&
-              governedOccurrence.rollback.action.length > 30 &&
-              edition?.occurrences?.includes(occurrenceId)
-            );
-          })
-        );
-      }
+  const placementRecords = Array.isArray(placementRegistry.placements)
+    ? placementRegistry.placements
+    : [];
+  const placementOccurrenceIds = placementRecords.map(
+    (placement) => placement.occurrenceId
+  );
+  const editionPhotoOccurrenceIds = (edition?.occurrences ?? []).filter(
+    (occurrenceId) => occurrenceId !== suite.protected_absence_id
+  );
+  const placementKeys = placementRecords.map(
+    (placement) => `${placement.context}\0${placement.assetId}`
+  );
+  const placementRegistryIsComplete =
+    placementRegistry.version === 1 &&
+    placementRecords.length > 0 &&
+    new Set(placementOccurrenceIds).size === placementOccurrenceIds.length &&
+    new Set(placementKeys).size === placementKeys.length &&
+    placementOccurrenceIds.length === editionPhotoOccurrenceIds.length &&
+    placementOccurrenceIds.every((occurrenceId) =>
+      editionPhotoOccurrenceIds.includes(occurrenceId)
     ) &&
-    displayedPhotoGovernance.flatMap((item) => item.occurrenceIds).length === 13;
+    editionPhotoOccurrenceIds.every((occurrenceId) =>
+      placementOccurrenceIds.includes(occurrenceId)
+    );
+
+  const governedAssetIds = [...new Set(
+    placementRecords.map((placement) => placement.assetId)
+  )];
+  const renderedSurfaceContract =
+    photographyData.includes(
+      'import placementRegistryData from "@/data/photo-placement-registry.json"'
+    ) &&
+    photographyData.includes("function placementIdsForAsset") &&
+    photographyData.includes("export function getPhotoOccurrenceId") &&
+    photographyData.includes("Missing governed photo occurrence") &&
+    hero.includes('getPhotoOccurrenceId(image, "home.hero")') &&
+    home.includes('"home.field-feature"') &&
+    home.includes('"home.scene.cabaret-law-hearing"') &&
+    home.includes('"home.scene.dcla-listening-room"') &&
+    home.includes('"home.scene.kc-town-hall-collaborator"') &&
+    home.includes('"home.scene.sunday-dinner-preparation"') &&
+    home.includes('placementContext="home.work-card"') &&
+    about.includes('"about.method"') &&
+    workIndex.includes('"work-index.hero"') &&
+    workIndex.includes('placementContext="work-index.work-card"') &&
+    workCard.includes("getPhotoOccurrenceId(visual, placementContext)") &&
+    workCard.includes("data-photo-occurrence={occurrenceId}") &&
+    caseStudyLayout.includes(
+      'getPhotoOccurrenceId(visual, "case-study.hero")'
+    ) &&
+    caseStudyLayout.includes("data-photo-occurrence={occurrenceId}");
+
+  const allDisplayedPhotographsAreGoverned =
+    placementRegistryIsComplete &&
+    renderedSurfaceContract &&
+    governedAssetIds.every((assetId) => {
+      const governedAsset = recordMap.get(assetId);
+      const assetPlacements = placementRecords.filter(
+        (placement) => placement.assetId === assetId
+      );
+      return (
+        governedAsset?.kind === "asset" &&
+        governedAsset?.media_type === "photograph" &&
+        governedAsset?.public_display_status === "hold" &&
+        ["unknown", "permission-needed"].includes(governedAsset?.rights_state) &&
+        governedAsset?.consent_state === "review-needed" &&
+        typeof governedAsset?.private_source_binding?.status === "string" &&
+        governedAsset.private_source_binding.status.length > 10 &&
+        photographyData.includes(`wikiId: "${assetId}"`) &&
+        new RegExp(
+          `placementIdsForAsset\\(\\s*"${assetId.replace(
+            /[.*+?^${}()|[\]\\]/g,
+            "\\$&"
+          )}"\\s*\\)`
+        ).test(photographyData) &&
+        assetPlacements.every((placement) => {
+          const governedDerivative = governedAsset?.public_derivatives?.find(
+            (item) => item.id === placement.derivativeId
+          );
+          const governedOccurrence = recordMap.get(placement.occurrenceId);
+          return (
+            Boolean(governedDerivative?.path) &&
+            governedOccurrence?.projection_type === "photo-occurrence" &&
+            governedOccurrence?.projection_status === "pending" &&
+            governedOccurrence?.portfolio_edition ===
+              suite.portfolio_edition_id &&
+            governedOccurrence?.asset === assetId &&
+            governedOccurrence?.derivative === placement.derivativeId &&
+            governedOccurrence?.route === placement.route &&
+            governedOccurrence?.component === placement.component &&
+            governedOccurrence?.approval?.public_git ===
+              "jamie-authorized-branch-review" &&
+            governedOccurrence?.approval?.production === "open" &&
+            governedOccurrence?.approval?.indexing === "open" &&
+            typeof governedOccurrence?.rollback?.action === "string" &&
+            governedOccurrence.rollback.action.length > 30
+          );
+        })
+      );
+    });
 
   const proposalDerivative = proposalAsset?.public_derivatives?.[0];
   const proposalBuffer = proposalDerivative?.path
@@ -762,8 +775,14 @@ export function evaluatePhotoKnowledge(options = {}) {
     ...suite.required_records,
     ...suite.required_guides,
     "apps/www/src/app/globals.css",
+    "apps/www/src/app/about/page.tsx",
+    "apps/www/src/app/page.tsx",
+    "apps/www/src/app/work/page.tsx",
+    "apps/www/src/components/CaseStudyLayout.tsx",
     "apps/www/src/data/photography.ts",
+    "apps/www/src/data/photo-placement-registry.json",
     "apps/www/src/components/Hero.tsx",
+    "apps/www/src/components/WorkCard.tsx",
     "rfcs/0003-living-photographic-knowledge-loop.md"
   ];
   const privateMaterialIsAbsent =
@@ -945,6 +964,88 @@ export function renderPhotoReports({ suite, records, checks }) {
   const proposalAsset = recordData.find(
     (record) => record.id === "asset.kc-town-hall.proposal-rendering.2019"
   );
+  const recordMap = new Map(recordData.map((record) => [record.id, record]));
+  const editionRecords = (edition?.occurrences ?? [])
+    .map((id) => recordMap.get(id))
+    .filter(Boolean);
+  const photoOccurrences = editionRecords.filter(
+    (record) => record.projection_type === "photo-occurrence"
+  );
+  const protectedOccurrences = editionRecords.filter(
+    (record) => record.projection_type === "protected-absence"
+  );
+  const displayedAssetIds = [...new Set(
+    photoOccurrences.map((record) => record.asset)
+  )];
+  const displayedAssets = displayedAssetIds
+    .map((id) => recordMap.get(id))
+    .filter(Boolean);
+
+  const tableCell = (value) =>
+    String(value ?? "unknown")
+      .replace(/\r?\n/g, " ")
+      .replace(/\|/g, "\\|")
+      .trim();
+  const wikiLink = (record, label = record?.title ?? record?.id ?? "missing") => {
+    const target = record?.canonical_path?.replace(
+      /^docs\/knowledge-bank\//,
+      "../"
+    );
+    return target ? `[${tableCell(label)}](${target})` : tableCell(label);
+  };
+  const creatorLabel = (photoAsset) => {
+    const preferred = photoAsset?.statements?.find(
+      (statement) =>
+        statement.property === "creator" && statement.rank === "preferred"
+    );
+    if (preferred?.value) return tableCell(preferred.value);
+    if (photoAsset?.creator?.value === "open") {
+      return "Photographer not yet confirmed";
+    }
+    return tableCell(photoAsset?.creator?.value ?? "Photographer not yet confirmed");
+  };
+  const derivativeFor = (photoAsset, occurrenceRecord) =>
+    photoAsset?.public_derivatives?.find(
+      (derivativeRecord) => derivativeRecord.id === occurrenceRecord?.derivative
+    );
+
+  const photographyIndexRows = displayedAssets.map((photoAsset) => {
+    const occurrences = photoOccurrences.filter(
+      (occurrenceRecord) => occurrenceRecord.asset === photoAsset.id
+    );
+    const derivatives = [...new Set(
+      occurrences.map((occurrenceRecord) => occurrenceRecord.derivative)
+    )];
+    return `| ${wikiLink(photoAsset)} | ${creatorLabel(photoAsset)} | ${derivatives
+      .map((id) => `\`${tableCell(id)}\``)
+      .join("<br>")} | ${occurrences
+      .map((occurrenceRecord) =>
+        wikiLink(
+          occurrenceRecord,
+          `${occurrenceRecord.route} / ${occurrenceRecord.component}`
+        )
+      )
+      .join("<br>")} | ${tableCell(photoAsset.public_display_status)} |`;
+  });
+
+  const researchOnlyRows = [
+    hardhatAsset,
+    councilAsset
+  ]
+    .filter(Boolean)
+    .map(
+      (researchAsset) =>
+        `| ${wikiLink(researchAsset)} | ${creatorLabel(researchAsset)} | None | Research only | ${tableCell(researchAsset.public_display_status)} |`
+    );
+  if (proposalAsset) {
+    researchOnlyRows.push(
+      `| ${wikiLink(proposalAsset)} | Project proposal; individual visual authorship open | \`${tableCell(
+        proposalAsset.public_derivatives?.[0]?.id
+      )}\` | KC Town Hall case study artifact | ${tableCell(
+        proposalAsset.public_display_status
+      )} |`
+    );
+  }
 
   const photographyIndex = `# Photography Index
 
@@ -952,16 +1053,38 @@ Generated from governed RFC 0003 records. Do not edit by hand.
 
 | Asset | Creator | Derivative | Current occurrence | Public display |
 | --- | --- | --- | --- | --- |
-| [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) | Elana Gordon | \`${asset?.public_derivatives?.[0]?.id ?? "missing"}\` | [Homepage hero](../projections/photography/layout-d-home-east-river.md) | ${asset?.public_display_status ?? "unknown"} |
-| [DCLA listening room, 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) | Open | \`${dclaAsset?.public_derivatives?.[0]?.id ?? "missing"}\` | [Homepage sequence](../projections/photography/layout-d-home-dcla-listening-room.md) | ${dclaAsset?.public_display_status ?? "unknown"} |
-| [KC Town Hall hard-hat worksite](../assets/photographs/kc-town-hall-hardhat-worksite-2018.md) | Recollection; confirmation open | None | Research only | ${hardhatAsset?.public_display_status ?? "unknown"} |
-| [KC Town Hall collaborator worksite](../assets/photographs/kc-town-hall-collaborator-worksite-2018.md) | Recollection; confirmation open | \`${collaboratorAsset?.public_derivatives?.[0]?.id ?? "missing"}\` | [Homepage](../projections/photography/layout-d-home-kc-town-hall-collaborator.md); [case study](../projections/photography/layout-d-work-kc-town-hall-collaborator.md) | ${collaboratorAsset?.public_display_status ?? "unknown"} |
-| [Commercial-rent fieldwork at 250 Broadway](../assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md) | Open | None | Research only | ${councilAsset?.public_display_status ?? "unknown"} |
-| [KC Town Hall proposal rendering](../assets/kc-town-hall-proposal-rendering-2019.md) | Project proposal; individual visual authorship open | \`${proposalAsset?.public_derivatives?.[0]?.id ?? "missing"}\` | KC Town Hall case study | ${proposalAsset?.public_display_status ?? "unknown"} |
+${[...photographyIndexRows, ...researchOnlyRows].join("\n")}
 
 Private source identifiers, related-frame counts, and permission correspondence
 are intentionally excluded.
 `;
+
+  const rightsRows = photoOccurrences.map((occurrenceRecord) => {
+    const photoAsset = recordMap.get(occurrenceRecord.asset);
+    const rightsState =
+      occurrenceRecord.id === suite.canary_occurrence_id
+        ? `${permission?.permission?.status ?? "unknown"}; ${photoAsset?.rights_state ?? "unknown"}`
+        : photoAsset?.rights_state ?? "unknown";
+    return `| ${wikiLink(occurrenceRecord, occurrenceRecord.id)} | ${creatorLabel(
+      photoAsset
+    )} | ${tableCell(rightsState)} | ${tableCell(
+      photoAsset?.consent_state
+    )} | ${tableCell(
+      occurrenceRecord.approval?.public_git
+    )} | ${tableCell(occurrenceRecord.approval?.production)} | ${tableCell(
+      occurrenceRecord.approval?.indexing
+    )} |`;
+  });
+  const researchRightsRows = [hardhatAsset, councilAsset]
+    .filter(Boolean)
+    .map(
+      (researchAsset) =>
+        `| ${wikiLink(researchAsset, researchAsset.id)} | ${creatorLabel(
+          researchAsset
+        )} | ${tableCell(researchAsset.rights_state)} | ${tableCell(
+          researchAsset.consent_state
+        )} | research only | not applicable | not applicable |`
+    );
 
   const rightsReview = `# Photo Rights Review
 
@@ -970,16 +1093,31 @@ hand. This report is not a rights grant.
 
 | Occurrence or asset | Creator | Rights state | Consent state | Public Git | Production | Indexing |
 | --- | --- | --- | --- | --- | --- | --- |
-| \`${suite.canary_occurrence_id}\` | Elana Gordon | ${permission?.permission?.status ?? "unknown"}; ${asset?.rights_state ?? "unknown"} | ${asset?.consent_state ?? "unknown"} | ${occurrence?.approval?.public_git ?? "unknown"} | ${occurrence?.approval?.production ?? "unknown"} | ${occurrence?.approval?.indexing ?? "unknown"} |
-| \`${dclaOccurrence?.id ?? "missing"}\` | Open | ${dclaAsset?.rights_state ?? "unknown"} | ${dclaAsset?.consent_state ?? "unknown"} | ${dclaOccurrence?.approval?.public_git ?? "unknown"} | ${dclaOccurrence?.approval?.production ?? "unknown"} | ${dclaOccurrence?.approval?.indexing ?? "unknown"} |
-| \`${collaboratorHomeOccurrence?.id ?? "missing"}\` | Recollection; confirmation open | ${collaboratorAsset?.rights_state ?? "unknown"} | ${collaboratorAsset?.consent_state ?? "unknown"} | ${collaboratorHomeOccurrence?.approval?.public_git ?? "unknown"} | ${collaboratorHomeOccurrence?.approval?.production ?? "unknown"} | ${collaboratorHomeOccurrence?.approval?.indexing ?? "unknown"} |
-| \`${collaboratorWorkOccurrence?.id ?? "missing"}\` | Recollection; confirmation open | ${collaboratorAsset?.rights_state ?? "unknown"} | ${collaboratorAsset?.consent_state ?? "unknown"} | ${collaboratorWorkOccurrence?.approval?.public_git ?? "unknown"} | ${collaboratorWorkOccurrence?.approval?.production ?? "unknown"} | ${collaboratorWorkOccurrence?.approval?.indexing ?? "unknown"} |
-| \`${hardhatAsset?.id ?? "missing"}\` | Recollection; confirmation open | ${hardhatAsset?.rights_state ?? "unknown"} | ${hardhatAsset?.consent_state ?? "unknown"} | research only | not applicable | not applicable |
-| \`${councilAsset?.id ?? "missing"}\` | Open | ${councilAsset?.rights_state ?? "unknown"} | ${councilAsset?.consent_state ?? "unknown"} | research only | not applicable | not applicable |
+${[...rightsRows, ...researchRightsRows].join("\n")}
 
 Private evidence reinspection, photographer confirmation, represented-person
 review, production approval, and indexing approval remain open human gates.
 `;
+
+  const placementRows = photoOccurrences.map((occurrenceRecord) => {
+    const photoAsset = recordMap.get(occurrenceRecord.asset);
+    const derivativeRecord = derivativeFor(photoAsset, occurrenceRecord);
+    return `| ${wikiLink(occurrenceRecord, occurrenceRecord.id)} | ${tableCell(
+      occurrenceRecord.projection_status
+    )} | \`${tableCell(occurrenceRecord.route)}\` | ${tableCell(
+      occurrenceRecord.component
+    )} | \`${tableCell(derivativeRecord?.id ?? occurrenceRecord.derivative)}\` | ${tableCell(
+      occurrenceRecord.caption?.text
+    )} | ${tableCell(occurrenceRecord.credit?.text)} |`;
+  });
+  const protectedRows = protectedOccurrences.map(
+    (protectedOccurrence) =>
+      `| ${wikiLink(protectedOccurrence, protectedOccurrence.id)} | protected absence | \`${tableCell(
+        protectedOccurrence.route
+      )}\` | ${tableCell(
+        protectedOccurrence.component
+      )} | Protected absence | No photograph in this edition. | Not applicable |`
+  );
 
   const placements = `# Public Photo Placements
 
@@ -987,11 +1125,7 @@ Generated from the current portfolio edition. Do not edit by hand.
 
 | Occurrence | Status | Route | Component | Derivative | Caption | Credit |
 | --- | --- | --- | --- | --- | --- | --- |
-| \`${suite.canary_occurrence_id}\` | active on branch; production open | \`${occurrence?.route ?? "unknown"}\` | ${occurrence?.component ?? "unknown"} | \`${occurrence?.derivative ?? "unknown"}\` | ${occurrence?.caption?.text ?? "unknown"} | ${occurrence?.credit?.text ?? "unknown"} |
-| \`${dclaOccurrence?.id ?? "missing"}\` | ${dclaOccurrence?.projection_status ?? "unknown"} | \`${dclaOccurrence?.route ?? "unknown"}\` | ${dclaOccurrence?.component ?? "unknown"} | \`${dclaOccurrence?.derivative ?? "unknown"}\` | ${dclaOccurrence?.caption?.text ?? "unknown"} | ${dclaOccurrence?.credit?.text ?? "unknown"} |
-| \`${collaboratorHomeOccurrence?.id ?? "missing"}\` | ${collaboratorHomeOccurrence?.projection_status ?? "unknown"} | \`${collaboratorHomeOccurrence?.route ?? "unknown"}\` | ${collaboratorHomeOccurrence?.component ?? "unknown"} | \`${collaboratorHomeOccurrence?.derivative ?? "unknown"}\` | ${collaboratorHomeOccurrence?.caption?.text ?? "unknown"} | ${collaboratorHomeOccurrence?.credit?.text ?? "unknown"} |
-| \`${collaboratorWorkOccurrence?.id ?? "missing"}\` | ${collaboratorWorkOccurrence?.projection_status ?? "unknown"} | \`${collaboratorWorkOccurrence?.route ?? "unknown"}\` | ${collaboratorWorkOccurrence?.component ?? "unknown"} | \`${collaboratorWorkOccurrence?.derivative ?? "unknown"}\` | ${collaboratorWorkOccurrence?.caption?.text ?? "unknown"} | ${collaboratorWorkOccurrence?.credit?.text ?? "unknown"} |
-| \`${suite.protected_absence_id}\` | protected absence | \`/resume\` | ResumePage | Protected absence | No photograph in this edition. | Not applicable |
+${[...placementRows, ...protectedRows].join("\n")}
 `;
 
   const impact = `# Photo Impact

@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { WorkCard } from "@/components/WorkCard";
-import { photographs, photoDisplayBoundary } from "@/data/photography";
+import {
+  getPhotoOccurrenceId,
+  photographs,
+  photoDisplayBoundary
+} from "@/data/photography";
 import { workGroups, workItems } from "@/data/work";
 import { createMetadata } from "@/lib/metadata";
 
@@ -35,7 +39,13 @@ export default function WorkPage() {
           </div>
         </div>
       </header>
-      <figure className="bg-jb-graphite text-white">
+      <figure
+        className="bg-jb-graphite text-white"
+        data-photo-occurrence={getPhotoOccurrenceId(
+          photographs.nightlifeTownHall,
+          "work-index.hero"
+        )}
+      >
         <div className="jb-frame py-5">
           <div className="relative aspect-[16/7] overflow-hidden max-md:aspect-[4/3]">
             <Image
@@ -98,7 +108,11 @@ export default function WorkPage() {
               <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
               <div className="mt-5 grid gap-5 lg:grid-cols-2">
                 {groupedItems.map((item) => (
-                  <WorkCard item={item} key={item.slug} />
+                  <WorkCard
+                    item={item}
+                    key={item.slug}
+                    placementContext="work-index.work-card"
+                  />
                 ))}
               </div>
             </section>

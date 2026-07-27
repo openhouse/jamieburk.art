@@ -10,7 +10,11 @@ import {
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { References } from "@/components/citations";
-import { photoDisplayBoundary, workVisuals } from "@/data/photography";
+import {
+  getPhotoOccurrenceId,
+  photoDisplayBoundary,
+  workVisuals
+} from "@/data/photography";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { WorkMeta } from "@/types/work";
 
@@ -21,6 +25,9 @@ type CaseStudyLayoutProps = {
 
 export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
   const visual = workVisuals[item.slug];
+  const occurrenceId = visual
+    ? getPhotoOccurrenceId(visual, "case-study.hero")
+    : undefined;
 
   return (
     <article>
@@ -35,7 +42,10 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </div>
       </header>
       {visual ? (
-        <figure className="border-y border-jb-ink/10 bg-jb-warm">
+        <figure
+          className="border-y border-jb-ink/10 bg-jb-warm"
+          data-photo-occurrence={occurrenceId}
+        >
           <div className="jb-frame py-4">
             <div className="jb-case-visual">
               <Image

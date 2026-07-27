@@ -1,3 +1,5 @@
+import placementRegistryData from "@/data/photo-placement-registry.json";
+
 type PhotoWorkingReview = {
   workingUse:
     | "authorized-for-features-layout-D-review"
@@ -38,11 +40,66 @@ export type PortfolioVisual =
       review?: never;
     });
 
+type PhotoPlacementRecord = {
+  context: string;
+  occurrenceId: string;
+  assetId: string;
+  derivativeId: string;
+  route: string;
+  component: string;
+};
+
+export const photoPlacementRegistry =
+  placementRegistryData.placements as readonly PhotoPlacementRecord[];
+
+export type PhotoPlacementContext =
+  | "home.hero"
+  | "home.field-feature"
+  | "home.scene.cabaret-law-hearing"
+  | "home.scene.dcla-listening-room"
+  | "home.scene.kc-town-hall-collaborator"
+  | "home.scene.sunday-dinner-preparation"
+  | "home.work-card"
+  | "about.method"
+  | "work-index.hero"
+  | "work-index.work-card"
+  | "case-study.hero";
+
+function placementIdsForAsset(assetId: string) {
+  return photoPlacementRegistry
+    .filter((placement) => placement.assetId === assetId)
+    .map((placement) => placement.occurrenceId);
+}
+
+export function getPhotoOccurrenceId(
+  visual: PortfolioVisual,
+  context: PhotoPlacementContext
+) {
+  if (visual.kind !== "photograph") return undefined;
+
+  const placement = photoPlacementRegistry.find(
+    (candidate) =>
+      candidate.assetId === visual.wikiId &&
+      candidate.derivativeId === visual.derivativeId &&
+      candidate.context === context
+  );
+
+  if (!placement) {
+    throw new Error(
+      `Missing governed photo occurrence for ${visual.wikiId ?? visual.src} in ${context}`
+    );
+  }
+
+  return placement.occurrenceId;
+}
+
 export const photographs = {
   eastRiver: {
     wikiId: "asset.photo.east-river-manhattan-bridge.2022.001",
     derivativeId: "derivative.photo.east-river.layout-d.v1",
-    placementIds: ["projection.photo.layout-d.home.east-river"],
+    placementIds: placementIdsForAsset(
+      "asset.photo.east-river-manhattan-bridge.2022.001"
+    ),
     src: "/images/field-notes/jamie-east-river.webp",
     width: 1280,
     height: 960,
@@ -68,7 +125,7 @@ export const photographs = {
   raftInFog: {
     wikiId: "asset.photo.raft-in-fog.waterways",
     derivativeId: "derivative.photo.raft-in-fog.layout-d.v1",
-    placementIds: ["projection.photo.layout-d.home.raft-in-fog"],
+    placementIds: placementIdsForAsset("asset.photo.raft-in-fog.waterways"),
     src: "/images/field-v02/raft-in-fog.jpg",
     width: 860,
     height: 1280,
@@ -76,7 +133,7 @@ export const photographs = {
       "A red handmade raft resting at the edge of still water in dense fog while a bundled person sits on deck.",
     caption:
       "The waterways project raft held at the bank in fog: a social and technical container made for a journey with other people.",
-    credit: "Jamie Burkart photo archive",
+    credit: "Photographer not yet confirmed. Jamie Burkart photo archive",
     objectPosition: "50% 56%",
     kind: "photograph",
     review: {
@@ -93,7 +150,9 @@ export const photographs = {
   cabaretLawHearing: {
     wikiId: "asset.photo.cabaret-law-hearing.2017",
     derivativeId: "derivative.photo.cabaret-law-hearing.layout-d.v1",
-    placementIds: ["projection.photo.layout-d.home.cabaret-law-hearing"],
+    placementIds: placementIdsForAsset(
+      "asset.photo.cabaret-law-hearing.2017"
+    ),
     src: "/images/field-v02/cabaret-law-hearing.jpg",
     width: 1368,
     height: 912,
@@ -101,7 +160,7 @@ export const photographs = {
       "A crowded New York City Council hearing room with attendees facing a panel.",
     caption:
       "Attendees face the Council panel during the public hearing on repealing the Cabaret Law, September 2017.",
-    credit: "Jamie Burkart photo archive",
+    credit: "Photographer not yet confirmed. Jamie Burkart photo archive",
     objectPosition: "50% 46%",
     kind: "photograph",
     review: {
@@ -117,10 +176,7 @@ export const photographs = {
   fairRentRally: {
     wikiId: "asset.photo.fair-rent-rally.2019",
     derivativeId: "derivative.photo.fair-rent-rally.layout-d.v1",
-    placementIds: [
-      "projection.photo.layout-d.work-index.fair-rent-rally",
-      "projection.photo.layout-d.work.fair-rent-rally"
-    ],
+    placementIds: placementIdsForAsset("asset.photo.fair-rent-rally.2019"),
     src: "/images/field-v02/fair-rent-rally.jpg",
     width: 1368,
     height: 912,
@@ -128,7 +184,8 @@ export const photographs = {
       "A speaker at a City Hall rally, with people behind her holding colorful Fair Rent signs.",
     caption:
       "A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019.",
-    credit: "NYC Artist Coalition photo archive",
+    credit:
+      "Photographer not yet confirmed. NYC Artist Coalition photo archive",
     objectPosition: "50% 45%",
     kind: "photograph",
     review: {
@@ -145,10 +202,9 @@ export const photographs = {
     wikiId: "asset.photo.kc-town-hall.collaborator-worksite.2018",
     derivativeId:
       "derivative.photo.kc-town-hall.collaborator-worksite.layout-d.v1",
-    placementIds: [
-      "projection.photo.layout-d.home.kc-town-hall-collaborator",
-      "projection.photo.layout-d.work.kc-town-hall-collaborator"
-    ],
+    placementIds: placementIdsForAsset(
+      "asset.photo.kc-town-hall.collaborator-worksite.2018"
+    ),
     src: "/images/field-v02/historic-restoration-work.jpg",
     width: 1280,
     height: 854,
@@ -174,12 +230,9 @@ export const photographs = {
     wikiId: "asset.photo.sunday-dinner.preparation",
     derivativeId:
       "derivative.photo.sunday-dinner-preparation.layout-d.v1",
-    placementIds: [
-      "projection.photo.layout-d.home.sunday-dinner-preparation",
-      "projection.photo.layout-d.about.sunday-dinner-preparation",
-      "projection.photo.layout-d.work-index.sunday-dinner-preparation",
-      "projection.photo.layout-d.work.sunday-dinner-preparation"
-    ],
+    placementIds: placementIdsForAsset(
+      "asset.photo.sunday-dinner.preparation"
+    ),
     src: "/images/field-v02/sunday-dinner-preparation.jpg",
     width: 956,
     height: 1276,
@@ -187,7 +240,7 @@ export const photographs = {
       "Jamie wearing an apron and seasoning a tray of food in an apartment kitchen.",
     caption:
       "Preparing food at 196, where hospitality supported a recurring participation practice.",
-    credit: "Jamie Burkart photo archive",
+    credit: "Photographer not yet confirmed. Jamie Burkart photo archive",
     objectPosition: "50% 43%",
     kind: "photograph",
     review: {
@@ -204,7 +257,9 @@ export const photographs = {
     wikiId: "asset.photo.nycac.dcla-listening-room.2017-01-27",
     derivativeId:
       "derivative.photo.nycac.dcla-listening-room.layout-d.v1",
-    placementIds: ["projection.photo.layout-d.home.dcla-listening-room"],
+    placementIds: placementIdsForAsset(
+      "asset.photo.nycac.dcla-listening-room.2017-01-27"
+    ),
     src: "/images/field-v02/artist-coalition-listening-room.jpg",
     width: 1280,
     height: 854,
@@ -229,9 +284,9 @@ export const photographs = {
   nightlifeTownHall: {
     wikiId: "asset.photo.nightlife-town-hall.2017",
     derivativeId: "derivative.photo.nightlife-town-hall.layout-d.v1",
-    placementIds: [
-      "projection.photo.layout-d.work-index.nightlife-town-hall"
-    ],
+    placementIds: placementIdsForAsset(
+      "asset.photo.nightlife-town-hall.2017"
+    ),
     src: "/images/field-v02/nightlife-town-hall.jpg",
     width: 1368,
     height: 912,
@@ -239,7 +294,8 @@ export const photographs = {
       "A packed audience faces a speaker and projected Save NYC Spaces graphics in a small cultural venue.",
     caption:
       "A speaker addresses a packed Night Mayor town hall in a small cultural space, October 2017.",
-    credit: "NYC Artist Coalition photo archive",
+    credit:
+      "Photographer not yet confirmed. NYC Artist Coalition photo archive",
     objectPosition: "50% 52%",
     kind: "photograph",
     review: {

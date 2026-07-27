@@ -3,18 +3,32 @@ import Link from "next/link";
 import type { Route } from "next";
 import { StatusBadge } from "@/components/StatusBadge";
 import { TagList } from "@/components/TagList";
-import { workVisuals } from "@/data/photography";
+import {
+  getPhotoOccurrenceId,
+  workVisuals,
+  type PhotoPlacementContext
+} from "@/data/photography";
 import type { WorkMeta } from "@/types/work";
 
 type WorkCardProps = {
   item: WorkMeta;
+  placementContext: Extract<
+    PhotoPlacementContext,
+    "home.work-card" | "work-index.work-card"
+  >;
 };
 
-export function WorkCard({ item }: WorkCardProps) {
+export function WorkCard({ item, placementContext }: WorkCardProps) {
   const visual = workVisuals[item.slug];
+  const occurrenceId = visual
+    ? getPhotoOccurrenceId(visual, placementContext)
+    : undefined;
 
   return (
-    <article className="overflow-hidden rounded border border-jb-ink/15 bg-jb-paper">
+    <article
+      className="overflow-hidden rounded border border-jb-ink/15 bg-jb-paper"
+      data-photo-occurrence={occurrenceId}
+    >
       {visual ? (
         <Link
           aria-label={`Read ${item.title} case study`}

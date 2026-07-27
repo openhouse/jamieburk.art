@@ -40,6 +40,9 @@ anti_claims:
   - First-person identification is represented-person consent.
   - Archive custody establishes copyright or creator credit.
 relations:
+  - type: projected_to
+    target: projection.photo.layout-d.work-index.kc-town-hall-collaborator
+    href: ../../projections/photography/layout-d-work-index-kc-town-hall-collaborator.md
   - type: related_to
     target: source.recollection.kc-town-hall-collaborator-photo.2026-07
     href: ../../sources/recollections/kc-town-hall-collaborator-photo-oral-history-2026-07.md

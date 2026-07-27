@@ -1,13 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { photographs, photoHeroBoundary } from "@/data/photography";
+import {
+  getPhotoOccurrenceId,
+  photographs,
+  photoHeroBoundary
+} from "@/data/photography";
 
 export function Hero() {
   const image = photographs.eastRiver;
+  const occurrenceId = getPhotoOccurrenceId(image, "home.hero");
 
   return (
-    <section className="jb-photo-hero border-b-4 jb-rule">
+    <section
+      className="jb-photo-hero border-b-4 jb-rule"
+      data-photo-occurrence={occurrenceId}
+    >
       <Image
         alt={image.alt}
         className="jb-photo-hero-media"

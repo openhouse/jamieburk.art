@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "placements": [
+    {
+      "context": "home.hero",
+      "occurrenceId": "projection.photo.layout-d.home.east-river",
+      "assetId": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "derivativeId": "derivative.photo.east-river.layout-d.v1",
+      "route": "/",
+      "component": "Hero"
+    },
+    {
+      "context": "home.field-feature",
+      "occurrenceId": "projection.photo.layout-d.home.raft-in-fog",
+      "assetId": "asset.photo.raft-in-fog.waterways",
+      "derivativeId": "derivative.photo.raft-in-fog.layout-d.v1",
+      "route": "/",
+      "component": "FeaturedProject"
+    },
+    {
+      "context": "home.scene.cabaret-law-hearing",
+      "occurrenceId": "projection.photo.layout-d.home.cabaret-law-hearing",
+      "assetId": "asset.photo.cabaret-law-hearing.2017",
+      "derivativeId": "derivative.photo.cabaret-law-hearing.layout-d.v1",
+      "route": "/",
+      "component": "ScenesOfTheWork"
+    },
+    {
+      "context": "home.scene.dcla-listening-room",
+      "occurrenceId": "projection.photo.layout-d.home.dcla-listening-room",
+      "assetId": "asset.photo.nycac.dcla-listening-room.2017-01-27",
+      "derivativeId": "derivative.photo.nycac.dcla-listening-room.layout-d.v1",
+      "route": "/",
+      "component": "ScenesOfTheWork"
+    },
+    {
+      "context": "home.scene.kc-town-hall-collaborator",
+      "occurrenceId": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+      "assetId": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "derivativeId": "derivative.photo.kc-town-hall.collaborator-worksite.layout-d.v1",
+      "route": "/",
+      "component": "ScenesOfTheWork"
+    },
+    {
+      "context": "home.scene.sunday-dinner-preparation",
+      "occurrenceId": "projection.photo.layout-d.home.sunday-dinner-preparation",
+      "assetId": "asset.photo.sunday-dinner.preparation",
+      "derivativeId": "derivative.photo.sunday-dinner-preparation.layout-d.v1",
+      "route": "/",
+      "component": "ScenesOfTheWork"
+    },
+    {
+      "context": "home.work-card",
+      "occurrenceId": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+      "assetId": "asset.photo.fair-rent-rally.2019",
+      "derivativeId": "derivative.photo.fair-rent-rally.layout-d.v1",
+      "route": "/",
+      "component": "WorkCard"
+    },
+    {
+      "context": "home.work-card",
+      "occurrenceId": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+      "assetId": "asset.photo.sunday-dinner.preparation",
+      "derivativeId": "derivative.photo.sunday-dinner-preparation.layout-d.v1",
+      "route": "/",
+      "component": "WorkCard"
+    },
+    {
+      "context": "about.method",
+      "occurrenceId": "projection.photo.layout-d.about.sunday-dinner-preparation",
+      "assetId": "asset.photo.sunday-dinner.preparation",
+      "derivativeId": "derivative.photo.sunday-dinner-preparation.layout-d.v1",
+      "route": "/about",
+      "component": "AboutHeader"
+    },
+    {
+      "context": "work-index.hero",
+      "occurrenceId": "projection.photo.layout-d.work-index.nightlife-town-hall",
+      "assetId": "asset.photo.nightlife-town-hall.2017",
+      "derivativeId": "derivative.photo.nightlife-town-hall.layout-d.v1",
+      "route": "/work",
+      "component": "WorkIndexLead"
+    },
+    {
+      "context": "work-index.work-card",
+      "occurrenceId": "projection.photo.layout-d.work-index.fair-rent-rally",
+      "assetId": "asset.photo.fair-rent-rally.2019",
+      "derivativeId": "derivative.photo.fair-rent-rally.layout-d.v1",
+      "route": "/work",
+      "component": "WorkCard"
+    },
+    {
+      "context": "work-index.work-card",
+      "occurrenceId": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+      "assetId": "asset.photo.sunday-dinner.preparation",
+      "derivativeId": "derivative.photo.sunday-dinner-preparation.layout-d.v1",
+      "route": "/work",
+      "component": "WorkCard"
+    },
+    {
+      "context": "work-index.work-card",
+      "occurrenceId": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+      "assetId": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "derivativeId": "derivative.photo.kc-town-hall.collaborator-worksite.layout-d.v1",
+      "route": "/work",
+      "component": "WorkCard"
+    },
+    {
+      "context": "case-study.hero",
+      "occurrenceId": "projection.photo.layout-d.work.fair-rent-rally",
+      "assetId": "asset.photo.fair-rent-rally.2019",
+      "derivativeId": "derivative.photo.fair-rent-rally.layout-d.v1",
+      "route": "/work/fair-rent-nyc",
+      "component": "CaseStudyLayout"
+    },
+    {
+      "context": "case-study.hero",
+      "occurrenceId": "projection.photo.layout-d.work.sunday-dinner-preparation",
+      "assetId": "asset.photo.sunday-dinner.preparation",
+      "derivativeId": "derivative.photo.sunday-dinner-preparation.layout-d.v1",
+      "route": "/work/196-sunday-dinner",
+      "component": "CaseStudyLayout"
+    },
+    {
+      "context": "case-study.hero",
+      "occurrenceId": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+      "assetId": "asset.photo.kc-town-hall.collaborator-worksite.2018",
+      "derivativeId": "derivative.photo.kc-town-hall.collaborator-worksite.layout-d.v1",
+      "route": "/work/kc-town-hall",
+      "component": "CaseStudyLayout"
+    }
+  ]
+}

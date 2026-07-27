@@ -57,6 +57,42 @@ test("the portfolio edition cannot omit a displayed occurrence", () => {
   );
 });
 
+test("the rendered placement registry cannot omit a WorkCard occurrence", () => {
+  const file = "apps/www/src/data/photo-placement-registry.json";
+  const registry = JSON.parse(source(file));
+  registry.placements = registry.placements.filter(
+    (placement) =>
+      placement.occurrenceId !==
+      "projection.photo.layout-d.home-work-card.fair-rent-rally"
+  );
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: {
+      [file]: `${JSON.stringify(registry, null, 2)}\n`
+    },
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.all_displayed_photographs_are_governed,
+    false
+  );
+});
+
+test("a rendered WorkCard cannot drop its occurrence binding", () => {
+  const file = "apps/www/src/components/WorkCard.tsx";
+  const result = evaluatePhotoKnowledge({
+    sourceOverrides: replace(
+      file,
+      "data-photo-occurrence={occurrenceId}",
+      ""
+    ),
+    skipGenerated: true
+  });
+  assert.equal(
+    result.checks.all_displayed_photographs_are_governed,
+    false
+  );
+});
+
 test("a missing derivative fails closed", () => {
   const result = evaluatePhotoKnowledge({
     assetOverrides: {

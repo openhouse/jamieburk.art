@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
-import { photographs, photoDisplayBoundary } from "@/data/photography";
+import {
+  getPhotoOccurrenceId,
+  photographs,
+  photoDisplayBoundary
+} from "@/data/photography";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -35,7 +39,12 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-        <figure>
+        <figure
+          data-photo-occurrence={getPhotoOccurrenceId(
+            photographs.sundayDinnerPreparation,
+            "about.method"
+          )}
+        >
           <div className="relative aspect-[3/4] overflow-hidden bg-jb-warm">
             <Image
               alt={photographs.sundayDinnerPreparation.alt}

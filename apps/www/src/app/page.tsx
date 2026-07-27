@@ -6,7 +6,11 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
-import { photographs, photoDisplayBoundary } from "@/data/photography";
+import {
+  getPhotoOccurrenceId,
+  photographs,
+  photoDisplayBoundary
+} from "@/data/photography";
 import { featuredWork } from "@/data/work";
 
 const startHereLinks = [
@@ -87,7 +91,11 @@ export default function HomePage() {
         </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
+            <WorkCard
+              item={item}
+              key={item.slug}
+              placementContext="home.work-card"
+            />
           ))}
         </div>
       </section>
@@ -111,7 +119,12 @@ export default function HomePage() {
               Read the through line
             </Link>
           </div>
-          <figure>
+          <figure
+            data-photo-occurrence={getPhotoOccurrenceId(
+              photographs.raftInFog,
+              "home.field-feature"
+            )}
+          >
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 alt={photographs.raftInFog.alt}
@@ -143,12 +156,27 @@ export default function HomePage() {
         </div>
         <div className="jb-photo-sequence">
           {[
-            photographs.cabaretLawHearing,
-            photographs.artistCoalitionListeningRoom,
-            photographs.kcTownHallWork,
-            photographs.sundayDinnerPreparation
-          ].map((image) => (
-            <figure key={image.src}>
+            {
+              context: "home.scene.cabaret-law-hearing" as const,
+              image: photographs.cabaretLawHearing
+            },
+            {
+              context: "home.scene.dcla-listening-room" as const,
+              image: photographs.artistCoalitionListeningRoom
+            },
+            {
+              context: "home.scene.kc-town-hall-collaborator" as const,
+              image: photographs.kcTownHallWork
+            },
+            {
+              context: "home.scene.sunday-dinner-preparation" as const,
+              image: photographs.sundayDinnerPreparation
+            }
+          ].map(({ context, image }) => (
+            <figure
+              data-photo-occurrence={getPhotoOccurrenceId(image, context)}
+              key={image.src}
+            >
               <Image
                 alt={image.alt}
                 fill

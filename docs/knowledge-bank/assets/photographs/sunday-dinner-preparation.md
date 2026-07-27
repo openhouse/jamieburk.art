@@ -38,6 +38,9 @@ anti_claims:
   - Domestic setting grants unrestricted reuse.
 relations:
   - type: projected_to
+    target: projection.photo.layout-d.home-work-card.sunday-dinner-preparation
+    href: ../../projections/photography/layout-d-home-work-card-sunday-dinner-preparation.md
+  - type: projected_to
     target: projection.photo.layout-d.home.sunday-dinner-preparation
     href: ../../projections/photography/layout-d-home-sunday-dinner-preparation.md
   - type: projected_to

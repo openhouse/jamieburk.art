@@ -24,11 +24,14 @@ occurrences:
   - projection.photo.layout-d.home.dcla-listening-room
   - projection.photo.layout-d.home.kc-town-hall-collaborator
   - projection.photo.layout-d.home.sunday-dinner-preparation
+  - projection.photo.layout-d.home-work-card.fair-rent-rally
+  - projection.photo.layout-d.home-work-card.sunday-dinner-preparation
   - projection.photo.layout-d.about.sunday-dinner-preparation
   - projection.photo.layout-d.work-index.nightlife-town-hall
   - projection.photo.layout-d.work-index.fair-rent-rally
   - projection.photo.layout-d.work.fair-rent-rally
   - projection.photo.layout-d.work-index.sunday-dinner-preparation
+  - projection.photo.layout-d.work-index.kc-town-hall-collaborator
   - projection.photo.layout-d.work.sunday-dinner-preparation
   - projection.photo.layout-d.work.kc-town-hall-collaborator
   - projection.photo.layout-d.resume.protected-absence
@@ -70,6 +73,12 @@ relations:
     target: projection.photo.layout-d.home.sunday-dinner-preparation
     href: layout-d-home-sunday-dinner-preparation.md
   - type: related_to
+    target: projection.photo.layout-d.home-work-card.fair-rent-rally
+    href: layout-d-home-work-card-fair-rent-rally.md
+  - type: related_to
+    target: projection.photo.layout-d.home-work-card.sunday-dinner-preparation
+    href: layout-d-home-work-card-sunday-dinner-preparation.md
+  - type: related_to
     target: projection.photo.layout-d.about.sunday-dinner-preparation
     href: layout-d-about-sunday-dinner-preparation.md
   - type: related_to
@@ -84,6 +93,9 @@ relations:
   - type: related_to
     target: projection.photo.layout-d.work-index.sunday-dinner-preparation
     href: layout-d-work-index-sunday-dinner-preparation.md
+  - type: related_to
+    target: projection.photo.layout-d.work-index.kc-town-hall-collaborator
+    href: layout-d-work-index-kc-town-hall-collaborator.md
   - type: related_to
     target: projection.photo.layout-d.work.sunday-dinner-preparation
     href: layout-d-work-sunday-dinner-preparation.md
@@ -108,11 +120,14 @@ commit hash.
 - [Homepage DCLA listening-room occurrence](layout-d-home-dcla-listening-room.md)
 - [Homepage KC Town Hall collaborator occurrence](layout-d-home-kc-town-hall-collaborator.md)
 - [Homepage Sunday Dinner preparation occurrence](layout-d-home-sunday-dinner-preparation.md)
+- [Homepage Fair Rent work-card occurrence](layout-d-home-work-card-fair-rent-rally.md)
+- [Homepage Sunday Dinner work-card occurrence](layout-d-home-work-card-sunday-dinner-preparation.md)
 - [About-page Sunday Dinner preparation occurrence](layout-d-about-sunday-dinner-preparation.md)
 - [Work-index Night Mayor town hall occurrence](layout-d-work-index-nightlife-town-hall.md)
 - [Work-index Fair Rent rally occurrence](layout-d-work-index-fair-rent-rally.md)
 - [FairRentNYC case-study rally occurrence](layout-d-work-fair-rent-rally.md)
 - [Work-index Sunday Dinner preparation occurrence](layout-d-work-index-sunday-dinner-preparation.md)
+- [Work-index KC Town Hall collaborator occurrence](layout-d-work-index-kc-town-hall-collaborator.md)
 - [Sunday Dinner case-study preparation occurrence](layout-d-work-sunday-dinner-preparation.md)
 - [KC Town Hall case-study collaborator occurrence](layout-d-work-kc-town-hall-collaborator.md)
 - [Resume protected absence](layout-d-resume-protected-absence.md)

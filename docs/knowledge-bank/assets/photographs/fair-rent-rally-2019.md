@@ -9,7 +9,7 @@ sensitivity: moderate
 last_reviewed: 2026-07-26
 review_by: 2026-08-26
 canonical_path: docs/knowledge-bank/assets/photographs/fair-rent-rally-2019.md
-summary: Governed record for the Fair Rent rally photograph used on the work index and case study.
+summary: Governed record for the Fair Rent rally photograph used on the homepage, work index, and case study.
 rights_state: unknown
 consent_state: review-needed
 public_display_status: hold
@@ -37,6 +37,9 @@ anti_claims:
   - The photograph proves a specific person's legislative influence.
   - Visible campaign participation grants unrestricted reuse.
 relations:
+  - type: projected_to
+    target: projection.photo.layout-d.home-work-card.fair-rent-rally
+    href: ../../projections/photography/layout-d-home-work-card-fair-rent-rally.md
   - type: projected_to
     target: projection.photo.layout-d.work-index.fair-rent-rally
     href: ../../projections/photography/layout-d-work-index-fair-rent-rally.md
