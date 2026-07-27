@@ -1,12 +1,13 @@
 {
   "generated_at": "2026-07-26",
-  "source_commit": "80d910ea27fbb76c3775e170a5d2b33fff1e39c6",
-  "candidate_fingerprint": "3467feb1203122bd490fddb3cb555165356d6dcc69707576b277ad795f6d4446",
-  "candidate_file_count": 667,
+  "source_commit": "13574a7f59fb2482b37db8ef2daa78805e995f7f",
+  "candidate_fingerprint": "9e011d36b3576e394a51a819eb0d66de56dd9590255589d5d8e6d32c334d6d64",
+  "candidate_file_count": 699,
   "exclusions": [
     "^docs\\/knowledge-bank\\/_generated\\/",
     "^reports\\/photo-knowledge\\/",
     "^evals\\/photo-knowledge\\/holdouts\\/",
+    "^docs\\/qa\\/evals-H\\/professor-candidate-receipt\\.json$",
     "^docs\\/qa\\/evals-H\\/(?:margaret-morse|warren-sack)-final-[abc]\\.json$",
     "^docs\\/evals\\/runs\\/2026-07-16-feature-evals-composite-final-[ab]\\.json$",
     "^apps\\/www\\/next-env\\.d\\.ts$",
