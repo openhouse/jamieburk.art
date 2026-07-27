@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Select the East River photograph as a Layout C homepage candidate
 
-**Source commit:** `ac5466f07fe11f46a4db474529d292a687f11584`
-**Generation time:** 2026-07-26T21:31:54-04:00
+**Source commit:** `04379c9c62623970968d897a2ec35aa006fc4cae`
+**Generation time:** 2026-07-26T22:31:02-04:00
 **Source fingerprint:** `a60365c43bf2ec9820b71ac84b2385f6c58a081809677a270052b9b2bd6ba005`
 
 - [Layout C homepage East River curatorial proposal](../../evaluations/curatorial/layout-c-home-east-river-v1.md) - `resulted_in` (frontmatter)
