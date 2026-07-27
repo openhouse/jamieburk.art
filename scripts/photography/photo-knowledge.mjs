@@ -131,6 +131,7 @@ const candidateExclusions = [
   /^docs\/knowledge-bank\/_generated\//,
   /^reports\/photo-knowledge\//,
   /^evals\/photo-knowledge\/holdouts\//,
+  /^docs\/qa\/evals-H\/professor-candidate-receipt\.json$/,
   /^docs\/qa\/evals-H\/(?:margaret-morse|warren-sack)-final-[abc]\.json$/,
   /^docs\/evals\/runs\/2026-07-16-feature-evals-composite-final-[ab]\.json$/,
   /^apps\/www\/next-env\.d\.ts$/,
