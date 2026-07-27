@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-27T01:35:29.062Z",
-  "baseUrl": "http://localhost:3045",
-  "publicSurfaceFingerprint": "ca13cbc344f24b89bf56265ab9c2938f5120388496b7ebb79e8403a6f62eb4fc",
+  "checkedAt": "2026-07-27T01:58:48.465Z",
+  "baseUrl": "http://127.0.0.1:3045",
+  "publicSurfaceFingerprint": "8be191e5d04214d3a2e71190ca3ed4f2984c5a9011cce4316d221e77a68182ac",
   "publicSurfaceFileCount": 119,
   "publicSurfaceScope": [
     "apps/www/** except generated apps/www/next-env.d.ts",

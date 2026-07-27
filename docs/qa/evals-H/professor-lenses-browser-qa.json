@@ -1,10 +1,10 @@
 {
   "reportVersion": 2,
-  "checkedAt": "2026-07-27T01:33:36.429Z",
-  "sourceCommit": "ac5466f07fe11f46a4db474529d292a687f11584",
-  "publicSurfaceFingerprint": "ca13cbc344f24b89bf56265ab9c2938f5120388496b7ebb79e8403a6f62eb4fc",
+  "checkedAt": "2026-07-27T01:58:53.741Z",
+  "sourceCommit": "ac130347c0aa89f4a36f787a3258e07950babcf4",
+  "publicSurfaceFingerprint": "8be191e5d04214d3a2e71190ca3ed4f2984c5a9011cce4316d221e77a68182ac",
   "publicSurfaceFileCount": 119,
-  "baseUrl": "http://localhost:3045",
+  "baseUrl": "http://127.0.0.1:3045",
   "route": "/about",
   "homepageAboutLink": {
     "visible": true,
@@ -12,9 +12,11 @@
   },
   "contentAssertions": {
     "throughLineHeading": "Systems people can inhabit",
-    "relationshipRows": 5,
-    "interfaceAndUseRows": 5,
-    "learningAndContinuityRows": 5,
+    "relationshipRows": 6,
+    "modelRows": 6,
+    "interfaceAndUseRows": 6,
+    "learningAndContinuityRows": 6,
+    "currentPracticeRows": 3,
     "publicOpenHouseSourceLinks": 1
   },
   "viewports": [

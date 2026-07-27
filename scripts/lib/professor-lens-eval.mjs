@@ -178,6 +178,10 @@ export function evaluateProfessorLenses({
     path.join(repoRoot, "docs/qa/evals-H/responsive-route-matrix.json"),
     "utf8"
   ));
+  const professorBrowserEvidence = JSON.parse(readFileSync(
+    path.join(repoRoot, "docs/qa/evals-H/professor-lenses-browser-qa.json"),
+    "utf8"
+  ));
   const photoCandidateReceipt = JSON.parse(readFileSync(
     path.join(repoRoot, "reports/photo-knowledge/candidate.json"),
     "utf8"
@@ -259,6 +263,21 @@ export function evaluateProfessorLenses({
       relationshipRows >= 6 && interfaceRows >= 6 && learningRows >= 6 &&
         currentRows >= 3,
       `${relationshipRows} relationship rows; ${interfaceRows} interface-and-use rows; ${learningRows} learning-and-continuity rows; ${currentRows} current-practice rows.`
+    ),
+    criterion(
+      "rendered-current-systems-trace",
+      "Candidate-bound browser evidence confirms six complete loops, three current-practice labels, and a usable two-click About surface.",
+      professorBrowserEvidence.passed === true &&
+        professorBrowserEvidence.publicSurfaceFingerprint ===
+          responsiveEvidence.publicSurfaceFingerprint &&
+        professorBrowserEvidence.homepageAboutLink?.visible === true &&
+        professorBrowserEvidence.homepageAboutLink?.href === "/about" &&
+        professorBrowserEvidence.contentAssertions?.relationshipRows === 6 &&
+        professorBrowserEvidence.contentAssertions?.modelRows === 6 &&
+        professorBrowserEvidence.contentAssertions?.interfaceAndUseRows === 6 &&
+        professorBrowserEvidence.contentAssertions?.learningAndContinuityRows === 6 &&
+        professorBrowserEvidence.contentAssertions?.currentPracticeRows === 3,
+      "Candidate-bound desktop and mobile browser trace checked."
     ),
     criterion(
       "open-house-boundary",

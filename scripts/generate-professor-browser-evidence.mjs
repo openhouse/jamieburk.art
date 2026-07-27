@@ -82,6 +82,10 @@ try {
         [...document.querySelectorAll("strong")].filter((node) =>
           node.textContent?.includes("Relationships:")
         ).length,
+      modelRows:
+        [...document.querySelectorAll("strong")].filter((node) =>
+          node.textContent?.includes("Model:")
+        ).length,
       interfaceAndUseRows:
         [...document.querySelectorAll("strong")].filter((node) =>
           node.textContent?.includes("Interface and use:")
@@ -89,6 +93,10 @@ try {
       learningAndContinuityRows:
         [...document.querySelectorAll("strong")].filter((node) =>
           node.textContent?.includes("Learning and continuity:")
+        ).length,
+      currentPracticeRows:
+        [...document.querySelectorAll("strong")].filter((node) =>
+          node.textContent?.includes("Current practice:")
         ).length,
       publicOpenHouseSourceLinks:
         [...document.querySelectorAll("a")].filter((link) =>
@@ -148,9 +156,11 @@ const report = {
     homepageAboutLink?.visible === true &&
     homepageAboutLink?.href === "/about" &&
     contentAssertions?.throughLineHeading === "Systems people can inhabit" &&
-    contentAssertions?.relationshipRows === 5 &&
-    contentAssertions?.interfaceAndUseRows === 5 &&
-    contentAssertions?.learningAndContinuityRows === 5 &&
+    contentAssertions?.relationshipRows === 6 &&
+    contentAssertions?.modelRows === 6 &&
+    contentAssertions?.interfaceAndUseRows === 6 &&
+    contentAssertions?.learningAndContinuityRows === 6 &&
+    contentAssertions?.currentPracticeRows === 3 &&
     contentAssertions?.publicOpenHouseSourceLinks >= 1 &&
     observations.every((entry) =>
       entry.homepageStatus >= 200 &&
