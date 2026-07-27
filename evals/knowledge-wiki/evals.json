@@ -221,12 +221,15 @@
         "photo_caption_credit_rendered",
         "photo_recollection_nonpublishing",
         "photo_inquiry_avoids_photo_counting",
+        "photo_callnyc_oral_history_default_closed",
+        "photo_first_field_close_reading_bounded",
         "photo_curatorial_authority_advisory",
         "photo_protected_absence_first_class",
         "photo_public_boundary_clean",
         "photo_introduced_history_boundary_clean",
         "photo_historical_revocation_monotonic",
         "photo_revocation_fails_closed",
+        "photo_authority_registry_bounded",
         "photo_commands_wired",
         "photo_human_gates_open"
       ]
