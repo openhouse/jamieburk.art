@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Frozen Knowledge Wiki branch C
 
-**Source commit:** `7b236c87dd6046015857e1aea1d70fc6921dc18c`
-**Generation time:** 2026-07-26T23:42:37-04:00
-**Source fingerprint:** `3287f59c330c386c0a9d2f021656cc3cc94a4948e246e4407085ec225a329ae6`
+**Source commit:** `7104874181485db255c8a266b0ccfd9d928c3377`
+**Generation time:** 2026-07-27T00:03:39-04:00
+**Source fingerprint:** `3a1f14c08d0ee0a0644417b1cd43ca0c1ec46033d0f3d4c925e490f5d07309b5`
 
 - [Outcomes, Adoption, and Afterlives](../../indexes/outcomes-adoption-and-afterlives.md) - `informed_by` (frontmatter)
 - [Research Agenda and Held Claims](../../indexes/research-agenda-and-held-claims.md) - `informed_by` (frontmatter)
