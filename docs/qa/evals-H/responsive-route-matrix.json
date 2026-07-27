@@ -1,8 +1,8 @@
 {
-  "reportVersion": 2,
-  "checkedAt": "2026-07-27T04:05:36.202Z",
+  "reportVersion": 3,
+  "checkedAt": "2026-07-27T04:21:25.507Z",
   "baseUrl": "http://127.0.0.1:3044",
-  "publicSurfaceFingerprint": "191057b499d3ac1c556cf50b7382b3aef034b768b9d3e9073b6f669775a4024f",
+  "publicSurfaceFingerprint": "2840ff8e687f5d83f21a28e92170b29eb23e3e3c4225589514fbacd988131676",
   "publicSurfaceFileCount": 122,
   "publicSurfaceScope": [
     "apps/www/**",
@@ -56,6 +56,48 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.home.east-river",
+          "visible": true,
+          "text": "TECHNICAL PROJECT MANAGER - PRODUCT OPERATIONS & IMPLEMENTATION Jamie Burkart I create operating structure for complex public-facing teams. View selected work View resume Contact Jamie At the East River beneath the Manhattan Bridge, 2022. Photograph by Elana Gordon. From Jamie Burkart's photo archive. The photograph documents a setting; it does not by itself prove authorship, impact, endorsement, or permission for reuse."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+          "visible": true,
+          "text": "FULL CASE STUDY PUBLIC-SAFE NYC Artist Coalition / FairRentNYC Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization As a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability. What became usable Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory. Civic Technology Knowledge Systems Documentation Product Operations A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+          "visible": true,
+          "text": "SHORT PROOF PAGE SUMMARY-ONLY 196 Artists Residency / Sunday Dinner Hosting, onboarding, facilitation, and continuity systems Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists. What became usable Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs. Community Systems Documentation Implementation Knowledge Systems Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.raft-in-fog",
+          "visible": true,
+          "text": "The waterways project raft held at the bank in fog: a social and technical container made for a journey with other people. Photographer not yet confirmed. Jamie Burkart photo archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.cabaret-law-hearing",
+          "visible": true,
+          "text": "Attendees face the Council panel during the public hearing on repealing the Cabaret Law, September 2017. Photographer not yet confirmed. Jamie Burkart photo archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.dcla-listening-room",
+          "visible": true,
+          "text": "A participant speaks while the room listens at a Department of Cultural Affairs meeting with DIY and alternative cultural-space communities, January 2017. Photographer not yet confirmed. NYC Artist Coalition archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
       "failedRequests": []
     },
@@ -76,6 +118,28 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.nightlife-town-hall",
+          "visible": true,
+          "text": "A speaker addresses a packed Night Mayor town hall in a small cultural space, October 2017. Photographer not yet confirmed. NYC Artist Coalition photo archive. These photographs document public or project settings. A displayed image does not by itself establish sole authorship, attendance, impact, endorsement, or permission for reuse outside this portfolio. Jamie approved this bounded branch trial; final production rights, credit, and represented-person care and consent review remain open."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "SHORT PROOF PAGE PUBLIC-SAFE KC Town Hall LLC Adaptive reuse planning and public-benefit documentation Co-founded and project-managed adaptive-reuse planning and public-benefit documentation for a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund. What became usable A coordinated mixed-use proposal, first-phase scope, neighborhood-listening process, public-benefit documentation, and municipal-review package for an adaptive-reuse effort. Implementation Documentation Knowledge Systems Public-Facing Tools Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.fair-rent-rally",
+          "visible": true,
+          "text": "FULL CASE STUDY PUBLIC-SAFE NYC Artist Coalition / FairRentNYC Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization As a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability. What became usable Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory. Civic Technology Knowledge Systems Documentation Product Operations A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+          "visible": true,
+          "text": "SHORT PROOF PAGE SUMMARY-ONLY 196 Artists Residency / Sunday Dinner Hosting, onboarding, facilitation, and continuity systems Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists. What became usable Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs. Community Systems Documentation Implementation Knowledge Systems Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive. Read case study"
+        }
+      ],
       "title": "Selected Work - Jamie Burkart",
       "failedRequests": []
     },
@@ -96,6 +160,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Technical Operations & Implementation - Jamie Burkart",
       "failedRequests": []
     },
@@ -116,6 +181,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Resume - Jamie Burkart",
       "failedRequests": []
     },
@@ -136,6 +202,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.about.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "About - Jamie Burkart",
       "failedRequests": []
     },
@@ -156,6 +229,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Contact - Jamie Burkart",
       "failedRequests": []
     },
@@ -176,6 +250,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Colophon - Jamie Burkart",
       "failedRequests": []
     },
@@ -196,6 +271,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Source-Backed Team Memory - Jamie Burkart",
       "failedRequests": []
     },
@@ -216,6 +292,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Harry J. Epstein Company - Jamie Burkart",
       "failedRequests": []
     },
@@ -236,6 +313,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.fair-rent-rally",
+          "visible": true,
+          "text": "A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive."
+        }
+      ],
       "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
       "failedRequests": []
     },
@@ -256,6 +340,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "CallNYC.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -276,6 +361,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "WOWList.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -296,6 +382,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
       "failedRequests": []
     },
@@ -316,6 +409,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive."
+        }
+      ],
       "title": "KC Town Hall LLC - Jamie Burkart",
       "failedRequests": []
     },
@@ -342,6 +442,48 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.home.east-river",
+          "visible": true,
+          "text": "TECHNICAL PROJECT MANAGER - PRODUCT OPERATIONS & IMPLEMENTATION Jamie Burkart I create operating structure for complex public-facing teams. View selected work View resume Contact Jamie At the East River beneath the Manhattan Bridge, 2022. Photograph by Elana Gordon. From Jamie Burkart's photo archive. The photograph documents a setting; it does not by itself prove authorship, impact, endorsement, or permission for reuse."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+          "visible": true,
+          "text": "FULL CASE STUDY PUBLIC-SAFE NYC Artist Coalition / FairRentNYC Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization As a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability. What became usable Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory. Civic Technology Knowledge Systems Documentation Product Operations A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+          "visible": true,
+          "text": "SHORT PROOF PAGE SUMMARY-ONLY 196 Artists Residency / Sunday Dinner Hosting, onboarding, facilitation, and continuity systems Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists. What became usable Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs. Community Systems Documentation Implementation Knowledge Systems Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.raft-in-fog",
+          "visible": true,
+          "text": "The waterways project raft held at the bank in fog: a social and technical container made for a journey with other people. Photographer not yet confirmed. Jamie Burkart photo archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.cabaret-law-hearing",
+          "visible": true,
+          "text": "Attendees face the Council panel during the public hearing on repealing the Cabaret Law, September 2017. Photographer not yet confirmed. Jamie Burkart photo archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.dcla-listening-room",
+          "visible": true,
+          "text": "A participant speaks while the room listens at a Department of Cultural Affairs meeting with DIY and alternative cultural-space communities, January 2017. Photographer not yet confirmed. NYC Artist Coalition archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
       "failedRequests": []
     },
@@ -362,6 +504,28 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.nightlife-town-hall",
+          "visible": true,
+          "text": "A speaker addresses a packed Night Mayor town hall in a small cultural space, October 2017. Photographer not yet confirmed. NYC Artist Coalition photo archive. These photographs document public or project settings. A displayed image does not by itself establish sole authorship, attendance, impact, endorsement, or permission for reuse outside this portfolio. Jamie approved this bounded branch trial; final production rights, credit, and represented-person care and consent review remain open."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "SHORT PROOF PAGE PUBLIC-SAFE KC Town Hall LLC Adaptive reuse planning and public-benefit documentation Co-founded and project-managed adaptive-reuse planning and public-benefit documentation for a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund. What became usable A coordinated mixed-use proposal, first-phase scope, neighborhood-listening process, public-benefit documentation, and municipal-review package for an adaptive-reuse effort. Implementation Documentation Knowledge Systems Public-Facing Tools Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.fair-rent-rally",
+          "visible": true,
+          "text": "FULL CASE STUDY PUBLIC-SAFE NYC Artist Coalition / FairRentNYC Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization As a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability. What became usable Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory. Civic Technology Knowledge Systems Documentation Product Operations A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+          "visible": true,
+          "text": "SHORT PROOF PAGE SUMMARY-ONLY 196 Artists Residency / Sunday Dinner Hosting, onboarding, facilitation, and continuity systems Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists. What became usable Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs. Community Systems Documentation Implementation Knowledge Systems Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive. Read case study"
+        }
+      ],
       "title": "Selected Work - Jamie Burkart",
       "failedRequests": []
     },
@@ -382,6 +546,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Technical Operations & Implementation - Jamie Burkart",
       "failedRequests": []
     },
@@ -402,6 +567,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Resume - Jamie Burkart",
       "failedRequests": []
     },
@@ -422,6 +588,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.about.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "About - Jamie Burkart",
       "failedRequests": []
     },
@@ -442,6 +615,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Contact - Jamie Burkart",
       "failedRequests": []
     },
@@ -462,6 +636,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Colophon - Jamie Burkart",
       "failedRequests": []
     },
@@ -482,6 +657,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Source-Backed Team Memory - Jamie Burkart",
       "failedRequests": []
     },
@@ -502,6 +678,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Harry J. Epstein Company - Jamie Burkart",
       "failedRequests": []
     },
@@ -522,6 +699,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.fair-rent-rally",
+          "visible": true,
+          "text": "A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive."
+        }
+      ],
       "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
       "failedRequests": []
     },
@@ -542,6 +726,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "CallNYC.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -562,6 +747,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "WOWList.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -582,6 +768,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
       "failedRequests": []
     },
@@ -602,6 +795,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive."
+        }
+      ],
       "title": "KC Town Hall LLC - Jamie Burkart",
       "failedRequests": []
     },
@@ -628,6 +828,48 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.home.east-river",
+          "visible": true,
+          "text": "TECHNICAL PROJECT MANAGER - PRODUCT OPERATIONS & IMPLEMENTATION Jamie Burkart I create operating structure for complex public-facing teams. I help teams turn ambiguous, stakeholder-heavy work into usable systems: requirements, workflows, documentation, decision trails, launch support, onboarding, and durable handoffs. View selected work View resume Contact Jamie Brooklyn, NY / Civic technology / Product operations / Knowledge systems / Public-facing tools At the East River beneath the Manhattan Bridge, 2022. Photograph by Elana Gordon. From Jamie Burkart's photo archive. The photograph documents a setting; it does not by itself prove authorship, impact, endorsement, or permission for reuse."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+          "visible": true,
+          "text": "FULL CASE STUDY PUBLIC-SAFE NYC Artist Coalition / FairRentNYC Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization As a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability. What became usable Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory. Civic Technology Knowledge Systems Documentation Product Operations A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+          "visible": true,
+          "text": "SHORT PROOF PAGE SUMMARY-ONLY 196 Artists Residency / Sunday Dinner Hosting, onboarding, facilitation, and continuity systems Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists. What became usable Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs. Community Systems Documentation Implementation Knowledge Systems Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.raft-in-fog",
+          "visible": true,
+          "text": "The waterways project raft held at the bank in fog: a social and technical container made for a journey with other people. Photographer not yet confirmed. Jamie Burkart photo archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.cabaret-law-hearing",
+          "visible": true,
+          "text": "Attendees face the Council panel during the public hearing on repealing the Cabaret Law, September 2017. Photographer not yet confirmed. Jamie Burkart photo archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.dcla-listening-room",
+          "visible": true,
+          "text": "A participant speaks while the room listens at a Department of Cultural Affairs meeting with DIY and alternative cultural-space communities, January 2017. Photographer not yet confirmed. NYC Artist Coalition archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
       "failedRequests": []
     },
@@ -648,6 +890,28 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.nightlife-town-hall",
+          "visible": true,
+          "text": "A speaker addresses a packed Night Mayor town hall in a small cultural space, October 2017. Photographer not yet confirmed. NYC Artist Coalition photo archive. These photographs document public or project settings. A displayed image does not by itself establish sole authorship, attendance, impact, endorsement, or permission for reuse outside this portfolio. Jamie approved this bounded branch trial; final production rights, credit, and represented-person care and consent review remain open."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "SHORT PROOF PAGE PUBLIC-SAFE KC Town Hall LLC Adaptive reuse planning and public-benefit documentation Co-founded and project-managed adaptive-reuse planning and public-benefit documentation for a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund. What became usable A coordinated mixed-use proposal, first-phase scope, neighborhood-listening process, public-benefit documentation, and municipal-review package for an adaptive-reuse effort. Implementation Documentation Knowledge Systems Public-Facing Tools Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.fair-rent-rally",
+          "visible": true,
+          "text": "FULL CASE STUDY PUBLIC-SAFE NYC Artist Coalition / FairRentNYC Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization As a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability. What became usable Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory. Civic Technology Knowledge Systems Documentation Product Operations A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+          "visible": true,
+          "text": "SHORT PROOF PAGE SUMMARY-ONLY 196 Artists Residency / Sunday Dinner Hosting, onboarding, facilitation, and continuity systems Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists. What became usable Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs. Community Systems Documentation Implementation Knowledge Systems Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive. Read case study"
+        }
+      ],
       "title": "Selected Work - Jamie Burkart",
       "failedRequests": []
     },
@@ -668,6 +932,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Technical Operations & Implementation - Jamie Burkart",
       "failedRequests": []
     },
@@ -688,6 +953,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Resume - Jamie Burkart",
       "failedRequests": []
     },
@@ -708,6 +974,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.about.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "About - Jamie Burkart",
       "failedRequests": []
     },
@@ -728,6 +1001,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Contact - Jamie Burkart",
       "failedRequests": []
     },
@@ -748,6 +1022,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Colophon - Jamie Burkart",
       "failedRequests": []
     },
@@ -768,6 +1043,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Source-Backed Team Memory - Jamie Burkart",
       "failedRequests": []
     },
@@ -788,6 +1064,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Harry J. Epstein Company - Jamie Burkart",
       "failedRequests": []
     },
@@ -808,6 +1085,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.fair-rent-rally",
+          "visible": true,
+          "text": "A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive."
+        }
+      ],
       "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
       "failedRequests": []
     },
@@ -828,6 +1112,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "CallNYC.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -848,6 +1133,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "WOWList.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -868,6 +1154,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
       "failedRequests": []
     },
@@ -888,6 +1181,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive."
+        }
+      ],
       "title": "KC Town Hall LLC - Jamie Burkart",
       "failedRequests": []
     },
@@ -914,6 +1214,48 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.home.east-river",
+          "visible": true,
+          "text": "TECHNICAL PROJECT MANAGER - PRODUCT OPERATIONS & IMPLEMENTATION Jamie Burkart I create operating structure for complex public-facing teams. I help teams turn ambiguous, stakeholder-heavy work into usable systems: requirements, workflows, documentation, decision trails, launch support, onboarding, and durable handoffs. View selected work View resume Contact Jamie Brooklyn, NY / Civic technology / Product operations / Knowledge systems / Public-facing tools At the East River beneath the Manhattan Bridge, 2022. Photograph by Elana Gordon. From Jamie Burkart's photo archive. The photograph documents a setting; it does not by itself prove authorship, impact, endorsement, or permission for reuse."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home-work-card.fair-rent-rally",
+          "visible": true,
+          "text": "FULL CASE STUDY PUBLIC-SAFE NYC Artist Coalition / FairRentNYC Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization As a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability. What became usable Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory. Civic Technology Knowledge Systems Documentation Product Operations A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
+          "visible": true,
+          "text": "SHORT PROOF PAGE SUMMARY-ONLY 196 Artists Residency / Sunday Dinner Hosting, onboarding, facilitation, and continuity systems Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists. What became usable Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs. Community Systems Documentation Implementation Knowledge Systems Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.raft-in-fog",
+          "visible": true,
+          "text": "The waterways project raft held at the bank in fog: a social and technical container made for a journey with other people. Photographer not yet confirmed. Jamie Burkart photo archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.cabaret-law-hearing",
+          "visible": true,
+          "text": "Attendees face the Council panel during the public hearing on repealing the Cabaret Law, September 2017. Photographer not yet confirmed. Jamie Burkart photo archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.dcla-listening-room",
+          "visible": true,
+          "text": "A participant speaks while the room listens at a Department of Cultural Affairs meeting with DIY and alternative cultural-space communities, January 2017. Photographer not yet confirmed. NYC Artist Coalition archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.home.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
       "failedRequests": []
     },
@@ -934,6 +1276,28 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.nightlife-town-hall",
+          "visible": true,
+          "text": "A speaker addresses a packed Night Mayor town hall in a small cultural space, October 2017. Photographer not yet confirmed. NYC Artist Coalition photo archive. These photographs document public or project settings. A displayed image does not by itself establish sole authorship, attendance, impact, endorsement, or permission for reuse outside this portfolio. Jamie approved this bounded branch trial; final production rights, credit, and represented-person care and consent review remain open."
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "SHORT PROOF PAGE PUBLIC-SAFE KC Town Hall LLC Adaptive reuse planning and public-benefit documentation Co-founded and project-managed adaptive-reuse planning and public-benefit documentation for a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund. What became usable A coordinated mixed-use proposal, first-phase scope, neighborhood-listening process, public-benefit documentation, and municipal-review package for an adaptive-reuse effort. Implementation Documentation Knowledge Systems Public-Facing Tools Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.fair-rent-rally",
+          "visible": true,
+          "text": "FULL CASE STUDY PUBLIC-SAFE NYC Artist Coalition / FairRentNYC Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization As a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability. What became usable Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory. Civic Technology Knowledge Systems Documentation Product Operations A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive. Read case study"
+        },
+        {
+          "occurrenceId": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
+          "visible": true,
+          "text": "SHORT PROOF PAGE SUMMARY-ONLY 196 Artists Residency / Sunday Dinner Hosting, onboarding, facilitation, and continuity systems Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists. What became usable Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs. Community Systems Documentation Implementation Knowledge Systems Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive. Read case study"
+        }
+      ],
       "title": "Selected Work - Jamie Burkart",
       "failedRequests": []
     },
@@ -954,6 +1318,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Technical Operations & Implementation - Jamie Burkart",
       "failedRequests": []
     },
@@ -974,6 +1339,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Resume - Jamie Burkart",
       "failedRequests": []
     },
@@ -994,6 +1360,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.about.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "About - Jamie Burkart",
       "failedRequests": []
     },
@@ -1014,6 +1387,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Contact - Jamie Burkart",
       "failedRequests": []
     },
@@ -1034,6 +1408,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Colophon - Jamie Burkart",
       "failedRequests": []
     },
@@ -1054,6 +1429,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Source-Backed Team Memory - Jamie Burkart",
       "failedRequests": []
     },
@@ -1074,6 +1450,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "Harry J. Epstein Company - Jamie Burkart",
       "failedRequests": []
     },
@@ -1094,6 +1471,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.fair-rent-rally",
+          "visible": true,
+          "text": "A speaker addresses a Commercial Rent Stabilization rally on the steps of City Hall, November 2019. Photographer not yet confirmed. NYC Artist Coalition photo archive."
+        }
+      ],
       "title": "NYC Artist Coalition / FairRentNYC - Jamie Burkart",
       "failedRequests": []
     },
@@ -1114,6 +1498,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "CallNYC.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -1134,6 +1519,7 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [],
       "title": "WOWList.org - Jamie Burkart",
       "failedRequests": []
     },
@@ -1154,6 +1540,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.sunday-dinner-preparation",
+          "visible": true,
+          "text": "Preparing food at 196, where hospitality supported a recurring participation practice. Photographer not yet confirmed. Jamie Burkart photo archive."
+        }
+      ],
       "title": "196 Artists Residency / Sunday Dinner - Jamie Burkart",
       "failedRequests": []
     },
@@ -1174,6 +1567,13 @@
       "mainPresent": true,
       "brokenImagesAfterScroll": 0,
       "unlabeledImages": 0,
+      "photoOccurrences": [
+        {
+          "occurrenceId": "projection.photo.layout-d.work.kc-town-hall-collaborator",
+          "visible": true,
+          "text": "Jamie and a project collaborator pause inside KC Town Hall during restoration work. Photographer not yet confirmed. KC Town Hall project archive."
+        }
+      ],
       "title": "KC Town Hall LLC - Jamie Burkart",
       "failedRequests": []
     }
@@ -1191,6 +1591,10 @@
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "invalidHomepageFirstViewportRows": 0,
+    "photoOccurrenceRows": 64,
+    "hiddenPhotoOccurrences": 0,
+    "governedPhotoTextMismatches": 0,
+    "duplicatePhotoCreditPunctuation": 0,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   }
