@@ -357,10 +357,10 @@ export function evaluatePhotographyNotebook(options = {}) {
   const oralHistoryPromptBounded =
     /one photograph from the previously verified private editorial\s+field was selected for attention/i.test(oralHistorySource) &&
     /is visible to Jamie in the working\s+conversation but is not stored in this repository/i.test(oralHistorySource) &&
-    /Private archive context provisionally associates the scene with KC Town Hall/i.test(oralHistorySource) &&
-    /association is a retrieval hypothesis,\s+not a conclusion established by the photograph/i.test(oralHistorySource) &&
-    /Oral history: requested, not yet received/i.test(oralHistorySource) &&
-    /Claim state: none created/i.test(oralHistorySource) &&
+    /Jamie subsequently supplied a protected oral history/i.test(oralHistorySource) &&
+    /remain first-person research leads, not conclusions\s+established by the photograph/i.test(oralHistorySource) &&
+    /Oral history: received; protected; public-safe capsule created/i.test(oralHistorySource) &&
+    /Claim state: none automatically created/i.test(oralHistorySource) &&
     /Public image: not added/i.test(oralHistorySource);
 
   const oralHistoryIntakeCannotAutoPromote =

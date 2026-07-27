@@ -41,6 +41,22 @@ relations:
   - type: uses_method
     target: method.photography-east-river-canary
     href: ../workflows/photography-east-river-canary.md
+  - type: related_to
+    target: index.photo-set.nycac-dcla-formation.2017
+    href: photo-sets/nycac-dcla-formation-2017.md
+    context: Held meeting photograph, event identity, and protected formation-source return.
+  - type: related_to
+    target: index.photo-set.kc-town-hall-fieldwork
+    href: photo-sets/kc-town-hall-fieldwork.md
+    context: Held worksite photographs, protected oral histories, local records, proposal, and one cleared map derivative.
+  - type: has_asset
+    target: asset.photo.nyc-council.field-kit.2026.001
+    href: ../assets/photographs/nyc-council-field-kit-2026.md
+    context: Current civic fieldwork photograph held while photographer permission remains open.
+  - type: related_to
+    target: research.photographic-source-return.2026-07-26
+    href: ../research-runs/photographic-source-return-2026-07-26.md
+    context: Dated return to supplied photographs, oral histories, proposal, connected archives, local records, and the live Photos capability boundary.
 ---
 
 # Photography knowledge loop
@@ -91,3 +107,16 @@ homepage.
 Passing automation cannot grant rights, consent, dignity clearance, production
 publication, or indexing approval. See [RFC 0003](../../../rfcs/0003-living-photographic-knowledge-loop.md)
 for the complete design and staged rollout.
+
+## July 26 source return
+
+The [DCLA formation set](photo-sets/nycac-dcla-formation-2017.md) and
+[KC Town Hall fieldwork set](photo-sets/kc-town-hall-fieldwork.md) extend the
+canary into governed clusters. Cluster membership improves retrieval; it does
+not turn related frames, recollections, or occurrences into independent proof.
+
+Four new photograph records remain held. One public-safe
+[proposal-map derivative](../assets/graphics/kc-town-hall-walkshed-2019.md)
+is cleared for staging-candidate use. See the
+[source-return record](../research-runs/photographic-source-return-2026-07-26.md)
+for the research, privacy, and Apple Photos capability boundaries.

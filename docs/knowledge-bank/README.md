@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-22
+last_reviewed: 2026-07-26
 review_by: 2027-01-18
 aliases:
   - Knowledge Bank
@@ -67,7 +67,7 @@ Protected source material remains outside the repository.
 The repo is public. Do not put anything here that would be unsafe, unfair, too
 private, or too hard to defend if quoted in a newspaper.
 
-The website is a projection of this bank. The bank can hold more structure than
+The website is a projection of this Wiki. The Wiki can hold more structure than
 the site shows: canonical claim language, evidence posture, source-basis
 categories, public-use guidance, guardrails, projection surfaces, and explicit
 non-public boundaries.
@@ -118,7 +118,7 @@ links, search stable IDs, use Find All References when needed, and run
 
 ## Purpose
 
-The knowledge bank exists to:
+The Knowledge Wiki exists to:
 
 - preserve strong, defensible professional claims;
 - keep public site copy grounded in evidence;
@@ -134,7 +134,7 @@ The knowledge bank exists to:
 
 ## Publication Model
 
-- **Knowledge bank:** public-safe repository layer for defensible claims,
+- **Knowledge Wiki:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
 - **Intake and observations:** lossless public-safe capture and proposition-level
   source reading in `historical-knowledge.ts`.
@@ -158,7 +158,7 @@ detail.
 
 ## Projection Rule
 
-The site should project from this bank, not mirror it.
+The site should project from this Wiki, not mirror it.
 
 For hiring pages, prefer role-fit claims: requirements, workflow mapping,
 documentation architecture, source-backed memory, implementation support,

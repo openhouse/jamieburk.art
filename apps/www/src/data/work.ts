@@ -66,7 +66,8 @@ const workMetaSchema = z.object({
           alt: z.string(),
           caption: z.string(),
           href: z.string(),
-          sourceLabel: z.string()
+          sourceLabel: z.string(),
+          fit: z.enum(["cover", "contain"]).optional()
         })
         .optional()
     })
@@ -523,7 +524,7 @@ const workItemsInput = [
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund.",
-    role: "Project Planning & Documentation Support",
+    role: "Co-founder & Project Manager",
     years: "2019-2024 public record",
     status: "Short proof page",
     featured: false,
@@ -537,8 +538,23 @@ const workItemsInput = [
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
       "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+    artifactTypes: ["map", "guide", "source map", "template"],
     artifacts: [
+      {
+        title: "Ten-minute-walk proposal map",
+        description:
+          "A neighborhood-scale planning graphic from the 2019 proposal, presented here as a public-safe crop with obsolete contact details removed.",
+        type: "map",
+        media: {
+          src: "/images/artifacts/kc-town-hall-walkshed.webp",
+          alt: "KC Town Hall proposal map showing a ten-minute walking area around the project location.",
+          caption:
+            "The map made a proposed neighborhood-scale constituency visible. It documents a planning frame, not a completed program or outcome.",
+          href: "/images/artifacts/kc-town-hall-walkshed.webp",
+          sourceLabel: "proposal map",
+          fit: "contain"
+        }
+      },
       {
         title: "Public-benefit documentation set",
         description:

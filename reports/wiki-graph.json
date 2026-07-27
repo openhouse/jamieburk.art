@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T18:29:46-04:00",
   "sourceCommit": "fe545c97e68ba49276a043f15c2b1dec876cfd33",
-  "sourceFingerprint": "25cf73ddcfbc40d67e5de66efe82550c19a0eef64a42bca65d14ec6bf16186cd",
+  "sourceFingerprint": "8a23ea6c4ab5118573aa63c128ca2fb39d551f7f76e9f96219017341aea79e2f",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -17,6 +17,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "path": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "title": "KC Town Hall ten-minute-walk proposal map",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe derivative of a 2019 proposal map showing the ten-minute walking area around KC Town Hall, cropped to remove obsolete contact details.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
     },
     {
       "id": "asset.photo.digital-district.001",
@@ -43,6 +56,58 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.hard-hat.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-hard-hat-worksite.md",
+      "title": "Jamie at the KC Town Hall worksite",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Held hard-hat portrait that opens research into KC Town Hall site operations, trade coordination, craft learning, and neighborhood listening.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-stewardship-interior.md",
+      "title": "Jamie and a collaborator inside KC Town Hall",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Held photograph of Jamie and a collaborator inside KC Town Hall that opens research into building stewardship, access systems, craft lineage, and project transition.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.nyc-council.field-kit.2026.001",
+      "path": "docs/knowledge-bank/assets/photographs/nyc-council-field-kit-2026.md",
+      "title": "Jamie with a civic field kit at New York City Council",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Held 2026 portrait of Jamie outside New York City Council hearing rooms carrying a clipboard and working materials connected to coalition participation and commercial-rent data research.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md",
+      "title": "DCLA listening room, January 2017",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Held photograph of a crowded DCLA listening meeting that opens research into NYC Artist Coalition formation while creator, dignity, identity, and publication rights remain unresolved.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
     },
     {
       "id": "capability.civic-cultural-technical-translation",
@@ -318,6 +383,21 @@
       "reviewBy": "2026-08-19"
     },
     {
+      "id": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "path": "docs/knowledge-bank/events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "title": "NYC DIY spaces meeting at the Department of Cultural Affairs",
+      "kind": "event",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe event record for the January 27, 2017 DCLA meeting that became a principal formation hinge for the continuing NYC Artist Coalition operating system.",
+      "aliases": [
+        "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting"
+      ],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "event.nycc.constituent-services-hackathon.2016",
       "path": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
       "title": "New York City Council constituent-services hackathon",
@@ -344,7 +424,7 @@
       "aliases": [
         "Knowledge Bank"
       ],
-      "lastReviewed": "2026-07-22",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-18"
     },
     {
@@ -593,6 +673,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "index.photo-set.kc-town-hall-fieldwork",
+      "path": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "title": "KC Town Hall fieldwork and proposal visual set",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Retrieval-oriented set connecting held worksite photographs, protected oral history, local digital records, the 2019 proposal, and one cleared map derivative.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "index.photo-set.nycac-dcla-formation.2017",
+      "path": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "title": "NYC Artist Coalition DCLA formation photo set",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Retrieval-oriented set joining one held meeting photograph to the event and protected formation source field without treating related records as additional proof.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
     },
     {
       "id": "method.collective-credit-protected-absence",
@@ -1166,7 +1272,7 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Governed prompt for inviting Jamie's recollection around one privately held photograph provisionally associated with KC Town Hall's later stewardship, while keeping recollection, corroborated fact, and publication separate.\n",
+      "summary": "Governed prompt and received-response disposition for one privately held KC Town Hall photograph, keeping recollection, corroborated fact, identity, rights, and publication separate.\n",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-26"
@@ -1235,6 +1341,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.photographic-source-return.2026-07-26",
+      "path": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
+      "title": "Photographic source return for DCLA, KC Town Hall, and Council fieldwork",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Dated source return that decomposed four supplied photographs, three oral-history accounts, a protected proposal, connected archive context, local project records, and an explicit Apple Photos capability gap.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
     },
     {
       "id": "source.callnyc.source-repository",
@@ -1415,8 +1534,34 @@
       "sensitivity": "high",
       "summary": "Metadata-only record of the 2019 proposal bundle documenting public-benefit intent, first-phase work, neighborhood support, listening commitments, project planning, and sensitive financial material.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.kc-town-hall.local-digital-archive.2026-07",
+      "path": "docs/knowledge-bank/sources/archives/kc-town-hall-local-digital-archive-2026-07.md",
+      "title": "KC Town Hall local digital archive review, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only review of retained KC Town Hall website, image, survey, geospatial, and parcel-analysis materials on Jamie's local system.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "title": "KC Town Hall photographic oral histories, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe capsule for two protected first-person oral histories prompted by KC Town Hall photographs and supplied as repaired, not audio-verified, working transcripts.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
     },
     {
       "id": "source.knowledge-wiki.branch-a.2026-07-19",
@@ -1495,6 +1640,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2027-01-19"
+    },
+    {
+      "id": "source.nyc-council.field-kit-oral-history.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/nyc-council-field-kit-oral-history-2026-07.md",
+      "title": "NYC Council field-kit photograph oral history, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe capsule for Jamie's first-person account of a 2026 photograph outside New York City Council hearing rooms with coalition field materials and a commercial-rent open-data proposal.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "source.nycac.dcla-formation-source-return.2026-07",
+      "path": "docs/knowledge-bank/sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "title": "NYC Artist Coalition DCLA formation source return, 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Protected-source capsule for an authenticated return to the 2017 DCLA meeting field across coalition records, connected archives, event captures, and supplied oral history.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
     },
     {
       "id": "source.nycac.nightlife-forum-transcript.2026",
@@ -1695,6 +1866,30 @@
       "context": null
     },
     {
+      "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
       "from": "asset.photo.digital-district.001",
       "type": "part_of",
       "to": "project.callnyc",
@@ -1740,6 +1935,94 @@
       "to": "source.photo-metadata.east-river.2022.public-safe",
       "source": "frontmatter",
       "href": "../../sources/photo-metadata/east-river-2022-public-safe.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.hard-hat.001",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.hard-hat.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.hard-hat.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.local-digital-archive.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/archives/kc-town-hall-local-digital-archive-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council.field-kit.2026.001",
+      "type": "related_to",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council.field-kit.2026.001",
+      "type": "uses_source",
+      "to": "source.nyc-council.field-kit-oral-history.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "type": "documents",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "source": "frontmatter",
+      "href": "../../events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "type": "related_to",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
       "context": null
     },
     {
@@ -2290,6 +2573,30 @@
       "to": "research.nycac.shared-folder.2026-07-19",
       "source": "frontmatter",
       "href": "../research-runs/nycac-shared-folder-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "type": "has_asset",
+      "to": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-dcla-listening-room-2017.md",
+      "context": "A held photograph documents the room while rights, dignity, identity, and exact credit remain open."
+    },
+    {
+      "from": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "The meeting became a principal formation hinge for the coalition's shared identity and continuing work."
+    },
+    {
+      "from": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
       "context": null
     },
     {
@@ -3086,6 +3393,14 @@
     },
     {
       "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
+      "to": "asset.photo.nyc-council.field-kit.2026.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nyc-council-field-kit-2026.md",
+      "context": "Current civic fieldwork photograph held while photographer permission remains open."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
       "type": "related_to",
       "to": "correction.photo.east-river-credit.2026-07",
       "source": "frontmatter",
@@ -3135,6 +3450,22 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "photo-sets/kc-town-hall-fieldwork.md",
+      "context": "Held worksite photographs, protected oral histories, local records, proposal, and one cleared map derivative."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "source": "frontmatter",
+      "href": "photo-sets/nycac-dcla-formation-2017.md",
+      "context": "Held meeting photograph, event identity, and protected formation-source return."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
       "to": "projection.photo.layout-c.home.east-river",
       "source": "frontmatter",
       "href": "../projections/photography/layout-c-home-east-river.md",
@@ -3147,6 +3478,14 @@
       "source": "frontmatter",
       "href": "../research-inquiries/documented-canoe-bike-journeys.md",
       "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "research.photographic-source-return.2026-07-26",
+      "source": "frontmatter",
+      "href": "../research-runs/photographic-source-return-2026-07-26.md",
+      "context": "Dated return to supplied photographs, oral histories, proposal, connected archives, local records, and the live Photos capability boundary."
     },
     {
       "from": "index.knowledge-wiki.photography",
@@ -3571,6 +3910,94 @@
       "source": "frontmatter",
       "href": "../../sources/recollections/jamie-canoe-commuting-2026-07.md",
       "context": "Later recollection about a recurring bicycle-canoe practice."
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "has_asset",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "source": "frontmatter",
+      "href": "../../assets/graphics/kc-town-hall-walkshed-2019.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.hard-hat.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-hard-hat-worksite.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-stewardship-interior.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.local-digital-archive.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/archives/kc-town-hall-local-digital-archive-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "type": "has_asset",
+      "to": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-dcla-listening-room-2017.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "type": "related_to",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "source": "frontmatter",
+      "href": "../../events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "context": null
     },
     {
       "from": "method.collective-credit-protected-absence",
@@ -4627,6 +5054,14 @@
     {
       "from": "project.kc-town-hall",
       "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": "Governed visual and oral-history field with held photographs and one cleared proposal-map derivative."
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "related_to",
       "to": "person.jamie-burkart",
       "source": "frontmatter",
       "href": "../people/jamie-burkart.md",
@@ -4727,6 +5162,14 @@
       "source": "frontmatter",
       "href": "../evaluations/nycac-shared-folder-production-2026-07-19.md",
       "context": "Deterministic coverage, leakage, credit, and projection criteria."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "source": "frontmatter",
+      "href": "../events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "context": "Public-safe event record for the agency-hosted meeting and the coalition continuity built around it."
     },
     {
       "from": "project.nyc-artist-coalition",
@@ -5011,6 +5454,14 @@
     {
       "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
       "type": "related_to",
+      "to": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-stewardship-interior.md",
+      "context": "The exact photograph now has a held first-class asset record."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
       "to": "index.knowledge-wiki.living-archive",
       "source": "frontmatter",
       "href": "../../indexes/living-archive.md",
@@ -5039,6 +5490,14 @@
       "source": "frontmatter",
       "href": "field-corpus-001.md",
       "context": "The photograph was encountered through the completed private field and its editor-ready proposal."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": "A protected first-person response was received and decomposed into public-safe research questions."
     },
     {
       "from": "research-inquiry.ucsc-installation-title",
@@ -5345,6 +5804,70 @@
       "context": null
     },
     {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "has_asset",
+      "to": "asset.photo.nyc-council.field-kit.2026.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nyc-council-field-kit-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "related_to",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "source": "frontmatter",
+      "href": "../indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.local-digital-archive.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/archives/kc-town-hall-local-digital-archive-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.nyc-council.field-kit-oral-history.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "context": null
+    },
+    {
       "from": "source.callnyc.source-repository",
       "type": "documents",
       "to": "project.callnyc",
@@ -5483,9 +6006,57 @@
     {
       "from": "source.kc-town-hall.cced-proposal.2019",
       "type": "related_to",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "source": "frontmatter",
+      "href": "../assets/graphics/kc-town-hall-walkshed-2019.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.cced-proposal.2019",
+      "type": "related_to",
       "to": "decision.kc-town-hall.listening-fieldwork",
       "source": "frontmatter",
       "href": "../decisions/kc-town-hall-listening-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.local-digital-archive.2026-07",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.local-digital-archive.2026-07",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.hard-hat.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-hard-hat-worksite.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-stewardship-interior.md",
       "context": null
     },
     {
@@ -5534,6 +6105,46 @@
       "to": "project.nter-chng",
       "source": "frontmatter",
       "href": "../projects/nter-chng.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-council.field-kit-oral-history.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.nyc-council.field-kit.2026.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nyc-council-field-kit-2026.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-council.field-kit-oral-history.2026-07",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-formation-source-return.2026-07",
+      "type": "documents",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "source": "frontmatter",
+      "href": "../../events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-formation-source-return.2026-07",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-formation-source-return.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-dcla-listening-room-2017.md",
       "context": null
     },
     {
@@ -6183,6 +6794,15 @@
       "fragment": null,
       "line": 64,
       "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "toPath": "apps/www/public/images/artifacts/kc-town-hall-walkshed.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
     },
     {
       "fromPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
@@ -7013,6 +7633,33 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "toPath": "docs/knowledge-bank/events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "toPath": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md",
+      "to": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "toPath": "docs/knowledge-bank/sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
@@ -7145,6 +7792,42 @@
       "to": null,
       "fragment": null,
       "line": 48,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "fragment": null,
+      "line": 53,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "fragment": null,
+      "line": 54,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "fragment": null,
+      "line": 59,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
+      "to": "research.photographic-source-return.2026-07-26",
+      "fragment": null,
+      "line": 61,
       "kind": "link"
     },
     {

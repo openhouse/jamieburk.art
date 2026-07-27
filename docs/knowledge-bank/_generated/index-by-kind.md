@@ -3,7 +3,7 @@
 
 **Source commit:** `fe545c97e68ba49276a043f15c2b1dec876cfd33`
 **Generation time:** 2026-07-26T18:29:46-04:00
-**Source fingerprint:** `25cf73ddcfbc40d67e5de66efe82550c19a0eef64a42bca65d14ec6bf16186cd`
+**Source fingerprint:** `8a23ea6c4ab5118573aa63c128ca2fb39d551f7f76e9f96219017341aea79e2f`
 
 ## application
 
@@ -11,8 +11,13 @@
 
 ## asset
 
+- [KC Town Hall ten-minute-walk proposal map](../assets/graphics/kc-town-hall-walkshed-2019.md) - `asset.graphic.kc-town-hall.walkshed.2019.001`
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
 - [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) - `asset.photo.east-river-manhattan-bridge.2022.001`
+- [Jamie at the KC Town Hall worksite](../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `asset.photo.kc-town-hall.hard-hat.001`
+- [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
+- [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
+- [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
 
 ## capability
 
@@ -51,6 +56,7 @@
 
 ## event
 
+- [NYC DIY spaces meeting at the Department of Cultural Affairs](../events/nyc-diy-spaces-dcla-2017-01-27.md) - `event.nyc.dcla.diy-spaces-listening.2017-01-27`
 - [New York City Council constituent-services hackathon](../events/nycc-constituent-services-hackathon-2016.md) - `event.nycc.constituent-services-hackathon.2016`
 
 ## index
@@ -75,6 +81,8 @@
 - [Scenes and Places of Work](../indexes/scenes-and-places-of-work.md) - `index.knowledge-wiki.scenes-and-places-of-work`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
 - [East River canoe outing, 2022](../indexes/photo-sets/east-river-canoe-2022.md) - `index.photo-set.east-river-canoe.2022`
+- [KC Town Hall fieldwork and proposal visual set](../indexes/photo-sets/kc-town-hall-fieldwork.md) - `index.photo-set.kc-town-hall-fieldwork`
+- [NYC Artist Coalition DCLA formation photo set](../indexes/photo-sets/nycac-dcla-formation-2017.md) - `index.photo-set.nycac-dcla-formation.2017`
 
 ## method
 
@@ -151,6 +159,7 @@
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
+- [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../research-runs/photographic-source-return-2026-07-26.md) - `research.photographic-source-return.2026-07-26`
 
 ## source
 
@@ -168,12 +177,16 @@
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
 - [The Kansas City Star raft report, November 15, 2007](../sources/kansas-city-star-raft-2007-11-15.md) - `source.kansas-city-star.raft.2007-11-15`
 - [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
+- [KC Town Hall local digital archive review, July 2026](../sources/archives/kc-town-hall-local-digital-archive-2026-07.md) - `source.kc-town-hall.local-digital-archive.2026-07`
+- [KC Town Hall photographic oral histories, July 2026](../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md) - `source.kc-town-hall.photographic-oral-histories.2026-07`
 - [Frozen Knowledge Wiki branch A](../sources/knowledge-wiki-branch-a-2026-07-19.md) - `source.knowledge-wiki.branch-a.2026-07-19`
 - [Frozen Knowledge Wiki branch B](../sources/knowledge-wiki-branch-b-2026-07-19.md) - `source.knowledge-wiki.branch-b.2026-07-19`
 - [Frozen Knowledge Wiki branch C](../sources/knowledge-wiki-branch-c-2026-07-19.md) - `source.knowledge-wiki.branch-c.2026-07-19`
 - [Frozen Knowledge Wiki branch D](../sources/knowledge-wiki-branch-d-2026-07-19.md) - `source.knowledge-wiki.branch-d.2026-07-19`
 - [Frozen Knowledge Wiki branch E](../sources/knowledge-wiki-branch-e-2026-07-19.md) - `source.knowledge-wiki.branch-e.2026-07-19`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
+- [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
+- [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
 - [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`

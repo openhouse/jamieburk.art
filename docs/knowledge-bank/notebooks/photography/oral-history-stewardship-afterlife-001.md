@@ -9,9 +9,9 @@ last_reviewed: 2026-07-26
 review_by: 2026-08-26
 canonical_path: docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md
 summary: >
-  Governed prompt for inviting Jamie's recollection around one privately held
-  photograph provisionally associated with KC Town Hall's later stewardship,
-  while keeping recollection, corroborated fact, and publication separate.
+  Governed prompt and received-response disposition for one privately held KC
+  Town Hall photograph, keeping recollection, corroborated fact, identity,
+  rights, and publication separate.
 projection:
   status: hold
   surfaces: []
@@ -32,6 +32,14 @@ relations:
     target: index.knowledge-wiki.living-archive
     href: ../../indexes/living-archive.md
     context: The inquiry may help locate a public-safe stewardship-transition record without exposing protected personal context.
+  - type: uses_source
+    target: source.kc-town-hall.photographic-oral-histories.2026-07
+    href: ../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md
+    context: A protected first-person response was received and decomposed into public-safe research questions.
+  - type: related_to
+    target: asset.photo.kc-town-hall.stewardship-interior.001
+    href: ../../assets/photographs/kc-town-hall-stewardship-interior.md
+    context: The exact photograph now has a held first-class asset record.
 ---
 
 # Oral history prompt 001: Stewardship afterlife
@@ -47,9 +55,11 @@ brick interior. One wears a hard hat and holds a flashlight. The other carries
 keys and a portable light. A hand rests on a shoulder. Exposed wood, brick, and
 openings situate the encounter in a building under care or inspection.
 
-Private archive context provisionally associates the scene with KC Town Hall
-and a later phase of stewardship. That association is a retrieval hypothesis,
-not a conclusion established by the photograph.
+Jamie subsequently supplied a protected oral history that associates the scene
+with KC Town Hall, identifies the people and a possible creator, and recalls a
+building tour during a later stewardship period. Those identity, credit, date,
+and transition propositions remain first-person research leads, not conclusions
+established by the photograph.
 
 ## Why ask now
 
@@ -64,7 +74,7 @@ The useful question is not whether the photograph proves a success. It is what
 Jamie remembers that can guide a return to records, collaborator knowledge,
 and appropriately bounded public language.
 
-## Invitation to Jamie
+## Original invitation to Jamie
 
 Please respond in your own voice, as freely or briefly as feels right:
 
@@ -81,8 +91,28 @@ Please respond in your own voice, as freely or briefly as feels right:
 8. Who made the photograph, and whose permission would be needed before any
    portfolio use?
 
-Jamie may answer questions the prompt did not know to ask. Silence, uncertainty,
-correction, and refusal are valid responses.
+Jamie answered questions the prompt did not know to ask. Silence, uncertainty,
+correction, and refusal remain valid in any follow-up.
+
+## Received response
+
+A repaired working transcript was received on 2026-07-26. It remains in
+protected custody because it contains personal, relational, exact-location, and
+third-party context. A public-safe source capsule and held asset record preserve
+what the response opened without reproducing the raw account.
+
+The response expanded the inquiry toward:
+
+- access, keys, lighting, equipment, and site-operation systems;
+- geospatial site-selection and building-assessment tools;
+- masonry, roof, and structural repair;
+- craft teaching and collaborator lineages;
+- the intended use of the interior; and
+- the substance and boundaries of later stewardship.
+
+The source return also found retained geospatial and parcel-analysis code. Its
+dates and purpose do not yet prove that it is the earlier citywide
+site-selection system described in memory.
 
 ## Intake contract
 
@@ -111,10 +141,11 @@ contains no reconstructive locator.
 
 ## Current disposition
 
-- Oral history: requested, not yet received.
-- Claim state: none created.
+- Oral history: received; protected; public-safe capsule created.
+- Claim state: none automatically created.
 - Portfolio state: held.
 - Rights and consent: unresolved.
 - Public image: not added.
-- Next action: receive Jamie's account, then decide what requires corroboration,
-  collaborator review, protection, or no further action.
+- Next action: seek creator credit and permission, depicted-person review,
+  date evidence, collaborator corroboration, and transition records before any
+  stronger claim or public image is considered.

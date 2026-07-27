@@ -3,8 +3,9 @@
 
 **Source commit:** `fe545c97e68ba49276a043f15c2b1dec876cfd33`
 **Generation time:** 2026-07-26T18:29:46-04:00
-**Source fingerprint:** `25cf73ddcfbc40d67e5de66efe82550c19a0eef64a42bca65d14ec6bf16186cd`
+**Source fingerprint:** `8a23ea6c4ab5118573aa63c128ca2fb39d551f7f76e9f96219017341aea79e2f`
 
+- [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
