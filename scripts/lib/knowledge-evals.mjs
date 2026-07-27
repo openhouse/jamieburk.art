@@ -63,8 +63,9 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
   caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
   // Re-reviewed 2026-07-26 after the Technical Operations photograph gained
-  // exact occurrence identity. KC Town Hall wording and evidence bounds did not change.
-  sharedPublicSurfacesSha256: "ad333dc58d1d41a3530d5a24d7611c132fee8eaf0d94efd3cb18e8cc261e77f8",
+  // exact occurrence identity and direct resume/contact actions. KC Town Hall
+  // wording and evidence bounds did not change.
+  sharedPublicSurfacesSha256: "5d8a49edd428538ac335fb6e2169d63a5bc25acfc8b69a6fd1bb8995d2a3123d",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
