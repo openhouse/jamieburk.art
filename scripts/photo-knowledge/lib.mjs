@@ -442,7 +442,7 @@ function authorityRegistryPolicyBound(registry) {
     JSON.stringify(registry.policy.doesNotEstablish) ===
       JSON.stringify(authorityRegistryDenials) &&
     Array.isArray(registry.photos) &&
-    registry.photos.length > 0 &&
+    registry.photos.length === 1 &&
     new Set(registry.photos.map((entry) => entry.photoId)).size ===
       registry.photos.length &&
     registry.photos.every(

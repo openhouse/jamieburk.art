@@ -1303,6 +1303,19 @@ test("authority registry cannot grant publication authority", () => {
         gateReviewers: Object.fromEntries(
           restorationGates.map((gate) => [
             gate,
+            ["Alex Example"]
+          ])
+        )
+      });
+    },
+    (registry) => {
+      registry.photos.push({
+        ...structuredClone(registry.photos[0]),
+        photoId: "photo.kc-town-hall-before",
+        basisRecordIds: ["photo.kc-town-hall-before"],
+        gateReviewers: Object.fromEntries(
+          restorationGates.map((gate) => [
+            gate,
             ["Automated evaluator"]
           ])
         )
