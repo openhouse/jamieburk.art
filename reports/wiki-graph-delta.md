@@ -3,19 +3,20 @@
 
 **Source commit:** `e998519c5cb13bd4fe55df04c495321042d556fd`
 **Generation time:** 2026-07-26T23:30:06-04:00
-**Source fingerprint:** `94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c`
+**Source fingerprint:** `54ce9251a18c8897301f040586c1b056cd89122d6594fcd8cc897a296415854f`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 30
+- Nodes added: 33
 - Nodes removed: 0
-- Edges added: 87
+- Edges added: 103
 - Edges removed: 0
 - New type-aware orphans: 0
-- Current rights-review records: 6
+- Current rights-review records: 7
 
 ## Added nodes
 
+- `asset.photo.nyc-council-open-data-portrait.2026`
 - `decision.photo.home-east-river.layout-b`
 - `decision.photo.protected-absence.layout-b`
 - `edition.portfolio.layout-b.2026-07`
@@ -36,6 +37,7 @@ Compared with the graph artifact on `origin/develop`.
 - `portfolio.photo.home-east-river.layout-b`
 - `research-inquiry.callnyc-interface-photo-oral-history`
 - `research-inquiry.canoe-bike-journeys`
+- `research-inquiry.nyc-council-open-data-photo.2026`
 - `research.photography-first-field-close-reading.2026-07-26`
 - `research.photography-first-pass-residency-proposal.2026-07-22`
 - `research.photography-notebook-opening.2026-07-22`
@@ -45,4 +47,5 @@ Compared with the graph artifact on `origin/develop`.
 - `source.permission.elana-gordon.east-river-portfolio`
 - `source.photo-metadata.east-river.2022`
 - `source.recollection.jamie.canoe-commuting.2026-07`
+- `source.recollection.jamie.nyc-council-open-data-photo.2026-07`
 - `source.teju-cole.far-away-from-here-process.2016`

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T23:30:06-04:00",
   "sourceCommit": "e998519c5cb13bd4fe55df04c495321042d556fd",
-  "sourceFingerprint": "94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c",
+  "sourceFingerprint": "54ce9251a18c8897301f040586c1b056cd89122d6594fcd8cc897a296415854f",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -30,6 +30,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "asset.photo.nyc-council-open-data-portrait.2026",
+      "path": "docs/knowledge-bank/assets/nyc-council-open-data-portrait-2026.md",
+      "title": "Jamie Burkart with a clipboard at 250 Broadway, 2026",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe metadata for a protected portrait of Jamie at a New York City Council setting with a clipboard and coalition materials.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "capability.civic-cultural-technical-translation",
@@ -1224,6 +1237,19 @@
       "reviewBy": "2026-10-26"
     },
     {
+      "id": "research-inquiry.nyc-council-open-data-photo.2026",
+      "path": "docs/knowledge-bank/research-inquiries/nyc-council-open-data-photo-2026.md",
+      "title": "Corroborate the 2026 NYC Council open-data photograph",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Held inquiry connecting a protected 250 Broadway portrait with Jamie's oral-history leads while keeping event identity, proposal history, photographer rights, and publication permission unresolved.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
       "id": "research-inquiry.ucsc-installation-title",
       "path": "docs/knowledge-bank/research-inquiries/ucsc-installation-title.md",
       "title": "Resolve the 2006 New York installation title",
@@ -1731,6 +1757,19 @@
       "reviewBy": "2026-10-26"
     },
     {
+      "id": "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+      "path": "docs/knowledge-bank/sources/jamie-nyc-council-open-data-photo-recollection-2026-07.md",
+      "title": "Jamie's NYC Council and open-data photograph recollection, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe source note for Jamie's dated oral history about a supplied portrait at 250 Broadway, preserved as first-person memory and research leads rather than independent corroboration or publication permission.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
       "id": "source.resume.jamie-burkart.2026-06-11",
       "path": "docs/knowledge-bank/sources/jamie-resume-2026-06-11.md",
       "title": "Jamie Burkart resume, June 11, 2026",
@@ -1840,6 +1879,30 @@
       "to": "project.callnyc",
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council-open-data-portrait.2026",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council-open-data-portrait.2026",
+      "type": "related_to",
+      "to": "research-inquiry.nyc-council-open-data-photo.2026",
+      "source": "frontmatter",
+      "href": "../research-inquiries/nyc-council-open-data-photo-2026.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council-open-data-portrait.2026",
+      "type": "uses_source",
+      "to": "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/jamie-nyc-council-open-data-photo-recollection-2026-07.md",
       "context": null
     },
     {
@@ -3266,6 +3329,14 @@
     },
     {
       "from": "index.knowledge-wiki.photographic-knowledge-loop",
+      "type": "has_asset",
+      "to": "asset.photo.nyc-council-open-data-portrait.2026",
+      "source": "frontmatter",
+      "href": "../assets/nyc-council-open-data-portrait-2026.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photographic-knowledge-loop",
       "type": "related_to",
       "to": "decision.photo.home-east-river.layout-b",
       "source": "frontmatter",
@@ -3302,6 +3373,14 @@
       "to": "photo.east-river-manhattan-bridge.2022",
       "source": "frontmatter",
       "href": "../assets/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photographic-knowledge-loop",
+      "type": "related_to",
+      "to": "research-inquiry.nyc-council-open-data-photo.2026",
+      "source": "frontmatter",
+      "href": "../research-inquiries/nyc-council-open-data-photo-2026.md",
       "context": null
     },
     {
@@ -3710,6 +3789,14 @@
       "to": "asset.photo.digital-district.001",
       "source": "frontmatter",
       "href": "../assets/digital-district-photo.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.visual-evidence",
+      "type": "has_asset",
+      "to": "asset.photo.nyc-council-open-data-portrait.2026",
+      "source": "frontmatter",
+      "href": "../assets/nyc-council-open-data-portrait-2026.md",
       "context": null
     },
     {
@@ -4998,11 +5085,27 @@
     },
     {
       "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "research-inquiry.nyc-council-open-data-photo.2026",
+      "source": "frontmatter",
+      "href": "../research-inquiries/nyc-council-open-data-photo-2026.md",
+      "context": "Corroboration and rights inquiry for the protected 250 Broadway portrait."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
       "type": "uses_source",
       "to": "source.nycac.shared-folder-census.2026",
       "source": "frontmatter",
       "href": "../sources/nycac-protected-shared-folder-census-2026.md",
       "context": "Protected source custody with public-safe aggregate coverage only."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "uses_source",
+      "to": "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/jamie-nyc-council-open-data-photo-recollection-2026-07.md",
+      "context": "Held first-person account connecting a coalition participation form with a 2026 public-data conversation; independent corroboration remains open."
     },
     {
       "from": "project.office-of-nightlife-town-halls",
@@ -5202,6 +5305,38 @@
       "to": "source.recollection.jamie.canoe-commuting.2026-07",
       "source": "frontmatter",
       "href": "../sources/jamie-canoe-commuting-recollection-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.nyc-council-open-data-photo.2026",
+      "type": "related_to",
+      "to": "asset.photo.nyc-council-open-data-portrait.2026",
+      "source": "frontmatter",
+      "href": "../assets/nyc-council-open-data-portrait-2026.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.nyc-council-open-data-photo.2026",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.nyc-council-open-data-photo.2026",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.nyc-council-open-data-photo.2026",
+      "type": "uses_source",
+      "to": "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/jamie-nyc-council-open-data-photo-recollection-2026-07.md",
       "context": null
     },
     {
@@ -5938,6 +6073,38 @@
       "to": "photo.east-river-manhattan-bridge.2022",
       "source": "frontmatter",
       "href": "../assets/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.nyc-council-open-data-portrait.2026",
+      "source": "frontmatter",
+      "href": "../assets/nyc-council-open-data-portrait-2026.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+      "type": "related_to",
+      "to": "research-inquiry.nyc-council-open-data-photo.2026",
+      "source": "frontmatter",
+      "href": "../research-inquiries/nyc-council-open-data-photo-2026.md",
       "context": null
     },
     {
@@ -7404,6 +7571,33 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photographic-knowledge-loop.md",
       "from": "index.knowledge-wiki.photographic-knowledge-loop",
+      "toPath": "docs/knowledge-bank/assets/nyc-council-open-data-portrait-2026.md",
+      "to": "asset.photo.nyc-council-open-data-portrait.2026",
+      "fragment": null,
+      "line": 45,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photographic-knowledge-loop.md",
+      "from": "index.knowledge-wiki.photographic-knowledge-loop",
+      "toPath": "docs/knowledge-bank/sources/jamie-nyc-council-open-data-photo-recollection-2026-07.md",
+      "to": "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+      "fragment": null,
+      "line": 47,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photographic-knowledge-loop.md",
+      "from": "index.knowledge-wiki.photographic-knowledge-loop",
+      "toPath": "docs/knowledge-bank/research-inquiries/nyc-council-open-data-photo-2026.md",
+      "to": "research-inquiry.nyc-council-open-data-photo.2026",
+      "fragment": null,
+      "line": 49,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photographic-knowledge-loop.md",
+      "from": "index.knowledge-wiki.photographic-knowledge-loop",
       "toPath": "docs/knowledge-bank/assets/east-river-manhattan-bridge-2022.md",
       "to": "photo.east-river-manhattan-bridge.2022",
       "fragment": null,
@@ -7777,6 +7971,15 @@
       "to": "asset.photo.digital-district.001",
       "fragment": null,
       "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/visual-evidence.md",
+      "from": "index.knowledge-wiki.visual-evidence",
+      "toPath": "docs/knowledge-bank/assets/nyc-council-open-data-portrait-2026.md",
+      "to": "asset.photo.nyc-council-open-data-portrait.2026",
+      "fragment": null,
+      "line": 27,
       "kind": "link"
     },
     {

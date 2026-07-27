@@ -2,25 +2,25 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T23:30:06-04:00",
   "sourceCommit": "e998519c5cb13bd4fe55df04c495321042d556fd",
-  "sourceFingerprint": "94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c",
+  "sourceFingerprint": "54ce9251a18c8897301f040586c1b056cd89122d6594fcd8cc897a296415854f",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 137,
+    "records": 140,
     "byKind": {
       "project": 14,
       "person": 1,
       "organization": 1,
       "event": 1,
       "place": 1,
-      "source": 35,
-      "asset": 7,
+      "source": 36,
+      "asset": 8,
       "claim": 2,
       "research-run": 8,
-      "research-inquiry": 3,
+      "research-inquiry": 4,
       "decision": 7,
       "correction": 1,
       "method": 11,
@@ -32,7 +32,7 @@
       "opportunity": 6,
       "projection": 5
     },
-    "typedRelations": 514,
+    "typedRelations": 530,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 1,
@@ -40,25 +40,25 @@
       "evidence:context": 1,
       "evidence:direct-support": 6,
       "evidence:private-support": 1,
-      "has_asset": 9,
+      "has_asset": 11,
       "informed_by": 53,
       "part_of": 9,
       "projected_to": 7,
-      "related_to": 296,
+      "related_to": 307,
       "resulted_in": 5,
       "supersedes": 1,
       "supports": 19,
       "uses_method": 29,
-      "uses_source": 66
+      "uses_source": 69
     },
-    "proseLinks": 319,
-    "rootReachable": 128,
+    "proseLinks": 323,
+    "rootReachable": 131,
     "orphanCount": 0,
     "deadEndCount": 0,
-    "wantedPageCount": 8,
+    "wantedPageCount": 12,
     "stalePageCount": 0,
     "correctionCount": 1,
-    "rightsReviewCount": 6,
+    "rightsReviewCount": 7,
     "opportunityCount": 6,
     "liveOpportunityCount": 5,
     "criticalRequirementCount": 22,
@@ -151,6 +151,34 @@
       "path": "docs/knowledge-bank/research-inquiries/canoe-bike-journeys.md"
     },
     {
+      "id": "source.nyc-school-of-data.2026.session-record",
+      "proposed_title": "Official 2026 NYC School of Data session record",
+      "reason": "Needed to establish the exact date, title, host relationship, and public program context.",
+      "requestedBy": "research-inquiry.nyc-council-open-data-photo.2026",
+      "path": "docs/knowledge-bank/research-inquiries/nyc-council-open-data-photo-2026.md"
+    },
+    {
+      "id": "source.nycac.member-sign-in-form",
+      "proposed_title": "NYC Artist Coalition member sign-in form",
+      "reason": "Needed to verify Jamie's design contribution and the form's participation and visibility choices without publishing participant data.",
+      "requestedBy": "research-inquiry.nyc-council-open-data-photo.2026",
+      "path": "docs/knowledge-bank/research-inquiries/nyc-council-open-data-photo-2026.md"
+    },
+    {
+      "id": "source.commercial-rent-open-data-proposal.2026",
+      "proposed_title": "Commercial rent and vacancy open-data proposal",
+      "reason": "Needed to verify the packet's contents, version, recipients, and follow-up without treating oral memory as institutional adoption.",
+      "requestedBy": "research-inquiry.nyc-council-open-data-photo.2026",
+      "path": "docs/knowledge-bank/research-inquiries/nyc-council-open-data-photo-2026.md"
+    },
+    {
+      "id": "source.permission.nyc-council-open-data-photo.2026",
+      "proposed_title": "Photographer identity and permission record",
+      "reason": "Needed to establish creator credit, rights scope, exact crop and caption, and any public-use permission.",
+      "requestedBy": "research-inquiry.nyc-council-open-data-photo.2026",
+      "path": "docs/knowledge-bank/research-inquiries/nyc-council-open-data-photo-2026.md"
+    },
+    {
       "id": "source.ucsc.installation-primary-record.2006",
       "proposed_title": "Primary 2006 installation record",
       "reason": "Needed to resolve the title from a contemporaneous invitation, checklist, photograph, gallery record, or artist file.",
@@ -181,6 +209,13 @@
       "rightsState": "unknown",
       "consentState": "not-applicable",
       "publicDisplayStatus": "cleared"
+    },
+    {
+      "id": "asset.photo.nyc-council-open-data-portrait.2026",
+      "path": "docs/knowledge-bank/assets/nyc-council-open-data-portrait-2026.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
     },
     {
       "id": "photo.paper-trimming",

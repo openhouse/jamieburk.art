@@ -19,6 +19,9 @@ relations:
   - type: has_asset
     target: asset.photo.digital-district.001
     href: ../assets/digital-district-photo.md
+  - type: has_asset
+    target: asset.photo.nyc-council-open-data-portrait.2026
+    href: ../assets/nyc-council-open-data-portrait-2026.md
   - type: related_to
     target: person.jamie-burkart
     href: ../people/jamie-burkart.md
@@ -55,6 +58,12 @@ to the asset, context, and use.
 The [Digital District photograph](../assets/digital-district-photo.md) is the
 current governed pilot. Its visible placard can support a bounded observation,
 while rights, represented-person consent, and public display remain on hold.
+
+The [250 Broadway portrait](../assets/nyc-council-open-data-portrait-2026.md)
+has a dated Jamie oral history that opens research into coalition participation
+forms and a commercial-rent and vacancy open-data proposal. The photograph is
+not committed here; photographer identity, rights, event details, and exact
+public use remain open.
 
 ### Held visual cohorts
 

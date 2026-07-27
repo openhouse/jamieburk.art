@@ -55,6 +55,9 @@ const requiredRecordIds = [
   "source.recollection.jamie.canoe-commuting.2026-07",
   "research-inquiry.canoe-bike-journeys",
   "research-inquiry.callnyc-interface-photo-oral-history",
+  "asset.photo.nyc-council-open-data-portrait.2026",
+  "source.recollection.jamie.nyc-council-open-data-photo.2026-07",
+  "research-inquiry.nyc-council-open-data-photo.2026",
   "research.photography-first-field-close-reading.2026-07-26",
   "evaluation.photo-curation.home-east-river.2026-07-26",
   "decision.photo.home-east-river.layout-b",
@@ -1170,6 +1173,15 @@ export function evaluatePhotoKnowledge(options = {}) {
   const callnycInquiry = byId.get(
     "research-inquiry.callnyc-interface-photo-oral-history"
   );
+  const councilOpenDataPortrait = byId.get(
+    "asset.photo.nyc-council-open-data-portrait.2026"
+  );
+  const councilOpenDataRecollection = byId.get(
+    "source.recollection.jamie.nyc-council-open-data-photo.2026-07"
+  );
+  const councilOpenDataInquiry = byId.get(
+    "research-inquiry.nyc-council-open-data-photo.2026"
+  );
   const firstFieldCloseReading = byId.get(
     "research.photography-first-field-close-reading.2026-07-26"
   );
@@ -1818,6 +1830,46 @@ export function evaluatePhotoKnowledge(options = {}) {
     /remains in the private editor field/i.test(callnycInquirySource) &&
     /publication permission/i.test(callnycInquirySource);
 
+  const councilOpenDataRecollectionSource = source(
+    councilOpenDataRecollection?.id
+  );
+  const councilOpenDataInquirySource = source(councilOpenDataInquiry?.id);
+  const councilOpenDataOralHistoryBounded =
+    councilOpenDataPortrait?.visibility === "summary-only" &&
+    councilOpenDataPortrait?.rights_state === "permission-needed" &&
+    councilOpenDataPortrait?.consent_state === "review-needed" &&
+    councilOpenDataPortrait?.public_display_status === "hold" &&
+    JSON.stringify(councilOpenDataPortrait?.projection) ===
+      JSON.stringify({ status: "hold", surfaces: [] }) &&
+    councilOpenDataRecollection?.source_kind ===
+      "first-person-recollection" &&
+    councilOpenDataRecollection?.visibility === "summary-only" &&
+    JSON.stringify(councilOpenDataRecollection?.projection) ===
+      JSON.stringify({ status: "hold", surfaces: [] }) &&
+    councilOpenDataRecollection?.relations?.some(
+      (relation) =>
+        relation.target === "asset.photo.nyc-council-open-data-portrait.2026"
+    ) &&
+    /not independent corroboration/i.test(
+      councilOpenDataRecollectionSource
+    ) &&
+    /does not answer or\s+clear the separate held CallNYC interface-in-use photograph/i.test(
+      councilOpenDataRecollectionSource
+    ) &&
+    heldResearchRecordIsDefaultClosed(
+      councilOpenDataInquiry,
+      councilOpenDataInquirySource
+    ) &&
+    councilOpenDataInquiry?.projection_status === "hold" &&
+    JSON.stringify(councilOpenDataInquiry?.projection) ===
+      JSON.stringify({ status: "hold", surfaces: [] }) &&
+    /not the separate CallNYC interface-in-use\s+photograph/i.test(
+      councilOpenDataInquirySource
+    ) &&
+    /does not establish institutional endorsement/i.test(
+      councilOpenDataInquirySource
+    );
+
   const firstFieldCloseReadingBounded =
     heldResearchRecordIsDefaultClosed(
       firstFieldCloseReading,
@@ -1857,6 +1909,8 @@ export function evaluatePhotoKnowledge(options = {}) {
     photo_inquiry_avoids_photo_counting: inquiryAvoidsPhotoCounting,
     photo_callnyc_oral_history_default_closed:
       callnycOralHistoryDefaultClosed,
+    photo_nyc_council_open_data_oral_history_bounded:
+      councilOpenDataOralHistoryBounded,
     photo_first_field_close_reading_bounded: firstFieldCloseReadingBounded,
     photo_curatorial_authority_advisory: curatorialAuthorityAdvisory,
     photo_protected_absence_first_class: protectedAbsenceFirstClass,

@@ -3,7 +3,7 @@
 
 **Source commit:** `e998519c5cb13bd4fe55df04c495321042d556fd`
 **Generation time:** 2026-07-26T23:30:06-04:00
-**Source fingerprint:** `94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c`
+**Source fingerprint:** `54ce9251a18c8897301f040586c1b056cd89122d6594fcd8cc897a296415854f`
 
 ## application
 
@@ -12,6 +12,7 @@
 ## asset
 
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
+- [Jamie Burkart with a clipboard at 250 Broadway, 2026](../assets/nyc-council-open-data-portrait-2026.md) - `asset.photo.nyc-council-open-data-portrait.2026`
 - [East River beneath the Manhattan Bridge, 2022](../assets/east-river-manhattan-bridge-2022.md) - `photo.east-river-manhattan-bridge.2022`
 - [KC Town Hall before Phase 1 restoration](../assets/kc-town-hall-before.md) - `photo.kc-town-hall-before`
 - [Paper trimming in progress](../assets/paper-trimming.md) - `photo.paper-trimming`
@@ -147,6 +148,7 @@
 
 - [Recover the context of a CallNYC interface-in-use photograph](../research-inquiries/callnyc-interface-photo-oral-history.md) - `research-inquiry.callnyc-interface-photo-oral-history`
 - [Document bicycle-canoe journeys](../research-inquiries/canoe-bike-journeys.md) - `research-inquiry.canoe-bike-journeys`
+- [Corroborate the 2026 NYC Council open-data photograph](../research-inquiries/nyc-council-open-data-photo-2026.md) - `research-inquiry.nyc-council-open-data-photo.2026`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
 ## research-run
@@ -192,6 +194,7 @@
 - [East River photograph public-safe metadata summary](../sources/east-river-photo-metadata-2022.md) - `source.photo-metadata.east-river.2022`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Jamie's canoe-commuting recollection, July 2026](../sources/jamie-canoe-commuting-recollection-2026-07.md) - `source.recollection.jamie.canoe-commuting.2026-07`
+- [Jamie's NYC Council and open-data photograph recollection, July 2026](../sources/jamie-nyc-council-open-data-photo-recollection-2026-07.md) - `source.recollection.jamie.nyc-council-open-data-photo.2026-07`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Teju Cole on the making of Far Away From Here](../sources/teju-cole-far-away-from-here-process-2016.md) - `source.teju-cole.far-away-from-here-process.2016`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`

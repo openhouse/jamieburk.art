@@ -30,6 +30,14 @@ relations:
     target: evaluation.nycac.shared-folder-production.2026-07-19
     href: ../evaluations/nycac-shared-folder-production-2026-07-19.md
     context: Deterministic coverage, leakage, credit, and projection criteria.
+  - type: uses_source
+    target: source.recollection.jamie.nyc-council-open-data-photo.2026-07
+    href: ../sources/jamie-nyc-council-open-data-photo-recollection-2026-07.md
+    context: Held first-person account connecting a coalition participation form with a 2026 public-data conversation; independent corroboration remains open.
+  - type: related_to
+    target: research-inquiry.nyc-council-open-data-photo.2026
+    href: ../research-inquiries/nyc-council-open-data-photo-2026.md
+    context: Corroboration and rights inquiry for the protected 250 Broadway portrait.
 human_review: governed-open
 ---
 
@@ -258,6 +266,10 @@ improving the current page enough to justify the added reader burden:
 - the government-only Local Law 220 and CURE outcome records apart from the
   selected Jamie-centered Talks Not Raids trajectory;
 - the Greene Hill link between Sunday Dinner and WOW List.
+- Jamie's 2026 first-person recollection of carrying coalition participation
+  materials into a Council data-team setting while discussing a commercial-rent
+  and vacancy open-data proposal. The photograph and recollection remain held
+  pending event, proposal, photographer, rights, and follow-up verification.
 
 ## Open research
 

@@ -25,6 +25,12 @@ relations:
   - type: related_to
     target: decision.photo.protected-absence.layout-b
     href: ../decisions/photo-protected-absence-layout-b.md
+  - type: has_asset
+    target: asset.photo.nyc-council-open-data-portrait.2026
+    href: ../assets/nyc-council-open-data-portrait-2026.md
+  - type: related_to
+    target: research-inquiry.nyc-council-open-data-photo.2026
+    href: ../research-inquiries/nyc-council-open-data-photo-2026.md
 ---
 
 # Photographic knowledge loop
@@ -67,3 +73,14 @@ separate placement and edition decision. A no-photo decision is first-class.
 The current edition records one such
 [protected absence](../decisions/photo-protected-absence-layout-b.md) for
 intimate gathering photography.
+
+## Oral-history return
+
+The [250 Broadway portrait](../assets/nyc-council-open-data-portrait-2026.md)
+now has a linked, dated
+[first-person recollection](../sources/jamie-nyc-council-open-data-photo-recollection-2026-07.md)
+and a separate
+[corroboration inquiry](../research-inquiries/nyc-council-open-data-photo-2026.md).
+The image, recollection, and inquiry remain held. The portrait is explicitly
+distinct from the CallNYC hand-and-phone image, whose own oral-history inquiry
+remains open.

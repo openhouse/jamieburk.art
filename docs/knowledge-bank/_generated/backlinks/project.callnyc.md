@@ -3,7 +3,7 @@
 
 **Source commit:** `e998519c5cb13bd4fe55df04c495321042d556fd`
 **Generation time:** 2026-07-26T23:30:06-04:00
-**Source fingerprint:** `94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c`
+**Source fingerprint:** `54ce9251a18c8897301f040586c1b056cd89122d6594fcd8cc897a296415854f`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
@@ -32,6 +32,8 @@
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [CallNYC portfolio projection](../../projections/work-callnyc.md) - `related_to` (frontmatter)
 - [Recover the context of a CallNYC interface-in-use photograph](../../research-inquiries/callnyc-interface-photo-oral-history.md) - `related_to` (frontmatter)
+- [Corroborate the 2026 NYC Council open-data photograph](../../research-inquiries/nyc-council-open-data-photo-2026.md) - `related_to` (frontmatter)
 - [CallNYC public source repository](../../sources/callnyc-source-repository.md) - `documents` (frontmatter)
 - [New York City Council Constituent Services Data release](../../sources/nycc-constituent-services-data-2016-05-27.md) - `documents` (frontmatter)
 - [Website provides new information about council members' focus](../../sources/politico-callnyc-2016-03-14.md) - `documents` (frontmatter)
+- [Jamie's NYC Council and open-data photograph recollection, July 2026](../../sources/jamie-nyc-council-open-data-photo-recollection-2026-07.md) - `related_to` (frontmatter)

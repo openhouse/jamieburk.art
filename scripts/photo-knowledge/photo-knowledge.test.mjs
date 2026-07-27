@@ -447,7 +447,7 @@ test("RFC 0003 photographic knowledge baseline passes", () => {
   assert.equal(result.passed, true, result.failures.join(", "));
   assert.equal(result.counts.photos, 6);
   assert.equal(result.counts.placements, 11);
-  assert.equal(result.counts.blockingCriteria, 25);
+  assert.equal(result.counts.blockingCriteria, 26);
 });
 
 test("a derivative checksum drift fails closed", () => {
@@ -705,6 +705,77 @@ test("a CallNYC oral-history lead rejects contradictory approval side channels",
   assert.equal(
     evaluatePhotoKnowledge({ wiki: wikiWithContradictorySummary })
       .checks.photo_callnyc_oral_history_default_closed,
+    false
+  );
+});
+
+test("the NYC Council open-data oral history remains distinct and held", () => {
+  const sourceId =
+    "source.recollection.jamie.nyc-council-open-data-photo.2026-07";
+  const assetId = "asset.photo.nyc-council-open-data-portrait.2026";
+  const inquiryId = "research-inquiry.nyc-council-open-data-photo.2026";
+
+  const wikiWithPublicSource = compileWiki();
+  const recollection = structuredClone(wikiWithPublicSource.byId.get(sourceId));
+  recollection.projection = {
+    status: "active",
+    surfaces: ["/work/fair-rent-nyc"]
+  };
+  wikiWithPublicSource.byId.set(sourceId, recollection);
+  assert.equal(
+    evaluatePhotoKnowledge({ wiki: wikiWithPublicSource })
+      .checks.photo_nyc_council_open_data_oral_history_bounded,
+    false
+  );
+
+  const wikiWithClearedAsset = compileWiki();
+  const asset = structuredClone(wikiWithClearedAsset.byId.get(assetId));
+  Object.assign(asset, {
+    rights_state: "cleared",
+    consent_state: "cleared",
+    public_display_status: "cleared",
+    projection: {
+      status: "active",
+      surfaces: ["/work/fair-rent-nyc"]
+    }
+  });
+  wikiWithClearedAsset.byId.set(assetId, asset);
+  assert.equal(
+    evaluatePhotoKnowledge({ wiki: wikiWithClearedAsset })
+      .checks.photo_nyc_council_open_data_oral_history_bounded,
+    false
+  );
+
+  const wikiWithApprovalSideChannel = compileWiki();
+  const inquiry = structuredClone(
+    wikiWithApprovalSideChannel.byId.get(inquiryId)
+  );
+  inquiry.production_approval = "approved";
+  wikiWithApprovalSideChannel.byId.set(inquiryId, inquiry);
+  assert.equal(
+    evaluatePhotoKnowledge({ wiki: wikiWithApprovalSideChannel })
+      .checks.photo_nyc_council_open_data_oral_history_bounded,
+    false
+  );
+});
+
+test("the NYC Council portrait cannot fill the separate CallNYC photo inquiry", () => {
+  const wiki = compileWiki();
+  const id =
+    "source.recollection.jamie.nyc-council-open-data-photo.2026-07";
+  const original = readFileSync(
+    path.join(defaultRepoRoot, wiki.byId.get(id).path),
+    "utf8"
+  );
+  const conflated = original.replace(
+    /does not answer or\s+clear the separate held CallNYC interface-in-use photograph/,
+    "also clears the CallNYC interface-in-use photograph"
+  );
+  assert.equal(
+    evaluatePhotoKnowledge({
+      wiki,
+      sourceOverrides: { [id]: conflated }
+    }).checks.photo_nyc_council_open_data_oral_history_bounded,
     false
   );
 });

@@ -3,7 +3,7 @@
 
 **Source commit:** `e998519c5cb13bd4fe55df04c495321042d556fd`
 **Generation time:** 2026-07-26T23:30:06-04:00
-**Source fingerprint:** `94dc49c39e7ca0a9b573f799f10623e97c5701aa0d4a19927a61ea0f90685c7c`
+**Source fingerprint:** `54ce9251a18c8897301f040586c1b056cd89122d6594fcd8cc897a296415854f`
 
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `informed_by` (frontmatter)
 - [Canonical Story Bank](../../indexes/canonical-story-bank.md) - `informed_by` (frontmatter)
