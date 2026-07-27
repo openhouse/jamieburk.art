@@ -195,6 +195,22 @@ test("private source paths and identifiers are rejected from public photo files"
   assert.ok(failures.some((failure) => failure.includes("source UUID")));
 });
 
+test("private locators are rejected from committed photo QA evidence", () => {
+  const root = mkdtempSync(path.join(os.tmpdir(), "photo-knowledge-qa-leak-"));
+  const qa = path.join(root, "docs/qa/photo-knowledge");
+  mkdirSync(qa, { recursive: true });
+  const protectedPath = ["/", "Users", "private", "photo-source"].join("/");
+  writeFileSync(path.join(qa, "receipt.json"), `{"source":"${protectedPath}"}`);
+  const failures = scanPhotoPublicSafety(root);
+  assert.ok(
+    failures.some(
+      (failure) =>
+        failure.includes("docs/qa/photo-knowledge/receipt.json") &&
+        failure.includes("absolute private path")
+    )
+  );
+});
+
 test("first-person recollection does not silently become homepage copy", () => {
   const home = readFileSync(
     path.join(repoRoot, "apps/www/src/app/page.tsx"),

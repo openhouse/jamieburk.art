@@ -452,6 +452,7 @@ export function scanPhotoPublicSafety(root = repoRoot) {
     absolute("docs/knowledge-bank/sources/permissions", root),
     absolute("docs/knowledge-bank/sources/recollections", root),
     absolute("docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md", root),
+    absolute("docs/qa/photo-knowledge", root),
     absolute(canary.manifestPath, root)
   ];
 
@@ -514,6 +515,7 @@ function branchHistoryPublicSafety(root = repoRoot) {
       "rfcs",
       "docs/photography",
       "docs/knowledge-bank",
+      "docs/qa/photo-knowledge",
       "evals/photo-knowledge",
       "scripts/photography",
       "apps/www/src/data/photography.ts"
