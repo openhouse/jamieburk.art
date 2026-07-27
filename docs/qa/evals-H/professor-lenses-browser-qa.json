@@ -1,5 +1,10 @@
 {
-  "baseUrl": "http://127.0.0.1:3045",
+  "reportVersion": 2,
+  "checkedAt": "2026-07-27T01:33:36.429Z",
+  "sourceCommit": "ac5466f07fe11f46a4db474529d292a687f11584",
+  "publicSurfaceFingerprint": "ca13cbc344f24b89bf56265ab9c2938f5120388496b7ebb79e8403a6f62eb4fc",
+  "publicSurfaceFileCount": 119,
+  "baseUrl": "http://localhost:3045",
   "route": "/about",
   "homepageAboutLink": {
     "visible": true,
@@ -7,9 +12,9 @@
   },
   "contentAssertions": {
     "throughLineHeading": "Systems people can inhabit",
-    "relationshipRows": 4,
-    "interfaceAndUseRows": 4,
-    "learningAndContinuityRows": 4,
+    "relationshipRows": 5,
+    "interfaceAndUseRows": 5,
+    "learningAndContinuityRows": 5,
     "publicOpenHouseSourceLinks": 1
   },
   "viewports": [
@@ -17,19 +22,33 @@
       "name": "desktop",
       "width": 1440,
       "height": 1000,
+      "screenshot": "professor-lenses-about-desktop.png",
+      "homepageStatus": 200,
+      "aboutStatus": 200,
       "documentScrollWidth": 1440,
       "bodyScrollWidth": 1440,
-      "consoleErrors": 0,
-      "screenshot": "professor-lenses-about-desktop.png"
+      "h1Count": 1,
+      "mainPresent": true,
+      "brokenImages": 0,
+      "unlabeledImages": 0,
+      "consoleErrors": [],
+      "failedRequests": []
     },
     {
       "name": "mobile",
       "width": 375,
       "height": 812,
+      "screenshot": "professor-lenses-about-mobile.png",
+      "homepageStatus": 200,
+      "aboutStatus": 200,
       "documentScrollWidth": 375,
       "bodyScrollWidth": 375,
-      "consoleErrors": 0,
-      "screenshot": "professor-lenses-about-mobile.png"
+      "h1Count": 1,
+      "mainPresent": true,
+      "brokenImages": 0,
+      "unlabeledImages": 0,
+      "consoleErrors": [],
+      "failedRequests": []
     }
   ],
   "passed": true
