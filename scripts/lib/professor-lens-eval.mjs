@@ -107,6 +107,8 @@ export const candidateRelativePaths = [
   "rfcs/0003-living-photographic-knowledge-loop.md",
   "scripts/photo-knowledge/lib.mjs",
   "scripts/photo-knowledge/photo-knowledge.test.mjs",
+  "scripts/knowledge-wiki/accessibility-evidence.mjs",
+  "scripts/knowledge-wiki/accessibility-evidence.test.mjs",
   "docs/qa/evals-H/professor-lenses-about-desktop.png",
   "docs/qa/evals-H/professor-lenses-about-mobile.png",
   "docs/qa/evals-H/responsive-route-matrix.json"

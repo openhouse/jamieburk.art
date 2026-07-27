@@ -56,3 +56,29 @@ test("a vertically clipped homepage identity fails closed", () => {
   homepage.firstViewport.heroContentClipped = true;
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
+
+test("a hidden governed photo occurrence fails closed", () => {
+  const report = structuredClone(current.report);
+  const row = report.rows.find(
+    (entry) => entry.path === "/" && entry.viewport === 1280
+  );
+  row.photoOccurrences[0].visible = false;
+  report.summary.hiddenPhotoOccurrences = 1;
+  assert.equal(
+    validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed,
+    false
+  );
+});
+
+test("duplicate rendered credit punctuation fails closed", () => {
+  const report = structuredClone(current.report);
+  const row = report.rows.find(
+    (entry) => entry.path === "/" && entry.viewport === 375
+  );
+  row.photoOccurrences[0].text += ".";
+  report.summary.duplicatePhotoCreditPunctuation = 1;
+  assert.equal(
+    validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed,
+    false
+  );
+});

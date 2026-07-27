@@ -200,8 +200,8 @@ h2 {
 .jb-photo-sequence {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
-  grid-template-rows: repeat(2, minmax(13rem, 1fr));
-  min-height: 34rem;
+  grid-template-rows: repeat(3, minmax(10rem, 1fr));
+  min-height: 42rem;
 }
 
 .jb-photo-sequence figure {
@@ -211,7 +211,7 @@ h2 {
 }
 
 .jb-photo-sequence figure:first-child {
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
 }
 
 .jb-photo-sequence img {
