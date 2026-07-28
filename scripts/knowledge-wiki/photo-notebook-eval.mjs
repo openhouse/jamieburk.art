@@ -44,6 +44,7 @@ export function evaluatePhotoNotebook(options = {}) {
   const sequences = normalized(manifest.sequenceId);
   const templates = normalized(manifest.templatesId);
   const proposal = normalized(manifest.proposalId);
+  const eventReturn = normalized(manifest.eventReturnId);
   const notebookSource = normalized(manifest.notebookRootId);
   const fieldSource = normalized(manifest.fieldId);
   const publicRegistry =
@@ -187,6 +188,41 @@ export function evaluatePhotoNotebook(options = {}) {
       proposal
     );
 
+  const photographyEventReturnSignalsRemainBounded =
+    /Keep depth is a prior editorial-survival signal, not an objective quality score, factual endorsement, identity proof, rights decision, or publication clearance/i.test(
+      eventReturn
+    ) &&
+    /a Person label is a research lead, not public identification, consent, role, attendance, or proof that the person is speaking at a particular transcript timestamp/i.test(
+      eventReturn
+    ) &&
+    /A transcript name does not identify a face/i.test(eventReturn) &&
+    /A timestamp overlap proposes that a frame may relate to a speech interval/i.test(
+      eventReturn
+    ) &&
+    /Do not promote the whole private crosswalk into public Git/i.test(
+      eventReturn
+    );
+
+  const photographyEventReturnPreservesContextAndCost =
+    /Compare the refined select with adjacent frames, rejected frames, room views, speaker transitions, audience response, apparatus, setup, and aftermath/i.test(
+      eventReturn
+    ) &&
+    /Start with high-information, low-cost signals/i.test(eventReturn) &&
+    /Only then expand the time window or filesystem scope/i.test(eventReturn) &&
+    /A deliberately broad adjacent-frame pass remains required/i.test(
+      eventReturn
+    );
+
+  const photographyEventReturnConnectsExistingTools =
+    /github\.com\/openhouse\/photo-filter\/tree\/feature\/big-album/i.test(
+      eventReturn
+    ) &&
+    /github\.com\/openhouse\/photo-select\/tree\/feature\/repair-large-context/i.test(
+      eventReturn
+    ) &&
+    /nested `_keep` and `_aside` trees/i.test(eventReturn) &&
+    /decision minutes, and durable tool state/i.test(eventReturn);
+
   const requiredSources = requiredIds.map(source);
   const photographyPrivateArchiveBoundary =
     requiredSources.every((text) => !privatePattern.test(text)) &&
@@ -213,6 +249,12 @@ export function evaluatePhotoNotebook(options = {}) {
     photography_residency_touchstone_is_attributed_memory: photographyResidencyTouchstoneIsAttributedMemory,
     photography_residency_hospitality_is_bounded: photographyResidencyHospitalityIsBounded,
     photography_proof_of_life_is_bounded: photographyProofOfLifeIsBounded,
+    photography_event_return_signals_remain_bounded:
+      photographyEventReturnSignalsRemainBounded,
+    photography_event_return_preserves_context_and_cost:
+      photographyEventReturnPreservesContextAndCost,
+    photography_event_return_connects_existing_tools:
+      photographyEventReturnConnectsExistingTools,
     photography_private_archive_boundary: photographyPrivateArchiveBoundary,
     photography_public_projection_selective: photographyPublicProjectionSelective
   };

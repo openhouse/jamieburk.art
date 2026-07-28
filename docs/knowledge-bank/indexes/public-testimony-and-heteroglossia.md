@@ -121,6 +121,13 @@ testimony inquiry](../research-inquiries/commercial-rent-state-and-public-event-
 and [July 28 source
 return](../research-runs/commercial-rent-state-public-event-source-return-2026-07-28.md).
 
+Many privately recorded public events may also have contemporaneous stop-motion
+documentary photograph sequences and earlier recursive photo selects. Use the
+[event transcript and photograph return](../notebooks/photography/event-transcript-photo-return.md)
+protocol to search those traces together while keeping transcript attribution,
+Person labels, time alignment, visual evidence, rights, and publication as
+separate judgments.
+
 ## How to Use It
 
 These are normalized official-transcript bodies, not polished quotations or

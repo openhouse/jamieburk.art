@@ -45,6 +45,10 @@ relations:
     target: notebook.photography.layout-study.d
     href: layout-study-d.md
   - type: related_to
+    target: notebook.photography.event-transcript-photo-return
+    href: event-transcript-photo-return.md
+    context: Bounded protocol for reconnecting event audio, transcript intervals, Apple Photos clusters, and earlier recursive selections.
+  - type: related_to
     target: asset.photo.east-river-manhattan-bridge.2022.001
     href: ../../assets/photographs/east-river-manhattan-bridge-2022.md
     context: RFC 0003 East River canary asset.
@@ -130,6 +134,10 @@ field manifest remains the authority for reconnecting a note to an original.
 - [Layout study D](layout-study-d.md): the bounded portfolio experiment using
   eight metadata-minimized photographic derivatives, including the RFC 0003
   East River canary.
+- [Event transcript and photograph return](event-transcript-photo-return.md):
+  a bounded protocol for reconnecting public-event recordings, Apple Photos
+  clusters, Person facets, and earlier photo-filter and photo-select traces
+  without treating retrieval signals as proof or publication permission.
 - [RFC 0003 photography guide](../../../photography/README.md): the living
   asset, occurrence, edition, recollection, correction, and rights workflow
   proven through the East River canary.

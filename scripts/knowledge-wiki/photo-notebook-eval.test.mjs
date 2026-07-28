@@ -21,7 +21,7 @@ test("photography notebook baseline passes", () => {
   const evaluation = evaluatePhotoNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, {
-    requiredRecords: 6,
+    requiredRecords: 7,
     targetPopulation: 1000,
     currentPopulation: 0,
     privateVerifiedPopulation: 1000
@@ -230,4 +230,52 @@ test("Proof of Life cannot become publication approval", () => {
     sourceOverrides: { [id]: mutated }
   });
   assert.equal(evaluation.checks.photography_proof_of_life_is_bounded, false);
+});
+
+test("photo-select keep depth cannot become objective merit or publication clearance", () => {
+  const id = "notebook.photography.event-transcript-photo-return";
+  const mutated = sourceFor(id).replace(
+    /Keep depth is a prior editorial-survival signal, not an objective quality\s+score, factual endorsement, identity proof, rights decision, or publication\s+clearance\./,
+    "Keep depth proves objective merit and clears the image for publication."
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.photography_event_return_signals_remain_bounded,
+    false
+  );
+});
+
+test("Apple Photos Person labels cannot silently identify a public speaker", () => {
+  const id = "notebook.photography.event-transcript-photo-return";
+  const mutated = sourceFor(id).replace(
+    /a Person label is a research lead, not public\s+identification, consent, role, attendance, or proof that the person is speaking\s+at a particular transcript timestamp\./,
+    "a Person label proves public identity, consent, attendance, and speaker alignment."
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.photography_event_return_signals_remain_bounded,
+    false
+  );
+});
+
+test("event return cannot omit rejected and adjacent frames", () => {
+  const id = "notebook.photography.event-transcript-photo-return";
+  const mutated = sourceFor(id).replace(
+    /Compare the\s+refined select with adjacent frames, rejected frames, room views, speaker\s+transitions, audience response, apparatus, setup, and aftermath\./,
+    "Review only the deepest keep folder."
+  );
+  const evaluation = evaluatePhotoNotebook({
+    result,
+    sourceOverrides: { [id]: mutated }
+  });
+  assert.equal(
+    evaluation.checks.photography_event_return_preserves_context_and_cost,
+    false
+  );
 });
