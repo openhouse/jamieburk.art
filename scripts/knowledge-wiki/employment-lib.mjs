@@ -54,30 +54,6 @@ function stableHash(entries) {
   return hash.digest("hex");
 }
 
-function sourceCommit(repoRoot, candidatePaths) {
-  try {
-    return execFileSync("git", ["log", "-1", "--format=%H", "--", ...candidatePaths], {
-      cwd: repoRoot,
-      encoding: "utf8",
-      stdio: ["ignore", "pipe", "ignore"]
-    }).trim();
-  } catch {
-    return "working-tree";
-  }
-}
-
-function commitTime(repoRoot, sha) {
-  if (sha === "working-tree") return "1970-01-01T00:00:00Z";
-  try {
-    return execFileSync("git", ["show", "-s", "--format=%cI", sha], {
-      cwd: repoRoot,
-      encoding: "utf8"
-    }).trim();
-  } catch {
-    return "1970-01-01T00:00:00Z";
-  }
-}
-
 function relevantTreeClean(repoRoot, candidatePaths) {
   try {
     return (
@@ -90,6 +66,25 @@ function relevantTreeClean(repoRoot, candidatePaths) {
   } catch {
     return false;
   }
+}
+
+export function deriveEmploymentCandidateMetadata(repoRoot, candidatePaths, opportunities) {
+  const candidateFingerprint = stableHash(
+    [...new Set(candidatePaths)].map((relativePath) => [
+      relativePath,
+      read(repoRoot, relativePath)
+    ])
+  );
+  const reviewHorizon = opportunities
+    .map((item) => dateText(item.data.verified_at ?? item.data.last_reviewed))
+    .filter(Boolean)
+    .sort(compareText)
+    .at(-1) ?? "1970-01-01";
+
+  return {
+    candidateFingerprint,
+    reviewHorizon
+  };
 }
 
 export function loadHiringSuite(repoRoot) {
@@ -151,7 +146,8 @@ function publicEvaluationMarkdown(report) {
     "<!-- GENERATED FILE. DO NOT EDIT. -->",
     "# Public-only hiring acceptance baseline",
     "",
-    `**Candidate commit:** \`${report.candidateSha}\``,
+    `**Candidate fingerprint:** \`${report.candidateFingerprint}\``,
+    `**Review horizon:** ${report.reviewHorizon}`,
     `**Portfolio snapshot:** \`${report.portfolioSnapshotHash}\``,
     `**Role-context hash:** \`${report.roleContextHash}\``,
     `**Reader-context hash:** \`${report.readerContextHash}\``,
@@ -201,8 +197,11 @@ export function evaluatePublicHiring(repoRoot) {
   const corpora = routeCorpora(repoRoot, suite);
   const publicFiles = [...new Set(Object.values(suite.routeFiles).flat())].sort();
   const candidatePaths = [...publicFiles, ...suite.opportunityPaths, ...suite.readerPaths, suitePath];
-  const candidateSha = sourceCommit(repoRoot, candidatePaths);
-  const generatedAt = commitTime(repoRoot, candidateSha);
+  const { candidateFingerprint, reviewHorizon } = deriveEmploymentCandidateMetadata(
+    repoRoot,
+    candidatePaths,
+    opportunities
+  );
   const publicEntries = publicFiles.map((file) => [file, read(repoRoot, file)]);
   const roleContexts = opportunities.map((item) => publicRoleContext(item.data));
   const readerContexts = readers.map((item) => publicReaderContext(item.data));
@@ -228,7 +227,7 @@ export function evaluatePublicHiring(repoRoot) {
     const critical = requirementCoverage.filter((item) => item.importance === "critical");
     const criticalObserved = critical.filter((item) => item.observed).length;
     const live = opportunity.status === "live";
-    const fresh = live && opportunity.reviewBy >= generatedAt.slice(0, 10);
+    const fresh = live && opportunity.reviewBy >= reviewHorizon;
     const hardScreenBlocked = opportunity.hardScreens.some(
       (screen) => screen.state === "not-met" || screen.disposition === "do-not-pursue"
     );
@@ -258,9 +257,9 @@ export function evaluatePublicHiring(repoRoot) {
   const corpus = Object.values(corpora).join("\n");
   const report = {
     schemaVersion: 1,
-    runId: `hiring-public-${candidateSha.slice(0, 12)}`,
-    generatedAt,
-    candidateSha,
+    runId: `hiring-public-${candidateFingerprint.slice(0, 12)}`,
+    reviewHorizon,
+    candidateFingerprint,
     candidatePathsClean: relevantTreeClean(repoRoot, candidatePaths),
     portfolioSnapshotHash: stableHash(publicEntries),
     roleContextHash: sha256(JSON.stringify(roleContexts)),
@@ -328,7 +327,7 @@ export function resolveHiringGaps(result, publicReport) {
   }
   const report = {
     schemaVersion: 1,
-    candidateSha: publicReport.candidateSha,
+    candidateFingerprint: publicReport.candidateFingerprint,
     portfolioSnapshotHash: publicReport.portfolioSnapshotHash,
     publicReportHash: sha256(JSON.stringify(publicReport)),
     wikiSourceFingerprint: result.graph.sourceFingerprint,
@@ -340,7 +339,7 @@ export function resolveHiringGaps(result, publicReport) {
     "<!-- GENERATED FILE. DO NOT EDIT. -->",
     "# Hiring acceptance Wiki gap resolution",
     "",
-    `**Candidate commit:** \`${report.candidateSha}\``,
+    `**Candidate fingerprint:** \`${report.candidateFingerprint}\``,
     `**Public report hash:** \`${report.publicReportHash}\``,
     `**Wiki fingerprint:** \`${report.wikiSourceFingerprint}\``,
     "",

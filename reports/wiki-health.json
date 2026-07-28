@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-07-28T07:14:37-04:00",
-  "sourceCommit": "cd146a7753b4ef79a9de9757fa2455a1c0cb6274",
+  "schemaVersion": 2,
+  "sourceIdentity": "content-addressed",
+  "reviewHorizon": "2026-07-28",
   "sourceFingerprint": "34fd85b78759747c1b28032355659a1ae5c1ae98c97db8a6187720a4b7bf029c",
   "hardGates": {
     "passed": true,

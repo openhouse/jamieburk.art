@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `cd146a7753b4ef79a9de9757fa2455a1c0cb6274`
-**Public report hash:** `402506e8a04a32478bc874a88ed42386f0b678524304cde630aa89ab9fe63b02`
+**Candidate fingerprint:** `4eaefa4f82aeeb1991b3e7f8cc19b039ecaf5eb4698f386de04632d46f2b0ef0`
+**Public report hash:** `63067f13554b96d8bf56d1a089e22c2e68aff104939893b2e4259470002165d5`
 **Wiki fingerprint:** `34fd85b78759747c1b28032355659a1ae5c1ae98c97db8a6187720a4b7bf029c`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.

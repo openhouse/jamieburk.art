@@ -151,6 +151,8 @@ export function evaluatePhotoKnowledge(options = {}) {
   const overrides = options.overrides ?? {};
   const suite = JSON.parse(read(repoRoot, ".agents/evals/photo-knowledge-loop.json", overrides));
   const photographySource = read(repoRoot, "apps/www/src/data/photography.ts", overrides);
+  const rfcSource = read(repoRoot, "rfcs/0003-living-photographic-knowledge-loop.md", overrides);
+  const editionGuideSource = read(repoRoot, "docs/photography/portfolio-editions.md", overrides);
   const canary = manifestObject(photographySource, suite.canary.manifestKey);
   const wikiResult = options.records
     ? { records: options.records, errors: options.wikiErrors ?? [] }
@@ -193,7 +195,6 @@ export function evaluatePhotoKnowledge(options = {}) {
   const privateLeakFiles = photoFiles
     .filter((file) => privateLeakPattern.test(readFileSync(file, "utf8")))
     .map((file) => path.relative(repoRoot, file));
-  const rfcSource = read(repoRoot, "rfcs/0003-living-photographic-knowledge-loop.md", overrides);
   const rfcData = matter(rfcSource).data;
   const packageManifest = JSON.parse(read(repoRoot, "package.json", overrides));
   const evaluationSource = read(
@@ -380,7 +381,11 @@ export function evaluatePhotoKnowledge(options = {}) {
         candidateIds.length - governedPhotoAssets.length ===
           suite.migration.remainingCount &&
         /two of thirteen/i.test(editionSource) &&
-        /remaining eleven/i.test(editionSource),
+        /remaining eleven/i.test(editionSource) &&
+        /two of Layout A's thirteen/i.test(rfcSource) &&
+        /remaining eleven/i.test(rfcSource) &&
+        /two of thirteen/i.test(editionGuideSource) &&
+        /remaining eleven/i.test(editionGuideSource),
       `The pilot reports ${governedPhotoAssets.length} governed assets, ${photoOccurrences.length} exact occurrences, and ${candidateIds.length - governedPhotoAssets.length} migration items across ${candidateIds.length} branch-review photographs.`
     )
   ];

@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "pre-launch-composite-native-public-h-2026-07-28",
+  "judgeId": "pre-launch-composite-native-public-l-2026-07-28",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "e400f9e7300e57422e13b03dd184241f01f104bbbcbf43a9bd3947433dd4cf99",
+  "candidateFingerprint": "f36607d1c70f5df9c1e039e137cf4eeacd96180a9583a48d73085e359d70ae4f",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,134 +12,134 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "candidate-manifest.json independently reproduced the required fingerprint across all 906 sorted paths, with every listed byte length and per-file SHA-256 matching.",
-        ".agents/evals/feature-evals-composite.json records exactly feature/evals-A through feature/evals-N, their frozen heads, refs/remotes/origin, feature/knowledge-h, and develop.",
-        "docs/integration/feature-evals-composite.json contains exactly one read-only integration decision for each of the fourteen frozen branches."
+        "candidate-manifest.json enumerates exactly 906 code-point-sorted candidate paths, and every listed byte length and file SHA-256 agrees with the corresponding dossier file.",
+        "The complete path-plus-NUL, decimal-byte-length-plus-NUL, raw-bytes-plus-NUL fingerprint is f36607d1c70f5df9c1e039e137cf4eeacd96180a9583a48d73085e359d70ae4f.",
+        ".agents/evals/feature-evals-composite.json fixes the A-N branch-head map under refs/remotes/origin and binds it to branchHeadMapDigest efa94ea9c3b7190deca61024093d30e4d78a2efdebf04b78b5d6857d9df7a002.",
+        "docs/knowledge-bank/integration-register.json contains one decision for each required A-N input and matches the rubric's exact head map, writable branch feature/knowledge-h, and base branch develop."
       ],
-      "rationale": "The dossier binds the complete A-N inventory, exact heads, namespace, integration branch, and pull-request base without treating a frozen source branch as writable."
+      "rationale": "The dossier is complete and internally content-addressed, and its integration inputs, namespace, base, and writable destination are fixed rather than inferred from mutable presentation state."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "docs/integration/feature-evals-composite.json gives every A-N branch an adopt, adapt, already-present, or reject-class decision with substantive rationale.",
-        "Each decision identifies existing destination paths and COMP verification identifiers.",
-        "The register expressly retains the selective H-derived website composition instead of projecting the knowledge bank wholesale."
+        "The canonical integration-register payload reproduces digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "Every A-N register decision includes a destination, bounded rationale, and verification identifiers rather than a decorative branch label.",
+        "The website decision preserves a selective public composition and does not merge the protected Knowledge Bank wholesale into the public application.",
+        "The register and rubric retain feature/knowledge-h over develop as the governed integration destination."
       ],
-      "rationale": "The integration choices are inspectable, destination-specific, and explicit about both projection and non-projection."
+      "rationale": "The integration record is exhaustive, digest-bound, destination-specific, and consistent with the public/private architecture."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The manifest contains the canonical schema, records, historical knowledge, agency graph, lifecycle operations, public projection, public registry, and proof layer.",
-        "None of the three forbidden parallel lifecycle paths declared by the frozen suite appears in the 906-path candidate.",
-        "apps/www/src/data/knowledge-bank/public-registry.json is a bounded claims, pages, and sources projection rather than a private Wiki dump.",
-        "Homepage, About, Technical Operations, and case-study surfaces consume curated public data and claims rather than exposing raw private records."
+        "The canonical schemas distinguish source records, claims, evidence relationships, agency and credit scopes, corrections, inquiries, projections, and publication status.",
+        "apps/www/src/data/public-registry.json exposes only the governed public sources, claims, and page projections needed by the website.",
+        "Public application code imports the public registry rather than internal excerpts, private locators, or the complete Knowledge Bank.",
+        "The manifest contains the required canonical lifecycle paths, contains no forbidden parallel lifecycle implementation, and exposes no /proofs route or private Wiki dump."
       ],
-      "rationale": "One governed architecture remains canonical, while the public site is a deliberately redacted and selective projection."
+      "rationale": "One canonical governed model supplies a deliberately narrower public projection, with protected research detail kept out of the public bundle."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "apps/www/src/data/knowledge-bank/lifecycle-operations.ts implements idempotent replay, linked duplicate preservation, and stable-ID collision rejection.",
-        "scripts/tests/lifecycle-operations.test.mjs covers replay, changed-ID duplicates, changed-content collisions, and lifecycle query behavior.",
-        "The query contract exposes mature held claims, unresolved inquiries, corrections, projection states, and orphan-source detection."
+        "scripts/knowledge-wiki/lifecycle-operations.mjs treats an identical stable-ID intake as already present and rejects a changed payload that collides with an existing stable ID.",
+        "A repeated artifact under a new ID is recorded as a linked duplicate rather than silently merged or discarded.",
+        "Lifecycle queries return held records, inquiries, corrections, projections, and orphan-source conditions.",
+        "scripts/knowledge-wiki/lifecycle-operations.test.mjs covers duplicate handling, collisions, transitions, query behavior, and fail-closed cases."
       ],
-      "rationale": "The append and query contracts preserve evidence history without silently overwriting collisions or hiding held and unresolved states."
+      "rationale": "The lifecycle operations are implemented as stable, test-covered governance behavior rather than prose-only policy."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Canonical source and claim records retain supports-generally, does-not-establish, evidence-role, correction, and projection boundaries.",
-        "Agency records distinguish individual, shared, collective, and institutional contribution and attach source-backed limitations.",
-        "Population controls require surface, capture date, denominator, recovery gaps, and explicit separation of not-recovered from did-not-exist.",
-        "FairRentNYC and KC Town Hall copy separates Jamie's contribution from coalition accomplishments, municipal causation, disbursement, consensus, sole authorship, and official endorsement."
+        "reports/wiki-health.json binds 164 governed records to source fingerprint 34fd85b78759747c1b28032355659a1ae5c1ae98c97db8a6187720a4b7bf029c and review horizon 2026-07-28, with zero hard errors and zero orphan records.",
+        "FairRentNYC projections distinguish Jamie's operating and implementation work from collective repeal, organizing, testimony, and policy outcomes; Council contact is explicitly not endorsement.",
+        "KC Town Hall records separate Jamie's Co-Founder and Project Manager role from municipal appropriation, non-disbursement, withdrawal, and return-of-funds actions.",
+        "The supportive-testimony corpus preserves 581 complete attributed turns from five bounded official events while excluding opposition, neutral or procedural material, fragments, and unestablished or conditional support.",
+        "The Commercial Rent Stabilization queue identifies City, State, and public-event research leads but explicitly forbids treating sponsorship, appearance, proximity, or named officials as verified quotations before source return."
       ],
-      "rationale": "Source, claim, correction, agency, and population integrity are consistently represented, with consequential limits kept adjacent to public claims."
+      "rationale": "Source identity, agency, collective credit, corrections, scope, and evidentiary limits remain visible through both the governed corpus and its public claims."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The homepage identifies Jamie's target role, directs hiring readers to Technical Operations, HJE, FairRentNYC, and the resume, and frames each project around what was unclear, Jamie's action, usable results, evidence, and limits.",
-        "About reconstructs continuity across artistic, civic, technical, relational, and social practice through observe, model, interface, use, revision, and handoff.",
-        "Technical Operations maps concrete responsibilities to eight named settings and links capabilities to inspectable project proof.",
-        "HJE identifies long-term implementation actions and a carefully bounded contribution to 2x revenue growth while withholding private analytics and operational detail.",
-        "FairRentNYC names Jamie's founding, organizing, web, documentation, and coordination work while preserving collective accomplishment and protected coalition context.",
-        "Sunday Dinner/196 exposes a public-safe operating specimen and recurring participation loop without publishing participant records or converting trust work into spectacle.",
-        "KC Town Hall distinguishes co-founder and project-manager evidence, municipal records, first-person field memory, shared authorship, proposal status, and non-causation limits."
+        "The homepage names Jamie as a Technical PM, Product Ops, and Implementation practitioner and links directly to proof surfaces organized around role, action, usable result, collective context, evidence, and limits.",
+        "About and Technical Operations explain Jamie's operating method and responsibilities without substituting biography or a private Wiki for work evidence.",
+        "HJE, FairRentNYC, Sunday Dinner/196, and KC Town Hall each state Jamie's role and actions, a usable artifact or operating result, collaborator context, source basis, and a bounded non-claim.",
+        "docs/qa/evals-H/responsive-route-matrix.json binds 56 route-viewport checks to public-surface fingerprint 6107c5ce77afc59e20bfc7a50593ce08e34603a169f17292f584d052abe70ec3, with no overflow, accessibility, keyboard, heading, request, or lazy-loading failures.",
+        "All 13 photography bindings provide alt text, captions, archive labels, stable dimensions, and crop positioning while the review register leaves exact credit, rights, consent, dignity, crop, caption, and collective-credit approval open.",
+        "The transcript-linked photographic method treats People labels, speaker labels, timestamps, photo-filter exports, and nested _keep selections as discovery signals only, never automatic identity, speaking, quality, rights, consent, or publication claims."
       ],
-      "rationale": "A hiring reader can recover Jamie's role, actions, usable results, collective setting, source basis, and honest limits without encountering a knowledge-bank mirror or private Wiki dump."
+      "rationale": "A hiring reader receives direct, usable role clarity and inspectable evidence across current responsive surfaces, while photographic and collective contexts remain carefully bounded."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "docs/knowledge-bank/data/blind-spot-controls-2026-07.json keeps human corroboration, collective review, hiring usability, job-funnel validation, and external validity explicitly open.",
-        "Each human-evidence control contains required evidence, anti-gaming rules, a next action, and a public-projection boundary.",
-        "The control semantics state that instrumented absence is not validation and external evidence cannot be synthesized.",
-        "Human launch tasks remain excluded: Jamie's exact-candidate approval, deployment verification, and indexing approval."
+        "The blind-spot controls keep human corroboration, collective review, hiring usability, job-funnel evidence, and external validity open, each with required evidence and a next action.",
+        "The evaluation semantics label automated checks as instrumented rather than validated and prohibit synthesizing external evidence.",
+        "The launch ledgers leave Jamie's exact-candidate approval, deployment infrastructure, domain and TLS checks, smoke and rollback verification, and explicit indexing approval unresolved.",
+        "Photo and publication governance retain human gates for rights, consent and dignity, exact creator credit, crop and caption, collective credit, staging, production, indexing, and Jamie approval.",
+        "Hiring reports expressly decline to infer employer interest, interview performance, hiring validity, or employment outcomes from public-surface simulations."
       ],
-      "rationale": "The candidate makes missing human and external evidence governable without pretending that automation resolved it."
+      "rationale": "Automation is treated as bounded verification evidence, while every required human, publication, deployment, indexing, and external-validity decision remains genuinely open."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The frozen rubric digest was independently recomputed from the canonical semantic payload as c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
-        "The suite separately pins the base portfolio suite, integration register, blind-spot controls, branch heads, canonical files, forbidden architectures, grader separation, and candidate identity.",
-        "scripts/tests/composite-integration.test.mjs includes mutations for branch omission, checksum-only approval, fabricated heads, decorative decisions, private leakage, human-evidence synthesis, rubric weakening, and holdout provenance.",
-        "The rubric forbids optimizer self-grading, forbids not-observed evidence from passing, and makes every criterion blocking."
+        "The semantic rubric payload reproduces c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340; the base suite, integration register, and blind-spot payloads also reproduce their frozen digests.",
+        "Composite regression tests reject omitted branches, fabricated heads, missing destinations, semantic rubric mutations, checksum-only repairs, decorative records, stale outputs, candidate mutations, optimizer self-grading, synthesized human closure, and score compensation for blockers.",
+        "Wiki reports distinguish content-addressed source identity, review horizon 2026-07-28, and source fingerprint; hiring reports separately identify their candidate fingerprint 4eaefa4f82aeeb1991b3e7f8cc19b039ecaf5eb4698f386de04632d46f2b0ef0 and review horizon 2026-07-26.",
+        "The generated graph delta withholds comparison because no immutable baseline is supplied, and its regression test forbids dependence on origin/develop.",
+        "RFC 0003, the portfolio edition guide, the governed edition, the photo evaluator, generated index, and health reports consistently state two governed assets, two governed occurrences, and eleven remaining migration items.",
+        "Photo regressions reject a missing second occurrence and stale RFC or edition-guide counts.",
+        "Testimony regressions require exact reading-copy projection, complete attribution, event boundaries, official locators, and the full exclusion taxonomy, so formatting repair cannot alter the governed corpus."
       ],
-      "rationale": "The semantic contract is independently reproducible and defended against the principal score-gaming and governance-weakening mutations."
+      "rationale": "The frozen evaluator identity and derived reports are reproducible, semantically guarded, candidate-aware, immutable where comparison is claimed, and covered by targeted regressions for the newly identified failure modes."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The complete 906-path fingerprint was independently recomputed using path, NUL, decimal byte length, NUL, raw bytes, NUL and exactly reproduced e400f9e7300e57422e13b03dd184241f01f104bbbcbf43a9bd3947433dd4cf99.",
-        "All 906 manifest byte lengths and per-file SHA-256 values matched the inspected files.",
-        "The responsive record binds 56 route and viewport observations across 14 routes and four widths, with zero status failures, axe violations, overflow rows, broken images, unlabeled images, failed requests, or screenshot-digest mismatches.",
-        "Supportive-testimony tests confirmed complete declared-scope contributions, source locators, exact Markdown projection, and preserved exclusions; transcript-photo tests confirmed that temporal proximity, People labels, timestamps, and _keep depth cannot establish identity, speaking, quality, rights, or consent.",
-        "Photography records keep exact crop, caption, creator credit, rights, consent, dignity, collective credit, destination, production, and indexing as separate human decisions.",
-        "This acceptance is expressly conditioned on paired installation with a distinct independent architecture judgment against this same unchanged fingerprint and rubric digest."
+        "The exact 906-path candidate identity is f36607d1c70f5df9c1e039e137cf4eeacd96180a9583a48d73085e359d70ae4f and the exact semantic rubric identity is c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
+        "COMP-001 through COMP-008 each pass without material unobserved evidence or a blocking finding.",
+        "candidate-manifest.json excludes the two earlier composite judgments from the candidate, avoiding circular judgment material.",
+        "This result is conditioned on paired installation with a distinct independent architecture judgment for this same unchanged candidate and rubric."
       ],
-      "rationale": "The exact candidate identity is reproduced, the other eight criteria pass without material unobserved evidence, and this judgment becomes a valid stopping input only when paired with a distinct independent architecture acceptance for the unchanged candidate and rubric."
+      "rationale": "The candidate and rubric identities are exact, every substantive criterion passes, and this public-surface judgment is valid only as one independent half of the required same-candidate, same-rubric paired evaluation."
     }
   ],
   "notObserved": [],
-  "findings": [
-    "The supportive-testimony corpus preserves complete attributed turns, official event and page boundaries, stenographic wording, exclusions, and uncertainty; its Markdown reading copy is an exact projection of the governed structured corpus.",
-    "The Commercial Rent Stabilization queue treats Emily Gallagher, Julia Salazar, Brad Lander, Shahana Hanif, Eon Huntley, and other officials as discovery leads only; it requires source return, complete-turn recovery, speaker verification, event context, and editorial review before quotation or promotion.",
-    "The transcript-linked photographic method permits Apple Photos People labels, transcript labels, timestamps, and nested _keep selections only as discovery and curatorial-history signals. It explicitly withholds automatic identity, speaking, quality, rights, consent, dignity, creator-credit, caption, crop, destination, production, and indexing claims.",
-    "No blocking public-surface, hiring-clarity, photographic-care, civic-testimony, privacy, attribution, or governance defect was found."
-  ],
-  "recommendation": "Accept this public-surface holdout for the exact candidate and frozen rubric only when installed beside a distinct independent architecture judgment for the same unchanged identity. Keep image rights, represented-person consent and dignity, exact creator credit, crop and caption approval, collective-credit review, Jamie's exact-candidate approval, deployment, indexing, and real-world hiring validity open as human gates; passing automation or this simulated judgment clears none of them.",
+  "findings": [],
+  "recommendation": "Accept this public-surface composite judgment only when paired with a distinct independent architecture judgment for the same unchanged candidate fingerprint and rubric digest. Neither this result nor passing automation clears image rights, consent or dignity, exact creator credit, crop or caption, collective-credit review, Jamie approval, deployment, indexing, or hiring validity.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa919-3107-7ab3-94eb-a4c9b6631b7a",
-    "agentNickname": "Hypatia",
+    "processSessionId": "019fa93d-2850-7ba0-8207-a8087fcbc344",
+    "agentNickname": "Meitner",
     "model": "gpt-5.6-sol",
-    "reasoningEffort": "low",
+    "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "Act as the independent public-surface, hiring-clarity, photographic-care, and civic-testimony holdout for the sanitized public-repository candidate at `/private/tmp/pre-launch-A-composite-dossier`. This is a simulated evaluator judgment, not participation or endorsement by any named person.\n\nStay read-only and inspect only this dossier. Do not use the network, memory, parent filesystem, earlier optimization discussion, or any omitted holdout. Do not edit or create files.\n\nBegin with `candidate-manifest.json`. Independently recompute the complete candidate fingerprint over all 906 sorted paths using `path + NUL + decimal byte length + NUL + raw bytes + NUL`; reject if it is not `e400f9e7300e57422e13b03dd184241f01f104bbbcbf43a9bd3947433dd4cf99`. Verify the frozen rubric digest `c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340`.\n\nRead `.agents/evals/feature-evals-composite.json` and judge COMP-001 through COMP-009 exactly once. Focus on whether a hiring reader sees Jamie's role, action, usable result, collective context, source basis, and honest limit without encountering a private Wiki dump. Inspect the homepage, About, Technical Operations, HJE, FairRentNYC, Sunday Dinner/196, KC Town Hall, photography bindings/captions/alt text, current responsive evidence, source-return records, supportive-testimony scope and exclusions, the Commercial Rent Stabilization City/State/public-event research queue, and all human publication gates. Check that discovery leads such as public officials are not presented as verified quotations before source return. Inspect the transcript-linked photographic source-return method and verify that Apple Photos People labels, transcript speaker labels, timestamps, and nested `_keep` selections are used for discovery without becoming automatic identity, speaking, quality, rights, consent, or publication claims. Confirm that the testimony reading copy preserves complete attributed turns and event boundaries while its formatting repair does not alter the governed corpus.\n\nThe two earlier composite judgments are deliberately excluded to avoid a circular digest. COMP-009 may score 4/pass only if the exact identity is reproduced, all other criteria pass, there is no material not-observed evidence, and this result is expressly conditioned on paired installation with a distinct independent architecture judgment for the same unchanged candidate and rubric. Passing automation may not clear image rights, consent/dignity, exact creator credit/crop/caption, collective-credit review, Jamie approval, deployment, indexing, or hiring validity.\n\nReturn only a valid JSON object with exactly these keys: `runVersion` (2), `judgeId` (`pre-launch-composite-native-public-h-2026-07-28`), `grader` (`independent_llm_judge`), `independentFromOptimizer` (true), `rubricSha256`, `candidateFingerprint`, `verdict` (`accepted` only if all nine criteria pass), `scores`, `notObserved`, `findings`, and `recommendation`. Include exactly nine `scores`, COMP-001 through COMP-009, each with `criterionId`, integer `score` 0-4, boolean `pass`, nonempty concrete `evidence` array, and `rationale`. Acceptance requires every score 4/pass, empty `notObserved`, and no blocking finding. Do not add process provenance; the parent orchestrator will record the native result transport and process metadata.",
-    "promptSha256": "c3803ab64072159e9727c3ba78138f00aea40fc83df7044232f1709353de710b",
-    "judgmentSha256": "b06293d4054a1e7cf06b298fecc57b095099267e56eb8b7e478edd01fa60c468",
+    "prompt": "Act as the independent public-surface, hiring-clarity, photographic-care, civic-testimony, and release-governance holdout for the sanitized public-repository candidate at `/private/tmp/pre-launch-A-composite-dossier`. This is a simulated evaluator judgment, not participation or endorsement by any named person.\n\nStay read-only and inspect only this dossier. Do not use the network, memory, parent filesystem, earlier optimization discussion, or any omitted holdout. Do not edit or create files.\n\nBegin with `candidate-manifest.json`. Independently recompute the complete candidate fingerprint over all 906 sorted paths using `path + NUL + decimal byte length + NUL + raw bytes + NUL`; reject if it is not `f36607d1c70f5df9c1e039e137cf4eeacd96180a9583a48d73085e359d70ae4f`. Verify the frozen rubric digest `c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340`.\n\nRead `.agents/evals/feature-evals-composite.json` and judge COMP-001 through COMP-009 exactly once. Focus on whether a hiring reader sees Jamie's role, action, usable result, collective context, source basis, and honest limit without encountering a private Wiki dump. Inspect the homepage, About, Technical Operations, HJE, FairRentNYC, Sunday Dinner/196, KC Town Hall, photography bindings/captions/alt text, current responsive evidence, source-return records, supportive-testimony scope and exclusions, the Commercial Rent Stabilization City/State/public-event research queue, and all human publication gates. Check that discovery leads such as public officials are not presented as verified quotations before source return.\n\nVerify that generated reports now distinguish source identity, review horizon, and candidate fingerprint accurately; that no generated graph comparison depends on a mutable remote ref; and that the RFC, edition guide, governed edition, photo evaluator, and reports consistently state two governed photo occurrences and eleven remaining migration items. Inspect the new regression tests for those failures.\n\nInspect the transcript-linked photographic method and verify that Apple Photos People labels, transcript speaker labels, timestamps, `photo-filter` exports, and nested `_keep` selections are used for discovery without becoming automatic identity, speaking, quality, rights, consent, or publication claims. Confirm that the testimony reading copy preserves complete attributed turns and event boundaries while formatting repair does not alter the governed corpus.\n\nThe two earlier composite judgments are deliberately excluded to avoid a circular digest. COMP-009 may score 4/pass only if the exact identity is reproduced, all other criteria pass, there is no material not-observed evidence, and this result is expressly conditioned on paired installation with a distinct independent architecture judgment for the same unchanged candidate and rubric. Passing automation may not clear image rights, consent/dignity, exact creator credit/crop/caption, collective-credit review, Jamie approval, deployment, indexing, or hiring validity.\n\nReturn only a valid JSON object with exactly these keys: `runVersion` (2), `judgeId` (`pre-launch-composite-native-public-l-2026-07-28`), `grader` (`independent_llm_judge`), `independentFromOptimizer` (true), `rubricSha256`, `candidateFingerprint`, `verdict` (`accepted` only if all nine criteria pass), `scores`, `notObserved`, `findings`, and `recommendation`. Include exactly nine `scores`, COMP-001 through COMP-009, each with `criterionId`, integer `score` 0-4, boolean `pass`, nonempty concrete `evidence` array, and `rationale`. Acceptance requires every score 4/pass, empty `notObserved`, and no blocking finding. Do not add process provenance; the parent orchestrator will record the native result transport and process metadata.\n",
+    "promptSha256": "e9f9eb9c7f45519208a82c18257702a165ec56a5d1881b66e9c1cb440678d23d",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-28T14:18:05.000Z",
-    "completedAt": "2026-07-28T14:23:55.000Z"
+    "startedAt": "2026-07-28T14:59:45Z",
+    "completedAt": "2026-07-28T15:16:00Z",
+    "judgmentSha256": "9e591ff6ca9c31f802401ea139d4347a637296bfbf55204634d4fa316373e15c"
   }
 }

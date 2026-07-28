@@ -165,3 +165,39 @@ test("the migration criterion fails if the second occurrence disappears", () => 
   );
   assert.equal(criterion.pass, false);
 });
+
+test("stale RFC migration counts fail closed", () => {
+  const rfcPath = "rfcs/0003-living-photographic-knowledge-loop.md";
+  const original = readFileSync(path.join(repoRoot, rfcPath), "utf8");
+  const result = evaluatePhotoKnowledge({
+    repoRoot,
+    overrides: {
+      [rfcPath]: original
+        .replace("two of Layout A's thirteen", "one of Layout A's thirteen")
+        .replace("remaining eleven", "remaining twelve")
+    },
+    skipGenerated: true
+  });
+  const criterion = result.criteria.find(
+    (item) => item.id === "PHOTO-KNOWLEDGE-010"
+  );
+  assert.equal(criterion.pass, false);
+});
+
+test("stale edition-guide migration counts fail closed", () => {
+  const guidePath = "docs/photography/portfolio-editions.md";
+  const original = readFileSync(path.join(repoRoot, guidePath), "utf8");
+  const result = evaluatePhotoKnowledge({
+    repoRoot,
+    overrides: {
+      [guidePath]: original
+        .replace("two of thirteen", "one of thirteen")
+        .replace("remaining eleven", "remaining twelve")
+    },
+    skipGenerated: true
+  });
+  const criterion = result.criteria.find(
+    (item) => item.id === "PHOTO-KNOWLEDGE-010"
+  );
+  assert.equal(criterion.pass, false);
+});

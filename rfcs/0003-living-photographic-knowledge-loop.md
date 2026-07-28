@@ -65,8 +65,8 @@ superseded_by: null
 > chamber homepage photograph as its first complete architectural canary and
 > preserves the East River example as a future migration candidate. This is a
 > donor-specific adaptation, not a claim that the records below already govern
-> Layout C. The first pass migrates one of Layout A's thirteen branch-review
-> photographs and reports the remaining twelve explicitly. Photographer,
+> Layout C. The first pass now governs two of Layout A's thirteen branch-review
+> photographs and reports the remaining eleven explicitly. Photographer,
 > permission, represented-person, artwork, caption, crop, staging, production,
 > indexing, and final Jamie approval remain open.
 

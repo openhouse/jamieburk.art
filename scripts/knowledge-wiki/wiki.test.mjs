@@ -4,11 +4,16 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import test from "node:test";
 
-import { compileWiki, semanticGraphFingerprint } from "./lib.mjs";
+import {
+  buildGeneratedOutputs,
+  compileWiki,
+  deriveSourceMetadata,
+  semanticGraphFingerprint
+} from "./lib.mjs";
 
 const metadata = {
-  sourceCommit: "fixture-commit",
-  generatedAt: "2026-07-18T00:00:00Z"
+  sourceIdentity: "fixture-content",
+  reviewHorizon: "2026-07-18"
 };
 
 const files = {
@@ -174,6 +179,24 @@ test("graph compilation is deterministic", () => {
   const first = compile(root);
   const second = compile(root);
   assert.equal(semanticGraphFingerprint(first.graph), semanticGraphFingerprint(second.graph));
+});
+
+test("default source metadata is content-addressed and commit-independent", () => {
+  const metadata = deriveSourceMetadata([
+    { last_reviewed: "2026-07-17" },
+    { last_reviewed: "2026-07-28" }
+  ]);
+  assert.deepEqual(metadata, {
+    sourceIdentity: "content-addressed",
+    reviewHorizon: "2026-07-28"
+  });
+});
+
+test("graph comparison output never depends on a mutable remote ref", () => {
+  const outputs = buildGeneratedOutputs(compile(fixture()));
+  const comparison = outputs["reports/wiki-graph-delta.md"];
+  assert.match(comparison, /No immutable comparison baseline is declared/);
+  assert.doesNotMatch(comparison, /origin\/develop/);
 });
 
 test("broken relative file link fails", () => {

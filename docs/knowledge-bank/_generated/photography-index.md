@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Photography index
 
-**Source fingerprint:** `6b540857ec8941a7b98e8af94a9d65132de5597bbbc50e3712667b8e5e03054b`
+**Source fingerprint:** `118dafd7f06357b2d9bd9f696f09c0f52a9f9cc287a5cb0b6cd4b4473624e156`
 
 - Manifest photographs: 13
 - Governed RFC 0003 assets: 2

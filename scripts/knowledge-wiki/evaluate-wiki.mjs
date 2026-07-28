@@ -362,7 +362,7 @@ const checks = {
           /Simulated/.test(reader.disclaimer) && reader.prohibitedAssumptions.length >= 2
       ),
   candidate_and_context_hashes_present:
-    /^[0-9a-f]{40}$/.test(publicHiring.report.candidateSha) &&
+    /^[0-9a-f]{64}$/.test(publicHiring.report.candidateFingerprint) &&
     [
       publicHiring.report.portfolioSnapshotHash,
       publicHiring.report.roleContextHash,

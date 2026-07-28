@@ -1,4 +1,3 @@
-import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import {
   existsSync,
@@ -735,46 +734,22 @@ function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
-function sourceMetadata(repoRoot, override) {
+export function deriveSourceMetadata(records, override) {
   if (override) return override;
 
-  let sourceCommit = "working-tree";
-  try {
-    sourceCommit = execFileSync(
-      "git",
-      [
-        "log",
-        "-1",
-        "--format=%H",
-        "--",
-        "package.json",
-        "package-lock.json",
-        ".vscode",
-        "docs/architecture",
-        "docs/knowledge-bank",
-        "scripts/knowledge-wiki",
-        "evals/knowledge-wiki",
-        ":(exclude)docs/knowledge-bank/_generated/**"
-      ],
-      { cwd: repoRoot, encoding: "utf8" }
-    ).trim();
-  } catch {
-    // Temporary test repositories use the deterministic fallback below.
-  }
+  const reviewHorizon = records
+    .map((record) => record.last_reviewed)
+    .filter(Boolean)
+    .sort(compareText)
+    .at(-1) ?? "1970-01-01";
 
-  let generatedAt = "1970-01-01T00:00:00Z";
-  if (sourceCommit !== "working-tree") {
-    try {
-      generatedAt = execFileSync("git", ["show", "-s", "--format=%cI", sourceCommit], {
-        cwd: repoRoot,
-        encoding: "utf8"
-      }).trim();
-    } catch {
-      // Keep the deterministic fallback.
-    }
-  }
-
-  return { sourceCommit, generatedAt };
+  // The generated graph is bound by sourceFingerprint below. A Git commit SHA
+  // creates a self-invalidating loop because committing the generated output
+  // necessarily changes HEAD after generation.
+  return {
+    sourceIdentity: "content-addressed",
+    reviewHorizon
+  };
 }
 
 function makeIssue(code, message, file, line, severity = "error") {
@@ -841,7 +816,6 @@ export function compileWiki(options = {}) {
   const repoRoot = options.repoRoot ?? defaultRepoRoot;
   const wikiRoot = path.join(repoRoot, options.wikiRelativeRoot ?? wikiRelativeRoot);
   const now = options.now ?? "2026-07-18";
-  const metadata = sourceMetadata(repoRoot, options.sourceMetadata);
   const issues = [];
   const markdownFiles = walkFiles(
     wikiRoot,
@@ -1276,6 +1250,7 @@ export function compileWiki(options = {}) {
     fingerprintHash.update("\0");
   }
   const sourceFingerprint = fingerprintHash.digest("hex");
+  const metadata = deriveSourceMetadata(records, options.sourceMetadata);
 
   const nodes = records
     .map((record) => ({
@@ -1316,9 +1291,9 @@ export function compileWiki(options = {}) {
   );
 
   const graph = {
-    schemaVersion: 1,
-    generatedAt: metadata.generatedAt,
-    sourceCommit: metadata.sourceCommit,
+    schemaVersion: 2,
+    sourceIdentity: metadata.sourceIdentity,
+    reviewHorizon: metadata.reviewHorizon,
     sourceFingerprint,
     rootId: "index.knowledge-wiki",
     nodes,
@@ -1329,9 +1304,9 @@ export function compileWiki(options = {}) {
   const errors = issues.filter((issue) => issue.severity === "error");
   const warnings = issues.filter((issue) => issue.severity === "warning");
   const health = {
-    schemaVersion: 1,
-    generatedAt: metadata.generatedAt,
-    sourceCommit: metadata.sourceCommit,
+    schemaVersion: 2,
+    sourceIdentity: metadata.sourceIdentity,
+    reviewHorizon: metadata.reviewHorizon,
     sourceFingerprint,
     hardGates: {
       passed: errors.length === 0,
@@ -1387,8 +1362,8 @@ export function compileWiki(options = {}) {
 
 function generatedHeader(title, result) {
   return `<!-- GENERATED FILE. DO NOT EDIT. -->\n# ${title}\n\n` +
-    `**Source commit:** \`${result.metadata.sourceCommit}\`\n` +
-    `**Generation time:** ${result.metadata.generatedAt}\n` +
+    `**Source identity:** \`${result.metadata.sourceIdentity}\`\n` +
+    `**Review horizon:** ${result.metadata.reviewHorizon}\n` +
     `**Source fingerprint:** \`${result.graph.sourceFingerprint}\`\n\n`;
 }
 
@@ -1498,49 +1473,21 @@ function backlinksOutputs(result) {
   );
 }
 
-function graphDeltaMarkdown(result, baseGraph) {
-  const baseNodes = new Map((baseGraph?.nodes ?? []).map((node) => [node.id, node]));
-  const currentNodes = new Map(result.graph.nodes.map((node) => [node.id, node]));
-  const baseEdges = new Set((baseGraph?.edges ?? []).map((edge) => `${edge.from}\0${edge.type}\0${edge.to}`));
-  const currentEdges = new Set(result.graph.edges.map((edge) => `${edge.from}\0${edge.type}\0${edge.to}`));
-  const addedNodes = [...currentNodes.keys()].filter((id) => !baseNodes.has(id)).sort();
-  const removedNodes = [...baseNodes.keys()].filter((id) => !currentNodes.has(id)).sort();
-  const addedEdges = [...currentEdges].filter((key) => !baseEdges.has(key)).sort();
-  const removedEdges = [...baseEdges].filter((key) => !currentEdges.has(key)).sort();
+function graphDeltaMarkdown(result) {
   const lines = [
-    generatedHeader("Knowledge Wiki graph delta", result).trimEnd(),
+    generatedHeader("Knowledge Wiki graph comparison status", result).trimEnd(),
     "",
-    baseGraph
-      ? "Compared with the graph artifact on `origin/develop`."
-      : "`origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.",
+    "No immutable comparison baseline is declared for this candidate. Node and edge deltas are withheld rather than derived from a mutable Git ref.",
     "",
-    `- Nodes added: ${addedNodes.length}`,
-    `- Nodes removed: ${removedNodes.length}`,
-    `- Edges added: ${addedEdges.length}`,
-    `- Edges removed: ${removedEdges.length}`,
-    `- New type-aware orphans: ${result.health.orphans.length}`,
+    `- Current nodes: ${result.graph.nodes.length}`,
+    `- Current edges: ${result.graph.edges.length}`,
+    `- Current type-aware orphans: ${result.health.orphans.length}`,
     `- Current rights-review records: ${result.health.rightsReview.length}`,
     "",
-    "## Added nodes",
+    "A future comparison must name and bind an immutable baseline artifact and its digest before reporting additions or removals.",
     "",
-    ...(addedNodes.length ? addedNodes.map((id) => `- \`${id}\``) : ["- None."]),
-    ""
   ];
   return lines.join("\n");
-}
-
-function loadBaseGraph(repoRoot) {
-  try {
-    return JSON.parse(
-      execFileSync("git", ["show", "origin/develop:reports/wiki-graph.json"], {
-        cwd: repoRoot,
-        encoding: "utf8",
-        stdio: ["ignore", "pipe", "ignore"]
-      })
-    );
-  } catch {
-    return null;
-  }
 }
 
 export function buildGeneratedOutputs(result) {
@@ -1548,7 +1495,7 @@ export function buildGeneratedOutputs(result) {
     "reports/wiki-graph.json": `${JSON.stringify(result.graph, null, 2)}\n`,
     "reports/wiki-health.json": `${JSON.stringify(result.health, null, 2)}\n`,
     "reports/wiki-health.md": healthMarkdown(result),
-    "reports/wiki-graph-delta.md": graphDeltaMarkdown(result, loadBaseGraph(result.repoRoot)),
+    "reports/wiki-graph-delta.md": graphDeltaMarkdown(result),
     [`${generatedRelativeRoot}/index-by-kind.md`]: indexByKindMarkdown(result),
     [`${generatedRelativeRoot}/orphans.md`]: listMarkdown(
       "Type-aware orphans",

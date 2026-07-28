@@ -4,7 +4,10 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import test from "node:test";
 
+import matter from "gray-matter";
+
 import {
+  deriveEmploymentCandidateMetadata,
   discoveryChecks,
   evaluatePublicHiring,
   loadHiringSuite,
@@ -44,6 +47,28 @@ test("named reader profiles retain simulation disclaimers", () => {
   assert.ok(named.length >= 5);
   assert.ok(named.every((reader) => /Simulated/.test(reader.disclaimer)));
   assert.ok(named.every((reader) => reader.prohibitedAssumptions.length >= 2));
+});
+
+test("candidate metadata is content-addressed and independent of Git history", () => {
+  const root = candidateFixture();
+  const suite = loadHiringSuite(root);
+  const opportunities = suite.opportunityPaths.map((item) => {
+    const parsed = matter(readFileSync(path.join(root, item), "utf8"));
+    return { data: parsed.data };
+  });
+  const candidatePaths = [
+    ...new Set([
+      ...Object.values(suite.routeFiles).flat(),
+      ...suite.opportunityPaths,
+      ...suite.readerPaths,
+      "evals/knowledge-wiki/hiring-suites.json"
+    ])
+  ];
+  const first = deriveEmploymentCandidateMetadata(root, candidatePaths, opportunities);
+  const second = deriveEmploymentCandidateMetadata(root, candidatePaths, opportunities);
+  assert.deepEqual(first, second);
+  assert.match(first.candidateFingerprint, /^[0-9a-f]{64}$/);
+  assert.equal(first.reviewHorizon, "2026-07-26");
 });
 
 test("removing a declared public proof lowers observed requirement coverage", () => {

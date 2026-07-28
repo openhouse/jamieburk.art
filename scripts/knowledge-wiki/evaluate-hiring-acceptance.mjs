@@ -21,5 +21,5 @@ if (issues.length) {
 }
 
 console.log(
-  `Public-only hiring baseline ${check ? "is current" : "written"}: ${evaluation.report.opportunities.length} opportunities, candidate ${evaluation.report.candidateSha.slice(0, 12)}.`
+  `Public-only hiring baseline ${check ? "is current" : "written"}: ${evaluation.report.opportunities.length} opportunities, candidate ${evaluation.report.candidateFingerprint.slice(0, 12)}.`
 );
