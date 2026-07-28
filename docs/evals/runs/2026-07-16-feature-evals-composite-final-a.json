@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "prelaunch-governance-ci-history-rebind-2026-07-28",
+  "judgeId": "prelaunch-governance-finalgraph-rebind-2026-07-28",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "97e4f949d0d0785a522dd17f7c90b6e96b224b1ae5a235ae8934b50ed20fc998",
+  "candidateFingerprint": "046d5f0fe50c75eea724c5cd84d049a3186290e8e2fb9e4e2a17c7b06894cf10",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,10 +12,10 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "The composite evaluator independently passed all 14 frozen feature/evals-A through feature/evals-N branch decisions and resolved their declared remote heads.",
-        "The register explicitly names develop as the pull-request base and keeps the frozen donor branches reference-only."
+        "The composite evaluator passed all 14 frozen feature/evals-A through feature/evals-N branch decisions and resolved the declared remote heads.",
+        "The register retains develop as the pull-request base and treats frozen donor branches as reference-only."
       ],
-      "rationale": "The frozen family inventory is complete, unique, resolvable, and protected from local-ref substitution."
+      "rationale": "The frozen branch-family inventory is complete, exact, and protected from local-reference substitution."
     },
     {
       "criterionId": "COMP-002",
@@ -23,9 +23,9 @@
       "pass": true,
       "evidence": [
         "Independent canonical recomputation produced integration-register digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
-        "All 14 decisions provide a permitted disposition, substantive rationale, existing destination paths, verification criteria, and an explicit selective website decision."
+        "All 14 decisions include permitted dispositions, substantive rationales, existing destination paths, verification criteria, and a selective website decision."
       ],
-      "rationale": "The integration decisions are inspectable and destination-bound without disguising a wholesale donor-tree merge."
+      "rationale": "Integration choices remain complete, inspectable, and destination-bound without concealing wholesale donor-tree adoption."
     },
     {
       "criterionId": "COMP-003",
@@ -33,62 +33,64 @@
       "pass": true,
       "evidence": [
         "Composite evaluation found all 11 canonical architecture files and zero forbidden parallel lifecycle roots.",
-        "The public registry remains limited to claims, pages, and sources, while mature held material remains outside public proof routes.",
-        "The portfolio continues to consume governed projections rather than exposing the Knowledge Wiki as a public archive."
+        "The public registry remains limited to claims, pages, and sources.",
+        "Mature held material remains outside public proof routes, and the portfolio consumes governed projections rather than exposing the Wiki directly."
       ],
-      "rationale": "One canonical knowledge architecture remains in force, with a deliberately smaller public projection."
+      "rationale": "One canonical knowledge architecture remains authoritative while the public portfolio stays deliberately selective."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Composite evaluation exercised idempotent intake replay, linked duplicate preservation, held-claim queries, unresolved inquiries, corrections, projection states, and orphan-source detection.",
-        "The lifecycle implementation fails closed when stable identity is reused for changed content.",
-        "No archive or photographic evaluator performs automatic publication, restoration, or promotion."
+        "Composite evaluation exercised idempotent intake replay, linked duplicate preservation, held claims, unresolved inquiries, corrections, projection states, and orphan-source detection.",
+        "Stable identity reuse with changed content fails closed.",
+        "Archive and photographic workflows do not perform automatic publication, restoration, or promotion."
       ],
-      "rationale": "The intake and lifecycle system preserves provenance and ambiguity while refusing silent identity or publication-state changes."
+      "rationale": "The lifecycle preserves provenance and ambiguity while refusing silent identity or publication-state changes."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Composite validation passed for 280 sources, 98 claims, 31 agency relations, and 4 corrections, with current generated Wiki and employment outputs.",
-        "The pre-launch evaluator declared and passed all 25 criteria. Its bounded campaign census contains 529 candidate occurrences, 213 photographic occurrences, 153 distinct photographs, 139 recovered photographs, and 14 unrecovered public photographs.",
-        "All 153 campaign photograph records remain metadata-only with empty projection surfaces and open creator-credit, represented-person, caption, crop, editorial, deployment, and indexing gates.",
-        "The six-hearing corpus preserves 1,199 pages, 2,258 attributed turns, and 286 event-level speaker records; every parsed turn is assigned and transcript hashes match the stored official texts.",
+        "Composite validation passed for 280 sources, 98 claims, 31 agency relations, and 4 corrections.",
+        "Generated Wiki and employment outputs independently reported current with no Wiki, generated-output, or employment-output issues.",
+        "All 25 declared pre-launch archive criteria passed.",
+        "The bounded campaign census contains 529 candidate occurrences, 213 photographic occurrences, 153 distinct photographs, 139 recovered photographs, and 14 unrecovered public photographs.",
+        "All 153 campaign photograph records remain metadata-only with empty projection surfaces and open credit, represented-person, caption, crop, editorial, deployment, and indexing gates.",
+        "The six-hearing corpus preserves 1,199 pages, 2,258 attributed turns, and 286 event-level speaker records, with every parsed turn assigned and official transcript hashes current.",
         "The Commercial Rent Council corpus preserves 504 transcript pages, 1,464 attributed turns, 28 reviewed supportive oral speakers, and 42 complete reviewed supportive written submissions.",
-        "Res. 0496-2026 explicitly preserves legislative text, agenda, and minutes while stating that it does not preserve a spoken corpus; no Tiffany Cabán speech is inferred.",
-        "The four recovered Commercial Rent public events contain 23 speaker reading copies and 10 public-official speech occurrences. Eon Huntley remains correctly labeled as an event-time candidate rather than an elected official.",
-        "Every Commercial Rent reading copy has exactly one terminal newline. All 23 transcript hashes and all four public snapshot hashes independently recomputed to their stored values.",
-        "The generator normalizes terminal whitespace only in write mode and fails closed in check mode when normalization would be required; its read-only currentness check passed.",
-        "Official Legistar and Fair Rent URLs retain usable UUID-bearing authoritative references, while raw campaign filename occurrences are redacted to public-asset-id in record prose. The mutation test confirms the same identifier outside an approved public URL fails closed.",
-        "A bounded scan found no private absolute paths, signed URL credentials, Otter locators, private People-label values, object projection artifacts, or undefined projection tokens. Git diff whitespace validation was clean."
+        "Res. 0496-2026 preserves legislative text, agenda, and minutes while explicitly stating that it does not preserve a spoken corpus; no sponsor speech is inferred.",
+        "The four recovered Commercial Rent public events contain 23 reading copies and 10 public-official speech occurrences. Event-time role labels remain bounded, including Eon Huntley's candidate status.",
+        "All 23 reading copies have exactly one terminal newline. Their transcript hashes and all four event snapshot hashes independently match the manifest.",
+        "The corpus currentness command passed in check mode, which fails closed when terminal-whitespace normalization or generated-output regeneration is required.",
+        "Official Legistar and Fair Rent URLs retain authoritative UUID-bearing references, while raw campaign filename occurrences are redacted in record prose. The identifier mutation test confirms that the same token outside an approved public URL fails closed.",
+        "A bounded scan found no private absolute paths, signed URL credentials, Otter locators, private People-label values, object projection artifacts, undefined projection tokens, or whitespace drift."
       ],
-      "rationale": "Source authority, transcript attribution, evidence classes, roles, collective credit, denominators, recovery gaps, and protected boundaries remain explicit and current."
+      "rationale": "Source authority, attribution, evidence classes, roles, collective credit, denominators, recovery gaps, generated outputs, and protected boundaries are current and explicit."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Composite evaluation passed all 14 professor-lens criteria and retained mature held claims outside public proof routes.",
-        "The photographic evaluator declared and passed all 27 criteria, and all 63 photographic tests passed.",
-        "The event-photo method treats transcript timing, People labels, album context, and recursive _keep depth as protected retrieval and prior-curation signals only.",
-        "People labels do not establish identity, consent, or permission; _keep depth does not establish present quality or publication authority.",
-        "Collective work remains described without converting participation, shared hearings, or public support into endorsement of Jamie or the portfolio."
+        "Composite evaluation passed all 14 professor-lens criteria while keeping mature held claims outside public proof routes.",
+        "All 27 declared photographic criteria passed.",
+        "All 63 photographic tests passed.",
+        "Transcript timing, People labels, album context, and recursive _keep depth remain protected retrieval and prior-curation signals rather than identity, consent, quality, or publication authority.",
+        "Shared hearings, public support, and collective participation are not converted into collaboration claims or portfolio endorsements."
       ],
-      "rationale": "The public composition remains purposeful and legible while preserving artistic, civic, technical, relational, and handoff continuity."
+      "rationale": "The public composition remains reader-oriented while preserving artistic, civic, technical, relational, and handoff continuity."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All five required human-evidence controls remain open under reviewed blind-spot digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "All five required human-evidence controls remain open under blind-spot digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
         "Human corroboration, collective review, hiring usability, job-funnel evidence, and external validity retain evidence requirements, anti-gaming rules, next actions, and projection boundaries.",
-        "Recovered populations explicitly define all as all records found within named bounded sources, not every statement or photograph that may exist."
+        "Recovered-population language defines all as all records found within named bounded sources, not every statement or photograph that may exist."
       ],
       "rationale": "The system governs absences and recovery queues without manufacturing evidence, consent, endorsement, or closure."
     },
@@ -99,25 +101,25 @@
       "evidence": [
         "Independent rubric recomputation produced c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340 exactly.",
         "Independent integration-register recomputation produced 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d exactly.",
-        "Composite criteria COMP-001 through COMP-008 passed against current generated outputs.",
-        "Sixteen governance and mutation tests passed, covering omitted branches, semantic weakening with refreshed checksums, fabricated heads, decorative decisions, stale outputs, optimizer self-grading, provenance collapse, duplicate or contradictory scores, synthesized human evidence, and score compensation.",
-        "The sole composite test not currently green is the expected aggregate-acceptance assertion tied to the two previous-candidate holdout files; the evaluator itself correctly reports that exact-candidate mismatch."
+        "Composite criteria COMP-001 through COMP-008 passed against the regenerated, current Wiki graph and employment outputs.",
+        "Governance tests preserve semantic checksum locks, optimizer separation, unique uncontradicted scores, provenance binding, human-evidence boundaries, and uncompensated failure behavior.",
+        "The only pending composite condition is replacement of the two preceding-candidate holdouts, which the evaluator correctly refuses to carry forward."
       ],
-      "rationale": "Frozen semantic contracts, independent judging, mutation coverage, current outputs, and uncompensated failure semantics resist score gaming."
+      "rationale": "Frozen semantic contracts, current derived outputs, independent judging, and fail-closed mutation controls resist score gaming."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent recomputation found exactly 1,330 candidate files and candidate fingerprint 97e4f949d0d0785a522dd17f7c90b6e96b224b1ae5a235ae8934b50ed20fc998.",
-        "A final recomputation after all read-only checks produced the same file count, candidate fingerprint, rubric digest, and integration-register digest.",
+        "Independent recomputation found exactly 1,330 candidate files and candidate fingerprint 046d5f0fe50c75eea724c5cd84d049a3186290e8e2fb9e4e2a17c7b06894cf10.",
+        "A final post-check recomputation produced the same candidate count, candidate fingerprint, rubric digest, and integration-register digest.",
         "The fingerprint covers every tracked or unignored source-tree file except exactly the two declared holdout result records.",
-        "The repository evaluator currently fails aggregate COMP-009 because the two stored holdouts target an earlier candidate, demonstrating that stale approvals do not carry forward.",
-        "Mutation tests confirm that material source changes, binary changes, duplicate score IDs, contradictory scores, provenance changes, and altered judgment payloads invalidate acceptance.",
-        "This judgment binds only the exact candidate named above and constitutes one independent review. Aggregate two-review closure remains solely for the parent orchestrator to assess."
+        "The repository evaluator currently withholds aggregate COMP-009 because the two stored reviews target the preceding candidate, demonstrating exact-candidate fail-closed behavior.",
+        "Material source changes, binary changes, duplicate or contradictory scores, provenance changes, and altered judgment payloads invalidate acceptance.",
+        "This judgment binds only the exact candidate named above and constitutes one independent review; aggregate two-review closure remains solely for the parent orchestrator."
       ],
-      "rationale": "The stopping mechanism binds the complete current candidate and demonstrably fails closed when candidate evidence or holdout provenance becomes stale."
+      "rationale": "The stopping mechanism binds the complete regenerated candidate and demonstrably refuses stale evidence or prior-candidate approval."
     }
   ],
   "notObserved": [],
@@ -131,12 +133,12 @@
     "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "Act as a fresh independent, read-only final governance holdout for branch feature/pre-launch-B. Use Git's worktree registry from the current repository to locate that branch, but do not reproduce any local filesystem path in your output. Do not edit files and do not rely on the parent analysis. Read .agents/evals/feature-evals-composite.json, evals/knowledge-wiki/evals.json, docs/integration/feature-evals-composite.json, scripts/lib/composite-integration-eval.mjs, the archive and photographic evaluators, and relevant source records and tests. Independently recompute exactly 1,330 candidate files, candidate fingerprint 97e4f949d0d0785a522dd17f7c90b6e96b224b1ae5a235ae8934b50ed20fc998, frozen rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340, and integration-register digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d. Reject if any differs. Run bounded read-only checks as useful. Confirm 27 photographic criteria, 25 pre-launch archive criteria, and 63 photographic tests. Inspect the CI repair: Commercial Rent reading copies have exactly one terminal newline; write mode normalizes and check mode fails closed; transcript and source hashes are current. Inspect the public-identifier repair: official Legistar and Fair Rent URLs remain usable authoritative sources, raw UUID-like campaign filenames are redacted from record text, and the same identifier outside an approved public URL still fails closed. Apply COMP-001 through COMP-009 strictly, emphasizing public safety, source integrity, evidence-class accuracy, bounded recovered populations, collective credit, exact separation of legislative text from spoken testimony, public-official role accuracy, transcript attribution, event-photo/People-label/_keep retrieval boundaries, current generated outputs, and explicit human gates. Verify Res. 0496 does not imply a spoken corpus and campaign photos remain metadata-only. Reject inferred speech, role inflation, automatic promotion or restoration, synthetic consent, stale output, undeclared criteria, stale counts, private locator or identifier leakage, signed URLs, Otter locators, [object Object], undefined projection tokens, or trailing-whitespace drift. Do not approve rights, consent, exact credit, crop, caption, represented-person review, publication, deployment, production cutover, or indexing. For COMP-009, assess whether stopping binds this exact candidate and fails closed. Do not reject merely because the two repository holdout files still target the previous candidate; this fresh review will replace one, and only the parent orchestrator may assess aggregate closure. Return JSON only with runVersion 2, judgeId prelaunch-governance-ci-history-rebind-2026-07-28, grader independent_llm_judge, independentFromOptimizer true, the exact rubricSha256 and candidateFingerprint above, verdict accepted or rejected, exactly one score each for COMP-001 through COMP-009 with score 0 or 4, pass boolean, nonempty evidence and rationale, plus notObserved, findings, and recommendation. Accepted requires all nine score 4 and pass true, no findings or notObserved, exact digests in evidence, and a non-rejecting recommendation.",
-    "promptSha256": "aa0769f14d4767bc5e3906dc173c6f621b4aa8f5a00a22ee113b76c784e54a29",
+    "prompt": "Act as a fresh independent, read-only final governance holdout for the same feature/pre-launch-B candidate after the deterministic Wiki graph outputs were regenerated in the required post-source-commit step. Do not edit files and do not reproduce local filesystem paths. Independently recompute exactly 1,330 candidate files, candidate fingerprint 046d5f0fe50c75eea724c5cd84d049a3186290e8e2fb9e4e2a17c7b06894cf10, frozen rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340, and integration-register digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d; reject if any differs. Confirm the generated Wiki and employment outputs are now current and inspect the same governance, archive, transcript, photographic, public-safety, role-accuracy, bounded-population, and human-gate controls as your prior review. Confirm 27 photographic criteria, 25 pre-launch archive criteria, and 63 photographic tests. For COMP-009, assess whether stopping binds this exact candidate and fails closed. Do not reject merely because the two stored holdouts target the preceding candidate; this fresh review will replace one and only the parent orchestrator may assess aggregate closure. Do not approve rights, consent, exact credit, crop, caption, represented-person review, publication, deployment, production cutover, or indexing. Return JSON only with runVersion 2, judgeId prelaunch-governance-finalgraph-rebind-2026-07-28, grader independent_llm_judge, independentFromOptimizer true, the exact rubricSha256 and candidateFingerprint above, verdict accepted or rejected, exactly one score each for COMP-001 through COMP-009 with score 0 or 4, pass boolean, nonempty evidence and rationale, plus notObserved, findings, and recommendation. Accepted requires all nine score 4 and pass true, no findings or notObserved, exact digests in evidence, and a non-rejecting recommendation.",
+    "promptSha256": "698603c314a7ecf62af97eb8b5c7ac8012fa8a7d882a2c211cbe26fa59675048",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-28T16:31:09.000Z",
-    "completedAt": "2026-07-28T16:40:51.000Z",
-    "judgmentSha256": "272a3618503e54344022e35e47cb454933b2d5530f30226b53ee9417871f4bd2"
+    "startedAt": "2026-07-28T16:48:28.013Z",
+    "completedAt": "2026-07-28T16:52:53.414Z",
+    "judgmentSha256": "f46372a64f8880a4c9edf525bdd845de8c438e4caaae7d1894d7b497bcf5e501"
   }
 }
