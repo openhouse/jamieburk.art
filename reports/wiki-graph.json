@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T09:28:47-04:00",
-  "sourceCommit": "0ad6b48340804dd5804d6a868d932ccebaf66bc4",
-  "sourceFingerprint": "2d9a3cc62f725c1ac97c33ae3888ef4fbc908d6e12c53077826d523865d0b021",
+  "generatedAt": "2026-07-28T09:49:38-04:00",
+  "sourceCommit": "13b39285ea8011bec67720dab1ddf5dffc5a8120",
+  "sourceFingerprint": "bf4e0f2465b562890cb0a7028281df6e1835008f05e040fac156070130090a5f",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -879,6 +879,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "notebook.photography.event-transcript-photo-return",
+      "path": "docs/knowledge-bank/notebooks/photography/event-transcript-photo-return.md",
+      "title": "Event transcript and photograph return",
+      "kind": "notebook",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "A bounded method for returning event transcripts to related Apple Photos clusters and earlier photo-select trees without confusing retrieval signals with evidence or publication permission.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
     },
     {
       "id": "notebook.photography.field.v01",
@@ -5134,6 +5147,14 @@
     {
       "from": "notebook.photography",
       "type": "related_to",
+      "to": "notebook.photography.event-transcript-photo-return",
+      "source": "frontmatter",
+      "href": "event-transcript-photo-return.md",
+      "context": "Bounded protocol for reconnecting event audio, transcript intervals, Apple Photos clusters, and earlier recursive selections."
+    },
+    {
+      "from": "notebook.photography",
+      "type": "related_to",
       "to": "notebook.photography.field.v01",
       "source": "frontmatter",
       "href": "field-v01.md",
@@ -5202,6 +5223,30 @@
       "source": "frontmatter",
       "href": "../../methods/structure-grows-from-the-material.md",
       "context": "The notebook permits its vocabulary and structures to develop through close reading."
+    },
+    {
+      "from": "notebook.photography.event-transcript-photo-return",
+      "type": "part_of",
+      "to": "notebook.photography",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": "The return protocol belongs to the held photography working notebook."
+    },
+    {
+      "from": "notebook.photography.event-transcript-photo-return",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "../../indexes/visual-evidence.md",
+      "context": "The visual-evidence index keeps discovery, evidence, and public display separate."
+    },
+    {
+      "from": "notebook.photography.event-transcript-photo-return",
+      "type": "related_to",
+      "to": "index.public-testimony-and-heteroglossia",
+      "source": "frontmatter",
+      "href": "../../indexes/public-testimony-and-heteroglossia.md",
+      "context": "Event transcripts can open a bounded search for contemporaneous photographic clusters."
     },
     {
       "from": "notebook.photography.field.v01",
@@ -9477,10 +9522,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/public-testimony-and-heteroglossia.md",
       "from": "index.public-testimony-and-heteroglossia",
+      "toPath": "docs/knowledge-bank/notebooks/photography/event-transcript-photo-return.md",
+      "to": "notebook.photography.event-transcript-photo-return",
+      "fragment": null,
+      "line": 68,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony-and-heteroglossia.md",
+      "from": "index.public-testimony-and-heteroglossia",
       "toPath": "docs/knowledge-bank/research-runs/public-testimony-source-return-2026-07-28.md",
       "to": "research.public-testimony-source-return.2026-07-28",
       "fragment": null,
-      "line": 83,
+      "line": 90,
       "kind": "link"
     },
     {
@@ -9684,10 +9738,19 @@
     {
       "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
       "from": "notebook.photography",
+      "toPath": "docs/knowledge-bank/notebooks/photography/event-transcript-photo-return.md",
+      "to": "notebook.photography.event-transcript-photo-return",
+      "fragment": null,
+      "line": 66,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "notebook.photography",
       "toPath": "docs/photography/README.md",
       "to": null,
       "fragment": null,
-      "line": 66,
+      "line": 70,
       "kind": "link"
     },
     {
@@ -9696,7 +9759,7 @@
       "toPath": "docs/photography/oral-history-from-an-image.md",
       "to": null,
       "fragment": null,
-      "line": 69,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -9705,7 +9768,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "fragment": null,
-      "line": 75,
+      "line": 79,
       "kind": "link"
     },
     {
@@ -9714,7 +9777,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
       "to": "index.photo-set.east-river-canoe.2022",
       "fragment": null,
-      "line": 76,
+      "line": 80,
       "kind": "link"
     },
     {
@@ -9723,7 +9786,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-d-home-east-river-v1.md",
       "to": "evaluation.curatorial.layout-d.home-east-river.v1",
       "fragment": null,
-      "line": 77,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -9732,7 +9795,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-d-home-east-river-v1.md",
       "to": "decision.photo.layout-d.home-east-river.v1",
       "fragment": null,
-      "line": 78,
+      "line": 82,
       "kind": "link"
     },
     {
@@ -9741,7 +9804,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-d-resume-protected-absence.md",
       "to": "decision.photo.layout-d.resume.protected-absence",
       "fragment": null,
-      "line": 79,
+      "line": 83,
       "kind": "link"
     },
     {
@@ -9750,7 +9813,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md",
       "to": "projection.photo.layout-d.home.east-river",
       "fragment": null,
-      "line": 80,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -9759,7 +9822,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
       "to": "projection.photo.layout-d.resume.protected-absence",
       "fragment": null,
-      "line": 81,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -9768,7 +9831,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
       "to": "edition.layout-d.photo-knowledge.2026-07",
       "fragment": null,
-      "line": 82,
+      "line": 86,
       "kind": "link"
     },
     {
@@ -9777,7 +9840,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.photo.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 83,
+      "line": 87,
       "kind": "link"
     },
     {
@@ -9786,7 +9849,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/hardhat-worksite-oral-history.md",
       "to": "research-inquiry.photo.hardhat-worksite-oral-history",
       "fragment": null,
-      "line": 84,
+      "line": 88,
       "kind": "link"
     },
     {

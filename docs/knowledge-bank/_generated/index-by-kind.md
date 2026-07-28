@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `0ad6b48340804dd5804d6a868d932ccebaf66bc4`
-**Generation time:** 2026-07-28T09:28:47-04:00
-**Source fingerprint:** `2d9a3cc62f725c1ac97c33ae3888ef4fbc908d6e12c53077826d523865d0b021`
+**Source commit:** `13b39285ea8011bec67720dab1ddf5dffc5a8120`
+**Generation time:** 2026-07-28T09:49:38-04:00
+**Source fingerprint:** `bf4e0f2465b562890cb0a7028281df6e1835008f05e040fac156070130090a5f`
 
 ## application
 
@@ -103,6 +103,7 @@
 ## notebook
 
 - [Photography working notebook](../notebooks/photography/README.md) - `notebook.photography`
+- [Event transcript and photograph return](../notebooks/photography/event-transcript-photo-return.md) - `notebook.photography.event-transcript-photo-return`
 - [Photography first field](../notebooks/photography/field-v01.md) - `notebook.photography.field.v01`
 - [Layout study D](../notebooks/photography/layout-study-d.md) - `notebook.photography.layout-study.d`
 - [A room for the archive](../notebooks/photography/residency-proposal-v01.md) - `notebook.photography.residency-proposal.v01`

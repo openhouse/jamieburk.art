@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T09:28:47-04:00",
-  "sourceCommit": "0ad6b48340804dd5804d6a868d932ccebaf66bc4",
-  "sourceFingerprint": "2d9a3cc62f725c1ac97c33ae3888ef4fbc908d6e12c53077826d523865d0b021",
+  "generatedAt": "2026-07-28T09:49:38-04:00",
+  "sourceCommit": "13b39285ea8011bec67720dab1ddf5dffc5a8120",
+  "sourceFingerprint": "bf4e0f2465b562890cb0a7028281df6e1835008f05e040fac156070130090a5f",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 184,
+    "records": 185,
     "byKind": {
       "project": 14,
       "person": 1,
@@ -27,13 +27,13 @@
       "timeline": 1,
       "application": 1,
       "evaluation": 4,
-      "notebook": 7,
+      "notebook": 8,
       "index": 20,
       "capability": 5,
       "opportunity": 6,
       "projection": 21
     },
-    "typedRelations": 663,
+    "typedRelations": 667,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 1,
@@ -43,17 +43,17 @@
       "evidence:private-support": 1,
       "has_asset": 8,
       "informed_by": 45,
-      "part_of": 15,
+      "part_of": 16,
       "projected_to": 22,
-      "related_to": 391,
+      "related_to": 394,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
       "uses_method": 29,
       "uses_source": 86
     },
-    "proseLinks": 348,
-    "rootReachable": 150,
+    "proseLinks": 350,
+    "rootReachable": 151,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,
