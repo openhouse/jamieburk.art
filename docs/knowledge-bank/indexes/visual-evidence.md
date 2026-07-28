@@ -5,7 +5,7 @@ kind: index
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-07-28
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/indexes/visual-evidence.md
 summary: Public-safe map of visual evidence that is approved, metadata-only, held for review, missing, or still awaiting research across Jamie's projects.
@@ -22,6 +22,12 @@ relations:
   - type: related_to
     target: research.foundational-source-return.2026-07-19
     href: ../research-runs/foundational-source-return-2026-07-19.md
+  - type: uses_source
+    target: source.nycac.campaign-site-media-census.2026-07
+    href: ../sources/nycac-campaign-site-media-census-2026-07.md
+  - type: related_to
+    target: research.campaign-site-photography-source-return.2026-07-28
+    href: ../research-runs/campaign-site-photography-source-return-2026-07-28.md
 wanted:
   - id: index.visual-rights-and-consent-register
     proposed_title: Private visual rights and consent register
@@ -53,6 +59,12 @@ The archive contains potential evidence for waterways work, NTER CHNG, Harry
 J. Epstein Company, KC Town Hall, NYC Artist Coalition events, WOWList, Sunday
 Dinner, 196 Artists Residency, and neighborhood projects. A source inventory is
 not permission to display those images.
+
+The [campaign-site census](../sources/nycac-campaign-site-media-census-2026-07.md)
+adds 181 metadata-only photo records recovered from public NYC Artist Coalition
+and campaign pages. The records retain page context and a bounded local-match
+state while holding exact display, crop, caption, credit, and represented-person
+review for a later editorial decision.
 
 ### Missing or research-needed
 

@@ -3,7 +3,7 @@
 
 **Source commit:** `d8bfaf102dfcadf6538a226edb40bf53f7cc4e4e`
 **Generation time:** 2026-07-27T00:00:42-04:00
-**Source fingerprint:** `aec023feb22f1f71158eb2f6cb9fb7f8ce07aeef7dbb89d792fca4a89736d092`
+**Source fingerprint:** `9d8ab593fc07e103b5b3d661a925890defd4fa5a119704dcbebc40820cc25e35`
 
 - [Participatory public systems](../../capabilities/participatory-public-systems.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
@@ -15,4 +15,5 @@
 - [Release / water / salt - visual sequence sketch](../../notebooks/photography/sketches/release-water-salt.md) - `uses_method` (frontmatter)
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `uses_method` (frontmatter)
+- [Protected portfolio and current-work conversation, July 2026](../../sources/current-work-chad-brunch-2026-07.md) - `informed_by` (frontmatter)
 - [Jamie Burkart writer's voice synthesis, July 2026](../../sources/writers-voice-synthesis-2026-07.md) - `documents` (frontmatter)

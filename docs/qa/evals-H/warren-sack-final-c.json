@@ -1,38 +1,40 @@
 {
-  "evaluator": "Fictionalized Warren Sack lens",
-  "reviewerId": "warren-sack-current-c",
+  "evaluator": "Independent professor-lens holdout judge C",
+  "reviewerId": "professor-lens-holdout-C-Avicenna",
   "phase": "holdout",
   "lensId": "PR-016",
   "lens": "PR-016",
   "judge": "C",
-  "date": "2026-07-26",
-  "candidateSha256": "46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341",
+  "date": "2026-07-28",
+  "candidateSha256": "3fa95fe76a1327db9385abdd166c2c554a07a3a3f29a352ba357bd0aa8313489",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Reproduced the stated path-NUL-bytes-NUL SHA-256 over 162 unique files; exact match.",
-    "The one-click About surface plainly names the recursive sequence and visibly marks three current practices in bound desktop/mobile evidence.",
-    "Fair Rent NYC traces current partner relationships through city/state and provenance models, collectively used campaign interfaces, learning records, and continuation artifacts.",
-    "Source-Backed Team Memory traces sources and contributors through typed records, Wiki/compiler interfaces, active editorial use, correction learning, and repeatable handoffs without claiming SaaS or client adoption.",
-    "Living Photographic Knowledge traces source and rights relationships through governed records, active compositions and review, inquiry-producing learning, receipts, and rollback handoffs.",
-    "Protected coursework remains held or bounded as lineage; no public claim asserts invention, peer review, production deployment, sole authorship, or current Max/Jitter proficiency."
+    "Independent SHA-256 recomputation over the evaluator's 343 sorted paths produced exactly the expected digest before and after review.",
+    "The one-click About surface states the recursive method in plain language and links directly to project evidence.",
+    "FairRentNYC supplies a complete current trace from relationships through models, campaign and collective-use interfaces, minutes, source maps, question logs, action trackers, and handoff rules.",
+    "Source-Backed Team Memory and the Knowledge Wiki supply a second current trace through typed states, editor use, visible corrections and failures, schemas, and source boundaries.",
+    "Living photographic knowledge supplies a third current trace through creators, represented people, sources, destinations, crops, captions, permissions, governed occurrences, exact-use review, recollection, and rollback.",
+    "Historical projects reinforce but do not substitute for the current traces.",
+    "The method rejects structural equivalence, disciplinary invention, peer-reviewed research, production deployment, sole authorship, and present proficiency inferred from historical tools.",
+    "All 181 campaign candidates remain permission-needed, consent review-needed, public display hold, metadata-only, and free of exact local capture times.",
+    "Candidate-bound browser evidence reports six rows for every recursive stage, three current-practice rows, and a clean 98-row responsive matrix."
   ],
   "limitations": [
-    "One Judge C score cannot establish the required three-judge median of 4 or the no-score-below-3 condition.",
-    "Localhost inspection was blocked by EPERM; candidate-bound screenshots and the 56-row responsive matrix were reviewed instead.",
-    "Rights, consent, exact credit and crop, Jamie approval, deployment, and indexing remain separate human gates.",
-    "This fictionalized lens is not Warren Sack's participation or endorsement."
+    "This is a fictionalized evaluative lens, not Warren Sack's participation, view, recommendation, or endorsement.",
+    "The Knowledge Wiki and photographic system are current methods or governed pilots, not external adoption or production deployment.",
+    "Publication, rights, consent, exact-use, Jamie approval, production, indexing, and hiring decisions remain human gates."
   ],
-  "recommendation": "Record Judge C as 4/pass for PR-016 and obtain two additional independent scorecards to determine the required median without closing any human release gate.",
+  "recommendation": "Pass PR-016 at 4 for this exact candidate. Keep the recursive sequence evidenced through current traces while preserving all anti-overclaim and human gates.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa14e-a589-7171-b87c-0c849336c6f5",
-    "agentNickname": "warren-sack-current-c",
+    "processSessionId": "019fa902-fe04-71e2-97cb-aaaee4063786",
+    "agentNickname": "Avicenna",
     "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "The completed native subagent result is recorded verbatim in the judge, date, candidateSha256, score, pass, evidence, limitations, and recommendation fields; repository identity and provenance fields were added by the parent orchestrator."
+    "operatorAttestation": "Completed native subagent judgment recorded by the parent orchestrator."
   }
 }

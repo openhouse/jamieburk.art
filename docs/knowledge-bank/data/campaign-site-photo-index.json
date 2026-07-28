@@ -1,0 +1,4143 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-28",
+  "network_upload": false,
+  "private_identifiers_included": false,
+  "items": [
+    {
+      "id": "campaign-photo-15be87fe25e76b84",
+      "url": "http://savenycspaces.nycartc.com/img/press/photos/save-nyc-spaces-group-photo-nyc-artist-coalition-bc5c4949f0e1975553e8f89ba63155b2.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "save-nyc-spaces-group-photo-nyc-artist-coalition-bc5c4949f0e1975553e8f89ba63155b2.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/10/savenycspacesnycartc.jpg"
+        },
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/10/savenycspacesnycartc.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-48ff1bac83a91a77",
+      "url": "http://savenycspaces.nycartc.com/img/press/photos/save-nyc-spaces-nyc-artist-coalition-ecf8e0879a27e277846818c25b489235.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "save-nyc-spaces-nyc-artist-coalition-ecf8e0879a27e277846818c25b489235.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/10/town-hall.jpg"
+        },
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/10/town-hall.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-f915b1754ad55ffe",
+      "url": "http://www.liquidsoundlounge.com/navbar/images/aboutwave.gif",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "aboutwave.gif"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "http://www.liquidsoundlounge.com/"
+        },
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "http://www.liquidsoundlounge.com/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-00d1b5da021280f5",
+      "url": "https://c1.staticflickr.com/1/799/25941745727_67f52e7e8c_c.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "25941745727_67f52e7e8c_c.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40alickasamuel%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-99745b6152836586",
+      "url": "https://cdn.civil.services/city-council/ny/new-york/headshots/512x512/andrew-cohen.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "andrew-cohen.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40AndrewCohenNYC%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4c297a32c4ed9812",
+      "url": "https://cdn.civil.services/city-council/ny/new-york/headshots/512x512/antonio-reynoso.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "antonio-reynoso.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40CMReynoso34%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-6ccf5989360e7340",
+      "url": "https://cdn.civil.services/city-council/ny/new-york/headshots/512x512/ben-kallos.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "ben-kallos.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40kallos%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-90d90b5e7faae0cd",
+      "url": "https://cdn.civil.services/city-council/ny/new-york/headshots/512x512/brad-lander.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "brad-lander.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40bradlander%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-1e82c82a375fffe3",
+      "url": "https://cdn.civil.services/city-council/ny/new-york/headshots/512x512/donovan-richards.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "donovan-richards.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40DRichards13%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-f40e4cf7d8e96681",
+      "url": "https://cdn.civil.services/city-council/ny/new-york/headshots/512x512/helen-rosenthal.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "helen-rosenthal.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40HelenRosenthal%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-d900d36393650064",
+      "url": "https://cdn.civil.services/city-council/ny/new-york/headshots/512x512/rafael-espinal.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "rafael-espinal.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40rlespinal%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-d4f329705f05842f",
+      "url": "https://cdn.civil.services/city-council/ny/new-york/headshots/512x512/stephen-levin.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "stephen-levin.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40StephenLevin33%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-d3646e0c394f355f",
+      "url": "https://fairrentnyc.nycartc.com/content/images/2023/03/fair-rent-1.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "fair-rent-1.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/city-council-sponsors-of-intro-93/",
+          "page_title": "25 City Council Members, The NYC Public Advocate as well as the Brooklyn and Bronx Borough Presidents signed on the #FairRentNYC bill - Join us in Thanking these Small Business Heroes!",
+          "heading": "Fair Rent NYC",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-a567ea9a6ae2dbcb",
+      "url": "https://fairrentnyc.nycartc.com/content/images/size/w2000/2023/02/93383C1E-5096-48D2-9667-1B4F82221C88.jpeg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "93383C1E-5096-48D2-9667-1B4F82221C88.jpeg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/",
+          "page_title": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "heading": "Fair Rent NYC",
+          "alt": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-afcd6ab0c079f535",
+      "url": "https://fairrentnyc.nycartc.com/content/images/size/w2000/2023/02/PXL_20230202_142709440.jpeg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "PXL_20230202_142709440.jpeg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/2023-call-for-hearing/",
+          "page_title": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023download-circle",
+          "heading": "Fair Rent NYC",
+          "alt": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-6f6a02e24c08ad28",
+      "url": "https://fairrentnyc.nycartc.com/content/images/size/w2000/2023/03/fair-rent.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "fair-rent.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/city-council-sponsors-of-intro-93/",
+          "page_title": "25 City Council Members, The NYC Public Advocate as well as the Brooklyn and Bronx Borough Presidents signed on the #FairRentNYC bill - Join us in Thanking these Small Business Heroes!",
+          "heading": "Fair Rent NYC",
+          "alt": "25 City Council Members, The NYC Public Advocate as well as the Brooklyn and Bronx Borough Presidents signed on the #FairRentNYC bill - Join us in Thanking these Small Business Heroes!",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-f7cff729487c26b3",
+      "url": "https://fairrentnyc.nycartc.com/content/images/size/w2000/2026/02/12_07_19__245_49201039602_o.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "12_07_19__245_49201039602_o.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/library/",
+          "page_title": "Fair Rent NYC Reference Library",
+          "heading": "Fair Rent NYC",
+          "alt": "Fair Rent NYC Reference Library",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-c360b0d119b6c2c1",
+      "url": "https://fairrentnyc.nycartc.com/content/images/size/w600/2023/02/93383C1E-5096-48D2-9667-1B4F82221C88.jpeg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "93383C1E-5096-48D2-9667-1B4F82221C88.jpeg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC",
+          "heading": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023",
+          "alt": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "link_url": "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/city-council-sponsors-of-intro-93/",
+          "page_title": "25 City Council Members, The NYC Public Advocate as well as the Brooklyn and Bronx Borough Presidents signed on the #FairRentNYC bill - Join us in Thanking these Small Business Heroes!",
+          "heading": "Subscribe to Fair Rent NYC",
+          "alt": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "link_url": "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/author/fair-rent-nyc/",
+          "page_title": "Fair Rent NYC - Fair Rent NYC",
+          "heading": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023",
+          "alt": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "link_url": "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/2023-call-for-hearing/",
+          "page_title": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023download-circle",
+          "heading": "Fair Rent NYC Reference Library",
+          "alt": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "link_url": "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-81461d5a435ed21d",
+      "url": "https://fairrentnyc.nycartc.com/content/images/size/w600/2023/02/PXL_20230202_142709440.jpeg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "PXL_20230202_142709440.jpeg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC",
+          "heading": "Fair Rent NYC Reference Library",
+          "alt": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023",
+          "link_url": "https://fairrentnyc.nycartc.com/2023-call-for-hearing/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/",
+          "page_title": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "heading": "Subscribe to Fair Rent NYC",
+          "alt": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023",
+          "link_url": "https://fairrentnyc.nycartc.com/2023-call-for-hearing/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/library/",
+          "page_title": "Fair Rent NYC Reference Library",
+          "heading": "Subscribe to Fair Rent NYC",
+          "alt": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023",
+          "link_url": "https://fairrentnyc.nycartc.com/2023-call-for-hearing/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/author/fair-rent-nyc/",
+          "page_title": "Fair Rent NYC - Fair Rent NYC",
+          "heading": "Fair Rent NYC Reference Library",
+          "alt": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023",
+          "link_url": "https://fairrentnyc.nycartc.com/2023-call-for-hearing/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-a110c3e9e6b05cb2",
+      "url": "https://fairrentnyc.nycartc.com/content/images/size/w600/2023/03/fair-rent.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "fair-rent.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC",
+          "heading": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "alt": "25 City Council Members, The NYC Public Advocate as well as the Brooklyn and Bronx Borough Presidents signed on the #FairRentNYC bill - Join us in Thanking these Small Business Heroes!",
+          "link_url": "https://fairrentnyc.nycartc.com/city-council-sponsors-of-intro-93/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/call-city-council-fairrentnyc-script/",
+          "page_title": "Call City Council #FairRentNYC Script",
+          "heading": "Subscribe to Fair Rent NYC",
+          "alt": "25 City Council Members, The NYC Public Advocate as well as the Brooklyn and Bronx Borough Presidents signed on the #FairRentNYC bill - Join us in Thanking these Small Business Heroes!",
+          "link_url": "https://fairrentnyc.nycartc.com/city-council-sponsors-of-intro-93/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/",
+          "page_title": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "heading": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023",
+          "alt": "25 City Council Members, The NYC Public Advocate as well as the Brooklyn and Bronx Borough Presidents signed on the #FairRentNYC bill - Join us in Thanking these Small Business Heroes!",
+          "link_url": "https://fairrentnyc.nycartc.com/city-council-sponsors-of-intro-93/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/author/fair-rent-nyc/",
+          "page_title": "Fair Rent NYC - Fair Rent NYC",
+          "heading": "What is Commercial Rent Stabilization as proposed by Intro 93?",
+          "alt": "25 City Council Members, The NYC Public Advocate as well as the Brooklyn and Bronx Borough Presidents signed on the #FairRentNYC bill - Join us in Thanking these Small Business Heroes!",
+          "link_url": "https://fairrentnyc.nycartc.com/city-council-sponsors-of-intro-93/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-6d8a912d0704f350",
+      "url": "https://fairrentnyc.nycartc.com/content/images/size/w600/2026/02/12_07_19__245_49201039602_o.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "12_07_19__245_49201039602_o.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC",
+          "heading": "Call City Council Commercial Rent Stabilization Progress: Intro 93 Call City Council",
+          "alt": "Fair Rent NYC Reference Library",
+          "link_url": "https://fairrentnyc.nycartc.com/library/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/author/fair-rent-nyc/",
+          "page_title": "Fair Rent NYC - Fair Rent NYC",
+          "heading": "Fair Rent NYC",
+          "alt": "Fair Rent NYC Reference Library",
+          "link_url": "https://fairrentnyc.nycartc.com/library/"
+        },
+        {
+          "site": "https://fairrentnyc.nycartc.com/",
+          "page_url": "https://fairrentnyc.nycartc.com/2023-call-for-hearing/",
+          "page_title": "Small Business Advocates' Call to City Council: PASS Commercial Rent Stabilization in 2023download-circle",
+          "heading": "Subscribe to Fair Rent NYC",
+          "alt": "Fair Rent NYC Reference Library",
+          "link_url": "https://fairrentnyc.nycartc.com/library/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-b82a081f1975e5ad",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/alan-maisel.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "alan-maisel.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://council.nyc.gov/district-46/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-a1e12bd14db5adf2",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/antonio-reynoso.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "antonio-reynoso.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40CMReynoso34%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-e4300af7662b3f67",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/barry-grodenchik.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "barry-grodenchik.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40barrygrodenchik%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-3b8348b6ffdb87a1",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/bill-perkins.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "bill-perkins.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40BillPerkinsNYC%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4a3d915acbfab4ef",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/carlos-menchaca.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "carlos-menchaca.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40cmenchaca%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-b7b1a1e229c8d843",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/corey-johnson.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "corey-johnson.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40CoreyinNYC%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-175e6db82d44870c",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/daniel-dromm.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "daniel-dromm.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40dromm25%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-aed6ad9e9af72ce1",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/daniel-garodnick.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "daniel-garodnick.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40DanGarodnick%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-2d0f648fd859b963",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/donovan-richards.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "donovan-richards.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40DRichards13%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-f10c03be15cf7c5f",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/eric-ulrich.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "eric-ulrich.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40eric_ulrich%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-e94d4f3cd7bf6b59",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/helen-rosenthal.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "helen-rosenthal.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40HelenRosenthal%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-de6c4537c66163b5",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/jimmy-van-bramer.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "jimmy-van-bramer.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40JimmyVanBramer%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-047d7df8c878d1a7",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/jumaane-williams.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "jumaane-williams.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40JumaaneWilliams%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-5a27419bc52494be",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/karen-koslowitz.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "karen-koslowitz.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40cmkoslowitz%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-32108c595b2cd55e",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/laurie-cumbo.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "laurie-cumbo.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40cmlauriecumbo%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-fa8b262c43f3acc2",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/margaret-chin.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "margaret-chin.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40CM_MargaretChin%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-fde2b8929296a239",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/mark-levine.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "mark-levine.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40MarkLevineNYC%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-10749ae3e54779c4",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/mark-treyger.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "mark-treyger.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40marktreyger718%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-09844187b569849d",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/rafael-espinal.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "rafael-espinal.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40rlespinal%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-a289039209f2079c",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/ritchie-torres.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "ritchie-torres.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40ritchietorres%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-17f8fa4c126750bc",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/robert-cornegy.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "robert-cornegy.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40RobertCornegyJr%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-31f5f55576bfa1e6",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/rosie-mendez.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "rosie-mendez.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40RosieMendez%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-479bbc701e33a3ce",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/stephen-levin.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "stephen-levin.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40StephenLevin33%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-d5b4594bf2454e11",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/vincent-gentile.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "vincent-gentile.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40VGentile43%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-7c2fd6dee3a58233",
+      "url": "https://letnycdance.nycartc.com/city-council/images/headshots/256x256/ydanis-rodriguez.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "ydanis-rodriguez.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "New York City Council Members Now Signed On to the Let NYC Dance Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20dance%20cultures%20thank%20%40ydanis%20%26%20%40NYCCouncil%20for%20passing%20%23LetNYCDance%20Bill%201652%21%20http%3A%2F%2FLetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4f8e79efc60ceba0",
+      "url": "https://letnycdance.nycartc.com/img/press/photos/let-nyc-dance-house-of-yes-julia-fredenburg-b49fe0bd42cecc808d6853776df70509.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "let-nyc-dance-house-of-yes-julia-fredenburg-b49fe0bd42cecc808d6853776df70509.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "Press Contact",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/08/house-of-yesmedium2.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-3516edb726029011",
+      "url": "https://letnycdance.nycartc.com/img/press/photos/market-hotel-nyc-artist-coaltion-a1b7c0c4b0a03675dba8314320f41f27.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "market-hotel-nyc-artist-coaltion-a1b7c0c4b0a03675dba8314320f41f27.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://letnycdance.nycartc.com/",
+          "page_url": "https://letnycdance.nycartc.com/",
+          "page_title": "Let NYC Dance - Movement to Repeal the Cabaret Law",
+          "heading": "Press Contact",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/04/townhallbig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-2b1c8231654e11da",
+      "url": "https://nycartc.com/content/images/2017/01/SF.jpeg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "SF.jpeg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/documents/",
+          "page_title": "Nation-Wide DIY Organizing Documents - NYC Artist Coalition",
+          "heading": "Oakland",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-9f7b8d9b1e0cb5fa",
+      "url": "https://nycartc.com/content/images/2017/02/13507133_813466595454827_3701638445214997873_n.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "13507133_813466595454827_3701638445214997873_n.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/dcla-meeting/",
+          "page_title": "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting - NYC Artist Coalition",
+          "heading": "New York Artist Coalition General Meeting",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-e3856bd3901dbdae",
+      "url": "https://nycartc.com/content/images/2017/02/31957946863_31ea6584e1_z--2-.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "31957946863_31ea6584e1_z--2-.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/vote-safety/",
+          "page_title": "We Voted! Fire Producer Tara Enlightens! Feb General Meeting - NYC Artist Coalition",
+          "heading": "Votes Are In!",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "exact-filename-match",
+        "match_count": 1
+      }
+    },
+    {
+      "id": "campaign-photo-2fbea85b9c123cb9",
+      "url": "https://nycartc.com/content/images/2017/02/32772046825_d3d5435349_z--1-.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "32772046825_d3d5435349_z--1-.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/vote-safety/",
+          "page_title": "We Voted! Fire Producer Tara Enlightens! Feb General Meeting - NYC Artist Coalition",
+          "heading": "Fire Safety Resources",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "exact-filename-match",
+        "match_count": 1
+      }
+    },
+    {
+      "id": "campaign-photo-1278528f431198a0",
+      "url": "https://nycartc.com/content/images/2017/02/DCLAmtg.JPG",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "DCLAmtg.JPG"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/dcla-meeting/",
+          "page_title": "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting - NYC Artist Coalition",
+          "heading": "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting Overview",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-bba5497fa0f67304",
+      "url": "https://nycartc.com/content/images/2017/02/tara.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "tara.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/safety/",
+          "page_title": "Safety Resources - NYC Artist Coalition",
+          "heading": "Safety Resources",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-bac4cbb42ded885e",
+      "url": "https://nycartc.com/content/images/2017/03/Culture-Push-Fellowship.jpeg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "Culture-Push-Fellowship.jpeg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/footloose-for-real/",
+          "page_title": "Footloose, for Real - NYC Artist Coalition",
+          "heading": "Weekly Bulletin Board",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-5a80147e99054772",
+      "url": "https://nycartc.com/content/images/2017/03/DCLAmeeting.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "DCLAmeeting.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Coalition Presents to Dept. of Cultural Affairs",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/DCLAmtgbig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-b654c54fb3b7573d",
+      "url": "https://nycartc.com/content/images/2017/03/FireGuard1web.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "FireGuard1web.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/footloose-for-real/",
+          "page_title": "Footloose, for Real - NYC Artist Coalition",
+          "heading": "Market Hotel - Show NYC We Support Spaces",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-c94a3fc94dca3492",
+      "url": "https://nycartc.com/content/images/2017/03/Frontspace.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "Frontspace.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march-general-mtg/",
+          "page_title": "March General Meeting, Calendar, and Bulletin Board - NYC Artist Coalition",
+          "heading": "Weekly Bulletin Board",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-29170ec926a447d8",
+      "url": "https://nycartc.com/content/images/2017/03/LLP_PopupShop-2017header.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "LLP_PopupShop-2017header.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march-general-mtg/",
+          "page_title": "March General Meeting, Calendar, and Bulletin Board - NYC Artist Coalition",
+          "heading": "Weekly Bulletin Board",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-74b5ca713d851b79",
+      "url": "https://nycartc.com/content/images/2017/03/coalitionpink.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "coalitionpink.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Coalition Presents to Dept. of Cultural Affairs",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/coalitionpink.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-dcf0e069fd4d73f4",
+      "url": "https://nycartc.com/content/images/2017/03/feb_general_small.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "feb_general_small.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/feb_general_big.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-9083526b33d02b71",
+      "url": "https://nycartc.com/content/images/2017/03/generalmeeting.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "generalmeeting.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/generalmeetingbig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-47d1f7eb63e9339d",
+      "url": "https://nycartc.com/content/images/2017/03/heart.gif",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "heart.gif"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/footloose-for-real/",
+          "page_title": "Footloose, for Real - NYC Artist Coalition",
+          "heading": "Weekly Bulletin Board",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-0438f91e150de526",
+      "url": "https://nycartc.com/content/images/2017/03/oakland-warehouse-cobanner.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "oakland-warehouse-cobanner.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/c2c-owc/",
+          "page_title": "City to City: Oakland Warehouse Coalition - NYC Artist Coalition",
+          "heading": "City to City: Oakland Warehouse Coalition",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-1de65b2057e7898a",
+      "url": "https://nycartc.com/content/images/2017/03/tara.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "tara.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/tarabig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-2f80bf4788451a76",
+      "url": "https://nycartc.com/content/images/2017/03/workinggroup1.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "workinggroup1.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/workinggroup1big.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-7d1de5fea26d9914",
+      "url": "https://nycartc.com/content/images/2017/03/workinggroup2.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "workinggroup2.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/workinggroup2big.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-89f5b6a807bf5dab",
+      "url": "https://nycartc.com/content/images/2017/04/32944305043_21fa1fbfee_z--1-.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "32944305043_21fa1fbfee_z--1-.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/04/frankiebig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-7904e3f8ebe50009",
+      "url": "https://nycartc.com/content/images/2017/04/32944305093_ceef03f207_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "32944305093_ceef03f207_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/04/nyc-artist-coalition-julia-fredenburg.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-78a81e3f68d5c067",
+      "url": "https://nycartc.com/content/images/2017/04/33372687200_002ff61294_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "33372687200_002ff61294_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/04/finkelpearlbig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-44e01170ef47a818",
+      "url": "https://nycartc.com/content/images/2017/04/33628280601_215894e78f_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "33628280601_215894e78f_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2017/04/33628280601_c82658d4ac_o.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-e8bff8a367d0011a",
+      "url": "https://nycartc.com/content/images/2017/04/33628281531_fc67dd17f4_z--2-.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "33628281531_fc67dd17f4_z--2-.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/04/townhallbig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-16d5e32a1520ec53",
+      "url": "https://nycartc.com/content/images/2017/04/nyc-artist-coalition-nowhere-legal-animated.gif",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "nyc-artist-coalition-nowhere-legal-animated.gif"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Graphics",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2017/04/nyc-artist-coalition-nowhere-legal-animated.gif"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-060e253c97a1d19f",
+      "url": "https://nycartc.com/content/images/2017/08/house-of-yesmedium2.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "house-of-yesmedium2.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2017/08/house-of-yes.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-74413a0a062cf2eb",
+      "url": "https://nycartc.com/content/images/2017/09/letnycdance-hearing.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "letnycdance-hearing.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/repeal-the-cabaret-law-now-city-hall-hearing/",
+          "page_title": "Repeal the Cabaret Law Now: City Hall Hearing - NYC Artist Coalition",
+          "heading": "Repeal the Cabaret Law Now: City Hall Hearing",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-cece4bcfe25cc15f",
+      "url": "https://nycartc.com/content/images/2017/10/37262361084_8683f65c0b_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "37262361084_8683f65c0b_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2017/10/SaveNYCSpaces1.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-a061c3f4786bef85",
+      "url": "https://nycartc.com/content/images/2017/10/37262370324_1d7261082f_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "37262370324_1d7261082f_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2017/10/37262370324_236d7afa4b_o.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-7337895067544d56",
+      "url": "https://nycartc.com/content/images/2017/10/37262372324_d4126f9e0c_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "37262372324_d4126f9e0c_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2017/10/KurtisBlow.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-dbdf360a0de4abc5",
+      "url": "https://nycartc.com/content/images/2017/10/kurtisblow.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "kurtisblow.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/nightmayor/",
+          "page_title": "Tell NYC's Night Mayor: Save NYC Spaces - NYC Artist Coalition",
+          "heading": "Tell NYC's Night Mayor: Save NYC Spaces",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-d7f07b4e77a8c6a4",
+      "url": "https://nycartc.com/content/images/2017/10/savenycspacesnycartc.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "savenycspacesnycartc.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/nightmayor/",
+          "page_title": "Tell NYC's Night Mayor: Save NYC Spaces - NYC Artist Coalition",
+          "heading": "Tell NYC's Night Mayor: Save NYC Spaces",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-39e2d6187e670b3a",
+      "url": "https://nycartc.com/content/images/2017/10/town-hall.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "town-hall.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/nightmayor/",
+          "page_title": "Tell NYC's Night Mayor: Save NYC Spaces - NYC Artist Coalition",
+          "heading": "Tell NYC's Night Mayor: Save NYC Spaces",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4e0598bd44034a1c",
+      "url": "https://nycartc.com/content/images/2017/12/Signing-Group-Photo.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "Signing-Group-Photo.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/letnycdance/",
+          "page_title": "\"No Dancing\" Cabaret Law REPEALED! 1926-2017 - NYC Artist Coalition",
+          "heading": "\"No Dancing\" Cabaret Law REPEALED! 1926-2017",
+          "alt": "",
+          "link_url": "http://letnycdance.nycartc.com/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-1677b705393bd0cb",
+      "url": "https://nycartc.com/content/images/2017/12/cabaret-law-repealed-1.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "cabaret-law-repealed-1.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/letnycdance/",
+          "page_title": "\"No Dancing\" Cabaret Law REPEALED! 1926-2017 - NYC Artist Coalition",
+          "heading": "\"No Dancing\" Cabaret Law REPEALED! 1926-2017",
+          "alt": "",
+          "link_url": "http://LetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-588895967e793a39",
+      "url": "https://nycartc.com/content/images/2017/12/meeting.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "meeting.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/priorities/",
+          "page_title": "NYC Artist Coalition Priorities - NYC Artist Coalition",
+          "heading": "NYC Office of Nightlife",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-71d9b797d372191b",
+      "url": "https://nycartc.com/content/images/2018/10/DianaMoreMedium.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "DianaMoreMedium.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2018/10/DianaMoraFull.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-be4783e5f0b0bd5a",
+      "url": "https://nycartc.com/content/images/2018/10/NolaRodneyM.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "NolaRodneyM.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2018/10/NolaRodneyFull.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-5105c88d836c03dd",
+      "url": "https://nycartc.com/content/images/2018/10/Olmypia.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "Olmypia.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2018/10/OlmypiaKaziFull.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-98ad7088d7f636aa",
+      "url": "https://nycartc.com/content/images/2018/10/RachelNelsonMedium.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "RachelNelsonMedium.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2018/10/RachelNelsonFull.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-e29d568713b4dca2",
+      "url": "https://nycartc.com/content/images/2018/10/SMLevinMedium.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "SMLevinMedium.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2018/10/StephenLevinFull.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-728fcf653fee284a",
+      "url": "https://nycartc.com/content/images/2018/10/crains200.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "crains200.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/sbjsa/",
+          "page_title": "Lease Protections for Spaces- Tell NYC Council: #PassSBJSA - NYC Artist Coalition",
+          "heading": "\"Sign On to SBJSA (Intro 737) #SaveNYCSpaces\"",
+          "alt": "",
+          "link_url": "https://www.crainsnewyork.com/real-estate/commercial-rent-control-bill-get-october-hearing"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-341ad4dee087c19e",
+      "url": "https://nycartc.com/content/images/2019/02/nyc-artist-coalition.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "nyc-artist-coalition.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "http://nycartc.com/"
+        },
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "http://nycartc.com/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-9650caf765870344",
+      "url": "https://nycartc.com/content/images/2019/02/villagvoice-square2.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "villagvoice-square2.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "CALL CITY COUNCIL",
+          "alt": "",
+          "link_url": "https://www.villagevoice.com/2016/12/08/palisades-owners-explain-why-the-beloved-venue-was-shut-down/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-491f1af7ff3d6cd2",
+      "url": "https://nycartc.com/content/images/2019/03/dekalb-vacant.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "dekalb-vacant.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/vacant-storefronts-in-nyc/",
+          "page_title": "Vacant Storefronts in NYC - NYC Artist Coalition",
+          "heading": "CALL CITY COUNCIL",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-e2dd27f800d488e8",
+      "url": "https://nycartc.com/content/images/2019/03/vacant-les.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "vacant-les.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/vacant-storefronts-in-nyc/",
+          "page_title": "Vacant Storefronts in NYC - NYC Artist Coalition",
+          "heading": "I STAND FOR #FAIR RENT NYC",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-8adbc5d9bc5e0554",
+      "url": "https://nycartc.com/content/images/2019/08/Richards.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "Richards.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=🏆%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40DRichards13%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-31c1b1da5cca4da8",
+      "url": "https://nycartc.com/content/images/2019/08/andrew-cohen.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "andrew-cohen.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40AndrewCohenNYC%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-ed392c9949389a89",
+      "url": "https://nycartc.com/content/images/2019/08/ayala-1.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "ayala-1.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #FairRentNYC Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40DianaAyalaNYC%20for%20supporting%20%23FairRentNYC%20Bill%201796%21&url=http%3A%2F%2FFairRentNYC.com"
+        },
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40DianaAyalaNYC%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-ff461edd85352df1",
+      "url": "https://nycartc.com/content/images/2019/08/brannon-1.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "brannon-1.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40JustinBrannan%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-96f4512e4be434b5",
+      "url": "https://nycartc.com/content/images/2019/08/kallos.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "kallos.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #FairRentNYC Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40kallos%20for%20supporting%20%23FairRentNYC%20Bill%201796%21&url=http%3A%2F%2FFairRentNYC.com"
+        },
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40kallos%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-c9116566b7e94cc6",
+      "url": "https://nycartc.com/content/images/2019/08/lander.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "lander.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #FairRentNYC Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40bradlander%20for%20supporting%20%23FairRentNYC%20Bill%201796%21&url=http%3A%2F%2FFairRentNYC.com"
+        },
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40bradlander%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-b8a595c7fa22ac32",
+      "url": "https://nycartc.com/content/images/2019/08/powers-1.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "powers-1.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40KeithPowersNYC%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-094cf99be4f4f0c1",
+      "url": "https://nycartc.com/content/images/2019/08/rosenthal.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "rosenthal.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=🏆%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40HelenRosenthal%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-8931db7265af04b2",
+      "url": "https://nycartc.com/content/images/2019/10/gjonaj.jpeg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "gjonaj.jpeg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=🏆%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40MarkGjonajNY%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-1c689d5010f6e5cf",
+      "url": "https://nycartc.com/content/images/2019/11/Olympia.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "Olympia.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2019/11/Olympia.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-964d46580dd34c08",
+      "url": "https://nycartc.com/content/images/2019/11/chhaya.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "chhaya.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2019/11/chhaya.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-e08fcb0238c56990",
+      "url": "https://nycartc.com/content/images/2019/11/dailynews.jpeg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "dailynews.jpeg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "CALL CITY COUNCIL",
+          "alt": "",
+          "link_url": "https://www.nydailynews.com/news/politics/ny-commercial-rent-regulation-steve-levin-20191114-eh3aigksp5edlf4itwdkfur74y-story.html"
+        },
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://www.nydailynews.com/news/politics/ny-commercial-rent-regulation-steve-levin-20191114-eh3aigksp5edlf4itwdkfur74y-story.html"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-0c2aa4947a27d12a",
+      "url": "https://nycartc.com/content/images/2019/11/elsewhere.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "elsewhere.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2019/11/elsewhere.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-1f67d9b2d7fea557",
+      "url": "https://nycartc.com/content/images/2019/11/isabella_rivera_izzie.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "isabella_rivera_izzie.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2019/11/isabella_rivera_izzie.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-cd30228c1fca73af",
+      "url": "https://nycartc.com/content/images/2019/11/lander.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "lander.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2019/11/lander.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-5a943f237ef7ba9a",
+      "url": "https://nycartc.com/content/images/2019/11/levin.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "levin.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2019/11/levin.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-55f6c5302a7992f3",
+      "url": "https://nycartc.com/content/images/2019/11/local802.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "local802.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2019/11/local802.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-be38d16c6f091e86",
+      "url": "https://nycartc.com/content/images/2019/11/streetvendors.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "streetvendors.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2019/11/streetvendors.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-c3f099b4ea383fe6",
+      "url": "https://nycartc.com/content/images/2019/11/whisk.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "whisk.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2019/11/whisk.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-da7794c8fa6f9c4d",
+      "url": "https://nycartc.com/content/images/2019/12/carlos-menchaca.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "carlos-menchaca.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #FairRentNYC Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40NYCCouncil38%20for%20supporting%20%23FairRentNYC%20Bill%201796%21&url=http%3A%2F%2FFairRentNYC.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-b1c3ecf3396b1b0a",
+      "url": "https://nycartc.com/content/images/2021/09/Fair-Rent-pink-2-web.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "Fair-Rent-pink-2-web.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "Zoom Background",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-58340c5d1a191aee",
+      "url": "https://nycartc.com/content/images/2021/09/district-37.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "district-37.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #FairRentNYC Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40DarmaVDiaz2%20for%20supporting%20%23FairRentNYC%20Bill%201796%21&url=http%3A%2F%2FFairRentNYC.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-9a54cb0049e6919c",
+      "url": "https://nycartc.com/content/images/2021/11/diaz-1.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "diaz-1.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/fairrentnyc/",
+          "page_title": "Pass Commercial Rent Stabilization - NYC Artist Coalition",
+          "heading": "I STAND FOR #FAIR RENT NYC",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-06efe4713f6a2d4e",
+      "url": "https://nycartc.com:443/content/images/2017/01/SF.jpeg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "SF.jpeg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/documents/",
+          "page_title": "Nation-Wide DIY Organizing Documents - NYC Artist Coalition",
+          "heading": "Oakland",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4ba321991ed73467",
+      "url": "https://nycartc.com:443/content/images/2017/02/tara.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "tara.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/safety/",
+          "page_title": "Safety Resources - NYC Artist Coalition",
+          "heading": "Safety Resources",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4146486fe4c26ac2",
+      "url": "https://nycartc.com:443/content/images/2017/03/DCLAmeeting.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "DCLAmeeting.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Coalition Presents to Dept. of Cultural Affairs",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/DCLAmtgbig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-e85a5205e7d1141a",
+      "url": "https://nycartc.com:443/content/images/2017/03/coalitionpink.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "coalitionpink.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Coalition Presents to Dept. of Cultural Affairs",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/coalitionpink.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-c446e349dcb02b76",
+      "url": "https://nycartc.com:443/content/images/2017/03/feb_general_small.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "feb_general_small.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/feb_general_big.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-f8b5da52a2354d9a",
+      "url": "https://nycartc.com:443/content/images/2017/03/generalmeeting.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "generalmeeting.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/generalmeetingbig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-de4bc4ed9d15ca5e",
+      "url": "https://nycartc.com:443/content/images/2017/03/tara.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "tara.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/tarabig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-887281ee61b8296a",
+      "url": "https://nycartc.com:443/content/images/2017/03/workinggroup1.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "workinggroup1.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/workinggroup1big.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4a59e146195b69e8",
+      "url": "https://nycartc.com:443/content/images/2017/03/workinggroup2.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "workinggroup2.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/03/workinggroup2big.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-0657da463c28f43f",
+      "url": "https://nycartc.com:443/content/images/2017/04/32944305043_21fa1fbfee_z--1-.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "32944305043_21fa1fbfee_z--1-.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/04/frankiebig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-53065d3b64124d12",
+      "url": "https://nycartc.com:443/content/images/2017/04/32944305093_ceef03f207_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "32944305093_ceef03f207_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/04/nyc-artist-coalition-julia-fredenburg.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-25295fc3e71fe9c1",
+      "url": "https://nycartc.com:443/content/images/2017/04/33372687200_002ff61294_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "33372687200_002ff61294_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/04/finkelpearlbig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-1f5d163f90f6f1f6",
+      "url": "https://nycartc.com:443/content/images/2017/04/33628280601_215894e78f_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "33628280601_215894e78f_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com:443/content/images/2017/04/33628280601_c82658d4ac_o.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-d3f5a130e4c9f826",
+      "url": "https://nycartc.com:443/content/images/2017/04/33628281531_fc67dd17f4_z--2-.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "33628281531_fc67dd17f4_z--2-.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/04/townhallbig.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-bcd346d0375403ef",
+      "url": "https://nycartc.com:443/content/images/2017/04/nyc-artist-coalition-nowhere-legal-animated.gif",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "nyc-artist-coalition-nowhere-legal-animated.gif"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Graphics",
+          "alt": "",
+          "link_url": "https://nycartc.com:443/content/images/2017/04/nyc-artist-coalition-nowhere-legal-animated.gif"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-ca2ebdeac0e045de",
+      "url": "https://nycartc.com:443/content/images/2017/08/house-of-yesmedium2.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "house-of-yesmedium2.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com:443/content/images/2017/08/house-of-yes.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-2fb31b0233c03228",
+      "url": "https://nycartc.com:443/content/images/2017/10/37262361084_8683f65c0b_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "37262361084_8683f65c0b_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com:443/content/images/2017/10/SaveNYCSpaces1.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-80e35674b81ad69c",
+      "url": "https://nycartc.com:443/content/images/2017/10/37262370324_1d7261082f_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "37262370324_1d7261082f_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com:443/content/images/2017/10/37262370324_236d7afa4b_o.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-df6ceae6f9183b57",
+      "url": "https://nycartc.com:443/content/images/2017/10/37262372324_d4126f9e0c_z.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "37262372324_d4126f9e0c_z.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/press/",
+          "page_title": "Press - NYC Artist Coalition",
+          "heading": "Gallery",
+          "alt": "",
+          "link_url": "https://nycartc.com:443/content/images/2017/10/KurtisBlow.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-2c17d910ce39be31",
+      "url": "https://nycartc.com:443/content/images/2017/12/Signing-Group-Photo.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "Signing-Group-Photo.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/letnycdance/",
+          "page_title": "\"No Dancing\" Cabaret Law REPEALED! 1926-2017 - NYC Artist Coalition",
+          "heading": "\"No Dancing\" Cabaret Law REPEALED! 1926-2017",
+          "alt": "",
+          "link_url": "http://letnycdance.nycartc.com/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-7333ff672b9df981",
+      "url": "https://nycartc.com:443/content/images/2017/12/cabaret-law-repealed-1.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "cabaret-law-repealed-1.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/letnycdance/",
+          "page_title": "\"No Dancing\" Cabaret Law REPEALED! 1926-2017 - NYC Artist Coalition",
+          "heading": "\"No Dancing\" Cabaret Law REPEALED! 1926-2017",
+          "alt": "",
+          "link_url": "http://LetNYCDance.org"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4ddc68be8c24c0a1",
+      "url": "https://nycartc.com:443/content/images/2019/03/dekalb-vacant.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "dekalb-vacant.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/vacant-storefronts-in-nyc/",
+          "page_title": "Vacant Storefronts in NYC - NYC Artist Coalition",
+          "heading": "CALL CITY COUNCIL",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-b09fac2bd3eea0fb",
+      "url": "https://nycartc.com:443/content/images/2019/03/vacant-les.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "vacant-les.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com:443/vacant-storefronts-in-nyc/",
+          "page_title": "Vacant Storefronts in NYC - NYC Artist Coalition",
+          "heading": "I STAND FOR #FAIR RENT NYC",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-a97e803aa84c7c31",
+      "url": "https://pbs.twimg.com/profile_images/951898249874608128/Q8y0l8xv_400x400.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "Q8y0l8xv_400x400.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://twitter.com/intent/tweet?text=%F0%9F%8F%86%20NYC%27s%20diverse%20community%20spaces%20thank%20%40NYCCouncil%20Member%20%40CMDebiRose%20for%20supporting%20%23TalksNotRaids%20Bill%201156%21&url=http%3A%2F%2FTalksNotRaids.com"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-72c276bed1804cc1",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://fairrentnyc.nycartc.com/s/img/save-nyc-spaces-group-photo-nyc-artist-coalition--web-02-40d6b2e9b5dc159580227430cfe1e9b2.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "save-nyc-spaces-group-photo-nyc-artist-coalition--web-02-40d6b2e9b5dc159580227430cfe1e9b2.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": "https://web.archive.org/s/img/save-nyc-spaces-group-photo-nyc-artist-coalition-8779ecdf32a8b25a0501695fa88923c0.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-ed9b38992c08e321",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://live.staticflickr.com/65535/49064835623_767fc7aa11_b.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "49064835623_767fc7aa11_b.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-e8dbcd8f94f19495",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://live.staticflickr.com/65535/49064835743_12472272b3_b.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "49064835743_12472272b3_b.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-ed6b4facd093e678",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://live.staticflickr.com/65535/49064836078_f5c388ac43_b.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "49064836078_f5c388ac43_b.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-6d36948c66ac7740",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://live.staticflickr.com/65535/49065349566_a0e858f609_b.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "49065349566_a0e858f609_b.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-086539ef7fbf20c2",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://live.staticflickr.com/65535/49065350151_9dda9df2c8_b.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "49065350151_9dda9df2c8_b.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-05e35714fc57bca6",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://live.staticflickr.com/65535/49065350316_13043c2843_b.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "49065350316_13043c2843_b.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 3
+      }
+    },
+    {
+      "id": "campaign-photo-4539283a9ddf5420",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://live.staticflickr.com/65535/49065562572_30d79e2441_b.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "49065562572_30d79e2441_b.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-5bf7085d73058b4a",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://live.staticflickr.com/65535/49065562972_567c2f6d40_b.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "49065562972_567c2f6d40_b.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-5e7e5472c5e4d5c9",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://live.staticflickr.com/65535/49201899181_f15d5d006d_b.jpg",
+      "media_class": "photograph",
+      "basenames": [
+        "49201899181_f15d5d006d_b.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "Pass Commercial Rent Stabilization",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "multiple-exact-filename-matches",
+        "match_count": 2
+      }
+    },
+    {
+      "id": "campaign-photo-de8e572f52816954",
+      "url": "https://res.cloudinary.com/nycartc/image/fetch/q_auto,f_auto/https://nycartc.com/content/images/2017/10/town-hall.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "town-hall.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://web.archive.org/web/20211201104425id_/https://fairrentnyc.nycartc.com/",
+          "page_url": "https://web.archive.org/web/20211201104425id_/https:/fairrentnyc.nycartc.com/",
+          "page_title": "Fair Rent NYC - Pass Commercial Rent Stabilization Bill 1796",
+          "heading": "3 more City Council Members needed to pass the #FairRentNYC Bill.",
+          "alt": "",
+          "link_url": "https://nycartc.com/content/images/2017/10/town-hall.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-945abc46508236ba",
+      "url": "https://savenycspaces.nycartc.com/img/funkrust-save-nyc-spaces-5b390cb9e0eeecb09d54b02c91d9504c.gif",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "funkrust-save-nyc-spaces-5b390cb9e0eeecb09d54b02c91d9504c.gif"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/funkrust-save-nyc-spaces-5b390cb9e0eeecb09d54b02c91d9504c.gif"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-df5901ef0c6fbf34",
+      "url": "https://savenycspaces.nycartc.com/img/press/photos/kurtis-blow-save-nyc-spaces-nyc-artist-coalition-8aca1249021402aea4a43733770692c6.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "kurtis-blow-save-nyc-spaces-nyc-artist-coalition-8aca1249021402aea4a43733770692c6.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "Press Contact",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/10/kurtisblow.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-da736990e504824c",
+      "url": "https://savenycspaces.nycartc.com/img/press/photos/save-nyc-spaces-group-photo-nyc-artist-coalition-bc5c4949f0e1975553e8f89ba63155b2.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "save-nyc-spaces-group-photo-nyc-artist-coalition-bc5c4949f0e1975553e8f89ba63155b2.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "Press Contact",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/10/savenycspacesnycartc.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-5463d1f12e028467",
+      "url": "https://savenycspaces.nycartc.com/img/press/photos/save-nyc-spaces-nyc-artist-coalition-ecf8e0879a27e277846818c25b489235.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "save-nyc-spaces-nyc-artist-coalition-ecf8e0879a27e277846818c25b489235.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "Press Contact",
+          "alt": "",
+          "link_url": "http://nycartc.com/content/images/2017/10/town-hall.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-bf018389ea36994b",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/ali-rosa-salas-48a6d5f5ef15a33d96bc39258f0e848c.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "ali-rosa-salas-48a6d5f5ef15a33d96bc39258f0e848c.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/ali-rosa-salas-48a6d5f5ef15a33d96bc39258f0e848c.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-299283eb1b566ae3",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/anya-sapozhnikova-190525fdf32da132ec0e345852a8c79c.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "anya-sapozhnikova-190525fdf32da132ec0e345852a8c79c.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/anya-sapozhnikova-190525fdf32da132ec0e345852a8c79c.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-fe97736c71f89b2d",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/brian-polite-72a179b11c5a541779ccd5602de26e51.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "brian-polite-72a179b11c5a541779ccd5602de26e51.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/brian-polite-72a179b11c5a541779ccd5602de26e51.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-e5e8ef374ae516f6",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/charlie-ahearn-7f08bd56eb2ca5ef919fdbbe78e2ab42.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "charlie-ahearn-7f08bd56eb2ca5ef919fdbbe78e2ab42.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/charlie-ahearn-7f08bd56eb2ca5ef919fdbbe78e2ab42.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-074138603e40b484",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/deearah-wright-c45095d3ddeda97ab82720d50e608c4a.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "deearah-wright-c45095d3ddeda97ab82720d50e608c4a.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/deearah-wright-c45095d3ddeda97ab82720d50e608c4a.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-9259cc9d76284a8b",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/jamie-burkart-84566fd4d4431339704e71f8b87fb7eb.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "jamie-burkart-84566fd4d4431339704e71f8b87fb7eb.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/jamie-burkart-84566fd4d4431339704e71f8b87fb7eb.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-51880dc019be966d",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/jeannie-hopper-f7cb995e1572e64ec74bbc486844d2b9.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "jeannie-hopper-f7cb995e1572e64ec74bbc486844d2b9.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/jeannie-hopper-f7cb995e1572e64ec74bbc486844d2b9.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-aa3938ed2a1bf8df",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/joe-ahearn-890145bfb21c0dc16258ec1f5c0c2299.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "joe-ahearn-890145bfb21c0dc16258ec1f5c0c2299.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/joe-ahearn-890145bfb21c0dc16258ec1f5c0c2299.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-3e3ea59b688258f1",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/kurtis-blow-896e952190e5ab1ecf91ed4a5ae48320.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "kurtis-blow-896e952190e5ab1ecf91ed4a5ae48320.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/kurtis-blow-896e952190e5ab1ecf91ed4a5ae48320.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-11ab296454863ac4",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/libertad-guerra-9fea45dfa34a25b6cac06021637ad303.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "libertad-guerra-9fea45dfa34a25b6cac06021637ad303.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/libertad-guerra-9fea45dfa34a25b6cac06021637ad303.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-8de2b0f83765e644",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/molly-cox-fbda27f130fe1bb49cd0f1585d201470.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "molly-cox-fbda27f130fe1bb49cd0f1585d201470.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/molly-cox-fbda27f130fe1bb49cd0f1585d201470.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-30114ccc46713baf",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/nikki-brown-f21a8c5692fb78e53b36bd93ec2dc2d0.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "nikki-brown-f21a8c5692fb78e53b36bd93ec2dc2d0.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/nikki-brown-f21a8c5692fb78e53b36bd93ec2dc2d0.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-423ac90c3e190177",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/olympia-kazi-ce651527d032894d51aa5da59a33bde7.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "olympia-kazi-ce651527d032894d51aa5da59a33bde7.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/olympia-kazi-ce651527d032894d51aa5da59a33bde7.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-d2d65966284cd0a3",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/pooyan-aslani-9111e6daad58dc26b3f6b7180a8073ea.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "pooyan-aslani-9111e6daad58dc26b3f6b7180a8073ea.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/pooyan-aslani-9111e6daad58dc26b3f6b7180a8073ea.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-36351aed62e0526c",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/rachel-nelson-a81b954effa80e3409acbd549bf9c41e.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "rachel-nelson-a81b954effa80e3409acbd549bf9c41e.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": "https://savenycspaces.nycartc.com/img/testimonials/web/rachel-nelson-a81b954effa80e3409acbd549bf9c41e.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-eada48e82b74a2d1",
+      "url": "https://savenycspaces.nycartc.com/img/testimonials/web/save-nyc-spaces-group-0d813bb10238c14ce775de2f0dc9e940.jpg",
+      "media_class": "portrait",
+      "basenames": [
+        "save-nyc-spaces-group-0d813bb10238c14ce775de2f0dc9e940.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://savenycspaces.nycartc.com/",
+          "page_url": "https://savenycspaces.nycartc.com/",
+          "page_title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse CulturesSave NYC Spaces - Culture Is Born in Small Diverse Spaces",
+          "heading": "NYC's Nightlife Mayor must help all cultures thrive",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4e487db524f39886",
+      "url": "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/11236550_479805375531261_5381466263199287473_n.jpg?_nc_cat=102&_nc_ht=scontent-lga3-1.xx&oh=9eb80143cc2811feeaf64c24b250611e&oe=5CEADA6B",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "11236550_479805375531261_5381466263199287473_n.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://nycartc.com/",
+          "page_url": "https://nycartc.com/march/",
+          "page_title": "Transparency on M.A.R.C.H #TalksNotRaids - NYC Artist Coalition",
+          "heading": "New York City Council Members Signed On To #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "http://www.artiststudioaffordabilityproject.org/"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-eac71f1dee980348",
+      "url": "https://talksnotraids.com/s/graphics/save-nyc-spaces-group-photo-nyc-artist-coalition--thumb-ce54825361437c041262231799fa8f47.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "save-nyc-spaces-group-photo-nyc-artist-coalition--thumb-ce54825361437c041262231799fa8f47.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "Media Kit",
+          "alt": "",
+          "link_url": "https://talksnotraids.com/s/graphics/save-nyc-spaces-group-photo-nyc-artist-coalition-e237bfa52882a37cbcb3e3b01962a57a.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-8dfca485f7e6ea23",
+      "url": "https://talksnotraids.com/s/graphics/save-nyc-spaces-nyc-artist-coalition--thumb-ecf8e0879a27e277846818c25b489235.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "save-nyc-spaces-nyc-artist-coalition--thumb-ecf8e0879a27e277846818c25b489235.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "Media Kit",
+          "alt": "",
+          "link_url": "https://talksnotraids.com/s/graphics/save-nyc-spaces-nyc-artist-coalition-30c70a2c9274c3575e853c4bb1296cd3.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-0fb8198e70dc3766",
+      "url": "https://talksnotraids.com/s/testimony/web/DianaMora-40e5d3678f944ff3933165bc1e445352.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "DianaMora-40e5d3678f944ff3933165bc1e445352.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://talksnotraids.com/s/testimony/web/DianaMora-40e5d3678f944ff3933165bc1e445352.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-ef8e0966423a625b",
+      "url": "https://talksnotraids.com/s/testimony/web/NolaRodney-d8c3d4658c68bab384d9d5f827f2b58a.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "NolaRodney-d8c3d4658c68bab384d9d5f827f2b58a.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://talksnotraids.com/s/testimony/web/NolaRodney-d8c3d4658c68bab384d9d5f827f2b58a.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-a42fb97d1d4de66d",
+      "url": "https://talksnotraids.com/s/testimony/web/OlmypiaKazi-bed9ccb40e4be8d3549eb3ddadf48e1f.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "OlmypiaKazi-bed9ccb40e4be8d3549eb3ddadf48e1f.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://talksnotraids.com/s/testimony/web/OlmypiaKazi-bed9ccb40e4be8d3549eb3ddadf48e1f.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-4b5c204d6f3458ba",
+      "url": "https://talksnotraids.com/s/testimony/web/RachelNelson-a0951bfe55ae89e7c91bde7d3ed2fd02.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "RachelNelson-a0951bfe55ae89e7c91bde7d3ed2fd02.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://talksnotraids.com/s/testimony/web/RachelNelson-a0951bfe55ae89e7c91bde7d3ed2fd02.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-36f2270b7cc373bd",
+      "url": "https://talksnotraids.com/s/testimony/web/StephenLevin-ffc752beb6dda29e811f373d8bd4a147.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "StephenLevin-ffc752beb6dda29e811f373d8bd4a147.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": "https://talksnotraids.com/s/testimony/web/StephenLevin-ffc752beb6dda29e811f373d8bd4a147.jpg"
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    },
+    {
+      "id": "campaign-photo-f3ad2af5204f72b2",
+      "url": "https://talksnotraids.com/s/testimony/web/save-nyc-spaces-group-4056d69275d80f8ed9b8f47121385371.jpg",
+      "media_class": "photograph-candidate",
+      "basenames": [
+        "save-nyc-spaces-group-4056d69275d80f8ed9b8f47121385371.jpg"
+      ],
+      "occurrences": [
+        {
+          "site": "https://talksnotraids.com/",
+          "page_url": "https://talksnotraids.com/",
+          "page_title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+          "heading": "New York City Council Members Signed On to the #TalksNotRaids Bill",
+          "alt": "",
+          "link_url": null
+        }
+      ],
+      "apple_photos": {
+        "match_state": "not-matched-by-filename",
+        "match_count": 0
+      }
+    }
+  ],
+  "private_capture_timestamps_included": false
+}

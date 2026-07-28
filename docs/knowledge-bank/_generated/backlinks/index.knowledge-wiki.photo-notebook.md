@@ -3,7 +3,7 @@
 
 **Source commit:** `d8bfaf102dfcadf6538a226edb40bf53f7cc4e4e`
 **Generation time:** 2026-07-27T00:00:42-04:00
-**Source fingerprint:** `aec023feb22f1f71158eb2f6cb9fb7f8ce07aeef7dbb89d792fca4a89736d092`
+**Source fingerprint:** `9d8ab593fc07e103b5b3d661a925890defd4fa5a119704dcbebc40820cc25e35`
 
 - [Protect intimate gathering photographs from automatic portfolio promotion](../../decisions/photography/intimate-gatherings-protected-absence.md) - `related_to` (frontmatter)
 - [First local Apple Photos canary](../../notebooks/photography/field-notes/first-local-photos-canary.md) - `related_to` (frontmatter)

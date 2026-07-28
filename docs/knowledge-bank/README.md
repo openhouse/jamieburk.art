@@ -51,6 +51,34 @@ relations:
     href: indexes/photography.md
     context: Governed photo assets, occurrences, editions, rights summaries, recollections, and protected absences.
   - type: related_to
+    target: index.knowledge-wiki.public-testimony
+    href: indexes/public-testimony.md
+    context: Full official transcript text and bounded sequence of six recovered first-person Council appearances.
+  - type: related_to
+    target: index.knowledge-wiki.public-testimony-heteroglossia
+    href: indexes/public-testimony-heteroglossia.md
+    context: Full attributed supportive and aligned testimony across seven recovered Council hearings, with qualification and collective credit preserved.
+  - type: related_to
+    target: index.knowledge-wiki.commercial-rent-stabilization-testimony
+    href: indexes/commercial-rent-stabilization-testimony.md
+    context: City and state legislative lineage, full oral and written support, sponsor records, official public statements, and timestamped public-event speeches.
+  - type: related_to
+    target: method.transcript-linked-event-photography
+    href: methods/transcript-linked-event-photography.md
+    context: Private return from event transcripts to simultaneous documentary photography and earlier recursive selects.
+  - type: related_to
+    target: research.public-testimony-heteroglossia.2026-07-28
+    href: research-runs/public-testimony-heteroglossia-source-return-2026-07-28.md
+    context: Reproducible source-return method for the seven-hearing attributed transcript corpus.
+  - type: related_to
+    target: research.commercial-rent-stabilization-testimony.2026-07-28
+    href: research-runs/commercial-rent-stabilization-testimony-source-return-2026-07-28.md
+    context: Reproducible source-return method for the Commercial Rent Stabilization legislative and testimony collection.
+  - type: related_to
+    target: research.current-workstream-source-return.2026-07-28
+    href: research-runs/current-workstream-source-return-2026-07-28.md
+    context: Protected-source, public-safe return to current commercial-rent review, speech preparation, and portfolio decisions.
+  - type: related_to
     target: method.recursive-social-systems-trace
     href: methods/recursive-social-systems-trace.md
     context: Current public-safe reconstruction of relationships, models, interfaces, use, learning, and handoff across three active practices.
@@ -112,6 +140,29 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Living photographic knowledge](indexes/photography.md): governed photo
   assets, source summaries, curatorial proposals, exact occurrences, editions,
   recollections, research returns, and protected absences.
+- [Public testimony](indexes/public-testimony.md): six recovered first-person
+  Council appearances, preserved as official transcript text with separate
+  editorial corrections and collective-credit boundaries.
+- [Public testimony heteroglossia](indexes/public-testimony-heteroglossia.md):
+  full attributed testimony from 187 supportive and aligned contributors across
+  seven hearings, with qualified positions and the unselected-label coverage
+  ledger retained.
+- [Commercial Rent Stabilization testimony](indexes/commercial-rent-stabilization-testimony.md):
+  municipal and state legislative lineage, full oral and written support,
+  sponsor records, official public statements, and timestamp-bound public-event
+  speeches whose precise scope remains explicit.
+- [Transcript-linked event photography](methods/transcript-linked-event-photography.md):
+  privacy-preserving return from speaker timestamps to simultaneous
+  documentary photographs, Apple Photos retrieval signals, and earlier
+  photo-select trees.
+- [Public testimony source return](research-runs/public-testimony-heteroglossia-source-return-2026-07-28.md):
+  reproducible method, coverage, and limits for the seven-hearing chorus.
+- [Commercial Rent Stabilization source return](research-runs/commercial-rent-stabilization-testimony-source-return-2026-07-28.md):
+  reproducible method, coverage, redaction, and official-record boundaries for
+  the legislative and testimony collection.
+- [Current workstream source return](research-runs/current-workstream-source-return-2026-07-28.md):
+  bounded present-tense evidence from commercial-rent research review, speech
+  preparation, and portfolio decision work.
 - [Recursive social-systems trace](methods/recursive-social-systems-trace.md):
   three current, bounded examples connecting relationship observation to a
   model, interface, social use, learning, and handoff.

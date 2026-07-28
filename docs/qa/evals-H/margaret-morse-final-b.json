@@ -1,37 +1,39 @@
 {
-  "evaluator": "Fictionalized Margaret Morse lens",
-  "reviewerId": "margaret-morse-current-b",
+  "evaluator": "Holdout B - PR-015, fictionalized Margaret Morse evaluative lens",
+  "reviewerId": "professor-lens-holdout-B-Wegener",
   "phase": "holdout",
   "lensId": "PR-015",
   "lens": "PR-015",
   "judge": "B",
-  "date": "2026-07-26",
-  "candidateSha256": "46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341",
+  "date": "2026-07-28",
+  "candidateSha256": "3fa95fe76a1327db9385abdd166c2c554a07a3a3f29a352ba357bd0aa8313489",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Receipt digest reproduced exactly with the stated path-NUL-bytes-NUL algorithm; all 162 listed files exist.",
-    "About is one click from the homepage and explicitly connects Open House, WOWList, Sunday Dinner/196, NYC Artist Coalition/FairRentNYC, team memory, and photographic knowledge under “Systems people can inhabit.”",
-    "WOWList joins community vocabulary to distributed publishing; Sunday Dinner/196 joins hospitality and consent to repeatable continuity; FairRentNYC joins lived experience and participation to campaign interfaces, decision memory, and handoff.",
-    "The homepage, work index, role-fit summaries, resume links, and contact CTA keep technical project management, product operations, and implementation legible rather than becoming an artist biography.",
-    "Open House governance, WOWList authorship, and civic outcomes retain collective credit; participant records, correspondence, protected educational records, unapproved testimonials, and uncleared images remain excluded.",
-    "Candidate-bound browser evidence covers 56 route-and-viewport rows with no accessibility violations, overflow, broken images, or failed requests; live inspection confirmed the requested routes and their continuity paths."
+    "Independent recomputation produced exactly 343 files and the expected SHA-256.",
+    "The role-first homepage and opening About section establish technical project management, product operations, and implementation before introducing the artistic, civic, technical, and social lineage.",
+    "The About surface explains inhabitation through participation, influence, memory, continuation, requirements, interfaces, and handoffs.",
+    "Six project continuities provide specific evidence of participation, hospitality, attention, documentation, care, place, and collective use.",
+    "Open House is grounded in a public article while protected UCSC records remain withheld and are not projected as endorsements.",
+    "The testimony structures preserve 187 attributed contributors, qualified and mechanism-opposing positions, complete event-bounded turns, and collective-credit limits.",
+    "All 181 campaign-photo records state rights_state permission-needed and public_display_status hold; the index excludes private identifiers, network upload, and exact private capture timestamps.",
+    "Candidate-bound browser evidence confirms six complete continuity rows, three current-practice labels, successful desktop and mobile rendering, and no accessibility, overflow, image, or request failures."
   ],
   "limitations": [
-    "The complete comparative trace makes the About page long, especially on mobile, although the thesis and project links appear early.",
-    "One holdout cannot establish the required three-judge median.",
-    "Rights, consent, exact credit and crop, Jamie approval, deployment, and indexing remain separate human gates."
+    "This is a fictionalized critical lens, not Margaret Morse's participation, belief, recommendation, permission, or endorsement.",
+    "Further archival additions should remain compressed or move to linked research surfaces.",
+    "Rights, consent, dignity, exact credit, crop, caption, destination, Jamie approval, production, indexing, and hiring decisions remain human gates."
   ],
-  "recommendation": "Pass PR-015 at 4; retain the one-click through-line, bounded project continuities, hiring-reader orientation, and explicit collective-credit and privacy limits.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate. Preserve the default-closed photography state and selective public composition.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa14f-0319-7202-ab3a-4beb20af314f",
-    "agentNickname": "morse-holdout-b",
+    "processSessionId": "019fa902-c7ec-7c21-940e-062aa7f79c39",
+    "agentNickname": "Wegener",
     "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
+    "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "The completed native subagent result is recorded verbatim in the judge, date, candidateSha256, score, pass, evidence, limitations, and recommendation fields; repository identity and provenance fields were added by the parent orchestrator."
+    "operatorAttestation": "Completed native subagent judgment recorded by the parent orchestrator."
   }
 }

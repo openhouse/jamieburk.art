@@ -1,10 +1,10 @@
 {
   "reportVersion": 2,
-  "checkedAt": "2026-07-27T03:40:52.112Z",
-  "sourceCommit": "94c222af74d6c6718a80835f9a553f4def8f4584",
-  "publicSurfaceFingerprint": "9105ad49d5e5f2c1b8d4f3d99970b00e9b534def093a66ef1cb5543d41bcc70e",
+  "checkedAt": "2026-07-28T13:57:00.302Z",
+  "sourceCommit": "2acca50f7acbf2cd0e23708248de09c558d3c5e1",
+  "publicSurfaceFingerprint": "13d0371c93ad2611f8892978b95038c19641c843efc7cd8f5b16199f7caaa48f",
   "publicSurfaceFileCount": 119,
-  "baseUrl": "http://127.0.0.1:3045",
+  "baseUrl": "http://localhost:3045",
   "route": "/about",
   "homepageAboutLink": {
     "visible": true,

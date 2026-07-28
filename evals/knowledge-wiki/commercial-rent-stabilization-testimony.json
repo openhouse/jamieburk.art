@@ -1,0 +1,98 @@
+{
+  "id": "commercial-rent-stabilization-testimony",
+  "version": 2,
+  "threshold": 1,
+  "principle": "Commercial Rent Stabilization memory must preserve the full attributed support chorus, legislative lineage, public-official speech, qualifications, and non-recoveries without converting alignment into endorsement or testimony into verified fact.",
+  "criteria": [
+    {
+      "id": "CRS-T-001",
+      "hard_gate": true,
+      "description": "The collection distinguishes the municipal Int 1796 and Int 0093 bills from the current state-legislation resolution lineage."
+    },
+    {
+      "id": "CRS-T-002",
+      "hard_gate": true,
+      "description": "Every legislation lifecycle statement is tied to an official Council record and dated status snapshot."
+    },
+    {
+      "id": "CRS-T-003",
+      "hard_gate": true,
+      "description": "Prime-sponsor and co-sponsor stated-meeting records preserve full recovered turns, including honest procedural-only non-recoveries."
+    },
+    {
+      "id": "CRS-T-004",
+      "hard_gate": true,
+      "description": "Public-official records distinguish direct bill support, support for related measures, problem recognition, and mechanism objections."
+    },
+    {
+      "id": "CRS-T-005",
+      "hard_gate": true,
+      "description": "Every included supportive public-official statement is a complete attributed transcript turn or full official support document."
+    },
+    {
+      "id": "CRS-T-006",
+      "hard_gate": true,
+      "description": "Opposition, unrelated remarks, agency non-endorsement, and missing transcript attachments remain visible in a coverage ledger."
+    },
+    {
+      "id": "CRS-T-007",
+      "hard_gate": true,
+      "description": "The complete recovered oral support cohort and all attributed supportive or qualified-support written submissions are retained."
+    },
+    {
+      "id": "CRS-T-008",
+      "hard_gate": true,
+      "description": "Direct support and qualified support remain distinct, and inclusion never implies agreement on every provision."
+    },
+    {
+      "id": "CRS-T-009",
+      "hard_gate": true,
+      "description": "Direct emails, telephone numbers, postal boxes, and street addresses are removed from the public derivative corpus."
+    },
+    {
+      "id": "CRS-T-010",
+      "hard_gate": true,
+      "description": "The official Council attachments remain canonical and testimony assertions are not presented as independently verified facts."
+    },
+    {
+      "id": "CRS-T-011",
+      "hard_gate": true,
+      "description": "Generated data, source pages, and indexes are reproducible and freshness-checked."
+    },
+    {
+      "id": "CRS-T-012",
+      "hard_gate": true,
+      "description": "Any later portfolio projection requires separate audience, claim, credit, and editorial review."
+    },
+    {
+      "id": "CRS-T-013",
+      "hard_gate": true,
+      "description": "The active A5568A and S8319 records retain complete official sponsor memoranda, current committee status, prime sponsors, and verified co-sponsors."
+    },
+    {
+      "id": "CRS-T-014",
+      "hard_gate": true,
+      "description": "Official written statements, sponsor memoranda, event transcripts, Council testimony, and corroborating interviews remain distinct source types."
+    },
+    {
+      "id": "CRS-T-015",
+      "hard_gate": true,
+      "description": "Every included public-event speech is a complete timestamp-bound turn from a hash-bound transcript, with pre-event and unrelated room audio excluded through an explicit coverage ledger."
+    },
+    {
+      "id": "CRS-T-016",
+      "hard_gate": true,
+      "description": "Shahana Hanif's late-2025 statement and Brad Lander's statement are retained with the public offices they held at that event."
+    },
+    {
+      "id": "CRS-T-017",
+      "hard_gate": true,
+      "description": "Eon Huntley's March 2026 statement is attributed to him as an Assembly candidate, while his later primary victory is recorded only as later context."
+    },
+    {
+      "id": "CRS-T-018",
+      "hard_gate": true,
+      "description": "A chamber-speech non-recovery remains visible while both state bills are in committee; no floor or introduction speech is inferred from a sponsor memorandum or press release."
+    }
+  ]
+}

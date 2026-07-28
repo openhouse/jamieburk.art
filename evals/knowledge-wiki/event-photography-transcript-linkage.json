@@ -1,0 +1,48 @@
+{
+  "id": "event-photography-transcript-linkage",
+  "version": 1,
+  "threshold": 1,
+  "principle": "Public-event transcripts and Jamie's simultaneous documentary photography should become mutually retrievable without turning private metadata, face labels, temporal proximity, or prior selection depth into identity proof or publication permission.",
+  "criteria": [
+    {
+      "id": "EPT-001",
+      "hard_gate": true,
+      "description": "Every event-photo return begins from a named, dated, hash-bound public-event transcript and a bounded speaking interval."
+    },
+    {
+      "id": "EPT-002",
+      "hard_gate": true,
+      "description": "Capture time, import time, timezone, and scan-date uncertainty remain distinct."
+    },
+    {
+      "id": "EPT-003",
+      "hard_gate": true,
+      "description": "Apple Photos People labels are used only as private retrieval signals and never as public identity proof."
+    },
+    {
+      "id": "EPT-004",
+      "hard_gate": true,
+      "description": "Nested _keep depth is recorded as prior curatorial process evidence, while _aside and earlier-level alternatives remain recoverable."
+    },
+    {
+      "id": "EPT-005",
+      "hard_gate": true,
+      "description": "A human inspects the pixels and confirms event context before any public-safe photo relationship is materialized."
+    },
+    {
+      "id": "EPT-006",
+      "hard_gate": true,
+      "description": "Private Photos identifiers, faces, coordinates, and filesystem paths remain outside public Git."
+    },
+    {
+      "id": "EPT-007",
+      "hard_gate": true,
+      "description": "Rights, consent, safety, collective credit, crop, caption, and exact destination remain separate human publication gates."
+    },
+    {
+      "id": "EPT-008",
+      "hard_gate": true,
+      "description": "The method preserves both the earlier selection decision and the present transcript-situated rereading instead of silently replacing either."
+    }
+  ]
+}

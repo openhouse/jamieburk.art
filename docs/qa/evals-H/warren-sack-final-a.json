@@ -1,38 +1,37 @@
 {
-  "evaluator": "Fictionalized Warren Sack lens",
-  "reviewerId": "warren-sack-current-a",
+  "evaluator": "Independent holdout A - fictionalized Warren Sack evaluative lens, not endorsement",
+  "reviewerId": "professor-lens-holdout-A-Peirce",
   "phase": "holdout",
   "lensId": "PR-016",
   "lens": "PR-016",
   "judge": "A",
-  "date": "2026-07-26",
-  "candidateSha256": "46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341",
+  "date": "2026-07-28",
+  "candidateSha256": "3fa95fe76a1327db9385abdd166c2c554a07a3a3f29a352ba357bd0aa8313489",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Receipt verification read all 162 unique candidateFiles, including 17 binary images; no files were missing and recomputation produced the exact professorLens SHA-256 46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341.",
-    "The homepage exposes About in one click; /about visibly states the plain recursive method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "Fair Rent NYC is explicitly current: lived experience, meetings, sources, questions, and public actors become city/state lanes, provenance, and decision memory; campaign sites, town halls, hearings, and action pathways support collective use; minutes, source maps, question logs, and trackers carry learning forward.",
-    "Source-Backed Team Memory/Knowledge Wiki is explicitly current: source and contributor relationships become typed Known/Open/Protected records; Jamie and AI-assisted editors use the Wiki, compiler checks, selective pages, and independent receipts; corrections, failures, wanted records, and holds create an inspectable handoff.",
-    "Living Photographic Knowledge is explicitly a current governed pilot: archive, creator, represented-person, editor, and reader relations become source/derivative/set/occurrence/permission/recollection models; exact-use proposals and human gates are the interface; creator correction, crop review, rollback, and returned recollection become durable Wiki handoffs.",
-    "Candidate-bound browser QA renders all six traces at desktop and mobile, finds exactly three Current practice rows, a visible homepage About link, no overflow, broken or unlabeled images, console errors, or failed requests; the 56-row responsive matrix reports zero axe violations and zero route/render failures.",
-    "Historical coursework remains bounded lineage: Open House uses a public source with collective governance, while protected UCSC/Max-Jitter material stays held and explicitly disclaims invention, peer review, production deployment, sole authorship, and current tool proficiency."
+    "Independent SHA-256 recomputation over 343 unique, sorted, existing candidate files exactly reproduced the expected digest.",
+    "Within one homepage click, About states the recursion: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "FairRentNYC, Source-Backed Team Memory and the Knowledge Wiki, and living photographic knowledge each expose a complete relationship-to-handoff loop.",
+    "The repaired campaign-photo corpus keeps all 181 records permission-needed, consent review-needed, and display hold, with no exact local capture times or private identifiers projected.",
+    "The About surface contains six relationship, model, interface-and-use, and learning-and-continuity rows, including three current traces.",
+    "Structural equivalence, disciplinary invention, peer-reviewed research, production deployment, sole authorship, client adoption, and current historical-tool proficiency are explicitly rejected.",
+    "Candidate-bound desktop, mobile, and seven-width responsive evidence reports successful rendering, no axe violations, no overflow, no broken or unlabeled images, and no failed requests."
   ],
   "limitations": [
-    "Living Photographic Knowledge remains a pull-request pilot; rights, consent, exact credit/crop/use, production deployment, and indexing remain separate human approval gates.",
-    "Source-Backed Team Memory demonstrates current use on Jamie's portfolio and professional archive, not external client adoption, production SaaS, or autonomous AI authority.",
-    "The localhost server was unavailable for a fresh live inspection; rendered judgment therefore uses the candidate-bound browser reports and screenshots included in the verified digest."
+    "This is a fictionalized evaluative lens, not Warren Sack's participation, opinion, recommendation, or endorsement.",
+    "Jamie approval, rights-holder authority, consent and dignity review, exact crop and credit, production, indexing, and hiring decisions remain human gates."
   ],
-  "recommendation": "Score 4 for PR-016: the three explicitly current practices each reconstruct the complete social-systems sequence and the About surface connects them plainly within one click. Preserve the stated collective-credit, protected-source, rights, consent, deployment, and indexing boundaries, and rebind all evidence after any candidate change.",
+  "recommendation": "Pass PR-016 at 4 for this exact candidate while retaining the current traces, anti-overclaim language, and human gates.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa14e-6673-7011-9ca7-b41c27d259ef",
-    "agentNickname": "A",
+    "processSessionId": "019fa902-9b7d-7860-9940-73f4ac833f79",
+    "agentNickname": "Peirce",
     "model": "gpt-5.6-sol",
     "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "The completed native subagent result is recorded verbatim in the judge, date, candidateSha256, score, pass, evidence, limitations, and recommendation fields; repository identity and provenance fields were added by the parent orchestrator."
+    "operatorAttestation": "Completed native subagent judgment recorded by the parent orchestrator."
   }
 }

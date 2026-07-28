@@ -1,37 +1,38 @@
 {
-  "evaluator": "Fictionalized Margaret Morse lens",
-  "reviewerId": "margaret-morse-current-c",
+  "evaluator": "Independent professor-lens holdout judge C",
+  "reviewerId": "professor-lens-holdout-C-Avicenna",
   "phase": "holdout",
   "lensId": "PR-015",
   "lens": "PR-015",
   "judge": "C",
-  "date": "2026-07-26",
-  "candidateSha256": "46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341",
+  "date": "2026-07-28",
+  "candidateSha256": "3fa95fe76a1327db9385abdd166c2c554a07a3a3f29a352ba357bd0aa8313489",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The 162-file professorLens digest reproduced exactly. From the homepage, About is one click away; its visible 'Systems people can inhabit' surface explicitly connects artistic, civic, technical, and social practice while retaining Technical Project Manager and implementation positioning.",
-    "WOWList translates organizers' own language, places, and scenes into followable keyword communities, distributed publishing, and reusable technical infrastructure, showing participation shaping the system rather than merely consuming it.",
-    "Sunday Dinner and 196 connect hospitality, invitation, onboarding, access handoffs, facilitation, and repeatable hosting rhythms; participant authority is operationalized through protected guest histories, correspondence, and unapproved images remaining absent.",
-    "NYC Artist Coalition and FairRentNYC connect cultural-space experience, public meetings, material production, campaign interfaces, source maps, running minutes, question logs, and action trackers; the site repeatedly credits collaborators and collective campaign outcomes rather than assigning sole causality.",
-    "Hiring legibility remains strong: the homepage first viewport names Technical Project Manager, Product Operations, and Implementation; the Start Here path prioritizes role-fit proof; About ends with resume and contact actions. Candidate-bound desktop/mobile evidence and the 56-row responsive matrix show successful routes, no overflow, clipping, broken post-scroll images, unlabeled images, failed requests, or axe violations.",
-    "The protected-source audit uses the public Open House article only for lineage, withholds UCSC educational records and private correspondence, projects no faculty testimonial, and documents intentional protected absence for intimate gathering photographs."
+    "Independent SHA-256 recomputation over the evaluator's 343 sorted paths produced exactly the expected digest before and after review.",
+    "A stranger can retrieve the through-line in one click from homepage navigation. About leads with Technical Project Manager and Implementation Lead, then names Systems people can inhabit.",
+    "Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, Source-Backed Team Memory, and living photographic knowledge keep artistic, civic, technical, social, participatory, hospitable, attentive, documentary, caring, and inhabitable dimensions connected.",
+    "Project continuities are specific and recoverable through community vocabulary, hospitality, participation, public action, campaign systems, source maps, minutes, handoff, exact-use review, correction, and rollback.",
+    "Collective credit remains intact across collectively governed, co-built, participant-authoritative, and coalition work.",
+    "The UCSC source note defines both lenses as evaluative controls, not endorsements, and withholds private praise and raw educational records.",
+    "All 181 campaign-photo records remain rights_state permission-needed, consent review-needed, and public display hold, with no exact local capture-time values.",
+    "Candidate-bound browser evidence covers desktop, mobile, and a 98-row matrix with no overflow, broken media, unlabeled images, console errors, request failures, or axe violations."
   ],
   "limitations": [
-    "This is a fictionalized evaluative lens, not Margaret Morse's participation or endorsement.",
-    "The score addresses only frozen rubric PR-015, not general production readiness, deployment, indexing, or publication approval.",
-    "Several active working-branch photographs still require exact production rights, credit, crop, represented-person dignity, and consent review; Jamie's approval of the exact production candidate remains a human gate."
+    "This is a fictionalized evaluative lens, not Margaret Morse's participation, view, recommendation, or endorsement.",
+    "Creator rights, represented-person dignity, exact credit and crop, Jamie approval, production, indexing, and hiring decisions remain human gates."
   ],
-  "recommendation": "Pass PR-015 at 4 for this exact candidate. Preserve the concise inhabited-systems through line and the three evidenced continuities while keeping collective credit, protected-source exclusion, exact-use rights and consent, deployment, and indexing decisions explicitly human-gated.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate. Preserve the one-click through-line, collective credit, protected-source exclusion, and permission-needed photo holds.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa14d-3e95-7200-9675-fcb8fcc17d4c",
-    "agentNickname": "current-c",
-    "model": "GPT-5",
+    "processSessionId": "019fa902-fe04-71e2-97cb-aaaee4063786",
+    "agentNickname": "Avicenna",
+    "model": "gpt-5.6-sol",
     "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "The completed native subagent result is recorded verbatim in the judge, date, candidateSha256, score, pass, evidence, limitations, and recommendation fields; repository identity and provenance fields were added by the parent orchestrator."
+    "operatorAttestation": "Completed native subagent judgment recorded by the parent orchestrator."
   }
 }

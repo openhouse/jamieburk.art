@@ -1,36 +1,37 @@
 {
-  "evaluator": "Fictionalized Margaret Morse lens",
-  "reviewerId": "margaret-morse-current-a",
+  "evaluator": "Independent holdout A - fictionalized Margaret Morse evaluative lens, not endorsement",
+  "reviewerId": "professor-lens-holdout-A-Peirce",
   "phase": "holdout",
   "lensId": "PR-015",
   "lens": "PR-015",
   "judge": "A",
-  "date": "2026-07-26",
-  "candidateSha256": "46c46b4c81ca73d2e8dbeb5637057da8ec543ebc69b428341ece4fcc18d7c341",
+  "date": "2026-07-28",
+  "candidateSha256": "3fa95fe76a1327db9385abdd166c2c554a07a3a3f29a352ba357bd0aa8313489",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The two-click surface is clear: the homepage stays hiring-oriented, and `/about` opens a visible threshold under “Systems people can inhabit” that links Open House to current work without turning the portfolio into an artist biography.",
-    "Candidate-bound browser QA confirms the rendered `/about` page carries six relationship/model/interface-and-use/learning-and-continuity rows and three current-practice rows, so the continuity is legible in the public surface rather than only in repository notes.",
-    "At least three public-safe continuities are convincingly connected: FairRentNYC frames documentation as infrastructure for collective civic action; WOWList turns community vocabulary and organizer distribution into a usable platform; Sunday Dinner / 196 treats hosting, onboarding, facilitation, trust, and continuity as operating systems.",
-    "The source-backed team memory and living photographic knowledge sections extend that line into current practice, showing attention, correction, care, protected boundaries, and handoff as active technical methods rather than retrospective branding.",
-    "Hiring usefulness remains intact: the homepage hero, start-here links, proof strip, and technical-operations page keep Jamie legible as Technical Project Manager / Product Operations / Implementation while the lineage explains what is distinctive about those systems.",
-    "Collective credit and protected-source limits hold throughout: coalition outcomes remain collective, private attendance and correspondence stay out of public pages, and the professor-lens source note explicitly excludes protected educational-record and testimonial projection."
+    "Independent SHA-256 recomputation over 343 unique, sorted, existing candidate files exactly reproduced the expected digest.",
+    "The About page is directly reachable from homepage navigation and visibly joins artistic, civic, technical, and social practice under Systems people can inhabit.",
+    "Hiring legibility remains primary while Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, Source-Backed Team Memory, and living photographic knowledge connect experimentation, hospitality, participation, attention, documentation, care, place, and continuation.",
+    "The portfolio explains how people recognize relationships, influence and inhabit interfaces, preserve memory, and continue work through handoffs.",
+    "Collective credit and privacy boundaries remain explicit; private correspondence, participant histories, unapproved images, and protected educational records remain withheld.",
+    "All 181 campaign-photo records remain permission-needed, consent review-needed, and public-display hold; the public index excludes private identifiers and private capture timestamps.",
+    "Candidate-bound browser evidence confirms six complete About-page continuity rows, three current-practice rows, successful desktop and mobile rendering, and a clean 98-row responsive and axe matrix."
   ],
   "limitations": [
-    "The strongest articulation of the lineage is concentrated on `/about`; readers who never take that click get a weaker explicit statement of the artistic-social through-line.",
-    "Some artistic continuity is carried more by comparative prose and governed method framing than by equally inspectable public artifacts on every linked project page."
+    "This is a fictionalized evaluative lens, not Margaret Morse's participation, opinion, recommendation, or endorsement.",
+    "Creator permission, represented-person dignity and consent, exact credit and crop, Jamie approval, production, indexing, and hiring decisions remain human gates."
   ],
-  "recommendation": "Keep this continuity surface intact; if revised, preserve the `/about` lineage block and the collective-credit, privacy, and hiring-legibility balance that currently makes PR-015 fully readable.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate while preserving the bounded through-line, collective credit, protected-source exclusions, and human gates.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa14e-37de-7900-aa50-dade7f713582",
-    "agentNickname": "independent-professor-lens-holdout",
-    "model": "gpt-5.4",
+    "processSessionId": "019fa902-9b7d-7860-9940-73f4ac833f79",
+    "agentNickname": "Peirce",
+    "model": "gpt-5.6-sol",
     "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
     "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "The completed native subagent result is recorded verbatim in the judge, date, candidateSha256, score, pass, evidence, limitations, and recommendation fields; repository identity and provenance fields were added by the parent orchestrator."
+    "operatorAttestation": "Completed native subagent judgment recorded by the parent orchestrator."
   }
 }

@@ -1,0 +1,68 @@
+---
+id: asset.photo.campaign-site.90d90b5e7faae0cd
+title: "brad lander — campaign-site image 90d90b5e7faae0cd"
+kind: asset
+status: governed-open
+visibility: public-safe
+sensitivity: moderate
+last_reviewed: 2026-07-28
+review_by: 2026-10-28
+canonical_path: docs/knowledge-bank/assets/photographs/campaign-sites/90d90b5e7faae0cd.md
+summary: "Metadata-only record for a portrait used on one or more public NYC Artist Coalition project or campaign pages."
+media_type: photograph
+media_class: portrait
+source_url: "https://cdn.civil.services/city-council/ny/new-york/headshots/512x512/brad-lander.jpg"
+source_occurrence_count: 1
+source_contexts:
+  - page_url: "https://talksnotraids.com/"
+    page_title: "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC"
+    heading: "New York City Council Members Signed On to the #TalksNotRaids Bill"
+    alt: ""
+apple_photos_match:
+  state: not-matched-by-filename
+  candidate_count: 0
+  network_upload: false
+rights_state: permission-needed
+consent_state: review-needed
+public_display_status: hold
+relations:
+  - type: uses_source
+    target: source.nycac.campaign-site-media-census.2026-07
+    href: ../../../sources/nycac-campaign-site-media-census-2026-07.md
+    context: Public campaign-site occurrence census and local-only Apple Photos filename matching.
+projection:
+  status: hold
+  surfaces: []
+---
+
+# brad lander — campaign-site image 90d90b5e7faae0cd
+
+> Generated from the governed campaign-site media census. Do not edit this
+> record by hand; update the source data and regenerate it.
+
+## Public occurrence
+
+The image appeared on 1 recovered public campaign-page
+occurrence(s). The page context can establish how the campaign used the image;
+it does not establish creator, every person shown, event identity, or Jamie's
+individual authorship.
+
+| Page | Nearby heading | Recovered alt text |
+| --- | --- | --- |
+| [Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC](https://talksnotraids.com/) | New York City Council Members Signed On to the #TalksNotRaids Bill | No recovered alt text |
+
+## Apple Photos return
+
+The local-only comparison reported **not-matched-by-filename** with
+**0** candidate asset(s). No pixels, private
+identifiers, People associations, coordinates, or archive paths entered Git.
+A filename or Flickr-ID match is a retrieval lead, not final identity proof.
+
+## Publication boundary
+
+The archive owner authorized research and portfolio consideration of
+campaign-site imagery. Public hosting or archive custody does not establish
+creator rights. This record remains metadata-only and held because the exact
+derivative, creator permission, credit, represented-person dignity, consent,
+crop, caption, destination, and production approval have not all been bound to
+one public occurrence.

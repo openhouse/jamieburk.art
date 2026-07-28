@@ -1,0 +1,72 @@
+{
+  "id": "prelaunch-cost-aware-evaluation-orchestration",
+  "version": 1,
+  "threshold": 1,
+  "principle": "Spend evaluation effort at the earliest stage where it can change the work, while preserving exact-candidate evidence and the unchanged full release gate.",
+  "hill_climb": {
+    "method": "Run the smallest deterministic suite that owns the changed paths; fix failures before widening. Refresh browser evidence and independent holdouts once the candidate is otherwise stable. Run the complete release suite against the same unchanged candidate.",
+    "stop": "Stop only when deterministic release checks pass, every required exact-candidate receipt is current, human release decisions remain honestly stated, and Jamie has reviewed the production candidate."
+  },
+  "criteria": [
+    {
+      "id": "COST-001",
+      "check": "changed_paths_are_mapped",
+      "hard_gate": true,
+      "description": "Every changed path maps to an owning evaluation group; unknown paths fail closed to all deterministic groups."
+    },
+    {
+      "id": "COST-002",
+      "check": "cheap_checks_precede_external_work",
+      "hard_gate": true,
+      "description": "Deterministic structural and unit checks run before browser capture or independent model calls."
+    },
+    {
+      "id": "COST-003",
+      "check": "skipped_is_not_passed",
+      "hard_gate": true,
+      "description": "A group omitted from an iterative run is reported as not selected, never passed."
+    },
+    {
+      "id": "COST-004",
+      "check": "candidate_evidence_is_bound",
+      "hard_gate": true,
+      "description": "Candidate-affecting changes explicitly require refreshed receipts and independent holdouts."
+    },
+    {
+      "id": "COST-005",
+      "check": "final_gate_is_complete",
+      "hard_gate": true,
+      "description": "The final release command remains npm run check and cannot be replaced by an incremental plan."
+    },
+    {
+      "id": "COST-006",
+      "check": "unknown_paths_fail_closed",
+      "hard_gate": true,
+      "description": "Unknown paths select every deterministic group and every exact-candidate external gate."
+    },
+    {
+      "id": "COST-007",
+      "check": "plan_is_reproducible",
+      "hard_gate": true,
+      "description": "The plan records branch, HEAD, changed paths, path digest, groups, commands, and external gates."
+    },
+    {
+      "id": "COST-008",
+      "check": "human_authority_remains_open",
+      "hard_gate": true,
+      "description": "Automated success never supplies production, indexing, rights, consent, credit, crop, or Jamie approval."
+    },
+    {
+      "id": "COST-009",
+      "check": "cost_is_visible",
+      "hard_gate": true,
+      "description": "Every group has a relative cost and execution class so expensive work is intentional."
+    },
+    {
+      "id": "COST-010",
+      "check": "full_candidate_is_unchanged",
+      "hard_gate": true,
+      "description": "External evidence and the final full suite must target one unchanged candidate."
+    }
+  ]
+}

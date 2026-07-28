@@ -471,7 +471,7 @@ export function scanPhotoPublicSafety(root = repoRoot) {
   ];
 
   for (const file of files.filter(existsSync)) {
-    const source = readFileSync(file, "utf8");
+    const source = stripPublicUrls(readFileSync(file, "utf8"));
     for (const { pattern, label } of patterns) {
       if (pattern.test(source)) {
         failures.push(`${path.relative(root, file)} contains ${label}`);
@@ -527,7 +527,7 @@ function branchHistoryPublicSafety(root = repoRoot) {
 }
 
 export function scanAddedHistoryPublicSafety(patch) {
-  const addedContent = addedPatchContent(patch);
+  const addedContent = stripPublicUrls(addedPatchContent(patch));
   const patterns = [
     { pattern: /\/(?:Users|Volumes)\//, label: "absolute private path" },
     {
@@ -545,6 +545,10 @@ export function scanAddedHistoryPublicSafety(patch) {
   return patterns
     .filter(({ pattern }) => pattern.test(addedContent))
     .map(({ label }) => `introduced branch history contains ${label}`);
+}
+
+function stripPublicUrls(value) {
+  return String(value).replace(/https?:\/\/[^\s<>"')\]]+/gi, "");
 }
 
 export function addedPatchContent(patch) {

@@ -1,0 +1,68 @@
+{
+  "id": "public-testimony-heteroglossia",
+  "version": 1,
+  "threshold": 1,
+  "principle": "A many-voiced public record preserves attribution, duration, qualification, and disagreement without converting coalition testimony into Jamie's sole authorship.",
+  "criteria": [
+    {
+      "id": "HET-001",
+      "hard_gate": true,
+      "description": "The corpus covers each of the seven Council hearings in the recovered Jamie testimony and Commercial Rent Stabilization inventory."
+    },
+    {
+      "id": "HET-002",
+      "hard_gate": true,
+      "description": "Every event is bound to an official Council transcript URL and a source-text digest."
+    },
+    {
+      "id": "HET-003",
+      "hard_gate": true,
+      "description": "Every included contribution records a canonical display name, official speaker label, role, position, issue scope, and full recovered turns."
+    },
+    {
+      "id": "HET-004",
+      "hard_gate": true,
+      "description": "Support, qualified support, aligned opposition to a mechanism, and aligned non-position remain distinct."
+    },
+    {
+      "id": "HET-005",
+      "hard_gate": true,
+      "description": "Unselected transcript labels remain visible in a coverage ledger rather than disappearing."
+    },
+    {
+      "id": "HET-006",
+      "hard_gate": true,
+      "description": "The derived corpus removes page furniture but does not silently correct official transcript wording or apparent errors."
+    },
+    {
+      "id": "HET-007",
+      "hard_gate": true,
+      "description": "Direct email addresses and telephone numbers are absent from the public corpus."
+    },
+    {
+      "id": "HET-008",
+      "hard_gate": true,
+      "description": "The official Council transcript remains identified as the canonical complete event record."
+    },
+    {
+      "id": "HET-009",
+      "hard_gate": true,
+      "description": "Inclusion never implies sole authorship, universal agreement, or independent verification of testimony claims."
+    },
+    {
+      "id": "HET-010",
+      "hard_gate": true,
+      "description": "Generated event records are reproducible from the governed corpus and current with it."
+    },
+    {
+      "id": "HET-011",
+      "hard_gate": true,
+      "description": "Speaker identity and position classifications remain reviewable editorial judgments, not automated publication authority."
+    },
+    {
+      "id": "HET-012",
+      "hard_gate": true,
+      "description": "Supportive public officials are retained with their public role and exact issue scope; public office is never treated as blanket endorsement."
+    }
+  ]
+}

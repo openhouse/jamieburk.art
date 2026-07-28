@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-26
+last_reviewed: 2026-07-28
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: >
@@ -37,6 +37,18 @@ relations:
     target: evaluation.curatorial.layout-c.home-east-river.v1
     href: ../evaluations/curatorial/layout-c-home-east-river-v1.md
     context: First artist-led blind and contextual curatorial proposal.
+  - type: uses_source
+    target: source.nycac.campaign-site-media-census.2026-07
+    href: ../sources/nycac-campaign-site-media-census-2026-07.md
+    context: Full-population public-web census of media on five coalition campaign sites plus one historical Fair Rent capture.
+  - type: related_to
+    target: research.campaign-site-photography-source-return.2026-07-28
+    href: ../research-runs/campaign-site-photography-source-return-2026-07-28.md
+    context: Situated rereading and local-only Apple Photos return for the campaign-site image cohort.
+  - type: related_to
+    target: method.transcript-linked-event-photography
+    href: ../methods/transcript-linked-event-photography.md
+    context: Return from public-event speech timestamps to simultaneous documentary photography and prior photo-select trees.
 ---
 
 # Living photographic knowledge
@@ -60,6 +72,29 @@ become consequential to research, curation, correction, or public use.
 
 - [Intimate gathering photographs](../decisions/photography/intimate-gatherings-protected-absence.md)
 - [Talks Not Raids child-specific review hold](../decisions/photography/talks-not-raids-child-review-hold.md)
+
+## Campaign-site field
+
+- [Campaign-site media census](../sources/nycac-campaign-site-media-census-2026-07.md)
+- [Campaign-site source return](../research-runs/campaign-site-photography-source-return-2026-07-28.md)
+- [Generated metadata-only photo records](../assets/photographs/campaign-sites/)
+
+The census currently materializes 181 photograph, probable-photograph, and
+portrait records from 82 public campaign pages. All 181 remain on display hold.
+The field preserves what the campaign pages can say about context without
+turning a filename match into identity, authorship, consent, or editorial
+clearance.
+
+## Event transcripts and photographs
+
+- [Transcript-linked event photography](../methods/transcript-linked-event-photography.md)
+
+Jamie often made documentary photographs while recording public-event audio.
+The method combines event and speaker timestamps, private Apple Photos capture
+metadata and People associations, and the recursive `_keep` signature of prior
+photo-select work. These are retrieval and curatorial signals only. Pixel
+inspection and separate rights, consent, credit, crop, caption, and destination
+review still govern any public use.
 
 Passing the canary does not authorize production or indexing and does not
 materialize the rest of the private archive.

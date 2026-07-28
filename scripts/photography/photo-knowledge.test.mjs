@@ -45,6 +45,10 @@ test("branch-history safety scans additions but not removed legacy locators", ()
   assert.deepEqual(scanAddedHistoryPublicSafety(`${patch}\n+${library}`), [
     "introduced branch history contains private library locator"
   ]);
+  assert.deepEqual(
+    scanAddedHistoryPublicSafety(`${patch}\n+https://example.test/${uuid}`),
+    []
+  );
 });
 
 test("the complete East River canary passes deterministic validation", () => {
@@ -193,6 +197,20 @@ test("private source paths and identifiers are rejected from public photo files"
   const failures = scanPhotoPublicSafety(root);
   assert.ok(failures.some((failure) => failure.includes("absolute private path")));
   assert.ok(failures.some((failure) => failure.includes("source UUID")));
+});
+
+test("public source URLs may contain service identifiers without becoming private locators", () => {
+  const root = mkdtempSync(path.join(os.tmpdir(), "photo-knowledge-public-url-"));
+  const docs = path.join(root, "docs/photography");
+  mkdirSync(docs, { recursive: true });
+  const publicUuid = ["ABCDEF12", "1234", "5678", "9ABC", "1234567890AB"].join(
+    "-"
+  );
+  writeFileSync(
+    path.join(docs, "citation.md"),
+    `Source: https://example.test/public/${publicUuid}/image.jpeg\n`
+  );
+  assert.deepEqual(scanPhotoPublicSafety(root), []);
 });
 
 test("private locators are rejected from committed photo QA evidence", () => {

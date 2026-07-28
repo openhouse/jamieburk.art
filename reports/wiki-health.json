@@ -2,63 +2,63 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-27T00:00:42-04:00",
   "sourceCommit": "d8bfaf102dfcadf6538a226edb40bf53f7cc4e4e",
-  "sourceFingerprint": "aec023feb22f1f71158eb2f6cb9fb7f8ce07aeef7dbb89d792fca4a89736d092",
+  "sourceFingerprint": "9d8ab593fc07e103b5b3d661a925890defd4fa5a119704dcbebc40820cc25e35",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 131,
+    "records": 346,
     "byKind": {
       "project": 14,
       "person": 1,
       "organization": 1,
       "event": 1,
       "place": 1,
-      "source": 34,
-      "asset": 2,
+      "source": 60,
+      "asset": 183,
       "claim": 2,
-      "research-run": 4,
+      "research-run": 8,
       "research-inquiry": 5,
       "decision": 8,
       "correction": 1,
-      "method": 12,
+      "method": 13,
       "timeline": 1,
       "application": 1,
       "evaluation": 5,
-      "index": 22,
+      "index": 25,
       "capability": 5,
       "opportunity": 6,
       "projection": 5
     },
-    "typedRelations": 505,
+    "typedRelations": 808,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 1,
-      "documents": 18,
+      "documents": 44,
       "evidence:context": 1,
       "evidence:direct-support": 6,
       "evidence:private-support": 1,
       "has_asset": 5,
-      "informed_by": 46,
+      "informed_by": 47,
       "part_of": 10,
       "projected_to": 8,
-      "related_to": 299,
+      "related_to": 374,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
       "uses_method": 26,
-      "uses_source": 66
+      "uses_source": 267
     },
-    "proseLinks": 317,
-    "rootReachable": 126,
+    "proseLinks": 358,
+    "rootReachable": 157,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 7,
     "stalePageCount": 0,
     "correctionCount": 1,
-    "rightsReviewCount": 1,
+    "rightsReviewCount": 182,
     "opportunityCount": 6,
     "liveOpportunityCount": 5,
     "criticalRequirementCount": 22,
@@ -164,6 +164,1273 @@
     {
       "id": "asset.photo.digital-district.001",
       "path": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.00d1b5da021280f5",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/00d1b5da021280f5.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.0438f91e150de526",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/0438f91e150de526.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.047d7df8c878d1a7",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/047d7df8c878d1a7.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.05e35714fc57bca6",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/05e35714fc57bca6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.060e253c97a1d19f",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/060e253c97a1d19f.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.0657da463c28f43f",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/0657da463c28f43f.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.06efe4713f6a2d4e",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/06efe4713f6a2d4e.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.074138603e40b484",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/074138603e40b484.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.086539ef7fbf20c2",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/086539ef7fbf20c2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.094cf99be4f4f0c1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/094cf99be4f4f0c1.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.09844187b569849d",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/09844187b569849d.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.0c2aa4947a27d12a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/0c2aa4947a27d12a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.0fb8198e70dc3766",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/0fb8198e70dc3766.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.10749ae3e54779c4",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/10749ae3e54779c4.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.11ab296454863ac4",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/11ab296454863ac4.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.1278528f431198a0",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/1278528f431198a0.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.15be87fe25e76b84",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/15be87fe25e76b84.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.1677b705393bd0cb",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/1677b705393bd0cb.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.16d5e32a1520ec53",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/16d5e32a1520ec53.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.175e6db82d44870c",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/175e6db82d44870c.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.17f8fa4c126750bc",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/17f8fa4c126750bc.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.1c689d5010f6e5cf",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/1c689d5010f6e5cf.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.1de65b2057e7898a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/1de65b2057e7898a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.1e82c82a375fffe3",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/1e82c82a375fffe3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.1f5d163f90f6f1f6",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/1f5d163f90f6f1f6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.1f67d9b2d7fea557",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/1f67d9b2d7fea557.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.25295fc3e71fe9c1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/25295fc3e71fe9c1.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.29170ec926a447d8",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/29170ec926a447d8.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.299283eb1b566ae3",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/299283eb1b566ae3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.2b1c8231654e11da",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/2b1c8231654e11da.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.2c17d910ce39be31",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/2c17d910ce39be31.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.2d0f648fd859b963",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/2d0f648fd859b963.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.2f80bf4788451a76",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/2f80bf4788451a76.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.2fb31b0233c03228",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/2fb31b0233c03228.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.2fbea85b9c123cb9",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/2fbea85b9c123cb9.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.30114ccc46713baf",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/30114ccc46713baf.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.31c1b1da5cca4da8",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/31c1b1da5cca4da8.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.31f5f55576bfa1e6",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/31f5f55576bfa1e6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.32108c595b2cd55e",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/32108c595b2cd55e.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.341ad4dee087c19e",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/341ad4dee087c19e.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.3516edb726029011",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/3516edb726029011.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.36351aed62e0526c",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/36351aed62e0526c.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.36f2270b7cc373bd",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/36f2270b7cc373bd.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.39e2d6187e670b3a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/39e2d6187e670b3a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.3b8348b6ffdb87a1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/3b8348b6ffdb87a1.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.3e3ea59b688258f1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/3e3ea59b688258f1.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4146486fe4c26ac2",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4146486fe4c26ac2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.423ac90c3e190177",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/423ac90c3e190177.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.44e01170ef47a818",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/44e01170ef47a818.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4539283a9ddf5420",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4539283a9ddf5420.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.479bbc701e33a3ce",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/479bbc701e33a3ce.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.47d1f7eb63e9339d",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/47d1f7eb63e9339d.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.48ff1bac83a91a77",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/48ff1bac83a91a77.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.491f1af7ff3d6cd2",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/491f1af7ff3d6cd2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4a3d915acbfab4ef",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4a3d915acbfab4ef.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4a59e146195b69e8",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4a59e146195b69e8.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4b5c204d6f3458ba",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4b5c204d6f3458ba.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4ba321991ed73467",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4ba321991ed73467.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4c297a32c4ed9812",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4c297a32c4ed9812.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4ddc68be8c24c0a1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4ddc68be8c24c0a1.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4e0598bd44034a1c",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4e0598bd44034a1c.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4e487db524f39886",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4e487db524f39886.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.4f8e79efc60ceba0",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/4f8e79efc60ceba0.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.5105c88d836c03dd",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/5105c88d836c03dd.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.51880dc019be966d",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/51880dc019be966d.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.53065d3b64124d12",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/53065d3b64124d12.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.5463d1f12e028467",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/5463d1f12e028467.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.55f6c5302a7992f3",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/55f6c5302a7992f3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.58340c5d1a191aee",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/58340c5d1a191aee.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.588895967e793a39",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/588895967e793a39.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.5a27419bc52494be",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/5a27419bc52494be.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.5a80147e99054772",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/5a80147e99054772.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.5a943f237ef7ba9a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/5a943f237ef7ba9a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.5bf7085d73058b4a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/5bf7085d73058b4a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.5e7e5472c5e4d5c9",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/5e7e5472c5e4d5c9.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.6ccf5989360e7340",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/6ccf5989360e7340.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.6d36948c66ac7740",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/6d36948c66ac7740.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.6d8a912d0704f350",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/6d8a912d0704f350.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.6f6a02e24c08ad28",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/6f6a02e24c08ad28.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.71d9b797d372191b",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/71d9b797d372191b.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.728fcf653fee284a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/728fcf653fee284a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.72c276bed1804cc1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/72c276bed1804cc1.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.7333ff672b9df981",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/7333ff672b9df981.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.7337895067544d56",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/7337895067544d56.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.74413a0a062cf2eb",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/74413a0a062cf2eb.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.74b5ca713d851b79",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/74b5ca713d851b79.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.78a81e3f68d5c067",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/78a81e3f68d5c067.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.7904e3f8ebe50009",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/7904e3f8ebe50009.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.7c2fd6dee3a58233",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/7c2fd6dee3a58233.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.7d1de5fea26d9914",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/7d1de5fea26d9914.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.80e35674b81ad69c",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/80e35674b81ad69c.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.81461d5a435ed21d",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/81461d5a435ed21d.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.887281ee61b8296a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/887281ee61b8296a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.8931db7265af04b2",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/8931db7265af04b2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.89f5b6a807bf5dab",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/89f5b6a807bf5dab.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.8adbc5d9bc5e0554",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/8adbc5d9bc5e0554.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.8de2b0f83765e644",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/8de2b0f83765e644.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.8dfca485f7e6ea23",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/8dfca485f7e6ea23.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.9083526b33d02b71",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/9083526b33d02b71.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.90d90b5e7faae0cd",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/90d90b5e7faae0cd.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.9259cc9d76284a8b",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/9259cc9d76284a8b.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.945abc46508236ba",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/945abc46508236ba.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.964d46580dd34c08",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/964d46580dd34c08.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.9650caf765870344",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/9650caf765870344.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.96f4512e4be434b5",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/96f4512e4be434b5.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.98ad7088d7f636aa",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/98ad7088d7f636aa.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.99745b6152836586",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/99745b6152836586.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.9a54cb0049e6919c",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/9a54cb0049e6919c.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.9f7b8d9b1e0cb5fa",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/9f7b8d9b1e0cb5fa.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.a061c3f4786bef85",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/a061c3f4786bef85.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.a110c3e9e6b05cb2",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/a110c3e9e6b05cb2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.a1e12bd14db5adf2",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/a1e12bd14db5adf2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.a289039209f2079c",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/a289039209f2079c.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.a42fb97d1d4de66d",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/a42fb97d1d4de66d.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.a567ea9a6ae2dbcb",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/a567ea9a6ae2dbcb.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.a97e803aa84c7c31",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/a97e803aa84c7c31.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.aa3938ed2a1bf8df",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/aa3938ed2a1bf8df.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.aed6ad9e9af72ce1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/aed6ad9e9af72ce1.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.afcd6ab0c079f535",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/afcd6ab0c079f535.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.b09fac2bd3eea0fb",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/b09fac2bd3eea0fb.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.b1c3ecf3396b1b0a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/b1c3ecf3396b1b0a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.b654c54fb3b7573d",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/b654c54fb3b7573d.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.b7b1a1e229c8d843",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/b7b1a1e229c8d843.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.b82a081f1975e5ad",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/b82a081f1975e5ad.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.b8a595c7fa22ac32",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/b8a595c7fa22ac32.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.bac4cbb42ded885e",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/bac4cbb42ded885e.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.bba5497fa0f67304",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/bba5497fa0f67304.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.bcd346d0375403ef",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/bcd346d0375403ef.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.be38d16c6f091e86",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/be38d16c6f091e86.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.be4783e5f0b0bd5a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/be4783e5f0b0bd5a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.bf018389ea36994b",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/bf018389ea36994b.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.c360b0d119b6c2c1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/c360b0d119b6c2c1.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.c3f099b4ea383fe6",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/c3f099b4ea383fe6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.c446e349dcb02b76",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/c446e349dcb02b76.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.c9116566b7e94cc6",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/c9116566b7e94cc6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.c94a3fc94dca3492",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/c94a3fc94dca3492.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.ca2ebdeac0e045de",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/ca2ebdeac0e045de.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.cd30228c1fca73af",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/cd30228c1fca73af.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.cece4bcfe25cc15f",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/cece4bcfe25cc15f.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.d2d65966284cd0a3",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/d2d65966284cd0a3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.d3646e0c394f355f",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/d3646e0c394f355f.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.d3f5a130e4c9f826",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/d3f5a130e4c9f826.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.d4f329705f05842f",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/d4f329705f05842f.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.d5b4594bf2454e11",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/d5b4594bf2454e11.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.d7f07b4e77a8c6a4",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/d7f07b4e77a8c6a4.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.d900d36393650064",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/d900d36393650064.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.da736990e504824c",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/da736990e504824c.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.da7794c8fa6f9c4d",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/da7794c8fa6f9c4d.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.dbdf360a0de4abc5",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/dbdf360a0de4abc5.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.dcf0e069fd4d73f4",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/dcf0e069fd4d73f4.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.de4bc4ed9d15ca5e",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/de4bc4ed9d15ca5e.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.de6c4537c66163b5",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/de6c4537c66163b5.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.de8e572f52816954",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/de8e572f52816954.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.df5901ef0c6fbf34",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/df5901ef0c6fbf34.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.df6ceae6f9183b57",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/df6ceae6f9183b57.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e08fcb0238c56990",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e08fcb0238c56990.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e29d568713b4dca2",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e29d568713b4dca2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e2dd27f800d488e8",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e2dd27f800d488e8.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e3856bd3901dbdae",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e3856bd3901dbdae.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e4300af7662b3f67",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e4300af7662b3f67.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e5e8ef374ae516f6",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e5e8ef374ae516f6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e85a5205e7d1141a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e85a5205e7d1141a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e8bff8a367d0011a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e8bff8a367d0011a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e8dbcd8f94f19495",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e8dbcd8f94f19495.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.e94d4f3cd7bf6b59",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/e94d4f3cd7bf6b59.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.eac71f1dee980348",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/eac71f1dee980348.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.eada48e82b74a2d1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/eada48e82b74a2d1.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.ed392c9949389a89",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/ed392c9949389a89.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.ed6b4facd093e678",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/ed6b4facd093e678.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.ed9b38992c08e321",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/ed9b38992c08e321.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.ef8e0966423a625b",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/ef8e0966423a625b.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.f10c03be15cf7c5f",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/f10c03be15cf7c5f.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.f3ad2af5204f72b2",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/f3ad2af5204f72b2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.f40e4cf7d8e96681",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/f40e4cf7d8e96681.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.f7cff729487c26b3",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/f7cff729487c26b3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.f8b5da52a2354d9a",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/f8b5da52a2354d9a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.f915b1754ad55ffe",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/f915b1754ad55ffe.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.fa8b262c43f3acc2",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/fa8b262c43f3acc2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.fde2b8929296a239",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/fde2b8929296a239.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.fe97736c71f89b2d",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/fe97736c71f89b2d.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.campaign-site.ff461edd85352df1",
+      "path": "docs/knowledge-bank/assets/photographs/campaign-sites/ff461edd85352df1.md",
       "rightsState": "permission-needed",
       "consentState": "review-needed",
       "publicDisplayStatus": "hold"

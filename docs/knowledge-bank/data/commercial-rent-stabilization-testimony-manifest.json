@@ -1,0 +1,605 @@
+{
+  "version": 2,
+  "scope": "Official New York City Council and New York State legislative records for Commercial Rent Stabilization, including complete recovered Council testimony, active Albany bill records and sponsor memoranda, official pro-bill public statements, and timestamp-bound transcripts of supportive public-event speeches.",
+  "legislation": [
+    {
+      "file": "Int 1796-2019",
+      "prime_sponsor": "Stephen T. Levin",
+      "introduced": "2019-11-14",
+      "status": "Filed (End of Session)",
+      "status_date": "2021-12-31",
+      "sponsor_count": 28,
+      "source_url": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=B2FF2D24-F642-42A1-BEBB-D8D59E079D99&ID=4230081",
+      "summary": "Proposed a commercial-rent registration and regulation system for covered retail, manufacturing, professional, service, and office spaces, administered through a Commercial Rent Guidelines Board."
+    },
+    {
+      "file": "Int 0093-2022",
+      "prime_sponsor": "Diana I. Ayala",
+      "introduced": "2022-03-24",
+      "status": "Filed (End of Session)",
+      "status_date": "2023-12-31",
+      "sponsor_count": 25,
+      "source_url": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=0FA34310-33D2-4090-9A39-2396910C9EB5&ID=5534186",
+      "summary": "Reintroduced the proposed municipal commercial-rent registration and regulation system with a nine-member Commercial Rent Guidelines Board."
+    },
+    {
+      "file": "Res 0496-2026",
+      "prime_sponsor": "Tiffany L. Cabán",
+      "introduced": "2026-06-11",
+      "status": "Committee",
+      "status_date": "2026-07-28",
+      "sponsor_count": 11,
+      "source_url": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=8F4D668A-9741-4F3F-9EC4-2F84CC8592C6&ID=8067758",
+      "summary": "Calls on New York State to pass A.5568A/S.8319, the New York City Small Business Rent Stabilization Act. This is a resolution in the current state-legislation lineage, not a municipal commercial-rent-stabilization bill."
+    }
+  ],
+  "stated_meetings": [
+    {
+      "date": "2019-11-14",
+      "bill": "Int 1796-2019",
+      "prime_sponsor": "Stephen T. Levin",
+      "source_url": "https://legistar.council.nyc.gov/View.ashx?GUID=7B14A16A-CBC9-4709-9E56-B57DA651503B&ID=7950220&M=F",
+      "pdf_sha256": "48681f8037a2fbccc6de1afd2a56b4139f896370eaffe9eac2a7e471ecc37a9a",
+      "raw_text_sha256": "a0f2fc65abb738432bf329d435f51d80d08f613e7b230c73809447a0dc668e82",
+      "raw_filename": "crs-stated-2019-11-14-raw.txt",
+      "speakers": [
+        {
+          "name": "Stephen T. Levin",
+          "labels": ["COUNCIL MEMBER LEVIN"],
+          "role": "prime sponsor",
+          "position": "procedural-record-no-substantive-crs-statement",
+          "scope_note": "All recovered Levin turns are retained. The substantive remarks concern the M.A.R.C.H. transparency bill, not commercial rent stabilization; no substantive Intro 1796 introduction statement was recovered in this transcript."
+        }
+      ]
+    },
+    {
+      "date": "2022-03-24",
+      "bill": "Int 0093-2022",
+      "prime_sponsor": "Diana I. Ayala",
+      "source_url": "https://legistar.council.nyc.gov/View.ashx?GUID=72BAA43F-B658-4164-B2F3-E98ADB16C3E2&ID=10873894&M=F",
+      "pdf_sha256": "96ca01515944de43e6e1b0ea7790d7f457d8256c812a48c0a7fc4bde30bab6d3",
+      "raw_text_sha256": "a22b717c55c3f1d9becfe1cece08e4e402d26079f5cab7cce144dab15342e115",
+      "raw_filename": "crs-stated-2022-03-24-raw.txt",
+      "speakers": [
+        {
+          "name": "Diana I. Ayala",
+          "labels": ["COUNCIL MEMBER AYALA"],
+          "role": "prime sponsor",
+          "position": "procedural-record-no-substantive-crs-statement",
+          "scope_note": "The two recoverable Ayala responses are retained. They are procedural attendance and voting responses; no substantive Intro 93 introduction statement was recovered in this transcript. The official PDF's text extraction places roll-call prompts and responses separately from speaker labels, so each response is identified by its adjacent roll-call prompt rather than silently assigned by the general speaker parser.",
+          "recorded_responses": [
+            {
+              "official_label": "Roll call response immediately following “Ayala?”",
+              "text": "Presente.",
+              "source_locator": "official extracted transcript lines 216-218"
+            },
+            {
+              "official_label": "Vote response immediately following “Ayala?”",
+              "text": "Aye on all.",
+              "source_locator": "official extracted transcript lines 2969-2970"
+            }
+          ]
+        },
+        {
+          "name": "Crystal Hudson",
+          "labels": ["COUNCIL MEMBER HUDSON"],
+          "role": "co-sponsor",
+          "position": "supportive",
+          "scope_note": "The complete stated-meeting turn is retained, including remarks on another bill before the commercial-rent-stabilization statement."
+        },
+        {
+          "name": "Carlina Rivera",
+          "labels": ["COUNCIL MEMBER RIVERA"],
+          "role": "co-sponsor",
+          "position": "supportive",
+          "scope_note": "The complete stated-meeting turn is retained, including remarks on maternal-health resolutions after the commercial-rent-stabilization statement."
+        }
+      ]
+    }
+  ],
+  "oral_public_official_statements": {
+    "date": "2021-09-17",
+    "bill": "Int 1796-2019",
+    "source_url": "https://legistar.council.nyc.gov/View.ashx?GUID=A1B80F54-A723-4AD9-94A4-D2E67FFEEFBE&ID=9899049&M=F",
+    "raw_text_sha256": "de3f9144cee346aac297884cd43e85b5d04113fc25ed61203257b26d025d6468",
+    "raw_filename": "crs-hearing-2021-09-17-raw.txt",
+    "records": [
+      {
+        "name": "Stephen T. Levin",
+        "labels": ["COUNCIL MEMBER LEVIN"],
+        "role": "prime sponsor and Council Member",
+        "position": "direct-bill-support",
+        "scope_note": "All Levin turns are already preserved in the full oral support corpus. The opening is an explicit sponsor statement for Intro 1796; later turns explain, defend, and delimit the bill.",
+        "selection": "all"
+      },
+      {
+        "name": "Eric Dinowitz",
+        "labels": ["COUNCIL MEMBER DINOWITZ"],
+        "role": "Council Member",
+        "position": "supportive-problem-recognition-bill-position-not-stated",
+        "scope_note": "These complete turns praise Levin for addressing harms to small businesses, return to rents as a central issue, and describe a deep need to address the rent crisis. They do not establish an endorsement or vote for Intro 1796.",
+        "turn_numbers": [1, 7, 8]
+      },
+      {
+        "name": "Helen Rosenthal",
+        "labels": ["COUNCIL MEMBER ROSENTHAL"],
+        "role": "Council Member and prime sponsor of Intro 2299",
+        "position": "supportive-related-commercial-tenant-measure",
+        "scope_note": "The complete opening statement supports a separate storefront business bill of rights and commercial-tenant protections. It is contextual support for the policy problem, not evidence of support for Intro 1796.",
+        "turn_numbers": [1]
+      },
+      {
+        "name": "Gale A. Brewer",
+        "labels": ["BOROUGH PRESIDENT BREWER"],
+        "role": "Manhattan Borough President",
+        "position": "supportive-related-commercial-tenant-measure",
+        "scope_note": "The complete testimony supports Intro 2299, recognizes commercial rent as a survival issue, and argues for fair renewal process. It is not classified as support for Intro 1796.",
+        "selection": "all"
+      },
+      {
+        "name": "Mark Gjonaj",
+        "labels": ["CHAIRPERSON GJONAJ"],
+        "role": "Committee chair and Council Member",
+        "position": "supportive-problem-recognition-mechanism-questioned",
+        "scope_note": "The selected complete turns recognize high commercial rents, fair renegotiation, and the importance of the issue; praise Levin's commitment; and close by valuing stakeholder testimony. The opening also records Gjonaj's explicit doubts about broad commercial rent regulation, so this is not bill support.",
+        "turn_numbers": [1, 2, 52]
+      }
+    ],
+    "coverage_notes": [
+      "Council Member Stephen T. Levin is the only public official in this hearing classified here as directly supporting Intro 1796.",
+      "Council Member Kalman Yeger argued against Intro 1796 and is not included in this supportive-statement collection; the official transcript remains the canonical record of his opposition.",
+      "Council Member Mark Treyger's substantive statement concerned Intro 568, not commercial rent, and is not included.",
+      "The Small Business Services commissioner and deputy commissioners testified for the administration but did not endorse Intro 1796; their testimony remains in the official transcript.",
+      "Public-official records are selected by complete transcript turn, not sentence fragments. Scope notes prevent related-measure support or problem recognition from being promoted into bill endorsement."
+    ]
+  },
+  "official_support_documents": [
+    {
+      "file": "Res 0496-2026",
+      "date": "2026-06-11",
+      "title": "New York City Small Business Rent Stabilization Act (A.5568A / S.8319)",
+      "source_url": "https://legistar.council.nyc.gov/View.ashx?GUID=F1514AA3-77AE-4A95-8668-7DF4A4C81AF1&ID=15573675&M=F",
+      "legislation_url": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=8F4D668A-9741-4F3F-9EC4-2F84CC8592C6&ID=8067758",
+      "attachment_sha256": "423e03c7134b69fc523faad0ad5eea986f981ffdb0dcf2ade4b1f83386fbd097",
+      "raw_text_sha256": "363fc6a9dfa643a8c203c3b842ed1ed0a7a5f13c3a04dd0973eb38cc24641c2f",
+      "raw_filename": "res-0496-2026-raw.txt",
+      "attributed_sponsors": [
+        "Tiffany L. Cabán",
+        "Shanel Thomas-Henry",
+        "Alexa Avilés",
+        "Shahana K. Hanif",
+        "Harvey D. Epstein",
+        "Amanda C. Farías",
+        "Kayla Santosuosso",
+        "Crystal Hudson",
+        "Chi A. Ossé",
+        "Farah N. Louis",
+        "Rita C. Joseph"
+      ],
+      "position": "direct-resolution-support",
+      "scope_note": "The full official resolution text is a collectively attributed public-official statement calling for state passage of A.5568A/S.8319. The Council meeting record does not provide a transcript attachment for an additional Cabán floor statement, so no separate speech is inferred."
+    }
+  ],
+  "written_testimony": {
+    "date": "2021-09-17",
+    "bill": "Int 1796-2019",
+    "source_url": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=9845228&GUID=15401C6A-BE04-4ACB-83B0-15CD9C3F3C0A",
+    "pdf_sha256": "286fdd587fd08ca1bbe5039b077f1f752e012cda2bb23177aa8714c6f9f1233e",
+    "raw_text_sha256": "418ed212f3d8e88952ef1a8f394553522bc642a7bbdaecb9c7ed1133fab0c82e",
+    "raw_filename": "crs-hearing-testimony-2021-09-17-raw.txt",
+    "total_pages": 237,
+    "documents": [
+      {"name": "Nelson Eusebio", "organization": "National Supermarket Association", "pages": [31, 32], "position": "supportive"},
+      {"name": "Association for Neighborhood and Housing Development", "organization": "ANHD", "pages": [39, 40], "position": "qualified-support"},
+      {"name": "Alham Usman", "organization": "Brooklyn Legal Services Corporation A", "pages": [51], "position": "supportive"},
+      {"name": "Christina Perry", "organization": "Chain Theatre", "pages": [53], "position": "supportive"},
+      {"name": "Gregory Youdan Jr.", "organization": "Dance/NYC", "pages": [54, 55, 56, 57, 58], "position": "supportive"},
+      {"name": "Tom LaGatta", "organization": "Downtown Independent Democrats", "pages": [59], "position": "qualified-support"},
+      {"name": "Christian González-Rivera", "organization": "Brookdale Center for Healthy Aging, Hunter College", "pages": [66, 67], "position": "supportive"},
+      {"name": "Khari White", "organization": "NAACP Jamaica Branch Economic and Development Committee", "pages": [72, 73, 74, 75, 76], "position": "supportive"},
+      {"name": "Guy Yedwab", "organization": "League of Independent Theater", "pages": [77, 78, 79, 80, 81, 82, 83], "position": "supportive"},
+      {"name": "Lynette C. Wood", "organization": "Jalopy Theatre and School of Music", "pages": [86], "position": "supportive"},
+      {"name": "Yara Flinn", "organization": "NOMIA", "pages": [88], "position": "supportive"},
+      {"name": "Olympia Kazi", "organization": "NYC Artist Coalition", "pages": [89, 90, 91], "position": "qualified-support"},
+      {"name": "Andrea Bowen", "organization": "NYC Network of Worker Cooperatives", "pages": [94, 95, 96, 97], "position": "supportive"},
+      {"name": "Ruth Lopez Martinez", "organization": "Pa'lante Forward Green Cleaning", "pages": [98, 99, 100], "position": "supportive"},
+      {"name": "Paula Z. Segal", "organization": "TakeRoot Justice", "pages": [114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126], "position": "qualified-support"},
+      {"name": "Taylor James", "organization": "The Legal Aid Society", "pages": [127, 128], "position": "supportive"},
+      {"name": "Sarah Timberlake", "organization": "Timberlake Studios", "pages": [129], "position": "supportive"},
+      {"name": "United for Small Business NYC", "organization": "USBNYC", "pages": [130, 131, 132, 133, 134, 135], "position": "qualified-support"},
+      {"name": "Vanna Valdez", "organization": "Bronx Clay", "pages": [136, 137], "position": "supportive"},
+      {"name": "Imran Hossain", "organization": "Volunteers of Legal Service", "pages": [138, 139, 140], "position": "supportive"},
+      {"name": "Kerry McLean", "organization": "WHEDco", "pages": [141, 142], "position": "qualified-support"},
+      {"name": "Yemeni American Merchants Association", "organization": "YAMA", "pages": [146, 147], "position": "supportive"},
+      {"name": "Catherine Murcek", "organization": "Samamkaya Yoga Back Care and Scoliosis Collective", "pages": [148, 149, 150, 151, 152], "position": "supportive"},
+      {"name": "Alex Carpenter", "organization": "East Village resident and small-business participant", "pages": [154, 155, 156, 157, 158], "position": "qualified-support"},
+      {"name": "Bertilda Garcia Gonzalez", "organization": "Chelsea Barbers", "pages": [160], "position": "supportive"},
+      {"name": "Bonnie Slotnick", "organization": "Bonnie Slotnick Cookbooks", "pages": [164], "position": "supportive"},
+      {"name": "Dana Davis", "organization": "Mara Hoffman and New York Fashion Workforce Development Coalition", "pages": [169], "position": "supportive"},
+      {"name": "Dana May Schwister", "organization": "small-business owner", "pages": [170], "position": "supportive"},
+      {"name": "Gabrielle Giattino", "organization": "Bureau", "pages": [171], "position": "supportive"},
+      {"name": "Jennifer Prescott", "organization": "green design GOODS", "pages": [205], "position": "qualified-support"},
+      {"name": "Jenny Dubnau", "organization": "Artist Studio Affordability Project", "pages": [206], "position": "supportive"},
+      {"name": "Laure Travers", "organization": "New York City resident", "pages": [210], "position": "qualified-support"},
+      {"name": "Maegan Hayward", "organization": "East Village Vintage Collective", "pages": [211, 212, 213, 214], "position": "qualified-support"},
+      {"name": "Monique Wong", "organization": "Boss Studio", "pages": [215, 216], "position": "qualified-support"},
+      {"name": "Natasha Amott", "organization": "Whisk", "pages": [217, 218], "position": "supportive"},
+      {"name": "Rachel Nicolazzo and Omar Hakim", "organization": "artist-landlords", "pages": [220, 221], "position": "qualified-support"},
+      {"name": "Peter Sullivan", "organization": "Briarwood resident", "pages": [222, 223, 224], "position": "supportive"},
+      {"name": "Shabad Simon-Alexander", "organization": "fashion designer and small-business owner", "pages": [227, 228], "position": "supportive"},
+      {"name": "Vanessa Thill", "organization": "artist and commercial tenant", "pages": [229, 230], "position": "qualified-support"},
+      {"name": "Laura Wolf-Powers", "organization": "Hunter College, testifying in an individual capacity", "pages": [231, 232], "position": "supportive"},
+      {"name": "Charlotta Janssen", "organization": "Chez Oskar and Bed-Stuy Restaurant Association", "pages": [233, 234, 235, 236], "position": "supportive"}
+    ],
+    "coverage_notes": [
+      "The official attachment contains unrelated hearings, opposition, agency testimony, duplicate submissions, and administrative material in addition to commercial-rent testimony.",
+      "Pages 165-166 duplicate the Boss Studio submission attributed to Monique Wong on pages 215-216; only the later attributed copy is reproduced.",
+      "Pages 167-168 overlap the more complete Charlotta Janssen submission on pages 233-236; only the later attributed copy is reproduced.",
+      "Statements that supported small-business relief but did not support or materially qualify commercial rent stabilization are not included in this support corpus.",
+      "The official 237-page attachment remains the canonical complete written record."
+    ]
+  },
+  "state_legislation": [
+    {
+      "bill": "A5568A",
+      "chamber": "New York State Assembly",
+      "prime_sponsor": "Emily Gallagher",
+      "introduced": "2025-02-14",
+      "status": "In Assembly Committee",
+      "status_date": "2026-07-28",
+      "current_committee": "Assembly Cities",
+      "source_url": "https://www.nysenate.gov/legislation/bills/2025/A5568/amendment/A",
+      "co_sponsors": [
+        "Sarahana Shrestha",
+        "Karines Reyes",
+        "Phara Souffrant Forrest",
+        "Robert C. Carroll",
+        "Rodneyse Bichotte Hermelyn",
+        "Jo Anne Simon",
+        "Diana Moreno",
+        "Tony Simone",
+        "Grace Lee"
+      ],
+      "raw_filename": "crs-assembly-official.html",
+      "raw_text_sha256": "cba0a5f74039085f8f7ac6a9cb90452c04295a5aa986b422bddcf835b97f42dd",
+      "parser": "nyassembly",
+      "scope_note": "The official active A amendment and sponsor memorandum are retained. Co-sponsor names reflect the official active bill page reviewed on 2026-07-28."
+    },
+    {
+      "bill": "S8319",
+      "chamber": "New York State Senate",
+      "prime_sponsor": "Julia Salazar",
+      "introduced": "2025-06-02",
+      "status": "In Senate Committee",
+      "status_date": "2026-07-28",
+      "current_committee": "Senate Cities 1",
+      "source_url": "https://www.nysenate.gov/legislation/bills/2025/S8319",
+      "co_sponsors": [
+        "Jabari Brisport",
+        "Kristen Gonzalez",
+        "Gustavo Rivera"
+      ],
+      "raw_filename": "crs-s8319-official.html",
+      "raw_text_sha256": "d899eebb0643cdd7de6a9d5548d324f679339c48e3da3a9123583f9898cf11b8",
+      "parser": "nysenate",
+      "scope_note": "The official active Senate bill page and complete sponsor memorandum are retained. The bill remains in committee; this corpus does not claim passage."
+    }
+  ],
+  "public_events": [
+    {
+      "id": "park-slope-2025-11-13",
+      "title": "Commercial Rent Stabilization event with Gallagher, Hanif, and Lander",
+      "date": "2025-11-13",
+      "venue": "Park Slope, Brooklyn",
+      "source_kind": "Otter.ai transcript of Jamie Burkart's public-event audio recording",
+      "source_url": "https://otter.ai/u/AHauNHmmEzrEGzymwq-F-YZDBCM",
+      "raw_filename": "park-slope-2025-11-13.txt",
+      "raw_text_sha256": "09740cc2c0abf50e6078db69424f24df871bbf15f52a3b6861dedd482f82406a",
+      "parser": "otter",
+      "scope_note": "The complete recovered main-stage supportive speeches are retained. Pre-event room audio and later audience discussion are outside this speech set.",
+      "speakers": [
+        {
+          "name": "Emily Gallagher",
+          "labels": ["AM Emily Gallagher"],
+          "timestamps": ["40:49", "1:01:51"],
+          "role_at_event": "New York State Assembly Member and A5568A prime sponsor",
+          "current_context": "Same office and sponsorship role as of 2026-07-28.",
+          "position": "direct-bill-support",
+          "scope_note": "Opening and complete keynote presentation."
+        },
+        {
+          "name": "Olympia Kazi",
+          "labels": ["Olympia Kazi"],
+          "timestamps": ["42:20"],
+          "role_at_event": "NYC Artist Coalition co-founder and Commercial Rent Stabilization advocate",
+          "current_context": "Community advocate.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete opening advocacy statement."
+        },
+        {
+          "name": "Shahana Hanif",
+          "labels": ["NYC Council Member Shahana Hanif"],
+          "timestamps": ["48:55"],
+          "role_at_event": "New York City Council Member",
+          "current_context": "Council Member and later co-sponsor of Res 0496-2026.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete main-stage statement supporting Gallagher and passage of Commercial Rent Stabilization."
+        },
+        {
+          "name": "Brad Lander",
+          "labels": ["Comptroller Brad Lander"],
+          "timestamps": ["53:59"],
+          "role_at_event": "New York City Comptroller",
+          "current_context": "Role recorded as of the event; later office changes do not alter attribution.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete main-stage statement on neighborhood continuity, affordability, and Commercial Rent Stabilization."
+        }
+      ],
+      "coverage_notes": [
+        "The source transcript begins with approximately forty minutes of pre-event room audio, which is not reproduced.",
+        "Later audience questions and related street-vendor discussion remain in the canonical recording but are not classified as main-stage Commercial Rent Stabilization speeches."
+      ]
+    },
+    {
+      "id": "friends-and-lovers-2026-02-17",
+      "title": "Small Business United and Commercial Rent Stabilization bill launch",
+      "date": "2026-02-17",
+      "venue": "Friends and Lovers, Brooklyn",
+      "source_kind": "Otter.ai transcript of Jamie Burkart's public-event audio recording",
+      "source_url": "https://otter.ai/u/wedx0rNF2suGeFU80fzqUFHCPeU",
+      "raw_filename": "friends-and-lovers-2026-02-17.txt",
+      "raw_text_sha256": "d35f082a82bd23a065894b2af00fdf11e29762a421366187cccf4b4a685fe4e2",
+      "parser": "otter",
+      "scope_note": "The complete recovered Gallagher bill presentation and Kazi's substantive bill responses are retained by timestamp.",
+      "speakers": [
+        {
+          "name": "Emily Gallagher",
+          "labels": ["AM Emily Gallagher"],
+          "timestamps": ["44:18", "48:16", "48:49", "50:16", "59:00", "1:00:59", "1:02:11", "1:04:31", "1:07:08", "1:08:09", "1:09:01", "1:12:04", "1:14:08"],
+          "role_at_event": "New York State Assembly Member and A5568A prime sponsor",
+          "current_context": "Same office and sponsorship role as of 2026-07-28.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete recovered bill-launch presentation and her substantive responses through the public close."
+        },
+        {
+          "name": "Olympia Kazi",
+          "labels": ["Olympia Kazi"],
+          "timestamps": ["32:48", "1:08:21", "1:09:33", "1:12:34"],
+          "role_at_event": "Commercial Rent Stabilization advocate and Small Business United organizer",
+          "current_context": "Community advocate.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete recovered campaign framing and substantive bill responses."
+        }
+      ],
+      "coverage_notes": [
+        "Setup, informal room conversation, campaign remarks unrelated to the bill, and unidentified audience turns are not reproduced.",
+        "The event transcript remains canonical for context surrounding the timestamp-bound selections."
+      ]
+    },
+    {
+      "id": "project-x-2026-03-10",
+      "title": "Project X Community Conversation",
+      "date": "2026-03-10",
+      "venue": "Bedford-Stuyvesant, Brooklyn",
+      "source_kind": "Corrected transcript of a public event recording",
+      "source_url": "https://otter.ai/u/6i6mIey5Bip_BrkymehM3tkFjqs",
+      "raw_filename": "project-x-2026-03-10.txt",
+      "raw_text_sha256": "630ae41310f78f338f6b6648c4fbdc041edabc4d78b54601b948d1b6a9f00a26",
+      "parser": "otter",
+      "scope_note": "The complete Eon Huntley speech that directly identifies Commercial Rent Stabilization is retained.",
+      "speakers": [
+        {
+          "name": "Eon Huntley",
+          "labels": ["Eon Huntley"],
+          "timestamps": ["1:08:11"],
+          "role_at_event": "Candidate for New York State Assembly District 56",
+          "current_context": "Huntley later won the June 2026 Democratic primary; the March speech remains attributed to him as a candidate.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete public speech, including its wider affordability and labor context."
+        }
+      ],
+      "coverage_notes": [
+        "Huntley's later campaign-finance appeal is not part of the Commercial Rent Stabilization speech.",
+        "No elected-office title is retroactively applied to a statement made while he was a candidate."
+      ]
+    },
+    {
+      "id": "jimmys-corner-2026-04-10",
+      "title": "Save Jimmy's Corner and Small Business Rent Stabilization rally",
+      "date": "2026-04-10",
+      "venue": "Jimmy's Corner, Manhattan",
+      "source_kind": "Corrected transcript of a public rally recording",
+      "source_url": "https://www.nysenate.gov/newsroom/press-releases/2026/julia-salazar/senator-salazar-rallies-jimmys-corner-and-small-business",
+      "raw_filename": "jimmys-corner-2026-04-10.txt",
+      "raw_text_sha256": "7b0b8591bb4386a1bbd8c790f576f940f1edca09348802bb2815d3f19561a356",
+      "parser": "corrected-bracketed",
+      "scope_note": "All named main-stage rally speakers and Gallagher's complete public handoffs are retained through the close.",
+      "speakers": [
+        {
+          "name": "Adam Glenn",
+          "labels": ["Adam Glenn (Jimmy's Corner)"],
+          "timestamps": ["00:00", "40:40", "44:12"],
+          "role_at_event": "Jimmy's Corner owner",
+          "current_context": "Small-business operator.",
+          "position": "direct-bill-support",
+          "scope_note": "Opening testimony and complete closing remarks."
+        },
+        {
+          "name": "Emily Gallagher",
+          "labels": ["Assembly Member Emily Gallagher"],
+          "timestamps": ["03:02", "07:32", "11:34", "13:36", "16:02", "22:42", "26:09", "29:49", "32:44", "39:24"],
+          "role_at_event": "New York State Assembly Member and A5568A prime sponsor",
+          "current_context": "Same office and sponsorship role as of 2026-07-28.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete rally speech and public speaker handoffs."
+        },
+        {
+          "name": "Alison Hirsh",
+          "labels": ["Alison Hirsh"],
+          "timestamps": ["06:02"],
+          "role_at_event": "Political and labor organizer",
+          "current_context": "Public-event speaker.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete attributed rally statement."
+        },
+        {
+          "name": "Julia Salazar",
+          "labels": ["State Senator Julia Salazar"],
+          "timestamps": ["08:03"],
+          "role_at_event": "New York State Senator and S8319 prime sponsor",
+          "current_context": "Same office and sponsorship role as of 2026-07-28.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete attributed rally statement."
+        },
+        {
+          "name": "Emelyn Stuart",
+          "labels": ["Emelyn Stuart"],
+          "timestamps": ["11:55"],
+          "role_at_event": "Small-business owner",
+          "current_context": "Public-event speaker.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete attributed rally statement."
+        },
+        {
+          "name": "Tony Simone",
+          "labels": ["Assembly Member Tony Simone"],
+          "timestamps": ["13:47"],
+          "role_at_event": "New York State Assembly Member and A5568A co-sponsor",
+          "current_context": "Same office and co-sponsor role as of 2026-07-28.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete attributed rally statement."
+        },
+        {
+          "name": "Freddy Castiblanco",
+          "labels": ["Freddy Castiblanco (Founder & Curator at Terraza 7)"],
+          "timestamps": ["17:22"],
+          "role_at_event": "Terraza 7 founder and curator",
+          "current_context": "Cultural-space operator and advocate.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete attributed rally statement."
+        },
+        {
+          "name": "Jo Anne Simon",
+          "labels": ["Assembly Member Jo Anne Simon"],
+          "timestamps": ["23:39"],
+          "role_at_event": "New York State Assembly Member and A5568A co-sponsor",
+          "current_context": "Same office and co-sponsor role as of 2026-07-28.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete attributed rally statement."
+        },
+        {
+          "name": "Jamell Henderson",
+          "labels": ["Jamell N.A. Henderson, M.P.A., M.P.P."],
+          "timestamps": ["27:03"],
+          "role_at_event": "Citizen Action New York speaker",
+          "current_context": "Public-event speaker.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete attributed rally statement."
+        },
+        {
+          "name": "Lindsey Boylan",
+          "labels": ["Lindsey Boylan (for City Council District 3)"],
+          "timestamps": ["30:47"],
+          "role_at_event": "Candidate for New York City Council District 3",
+          "current_context": "Role recorded as of the event.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete attributed rally statement."
+        },
+        {
+          "name": "Olympia Kazi",
+          "labels": ["Olympia Kazi"],
+          "timestamps": ["34:58"],
+          "role_at_event": "NYC Artist Coalition co-founder and Commercial Rent Stabilization advocate",
+          "current_context": "Community advocate.",
+          "position": "direct-bill-support",
+          "scope_note": "Complete attributed rally statement."
+        }
+      ],
+      "coverage_notes": [
+        "Ambient post-rally chatter is excluded.",
+        "Linda B. Rosenthal and other bill supporters who did not deliver a recovered rally speech are represented only through their separately published official statements."
+      ]
+    }
+  ],
+  "official_state_statements": [
+    {
+      "id": "state-introduction-2026-02-17",
+      "title": "Senator Salazar and Assembly Member Gallagher introduce the Small Business Survival Act",
+      "date": "2026-02-17",
+      "source_url": "https://www.nysenate.gov/newsroom/press-releases/2026/julia-salazar/senator-salazar-and-assembly-member-gallagher-introduce",
+      "source_kind": "official New York State Senate press release",
+      "scope_note": "The complete attributed pro-bill quotations are retained. These are published statements, not represented as chamber-floor transcripts.",
+      "records": [
+        {
+          "name": "Julia Salazar",
+          "role_at_statement": "New York State Senator and S8319 prime sponsor",
+          "position": "direct-bill-support",
+          "text": "The Small Business Survival Act would be a lifeline for small businesses in New York City by capping outrageous rent hikes and guaranteeing lease renewals. Corporate landlords are charging rents so high that the only business owners who can afford to pay are corporate chains. Or, they’re keeping storefronts vacant until larger, wealthier tenants come along. This is a toxic and now commonplace pattern that is shuttering our local businesses, putting New Yorkers out of work, and turning our vibrant neighborhoods into chain malls."
+        },
+        {
+          "name": "Emily Gallagher",
+          "role_at_statement": "New York State Assembly Member and A5568A prime sponsor",
+          "position": "direct-bill-support",
+          "text": "Small businesses are what make New York special, but they are increasingly being pushed out by greedy corporate actors. In the 20 years I’ve been in my neighborhood, I’ve seen so many beloved businesses close because of unaffordable rents or because big landlords would rather wait for a corporate chain to come along. With the Small Business Survival Act, we will cap rent, guarantee leases, and ensure our community businesses are actually owned by the members of our community."
+        },
+        {
+          "name": "Olympia Kazi",
+          "role_at_statement": "Urban activist",
+          "position": "direct-bill-support",
+          "text": "I want to thank State Senator Julia Salazar and Assembly Member Emily Gallagher for introducing this critical legislation to enact a common-sense, fundamental protection for commercial tenants. For more than half a century, communities have fought to defend beloved small businesses, nonprofits, and cultural institutions from displacement and erasure. With renewed leadership in New York State and New York City that centers affordability and justice, I am hopeful—and confident—that the moment to pass commercial rent stabilization has arrived."
+        },
+        {
+          "name": "Small Business United",
+          "role_at_statement": "Small-business organizing coalition",
+          "position": "direct-bill-support",
+          "text": "Small businesses are struggling to survive in New York City because they cannot keep up with continuously rising costs, including the rising cost of rent. This crisis is the result of treating commercial space as a commodity to make corporate real estate companies richer, rather than as community infrastructure to support our neighborhoods. New York must pass the Small Business Survival Act before our local business owners are forced to close their doors and seek opportunities elsewhere."
+        }
+      ]
+    },
+    {
+      "id": "jimmys-corner-release-2026-04-10",
+      "title": "Senator Salazar rallies for Jimmy's Corner and Small Business Rent Stabilization",
+      "date": "2026-04-10",
+      "source_url": "https://www.nysenate.gov/newsroom/press-releases/2026/julia-salazar/senator-salazar-rallies-jimmys-corner-and-small-business",
+      "source_kind": "official New York State Senate press release",
+      "scope_note": "The complete attributed pro-bill quotations in the official release are retained. They supplement, but do not replace, the event transcript.",
+      "records": [
+        {
+          "name": "Julia Salazar",
+          "role_at_statement": "New York State Senator and S8319 prime sponsor",
+          "position": "direct-bill-support",
+          "text": "Jimmy’s Corner is a beloved small business and member of the community. It has had an impact that corporate businesses could never replicate. Unfortunately, there are countless small businesses just like Jimmy’s that are being squeezed out of our city. Big landlords are charging rents so high that the only business owners who can afford to pay are corporate chains. Or, they’re keeping storefronts vacant until larger, wealthier tenants come along. This is a toxic and now commonplace pattern that is shuttering our small businesses, putting New Yorkers out of work, and turning our vibrant neighborhoods into chain malls. Small Business Rent Stabilization would be a lifeline for local businesses in New York City by capping outrageous rent hikes, guaranteeing lease renewals, and protecting at-will tenants."
+        },
+        {
+          "name": "Emily Gallagher",
+          "role_at_statement": "New York State Assembly Member and A5568A prime sponsor",
+          "position": "direct-bill-support",
+          "text": "Small, local businesses make our neighborhoods vibrant, our communities safer, and our city unique. But increasingly, you have to be a huge chain or a venture-backed business to make it in this city. Landlords leave storefronts vacant while they wait for these cookie cutter establishments to come in and price out beloved local counterparts. The Small Business Rent Stabilization Act will protect our local businesses and ensure NYC continues to be a place where they can thrive."
+        },
+        {
+          "name": "Olympia Kazi",
+          "role_at_statement": "NYC Artist Coalition and Music Workers Alliance co-founder",
+          "position": "direct-bill-support",
+          "text": "What is happening with Jimmy's Corner—recently described by a patron as “the only real bar in the neighborhood”—perfectly illustrates how unfairly tilted the scales are for small businesses right now. Our government has left New York City’s commercial tenants largely unprotected. Current policies fail to recognize that these establishments provide essential services, create jobs, and contribute deep social and cultural value—often for decades. In this case, that legacy spans 54 years. Yet all of that can be erased overnight, and even leveraged for profit by landlords. The story of Jimmy’s Corner is a wake-up call. It underscores the urgent need for the city to finally establish meaningful protections for commercial tenants and we need to start with the most fundamental of them all, the passage of commercial rent stabilization."
+        },
+        {
+          "name": "Linda B. Rosenthal",
+          "role_at_statement": "New York State Assembly Member and Chair of the Assembly Committee on Housing",
+          "position": "direct-bill-support",
+          "text": "Jimmy's Corner is a New York institution, but could soon be forced to close its doors as a result of a dubious eviction proceeding. Nearly half of New York State's workforce is employed by small businesses, but drastic rent hikes and corporate greed have pushed thousands of these businesses to close in recent years. We need to act to lend a hand to New York City's beleaguered businesses by supporting Assemblymember Gallagher's legislation, the Small Business Rent Stabilization Act, which will protect at-will tenants, prohibit unaffordable rent hikes and guarantee lease renewals for small businesses across our city."
+        },
+        {
+          "name": "Jo Anne Simon",
+          "role_at_statement": "New York State Assembly Member and A5568A co-sponsor",
+          "position": "direct-bill-support",
+          "text": "Local businesses are the backbone of New York City, but far too many are being forced out by skyrocketing commercial rents and price-gouging. Small-business rent stabilization will help protect the very neighborhood institutions that create jobs, build community, and give NYC its quintessential character. I am proud to support this effort and thank Assemblymember Gallagher and Senator Salazar for sponsoring this important legislation."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "No official chamber video or transcript was recovered for an A5568A or S8319 introduction or floor speech. Both bills remain in committee as of 2026-07-28.",
+    "Official sponsor memoranda and official press-release quotations are written public statements; public-event records are transcript-derived speeches.",
+    "The collection is additive, not a claim of exhaustive statewide public support. New source leads should enter through the same hash-bound, role-at-the-time, source-type-aware process."
+  ]
+}
