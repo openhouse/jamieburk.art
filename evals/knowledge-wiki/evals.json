@@ -166,7 +166,7 @@
         "family_public_projection_still_selective",
         "family_public_safety_preserved",
         "merge_readiness_ci_enforced",
-        "rfp_contract_enforced",
+        "rfc_contract_enforced",
         "generated_outputs_locale_independent",
         "diff_hygiene_clean"
       ]
@@ -192,7 +192,7 @@
         "photo_encounters_are_additive",
         "photo_publication_gates_human",
         "no_public_photo_route",
-        "photo_rfp_boundary_preserved",
+        "photo_rfc_boundary_preserved",
         "photo_source_non_mutation_preserved",
         "residency_proposal_not_contract",
         "artistic_divergence_protected",
@@ -200,7 +200,30 @@
         "open_ended_outcome_protected",
         "host_acceptance_preserves_artist_agency",
         "remembered_teju_source_positioned_honestly",
-        "human_host_acceptance_recorded"
+        "human_host_acceptance_recorded",
+        "oral_history_prompt_bounded",
+        "oral_history_intake_cannot_auto_promote",
+        "oral_history_research_and_credit_open",
+        "oral_history_privacy_fails_closed",
+        "oral_history_not_publication"
+      ]
+    },
+    {
+      "id": "photographic-source-return",
+      "criteria": [
+        "photographic_source_return_materialized",
+        "photographic_source_return_reachable",
+        "photo_evidence_layers_distinct",
+        "photo_clusters_do_not_inflate_evidence",
+        "oral_history_received_without_auto_promotion",
+        "dcla_host_mobilization_and_participation_bounded",
+        "photo_rights_and_consent_fail_closed",
+        "map_derivative_exact_and_bounded",
+        "protected_photo_payload_not_published",
+        "apple_photos_capability_gap_explicit",
+        "knowledge_wiki_naming_is_canonical",
+        "portfolio_projection_remains_selective",
+        "source_return_human_authority_preserved"
       ]
     }
   ]

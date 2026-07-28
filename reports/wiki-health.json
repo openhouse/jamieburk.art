@@ -1,64 +1,64 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T21:55:36-04:00",
-  "sourceCommit": "cb9dd7b36538082805f12cad2a440e07e415e33b",
-  "sourceFingerprint": "404077c2277724a0cd97abde4ca20f64519ec27106361a032596c9ea336f5ed8",
+  "generatedAt": "2026-07-26T22:44:56-04:00",
+  "sourceCommit": "487239f87287f384a08161158d914cda3f74274f",
+  "sourceFingerprint": "f8e058631a2387c091db50f79a488100a84f69e2d5b3f63dd7beef6f57ab6001",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 110,
+    "records": 140,
     "byKind": {
       "project": 14,
-      "person": 1,
+      "person": 2,
       "organization": 1,
-      "event": 1,
+      "event": 2,
       "place": 1,
-      "source": 29,
-      "asset": 1,
+      "source": 36,
+      "asset": 8,
       "claim": 2,
-      "research-run": 4,
-      "research-inquiry": 3,
-      "decision": 5,
-      "correction": 1,
-      "method": 10,
+      "research-run": 5,
+      "research-inquiry": 5,
+      "decision": 7,
+      "correction": 2,
+      "method": 11,
       "timeline": 1,
       "application": 1,
-      "evaluation": 3,
-      "index": 18,
+      "evaluation": 4,
+      "index": 22,
       "capability": 5,
       "opportunity": 6,
-      "projection": 3
+      "projection": 5
     },
-    "typedRelations": 441,
+    "typedRelations": 553,
     "evidenceRelations": 8,
     "relationTypeCounts": {
-      "collaborated_with": 1,
-      "documents": 18,
+      "collaborated_with": 2,
+      "documents": 24,
       "evidence:context": 1,
       "evidence:direct-support": 6,
       "evidence:private-support": 1,
-      "has_asset": 2,
-      "informed_by": 44,
-      "part_of": 9,
-      "projected_to": 6,
-      "related_to": 255,
-      "resulted_in": 5,
+      "has_asset": 12,
+      "informed_by": 45,
+      "part_of": 10,
+      "projected_to": 7,
+      "related_to": 322,
+      "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
-      "uses_method": 22,
-      "uses_source": 59
+      "uses_method": 23,
+      "uses_source": 82
     },
-    "proseLinks": 296,
-    "rootReachable": 109,
+    "proseLinks": 330,
+    "rootReachable": 132,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
-    "correctionCount": 1,
-    "rightsReviewCount": 1,
+    "correctionCount": 2,
+    "rightsReviewCount": 6,
     "opportunityCount": 6,
     "liveOpportunityCount": 6,
     "criticalRequirementCount": 22,
@@ -151,6 +151,12 @@
       "title": "CallNYC chronology correction",
       "path": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
       "humanReview": "resolved"
+    },
+    {
+      "id": "correction.photo.east-river-credit.2026-07",
+      "title": "Add Elana Gordon's credit to the East River homepage occurrence",
+      "path": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
+      "humanReview": "not-requested"
     }
   ],
   "rightsReview": [
@@ -158,6 +164,41 @@
       "id": "asset.photo.digital-district.001",
       "path": "docs/knowledge-bank/assets/digital-district-photo.md",
       "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.hard-hat.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-hard-hat-worksite.md",
+      "rightsState": "permission-needed",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-kc-star-aerial-2021.md",
+      "rightsState": "do-not-publish",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-stewardship-interior.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.nyc-council.field-kit.2026.001",
+      "path": "docs/knowledge-bank/assets/photographs/nyc-council-field-kit-2026.md",
+      "rightsState": "permission-needed",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md",
+      "rightsState": "unknown",
       "consentState": "review-needed",
       "publicDisplayStatus": "hold"
     }

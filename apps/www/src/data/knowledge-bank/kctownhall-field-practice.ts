@@ -369,6 +369,7 @@ export const kcTownHallFieldPractice = {
       protectedLocatorId: "ARCHIVE-KCTH-CCED-PROPOSAL-2019-001",
       supportsGenerally: [
         "Jamie Burkart and Julia Fredenburg were identified as founders and project managers",
+        "the proposal requested $490,539 in CCED support for Phase Two",
         "the proposal presented a multi-trade professional and construction team",
         "Phase One included roof, masonry, floor-framing, water, access, safety, environmental, and related cold-shell work",
         "the proposal reported substantial roof, masonry, debris-removal, and egress work by 2018",
@@ -376,6 +377,7 @@ export const kcTownHallFieldPractice = {
         "support letters praised the neighborhood process and local construction participation"
       ],
       doesNotEstablish: [
+        "sole authorship of the proposal or presentation materials",
         "that Jamie held the title general contractor",
         "that Phase One was completed in 2019",
         "Jamie's individual authorship of the survey handbill or data system",

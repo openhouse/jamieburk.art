@@ -19,6 +19,10 @@ relations:
   - type: supports
     target: capability.participatory-public-systems
     href: ../capabilities/participatory-public-systems.md
+  - type: related_to
+    target: index.photo-set.kc-town-hall-fieldwork
+    href: ../indexes/photo-sets/kc-town-hall-fieldwork.md
+    context: Governed visual and oral-history field with held photographs and one cleared proposal-map derivative.
 ---
 
 # KC Town Hall orientation

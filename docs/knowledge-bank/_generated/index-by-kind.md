@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `cb9dd7b36538082805f12cad2a440e07e415e33b`
-**Generation time:** 2026-07-22T21:55:36-04:00
-**Source fingerprint:** `404077c2277724a0cd97abde4ca20f64519ec27106361a032596c9ea336f5ed8`
+**Source commit:** `487239f87287f384a08161158d914cda3f74274f`
+**Generation time:** 2026-07-26T22:44:56-04:00
+**Source fingerprint:** `f8e058631a2387c091db50f79a488100a84f69e2d5b3f63dd7beef6f57ab6001`
 
 ## application
 
@@ -11,7 +11,14 @@
 
 ## asset
 
+- [KC Town Hall ten-minute-walk proposal map](../assets/graphics/kc-town-hall-walkshed-2019.md) - `asset.graphic.kc-town-hall.walkshed.2019.001`
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
+- [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) - `asset.photo.east-river-manhattan-bridge.2022.001`
+- [Jamie at the KC Town Hall worksite](../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `asset.photo.kc-town-hall.hard-hat.001`
+- [Kansas City Star aerial view of KC Town Hall](../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `asset.photo.kc-town-hall.kc-star-aerial.2021`
+- [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
+- [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
+- [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
 
 ## capability
 
@@ -29,6 +36,7 @@
 ## correction
 
 - [CallNYC chronology correction](../corrections/callnyc-years-2026.md) - `correction.callnyc-years.2026`
+- [Add Elana Gordon's credit to the East River homepage occurrence](../corrections/east-river-credit-2026-07.md) - `correction.photo.east-river-credit.2026-07`
 
 ## decision
 
@@ -37,15 +45,19 @@
 - [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
+- [Select the East River photograph for the Layout C homepage](../decisions/photography/layout-c-home-east-river-v1.md) - `decision.photo.layout-c.home-east-river.v1`
+- [Keep the Layout C resume route photograph-free](../decisions/photography/layout-c-resume-no-photo-v1.md) - `decision.photo.layout-c.resume-no-photo.v1`
 
 ## evaluation
 
+- [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
 
 ## event
 
+- [NYC DIY spaces meeting at the Department of Cultural Affairs](../events/nyc-diy-spaces-dcla-2017-01-27.md) - `event.nyc.dcla.diy-spaces-listening.2017-01-27`
 - [New York City Council constituent-services hackathon](../events/nycc-constituent-services-hackathon-2016.md) - `event.nycc.constituent-services-hackathon.2016`
 
 ## index
@@ -59,6 +71,7 @@
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
 - [Outcomes, Adoption, and Afterlives](../indexes/outcomes-adoption-and-afterlives.md) - `index.knowledge-wiki.outcomes-adoption-afterlives`
 - [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
+- [Photography knowledge loop](../indexes/photography.md) - `index.knowledge-wiki.photography`
 - [Photography field notebook](../notebooks/photography/README.md) - `index.knowledge-wiki.photography-notebook`
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
@@ -68,6 +81,9 @@
 - [Role, Collective Authorship, and Protected Absence](../indexes/role-collective-authorship-and-protected-absence.md) - `index.knowledge-wiki.role-authorship-protected-absence`
 - [Scenes and Places of Work](../indexes/scenes-and-places-of-work.md) - `index.knowledge-wiki.scenes-and-places-of-work`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
+- [East River canoe outing, 2022](../indexes/photo-sets/east-river-canoe-2022.md) - `index.photo-set.east-river-canoe.2022`
+- [KC Town Hall fieldwork and proposal visual set](../indexes/photo-sets/kc-town-hall-fieldwork.md) - `index.photo-set.kc-town-hall-fieldwork`
+- [NYC Artist Coalition DCLA formation photo set](../indexes/photo-sets/nycac-dcla-formation-2017.md) - `index.photo-set.nycac-dcla-formation.2017`
 
 ## method
 
@@ -77,6 +93,7 @@
 - [Learning Through Making](../methods/learning-through-making.md) - `method.learning-through-making`
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
+- [East River photographic knowledge-loop tutorial](../workflows/photography-east-river-canary.md) - `method.photography-east-river-canary`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
@@ -97,6 +114,7 @@
 
 ## person
 
+- [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
 
 ## place
@@ -122,14 +140,18 @@
 
 ## projection
 
+- [Layout C photographic portfolio edition](../projections/photography/edition-layout-c-2026-07.md) - `edition.layout-c.2026-07`
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
 
 ## research-inquiry
 
+- [Documented bicycle-canoe journeys](../research-inquiries/documented-canoe-bike-journeys.md) - `research-inquiry.documented-canoe-bike-journeys`
 - [196 Artists Residency proposal: The First Pass](../notebooks/photography/196-first-pass-proposal.md) - `research-inquiry.photography.196-first-pass-proposal`
 - [Field Corpus 001](../notebooks/photography/field-corpus-001.md) - `research-inquiry.photography.field-corpus-001`
+- [Oral history prompt 001: Stewardship afterlife](../notebooks/photography/oral-history-stewardship-afterlife-001.md) - `research-inquiry.photography.oral-history-stewardship-afterlife-001`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
 ## research-run
@@ -138,6 +160,7 @@
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
+- [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../research-runs/photographic-source-return-2026-07-26.md) - `research.photographic-source-return.2026-07-26`
 
 ## source
 
@@ -155,18 +178,25 @@
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
 - [The Kansas City Star raft report, November 15, 2007](../sources/kansas-city-star-raft-2007-11-15.md) - `source.kansas-city-star.raft.2007-11-15`
 - [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
+- [KC Town Hall local digital archive review, July 2026](../sources/archives/kc-town-hall-local-digital-archive-2026-07.md) - `source.kc-town-hall.local-digital-archive.2026-07`
+- [KC Town Hall photographic oral histories, July 2026](../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md) - `source.kc-town-hall.photographic-oral-histories.2026-07`
 - [Frozen Knowledge Wiki branch A](../sources/knowledge-wiki-branch-a-2026-07-19.md) - `source.knowledge-wiki.branch-a.2026-07-19`
 - [Frozen Knowledge Wiki branch B](../sources/knowledge-wiki-branch-b-2026-07-19.md) - `source.knowledge-wiki.branch-b.2026-07-19`
 - [Frozen Knowledge Wiki branch C](../sources/knowledge-wiki-branch-c-2026-07-19.md) - `source.knowledge-wiki.branch-c.2026-07-19`
 - [Frozen Knowledge Wiki branch D](../sources/knowledge-wiki-branch-d-2026-07-19.md) - `source.knowledge-wiki.branch-d.2026-07-19`
 - [Frozen Knowledge Wiki branch E](../sources/knowledge-wiki-branch-e-2026-07-19.md) - `source.knowledge-wiki.branch-e.2026-07-19`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
+- [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
+- [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
 - [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
+- [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
+- [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
-- [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
+- [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
+- [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`

@@ -1,10 +1,14 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Town Hall CCED proposal bundle, 2019
 
-**Source commit:** `cb9dd7b36538082805f12cad2a440e07e415e33b`
-**Generation time:** 2026-07-22T21:55:36-04:00
-**Source fingerprint:** `404077c2277724a0cd97abde4ca20f64519ec27106361a032596c9ea336f5ed8`
+**Source commit:** `487239f87287f384a08161158d914cda3f74274f`
+**Generation time:** 2026-07-26T22:44:56-04:00
+**Source fingerprint:** `f8e058631a2387c091db50f79a488100a84f69e2d5b3f63dd7beef6f57ab6001`
 
+- [KC Town Hall ten-minute-walk proposal map](../../assets/graphics/kc-town-hall-walkshed-2019.md) - `uses_source` (frontmatter)
+- [Jamie at the KC Town Hall worksite](../../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `uses_source` (frontmatter)
 - [KC Town Hall listening within fieldwork](../../decisions/kc-town-hall-listening-fieldwork.md) - `uses_source` (frontmatter)
+- [KC Town Hall fieldwork and proposal visual set](../../indexes/photo-sets/kc-town-hall-fieldwork.md) - `uses_source` (frontmatter)
 - [Interpretive layer source return, July 19, 2026](../../research-runs/interpretive-layer-source-return-2026-07-19.md) - `prose_link` (markdown)
 - [Interpretive layer source return, July 19, 2026](../../research-runs/interpretive-layer-source-return-2026-07-19.md) - `uses_source` (frontmatter)
+- [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../../research-runs/photographic-source-return-2026-07-26.md) - `uses_source` (frontmatter)

@@ -68,7 +68,7 @@ causal contribution.
 | CallNYC | Archived independent prototype with surviving implementation and reporting | Archive is not a current or official Council service |
 | NYC Artist Coalition | Surviving records document collective events, campaigns, and publishing | The Wiki does not declare the coalition ended or assign every later activity |
 | KC Spaces Fund | Historical collaborator-led campaign with a surviving public fundraising result and Jamie's bounded digital contribution | Fundraising does not prove the website caused donations or make Jamie an organizer |
-| KC Town Hall | Phase One, municipal actions, later non-disbursement, withdrawal, and unused appropriation are separately documented | Private transition circumstances remain absent; municipal disposition is not the social handoff |
+| KC Town Hall | Phase One, a $490,539 public funding award, sustained administrative stewardship, an authorized mission-aligned transition account, and the later municipal closeout are separately documented | The recipient and legal mechanics remain unasserted; municipal disposition is not the social handoff |
 | NTER CHNG | Joint public credit and later exhibition history survive | Protected production records do not allocate every task or authorize participant material |
 
 ## Maintenance and care

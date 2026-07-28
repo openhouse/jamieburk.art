@@ -486,26 +486,30 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. After the CCED Board recommended $490,539, the Kansas City Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount in 2019. The City reported no disbursement in 2022; the project later withdrew, and the full unused appropriation returned to the fund in 2024.",
+      "Secured a $490,539 public funding award for KC Town Hall by co-developing the successful CCED proposal and serving as the City's named developer/presenter for the exact request, then transitioned the project to a mission-aligned organization.",
     shortWording:
-      "Jamie co-led adaptive reuse planning; the City appropriated $490,539, but reported no disbursement before project withdrawal and return of the full unused amount",
+      "Secured a $490,539 public funding award through a successful CCED proposal and presentation, then transitioned the project to a mission-aligned organization",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Official records separately establish the CCED Board's recommendation, the Council's acceptance and authority to negotiate a funding agreement, the Council's appropriation, the absence of reported disbursement while the agreement remained under negotiation in 2022, and return of the full unused amount after withdrawal in 2024.",
+      "Jamie co-founded KC Town Hall LLC, served as project manager, co-developed its CCED proposal, and was the City's named developer/presenter for the $490,539 request. Official records trace the successful request through unanimous Board recommendation, Council acceptance, and appropriation. A 2021 Kansas City Star investigation independently documented repeated City Hall roadblocks; City-posted reports then name Jamie as a developer point of contact in 2022 and 2023 and document progress on M/WBE and CREO requirements. Jamie later transitioned the project to a mission-aligned organization.",
     sourceBasis:
-      "Approved resume language supports Jamie's planning and documentation contribution. A protected 2019 proposal bundle additionally supports founder/project-manager attribution, multi-trade Phase One scope, substantial work reported by 2018, and the neighborhood-survey process; it does not independently establish general-contractor title, final 2019 completion, or component-level authorship. Kansas City Resolution 190649, Ordinance 190642, the May 17, 2022 CCED project update, and Ordinance 240317 separately support the institutional funding lifecycle; those municipal records do not establish Jamie's individual role.",
+      "Kansas City's June 2019 CCED hearing record identifies Jamie as KC Town Hall's developer/presenter for the exact $490,539 request, and the July minutes record the unanimous recommendation. A protected 2019 proposal bundle supports shared founder/project-manager attribution and the matching Phase Two request; it does not establish sole authorship. Resolution 190649, Ordinance 190642, the Kansas City Star's December 2021 investigation, the May 17, 2022 and December 2022 CCED materials, later pre-initial reporting, Ordinance 230316, the December 12, 2023 status report, and Ordinance 240317 establish the award, institutional actions, administrative burden and timeline, non-disbursement, withdrawal, and return of the unused amount. The article's elevated lead photograph is credited to Tammy Ljungblad and is not cleared for portfolio republication.",
     guardrail:
-      "Say accepted and appropriated, not received, disbursed, spent, or completed. Keep the 2022 non-disbursement and 2024 withdrawal and return with any public account of the 2019 Council action. Do not attribute institutional decisions to Jamie or promote general-contractor, completion, daily field-coordination, or component-authorship propositions without independent corroboration.",
+      "Jamie may be credited with securing the award through documented proposal-and-presentation work. Keep shared proposal credit and the Board's and Council's institutional authority explicit. Do not say received, disbursed, spent, or completed. The full municipal lifecycle remains preserved in the Knowledge Wiki rather than burdening hiring-facing copy. The transition is an authorized first-party account; do not identify the receiving organization or infer legal mechanics. Do not promote general-contractor, completion, daily field-coordination, final-withdrawal, or component-authorship propositions without independent public corroboration.",
     doNotSay: [
       "KC Town Hall received or spent $490,539",
       "A funding agreement was executed",
       "The City funded construction or project completion",
-      "Jamie secured or caused the Board recommendation or Council appropriation",
+      "Jamie alone wrote the proposal",
+      "Jamie controlled or solely caused the Board recommendation or Council appropriation",
+      "Jamie personally received or spent the award",
       "The public record establishes why the project withdrew",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the recorded recommendation, acceptance, and appropriation"
     ],
     protectedBoundaries: [
+      "Private personal circumstances",
+      "Private correspondence",
       "Private financial details",
       "Legal details",
       "Property details",
@@ -517,7 +521,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context", "construction-coordination", "participatory-design"],
-    lastReviewed: "2026-07-15"
+    lastReviewed: "2026-07-26"
   },
   {
     id: "kc-town-hall-public-service-interface",
@@ -691,6 +695,7 @@ export const resumeProofHighlights = [
   "nyc-artist-coalition-civic-systems",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
+  "kc-town-hall-public-benefit-documentation",
   "ai-evals-professional-development"
 ].map(requireReadyOrCarefulProof);
 

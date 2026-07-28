@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T21:55:36-04:00",
-  "sourceCommit": "cb9dd7b36538082805f12cad2a440e07e415e33b",
-  "sourceFingerprint": "404077c2277724a0cd97abde4ca20f64519ec27106361a032596c9ea336f5ed8",
+  "generatedAt": "2026-07-26T22:44:56-04:00",
+  "sourceCommit": "487239f87287f384a08161158d914cda3f74274f",
+  "sourceFingerprint": "f8e058631a2387c091db50f79a488100a84f69e2d5b3f63dd7beef6f57ab6001",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -19,6 +19,19 @@
       "reviewBy": "2026-08-19"
     },
     {
+      "id": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "path": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "title": "KC Town Hall ten-minute-walk proposal map",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe derivative of a 2019 proposal map showing the ten-minute walking area around KC Town Hall, cropped to remove obsolete contact details.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
       "id": "asset.photo.digital-district.001",
       "path": "docs/knowledge-bank/assets/digital-district-photo.md",
       "title": "Digital District participant photograph metadata",
@@ -30,6 +43,84 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "path": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "title": "East River beneath the Manhattan Bridge, 2022",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.hard-hat.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-hard-hat-worksite.md",
+      "title": "Jamie at the KC Town Hall worksite",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Held hard-hat portrait that opens research into KC Town Hall site operations, trade coordination, craft learning, and neighborhood listening.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-kc-star-aerial-2021.md",
+      "title": "Kansas City Star aerial view of KC Town Hall",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Published elevated view of the KC Town Hall building in the Kansas City Star's December 2021 investigation of CCED administrative delays.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-stewardship-interior.md",
+      "title": "Jamie and a collaborator inside KC Town Hall",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Held photograph of Jamie and a collaborator inside KC Town Hall that opens research into building stewardship, access systems, craft lineage, and project transition.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.nyc-council.field-kit.2026.001",
+      "path": "docs/knowledge-bank/assets/photographs/nyc-council-field-kit-2026.md",
+      "title": "Jamie with a civic field kit at New York City Council",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Held 2026 portrait of Jamie outside New York City Council hearing rooms carrying a clipboard and working materials connected to coalition participation and commercial-rent data research.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md",
+      "title": "DCLA listening room, January 2017",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Held photograph of a crowded DCLA listening meeting that opens research into NYC Artist Coalition formation while creator, dignity, identity, and publication rights remain unresolved.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
     },
     {
       "id": "capability.civic-cultural-technical-translation",
@@ -136,6 +227,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "correction.photo.east-river-credit.2026-07",
+      "path": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
+      "title": "Add Elana Gordon's credit to the East River homepage occurrence",
+      "kind": "correction",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Attribution correction replacing an archive-custody-only line with separate creator credit and custody wording.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
       "id": "decision.callnyc.issue-pathways",
       "path": "docs/knowledge-bank/decisions/callnyc-issue-pathways.md",
       "title": "CallNYC issue pathways for public constituent-services data",
@@ -201,6 +305,58 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "decision.photo.layout-c.home-east-river.v1",
+      "path": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
+      "title": "Select the East River photograph for the Layout C homepage",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded selection decision preserving the chosen homepage occurrence, a meaningful alternative, dissent, exact-use gates, and the right to supersede or withdraw the image.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "decision.photo.layout-c.resume-no-photo.v1",
+      "path": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
+      "title": "Keep the Layout C resume route photograph-free",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Protected-absence decision preserving the resume route as a task-focused, artifact-led surface rather than adding photography for visual consistency.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "edition.layout-c.2026-07",
+      "path": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
+      "title": "Layout C photographic portfolio edition",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Dated staging edition for the Layout C composition, binding its East River occurrence and deliberate resume-route protected absence without claiming timeless finality.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "evaluation.curatorial.layout-c.home-east-river.v1",
+      "path": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
+      "title": "Layout C homepage East River curatorial proposal",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe curatorial proposal preserving blind and contextual passes, the selected East River occurrence, a meaningful alternative, dissent, and human authority boundaries.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
       "id": "evaluation.employment-context.coverage.2026-07-18",
       "path": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "title": "Employment context coverage baseline - July 18, 2026",
@@ -240,6 +396,21 @@
       "reviewBy": "2026-08-19"
     },
     {
+      "id": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "path": "docs/knowledge-bank/events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "title": "NYC DIY spaces meeting at the Department of Cultural Affairs",
+      "kind": "event",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe event record for the January 27, 2017 DCLA meeting that became a principal formation hinge for the continuing NYC Artist Coalition operating system.",
+      "aliases": [
+        "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting"
+      ],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "event.nycc.constituent-services-hackathon.2016",
       "path": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
       "title": "New York City Council constituent-services hackathon",
@@ -266,7 +437,7 @@
       "aliases": [
         "Knowledge Bank"
       ],
-      "lastReviewed": "2026-07-22",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-18"
     },
     {
@@ -292,7 +463,7 @@
       "sensitivity": "low",
       "summary": "Index of bounded decision reconstructions preserving actors, constraints, alternatives, artifacts, outcomes, unknowns, and projection holds.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
     },
     {
@@ -374,6 +545,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.knowledge-wiki.photography",
+      "path": "docs/knowledge-bank/indexes/photography.md",
+      "title": "Photography knowledge loop",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
       "id": "index.knowledge-wiki.photography-notebook",
       "path": "docs/knowledge-bank/notebooks/photography/README.md",
       "title": "Photography field notebook",
@@ -383,7 +567,7 @@
       "sensitivity": "moderate",
       "summary": "Public-safe working notebook for exploratory photographic reading, sequence sketches, research questions, and the governed movement from a private field corpus toward selective public use.\n",
       "aliases": [],
-      "lastReviewed": "2026-07-22",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-22"
     },
     {
@@ -491,6 +675,45 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.photo-set.east-river-canoe.2022",
+      "path": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+      "title": "East River canoe outing, 2022",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe set record for related East River photographs made during one canoe outing in 2022.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "index.photo-set.kc-town-hall-fieldwork",
+      "path": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "title": "KC Town Hall fieldwork and proposal visual set",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Retrieval-oriented set connecting held worksite photographs, protected oral history, local digital records, the 2019 proposal, and one cleared map derivative.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "index.photo-set.nycac-dcla-formation.2017",
+      "path": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "title": "NYC Artist Coalition DCLA formation photo set",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Retrieval-oriented set joining one held meeting photograph to the event and protected formation source field without treating related records as additional proof.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "method.collective-credit-protected-absence",
       "path": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "title": "Collective credit and protected absence",
@@ -567,6 +790,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "method.photography-east-river-canary",
+      "path": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
+      "title": "East River photographic knowledge-loop tutorial",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Teammate tutorial for tracing, validating, correcting, revoking, and safely extending the first complete photo knowledge occurrence without access to private archive details.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
     },
     {
       "id": "method.situated-source-rereading",
@@ -713,6 +949,19 @@
       ],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "person.elana-gordon",
+      "path": "docs/knowledge-bank/people/elana-gordon.md",
+      "title": "Elana Gordon",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Photographer credited for the 2022 East River image used in the Layout C homepage occurrence.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
     },
     {
       "id": "person.jamie-burkart",
@@ -977,6 +1226,32 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "projection.photo.layout-c.home.east-river",
+      "path": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
+      "title": "Layout C homepage East River occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence binding the East River derivative to the Layout C homepage hero, crop, caption, credit, assertions, and release states.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "research-inquiry.documented-canoe-bike-journeys",
+      "path": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+      "title": "Documented bicycle-canoe journeys",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "internal",
+      "sensitivity": "moderate",
+      "summary": "Bounded inquiry for identifying distinct source-supported bicycle-canoe journeys without converting a first-person recollection or neighboring photographs into a numerical claim.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "research-inquiry.photography.196-first-pass-proposal",
       "path": "docs/knowledge-bank/notebooks/photography/196-first-pass-proposal.md",
       "title": "196 Artists Residency proposal: The First Pass",
@@ -997,10 +1272,23 @@
       "status": "draft",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Working sketchpad for Jamie's planned rough-draft selection of approximately 1,000 photographs, held as a private exploratory field rather than a completeness claim, evidence set, or publication candidate.\n",
+      "summary": "Working sketchpad for Jamie's completed private rough-draft field of 1,000 photographs, held as an exploratory field rather than a representative sample, evidence set, or publication candidate.\n",
       "aliases": [],
-      "lastReviewed": "2026-07-22",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-22"
+    },
+    {
+      "id": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "path": "docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md",
+      "title": "Oral history prompt 001: Stewardship afterlife",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed prompt and received-response disposition for one privately held KC Town Hall photograph, keeping recollection, corroborated fact, identity, rights, and publication separate.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
     },
     {
       "id": "research-inquiry.ucsc-installation-title",
@@ -1066,6 +1354,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.photographic-source-return.2026-07-26",
+      "path": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
+      "title": "Photographic source return for DCLA, KC Town Hall, and Council fieldwork",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Dated source return that decomposed four supplied photographs, three oral-history accounts, a protected proposal, connected archive context, local project records, and an explicit Apple Photos capability gap.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
     },
     {
       "id": "source.callnyc.source-repository",
@@ -1246,8 +1547,34 @@
       "sensitivity": "high",
       "summary": "Metadata-only record of the 2019 proposal bundle documenting public-benefit intent, first-phase work, neighborhood support, listening commitments, project planning, and sensitive financial material.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.kc-town-hall.local-digital-archive.2026-07",
+      "path": "docs/knowledge-bank/sources/archives/kc-town-hall-local-digital-archive-2026-07.md",
+      "title": "KC Town Hall local digital archive review, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only review of retained KC Town Hall website, image, survey, geospatial, and parcel-analysis materials on Jamie's local system.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "title": "KC Town Hall photographic oral histories, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe capsule for two protected first-person oral histories prompted by KC Town Hall photographs and supplied as repaired, not audio-verified, working transcripts.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
     },
     {
       "id": "source.knowledge-wiki.branch-a.2026-07-19",
@@ -1328,6 +1655,32 @@
       "reviewBy": "2027-01-19"
     },
     {
+      "id": "source.nyc-council.field-kit-oral-history.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/nyc-council-field-kit-oral-history-2026-07.md",
+      "title": "NYC Council field-kit photograph oral history, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe capsule for Jamie's repaired first-person account of a 2026 photograph outside New York City Council hearing rooms with coalition field materials and a commercial-rent open-data proposal.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "source.nycac.dcla-formation-source-return.2026-07",
+      "path": "docs/knowledge-bank/sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "title": "NYC Artist Coalition DCLA formation source return, 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Protected-source capsule for an authenticated return to the 2017 DCLA meeting field across coalition records, connected archives, event captures, and supplied oral history.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
       "id": "source.nycac.nightlife-forum-transcript.2026",
       "path": "docs/knowledge-bank/sources/nycac-nightlife-forum-transcript-2026.md",
       "title": "NYC nightlife forum corrected working transcript, 2026",
@@ -1380,6 +1733,32 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.permission.elana-gordon.east-river.2026-07",
+      "path": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "title": "Elana Gordon East River portfolio permission summary",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe capsule recording creator confirmation, bounded portfolio permission, required credit, private evidence custody, and revocation handling.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "source.photo-metadata.east-river.2022.public-safe",
+      "path": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
+      "title": "East River photograph public-safe metadata summary",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe metadata and visual-review summary supporting year, public place label, archive custody, dimensions, and source-to-derivative continuity without exposing private identifiers.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
       "id": "source.politico.callnyc.2016-03-14",
       "path": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
       "title": "Website provides new information about council members' focus",
@@ -1393,16 +1772,32 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.recollection.jamie-canoe-commuting.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "title": "Jamie Burkart recollection of bicycle-canoe journeys",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "internal",
+      "sensitivity": "moderate",
+      "summary": "Seeing the Layout C East River photograph prompted Jamie to recall transporting a canoe by bicycle with a handmade trailer and treating bicycle, trailer, canoe, and paddle as a lightweight participatory land-water travel system.",
+      "aliases": [
+        "canoe commuting",
+        "canoe-bicycle commuting"
+      ],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2027-01-26"
+    },
+    {
       "id": "source.resume.jamie-burkart.2026-06-11",
       "path": "docs/knowledge-bank/sources/jamie-resume-2026-06-11.md",
-      "title": "Jamie Burkart resume, June 11, 2026",
+      "title": "Jamie Burkart public resume, maintained 2026",
       "kind": "source",
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Public professional resume used as a present-tense statement of role, capabilities, chronology, and selected impact claims.",
+      "summary": "Maintained public professional resume used as a present-tense statement of role, capabilities, chronology, and selected impact claims.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
     },
     {
@@ -1484,11 +1879,187 @@
       "context": null
     },
     {
+      "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
       "from": "asset.photo.digital-district.001",
       "type": "part_of",
       "to": "project.callnyc",
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "collaborated_with",
+      "to": "person.elana-gordon",
+      "source": "frontmatter",
+      "href": "../../people/elana-gordon.md",
+      "context": "Elana Gordon is the preferred creator attribution."
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "projected_to",
+      "to": "projection.photo.layout-c.home.east-river",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-c-home-east-river.md",
+      "context": "Homepage hero occurrence in Layout C."
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "related_to",
+      "to": "index.photo-set.east-river-canoe.2022",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/east-river-canoe-2022.md",
+      "context": "One of several privately related frames from the outing."
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "uses_source",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "uses_source",
+      "to": "source.photo-metadata.east-river.2022.public-safe",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/east-river-2022-public-safe.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.hard-hat.001",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.hard-hat.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.hard-hat.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.local-digital-archive.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/archives/kc-town-hall-local-digital-archive-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council.field-kit.2026.001",
+      "type": "related_to",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council.field-kit.2026.001",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council.field-kit.2026.001",
+      "type": "uses_source",
+      "to": "source.nyc-council.field-kit-oral-history.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "type": "documents",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "source": "frontmatter",
+      "href": "../../events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "type": "related_to",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
       "context": null
     },
     {
@@ -1786,6 +2357,30 @@
       "context": null
     },
     {
+      "from": "correction.photo.east-river-credit.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.east-river-credit.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-c.home.east-river",
+      "source": "frontmatter",
+      "href": "../projections/photography/layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.east-river-credit.2026-07",
+      "type": "uses_source",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
       "from": "decision.callnyc.issue-pathways",
       "type": "informed_by",
       "to": "research.interpretive-layer-source-return.2026-07-19",
@@ -1922,6 +2517,62 @@
       "context": null
     },
     {
+      "from": "decision.photo.layout-c.home-east-river.v1",
+      "type": "related_to",
+      "to": "evaluation.curatorial.layout-c.home-east-river.v1",
+      "source": "frontmatter",
+      "href": "../../evaluations/curatorial/layout-c-home-east-river-v1.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.layout-c.home-east-river.v1",
+      "type": "related_to",
+      "to": "projection.photo.layout-c.home.east-river",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.layout-c.resume-no-photo.v1",
+      "type": "related_to",
+      "to": "edition.layout-c.2026-07",
+      "source": "frontmatter",
+      "href": "../../projections/photography/edition-layout-c-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-c.2026-07",
+      "type": "related_to",
+      "to": "decision.photo.layout-c.resume-no-photo.v1",
+      "source": "frontmatter",
+      "href": "../../decisions/photography/layout-c-resume-no-photo-v1.md",
+      "context": null
+    },
+    {
+      "from": "edition.layout-c.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-c.home.east-river",
+      "source": "frontmatter",
+      "href": "layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.layout-c.home-east-river.v1",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.layout-c.home-east-river.v1",
+      "type": "resulted_in",
+      "to": "decision.photo.layout-c.home-east-river.v1",
+      "source": "frontmatter",
+      "href": "../../decisions/photography/layout-c-home-east-river-v1.md",
+      "context": null
+    },
+    {
       "from": "evaluation.employment-context.coverage.2026-07-18",
       "type": "related_to",
       "to": "index.knowledge-wiki.employment-context",
@@ -1959,6 +2610,30 @@
       "to": "research.nycac.shared-folder.2026-07-19",
       "source": "frontmatter",
       "href": "../research-runs/nycac-shared-folder-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "type": "has_asset",
+      "to": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-dcla-listening-room-2017.md",
+      "context": "A held photograph documents the room while rights, dignity, identity, and exact credit remain open."
+    },
+    {
+      "from": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "The meeting became a principal formation hinge for the coalition's shared identity and continuing work."
+    },
+    {
+      "from": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
       "context": null
     },
     {
@@ -2016,6 +2691,14 @@
       "source": "frontmatter",
       "href": "indexes/living-archive.md",
       "context": "Orientation, missing-page, project, and situated source-return map."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography",
+      "source": "frontmatter",
+      "href": "indexes/photography.md",
+      "context": "Governed photo assets, exact occurrences, corrections, recollections, and human release gates."
     },
     {
       "from": "index.knowledge-wiki",
@@ -2151,6 +2834,22 @@
       "to": "decision.open-house.communal-governance",
       "source": "frontmatter",
       "href": "../decisions/open-house-communal-governance.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.photo.layout-c.home-east-river.v1",
+      "source": "frontmatter",
+      "href": "../decisions/photography/layout-c-home-east-river-v1.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.photo.layout-c.resume-no-photo.v1",
+      "source": "frontmatter",
+      "href": "../decisions/photography/layout-c-resume-no-photo-v1.md",
       "context": null
     },
     {
@@ -2722,6 +3421,118 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": "First complete public-safe canary asset."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
+      "to": "asset.photo.nyc-council.field-kit.2026.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nyc-council-field-kit-2026.md",
+      "context": "Current civic fieldwork photograph held while photographer permission remains open."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "correction.photo.east-river-credit.2026-07",
+      "source": "frontmatter",
+      "href": "../corrections/east-river-credit-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "decision.photo.layout-c.home-east-river.v1",
+      "source": "frontmatter",
+      "href": "../decisions/photography/layout-c-home-east-river-v1.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "decision.photo.layout-c.resume-no-photo.v1",
+      "source": "frontmatter",
+      "href": "../decisions/photography/layout-c-resume-no-photo-v1.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "edition.layout-c.2026-07",
+      "source": "frontmatter",
+      "href": "../projections/photography/edition-layout-c-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "evaluation.curatorial.layout-c.home-east-river.v1",
+      "source": "frontmatter",
+      "href": "../evaluations/curatorial/layout-c-home-east-river-v1.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "index.photo-set.east-river-canoe.2022",
+      "source": "frontmatter",
+      "href": "photo-sets/east-river-canoe-2022.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "photo-sets/kc-town-hall-fieldwork.md",
+      "context": "Held worksite photographs, protected oral histories, local records, proposal, and one cleared map derivative."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "source": "frontmatter",
+      "href": "photo-sets/nycac-dcla-formation-2017.md",
+      "context": "Held meeting photograph, event identity, and protected formation-source return."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.layout-c.home.east-river",
+      "source": "frontmatter",
+      "href": "../projections/photography/layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "research-inquiry.documented-canoe-bike-journeys",
+      "source": "frontmatter",
+      "href": "../research-inquiries/documented-canoe-bike-journeys.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "research.photographic-source-return.2026-07-26",
+      "source": "frontmatter",
+      "href": "../research-runs/photographic-source-return-2026-07-26.md",
+      "context": "Dated return to supplied photographs, oral histories, proposal, connected archives, local records, and the live Photos capability boundary."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "uses_method",
+      "to": "method.photography-east-river-canary",
+      "source": "frontmatter",
+      "href": "../workflows/photography-east-river-canary.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki.photography-notebook",
       "type": "related_to",
       "to": "index.knowledge-wiki.visual-evidence",
@@ -2752,6 +3563,14 @@
       "source": "frontmatter",
       "href": "field-corpus-001.md",
       "context": "First exploratory selection and close-reading sketchpad."
+    },
+    {
+      "from": "index.knowledge-wiki.photography-notebook",
+      "type": "related_to",
+      "to": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "source": "frontmatter",
+      "href": "oral-history-stewardship-afterlife-001.md",
+      "context": "First governed photo-to-oral-history prompt, held outside claim and publication states."
     },
     {
       "from": "index.knowledge-wiki.pilot",
@@ -3114,6 +3933,118 @@
       "context": null
     },
     {
+      "from": "index.photo-set.east-river-canoe.2022",
+      "type": "has_asset",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.east-river-canoe.2022",
+      "type": "related_to",
+      "to": "source.recollection.jamie-canoe-commuting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "context": "Later recollection about a recurring bicycle-canoe practice."
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "has_asset",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "source": "frontmatter",
+      "href": "../../assets/graphics/kc-town-hall-walkshed-2019.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.hard-hat.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-hard-hat-worksite.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-kc-star-aerial-2021.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-stewardship-interior.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.local-digital-archive.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/archives/kc-town-hall-local-digital-archive-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "type": "has_asset",
+      "to": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-dcla-listening-room-2017.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "type": "related_to",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "source": "frontmatter",
+      "href": "../../events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "context": null
+    },
+    {
       "from": "method.collective-credit-protected-absence",
       "type": "related_to",
       "to": "method.source-backed-team-memory",
@@ -3383,6 +4314,30 @@
       "to": "method.collective-credit-protected-absence",
       "source": "frontmatter",
       "href": "collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "method.photography-east-river-canary",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "method.photography-east-river-canary",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography",
+      "source": "frontmatter",
+      "href": "../indexes/photography.md",
+      "context": null
+    },
+    {
+      "from": "method.photography-east-river-canary",
+      "type": "related_to",
+      "to": "projection.photo.layout-c.home.east-river",
+      "source": "frontmatter",
+      "href": "../projections/photography/layout-c-home-east-river.md",
       "context": null
     },
     {
@@ -3790,6 +4745,22 @@
       "context": null
     },
     {
+      "from": "person.elana-gordon",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": "Preferred creator attribution for the promoted photograph."
+    },
+    {
+      "from": "person.elana-gordon",
+      "type": "related_to",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": "Public-safe permission and credit summary; private correspondence remains outside Git."
+    },
+    {
       "from": "person.jamie-burkart",
       "type": "collaborated_with",
       "to": "organization.nyc-artist-coalition",
@@ -4128,6 +5099,14 @@
     {
       "from": "project.kc-town-hall",
       "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": "Governed visual and oral-history field with held photographs and one cleared proposal-map derivative."
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "related_to",
       "to": "person.jamie-burkart",
       "source": "frontmatter",
       "href": "../people/jamie-burkart.md",
@@ -4228,6 +5207,14 @@
       "source": "frontmatter",
       "href": "../evaluations/nycac-shared-folder-production-2026-07-19.md",
       "context": "Deterministic coverage, leakage, credit, and projection criteria."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "source": "frontmatter",
+      "href": "../events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "context": "Public-safe event record for the agency-hosted meeting and the coalition continuity built around it."
     },
     {
       "from": "project.nyc-artist-coalition",
@@ -4390,6 +5377,54 @@
       "context": null
     },
     {
+      "from": "projection.photo.layout-c.home.east-river",
+      "type": "related_to",
+      "to": "edition.layout-c.2026-07",
+      "source": "frontmatter",
+      "href": "edition-layout-c-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-c.home.east-river",
+      "type": "related_to",
+      "to": "source.recollection.jamie-canoe-commuting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "context": "Encountering the composed placement prompted a later recollection."
+    },
+    {
+      "from": "projection.photo.layout-c.home.east-river",
+      "type": "uses_source",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.layout-c.home.east-river",
+      "type": "uses_source",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.documented-canoe-bike-journeys",
+      "type": "informed_by",
+      "to": "source.recollection.jamie-canoe-commuting.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.documented-canoe-bike-journeys",
+      "type": "related_to",
+      "to": "index.photo-set.east-river-canoe.2022",
+      "source": "frontmatter",
+      "href": "../indexes/photo-sets/east-river-canoe-2022.md",
+      "context": null
+    },
+    {
       "from": "research-inquiry.photography.196-first-pass-proposal",
       "type": "related_to",
       "to": "index.knowledge-wiki.photography-notebook",
@@ -4452,6 +5487,62 @@
       "source": "frontmatter",
       "href": "196-first-pass-proposal.md",
       "context": "The proposal gives the first encounter a time-bound but non-prescriptive residency frame."
+    },
+    {
+      "from": "research-inquiry.photography.field-corpus-001",
+      "type": "related_to",
+      "to": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "source": "frontmatter",
+      "href": "oral-history-stewardship-afterlife-001.md",
+      "context": "One photograph from the private editorial field now opens a bounded oral-history inquiry."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-stewardship-interior.md",
+      "context": "The exact photograph now has a held first-class asset record."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.living-archive",
+      "source": "frontmatter",
+      "href": "../../indexes/living-archive.md",
+      "context": "The inquiry may help locate a public-safe stewardship-transition record without exposing protected personal context."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography-notebook",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": "The notebook governs the separation of attention, recollection, research, and publication."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": "Private archive context provisionally associates the scene with the project's later stewardship."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "related_to",
+      "to": "research-inquiry.photography.field-corpus-001",
+      "source": "frontmatter",
+      "href": "field-corpus-001.md",
+      "context": "The photograph was encountered through the completed private field and its editor-ready proposal."
+    },
+    {
+      "from": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": "A protected first-person response was received and decomposed into public-safe research questions."
     },
     {
       "from": "research-inquiry.ucsc-installation-title",
@@ -4758,6 +5849,70 @@
       "context": null
     },
     {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "has_asset",
+      "to": "asset.photo.nyc-council.field-kit.2026.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nyc-council-field-kit-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "related_to",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "source": "frontmatter",
+      "href": "../indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.local-digital-archive.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/archives/kc-town-hall-local-digital-archive-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.nyc-council.field-kit-oral-history.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.photographic-source-return.2026-07-26",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "context": null
+    },
+    {
       "from": "source.callnyc.source-repository",
       "type": "documents",
       "to": "project.callnyc",
@@ -4896,9 +6051,57 @@
     {
       "from": "source.kc-town-hall.cced-proposal.2019",
       "type": "related_to",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "source": "frontmatter",
+      "href": "../assets/graphics/kc-town-hall-walkshed-2019.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.cced-proposal.2019",
+      "type": "related_to",
       "to": "decision.kc-town-hall.listening-fieldwork",
       "source": "frontmatter",
       "href": "../decisions/kc-town-hall-listening-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.local-digital-archive.2026-07",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.local-digital-archive.2026-07",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.hard-hat.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-hard-hat-worksite.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.photographic-oral-histories.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-stewardship-interior.md",
       "context": null
     },
     {
@@ -4950,6 +6153,54 @@
       "context": null
     },
     {
+      "from": "source.nyc-council.field-kit-oral-history.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.nyc-council.field-kit.2026.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nyc-council-field-kit-2026.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-council.field-kit-oral-history.2026-07",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-council.field-kit-oral-history.2026-07",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-formation-source-return.2026-07",
+      "type": "documents",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "source": "frontmatter",
+      "href": "../../events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-formation-source-return.2026-07",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-formation-source-return.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-dcla-listening-room-2017.md",
+      "context": null
+    },
+    {
       "from": "source.nycac.nightlife-forum-transcript.2026",
       "type": "documents",
       "to": "project.office-of-nightlife-town-halls",
@@ -4990,6 +6241,30 @@
       "context": null
     },
     {
+      "from": "source.permission.elana-gordon.east-river.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.elana-gordon.east-river.2026-07",
+      "type": "related_to",
+      "to": "person.elana-gordon",
+      "source": "frontmatter",
+      "href": "../../people/elana-gordon.md",
+      "context": null
+    },
+    {
+      "from": "source.photo-metadata.east-river.2022.public-safe",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
       "from": "source.politico.callnyc.2016-03-14",
       "type": "documents",
       "to": "project.callnyc",
@@ -5004,6 +6279,22 @@
       "source": "frontmatter",
       "href": "../claims/callnyc-independent-follow-on.md",
       "context": null
+    },
+    {
+      "from": "source.recollection.jamie-canoe-commuting.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-c.home.east-river",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-c-home-east-river.md",
+      "context": "The composed occurrence prompted the recollection."
+    },
+    {
+      "from": "source.recollection.jamie-canoe-commuting.2026-07",
+      "type": "related_to",
+      "to": "research-inquiry.documented-canoe-bike-journeys",
+      "source": "frontmatter",
+      "href": "../../research-inquiries/documented-canoe-bike-journeys.md",
+      "context": "The recollection opened a bounded research question."
     },
     {
       "from": "source.vault.communication-history.metadata",
@@ -5077,7 +6368,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 118,
+      "line": 121,
       "kind": "link"
     },
     {
@@ -5086,7 +6377,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 119,
+      "line": 122,
       "kind": "link"
     },
     {
@@ -5095,7 +6386,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 122,
+      "line": 125,
       "kind": "link"
     },
     {
@@ -5104,7 +6395,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 126,
+      "line": 129,
       "kind": "link"
     },
     {
@@ -5113,7 +6404,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 133,
+      "line": 136,
       "kind": "link"
     },
     {
@@ -5122,7 +6413,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 138,
+      "line": 141,
       "kind": "link"
     },
     {
@@ -5131,7 +6422,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 144,
+      "line": 147,
       "kind": "link"
     },
     {
@@ -5140,7 +6431,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 149,
+      "line": 152,
       "kind": "link"
     },
     {
@@ -5149,7 +6440,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 155,
+      "line": 158,
       "kind": "link"
     },
     {
@@ -5158,7 +6449,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 157,
+      "line": 160,
       "kind": "link"
     },
     {
@@ -5167,7 +6458,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 163,
+      "line": 166,
       "kind": "link"
     },
     {
@@ -5176,7 +6467,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 165,
+      "line": 168,
       "kind": "link"
     },
     {
@@ -5185,7 +6476,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 173,
+      "line": 176,
       "kind": "link"
     },
     {
@@ -5194,7 +6485,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 179,
+      "line": 182,
       "kind": "link"
     },
     {
@@ -5203,7 +6494,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 181,
+      "line": 184,
       "kind": "link"
     },
     {
@@ -5212,7 +6503,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 187,
+      "line": 190,
       "kind": "link"
     },
     {
@@ -5221,7 +6512,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 193,
+      "line": 196,
       "kind": "link"
     },
     {
@@ -5230,7 +6521,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 199,
+      "line": 202,
       "kind": "link"
     },
     {
@@ -5239,7 +6530,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 205,
+      "line": 208,
       "kind": "link"
     },
     {
@@ -5248,7 +6539,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 211,
+      "line": 214,
       "kind": "link"
     },
     {
@@ -5257,7 +6548,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 217,
+      "line": 220,
       "kind": "link"
     },
     {
@@ -5266,7 +6557,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 219,
+      "line": 222,
       "kind": "link"
     },
     {
@@ -5275,7 +6566,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 225,
+      "line": 228,
       "kind": "link"
     },
     {
@@ -5284,7 +6575,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 230,
+      "line": 233,
       "kind": "link"
     },
     {
@@ -5293,7 +6584,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 232,
+      "line": 235,
       "kind": "link"
     },
     {
@@ -5302,7 +6593,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 239,
+      "line": 242,
       "kind": "link"
     },
     {
@@ -5311,7 +6602,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 241,
+      "line": 244,
       "kind": "link"
     },
     {
@@ -5320,7 +6611,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 247,
+      "line": 250,
       "kind": "link"
     },
     {
@@ -5329,7 +6620,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 249,
+      "line": 252,
       "kind": "link"
     },
     {
@@ -5338,7 +6629,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 254,
+      "line": 257,
       "kind": "link"
     },
     {
@@ -5347,7 +6638,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 256,
+      "line": 259,
       "kind": "link"
     },
     {
@@ -5365,7 +6656,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 262,
+      "line": 265,
       "kind": "link"
     },
     {
@@ -5374,7 +6665,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 264,
+      "line": 267,
       "kind": "link"
     },
     {
@@ -5383,7 +6674,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 271,
+      "line": 274,
       "kind": "link"
     },
     {
@@ -5392,16 +6683,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
-      "line": 273,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
-      "to": null,
-      "fragment": null,
-      "line": 279,
+      "line": 276,
       "kind": "link"
     },
     {
@@ -5416,7 +6698,7 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
       "line": 282,
@@ -5425,10 +6707,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 285,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 287,
+      "line": 290,
       "kind": "link"
     },
     {
@@ -5437,7 +6728,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 288,
+      "line": 291,
       "kind": "link"
     },
     {
@@ -5497,10 +6788,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/photography.md",
+      "to": "index.knowledge-wiki.photography",
+      "fragment": null,
+      "line": 45,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/indexes/project-lineages.md",
       "to": "index.knowledge-wiki.project-lineages",
       "fragment": null,
-      "line": 45,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -5509,7 +6809,7 @@
       "toPath": "docs/knowledge-bank/indexes/decision-records.md",
       "to": "index.knowledge-wiki.decision-records",
       "fragment": null,
-      "line": 47,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -5518,7 +6818,7 @@
       "toPath": "docs/knowledge-bank/indexes/family-closure.md",
       "to": "index.knowledge-wiki.family-closure",
       "fragment": null,
-      "line": 49,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -5527,7 +6827,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 52,
+      "line": 55,
       "kind": "link"
     },
     {
@@ -5536,7 +6836,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 55,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -5545,8 +6845,26 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 61,
+      "line": 64,
       "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "toPath": "apps/www/public/images/artifacts/kc-town-hall-walkshed.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "toPath": "apps/www/public/images/field-notes/jamie-east-river.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
     },
     {
       "fromPath": "docs/knowledge-bank/capabilities/civic-cultural-and-technical-translation.md",
@@ -5744,6 +7062,24 @@
       "to": "decision.knowledge-wiki.selective-projection",
       "fragment": null,
       "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
+      "to": "decision.photo.layout-c.home-east-river.v1",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
+      "to": "decision.photo.layout-c.resume-no-photo.v1",
+      "fragment": null,
+      "line": 17,
       "kind": "link"
     },
     {
@@ -6350,6 +7686,204 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "toPath": "docs/knowledge-bank/events/nyc-diy-spaces-dcla-2017-01-27.md",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "toPath": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md",
+      "to": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "from": "index.photo-set.nycac-dcla-formation.2017",
+      "toPath": "docs/knowledge-bank/sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "to": "source.nycac.dcla-formation-source-return.2026-07",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+      "to": "index.photo-set.east-river-canoe.2022",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/people/elana-gordon.md",
+      "to": "person.elana-gordon",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
+      "to": "source.photo-metadata.east-river.2022.public-safe",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "fragment": null,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
+      "to": "evaluation.curatorial.layout-c.home-east-river.v1",
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
+      "to": "decision.photo.layout-c.home-east-river.v1",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
+      "to": "decision.photo.layout-c.resume-no-photo.v1",
+      "fragment": null,
+      "line": 34,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
+      "to": "projection.photo.layout-c.home.east-river",
+      "fragment": null,
+      "line": 35,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
+      "to": "edition.layout-c.2026-07",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
+      "to": "correction.photo.east-river-credit.2026-07",
+      "fragment": null,
+      "line": 37,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "to": "source.recollection.jamie-canoe-commuting.2026-07",
+      "fragment": null,
+      "line": 38,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+      "to": "research-inquiry.documented-canoe-bike-journeys",
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
+      "to": "method.photography-east-river-canary",
+      "fragment": null,
+      "line": 40,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
+      "to": null,
+      "fragment": null,
+      "line": 48,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "fragment": null,
+      "line": 53,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "fragment": null,
+      "line": 54,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "fragment": null,
+      "line": 59,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
+      "to": "research.photographic-source-return.2026-07-26",
+      "fragment": null,
+      "line": 61,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/pilot.md",
       "from": "index.knowledge-wiki.pilot",
       "toPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
@@ -6793,7 +8327,7 @@
     {
       "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
       "from": "index.knowledge-wiki.photography-notebook",
-      "toPath": "rfps/0002-lifetime-photo-archive-fieldwork.md",
+      "toPath": "rfcs/0002-lifetime-photo-archive-fieldwork.md",
       "to": null,
       "fragment": null,
       "line": 13,
@@ -6815,6 +8349,24 @@
       "to": "research-inquiry.photography.field-corpus-001",
       "fragment": null,
       "line": 83,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
+      "from": "index.knowledge-wiki.photography-notebook",
+      "toPath": "docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md",
+      "to": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "fragment": null,
+      "line": 86,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/field-corpus-001.md",
+      "from": "research-inquiry.photography.field-corpus-001",
+      "toPath": "docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md",
+      "to": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+      "fragment": null,
+      "line": 134,
       "kind": "link"
     },
     {
@@ -7165,7 +8717,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 65,
+      "line": 128,
       "kind": "link"
     },
     {
@@ -7174,7 +8726,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 91,
+      "line": 154,
       "kind": "link"
     },
     {
@@ -7733,6 +9285,51 @@
       "to": "index.knowledge-wiki",
       "fragment": null,
       "line": 5,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
+      "from": "method.photography-east-river-canary",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
+      "to": "projection.photo.layout-c.home.east-river",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
+      "from": "method.photography-east-river-canary",
+      "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
+      "from": "method.photography-east-river-canary",
+      "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
+      "from": "method.photography-east-river-canary",
+      "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
+      "to": "source.recollection.jamie-canoe-commuting.2026-07",
+      "fragment": null,
+      "line": 62,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
+      "from": "method.photography-east-river-canary",
+      "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
+      "to": "research-inquiry.documented-canoe-bike-journeys",
+      "fragment": null,
+      "line": 63,
       "kind": "link"
     }
   ]

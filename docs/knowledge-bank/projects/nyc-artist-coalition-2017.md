@@ -30,6 +30,10 @@ relations:
     target: evaluation.nycac.shared-folder-production.2026-07-19
     href: ../evaluations/nycac-shared-folder-production-2026-07-19.md
     context: Deterministic coverage, leakage, credit, and projection criteria.
+  - type: related_to
+    target: event.nyc.dcla.diy-spaces-listening.2017-01-27
+    href: ../events/nyc-diy-spaces-dcla-2017-01-27.md
+    context: Public-safe event record for the agency-hosted meeting and the coalition continuity built around it.
 human_review: governed-open
 ---
 

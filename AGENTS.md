@@ -24,7 +24,8 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
-- `npm run knowledge-bank`
+- `npm run knowledge-wiki`
+- `npm run knowledge-bank` (compatibility alias)
 - `npm run public-safety`
 - `npm run check:routes`
 - `npm run check:citations`
@@ -46,10 +47,11 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
-## Knowledge Bank
+## Knowledge Wiki
 
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
-public-safe claim layer.
+public-safe claim layer. The directory and TypeScript module names are
+compatibility locators; the reader-facing product name is Knowledge Wiki.
 
 Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
 canonical machine-readable source. Do not add or strengthen a public factual
@@ -73,7 +75,7 @@ Do not expose private source paths, private assets, protected locators, signed
 URLs, or raw research artifacts. Regenerate the redacted public registry after
 changing canonical records.
 
-Website copy should project from the knowledge bank and stay optimized for
+Website copy should project from the Knowledge Wiki and stay optimized for
 clarity, audience, and purpose.
 
 Do not strengthen a claim in a public page unless the stronger claim exists in
@@ -103,17 +105,17 @@ exact-commit release discipline.
 
 Use `evals/knowledge-bank/evals.json` for recursive intake and claim maturation.
 Run its deterministic checks before promoting a claim or source into a public
-page. The bank should become deeper with each pass while the public site remains
+page. The Wiki should become deeper with each pass while the public site remains
 selective.
 
 ## Repository Feature Proposals
 
-Use `rfps/` for substantial architecture, governance, privacy-boundary, data
+Use `rfcs/` for substantial architecture, governance, privacy-boundary, data
 model, package, repository, or cross-system proposals. Follow
-`rfps/0000-template.md` and run `node scripts/check-rfps.mjs`. A merged `proposed` or
-`exploring` RFP is preserved for review; it is not implementation authorization.
-Agents may draft, critique, prototype, and test an RFP but may not advance a
-decision that the RFP reserves for Jamie or another named human decision owner.
+`rfcs/0000-template.md` and run `node scripts/check-rfcs.mjs`. A merged `proposed` or
+`exploring` RFC is preserved for review; it is not implementation authorization.
+Agents may draft, critique, prototype, and test an RFC but may not advance a
+decision that the RFC reserves for Jamie or another named human decision owner.
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

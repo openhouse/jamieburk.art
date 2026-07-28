@@ -1,18 +1,21 @@
 {
   "suite": "knowledge-wiki-photography-field-notebook",
-  "version": 5,
+  "version": 7,
   "notebookId": "index.knowledge-wiki.photography-notebook",
   "notebookPath": "docs/knowledge-bank/notebooks/photography/README.md",
   "fieldId": "research-inquiry.photography.field-corpus-001",
   "fieldPath": "docs/knowledge-bank/notebooks/photography/field-corpus-001.md",
   "proposalId": "research-inquiry.photography.196-first-pass-proposal",
   "proposalPath": "docs/knowledge-bank/notebooks/photography/196-first-pass-proposal.md",
+  "oralHistoryId": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
+  "oralHistoryPath": "docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md",
   "visualIndexId": "index.knowledge-wiki.visual-evidence",
-  "rfpPath": "rfps/0002-lifetime-photo-archive-fieldwork.md",
+  "rfcPath": "rfcs/0002-lifetime-photo-archive-fieldwork.md",
   "contentBindings": {
-    "notebook": "755b63d436b6e82b62d8969d1e074aada4a3bc2dda552458adf17b54ef708314",
-    "field": "934b3bfc1c6ce10095679da3e28879b50bab7dde4761de529ff0c9a43043d930",
-    "proposal": "68a4cdc3b33aae711186572e35fd16d95076289b807ec285355e866d50053120"
+    "notebook": "5e764f018a12eea13da59b508bdc2c90f0d9ec7ac0ef726fc0189d6687d2aa43",
+    "field": "a4d9f27c23c484726d4f7672798832cc4be5dd119128d442604f0b4e159e5a1b",
+    "proposal": "68a4cdc3b33aae711186572e35fd16d95076289b807ec285355e866d50053120",
+    "oralHistory": "b141a08f2f9d1b45c7b6dca1c9bcbe81560074f45cb0a65bbed501b25ee7aedc"
   },
   "residencyAcceptance": {
     "acceptedBy": "Jamie Burkart",

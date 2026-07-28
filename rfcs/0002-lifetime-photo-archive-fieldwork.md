@@ -1,5 +1,5 @@
 ---
-rfp: 2
+rfc: 2
 title: Lifetime Photo Archive Fieldwork and Selective Publication
 stage: proposed
 start_date: 2026-07-22
@@ -154,7 +154,7 @@ archive that made those selections possible.
 
 Permitted public artifacts may include:
 
-- this RFP and later accepted operating documentation;
+- this RFC and later accepted operating documentation;
 - evaluation schemas and synthetic fixtures that contain no personal archive
   data;
 - redacted aggregate run receipts that cannot identify people or reconstruct

@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,33 +12,23 @@ const sourceNotePath = path.join(
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
 );
 
-export const professorCandidateRelativePaths = [
+const professorRubricRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
-  "DESIGN.md",
-  "apps/www/public/images/field-notes/jamie-east-river.webp",
-  "apps/www/public/images/field-notes/paper-trimming.webp",
-  "apps/www/public/images/field-notes/printed-editions.webp",
-  "apps/www/public/images/field-notes/raft-riverboat.webp",
-  "apps/www/src/app/about/page.tsx",
-  "apps/www/src/app/colophon/page.tsx",
-  "apps/www/src/app/globals.css",
-  "apps/www/src/app/layout.tsx",
-  "apps/www/src/app/page.tsx",
-  "apps/www/src/app/work/page.tsx",
-  "apps/www/src/app/work/technical-operations/page.tsx",
-  "apps/www/src/components/FieldPhoto.tsx",
-  "apps/www/src/components/SiteFooter.tsx",
-  "apps/www/src/components/SiteHeader.tsx",
-  "apps/www/src/components/Hero.tsx",
-  "apps/www/src/content/work/harry-j-epstein.mdx",
-  "apps/www/src/content/work/wowlist.mdx",
-  "apps/www/src/content/work/callnyc.mdx",
-  "apps/www/src/content/work/196-sunday-dinner.mdx",
-  "apps/www/src/content/work/fair-rent-nyc.mdx",
-  "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
-  "apps/www/src/data/photography.ts",
-  "apps/www/src/data/work.ts"
+  "DESIGN.md"
 ];
+
+const publicSurfaceRelativePaths = execFileSync(
+  "git",
+  ["ls-files", "apps/www", "package.json", "package-lock.json"],
+  { cwd: repoRoot, encoding: "utf8" }
+)
+  .trim()
+  .split("\n")
+  .filter(Boolean);
+
+export const professorCandidateRelativePaths = [
+  ...new Set([...professorRubricRelativePaths, ...publicSurfaceRelativePaths])
+].sort();
 
 const finalScorecardRelativePaths = [
   "docs/qa/evals-H/margaret-morse-final-a.json",
@@ -48,7 +39,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "636bdcf6b19e31dbf5e51530da4b407d2adfee38605e94c58cd67169e0322d3d";
+const approvedCandidateSha256 = "f67dfb357367da9e5e33f58230e934f80da09deeb45bf7745d0210b5c7831f54";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },

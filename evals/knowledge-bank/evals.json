@@ -214,19 +214,42 @@
     },
     "kcTownHallCouncilFunding": {
       "intakeId": "INTAKE-KC-TOWN-HALL-COUNCIL-FUNDING-2019",
+      "awardIntakeId": "INTAKE-KC-TOWN-HALL-AWARD-ROLE-2019",
+      "stewardshipIntakeId": "INTAKE-KC-TOWN-HALL-ADMINISTRATIVE-STEWARDSHIP-2021-2023",
       "contributionIntakeId": "INTAKE-KC-TOWN-HALL-RESUME-CONTRIBUTION-2026",
       "transitionIntakeId": "INTAKE-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
       "claimId": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+      "awardClaimId": "CLM-KC-TOWN-HALL-JAMIE-SECURED-CCED-AWARD",
+      "stewardshipClaimId": "CLM-KC-TOWN-HALL-ADMINISTRATIVE-STEWARDSHIP",
       "contributionClaimId": "CLM-KC-TOWN-HALL-JAMIE-PLANNING-CONTRIBUTION",
+      "transitionClaimId": "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
       "inquiryId": "INQ-KC-TOWN-HALL-COUNCIL-FUNDING-2026",
+      "awardInquiryId": "INQ-KC-TOWN-HALL-JAMIE-AWARD-ROLE-2026",
+      "stewardshipInquiryId": "INQ-KC-TOWN-HALL-ADMINISTRATIVE-STEWARDSHIP-2026",
       "proofId": "kc-town-hall-public-benefit-documentation",
       "pageId": "kc-town-hall",
-      "approvedMdxSha256": "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-      "approvedContentSha256": "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
+      "approvedMdxSha256": "21d241eae57f230f4863ded3afeacca25715e5c3335c83c4314764d141d33178",
+      "approvedContentSha256": "ecfe86b9804ebd2310012a8fbb0b0017ee2ce4b2b4de7d67ede1e5f156a63b5d",
       "contributionSourceId": "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
+      "transitionSourceId": "SRC-JAMIE-KC-TOWN-HALL-TRANSITION-AUTHORIZATION-2026",
       "contributionObservationId": "OBS-KC-TOWN-HALL-JAMIE-PLANNING-RESUME",
       "transitionObservationId": "OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY",
       "transitionInquiryId": "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+      "awardSourceIds": [
+        "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
+        "SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019",
+        "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+        "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+        "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+        "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+      ],
+      "stewardshipSourceIds": [
+        "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+        "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+        "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
+        "SRC-KCMO-ORDINANCE-230316",
+        "SRC-KC-TOWN-HALL-CCED-UPDATE-2023-12-12"
+      ],
       "sourceIds": [
         "SRC-KC-TOWN-HALL-RESOLUTION-190649",
         "SRC-KC-TOWN-HALL-ORDINANCE-190642",
@@ -240,9 +263,22 @@
         "OBS-KC-TOWN-HALL-NO-DISBURSEMENT-2022",
         "OBS-KC-TOWN-HALL-WITHDRAWAL-240317"
       ],
+      "awardObservationIds": [
+        "OBS-KC-TOWN-HALL-JAMIE-DEVELOPER-PRESENTER-2019",
+        "OBS-KC-TOWN-HALL-SUCCESSFUL-REQUEST-2019"
+      ],
+      "stewardshipObservationIds": [
+        "OBS-KC-TOWN-HALL-KCSTAR-ADMINISTRATIVE-BURDEN-2021",
+        "OBS-KC-TOWN-HALL-JAMIE-DEVELOPER-CONTACT-2022",
+        "OBS-KC-TOWN-HALL-COMPLIANCE-PROGRESS-2023",
+        "OBS-KC-TOWN-HALL-POLICY-DEADLINE-2023"
+      ],
       "relationIds": [
         "REL-KC-CCED-BOARD-RECOMMENDED-TOWN-HALL",
         "REL-JAMIE-COLED-KC-TOWN-HALL-PLANNING",
+        "REL-JAMIE-CODEVELOPED-PRESENTED-KC-TOWN-HALL-REQUEST",
+        "REL-JAMIE-SUSTAINED-KC-TOWN-HALL-CCED-COORDINATION",
+        "REL-JAMIE-TRANSITIONED-KC-TOWN-HALL-STEWARDSHIP",
         "REL-KC-COUNCIL-ACCEPTED-TOWN-HALL-RECOMMENDATION",
         "REL-KC-COUNCIL-APPROPRIATED-TOWN-HALL-FUNDS",
         "REL-KC-TOWN-HALL-WITHDREW-CCED-PROJECT",
@@ -775,7 +811,7 @@
     },
     "kcTownHallFieldPractice": {
       "documentationPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
-      "approvedContentSha256": "7344b91556feaffebbcf4394b0b6cca9ac005c8d94d3b325dce97c557fc1cdc1",
+      "approvedContentSha256": "20969ea8c506b025cfc6cd0dadb6b4eab4ce7eb93935885c421be5ca33b5563a",
       "expectedIntakeCount": 3,
       "expectedObservationCount": 13,
       "expectedSourceCount": 5,
@@ -1028,9 +1064,9 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 31,
-      "expectedRelationCount": 31,
-      "approvedGraphSha256": "ee05326db54ab02a5a22b1d36b09308159aa6482c790eef78e64bed1b8b48f86",
+      "expectedEntityCount": 32,
+      "expectedRelationCount": 34,
+      "approvedGraphSha256": "5471c699a6f92a46f974dcbe898f89cf101dff44ea646d51d61c6752e8ede829",
       "relationIds": [
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",
@@ -1059,6 +1095,9 @@
         "REL-JAMIE-COMMERCIAL-RENT-TESTIMONY",
         "REL-KC-CCED-BOARD-RECOMMENDED-TOWN-HALL",
         "REL-JAMIE-COLED-KC-TOWN-HALL-PLANNING",
+        "REL-JAMIE-CODEVELOPED-PRESENTED-KC-TOWN-HALL-REQUEST",
+        "REL-JAMIE-SUSTAINED-KC-TOWN-HALL-CCED-COORDINATION",
+        "REL-JAMIE-TRANSITIONED-KC-TOWN-HALL-STEWARDSHIP",
         "REL-KC-COUNCIL-ACCEPTED-TOWN-HALL-RECOMMENDATION",
         "REL-KC-COUNCIL-APPROPRIATED-TOWN-HALL-FUNDS",
         "REL-KC-TOWN-HALL-WITHDREW-CCED-PROJECT",

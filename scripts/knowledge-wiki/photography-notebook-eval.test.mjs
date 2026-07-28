@@ -38,6 +38,9 @@ function manifestForSources(overrides = {}) {
   manifest.contentBindings.proposal = sha256(
     overrides.proposal ?? sourceFor(manifest.proposalId)
   );
+  manifest.contentBindings.oralHistory = sha256(
+    overrides.oralHistory ?? sourceFor(manifest.oralHistoryId)
+  );
   return manifest;
 }
 
@@ -48,9 +51,9 @@ function manifestForFieldSource(fieldSource) {
 test("photography notebook baseline passes", () => {
   const evaluation = evaluatePhotographyNotebook({ result });
   assert.deepEqual(evaluation.failures, []);
-  assert.equal(evaluation.counts.blockingCriteria, 27);
+  assert.equal(evaluation.counts.blockingCriteria, 32);
   assert.equal(evaluation.counts.humanGates, 10);
-  assert.equal(evaluation.counts.governedRecords, 3);
+  assert.equal(evaluation.counts.governedRecords, 4);
 });
 
 test("a missing field corpus page fails the notebook contract", () => {
@@ -73,9 +76,20 @@ test("a missing residency proposal fails the notebook contract", () => {
   assert.equal(evaluation.checks.photography_notebook_reachable, false);
 });
 
-test("a false completed-corpus statement fails truthful state", () => {
+test("a missing oral-history prompt fails the notebook contract", () => {
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    recordOverrides: {
+      "research-inquiry.photography.oral-history-stewardship-afterlife-001": null
+    }
+  });
+  assert.equal(evaluation.checks.photography_notebook_materialized, false);
+  assert.equal(evaluation.checks.photography_notebook_reachable, false);
+});
+
+test("an obsolete unassembled-corpus statement fails truthful state", () => {
   const id = "research-inquiry.photography.field-corpus-001";
-  const fieldSource = `${sourceFor(id)}\n\nWe finished assembling the full corpus.\n`;
+  const fieldSource = `${sourceFor(id)}\n\nThe current private 1,000-photo field is not assembled.\n`;
   const evaluation = evaluatePhotographyNotebook({
     result,
     manifest: manifestForFieldSource(fieldSource),
@@ -84,6 +98,78 @@ test("a false completed-corpus statement fails truthful state", () => {
     }
   });
   assert.equal(evaluation.checks.field_corpus_state_truthful, false);
+});
+
+test("oral history cannot automatically become a claim or publication approval", () => {
+  const id =
+    "research-inquiry.photography.oral-history-stewardship-afterlife-001";
+  const oralHistorySource = `${sourceFor(id)}\n\nJamie's response automatically becomes a verified claim and approves publication.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ oralHistory: oralHistorySource }),
+    sourceOverrides: { [id]: oralHistorySource }
+  });
+  assert.equal(
+    evaluation.checks.oral_history_intake_cannot_auto_promote,
+    false
+  );
+  assert.equal(evaluation.checks.oral_history_not_publication, false);
+});
+
+test("oral-history private locators fail closed", () => {
+  const id =
+    "research-inquiry.photography.oral-history-stewardship-afterlife-001";
+  const oralHistorySource = `${sourceFor(id)}\n\nProtected source: /Users/example/Pictures/private-library\nImage file: private-frame.heic\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ oralHistory: oralHistorySource }),
+    sourceOverrides: { [id]: oralHistorySource }
+  });
+  assert.equal(evaluation.checks.public_notebook_has_no_private_payload, false);
+  assert.equal(evaluation.checks.oral_history_privacy_fails_closed, false);
+});
+
+test("oral-history public notes cannot name a protected circumstance category", () => {
+  const id =
+    "research-inquiry.photography.oral-history-stewardship-afterlife-001";
+  const oralHistorySource = `${sourceFor(id)}\n\nThe transition followed a family crisis.\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ oralHistory: oralHistorySource }),
+    sourceOverrides: { [id]: oralHistorySource }
+  });
+  assert.equal(evaluation.checks.oral_history_privacy_fails_closed, false);
+});
+
+test("an embedded oral-history photograph fails the public notebook boundary", () => {
+  const id =
+    "research-inquiry.photography.oral-history-stewardship-afterlife-001";
+  const oralHistorySource = `${sourceFor(id)}\n\n![private preview](https://example.com/private.jpg)\n`;
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ oralHistory: oralHistorySource }),
+    sourceOverrides: { [id]: oralHistorySource }
+  });
+  assert.equal(evaluation.checks.public_notebook_has_no_private_payload, false);
+  assert.equal(evaluation.checks.oral_history_privacy_fails_closed, false);
+});
+
+test("oral-history intake must preserve corroboration and collaborator review", () => {
+  const id =
+    "research-inquiry.photography.oral-history-stewardship-afterlife-001";
+  const oralHistorySource = sourceFor(id).replace(
+    "seek corroborating\nrecords and collaborator knowledge, preserve counterevidence",
+    "accept the recollection without corroboration or collaborator review"
+  );
+  const evaluation = evaluatePhotographyNotebook({
+    result,
+    manifest: manifestForSources({ oralHistory: oralHistorySource }),
+    sourceOverrides: { [id]: oralHistorySource }
+  });
+  assert.equal(
+    evaluation.checks.oral_history_research_and_credit_open,
+    false
+  );
 });
 
 test("the one-photo canary cannot complete the larger field", () => {

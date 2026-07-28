@@ -385,6 +385,26 @@
       ]
     },
     {
+      "id": "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
+      "title": "Central City Economic Development Sales Tax Board meeting materials",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-07-29",
+      "accessedAt": "2026-07-26",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Central City Economic Development Sales Tax Board meeting materials, June-July 2019.",
+      "publicNote": "The June 12 minutes identify Jamie as KC Town Hall's developer/presenter for a $490,539 request. The July 16 minutes record the Board's unanimous vote to recommend approval and funding in that amount.",
+      "doesNotEstablish": [
+        "sole authorship of the proposal or presentation materials",
+        "that Jamie controlled or solely caused the Board vote",
+        "Council acceptance or appropriation",
+        "an executed funding agreement, receipt, disbursement, expenditure, construction, or completion"
+      ]
+    },
+    {
       "id": "SRC-KC-TOWN-HALL-RESOLUTION-190649",
       "title": "Second Committee Substitute for Resolution No. 190649",
       "organization": "Council of Kansas City, Missouri",
@@ -427,44 +447,42 @@
       ]
     },
     {
-      "id": "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
-      "title": "Central City Sales Tax Project Updates - May 17, 2022",
+      "id": "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+      "title": "Central City Economic Development Sales Tax Board meeting materials - December 13, 2022",
       "organization": "City of Kansas City, Missouri",
       "kind": "government-record",
       "visibility": "public",
       "preservationStatus": "live",
-      "publishedAt": "2022-05-17",
-      "accessedAt": "2026-07-14",
-      "canonicalUrl": "https://clerk.kcmo.gov/View.ashx?GUID=C851CE5D-2041-4E27-9967-26DB1BFD1D4F&ID=10918035&M=F",
+      "publishedAt": "2022-12-13",
+      "accessedAt": "2026-07-26",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/9697/638084262582370000",
       "preferredPublicUrl": "canonical",
-      "publicCitation": "City of Kansas City, Missouri, 'Central City Sales Tax Project Updates,' May 17, 2022.",
-      "publicNote": "The KC Town Hall row in the official Round 2 status table lists a $490,539 budget, no disbursed amount, and a funding agreement still under negotiation.",
+      "publicCitation": "City of Kansas City, Missouri, Central City Economic Development Sales Tax Board meeting materials, December 13, 2022.",
+      "publicNote": "The public packet calls the Round 2 amounts awards, reports no KC Town Hall disbursement, and includes a pre-initial report naming Jamie and project counsel as developer points of contact. Contact details are intentionally omitted.",
       "doesNotEstablish": [
-        "what occurred after May 17, 2022",
-        "the reason for the negotiation timeline",
-        "individual responsibility for the project's status",
-        "the status of unrelated public or private funding"
+        "sole responsibility for every project submission or compliance task",
+        "an executed funding agreement",
+        "receipt, expenditure, construction, or completion",
+        "the reason for the project's later withdrawal"
       ]
     },
     {
-      "id": "SRC-KC-TOWN-HALL-ORDINANCE-240317",
-      "title": "Ordinance No. 240317",
-      "organization": "Council of Kansas City, Missouri",
+      "id": "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
+      "title": "KC Town Hall CCED pre-initial fund-disbursement bimonthly report",
+      "organization": "City of Kansas City, Missouri",
       "kind": "government-record",
       "visibility": "public",
       "preservationStatus": "live",
-      "publishedAt": "2024-03-28",
-      "accessedAt": "2026-07-14",
-      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
-      "assetUrl": "https://clerk.kcmo.gov/View.ashx?M=F&ID=12810736&GUID=3A0D7DA0-D417-4A3B-A922-B9EA9A6EB862",
+      "accessedAt": "2026-07-26",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/10872/638229613912800000",
       "preferredPublicUrl": "canonical",
-      "publicCitation": "Council of Kansas City, Missouri, Ordinance No. 240317, passed March 28, 2024.",
-      "publicNote": "The title, recitals, and Section 1 confirm the 2019 KC Town Hall appropriation, record project withdrawal, and reclaim the full unused amount.",
+      "publicCitation": "City of Kansas City, Missouri, KC Town Hall CCED pre-initial fund-disbursement bimonthly report, public meeting packet.",
+      "publicNote": "The City-posted form is labeled December 2023 Report (October/November 2023). It again names Jamie and project counsel as developer points of contact and records established M/WBE goals and active CREO coordination. Contact details are intentionally omitted.",
       "doesNotEstablish": [
-        "the reason for withdrawal",
-        "individual responsibility for withdrawal",
-        "that the 2019 Council appropriation did not occur",
-        "the status of unrelated funding or property interests"
+        "who performed each underlying compliance task",
+        "an executed funding agreement",
+        "construction start, receipt, expenditure, or completion",
+        "the reason for the project's later withdrawal"
       ]
     },
     {
@@ -474,12 +492,12 @@
       "kind": "project-archive",
       "visibility": "public",
       "preservationStatus": "live",
-      "publishedAt": "2026-06-11",
-      "accessedAt": "2026-07-14",
+      "publishedAt": "2026-07-11",
+      "accessedAt": "2026-07-26",
       "canonicalUrl": "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "preferredPublicUrl": "canonical",
-      "publicCitation": "Jamie Burkart, 'Resume - Technical Project Manager,' KC Town Hall LLC entry, June 11, 2026.",
-      "publicNote": "The KC Town Hall LLC entry identifies Jamie as co-founder and project manager and describes his planning and public-benefit documentation contribution.",
+      "publicCitation": "Jamie Burkart, 'Resume - Technical Project Manager,' KC Town Hall LLC entry, July 11, 2026, revised July 26, 2026.",
+      "publicNote": "The maintained KC Town Hall LLC entry identifies Jamie as co-founder and project manager, describes his planning and public-benefit documentation contribution, and includes the authorized award-and-transition wording.",
       "doesNotEstablish": [
         "independent third-party verification of Jamie's contribution",
         "Jamie's causal role in the Board recommendation or Council actions",
@@ -585,6 +603,28 @@
         "authorship of a particular post",
         "engagement with KC Town Hall",
         "project adoption, partnership, or endorsement"
+      ]
+    },
+    {
+      "id": "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+      "title": "Advocates say City Hall has moved too slow with special tax meant to improve East Side",
+      "organization": "The Kansas City Star",
+      "author": "Kevin Hardy, Mike Hendricks, and Cortlynn Stark",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2021-12-27",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.kansascity.com/news/politics-government/article256377677.html",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Kevin Hardy, Mike Hendricks, and Cortlynn Stark, 'Advocates say City Hall has moved too slow with special tax meant to improve East Side,' The Kansas City Star, December 27, 2021.",
+      "publicNote": "The investigation leads with KC Town Hall, reports a final contract still incomplete more than two years after the Board recommendation, and describes insurance and tax-document roadblocks. Its elevated lead photograph of the building is credited to Tammy Ljungblad; publication by the Star does not clear reuse rights for this portfolio.",
+      "doesNotEstablish": [
+        "the later project-withdrawal reason",
+        "receipt or expenditure of appropriated funds",
+        "construction or completion",
+        "Jamie's individual role or causal credit",
+        "portfolio republication rights for the Kansas City Star photograph"
       ]
     },
     {
@@ -1626,12 +1666,12 @@
       ]
     },
     {
-      "id": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+      "id": "CLM-KC-TOWN-HALL-JAMIE-SECURED-CCED-AWARD",
       "status": "confirmed-with-boundary",
       "projections": [
         {
           "key": "case-study",
-          "text": "After the CCED Board recommended KC Town Hall's proposal, the Kansas City Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated $490,539 in 2019. City records reported no disbursement and an agreement still under negotiation in 2022; after the project withdrew, the Council returned the full unused appropriation to the fund in 2024.",
+          "text": "Jamie secured a $490,539 public funding award for KC Town Hall by co-developing the successful CCED proposal and serving as the City's named developer/presenter for the exact request. The Board recommended the full request, and the Council accepted and appropriated the amount.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1640,7 +1680,7 @@
         },
         {
           "key": "archive-note",
-          "text": "The public record traces KC Town Hall from a $490,539 CCED Board recommendation through Council acceptance, negotiation authority, and appropriation, followed by non-disbursement, withdrawal, and return of the unused amount.",
+          "text": "The strongest bounded professional claim is that Jamie secured a $490,539 public funding award by co-developing and presenting KC Town Hall's successful CCED request. Institutional authority remained with the Board and Council, and the award never became an executed agreement or disbursement.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1650,12 +1690,21 @@
       ],
       "evidence": [
         {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie Burkart was the named developer and presenter for KC Town Hall's $490,539 CCED request",
+            "the CCED Board unanimously voted to recommend approval and funding of KC Town Hall's full $490,539 request"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
           "sourceId": "SRC-KC-TOWN-HALL-RESOLUTION-190649",
           "relationship": "direct-support",
           "supports": [
             "the CCED Board voted to recommend $490,539 for KC Town Hall",
-            "the Council accepted the CCED Board recommendation",
-            "the Council authorized negotiation of a funding agreement"
+            "the Council accepted the CCED Board recommendation"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -1664,37 +1713,112 @@
           "sourceId": "SRC-KC-TOWN-HALL-ORDINANCE-190642",
           "relationship": "direct-support",
           "supports": [
-            "the Council passed Ordinance 190642 as substituted on September 26, 2019",
             "the Council appropriated $490,539 to KC Town Hall"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
-          "relationship": "supports-boundary",
-          "supports": [
-            "no KC Town Hall funds were reported as disbursed on May 17, 2022",
-            "the KC Town Hall funding agreement remained under negotiation on May 17, 2022"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KC-TOWN-HALL-ORDINANCE-240317",
-          "relationship": "supports-boundary",
-          "supports": [
-            "KC Town Hall later withdrew from the project",
-            "the Council reclaimed the full unused $490,539 project appropriation in 2024"
           ],
           "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "Appropriation is not receipt, disbursement, expenditure, an executed funding agreement, construction, or completion.",
-        "The legislative record does not establish Jamie's individual role in securing the Board recommendation or Council actions.",
-        "Any public account of the 2019 appropriation must retain the later non-disbursement, withdrawal, and return of the full unused amount."
+        "Secured describes Jamie's documented proposal-and-presentation role connected to the successful institutional result; it does not assign him the Board's or Council's authority or claim sole causation.",
+        "Co-developed preserves shared project credit and does not claim sole authorship of the proposal or presentation materials.",
+        "Award and appropriation are not an executed funding agreement, receipt, disbursement, expenditure, construction, or completion.",
+        "The full lifecycle, including non-disbursement and return of the unused appropriation, remains preserved in the Knowledge Wiki even when hiring-facing copy leads with the award."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-ADMINISTRATIVE-STEWARDSHIP",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie remained a named developer point of contact through a multi-year administrative process. A 2021 Kansas City Star investigation documented repeated City Hall roadblocks; City-posted reports in 2022 and 2023 then show progress from unresolved M/WBE and CREO requirements to established goals and active coordination.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+          "relationship": "corroborating",
+          "supports": [
+            "no final contract completed by the article's December 2021 publication date",
+            "reported administrative delay after the CCED Board recommendation",
+            "reported insurance and tax-document roadblocks in the KC Town Hall process"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+          "relationship": "direct-support",
+          "supports": [
+            "James Burkart and project counsel were named as KC Town Hall developer points of contact in the December 2022 pre-initial report",
+            "professional and construction M/WBE goals were not yet established in the December 2022 report"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
+          "relationship": "direct-support",
+          "supports": [
+            "James Burkart and project counsel were named as KC Town Hall developer points of contact in the later pre-initial report",
+            "professional and construction M/WBE goals were recorded as established",
+            "CREO coordination for pre-bid, bid, pre-construction, and construction meetings was recorded as active"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Named point-of-contact status and reported progress do not establish sole responsibility for every submission or task.",
+        "The policy and applied deadline do not establish that the policy alone caused withdrawal.",
+        "The reports contain contact details that are not reproduced.",
+        "Private correspondence and personal circumstances remain outside the public repository."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie later transitioned the project to a mission-aligned organization.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "resume-html",
+          "text": "Secured a $490,539 public funding award for KC Town Hall through a successful CCED proposal and presentation, then transitioned the project to a mission-aligned organization.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie has authorized a bounded first-party professional claim that he transitioned KC Town Hall project stewardship to a mission-aligned organization; recipient identity and legal mechanics remain outside the public claim.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "This is an authorized first-party professional account, not independent verification.",
+        "Do not identify the receiving organization.",
+        "Do not infer the legal form, date, scope, acceptance, or municipal approval of the transition.",
+        "Keep the transition distinct from the City's later withdrawal record."
       ]
     },
     {
@@ -1726,7 +1850,7 @@
       "boundaries": [
         "This is Jamie's approved first-party professional account, not an independent municipal or collaborator attribution.",
         "Co-leadership does not imply sole ownership of collective project work.",
-        "This claim is separate from the municipal records and does not establish that Jamie caused the Board or Council actions."
+        "This claim is separate from the municipal decision record; Jamie's award-seeking role is governed by CLM-KC-TOWN-HALL-JAMIE-SECURED-CCED-AWARD."
       ]
     },
     {
@@ -2708,10 +2832,12 @@
       "id": "kc-town-hall",
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
+        "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
         "SRC-KC-TOWN-HALL-RESOLUTION-190649",
         "SRC-KC-TOWN-HALL-ORDINANCE-190642",
-        "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
-        "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+        "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+        "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+        "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
         "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
         "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
         "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
@@ -2721,14 +2847,28 @@
       ],
       "occurrences": [
         {
-          "id": "council-appropriation-lifecycle",
-          "claimId": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+          "id": "jamie-secured-cced-award",
+          "claimId": "CLM-KC-TOWN-HALL-JAMIE-SECURED-CCED-AWARD",
           "projection": "case-study",
           "sourceIds": [
+            "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
             "SRC-KC-TOWN-HALL-RESOLUTION-190649",
-            "SRC-KC-TOWN-HALL-ORDINANCE-190642",
-            "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
-            "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+            "SRC-KC-TOWN-HALL-ORDINANCE-190642"
+          ]
+        },
+        {
+          "id": "mission-aligned-transition",
+          "claimId": "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+          "projection": "case-study"
+        },
+        {
+          "id": "administrative-stewardship",
+          "claimId": "CLM-KC-TOWN-HALL-ADMINISTRATIVE-STEWARDSHIP",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+            "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+            "SRC-KC-TOWN-HALL-CCED-REPORT-2023"
           ]
         },
         {

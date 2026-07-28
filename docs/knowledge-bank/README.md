@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-22
+last_reviewed: 2026-07-26
 review_by: 2027-01-18
 aliases:
   - Knowledge Bank
@@ -30,6 +30,10 @@ relations:
     target: index.knowledge-wiki.photography-notebook
     href: notebooks/photography/README.md
     context: Public-safe working notebook for exploratory photographic fieldwork.
+  - type: related_to
+    target: index.knowledge-wiki.photography
+    href: indexes/photography.md
+    context: Governed photo assets, exact occurrences, corrections, recollections, and human release gates.
   - type: related_to
     target: index.knowledge-wiki.project-lineages
     href: indexes/project-lineages.md
@@ -63,7 +67,7 @@ Protected source material remains outside the repository.
 The repo is public. Do not put anything here that would be unsafe, unfair, too
 private, or too hard to defend if quoted in a newspaper.
 
-The website is a projection of this bank. The bank can hold more structure than
+The website is a projection of this Wiki. The Wiki can hold more structure than
 the site shows: canonical claim language, evidence posture, source-basis
 categories, public-use guidance, guardrails, projection surfaces, and explicit
 non-public boundaries.
@@ -91,6 +95,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Photography field notebook](notebooks/photography/README.md): exploratory
   questions, sequence sketches, visual patterns, counterreadings, and dated
   public-safe changes in understanding.
+- [Photography knowledge loop](indexes/photography.md): first-class photo
+  records, exact page occurrences, credit corrections, recollections, protected
+  absence, and release gates implemented through the East River canary.
 - [Project lineages](indexes/project-lineages.md): inheritance, adaptation, and
   divergence without retrospective inevitability.
 - [Decision records](indexes/decision-records.md): bounded reconstructions that
@@ -111,7 +118,7 @@ links, search stable IDs, use Find All References when needed, and run
 
 ## Purpose
 
-The knowledge bank exists to:
+The Knowledge Wiki exists to:
 
 - preserve strong, defensible professional claims;
 - keep public site copy grounded in evidence;
@@ -127,7 +134,7 @@ The knowledge bank exists to:
 
 ## Publication Model
 
-- **Knowledge bank:** public-safe repository layer for defensible claims,
+- **Knowledge Wiki:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
 - **Intake and observations:** lossless public-safe capture and proposition-level
   source reading in `historical-knowledge.ts`.
@@ -151,7 +158,7 @@ detail.
 
 ## Projection Rule
 
-The site should project from this bank, not mirror it.
+The site should project from this Wiki, not mirror it.
 
 For hiring pages, prefer role-fit claims: requirements, workflow mapping,
 documentation architecture, source-backed memory, implementation support,

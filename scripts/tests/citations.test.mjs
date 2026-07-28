@@ -28,15 +28,18 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
-test("KC Town Hall keeps contribution evidence separate from municipal lifecycle evidence", () => {
+test("KC Town Hall keeps the hiring-facing award, transition, and planning records distinct", () => {
   assert.deepEqual(
-    resolveCitationOccurrence("kc-town-hall", "council-appropriation-lifecycle").sources.map((item) => item.source.id),
+    resolveCitationOccurrence("kc-town-hall", "jamie-secured-cced-award").sources.map((item) => item.source.id),
     [
+      "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
       "SRC-KC-TOWN-HALL-RESOLUTION-190649",
-      "SRC-KC-TOWN-HALL-ORDINANCE-190642",
-      "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
-      "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+      "SRC-KC-TOWN-HALL-ORDINANCE-190642"
     ]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "mission-aligned-transition").sources,
+    []
   );
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "jamie-planning-contribution").sources.map((item) => item.source.id),

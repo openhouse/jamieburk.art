@@ -48,6 +48,7 @@ export type Artifact = {
     caption: string;
     href: string;
     sourceLabel: string;
+    fit?: "cover" | "contain";
   };
 };
 

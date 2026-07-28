@@ -37,7 +37,11 @@ const acceptancePublicationPattern =
 const falselyResolvedRememberedSourcePattern =
   /(?:\bTeju Cole (?:wrote|said|described)\b.{0,80}\b(?:exactly|verbatim|in the essay titled)\b|\b(?:exact )?source (?:has been|is) (?:verified|confirmed|recovered)\b)/i;
 const canaryCompletionPattern =
-  /(?:\bone-photo (?:operational )?canary\b.{0,140}\b(?:completes?|completed|proves?|establishes?)\b.{0,100}\b(?:field corpus 001|1,000-photo(?:graph)? field|archive-wide|publication readiness|publication ready)\b|\b(?:field corpus 001|1,000-photo(?:graph)? field)\b.{0,100}\b(?:is|has been|was)\b.{0,30}\b(?:assembled|complete|completed|frozen|ingested|publication ready)\b)/i;
+  /(?:\bone-photo (?:operational )?canary\b.{0,140}\b(?:completes?|completed|proves?|establishes?)\b.{0,100}\b(?:field corpus 001|1,000-photo(?:graph)? field|archive-wide|publication readiness|publication ready)\b|\b(?:field corpus 001|1,000-photo(?:graph)? field)\b.{0,100}\b(?:completed|assembled|frozen|ingested)\b.{0,80}\b(?:by|through)\b.{0,40}\bone-photo (?:operational )?canary\b)/i;
+const oralHistoryAutoPromotionPattern =
+  /\b(?:oral history|recollection|Jamie['’]s response|response)\b.{0,120}\b(?:automatically|directly|without review)\b.{0,100}\b(?:verified claim|claim|approves? publication|publication approval|public caption|rights clearance)\b/i;
+const protectedCircumstanceDisclosurePattern =
+  /\b(?:family|medical|health|financial|legal|housing|relationship|personal)\s+(?:crisis|emergency|hardship|conflict|breakdown)\b/i;
 const unauthorizedCatalogMutationPattern =
   /(?:(?<!not )\b(?:edit|move|delete|retag|reorganize|modify|change)\w*\b.{0,100}\b(?:source asset|original|pre-existing (?:album|collection|organization)|people association|favorite|metadata)\b|\b(?:outside|beyond)\b.{0,60}\bauthorized workspace\b.{0,60}\b(?:write|album|membership|collection)\b|\b(?:album|catalog|membership)\s+write\b.{0,60}\b(?:outside|beyond)\b.{0,60}\bauthorized workspace\b)/i;
 
@@ -88,17 +92,20 @@ export function evaluatePhotographyNotebook(options = {}) {
   const notebook = record(manifest.notebookId);
   const field = record(manifest.fieldId);
   const proposal = record(manifest.proposalId);
+  const oralHistory = record(manifest.oralHistoryId);
   const visualIndex = record(manifest.visualIndexId);
   const notebookSource = source(manifest.notebookId);
   const fieldSource = source(manifest.fieldId);
   const proposalSource = source(manifest.proposalId);
-  const combinedSource = `${notebookSource}\n${fieldSource}\n${proposalSource}`;
-  const rfpSource = readFileSync(path.join(repoRoot, manifest.rfpPath), "utf8");
+  const oralHistorySource = source(manifest.oralHistoryId);
+  const combinedSource = `${notebookSource}\n${fieldSource}\n${proposalSource}\n${oralHistorySource}`;
+  const rfcSource = readFileSync(path.join(repoRoot, manifest.rfcPath), "utf8");
 
   const contentBindingsCurrent =
     sha256(notebookSource) === manifest.contentBindings.notebook &&
     sha256(fieldSource) === manifest.contentBindings.field &&
-    sha256(proposalSource) === manifest.contentBindings.proposal;
+    sha256(proposalSource) === manifest.contentBindings.proposal &&
+    sha256(oralHistorySource) === manifest.contentBindings.oralHistory;
 
   const machineClosesHumanGate = passageMatchesGroups(combinedSource, [
     /\b(?:machine|model|AI|algorithm|automation|automated|classifier|confidence|score|agent)\b/i,
@@ -114,13 +121,12 @@ export function evaluatePhotographyNotebook(options = {}) {
     /\b(?:each|every|all)\s+(?:project|period|person|place)\b/i,
     /\b(?:same|equal|balance|quota|allocat|coverage|represent)/i
   ]);
-  const finalizedNarrativeStatement = passageMatchesGroups(fieldSource, [
-    /\b(?:field|corpus|selection)\b/i,
-    /\b(?:representative|complete|comprehensive|final|definitive)\b/i,
-    /\b(?:narrative|sample|account|archive|story)\b/i
-  ]);
+  const finalizedNarrativeStatement =
+    /\b(?:this|the)\s+(?:field|corpus|selection)\s+(?:is|has become|constitutes)\s+(?:the|a)\s+(?:representative|complete|comprehensive|final|definitive)\b.{0,100}\b(?:narrative|sample|account|archive|story)\b/i.test(
+      fieldSource
+    );
 
-  const notebookAreaMaterialized =
+  const notebookAreaMaterialized = Boolean(
     notebook?.kind === "index" &&
     notebook?.status === "governed-open" &&
     notebook?.canonical_path === manifest.notebookPath &&
@@ -129,9 +135,13 @@ export function evaluatePhotographyNotebook(options = {}) {
     field?.canonical_path === manifest.fieldPath &&
     proposal?.kind === "research-inquiry" &&
     proposal?.status === "governed-open" &&
-    proposal?.canonical_path === manifest.proposalPath;
+    proposal?.canonical_path === manifest.proposalPath &&
+    oralHistory?.kind === "research-inquiry" &&
+    oralHistory?.status === "governed-open" &&
+    oralHistory?.canonical_path === manifest.oralHistoryPath
+  );
 
-  const notebookReachable =
+  const notebookReachable = Boolean(
     Boolean(notebook) &&
     Boolean(field) &&
     Boolean(proposal) &&
@@ -139,24 +149,30 @@ export function evaluatePhotographyNotebook(options = {}) {
     visualIndex?.relations?.some((relation) => relation.target === manifest.notebookId) &&
     notebook?.relations?.some((relation) => relation.target === manifest.fieldId) &&
     notebook?.relations?.some((relation) => relation.target === manifest.proposalId) &&
+    notebook?.relations?.some((relation) => relation.target === manifest.oralHistoryId) &&
     proposal?.relations?.some((relation) => relation.target === manifest.fieldId) &&
     proposal?.relations?.some((relation) => relation.target === "project.sunday-dinner-196") &&
+    field?.relations?.some((relation) => relation.target === manifest.oralHistoryId) &&
+    oralHistory?.relations?.some((relation) => relation.target === manifest.fieldId) &&
+    oralHistory?.relations?.some((relation) => relation.target === "project.kc-town-hall") &&
     result.reachable.has(manifest.notebookId) &&
     result.reachable.has(manifest.fieldId) &&
-    result.reachable.has(manifest.proposalId);
+    result.reachable.has(manifest.proposalId) &&
+    result.reachable.has(manifest.oralHistoryId)
+  );
 
   const fieldCorpusStateTruthful =
-    /planned rough-draft selection of approximately\s+1,000 photographs/i.test(fieldSource) &&
-    /private field has not yet been frozen or ingested/i.test(fieldSource) &&
-    /operational source has now been privately frozen and\s+verified/i.test(fieldSource) &&
-    /exact count and digest remain outside public Git/i.test(fieldSource) &&
-    /planned\s+1,000-photograph field has not been assembled/i.test(fieldSource) &&
-    !/1,000 photographs (?:were|have been|are now) (?:selected|ingested|frozen)/i.test(fieldSource) &&
-    !falseCompletionPattern.test(fieldSource) &&
+    /assembled an exploratory rough-draft field of 1,000 photographs/i.test(fieldSource) &&
+    /private field was completed and independently verified on 2026-07-22/i.test(fieldSource) &&
+    /separate 24-photo editor-ready proposal was then created and verified/i.test(fieldSource) &&
+    /Neither selection is a representative sample, evidence set, rights\s+clearance, or publication decision/i.test(fieldSource) &&
+    /exact source contract, membership digest, photographs, source identifiers,\s+image-level metadata, private contact sheets, and private encounter notes\s+remain outside public Git/i.test(fieldSource) &&
+    /Field Corpus 001 was completed through the separate 1,000-photo field process/i.test(fieldSource) &&
+    !/\b(?:current|present|now)\b.{0,50}\b(?:field corpus 001|1,000-photo(?:graph)? field|private field)\b.{0,80}\b(?:not assembled|unfinished|not completed|not frozen)\b/i.test(fieldSource) &&
     !canaryCompletionPattern.test(fieldSource);
 
   const onePhotoCanaryBounded =
-    /one-photo operational canary has been completed/i.test(fieldSource) &&
+    /one-photo operational canary was also completed/i.test(fieldSource) &&
     /stable local helper created one additive workspace album with one existing source membership pointer/i.test(fieldSource) &&
     /identical rerun was idempotent/i.test(fieldSource) &&
     /independent read-only catalog verification confirmed the folder chain,\s+membership, and that source records and pre-existing organization were not modified/i.test(fieldSource) &&
@@ -182,10 +198,11 @@ export function evaluatePhotographyNotebook(options = {}) {
     /does not establish zero-HOLD readiness\s+for the generic phase chain/i.test(fieldSource);
 
   const onePhotoCanaryDoesNotCompleteField =
-    /It is not Field\s+Corpus 001 and does not complete the larger edit/i.test(fieldSource) &&
+    /It is not Field\s+Corpus 001 and did not complete the larger edit/i.test(fieldSource) &&
+    /Field Corpus 001 was completed through the separate 1,000-photo field process/i.test(fieldSource) &&
     /It carries no claim of\s+representativeness and is not a publication candidate/i.test(fieldSource) &&
-    /The larger field is still unassembled/i.test(fieldSource) &&
-    /every publication gate remains open/i.test(fieldSource) &&
+    /Completion establishes a working field, not representative coverage,\s+factual authority, or publication readiness/i.test(fieldSource) &&
+    /Every proposed photograph still requires exact rights, consent, credit,\s+context, crop, caption, alt-text, destination, and Jamie approval/i.test(fieldSource) &&
     /Operational success does not confer rights, consent, factual authority,\s+representativeness, accessibility, publication readiness/i.test(fieldSource) &&
     !canaryCompletionPattern.test(fieldSource);
 
@@ -233,7 +250,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     !gpsPayloadPattern.test(combinedSource) &&
     !derivedPrivatePayloadPattern.test(combinedSource) &&
     /Keep exact source identifiers, filenames, paths, previews, contact sheets/i.test(notebookSource) &&
-    /No photographs, source\s+identifiers, image-level metadata, or private encounter notes are recorded/i.test(fieldSource);
+    /exact source contract, membership digest, photographs, source identifiers,\s+image-level metadata, private contact sheets, and private encounter notes\s+remain outside public Git/i.test(fieldSource) &&
+    /contains no reconstructive locator/i.test(oralHistorySource);
 
   const encounterHistoryIsAdditive =
     /Revise additively and date each encounter/i.test(notebookSource) &&
@@ -246,6 +264,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     notebook?.projection?.surfaces?.length === 0 &&
     field?.projection?.status === "hold" &&
     field?.projection?.surfaces?.length === 0 &&
+    oralHistory?.projection?.status === "hold" &&
+    oralHistory?.projection?.surfaces?.length === 0 &&
     manifest.humanGates.every((gate) =>
       fieldSource.toLowerCase().includes(gate.toLowerCase())
     ) &&
@@ -258,16 +278,17 @@ export function evaluatePhotographyNotebook(options = {}) {
     !existsSync(path.join(repoRoot, "apps/www/src/app/photos")) &&
     !existsSync(path.join(repoRoot, "apps/www/src/app/photography")) &&
     notebook?.projection?.status !== "active" &&
-    field?.projection?.status !== "active";
+    field?.projection?.status !== "active" &&
+    oralHistory?.projection?.status !== "active";
 
-  const rfpBoundaryPreserved =
-    /^stage: proposed$/m.test(rfpSource) &&
-    /RFP remains proposed/i.test(notebookSource) &&
+  const rfcBoundaryPreserved =
+    /^stage: proposed$/m.test(rfcSource) &&
+    /RFC remains proposed/i.test(notebookSource) &&
     /does not authorize archive access,\s+private-workspace implementation, image ingestion, or publication/i.test(notebookSource);
 
   const nextPassDoesNotMutateSource =
-    /without mutating source records or\s+pre-existing organization/i.test(fieldSource) &&
-    /Create only additive membership pointers inside the\s+authorized workspace/i.test(fieldSource) &&
+    /without mutating\s+source\s+records or\s+pre-existing organization/i.test(fieldSource) &&
+    /Create only additive\s+membership\s+pointers\s+inside the authorized workspace/i.test(fieldSource) &&
     /authoritative originals, edits, metadata, and pre-existing organization/i.test(notebookSource) &&
     /Private and read-only for fieldwork; outside this repository/i.test(notebookSource) &&
     /bounded catalog addition/i.test(fieldSource) &&
@@ -333,6 +354,56 @@ export function evaluatePhotographyNotebook(options = {}) {
       proposalSource
     );
 
+  const oralHistoryPromptBounded =
+    /one photograph from the previously verified private editorial\s+field was selected for attention/i.test(oralHistorySource) &&
+    /is visible to Jamie in the working\s+conversation but is not stored in this repository/i.test(oralHistorySource) &&
+    /Jamie subsequently supplied a protected oral history/i.test(oralHistorySource) &&
+    /remain first-person research leads, not conclusions\s+established by the photograph/i.test(oralHistorySource) &&
+    /Oral history: received; protected; public-safe capsule created/i.test(oralHistorySource) &&
+    /Claim state: none automatically created/i.test(oralHistorySource) &&
+    /Public image: not added/i.test(oralHistorySource);
+
+  const oralHistoryIntakeCannotAutoPromote =
+    /response will enter as a dated first-person recollection source/i.test(oralHistorySource) &&
+    /will not automatically become/i.test(oralHistorySource) &&
+    /verified claim/i.test(oralHistorySource) &&
+    /public caption or alt text/i.test(oralHistorySource) &&
+    /identification or consent for another depicted person/i.test(oralHistorySource) &&
+    /creator credit, rights, or license evidence/i.test(oralHistorySource) &&
+    /proof of project outcome, causation, or endorsement/i.test(oralHistorySource) &&
+    /approval to copy the photograph into the portfolio/i.test(oralHistorySource) &&
+    /normal Knowledge Wiki\s+lifecycle and human gates/i.test(oralHistorySource) &&
+    !unsupportedClaimPromotionPattern.test(oralHistorySource) &&
+    !oralHistoryAutoPromotionPattern.test(oralHistorySource) &&
+    !automatedAuthorityPattern.test(oralHistorySource);
+
+  const oralHistoryResearchAndCreditRemainOpen =
+    /What moment are we looking at/i.test(oralHistorySource) &&
+    /how\s+should collective credit be handled/i.test(oralHistorySource) &&
+    /What part of this history should remain private/i.test(oralHistorySource) &&
+    /Who made the photograph, and whose permission would be needed/i.test(oralHistorySource) &&
+    /distinguish memory from visible observation, seek corroborating\s+records and collaborator knowledge, preserve counterevidence/i.test(oralHistorySource) &&
+    /Rights and consent: unresolved/i.test(oralHistorySource);
+
+  const oralHistoryPrivacyFailsClosed =
+    /photograph, filename, source and collection identifiers, local paths,\s+previews, People associations, exact date and location metadata, raw oral\s+history, private names, and rights records remain outside public Git/i.test(oralHistorySource) &&
+    /contains no reconstructive locator/i.test(oralHistorySource) &&
+    !protectedLocatorPattern.test(oralHistorySource) &&
+    !embeddedMediaPattern.test(oralHistorySource) &&
+    !sourceIdentifierPattern.test(oralHistorySource) &&
+    !gpsPayloadPattern.test(oralHistorySource) &&
+    !derivedPrivatePayloadPattern.test(oralHistorySource) &&
+    !protectedCircumstanceDisclosurePattern.test(oralHistorySource);
+
+  const oralHistoryNotPublication =
+    oralHistory?.projection?.status === "hold" &&
+    oralHistory?.projection?.surfaces?.length === 0 &&
+    /Portfolio state: held/i.test(oralHistorySource) &&
+    /No claim or publication state changed/i.test(fieldSource) &&
+    !acceptancePublicationPattern.test(oralHistorySource) &&
+    !oralHistoryAutoPromotionPattern.test(oralHistorySource) &&
+    !machineClosesHumanGate;
+
   const checks = {
     photography_notebook_materialized: notebookAreaMaterialized,
     photography_notebook_reachable: notebookReachable,
@@ -352,7 +423,7 @@ export function evaluatePhotographyNotebook(options = {}) {
     photo_encounters_are_additive: encounterHistoryIsAdditive,
     photo_publication_gates_human: publicationGatesRemainHuman,
     no_public_photo_route: noPublicPhotoRoute,
-    photo_rfp_boundary_preserved: rfpBoundaryPreserved,
+    photo_rfc_boundary_preserved: rfcBoundaryPreserved,
     photo_source_non_mutation_preserved: nextPassDoesNotMutateSource,
     residency_proposal_not_contract: proposalIsNotAContract,
     artistic_divergence_protected: artisticDivergenceProtected,
@@ -360,7 +431,12 @@ export function evaluatePhotographyNotebook(options = {}) {
     open_ended_outcome_protected: openEndedOutcomeProtected,
     host_acceptance_preserves_artist_agency: hostAcceptancePreservesArtistAgency,
     remembered_teju_source_positioned_honestly: rememberedSourcePositionedHonestly,
-    human_host_acceptance_recorded: humanHostAcceptanceRecorded
+    human_host_acceptance_recorded: humanHostAcceptanceRecorded,
+    oral_history_prompt_bounded: oralHistoryPromptBounded,
+    oral_history_intake_cannot_auto_promote: oralHistoryIntakeCannotAutoPromote,
+    oral_history_research_and_credit_open: oralHistoryResearchAndCreditRemainOpen,
+    oral_history_privacy_fails_closed: oralHistoryPrivacyFailsClosed,
+    oral_history_not_publication: oralHistoryNotPublication
   };
 
   return {
@@ -372,7 +448,7 @@ export function evaluatePhotographyNotebook(options = {}) {
     counts: {
       blockingCriteria: Object.keys(checks).length,
       humanGates: manifest.humanGates.length,
-      governedRecords: 3
+      governedRecords: 4
     }
   };
 }

@@ -1,0 +1,39 @@
+{
+  "suite": "living-photographic-knowledge-loop-east-river-canary",
+  "version": 1,
+  "rfcPath": "rfcs/0003-living-photographic-knowledge-loop.md",
+  "manifestPath": "apps/www/src/data/photography.ts",
+  "assetId": "asset.photo.east-river-manhattan-bridge.2022.001",
+  "assetPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+  "setId": "index.photo-set.east-river-canoe.2022",
+  "metadataSourceId": "source.photo-metadata.east-river.2022.public-safe",
+  "permissionSourceId": "source.permission.elana-gordon.east-river.2026-07",
+  "recollectionSourceId": "source.recollection.jamie-canoe-commuting.2026-07",
+  "curatorialEvaluationId": "evaluation.curatorial.layout-c.home-east-river.v1",
+  "selectionDecisionId": "decision.photo.layout-c.home-east-river.v1",
+  "protectedAbsenceDecisionId": "decision.photo.layout-c.resume-no-photo.v1",
+  "placementId": "projection.photo.layout-c.home.east-river",
+  "editionId": "edition.layout-c.2026-07",
+  "correctionId": "correction.photo.east-river-credit.2026-07",
+  "inquiryId": "research-inquiry.documented-canoe-bike-journeys",
+  "photographerId": "person.elana-gordon",
+  "derivative": {
+    "id": "derivative.photo.east-river.layout-c.v1",
+    "path": "apps/www/public/images/field-notes/jamie-east-river.webp",
+    "sha256": "748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621",
+    "width": 1280,
+    "height": 960
+  },
+  "publicCopy": {
+    "caption": "At the East River beneath the Manhattan Bridge, 2022.",
+    "credit": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+    "route": "/",
+    "component": "Hero"
+  },
+  "privateBinding": {
+    "provider": "photo-fieldwork",
+    "opaqueId": "pfwpub_ylAbyl1bHgM5",
+    "environmentVariable": "PHOTO_PRIVATE_BINDING_PATH"
+  },
+  "candidateReceiptPath": "evals/photo-knowledge/runs/2026-07-26-east-river-canary.json"
+}
