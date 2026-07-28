@@ -49,6 +49,16 @@ test("branch-history safety scans additions but not removed legacy locators", ()
     scanAddedHistoryPublicSafety(`${patch}\n+https://example.test/${uuid}`),
     []
   );
+  assert.deepEqual(
+    scanAddedHistoryPublicSafety(
+      `${patch}\n+\"${uuid}.jpeg\"\n+https://example.test/${uuid}.jpeg`
+    ),
+    []
+  );
+  assert.deepEqual(
+    scanAddedHistoryPublicSafety(`${patch}\n+asset_id: ${uuid}`),
+    ["introduced branch history contains source UUID"]
+  );
 });
 
 test("the complete East River canary passes deterministic validation", () => {

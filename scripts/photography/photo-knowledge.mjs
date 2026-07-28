@@ -527,7 +527,9 @@ function branchHistoryPublicSafety(root = repoRoot) {
 }
 
 export function scanAddedHistoryPublicSafety(patch) {
-  const addedContent = stripPublicUrls(addedPatchContent(patch));
+  const addedContent = stripPublicAssetFilenames(
+    stripPublicUrls(addedPatchContent(patch))
+  );
   const patterns = [
     { pattern: /\/(?:Users|Volumes)\//, label: "absolute private path" },
     {
@@ -549,6 +551,16 @@ export function scanAddedHistoryPublicSafety(patch) {
 
 function stripPublicUrls(value) {
   return String(value).replace(/https?:\/\/[^\s<>"')\]]+/gi, "");
+}
+
+function stripPublicAssetFilenames(value) {
+  // Some recovered campaign URLs use a UUID-shaped public image basename.
+  // The extension distinguishes that public web filename from a private
+  // Photos-library identifier, which remains blocked when it appears alone.
+  return String(value).replace(
+    /\b[A-F0-9]{8}(?:-[A-F0-9]{4}){3}-[A-F0-9]{12}\.(?:jpe?g|heic|png|webp)\b/gi,
+    ""
+  );
 }
 
 export function addedPatchContent(patch) {
