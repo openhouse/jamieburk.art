@@ -64,4 +64,3 @@ the official source controls the complete wording.
   continuity measure for locally owned businesses.
 
 These are release statements, not hearing or floor speeches.
-

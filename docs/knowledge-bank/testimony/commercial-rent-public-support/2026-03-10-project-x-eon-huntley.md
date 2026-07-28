@@ -39,4 +39,3 @@ The larger event includes additional speakers and discussion. The cleaned
 transcript, incidental personal details, and source locator remain in the
 protected research layer. This record does not imply that Huntley endorses
 Jamie or this portfolio.
-

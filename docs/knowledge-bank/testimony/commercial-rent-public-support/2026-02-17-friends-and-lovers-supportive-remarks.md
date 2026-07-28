@@ -62,4 +62,3 @@ personal details, and protected source locator remain outside public Git.
 
 Role labels are time-specific. Eon Huntley's later election result does not
 retroactively change the role he held when he spoke.
-

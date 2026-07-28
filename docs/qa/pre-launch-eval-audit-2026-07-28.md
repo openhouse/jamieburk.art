@@ -1,7 +1,9 @@
 # Pre-Launch Evaluation Audit
 
-Date: 2026-07-28  
-Candidate: `feature/pre-launch-C`  
+Date: 2026-07-28
+
+Candidate: `feature/pre-launch-C`
+
 Status: launch-decision support; not production approval
 
 ## Method

@@ -71,4 +71,3 @@ remain human gates.
 - Attributed turns: 3
 - Public-safe orientation: Voiced support and connected the proposal to
   economic stability, community life, and local public policy.
-

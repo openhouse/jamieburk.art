@@ -1,10 +1,10 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-holdout-hiring-composition-v3-2026-07-28",
+  "judgeId": "composite-holdout-hiring-composition-v3-final-2026-07-28",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "fbd3009370350f1daae86b75425e87b0bd7157df7f8eb7c92a61e10107178fbd",
-  "candidateFingerprint": "81c81e670427961e218eeaa8b4859519a473527529fd5a55393fdc8acfcc97e2",
+  "candidateFingerprint": "4d3835401e5ffd3c9ba145b44d040b4c159c53ace223de1ed4e52f7fae72dfdb",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,38 +12,44 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "All fourteen feature/evals-A through feature/evals-N heads appear exactly once and match the frozen inventory.",
-        "The declared remote-reference namespace resolves the recorded heads; the integration branch, develop base, and reference-only policy are explicit."
+        "All 14 feature/evals-A through feature/evals-N decisions match the frozen heads.",
+        "Each head resolves through refs/remotes/origin.",
+        "The integration branch and develop base are explicit."
       ],
-      "rationale": "The frozen family inventory is complete, exact, and protected from silent branch substitution."
+      "rationale": "The frozen donor-family inventory is complete, exact, and reference-only."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Every A-N decision records an adopt, adapt, already-present, or reject disposition with substantive rationale, destination files, and verification criteria.",
-        "The register deliberately retains the existing public composition and declines additional public copy merely to demonstrate architectural integration."
+        "All 14 donor decisions specify an allowed disposition, substantive rationale, existing destinations, and verification criteria.",
+        "The reviewed integration-register digest matches 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "The register explicitly records selective website projection rather than wholesale donor import."
       ],
-      "rationale": "Integration decisions are inspectable and distinguish repository adoption from public projection."
+      "rationale": "Integration choices are inspectable and connected to concrete destinations and verification."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The canonical schema, records, lifecycle, agency, public registry, and proof files remain a single H-derived architecture.",
-        "All eleven canonical files are present, forbidden parallel lifecycle roots are absent, and the application exposes redacted projections without public knowledge-bank or proofs routes."
+        "All 11 declared canonical knowledge files are present.",
+        "None of the three forbidden parallel lifecycle roots is present.",
+        "The public registry exposes only claims, pages, and sources.",
+        "Public routes consume governed projections instead of protected source records."
       ],
-      "rationale": "The candidate preserves one canonical knowledge architecture while keeping the public site selective."
+      "rationale": "The candidate retains one canonical, redacted knowledge architecture."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh lifecycle tests passed identical-intake replay, linked duplicate preservation, and changed-content stable-ID rejection.",
-        "Held claims, inquiries, corrections, projection states, and orphan sources are queryable."
+        "Identical intake replay returns already-present.",
+        "A repeated artifact with a new ID is preserved as a linked duplicate.",
+        "Lifecycle tests preserve rejection of changed-content stable-ID collisions.",
+        "Held claims, inquiries, corrections, projection states, and orphan-source status remain queryable."
       ],
       "rationale": "The intake and lifecycle behavior is append-safe and exposes every required review state."
     },
@@ -52,92 +58,100 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh composite validation reported 286 sources, 102 claims, 34 agency relations, and 4 corrections with current derived outputs.",
-        "Citation checks and ten citation tests passed; public-safety checks passed while retaining explicit guardrails for eleven careful claims.",
-        "Collective advocacy, institutional action, Jamie's implementation work, historical population denominators, capture dates, and recovery gaps remain distinct."
+        "Validation passes across 286 sources, 102 claims, 34 agency relations, and 4 corrections.",
+        "Citation projections and generated Wiki and employment outputs are current and public-safe.",
+        "Agency records distinguish Jamie's work, shared production, collective advocacy, and institutional decisions.",
+        "Population language retains capture dates, denominators, retrieval limits, and recovery gaps, including the 445-post capture boundary and the 3,123-record retrievable X corpus with 2,001 profile-counted records outside capture."
       ],
-      "rationale": "Source, claim, agency, correction, credit, and population boundaries are coherent and do not inflate Jamie's role or erase collective causality."
+      "rationale": "Source roles, non-establishment limits, correction history, population boundaries, and credit scopes remain coherent."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The first viewport names Jamie, the target role, the operating promise, and direct Work and Resume actions; Start here, selected proof points, and project cards reduce hiring-reader search cost.",
-        "Lead work presents context, Jamie's action, purpose, and usable outcomes, while the deeper Technical Operations page maps capabilities to named project evidence.",
-        "The About page joins artistic, civic, technical, relational, and social practice and makes relationship, model, interface/use, learning, revision, and continuation reconstructable across current systems.",
-        "Photography is selective: one fully bound East River field photograph performs orientation and personal presence, while unresolved archival photographs remain absent and case-study images function as inspectable artifacts.",
-        "Current browser evidence covers 56 route/viewport combinations with zero axe violations, overflow, broken images, unlabeled images, request failures, or invalid heading/landmark rows; keyboard, mobile-menu, focus-visible, and reflow checks also pass."
+        "The first viewport names Jamie, the target role, the promise that emerging work becomes usable systems, and direct Work and Resume actions.",
+        "The Start Here index, selected proof points, Technical Operations proof map, and grouped work index reduce hiring-reader search burden.",
+        "Work cards distinguish what was emerging from what became usable; case studies separate context, Jamie's action, deliverables, and bounded outcomes.",
+        "CallNYC translates administrative data into resident pathways; campaign memory is explained as recoverable decisions and next steps; the M.A.R.C.H. acronym is expanded and institutionally attributed.",
+        "FairRentNYC separates Jamie's implementation from collective advocacy and Council or City action; KC Town Hall separates proposal work, institutional authority, appropriation, non-disbursement, and later transition.",
+        "The About page preserves artistic, civic, technical, relational, and social continuity and makes observe, model, prototype, use, learn, revise, and handoff reconstructable.",
+        "Fourteen of fourteen professor-lens criteria pass, mature held claims remain unprojected, and no public proofs route exists."
       ],
-      "rationale": "The site remains a composed, role-legible portfolio rather than a knowledge-bank mirror. Chad's lens, practice continuity, recursive systems work, accessibility, and selective visual evidence are fully satisfied without suppressing collective credit or protected absences."
+      "rationale": "The portfolio is selective and role-legible. Jamie remains visible as an actor without absorbing collective or institutional outcomes, and specialized work is translated into usable hiring evidence."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Human corroboration, collective review, hiring usability, job-funnel evidence, and external validity all remain explicitly open.",
-        "Each control specifies required evidence, anti-gaming rules, a next action, and a public-projection boundary; synthetic or instrumented absence cannot count as validation."
+        "Human corroboration, collective review, hiring usability, job-funnel learning, and external validity all remain explicitly open.",
+        "Each control specifies required evidence, pass conditions, anti-gaming rules, a next action, and a public-projection boundary.",
+        "The hiring-usability control records zero governed unfamiliar-reader sessions and forbids synthetic or coached validation.",
+        "The evaluation contract states that instrumented absence is not external validation."
       ],
-      "rationale": "Blind spots are governed as actionable absences, not converted into invented evidence or approval."
+      "rationale": "Blind-spot controls govern absence honestly and preserve actionable human-validation work."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The independently recomputed rubric digest matches the frozen digest, and the base suite, integration register, and blind-spot controls match their reviewed hashes.",
-        "Fifteen adversarial and mutation assertions passed, including semantic weakening, fabricated heads, stale outputs, incomplete candidate identity, optimizer self-grading, synthetic human evidence, shared reviewer labels, and blocker compensation.",
-        "The sole composite-test failure was the positive all-holdouts-installed assertion, which is expected in the declared pre-install state and belongs to the COMP-009 stopping gate."
+        "The recomputed semantic rubric digest exactly matches fbd3009370350f1daae86b75425e87b0bd7157df7f8eb7c92a61e10107178fbd.",
+        "The base suite, integration register, blind-spot controls, and frozen branch heads match their pinned digests.",
+        "The optimizer cannot grade its own patch, not-observed cannot pass, and blocking failures cannot be compensated.",
+        "Fifteen adversarial assertions pass, covering semantic weakening, checksum-only approval, fabricated heads, stale outputs, self-grading, synthesized human evidence, incomplete candidate binding, duplicate reviewer labels, and score compensation."
       ],
-      "rationale": "Frozen governance resists checksum refresh, score gaming, self-grading, candidate omission, and synthesis of human evidence."
+      "rationale": "The governance contract remains frozen and resists the specified score-gaming and semantic-weakening mutations."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The exact candidate fingerprint was independently recomputed as 81c81e670427961e218eeaa8b4859519a473527529fd5a55393fdc8acfcc97e2 over 1309 files.",
-        "Candidate identity excludes only the two declared holdout result records and binds canonical content, public UI, accessibility, indexing, validation, runtime, and release dependencies.",
-        "Receipt validation requires distinct reviewer labels, review times, the declared provider, and a digest of each complete judgment while explicitly refusing to authenticate reviewer process identity or expose private identifiers.",
-        "Absent holdout records are the expected pre-install state; this accepted judgment does not claim that the two-receipt stopping rule has already completed."
+        "The candidate fingerprint independently recomputes to 4d3835401e5ffd3c9ba145b44d040b4c159c53ace223de1ed4e52f7fae72dfdb over 1309 files.",
+        "Candidate identity excludes only the two declared holdout receipt files and binds canonical content, public rendering, accessibility, indexing, validation, runtime, and release dependencies.",
+        "The receipt contract requires run version 3, independent grading, the frozen rubric digest, the exact candidate fingerprint, a complete nine-criterion judgment, distinct reviewer labels, timestamps, provider labels, and judgment-payload digests.",
+        "Private orchestration separately commissioned this hiring-composition review and a parallel source-integrity review.",
+        "The stale excluded receipts are the expected pre-install state and are not used as evidence for this candidate.",
+        "This accepted judgment can serve as one of the two required receipts; the repository verifier will establish the joint same-candidate stopping gate only after both accepted receipts are installed."
       ],
-      "rationale": "The exact-candidate stopping contract is stable and public-safe. Completion still requires installation of two separately commissioned accepted receipts for this unchanged fingerprint, followed by a fresh deterministic composite run and the independent human release gates."
+      "rationale": "Under the intended non-circular protocol, this holdout may accept the fully bound candidate as one independently commissioned judgment. Final stopping still requires installation and deterministic verification of this judgment and the separately commissioned source-integrity judgment against the unchanged fingerprint."
     }
   ],
   "notObserved": [],
   "findings": [
     {
-      "classification": "pre-install-holdout-gate",
+      "classification": "expected-pre-install-holdout-state",
       "candidateBlocking": false,
       "releaseBlocking": true,
-      "detail": "This judgment is acceptance evidence, not proof that two distinct accepted receipts are already installed. Produce both public-safe receipts and rerun the composite checks without changing candidate bytes."
+      "detail": "The two excluded receipt files still describe a prior candidate, as expected before installation. They provide no evidence for this review. The joint stopping gate remains open until this accepted judgment and the separately commissioned accepted source-integrity judgment are installed and verified against the unchanged fingerprint."
     },
     {
-      "classification": "human-approval-boundary",
+      "classification": "production-human-gates",
       "candidateBlocking": false,
       "releaseBlocking": true,
-      "detail": "Automation and this review do not confer rights, consent, collaborator endorsement, contact or resume approval, exact-candidate production approval, deployment approval, or indexing approval. The bounded East River permission and credit record is evidence, while production and indexing remain Jamie-controlled gates."
+      "detail": "Candidate acceptance does not substitute for Jamie's exact-commit approval; consent, rights, exact credit and crop approval; collaborator-sensitive correction and credit review; deployment, TLS, smoke, and rollback verification; indexing approval; or human accessibility and hiring-usability validation."
     },
     {
-      "classification": "external-validation-boundary",
+      "classification": "public-receipt-authentication-boundary",
       "candidateBlocking": false,
       "releaseBlocking": false,
-      "detail": "Hiring usability, job-funnel effects, and employment outcomes remain unvalidated external questions and must not be inferred from green checks or LLM judgments."
+      "detail": "Reviewer labels, timestamps, and judgment digests bind public receipts to candidate content but do not authenticate reviewer process identity. Separate commissioning remains established through private orchestration outside the public repository."
     },
     {
-      "classification": "deep-page-density",
+      "classification": "open-human-validation-gates",
       "candidateBlocking": false,
-      "releaseBlocking": false,
-      "detail": "The About and FairRentNYC pages carry substantial detail, but fast-path entry surfaces preserve clear role, action, outcome, and next-step hierarchy; the deeper material remains composed and selectively projected."
+      "releaseBlocking": true,
+      "detail": "Collaborator corroboration, collective review, unfamiliar hiring-reader usability, job-funnel learning, external validity, and human accessibility review remain open and cannot be synthesized from automated or LLM evidence."
     }
   ],
-  "recommendation": "Accept this frozen candidate for holdout purposes. Preserve the exact 1309-file fingerprint, install two distinct public-safe accepted receipts, rerun the deterministic composite checks, and keep Jamie, collaborator, photography, deployment, indexing, hiring-validation, and employment-outcome gates explicit.",
+  "recommendation": "Accept this exact candidate as one independent hiring-composition holdout judgment. Install this receipt with the separately commissioned accepted source-integrity receipt, rerun the deterministic composite verifier without changing the 1309-file candidate, and keep Jamie approval, consent, rights, credit, crop, collaborator review, deployment, TLS, smoke, rollback, indexing, accessibility, and usability as separate human release gates.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "hiring-composition-reviewer-b",
-    "reviewedAt": "2026-07-28T17:47:06Z",
-    "judgmentSha256": "e292e162329a3aae6fa9ac0d50affefc5c0a320607c5dcb17fb7fcd6f2d5c7e6",
+    "reviewerLabel": "hiring-composition-reviewer-b-final",
+    "reviewedAt": "2026-07-28T19:18:00Z",
+    "judgmentSha256": "17cc7301fb6c2a945d79b8d1c356ef9c5ff94058979eef2383fd6e2ac7b59f90",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
   }
 }

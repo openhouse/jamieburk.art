@@ -64,4 +64,3 @@ controls complete wording and remains distinct from a rally transcript.
 - Role at publication: New York State Assembly Member
 - Public-safe orientation: Connected stable commercial tenancy to neighborhood
   character, community institutions, and economic continuity.
-
