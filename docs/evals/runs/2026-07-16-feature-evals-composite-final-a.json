@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "pre-launch-E-composite-architecture-a-final2-2026-07-28",
+  "judgeId": "pre-launch-E-composite-architecture-a-final3-2026-07-28",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "28211fc17b0022114f60665640f871e6ed2e647cb1db776edbd9dcad5bf20a55",
+  "candidateFingerprint": "b29b662cbf2c796e3470750b496045ae341ee428b14074b208dad74d7fd7b197",
   "verdict": "accepted",
   "scores": [
     {
@@ -16,7 +16,7 @@
         "Holdout-free evaluation confirmed 14/14 integration decisions match the frozen heads.",
         "The integration source, develop pull-request base, and reference-only donor policy remain explicit."
       ],
-      "rationale": "The complete A-N inventory is frozen, uniquely identified, and protected from silent donor-branch substitution."
+      "rationale": "The complete A-N inventory is frozen, uniquely identified, and protected from silent donor substitution."
     },
     {
       "criterionId": "COMP-002",
@@ -72,13 +72,13 @@
       "pass": true,
       "evidence": [
         "Holdout-free evaluation reported 16/16 professor-lens criteria passing.",
-        "The professor binding covers 343 files and agrees with photo candidate b74dbcaaa33193a06911677f209e3eb55d70f96afe361b1454646ab308cdb011 and responsive surface 13d0371c93ad2611f8892978b95038c19641c843efc7cd8f5b16199f7caaa48f.",
+        "The professor binding covers 343 files and agrees with photo candidate e02ef866ab95d2eb064a89a37e6abc6ed0d20fc316ceb51d9a69fcb38aebe23a and responsive surface 13d0371c93ad2611f8892978b95038c19641c843efc7cd8f5b16199f7caaa48f.",
         "The accessibility binding covers 119 files and 98 route-viewport rows with zero axe violations, failed requests, overflow rows, or broken images after scrolling.",
-        "Photo evaluation passed all hard criteria at 100 percent, including the exact 933-file photo candidate and two accepted exact-candidate photo holdouts.",
-        "The fresh photo holdouts retain Jamie approval, exact occurrence, creator rights, represented-person dignity and consent, collective credit, crop, caption, destination, production, deployment, and indexing as human gates.",
+        "Photo evaluation passed every hard criterion at 100 percent, including its exact 933-file candidate and two fresh exact-candidate photo holdouts.",
+        "The repaired photo-history scanner permits UUID-shaped public image filenames only with recognized image extensions while continuing to reject standalone or non-image UUID-shaped identifiers.",
         "All 181 campaign records remain permission-needed, consent-review-needed, and on public-display hold."
       ],
-      "rationale": "The public composition remains purposeful, accessible, and continuous across artistic, civic, technical, relational, and social practice without converting evidence or media access into publication authority."
+      "rationale": "The public composition remains purposeful, accessible, and continuous without converting evidence, archive custody, retrieval matches, or automated evaluation into artistic or publication authority."
     },
     {
       "criterionId": "COMP-007",
@@ -112,11 +112,11 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "The complete candidate independently recomputed to exactly 1302 files with SHA-256 28211fc17b0022114f60665640f871e6ed2e647cb1db776edbd9dcad5bf20a55.",
+        "The complete candidate independently recomputed to exactly 1302 files with SHA-256 b29b662cbf2c796e3470750b496045ae341ee428b14074b208dad74d7fd7b197.",
         "A final recomputation after all read-only checks produced the identical file count, candidate fingerprint, and frozen rubric digest.",
         "Holdout-free evaluation passed COMP-001 through COMP-008; its COMP-009 absence was solely the expected consequence of passing holdouts:[] and not installing this judgment during review.",
         "Every independently evaluated composite criterion scores 4 with no material evidence marked not observed.",
-        "The accepted photo holdouts are bound to their exact excluded-scope photo candidate and preserve every human and release boundary.",
+        "The fresh photo holdouts bind their exact photo candidate and explicitly preserve all human and release boundaries.",
         "This exact composite candidate is suitable as one of the two required independent stopping judgments."
       ],
       "rationale": "The unchanged candidate is reproducible and acceptable as one required stopping judgment. Final stopping still requires installation with the parent-supplied receipt and a second independent acceptance bound to this identical candidate and rubric."
@@ -130,7 +130,7 @@
     "Open collaborator corroboration, collective review, rights, consent, dignity, credit, crop, caption, exact-occurrence, Jamie editorial, production, deployment, indexing, hiring-usability, job-funnel, external-validity, employment, and application gates remain visible and uncompromised.",
     "This acceptance is a composite stopping judgment, not production, publication, deployment, indexing, employment, or application approval."
   ],
-  "recommendation": "Accept candidate 28211fc17b0022114f60665640f871e6ed2e647cb1db776edbd9dcad5bf20a55 as one of the two required independent composite stopping judgments. Install it only with the parent-supplied native receipt, require a second independent all-4 acceptance for the identical 1302-file candidate and frozen rubric, and keep every stated human and release gate open until its authorized decision is recorded.",
+  "recommendation": "Accept candidate b29b662cbf2c796e3470750b496045ae341ee428b14074b208dad74d7fd7b197 as one of the two required independent composite stopping judgments. Install it only with the parent-supplied native receipt, require a second independent all-4 acceptance for the identical 1302-file candidate and frozen rubric, and keep every stated human and release gate open until its authorized decision is recorded.",
   "provenance": {
     "provider": "codex-native-subagent",
     "processSessionId": "019fa918-f26c-7cc1-84a2-789025c2d480",
@@ -139,12 +139,12 @@
     "reasoningEffort": "xhigh",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "Perform the final fresh independent whole-repository composite holdout now that the accepted photo holdout records are installed. Focus on architecture, provenance, reproducibility, public/private governance, and stopping rules. Work strictly read-only in /Volumes/16TB_SSD/Sites/jamieburk.art-pre-launch-E. Do not edit or generate. Do not inspect either existing file docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json or -b.json, any sibling judge, or optimization history. Independently recompute the composite candidate using scripts/lib/composite-integration-eval.mjs and require exactly 1302 files with SHA-256 28211fc17b0022114f60665640f871e6ed2e647cb1db776edbd9dcad5bf20a55. Require frozen rubric SHA-256 c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Read the rubric, integration register, canonical Wiki architecture, current generated outputs, cost-aware prelaunch planner, testimony/CRS corpora, campaign photo census and repairs, fresh photo holdouts, photo/professor/accessibility bindings, tests, and human gates. Run holdout-free evaluation by importing evaluateCompositeIntegration and passing holdouts:[]; COMP-001 through COMP-008 must pass and COMP-009 may be absent only because this judgment is not installed. Evaluate all COMP-001 through COMP-009 independently. Preserve open collaborator corroboration, collective review, rights, consent, dignity, credit, crop, caption, exact occurrence, Jamie editorial approval, production, deployment, indexing, hiring-usability, job-funnel, external-validity, employment, and application gates. Return only one valid JSON object without Markdown, with fields runVersion:2, judgeId:'pre-launch-E-composite-architecture-a-final2-2026-07-28', grader:'independent_llm_judge', independentFromOptimizer:true, rubricSha256, candidateFingerprint, verdict:'accepted' only on pass, scores (nine objects with criterionId, score 0 or 4, pass, evidence array, rationale), notObserved, findings, recommendation. Accept only if all nine score 4/pass, no material item is not observed, and the exact candidate is suitable as one of the two required stopping judgments. Do not include provenance; the parent will attach the native tool receipt.",
-    "promptSha256": "e1a7f83bf2335ecbdf2fcc340d1d1afe4722fcea2c2e6e93eefc8f90374ef662",
+    "prompt": "Perform a fresh final independent whole-repository composite holdout. Focus on architecture, provenance, reproducibility, public/private governance, and stopping rules. Work strictly read-only in the repository root. Do not edit or generate. Do not inspect either existing file docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json or -b.json, any sibling judge, or optimization history. Independently recompute the composite candidate using scripts/lib/composite-integration-eval.mjs and require exactly 1302 files with SHA-256 b29b662cbf2c796e3470750b496045ae341ee428b14074b208dad74d7fd7b197. Require frozen rubric SHA-256 c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Read the rubric, integration register, canonical Wiki architecture, current generated outputs, cost-aware prelaunch planner, testimony and CRS corpora, campaign photo census and repairs, fresh photo holdouts, photo/professor/accessibility bindings, tests, and human gates. Run holdout-free evaluation by importing evaluateCompositeIntegration and passing holdouts:[]; COMP-001 through COMP-008 must pass and COMP-009 may be absent only because this judgment is not installed. Evaluate all COMP-001 through COMP-009 independently. Preserve open collaborator corroboration, collective review, rights, consent, dignity, credit, crop, caption, exact occurrence, Jamie editorial approval, production, deployment, indexing, hiring-usability, job-funnel, external-validity, employment, and application gates. Return only one valid JSON object without Markdown, with fields runVersion:2, judgeId:'pre-launch-E-composite-architecture-a-final3-2026-07-28', grader:'independent_llm_judge', independentFromOptimizer:true, rubricSha256, candidateFingerprint, verdict:'accepted' only on pass, scores (nine objects with criterionId, score 0 or 4, pass, evidence array, rationale), notObserved, findings, recommendation. Accept only if all nine score 4/pass, no material item is not observed, and the exact candidate is suitable as one of the two required stopping judgments. Do not include provenance; the parent will attach the native tool receipt.",
+    "promptSha256": "346280222b6cbbd91df6f9d5dc04858fdea5f05153adee3e9c6fb8a16726879b",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-28T14:59:00Z",
-    "completedAt": "2026-07-28T15:09:00Z",
-    "judgmentSha256": "80831271d5cf296d1f30b9da8640e14d4ccdae96610ec0269ea71508f008bca9"
+    "startedAt": "2026-07-28T15:33:00Z",
+    "completedAt": "2026-07-28T15:41:00Z",
+    "judgmentSha256": "2082dbc21dee718cab01a1e50b3e2603a3c75e01e667010b321e5a96f2193ed5"
   }
 }
