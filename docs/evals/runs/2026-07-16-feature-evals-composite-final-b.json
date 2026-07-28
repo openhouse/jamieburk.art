@@ -1,10 +1,10 @@
 {
   "runVersion": 2,
-  "judgeId": "editorial-accessibility-photo-knowledge-B-oral-history-2026-07-26",
+  "judgeId": "editorial-accessibility-photo-knowledge-B-final-rebind-2026-07-26",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
-  "candidateFingerprint": "7ea4ff67820105493792e14e27e39f2ef72c48163066a4c27d6bce960f0f5f75",
+  "candidateFingerprint": "5fe163a628304a18e043c9fb778ea5a0b5af52050d099b51ecb466db84d99e10",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,125 +12,127 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "The checkout was clean at exact HEAD 31715f6c155680058ee2a859b6817850959f376c.",
-        "The bounded composite evaluation resolved all 14 feature/evals-A through feature/evals-N origin heads and passed COMP-001.",
-        "The register names feature/knowledge-h as the integration branch and develop as the pull-request base."
+        "The evaluator resolved all 14 frozen feature/evals-A through feature/evals-N heads through refs/remotes/origin and matched each recorded head.",
+        "The integration register explicitly retains feature/knowledge-h as its writable integration branch and develop as the pull-request base.",
+        "The inspected worktree remained clean at exact HEAD 34302d91b0c21b5e93090c4c7234efef63244525."
       ],
-      "rationale": "The frozen family inventory is complete, exact, reference-only, and tied to the declared remote namespace."
+      "rationale": "The frozen donor family is complete, exact, and reference-only; the candidate does not rewrite donor history or obscure its intended develop target."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 branch decisions have allowed decision values, substantive rationales, destination paths, and verification IDs.",
-        "The independently computed register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
-        "The bounded composite evaluation passed COMP-002 with no missing destination."
+        "All 14 branch decisions use an allowed adopt, adapt, already-present, or reject disposition with substantive rationale, existing destination paths, and criterion references.",
+        "The canonical integration-register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "The register distinguishes deliberate website composition from material retained only in governed knowledge records."
       ],
-      "rationale": "Integration choices and website projection decisions are inspectable and reconstructable rather than decorative."
+      "rationale": "A teammate can reconstruct what was selected, where it landed, how it is verified, and what intentionally did not become public."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 11 declared canonical knowledge files exist.",
-        "None of the three forbidden parallel lifecycle roots exists.",
-        "The public experience uses composed routes and redacted projections; it exposes no proofs, knowledge-bank, or public-claims route."
+        "All 11 declared canonical knowledge files exist and none of the three forbidden parallel lifecycle architectures is present.",
+        "The generated public registry contains only claims, pages, and sources; citation validation confirmed that it is current and redacted.",
+        "There is no public proofs route, and the portfolio presents composed role and project narratives rather than exposing the Knowledge Wiki as a public claims database."
       ],
-      "rationale": "The candidate preserves one canonical knowledge architecture without turning the portfolio into a public claims database."
+      "rationale": "The repository preserves one canonical knowledge architecture while the public application consumes a selective, redacted projection."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The bounded lifecycle evaluation exercised idempotent replay and linked duplicate preservation.",
-        "Held claims, unresolved inquiries, corrections, projection states, and orphan-source detection remained queryable.",
-        "The lifecycle mutation coverage retains failure behavior for changed-content stable-ID collisions."
+        "The deterministic evaluator exercised idempotent intake replay, linked duplicate preservation, held-claim queries, unresolved inquiries, corrections, and orphan detection.",
+        "A stable-ID content collision remains an error rather than an overwrite path.",
+        "The Knowledge Wiki start page, generated indexes, wanted-page queue, photographic loop, and employment-context indexes make the handoff navigable without requiring private source access."
       ],
-      "rationale": "Intake and lifecycle operations remain append-safe, queryable, and resistant to identity collision."
+      "rationale": "The lifecycle is append-safe, queryable, and reconstructable; new evidence can enter without silently replacing earlier records or automatically reaching the site."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Knowledge validation passed for 280 sources, 98 claims, 31 agency relations, and 4 corrections.",
-        "Knowledge Wiki currentness passed with 140 records, 538 semantic or evidence edges, 323 prose links, and current generated outputs.",
-        "Public-safety and route checks passed; individual, shared, collective, and institutional attribution remain distinct in the inspected public copy.",
-        "The first-person NYC Council recollection explicitly says it is not independent corroboration, and its inquiry forbids conflation with the separate held CallNYC interface photograph."
+        "Canonical validation passed across 280 sources, 98 claims, 31 agency relations, and 4 corrections, with current Wiki and employment outputs.",
+        "Public-safety, route, and citation checks passed; the citation registry remained redacted and no private locator appeared in the inspected public records.",
+        "The NYC Council portrait is represented by a summary-only asset, a held first-person recollection, and a separate inquiry; the image itself is not committed.",
+        "The recollection explicitly states that it is not independent corroboration and cannot establish event identity, institutional adoption, photographer permission, or publication clearance."
       ],
-      "rationale": "Source boundaries, agency, collective credit, corrections, population limits, private exclusions, and photo-context separation remain intact."
+      "rationale": "Source roles, evidence limits, agency scopes, collective credit, and population boundaries remain explicit without erasing Jamie's supported actions."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The home first viewport names Jamie, the target role, the operating contribution, and direct Work and Resume actions.",
-        "The Technical Operations route repeats immediate Resume and Contact actions before its photograph and gives hiring readers a project-linked proof map.",
-        "Public copy consistently names Jamie's actions while retaining co-built, co-led, collaborator-led, collectively governed, and many-collaborator language.",
-        "Photography moves from person to place, neighborhood operation, and handwork with captions and credits; held people and gathering photographs remain absent.",
-        "The About route reconstructs relationships, model, interface and use, learning, revision, and continuity across current implementation loops.",
-        "The professor-lens evaluation passed all 14 criteria."
+        "The first homepage viewport names Jamie, the target role, the operating-structure proposition, and immediate work and resume actions.",
+        "The Technical Operations page makes Jamie the actor, maps role capabilities to named projects, and places View resume and Contact Jamie before its lead photograph.",
+        "Case studies provide the same application actions before lead media on mobile and in the desktop aside.",
+        "Photography is composed as field evidence through named placements, bounded captions, credits, and material scenes; it does not replace the hiring argument or become an archive spectacle.",
+        "The portfolio retains collective wording for coalition, neighborhood, and institutional outcomes while using direct language for Jamie's supported implementation work."
       ],
-      "rationale": "A stranger or hiring reader can identify Jamie, role fit, usable outcomes, application actions, practice continuity, and handoff logic without encountering spectacle or a claims-led interface."
+      "rationale": "A stranger can identify Jamie's role, operating value, representative evidence, and next action quickly. Artistic, civic, technical, relational, and handoff continuity remain visible without turning the site into a ledger."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All five human-evidence controls remain open under blind-spot digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "Human corroboration, collective review, hiring usability, job-funnel evidence, and external validity each retain evidence requirements, anti-gaming rules, next actions, and projection boundaries.",
-        "The photo manifest records intimate gatherings as a chosen protected absence.",
-        "Rights, consent, exact credit, crop, caption, represented-person review, production, deployment, and indexing remain explicit human gates."
+        "All five human-evidence controls for corroboration, collective review, hiring usability, job-funnel evidence, and external validity remain explicitly open.",
+        "Each control retains required evidence, anti-gaming rules, a next action, and a public-projection boundary under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "Photo records distinguish discovery, evidence, rights, consent, represented-person review, editorial selection, production, deployment, and indexing.",
+        "The intimate-gathering cohort is preserved as a first-class protected absence rather than treated as a missing deliverable."
       ],
-      "rationale": "The candidate governs absences and next actions without synthesizing missing human evidence or disguising automated checks as approval."
+      "rationale": "Known absences remain useful and actionable without being relabeled as validation or filled with synthetic approval."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The independently recomputed rubric digest exactly matches c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
-        "COMP-008 passed with the base suite, integration register, blind-spot controls, grader separation, and current generated outputs bound.",
-        "Sixteen adversarial composite tests passed, including semantic weakening, fabricated heads, decorative decisions, stale outputs, source-tree mutation, self-grading, provenance, duplicate-score, synthesized-human-evidence, and score-compensation cases.",
-        "Candidate-bound accessibility evidence passed stale-surface, route substitution, viewport substitution, screenshot, keyboard, axe, lazy-image, and untracked-public-file checks."
+        "The independently recomputed rubric digest exactly matched c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340.",
+        "Derived Wiki and employment outputs passed deterministic currentness checks.",
+        "Sixteen composite mutation and governance tests passed, including semantic-lock, self-grading, fabricated-head, private-evidence, source-tree fingerprint, and human-evidence controls; the remaining aggregate test awaited exact-candidate holdout replacement.",
+        "The knowledge evaluation passed 5/5 across 32 criteria with two recorded consecutive knowledge holdouts.",
+        "Sixteen targeted KC Town Hall tests confirmed that protected sources, held field-practice claims, shared public surfaces, MDX, proof wording, and public-review reports cannot bypass the reviewed semantic locks through checksum refreshes or paraphrases."
       ],
-      "rationale": "Frozen governance resists checksum refreshes, score gaming, stale review evidence, self-grading, and substitution of automation for human authority."
+      "rationale": "The frozen contract resists score gaming, stale derived output, and checksum-only semantic approval, including the specifically reviewed KC Town Hall shared surface."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The candidate enumerator returned exactly 832 files after only the two declared holdout records were excluded.",
-        "The independently recomputed candidate fingerprint is 7ea4ff67820105493792e14e27e39f2ef72c48163066a4c27d6bce960f0f5f75.",
-        "The deterministic composite evaluator passed COMP-001 through COMP-008 and stopped at COMP-009 because two accepted provenance-bound holdouts were not yet present.",
-        "This judgment targets the exact clean candidate and is only one independent holdout; it does not close the aggregate two-review gate."
+        "Independent recomputation found exactly 832 candidate files and fingerprint 5fe163a628304a18e043c9fb778ea5a0b5af52050d099b51ecb466db84d99e10 at clean HEAD 34302d91b0c21b5e93090c4c7234efef63244525.",
+        "The candidate identity includes tracked and unignored source-tree files and excludes only the two declared holdout records.",
+        "The stopping implementation requires two distinct judges, process-session IDs, prompt digests, full provenance, exact rubric and candidate bindings, nine unique passing scores, no findings, and non-adverse recommendations.",
+        "Candidate-bound responsive evidence covers 14 routes at 360, 375, 768, and 1280 pixels: 56 of 56 keyboard rows passed with zero axe violations, overflow elements, failed requests, unlabeled images, or broken images after scrolling.",
+        "Accessibility evidence tests passed 8 of 8 and contrast tests passed 4 of 4, including stale-evidence, route-substitution, viewport-substitution, keyboard, screenshot, and lazy-image failure controls.",
+        "Three targeted photo tests passed, confirming that first-person recollection cannot auto-project, the NYC Council portrait remains held, and its context cannot be conflated with the separate CallNYC hand-and-phone photograph."
       ],
-      "rationale": "The source-tree binding and fail-closed stopping mechanism are exact and effective. Aggregate completion still requires a distinct second accepted holdout against the same fingerprint and rubric."
+      "rationale": "The exact-candidate stopping mechanism is sound and this judgment is suitable as one independent holdout. This single review does not close the required aggregate two-review gate or any human publication gate."
     }
   ],
   "notObserved": [],
   "findings": [],
-  "recommendation": "Accept this as one independent exact-candidate composite holdout. Preserve all stated human gates and require a distinct second accepted holdout before the aggregate stopping decision can complete.",
+  "recommendation": "Accept this exact candidate as one independent composite holdout. Record a distinct second accepted holdout against the same fingerprint and rubric before the aggregate stopping condition is satisfied. Keep rights, consent, exact creator credit, crop, caption, represented-person review, publication, deployment, and indexing under their named human authorities.",
   "provenance": {
     "provider": "codex-native-subagent",
-    "processSessionId": "019fa1b6-9360-7543-892e-61010a27f5a5",
-    "agentNickname": "Nietzsche",
+    "processSessionId": "019fa1c8-0f11-7753-9b5e-918249d4facc",
+    "agentNickname": "Dewey",
     "model": "inherited-parent-model",
-    "reasoningEffort": "inherited",
+    "reasoningEffort": "high",
     "sandbox": "read-only",
     "ephemeral": true,
-    "prompt": "Act as a fresh independent, read-only composite holdout. Inspect /private/tmp/jamieburk-art-feature-photo-knowledge-B at exact clean HEAD 31715f6c155680058ee2a859b6817850959f376c. Do not edit files and do not rely on a parent summary. Read .agents/evals/feature-evals-composite.json, scripts/lib/composite-integration-eval.mjs, and relevant source/tests. Independently verify 832 candidate files, candidate fingerprint 7ea4ff67820105493792e14e27e39f2ef72c48163066a4c27d6bce960f0f5f75, and frozen rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Run bounded read-only checks and inspect candidate-bound responsive evidence as useful.\n\nApply COMP-001 through COMP-009 strictly. Emphasize stranger and hiring-reader comprehension, Jamie-as-actor and target-role legibility, immediate mobile resume/contact actions, collective credit, photography as composed evidence rather than spectacle, the public-safe use of first-person memory without treating it as independent corroboration, route/viewport accessibility, protected absence, Knowledge Wiki usefulness, deterministic currentness, and exact-candidate stopping discipline. Reject a claims-database public experience, buried application actions, stale review locks, non-reconstructable handoffs, photo-context conflation, private leakage, or disguised human approval. Do not approve rights, consent, exact credit/crop/caption, represented-person review, publication, deployment, or indexing.\n\nReturn JSON only, with no markdown fences, in this exact shape:\n{\n  \"runVersion\": 2,\n  \"judgeId\": \"unique id\",\n  \"grader\": \"independent_llm_judge\",\n  \"independentFromOptimizer\": true,\n  \"rubricSha256\": \"c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340\",\n  \"candidateFingerprint\": \"7ea4ff67820105493792e14e27e39f2ef72c48163066a4c27d6bce960f0f5f75\",\n  \"verdict\": \"accepted\" or \"rejected\",\n  \"scores\": [\n    {\"criterionId\":\"COMP-001\",\"score\":0 or 4,\"pass\":boolean,\"evidence\":[\"...\"],\"rationale\":\"...\"},\n    ... exactly one entry each for COMP-001 through COMP-009\n  ],\n  \"notObserved\": [],\n  \"findings\": [],\n  \"recommendation\": \"...\"\n}\nDo not add duplicate score IDs. Accepted requires every criterion score 4/pass true, no findings, and a non-rejecting recommendation. One reviewer may assess the stopping mechanism but must not claim this one review closes the aggregate two-review gate.\nUse judgeId editorial-accessibility-photo-knowledge-B-oral-history-2026-07-26.",
-    "promptSha256": "55d133a44d8d25aa35f223fa2d9bdf4233ce8b9fd8e67e991bca667e9c0ad518",
+    "prompt": "Act as a fresh independent, read-only composite holdout. Inspect /private/tmp/jamieburk-art-feature-photo-knowledge-B at exact clean HEAD 34302d91b0c21b5e93090c4c7234efef63244525. Do not edit files and do not rely on a parent summary. Read .agents/evals/feature-evals-composite.json, scripts/lib/composite-integration-eval.mjs, and relevant source/tests. Independently verify 832 candidate files, candidate fingerprint 5fe163a628304a18e043c9fb778ea5a0b5af52050d099b51ecb466db84d99e10, and frozen rubric digest c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340. Run bounded read-only checks and inspect candidate-bound responsive evidence as useful.\n\nApply COMP-001 through COMP-009 strictly. Emphasize stranger and hiring-reader comprehension, Jamie-as-actor and target-role legibility, immediate mobile resume/contact actions, collective credit, photography as composed evidence rather than spectacle, the public-safe use of first-person memory without treating it as independent corroboration, route/viewport accessibility, protected absence, Knowledge Wiki usefulness, deterministic currentness, the reviewed KC Town Hall shared-surface lock, and exact-candidate stopping discipline. Reject a claims-database public experience, buried application actions, stale review locks, non-reconstructable handoffs, photo-context conflation, private leakage, disguised human approval, or changed KC Town Hall semantics hidden by a checksum rebind. Do not approve rights, consent, exact credit/crop/caption, represented-person review, publication, deployment, or indexing.\n\nReturn JSON only, with no markdown fences, in this exact shape:\n{\n  \"runVersion\": 2,\n  \"judgeId\": \"editorial-accessibility-photo-knowledge-B-final-rebind-2026-07-26\",\n  \"grader\": \"independent_llm_judge\",\n  \"independentFromOptimizer\": true,\n  \"rubricSha256\": \"c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340\",\n  \"candidateFingerprint\": \"5fe163a628304a18e043c9fb778ea5a0b5af52050d099b51ecb466db84d99e10\",\n  \"verdict\": \"accepted\" or \"rejected\",\n  \"scores\": [\n    {\"criterionId\":\"COMP-001\",\"score\":0 or 4,\"pass\":boolean,\"evidence\":[\"...\"],\"rationale\":\"...\"},\n    ... exactly one entry each for COMP-001 through COMP-009\n  ],\n  \"notObserved\": [],\n  \"findings\": [],\n  \"recommendation\": \"...\"\n}\nDo not add duplicate score IDs. Accepted requires every criterion score 4/pass true, no findings, and a non-rejecting recommendation. One reviewer may assess the stopping mechanism but must not claim this one review closes the aggregate two-review gate.",
+    "promptSha256": "e674cabc668bcadac40ebba81bea463f7def0a5fc113fae9220f076e466ece65",
+    "judgmentSha256": "71dc2e6924645e1ea767255c330bbd63698e30f7513963925b2938470e8b2f60",
     "resultTransport": "multi_agent_v1__wait_agent-completed",
     "operatorAttestation": "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-    "startedAt": "2026-07-27T03:55:24.890Z",
-    "completedAt": "2026-07-27T04:07:30.544Z",
-    "judgmentSha256": "143fdce053942866c8e4f06178f89a3a7ac3af88f9eb02a831a8b9575e7ace6e"
+    "startedAt": "2026-07-27T04:14:30.673Z",
+    "completedAt": "2026-07-28T11:16:08.467Z"
   }
 }
